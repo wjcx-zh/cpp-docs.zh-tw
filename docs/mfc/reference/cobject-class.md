@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377236"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041707"
 ---
 # <a name="cobject-class"></a>CObject 類別
 MFC 程式庫的主要基底類別。  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>備註  
  預設版本會自動呼叫您的衍生類別的建構函式。  
   
- 如果您的類別是可序列化 (它會合併`IMPLEMENT_SERIAL`巨集)，則必須在類別宣告中有預設建構函式 （不含引數的建構函式）。 如果您不需要預設建構函式，宣告私用或受保護的"empty"的建構函式。 如需詳細資訊，請參閱[使用 CObject](../../mfc/using-cobject.md)。  
+ 如果您的類別是可序列化 （它會合併 IMPLEMENT_SERIAL 巨集），則必須在類別宣告中有預設建構函式 （不含引數的建構函式）。 如果您不需要預設建構函式，宣告私用或受保護的"empty"的建構函式。 如需詳細資訊，請參閱[使用 CObject](../../mfc/using-cobject.md)。  
   
  標準 c + + 預設類別複製建構函式會依成員複本。 私用與否`CObject`複製建構函式可以保證編譯器錯誤訊息，如果類別的複製建構函式所需但無法使用。 因此，如果您的類別需要這項功能，您必須提供的複製建構函式。  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `dc`  
+ *dc*  
  傾印，通常的診斷傾印內容`afxDump`。  
   
 ### <a name="remarks"></a>備註  
- 當您撰寫您自己的類別時，您應該覆寫`Dump`函式，以提供診斷服務為自己和您類別的其他使用者。 覆寫`Dump`通常會呼叫`Dump`其基底類別，然後再列印唯一衍生的類別資料成員的函式。 `CObject::Dump` 列印類別名稱，如果您的類別使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`巨集。  
+ 當您撰寫您自己的類別時，您應該覆寫`Dump`函式，以提供診斷服務為自己和您類別的其他使用者。 覆寫`Dump`通常會呼叫`Dump`其基底類別，然後再列印唯一衍生的類別資料成員的函式。 `CObject::Dump` 列印類別名稱，如果您的類別使用`IMPLEMENT_DYNAMIC`或 IMPLEMENT_SERIAL 巨集。  
   
 > [!NOTE]
 >  您`Dump`函式應該不會列印新行字元，其輸出的結尾。  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClass`  
+ *pClass*  
  指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構與相關聯您`CObject`-衍生的類別。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果物件會對應至類別。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 此函式會測試`pClass`檢查 （1） 它已指定類別的物件或 （2） 它已從指定的類別衍生的類別物件。 此函式僅適用於以宣告的類別[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集。  
+ 此函式會測試*pClass*檢查 （1） 它已指定類別的物件或 （2） 它已從指定的類別衍生的類別物件。 此函式僅適用於以宣告的類別[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集。  
   
  因為它會失去 c + + 多型功能請勿廣泛使用此函式。 請改用虛擬函式。  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ar`  
+ *ar*  
  A`CArchive`往或來自序列化的物件。  
   
 ### <a name="remarks"></a>備註  

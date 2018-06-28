@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d274cbafbd50df2f577b484e433c964f1dec096
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376326"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040125"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 類別
 這是可簡化區塊和屬性值組邏輯的類別。  
@@ -166,7 +166,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStatChunk`  
+ *pStatChunk*  
  指向目的地值描述區塊的特性。  
   
 ### <a name="return-value"></a>傳回值  
@@ -182,7 +182,7 @@ void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pValue`  
+ *pValue*  
  指定要複製的來源值。  
   
 ### <a name="remarks"></a>備註  
@@ -243,11 +243,11 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppPropVariant`  
+ *ppPropVariant*  
  此函式傳回時，此參數會包含區塊值。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已成功地配置 PROPVARIANT 和區塊值已成功地複製至 S_OK `ppPropVariant`，否則為錯誤碼。  
+ 如果已成功地配置 PROPVARIANT 和區塊值已成功地複製至 S_OK *ppPropVariant*，否則為錯誤碼。  
   
 ### <a name="remarks"></a>備註  
   
@@ -300,25 +300,25 @@ HRESULT SetBoolValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `bVal`  
+ *bVal*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -340,22 +340,22 @@ HRESULT SetChunk(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -378,25 +378,25 @@ HRESULT SetDwordValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `dwVal`  
+ *dwVal*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -419,25 +419,25 @@ HRESULT SetFileTimeValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `dtVal`  
+ *dtVal*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -460,25 +460,25 @@ HRESULT SetInt64Value(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `nVal`  
+ *nVal*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -501,25 +501,25 @@ HRESULT SetIntValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `nVal`  
+ *nVal*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -542,25 +542,25 @@ HRESULT SetLongValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `lVal`  
+ *lVal*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -583,25 +583,25 @@ HRESULT SetSystemTimeValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `systemTime`  
+ *systemTime*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -624,25 +624,25 @@ HRESULT SetTextValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pkey`  
+ *pkey*  
  指定屬性的索引鍵。  
   
- `pszValue`  
+ *pszValue*  
  指定要設定的區塊值。  
   
- `chunkType`  
+ *chunkType*  
  旗標會指出這個區塊包含文字類型或實值型別屬性。 旗標值取自 CHUNKSTATE 列舉型別。  
   
- `locale`  
+ *locale*  
  語言和次要語言的文字區塊相關聯。 文件索引子會使用區塊地區設定，執行適當的斷詞的文字。 如果區塊是文字類型都具有資料類型 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 實值類型，則會忽略此欄位。  
   
- `cwcLenSource`  
+ *cwcLenSource*  
  目前區塊衍生的來源文字的字元長度。 零值表示原始程式文字與衍生的文字之間的逐字元對應。 非零值表示這種直接對應存在。  
   
- `cwcStartSource`  
+ *cwcStartSource*  
  從中衍生區塊 (chunk) 的來源文字來源區塊中的開始位移。  
   
- `chunkBreakType`  
+ *chunkBreakType*  
  中斷目前的區塊從分隔的前一個區塊的類型。 值是從 CHUNK_BREAKTYPE 列舉型別。  
   
 ### <a name="return-value"></a>傳回值  

@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378488"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039306"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
 表示 HTML 編輯元件。  
@@ -391,7 +391,7 @@ HRESULT AddToGlyphTable(
 ```  
   
 ### <a name="parameters"></a>參數  
- `szTag`  
+ *szTag*  
  標記名稱 （例如，"P"或"table"）。  
   
  *szImgUrl*  
@@ -444,7 +444,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  按鈕控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -461,7 +461,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  核取方塊控制項的 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -530,7 +530,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  下拉式清單選取項目控制項的 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -571,10 +571,10 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cmdID`  
+ *cmdID*  
  要執行的命令識別碼。 如需清單，請參閱[MSHTML 命令識別碼](https://msdn.microsoft.com/library/aa741315.aspx)。  
   
- `cmdExecOpt`  
+ *cmdExecOpt*  
  值取自[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)列舉，描述物件應該如何執行命令。  
   
  *pInVar*  
@@ -613,7 +613,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果項目的位置屬性設定為"absolute。 」，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -630,7 +630,7 @@ HRESULT GetBackColor(int& nColor) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nColor`  
+ *nColor*  
  背景色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -698,7 +698,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppDoc`  
+ *ppDoc*  
  文件物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -712,7 +712,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szHTML`  
+ *szHTML*  
  HTML 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -740,7 +740,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppEventObj`  
+ *ppEventObj*  
  事件物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -768,14 +768,14 @@ HRESULT GetFontFace(CString& strFace) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `strFace`  
+ *strFace*  
  字型名稱。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 如果目前的選取範圍會使用多個字型、`strFace`會是空字串。  
+ 如果目前的選取範圍會使用多個字型、 *strFace*會是空字串。  
   
  這個方法會傳送[IDM_FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 控制項。  
   
@@ -787,7 +787,7 @@ HRESULT GetFontSize(short& nSize) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSize`  
+ *nSize*  
  字型大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -804,7 +804,7 @@ HRESULT GetForeColor(int& nColor);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nColor`  
+ *nColor*  
  前景色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -848,7 +848,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果圖像會顯示所有項目則為 true **styleFloat**屬性則會顯示任何圖像 （glyph） 為 false。  
   
 ### <a name="return-value"></a>傳回值  
@@ -865,7 +865,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示這些圖像會顯示文件; 中的所有標記的位置，則為 true。如果不為 false。  
   
 ### <a name="return-value"></a>傳回值  
@@ -882,7 +882,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示區域標記的圖像 false 如果不存在，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -899,7 +899,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示字符的 br 標記 false 如果沒有，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -916,7 +916,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示註解標記的圖像 false 如果沒有，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -933,7 +933,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示所有標籤顯示在 Microsoft Internet Explorer 4.0，它並不會為 false，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -950,7 +950,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示字符的所有指令碼標記，false 如果不存在，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -967,7 +967,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示字符的所有樣式的標籤，false 如果不存在，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -984,7 +984,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCurValue`  
+ *bCurValue*  
  如果 WebBrowser 顯示字符的 所有未知的標記，false 如果不存在，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1018,7 +1018,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szUrl`  
+ *szUrl*  
  超連結 URL。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1035,7 +1035,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szData`  
+ *szData*  
  要貼上的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1052,7 +1052,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  識別碼的內嵌框架。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1069,7 +1069,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szUrl`  
+ *szUrl*  
  要插入的影像路徑和檔案名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1099,7 +1099,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  方塊的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1116,7 +1116,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  Button 控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1133,7 +1133,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  隱藏的控制項識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1150,7 +1150,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  影像控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1167,7 +1167,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  密碼控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1184,7 +1184,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  重設控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1201,7 +1201,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  送出控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1218,7 +1218,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  檔案上傳控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1235,7 +1235,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bValue`  
+ *bValue*  
  如果項目因靜態定位，則為 false，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1252,7 +1252,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bValue`  
+ *bValue*  
  如果項目因絕對位置，則為 false，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1321,7 +1321,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  清單方塊控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1338,7 +1338,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  跑馬燈識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1365,7 +1365,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  如需已排序的清單識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1395,7 +1395,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  段落識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1427,7 +1427,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  路徑的列印範本。如果未指定，會使用預設的列印範本。  
   
  *bShowPrintDialog*  
@@ -1448,7 +1448,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  列印範本的路徑。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1465,11 +1465,11 @@ long QueryStatus(long cmdID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `cmdID`  
+ *cmdID*  
  命令 ID。 命令識別碼都取自`CGID_MSHTML`命令群組。 這些命令 Mshtmcid.h 中定義。 您也可以尋找在線上的清單[MSHTML 命令識別碼](http://go.microsoft.com/fwlink/p/?linkid=149220)。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)的狀態，指出`cmdID`，或 0 失敗。  
+ 傳回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)的狀態，指出*cmdID*，或 0 失敗。  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  會覆寫目前的選取項目上的選項按鈕控制項。  
@@ -1479,7 +1479,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  選項按鈕的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1522,7 +1522,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szPath`  
+ *szPath*  
  要用來儲存 Web 網頁的路徑和檔案名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1552,7 +1552,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，則可以藉由拖曳線上移動絕對定位項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1569,7 +1569,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，項目的位置的屬性是"absolute";如果為 false，，則 「 靜態 」。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1586,7 +1586,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，則會僅做為一個單位，可選取 ATOMICSELECTION 屬性設定為 TRUE 的任何元素。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1603,7 +1603,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，則會啟用自動的 URL 偵測。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1621,11 +1621,11 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nColor`  
- 色彩。 請參閱`pvaIn`中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。  
+ *nColor*  
+ 色彩。 請參閱*pvaIn*中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。  
   
- `szColor`  
- 色彩。 請參閱`pvaIn`中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。  
+ *szColor*  
+ 色彩。 請參閱*pvaIn*中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -1641,7 +1641,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szFormat`  
+ *szFormat*  
  格式標記。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1675,7 +1675,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLevel`  
+ *nLevel*  
  CSS 層級。 如果您不想 CSS 支援，請傳遞 0。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1714,10 +1714,10 @@ HRESULT SetDefaultComposeSettings(
  *bBold*  
  傳遞的粗體文字，則為 true。  
   
- `bItalic`  
+ *bItalic*  
  傳遞的斜體文字，則為 true。  
   
- `bUnderline`  
+ *bUnderline*  
  傳遞的加底線的文字，則為 true。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1734,7 +1734,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bMode`  
+ *bMode*  
  如果為 true，會開啟設計模式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1748,7 +1748,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，會停用則包含陰影的框線和站台可選取項目周圍的控制代碼時項目設計模式中具有 「 編輯焦點 」也就是說，當文字或項目的內容可供編輯。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1765,7 +1765,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szHTML`  
+ *szHTML*  
  HTML 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1779,7 +1779,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szFace`  
+ *szFace*  
  字型名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1796,7 +1796,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  HTML 字型大小 (1-7)。 值為 0 會將字型大小設定為 1。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1814,10 +1814,10 @@ HRESULT SetForeColor(int nColor) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szColor`  
+ *szColor*  
  色彩。  
   
- `nColor`  
+ *nColor*  
  色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1834,7 +1834,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，貼上的所有作業都都相容的 Internet Explorer 5;如果為 false，貼上作業會與 Internet Explorer 5.5 相容。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1851,7 +1851,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，則會導致 WebBrowser 更新項目的外觀，持續進行調整大小或移動作業;如果為 false，便會更新只會在完成移動或調整大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1868,7 +1868,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，允許選取多個站台可選取項目時，使用者按住 SHIFT 或 CTRL 鍵一次。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1885,7 +1885,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，WebBrowser 不會變更滑鼠指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1902,7 +1902,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bMode`  
+ *bMode*  
  如果為 true，會覆寫文字項目模式。如果為 false，則文字項目模式為 insert。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1919,7 +1919,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，具有可見度設定為"hidden"，或顯示屬性設定為"none"的任何項目將不會顯示在設計模式和瀏覽模式;如果為 false，則這些項目將顯示只能在瀏覽模式中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1936,7 +1936,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示字符的所有項目**styleFloat**屬性。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1953,7 +1953,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，則會顯示這些圖像會顯示文件中的所有標記的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1970,7 +1970,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示所有區域標記的圖像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1987,7 +1987,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示所有 br 標記的圖像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2004,7 +2004,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示所有註解標記的圖像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2021,7 +2021,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，則會顯示在 Microsoft Internet Explorer 4.0 中顯示的所有標記。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2038,7 +2038,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示所有指令碼標記的圖像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2055,7 +2055,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示所有樣式標記的圖像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2072,7 +2072,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNewValue`  
+ *bNewValue*  
  如果為 true，就會顯示所有未知的標記的圖像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2089,7 +2089,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  多行文字輸入控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2106,7 +2106,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  文字控制項的 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2162,7 +2162,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `szId`  
+ *szId*  
  未排序清單的識別碼。  
   
 ### <a name="return-value"></a>傳回值  

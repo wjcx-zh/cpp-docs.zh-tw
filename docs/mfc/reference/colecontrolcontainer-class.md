@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673ce0694357a397590a29f7328612cfcc3cce09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375333"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041925"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 做為 ActiveX 控制項的控制項容器。  
@@ -122,7 +122,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::GetDlgItem](#getdlgitem)|擷取指定的對話方塊控制項。|  
 |[COleControlContainer::GetDlgItemInt](#getdlgitemint)|擷取指定的對話方塊控制項的值。|  
 |[COleControlContainer::GetDlgItemText](#getdlgitemtext)|擷取指定的對話方塊控制項的標題。|  
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|決定是否容器處理`WM_SETFOCUS`訊息。|  
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|決定是否容器處理 WM_SETFOCUS 訊息。|  
 |[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|會處理訊息傳送至無視窗控制項。|  
 |[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|判斷指定的按鍵的狀態。|  
 |[COleControlContainer::OnPaint](#onpaint)|呼叫以重新繪製容器之一部分。|  
@@ -178,10 +178,10 @@ void AttachControlSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指標`CWnd`物件。  
   
- `nIDC`  
+ *nIDC*  
  要附加的控制項識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -198,7 +198,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  要變更的環境屬性的分派 ID。  
   
 ### <a name="remarks"></a>備註  
@@ -214,10 +214,10 @@ virtual void CheckDlgButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDButton`  
+ *nIDButton*  
  要修改的按鈕的識別碼。  
   
- `nCheck`  
+ *n 檢查*  
  指定按鈕的狀態。 可以是下列其中一項：  
   
 - **BST_CHECKED**按鈕狀態設定為已核取。  
@@ -237,13 +237,13 @@ virtual void CheckRadioButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDFirstButton`  
+ *nIDFirstButton*  
  指定的識別項的第一個選項按鈕群組中。  
   
- `nIDLastButton`  
+ *nIDLastButton*  
  指定群組中的最後一個選項按鈕的識別項。  
   
- `nIDCheckButton`  
+ *nIDCheckButton*  
  指定要檢查的選項按鈕的識別項。  
   
 ##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
@@ -254,7 +254,7 @@ explicit COleControlContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  控制項容器的父視窗指標。  
   
 ### <a name="remarks"></a>備註  
@@ -292,53 +292,53 @@ BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndCtrl`  
+ *pWndCtrl*  
  表示控制項的視窗物件的指標。  
   
- `clsid`  
+ *clsid*  
  控制項的唯一類別 ID。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  要在控制項中顯示的文字指標。 （如果有的話），請設定控制項的標題或文字屬性的值。 如果**NULL**，則不會變更控制項的標題或文字屬性。  
   
- `dwStyle`  
+ *dwStyle*  
  視窗樣式。 可用的樣式會列在下**備註**> 一節。  
   
- `rect`  
+ *rect*  
  指定控制項的大小和位置。 它可以是`CRect`物件或`RECT`結構。  
   
- `nID`  
+ *nID*  
  指定控制項的子視窗識別碼。  
   
- `pPersist`  
+ *pPersist*  
  指標`CFile`包含控制項的永續性狀態。 預設值是**NULL**，指出此控制項，而不還原其狀態從任何永續性儲存體初始化本身。 如果沒有**NULL**，它應該指向的`CFile`-衍生物件，包含控制項的永續性資料，請在資料流或儲存體的格式。 這項資料可以儲存在用戶端上啟用。 `CFile`可以包含其他資料，但必須設定的持續性資料的第一個位元組時呼叫其讀寫指標`CreateControl`。  
   
- `bStorage`  
- 指出是否在資料`pPersist`應該解譯為`IStorage`或`IStream`資料。 如果中的資料`pPersist`是儲存體，`bStorage`應該**TRUE**。 如果在資料`pPersist`是 stream，`bStorage`應該**FALSE**。 預設值是**FALSE**。  
+ *bStorage*  
+ 指出是否在資料*pPersist*應該解譯為`IStorage`或`IStream`資料。 如果中的資料*pPersist*是儲存體， *bStorage*應該**TRUE**。 如果在資料*pPersist*是 stream， *bStorage*應該**FALSE**。 預設值是**FALSE**。  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  選擇性的授權金鑰資料。 此資料只需要建立需要的執行階段授權識別碼的控制項。 如果此控制項支援授權，您必須提供控制項才會成功建立授權金鑰。 預設值是**NULL**。  
   
  *ppNewSite*  
  現有的控制項站台會裝載在建立控制項的指標。 預設值是**NULL**，指出，新的控制項站台時會自動建立及附加到新的控制項。  
   
- `ppt`  
- 指標**點**結構，包含控制項的左上角。 控制項的大小取決於值*psize*。 `ppt`和*psize*值是選擇性的方法，可指定的大小和位置的控制項。  
+ *ppt*  
+ 指標**點**結構，包含控制項的左上角。 控制項的大小取決於值*psize*。 *Ppt*和*psize*值是選擇性的方法，可指定的大小和位置的控制項。  
   
  *psize*  
- 指標**大小**結構，包含控制項的大小。 左上角的值來決定`ppt`。 `ppt`和*psize*值是選擇性的方法，可指定的大小和位置的控制項。  
+ 指標**大小**結構，包含控制項的大小。 左上角的值來決定*ppt*。 *Ppt*和*psize*值是選擇性的方法，可指定的大小和位置的控制項。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 只有 Windows 子集`dwStyle`旗標受到`CreateControl`:  
+ 只有 Windows 子集*dwStyle*旗標受到`CreateControl`:  
   
 - **WS_VISIBLE**建立一開始即可見的視窗。 如果您想看見立即像一般的 windows 控制項的必要項。  
   
 - **WS_DISABLED**建立視窗一開始停用。 停用的視窗無法接收使用者輸入。 如果控制項具有已啟用屬性，可以設定。  
   
-- `WS_BORDER` 建立具有精簡列框線的視窗。 如果控制項的框線樣式屬性，可以設定。  
+- **WS_BORDER**建立精簡列框線的視窗。 如果控制項的框線樣式屬性，可以設定。  
   
 - **WS_GROUP**指定控制項群組的第一個控制項。 使用者可以變更鍵盤焦點從一個控制項群組中至下一個使用方向鍵。 所有控制項，以定義**WS_GROUP**樣式之後的第一個控制項必須屬於相同的群組。 下一個控制項與**WS_GROUP**樣式結束的群組，並啟動下一個群組。  
   
@@ -354,7 +354,7 @@ void CreateOleFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFont`  
+ *pFont*  
  指標，用於透過控制項容器的字型。  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
@@ -365,7 +365,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  要尋找的項目識別項。  
   
 ### <a name="return-value"></a>傳回值  
@@ -379,7 +379,7 @@ void FreezeAllEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bFreeze`  
+ *bFreeze*  
  為非零，如果事件處理。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
@@ -398,10 +398,10 @@ virtual BOOL GetAmbientProp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSite`  
+ *pSite*  
  指向控制項站台將會擷取環境的屬性。  
   
- `dispid`  
+ *dispid*  
  所需的環境屬性的分派識別碼。  
   
  *pVarResult*  
@@ -422,10 +422,10 @@ virtual void GetDlgItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  擷取對話方塊項目的識別碼。  
   
- `phWnd`  
+ *phWnd*  
  指定的對話方塊項目的視窗物件的控制代碼指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -442,21 +442,21 @@ virtual UINT GetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  控制項的識別項。  
   
- `lpTrans`  
+ *lpTrans*  
  接收函式成功/失敗值的布林變數的指標 ( **TRUE**表示成功， **FALSE**表示失敗)。  
   
- `bSigned`  
- 指定函式是否應該檢查負號開頭的文字，並傳回帶正負號的整數值，如果找到。 如果`bSigned`參數是**TRUE**，指定要擷取的值帶正負號的整數值，將傳回值轉換為`int`型別。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ *bSigned*  
+ 指定函式是否應該檢查負號開頭的文字，並傳回帶正負號的整數值，如果找到。 如果*bSigned*參數是**TRUE**，指定要擷取的值帶正負號的整數值，將傳回值轉換為**int**型別。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，變數所指向`lpTrans`設**TRUE**，且傳回的值為控制項文字的已翻譯的值。  
+ 如果成功，變數所指向*lpTrans*設**TRUE**，且傳回的值為控制項文字的已翻譯的值。  
   
- 如果函式失敗，變數所指向`lpTrans`設**FALSE**，並傳回值為零。 請注意，由於零是可能的已翻譯的值，傳回值為零不本身會指出失敗。  
+ 如果函式失敗，變數所指向*lpTrans*設**FALSE**，並傳回值為零。 請注意，由於零是可能的已翻譯的值，傳回值為零不本身會指出失敗。  
   
- 如果`lpTrans`是**NULL**，此函數會傳回沒有成功或失敗的資訊。  
+ 如果*lpTrans*是**NULL**，此函數會傳回沒有成功或失敗的資訊。  
   
 ### <a name="remarks"></a>備註  
  此函式會將擷取的文字轉譯條狀配置任何額外的空格開頭的文字，然後將轉換的十進位數字。 函式會停止轉譯它到達文字末端，或在遇到非數字字元。  
@@ -474,14 +474,14 @@ virtual int GetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  控制項的識別項。  
   
- `lpStr`  
+ *lpStr*  
  控制項的文字指標。  
   
- `nMaxCount`  
- 指定以字元為單位，要複製到緩衝區所指向之字串的長度上限， `lpStr`。 如果字串的長度超過限制，系統會截斷字串。  
+ *nMaxCount*  
+ 指定以字元為單位，要複製到緩衝區所指向之字串的長度上限， *lpStr*。 如果字串的長度超過限制，系統會截斷字串。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，傳回值會指定字元複製到緩衝區，不包括結束的 null 字元的數。  
@@ -489,14 +489,14 @@ virtual int GetDlgItemText(
  如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
- 決定是否容器處理`WM_SETFOCUS`訊息。  
+ 決定是否容器處理 WM_SETFOCUS 訊息。  
   
 ```  
 virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果容器處理`WM_SETFOCUS`訊息; 否則為零。  
+ 為非零，如果容器處理 WM_SETFOCUS 訊息。否則為零。  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  處理無視窗控制項的視窗訊息。  
@@ -510,14 +510,14 @@ virtual BOOL HandleWindowlessMessage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `message`  
+ *message*  
  視窗訊息，Windows 所提供的識別項。  
   
- `wParam`  
- 參數的訊息。由 Windows 所提供。 指定特定訊息的其他資訊。 此參數的內容而定的值`message`參數。  
+ *wParam*  
+ 參數的訊息。由 Windows 所提供。 指定特定訊息的其他資訊。 此參數的內容而定的值*訊息*參數。  
   
- `lParam`  
- 參數的訊息。由 Windows 所提供。 指定特定訊息的其他資訊。 此參數的內容而定的值`message`參數。  
+ *lParam*  
+ 參數的訊息。由 Windows 所提供。 指定特定訊息的其他資訊。 此參數的內容而定的值*訊息*參數。  
   
  *plResult*  
  Windows 結果碼。 指定訊息處理的結果，取決於訊息傳送。  
@@ -536,7 +536,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDButton`  
+ *nIDButton*  
  按鈕控制項的識別項。  
   
 ### <a name="return-value"></a>傳回值  
@@ -622,14 +622,14 @@ CMapPtrToPtr m_siteMap;
 ```  
   
 ##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
- 由架構呼叫以處理`WM_PAINT`要求。  
+ 由架構呼叫以處理 WM_PAINT 要求。  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  容器所使用的裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -639,28 +639,28 @@ virtual BOOL OnPaint(CDC* pDC);
  此函式可自訂的繪製程序會覆寫。  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- 由架構呼叫時，控制站台所指`pSite`，即將就地啟動。  
+ 由架構呼叫時，控制站台所指*pSite*，即將就地啟動。  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSite`  
+ *pSite*  
  指向控制項站台將要就地啟動。  
   
 ### <a name="remarks"></a>備註  
  在就地啟用表示容器的主功能表取代就地組合功能表。  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- 由架構呼叫時，控制站台所指`pSite`，即將停用。  
+ 由架構呼叫時，控制站台所指*pSite*，即將停用。  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSite`  
+ *pSite*  
  指向控制項站台即將關閉。  
   
 ### <a name="remarks"></a>備註  
@@ -676,7 +676,7 @@ virtual void ScrollChildren(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  沿著 x 軸的捲動的數量，以像素。  
   
  *dy*  
@@ -694,16 +694,16 @@ virtual LRESULT SendDlgItemMessage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  指定接收訊息之控制項的識別碼。  
   
- `message`  
+ *message*  
  指定要傳送的訊息。  
   
- `wParam`  
+ *wParam*  
  指定特定訊息的其他資訊。  
   
- `lParam`  
+ *lParam*  
  指定特定訊息的其他資訊。  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
@@ -717,17 +717,17 @@ virtual void SetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  控制項的識別項。  
   
- `nValue`  
+ *n 值*  
  要顯示的整數值。  
   
- `bSigned`  
- 指定是否`nValue`參數已簽署或不帶正負號。 如果這個參數是**TRUE**，`nValue`簽署。 如果這個參數是**TRUE**和`nValue`小於零，字串中的第一個數字之前放置登減號。 如果這個參數是**FALSE**，`nValue`不帶正負號。  
+ *bSigned*  
+ 指定是否*n 值*參數已簽署或不帶正負號。 如果這個參數是**TRUE**， *n 值*簽署。 如果這個參數是**TRUE**和*n 值*小於零，字串中的第一個數字之前放置登減號。 如果這個參數是**FALSE**， *n 值*不帶正負號。  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
- 設定指定的控制項，使用中包含的文字的文字`lpszString`。  
+ 設定指定的控制項，使用中包含的文字的文字*lpszString*。  
   
 ```  
 virtual void SetDlgItemText(
@@ -736,10 +736,10 @@ virtual void SetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  控制項的識別項。  
   
- `lpszString`  
+ *lpszString*  
  控制項的文字指標。  
   
 ## <a name="see-also"></a>另請參閱  

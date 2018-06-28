@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368965"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042530"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 類別
 用於 OLE 的 [編輯連結] 對話方塊。  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDoc`  
+ *pDoc*  
  指向包含要編輯連結的 OLE 文件。  
   
- `pView`  
- 指向目前的檢視上`pDoc`。  
+ *pView*  
+ 指向目前的檢視上*pDoc*。  
   
- `dwFlags`  
+ *dwFlags*  
  建立旗標，其中包含可能是 0 或**ELF_SHOWHELP**指定對話方塊顯示時，是否會顯示 [說明] 按鈕。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，父視窗，在對話方塊的 設定主應用程式視窗為。  
   
 ### <a name="remarks"></a>備註  

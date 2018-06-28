@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374470"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037750"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 類別
 內嵌於快顯功能表的功能表列。  
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  `TRUE` 若要自動重新計算配置的快顯功能表列 窗格中。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiMenuResID`  
+ [in]*uiMenuResID*  
  指定要載入功能表資源的功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  在螢幕上的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hMenu`  
+ [in]*hMenu*  
  要從中匯入的快顯功能表按鈕功能表。  
   
- [輸入] `bShowAllCommands`  
+ [in]*bShowAllCommands*  
  `TRUE` 如果功能表上的所有命令匯入，或`FALSE`如果很少使用的項目可能會隱藏起來。  
   
 ### <a name="return-value"></a>傳回值  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hMenu`  
+ [in]*hMenu*  
  載入 [封存] 功能表的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  工具列按鈕的樣式是要設定的以零為起始的索引。  
   
- [輸入] `nStyle`  
+ [in]*nStyle*  
  按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
   
 ### <a name="remarks"></a>備註  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iOffset`  
+ [in]*iOffset*  
  快顯功能表列應進行位移的資料列數目。  
   
 ### <a name="remarks"></a>備註  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMenuButton`  
+ [in]*pMenuButton*  
  要設定延遲計時器的功能表按鈕的指標。  
   
- [輸入] `nDelayFactor`  
+ [in]*nDelayFactor*  
  延遲因素，等於至少一個，乘以標準功能表的延遲時間 （通常之間半秒和 5 秒）。  
   
 ### <a name="remarks"></a>備註  

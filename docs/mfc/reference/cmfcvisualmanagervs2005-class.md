@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a48cbe09d493ecc86bf8927ad4c66fd03d7662f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371737"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038057"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 類別
 `CMFCVisualManagerVS2005` 讓應用程式的 Microsoft Visual Studio 2005 的外觀。  
@@ -143,7 +143,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pPropList`  
+ [in]*pPropList*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -166,15 +166,15 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTabWnd`  
- [輸入] `clrDark`  
- [輸入] `clrBlack`  
- [輸入] `clrHighlight`  
- [輸入] `clrFace`  
- [輸入] `clrDarkShadow`  
- [輸入] `clrLight`  
- [輸入] `pbrFace`  
- [輸入] `pbrBlack`  
+ [in]*pTabWnd*  
+ [in]*clrDark*  
+ [in]*clrBlack*  
+ [in]*clrHighlight*  
+ [in]*clrFace*  
+ [in]*clrDarkShadow*  
+ [in]*clrLight*  
+ [in]*pbrFace*  
+ [in]*pbrBlack*  
   
 ### <a name="remarks"></a>備註  
   
@@ -201,10 +201,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rectBounds`  
- [輸入] `rectBorderSize`  
- [輸入] `pButton`  
+ [in]*pDC*  
+ [in]*rectBounds*  
+ [in]*rectBorderSize*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>備註  
   
@@ -223,13 +223,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `pButton`  
- [輸入] `bActive`  
- [輸入] `bHorz`  
- [輸入] `bMaximized`  
- [輸入] `bDisabled`  
- [輸入] `nImageID`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*bActive*  
+ [in]*bHorz*  
+ [in]*bMaximized*  
+ [in]*bDisabled*  
+ [in]*nImageID*  
   
 ### <a name="remarks"></a>備註  
   
@@ -246,11 +246,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `pBar`  
- [輸入] `bActive`  
- [輸入] `rectCaption`  
- [輸入] `rectButtons`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*bActive*  
+ [in]*rectCaption*  
+ [in]*rectButtons*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -268,10 +268,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `pBar`  
- [輸入] `rect`  
- [輸入] `bIsHoriz`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
+ [in]*bIsHoriz*  
   
 ### <a name="remarks"></a>備註  
   
@@ -288,11 +288,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rectTab`  
- [輸入] `iTab`  
- [輸入] `bIsActive`  
- [輸入] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rectTab*  
+ [in]*iTab*  
+ [in]*bIsActive*  
+ [in]*pTabWnd*  
   
 ### <a name="remarks"></a>備註  
   
@@ -306,8 +306,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -322,9 +322,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rect`  
- [輸入] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pTabWnd*  
   
 ### <a name="remarks"></a>備註  
   
@@ -339,9 +339,9 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rect`  
- [輸入] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>備註  
   
@@ -357,10 +357,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rect`  
- [輸入] `pBrush`  
- [輸入] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pBrush*  
+ [in]*pButton*  
   
 ### <a name="remarks"></a>備註  
   
@@ -376,10 +376,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rectCaption`  
- [輸入] `pFrameWnd`  
- [輸入] `bActive`  
+ [in]*pDC*  
+ [in]*rectCaption*  
+ [in]*pFrameWnd*  
+ [in]*bActive*  
   
 ### <a name="return-value"></a>傳回值  
   

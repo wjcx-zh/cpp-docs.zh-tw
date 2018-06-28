@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366638"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042078"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 類別
 `CMFCPropertyPage`類別支援在屬性頁上顯示快顯功能表。  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDTemplate`  
+ *nIDTemplate*  
  此頁面的範本資源 ID。  
   
- `nIDCaption`  
+ *nIDCaption*  
  資源識別碼的標籤放置在此頁面 索引標籤。 如果為 0，名稱被取自此頁面的對話方塊範本中。 預設值為 0。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  此頁面的範本名稱點。 不能`NULL`。  
   
 ### <a name="return-value"></a>傳回值  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371669"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041746"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 類別
 實作內容快顯工具列。  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRibbonBar`  
+ [in]*pRibbonBar*  
  要顯示的按鈕搜尋迷你工具列功能區列。  
   
- [輸入] `lstCommands`  
+ [in]*lstCommands*  
  顯示迷你工具列上的命令清單。 所有的功能區分類會搜尋以尋找相關聯的按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `x`  
+ [in]*x*  
  指定螢幕座標的迷你工具列的水平位置。  
   
- [輸入] `y`  
+ [in]*y*  
  指定螢幕座標的迷你工具列的垂直位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `x`  
+ [in]*x*  
  在螢幕座標中指定的內容功能表的水平位置。  
   
- [輸入] `y`  
+ [in]*y*  
  在螢幕座標中指定的內容功能表的垂直位置。  
   
- [輸入] `uiMenuResID`  
+ [in]*uiMenuResID*  
  指定要顯示內容功能表中的資源 ID。  
   
- [輸入] `pWndOwner`  
+ [in]*pWndOwner*  
  識別視窗操作功能表中接收訊息的視窗。  
   
 ### <a name="return-value"></a>傳回值  

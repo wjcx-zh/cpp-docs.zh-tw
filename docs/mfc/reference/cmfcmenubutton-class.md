@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375385"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040164"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 類別
 顯示快顯功能表和報告使用者功能表選取的按鈕。  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
  指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bCalcOnly`  
+ [in]*bCalcOnly*  
  布林值參數，指出是否此方法會調整大小的按鈕。  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定新按鈕的大小。  
   
 ### <a name="remarks"></a>備註  
- 如果您呼叫此函式和`bCalcOnly`是`TRUE`，`SizeToContent`會計算按鈕的新大小。  
+ 如果您呼叫此函式和*bCalcOnly*是`TRUE`，`SizeToContent`會計算按鈕的新大小。  
   
  新按鈕的大小計算為符合按鈕文字、 影像和箭號。 架構也會加入 10 個像素水平的邊緣和垂直邊緣 5 像素的預先定義的邊界。  
   

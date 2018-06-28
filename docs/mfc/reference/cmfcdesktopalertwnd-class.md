@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370652"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039982"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`類別實作來通知使用者有關的事件在螢幕上會出現非強制回應對話方塊的功能。  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pWndOwner`  
+ [in][out]*pWndOwner*  
  指定 [通知] 視窗的擁有者。 該擁有者將收到所有桌面警示視窗的通知。 這個值不能是 `NULL`。  
   
- [輸入] `uiDlgResID`  
+ [in]*uiDlgResID*  
  指定警示的視窗資源識別碼。  
   
- [輸入] `hMenu`  
+ [in]*hMenu*  
  指定當使用者按下功能表按鈕時顯示的功能表。 如果`NULL`，不會顯示功能表按鈕。  
   
- [輸入] `ptPos`  
+ [in]*ptPos*  
  指定 [通知] 視窗會顯示其中的初始位置，就會使用螢幕座標。 如果這個參數是 （-1，-1），[通知] 視窗會顯示在螢幕右下角。  
   
- [輸入] `pRTIDlgBar`  
+ [in]*pRTIDlgBar*  
  涵蓋 [通知] 視窗的工作區的自訂對話方塊類別的執行階段類別資訊。  
   
- [輸入] `params`  
+ [in]*params*  
  指定用來建立警示的視窗的參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CPoint&`  
+ [in]*CPoint （& s)*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `wParam`  
- [輸入] `lParam`  
+ [in]*wParam*  
+ [in]*lParam*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>備註  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hwnd`  
+ [in]*hwnd*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nSpeed`  
+ [in]*nSpeed*  
  指定新動畫的速度，以毫秒為單位。  
   
 ### <a name="remarks"></a>備註  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `type`  
+ [in]*類型*  
  指定動畫類型。  
   
 ### <a name="remarks"></a>備註  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nTime`  
+ [in]*nTime*  
  ，以毫秒為單位，所經過的時間之前會自動關閉警示的視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSmallCaption`  
+ [in]*bSmallCaption*  
  `TRUE` 若要指定 [通知] 視窗會顯示小標題;否則，`FALSE`指定 [通知] 視窗會顯示一般大小的標題。  
   
 ### <a name="remarks"></a>備註  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nTransparency`  
+ [in]*nTransparency*  
  指定透明度層級。 此值必須介於 0 和 255 之間。 值愈大、 更多的不透明的視窗。  
   
 ### <a name="remarks"></a>備註  

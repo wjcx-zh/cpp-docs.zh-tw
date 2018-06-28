@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377619"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041886"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 `CMDIChildWndEx`類別會提供功能的 Windows 多重文件介面 (MDI) 子視窗。 它會擴充功能的[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
  在窗格的指標。  
   
- [輸入] `bTail`  
+ [in]*bTail*  
  `TRUE` 若要窗格的清單結尾加入窗格，停駐的管理員。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
  在窗格的指標。  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hdwp`  
+ [in]*hdwp*  
  延後的視窗位置結構的控制代碼。  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
  在窗格的指標。  
   
- [輸入] `nDockBarID`  
+ [in]*nDockBarID*  
  窗格的識別碼。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  矩形的指標。  
   
 ### <a name="remarks"></a>備註  
- `lpRect`不使用參數。  
+ *LpRect*不使用參數。  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  將窗格停駐在另一個窗格的左邊。  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBar`  
+ *pBar*  
  指標，是要停駐窗格。  
   
- `pLeftOf`  
+ *pLeftOf*  
  作為參考點的窗格指標。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 成功時，`FALSE`失敗。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會採用所指定的窗格`pBar`並固定在左邊窗格中所指定`pLeftOf`。  
+ 這個方法會採用所指定的窗格*pBar*並固定在左邊窗格中所指定*pLeftOf*。  
   
  當您想要停駐在預先定義的順序中的幾個窗格，請呼叫這個方法。  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwDockStyle`  
+ [in]*dwDockStyle*  
  指定已啟用的主框架視窗的側邊。 使用一或多個下列旗標。  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwDockStyle`  
+ [in]*dwDockStyle*  
  指定要啟用的停駐對齊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  若要尋找窗格的控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
  要插入窗格指標。  
   
- [輸入] `pTarget`  
+ [in]*pTarget*  
  在相鄰的窗格指標。  
   
- [輸入] `bAfter`  
- 如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`插入之前`pTarget`。  
+ [in]*bAfter*  
+ 如果`TRUE`， *pControlBar*後面插入*pTarget*。 如果`FALSE`， *pControlBar*插入之前*pTarget*。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果此方法成功，`FALSE`否則。  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  指定的點。  
   
- [輸入] `dwBarAlignment`  
+ [in]*dwBarAlignment*  
  指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，和 `CBRS_ALIGN_BOTTOM`  
   
- [輸入] `bOuterEdge`  
+ [in]*bOuterEdge*  
  `TRUE` 如果點附近外框的停駐位置。`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrame`  
+ [in]*pFrame*  
  迷你框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bPreview`  
+ [in]*bPreview*  
  如果`TRUE`，輸入 預覽列印模式。 如果`FALSE`，結束預覽列印模式。  
   
- [輸入] `pState`  
+ [in]*pState*  
  預覽列印狀態結構的指標。  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bAddToTitle`  
+ [in]*bAddToTitle*  
  如果`TRUE`，標題中加入文件名稱。  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  指定的點，若要檢查的螢幕座標。  
   
- [輸入] `nSensitivity`  
+ [in]*nSensitivity*  
  搜尋區域增加此數量。 如果指定的點落在增加區域窗格可滿足搜尋條件。  
   
- [輸入] `bExactBar`  
- `TRUE` 表示忽略`nSensitivity`參數，否則`FALSE`。  
+ [in]*bExactBar*  
+ `TRUE` 表示忽略*nSensitivity*參數，否則`FALSE`。  
   
- [輸入] `pRTCBarType`  
+ [in]*pRTCBarType*  
  如果沒有`NULL`，方法會搜尋窗格指定的型別。  
   
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  如果窗格找到指定的點，此參數會包含已最接近指定位置的窗格的側邊。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ### <a name="return-value"></a>傳回值  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>備註  
  呼叫此方法以判斷窗格是否包含指定的點，根據指定的條件，例如執行階段類別和可見性。  
   
- 此函數會傳回，而且找不到窗格中，當`dwAlignment`包含指定點的對齊方式。 例如，如果點已頂端的窗格中，最接近`dwAlignment`設`CBRS_ALIGN_TOP`。  
+ 此函數會傳回，而且找不到窗格中，當*dwAlignment*包含指定點的對齊方式。 例如，如果點已頂端的窗格中，最接近*dwAlignment*設`CBRS_ALIGN_TOP`。  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  重新計算視窗的配置。  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bNotify`  
+ [in]*bNotify*  
  如果`TRUE`，使用中視窗的就地項目接收的版面配置變更通知。  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
  若要移除窗格指標。  
   
- [輸入] `bDestroy`  
+ [in]*bDestroy*  
  如果`TRUE`，[移除] 窗格會終結。  
   
- [輸入] `bAdjustLayout`  
+ [in]*bAdjustLayout*  
  如果`TRUE`，立即調整停駐的配置。  
   
- [輸入] `bAutoHide`  
+ [in]*bAutoHide*  
  如果`TRUE`，停駐的配置相關的自動隱藏列清單。 如果`FALSE`，停駐的配置相關規則窗格的清單。  
   
- [輸入] `pBarReplacement`  
+ [in]*pBarReplacement*  
  取代 [移除] 窗格之窗格的指標。  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `p`  
+ [in]*p*  
   
 ### <a name="remarks"></a>備註  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
- [輸入] `bShow`  
- [輸入] `bDelay`  
- [輸入] `bActivate`  
+ [in]*pBar*  
+ [in]*bShow*  
+ [in]*bDelay*  
+ [in]*bActivate*  
   
 ### <a name="remarks"></a>備註  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hIcon`  
+ *hIcon*  
  在 Windows 7 工作列 索引標籤上顯示圖示的控制代碼。  
   
 ### <a name="remarks"></a>備註  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  指定此函式是否須檢查向 MDI 索引標籤的 MDI 子系數目。 如果這個數字是 0，此函式會移除裁剪方框從應用程式的工作列縮圖。  
   
 ### <a name="remarks"></a>備註  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  指定新的裁剪方框。 如果矩形空白或 null，則會移除裁剪。  
   
 ### <a name="return-value"></a>傳回值  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  STPFLAG 值的組合。 如需詳細資訊，請參閱[itaskbarlist4:: Settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx)。  
   
 ### <a name="remarks"></a>備註  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndBefore`  
+ *pWndBefore*  
  其縮圖會插入至左的 MDI 子視窗指標。 此視窗必須已透過登錄`RegisterTaskbarTab`。 如果此值為`NULL`，新的縮圖會加入至清單的結尾。  
   
 ### <a name="remarks"></a>備註  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndBefore`  
+ *pWndBefore*  
  其縮圖會插入至左的 MDI 子視窗指標。 此視窗必須已透過登錄`RegisterTaskbarTab`。 如果此值為`NULL`，新的縮圖會加入至清單的結尾。  
   
 ### <a name="remarks"></a>備註  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hBmpDst`  
+ *hBmpDst*  
  目的點陣圖的控制代碼。  
   
- `rectDst`  
+ *rectDst*  
  指定目的地矩形。  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  來源點陣圖的控制代碼。  
   
- `rectSrc`  
+ *rectSrc*  
  指定來源矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  指定正在啟用視窗的最上層的父視窗的指標。 指標可能是暫時性的不會儲存。  
   
- `nHitTest`  
+ *nHitTest*  
  指定的點擊測試區域代碼。 點擊的測試是測試，決定游標的位置。  
   
- `message`  
+ *message*  
  指定滑鼠訊息數目。  
   
 ### <a name="remarks"></a>備註  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nState`  
+ *nState*  
  指定是否`CWnd`啟動或停用。  
   
- `pWndOther`  
+ *pWndOther*  
  指標`CWnd`正在啟動或停用。 指標可以是`NULL`，並可能是暫時性。  
   
- `bMinimized`  
+ *bMinimized*  
  指定的最小化的狀態`CWnd`正在啟動或停用。 值為`TRUE`指出視窗最小化。  
   
 ### <a name="remarks"></a>備註  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWidth`  
+ *nWidth*  
  指定必要的點陣圖的寬度。  
   
- `nHeight`  
+ *nHeight*  
  指定所需點陣圖的高度。  
   
 ### <a name="remarks"></a>備註  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  這個參數是`TRUE`點陣圖所要求的 MDI 子系，如果它目前作用中和主視窗不最小化。 預設在此情況下處理主視窗的快照。  
   
- `ptLocation`  
+ *ptLocation*  
  指定點陣圖的位置 （最上層） 在主要視窗工作區座標。 應由被呼叫端提供此點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  指定是否要啟用 ( `TRUE`)，或停用 ( `FALSE`) 自動選取来顯示視窗的用戶端區域的一部分。  
   
 ### <a name="remarks"></a>備註  

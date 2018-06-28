@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369703"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042052"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 `CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-其中，`nID` 是核取方塊的命令識別碼，`lpszText` 則是核取方塊的文字標籤。  
+其中*nID*是核取方塊命令識別碼和*lpszText*是核取方塊的文字標籤。  
   
  您可以將核取方塊加入 功能區面板使用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  指定命令識別碼。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  指定文字標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  指標`CDC`相關聯的核取方塊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  指標`CDC`此核取方塊相關聯。  
   
 ### <a name="return-value"></a>傳回值  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  指標`CDC`此核取方塊相關聯的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  指標`CDC`要在其中繪製此核取方塊。  
   
 ### <a name="remarks"></a>備註  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CDC*`  
+ [in]*CDC**  
  指標`CDC`相關聯的核取方塊。  
   
- [輸入] `CRect`  
+ [in]*CRect*  
  A`CRect`物件，指定要在其中繪製的功能表影像的矩形。  
   
 ### <a name="return-value"></a>傳回值  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  在其中繪製此核取方塊的裝置內容的指標。  
   
- [輸入] `strText`  
+ [in]*strText*  
  顯示文字。  
   
- [輸入] `nTextOffset`  
+ [in]*nTextOffset*  
  距離，單位為像素，從清單方塊來顯示文字的左邊。  
   
- [輸入] `rect`  
+ [in]*rect*  
  核取方塊的顯示矩形。  
   
- [輸入] `bIsSelected`  
+ [in]*bIsSelected*  
  `TRUE` 如果選取此核取方塊，或`FALSE`如果不是。  
   
- [輸入] `bHighlighted`  
+ [in]*bHighlighted*  
  `TRUE` 如果核取方塊會反白顯示，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParent`  
+ *pParent*  
  核取方塊的父視窗。  
   
- `data`  
+ *data*  
  核取方塊的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  

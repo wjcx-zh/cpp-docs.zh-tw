@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e80b74262a05548d9aede80df44d204b759b84da
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373073"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038512"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 `CNetAddressCtrl` 類別表示網路位址控制項，您可以用來輸入和驗證 IPv4、IPv6 和具名 DNS 位址的格式。  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `dwStyle`|若要套用至控制項的樣式的位元組合。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
-|[輸入] `rect`|若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[輸入] `pParentWnd`|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[輸入] `nID`|控制項的識別碼。|  
+|[in]*dwStyle*|若要套用至控制項的樣式的位元組合。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
+|[in]*rect*|若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
+|[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
+|[in]*nID*|控制項的識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `dwExStyle`|的位元組合 (OR) 套用至控制項的延伸樣式。 如需詳細資訊，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式。|  
-|[輸入] `dwStyle`|的位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
-|[輸入] `rect`|若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[輸入] `pParentWnd`|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[輸入] `nID`|控制項的識別碼。|  
+|[in]*dwExStyle*|的位元組合 (OR) 套用至控制項的延伸樣式。 如需詳細資訊，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式。|  
+|[in]*dwStyle*|的位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
+|[in]*rect*|若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
+|[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
+|[in]*nID*|控制項的識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -186,7 +186,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、out] `pAddress`|指標[NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345)結構。  設定`pAddrInfo`隸屬此結構的位址[NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)結構 GetAddress 方法呼叫之前。|  
+|[in、 out]*pAddress*|指標[NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345)結構。  設定*pAddrInfo*隸屬此結構的位址[NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)結構 GetAddress 方法呼叫之前。|  
   
 ### <a name="return-value"></a>傳回值  
  值`S_OK`如果此方法成功，否則 COM 錯誤碼。 如需可能的錯誤碼的詳細資訊，請參閱 > 一節會傳回值[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)巨集。  
@@ -209,7 +209,7 @@ DWORD GetAllowType() const;
  網路位址控制項可以支援的位元組合 (OR) 旗標，指定類型的位址。 如需詳細資訊，請參閱[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。  
   
 ### <a name="remarks"></a>備註  
- 此訊息會叫用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)巨集，它 Windows SDK 中所述。 該巨集傳送`NCM_GETALLOWTYPE`訊息。  
+ 此訊息會叫用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)巨集，它 Windows SDK 中所述。 該巨集 NCM_GETALLOWTYPE 將訊息傳送。  
   
 ##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  設定目前的網路位址控制項可支援的網路位址的類型。  
@@ -222,7 +222,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `dwAddrMask`|網路位址控制項可以支援的位元組合 (OR) 旗標，指定類型的位址。 如需詳細資訊，請參閱[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
+|[in]*dwAddrMask*|網路位址控制項可以支援的位元組合 (OR) 旗標，指定類型的位址。 如需詳細資訊，請參閱[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
   
 ### <a name="return-value"></a>傳回值  
  `S_OK` 如果此方法成功。否則，COM 錯誤碼。  
@@ -230,7 +230,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 ### <a name="remarks"></a>備註  
  使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定的位址可支援目前的網路位址控制項類型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法來驗證和剖析使用者輸入的網路位址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法時所顯示的錯誤訊息資訊提示[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  
   
- 此訊息會叫用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)巨集，它 Windows SDK 中所述。 該巨集傳送`NCM_SETALLOWTYPE`訊息。  
+ 此訊息會叫用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)巨集，它 Windows SDK 中所述。 該巨集 NCM_SETALLOWTYPE 將訊息傳送。  
   
 ## <a name="see-also"></a>另請參閱  
  [CNetAddressCtrl 類別](../../mfc/reference/cnetaddressctrl-class.md)   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367912"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040229"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 `CMFCColorDialog`類別代表色彩選取對話方塊。  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `clrInit`  
+ [in]*clrInit*  
  預設的色彩選擇。 如果未不指定任何值，則預設為 RGB(0,0,0) （黑色）。  
   
- [輸入] `dwFlags`  
+ [in]*dwFlags*  
  （保留）。  
   
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  對話方塊的父系或擁有者視窗的指標。  
   
- [輸入] `hPal`  
+ [in]*hPal*  
  色彩調色盤的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rgb`  
+ [in]*rgb*  
  RGB 色彩值  
   
 ### <a name="remarks"></a>備註  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rgb`  
+ [in]*rgb*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)指定 RGB 色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `R`  
+ [in]*R*  
  指定 RGB 值的紅色元件。  
   
- [輸入] `G`  
+ [in]*G*  
  指定 RGB 值的綠色元件。  
   
- [輸入] `B`  
+ [in]*B*  
  指定 RGB 值的藍色元件。  
   
 ### <a name="remarks"></a>備註  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `R`  
+ [in]*R*  
  指定 RGB 值的紅色的元件  
   
- [輸入] `G`  
+ [in]*G*  
  指定 RGB 值的綠色的元件  
   
- [輸入] `B`  
+ [in]*B*  
  指定 RGB 值的藍色的元件  
   
 ### <a name="remarks"></a>備註  

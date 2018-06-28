@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370408"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040073"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 類別
 這個類別會實作會放在 Shell for Rich Preview 提供主控視窗的視窗。  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hWndParent`  
+ *hWndParent*  
  在 Shell for Rich Preview 提供主控視窗控制代碼。  
   
- `prc`  
+ *中國*  
  指定的初始大小和視窗的位置。  
   
- `pContext`  
+ *pContext*  
  建立內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  繪製的裝置內容的指標。  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDocument`  
+ *pDocument*  
  文件實作指標。  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hWndParent`  
+ *hWndParent*  
  新的父視窗控制代碼。  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>參數  
- `clrBack`  
+ *clrBack*  
  預覽視窗的背景色彩。  
   
- `clrText`  
+ *clrText*  
  預覽視窗的文字色彩。  
   
- `plf`  
+ *plf*  
  用來在預覽視窗中顯示文字的字型。 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `prc`  
+ *中國*  
  指定新的大小和預覽控制項的位置。  
   
- `bRedraw`  
+ *bRedraw*  
  指定是否應該重繪控制項。  
   
 ### <a name="remarks"></a>備註  

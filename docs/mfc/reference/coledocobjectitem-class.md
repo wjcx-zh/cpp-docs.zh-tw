@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373575"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042205"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 類別
 實作主動式文件內含項目。  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pContainerDoc`  
+ *pContainerDoc*  
  指標`COleDocument`物件做為主動式文件容器。 這個參數必須是**NULL**啟用**IMPLEMENT_SERIALIZE**。 通常將 OLE 項目建構與非**NULL**文件指標。  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCaller`  
+ *pCaller*  
  指標[CView](../../mfc/reference/cview-class.md)傳送列印命令的物件。  
   
- `pInfo`  
+ *pInfo*  
  指標[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)物件，描述要列印工作。  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,14 +138,14 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCmdID`  
- 要執行的命令識別碼。 所識別之群組中必須是`pguidCmdGroup`。  
+ *nCmdID*  
+ 要執行的命令識別碼。 所識別之群組中必須是*pguidCmdGroup*。  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  指定命令執行的選項。 根據預設，設定，才能執行此命令不會提示使用者。 請參閱[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)如值的清單。  
   
- `pguidCmdGroup`  
- 命令群組的唯一識別碼。 根據預設， **NULL**，以指定標準的群組。 此命令傳遞`nCmdID`必須屬於群組。  
+ *pguidCmdGroup*  
+ 命令群組的唯一識別碼。 根據預設， **NULL**，以指定標準的群組。 此命令傳遞*nCmdID*必須屬於群組。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`S_OK`如果成功; 否則傳回下列錯誤碼的其中一個。  
@@ -155,14 +155,14 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|發生意外的錯誤。|  
 |**E_FAIL**|發生錯誤。|  
 |**E_NOTIMPL**|表示 MFC 本身應該嘗試轉譯和分派命令。|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 為非**NULL**但未指定可辨識的命令群組。|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 無法辨識為有效的命令群組 pGroup 中。|  
-|**OLECMDERR_DISABLED**|所識別的命令`nCmdID`已停用，無法執行。|  
-|**OLECMDERR_NOHELP**|呼叫端所識別的命令要求協助`nCmdID`但沒有說明。|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup*是非**NULL**但未指定可辨識的命令群組。|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID*無法辨識為有效的命令群組 pGroup 中。|  
+|**OLECMDERR_DISABLED**|所識別的命令*nCmdID*已停用，無法執行。|  
+|**OLECMDERR_NOHELP**|呼叫端所識別的命令要求協助*nCmdID*但沒有說明。|  
 |**OLECMDERR_CANCELLED**|使用者已取消執行。|  
   
 ### <a name="remarks"></a>備註  
- `pguidCmdGroup`和`nCmdID`參數會共同唯一識別叫用的命令。 `nCmdExecOpt`參數會指定要採取的確切動作。  
+ *PguidCmdGroup*和*nCmdID*參數會共同唯一識別叫用的命令。 *NCmdExecOpt*參數會指定要採取的確切動作。  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  呼叫此成員函式取得的指標`IOleDocumentView`介面目前使用的檢視。  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCaller`  
+ *pCaller*  
  指標[CView](../../mfc/reference/cview-class.md)傳送列印命令的物件。  
   
- `pInfo`  
+ *pInfo*  
  指標[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)物件，描述要列印工作。  
   
- `bPrintAll`  
+ *bPrintAll*  
  指定是否要列印整份文件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCaller`  
+ *pCaller*  
  正在傳送列印命令 CView 物件的指標。  
   
- `pInfo`  
+ *pInfo*  
  指標[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)物件，描述要列印工作。  
   
- `bPrintAll`  
+ *bPrintAll*  
  指定是否要列印整份文件。  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCmdID`  
+ *nCmdID*  
  要查詢的命令的識別碼。  
   
- `pdwStatus`  
+ *pdwStatus*  
  當做查詢結果傳回的旗標指標。 如需可能值的清單，請參閱[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)。  
   
- `pCmdText`  
+ *pCmdText*  
  指標[OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314)中傳回單一命令的名稱和狀態資訊所屬的結構。 可以是**NULL**表示呼叫端不需要這項資訊。  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  命令群組; 的唯一識別碼可以是**NULL**來指定標準的群組。  
   
 ### <a name="return-value"></a>傳回值  
@@ -277,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCloseOption`  
+ *dwCloseOption*  
  旗標，指定當它傳回至載入的狀態，OLE 項目儲存在哪些情況之下。 如需可能值的清單，請參閱[COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)。  
   
 ### <a name="remarks"></a>備註  

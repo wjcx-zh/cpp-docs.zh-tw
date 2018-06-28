@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372456"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038073"
 ---
 # <a name="cmutex-class"></a>CMutex 類別
 代表 「 mutex"— 允許執行緒互斥存取資源的同步處理物件。  
@@ -74,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  指定如果建立的執行緒`CMutex`物件一開始會有由 mutex 控制資源的存取權。  
   
- `lpszName`  
- `CMutex` 物件的名稱。 如果具有相同名稱的另一個 mutex 已存在，`lpszName`必須提供，如果物件會使用跨處理序界限。 如果**NULL**，將未命名的 mutex。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`即在參考該名稱的 mutex 物件。 如果名稱符合現有同步處理物件不是 mutex，建構將會失敗。  
+ *lpszName*  
+ `CMutex` 物件的名稱。 如果具有相同名稱的另一個 mutex 已存在， *lpszName*必須提供，如果物件會使用跨處理序界限。 如果**NULL**，將未命名的 mutex。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`即在參考該名稱的 mutex 物件。 如果名稱符合現有同步處理物件不是 mutex，建構將會失敗。  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Mutex 物件的安全性屬性。 此結構的完整說明，請參閱[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  

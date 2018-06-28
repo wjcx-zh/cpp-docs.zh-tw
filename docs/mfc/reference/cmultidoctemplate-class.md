@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371578"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040830"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 類別
 定義實作多重文件介面 (MDI) 的文件範本。  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDResource`  
+ *nIDResource*  
  指定的文件類型搭配使用的資源識別碼。 這可能包括功能表、 圖示、 快速鍵對應表和字串資源。  
   
  最多七 '\n' 字元分隔的子字串所組成的字串資源 （如果不包含子字串，則需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元）;這些子字串會描述文件類型。 子字串的相關資訊，請參閱[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如:   
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  如需有關這些資源類型的詳細資訊，請參閱[資源編輯器](../../windows/resource-editors.md)。  
   
- `pDocClass`  
- 指向`CRuntimeClass`文件類別的物件。 這個類別是**CDocument**-衍生的類別定義以代表您的文件。  
+ *pDocClass*  
+ 指向`CRuntimeClass`文件類別的物件。 這個類別是`CDocument`-衍生的類別定義以代表您的文件。  
   
- `pFrameClass`  
+ *pFrameClass*  
  指向`CRuntimeClass`框架視窗類別的物件。 這個類別可以是`CMDIChildWnd`-衍生的類別，或者它可以是`CMDIChildWnd`本身如果您要為您的文件框架視窗的預設行為。  
   
- `pViewClass`  
+ *pViewClass*  
  指向`CRuntimeClass`檢視類別的物件。 這個類別是`CView`-衍生的類別，您定義用來顯示文件。  
   
 ### <a name="remarks"></a>備註  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372372"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037300"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 類別
 表示使用者使用文件或應用程式中選取色彩的快顯功能表。  
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `colors`  
+ [in]*色彩*  
  架構會顯示快顯功能表的色彩的陣列。  
   
- [輸入] `color`  
+ [in]*色彩*  
  選取的預設色彩。  
   
- [輸入] `lpszAutoColor`  
+ [in]*lpszAutoColor*  
  文字標籤*自動*（預設值） 的色彩按鈕，或`NULL`。  
   
  自動按鈕的標準標籤是**自動**。  
   
- [輸入] `lpszOtherColor`  
+ [in]*lpszOtherColor*  
  文字標籤*其他*按鈕則顯示更多色彩選擇，或`NULL`。  
   
  其他按鈕的標準標籤是**更多色彩...**.  
   
- [輸入] `lpszDocColors`  
+ [in]*lpszDocColors*  
  文件色彩按鈕文字標籤。 文件色彩調色盤會列出所有文件目前使用的色彩。  
   
- [輸入] `lstDocColors`  
+ [in]*lstDocColors*  
  文件目前使用的色彩清單。  
   
- [輸入] `nColumns`  
+ [in]*nColumns*  
  具有色彩陣列的資料行數目。  
   
- [輸入] `nHorzDockRows`  
+ [in]*nHorzDockRows*  
  色軸具有水平停駐時的資料列數目。  
   
- [輸入] `nVertDockColumns`  
+ [in]*nVertDockColumns*  
  色軸具有為垂直的停駐時的資料行數目。  
   
- [輸入] `colorAutomatic`  
+ [in]*colorAutomatic*  
  當您按一下 [自動] 按鈕時，適用於架構的預設色彩。  
   
- [輸入] `uiCommandID`  
+ [in]*uiCommandID*  
  色軸控制項命令識別碼。  
   
- [輸入] `bStdColorDlg`  
+ [in]*bStdColorDlg*  
  布林值，指出是否要顯示標準系統色彩 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  對話方塊。  
   
- [輸入] `pParentBtn`  
+ [in]*pParentBtn*  
  父代按鈕指標。  
   
- [輸入] `nID`  
+ [in]*nID*  
  命令 ID。  
   
 ### <a name="remarks"></a>備註  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pWndMain`|Tear-off 列的父視窗的指標。|  
-|[輸入] `uiID`|Tear-off 列的命令識別碼。|  
-|[輸入] `lpszName`|Tear-off 列視窗文字。|  
+|[in]*pWndMain*|Tear-off 列的父視窗的指標。|  
+|[in]*uiID*|Tear-off 列的命令識別碼。|  
+|[in]*lpszName*|Tear-off 列視窗文字。|  
   
 ### <a name="return-value"></a>傳回值  
  新的分割控制列物件的指標。  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndList`  
+ [in]*pWndList*  
  屬性方格控制項物件的指標。  
   
 ## <a name="see-also"></a>另請參閱  

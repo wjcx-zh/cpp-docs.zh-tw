@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b3af1336c35fe9520834018d9c668005048db82
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366820"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037753"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 類別
 支援以 void 指標為索引鍵的 void 指標對應。  
@@ -61,7 +61,7 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CMapPtrToPtr`類別成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到 `CObject` 指標做為函式參數或傳回值，請用 `void` 的指標予以替代。 無論在何處看到`CString`或**const**指標`char`做為函式參數或傳回值，取代 指標`void`。  
+ 成員函式`CMapPtrToPtr`類別成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值的指標予以替代**void**。 無論在何處看到`CString`或**const**指標`char`做為函式參數或傳回值，取代 指標**void**。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

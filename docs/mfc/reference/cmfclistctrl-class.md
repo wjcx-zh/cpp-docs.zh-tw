@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369618"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037725"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 類別
 `CMFCListCtrl`類別會擴充功能的[CListCtrl 類別](../../mfc/reference/clistctrl-class.md)類別所支援的進階標頭控制項功能[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)。  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bMark`  
+ [in]*bMark*  
  布林值參數，決定是否要啟用不同的背景色彩。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  布林值參數，決定是否要立即重繪控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  布林值，指定是否要啟用多個資料行排序模式。  
   
 ### <a name="remarks"></a>備註  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lParam1`  
+ [in]*lParam1*  
  要比較的第一個項目。  
   
- [輸入] `lParam2`  
+ [in]*lParam2*  
  要比較的第二個項目。  
   
- [輸入] `iColumn`  
+ [in]*iColumn*  
  這個方法會排序資料行的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nRow`  
+ [in]*nRow*  
  有問題的儲存格的資料列。  
   
- [輸入] `nColumn`  
+ [in]*nColumn*  
  有問題的儲存格的資料行。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  使用者定義的資料。 預設實作不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nRow`  
+ [in]*nRow*  
  有問題的儲存格的資料列。  
   
- [輸入] `nColumn`  
+ [in]*nColumn*  
  有問題的儲存格的資料行。  
   
 ### <a name="return-value"></a>傳回值  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iColumn`  
+ [in]*iColumn*  
  若要移除資料行。  
   
 ### <a name="remarks"></a>備註  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iColumn`  
+ [in]*iColumn*  
  若要排序資料行。  
   
- [輸入] `bAscending`  
+ [in]*bAscending*  
  布林值，指定排序次序。  
   
- [輸入] `bAdd`  
- 布林值，指定方法是否會將所指定的資料行`iColumn`排序資料行的清單。  
+ [in]*bAdd*  
+ 布林值，指定方法是否會將所指定的資料行*iColumn*排序資料行的清單。  
   
 ### <a name="remarks"></a>備註  
  這個方法會輸入的參數傳遞至標題控制項使用的方法[CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)。  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iColumn`  
+ [in]*iColumn*  
  若要排序資料行。  
   
- [輸入] `bAscending`  
+ [in]*bAscending*  
  布林值，指定排序次序。  
   
- [輸入] `bAdd`  
- 布林值，指定是否此方法會將所指定的資料行`iColumn`排序資料行的清單。  
+ [in]*bAdd*  
+ 布林值，指定是否此方法會將所指定的資料行*iColumn*排序資料行的清單。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371510"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040742"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
 `CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區的快顯功能表的下拉式方塊控制項。  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszItem`  
+ [in]*lpszItem*  
  要加入之項目的字串。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  要加入的項目與相關的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  下拉式方塊的識別碼。  
   
- [輸入] `bHasEditBox`  
+ [in]*bHasEditBox*  
  `TRUE` 如果您想編輯方塊控制項; 內`FALSE`否則。  
   
- [輸入] `nWidth`  
+ [in]*nWidth*  
  像素為單位; 下拉式方塊的寬度或-1 可進行的預設寬度。  
   
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  下拉式方塊顯示標籤。  
   
- [輸入] `nImage`  
+ [in]*nImage*  
  下拉式方塊的小型影像索引。  
   
 ### <a name="remarks"></a>備註  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  要刪除的項目以零為起始的索引。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  要刪除的項目與相關的資料。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  要刪除之項目的字串。 如果有多個項目，使用相同的字串，則會刪除第一個項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用 調整大小;`FALSE`停用調整大小。  
   
 ### <a name="remarks"></a>備註  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszText`  
+ [in]*lpszText*  
  清單方塊中項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  下拉式方塊的裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nItem`  
+ [in]*nItem*  
  選取之項目的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  清單方塊中的項目以零為起始的索引。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  清單方塊中的項目與相關的資料。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  清單方塊中項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nHeight`  
+ [in]*nHeight*  
  高度 （像素為單位的清單方塊）。  
   
 ### <a name="remarks"></a>備註  

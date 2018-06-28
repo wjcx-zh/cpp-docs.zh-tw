@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373725"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037479"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 結構
 此結構提供使用者停留 MDI 索引標籤的相關資訊。  
@@ -43,7 +43,7 @@ struct CMFCTabToolTipInfo
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|工具提示文字。|  
   
 ## <a name="remarks"></a>備註  
- 指標`CMFCTabToolTipInfo`結構會當做參數傳遞`AFX_WM_ON_GET_TAB_TOOLTIP`訊息。 MDI 索引標籤已啟用，而且使用者將滑鼠指標停留在索引標籤控制項上時，會產生此訊息。  
+ 指標`CMFCTabToolTipInfo`結構會傳遞做為 AFX_WM_ON_GET_TAB_TOOLTIP 訊息的參數。 MDI 索引標籤已啟用，而且使用者將滑鼠指標停留在索引標籤控制項上時，會產生此訊息。  
   
 ## <a name="example"></a>範例  
  下列範例會示範如何`CMFCTabToolTipInfo`用於[MDITabsDemo 範例： MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。  

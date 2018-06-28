@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374893"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038217"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 類別
 允許將資料拖曳到置放目標。  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dropEffect`  
+ *dropEffect*  
  通常指出項目會發生您想要向使用者顯示的效果，則卸除發生了此點與所選取的資料。 一般而言，這是最新的呼叫所傳回的值[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_NONE` 不允許卸除。  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向視窗，其中包含所選取的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  指出是否已在上次呼叫後按下 ESC 鍵`COleDropSource::QueryContinueDrag`。  
   
- `dwKeyState`  
+ *dwKeyState*  
  包含在鍵盤上的輔助按鍵的狀態。 這是任意數目的下列組合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
   
 ### <a name="return-value"></a>傳回值  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370285"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042517"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 類別
 如需詳細資訊，請參閱[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的結構。  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指向要啟用或轉換的項目。  
   
- `dwFlags`  
+ *dwFlags*  
  使用位元結合起來建立旗標，其中包含下列值的任何數字-or 運算子：  
   
 - **CF_SELECTCONVERTTO**指定對話方塊中呼叫時，一開始選取轉換為選項按鈕。 這是預設值。  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON**指定呼叫對話方塊時，會顯示 [說明] 按鈕。  
   
- `pClassID`  
- 指向 CLSID 要啟用或轉換的項目。 如果**NULL**、 **CLSID**聯`pItem`將使用。  
+ *pClassID*  
+ 指向 CLSID 要啟用或轉換的項目。 如果**NULL**、 **CLSID**聯*pItem*將使用。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，父視窗，在對話方塊的 設定主應用程式視窗為。  
   
 ### <a name="remarks"></a>備註  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指向要啟用或轉換的項目。 不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  

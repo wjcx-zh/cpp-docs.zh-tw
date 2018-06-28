@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373299"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042305"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 具有 Microsoft Outlook [ **巡覽窗格** ] 視覺外觀的索引標籤控制項。  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndCtrl`  
+ [in]*pWndCtrl*  
  若要加入控制項的指標。  
   
- [輸入] `lpszName`  
+ [in]*lpszName*  
  指定的索引標籤的名稱。  
   
- [輸入] `bDetachable`  
+ [in]*bDetachable*  
  如果`TRUE`，頁面將會建立為中斷連結。  
   
- [輸入] `nImageID`  
+ [in]*nImageID*  
  要在新的索引標籤中顯示影像的內部的映像清單中的影像索引。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定 AFX_ `CBRS_`* 包裝停駐窗格的樣式。  
   
 ### <a name="remarks"></a>備註  
@@ -168,7 +168,7 @@ void AddControl(
   
  此函數會在內部呼叫上[cmfcbasetabctrl::](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)。  
   
- 如果您設定`bDetachable`至`TRUE`，`AddControl`會在內部建立`CDockablePaneAdapter`物件，並包裝加入的控制項。 它會自動設定的索引標籤式視窗的執行階段類別的執行階段類別`CMFCOutlookBar`和執行階段類別的浮動框架`CMultiPaneFrameWnd`。  
+ 如果您設定*bDetachable*至`TRUE`，`AddControl`會在內部建立`CDockablePaneAdapter`物件，並包裝加入的控制項。 它會自動設定的索引標籤式視窗的執行階段類別的執行階段類別`CMFCOutlookBar`和執行階段類別的浮動框架`CMultiPaneFrameWnd`。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`AddControl`方法中的`CMFCOutlookBarTabCtrl`類別。 此程式碼片段是部分[Outlook 示範範例](../../visual-cpp-samples.md)。  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
  指定的初始大小和位置，像素為單位。  
   
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  指向父視窗。 必須不是 `NULL`。  
   
- [輸入] `nID`  
+ [in]*nID*  
  控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 建立控制項為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 通常，outlook 工具列索引標籤控制項時，會建立[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)控制項`WM_CREATE`程序的訊息。  
+ 通常，outlook 工具列索引標籤控制項時，會建立[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)控制 WM_CREATE 訊息的處理程序。  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  指定在使用中的索引標籤之間切換時，就會發生的動畫是否已啟用。  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  指定應該啟用或停用動畫。  
   
 ### <a name="remarks"></a>備註  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  如果`TRUE`，啟用就地編輯的文字標籤。 如果`FALSE`，停用就地編輯。  
   
 ### <a name="remarks"></a>備註  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  決定是否顯示捲軸按鈕。  
   
- [輸入] `bIsUp`  
+ [in]*bIsUp*  
  決定是否要顯示的最上層的捲軸。  
   
- [輸入] `bIsDown`  
+ [in]*bIsDown*  
  決定是否要顯示的底端的捲軸。  
   
 ### <a name="remarks"></a>備註  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iTab`  
+ [in]*iTab*  
  索引標籤以開啟以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nBorderSize`  
+ [in]*nBorderSize*  
  像素為單位指定新的框線大小。  
   
 ### <a name="remarks"></a>備註  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiAlign`  
+ [in]*uiAlign*  
  指定的文字對齊方式。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  如果`TRUE`，outlook 視窗將會重新繪製。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此函式來變更 按鈕的文字對齊方式。  
   
- `uiAlign` 可以是下列值之一：  
+ *uiAlign*可以是下列值之一：  
   
 |常數|意義|  
 |--------------|-------------|  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  指定映像載入的資源識別碼。  
   
- [輸入] `cx`  
+ [in]*cx*  
  在映像清單中，像素為單位指定影像的寬度。  
   
- [輸入] `clrTransp`  
+ [in]*clrTransp*  
  指定透明色彩的 RGB 值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nVisiblePageButtons`  
+ [in]*nVisiblePageButtons*  
   
 ### <a name="remarks"></a>備註  
   

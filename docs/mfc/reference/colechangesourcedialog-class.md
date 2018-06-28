@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376446"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037592"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 類別
 用於 OLE 的 [變更來源] 對話方塊。  
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指向連結[COleClientItem](../../mfc/reference/coleclientitem-class.md)更新為其來源。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，對話方塊中的父視窗將會設定為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  

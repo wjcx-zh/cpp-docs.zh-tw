@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377910"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040203"
 ---
 # <a name="cobarray-class"></a>CObArray 類別
 支援 `CObject` 指標的陣列。  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  如同 C 陣列、 存取時間`CObArray`索引的項目是常數，而且陣列大小無關。  
   
- `CObArray` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果陣列`CObject`指標會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CObject`以及其陣列的索引，依次序列化項目。  
+ `CObArray` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果陣列`CObject`指標會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CObject`以及其陣列的索引，依次序列化項目。  
   
  如果您需要個別的傾印`CObject`陣列中的項目，您必須設定的深度`CDumpContext`1 或更大的物件。  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  清單衍生相似的陣列類別衍生。 特殊用途的清單類別衍生的詳細資訊，請參閱文章[集合](../../mfc/collections.md)。  
   
 > [!NOTE]
->  您必須使用`IMPLEMENT_SERIAL`巨集，如果您想要序列化的陣列，您在衍生類別實作中。  
+>  如果您想要序列化的陣列，您必須在衍生類別的實作中使用 IMPLEMENT_SERIAL 巨集。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- `newElement`  
+ *newElement*  
  `CObject`加入此陣列的指標。  
   
 ### <a name="return-value"></a>傳回值  
  加入項目的索引。  
   
 ### <a name="remarks"></a>備註  
- 如果[SetSize](#setsize)已搭配`nGrowBy`值大於 1，則額外的記憶體可以配置。 不過，只有 1 提高上限。  
+ 如果[SetSize](#setsize)已搭配*nGrowBy*值大於 1，則額外的記憶體可以配置。 不過，只有 1 提高上限。  
   
  下表顯示其他成員函式，類似於`CObArray::Add`。  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>備註  
  陣列必須是相同的型別。  
   
- 如有必要，**附加**可能會配置額外的記憶體來容納附加至陣列的項目。  
+ 如有必要，`Append`可能會配置額外的記憶體來容納附加至陣列的項目。  
   
  下表顯示其他成員函式，類似於`CObArray::Append`。  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  要複製到陣列之項目的來源。  
   
 ### <a name="remarks"></a>備註  
- **複製**不會釋放記憶體; 不過，如有必要，**複製**可能會配置額外的記憶體來容納的項目複製到陣列。  
+ `Copy` 不會釋放記憶體;不過，如果有必要，`Copy`可能會配置額外的記憶體來容納的項目複製到陣列。  
   
  下表顯示其他成員函式，類似於`CObArray::Copy`。  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  可能會大於所傳回的值的整數索引`GetUpperBound`。  
   
- `newElement`  
- `CObject`放置在這個陣列的指標。 A`newElement`值的**NULL**允許。  
+ *newElement*  
+ `CObject`放置在這個陣列的指標。 A *newElement*值的**NULL**允許。  
   
- `nCount`  
+ *nCount*  
  這個項目應該是次數插入 （預設值為 1）。  
   
- `nStartIndex`  
+ *nStartIndex*  
  可能會大於所傳回的值的整數索引`GetUpperBound`。  
   
- `pNewArray`  
+ *pNewArray*  
  另一個陣列，包含要加入至這個陣列的項目。  
   
 ### <a name="remarks"></a>備註  
  第一個版本`InsertAt`陣列中指定索引處插入一個項目 （或多個項目的複本）。 在過程中，它會往上移動這個索引及它在現有的項目移位上面的所有項目 （依遞增索引）。  
   
- 第二個版本從另一個插入的所有項目`CObArray`集合中，開始`nStartIndex`位置。  
+ 第二個版本從另一個插入的所有項目`CObArray`集合中，開始*nStartIndex*位置。  
   
  `SetAt`函式，相較之下，取代一個指定的陣列項目，並且不移動任何項目。  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
- `nCount`  
+ *nCount*  
  要移除的項目數目。  
   
 ### <a name="remarks"></a>備註  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
- `newElement`  
+ *newElement*  
  要插入此陣列中的物件指標。 A **NULL**允許值。  
   
 ### <a name="remarks"></a>備註  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  大於或等於 0 的整數索引。  
   
- `newElement`  
+ *newElement*  
  要加入此陣列的物件指標。 A **NULL**允許值。  
   
 ### <a name="remarks"></a>備註  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nNewSize`  
+ *nNewSize*  
  新陣列的大小 （數字的項目）。 必須是大於或等於 0。  
   
- `nGrowBy`  
+ *nGrowBy*  
  如果是必要的大小增加配置項目位置最小數目。  
   
 ### <a name="remarks"></a>備註  
  如果新的大小小於舊的大小，然後陣列會被截斷，並釋放所有未使用的記憶體。 為了提高效率，呼叫`SetSize`使用之前，先設定陣列的大小。 這可防止重新配置，並將陣列複製項目加入每次需要。  
   
- `nGrowBy`陣列成長的情況時，參數會影響內部記憶體配置。 其用途並不會影響陣列大小所報告`GetSize`和`GetUpperBound`。  
+ *NGrowBy*陣列成長的情況時，參數會影響內部記憶體配置。 其用途並不會影響陣列大小所報告`GetSize`和`GetUpperBound`。  
   
  如果陣列的大小成長，所有新配置**CObject \*** 指標設定為 NULL。  
   

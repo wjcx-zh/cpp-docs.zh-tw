@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366905"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039478"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 類別
 封裝線性速度轉換。  
@@ -84,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblSpeed`  
+ *dblSpeed*  
  變數的速度的絕對值。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
-`pLibrary`  
+*pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
   
 ### <a name="return-value"></a>傳回值  

@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a277293cd4b192af0a8a069b82b1b1614490a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69836eb254b23c05f2405c8f11b55a6d6293a9cb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378757"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039332"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 類別
 定義 OLE 項目的容器介面。  
@@ -323,7 +323,7 @@ void Activate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nVerb`  
+ *nVerb*  
  指定要執行的指令動詞。 它可以是下列其中一項：  
   
 |值|意義|符號|  
@@ -336,21 +336,21 @@ void Activate(
   
  -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果為-1。 如需其他值，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
   
- `pView`  
+ *pView*  
  容器檢視視窗，其中包含 OLE 項目; 的指標這用於伺服器應用程式就地啟用。 這個參數應該是**NULL**如果容器不支援就地啟用。  
   
- `lpMsg`  
+ *lpMsg*  
  造成要啟動的項目之訊息的指標。  
   
 ### <a name="remarks"></a>備註  
  如果伺服器應用程式使用 Microsoft Foundation 類別庫所撰寫，這個函式會導致[OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)成員函式對應`COleServerItem`来執行的物件。  
   
- 如果主要動作是編輯和中指定零`nVerb`啟動參數，伺服器應用程式以允許編輯 OLE 項目。 如果容器應用程式支援就地啟用，編輯即可備妥。 如果容器不支援就地啟用 （或如果未指定 Open 動詞），伺服器會在個別視窗中啟動，並編輯即可那里。 一般而言，當容器應用程式使用者按兩下 OLE 項目中的主要動詞命令的值時，才`nVerb`參數會決定使用者可以採取哪些動作。 不過，如果伺服器支援只有一個動作，會在該動作，不論其中該值會以指定`nVerb`參數。  
+ 如果主要的指令動詞為編輯，但在指定了 0 *nVerb*啟動參數，伺服器應用程式以允許編輯 OLE 項目。 如果容器應用程式支援就地啟用，編輯即可備妥。 如果容器不支援就地啟用 （或如果未指定 Open 動詞），伺服器會在個別視窗中啟動，並編輯即可那里。 一般而言，當容器應用程式使用者按兩下 OLE 項目中的主要動詞命令的值時，才*nVerb*參數會決定使用者可以採取哪些動作。 不過，如果伺服器支援只有一個動作，會在該動作，不論其中該值會以指定*nVerb*參數。  
   
  如需詳細資訊，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
- 啟動項目，就好像是所指定之類型的項目會使用 OLE 的物件轉換設備`clsidNew`。  
+ 啟動項目，就好像是所指定之類型的項目會使用 OLE 的物件轉換設備*clsidNew*。  
   
 ```  
 virtual BOOL ActivateAs(
@@ -366,7 +366,7 @@ virtual BOOL ActivateAs(
  *clsidOld*  
  項目的目前類別的參考識別碼。 類別識別碼應該代表實際物件的類型儲存，除非它是連結。 在此情況下，它應該是 CLSID 的連結所參考的項目。 [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)自動提供項目的正確類別識別碼。  
   
- `clsidNew`  
+ *clsidNew*  
  參考到目標類別識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -409,7 +409,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataObject`  
+ *pDataObject*  
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -430,7 +430,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataObject`  
+ *pDataObject*  
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -477,7 +477,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCloseOption`  
+ *dwCloseOption*  
  旗標，指定當它傳回至載入的狀態，OLE 項目儲存在哪些情況之下。 它可以包含下列值之一：  
   
 - `OLECLOSE_SAVEIFDIRTY` 儲存 OLE 項目。  
@@ -499,7 +499,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pContainerDoc`  
+ *pContainerDoc*  
  容器文件會包含此項目的指標。 這可以是任何[COleDocument](../../mfc/reference/coledocument-class.md)衍生項目。  
   
 ### <a name="remarks"></a>備註  
@@ -528,14 +528,14 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 - [CreateCloneFrom](#createclonefrom)  
   
 ##  <a name="convertto"></a>  COleClientItem::ConvertTo  
- 呼叫此成員函式，將項目所指定之類型為`clsidNew`。  
+ 呼叫此成員函式，將項目所指定之類型為*clsidNew*。  
   
 ```  
 virtual BOOL ConvertTo(REFCLSID clsidNew);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clsidNew`  
+ *clsidNew*  
  目標類型的類別識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -552,7 +552,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE**如果連結資訊應該複製到剪貼簿，讓連結的項目貼上，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
@@ -591,11 +591,11 @@ BOOL CreateFromClipboard(
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -617,17 +617,17 @@ BOOL CreateFromData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataObject`  
+ *pDataObject*  
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -650,20 +650,20 @@ BOOL CreateFromFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  建立 OLE 項目檔案名稱的指標。  
   
- `clsid`  
+ *clsid*  
  保留供未來使用。  
   
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -687,11 +687,11 @@ BOOL CreateLinkFromClipboard(
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -713,17 +713,17 @@ BOOL CreateLinkFromData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataObject`  
+ *pDataObject*  
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -745,17 +745,17 @@ BOOL CreateLinkFromFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  建立 OLE 項目檔案名稱的指標。  
   
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -777,17 +777,17 @@ BOOL CreateNewItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  唯一識別要建立的 OLE 項目類型的識別碼。  
   
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -811,11 +811,11 @@ BOOL CreateStaticFromClipboard(
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -837,17 +837,17 @@ BOOL CreateStaticFromData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataObject`  
+ *pDataObject*  
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
  *轉譯*  
  旗標，指定伺服器如何呈現 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
   
- `cfFormat`  
+ *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
- `lpFormatEtc`  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，如果使用*呈現*是**OLERENDER_FORMAT**或**OLERENDER_DRAW**。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -895,7 +895,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAutoDelete`  
+ *bAutoDelete*  
  指定是否要從文件中移除項目。  
   
 ### <a name="remarks"></a>備註  
@@ -914,26 +914,26 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpItemRect`  
+ *lpItemRect*  
  在工作區座標 （像素） 的螢幕上項目的矩形。  
   
- `ptOffset`  
- 從位移`lpItemRect`滑鼠位置在拖曳時的所在。  
+ *ptOffset*  
+ 從位移*lpItemRect*滑鼠位置在拖曳時的所在。  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  將此設**TRUE**如果連結資料應該複製到剪貼簿。 將它設定為**FALSE**如果伺服器應用程式不支援的連結。  
   
- `dwEffects`  
+ *dwEffects*  
  決定拖曳來源會允許在拖曳作業的效果。  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  實際開始拖曳所定義的矩形的指標。 如需詳細資訊，請參閱接下來的＜備註＞一節。  
   
 ### <a name="return-value"></a>傳回值  
  `DROPEFFECT` 值。 如果是`DROPEFFECT_MOVE`，應該移除原始的資料。  
   
 ### <a name="remarks"></a>備註  
- 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形`lpRectStartDrag`，或是直到已通過指定的毫秒數。 如果`lpRectStartDrag`是**NULL**，矩形的大小是一個像素。  
+ 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形*lpRectStartDrag* ，或是直到已通過指定的毫秒數。 如果*lpRectStartDrag*是**NULL**，矩形的大小是一個像素。  
   
  登錄機碼設定所指定的延遲時間。 您可以藉由呼叫變更的延遲時間[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果您未指定延遲時間，會使用預設值是 200 毫秒。 拖放到延遲時間會儲存，如下所示：  
   
@@ -956,7 +956,7 @@ virtual BOOL DoVerb(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nVerb`  
+ *nVerb*  
  指定要執行的指令動詞。 它可以包含下列其中一項：  
   
 |值|意義|符號|  
@@ -969,10 +969,10 @@ virtual BOOL DoVerb(
   
  -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果為-1。 如需其他值，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
   
- `pView`  
+ *pView*  
  指向 [檢視] 視窗中。這用於伺服器就地啟用。 這個參數應該是**NULL**如果容器應用程式不允許就地啟用。  
   
- `lpMsg`  
+ *lpMsg*  
  造成要啟動的項目之訊息的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -981,7 +981,7 @@ virtual BOOL DoVerb(
 ### <a name="remarks"></a>備註  
  此函數會呼叫[Activate](#activate)成員函式來執行的指令動詞。 它也會攔截例外狀況，並向使用者顯示訊息方塊，如果其中一個會擲回。  
   
- 如果主要動作是編輯和中指定零`nVerb`啟動參數，伺服器應用程式以允許編輯 OLE 項目。 如果容器應用程式支援就地啟用，編輯即可備妥。 如果容器不支援就地啟用 （或如果未指定 Open 動詞），伺服器會在個別視窗中啟動，並編輯即可那里。 一般而言，當容器應用程式使用者按兩下 OLE 項目中的主要動詞命令的值時，才`nVerb`參數會決定使用者可以採取哪些動作。 不過，如果伺服器支援只有一個動作，會在該動作，不論其中該值會以指定`nVerb`參數。  
+ 如果主要的指令動詞為編輯，但在指定了 0 *nVerb*啟動參數，伺服器應用程式以允許編輯 OLE 項目。 如果容器應用程式支援就地啟用，編輯即可備妥。 如果容器不支援就地啟用 （或如果未指定 Open 動詞），伺服器會在個別視窗中啟動，並編輯即可那里。 一般而言，當容器應用程式使用者按兩下 OLE 項目中的主要動詞命令的值時，才*nVerb*參數會決定使用者可以採取哪些動作。 不過，如果伺服器支援只有一個動作，會在該動作，不論其中該值會以指定*nVerb*參數。  
   
 ##  <a name="draw"></a>  COleClientItem::Draw  
  呼叫此函式可使用指定的裝置內容指定的週框矩形內繪製 OLE 項目。  
@@ -994,14 +994,14 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指標[CDC](../../mfc/reference/cdc-class.md)物件用來繪製 OLE 項目。  
   
- `lpBounds`  
+ *lpBounds*  
  指標[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或`RECT`結構，定義要在其中繪製 OLE 項目 （以邏輯單位，取決於裝置內容） 的周框。  
   
- `nDrawAspect`  
- 指定層面的 OLE 項目，也就是它應如何顯示。 如果`nDrawAspect`為-1，上次使用設定的外觀[SetDrawAspect](#setdrawaspect)用。 如需可能的值，這個旗標的詳細資訊，請參閱[SetDrawAspect](#setdrawaspect)。  
+ *nDrawAspect*  
+ 指定層面的 OLE 項目，也就是它應如何顯示。 如果*nDrawAspect*為-1，上次使用設定的外觀[SetDrawAspect](#setdrawaspect)用。 如需可能的值，這個旗標的詳細資訊，請參閱[SetDrawAspect](#setdrawaspect)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -1009,9 +1009,9 @@ BOOL Draw(
 ### <a name="remarks"></a>備註  
  函式可能會使用 OLE 項目所建立的中繼檔表示[OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw)成員函式`COleServerItem`。  
   
- 通常您會使用**繪製**螢幕顯示將傳遞做為螢幕裝置內容`pDC`。 在此情況下，您需要指定只有前兩個參數。  
+ 通常您會使用**繪製**螢幕顯示將傳遞做為螢幕裝置內容*pDC*。 在此情況下，您需要指定只有前兩個參數。  
   
- `lpBounds`參數會識別 （相對於其目前的對應模式） 的目標裝置內容中的矩形。 呈現可能牽涉到將圖片的比例，以及可以由容器應用程式用來強制顯示的檢視之間列印的最後一個影像縮放比例的檢視。  
+ *LpBounds*參數會識別 （相對於其目前的對應模式） 的目標裝置內容中的矩形。 呈現可能牽涉到將圖片的比例，以及可以由容器應用程式用來強制顯示的檢視之間列印的最後一個影像縮放比例的檢視。  
   
  如需詳細資訊，請參閱[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) Windows SDK 中。  
   
@@ -1035,10 +1035,10 @@ BOOL GetCachedExtent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpSize`  
+ *lpSize*  
  指標**大小**結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)將會收到大小資訊的物件。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  指定要擷取其界限的 OLE 項目的外觀。 可能的值，請參閱[SetDrawAspect](#setdrawaspect)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1052,14 +1052,14 @@ BOOL GetCachedExtent(
  如需詳細資訊，請參閱[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Windows SDK 中。  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
- 傳回的類別識別碼的項目至所指向的記憶體`pClassID`。  
+ 傳回的類別識別碼的項目至所指向的記憶體*pClassID*。  
   
 ```  
 void GetClassID(CLSID* pClassID) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClassID`  
+ *pClassID*  
  指標類型的應用程式識別項[CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)擷取的類別識別碼。 如需有關詳細**CLSID**，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
@@ -1079,16 +1079,16 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataSource`  
+ *pDataSource*  
  指標[COleDataSource](../../mfc/reference/coledatasource-class.md)將 OLE 項目中接收資料所包含的物件。  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE**連結資料應該包含，否則如果**FALSE**。  
   
- `lpOffset`  
+ *lpOffset*  
  從原點的物件，像素為單位的滑鼠游標的位移。  
   
- `lpSize`  
+ *lpSize*  
  物件，像素為單位的大小。  
   
 ### <a name="remarks"></a>備註  
@@ -1130,10 +1130,10 @@ BOOL GetExtent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpSize`  
+ *lpSize*  
  指標**大小**結構或`CSize`將會收到大小資訊的物件。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  指定要擷取其界限的 OLE 項目的外觀。 可能的值，請參閱[SetDrawAspect](#setdrawaspect)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1157,7 +1157,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  參考的 CLSID 與圖示相關聯的伺服器。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1202,7 +1202,7 @@ UINT GetItemState() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A **COleClientItem::ItemState**列舉值，它可以是下列其中之一： `emptyState`， **loadedState**， `openState`， `activeState`， `activeUIState`。 如需這些狀態資訊，請參閱文章[容器： 用戶端項目狀態](../../mfc/containers-client-item-states.md)。  
+ A **COleClientItem::ItemState**列舉值，它可以是下列其中之一： `emptyState`， `loadedState`， `openState`， `activeState`， `activeUIState`。 如需這些狀態資訊，請參閱文章[容器： 用戶端項目狀態](../../mfc/containers-client-item-states.md)。  
   
 ### <a name="remarks"></a>備註  
  若要將 OLE 項目的狀態變更時，會收到通知，請使用[OnChange](#onchange)成員函式。  
@@ -1280,7 +1280,7 @@ void GetUserType(
   
 - `USERCLASSTYPE_APPNAME` 服務類別的應用程式名稱。  
   
- `rString`  
+ *rString*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)所要傳回的字串描述 OLE 項目的型別物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1393,7 +1393,7 @@ virtual void OnChange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCode`  
+ *則 nCode*  
  伺服器的原因會變更此項目。 它可以包含下列值之一：  
   
 - `OLE_CHANGED` OLE 項目的外觀已變更。  
@@ -1404,11 +1404,11 @@ virtual void OnChange(
   
 - `OLE_CHANGED_STATE` OLE 項目已從某個狀態變更為另一個。  
   
- `dwParam`  
- 如果`nCode`是`OLE_SAVED`或`OLE_CLOSED`，未使用此參數。 如果`nCode`是`OLE_CHANGED`，此參數指定的 OLE 項目已變更外觀。 可能的值，請參閱`dwParam`參數[COleClientItem::Draw](#draw)。 如果`nCode`是`OLE_CHANGED_STATE`，這個參數是**COleClientItem::ItemState**列舉值，並說明所輸入的狀態。 它可以有下列值之一： `emptyState`， **loadedState**， `openState`， `activeState`，或`activeUIState`。  
+ *dwParam*  
+ 如果*則 nCode*是`OLE_SAVED`或`OLE_CLOSED`，未使用此參數。 如果*則 nCode*是`OLE_CHANGED`，此參數指定的 OLE 項目已變更外觀。 可能的值，請參閱*dwParam*參數[COleClientItem::Draw](#draw)。 如果*則 nCode*是`OLE_CHANGED_STATE`，這個參數是**COleClientItem::ItemState**列舉值，並說明所輸入的狀態。 它可以有下列值之一： `emptyState`， `loadedState`， `openState`， `activeState`，或`activeUIState`。  
   
 ### <a name="remarks"></a>備註  
- (如果使用 Mfc 程式庫來撰寫伺服器應用程式，以回應呼叫此函式`Notify`的成員函式`COleServerDoc`或`COleServerItem`。)預設實作會將標示容器文件為，如果修改`nCode`是`OLE_CHANGED`或`OLE_SAVED`。  
+ (如果使用 Mfc 程式庫來撰寫伺服器應用程式，以回應呼叫此函式`Notify`的成員函式`COleServerDoc`或`COleServerItem`。)預設實作會將標示容器文件為，如果修改*則 nCode*是`OLE_CHANGED`或`OLE_SAVED`。  
   
  如`OLE_CHANGED_STATE`，從傳回的目前狀態[GetItemState](#getitemstate)仍會舊的狀態，表示目前在這個狀態變更之前的狀態。  
   
@@ -1465,13 +1465,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bUndoable`  
+ *bUndoable*  
  指定編輯變更是否可復原。  
   
 ### <a name="remarks"></a>備註  
  此函式會還原到其原始狀態，隱藏任何功能表和其他控制項，可建立就地啟用的容器應用程式的使用者介面。  
   
- 如果`bUndoable`是**FALSE**容器應該停用復原命令，實際上並捨棄復原狀態的容器，因為它會指出伺服器所執行最後一項作業是無法復原。  
+ 如果*bUndoable*是**FALSE**容器應該停用復原命令，實際上並捨棄復原狀態的容器，因為它會指出伺服器所執行最後一項作業不是可復原。  
   
 ##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
  當使用者執行動作可捨棄復原狀態編輯 OLE 項目時由架構呼叫。  
@@ -1498,13 +1498,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bIncludeLink`  
+ *bIncludeLink*  
  將此設**TRUE**如果連結資料應該複製到剪貼簿。 將此設**FALSE**如果伺服器應用程式不支援的連結。  
   
- `lpOffset`  
+ *lpOffset*  
  從原點的像素為單位的物件的指標，滑鼠游標的位移。  
   
- `lpSize`  
+ *lpSize*  
  物件，像素為單位的大小指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1537,7 +1537,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPosition`  
+ *rPosition*  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)將包含的項目位置座標的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1556,13 +1556,13 @@ virtual BOOL OnGetWindowContext(
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppMainFrame`  
+ *ppMainFrame*  
  主框架視窗的指標的指標。  
   
- `ppDocFrame`  
+ *ppDocFrame*  
  指向文件框架視窗的指標。  
   
- `lpFrameInfo`  
+ *lpFrameInfo*  
  指標[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737)結構，將會收到框架視窗資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1571,7 +1571,7 @@ virtual BOOL OnGetWindowContext(
 ### <a name="remarks"></a>備註  
  此函式用來擷取 OLE 項目的父視窗的相關資訊。  
   
- 如果容器是 MDI 應用程式，預設實作會傳回指標[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)物件存放至`ppMainFrame`和作用中的指標[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)中物件`ppDocFrame`. 如果容器是 SDI 應用程式，預設實作會傳回指標[CFrameWnd](../../mfc/reference/cframewnd-class.md)物件存放至`ppMainFrame`並傳回**NULL**中`ppDocFrame`。 預設實作也會填入的成員`lpFrameInfo`。  
+ 如果容器是 MDI 應用程式，預設實作會傳回指標[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)物件存放至*ppMainFrame*和作用中的指標[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)物件存放至*ppDocFrame*。 如果容器是 SDI 應用程式，預設實作會傳回指標[CFrameWnd](../../mfc/reference/cframewnd-class.md)物件存放至*ppMainFrame*並傳回**NULL**中*ppDocFrame*。 預設實作也會填入的成員*lpFrameInfo*。  
   
  預設實作不符合應用程式; 時，才會覆寫這個函式例如，如果您的應用程式具有不同於 SDI 或 MDI 使用者介面典範。 這是進階可覆寫。  
   
@@ -1587,16 +1587,16 @@ virtual void OnInsertMenus(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMenuShared`  
+ *pMenuShared*  
  指向空的功能表。  
   
- `lpMenuWidths`  
+ *lpMenuWidths*  
  指向陣列的六**長**指出多少功能表在每個下列功能表群組中的值： 檔案、 編輯、 容器物件，視窗中，說明。 容器應用程式會負責檔、 容器和視窗功能表群組，對應至 0、 2 和 4，這個陣列的項目。  
   
 ### <a name="remarks"></a>備註  
  這個功能表，然後會傳遞到伺服器，它會插入其本身的功能表，建立複合的功能表。 可以重複呼叫這個函式來建立數個複合功能表。  
   
- 預設實作插入`pMenuShared`就地容器功能表; 也就是檔案、 容器和視窗功能表的群組。 [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo)用來設定此功能表資源。 預設實作也會將適當的值指派給 0、 2 和 4 中的項目`lpMenuWidths`，取決於功能表資源。 覆寫的預設實作不是適用於您的應用程式; 此函式例如，如果您的應用程式不會使用文件範本關聯的文件類型的資源。 如果您覆寫這個函式，您也應該覆寫[OnSetMenu](#onsetmenu)和[OnRemoveMenus](#onremovemenus)。 這是進階可覆寫。  
+ 預設實作插入*pMenuShared*就地容器功能表; 也就是檔案、 容器和視窗功能表的群組。 [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo)用來設定此功能表資源。 預設實作也會將適當的值指派給 0、 2 和 4 中的項目*lpMenuWidths*，取決於功能表資源。 覆寫的預設實作不是適用於您的應用程式; 此函式例如，如果您的應用程式不會使用文件範本關聯的文件類型的資源。 如果您覆寫這個函式，您也應該覆寫[OnSetMenu](#onsetmenu)和[OnRemoveMenus](#onremovemenus)。 這是進階可覆寫。  
   
  如需詳細資訊，請參閱[ioleinplaceframe:: Insertmenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) Windows SDK 中。  
   
@@ -1608,13 +1608,13 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMenuShared`  
+ *pMenuShared*  
  指向建構所呼叫的複合功能表[OnInsertMenus](#oninsertmenus)成員函式。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會移除`pMenuShared`，不是就地容器功能表、 檔案、 容器和視窗功能表的群組。 覆寫的預設實作不是適用於您的應用程式; 此函式例如，如果您的應用程式不會使用文件範本關聯的文件類型的資源。 如果您覆寫這個函式，您應該可能覆寫[OnInsertMenus](#oninsertmenus)和[OnSetMenu](#onsetmenu)以及。 這是進階可覆寫。  
+ 預設實作會移除*pMenuShared* ，不是就地容器功能表、 檔案、 容器和視窗功能表的群組。 覆寫的預設實作不是適用於您的應用程式; 此函式例如，如果您的應用程式不會使用文件範本關聯的文件類型的資源。 如果您覆寫這個函式，您應該可能覆寫[OnInsertMenus](#oninsertmenus)和[OnSetMenu](#onsetmenu)以及。 這是進階可覆寫。  
   
- 在子功能表`pMenuShared`可能會由一個以上的複合功能表所共用，如果伺服器具有重複呼叫`OnInsertMenus`。 因此，請勿刪除任何子功能表中的覆寫`OnRemoveMenus`; 您應該只中斷。  
+ 在子功能表*pMenuShared*可能會由一個以上的複合功能表所共用，如果伺服器具有重複呼叫`OnInsertMenus`。 因此，請勿刪除任何子功能表中的覆寫`OnRemoveMenus`; 您應該只中斷。  
   
  如需詳細資訊，請參閱[IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) Windows SDK 中。  
   
@@ -1638,7 +1638,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
  如需詳細資訊，請參閱[IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) Windows SDK 中。  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
- 由架構呼叫兩次就地啟用開始和結束。安裝組合功能表和第二次第一次 (與`holemenu`等於**NULL**) 將它移除。  
+ 由架構呼叫兩次就地啟用開始和結束。安裝組合功能表和第二次第一次 (與*holemenu*等於**NULL**) 將它移除。  
   
 ```  
 virtual void OnSetMenu(
@@ -1648,10 +1648,10 @@ virtual void OnSetMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMenuShared`  
+ *pMenuShared*  
  建構函式所呼叫，以組合功能表指向[OnInsertMenus](#oninsertmenus)成員函式和`InsertMenu`函式。  
   
- `holemenu`  
+ *holemenu*  
  所傳回的功能表描述元的控制代碼**OleCreateMenuDescriptor**函式，或**NULL**分派的程式碼是否要移除。  
   
  *hwndActiveObject*  
@@ -1672,17 +1672,17 @@ virtual BOOL OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFrameWnd`  
+ *pFrameWnd*  
  容器應用程式的框架視窗的指標。 這可以是主框架視窗或 MDI 子視窗。  
   
- `bShow`  
+ *bShow*  
  指定是否要顯示或隱藏控制列。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式呼叫會造成控制列的狀態; 變更為非零0 如果呼叫會不造成任何變更，或如果`pFrameWnd`未指向容器的框架視窗。  
+ 如果函式呼叫會造成控制列的狀態; 變更為非零0 如果呼叫會不造成任何變更，或如果*pFrameWnd*未指向容器的框架視窗。  
   
 ### <a name="remarks"></a>備註  
- 如果控制列已在所指定的狀態，此函數會傳回 0 *bShow。* 這會發生，例如，如果隱藏的控制列和`bShow`是**FALSE**。  
+ 如果控制列已在所指定的狀態，此函數會傳回 0 *bShow。* 這會發生，例如，如果隱藏的控制列和*bShow*是**FALSE**。  
   
  預設實作會移除最上層框架視窗中的工具列。  
   
@@ -1734,11 +1734,11 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCloseOption`  
+ *dwCloseOption*  
  旗標，指定當它傳回至載入的狀態，OLE 項目儲存在哪些情況之下。 如需可能值的清單，請參閱[COleClientItem::Close](#close)。  
   
 ### <a name="remarks"></a>備註  
- **發行**稱為`COleClientItem`解構函式。  
+ `Release` 會呼叫`COleClientItem`解構函式。  
   
  如需詳細資訊，請參閱[Iunknown](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK 中。  
   
@@ -1763,7 +1763,7 @@ void Run();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫**執行**成員函式來啟動伺服器應用程式，然後再啟動項目。 這是自動由[Activate](#activate)和[DoVerb](#doverb)，因此通常不需要呼叫此函式。 呼叫此函式，如果需要執行的伺服器，才能設定項目屬性，例如[SetExtent](#setextent)，然後再執行[DoVerb](#doverb)。  
+ 呼叫`Run`成員函式來啟動伺服器應用程式，然後再啟動項目。 這是自動由[Activate](#activate)和[DoVerb](#doverb)，因此通常不需要呼叫此函式。 呼叫此函式，如果需要執行的伺服器，才能設定項目屬性，例如[SetExtent](#setextent)，然後再執行[DoVerb](#doverb)。  
   
 ##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
  呼叫`SetDrawAspect`成員函式來設定 「 外觀 」 或項目的檢視。  
@@ -1773,7 +1773,7 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 列舉中的值。 這個參數的值可以是下列其中一個：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -1799,10 +1799,10 @@ void SetExtent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含大小資訊。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  指定的界限所設定的 OLE 項目的外觀。 可能的值，請參閱[SetDrawAspect](#setdrawaspect)。  
   
 ### <a name="remarks"></a>備註  
@@ -1820,10 +1820,10 @@ void SetHostNames(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszHost`  
+ *lpszHost*  
  使用者顯示的容器應用程式名稱的指標。  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  識別字串，包含 OLE 項目之容器的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1841,7 +1841,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hMetaPict`  
+ *hMetaPict*  
  用於繪製的項目圖示的中繼檔的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1850,7 +1850,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ### <a name="remarks"></a>備註  
  使用[GetIconicMetafile](#geticonicmetafile)擷取中繼檔。  
   
- `hMetaPict`參數複製到項目; 因此，`hMetaPict`必須由呼叫者釋放。  
+ *HMetaPict*參數複製到項目; 因此， *hMetaPict*必須由呼叫者釋放。  
   
 ##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
  呼叫此函式可設定之周框或 OLE 項目顯示矩形。  
@@ -1905,10 +1905,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptd`  
+ *ptd*  
  指標[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)資料結構，其中包含新的列印目標裝置的相關資訊。 可以是**NULL**。  
   
- `ppd`  
+ *ppd*  
  指標[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940)資料結構，其中包含新的列印目標裝置的相關資訊。 可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  

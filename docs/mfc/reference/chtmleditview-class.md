@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367340"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040609"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 類別
 在 MFC 的文件/檢視架構內容中提供 WebBrowser 編輯平台的功能。  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszClassName`  
+ *lpszClassName*  
  指向以 null 結束的字元字串，Windows 類別命名。 類別名稱可以是任何名稱登錄與[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式或**RegisterClass** Windows 函式。 如果**NULL**，會使用預先定義的預設[CFrameWnd](../../mfc/reference/cframewnd-class.md)屬性。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向以 null 結束的字元字串，表示視窗名稱。  
   
- `dwStyle`  
+ *dwStyle*  
  指定視窗的樣式屬性。 根據預設， **WS_VISIBLE**和**WS_CHILD**設定視窗樣式。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 `rectDefault`值，可讓 Windows，指定新的視窗位置與大小。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值，可讓 Windows，指定新的視窗位置與大小。  
   
- `pParentWnd`  
+ *pParentWnd*  
  控制項的父視窗指標。  
   
- `nID`  
+ *nID*  
  檢視的識別碼。 根據預設，設定為**AFX_IDW_PANE_FIRST**。  
   
- `pContext`  
+ *pContext*  
  指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**預設。  
   
 ### <a name="remarks"></a>備註  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppDocument`  
+ *ppDocument*  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)介面。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

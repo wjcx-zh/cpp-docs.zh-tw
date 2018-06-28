@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a05553843c4478109c0fe63dd79f08b2116f58c7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378770"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039241"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 類別
 提供 OLE 項目的伺服器介面。  
@@ -119,7 +119,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::GetDocument](#getdocument)|傳回包含之項目的伺服器文件。|  
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|取得**CF_EMBEDSOURCE** OLE 項目的資料。|  
 |[COleServerItem::GetItemName](#getitemname)|傳回項目的名稱。 用於連結項目。|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|取得`CF_LINKSOURCE`OLE 項目的資料。|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|取得**CF_LINKSOURCE** OLE 項目的資料。|  
 |[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|取得**CF_OBJECTDESCRIPTOR** OLE 項目的資料。|  
 |[COleServerItem::IsConnected](#isconnected)|指出是否此項目目前已連結至使用中的容器。|  
 |[COleServerItem::IsLinkedItem](#islinkeditem)|指出項目是否代表連結的 OLE 項目。|  
@@ -185,7 +185,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataSource`  
+ *pDataSource*  
  指標`COleDataSource`物件存放至應放置資料。  
   
 ### <a name="remarks"></a>備註  
@@ -201,10 +201,10 @@ COleServerItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pServerDoc`  
+ *pServerDoc*  
  文件會包含新項目的指標。  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  表示在發行的連結時，是否可以刪除物件旗標。 將此設**FALSE**如果`COleServerItem`物件是您必須刪除您的文件資料中不可或缺的一部分。 將此設**TRUE**如果物件是用來識別文件的資料可以刪除架構中的範圍的第二個結構。  
   
 ##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
@@ -215,7 +215,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bIncludeLink`  
+ *bIncludeLink*  
  將此設**TRUE**如果連結資料應該複製到剪貼簿。 將此設**FALSE**如果伺服器應用程式不支援的連結。  
   
 ### <a name="remarks"></a>備註  
@@ -237,23 +237,23 @@ DROPEFFECT DoDragDrop(
  *lpRectItem*  
  在畫面上，以像素為單位，相對於用戶端區域中的項目矩形。  
   
- `ptOffset`  
- 從位移`lpItemRect`滑鼠位置在拖曳時的所在。  
+ *ptOffset*  
+ 從位移*lpItemRect*滑鼠位置在拖曳時的所在。  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  將此設**TRUE**如果連結資料應該複製到剪貼簿。 將它設定為**FALSE**如果您的應用程式不支援的連結。  
   
- `dwEffects`  
+ *dwEffects*  
  決定拖曳來源將允許在拖曳作業 （複製、 移動和連結的組合） 中的效果。  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  實際開始拖曳所定義的矩形的指標。 如需詳細資訊，請參閱接下來的＜備註＞一節。  
   
 ### <a name="return-value"></a>傳回值  
  `DROPEFFECT` 列舉中的值。 如果是`DROPEFFECT_MOVE`，應該移除原始的資料。  
   
 ### <a name="remarks"></a>備註  
- 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形`lpRectStartDrag`，或是直到已通過指定的毫秒數。 如果`lpRectStartDrag`是**NULL**，使用預設矩形，因此拖曳開始，當滑鼠游標移一個像素。  
+ 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形*lpRectStartDrag* ，或是直到已通過指定的毫秒數。 如果*lpRectStartDrag*是**NULL**，使用預設矩形，因此拖曳開始，當滑鼠游標移一個像素。  
   
  登錄機碼設定所指定的延遲時間。 您可以藉由呼叫變更的延遲時間[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果您未指定延遲時間，會使用預設值是 200 毫秒。 拖放到延遲時間會儲存，如下所示：  
   
@@ -277,20 +277,20 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataSource`  
+ *pDataSource*  
  指標`COleDataSource`會在所有支援的格式接收 OLE 項目資料的物件。  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **TRUE**如果連結資料應該複製到剪貼簿。 **FALSE**如果伺服器應用程式不支援的連結。  
   
- `lpOffset`  
+ *lpOffset*  
  以像素的原始物件的滑鼠游標的位移。  
   
- `lpSize`  
+ *lpSize*  
  物件，像素為單位的大小。  
   
 ### <a name="remarks"></a>備註  
- 此函數會呼叫[GetEmbedSourceData](#getembedsourcedata)成員函式來取得原生資料的 OLE 項目並呼叫[AddOtherClipboardData](#addotherclipboarddata)成員函式可取得的呈現格式，以及任何支援的轉換格式。 如果`bIncludeLink`是**TRUE**，函式也會呼叫[GetLinkSourceData](#getlinksourcedata)取得項目的連結資料。  
+ 此函數會呼叫[GetEmbedSourceData](#getembedsourcedata)成員函式來取得原生資料的 OLE 項目並呼叫[AddOtherClipboardData](#addotherclipboarddata)成員函式可取得的呈現格式，以及任何支援的轉換格式。 如果*bIncludeLink*是**TRUE**，函式也會呼叫[GetLinkSourceData](#getlinksourcedata)取得項目的連結資料。  
   
  覆寫這個函式，如果您想要放入格式`COleDataSource`物件之前或之後所提供的這些格式`CopyToClipboard`。  
   
@@ -328,7 +328,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpStgMedium`  
+ *lpStgMedium*  
  指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，將會收到**CF_EMBEDSOURCE** OLE 項目的資料。  
   
 ### <a name="remarks"></a>備註  
@@ -359,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpStgMedium`  
+ *lpStgMedium*  
  指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，將會收到`CF_LINKSOURCE`OLE 項目的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -383,17 +383,17 @@ void GetObjectDescriptorData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpOffset`  
+ *lpOffset*  
  從 OLE 項目左上角，按一下滑鼠的位移。 可以是**NULL**。  
   
- `lpSize`  
+ *lpSize*  
  OLE 項目的大小。 可以是**NULL**。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，將會收到**CF_OBJECTDESCRIPTOR** OLE 項目的資料。  
   
 ### <a name="remarks"></a>備註  
- 將資訊複製到**STGMEDIUM**結構所指`lpStgMedium`。 此格式包含貼上 對話方塊所需的資訊。  
+ 將資訊複製到**STGMEDIUM**結構所指*lpStgMedium*。 此格式包含貼上 對話方塊所需的資訊。  
   
  如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK 中。  
   
@@ -443,7 +443,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nDrawAspect`  
+ *nDrawAspect*  
  中的值`DVASPECT`列舉，指出哪些方面的 OLE 項目已變更。 這個參數可以具有下列值之一：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -465,7 +465,7 @@ virtual void OnDoVerb(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iVerb`  
+ *iVerb*  
  指定要執行的指令動詞。 它可以是下列其中一項動作：  
   
 |值|意義|符號|  
@@ -495,10 +495,10 @@ virtual BOOL OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指標[CDC](../../mfc/reference/cdc-class.md)物件在其上繪製項目。 顯示內容會自動連接到的屬性顯示的內容讓您可以呼叫屬性函式，雖然這樣做會讓中繼檔裝置特定。  
   
- `rSize`  
+ *rsize 則*  
  調整大小，請在**HIMETRIC**單位，在其中繪製中繼檔。  
   
 ### <a name="return-value"></a>傳回值  
@@ -518,10 +518,10 @@ virtual BOOL OnDrawEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指標[CDC](../../mfc/reference/cdc-class.md)物件在其上繪製項目。 DC 會自動連接到 DC 的屬性，您可以呼叫屬性函式，雖然這樣做會讓中繼檔裝置特定。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 列舉中的值。 這個參數可以具有下列值之一：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -554,13 +554,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bIncludeLink`  
+ *bIncludeLink*  
  將此設**TRUE**如果連結資料應該複製到剪貼簿。 將此設**FALSE**如果伺服器應用程式不支援的連結。  
   
- `lpOffset`  
+ *lpOffset*  
  從原點的物件，像素為單位的滑鼠游標的位移。  
   
- `lpSize`  
+ *lpSize*  
  物件，像素為單位的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -579,7 +579,7 @@ virtual BOOL OnGetExtent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nDrawAspect`  
+ *nDrawAspect*  
  指定要擷取其界限的 OLE 項目的外觀。 這個參數可以具有下列值之一：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -590,7 +590,7 @@ virtual BOOL OnGetExtent(
   
 - `DVASPECT_DOCPRINT` 項目被表示，如同它已使用 [列印] 命令，從 [檔案] 功能表來列印。  
   
- `rSize`  
+ *rsize 則*  
  若要參考`CSize`將會收到的 OLE 項目大小的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -610,7 +610,7 @@ virtual void OnHide();
  預設會呼叫**COleServerDoc::OnShowDocument (FALSE)**。 此函式也會告知容器已隱藏 OLE 項目。 如果您想要隱藏 OLE 項目會執行特殊處理，請覆寫這個函式。  
   
 ##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
- 由架構呼叫以初始化 OLE 項目使用的內容`pDataObject`。  
+ 由架構呼叫以初始化 OLE 項目使用的內容*pDataObject*。  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -619,17 +619,17 @@ virtual BOOL OnInitFromData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDataObject`  
+ *pDataObject*  
  OLE 資料物件包含各種格式來初始化 OLE 項目中的資料指標。  
   
- `bCreation`  
+ *bCreation*  
  **TRUE**如果函式會呼叫以初始化 OLE 項目所新建立的容器應用程式。 **FALSE**如果呼叫的函式取代現有的 OLE 項目內容。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`bCreation`是**TRUE**，如果容器實作插入新根據目前的選取範圍的物件，呼叫此函式。 建立新的 OLE 項目時，會使用選取的資料。 比方說，當在試算表程式中選取資料格範圍，然後使用 建立圖表的 插入新物件基礎的選取範圍中的值。 預設實作不做任何動作。 覆寫此函式可從所提供的選擇可接受的格式`pDataObject`和初始化 OLE 項目，根據提供的資料。 這是進階可覆寫。  
+ 如果*bCreation*是**TRUE**，如果容器實作插入新根據目前的選取範圍的物件，呼叫此函式。 建立新的 OLE 項目時，會使用選取的資料。 比方說，當在試算表程式中選取資料格範圍，然後使用 建立圖表的 插入新物件基礎的選取範圍中的值。 預設實作不做任何動作。 覆寫此函式可從所提供的選擇可接受的格式*pDataObject*和初始化 OLE 項目，根據提供的資料。 這是進階可覆寫。  
   
  如需詳細資訊，請參閱[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK 中。  
   
@@ -670,10 +670,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)資料所要傳回的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -682,7 +682,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>備註  
  指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)延遲轉譯的成員函式。 此函式的預設實作會呼叫[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)分別，如果提供的儲存體中的檔案或記憶體。 如果這些格式都不提供，預設會傳回 0 與實作不做任何動作。  
   
- 如果`lpStgMedium` ->  *tymed*是**TYMED_NULL**、 **STGMEDIUM**應該配置，以及所指定的填滿*lpFormatEtc->tymed*。 如果沒有**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
+ 如果*lpStgMedium*-> *tymed*是**TYMED_NULL**、 **STGMEDIUM**應該配置和所指定的填滿*lpFormatEtc]-> [tymed*。 如果沒有**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
   
  這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您的資料是小型且固定的大小，會覆寫`OnRenderGlobalData`。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。  
   
@@ -698,10 +698,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
   
- `pFile`  
+ *pFile*  
  指向`CFile`資料為呈現的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -724,10 +724,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
   
- `phGlobal`  
+ *phGlobal*  
  指向全域記憶體資料所要傳回的控制代碼。 如果已不配置任何記憶體，這個參數可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -736,7 +736,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>備註  
  指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)延遲轉譯的成員函式。 此函式的預設實作只會傳回**FALSE**。  
   
- 如果`phGlobal`是**NULL**，然後新`HGLOBAL`應該配置並傳回`phGlobal`。 否則，`HGLOBAL`所指定`phGlobal`應填入資料。 資料量置於`HGLOBAL`不能超過目前的記憶體區塊大小。 此外，無法重新配置較大的區塊。  
+ 如果*phGlobal*是**NULL**，然後新`HGLOBAL`應該配置並傳回*phGlobal*。 否則，`HGLOBAL`所指定*phGlobal*應填入資料。 資料量置於`HGLOBAL`不能超過目前的記憶體區塊大小。 此外，無法重新配置較大的區塊。  
   
  這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存媒體，覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫[OnRenderFileData](#onrenderfiledata)。  
   
@@ -750,7 +750,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpLogPalette`  
+ *lpLogPalette*  
  指標的 windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -772,14 +772,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定資料的格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構中資料的所在。  
   
- `bRelease`  
- 指出誰完成函式呼叫後之儲存媒體的擁有權。 呼叫端決定誰負責釋放之儲存媒體代表配置的資源。 呼叫端會藉由設定`bRelease`。 如果`bRelease`為非零，伺服器項目取得擁有權，使用它完成時釋放媒體。 當`bRelease`是 0，呼叫端保留擁有權，伺服器項目可以只針對在呼叫期間使用之儲存媒體。  
+ *bRelease*  
+ 指出誰完成函式呼叫後之儲存媒體的擁有權。 呼叫端決定誰負責釋放之儲存媒體代表配置的資源。 呼叫端會藉由設定*bRelease*。 如果*bRelease*為非零，伺服器項目取得擁有權，使用它完成時釋放媒體。 當*bRelease*是 0，呼叫端保留擁有權，伺服器項目可以只針對在呼叫期間使用之儲存媒體。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -801,7 +801,7 @@ virtual BOOL OnSetExtent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nDrawAspect`  
+ *nDrawAspect*  
  指定其界限所指定的 OLE 項目的外觀。 這個參數可以具有下列值之一：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -812,14 +812,14 @@ virtual BOOL OnSetExtent(
   
 - `DVASPECT_DOCPRINT` 項目被表示，如同它已使用 [列印] 命令，從 [檔案] 功能表來列印。  
   
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)結構，指定新的 OLE 項目大小。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果容器應用程式已撰寫與 Mfc 程式庫，此函式時，會呼叫[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)成員函式對應`COleClientItem`稱為物件。 預設實作集[m_sizeExtent](#m_sizeextent)成員為指定的大小如果`nDrawAspect`是`DVASPECT_CONTENT`; 否則它會傳回 0。 覆寫此函式以執行特殊處理，當您變更項目的大小。  
+ 如果容器應用程式已撰寫與 Mfc 程式庫，此函式時，會呼叫[SetExtent](../../mfc/reference/coleclientitem-class.md#setextent)成員函式對應`COleClientItem`稱為物件。 預設實作集[m_sizeExtent](#m_sizeextent)成員為指定的大小如果*nDrawAspect*是`DVASPECT_CONTENT`; 否則它會傳回 0。 覆寫此函式以執行特殊處理，當您變更項目的大小。  
   
 ##  <a name="onshow"></a>  COleServerItem::OnShow  
  由架構呼叫以指示伺服器應用程式，以就地顯示 OLE 項目。  
@@ -845,16 +845,16 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSender`  
+ *pSender*  
  修改文件的項目指標。 可以是**NULL**。  
   
- `lHint`  
+ *lHint*  
  包含有關修改資訊。  
   
- `pHint`  
+ *pHint*  
  儲存修改的相關資訊的物件指標。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 列舉中的值。 這個參數可以具有下列值之一：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -886,7 +886,7 @@ void SetItemName(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszItemName`  
+ *lpszItemName*  
  項目的新名稱的指標。  
   
 ### <a name="remarks"></a>備註  

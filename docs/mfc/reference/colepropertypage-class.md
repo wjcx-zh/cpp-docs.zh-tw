@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376206"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042543"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 類別
 用來將自訂控制項的屬性顯示在類似對話方塊的圖形介面中。  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  資源屬性頁控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pnObjects`  
+ *pnObjects*  
  將會收到的頁面正在編輯的物件數目的不帶正負號長整數指標。  
   
 ### <a name="return-value"></a>傳回值  
  陣列的指標`IDispatch`指標，用來存取屬性頁上每個控制項的屬性。 呼叫端必須不會釋放這些介面指標。  
   
 ### <a name="remarks"></a>備註  
- 每個屬性頁物件會維護的指標陣列`IDispatch`正在編輯的頁面之物件的介面。 此函式會將其`pnObjects`該陣列中的項目數目的引數和傳回陣列的第一個元素的指標。  
+ 每個屬性頁物件會維護的指標陣列`IDispatch`正在編輯的頁面之物件的介面。 此函式會將其*pnObjects*該陣列中的項目數目的引數和傳回陣列的第一個元素的指標。  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  取得屬性頁的指標`IPropertyPageSite`介面。  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  要忽略的控制項 ID。  
   
 ### <a name="remarks"></a>備註  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  分派識別碼所編輯的屬性。  
   
 ### <a name="return-value"></a>傳回值  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  包含的屬性頁控制項的識別碼。  
   
- `bDirty`  
+ *bDirty*  
  指定是否已修改的屬性頁面的欄位。 設定為**TRUE**如果欄位已被修改， **FALSE**如果未修改。  
   
 ### <a name="return-value"></a>傳回值  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  字串，包含顯示在狀態列上或其他位置的簡短說明資訊。  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  屬性頁的說明檔的名稱。  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bModified`  
+ *bModified*  
  指定屬性頁的已修改的旗標的新值。  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5640f634276f87d0a41633354a7dde0ed65a2940
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 935728856a00a27afa1f386f493832ddb955538b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372491"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040996"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 類別
 具有 Microsoft Outlook 2000 或 Outlook 2003 [ **巡覽窗格** ] 視覺外觀的索引標籤式窗格。 `CMFCOutlookBar`物件包含[CMFCOutlookBarTabCtrl 類別](../../mfc/reference/cmfcoutlookbartabctrl-class.md)物件及一系列的索引標籤。 索引標籤可以是[CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)物件或`CWnd`-衍生物件。 對於使用者，Outlook 功能區會顯示為一系列按鈕與一個顯示區域。 當使用者按一下按鈕時，對應的控制項或按鈕窗格隨即顯示。  
@@ -111,7 +111,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     CMFCOutlookBarPane m_wndOutlookPane;  
  ... };  
  ```  
-2.  處理時`WM_CREATE`主框架呼叫的訊息[CMFCOutlookBar::Create](#create)方法來建立索引標籤控制項列 Outlook。  
+2.  當處理主框架 WM_CREATE 訊息、 呼叫[CMFCOutlookBar::Create](#create)方法來建立索引標籤控制項列 Outlook。  
   
  ```  
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -147,7 +147,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     ID_FILE_OPEN);
 
  ```  
-5.  呼叫[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)新增每個新的索引標籤。設定`bDetachable`參數`FALSE`進行非中斷連結的頁面。 或者，使用[CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)新增中斷連結的頁面。  
+5.  呼叫[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)新增每個新的索引標籤。設定*bDetachable*參數`FALSE`進行非中斷連結的頁面。 或者，使用[CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)新增中斷連結的頁面。  
   
  ```  
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
@@ -207,7 +207,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
  正在停駐此窗格的另一個窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -216,7 +216,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ### <a name="remarks"></a>備註  
  如果 outlook 功能區，在 Outlook 2003 模式中停駐不支援，因此傳回值是`FALSE`。  
   
- 如果`pBar`參數是`NULL`，這個方法會傳回`FALSE`。  
+ 如果*pBar*參數是`NULL`，這個方法會傳回`FALSE`。  
   
  否則，這個方法的行為如同基底方法[cbasepane:: Canacceptpane](../../mfc/reference/cbasepane-class.md#canacceptpane)，不過，即使未啟用停駐，outlook 功能區仍然可以啟用要透過它停駐的另一個 outlook 功能區。  
   
@@ -250,25 +250,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszCaption`  
+ [in]*lpszCaption*  
  指定的視窗標題。  
   
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  指定的父視窗的指標。 它不得為 NULL。  
   
- [輸入] `rect`  
+ [in]*rect*  
  指定軸的大小和位置單位為像素 outlook。  
   
- [輸入] `nID`  
+ [in]*nID*  
  指定控制項 id。 必須與其他控制項的應用程式中使用的 Id 不同。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  指定所要的控制項列樣式。 可能的值，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定特殊的程式庫定義樣式。  
   
- [輸入] `pContext`  
+ [in]*pContext*  
  建立內容。  
   
 ### <a name="return-value"></a>傳回值  
@@ -277,7 +277,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  您建構`CMFCOutlookBar`兩個步驟中的物件。 第一次呼叫建構函式，然後再呼叫`Create`，建立 outlook 列控制項，並將它附加至`CMFCOutlookBar`物件。  
   
- 請參閱[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)的清單，以指定可用程式庫定義樣式`dwControlBarStyle`。  
+ 請參閱[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)的清單，以指定可用程式庫定義樣式*dwControlBarStyle*。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`Create`方法`CMFCOutlookBar`類別。 此程式碼片段是部分[Outlook 多重檢視範例](../../visual-cpp-samples.md)。  
@@ -297,16 +297,16 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszPageName`  
+ [in]*lpszPageName*  
  頁面的標籤。  
   
- [輸入] `bActivatePage`  
+ [in]*bActivatePage*  
  如果`TRUE`，頁面會變成作用中，在建立時。  
   
- [輸入] `dwEnabledDocking`  
+ [in]*dwEnabledDocking*  
  卸離頁面時，指定已啟用的停駐邊 CBRS_ALIGN_ 旗標的組合。  
   
- [輸入] `bEnableTextLabels`  
+ [in]*bEnableTextLabels*  
  如果`TRUE`，啟用頁面上的按鈕文字標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,16 +347,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
  Float 窗格指標。  
   
- [輸入] `nTabID`  
+ [in]*nTabID*  
  浮動索引標籤以零為起始的索引。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定要用來讓窗格浮動方法。  如需詳細資訊，請參閱[cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。  
   
- [輸入] `bHide`  
+ [in]*bHide*  
  `TRUE` 若要隱藏窗格之前浮點數;否則， `FALSE`。 不同於這個方法的基底類別版本，此參數沒有預設值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -388,10 +388,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `rectTabAreaTop`  
+ [out]*rectTabAreaTop*  
  包含此函數會傳回的大小和位置 （用戶端座標中） 的最上層索引標籤區域。  
   
- [輸出] `rectTabAreaBottom`  
+ [out]*rectTabAreaBottom*  
  包含此函數會傳回的大小和位置 （用戶端座標中） 下方的索引標籤區域。  
   
 ### <a name="remarks"></a>備註  
@@ -422,7 +422,7 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPage`  
+ [in]*nPage*  
  索引標籤頁已成為作用中以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -436,7 +436,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPage`  
+ [in]*nPage*  
  設定作用中的索引標籤頁的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -452,7 +452,7 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bDown`  
+ [in]*bDown*  
  `TRUE` 如果捲動 outlook 功能區，或`FALSE`如果它向上捲動。  
   
 ### <a name="remarks"></a>備註  
@@ -467,10 +467,10 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiPage`  
+ [in]*uiPage*  
  父 Outlook 視窗中頁面的以零為起始的索引。  
   
- [輸入] `pTargetWnd`  
+ [in]*pTargetWnd*  
  Pointerto 父 Outlook 視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -493,10 +493,10 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFont`  
+ [in]*pFont*  
  指定新的字型。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  如果`TRUE`，將會重繪 outlook 功能區。  
   
 ### <a name="remarks"></a>備註  
@@ -510,7 +510,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bMode2003`  
+ [in]*bMode2003*  
  如果為 TRUE，則會啟用 Office 2003 模式。  
   
 ### <a name="remarks"></a>備註  

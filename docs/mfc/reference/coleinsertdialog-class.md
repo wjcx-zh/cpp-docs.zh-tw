@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374877"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042166"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 類別
 用於 OLE 的 [插入物件] 對話方塊。  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  包含任何數目的下列值來使用位元 OR 運算子加以結合，建立旗標：  
   
 - **IOF_SHOWHELP**指定呼叫對話方塊時，會顯示 [說明] 按鈕。  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST**指定對話方塊應會驗證就會加入至清單方塊確保系統註冊資料庫中指定的伺服器有對話方塊顯示之前的類別。 設定這個旗標可能會大幅降低效能。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設定為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  要建立之項目的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  下列其中一個值：  
   
  `COleInsertDialog::DocObjectsOnly` 插入只 DocObjects。  

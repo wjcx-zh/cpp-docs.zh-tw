@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c60027195024a9abb1af5ce5ec47dc6f6a6bfbf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372414"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038981"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 類別
 可讓您存取在使用網際網路通訊協定的遠端系統上的檔案。  
@@ -97,7 +97,7 @@ class CInternetFile : public CStdioFile
 ## <a name="remarks"></a>備註  
  提供的基底類別[Cinternetfile](../../mfc/reference/chttpfile-class.md)和[CGopherFile](../../mfc/reference/cgopherfile-class.md)檔案類別。 您絕對不要建立`CInternetFile`直接物件。 相反地，來建立物件的其中一個衍生類別呼叫[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)。 您也可以建立`CInternetFile`藉由呼叫物件[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)。  
   
- `CInternetFile`成員函式**開啟**， `LockRange`， `UnlockRange`，和`Duplicate`並未實作`CInternetFile`。 如果您在上呼叫這些函式`CInternetFile`物件，則將會收到[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ `CInternetFile`成員函式`Open`， `LockRange`， `UnlockRange`，和`Duplicate`並未實作`CInternetFile`。 如果您在上呼叫這些函式`CInternetFile`物件，則將會收到[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
  若要深入了解如何`CInternetFile`運作方式與其他 MFC 網際網路類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
@@ -123,7 +123,7 @@ virtual void Abort();
 ### <a name="remarks"></a>備註  
  如果您無法關閉檔案然後再終結物件，解構函式會關閉它為您。  
   
- 當例外狀況處理、**中止**不同於[關閉](#close)兩個重要的層面。 首先，**中止**函式不會擲回例外狀況失敗因為它會忽略失敗。 第二個，**中止**不**ASSERT**如果檔案尚未開啟，或先前已關閉。  
+ 當例外狀況處理、`Abort`不同於[關閉](#close)兩個重要的層面。 首先，`Abort`函式不會擲回例外狀況失敗因為它會忽略失敗。 第二個，`Abort`不**ASSERT**如果檔案尚未開啟，或先前已關閉。  
   
 ##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  此成員函式時，會呼叫`CInternetFile`建立物件。  
@@ -146,25 +146,25 @@ CInternetFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hFile`  
+ *hFile*  
  網際網路檔案控制代碼。  
   
- `pstrFileName`  
+ *pstrFileName*  
  包含檔案名稱的字串指標。  
   
- `pConnection`  
+ *pConnection*  
  指標[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)物件。  
   
  *bReadMode*  
  指出檔案是否為唯讀。  
   
- `hSession`  
+ *hSession*  
  網際網路工作階段控制代碼。  
   
- `pstrServer`  
+ *pstrServer*  
  包含伺服器名稱的字串指標。  
   
- `dwContext`  
+ *dwContext*  
  內容識別項`CInternetFile`物件。 請參閱[WinInet 基本概念](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -212,7 +212,7 @@ operator HINTERNET() const;
 ```  
   
 ##  <a name="read"></a>  Cinternetfile:: Read  
- 呼叫此成員函式以讀取到指定的記憶體，從 `lpvBuf` 開始，指定的位元組數目為 `nCount`。  
+ 呼叫此成員函式，來讀取為指定的記憶體，開始*lpvBuf*、 指定的位元組數目， *nCount*。  
   
 ```  
 virtual UINT Read(
@@ -221,17 +221,17 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  將檔案資料讀取到的記憶體位址指標。  
   
- `nCount`  
+ *nCount*  
  要寫入的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
- 傳輸至緩衝區的位元組數目。 如果已達到檔案結尾，傳回的值可能小於 `nCount`。  
+ 傳輸至緩衝區的位元組數目。 傳回的值可能小於*nCount*如果已到達檔案結尾。  
   
 ### <a name="remarks"></a>備註  
- 此函數會傳回實際讀取的位元組數目 — 可能小於 `nCount` 的數字 (如果檔案結束)。 如果在讀取檔案時發生錯誤，函式會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)描述錯誤的物件。 請注意，讀取超過檔案結尾不被視為錯誤，而且會擲回任何例外狀況。  
+ 此函數會傳回實際讀取的位元組數目 — 可能的數字小於*nCount*如果檔案結束。 如果在讀取檔案時發生錯誤，函式會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)描述錯誤的物件。 請注意，讀取超過檔案結尾不被視為錯誤，而且會擲回任何例外狀況。  
   
  若要確保擷取所有的資料，應用程式必須繼續呼叫**cinternetfile:: Read**方法，直到該方法會傳回零。  
   
@@ -248,13 +248,13 @@ virtual LPTSTR ReadString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pstr`  
+ *pstr*  
  將會收到所讀取的行的字串指標。  
   
- `nMax`  
+ *nMax*  
  要讀取的字元數目上限。  
   
- `rString`  
+ *rString*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收讀取的行的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -263,7 +263,7 @@ virtual LPTSTR ReadString(
  **NULL**檔案結尾已到達未讀取任何資料; 如果或布林值，如果**FALSE**如果檔案結尾已到達未讀取的任何資料。  
   
 ### <a name="remarks"></a>備註  
- 此函式會產生列放入所參考的記憶體`pstr`參數。 它會停止讀取字元它何時到達指定的字元數目上限`nMax`。 緩衝區一定會收到結束的 null 字元。  
+ 此函式會產生列放入所參考的記憶體*pstr*參數。 它會停止讀取字元它何時到達指定的字元數目上限*nMax*。 緩衝區一定會收到結束的 null 字元。  
   
  如果您呼叫`ReadString`情況下先呼叫[SetReadBufferSize](#setreadbuffersize)，您會收到 4096 位元組的緩衝區。  
   
@@ -277,17 +277,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lOffset`  
+ *lOffset*  
  在讀取/寫入將指標移至檔案中的位元組位移。  
   
- `nFrom`  
+ *nFrom*  
  相對位移的參考。 必須是下列值之一：  
   
-- **CFile::begin**檔案指標移到`lOff`將從檔案開頭的位元組。  
+- **CFile::begin**檔案指標移到*lOff*將從檔案開頭的位元組。  
   
-- **CFile::current**檔案指標移到`lOff`位元組從檔案中的目前位置。  
+- **CFile::current**檔案指標移到*lOff*位元組從檔案中的目前位置。  
   
-- **CFile::end**檔案指標移到`lOff`從檔案結尾的位元組。 `lOff` 必須為負數搜尋現有的檔案。正值會搜尋超出檔案結尾。  
+- **CFile::end**檔案指標移到*lOff*從檔案結尾的位元組。 *lOff*必須負到現有的搜尋檔案進行; 正數值將會搜尋超出檔案結尾。  
   
 ### <a name="return-value"></a>傳回值  
  新要求的位置是合法的; 如果從檔案開頭位移的位元組否則，值就是未定義和[CInternetException](../../mfc/reference/cinternetexception-class.md)物件就會擲回。  
@@ -320,7 +320,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
- 基礎 WinInet Api 不要執行緩衝處理，因此請選擇可讓您的應用程式有效率地讀取資料，無論要讀取的資料量的緩衝區大小。 如果每個呼叫[讀取](#read)通常牽涉到大型 aount 的資料 （例如，四個或多個 kb 為單位），您應該不需要緩衝區。 不過，如果您呼叫**讀取**取得小區塊中的資料，或如果您使用[ReadString](#readstring)來個別程式碼行讀取一次，則讀取的緩衝區改進應用程式效能。  
+ 基礎 WinInet Api 不要執行緩衝處理，因此請選擇可讓您的應用程式有效率地讀取資料，無論要讀取的資料量的緩衝區大小。 如果每個呼叫[讀取](#read)通常牽涉到大型 aount 的資料 （例如，四個或多個 kb 為單位），您應該不需要緩衝區。 不過，如果您呼叫`Read`取得小區塊中的資料，或如果您使用[ReadString](#readstring)來個別程式碼行讀取一次，則讀取的緩衝區改進應用程式效能。  
   
  根據預設，`CInternetFile`物件不提供任何緩衝讀取。 如果您呼叫此成員函式，您必須確定已開啟檔案進行讀取存取。  
   
@@ -346,7 +346,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  根據預設，`CInternetFile`物件不提供寫入任何緩衝。 如果您呼叫此成員函式，您必須確定已開啟檔案進行寫入存取權。 您可以在任何時間，變更寫入緩衝區的大小，但這樣做會導致的隱含呼叫[排清](#flush)。  
   
 ##  <a name="write"></a>  CInternetFile::Write  
- 呼叫此成員函式，要寫入至指定的記憶體， `lpvBuf`、 指定的位元組數目， `nCount`。  
+ 呼叫此成員函式，要寫入至指定的記憶體， *lpvBuf*、 指定的位元組數目， *nCount*。  
   
 ```  
 virtual void Write(
@@ -355,10 +355,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  要寫入的第一個位元組指標。  
   
- `nCount`  
+ *nCount*  
  指定要寫入的位元組數目。  
   
 ### <a name="remarks"></a>備註  
@@ -372,7 +372,7 @@ virtual void WriteString(LPCTSTR pstr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pstr`  
+ *pstr*  
  字串，包含要寫入的內容指標。  
   
 ### <a name="remarks"></a>備註  

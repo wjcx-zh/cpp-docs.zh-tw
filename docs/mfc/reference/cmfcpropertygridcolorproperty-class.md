@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367990"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040804"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 類別
 `CMFCPropertyGridColorProperty` 類別支援開啟色彩選取對話方塊的屬性清單控制項項目。  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strName`  
+ [in]*strName*  
  屬性的名稱。  
   
- [輸入] `color`  
+ [in]*色彩*  
  色彩屬性的值。  
   
- [輸入] `pPalette`  
+ [in]*pPalette*  
  指標的色彩調色盤。 預設值是 `NULL`。  
   
- [輸入] `lpszDescr`  
+ [in]*lpszDescr*  
  屬性描述。 預設值是 `NULL`。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  自動按鈕的標籤文字。  
   
- [輸入] `colorAutomatic`  
+ [in]*colorAutomatic*  
  自動 （預設） 色彩的 RGB 色彩值。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用 [自動] 按鈕。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  其他按鈕的標籤文字。  
   
- [輸入] `bAltColorDlg`  
+ [in]*bAltColorDlg*  
  `TRUE` 若要顯示`CMFCColorDialog` 對話方塊。`FALSE`顯示標準色彩選取對話方塊。 預設值是 `TRUE`。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要顯示 [其他] 按鈕。否則， `FALSE`。  預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nColumnsNumber`  
+ [in]*nColumnsNumber*  
  色彩屬性格線中的資料行的慣用的數目。  
   
 ### <a name="remarks"></a>備註  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `varValue`  
+ [in]*varValue*  
  一個值。  
   
 ### <a name="remarks"></a>備註  

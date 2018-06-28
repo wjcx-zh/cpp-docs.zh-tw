@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8dd962a06d6c7edadcdd029bd83d44b251aec8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45e0499297c814e4a214962bc2f51404960a8c38
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377735"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039215"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 封裝月曆控制項的功能。  
@@ -226,19 +226,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定套用至月曆控制項的視窗樣式的組合。 請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)如需有關樣式的 Windows SDK 中。  
   
- `rect`  
+ *rect*  
  若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 包含的位置與月曆控制項的大小。  
   
- `pt`  
+ *pt*  
  若要參考[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)結構可識別月曆控制項的位置。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指標[CWnd](../../mfc/reference/cwnd-class.md)是月曆控制項的父視窗的物件。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定的月曆控制項的控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -251,11 +251,11 @@ virtual BOOL Create(
   
 2.  呼叫此成員函式，建立月曆控制項，並將它附加至`CMonthCalCtrl`物件。  
   
- 當您呼叫**建立**，通用控制項都已初始化。 版本**建立**您呼叫可讓您決定大小的方式：  
+ 當您呼叫`Create`，通用控制項都已初始化。 版本`Create`您呼叫可讓您決定大小的方式：  
   
--   若要自動調整一個月控制項的 MFC，請呼叫使用覆寫`pt`參數。  
+-   若要自動調整一個月控制項的 MFC，請呼叫使用覆寫*pt*參數。  
   
--   若要自行大小控制項，呼叫會使用此函式的覆寫`rect`參數。  
+-   若要自行大小控制項，呼叫會使用此函式的覆寫*rect*參數。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `pmcGridInfo`|指標[MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925)接收目前月曆控制項的相關資訊的結構。 呼叫端會負責配置和初始化此結構的。|  
+|[out]*pmcGridInfo*|指標[MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925)接收目前月曆控制項的相關資訊的結構。 呼叫端會負責配置和初始化此結構的。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -331,15 +331,15 @@ CALID GetCalID() const;
  這個方法會傳送[MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) Windows SDK 中所述的訊息。  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
- 月份的區域的色彩月曆控制項所指定的擷取`nRegion`。  
+ 月份的區域的色彩月曆控制項所指定的擷取*nRegion*。  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRegion`  
- 月曆控制項擷取色彩區域。 如需值的清單，請參閱`nRegion`參數[SetColor](#setcolor)。  
+ *nRegion*  
+ 月曆控制項擷取色彩區域。 如需值的清單，請參閱*nRegion*參數[SetColor](#setcolor)。  
   
 ### <a name="return-value"></a>傳回值  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，指定與月曆控制項的部分相關聯的色彩，如果成功的話。 否則，此成員函式會傳回-1。  
@@ -384,10 +384,10 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `refDateTime`  
+ *refDateTime*  
  若要參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。 接收目前的時間。  
   
- `pDateTime`  
+ *pDateTime*  
  指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)將會收到將目前選取的日期資訊的結構。 這個參數必須是有效的位址，且不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -480,7 +480,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRect`  
+ *pRect*  
  指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)將會收到週框矩形資訊的結構。 這個參數必須是有效的位址，且不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -523,19 +523,19 @@ int GetMonthRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `refMinRange`  
+ *refMinRange*  
  若要參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含允許的最小日期。  
   
- `refMaxRange`  
+ *refMaxRange*  
  若要參考`COleDateTime`或`CTime`物件，其中包含允許的最大日期。  
   
- `pMinRange`  
+ *pMinRange*  
  指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含最低範圍的結束日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`SYSTEMTIME`結構，其中包含最高範圍的結束日期。  
   
- `dwFlags`  
+ *dwFlags*  
  值，指定要擷取的範圍限制的範圍。 此值必須是下列其中一項。  
   
 |值|意義|  
@@ -544,7 +544,7 @@ int GetMonthRange(
 |GMR_VISIBLE|包括完全顯示這些月份。|  
   
 ### <a name="return-value"></a>傳回值  
- 整數，表示合併兩個限制的範圍，以月為單位，由`refMinRange`和`refMaxRange`中的第一個和第二個版本，或`pMinRange`和`pMaxRange`第三個版本中。  
+ 整數，表示合併兩個限制的範圍，以月為單位，由*refMinRange*和*refMaxRange*中的第一個和第二個版本，或*pMinRange*和*pMaxRange*第三個版本中。  
   
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981)、 Windows SDK 中所述。 在 MFC 的實作`GetMonthRange`，您可以指定`COleDateTime`使用量，`CTime`使用量或`SYSTEMTIME`結構使用。  
@@ -570,10 +570,10 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMinRange`  
+ *pMinRange*  
  指標`COleDateTime`物件`CTime`物件，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含最低範圍的結束日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`COleDateTime`物件`CTime`物件，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含最高範圍的結束日期。  
   
 ### <a name="return-value"></a>傳回值  
@@ -581,8 +581,8 @@ DWORD GetRange(
   
 |值|意義|  
 |-----------|-------------|  
-|GDTR_MAX|最大限制是設定的控制項;`pMaxRange`有效，且包含適用於日期資訊。|  
-|GDTR_MIN|最小限制為設定的控制項;`pMinRange`有效，且包含適用於日期資訊。|  
+|GDTR_MAX|最大限制是設定的控制項;*pMaxRange*有效，且包含適用於日期資訊。|  
+|GDTR_MIN|最小限制為設定的控制項;*pMinRange*有效，且包含適用於日期資訊。|  
   
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983)、 Windows SDK 中所述。 在 MFC 的實作`GetRange`，您可以指定`COleDateTime`使用量，`CTime`使用量或`SYSTEMTIME`結構使用。  
@@ -608,16 +608,16 @@ BOOL GetSelRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `refMinRange`  
+ *refMinRange*  
  若要參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含允許的最小日期。  
   
- `refMaxRange`  
+ *refMaxRange*  
  若要參考`COleDateTime`或`CTime`物件，其中包含允許的最大日期。  
   
- `pMinRange`  
+ *pMinRange*  
  指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含最低範圍的結束日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`SYSTEMTIME`結構，其中包含最高範圍的結束日期。  
   
 ### <a name="return-value"></a>傳回值  
@@ -638,10 +638,10 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `refDateTime`  
+ *refDateTime*  
  若要參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，指出目前的日期。  
   
- `pDateTime`  
+ *pDateTime*  
  指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構將會接收日期資訊。 這個參數必須是有效的位址，且不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -733,10 +733,10 @@ void SetCalendarBorder(int cxyBorder);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `cxyBorder`|框線寬度，單位為像素。|  
+|[in]*cxyBorder*|框線寬度，單位為像素。|  
   
 ### <a name="remarks"></a>備註  
- 如果此方法成功，設定框線寬度`cxyBorder`參數。 否則，框線寬度會重設為預設值，指定由目前[佈景主題](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或如果不會使用佈景主題。  
+ 如果此方法成功，設定框線寬度*cxyBorder*參數。 否則，框線寬度會重設為預設值，指定由目前[佈景主題](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或如果不會使用佈景主題。  
   
  這個方法會傳送[MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) Windows SDK 中所述的訊息。  
   
@@ -773,13 +773,13 @@ BOOL SetCalID(CALID calid);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `calid`|其中一個[行事曆識別碼](http://msdn.microsoft.com/library/windows/desktop/dd317732)常數。|  
+|[in]*calid*|其中一個[行事曆識別碼](http://msdn.microsoft.com/library/windows/desktop/dd317732)常數。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 行事曆識別碼指定特定地區行事曆，例如西曆 （已當地語系化）、 日文或回曆行事曆。 使用`SetCalID`方法，以顯示所指定的行事曆`calid`參數，如果您的電腦上安裝包含行事曆的地區設定。  
+ 行事曆識別碼指定特定地區行事曆，例如西曆 （已當地語系化）、 日文或回曆行事曆。 使用`SetCalID`方法，以顯示所指定的行事曆*calid*參數，如果您的電腦上安裝包含行事曆的地區設定。  
   
  這個方法會傳送[MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) Windows SDK 中所述的訊息。  
   
@@ -816,7 +816,7 @@ COLORREF SetColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRegion`  
+ *nRegion*  
  整數值，指定要設定哪一個月份行事曆色彩。 這個值可以是下列其中一項。  
   
 |值|意義|  
@@ -828,7 +828,7 @@ COLORREF SetColor(
 |MCSC_TITLETEXT|用來顯示日曆標題內文字的色彩。|  
 |MCSC_TRAILINGTEXT|用來顯示標頭和結尾的一天的文字色彩。 標頭日期及其後日期會從目前的行事曆會出現之前與之後月份的天數。|  
   
- `ref`  
+ *ref*  
  A **COLORREF**月曆控制項的指定部分的新色彩設定的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `dwNewView`|下列的值，指定每月、 每年、 十年或含世紀檢視的其中一個。<br /><br /> MCMV_MONTH： 每月 檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年檢視<br /><br /> MCMV_CENTURY： 世紀檢視|  
+|[in]*dwNewView*|下列的值，指定每月、 每年、 十年或含世紀檢視的其中一個。<br /><br /> MCMV_MONTH： 每月 檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年檢視<br /><br /> MCMV_CENTURY： 世紀檢視|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -869,10 +869,10 @@ BOOL SetCurSel(const CTime& refDateTime);
 ```  
   
 ### <a name="parameters"></a>參數  
- `refDateTime`  
+ *refDateTime*  
  若要參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，指出目前選取的月份行事曆控制項。  
   
- `pDateTime`  
+ *pDateTime*  
  指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含要設定為目前的選取範圍的日期。  
   
 ### <a name="return-value"></a>傳回值  
@@ -895,9 +895,9 @@ BOOL SetDayState(
   
 ### <a name="parameters"></a>參數  
  *nMonths*  
- 值，指出陣列中項目數目，`pStates`指向。  
+ 值，指出陣列中項目數目， *pStates*指向。  
   
- `pStates`  
+ *pStates*  
  指標[MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915)定義如何月曆控制項時，會在其顯示繪製每一天的值陣列。 **MONTHDAYSTATE**資料類型是位元欄位，其中每一個位元 (1 到 31) 代表一個月中每天的狀態。 如果位元是開啟的，則對應的日期會以粗體顯示；否則就不會強調其顯示。  
   
 ### <a name="return-value"></a>傳回值  
@@ -955,7 +955,7 @@ BOOL SetMaxSelCount(int nMax);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMax`  
+ *nMax*  
  將會設定為代表最大天數可選取的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1027,10 +1027,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMinRange`  
+ *pMinRange*  
  指標`COleDateTime`物件`CTime`物件，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含最低範圍的結束日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`COleDateTime`物件`CTime`物件，或`SYSTEMTIME`結構，其中包含最高範圍的結束日期。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1062,10 +1062,10 @@ BOOL SetSelRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMinRange`  
+ *pMinRange*  
  指標`COleDateTime`物件`CTime`物件，或[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含最低範圍的結束日期。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`COleDateTime`物件`CTime`物件，或`SYSTEMTIME`結構，其中包含最高範圍的結束日期。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1084,10 +1084,10 @@ void SetToday(const CTime* pDateTime);
 ```  
   
 ### <a name="parameters"></a>參數  
- `refDateTime`  
+ *refDateTime*  
  若要參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件，其中包含目前的日期。  
   
- `pDateTime`  
+ *pDateTime*  
  在第二個版本中，指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含目前的日期資訊。 在第三個版本中，指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含目前的日期資訊。  
   
 ### <a name="remarks"></a>備註  
@@ -1117,7 +1117,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bRepaint`  
+ *bRepaint*  
  指定是否重新繪製控制項。 根據預設， **TRUE**。 如果**FALSE**，沒有重新繪製時發生。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1137,13 +1137,13 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆的所需的數目的矩形。|  
+|[in]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆的所需的數目的矩形。|  
   
 ### <a name="return-value"></a>傳回值  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)所定義的結構，定義的矩形的大小小於或等於矩形`lpRect`參數。  
+ 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)所定義的結構，定義的矩形的大小小於或等於矩形*lpRect*參數。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會計算所指定的矩形內可容納多少行事曆`lpRect`參數，然後傳回最小的矩形可以包含該數目的行事曆。 實際上，這個方法會縮小以完全符合需要的行事曆數指定的矩形。  
+ 這個方法會計算所指定的矩形內可容納多少行事曆*lpRect*參數，然後傳回最小的矩形可以包含該數目的行事曆。 實際上，這個方法會縮小以完全符合需要的行事曆數指定的矩形。  
   
  這個方法會傳送[MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) Windows SDK 中所述的訊息。  
   

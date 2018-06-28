@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368855"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037430"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 類別
 `CMFCRibbonButtonsGroup`類別可讓您將一組功能區按鈕組織為群組。 群組中的所有按鈕彼此水平直接相鄰，而且以框線框住。  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  若要加入按鈕指標。  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lstButtons`  
+ [in]*lstButtons*  
  您想要新增的按鈕的指標的清單。  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  指定將新增至新建立的按鈕`CMFCRibbonButtonsGroup`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `i`  
+ [in]*我*  
  返回按鈕以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  功能區群組的裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonButtonsGroup`物件。  
   
- [輸入] `rectImage`  
+ [in]*rectImage*  
  在其中繪製影像的矩形。  
   
- [輸入] `pButton`  
+ [in]*pButton*  
  要繪製影像按鈕。  
   
- [輸入] `nImageIndex`  
+ [in]*nImageIndex*  
  （在三個映像陣列以進行一般、 反白顯示或停用按鈕） 的按鈕上繪製影像的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pImages`  
+ [in]*pImages*  
  一般的映像。  
   
- [輸入] `pHotImages`  
+ [in]*pHotImages*  
  作用中影像。  
   
- [輸入] `pDisabledImages`  
+ [in]*pDisabledImages*  
  已停用映像。  
   
 ### <a name="remarks"></a>備註  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pCategory`  
+ [in]*pCategory*  
  若要設定的父類別的指標 （在功能區控制項的索引標籤式的群組稱為類別）。  
   
 ### <a name="remarks"></a>備註  

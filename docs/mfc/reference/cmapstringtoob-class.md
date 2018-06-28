@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375767"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042244"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 類別
 字典集合類別，這個類別會將唯一的 `CString` 物件對應至 `CObject` 指標。  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBlockSize`  
+ *nBlockSize*  
  指定擴充對應的記憶體配置資料粒的度。  
   
 ### <a name="remarks"></a>備註  
- 記憶體對應成長時，配置單位的`nBlockSize`項目。  
+ 記憶體對應成長時，配置單位的*nBlockSize*項目。  
   
  下表顯示其他成員函式，類似於**CMapStringToOb:: CMapStringToOb**。  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  雜湊值會計算索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hashSize`  
+ *hashSize*  
  雜湊表中的項目數。  
   
- `bAllocNow`  
+ *bAllocNow*  
  如果**TRUE**，配置雜湊表初始化，在需要時，否則配置資料表。  
   
 ### <a name="remarks"></a>備註  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  指定字串索引鍵可識別要查閱的項目。  
   
- `rValue`  
+ *rValue*  
  指定查閱向上元素傳回的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  指定字串索引鍵可識別要查閱的項目。  
   
- `rKey`  
+ *rKey*  
  相關聯的索引鍵參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標的參考`CObject`物件; 或**NULL**如果 map 是空的或`key`超出範圍。  
+ 指標的參考`CObject`物件; 或**NULL**如果 map 是空的或*金鑰*超出範圍。  
   
 ### <a name="remarks"></a>備註  
  因此可以使用只在指派陳述式 （左值） 的左半部。 如果沒有具有指定之索引鍵的對應項目，則會建立新的項目。  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  指定用於對應查閱的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  指定新項目的索引鍵的字串。  
   
- `newValue`  
+ *newValue*  
  指定`CObject`是新的項目值的指標。  
   
 ### <a name="remarks"></a>備註  

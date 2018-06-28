@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375095"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041041"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 類別
 用於 OLE 的 [變更圖示] 對話方塊。  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  要轉換之項目的點。  
   
- `dwFlags`  
+ *dwFlags*  
  使用位元結合起來建立旗標，其中包含下列值的任何數字-or 運算子：  
   
 - **CIF_SELECTCURRENT**指定對話方塊中呼叫時，一開始選取目前的選項按鈕。 這是預設值。  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE**指定圖示應該要從可執行檔中指定擷取**szIconExe**欄位[m_ci](#m_ci)而不是擷取自型別。 這是適用於內嵌或連結至非 OLE 檔案。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，對話方塊中的父視窗將會設定為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指向其圖示會變更的項目。  
   
 ### <a name="return-value"></a>傳回值  

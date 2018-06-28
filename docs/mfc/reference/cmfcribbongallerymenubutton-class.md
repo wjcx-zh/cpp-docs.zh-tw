@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370903"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041256"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 類別
 實作包含功能區組件庫的功能區功能表按鈕。  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
   
 ### <a name="remarks"></a>備註  
   
@@ -132,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `uiID`  
- 按鈕的命令識別碼。 這是傳送的值**WM_COMMAND**當使用者按一下此按鈕時，訊息。  
+ *uiID*  
+ 按鈕的命令識別碼。 這是當使用者按一下此按鈕 WM_COMMAND 訊息中傳送的值。  
   
- `iImage`  
- 要與組件庫功能表按鈕顯示的影像索引。 影像會儲存在`imagesPalette`參數。  
+ *iImage*  
+ 要與組件庫功能表按鈕顯示的影像索引。 影像會儲存在*imagesPalette*參數。  
   
- `lpszText`  
+ *lpszText*  
  要顯示的功能表按鈕上的文字。  
   
- `imagesPalette`  
+ *imagesPalette*  
  包含組件庫上顯示影像的清單。  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  顯示組件庫的映像的映像清單資源識別碼。  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  指定的寬度，以顯示組件庫映像素為單位。  
   
 ### <a name="remarks"></a>備註  

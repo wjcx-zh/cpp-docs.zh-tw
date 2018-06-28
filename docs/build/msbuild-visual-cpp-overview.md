@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379259"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039085"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概觀  
   
@@ -139,7 +139,10 @@ MSBuild 系統之前，或另一個目標之後，可以有條件地執行目標
 |重建|會清除，然後建置您的專案。|  
 |ResourceCompile|執行 Microsoft Windows 資源編譯器工具 rc.exe。|  
 |XdcMake|執行 XML 文件工具 xdcmake.exe。|  
-|Xsd|執行 XML 結構描述定義工具 xsd.exe。|  
+|Xsd|執行 XML 結構描述定義工具 xsd.exe。 *請參閱下方的附註。*|  
+
+> [!NOTE] 
+> 在 Visual Studio 2017，c + + 專案支援**xsd**檔案已被取代。 您仍然可以使用**Microsoft.VisualC.CppCodeProvider**加**CppCodeProvider.dll**手動到 GAC。
   
 ## <a name="see-also"></a>另請參閱  
   

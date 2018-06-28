@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369332"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040216"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 類別
 實作以視覺效果指示長時間作業進度的控制項。  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  指定功能區進度列的命令 ID。  
   
- [輸入] `nWidth`  
+ [in]*nWidth*  
  指定的寬度，以像素的功能區進度列。  
   
- [輸入] `nHeight`  
+ [in]*nHeight*  
  指定高度，單位為像素的功能區進度列。  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>備註  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSet`  
+ [in]*bSet*  
  `TRUE` 若要指定無限的模式，進度列否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPos`  
+ [in]*nPos*  
  指定設定的進度列的位置。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  指定是否應該重新繪製進度列。  
   
 ### <a name="remarks"></a>備註  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nMin`  
+ [in]*nMin*  
  指定範圍的最小值。  
   
- [輸入] `nMax`  
+ [in]*nMax*  
  指定範圍的最大值。  
   
 ### <a name="remarks"></a>備註  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378414"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039124"
 ---
 # <a name="coblist-class"></a>CObList 類別
 排序清單的非唯一的 fSupports`CObject`指標可循序或依指標值。  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  插入項目是非常快速在清單開頭、 結尾和已知**位置**。 循序搜尋的必要值或索引來查閱項目。 這項搜尋可能會慢如果清單很長的。  
   
- `CObList` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果一份`CObject`指標會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CObject`並依序序列化項目。  
+ `CObList` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果一份`CObject`指標會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CObject`並依序序列化項目。  
   
  如果您需要個別的傾印`CObject`清單中的項目，您必須將傾印內容的深度為 1 或更大。  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `newElement`  
+ *newElement*  
  `CObject`来加入至這份清單的指標。  
   
- `pNewList`  
- 指標，另一個`CObList`清單。 中的項目`pNewList`會加入此清單。  
+ *pNewList*  
+ 指標，另一個`CObList`清單。 中的項目*pNewList*會加入此清單。  
   
 ### <a name="return-value"></a>傳回值  
  第一個版本會傳回**位置**新插入的項目值。  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `newElement`  
+ *newElement*  
  `CObject`来加入至這份清單的指標。  
   
- `pNewList`  
- 指標，另一個`CObList`清單。 中的項目`pNewList`會加入此清單。  
+ *pNewList*  
+ 指標，另一個`CObList`清單。 中的項目*pNewList*會加入此清單。  
   
 ### <a name="return-value"></a>傳回值  
  第一個版本會傳回**位置**新插入的項目值。  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBlockSize`  
+ *nBlockSize*  
  用於擴充清單的記憶體配置資料粒度。  
   
 ### <a name="remarks"></a>備註  
- 清單成長時，配置單位的記憶體`nBlockSize`項目。 如果記憶體配置失敗，`CMemoryException`就會擲回。  
+ 清單成長時，配置單位的記憶體*nBlockSize*項目。 如果記憶體配置失敗，`CMemoryException`就會擲回。  
   
  下表顯示其他成員函式，類似於`CObList::CObList`。  
   
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>參數  
- `searchValue`  
+ *searchValue*  
  要在此清單中找到的物件指標。  
   
- `startAfter`  
+ *startAfter*  
  搜尋開始位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -285,18 +285,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- 會使用值`nIndex`為清單中的索引。  
+ 會使用值*nIndex*為清單中的索引。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  若要找的清單項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果`nIndex`太大。 (架構產生判斷提示，如果`nIndex`為負數。)  
+ A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果*nIndex*太大。 (架構產生判斷提示，如果*nIndex*是負數。)  
   
 ### <a name="remarks"></a>備註  
  從清單中，停止上的開頭啟動循序掃描*n*th 項目。  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>參數  
  *位置*  
- A**位置**傳回先前值`GetHeadPosition`或**尋找**成員函式呼叫。  
+ A**位置**傳回先前值`GetHeadPosition`或`Find`成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
  請參閱的傳回值描述[GetHead](#gethead)。  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至`POSITION`清單中的下一個項目的值。  
+ 取得所識別的清單項目*rPosition*，然後設定*rPosition*至`POSITION`清單中的下一個項目的值。  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPosition`  
+ *rPosition*  
  參考`POSITION`傳回先前值`GetNext`， `GetHeadPosition`，或其他成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  您必須確定您`POSITION`值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
- 如果擷取的項目是在清單中，最後則新值`rPosition`設`NULL`。  
+ 如果擷取的項目是在清單中，最後則新值*rPosition*設`NULL`。  
   
  很可能在反覆項目移除項目。 請參閱範例的[RemoveAt](#removeat)。  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至`POSITION`先前的項目在清單中的值。  
+ 取得所識別的清單項目*rPosition*，然後設定*rPosition*至`POSITION`先前的項目在清單中的值。  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPosition`  
+ *rPosition*  
  若要參考`POSITION`傳回先前值`GetPrev`或其他成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>參數  
  *位置*  
- 先前的 **、** 或 `GetNext`Find `GetPrev`成員函式呼叫所傳回的 **POSITION** 值。  
+ A**位置**傳回先前值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。  
   
  `newElement`  
  要加入至這個清單的物件指標。  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>參數  
  *位置*  
- 先前的 **、** 或 `GetNext`Find `GetPrev`成員函式呼叫所傳回的 **POSITION** 值。  
+ A**位置**傳回先前值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。  
   
- `newElement`  
+ *newElement*  
  要加入至這個清單的物件指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  **位置**来設定的項目。  
   
- `newElement`  
+ *newElement*  
  `CObject`寫入至清單的指標。  
   
 ### <a name="remarks"></a>備註  

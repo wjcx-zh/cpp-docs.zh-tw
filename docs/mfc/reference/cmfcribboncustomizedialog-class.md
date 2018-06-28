@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8e693a0e6a2353693f676ed0d63d7087d3e57455
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370190"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040895"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 類別
 顯示功能區**自訂**頁面。  
@@ -82,10 +82,10 @@ CMFCRibbonCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  父視窗 （通常是主框架） 的指標。  
   
- [輸入] `pRibbon`  
+ [in]*pRibbon*  
  指標`CMFCRibbonBar`要加以自訂。  
   
 ### <a name="example"></a>範例  

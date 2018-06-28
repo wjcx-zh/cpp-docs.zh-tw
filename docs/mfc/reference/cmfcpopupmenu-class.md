@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d18ab91e1b1c3af7e676cbad9992094238214e38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f92f600d5005fbc85b1dd82ce66274020adb4b2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377716"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042192"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 實作 Windows 快顯功能表功能，並加入功能 (例如 Tear-Off 功能表和工具提示) 進行擴充。
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTopFrame`  
- [輸入] `pPopupMenu`  
+ [in]*pTopFrame*  
+ [in]*pPopupMenu*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -330,7 +330,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 如果快顯功能表可顯示空的項目。`FALSE`否則。  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
@@ -352,7 +352,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `ptScreen`  
+ [in]*ptScreen*  
  螢幕座標中的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -361,17 +361,17 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="remarks"></a>備註  
  MENUAREA_TYPE 參數可以有下列值之一。  
   
--   外部-`ptScreen`超出快顯功能表。  
+-   外部- *ptScreen*超出快顯功能表。  
   
--   標誌-`ptScreen`標誌區域上方。  
+-   標誌- *ptScreen*標誌區域上方。  
   
--   TEAROFF_CAPTION-`ptScreen`撕標題上方。  
+-   TEAROFF_CAPTION- *ptScreen*撕標題上方。  
   
--   SHADOW_BOTTOM-`ptScreen`上方的快顯功能表下陰影。  
+-   SHADOW_BOTTOM- *ptScreen*上方的快顯功能表下陰影。  
   
--   SHADOW_RIGHT-`ptScreen`是透過快顯功能表的陰影。  
+-   SHADOW_RIGHT- *ptScreen*是透過快顯功能表的陰影。  
   
--   功能表-`ptScreen`是透過命令。  
+-   功能表- *ptScreen*是透過命令。  
   
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSetFocusToBar`  
+ [in]*bSetFocusToBar*  
   
 ### <a name="remarks"></a>備註  
   
@@ -395,10 +395,10 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pCustPage`  
+ [in]*pCustPage*  
  自訂頁面指標。  
   
- [輸入] `lpszTitle`  
+ [in]*lpszTitle*  
  包含的功能表標題的字串。  
   
 ### <a name="remarks"></a>備註  
@@ -418,29 +418,29 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  父視窗`CMFCPopupMenu`。  
   
- [輸入] `x`  
+ [in]*x*  
  水平的螢幕座標的位置快顯功能表  
   
- [輸入] `y`  
+ [in]*y*  
  垂直的螢幕快顯功能表的位置座標。  
   
- [輸入] `hMenu`  
+ [in]*hMenu*  
  功能表資源控制代碼。  
   
- [輸入] `bLocked`  
+ [in]*封鎖*  
  表示功能表是否可自訂的布林參數。 `FALSE` 表示可自訂的快顯功能表。  
   
- [輸入] `bOwnMessage`  
+ [in]*bOwnMessage*  
  布林值參數，指出此架構將功能表訊息的路由。 請參閱 < 備註 > 一節，如需詳細資訊。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果方法成功。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 如果`bOwnMessage`是`TRUE`，架構會傳送到任何功能表訊息`pWndParent`。 `pWndParent` 不能`NULL`如果`bOwnMessage`是`TRUE.`如果`bOwnMessage`是`FALSE`，架構會傳送至父快顯功能表的功能表訊息。  
+ 如果*bOwnMessage*是`TRUE`，架構會傳送到任何功能表訊息*pWndParent*。 *pWndParent*不得`NULL`如果*bOwnMessage*是`TRUE.`如果*bOwnMessage*是`FALSE`，架構會將功能表訊息路由至父快顯功能表.  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`Create`方法`CMFCPopuMenu`類別。 此程式碼片段是部分[自訂網頁範例](../../visual-cpp-samples.md)。  
@@ -458,9 +458,9 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndMain`  
- [輸入] `uiID`  
- [輸入] `lpszName`  
+ [in]*pWndMain*  
+ [in]*uiID*  
+ [in]*lpszName*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -487,16 +487,16 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iLogoSize`  
+ [in]*iLogoSize*  
  標誌，像素為單位的大小。  
   
- [輸入] `nLogoLocation`  
+ [in]*nLogoLocation*  
  列舉的資料型別表示的商標的位置。  
   
 ### <a name="remarks"></a>備註  
  若要顯示標誌，請實作方法[CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo)主框架視窗中。  
   
- 可能值`nLogoLocation`MENU_LOGO_LEFT、 MENU_LOGO_RIGHT、 MENU_LOGO_TOP，和 MENU_LOGO_BOTTOM。  
+ 可能值*nLogoLocation* MENU_LOGO_LEFT、 MENU_LOGO_RIGHT、 MENU_LOGO_TOP，和 MENU_LOGO_BOTTOM。  
   
 ##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
  可讓功能表音效。  
@@ -506,7 +506,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用聲音`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
@@ -520,7 +520,7 @@ void EnableResize(CSize sizeMinResize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `sizeMinResize`  
+ [in]*sizeMinResize*  
   
 ### <a name="remarks"></a>備註  
   
@@ -532,7 +532,7 @@ void EnableScrolling(BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `BOOL`  
+ [in]*BOOL*  
   
 ### <a name="remarks"></a>備註  
   
@@ -544,7 +544,7 @@ void EnableVertResize(int nMinResize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nMinResize`  
+ [in]*nMinResize*  
   
 ### <a name="remarks"></a>備註  
   
@@ -556,7 +556,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -596,7 +596,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bNoSystem`  
+ [in]*bNoSystem*  
  布林值參數，指出是否此方法會檢查全域值。 FALSE，此方法以傳回這個執行個體的動畫樣式[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -682,7 +682,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  功能表項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -722,7 +722,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectParentBtn`  
+ [in]*rectParentBtn*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -849,17 +849,17 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `button`  
+ [in]*按鈕*  
  若要加入之功能表項目的參考。  
   
- [輸入] `iInsertAt`  
- 新項目的以零為起始的索引。 如果`iInsertAt`為-1，將項目會加入功能表的結束。  
+ [in]*iInsertAt*  
+ 新項目的以零為起始的索引。 如果*iInsertAt*為-1，將項目會加入功能表的結束。  
   
 ### <a name="return-value"></a>傳回值  
  項目已插入的位置以零為起始的索引。 如果方法失敗-1。  
   
 ### <a name="remarks"></a>備註  
- 如果您提供的值無效，這個方法將會失敗`iInsertAt`，例如大於目前的快顯功能表的項目數的整數。  
+ 如果您提供的值無效，這個方法將會失敗*iInsertAt*，例如大於目前的快顯功能表的項目數的整數。  
   
 ##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
  在指定的位置快顯功能表中插入分隔符號。  
@@ -869,16 +869,16 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iInsertAt`  
+ [in]*iInsertAt*  
  這個方法會在其中插入分隔符號位置的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  插入分隔符號位置以零為起始的索引。 如果此方法失敗-1。  
   
 ### <a name="remarks"></a>備註  
- 值為-1 代表`iInsertAt`表示這個方法會加入快顯功能表的結束分隔符號。  
+ 值為-1 代表*iInsertAt*表示這個方法會加入快顯功能表的結束分隔符號。  
   
- 如果這個方法會失敗`iInsertAt`是無效的值。  
+ 如果這個方法會失敗*iInsertAt*是無效的值。  
   
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose  
 
@@ -1013,7 +1013,7 @@ static BOOL IsSendMenuSelectMsg();
  `TRUE` 如果架構通知父框架。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 架構會傳送通知父框架`WM_MENUSELECT`訊息時使用的選取功能表命令。  
+ 架構會使用選取功能表命令時將它傳送 WM_MENUSELECT 訊息通知父框架。  
   
 ##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
  指出快顯功能表目前是否為可見。  
@@ -1033,7 +1033,7 @@ void MoveTo(const CPoint& pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pt`  
+ [in]*pt*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1045,7 +1045,7 @@ virtual void OnChangeHot(int nHot);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nHot`  
+ [in]*nHot*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1057,7 +1057,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uidCmdID`  
+ [in]*uidCmdID*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
- [輸入] `nCode`  
- [輸入] `pExtra`  
- [輸入] `pHandlerInfo`  
+ [in]*nID*  
+ [in]*則 nCode*  
+ [in]*pExtra*  
+ [in]*pHandlerInfo*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1090,7 +1090,7 @@ BOOL PostCommand(UINT uiCommandID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCommandID`  
+ [in]*uiCommandID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1104,7 +1104,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1118,7 +1118,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bNotify`  
+ [in]*bNotify*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1137,7 +1137,7 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  若要刪除的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1163,13 +1163,13 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nElapse`  
+ [in]*nElapse*  
  新動畫的速度，以毫秒為單位。  
   
 ### <a name="remarks"></a>備註  
  動畫速度是全域的值，而且會影響應用程式中的所有快顯功能表。 這個值會指定花費的時間完成快顯功能表的動畫。  
   
- 根據預設，此參數設定為 30 毫秒。 有效值範圍`nElapse`是從 0 到 200。  
+ 根據預設，此參數設定為 30 毫秒。 有效值範圍*nElapse*是從 0 到 200。  
   
 ##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  設定這個快顯功能表的動畫類型。  
@@ -1179,11 +1179,11 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `type`  
+ [in]*類型*  
  列舉的資料型別指定動畫的類型。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[CMFCPopupMenu::GetAnimationType](#getanimationtype)的有效值清單`type`。  
+ 請參閱[CMFCPopupMenu::GetAnimationType](#getanimationtype)的有效值清單*類型*。  
   
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
@@ -1193,7 +1193,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1205,7 +1205,7 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
  新的預設命令的功能表命令識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -1219,7 +1219,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bValue`  
+ [in]*bValue*  
  `TRUE` 如果您想要的 framework 就能強制輸入的焦點時快顯功能表的功能表列會顯示。 `FALSE` 如果您想要保留焦點快顯功能表。  
   
 ### <a name="remarks"></a>備註  
@@ -1233,7 +1233,7 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bValue`  
+ [in]*bValue*  
  `TRUE` 如果您想要繪製功能表陰影 framework`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
@@ -1247,7 +1247,7 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iMaxWidth`  
+ [in]*iMaxWidth*  
  快顯功能表的 像素為單位的最大寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -1261,7 +1261,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsgWnd`  
+ [in]*pMsgWnd*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1273,7 +1273,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pElem`  
+ [in]*pElem*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1285,7 +1285,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `Type`  
+ [in]*類型*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1306,7 +1306,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bRightAlign`  
+ [in]*bRightAlign*  
  布林值，指出功能表對齊方式。 `TRUE` 指出靠右對齊，`FALSE`指出靠左的對齊。  
   
 ### <a name="remarks"></a>備註  
@@ -1320,7 +1320,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSet`  
+ [in]*bSet*  
  `TRUE` 如果快顯功能表通知其父框架，`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
@@ -1353,7 +1353,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lprectScreen`  
+ [in]*lprectScreen*  
  指定要更新的區域在螢幕座標中的矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -1367,7 +1367,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lprectScreen`  
+ [in]*lprectScreen*  
  矩形中，在螢幕座標中，指定要更新的區域界限。  
   
 ### <a name="remarks"></a>備註  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367152"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040138"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 類別
 在 MFC 視窗中提供 WebBrowser ActiveX 控制項的功能。  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszWindowName`  
+ *lpszWindowName*  
  不使用這個參數。  
   
- `dwStyle`  
+ *dwStyle*  
  不使用這個參數。  
   
- `rect`  
+ *rect*  
  指定控制項的大小和位置。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定控制項的父視窗。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定控制項的 id。  
   
- `pContext`  
+ *pContext*  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppDocument`  
+ *ppDocument*  
  文件介面。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

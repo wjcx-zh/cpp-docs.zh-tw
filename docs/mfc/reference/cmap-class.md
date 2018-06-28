@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239420"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039151"
 ---
 # <a name="cmap-class"></a>CMap 類別
 字典集合類別，這個類別會將唯一索引鍵對應至值。  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>參數  
- `KEY`  
+ *KEY*  
  做為索引鍵對應的物件類別。  
   
- `ARG_KEY`  
- 資料型別用於`KEY`引數; 通常參考`KEY`。  
+ *ARG_KEY*  
+ 資料型別用於*金鑰*引數; 通常參考*金鑰*。  
   
- `VALUE`  
+ *值*  
  儲存在 map 中的物件類別。  
   
- `ARG_VALUE`  
- 資料型別用於`VALUE`引數; 通常參考`VALUE`。  
+ *ARG_VALUE*  
+ 資料型別用於*值*引數; 通常參考*值*。  
   
 ## <a name="members"></a>成員  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBlockSize`  
+ *nBlockSize*  
  指定擴充對應的記憶體配置資料粒的度。  
   
 ### <a name="remarks"></a>備註  
- 記憶體對應成長時，配置單位的`nBlockSize`項目。  
+ 記憶體對應成長時，配置單位的*nBlockSize*項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rNextPosition`  
+ *rNextPosition*  
  指定的參考**位置**傳回先前值`GetNextAssoc`或`GetStartPosition`呼叫。  
   
  *KEY*  
  指定地圖的索引鍵的類型樣板參數。  
   
- `rKey`  
+ *rKey*  
  指定傳回的索引鍵的擷取的項目。  
   
  *值*  
  指定的對應值的類型樣板參數。  
   
- `rValue`  
+ *rValue*  
  指定的擷取的項目傳回的值。  
   
 ### <a name="remarks"></a>備註  
  此函式是最適合用來逐一查看對應中的所有項目。 請注意，位置順序不一定與索引鍵值順序相同。  
   
- 如果擷取的項目是在對應中，最後則新值`rNextPosition`設**NULL**。  
+ 如果擷取的項目是在對應中，最後則新值*rNextPosition*設**NULL**。  
   
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::SetAt](#setat)。  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hashSize`  
+ *hashSize*  
  雜湊表中的項目數。  
   
- `bAllocNow`  
+ *bAllocNow*  
  如果**TRUE**，配置雜湊表初始化，在需要時，否則配置資料表。  
   
 ### <a name="remarks"></a>備註  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_KEY`  
- 指定的類型樣板參數`key`值。  
+ *ARG_KEY*  
+ 指定的類型樣板參數*金鑰*值。  
   
- `key`  
+ *key*  
  指定識別的項目是要查閱的索引鍵。  
   
  *值*  
  指定要查閱之值的類型。  
   
- `rValue`  
+ *rValue*  
  接收的總查閱值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *值*  
  指定的對應值類型的樣板參數。  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  指定的索引鍵值的類型樣板參數。  
   
- `key`  
+ *key*  
  索引鍵，用來擷取對應的值。  
   
 ### <a name="remarks"></a>備註  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- 擷取所指的地圖元素`pAssocRec`。  
+ 擷取所指的地圖元素*pAssocRec*。  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  要搜尋的項目索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_KEY`  
+ *ARG_KEY*  
  指定索引鍵的類型樣板參數。  
   
- `key`  
+ *key*  
  要移除的項目索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_KEY`  
- 指定的類型樣板參數`key`參數。  
+ *ARG_KEY*  
+ 指定的類型樣板參數*金鑰*參數。  
   
- `key`  
+ *key*  
  指定新項目的索引鍵。  
   
- `ARG_VALUE`  
- 指定的類型樣板參數`newValue`參數。  
+ *ARG_VALUE*  
+ 指定的類型樣板參數*newValue*參數。  
   
- `newValue`  
+ *newValue*  
  指定新項目的值。  
   
 ### <a name="remarks"></a>備註  

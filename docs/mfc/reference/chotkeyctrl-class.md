@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368748"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040151"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 提供 Windows 通用快速鍵控制項的功能。  
@@ -73,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  這個控制項 (因此`CHotKeyCtrl`類別) 僅適用於 Windows 95/98、 Windows NT 的版本 3.51 下執行的程式和更新版本。  
   
- 當使用者選擇的按鍵組合時，應用程式可以從控制項擷取指定的按鍵組合，並使用**WM_SETHOTKEY**設定熱鍵系統中的訊息。 每當使用者按下便捷鍵之後，從系統的任何部分中指定的視窗**WM_SETHOTKEY**訊息接收`WM_SYSCOMMAND`訊息指定**SC_HOTKEY**。 此訊息會啟動所收到的視窗。 熱鍵仍然有效，直到應用程式呼叫**WM_SETHOTKEY**結束。  
+ 當使用者選擇的按鍵組合時，應用程式可以從控制項擷取指定的按鍵組合，並使用**WM_SETHOTKEY**設定熱鍵系統中的訊息。 每當使用者按下便捷鍵之後，從系統的任何部分中指定的視窗**WM_SETHOTKEY**訊息接收**WM_SYSCOMMAND**訊息指定**SC_HOTKEY**. 此訊息會啟動所收到的視窗。 熱鍵仍然有效，直到應用程式呼叫**WM_SETHOTKEY**結束。  
   
  這項機制與不同而定的熱支援**WM_HOTKEY**訊息和 Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)和[UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327)函式。  
   
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)如需詳細資訊的 Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定熱鍵控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定熱鍵控制項的父視窗，通常[CDialog](../../mfc/reference/cdialog-class.md)。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定熱鍵控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  非零，如果初始化成功。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CHotKeyCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫**建立**，建立熱鍵控制項，並將它附加至`CHotKeyCtrl`物件。  
+ 您建構`CHotKeyCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，建立熱鍵控制項，並將它附加至`CHotKeyCtrl`物件。  
   
- 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
+ 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  呼叫此函式來建立控制項 （子視窗），並將它與相關聯`CHotKeyCtrl`物件。  
@@ -143,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `wVirtualKeyCode`  
+ [out]*wVirtualKeyCode*  
  鍵盤快速鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
   
- [輸出] `wModifiers`  
+ [out]*wModifiers*  
  的位元組合 (OR) 旗標，表示修飾詞中的索引鍵的鍵盤快速鍵。  
   
  修飾詞旗標如下所示：  
@@ -220,14 +220,14 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `vk`  
+ *vk*  
  虛擬按鍵碼。  
   
  *fExtended*  
  如果虛擬按鍵碼是擴充的索引鍵， **TRUE**，否則為**FALSE**。  
   
 ### <a name="return-value"></a>傳回值  
- 所指定的索引鍵的當地語系化的名稱`vk`參數。 如果機碼具有沒有對應的名稱，`GetKeyName`會傳回空字串。  
+ 所指定的索引鍵的當地語系化的名稱*vk*參數。 如果機碼具有沒有對應的名稱，`GetKeyName`會傳回空字串。  
   
 ### <a name="remarks"></a>備註  
  此函數會傳回索引鍵名稱來自鍵盤驅動程式，讓您安裝非當地語系化鍵盤驅動程式中的當地語系化版本的 Windows，反之亦然。  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `wVirtualKeyCode`  
+ [in]*wVirtualKeyCode*  
  鍵盤快速鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
   
- [輸入] `wModifiers`  
+ [in]*wModifiers*  
  的位元組合 (OR) 旗標，表示修飾詞中的索引鍵的鍵盤快速鍵。  
   
  修飾詞旗標如下所示：  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>參數  
- `wInvalidComb`  
+ *wInvalidComb*  
  指定無效的索引鍵組合旗標的陣列。 它可以是下列值的組合：  
   
 - `HKCOMB_A` ALT 鍵  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  指定使用者輸入無效的組合時所要使用的按鍵組合旗標的陣列。 如需有關修飾詞旗標的詳細資訊，請參閱[GetHotKey](#gethotkey)。  
   
 ### <a name="remarks"></a>備註  
- 當使用者輸入無效的索引鍵組合中指定的旗標所定義`wInvalidComb`，系統會使用 OR 運算子結合使用者輸入中指定的旗標的索引鍵`wModifiers`。 產生的按鍵組合是轉換成字串，並接著會顯示在熱鍵控制項。  
+ 當使用者輸入無效的索引鍵組合中指定的旗標所定義*wInvalidComb*，系統會使用 OR 運算子結合使用者輸入中指定的旗標的索引鍵*wModifiers*. 產生的按鍵組合是轉換成字串，並接著會顯示在熱鍵控制項。  
   
 ## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

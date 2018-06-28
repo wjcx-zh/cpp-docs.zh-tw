@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374080"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037898"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 類別
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiImage`  
+ [in]*uiImage*  
  指定點陣圖的資源識別碼。  
   
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定按鈕的文字。  
   
- [輸入] `iIdCommand`  
+ [in]*iIdCommand*  
  指定按鈕控制項的 id。  
   
- [輸入] `iInsertAt`  
+ [in]*iInsertAt*  
  要插入按鈕 outlook 功能區的頁面上指定的以零為起始的索引。  
   
- [輸入] `uiLabel`  
+ [in]*uiLabel*  
  字串資源 id。  
   
- [輸入] `szBmpFileName`  
+ [in]*szBmpFileName*  
  指定要載入之磁碟映像檔案名稱。  
   
- [輸入] `szLabel`  
+ [in]*szLabel*  
  指定按鈕的文字。  
   
- [輸入] `hBmp`  
+ [in]*hBmp*  
  點陣圖按鈕的控制代碼。  
   
- [輸入] `hIcon`  
+ [in]*hIcon*  
  按鈕的圖示的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>備註  
  使用這個方法，將新的按鈕插入 outlook 功能區的頁面。 可以載入按鈕的影像，從應用程式資源或磁碟檔案。  
   
- 如果所指定的頁面識別碼`uiPageID`為-1，按鈕會插入第一頁。  
+ 如果所指定的頁面識別碼*uiPageID*為-1，按鈕會插入第一頁。  
   
- 如果指定的索引`iInsertAt`為-1，按鈕就會加入結尾的頁面。  
+ 如果指定的索引*iInsertAt*為-1，按鈕就會加入結尾的頁面。  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  指定 Outlook 狀態列窗格控制項的父視窗。 必須不是 `NULL`。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  視窗樣式。  如需視窗樣式的清單，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  控制項 id。 必須是唯一啟用儲存控制項的狀態。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定特殊從 outlook 功能區卸離時，定義行為的 Outlook 狀態列窗格控制項的樣式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  工具列按鈕，使用者按下指標。  
   
- [輸入] `pPopup`  
+ [in]*pPopup*  
  指標的捷徑功能表。  
   
 ### <a name="return-value"></a>傳回值  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bPageScroll`  
+ [in]*bPageScroll*  
  如果`TRUE`，啟用頁面捲動模式。 如果`FALSE`，停用頁面捲動模式。  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIdCommand`  
+ [in]*iIdCommand*  
  指定要移除按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  指定新的背景色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiImageID`  
+ [in]*uiImageID*  
  指定影像資源識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `clrRegText`  
+ [in]*clrRegText*  
  指定新的未選取文字色彩。  
   
- [輸入] `clrSelText`  
+ [in]*clrSelText*  
  指定新的選取文字色彩。  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  指定新的透明色彩。  
   
 ### <a name="remarks"></a>備註  

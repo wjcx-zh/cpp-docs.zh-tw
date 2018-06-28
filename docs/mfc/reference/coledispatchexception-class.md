@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373382"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037866"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 類別
 處理 OLE `IDispatch` 介面 (OLE Automation 的主要部分) 特定的例外狀況。  
@@ -55,7 +55,7 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`為特定的錯誤碼。|  
   
 ## <a name="remarks"></a>備註  
- 其他例外狀況類別衍生自像`CException`基底類別，`COleDispatchException`可以搭配**擲回**， `THROW_LAST`，**再試一次**，**攔截**，`AND_CATCH`，和`END_CATCH`巨集。  
+ 其他例外狀況類別衍生自像`CException`基底類別，`COleDispatchException`可以搭配 THROW、 THROW_LAST、 TRY、 CATCH、 AND_CATCH 和 END_CATCH 巨集。  
   
  一般情況下，您應該呼叫[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)建立，而且會擲回`COleDispatchException`物件。  
   

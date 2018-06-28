@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370753"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040710"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 類別
 實作 MFC 的方法以更新與應用程式 `IOleCommandTarget`驅動功能相關聯之使用者介面物件的狀態。  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rgCmds`  
+ *rgCmds*  
  支援與指定 GUID 相關聯的命令清單。 **OLECMD**命令旗標與結構產生關聯的命令。  
   
  *cCmds*  
- 中的命令計數`rgCmds`。  
+ 中的命令計數*rgCmds*。  
   
- `pGroup`  
+ *pGroup*  
  識別一組命令的 GUID 指標。  
   
 ### <a name="remarks"></a>備註  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bOn`  
+ *送行*  
  指出是否使用相關聯的命令`COleCmdUI`物件應該啟用或停用。 非零，可讓命令。0 會停用的命令。  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCheck`  
+ *n 檢查*  
  值，判斷要設定的開關切換狀態命令。 值為：  
   
 |值|描述|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
+ *lpszText*  
  要搭配此命令的文字指標。  
   
 ## <a name="see-also"></a>另請參閱  

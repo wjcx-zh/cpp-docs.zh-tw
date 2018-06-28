@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368143"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039533"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 類別
 實作 Windows 中繼檔，這個檔案包含一連串可重新執行來建立所需影像或文字的繪圖裝置介面 (GDI) 命令。  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  傳送給`CMetaFileDC`物件的順序`CDC`您想讓它重新執行的 GDI 命令。 建立輸出，例如 GDI 命令`MoveTo`和`LineTo`，可以使用。  
   
- 您所需的命令傳送至中繼檔之後，請呼叫**關閉**成員函式，以關閉中繼檔裝置內容，並傳回的中繼檔的控制代碼。 然後處置`CMetaFileDC`物件。  
+ 您所需的命令傳送至中繼檔之後，請呼叫`Close`成員函式，以關閉中繼檔裝置內容，並傳回的中繼檔的控制代碼。 然後處置`CMetaFileDC`物件。  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)然後可以使用中繼檔的控制代碼來重複播放中繼檔。 中繼檔也操作 Windows 函式例如[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)，這會將中繼檔複製到磁碟。  
   
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDCRef`  
+ *pDCRef*  
  識別參考裝置的增強型中繼檔。  
   
- `lpszFileName`  
+ *lpszFileName*  
  指向以 null 結尾字元字串。 指定要建立的增強型中繼檔的檔案名稱。 如果這個參數是**NULL**，增強型中繼檔是記憶體為主的遺失或時終結物件及其內容 Win32 **DeleteEnhMetaFile**呼叫函式。  
   
- `lpBounds`  
+ *lpBounds*  
  指向[RECT](../../mfc/reference/rect-structure1.md)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定中的維度**HIMETRIC**單位 （.01 公釐為增量單位） 的圖片儲存在增強型中繼檔。  
   
- `lpszDescription`  
+ *lpszDescription*  
  指向以零結尾的字串，指定建立應用程式的圖片，以及圖片的標題名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>備註  
  此 DC 可以用來儲存與裝置無關的圖片。  
   
- Windows 會使用所識別的參考裝置`pDCRef`參數，以記錄的解決方式和裝置的圖片原本出現的單位。 如果`pDCRef`參數是**NULL**，它會使用目前的顯示裝置的參考。  
+ Windows 會使用所識別的參考裝置*pDCRef*參數，以記錄的解決方式和裝置的圖片原本出現的單位。 如果*pDCRef*參數是**NULL**，它會使用目前的顯示裝置的參考。  
   
- 左端和頂端成員`RECT`資料結構所指`lpBounds`參數分別必須小於右邊緣和下的成員。 矩形的邊緣點包含在圖片中。 如果`lpBounds`是**NULL**，圖形裝置介面 (GDI) 會計算最小矩形，可以將包含應用程式所繪製的圖片的維度。 `lpBounds`應該盡可能提供參數。  
+ 左端和頂端成員`RECT`資料結構所指*lpBounds*參數分別必須小於右邊緣和下的成員。 矩形的邊緣點包含在圖片中。 如果*lpBounds*是**NULL**，圖形裝置介面 (GDI) 會計算最小矩形，可以將包含應用程式所繪製的圖片的維度。 *LpBounds*應該盡可能提供參數。  
   
- 所指向之字串`lpszDescription`參數必須包含 null 字元的應用程式名稱與圖片名稱之間，且必須使用兩個 null 字元結束 — 例如，"XYZ 圖形 Editor\0Bald Eagle\0\0，"其中 \0 代表 null字元。 如果`lpszDescription`是**NULL**，增強型中繼檔標頭中沒有任何對應的項目。  
+ 所指向之字串*lpszDescription*參數必須包含 null 字元的應用程式名稱與圖片名稱之間，且必須使用兩個 null 字元結束 — 例如，"XYZ 圖形 Editor\0Bald Eagle\0\0，「 \0 代表 null 字元。 如果*lpszDescription*是**NULL**，增強型中繼檔標頭中沒有任何對應的項目。  
   
  應用程式會使用這個函式所建立的 DC，將圖形圖片儲存的增強型中繼檔。 識別此 DC 的控制代碼可以傳遞任何 GDI 函式。  
   
- 應用程式的增強型中繼檔中所儲存圖片之後，它可以藉由呼叫任何輸出裝置上顯示圖片`CDC::PlayMetaFile`函式。 當顯示圖片時，Windows 會使用所指向的矩形`lpBounds`參數和參考裝置定位和調整圖片的解析度資料。 此函數所傳回的裝置內容，其中包含相關聯的任何新的 DC 相同的預設屬性。  
+ 應用程式的增強型中繼檔中所儲存圖片之後，它可以藉由呼叫任何輸出裝置上顯示圖片`CDC::PlayMetaFile`函式。 當顯示圖片時，Windows 會使用所指向的矩形*lpBounds*參數和參考裝置定位和調整圖片的解析度資料。 此函數所傳回的裝置內容，其中包含相關聯的任何新的 DC 相同的預設屬性。  
   
  應用程式必須使用 Win32 **GetWinMetaFileBits**較舊的 Windows 中繼檔格式轉換成增強型中繼檔的函式。  
   

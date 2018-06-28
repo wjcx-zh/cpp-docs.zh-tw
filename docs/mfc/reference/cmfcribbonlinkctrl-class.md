@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368432"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039007"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 類別
 實作放置在功能區上的超連結。 當您按一下時，超連結會開啟網頁。  
@@ -106,13 +106,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  指定當按下連結控制項時執行的命令的命令識別碼。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  指定要連結控制項上所顯示的標籤。  
   
- [輸入] `lpszLink`  
+ [in]*lpszLink*  
  指定連結控制項相關聯的超連結。  
   
 ### <a name="example"></a>範例  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
   
 ### <a name="remarks"></a>備註  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CDC*`  
- [輸入] `CRect`  
+ [in]*CDC**  
+ [in]*CRect*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>備註  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
   
 ### <a name="remarks"></a>備註  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLink`  
+ [in]*lpszLink*  
  指定超連結文字。  
   
 ## <a name="see-also"></a>另請參閱  

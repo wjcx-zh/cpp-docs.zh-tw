@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71610035d029c4d8f5ca403c52d9eddd575e3a8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b79f65b39aa741a9794fbe05721c7dc44287603
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377567"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041642"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 類別
 `COleIPFrameWndEx` 類別會實作支援 MFC 的 OLE 容器。 您必須從 `COleIPFrameWndEx` 類別衍生應用程式的就地框架視窗類別，而不是從 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)類別來衍生。 
@@ -217,8 +217,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `bTail`  
+ [in]*pControlBar*  
+ [in]*bTail*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -232,7 +232,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hdwp`  
+ [in]*hdwp*  
   
 ### <a name="remarks"></a>備註  
   
@@ -247,9 +247,9 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
- [輸入] `nDockBarID`  
- [輸入] `lpRect`  
+ [in]*pBar*  
+ [in]*nDockBarID*  
+ [in]*lpRect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -263,17 +263,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
  若要停駐窗格的指標。  
   
- [輸入] `pLeftOf`  
+ [in]*pLeftOf*  
  窗格中做為原始指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`TRUE`如果作業成功。 否則傳回 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，以停駐在預先定義的順序中的數個窗格物件。 這個方法所指定的窗格停駐於`pBar`左邊窗格中所指定的`pLeftOf`。  
+ 呼叫這個方法，以停駐在預先定義的順序中的數個窗格物件。 這個方法所指定的窗格停駐於*pBar*左邊窗格中所指定的*pLeftOf*。  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -283,7 +283,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -297,7 +297,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -317,12 +317,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
- [輸入] `uiCustomizeCmd`  
- [輸入] `strCustomizeLabel`  
- [輸入] `uiViewToolbarsMenuEntryID`  
- [輸入] `bContextMenuShowsToolbarsOnly`  
- [輸入] `bViewMenuShowsToolbarsOnly`  
+ [in]*bEnable*  
+ [in]*uiCustomizeCmd*  
+ [in]*strCustomizeLabel*  
+ [in]*uiViewToolbarsMenuEntryID*  
+ [in]*bContextMenuShowsToolbarsOnly*  
+ [in]*bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>備註  
   
@@ -417,7 +417,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -446,10 +446,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  按鈕的指標。  
   
- [輸入] `strTTText`  
+ [in]*strTTText*  
  指標的工具提示文字。  
   
 ### <a name="return-value"></a>傳回值  
@@ -469,17 +469,17 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszRegEntry`  
+ [in]*lpszRegEntry*  
  程式庫儲存使用者工具列設定登錄項目。  
   
- [輸入] `uiUserToolbarFirst`  
+ [in]*uiUserToolbarFirst*  
  指派給第一個使用者定義工具列控制項 ID。  
   
- [輸入] `uiUserToolbarLast`  
+ [in]*uiUserToolbarLast*  
  指派給最後一個使用者定義工具列控制項 ID。  
   
 ### <a name="remarks"></a>備註  
- 使用此函式來初始化指派給使用者以動態方式定義工具列控制項 Id 的範圍。 參數`uiUserToolbarFirst`和`uiUserToolbarLast`定義允許的工具列控制項 Id 的範圍。 若要停用使用者定義工具列的建立，請設定`uiUserToolbarFirst`或`uiUserToolbarLast`為-1。  
+ 使用此函式來初始化指派給使用者以動態方式定義工具列控制項 Id 的範圍。 參數*uiUserToolbarFirst*和*uiUserToolbarLast*定義允許的工具列控制項 Id 的範圍。 若要停用使用者定義工具列的建立，請設定*uiUserToolbarFirst*或*uiUserToolbarLast*為-1。  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -492,9 +492,9 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `pTarget`  
- [輸入] `bAfter`  
+ [in]*pControlBar*  
+ [in]*pTarget*  
+ [in]*bAfter*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -524,9 +524,9 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
- [輸入] `dwBarAlignment`  
- [輸入] `bOuterEdge`  
+ [in]*點*  
+ [in]*dwBarAlignment*  
+ [in]*bOuterEdge*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -544,10 +544,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIDResource`  
- [輸入] `dwDefaultStyle`  
- [輸入] `pParentWnd`  
- [輸入] `pContext`  
+ [in]*nIDResource*  
+ [in]*dwDefaultStyle*  
+ [in]*pParentWnd*  
+ [in]*pContext*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -561,7 +561,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CDockablePane*`  
+ [in]*CDockablePane**  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -575,25 +575,25 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CPaneFrameWnd*`  
+ [in]*CPaneFrameWnd\**  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu  
- 使用中的快顯功能表處理時，由架構呼叫`WM_DESTROY`訊息。  
+ 架構在作用中的快顯功能表處理 WM_DESTROY 訊息時所呼叫。  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMenuPopup`  
+ [in]*pMenuPopup*  
  快顯功能表物件的指標。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個方法，以接收來自通知`CMFCPopupMenu`物件時，它們會處理`WM_DESTROY`訊息。  
+ 覆寫這個方法，以接收來自通知`CMFCPopupMenu`它們處理 WM_DESTROY 訊息時的物件。  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -607,10 +607,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
- [輸入] `nCode`  
- [輸入] `pExtra`  
- [輸入] `pHandlerInfo`  
+ [in]*nID*  
+ [in]*則 nCode*  
+ [in]*pExtra*  
+ [in]*pHandlerInfo*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -627,13 +627,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `pMenuButton`  
+ [in]*pMenuButton*  
  功能表按鈕的指標。  
   
- [輸入] `rectImage`  
+ [in]*rectImage*  
  與功能表項目相關聯的影像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -643,7 +643,7 @@ virtual BOOL OnDrawMenuImage(
  覆寫這個方法，如果您想要自訂映像繪製功能表項目所擁有的功能表列屬於`COleIPFrameWndEx`-衍生物件。  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
- 由架構呼叫時[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件處理程序`WM_PAINT`訊息。  
+ 架構在 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件處理 WM_PAINT 訊息時所呼叫。  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -653,13 +653,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `pMenu`  
+ [in]*pMenu*  
  快顯功能表物件指標。  
   
- [輸入] `rectLogo`  
+ [in]*rectLogo*  
  要顯示的標誌的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -682,7 +682,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  `TOOLINFO` 結構的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 預設實作不做任何動作，並傳回 0。 您的實作應該傳回非零值，如果它填滿`pTI`參數。  
+ 預設實作不做任何動作，並傳回 0。 您的實作應該傳回非零值，如果它填滿*pTI*參數。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法以提供特定的功能表項目相關的工具提示資訊。  
@@ -695,7 +695,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrame`  
+ [in]*pFrame*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -711,8 +711,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bPreview`  
- [輸入] `pState`  
+ [in]*bPreview*  
+ [in]*pState*  
   
 ### <a name="remarks"></a>備註  
   
@@ -726,8 +726,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMenuPane`  
- [輸入] `uiToolbarID`  
+ [in]*pMenuPane*  
+ [in]*uiToolbarID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -741,7 +741,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -755,7 +755,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] pMenuPopup`  
+ [in]*pMenuPopup*  
  顯示快顯功能表的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -774,10 +774,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMenuPopup`  
+ [in]*pMenuPopup*  
  使用者選取的快顯功能表指標。  
   
- [輸入] `pBar`  
+ [in]*pBar*  
  裝載功能表 窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -804,11 +804,11 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
- [輸入] `nSensitivity`  
- [輸入] `bExactBar`  
- [輸入] `pRTCBarType`  
- [輸入] `dwAlignment`  
+ [in]*點*  
+ [in]*nSensitivity*  
+ [in]*bExactBar*  
+ [in]*pRTCBarType*  
+ [in]*dwAlignment*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -822,7 +822,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -836,7 +836,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bNotify`  
+ [in]*bNotify*  
   
 ### <a name="remarks"></a>備註  
   
@@ -853,11 +853,11 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `bDestroy`  
- [輸入] `bAdjustLayout`  
- [輸入] `bAutoHide`  
- [輸入] `pBarReplacement`  
+ [in]*pControlBar*  
+ [in]*bDestroy*  
+ [in]*bAdjustLayout*  
+ [in]*bAutoHide*  
+ [in]*pBarReplacement*  
   
 ### <a name="remarks"></a>備註  
   
@@ -869,7 +869,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `state`  
+ [in]*狀態*  
  指定的銜接狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -886,13 +886,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `menu`  
+ [in]*功能表*  
  若要參考[CMenu](../../mfc/reference/cmenu-class.md)要修改物件。  
   
- [輸入] `uiViewUserToolbarCmdFirst`  
+ [in]*uiViewUserToolbarCmdFirst*  
  指定的使用者定義的第一個命令。  
   
- [輸入] `uiViewUserToolbarCmdLast`  
+ [in]*uiViewUserToolbarCmdLast*  
  指定的使用者定義的最後一個命令。  
   
 ### <a name="remarks"></a>備註  
@@ -909,10 +909,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
- [輸入] `bShow`  
- [輸入] `bDelay`  
- [輸入] `bActivate`  
+ [in]*pBar*  
+ [in]*bShow*  
+ [in]*bDelay*  
+ [in]*bActivate*  
   
 ### <a name="remarks"></a>備註  
   
@@ -927,10 +927,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>參數  
  [in] dwData  
- 指定資料為 `nCmd`所指定之說明類型的必要項目。  
+ 指定所需的說明所指定類型的資料*nCmd*。  
   
- [輸入] `nCmd`  
- 指定要求的說明類型。 如需可能的值清單以及它們如何影響 `dwData` 參數的相關資訊，請參閱 Windows SDK 中的 [WinHelp 函式](http://msdn.microsoft.com/library/windows/desktop/bb762267) 。  
+ [in]*nCmd*  
+ 指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱[WinHelp 函式](http://msdn.microsoft.com/library/windows/desktop/bb762267)Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
   

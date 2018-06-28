@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b622ca84ca73090d609cbb557096fb75802a023
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82a73c95c0869f7f5245ef3ddc15c0216b07579
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376157"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041722"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 類別
 `CMFCStatusBar`類別會實作類似於狀態列`CStatusBar`類別。 不過， `CMFCStatusBar` 類別具有 `CStatusBar` 類別所未提供的功能，例如能夠顯示影像、動畫和進度列，而且能夠回應滑鼠按兩下。 
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
- [輸入] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -212,7 +212,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIDFind`  
+ [in]*nIDFind*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -229,9 +229,9 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
- [輸入] `dwStyle`  
- [輸入] `nID`  
+ [in]*pParentWnd*  
+ [in]*dwStyle*  
+ [in]*nID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
- [輸入] `dwCtrlStyle`  
- [輸入] `dwStyle`  
- [輸入] `nID`  
+ [in]*pParentWnd*  
+ [in]*dwCtrlStyle*  
+ [in]*dwStyle*  
+ [in]*nID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -277,11 +277,11 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  如果`TRUE`，啟用處理滑鼠按兩下。 否則，請停用滑鼠按兩下的處理。  
   
 ### <a name="remarks"></a>備註  
- 如果啟用處理雙點選 [狀態] 列，則 Windows 會傳送`WM_COMMAND`通知擁有者的資源識別碼以及每次使用者按兩下狀態列窗格上狀態列。  
+ 如果啟用處理雙點選 [狀態] 列，則 Windows 傳送 WM_COMMAND 通知資源識別碼以及每次使用者按兩下狀態列窗格上狀態列的擁有者。  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
  在指定的窗格會顯示進度列。  
@@ -297,28 +297,28 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  若要啟用其進度列指定窗格的索引。  
   
- [輸入] `nTotal`  
+ [in]*nTotal*  
  指定進度列的最大值。  
   
- [輸入] `bDisplayText`  
+ [in]*bDisplayText*  
  指定是否要在進度列顯示目前的進度值。  
   
- [輸入] `clrBar`  
+ [in]*clrBar*  
  指定進度列的背景色彩。  
   
- [輸入] `clrBarDest`  
- 指定次要背景色彩的進度列。 使用不同的值`clrBar`以填滿漸層到混合的色彩。  
+ [in]*clrBarDest*  
+ 指定次要背景色彩的進度列。 使用不同的值*clrBar*以填滿漸層到混合的色彩。  
   
- [輸入] `clrProgressText`  
+ [in]*clrProgressText*  
  指定進度列的文字色彩。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要停用進度列呼叫`EnablePaneProgressBar`與`nTotal`設為-1。 根據預設`nTotal`會設定為 100。 因此，您不需要任何額外的計算，以百分比顯示進度。  
+ 如果您想要停用進度列呼叫`EnablePaneProgressBar`與*nTotal*設為-1。 根據預設*nTotal*會設定為 100。 因此，您不需要任何額外的計算，以百分比顯示進度。  
   
- 您應該傳遞不同的值`clrBar`和`clrBarDest`，讓進度列的背景色彩顯示混合到漸層色彩。 。  
+ 您應該傳遞不同的值*clrBar*和*clrBarDest* ，讓進度列的背景色彩顯示混合到漸層色彩。 。  
   
  若要設定的目前進度，請呼叫[CMFCStatusBar::SetPaneProgress](#setpaneprogress)方法。  
   
@@ -351,7 +351,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -365,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
- [輸入] `lpRect`  
+ [in]*nIndex*  
+ [in]*lpRect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
- [輸入] `nID`  
- [輸入] `nStyle`  
- [輸入] `cxWidth`  
+ [in]*nIndex*  
+ [in]*nID*  
+ [in]*nStyle*  
+ [in]*cxWidth*  
   
 ### <a name="remarks"></a>備註  
   
@@ -413,7 +413,7 @@ long GetPaneProgress(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -427,7 +427,7 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
- [輸入] `s`  
+ [in]*nIndex*  
+ [in]*s*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -460,11 +460,11 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定狀態列窗格的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 狀態列窗格的寬度，`nIndex`指定，否則零如果狀態列窗格不存在。  
+ 狀態列窗格的寬度， *nIndex*指定，否則零如果狀態列窗格不存在。  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
  擷取的狀態列窗格的工具提示文字。  
@@ -474,11 +474,11 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定要擷取工具提示文字窗格的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 工具提示文字的狀態列窗格的`nIndex`指定。 否則，如果狀態列窗格不存在指定的字串空`nIndex`或如果其工具提示文字是空的。  
+ 工具提示文字的狀態列窗格的*nIndex*指定。 否則，如果狀態列窗格不存在指定的字串空*nIndex*或如果其工具提示文字是空的。  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
  使失效狀態列窗格，並且重繪其內容。  
@@ -488,11 +488,11 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定的內容會失效或重新繪製的窗格的索引。  
   
 ### <a name="remarks"></a>備註  
- 當 [狀態] 列會失效時，則會將其標示為重繪作業。 Windows 重新繪製時`UpdateWindow`方法傳送`WM_PAINT`傳送訊息給`OnPaint`方法。  
+ 當 [狀態] 列會失效時，則會將其標示為重繪作業。 Windows 重新繪製時`UpdateWindow`方法會傳送至 WM_PAINT 訊息`OnPaint`方法。  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
  重繪其 [狀態] 列的窗格。  
@@ -504,14 +504,14 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  繪製的裝置內容的指標。  
   
- [輸入] `pPane`  
+ [in]*pPane*  
  指標`CMFCStatusBarPaneInfo`結構，其中包含的資訊窗格中重新繪製。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，`OnDrawPane`窗格所使用的裝置內容會重新繪製`pDC`根據窗格的樣式和內容。  
+ 根據預設，`OnDrawPane`窗格所使用的裝置內容會重新繪製*pDC*根據窗格的樣式和內容。  
   
  覆寫這個方法在`CMFCStatusBar`-衍生的類別來自訂顯示窗格的外觀。  
   
@@ -523,7 +523,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `cs`  
+ [in]*cs*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -537,7 +537,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSet`  
+ [in]*bSet*  
   
 ### <a name="remarks"></a>備註  
   
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpIDArray`  
- [輸入] `nIDCount`  
+ [in]*lpIDArray*  
+ [in]*nIDCount*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -570,16 +570,16 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定您要為其指派動畫 窗格的索引。  
   
- [輸入] `hImageList`  
+ [in]*hImageList*  
  指定保存動畫畫面格的影像清單控制代碼。  
   
- [輸入] `nFrameRate`  
+ [in]*nFrameRate*  
  指定以毫秒為單位，用於動畫的畫面播放速率。  
   
- [輸入] `bUpdate`  
+ [in]*bUpdate*  
  如果`TRUE`，立即更新 窗格內容。 否則，它會失效時，會更新 窗格內容。  
   
 ### <a name="remarks"></a>備註  
@@ -596,13 +596,13 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定要設定新的背景色彩 窗格的索引。  
   
- [輸入] `clrBackground`  
+ [in]*clrBackground*  
  指定新的背景色彩。  
   
- [輸入] `bUpdate`  
+ [in]*bUpdate*  
  如果`TRUE`，立即更新 窗格內容。 否則，不會更新 窗格內容之前的窗格無效的另一種方法。  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定要設定映像 窗格的索引。  
   
- [輸入] `hIcon`  
+ [in]*hIcon*  
  指定要設定為窗格影像圖示的控制代碼。  
   
- [輸入] `bUpdate`  
+ [in]*bUpdate*  
  指定是否要立即更新 窗格內容。  
   
- [輸入] `hBmp`  
+ [in]*hBmp*  
  指定要設定為窗格影像點陣圖的控制代碼。  
   
- [輸入] `clrTransparent`  
- 指定點陣圖的透明色彩的`hBmp`表示。  
+ [in]*clrTransparent*  
+ 指定點陣圖的透明色彩的*hBmp*表示。  
   
 ### <a name="remarks"></a>備註  
  您可以傳遞`HICON`或`HBITMAP`以及設定窗格的影像的透明色彩。 如果您不想再顯示這個影像，傳遞`NULL`影像控制代碼的值。  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
- [輸入] `nID`  
- [輸入] `nStyle`  
- [輸入] `cxWidth`  
+ [in]*nIndex*  
+ [in]*nID*  
+ [in]*nStyle*  
+ [in]*cxWidth*  
   
 ### <a name="remarks"></a>備註  
   
@@ -673,13 +673,13 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定用來更新進度列指示器窗格的索引。  
   
- [輸入] `nCurr`  
+ [in]*nCurr*  
  指定進度列指示器的目前值。  
   
- [輸入] `bUpdate`  
+ [in]*bUpdate*  
  指定是否要立即更新 窗格。  
   
 ### <a name="remarks"></a>備註  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
- [輸入] `nStyle`  
+ [in]*nIndex*  
+ [in]*nStyle*  
   
 ### <a name="remarks"></a>備註  
   
@@ -713,9 +713,9 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
- [輸入] `lpszNewText`  
- [輸入] `bUpdate`  
+ [in]*nIndex*  
+ [in]*lpszNewText*  
+ [in]*bUpdate*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -732,13 +732,13 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定您要指派新的文字色彩的窗格的索引。  
   
- [輸入] `clrText`  
+ [in]*clrText*  
  指定的文字色彩。  
   
- [輸入] `bUpdate`  
+ [in]*bUpdate*  
  如果`TRUE`，立即更新 窗格內容。 否則，不會更新 窗格內容之前的窗格無效的另一種方法。  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
@@ -751,10 +751,10 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  要設定新的寬度狀態列窗格的索引。  
   
- [輸入] `cx`  
+ [in]*cx*  
  [狀態] 列窗格中，像素為單位的新的寬度。  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
@@ -767,10 +767,10 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  您要指派的工具提示文字窗格的索引。  
   
- [輸入] `pszTipText`  
+ [in]*pszTipText*  
  新的工具提示文字。  
   
 ## <a name="see-also"></a>另請參閱  

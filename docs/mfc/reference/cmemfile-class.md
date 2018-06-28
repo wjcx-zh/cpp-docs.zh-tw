@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368357"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040060"
 ---
 # <a name="cmemfile-class"></a>CMemFile 類別
 [CFile](../../mfc/reference/cfile-class.md)-衍生的類別支援記憶體檔案。  
@@ -108,7 +108,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBytes`  
+ *nBytes*  
  記憶體配置的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -130,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuffer`  
+ *lpBuffer*  
  要附加至緩衝區的指標`CMemFile`。  
   
- `nBufferSize`  
+ *nBufferSize*  
  以位元組為單位指定的緩衝區大小的整數。  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  以位元組為單位的記憶體配置遞增值。  
   
 ### <a name="remarks"></a>備註  
  這會導致`CMemFile`為記憶體檔案中使用的記憶體區塊。  
   
- 如果`nGrowBytes`為 0，`CMemFile`將設定檔案長度為`nBufferSize`。 這表示，記憶體區塊中的資料之前已附加至`CMemFile`用作檔案。 以這種方式建立記憶體檔案無法成長。  
+ 如果*nGrowBytes*為 0，`CMemFile`將設定檔案長度為*nBufferSize*。 這表示，記憶體區塊中的資料之前已附加至`CMemFile`用作檔案。 以這種方式建立記憶體檔案無法成長。  
   
- 由於檔案無法增長，小心不要造成`CMemFile`嘗試將檔案成長的。 例如，請勿呼叫`CMemFile`覆寫的[CFile:Write](../../mfc/reference/cfile-class.md#write)來寫入結尾，或不要呼叫[CFile:SetLength](../../mfc/reference/cfile-class.md#setlength)長度超過`nBufferSize`。  
+ 由於檔案無法增長，小心不要造成`CMemFile`嘗試將檔案成長的。 例如，請勿呼叫`CMemFile`覆寫的[CFile:Write](../../mfc/reference/cfile-class.md#write)來寫入結尾，或不要呼叫[CFile:SetLength](../../mfc/reference/cfile-class.md#setlength)長度超過*nBufferSize*。  
   
- 如果`nGrowBytes`大於 0，`CMemFile`將會忽略已連接的記憶體區塊的內容。 您必須從臨時使用寫入記憶體檔案的內容`CMemFile`覆寫`CFile::Write`。 如果您嘗試寫入超過檔案結尾，或檔案成長的藉由呼叫`CMemFile`覆寫`CFile::SetLength`，`CMemFile`會成長量的記憶體配置`nGrowBytes`。 如果您傳遞給記憶體區塊成長的記憶體配置將會失敗**附加**未與相容的方法以配置[配置](#alloc)。 預設實作與`Alloc`，您必須配置的記憶體與執行階段程式庫函式[malloc](../../c-runtime-library/reference/malloc.md)或[calloc](../../c-runtime-library/reference/calloc.md)。  
+ 如果*nGrowBytes*大於 0，`CMemFile`將會忽略已連接的記憶體區塊的內容。 您必須從臨時使用寫入記憶體檔案的內容`CMemFile`覆寫`CFile::Write`。 如果您嘗試寫入超過檔案結尾，或檔案成長的藉由呼叫`CMemFile`覆寫`CFile::SetLength`，`CMemFile`會成長量的記憶體配置*nGrowBytes*。 如果您傳遞給記憶體區塊成長的記憶體配置將會失敗`Attach`未與相容的方法以配置[配置](#alloc)。 預設實作與`Alloc`，您必須配置的記憶體與執行階段程式庫函式[malloc](../../c-runtime-library/reference/malloc.md)或[calloc](../../c-runtime-library/reference/calloc.md)。  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  第一個多載開啟空白記憶體檔案。  
@@ -162,19 +162,19 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGrowBytes`  
+ *nGrowBytes*  
  以位元組為單位的記憶體配置遞增值。  
   
  *lpBuffe*r  
- 接收資訊大小的緩衝區指標`nBufferSize`。  
+ 接收資訊大小的緩衝區指標*nBufferSize*。  
   
- `nBufferSize`  
+ *nBufferSize*  
  整數，指定檔案緩衝區大小，以位元組為單位。  
   
 ### <a name="remarks"></a>備註  
  請注意，建構函式開啟的檔案，您不應該呼叫[CFile::Open](../../mfc/reference/cfile-class.md#open)。  
   
- 第二個多載作用相同時，如果您使用的第一個建構函式，並立即呼叫[附加](#attach)具有相同參數。 請參閱**附加**如需詳細資訊。  
+ 第二個多載作用相同時，如果您使用的第一個建構函式，並立即呼叫[附加](#attach)具有相同參數。 如需詳細資訊，請參閱`Attach`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
@@ -190,7 +190,7 @@ BYTE* Detach();
  包含記憶體檔案的內容的記憶體區塊指標。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式也會關閉`CMemFile`。 您可以將記憶體區塊重新附加`CMemFile`藉由呼叫[附加](#attach)。 如果您想要重新附加檔案，並將資料用於，您應該呼叫[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength)要取得其長度的檔案，然後再呼叫**卸離**。 請注意，如果您附加至的記憶體區塊`CMemFile`以便您可以使用它的資料 ( `nGrowBytes` = = 0)，則您將無法檔案成長的記憶體。  
+ 呼叫此函式也會關閉`CMemFile`。 您可以將記憶體區塊重新附加`CMemFile`藉由呼叫[附加](#attach)。 如果您想要重新附加檔案，並將資料用於，您應該呼叫[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength)要取得其長度的檔案，然後再呼叫`Detach`。 請注意，如果您附加至的記憶體區塊`CMemFile`以便您可以使用它的資料 ( `nGrowBytes` = = 0)，則您將無法檔案成長的記憶體。  
   
 ##  <a name="free"></a>  CMemFile::Free  
  會呼叫此函式`CMemFile`成員函式。  
@@ -200,7 +200,7 @@ virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpMem`  
+ *lpMem*  
  要取消配置的記憶體指標。  
   
 ### <a name="remarks"></a>備註  
@@ -214,7 +214,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwNewLen`  
+ *dwNewLen*  
  新的記憶體檔案的大小。  
   
 ### <a name="remarks"></a>備註  
@@ -231,17 +231,17 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpMemTarget`  
+ *lpMemTarget*  
  記憶體區塊，將複製的來源記憶體指標。  
   
- `lpMemSource`  
+ *lpMemSource*  
  來源的記憶體區塊指標。  
   
- `nBytes`  
+ *nBytes*  
  要複製的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
- `lpMemTarget` 的複本。  
+ 一份*lpMemTarget*。  
   
 ### <a name="remarks"></a>備註  
  如果您想要變更的方式，覆寫此函數的`CMemFile`沒有這些記憶體複本。  
@@ -256,10 +256,10 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpMem`  
+ *lpMem*  
  要重新配置的記憶體區塊指標。  
   
- `nBytes`  
+ *nBytes*  
  新的記憶體區塊大小。  
   
 ### <a name="return-value"></a>傳回值  

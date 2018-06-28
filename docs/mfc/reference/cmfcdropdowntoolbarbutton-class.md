@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c894ff57bbbee59842f56dbfef0ec06a6c7899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372530"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041691"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 類別
 按一下時其行為像一般按鈕的工具列按鈕類型。 不過，它會開啟下拉式工具列 ( [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果使用者按住工具列按鈕。  
@@ -132,11 +132,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
  要從中複製來源 按鈕參考。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src` 必須是型別`CMFCDropDownToolbarButton`。  
+ 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 *src*必須是型別`CMFCDropDownToolbarButton`。  
   
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  建構 `CMFCDropDownToolbarButton` 物件。  
@@ -151,16 +151,16 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  按鈕的預設文字。  
   
- [輸入] `pToolBar`  
+ [in]*pToolBar*  
  指標`CMFCDropDownToolBar`使用者按下按鈕時顯示的物件。  
   
 ### <a name="remarks"></a>備註  
- 建構函式的第二個多載將複製到下拉式按鈕的第一個按鈕從工具列的`pToolBar`指定。  
+ 建構函式的第二個多載將複製到下拉式按鈕的第一個按鈕從工具列的*pToolBar*指定。  
   
- 一般而言，下拉式清單工具列按鈕會從最近使用過的按鈕文字使用工具列中，`pToolBar`指定。 它會使用所指定的文字`lpszName`按鈕時轉換成功能表按鈕或顯示在**命令** 索引標籤**自訂** 對話方塊。 如需有關**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
+ 一般而言，下拉式清單工具列按鈕會從最近使用過的按鈕文字使用工具列中， *pToolBar*指定。 它會使用所指定的文字*lpszName*按鈕時轉換成功能表按鈕或顯示在**命令** 索引標籤**自訂** 對話方塊。 如需有關**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何建構的物件`CMFCDropDownToolbarButton`類別。 此程式碼片段是部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
@@ -175,7 +175,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  父視窗的下拉式清單畫面格，或`NULL`使用下拉式工具列按鈕的父視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -186,7 +186,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  這個方法會使用建立下拉式工具列[CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create)方法。 如果父工具列停駐垂直，這個方法會將下拉式工具列到為父工具列，根據調整大小的左手或右手邊端。 否則，這個方法會將為父工具列下方的下拉式清單工具列。  
   
- 如果這個方法會失敗`pWnd`是`NULL`而下拉式工具列按鈕並沒有父視窗。  
+ 如果這個方法會失敗*pWnd*是`NULL`而下拉式工具列按鈕並沒有父視窗。  
   
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  複製文字從工具列按鈕加入的功能表。  
@@ -196,7 +196,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `menuButton`  
+ [in]*menuButton*  
  目標功能表按鈕的參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -267,13 +267,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容顯示的按鈕。  
   
- [輸入] `sizeDefault`  
+ [in]*sizeDefault*  
  按鈕的預設大小。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  為父工具列停駐狀態。 這個參數是`TRUE`工具列水平停駐或浮動，如果或`FALSE`若垂直停駐工具列。  
   
 ### <a name="return-value"></a>傳回值  
@@ -290,7 +290,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  新的父視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -306,10 +306,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  父視窗的工具列按鈕。  
   
- [輸入] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 如果應該處理訊息，且延遲時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -345,14 +345,14 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  父視窗的工具列按鈕。  
   
 ### <a name="return-value"></a>傳回值  
  如果按鈕處理說明訊息，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 藉由呼叫[CMFCDropDownToolbarButton::OnClick](#onclick)方法`bDelay`設`FALSE`. 這個方法會傳回所傳回的值[CMFCDropDownToolbarButton::OnClick](#onclick)。  
+ 此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 藉由呼叫[CMFCDropDownToolbarButton::OnClick](#onclick)方法*bDelay*設`FALSE`。 這個方法會傳回所傳回的值[CMFCDropDownToolbarButton::OnClick](#onclick)。  
   
  如需有關`WM_HELPHITTEST message, see` [TN028： 即時線上說明支援](../../mfc/tn028-context-sensitive-help-support.md)。  
   
@@ -364,7 +364,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMenu`  
+ [in]*pMenu*  
  若要自訂功能表。  
   
 ### <a name="return-value"></a>傳回值  
@@ -401,28 +401,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容顯示的按鈕。  
   
- [輸入] `rect`  
+ [in]*rect*  
  按鈕的週框。  
   
- [輸入] `pImages`  
+ [in]*pImages*  
  與按鈕相關聯的工具列影像集合。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  為父工具列停駐狀態。 這個參數是`TRUE`當按鈕會停駐水平及`FALSE`當按鈕會停駐垂直。  
   
- [輸入] `bCustomizeMode`  
+ [in]*bCustomizeMode*  
  指定工具列是否為自訂模式。 這個參數是`TRUE`工具列時自訂模式和`FALSE`當工具列不是以自訂模式。  
   
- [輸入] `bHighlight`  
+ [in]*bHighlight*  
  指定按鈕會反白顯示。 這個參數是`TRUE`按鈕反白顯示和`FALSE`時的按鈕不強調顯示。  
   
- [輸入] `bDrawBorder`  
+ [in]*bDrawBorder*  
  指定按鈕是否應顯示框線。 這個參數是`TRUE`按鈕時應該顯示框線和`FALSE`當按鈕不應該顯示框線。  
   
- [輸入] `bGrayDisabledButtons`  
+ [in]*bGrayDisabledButtons*  
  指定是否要加上陰影停用的按鈕，或使用已停用的影像集合。 這個參數是`TRUE`已停用的按鈕時應該會有陰影和`FALSE`當這個方法應該使用已停用的影像集合。  
   
 ### <a name="remarks"></a>備註  
@@ -439,13 +439,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容顯示的按鈕。  
   
- [輸入] `rect`  
+ [in]*rect*  
  按鈕的週框。  
   
- [輸入] `bSelected`  
+ [in]*bSelected*  
  是否已選取 [] 按鈕。 如果這個參數是`TRUE`，選取 [] 按鈕。 如果這個參數是`FALSE`，請勿選取按鈕。  
   
 ### <a name="return-value"></a>傳回值  
@@ -464,7 +464,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `ar`  
+ [in]*ar*  
  `CArchive`從中或要序列化的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -478,11 +478,11 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
  預設命令的識別碼。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，指定當使用者按一下按鈕時，會執行架構的預設命令。 具有所指定的命令識別碼的項目`uiCmd`必須位於父下拉式工具列。  
+ 呼叫這個方法，指定當使用者按一下按鈕時，會執行架構的預設命令。 具有所指定的命令識別碼的項目*uiCmd*必須位於父下拉式工具列。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

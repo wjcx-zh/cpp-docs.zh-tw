@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369225"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037265"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 類別
 表示資料的資料流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 名為[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
@@ -113,7 +113,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pError`  
+ *pError*  
  檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
   
 ### <a name="return-value"></a>傳回值  
@@ -130,7 +130,7 @@ BOOL Detach(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pError`  
+ *pError*  
  檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
   
 ### <a name="return-value"></a>傳回值  
@@ -164,22 +164,22 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszURL`  
+ *lpszURL*  
  URL 或開啟檔案的檔案名稱。  
   
- `pError`  
+ *pError*  
  檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
   
- `pMoniker`  
+ *pMoniker*  
  Moniker 介面的指標`IMoniker`用來取得資料流。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- `lpszURL`參數不能在 Macintosh。 只有`pMoniker`形式**開啟**可以用於 Macintosh。  
+ *LpszURL*參數不能在 Macintosh。 只有*pMoniker*形式**開啟**可以用於 Macintosh。  
   
- 您可以使用 URL 或檔案名稱`lpszURL`參數。 例如:   
+ 您可以使用 URL 或檔案名稱*lpszURL*參數。 例如:   
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

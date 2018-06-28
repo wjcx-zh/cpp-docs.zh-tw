@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378378"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038577"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 表示通常在浮動工具列周圍出現的半高度框架視窗。  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpClassName`  
+ *lpClassName*  
  指向以 null 結束的字元字串，Windows 類別命名。 類別名稱可以是任何名稱登錄與全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式。 如果**NULL**，將會為您登錄視窗類別，由架構。 MFC 提供的預設類別樣式，下列屬性：  
   
 -   設定樣式位元**CS_DBLCLKS**，會將按兩下訊息至視窗程序在使用者按兩下滑鼠時。  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   設定視窗的預設大小和位置，由 Windows 所示。  
   
- `lpWindowName`  
+ *lpWindowName*  
  指向以 null 結尾字元字串，包含視窗名稱。  
   
- `dwStyle`  
+ *dwStyle*  
  指定視窗的樣式屬性。 這些可以包括標準的視窗樣式與一個或多個下列特殊的樣式：  
   
 - **MFS_MOVEFRAME**可讓任何視窗，而不只是標題的邊緣上的 要移動迷你框架視窗。  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  請參閱[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)如需可能的視窗樣式值的說明。 典型的迷你框架視窗使用，就是**WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**。  
   
- `rect`  
+ *rect*  
  A`RECT`結構，指定視窗的所需的維度。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父視窗。 使用**NULL**為最上層視窗。  
   
- `nID`  
+ *nID*  
  如果做為子視窗建立迷你框架視窗時，這是識別項的子控制項，否則便是 0。  
   
 ### <a name="return-value"></a>傳回值  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
+ *dwExStyle*  
  指定的擴充的樣式`CMiniFrameWnd`所建立。 套用這其中任何[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)至視窗。  
   
- `lpClassName`  
+ *lpClassName*  
  指向以 null 結束的字元字串，名稱的 Windows 類別 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱登錄與全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式或任何預先定義的控制項類別名稱。 它不得為**NULL**。  
   
- `lpWindowName`  
+ *lpWindowName*  
  指向以 null 結尾字元字串，包含視窗名稱。  
   
- `dwStyle`  
+ *dwStyle*  
  指定視窗的樣式屬性。 請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)的可能值的描述。  
   
- `rect`  
- 大小和視窗的位置，在用戶端座標`pParentWnd`。  
+ *rect*  
+ 大小和視窗的位置，在用戶端座標*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父視窗物件。  
   
- `nID`  
+ *nID*  
  子視窗的識別項。  
   
 ### <a name="return-value"></a>傳回值  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  覆寫進一步 **上 * * * 訊息*訊息處理常式，以進一步將功能加入至您的衍生類別。  
   
- 如果**WS_VISIBLE**樣式，Windows 會將視窗啟動並顯示視窗所需的所有訊息。 如果視窗樣式指定標題列，視窗標題所指`lpszWindowName`參數會顯示在標題列中。  
+ 如果**WS_VISIBLE**樣式，Windows 會將視窗啟動並顯示視窗所需的所有訊息。 如果視窗樣式指定標題列，視窗標題所指*lpszWindowName*參數會顯示在標題列中。  
   
- `dwStyle`參數可以是任何的組合[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+ *DwStyle*參數可以是任何的組合[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
  不再支援的舊樣式的調色盤 [工具箱] 視窗。 支援舊版的 Windows 上執行 MFC 應用程式時的舊樣式，並沒有"X"按鈕，但已不再支援 Visual c + +.NET 中。 只有新`WS_EX_TOOLWINDOW`樣式現在支援; 如需此樣式的說明，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
   

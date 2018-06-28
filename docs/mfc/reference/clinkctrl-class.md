@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371695"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042374"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 提供 Windows 通用 SysLink 控制項的功能。  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  以零結尾的字串，其中包含標示為要顯示的文字指標。 如需詳細資訊，請參閱主題中的 「 標記與連結存取 」 區段[SysLink 控制項概觀](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
   
- `dwStyle`  
+ *dwStyle*  
  指定連結控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中`Windows SDK`如需詳細資訊。  
   
- `rect`  
+ *rect*  
  指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定連結控制項的父視窗。 它不得為`NULL`。  
   
- `nID`  
+ *nID*  
  指定連結控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>備註  
  您建構`CLinkCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，建立連結控制項，並將它附加至`CLinkCtrl`物件。 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CLinkCtrl::CreateEx](#createex)而不是`Create`。  
   
- 第二種`Create`方法已被取代。 使用指定的第一個表單`lpszLinkMarkup`參數。  
+ 第二種`Create`方法已被取代。 使用指定的第一個表單*lpszLinkMarkup*參數。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義兩個變數，名為`m_Link1`和`m_Link2`，可用來存取兩個連結控制項。  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  以零結尾的字串，其中包含標示為要顯示的文字指標。 如需詳細資訊，請參閱主題中的 「 標記與連結存取 」 區段[SysLink 控制項概觀](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
   
- `dwExStyle`  
- 指定連結控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定連結控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定連結控制項的父視窗。 它不得為`NULL`。  
   
- `nID`  
+ *nID*  
  指定連結控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式常數。  
   
- 第二種`CreateEx`方法已被取代。 使用指定的第一個表單`lpszLinkMarkup`參數。  
+ 第二種`CreateEx`方法已被取代。 使用指定的第一個表單*lpszLinkMarkup*參數。  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  擷取連結控制項的理想高度。  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `cxMaxWidth`|連結，像素為單位的最大寬度。|  
-|[out] * `pSize`|Windows 的指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 此方法傳回時，`cy`隸屬`SIZE`結構包含所指定的連結文字寬度的理想連結的文字高度`cxMaxWidth`。 `cx`結構成員會包含實際需要的連結文字寬度。|  
+|[in]*cxMaxWidth*|連結，像素為單位的最大寬度。|  
+|[out] * *pSize*|Windows 的指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 此方法傳回時， *cy*隸屬`SIZE`結構包含所指定的連結文字寬度的理想連結的文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際需要的連結文字寬度。|  
   
 ### <a name="return-value"></a>傳回值  
- 連結文字，單位為像素的慣用的高度。 傳回的值時的值相同`cy`隸屬`SIZE`結構。  
+ 連結文字，單位為像素的慣用的高度。 傳回的值時的值相同*cy*隸屬`SIZE`結構。  
   
 ### <a name="remarks"></a>備註  
  如需`GetIdealSize`方法，請參閱中的範例[CLinkCtrl::Create](#create)。  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指標[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)接收項目資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iLink`  
+ *iLink*  
  連結控制項項目的索引。  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iLink`  
+ *iLink*  
  連結控制項項目的索引。  
   
- `pnState`  
+ *pnState*  
  指定的狀態項目的值。  
   
- `stateMask`  
+ *stateMask*  
  描述要取得的狀態項目旗標的組合。 如需值的清單，請參閱描述**狀態**中的成員[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)結構。 允許的項目是相同的物件中允許**狀態**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iLink`  
+ *iLink*  
  連結控制項項目的索引。  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含指定的項目所代表的 URL  
   
- `szUrl`  
+ *szUrl*  
  以 null 結束的字串，包含指定的項目所代表的 URL  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指標[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)結構，其中包含要設定的資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iLink`  
+ *iLink*  
  連結控制項項目的索引。  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iLink`  
+ *iLink*  
  連結控制項項目的索引。  
   
- `pnState`  
+ *pnState*  
  設定指定的狀態項目的值。  
   
- `stateMask`  
+ *stateMask*  
  描述正在設定的狀態項目旗標的組合。 如需值的清單，請參閱描述**狀態**中的成員[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)結構。 允許的項目是相同的物件中允許**狀態**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iLink`  
+ *iLink*  
  連結控制項項目的索引。  
   
- `szUrl`  
+ *szUrl*  
  以 null 結束的字串，包含指定的項目所代表的 URL  
   
 ### <a name="return-value"></a>傳回值  

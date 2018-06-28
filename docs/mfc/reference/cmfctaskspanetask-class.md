@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371328"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040697"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 類別
 `CMFCTasksPaneTask`類別是 helper 類別，表示工作窗格控制項的工作 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 工作物件，代表工作群組中的項目 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每個工作可以有命令，當使用者按一下工作與工作名稱左邊的圖示時，Framework 就會執行這個命令。  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  指定[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)所屬的工作。  
   
- `lpszName`  
+ *lpszName*  
  指定工作的名稱。  
   
- `nIcon`  
+ *nIcon*  
  影像清單中指定工作的映像的索引。  
   
- `uiCommandID`  
+ *uiCommandID*  
  指定按一下工作時所執行的命令的命令識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  使用者定義的資料。  
   
- `hwndTask`  
+ *hwndTask*  
  指定 [工作] 視窗的控制代碼。  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  如果`TRUE`，[工作] 視窗將會自動終結。  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  指定 [工作] 視窗的高度。  
   
 ### <a name="remarks"></a>備註  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParent`  
+ [in]*pParent*  
  表示目前工作的父視窗。  
   
- [輸出] `data`  
+ [out]*資料*  
  型別的物件`CAccessibilityData`填入目前的工作的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果`data`參數已成功填入目前的工作的協助工具資料，否則`FALSE`。  
+ `TRUE` 如果*資料*參數已成功填入目前的工作的協助工具資料，否則`FALSE`。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

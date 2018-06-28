@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369046"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038499"
 ---
 # <a name="cjumplist-class"></a>CJumpList 類別
 A`CJumpList`是當您以滑鼠右鍵按一下工作列中的圖示時所顯示的快速鍵的清單。  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  指定類別名稱。 如果指定的類別目錄不存在，則會建立。  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  指定目的地檔案的路徑。  
   
- `strCategoryName`  
+ *strCategoryName*  
  指定類別名稱。 如果指定的類別目錄不存在，則會建立。  
   
- `pShellItem`  
+ *pShellItem*  
  指定代表要加入目的地 Shell 項目。  
   
- `pShellLink`  
+ *pShellLink*  
  指定代表要加入目的地的殼層連結。  
   
 ### <a name="return-value"></a>傳回值  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>參數  
- `category`  
+ *category*  
  指定已知的類別類型。 可以是`KDC_RECENT`，或`KDC_KNOWN`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>參數  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  指定目標工作路徑。  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  指定可執行檔 strTargetExecutablePath 所指定的命令列引數。  
   
- `strTitle`  
+ *strTitle*  
  將目的地清單中顯示的工作名稱。  
   
- `strIconLocation`  
+ *strIconLocation*  
  將標題以及之目的地清單中顯示的圖示的位置。  
   
- `iIconIndex`  
+ *iIconIndex*  
  圖示索引。  
   
- `pShellLink`  
+ *pShellLink*  
  介面表示要加入工作的連結。  
   
 ### <a name="return-value"></a>傳回值  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pObjectCollection`  
+ *pObjectCollection*  
  要加入之工作集合。  
   
 ### <a name="return-value"></a>傳回值  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAutoCommit`  
+ *bAutoCommit*  
  如果這個參數是 FALSE 清單不會自動認可解構函式中。  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `strAppID`  
+ *strAppID*  
  字串，指定應用程式使用者模型識別碼。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373699"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042218"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 類別
 `CMFCVisualManagerWindows7`讓應用程式的外觀[!INCLUDE[win7](../../build/includes/win7_md.md)]應用程式。  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pEdit`  
+ [in]*pEdit*  
  編輯控制項的指標。 這個值不能是 `NULL`。  
   
- [輸出] `bIsHighlighted`  
+ [out]*bIsHighlighted*  
  傳回功能區中會反白顯示。  
   
- [輸出] `bIsPaneHighlighted`  
- 傳回`TRUE`如果功能區 面板中包含`pEdit`會反白顯示。  
+ [out]*bIsPaneHighlighted*  
+ 傳回`TRUE`如果功能區 面板中包含*pEdit*會反白顯示。  
   
- [輸出] `bIsDisabled`  
- 傳回是否`pEdit`已停用。  
+ [out]*bIsDisabled*  
+ 傳回是否*pEdit*已停用。  
   
 ### <a name="return-value"></a>傳回值  
- 編輯方塊的背景色彩`pEdit`。  
+ 編輯方塊的背景色彩*pEdit*。  
   
 ### <a name="remarks"></a>備註  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容功能表按鈕的指標。  
   
- [輸入] `pButton`  
+ [in]*pButton*  
  指標`CMFCToolBarButton`。 架構會填滿此按鈕的背景。  
   
- [輸入] `rect`  
+ [in]*rect*  
  指定功能表按鈕的影像區域界限的矩形。  
   
- [輸入] `state`  
+ [in]*狀態*  
  按鈕的狀態。  
   
 ### <a name="remarks"></a>備註  

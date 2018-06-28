@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371793"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040099"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 類別
 `CMFCMaskedEdit`類別支援遮罩的編輯控制項，會驗證使用者輸入，根據遮罩，並顯示根據範本驗證的結果。  
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法擷取只遮罩字元。`FALSE`指定方法擷取整個文字。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszMask`  
- 遮罩字串會指定可以出現在使用者輸入的每個位置的字元類型。 長度`lpszInputTemplate`和`lpszMask`參數字串必須相同。 請參閱 < 備註 > 一節，如需詳細資訊遮罩字元。  
+ [in]*lpszMask*  
+ 遮罩字串會指定可以出現在使用者輸入的每個位置的字元類型。 長度*lpszInputTemplate*和*lpszMask*參數字串必須相同。 請參閱 < 備註 > 一節，如需詳細資訊遮罩字元。  
   
- [輸入] `lpszInputTemplate`  
- 遮罩範本字串，指定常值字元，可以出現在使用者輸入的每個位置。 使用底線字元 ('_') 做為字元預留位置。 長度`lpszInputTemplate`和`lpszMask`參數字串必須相同。  
+ [in]*lpszInputTemplate*  
+ 遮罩範本字串，指定常值字元，可以出現在使用者輸入的每個位置。 使用底線字元 ('_') 做為字元預留位置。 長度*lpszInputTemplate*和*lpszMask*參數字串必須相同。  
   
- [輸入] `chMaskInputTemplate`  
+ [in]*chMaskInputTemplate*  
  架構可以代替使用者輸入中每個無效字元的預設字元。 這個參數的預設值為底線 ('_')。  
   
- [輸入] `lpszValid`  
+ [in]*lpszValid*  
  字串，包含一組有效的字元。 `NULL` 表示所有字元都都有效。 此參數的預設值為 `NULL`。  
   
 ### <a name="remarks"></a>備註  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要選取群組。`FALSE`選取整個文字。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要驗證使用者輸入只遮罩字元;`FALSE`整個遮罩對其進行驗證。 預設值是 `TRUE`。  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `lpszStringBuf`  
+ [out]*lpszStringBuf*  
  接收從編輯控制項的文字緩衝區的指標。  
   
- [輸入] `nMaxCount`  
+ [in]*nMaxCount*  
  要接收的字元數目上限。  
   
- [輸出] `rstrString`  
+ [out]*rstrString*  
  接收從編輯控制項的文字字串物件的參考。  
   
 ### <a name="return-value"></a>傳回值  
- 第一個方法多載會傳回字串複製到的位元組數目`lpszStringBuf`參數緩衝區，則為 0，如果遮罩的編輯控制項不的任何文字。  
+ 第一個方法多載會傳回字串複製到的位元組數目*lpszStringBuf*參數緩衝區，則為 0，如果遮罩的編輯控制項不的任何文字。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會將文字複製到遮罩的編輯控制項中`lpszStringBuf`緩衝區或`rstrString`字串。  
+ 這個方法會將文字複製到遮罩的編輯控制項中*lpszStringBuf*緩衝區或*rstrString*字串。  
   
  這個方法會重新定義[CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)。  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `chChar`  
+ [in]*chChar*  
  要驗證的字元。  
   
- [輸入] `chMaskChar`  
+ [in]*chMaskChar*  
  遮罩字串中的對應字元。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果`chChar`參數是所允許的字元類型`chMaskChar`參數，否則`FALSE`。  
+ `TRUE` 如果*chChar*參數是所允許的字元類型*chMaskChar*參數，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法以驗證您自己的輸入的字元。 如需遮罩字元的詳細資訊，請參閱[CMFCMaskedEdit::EnableMask](#enablemask)方法。  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszValid`  
+ [in]*lpszValid*  
  包含一組有效的輸入字元的字串。 `NULL` 表示所有字元都都有效。 此參數的預設值為 `NULL`。  
   
 ### <a name="remarks"></a>備註  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszString`  
+ [in]*lpszString*  
  指向以 null 結束的字串將用於做為提示。  
   
 ### <a name="remarks"></a>備註  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372952"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042065"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 類別
 根據 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)的擴充工具提示實作。 根據 `CMFCToolTipCtrl` 類別的工具提示可以顯示圖示、標籤和描述。 您可以使用漸層填滿、自訂文字和框線色彩、粗體文字、圓角或氣球樣式，自訂其視覺外觀。  
@@ -169,7 +169,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParams`  
+ [in]*pParams*  
   
 ### <a name="remarks"></a>備註  
   
@@ -204,13 +204,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- `[in] rect`  
+ [in]*rect*  
  工具提示的週框。  
   
- `[in] clrLine`  
+ [in]*clrLine*  
  框線色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -227,9 +227,9 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- [輸入] `rect`  
- [輸入] `bCalcOnly`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bCalcOnly*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -245,10 +245,10 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rectImage`  
+ [in]*rectImage*  
  圖示的座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -268,13 +268,13 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- `[in] rect`  
+ [in]*rect*  
  標籤區域的週框。  
   
- `[in] bCalcOnly`  
+ [in]*bCalcOnly*  
  如果`TRUE`，標籤不會被繪製。  
   
 ### <a name="return-value"></a>傳回值  
@@ -295,16 +295,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `x1`  
+ [in]*x1*  
  水平分隔符號的左邊的座標。  
   
- [輸入] `x2`  
+ [in]*x2*  
  水平座標分隔符號的右邊。  
   
- [輸入] `Y`  
+ [in]*Y*  
  在分隔符號的垂直座標。  
   
 ### <a name="remarks"></a>備註  
@@ -324,20 +324,20 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- `[in] rect`  
+ [in]*rect*  
  指定要填滿區域的周框矩形。  
   
- `[in] clrText`  
+ [in]*clrText*  
  工具提示的前景色彩。  
   
- `[in] clrLine`  
+ [in]*clrLine*  
  色彩的框線和分隔符號之間的線條標籤和描述。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會填入所指定的矩形`rect`色彩或最新的呼叫所指定的模式與[CMFCToolTipCtrl::SetParams](#setparams)。  
+ 預設實作會填入所指定的矩形*rect*色彩或最新的呼叫所指定的模式與[CMFCToolTipCtrl::SetParams](#setparams)。  
   
  如果您想要自訂工具提示的外觀，請覆寫這個方法在衍生類別中。  
   
@@ -349,7 +349,7 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] strDesrciption`  
+ [in]*strDesrciption*  
  描述文字。  
   
 ### <a name="remarks"></a>備註  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nWidthRegular`  
- [輸入] `nWidthLargeImage`  
+ [in]*nWidthRegular*  
+ [in]*nWidthLargeImage*  
   
 ### <a name="remarks"></a>備註  
   
@@ -378,7 +378,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRibbonButton`  
+ [in]*pRibbonButton*  
   
 ### <a name="remarks"></a>備註  
   
@@ -390,7 +390,7 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pt`  
+ [in]*pt*  
   
 ### <a name="remarks"></a>備註  
   
@@ -402,11 +402,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] pParams`  
+ [in]*pParams*  
  指標[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件，其中包含顯示參數。  
   
 ### <a name="remarks"></a>備註  
- 顯示工具提示，它使用色彩來繪製視覺樣式，每當`pParams`指定。 值`pParams`會儲存在受保護成員`m_Params`，可由衍生類別會覆寫來存取[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)， [CMFCToolTipCtrl::OnDrawIcon](#ondrawicon)， [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)， [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)，或[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)維護指定的外觀。  
+ 顯示工具提示，它使用色彩來繪製視覺樣式，每當*pParams*指定。 值*pParams*會儲存在受保護成員`m_Params`，可由衍生類別會覆寫來存取[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)， [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)， [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)， [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)，或[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)維護指定的外觀。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

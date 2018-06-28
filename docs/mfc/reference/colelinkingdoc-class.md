@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369843"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039969"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 類別
 支援連結至所包含內嵌項目之 OLE 容器文件的基底類別。  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- 連接您`COleTemplateServer`要藉由呼叫物件的文件範本物件`ConnectTemplate`成員函式，並註冊所有類別藉由呼叫都物件以 OLE 系統**coletemplateserver:: Registerall**:  
+ 連接您`COleTemplateServer`要藉由呼叫物件的文件範本物件`ConnectTemplate`成員函式，並註冊所有類別藉由呼叫都物件以 OLE 系統`COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszItemName`  
+ *lpszItemName*  
  內嵌 OLE 項目要求的名稱指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszItemName`  
+ *lpszItemName*  
  連結的 OLE 項目要求的名稱指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  OLE factory 物件指標 (可以是**NULL**)。  
   
- `lpszPathName`  
+ *lpszPathName*  
  容器文件的完整路徑的指標。  
   
 ### <a name="return-value"></a>傳回值  

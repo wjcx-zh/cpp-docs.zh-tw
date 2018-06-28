@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8139047f47a1984dca9faba3ebff6b0426bb444
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0cdc5c25751da895100155571d6a24705479fd0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376430"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039280"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 封裝 OLE Automation 的 `CURRENCY` 資料類型。  
@@ -88,11 +88,11 @@ class COleCurrency
 |[COleCurrency::m_status](#m_status)|包含的狀態`COleCurrency`物件。|  
   
 ## <a name="remarks"></a>備註  
- **COleCurrency**沒有基底類別。  
+ `COleCurrency` 沒有基底類別。  
   
  **貨幣**會實作成 8 位元組，以 10000 倍的二補數整數值。 這得出一個定點數字，小數點左邊 15 位數，小數點右邊 4 位數。 **貨幣**資料類型是非常有用，涉及金額的計算或任何固定點計算正確性很重要。 它是其中一個可能的類型`VARIANT`OLE automation 資料類型。  
   
- **COleCurrency**也會實作此固定點類型的一些基本的算術運算。 已選取支援的作業來控制固定點計算期間發生的捨入錯誤。  
+ `COleCurrency` 也會實作此固定點類型的一些基本的算術運算。 已選取支援的作業來控制固定點計算期間發生的捨入錯誤。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `COleCurrency`  
@@ -101,7 +101,7 @@ class COleCurrency
  **標頭：** afxdisp.h  
   
 ##  <a name="colecurrency"></a>  COleCurrency::COleCurrency  
- 建構**COleCurrency**物件。  
+ 建構 `COleCurrency` 物件。  
   
 ```  
 COleCurrency();  
@@ -116,30 +116,30 @@ COleCurrency(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cySrc`  
- A**貨幣**值複製到新**COleCurrency**物件。  
+ *cySrc*  
+ A**貨幣**值複製到新`COleCurrency`物件。  
   
- `curSrc`  
- 現有**COleCurrency**物件複製到新**COleCurrency**物件。  
+ *curSrc*  
+ 現有`COleCurrency`物件複製到新`COleCurrency`物件。  
   
  *varSrc*  
- 現有**VARIANT**資料結構 (可能是`COleVariant`物件) 轉換成貨幣值 ( `VT_CY`) 並複製到新**COleCurrency**物件。  
+ 現有**VARIANT**資料結構 (可能是`COleVariant`物件) 轉換成貨幣值 ( `VT_CY`) 並複製到新`COleCurrency`物件。  
   
- `nUnits`, `nFractionalUnits`  
- 表示要複製到新的單位和 (1/10 中 000's年） 之值的小數部分**COleCurrency**物件。  
+ *nUnits*， *nFractionalUnits*  
+ 表示要複製到新的單位和 (1/10 中 000's年） 之值的小數部分`COleCurrency`物件。  
   
 ### <a name="remarks"></a>備註  
- 所有這些建構函式建立新**COleCurrency**物件初始化為指定的值。 遵循每個這些建構函式的簡短描述。 除非另有說明新的狀態**COleCurrency**項目設定為有效。  
+ 所有這些建構函式建立新`COleCurrency`物件初始化為指定的值。 遵循每個這些建構函式的簡短描述。 除非另有說明新的狀態`COleCurrency`項目設定為有效。  
   
-- COleCurrency() 建構**COleCurrency**物件初始化為 0 （零）。  
+- COleCurrency() 建構`COleCurrency`物件初始化為 0 （零）。  
   
-- COleCurrency (`cySrc`) 建構**COleCurrency**物件從[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)值。  
+- COleCurrency (`cySrc`) 建構`COleCurrency`物件從[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)值。  
   
-- COleCurrency (`curSrc`) 建構**COleCurrency**從現有物件**COleCurrency**物件。 新的物件都有來源物件相同的狀態。  
+- COleCurrency (`curSrc`) 建構`COleCurrency`從現有物件`COleCurrency`物件。 新的物件都有來源物件相同的狀態。  
   
-- COleCurrency (`varSrc`) 建構**COleCurrency**物件。 嘗試轉換[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)結構或`COleVariant`貨幣的物件 ( `VT_CY`) 值。 如果這個轉換成功，已轉換的值會複製到新**COleCurrency**物件。 如果不是，值**COleCurrency**物件設定為零 (0) 和其狀態變更為無效。  
+- COleCurrency (`varSrc`) 建構`COleCurrency`物件。 嘗試轉換[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)結構或`COleVariant`貨幣的物件 ( `VT_CY`) 值。 如果這個轉換成功，已轉換的值會複製到新`COleCurrency`物件。 如果不是，值`COleCurrency`物件設定為零 (0) 和其狀態變更為無效。  
   
-- `COleCurrency(`nUnits`, `nFractionalUnits') 建構**COleCurrency**從指定的數值元件的物件。 如果小數部分的絕對值大於 10000，進行適當調整就的單位。 請注意，指定單位和小數部分的帶正負號的 long 值。  
+- `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 從指定的數值元件的物件。 如果小數部分的絕對值大於 10000，進行適當調整就的單位。 請注意，指定單位和小數部分的帶正負號的 long 值。  
   
  如需詳細資訊，請參閱[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)和[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) Windows SDK 中的項目。  
   
@@ -156,35 +156,35 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  表示地區設定的旗標。 下列旗標是貨幣：  
   
 - **LOCALE_NOUSEROVERRIDE**使用系統預設地區設定，而不是自訂的使用者設定。  
   
- `lcid`  
+ *lcid*  
  指出要使用來進行轉換的地區設定識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  A`CString`包含格式化的貨幣值。  
   
 ### <a name="remarks"></a>備註  
- 它會格式化使用的地區語言規格 （也就是地區設定識別碼） 的值。 貨幣符號不包含在傳回的值。 如果這個狀態**COleCurrency**物件為 null，傳回的值為空字串。 如果狀態不正確，則傳回字串指定字串資源**IDS_INVALID_CURRENCY**。  
+ 它會格式化使用的地區語言規格 （也就是地區設定識別碼） 的值。 貨幣符號不包含在傳回的值。 如果這個狀態`COleCurrency`物件為 null，傳回的值為空字串。 如果狀態不正確，則傳回字串指定字串資源**IDS_INVALID_CURRENCY**。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
 ##  <a name="getstatus"></a>  COleCurrency::GetStatus  
- 呼叫此成員函式取得的狀態 （有效性） 指定**COleCurrency**物件。  
+ 呼叫此成員函式取得的狀態 （有效性） 指定`COleCurrency`物件。  
   
 ```  
 CurrencyStatus GetStatus() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回這個狀態**COleCurrency**值。  
+ 傳回這個狀態`COleCurrency`值。  
   
 ### <a name="remarks"></a>備註  
- 傳回值由定義`CurrencyStatus`列舉內定義的型別**COleCurrency**類別。  
+ 傳回值由定義`CurrencyStatus`列舉內定義的型別`COleCurrency`類別。  
   
 ```  
 enum CurrencyStatus {
@@ -196,13 +196,13 @@ enum CurrencyStatus {
   
  如需這些狀態值的簡短說明，請參閱下列清單：  
   
-- **COleCurrency::valid**指出此**COleCurrency**物件是否有效。  
+- **COleCurrency::valid**指出此`COleCurrency`物件是否有效。  
   
-- **COleCurrency::invalid**指出此**COleCurrency**物件無效; 也就是說，其值可能不正確。  
+- **COleCurrency::invalid**指出此`COleCurrency`物件無效; 也就是說，其值可能不正確。  
   
-- **COleCurrency::null**指出此**COleCurrency**物件為 null，也就是已針對此物件提供任何值。 (這是 「 null 」 中的"having 沒有值時，"而不 c + + 資料庫意義**NULL**。)  
+- **COleCurrency::null**指出此`COleCurrency`物件為 null，也就是已針對此物件提供任何值。 (這是 「 null 」 中的"having 沒有值時，"而不 c + + 資料庫意義**NULL**。)  
   
- 狀態**COleCurrency**物件不能用在下列情況：  
+ 狀態`COleCurrency`物件不能用在下列情況：  
   
 -   如果其值設定從**VARIANT**或`COleVariant`無法轉換為貨幣值的值。  
   
@@ -230,17 +230,17 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- 基礎[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)這個結構**COleCurrency**物件。  
+ 基礎[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)這個結構`COleCurrency`物件。  
   
 ### <a name="remarks"></a>備註  
   
 > [!CAUTION]
->  變更中的值**貨幣**結構存取此函式傳回的指標會變更這個值**COleCurrency**物件。 不會變更這個狀態**COleCurrency**物件。  
+>  變更中的值**貨幣**結構存取此函式傳回的指標會變更這個值`COleCurrency`物件。 不會變更這個狀態`COleCurrency`物件。  
   
  如需詳細資訊，請參閱[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)Windows SDK 中的項目。  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
- 此資料成員的類型是列舉型別`CurrencyStatus`，定義內**COleCurrency**類別。  
+ 此資料成員的類型是列舉型別`CurrencyStatus`，定義內`COleCurrency`類別。  
   
 ```  
 enum CurrencyStatus{  
@@ -253,13 +253,13 @@ enum CurrencyStatus{
 ### <a name="remarks"></a>備註  
  如需這些狀態值的簡短說明，請參閱下列清單：  
   
-- **COleCurrency::valid**指出此**COleCurrency**物件是否有效。  
+- **COleCurrency::valid**指出此`COleCurrency`物件是否有效。  
   
-- **COleCurrency::invalid**指出此**COleCurrency**物件無效; 也就是說，其值可能不正確。  
+- **COleCurrency::invalid**指出此`COleCurrency`物件無效; 也就是說，其值可能不正確。  
   
-- **COleCurrency::null**指出此**COleCurrency**物件為 null，也就是已針對此物件提供任何值。 (這是 「 null 」 中的"having 沒有值時，"而不 c + + 資料庫意義**NULL**。)  
+- **COleCurrency::null**指出此`COleCurrency`物件為 null，也就是已針對此物件提供任何值。 (這是 「 null 」 中的"having 沒有值時，"而不 c + + 資料庫意義**NULL**。)  
   
- 狀態**COleCurrency**物件不能用在下列情況：  
+ 狀態`COleCurrency`物件不能用在下列情況：  
   
 -   如果其值設定從**VARIANT**或`COleVariant`無法轉換為貨幣值的值。  
   
@@ -287,7 +287,7 @@ enum CurrencyStatus{
     >  此資料成員是針對進階程式的情況。 您應該使用內嵌成員函式[GetStatus](#getstatus)和[SetStatus](#setstatus)。 請參閱`SetStatus`的其他注意事項，關於明確設定此資料成員。  
   
 ##  <a name="operator_eq"></a>  COleCurrency::operator =  
- 這些多載的指派運算子會將來源貨幣值複製到這個**COleCurrency**物件。  
+ 這些多載的指派運算子會將來源貨幣值複製到這個`COleCurrency`物件。  
   
 ```  
 const COleCurrency& operator=(CURRENCY cySrc);  
@@ -298,11 +298,11 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 ### <a name="remarks"></a>備註  
  每個運算子的簡短描述如下：  
   
-- **運算子 = (** `cySrc` **)** `CURRENCY`值複製到**COleCurrency**物件，且其狀態會設定為有效。  
+- **運算子 = (** `cySrc` **)** `CURRENCY`值複製到`COleCurrency`物件，且其狀態會設定為有效。  
   
-- **運算子 = (** `curSrc` **)** 的值和運算元的現有狀態**COleCurrency**物件會複製到這個**COleCurrency**物件.  
+- **運算子 = (** `curSrc` **)** 的值和運算元的現有狀態`COleCurrency`物件會複製到這個`COleCurrency`物件。  
   
-- **運算子 = (** *varSrc* **)** 如果轉換`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 為貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個**COleCurrency**物件，且其狀態會設定為有效。 如果轉換不成功，值**COleCurrency**物件設定為 0，其狀態變更為無效。  
+- **運算子 = (** *varSrc* **)** 如果轉換`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 為貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個`COleCurrency`物件，且其狀態會設定為有效。 如果轉換不成功，值`COleCurrency`物件設定為 0，其狀態變更為無效。  
   
  如需詳細資訊，請參閱[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)和[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) Windows SDK 中的項目。  
   
@@ -310,7 +310,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
 ##  <a name="operator_plus_minus"></a>  COleCurrency::operator +、-  
- 這些運算子可讓您加入和減去兩個**COleCurrency**值和彼此，並將變更的正負號**COleCurrency**值。  
+ 這些運算子可讓您加入和減去兩個`COleCurrency`值和彼此，並將變更的正負號`COleCurrency`值。  
   
 ```  
 COleCurrency operator+(const COleCurrency& cur) const;  
@@ -319,11 +319,11 @@ COleCurrency operator-() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果任一運算元是 null，產生的狀態**COleCurrency**值為 null。  
+ 如果其中一個運算元為 null，產生的狀態`COleCurrency`值為 null。  
   
- 如果算術運算造成溢位，產生**COleCurrency**值無效。  
+ 如果算術運算造成溢位，產生`COleCurrency`值無效。  
   
- 如果是不正確，而另一個運算元不是 null，產生的狀態**COleCurrency**值無效。  
+ 如果是不正確，而另一個運算元不是 null，產生的狀態`COleCurrency`值無效。  
   
  如需有關有效、 無效的 null 狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。  
   
@@ -331,7 +331,7 @@ COleCurrency operator-() const;
  [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
 ##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator + =、-= 左邊  
- 可讓您加入和減去**COleCurrency**值與這個**COleCurrency**物件。  
+ 可讓您加入和減去`COleCurrency`值與這個`COleCurrency`物件。  
   
 ```  
 const COleCurrency& operator+=(const COleCurrency& cur);  
@@ -339,11 +339,11 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果其中一個運算元為 null，這個狀態**COleCurrency**物件設定為 null。  
+ 如果任一運算元是 null，這個狀態`COleCurrency`物件設定為 null。  
   
- 如果算術運算造成溢位，這個狀態**COleCurrency**物件設為以不正確。  
+ 如果算術運算造成溢位，這個狀態`COleCurrency`物件設為以不正確。  
   
- 如果任一運算元無效，而且其他不是 null，這個狀態**COleCurrency**物件設為以不正確。  
+ 如果任一運算元無效，而且其他不是 null，這個狀態`COleCurrency`物件設為以不正確。  
   
  如需有關有效、 無效的 null 狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。  
   
@@ -351,7 +351,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
  [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
 ##  <a name="operator_star"></a>  COleCurrency::operator * 和 /  
- 可讓您調整**COleCurrency**整數的值。  
+ 可讓您調整`COleCurrency`整數的值。  
   
 ```  
 COleCurrency operator*(long nOperand) const;  
@@ -359,11 +359,11 @@ COleCurrency operator/(long nOperand) const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果**COleCurrency**運算元是 null，產生的狀態**COleCurrency**值為 null。  
+ 如果`COleCurrency`運算元是 null，產生的狀態`COleCurrency`值為 null。  
   
- 如果算術運算造成溢位或反向溢位，產生的狀態**COleCurrency**值無效。  
+ 如果算術運算造成溢位或反向溢位，產生的狀態`COleCurrency`值無效。  
   
- 如果**COleCurrency**運算元無效，產生的狀態**COleCurrency**值無效。  
+ 如果`COleCurrency`運算元無效，產生的狀態`COleCurrency`值無效。  
   
  如需有關有效、 無效的 null 狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。  
   
@@ -371,7 +371,7 @@ COleCurrency operator/(long nOperand) const;
  [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
 ##  <a name="operator_star_div_eq"></a>  COleCurrency::operator * =、 / =  
- 可讓您調整這**COleCurrency**整數的值。  
+ 可讓您調整這`COleCurrency`整數的值。  
   
 ```  
 const COleCurrency& operator*=(long nOperand);  
@@ -379,11 +379,11 @@ const COleCurrency& operator/=(long nOperand);
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果**COleCurrency**運算元是 null，這個狀態**COleCurrency**物件設定為 null。  
+ 如果`COleCurrency`運算元是 null，這個狀態`COleCurrency`物件設定為 null。  
   
- 如果算術運算造成溢位，這個狀態**COleCurrency**物件設為以不正確。  
+ 如果算術運算造成溢位，這個狀態`COleCurrency`物件設為以不正確。  
   
- 如果**COleCurrency**運算元無效，這個狀態**COleCurrency**物件設為以不正確。  
+ 如果`COleCurrency`運算元無效，這個狀態`COleCurrency`物件設為以不正確。  
   
  如需有關有效、 無效的 null 狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。  
   
@@ -411,7 +411,7 @@ friend CArchive& operator>>(
  擷取 ( **>>**) 運算子支援從封存的載入。  
   
 ##  <a name="operator_currency"></a>  COleCurrency::operator 貨幣  
- 傳回`CURRENCY`結構，其值會複製從這個**COleCurrency**物件。  
+ 傳回`CURRENCY`結構，其值會複製從這個`COleCurrency`物件。  
   
 ```  
 operator CURRENCY() const; 
@@ -436,12 +436,12 @@ throw(COleException*);
  *lpszCurrency*  
  要剖析的 null 終止字串指標。  
   
- `dwFlags`  
+ *dwFlags*  
  表示地區設定，可能是下列旗標的旗標：  
   
 - **LOCALE_NOUSEROVERRIDE**使用系統預設地區設定，而不是自訂的使用者設定。  
   
- `lcid`  
+ *lcid*  
  指出要使用來進行轉換的地區設定識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -452,9 +452,9 @@ throw(COleException*);
   
  如需地區設定識別碼值的討論，請參閱[支援多種語言](http://msdn.microsoft.com/en-us/47dc5add-232c-4268-b977-43e12da81ede)。  
   
- 如果成功轉換為貨幣符號的字串值，這個值**COleCurrency**物件設定為該值和其狀態變更為有效。  
+ 如果成功轉換為貨幣符號的字串值，這個值`COleCurrency`物件設定為該值和其狀態變更為有效。  
   
- 如果無法將字串轉換為貨幣值，或發生數值溢位，這個狀態**COleCurrency**物件無效。  
+ 如果無法將字串轉換為貨幣值，或發生數值溢位，這個狀態`COleCurrency`物件無效。  
   
  如果字串轉換失敗，因為記憶體配置錯誤，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)。 在任何其他錯誤的狀態，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -482,7 +482,7 @@ BOOL operator>=(const COleCurrency& cur) const;
  [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
 ##  <a name="setcurrency"></a>  COleCurrency::SetCurrency  
- 呼叫此成員函式設定單位與小數部分，這個**COleCurrency**物件。  
+ 呼叫此成員函式設定單位與小數部分，這個`COleCurrency`物件。  
   
 ```  
 void SetCurrency(
@@ -491,8 +491,8 @@ void SetCurrency(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nUnits`, `nFractionalUnits`  
- 表示單位和 (1/10 中 000's年） 之值的小數部分複製到這個**COleCurrency**物件。  
+ *nUnits*， *nFractionalUnits*  
+ 表示單位和 (1/10 中 000's年） 之值的小數部分複製到這個`COleCurrency`物件。  
   
 ### <a name="remarks"></a>備註  
  如果小數部分的絕對值大於 10000，會進行適當調整單位的第三個下列範例所示。  
@@ -503,7 +503,7 @@ void SetCurrency(
  [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
 ##  <a name="setstatus"></a>  COleCurrency::SetStatus  
- 呼叫此成員函式，以設定這個狀態 （有效性） **COleCurrency**物件。  
+ 呼叫此成員函式，以設定這個狀態 （有效性）`COleCurrency`物件。  
   
 ```  
 void SetStatus(CurrencyStatus  status  );
@@ -511,10 +511,10 @@ void SetStatus(CurrencyStatus  status  );
   
 ### <a name="parameters"></a>參數  
  *status*  
- 這個新的狀態**COleCurrency**物件。  
+ 這個新的狀態`COleCurrency`物件。  
   
 ### <a name="remarks"></a>備註  
- *狀態*參數值由定義`CurrencyStatus`列舉型別，其中定義**COleCurrency**類別。  
+ *狀態*參數值由定義`CurrencyStatus`列舉型別，其中定義`COleCurrency`類別。  
   
 ```  
 enum CurrencyStatus {
@@ -526,11 +526,11 @@ enum CurrencyStatus {
   
  如需這些狀態值的簡短說明，請參閱下列清單：  
   
-- **COleCurrency::valid**指出此**COleCurrency**物件是否有效。  
+- **COleCurrency::valid**指出此`COleCurrency`物件是否有效。  
   
-- **COleCurrency::invalid**指出此**COleCurrency**物件無效; 也就是說，其值可能不正確。  
+- **COleCurrency::invalid**指出此`COleCurrency`物件無效; 也就是說，其值可能不正確。  
   
-- **COleCurrency::null**指出此**COleCurrency**物件為 null，也就是已針對此物件提供任何值。 (這是 「 null 」 中的"having 沒有值時，"而不 c + + 資料庫意義**NULL**。)  
+- **COleCurrency::null**指出此`COleCurrency`物件為 null，也就是已針對此物件提供任何值。 (這是 「 null 」 中的"having 沒有值時，"而不 c + + 資料庫意義**NULL**。)  
   
     > [!CAUTION]
     >  此函式是針對進階程式的情況。 此函式不會改變此物件中的資料。 它通常會用來設定為 null 或無效的狀態。 請注意，指派運算子 ([運算子 =](#operator_eq)) 和[SetCurrency](#setcurrency)不要將狀態設為根據的來源值的物件。  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367610"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039034"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟字型選取對話方塊的屬性清單控制項項目。  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strName`  
+ [in]*strName*  
  屬性的名稱。  
   
- [輸入] `lf`  
+ [in]*lf*  
  指定的屬性之字型的邏輯字型結構。  
   
- [輸入] `dwFontDialogFlags`  
- 當您按一下屬性值下拉式按鈕會顯示 [字型] 對話方塊所套用的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱`Flags`參數[CHOOSEFONT 結構](http://msdn.microsoft.com/library/windows/desktop/ms646832)。  
+ [in]*dwFontDialogFlags*  
+ 當您按一下屬性值下拉式按鈕會顯示 [字型] 對話方塊所套用的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱*旗標*參數[CHOOSEFONT 結構](http://msdn.microsoft.com/library/windows/desktop/ms646832)。  
   
- [輸入] `lpszDescr`  
+ [in]*lpszDescr*  
  Font 屬性的描述。 預設值是 `NULL`。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
- [輸入] `color`  
+ [in]*色彩*  
  字型的色彩。 預設值為預設色彩。  
   
 ### <a name="remarks"></a>備註  

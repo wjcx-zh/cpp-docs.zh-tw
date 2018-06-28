@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367967"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040738"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 提供便利的方式，來偵測記憶體流失的問題在程式中。  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  如同其他診斷，`CMemoryState`診斷中才有您的程式的偵錯版本。 偵錯版本必須有 **_DEBUG**常數定義。  
   
- 如果您懷疑程式有記憶體流失，您可以使用`Checkpoint`，**差異**，和`DumpStatistics`記憶體狀態 （已配置的物件） 之間的差異探索在兩個不同的點在程式中的函式執行。 這項資訊可用於判斷函式會清除其所配置的所有物件。  
+ 如果您懷疑程式有記憶體流失，您可以使用`Checkpoint`， `Difference`，和`DumpStatistics`函式的記憶體狀態 （已配置的物件） 之間的差異探索在程式執行的兩個不同點。 這項資訊可用於判斷函式會清除其所配置的所有物件。  
   
  如果只了解，不平衡配置和解除配置中的發生未提供足夠的資訊，您可以使用`DumpAllObjectsSince`傾印所有配置自上次呼叫物件的函式`Checkpoint`。 這個傾印顯示順序配置、 原始程式檔和列物件配置的位置 (如果您使用`DEBUG_NEW`配置)，和衍生的物件，其位址以及其大小。 `DumpAllObjectsSince` 也會呼叫每個物件的`Dump`函式可提供其目前狀態的相關資訊。  
   

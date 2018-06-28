@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369147"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040723"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 類別
 衍生的視覺管理員與 Windows 佈景主題 API 層。  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標  
   
- [輸入] `rect`  
+ [in]*rect*  
  核取方塊的週框。  
   
- [輸入] `bHighlighted`  
+ [in]*bHighlighted*  
  指定核取方塊會反白顯示。  
   
- [輸入] `nState`  
+ [in]*nState*  
  0 未選取，1，適用於選取的標準  
   
  適用於混合的標準 2。  
   
- [輸入] `bEnabled`  
+ [in]*bEnabled*  
  指定是否要啟用此核取方塊。  
   
- [輸入] `bPressed`  
+ [in]*bPressed*  
  指定是否要按下核取方塊。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果已啟用佈景主題的 API。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 值`nState`對應至下列核取方塊樣式。  
+ 值*nState*對應至下列核取方塊樣式。  
   
 |nState|核取方塊樣式|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  下拉式方塊框線的週框。  
   
- [輸入] `bDisabled`  
+ [in]*bDisabled*  
  指定是否要停用下拉式方塊框線。  
   
- [輸入] `bIsDropped`  
+ [in]*bIsDropped*  
  指定是否要向下卸除下拉式方塊框線。  
   
- [輸入] `bIsHighlighted`  
+ [in]*bIsHighlighted*  
  指定下拉式方塊框線會反白顯示。  
   
 ### <a name="return-value"></a>傳回值  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `pDC`|裝置內容的指標。|  
-|[輸入] `rect`|下拉式方塊下拉式按鈕的週框。|  
-|[輸入] `bDisabled`|指定是否要停用下拉式方塊下拉式按鈕。|  
-|[輸入] `bIsDropped`|指定是否要向下卸除下拉式方塊下拉式按鈕。|  
-|[輸入] `bIsHighlighted`|指定下拉式方塊下拉式按鈕會反白顯示。|  
+|[in]*pDC*|裝置內容的指標。|  
+|[in]*rect*|下拉式方塊下拉式按鈕的週框。|  
+|[in]*bDisabled*|指定是否要停用下拉式方塊下拉式按鈕。|  
+|[in]*bIsDropped*|指定是否要向下卸除下拉式方塊下拉式按鈕。|  
+|[in]*bIsHighlighted*|指定下拉式方塊下拉式按鈕會反白顯示。|  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果已啟用佈景主題的 API。否則`FALSE`。  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  按鈕的週框。  
   
- [輸入] `pButton`  
+ [in]*pButton*  
  指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)繪製的物件。  
   
- [輸入] `uiState`  
- 忽略。 狀態取自`pButton`。  
+ [in]*uiState*  
+ 忽略。 狀態取自*pButton*。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果已啟用佈景主題的 API。否則`FALSE`。  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  選項按鈕的週框。  
   
- [輸入] `bHighlighted`  
+ [in]*bHighlighted*  
  指定的選項按鈕會反白顯示。  
   
- [輸入] `bChecked`  
+ [in]*bChecked*  
  指定是否要檢查的選項按鈕。  
   
- [輸入] `bEnabled`  
+ [in]*bEnabled*  
  指定是否要啟用的選項按鈕。  
   
- [輸入] `bPressed`  
+ [in]*bPressed*  
  指定是否要按下的選項按鈕。  
   
 ### <a name="return-value"></a>傳回值  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `pStatusBar`  
+ [in]*pStatusBar*  
  狀態列指標。 這個值會被忽略。  
   
- [輸入] `rectProgress`  
- 中的進度列的週框矩形`pDC`座標。  
+ [in]*rectProgress*  
+ 中的進度列的週框矩形*pDC*座標。  
   
- [輸入] `nProgressTotal`  
+ [in]*nProgressTotal*  
  整體進度值。  
   
- [輸入] `nProgressCurr`  
+ [in]*nProgressCurr*  
  目前的進度值。  
   
- [輸入] `clrBar`  
+ [in]*clrBar*  
  開始色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
   
- [輸入] `clrProgressBarDest`  
+ [in]*clrProgressBarDest*  
  結束色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
   
- [輸入] `clrProgressText`  
+ [in]*clrProgressText*  
  進度的文字色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 所定義的文字色彩`afxGlobalData.clrBtnText`。  
   
- [輸入] `bProgressText`  
+ [in]*bProgressText*  
  指定是否要顯示進度的文字。  
   
 ### <a name="return-value"></a>傳回值  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `pBar`  
+ [in]*pBar*  
  指標，其背景應該繪製的窗格。  
   
- [輸入] `rectClient`  
+ [in]*rectClient*  
  要填滿區域的週框。  
   
 ### <a name="return-value"></a>傳回值  

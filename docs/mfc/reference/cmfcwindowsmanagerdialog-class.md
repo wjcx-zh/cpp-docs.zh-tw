@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366560"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042093"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog 類別
 `CMFCWindowsManagerDialog`物件可讓使用者管理 MDI 應用程式中的 MDI 子視窗。  
@@ -76,10 +76,10 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMDIFrame`  
+ [in]*pMDIFrame*  
  父系或擁有者視窗的指標。  
   
- [輸入] `bHelpButton`  
+ [in]*bHelpButton*  
  布林值參數，指定是否要顯示架構**協助** 按鈕。  
   
 ### <a name="remarks"></a>備註  

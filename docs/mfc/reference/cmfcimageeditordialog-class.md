@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376245"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040765"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 類別
 `CMFCImageEditorDialog`類別支援影像編輯器 對話方塊。  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBitmap`  
+ *pBitmap*  
  映像的指標。  
   
- `pParent`  
+ *pParent*  
  在目前的影像編輯器對話方塊中的父視窗的指標。  
   
- `nBitsPixel`  
- 用來表示單一像素，也稱為色階的色彩位元數。  如果`nBitsPixel`參數為-1，色彩深度衍生自所指定的影像`pBitmap`參數。 預設值為 -1。  
+ *nBitsPixel*  
+ 用來表示單一像素，也稱為色階的色彩位元數。  如果*nBitsPixel*參數為-1，色彩深度衍生自所指定的影像*pBitmap*參數。 預設值為 -1。  
   
 ### <a name="return-value"></a>傳回值  
  若要修改映像，將傳遞的映像指標`CMFCImageEditorDialog`建構函式。 然後呼叫`DoModal`方法來開啟強制回應對話方塊。 當`DoModal`方法傳回時，點陣圖包含新的映像。  

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afd30c9f27d83e7d4cfaf9b993b258b069f73dc4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378822"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039228"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 `CMFCButton`類別將功能加入[CButton](../../mfc/reference/cbutton-class.md)類別，例如對齊按鈕文字、 結合按鈕文字和影像、 選取游標和指定工具提示。  
@@ -218,7 +218,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bOn`  
+ [in]*送行*  
  `TRUE` 若要顯示的所有文字。`FALSE`要截斷的顯示文字。  
   
 ### <a name="remarks"></a>備註  
@@ -233,10 +233,10 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bOn`  
+ [in]*送行*  
  `TRUE` 若要使用應用程式功能表字型為按鈕的文字字型。`FALSE`使用系統字型。 預設值為 `TRUE`。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即重繪螢幕。否則， `FALSE`。 預設值為 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -250,7 +250,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要使用目前的 Windows 佈景主題來繪製按鈕的框線;`FALSE`為不使用 Windows 佈景主題。 預設值為 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -473,13 +473,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  參考範圍按鈕的矩形。  
   
- [輸入] `uiState`  
+ [in]*uiState*  
  目前的按鈕狀態。 如需詳細資訊，請參閱`itemState`隸屬[DRAWITEMSTRUCT 結構](../../mfc/reference/drawitemstruct-structure.md)主題。  
   
 ### <a name="remarks"></a>備註  
@@ -496,13 +496,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rectClient`  
+ [in]*rectClient*  
  參考範圍按鈕的矩形。  
   
- [輸入] `uiState`  
+ [in]*uiState*  
  目前的按鈕狀態。 如需詳細資訊，請參閱`itemState`隸屬[DRAWITEMSTRUCT 結構](../../mfc/reference/drawitemstruct-structure.md)主題。  
   
 ### <a name="remarks"></a>備註  
@@ -518,10 +518,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rectClient`  
+ [in]*rectClient*  
  參考範圍按鈕的矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -540,19 +540,19 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  參考範圍按鈕的矩形。  
   
- [輸入] `strText`  
+ [in]*strText*  
  要繪製的文字。  
   
- [輸入] `uiDTFlags`  
- 旗標，指定如何格式化的文字。 如需詳細資訊，請參閱`nFormat`參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。  
+ [in]*uiDTFlags*  
+ 旗標，指定如何格式化的文字。 如需詳細資訊，請參閱*nFormat*參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法。  
   
- [輸入] `uiState`  
+ [in]*uiState*  
  （保留）。  
   
 ### <a name="remarks"></a>備註  
@@ -568,10 +568,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rectClient`  
+ [in]*rectClient*  
  參考範圍按鈕的矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -585,7 +585,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -601,11 +601,11 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nTimeDelay`  
+ [in]*nTimeDelay*  
  非負的數字，指定傳送至父視窗的訊息之間的間隔。 以毫秒為單位的間隔，其預設值為 500 毫秒。 指定 0 時可停用自動重複訊息模式。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使按鈕不斷地傳送至父視窗 WM_COMMAND 訊息，直到放開按鈕，或`nTimeDelay`參數設為零。  
+ 這個方法會使按鈕不斷地傳送至父視窗 WM_COMMAND 訊息，直到放開按鈕，或*nTimeDelay*參數設為零。  
   
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  設定為已核取按鈕的影像。  
@@ -634,40 +634,40 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hIcon`  
+ [in]*hIcon*  
  點陣圖和新的映像的遮罩包含圖示的控制代碼。  
   
- [輸入] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
  `TRUE` 若要指定點陣圖資源會自動; 終結否則， `FALSE`。 預設值為 `TRUE`。  
   
- [輸入] `hIconHot`  
+ [in]*hIconHot*  
  包含所選取狀態的影像圖示的控制代碼。  
   
- [輸入] `hBitmap`  
+ [in]*hBitmap*  
  包含未選取狀態的影像之點陣圖的控制代碼。  
   
- [輸入] `hBitmapHot`  
+ [in]*hBitmapHot*  
  包含所選取狀態的影像之點陣圖的控制代碼。  
   
- [輸入] `bMap3dColors`  
+ [in]*bMap3dColors*  
  指定透明背景的色彩按鈕。也就是說，按鈕的圖示。 `TRUE` 若要使用的色彩值 RGB （192、 192，192）;`FALSE`使用所定義的色彩值`AFX_GLOBAL_DATA::clrBtnFace`。  
   
- [輸入] `uiBmpResId`  
+ [in]*uiBmpResId*  
  未選取的映像的資源識別碼。  
   
- [輸入] `uiBmpHotResId`  
+ [in]*uiBmpHotResId*  
  所選影像的資源識別碼。  
   
- [輸入] `hIconDisabled`  
+ [in]*hIconDisabled*  
  已停用映像的圖示的控制代碼。  
   
- [輸入] `hBitmapDisabled`  
+ [in]*hBitmapDisabled*  
  包含已停用的影像之點陣圖的控制代碼。  
   
- [輸入] `uiBmpDsblResID`  
+ [in]*uiBmpDsblResID*  
  已停用點陣圖的資源識別碼。  
   
- [輸入] `bAlphaBlend`  
+ [in]*bAlphaBlend*  
  `TRUE` 若要使用使用 alpha 色板; 只有 32 位元映像`FALSE`，若要不使用只能包含影像 alpha 色板。 預設值為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -682,10 +682,10 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `crFace`  
+ [in]*crFace*  
  RGB 色彩值。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要立即; 重繪螢幕否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -718,40 +718,40 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hIcon`  
+ [in]*hIcon*  
  點陣圖和新的映像的遮罩包含圖示的控制代碼。  
   
- [輸入] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
  `TRUE` 若要指定點陣圖資源會自動; 終結否則， `FALSE`。 預設值為 `TRUE`。  
   
- [輸入] `hIconHot`  
+ [in]*hIconHot*  
  包含所選取狀態的影像圖示的控制代碼。  
   
- [輸入] `hBitmap`  
+ [in]*hBitmap*  
  包含未選取狀態的影像之點陣圖的控制代碼。  
   
- [輸入] `hBitmapHot`  
+ [in]*hBitmapHot*  
  包含所選取狀態的影像之點陣圖的控制代碼。  
   
- [輸入] `uiBmpResId`  
+ [in]*uiBmpResId*  
  未選取的映像的資源識別碼。  
   
- [輸入] `uiBmpHotResId`  
+ [in]*uiBmpHotResId*  
  所選影像的資源識別碼。  
   
- [輸入] `bMap3dColors`  
+ [in]*bMap3dColors*  
  指定透明背景的色彩按鈕。也就是說，按鈕的圖示。 `TRUE` 若要使用的色彩值 RGB （192、 192，192）;`FALSE`使用所定義的色彩值`AFX_GLOBAL_DATA::clrBtnFace`。  
   
- [輸入] `hIconDisabled`  
+ [in]*hIconDisabled*  
  已停用映像的圖示的控制代碼。  
   
- [輸入] `hBitmapDisabled`  
+ [in]*hBitmapDisabled*  
  包含已停用的影像之點陣圖的控制代碼。  
   
- [輸入] `uiBmpDsblResID`  
+ [in]*uiBmpDsblResID*  
  已停用點陣圖的資源識別碼。  
   
- [輸入] `bAlphaBlend`  
+ [in]*bAlphaBlend*  
  `TRUE` 若要使用使用 alpha 色板; 只有 32 位元映像`FALSE`，若要不使用只能包含影像 alpha 色板。 預設值為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -770,7 +770,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hcursor`  
+ [in]*hcursor*  
  資料指標的控制代碼。  
   
 ### <a name="remarks"></a>備註  
@@ -803,13 +803,13 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `id`  
+ [in]*識別碼*  
  其中一個按鈕影像識別項中定義`CMenuImage::IMAGES_IDS`列舉型別。 指定的映像值，例如箭號、 pin 碼，以及選項按鈕的影像。  
   
- [輸入] `state`  
+ [in]*狀態*  
  其中一個按鈕影像狀態識別項中定義`CMenuImages::IMAGE_STATE`列舉型別。 映像狀態指定的按鈕色彩，例如黑色、 灰色、 淺灰色，白色與暗灰色。 預設值是 `CMenuImages::ImageBlack`。  
   
- [輸入] `idDisabled`  
+ [in]*idDisabled*  
  其中一個按鈕影像識別項中定義`CMenuImage::IMAGES_IDS`列舉型別。 映像表示按鈕已停用。 預設值是第一個按鈕影像 ( `CMenuImages::IdArrowDown`)。  
   
 ### <a name="remarks"></a>備註  
@@ -822,7 +822,7 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `clrText`  
+ [in]*clrText*  
  RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
@@ -835,7 +835,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `clrTextHot`  
+ [in]*clrTextHot*  
  RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
@@ -848,7 +848,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszToolTipText`  
+ [in]*lpszToolTipText*  
  工具提示的文字指標。 請指定 NULL 來停用工具提示。  
   
 ### <a name="remarks"></a>備註  
@@ -861,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bCalcOnly`  
+ [in]*bCalcOnly*  
  `TRUE` 若要計算，但不是能變更的按鈕; 新的大小`FALSE`若要變更按鈕的大小。 預設值為 `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  

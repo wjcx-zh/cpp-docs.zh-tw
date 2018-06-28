@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367181"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038454"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame 類別
 表示動畫主要畫面格。  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本指標。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  指定是否要加入主要畫面格，或轉換以遞迴方式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本指標。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  指定是否要轉換以遞迴方式加入。  
   
 ### <a name="return-value"></a>傳回值  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本指標。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  指定要加入主要畫面格這個主要畫面格是否相依於以遞迴方式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTransition`  
+ *pTransition*  
  轉換指標。  
   
- `pKeyframe`  
+ *pKeyframe*  
  主要畫面格指標。  
   
- `offset`  
+ *offset*  
  以秒為單位，從主要畫面格 pkeyframe 指定的位移。  
   
 ### <a name="remarks"></a>備註  

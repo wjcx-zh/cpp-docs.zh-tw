@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371386"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041441"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 類別
 表示資料的資料流 ( `IStream`) 在複合檔案中做為 OLE 結構化儲存體的一部分。  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpStream`  
+ *lpStream*  
  指向 OLE 資料流 ( `IStream`) 與物件相關聯。 不能**NULL**。  
   
 ### <a name="remarks"></a>備註  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpStream`  
+ *lpStream*  
  要與物件相關聯之 OLE 資料流指標。  
   
 ### <a name="remarks"></a>備註  
- 如果`lpStream`是**NULL**物件不是與 OLE 資料流相關聯，否則物件是提供的 OLE 資料流相關聯。  
+ 如果*lpStream*是**NULL**物件不是與 OLE 資料流相關聯，否則物件是提供的 OLE 資料流相關聯。  
   
  如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pError`  
+ *pError*  
  指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或**NULL** ，表示建立作業的完成狀態。 如果您想要監視可能嘗試建立資料流所產生的例外狀況，請提供這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpStorage`  
+ *lpStorage*  
  指向包含要建立的資料流 OLE 儲存物件。 不能**NULL**。  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  若要建立資料流名稱。 不能**NULL**。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  開啟資料流時要使用的存取模式。 獨佔，讀取/寫入，並建立模式由預設值。 如需可用的模式的完整清單，請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
- `pError`  
+ *pError*  
  指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或**NULL**。 如果您想要監視可能嘗試建立資料流所產生的例外狀況，請提供這個參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 建立資料流，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果開啟作業失敗，則擲回檔案例外狀況和`pError`不**NULL**。  
+ 如果開啟作業失敗，則擲回檔案例外狀況和*pError*不**NULL**。  
   
  如需詳細資訊，請參閱[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpStorage`  
+ *lpStorage*  
  指向包含要開啟的資料流 OLE 儲存物件。 不能**NULL**。  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  若要開啟資料流名稱。 不能**NULL**。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  開啟資料流時要使用的存取模式。 獨佔和讀/寫模式所使用預設值。 可用的模式的完整清單，請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
- `pError`  
+ *pError*  
  指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或**NULL**。 如果您想要監視可能嘗試開啟資料流所產生的例外狀況，請提供這個參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功; 開啟資料流，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果開啟作業失敗，則擲回檔案例外狀況和`pError`不**NULL**。  
+ 如果開啟作業失敗，則擲回檔案例外狀況和*pError*不**NULL**。  
   
  如需詳細資訊，請參閱[IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
   

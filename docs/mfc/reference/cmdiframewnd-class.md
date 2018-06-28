@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374035"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038886"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 類別
 提供 Windows 多重文件介面 (MDI) 框架視窗的功能，以及管理視窗的成員。  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  您可以藉由呼叫建構 MDI 框架視窗[建立](../../mfc/reference/cframewnd-class.md#create)或[LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)成員函式`CFrameWnd`。  
   
- 之前先呼叫**建立**或`LoadFrame`，您必須建構框架視窗物件，使用 c + + 堆積上的**新**運算子。 然後再呼叫**建立**您也可以註冊視窗類別[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式，可設定的畫面格的圖示和類別樣式。  
+ 之前先呼叫`Create`或`LoadFrame`，您必須建構框架視窗物件，使用 c + + 堆積上的**新**運算子。 然後再呼叫`Create`您也可以註冊視窗類別[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式，可設定的畫面格的圖示和類別樣式。  
   
- 使用**建立**傳遞畫面格的建立參數為立即引數的成員函式。  
+ 使用`Create`傳遞畫面格的建立參數為立即引數的成員函式。  
   
- `LoadFrame` 需要較少的引數比**建立**，並改為從資源，包括畫面格的標題、 圖示、 快速鍵對應表，以及功能表中擷取大部分其預設值。 可供存取`LoadFrame`，所有這些資源必須具有相同的資源識別碼 (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要較少的引數比`Create`，並改為從資源，包括畫面格的標題、 圖示、 快速鍵對應表，以及功能表中擷取大部分其預設值。 可供存取`LoadFrame`，所有這些資源必須具有相同的資源識別碼 (例如， **IDR_MAINFRAME**)。  
   
  雖然**MDIFrameWnd**衍生自`CFrameWnd`，框架視窗類別衍生自`CMDIFrameWnd`不需要使用宣告`DECLARE_DYNCREATE`。  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫**建立**或`LoadFrame`成員函式來建立顯示 MDI 框架視窗。  
+ 呼叫`Create`或`LoadFrame`成員函式來建立顯示 MDI 框架視窗。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  長指標[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)結構。  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  指向視窗的快顯功能表。  
   
 ### <a name="return-value"></a>傳回值  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClass`  
+ *pClass*  
  若要建立子視窗的執行階段類別。  
   
  *nResource*  
  子視窗相關聯的共用資源的識別碼。  
   
- `hMenu`  
+ *hMenu*  
  子視窗功能表。  
   
- `hAccel`  
+ *hAccel*  
  子視窗的快速鍵。  
   
 ### <a name="remarks"></a>備註  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nType`  
+ *n*  
  指定 cascade 旗標。 您可以指定下列旗標： `MDITILE_SKIPDISABLED`，它可防止已停用的 MDI 子視窗的重疊顯示。  
   
 ### <a name="remarks"></a>備註  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  若要最大化視窗的點。  
   
 ### <a name="remarks"></a>備註  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向以還原視窗。  
   
 ### <a name="example"></a>範例  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  指定新的框架視窗功能表的功能表。 如果**NULL**，功能表不會變更。  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  指定新的視窗快顯功能表的功能表。 如果**NULL**，功能表不會變更。  
   
 ### <a name="return-value"></a>傳回值  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nType`  
+ *n*  
  指定可並排顯示旗標。 這個參數可以是下列旗標的任一項：  
   
 - `MDITILE_HORIZONTAL` 圖格 MDI 子視窗，該視窗會出現另一個的上方。  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` 圖格 MDI 子視窗，該視窗會出現另一個旁邊。  
   
 ### <a name="remarks"></a>備註  
- 第一個版本`MDITile`，不含參數，並排顯示視窗垂直下 Windows 3.1 和更新版本的版本。 第二個版本並排顯示視窗垂直或水平，根據的值`nType`參數。  
+ 第一個版本`MDITile`，不含參數，並排顯示視窗垂直下 Windows 3.1 和更新版本的版本。 第二個版本並排顯示視窗垂直或水平，根據的值*n*參數。  
   
 ### <a name="example"></a>範例  
  請參閱範例的[CMDIFrameWnd::MDICascade](#mdicascade)。  

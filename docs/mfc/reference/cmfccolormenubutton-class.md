@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c19386aeac0d85565ae7834a881d710d9226ef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9fddef1b032d1e17ea46229a992c23ca960822
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370701"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039020"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 類別
 `CMFCColorMenuButton`類別支援功能表命令或工具列按鈕，啟動色彩選擇器對話方塊。  
@@ -143,13 +143,13 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  按鈕的命令識別碼。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  按鈕文字。  
   
- [輸入] `pPalette`  
+ [in]*pPalette*  
  按鈕的色彩調色盤指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -167,7 +167,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
  若要複製的 [來源] 按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -197,13 +197,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定自動按鈕時顯示的按鈕文字。  
   
- [輸入] `colorAutomatic`  
+ [in]*colorAutomatic*  
  指定新的自動色彩。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  指定按鈕是否為自動。  
   
 ### <a name="remarks"></a>備註  
@@ -219,10 +219,10 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定按鈕的文字。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要顯示特定文件的色彩或`FALSE`顯示系統色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -239,13 +239,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定按鈕的文字。  
   
- [輸入] `bAltColorDlg`  
+ [in]*bAltColorDlg*  
  指定`TRUE`顯示`CMFCColorDialog`對話方塊中，或`FALSE`顯示標準系統色彩 對話方塊。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  指定`TRUE`顯示 「 其他 」 按鈕，否則`FALSE`。 預設值為 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -261,13 +261,13 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  指定的分割窗格的識別碼。  
   
- [輸入] `nVertDockColumns`  
+ [in]*nVertDockColumns*  
  指定資料行的數目色彩垂直停駐的窗格中在分割狀態時。  
   
- [輸入] `nHorzDockRows`  
+ [in]*nHorzDockRows*  
  指定在分割狀態時的水平停駐的色彩窗格的資料列數目。  
   
 ### <a name="remarks"></a>備註  
@@ -306,14 +306,14 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  命令 id。  
   
 ### <a name="return-value"></a>傳回值  
  色彩對應於指定的命令識別碼。  
   
 ### <a name="remarks"></a>備註  
- 當您的應用程式中有數個色彩按鈕時，請使用這個方法。 當使用者按一下色彩按鈕時，按鈕就會傳送其命令識別碼`WM_COMMAND`訊息至其父代。 `GetColorByCmdID`方法使用的命令識別碼來擷取對應的色彩。  
+ 當您的應用程式中有數個色彩按鈕時，請使用這個方法。 當使用者按一下色彩按鈕時，按鈕會將其命令識別碼 WM_COMMAND 訊息中傳送至其父代中。 `GetColorByCmdID`方法使用的命令識別碼來擷取對應的色彩。  
   
 ##  <a name="isemptymenuallowed"></a>  CMFCColorMenuButton::IsEmptyMenuAllowed  
  指出是否支援空的功能表。  
@@ -336,7 +336,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  新的父視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -357,28 +357,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  範圍必須重新繪製區域的矩形。  
   
- [輸入] `pImages`  
+ [in]*pImages*  
  指向清單下工具列影像。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 若要指定工具列是處於的水平停駐;否則， `FALSE`。 預設值為 `TRUE`。  
   
- [輸入] `bCustomizeMode`  
+ [in]*bCustomizeMode*  
  `TRUE` 若要指定在應用程式進行自訂模式。否則， `FALSE`。 預設值為 `FALSE`。  
   
- [輸入] `bHighlight`  
+ [in]*bHighlight*  
  `TRUE` 若要指定 按鈕會反白顯示。否則， `FALSE`。 預設值為 `FALSE`。  
   
- [輸入] `bDrawBorder`  
+ [in]*bDrawBorder*  
  `TRUE` 若要指定，會顯示此按鈕的框線。否則， `FALSE`。 預設值為 `TRUE`。  
   
- [輸入] `bGrayDisabledButtons`  
+ [in]*bGrayDisabledButtons*  
  `TRUE` 若要指定的停用按鈕會呈現灰色 （表示停用） 出;否則， `FALSE`。 預設值為 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -394,13 +394,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  限制按鈕要繪製的矩形。  
   
- [輸入] `bSelected`  
+ [in]*bSelected*  
  `TRUE` 指定按鈕處於選取狀態。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -419,17 +419,17 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `colorDefault`  
+ [in]*colorDefault*  
  在 [色彩] 對話方塊中選取的預設色彩。  
   
- [輸出] `colorRes`  
+ [out]*colorRes*  
  傳回使用者從色彩 對話方塊中選取的色彩。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者選取新的色彩。否則為零。  
   
 ### <a name="remarks"></a>備註  
- 按一下功能表按鈕時，呼叫這個方法，以開啟 [色彩] 對話方塊。 傳回值不是零，如果使用者選取的色彩會儲存在`colorRes`參數。 使用[CMFCColorMenuButton::EnableOtherButton](#enableotherbutton)切換標準色彩對話方塊中的方法和[CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md) 對話方塊。  
+ 按一下功能表按鈕時，呼叫這個方法，以開啟 [色彩] 對話方塊。 傳回值不是零，如果使用者選取的色彩會儲存在*colorRes*參數。 使用[CMFCColorMenuButton::EnableOtherButton](#enableotherbutton)切換標準色彩對話方塊中的方法和[CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md) 對話方塊。  
   
 ##  <a name="setcolor"></a>  CMFCColorMenuButton::SetColor  
  設定目前的色彩按鈕的色彩。  
@@ -441,14 +441,14 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `clr`  
+ [in]*clr*  
  RGB 色彩值。  
   
- [輸入] `bNotify`  
- `TRUE` 若要套用`clr`參數色彩的任何相關聯的功能表按鈕或工具列按鈕; 否則`FALSE`。  
+ [in]*bNotify*  
+ `TRUE` 若要套用*clr*參數色彩的任何相關聯的功能表按鈕或工具列按鈕; 否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以變更目前的色彩按鈕的色彩。 如果`bNotify`參數為非零值，對應上的任何相關聯的快顯功能表或工具列按鈕的色彩變更為所指定的色彩`clr`參數。  
+ 呼叫此方法以變更目前的色彩按鈕的色彩。 如果*bNotify*參數為非零值，對應上的任何相關聯的快顯功能表或工具列按鈕的色彩變更為所指定的色彩*clr*參數。  
   
 ##  <a name="setcolorbycmdid"></a>  CMFCColorMenuButton::SetColorByCmdID  
  設定指定的色彩功能表按鈕的色彩。  
@@ -460,10 +460,10 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  色彩功能表按鈕的資源識別碼。  
   
- [輸入] `color`  
+ [in]*色彩*  
  RGB 色彩值。  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
@@ -476,10 +476,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  其名稱會變更色彩的 RGB 值。  
   
- [輸入] `strName`  
+ [in]*strName*  
  新色彩的名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -492,7 +492,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nColumns`  
+ [in]*nColumns*  
  若要顯示的資料行數目。  
   
 ### <a name="remarks"></a>備註  

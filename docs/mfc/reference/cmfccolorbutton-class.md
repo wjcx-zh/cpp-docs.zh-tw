@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd59f9575fdbde798b46bee343f7f7724968a478
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371109"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038308"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 類別
 `CMFCColorButton`和[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)類別一起用來實作色彩選擇器控制項。  
@@ -159,13 +159,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定自動按鈕的文字。  
   
- [輸入] `colorAutomatic`  
+ [in]*colorAutomatic*  
  指定自動按鈕的預設色彩的 RGB 值。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  指定自動按鈕是否要啟用或停用。  
   
 ### <a name="remarks"></a>備註  
@@ -181,13 +181,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定按鈕的文字。  
   
- [輸入] `bAltColorDlg`  
+ [in]*bAltColorDlg*  
  指定是否[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)當使用者按一下按鈕開啟對話方塊或系統的 [色彩] 對話方塊。  
   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  指定是否啟用或停用 「 其他 」 按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -249,13 +249,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  用來呈現按鈕的影像之裝置內容的點。  
   
- [輸入] `rect`  
+ [in]*rect*  
  矩形會框住的按鈕。  
   
- [輸入] `uiState`  
+ [in]*uiState*  
  指定按鈕的視覺狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -272,13 +272,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  指向用來繪製框線的裝置內容。  
   
- [輸入] `rectClient`  
- 在裝置內容所指定的矩形`pDC`參數，定義要繪製按鈕的界限。  
+ [in]*rectClient*  
+ 在裝置內容所指定的矩形*pDC*參數，定義要繪製按鈕的界限。  
   
- [輸入] `uiState`  
+ [in]*uiState*  
  指定按鈕的視覺狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -294,11 +294,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  指向用來繪製焦點矩形的裝置內容。  
   
- [輸入] `rectClient`  
- 所指定的裝置內容中的矩形`pDC`參數，定義按鈕的界限。  
+ [in]*rectClient*  
+ 所指定的裝置內容中的矩形*pDC*參數，定義按鈕的界限。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以自訂焦點矩形的外觀。  
@@ -323,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `pPal`|邏輯色板的指標或`NULL`。 如果`NULL`，會使用預設系統調色盤。|  
+|[in]*pPal*|邏輯色板的指標或`NULL`。 如果`NULL`，會使用預設系統調色盤。|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  指定按鈕的色彩。  
@@ -333,7 +333,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  RGB 值。  
   
 ### <a name="remarks"></a>備註  
@@ -348,10 +348,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  此色彩的 RGB 值。  
   
- [輸入] `strName`  
+ [in]*strName*  
  此色彩的名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -365,7 +365,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nColumns`  
+ [in]*nColumns*  
  指定資料行的數目。  
   
 ### <a name="remarks"></a>備註  
@@ -381,14 +381,14 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  指定要使用的文件色彩來顯示標籤。  
   
- [輸入] `lstColors`  
+ [in]*lstColors*  
  參考的 RGB 值清單。  
   
 ### <a name="remarks"></a>備註  
- A`CMFCColorButton`物件會維護一份 RGB 值傳送至[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件。 這些色彩顯示色軸時，會顯示其標籤由所指定的特殊區段`lpszLabel`參數。  
+ A`CMFCColorButton`物件會維護一份 RGB 值傳送至[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件。 這些色彩顯示色軸時，會顯示其標籤由所指定的特殊區段*lpszLabel*參數。  
   
 ##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
  指定要在快顯色彩列上顯示標準的色彩。  
@@ -398,7 +398,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pPalette`  
+ [in]*pPalette*  
  色彩調色盤指標。  
   
 ### <a name="remarks"></a>備註  
@@ -411,7 +411,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bCalcOnly`  
+ [in]*bCalcOnly*  
  如果是非零值，計算新的按鈕控制項的大小，但不是會變更的實際大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -427,11 +427,11 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  使用者所選取之色彩。  
   
 ### <a name="remarks"></a>備註  
- `UpdateColor`函式會變更目前選取之按鈕的色彩，並會傳送通知其父代`WM_COMMAND`訊息`BN_CLICKED`標準的通知。 使用[CMFCColorButton::GetColor](#getcolor)方法來擷取所選的色彩。  
+ `UpdateColor`函式會變更目前選取之按鈕的色彩，並會傳送 WM_COMMAND 訊息以 BN_CLICKED 標準通知來通知其父代。 使用[CMFCColorButton::GetColor](#getcolor)方法來擷取所選的色彩。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

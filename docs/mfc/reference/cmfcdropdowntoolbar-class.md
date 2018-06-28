@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369804"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042114"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 當使用者按住最上層工具列按鈕時出現的工具列。  
@@ -133,22 +133,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiResID`  
+ [in]*uiResID*  
  參考作用中工具列影像之點陣圖的資源 ID。  
   
- [輸入] `uiColdResID`  
+ [in]*uiColdResID*  
  參考非作用中工具列影像之點陣圖的資源 ID。  
   
- [輸入] `uiMenuResID`  
+ [in]*uiMenuResID*  
  參考標準功能表影像之點陣圖的資源 ID。  
   
- [輸入] `bLocked`  
+ [in]*封鎖*  
  `TRUE` 若要鎖定工具列，否則`FALSE`。  
   
- [輸入] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  參考已停用工具列影像之點陣圖的資源 ID。  
   
- [輸入] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  參考已停用功能表影像之點陣圖的資源 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiResID`  
- [輸入] `uiColdResID`  
- [輸入] `uiMenuResID`  
- [輸入] `BOOL`  
- [輸入] `uiDisabledResID`  
- [輸入] `uiMenuDisabledResID`  
- [輸入] `uiHotResID`  
+ [in]*uiResID*  
+ [in]*uiColdResID*  
+ [in]*uiMenuResID*  
+ [in]*BOOL*  
+ [in]*uiDisabledResID*  
+ [in]*uiMenuDisabledResID*  
+ [in]*uiHotResID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nFlags`  
- [輸入] `point`  
+ [in]*nFlags*  
+ [in]*點*  
   
 ### <a name="remarks"></a>備註  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nFlags`  
- [輸入] `point`  
+ [in]*nFlags*  
+ [in]*點*  
   
 ### <a name="remarks"></a>備註  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTarget`  
- [輸入] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>備註  
   

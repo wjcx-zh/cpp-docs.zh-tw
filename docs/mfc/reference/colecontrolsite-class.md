@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377806"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040869"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 類別
 提供自訂用戶端控制項介面的支援。  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|控制項的站台的維度。|  
   
 ## <a name="remarks"></a>備註  
- 這項支援是依據內嵌的 ActiveX 控制項取得資訊的位置和其顯示站台、 其 moniker、 其使用者介面、 其環境的屬性和其容器所提供的其他資源的範圍的主要方式。 `COleControlSite` 全面實作[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， **IBoundObjectSite**， **INotifyDBEvents**， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)介面。 此外，也被實作 IDispatch 介面 （如環境屬性和事件接收提供支援）。  
+ 這項支援是依據內嵌的 ActiveX 控制項取得資訊的位置和其顯示站台、 其 moniker、 其使用者介面、 其環境的屬性和其容器所提供的其他資源的範圍的主要方式。 `COleControlSite` 全面實作[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， `IBoundObjectSite`，`INotifyDBEvents`， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)介面。 此外，也被實作 IDispatch 介面 （如環境屬性和事件接收提供支援）。  
   
  若要建立 ActiveX 控制項站台使用`COleControlSite`，自`COleControlSite`。 在您`CWnd`-容器 （例如，您的對話方塊） 的衍生的類別覆寫**CWnd::CreateControlSite**函式。  
   
@@ -231,16 +231,16 @@ virtual void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  指定**DISPID**繫結至資料來源控制項的資料繫結控制項上的屬性。  
   
- `vtProp`  
- 指定要繫結的屬性類型 — 例如， `VT_BSTR`， **VT_VARIANT**，依此類推。  
+ *vtProp*  
+ 指定要繫結的屬性類型 — 例如， **VT_BSTR**， **VT_VARIANT**，依此類推。  
   
- `szFieldName`  
+ *szFieldName*  
  指定資料來源控制項，屬性會繫結所提供的資料指標中的資料行的名稱。  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  指標`CWnd`-主控資料來源控制項屬性會繫結的衍生的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -259,7 +259,7 @@ virtual void BindProperty(
  *dwDispId*  
  指定**DISPID**繫結至資料來源控制項的資料繫結控制項上的屬性。  
   
- `pWndDSC`  
+ *pWndDSC*  
  指標`CWnd`-主控資料來源控制項屬性會繫結的衍生的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -273,7 +273,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCtrlCont`  
+ *pCtrlCont*  
  控制項的容器 （表示裝載 AtiveX 控制項的視窗） 的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -309,50 +309,50 @@ virtual HRESULT CreateControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndCtrl`  
+ *pWndCtrl*  
  表示控制項的視窗物件的指標。  
   
- `clsid`  
+ *clsid*  
  控制項的唯一類別 ID。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  要在控制項中顯示的文字指標。 （如果有的話），請設定 winodw 標題或文字屬性的值。  
   
- `dwStyle`  
+ *dwStyle*  
  視窗樣式。 可用的樣式會列在下**備註**> 一節。  
   
- `rect`  
+ *rect*  
  指定控制項的大小和位置。 它可以是`CRect`物件或`RECT`結構。  
   
- `nID`  
+ *nID*  
  指定控制項的子視窗識別碼。  
   
- `pPersist`  
+ *pPersist*  
  指標`CFile`包含控制項的永續性狀態。 預設值是**NULL**，指出此控制項，而不還原其狀態從任何永續性儲存體初始化本身。 如果沒有**NULL**，它應該指向的`CFile`-衍生物件，包含控制項的永續性資料，請在資料流或儲存體的格式。 這項資料可以儲存在用戶端上啟用。 `CFile`可以包含其他資料，但必須設定的持續性資料的第一個位元組時呼叫其讀寫指標`CreateControl`。  
   
- `bStorage`  
- 指出是否在資料`pPersist`應該解譯為`IStorage`或`IStream`資料。 如果中的資料`pPersist`是儲存體，`bStorage`應該**TRUE**。 如果在資料`pPersist`是 stream，`bStorage`應該**FALSE**。 預設值是**FALSE**。  
+ *bStorage*  
+ 指出是否在資料*pPersist*應該解譯為`IStorage`或`IStream`資料。 如果中的資料*pPersist*是儲存體， *bStorage*應該**TRUE**。 如果在資料*pPersist*是 stream， *bStorage*應該**FALSE**。 預設值是**FALSE**。  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  選擇性的授權金鑰資料。 此資料只需要建立需要的執行階段授權識別碼的控制項。 如果此控制項支援授權，您必須提供控制項才會成功建立授權金鑰。 預設值是**NULL**。  
   
- `ppt`  
- 指標**點**結構，包含控制項的左上角。 控制項的大小取決於值*psize*。 `ppt`和*psize*值是選擇性的方法，可指定大小和位置 opf 控制項。  
+ *ppt*  
+ 指標**點**結構，包含控制項的左上角。 控制項的大小取決於值*psize*。 *Ppt*和*psize*值是選擇性的方法，可指定大小和位置 opf 控制項。  
   
  *psize*  
- 指標**大小**結構，包含控制項的大小。 左上角的值來決定`ppt`。 `ppt`和*psize*值是選擇性的方法，可指定大小和位置 opf 控制項。  
+ 指標**大小**結構，包含控制項的大小。 左上角的值來決定*ppt*。 *Ppt*和*psize*值是選擇性的方法，可指定大小和位置 opf 控制項。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
 ### <a name="remarks"></a>備註  
- 只有 Windows 子集`dwStyle`旗標受到`CreateControl`:  
+ 只有 Windows 子集*dwStyle*旗標受到`CreateControl`:  
   
 - **WS_VISIBLE**建立一開始即可見的視窗。 如果您想看見立即像一般的 windows 控制項的必要項。  
   
 - **WS_DISABLED**建立視窗一開始停用。 停用的視窗無法接收使用者輸入。 如果控制項具有已啟用屬性，可以設定。  
   
-- `WS_BORDER` 建立具有精簡列框線的視窗。 如果控制項的框線樣式屬性，可以設定。  
+- **WS_BORDER**建立精簡列框線的視窗。 如果控制項的框線樣式屬性，可以設定。  
   
 - **WS_GROUP**指定控制項群組的第一個控制項。 使用者可以變更鍵盤焦點從一個控制項群組中至下一個使用方向鍵。 所有控制項，以定義**WS_GROUP**樣式之後的第一個控制項必須屬於相同的群組。 下一個控制項與**WS_GROUP**樣式結束的群組，並啟動下一個群組。  
   
@@ -383,7 +383,7 @@ virtual HRESULT DoVerb(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nVerb`  
+ *nVerb*  
  指定要執行的指令動詞。 它可以包含下列其中一項：  
   
 |值|意義|符號|  
@@ -394,10 +394,10 @@ virtual HRESULT DoVerb(
 |-2|編輯另一個視窗中的項目。|`OLEIVERB_OPEN`|  
 |-3|隱藏物件。|`OLEIVERB_HIDE`|  
 |-4|控制會就地啟動。|`OLEIVERB_UIACTIVATE`|  
-|-5|控制會就地啟動，而不會額外的使用者介面元素。|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|顯示控制項的屬性。|**OLEIVERB_PROPERTIES**|  
+|-5|控制會就地啟動，而不會額外的使用者介面元素。|`OLEIVERB_INPLACEACTIVATE`|  
+|-7|顯示控制項的屬性。|`OLEIVERB_PROPERTIES`|  
   
- `lpMsg`  
+ *lpMsg*  
  造成要啟動的項目之訊息的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -426,7 +426,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  指定是否要啟用或停用視窗： **TRUE**如果視窗輸入已啟用，否則**FALSE**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -440,11 +440,11 @@ void FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bFreeze`  
+ *bFreeze*  
  指定控制項站台是否想要停止接受事件。 為非零，如果控制項不接受事件。否則為零。  
   
 ### <a name="remarks"></a>備註  
- 如果`bFreeze`是**TRUE**，控制網站要求要停止 fring 事件的控制項。 如果`bFreeze`是**FALSE**，控制網站要求繼續引發事件的控制項。  
+ 如果*bFreeze*是**TRUE**，控制網站要求要停止 fring 事件的控制項。 如果*bFreeze*是**FALSE**，控制網站要求繼續引發事件的控制項。  
   
 > [!NOTE]
 >  控制項不需要停止引發事件，如果要求控制項站台。 它可以繼續引發，但控制項的站台會略過所有後續的事件。  
@@ -493,11 +493,11 @@ BOOL GetEventIID(IID* piid);
 ```  
   
 ### <a name="parameters"></a>參數  
- `piid`  
+ *piid*  
  指向介面識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為非零，否則為 0。 如果成功的話，`piid`包含控制項的預設事件介面的介面識別碼。  
+ 如果成功，則為非零，否則為 0。 如果成功的話， *piid*包含控制項的預設事件介面的介面識別碼。  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  擷取視窗的延伸的樣式。  
@@ -513,7 +513,7 @@ virtual DWORD GetExStyle() const;
  若要擷取規則的樣式，請呼叫[COleControlSite::GetStyle](#getstyle)。  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- 取得所指定的控制項屬性`dwDispID`。  
+ 取得所指定的控制項屬性*dwDispID*。  
   
 ```  
 virtual void GetProperty(
@@ -523,17 +523,17 @@ virtual void GetProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  識別屬性，位於控制項的預設分派識別碼`IDispatch`介面，以擷取。  
   
- `vtProp`  
+ *vtProp*  
  指定要擷取屬性的型別。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `pvProp`  
- 將會收到屬性值的變數位址。 它必須符合所指定之類型`vtProp`。  
+ *pvProp*  
+ 將會收到屬性值的變數位址。 它必須符合所指定之類型*vtProp*。  
   
 ### <a name="remarks"></a>備註  
- 透過傳回的值`pvProp`。  
+ 透過傳回的值*pvProp*。  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  擷取控制項站台的樣式。  
@@ -556,14 +556,14 @@ virtual void GetWindowText(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `str`  
+ *str*  
  若要參考`CString`物件，其中包含目前控制項的文字。  
   
 ### <a name="remarks"></a>備註  
  如果此控制項支援標題內建屬性，這個值會傳回。 如果不支援標題內建屬性，則會傳回文字屬性的值。  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- 叫用方法或屬性所指定`dwDispID`，所指定的內容中`wFlags`。  
+ 叫用方法或屬性所指定*dwDispID*，所指定的內容中*wFlags*。  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -575,31 +575,31 @@ virtual void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以叫用。  
   
- `wFlags`  
- 描述的 idispatch:: Invoke 的呼叫內容的旗標。 可能的`wFlags`值，請參閱`IDispatch::Invoke`Windows SDK 中。  
+ *wFlags*  
+ 描述的 idispatch:: Invoke 的呼叫內容的旗標。 可能的*wFlags*值，請參閱`IDispatch::Invoke`Windows SDK 中。  
   
- `vtRet`  
+ *vtRet*  
  指定傳回值的類型。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `pvRet`  
- 要接收屬性值或傳回值之變數的位址。 其必須符合 `vtRet`所指定的類型。  
+ *pvRet*  
+ 要接收屬性值或傳回值之變數的位址。 它必須符合所指定之類型*vtRet*。  
   
- `pbParamInfo`  
- 指定以 null終止，並尾隨在 `pbParamInfo`之後之參數類型的位元組的字串指標。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
+ *pbParamInfo*  
+ 以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
- `pbParamInfo`中所指定之參數類型的變數清單。  
+ 在指定的型別參數的變數清單*pbParamInfo*。  
   
 ### <a name="remarks"></a>備註  
- `pbParamInfo` 參數會指定傳遞給方法或屬性的參數類型。 引數的變數清單是由表示...語法宣告。  
+ *PbParamInfo*參數會指定傳遞給方法或屬性參數的類型。 引數的變數清單是由表示...語法宣告。  
   
- 此函式會將轉換的參數**VARIANTARG**值，然後再叫用**idispatch:: Invoke**控制項上的方法。 如果呼叫**idispatch:: Invoke**失敗，此函式將會擲回例外狀況。 如果傳回狀態碼**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函式會擲回**COleDispatchException**物件，否則會擲回`COleException`。  
+ 此函式會將轉換的參數**VARIANTARG**值，然後再叫用`IDispatch::Invoke`控制項上的方法。 如果呼叫`IDispatch::Invoke`失敗，此函式將會擲回例外狀況。 如果傳回狀態碼`IDispatch::Invoke`是`DISP_E_EXCEPTION`，此函式會擲回`COleDispatchException`物件，否則會擲回`COleException`。  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- 叫用方法或屬性所指定`dwDispID`，所指定的內容中`wFlags`。  
+ 叫用方法或屬性所指定*dwDispID*，所指定的內容中*wFlags*。  
   
 ```  
 virtual void InvokeHelperV(
@@ -612,26 +612,26 @@ virtual void InvokeHelperV(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以叫用。  
   
- `wFlags`  
+ *wFlags*  
  描述的 idispatch:: Invoke 的呼叫內容的旗標。  
   
- `vtRet`  
+ *vtRet*  
  指定傳回值的類型。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `pvRet`  
- 要接收屬性值或傳回值之變數的位址。 其必須符合 `vtRet`所指定的類型。  
+ *pvRet*  
+ 要接收屬性值或傳回值之變數的位址。 它必須符合所指定之類型*vtRet*。  
   
- `pbParamInfo`  
- 指定以 null終止，並尾隨在 `pbParamInfo`之後之參數類型的位元組的字串指標。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
+ *pbParamInfo*  
+ 以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `argList`  
+ *引數清單*  
  變數引數清單的指標。  
   
 ### <a name="remarks"></a>備註  
- `pbParamInfo` 參數會指定傳遞給方法或屬性的參數類型。 可以使用傳遞的方法或屬性所叫用的額外參數*va_list*參數。  
+ *PbParamInfo*參數會指定傳遞給方法或屬性參數的類型。 可以使用傳遞的方法或屬性所叫用的額外參數*va_list*參數。  
   
  一般而言，會呼叫此函式`COleControlSite::InvokeHelper`。  
   
@@ -790,13 +790,13 @@ virtual BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwRemove`  
+ *dwRemove*  
  要移除目前的視窗樣式的樣式。  
   
- `dwAdd`  
+ *dwAdd*  
  要加入從目前的視窗樣式的樣式。  
   
- `nFlags`  
+ *nFlags*  
  定位旗標的視窗。 如需可能值的清單，請參閱[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -807,7 +807,7 @@ virtual BOOL ModifyStyle(
   
  修改控制項的視窗樣式。 加入或移除的樣式可以藉由使用位元 OR 結合 ( &#124; ) 運算子。 請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
   
- 如果`nFlags`非零，`ModifyStyle`呼叫 Win32 函式`SetWindowPos`，並結合重新繪製視窗`nFlags`與下列四個旗標：  
+ 如果*nFlags*非零，`ModifyStyle`呼叫 Win32 函式`SetWindowPos`，並結合重新繪製視窗*nFlags*與下列四個旗標：  
   
 - `SWP_NOSIZE` 會保留目前的大小。  
   
@@ -830,13 +830,13 @@ virtual BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwRemove`  
+ *dwRemove*  
  要從目前的視窗樣式移除延伸的樣式。  
   
- `dwAdd`  
+ *dwAdd*  
  若要從目前的視窗樣式加入擴充的樣式。  
   
- `nFlags`  
+ *nFlags*  
  定位旗標的視窗。 如需可能值的清單，請參閱[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -847,7 +847,7 @@ virtual BOOL ModifyStyleEx(
   
  修改擴充控制項的站台物件的樣式的視窗。 加入或移除的樣式可以藉由使用位元 OR 結合 ( &#124; ) 運算子。 請參閱[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
   
- 如果`nFlags`非零，`ModifyStyleEx`呼叫 Win32 函式`SetWindowPos`，並結合重新繪製視窗`nFlags`與下列四個旗標：  
+ 如果*nFlags*非零，`ModifyStyleEx`呼叫 Win32 函式`SetWindowPos`，並結合重新繪製視窗*nFlags*與下列四個旗標：  
   
 - `SWP_NOSIZE` 會保留目前的大小。  
   
@@ -877,10 +877,10 @@ virtual void MoveWindow(
  *y*  
  視窗頂端的新位置。  
   
- `nWidth`  
+ *nWidth*  
  新視窗的寬度  
   
- `nHeight`  
+ *nHeight*  
  新視窗的高度。  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
@@ -899,7 +899,7 @@ virtual BOOL QuickActivate();
  `IPersist*::Load`和`IPersist*::InitNew`快速啟動發生後，就應該呼叫方法。 控制項應該在啟動過程中快速建立它與容器的接收器的連接。 不過，這些連線不會即時直到`IPersist*::Load`或`IPersist*::InitNew`已呼叫。  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- 設定所指定的控制項屬性`dwDispID`。  
+ 設定所指定的控制項屬性*dwDispID*。  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -908,14 +908,14 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以設定。  
   
- `vtProp`  
+ *vtProp*  
  指定要設定屬性類型。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
- `vtProp`指定的類型單一參數。  
+ 所指定之類型的單一參數*vtProp*。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -933,7 +933,7 @@ void SetDefaultButton(BOOL bDefault);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bDefault`  
+ *bDefault*  
  如果控制項應成為預設按鈕，則為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
@@ -949,7 +949,7 @@ virtual int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  新的識別碼值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -973,7 +973,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
  先前擁有焦點的視窗的指標。  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- 設定所指定的控制項屬性`dwDispID`。  
+ 設定所指定的控制項屬性*dwDispID*。  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -982,22 +982,22 @@ virtual void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以設定。  
   
- `vtProp`  
+ *vtProp*  
  指定要設定屬性類型。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
  *...*  
- `vtProp`指定的類型單一參數。  
+ 所指定之類型的單一參數*vtProp*。  
   
 ### <a name="remarks"></a>備註  
  如果`SetProperty`在遇到錯誤，擲回例外狀況。  
   
- 例外狀況的類型取決於嘗試設定屬性或方法的傳回值。 如果傳回值是`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**擲回; 否則為`COleException`。  
+ 例外狀況的類型取決於嘗試設定屬性或方法的傳回值。 如果傳回值是`DISP_E_EXCEPTION`、`COleDispatchExcpetion`擲回; 否則為`COleException`。  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- 設定所指定的控制項屬性`dwDispID`。  
+ 設定所指定的控制項屬性*dwDispID*。  
   
 ```  
 virtual void SetPropertyV(
@@ -1007,19 +1007,19 @@ virtual void SetPropertyV(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDispID`  
+ *dwDispID*  
  識別屬性或方法，在控制項上找到的分派識別碼`IDispatch`介面，以設定。  
   
- `vtProp`  
+ *vtProp*  
  指定要設定屬性類型。 可能的值，請參閱 < 備註 > 一節[coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)。  
   
- `argList`  
+ *引數清單*  
  引數清單的指標。  
   
 ### <a name="remarks"></a>備註  
  方法或屬性所叫用的額外參數可以是 passeed 使用*arg_list*參數。 如果`SetProperty`在遇到錯誤，擲回例外狀況。  
   
- 例外狀況的類型取決於嘗試設定屬性或方法的傳回值。 如果傳回值是`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**擲回; 否則為`COleException`。  
+ 例外狀況的類型取決於嘗試設定屬性或方法的傳回值。 如果傳回值是`DISP_E_EXCEPTION`、`COleDispatchExcpetion`擲回; 否則為`COleException`。  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  設定大小、 位置及控制項站台的疊置順序。  
@@ -1035,7 +1035,7 @@ virtual BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndInsertAfter`  
+ *pWndInsertAfter*  
  視窗的指標。  
   
  *x*  
@@ -1044,13 +1044,13 @@ virtual BOOL SetWindowPos(
  *y*  
  視窗頂端的新位置。  
   
- `cx`  
+ */cx*  
  新視窗的寬度  
   
- `cy`  
+ *cy*  
  新視窗的高度。  
   
- `nFlags`  
+ *nFlags*  
  指定視窗大小及定位旗標。 可能的值，請參閱 < 備註 > 一節[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1064,7 +1064,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszString`  
+ *lpszString*  
  以 null 終止的字串當做新的標題或控制文字指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1078,7 +1078,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCmdShow`  
+ *nCmdShow*  
  指定控制項站台的顯示方式。 它必須是下列值之一：  
   
 - **SW_HIDE**會隱藏此視窗，並將啟用傳遞給另一個視窗。  

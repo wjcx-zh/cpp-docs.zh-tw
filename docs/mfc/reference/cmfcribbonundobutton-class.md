@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370164"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041243"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 類別
 `CMFCRibbonUndoButton`類別實作，其中包含最新的使用者命令中的下拉式清單按鈕。 使用者可以從要取消復原或復原這些下拉式清單中選取一或多個最新的命令。  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  將會顯示在下拉式清單中的動作標籤。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  指定命令識別碼。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  指定按鈕的文字標籤。  
   
- [輸入] `nSmallImageIndex`  
+ [in]*nSmallImageIndex*  
  按鈕的小型影像的父物件的影像清單中以零為起始的索引。  
   
- [輸入] `nLargeImageIndex`  
+ [in]*nLargeImageIndex*  
  以零為起始的索引的父物件的影像清單中的按鈕的大型影像。  
   
- [輸入] `hIcon`  
+ [in]*hIcon*  
  您可以使用做為按鈕的影像圖示的控制代碼。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370916"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041801"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 類別
 為您管理預設狀態的快速存取工具列並放置在功能區列上的協助程式類別 ( [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md))。  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] uiCmd`  
+ *[] in uiCmd*  
  指定命令識別碼。  
   
- `[in] bIsVisible`  
+ *[] in bIsVisible*  
  快速存取工具列處於預設狀態時，請設定命令的可見性。  
   
 ### <a name="remarks"></a>備註  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
  來源的參考`CMFCRibbonQuickAccessToolBarDefaultState`從複製的物件。  
   
 ### <a name="remarks"></a>備註  

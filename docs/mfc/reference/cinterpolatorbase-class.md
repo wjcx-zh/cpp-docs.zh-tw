@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367756"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041269"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 類別
 實作回呼，當動畫 API 必須計算動畫變數的新值時由此 API 呼叫。  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pInterpolator`  
+ *pInterpolator*  
  自訂 interpolator 指標。  
   
- `ppHandler`  
+ *ppHandler*  
  輸出。 此函式傳回時包含 CInterpolatorBase 的執行個體的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>參數  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  輸出。 Interpolator 的起始值而定的各個層面傳遞給 SetInitialValueAndVelocity。  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  輸出。 Interpolator 的初始速度而定的部分傳遞至 SetInitialValueAndVelocity。  
   
- `durationDependencies`  
+ *durationDependencies*  
  輸出。 Interpolator 的持續時間而定的部分傳遞至 SetDuration。  
   
 ### <a name="return-value"></a>傳回值  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  輸出。 轉換，以秒為單位的持續時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>參數  
- `value`  
+ *值*  
  輸出。 變數在轉換結束最後的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>參數  
- `offset`  
+ *offset*  
  從轉換的起始位移。 此位移一律為大於或等於零且小於轉換的持續時間。 如果轉換的持續時間為零，不會呼叫這個方法。  
   
- `value`  
+ *值*  
  輸出。 插補的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>參數  
- `offset`  
+ *offset*  
  從轉換的起始位移。 位移永遠是大於或等於零且小於或等於轉換的持續時間。 如果轉換的持續時間為零，不會呼叫這個方法。  
   
- `velocity`  
+ *速度*  
  輸出。 在位移變數的速度。  
   
 ### <a name="return-value"></a>傳回值  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pInterpolator`  
+ *pInterpolator*  
  自訂 interpolator 指標。  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>參數  
- `initialValue`  
+ *initialValue*  
  在開始轉換的變數的值。  
   
- `initialVelocity`  
+ *initialVelocity*  
  在開始轉換的變數的速度。  
   
 ### <a name="return-value"></a>傳回值  

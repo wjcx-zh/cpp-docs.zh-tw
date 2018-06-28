@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367792"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038909"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟檔案選取對話方塊的屬性清單控制項項目。  
@@ -78,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strName`  
+ [in]*strName*  
  屬性名稱。  
   
- [輸入] `bOpenFileDialog`  
+ [in]*bOpenFileDialog*  
  `TRUE` 若要開啟**開啟檔案** 對話方塊。`FALSE`開啟**儲存檔案** 對話方塊。  
   
- [輸入] `strFileName`  
+ [in]*strFileName*  
  初始檔案名稱。  
   
- [輸入] `lpszDefExt`  
+ [in]*lpszDefExt*  
  一或多個副檔名的字串。 預設值是 `NULL`。  
   
- [輸入] `dwFlags`  
+ [in]*dwFlags*  
  對話方塊旗標。 預設值是 `OFN_HIDEREADONLY` 和 `OFN_OVERWRITEPROMPT` 的位元組合 (OR)。  
   
- [輸入] `lpszFilter`  
+ [in]*lpszFilter*  
  一或多個檔案篩選條件的字串。 預設值是 `NULL`。  
   
- [輸入] `lpszDescr`  
+ [in]*lpszDescr*  
  屬性項目說明。 預設值是 `NULL`。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  屬性項目相關聯的應用程式專屬資料。 例如，32 位元整數或其他資料的指標。 預設值為 0。  
   
 ### <a name="return-value"></a>傳回值  

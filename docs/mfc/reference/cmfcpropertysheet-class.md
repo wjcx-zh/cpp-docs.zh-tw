@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372716"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040008"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 類別
 `CMFCPropertySheet` 類別支援屬性工作表，其中每個屬性頁是由頁面索引標籤、工具列按鈕、樹狀目錄控制項節點或清單項目所表示。  
@@ -151,7 +151,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pPage`  
+ [in]*pPage*  
  Page 物件指標。 此參數不得為`NULL`。  
   
 ### <a name="remarks"></a>備註  
@@ -171,20 +171,20 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pCategory`  
+ [in]*pCategory*  
  父樹狀目錄節點的指標或`NULL`使指定的頁面與最上層節點。 呼叫[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法，以取得此指標。  
   
- [輸入] `pPage`  
+ [in]*pPage*  
  屬性頁物件指標。  
   
- [輸入] `nIconNum`  
+ [in]*nIconNum*  
  圖示，則為-1 會使用任何圖示的以零為起始的索引。 未選取的頁面時，樹狀目錄控制項屬性頁旁會顯示圖示。 預設值為 -1。  
   
- [輸入] `nSelIconNum`  
+ [in]*nSelIconNum*  
  圖示，則為-1 會使用任何圖示的以零為起始的索引。 選取頁面時，樹狀目錄控制項屬性頁旁會顯示圖示。 預設值為 -1。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會加入為分葉節點的樹狀目錄控制項的屬性頁。 若要加入屬性頁，請建立`CMFCPropertySheet`物件，呼叫[cmfcpropertysheet:: Setlook](#setlook)方法`look`參數設定為`CMFCPropertySheet::PropSheetLook_Tree`，然後使用此方法加入屬性頁。  
+ 這個方法會加入為分葉節點的樹狀目錄控制項的屬性頁。 若要加入屬性頁，請建立`CMFCPropertySheet`物件，呼叫[cmfcpropertysheet:: Setlook](#setlook)方法*尋找*參數設定為`CMFCPropertySheet::PropSheetLook_Tree`，然後使用此方法加入屬性頁.  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  將新的節點新增至樹狀目錄控制項。  
@@ -198,23 +198,23 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  節點的名稱。  
   
- [輸入] `nIconNum`  
+ [in]*nIconNum*  
  圖示，則為-1 會使用任何圖示的以零為起始的索引。 未選取的頁面時，樹狀目錄控制項屬性頁旁會顯示圖示。 預設值為 -1。  
   
- [輸入] `nSelectedIconNum`  
+ [in]*nSelectedIconNum*  
  圖示，則為-1 會使用任何圖示的以零為起始的索引。 選取頁面時，樹狀目錄控制項屬性頁旁會顯示圖示。 預設值為 -1。  
   
- [輸入] `pParentCategory`  
+ [in]*pParentCategory*  
  父樹狀目錄節點的指標或`NULL`使指定的頁面與最上層節點。 設定此參數與[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法。  
   
 ### <a name="return-value"></a>傳回值  
  新節點在樹狀控制項的指標。  
   
 ### <a name="remarks"></a>備註  
- 將新的節點，也稱為類別，新增至樹狀目錄控制項中使用這個方法。 若要加入的節點，建立`CMFCPropertySheet`物件，呼叫[cmfcpropertysheet:: Setlook](#setlook)方法`look`參數設定為`CMFCPropertySheet::PropSheetLook_Tree`，然後使用這個方法，將節點加入。  
+ 將新的節點，也稱為類別，新增至樹狀目錄控制項中使用這個方法。 若要加入的節點，建立`CMFCPropertySheet`物件，呼叫[cmfcpropertysheet:: Setlook](#setlook)方法*尋找*參數設定為`CMFCPropertySheet::PropSheetLook_Tree`，然後使用這個方法，將節點加入。  
   
  在後續呼叫中使用這個方法的傳回值[CMFCPropertySheet::AddPageToTree](#addpagetotree)和[CMFCPropertySheet::AddTreeCategory](#addtreecategory)。  
   
@@ -234,16 +234,16 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszCaption`  
+ [in]*pszCaption*  
  字串，包含屬性工作表的標題。 不能`NULL`。  
   
- [輸入] `nIDCaption`  
+ [in]*nIDCaption*  
  資源識別碼，其中包含屬性工作表的標題。  
   
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  屬性工作表中，父視窗的指標或`NULL`如果父視窗是應用程式的主視窗。 預設值是 `NULL`。  
   
- [輸入] `iSelectPage`  
+ [in]*iSelectPage*  
  最上層屬性頁的以零為起始的索引。 預設值為 0。  
   
 ### <a name="remarks"></a>備註  
@@ -257,11 +257,11 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nHeaderHeight`  
+ [in]*nHeaderHeight*  
  標頭，單位為像素的高度。  
   
 ### <a name="remarks"></a>備註  
- 若要使用的值`nHeaderHeight`參數，以繪製自訂標頭，覆寫[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)方法。  
+ 若要使用的值*nHeaderHeight*參數，以繪製自訂標頭，覆寫[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)方法。  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  擷取目前標頭的高度。  
@@ -334,7 +334,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pPage`  
+ [in]*pPage*  
  屬性頁物件，代表已啟用的屬性頁面的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -351,13 +351,13 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `nPage`  
+ [in]*nPage*  
  以零為起始的屬性頁面數目。  
   
- [輸入] `rectHeader`  
+ [in]*rectHeader*  
  指定要繪製的標頭位置的周框。  
   
 ### <a name="remarks"></a>備註  
@@ -371,7 +371,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pPage`  
+ [in]*pPage*  
  屬性頁物件，代表要移除的屬性頁面的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -385,7 +385,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pCategory`  
+ [in]*pCategory*  
  若要移除的類別目錄 （節點） 的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -400,14 +400,14 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pPage`  
+ [in]*pPage*  
  屬性頁物件，代表要移除的屬性頁面的指標。 不能`NULL`。  
   
- [輸入] `nPage`  
+ [in]*nPage*  
  要移除之頁面的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 這個方法中移除指定的屬性頁面，並會終結其相關聯的視窗。 屬性頁物件`pPage`參數會指定並不會終結之前[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)視窗已關閉。  
+ 這個方法中移除指定的屬性頁面，並會終結其相關聯的視窗。 屬性頁物件*pPage*參數會指定並不會終結之前[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)視窗已關閉。  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  指定在 Outlook 窗格之導覽控制項中使用的映像清單。  
@@ -421,16 +421,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiImageListResID`  
+ [in]*uiImageListResID*  
  影像清單的資源識別碼。  
   
- [輸入] `cx`  
+ [in]*cx*  
  寬度 （以像素的影像清單中的圖示）。  
   
- [輸入] `clrTransparent`  
+ [in]*clrTransparent*  
  透明影像色彩。 此色彩影像部分會為透明的。 預設值是洋紅色，RGB(255,0,255)。  
   
- [輸入] `hIcons`  
+ [in]*hIcons*  
  現有的影像清單控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -451,16 +451,16 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `look`  
+ [in]*尋找*  
  其中一個列舉值，指定屬性工作表的外觀。 屬性工作表的預設樣式為`CMFCPropertySheet::PropSheetLook_Tabs`。 如需詳細資訊，請參閱這個主題的 < 備註 > 一節中的資料表。  
   
- [輸入] `nNavControlWidth`  
+ [in]*nNavControlWidth*  
  瀏覽控制項，單位為像素寬度。 預設值為 100。  
   
 ### <a name="remarks"></a>備註  
  若要顯示屬性工作表中的預設值以外的樣式，呼叫這個方法，建立屬性工作表視窗之前。  
   
- 下表列出可以在指定的列舉值`look`參數。  
+ 下表列出可以在指定的列舉值*尋找*參數。  
   
 |值|描述|  
 |-----------|-----------------|  

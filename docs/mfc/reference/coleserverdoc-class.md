@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7df4ea13313758c517188e1c4ce0441618a99b4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377664"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039049"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 類別
 OLE 伺服器文件的基底類別。  
@@ -237,7 +237,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  容器應用程式的父視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -269,7 +269,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFrameWnd`  
+ *pFrameWnd*  
  要終結就地編輯框架視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -306,7 +306,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDocSite`  
+ *pDocSite*  
  指標`IOleDocumentSite`會連線到伺服器的這份文件的介面。  
   
 ### <a name="return-value"></a>傳回值  
@@ -340,7 +340,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpClipRect`  
+ *lpClipRect*  
  指標`RECT`結構或`CRect`接收項目的裁剪方框座標的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -356,7 +356,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpPosRect`  
+ *lpPosRect*  
  指標`RECT`結構或`CRect`接收項目的座標的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -381,7 +381,7 @@ BOOL GetZoomFactor(
  *lpSizeDenom*  
  類別的物件指標`CSize`將保留比例分母。 可以是**NULL**。  
   
- `lpPosRect`  
+ *lpPosRect*  
  類別的物件指標`CRect`描述項目的新位置。 如果這個引數是**NULL**，此函數會使用的項目目前的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -456,7 +456,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszNewName`  
+ *lpszNewName*  
  指定的伺服器文件; 新名稱的字串指標這通常是完整的路徑。  
   
 ### <a name="remarks"></a>備註  
@@ -480,7 +480,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCloseOption`  
+ *dwCloseOption*  
  列舉中的值`OLECLOSE`。 這個參數的值可以是下列其中一個：  
   
 - `OLECLOSE_SAVEIFDIRTY` 如果已修改，則會儲存檔案。  
@@ -516,13 +516,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bUndoable`  
+ *bUndoable*  
  指定是否可以復原編輯變更。  
   
 ### <a name="remarks"></a>備註  
  此函式會還原到其原始狀態，隱藏任何功能表和其他控制項，可建立就地啟用的容器應用程式的使用者介面。  
   
- 架構一律設定`bUndoable`至**FALSE**。 如果伺服器支援復原，因此沒有可復原的作業，呼叫基底類別實作`bUndoable`設**TRUE**。  
+ 架構一律設定*bUndoable*至**FALSE**。 如果伺服器支援復原，因此沒有可復原的作業，呼叫基底類別實作*bUndoable*設**TRUE**。  
   
 ##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  架構會呼叫此函式可啟用或停用就地編輯的文件視窗。  
@@ -532,7 +532,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bActivate`  
+ *bActivate*  
  指定是否要啟用或停用文件視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -553,11 +553,11 @@ virtual HRESULT OnExecOleCmd(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  識別一組命令的 GUID 指標。 可以是**NULL**表示預設命令群組。  
   
- `nCmdID`  
- 要執行的命令。 所識別之群組中必須是`pguidCmdGroup`。  
+ *nCmdID*  
+ 要執行的命令。 所識別之群組中必須是*pguidCmdGroup*。  
   
  *nCmdExecOut*  
  方法的物件應該執行命令、 一或多個下列值從**OLECMDEXECOPT**列舉型別：  
@@ -570,10 +570,10 @@ virtual HRESULT OnExecOleCmd(
   
  **OLECMDEXECOPT_SHOWHELP**  
   
- `pvarargIn`  
+ *pvarargIn*  
  指標**VARIANTARG**包含命令的輸入引數。 可以是**NULL**。  
   
- `pvarargOut`  
+ *pvarargOut*  
  指標**VARIANTARG**來接收命令的輸出傳回的值。 可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -584,10 +584,10 @@ virtual HRESULT OnExecOleCmd(
 |**E_UNEXPECTED**|發生意外的錯誤|  
 |**E_FAIL**|發生錯誤|  
 |**E_NOTIMPL**|表示 MFC 本身應該嘗試轉譯和分派命令|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 為非**NULL**但未指定可辨識的命令群組|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 無法辨識為有效的命令群組中 `pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|所識別的命令`nCmdID`已停用，無法執行|  
-|**OLECMDERR_NOHELP**|呼叫端所識別的命令要求協助`nCmdID`但沒有說明|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup*是非**NULL**但未指定可辨識的命令群組|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID*無法辨識為有效的命令群組中*pguidCmdGroup*|  
+|**OLECMDERR_DISABLED**|所識別的命令*nCmdID*已停用，無法執行|  
+|**OLECMDERR_NOHELP**|呼叫端所識別的命令要求協助*nCmdID*但沒有說明|  
 |**OLECMDERR_CANCELED**|使用者已取消執行|  
   
 ### <a name="remarks"></a>備註  
@@ -595,11 +595,11 @@ virtual HRESULT OnExecOleCmd(
   
  架構會呼叫函式，然後再嘗試將轉譯和分派 OLE 文件命令。 您不需要覆寫這個函式，以處理標準 OLE 文件的命令，但如果您想要處理自己的自訂命令或處理命令會接受參數或傳回結果，您必須提供這個函式覆寫。  
   
- 大部分命令不要接受引數或傳回值。 呼叫端可以通過大部分的命令**NULL**s`pvarargIn`和`pvarargOut`。 預期輸入的值的命令，呼叫端可以宣告和初始化**VARIANTARG**變數並將指標傳遞給中的變數`pvarargIn`。 對於需要單一值的命令，將引數可以直接在儲存**VARIANTARG**並傳遞給函式。 多個引數必須封裝在內**VARIANTARG**使用其中一種支援的型別 (例如`IDispatch`和**SAFEARRAY** )。  
+ 大部分命令不要接受引數或傳回值。 呼叫端可以通過大部分的命令**NULL**s *pvarargIn*和*pvarargOut*。 預期輸入的值的命令，呼叫端可以宣告和初始化**VARIANTARG**變數並將指標傳遞給中的變數*pvarargIn*。 對於需要單一值的命令，將引數可以直接在儲存**VARIANTARG**並傳遞給函式。 多個引數必須封裝在內**VARIANTARG**使用其中一種支援的型別 (例如`IDispatch`和**SAFEARRAY** )。  
   
- 同樣地，如果命令傳回引數呼叫端所要宣告**VARIANTARG**，它初始化為`VT_EMPTY`，並將其位址中的傳遞`pvarargOut`。 如果命令傳回單一值，直接在值可以儲存物件`pvarargOut`。 多個輸出值必須以某種方式適用於封裝**VARIANTARG**。  
+ 同樣地，如果命令傳回引數呼叫端所要宣告**VARIANTARG**，它初始化為`VT_EMPTY`，並將其位址中的傳遞*pvarargOut*。 如果命令傳回單一值，直接在值可以儲存物件*pvarargOut*。 多個輸出值必須以某種方式適用於封裝**VARIANTARG**。  
   
- 此函式的基底類別實作會引導**OLE_COMMAND_MAP**命令目標並再試一次來分派至適當的處理常式命令相關聯的結構。 基底類別實作，只適用於命令不接受引數或傳回值。 如果您需要處理命令接受引數或傳回值，您必須覆寫此函數並使用`pvarargIn`和`pvarargOut`參數自己。  
+ 此函式的基底類別實作會引導**OLE_COMMAND_MAP**命令目標並再試一次來分派至適當的處理常式命令相關聯的結構。 基底類別實作，只適用於命令不接受引數或傳回值。 如果您需要處理命令接受引數或傳回值，您必須覆寫此函數並使用*pvarargIn*和*pvarargOut*參數自己。  
   
 ##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  當容器應用程式的框架視窗啟用或停用時，架構會呼叫此函式。  
@@ -609,7 +609,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bActivate`  
+ *bActivate*  
  指定是否要啟用或停用的框架視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -656,14 +656,14 @@ virtual void OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpRectBorder`  
+ *lpRectBorder*  
  指標`RECT`結構或`CRect`物件，指定框線的座標。  
   
- `lpUIWindow`  
+ *lpUIWindow*  
  類別的物件指標**IOleInPlaceUIWindow**擁有目前就地編輯工作階段。  
   
  *bFrame*  
- **TRUE**如果`lpUIWindow`指向容器應用程式的最上層框架視窗中，或**FALSE**如果`lpUIWindow`指向容器應用程式的文件層級框架視窗。  
+ **TRUE**如果*lpUIWindow*指向容器應用程式的最上層框架視窗中，或**FALSE**如果*lpUIWindow*指向容器應用程式的文件層級框架視窗。  
   
 ### <a name="remarks"></a>備註  
  此函式會調整大小，並調整工具列和其他新的視窗大小一致的使用者介面項目。  
@@ -682,10 +682,10 @@ virtual void OnSetHostNames(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszHost`  
+ *lpszHost*  
  指定的容器應用程式名稱的字串指標。  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  指定文件的容器名稱的字串指標。  
   
 ### <a name="remarks"></a>備註  
@@ -703,10 +703,10 @@ virtual void OnSetItemRects(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpPosRect`  
+ *lpPosRect*  
  指標`RECT`結構或`CRect`物件，指定相對於容器應用程式的用戶端區域的就地框架視窗的位置。  
   
- `lpClipRect`  
+ *lpClipRect*  
  指標`RECT`結構或`CRect`物件，指定相對於容器應用程式的用戶端區域的就地框架視窗的裁剪方框。  
   
 ### <a name="remarks"></a>備註  
@@ -715,7 +715,7 @@ virtual void OnSetItemRects(
  此函式通常稱為以回應`RequestPositionChange`呼叫時，雖然可以在任何時間中呼叫來要求位置變更就地項目的容器。  
   
 ##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
- 架構會呼叫此函式可顯示或隱藏與所識別的框架視窗相關聯的伺服器應用程式的控制列`pFrameWnd`。  
+ 架構會呼叫此函式可顯示或隱藏與所識別的框架視窗相關聯的伺服器應用程式的控制列*pFrameWnd*。  
   
 ```  
 virtual void OnShowControlBars(
@@ -724,10 +724,10 @@ virtual void OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFrameWnd`  
+ *pFrameWnd*  
  框架視窗應該隱藏或顯示其控制列的指標。  
   
- `bShow`  
+ *bShow*  
  決定是否顯示或隱藏控制列。  
   
 ### <a name="remarks"></a>備註  
@@ -741,11 +741,11 @@ virtual void OnShowDocument(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bShow`  
+ *bShow*  
  指定是否要顯示或隱藏文件的使用者介面。  
   
 ### <a name="remarks"></a>備註  
- 如果`bShow`是**TRUE**的預設實作會啟動伺服器應用程式，如有必要，並造成捲動視窗，使項目是可見的容器應用程式。 如果`bShow`是**FALSE**的預設實作會停用的項目，透過呼叫`OnDeactivate`，然後終結或隱藏文件中，除了第一個已建立的所有框架視窗。 如果沒有可見的文件保有的預設實作會隱藏伺服器應用程式。  
+ 如果*bShow*是**TRUE**的預設實作會啟動伺服器應用程式，如有必要，並造成捲動視窗，使項目是可見的容器應用程式。 如果*bShow*是**FALSE**的預設實作會停用的項目，透過呼叫`OnDeactivate`，然後終結或隱藏文件中，除了第一個已建立的所有框架視窗其中一個。 如果沒有可見的文件保有的預設實作會隱藏伺服器應用程式。  
   
 ##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  儲存文件是在複合文件中的內嵌項目時由架構呼叫。  
@@ -768,7 +768,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpPosRect`  
+ *lpPosRect*  
  指標`RECT`結構或`CRect`物件，其中包含項目的新位置。  
   
 ### <a name="remarks"></a>備註  
@@ -792,7 +792,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
 ### <a name="parameters"></a>參數  
- `sizeScroll`  
+ *sizeScroll*  
  表示容器文件捲動伸展多遠。  
   
 ### <a name="return-value"></a>傳回值  
@@ -813,16 +813,16 @@ void UpdateAllItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSender`  
+ *pSender*  
  修改文件中，項目的指標或**NULL**如果所有項目更新。  
   
- `lHint`  
+ *lHint*  
  包含有關修改資訊。  
   
- `pHint`  
+ *pHint*  
  儲存修改的相關資訊的物件指標。  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  判斷如何繪製項目。 這是一個值從`DVASPECT`列舉型別。 這個參數的值可以是下列其中一個：  
   
 - `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
@@ -836,7 +836,7 @@ void UpdateAllItems(
 ### <a name="remarks"></a>備註  
  使用者變更伺服器文件後，通常會呼叫此函式。 如果 OLE 項目連結至文件之自動連結，則項目會更新以反映變更。 在容器應用程式中使用 Microsoft Foundation 類別庫中，撰寫[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成員函式`COleClientItem`呼叫。  
   
- 此函數會呼叫`OnUpdate`成員函式的每個文件的項目，除了傳送項目、 傳遞`pHint`， `lHint`，和`nDrawAspect`。 使用這些參數將資訊傳遞至相關的文件進行的修改項目。 您可以編碼資訊使用`lHint`或者您可以定義`CObject`-衍生類別來儲存所做的修改的相關資訊，並將該類別使用的物件傳遞`pHint`。 覆寫`OnUpdate`成員函式中的您`COleServerItem`-衍生的類別，以最佳化每個項目，根據是否已變更其簡報的更新。  
+ 此函數會呼叫`OnUpdate`成員函式的每個文件的項目，除了傳送項目、 傳遞*pHint*， *lHint*，和*nDrawAspect*。 使用這些參數將資訊傳遞至相關的文件進行的修改項目。 您可以編碼資訊使用*lHint*或者您可以定義`CObject`-衍生類別來儲存所做的修改的相關資訊，並將該類別使用的物件傳遞*pHint*。 覆寫`OnUpdate`成員函式中的您`COleServerItem`-衍生的類別，以最佳化每個項目，根據是否已變更其簡報的更新。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   

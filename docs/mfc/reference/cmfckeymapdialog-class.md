@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369030"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037284"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 類別
 `CMFCKeyMapDialog`類別支援將命令對應至鍵盤上的按鍵的控制項。  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParentFrame`  
+ [in]*pWndParentFrame*  
  父視窗的指標`CMFCKeyMapDialog`物件。  
   
- [輸入] `bEnablePrint`  
+ [in]*bEnablePrint*  
  `TRUE` 如果可以列印快速鍵的清單。，否則， `FALSE`。 預設值為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nItem`  
+ [in]*nItem*  
  索引鍵對應的內部清單中項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  命令 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  指標用來對應鍵盤按鍵的組合來建立命令名稱與描述工具列按鈕。 索引鍵對應項目會儲存在內部清單控制項中。  
   
- [輸入] `nItem`  
+ [in]*nItem*  
  以零為起始的索引，指定要插入新的索引鍵對應項目內部清單控制項中的位置。  
   
 ### <a name="remarks"></a>備註  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dc`  
+ [in]*dc*  
  印表機裝置內容。  
   
- [輸入] `nPage`  
+ [in]*nPage*  
  若要列印的頁碼。  
   
- [輸入] `cx`  
+ [in]*cx*  
  標頭，單位為像素水平位移。  
   
 ### <a name="return-value"></a>傳回值  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dc`  
+ [in]*dc*  
  印表機裝置內容。  
   
- [輸入] `nItem`  
+ [in]*nItem*  
  若要列印的項目以零為起始的索引。  
   
- [輸入] `y`  
+ [in]*y*  
  頁面頂端和項目的位置之間的垂直位移。  
   
- [輸入] `cx`  
+ [in]*cx*  
  頁面的左邊和項目的位置之間的水平位移。  
   
- [輸入] `bCalcHeight`  
+ [in]*bCalcHeight*  
  `TRUE` 計算最佳的高度，列印的項目。`FALSE`截斷列印項目，使其符合預設的空間。  
   
 ### <a name="return-value"></a>傳回值  

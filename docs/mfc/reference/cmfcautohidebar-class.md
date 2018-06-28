@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369869"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042179"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。  
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pAutoHideWnd`  
+ [in]*pAutoHideWnd*  
  您要隱藏的視窗。  
   
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  指定自動隱藏按鈕與應用程式視窗之對齊方式的值。  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- `dwAlignment` 參數表示自動隱藏按鈕在應用程式中的位置。 這個參數可以是下列任何一個值：  
+ *DwAlignment*參數表示自動隱藏按鈕在應用程式所在的位置。 這個參數可以是下列任何一個值：  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
- [輸入] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -207,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszClassName`  
- [輸入] `dwStyle`  
- [輸入] `rect`  
- [輸入] `pParentWnd`  
- [輸入] `nID`  
- [輸入] `dwControlBarStyle`  
- [輸入] `pContext`  
+ [in]*lpszClassName*  
+ [in]*dwStyle*  
+ [in]*rect*  
+ [in]*pParentWnd*  
+ [in]*nID*  
+ [in]*dwControlBarStyle*  
+ [in]*pContext*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -261,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CPoint`  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -275,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>參數  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  要移除的自動隱藏視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]BOOL `bActive`  
+ [in]BOOL *bActive*  
  TRUE 表示要設定為作用中，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
@@ -305,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bState`  
+ [in]*bState*  
   
 ### <a name="remarks"></a>備註  
   
@@ -320,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]CDockablePane * `pAutoHideWnd`  
- [in]BOOL `bShow`  
+ [in]CDockablePane * *pAutoHideWnd*  
+ [in]BOOL *bShow*  
  TRUE 表示要顯示視窗。  
   
- [in]BOOL `bDelay`  
+ [in]BOOL *bDelay*  
  這個參數已忽略。  
   
 ### <a name="return-value"></a>傳回值  
@@ -342,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nLength`  
+ [in]*nLength*  
  這是基底實作中未使用的值。 在衍生實作中，這個值可用來表示已調整窗格的長度。  
   
- [輸入] `bVert`  
+ [in]*bVert*  
  這是基底實作中未使用的值。 在衍生實作中，使用`TRUE`以處理的情況，其中自動隱藏列垂直摺疊，和`FALSE`其中自動隱藏列是水平摺疊的案例。  
   
 ### <a name="return-value"></a>傳回值  

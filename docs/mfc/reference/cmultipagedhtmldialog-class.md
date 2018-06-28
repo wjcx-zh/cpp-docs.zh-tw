@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373888"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038002"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 類別
 多頁對話方塊會循序顯示多個 HTML 網頁並處理來自每頁的事件。  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  對話方塊範本資源的名稱以 null 結尾字串。  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  以 null 結束的字串是 HTML 資源的名稱。  
   
- `pParentWnd`  
+ *pParentWnd*  
  父系或擁有者的視窗物件的指標 (類型的[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含對話方塊範本資源的識別碼。  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  包含 HTML 資源的識別碼。  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

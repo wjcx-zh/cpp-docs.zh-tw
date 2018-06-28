@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370118"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042491"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 類別
 實作功能區的不可點選式文字標籤。  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszText`  
+ [in]*lpszText*  
  在標籤中顯示的文字。  
   
- [輸入] `bIsMultiLine`  
+ [in]*bIsMultiLine*  
  `TRUE` 若要指定標籤為多行標籤。否則， `FALSE`。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParent`  
+ [in]*pParent*  
  表示目前的功能區標籤的父視窗。  
   
- [輸出] `data`  
+ [out]*資料*  
  型別的物件`CAccessibilityData`填入目前的功能區標籤的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果`data`參數已成功填入目前的功能區標籤的協助工具資料，否則`FALSE`。  
+ `TRUE` 如果*資料*參數已成功填入目前的功能區標籤的協助工具資料，否則`FALSE`。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

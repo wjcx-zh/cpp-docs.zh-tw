@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369527"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039777"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 類別
 實作虛擬按鍵對應和格式化的協助程式類別。  
@@ -80,7 +80,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpAccel`  
+ [in]*lpAccel*  
  攠摝坫指標。  
   
 ### <a name="remarks"></a>備註  
@@ -94,7 +94,7 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `str`  
+ [out]*str*  
  若要參考`CString`方法寫入翻譯的快速鍵位置的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -108,7 +108,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpAccel`  
+ [in]*lpAccel*  
  攠摝坫指標。  
   
 ### <a name="remarks"></a>備註  

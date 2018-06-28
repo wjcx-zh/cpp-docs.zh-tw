@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374353"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039157"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 類別
 用於 OLE 的 [選擇性貼上] 對話方塊。  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|格式可以貼上您的應用程式清單中加入自訂格式。|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|將新的項目加入至支援的剪貼簿格式的清單。|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|新增**CF_BITMAP**， **CF_DIB**， `CF_METAFILEPICT`，並選擇性地`CF_LINKSOURCE`格式的清單可以貼上您的應用程式。|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|新增**CF_BITMAP**， **CF_DIB**， **CF_METAFILEPICT**，並選擇性地**CF_LINKSOURCE**格式的清單可以貼上您的應用程式.|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|使用指定的格式容器文件中建立項目。|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|顯示 OLE 選擇性貼上 對話方塊。|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|指示是否要繪製在項目以圖示，或不。|  
@@ -130,22 +130,22 @@ void AddFormat(
  *fmt*  
  要加入的資料類型的參考。  
   
- `lpszFormat`  
+ *lpszFormat*  
  描述使用者的格式字串。  
   
  *lpszResult*  
  如果在對話方塊中選擇這種格式，則描述結果的字串。  
   
- `flags`  
+ *flags*  
  不同連結和內嵌選項適用於這種格式。 這個旗標是一或多個中的不同值的位元組合**OLEUIPASTEFLAG**列舉型別。  
   
- `cf`  
+ *cf*  
  要加入的剪貼簿格式。  
   
  *tymed*  
  在這種格式中可用的媒體類型。 這是一或多個值的位元組合**TYMED**列舉型別。  
   
- `nFormatID`  
+ *nFormatID*  
  識別此格式的字串識別碼。 這個字串的格式為 '\n' 字元分隔的兩個不同的字串。 第一個字串是相同會傳入*lpstrFormat* ，第二個參數，等同於*lpstrResult*參數。  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cf`  
+ *cf*  
  要加入的剪貼簿格式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **「 內嵌的物件 」**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  建立旗標，會包含任何數目的下列旗標使用位元 OR 運算子結合在一起：  
   
 - `PSF_SELECTPASTE` 指定呼叫對話方塊時，一開始檢查貼上選項按鈕。 不能搭配`PSF_SELECTPASTELINK`。 這是預設值。  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` 指定呼叫對話方塊時，會顯示 [說明] 按鈕。  
   
- `pDataObject`  
+ *pDataObject*  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)貼上。 如果此值為**NULL**，它會取得`COleDataObject`從剪貼簿。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，父視窗，在對話方塊的 設定主應用程式視窗為。  
   
 ### <a name="remarks"></a>備註  

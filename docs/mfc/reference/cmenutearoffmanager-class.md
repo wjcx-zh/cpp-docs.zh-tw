@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367665"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041009"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 類別
 管理 Tear-Off 功能表。 Tear-Off 功能表是在功能表列上的功能表。 使用者可以取下功能表列中的 Tear-Off 功能表，讓 Tear-Off 功能表浮動。  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiTearOffBarID`  
- [輸入] `strText`  
+ [in]*uiTearOffBarID*  
+ [in]*strText*  
   
 ### <a name="remarks"></a>備註  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszRegEntry`  
+ [in]*lpszRegEntry*  
  字串，包含路徑的登錄項目。 您的應用程式儲存分割列設定此登錄項目中。  
   
- [輸入] `uiTearOffMenuFirst`  
+ [in]*uiTearOffMenuFirst*  
  Tear-off 功能表第一個功能表識別碼。  
   
- [輸入] `uiTearOffMenuLast`  
+ [in]*uiTearOffMenuLast*  
  Tear-off 功能表最後功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 從功能表識別碼的範圍`uiTearOffMenuFirst`至`uiTearOffMenuLast`必須是連續的間隔。 此間隔會定義 tear-off 功能表可在應用程式中同時出現的數目。  
+ 從功能表識別碼的範圍*uiTearOffMenuFirst*至*uiTearOffMenuLast*必須是連續的間隔。 此間隔會定義 tear-off 功能表可在應用程式中同時出現的數目。  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `str`  
+ [in]*str*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hmenu`  
+ [in]*hmenu*  
   
 ### <a name="remarks"></a>備註  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdId`  
- [輸入] `bUse`  
+ [in]*uiCmdId*  
+ [in]*bUse*  
   
 ### <a name="remarks"></a>備註  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hMenu`  
+ [in]*hMenu*  
   
 ### <a name="remarks"></a>備註  
   

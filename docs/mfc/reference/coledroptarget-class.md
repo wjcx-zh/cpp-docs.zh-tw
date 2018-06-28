@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373129"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039598"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 類別
 提供視窗與 OLE 程式庫之間的溝通機制。  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  正在進入點至視窗資料指標。  
   
- `pDataObject`  
+ *pDataObject*  
  指向包含要卸除之資料的資料物件。  
   
- `dwKeyState`  
+ *dwKeyState*  
  包含輔助按鍵的狀態。 這是任意數目的下列組合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
   
- `point`  
+ *點*  
  包含用戶端座標中的資料指標的目前位置。  
   
 ### <a name="return-value"></a>傳回值  
- 卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多個項目：  
+ 卸除已嘗試在所指定的位置時，會產生的效果*點*。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_NONE` 不允許卸除。  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向視窗游標離開。  
   
 ### <a name="remarks"></a>備註  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  游標位於視窗的點。  
   
- `pDataObject`  
+ *pDataObject*  
  指向包含要卸除之資料的資料物件。  
   
- `dwKeyState`  
+ *dwKeyState*  
  包含輔助按鍵的狀態。 這是任意數目的下列組合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
   
- `point`  
+ *點*  
  包含用戶端座標中的資料指標的目前位置。  
   
 ### <a name="return-value"></a>傳回值  
- 卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多個項目：  
+ 卸除已嘗試在所指定的位置時，會產生的效果*點*。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_NONE` 不允許卸除。  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- 由架構呼叫之前呼叫[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)來判斷是否`point`捲軸的區域中。  
+ 由架構呼叫之前呼叫[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)來判斷是否*點*捲軸的區域中。  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向資料指標位於目前的視窗。  
   
- `dwKeyState`  
+ *dwKeyState*  
  包含輔助按鍵的狀態。 這是任意數目的下列組合： **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
   
- `point`  
+ *點*  
  包含資料指標，以像素與相對螢幕的位置。  
   
 ### <a name="return-value"></a>傳回值  
- 卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多個項目：  
+ 卸除已嘗試在所指定的位置時，會產生的效果*點*。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_NONE` 不允許卸除。  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向資料指標位於目前的視窗。  
   
- `pDataObject`  
+ *pDataObject*  
  指向包含要卸除之資料的資料物件。  
   
- `dropEffect`  
+ *dropEffect*  
  使用者選擇拖放作業的效果。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_COPY` 執行複製作業。  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
- `point`  
+ *點*  
  包含資料指標，以像素與相對螢幕的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向資料指標位於目前的視窗。  
   
- `pDataObject`  
+ *pDataObject*  
  指向包含要卸除之資料的資料物件。  
   
- `dropDefault`  
+ *dropDefault*  
  使用者選擇根據索引鍵的目前狀態的預設拖放作業的效果。 它可以是`DROPEFFECT_NONE`。 < 備註 > 一節中討論的置放效果。  
   
- `dropList`  
+ *下拉清單*  
  置放來源支援置放效果的清單。 可以使用的位元 OR 結合置放效果值 ( **&#124;**) 作業。 < 備註 > 一節中討論的置放效果。  
   
- `point`  
+ *點*  
  包含資料指標，以像素與相對螢幕的位置。  
   
 ### <a name="return-value"></a>傳回值  
- 卸除嘗試在所指定的位置所產生的置放效果`point`。 < 備註 > 一節中討論的置放效果。  
+ 卸除嘗試在所指定的位置所產生的置放效果*點*。 < 備註 > 一節中討論的置放效果。  
   
 ### <a name="remarks"></a>備註  
  架構會先呼叫此函式。 如果它不會處理卸除，架構會呼叫[OnDrop](#ondrop)。 一般而言，您將會覆寫[OnDropEx](../../mfc/reference/cview-class.md#ondropex)中檢視類別，以支援滑鼠右鍵拖曳和卸除。 通常，檢視類別[OnDrop](../../mfc/reference/cview-class.md#ondrop)用來處理支援簡單拖曳和卸除的大小寫。  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向以登錄為置放目標的視窗。  
   
 ### <a name="return-value"></a>傳回值  

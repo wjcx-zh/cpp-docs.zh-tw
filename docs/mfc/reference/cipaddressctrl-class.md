@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368910"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042153"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 類別
 提供 Windows 通用 IP 位址控制項的功能。  
@@ -119,16 +119,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  IP 位址控制項的樣式。 套用視窗樣式的組合。 您必須包含**WS_CHILD**因為控制項必須是子視窗的樣式。 請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 樣式的清單中。  
   
- `rect`  
+ *rect*  
  IP 位址控制項的大小和位置參考。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  IP 位址控制項的父視窗的指標。 它不得為**NULL。**  
   
- `nID`  
+ *nID*  
  IP 位址控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -139,9 +139,9 @@ virtual BOOL Create(
   
 1.  呼叫建構函式，建立`CIPAddressCtrl`物件。  
   
-2.  呼叫**建立**，它會建立 IP 位址控制項。  
+2.  呼叫`Create`，它會建立 IP 位址控制項。  
   
- 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
+ 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  呼叫此函式來建立控制項 （子視窗），並將它與相關聯`CIPAddressCtrl`物件。  
@@ -156,19 +156,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  IP 位址控制項的樣式。 套用視窗樣式的組合。 您必須包含**WS_CHILD**因為控制項必須是子視窗的樣式。 請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK for windows 樣式的清單中。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -191,26 +191,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nField0`  
+ *nField0*  
  從壓縮的 IP 位址欄位 0 值參考。  
   
- `nField1`  
+ *nField1*  
  從壓縮的 IP 位址欄位 1 值參考。  
   
- `nField2`  
+ *nField2*  
  從壓縮的 IP 位址欄位 2 值參考。  
   
- `nField3`  
+ *nField3*  
  從壓縮的 IP 位址欄位 3 值參考。  
   
- `dwAddress`  
- 參考的位址`DWORD`接收 IP 位址的值。 請參閱**備註**顯示資料表如何`dwAddress`填滿。  
+ *dwAddress*  
+ 參考的位址`DWORD`接收 IP 位址的值。 請參閱**備註**顯示資料表如何*dwAddress*填滿。  
   
 ### <a name="return-value"></a>傳回值  
  IP 位址控制項中的非空白欄位數目。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)、 Windows SDK 中所述。 在上述第一個原型中的數字 0 到 3 控制項的欄位中讀取由左到右分別，填入的四個參數。 在上述項目，第二個原型`dwAddress`已填入，如下所示。  
+ 此成員函式實作的 Win32 訊息行為[IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)、 Windows SDK 中所述。 在上述第一個原型中的數字 0 到 3 控制項的欄位中讀取由左到右分別，填入的四個參數。 在上述項目，第二個原型*dwAddress*已填入，如下所示。  
   
 |欄位|包含欄位值的位元|  
 |-----------|-------------------------------------|  
@@ -246,23 +246,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nField0`  
+ *nField0*  
  從壓縮的 IP 位址欄位 0 值。  
   
- `nField1`  
+ *nField1*  
  從壓縮的 IP 位址欄位 1 值。  
   
- `nField2`  
+ *nField2*  
  從壓縮的 IP 位址欄位 2 值。  
   
- `nField3`  
+ *nField3*  
  從壓縮的 IP 位址欄位 3 值。  
   
- `dwAddress`  
+ *dwAddress*  
  A`DWORD`包含新的 IP 位址的值。 請參閱**備註**的資料表，其中顯示如何`DWORD`已填入值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)、 Windows SDK 中所述。 在上述第一個原型中的數字 0 到 3 控制項的欄位中讀取由左到右分別，填入的四個參數。 在上述項目，第二個原型`dwAddress`已填入，如下所示。  
+ 此成員函式實作的 Win32 訊息行為[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)、 Windows SDK 中所述。 在上述第一個原型中的數字 0 到 3 控制項的欄位中讀取由左到右分別，填入的四個參數。 在上述項目，第二個原型*dwAddress*已填入，如下所示。  
   
 |欄位|包含欄位值的位元|  
 |-----------|-------------------------------------|  
@@ -279,7 +279,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nField`  
+ *nField*  
  以零為起始的欄位應該設定焦點的索引。 如果此值大於欄位數目，會將焦點設定為第一個空白欄位。 如果非空白的所有欄位，則會將焦點設定為第一個欄位。  
   
 ### <a name="remarks"></a>備註  
@@ -296,17 +296,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nField`  
+ *nField*  
  將套用該範圍的以零為起始的欄位索引。  
   
- `nLower`  
+ *nLower*  
  在此 IP 位址控制項中接收指定之欄位的下限的整數的參考。  
   
- `nUpper`  
+ *nUpper*  
  在此 IP 位址控制項中接收指定之欄位的數目上限的整數的參考。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)、 Windows SDK 中所述。 您可以使用兩個參數，`nLower`和`nUpper`，以表示的下限和上限的限制和欄位，而不是*wRange*參數搭配的 Win32 訊息。  
+ 此成員函式實作的 Win32 訊息行為[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)、 Windows SDK 中所述。 您可以使用兩個參數， *nLower*和*nUpper*，以表示的下限和上限的限制和欄位，而不是*wRange*參數搭配的 Win32 訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

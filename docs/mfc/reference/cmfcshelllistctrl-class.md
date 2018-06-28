@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374959"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040817"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 類別
 `CMFCShellListCtrl`類別提供視窗清單控制項功能，並加入顯示 shell 項目清單的能力擴充。  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszPath`  
+ [in]*lpszPath*  
  字串，包含的資料夾路徑。  
   
- [輸入] `lpItemInfo`  
+ [in]*lpItemInfo*  
  指標`LPAFX_SHELLITEMINFO`描述要顯示的資料夾結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  布林值，指定架構是否啟用快顯功能表。  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `strPath`  
+ [out]*strPath*  
  字串參數之方法的路徑的寫入位置參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `strName`  
+ [out]*strName*  
  字串參數之方法的名稱的寫入位置參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `strPath`  
+ [out]*strPath*  
  接收路徑字串的參考。  
   
- [輸入] `iItem`  
+ [in]*iItem*  
  清單項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果登錄成功。，`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
- 所提供的索引`iItem`根據目前所顯示的項目[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+ 所提供的索引*iItem*根據目前所顯示的項目[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  傳回的類型顯示的項目[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lParam1`  
- [輸入] `lParam2`  
- [輸入] `iColumn`  
+ [in]*lParam1*  
+ [in]*lParam2*  
+ [in]*iColumn*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `tmFile`  
+ [in]*tmFile*  
  與檔案關聯的日期。  
   
- [輸出] `str`  
+ [out]*str*  
  字串，包含日期的格式的檔案的日期。  
   
 ### <a name="remarks"></a>備註  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lFileSize`  
+ [in]*lFileSize*  
  架構會顯示檔案的大小。  
   
- [輸出] `str`  
+ [out]*str*  
  字串，包含格式的檔案大小。  
   
 ### <a name="remarks"></a>備註  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iItem`  
+ [in]*iItem*  
  項目索引。  
   
- [輸入] `pItem`  
+ [in]*pItem*  
  A`LPAFX_SHELLITEMINFO`參數描述項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>備註  
  圖示的影像索引為基礎的系統映像清單。  
   
- 根據預設，這個方法依賴`pItem`參數。 值`iItem`不是預設的實作。 您可以使用`iItem`來實作自訂行為。  
+ 根據預設，這個方法依賴*pItem*參數。 值*iItem*不是預設的實作。 您可以使用*iItem*來實作自訂行為。  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  它必須擷取 shell 項目的文字時，架構會呼叫這個方法。  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iItem`  
+ [in]*iItem*  
  項目索引。  
   
- [輸入] `iColumn`  
+ [in]*iColumn*  
  感興趣的資料行。  
   
- [輸入] `pItem`  
+ [in]*pItem*  
  A`LPAFX_SHELLITEMINFO`參數描述項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>備註  
  每個項目`CMFCShellListCtrl`物件可能有一或多個資料行中的文字。 架構會呼叫這個方法，它會指定它感興趣的資料行。 如果您手動呼叫這個函式，您也必須指定您感興趣的資料行。  
   
- 根據預設，這個方法依賴`pItem`參數，來判斷其項目至處理序。 值`iItem`不是預設的實作。  
+ 根據預設，這個方法依賴*pItem*參數，來判斷其項目至處理序。 值*iItem*不是預設的實作。  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  它會設定的資料行名稱時，架構會呼叫這個方法。  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nTypes`  
+ [in]*nTypes*  
  項目的清單類型`CMFCShellListCtrl`物件支援。  
   
 ### <a name="remarks"></a>備註  

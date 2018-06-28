@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366326"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040882"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition 類別
 封裝線性轉換。  
@@ -84,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
-`pLibrary`  
+*pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
   
 ### <a name="return-value"></a>傳回值  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369410"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038525"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 類別
 協助網際網路檔案搜尋 Gopher 伺服器。  
@@ -119,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pConnection`  
+ *pConnection*  
  指標[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)物件。  
   
- `dwContext`  
- 作業的內容識別碼。 請參閱**備註**如需有關`dwContext`。  
+ *dwContext*  
+ 作業的內容識別碼。 請參閱**備註**如需有關*dwContext*。  
   
 ### <a name="remarks"></a>備註  
- 預設值為`dwContext`MFC 所傳送的`CGopherFileFind`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CGopherFileFind`物件。 當您建構`CGopherFileFind`物件，您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
+ 預設值為*dwContext* MFC 所傳送的`CGopherFileFind`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CGopherFileFind`物件。 當您建構`CGopherFileFind`物件，您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  呼叫此成員函式，以尋找 gopher 檔案。  
@@ -144,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `refLocator`  
+ *refLocator*  
  若要參考[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件。  
   
  *pstrString*  
  包含檔案名稱的字串指標。  
   
- `dwFlags`  
+ *dwFlags*  
  描述如何處理此工作階段旗標。 有效的旗標如下：  
   
 -   INTERNET_FLAG_RELOAD 從遠端伺服器取得資料，即使在本機快取。  
@@ -186,10 +186,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTimeStamp`  
+ *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。  
   
- `refTime`  
+ *refTime*  
  若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -210,10 +210,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `refTime`  
+ *refTime*  
  若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -234,10 +234,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTimeStamp`  
+ *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。  
   
- `refTime`  
+ *refTime*  
  若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  

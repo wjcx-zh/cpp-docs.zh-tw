@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f492e7fc3e29c74caba7303179b72c5dacad72e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377118"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040684"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 支援視覺化編輯之 OLE 文件的基底類別。  
@@ -119,15 +119,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|由架構呼叫以更新命令 UI 的 [貼上] 功能表選項。|  
   
 ## <a name="remarks"></a>備註  
- `COleDocument` 衍生自**CDocument**，可讓您使用 Microsoft Foundation 類別庫所提供的文件/檢視架構的 OLE 應用程式。  
+ `COleDocument` 衍生自`CDocument`，可讓您使用 Microsoft Foundation 類別庫所提供的文件/檢視架構的 OLE 應用程式。  
   
  `COleDocument` 將文件做為集合[CDocItem](../../mfc/reference/cdocitem-class.md)物件來處理 OLE 項目。 容器和伺服器應用程式需要這類架構，因為其文件中必須要能夠包含 OLE 項目。 [COleServerItem](../../mfc/reference/coleserveritem-class.md)和[COleClientItem](../../mfc/reference/coleclientitem-class.md)類別都衍生自`CDocItem`，管理應用程式和 OLE 項目之間的互動。  
   
- 如果您要撰寫簡單的容器應用程式，衍生您的文件的類別從`COleDocument`。 如果您正在撰寫一個容器應用程式，支援將連結至其文件所包含內嵌的項目，衍生您的文件的類別從[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)。 如果您要撰寫伺服器應用程式或組合容器/伺服器，衍生您的文件的類別從[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)。 `COleLinkingDoc` 和`COleServerDoc`衍生自`COleDocument`，因此這些類別會繼承中可用的所有服務`COleDocument`和**CDocument**。  
+ 如果您要撰寫簡單的容器應用程式，衍生您的文件的類別從`COleDocument`。 如果您正在撰寫一個容器應用程式，支援將連結至其文件所包含內嵌的項目，衍生您的文件的類別從[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)。 如果您要撰寫伺服器應用程式或組合容器/伺服器，衍生您的文件的類別從[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)。 `COleLinkingDoc` 和`COleServerDoc`衍生自`COleDocument`，因此這些類別會繼承中可用的所有服務`COleDocument`和`CDocument`。  
   
  若要使用`COleDocument`衍生的類別，將功能加入至管理應用程式的非 OLE 資料，以及內嵌或連結項目。 如果您定義`CDocItem`-衍生的類別來儲存應用程式的原生資料，您可以使用所定義的預設實作`COleDocument`儲存 OLE 和非 OLE 資料。 您也可以設計自己的資料結構來儲存非 OLE 資料分開 OLE 項目。 如需詳細資訊，請參閱文章[容器： 複合檔案](../../mfc/containers-compound-files.md)...  
   
- **CDocument**支援傳送郵件透過文件是否有郵件支援 (MAPI)。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail)複合文件來正確地處理。 如需詳細資訊，請參閱文章[MAPI](../../mfc/mapi.md)和[MFC 中的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)...  
+ `CDocument` 如果郵件支援 (MAPI) 存在於傳送郵件透過文件的支援。 `COleDocument` 已更新[OnFileSendMail](#onfilesendmail)複合文件來正確地處理。 如需詳細資訊，請參閱文章[MAPI](../../mfc/mapi.md)和[MFC 中的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -149,7 +149,7 @@ virtual void AddItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  要加入的文件項目指標。  
   
 ### <a name="remarks"></a>備註  
@@ -164,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptd`  
+ *ptd*  
  指標**DVTARGETDEVICE**資料結構，其中包含新的列印目標裝置的相關資訊。 可以是**NULL**。  
   
- `ppd`  
+ *ppd*  
  指標**PRINTDLG**資料結構，其中包含新的列印目標裝置的相關資訊。 可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -197,7 +197,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  指定是否啟用或停用複合檔案支援。  
   
 ### <a name="remarks"></a>備註  
@@ -208,14 +208,14 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
  複合檔案支援為啟用或停用文件之後，文件的存留期間不應該變更設定。  
   
 ##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
- 呼叫此函式可取得 OLE 項目目前啟動包含所識別的檢視和框架視窗中就地`pWnd`。  
+ 呼叫此函式可取得 OLE 項目目前啟動包含所識別的檢視和框架視窗中就地*pWnd*。  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  顯示容器文件視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -229,14 +229,14 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  參考**位置**設定值由先前呼叫`GetNextClientItem`; 起始值由`GetStartPosition`成員函式。  
   
 ### <a name="return-value"></a>傳回值  
  下一步，文件中的用戶端項目的指標或**NULL**如果沒有更多的用戶端項目。  
   
 ### <a name="remarks"></a>備註  
- 每次呼叫時，值之後`pos`設定文件，其中可能會或可能不是用戶端項目中的下一個項目。  
+ 每次呼叫時，值之後*pos*設定文件，其中可能會或可能不是用戶端項目中的下一個項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
@@ -249,14 +249,14 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  參考**位置**設定值由先前呼叫`GetNextItem`; 起始值由`GetStartPosition`成員函式。  
   
 ### <a name="return-value"></a>傳回值  
  指定位置處的文件項目指標。  
   
 ### <a name="remarks"></a>備註  
- 每次呼叫時，值之後`pos`設**位置**文件中的下一個項目值。 如果擷取的項目是在文件中的新值的最後一個項目`pos`是**NULL**。  
+ 每次呼叫時，值之後*pos*設**位置**文件中的下一個項目值。 如果擷取的項目是在文件中的新值的最後一個項目*pos*是**NULL**。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
@@ -269,14 +269,14 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  參考**位置**設定值由先前呼叫`GetNextServerItem`; 起始值由`GetStartPosition`成員函式。  
   
 ### <a name="return-value"></a>傳回值  
  下一步，文件中的伺服器項目的指標或**NULL**如果沒有更多的伺服器項目。  
   
 ### <a name="remarks"></a>備註  
- 每次呼叫時，值之後`pos`設定文件，其中可能會或可能不是伺服器項目中的下一個項目。  
+ 每次呼叫時，值之後*pos*設定文件，其中可能會或可能不是伺服器項目中的下一個項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
@@ -289,7 +289,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pView`  
+ *pView*  
  顯示文件的作用中的檢視物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -366,7 +366,7 @@ afx_msg void OnFileSendMail();
 ### <a name="remarks"></a>備註  
  `OnFileSendMail` 呼叫`OnSaveDocument`（儲存） 未命名和已修改的暫存檔案，然後透過電子郵件傳送文件序列化。 如果未修改文件，則不會需要的暫存檔案;原始會傳送。 `OnFileSendMail` 載入 MAPI32。如果它已經尚未載入的 DLL。  
   
- 不同於的實作`OnFileSendMail`如**CDocument**，此函式會正確處理複合檔案。  
+ 不同於的實作`OnFileSendMail`如`CDocument`，此函式會正確處理複合檔案。  
   
  如需詳細資訊，請參閱[MAPI 主題](../../mfc/mapi.md)和[MFC 中的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)文件...  
   
@@ -378,7 +378,7 @@ virtual void OnShowViews(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bVisible`  
+ *bVisible*  
  指出是否在文件變得可見或不可見。  
   
 ### <a name="remarks"></a>備註  
@@ -392,8 +392,8 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
- 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫**啟用**成員函式`CCmdUI`結構透過`pCmdUI`更新使用者介面。  
+ *pCmdUI*  
+ 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫`Enable`成員函式`CCmdUI`結構透過*pCmdUI*更新使用者介面。  
   
 ### <a name="remarks"></a>備註  
  `OnUpdateEditChangeIcon` 更新命令的使用者介面，根據有效的圖示有文件中。 覆寫此函式可變更的行為。  
@@ -406,8 +406,8 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
- 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫**啟用**成員函式`CCmdUI`結構透過`pCmdUI`更新使用者介面。  
+ *pCmdUI*  
+ 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫`Enable`成員函式`CCmdUI`結構透過*pCmdUI*更新使用者介面。  
   
 ### <a name="remarks"></a>備註  
  從開始，文件中第一個 OLE 項目`OnUpdateEditLinksMenu`存取每個項目、 測試是否項目為連結，和，如果它是連結，可讓連結命令。 覆寫此函式可變更的行為。  
@@ -420,8 +420,8 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
- 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫**啟用**成員函式`CCmdUI`結構透過`pCmdUI`更新使用者介面。  
+ *pCmdUI*  
+ 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫`Enable`成員函式`CCmdUI`結構透過*pCmdUI*更新使用者介面。  
   
 ### <a name="remarks"></a>備註  
  `OnUpdateObjectVerbMenu` 更新*ObjectName*根據有效的物件是否有文件中的命令的使用者介面。 如果物件存在， *ObjectName*已啟用 [編輯] 功能表的命令。 選取此功能表命令時，會顯示指令動詞 子功能表。 [指令動詞] 子功能表包含物件，例如編輯、 屬性，以及其他可用的所有動詞命令。 覆寫此函式可變更的行為。  
@@ -434,8 +434,8 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
- 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫**啟用**成員函式`CCmdUI`結構透過`pCmdUI`更新使用者介面。  
+ *pCmdUI*  
+ 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫`Enable`成員函式`CCmdUI`結構透過*pCmdUI*更新使用者介面。  
   
 ### <a name="remarks"></a>備註  
  啟用或停用項目是否可以貼到文件或未根據選擇性貼上的功能表命令。  
@@ -448,8 +448,8 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
- 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫**啟用**成員函式`CCmdUI`結構透過`pCmdUI`更新使用者介面。  
+ *pCmdUI*  
+ 指標`CCmdUI`結構，表示產生更新命令的功能表。 更新處理常式呼叫`Enable`成員函式`CCmdUI`結構透過*pCmdUI*更新使用者介面。  
   
 ### <a name="remarks"></a>備註  
  貼上 功能表命令和按鈕啟用或停用項目是否可以貼到文件或未根據。  
@@ -462,7 +462,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  要移除文件項目指標。  
   
 ### <a name="remarks"></a>備註  

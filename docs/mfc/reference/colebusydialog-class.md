@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374366"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040908"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 類別
 用於 OLE 的 [伺服器沒有回應] 或 [伺服器忙碌] 對話方塊。  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  如果**TRUE**，呼叫 [沒有回應] 對話方塊中，而不是 [伺服器忙碌] 對話方塊。 沒有回應 對話方塊中的文字稍有不同於 伺服器忙碌 對話方塊中的文字和 取消 按鈕已停用。  
   
- `dwFlags`  
+ *dwFlags*  
  建立旗標。 可以包含零或多個以位元 OR 運算子結合的下列值：  
   
 - **BZ_DISABLECANCELBUTTON**呼叫對話方塊時，停用 [取消] 按鈕。  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON**呼叫對話方塊時，停用 [重試] 按鈕。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設定為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377790"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039267"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 類別
 實作停駐的功能表列。  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
- [輸入] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwMode`  
- [輸入] `nLength`  
+ [in]*dwMode*  
+ [in]*nLength*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -333,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  新的父視窗的指標`CMFCMenuBar`物件。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  新的功能表列的樣式。  
   
- [輸入] `nID`  
+ [in]*nID*  
  子視窗功能表列的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -366,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  新的父視窗的指標`CMFCMenuBar`物件。  
   
- [輸入] `dwCtrlStyle`  
+ [in]*dwCtrlStyle*  
  其他新的功能表列的樣式。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  新的功能表列的主樣式。  
   
- [輸入] `rcBorders`  
+ [in]*rcBorders*  
  A`CRect`參數會指定框線的大小`CMFCMenuBar`物件。  
   
- [輸入] `nID`  
+ [in]*nID*  
  子視窗功能表列的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -406,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hMenu`  
+ [in]*hMenu*  
  功能表資源控制代碼。 `CreateFromMenu` 使用這項資源的範本作為`CMFCMenuBar`。  
   
- [輸入] `bDefaultMenu`  
+ [in]*bDefaultMenu*  
  布林值，指出新的功能表是否為預設的功能表。  
   
- [輸入] `bForceUpdate`  
+ [in]*bForceUpdate*  
  布林值，指出此方法是否強制功能表更新。  
   
 ### <a name="remarks"></a>備註  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  命令 ID 的按鈕**協助**下拉式方塊。  
   
- [輸入] `lpszPrompt`  
+ [in]*lpszPrompt*  
  字串，包含 framework 顯示下拉式方塊中，如果它是空白且非作用中的文字。 例如，"輸入的文字 」。  
   
- [輸入] `nComboBoxWidth`  
+ [in]*nComboBoxWidth*  
  像素為單位的下拉式方塊按鈕的寬度。  
   
 ### <a name="remarks"></a>備註  
  **協助**下拉式方塊類似**協助**下拉式方塊中的功能表列[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]。  
   
- 當您呼叫這個方法與`uiID`設為 0，這個方法會隱藏下拉式方塊。 否則，這個方法會顯示下拉式方塊會自動在功能表列的右邊。 呼叫這個方法之後，請呼叫[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)取得插入的指標[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件。  
+ 當您呼叫這個方法與*uiID*設為 0，這個方法會隱藏下拉式方塊。 否則，這個方法會顯示下拉式方塊會自動在功能表列的右邊。 呼叫這個方法之後，請呼叫[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)取得插入的指標[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件。  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  啟用快顯功能表的陰影。  
@@ -451,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  布林值參數，指出是否應該啟用快顯功能表的陰影。  
   
 ### <a name="remarks"></a>備註  
@@ -513,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -558,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bHorz`  
+ [in]*bHorz*  
  布林值參數，指定是否要傳回的水平或垂直字型。 `TRUE` 表示水平字型。  
   
 ### <a name="return-value"></a>傳回值  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iItem`  
+ [in]*iItem*  
  傳回功能表項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CMFCToolBarButton`物件中符合指定的索引`iItem`。 `NULL` 如果索引是無效的。  
+ 指標`CMFCToolBarButton`物件中符合指定的索引*iItem*。 `NULL` 如果索引是無效的。  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiBtn`  
- [輸入] `bByCommand`  
+ [in]*uiBtn*  
+ [in]*bByCommand*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -639,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bHighlight`  
+ [in]*bHighlight*  
  布林值參數，指出是否此架構會反白顯示無法使用功能表項目。  
   
 ### <a name="remarks"></a>備註  
@@ -740,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  字串，包含 Windows 登錄機碼的路徑。  
   
- [輸入] `nIndex`  
+ [in]*nIndex*  
  在功能表列控制項 ID。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  保留的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -765,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iHot`  
+ [in]*iHot*  
   
 ### <a name="remarks"></a>備註  
   
@@ -777,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hMenu`  
+ [in]*hMenu*  
  功能表的控制代碼附加至`CMFCMenuBar`物件。  
   
 ### <a name="remarks"></a>備註  
@@ -791,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -805,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  指標[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)使用者想要自訂的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
- [輸入] `pTI`  
+ [in]*點*  
+ [in]*pTI*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -839,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -871,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  字串，包含 Windows 登錄機碼的路徑。  
   
- [輸入] `nIndex`  
+ [in]*nIndex*  
  在功能表列控制項 ID。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  保留的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -896,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiResId`  
+ [in]*uiResId*  
  新的預設功能表資源識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -912,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bValue`  
+ [in]*bValue*  
   
 ### <a name="remarks"></a>備註  
   
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bMax`  
+ [in]*bMax*  
  布林值，指定的模式。 如需詳細資訊，請參閱＜備註＞一節。  
   
- [輸入] `pWnd`  
+ [in]*pWnd*  
  正在變更的 MDI 子視窗指標。  
   
- [輸入] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  布林值，指定是否要立即計算的功能表列版面配置。  
   
 ### <a name="remarks"></a>備註  
- MDI 子視窗會最大化時，功能表列附加至 MDI 主框架視窗會顯示 [系統] 功能表和**最小化**，**最大化**和**關閉**按鈕。 如果`bMax`是`TRUE`和`pWnd`不`NULL`、 最大化的 MDI 子視窗和功能表列必須併入額外的控制項。 否則，在功能表列會傳回其規則的狀態。  
+ MDI 子視窗會最大化時，功能表列附加至 MDI 主框架視窗會顯示 [系統] 功能表和**最小化**，**最大化**和**關閉**按鈕。 如果*bMax*是`TRUE`和*pWnd*不`NULL`、 最大化的 MDI 子視窗和功能表列必須併入額外的控制項。 否則，在功能表列會傳回其規則的狀態。  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  設定使用者建立功能表按鈕時，架構會使用執行階段類別資訊。  
@@ -947,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMenuButtonRTC`  
+ [in]*pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)類別的資訊衍生自[CMFCMenuButton 類別](../../mfc/reference/cmfcmenubutton-class.md)。  
   
 ### <a name="remarks"></a>備註  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpLogFont`  
+ [in]*lpLogFont*  
  指標[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327)結構，定義要設定的字型。  
   
- [輸入] `bHorz`  
- 如果您想要則為 TRUE`lpLogFont`參數使用垂直字型，也就是 FALSE，如果您想要用於水平字型。  
+ [in]*bHorz*  
+ 如果您想要則為 TRUE *lpLogFont*參數使用垂直字型，也就是 FALSE，如果您想要用於水平字型。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果該方法成功。否則`FALSE`。  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bOn`  
+ [in]*送行*  
  布林值，控制是否要顯示最近使用的功能表命令。  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShowAllCommands`  
+ [in]*bShowAllCommands*  
  布林值參數，指定是否快顯功能表會顯示所有功能表命令。  
   
 ### <a name="remarks"></a>備註  

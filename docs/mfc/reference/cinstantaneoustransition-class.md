@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d782f0f896837474c24255703a60e228737ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366732"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038402"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition 類別
 封裝瞬間的轉換。  
@@ -79,7 +79,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblFinalValue`  
+ *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
@@ -92,7 +92,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
-`pLibrary`  
+*pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
 
   

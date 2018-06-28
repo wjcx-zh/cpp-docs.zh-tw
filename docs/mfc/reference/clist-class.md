@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372517"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039132"
 ---
 # <a name="clist-class"></a>CList 類別
 支援可循序或依值存取之非唯一物件的排序清單。  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  指定清單項目 (可以是參考) 之類型的樣板參數。  
   
- `newElement`  
+ *newElement*  
  新的項目。  
   
- `pNewList`  
- 指標，另一個`CList`清單。 中的項目`pNewList`會加入此清單。  
+ *pNewList*  
+ 指標，另一個`CList`清單。 中的項目*pNewList*會加入此清單。  
   
 ### <a name="return-value"></a>傳回值  
  第一個版本會傳回**位置**新插入的項目值。  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  指定清單項目 (可以是參考) 之類型的樣板參數。  
   
- `newElement`  
+ *newElement*  
  要加入這份清單中的項目。  
   
- `pNewList`  
- 指標，另一個`CList`清單。 中的項目`pNewList`會加入此清單。  
+ *pNewList*  
+ 指標，另一個`CList`清單。 中的項目*pNewList*會加入此清單。  
   
 ### <a name="return-value"></a>傳回值  
  第一個版本會傳回**位置**新插入的項目值。  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBlockSize`  
+ *nBlockSize*  
  用於擴充清單的記憶體配置資料粒度。  
   
 ### <a name="remarks"></a>備註  
- 清單成長時，配置單位的記憶體`nBlockSize`項目。  
+ 清單成長時，配置單位的記憶體*nBlockSize*項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- 會以循序方式來尋找符合指定的第一個項目清單中搜尋`searchValue`。  
+ 會以循序方式來尋找符合指定的第一個項目清單中搜尋*searchValue*。  
   
 ```  
 POSITION Find(
@@ -223,13 +223,13 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  指定清單項目 (可以是參考) 之類型的樣板參數。  
   
- `searchValue`  
+ *searchValue*  
  要在清單中找到的值。  
   
- `startAfter`  
+ *startAfter*  
  搜尋開始位置。 如果未不指定任何值，標頭項目將會開始搜尋。  
   
 ### <a name="return-value"></a>傳回值  
@@ -239,18 +239,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- 會使用值`nIndex`為清單中的索引。  
+ 會使用值*nIndex*為清單中的索引。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  若要找的清單項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果`nIndex`是負數或太大。  
+ A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果*nIndex*是負數或太大。  
   
 ### <a name="remarks"></a>備註  
  從清單中，停止上的開頭啟動循序掃描*n*th 項目。  
@@ -338,7 +338,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**清單中的下一個項目的值。  
+ 取得所識別的清單項目*rPosition*，然後設定*rPosition*至**位置**清單中的下一個項目的值。  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,7 +349,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *型別*  
  樣板參數清單中指定的項目類型。  
   
- `rPosition`  
+ *rPosition*  
  參考**位置**傳回先前值`GetNext`， [GetHeadPosition](#getheadposition)，或其他成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
@@ -358,7 +358,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  如果清單不是**const**，`GetNext`傳回清單的元素的參考。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用`GetNext`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetHeadPosition`或**尋找**。  
+ 您可以使用`GetNext`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetHeadPosition`或`Find`。  
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
@@ -379,7 +379,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *型別*  
  樣板參數清單中指定的項目類型。  
   
- `rPosition`  
+ *rPosition*  
  參考**位置**傳回先前值`GetPrev`或其他成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
@@ -388,11 +388,11 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  如果清單不是**const**，`GetPrev`傳回清單的元素的參考。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用`GetPrev`反向反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetTailPosition`或**尋找**。  
+ 您可以使用`GetPrev`反向反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetTailPosition`或`Find`。  
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
- 如果擷取的項目是在清單中，第一則的新值`rPosition`設**NULL**。  
+ 如果擷取的項目是在清單中，第一則的新值*rPosition*設**NULL**。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -456,12 +456,12 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>參數  
  *位置*  
- 先前的 **、** 或 `GetNext`Find `GetPrev`成員函式呼叫所傳回的 **POSITION** 值。  
+ A**位置**傳回先前值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。  
   
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  指定清單項目類型的樣板參數。  
   
- `newElement`  
+ *newElement*  
  要加入這份清單中的項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>參數  
  *位置*  
- 先前的 **、** 或 `GetNext`Find `GetPrev`成員函式呼叫所傳回的 **POSITION** 值。  
+ A**位置**傳回先前值`GetNext`， `GetPrev`，或`Find`成員函式呼叫。  
   
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  指定清單項目 (可以是參考) 之類型的樣板參數。  
   
- `newElement`  
+ *newElement*  
  要加入這份清單中的項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -587,13 +587,13 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  **位置**来設定的項目。  
   
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  指定清單項目 (可以是參考) 之類型的樣板參數。  
   
- `newElement`  
+ *newElement*  
  要加入至清單的項目。  
   
 ### <a name="remarks"></a>備註  

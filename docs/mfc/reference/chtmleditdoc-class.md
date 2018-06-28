@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366967"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038955"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 類別
 與[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)，提供 WebBrowser 編輯平台的 MFC 文件檢視架構內容中的功能。  
@@ -100,7 +100,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszURL`  
+ *lpszURL*  
  若要開啟 URL。  
   
 ### <a name="return-value"></a>傳回值  

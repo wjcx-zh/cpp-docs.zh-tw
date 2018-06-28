@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375933"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038204"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 類別
 實作建立 OLE 物件 (例如伺服器、Automation 物件和文件) 的 OLE Class Factory。  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  代表此物件 factory 的 OLE 類別 ID 的參考。  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  此處理站可建立的 c + + 物件的執行階段類別的指標。  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  表示應用程式的單一執行個體是否可以支援多個具現化。 如果**TRUE**，針對每個要求建立物件啟動應用程式的多個執行個體。  
   
- `nFlags`  
+ *nFlags*  
  包含一或多個下列旗標：  
   
 - **afxRegDefault**的執行緒模式設為 ThreadingModel = Apartment。  
   
 - **afxRegInsertable**讓控制項出現在**插入物件**OLE 物件 對話方塊。  
   
-- `afxRegApartmentThreading` 在 ThreadingModel 登錄中設定執行緒模型 = Apartment。  
+- **afxRegApartmentThreading** ThreadingModel 登錄中設定執行緒模型 = Apartment。  
   
 - **afxRegFreeThreading** ThreadingModel 登錄中設定執行緒模型 = 可用。  
   
      您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設定 ThreadingModel = Both。 請參閱[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)執行緒模型註冊的詳細資訊的 Windows SDK 中。  
   
- `lpszProgID`  
+ *lpszProgID*  
  指向字串，包含動詞化的程式識別項，例如"Microsoft Excel"。  
   
 ### <a name="remarks"></a>備註  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- 從控制項之 DLL 要求一個唯一的授權金鑰，並將其儲存在`BSTR`指向`pbstrKey`。  
+ 從控制項之 DLL 要求一個唯一的授權金鑰，並將其儲存在`BSTR`指向*pbstrKey*。  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwReserved`  
+ *dwReserved*  
  保留供未來使用。  
   
- `pbstrKey`  
+ *pbstrKey*  
  指標`BSTR`將儲存的授權金鑰。  
   
 ### <a name="return-value"></a>傳回值  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszProgID`  
+ *lpszProgID*  
  指向字串，包含人類看得懂的程式識別項，例如"Excel.Document.5"。  
   
- `bRegister`  
+ *bRegister*  
  判斷是否要註冊的控制項類別的物件 factory。  
   
 ### <a name="remarks"></a>備註  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** OLE 系統登錄中註冊這個物件 factory。 通常會呼叫此函式[Afxenablecontrolcontainer](../../mfc/reference/cwinapp-class.md#initinstance)應用程式啟動時。  
   
-- **UpdateRegistry (** `bRegister` **)** 這種形式的函式是可覆寫。 如果`bRegister`是**TRUE**，此函式會向系統登錄註冊控制項類別。 否則，它會移除註冊類別。  
+- **UpdateRegistry (** `bRegister` **)** 這種形式的函式是可覆寫。 如果*bRegister*是**TRUE**，此函式會向系統登錄註冊控制項類別。 否則，它會移除註冊類別。  
   
      如果您使用 MFC ActiveX ControlWizard 來建立專案時，ControlWizard 提供覆寫，此純虛擬函式。  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bRegister`  
+ *bRegister*  
  判斷是否要註冊的控制項類別的物件 factory。  
   
 ### <a name="return-value"></a>傳回值  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bstrKey`  
+ *bstrKey*  
  A`BSTR`儲存授權字串的容器的版本。  
   
 ### <a name="return-value"></a>傳回值  
  如果執行階段授權有效，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 預設版本呼叫[GetLicenseKey](#getlicensekey)取得控制項的副本的授權字串並比較它與中的字串`bstrKey`。 如果兩個字串相符，函數會傳回非零值;否則會傳回 0。  
+ 預設版本呼叫[GetLicenseKey](#getlicensekey)取得控制項的副本的授權字串並比較它與中的字串*bstrKey*。 如果兩個字串相符，函數會傳回非零值;否則會傳回 0。  
   
  您可以覆寫此函式可提供自訂的驗證的授權。  
   

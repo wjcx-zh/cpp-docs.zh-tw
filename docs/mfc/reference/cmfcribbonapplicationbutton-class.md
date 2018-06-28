@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369160"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037417"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 類別
 實作位於應用程式視窗左上角的特殊按鈕。 按一下按鈕時，按鈕會開啟通常包含一般 [ **檔案** ] 命令 (例如 [ **開啟**]、[ **儲存**] 和 [ **結束**]) 的功能表。  
@@ -98,10 +98,10 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiBmpResID`  
+ [in]*uiBmpResID*  
  在應用程式按鈕上顯示的影像資源識別碼。  
   
- [輸入] `hBmp`  
+ [in]*hBmp*  
  在應用程式按鈕上顯示點陣圖的控制代碼。  
   
 ### <a name="remarks"></a>備註  

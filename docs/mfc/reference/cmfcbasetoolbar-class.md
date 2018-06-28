@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366313"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037840"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 類別
 工具列的基底類別。  
@@ -90,7 +90,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `size`  
+ [out]*大小*  
  工具列的大小下限。  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
@@ -101,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndOldParent`  
+ [in]*pWndOldParent*  
  先前的父視窗的指標。  
   
 ## <a name="see-also"></a>另請參閱  

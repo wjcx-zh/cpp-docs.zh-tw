@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366339"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037611"
 ---
 # <a name="clistview-class"></a>CListView 類別
 可簡化使用清單控制項和[CListCtrl](../../mfc/reference/clistctrl-class.md)，封裝清單控制項功能，透過 MFC 的文件檢視架構的類別。  
@@ -105,7 +105,7 @@ void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImageList`  
+ *nImageList*  
  映像以移除以零為起始的索引。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bddd7274feb9ecde268a94d7e9a6e857c906650
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e6c4493239030380ab935d473af48d4107556d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376814"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041418"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 類別
 包含編輯控制項的工具列按鈕 ( [CEdit 類別](../../mfc/reference/cedit-class.md))。  
@@ -110,7 +110,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|由架構呼叫以計算指定之裝置內容和停駐狀態的按鈕的大小。 (覆寫[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|插入新的工具列按鈕時由架構呼叫。 (覆寫[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
 |[CMFCToolBarEditBoxButton::OnClick](#onclick)|當使用者按一下滑鼠按鈕時由架構呼叫。 (覆寫[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)。)|  
-|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|為父工具列處理時，由架構呼叫`WM_CTLCOLOR`訊息。 (覆寫[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)。)|  
+|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|為父工具列處理 WM_CTLCOLOR 訊息時由架構呼叫。 (覆寫[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)。)|  
 |`CMFCToolBarEditBoxButton::OnDraw`|由架構呼叫以繪製按鈕，使用指定的樣式和選項。 (覆寫[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw)。)|  
 |`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|由架構呼叫以繪製按鈕**命令**窗格**自訂** 對話方塊。 (覆寫[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。)|  
 |[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|當全域字型變更時由架構呼叫。 (覆寫[CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)。)|  
@@ -133,7 +133,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  2. 建構`CMFCToolBarEditBoxButton`物件。  
   
- 3. 在訊息處理常式來處理`AFX_WM_RESETTOOLBAR`訊息，請使用新的下拉式方塊按鈕取代 dummy 按鈕[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
+ 3. 在處理 AFX_WM_RESETTOOLBAR 訊息的訊息處理常式，取代 dummy 按鈕新下拉式方塊按鈕使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
   
  如需詳細資訊，請參閱[逐步解說： 將工具列控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)。  
   
@@ -177,16 +177,16 @@ CMFCToolBarEditBoxButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  指定控制項 id。  
   
- [輸入] `iImage`  
+ [in]*iImage*  
  指定工具列影像的以零為起始的索引。 映像位於[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別會維護。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  指定的編輯控制項的樣式。  
   
- [輸入] `iWidth`  
+ [in]*iWidth*  
  編輯控制項的像素為單位指定寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
  要從中複製來源 按鈕參考。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src` 必須是型別`CMFCToolBarEditBoxButton`。  
+ 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 *src*必須是型別`CMFCToolBarEditBoxButton`。  
   
 ##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
  建立新的編輯控制項中的按鈕。  
@@ -220,10 +220,10 @@ virtual CEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] pWndParent`  
+ [in]*pWndParent*  
  指定編輯控制項的父視窗。 它不得為 NULL。  
   
- `[in] rect`  
+ [in]*rect*  
  指定編輯控制項的大小和位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -240,7 +240,7 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
  要擷取按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -257,7 +257,7 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
  要從中擷取內容 按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -287,7 +287,7 @@ virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `rectBorder`  
+ [out]*rectBorder*  
  若要參考`CRect`接收的週框物件。  
   
 ### <a name="remarks"></a>備註  
@@ -368,11 +368,11 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iNotifyCode`  
+ [in]*iNotifyCode*  
  與命令相關聯的通知訊息。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果按鈕處理`WM_COMMAND`訊息，或`FALSE`表示為父工具列必須處理訊息。  
+ `TRUE` 如果按鈕將 WM_COMMAND 訊息處理，或`FALSE`表示為父工具列必須處理訊息。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法，當它是傳送[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)父視窗的訊息。  
@@ -399,7 +399,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  新的父視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -415,10 +415,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  未使用。  
   
- [輸入] `bDelay`  
+ [in]*bDelay*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -428,7 +428,7 @@ virtual BOOL OnClick(
  這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) 藉由傳回非零值，如果內部`CEdit`物件為可見。  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
- 為父工具列處理時，由架構呼叫`WM_CTLCOLOR`訊息。  
+ 為父工具列處理 WM_CTLCOLOR 訊息時由架構呼叫。  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -437,10 +437,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容顯示的按鈕。  
   
- [輸入] `nCtlColor`  
+ [in]*nCtlColor*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -481,11 +481,11 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
  指定按鈕是否可見。 如果這個參數是`TRUE`，按鈕會顯示。 否則，按鈕看不到。  
   
 ### <a name="remarks"></a>備註  
- 此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 來顯示按鈕`bShow`是`TRUE`。 否則，這個方法會隱藏按鈕。  
+ 此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 來顯示按鈕*bShow*是`TRUE`。 否則，這個方法會隱藏按鈕。  
   
 ##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
  為父工具列變更它的大小或位置，這項變更會使按鈕將大小變更時由架構呼叫。  
@@ -495,7 +495,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iSize`  
+ [in]*iSize*  
  新按鈕，像素為單位的寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -513,16 +513,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  未使用。  
   
- [輸入] `iButtonIndex`  
+ [in]*iButtonIndex*  
  未使用。  
   
- [輸入] `wndToolTip`  
+ [in]*wndToolTip*  
  在顯示工具提示文字的控制項。  
   
- [輸出] `str`  
+ [out]*str*  
  A`CString`接收更新的工具提示文字的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -539,7 +539,7 @@ virtual void SetContents(const CString& sContents);
 ```  
   
 ### <a name="parameters"></a>參數  
- `[in] sContents`  
+ [in]*sContents*  
  指定要設定的新文字。  
   
 ##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
@@ -552,10 +552,10 @@ static BOOL SetContentsAll(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
  指定控制項變更文字的命令的識別碼。  
   
- [輸入] `strContents`  
+ [in]*strContents*  
  指定要設定的新文字。  
   
 ### <a name="return-value"></a>傳回值  
@@ -569,7 +569,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmd`  
+ [in]*uiCmd*  
  快顯功能表資源識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -583,7 +583,7 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bFlat`  
+ [in]*bFlat*  
  編輯方塊按鈕平面樣式。 如果這個參數是`TRUE`的平面樣式外觀會啟用，否則停用的平面樣式外觀。  
   
 ### <a name="remarks"></a>備註  
@@ -597,11 +597,11 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nStyle`  
+ [in]*nStyle*  
  若要設定新的樣式。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會設定[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)至`nStyle`它也會停用在文字方塊中，當應用程式為自訂模式，並讓它無法自訂模式應用程式時 (請參閱[CMFCToolBar:: SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)和[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode))。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)如需有效的樣式旗標的清單。  
+ 這個方法會設定[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)至*nStyle*它也會停用在文字方塊中為自訂模式，或讓它無法自訂模式 （請參閱應用程式時的應用程式[CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)和[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode))。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)如需有效的樣式旗標的清單。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

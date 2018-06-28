@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369186"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038428"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 類別
 `CMFCRibbonStatusBarPane`類別實作可以加入功能區狀態列的功能區項目。  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nCmdID`  
+ [in]*nCmdID*  
  指定命令 ID 的窗格。  
   
- [輸入] `lpszText`  
+ [in]*lpszText*  
  指定要在窗格中顯示的文字字串。  
   
- [輸入] `bIsStatic`  
+ [in]*bIsStatic*  
  如果`TRUE`，無法反白顯示或按一下選取 [狀態] 窗格。  
   
- [輸入] `hIcon`  
+ [in]*hIcon*  
  指定要在窗格中顯示的圖示的控制代碼。  
   
- [輸入] `lpszAlmostLargeText`  
+ [in]*lpszAlmostLargeText*  
  指定的最長的文字字串，可顯示的窗格。  
   
- [輸入] `hBmpAnimationList`  
+ [in]*hBmpAnimationList*  
  指定將用於動畫的影像清單控制代碼。  
   
- [輸入] `cxAnimation`  
+ [in]*cxAnimation*  
  指定的寬度，單位為像素用於動畫的影像清單中的圖示。  
   
- [輸入] `clrTrnsp`  
+ [in]*clrTrnsp*  
  指定用於動畫的影像清單中的影像的透明色彩。  
   
- [輸入] `uiAnimationListResID`  
+ [in]*uiAnimationListResID*  
  指定用於動畫的影像清單的資源識別碼。  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CDC*`  
+ [in]*CDC**  
   
 ### <a name="remarks"></a>備註  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszAlmostLargeText`  
+ [in]*lpszAlmostLargeText*  
  指定的最長的字串，而不會截斷狀態列窗格可以顯示。  
   
 ### <a name="remarks"></a>備註  
- 程式庫會計算文字的大小，`lpszAlmostLargeText`指定並據以調整窗格的大小。 如果仍然無法容納在窗格中，文字會被截斷。  
+ 程式庫會計算文字的大小， *lpszAlmostLargeText*指定並據以調整窗格的大小。 如果仍然無法容納在窗格中，文字會被截斷。  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  附加到狀態列窗格可用於動畫的影像清單。  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hBmpAnimationList`  
+ [in]*hBmpAnimationList*  
  指定影像清單控制代碼。  
   
- [輸入] `cxAnimation`  
+ [in]*cxAnimation*  
  指定的寬度，單位為像素的影像清單中的框架。  
   
- [輸入] `clrTransp`  
+ [in]*clrTransp*  
  指定的影像清單的透明色彩。  
   
- [輸入] `uiAnimationListResID`  
+ [in]*uiAnimationListResID*  
  指定的影像清單的資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nAlign`  
+ [in]*nAlign*  
  指定的文字對齊方式。  
   
 ### <a name="remarks"></a>備註  
- `nAlign` 可以有下列值之一：  
+ *nAlign*可以有下列值之一：  
   
 - `TA_LEFT`： 靠左對齊  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nFrameDelay`  
+ [in]*nFrameDelay*  
  指定動畫畫面播放速率，以毫秒為單位。  
   
- [輸入] `nDuration`  
+ [in]*nDuration*  
  指定要播放動畫，以毫秒為單位的時間長度。 使用-1 為無限迴圈。  
   
 ### <a name="remarks"></a>備註  

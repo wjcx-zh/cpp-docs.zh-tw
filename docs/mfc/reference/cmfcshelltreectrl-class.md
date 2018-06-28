@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371442"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041941"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 類別
 `CMFCShellTreeCtrl`類別會擴充[CTreeCtrl 類別](../../mfc/reference/ctreectrl-class.md)透過顯示 Shell 項目階層。  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  布林值，指定是否啟用快顯功能表。  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `strPath`  
+ [out]*strPath*  
  字串參數的參考。 方法會寫入此參數中的項目的路徑。  
   
- [輸入] `htreeItem`  
+ [in]*htreeItem*  
  方法會擷取此樹狀目錄控制項目的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果此方法失敗，`strPath`包含空字串。  
+ 如果此方法失敗， *strPath*包含空字串。  
   
- 如果您未指定`hTreeItem`，這個方法會嘗試取得目前選取項目的字串。 如果不選取任何項目和`hTreeItem`是`NULL`，此方法失敗。  
+ 如果您未指定*hTreeItem*，這個方法會嘗試取得目前選取項目的字串。 如果不選取任何項目和*hTreeItem*是`NULL`，此方法失敗。  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  將指標傳回至[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)與此相關聯的物件[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `message`  
- [輸入] `wParam`  
- [輸入] `lParam`  
- [輸入] `pLResult`  
+ [in]*訊息*  
+ [in]*wParam*  
+ [in]*lParam*  
+ [in]*pLResult*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pItem`  
- [輸入] `bSelected`  
+ [in]*pItem*  
+ [in]*bSelected*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pItem`  
+ [in]*pItem*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszPath`  
+ [in]*lpszPath*  
  字串，指定項目的路徑。  
   
- [輸入] `lpidl`  
+ [in]*lpidl*  
  指定的項目 PIDL  
   
 ### <a name="return-value"></a>傳回值  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwFlags`  
+ [in]*dwFlags*  
  要設定的旗標。  
   
- [輸入] `bRefresh`  
+ [in]*bRefresh*  
  布林值，指定是否`CMFCShellTreeCtrl`應該立即重新整理。  
   
 ### <a name="remarks"></a>備註  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pShellList`  
+ [in]*pShellList*  
  指標`CMFCShellListCtrl`物件。  
   
 ### <a name="remarks"></a>備註  

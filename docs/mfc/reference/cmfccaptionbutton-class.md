@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368773"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040625"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
 `CMFCCaptionButton`類別實作停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nHit`  
+ [in]*nHit*  
  命令與按鈕相關聯。  
   
- [輸入] `bLeftAlign`  
+ [in]*bLeftAlign*  
  指定按鈕是否靠左對齊。  
   
- 下表列出可能的值為`nHit`參數。  
+ 下表列出可能的值為*nHit*參數。  
   
 |值|命令|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 左或向右箭號映像識別碼;`FALSE`的向上或向下箭號影像 Id。  
   
- [輸入] `bMaximized`  
+ [in]*bMaximized*  
  `TRUE` 最大化映像識別碼;`FALSE`最小化映像識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `ptTo`  
+ [in]*ptTo*  
  新位置。  
   
- [輸入] `bHide`  
+ [in]*bHide*  
  是否要顯示的按鈕。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  按鈕的裝置內容的指標。  
   
- [輸入] `bActive`  
+ [in]*bActive*  
  是否要繪製作用中的按鈕影像。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  保留供衍生類別中使用。  
   
- [輸入] `bMaximized`  
+ [in]*bMaximized*  
  是否要繪製最大化的按鈕影像。  
   
- [輸入] `bDisabled`  
+ [in]*bDisabled*  
  是否要繪製啟用的按鈕影像。  
   
 ### <a name="remarks"></a>備註  
- `bMaximized`參數會使用最大化 按鈕時，或最小化按鈕。  
+ *BMaximized*參數會使用最大化 按鈕時，或最小化按鈕。  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  設定迷你標題列的大小。  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSet`  
+ [in]*bSet*  
  `TRUE` 迷你標題列的高度;`FALSE`預設標題列的高度。  
   
 ## <a name="see-also"></a>另請參閱  

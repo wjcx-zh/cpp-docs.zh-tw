@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370805"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041977"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 類別
 表示可以在色彩對話方塊中選取自訂色彩 屬性頁面。  
@@ -91,9 +91,9 @@ void Setup(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `R`|紅元件的 RGB 值。|  
-|[輸入] `G`|綠元件的 RGB 值。|  
-|[輸入] `B`|藍色元件的 RGB 值。|  
+|[in]*R*|紅元件的 RGB 值。|  
+|[in]*G*|綠元件的 RGB 值。|  
+|[in]*B*|藍色元件的 RGB 值。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會更新目前的 RGB 和相關聯的 HLS （色調、 亮度及飽和度） 色彩值的屬性頁。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)架構初始化色彩 對話方塊，或在使用者按下滑鼠左的按鈕時，方法會呼叫這個方法。 如需有關`CMFCColorDialog`，請參閱[CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)。  

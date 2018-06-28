@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376016"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041954"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 提供 Windows 通用標頭控制項的功能。  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nColumn`  
+ *nColumn*  
  資料行值，指出其清除篩選。  
   
 ### <a name="return-value"></a>傳回值  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定標頭控制項的樣式。 如需標頭控制項樣式的說明，請參閱[標頭控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定標頭控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定標頭控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定標頭控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果初始化成功，則為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CHeaderCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫**建立**，建立標題控制項，並將它附加至`CHeaderCtrl`物件。  
+ 您建構`CHeaderCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，建立標題控制項，並將它附加至`CHeaderCtrl`物件。  
   
  除了標頭控制項樣式中，您可以使用下列常見的控制項樣式判斷標題控制項的定位方式，並調整其大小 (請參閱[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)如需詳細資訊):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP**透過這些使用者可以使用 TAB 鍵移動的控制項的指定任意數目的其中一個。 TAB 鍵移至所指定的下一個控制項的使用者**WS_TABSTOP**樣式。  
   
- 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
+ 如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是`Create`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  標題控制項的樣式。 如需標頭控制項樣式的說明，請參閱[標頭控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。 請參閱[建立](#create)其他樣式的清單。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是**建立**套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+ 使用`CreateEx`而不是`Create`套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
 ##  <a name="createdragimage"></a>  Cheaderctrl:: Createdragimage  
  建立標題控制項中的項目影像的透明版本。  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  標題控制項內的項目以零為起始的索引。 指派給此項目影像是透明的映像的基礎。  
   
 ### <a name="return-value"></a>傳回值  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  指定要刪除的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，描述要繪製的項目。  
   
 ### <a name="remarks"></a>備註  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CHeaderCtrl`物件。  
   
- 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
+ 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件*lpDrawItemStruct*之前此成員函式會結束。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nColumn`  
+ *nColumn*  
  若要編輯資料行。  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  如果使用者正在編輯篩選條件的值，指定如何處理使用者的編輯變更時[HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)傳送訊息。  
   
  指定`true`捨棄使用者所做的變更或`false`接受使用者所做的變更。  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  指定要擷取之項目的以零為起始的索引。  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  指標[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)接收新項目的結構。 此結構會搭配`InsertItem`和`SetItem`成員函式。 在設定任何旗標**遮罩**項目會確保傳回時正確填入對應的項目中的值。 如果**遮罩**項目設為零，其他結構項目中的值是無意義。  
   
 ### <a name="return-value"></a>傳回值  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iItem`|其樣式為標頭項目的以零為起始的索引`HDF_SPLITBUTTON`。 如需詳細資訊，請參閱`fmt`隸屬[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構。|  
-|[輸出] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收週框矩形資訊的結構。|  
+|[in]*iItem*|其樣式為標頭項目的以零為起始的索引`HDF_SPLITBUTTON`。 如需詳細資訊，請參閱`fmt`隸屬[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構。|  
+|[out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果此函式成功。否則， `false`。  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  標題控制項項目以零為起始的索引。  
   
- `lpRect`  
+ *lpRect*  
  位址指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收週框矩形資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>參數  
- `piArray`  
+ *piArray*  
  在控制項標頭中，以其出現從左到右的順序接收項目的索引值的緩衝區的位址指標。  
   
- `iCount`  
+ *iCount*  
  標頭控制項項目數目。 必須為非負數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收週框矩形資訊的結構。|  
+|[out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果此函式成功。否則， `false`。  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、out] `phdhti`|指標[HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245)結構，以指定要測試的點，並接收測試的結果。|  
+|[in、 out]*phdhti*|指標[HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245)結構，以指定要測試的點，並接收測試的結果。|  
   
 ### <a name="return-value"></a>傳回值  
  標頭項目，如果有的話，在指定的位置以零起始的索引否則為-1。  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  要插入之項目之以零起始的索引。 如果值為零，此標題控制項的開頭插入項目。 如果值大於最大值，此項目插入標頭控制項的結尾。  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWidth`  
+ *nWidth*  
  指定寬度邊界四周內現有的標頭控制項的點陣圖的像素為單位。  
   
 ### <a name="return-value"></a>傳回值  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iItem`|標頭項目的以零為起始的索引。|  
+|[in]*iItem*|標頭項目的以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  指標的位置。 標題控制項中，反白顯示適當的分割線根據指標的位置。  
   
- `nIndex`  
+ *nIndex*  
  反白顯示分割線的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pImageList`  
+ *pImageList*  
  指標`CImageList`物件，其中包含要指派至標題控制項之影像清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  可操作的項目以零為起始的索引。  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  指標[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構，其中包含新項目的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iCount`  
+ *iCount*  
  標頭控制項項目數目。  
   
- `piArray`  
+ *piArray*  
  在控制項標頭中，以其出現從左到右的順序接收項目的索引值的緩衝區的位址指標。  
   
 ### <a name="return-value"></a>傳回值  

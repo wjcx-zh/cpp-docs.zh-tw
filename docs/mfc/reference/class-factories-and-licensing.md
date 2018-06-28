@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367070"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038224"
 ---
 # <a name="class-factories-and-licensing"></a>Class Factory 和授權
 若要建立 OLE 控制項的執行個體，容器應用程式會呼叫控制項之 Class Factory 的成員函式。 由於您的控制項是一個實際的 OLE 物件，Class Factory 會負責為您的控制項建立執行個體。 每個 OLE 控制項類別必須有一個 Class Factory。  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hInstance`  
+ *hInstance*  
  執行個體控制代碼與授權控制項相關聯的 dll。  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  指向以 null 結尾字元字串，包含授權檔名。  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  必須符合授權檔案的開頭找到序列的位元組序列的點。  
   
- `cch`  
- 中的字元數`pszLicFileContents`。  
+ *cch*  
+ 中的字元數*pszLicFileContents*。  
   
 ### <a name="return-value"></a>傳回值  
- 如果授權檔案存在，而且在中的字元序列的開頭為非零`pszLicFileContents`; 否則為 0。  
+ 如果授權檔案存在，而且在中的字元序列的開頭為非零*pszLicFileContents*; 否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`cch`為-1，這個函式使用：  
+ 如果*cch*為-1，這個函式使用：  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

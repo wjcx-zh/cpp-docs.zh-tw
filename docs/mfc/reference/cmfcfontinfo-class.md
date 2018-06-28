@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368289"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038597"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 `CMFCFontInfo`類別所描述的名稱和字型的其他屬性。  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  字型的名稱。 如需詳細資訊，請參閱`lfFaceName`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
- [輸入] `lpszScript`  
+ [in]*lpszScript*  
  指令碼 （字元集） 的字型名稱。  
   
- [輸入] `nCharSet`  
+ [in]*nCharSet*  
  指定字型的字元集 （指令碼） 的值。 如需詳細資訊，請參閱`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
- [輸入] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  值，指定字距和系列的字型。 如需詳細資訊，請參閱`lfPitchAndFamily`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
- [輸入] `nType`  
+ [in]*n*  
  指定的字型類型的值。 這個參數可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
   
- [輸入] `src`  
+ [in]*src*  
  現有`CMFCFontInfo`其成員會用來建構這個物件`CMFCFontInfo`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱`nCharSet`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
+ 如需詳細資訊，請參閱*nCharSet*參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  指定的字幅 （點大小） 和字型家族 （例如，新細明體，新細明體和等寬） 的值。  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱`nPitchAndFamily`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
+ 如需詳細資訊，請參閱*nPitchAndFamily*參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  指定的字型類型的值。  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱`nType`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
+ 如需詳細資訊，請參閱*n*參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  字型的名稱： 例如，**新細明體**。  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱`lpszName`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
+ 如需詳細資訊，請參閱*lpszName*參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  字元集 （指令碼） 與字型相關聯的名稱。  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱`lpszScript`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
+ 如需詳細資訊，請參閱*lpszScript*參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10f183ed498fde15166a6e8ee7e7d10cfe9f60d7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378615"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040931"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -399,19 +399,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPageIdx`  
+ [in]*nPageIdx*  
  指定的以零為起始的頁面索引。  
   
- [輸入] `lpszGroupName`  
+ [in]*lpszGroupName*  
  指定群組名稱。  
   
- [輸入] `bBottomLocation`  
+ [in]*bBottomLocation*  
  `TRUE` 建立群組，底部的 工作窗格控制項。否則， `FALSE`。  
   
- [輸入] `bSpecial`  
+ [in]*bSpecial*  
  `TRUE` 將標示為此群組*特殊*群組; 否則`FALSE`。 如需特殊群組的詳細資訊，請參閱的 < 備註 > 一節`CMFCTasksPane`。  
   
- [輸入] `hIcon`  
+ [in]*hIcon*  
  指定要顯示群組標題中的圖示。  
   
 ### <a name="return-value"></a>傳回值  
@@ -434,20 +434,20 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定的索引標籤會加入其中的群組。  
   
- [輸入] `lpszLabelName`  
+ [in]*lpszLabelName*  
  指定標籤的名稱。  
   
- [輸入] `nTaskIcon`  
+ [in]*nTaskIcon*  
  指定要顯示標籤旁邊的圖示。 架構儲存圖示的影像清單中。 這個參數是該清單中的索引。  
   
- [輸入] `bIsBold`  
+ [in]*bIsBold*  
  `TRUE` 若要以粗體文字; 顯示標籤否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- 起始的索引標籤已新增的群組，則為-1 所指定的群組`nGroup`不存在。  
+ 起始的索引標籤已新增的群組，則為-1 所指定的群組*nGroup*不存在。  
   
 ### <a name="remarks"></a>備註  
  架構會以不同方式處理工作和標籤。 當使用者按一下工作時，framework 就會執行命令。 當使用者按下標籤時，會不執行任何命令。 如需詳細資訊，請參閱[cmfctaskspane:: Addtask](#addtask)。  
@@ -462,14 +462,14 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定群組的索引。 這個方法會將此參數所指定的群組 MRU 檔案清單。  
   
- [輸入] `nMaxFiles`  
+ [in]*nMaxFiles*  
  指定要顯示最近使用的檔案清單中的檔案數目。  
   
 ### <a name="return-value"></a>傳回值  
- 會加入 MRU 檔案清單，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
+ 會加入 MRU 檔案清單，群組的以零為起始的索引則為-1 所指定的群組*nGroup*不存在。  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  將頁面加入工作窗格。  
@@ -479,7 +479,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszPageLabel`  
+ [in]*lpszPageLabel*  
  指定頁面標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -493,7 +493,7 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -512,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定的工作加入其中的群組索引。  
   
- [輸入] `lpszTaskName`  
+ [in]*lpszTaskName*  
  指定工作的名稱。  
   
- [輸入] `nTaskIcon`  
+ [in]*nTaskIcon*  
  指定要顯示工作旁邊的圖示。 架構儲存圖示的影像清單中。 這個參數是該清單中的索引。  
   
- [輸入] `uiCommandID`  
- 指定要在使用者按一下工作時所執行的命令的命令識別碼。 工作會被視為標籤如果`uiCommandID`為 0。  
+ [in]*uiCommandID*  
+ 指定要在使用者按一下工作時所執行的命令的命令識別碼。 工作會被視為標籤如果*uiCommandID*為 0。  
   
- [輸入] `dwUserData`  
+ [in]*dwUserData*  
  指定要與工作相關聯的使用者定義資料。  
   
 ### <a name="return-value"></a>傳回值  
- 工作已加入其中，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
+ 工作已加入其中，群組的以零為起始的索引則為-1 所指定的群組*nGroup*不存在。  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  將子視窗加入工作窗格。  
@@ -543,23 +543,23 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定視窗會加入其中的群組索引。  
   
- [輸入] `hwndTask`  
+ [in]*hwndTask*  
  指定要加入之視窗的控制代碼。  
   
- [輸入] `nWndHeight`  
+ [in]*nWndHeight*  
  指定視窗的高度。  
   
- [輸入] `bAutoDestroyWindow`  
+ [in]*bAutoDestroyWindow*  
  `TRUE` 若要移除工作; 時終結視窗否則， `FALSE`。  
   
- [輸入] `dwUserData`  
+ [in]*dwUserData*  
  指定與工作相關聯的使用者定義資料。  
   
 ### <a name="return-value"></a>傳回值  
- 會加入 [] 視窗中，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
+ 會加入 [] 視窗中，群組的以零為起始的索引則為-1 所指定的群組*nGroup*不存在。  
   
 ### <a name="remarks"></a>備註  
  呼叫此方法以將控制項加入工作窗格。 比方說，您可以將編輯控制項的功能，例如搜尋列。  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bCollapse`  
- [輸入] `nPageIdx`  
+ [in]*bCollapse*  
+ [in]*nPageIdx*  
   
 ### <a name="remarks"></a>備註  
   
@@ -604,13 +604,13 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pGroup`  
+ [in]*pGroup*  
  指定要摺疊的群組。  
   
- [輸入] `bCollapse`  
+ [in]*bCollapse*  
  `TRUE` 若要摺疊群組。`FALSE`展開群組。  
   
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定以零為起始的索引，要摺疊的群組內部的清單中的群組。  
   
 ### <a name="return-value"></a>傳回值  
@@ -627,7 +627,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectInitial`  
+ [in]*rectInitial*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -656,7 +656,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用工作群組會展開或摺疊; 時所發生的動畫否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -670,7 +670,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 如果使用者可以摺疊工作群組;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -684,7 +684,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用下拉式功能表上**下一步**和**上一步**瀏覽按鈕，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -706,16 +706,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用導覽工具列。否則， `FALSE`。  
   
- [輸入] `uiToolbarBmpRes`  
+ [in]*uiToolbarBmpRes*  
  指定包含要在工具列上顯示的影像之點陣圖的資源識別碼。  
   
- [輸入] `sizeToolbarImage`  
+ [in]*sizeToolbarImage*  
  指定工具列影像的大小。  
   
- [輸入] `sizeToolbarButton`  
+ [in]*sizeToolbarButton*  
  指定工具列按鈕的大小。  
   
 ### <a name="remarks"></a>備註  
@@ -731,7 +731,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
   
 ### <a name="remarks"></a>備註  
   
@@ -743,7 +743,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要在工作窗格中，而非捲軸; 顯示捲軸按鈕否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -757,7 +757,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要將文字換行中會出現在 [工作] 窗格中; 的標籤否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -771,7 +771,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要將工作包裝在工作窗格。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -840,10 +840,10 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pGroup`  
+ [in]*pGroup*  
  指定工作群組中，擷取其位置。  
   
- [輸出] `nGroup`  
+ [out]*nGroup*  
  包含工作群組的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -880,7 +880,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lstNextPages`  
+ [in]*lstNextPages*  
   
 ### <a name="remarks"></a>備註  
   
@@ -894,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定工作群組的以零為起始的索引。  
   
- [輸出] `nPage`  
+ [out]*nPage*  
  包含指定群組的頁面索引。 如果工作群組僅包含預設網頁，則傳回的值為 0。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果群組`nGroup`存在，否則`FALSE`。  
+ `TRUE` 如果群組*nGroup*存在，否則`FALSE`。  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  傳回頁數。  
@@ -921,7 +921,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lstPrevPages`  
+ [in]*lstPrevPages*  
   
 ### <a name="remarks"></a>備註  
   
@@ -933,7 +933,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nBar`  
+ [in]*nBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定包含工作群組的以零為起始的索引。  
   
- [輸入] `nTask`  
- 指定工作的以零為起始的索引中所指定的清單`nGroup`。  
+ [in]*n*  
+ 指定工作的以零為起始的索引中所指定的清單*nGroup*。  
   
 ### <a name="return-value"></a>傳回值  
  指定索引處的工作。  
@@ -966,11 +966,11 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定工作群組的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的群組或 0 中的工作數目`nGroup`無效。  
+ 指定的群組或 0 中的工作數目*nGroup*無效。  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  傳回指定之群組索引的工作群組。  
@@ -980,7 +980,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定要擷取之群組的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1007,26 +1007,26 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCommandID`  
+ [in]*uiCommandID*  
  指定要尋找工作的命令識別碼。  
   
- [輸出] `nGroup`  
+ [out]*nGroup*  
  包含工作的群組索引。  
   
- [輸出] `nTask`  
+ [out]*n*  
  包含工作群組中工作的索引。  
   
- [輸入] `hwndTask`  
+ [in]*hwndTask*  
  指定與工作相關聯的視窗。  
   
- [輸入] `pTask`  
+ [in]*pTask*  
  指定要尋找工作。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果找不到工作位置。`FALSE`如果指定的工作不存在。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會擷取的群組索引和工作指定工作的索引。 如果此方法會傳回`FALSE`，`nGroup`和`nTask`設定為-1。  
+ 這個方法會擷取的群組索引和工作指定工作的索引。 如果此方法會傳回`FALSE`， *nGroup*和*n*設定為-1。  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  傳回工作的水平位移。  
@@ -1199,9 +1199,9 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
- [輸入] `nIndex`  
- [輸入] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*nIndex*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1238,20 +1238,20 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroupNumber`  
+ [in]*nGroupNumber*  
  指定包含按下後的工作群組的以零為起始的索引。  
   
- [輸入] `nTaskNumber`  
+ [in]*nTaskNumber*  
  指定按下工作的以零為起始的索引。  
   
- [輸入] `uiCommandID`  
+ [in]*uiCommandID*  
  指定與工作相關聯的命令識別碼。  
   
- [輸入] `dwUserData`  
+ [in]*dwUserData*  
  包含與按下後的工作相關聯的使用者定義資料。  
   
 ### <a name="remarks"></a>備註  
- 當使用者按一下工作時，架構會呼叫這個方法。 根據預設，架構會檢查與按下後的工作相關聯的命令 ID，如果不是零，就會傳送`WM_COMMAND`工作窗格控制項的擁有者的訊息。  
+ 當使用者按一下工作時，架構會呼叫這個方法。 根據預設，架構會檢查與按下後的工作相關聯的命令識別碼並不是零，如果將 WM_COMMAND 訊息傳送至工作窗格控制項的擁有者。  
   
  若要在按下工作時，執行自訂程式碼在衍生類別中的，這個方法會覆寫。  
   
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pbtn`  
- [輸入] `pWndOwner`  
+ [in]*pbtn*  
+ [in]*pWndOwner*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1323,7 +1323,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lVal`  
+ [in]*lVal*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTarget`  
- [輸入] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1352,7 +1352,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1366,7 +1366,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1378,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPageIdx`  
+ [in]*nPageIdx*  
  指定頁面的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 移除指定的頁面上的所有群組`nPageIdx`，或如果沒有預設網頁的所有群組。  
+ 移除指定的頁面上的所有群組*nPageIdx*，或如果沒有預設網頁的所有群組。  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  從工作窗格中移除所有頁面，預設 (第一頁) 頁面除外。  
@@ -1399,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定群組的以零為起始的索引。  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1410,7 +1410,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定要移除之群組的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -1426,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPageIdx`  
+ [in]*nPageIdx*  
  指定要移除之頁面的以零為起始的索引。  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1440,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定包含要移除之工作的工作群組的以零為起始的索引。  
   
- [輸入] `nTask`  
+ [in]*n*  
  指定要移除工作的以零為起始的索引。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要重繪其工作窗格。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果函式成功則`FALSE`如果`nGroup`或`nTask`無效。  
+ `TRUE` 如果函式成功則`FALSE`如果*nGroup*或*n*無效。  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1463,9 +1463,9 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
- [輸入] `nIndex`  
- [輸入] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*nIndex*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1479,7 +1479,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `ar`  
+ [in]*ar*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1491,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPageIdx`  
+ [in]*nPageIdx*  
  指定要顯示之頁面的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 如果此方法會判斷提示`nPageIdx`無效。  
+ 如果此方法會判斷提示*nPageIdx*無效。  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  設定工作窗格的標題名稱。  
@@ -1505,7 +1505,7 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  指定的標題名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -1519,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定的標題高度。  
   
 ### <a name="remarks"></a>備註  
  呼叫此方法以自訂工作窗格元素的邊界。  
   
- 如果`n`為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 預設的標題高度為 25 像素。  
+ 如果*n*為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 預設的標題高度為 25 像素。  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  設定群組標題的水平位移。  
@@ -1535,7 +1535,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定群組標題的水平位移。  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
@@ -1546,7 +1546,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定垂直位移，以像素的群組標題。  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
@@ -1559,10 +1559,10 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定群組的以零為起始的索引。  
   
- [輸入] `lpszGroupName`  
+ [in]*lpszGroupName*  
  指定群組的名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1579,13 +1579,13 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定群組的以零為起始的索引。  
   
- [輸入] `color`  
+ [in]*色彩*  
  指定的文字色彩。  
   
- [輸入] `colorHot`  
+ [in]*colorHot*  
  指定的文字色彩反白顯示的群組。 如果-1，則會使用預設的反白顯示色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1599,13 +1599,13 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定垂直位移。  
   
 ### <a name="remarks"></a>備註  
  垂直位移是工作群組與工作窗格的框線之間的距離。  
   
- 呼叫此方法以自訂工作窗格元素的邊界。 如果`n`為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 預設位移為 15 像素。  
+ 呼叫此方法以自訂工作窗格元素的邊界。 如果*n*為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 預設位移為 15 像素。  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  設定水平的邊界。  
@@ -1615,7 +1615,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定邊界，像素為單位。  
   
 ### <a name="remarks"></a>備註  
@@ -1636,16 +1636,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiImageListResID`  
+ [in]*uiImageListResID*  
  指定的影像清單的資源識別碼。  
   
- [輸入] `cx`  
+ [in]*cx*  
  影像清單中指定圖示的大小。  
   
- [輸入] `clrTransparent`  
+ [in]*clrTransparent*  
  指定透明色彩。  
   
- [輸入] `hIcons`  
+ [in]*hIcons*  
  指定包含的工作窗格圖示的影像清單。  
   
 ### <a name="remarks"></a>備註  
@@ -1663,10 +1663,10 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPageIdx`  
+ [in]*nPageIdx*  
  指定頁面的以零為起始的索引。  
   
- [輸入] `lpszName`  
+ [in]*lpszName*  
  指定要顯示在頁面上的標題文字。  
   
 ### <a name="remarks"></a>備註  
@@ -1683,13 +1683,13 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定工作群組的以零為起始的索引。  
   
- [輸入] `nTask`  
+ [in]*n*  
  指定工作的以零為起始的索引。  
   
- [輸入] `lpszTaskName`  
+ [in]*lpszTaskName*  
  指定工作名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1703,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定水平位移。  
   
 ### <a name="remarks"></a>備註  
  水平位移是像素為單位，從群組的左右邊緣的距離。  
   
- 如果`n`為-1，這個方法所傳回的值會設定水平位移`CMFCVisualManager::GetTasksPaneTaskHorzOffset`方法。  
+ 如果*n*為-1，這個方法所傳回的值會設定水平位移`CMFCVisualManager::GetTasksPaneTaskHorzOffset`方法。  
   
  預設的水平位移為 12 個像素。  
   
@@ -1721,7 +1721,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1733,7 +1733,7 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1749,16 +1749,16 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定工作群組，其中包含工作的以零為起始的索引。  
   
- [輸入] `nTask`  
+ [in]*n*  
  指定工作的以零為起始的索引。  
   
- [輸入] `color`  
+ [in]*色彩*  
  指定工作的文字色彩。  
   
- [輸入] `colorHot`  
+ [in]*colorHot*  
  指定的文字色彩反白顯示的群組。 -1，如果此方法會使用預設的反白顯示色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1772,13 +1772,13 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
+ [in]*n*  
  指定垂直邊界來設定。  
   
 ### <a name="remarks"></a>備註  
  垂直邊界是工作窗格與用戶端區域的垂直邊緣之間的距離。  
   
- 如果`n`為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 預設邊界為 12 個像素。  
+ 如果*n*為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 預設邊界為 12 個像素。  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  設定視窗控制項的高度。  
@@ -1796,17 +1796,17 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定群組，其中包含視窗控制項的以零為起始的索引。  
   
- [輸入] `hwndTask`  
+ [in]*hwndTask*  
  指定視窗控制項之控制代碼。  
   
- [輸入] `nWndHeight`  
+ [in]*nWndHeight*  
  指定設定的高度。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已成功設定視窗控制項的高度。`FALSE`如果`nGroup`無效或者`hwndTask`不存在。  
+ `TRUE` 如果已成功設定視窗控制項的高度。`FALSE`如果*nGroup*無效或者*hwndTask*不存在。  
   
 ### <a name="remarks"></a>備註  
  呼叫[CMFCTasksPane::AddWindow](#addwindow)加入與視窗控制項的工作。  
@@ -1819,7 +1819,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdId`  
+ [in]*uiCmdId*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1835,16 +1835,16 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nGroup`  
+ [in]*nGroup*  
  指定群組的以零為起始的索引。  
   
- [輸入] `nTask`  
+ [in]*n*  
  指定要顯示或隱藏工作的以零為起始的索引。  
   
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要顯示工作。`FALSE`隱藏工作。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要重繪其工作窗格。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1864,13 +1864,13 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCommandID`  
+ [in]*uiCommandID*  
  指定要顯示或隱藏工作的命令識別碼。  
   
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要顯示工作。`FALSE`隱藏工作。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  `TRUE` 若要重繪其工作窗格。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  

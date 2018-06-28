@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372202"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037853"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 類別
 在控制項中顯示資料庫記錄的檢視。  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含的對話方塊範本資源名稱的以 null 結尾字串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含對話方塊範本資源的識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  標準 `HRESULT` 值。  
   
 ### <a name="remarks"></a>備註  
- 您必須覆寫此成員函式，來建構或取得資料列集物件，並傳回它的控制代碼。 如果您宣告 ClassWizard 資料錄檢視類別，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料列控制代碼儲存在資料錄檢視中，如果有的話。 建構類型的資料列集物件不是，如果您指定了與 ClassWizard 並呼叫其**開啟**成員函式，開啟資料表，或執行查詢，並再傳回物件的控制代碼。  
+ 您必須覆寫此成員函式，來建構或取得資料列集物件，並傳回它的控制代碼。 如果您宣告 ClassWizard 資料錄檢視類別，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料列控制代碼儲存在資料錄檢視中，如果有的話。 建構類型的資料列集物件不是，如果您指定了與 ClassWizard 並呼叫其`Open`成員函式，開啟資料表，或執行查詢，並再傳回物件的控制代碼。  
   
 > [!NOTE]
 >  若是使用 MFC 7.0 之前`OnGetRowset`傳回的指標`CRowset`。 如果您呼叫的程式碼`OnGetRowset`，您需要變更範本化類別的傳回型別**CRowset <>**。  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  其中一個的下列標準命令 ID 值：  
   
 - `ID_RECORD_FIRST` — 將移至資料錄集中的第一個記錄。  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  為非零，如果移動成功。否則為 0，如果移動要求被拒。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會呼叫適當**移動**成員函式`CRowset`資料錄檢視相關聯的物件。  
+ 預設實作會呼叫適當`Move`成員函式`CRowset`資料錄檢視相關聯的物件。  
   
  根據預設，`OnMove`更新目前的記錄資料來源上，如果使用者資料錄檢視中已變更。  
   

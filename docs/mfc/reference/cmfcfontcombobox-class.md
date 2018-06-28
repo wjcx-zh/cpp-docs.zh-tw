@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375741"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039995"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 類別
 `CMFCFontComboBox`類別會建立包含字型清單的下拉式方塊控制項。  
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDesc`  
+ [in]*pDesc*  
  指向字型描述物件。  
   
- [輸入] `lpszName`  
+ [in]*lpszName*  
  指定的字型名稱。  
   
- [輸入] `nCharSet`  
+ [in]*nCharSet*  
  指定的字元集。 預設值是 DEFAULT_CHARSET。 如需詳細資訊，請參閱`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nFontType`  
+ [in]*nFontType*  
  指定的字型類型。 預設值為 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
   
- [輸入] `nCharSet`  
+ [in]*nCharSet*  
  指定字型的字元集。 預設值是 DEFAULT_CHARSET。  
   
- [輸入] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  指定字型的字距和系列。 預設值是 DEFAULT_PITCH。  
   
 ### <a name="return-value"></a>傳回值  

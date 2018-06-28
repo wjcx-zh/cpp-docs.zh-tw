@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322403"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041106"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -422,7 +422,7 @@ CHttpConnection* GetHttpConnection(
 包含存取密碼的字串指標。
 
 *將 dwflags*  
-任何組合`INTERNET_FLAG_*`旗標。 請參閱表格**備註**區段[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)的說明`dwFlags`值。
+任何組合`INTERNET_FLAG_*`旗標。 請參閱中的資料表**備註**區段[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)的說明*dwFlags*值。
 
 ### <a name="return-value"></a>傳回值
 

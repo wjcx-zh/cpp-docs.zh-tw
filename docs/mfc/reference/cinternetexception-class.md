@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366892"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037885"
 ---
 # <a name="cinternetexception-class"></a>CInternetException 類別
 表示與網際網路作業相關的例外狀況。  
@@ -76,7 +76,7 @@ CInternetException(DWORD dwError);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwError`  
+ *dwError*  
  造成例外狀況時發生錯誤。  
   
 ### <a name="remarks"></a>備註  
@@ -90,7 +90,7 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>備註  
- 中原本指定的內容識別碼[CInternetSession](../../mfc/reference/cinternetsession-class.md)而且由 MFC 傳遞[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-衍生的類別。 您可以覆寫此預設值，並將任何指派`dwContext`參數您選擇的值。 `dwContext` 與指定之任何的物件作業有關聯。 `dwContext` 識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
+ 中原本指定的內容識別碼[CInternetSession](../../mfc/reference/cinternetsession-class.md)而且由 MFC 傳遞[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-衍生的類別。 您可以覆寫此預設值，並將任何指派*dwContext*參數您選擇的值。 *dwContext*與指定之任何的物件作業相關聯。 *dwContext*識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  造成例外狀況時發生錯誤。  

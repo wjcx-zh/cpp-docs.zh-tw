@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374661"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038099"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 類別
 `CMFCRibbonStatusBar`類別會實作狀態列控制項可以顯示功能區項目。  
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pElement`  
+ [in]*pElement*  
  動態項目之指標。  
   
 ### <a name="remarks"></a>備註  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pElement`  
+ [in]*pElement*  
  加入項目的指標。  
   
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  項目的文字標籤。  
   
- [輸入] `bIsVisible`  
+ [in]*bIsVisible*  
  `TRUE` 如果您想要將項目新增為可見，`FALSE`如果您想要新增項目，做為隱藏。  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pElement`  
+ [in]*pElement*  
  加入項目的指標。  
   
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  項目的文字標籤。  
   
- [輸入] `bIsVisible`  
+ [in]*bIsVisible*  
  `TRUE` 如果您想要將項目新增為可見，`FALSE`如果您想要新增項目，做為隱藏。  
   
 ### <a name="remarks"></a>備註  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  父視窗的指標。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  邏輯 OR 組合的控制項樣式。  
   
- [輸入] `nID`  
+ [in]*nID*  
  狀態列控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  父視窗的指標。  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  建立狀態列物件的其他樣式的邏輯 OR 組合。  
   
- `dwStyle`  
+ *dwStyle*  
  狀態列控制項樣式。  
   
- `nID`  
+ *nID*  
  狀態列控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
- [輸入] `BOOL`  
+ [in]*uiCmdID*  
+ [in]*BOOL*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  項目的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定位於狀態列控制項的主要區域中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  指定位於狀態列控制項擴充區域中之元素的以零起始索引。  
   
 ### <a name="return-value"></a>傳回值  
- 此指標指向功能區狀態列擴充區域中，位於指定索引上的元素。 如果 `NULL` 為負數，或超過功能區狀態列擴充區域中的元素數目，則為 `nIndex`。  
+ 此指標指向功能區狀態列擴充區域中，位於指定索引上的元素。 `NULL` 如果*nIndex*是負值或超過功能區狀態列擴充區域中的項目數。  
   
 ### <a name="remarks"></a>備註  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pElement`  
+ [in]*pElement*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `strInfo`  
+ [in]*strInfo*  
  資訊的字串。  
   
- [輸入] `rectInfo`  
+ [in]*rectInfo*  
  週框。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要自訂 [狀態] 列上的資訊字串的外觀，請覆寫這個方法在衍生類別中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法，將 [狀態] 列置於資訊模式。 在此模式中，[狀態] 列會隱藏所有窗格，顯示所指定的資訊字串`strInfo`。  
+ 如果您想要自訂 [狀態] 列上的資訊字串的外觀，請覆寫這個方法在衍生類別中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法，將 [狀態] 列置於資訊模式。 在此模式中，[狀態] 列會隱藏所有窗格，顯示所指定的資訊字串*strInfo*。  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  從 [狀態] 列中移除項目的 ID。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果具有指定的項目`uiID`已移除。 否則為 `FALSE`。  
+ `TRUE` 如果具有指定的項目*uiID*已移除。 否則為 `FALSE`。  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  啟用或停用功能區狀態列的資訊模式。  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszInfo`  
+ [in]*lpszInfo*  
  資訊的字串。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法，將 [狀態] 列中的資訊模式。 在此模式中，[狀態] 列會隱藏所有窗格，顯示所指定的資訊字串`lpszInfo`。  
+ 使用這個方法，將 [狀態] 列中的資訊模式。 在此模式中，[狀態] 列會隱藏所有窗格，顯示所指定的資訊字串*lpszInfo*。  
   
  LpszInfo 時`NULL`，狀態列會還原為一般模式。  
   

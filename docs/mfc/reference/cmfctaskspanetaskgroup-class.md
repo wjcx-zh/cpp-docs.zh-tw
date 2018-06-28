@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370841"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037492"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 類別
 `CMFCTasksPaneTaskGroup`類別是所使用的 helper 類別[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控制項。 屬於類型 `CMFCTasksPaneTaskGroup` 的物件表示「 *工作群組*」(Task Group)。 工作群組是 Framework 顯示在具有摺疊按鈕之不同方塊中的項目清單。 方塊可以有選擇性的標題 (群組名稱)。 如果群組已摺疊，工作清單是不可見的。  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  在 群組標題中指定群組的名稱。  
   
- `bIsBottom`  
+ *bIsBottom*  
  指定群組是否對齊工作窗格控制項的底部。  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  指定是否要將群組指定為*特殊*，因此，是否在群組標題會填入不同的色彩。  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  指定是否要摺疊群組。  
   
- `pPage`  
+ *pPage*  
  指定這個工作群組所屬的屬性頁。  
   
- `hIcon`  
+ *hIcon*  
  指定在群組標題中顯示的圖示。  
   
 ### <a name="remarks"></a>備註  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParent`  
+ [in]*pParent*  
  表示目前的工作群組的父視窗。  
   
- [輸出] `data`  
+ [out]*資料*  
  型別的物件`CAccessibilityData`填入目前的工作群組的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果`data`參數已成功填入目前的工作群組的協助工具資料，否則`FALSE`。  
+ `TRUE` 如果*資料*參數已成功填入目前的工作群組的協助工具資料，否則`FALSE`。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

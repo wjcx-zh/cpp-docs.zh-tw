@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369345"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040843"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 類別
 提供 Windows 多重文件介面 (MDI) 子視窗的功能，以及管理視窗的成員。  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  有三種方法來建構 MDI 子視窗：  
   
--   直接建構使用**建立**。  
+-   直接建構使用`Create`。  
   
 -   直接建構使用`LoadFrame`。  
   
 -   間接透過文件範本來建構它。  
   
- 之前先呼叫**建立**或`LoadFrame`，您必須建構使用 c + + 堆積上的框架視窗物件**新**運算子。 然後再呼叫**建立**您也可以註冊視窗類別[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式，可設定的畫面格的圖示和類別樣式。  
+ 之前先呼叫`Create`或`LoadFrame`，您必須建構使用 c + + 堆積上的框架視窗物件**新**運算子。 然後再呼叫`Create`您也可以註冊視窗類別[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式，可設定的畫面格的圖示和類別樣式。  
   
- 使用**建立**傳遞畫面格的建立參數為立即引數的成員函式。  
+ 使用`Create`傳遞畫面格的建立參數為立即引數的成員函式。  
   
- `LoadFrame` 需要較少的引數比**建立**，並改為從資源，包括畫面格的標題、 圖示、 快速鍵對應表，以及功能表中擷取大部分其預設值。 若要可供`LoadFrame`，所有這些資源必須具有相同的資源識別碼 (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要較少的引數比`Create`，並改為從資源，包括畫面格的標題、 圖示、 快速鍵對應表，以及功能表中擷取大部分其預設值。 若要可供`LoadFrame`，所有這些資源必須具有相同的資源識別碼 (例如， **IDR_MAINFRAME**)。  
   
  當`CMDIChildWnd`物件包含檢視表和文件時，會間接建立而不是直接由程式設計人員，架構。 `CDocTemplate`物件協調框架的建立、 包含檢視中，建立和檢視，以適當的文件的連接。 參數的`CDocTemplate`建構函式指定`CRuntimeClass`三個類別的涉及 （文件、 框架和檢視）。 A`CRuntimeClass`物件可由架構來動態建立新的框架時使用者所指定 （例如，透過使用新檔案或新 MDI 視窗的命令）。  
   
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszClassName`  
+ *lpszClassName*  
  指向以 null 結束的字元字串，名稱的 Windows 類別 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱登錄與[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式。 應該是**NULL**標準`CMDIChildWnd`。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向以 null 結束的字元字串，表示視窗名稱。 做為標題列的文字。  
   
- `dwStyle`  
+ *dwStyle*  
  指定視窗[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)屬性。 **WS_CHILD**樣式是必要。  
   
- `rect`  
+ *rect*  
  包含的大小和視窗的位置。 `rectDefault`值可以讓指定的大小和位置，新的 Windows `CMDIChildWnd`。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定視窗的父代。 如果**NULL**，使用主應用程式視窗。  
   
- `pContext`  
+ *pContext*  
  指定[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。 這個參數可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  目前作用中的 MDI 子框架視窗可以判斷父框架視窗的標題。 這項功能已停用透過關閉**FWS_ADDTOTITLE**子框架視窗的樣式位元。  
   
- 架構會呼叫此成員函式以回應使用者命令來建立子視窗，和此架構會使用`pContext`參數，以正確地連接到應用程式的子視窗。 當您呼叫**建立**，`pContext`可以**NULL**。  
+ 架構會呼叫此成員函式以回應使用者命令來建立子視窗，和此架構會使用*pContext*參數，以正確地連接到應用程式的子視窗。 當您呼叫`Create`， *pContext*可以**NULL**。  
   
 ### <a name="example"></a>範例  
  範例 1:  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hMenu`  
+ *hMenu*  
  功能表資源的控制代碼。  
   
- `hAccel`  
+ *hAccel*  
  快速鍵對應資源控制代碼。  
   
 ### <a name="remarks"></a>備註  

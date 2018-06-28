@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368003"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040671"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 類別
 實作自訂頁面**自訂**在功能區應用程式中的對話方塊。  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `lpszName`|指定自訂的類別名稱。|  
-|[輸入] `lstIDS`|包含要在自訂的類別目錄中顯示功能區命令識別碼。|  
+|[in]*lpszName*|指定自訂的類別名稱。|  
+|[in]*lstIDS*|包含要在自訂的類別目錄中顯示功能區命令識別碼。|  
   
 ### <a name="remarks"></a>備註  
- 這個方法會加入名為 category`lpszName`至**命令**下拉式方塊。 當使用者選取類別目錄時，在指定的命令`lstIDS`命令清單中出現。  
+ 這個方法會加入名為 category *lpszName*至**命令**下拉式方塊。 當使用者選取類別目錄時，在指定的命令*lstIDS*命令清單中出現。  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  建構 `CMFCRibbonCustomizePropertyPage` 物件。  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRibbonBar`  
+ [in]*pRibbonBar*  
  在功能區控制項的指標以自訂的選項。  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

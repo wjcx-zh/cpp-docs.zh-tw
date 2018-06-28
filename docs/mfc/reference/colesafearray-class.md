@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376873"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041629"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 類別
 類別，用來處理任意類型和維度的陣列。  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppvData`  
+ *ppvData*  
  指向陣列資料的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDims`  
+ *dwDims*  
  安全陣列中的維度數目。  
   
 ### <a name="remarks"></a>備註  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `saSrc`  
+ *saSrc*  
  現有`COleSafeArray`物件或**SAFEARRAY**要複製到新`COleSafeArray`物件。  
   
- `vtSrc`  
+ *vtSrc*  
  **VARTYPE**新`COleSafeArray`物件。  
   
- `psaSrc`  
+ *psaSrc*  
  指標**SAFEARRAY**要複製到新`COleSafeArray`物件。  
   
  *varSrc*  
  現有**VARIANT**或`COleVariant`物件複製到新`COleSafeArray`物件。  
   
- `pSrc`  
+ *pSrc*  
  指標**VARIANT**物件複製到新`COleSafeArray`物件。  
   
 ### <a name="remarks"></a>備註  
- 所有這些建構函式建立新`COleSafeArray`物件。 如果沒有參數，空`COleSafeArray`建立物件 ( `VT_EMPTY`)。 如果`COleSafeArray`複製從另一個陣列的[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)隱含已知 ( `COleSafeArray`， `COleVariant`，或**VARIANT**)、 **VARTYPE**的來源陣列會保留，而不需要指定。 如果`COleSafeArray`複製從另一個陣列的**VARTYPE**不知道 ( **SAFEARRAY**)、 **VARTYPE**中必須指定`vtSrc`參數。  
+ 所有這些建構函式建立新`COleSafeArray`物件。 如果沒有參數，空`COleSafeArray`建立物件 ( `VT_EMPTY`)。 如果`COleSafeArray`複製從另一個陣列的[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)隱含已知 ( `COleSafeArray`， `COleVariant`，或**VARIANT**)、 **VARTYPE**的來源陣列會保留，而不需要指定。 如果`COleSafeArray`複製從另一個陣列的**VARTYPE**不知道 ( **SAFEARRAY**)、 **VARTYPE**中必須指定*vtSrc*參數。  
   
  錯誤時，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `vtSrc`  
- 陣列的基底類型 (也就是**VARTYPE**的陣列的每個項目)。 **VARTYPE**限制為 variant 的類型子集。 既不**VT_ARRAY**和**VT_BYREF**可以設定旗標。 `VT_EMPTY` 和**VT_NULL**不是有效的基底型別陣列。 所有其他類型是合法的。  
+ *vtSrc*  
+ 陣列的基底類型 (也就是**VARTYPE**的陣列的每個項目)。 **VARTYPE**限制為 variant 的類型子集。 既不**VT_ARRAY**和**VT_BYREF**可以設定旗標。 **VT_EMPTY**和**VT_NULL**不是有效的基底型別陣列。 所有其他類型是合法的。  
   
- `dwDims`  
+ *dwDims*  
  陣列中的維度數目。 這可以與建立陣列之後變更[Redim](#redim)。  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>參數  
- `vtSrc`  
+ *vtSrc*  
  陣列的基底類型 (也就是**VARTYPE**的陣列的每個項目)。  
   
- `dwElements`  
+ *dwElements*  
  陣列中的項目數目。 這可以與建立陣列之後變更[ResizeOneDim](#resizeonedim)。  
   
- `pvSrcData`  
+ *pvSrcData*  
  將複製到陣列的資料指標。  
   
  *nLBound*  
  陣列的下限。  
   
 ### <a name="remarks"></a>備註  
- 此函式配置，並初始化陣列，複製指定的資料時，如果資料指標`pvSrcData`不**NULL**。  
+ 此函式配置，並初始化陣列，複製指定的資料時，如果資料指標*pvSrcData*不**NULL**。  
   
  錯誤時，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)。  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bytes`  
+ *位元組*  
  若要參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rgIndices`  
+ *rgIndices*  
  陣列的每個維度索引陣列的指標。  
   
- `pvData`  
+ *pvData*  
  要放入陣列的元素的位置指標。  
   
 ### <a name="remarks"></a>備註  
- 此函式自動呼叫 windows 函式`SafeArrayLock`和`SafeArrayUnlock`之前與之後擷取的項目。 如果資料項目是字串、 物件或變數，函式會複製項目中的正確方式。 參數`pvData`應該指向大型緩衝區不足，無法包含的項目。  
+ 此函式自動呼叫 windows 函式`SafeArrayLock`和`SafeArrayUnlock`之前與之後擷取的項目。 如果資料項目是字串、 物件或變數，函式會複製項目中的正確方式。 參數*pvData*應該指向大型緩衝區不足，無法包含的項目。  
   
  錯誤時，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDim`  
+ *dwDim*  
  用來取得下限陣列維度。  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDim`  
+ *dwDim*  
  用來取得上限陣列維度。  
   
  *pUBound*  
@@ -581,11 +581,11 @@ void PtrOfIndex (長時間 * rgIndices，
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (長時間 * rgIndices，
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements);
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

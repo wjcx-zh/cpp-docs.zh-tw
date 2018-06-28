@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2906071ce1e8c8f65f21554915feed0d134276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367941"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037242"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 類別
 `CMFCAcceleratorKeyAssignCtrl`類別會擴充[CEdit 類別](../../mfc/reference/cedit-class.md)以支援額外的系統按鈕，例如 ALT、 CONTROL 和 SHIFT。  
@@ -138,7 +138,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>傳回值  
   

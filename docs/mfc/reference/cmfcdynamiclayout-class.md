@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370717"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042361"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 類別
 指定使用者調整視窗大小時，控制項在視窗中如何移動和調整大小。  
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hwnd`  
+ *hwnd*  
  要加入之視窗的控制代碼。  
   
- `nID`  
+ *nID*  
  要加入之子控制項的 ID。  
   
- `moveSettings`  
+ *moveSettings*  
  說明在視窗大小變更時應如何移動控制項的結構。  
   
- `sizeSettings`  
+ *sizeSettings*  
  說明在視窗大小變更時應如何為控制項調整大小的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- pHostWnd  
+ *pHostWnd*  
  主控視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  在此函數傳回之後，此參數會包含版面配置區域的週框。 這是輸出參數；輸入值會被覆寫。  
   
 ### <a name="remarks"></a>備註  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hwnd`  
+ *hwnd*  
  控制項的視窗控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>參數  
- `pHostWnd`  
+ *pHostWnd*  
  主控視窗的指標。  
   
- `lpResource`  
+ *lpResource*  
  包含 AFX_DIALOG_LAYOUT 資源的緩衝區的指標。  
   
- `dwSize`  
+ *dwSize*  
  緩衝區大小，以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
@@ -248,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRatio`  
+ *nRatio*  
  定義當使用者調整主視窗大小時，水平移動子控制項的幅度百分比。  
   
 ### <a name="return-value"></a>傳回值  
@@ -264,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nXRatio`  
+ *nXRatio*  
  定義當使用者調整主視窗大小時，水平移動子控制項的幅度百分比。  
   
- `nYRatio`  
+ *nYRatio*  
  定義當使用者調整主視窗大小時，垂直移動子控制項的幅度百分比。  
   
 ### <a name="return-value"></a>傳回值  
@@ -336,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRatio`  
+ *nRatio*  
  定義當使用者調整主視窗大小時，垂直移動子控制項的幅度百分比。  
   
 ### <a name="return-value"></a>傳回值  
@@ -352,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  所需的大小下限，低於此值就不調整版面配置。  
   
 ### <a name="remarks"></a>備註  
@@ -366,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRatio`  
+ *nRatio*  
  定義當使用者調整主視窗大小時，水平調整子控制項大小的幅度百分比。  
   
 ### <a name="return-value"></a>傳回值  
@@ -382,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nXRatio`  
+ *nXRatio*  
  定義當使用者調整主視窗大小時，水平調整子控制項大小的幅度百分比。  
   
- `nYRatio`  
+ *nYRatio*  
  定義當使用者調整主視窗大小時，垂直調整子控制項大小的幅度百分比。  
   
 ### <a name="return-value"></a>傳回值  
@@ -453,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRatio`  
+ *nRatio*  
  定義當使用者調整主視窗大小時，垂直調整子控制項大小的幅度百分比。  
   
 ### <a name="return-value"></a>傳回值  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368796"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037957"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 A`CMFCReBar`物件是提供版面配置、 持續性和 rebar 控制項的狀態資訊的控制列。  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pBar`  
+ [in][out]*pBar*  
  是要插入至 rebar 的子視窗的指標。 參考的物件必須具有**WS_CHILD**視窗樣式。  
   
- [輸入] `pszText`  
+ [in]*pszText*  
  指定要顯示在 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示在 rebar 本身。  
   
- [in][out] `pbmp`  
+ [in][out]*pbmp*  
  指定要顯示 rebar 背景點陣圖。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  包含要套用至群組列的樣式。 頻外樣式的完整清單，請參閱的描述`fStyle`中[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK 文件中的結構。  
   
- [輸入] `clrFore`  
+ [in]*clrFore*  
  代表 rebar 的前景色彩。  
   
- [輸入] `clrBack`  
+ [in]*clrBack*  
  代表 rebar 的背景色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  這個 rebar 控制項的父視窗指標。  
   
- [輸入] `dwCtrlStyle`  
+ [in]*dwCtrlStyle*  
  指定 rebar 控制項的樣式。 預設樣式的值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項上的線條。 如需有效樣式的清單，請參閱[Rebar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 文件中。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  Rebar 控制項的視窗樣式。 如需有效樣式的清單，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [輸入] `nID`  
+ [in]*nID*  
  Rebar 的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
- [輸入] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
 ### <a name="remarks"></a>備註  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CPoint`  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
- [輸入] `pTI`  
+ [in]*點*  
+ [in]*pTI*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTarget`  
- [輸入] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>備註  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
   
 ### <a name="remarks"></a>備註  
   

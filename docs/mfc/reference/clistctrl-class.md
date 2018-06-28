@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b44878f5b860a05029f31492a7ca8ae06d83b607
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a81ce168c99f4ad473619c72941842085c3a5a8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379043"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042413"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 封裝「清單檢視控制項」的功能，顯示項目集合，其中每個項目是由圖示 (來自影像清單) 和標籤所組成的。  
@@ -487,7 +487,7 @@ class CListCtrl : public CWnd
 ## <a name="items-and-subitems"></a>項目和子項目  
  清單檢視控制項中的每個項目是由圖示 （來自影像清單）、 標籤、 目前的狀態和應用程式定義的值 （稱為 「 項目資料 」） 所組成。 一個以上的子項目也可以產生關聯每個項目。 「 子項目 」 是一個字串，在報表檢視中，可以顯示在右邊的項目圖示和標籤資料行。 清單檢視控制項中的所有項目必須具有相同數目的子項目。  
   
- 類別**CListCtrl**提供數個函數來插入、 刪除、 尋找、 和修改這些項目。 如需詳細資訊，請參閱[clistctrl:: Getitem](#getitem)， [CListCtrl::InsertItem](#insertitem)，和[CListCtrl::FindItem](#finditem)，[將項目加入至控制項](../adding-items-to-the-control.md)，和[捲動、 排列、 排序和尋找在清單控制項中](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。  
+ 類別`CListCtrl`提供數個函數來插入、 刪除、 尋找、 和修改這些項目。 如需詳細資訊，請參閱[clistctrl:: Getitem](#getitem)， [CListCtrl::InsertItem](#insertitem)，和[CListCtrl::FindItem](#finditem)，[將項目加入至控制項](../adding-items-to-the-control.md)，和[捲動、 排列、 排序和尋找在清單控制項中](../scrolling-arranging-sorting-and-finding-in-list-controls.md)。  
   
  根據預設，清單檢視控制項負責儲存項目的圖示和文字屬性。 不過，這些項目類型，除了類別`CListCtrl`支援 「 回呼項目。 」 「 回呼項目 」 是清單檢視項目，其應用程式，而不是控制項 — 儲存文字、 圖示或兩者。 回呼遮罩用來指定應用程式所提供的項目屬性 （文字及/或圖示）。 如果應用程式使用回呼項目，它必須能夠提供隨選的文字及/或圖示屬性。 當您的應用程式已經會維護此資訊的某些部分，回呼項目會很有幫助。 如需詳細資訊，請參閱[使用 CListCtrl： 回呼項目和回呼遮罩](../callback-items-and-the-callback-mask.md)。  
   
@@ -535,10 +535,10 @@ CSize ApproximateViewRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `sz`  
+ *sz*  
  建議的維度的控制項，像素為單位。 如果未指定的維度，架構會使用目前的寬度或高度值的控制項。  
   
- `iCount`  
+ *iCount*  
  若要在控制項中顯示的項目數目。 如果這個參數是-1，架構會使用項目的總數目前控制項中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -555,7 +555,7 @@ BOOL Arrange(UINT nCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCode`  
+ *則 nCode*  
  指定對齊樣式項目。 它可以是下列值之一：  
   
 - `LVA_ALIGNLEFT` 對齊視窗的左邊緣處的項目。  
@@ -570,7 +570,7 @@ BOOL Arrange(UINT nCode);
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- `nCode`參數指定對齊樣式。  
+ *則 nCode*參數指定對齊樣式。  
   
 ### <a name="example"></a>範例    
 ```cpp  
@@ -610,25 +610,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 請參閱[清單檢視 視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb774739)Windows SDK 中針對這些樣式的完整清單。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。  
   
- `rect`  
+ *rect*  
  指定清單控制項的大小和位置。 它可以是`CRect`物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定清單控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定清單控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CListCtrl`分成兩個步驟。 首先，呼叫建構函式，然後呼叫**建立**，建立清單檢視控制項，並將它附加至`CListCtrl`物件。  
+ 您建構`CListCtrl`分成兩個步驟。 首先，呼叫建構函式，然後呼叫`Create`，建立清單檢視控制項，並將它附加至`CListCtrl`物件。  
   
- 若要將延伸的視窗樣式套用至清單控制項物件，呼叫[CreateEx](#createex)而不是**建立**。  
+ 若要將延伸的視窗樣式套用至清單控制項物件，呼叫[CreateEx](#createex)而不是`Create`。  
   
 ### <a name="example"></a>範例  
 
@@ -652,19 +652,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 如需這些樣式的完整清單，請參閱[清單檢視 視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb774739)Windows SDK 中。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -673,10 +673,10 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
- `CreateEx` 建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**LVS_EX_FULLROWSELECT**。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
+ `CreateEx` 建立具有所指定的延伸視窗樣式控制項， *dwExStyle*。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**LVS_EX_FULLROWSELECT**。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
- 建立所指定的項目拖曳影像清單`nItem`。  
+ 建立所指定的項目拖曳影像清單*nItem*。  
   
 ```  
 CImageList* CreateDragImage(
@@ -685,10 +685,10 @@ CImageList* CreateDragImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  若要建立其拖曳影像清單的項目索引。  
   
- `lpPoint`  
+ *lpPoint*  
  位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)接收影像的左上角的初始位置的結構檢視中的座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -734,7 +734,7 @@ BOOL DeleteColumn(int nCol);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCol`  
+ *nCol*  
  要刪除之資料行索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -761,7 +761,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  指定要刪除之項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -787,7 +787,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  長指標`DRAWITEMSTRUCT`結構，其中包含所需的繪圖的類型資訊。  
   
 ### <a name="remarks"></a>備註  
@@ -805,7 +805,7 @@ CEdit* EditLabel(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  要編輯的清單檢視項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -836,7 +836,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `fEnable`  
+ *fEnable*  
  指出是否啟用 listview 控制項以群組顯示的項目。 **TRUE**若要啟用群組;**FALSE**停用此功能。  
   
 ### <a name="return-value"></a>傳回值  
@@ -861,17 +861,17 @@ BOOL EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  要顯示清單檢視項目的索引。  
   
- `bPartialOK`  
+ *bPartialOK*  
  指定是否可接受部分的可見性。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 必要時捲動清單檢視控制項。 如果`bPartialOK`參數為非零，不捲動項目是否可見部分時發生。  
+ 必要時捲動清單檢視控制項。 如果*bPartialOK*參數為非零，不捲動項目是否可見部分時發生。  
   
 ### <a name="example"></a>範例  
 ```cpp  
@@ -892,17 +892,17 @@ int FindItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFindInfo`  
+ *pFindInfo*  
  指標[LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745)結構，其中包含要搜尋項目的相關資訊。  
   
- `nStart`  
- 索引的項目，來開始搜尋，或是-1，從頭開始。 處的項目`nStart`排除不進行搜尋如果`nStart`不等於-1。  
+ *nStart*  
+ 索引的項目，來開始搜尋，或是-1，從頭開始。 處的項目*nStart*排除不進行搜尋如果*nStart*不等於-1。  
   
 ### <a name="return-value"></a>傳回值  
  否則為-1 的項目，如果成功的索引。  
   
 ### <a name="remarks"></a>備註  
- `pFindInfo`參數指向**LVFINDINFO**結構，其中包含用來搜尋清單檢視項目資訊。  
+ *PFindInfo*參數指向**LVFINDINFO**結構，其中包含用來搜尋清單檢視項目資訊。  
   
 ### <a name="example"></a>範例  
 
@@ -942,7 +942,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `plvbkImage`  
+ *plvbkImage*  
  指標**LVBKIMAGE**結構包含清單檢視目前的背景影像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -991,7 +991,7 @@ BOOL GetCheck(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1013,10 +1013,10 @@ BOOL GetColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCol`  
+ *nCol*  
  要擷取其屬性的資料行的索引。  
   
- `pColumn`  
+ *pColumn*  
  位址[LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)結構，以指定要擷取之資訊，並接收到的資料行的相關資訊。 **遮罩**成員指定哪個資料行屬性來擷取。 如果**遮罩**成員指定`LVCF_TEXT`值**pszText**成員必須包含接收項目文字的緩衝區的位址和**cchTextMax**成員必須指定緩衝區的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1051,10 +1051,10 @@ BOOL GetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>參數  
- `piArray`  
+ *piArray*  
  將包含清單檢視控制項中的資料行的索引值的緩衝區指標。 緩衝區必須夠大，無法包含在清單檢視控制項中的資料行總數。  
   
- `iCount`  
+ *iCount*  
  在清單檢視控制項中的資料行數目。 如果這個參數是-1，由架構自動擷取的資料行數目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1100,11 +1100,11 @@ int GetColumnWidth(int nCol) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCol`  
+ *nCol*  
  指定要擷取其寬度的資料行的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 像素為單位指定之資料行的寬度， `nCol`。  
+ 像素為單位指定之資料行的寬度， *nCol*。  
   
 ### <a name="example"></a>範例  
 
@@ -1251,10 +1251,10 @@ int GetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iGroupId`  
+ *iGroupId*  
  要擷取其資訊之群組的識別碼。  
   
- `pgrp`  
+ *pgrp*  
  指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)包含指定的群組上的資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iIndex`|群組的以零為起始的索引。|  
-|[輸出] `pGroup`|指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收所指定之群組的相關資訊的結構`iIndex`參數。<br /><br /> 呼叫端會負責初始化的成員[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。 設定`cbSize`成員的結構大小的旗標`mask`來指定要擷取之資訊的成員。|  
+|[in]*iIndex*|群組的以零為起始的索引。|  
+|[out]*pGroup*|指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收所指定之群組的相關資訊的結構*iIndex*參數。<br /><br /> 呼叫端會負責初始化的成員[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。 設定`cbSize`成員的結構大小的旗標`mask`來指定要擷取之資訊的成員。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1333,7 +1333,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  指標[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)包含群組度量資訊。  
   
 ### <a name="remarks"></a>備註  
@@ -1353,15 +1353,15 @@ BOOL GetGroupRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iGroupId`|指定的群組。|  
-|[in、out] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構將會收到群組所指定的矩形座標`iGroupId`。|  
-|[輸入] `iCoords`|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> - `LVGGR_GROUP` -整個展開群組的 （預設值） 座標。<br />- `LVGGR_HEADER` 座標只標頭 （摺疊的群組）。<br />- `LVGGR_SUBSETLINK` 座標只有子集連結 （標記子集）。|  
+|[in]*iGroupId*|指定的群組。|  
+|[in、 out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構將會收到群組所指定的矩形座標*iGroupId*。|  
+|[in]*iCoords*|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> - `LVGGR_GROUP` -整個展開群組的 （預設值） 座標。<br />- `LVGGR_HEADER` 座標只標頭 （摺疊的群組）。<br />- `LVGGR_SUBSETLINK` 座標只有子集連結 （標記子集）。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構所指`pRect`參數。  
+ 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構所指*pRect*參數。  
   
  這個方法會傳送[LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) Windows SDK 中所述的訊息。  
   
@@ -1406,14 +1406,14 @@ UINT GetGroupState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iGroupId`|群組的以零為起始的索引。|  
-|[輸入] `dwMask`|指定要擷取指定群組的狀態值的遮罩。 如需詳細資訊，請參閱`mask`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。|  
+|[in]*iGroupId*|群組的以零為起始的索引。|  
+|[in]*dwMask*|指定要擷取指定群組的狀態值的遮罩。 如需詳細資訊，請參閱`mask`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的群組，或 0，如果找不到該群組所要求的狀態。  
   
 ### <a name="remarks"></a>備註  
- 傳回值是位元 AND 運算的結果上`dwMask`參數和值`state`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，表示目前的清單檢視控制項。  
+ 傳回值是位元 AND 運算的結果上*dwMask*參數和值`state`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，表示目前的清單檢視控制項。  
   
  這個方法會傳送[LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) Windows SDK 中所述的訊息。 如需詳細資訊，請參閱[ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288)巨集。  
   
@@ -1512,7 +1512,7 @@ CImageList* GetImageList(int nImageList) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImageList`  
+ *nImageList*  
  值，指定要擷取的映像清單。 它可以是下列值之一：  
   
 - `LVSIL_NORMAL` 使用大圖示的影像清單。  
@@ -1541,7 +1541,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lvim`  
+ *lvim*  
  指標[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)結構，包含插入標記的資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1571,7 +1571,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRect`  
+ *pRect*  
  指標`RECT`結構，其中包含的範圍插入點的矩形座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1592,7 +1592,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指標[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)收到的項目屬性的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1622,7 +1622,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  其資料的擷取清單項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子項目的父項的結構。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 此參數不得為`NULL`。|  
-|[輸入] `iColumn`|控制項中的資料行以零為起始的索引。|  
-|[輸入] `rectType`|這擷取週框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> `LVIR_BOUNDS` -傳回整個子項目，包括圖示與標籤的周框矩形。<br /><br /> `LVIR_ICON` -傳回圖示或小圖示的子項目的週的框。<br /><br /> `LVIR_LABEL` -傳回子項目文字的週框矩形。|  
-|[輸出] `pRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的周框的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 此參數不得為`NULL`。|  
+|[in]*pItemIndex*|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子項目的父項的結構。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 此參數不得為`NULL`。|  
+|[in]*iColumn*|控制項中的資料行以零為起始的索引。|  
+|[in]*rectType*|這擷取週框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> `LVIR_BOUNDS` -傳回整個子項目，包括圖示與標籤的周框矩形。<br /><br /> `LVIR_ICON` -傳回圖示或小圖示的子項目的週的框。<br /><br /> `LVIR_LABEL` -傳回子項目文字的週框矩形。|  
+|[out]*pRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的周框的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 此參數不得為`NULL`。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1709,10 +1709,10 @@ BOOL GetItemPosition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  要擷取其位置的項目索引。  
   
- `lpPoint`  
+ *lpPoint*  
  位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)接收位置的項目左上角的結構檢視中的座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1746,13 +1746,13 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  要擷取其位置的項目索引。  
   
- `lpRect`  
+ *lpRect*  
  位址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收之周框的結構。  
   
- `nCode`  
+ *則 nCode*  
  清單檢視項目，要擷取之周框的部分。 它可以是下列值之一：  
   
 - `LVIR_BOUNDS` 傳回整個項目，包括圖示與標籤的周框矩形。  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `fSmall`|要擷取的項目間距的檢視。 指定`true`小圖示檢視或`false`圖示檢視。|  
-|[輸出] `pnHorzSpacing`|包含項目之間的水平間距。|  
-|[輸出] `pnVertSpacing`|包含項目之間的垂直間距。|  
+|[in]*fSmall*|要擷取的項目間距的檢視。 指定`true`小圖示檢視或`false`圖示檢視。|  
+|[out]*pnHorzSpacing*|包含項目之間的水平間距。|  
+|[out]*pnVertSpacing*|包含項目之間的垂直間距。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1841,10 +1841,10 @@ UINT GetItemState(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  要擷取其狀態的項目索引。  
   
- `nMask`  
+ *nMask*  
  指定要傳回哪些項目的狀態旗標的遮罩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1872,25 +1872,25 @@ CString GetItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  要擷取其文字的項目索引。  
   
- `nSubItem`  
+ *nSubItem*  
  指定文字是要擷取的子項目。  
   
- `lpszText`  
+ *lpszText*  
  要接收的項目文字的字串指標。  
   
- `nLen`  
- 所指向的緩衝區長度`lpszText`。  
+ *nLen*  
+ 所指向的緩衝區長度*lpszText*。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的版本`int`傳回擷取字串的長度。  
+ 傳回的版本**int**傳回擷取字串的長度。  
   
  傳回的版本`CString`傳回項目文字。  
   
 ### <a name="remarks"></a>備註  
- 如果`nSubItem`為零，此函式會擷取項目標籤; 如果`nSubItem`為非零，它會擷取子項目的文字。 如需子項目的引數的詳細資訊，請參閱的討論[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK 中的結構。  
+ 如果*nSubItem*為零，此函式會擷取項目標籤; 如果*nSubItem*為非零，它會擷取子項目的文字。 如需子項目的引數的詳細資訊，請參閱的討論[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK 中的結構。  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  搜尋清單檢視項目具有指定的屬性，且，具有給定的項目之指定關聯性。  
@@ -1902,10 +1902,10 @@ int GetNextItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  若要開始使用，搜尋的項目或是-1，尋找符合指定的旗標的第一個項目索引。 指定的項目本身是從搜尋中排除。  
   
- `nFlags`  
+ *nFlags*  
  幾何要求的項目指定的項目，並要求的項目狀態的關聯。 幾何關聯可以是下列值之一：  
   
 - `LVNI_ABOVE` 搜尋指定的項目上方的項目。  
@@ -1944,30 +1944,30 @@ BOOL GetNextItemIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、out] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋，或是-1，尋找符合中的旗標的第一個項目`nFlags`參數。<br /><br /> 如果此方法成功，`LVITEMINDEX`結構描述搜尋找到的項目。|  
-|[輸入] `nFlags`|的位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能會相依於索引、 狀態或外觀的目標項目，或以指定的目標項目實體位置，相對於項目`pItemIndex`參數。 如需詳細資訊，請參閱`flags`中的參數[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
+|[in、 out]*pItemIndex*|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋，或是-1，尋找符合中的旗標的第一個項目*nFlags*參數。<br /><br /> 如果此方法成功，`LVITEMINDEX`結構描述搜尋找到的項目。|  
+|[in]*nFlags*|的位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能會相依於索引、 狀態或外觀的目標項目，或以指定的目標項目實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱*旗標*中的參數[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫端會負責配置和設定的成員`LVITEMINDEX`結構所指`pItemIndex`參數。  
+ 呼叫端會負責配置和設定的成員`LVITEMINDEX`結構所指*pItemIndex*參數。  
   
  這個方法會傳送[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) Windows SDK 中所述的訊息。  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
- 取得索引所識別之清單項目的`pos`，然後設定*pos*至**位置**值。  
+ 取得索引所識別之清單項目的*pos*，然後設定*pos*至**位置**值。  
   
 ```  
 int GetNextSelectedItem(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  若要參考**位置**先前呼叫所傳回的值`GetNextSelectedItem`或`GetFirstSelectedItemPosition`。 此呼叫的下一個位置更新的值。  
   
 ### <a name="return-value"></a>傳回值  
- 所識別之清單項目的索引`pos`。  
+ 所識別之清單項目的索引*pos*。  
   
 ### <a name="remarks"></a>備註  
  您可以使用`GetNextSelectedItem`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetFirstSelectedItemPosition`。  
@@ -2058,7 +2058,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpPoint`  
+ *lpPoint*  
  位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)接收檢視來源的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2137,11 +2137,11 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpsz`  
+ *lpsz*  
  Null 結束的字串，其寬度是所決定的位址。  
   
 ### <a name="return-value"></a>傳回值  
- 寬度，單位為像素所指向的字串`lpsz`。  
+ 寬度，單位為像素所指向的字串*lpsz*。  
   
 ### <a name="remarks"></a>備註  
  傳回的寬度會考慮控制項的目前字型和資料行邊界，但不是小圖示的寬度。  
@@ -2190,7 +2190,7 @@ BOOL GetSubItemRect(
   
 - `LVIR_LABEL` 傳回整個項目，包括圖示與標籤的周框矩形。 這等同於`LVIR_BOUNDS`。  
   
- `ref`  
+ *ref*  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含的子項目的座標之周框。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2250,7 +2250,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptvi`  
+ *ptvi*  
  指標[LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768)接收所擷取的資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2334,7 +2334,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpRect`  
+ *lpRect*  
  位址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2353,10 +2353,10 @@ void GetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWorkAreas`  
+ *nWorkAreas*  
  數目`RECT`結構中包含*中國*陣列。  
   
- `prc`  
+ *中國*  
  陣列的指標`RECT`結構 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件)，接收工作區域的清單檢視控制項。 這些結構中的值會在用戶端座標。  
   
 ### <a name="remarks"></a>備註  
@@ -2373,7 +2373,7 @@ BOOL HasGroup(int iGroupId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `iGroupId`  
+ *iGroupId*  
  所要求的群組識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2394,22 +2394,22 @@ int HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  位址**LVHITTESTINFO**結構，其中包含要進行點擊測試，而且位置會接收的點擊測試結果的相關資訊。  
   
- `pt`  
+ *pt*  
  要測試的點。  
   
- `pFlags`  
+ *pFlags*  
  接收的測試結果的相關資訊的整數指標。 請參閱說明**旗標**隸屬[LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) Windows SDK 中的結構。  
   
 ### <a name="return-value"></a>傳回值  
- 所指定的位置處的項目索引`pHitTestInfo`，若有的話，否則為-1 或。  
+ 所指定的位置處的項目索引*pHitTestInfo*，若有的話，否則為-1 或。  
   
 ### <a name="remarks"></a>備註  
  您可以使用`LVHT_ABOVE`， `LVHT_BELOW`， `LVHT_TOLEFT`，和`LVHT_TORIGHT`值結構的**旗標**成員以決定是否要捲動清單檢視控制項的內容。 兩個旗標可以結合，例如，如果上方和用戶端區域左邊的位置。  
   
- 您可以針對測試**LVHT_ONITEM**值結構的**旗標**成員以決定指定的位置是否在清單檢視項目。 這個值是上的位元 OR 運算`LVHT_ONITEMICON`， `LVHT_ONITEMLABEL`，和`LVHT_ONITEMSTATEICON`值結構的**旗標**成員。  
+ 您可以針對測試`LVHT_ONITEM`值結構的**旗標**成員以決定指定的位置是否在清單檢視項目。 這個值是上的位元 OR 運算`LVHT_ONITEMICON`， `LVHT_ONITEMLABEL`，和`LVHT_ONITEMSTATEICON`值結構的**旗標**成員。  
   
 ### <a name="example"></a>範例  
 
@@ -2452,22 +2452,22 @@ int InsertColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCol`  
+ *nCol*  
  新的資料行的索引。  
   
- `pColumn`  
+ *pColumn*  
  位址**LVCOLUMN**結構，其中包含新的資料行的屬性。  
   
  *lpszColumnHeading*  
  字串，包含資料行標題的位址。  
   
- `nFormat`  
+ *nFormat*  
  指定資料行的對齊方式的整數。 它可以是下列值之一： **LVCFMT_LEFT**， **LVCFMT_RIGHT**，或**LVCFMT_CENTER**。  
   
- `nWidth`  
+ *nWidth*  
  資料行，單位為像素寬度。 這個參數是-1，如果未設定資料行寬度。  
   
- `nSubItem`  
+ *nSubItem*  
  資料行相關聯的子項目的索引。 這個參數是-1，如果沒有子項目是資料行相關聯。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2491,7 +2491,7 @@ LRESULT InsertGroup(
  *index*  
  群組是要插入之項目的索引。  
   
- `pgrp`  
+ *pgrp*  
  指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，其中包含要加入的群組。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2546,29 +2546,29 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指標[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)指定項目的屬性，如下所述的 Windows SDK 中的結構。  
   
- `nItem`  
+ *nItem*  
  要插入之項目的索引。  
   
- `lpszItem`  
+ *lpszItem*  
  字串，包含的項目標籤的位址或`LPSTR_TEXTCALLBACK`如果項目回呼項目。 回呼項目上的資訊，請參閱[clistctrl:: Getcallbackmask](#getcallbackmask)。  
   
- `nImage`  
+ *nImage*  
  項目的影像索引或`I_IMAGECALLBACK`如果項目回呼項目。 回呼項目上的資訊，請參閱[clistctrl:: Getcallbackmask](#getcallbackmask)。  
   
- `nMask`  
- `nMask`參數會指定哪一個項目做為參數傳遞的屬性都是有效。 它可以是其中一個或多個遮罩值中所述[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows SDK 中。 有效的值可以與位元 OR 運算子結合。  
+ *nMask*  
+ *NMask*參數會指定哪一個項目做為參數傳遞的屬性都是有效。 它可以是其中一個或多個遮罩值中所述[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows SDK 中。 有效的值可以與位元 OR 運算子結合。  
   
- `nState`  
+ *nState*  
  表示項目的狀態、 狀態映像，以及覆疊影像。 請參閱 Windows SDK 主題[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)如需詳細資訊和[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)如需有效的旗標的清單。  
   
- `nStateMask`  
+ *nStateMask*  
  指出將擷取或修改的位元之狀態的成員。 請參閱[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)如需詳細資訊的 Windows SDK 中。  
   
- `lParam`  
- 與項目相關聯的 32 位元應用程式專屬值。 如果指定此參數，您必須設定`nMask`屬性`LVIF_PARAM`。  
+ *lParam*  
+ 與項目相關聯的 32 位元應用程式專屬值。 如果指定此參數，您必須設定*nMask*屬性`LVIF_PARAM`。  
   
 ### <a name="return-value"></a>傳回值  
  新的項目，如果成功則為-1 的其他索引。  
@@ -2611,10 +2611,10 @@ int InsertMarkHitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pPoint`  
+ *pPoint*  
  指標[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)相對於清單控制項的用戶端區域包含點擊的測試的結構座標。  
   
- `lvim`  
+ *lvim*  
  指標[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)結構，指定最接近的座標點參數所定義的插入點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `index`|目前的清單檢視控制項中的項目以零為起始的索引。|  
+|[in]*索引*|目前的清單檢視控制項中的項目以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果指定的項目為可見，否則`false`。  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `id`|項目的唯一識別碼。|  
+|[in]*識別碼*|項目的唯一識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  目前的索引，針對指定的識別碼。  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `index`|項目以零為起始的索引。|  
+|[in]*索引*|項目以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  指定項目的唯一 ID。  
@@ -2751,10 +2751,10 @@ LRESULT MoveGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iGroupId`  
+ *iGroupId*  
  要移動之群組的識別碼。  
   
- `toIndex`  
+ *toIndex*  
  要移動這些群組的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2773,10 +2773,10 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `idItemFrom`  
+ [in]*idItemFrom*  
  要移動之項目的索引。  
   
- [輸入] `idGroupTo`  
+ [in]*idGroupTo*  
  群組識別碼的項目將會移至。  
   
 ### <a name="remarks"></a>備註  
@@ -2796,17 +2796,17 @@ BOOL RedrawItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nFirst`  
+ *nFirst*  
  重新繪製的第一個項目索引。  
   
- `nLast`  
+ *nLast*  
  重新繪製的最後一個項目索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 指定的項目都會不實際重新繪製直到接收到 [清單] 檢視視窗`WM_PAINT`訊息。 若要立即重繪，呼叫 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)之後使用這個函式的函式。  
+ 直到 [清單] 檢視視窗收到 WM_PAINT 訊息，不會實際繪製指定的項目。 若要立即重繪，呼叫 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)之後使用這個函式的函式。  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  從清單檢視控制項中移除所有群組。  
@@ -2826,7 +2826,7 @@ LRESULT RemoveGroup(int iGroupId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iGroupId`  
+ *iGroupId*  
  要移除之群組的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2843,8 +2843,8 @@ BOOL Scroll(CSize size);
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
- A`CSize`物件，指定水平和垂直捲動，像素為單位的數量。 **y**隸屬`size`除以高度，單位為像素的清單檢視控制項的列，並捲動所產生的線條數目。  
+ *size*  
+ A`CSize`物件，指定水平和垂直捲動，像素為單位的數量。 **y**隸屬*大小*除以高度，單位為像素的清單檢視控制項的列，並捲動所產生的線條數目。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -2857,7 +2857,7 @@ BOOL SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cr`  
+ *cr*  
  背景色彩設定，或`CLR_NONE`沒有背景色彩值。 使用背景色彩的清單檢視控制項重繪其本身明顯比沒有背景色彩的速度快。 如需資訊，請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2894,13 +2894,13 @@ BOOL SetBkImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `plvbkImage`  
+ *plvbkImage*  
  位址**LVBKIMAGE**結構，包含新的背景影像資訊。  
   
- `hbm`  
+ *hbm*  
  點陣圖的控制代碼。  
   
- `pszUrl`  
+ *pszUrl*  
  A **NULL**-結尾的字串，其中包含背景影像的 URL。  
   
  *fTile*  
@@ -2931,7 +2931,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMask`  
+ *nMask*  
  回呼遮罩的新值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2959,11 +2959,11 @@ BOOL SetCheck(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  清單控制項項目以零為起始的索引。  
   
- `fCheck`  
- 指定無論項目的狀態影像是否應該顯示。 根據預設，*來瞧*是**TRUE**和狀態影像會顯示。 如果`fCheck`是**FALSE**，看不到。  
+ *來瞧*  
+ 指定無論項目的狀態影像是否應該顯示。 根據預設，*來瞧*是**TRUE**和狀態影像會顯示。 如果*來瞧*是**FALSE**，看不到。  
   
 ### <a name="return-value"></a>傳回值  
  如果勾選此項目，則為非零，否則為 0。  
@@ -2997,10 +2997,10 @@ BOOL SetColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCol`  
+ *nCol*  
  若要設定其屬性的資料行的索引。  
   
- `pColumn`  
+ *pColumn*  
  位址[LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)結構，其中包含新的資料行屬性，Windows SDK 中所述。 結構的**遮罩**成員指定哪個資料行屬性來設定。 如果**遮罩**成員指定`LVCF_TEXT`值結構的**pszText**成員是以 null 結束的字串和結構的位址**cchTextMax**成員會被忽略。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3019,10 +3019,10 @@ BOOL SetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>參數  
- `piArray`  
+ *piArray*  
  包含索引值 （從左到右） 的清單檢視控制項中的資料行緩衝區的指標。 緩衝區必須夠大，無法包含在清單檢視控制項中的資料行總數。  
   
- `iCount`  
+ *iCount*  
  在清單檢視控制項中的資料行數目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3044,10 +3044,10 @@ BOOL SetColumnWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCol`  
+ *nCol*  
  若要設定寬度的資料行索引。 在清單檢視中，這個參數必須是 0。  
   
- `cx`  
+ */cx*  
  新的資料行的寬度。 可以是**LVSCW_AUTOSIZE**或**LVSCW_AUTOSIZE_USEHEADER**中所述， [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3061,7 +3061,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwNewStyle`  
+ *dwNewStyle*  
  清單檢視控制項所使用的延伸樣式的組合。 描述這些樣式的清單，請參閱[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中的主題。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3090,10 +3090,10 @@ int SetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iGroupId`  
+ *iGroupId*  
  其資訊設定的群組的識別碼。  
   
- `pgrp`  
+ *pgrp*  
  指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，其中包含要設定的資訊。 呼叫端會負責配置此結構，並設定其成員項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3110,7 +3110,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  指標[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)結構，其中包含要設定的群組度量資訊。  
   
 ### <a name="remarks"></a>備註  
@@ -3146,7 +3146,7 @@ int SetHotItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iIndex`  
+ *iIndex*  
  要設定為熱門項目之項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3190,13 +3190,13 @@ CSize SetIconSpacing(CSize size);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cx`  
+ */cx*  
  在 x 軸上的圖示之間的距離 （以像素為單位）。  
   
- `cy`  
+ *cy*  
  Y 軸上的圖示之間的距離 （以像素為單位）。  
   
- `size`  
+ *size*  
  A`CSize`物件，指定圖示在 x 軸和 y 軸之間的距離 （以像素為單位）。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3224,10 +3224,10 @@ CImageList* SetImageList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pImageList`  
+ *pImageList*  
  若要指派的影像清單的指標。  
   
- `nImageListType`  
+ *nImageListType*  
  影像清單的類型。 它可以是下列值之一：  
   
 - `LVSIL_NORMAL` 使用大圖示的影像清單。  
@@ -3267,7 +3267,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lvim`  
+ *lvim*  
  指標[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)結構，指定設定插入點的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3284,7 +3284,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，指定要設定插入點的色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3324,47 +3324,47 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  位址[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，其中包含新的項目屬性，Windows SDK 中所述。 結構的**iItem**和**iSubItem**成員識別項目或子項目，以及結構**遮罩**成員指定要設定的屬性。 如需有關**遮罩**成員，請參閱**備註**。  
   
- `nItem`  
+ *nItem*  
  重新設定其屬性的項目索引。  
   
- `nSubItem`  
+ *nSubItem*  
  其屬性會設定子項目的索引。  
   
- `nMask`  
+ *nMask*  
  指定的屬性來設定 （請參閱 < 備註 >）。  
   
- `lpszItem`  
+ *lpszItem*  
  指定項目的標籤的 null 終止字串的位址。  
   
- `nImage`  
+ *nImage*  
  影像清單內的項目影像的索引。  
   
- `nState`  
+ *nState*  
  指定狀態變更 （請參閱 < 備註 >） 的值。  
   
- `nStateMask`  
+ *nStateMask*  
  指定哪些狀態變更 （請參閱 < 備註 >）。  
   
- `lParam`  
+ *lParam*  
  32 位元應用程式專屬值必須與項目相關聯。  
   
- `nIndent`  
- 縮排的像素為單位的寬度。 如果`nIndent`小於超過系統定義最小寬度，新的寬度設定為系統定義的最小值  
+ *nIndent*  
+ 縮排的像素為單位的寬度。 如果*nIndent*小於超過系統定義最小寬度，新的寬度設定為系統定義的最小值  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- **IItem**和**iSubItem**成員**LVITEM**結構和`nItem`和`nSubItem`參數識別的項目和其 subitem屬性會設定。  
+ **IItem**和**iSubItem**成員**LVITEM**結構和*nItem*和*nSubItem*參數會識別在項目和其屬性會設為子項目。  
   
- **遮罩**隸屬**LVITEM**結構和`nMask`參數會指定哪一個項目要設定屬性：  
+ **遮罩**隸屬**LVITEM**結構和*nMask*參數會指定哪一個項目要設定屬性：  
   
-- `LVIF_TEXT` **PszText**成員或`lpszItem`參數是以 null 結束的字串位址; **cchTextMax**成員會被忽略。  
+- `LVIF_TEXT` **PszText**成員或*lpszItem*參數是以 null 結束的字串位址; **cchTextMax**成員會被忽略。  
   
-- `LVIF_STATE` **StateMask**成員或`nStateMask`參數會指定哪一個項目狀態變更和**狀態**成員或`nState`參數會包含這些狀態的值。  
+- `LVIF_STATE` **StateMask**成員或*nStateMask*參數會指定哪一個項目狀態變更和**狀態**成員或*nState*參數會包含這些狀態的值。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::HitTest](#hittest)。  
@@ -3377,7 +3377,7 @@ void SetItemCount(int nItems);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItems`  
+ *nItems*  
  最後會包含控制項的項目數目。  
   
 ### <a name="remarks"></a>備註  
@@ -3413,10 +3413,10 @@ BOOL SetItemCountEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iCount`  
+ *iCount*  
  最後會包含控制項的項目數目。  
   
- `dwFlags`  
+ *dwFlags*  
  指定清單檢視控制項的行為之後重設項目計數。 這個值可以是下列組合：  
   
 - **LVSICF_NOINVALIDATEALL**清單檢視控制項將會重新繪製除非受影響的項目目前檢視中。 這是預設值。  
@@ -3451,17 +3451,17 @@ BOOL SetItemCountEx(
 
   
 ##  <a name="setitemdata"></a>  CListCtrl::SetItemData  
- 設定所指定的項目相關聯的 32 位元應用程式專屬值`nItem`。  
+ 設定所指定的項目相關聯的 32 位元應用程式專屬值*nItem*。  
   
 ```  
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  設定為其資料之清單項目的索引。  
   
- `dwData`  
+ *dwData*  
  32 位元值必須與項目相關聯。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3496,17 +3496,17 @@ BOOL SetItemIndexState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目。 呼叫端會負責配置此結構，並設定其成員項目。|  
-|[輸入] `dwState`|設定項目，狀態即的位元組合[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 時可重設，或其中一個設定，狀態。|  
-|[輸入] `dwMask`|所指定的狀態的有效位元遮罩`dwState`參數。 指定的位元組合 (OR)[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
+|[in]*pItemIndex*|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目。 呼叫端會負責配置此結構，並設定其成員項目。|  
+|[in]*dwState*|設定項目，狀態即的位元組合[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 時可重設，或其中一個設定，狀態。|  
+|[in]*dwMask*|所指定的狀態的有效位元遮罩*dwState*參數。 指定的位元組合 (OR)[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 如需有關`dwState`參數，請參閱[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。  
+ 如需有關*dwState*參數，請參閱[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。  
   
- 如需有關`dwMask`參數，請參閱`stateMask`隸屬[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構。  
+ 如需有關*dwMask*參數，請參閱*stateMask*隸屬[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構。  
   
  這個方法會傳送[LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) Windows SDK 中所述的訊息。  
   
@@ -3520,10 +3520,10 @@ BOOL SetItemPosition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  若要設定其位置的項目索引。  
   
- `pt`  
+ *pt*  
  A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)結構，指定檢視中的新位置座標，項目左上角。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3553,16 +3553,16 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  若要設定其狀態的項目索引。  
   
- `pItem`  
+ *pItem*  
  位址[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，Windows SDK 中所述。 結構的**stateMask**成員指定哪些狀態位元來變更與該結構的**狀態**成員會包含那些位元的新值。 其他成員都會被忽略。  
   
- `nState`  
+ *nState*  
  狀態位元的新值。 如需可能值的清單，請參閱[CListCtrl::GetNextItem](#getnextitem)和[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)狀態的成員。  
   
- `nMask`  
+ *nMask*  
  指定要變更的哪些狀態位元遮罩。 這個值會對應至的 stateMask 成員[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3585,13 +3585,13 @@ BOOL SetItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  若要設定其文字的項目索引。  
   
- `nSubItem`  
+ *nSubItem*  
  若要設定項目標籤子項目，則為零的索引。  
   
- `lpszText`  
+ *lpszText*  
  包含新的項目文字的字串指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3611,7 +3611,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  新[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，其中包含外框色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3645,7 +3645,7 @@ int SetSelectionMark(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iIndex`  
+ *iIndex*  
  多個選取項目中的第一個項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3665,7 +3665,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cr`  
+ *cr*  
  A **COLORREF**指定新的文字背景色彩。 如需資訊，請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3690,7 +3690,7 @@ BOOL SetTextColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cr`  
+ *cr*  
  A **COLORREF**指定新的文字色彩。 如需資訊，請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3733,7 +3733,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptvi`  
+ *ptvi*  
  指標[LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768)結構，其中包含要設定的資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3750,7 +3750,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndTip`  
+ *pWndTip*  
  指標`CToolTipCtrl`清單控制項將使用的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3788,10 +3788,10 @@ void SetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWorkAreas`  
- 數目`RECT`結構 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件) 中所指陣列`lpRect`。  
+ *nWorkAreas*  
+ 數目`RECT`結構 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件) 中所指陣列*lpRect*。  
   
- `lpRect`  
+ *lpRect*  
  陣列中的位址`RECT`結構 (或`CRect`物件) 會指定新的工作區域的清單檢視控制項。 必須在用戶端座標中指定這些區域。 如果這個參數是**NULL**，工作區將會設定為控制項的工作區。  
   
 ### <a name="remarks"></a>備註  
@@ -3816,10 +3816,10 @@ BOOL SortGroups(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_pfnGroupCompare`  
+ *_pfnGroupCompare*  
  群組的比較函式的指標。  
   
- `_plv`  
+ *_plv*  
  Void 的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3838,12 +3838,12 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pfnCompare`  
+ [in]*pfnCompare*  
  應用程式定義的比較函式的位址。  
   
  排序作業呼叫的比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是類別的靜態成員，或是獨立函式不是類別的任何類別的成員。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  應用程式定義的值傳遞給比較函式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3852,7 +3852,7 @@ BOOL SortItems(
 ### <a name="remarks"></a>備註  
  這個方法會變更以反映新的順序的每個項目的索引。  
   
- 比較函式， `pfnCompare`，具有下列格式：  
+ 比較函式， *pfnCompare*，具有下列格式：  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -3861,12 +3861,12 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 比較函式必須傳回負數值，如果第一個項目之前，第二個，如果第一個項目應該遵循第二個或為零的正數值的兩個項目相等。  
   
- `lParam1`參數是 32 位元值進行比較的第一個項目相關聯，`lParam2`參數是與第二個項目相關聯的值。 這些是中所指定的值`lParam`成員的項目[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構時插入到清單。 `lParamSort`參數等同於`dwData`值。  
+ *LParam1*參數是 32 位元值進行比較的第一個項目相關聯， *lParam2*參數是與第二個項目相關聯的值。 這些是中所指定的值*lParam*成員的項目[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構時插入到清單。 *LParamSort*參數等同於*dwData*值。  
   
  這個方法會傳送[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 以下是簡單的比較函式中要排序的項目而產生其`lParam`值。  
+ 以下是簡單的比較函式中要排序的項目而產生其*lParam*值。  
   
 ```cpp  
 // Sort items by associated lParam
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `pfnCompare`|應用程式定義的比較函式的位址。<br /><br /> 排序作業呼叫的比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是類別的靜態成員，或是獨立函式不是類別的任何類別的成員。|  
-|[輸入] `dwData`|應用程式定義的值傳遞給比較函式。|  
+|[in]*pfnCompare*|應用程式定義的比較函式的位址。<br /><br /> 排序作業呼叫的比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是類別的靜態成員，或是獨立函式不是類別的任何類別的成員。|  
+|[in]*dwData*|應用程式定義的值傳遞給比較函式。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -3908,14 +3908,14 @@ BOOL SortItemsEx(
 ### <a name="remarks"></a>備註  
  這個方法會變更以反映新的順序的每個項目的索引。  
   
- 比較函式， `pfnCompare`，具有下列格式：  
+ 比較函式， *pfnCompare*，具有下列格式：  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-此訊息就像是[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，除了的資訊類型傳遞至比較函數。 在[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，`lParam1`和`lParam2`是項目，即可比較的值。 在[LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)，`lParam1`是要比較的第一個項目目前的索引和`lParam2`是目前的第二個項目索引。 您可以傳送[LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055)訊息，以擷取項目的詳細資訊。  
+此訊息就像是[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，除了的資訊類型傳遞至比較函數。 在[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)， *lParam1*和*lParam2*是項目，即可比較的值。 在[LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)， *lParam1*是要比較的第一個項目目前的索引和*lParam2*是目前的第二個項目索引。 您可以傳送[LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055)訊息，以擷取項目的詳細資訊。  
   
  比較函式必須傳回負數值，如果第一個項目之前，第二個，如果第一個項目應該遵循第二個或為零的正數值的兩個項目相等。  
   
@@ -3977,7 +3977,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pInfo`  
+ *pInfo*  
  指標[LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -4008,14 +4008,14 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
   
 ##  <a name="update"></a>  CListCtrl::Update  
- 強制重新繪製指定的項目清單檢視控制項`nItem`。  
+ 強制重新繪製指定的項目清單檢視控制項*nItem*。  
   
 ```  
 BOOL Update(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  若要更新項目的索引。  
   
 ### <a name="return-value"></a>傳回值  

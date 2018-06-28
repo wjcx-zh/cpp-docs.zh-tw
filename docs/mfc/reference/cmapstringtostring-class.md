@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43c9fdc667f5bd40b6c683f6e48753a084266847
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368139"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037644"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 類別
 支援以 `CString` 物件為索引鍵的 `CString` 物件對應。  
@@ -69,7 +69,7 @@ class CMapStringToString : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CMapStringToString`類別成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到`CObject`指標傳回值或 「 輸出 」 函式參數，如指標予以替代`char`。 無論在何處看到`CObject`指標做為 「 輸入 」 函式參數的指標予以替代`char`。  
+ 成員函式`CMapStringToString`類別成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到`CObject`指標傳回值或 「 輸出 」 函式參數，如指標予以替代**char**。 無論在何處看到`CObject`指標做為 「 輸入 」 函式參數的指標予以替代**char**。  
   
  `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`  
   
@@ -169,7 +169,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
- 擷取所指的地圖元素`pAssocRec`。  
+ 擷取所指的地圖元素*pAssocRec*。  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;  
@@ -200,7 +200,7 @@ CPair* PLookup(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>參數  
- `key`  
+ *key*  
  要搜尋的項目索引鍵的指標。  
   
 ### <a name="return-value"></a>傳回值  

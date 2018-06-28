@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371360"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037607"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 類別
 管理 OLE 應用程式互動所需的並行。  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  `BeginBusyState`和`EndBusyState`呼叫遞增和遞減，分別決定應用程式是否忙碌的計數器。 例如，兩個呼叫`BeginBusyState`和呼叫`EndBusyState`仍處於忙碌狀態的結果。 若要取消忙碌狀態，則需要呼叫`EndBusyState`相同次數`BeginBusyState`已呼叫。  
   
- 根據預設，架構，請輸入在閒置處理，這會由執行的忙碌狀態[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 當應用程式正在處理**ON_COMMANDUPDATEUI**通知，傳入呼叫處理更新版本中，閒置處理完成後。  
+ 根據預設，架構，請輸入在閒置處理，這會由執行的忙碌狀態[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 應用程式正在處理 ON_COMMANDUPDATEUI 通知，而連入呼叫會在閒置處理完成之後更新版本中，處理。  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  建立 `COleMessageFilter` 物件。  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  `BeginBusyState`和`EndBusyState`呼叫遞增和遞減，分別決定應用程式是否忙碌的計數器。 例如，兩個呼叫`BeginBusyState`和呼叫`EndBusyState`仍處於忙碌狀態的結果。 若要取消忙碌狀態，則需要呼叫`EndBusyState`相同次數`BeginBusyState`已呼叫。  
   
- 根據預設，架構，請輸入在閒置處理，這會由執行的忙碌狀態[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 當應用程式正在處理`ON_UPDATE_COMMAND_UI`閒置處理完成之後處理連入呼叫的通知。  
+ 根據預設，架構，請輸入在閒置處理，這會由執行的忙碌狀態[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 應用程式正在處理 ON_UPDATE_COMMAND_UI 通知，而閒置處理完成後，會處理連入呼叫。  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  由架構呼叫以處理訊息 OLE 呼叫正在進行時。  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMsg`  
+ *pMsg*  
  暫止訊息指標。  
   
 ### <a name="return-value"></a>傳回值  
  非零成功，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 當呼叫的應用程式正在等待完成的呼叫時，架構會呼叫`OnMessagePending`與暫止訊息的指標。 根據預設，此架構會分派`WM_PAINT`訊息，以便視窗更新進行呼叫，且需要較長的時間期間。  
+ 當呼叫的應用程式正在等待完成的呼叫時，架構會呼叫`OnMessagePending`與暫止訊息的指標。 根據預設，架構會分派 WM_PAINT 訊息，以便視窗更新進行呼叫，且需要較長的時間期間。  
   
  您必須註冊您的訊息篩選器透過呼叫[註冊](#register)之前可能會成為使用中。  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTimeout`  
+ *nTimeout*  
  訊息擱置的延遲毫秒數。  
   
 ### <a name="remarks"></a>備註  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRetryReply`  
+ *nRetryReply*  
  重試之間的毫秒數。  
   
 ### <a name="remarks"></a>備註  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  呼叫者的回應由函式`SetRetryReply`和[SetMessagePendingDelay](#setmessagependingdelay)。 `SetRetryReply` 判斷呼叫的應用程式之間的特定呼叫重試次數應該等候多久。 `SetMessagePendingDelay` 決定多久呼叫的應用程式等候伺服器回應之前採取進一步動作。  
   
- 通常預設值是可接受並不需要變更。 架構會重試該呼叫每個`nRetryReply`直到呼叫會通過，或已過期的訊息擱置延遲 （毫秒)。 值為 0`nRetryReply`指定立即重試和-1 指定的呼叫取消。  
+ 通常預設值是可接受並不需要變更。 架構會重試該呼叫每個*nRetryReply*直到呼叫會通過，或已過期的訊息擱置延遲 （毫秒)。 值為 0 *nRetryReply*指定立即重試和-1 指定的呼叫取消。  
   
  訊息擱置延遲已過期時，OLE"忙碌 對話方塊"(請參閱[COleBusyDialog](../../mfc/reference/colebusydialog-class.md))，讓使用者可以選擇取消，或重試一次呼叫會顯示。 呼叫[EnableBusyDialog](#enablebusydialog)啟用或停用此對話方塊。  
   

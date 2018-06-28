@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369319"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037970"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 `CMFCEditBrowseCtrl`類別支援編輯瀏覽控制項，這是選擇性包含瀏覽 按鈕可編輯的文字方塊。 當使用者按一下瀏覽按鈕時，控制項就會執行自訂動作或顯示包含檔案瀏覽器或資料夾瀏覽器的標準對話方塊。  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  若要瀏覽按鈕提供的自訂映像，呼叫[SetBrowseButtonImage](#setbrowsebuttonimage)方法或覆寫[OnDrawBrowseButton](#ondrawbrowsebutton)方法。  
   
-7.  若要移除編輯瀏覽控制項的瀏覽按鈕，請呼叫[EnableBrowseButton](#enablebrowsebutton)方法`bEnable`參數設定為`FALSE`。  
+7.  若要移除編輯瀏覽控制項的瀏覽按鈕，請呼叫[EnableBrowseButton](#enablebrowsebutton)方法*bEnable*參數設定為`FALSE`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  `TRUE` 若要顯示 [瀏覽] 按鈕。`FALSE`不想再顯示瀏覽按鈕。 預設值是 `TRUE`。  
   
- `szLabel`  
+ *szLabel*  
  瀏覽按鈕顯示標籤。 預設值是" **...**".  
   
 ### <a name="remarks"></a>備註  
- 如果`bEnable`參數是`TRUE`，實作自訂動作，按一下瀏覽按鈕時執行。 若要實作自訂動作，衍生自`CMFCEditBrowseCtrl`類別，然後覆寫其[OnBrowse](#onbrowse)方法。  
+ 如果*bEnable*參數是`TRUE`，實作自訂動作，按一下瀏覽按鈕時執行。 若要實作自訂動作，衍生自`CMFCEditBrowseCtrl`類別，然後覆寫其[OnBrowse](#onbrowse)方法。  
   
  如果`bEnable`參數是`TRUE`，控制項的瀏覽模式是`BrowseMode_Default`; 否則，請瀏覽模式`BrowseMode_None`。 如需瀏覽模式的詳細資訊，請參閱[GetMode](#getmode)方法。  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszDefExt`  
+ *lpszDefExt*  
  指定用於檔案選取對話方塊中的預設副檔名。 預設值是 `NULL`。  
   
- `lpszFilter`  
+ *lpszFilter*  
  指定用於檔案選取對話方塊中的預設篩選字串。 預設值是 `NULL`。  
   
- `dwFlags`  
+ *dwFlags*  
  對話方塊旗標。 預設值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的位元組合 (OR)。  
   
 ### <a name="remarks"></a>備註  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  裝置內容的指標。  
   
- `Rect`  
+ *rect*  
  瀏覽按鈕的週框。  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` 如果按下按鈕。否則， `FALSE`。  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` 如果按鈕會反白顯示。，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hIcon`  
+ *hIcon*  
  圖示的控制代碼。  
   
- `hBitmap`  
+ *hBitmap*  
  點陣圖的控制代碼。  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  點陣圖的資源 ID。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` 刪除指定的圖示或點陣圖，當這個方法會結束。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `strFileName`  
+ *strFileName*  
  指定不合法的檔案名稱。  
   
 ### <a name="return-value"></a>傳回值  

@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5d2a65e1f75fb084c2878dc1231f0dffc12102
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378236"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042387"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 類別
 `CMFCRibbonBar` 類別會實作類似於 Office 2007 中使用的功能區列。  
@@ -353,11 +353,11 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiContextID`  
+ [in]*uiContextID*  
  內容類別識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果內容類別與`uiContextID`找到並啟動; 否則為`FALSE`。  
+ `TRUE` 如果內容類別與*uiContextID*找到並啟動; 否則為`FALSE`。  
   
 ##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  建立並初始化新的功能區類別的功能區列。  
@@ -376,32 +376,32 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  功能區分類的名稱。  
   
- [輸入] `uiSmallImagesResID`  
+ [in]*uiSmallImagesResID*  
  資源識別碼的功能區分類的小型影像清單。  
   
- [輸入] `uiLargeImagesResID`  
+ [in]*uiLargeImagesResID*  
  資源識別碼的功能區分類的大型影像清單。  
   
- [輸入] `sizeSmallImage`  
+ [in]*sizeSmallImage*  
  指定功能區分類的小型影像的大小。  
   
- [輸入] `sizeLargeImage`  
+ [in]*sizeLargeImage*  
  指定功能區分類的大型影像的大小。  
   
- [輸入] `nInsertAt`  
+ [in]*nInsertAt*  
  類別目錄位置為零起始的索引。  
   
- [輸入] `pRTI`  
+ [in]*pRTI*  
  指標[CMFCRibbonCategory 類別](../../mfc/reference/cmfcribboncategory-class.md)動態建立在執行階段的功能區類別的執行階段類別。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功; 的新功能區分類的指標否則， `NULL`。  
   
 ### <a name="remarks"></a>備註  
- 如果`pRTI`參數不是`NULL`，使用執行階段類別，以動態方式建立新的功能區分類。  
+ 如果*pRTI*參數不是`NULL`，使用執行階段類別，以動態方式建立新的功能區分類。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`AddCategory`方法中的`CMFCRibbonBar`類別。  
@@ -427,35 +427,35 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  分類的名稱。  
   
- [輸入] `lpszContextName`  
+ [in]*lpszContextName*  
  內容分類標題的名稱。  
   
- [輸入] `uiContextID`  
+ [in]*uiContextID*  
  內容識別碼。  
   
- [輸入] `clrContext`  
+ [in]*clrContext*  
  內容分類標題的色彩。  
   
- [輸入] `uiSmallImagesResID`  
+ [in]*uiSmallImagesResID*  
  內容類別目錄的小型影像資源識別碼。  
   
- [輸入] `uiLargeImagesResID`  
+ [in]*uiLargeImagesResID*  
  內容類別大型影像資源識別碼。  
   
- [輸入] `sizeSmallImage`  
+ [in]*sizeSmallImage*  
  小型影像的大小。  
   
- [輸入] `sizeLargeImage`  
+ [in]*sizeLargeImage*  
  大型影像的大小。  
   
- [輸入] `pRTI`  
+ [in]*pRTI*  
  執行階段類別的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 指標，新建的類別，或`NULL`如果`CreateObject`方法`pRTI`無法建立指定的分類。  
+ 指標，新建的類別，或`NULL`如果`CreateObject`方法*pRTI*無法建立指定的分類。  
   
 ### <a name="remarks"></a>備註  
  使用這個函數來加入內容分類。 內容類別是類別的一種特殊類型，可顯示或隱藏在執行階段，根據目前的應用程式內容。 比方說，當使用者選取的物件，您可以顯示您用來變更特定所選的物件的內容分類與特殊索引標籤。  
@@ -493,19 +493,19 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  主要功能區分類的名稱。  
   
- [輸入] `uiSmallImagesResID`  
+ [in]*uiSmallImagesResID*  
  小型影像資源識別碼。  
   
- [輸入] `uiLargeImagesResID`  
+ [in]*uiLargeImagesResID*  
  大型影像資源識別碼。  
   
- [輸入] `sizeSmallImage`  
+ [in]*sizeSmallImage*  
  小型影像的大小。  
   
- [輸入] `sizeLargeImage`  
+ [in]*sizeLargeImage*  
  大型影像的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -544,13 +544,13 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  分類的名稱。  
   
- [輸入] `uiSmallImagesResID`  
+ [in]*uiSmallImagesResID*  
  影像清單的分類的資源識別碼。  
   
- [輸入] `sizeSmallImage`  
+ [in]*sizeSmallImage*  
  功能區中的項目分類的映像的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -567,7 +567,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pElement`  
+ [in]*pElement*  
  功能區項目的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -581,7 +581,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bReplaceFrameCaption`  
+ [in]*bReplaceFrameCaption*  
  `TRUE` 若要取代的主框架視窗標題; 功能區列`FALSE`找出功能區列在 主框架視窗的標題。  
   
 ### <a name="remarks"></a>備註  
@@ -597,13 +597,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  功能區列的父視窗的指標。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  新視窗的樣式邏輯結合。  
   
- [輸入] `nID`  
+ [in]*nID*  
  新視窗的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -628,16 +628,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  功能區列的父視窗的指標。  
   
- [輸入] `dwCtrlStyle`  
+ [in]*dwCtrlStyle*  
  不使用這個參數。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  新視窗的樣式邏輯結合。  
   
- [輸入] `nID`  
+ [in]*nID*  
  新視窗的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -653,7 +653,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSetFocus`  
+ [in]*bSetFocus*  
  `TRUE` 若要將焦點設定在功能區列的父視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -669,13 +669,13 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  功能表按鈕的裝置內容的指標。  
   
- [輸入] `pMenuItem`  
+ [in]*pMenuItem*  
  工具列功能表按鈕的指標。  
   
- [輸入] `rectImage`  
+ [in]*rectImage*  
  功能表按鈕的顯示矩形。  
   
 ### <a name="return-value"></a>傳回值  
@@ -700,7 +700,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用 「 按鍵提示 」 功能。`FALSE`停用按鍵提示功能。  
   
 ### <a name="remarks"></a>備註  
@@ -714,11 +714,11 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用**預覽列印**功能;`FALSE`停用**預覽列印**功能。  
   
 ### <a name="remarks"></a>備註  
- 如果`bEnable`是`FALSE`和預覽列印類別存在，就會刪除。  
+ 如果*bEnable*是`FALSE`和預覽列印類別存在，就會刪除。  
   
  根據預設**預覽列印**功能已啟用。  
   
@@ -732,14 +732,14 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用功能區列; 上的工具提示`FALSE`停用功能區列上的工具提示。  
   
- [輸入] `bEnableDescr`  
+ [in]*bEnableDescr*  
  `TRUE` 若要啟用工具提示描述在工具提示。`FALSE`停用工具提示上的工具提示描述。  
   
 ### <a name="remarks"></a>備註  
- `bEnable`參數會決定當滑鼠停留在功能區項目時，是否會顯示工具提示。 `bEnableDescr`參數會判斷要使用的工具提示文字是否顯示其他的描述性文字。  
+ *BEnable*參數會決定當滑鼠停留在功能區項目時，是否會顯示工具提示。 *BEnableDescr*參數會判斷要使用的工具提示文字是否顯示其他的描述性文字。  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  如果有指定的資料和可見性會擷取功能區項目的指標。  
@@ -751,10 +751,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwData`  
+ [in]*dwData*  
  與功能區項目相關聯的資料。  
   
- [輸入] `bVisibleOnly`  
+ [in]*bVisibleOnly*  
  `TRUE` 搜尋; 僅限可見的功能區項目`FALSE`搜尋所有功能區項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -774,13 +774,13 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  功能區項目的命令識別碼。  
   
- [輸入] `bVisibleOnly`  
+ [in]*bVisibleOnly*  
  `TRUE` 搜尋; 僅限可見的功能區項目`FALSE`搜尋所有功能區項目。  
   
- [輸入] `bExcludeQAT`  
+ [in]*bExcludeQAT*  
  `TRUE` 排除搜尋; 快速存取工具列項目否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -799,7 +799,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwData`  
+ [in]*dwData*  
  具有功能區分類相關聯的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -859,11 +859,11 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  在功能區列中所包含的功能區分類清單中的功能區分類的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的索引處的功能區分類的指標否則，`NULL`如果`nIndex`超出範圍。  
+ 指定的索引處的功能區分類的指標否則，`NULL`如果*nIndex*超出範圍。  
   
 ##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  擷取在功能區列中的功能區分類數目。  
@@ -896,11 +896,11 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pCategory`  
+ [in]*pCategory*  
  功能區分類的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 功能區類別目錄所指定的以零為起始的索引`pCategory`; 或如果找不到功能區分類為-1。  
+ 功能區類別目錄所指定的以零為起始的索引*pCategory*; 或如果找不到功能區分類為-1。  
   
 ##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  擷取內容之識別碼所指定的內容分類標題的名稱  
@@ -912,14 +912,14 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiContextID`  
+ [in]*uiContextID*  
  功能區類別內容識別碼。  
   
- [輸出] `strName`  
+ [out]*strName*  
  內容分類標題的名稱。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果該方法成功。否則，`FALSE`如果`uiContextID`是零，或找不到的內容分類標題。  
+ `TRUE` 如果該方法成功。否則，`FALSE`如果*uiContextID*是零，或找不到的內容分類標題。  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  擷取目前為下拉功能區項目。  
@@ -943,10 +943,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  功能區項目的命令識別碼。  
   
- [輸出] `arButtons`  
+ [out]*arButtons*  
  功能區項目指標的陣列。  
   
 ### <a name="remarks"></a>備註  
@@ -980,10 +980,10 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `lstItems`  
+ [out]*lstItems*  
  功能區列中所包含的功能區項目的命令 Id 的清單。  
   
- [輸入] `bHiddenOnly`  
+ [in]*bHiddenOnly*  
  `TRUE` 若要排除顯示; 的功能區項目`FALSE`要包含在功能區列中的所有功能區項目。  
   
 ### <a name="remarks"></a>備註  
@@ -1081,7 +1081,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `lstCommands`  
+ [out]*lstCommands*  
  功能區項目的快速存取工具列上的命令 Id 的清單。  
   
 ### <a name="remarks"></a>備註  
@@ -1183,20 +1183,20 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  在功能區列座標點的位置。  
   
- [輸入] `bCheckActiveCategory`  
+ [in]*bCheckActiveCategory*  
  `TRUE` 若要搜尋作用中的分類。`FALSE`不是要搜尋作用中的分類。  
   
- [輸入] `bCheckPanelCaption`  
+ [in]*bCheckPanelCaption*  
  `TRUE` 若要測試功能區面板的標題位於; 的點`FALSE`不是可進行測試的功能區面板的標題中的點。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ### <a name="return-value"></a>傳回值  
  位於指定的點; 功能區項目的指標否則`NULL`如果找不到功能區項目點。  
   
 ### <a name="remarks"></a>備註  
- 除非尚未經過測試的功能區面板中的點標題`bCheckActiveCategory`參數是`TRUE`。  
+ 除非尚未經過測試的功能區面板中的點標題*bCheckActiveCategory*參數是`TRUE`。  
   
 ##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  指出是否已啟用按鍵提示功能。  
@@ -1325,10 +1325,10 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  已按下按鈕的指標。  
   
- [輸入] `point`  
+ [in]*點*  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pEdit`  
- [輸入] `point`  
+ [in]*pEdit*  
+ [in]*點*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1356,7 +1356,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bIsRTL`  
+ [in]*bIsRTL*  
  `TRUE` 如果配置為從右至左。`FALSE`如果版面配置是由左到右。  
   
 ### <a name="remarks"></a>備註  
@@ -1370,7 +1370,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>參數  
- 長 `lVal`  
+ 長*lVal*  
  可存取物件的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
- [輸入] `x`  
- [輸入] `y`  
- [輸入] `pHit`  
+ [in]*pWnd*  
+ [in]*x*  
+ [in]*y*  
+ [in]*pHit*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
- [輸入] `x`  
- [輸入] `y`  
- [輸入] `pHit`  
+ [in]*pWnd*  
+ [in]*x*  
+ [in]*y*  
+ [in]*pHit*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1431,13 +1431,13 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrameWnd`  
+ [in]*pFrameWnd*  
  功能區列的父主框架視窗的指標。  
   
- [輸入] `wParam`  
+ [in]*wParam*  
  按下索引鍵的虛擬按鍵碼。  
   
- [輸入] `lParam`  
+ [in]*lParam*  
  已按下按鍵時，鍵盤狀態旗標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1456,13 +1456,13 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrameWnd`  
+ [in]*pFrameWnd*  
  功能區列的父主框架視窗的指標。  
   
- [輸入] `wParam`  
+ [in]*wParam*  
  索引鍵被釋放虛擬按鍵碼。  
   
- [輸入] `lParam`  
+ [in]*lParam*  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1487,7 +1487,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMsg`  
+ [in]*pMsg*  
  訊息的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1533,7 +1533,7 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  在功能區列中所包含的功能區分類清單中的類別目錄的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1552,10 +1552,10 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pCategory`  
+ [in]*pCategory*  
  功能區分類包含在功能區列中。  
   
- [輸入] `bForceRestore`  
+ [in]*bForceRestore*  
  `TRUE` 若要最大化功能區列，如果它最小化;`FALSE`作用中分類顯示快顯視窗中，如果最小化功能區列。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1564,7 +1564,7 @@ BOOL SetActiveCategory(
 ### <a name="remarks"></a>備註  
  主要功能區分類不能使用中的類別。  
   
- 如果所指定的類別目錄`pCategory`是未顯示，它不能設為作用中的分類。  
+ 如果所指定的類別目錄*pCategory*是未顯示，它不能設為作用中的分類。  
   
 ##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  將功能區列上屬於多個文件介面 (MDI) 子視窗至指定的 MDI 子視窗的系統按鈕。  
@@ -1574,7 +1574,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  MDI 子視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1589,10 +1589,10 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pButton`  
+ [in]*pButton*  
  應用程式功能區按鈕的指標。  
   
- [輸入] `sizeButton`  
+ [in]*sizeButton*  
  應用程式功能區按鈕的大小。  
   
 ### <a name="remarks"></a>備註  
@@ -1614,13 +1614,13 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdID`  
+ [in]*uiCmdID*  
  功能區項目的命令 ID。  
   
- [輸入] `lpszKeys`  
+ [in]*lpszKeys*  
  Keytip。  
   
- [輸入] `lpszMenuKeys`  
+ [in]*lpszMenuKeys*  
  功能表 keytip。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1639,10 +1639,10 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pLevel`  
+ [in]*pLevel*  
  目前的鍵盤瀏覽物件的指標。  
   
- [輸入] `bSetFocus`  
+ [in]*bSetFocus*  
  `TRUE` 若要將鍵盤焦點設定在功能區列。  
   
 ### <a name="remarks"></a>備註  
@@ -1658,10 +1658,10 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bMax`  
+ [in]*bMax*  
  `TRUE` 在功能區列; 上顯示 MDI 子視窗的 [系統] 按鈕`FALSE`移除在功能區列中的 MDI 子視窗的 [系統] 按鈕。  
   
- [輸入] `pWnd`  
+ [in]*pWnd*  
  功能區列的主框架視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1677,10 +1677,10 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lstCommands`  
+ [in]*lstCommands*  
  要放在快速存取工具列命令的清單。  
   
- [輸入] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  `TRUE` 如果想要新增的功能區項目; 後重繪功能區`FALSE`否則。  
   
 ### <a name="example"></a>範例  
@@ -1696,7 +1696,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `state`  
+ [in]*狀態*  
  快速存取工具列預設狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -1715,7 +1715,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bOnTop`  
+ [in]*bOnTop*  
  `TRUE` 若要將功能區列; 快速存取工具列`FALSE`放置在功能區列下方的快速存取工具列。  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
@@ -1728,10 +1728,10 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nWidthRegular`  
+ [in]*nWidthRegular*  
  寬度 （以像素的規則的固定大小工具提示）。  
   
- [輸入] `nWidthLargeImage`  
+ [in]*nWidthLargeImage*  
  寬度，以像素的大型的固定大小的工具提示。  
   
 ### <a name="remarks"></a>備註  
@@ -1747,10 +1747,10 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIndex`  
+ [in]*nIndex*  
  功能區類別的索引。  
   
- [輸入] `bShow`  
+ [in]*bShow*  
  如果`TRUE`，會顯示功能區分類的; 否則隱藏功能區分類。  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
@@ -1763,10 +1763,10 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiContextID`  
+ [in]*uiContextID*  
  內容類別識別碼。  
   
- [輸入] `bShow`  
+ [in]*bShow*  
  如果`TRUE`，顯示具有指定的識別碼的類別目錄; 否則隱藏具有指定的識別碼的類別  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
@@ -1798,7 +1798,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nChar`  
+ [in]*nChar*  
  使用者按鍵輸入字元程式碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1848,16 +1848,16 @@ virtual BOOL LoadFromResource(
 ```  
   
 ### <a name="parameters"></a>參數  
- `uiXMLResID`  
+ *uiXMLResID*  
  指定功能區列資訊的資源識別碼的 XML 字串。  
   
- `lpszResType`  
- 指定位於資源類型`uiXMLResID`。  
+ *lpszResType*  
+ 指定位於資源類型*uiXMLResID*。  
   
- `hInstance`  
- 其可執行檔包含資源模組的控制代碼。 如果`hInstance`是`NULL`，系統會從用來建立目前的處理序的模組載入資源。  
+ *hInstance*  
+ 其可執行檔包含資源模組的控制代碼。 如果*hInstance*是`NULL`，系統會從用來建立目前的處理序的模組載入資源。  
   
- `lpszXMLResID`  
+ *lpszXMLResID*  
  指定功能區列資訊的資源識別碼 （以字串形式）。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1873,8 +1873,8 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppBuffer`  
- 此函式傳回時，`ppBuffer`指向這個方法所配置的緩衝區，並包含以 XML 格式的功能區列資訊。  
+ *ppBuffer*  
+ 此函式傳回時， *ppBuffer*指向這個方法所配置的緩衝區，並包含以 XML 格式的功能區列資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 `TRUE`，否則為 `FALSE`。  
@@ -1889,7 +1889,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFilePath`  
+ *lpszFilePath*  
  指定輸出檔。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1907,10 +1907,10 @@ void SetWindows7Look(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bWindows7Look`  
+ *bWindows7Look*  
  `TRUE` 設定 Windows 7 的外觀。`FALSE`否則。  
   
- `bRecalc`  
+ *bRecalc*  
  `TRUE` 重新計算功能區配置。`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  

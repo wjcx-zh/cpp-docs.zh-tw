@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376703"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038551"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 類別
 做為快取，應用程式在此放置資料，以便在資料傳輸作業 (例如剪貼簿或拖放作業) 期間提供。  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，其中包含指定的格式中的資料。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
   
 ### <a name="remarks"></a>備註  
  您必須提供資料，因為此函式，提供它使用立即呈現。 資料會快取，直到需要為止。  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
  *hGlobal*  
  包含指定的格式資料的全域記憶體區塊的控制代碼。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
   
 ### <a name="remarks"></a>備註  
  此函式提供使用直接呈現，因此呼叫函式; 時，您必須提供資料的資料資料會快取，直到需要為止。 使用`CacheData`成員函式，如果您提供的大量資料，或如果您需要的結構化儲存體。  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
   
 ### <a name="remarks"></a>備註  
  此函式提供的資料，使用延遲的轉譯，所以不會立即提供的資料。 [OnRenderData](#onrenderdata)或[OnRenderGlobalData](#onrenderglobaldata)呼叫成員函式會要求資料。  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
   
 ### <a name="remarks"></a>備註  
  此函式提供的資料，使用延遲的轉譯，所以不會立即提供的資料。 [OnRenderFileData](#onrenderfiledata)呼叫成員函式會要求資料。  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  中的資料是放到剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述中的資料是要被取代的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述中的資料是要被取代的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
   
 ### <a name="remarks"></a>備註  
  [OnSetData](#onsetdata)會在發生此情況時由架構呼叫。 這只用於架構傳回的資料來源時[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`未呼叫您`OnSetData`永遠不會呼叫函式。 `DelaySetData` 應該針對每個剪貼簿呼叫或**FORMATETC**您支援的格式。  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwEffects`  
+ *dwEffects*  
  拖放作業所允許在此資料來源。 可以是下列一或多個項目：  
   
 - `DROPEFFECT_COPY` 無法執行複製作業。  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` 表示可能發生拖曳捲軸作業。  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  實際開始拖曳所定義的矩形的指標。 如需詳細資訊，請參閱接下來的＜備註＞一節。  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  卸除拖放作業，所產生的效果否則`DROPEFFECT_NONE`如果作業永遠不會開始因為使用者放開滑鼠按鈕，然後退出提供的矩形。  
   
 ### <a name="remarks"></a>備註  
- 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形`lpRectStartDrag`，或是直到已通過指定的毫秒數。 如果`lpRectStartDrag`是**NULL**，矩形的大小是一個像素。  
+ 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形*lpRectStartDrag* ，或是直到已通過指定的毫秒數。 如果*lpRectStartDrag*是**NULL**，矩形的大小是一個像素。  
   
  登錄機碼設定所指定的延遲時間。 您可以藉由呼叫變更的延遲時間[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果您未指定延遲時間，會使用預設值是 200 毫秒。 拖放到延遲時間會儲存，如下所示：  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)資料所要傳回的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>備註  
  指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)延遲轉譯的成員函式。 此函式的預設實作會呼叫[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)是否提供的儲存體中的檔案或記憶體，分別。 如果這些格式都不提供，預設實作會傳回 0，然後會執行任何動作。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源： 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 如果`lpStgMedium` ->  *tymed*是**TYMED_NULL**、 **STGMEDIUM**應該配置，並填入所指定*lpFormatEtc->tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
+ 如果*lpStgMedium*-> *tymed*是**TYMED_NULL**、 **STGMEDIUM**應該配置和所指定的填滿*lpFormatEtc]-> [tymed*。 如果不是**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
   
  這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您的資料是小型且固定的大小，會覆寫`OnRenderGlobalData`。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
   
- `pFile`  
+ *pFile*  
  指向[CFile](../../mfc/reference/cfile-class.md)資料為呈現的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
   
- `phGlobal`  
+ *phGlobal*  
  指向全域記憶體資料所要傳回的控制代碼。 如果其中一個具有尚未配置，這個參數可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>備註  
  指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](#delayrenderdata)延遲轉譯的成員函式。 此函式的預設實作只會傳回**FALSE**。  
   
- 如果`phGlobal`是**NULL**，然後新`HGLOBAL`應該配置並傳回`phGlobal`。 否則，`HGLOBAL`所指定`phGlobal`應填入資料。 資料量置於`HGLOBAL`不能超過目前的記憶體區塊大小。 此外，無法重新配置較大的區塊。  
+ 如果*phGlobal*是**NULL**，然後新`HGLOBAL`應該配置並傳回*phGlobal*。 否則，`HGLOBAL`所指定*phGlobal*應填入資料。 資料量置於`HGLOBAL`不能超過目前的記憶體區塊大小。 此外，無法重新配置較大的區塊。  
   
  這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存媒體，覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫[OnRenderFileData](#onrenderfiledata)。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源： 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定要取代的資料格式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，其中包含的資料，將會取代目前的內容`COleDataSource`物件。  
   
- `bRelease`  
- 指出誰完成函式呼叫後之儲存媒體的擁有權。 呼叫端決定誰負責釋放之儲存媒體代表配置的資源。 呼叫端會藉由設定`bRelease`。 如果`bRelease`為非零，資料來源取得擁有權，使用它完成時釋放媒體。 當`bRelease`為 0、 呼叫端保留擁有權和資料來源可以只針對在呼叫期間使用之儲存媒體。  
+ *bRelease*  
+ 指出誰完成函式呼叫後之儲存媒體的擁有權。 呼叫端決定誰負責釋放之儲存媒體代表配置的資源。 呼叫端會藉由設定*bRelease*。 如果*bRelease*為非零，資料來源取得擁有權，使用它完成時釋放媒體。 當*bRelease*為 0、 呼叫端保留擁有權和資料來源可以只針對在呼叫期間使用之儲存媒體。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  

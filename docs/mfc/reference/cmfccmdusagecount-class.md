@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369238"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037339"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 類別
 追蹤 Windows 訊息，例如當使用者從功能表選取項目使用方式的計數。  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `uiCmd`|指定命令計數器遞增。|  
+|[in]*uiCmd*|指定命令計數器遞增。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會加入新項目命令計數的對應結構`m_CmdUsage`，如果已經不存在。  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   工具列 framework 是以自訂模式 ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)方法會傳回非零值)。  
   
--   此命令是指子功能表或功能表分隔符號 (`uiCmd`等於 0，則為-1)。  
+-   此命令是指子功能表或功能表分隔符號 ( *uiCmd*等於 0，則為-1)。  
   
-- `uiCmd` 指的是標準的命令 (全域`IsStandardCommand`函式會傳回非零值)。  
+- *uiCmd*指的是標準的命令 (全域`IsStandardCommand`函式會傳回非零值)。  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  擷取與指定的命令識別碼相關聯的使用計數  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `uiCmd`|要擷取命令計數器的識別碼。|  
+|[in]*uiCmd*|要擷取命令計數器的識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  與指定的命令識別碼相關聯的使用計數  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `uiCmd`|指定要檢查的命令。|  
+|[in]*uiCmd*|指定要檢查的命令。|  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果經常使用的命令。否則便是 0。  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `ar`|A`CArchive`来序列化或物件。|  
+|[in]*ar*|A`CArchive`来序列化或物件。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會序列化的指令計數對應結構`m_CmdUsage`，和總計 命令使用方式`m_nTotalUsage`、 計數器或指定的封存。  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `nStartCount`|所有追蹤命令的初始新計數。|  
-|[輸入] `nMinUsagePercentage`|新的最小的使用量百分比。|  
+|[in]*nStartCount*|所有追蹤命令的初始新計數。|  
+|[in]*nMinUsagePercentage*|新的最小的使用量百分比。|  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功，`FALSE`如果`nMinUsagePercentage`參數是大於或等於 100。  
+ `TRUE` 如果此方法成功，`FALSE`如果*nMinUsagePercentage*參數是大於或等於 100。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會設定共用`CMFCCmdUsageCount`類別資料成員`m_nStartCount`和`m_nMinUsagePercentage`至`nStartCount`和`nMinUsagePercentage`分別。 `m_nStartCount` 正由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法，以判斷此物件是否已收集追蹤資料的最小數量。 `m_nMinUsagePercentage` 正由[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法，以判斷是否經常使用指定的命令。  
+ 這個方法會設定共用`CMFCCmdUsageCount`類別資料成員`m_nStartCount`和`m_nMinUsagePercentage`至*nStartCount*和*nMinUsagePercentage*分別。 `m_nStartCount` 正由[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法，以判斷此物件是否已收集追蹤資料的最小數量。 `m_nMinUsagePercentage` 正由[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法，以判斷是否經常使用指定的命令。  
   
  在偵錯組建中這個方法會產生判斷提示失敗如果`nMinUsagePercentage`參數是大於或等於 100。  
   

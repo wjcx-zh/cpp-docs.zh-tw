@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c20de761f91f304c1d7684dbd19a03c0b8efa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 510f0416686c981682236f6d6c05ae761fe8230d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366990"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041726"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr 類別
 支援以 16 位元字組為索引鍵的 void 指標對應。  
@@ -61,7 +61,7 @@ class CMapWordToPtr : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CMapWordToPtr`類別成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到 `CObject` 指標做為函式參數或傳回值，請用 `void` 的指標予以替代。 無論在何處看到`CString`或**const**指標`char`做為函式參數或傳回值，取代**WORD**。  
+ 成員函式`CMapWordToPtr`類別成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值的指標予以替代**void**。 無論在何處看到`CString`或**const**指標**char**做為函式參數或傳回值，取代**WORD**。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

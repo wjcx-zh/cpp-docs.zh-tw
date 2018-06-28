@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375829"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038968"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
 A`CMFCCaptionBar`物件是一種控制列，可以顯示三個項目： 按鈕、 文字標籤和點陣圖。 它一次只能每個類型各顯示一個項目。 您可以將每個項目對齊控制項的左緣或右緣，或對齊中央。 您也可以將平面或 3D 樣式套用至標題列的上框線和下框線。  
@@ -189,19 +189,19 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  標題列樣式的邏輯 OR 組合。  
   
- `pParentWnd`  
+ *pParentWnd*  
  標題列控制項的父視窗。  
   
- `uID`  
+ *UID*  
  標題列控制項的識別碼。  
   
- `nHeight`  
+ *nHeight*  
  高度 （標題列控制項的像素為單位）。 如果是-1，則會根據圖示、 文字和標題列控制項顯示的按鈕的高度計算高度。  
   
- `bIsMessageBarMode`  
+ *bIsMessageBarMode*  
  `TRUE` 如果標題列為訊息列模式;`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
@@ -230,7 +230,7 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用按鈕，`FALSE`來停用按鈕。  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
@@ -241,7 +241,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `elem`  
+ [in]*elem*  
  要擷取對齊標題列項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -332,10 +332,10 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的標題列的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  要填滿的週框矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -353,10 +353,10 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容，用於顯示框線。  
   
- [輸入] `rect`  
+ [in]*rect*  
  週框。  
   
 ### <a name="remarks"></a>備註  
@@ -376,16 +376,16 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  用來顯示按鈕裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  按鈕的週框。  
   
- [輸入] `strButton`  
+ [in]*strButton*  
  按鈕的文字標籤。  
   
- [輸入] `bEnabled`  
+ [in]*bEnabled*  
  `TRUE` 如果已啟用 按鈕。`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
@@ -401,10 +401,10 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  用來顯示影像的裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  指定影像的週框矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -421,13 +421,13 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  用來顯示按鈕裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  文字的週框。  
   
- [輸入] `strText`  
+ [in]*strText*  
  要顯示的文字字串。  
   
 ### <a name="remarks"></a>備註  
@@ -485,16 +485,16 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hBitmap`  
+ [in]*hBitmap*  
  要設定點陣圖的控制代碼。  
   
- [輸入] `clrTransparent`  
+ [in]*clrTransparent*  
  指定點陣圖的透明色彩的 RGB 值。  
   
- [輸入] `bStretch`  
+ [in]*bStretch*  
  如果`TRUE`，點陣圖會延伸，如果無法容納周框的影像。 否則不會延伸點陣圖。  
   
- [輸入] `bmpAlignment`  
+ [in]*bmpAlignment*  
  點陣圖的對齊方式。  
   
 ### <a name="remarks"></a>備註  
@@ -502,7 +502,7 @@ void SetBitmap(
   
  先前的點陣圖，會自動終結。 如果標題列會顯示一個圖示因為你把[CMFCCaptionBar::SetIcon](#seticon)方法，將不會顯示點陣圖，除非您移除圖示，藉由呼叫[CMFCCaptionBar::RemoveIcon](#removeicon)。  
   
- 點陣圖會對齊依指定`bmpAlignment`參數。  這個參數可以是下列其中一個 `BarElementAlignment` 值：  
+ 點陣圖會對齊依指定*bmpAlignment*參數。  這個參數可以是下列其中一個 `BarElementAlignment` 值：  
   
 -   ALIGN_INVALID  
   
@@ -520,7 +520,7 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nSize`  
+ [in]*nSize*  
  新的大小，單位為像素的標題列框線。  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
@@ -535,16 +535,16 @@ void SetButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszLabel`  
+ *lpszLabel*  
  按鈕的命令標籤。  
   
- `uiCmdUI`  
+ *uiCmdUI*  
  按鈕的命令識別碼。  
   
- `btnAlignmnet`  
+ *btnAlignmnet*  
  按鈕的對齊方式。  
   
- `bHasDropDownArrow`  
+ *bHasDropDownArrow*  
  `TRUE` 如果按鈕顯示的下拉箭號，`FALSE`否則。  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
@@ -555,7 +555,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bPresed`  
+ *bPresed*  
  `TRUE` 如果按鈕會保留其狀態為 pressed，`FALSE`否則。  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
@@ -568,10 +568,10 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszToolTip`  
+ [in]*lpszToolTip*  
  工具提示標題。  
   
- [輸入] `lpszDescription`  
+ [in]*lpszDescription*  
  工具提示描述。  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
@@ -582,7 +582,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bFlat`  
+ [in]*bFlat*  
  `TRUE` 如果是平面的標題列的框線。 `FALSE` 如果框線為 3D。  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
@@ -595,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hIcon`  
+ [in]*hIcon*  
  若要設定圖示的控制代碼。  
   
- [輸入] `iconAlignment`  
+ [in]*iconAlignment*  
  圖示的對齊方式。  
   
 ### <a name="remarks"></a>備註  
  標題列可以顯示圖示或點陣圖。 請參閱[CMFCCaptionBar::SetBitmap](#setbitmap) ，了解如何顯示點陣圖。 如果您設定圖示和點陣圖，一律會顯示圖示。 呼叫[CMFCCaptionBar::RemoveIcon](#removeicon)若要移除的標題列中的圖示。  
   
- 圖示對齊根據`iconAlignment`參數。 它可以是下列其中一種`BarElementAlignment`值：  
+ 圖示對齊根據*iconAlignment*參數。 它可以是下列其中一種`BarElementAlignment`值：  
   
 -   ALIGN_INVALID  
   
@@ -624,10 +624,10 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszToolTip`  
+ [in]*lpszToolTip*  
  工具提示的文字。  
   
- [輸入] `lpszDescription`  
+ [in]*lpszDescription*  
  工具提示描述。  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
@@ -638,7 +638,7 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nMargin`  
+ [in]*nMargin*  
  距離，單位為像素的標題列項目邊緣之間的標題列控制項的邊緣。  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
@@ -651,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strText`  
+ [in]*strText*  
  要設定的文字字串。  
   
- [輸入] `textAlignment`  
+ [in]*textAlignment*  
  文字對齊方式。  
   
 ### <a name="remarks"></a>備註  
- 對齊的文字標籤所指定`textAlignment`參數。 它可以是下列其中一種`BarElementAlignment`值：  
+ 對齊的文字標籤所指定*textAlignment*參數。 它可以是下列其中一種`BarElementAlignment`值：  
   
 -   ALIGN_INVALID  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370867"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078463"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 結構
 `CREATESTRUCT`結構會定義初始化參數傳遞至應用程式的視窗程序。  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>參數  
- `lpCreateParams`  
+ *lpCreateParams*  
  要用來建立視窗的資料點。  
   
- `hInstance`  
+ *hInstance*  
  識別擁有新的視窗中的模組的模組執行個體控制代碼。  
   
- `hMenu`  
+ *hMenu*  
  識別可供新的視窗功能表。 如果子視窗，包含整數識別碼。  
   
- `hwndParent`  
+ *hwndParent*  
  識別擁有新視窗的視窗。 這個成員是**NULL**如果新的視窗是最上層視窗。  
   
- `cy`  
+ *cy*  
  指定新的視窗的高度。  
   
- `cx`  
+ */cx*  
  指定新的視窗的寬度。  
   
- `y`  
+ *y*  
  指定新的視窗左上角的 y 座標。 如果新的視窗是子視窗; 座標是相對於父視窗否則座標是相對於螢幕原點。  
   
- `x`  
+ *x*  
  指定新的視窗左上角的 x 座標。 如果新的視窗是子視窗; 座標是相對於父視窗否則座標是相對於螢幕原點。  
   
- `style`  
+ *style*  
  指定新的視窗[樣式](../../mfc/reference/styles-used-by-mfc.md)。  
   
- `lpszName`  
+ *lpszName*  
  指向以 null 終止的字串，指定新的視窗名稱。  
   
- `lpszClass`  
+ *lpszClass*  
  指向以 null 結束的字串，指定新視窗的視窗類別名稱 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構; 如需詳細資訊，請參閱 Windows SDK)。  
   
- `dwExStyle`  
+ *dwExStyle*  
  指定[延伸樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新視窗。  
   
 ## <a name="requirements"></a>需求  

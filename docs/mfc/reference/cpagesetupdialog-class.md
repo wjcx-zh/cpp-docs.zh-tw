@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374645"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079179"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 封裝 Windows 通用 OLE 版面設定對話方塊所提供的服務，以及設定和修改列印邊界的額外支援。  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  一或多個旗標可用於自訂的對話方塊中設定。 值可以使用位元 OR 運算子結合起來。 這些值具有下列意義：  
   
 - **PSD_DEFAULTMINMARGINS**設定頁面邊界，使印表機的最小值與相同的最小允許寬度寬度。 如果，則會忽略此旗標**PSD_MARGINS**和**PSD_MINMARGINS**也指定旗標。  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING**對話方塊中的繪圖區域會停用。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊的父系或擁有者的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 所使用的裝置名稱**CPageSetupDialog**物件。  
+ 所使用的裝置名稱`CPageSetupDialog`物件。  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  呼叫此函式之後呼叫`DoModal`擷取印表機裝置內容的相關資訊`CPageSetupDialog`物件。  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  印表機裝置內容的指標。  
   
- `nMessage`  
+ *n 訊息*  
  指定的訊息，指出頁面目前所繪製的區域。 可以是下列其中一項：  
   
 - **WM_PSD_FULLPAGERECT**整個頁面區域。  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT**傳回位址表示法的區域。 這個區域會擴充範例頁面區域的邊緣。  
   
- `lpRect`  
+ *lpRect*  
  指標[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)物件，其中包含在繪圖區域的座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>備註  
  此映像，這時會顯示做為通用 OLE 版面設定對話方塊的一部分。 預設實作會繪製的文字頁面的影像。  
   
- 覆寫此函式以自訂映像或整個映像的特定區域的繪圖。 您可以使用`switch`陳述式搭配**案例**檢查值的陳述式`nMessage`。 例如，若要自訂內容的頁面影像轉譯，您可以使用下列範例程式碼：  
+ 覆寫此函式以自訂映像或整個映像的特定區域的繪圖。 您可以使用**切換**陳述式搭配**案例**檢查值的陳述式*n 訊息*。 例如，若要自訂內容的頁面影像轉譯，您可以使用下列範例程式碼：  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- 請注意，您不需要處理的每個案例`nMessage`。 您可以選擇來處理映像的映像或整個區域的數個元件的一個元件。  
+ 請注意，您不需要處理的每個案例*n 訊息*。 您可以選擇來處理映像的映像或整個區域的數個元件的一個元件。  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  繪製列印頁面的螢幕影像之前，由架構呼叫。  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  指定值，指出紙張大小。 這個值可以是其中一個**DMPAPER_** 值的描述中所列[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)結構。  
   
- `wFlags`  
+ *wFlags*  
  指出的紙張或信封的方向，以及印表機是否為點陣或 HPPCL （Hewlett Packard 印表機控制語言） 裝置。 這個參數的值可以是下列其中一個：  
   
 -   0x001 紙張以橫向模式 （點陣式）  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f 信封以直向模式 （點陣式）  
   
- `pPSD`  
+ *pPSD*  
  指標**PAGESETUPDLG**結構。 如需有關[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)，請參閱 Windows SDK。  
   
 ### <a name="return-value"></a>傳回值  

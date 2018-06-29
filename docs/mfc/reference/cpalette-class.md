@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377272"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079677"
 ---
 # <a name="cpalette-class"></a>CPalette 類別
 封裝 Windows 調色盤。  
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStartIndex`  
+ *nStartIndex*  
  指定要建立動畫的調色盤，第一個項目。  
   
- `nNumEntries`  
+ *nNumEntries*  
  若要建立動畫調色盤中指定的項目數。  
   
- `lpPaletteColors`  
- 指向陣列的第一個成員[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目`nStartIndex`和`nNumEntries`。  
+ *lpPaletteColors*  
+ 指向陣列的第一個成員[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目*nStartIndex*和*nNumEntries*。  
   
 ### <a name="remarks"></a>備註  
  當應用程式呼叫`AnimatePalette`，它並沒有要更新其工作區，因為 Windows 立即對應系統調色盤將新項目。  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  識別裝置內容。  
   
 ### <a name="return-value"></a>傳回值  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpLogPalette`  
+ *lpLogPalette*  
  指向[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，其中包含邏輯的調色盤色彩的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hPalette`  
+ *hPalette*  
  Windows GDI 色彩調色盤的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `crColor`  
+ *crColor*  
  指定要比對的色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStartIndex`  
+ *nStartIndex*  
  指定要擷取邏輯的調色盤中的第一個項目。  
   
- `nNumEntries`  
+ *nNumEntries*  
  要擷取邏輯的調色盤中指定的項目數。  
   
- `lpPaletteColors`  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含所指定的數目，至少資料結構`nNumEntries`。  
+ *lpPaletteColors*  
+ 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含所指定的數目，至少資料結構*nNumEntries*。  
   
 ### <a name="return-value"></a>傳回值  
  從邏輯色板; 擷取的項目數目如果函式失敗，，0。  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  如需使用 圖形物件的詳細資訊，請參閱文章[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- 變更附加到邏輯色板的大小`CPalette`物件所指定的項目數`nNumEntries`。  
+ 變更附加到邏輯色板的大小`CPalette`物件所指定的項目數*nNumEntries*。  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nNumEntries`  
+ *nNumEntries*  
  已調整大小之後，調色盤中指定的項目數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStartIndex`  
+ *nStartIndex*  
  指定第一個項目設定邏輯的調色盤。  
   
- `nNumEntries`  
+ *nNumEntries*  
  設定邏輯調色盤中指定的項目數。  
   
- `lpPaletteColors`  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含所指定的數目，至少資料結構`nNumEntries`。  
+ *lpPaletteColors*  
+ 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含所指定的數目，至少資料結構*nNumEntries*。  
   
 ### <a name="return-value"></a>傳回值  
  設定邏輯調色盤; 中的項目數目如果函式失敗，，0。  

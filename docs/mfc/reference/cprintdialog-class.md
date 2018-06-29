@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377223"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079644"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 類別
 封裝 Windows 通用列印對話方塊提供的服務。  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bPrintSetupOnly`  
- 指定是否顯示標準的 Windows 列印對話方塊或 [設定列印格式] 對話方塊。 這個參數設定為**TRUE**顯示標準的 [Windows 設定列印格式] 對話方塊。 將它設定為**FALSE**顯示 Windows 列印 對話方塊。 如果`bPrintSetupOnly`是**FALSE**，設定列印格式 選項按鈕仍會顯示在 列印 對話方塊。  
+ *bPrintSetupOnly*  
+ 指定是否顯示標準的 Windows 列印對話方塊或 [設定列印格式] 對話方塊。 這個參數設定為**TRUE**顯示標準的 [Windows 設定列印格式] 對話方塊。 將它設定為**FALSE**顯示 Windows 列印 對話方塊。 如果*bPrintSetupOnly*是**FALSE**，設定列印格式 選項按鈕仍會顯示在 列印 對話方塊。  
   
- `dwFlags`  
+ *dwFlags*  
  一或多個旗標可用於自訂的對話方塊中，使用位元 OR 運算子結合在一起設定。 例如， **PD_ALLPAGES**旗標設定的預設列印範圍到文件的所有頁面。 請參閱[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)如需有關這些旗標的 Windows SDK 中的結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊的父系或擁有者視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  在呼叫`DoModal`，您可以呼叫其他成員函式來擷取在對話方塊中的 設定 或 使用者資訊輸入。  
   
- 請注意，當您呼叫具有建構函式`bPrintSetupOnly`設**FALSE**、 **PD_RETURNDC**旗標會自動使用。 在呼叫`DoModal`， `GetDefaults`，或`GetPrinterDC`，是印表機 DC 將會傳回`m_pd.hDC`。 此 DC 必須釋放呼叫[DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)的呼叫端所`CPrintDialog`。  
+ 請注意，當您呼叫具有建構函式*bPrintSetupOnly*設**FALSE**、 **PD_RETURNDC**旗標會自動使用。 在呼叫`DoModal`， `GetDefaults`，或`GetPrinterDC`，是印表機 DC 將會傳回`m_pd.hDC`。 此 DC 必須釋放呼叫[DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)的呼叫端所`CPrintDialog`。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CPrintDialog::CreatePrinterDC](#createprinterdc)。  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>備註  
  擷取的值會放在`m_pd`結構。  
   
- 在某些情況下，會呼叫此函式的呼叫[建構函式](#cprintdialog)如`CPrintDialog`與`bPrintSetupOnly`設**FALSE**。 在這些情況下，是印表機 DC 和**hDevNames**和**hDevMode** (兩個控點位於`m_pd`資料成員) 會自動配置。  
+ 在某些情況下，會呼叫此函式的呼叫[建構函式](#cprintdialog)如`CPrintDialog`與*bPrintSetupOnly*設**FALSE**。 在這些情況下，是印表機 DC 和**hDevNames**和**hDevMode** (兩個控點位於`m_pd`資料成員) 會自動配置。  
   
  如果建構函式`CPrintDialog`呼叫`bPrintSetupOnly`設**FALSE**，此函式不只會傳回**hDevNames**和**hDevMode** （位於**m_pd.hDevNames**和**m_pd.hDevMode**) 給呼叫者，但也會傳回的印表機 DC **m_pd.hDC**。 刪除印表機 DC 並呼叫 Windows 呼叫端負責[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)函式上的控制代碼，當您完成`CPrintDialog`物件。  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  成功; 如果印表機裝置內容控制代碼否則**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 如果`bPrintSetupOnly`參數`CPrintDialog`建構函式已**FALSE** （表示會顯示 [列印] 對話方塊），然後`GetPrinterDC`印表機裝置內容中傳回的控制代碼。 您必須呼叫 Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)函式來刪除的裝置內容，當您在使用它。  
+ 如果*bPrintSetupOnly*參數`CPrintDialog`建構函式已**FALSE** （表示會顯示 [列印] 對話方塊），然後`GetPrinterDC`印表機裝置傳回的控制代碼內容。 您必須呼叫 Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533)函式來刪除的裝置內容，當您在使用它。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

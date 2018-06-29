@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b764777f33b0ae8ea1521e931ee45740f7057ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8de4afadd51d9446a57b8d68fbcda337a650e984
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378437"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079912"
 ---
 # <a name="cpane-class"></a>CPane Class
 `CPane`類別是一項增強功能的[CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)。 如果您要升級現有的 MFC 專案，取代所有出現之`CControlBar`與`CPane`。  
@@ -278,7 +278,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  `TRUE` 若要自動重新計算窗格; 配置否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -294,10 +294,10 @@ BOOL AllocElements(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nElements`  
+ [in]*nElements*  
  這是要將存放裝置配置的項目數目。  
   
- [輸入] `cbElement`  
+ [in]*cbElement*  
  以位元組為單位，項目的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -324,11 +324,11 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectRequired`  
+ [in]*rectRequired*  
  必要的矩形。  
   
 ### <a name="return-value"></a>傳回值  
- 寬度和高度間的差異`rectRequired`和目前的視窗矩形。  
+ 寬度和高度間的差異*rectRequired*和目前的視窗矩形。  
   
 ##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect  
  計算內部的窗格中，包括框線和夾的矩形。  
@@ -340,14 +340,14 @@ void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `rect`  
+ [out]*rect*  
  包含的大小和位移的窗格中的工作區。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 如果窗格是水平空間。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 重新計算配置窗格時，這個方法是由架構呼叫。 `rect`填入參數的大小和位移的窗格中的工作區。 這包括其框線和夾。  
+ 重新計算配置窗格時，這個方法是由架構呼叫。 *Rect*填入參數的大小和位移的窗格中的工作區。 這包括其框線和夾。  
   
 ##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect  
  會計算最近停駐的矩形。  
@@ -367,7 +367,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bVertDock`  
+ [in]*bVertDock*  
  `TRUE` 如果垂直停駐窗格`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
@@ -384,7 +384,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDockBar`  
+ [in]*pDockBar*  
  指定要停駐此窗格窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -416,7 +416,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bActiveTabOnly`  
+ [in]*bActiveTabOnly*  
  中不使用`CPane::ConvertToTabbedDocument`。  
   
 ### <a name="remarks"></a>備註  
@@ -430,11 +430,11 @@ virtual void CopyState(CPane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pOrgBar`  
+ [in]*pOrgBar*  
  窗格的指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會複製狀態的`pOrgBar`到目前的窗格。  
+ 這個方法會複製狀態的*pOrgBar*到目前的窗格。  
   
 ##  <a name="create"></a>  Cpane:: Create  
  建立控制列，並將它附加至[CPane](../../mfc/reference/cpane-class.md)物件。  
@@ -451,25 +451,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszClassName`  
+ [in]*lpszClassName*  
  指定的視窗類別名稱。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  指定視窗的樣式屬性。 如需詳細資訊，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [輸入] `rect`  
- 指定的初始大小和位置`pParentWnd`視窗中的，在用戶端座標。  
+ [in]*rect*  
+ 指定的初始大小和位置*pParentWnd*視窗中的，在用戶端座標。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定此窗格中的父視窗。  
   
- [輸入] `nID`  
+ [in]*nID*  
  指定窗格的識別碼。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定的樣式窗格。 如需詳細資訊，請參閱[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定建立的內容窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -478,7 +478,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  這個方法會建立 Windows 窗格，並將它附加至`CPane`物件。  
   
- 如果您未明確初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)之前先呼叫`Create`，參數`rect`用作浮點或停駐窗格時的矩形。  
+ 如果您未明確初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)之前先呼叫`Create`，參數*rect*用作浮點或停駐窗格時的矩形。  
   
 ##  <a name="createdefaultminiframe"></a>  Cpane:: Createdefaultminiframe  
  建立浮動窗格的迷你框架視窗。  
@@ -488,7 +488,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectInitial`  
+ [in]*rectInitial*  
  指定的初始大小和位置，以螢幕座標的迷你框架視窗建立。  
   
 ### <a name="return-value"></a>傳回值  
@@ -515,28 +515,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwStyleEx`  
+ [in]*dwStyleEx*  
  指定延伸的視窗樣式屬性。 如需詳細資訊，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
   
- [輸入] `lpszClassName`  
+ [in]*lpszClassName*  
  指定的視窗類別名稱。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  指定視窗的樣式屬性。 如需詳細資訊，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [輸入] `rect`  
- 指定的初始大小和位置`pParentWnd`視窗中的，在用戶端座標。  
+ [in]*rect*  
+ 指定的初始大小和位置*pParentWnd*視窗中的，在用戶端座標。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定此窗格中的父視窗。  
   
- [輸入] `nID`  
+ [in]*nID*  
  指定窗格的識別碼。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定的樣式窗格。 如需詳細資訊，請參閱[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定建立內容窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -545,7 +545,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  這個方法會建立 Windows 窗格，並將它附加至`CPane`物件。  
   
- 如果您未明確初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)之前先呼叫`CreateEx`，參數`rect`用作浮點或停駐窗格時的矩形。  
+ 如果您未明確初始化[cpane:: M_recentdockinfo](#m_recentdockinfo)之前先呼叫`CreateEx`，參數*rect*用作浮點或停駐窗格時的矩形。  
   
 ##  <a name="dockbymouse"></a>  CPane::DockByMouse  
  使用滑鼠停駐窗格。  
@@ -555,7 +555,7 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDockBar`  
+ [in]*pDockBar*  
  指定基底的窗格，即可用來停駐此窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -572,13 +572,13 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pDockBar`  
+ [in][out]*pDockBar*  
  指定基底的窗格，即可停駐此窗格，即可。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  在基底所在停駐此窗格的窗格中指定的矩形。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定要使用的停駐的方法。 可用的選項如下所示：  
   
 |選項|描述|  
@@ -587,14 +587,14 @@ virtual BOOL DockPane(
 |`DM_MOUSE`|在內部使用。|  
 |`DM_DBL_CLICK`|移駐夾按兩下時，會使用這個選項。 窗格會在其最新的停駐位置重新定位。 如果按兩下浮動窗格的窗格是在其最新的浮動位置重新定位。|  
 |`DM_SHOW`|此選項可以用來以程式設計的方式停駐窗格。 窗格會儲存其最新位置。|  
-|`DM_RECT`|所指定之區域中停駐窗格`lpRect`。|  
+|`DM_RECT`|所指定之區域中停駐窗格*lpRect*。|  
 |`DM_STANDARD`|當您使用此選項時，framework 窗格當做繪製外框框架正在移動時。|  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果已成功; 停駐窗格，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法窗格停駐於所指定的基底窗格`pDockBar`參數。 您必須先啟用藉由呼叫停駐[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。  
+ 這個方法窗格停駐於所指定的基底窗格*pDockBar*參數。 您必須先啟用藉由呼叫停駐[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。  
   
 ##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard  
  使用大綱 （標準） 的停駐停駐窗格。  
@@ -604,11 +604,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bWasDocked`  
+ [in]*bWasDocked*  
  `TRUE` 如果窗格已成功停駐;，否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- 這個方法一律會傳回`this`指標。  
+ 這個方法一律會傳回**這**指標。  
   
 ### <a name="remarks"></a>備註  
  這個方法只適用於衍生自的窗格[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。 如需詳細資訊，請參閱[CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard)。  
@@ -627,23 +627,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  您想要以窗格停駐於父框架端。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  指定的大小。  
   
- [輸入] `dwDockFlags`  
+ [in]*dwDockFlags*  
  忽略。  
   
- [輸入] `pRelativeBar`  
+ [in]*pRelativeBar*  
  忽略。  
   
- [輸入] `nRelativeIndex`  
+ [in]*nRelativeIndex*  
  忽略。  
   
- [輸入] `bOuterEdge`  
- 如果`TRUE`而且沒有其他可停駐窗格位於所指定的側邊`dwAlignment`，窗格會停駐以外其他窗格，更接近的父框架邊緣。 如果`FALSE`，窗格停駐接近於用戶端區域的中央。  
+ [in]*bOuterEdge*  
+ 如果`TRUE`而且沒有其他可停駐窗格位於所指定的側邊*dwAlignment*，窗格會停駐以外其他窗格，更接近的父框架邊緣。 如果`FALSE`，窗格停駐接近於用戶端區域的中央。  
   
 ### <a name="return-value"></a>傳回值  
  `FALSE` 如果窗格分割線 ( [CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)) 建立; 否則就無法`TRUE`。  
@@ -676,20 +676,20 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectFloat`  
+ [in]*rectFloat*  
  指定位置，在螢幕座標，當它浮動定位在窗格中。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定要使用時浮動窗格的停駐方法。 如需可能值的清單，請參閱[CPane::DockPane](#dockpane)。  
   
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 顯示窗格中，當浮動;否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果已成功浮動窗格，或無法浮動窗格，因為[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)傳回`FALSE`，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以浮動窗格中，位於所指定的位置`rectFloat`參數。 這個方法會自動建立父迷你框架視窗的窗格。  
+ 呼叫此方法以浮動窗格中，位於所指定的位置*rectFloat*參數。 這個方法會自動建立父迷你框架視窗的窗格。  
   
 ##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize  
  傳回量，單位為像素，可以展開 [] 窗格。  
@@ -784,7 +784,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `size`  
+ [out]*大小*  
  A`CSize`填滿允許大小的最小的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -797,7 +797,7 @@ virtual void GetPaneName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `strName`  
+ [out]*strName*  
  A`CString`填滿標題名稱的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -811,7 +811,7 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `rectVirtual`  
+ [out]*rectVirtual*  
  A`CRect`填滿的虛擬矩形的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -829,11 +829,11 @@ virtual AFX_CS_STATUS IsChangeState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nOffset`  
- 指定停駐的敏感度。 例如，內移動窗格`nOffset`像素為單位，從停駐的資料列將會停駐。  
+ [in]*nOffset*  
+ 指定停駐的敏感度。 例如，內移動窗格*nOffset*像素為單位，從停駐的資料列將會停駐。  
   
- [輸入] `ppTargetBar`  
- 方法傳回時，`ppTargetBar`包含物件的目前的窗格停駐、 指標或`NULL`是否停駐不應該發生。  
+ [in]*ppTargetBar*  
+ 方法傳回時， *ppTargetBar*包含物件的目前的窗格停駐、 指標或`NULL`是否停駐不應該發生。  
   
 ### <a name="return-value"></a>傳回值  
  下列其中一種`AFX_CS_STATUS`值：  
@@ -880,16 +880,16 @@ bool IsLeftOf(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
  A`CRect`用於比較的物件。  
   
- [輸入] `bWindowRect`  
- 如果`TRUE`，`rect`假設為包含螢幕座標。 如果`FALSE`，`rect`假設為包含用戶端座標。  
+ [in]*bWindowRect*  
+ 如果`TRUE`， *rect*假設為包含螢幕座標。 如果`FALSE`， *rect*假設為包含用戶端座標。  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- 如果水平停駐窗格中，這個方法會檢查它的位置，是否要保留的`rect`。 否則，這個方法會檢查位置是否之上`rect`。  
+ 如果水平停駐窗格中，這個方法會檢查它的位置，是否要保留的*rect*。 否則，這個方法會檢查位置是否之上*rect*。  
   
 ##  <a name="isresizable"></a>  CPane::IsResizable  
  指定的窗格是否可調整大小。  
@@ -932,13 +932,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  設定檔名稱。  
   
- [輸入] `nIndex`  
+ [in]*nIndex*  
  設定檔的索引。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -981,16 +981,16 @@ BOOL MoveByAlignment(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  指定窗格對齊方式。  
   
- [輸入] `nOffset`  
+ [in]*nOffset*  
  數量，以像素為單位，所要移動的窗格和虛擬的矩形。  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- `dwAlignment` 可以是下列值之一：  
+ *dwAlignment*可以是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -1000,7 +1000,7 @@ BOOL MoveByAlignment(
 |`CBRS_ALIGN_RIGHT`|可讓停駐在框架視窗的工作區的右邊的窗格。|  
 |`CBRS_ALIGN_ANY`|可讓要停駐在框架視窗的工作區的任一側窗格。|  
   
- 如果`dwAlignment`包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`旗標、 窗格和虛擬矩形會水平; 否則如果移動`dwAlignment`包含`CBRS_ALIGN_TOP`或`CBRS_ALIGN_BOTTOM`旗標、 窗格和虛擬矩形都會移垂直。  
+ 如果*dwAlignment*包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`旗標、 窗格和虛擬矩形會水平; 否則如果移動*dwAlignment*包含`CBRS_ALIGN_TOP`或`CBRS_ALIGN_BOTTOM`旗標、 窗格和虛擬矩形會垂直移動。  
   
 ##  <a name="movepane"></a>  CPane::MovePane  
  將窗格移至指定的矩形。  
@@ -1013,17 +1013,17 @@ virtual CSize MovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectNew`  
+ [in]*rectNew*  
  指定新的矩形的窗格。  
   
- [輸入] `bForceMove`  
+ [in]*bForceMove*  
  如果`TRUE`，這個方法會忽略的最小允許的窗格大小 ( [CPane::GetMinSize](#getminsize)); 否則，請調整 [] 窗格中，如有必要，以確保它至少是允許的大小最小值。  
   
- [輸入] `hdwp`  
+ [in]*hdwp*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`物件，其中包含新的和舊的矩形之間的差異寬度及高度 (舊矩形- `rectNew`)。  
+ A`CSize`物件，其中包含新的和舊的矩形之間的差異寬度及高度 (舊矩形- *rectNew*)。  
   
 ### <a name="remarks"></a>備註  
  這個方法只適用於可停駐窗格。  
@@ -1036,7 +1036,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pWndOldParent`  
+ [in][out]*pWndOldParent*  
  前一父視窗的窗格。  
   
 ### <a name="remarks"></a>備註  
@@ -1053,13 +1053,13 @@ virtual void OnAfterDock(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
  不使用這個參數。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  不使用這個參數。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  不使用這個參數。  
   
 ##  <a name="onafterfloat"></a>  CPane::OnAfterFloat  
@@ -1082,10 +1082,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pWndNewParent`  
+ [in][out]*pWndNewParent*  
  指定新的父視窗。  
   
- [輸入] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 若要延遲的全域的停駐配置調整。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1104,13 +1104,13 @@ virtual BOOL OnBeforeDock(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `ppDockBar`  
+ [in][out]*ppDockBar*  
  指定此窗格停駐窗格。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  指定的停駐的矩形。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定的停駐的方法。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1129,10 +1129,10 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectFloat`  
+ [in]*rectFloat*  
  浮動狀態時，指定的位置和窗格的大小。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定停駐窗格的方法。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1159,7 +1159,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  指定功能表的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1191,13 +1191,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  設定檔名稱。  
   
- [輸入] `nIndex`  
+ [in]*nIndex*  
  設定檔的索引。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1216,7 +1216,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bActive`  
+ [in]*bActive*  
  A `BOOL` ，指定是否標示為使用中 窗格。  
   
 ### <a name="remarks"></a>備註  
@@ -1240,19 +1240,19 @@ void SetBorders(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `cxLeft`  
+ [in]*cxLeft*  
  指定寬度，以像素的左窗格的框線。  
   
- [輸入] `cyTop`  
+ [in]*cyTop*  
  指定像素為單位，窗格的上框線的寬度。  
   
- [輸入] `cxRight`  
+ [in]*cxRight*  
  指定像素為單位，窗格的右框線的寬度。  
   
- [輸入] `cyBottom`  
+ [in]*cyBottom*  
  指定寬度，單位為像素的窗格下框線。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含的寬度，以像素為單位，每個窗格的框線。  
   
 ### <a name="remarks"></a>備註  
@@ -1266,7 +1266,7 @@ void SetClientHotSpot(const CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `ptNew`  
+ [in]*ptNew*  
  A`CPoint`物件，指定新的作用點。  
   
 ### <a name="remarks"></a>備註  
@@ -1280,7 +1280,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDockManager`  
+ [in]*pDockManager*  
  停駐的管理員主框架視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1296,7 +1296,7 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bExclusive`  
+ [in]*bExclusive*  
  `TRUE` 若要啟用獨佔資料列模式;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1312,7 +1312,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `size`  
+ [in]*大小*  
  A`CSize`物件，其中包含最小允許大小的窗格。  
   
 ### <a name="remarks"></a>備註  
@@ -1327,11 +1327,11 @@ void SetVirtualRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
  A`CRect`物件，指定要設定的虛擬矩形。  
   
  [輸入] `bMapToParent`  
- 指定`TRUE`如果`rect`包含相對於父視窗的點。  
+ 指定`TRUE`如果*rect*包含相對於父視窗的點。  
   
 ### <a name="remarks"></a>備註  
  A*虛擬矩形*移動時，儲存到原始位置的窗格。 架構可以使用的虛擬矩形還原到原始位置。  
@@ -1346,7 +1346,7 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pClass`  
+ [in][out]*pClass*  
  指定迷你框架視窗的執行階段類別資訊。  
   
 ### <a name="remarks"></a>備註  
@@ -1362,17 +1362,17 @@ virtual int StretchPaneDeferWndPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nStretchSize`  
+ [in]*nStretchSize*  
  量，單位為像素伸展窗格。 您可以使用負數值來壓縮窗格。  
   
- [輸入] `hdwp`  
+ [in]*hdwp*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
  實際的數量，以像素已延展的窗格。  
   
 ### <a name="remarks"></a>備註  
- 如果有必要，這個方法會修改`nStretchSize`以確保窗格不會超過大小限制。 這些限制藉由呼叫取得[CPane::GetAvailableStretchSize](#getavailablestretchsize)和[CPane::GetAvailableExpandSize](#getavailableexpandsize)。  
+ 如果有必要，這個方法會修改*nStretchSize*以確保窗格不會超過大小限制。 這些限制藉由呼叫取得[CPane::GetAvailableStretchSize](#getavailablestretchsize)和[CPane::GetAvailableExpandSize](#getavailableexpandsize)。  
   
 ##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide  
  切換自動隱藏模式。  
@@ -1392,7 +1392,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bDelay`  
+ [in]*bDelay*  
  如果`FALSE`，架構會呼叫[cbasepane:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout)調整停駐的配置。  
   
 ### <a name="remarks"></a>備註  
@@ -1408,18 +1408,18 @@ void UpdateVirtualRect(CPoint ptOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `ptOffset`  
+ [in]*ptOffset*  
  A`CPoint`物件，指定用來移動 [] 窗格中的位移。  
   
- [輸入] `sizeNew`  
+ [in]*sizeNew*  
  A`CSize`物件，指定 [] 窗格中的新大小。  
   
 ### <a name="remarks"></a>備註  
  第一個多載會使用窗格的大小與目前的位置，以設定的虛擬矩形。  
   
- 第二個多載移位量所指定的虛擬矩形`ptOffset`。  
+ 第二個多載移位量所指定的虛擬矩形*ptOffset*。  
   
- 第三個多載是使用目前的位置 窗格及所指定的大小來設定的虛擬矩形`sizeNew`。  
+ 第三個多載是使用目前的位置 窗格及所指定的大小來設定的虛擬矩形*sizeNew*。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

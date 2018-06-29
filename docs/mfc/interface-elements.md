@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1906505e75273cc62a0eac55e6ed1a9686a3b76f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352573"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078440"
 ---
 # <a name="interface-elements"></a>介面項目
-本文件說明中所導入的介面項目[!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]SP1，並也描述與程式庫的舊版本的差異。  
+本文說明 Visual Studio 2008 SP1 中導入的介面項目，並也描述與程式庫的舊版本的差異。  
   
  下圖顯示所使用的新介面項目建立的應用程式。  
   

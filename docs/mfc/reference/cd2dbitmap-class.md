@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 03c41bc17b6d8e5853203533a2d20d81063316a1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954742"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079285"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 類別
 ID2D1Bitmap 包裝函式。  
@@ -152,7 +152,7 @@ virtual ~CD2DBitmap();
 ```  
   
 ##  <a name="attach"></a>  CD2DBitmap::Attach  
- 將現有的資源物件的介面  
+ 將現有的資源物件的介面。  
   
 ```  
 void Attach(ID2D1Bitmap* pResource);
@@ -160,7 +160,7 @@ void Attach(ID2D1Bitmap* pResource);
   
 ### <a name="parameters"></a>參數  
  *pResource*  
- 現有資源的介面。 不能是 NULL  
+ 現有資源的介面。 不可以是 NULL。  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  建構 CD2DBitmap 物件從資源。  
@@ -216,14 +216,14 @@ CD2DBitmap(
  點陣圖的控制代碼。  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
- 初始化物件  
+ 初始化物件。  
   
 ```  
 void CommonInit();
 ```  
   
 ##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
- 將指定的區域從指定的點陣圖複製到目前的點陣圖  
+ 將指定的區域從指定的點陣圖複製到目前的點陣圖。  
   
 ```  
 HRESULT CopyFromBitmap(
@@ -234,19 +234,19 @@ HRESULT CopyFromBitmap(
   
 ### <a name="parameters"></a>參數  
  *pBitmap*  
- 要複製的點陣圖  
+ 要複製的點陣圖。  
   
  *destPoint*  
- 在目前的點陣圖，也會複製區域指定 srcRect 所要的區域的左上角  
+ 目前的點陣圖，複製要 srcRect 由所指定區域的區域的左上角。  
   
  *srcRect*  
- 複製點陣圖的區域  
+ 複製點陣圖的區域。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- 將從記憶體的目前點陣圖複製到指定的區域  
+ 將指定的區域從記憶體複製到目前的點陣圖。  
   
 ```  
 HRESULT CopyFromMemory(
@@ -257,19 +257,19 @@ HRESULT CopyFromMemory(
   
 ### <a name="parameters"></a>參數  
  *srcData*  
- 要複製資料  
+ 要複製的資料。  
   
  *點數*  
- 分散或音調、 儲存在 srcData 來源點陣圖。 Stride 是掃瞄線 （在記憶體中的像素為單位的一個資料列） 的位元組計數。 可以從下列公式計算分散： 像素寬度 * 每個像素 + 記憶體填補位元組  
+ 分散或音調、 儲存在 srcData 來源點陣圖。 Stride 是掃瞄線 （在記憶體中的像素為單位的一個資料列） 的位元組計數。 可以從下列公式計算分散： 像素寬度 * 每個像素 + 記憶體填補位元組。  
   
  *destRect*  
- 在目前的點陣圖，也會複製區域指定 srcRect 所要的區域的左上角  
+ 目前的點陣圖，複製要 srcRect 由所指定區域的區域的左上角。 
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- 複製指定的地區，從指定呈現目標，到目前的點陣圖  
+ 複製指定的地區，從指定呈現目標，到目前的點陣圖。  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -280,13 +280,13 @@ HRESULT CopyFromRenderTarget(
   
 ### <a name="parameters"></a>參數  
  *pRenderTarget*  
- 呈現目標，其中包含要複製的區域  
+ 呈現目標，其中包含要複製的區域。  
   
  *destPoint*  
- 在目前的點陣圖，也會複製區域指定 srcRect 所要的區域的左上角  
+ 目前的點陣圖，複製要 srcRect 由所指定區域的區域的左上角。  
   
  *srcRect*  
- 若要複製的轉譯目標的區域  
+ 若要複製的轉譯目標區域。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
@@ -313,7 +313,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBitmap::Detach  
- 中斷連結物件中的資源介面  
+ 中斷連結物件中的資源介面。  
   
 ```  
 ID2D1Bitmap* Detach();
@@ -323,7 +323,7 @@ ID2D1Bitmap* Detach();
  中斷連結的資源的介面指標。  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
- 傳回 ID2D1Bitmap 介面  
+ 傳回 ID2D1Bitmap 介面。  
   
 ```  
 ID2D1Bitmap* Get();
@@ -333,7 +333,7 @@ ID2D1Bitmap* Get();
  ID2D1Bitmap 介面或如果尚未初始化物件為 NULL 指標。  
   
 ##  <a name="getdpi"></a>  CD2DBitmap::GetDPI  
- 傳回每英吋點數 (DPI) 之點陣圖  
+ 傳回每英吋點數 (DPI) 的點陣圖。  
   
 ```  
 CD2DSizeF GetDPI() const;  
@@ -353,7 +353,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
  點陣圖的像素格式和 alpha 模式。  
   
 ##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
- 傳回點陣圖的大小，以裝置而異的單位 （像素）  
+ 傳回的大小，以裝置而異 （像素） 為單位的點陣圖。  
   
 ```  
 CD2DSizeU GetPixelSize() const;  
@@ -363,7 +363,7 @@ CD2DSizeU GetPixelSize() const;
  點陣圖的像素為單位大小...  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
- 傳回的點陣圖的大小，以與裝置無關的像素 (Dip)，  
+ 傳回的大小，以與裝置無關的像素 (Dip) 的點陣圖。  
   
 ```  
 CD2DSizeF GetSize() const;  
@@ -373,7 +373,7 @@ CD2DSizeF GetSize() const;
  以 dip 為單位，點陣圖的大小。  
   
 ##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
- 檢查資源的有效性  
+ 檢查資源的有效性。  
   
 ```  
 virtual BOOL IsValid() const;  

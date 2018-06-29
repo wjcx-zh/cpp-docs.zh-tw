@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375538"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079563"
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 A [CView](../../mfc/reference/cview-class.md)具有捲動功能。  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  之前`OnDraw`稱為衍生的檢視類別成員函式，`CScrollView`自動調整檢視區原點`CPaintDC`裝置內容物件，就會傳遞至`OnDraw`。  
   
- 若要調整檢視區原點捲動視窗中，請`CScrollView`會覆寫[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 這項調整會自動針對`CPaintDC`裝置內容的`CScrollView`給`OnDraw`，但是您必須呼叫**CScrollView::OnPrepareDC**自己的任何其他裝置內容中使用，例如`CClientDC`. 您可以覆寫**CScrollView::OnPrepareDC**設定畫筆、 背景色彩，以及其他的繪圖屬性，但呼叫基底類別進行調整。  
+ 若要調整檢視區原點捲動視窗中，請`CScrollView`會覆寫[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 這項調整會自動針對`CPaintDC`裝置內容的`CScrollView`給`OnDraw`，但是您必須呼叫`CScrollView::OnPrepareDC`自己的任何其他裝置內容中使用，例如`CClientDC`。 您可以覆寫`CScrollView::OnPrepareDC`設定畫筆、 背景色彩，以及其他的繪圖屬性，但呼叫基底類別進行調整。  
   
  捲軸可以出現在相對於檢視中，三個位置，如下所示：  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  在其中填入執行的裝置內容。  
   
- `pBrush`  
+ *pBrush*  
  筆刷的區域是要填滿。  
   
 ### <a name="remarks"></a>備註  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMapMode`  
+ *nMapMode*  
  傳回目前的對應模式，此檢視。 如需可能值的清單，請參閱`SetScrollSizes`。  
   
- `sizeTotal`  
+ *sizeTotal*  
  以裝置為單位傳回目前的捲動檢視的總大小。  
   
- `sizePage`  
+ *sizePage*  
  傳回目前的水平和垂直數量，以回應滑鼠每一個方向的捲動按一下捲軸中。 **Cx**成員包含水平量。 **Cy**成員包含垂直量。  
   
- `sizeLine`  
+ *sizeLine*  
  傳回目前的水平和垂直數量，以回應滑鼠每一個方向的捲動按一下捲動箭號。 **Cx**成員包含水平量。 **Cy**成員包含垂直量。  
   
 ### <a name="remarks"></a>備註  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  要捲動，以邏輯單位表示的點。 **x**成員必須是正數 （大於或等於 0，最多總檢視的大小）。 同樣適用於**y**成員對應模式時`MM_TEXT`。 **y**成員中為負數以外對應模式`MM_TEXT`。  
   
 ### <a name="remarks"></a>備註  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>參數  
- `sizeTotal`  
+ *sizeTotal*  
  檢視是要調整大小水平和垂直大小。 捲動檢視的大小被以邏輯單位。 水平大小包含在**cx**成員。 中包含的垂直大小**cy**成員。 同時**cx**和**cy**必須大於或等於 0。  
   
 ### <a name="remarks"></a>備註  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMapMode`  
+ *nMapMode*  
  若要設定此檢視的對應模式。 可能的值包括：  
   
 |對應模式|邏輯單元|正數 y 軸延伸...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  這些模式是由 Windows 定義。 兩種的標準對應模式`MM_ISOTROPIC`和`MM_ANISOTROPIC`，不會用於`CScrollView`。 類別庫會提供`SetScaleToFitSize`調整視窗大小檢視的成員函式。 上表中的三個資料行描述座標的方向。  
   
- `sizeTotal`  
+ *sizeTotal*  
  捲動檢視的大小總計。 **Cx**成員包含水平的範圍。 **Cy**成員包含垂直範圍。 大小是以邏輯單位表示。 同時**cx**和**cy**必須大於或等於 0。  
   
- `sizePage`  
+ *sizePage*  
  捲軸中，按一下滑鼠的回應中的每個方向的捲動水平和垂直數量。 **Cx**成員包含水平量。 **Cy**成員包含垂直量。  
   
- `sizeLine`  
+ *sizeLine*  
  滑鼠的回應中的每個方向的捲動水平和垂直數量按一下捲動箭號。 **Cx**成員包含水平量。 **Cy**成員包含垂直量。  
   
 ### <a name="remarks"></a>備註  

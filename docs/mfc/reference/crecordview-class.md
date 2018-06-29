@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373481"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079143"
 ---
 # <a name="crecordview-class"></a>CRecordView 類別
 在控制項中顯示資料庫記錄的檢視。  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含的對話方塊範本資源名稱的以 null 結尾字串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含對話方塊範本資源的識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate**呼叫`UpdateData`，而它會呼叫`DoDataExchange`。 此一次呼叫`DoDataExchange`連接`CRecordView`（間接） 可控制`CRecordset`欄位 ClassWizard 所建立的資料成員。 這些資料成員不能直到之後呼叫的基底類別**CFormView::OnInitialUpdate**成員函式。  
   
 > [!NOTE]
->  如果您使用 ClassWizard，精靈定義`enum`值`CRecordView::IDD`、 在類別宣告中，指定它，並建構函式使用成員初始設定清單中。  
+>  如果您使用 ClassWizard，精靈定義**列舉**值`CRecordView::IDD`、 在類別宣告中，指定它，並建構函式使用成員初始設定清單中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  此函數非常適用於撰寫您自己的預設實作 ClassWizard 寫入移動記錄記錄的支援使用者介面的命令更新處理常式。  
   
 > [!CAUTION]
->  此函式的結果是可靠的不同之處在於檢視無法偵測資料錄集的結尾，直到使用者已移動過。 資料錄檢視可以得知必須先停用移到下一個或最後一個記錄的任何使用者介面物件之前，使用者必須移動超過上一筆記錄。 如果使用者移動到超過最後一筆記錄以後，再移回至最後一筆記錄 （或之前），資料錄檢視可以追蹤使用者的資料錄集中的位置，並正確地停用使用者介面物件。 `IsOnLastRecord` 實作函式的呼叫之後也不可靠**OnRecordLast**，以處理`ID_RECORD_LAST`命令，或`CRecordset::MoveLast`。  
+>  此函式的結果是可靠的不同之處在於檢視無法偵測資料錄集的結尾，直到使用者已移動過。 資料錄檢視可以得知必須先停用移到下一個或最後一個記錄的任何使用者介面物件之前，使用者必須移動超過上一筆記錄。 如果使用者移動到超過最後一筆記錄以後，再移回至最後一筆記錄 （或之前），資料錄檢視可以追蹤使用者的資料錄集中的位置，並正確地停用使用者介面物件。 `IsOnLastRecord` 實作函式的呼叫之後也不可靠`OnRecordLast`，以處理`ID_RECORD_LAST`命令，或`CRecordset::MoveLast`。  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  將指標傳回至`CRecordset`-衍生的資料錄檢視相關聯的物件。  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  指標`CRecordset`-衍生物件，如果物件已成功建立; 否則為**NULL**指標。  
   
 ### <a name="remarks"></a>備註  
- 您必須覆寫此成員函式，來建構或取得資料錄集物件，並傳回的指標。 如果您宣告 ClassWizard 資料錄檢視類別，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料錄集指標儲存在資料錄檢視中，如果有的話。 建構類型的資料錄集物件不是，如果您指定了與 ClassWizard 並呼叫其**開啟**成員開啟資料表，或執行查詢，函式，並再傳回物件的指標。  
+ 您必須覆寫此成員函式，來建構或取得資料錄集物件，並傳回的指標。 如果您宣告 ClassWizard 資料錄檢視類別，精靈會為您撰寫的預設覆寫。 ClassWizard 的預設實作會傳回資料錄集指標儲存在資料錄檢視中，如果有的話。 建構類型的資料錄集物件不是，如果您指定了與 ClassWizard 並呼叫其`Open`成員開啟資料表，或執行查詢，函式，並再傳回物件的指標。  
   
  如需詳細資訊與範例，請參閱文章[資料錄檢視： 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  為非零，如果移動成功。否則為 0，如果移動要求被拒。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會呼叫適當**移動**成員函式`CRecordset`資料錄檢視相關聯的物件。  
+ 預設實作會呼叫適當`Move`成員函式`CRecordset`資料錄檢視相關聯的物件。  
   
  根據預設，`OnMove`更新目前的記錄資料來源上，如果使用者資料錄檢視中已變更。  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  如果您移動超過資料錄集中的最後一筆記錄，資料錄檢視會繼續顯示最後一筆記錄。 如果您向後移動超過第一筆資料錄，資料錄檢視會繼續顯示第一筆記錄。  
   
 > [!CAUTION]
->  呼叫`OnMove`擲回例外狀況，如果資料錄集不有任何記錄。 呼叫適當的使用者介面更新處理常式函式 — **OnUpdateRecordFirst**， **OnUpdateRecordLast**， **OnUpdateRecordNext**，或**OnUpdateRecordPrev** — 之前對應移動運算，判斷資料錄集是否有任何記錄。  
+>  呼叫`OnMove`擲回例外狀況，如果資料錄集不有任何記錄。 呼叫適當的使用者介面更新處理常式函式 — `OnUpdateRecordFirst`， `OnUpdateRecordLast`， `OnUpdateRecordNext`，或`OnUpdateRecordPrev`— 之前對應移動運算，判斷資料錄集是否有任何記錄。  
   
 ## <a name="see-also"></a>另請參閱  
  [CFormView 類別](../../mfc/reference/cformview-class.md)   

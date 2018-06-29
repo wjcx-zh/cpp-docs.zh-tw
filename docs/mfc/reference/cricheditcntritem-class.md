@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368416"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078604"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 類別
 與[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供豐富的編輯控制項的 MFC 的文件檢視架構內容中的功能。  
@@ -86,8 +86,8 @@ CRichEditCntrItem(
  *preo*  
  指標[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構包含這個 OLE 項目。 如果*preo*是**NULL**，用戶端項目是空的。  
   
- `pContainer`  
- 容器文件會包含此項目的指標。 如果`pContainer`是**NULL**，您必須明確呼叫[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)將這個用戶端項目加入至文件。  
+ *pContainer*  
+ 容器文件會包含此項目的指標。 如果*pContainer*是**NULL**，您必須明確呼叫[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)將這個用戶端項目加入至文件。  
   
 ### <a name="remarks"></a>備註  
  此函式不會執行任何 OLE 初始化。  
@@ -95,7 +95,7 @@ CRichEditCntrItem(
  如需詳細資訊，請參閱[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的結構。  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- 呼叫此函式可同步處理裝置層面， [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個**CRichEditCntrltem**所指定的*reo*。  
+ 呼叫此函式可同步處理裝置層面， [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個`CRichEditCntrltem`所指定的*reo*。  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);

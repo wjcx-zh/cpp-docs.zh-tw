@@ -1,7 +1,7 @@
 ---
 title: C + + 中封送處理的概觀 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,19 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137130"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079156"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中封送處理的概觀
-在混合模式中，您有時必須封送處理您原生與 managed 型別之間的資料。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 導入了封送處理程式庫，可協助您封送處理，並將資料轉換的簡單方式。  
-  
+在混合模式中，您有時必須封送處理您原生與 managed 型別之間的資料。 Visual Studio 2008 導入*封送處理程式庫*協助封送處理，並將資料轉換的簡單方式。  封送處理程式庫包含一組函式和`marshal_context`執行常見的封送處理的類別。 在這些標頭中所定義的程式庫**msclr 包含**Visual Studio 版本的目錄：
+
+|頁首|描述|  
+|---------------|-----------------|
+|marshal.h|`marshal_context` 類別和內容釋放封送處理函式|
+|marshal_atl.h| ATL 類型封送處理函式|
+|marshal_cppstd.h|標準 c + + 類型封送處理函式|
+|marshal_windows.h|Windows 類型封送處理函式|
+
+
+預設路徑**msclr**資料夾是類似下面的您有根據哪一個版本和組建編號：
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  您可以使用封送處理，不論[marshal_context 類別](../dotnet/marshal-context-class.md)。 某些轉換需要的內容。 其他轉換可使用實作[marshal_as](../dotnet/marshal-as.md)函式。 下表列出支援的目前轉換、 是否需要內容，並封送處理的檔案必須包含：  
   
-|從型別|若要輸入|封送處理方法|Include 檔|  
+|從型別|若要輸入|封送處理方法|include 檔|  
 |---------------|-------------|--------------------|------------------|  
 |System:: string ^|const char *|marshal_context|marshal.h|  
 |const char *|System:: string ^|marshal_as|marshal.h|  
@@ -62,7 +76,7 @@ ms.locfileid: "33137130"
 > [!NOTE]
 >  如果您已嵌入`NULL`s 在字串中的，不保證封送處理字串的結果。 內嵌`NULL`可能會導致要截斷的字串，或可能會保留。  
   
- 封送處理程式庫標頭位於 msclr 子目錄中的包含目錄中。 這個範例示範如何在包含標頭宣告包含 msclr 目錄：  
+這個範例示範如何在包含標頭宣告包含 msclr 目錄：  
   
  `#include "msclr\marshal_cppstd.h"`  
   

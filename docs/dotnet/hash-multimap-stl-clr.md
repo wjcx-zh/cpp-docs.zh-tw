@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8b14a4941a280d34e29de80f343981a0f6d20e5
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305848"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079886"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`hash_multimap`若要管理的項目序列的雜湊表，儲存雙向的每個資料表項目連結清單節點，以及儲存一個項目每個節點。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -145,7 +145,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
   
@@ -1545,7 +1545,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入索引鍵的值。  
   
  其中  

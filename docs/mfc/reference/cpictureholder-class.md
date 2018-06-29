@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375437"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079445"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 類別
 實作圖片屬性，這可讓使用者在控制項中顯示的圖片。  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `idResource`  
+ *idResource*  
  點陣圖資源的資源識別碼。  
   
- `pBitmap`  
+ *pBitmap*  
  指標[CBitmap](../../mfc/reference/cbitmap-class.md)物件。  
   
  *pPal*  
  指標[CPalette](../../mfc/reference/cpalette-class.md)物件。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  表示圖片物件是否將點陣圖和調色盤物件的擁有權。  
   
- `hbm`  
+ *hbm*  
  點陣圖的控制代碼`CPictureHolder`建立物件。  
   
- `hpal`  
+ *hpal*  
  用來呈現點陣圖的調色盤的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果已成功建立物件。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`bTransferOwnership`是**TRUE**、 呼叫端不應該使用點陣圖或以任何方式在這個呼叫之後的調色盤物件傳回。 如果`bTransferOwnership`是**FALSE**，呼叫端會負責確保圖片物件的存留期間點陣圖和調色盤物件維持有效。  
+ 如果*bTransferOwnership*是**TRUE**、 呼叫端不應該使用點陣圖或以任何方式在這個呼叫之後的調色盤物件傳回。 如果*bTransferOwnership*是**FALSE**，呼叫端會負責確保圖片物件的存留期間點陣圖和調色盤物件維持有效。  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  使用圖示來初始化中的圖片物件`CPictureHolder`。  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- `idResource`  
+ *idResource*  
  點陣圖資源的資源識別碼。  
   
- `hIcon`  
+ *hIcon*  
  圖示的控制代碼`CPictureHolder`建立物件。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  表示圖片物件是否將圖示物件的擁有權。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果已成功建立物件。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`bTransferOwnership`是**TRUE**，呼叫端不應該使用 icon 物件以任何方式之後，這個呼叫會傳回。 如果`bTransferOwnership`是**FALSE**，呼叫端會負責確保圖示物件圖片物件的存留期間就持續有效。  
+ 如果*bTransferOwnership*是**TRUE**，呼叫端不應該使用 icon 物件以任何方式之後，這個呼叫會傳回。 如果*bTransferOwnership*是**FALSE**，呼叫端會負責確保圖示物件圖片物件的存留期間就持續有效。  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  使用中繼檔初始化中的圖片物件`CPictureHolder`。  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hmf`  
+ *hmf*  
  用來建立中繼檔的控制代碼`CPictureHolder`物件。  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  圖片的 Y 範圍。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  表示圖片物件是否將中繼檔物件的擁有權。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果已成功建立物件。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`bTransferOwnership`是**TRUE**，呼叫端不應該使用中繼檔物件以任何方式之後，這個呼叫會傳回。 如果`bTransferOwnership`是**FALSE**，呼叫端會負責確保中繼檔物件的存留期圖片物件就持續有效。  
+ 如果*bTransferOwnership*是**TRUE**，呼叫端不應該使用中繼檔物件以任何方式之後，這個呼叫會傳回。 如果*bTransferOwnership*是**FALSE**，呼叫端會負責確保中繼檔物件的存留期圖片物件就持續有效。  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  擷取容器的屬性瀏覽器中顯示的字串。  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `strValue`  
+ *StrValue*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)要保存的顯示字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  Cpictureholder:: Render  
- 呈現所參考的矩形中的圖片`rcRender`。  
+ 呈現所參考的矩形中的圖片*rcRender*。  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  圖片為轉譯的顯示內容的指標。  
   
- `rcRender`  
+ *rcRender*  
  圖片為呈現的矩形。  
   
  *rcWBounds*  
- 表示轉譯圖片物件的週框的矩形。 控制項，這個矩形是`rcBounds`參數傳遞給的覆寫[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。  
+ 表示轉譯圖片物件的週框的矩形。 控制項，這個矩形是*rcbounds 就*參數傳遞給的覆寫[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  連接`CPictureHolder`物件`IPictureDisp`介面。  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDisp`  
+ *pDisp*  
  新的指標`IPictureDisp`介面。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370151"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078417"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>建立檔案總管樣式的 MFC 應用程式
 許多 Windows 系統應用程式會使用檔案總管 中的使用者介面 (UI)。 當您啟動檔案總管 中時，例如，您會看到的分割線的用戶端區域的垂直分割的應用程式。 工作區的左半部提供巡覽和瀏覽功能，以及用戶端區域的右側會顯示詳細資料與選取項目相關的左窗格中。 當使用者按一下左窗格中的項目時，應用程式會重新填入右窗格。 MDI 應用程式中，您可以使用命令上**檢視**功能表變更顯示在右窗格中的詳細資料量。 （SDI 或多個最上層文件應用程式中，您可以變更的詳細資料，使用工具列按鈕）。  
@@ -32,7 +32,7 @@ ms.locfileid: "33370151"
   
  精靈會為您建立下列類別：  
   
--   **CLeftView**類別會定義工作區的左的窗格。 它一律衍生自[CTreeView](../../mfc/reference/ctreeview-class.md)。  
+-   `CLeftView`類別會定義工作區的左的窗格。 它一律衍生自[CTreeView](../../mfc/reference/ctreeview-class.md)。  
   
 -   C*ProjName*檢視類別定義的工作區的右窗格。 根據預設，它衍生自[CListView](../../mfc/reference/clistview-class.md)但可以是另一種檢視，請從您指定的類別而**基底類別**清單中[產生的類別](../../mfc/reference/generated-classes-mfc-application-wizard.md)頁面精靈。  
   

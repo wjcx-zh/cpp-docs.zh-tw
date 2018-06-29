@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370177"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078279"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 類別
 [CMemFile](../../mfc/reference/cmemfile-class.md)-衍生的類別可支援共用記憶體檔案。  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>備註  
  不同之處在於檔案會儲存在 RAM 中，而不是磁碟上檔案的記憶體的行為與磁碟檔案。 記憶體檔案有助於快速暫存儲存位置或傳送未經處理位元組或序列化的獨立處理序之間的物件。  
   
- 共用的記憶體檔案與不同的其他記憶體檔案，記憶體配置與[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函式。 `CSharedFile`類別將資料儲存在全域配置的記憶體區塊 (使用建立**GlobalAlloc**)，並能夠使用 DDE、 剪貼簿或其他 OLE/COM 制式資料傳輸作業，例如，共用此記憶體區塊使用`IDataObject`。  
+ 共用的記憶體檔案與不同的其他記憶體檔案，記憶體配置與[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函式。 `CSharedFile`類別將資料儲存在全域配置的記憶體區塊 (使用建立`GlobalAlloc`)，而此記憶體區塊可以共用使用 DDE、 剪貼簿或其他 OLE/COM 制式資料傳輸作業，例如，使用`IDataObject`。  
   
- **GlobalAlloc**傳回`HGLOBAL`處理而不是記憶體中，例如指標所傳回的指標[malloc](../../c-runtime-library/reference/malloc.md)。 `HGLOBAL`中某些應用程式需要控制代碼。 例如，若要將資料放剪貼簿您需要`HGLOBAL`處理。  
+ `GlobalAlloc` 傳回`HGLOBAL`處理而不是記憶體中，例如指標所傳回的指標[malloc](../../c-runtime-library/reference/malloc.md)。 `HGLOBAL`中某些應用程式需要控制代碼。 例如，若要將資料放剪貼簿您需要`HGLOBAL`處理。  
   
  請注意，`CSharedFile`不使用記憶體對應檔，並在處理序之間無法直接共用的資料。  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  指出記憶體的配置方式的旗標。 請參閱[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)有效旗標值的清單。  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  以位元組為單位的記憶體配置遞增值。  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  要附加至的全域記憶體處理`CSharedFile`。  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  指定的記憶體區塊是否可以成長。  
   
 ### <a name="remarks"></a>備註  
- 如果`bAllowGrow`是非零值，記憶體區塊的大小增加為有需要，例如，如果嘗試對多個位元組寫入檔案時要比配置記憶體區塊。  
+ 如果*bAllowGrow*是非零值，記憶體區塊的大小增加為有需要，例如，如果嘗試對多個位元組寫入檔案時要比配置記憶體區塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [CMemFile 類別](../../mfc/reference/cmemfile-class.md)   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7711e0105085f0b7af1344ce230839e90f2b6851
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376889"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079484"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包裝 Windows 應用程式開發介面函式，提供用來存取登錄的物件導向介面。  
@@ -102,14 +102,14 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszPath`  
+ [in]*pszPath*  
  指定用來建立或開啟金鑰的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  0，如果登錄成功。否則則為非零值。  
   
 ### <a name="remarks"></a>備註  
- `CreateKey` 使用`m_hKey`為登錄查詢等相關事宜的根目錄。 它會搜尋`pszPath`為的子機碼`m_hKey`。 如果索引鍵不存在，`CreateKey`會加以建立。 否則，它會開啟索引鍵。 `CreateKey` 然後設定`m_hKey`建立或開啟索引鍵。  
+ `CreateKey` 使用`m_hKey`為登錄查詢等相關事宜的根目錄。 它會搜尋*pszPath*為的子機碼`m_hKey`。 如果索引鍵不存在，`CreateKey`會加以建立。 否則，它會開啟索引鍵。 `CreateKey` 然後設定`m_hKey`建立或開啟索引鍵。  
   
 ##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  建立 `CSettngsStore` 物件。  
@@ -121,16 +121,16 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bAdmin`  
+ [in]*bAdmin*  
  布林值參數，指定是否`CSettingsStore`物件扮演系統管理員模式。  
   
- [輸入] `bReadOnly`  
+ [in]*bReadOnly*  
  布林值參數，指定是否`CSettingsStore`唯讀模式中建立物件。  
   
 ### <a name="remarks"></a>備註  
- 如果`bAdmin`設`true`、`m_hKey`成員變數會設為`HKEY_LOCAL_MACHINE`。 如果您設定`bAdmin`至`false`，`m_hKey`設`HKEY_CURRENT_USER`。  
+ 如果*bAdmin*設`true`、`m_hKey`成員變數會設為`HKEY_LOCAL_MACHINE`。 如果您設定*bAdmin*至`false`，`m_hKey`設`HKEY_CURRENT_USER`。  
   
- 安全性存取取決於`bReadOnly`參數。 如果`bReadonly`是`false`，安全性的存取將會設定為`KEY_ALL_ACCESS`。 如果`bReadyOnly`是`true`，安全性的存取將會設定為的組合`KEY_QUERY_VALUE, KEY_NOTIFY`和`KEY_ENUMERATE_SUB_KEYS`。 如需安全性的存取，以及登錄的詳細資訊，請參閱[登錄機碼的安全性和存取權限](http://msdn.microsoft.com/library/windows/desktop/ms724878)。  
+ 安全性存取取決於*bReadOnly*參數。 如果*bReadonly*是`false`，安全性的存取將會設定為`KEY_ALL_ACCESS`。 如果*bReadyOnly*是`true`，安全性的存取將會設定為的組合`KEY_QUERY_VALUE, KEY_NOTIFY`和`KEY_ENUMERATE_SUB_KEYS`。 如需安全性的存取，以及登錄的詳細資訊，請參閱[登錄機碼的安全性和存取權限](http://msdn.microsoft.com/library/windows/desktop/ms724878)。  
   
  解構函式`CSettingsStore`釋放`m_hKey`自動。  
   
@@ -144,10 +144,10 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszPath`  
+ [in]*pszPath*  
  若要刪除的索引鍵名稱。  
   
- [輸入] `bAdmin`  
+ [in]*bAdmin*  
  指定要刪除之索引鍵位置的參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -156,7 +156,7 @@ virtual BOOL DeleteKey(
 ### <a name="remarks"></a>備註  
  如果這個方法將會失敗`CSettingsStore`物件處於唯讀模式。  
   
- 如果參數`bAdmin`為零，`DeleteKey`下刪除鍵搜尋`HKEY_CURRENT_USER`。 如果`bAdmin`非零，`DeleteKey`下刪除鍵搜尋`HKEY_LOCAL_MACHINE`。  
+ 如果參數*bAdmin*為零，`DeleteKey`下刪除鍵搜尋`HKEY_CURRENT_USER`。 如果*bAdmin*非零，`DeleteKey`下刪除鍵搜尋`HKEY_LOCAL_MACHINE`。  
   
 ##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  刪除值，以從`m_hKey`。  
@@ -166,7 +166,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszValue`  
+ [in]*pszValue*  
  指定要移除的值欄位。  
   
 ### <a name="return-value"></a>傳回值  
@@ -180,7 +180,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszPath`  
+ [in]*pszPath*  
  登錄機碼的名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -265,59 +265,59 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszKey`  
+ [in]*pszKey*  
  以 null 終止的字串，其中包含要從登錄讀取值的名稱的指標。  
   
- [輸出] `iVal`  
+ [out]*iVal*  
  接收從登錄機碼讀取值的整數變數的參考。  
   
- [輸出] `dwVal`  
+ [out]*dwVal*  
  接收從登錄機碼讀取值的 32 位元雙字組變數的參考。  
   
- [輸出] `sVal`  
+ [out]*sVal*  
  接收從登錄機碼讀取值的字串變數的參考。  
   
- [輸出] `scStringList`  
+ [out]*scStringList*  
  接收從登錄機碼讀取值的字串清單變數參考。  
   
- [輸出] `scArray`  
+ [out]*scArray*  
  接收從登錄機碼讀取值的字串陣列變數的參考。  
   
- [輸出] `dwcArray`  
+ [out]*dwcArray*  
  接收從登錄機碼讀取值的 32 位元雙字組陣列變數的參考。  
   
- [輸出] `wcArray`  
+ [out]*wcArray*  
  接收從登錄機碼讀取值的 16 位元字組陣列變數的參考。  
   
- [輸出] `bcArray`  
+ [out]*bcArray*  
  接收從登錄機碼讀取值的位元組陣列變數的參考。  
   
- [輸出] `lpPoint`  
+ [out]*lpPoint*  
  參考的指標`POINT`接收值的結構會讀取登錄機碼。  
   
- [輸出] `rect`  
+ [out]*rect*  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)變數接收值讀取登錄機碼。  
   
- [輸出] `ppData`  
+ [out]*ppData*  
  從登錄機碼讀取接收值的資料指標的指標。  
   
- [輸出] `pBytes`  
- 不帶正負號的整數變數的指標。 此變數會接收緩衝區的大小，`ppData`指向。  
+ [out]*pBytes*  
+ 不帶正負號的整數變數的指標。 此變數會接收緩衝區的大小， *ppData*指向。  
   
- [輸出] `list`  
+ [out]*清單*  
  若要參考[CObList](../../mfc/reference/coblist-class.md)變數接收值讀取登錄機碼。  
   
- [輸出] `obj`  
+ [out]*obj*  
  若要參考[CObject](../../mfc/reference/cobject-class.md)變數接收值讀取登錄機碼。  
   
- [輸出] `pObj`  
+ [out]*pObj*  
  參考的指標`CObject`變數接收值讀取登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- `Read` 檢查是否有`pszKey`為的子機碼`m_hKey`。  
+ `Read` 檢查是否有*pszKey*為的子機碼`m_hKey`。  
   
 ##  <a name="write"></a>  CSettingsStore::Write  
  將值寫入開啟機碼下登錄。  
@@ -395,59 +395,59 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pszKey`  
+ [in]*pszKey*  
  包含要設定的值名稱的字串指標。  
   
- [輸入] `iVal`  
+ [in]*iVal*  
  整數變數，其中包含要儲存資料的參考。  
   
- [輸入] `dwVal`  
+ [in]*dwVal*  
  包含要儲存資料的 32 位元雙字組變數的參考。  
   
- [輸入] `pszVal`  
+ [in]*pszVal*  
  Null 結束的字串變數，其中包含要儲存的資料指標。  
   
- [輸入] `scStringList`  
+ [in]*scStringList*  
  若要參考[CStringList](../../mfc/reference/cstringlist-class.md)變數，其中包含要儲存的資料。  
   
- [輸入] `bcArray`  
+ [in]*bcArray*  
  包含要儲存資料的位元組陣列變數的參考。  
   
- [輸入] `scArray`  
+ [in]*scArray*  
  包含要儲存資料的字串陣列變數的參考。  
   
- [輸入] `dwcArray`  
+ [in]*dwcArray*  
  包含要儲存資料的 32 位元雙字組陣列變數的參考。  
   
- [輸入] `wcArray`  
+ [in]*wcArray*  
  包含要儲存資料的 16 位元字組陣列變數的參考。  
   
- [輸入] `rect`  
+ [in]*rect*  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)變數，其中包含要儲存的資料。  
   
- [輸入] `lpPoint`  
+ [in]*lpPoint*  
  參考的指標`POINT`變數，其中包含要儲存的資料。  
   
- [輸入] `pData`  
+ [in]*pData*  
  其中包含要儲存的資料緩衝區的指標。  
   
- [輸入] `nBytes`  
- 指定的大小，以位元組為單位之資料`pData`參數點。  
+ [in]*nBytes*  
+ 指定的大小，以位元組為單位之資料*pData*參數點。  
   
- [輸入] `list`  
+ [in]*清單*  
  若要參考[CObList](../../mfc/reference/coblist-class.md)變數，其中包含要儲存的資料。  
   
- [輸入] `obj`  
+ [in]*obj*  
  若要參考[CObject](../../mfc/reference/cobject-class.md)變數，其中包含要儲存的資料。  
   
- [輸入] `pObj`  
+ [in]*pObj*  
  指標的指標`CObject`變數，其中包含要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 `TRUE`，否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 要寫入至登錄，您必須設定`bReadOnly`為非零值，當您建立[CSettingsStore](../../mfc/reference/csettingsstore-class.md)物件。 如需詳細資訊，請參閱[CSettingsStore::CSettingsStore](#csettingsstore)。  
+ 要寫入至登錄，您必須設定*bReadOnly*為非零值，當您建立[CSettingsStore](../../mfc/reference/csettingsstore-class.md)物件。 如需詳細資訊，請參閱[CSettingsStore::CSettingsStore](#csettingsstore)。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

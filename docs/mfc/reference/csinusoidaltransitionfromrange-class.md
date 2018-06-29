@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370203"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078679"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange 類別
 封裝已指定振動範圍的正弦曲線範圍轉換。  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  這是負責建立的標準轉換轉換程式庫指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  在的正弦曲線 wave 透過動畫變數的值。  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  在尖峰的正弦曲線 wave 動畫變數的值。  
   
- `period`  
+ *週期*  
  以秒為單位的正弦曲線 wave 振動期間。  
   
- `slope`  
+ *坡度*  
  在開始轉換的斜率。  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

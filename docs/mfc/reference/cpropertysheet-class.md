@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377458"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079769"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 表示屬性工作表，也稱為索引標籤對話方塊。  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pPage`  
+ *pPage*  
  指向要加入至屬性工作表頁。 不能**NULL**。  
   
 ### <a name="remarks"></a>備註  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDCaption`  
+ *nIDCaption*  
  要用於屬性工作表的標題識別碼。  
   
- `pParentWnd`  
+ *pParentWnd*  
  屬性工作表的父視窗的指標。 如果**NULL**，父視窗會在應用程式的主視窗。  
   
- `iSelectPage`  
+ *iSelectPage*  
  一開始會是最上層顯示頁面的索引。 預設值為加入至工作表的第一頁。  
   
- `pszCaption`  
+ *pszCaption*  
  包含要用於屬性工作表的標題字串的指標。 不能**NULL**。  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  屬性頁的浮水印點陣圖的控制代碼。  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  浮水印點陣圖和/或標頭點陣圖的調色盤的控制代碼。  
   
- `hbmHeader`  
+ *hbmHeader*  
  [屬性] 頁面的標頭點陣圖的控制代碼。  
   
 ### <a name="remarks"></a>備註  
@@ -253,7 +253,7 @@ void Construct(
   
  若要顯示屬性工作表，請呼叫[DoModal](#domodal)或[建立](#create)。 第一個參數中所包含的字串將放置在屬性工作表的標題列。  
   
- 如果可以顯示浮水印和/或標頭的映像會自動使用第三個或第四個原型的`Construct`、 上面所列，而且您通過有效值`hbmWatermark`， `hpalWatermark`，及/或`hbmHeader`參數。  
+ 您可以浮水印和/或標頭的映像自動顯示如果您使用的第三個或第四個原型`Construct`、 上面所列，而且您通過有效值*hbmWatermark*， *hpalWatermark*及/或*hbmHeader*參數。  
   
 ### <a name="example"></a>範例  
  下列範例會示範在何種情況下您會呼叫`Construct`。  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDCaption`  
+ *nIDCaption*  
  要用於屬性工作表的標題識別碼。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父視窗的屬性工作表。 如果**NULL**，父視窗會在應用程式的主視窗。  
   
- `iSelectPage`  
+ *iSelectPage*  
  一開始會是最上層顯示頁面的索引。 預設值為加入至工作表的第一頁。  
   
- `pszCaption`  
+ *pszCaption*  
  指向字串，包含要用於屬性工作表的標題。 不能**NULL**。  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  屬性工作表的背景點陣圖的控制代碼。  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  浮水印點陣圖和/或標頭點陣圖的調色盤的控制代碼。  
   
- `hbmHeader`  
+ *hbmHeader*  
  標頭點陣圖屬性頁的控制代碼。  
   
 ### <a name="remarks"></a>備註  
@@ -324,7 +324,7 @@ CPropertySheet(
   
  如果您有多個參數 （例如，如果您使用的陣列） 時，使用[建構](#construct)而不是`CPropertySheet`。  
   
- 如果可以顯示浮水印和/或標頭的映像會自動使用第三個或第四個原型的`CPropertySheet`、 以上版本，而且您將有效的值`hbmWatermark`， `hpalWatermark`，及/或`hbmHeader`參數。  
+ 如果可以顯示浮水印和/或標頭的映像會自動使用第三個或第四個原型的`CPropertySheet`、 以上版本，而且您將有效的值*hbmWatermark*， *hpalWatermark*，和 /或*hbmHeader*參數。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
@@ -339,26 +339,26 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  指向父視窗。 如果**NULL**，父為桌面。  
   
- `dwStyle`  
+ *dwStyle*  
  屬性工作表的視窗樣式。 如需完整的可用樣式清單，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- `dwExStyle`  
+ *dwExStyle*  
  屬性工作表的延伸的視窗樣式。 如需完整的可用樣式清單，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果成功; 建立屬性工作表否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 若要呼叫**建立**能放在建構函式，或在叫用建構函式之後呼叫它。  
+ 若要呼叫`Create`能放在建構函式，或在叫用建構函式之後呼叫它。  
   
- 預設樣式，藉由傳遞為-1 表示`dwStyle`，實際上是**WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_可見**。 預設的延伸視窗樣式，藉由傳遞 0 做為表示`dwExStyle`，實際上是**WS_EX_DLGMODALFRAME**。  
+ 預設樣式，藉由傳遞為-1 表示*dwStyle*，實際上是**WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE**。 預設的延伸視窗樣式，藉由傳遞 0 做為表示*dwExStyle*，實際上是**WS_EX_DLGMODALFRAME**。  
   
- **建立**成員函式傳回之後立即建立屬性工作表。 若要損毀的屬性工作表，請呼叫[cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。  
+ `Create`成員函式傳回之後立即建立屬性工作表。 若要損毀的屬性工作表，請呼叫[cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)。  
   
- 非強制回應屬性工作表顯示呼叫**建立**沒有 確定、 取消，立即套用 和 說明 按鈕強制回應屬性工作表一樣。 使用者必須建立所需的按鈕。  
+ 非強制回應屬性工作表顯示呼叫`Create`沒有 確定、 取消，立即套用 和 說明 按鈕強制回應屬性工作表一樣。 使用者必須建立所需的按鈕。  
   
  若要顯示強制回應屬性工作表，請呼叫[DoModal](#domodal)改為。  
   
@@ -418,13 +418,13 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bStacked`  
- 表示屬性工作表中是否已啟用堆疊索引標籤。 停用堆疊的資料列的標籤設定`bStacked`至**FALSE**。  
+ *bStacked*  
+ 表示屬性工作表中是否已啟用堆疊索引標籤。 停用堆疊的資料列的標籤設定*bStacked*至**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，如果屬性工作表具有多個索引標籤會超過單一資料列寬度屬性工作表索引標籤就會堆疊在多個資料列。 若要使用捲動的索引標籤而非堆疊索引標籤，呼叫`EnableStackedTabs`與`bStacked`設**FALSE**之前先呼叫[DoModal](#domodal)或[建立](#create)。  
+ 根據預設，如果屬性工作表具有多個索引標籤會超過單一資料列寬度屬性工作表索引標籤就會堆疊在多個資料列。 若要使用捲動的索引標籤而非堆疊索引標籤，呼叫`EnableStackedTabs`與*bStacked*設**FALSE**之前先呼叫[DoModal](#domodal)或[建立](#create).  
   
- 您必須呼叫`EnableStackedTabs`當您建立強制回應或非強制回應屬性工作表。 若要納入此樣式中的`CPropertySheet`-衍生類別，撰寫訊息處理常式的`WM_CREATE`。 中的覆寫版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，呼叫**EnableStackedTabs (FALSE)** 然後再呼叫基底類別實作。  
+ 您必須呼叫`EnableStackedTabs`當您建立強制回應或非強制回應屬性工作表。 若要納入此樣式中的`CPropertySheet`-衍生類別，為 WM_CREATE 撰寫訊息處理常式。 中的覆寫版本[CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)，呼叫**EnableStackedTabs (FALSE)** 然後再呼叫基底類別實作。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
@@ -485,11 +485,11 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPage`  
+ *nPage*  
  所需的頁面上，索引 0 開始。 必須介於 0 與小於屬性工作表，內含頁數。  
   
 ### <a name="return-value"></a>傳回值  
- 對應至的頁面指標`nPage`參數。  
+ 對應至的頁面指標*nPage*參數。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pPage`  
+ *pPage*  
  指向包含要尋找的索引的頁面。 不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -547,7 +547,7 @@ CTabCtrl* GetTabControl() const;
  結構，其成員儲存的特性[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。  
   
 ### <a name="remarks"></a>備註  
- 使用此結構來初始化屬性工作表的外觀，它由建構後，但它會顯示與[DoModal](#domodal)成員函式。 例如，設定`dwSize`隸屬`m_psh`大小，您想將屬性工作表。  
+ 使用此結構來初始化屬性工作表的外觀，它由建構後，但它會顯示與[DoModal](#domodal)成員函式。 例如，設定*dwSize*隸屬`m_psh`大小，您想將屬性工作表。  
   
  如需有關此結構，包括其成員的清單，請參閱**PROPSHEETHEADER** Windows SDK 中。  
   
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpRect`  
+ *lpRect*  
  指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含對話方塊来轉換的座標。  
   
 ### <a name="remarks"></a>備註  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 函式會傳回系統字型的大小資訊，但是您可以指定不同的字型，每一個屬性工作表，如果您使用**DS_SETFONT**中設定樣式資源定義檔。 [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows 函式，描述在 Windows SDK 中，使用適當的字型，此對話方塊。  
   
- `MapDialogRect`成員函式取代對話方塊單位`lpRect`與畫面單位 （像素為單位），使矩形可以用來建立對話方塊或調整控制項的方塊內的位置。  
+ `MapDialogRect`成員函式取代對話方塊單位*lpRect*與畫面單位 （像素為單位），使矩形可以用來建立對話方塊或調整控制項的方塊內的位置。  
   
 ##  <a name="oninitdialog"></a>  Cpropertysheet:: Oninitdialog  
  覆寫以擴大屬性工作表的初始設定。  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指定應用程式是否已設定為其中一個屬性工作表中的控制項的輸入的焦點。 如果**OnInitDialog**傳回非零值時，Windows 就會將輸入的焦點設定為屬性工作表中的第一個控制項。 只有當它已明確設為其中一個屬性工作表中控制項的輸入的焦點，應用程式可以傳回 0。  
+ 指定應用程式是否已設定為其中一個屬性工作表中的控制項的輸入的焦點。 如果`OnInitDialog`傳回非零值時，Windows 就會將輸入的焦點設定為屬性工作表中的第一個控制項。 只有當它已明確設為其中一個屬性工作表中控制項的輸入的焦點，應用程式可以傳回 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式呼叫以回應**WM_INITDIALOG**訊息。 此訊息會傳送至屬性工作表期間[建立](#create)或[DoModal](#domodal)呼叫，就會發生在屬性表顯示之前。  
+ 此成員函式呼叫來回應 WM_INITDIALOG 訊息。 此訊息會傳送至屬性工作表期間[建立](#create)或[DoModal](#domodal)呼叫，就會發生在屬性表顯示之前。  
   
  如果您需要執行特殊處理初始化的屬性工作表時，請覆寫此成員函式。 在覆寫的版本中，先呼叫基底類別`OnInitDialog`但忽略它的傳回值。 您通常會傳回**TRUE**從您的覆寫的成員函式。  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nButton`  
+ *nButton*  
  nButton： 識別可按的按鈕。 這個參數可以是下列值之一：  
   
 - **PSBTN_BACK**選擇 [上一頁] 按鈕。  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pPage`  
+ *pPage*  
  指向要從此屬性工作表頁。 不能`NULL`。  
   
- `nPage`  
+ *nPage*  
  要移除的頁面索引。 必須介於 0 與小於屬性工作表，內含頁數。  
   
 ### <a name="remarks"></a>備註  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPage`  
+ *nPage*  
  若要設定頁面的索引。 它必須介於 0 與小於屬性工作表，內含頁數。  
   
- `pPage`  
+ *pPage*  
  在屬性工作表中設定頁面的點。 它不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -672,7 +672,7 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
+ *lpszText*  
  指向要顯示在 [完成] 5d; 命令按鈕的文字。  
   
 ### <a name="remarks"></a>備註  
@@ -691,10 +691,10 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStyle`  
+ *nStyle*  
  指定的屬性工作表標題的樣式。 必須指定樣式，0 或**PSH_PROPTITLE**。 如果樣式設定為**PSH_PROPTITLE**，指定為標題的文字後面出現的文字 「 屬性 」。 例如，呼叫`SetTitle`(「 簡單 」 **PSH_PROPTITLE**) 會在屬性工作表標題的 「 簡單屬性 」。  
   
- `lpszText`  
+ *lpszText*  
  指向要做為屬性工作表的標題列中的標題文字。  
   
 ### <a name="remarks"></a>備註  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  一組自訂精靈按鈕的外觀與函式的旗標。 這個參數可以是下列值的組合：  
   
 - **PSWIZB_BACK**上一頁按鈕  

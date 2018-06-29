@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305549"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079703"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有先進存取的物件。 您可以使用容器配接器`queue`管理為佇列基礎容器。  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  值  
  受控制序列中項目的類型。  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|重複的物件。|  
 |IQueue\<值、 容器 >|維護泛型容器配接器。|  
   
-### <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註  
  物件可配置及釋放的序列型別的基礎容器中，透過它所控制的儲存體`Container`，其中存放`Value`項目，而且視成長。 物件會限制存取只按第一個項目並取出最後一個項目，實作先進先出佇列 （也稱為 FIFO 佇列中或只是佇列）。  
   
 ## <a name="members"></a>成員

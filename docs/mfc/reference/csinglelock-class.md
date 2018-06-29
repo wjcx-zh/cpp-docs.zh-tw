@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e969607e4017191539a0b0301b0c27ccb9f1ae
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372965"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078980"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 類別
 代表多執行緒程式用來控制單一資源存取的存取控制機制。  
@@ -57,7 +57,7 @@ class CSingleLock
 ## <a name="remarks"></a>備註  
  `CSingleLock` 沒有基底類別。  
   
- 若要使用同步類別[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，您必須建立`CSingleLock`或[CMultiLock](../../mfc/reference/cmultilock-class.md)等候，並釋出同步處理物件的物件。 使用`CSingleLock`您可能只需要一次等候上一個物件。 使用**CMultiLock**時您可以使用在特定時間的多個物件。  
+ 若要使用同步類別[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，您必須建立`CSingleLock`或[CMultiLock](../../mfc/reference/cmultilock-class.md)等候，並釋出同步處理物件的物件。 使用`CSingleLock`您可能只需要一次等候上一個物件。 使用`CMultiLock`時您可以使用在特定時間的多個物件。  
   
  若要使用`CSingleLock`物件，在受控制的資源類別中呼叫其建構函式內的成員函式。 然後呼叫[IsLocked](#islocked)成員函式來判斷資源是否可用。 如果是，繼續進行此成員函式的其餘部分。 如果資源無法使用，請等候一段指定時間的資源釋出，或傳回失敗。 使用的資源已完成之後，呼叫[Unlock](#unlock)函式如果`CSingleLock`物件是使用一次，或允許`CSingleLock`物件也將被銷毀。  
   
@@ -79,10 +79,10 @@ explicit CSingleLock(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pObject`  
+ *pObject*  
  指向要存取的同步處理物件。 不能**NULL**。  
   
- `bInitialLock`  
+ *bInitialLock*  
  指定是否一開始嘗試存取提供的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -137,10 +137,10 @@ BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lCount`  
+ *lCount*  
  要釋放的存取數目。 必須大於 0。 如果指定的數量會導致超過最大值的物件的計數，計數不會變更，並傳回函式**FALSE**。  
   
- `lPrevCount`  
+ *lPrevCount*  
  指向接收之同步處理物件的先前計數的變數。 如果**NULL**，就不會傳回前次計數。  
   
 ### <a name="return-value"></a>傳回值  

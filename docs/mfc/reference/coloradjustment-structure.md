@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb0ec0233edd968ad121b84f9e1d584a26f3387
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369960"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077951"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT 結構
-`COLORADJUSTMENT`結構會定義 windows 所使用的色彩調整值`StretchBlt`和**stretchdibits 做**函式時`StretchBlt`模式是**半色調**。  
+`COLORADJUSTMENT`結構會定義 windows 所使用的色彩調整值`StretchBlt`和`StretchDIBits`函式時`StretchBlt`模式是**半色調**。  
   
 ## <a name="syntax"></a>語法  
   

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376375"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079586"
 ---
 # <a name="cpen-class"></a>CPen 類別
 封裝 Windows 繪圖裝置介面 (GDI) 畫筆。  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPenStyle`  
+ *nPenStyle*  
  指定的畫筆樣式。 建構函式的第一個版本中的這個參數可以是下列值之一：  
   
 - **PS_SOLID**建立實心筆。  
@@ -118,7 +118,7 @@ CPen(
   
 - **PS_NULL**建立 null 畫筆。  
   
-- **PS_INSIDEFRAME**建立畫筆繪製線條，以指定的周框 Windows GDI 輸出函式所產生的封閉圖形的框架內，(比方說，**橢圓形**，**矩形**， `RoundRect`， `Pie`，和`Chord`成員函式)。 當這個樣式搭配 Windows GDI 輸出函式未指定的周框 (比方說，`LineTo`成員函式)，畫筆的繪圖區域不會限制在範圍內。  
+- **PS_INSIDEFRAME**建立畫筆繪製線條，以指定的周框 Windows GDI 輸出函式所產生的封閉圖形的框架內，(比方說， `Ellipse`， `Rectangle`， `RoundRect`， `Pie`，和`Chord`成員函式)。 當這個樣式搭配 Windows GDI 輸出函式未指定的周框 (比方說，`LineTo`成員函式)，畫筆的繪圖區域不會限制在範圍內。  
   
  第二個版本`CPen`建構函式指定的型別、 樣式、 結束端點和聯結屬性組合。 每個類別目錄中的值應該使用位元 OR 運算子結合 (&#124;)。 畫筆類型可以是下列值之一：  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC**建立外觀的畫筆。  
   
-     第二個版本`CPen`建構函式會加入下列畫筆樣式的`nPenStyle`:  
+     第二個版本`CPen`建構函式會加入下列畫筆樣式的*nPenStyle*:  
   
 - **PS_ALTERNATE**建立畫筆設定每個像素。 （這個樣式是只適用於外觀畫筆）。  
   
@@ -148,24 +148,24 @@ CPen(
   
 - **PS_JOIN_ROUND**聯結會四捨五入。  
   
- `nWidth`  
+ *nWidth*  
  指定的畫筆寬度。  
   
 -   建構函式的第一個版本，如果此值為 0，以裝置為單位的寬度一律為 1 個像素，不論對應模式。  
   
--   第二個版本的建構函式，如果`nPenStyle`是**PS_GEOMETRIC**，以邏輯單位表示指定寬度。 如果`nPenStyle`是**PS_COSMETIC**，寬度必須設定為 1。  
+-   第二個版本的建構函式，如果*nPenStyle*是**PS_GEOMETRIC**，以邏輯單位表示指定寬度。 如果*nPenStyle*是**PS_COSMETIC**，寬度必須設定為 1。  
   
- `crColor`  
+ *crColor*  
  包含畫筆的 RGB 色彩。  
   
- `pLogBrush`  
- 指向`LOGBRUSH`結構。 如果`nPenStyle`是**PS_COSMETIC**、`lbColor`隸屬`LOGBRUSH`結構指定的畫筆色彩和`lbStyle`隸屬`LOGBRUSH`結構必須設為**BS_實心**。 如果`nPenStyle`是**PS_GEOMETRIC**，所有成員必須都用來指定畫筆的筆刷屬性。  
+ *pLogBrush*  
+ 指向`LOGBRUSH`結構。 如果*nPenStyle*是**PS_COSMETIC**、 *lbColor*隸屬`LOGBRUSH`結構指定的畫筆色彩和*lbStyle*隸屬`LOGBRUSH`結構必須設為**BS_SOLID**。 如果*nPenStyle*是**PS_GEOMETRIC**，所有成員必須都用來指定畫筆的筆刷屬性。  
   
- `nStyleCount`  
- 指定的長度，單位 doubleword`lpStyle`陣列。 此值必須是零如果`nPenStyle`不**PS_USERSTYLE**。  
+ *nStyleCount*  
+ 指定的長度，單位 doubleword *lpStyle*陣列。 此值必須是零如果*nPenStyle*不**PS_USERSTYLE**。  
   
- `lpStyle`  
- 指向陣列的 doubleword 值。 第一個值指定使用者定義的樣式中的第一條虛線的長度，第二個值指定長度的第一個空格，依此類推。 此指標必須是**NULL**如果`nPenStyle`不**PS_USERSTYLE**。  
+ *lpStyle*  
+ 指向陣列的 doubleword 值。 第一個值指定使用者定義的樣式中的第一條虛線的長度，第二個值指定長度的第一個空格，依此類推。 此指標必須是**NULL**如果*nPenStyle*不**PS_USERSTYLE**。  
   
 ### <a name="remarks"></a>備註  
  如果您使用不含引數的建構函式，您必須初始化產生`CPen`物件`CreatePen`， `CreatePenIndirect`，或`CreateStockObject`成員函式。  
@@ -194,27 +194,27 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPenStyle`  
- 指定的樣式的畫筆。 如需可能值的清單，請參閱`nPenStyle`中的參數[CPen](#cpen)建構函式。  
+ *nPenStyle*  
+ 指定的樣式的畫筆。 如需可能值的清單，請參閱*nPenStyle*中的參數[CPen](#cpen)建構函式。  
   
- `nWidth`  
+ *nWidth*  
  指定的畫筆寬度。  
   
 -   第一個版本`CreatePen`，此值為 0，如果裝置單位寬度一律為 1 個像素，不論對應模式。  
   
--   第二個版本的`CreatePen`，如果`nPenStyle`是**PS_GEOMETRIC**，以邏輯單位表示指定寬度。 如果`nPenStyle`是**PS_COSMETIC**，寬度必須設定為 1。  
+-   第二個版本的`CreatePen`，如果*nPenStyle*是**PS_GEOMETRIC**，以邏輯單位表示指定寬度。 如果*nPenStyle*是**PS_COSMETIC**，寬度必須設定為 1。  
   
- `crColor`  
+ *crColor*  
  包含畫筆的 RGB 色彩。  
   
- `pLogBrush`  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)結構。 如果`nPenStyle`是**PS_COSMETIC**、 **lbColor**隸屬`LOGBRUSH`結構指定的畫筆色彩和`lbStyle`隸屬`LOGBRUSH`結構必須是設定為**BS_SOLID**。 如果**nPenStyle**是**PS_GEOMETRIC**，所有成員必須都用來指定畫筆的筆刷屬性。  
+ *pLogBrush*  
+ 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)結構。 如果*nPenStyle*是**PS_COSMETIC**、 **lbColor**隸屬`LOGBRUSH`結構指定的畫筆色彩和*lbStyle*隸屬`LOGBRUSH`結構必須設為**BS_SOLID**。 如果**nPenStyle**是**PS_GEOMETRIC**，所有成員必須都用來指定畫筆的筆刷屬性。  
   
- `nStyleCount`  
- 指定的長度，單位 doubleword`lpStyle`陣列。 此值必須是零如果`nPenStyle`不**PS_USERSTYLE**。  
+ *nStyleCount*  
+ 指定的長度，單位 doubleword *lpStyle*陣列。 此值必須是零如果*nPenStyle*不**PS_USERSTYLE**。  
   
- `lpStyle`  
- 指向陣列的 doubleword 值。 第一個值指定使用者定義的樣式中的第一條虛線的長度，第二個值指定長度的第一個空格，依此類推。 此指標必須是**NULL**如果`nPenStyle`不**PS_USERSTYLE**。  
+ *lpStyle*  
+ 指向陣列的 doubleword 值。 第一個值指定使用者定義的樣式中的第一條虛線的長度，第二個值指定長度的第一個空格，依此類推。 此指標必須是**NULL**如果*nPenStyle*不**PS_USERSTYLE**。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為非零或零，如果方法失敗。  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  第二個版本`CreatePen`初始化邏輯的外觀或幾何畫筆具有指定的樣式、 寬度和筆刷屬性。 外觀的畫筆寬度永遠為 1。以全局單位一律指定幾何的畫筆寬度。 應用程式建立邏輯畫筆之後，它可以藉由呼叫放入裝置內容中選取該畫筆[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)函式。 畫筆選入裝置內容之後，它可用來繪製的直線和曲線。  
   
--   如果`nPenStyle`是**PS_COSMETIC**和**PS_USERSTYLE**中的項目`lpStyle`陣列指定虛線和間距的長度單位樣式。 定義樣式單位所在畫筆用來繪製一條線的裝置。  
+-   如果*nPenStyle*是**PS_COSMETIC**和**PS_USERSTYLE**中的項目*lpStyle*陣列指定長度的連字號和空格樣式單位。 定義樣式單位所在畫筆用來繪製一條線的裝置。  
   
--   如果`nPenStyle`是**PS_GEOMETRIC**和**PS_USERSTYLE**中的項目`lpStyle`陣列指定虛線和間距的長度，以邏輯單位表示。  
+-   如果*nPenStyle*是**PS_GEOMETRIC**和**PS_USERSTYLE**中的項目*lpStyle*陣列指定長度的連字號和空格邏輯單元。  
   
--   如果`nPenStyle`是**PS_ALTERNATE**、 樣式單位會被忽略，而且每個像素設定。  
+-   如果*nPenStyle*是**PS_ALTERNATE**、 樣式單位會被忽略，而且每個像素設定。  
   
  當應用程式不再需要給定的畫筆時，它應該呼叫[CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成員函式或摧毀`CPen`物件，以便資源不再使用。 裝置內容中選取 畫筆時，應用程式不應該刪除畫筆。  
   
@@ -240,14 +240,14 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- 初始化具有樣式、 寬度和色彩所指向的結構中的畫筆`lpLogPen`。  
+ 初始化具有樣式、 寬度和色彩所指向的結構中的畫筆*lpLogPen*。  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpLogPen`  
+ *lpLogPen*  
  指向 Windows [LOGPEN](../../mfc/reference/logpen-structure.md)包含畫筆的相關資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -289,7 +289,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLogPen`  
+ *pLogPen*  
  指向[EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)包含畫筆的相關資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -321,7 +321,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLogPen`  
+ *pLogPen*  
  指向[LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)結構以包含畫筆的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  

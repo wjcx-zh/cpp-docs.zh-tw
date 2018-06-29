@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374379"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077974"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 用於 OLE 視覺化編輯伺服程式、Automation 伺服程式和連結容器 (支援內嵌連結的應用程式)。  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  範本要求的 OLE 類別 ID 的參考。  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  文件範本的指標。  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  表示應用程式的單一執行個體是否可以支援多個具現化。 如果**TRUE**，針對每個要求建立物件啟動應用程式的多個執行個體。  
   
 ### <a name="remarks"></a>備註  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nAppType`  
+ *nAppType*  
  中的值**OLE_APPTYPE** AFXDISP 中定義的列舉。H. 它可以包含下列值之一：  
   
 - `OAT_INPLACE_SERVER` 伺服器具有完整伺服器的使用者介面。  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` 物件是`IDispatch`的能力。  
   
-- **OAT_DOC_OBJECT_SERVER**伺服器同時支援內嵌和文件物件元件模型。  
+- `OAT_DOC_OBJECT_SERVER` 伺服器同時支援內嵌和文件物件元件模型。  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  沒有任何項目存在時，才會寫入到登錄中的項目清單。  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  不論任何先前的項目是否存在登錄中會寫入的項目清單。  
   
- `bRegister`  
- 判斷是否要註冊的類別。 如果`bRegister`是**TRUE**，類別會向系統登錄。 否則，它會移除註冊類別。  
+ *bRegister*  
+ 判斷是否要註冊的類別。 如果*bRegister*是**TRUE**，類別會向系統登錄。 否則，它會移除註冊類別。  
   
 ### <a name="remarks"></a>備註  
  註冊資訊會透過呼叫載入[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 擷取子字串是由索引**regFileTypeId**， **regFileTypeName**，和**fileNewName**中所述， `GetDocString`參考頁面。  
   
  如果**regFileTypeId**子字串是空的或如果呼叫`GetDocString`失敗等任何其他原因，此函式失敗，而且未在登錄中輸入的檔案資訊。  
   
- 引數中的資訊`rglpszRegister`和`rglpszOverwrite`透過呼叫登錄寫入[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 預設值資訊，這兩個引數時，會註冊**NULL**，適用於大部分的應用程式。 這些引數中的資訊結構的資訊，請參閱`AfxOleRegisterServerClass`。  
+ 引數中的資訊*rglpszRegister*和*rglpszOverwrite*透過呼叫登錄寫入[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 預設值資訊，這兩個引數時，會註冊**NULL**，適用於大部分的應用程式。 這些引數中的資訊結構的資訊，請參閱`AfxOleRegisterServerClass`。  
   
- 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 如需詳細資訊，請參閱[實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   

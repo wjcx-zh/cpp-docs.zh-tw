@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370636"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078575"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity 類別
 封裝由動畫變數的初始速度決定其幅度的正弦曲線速度轉換。  
@@ -84,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  這是負責建立的標準轉換轉換程式庫指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -100,10 +100,10 @@ CSinusoidalTransitionFromVelocity(
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
- `period`  
+ *週期*  
  以秒為單位的正弦曲線 wave 振動期間。  
   
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  

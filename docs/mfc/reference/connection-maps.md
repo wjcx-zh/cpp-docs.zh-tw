@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a82cc55e1cbf782603c7b34368fbc3d4ebe4c4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372834"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079194"
 ---
 # <a name="connection-maps"></a>連接對應
 OLE 控制項都能將介面公開給其他應用程式。 這些介面只允許從容器的存取，至該控制項。 如果 OLE 控制項想要存取外部的其他 OLE 物件的介面，必須先建立的連接點。 此連接點可讓連出外部的分派對應，例如事件對應或通知函式的存取控制。  
@@ -59,14 +59,14 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  指定的連接點，這樣的控制項類別名稱。  
   
  *localClass*  
  指定實作連接點之區域類別的名稱。  
   
 ### <a name="remarks"></a>備註  
- 在定義類別的成員函式宣告 (.h) 檔案中，啟動 連接點`BEGIN_CONNECTION_PART`巨集，然後新增`CONNECTION_IID`巨集和您想要實作，並完成 連接點對應任何其他成員函式與`END_CONNECTION_PART`巨集。  
+ 在定義類別的成員函式宣告 (.h) 檔案中，連接點開頭 BEGIN_CONNECTION_PART 巨集則加入 CONNECTION_IID 巨集和您想要實作，任何其他成員函式和完成連線點具有 END_CONNECTION_PART 巨集對應。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
@@ -86,18 +86,18 @@ END_CONNECTION_PART(localClass)
   **標頭**afxdisp.h  
   
 ##  <a name="connection_iid"></a>  CONNECTION_IID  
- 在 `BEGIN_CONNECTION_PART` 和 `END_CONNECTION_PART` 巨集間使用，為 OLE Automation 控制項支授的連接點定義介面 ID。  
+ 使用 BEGIN_CONNECTION_PART 之間 END_CONNECTION_PART 巨集來定義 OLE 控制項所支援的連接點的介面識別碼。  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
+ *iid*  
  連接點所呼叫介面的介面 ID。  
   
 ### <a name="remarks"></a>備註  
- `iid` 引數是用於識別連接點將在其連接的接收器上呼叫之介面的介面 ID。 例如:   
+ *Iid*引數是使用識別碼來識別連接點將在其連接的接收器呼叫之介面的介面。 例如:   
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
@@ -114,7 +114,7 @@ DECLARE_CONNECTION_MAP()
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果控制項支援額外的連接點，請在類別宣告的結尾處使用 `DECLARE_CONNECTION_MAP` 巨集。 然後，在定義類別成員函式的 .cpp 檔案中使用 `BEGIN_CONNECTION_MAP` 巨集、針對每個控制項的連接點使用 `CONNECTION_PART` 巨集，以及使用 `END_CONNECTION_MAP` 巨集來宣告連接對應的結尾。  
+ 如果控制項支援額外的點，請在類別宣告的結尾使用 DECLARE_CONNECTION_MAP 巨集。 接著，在定義類別的成員函式的.cpp 檔案，使用 BEGIN_CONNECTION_MAP 巨集、 CONNECTION_PART 巨集，每個控制項的連接點和 END_CONNECTION_MAP 巨集來宣告連接對應的結尾。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
@@ -127,14 +127,14 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  指定連接對應之控制項類別的名稱。  
   
  *theBase*  
- 指定 `theClass` 基底類別的名稱。  
+ 指定的基底類別名稱*theClass*。  
   
 ### <a name="remarks"></a>備註  
- 在實作 (。定義您的類別成員函式的 CPP) 檔案啟動連接對應與`BEGIN_CONNECTION_MAP`巨集，然後將巨集項目加入您的連線點使用的每個[CONNECTION_PART](#connection_part)巨集。 最後，完成連接對應與[END_CONNECTION_MAP](#end_connection_map)巨集。  
+ 在實作 (。Cpp) 所定義的成員函式類別的、 與 BEGIN_CONNECTION_MAP 巨集啟動連接對應，然後將巨集項目加入您的連線點使用的每個[CONNECTION_PART](#connection_part)巨集。 最後，完成連接對應與[END_CONNECTION_MAP](#end_connection_map)巨集。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
@@ -157,10 +157,10 @@ CONNECTION_PART(theClass, iid, localClass)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  指定的連接點，這樣的控制項類別名稱。  
   
- `iid`  
+ *iid*  
  連接點所呼叫介面的介面 ID。  
   
  *localClass*  
@@ -177,7 +177,7 @@ CONNECTION_PART(theClass, iid, localClass)
   **標頭**afxdisp.h  
   
 ##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
- 呼叫此函式可指定來源之間建立連線`pUnkSrc`，與所指定的接收`pUnkSink`。  
+ 呼叫此函式可指定來源之間建立連線*pUnkSrc*，與所指定的接收*pUnkSink*。  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -189,20 +189,20 @@ BOOL AFXAPI AfxConnectionAdvise(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkSrc`  
+ *pUnkSrc*  
  呼叫介面的物件指標。  
   
- `pUnkSink`  
+ *pUnkSink*  
  實作介面的物件指標。  
   
- `iid`  
+ *iid*  
  連接的介面識別碼。  
   
- `bRefCount`  
- **TRUE**表示建立的連接應該會使參考計數的`pUnkSink`遞增。 **FALSE**指出應該不會遞增參考計數。  
+ *bRefCount*  
+ **TRUE**表示建立的連接應該會使參考計數的*pUnkSink*遞增。 **FALSE**指出應該不會遞增參考計數。  
   
- `pdwCookie`  
- 指標`DWORD`傳回連接識別碼的位置。 此值應傳遞做為`dwCookie`參數`AfxConnectionUnadvise`時中斷連線的連線。  
+ *pdwCookie*  
+ 指標`DWORD`傳回連接識別碼的位置。 此值應傳遞做為*dwCookie*參數`AfxConnectionUnadvise`時中斷連線的連線。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果已建立連線;否則便是 0。  
@@ -214,7 +214,7 @@ BOOL AFXAPI AfxConnectionAdvise(
  **標頭：** afxctl.h 
 
 ##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
- 呼叫此函式來中斷連線之間指定的來源`pUnkSrc`，與所指定的接收`pUnkSink`。  
+ 呼叫此函式來中斷連線之間指定的來源*pUnkSrc*，與所指定的接收*pUnkSink*。  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -226,19 +226,19 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkSrc`  
+ *pUnkSrc*  
  呼叫介面的物件指標。  
   
- `pUnkSink`  
+ *pUnkSink*  
  實作介面的物件指標。  
   
- `iid`  
+ *iid*  
  連接點介面的介面識別碼。  
   
- `bRefCount`  
- **TRUE**表示中斷連線的連線應該會使參考計數的`pUnkSink`會減少。 **FALSE**表示不應該遞減參考計數。  
+ *bRefCount*  
+ **TRUE**表示中斷連線的連線應該會使參考計數的*pUnkSink*會減少。 **FALSE**表示不應該遞減參考計數。  
   
- `dwCookie`  
+ *dwCookie*  
  所傳回的連接識別碼`AfxConnectionAdvise`。  
   
 ### <a name="return-value"></a>傳回值  

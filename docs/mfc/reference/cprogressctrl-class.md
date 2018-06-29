@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317ce9484cc471611762d10e6f1482f24c2742a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ccc4acfdfd618bf0fa11f4a49c1e0b78f009ca
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378317"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079386"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 提供 Windows 通用進度列控制項的功能。  
@@ -142,27 +142,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定進度列控制項的樣式。 套用視窗 stylesdescribed 中的任何組合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了下列進度列控制項的樣式，來控制：  
   
 - `PBS_VERTICAL` 顯示進度資訊以垂直方式，從上至下。 沒有此旗標，進度列控制項會顯示水平、 向左到右。  
   
 - `PBS_SMOOTH` 顯示填滿進度列控制項中漸進式平滑。 此旗標，沒有區塊填入控制項。  
   
- `rect`  
- 指定進度列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 控制項必須是子視窗，因為指定的座標是相對於用戶端區域的`pParentWnd`。  
+ *rect*  
+ 指定進度列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 控制項必須是子視窗，因為指定的座標是相對於用戶端區域的*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定進度列控制項的父視窗，通常`CDialog`。 它不得為**NULL。**  
   
- `nID`  
+ *nID*  
  指定進度列控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果`CProgressCtrl`物件已成功建立，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CProgressCtrl`兩個步驟中的物件。 首先，呼叫建構函式，建立`CProgressCtrl`物件，然後再呼叫**建立**，它會建立進度列控制項。  
+ 您建構`CProgressCtrl`兩個步驟中的物件。 首先，呼叫建構函式，建立`CProgressCtrl`物件，然後再呼叫`Create`，它會建立進度列控制項。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
@@ -180,19 +180,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定進度列控制項的樣式。 套用視窗樣式中所述的任何組合[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -253,14 +253,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLower`  
+ *nLower*  
  接收進度列控制項的下限的整數的參考。  
   
- `nUpper`  
+ *nUpper*  
  接收進度列控制項的時間上限的整數的參考。  
   
 ### <a name="remarks"></a>備註  
- 此函式會將下限和上限限制中的值複製到所參考的整數`nLower`和`nUpper`分別。  
+ 此函式會將下限和上限限制中的值複製到所參考的整數*nLower*和*nUpper*分別。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
@@ -320,14 +320,14 @@ int GetStep() const;
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
 ##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
- 進度列控制項的目前位置前移所指定的增量`nPos`及重繪列，以反映新的位置。  
+ 進度列控制項的目前位置前移所指定的增量*nPos*及重繪列，以反映新的位置。  
   
 ```  
 int OffsetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  位置向前移動的數量。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `clrBar`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，指定新的進度指示器列色彩。 指定`CLR_DEFAULT`造成進度列，若要使用其預設色彩。|  
+|[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，指定新的進度指示器列色彩。 指定`CLR_DEFAULT`造成進度列，若要使用其預設色彩。|  
   
 ### <a name="return-value"></a>傳回值  
  前一個色彩的進度指示器列中，以表示[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，或`CLR_DEFAULT`如果進度指示器列的色彩的預設色彩。  
@@ -375,7 +375,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clrNew`  
+ *clrNew*  
  A **COLORREF**值，指定新的背景色彩。 指定`CLR_DEFAULT`進度列所使用的預設背景色彩值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -397,8 +397,8 @@ BOOL SetMarquee(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `fMarqueeMode`|`true` 若要開啟跑馬燈模式或`false`跑馬燈模式關閉。|  
-|[輸入] `nInterval`|以毫秒為單位的跑馬燈動畫的更新之間的時間。|  
+|[in]*fMarqueeMode*|`true` 若要開啟跑馬燈模式或`false`跑馬燈模式關閉。|  
+|[in]*n 間隔*|以毫秒為單位的跑馬燈動畫的更新之間的時間。|  
   
 ### <a name="return-value"></a>傳回值  
  這個方法一律會傳回 `true`。  
@@ -419,14 +419,14 @@ BOOL SetMarquee(
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
 ##  <a name="setpos"></a>  CProgressCtrl::SetPos  
- 設定進度列控制項的目前位置所指定`nPos`及重繪列，以反映新的位置。  
+ 設定進度列控制項的目前位置所指定*nPos*及重繪列，以反映新的位置。  
   
 ```  
 int SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  進度列控制項的新位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -453,10 +453,10 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLower`  
+ *nLower*  
  指定範圍的下限 （預設值是零）。  
   
- `nUpper`  
+ *nUpper*  
  指定範圍的上限 （預設值為 100）。  
   
 ### <a name="remarks"></a>備註  
@@ -476,7 +476,7 @@ int SetState(int iState);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iState`|要設定的進度列狀態。 使用下列其中一個值：<br /><br /> - `PBST_NORMAL` -進行中<br />- `PBST_ERROR` -錯誤<br />- `PBST_PAUSED` -暫停|  
+|[in]*iState*|要設定的進度列狀態。 使用下列其中一個值：<br /><br /> - `PBST_NORMAL` -進行中<br />- `PBST_ERROR` -錯誤<br />- `PBST_PAUSED` -暫停|  
   
 ### <a name="return-value"></a>傳回值  
  目前進度列控制項先前的狀態。  

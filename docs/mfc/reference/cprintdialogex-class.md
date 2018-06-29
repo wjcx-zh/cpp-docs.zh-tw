@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376642"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079094"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 類別
 封裝 Windows 列印屬性工作表提供的服務。  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwFlags`  
+ *dwFlags*  
  一或多個旗標可用於自訂的對話方塊中，使用位元 OR 運算子結合在一起設定。 例如， **PD_ALLPAGES**旗標設定的預設列印範圍到文件的所有頁面。 請參閱[PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844)如需有關這些旗標的 Windows SDK 中的結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊的父系或擁有者視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  A`CString`指定系統定莪驅動程式名稱。  
   
 ### <a name="remarks"></a>備註  
- 使用指標`CString`所傳回物件`GetDriverName`做為值`lpszDriverName`呼叫[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。  
+ 使用指標`CString`所傳回物件`GetDriverName`做為值*lpszDriverName*呼叫[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  呼叫此函式之後呼叫[DoModal](#domodal)或[GetDefaults](#getdefaults)擷取目前選取的印表機連接埠的名稱。  

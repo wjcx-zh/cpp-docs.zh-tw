@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371138"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078763"
 ---
 # <a name="crebar-class"></a>CReBar 類別
 提供 Rebar 控制項配置、持續性和狀態資訊的控制列。  
@@ -56,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Rebar 控制項  
  Rebar 物件的行為類似工具列物件。 Rebar 使用按一下並拖曳機制來調整其群組列的大小。 Rebar 控制項可以包含一個或多個群組列，而且每個群組列都具有移駐夾列、點陣圖、文字標籤和子視窗中的任何組合。 不過，群組列不能包含一個以上的子視窗。  
   
- **CReBar**使用[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)類別，以提供它的實作。 您可以存取透過 rebar 控制項[GetReBarCtrl](#getrebarctrl)利用控制項的自訂選項。 如需 rebar 控制項的詳細資訊，請參閱`CReBarCtrl`。 如需使用 rebar 控制項的詳細資訊，請參閱[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。  
+ `CReBar` 使用[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)類別，以提供它的實作。 您可以存取透過 rebar 控制項[GetReBarCtrl](#getrebarctrl)利用控制項的自訂選項。 如需 rebar 控制項的詳細資訊，請參閱`CReBarCtrl`。 如需使用 rebar 控制項的詳細資訊，請參閱[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。  
   
 > [!CAUTION]
->  Rebar 和 rebar 控制項物件不支援 MFC 控制列的停駐。 如果**CRebar::EnableDocking**呼叫時，您的應用程式會判斷提示。  
+>  Rebar 和 rebar 控制項物件不支援 MFC 控制列的停駐。 如果`CRebar::EnableDocking`呼叫時，您的應用程式會判斷提示。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -95,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBar`  
+ *pBar*  
  指標`CWnd`是要插入至 rebar 的子視窗的物件。 參考的物件必須具有**WS_CHILD**。  
   
- `lpszText`  
- 字串，包含 rebar 上顯示的文字指標。 **NULL**預設。 中包含的文字`lpszText`不屬於子視窗，其位於 rebar 本身。  
+ *lpszText*  
+ 字串，包含 rebar 上顯示的文字指標。 **NULL**預設。 中包含的文字*lpszText*不屬於子視窗，其位於 rebar 本身。  
   
- `pbmp`  
+ *pbmp*  
  指標`CBitmap`rebar 背景上顯示的物件。 **NULL**預設。  
   
- `dwStyle`  
+ *dwStyle*  
  A`DWORD`包含要套用至 rebar 的樣式。 請參閱**fStyle**函數中的 Win32 結構描述[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)如需完整的頻外樣式清單。  
   
  *clrFore*  
@@ -131,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  指標`CWnd`其 Windows 視窗中是 [狀態] 列的父代的物件。 通常框架視窗。  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Rebar 控制項樣式。 根據預設， **RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項中的行。 請參閱[Rebar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb774377)樣式清單的 Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  Rebar 的視窗樣式。  
   
- `nID`  
+ *nID*  
  Rebar 的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  

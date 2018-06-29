@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305767"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079808"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`vector`管理的項目序列，做為連續的區塊存放裝置。 區塊會實作為隨成長的陣列。  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  值  
  受控制序列中項目的類型。  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼不會終結其項目。  
   
-## <a name="requirements"></a>需求  
- **標頭：** \<向量 cliext/>  
-  
- **命名空間：** cliext  
+## <a name="members"></a>成員
 
 ## <a name="assign"></a> vector:: assign (STL/CLR)
 取代所有項目。  
@@ -255,7 +252,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入之項目的值。  
   
 ### <a name="remarks"></a>備註  
@@ -1337,7 +1334,7 @@ void insert(iterator where,
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入之項目的值。  
   
  其中  
@@ -1881,7 +1878,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  新的受控制序列的大小。  
   
- val  
+ Val  
  填補項目的值。  
   
 ### <a name="remarks"></a>備註  
@@ -2252,7 +2249,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
  向右  
  要插入的物件或範圍。  
   
- val  
+ Val  
  要插入之項目的值。  
   
 ### <a name="remarks"></a>備註  

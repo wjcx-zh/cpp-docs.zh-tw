@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368627"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078254"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 結構
 `COMPAREITEMSTRUCT`結構提供的識別項和應用程式提供兩個項目的已排序的主控描繪清單方塊或下拉式方塊中的資料。  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>參數  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** （指定主控描繪清單方塊） 或**ODT_COMBOBOX** （指定主控描繪下拉式方塊）。  
   
- `CtlID`  
+ *CtlID*  
  清單方塊或下拉式方塊控制項 ID。  
   
- `hwndItem`  
+ *hwndItem*  
  控制項的視窗控制代碼。  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  應用程式提供的資料進行比較的第二個項目。 將項目加入至組合或清單方塊的呼叫中傳遞此值。  
   
 ## <a name="remarks"></a>備註  
- 每當應用程式會將新的項目加入至主控描繪清單方塊或下拉式方塊以建立**CBS_SORT**或**LBS_SORT**樣式，Windows 會傳送擁有者`WM_COMPAREITEM`訊息。 `lParam`訊息參數包含的長指標`COMPAREITEMSTRUCT`結構。 收到訊息時，擁有者會比較兩個項目，並傳回值，指出哪一個項目排序之前另。  
+ 每當應用程式會將新的項目加入至主控描繪清單方塊或下拉式方塊以建立**CBS_SORT**或**LBS_SORT**樣式，Windows 會傳送擁有者 WM_COMPAREITEM 訊息。 *LParam*訊息參數包含的長指標`COMPAREITEMSTRUCT`結構。 收到訊息時，擁有者會比較兩個項目，並傳回值，指出哪一個項目排序之前另。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  

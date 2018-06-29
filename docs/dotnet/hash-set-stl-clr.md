@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba3494599c57160bf87a10e53aa2143d9e2b78c0
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 9c701bfa64e96594050ddaf46d56c12849a0ad30
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305734"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079743"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`hash_set`若要管理的項目序列的雜湊表，儲存雙向的每個資料表項目連結清單節點，以及儲存一個項目每個節點。 每個項目的值用做為索引鍵，排序順序。  
   
  在以下描述`GValue`相同`GKey`，這又是相同`Key`後者是 ref 型別，除非在這種情況下很`Key^`。  
   
-### <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Key>  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **命名空間：** cliext  
 
-## <a name="members"></a>成員  
+## <a name="declarations"></a>宣告  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
 |IHash\<索引鍵、 值 >|維護泛型容器。|  
   
-### <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註  
  物件可配置及釋放它為雙向連結清單中的個別節點所控制的序列的儲存體。 若要加快存取速度，物件也會維護有效管理整份清單為一連串個子，指標至清單 （雜湊資料表） 的變動長度陣列或值區。 它會將項目插入藉由改變節點，而非由複製到另一個節點的內容之間的連結會保持已排序的值區。 這表示您可以插入和移除項目，自由地不干擾其餘項目。  
   
  物件，排序它所控制藉由呼叫預存的委派物件類型的每個貯體[hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 當您建構 hash_set; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<=(key_type, key_type)`。  
@@ -240,6 +240,8 @@ template<typename Key>
   
  清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
   
+## <a name="members"></a>成員
+
 ## <a name="begin"></a> hash_set:: begin (STL/CLR)
 指定受控制序列的開頭。  
   
@@ -1497,7 +1499,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入索引鍵的值。  
   
  其中  

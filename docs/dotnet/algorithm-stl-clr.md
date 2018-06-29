@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 71399d254b2b47b33959695a00227e316c04a008
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a494993eea8a82307243ee1a05b92212dd4cb216
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305796"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079834"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 定義 STL/CLR 容器樣板函式執行的演算法。  
@@ -172,7 +172,7 @@ ms.locfileid: "36305796"
   
  **命名空間：** cliext  
     
-## <a name="functions"></a>函式  
+## <a name="declarations"></a>宣告  
   
 |功能|描述|  
 |--------------|-----------------|  
@@ -243,6 +243,7 @@ ms.locfileid: "36305796"
 |[unique_copy (STL/CLR)](#unique_copy)|將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。|  
 |[upper_bound (STL/CLR)](#upper_bound)|在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。|  
  
+## <a name="members"></a>成員
 
 ## <a name="adjacent_find"></a> adjacent_find (STL/CLR)
 搜尋等於或符合指定之條件的兩個相鄰項目。  

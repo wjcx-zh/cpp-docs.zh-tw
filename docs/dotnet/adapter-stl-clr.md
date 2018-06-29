@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305536"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079432"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR 標頭`<cliext/adapter>`指定兩個範本類別 (`collection_adapter`和`range_adapter`)，而該範本函式`make_collection`。  
@@ -80,7 +80,7 @@ STL/CLR 標頭`<cliext/adapter>`指定兩個範本類別 (`collection_adapter`�
   
  **命名空間：** cliext 
   
-## <a name="members"></a>成員  
+## <a name="declarations"></a>宣告  
   
 |類別|描述|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ STL/CLR 標頭`<cliext/adapter>`指定兩個範本類別 (`collection_adapter`�
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|建立範圍配接器使用的迭代器組。|   
   
+## <a name="members"></a>成員
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 包裝 STL/CLR 容器做為.NET 集合。 A`collection_adapter`是範本類別描述一個簡單的 STL/CLR 容器物件。 它會包裝基底類別程式庫 (BCL) 介面，並傳回您用於管理受控制的序列的迭代器配對。  
   
@@ -990,7 +992,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>參數  
- iter  
+ Iter  
  對已包裝的迭代器相關聯的類型。  
   
 ### <a name="members"></a>成員  

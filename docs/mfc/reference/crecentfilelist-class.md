@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377249"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079012"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 類別
 支援最近使用的 (MRU) 檔案清單控制項。  
@@ -115,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  指定要加入至清單的路徑名稱。  
   
- `lpszAppID`  
+ *lpszAppID*  
  指定應用程式的應用程式使用者模型識別碼。  
   
- `pItem`  
+ *pItem*  
  指定要加入至清單的殼層項目的指標。  
   
- `pLink`  
+ *pLink*  
  指定殼層連結加入至清單的指標。  
   
- `pidl`  
+ *pidl*  
  指定應該加入至新的文件資料夾的 shell 項目 IDLIST。  
   
 ### <a name="remarks"></a>備註  
@@ -146,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStart`  
+ *nStart*  
  在功能表上顯示的 MRU （最近使用的） 檔案清單編號的位移。  
   
- `lpszSection`  
+ *lpszSection*  
  指向名稱登錄或應用程式的一節。其中 MRU 檔案清單會讀取及/或寫入的 INI 檔案。  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  指向用於儲存在登錄或應用程式的項目名稱的格式字串。INI 檔案。  
   
- `nSize`  
+ *nSize*  
  MRU 檔案清單中的檔案數目上限。  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  最大長度，以字元為單位，可供常用的檔案清單中的檔名的功能表顯示。  
   
 ### <a name="remarks"></a>備註  
- 格式字串所指向`lpszEntryFormat`應該包含"%d"，用於取代每個最近使用之項目的索引。 例如，如果格式字串是`"file%d"`項目將會命名為`file0`， `file1`，依此類推。  
+ 格式字串所指向*lpszEntryFormat*應該包含"%d"，用於取代每個最近使用之項目的索引。 例如，如果格式字串是`"file%d"`項目將會命名為`file0`， `file1`，依此類推。  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  取得檔案的 MRU 檔案清單中，用於功能表顯示的 MRU 清單中的顯示名稱。  
@@ -177,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `strName`  
+ *strName*  
  顯示功能表清單中的最近使用的檔案名稱的檔案的完整路徑。  
   
- `nIndex`  
+ *nIndex*  
  MRU 檔案清單中的檔案以零為起始的索引。  
   
  *lpszCurDir*  
@@ -189,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  目前的目錄字串的長度。  
   
- `bAtLeastName`  
- 如果是非零值，指出基底檔案名稱應該傳回，即使它已超過最大顯示長度 (以傳遞`nMaxDispLen`參數`CRecentFileList`建構函式)。  
+ *bAtLeastName*  
+ 如果是非零值，指出基底檔案名稱應該傳回，即使它已超過最大顯示長度 (以傳遞*nMaxDispLen*參數`CRecentFileList`建構函式)。  
   
 ### <a name="return-value"></a>傳回值  
  **FALSE**如果沒有任何檔名指定的索引中最近使用的 (MRU) 檔案清單。  
   
 ### <a name="remarks"></a>備註  
- 如果檔案是在目前的目錄，函式會使關閉顯示器的目錄。 如果檔名太長，則會予以去除目錄和擴充功能。 除非如果仍然太長檔名，將顯示名稱會設定為空字串`bAtLeastName`為非零值。  
+ 如果檔案是在目前的目錄，函式會使關閉顯示器的目錄。 如果檔名太長，則會予以去除目錄和擴充功能。 除非如果仍然太長檔名，將顯示名稱會設定為空字串*bAtLeastName*為非零值。  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  擷取最近使用的檔案清單中的檔案數目。  
@@ -209,14 +209,14 @@ int GetSize() const;
  在目前的檔案數目最常使用 (的 MRU) 檔案清單。  
   
 ##  <a name="operator_at"></a>  CRecentFileList::operator]  
- 多載註標 ( `[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定`nIndex`。  
+ 多載註標 ( `[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定*nIndex*。  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  以零為起始的索引`CString`中一組`CString`s。  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -234,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要從最近使用的 (MRU) 檔案清單中移除的檔案以零為起始的索引。  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -245,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
+ *pCmdUI*  
  指標[CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用的 (MRU) 檔案清單功能表的物件。  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

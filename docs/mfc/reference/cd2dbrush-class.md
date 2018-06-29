@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952050"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078552"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 類別
 ID2D1Brush 包裝函式。  
@@ -110,7 +110,7 @@ virtual ~CD2DBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DBrush::Attach  
- 將現有的資源物件的介面  
+ 將現有的資源物件的介面。  
   
 ```  
 void Attach(ID2D1Brush* pResource);
@@ -118,7 +118,7 @@ void Attach(ID2D1Brush* pResource);
   
 ### <a name="parameters"></a>參數  
  *pResource*  
- 現有資源的介面。 不能是 NULL  
+ 現有資源的介面。 不可以是 NULL。  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  建構 CD2DBrush 物件。  
@@ -148,7 +148,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBrush::Detach  
- 中斷連結物件中的資源介面  
+ 中斷連結物件中的資源介面。  
   
 ```  
 ID2D1Brush* Detach();
@@ -175,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有像素的筆刷填滿的 alpha 值的常數乘數。 在之前一起相乘範圍 0 到 1 壓制的不透明度值  
+ 介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有像素的筆刷填滿的 alpha 值的常數乘數。 不透明度值會縮減範圍 0 到 1 之前一起相乘。  
   
 ##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  取得目前的呈現目標的轉換  
@@ -186,7 +186,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
   
 ### <a name="parameters"></a>參數  
  *transform*  
- 這會傳回包含目前的呈現目標的轉換。 這個參數未初始化便傳遞  
+ 這會傳回包含目前的呈現目標的轉換。 這個參數會以未初始化的狀態傳遞。  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  檢查資源的有效性  
@@ -231,10 +231,10 @@ void SetOpacity(FLOAT opacity);
   
 ### <a name="parameters"></a>參數  
  *不透明度*  
- 介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有像素的筆刷填滿的 alpha 值的常數乘數。 在之前一起相乘範圍 0 到 1 壓制的不透明度值  
+ 介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有像素的筆刷填滿的 alpha 值的常數乘數。 不透明度值會縮減範圍 0 到 1 之前一起相乘。  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
- 將指定的轉換套用至呈現目標，取代現有的轉換。 後續的所有繪圖作業發生在轉換後的空間  
+ 將指定的轉換套用至呈現目標，取代現有的轉換。 後續的所有繪圖作業發生在轉換後的空間。  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);

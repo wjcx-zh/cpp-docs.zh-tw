@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306030"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079527"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此範本類別描述控制不同長度排序項目序列的有限存取的物件。 您可以使用容器配接器`priority_queue`來管理其優先順序佇列為基礎容器。  
   
  在以下描述`GValue`相同`Value`後者是 ref 型別，除非在這種情況下很`Value^`。 同樣地，`GContainer`相同`Container`後者是 ref 型別，除非在這種情況下很`Container^`。  
   
-### <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  值  
  受控制序列中項目的類型。  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|重複的物件。|  
 |IPriorityQueue\<值、 容器 >|維護泛型容器配接器。|  
   
-### <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註  
  物件可配置及釋放的序列型別的基礎容器中，透過它所控制的儲存體`Container`，其中存放`Value`項目，而且視成長。 它會保留為堆積，與最高優先權項目 （最上層元素） 準備好可存取，並卸除式排序順序。 物件會限制存取推入新的項目並取出只的最高優先權項目，實作優先權佇列。  
   
  物件，排序它藉由呼叫預存的委派類型的物件所控制的序列[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)。 當您建構 priority_queue; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<(value_type, value_type)`。 您藉由呼叫成員函式中存取這個預存的物件[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`。  

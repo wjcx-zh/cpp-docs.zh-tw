@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1052c7197d8679272cc917402a8936983649acb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378352"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079234"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 類別
 實作數個可讓您使用識別項清單指標 (PIDL) 的方法。  
@@ -104,29 +104,29 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `strOutFolder`  
+ [out]*strOutFolder*  
  字串，此方法用來儲存所選資料夾的路徑。  
   
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  父視窗的指標。  
   
- [輸入] `lplszInitialFolder`  
+ [in]*lplszInitialFolder*  
  字串，包含 對話方塊顯示時，依預設會選取的資料夾。  
   
- [輸入] `lpszTitle`  
+ [in]*lpszTitle*  
  對話方塊標題。  
   
- [輸入] `ulFlags`  
+ [in]*ulFlags*  
  指定的對話方塊選項旗標。 請參閱[BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205)詳細描述。  
   
- [輸出] `piFolderImage`  
+ [out]*piFolderImage*  
  方法寫入所選資料夾的影像索引位置的整數值的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果使用者選取資料夾 對話方塊中，從非零，否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 當您呼叫這個方法時，建立應用程式，並顯示對話方塊，可讓使用者選取的資料夾。 方法會寫入至資料夾的路徑`strOutFolder`參數。  
+ 當您呼叫這個方法時，建立應用程式，並顯示對話方塊，可讓使用者選取的資料夾。 方法會寫入至資料夾的路徑*strOutFolder*參數。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何擷取的參照`CShellManager`物件使用`CWinAppEx::GetShellManager`方法以及如何使用`BrowseForFolder`方法。 此程式碼片段是部分[總管範例](../../visual-cpp-samples.md)。  
@@ -143,17 +143,17 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pidl1`  
+ [in]*pidl1*  
  第一個項目中。  
   
- [輸入] `pidl2`  
+ [in]*pidl2*  
  第二個項目中。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，否則為新項目清單的指標`NULL`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會建立新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)夠大，無法同時包含`pidl1`和`pidl2`。 然後將複製`pidl1`和`pidl2`新清單。  
+ 這個方法會建立新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)夠大，無法同時包含*pidl1*和*pidl2*。 然後將複製*pidl1*和*pidl2*新清單。  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  將複製的項目清單。  
@@ -163,7 +163,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pidlSource`  
+ [in]*pidlSource*  
  原始的項目清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -180,7 +180,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `cbSize`  
+ [in]*cbSize*  
  項目清單的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -204,7 +204,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pidl`  
+ [in]*pidl*  
  若要刪除項目清單。  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
@@ -215,7 +215,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pidl`  
+ [in]*pidl*  
  項目清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -229,7 +229,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pidl`  
+ [in]*pidl*  
  項目清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -243,7 +243,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pidl`  
+ [in]*pidl*  
  要逐一查看的項目清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -262,10 +262,10 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpidl`  
+ [in]*lpidl*  
  PIDL，將擷取其父代。  
   
- [輸出] `lpidlParent`  
+ [out]*lpidlParent*  
  方法會在其中儲存結果 PIDL 參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -284,10 +284,10 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszPath`  
+ [in]*lpszPath*  
  字串，指定項目的路徑。  
   
- [輸出] `pidl`  
+ [out]*pidl*  
  PIDL 參考。 方法會使用這個 PIDL 儲存它的傳回值的指標。  
   
 ### <a name="return-value"></a>傳回值  

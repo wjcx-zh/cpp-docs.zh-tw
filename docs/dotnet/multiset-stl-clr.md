@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4a4255e5c6229ee570b9baa8952cc784044ef95
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b3c81bc3fd5068f8269476608cc870272a0ef2e4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305809"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079795"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`multiset`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。  
@@ -135,7 +135,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
 
@@ -1115,7 +1115,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入索引鍵的值。  
   
  其中  

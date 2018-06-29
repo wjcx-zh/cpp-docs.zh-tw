@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305510"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079036"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 定義容器樣板函式執行數值處理提供的演算法。  
@@ -57,7 +57,7 @@ ms.locfileid: "36305510"
 |[inner_product (STL/CLR)](#inner_product)|計算兩個範圍的元素乘積總和並將它加到指定的初始值，或計算一般化程序的結果，其中總和及乘積二進位運算會由其他指定的二進位運算取代。|  
 |[partial_sum (STL/CLR)](#partial_sum)|計算一系列中的第一個項目，透過輸入範圍內的總和`i`th 項目，並將每個總和的結果`i`個元素的目的範圍，或計算一般化程序的結果，其中總和運算由另一個指定的二進位運算取代。|  
  
-## <a name="functions"></a>函式
+## <a name="members"></a>成員
 
 ## <a name="accumulate"></a> 累積 (STL/CLR)
 藉由計算連續的部分總和來計算指定範圍內所有元素 (包括某個初始值) 的總和，或是計算連續部分結果 (同樣是使用指定的二進位運算而非加總來計算出) 的結果。  

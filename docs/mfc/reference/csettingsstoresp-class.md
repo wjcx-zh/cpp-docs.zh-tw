@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376040"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078695"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 類別
 `CSettingsStoreSP`類別是協助程式類別可讓您建立的執行個體[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bAdmin`  
+ [in]*bAdmin*  
  布林值參數會決定是否`CSettingsStore`系統管理員模式中建立物件。  
   
- [輸入] `bReadOnly`  
+ [in]*bReadOnly*  
  布林值參數會決定是否`CSettingsStore`建立物件的唯讀存取權。  
   
 ### <a name="return-value"></a>傳回值  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  如果您建立`CSettingsStore`物件在系統管理員模式中，所有存取登錄的預設位置是 HKEY_LOCAL_MACHINE。 否則，所有存取登錄的預設位置是 HKEY_CURRENT_USER。  
   
- 如果`bAdmin`是`TRUE`，應用程式必須具備系統管理權限。 否則，它將會失敗時嘗試存取登錄。  
+ 如果*bAdmin*是`TRUE`，應用程式必須具備系統管理權限。 否則，它將會失敗時嘗試存取登錄。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`Create`方法`CSettingsStoreSP`類別。  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwUserData`  
+ [in]*dwUserData*  
  使用者定義資料的`CSettingsStoreSP`物件存放區。  
   
 ### <a name="remarks"></a>備註  
- `CSettingsStoreSP`物件會儲存從資料`dwUserData`受保護的成員變數中`m_dwUserData`。  
+ `CSettingsStoreSP`物件會儲存從資料*dwUserData*受保護的成員變數中`m_dwUserData`。  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  設定執行階段類別。 此方法[CSettingsStoreSP::Create](#create)會使用執行階段類別，來判斷要建立的物件類型。  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRTI`  
+ [in]*pRTI*  
  從衍生類別的執行階段類別資訊指標[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果登錄成功。，`FALSE`如果所識別的類別`pRTI`不衍生自`CSettingsStore`。  
+ `TRUE` 如果登錄成功。，`FALSE`如果所識別的類別*pRTI*不衍生自`CSettingsStore`。  
   
 ### <a name="remarks"></a>備註  
  您可以使用[CSettingsStoreSP 類別](../../mfc/reference/csettingsstoresp-class.md)衍生類別，從`CSettingsStore`。 使用方法`SetRuntimeClass`如果您想要建立的自訂類別，衍生自物件`CSettingsStore`。  

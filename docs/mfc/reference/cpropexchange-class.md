@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377336"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078404"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 類別
 支援 OLE 控制項的永續性實作。  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pszPropName`  
+ *pszPropName*  
  交換屬性的名稱。  
   
- `phBlob`  
+ *phBlob*  
  指標指向變數，來儲存屬性 （變數通常是您的類別的成員）。  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  屬性的預設值。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果交換成功。0，如果不成功。  
   
 ### <a name="remarks"></a>備註  
- 屬性的值是讀取或寫入至，適當情況下所參考的變數`phBlob`。 如果`hBlobDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化失敗，則會使用此值。  
+ 屬性的值是讀取或寫入至，適當情況下所參考的變數*phBlob*。 如果*hBlobDefault*指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化失敗，則會使用此值。  
   
  函式**CArchivePropExchange::ExchangeBlobProp**， **CResetPropExchange::ExchangeBlobProp**，和**CPropsetPropExchange::ExchangeBlobProp**覆寫這個純虛擬函式。  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pszPropName`  
+ *pszPropName*  
  交換屬性的名稱。  
   
- `font`  
+ *字型*  
  若要參考[CFontHolder](../../mfc/reference/cfontholder-class.md)物件，其中包含的字型屬性。  
   
- `pFontDesc`  
- 指標[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)結構，其中包含值，初始化 font 屬性的預設狀態時`pFontDispAmbient`是**NULL**。  
+ *pFontDesc*  
+ 指標[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)結構，其中包含值，初始化 font 屬性的預設狀態時*pFontDispAmbient*是**NULL**。  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  指標**IFontDisp**介面要用於初始化 font 屬性的預設狀態的字型。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果交換成功。0，如果不成功。  
   
 ### <a name="remarks"></a>備註  
- 如果正在從媒體載入至控制項的字型屬性，從媒體擷取字型的特性和`CFontHolder`所參考物件`font`初始化與它們。 如果儲存的字型屬性時，字型物件中的特性會寫入至媒體。  
+ 如果正在從媒體載入至控制項的字型屬性，從媒體擷取字型的特性和`CFontHolder`所參考物件*字型*初始化與它們。 如果儲存的字型屬性時，字型物件中的特性會寫入至媒體。  
   
  函式**CArchivePropExchange::ExchangeFontProp**， **CResetPropExchange::ExchangeFontProp**，和**CPropsetPropExchange::ExchangeFontProp**覆寫這個純虛擬函式。  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pszPropName`  
+ *pszPropName*  
  交換屬性的名稱。  
   
- `ppUnk`  
+ *ppUnk*  
  包含屬性的指標變數的指標**IUnknown** （這個變數通常是您的類別的成員） 的介面。  
   
- `iid`  
+ *iid*  
  控制項將使用的屬性上之介面的介面 ID。  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  屬性的預設值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pszPropName`  
+ *pszPropName*  
  交換屬性的名稱。  
   
- `vtProp`  
+ *vtProp*  
  符號，指定要交換屬性的型別。 可能的值為：  
   
 |符號|屬性類型|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  屬性值的指標。  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  為非零，如果交換成功。0，如果不成功。  
   
 ### <a name="remarks"></a>備註  
- 正在從媒體載入至控制項的屬性，如果從媒體擷取和儲存在所指向的物件屬性的值`pvProp`。 如果屬性所儲存之媒體中，物件的值所指向`pvProp`寫入至媒體。  
+ 正在從媒體載入至控制項的屬性，如果從媒體擷取和儲存在所指向的物件屬性的值*pvProp*。 如果屬性所儲存之媒體中，物件的值所指向*pvProp*寫入至媒體。  
   
  函式**CArchivePropExchange::ExchangeProp**， **CResetPropExchange::ExchangeProp**，和**CPropsetPropExchange::ExchangeProp**這純粹的覆寫虛擬函式。  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  正在載入的永續性資料的版本號碼會儲存所在的變數參考。  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  控制項的目前版本號碼。  
   
- `bConvert`  
+ *bConvert*  
  指出是否要將持續性資料轉換成目前的版本，或將它保留在相同的版本載入。  
   
 ### <a name="return-value"></a>傳回值  

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5b0fac11c2472bbaf0d5f4a3ede7d4f5658f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c26df378c500b8c1384f7a357b93693b215ca10
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377154"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079612"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 提供 Windows 通用滑桿控制項的功能。  
@@ -155,7 +155,7 @@ class CSliderCtrl : public CWnd
   
  您在建立時指定的增量，滑桿移動。 例如，如果您指定滑桿移應有五個範圍，滑桿只能佔用六個位置： 一個位置是在左邊的滑桿控制項和範圍中的之每個增量，一個位置。 一般來說，這些位置的每一個都以刻度標記來識別。  
   
- 使用建構函式建立滑桿和**建立**成員函式`CSliderCtrl`。 當您建立的滑桿控制項之後時，您可以使用成員函式中的`CSliderCtrl`變更許多屬性。 您可以進行的變更包括設定滑桿的最小和最大位置、繪製刻度標記、設定選取範圍，以及重新調整滑桿定位。  
+ 使用建構函式建立滑桿和`Create`成員函式`CSliderCtrl`。 當您建立的滑桿控制項之後時，您可以使用成員函式中的`CSliderCtrl`變更許多屬性。 您可以進行的變更包括設定滑桿的最小和最大位置、繪製刻度標記、設定選取範圍，以及重新調整滑桿定位。  
   
  如需有關使用`CSliderCtrl`，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。  
   
@@ -179,7 +179,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bRedraw`  
+ *bRedraw*  
  重繪旗標。 如果這個參數是**TRUE**，滑桿會重新繪製之後會清除選取範圍, 否則滑桿不重新繪製。  
   
 ##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
@@ -190,7 +190,7 @@ void ClearTics(BOOL bRedraw = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bRedraw`  
+ *bRedraw*  
  重繪旗標。 如果這個參數是**TRUE**，滑桿會重新繪製之後會清除刻度標記, 否則滑桿不重新繪製。  
   
 ##  <a name="create"></a>  CSliderCtrl::Create  
@@ -205,27 +205,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中所述，在 Windows SDK 中，加入控制項。  
   
- `rect`  
+ *rect*  
  指定滑桿控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定滑桿控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定滑桿控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果初始化成功，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CSliderCtrl`分成兩個步驟。 首先，呼叫建構函式，然後再呼叫**建立**，建立滑桿控制項，並將它附加至`CSliderCtrl`物件。  
+ 您建構`CSliderCtrl`分成兩個步驟。 首先，呼叫建構函式，然後再呼叫`Create`，建立滑桿控制項，並將它附加至`CSliderCtrl`物件。  
   
  為設定的值根據`dwStyle`，滑桿控制項可以具有垂直或水平方向。 它可以有刻度任一邊側邊，或兩者皆非。 它也可以用來指定連續值的範圍。  
   
- 若要將延伸的視窗樣式套用至滑桿控制項，呼叫[CreateEx](#createex)而不是**建立**。  
+ 若要將延伸的視窗樣式套用至滑桿控制項，呼叫[CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CSliderCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CSliderCtrl`物件。  
@@ -240,19 +240,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中所述，在 Windows SDK 中，加入控制項。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -276,7 +276,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `fLocation`  
+ *fLocation*  
  布林值，指出這兩個擷取的協同視窗控制代碼。 可為下列其中一個值：  
   
 - **TRUE**擷取左邊的滑桿好友的控制代碼。 如果滑桿控制項使用`TBS_VERT`樣式，訊息將會擷取滑桿上方朋友。  
@@ -297,7 +297,7 @@ void GetChannelRect(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lprc`  
+ *lprc*  
  指標[CRect](../../atl-mfc-shared/reference/crect-class.md)函式會傳回物件，其中包含的大小和位置的通道之周框。  
   
 ### <a name="remarks"></a>備註  
@@ -359,14 +359,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMin`  
+ *nMin*  
  整數，接收的最小位置參考。  
   
- `nMax`  
+ *nMax*  
  整數，接收的最大位置參考。  
   
 ### <a name="remarks"></a>備註  
- 此函式將值複製到所參考的整數`nMin`和`nMax`。  
+ 此函式將值複製到所參考的整數*nMin*和*nMax*。  
   
 ##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
  擷取滑桿控制項在滑桿的最大的位置。  
@@ -398,10 +398,10 @@ void GetSelection(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMin`  
+ *nMin*  
  接收目前選取範圍的開始位置的整數的參考。  
   
- `nMax`  
+ *nMax*  
  接收目前選取範圍的結束位置的整數的參考。  
   
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
@@ -425,7 +425,7 @@ void GetThumbRect(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lprc`  
+ *lprc*  
  指標`CRect`函式傳回時包含滑桿的週框物件。  
   
 ##  <a name="gettic"></a>  CSliderCtrl::GetTic  
@@ -436,11 +436,11 @@ int GetTic(int nTic) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTic`  
+ *nTic*  
  識別的刻度以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的刻度或-1，否則位置`nTic`未指定有效的索引。  
+ 指定的刻度或-1，否則位置*nTic*未指定有效的索引。  
   
 ##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
  擷取陣列包含的刻度標記的滑桿控制項位置的位址。  
@@ -460,11 +460,11 @@ int GetTicPos(int nTic) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTic`  
+ *nTic*  
  識別的刻度以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 實體位置，用戶端座標中指定的刻度或-1，否則`nTic`未指定有效的索引。  
+ 實體位置，用戶端座標中指定的刻度或-1，否則*nTic*未指定有效的索引。  
   
 ##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
  如果有的話，請擷取指派至滑桿控制項，工具提示控制項的控制代碼。  
@@ -491,10 +491,10 @@ CWnd* SetBuddy(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndBuddy`  
+ *pWndBuddy*  
  指標`CWnd`會被設定為滑桿控制項的好友的物件。  
   
- `fLocation`  
+ *fLocation*  
  值，指定要顯示協同視窗的位置。 這個值可以是下列其中一項：  
   
 - **TRUE**如果 trackbar 控制項使用，將會出現 trackbar 左邊的好友`TBS_HORZ`樣式。 如果使用 trackbar`TBS_VERT`樣式，好友上方 trackbar 控制項。  
@@ -517,7 +517,7 @@ int SetLineSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSize`  
+ *nSize*  
  滑桿控制項的新行大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -534,7 +534,7 @@ int SetPageSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSize`  
+ *nSize*  
  滑桿控制項的新的頁面大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -551,7 +551,7 @@ void SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  指定新的滑桿位置。  
   
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange  
@@ -565,13 +565,13 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMin`  
+ *nMin*  
  最小滑桿的位置。  
   
- `nMax`  
+ *nMax*  
  最大滑桿的位置。  
   
- `bRedraw`  
+ *bRedraw*  
  重繪旗標。 如果這個參數是**TRUE**，滑桿範圍設定之後會重新繪製; 否則滑桿不重新繪製。  
   
 ##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
@@ -584,10 +584,10 @@ void SetRangeMax(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMax`  
+ *nMax*  
  最大滑桿的位置。  
   
- `bRedraw`  
+ *bRedraw*  
  重繪旗標。 如果這個參數是**TRUE**，滑桿範圍設定之後會重新繪製; 否則滑桿不重新繪製。  
   
 ##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
@@ -600,10 +600,10 @@ void SetRangeMin(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMin`  
+ *nMin*  
  最小滑桿的位置。  
   
- `bRedraw`  
+ *bRedraw*  
  重繪旗標。 如果這個參數是**TRUE**，滑桿範圍設定之後會重新繪製; 否則滑桿不重新繪製。  
   
 ##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
@@ -616,10 +616,10 @@ void SetSelection(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMin`  
+ *nMin*  
  滑桿的開始位置。  
   
- `nMax`  
+ *nMax*  
  結束滑桿的位置。  
   
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `nLength`|滑桿，像素為單位的長度。|  
+|[in]*nLength*|滑桿，像素為單位的長度。|  
   
 ### <a name="remarks"></a>備註  
  此方法需要 trackbar 控制項設定為[TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147)樣式。  
@@ -658,7 +658,7 @@ BOOL SetTic(int nTic);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTic`  
+ *nTic*  
  刻度的位置。 這個參數必須指定正數值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -688,11 +688,11 @@ int SetTipSide(int nLocation);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLocation`  
+ *n 位置*  
  值，表示要顯示工具提示控制項的位置。 如需可能值的清單，請參閱的 Win32 訊息[TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240)、 Windows SDK 中所述。  
   
 ### <a name="return-value"></a>傳回值  
- 值，表示工具提示控制項的上一個位置。 傳回的值等於其中一個可能的值為`nLocation`。  
+ 值，表示工具提示控制項的上一個位置。 傳回的值等於其中一個可能的值為*n 位置*。  
   
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為**TBM_SETTIPSIDE**、 Windows SDK 中所述。 滑桿控制項使用**TBS_TOOLTIPS**樣式顯示工具提示。 如需滑桿控制項樣式的說明，請參閱[Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
@@ -705,7 +705,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndTip`  
+ *pWndTip*  
  指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件，其中包含要使用滑桿控制項的工具提示。  
   
 ### <a name="remarks"></a>備註  

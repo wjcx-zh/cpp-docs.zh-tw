@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305887"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079873"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`set`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。  
   
  在以下描述`GValue`相同`GKey`，這又是相同`Key`後者是 ref 型別，除非在這種情況下很`Key^`。  
   
-### <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
   
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
+  
+ **命名空間：** cliext  
+
 ## <a name="declarations"></a>宣告  
   
 |類型定義|描述|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
 |ITree\<索引鍵、 值 >|維護泛型容器。|  
   
-### <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註  
  物件可配置及釋放它做為個別的節點所控制的序列的儲存體。 它會將元素插入 （幾乎） 平衡樹狀目錄中，它會保留排序會改變節點，而非由複製到另一個節點的內容之間的連結。 這表示您可以插入和移除項目，自由地不干擾其餘項目。  
   
  物件，排序它藉由呼叫預存的委派類型的物件所控制的序列[set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)。 當您建構組; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<(key_type, key_type)`。 您藉由呼叫成員函式中存取這個預存的物件[set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`。  
@@ -228,11 +233,6 @@ template<typename Key>
  集合的迭代器會儲存到其相關聯的集節點，接著會儲存到其相關聯的容器的控制代碼的控制代碼。 您可以使用迭代器，只能使用其相關聯的容器物件。 只要其相關聯的集節點是某些集相關聯集合的迭代器會保持有效。 此外，有效的迭代器是 dereferencable--您可用它來存取或修改項目值，它會指定-，只要不等於`end()`。  
   
  清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** \<cliext/set >  
-  
- **命名空間：** cliext  
  
 ## <a name="members"></a>成員
 
@@ -1113,7 +1113,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入索引鍵的值。  
   
  其中  

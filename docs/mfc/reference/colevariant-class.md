@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0966aa28595d5384fd6877f30452d3cc24853f29
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378517"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079198"
 ---
 # <a name="colevariant-class"></a>COleVariant 類別
-封裝 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 資料類型。  
+封裝[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)資料型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,14 +76,14 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator &lt; &lt;， &gt;&gt;](#operator_lt_lt__gt_gt)|輸出`COleVariant`值設定為`CArchive`或`CDumpContext`和輸入`COleVariant`物件從`CArchive`。|  
   
 ## <a name="remarks"></a>備註  
- 此資料類型是 OLE automation 中使用。 具體來說， [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b)結構包含的陣列的指標**VARIANT**結構。 A **DISPPARAMS**結構用來將參數傳遞至[idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)。  
+ 此資料類型是 OLE automation 中使用。 具體來說， [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b)結構包含的陣列的指標**VARIANT**結構。 A **DISPPARAMS**結構用來將參數傳遞至[idispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d)。  
   
 > [!NOTE]
 >  這個類別衍生自**VARIANT**結構。 這表示您可以傳遞`COleVariant`中呼叫的參數**VARIANT**的資料成員**VARIANT**結構是可存取的資料成員的`COleVariant`。  
   
  兩個相關的 MFC 類別[COleCurrency](../../mfc/reference/colecurrency-class.md)和[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)封裝 variant 資料類型**貨幣**( `VT_CY`) 和**日期**( `VT_DATE`). `COleVariant`類別在 DAO 類別中廣泛使用，請參閱一般的使用情況的這個類別，這些類別時，例如[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)和[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
   
- 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)，[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)， [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b)，和[idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)，[貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)， [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b)，和[idispatch:: Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d) Windows SDK 中的項目。  
   
  如需有關`COleVariant`類別和其使用 OLE automation 中的看到文件中的"傳遞的參數中 OLE Automation"[自動化](../../mfc/automation.md)。  
   
@@ -96,7 +96,7 @@ class COleVariant : public tagVARIANT
  **標頭：** afxdisp.h  
   
 ##  <a name="attach"></a>  COleVariant::Attach  
- 呼叫此函式，將給定[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)物件與目前`COleVariant`物件。  
+ 呼叫此函式，將給定[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)物件與目前`COleVariant`物件。  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -107,9 +107,9 @@ void Attach(VARIANT& varSrc);
  現有**VARIANT**物件附加至目前`COleVariant`物件。  
   
 ### <a name="remarks"></a>備註  
- 此函式會將[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)的*varSrc*至`VT_EMPTY`。  
+ 此函式會將[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)的*varSrc*至`VT_EMPTY`。  
   
- 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)和[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)和[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的項目。  
   
 ##  <a name="colevariant"></a>  COleVariant::COleVariant  
  建構 `COleVariant` 物件。  
@@ -138,40 +138,40 @@ COleVariant(LPCITEMIDLIST pidl);
  *varSrc*  
  現有`COleVariant`或**VARIANT**物件複製到新`COleVariant`物件。  
   
- `pSrc`  
+ *pSrc*  
  指標**VARIANT**會複製到新的物件`COleVariant`物件。  
   
- `lpszSrc`  
+ *lpszSrc*  
  複製到新的以 null 結尾字串`COleVariant`物件。  
   
- `vtSrc`  
+ *vtSrc*  
  `VARTYPE`新`COleVariant`物件。  
   
- `strSrc`  
+ *strSrc*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件複製到新`COleVariant`物件。  
   
- `nSrc`, `lSrc`  
+ *nSrc*， *lSrc*  
  要複製到新的 `COleVariant` 物件中的數值。  
   
- `vtSrc`  
+ *vtSrc*  
  `VARTYPE`新`COleVariant`物件。  
   
- `curSrc`  
+ *curSrc*  
  A [COleCurrency](../../mfc/reference/colecurrency-class.md)物件複製到新`COleVariant`物件。  
   
- `fltSrc`, `dblSrc`  
+ *fltSrc*， *dblSrc*  
  要複製到新的 `COleVariant` 物件中的數值。  
   
- `timeSrc`  
+ *timeSrc*  
  A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件複製到新`COleVariant`物件。  
   
- `arrSrc`  
+ *arrSrc*  
  A [CByteArray](../../mfc/reference/cbytearray-class.md)物件複製到新`COleVariant`物件。  
   
- `lbSrc`  
+ *lbSrc*  
  A [CLongBinary](../../mfc/reference/clongbinary-class.md)物件複製到新`COleVariant`物件。  
   
- `pidl`  
+ *pidl*  
  指標[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)結構複製到新`COleVariant`物件。  
   
 ### <a name="remarks"></a>備註  
@@ -185,15 +185,15 @@ COleVariant(LPCITEMIDLIST pidl);
   
 - **COleVariant (** `lpszSrc` **)** 將字串複製到新的物件， `VT_BSTR` (UNICODE)。  
   
-- **COleVariant (** `lpszSrc` **，** `vtSrc` **)** 將字串複製到新的物件。 參數`vtSrc`必須`VT_BSTR`(UNICODE) 或`VT_BSTRT`(ANSI)。  
+- **COleVariant (** `lpszSrc` **，** `vtSrc` **)** 將字串複製到新的物件。 參數*vtSrc*必須`VT_BSTR`(UNICODE) 或`VT_BSTRT`(ANSI)。  
   
 - **COleVariant (** `strSrc` **)** 將字串複製到新的物件， **VT_BSTR** (UNICODE)。  
   
 - **COleVariant (** `nSrc` **)** 將 8 位元整數複製到新的物件， `VT_UI1`。  
   
-- **COleVariant (** `nSrc` **，** `vtSrc` **)** 將 16 位元整數 （或布林值） 複製到新的物件。 參數`vtSrc`必須`VT_I2`或`VT_BOOL`。  
+- **COleVariant (** `nSrc` **，** `vtSrc` **)** 將 16 位元整數 （或布林值） 複製到新的物件。 參數*vtSrc*必須`VT_I2`或`VT_BOOL`。  
   
-- **COleVariant (** `lSrc` **，** `vtSrc` **)** 複製 32 位元整數 (或`SCODE`值) 成新的物件。 參數`vtSrc`必須`VT_I4`， `VT_ERROR`，或`VT_BOOL`。  
+- **COleVariant (** `lSrc` **，** `vtSrc` **)** 複製 32 位元整數 (或`SCODE`值) 成新的物件。 參數*vtSrc*必須`VT_I4`， `VT_ERROR`，或`VT_BOOL`。  
   
 - **COleVariant (** `curSrc` **)** 複本**COleCurrency**值插入新的物件， `VT_CY`。  
   
@@ -217,14 +217,14 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `vartype`  
- [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)這個`COleVariant`物件。  
+ *vartype*  
+ [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)這個`COleVariant`物件。  
   
- `pSrc`  
- 指標[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)来轉換的物件。 如果此值為**NULL**，這個`COleVariant`物件當做來源使用的轉換。  
+ *pSrc*  
+ 指標[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)来轉換的物件。 如果此值為**NULL**，這個`COleVariant`物件當做來源使用的轉換。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)，和[VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)，和[VariantChangeType](http://msdn.microsoft.com/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) Windows SDK 中的項目。  
   
 ##  <a name="clear"></a>  COleVariant::Clear  
  清除**VARIANT**。  
@@ -239,19 +239,19 @@ void Clear();
  如需詳細資訊，請參閱`VARIANT`， `VARTYPE`，和`VariantClear`Windows SDK 中的項目。  
   
 ##  <a name="detach"></a>  COleVariant::Detach  
- 中斷連結基礎[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)物件與這個`COleVariant`物件。  
+ 中斷連結基礎[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)物件與這個`COleVariant`物件。  
   
 ```  
 VARIANT Detach();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會將[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)這個`COleVariant`物件`VT_EMPTY`。  
+ 此函式會將[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)這個`COleVariant`物件`VT_EMPTY`。  
   
 > [!NOTE]
->  在呼叫**卸離**，呼叫端必須負責呼叫**Vvalue**上產生**VARIANT**結構。  
+>  在呼叫`Detach`，呼叫端必須負責呼叫**Vvalue**上產生**VARIANT**結構。  
   
- 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)，和[Vvalue](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)，和[Vvalue](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) Windows SDK 中的項目。  
   
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  從現有的變數陣列擷取的位元組陣列  
@@ -261,7 +261,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bytes`  
+ *位元組*  
  若要將現有的參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。  
   
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
@@ -310,13 +310,13 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **運算子 = (** *varSrc * * *)** 複製現有**VARIANT**或`COleVariant`成為這個物件的物件。  
   
-- **運算子 = (** `pSrc` **)** 複本**VARIANT**物件來存取`pSrc`到這個物件。  
+- **運算子 = (** `pSrc` **)** 複本**VARIANT**物件來存取*pSrc*到這個物件。  
   
 - **運算子 = (** `lpszSrc` **)** 將以 null 結束的字串複製到這個物件，並設定**VARTYPE**至`VT_BSTR`。  
   
 - **運算子 = (** `strSrc` **)** 複本[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件到此物件，然後設定**VARTYPE**至`VT_BSTR`。  
   
-- **運算子 = (** `nSrc` **)** 將 8 位元或 16 位元整數值複製到這個物件。 如果`nSrc`是 8 位元值**VARTYPE**這個設`VT_UI1`。 如果`nSrc`是 16 位元值和**VARTYPE**這個是`VT_BOOL`、 保留; 否則為，它會設定為`VT_I2`。  
+- **運算子 = (** `nSrc` **)** 將 8 位元或 16 位元整數值複製到這個物件。 如果*nSrc*是 8 位元值**VARTYPE**這個設`VT_UI1`。 如果*nSrc*是 16 位元值和**VARTYPE**這個是`VT_BOOL`、 保留; 否則為，它會設定為`VT_I2`。  
   
 - **運算子 = (** `lSrc` **)** 將 32 位元整數的值複製到這個物件。 如果**VARTYPE**這個是`VT_ERROR`、 保留; 否則為，它會設定為`VT_I4`。  
   
@@ -332,7 +332,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **運算子 = (** `lbSrc` **)** 複本[CLongBinary](../../mfc/reference/clongbinary-class.md)到這個物件`COleVariant`物件。  
   
- 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)和[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)和[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK 中的項目。  
   
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator = =  
  此運算子比較兩個變數的值，並傳回非零，如果兩者相等;否則便是 0。  
@@ -370,16 +370,16 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSrc`  
+ *lpszSrc*  
  複製到新的以 null 結尾字串`COleVariant`物件。  
   
- *VtSrc*  
+ *vtSrc*  
  **VARTYPE**新`COleVariant`物件。  
   
 ### <a name="remarks"></a>備註  
- 參數`vtSrc`必須`VT_BSTR`(UNICODE) 或`VT_BSTRT`(ANSI)。 `SetString` 通常用來為 ANSI，設定字串的預設值為自[COleVariant::COleVariant](#colevariant)建構函式的字串或字串指標參數，並沒有**VARTYPE**是 UNICODE。  
+ 參數*vtSrc*必須`VT_BSTR`(UNICODE) 或`VT_BSTRT`(ANSI)。 `SetString` 通常用來為 ANSI，設定字串的預設值為自[COleVariant::COleVariant](#colevariant)建構函式的字串或字串指標參數，並沒有**VARTYPE**是 UNICODE。  
   
- DAO 資料錄集，非 UNICODE 組建中的預期為 ANSI 字串。 因此，適用於 DAO 函式使用`COleVariant`物件，如果您不想要建立的 UNICODE 資料錄集，您必須使用**COleVariant::COleVariant (** `lpszSrc` **，** `vtSrc` **)** 表單的建構函式與`vtSrc`設`VT_BSTRT`(ANSI) 或使用`SetString`與`vtSrc`設`VT_BSTRT`將 ANSI 字串。 例如，`CDaoRecordset`函式[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)和[CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`物件做為參數。 如果 DAO 資料錄集不是 UNICODE，這些物件必須是 ANSI。  
+ DAO 資料錄集，非 UNICODE 組建中的預期為 ANSI 字串。 因此，適用於 DAO 函式使用`COleVariant`物件，如果您不想要建立的 UNICODE 資料錄集，您必須使用**COleVariant::COleVariant (** `lpszSrc` **，** `vtSrc` **)** 表單的建構函式與*vtSrc*設`VT_BSTRT`(ANSI) 或使用`SetString`與*vtSrc*設`VT_BSTRT`將 ANSI 字串。 例如，`CDaoRecordset`函式[CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek)和[CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue)使用`COleVariant`物件做為參數。 如果 DAO 資料錄集不是 UNICODE，這些物件必須是 ANSI。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375904"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079664"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 類別
 可讓項目以顯示、 移動和調整大小不同的方式。  
@@ -124,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nHandle`  
+ *nHandle*  
  使用控制代碼的索引。  
   
- `lpRect`  
+ *lpRect*  
  目前大小的矩形的指標。 （矩形的大小是由它的高度和寬度所提供）。  
   
 ### <a name="remarks"></a>備註  
  此函式的預設行為可讓矩形的方向變更時，才`Track`和`TrackRubberBand`以反轉允許來呼叫。  
   
- 覆寫這個函式來控制追蹤矩形拖曳作業期間的調整。 其中一個方法是調整所指定的座標`lpRect`後再傳回。  
+ 覆寫這個函式來控制追蹤矩形拖曳作業期間的調整。 其中一個方法是調整所指定的座標*lpRect*後再傳回。  
   
  並不直接支援的特殊功能`CRectTracker`，例如貼齊至格線或保留外觀比例，可以藉由覆寫這個函式實作。  
   
@@ -150,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpSrcRect`  
+ *lpSrcRect*  
  矩形物件的座標。  
   
- `nStyle`  
+ *nStyle*  
  指定的樣式`CRectTracker`物件。 支援下列樣式：  
   
 - **CRectTracker::solidLine**實線用於矩形的框線。  
@@ -169,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched 模式涵蓋整個矩形。  
   
 ### <a name="remarks"></a>備註  
- 預設建構函式初始化`CRectTracker`物件的值填入`lpSrcRect`並初始化為系統預設值的其他大小。 如果使用任何參數，建立物件`m_rect`和`m_nStyle`資料成員都是未初始化。  
+ 預設建構函式初始化`CRectTracker`物件的值填入*lpSrcRect*並初始化為系統預設值的其他大小。 如果使用任何參數，建立物件`m_rect`和`m_nStyle`資料成員都是未初始化。  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  呼叫此函式可繪製的矩形外部線條和內部的區域。  
@@ -179,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  若要在其上繪製的裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -197,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpRect`  
+ *lpRect*  
  指標`RECT`，其中包含要繪製的矩形。  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  用於裁剪矩形視窗的指標。  
   
- `pDC`  
+ *pDC*  
  若要在其上繪製的裝置內容的指標。  
   
- `pWnd`  
+ *pWnd*  
  視窗繪圖將會發生的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -243,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpTrueRect`  
+ *lpTrueRect*  
  指標`RECT`結構將會包含裝置座標`CRectTracker`物件。  
   
 ### <a name="remarks"></a>備註  
- 矩形的維度會包含任何調整大小控點位於 外框的寬度與高度。 時傳回，`lpTrueRect`永遠是標準化的裝置座標中矩形。  
+ 矩形的維度會包含任何調整大小控點位於 外框的寬度與高度。 時傳回， *lpTrueRect*永遠是標準化的裝置座標中矩形。  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
  呼叫此函式可了解使用者是否具有捕捉調整大小控點。  
@@ -257,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  若要測試的裝置座標中的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -328,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nHandle`  
+ *nHandle*  
  使用者所選的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指向目前包含游標的視窗。  
   
- `nHitTest`  
- 先前的點擊測試的結果從`WM_SETCURSOR`訊息。  
+ *nHitTest*  
+ 先前的點擊測試，從 WM_SETCURSOR 訊息的結果。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果上一個結果是經由 tracker 矩形。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式從您的視窗處理函式內`WM_SETCURSOR`訊息 (通常`OnSetCursor`)。  
+ 呼叫此函式從 WM_SETCURSOR 訊息的處理程式視窗的函式內 (通常`OnSetCursor`)。  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  呼叫此函式可顯示使用者介面的調整大小的矩形。  
@@ -387,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  包含矩形的視窗物件。  
   
- `point`  
+ *點*  
  裝置目前的滑鼠位置相對於用戶端區域的座標。  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  如果**TRUE**，矩形可以是反向沿著 x 軸或 y 軸，否則**FALSE**。  
   
- `pWndClipTo`  
- 繪製作業會裁剪到視窗。 如果**NULL**，`pWnd`做裁剪方框。  
+ *pWndClipTo*  
+ 繪製作業會裁剪到視窗。 如果**NULL**， *pWnd*做裁剪方框。  
   
 ### <a name="return-value"></a>傳回值  
  如果按下 ESC 鍵時，則會暫止追蹤程序、 儲存在追蹤程式中的矩形不會改變，和會傳回 0。 如果認可變更時，藉由移動滑鼠，並釋放滑鼠左鍵，新的位置及/或大小會記錄在追蹤器的矩形，並為非零，則會傳回。  
@@ -407,7 +407,7 @@ BOOL Track(
   
  此函式會擷取滑鼠，直到使用者放開滑鼠左的按鈕、 按下 ESC 鍵，或按下滑鼠按鈕。 當使用者移動滑鼠游標，藉由呼叫也會更新意見反應`DrawTrackerRect`和`OnChangedRect`。  
   
- 如果`bAllowInvert`是**TRUE**，追蹤矩形可以反轉 x 軸或 y 軸上。  
+ 如果*bAllowInvert*是**TRUE**，追蹤矩形可以反轉 x 軸或 y 軸上。  
   
 ##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband  
  呼叫此函式執行拖放矩形選取範圍。  
@@ -420,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  包含矩形的視窗物件。  
   
- `point`  
+ *點*  
  裝置目前的滑鼠位置相對於用戶端區域的座標。  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  如果**為 TRUE，** 矩形可以是反向沿著 x 軸或 y 軸，否則**FALSE**。  
   
 ### <a name="return-value"></a>傳回值  
  如果滑鼠移動，而且矩形不是空的則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 它通常稱為從函式會處理應用程式內`WM_LBUTTONDOWN`訊息 (通常`OnLButtonDown`)。  
+ 它通常稱為從 WM_LBUTTONDOWN 訊息的處理應用程式的函式內 (通常`OnLButtonDown`)。  
   
  此函式會擷取滑鼠，直到使用者放開滑鼠左的按鈕、 按下 ESC 鍵，或按下滑鼠按鈕。 當使用者移動滑鼠游標，藉由呼叫也會更新意見反應`DrawTrackerRect`和`OnChangedRect`。  
   

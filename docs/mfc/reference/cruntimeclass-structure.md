@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376287"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079540"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 結構
 每個類別衍生自`CObject`聯`CRuntimeClass`可用來取得在執行階段物件或其基底類別的相關資訊的結構。  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszClassName`  
+ *lpszClassName*  
  要建立之類別的熟悉名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszClassName`  
+ *lpszClassName*  
  類別的熟悉名稱衍生自`CObject`。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CRuntimeClass`，對應到物件名稱傳入`lpszClassName`。 此函數會傳回**NULL**如果找不到任何相符的類別名稱。  
+ 指標`CRuntimeClass`，對應到物件名稱傳入*lpszClassName*。 此函數會傳回**NULL**如果找不到任何相符的類別名稱。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  關聯性取決於 「 查核 」 從鏈結中向上衍生的類別成員的類別到頂端。 此函式只會傳回**FALSE**如果沒有找到符合的基底類別。  
   
 > [!NOTE]
->  若要使用`CRuntimeClass`結構，您必須包含`IMPLEMENT_DYNAMIC`， `IMPLEMENT_DYNCREATE`，或`IMPLEMENT_SERIAL`巨集，在您要擷取的執行階段物件資訊類別的實作。  
+>  若要使用`CRuntimeClass`結構，您必須在您要擷取的執行階段物件資訊類別的實作包含您的類別、 IMPLEMENT_DYNCREATE 或 IMPLEMENT_SERIAL 巨集。  
   
  如需有關使用`CRuntimeClass`，請參閱文章[CObject 類別： 存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。  
   

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376170"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079625"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 類別
 表示屬性工作表的個別頁面，也稱為索引標籤對話方塊。  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDTemplate`  
+ *nIDTemplate*  
  使用此頁面的範本識別碼。  
   
- `nIDCaption`  
+ *nIDCaption*  
  要放置在此頁面的索引標籤名稱的識別碼。 如果為 0，名稱將會取自此頁面的對話方塊範本。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含的範本資源名稱的以 null 結尾字串。  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  要放置在屬性頁標頭的標題位置名稱的識別碼。 預設為 0。  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  要放置在屬性頁標頭的子標題位置名稱的識別碼。 預設為 0。  
   
 ### <a name="remarks"></a>備註  
@@ -189,9 +189,9 @@ void Construct(
   
 -   使用者選取了 （以索引標籤式） 此頁面。  
   
- 呼叫**建構**如果其中一個其他類別建構函式被呼叫。 `Construct`成員函式是有彈性，因為您可以將參數的陳述式保留空白，然後在您的程式碼中指定多個參數和建構在任何時間點。  
+ 呼叫`Construct`如果其中一個其他類別建構函式被呼叫。 `Construct`成員函式是有彈性，因為您可以將參數的陳述式保留空白，然後在您的程式碼中指定多個參數和建構在任何時間點。  
   
- 您必須使用`Construct`當您使用的陣列，且您必須呼叫**建構**陣列的每個成員，以便將資料成員會指派適當的值。  
+ 您必須使用`Construct`當您使用的陣列，且您必須呼叫`Construct`陣列的每個成員，以便將資料成員會指派適當的值。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDTemplate`  
+ *nIDTemplate*  
  使用此頁面的範本識別碼。  
   
- `nIDCaption`  
+ *nIDCaption*  
  要放置在此頁面的索引標籤名稱的識別碼。 如果為 0，名稱將會取自此頁面的對話方塊範本。  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  指向字串，包含此頁面範本的名稱。 不能**NULL**。  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  要放置在屬性頁標頭的標題位置名稱的識別碼。  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  要放置在屬性頁標頭的子標題位置名稱的識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>參數  
- `wParam`  
+ *wParam*  
  指定訊息相關的其他資訊。  
   
- `lParam`  
+ *lParam*  
  指定訊息相關的其他資訊  
   
 ### <a name="return-value"></a>傳回值  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bChanged`  
+ *bChanged*  
  **TRUE**表示屬性頁設定，已修改這些交易套用; 最後一次**FALSE** ，表示屬性頁設定已套用，或應予忽略。  
   
 ### <a name="remarks"></a>備註  

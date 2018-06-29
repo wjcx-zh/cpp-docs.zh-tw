@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370236"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078617"
 ---
 # <a name="cptrlist-class"></a>CPtrList 類別
 支援 void 指標的清單。  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CPtrList`類別成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到 `CObject` 指標做為函式參數或傳回值，請用 `void` 的指標予以替代。  
+ 成員函式`CPtrList`類別成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值的指標予以替代**void**。  
   
  `CObject*& CObList::GetHead() const;`  
   

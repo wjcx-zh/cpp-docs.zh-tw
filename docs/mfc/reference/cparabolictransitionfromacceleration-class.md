@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370971"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078891"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 類別
 封裝拋物線加速轉換。  
@@ -88,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblFinalValue`  
+ *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  結尾的轉換動畫變數的速度。  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  在轉換期間動畫變數的加速。  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  這是負責建立的標準轉換轉換程式庫指標。  
   
 ### <a name="return-value"></a>傳回值  

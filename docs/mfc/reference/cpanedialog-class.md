@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374936"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078539"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 類別
 `CPaneDialog`類別支援非強制回應，可停駐對話方塊。  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|處理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)訊息。 (重新定義[CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)。)|  
 |`CPaneDialog::OnLButtonDblClk`|處理[WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606)訊息。 (重新定義[CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk)。)|  
 |`CPaneDialog::OnLButtonDown`|處理[WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607)訊息。 (重新定義[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)。)|  
-|`CPaneDialog::OnUpdateCmdUI`|由架構呼叫以更新對話方塊視窗。 (覆寫[cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
+|`CPaneDialog::OnUpdateCmdUI`|由架構呼叫以更新對話方塊視窗。 (覆寫[cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
 |`CPaneDialog::OnWindowPosChanging`|處理[WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653)訊息。 (重新定義[CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)。)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|指定的範本，是一個 OLE 控制項容器 對話方塊。|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszWindowName`  
+ [in]*lpszWindowName*  
  [停駐] 對話方塊中的名稱。  
   
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  指向父視窗。  
   
- [輸入] `bHasGripper`  
+ [in]*bHasGripper*  
  `TRUE` 若要建立停駐對話方塊具有標題 （移駐夾）;否則， `FALSE`。  
   
- [輸入] `lpszTemplateName`  
+ [in]*lpszTemplateName*  
  資源的對話方塊範本的名稱。  
   
- [輸入] `nStyle`  
+ [in]*nStyle*  
  視窗樣式。  
   
- [輸入] `nID`  
+ [in]*nID*  
  控制項 id。  
   
- [輸入] `nIDTemplate`  
+ [in]*nIDTemplate*  
  對話方塊範本資源識別碼。  
   
- [輸入] `dwTabbedStyle`  
+ [in]*dwTabbedStyle*  
  使用者控制項的另一個窗格拖放此控制項窗格的標題時，所造成的索引標籤式視窗的樣式。 預設值是 `AFX_CBRS_REGULAR_TABS`。 如需詳細資訊，請參閱 < 備註 > 一節[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  其他樣式屬性。 預設值是 `AFX_DEFAULT_DOCKING_PANE_STYLE`。 如需詳細資訊，請參閱 < 備註 > 一節[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
 ### <a name="return-value"></a>傳回值  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `wParam`  
+ [in]*wParam*  
  要接收預設鍵盤焦點的控制項的控制代碼。  
   
- [輸入] `lParam`  
+ [in]*lParam*  
  指定額外的初始化資料。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `TRUE`；否則為 `FALSE`。 此外，`TRUE`將鍵盤焦點設定為所指定的控制項`wParam`參數;`FALSE`防止設定預設鍵盤焦點。  
+ 如果此方法成功為 `TRUE`；否則為 `FALSE`。 此外，`TRUE`將鍵盤焦點設定為所指定的控制項*wParam*參數;`FALSE`防止設定預設鍵盤焦點。  
   
 ### <a name="remarks"></a>備註  
  架構會使用這個方法初始化控制項和對話方塊的外觀。 架構會呼叫這個方法之前會顯示對話方塊。  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pOccDialogInfo`  
+ [in]*pOccDialogInfo*  
  對話方塊範本用來建立對話方塊物件的指標。 此參數的值之後會傳遞至[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
   
 ### <a name="return-value"></a>傳回值  

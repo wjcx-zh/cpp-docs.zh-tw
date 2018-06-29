@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369921"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078232"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 類別
 這個類別是資源關鍵 MFC 例外狀況的基底類別。  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAutoDelete`  
- 指定**TRUE**如果的記憶體`CSimpleException`已在堆積上配置物件。 這會導致`CSimpleException`時刪除物件**刪除**呼叫成員函式會刪除例外狀況。 指定**FALSE**如果`CSimpleException`物件在堆疊上，或全域物件。 在此情況下，`CSimpleException`物件沒有被刪除時**刪除**呼叫成員函式。  
+ *bAutoDelete*  
+ 指定**TRUE**如果的記憶體`CSimpleException`已在堆積上配置物件。 這會導致`CSimpleException`時刪除物件`Delete`呼叫成員函式會刪除例外狀況。 指定**FALSE**如果`CSimpleException`物件在堆疊上，或全域物件。 在此情況下，`CSimpleException`物件沒有被刪除時`Delete`呼叫成員函式。  
   
 ### <a name="remarks"></a>備註  
  您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該使用其中一個 MFC 擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 擲回預先定義的類型。  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszError`  
+ *lpszError*  
  將會收到錯誤訊息緩衝區的指標。  
   
- `nMaxError`  
+ *nMaxError*  
  緩衝區可以保存，包括的字元的數目上限**NULL**結束字元。  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  位址**UINT** ，將會收到說明內容識別碼。 如果**NULL**，將會傳回任何識別碼。  
   
 ### <a name="return-value"></a>傳回值  

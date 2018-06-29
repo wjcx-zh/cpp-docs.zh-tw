@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373047"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079970"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 類別
 用於 OLE [編輯連結] 對話方塊的特殊狀況，當您只需要更新文件中現有的連結或內嵌物件時，應該使用此項。  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDoc`  
+ *pDoc*  
  指向此文件包含可能需要更新的連結。  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  內嵌的物件會決定要更新的旗標。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別`CWnd`) 所屬之對話方塊物件。 如果是**NULL**，對話方塊中的父視窗將會設定為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  

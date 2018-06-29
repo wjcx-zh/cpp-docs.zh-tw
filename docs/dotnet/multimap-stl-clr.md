@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305874"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079716"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`multimap`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -127,7 +127,7 @@ ms.locfileid: "36305874"
   
  `GMapped` 等同於`Mapped`後者是 ref 型別，除非在這種情況下很 `Mapped^`  
   
-### <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Key,  
@@ -144,7 +144,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
   
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
 |ITree\<索引鍵、 值 >|維護泛型容器。|  
   
-### <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註  
  物件可配置及釋放它做為個別的節點所控制的序列的儲存體。 它會將元素插入 （幾乎） 平衡樹狀目錄中，它會保留排序會改變節點，而非由複製到另一個節點的內容之間的連結。 這表示您可以插入和移除項目，自由地不干擾其餘項目。  
   
  物件，排序它藉由呼叫預存的委派類型的物件所控制的序列[multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)。 當您建構 multimap; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<(key_type, key_type)`。 您藉由呼叫成員函式中存取這個預存的物件[multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`。  
@@ -1149,7 +1149,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  向右  
  若要插入的列舉型別。  
   
- val  
+ Val  
  要插入索引鍵的值。  
   
  其中  

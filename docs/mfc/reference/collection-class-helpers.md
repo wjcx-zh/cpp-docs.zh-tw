@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374834"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078152"
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
-集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於等目的的比較、 複製和序列化項目。 為您的基礎類別實作的一部分`CMap`， `CList`，和`CArray`，您必須使用符合您地圖、 清單或陣列中儲存的資料類型的版本覆寫視需要這些函式。 如需覆寫 helper 函式時，例如`SerializeElements`，請參閱文章[集合： 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意， **ConstructElements**和**DestructElements**已被取代。  
+集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於等目的的比較、 複製和序列化項目。 為您的基礎類別實作的一部分`CMap`， `CList`，和`CArray`，您必須使用符合您地圖、 清單或陣列中儲存的資料類型的版本覆寫視需要這些函式。 如需覆寫 helper 函式時，例如`SerializeElements`，請參閱文章[集合： 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意，`ConstructElements`和`DestructElements`已被取代。  
   
  Microsoft Foundation 類別庫提供 afxtempl.h 來協助您自訂您的集合類別的下列全域函式：  
   
@@ -57,24 +57,24 @@ CompareElements(
  *型別*  
  要比較的第一個項目類型。  
   
- `pElement1`  
+ *pElement1*  
  要比較的第一個元素的指標。  
   
- `ARG_TYPE`  
+ *ARG_TYPE 這個*  
  要比較的第二個項目類型。  
   
- `pElement2`  
+ *pElement2*  
  要比較的第二個項目指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果指向的物件則為非零`pElement1`所指向的物件等於`pElement2`; 否則為 0。  
+ 如果指向的物件則為非零*pElement1*所指向的物件等於*pElement2*; 否則為 0。  
   
 ### <a name="remarks"></a>備註  
  `CMap`呼叫使用`CMap`範本參數*金鑰*和`ARG_KEY`。  
   
  預設實作會傳回的比較結果的 *\*pElement1*和 *\*pElement2*。 因此，它會比較適合您的應用程式的方法中的項目，請覆寫此函數。  
   
- C + + 語言定義比較運算子 ( `==`) 的簡單型別 ( `char`， `int`， **float**等等)，但沒有定義比較運算子的類別和結構。 如果您想要使用`CompareElements`或具現化的其中一個使用該集合類別，您必須定義比較運算子，或多載`CompareElements`傳回適當的值的版本。  
+ C + + 語言定義比較運算子 ( `==`) 的簡單型別 ( **char**， **int**， **float**等等)，但沒有定義比較運算子類別和結構。 如果您想要使用`CompareElements`或具現化的其中一個使用該集合類別，您必須定義比較運算子，或多載`CompareElements`傳回適當的值的版本。  
   
 ### <a name="requirements"></a>需求  
    **Header:** afxtempl.h   
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *型別*  
  指定要複製之項目的類型的樣板參數。  
   
- `pDest`  
+ *pDest*  
  指向項目複製目的地的指標。  
   
- `pSrc`  
+ *pSrc*  
  指向要複製項目之來源的指標。  
   
- `nCount`  
+ *nCount*  
  要複製項目的數目。  
   
 ### <a name="remarks"></a>備註  
@@ -123,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dc`  
+ *dc*  
  傾印內容傾印項目。  
   
  *型別*  
  指定的項目類型的樣板參數。  
   
- `pElements`  
+ *pElements*  
  可傾印之項目的指標。  
   
- `nCount`  
+ *nCount*  
  會傾印的項目數目。  
   
 ### <a name="remarks"></a>備註  
- **CArray::Dump**， **CList::Dump**，和**CMap::Dump**函式會呼叫這個如果傾印的深度大於 0。  
+ `CArray::Dump`， `CList::Dump`，和`CMap::Dump`函式會呼叫這個如果傾印的深度大於 0。  
   
  預設實作不做任何動作。 如果您的集合的項目衍生自`CObject`，覆寫會通常逐一查看集合的項目，呼叫`Dump`中開啟每個元素。  
   
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ARG_KEY`  
+ *ARG_KEY*  
  指定用來存取的對應索引鍵的資料類型的樣板參數。  
   
- `key`  
+ *key*  
  雜湊值會計算索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>備註  
  呼叫此函式是直接以[CMap::RemoveKey](cmap-class.md#removekey)和間接[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator &#91; &#93; ](cmap-class.md#operator_at)。
   
- 預設實作會建立雜湊值的移位`key`的四個位置。 覆寫這個函式，使它傳回雜湊值適用於您的應用程式。  
+ 預設實作會建立雜湊值的移位*金鑰*的四個位置。 覆寫這個函式，使它傳回雜湊值適用於您的應用程式。  
   
 ### <a name="example"></a>範例
  ```cpp  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *型別*  
  指定的項目類型的樣板參數。  
   
- `ar`  
+ *ar*  
  若要封存往或來自保存物件。  
   
- `pElements`  
+ *pElements*  
  封存項目指標。  
   
- `nCount`  
+ *nCount*  
  封存項目數目  
   
 ### <a name="remarks"></a>備註  

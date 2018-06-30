@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d3b1a5dcfc8481727bffd8b80e0bb1b230d56ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bc7a236b8a1dfc8877bc094641d26163f735a3e
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375000"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122761"
 ---
 # <a name="cstatic-class"></a>CStatic 類別
 提供 Windows 靜態控制項的功能。  
@@ -78,7 +78,7 @@ class CStatic : public CWnd
 |[CStatic::SetIcon](#seticon)|指定要在靜態控制項中顯示的圖示。|  
   
 ## <a name="remarks"></a>備註  
- 靜態控制項顯示文字字串、 方塊、 矩形、 圖示、 游標、 點陣圖或增強型中繼檔。 它可以用來加上標籤，方塊中，或分隔其他控制項。 靜態控制項通常會接受任何輸入，並不提供任何輸出。不過，它可以通知其父代的滑鼠按鍵的情況下建立具有**SS_NOTIFY**樣式。  
+ 靜態控制項顯示文字字串、 方塊、 矩形、 圖示、 游標、 點陣圖或增強型中繼檔。 它可以用來加上標籤，方塊中，或分隔其他控制項。 靜態控制項通常會接受任何輸入，並不提供任何輸出。不過，它可以通知其父代的滑鼠按鍵的情況下建立 SS_NOTIFY 樣式。  
   
  兩個步驟建立靜態控制項。 首先，呼叫建構函式來建構`CStatic`物件，然後呼叫[建立](#create)成員函式來建立靜態控制項，並將其附加至`CStatic`物件。  
   
@@ -111,46 +111,46 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
- 指定要放置在控制項中的文字。 如果**NULL**，不會顯示任何文字。  
+ *lpszText*  
+ 指定要放置在控制項中的文字。 如果是 NULL，則不會顯示任何文字。  
   
- `dwStyle`  
+ *dwStyle*  
  指定靜態控制項的視窗樣式。 套用的任何組合[靜態控制項樣式](../../mfc/reference/styles-used-by-mfc.md#static-styles)至控制項。  
   
- `rect`  
+ *rect*  
  指定的位置和靜態控制項的大小。 它可以是`RECT`結構或`CRect`物件。  
   
- `pParentWnd`  
- 指定`CStatic`父視窗，通常`CDialog`物件。 它不得為**NULL**。  
+ *pParentWnd*  
+ 指定`CStatic`父視窗，通常`CDialog`物件。 它不得為 NULL。  
   
- `nID`  
+ *nID*  
  指定靜態控制項的控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 建構`CStatic`兩個步驟中的物件。 首先，呼叫建構函式`CStatic`，然後呼叫**建立**，建立 Windows 靜態控制項，並將它附加至`CStatic`物件。  
+ 建構`CStatic`兩個步驟中的物件。 首先，呼叫建構函式`CStatic`，然後呼叫`Create`，建立 Windows 靜態控制項，並將它附加至`CStatic`物件。  
   
  套用下列[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)靜態控制項：  
   
-- **WS_CHILD**一律  
+- WS_CHILD 一律  
   
-- **WS_VISIBLE**通常  
+- WS_VISIBLE 通常  
   
-- **WS_DISABLED**很少  
+- WS_DISABLED 很少  
   
  如果您要顯示在靜態控制項的點陣圖、 游標、 圖示或中繼檔，您必須套用下列其中一種[靜態樣式](../../mfc/reference/styles-used-by-mfc.md#static-styles):  
   
-- **SS_BITMAP**點陣圖使用此樣式。  
+- SS_BITMAP 點陣圖使用此樣式。  
   
-- **SS_ICON**使用此樣式的資料指標和圖示。  
+- 資料指標圖示的 SS_ICON 使用此樣式。  
   
-- **SS_ENHMETAFILE**對增強型中繼檔中使用此樣式。  
+- SS_ENHMETAFILE 對增強型中繼檔使用此樣式。  
   
  資料指標、 點陣圖或圖示，您也可以使用下列樣式：  
   
-- **SS_CENTERIMAGE**用於置中靜態控制項的影像。  
+- 若要在靜態控制項中的影像置 SS_CENTERIMAGE 使用。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
@@ -173,11 +173,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構。 此結構包含要繪製的項目和所需的繪圖的類型資訊。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個函式來實作繪圖的描繪**CStatic**物件 (控制項已樣式**SS_OWNERDRAW**)。  
+ 覆寫這個函式來實作繪圖的描繪`CStatic`（控制項有樣式 SS_OWNERDRAW） 的物件。  
   
 ##  <a name="getbitmap"></a>  CStatic::GetBitmap  
  取得點陣圖，使用先前設定的控制代碼[SetBitmap](#setbitmap)，也就是與相關聯`CStatic`。  
@@ -187,7 +187,7 @@ HBITMAP GetBitmap() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為目前的點陣圖的控制代碼或**NULL**如果已不設定任何的點陣圖。  
+ 目前的點陣圖或如果沒有點陣圖已設定為 NULL 的控制代碼。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
@@ -200,7 +200,7 @@ HCURSOR GetCursor();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的資料指標的控制代碼或**NULL**如果已不設定任何資料指標。  
+ 目前的資料指標或如果已不設定任何資料指標為 NULL 的控制代碼。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
@@ -213,7 +213,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的增強型中繼檔，控制代碼或**NULL**如果已設定無增強型中繼檔。  
+ 目前的增強型中繼檔或如果沒有增強型中繼檔已設定為 NULL 的控制代碼。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
@@ -226,7 +226,7 @@ HICON GetIcon() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在目前的圖示的控制代碼或**NULL**如果已設定無圖示。  
+ 目前的圖示或如果沒有圖示已被設定為 NULL 的控制代碼。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
@@ -239,11 +239,11 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hBitmap`  
+ *hBitmap*  
  要在靜態控制項中繪製點陣圖的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 靜態控制項，先前關聯之點陣圖的控制代碼或`NULL`如果沒有點陣圖是與靜態控制項相關聯。  
+ 已先前關聯的靜態控制項或為 NULL，如果沒有點陣圖是與靜態控制項相關聯的點陣圖的控制代碼。  
   
 ### <a name="remarks"></a>備註  
  將會自動在靜態控制項中繪製了點陣圖。 根據預設，會被繪製在左上角和靜態控制項能調整大小的點陣圖。  
@@ -276,20 +276,20 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hCursor`  
+ *hCursor*  
  要在靜態控制項中繪製游標的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 先前與靜態控制項相關聯的游標的控制代碼或**NULL**如果任何資料指標不是靜態控制項相關聯。  
+ 先前與相關聯的靜態控制項或為 NULL 如果任何資料指標不是靜態控制項相關聯的資料指標控制代碼。  
   
 ### <a name="remarks"></a>備註  
  資料指標將會自動繪出，靜態控制項中。 根據預設，會被繪製在左上角和靜態控制項將會調整大小資料指標的大小。  
   
  您可以使用各種視窗和靜態控制項的樣式，包括下列：  
   
-- **SS_ICON**一律使用此樣式，資料指標和圖示。  
+- SS_ICON 一律使用此樣式的資料指標和圖示。  
   
-- **SS_CENTERIMAGE** center 靜態控制項中使用。 如果影像大於靜態控制項，則會裁剪。 如果是小於靜態控制項，在影像周圍的空白空間將會填入靜態控制項的背景色彩。  
+- 若要在靜態控制項置 SS_CENTERIMAGE 使用。 如果影像大於靜態控制項，則會裁剪。 如果是小於靜態控制項，在影像周圍的空白空間將會填入靜態控制項的背景色彩。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
@@ -302,18 +302,18 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hMetaFile`  
+ *hMetaFile*  
  要在靜態控制項中繪製的增強型中繼檔的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 之前與靜態控制項相關聯的增強型中繼檔的控制代碼或**NULL**如果沒有增強型中繼檔是與靜態控制項相關聯。  
+ 先前與相關聯的靜態控制項或為 NULL 如果沒有增強型中繼檔是與靜態控制項相關聯的增強型中繼檔的控制代碼。  
   
 ### <a name="remarks"></a>備註  
  增強型中繼檔將會自動繪出，靜態控制項中。 增強型中繼檔會調整為適合靜態控制項的大小。  
   
  您可以使用各種視窗和靜態控制項的樣式，包括下列：  
   
-- **SS_ENHMETAFILE**對增強型中繼檔一律使用此樣式。  
+- SS_ENHMETAFILE 使用這個樣式一律為增強型中繼檔。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
@@ -326,20 +326,20 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hIcon`  
+ *hIcon*  
  要在靜態控制項中繪製圖示的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 先前與靜態控制項相關聯的圖示的控制代碼或**NULL**是否與靜態控制項相關聯的圖示。  
+ 先前與相關聯的靜態控制項或為 NULL 的圖示是否與靜態控制項相關聯的圖示的控制代碼。  
   
 ### <a name="remarks"></a>備註  
  會在靜態控制項中會自動繪出圖示。 根據預設，會被繪製在左上角和靜態控制項將會調整大小圖示的大小。  
   
  您可以使用各種視窗和靜態控制項的樣式，包括下列：  
   
-- **SS_ICON**一律使用此樣式，資料指標和圖示。  
+- SS_ICON 一律使用此樣式的資料指標和圖示。  
   
-- **SS_CENTERIMAGE** center 靜態控制項中使用。 如果影像大於靜態控制項，則會裁剪。 如果是小於靜態控制項，在影像周圍的空白空間將會填入靜態控制項的背景色彩。  
+- 若要在靜態控制項置 SS_CENTERIMAGE 使用。 如果影像大於靜態控制項，則會裁剪。 如果是小於靜態控制項，在影像周圍的空白空間將會填入靜態控制項的背景色彩。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  

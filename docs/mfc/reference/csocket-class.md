@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c423f1423c874dbf110cfd6951b3510fe0506af
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375599"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121873"
 ---
 # <a name="csocket-class"></a>CSocket 類別
 衍生自`CAsyncSocket`、 繼承其封裝的 Windows 通訊端應用程式開發介面，並代表比更高的抽象層級`CAsyncSocket`物件。  
@@ -58,10 +58,10 @@ class CSocket : public CAsyncSocket
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|附加**通訊端**的控制代碼`CSocket`物件。|  
+|[CSocket::Attach](#attach)|將附加的通訊端控制代碼`CSocket`物件。|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|取消目前正在進行封鎖呼叫。|  
 |[CSocket::Create](#create)|建立通訊端。|  
-|[CSocket::FromHandle](#fromhandle)|將指標傳回至`CSocket`物件，指定**通訊端**處理。|  
+|[CSocket::FromHandle](#fromhandle)|將指標傳回至`CSocket`物件，指定的通訊端控制代碼。|  
 |[CSocket::IsBlocking](#isblocking)|決定封鎖的呼叫是否正在進行中。|  
   
 ### <a name="protected-methods"></a>保護方法  
@@ -73,9 +73,9 @@ class CSocket : public CAsyncSocket
 ## <a name="remarks"></a>備註  
  `CSocket` 類別會搭配`CSocketFile`和`CArchive`管理傳送和接收資料。  
   
- A`CSocket`物件也會提供封鎖，這是同步的作業不可或缺`CArchive`。 封鎖函式，例如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(從所有繼承`CAsyncSocket`)，不會傳回`WSAEWOULDBLOCK`錯誤`CSocket`。 相反地，這些函式會等候直到作業完成為止。 此外，原始的呼叫將會終止錯誤`WSAEINTR`如果`CancelBlockingCall`封鎖了其中一個這些函式時，會呼叫。  
+ A`CSocket`物件也會提供封鎖，這是同步的作業不可或缺`CArchive`。 封鎖函式，例如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(從所有繼承`CAsyncSocket`)，不會傳回`WSAEWOULDBLOCK`錯誤`CSocket`。 相反地，這些函式會等候直到作業完成為止。 此外，原始的呼叫將會終止錯誤 WSAEINTR 如果`CancelBlockingCall`封鎖了其中一個這些函式時，會呼叫。  
   
- 若要使用`CSocket`物件，呼叫建構函式，然後呼叫`Create`建立基礎`SOCKET`處理 (型別`SOCKET`)。 預設參數`Create`建立資料流通訊端，但如果您不想要使用的通訊端`CArchive`物件，您可以指定建立資料包通訊端，相反地，或繫結至特定的連接埠，建立伺服器通訊端的參數。 連接到用戶端通訊端使用`Connect`用戶端和`Accept`伺服器端上。 然後建立`CSocketFile`物件，並將它來產生關聯`CSocket`物件存放至`CSocketFile`建構函式。 接下來，建立`CArchive`物件以傳送和接收資料 （如有需要），然後將它們與`CSocketFile`物件存放至`CArchive`建構函式。 完成通訊時，摧毀`CArchive`， `CSocketFile`，和`CSocket`物件。 `SOCKET`資料類型文件中所述[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)。  
+ 若要使用`CSocket`物件，呼叫建構函式，然後呼叫`Create`建立基礎通訊端控制代碼 （型別通訊端）。 預設參數`Create`建立資料流通訊端，但如果您不想要使用的通訊端`CArchive`物件，您可以指定建立資料包通訊端，相反地，或繫結至特定的連接埠，建立伺服器通訊端的參數。 連接到用戶端通訊端使用`Connect`用戶端和`Accept`伺服器端上。 然後建立`CSocketFile`物件，並將它來產生關聯`CSocket`物件存放至`CSocketFile`建構函式。 接下來，建立`CArchive`物件以傳送和接收資料 （如有需要），然後將它們與`CSocketFile`物件存放至`CArchive`建構函式。 完成通訊時，摧毀`CArchive`， `CSocketFile`，和`CSocket`物件。 通訊端的資料類型文件中所述[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)。  
   
  當您使用`CArchive`與`CSocketFile`和`CSocket`，您可能會遇到的情況其中`CSocket::Receive`進入迴圈 (由`PumpMessages(FD_READ)`) 正在等待要求的位元組數量。 這是因為 Windows 通訊端可以只有一個接收呼叫每個 FD_READ 告知但`CSocketFile`和`CSocket`允許每個 FD_READ 的多個接收呼叫。 如果可讀取的資料時，您會收到 FD_READ，應用程式停止回應。 如果您永遠不會收到另一個 FD_READ，就會停止應用程式透過通訊端進行通訊。  
   
@@ -108,14 +108,14 @@ BOOL Attach(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hSocket`  
+ *hSocket*  
  包含通訊端的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零。  
   
 ### <a name="remarks"></a>備註  
- **通訊端**控制代碼會儲存在物件的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)資料成員。  
+ SOCKET 控制代碼會儲存在物件的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)資料成員。  
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -134,11 +134,11 @@ void CancelBlockingCall();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會取消任何未完成的封鎖這個通訊端作業。 原始的封鎖呼叫將會儘快終止錯誤**WSAEINTR**。  
+ 此函式會取消任何未完成的封鎖這個通訊端作業。 原始的封鎖呼叫將會儘快終止錯誤 WSAEINTR。  
   
- 在封鎖的情況下**連接**作業，只要，但它可能不會釋放，直到完成連接的通訊端資源的 Windows Sockets 實作將會終止封鎖的呼叫（，然後已重設） 或逾時。這是可能會注意到只有當應用程式立即嘗試開啟新的通訊端 （如果不有可用的任何通訊端），或連接到相同的對等項目。  
+ 在封鎖的情況下`Connect`作業，只要，但它可能不會釋放，直到連接已完成 （並再重設） 的通訊端資源的 Windows Sockets 實作將會終止封鎖的呼叫或逾時。這是可能會注意到只有當應用程式立即嘗試開啟新的通訊端 （如果不有可用的任何通訊端），或連接到相同的對等項目。  
   
- 取消任何作業以外**接受**可能會讓通訊端處於不定狀態。 如果應用程式取消封鎖通訊端上的作業，唯一的應用程式可能會相依於無法在通訊端上執行的作業是呼叫**關閉**，不過其他作業可能在某些 Windows 通訊端上運作實作。 如果您的應用程式需要最大的可攜性，您必須小心，不要在取消後執行作業而定。  
+ 取消任何作業以外`Accept`可能會讓通訊端處於不定狀態。 如果應用程式取消封鎖通訊端上的作業，唯一的應用程式可能會相依於無法在通訊端上執行的作業是呼叫`Close`，不過其他作業可能在某些 Windows Sockets 實作上運作。 如果您的應用程式需要最大的可攜性，您必須小心，不要在取消後執行作業而定。  
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -153,27 +153,27 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSocketPort`  
+ *nSocketPort*  
  若要使用通訊端，或 0，如果您想要選取連接埠的 MFC 特定的連接埠。  
   
- `nSocketType`  
- **SOCK_STREAM**或**SOCK_DGRAM**。  
+ *nSocketType*  
+ SOCK_STREAM 或 SOCK_DGRAM。  
   
- `lpszSocketAddress`  
- 包含連接的通訊端，小數點的數字，例如"128.56.22.8 」 的網路位址的字串指標。 傳遞**NULL**此參數表示的字串**CSocket**應接聽所有網路介面上的用戶端活動的執行個體。  
+ *lpszSocketAddress*  
+ 包含連接的通訊端，小數點的數字，例如"128.56.22.8 」 的網路位址的字串指標。 此參數可指定將 NULL 傳遞字串`CSocket`應接聽所有網路介面上的用戶端活動的執行個體。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫`GetLastError`。  
   
 ### <a name="remarks"></a>備註  
- **建立**然後呼叫**繫結**繫結至指定的位址的通訊端。 支援下列通訊端類型：  
+ `Create` 然後呼叫`Bind`繫結至指定的位址的通訊端。 支援下列通訊端類型：  
   
-- **SOCK_STREAM**排序，提供可靠、 雙向、 連線基礎位元組資料流。 針對網際網路位址家族，會使用傳輸控制通訊協定 (TCP)。  
+- SOCK_STREAM 提供排序，可靠、 雙向、 連線基礎位元組資料流。 針對網際網路位址家族，會使用傳輸控制通訊協定 (TCP)。  
   
-- **SOCK_DGRAM**支援資料流，也就是無連接且不可靠的固定 （通常很短） 的最大長度的緩衝區。 針對網際網路位址家族，會使用使用者資料包通訊協定 (UDP)。 若要使用此選項，您不得使用的通訊端`CArchive`物件。  
+- SOCK_DGRAM 支援資料包，都是無連接且不可靠的固定 （通常很短） 的最大長度的緩衝區。 針對網際網路位址家族，會使用使用者資料包通訊協定 (UDP)。 若要使用此選項，您不得使用的通訊端`CArchive`物件。  
   
     > [!NOTE]
-    >  **接受**成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫**接受**。 請注意，如果這個通訊端物件超出範圍，連接會關閉。 請勿呼叫**建立**對這個新通訊端物件。  
+    >  `Accept`成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫`Accept`。 請注意，如果這個通訊端物件超出範圍，連接會關閉。 請勿呼叫`Create`對這個新通訊端物件。  
   
  如需有關資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)， [Windows Sockets： 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)，和[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -185,7 +185,7 @@ CSocket();
 ```  
   
 ### <a name="remarks"></a>備註  
- 建構完成之後，您必須呼叫**建立**成員函式。  
+ 建構完成之後，您必須呼叫`Create`成員函式。  
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
@@ -197,14 +197,14 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hSocket`  
+ *hSocket*  
  包含通訊端的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CSocket`物件，或**NULL**如果沒有任何`CSocket`物件附加至`hSocket`。  
+ 指標`CSocket`物件，或如果沒有則為 NULL 沒有`CSocket`物件附加至*hSocket*。  
   
 ### <a name="remarks"></a>備註  
- 當指定時**通訊端**處理，如果`CSocket`物件沒有附加至控制代碼，則成員函式會傳回**NULL**並不會建立暫存物件。  
+ 當通訊端控制代碼，如果提供`CSocket`物件沒有附加至控制代碼，此成員函式會傳回 NULL，且不會建立暫存物件。  
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   

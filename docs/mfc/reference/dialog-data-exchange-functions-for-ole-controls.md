@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375969"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121821"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控制項的對話方塊資料交換函式
 本主題列出用來交換資料屬性對話方塊、 表單檢視或控制項檢視物件中 OLE 控制項和對話方塊、 表單檢視或控制項檢視物件的資料成員間的 DDX_OC 函式。  
@@ -48,8 +48,8 @@ ms.locfileid: "33375969"
 |[DDX_OCColorRO](#ddx_occolorro)|管理傳送**OLE_COLOR** OLE 控制項的唯讀屬性之間的資料和**OLE_COLOR**資料成員。|  
 |[DDX_OCFloat](#ddx_ocfloat)|管理傳送**float** (或**雙**) 之間的 OLE 控制項屬性的資料和**float** (或**雙**) 資料成員。|  
 |[DDX_OCFloatRO](#ddx_ocfloatro)|管理傳送**float** (或**double**) 的 OLE 控制項的唯讀屬性之間的資料和**float** (或**double**) 資料成員。|  
-|[DDX_OCInt](#ddx_ocint)|管理傳送`int`(或**長**) 之間的 OLE 控制項屬性的資料和`int`(或**長**) 資料成員。|  
-|[DDX_OCIntRO](#ddx_ocintro)|管理傳送`int`(或**長**) 之間的 OLE 控制項的唯讀屬性的資料和`int`(或**長**) 資料成員。|  
+|[DDX_OCInt](#ddx_ocint)|管理傳送**int** (或**長**) 之間的 OLE 控制項屬性的資料和**int** (或**長**) 資料成員。|  
+|[DDX_OCIntRO](#ddx_ocintro)|管理傳送**int** (或**長**) 之間的 OLE 控制項的唯讀屬性的資料和**int** (或**長**) 資料成員。|  
 |[DDX_OCShort](#ddx_ocshort)|管理傳送**簡短**OLE 控制項的屬性之間的資料和**簡短**資料成員。|  
 |[DDX_OCShortRO](#ddx_ocshortro)|管理傳送**簡短**OLE 控制項的唯讀屬性之間的資料和**簡短**資料成員。|  
 |[DDX_OCText](#ddx_octext)|管理傳送**CString** OLE 控制項的屬性之間的資料和**CString**資料成員。|  
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -116,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **標頭**afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  DDX_OCColor  
- `DDX_OCColor`函式會管理的傳輸**OLE_COLOR** OLE 控制項在對話方塊中，屬性之間的資料形成檢視或控制項檢視物件和**OLE_COLOR**對話方塊中，資料成員表單檢視或控制項檢視物件。  
+ `DDX_OCColor`函式管理的對話方塊中，表單檢視中 OLE 控制項屬性間傳輸 OLE_COLOR 資料或控制項檢視物件和 OLE_COLOR 資料成員的對話方塊中，表單檢視，或控制項檢視物件。  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -146,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **標頭**afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
- `DDX_OCColorRO`函式會管理的傳輸**OLE_COLOR** OLE 控制項在對話方塊中，唯讀屬性之間的資料形成檢視或控制項檢視物件和**OLE_COLOR**資料成員對話方塊、 表單檢視或控制項檢視物件。  
+ `DDX_OCColorRO`函式管理對話方塊中，表單檢視中 OLE 控制項的唯讀屬性間傳輸 OLE_COLOR 資料或控制項檢視物件和 OLE_COLOR 資料成員的對話方塊中，表單檢視，或控制項檢視物件。  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **標頭**afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  DDX_OCInt  
- `DDX_OCInt`函式會管理的傳輸`int`(或**長**) 的 OLE 控制項在對話方塊中，屬性之間的資料形成檢視或控制項檢視物件和`int`(或**長時間**) 對話方塊、 表單檢視或控制項檢視物件的資料成員。  
+ `DDX_OCInt`函式會管理的傳輸**int** (或**長**) 的 OLE 控制項在對話方塊中，屬性之間的資料形成檢視或控制項檢視物件和**int**(或**長**) 對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -284,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **標頭**afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
- `DDX_OCIntRO`函式會管理的傳輸`int`(或**長**) 之間的 OLE 控制項在對話方塊中，唯讀屬性的資料形成檢視或控制項檢視物件和`int`(或**長**) 對話方塊、 表單檢視或控制項檢視物件的資料成員。  
+ `DDX_OCIntRO`函式會管理的傳輸**int** (或**長**) 之間的 OLE 控制項在對話方塊中，唯讀屬性的資料形成檢視或控制項檢視物件和**int**(或**長**) 對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標**CDataExchange**物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
   
- `dispid`  
+ *dispid*  
  控制項屬性的分派識別碼。  
   
  *值*  

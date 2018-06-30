@@ -1,7 +1,7 @@
 ---
 title: CMFCOutlookBar 類別 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -48,19 +48,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935728856a00a27afa1f386f493832ddb955538b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2be91dee4b05a7886ab94358a6490ed2091acf3e
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040996"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123080"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 類別
 具有 Microsoft Outlook 2000 或 Outlook 2003 [ **巡覽窗格** ] 視覺外觀的索引標籤式窗格。 `CMFCOutlookBar`物件包含[CMFCOutlookBarTabCtrl 類別](../../mfc/reference/cmfcoutlookbartabctrl-class.md)物件及一系列的索引標籤。 索引標籤可以是[CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)物件或`CWnd`-衍生物件。 對於使用者，Outlook 功能區會顯示為一系列按鈕與一個顯示區域。 當使用者按一下按鈕時，對應的控制項或按鈕窗格隨即顯示。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class CMFCOutlookBar : public CBaseTabbedPane  
 ```  
   
@@ -104,56 +104,59 @@ class CMFCOutlookBar : public CBaseTabbedPane
   
 1.  內嵌 `CMFCOutlookBar` 物件到主框架視窗類別。  
   
- ```  
+    ```cpp
     class CMainFrame : public CMDIFrameWnd  
- { ...  
-    CMFCOutlookBar m_wndOutlookBar;  
-    CMFCOutlookBarPane m_wndOutlookPane;  
- ... };  
- ```  
-2.  當處理主框架 WM_CREATE 訊息、 呼叫[CMFCOutlookBar::Create](#create)方法來建立索引標籤控制項列 Outlook。  
-  
- ```  
-    m_wndOutlookBar.Create (_T("Shortcuts"),
-    this,
-    CRect (0,
-    0,
-    100,
-    100),
-    ID_VIEW_OUTLOOKBAR,
-    WS_CHILD | WS_VISIBLE | CBRS_LEFT);
+    { 
+        // ...  
+        CMFCOutlookBar m_wndOutlookBar;  
+        CMFCOutlookBarPane m_wndOutlookPane;  
+        // ...
+    };  
+    ```
 
- ```  
+2.  處理時`WM_CREATE`主框架呼叫的訊息[CMFCOutlookBar::Create](#create)方法來建立索引標籤控制項列 Outlook。  
+  
+    ```cpp
+    m_wndOutlookBar.Create (_T("Shortcuts"),
+        this,
+        CRect (0, 0, 100, 100),
+        ID_VIEW_OUTLOOKBAR,
+        WS_CHILD | WS_VISIBLE | CBRS_LEFT);
+    ```
+
 3.  取得基礎指標`CMFCOutlookBarTabCtrl`使用[CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow)。  
   
- ```  
+    ```cpp
     CMFCOutlookBarTabCtrl* pOutlookBar = (CMFCOutlookBarTabCtrl*) m_wndOutlookBar.GetUnderlyingWindow ();
-
- ```  
+    ```
+    
 4.  建立[CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)包含按鈕的每個索引標籤的物件。  
   
- ```  
-    m_wndOutlookPane.Create (&m_wndOutlookBar,
-    AFX_DEFAULT_TOOLBAR_STYLE,
-    ID_OUTLOOK_PANE_GENERAL,
-    AFX_CBRS_FLOAT | AFX_CBRS_RESIZE);
-*// make the Outlook pane detachable (enable docking)  
-    m_wndOutlookPane.EnableDocking (CBRS_ALIGN_ANY);
-*// add buttons  
-    m_wndOutlookPane.AddButton (theApp.LoadIcon (IDR_MAINFRAME), "About",
-    ID_APP_ABOUT);
+    ```cpp
+    m_wndOutlookPane.Create(&m_wndOutlookBar,
+        AFX_DEFAULT_TOOLBAR_STYLE,
+        ID_OUTLOOK_PANE_GENERAL,
+        AFX_CBRS_FLOAT | AFX_CBRS_RESIZE);  
 
-    m_wndOutlookPane.AddButton (theApp.LoadIcon (IDR_CUSTOM_OPEN_ICON), "Open",
-    ID_FILE_OPEN);
+    // make the Outlook pane detachable (enable docking)  
+    m_wndOutlookPane.EnableDocking(CBRS_ALIGN_ANY);
 
- ```  
-5.  呼叫[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)新增每個新的索引標籤。設定*bDetachable*參數`FALSE`進行非中斷連結的頁面。 或者，使用[CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)新增中斷連結的頁面。  
+    // add buttons  
+    m_wndOutlookPane.AddButton(theApp.LoadIcon (IDR_MAINFRAME),
+        "About",
+        ID_APP_ABOUT);
+
+    m_wndOutlookPane.AddButton (theApp.LoadIcon (IDR_CUSTOM_OPEN_ICON),
+        "Open",
+        ID_FILE_OPEN);
+    ```
+
+5.  呼叫[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)新增每個新的索引標籤。設定`bDetachable`參數`FALSE`進行非中斷連結的頁面。 或者，使用[CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)新增中斷連結的頁面。  
   
- ```  
-    pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1,
-    TRUE);
+    ```cpp
+    pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1, TRUE);
+    ```  
 
- ```  
 6.  新增`CWnd`-衍生控制項 (例如， [CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)) 索引標籤上，建立控制項，然後呼叫[CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)將它加入至 outlook 功能區。  
   
 > [!NOTE]
@@ -189,7 +192,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
  指定是否可以終結空的索引標籤式的窗格。  
   
-```  
+```cpp  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
@@ -202,7 +205,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ##  <a name="canacceptpane"></a>  CMFCOutlookBar::CanAcceptPane  
  判斷另一個窗格是否可以固定到 Outlook 功能區窗格。  
   
-```  
+```cpp  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
 ```  
   
@@ -223,7 +226,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ##  <a name="cansetcaptiontexttotabname"></a>  CMFCOutlookBar::CanSetCaptionTextToTabName  
  決定索引標籤式窗格的標題是否顯示為 [作用中] 索引標籤相同的文字。  
   
-```  
+```cpp  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
@@ -238,7 +241,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 ##  <a name="create"></a>  CMFCOutlookBar::Create  
  建立 Outlook 列控制項。  
   
-```  
+```cpp  
 virtual BOOL Create(
     LPCTSTR lpszCaption,  
     CWnd* pParentWnd,  
@@ -288,7 +291,7 @@ virtual BOOL Create(
 ##  <a name="createcustompage"></a>  CMFCOutlookBar::CreateCustomPage  
  建立自訂的 Outlook 列索引標籤。  
   
-```  
+```cpp  
 CMFCOutlookBarPane* CreateCustomPage(
     LPCTSTR lpszPageName,  
     BOOL bActivatePage=TRUE,  
@@ -338,7 +341,7 @@ DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
 ##  <a name="floattab"></a>  CMFCOutlookBar::FloatTab  
  讓窗格浮動。  
   
-```  
+```cpp  
 virtual BOOL FloatTab(
     CWnd* pBar,  
     int nTabID,  
@@ -368,7 +371,7 @@ virtual BOOL FloatTab(
 ##  <a name="getbuttonsfont"></a>  CMFCOutlookBar::GetButtonsFont  
  傳回文字的字型頁面上的 outlook 功能區按鈕索引標籤。  
   
-```  
+```cpp  
 CFont* GetButtonsFont() const;  
 ```  
   
@@ -381,7 +384,7 @@ CFont* GetButtonsFont() const;
 ##  <a name="gettabarea"></a>  CMFCOutlookBar::GetTabArea  
  決定的大小和 outlook 功能區上的索引標籤區域的位置。  
   
-```  
+```cpp  
 virtual void GetTabArea(
     CRect& rectTabAreaTop,  
     CRect& rectTabAreaBottom) const;  
@@ -404,7 +407,7 @@ virtual void GetTabArea(
 ##  <a name="ismode2003"></a>  CMFCOutlookBar::IsMode2003  
  指定 outlook 功能區的行為與內容的 Microsoft Office Outlook 2003 相似。  
   
-```  
+```cpp  
 BOOL IsMode2003() const;  
 ```  
   
@@ -417,7 +420,7 @@ BOOL IsMode2003() const;
 ##  <a name="onafteranimation"></a>  CMFCOutlookBar::OnAfterAnimation  
  由呼叫[CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)之後已設定使用中的索引標籤使用的動畫。  
   
-```  
+```cpp  
 virtual void OnAfterAnimation(int nPage);
 ```  
   
@@ -431,7 +434,7 @@ virtual void OnAfterAnimation(int nPage);
 ##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation  
  由呼叫[CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)前一個索引標籤頁會設定為使用中的索引標籤使用的動畫。  
   
-```  
+```cpp  
 virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
@@ -447,7 +450,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ##  <a name="onscroll"></a>  CMFCOutlookBar::OnScroll  
  如果向上或向下捲動 outlook 功能區，由架構呼叫。  
   
-```  
+```cpp  
 virtual void OnScroll(BOOL bDown);
 ```  
   
@@ -460,7 +463,7 @@ virtual void OnScroll(BOOL bDown);
 ##  <a name="removecustompage"></a>  CMFCOutlookBar::RemoveCustomPage  
  移除自訂 Outlook 列索引標籤頁。  
   
-```  
+```cpp  
 BOOL RemoveCustomPage(
     UINT uiPage,  
     CMFCOutlookBarTabCtrl* pTargetWnd);
@@ -486,7 +489,7 @@ BOOL RemoveCustomPage(
 ##  <a name="setbuttonsfont"></a>  CMFCOutlookBar::SetButtonsFont  
  設定 outlook 功能區按鈕的文字字型。  
   
-```  
+```cpp  
 void SetButtonsFont(
     CFont* pFont,  
     BOOL bRedraw=TRUE);
@@ -505,7 +508,7 @@ void SetButtonsFont(
 ##  <a name="setmode2003"></a>  CMFCOutlookBar::SetMode2003  
  指定是否 outlook 功能區的行為會模擬，Outlook 2003。  
   
-```  
+```cpp  
 void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   

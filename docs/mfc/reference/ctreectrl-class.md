@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44e7afd1362064faa19d013da1ee61d32d03227a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16eaca3857687e7039391cf15472a5a68b25a5c6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379030"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123158"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 提供 Windows 通用樹狀檢閱控制項的功能。  
@@ -317,27 +317,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定樹狀檢視控制項的樣式。 套用所述的視窗樣式[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)，和任何的組合[樹狀檢視控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中所述。  
   
- `rect`  
+ *rect*  
  指定樹狀檢視控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
- `pParentWnd`  
- 指定樹狀檢視控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
+ *pParentWnd*  
+ 指定樹狀檢視控制項的父視窗，通常`CDialog`。 它不得為 NULL。  
   
- `nID`  
+ *nID*  
  指定樹狀檢視控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果初始化成功，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要建立做為一些其他視窗的子視窗的樹狀結構控制項中，使用**建立**成員函式。 如果您建立樹狀目錄控制項使用**建立**，您必須將它傳遞**WS_VISIBLE**，除了其他樹狀目錄檢視的樣式。  
+ 如果您想要建立做為一些其他視窗的子視窗的樹狀結構控制項中，使用`Create`成員函式。 如果您建立樹狀目錄控制項使用`Create`，您必須將它傳遞 WS_VISIBLE，除了其他樹狀目錄檢視的樣式。  
   
- 您建構`CTreeCtrl`分成兩個步驟。 第一次呼叫建構函式，然後呼叫**建立**，建立樹狀檢視控制項，並將它附加至`CTreeCtrl`物件。  
+ 您建構`CTreeCtrl`分成兩個步驟。 第一次呼叫建構函式，然後呼叫`Create`，建立樹狀檢視控制項，並將它附加至`CTreeCtrl`物件。  
   
- 若要建立具有延伸的視窗樣式的樹狀目錄控制項，呼叫[CreateEx](#createex)而不是**建立**。  
+ 若要建立具有延伸的視窗樣式的樹狀目錄控制項，呼叫[CreateEx](#createex)而不是`Create`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]  
@@ -355,19 +355,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定樹狀檢視控制項的樣式。 套用所述的視窗樣式[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)，和任何的組合[樹狀檢視控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中所述。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -384,11 +384,11 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀項目拖曳出來，放到控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 指標影像清單拖曳點陣圖已加入其中，如果登錄成功。否則**NULL**。  
+ 指標影像清單拖曳點陣圖已加入其中，如果登錄成功。否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  應用程式中使用影像清單的函式顯示的影像，當被拖曳的項目。  
@@ -425,8 +425,8 @@ BOOL DeleteItem(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
- 要刪除的樹狀結構項目控制代碼。 如果*hitem*具有**TVI_ROOT**值，會刪除所有的項目從樹狀檢視控制項。  
+ *hItem*  
+ 要刪除的樹狀結構項目控制代碼。 如果*hitem* TVI_ROOT 值中，從樹狀檢視控制項，會刪除所有的項目。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -442,11 +442,11 @@ CEdit* EditLabel(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀項目可供編輯的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功的話，指標`CEdit`物件，用來編輯項目文字; 否則為**NULL**。  
+ 如果成功的話，指標`CEdit`用來編輯項目文字的物件; 否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  以單行編輯控制項包含文字取代項目的文字來完成編輯。  
@@ -465,10 +465,10 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `fCancelWithoutSave`|`true` 捨棄變更的樹狀檢視項目之前完成的編輯作業，或`false`之前完成操作，將變更儲存到樹狀結構檢視項目。|  
+|[in]*fCancelWithoutSave*|捨棄之前完成的編輯作業或為 FALSE，則之前完成操作，將變更儲存至樹狀檢視項目樹狀檢視項目的變更，則為 TRUE。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[TVM_ENDEDITLABELNOW](http://msdn.microsoft.com/library/windows/desktop/bb773564) Windows SDK 中所述的訊息。  
@@ -481,11 +481,11 @@ BOOL EnsureVisible(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  控制代碼進行可見的樹狀結構項目。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**系統若捲動以確保指定的項目顯示的樹狀檢視控制項中的項目。 否則，傳回值是**FALSE**。  
+ 為 true，則會傳回系統若捲動以確保指定的項目顯示的樹狀檢視控制項中的項目。 否則，傳回的值為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  如有必要，函式展開父項目，或捲動樹狀檢視控制項，讓項目為可見。  
@@ -503,19 +503,19 @@ BOOL Expand(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  要展開的樹狀目錄項目的控制代碼。  
   
- `nCode`  
+ *則 nCode*  
  旗標，指出要採取的動作類型。 這個旗標可以有下列值之一：  
   
-- `TVE_COLLAPSE` 摺疊清單。  
+- TVE_COLLAPSE 摺疊清單。  
   
-- `TVE_COLLAPSERESET` 摺疊清單，並移除子項目。 **TVIS_EXPANDEDONCE**狀態旗標會重設。 這個旗標必須搭配`TVE_COLLAPSE`旗標。  
+- TVE_COLLAPSERESET 摺疊清單，並移除子項目。 TVIS_EXPANDEDONCE 狀態旗標會重設。 這個旗標必須搭配 TVE_COLLAPSE 旗標。  
   
-- `TVE_EXPAND` 會展開清單。  
+- TVE_EXPAND 會展開清單。  
   
-- `TVE_TOGGLE` 摺疊清單，如果它目前已擴充，或將它擴充，如果目前已摺疊。  
+- 如果它目前已擴充，或將它擴充，如果目前已摺疊，TVE_TOGGLE 摺疊清單。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -531,7 +531,7 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A **COLORREF**值，表示控制項的目前視窗背景色彩。 如果此值為-1，控制項是否使用系統的視窗色彩。 在此情況下，您可以使用`::GetSysColor(COLOR_WINDOW)`取得控制項使用的目前系統色彩。  
+ COLORREF 值，表示控制項目前的視窗背景色彩。 如果此值為-1，控制項是否使用系統的視窗色彩。 在此情況下，您可以使用`::GetSysColor(COLOR_WINDOW)`取得控制項使用的目前系統色彩。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::SetTextColor](#settextcolor)。  
@@ -544,8 +544,8 @@ BOOL GetCheck(HTREEITEM hItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
- **HTREEITEM**要接收的狀態資訊。  
+ *hItem*  
+ 這是要接收的狀態資訊相關 HTREEITEM。  
   
 ### <a name="return-value"></a>傳回值  
  如果選取的樹狀目錄控制項目; 非零，否則便是 0。  
@@ -554,18 +554,18 @@ BOOL GetCheck(HTREEITEM hItem) const;
   請參閱範例的[CTreeCtrl::SetCheck](#setcheck)。  
   
 ##  <a name="getchilditem"></a>  CTreeCtrl::GetChildItem  
- 呼叫此函式可擷取的樹狀目錄檢視項目，是所指定的項目子系`hItem`。  
+ 呼叫此函式可擷取的樹狀目錄檢視項目，是所指定的項目子系*hItem*。  
   
 ```  
 HTREEITEM GetChildItem(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功; 的子系項目控點否則**NULL**。  
+ 如果成功; 的子系項目控點否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]  
@@ -591,7 +591,7 @@ HTREEITEM GetDropHilightItem() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 成功; 如果卸除的項目控點否則**NULL**。  
+ 成功; 如果卸除的項目控點否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
@@ -604,7 +604,7 @@ CEdit* GetEditControl() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 用來成功; 如果編輯項目文字編輯控制項的指標否則**NULL**。  
+ 用來成功; 如果編輯項目文字編輯控制項的指標否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#10](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]  
@@ -630,7 +630,7 @@ HTREEITEM GetFirstVisibleItem() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 控制代碼的第一個可見的項目。否則**NULL**。  
+ 控制代碼的第一個可見的項目。否則為 NULL。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::SetCheck](#setcheck)。  
@@ -643,15 +643,15 @@ CImageList* GetImageList(UINT nImageList) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImageList`  
+ *nImageList*  
  要擷取影像清單的類型。 影像清單可以是下列值之一：  
   
-- `TVSIL_NORMAL` 擷取標準映像清單，其中包含樹狀檢視項目選取及未選取映像。  
+- TVSIL_NORMAL 擷取一般影像清單中，包含樹狀檢視項目選取及未選取映像。  
   
-- `TVSIL_STATE` 擷取狀態的影像清單，其中包含使用者定義的狀態中的樹狀結構檢視項目的映像。  
+- TVSIL_STATE 擷取狀態的影像清單，其中包含使用者定義的狀態中的樹狀結構檢視項目的映像。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功; 控制項的影像清單的指標否則**NULL**。  
+ 如果成功; 控制項的影像清單的指標否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  在樹狀檢視控制項中的每個項目可以有一組與其相關聯的點陣圖影像。 當選取的項目，並不選取項目顯示的其他時，會顯示一個影像。 例如，項目可能會顯示開啟的資料夾，選取時，關閉的資料夾時未選取。  
@@ -682,7 +682,7 @@ COLORREF GetInsertMarkColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A **COLORREF**值，包含目前的插入標記色彩。  
+ COLORREF 值，其中包含目前的插入標記色彩。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#13](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]  
@@ -695,7 +695,7 @@ BOOL GetItem(TVITEM* pItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指標[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)結構，Windows SDK 中所述。  
   
 ### <a name="return-value"></a>傳回值  
@@ -712,11 +712,11 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  要擷取其資料的項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 與所指定的項目相關聯的 32 位元應用程式專屬值`hItem`。  
+ 與所指定的項目相關聯的 32 位元應用程式專屬值*hItem*。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#14](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的項目展開的狀態時所顯示之影像的索引。  
@@ -764,13 +764,13 @@ BOOL GetItemImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  要擷取的映像的項目控制代碼。  
   
- `nImage`  
+ *nImage*  
  整數，接收樹狀檢視控制項影像清單內的項目影像的索引。  
   
- `nSelectedImage`  
+ *nSelectedImage*  
  整數，會收到的項目樹狀檢視控制項影像清單中選取映像的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -798,17 +798,17 @@ BOOL GetItemPartRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
-|[輸入] `nPart`|組件識別碼。 必須設定為`TVGIPR_BUTTON`。|  
-|[輸出] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構接收部分所指定的矩形座標`hItem`和`nPart`。|  
+|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
+|[in]*nPart*|組件識別碼。 必須設定為 TVGIPR_BUTTON。|  
+|[out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構接收部分所指定的矩形座標*hItem*和*nPart*。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 每個樹狀目錄控制項目限於圖形矩形。 只要按一下該矩形中的點時，項目即為*叫用*。 如此矩形中的點按一下時，所識別的項目，這個方法會傳回最大矩形`hItem`參數叫用。  
+ 每個樹狀目錄控制項目限於圖形矩形。 只要按一下該矩形中的點時，項目即為*叫用*。 如此矩形中的點按一下時，所識別的項目，這個方法會傳回最大矩形*hItem*參數叫用。  
   
- 這個方法會傳送`TVM_GETITEMPARTRECT`Windows SDK 中所述的訊息。 如需詳細資訊，請參閱[TreeView_GetItemPartRect](http://msdn.microsoft.com/library/windows/desktop/bb773847)巨集。  
+ 這個方法會傳送 TVM_GETITEMPARTRECT 訊息，Windows SDK 中所述。 如需詳細資訊，請參閱[TreeView_GetItemPartRect](http://msdn.microsoft.com/library/windows/desktop/bb773847)巨集。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_treeCtrl`，也就是用來存取目前的樹狀檢視控制項。 程式碼範例也會定義的不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例中使用這些變數。  
@@ -821,7 +821,7 @@ BOOL GetItemPartRect(
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
 ##  <a name="getitemrect"></a>  CTreeCtrl::GetItemRect  
- 呼叫此函式可擷取週框矩形`hItem`並判斷它是否可見。  
+ 呼叫此函式可擷取週框矩形*hItem*並判斷它是否可見。  
   
 ```  
 BOOL GetItemRect(
@@ -831,23 +831,23 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀檢視控制項項目控制代碼。  
   
- `lpRect`  
+ *lpRect*  
  指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收之周框的結構。 座標是相對於樹狀檢閱控制項的左上角。  
   
  *bTextOnly*  
  如果這個參數不是零，週框矩形會包含項目的文字。 否則它會在樹狀檢視控制項中包含項目都會佔用的整行。  
   
 ### <a name="return-value"></a>傳回值  
- 如果週框矩形中包含的項目可見，則為非零`lpRect`。 否則為 0 與`lpRect`未初始化。  
+ 如果週框矩形中包含的項目可見，則為非零*lpRect*。 否則為 0 與*lpRect*未初始化。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#17](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]  
   
 ##  <a name="getitemstate"></a>  CTreeCtrl::GetItemState  
- 傳回所指定項目的狀態`hItem`。  
+ 傳回所指定項目的狀態*hItem*。  
   
 ```  
 UINT GetItemState(
@@ -856,14 +856,14 @@ UINT GetItemState(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  要擷取其狀態的項目控制代碼。  
   
- `nStateMask`  
- 遮罩，指示要擷取的一或多個狀態。 如需有關可能的值為`nStateMask`的討論內容，請參閱 <<c2>  **狀態**和**stateMask**成員[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) Windows SDK 中的結構。  
+ *nStateMask*  
+ 遮罩，指示要擷取的一或多個狀態。 如需有關可能的值為*nStateMask*的討論內容，請參閱 <<c4> `state` 和`stateMask`成員[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) Windows SDK 中的結構。  
   
 ### <a name="return-value"></a>傳回值  
- A **UINT**保存 nStateMask 所指定之值的位元 OR。 如需可能的值資訊，請參閱[CTreeCtrl::GetItem](#getitem)。 若要尋找特定狀態的值，執行狀態值和傳回值的位元 AND 運算，如下列範例所示。  
+ UINT 保存 nStateMask 所指定之值的位元 OR。 如需可能的值資訊，請參閱[CTreeCtrl::GetItem](#getitem)。 若要尋找特定狀態的值，執行狀態值和傳回值的位元 AND 運算，如下列範例所示。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#18](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
   
 ### <a name="return-value"></a>傳回值  
  項目的擴充的狀態。 如需詳細資訊，請參閱`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。  
@@ -888,14 +888,14 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
  這個方法會傳送[TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) Windows SDK 中所述的訊息。 訊息傳回[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構描述樹狀檢視控制項項目，而且這個方法會擷取`uStateEx`從該結構的成員。  
   
 ##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText  
- 傳回所指定項目的文字`hItem`。  
+ 傳回所指定項目的文字*hItem*。  
   
 ```  
 CString GetItemText(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  要擷取其文字的項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -912,10 +912,10 @@ HTREEITEM GetLastVisibleItem() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 最後一個節點未展開項目方法是否成功的; 控制代碼否則， `NULL`。  
+ 最後一個節點未展開項目方法是否成功的; 控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[TVM_GETNEXTITEM](http://msdn.microsoft.com/library/windows/desktop/bb773622) Windows SDK 中所述的訊息。 如需詳細資訊，請參閱`TVGN_LASTVISIBLE`加上旗標`flag`該訊息的參數。  
+ 這個方法會傳送[TVM_GETNEXTITEM](http://msdn.microsoft.com/library/windows/desktop/bb773622) Windows SDK 中所述的訊息。 如需詳細資訊，請參閱中的 TVGN_LASTVISIBLE 旗標*旗標*該訊息的參數。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_treeCtrl`，也就是用來存取目前的樹狀檢視控制項。 程式碼範例也會定義的不帶正負號的整數和數個 HTREEITEM 變數。 一或多個這些變數用於下一個範例。  
@@ -941,7 +941,7 @@ COLORREF GetLineColor() const;
  [!code-cpp[NVC_MFC_CTreeCtrl#19](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]  
   
 ##  <a name="getnextitem"></a>  CTreeCtrl::GetNextItem  
- 呼叫此函式可擷取的樹狀目錄檢視項目，具有指定的關聯性，並由`nCode`參數至`hItem`。  
+ 呼叫此函式可擷取的樹狀目錄檢視項目，具有指定的關聯性，並由*則 nCode*參數至*hItem*。  
   
 ```  
 HTREEITEM GetNextItem(
@@ -950,39 +950,39 @@ HTREEITEM GetNextItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
- `nCode`  
- 旗標，表示要關聯型別`hItem`。 這個旗標可以是下列值之一：  
+ *則 nCode*  
+ 旗標，表示要關聯型別*hItem*。 這個旗標可以是下列值之一：  
   
-- `TVGN_CARET` 擷取目前選取的項目。  
+- TVGN_CARET 擷取目前選取的項目。  
   
-- `TVGN_CHILD` 擷取第一個子項目所指定的項目`hItem`參數。  
+- TVGN_CHILD 擷取第一個子項目所指定的項目*hItem*參數。  
   
-- `TVGN_DROPHILITE` 擷取的項目是拖放作業的目標。  
+- TVGN_DROPHILITE 擷取的項目是拖放作業的目標。  
   
-- `TVGN_FIRSTVISIBLE` 擷取的第一個可見項目。  
+- TVGN_FIRSTVISIBLE 擷取的第一個可見項目。  
   
-- `TVGN_LASTVISIBLE` 擷取樹狀目錄中的最後一個展開項目。 這不會擷取最後一個項目顯示在樹狀檢視 視窗中。  
+- TVGN_LASTVISIBLE 擷取最後一個項目展開樹狀目錄中。 這不會擷取最後一個項目顯示在樹狀檢視 視窗中。  
   
-- `TVGN_NEXT` 擷取下一個同層級項目。  
+- TVGN_NEXT 擷取下一個同層級項目。  
   
-- `TVGN_NEXTVISIBLE` 擷取下一個可見項目後面指定的項目。  
+- TVGN_NEXTVISIBLE 擷取下一個可見項目後面指定的項目。  
   
-- `TVGN_PARENT` 擷取指定之項目的父代。  
+- TVGN_PARENT 擷取指定之項目的父代。  
   
-- `TVGN_PREVIOUS` 擷取上一個同層級項目。  
+- TVGN_PREVIOUS 擷取上一個同層級項目。  
   
-- `TVGN_PREVIOUSVISIBLE` 擷取位於指定的項目的第一個可見項目。  
+- TVGN_PREVIOUSVISIBLE 擷取位於指定的項目的第一個可見項目。  
   
-- `TVGN_ROOT` 擷取第一個子系項目，其中指定的項目所屬的根項目。  
+- TVGN_ROOT 擷取第一個子系項目，其中指定的項目所屬的根項目。  
   
 ### <a name="return-value"></a>傳回值  
- 下一個項目成功; 如果控制代碼否則**NULL**。  
+ 下一個項目成功; 如果控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此函式會傳回**NULL**如果正在擷取的項目樹狀結構的根節點。 例如，如果您使用與此訊息`TVGN_PARENT`旗標上第一層子系的樹狀檢視中的根節點，不會傳回訊息**NULL**。  
+ 如果正在擷取的項目樹狀結構的根節點，此函數會傳回 NULL。 例如，如果您使用此訊息在樹狀檢視中的根節點的第一層子系 TVGN_PARENT 旗標時，訊息會傳回 NULL。  
   
 ### <a name="example"></a>範例  
  如需使用`GetNextItem`在迴圈中，請參閱[CTreeCtrl::DeleteItem](#deleteitem)。  
@@ -990,89 +990,89 @@ HTREEITEM GetNextItem(
  [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]  
   
 ##  <a name="getnextsiblingitem"></a>  CTreeCtrl::GetNextSiblingItem  
- 呼叫此函式可擷取下一個同層級`hItem`。  
+ 呼叫此函式可擷取下一個同層級*hItem*。  
   
 ```  
 HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 控制代碼的下一個同層級項目。否則**NULL**。  
+ 控制代碼的下一個同層級項目。否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#21](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]  
   
 ##  <a name="getnextvisibleitem"></a>  CTreeCtrl::GetNextVisibleItem  
- 呼叫此函式可擷取的下一個可見的項目`hItem`。  
+ 呼叫此函式可擷取的下一個可見的項目*hItem*。  
   
 ```  
 HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 控制代碼的下一個可見項目。否則**NULL**。  
+ 控制代碼的下一個可見項目。否則為 NULL。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::SetCheck](#setcheck)。  
   
 ##  <a name="getparentitem"></a>  CTreeCtrl::GetParentItem  
- 呼叫此函式可擷取的父代`hItem`。  
+ 呼叫此函式可擷取的父代*hItem*。  
   
 ```  
 HTREEITEM GetParentItem(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 與父項目; 控制代碼否則**NULL**。  
+ 與父項目; 控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此函式會傳回**NULL**如果所指定項目的父代是樹狀結構的根節點。  
+ 如果指定之項目的父代是樹狀結構的根節點，此函數會傳回 NULL。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::EnsureVisible](#ensurevisible)。  
   
 ##  <a name="getprevsiblingitem"></a>  CTreeCtrl::GetPrevSiblingItem  
- 呼叫此函式可擷取的前一個同層級`hItem`。  
+ 呼叫此函式可擷取的前一個同層級*hItem*。  
   
 ```  
 HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 控制代碼的之前同層級。否則**NULL**。  
+ 控制代碼的之前同層級。否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#22](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]  
   
 ##  <a name="getprevvisibleitem"></a>  CTreeCtrl::GetPrevVisibleItem  
- 呼叫此函式可擷取的前一個可見的項目`hItem`。  
+ 呼叫此函式可擷取的前一個可見的項目*hItem*。  
   
 ```  
 HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 控制代碼的上一個可見的項目。否則**NULL**。  
+ 控制代碼的上一個可見的項目。否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#23](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]  
@@ -1085,7 +1085,7 @@ HTREEITEM GetRootItem() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 控制代碼的根項目。否則**NULL**。  
+ 控制代碼的根項目。否則為 NULL。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::EditLabel](#editlabel)。  
@@ -1124,7 +1124,7 @@ HTREEITEM GetSelectedItem() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 選取的項目; 的控制代碼否則**NULL**。  
+ 選取的項目; 的控制代碼否則為 NULL。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#24](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]  
@@ -1137,7 +1137,7 @@ COLORREF GetTextColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A **COLORREF**值，表示目前的文字色彩。 如果此值為-1，控制項是否使用系統色彩的文字色彩。  
+ COLORREF 值，表示目前的文字色彩。 如果此值為-1，控制項是否使用系統色彩的文字色彩。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::SetTextColor](#settextcolor)。  
@@ -1150,7 +1150,7 @@ CToolTipCtrl* GetToolTips() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)樹狀結構控制項中所使用的物件。 如果[建立](#create)成員函式會使用樣式**TVS_NOTOOLTIPS**，使用任何工具提示，以及**NULL**傳回。  
+ 指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)樹狀結構控制項中所使用的物件。 如果[建立](#create)成員函式使用的樣式 TVS_NOTOOLTIPS、 使用任何工具提示，以及會傳回 NULL。  
   
 ### <a name="remarks"></a>備註  
  MFC 實作`GetToolTips`傳回`CToolTipCtrl`物件，它由樹狀控制中，而不是工具提示控制項的控制代碼。  
@@ -1183,20 +1183,20 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  用戶端座標點的測試。  
   
- `pFlags`  
- 接收的點擊測試結果的相關資訊的整數指標。 它可以是其中一個或多個值列在**旗標**< 備註 > 一節中的成員。  
+ *pFlags*  
+ 接收的點擊測試結果的相關資訊的整數指標。 它可以是其中一個或多個值列在`flags`< 備註 > 一節中的成員。  
   
- `pHitTestInfo`  
+ *pHitTestInfo*  
  位址[TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448)結構，其中包含要進行點擊測試，而且位置會接收的點擊測試結果的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
- 樹狀檢閱項佔用指定的點的控制代碼或**NULL**如果沒有項目都會佔用的點。  
+ 如果沒有項目都會佔用點所佔用的指定的點或為 NULL 的樹狀檢視項目控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式時，`pt`參數會指定要測試點的座標。 此函數會傳回指定的點處的項目控制代碼或**NULL**如果沒有項目都會佔用的點。 此外，`pFlags`參數會包含值，指出指定點的位置。 可能的值為：  
+ 呼叫此函式時， *pt*參數會指定要測試點的座標。 如果沒有項目都會佔用點，函數會傳回位於指定的點則為 NULL 的項目控制代碼。 此外， *pFlags*參數會包含值，指出指定點的位置。 可能的值為：  
   
 |||  
 |-|-|  
@@ -1255,35 +1255,35 @@ HTREEITEM InsertItem(
  *lpInsertStruct*  
  指標`TVINSERTSTRUCT`，指定要插入之樹狀檢視項目的屬性。  
   
- `nMask`  
+ *nMask*  
  整數，指定要設定的屬性。 請參閱`TVITEM`Windows SDK 中的結構。  
   
- `lpszItem`  
+ *lpszItem*  
  字串，包含的項目文字的位址。  
   
- `nImage`  
+ *nImage*  
  樹狀檢視控制項影像清單中的項目影像的索引。  
   
- `nSelectedImage`  
+ *nSelectedImage*  
  樹狀檢視控制項影像清單中的項目選取的映像的索引。  
   
- `nState`  
+ *nState*  
  指定的項目狀態的值。 請參閱樹狀檢視控制項目狀態的適當狀態清單的 Windows SDK 中。  
   
- `nStateMask`  
+ *nStateMask*  
  指定要設定哪些狀態。 請參閱`TVITEM`Windows SDK 中的結構。  
   
- `lParam`  
+ *lParam*  
  與項目相關聯的 32 位元應用程式專屬值。  
   
- `hParent`  
+ *hParent*  
  插入的項目之父代的控制代碼。  
   
  *hInsertAfter*  
  要插入新項目之後的項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 新的項目成功; 如果控制代碼否則**NULL**。  
+ 新的項目成功; 如果控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  此範例示範情況下您可能會想插入樹狀目錄控制項目時，使用每個版本的函式。  
@@ -1292,18 +1292,18 @@ HTREEITEM InsertItem(
  [!code-cpp[NVC_MFC_CTreeCtrl#27](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]  
   
 ##  <a name="itemhaschildren"></a>  CTreeCtrl::ItemHasChildren  
- 使用此函數來判斷是否樹狀結構項目指定`hItem`有子系的項目。  
+ 使用此函數來判斷是否樹狀結構項目指定*hItem*有子系的項目。  
   
 ```  
 BOOL ItemHasChildren(HTREEITEM hItem) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果樹狀結構項目所指定非零，`hItem`有子系的項目; 如果不為 0。  
+ 如果樹狀結構項目所指定非零， *hItem*有子系的項目; 如果不為 0。  
   
 ### <a name="remarks"></a>備註  
  因此，您可以接著使用如果[CTreeCtrl::GetChildItem](#getchilditem)来擷取這些子項目。  
@@ -1322,10 +1322,10 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `uAccId`|樹狀檢視項目中的項目範圍識別項。|  
+|[in]*uAccId*|樹狀檢視項目中的項目範圍識別項。|  
   
 ### <a name="return-value"></a>傳回值  
- 樹狀檢視項目之控制代碼 ( `HTREEITEM`) 會對應至`uAccId`參數。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。  
+ 樹狀檢視項目之控制代碼 ( `HTREEITEM`) 會對應至*uAccId*參數。 如需詳細資訊，請參閱*hItem*隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。  
   
 ### <a name="remarks"></a>備註  
  協助工具是應用程式，協助殘障人士使用電腦。 存取範圍識別項由`IAccessible`介面來唯一地指定在視窗中的項目。 如需有關存取範圍識別項的詳細資訊，請搜尋"有關 Active Accessibility 支援 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  
@@ -1353,10 +1353,10 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|樹狀檢視中的項目控制項的控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
+|[in]*hItem*|樹狀檢視中的項目控制項的控制代碼。 如需詳細資訊，請參閱*hItem*隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
   
 ### <a name="return-value"></a>傳回值  
- 存取範圍識別項對應至`hItem`參數。  
+ 存取範圍識別項對應至*hItem*參數。  
   
 ### <a name="remarks"></a>備註  
  協助工具是應用程式，協助殘障人士使用電腦。 存取範圍識別項由`IAccessible`介面來唯一地指定在視窗中的項目。 如需有關存取範圍識別項的詳細資訊，請搜尋"有關 Active Accessibility 支援 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  
@@ -1383,23 +1383,23 @@ BOOL Select(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
- `nCode`  
+ *則 nCode*  
  要採取的動作類型。 這個參數可以是下列值之一：  
   
-- `TVGN_CARET` 將選取項目設定為指定的項目。  
+- TVGN_CARET 設定指定項目的選取項目。  
   
-- `TVGN_DROPHILITE` 用來表示拖放操作目標的樣式會重新繪製指定的項目。  
+- TVGN_DROPHILITE 重新繪製用來表示拖放操作目標的樣式中指定的項目。  
   
-- `TVGN_FIRSTVISIBLE` 垂直捲動樹狀檢視，使指定的項目是第一個可見的項目。  
+- 使指定的項目是第一個可見的項目樹狀結構檢視垂直 TVGN_FIRSTVISIBLE 捲動。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`nCode`包含值`TVGN_CARET`，父視窗會收到**TVN_SELCHANGING**和**TVN_SELCHANGED**通知訊息。 此外，如果指定的項目已摺疊的父項目的子系，在父系的子項目清單會展開以顯示指定的項目。 在此情況下，父視窗會收到**TVN_ITEMEXPANDING**和**TVN_ITEMEXPANDED**通知訊息。  
+ 如果*則 nCode*包含值 TVGN_CARET，父視窗會收到 TVN_SELCHANGING 和 TVN_SELCHANGED 通知訊息。 此外，如果指定的項目已摺疊的父項目的子系，在父系的子項目清單會展開以顯示指定的項目。 在此情況下，父視窗會收到 TVN_ITEMEXPANDING 和 TVN_ITEMEXPANDED 通知訊息。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::HitTest](#hittest)。  
@@ -1412,7 +1412,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1429,14 +1429,14 @@ BOOL SelectItem(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  樹狀結構項目控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`hItem`是**NULL**，則此函式會不選取任何項目。  
+ 如果*hItem*為 NULL，則此函式會不選取任何項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
@@ -1449,14 +1449,14 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  將為第一個可見項目的樹狀目錄項目的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 函式會將訊息傳送至與視窗`TVM_SELECTITEM`和`TVGN_FIRSTVISIBLE`訊息參數。  
+ 此函式會傳送訊息至使用 TVM_SELECTITEM 和 TVGN_FIRSTVISIBLE 訊息參數視窗。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]  
@@ -1474,14 +1474,14 @@ BOOL SetAutoscrollInfo(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `uPixelsPerSec`|每秒来捲動的像素數目。|  
-|[輸入] `uUpdateTime`|更新控制項的時間間隔。|  
+|[in]*uPixelsPerSec*|每秒来捲動的像素數目。|  
+|[in]*uUpdateTime*|更新控制項的時間間隔。|  
   
 ### <a name="return-value"></a>傳回值  
- 一律傳回 `true`。  
+ 一律傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 自動捲動參數可用來看不到目前的項目捲動到檢視。 樹狀檢視控制項都必須有`TVS_EX_AUTOHSCROLL`延伸樣式中所述[樹狀檢視控制項的延伸樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。  
+ 自動捲動參數可用來看不到目前的項目捲動到檢視。 樹狀檢視控制項必須延伸樣式中所述 TVS_EX_AUTOHSCROLL[樹狀檢視控制項的延伸樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。  
   
  這個方法會傳送[TVM_SETAUTOSCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb773738) Windows SDK 中所述的訊息。  
   
@@ -1503,11 +1503,11 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clr`  
- A **COLORREF**值，包含新的背景色彩。 如果此值為-1，控制項將會還原為使用系統色彩的背景色彩。  
+ *clr*  
+ COLORREF 值，其中包含新的背景色彩。 如果此值為-1，控制項將會還原為使用系統色彩的背景色彩。  
   
 ### <a name="return-value"></a>傳回值  
- A **COLORREF**值，表示目前的文字色彩。 如果此值為-1，控制項是否使用系統色彩的文字色彩。  
+ COLORREF 值，表示目前的文字色彩。 如果此值為-1，控制項是否使用系統色彩的文字色彩。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::SetTextColor](#settextcolor)。  
@@ -1522,17 +1522,17 @@ BOOL SetCheck(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
- **HTREEITEM**接收核取狀態變更。  
+ *hItem*  
+ 若要接收的核取狀態變更 HTREEITEM。  
   
- `fCheck`  
+ *來瞧*  
  指出是否要 checked 或 unchecked 樹狀目錄控制項目。 根據預設，`SetCheck`設定要檢查的項目。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 當會檢查樹狀目錄控制項目 (`fCheck`設**TRUE**)，與相鄰的核取記號，出現的項目。  
+ 樹狀目錄控制項目會檢查時 (*來瞧*設為 TRUE)，以相鄰的核取記號，出現的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#29](../../mfc/reference/codesnippet/cpp/ctreectrl-class_34.cpp)]  
@@ -1555,14 +1555,14 @@ DWORD SetExtendedStyle(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `dwExMask`|位元遮罩，指定目前的樹狀檢視控制項中的樣式會受到這個方法。 如果此參數為零，則會忽略，而`dwExStyles`參數指派給樹狀檢視控制項。<br /><br /> 指定零或的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。|  
-|[輸入] `dwExStyles`|位元遮罩，指定目前的樹狀檢視中的樣式控制才能設定或清除。<br /><br /> 若要設定樣式的組合，指定的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。 若要清除的樣式的一組，指定零。|  
+|[in]*dwExMask*|位元遮罩，指定目前的樹狀檢視控制項中的樣式會受到這個方法。 如果此參數為零，則會忽略，而*dwExStyles*參數指派給樹狀檢視控制項。<br /><br /> 指定零或的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。|  
+|[in]*dwExStyles*|位元遮罩，指定目前的樹狀檢視中的樣式控制才能設定或清除。<br /><br /> 若要設定樣式的組合，指定的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。 若要清除的樣式的一組，指定零。|  
   
 ### <a name="return-value"></a>傳回值  
  值，包含先前擴充控制項的樣式。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會清除中指定的樣式`dwExMask`參數，然後設定中指定的樣式`dwExStyles`參數。 只有對應的位元的延伸的樣式`dwExMask`變更。  
+ 這個方法會清除中指定的樣式*dwExMask*參數，然後設定中指定的樣式*dwExStyles*參數。 只有對應的位元的延伸的樣式*dwExMask*變更。  
   
  這個方法會傳送[TVM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb773744) Windows SDK 中所述的訊息。  
   
@@ -1572,7 +1572,7 @@ DWORD SetExtendedStyle(
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會將`TVS_EX_AUTOHSCROLL`延伸至目前的樹狀檢視控制項的樣式。 在先前章節中的程式碼範例中，不會顯示，我們會建立根國家/地區為美國節點、 子節點的狀態賓州和美國華盛頓州和城市，這些狀態中的樹狀結構項目所組成的樹狀檢視。 我們故意組成的樹狀檢視控制項窄，讓它自動必須捲動至顯示具有焦點的樹狀結構項目。  
+ 下列程式碼範例會將 TVS_EX_AUTOHSCROLL 擴充樣式加入至目前的樹狀檢視控制項。 在先前章節中的程式碼範例中，不會顯示，我們會建立根國家/地區為美國節點、 子節點的狀態賓州和美國華盛頓州和城市，這些狀態中的樹狀結構項目所組成的樹狀檢視。 我們故意組成的樹狀檢視控制項窄，讓它自動必須捲動至顯示具有焦點的樹狀結構項目。  
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]  
   
@@ -1586,18 +1586,18 @@ CImageList* SetImageList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pImageList`  
- 若要指派的影像清單的指標。 如果`pImageList`是**NULL**，所有映像會從樹狀檢視控制項中移除。  
+ *pImageList*  
+ 若要指派的影像清單的指標。 如果*pImageList*是 NULL，所有映像會從樹狀檢視控制項中移除。  
   
- `nImageListType`  
+ *nImageListType*  
  若要設定的影像清單的類型。 影像清單可以是下列值之一：  
   
-- `TVSIL_NORMAL` 設定一般的影像清單，其中包含樹狀檢視項目選取及未選取映像。 您必須使用此狀態的覆疊影像。  
+- TVSIL_NORMAL 設定一般影像清單中，包含樹狀檢視項目選取及未選取映像。 您必須使用此狀態的覆疊影像。  
   
-- `TVSIL_STATE` 設定狀態的影像清單，其中包含使用者定義的狀態中的樹狀結構檢視項目的映像。  
+- TVSIL_STATE 設定狀態的影像清單，其中包含使用者定義的狀態中的樹狀結構檢視項目的映像。  
   
 ### <a name="return-value"></a>傳回值  
- 指標上述映像清單中，如果有的話。否則**NULL**。  
+ 指標上述映像清單中，如果有的話。否則為 NULL。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::GetImageList](#getimagelist)。  
@@ -1610,8 +1610,8 @@ void SetIndent(UINT nIndent);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndent`  
- 縮排的像素為單位的寬度。 如果`nIndent`小於超過系統定義最小寬度，新的寬度設定為系統定義的最小值。  
+ *nIndent*  
+ 縮排的像素為單位的寬度。 如果*nIndent*小於超過系統定義最小寬度，新的寬度設定為系統定義的最小值。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::GetIndent](#getindent)。  
@@ -1626,11 +1626,11 @@ BOOL SetInsertMark(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
- **HTREEITEM**指定插入標記將會放在哪一個項目。 如果這個引數是**NULL**，插入標記會移除。  
+ *hItem*  
+ 指定即將放置在哪一個項目插入標記的 HTREEITEM。 如果這個引數為 NULL，則會移除插入標記。  
   
  *fAfter*  
- **BOOL**值，指定是否插入標記就會變成之前或之後指定的項目。 如果這個引數不是零，插入標記就會放在項目之後。 如果這個引數為零時，插入標記就會放在項目之前。  
+ 布林值，指定是否插入標記就會變成之前或之後指定的項目。 如果這個引數不是零，插入標記就會放在項目之後。 如果這個引數為零時，插入標記就會放在項目之前。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -1646,11 +1646,11 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clrNew`  
- A **COLORREF**包含新插入標記色彩值。  
+ *clrNew*  
+ 包含新插入標記色彩 COLORREF 值。  
   
 ### <a name="return-value"></a>傳回值  
- A **COLORREF**值，包含前一個插入標記色彩。  
+ 包含前一個插入標記色彩 COLORREF 值。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)。  
@@ -1674,40 +1674,40 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  指標[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)結構，其中包含新的項目屬性，Windows SDK 中所述。  
   
- `hItem`  
- 重新設定其屬性的項目控制代碼。 請參閱**hItem**隸屬`TVITEM`Windows SDK 中的結構。  
+ *hItem*  
+ 重新設定其屬性的項目控制代碼。 請參閱`hItem`隸屬`TVITEM`Windows SDK 中的結構。  
   
- `nMask`  
- 整數，指定要設定的屬性。 請參閱**遮罩**隸屬`TVITEM`結構。  
+ *nMask*  
+ 整數，指定要設定的屬性。 請參閱`mask`隸屬`TVITEM`結構。  
   
- `lpszItem`  
+ *lpszItem*  
  字串，包含的項目文字的位址。  
   
- `nImage`  
+ *nImage*  
  樹狀檢視控制項影像清單中的項目影像的索引。 請參閱`iImage`隸屬`TVITEM`結構。  
   
- `nSelectedImage`  
- 樹狀檢視控制項影像清單中的項目選取的映像的索引。 請參閱**iSelectedImage**隸屬`TVITEM`結構。  
+ *nSelectedImage*  
+ 樹狀檢視控制項影像清單中的項目選取的映像的索引。 請參閱`iSelectedImage`隸屬`TVITEM`結構。  
   
- `nState`  
- 指定的項目狀態的值。 請參閱**狀態**隸屬`TVITEM`結構。  
+ *nState*  
+ 指定的項目狀態的值。 請參閱`State`隸屬`TVITEM`結構。  
   
- `nStateMask`  
- 指定要設定哪些狀態。 請參閱**stateMask**隸屬`TVITEM`結構。  
+ *nStateMask*  
+ 指定要設定哪些狀態。 請參閱`stateMask`隸屬`TVITEM`結構。  
   
- `lParam`  
+ *lParam*  
  與項目相關聯的 32 位元應用程式專屬值。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 在`TVITEM`結構**hItem**成員識別項目，而**遮罩**成員指定要設定的屬性。  
+ 在`TVITEM`結構`hItem`成員識別項目，而`mask`成員指定要設定的屬性。  
   
- 如果**遮罩**成員或`nMask`參數會指定`TVIF_TEXT`值**pszText**成員或`lpszItem`是以 null 結束的字串和位址**cchTextMax**成員會被忽略。 如果**遮罩**(或`nMask`) 指定`TVIF_STATE`值**stateMask**成員或`nStateMask`參數會指定哪一個項目狀態變更和**狀態**成員或`nState`參數會包含這些狀態的值。  
+ 如果`mask`成員或*nMask*參數會指定 TVIF_TEXT 值，`pszText`成員或*lpszItem*是以 null 結束的字串的位址和`cchTextMax`成員會被忽略。 如果`mask`(或*nMask*) 指定 TVIF_STATE 值`stateMask`成員或*nStateMask*參數會指定哪一個項目狀態變更和`state`成員或*nState*參數會包含這些狀態的值。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#32](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]  
@@ -1722,11 +1722,11 @@ BOOL SetItemData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  要擷取其資料的項目控制代碼。  
   
- `dwData`  
- 與所指定的項目相關聯的 32 位元應用程式專屬值`hItem`。  
+ *dwData*  
+ 與所指定的項目相關聯的 32 位元應用程式專屬值*hItem*。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -1747,14 +1747,14 @@ BOOL SetItemExpandedImageIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
-|[輸入] `iExpandedImage`|指定的項目展開的狀態時所顯示之影像的索引。|  
+|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
+|[in]*iExpandedImage*|指定的項目展開的狀態時所顯示之影像的索引。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) Windows SDK 中所述的訊息。 這個方法會將指派`iExpandedImage`參數`iExpandedImage`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構，然後使用該結構的訊息中。  
+ 這個方法會傳送[TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) Windows SDK 中所述的訊息。 這個方法會將指派*iExpandedImage*參數`iExpandedImage`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構，然後使用該結構的訊息中。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_treeCtrl`，也就是用來存取目前的樹狀檢視控制項。 程式碼範例也會定義的不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例中使用這些變數。  
@@ -1774,7 +1774,7 @@ SHORT SetItemHeight(SHORT cyHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cyHeight`  
+ *cyHeight*  
  在樹狀結構檢視中，像素為單位指定新的每個項目高度。 如果這個引數小於之影像的高度，則它會設為影像的高度。 如果這個引數不是即使，會四捨五入至最接近甚至值。 如果這個引數為-1，控制項將會還原成使用預設項目高度。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1794,13 +1794,13 @@ BOOL SetItemImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  若要設定其映像的項目控制代碼。  
   
- `nImage`  
+ *nImage*  
  樹狀檢視控制項影像清單中的項目影像的索引。  
   
- `nSelectedImage`  
+ *nSelectedImage*  
  樹狀檢視控制項影像清單中的項目選取的映像的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1817,7 +1817,7 @@ BOOL SetItemImage(
   請參閱範例的[CTreeCtrl::GetItemImage](#getitemimage)。  
   
 ##  <a name="setitemstate"></a>  CTreeCtrl::SetItemState  
- 設定所指定項目的狀態`hItem`。  
+ 設定所指定項目的狀態*hItem*。  
   
 ```  
 BOOL SetItemState(
@@ -1827,13 +1827,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  若要設定其狀態的項目控制代碼。  
   
- `nState`  
+ *nState*  
  指定新項目的狀態。  
   
- `nStateMask`  
+ *nStateMask*  
  指定要變更的狀態。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1858,14 +1858,14 @@ BOOL SetItemStateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
-|[輸入] `uStateEx`|項目的擴充的狀態。 如需詳細資訊，請參閱`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
+|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
+|[in]*uStateEx*|項目的擴充的狀態。 如需詳細資訊，請參閱`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) Windows SDK 中所述的訊息。 這個方法會將指派`uStateEx`參數`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構，然後使用該結構的訊息中。  
+ 這個方法會傳送[TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) Windows SDK 中所述的訊息。 這個方法會將指派*uStateEx*參數`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構，然後使用該結構的訊息中。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_treeCtrl`，也就是用來存取目前的樹狀檢視控制項。 程式碼範例也會定義的不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例中使用這些變數。  
@@ -1878,7 +1878,7 @@ BOOL SetItemStateEx(
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]  
   
 ##  <a name="setitemtext"></a>  CTreeCtrl::SetItemText  
- 設定所指定項目的文字`hItem`。  
+ 設定所指定項目的文字*hItem*。  
   
 ```  
 BOOL SetItemText(
@@ -1887,10 +1887,10 @@ BOOL SetItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
+ *hItem*  
  若要設定其文字的項目控制代碼。  
   
- `lpszItem`  
+ *lpszItem*  
  包含項目的新的文字字串的位址  
   
 ### <a name="return-value"></a>傳回值  
@@ -1907,7 +1907,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clrNew`  
+ *clrNew*  
  新的線條色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1944,11 +1944,11 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clr`  
- A **COLORREF**值，包含新的文字色彩。 如果這個引數為-1，控制項將會還原為使用系統色彩的文字色彩。  
+ *clr*  
+ COLORREF 值，其中包含新的文字色彩。 如果這個引數為-1，控制項將會還原為使用系統色彩的文字色彩。  
   
 ### <a name="return-value"></a>傳回值  
- A **COLORREF**值，表示先前的文字色彩。 此值為-1，如果控制項已使用系統色彩的文字色彩。  
+ COLORREF 值，表示先前的文字色彩。 此值為-1，如果控制項已使用系統色彩的文字色彩。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#36](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]  
@@ -1961,14 +1961,14 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndTip`  
+ *pWndTip*  
  指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)樹狀目錄控制項將使用的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件，包含控制項，先前使用的工具提示或**NULL**如果先前不使用任何工具提示。  
+ 指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件，包含先前使用的控制項或為 NULL 如果先前不使用任何工具提示的工具提示。  
   
 ### <a name="remarks"></a>備註  
- 若要使用工具提示，指出**TVS_NOTOOLTIPS**樣式，當您建立`CTreeCtrl`物件。  
+ 若要使用工具提示，指出當您建立的 TVS_NOTOOLTIPS 樣式`CTreeCtrl`物件。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CTreeCtrl::GetToolTips](#gettooltips)。  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `hItem`|樹狀檢視中的項目控制項控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
+|[in]*hItem*|樹狀檢視中的項目控制項控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
   
 ### <a name="remarks"></a>備註  
  如需有關工具提示和資訊提示之間的差異的詳細資訊，請搜尋 「 工具提示和資訊提示 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  
@@ -1999,14 +1999,14 @@ BOOL SortChildren(HTREEITEM hItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hItem`  
- 父項目，其中的子系項目是要排序的控制代碼。 如果`hItem`是**NULL**，排序將會繼續從樹狀結構的根。  
+ *hItem*  
+ 父項目，其中的子系項目是要排序的控制代碼。 如果*hItem*是 NULL，排序將會繼續從樹狀結構的根。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- `SortChildren` 不會遞迴所有樹狀結構。只有的直接子系`hItem`將進行排序。  
+ `SortChildren` 不會遞迴所有樹狀結構。只有的直接子系*hItem*將進行排序。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#37](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]  
@@ -2026,9 +2026,9 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 結構的比較函式， **lpfnCompare**，必須傳回負值正如果第一個項目應該在第二個值，如果第一個項目應該遵循第二個，或如果兩個項目相等。  
+ 結構的比較函式， `lpfnCompare`，必須傳回負值正如果第一個項目應該在第二個值，如果第一個項目應該遵循第二個，或如果兩個項目相等。  
   
- `lParam1`和`lParam2`參數會對應至**lParam**隸屬[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)結構的兩個項目進行比較。 `lParamSort`參數會對應至**lParam**隸屬`TV_SORTCB`結構。  
+ *LParam1*和*lParam2*參數會對應至`lParam`隸屬[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)結構的兩個項目進行比較。 *LParamSort*參數會對應至`lParam`隸屬`TV_SORTCB`結構。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTreeCtrl#38](../../mfc/reference/codesnippet/cpp/ctreectrl-class_46.cpp)]  

@@ -1,7 +1,7 @@
 ---
 title: CDaoRelationInfo 結構 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951288"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122604"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 結構
 `CDaoRelationInfo`結構包含定義兩個資料表中的欄位之間的關聯性的相關資訊[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>參數  
- *m_strName*  
+*m_strName*  
  關聯物件的唯一名稱。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
   
  *m_strTable*  
@@ -70,11 +71,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade**刪除動作會串聯。  
   
- *m_pFieldInfos*  
- 陣列的指標[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)結構。 此陣列中包含關聯性中的每個欄位的一個的物件。 *M_nFields*資料成員可讓陣列項目的計數。  
+*m_pFieldInfos*  
+ 陣列的指標[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)結構。 此陣列中包含關聯性中的每個欄位的一個的物件。 `m_nFields`資料成員可讓陣列項目的計數。  
   
- *m_nFields*  
- 數目`CDaoRelationFieldInfo`中的物件*m_pFieldInfos*資料成員。  
+*m_nFields*  
+ 數目`CDaoRelationFieldInfo`中的物件`m_pFieldInfos`資料成員。  
   
 ## <a name="remarks"></a>備註  
  主要和次要上述參考表示所傳回的資訊是如何[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)類別中的成員函式`CDaoDatabase`。  

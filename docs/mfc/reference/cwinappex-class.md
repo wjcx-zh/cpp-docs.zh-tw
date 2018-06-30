@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63882cd6ae167e78bc5e3cf509650ae3d84fd0ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdf57093ff1feeccc0f805bee197959dd4fb453b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378635"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123060"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 類別
 `CWinAppEx` 處理應用程式狀態、 儲存狀態至登錄、 從登錄載入狀態、 初始化應用程式管理員和提供連結，這些相同的應用程式管理員。  
@@ -210,7 +210,7 @@ class CWinAppEx : public CWinApp
 |----------|-----------------|  
 |[CWinAppEx::LoadCustomState](#loadcustomstate)|在載入應用程式的狀態時由架構呼叫。|  
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|從登錄載入的大小和位置的應用程式時由架構呼叫。 載入的資料包含的大小和位置的主要畫面格，在您的應用程式上次關閉的時間。|  
-|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|當處理主框架視窗時，由架構呼叫`WM_CLOSE`。|  
+|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|當主框架視窗正在處理 WM_CLOSE 時由架構呼叫。|  
 |[CWinAppEx::PreLoadState](#preloadstate)|立即之前由架構呼叫應用程式狀態為 loaded。|  
 |[CWinAppEx::PreSaveState](#presavestate)|由架構呼叫的前面會儲存應用程式狀態。|  
 |[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|重新載入的大小和位置的登錄中提供的視窗|  
@@ -254,14 +254,14 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSectionName`  
+ [in]*lpszSectionName*  
  包含的登錄機碼路徑的字串。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果該方法成功。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會清除從登錄的特定區段的應用程式資料。 您可以指定要使用參數清除區段`lpszSectionName`。 如果`lpszSectionName`是`NULL`，這個方法會使用儲存在預設登錄路徑`CWinAppEx`物件。 若要取得預設的登錄路徑，請使用[CWinAppEx::GetRegistryBase](#getregistrybase)。  
+ 這個方法會清除從登錄的特定區段的應用程式資料。 您可以指定要使用參數清除區段*lpszSectionName*。 如果*lpszSectionName*是 NULL，這個方法會使用儲存在預設登錄路徑`CWinAppEx`物件。 若要取得預設的登錄路徑，請使用[CWinAppEx::GetRegistryBase](#getregistrybase)。  
   
 ##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx  
  建構 `CWinAppEx` 物件。  
@@ -271,7 +271,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bResourceSmartUpdate`  
+ [in]*bResourceSmartUpdate*  
  布林值參數，指定工作區物件是否應該偵測和處理資源更新。  
   
 ### <a name="remarks"></a>備註  
@@ -285,11 +285,11 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  指定應用程式從登錄是否載入的初始大小和位置的主框架視窗。  
   
 ### <a name="remarks"></a>備註  
- 根據預設的大小和位置的主要畫面格是從搭配其他應用程式設定的登錄載入。 期間發生此錯誤[CWinAppEx::LoadState](#loadstate)。 如果不想從登錄載入視窗的初始位置，呼叫這個方法與`bEnable`設`false`。  
+ 根據預設的大小和位置的主要畫面格是從搭配其他應用程式設定的登錄載入。 期間發生此錯誤[CWinAppEx::LoadState](#loadstate)。 如果不想從登錄載入視窗的初始位置，呼叫這個方法與*bEnable*設為 FALSE。  
   
 ##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus  
  建立並初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)物件。  
@@ -302,17 +302,17 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszRegEntry`  
+ [in]*lpszRegEntry*  
  字串，包含路徑的登錄機碼。 應用程式會使用此登錄機碼來儲存資訊 tear-off 功能表。  
   
- [輸入] `uiCmdFirst`  
+ [in]*uiCmdFirst*  
  第一個功能表關閉終止識別碼。  
   
- [輸入] `uiCmdLast`  
+ [in]*uiCmdLast*  
  最後一個終止功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `True` 如果`CMenuTearOffManager`建立並初始化成功。`false`如果發生錯誤，或如果`CMenuTearOffManager`已經存在。  
+ TRUE，否則`CMenuTearOffManager`建立並初始化成功。FALSE 或發生錯誤時如果`CMenuTearOffManager`已經存在。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此函式來啟用應用程式中的 tear-off 功能表。 您應該呼叫此函式，從`InitInstance`。  
@@ -331,31 +331,31 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdToolsDummy`  
+ [in]*uiCmdToolsDummy*  
  不帶正負號的整數，架構會使用預留位置做為使用者的 [工具] 功能表的命令識別碼。  
   
- [輸入] `uiCmdFirst`  
+ [in]*uiCmdFirst*  
  第一個使用者工具命令的命令識別碼。  
   
- [輸入] `uiCmdLast`  
+ [in]*uiCmdLast*  
  最後一個使用者工具命令的命令識別碼。  
   
- [輸入] `pToolRTC`  
+ [in]*pToolRTC*  
  類別 A`CUserToolsManager`物件會使用來建立新的使用者工具。  
   
- [輸入] `uArgMenuID`  
+ [in]*uArgMenuID*  
  引數功能表識別碼。  
   
- [輸入] `uInitDirMenuID`  
+ [in]*uInitDirMenuID*  
  初始工具目錄功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法會建立並初始化`CUserToolsManager`物件;`FALSE`如果方法失敗，或如果`CUserToolsManager`物件已經存在。  
+ 如果此方法會建立並初始化，則為 TRUE`CUserToolsManager`物件;FALSE 如果方法失敗，或如果`CUserToolsManager`物件已經存在。  
   
 ### <a name="remarks"></a>備註  
  當您啟用使用者定義的工具時，架構會自動支援自訂期間可以擴充動態功能表。 架構會將每個新的項目關聯的外部命令。 架構在使用者選取適當項目時，會叫用這些命令**工具**功能表。  
   
- 每次使用者加入新項目時，framework 就會建立新的物件。 類別的新物件的類型由所定義`pToolRTC`。 `pToolRTC`類別型別必須衍生自[CUserTool 類別](../../mfc/reference/cusertool-class.md)。  
+ 每次使用者加入新項目時，framework 就會建立新的物件。 類別的新物件的類型由所定義*pToolRTC*。 *PToolRTC*類別型別必須衍生自[CUserTool 類別](../../mfc/reference/cusertool-class.md)。  
   
  如需有關使用者工具，以及如何將它們合併到您的應用程式的詳細資訊，請參閱[使用者定義工具](../../mfc/user-defined-tools.md)。  
   
@@ -381,22 +381,22 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含的登錄機碼名稱。  
   
- [輸出] `ppData`  
+ [out]*ppData*  
  方法會以二進位資料的填滿緩衝區的指標。  
   
- [輸出] `pBytes`  
+ [out]*pBytes*  
  讀取方法用來寫入的位元組數目的不帶正負號整數的指標。  
   
 ### <a name="return-value"></a>傳回值  
- `True` 如果登錄成功。，`false`否則。  
+ 如果成功，則為 TRUEFALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  這個方法會讀取寫入登錄的二進位資料。 若要將資料寫入登錄中，使用方法[CWinAppEx::WriteBinary](#writebinary)和[CWinAppEx::WriteSectionBinary](#writesectionbinary)。  
   
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager  
  將指標傳回至全域[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。  
@@ -452,19 +452,19 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含名稱的登錄項目。  
   
- [輸入] `nDefault`  
+ [in]*nDefault*  
  如果指定的登錄項目不存在該方法會傳回預設值。  
   
 ### <a name="return-value"></a>傳回值  
- 登錄資料，如果該方法成功。否則`nDefault`。  
+ 登錄資料，如果該方法成功。否則*nDefault*。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會從登錄讀取整數資料。 如果沒有與所指定的登錄機碼相關聯的整數資料`lpszEntry`，這個方法會傳回`nDefault`。 若要將資料寫入登錄中，使用方法[CWinAppEx::WriteSectionInt](#writesectionint)和[CWinAppEx::WriteInt](#writeint)。  
+ 這個方法會從登錄讀取整數資料。 如果沒有與所指定的登錄機碼相關聯的整數資料*lpszEntry*，這個方法會傳回*nDefault*。 若要將資料寫入登錄中，使用方法[CWinAppEx::WriteSectionInt](#writesectionint)和[CWinAppEx::WriteInt](#writeint)。  
   
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager  
  將指標傳回至全域[CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)物件。  
@@ -502,10 +502,10 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含相對路徑的登錄項目。  
   
- [輸出] `obj`  
+ [out]*obj*  
  若要參考`CObject`。 方法會使用這個參考來登錄資料儲存。  
   
 ### <a name="return-value"></a>傳回值  
@@ -514,7 +514,7 @@ BOOL GetObject(
 ### <a name="remarks"></a>備註  
  這個方法會從衍生自的登錄讀取資料`CObject`。 要寫入`CObject`資料登錄中，使用[CWinAppEx::WriteObject](#writeobject)或[CWinAppEx::WriteSectionObject](#writesectionobject)。  
   
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase  
  擷取應用程式的預設登錄路徑。  
@@ -537,14 +537,14 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `szSectionAdd`  
+ [in]*szSectionAdd*  
  字串，包含相對路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  A `CString` ，其中包含的登錄機碼的絕對路徑。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會藉由附加中的相對路徑定義的登錄機碼的絕對路徑`szSectionAdd`到您的應用程式的預設登錄位置。 若要取得預設的登錄機碼，請使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)。  
+ 這個方法會藉由附加中的相對路徑定義的登錄機碼的絕對路徑*szSectionAdd*到您的應用程式的預設登錄位置。 若要取得預設的登錄機碼，請使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)。  
   
 ##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary  
  從登錄讀取二進位資料。  
@@ -558,25 +558,25 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要讀取的值。  
   
- [輸出] `ppData`  
+ [out]*ppData*  
  方法會儲存資料緩衝區的指標。  
   
- [輸出] `pBytes`  
- 不帶正負號的整數指標。 方法會寫入的大小`ppData`給這個參數。  
+ [out]*pBytes*  
+ 不帶正負號的整數指標。 方法會寫入的大小*ppData*給這個參數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為 `True`，否則為 `false`。  
+ 如果成功，則為 TRUE，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  這個方法會讀取登錄的方式寫入二進位資料[CWinAppEx::WriteBinary](#writebinary)和[CWinAppEx::WriteSectionBinary](#writesectionbinary)。  
   
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt  
  從登錄讀取的整數資料。  
@@ -589,22 +589,22 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要讀取的值。  
   
- [輸入] `nDefault`  
+ [in]*nDefault*  
  要傳回如果指定的值不存在的預設值。  
   
 ### <a name="return-value"></a>傳回值  
- 整數資料儲存在指定的登錄值。`nDefault`如果資料不存在。  
+ 整數資料儲存在指定的登錄值。*nDefault*如果資料不存在。  
   
 ### <a name="remarks"></a>備註  
  使用方法[CWinAppEx::WriteInt](#writeint)和[CWinAppEx::WriteSectionInt](#writesectionint)將整數資料寫入登錄。  
   
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對的路徑加入至您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對的路徑加入至您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject  
  讀取[CObject](../../mfc/reference/cobject-class.md)登錄中的登錄資料。  
@@ -617,13 +617,13 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要讀取的值。  
   
- [輸出] `obj`  
+ [out]*obj*  
  若要參考`CObject`。 方法會使用此`CObject`登錄資料儲存。  
   
 ### <a name="return-value"></a>傳回值  
@@ -632,7 +632,7 @@ BOOL GetSectionObject(
 ### <a name="remarks"></a>備註  
  這個方法會從登錄讀取資料。 資料讀取為`CObject`資料或衍生自的類別資料`CObject`。 要寫入`CObject`資料登錄中，使用[CWinAppEx::WriteObject](#writeobject)或[CWinAppEx::WriteSectionObject](#writesectionobject)。  
   
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString  
  讀取字串登錄中的資料。  
@@ -645,22 +645,22 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要讀取的值。  
   
- [輸入] `lpszDefault`  
+ [in]*lpszDefault*  
  要傳回如果指定的值不存在的預設值。  
   
 ### <a name="return-value"></a>傳回值  
- 如果資料存在時，儲存在指定的登錄值中的字串資料否則`lpszDefault`。  
+ 如果資料存在時，儲存在指定的登錄值中的字串資料否則*lpszDefault*。  
   
 ### <a name="remarks"></a>備註  
  這個方法會讀取寫入登錄的字串資料。 使用[CWinAppEx::WriteString](#writestring)和[CWinAppEx::WriteSectionString](#writesectionstring)將字串資料寫入登錄。  
   
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager  
  將指標傳回至全域[CShellManager](../../mfc/reference/cshellmanager-class.md)物件。  
@@ -685,19 +685,19 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含的登錄機碼名稱  
   
- [輸入] `lpzDefault`  
+ [in]*lpzDefault*  
  如果指定的登錄項目不存在該方法會傳回預設值。  
   
 ### <a name="return-value"></a>傳回值  
- 成功; 如果在登錄中儲存的字串資料`lpszDefault`否則。  
+ 成功; 如果在登錄中儲存的字串資料*lpszDefault*否則。  
   
 ### <a name="remarks"></a>備註  
  這個方法會讀取寫入登錄的字串資料。 若要將資料寫入登錄中，使用方法[CWinAppEx::WriteString](#writestring)或[CWinAppEx::WriteSectionString](#writesectionstring)。  
   
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager  
  將指標傳回至全域[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)物件。  
@@ -720,7 +720,7 @@ CUserToolsManager* GetUserToolsManager();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標的全域`CUserToolsManager`物件;`NULL`如果使用者工具管理未啟用應用程式。  
+ 指標的全域`CUserToolsManager`物件;NULL，如果使用者工具管理未啟用應用程式。  
   
 ### <a name="remarks"></a>備註  
  擷取的指標之前`CUserToolsManager`物件，您必須藉由呼叫初始化管理員[CWinAppEx::EnableUserTools](#enableusertools)。  
@@ -819,7 +819,7 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSectionName`  
+ [in]*lpszSectionName*  
  包含的登錄機碼路徑的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -862,13 +862,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrame`  
+ [in]*pFrame*  
  框架視窗物件的指標。 此方法適用於此框架視窗中登錄的狀態資訊。  
   
- [輸入] `lpszSectionName`  
+ [in]*lpszSectionName*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `pFrameImpl`  
+ [in]*pFrameImpl*  
  指標`CFrameImpl`物件。 此方法適用於此框架視窗中登錄的狀態資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -879,7 +879,7 @@ virtual BOOL LoadState(
   
  預設實作`CFrameImpl::OnLoadFrame`呼叫`LoadState`。  
   
- `lpszSectionName`參數不是絕對路徑的登錄項目。 它是相對的路徑加入至您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSectionName*參數不是絕對路徑的登錄項目。 它是相對的路徑加入至您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement  
  從登錄載入的大小和位置的主框架視窗時，由架構呼叫。  
@@ -892,13 +892,13 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `rectNormalPosition`  
+ [out]*rectNormalPosition*  
  包含主框架視窗的座標，當它是在還原的位置矩形。  
   
- [輸出] `nFlags`  
+ [out]*nFlags*  
  控制的位置最小化的視窗及作業系統還原的視窗最小化的視窗之間切換的方式的旗標。  
   
- [輸出] `nShowCmd`  
+ [out]*nShowCmd*  
  指定視窗的顯示狀態的整數。 如需可能值的詳細資訊，請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -929,28 +929,28 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndControl`  
+ [in]*pWndControl*  
  使用者叫用內容說明視窗物件的指標。  
   
- [輸入] `dwHelpIDArray[]`  
+ [in]*dwHelpIDArray]*  
  保留的值。  
   
 ### <a name="remarks"></a>備註  
  這個方法目前已保留供未來使用。 預設實作不做任何動作，它目前不由架構呼叫。  
   
 ##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame  
- 框架視窗正在處理時，架構會呼叫這個方法`WM_CLOSE`。  
+ 當框架視窗正在處理 WM_CLOSE，架構會呼叫這個方法。  
   
 ```  
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrameImpl`  
+ [in]*pFrameImpl*  
  指標`CFrameImpl`物件。  
   
 ### <a name="remarks"></a>備註  
- 這個方法的預設實作會將儲存的狀態`pFrameImpl`。  
+ 這個方法的預設實作會將儲存的狀態*pFrameImpl*。  
   
 ##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick  
  呼叫使用者定義的命令是與檢視相關聯，當使用者按兩下該檢視內的任何位置。  
@@ -962,17 +962,17 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  物件的指標衍生自[CView 類別](../../mfc/reference/cview-class.md)。  
   
- [輸入] `iViewId`  
+ [in]*iViewId*  
  檢視識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `True` 如果架構找到命令。否則為 false。  
+ 如果架構會尋找命令，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 為了支援自訂滑鼠行為，您必須呼叫此函式處理時`WM_LBUTTONDBLCLK`訊息。 這個方法會執行與所提供的檢視表識別碼相關聯的命令`iViewId`。 如需自訂滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。  
+ 為了支援自訂滑鼠行為，您必須呼叫此函式，當您處理 WM_LBUTTONDBLCLK 訊息。 這個方法會執行與所提供的檢視表識別碼相關聯的命令*iViewId*。 如需自訂滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。  
   
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle  
 
@@ -982,7 +982,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `CWnd*`  
+ [in]*CWnd&#38;*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1016,7 +1016,7 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFrame`  
+ [in]*pFrame*  
  框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1060,22 +1060,22 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSectionName`  
+ [in]*lpszSectionName*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `pFrameImpl`  
+ [in]*pFrameImpl*  
  指標`CFrameImpl`物件。 此框架會儲存至 Windows 登錄中。  
   
- [輸入] `pFrame`  
+ [in]*pFrame*  
  框架視窗物件的指標。 此框架會儲存至 Windows 登錄中。  
   
 ### <a name="return-value"></a>傳回值  
- `True` 如果登錄成功。，`false`否則。  
+ 如果成功，則為 TRUEFALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  這個方法會將儲存應用程式和提供的框架視窗的任何狀態資訊的狀態。 如果未提供框架視窗，此方法只會儲存應用程式狀態。 應用程式資訊包含狀態的[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)， [CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)， [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)，而[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)。  
   
- `lpszSectionName`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSectionName*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
 ##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase  
  設定應用程式的預設登錄路徑。  
@@ -1085,7 +1085,7 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSectionName`  
+ [in]*lpszSectionName*  
  字串，包含路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1105,20 +1105,20 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiMenuResId`  
+ [in]*uiMenuResId*  
  功能表上的資源 id。  
   
- [輸入] `point`  
+ [in]*點*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)螢幕座標中指定功能表的位置。  
   
- [輸入] `pWnd`  
+ [in]*pWnd*  
  擁有快顯功能表視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果快顯功能表會顯示可順利啟動。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會顯示相關聯的功能表`uiMenuResId`。  
+ 這個方法會顯示相關聯的功能表*uiMenuResId*。  
   
  若要支援快顯功能表，您必須擁有[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。 如果您有未初始化`CContextMenuManager`物件`ShowPopupMenu`將會失敗。  
   
@@ -1133,13 +1133,13 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nFlags`  
+ [in]*nFlags*  
  控制的位置最小化的視窗及作業系統還原的視窗最小化的視窗之間切換的方式的旗標。  
   
- [輸入] `nShowCmd`  
+ [in]*nShowCmd*  
  指定視窗的顯示狀態的整數。 如需可能值的詳細資訊，請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
   
- [輸入] `rectNormalPosition`  
+ [in]*rectNormalPosition*  
  處於還原中狀態時，包含的主框架視窗座標的矩形。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1161,22 +1161,22 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含的登錄機碼名稱。  
   
- [輸入] `pData`  
+ [in]*pData*  
  要儲存的資料。  
   
- [輸入] `nBytes`  
- 大小`pData`以位元組為單位。  
+ [in]*nBytes*  
+ 大小*pData*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的索引鍵`lpszEntry`不存在，這個方法會建立它。  
+ 如果所指定的索引鍵*lpszEntry*不存在，這個方法會建立它。  
   
 ##  <a name="writeint"></a>  CWinAppEx::WriteInt  
  將數值資料寫入登錄。  
@@ -1188,19 +1188,19 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含的登錄機碼名稱。  
   
- [輸入] `nValue`  
+ [in]*n 值*  
  要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的索引鍵`lpszEntry`不存在，這個方法會建立它。  
+ 如果所指定的索引鍵*lpszEntry*不存在，這個方法會建立它。  
   
 ##  <a name="writeobject"></a>  CWinAppEx::WriteObject  
  將衍生自資料寫入[CObject 類別](../../mfc/reference/cobject-class.md)登錄。  
@@ -1212,17 +1212,17 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要設定的值。  
   
- [輸入] `obj`  
+ [in]*obj*  
  若要參考`CObject`方法會將儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會寫入`obj`預設登錄機碼下的指定值的資料。 使用[CWinAppEx::GetRegistryBase](#getregistrybase)來判斷目前的登錄機碼。  
+ 這個方法會寫入*obj*預設登錄機碼下的指定值的資料。 使用[CWinAppEx::GetRegistryBase](#getregistrybase)來判斷目前的登錄機碼。  
   
 ##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary  
  將二進位資料寫入登錄中的值。  
@@ -1236,25 +1236,25 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含的登錄機碼名稱  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要設定的值。  
   
- [輸入] `pData`  
+ [in]*pData*  
  要寫入登錄的資料。  
   
- [輸入] `nBytes`  
- 大小`pData`以位元組為單位。  
+ [in]*nBytes*  
+ 大小*pData*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的索引鍵`lpszEntry`不存在，這個方法會建立它。  
+ 如果所指定的索引鍵*lpszEntry*不存在，這個方法會建立它。  
   
 ##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt  
  將數值資料寫入登錄。  
@@ -1267,22 +1267,22 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含相對路徑的登錄機碼。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要設定的值。  
   
- [輸入] `nValue`  
+ [in]*n 值*  
  要寫入登錄的資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是附加至您的應用程式的預設登錄機碼的相對路徑。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是附加至您的應用程式的預設登錄機碼的相對路徑。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的索引鍵`lpszEntry`不存在，這個方法會建立它。  
+ 如果所指定的索引鍵*lpszEntry*不存在，這個方法會建立它。  
   
 ##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject  
  將衍生自資料寫入[CObject 類別](../../mfc/reference/cobject-class.md)特定登錄值。  
@@ -1295,22 +1295,22 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含的登錄機碼名稱。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要設定之值的名稱。  
   
- [輸入] `obj`  
+ [in]*obj*  
  要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的值`lpszEntry`下所指定的登錄機碼不存在`lpszSubSection`，這個方法會建立該值。  
+ 如果所指定的值*lpszEntry*下所指定的登錄機碼不存在*lpszSubSection*，這個方法會建立該值。  
   
 ##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString  
  將字串的資料寫入登錄中的值。  
@@ -1323,22 +1323,22 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszSubSection`  
+ [in]*lpszSubSection*  
  字串，包含的登錄機碼名稱。  
   
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含要設定的值。  
   
- [輸入] `lpszValue`  
+ [in]*lpszValue*  
  要寫入登錄的字串資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszSubSection`參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszSubSection*參數不是絕對路徑的登錄項目。 它是相對路徑附加到您的應用程式的預設登錄機碼的結尾。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的值`lpszEntry`下沒有`lpszSubSection`，這個方法會建立它。  
+ 如果所指定的值*lpszEntry*下沒有*lpszSubSection*，這個方法會建立它。  
   
 ##  <a name="writestring"></a>  CWinAppEx::WriteString  
  將字串的資料寫入登錄。  
@@ -1350,19 +1350,19 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszEntry`  
+ [in]*lpszEntry*  
  字串，包含的登錄機碼名稱。  
   
- [輸入] `lpszValue`  
+ [in]*lpszValue*  
  要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果此方法成功。否則`FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `lpszEntry`參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
+ *LpszEntry*參數就是位於您的應用程式的預設登錄機碼下的登錄項目名稱。 若要取得或設定預設的登錄機碼，使用方法[CWinAppEx::GetRegistryBase](#getregistrybase)和[CWinAppEx::SetRegistryBase](#setregistrybase)分別。  
   
- 如果所指定的索引鍵`lspzEntry`不存在，這個方法會建立它。  
+ 如果所指定的索引鍵*lspzEntry*不存在，這個方法會建立它。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

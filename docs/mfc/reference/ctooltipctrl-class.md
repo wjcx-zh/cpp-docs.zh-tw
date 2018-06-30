@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de230a82adaaafc149d2ed5a762977205c798b03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9436f3809a337b732a2e95d9c30b9baa45c4e8ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377606"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123106"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 封裝「工具提示控制項」的功能，這個小型快顯視窗顯示說明應用程式中工具用途的單行文字。  
@@ -174,11 +174,11 @@ void Activate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bActivate`  
+ *bActivate*  
  指定是否要啟用或停用工具提示控制項。  
   
 ### <a name="remarks"></a>備註  
- 如果`bActivate`是**TRUE**，啟動; 如果**FALSE**，它會停用。  
+ 如果*bActivate*為 TRUE 時，啟動; 如果為 FALSE，它會停用。  
   
  資料指標位於控制項，向註冊工具上時，使用工具提示控制項時，會出現工具提示資訊非作用中時，工具提示資訊沒有出現，即使游標位於工具上。  
   
@@ -204,26 +204,26 @@ BOOL AddTool(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `nIDText`  
+ *nIDText*  
  包含工具的文字字串資源的識別碼。  
   
  *lpRectTool*  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含工具的座標之周框。 座標是相對於所識別的視窗工作區的左上角`pWnd`。  
+ 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含工具的座標之周框。 座標是相對於所識別的視窗工作區的左上角*pWnd*。  
   
- `nIDTool`  
+ *nIDTool*  
  此工具的識別碼。  
   
- `lpszText`  
- 此工具的文字指標。 如果這個參數會包含值**LPSTR_TEXTCALLBACK**， **TTN_NEEDTEXT**通知訊息會移至視窗的父代，`pWnd`指向。  
+ *lpszText*  
+ 此工具的文字指標。 如果這個參數會包含值 LPSTR_TEXTCALLBACK，TTN_NEEDTEXT 通知訊息移至視窗的父代， *pWnd*指向。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- **LpRectTool**和**nIDTool**參數必須是有效的或者如果**lpRectTool**是 NULL， **nIDTool**必須是 0。  
+ *LpRectTool*和*nIDTool*參數必須是有效的或者如果*lpRectTool*是 NULL， *nIDTool*必須是 0。  
   
  工具提示控制項可以與多個工具產生關聯。 呼叫此函式可與工具提示控制項註冊工具，因此當游標位於工具上時，會顯示工具提示中所儲存的資訊。  
   
@@ -243,11 +243,11 @@ BOOL AdjustRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lprc`  
+ *lprc*  
  指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，可保存的工具提示視窗矩形或文字的顯示矩形。  
   
- `bLarger`  
- 如果**TRUE**，`lprc`用來指定文字顯示矩形中，並且會收到對應視窗矩形。 如果**FALSE**，`lprc`用來指定視窗矩形中，並且會收到對應的文字顯示矩形。  
+ *bLarger*  
+ 如果為 TRUE， *lprc*用來指定文字顯示矩形中，並且會收到對應視窗矩形。 如果為 FALSE， *lprc*用來指定視窗矩形中，並且會收到對應的文字顯示矩形。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果已成功調整矩形。否則便是 0。  
@@ -265,28 +265,28 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
- 指定工具提示控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
+ *pParentWnd*  
+ 指定工具提示控制項的父視窗，通常`CDialog`。 它不得為 NULL。  
   
- `dwStyle`  
+ *dwStyle*  
  指定工具提示控制項的樣式。 請參閱**備註**節的詳細資訊。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果`CToolTipCtrl`物件是否已成功建立; 否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CToolTipCtrl`分成兩個步驟。 首先，呼叫建構函式來建構`CToolTipCtrl`物件，然後再呼叫**建立**建立工具提示控制項，並將其附加至`CToolTipCtrl`物件。  
+ 您建構`CToolTipCtrl`分成兩個步驟。 首先，呼叫建構函式來建構`CToolTipCtrl`物件，然後再呼叫`Create`建立工具提示控制項，並將其附加至`CToolTipCtrl`物件。  
   
- `dwStyle`參數可以是任何的組合[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 此外，工具提示控制項有兩種類別的特定樣式： **TTS_ALWAYSTIP**和**TTS_NOPREFIX**。  
+ *DwStyle*參數可以是任何的組合[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 此外，工具提示控制項有兩種類別的特定樣式： TTS_ALWAYSTIP 和 TTS_NOPREFIX。  
   
 |樣式|意義|  
 |-----------|-------------|  
-|**TTS_ALWAYSTIP**|指定資料指標上的工具，無論工具提示控制項的主控視窗是作用中或非使用中時，會出現工具提示。 若沒有這個樣式，工具的擁有者視窗是作用中，但它是在非使用中時，不會出現工具提示控制項。|  
-|**TTS_NOPREFIX**|此樣式會防止系統移除連字號 (&) 字元字串。 如果工具提示控制項沒有**TTS_NOPREFIX**樣式，系統會自動移除連字號字元，允許應用程式使用相同的字串，做為功能表項目，並以工具提示控制項的文字。|  
+|TTS_ALWAYSTIP|指定資料指標上的工具，無論工具提示控制項的主控視窗是作用中或非使用中時，會出現工具提示。 若沒有這個樣式，工具的擁有者視窗是作用中，但它是在非使用中時，不會出現工具提示控制項。|  
+|TTS_NOPREFIX|此樣式會防止系統移除連字號 (&) 字元字串。 如果工具提示控制項沒有 TTS_NOPREFIX 樣式，系統將會自動移除連字號字元，允許應用程式使用相同的字串，做為功能表項目，並以工具提示控制項的文字。|  
   
- 工具提示控制項具有`WS_POPUP`和**WS_EX_TOOLWINDOW**視窗樣式，無論您是否指定它們建立控制項時。  
+ 工具提示控制項有 WS_POPUP 和 WS_EX_TOOLWINDOW 視窗樣式，無論您是否指定它們建立控制項時。  
   
- 若要建立擴充的視窗樣式工具提示控制項，呼叫[CToolTipCtrl::CreateEx](#createex)而不是**建立**。  
+ 若要建立擴充的視窗樣式工具提示控制項，呼叫[CToolTipCtrl::CreateEx](#createex)而不是`Create`。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
@@ -302,20 +302,20 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `dwStyle`  
+ *dwStyle*  
  指定工具提示控制項的樣式。 請參閱**備註**區段[建立](#create)如需詳細資訊。  
   
  *dwStyleEx*  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  否則為 0，如果成功則為非零。  
   
 ### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是**建立**套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+ 使用`CreateEx`而不是`Create`套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
 ##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl  
  建構 `CToolTipCtrl` 物件。  
@@ -325,13 +325,13 @@ CToolTipCtrl();
 ```  
   
 ### <a name="remarks"></a>備註  
- 您必須呼叫**建立**之後建構物件。  
+ 您必須呼叫`Create`之後建構物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
 ##  <a name="deltool"></a>  CToolTipCtrl::DelTool  
- 移除所指定的工具`pWnd`和`nIDTool`集合中的工具提示控制項所支援的工具。  
+ 移除所指定的工具*pWnd*和*nIDTool*集合中的工具提示控制項所支援的工具。  
   
 ```  
 void DelTool(
@@ -340,10 +340,10 @@ void DelTool(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `nIDTool`  
+ *nIDTool*  
  此工具的識別碼。  
   
 ##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize  
@@ -354,7 +354,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpToolInfo`  
+ *lpToolInfo*  
  工具提示的指標[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -374,10 +374,10 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `lpToolInfo`|指標[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)接收目前的工具提示視窗的相關資訊的結構。|  
+|[out]*lpToolInfo*|指標[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)接收目前的工具提示視窗的相關資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果已成功; 擷取資訊否則， `false.`  
+ 如果已成功; 擷取資訊，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) Windows SDK 中所述的訊息。  
@@ -395,14 +395,14 @@ int GetDelayTime(DWORD dwDuration) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDuration`  
+ *dwDuration*  
  將會擷取指定的持續時間值的旗標。 這個參數可以是下列值之一：  
   
-- `TTDT_AUTOPOP` 擷取工具提示視窗保持可見當指標靜止於工具的週框矩形內的時間長度。  
+- TTDT_AUTOPOP 擷取的工具提示視窗的時間長度仍會顯示當指標靜止於工具的週框矩形內。  
   
-- `TTDT_INITIAL` 擷取工具提示視窗出現之前，指標必須保持靜止於工具的週框矩形內的時間的長度。  
+- 擷取 TTDT_INITIAL 隨即出現，指標必須保持靜止於工具提示視窗之前工具的週框矩形內的時間長度。  
   
-- `TTDT_RESHOW` 擷取後續工具提示視窗出現當指標從一種工具移動到另一個所花費的時間的長度。  
+- TTDT_RESHOW 擷取的後續工具提示視窗，顯示為指標所花費的時間長度將從一種工具之間。  
   
 ### <a name="return-value"></a>傳回值  
  指定的延遲時間 （毫秒）  
@@ -418,15 +418,15 @@ void GetMargin(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lprc`  
+ *lprc*  
  位址`RECT`將會收到的邊界資訊的結構。 成員[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構未定義的週框。 此訊息，請以結構成員解譯，如下所示：  
   
 |成員|表示法|  
 |------------|--------------------|  
-|**top**|上框線和工具提示文字，單位為像素頂端之間的距離。|  
-|**left**|左的框線和左側的像素為單位的提示文字之間的距離。|  
-|**bottom**|下框線和像素為單位的提示文字的底部之間的距離。|  
-|**right**|右框線和右端的像素為單位的提示文字之間的距離。|  
+|`top`|上框線和工具提示文字，單位為像素頂端之間的距離。|  
+|`left`|左的框線和左側的像素為單位的提示文字之間的距離。|  
+|`bottom`|下框線和像素為單位的提示文字的底部之間的距離。|  
+|`right`|右框線和右端的像素為單位的提示文字之間的距離。|  
   
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391)、 Windows SDK 中所述。  
@@ -455,17 +455,17 @@ void GetText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `str`  
+ *str*  
  若要參考`CString`物件，可接收工具的文字。  
   
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `nIDTool`  
+ *nIDTool*  
  此工具的識別碼。  
   
 ### <a name="remarks"></a>備註  
- `pWnd`和`nIDTool`參數識別的工具。 如果該工具先前註冊的工具提示控制項透過先前呼叫**CToolTipCtrl::AddTool**，所參考的物件`str`參數會指定工具的文字。  
+ *PWnd*和*nIDTool*參數識別的工具。 如果該工具先前註冊的工具提示控制項透過先前呼叫`CToolTipCtrl::AddTool`，所參考的物件*str*參數會指定工具的文字。  
   
 ##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor  
  擷取工具提示視窗中的背景色彩。  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `pttgt`|指標[TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260)結構，其中包含工具提示控制項的相關資訊。 此方法傳回時，`pszTitle`隸屬[TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260)結構指向標題文字。|  
+|[out]*pttgt*|指標[TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260)結構，其中包含工具提示控制項的相關資訊。 此方法傳回時， *pszTitle*隸屬[TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260)結構指向標題文字。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) Windows SDK 中所述的訊息。  
@@ -533,17 +533,17 @@ BOOL GetToolInfo(
  *ToolInfo*  
  若要參考`TOOLINFO`物件，可接收工具的文字。  
   
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `nIDTool`  
+ *nIDTool*  
  此工具的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- **Hwnd**和**uId**成員[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)所參考的結構*CToolInfo*識別的工具。 如果工具提示控制項先前呼叫透過已註冊該工具`AddTool`、`TOOLINFO`結構填滿工具的相關資訊。  
+ `hwnd`和`uId`成員[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)所參考的結構*CToolInfo*識別的工具。 如果工具提示控制項先前呼叫透過已註冊該工具`AddTool`、`TOOLINFO`結構填滿工具的相關資訊。  
   
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest  
  測試點，以判斷它是否在指定之工具的週框矩形內，如果是的話，擷取工具的相關資訊。  
@@ -556,20 +556,20 @@ BOOL HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `pt`  
+ *pt*  
  指標`CPoint`物件，其中包含要測試點的座標。  
   
- `lpToolInfo`  
+ *lpToolInfo*  
  指標[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)結構，其中包含工具的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果工具的周框; 內的點擊測試資訊所指定的點為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果此函數會傳回非零值，結構所指`lpToolInfo`填滿的矩形內的這個點位於的工具上的資訊。  
+ 如果此函數會傳回非零值，結構所指*lpToolInfo*填滿的矩形內的這個點位於的工具上的資訊。  
   
  `TTHITTESTINFO`結構定義如下：  
   
@@ -583,13 +583,13 @@ BOOL HitTest(
   
  `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
   
- **hwnd**  
+ `hwnd`  
  指定工具的控制代碼。  
   
- **pt**  
+ `pt`  
  指定點的座標，如果點在工具的周框。  
   
- **Ti**  
+ `ti`  
  此工具的相關資訊。 如需有關`TOOLINFO`結構，請參閱[CToolTipCtrl::GetToolInfo](#gettoolinfo)。  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
@@ -625,7 +625,7 @@ void RelayEvent(LPMSG lpMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpMsg`  
+ *lpMsg*  
  指標[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)結構，其中包含要轉送的訊息。  
   
 ### <a name="remarks"></a>備註  
@@ -633,9 +633,9 @@ void RelayEvent(LPMSG lpMsg);
   
 |WM_LBUTTONDOWN|WM_MOUSEMOVE|  
 |---------------------|-------------------|  
-|`WM_LBUTTONUP`|`WM_RBUTTONDOWN`|  
-|`WM_MBUTTONDOWN`|`WM_RBUTTONUP`|  
-|`WM_MBUTTONUP`||  
+|WM_LBUTTONUP|WM_RBUTTONDOWN|  
+|WM_MBUTTONDOWN|WM_RBUTTONUP|  
+|WM_MBUTTONUP||  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
@@ -656,7 +656,7 @@ void SetDelayTime(
  *nDelay*  
  指定新的延遲時間，以毫秒為單位。  
   
- `dwDuration`  
+ *dwDuration*  
  將會擷取指定的持續時間值的旗標。 請參閱[CToolTipCtrl::GetDelayTime](#getdelaytime)有效值的描述。  
   
  *iTime*  
@@ -673,7 +673,7 @@ void SetMargin(LPRECT lprc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lprc`  
+ *lprc*  
  位址`RECT`結構，其中包含要設定的邊界資訊。 成員`RECT`結構未定義的週框。 請參閱[CToolTipCtrl::GetMargin](#getmargin)的邊界資訊的說明。  
   
 ### <a name="remarks"></a>備註  
@@ -704,7 +704,7 @@ void SetTipBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clr`  
+ *clr*  
  新的背景色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -718,7 +718,7 @@ void SetTipTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clr`  
+ *clr*  
  新的文字色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -754,7 +754,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpToolInfo`  
+ *lpToolInfo*  
  指標[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)結構，指定要設定的資訊。  
   
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect  
@@ -768,13 +768,13 @@ void SetToolRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `nIDTool`  
+ *nIDTool*  
  此工具的識別碼。  
   
- `lpRect`  
+ *lpRect*  
  指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定新週框。  
   
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme  
@@ -785,7 +785,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pszSubAppName`  
+ *pszSubAppName*  
  包含要設定的視覺樣式的 Unicode 字串指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -818,16 +818,16 @@ void UpdateTipText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
+ *lpszText*  
  此工具的文字指標。  
   
- `pWnd`  
+ *pWnd*  
  中包含的工具視窗的指標。  
   
- `nIDTool`  
+ *nIDTool*  
  此工具的識別碼。  
   
- `nIDText`  
+ *nIDText*  
  包含工具的文字字串資源的識別碼。  
   
 ## <a name="see-also"></a>另請參閱  

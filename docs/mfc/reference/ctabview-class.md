@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375219"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121753"
 ---
 # <a name="ctabview-class"></a>CTabView 類別
 `CTabView`類別簡化索引標籤控制項類別的使用 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 在使用 MFC 的文件/檢視架構的應用程式。  
@@ -95,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pViewClass`  
+ [in]*pViewClass*  
  執行階段類別，插入檢視的指標。  
   
- [輸入] `strViewLabel`  
+ [in]*strViewLabel*  
  指定在索引標籤的文字。  
   
- [輸入] `iIndex`  
+ [in]*iIndex*  
  指定要插入檢視以零為起始的位置。 如果這個位置是新的索引標籤插入尾端的-1。  
   
- [輸入] `pContext`  
+ [in]*pContext*  
  指標`CCreateContext`的檢視。  
   
 ### <a name="return-value"></a>傳回值  
@@ -121,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hWndView`  
+ [in]*hWndView*  
  檢視的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 有效的指標為作用中的檢視，或`NULL`如果沒有使用中的檢視。  
+ 有效指標的使用中的檢視或為 NULL，如果沒有使用中的檢視。  
   
 ### <a name="remarks"></a>備註  
   
@@ -160,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果應該要建立索引標籤檢視，以及共用的捲軸。 否則為 `FALSE`。  
+ 如果索引標籤檢視應該要建立與共用的捲軸，則為 TRUE。 否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法時`CTabView`建立物件。  
+ 架構會呼叫這個方法時*CTabView*建立物件。  
   
- 覆寫`IsScrollBar`方法中的`CTabView`-衍生類別，並傳回`TRUE`如果您想要建立的檢視，有共用水平捲軸。  
+ 覆寫*IsScrollBar*方法中的*CTabView*-衍生類別，並傳回 TRUE，如果您想要建立的檢視，有共用水平捲軸。  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  索引標籤檢視進行作用中或非使用中時，由架構呼叫。  
@@ -175,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `view`  
+ [in]*檢視*  
  檢視指標。  
   
 ### <a name="remarks"></a>備註  
@@ -189,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iTabNum`  
+ [in]*iTabNum*  
  要移除之檢視的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -205,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iTabNum`  
+ [in]*iTabNum*  
  索引標籤檢視以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果指定的檢視已啟用，`FALSE`如果檢視的索引無效。  
+ 如果指定的檢視已啟用，FALSE 如果檢視的索引無效，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)。  

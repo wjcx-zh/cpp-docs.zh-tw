@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8a888cfdf8d83f3628bf4ad80b26db6ac51ad72
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377436"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123093"
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件對應
 下列巨集可以用於處理 DHTML 事件。  
@@ -42,32 +42,32 @@ ms.locfileid: "33377436"
 |[DHTML_EVENT_AXCONTROL](#dhtml_event_axcontrol)|用來處理 ActiveX 控制項所引發的事件。|  
 |[DHTML_EVENT_CLASS](#dhtml_event_class)|用來處理所有 HTML 項目，與特定的 CSS 類別的文件層級的事件。|  
 |[DHTML_EVENT_ELEMENT](#dhtml_event_element)|用來處理項目層級的事件。|  
-|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|用來處理**onafterupdate**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|用來處理**onbeforeupdate**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|用來處理**onblur**事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|用來處理`onafterupdate`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|用來處理`onbeforeupdate`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|用來處理`onblur`事件，從 HTML 項目。|  
 |[DHTML_EVENT_ONCHANGE](#dhtml_event_onchange)|用來處理`onchange`事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|用來處理**onclick**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|用來處理**ondataavailable**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|用來處理**ondatasetchanged**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|用來處理**ondatasetcomplete**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|用來處理**類似**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|用來處理**ondragstart**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|用來處理**onerrorupdate**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|用來處理**onfilterchange**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|用來處理**onfocus**事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|用來處理`onclick`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|用來處理`ondataavailable`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|用來處理`ondatasetchanged`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|用來處理`ondatasetcomplete`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|用來處理`ondblclick`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|用來處理`ondragstart`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|用來處理`onerrorupdate`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|用來處理`onfilterchange`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|用來處理`onfocus`事件，從 HTML 項目。|  
 |[DHTML_EVENT_ONHELP](#dhtml_event_onhelp)|用來處理`onhelp`事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|用來處理**onkeydown**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|用來處理**onkeypress**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|用來處理**onkeyup**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|用來處理**onmousedown**事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|用來處理`onkeydown`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|用來處理`onkeypress`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|用來處理`onkeyup`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|用來處理`onmousedown`事件，從 HTML 項目。|  
 |[DHTML_EVENT_ONMOUSEMOVE](#dhtml_event_onmousemove)|用來處理`onmousemove`事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|用來處理**onmouseout**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|用來處理**onmouseover**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|用來處理**onmouseup**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|用來處理**onresize**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|用來處理**onrowenter**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|用來處理**onrowexit**事件，從 HTML 項目。|  
-|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|用來處理**onselectstart**事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|用來處理`onmouseout`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|用來處理`onmouseover`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|用來處理`onmouseup`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|用來處理`onresize`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|用來處理`onrowenter`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|用來處理`onrowexit`事件，從 HTML 項目。|  
+|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|用來處理`onselectstart`事件，從 HTML 項目。|  
 |[DHTML_EVENT_TAG](#dhtml_event_tag)|用來處理所有的項目具有特定的 HTML 標記的文件層級的事件。|  
 |[END_DHTML_EVENT_MAP](#end_dhtml_event_map)|DHTML 事件對應結束標記。|  
 |[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)|DHTML 事件對應結束標記。 |
@@ -97,13 +97,13 @@ BEGIN_DHTML_EVENT_MAP(className)
 ```  
   
 ### <a name="parameters"></a>參數  
- `className`  
+ *類別名稱*  
  包含 DHTML 事件對應的類別名稱。 這個類別應該直接或間接衍生自[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)並包含[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)其類別定義中的巨集。  
   
 ### <a name="remarks"></a>備註  
- DHTML 事件對應加入至您的類別，提供資訊給**CDHtmlDialog** ，可以用來引發 HTML 項目或與您的類別處理函式的網頁中的 ActiveX 控制項的路由事件。  
+ DHTML 事件對應加入至您的類別，提供資訊給`CDHtmlDialog`，可以用來引發 HTML 項目或與您的類別處理函式的網頁中的 ActiveX 控制項的路由事件。  
   
- 位置`BEGIN_DHTML_EVENT_MAP`類別的實作 (.cpp) 檔案中的巨集後面`DHTML_EVENT`巨集的事件類別是處理 (例如，`DHTML_EVENT_ONMOUSEOVER`為 mouseover 事件)。 使用[END_DHTML_EVENT_MAP](#end_dhtml_event_map)巨集，以標記事件對應的結尾。 這些巨集實作下列函數：  
+ 類別的實作檔 (.cpp) 後面接著 DHTML_EVENT 巨集，此類別是要處理的事件 (例如，為 mouseover 事件 DHTML_EVENT_ONMOUSEOVER) 括住 BEGIN_DHTML_EVENT_MAP 巨集。 使用[END_DHTML_EVENT_MAP](#end_dhtml_event_map)巨集，以標記事件對應的結尾。 這些巨集實作下列函數：  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -111,20 +111,20 @@ BEGIN_DHTML_EVENT_MAP(className)
   **標頭**afxdhtml.h  
   
 ##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
- 標記的類別定義內 DHTML 事件對應的開頭`className`。  
+ 標記的類別定義內 DHTML 事件對應的開頭*className*。  
   
 ```   
 BEGIN_DHTML_EVENT_MAP_INLINE(className)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `className`  
+ *類別名稱*  
  包含 DHTML 事件對應的類別名稱。 這個類別應該直接或間接衍生自[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)並包含[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)其類別定義中的巨集。  
   
 ### <a name="remarks"></a>備註  
- DHTML 事件對應加入至您的類別，提供資訊給**CDHtmlDialog** ，可以用來引發 HTML 項目或與您的類別處理函式的網頁中的 ActiveX 控制項的路由事件。  
+ DHTML 事件對應加入至您的類別，提供資訊給`CDHtmlDialog`，可以用來引發 HTML 項目或與您的類別處理函式的網頁中的 ActiveX 控制項的路由事件。  
   
- 位置`BEGIN_DHTML_EVENT_MAP`後面接著巨集的類別定義 (.h) 檔中`DHTML_EVENT`巨集的事件類別是處理 (例如，`DHTML_EVENT_ONMOUSEOVER`為 mouseover 事件)。 使用[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)巨集，以標記事件對應的結尾。 這些巨集實作下列函數：  
+ 類別的定義 (.h) 檔後面接著 DHTML_EVENT 巨集，此類別是要處理的事件 (例如，為 mouseover 事件 DHTML_EVENT_ONMOUSEOVER) 括住 BEGIN_DHTML_EVENT_MAP 巨集。 使用[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)巨集，以標記事件對應的結尾。 這些巨集實作下列函數：  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -152,20 +152,20 @@ DECLARE_DHTML_EVENT_MAP()
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event"></a>  DHTML_EVENT  
- 處理 （在文件層級） 所識別的事件`dispid`源自所識別的 HTML 元素`elemName`。  
+ 處理 （在文件層級） 所識別的事件*dispid*源自所識別的 HTML 元素*elemName*。  
   
 ```   
 DHTML_EVENT(dispid, elemName,  memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  要處理事件的 DISPID。  
   
- `elemName`  
- `LPCWSTR`保留來源事件，將 HTML 項目的 ID 或**NULL**來處理文件的事件。  
+ *elemName*  
+ 保留來源事件，將 HTML 項目的 ID LPCWSTR 或 NULL 處理文件事件。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -175,20 +175,20 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
- 處理所識別的事件`dispid`所識別的 ActiveX 控制項引發`controlName`。  
+ 處理所識別的事件*dispid*所識別的 ActiveX 控制項引發*目*。  
   
 ```   
 DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)  
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  要處理的事件分派識別碼。  
   
- `controlName`  
- `LPCWSTR`持有 HTML 控制項的 ID 而引發的事件。  
+ *目*  
+ LPCWSTR 持有 HTML 控制項的 ID 而引發的事件。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -198,20 +198,20 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
- 處理 （在文件層級） 所識別的事件`dispid`源自任何 HTML 項目所識別的 CSS 類別`elemName`。  
+ 處理 （在文件層級） 所識別的事件*dispid*源自任何 HTML 項目所識別的 CSS 類別*elemName*。  
   
 ```   
 DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  要處理的事件分派識別碼。  
   
- `elemName`  
- `LPCWSTR`持有當做事件來源的 HTML 項目之 CSS 類別。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源的 HTML 項目之 CSS 類別。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -221,44 +221,44 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
- 處理 (所識別的項目`elemName`) 所識別的事件`dispid`。  
+ 處理 (所識別的項目*elemName*) 所識別的事件*dispid*。  
   
 ```   
 DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn) 
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  要處理的事件分派識別碼。  
   
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
  若要新增的項目，以使用這個巨集[DHTML 事件對應](#begin_dhtml_event_map_inline)在您的類別。  
   
- 如果這個巨集用來處理 nonbubbling 事件，事件來源會所識別的元素`elemName`。  
+ 如果這個巨集用來處理 nonbubbling 事件，事件來源會所識別的元素*elemName*。  
   
- 如果這個巨集用來處理反昇事件，所識別之項目的`elemName`可能不到事件的來源 (來源可能會包含任何項目`elemName`)。  
+ 如果這個巨集用來處理反昇事件，所識別之項目的*elemName*可能不到事件的來源 (來源可能會包含任何項目*elemName*)。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
- （在文件層級） 會處理**onafterupdate**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onafterupdate`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -268,17 +268,17 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
- （在文件層級） 會處理**onbeforeupdate**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onbeforeupdate`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -288,17 +288,17 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
- （在項目層級） 會處理**onblur**事件。 這是 nonbubbling 事件。  
+ （在項目層級） 會處理`onblur`事件。 這是 nonbubbling 事件。  
   
 ```   
 DHTML_EVENT_ONBLUR(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -315,10 +315,10 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -328,17 +328,17 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
- （在文件層級） 會處理**onclick**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onclick`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONCLICK(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -348,17 +348,17 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
- （在文件層級） 會處理**ondataavailable**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`ondataavailable`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -368,17 +368,17 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
- （在文件層級） 會處理**ondatasetchanged**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`ondatasetchanged`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -388,7 +388,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
- （在文件層級） 會處理**ondatasetcomplete**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`ondatasetcomplete`所識別的 HTML 項目所產生的事件`elemName`。  
   
 ```   
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn) 
@@ -396,10 +396,10 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -409,17 +409,17 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
- （在文件層級） 會處理**類似**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`ondblclick`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -429,17 +429,17 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
- （在文件層級） 會處理**ondragstart**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`ondragstart`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -449,7 +449,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
- （在文件層級） 會處理**onerrorupdate**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onerrorupdate`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```   
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)  
@@ -457,10 +457,10 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -470,7 +470,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
- （在文件層級） 會處理**onfilterchange**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onfilterchange`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -479,10 +479,10 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -492,7 +492,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
- （在項目層級） 會處理**onfocus**事件。 這是 nonbubbling 事件。  
+ （在項目層級） 會處理`onfocus`事件。 這是 nonbubbling 事件。  
   
 ```  
  
@@ -501,10 +501,10 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -514,7 +514,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
- （在文件層級） 會處理`onhelp`所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onhelp`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -523,10 +523,10 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -536,7 +536,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
- （在文件層級） 會處理**onkeydown**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onkeydown`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -545,10 +545,10 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -558,7 +558,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
- （在文件層級） 會處理**onkeypress**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onkeypress`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -567,10 +567,10 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -580,7 +580,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
- （在文件層級） 會處理**onkeyup**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onkeyup`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -589,10 +589,10 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -602,7 +602,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
- （在文件層級） 會處理**onmousedown**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onmousedown`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -611,10 +611,10 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -624,7 +624,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
- （在文件層級） 會處理`onmousemove`所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onmousemove`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -633,10 +633,10 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -646,7 +646,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
- （在文件層級） 會處理**onmouseout**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onmouseout`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -655,10 +655,10 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -668,7 +668,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
- （在文件層級） 會處理**onmouseover**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onmouseover`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -677,10 +677,10 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -690,7 +690,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
- （在文件層級） 會處理**onmouseup**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onmouseup`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -699,10 +699,10 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -712,7 +712,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
- （在項目層級） 會處理**onresize**事件。 這是 nonbubbling 事件。  
+ （在項目層級） 會處理`onresize`事件。 這是 nonbubbling 事件。  
   
 ```  
  
@@ -721,10 +721,10 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -734,7 +734,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
- （在文件層級） 會處理**onrowenter**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onrowenter`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -743,10 +743,10 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -756,7 +756,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
- （在文件層級） 會處理**onrowexit**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onrowexit`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -765,10 +765,10 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -778,7 +778,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
- （在文件層級） 會處理**onselectstart**所識別的 HTML 項目所產生的事件`elemName`。  
+ （在文件層級） 會處理`onselectstart`所識別的 HTML 項目所產生的事件*elemName*。  
   
 ```  
  
@@ -787,10 +787,10 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>參數  
- `elemName`  
- `LPCWSTR`持有當做事件來源將 HTML 項目的識別碼。  
+ *elemName*  
+ LPCWSTR 持有當做事件來源將 HTML 項目的識別碼。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -800,20 +800,20 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
   **標頭**afxdhtml.h  
   
 ##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
- 處理 （在文件層級） 所識別的事件`dispid`源自任何 HTML 項目所識別的 HTML 標記`elemName`。  
+ 處理 （在文件層級） 所識別的事件`dispid`源自任何 HTML 項目所識別的 HTML 標記*elemName*。  
   
 ```   
 DHTML_EVENT_TAG(dispid, elemName,  memberFxn)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  要處理的事件分派識別碼。  
   
- `elemName`  
+ *elemName*  
  當做事件來源之 HTML 項目的 HTML 標記。  
   
- `memberFxn`  
+ *memberFxn*  
  事件處理常式函式。  
   
 ### <a name="remarks"></a>備註  
@@ -844,7 +844,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ```  
   
 ### <a name="remarks"></a>備註  
- Put`BEGIN_DHTML_URL_EVENT_MAP`的實作檔案中您[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-衍生的類別。 請遵循與[內嵌 DHTML 事件對應](#begin_embed_dhtml_event_map)和[URL 項目](#begin_url_entries)，然後關閉使用[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)。 包含[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)類別定義中的巨集。  
+ 實作檔中放置 BEGIN_DHTML_URL_EVENT_MAP 您[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-衍生的類別。 請遵循與[內嵌 DHTML 事件對應](#begin_embed_dhtml_event_map)和[URL 項目](#begin_url_entries)，然後關閉使用[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)。 包含[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)類別定義中的巨集。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
@@ -861,7 +861,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ```  
   
 ### <a name="parameters"></a>參數  
- `className`  
+ *類別名稱*  
  包含事件對應的類別名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 內嵌的 DHTML 事件對應都必須位於[DHTML 和 URL 事件對應](#begin_dhtml_url_event_map))。  
   
  *mapName*  
@@ -870,9 +870,9 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="remarks"></a>備註  
  多頁 DHTML 對話方塊包含多個 HTML 網頁，其中每一個都可以引發 DHTML 事件，因此內嵌的事件對應用來將事件對應至每個頁面為基礎的處理常式。  
   
- DHTML 和 URL 事件對應中的內嵌的事件對應組成`BEGIN_EMBED_DHTML_EVENT_MAP`後面接著巨集[DHTML_EVENT](#dhtml_event)巨集和[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)巨集。  
+ DHTML 和 URL 事件對應中的內嵌的事件對應組成 BEGIN_EMBED_DHTML_EVENT_MAP 巨集後面[DHTML_EVENT](#dhtml_event)巨集和[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)巨集。  
   
- 每個內嵌的事件對應需要對應[URL 事件項目](#url_event_entry)對應*mapName* (指定在`BEGIN_EMBED_DHTML_EVENT_MAP`) 至 URL 或 HTML 資源。  
+ 每個內嵌的事件對應需要對應[URL 事件項目](#url_event_entry)對應*mapName* （指定於 BEGIN_EMBED_DHTML_EVENT_MAP） 至 URL 或 HTML 資源。  
   
 ### <a name="example"></a>範例  
  請參閱中的範例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
@@ -889,11 +889,11 @@ BEGIN_URL_ENTRIES(className)
 ```  
   
 ### <a name="parameters"></a>參數  
- `className`  
+ *類別名稱*  
  包含 URL 事件項目對應之類別的名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件項目對應必須在內部[DHTML 和 URL 事件對應](#begin_dhtml_url_event_map))。  
   
 ### <a name="remarks"></a>備註  
- 多頁 DHTML 對話方塊包含多個 HTML 網頁，因為 URL 事件項目用來對應 Url 或 HTML 資源對應[內嵌 DHTML 事件對應](#begin_embed_dhtml_event_map)。 Put`URL_EVENT_ENTRY`巨集之間`BEGIN_URL_ENTRIES`和[END_URL_ENTRIES](#end_url_entries)巨集。  
+ 多頁 DHTML 對話方塊包含多個 HTML 網頁，因為 URL 事件項目用來對應 Url 或 HTML 資源對應[內嵌 DHTML 事件對應](#begin_embed_dhtml_event_map)。 Put URL_EVENT_ENTRY 巨集之間 BEGIN_URL_ENTRIES 和[END_URL_ENTRIES](#end_url_entries)巨集。  
   
 ### <a name="example"></a>範例  
  請參閱中的範例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
@@ -926,8 +926,8 @@ END_DHTML_URL_EVENT_MAP(className)
 ```  
   
 ### <a name="parameters"></a>參數  
- `className`  
- 包含事件對應的類別名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 這應該符合`className`對應[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)巨集。  
+ *類別名稱*  
+ 包含事件對應的類別名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 這應該符合*className*對應[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)巨集。  
   
 ### <a name="example"></a>範例  
  請參閱中的範例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  
@@ -971,7 +971,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
 ```  
   
 ### <a name="parameters"></a>參數  
- `className`  
+ *類別名稱*  
  包含 URL 事件項目對應之類別的名稱。 這個類別應該直接或間接衍生自[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)。 URL 事件項目對應必須在內部[DHTML 和 URL 事件對應](#begin_dhtml_url_event_map))。  
   
  *Url*  

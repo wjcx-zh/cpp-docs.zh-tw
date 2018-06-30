@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372991"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122633"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 類別
 `CVSListBox`類別支援可編輯的清單控制項。  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strIext`  
+ [in]*strIext*  
  字串的參考。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  特定應用程式的 32 位元值與字串相關聯。 預設值為 0。  
   
- [輸入] `iIndex`  
- 將保留在字串的位置以零為起始的索引。 如果`iIndex`參數為-1，字串會新增至清單的結尾。 預設值為 -1。  
+ [in]*iIndex*  
+ 將保留在字串的位置以零為起始的索引。 如果*iIndex*參數為-1，字串會新增至清單的結尾。 預設值為 -1。  
   
 ### <a name="return-value"></a>傳回值  
  字串清單控制項中的位置以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 使用[CVSListBox::GetItemData](#getitemdata)方法來擷取所指定的值`dwData`參數。 這個值可以是應用程式特定整數或其他資料的指標。  
+ 使用[CVSListBox::GetItemData](#getitemdata)方法來擷取所指定的值*dwData*參數。 這個值可以是應用程式特定整數或其他資料的指標。  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  建構 `CVSListBox` 物件。  
@@ -158,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果編輯作業會成功; 啟動否則， `FALSE`。  
+ 如果編輯作業會成功; 啟動，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  在使用者開始編輯作業，連按兩下某個項目的標籤，或按**F2**或**空格鍵**索引鍵的項目有焦點時。  
@@ -188,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -246,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已移除指定的項目。否則， `FALSE`。  
+ 已移除指定的項目; 如果為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -262,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iItem`  
+ [in]*iItem*  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+ 如果此方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  此方法會選取指定的項目，而且如有必要，將項目捲動到檢視。  
@@ -281,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  可編輯的清單控制項項目以零為起始的索引。  
   
- [輸入] `dwData`  
+ [in]*dwData*  
  32 位元值。 這個值可以是應用程式特定整數或其他資料的指標。  
   
 ### <a name="remarks"></a>備註  

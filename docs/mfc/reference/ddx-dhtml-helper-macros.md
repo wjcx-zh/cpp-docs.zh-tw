@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372071"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121698"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper 巨集
 DDX_DHtml helper 巨集可以讓您輕鬆存取常用的 HTML 網頁上的控制項屬性。  
@@ -66,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
@@ -89,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
@@ -114,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
@@ -140,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
@@ -163,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。 請參閱*值*中[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)。  
   
 ## <a name="remarks"></a>備註  
@@ -188,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
@@ -213,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
@@ -236,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>參數  
- `dx`  
+ *dx*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
   
- `name`  
+ *name*  
  您指定 HTML 控制項的 ID 參數的值。  
   
- `var`  
+ *var*  
  交換值。  
   
 ## <a name="remarks"></a>備註  
- 當使用`DDX_DHtml_Img_Src`巨集來擷取影像項目時，Internet Explorer 映像物件的 src 屬性會傳回完全逸出的映像來源 URL。 例如，如果您使用`DDX_DHtml_Img_Src`巨集，以將影像項目 src 屬性設定為字串"一些有趣圖片，"Internet Explorer 時擷取該屬性時，會傳回字串"res://d:\myapplication\myapp.exe/some%20interesting %20picture。 」  
+ 當使用 DDX_DHtml_Img_Src 巨集來擷取影像元素的 src 屬性，Internet Explorer 的影像物件會傳回完全逸出的映像來源 URL。 比方說，如果您使用 DDX_DHtml_Img_Src 巨集影像元素的 src 屬性設定為字串"一些有趣的圖片 」，當您擷取該屬性時，Internet Explorer 將會傳回字串"res://d:\myapplication\myapp.exe/some%20interesting %20picture。 」  
   
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLIMGELEMENT_SRC 分派識別碼。  
 

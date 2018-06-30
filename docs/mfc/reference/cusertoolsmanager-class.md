@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa99952daf401132768d9be5d4c589b5fdbee52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf73aa44134aa05a61b372080b7e2033a73bf5b0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376193"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122872"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager 類別
 會維護的集合[CUserTool 類別](../../mfc/reference/cusertool-class.md)應用程式中的物件。 使用者工具是執行外部應用程式的功能表項目。 `CUserToolsManager` 物件可讓使用者或開發人員將新的使用者工具加入至應用程式。 它支援執行與使用者工具相關聯的命令，也會在 Windows 登錄中儲存使用者工具的相關資訊。  
@@ -135,7 +135,7 @@ CUserTool* CreateNewTool();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標，新建的使用者工具，或`NULL`如果使用者工具的數目已超過最大值。 傳回的型別是傳遞至型別相同`CWinAppEx::EnableUserTools`為`pToolRTC`參數。  
+ 新建立的使用者工具或如果使用者工具的數目已超過最大值為 NULL 指標。 傳回的型別是傳遞至型別相同`CWinAppEx::EnableUserTools`為*pToolRTC*參數。  
   
 ### <a name="remarks"></a>備註  
  這個方法的呼叫中已提供範圍中尋找第一個可用的功能表命令識別碼[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)並指派使用者工具，此識別碼。  
@@ -159,22 +159,22 @@ CUserToolsManager(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdToolsDummy`  
+ [in]*uiCmdToolsDummy*  
  不帶正負號的整數，架構會使用預留位置做為使用者的 [工具] 功能表的命令識別碼。  
   
- [輸入] `uiCmdFirst`  
+ [in]*uiCmdFirst*  
  第一個使用者工具命令的命令識別碼。  
   
- [輸入] `uiCmdLast`  
+ [in]*uiCmdLast*  
  最後一個使用者工具命令的命令識別碼。  
   
- [輸入] `pToolRTC`  
+ [in]*pToolRTC*  
  類別， [CUserToolsManager::CreateNewTool](#createnewtool)建立。 藉由使用這個類別，您可以使用的衍生的類型[CUserTool 類別](../../mfc/reference/cusertool-class.md)而不是預設實作。  
   
- [輸入] `uArgMenuID`  
+ [in]*uArgMenuID*  
  引數的快顯功能表的功能表資源識別碼。  
   
- [輸入] `uInitDirMenuID`  
+ [in]*uInitDirMenuID*  
  初始目錄的快顯功能表的功能表資源識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -188,14 +188,14 @@ CUserTool* FindTool(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdId`  
+ [in]*uiCmdId*  
  功能表命令的識別項。  
   
 ### <a name="return-value"></a>傳回值  
- 指標[CUserTool 類別](../../mfc/reference/cusertool-class.md)或`CUserTool`-衍生物件，如果成功，否則為`NULL`。  
+ 指標[CUserTool 類別](../../mfc/reference/cusertool-class.md)或`CUserTool`-衍生物件，如果成功; 否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 當`FindTool`是成功，傳回的型別是相同的型別`pToolRTC`參數[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
+ 當`FindTool`是成功，傳回的型別是相同的型別*pToolRTC*參數[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
   
 ##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
  傳回相關聯的資源識別碼**引數**功能表**工具** 索引標籤**自訂** 對話方塊。  
@@ -208,7 +208,7 @@ UINT GetArgumentsMenuID() const;
  功能表資源的識別項。  
   
 ### <a name="remarks"></a>備註  
- `uArgMenuID`參數[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)指定資源的識別碼。  
+ *UArgMenuID*參數[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)指定資源的識別碼。  
   
 ##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
  傳回的預設副檔名**開啟舊檔**對話方塊 ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) 中使用**命令**欄位**工具** 索引標籤**自訂** 對話方塊。  
@@ -241,7 +241,7 @@ UINT GetInitialDirMenuID() const;
  功能表資源的識別項。  
   
 ### <a name="remarks"></a>備註  
- 傳回指定的識別碼是在`uInitDirMenuID`參數[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
+ 傳回指定的識別碼是在*uInitDirMenuID*參數[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
   
 ##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
  傳回應用程式可以配置的使用者工具的最大數目。  
@@ -254,7 +254,7 @@ int GetMaxTools() const;
  可配置的使用者工具的數目上限。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以擷取工具，可配置在應用程式的最大數目。 這個數字是從範圍中的識別碼數目`uiCmdFirst`透過`uiCmdLast`參數傳遞給[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
+ 呼叫此方法以擷取工具，可配置在應用程式的最大數目。 這個數字是從範圍中的識別碼數目*uiCmdFirst*透過*uiCmdLast*參數傳遞給[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
   
 ##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
  傳回使用者工具的功能表項目預留位置的命令識別碼。  
@@ -267,7 +267,7 @@ UINT GetToolsEntryCmd() const;
  預留位置的命令識別碼。  
   
 ### <a name="remarks"></a>備註  
- 若要啟用使用者工具，您呼叫[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。 `uiCmdToolsDummy`參數指定 [工具] 項目命令的命令識別碼。 這個方法會傳回工具項目命令識別碼。 只要使用該識別碼，就在功能表中，它取代為使用者工具的清單時，功能表隨即出現。  
+ 若要啟用使用者工具，您呼叫[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。 *UiCmdToolsDummy*參數指定 [工具] 項目命令的命令識別碼。 這個方法會傳回工具項目命令識別碼。 只要使用該識別碼，就在功能表中，它取代為使用者工具的清單時，功能表隨即出現。  
   
 ##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
  傳回清單中的使用者工具的參考。  
@@ -280,7 +280,7 @@ const CObList& GetUserTools() const;
  Const 參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含使用者工具的清單。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，以擷取使用者的清單工具[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)物件會維護。 每個使用者工具由型別的物件[CUserTool 類別](../../mfc/reference/cusertool-class.md)或型別衍生自`CUserTool`。 類型，由指定`pToolRTC`參數，當您呼叫[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)來讓使用者工具。  
+ 呼叫這個方法，以擷取使用者的清單工具[CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)物件會維護。 每個使用者工具由型別的物件[CUserTool 類別](../../mfc/reference/cusertool-class.md)或型別衍生自`CUserTool`。 類型，由指定*pToolRTC*參數，當您呼叫[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)來讓使用者工具。  
   
 ##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
  執行具有指定的命令識別碼。 使用者工具相關聯的應用程式  
@@ -290,14 +290,14 @@ BOOL InvokeTool(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdId`  
+ [in]*uiCmdId*  
  與使用者工具相關聯的功能表命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果使用者工具相關聯的命令執行成功，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法才能執行與使用者相關聯的應用程式工具，具有所指定的命令識別碼`uiCmdId`。  
+ 呼叫此方法才能執行與使用者相關聯的應用程式工具，具有所指定的命令識別碼*uiCmdId*。  
   
 ##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
  判斷是否與使用者工具相關聯的命令識別碼。  
@@ -307,7 +307,7 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiCmdId`  
+ [in]*uiCmdId*  
  功能表項目的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -324,7 +324,7 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows 登錄機碼的路徑。  
   
 ### <a name="return-value"></a>傳回值  
@@ -343,14 +343,14 @@ BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTool`  
+ [in]*pTool*  
  指定要移動的使用者工具。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者工具已順利啟動。 下移否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 方法失敗，如果此工具，`pTool`指定不是內部的清單或此工具是否在清單中最後一個。  
+ 方法失敗，如果此工具， *pTool*指定不是內部的清單或此工具是否在清單中最後一個。  
   
 ##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
  在使用者工具清單中，向上移動指定的使用者工具。  
@@ -360,14 +360,14 @@ BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pTool`  
+ [in]*pTool*  
  指定要移動的使用者工具。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者工具往上移可順利啟動。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果該方法會失敗的工具，`pTool`參數會指定不是內部的清單或此工具是否在清單中的第一個工具項目。  
+ 如果該方法會失敗的工具， *pTool*參數會指定不是內部的清單或此工具是否在清單中的第一個工具項目。  
   
 ##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
  從應用程式中移除指定的使用者工具。  
@@ -377,14 +377,14 @@ BOOL RemoveTool(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、out] `pTool`  
+ [in、 out]*pTool*  
  要移除的使用者工具指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果成功移除工具。 否則為 `FALSE`。  
+ 如果已成功移除此工具，則為 TRUE。 否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如果成功移除此工具，這個方法會刪除`pTool`。  
+ 如果成功移除此工具，這個方法會刪除*pTool*。  
   
 ##  <a name="savestate"></a>  CUserToolsManager::SaveState  
  在 Windows 登錄中儲存使用者工具的相關資訊。  
@@ -394,7 +394,7 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows 登錄機碼路徑。  
   
 ### <a name="return-value"></a>傳回值  
@@ -413,7 +413,7 @@ void SetDefExt(const CString& strDefExt);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strDefExt`  
+ [in]*strDefExt*  
  文字字串，其中包含預設的副檔名。  
   
 ### <a name="remarks"></a>備註  
@@ -427,7 +427,7 @@ void SetFilter(const CString& strFilter);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strFilter`  
+ [in]*strFilter*  
  指定的篩選器。  
   
 ## <a name="see-also"></a>另請參閱  

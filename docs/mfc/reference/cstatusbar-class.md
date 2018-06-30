@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374295"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122937"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 類別
 具有一列文字輸出窗格或「指示器」的控制列。  
@@ -110,7 +110,7 @@ class CStatusBar : public CControlBar
   
 1.  呼叫[CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)更新窗格僅 0 中的文字。  
   
-2.  呼叫[CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext)在狀態列上`ON_UPDATE_COMMAND_UI`處理常式。  
+2.  呼叫[CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext)狀態列 ON_UPDATE_COMMAND_UI 處理常式中。  
   
 3.  呼叫[SetPaneText](#setpanetext)更新任何窗格的文字。  
   
@@ -140,7 +140,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDFind`  
+ *nIDFind*  
  指標的索引是要擷取的字串識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -160,19 +160,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  指標[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 視窗中是 [狀態] 列的父代的物件。  
   
- `dwStyle`  
+ *dwStyle*  
  狀態列樣式。 除了標準 Windows[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)，支援這些樣式。  
   
-- `CBRS_TOP` 控制列是在框架視窗的頂端。  
+- CBRS_TOP 控制列是在框架視窗的頂端。  
   
-- `CBRS_BOTTOM` 控制列是在框架視窗的底部。  
+- CBRS_BOTTOM 控制列是在框架視窗的底部。  
   
-- `CBRS_NOALIGN` 父代重新調整大小時未重新置放控制列。  
+- 父代重新調整大小時，不會重新定位 CBRS_NOALIGN 控制列。  
   
- `nID`  
+ *nID*  
  工具列的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -193,22 +193,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  指標[CWnd](../../mfc/reference/cwnd-class.md)其 Windows 視窗中是 [狀態] 列的父代的物件。  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  建立內嵌的其他樣式[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)物件。 預設值會指定狀態列，而不需要調整大小底框或工具提示支援。 支援的狀態 列樣式為：  
   
-- **SBARS_SIZEGRIP**狀態列控制項包含 [狀態] 列右邊的調整大小底框。 調整大小的底框類似縮放框線；它是使用者可以按一下並拖曳調整父視窗大小的矩形區域。  
+- SBARS_SIZEGRIP 狀態列控制項包括最右邊的 [狀態] 列的調整大小底框。 調整大小的底框類似縮放框線；它是使用者可以按一下並拖曳調整父視窗大小的矩形區域。  
   
-- **SBT_TOOLTIPS**狀態列支援工具提示。  
+- SBT_TOOLTIPS 狀態列支援工具提示。  
   
  如需有關這些樣式的詳細資訊，請參閱[CStatusBarCtrl 的設定](../../mfc/settings-for-the-cstatusbarctrl.md)。  
   
- `dwStyle`  
+ *dwStyle*  
  狀態的橫條樣式。 預設值會指定顯示狀態列，建立框架視窗的底部。 套用狀態列控制項樣式中所列的任何組合[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)和[CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create)。 不過，這個參數應該永遠包含 WS_CHILD 和 WS_VISIBLE 樣式。  
   
- `nID`  
+ *nID*  
  [狀態] 列的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -217,7 +217,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  此函式也會設定初始的字型，並將狀態設定為預設值的長條的高度。  
   
- 使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要有內嵌的狀態列控制項建立期間。 例如，設定`dwCtrlStyle`至**SBT_TOOLTIPS**顯示狀態 列物件中的工具提示。  
+ 使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要有內嵌的狀態列控制項建立期間。 例如，設定*dwCtrlStyle*至 SBT_TOOLTIPS 顯示狀態 列物件中的工具提示。  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  建構`CStatusBar`物件、 建立預設狀態列字型如有必要，，並設定為預設值的字型特性。  
@@ -234,28 +234,28 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，其中包含所需的繪圖的類型資訊。  
   
 ### <a name="remarks"></a>備註  
- **ItemAction**隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。 覆寫此成員函式，來實作主控描繪的繪圖`CStatusBar`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前終止此成員函式。  
+ `itemAction`隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。 覆寫此成員函式，來實作主控描繪的繪圖`CStatusBar`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件*lpDrawItemStruct*之前終止此成員函式。  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- 傳回所指定的標記識別碼`nIndex`。  
+ 傳回所指定的標記識別碼*nIndex*。  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  指標的識別碼是要擷取的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指標所指定的識別碼`nIndex`。  
+ 指標所指定的識別碼*nIndex*。  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- 複製指標所指定的座標`nIndex`至所指向的結構`lpRect`。  
+ 複製指標所指定的座標*nIndex*至所指向的結構*lpRect*。  
   
 ```  
 void GetItemRect(
@@ -264,17 +264,17 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取其矩形座標的指標的索引。  
   
- `lpRect`  
- 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，將會收到指標所指定的座標`nIndex`。  
+ *lpRect*  
+ 指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，將會收到指標所指定的座標*nIndex*。  
   
 ### <a name="remarks"></a>備註  
  座標是相對於狀態列的左上角像素為單位。  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- 設定`nID`， `nStyle`，和`cxWidth`至 ID、 樣式和寬度所指定的位置指標窗格的`nIndex`。  
+ 設定*nID*， *nStyle*，和*cxWidth*至 ID、 樣式和寬度所指定的位置指標窗格的*nIndex*。  
   
 ```  
 void GetPaneInfo(
@@ -285,16 +285,16 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取其資訊 窗格的索引。  
   
- `nID`  
- 若要參考**UINT**設窗格的識別碼。  
+ *nID*  
+ 參考設定 窗格的識別碼為 UINT。  
   
- `nStyle`  
- 若要參考**UINT**為樣式 窗格的設定。  
+ *nStyle*  
+ 設定為樣式 窗格的 UINT 參考。  
   
- `cxWidth`  
+ *cxWidth*  
  參考設定為窗格的寬度的整數。  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
@@ -305,11 +305,11 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取其樣式 窗格的索引。  
   
 ### <a name="return-value"></a>傳回值  
- [狀態列] 窗格中所指定的樣式`nIndex`。  
+ [狀態列] 窗格中所指定的樣式*nIndex*。  
   
 ### <a name="remarks"></a>備註  
  窗格的樣式會決定如何顯示 窗格。  
@@ -324,10 +324,10 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取其文字窗格的索引。  
   
- `rString`  
+ *rString*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要擷取的文字。  
   
 ### <a name="return-value"></a>傳回值  
@@ -352,7 +352,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  關於通用控制項的一般資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
 ##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- 陣列的對應項目所指定的值來設定每一個指標 ID `lpIDArray`、 載入每個識別碼，由指定之字串資源，並將指標的文字設為字串。  
+ 陣列的對應項目所指定的值來設定每一個指標 ID *lpIDArray*、 載入每個識別碼，由指定之字串資源，並將指標的文字設為字串。  
   
 ```  
 BOOL SetIndicators(
@@ -361,11 +361,11 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpIDArray`  
+ *lpIDArray*  
  識別碼的陣列指標。  
   
- `nIDCount`  
- 所指陣列中的項目數`lpIDArray`。  
+ *nIDCount*  
+ 所指陣列中的項目數*lpIDArray*。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -382,30 +382,30 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要設定其樣式指標窗格的索引。  
   
- `nID`  
+ *nID*  
  [指標] 窗格中的新識別碼。  
   
- `nStyle`  
+ *nStyle*  
  [指標] 窗格中的新樣式。  
   
- `cxWidth`  
+ *cxWidth*  
  新的指標窗格的寬度。  
   
 ### <a name="remarks"></a>備註  
  支援下列指標樣式：  
   
-- **SBPS_NOBORDERS**窗格沒有 3d 框線。  
+- SBPS_NOBORDERS 否 3d 窗格周圍的框線。  
   
-- **SBPS_POPOUT**反向框線，讓文字 」 會跳出。 」  
+- SBPS_POPOUT 反轉框線，讓文字 」 會跳出。 」  
   
-- **SBPS_DISABLED**不繪製文字。  
+- SBPS_DISABLED 不繪製文字。  
   
-- **SBPS_STRETCH** Stretch 窗格，以填滿未使用的空間。 只有每個狀態列上一個窗格可以將此樣式。  
+- SBPS_STRETCH 縮放以填滿未使用的空間的窗格。 只有每個狀態列上一個窗格可以將此樣式。  
   
-- **SBPS_NORMAL**沒有 stretch、 框線或快顯。  
+- SBPS_NORMAL 否 stretch、 框線或快顯。  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  呼叫此成員函式，設定狀態列窗格的樣式。  
@@ -417,10 +417,10 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  若要設定其樣式 窗格的索引。  
   
- `nStyle`  
+ *nStyle*  
  若要設定其樣式 窗格的樣式。  
   
 ### <a name="remarks"></a>備註  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  如需可用狀態列樣式的清單，請參閱[SetPaneInfo](#setpaneinfo)。  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- 呼叫此成員函式，將窗格文字所指向的字串為`lpszNewText`。  
+ 呼叫此成員函式，將窗格文字所指向的字串為*lpszNewText*。  
   
 ```  
 BOOL SetPaneText(
@@ -439,14 +439,14 @@ BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要設定其文字窗格的索引。  
   
- `lpszNewText`  
+ *lpszNewText*  
  新的窗格中文字指標。  
   
  *bUpdate*  
- 如果**TRUE**，窗格失效之後設定文字。  
+ 如果為 TRUE，窗格就會失效之後設定文字。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375816"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122911"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 類別
 為 `CPtrArray` 或 `CObArray`類別的物件提供類型安全「包裝函式」。  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>參數  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標陣列類別; 事件類別必須是陣列類別 (`CObArray`或`CPtrArray`)。  
   
- `TYPE`  
+ *型別*  
  基底類別的陣列中儲存的項目類型。  
   
 ## <a name="members"></a>成員  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *型別*  
  指定要加入至陣列元素的類型樣板參數。  
   
- `newElement`  
+ *newElement*  
  要加入此陣列的項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  如需詳細註解，請參閱[CObArray::Add](../../mfc/reference/cobarray-class.md#add)。  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- 此成員函式呼叫`BASE_CLASS` **:: Append**。  
+ 此成員函式呼叫`BASE_CLASS`:: Append * *。  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標陣列類別; 事件類別必須是陣列類別 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
   
  *型別*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標陣列類別; 事件類別必須是陣列類別 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
   
  *型別*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *型別*  
  指定儲存此陣列中的項目類型的樣板參數。  
   
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`BASE_CLASS` **:: GetUpperBound**。  
   
 ### <a name="return-value"></a>傳回值  
- 所指定的位置處的項目的臨時參考`nIndex`。 這個項目是範本參數所指定型別的*類型*。  
+ 所指定的位置處的項目的臨時參考*nIndex*。 這個項目是範本參數所指定型別的*類型*。  
   
 ### <a name="remarks"></a>備註  
  如需詳細註解，請參閱[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)。  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *型別*  
  指定儲存在陣列中的項目類型的樣板參數。  
   
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`BASE_CLASS` **:: GetUpperBound**。  
   
 ### <a name="return-value"></a>傳回值  
- 所指定的位置處的項目副本`nIndex`。 這個項目是範本參數所指定型別的*類型*。  
+ 所指定的位置處的項目副本*nIndex*。 這個項目是範本參數所指定型別的*類型*。  
   
 ### <a name="remarks"></a>備註  
  如需詳細註解，請參閱[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  可能會大於所傳回的值的整數索引[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。  
   
  *型別*  
  基底類別的陣列中儲存的項目類型。  
   
- `newElement`  
- 要放在這個陣列中的物件指標。 A`newElement`值的**NULL**允許。  
+ *newElement*  
+ 要放在這個陣列中的物件指標。 A *newElement*值的**NULL**允許。  
   
- `nCount`  
+ *nCount*  
  這個項目應該是次數插入 （預設值為 1）。  
   
- `nStartIndex`  
+ *nStartIndex*  
  可能會大於所傳回的值的整數索引`CObArray::GetUpperBound`。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標陣列類別; 事件類別必須是陣列類別 ( [CObArray](../../mfc/reference/cobarray-class.md)或[CPtrArray](../../mfc/reference/cptrarray-class.md))。  
   
- `pNewArray`  
+ *pNewArray*  
  另一個陣列，包含要加入至這個陣列的項目。  
   
 ### <a name="remarks"></a>備註  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *型別*  
  指定儲存在陣列中的項目類型的樣板參數。  
   
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值`BASE_CLASS` **:: GetUpperBound**。  
   
 ### <a name="remarks"></a>備註  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  整數索引大於或等於 0 且小於或等於所傳回的值[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)。  
   
  *型別*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  大於或等於 0 的整數索引。  
   
  *型別*  
  基底類別的陣列中儲存的項目類型。  
   
- `newElement`  
+ *newElement*  
  要加入此陣列的物件指標。 A **NULL**允許值。  
   
 ### <a name="remarks"></a>備註  

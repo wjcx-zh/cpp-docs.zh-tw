@@ -1,7 +1,7 @@
 ---
 title: ATL OLE DB 消費者精靈 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364946"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121685"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 這個精靈設定 OLE DB 取用者類別與資料繫結到指定的 OLE DB 提供者存取指定的資料來源所需。  
@@ -133,7 +133,7 @@ ms.locfileid: "32364946"
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  
@@ -189,5 +189,5 @@ ms.locfileid: "32364946"
   
 ## <a name="see-also"></a>另請參閱  
  [ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [連接字串] 和 [資料連結 (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

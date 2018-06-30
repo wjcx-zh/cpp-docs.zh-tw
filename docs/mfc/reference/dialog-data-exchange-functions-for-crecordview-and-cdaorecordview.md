@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377513"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123028"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的對話方塊資料交換函式
 本主題列出用來交換資料之間的 DDX_Field 函式[CRecordset](../../mfc/reference/crecordset-class.md)和[CRecordView](../../mfc/reference/crecordview-class.md)表單或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)表單。  
@@ -77,16 +77,16 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *index*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -120,16 +120,16 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -163,16 +163,16 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -189,7 +189,7 @@ void AFXAPI DDX_FieldCBStringExact(
   **標頭**afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
- `DDX_FieldCheck`函式會管理的傳輸`int`在對話方塊中，核取方塊控制項之間的資料形成檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
+ `DDX_FieldCheck`函式會管理的傳輸**int**在對話方塊中，核取方塊控制項之間的資料形成檢視或控制項檢視物件和**int**對話方塊、 表單檢視或控制項的資料成員檢視物件。  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -206,16 +206,16 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  核取方塊控制項的控制項屬性相關聯的資源識別碼。  
   
  *值*  
  對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數參考。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -227,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
   **標頭**afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
- `DDX_FieldLBIndex`函式會同步處理選取的項目在清單方塊控制項中資料錄檢視的索引和`int`資料錄檢視相關聯的資料錄集欄位資料成員。  
+ `DDX_FieldLBIndex`函式會同步處理選取的項目在清單方塊控制項中資料錄檢視的索引和**int**資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -244,16 +244,16 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *index*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -287,16 +287,16 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -330,16 +330,16 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -356,7 +356,7 @@ void AFXAPI DDX_FieldLBStringExact(
   **標頭**afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
- `DDX_FieldRadio`函式將以零為起始`int`成員變數的資料錄檢視的資料錄集與資料錄檢視中的選項按鈕群組中的目前選取的選項按鈕。  
+ `DDX_FieldRadio`函式將以零為起始**int**成員變數的資料錄檢視的資料錄集與資料錄檢視中的選項按鈕群組中的目前選取的選項按鈕。  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -373,16 +373,16 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
- 識別碼的第一個群組中 (樣式**WS_GROUP**) 中的相鄰的選項按鈕控制項的[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
+ *nIDC*  
+ 第一個識別碼的相鄰的選項按鈕控制項中的群組 （有樣式 WS_GROUP） [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -399,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
   **標頭**afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
- `DDX_FieldScroll`函式會同步處理資料錄檢視中的捲軸控制項捲軸位置和`int`與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。  
+ `DDX_FieldScroll`函式會同步處理資料錄檢視中的捲軸控制項捲軸位置和**int**與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員.  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -416,16 +416,16 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
- 識別碼的第一個群組中 (樣式**WS_GROUP**) 中的相鄰的選項按鈕控制項的[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
+ *nIDC*  
+ 第一個識別碼的相鄰的選項按鈕控制項中的群組 （有樣式 WS_GROUP） [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -442,7 +442,7 @@ void AFXAPI DDX_FieldScroll(
   **標頭**afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
-`DDX_FieldSlider`函式會同步處理資料錄檢視中的滑桿控制項捲動方塊位置和`int`與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。  
+`DDX_FieldSlider`函式會同步處理資料錄檢視中的滑桿控制項捲動方塊位置和**int**與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。  
    
 ### <a name="syntax"></a>語法  
   ```
@@ -459,16 +459,16 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  滑桿控制項的資源識別碼。  
   
  *值*  
  交換值的參考。 這個參數保留或將用來設定滑桿控制項的目前捲動方塊位置。  
   
- `pRecordset`  
+ *pRecordset*  
  相關聯的指標`CRecordset`或`CDaoRecordset`交換資料的物件。  
    
 ### <a name="remarks"></a>備註  
@@ -490,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
  [巨集和全域變數](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
- `DDX_FieldText`函式會管理的傳輸`int`，**簡短**，**長**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**， **double**， **BOOL**，或**位元組**編輯方塊控制項和資料錄集的欄位資料成員之間的資料。  
+ `DDX_FieldText`函式會管理的傳輸**int**，**簡短**，**長**，DWORD， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**， **double**， **BOOL**，或**位元組**編輯方塊控制項和資料錄集的欄位資料成員之間的資料。  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -603,16 +603,16 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDX`  
+ *pDX*  
  指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
   
- `nIDC`  
+ *nIDC*  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
  *值*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。 值的資料類型取決於哪一個多載版本`DDX_FieldText`您使用。  
   
- `pRecordset`  
+ *pRecordset*  
  指標[CRecordset](../../mfc/reference/crecordset-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)交換資料的物件。 此指標可以讓`DDX_FieldText`偵測及設定 Null 值。  
   
 ### <a name="remarks"></a>備註  

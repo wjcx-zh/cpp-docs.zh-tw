@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368871"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121646"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 類別
 
@@ -81,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
- 裝置內容的指標。 如果這個參數是`NULL`，架構會重新繪製作用中視窗。  
+ [in]*pDC*  
+ 裝置內容的指標。 如果這個參數是 NULL，架構會重新繪製作用中視窗。  
   
- [輸入] `nType`  
+ [in]*n*  
  其中一個`CSplitterWnd::ESplitType`列舉值，指定要繪製的分隔視窗項目。 有效值為`splitBox`， `splitBar`， `splitIntersection`，和`splitBorder`。  
   
- [輸入] `rect`  
+ [in]*rect*  
  指定的維度和位置繪製指定的分隔器視窗項目的周框。  
   
 ### <a name="remarks"></a>備註  

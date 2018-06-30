@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7cbdcc1c5534d8dd9ba5d4f895af70a8ec16ac5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 115b351ccbaf9c8c5cbccb0004d04c53e54351ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376962"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123055"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 代表應用程式內執行的執行緒。  
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
   
  有兩種一般的執行緒，`CWinThread`支援： 工作者執行緒和使用者介面執行緒。 背景工作執行緒中有任何訊息幫浦： 例如，執行緒執行背景計算的試算表應用程式中的。 使用者介面執行緒有訊息幫浦，並處理從系統收到的訊息。 [CWinApp](../../mfc/reference/cwinapp-class.md)和從它衍生的類別是使用者介面執行緒的範例。 您也可以直接從衍生其他使用者介面執行緒`CWinThread`。  
   
- 類別的物件`CWinThread`通常存在該執行緒持續期間。 如果您想要修改此行為，設定[m_bAutoDelete](#m_bautodelete)至**FALSE**。  
+ 類別的物件`CWinThread`通常存在該執行緒持續期間。 如果您想要修改此行為，設定[m_bAutoDelete](#m_bautodelete)為 FALSE。  
   
  `CWinThread`類別是為了讓您的程式碼與 MFC 完整的安全執行緒。 執行緒區域資料架構用來維護執行緒特定的資訊由管理`CWinThread`物件。 因為此相依性`CWinThread`處理執行緒區域資料，任何使用 MFC 的執行緒必須由 MFC。 例如，執行階段函式所建立的執行緒[_beginthread、 _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)不能使用任何 MFC 應用程式開發介面。  
   
@@ -157,17 +157,17 @@ BOOL CreateThread(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCreateFlags`  
+ *dwCreateFlags*  
  指定控制的執行緒建立的額外旗標。 這個旗標可以包含兩個值之一：  
   
-- **CREATE_SUSPENDED**暫停計數為其中一個啟動執行緒。 使用**CREATE_SUSPENDED**如果您想要初始化的任何成員資料`CWinThread`物件，例如[m_bAutoDelete](#m_bautodelete)或衍生類別中，執行緒開始執行之前的任何成員。 當您初始化完成之後，使用[CWinThread::ResumeThread](#resumethread)開始執行的執行緒。 執行緒不會執行直到`CWinThread::ResumeThread`呼叫。  
+- CREATE_SUSPENDED 暫停計數為其中一個啟動執行緒。 如果您想要初始化的任何成員資料，請使用 CREATE_SUSPENDED`CWinThread`物件，例如[m_bAutoDelete](#m_bautodelete)或衍生類別中，執行緒開始執行之前的任何成員。 當您初始化完成之後，使用[CWinThread::ResumeThread](#resumethread)開始執行的執行緒。 執行緒不會執行直到`CWinThread::ResumeThread`呼叫。  
   
 - **0**在建立後立即啟動執行緒。  
   
- `nStackSize`  
+ *nStackSize*  
  指定的大小，以位元組為單位的新執行緒的堆疊。 如果**0**，堆疊大小預設為相同大小的處理序的主要執行緒。  
   
- `lpSecurityAttrs`  
+ *lpSecurityAttrs*  
  指向[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定在執行緒的安全性屬性。  
   
 ### <a name="return-value"></a>傳回值  
@@ -197,9 +197,9 @@ virtual int ExitInstance();
  在執行緒結束代碼。0 表示沒有錯誤，和大於 0 的值表示錯誤。 這個值可以藉由呼叫擷取[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)。  
   
 ### <a name="remarks"></a>備註  
- 請勿呼叫此成員函式從任何地方但內**執行**成員函式。 此成員函式只能用於使用者介面執行緒。  
+ 請勿呼叫此成員函式從任何地方但內`Run`成員函式。 此成員函式只能用於使用者介面執行緒。  
   
- 此函式的預設實作會刪除`CWinThread`物件，如果[m_bAutoDelete](#m_bautodelete)是**TRUE**。 如果您想要在執行緒結束時執行其他清除，請覆寫這個函式。 實作`ExitInstance`執行您的程式碼之後，應該呼叫基底類別的版本。  
+ 此函式的預設實作會刪除`CWinThread`物件，如果[m_bAutoDelete](#m_bautodelete)為 TRUE。 如果您想要在執行緒結束時執行其他清除，請覆寫這個函式。 實作`ExitInstance`執行您的程式碼之後，應該呼叫基底類別的版本。  
   
 ##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd  
  如果您的應用程式是 OLE 伺服器，呼叫此函式可擷取而不是直接參考應用程式的現用主視窗的指標`m_pMainWnd`應用程式物件的成員。  
@@ -230,19 +230,19 @@ int GetThreadPriority();
 ### <a name="return-value"></a>傳回值  
  在其優先順序類別中目前的執行緒優先權等級。 傳回的值將會是下列其中一項列出優先順序從高到最低：  
   
-- **THREAD_PRIORITY_TIME_CRITICAL**  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
-- **THREAD_PRIORITY_HIGHEST**  
+- THREAD_PRIORITY_HIGHEST  
   
-- **THREAD_PRIORITY_ABOVE_NORMAL**  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
-- **THREAD_PRIORITY_NORMAL**  
+- THREAD_PRIORITY_NORMAL  
   
-- **THREAD_PRIORITY_BELOW_NORMAL**  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
-- **THREAD_PRIORITY_LOWEST**  
+- THREAD_PRIORITY_LOWEST  
   
-- **THREAD_PRIORITY_IDLE**  
+- THREAD_PRIORITY_IDLE  
   
  如需有關這些優先順序的詳細資訊，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
   
@@ -262,27 +262,27 @@ virtual BOOL InitInstance();
  此成員函式只能用於使用者介面執行緒。 在控制傳遞至函式中執行的背景工作執行緒初始化[AfxBeginThread](application-information-and-management.md#afxbeginthread)。  
   
 ##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage  
- 覆寫此函式可保留**OnIdle**從被呼叫後會產生特定的訊息。  
+ 覆寫此函式可保留`OnIdle`從被呼叫後會產生特定的訊息。  
   
 ```  
 virtual BOOL IsIdleMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMsg`  
+ *pMsg*  
  指向目前正在處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果`OnIdle`應該經過處理後呼叫訊息; 否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 預設實作不會呼叫**OnIdle**備援滑鼠訊息後插入號閃爍不停，所產生的訊息。  
+ 預設實作不會呼叫`OnIdle`備援滑鼠訊息後插入號閃爍不停，所產生的訊息。  
   
- 如果已建立的應用程式的簡短的計時器， **OnIdle**會呼叫經常造成效能問題。 若要改善這類應用程式的效能，覆寫`IsIdleMessage`在應用程式的`CWinApp`-衍生的類別來檢查`WM_TIMER`訊息，如下所示：  
+ 如果已建立的應用程式的簡短的計時器，`OnIdle`會呼叫經常造成效能問題。 若要改善這類應用程式的效能，覆寫`IsIdleMessage`在應用程式的`CWinApp`-衍生的類別來檢查 WM_TIMER 郵件，如下所示：  
   
  [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
   
- 處理`WM_TIMER`以這種方式將可改善效能的應用程式，使用簡短的計時器。  
+ 以這種方式處理 WM_TIMER 會改善使用簡短的計時器應用程式的效能。  
   
 ##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete  
  指定在執行緒終止時是否要自動刪除 `CWinThread` 物件。  
@@ -292,7 +292,7 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_bAutoDelete`資料成員是類型的公用變數**BOOL**。  
+ `m_bAutoDelete`資料成員是 BOOL 類型的公用變數。  
   
  `m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。  
   
@@ -304,7 +304,7 @@ HANDLE m_hThread;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hThread`資料成員是類型的公用變數`HANDLE`。 如果基礎執行緒目前存在，才有效。  
+ `m_hThread`資料成員是型別控制代碼的公用變數。 如果基礎執行緒目前存在，才有效。  
   
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID  
  執行緒的 ID 附加至這個`CWinThread`。  
@@ -314,7 +314,7 @@ DWORD m_nThreadID;
 ```  
   
 ### <a name="remarks"></a>備註  
- **M_nThreadID**資料成員是類型的公用變數`DWORD`。 如果基礎執行緒目前存在，才有效。  
+ `m_nThreadID`資料成員是類型為 DWORD 的公用變數。 如果基礎執行緒目前存在，才有效。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[AfxGetThread](application-information-and-management.md#afxgetthread)。  
@@ -327,7 +327,7 @@ CWnd* m_pActiveWnd;
 ```  
   
 ### <a name="remarks"></a>備註  
- Microsoft Foundation 類別庫會自動終止您的執行緒，所參考的視窗時`m_pActiveWnd`已關閉。 如果這個執行緒是由主執行緒的應用程式，將會終止應用程式。 如果此資料成員是**NULL**，應用程式的使用中視窗`CWinApp`物件會被繼承。 `m_pActiveWnd` 這類型的公用變數**CWnd\***。  
+ Microsoft Foundation 類別庫會自動終止您的執行緒，所參考的視窗時`m_pActiveWnd`已關閉。 如果這個執行緒是由主執行緒的應用程式，將會終止應用程式。 如果此資料成員為 NULL，如應用程式的使用中視窗`CWinApp`物件會被繼承。 `m_pActiveWnd` 這類型的公用變數`CWnd*`。  
   
  一般而言，您將此成員變數覆寫時`InitInstance`。 在背景工作執行緒，這個資料成員的值被繼承自父執行緒。  
   
@@ -339,7 +339,7 @@ CWnd* m_pMainWnd;
 ```  
   
 ### <a name="remarks"></a>備註  
- Microsoft Foundation 類別庫會自動終止您的執行緒，所參考的視窗時`m_pMainWnd`已關閉。 如果這個執行緒是由主執行緒的應用程式，將會終止應用程式。 如果此資料成員是**NULL**，應用程式的主視窗`CWinApp`物件會用來判斷何時要終止執行緒。 `m_pMainWnd` 這類型的公用變數**CWnd\***。  
+ Microsoft Foundation 類別庫會自動終止您的執行緒，所參考的視窗時`m_pMainWnd`已關閉。 如果這個執行緒是由主執行緒的應用程式，將會終止應用程式。 如果此資料成員為 NULL，應用程式的主視窗`CWinApp`物件會用來判斷何時要終止執行緒。 `m_pMainWnd` 這類型的公用變數`CWnd*`。  
   
  一般而言，您將此成員變數覆寫時`InitInstance`。 在背景工作執行緒，這個資料成員的值被繼承自父執行緒。  
   
@@ -351,8 +351,8 @@ virtual BOOL OnIdle(LONG lCount);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lCount`  
- 每次遞增計數器`OnIdle`執行緒的訊息佇列是空的時呼叫。 這個計數會重設為 0 每次處理新訊息時。 您可以使用`lCount`參數，來判斷相對的執行緒已經閒置而不處理訊息的時間長度。  
+ *lCount*  
+ 每次遞增計數器`OnIdle`執行緒的訊息佇列是空的時呼叫。 這個計數會重設為 0 每次處理新訊息時。 您可以使用*lCount*參數，來判斷相對的執行緒已經閒置而不處理訊息的時間長度。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，接收更多閒置處理時間;如果沒有更多閒置處理時間就是 0。  
@@ -360,7 +360,7 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="remarks"></a>備註  
  `OnIdle` 預設訊息迴圈中時呼叫的執行緒訊息佇列是空的。 您可以使用覆寫來呼叫您自己的背景工作閒置處理常式。  
   
- `OnIdle` 應該會傳回 0，表示需要任何額外的閒置處理時間。 `lCount`參數就會遞增每次`OnIdle`時呼叫的訊息佇列是空的而且會重設為 0 每次處理新訊息時。 您可以呼叫您不同閒置基礎常式，此計數。  
+ `OnIdle` 應該會傳回 0，表示需要任何額外的閒置處理時間。 *LCount*參數就會遞增每次`OnIdle`時呼叫的訊息佇列是空的而且會重設為 0 每次處理新訊息時。 您可以呼叫您不同閒置基礎常式，此計數。  
   
  暫存物件和記憶體未使用的動態連結程式庫，此成員函式的預設實作會釋出。  
   
@@ -376,7 +376,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功的話，物件的控制代碼的執行緒。否則， **NULL**。  
+ 如果成功的話，物件的控制代碼的執行緒。否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  若要直接呼叫 Windows Api 中使用控制代碼。  
@@ -392,20 +392,20 @@ BOOL PostThreadMessage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `message`  
+ *message*  
  使用者定義訊息的識別碼。  
   
- `wParam`  
+ *wParam*  
  第一個訊息參數。  
   
- `lParam`  
+ *lParam*  
  第二個訊息參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 張貼的訊息由訊息對應巨集對應到適當的訊息處理常式`ON_THREAD_MESSAGE`。  
+ 訊息對應巨集 ON_THREAD_MESSAGE 所張貼的訊息對應至適當的訊息處理常式。  
   
 > [!NOTE]
 >  當呼叫 Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)內 MFC 應用程式時，MFC 訊息處理常式不會呼叫的函式。 如需詳細資訊，請參閱知識庫文件 」 PRB:: MFC 訊息處理常式不呼叫與 PostThreadMessage() 」 (Q142415)。  
@@ -418,7 +418,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMsg`  
+ *pMsg*  
  指向[MSG 結構](../../mfc/reference/msg-structure1.md)包含要處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
@@ -437,10 +437,10 @@ virtual BOOL ProcessMessageFilter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `code`  
- 指定攔截的程式碼。 此成員函式來判斷如何處理使用程式碼 `lpMsg.`  
+ *程式碼*  
+ 指定攔截的程式碼。 此成員函式會使用程式碼來判斷如何處理*lpMsg。*  
   
- `lpMsg`  
+ *lpMsg*  
  Windows 的指標[MSG 結構](../../mfc/reference/msg-structure1.md)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -464,11 +464,11 @@ virtual LRESULT ProcessWndProcException(
  *e*  
  要處理的例外狀況的點。  
   
- `pMsg`  
+ *pMsg*  
  指向[MSG 結構](../../mfc/reference/msg-structure1.md)包含導致擲回例外狀況架構的 windows 訊息的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
- -1，否則`WM_CREATE`會產生例外狀況; 否則為 0。  
+ 為-1 會產生 WM_CREATE 例外狀況。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
  請勿直接呼叫此成員函式。  
@@ -477,8 +477,8 @@ virtual LRESULT ProcessWndProcException(
   
 |命令|動作|  
 |-------------|------------|  
-|`WM_CREATE`|失敗。|  
-|`WM_PAINT`|驗證受影響的視窗，因此防止另`WM_PAINT`產生的訊息。|  
+|WM_CREATE|失敗。|  
+|WM_PAINT|驗證受影響的視窗中，以防止產生的另一個 WM_PAINT 訊息。|  
   
  覆寫此成員函式，以提供您的例外狀況的全域處理。 只有當您想要顯示的預設行為，請呼叫基底功能。  
   
@@ -492,12 +492,12 @@ virtual BOOL PumpMessage();
 ```  
   
 ### <a name="remarks"></a>備註  
- `PumpMessage` 包含執行緒的訊息迴圈。 **PumpMessage**稱為`CWinThread`至執行緒的訊息幫浦 」。 您可以呼叫`PumpMessage`直接強制訊息加以處理，或者您可以覆寫`PumpMessage`變更其預設行為。  
+ `PumpMessage` 包含執行緒的訊息迴圈。 `PumpMessage` 會呼叫`CWinThread`至執行緒的訊息幫浦 」。 您可以呼叫`PumpMessage`直接強制訊息加以處理，或者您可以覆寫`PumpMessage`變更其預設行為。  
   
  呼叫`PumpMessage`直接覆寫其預設行為是僅供進階使用者建議。  
   
 ##  <a name="resumethread"></a>  CWinThread::ResumeThread  
- 若要繼續執行已暫停的執行緒呼叫[SuspendThread](#suspendthread)成員函式或使用建立的執行緒**CREATE_SUSPENDED**旗標。  
+ 若要繼續執行已暫停的執行緒呼叫[SuspendThread](#suspendthread)成員函式或建立 CREATE_SUSPENDED 旗標的執行緒。  
   
 ```  
 DWORD ResumeThread();
@@ -517,12 +517,12 @@ virtual int Run();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `int`執行緒所傳回的值。 這個值可以藉由呼叫擷取[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)。  
+ **Int**執行緒所傳回的值。 這個值可以藉由呼叫擷取[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)。  
   
 ### <a name="remarks"></a>備註  
- **執行**取得和分派視窗訊息，直到應用程式收到[WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641)訊息。 如果目前執行緒的訊息佇列不包含的任何訊息，**執行**呼叫`OnIdle`執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)標準鍵盤翻譯。 最後， [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)呼叫 Windows 函式。  
+ `Run` 取得和分派視窗訊息，直到應用程式收到[WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641)訊息。 如果目前執行緒的訊息佇列不包含的任何訊息，`Run`呼叫`OnIdle`執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)標準鍵盤翻譯。 最後， [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)呼叫 Windows 函式。  
   
- **執行**很少會覆寫，但您可以覆寫該實作特殊行為。  
+ `Run` 很少會覆寫，但您可以覆寫該實作特殊行為。  
   
  此成員函式只能用於使用者介面執行緒。  
   
@@ -534,22 +534,22 @@ BOOL SetThreadPriority(int nPriority);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPriority`  
+ *nPriority*  
  指定新的執行緒優先權等級，其優先順序類別內。 這個參數必須是下列值，列出優先順序從高到最低的其中一個：  
   
-- **THREAD_PRIORITY_TIME_CRITICAL**  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
-- **THREAD_PRIORITY_HIGHEST**  
+- THREAD_PRIORITY_HIGHEST  
   
-- **THREAD_PRIORITY_ABOVE_NORMAL**  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
-- **THREAD_PRIORITY_NORMAL**  
+- THREAD_PRIORITY_NORMAL  
   
-- **THREAD_PRIORITY_BELOW_NORMAL**  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
-- **THREAD_PRIORITY_LOWEST**  
+- THREAD_PRIORITY_LOWEST  
   
-- **THREAD_PRIORITY_IDLE**  
+- THREAD_PRIORITY_IDLE  
   
  如需有關這些優先順序的詳細資訊，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
   

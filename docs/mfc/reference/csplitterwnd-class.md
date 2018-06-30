@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d2b44c4e854a27bcc753c1403ea058b03906a8
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377845"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123145"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 提供分割視窗 (這是包含多個窗格的視窗) 的功能。  
@@ -159,9 +159,9 @@ class CSplitterWnd : public CWnd
   
 3.  從覆寫`OnCreateClient`，呼叫[建立](#create)或[CreateStatic](#createstatic)成員函式`CSplitterWnd`。  
   
- 呼叫**建立**成員函式來建立動態分隔視窗。 動態分隔視窗通常用來建立及捲動多個個別的窗格或檢視相同文件。 架構會自動建立分隔器; 的初始窗格然後架構建立、 調整大小，並處置其他窗格與使用者分隔視窗的控制項。  
+ 呼叫`Create`成員函式來建立動態分隔視窗。 動態分隔視窗通常用來建立及捲動多個個別的窗格或檢視相同文件。 架構會自動建立分隔器; 的初始窗格然後架構建立、 調整大小，並處置其他窗格與使用者分隔視窗的控制項。  
   
- 當您呼叫**建立**，指定最小資料列高度和資料行寬度，以決定何時窗格太小而無法完整顯示。 在您呼叫後**建立**，您可以調整的最小值，藉由呼叫[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函式。  
+ 當您呼叫`Create`，指定最小資料列高度和資料行寬度，以決定何時窗格太小而無法完整顯示。 在您呼叫後`Create`，您可以調整的最小值，藉由呼叫[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函式。  
   
  也使用`SetColumnInfo`和`SetRowInfo`設定資料行 」 理想 「 寬度 」 和 「"理想"的資料列高度的成員函式。 當 framework 顯示在分隔視窗時，它會先顯示父框架，然後分隔視窗。 架構然後配置中資料行和資料列，根據其理想的維度，使用從左上角到右下角分隔視窗工作區的窗格。  
   
@@ -171,13 +171,13 @@ class CSplitterWnd : public CWnd
   
  具體而言，當您建立靜態分隔器，您必須建立所有靜態分隔的窗格。 請確定您建立父框架之前的所有窗格`OnCreateClient`成員函式會傳回，否則架構會無法正確顯示視窗。  
   
- `CreateStatic`成員函式會自動初始化靜態分隔器與最小資料列高度和資料行寬度為 0。 在您呼叫後**建立**，調整的最小值，藉由呼叫[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函式。 也使用`SetColumnInfo`和`SetRowInfo`呼叫之後`CreateStatic`以指出預期理想窗格維度。  
+ `CreateStatic`成員函式會自動初始化靜態分隔器與最小資料列高度和資料行寬度為 0。 在您呼叫後`Create`，調整的最小值，藉由呼叫[SetColumnInfo](#setcolumninfo)和[SetRowInfo](#setrowinfo)成員函式。 也使用`SetColumnInfo`和`SetRowInfo`呼叫之後`CreateStatic`以指出預期理想窗格維度。  
   
  靜態分隔器的個別窗格通常屬於不同類別。 如需靜態分隔視窗的範例，請參閱圖形編輯器和 Windows 檔案管理員。  
   
  分隔視窗支援特殊的捲軸 （除了窗格可能會有捲軸）。 這些捲軸是子系`CSplitterWnd`物件，並與窗格共用。  
   
- 當您建立分隔視窗時，您會建立這些特殊的捲軸。 比方說，`CSplitterWnd`具有一個資料列中，兩個資料行，而**WS_VSCROLL**樣式，將顯示垂直捲軸的兩個窗格。 當使用者將捲軸，`WM_VSCROLL`訊息傳送至這兩個窗格。 當窗格設定捲軸位置時，會設定共用的捲軸。  
+ 當您建立分隔視窗時，您會建立這些特殊的捲軸。 例如，`CSplitterWnd`具有一個資料列中，兩個資料行，且 WS_VSCROLL 樣式會顯示垂直捲軸的兩個窗格。 當使用者將捲軸時，WM_VSCROLL 訊息會傳送給這兩個窗格。 當窗格設定捲軸位置時，會設定共用的捲軸。  
   
  如需分隔視窗的詳細資訊，請參閱：  
   
@@ -211,7 +211,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bPrev`  
+ *bPrev*  
  表示啟用哪一個視窗。 **TRUE**的上一個;**FALSE**的下一步。  
   
 ### <a name="remarks"></a>備註  
@@ -225,7 +225,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bPrev`  
+ *bPrev*  
  表示啟用哪一個視窗。 **TRUE**的上一個;**FALSE**的下一步。  
   
 ### <a name="return-value"></a>傳回值  
@@ -249,7 +249,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  分隔視窗的父框架視窗。  
   
  *nMaxRows*  
@@ -258,17 +258,17 @@ virtual BOOL Create(
  *nMaxCols*  
  分隔視窗中的資料行的數目上限。 此值不能超過 2。  
   
- `sizeMin`  
+ *sizeMin*  
  指定的速率可能會顯示一個窗格的大小下限。  
   
- `pContext`  
- 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。 在大部分情況下，這可以是`pContext`傳遞給父框架視窗。  
+ *pContext*  
+ 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。 在大部分情況下，這可以是*pContext*傳遞給父框架視窗。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的視窗樣式。  
   
- `nID`  
- 視窗的子視窗識別碼。 識別碼可以是**AFX_IDW_PANE_FIRST**除非分隔視窗是否位於另一個分隔視窗。  
+ *nID*  
+ 視窗的子視窗識別碼。 識別碼可以是 AFX_IDW_PANE_FIRST，除非在另一個分隔視窗為巢狀分隔視窗。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -280,11 +280,11 @@ virtual BOOL Create(
   
 2.  覆寫父框架[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)成員函式。  
   
-3.  呼叫**建立**從覆寫的成員函式`OnCreateClient`。  
+3.  呼叫`Create`從覆寫的成員函式`OnCreateClient`。  
   
- 當您建立分隔視窗從父系範圍內時，傳遞父框架`pContext`分隔視窗的參數。 否則，這個參數可以是**NULL**。  
+ 當您建立分隔視窗從父系範圍內時，傳遞父框架*pContext*分隔視窗的參數。 否則，這個參數可以是 NULL。  
   
- 動態分隔視窗的初始最小資料列高度和資料行寬度由設定`sizeMin`參數。 這些最小值，判斷是否為太小而無法完整顯示 窗格，可以變更與[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函式。  
+ 動態分隔視窗的初始最小資料列高度和資料行寬度由設定*sizeMin*參數。 這些最小值，判斷是否為太小而無法完整顯示 窗格，可以變更與[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函式。  
   
  如需動態分隔視窗的詳細資訊，請參閱 「 分隔視窗 」 文章中[多重文件類型、 檢視和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技術附註 29](../../mfc/tn029-splitter-windows.md)，而`CSplitterWnd`類別概觀。  
   
@@ -301,11 +301,11 @@ virtual BOOL CreateScrollBarCtrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定的視窗樣式。  
   
- `nID`  
- 視窗的子視窗識別碼。 識別碼可以是**AFX_IDW_PANE_FIRST**除非分隔視窗是否位於另一個分隔視窗。  
+ *nID*  
+ 視窗的子視窗識別碼。 識別碼可以是 AFX_IDW_PANE_FIRST，除非在另一個分隔視窗為巢狀分隔視窗。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -326,20 +326,20 @@ virtual BOOL CreateStatic(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  分隔視窗的父框架視窗。  
   
- `nRows`  
+ *nRows*  
  列的數目。 此值不能超過 16。  
   
  *nCols*  
  行數。 此值不能超過 16。  
   
- `dwStyle`  
+ *dwStyle*  
  指定的視窗樣式。  
   
- `nID`  
- 視窗的子視窗識別碼。 識別碼可以是**AFX_IDW_PANE_FIRST**除非分隔視窗是否位於另一個分隔視窗。  
+ *nID*  
+ 視窗的子視窗識別碼。 識別碼可以是 AFX_IDW_PANE_FIRST，除非在另一個分隔視窗為巢狀分隔視窗。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -359,7 +359,7 @@ virtual BOOL CreateStatic(
   
  靜態分隔視窗的初始最小資料列高度和資料行寬度是 0。 這些最小值，判斷太小而無法完整顯示一個窗格時，可以變更與[SetRowInfo](#setrowinfo)和[SetColumnInfo](#setcolumninfo)成員函式。  
   
- 若要加入至靜態分隔視窗的捲軸，加入**WS_HSCROLL**和**WS_VSCROLL**樣式到`dwStyle`。  
+ 若要加入至靜態分隔視窗的捲軸，加入 WS_HSCROLL 和 WS_VSCROLL 樣式*dwStyle*。  
   
  請參閱文件中的 「 分隔視窗 」[多重文件類型、 檢視和框架視窗](../../mfc/multiple-document-types-views-and-frame-windows.md)，[技術附註 29](../../mfc/tn029-splitter-windows.md)，而`CSplitterWnd`如需有關靜態分隔視窗類別概觀。  
   
@@ -376,20 +376,20 @@ virtual BOOL CreateView(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
+ *資料列*  
  指定要放置新檢視的分隔視窗資料列。  
   
- `col`  
+ *資料行*  
  指定要放置新檢視的分隔視窗資料行。  
   
- `pViewClass`  
+ *pViewClass*  
  指定[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)新的檢視。  
   
  *sizeInit*  
  指定新的檢視表的初始大小。  
   
- `pContext`  
- 建立內容，用來建立檢視的指標 (通常`pContext`傳入父框架覆寫[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)在其中建立分隔視窗的成員函式)。  
+ *pContext*  
+ 建立內容，用來建立檢視的指標 (通常*pContext*傳入父框架覆寫[CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)分隔視窗是成員函式正在建立）。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -424,7 +424,7 @@ virtual void DeleteColumn(int colDelete);
  指定要刪除的資料行。  
   
 ### <a name="remarks"></a>備註  
- 若要實作動態分隔視窗的邏輯架構會呼叫此成員函式 (亦即，如果分隔視窗具有**SPLS_DYNAMIC_SPLIT**樣式)。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
+ 若要實作動態分隔視窗的邏輯 （也就是如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式） 架構會呼叫此成員函式。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
   
 ##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  從分隔視窗刪除一個資料列。  
@@ -438,7 +438,7 @@ virtual void DeleteRow(int rowDelete);
  指定要刪除的資料列。  
   
 ### <a name="remarks"></a>備註  
- 若要實作動態分隔視窗的邏輯架構會呼叫此成員函式 (亦即，如果分隔視窗具有**SPLS_DYNAMIC_SPLIT**樣式)。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
+ 若要實作動態分隔視窗的邏輯 （也就是如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式） 架構會呼叫此成員函式。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
   
 ##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  從分隔視窗刪除一個檢視。  
@@ -450,16 +450,16 @@ virtual void DeleteView(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
+ *資料列*  
  指定要刪除檢視的分隔視窗資料列。  
   
- `col`  
+ *資料行*  
  指定要刪除檢視的分隔視窗資料行。  
   
 ### <a name="remarks"></a>備註  
  如果刪除使用中的檢視時，會變成作用中下一個檢視。 預設實作會假設檢視就會自動刪除[PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy)。  
   
- 若要實作動態分隔視窗的邏輯架構會呼叫此成員函式 (亦即，如果分隔視窗具有**SPLS_DYNAMIC_SPLIT**樣式)。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
+ 若要實作動態分隔視窗的邏輯 （也就是如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式） 架構會呼叫此成員函式。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
   
 ##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  執行鍵盤分隔的命令，通常是 「 視窗分割 」。  
@@ -485,26 +485,26 @@ virtual BOOL DoScroll(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pViewFrom`  
+ *pViewFrom*  
  捲動訊息的來源檢視的指標。  
   
- `nScrollCode`  
+ *nScrollCode*  
  捲軸程式碼，表示使用者的捲動要求。 這個參數由兩個部分組成： 低序位位元組，這會決定捲動發生水平的型別，以及高序位位元組，這會決定捲動發生垂直的類型：  
   
-- **SB_BOTTOM**往下捲動。  
+- SB_BOTTOM 捲動至底部。  
   
-- **SB_LINEDOWN**向下捲動一行。  
+- SB_LINEDOWN 捲動下一行。  
   
-- **SB_LINEUP**向上捲動一行。  
+- SB_LINEUP 捲動上一行。  
   
-- **SB_PAGEDOWN**向下捲動一頁。  
+- 向下 SB_PAGEDOWN 捲動一頁。  
   
-- **SB_PAGEUP**向上捲動一頁。  
+- SB_PAGEUP 捲動一頁上。  
   
-- **SB_TOP**捲動至頂端。  
+- SB_TOP 捲動至頂端。  
   
- `bDoScroll`  
- 判斷是否發生指定的捲動動作。 如果`bDoScroll`是**TRUE** （也就是子視窗已存在，而且如果分隔視窗具有捲軸範圍），然後指定捲動動作可以進行; 如果`bDoScroll`是**FALSE** （亦即，如果沒有任何子視窗已存在，或分割檢視有沒有捲軸範圍），然後捲動不會發生。  
+ *bDoScroll*  
+ 判斷是否發生指定的捲動動作。 如果*bDoScroll*是 TRUE （也就是子視窗已存在，而且如果分隔視窗具有捲軸範圍），則指定捲動動作時可能需要的位置; 如果*bDoScroll*如果為 FALSE (也就是沒有任何子視窗存在，或分割檢視有沒有捲軸範圍)，然後捲動不會發生。  
   
 ### <a name="return-value"></a>傳回值  
  如果同步處理則為非零捲動，就會發生。否則便是 0。  
@@ -523,20 +523,20 @@ virtual BOOL DoScrollBy(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pViewFrom`  
+ *pViewFrom*  
  捲動訊息的來源檢視的指標。  
   
- `sizeScroll`  
+ *sizeScroll*  
  水平和垂直捲動的像素數目。  
   
- bDoScroll  
- 判斷是否發生指定的捲動動作。 如果`bDoScroll`是**TRUE** （也就是子視窗已存在，而且如果分隔視窗具有捲軸範圍），然後指定捲動動作可以進行; 如果`bDoScroll`是**FALSE** （亦即，如果沒有任何子視窗已存在，或分割檢視有沒有捲軸範圍），然後捲動不會發生。  
+ *bDoScroll*  
+ 判斷是否發生指定的捲動動作。 如果*bDoScroll*是 TRUE （也就是子視窗已存在，而且如果分隔視窗具有捲軸範圍），則指定捲動動作時可能需要的位置; 如果*bDoScroll*如果為 FALSE (也就是沒有任何子視窗存在，或分割檢視有沒有捲軸範圍)，然後捲動不會發生。  
   
 ### <a name="return-value"></a>傳回值  
  如果同步處理則為非零捲動，就會發生。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 捲動訊息的回應中的架構會呼叫此成員函式、 執行同步處理量，單位為像素所指示的分隔視窗捲動`sizeScroll`。 正值表示捲動往下及往右;負數值表示向上及向左捲動。  
+ 捲動訊息的回應中的架構會呼叫此成員函式、 執行同步處理量，單位為像素所指示的分隔視窗捲動*sizeScroll*。 正值表示捲動往下及往右;負數值表示向上及向左捲動。  
   
  需要使用者動作，才能允許捲動的覆寫。  
   
@@ -550,14 +550,14 @@ virtual CWnd* GetActivePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRow`  
+ *pRow*  
  指標**int**擷取使用中 窗格中的資料列數目。  
   
- `pCol`  
+ *pCol*  
  指標**int**擷取使用中 窗格中的資料行數目。  
   
 ### <a name="return-value"></a>傳回值  
- 使用中窗格的指標。 **NULL**是否有任何作用中 窗格。  
+ 使用中窗格的指標。 如果沒有使用中窗格存在，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  若要判斷在分隔視窗中 [作用中的] 窗格的 framework 會呼叫此成員函式。 覆寫，以要求使用者執行動作才能取得使用中 窗格。  
@@ -583,14 +583,14 @@ void GetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `col`  
+ *資料行*  
  指定資料行。  
   
  *cxCur*  
- 若要參考`int`設為目前的資料行寬度。  
+ 若要參考**int**設為目前的資料行寬度。  
   
- `cxMin`  
- 若要參考`int`設為資料行的目前最小寬度。  
+ *cxMin*  
+ 若要參考**int**設為資料行的目前最小寬度。  
   
 ##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  傳回在指定的資料列和資料行的窗格。  
@@ -602,10 +602,10 @@ CWnd* GetPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
+ *資料列*  
  指定資料列。  
   
- `col`  
+ *資料行*  
  指定資料行。  
   
 ### <a name="return-value"></a>傳回值  
@@ -632,17 +632,17 @@ void GetRowInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
+ *資料列*  
  指定資料列。  
   
- `cyCur`  
- 若要參考`int`設為目前像素為單位的資料列的高度。  
+ *cyCur*  
+ 若要參考**int**設為目前像素為單位的資料列的高度。  
   
- `cyMin`  
- 若要參考`int`設為目前的最小高度，單位為像素的資料列。  
+ *cyMin*  
+ 若要參考**int**設為目前的最小高度，單位為像素的資料列。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此成員函式可取得指定的資料列的相關資訊。 `cyCur`參數會填入目前指定的資料列的高度和`cyMin`填滿的資料列的最小高度。  
+ 呼叫此成員函式可取得指定的資料列的相關資訊。 *CyCur*參數會填入目前指定的資料列的高度和*cyMin*填滿的資料列的最小高度。  
   
 ##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  傳回分隔視窗的共用的捲軸樣式。  
@@ -654,9 +654,9 @@ DWORD GetScrollStyle() const;
 ### <a name="return-value"></a>傳回值  
  一或多個下列的視窗樣式旗標，如果成功：  
   
-- **WS_HSCROLL**如果分隔器目前管理共用水平捲軸。  
+- WS_HSCROLL 如果分隔器目前管理共用水平捲軸。  
   
-- **WS_VSCROLL**如果分隔器目前管理共用的垂直捲軸。  
+- WS_VSCROLL 如果分隔器目前管理共用的垂直捲軸。  
   
  如果是零，分隔視窗目前沒有管理任何共用的捲軸。  
   
@@ -670,10 +670,10 @@ int IdFromRowCol(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
+ *資料列*  
  指定分隔視窗資料列。  
   
- `col`  
+ *資料行*  
  指定分隔視窗資料行。  
   
 ### <a name="return-value"></a>傳回值  
@@ -686,7 +686,7 @@ int IdFromRowCol(
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
 ##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
- 決定是否`pWnd`目前是子此分隔視窗窗格。  
+ 決定是否*pWnd*目前是子此分隔視窗窗格。  
   
 ```  
 BOOL IsChildPane(
@@ -696,17 +696,17 @@ BOOL IsChildPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指標[CWnd](../../mfc/reference/cwnd-class.md)要測試的物件。  
   
- `pRow`  
- 指標`int`用來儲存資料列數目。  
+ *pRow*  
+ 指標**int**用來儲存資料列數目。  
   
- `pCol`  
- 指標`int`用來儲存資料行編號。  
+ *pCol*  
+ 指標**int**用來儲存資料行編號。  
   
 ### <a name="return-value"></a>傳回值  
- 如果是非零值，`pWnd`目前是子此分隔視窗窗格，及`pRow`和`pCol`值隨即填入分隔視窗中窗格的位置。 如果`pWnd`不是子窗格的分隔視窗中，就會傳回 0。  
+ 如果是非零值， *pWnd*目前是子此分隔視窗窗格，及*pRow*和*pCol*值隨即填入分隔視窗中窗格的位置。 如果*pWnd*不是子窗格的分隔視窗中，就會傳回 0。  
   
 ### <a name="remarks"></a>備註  
  在 Visual c + + 6.0 之前的版本，此函式定義為  
@@ -736,21 +736,21 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
- 要在其中繪製的裝置內容的指標。 如果`pDC`是**NULL**，然後[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)稱為架構並沒有分割繪製視窗。  
+ *pDC*  
+ 要在其中繪製的裝置內容的指標。 如果*pDC*是 NULL，則[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)稱為架構並沒有分割繪製視窗。  
   
- `nType`  
- 值為**列舉 ESplitType**，它可以是下列其中之一：  
+ *n*  
+ 值為`enum ESplitType`，它可以是下列其中之一：  
   
-- **splitBox**分隔器拖曳方塊。  
+- `splitBox` 分隔器拖曳方塊中。  
   
 - `splitBar` 出現兩個分割視窗之間的列。  
   
-- **splitIntersection**分隔視窗的交集。 Windows 95/98 上執行時，將不會呼叫這個項目。  
+- `splitIntersection` 分隔視窗的交集。 Windows 95/98 上執行時，將不會呼叫這個項目。  
   
-- **splitBorder**分割視窗框線。  
+- `splitBorder` 分割視窗框線。  
   
- `rect`  
+ *rect*  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定的大小和形狀分割視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -766,7 +766,7 @@ virtual void OnInvertTracker(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  若要參考`CRect`物件，指定追蹤矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -800,19 +800,19 @@ virtual void SetActivePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
- 如果`pWnd`是**NULL**，將會是作用中 窗格中指定的資料列。  
+ *資料列*  
+ 如果*pWnd*為 NULL 時，將會是作用中 窗格中指定的資料列。  
   
- `col`  
- 如果`pWnd`是**NULL**，將會是作用中 窗格中指定的資料行。  
+ *資料行*  
+ 如果*pWnd*為 NULL 時，將會是作用中 窗格中指定的資料行。  
   
- `pWnd`  
- 指標`CWnd`物件。 如果**NULL**，所指定的窗格`row`和`col`設定為使用中。 如果沒有**NULL**，指定已設定使用中 窗格。  
+ *pWnd*  
+ 指標`CWnd`物件。 如果是 NULL，所指定的窗格*資料列*和*col*設定為使用中。 如果不是 NULL，指定已設定使用中 窗格。  
   
 ### <a name="remarks"></a>備註  
  此成員函式會呼叫架構，以設定為使用中 窗格，當使用者將焦點變更為在框架視窗內的窗格。 您可以明確地呼叫`SetActivePane`若要將焦點變更為指定的檢視。  
   
- 藉由提供資料列和資料行中，指定窗格**或**藉由提供`pWnd`。  
+ 藉由提供資料列和資料行中，指定窗格**或**藉由提供*pWnd*。  
   
 ##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  呼叫以設定所指定的資料行資訊。  
@@ -825,13 +825,13 @@ void SetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `col`  
+ *資料行*  
  指定分隔視窗資料行。  
   
  *cxIdeal*  
  指定單位為像素的分隔視窗資料行的理想寬度。  
   
- `cxMin`  
+ *cxMin*  
  指定單位為像素的分隔視窗資料行的最小寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -853,13 +853,13 @@ void SetRowInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `row`  
+ *資料列*  
  指定分隔視窗資料列。  
   
  *cyIdeal*  
  指定分隔視窗資料列的理想高度，單位為像素。  
   
- `cyMin`  
+ *cyMin*  
  指定分隔視窗資料列的最小高度，單位為像素。  
   
 ### <a name="remarks"></a>備註  
@@ -875,12 +875,12 @@ void SetScrollStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  分隔視窗的新捲軸樣式共用捲軸的支援，它可以是下列值之一：  
   
-- **WS_HSCROLL**建立/顯示水平共用捲軸。  
+- WS_HSCROLL 建立/顯示水平共用的捲軸。  
   
-- **WS_VSCROLL**建立/顯示垂直共用捲軸。  
+- WS_VSCROLL 建立/顯示垂直共用的捲軸。  
   
 ### <a name="remarks"></a>備註  
  一旦建立之後的捲軸它將不會終結即使`SetScrollStyle`呼叫沒有該樣式; 改用這些捲軸會隱藏。 這可讓保留其狀態，即使它們隱藏的捲軸。 在呼叫`SetScrollStyle`就必須呼叫[RecalcLayout](#recalclayout)的所有變更才會生效。  
@@ -902,7 +902,7 @@ virtual BOOL SplitColumn(int cxBefore);
 ### <a name="remarks"></a>備註  
  建立垂直分隔視窗時，會呼叫此成員函式。 `SplitColumn` 指出分割發生的預設位置。  
   
- `SplitColumn` 由架構呼叫以實作動態分隔視窗的邏輯 (也就是如果分隔視窗具有**SPLS_DYNAMIC_SPLIT**樣式)。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
+ `SplitColumn` 若要實作動態分隔視窗的邏輯 （也就是如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式） 架構會呼叫。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
   
 ##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  指示框架視窗水平分隔的位置為何。  
@@ -921,7 +921,7 @@ virtual BOOL SplitRow(int cyBefore);
 ### <a name="remarks"></a>備註  
  建立水平分隔視窗時，會呼叫此成員函式。 `SplitRow` 指出分割發生的預設位置。  
   
- `SplitRow` 由架構呼叫以實作動態分隔視窗的邏輯 (也就是如果分隔視窗具有**SPLS_DYNAMIC_SPLIT**樣式)。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
+ `SplitRow` 若要實作動態分隔視窗的邏輯 （也就是如果分隔視窗具有 SPLS_DYNAMIC_SPLIT 樣式） 架構會呼叫。 您可以加以自訂，以及虛擬函式[CreateView](#createview)，以實作更進階的動態分隔器。  
   
 ##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  由架構呼叫以繪製分隔視窗。  
@@ -931,7 +931,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  

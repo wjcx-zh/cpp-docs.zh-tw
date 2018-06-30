@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374687"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122963"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 提供 Windows 通用微調按鈕控制項的功能。  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項樣式的組合。 這些樣式中所述[上下按鈕控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb759885)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定微調按鈕控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構  
   
- `pParentWnd`  
- 微調按鈕控制項的父視窗，通常是指向`CDialog`。 它不得為**NULL。**  
+ *pParentWnd*  
+ 微調按鈕控制項的父視窗，通常是指向`CDialog`。 它不得為 NULL。  
   
- `nID`  
+ *nID*  
  指定微調按鈕控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果初始化成功，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CSpinButtonCtrl`先物件在兩個步驟中，呼叫建構函式，，然後呼叫**建立**，建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。  
+ 您建構`CSpinButtonCtrl`先物件在兩個步驟中，呼叫建構函式，，然後呼叫`Create`，建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。  
   
- 若要使用延伸的視窗樣式建立微調按鈕控制項，呼叫[CSpinButtonCtrl::CreateEx](#createex)而不是**建立**。  
+ 若要使用延伸的視窗樣式建立微調按鈕控制項，呼叫[CSpinButtonCtrl::CreateEx](#createex)而不是`Create`。  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CSpinButtonCtrl`物件。  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項樣式的組合。 這些樣式中所述[上下按鈕控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb759885)Windows SDK 中。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+ 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，Windows 擴充的樣式序言 WS_EX_ 所指定。  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  建構 `CSpinButtonCtrl` 物件。  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nAccel`  
- 中所指定之陣列的項目數`pAccel`。  
+ *nAccel*  
+ 中所指定之陣列的項目數*pAccel*。  
   
- `pAccel`  
+ *pAccel*  
  陣列的指標[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)接收加速資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>參數  
  *lpbError*  
- 已成功擷取或非零發生錯誤時設定為零如果值為布林值的指標。 如果此參數設為**NULL**，不會報告錯誤。  
+ 已成功擷取或非零發生錯誤時設定為零如果值為布林值的指標。 如果此參數設為 NULL 時，不會報告錯誤。  
   
 ### <a name="return-value"></a>傳回值  
  第一個版本會傳回 16 位元低序位字組中的目前位置。 高序位文字不是零，如果發生錯誤。  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nAccel`  
- 數目[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)所指定的結構`pAccel`。  
+ *nAccel*  
+ 數目[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)所指定的結構*pAccel*。  
   
- `pAccel`  
- 陣列的指標`UDACCEL`結構，其中包含加速資訊。 應該排序項目以遞增順序依據**nSec**成員。  
+ *pAccel*  
+ UDACCEL 結構，其中包含加速資訊的陣列指標。 應該排序項目以遞增順序依據`nSec`成員。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBase`  
+ *nBase*  
  新控制項的基底值。 它可以是十進位的 10 或 16 個十六進位。  
   
 ### <a name="return-value"></a>傳回值  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndBuddy`  
+ *pWndBuddy*  
  新的協同視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPos`  
+ *nPos*  
  控制項的新位置。 此值必須是控制項的上限和下限所指定的範圍中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLower` 和 `nUpper`  
- 上限和下限控制項。 如`SetRange`，都沒有限制可能會大於**UD_MAXVAL**或小於**UD_MINVAL**; 此外，不能超過兩個限制之間的差異**UD_MAXVAL**. `SetRange32` 沒有任何限制置於限制;使用任何整數。  
+ *nLower*和*nUpper*  
+ 上限和下限控制項。 如`SetRange`、 都沒有限制可能會大於 UD_MAXVAL 或小於 UD_MINVAL; 此外，兩個限制之間的差異不能超過 UD_MAXVAL。 `SetRange32` 沒有任何限制置於限制;使用任何整數。  
   
 ### <a name="remarks"></a>備註  
  成員函式`SetRange32`設定微調按鈕控制項的 32 位元範圍。  

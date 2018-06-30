@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80f0c9802077b89ca5555dc476b1066f61e6c593
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374253"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121486"
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 類別
 封裝平滑停止轉換。  
@@ -84,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  這是負責建立的標準轉換轉換程式庫指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -100,10 +100,10 @@ CSmoothStopTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `maximumDuration`  
+ *maximumDuration*  
  轉換的最大持續時間。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
 ##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  

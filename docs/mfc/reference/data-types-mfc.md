@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375349"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121010"
 ---
 # <a name="data-types-mfc"></a>資料類型 (MFC)
 本主題列出最常在 MFC 程式庫中使用的資料類型。 大部分的資料類型與 Platform Software Development Kit (SDK) 中的相同，其他的則是 MFC 獨有。  
@@ -48,9 +48,9 @@ ms.locfileid: "33375349"
   
  MFC 程式庫獨有的資料類型如下：  
   
--   **位置**的值來代表項目的集合中的位置; 由 MFC 集合類別。  
+-   將用來代表集合中，項目位置的值由 MFC 集合類別。  
   
--   **LPCRECT**常數 （不可修改） 的 32 位元指標`RECT`結構。  
+-   LPCRECT 常數 （不可修改） 的 32 位元指標`RECT`結構。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../mfc/class-library-overview.md)   

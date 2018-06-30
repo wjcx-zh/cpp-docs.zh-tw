@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00aece4445f87ab13b0f3250e6e0b1a337d75633
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377317"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122989"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵錯。 這些診斷服務包含巨集和全域函式，可讓您追蹤程式的記憶體配置、在執行階段傾印物件的內容，以及在執行階段列印偵錯訊息。 診斷服務的巨集和全域函式可分為下列分類：  
@@ -46,7 +46,7 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
   
 -   物件診斷函式  
   
- 這些巨集和函式都可以在 MFC 的偵錯和發行版本中，供所有衍生自 `CObject` 的類別使用。 不過，在發行版本中只能使用 `DEBUG_NEW` 和 **VERIFY** 。  
+ 這些巨集和函式都可以在 MFC 的偵錯和發行版本中，供所有衍生自 `CObject` 的類別使用。 不過，除了 DEBUG_NEW 及驗證的所有執行發行版本中的任何動作。  
   
  在偵錯程式庫中，所有配置的記憶體區塊都會以一系列「保護位元組」(Guard Byte) 來提供支援。 如果這些位元組受到錯誤記憶體寫入的干擾，則診斷常式可能會回報問題。 如果您在實作檔中包含此行：  
   
@@ -60,15 +60,15 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
   
 |||  
 |-|-|  
-|[ASSERT](#assert)|如果指定的運算式在程式庫的偵錯版本中評估為 **FALSE** ，則會列印訊息，再中止程式。|  
+|[ASSERT](#assert)|列印訊息，如果指定的運算式評估為 FALSE 的程式庫在偵錯版本，再中止程式。|  
 |[ASSERT_KINDOF](#assert_kindof)|測試某物件是屬於指定類別，還是屬於該類別的衍生類別。|  
 |[ASSERT_VALID](#assert_valid)|藉由呼叫物件的 `AssertValid` 成員函式來測試其內部有效性，通常會覆寫自 `CObject`。|
 |[DEBUG_NEW](#debug_new)|提供偵錯模式中所有物件配置的檔案名稱和行號，以協助找出記憶體流失的問題。|  
-|[DEBUG_ONLY](#debug_only)|類似於 **ASSERT** ，但不會測試運算式的值；適用於只能在偵錯模式中執行的程式碼。|  
+|[DEBUG_ONLY](#debug_only)|類似於判斷提示但不會測試運算式; 的值適用於程式碼應該只在偵錯模式中執行。|  
 |[請確認且 ENSURE_VALID](#ensure)|用來驗證資料的正確性。|
 |[THIS_FILE](#this_file)|會展開至已編譯之檔案的名稱。|
 |[TRACE](#trace)|提供此程式庫之偵錯版本中類似 `printf`的功能。|  
-|[VERIFY](#verify)|類似於 **ASSERT** ，但不僅會評估此程式庫之發行版本中的運算式，也會評估偵錯版本中的運算式。|  
+|[VERIFY](#verify)|判斷提示的類似但中評估運算式程式庫也如同偵錯版本的版本。|  
   
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC 一般診斷變數和函式  
   
@@ -76,7 +76,7 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
 |-|-|  
 |[afxDump](#afxdump)|全域變數，可將 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 資訊傳送至偵錯工具輸出視窗或偵錯終端機。|  
 |[afxMemDF](#afxmemdf)|全域變數，可控制偵錯記憶體配置器的行為。|  
-|[AfxCheckError](#afxcheckerror)|全域變數，可用來測試所傳遞的 **SCODE** 以查看其是否為錯誤；如果是，則擲回適當的錯誤。|  
+|[AfxCheckError](#afxcheckerror)|用來測試以查看是否發生錯誤，若是如此，傳入的 SCODE 的全域變數會擲回適當的錯誤。|  
 |[AfxCheckMemory](#afxcheckmemory)|檢查目前配置之所有記憶體的完整性。|  
 |[AfxDebugBreak](#afxdebugbreak)|導致執行中的中斷。|
 |[AfxDump](#cdumpcontext_in_mfc)|如果在偵錯工具中呼叫，則會一面進行偵錯，一面傾印物件的狀態。|  
@@ -133,7 +133,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>備註  
- `AfxDebugBreak` 在 MFC 應用程式的發行版本中沒有任何作用，應該移除。 此函式只能用於 MFC 應用程式。 使用 Win32 API 版本， **DebugBreak**、 非 MFC 應用程式中造成中斷。  
+ `AfxDebugBreak` 在 MFC 應用程式的發行版本中沒有任何作用，應該移除。 此函式只能用於 MFC 應用程式。 使用 Win32 API 版本， `DebugBreak`、 非 MFC 應用程式中造成中斷。  
    
 ### <a name="requirements"></a>需求  
  **標頭：** afxver_.h   
@@ -146,19 +146,19 @@ ASSERT(booleanExpression)
 ```  
   
 ### <a name="parameters"></a>參數  
- `booleanExpression`  
+ *booleanExpression*  
  指定評估為非零，則為 0 的運算式 （包括指標值）。  
   
 ### <a name="remarks"></a>備註  
  如果結果為 0，巨集會列印診斷訊息，並中止程式。 如果條件為非零，它會執行任何動作。  
   
- 診斷資訊的格式如下  
+ 診斷資訊格式如下  
   
  `assertion failed in file <name> in line <num>`  
   
  其中*名稱*是原始程式檔的名稱和*num*是原始程式檔中失敗的判斷提示的行號。  
   
- 在發行版本的 MFC， **ASSERT**不會評估運算式，而且因此不會中斷程式。 如果不論環境，必須評估運算式，使用**確認**巨集取代**ASSERT**。  
+ MFC 發行版本，判斷提示不會評估運算式，而且因此不會中斷程式。 如果不論環境，必須評估運算式，使用 VERIFY 巨集取代的判斷提示。  
   
 > [!NOTE]
 >  此函式是只能在 MFC 的偵錯版本。  
@@ -208,13 +208,13 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="parameters"></a>參數  
- `pObject`  
+ *pObject*  
  指定衍生自此類別的物件`CObject`具有覆寫版本的`AssertValid`成員函式。  
   
 ### <a name="remarks"></a>備註  
- `ASSERT_VALID` 呼叫`AssertValid`做為其引數傳遞之物件的成員函式。  
+ ASSERT_VALID 呼叫`AssertValid`做為其引數傳遞之物件的成員函式。  
   
- 在發行版本的 MFC，`ASSERT_VALID`不做任何動作。 在偵錯版本中，驗證指標、 檢查**NULL**，和呼叫物件的自己`AssertValid`成員函式。 如果其中任何一項測試失敗，警示訊息會顯示在相同的方式[ASSERT](#assert)。  
+ 在 MFC 的發行版本，ASSERT_VALID 沒有任何作用。 在偵錯版本，它會驗證指標、 檢查 null 值，並呼叫物件本身`AssertValid`成員函式。 如果其中任何一項測試失敗，警示訊息會顯示在相同的方式[ASSERT](#assert)。  
   
 > [!NOTE]
 >  此函式是只能在 MFC 的偵錯版本。  
@@ -235,33 +235,33 @@ ASSERT_VALID(pObject)
 ```  
   
 ### <a name="remarks"></a>備註  
- 您可以使用`DEBUG_NEW`您通常會使用您程式中的所有**新**配置堆積存放集區的運算子。  
+ 您通常會使用您程式中各處使用 DEBUG_NEW**新**配置堆積存放集區的運算子。  
   
- 偵錯模式中 (當 **_DEBUG**已定義符號)，`DEBUG_NEW`會追蹤的每個物件所配置的檔名和行號碼。 然後，當您使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)成員函式，以配置每個物件`DEBUG_NEW`上顯示的檔名和行號配置位置。  
+ 偵錯模式中 (當 **_DEBUG**已定義符號)，DEBUG_NEW 會追蹤的每個物件所配置的檔名和行數。 然後，當您使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)成員函式，以 DEBUG_NEW 配置每個物件顯示的檔名和行號配置位置。  
   
- 若要使用`DEBUG_NEW`，將下列指示詞插入至原始程式檔：  
+ 若要使用 DEBUG_NEW，插入原始程式檔中的下列指示詞：  
   
  [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- 一旦您將此指示詞，前置處理器會插入`DEBUG_NEW`無論您使用**新**，和 MFC 會完成其餘工作。 當您編譯程式的發行版本`DEBUG_NEW`解析成簡單**新**不產生作業和檔名和行號資訊。  
+ 無論在何處使用插入後此指示詞，前置處理器會插入 DEBUG_NEW**新**，和 MFC 會完成其餘工作。 當您編譯程式的發行版本時，DEBUG_NEW 解析成簡單**新**不產生作業和檔名和行號資訊。  
   
 > [!NOTE]
->  在舊版的 MFC （4.1 及更早版本），您需要將`#define`呼叫的所有陳述式之後的陳述式`IMPLEMENT_DYNCREATE`或`IMPLEMENT_SERIAL`巨集。 這是不必要的。  
+>  在舊版的 MFC （4.1 及更早版本），您需要將`#define`呼叫 IMPLEMENT_DYNCREATE 或 IMPLEMENT_SERIAL 巨集的所有陳述式之後的陳述式。 這是不必要的。  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h
 
 ##  <a name="debug_only"></a>  DEBUG_ONLY  
- 在偵錯模式下 (當 **_DEBUG**已定義符號)，`DEBUG_ONLY`評估其引數。  
+ 在偵錯模式下 (當 **_DEBUG**已定義符號)，DEBUG_ONLY 評估其引數。  
   
 ```   
 DEBUG_ONLY(expression)   
 ```  
   
 ### <a name="remarks"></a>備註  
- 在發行組建， **DEBUG_ONLY**不會評估其引數。 當您應該只在偵錯組建中執行的程式碼時，這非常有用。  
+ 在發行組建，DEBUG_ONLY 不會評估其引數。 當您應該只在偵錯組建中執行的程式碼時，這非常有用。  
   
- `DEBUG_ONLY`巨集就相當於周圍*運算式*與 **#ifdef _DEBUG**和`#endif`。  
+ DEBUG_ONLY 巨集就相當於周圍*運算式*與`#ifdef _DEBUG`和`#endif`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
@@ -278,19 +278,19 @@ ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )  
 ```
 ### <a name="parameters"></a>參數  
- `booleanExpression`  
+ *booleanExpression*  
  指定要測試的布林運算式。  
    
 ### <a name="remarks"></a>備註  
- 這些巨集的目的是要提升驗證的參數。 巨集會阻止進一步處理的程式碼中的參數不正確。 不同於**ASSERT**巨集，**請**巨集擲回的例外狀況，除了產生判斷提示。  
+ 這些巨集的目的是要提升驗證的參數。 巨集會阻止進一步處理的程式碼中的參數不正確。 不同於 ASSERT 巨集，請確定巨集例外狀況除了產生判斷提示。  
   
- 巨集的行為的兩種方式，根據專案組態。 巨集會呼叫**ASSERT**再擲回例外狀況，如果判斷提示失敗。 因此，在偵錯組態 (也就是其中 **_DEBUG**定義) 巨集產生判斷提示，以及在發行組態中的例外狀況，巨集產生的例外狀況 (**ASSERT**則否評估運算式，在發行組態）。  
+ 巨集的行為的兩種方式，根據專案組態。 巨集呼叫判斷提示，然後在判斷提示失敗時擲回例外狀況。 因此，在偵錯組態 （也就是當定義 _DEBUG） 巨集產生判斷提示，以及在發行組態中，巨集產生時發生的例外狀況 （判斷提示不會評估發行組態中的運算式） 的例外狀況。  
   
- 巨集**ENSURE_ARG**類似**請**巨集。  
+ 巨集 ENSURE_ARG 像是確保巨集。  
   
- **ENSURE_VALID**呼叫`ASSERT_VALID`巨集 （它只在偵錯組建中沒有影響）。 此外， **ENSURE_VALID**指標為 NULL 時擲回例外狀況。 NULL 測試是在偵錯和發行組態中執行。  
+ ENSURE_VALID 呼叫 ASSERT_VALID 巨集 （會將只在偵錯組建中沒有影響）。 此外，ENSURE_VALID 指標為 NULL 時擲回例外狀況。 NULL 測試是在偵錯和發行組態中執行。  
   
- 如果其中任何一項測試失敗，警示訊息會顯示在相同的方式**ASSERT**。 如有需要巨集，就會擲回例外狀況無效的引數。  
+ 如果任何一種測試失敗時，警示訊息會顯示在相同的方式來判斷提示。 如有需要巨集，就會擲回例外狀況無效的引數。  
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
    
@@ -308,7 +308,7 @@ THIS_FILE
 ```  
    
 ### <a name="remarks"></a>備註  
- 會使用資訊**ASSERT**和**確認**巨集。 應用程式精靈和程式碼精靈會將巨集放在他們建立的原始程式檔。  
+ 資訊會使用 ASSERT 及驗證巨集。 應用程式精靈和程式碼精靈會將巨集放在他們建立的原始程式檔。  
    
 ### <a name="example"></a>範例  
 ```cpp
@@ -339,7 +339,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2)的說明**追蹤**。 **追蹤**和`ATLTRACE2`有相同的行為。  
+ 請參閱[ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2)追蹤的說明。 追蹤和 ATLTRACE2 有相同的行為。  
   
  在 MFC 的偵錯版本，此巨集會將指定的字串傳送至目前的應用程式的偵錯工具。 在發行組建，這個巨集，會編譯為 nothing （沒有程式碼產生的話）。  
   
@@ -356,19 +356,19 @@ VERIFY(booleanExpression)
 ```  
   
 ### <a name="parameters"></a>參數  
- `booleanExpression`  
+ *booleanExpression*  
  指定評估為非零，則為 0 的運算式 （包括指標值）。  
   
 ### <a name="remarks"></a>備註  
  如果結果為 0，巨集會列印診斷訊息，並中止程式。 如果條件為非零，它會執行任何動作。  
   
- 診斷資訊的格式如下  
+ 診斷資訊格式如下  
   
  `assertion failed in file <name> in line <num>`  
   
  其中*名稱*是原始程式檔的名稱和*num*是原始程式檔中失敗的判斷提示的行號。  
   
- 在發行版本的 MFC，**確認**會評估運算式，但不會列印或中斷的程式。 例如，如果運算式是函式呼叫，將會進行呼叫。  
+ 在 MFC 發行版本中，確認計算運算式，但不列印或中斷的程式。 例如，如果運算式是函式呼叫，將會進行呼叫。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
@@ -405,13 +405,13 @@ MFC 會使用來傾印偵錯時的物件狀態的內部函式。
 void AfxDump(const CObject* pOb);   
 ```
 ### <a name="parameters"></a>參數  
- `pOb`  
+ *pOb*  
  從衍生類別的物件指標`CObject`。  
    
 ### <a name="remarks"></a>備註  
- **AfxDump**呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 **AfxDump**僅適用於 MFC 的偵錯版本。  
+ `AfxDump` 呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 `AfxDump` 只使用 MFC 的偵錯版本。  
   
- 您的程式碼不應該呼叫**AfxDump**，但應該改為呼叫`Dump`成員函式的適當的物件。  
+ 您的程式碼不應該呼叫`AfxDump`，但應該改為呼叫`Dump`成員函式的適當的物件。  
    
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
@@ -431,11 +431,11 @@ int  afxMemDF;
 ### <a name="remarks"></a>備註  
  `afxMemDF` 可以是下列值所列舉型別指定`afxMemDF`:  
   
-- **allocMemDF**開啟偵錯配置器 （偵錯程式庫中的預設值）。  
+- `allocMemDF` 開啟偵錯配置器 （偵錯程式庫中的預設值）。  
   
-- **delayFreeMemDF**延遲釋放記憶體。 當您的程式會釋放記憶體區塊時，配置器不會傳回記憶體基礎作業系統。 這會將最大記憶體壓力放在您的程式。  
+- `delayFreeMemDF` 延遲釋放記憶體。 當您的程式會釋放記憶體區塊時，配置器不會傳回記憶體基礎作業系統。 這會將最大記憶體壓力放在您的程式。  
   
-- **checkAlwaysMemDF**呼叫`AfxCheckMemory`每次配置或釋放記憶體。 這會將大幅降低記憶體配置和解除配置。  
+- `checkAlwaysMemDF` 呼叫`AfxCheckMemory`每次配置或釋放記憶體。 這會將大幅降低記憶體配置和解除配置。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
@@ -444,7 +444,7 @@ int  afxMemDF;
  **標頭：** afx.h
 
 ##  <a name="afxcheckerror"></a>  AfxCheckError  
- 此函式會測試傳遞**SCODE**以查看是否發生錯誤。  
+ 此函式會測試傳遞的 SCODE 以查看是否發生錯誤。  
   
 ```   
 void AFXAPI AfxCheckError(SCODE sc);
@@ -453,7 +453,7 @@ throw COleException*
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果是錯誤，函式會擲回例外狀況。 如果傳入`SCODE`是**E_OUTOFMEMORY**，函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)藉由呼叫[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 否則，函式會擲回[COleException](../../mfc/reference/coleexception-class.md)藉由呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
+ 如果是錯誤，函式會擲回例外狀況。 如果傳遞的 SCODE E_OUTOFMEMORY，函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)藉由呼叫[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 否則，函式會擲回[COleException](../../mfc/reference/coleexception-class.md)藉由呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
   
  這個函式可用來檢查對應用程式中 OLE 函式呼叫的傳回值。 藉由在應用程式中以此函式測試傳回值，您可以用最少的程式碼因應錯誤狀況。  
   
@@ -479,7 +479,7 @@ BOOL  AfxCheckMemory();
 ### <a name="remarks"></a>備註  
  如果函式偵測到沒有記憶體損毀，它會列印執行任何動作。  
   
- 檢查所有在堆積上目前配置的記憶體區塊，包括所配置**新**但無法直接呼叫基礎的記憶體配置器所配置的這類`malloc`函式或**GlobalAlloc** Windows 函式。 如果發現任何區塊已損毀，則訊息會列印至偵錯工具的輸出。  
+ 檢查所有在堆積上目前配置的記憶體區塊，包括所配置**新**但無法直接呼叫基礎的記憶體配置器所配置的這類**malloc**函式或`GlobalAlloc` Windows 函式。 如果發現任何區塊已損毀，則訊息會列印至偵錯工具的輸出。  
   
  如果您加入線條  
   
@@ -488,7 +488,7 @@ BOOL  AfxCheckMemory();
  在程式模組中，則後續呼叫`AfxCheckMemory`顯示配置的記憶體位置的檔名和行號。  
   
 > [!NOTE]
->  如果模組包含的一或多個實作的可序列化的類別，則您必須將`#define`最後一個之後的行`IMPLEMENT_SERIAL`巨集呼叫。  
+>  如果模組包含的一或多個實作的可序列化的類別，則您必須將`#define`最後 IMPLEMENT_SERIAL 巨集呼叫之後的行。  
   
  此函式僅適用於 MFC 的偵錯版本。  
   
@@ -506,13 +506,13 @@ void AfxDump(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pOb`  
+ *pOb*  
  從衍生類別的物件指標`CObject`。  
   
 ### <a name="remarks"></a>備註  
- **AfxDump**呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 **AfxDump**僅適用於 MFC 的偵錯版本。  
+ `AfxDump` 呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 `AfxDump` 只使用 MFC 的偵錯版本。  
   
- 您的程式碼不應該呼叫**AfxDump**，但應該改為呼叫`Dump`成員函式的適當的物件。  
+ 您的程式碼不應該呼叫`AfxDump`，但應該改為呼叫`Dump`成員函式的適當的物件。  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
@@ -533,15 +533,15 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
  *dwTarget*  
  表示傾印的輸出的目標。 可能的值，可以使用位元 OR 結合 ( **&#124;**) 運算子，如下：  
   
-- **AFX_STACK_DUMP_TARGET_TRACE**將輸出藉由傳送[追蹤](#trace)巨集。 **追蹤**巨集只能偵錯組建中產生輸出。 不過，它會在發行組建中產生任何輸出。 此外，**追蹤**可以重新導向至其他偵錯工具以外的目標。  
+- 藉由 AFX_STACK_DUMP_TARGET_TRACE 傳送的輸出[追蹤](#trace)巨集。 TRACE 巨集; 僅限偵錯組建中產生輸出它會在發行組建中產生任何輸出。 此外，追蹤可以重新導向至其他偵錯工具以外的目標。  
   
-- **AFX_STACK_DUMP_TARGET_DEFAULT**傳送傾印的預設目標的輸出。 偵錯組建中，會輸出至**追蹤**巨集。 在發行組建，輸出會移至剪貼簿。  
+- AFX_STACK_DUMP_TARGET_DEFAULT 傳送傾印的輸出到預設目標。 偵錯組建中，會輸出至 TRACE 巨集。 在發行組建，輸出會移至剪貼簿。  
   
-- **AFX_STACK_DUMP_TARGET_CLIPBOARD**將輸出傳送至只在剪貼簿。 將資料放在剪貼簿使用純文字上**CF_TEXT**剪貼簿格式。  
+- AFX_STACK_DUMP_TARGET_CLIPBOARD 傳送到剪貼簿只有輸出。 以純文字格式使用 CF_TEXT 剪貼簿格式會將資料放在剪貼簿。  
   
-- **AFX_STACK_DUMP_TARGET_BOTH**傳送輸出至剪貼簿和**追蹤**巨集，同時。  
+- AFX_STACK_DUMP_TARGET_BOTH 傳送輸出到剪貼簿和 TRACE 巨集，同時。  
   
-- **AFX_STACK_DUMP_TARGET_ODS**輸出將直接傳送至偵錯工具的 Win32 函式透過**OutputDebugString()**。 此選項會產生偵錯工具輸出，在這兩個偵錯與發行組建，當偵錯工具附加至處理序。 **AFX_STACK_DUMP_TARGET_ODS**永遠會到達偵錯工具 （如果它附加），而且無法重新導向。  
+- AFX_STACK_DUMP_TARGET_ODS 傳送輸出直接透過 Win32 函式偵錯工具`OutputDebugString()`。 此選項會產生偵錯工具輸出，在這兩個偵錯與發行組建，當偵錯工具附加至處理序。 AFX_STACK_DUMP_TARGET_ODS 永遠會到達偵錯工具 （如果它附加），而且無法重新導向。  
   
 ### <a name="remarks"></a>備註  
  下列範例會反映單一呼叫所產生的輸出行`AfxDumpStack`從 MFC 對話方塊應用程式中的按鈕處理常式：  
@@ -612,15 +612,15 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
  **標頭：** afx.h 
 
 ##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
- 啟用和停用 `AFX_DEBUG_STATE` 解構函式中的記憶體流失傾印。  
+ 啟用和停用 AFX_DEBUG_STATE 解構函式中的記憶體流失傾印。  
   
 ```  
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bDump`  
- `TRUE` 表示已啟用記憶體流失傾印；`FALSE` 則表示已停用記憶體流失傾印。  
+ [in]*bDump*  
+ TRUE 表示已啟用記憶體流失傾印。FALSE 表示記憶體流失傾印會停用。  
   
 ### <a name="return-value"></a>傳回值  
  此旗標先前的值。  
@@ -645,7 +645,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
   
 ### <a name="parameters"></a>參數  
  *bTrack*  
- 此值設定為**TRUE**開啟記憶體追蹤。**FALSE**會關閉。  
+ 將此值為 TRUE 會設定記憶體追蹤。FALSE 予以關閉。  
   
 ### <a name="return-value"></a>傳回值  
  追蹤啟用旗標先前的設定。  
@@ -675,20 +675,20 @@ BOOL AfxIsMemoryBlock(
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  要測試的記憶體區塊指向。  
   
- `nBytes`  
+ *nBytes*  
  包含以位元組為單位的記憶體區塊的長度。  
   
- `plRequestNumber`  
+ *plRequestNumber*  
  指向**長**會填入該記憶體區塊的配置順序編號，或如果不是目前作用中的記憶體區塊零的整數。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果目前配置的記憶體區塊，而且長度正確;否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 它也會檢查指定的大小，針對原始配置的大小。 如果此函數會傳回非零，就會傳回的配置順序編號`plRequestNumber`。 這個數字代表相對於所有其他配置區塊已在其中的順序**新**配置。  
+ 它也會檢查指定的大小，針對原始配置的大小。 如果此函數會傳回非零，就會傳回的配置順序編號*plRequestNumber*。 這個數字代表相對於所有其他配置區塊已在其中的順序**新**配置。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
@@ -707,19 +707,19 @@ BOOL AfxIsValidAddress(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lp`  
+ *lp*  
  指向要測試的記憶體位址。  
   
- `nBytes`  
+ *nBytes*  
  包含要測試記憶體的位元組數目。  
   
  *bReadWrite*  
- 指定的記憶體是否同時進行讀取和寫入 ( **TRUE**) 或只讀取 ( **FALSE**)。  
+ 指定的記憶體是否針對讀取和寫入 (TRUE) 或只讀取 (FALSE)。  
   
 ### <a name="return-value"></a>傳回值  
  在偵錯組建為非零，如果指定的記憶體區塊包含完全在程式的記憶體空間。否則便是 0。  
   
- 在非偵錯組建中，為非零，如果`lp`不是 NULL，否則為 0。  
+ 在非偵錯組建中，為非零，如果*lp*不是 NULL，否則為 0。  
   
 ### <a name="remarks"></a>備註  
  位址不會套用至所配置的區塊**新**。  
@@ -740,16 +740,16 @@ BOOL  AfxIsValidString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpsz`  
+ *lpsz*  
  要測試的指標。  
   
- `nLength`  
+ *nLength*  
  指定要測試，以位元組為單位之字串的長度。 -1 表示會以 null 結束的字串。  
   
 ### <a name="return-value"></a>傳回值  
  在偵錯組建中，為非零，如果指定的指標指向的字串指定的大小。否則便是 0。  
   
- 在非偵錯組建中，為非零，如果`lpsz`不是 NULL，否則為 0。  
+ 在非偵錯組建中，為非零，如果*lpsz*不是 NULL，否則為 0。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
@@ -776,16 +776,16 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
   
  **BOOL AFXAPI AllocHook (size_t** `nSize` **，BOOL** `bObject` **，LONG** `lRequestNumber` **);**  
   
- `nSize`  
+ *nSize*  
  建議的記憶體配置的大小。  
   
- `bObject`  
- **TRUE**若配置為`CObject`-衍生物件; 否則為**FALSE**。  
+ *bObject*  
+ 如果配置，則為 TRUE `CObject`-衍生的物件; 否則為 FALSE。  
   
- `lRequestNumber`  
+ *lRequestNumber*  
  記憶體配置順序編號。  
   
- 請注意， **AFXAPI**呼叫慣例隱含被呼叫端必須從堆疊移除參數。  
+ 請注意，呼叫慣例 AFXAPI 意味著被呼叫端必須從堆疊移除參數。  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
@@ -801,14 +801,14 @@ AFXAPI AfxDoForAllClasses(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pfn`  
+ *pfn。*  
  指向要呼叫的每個類別的反覆項目函式。 函式引數是指標`CRuntimeClass`物件和 void 指標至函式的呼叫端提供的額外資料。  
   
- `pContext`  
- 呼叫者可提供給反覆項目函式的選擇性資料點。 此指標可以是**NULL**。  
+ *pContext*  
+ 呼叫者可提供給反覆項目函式的選擇性資料點。 此指標可以是 NULL。  
   
 ### <a name="remarks"></a>備註  
- 可序列化`CObject`-衍生的類別是衍生使用`DECLARE_SERIAL`巨集。 將指標傳遞至`AfxDoForAllClasses`中`pContext`會傳遞至指定的反覆項目函式每次呼叫時。  
+ 可序列化`CObject`-衍生的類別都是使用 DECLARE_SERIAL 巨集所衍生的類別。 將指標傳遞至`AfxDoForAllClasses`中*pContext*會傳遞至指定的反覆項目函式每次呼叫時。  
   
 > [!NOTE]
 >  此函式僅適用於 MFC 的偵錯版本。  
@@ -831,14 +831,14 @@ void AfxDoForAllObjects(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pfn`  
+ *pfn。*  
  指向反覆項目要執行函式的每個物件。 函式引數是指標`CObject`和 void 指標至函式的呼叫端提供的額外資料。  
   
- `pContext`  
- 呼叫者可提供給反覆項目函式的選擇性資料點。 此指標可以是**NULL**。  
+ *pContext*  
+ 呼叫者可提供給反覆項目函式的選擇性資料點。 此指標可以是 NULL。  
   
 ### <a name="remarks"></a>備註  
- 不會列舉堆疊全域的或內嵌的物件。 將指標傳遞至`AfxDoForAllObjects`中`pContext`會傳遞至指定的反覆項目函式每次呼叫時。  
+ 不會列舉堆疊全域的或內嵌的物件。 將指標傳遞至`AfxDoForAllObjects`中*pContext*會傳遞至指定的反覆項目函式每次呼叫時。  
   
 > [!NOTE]
 >  此函式僅適用於 MFC 的偵錯版本。  

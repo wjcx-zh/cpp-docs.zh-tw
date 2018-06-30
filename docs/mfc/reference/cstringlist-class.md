@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375144"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122711"
 ---
 # <a name="cstringlist-class"></a>CStringList 類別
 支援 `CString` 物件的清單。  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>備註  
  值，這表示字串中的字元會比較而不是字串的位址來完成所有的比較。  
   
- `CStringList` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果一份`CString`物件會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CString`並依序序列化項目。  
+ `CStringList` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果一份`CString`物件會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CString`並依序序列化項目。  
   
  如果您需要個別的傾印`CString`項目，您必須將傾印內容的深度為 1 或更大。  
   

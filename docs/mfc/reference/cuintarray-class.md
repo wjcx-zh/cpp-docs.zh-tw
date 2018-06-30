@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372401"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121620"
 ---
 # <a name="cuintarray-class"></a>CUIntArray 類別
 支援不帶正負號整數的陣列。  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CUIntArray`類別成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代**UINT**。  
+ 成員函式`CUIntArray`類別成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，以取代 UINT。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|傳回給定索引的值。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|取得此陣列中項目的數目。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是 NULL。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|取得此陣列中項目的數目。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|傳回最大的有效索引。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
@@ -112,7 +112,7 @@ class CUIntArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- 不帶正負號的整數，或**UINT**，文字及雙字組中，從不同的實體大小**UINT**可以根據作業環境的目標變更。 A **UINT**是 doubleword 相同的大小。  
+ 不帶正負號的整數或 UINT，不同於文字及雙字組，UINT 的實體大小可以根據作業環境的目標變更。 UINT 是 doubleword 相同的大小。  
   
  `CUIntArray` 結合[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)巨集，支援執行階段類型存取和傾印[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件。 如果您需要個別的不帶正負號的整數的項目的傾印，您必須設定為 1 或更大的傾印內容的深度。 無法序列化不帶正負號的整數陣列。  
   

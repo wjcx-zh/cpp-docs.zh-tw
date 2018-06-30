@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f74782241ec69d77ec55b8613c59f87adb40fb
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374584"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122826"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 類別
 為 `CPtrList`類別的物件提供類型安全「包裝函式」。  
@@ -54,10 +54,10 @@ class CTypedPtrList : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>參數  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標清單類別;必須是指標的清單類別 (`CObList`或`CPtrList`)。  
   
- `TYPE`  
+ *型別*  
  基底類別清單中所儲存的項目類型。  
   
 ## <a name="members"></a>成員  
@@ -119,17 +119,17 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *型別*  
  基底類別清單中所儲存的項目類型。  
   
- `newElement`  
- 要加入至這個清單的物件指標。 A **NULL**允許值。  
+ *newElement*  
+ 要加入至這個清單的物件指標。 允許 NULL 值。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標清單類別;必須是指標的清單類別 ( [CObList](../../mfc/reference/coblist-class.md)或[CPtrList](../../mfc/reference/cptrlist-class.md))。  
   
- `pNewList`  
- 指標，另一個[CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)物件。 中的項目`pNewList`會加入此清單。  
+ *pNewList*  
+ 指標，另一個[CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)物件。 中的項目*pNewList*會加入此清單。  
   
 ### <a name="return-value"></a>傳回值  
- 第一個版本會傳回**位置**新插入的項目值。  
+ 第一個版本會傳回新插入的元素的位置值。  
   
 ### <a name="remarks"></a>備註  
  第一版中新增新的項目清單的開頭之前。 第二個版本會加入另一個標頭之前的項目清單。  
@@ -146,23 +146,23 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *型別*  
  基底類別清單中所儲存的項目類型。  
   
- `newElement`  
- 要加入至這個清單的物件指標。 A **NULL**允許值。  
+ *newElement*  
+ 要加入至這個清單的物件指標。 允許 NULL 值。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標清單類別;必須是指標的清單類別 ( [CObList](../../mfc/reference/coblist-class.md)或[CPtrList](../../mfc/reference/cptrlist-class.md))。  
   
- `pNewList`  
- 指標，另一個[CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)物件。 中的項目`pNewList`會加入此清單。  
+ *pNewList*  
+ 指標，另一個[CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)物件。 中的項目*pNewList*會加入此清單。  
   
 ### <a name="return-value"></a>傳回值  
- 第一個版本會傳回**位置**新插入的項目值。  
+ 第一個版本會傳回新插入的元素的位置值。  
   
 ### <a name="remarks"></a>備註  
  第一個版本之後清單的結尾新增新的項目。 第二個版本的清單結尾之後新增另一個項目清單。  
   
 ##  <a name="getat"></a>  CTypedPtrList::GetAt  
- 類型的變數**位置**是索引鍵的清單。  
+ 位置類型的變數是索引鍵的清單。  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -174,17 +174,17 @@ TYPE GetAt(POSITION position) const;
  指定儲存在清單中的項目類型的樣板參數。  
   
  *位置*  
- A**位置**傳回先前值`GetHeadPosition`或**尋找**成員函式呼叫。  
+ 傳回先前的位置值`GetHeadPosition`或`Find`成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
- 如果清單透過指標存取**const CTypedPtrList**，然後`GetAt`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
+ 如果清單透過指標存取`const CTypedPtrList`，然後`GetAt`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
   
  如果清單直接或透過指標存取`CTypedPtrList`，然後`GetAt`傳回的範本參數所指定之類型的指標的參考*類型*。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
 ### <a name="remarks"></a>備註  
- 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `GetAt` 擷取`CObject`相關聯的指定位置的指標。  
+ 它不是索引，相同，您無法處理您自己的位置值。 `GetAt` 擷取`CObject`相關聯的指定位置的指標。  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
+ 您必須確定您位置的值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
  此內嵌函式呼叫`BASE_CLASS` **:: GetAt**。  
   
@@ -201,7 +201,7 @@ TYPE GetHead() const;
  指定儲存在清單中的項目類型的樣板參數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果清單透過指標存取**const CTypedPtrList**，然後`GetHead`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
+ 如果清單透過指標存取`const CTypedPtrList`，然後`GetHead`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
   
  如果清單直接或透過指標存取`CTypedPtrList`，然後`GetHead`傳回的範本參數所指定之類型的指標的參考*類型*。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
@@ -209,7 +209,7 @@ TYPE GetHead() const;
  您必須確定清單不是空的再呼叫`GetHead`。 如果清單是空的偵錯版本的 Mfc 程式庫判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單包含項目。  
   
 ##  <a name="getnext"></a>  CTypedPtrList::GetNext  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**清單中的下一個項目的值。  
+ 取得所識別的清單項目*rPosition*，然後設定*rPosition*位置的值清單中的下一個項目。  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -220,25 +220,25 @@ TYPE GetNext(POSITION& rPosition) const;
  *型別*  
  指定此清單中包含的項目類型的樣板參數。  
   
- `rPosition`  
- 參考**位置**傳回先前值`GetNext`， `GetHeadPosition`，或其他成員函式呼叫。  
+ *rPosition*  
+ 傳回先前的位置值的參考`GetNext`， `GetHeadPosition`，或其他成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
- 如果清單透過指標存取**const CTypedPtrList**，然後`GetNext`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
+ 如果清單透過指標存取`const CTypedPtrList`，然後`GetNext`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
   
  如果清單直接或透過指標存取`CTypedPtrList`，然後`GetNext`傳回的範本參數所指定之類型的指標的參考*類型*。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
 ### <a name="remarks"></a>備註  
  您可以使用`GetNext`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetHeadPosition`或[CPtrList::Find](../../mfc/reference/coblist-class.md#find)。  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
+ 您必須確定您位置的值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
- 如果擷取的項目是在清單中，最後則新值`rPosition`設**NULL**。  
+ 如果擷取的項目是在清單中，最後則新值*rPosition*設為 NULL。  
   
  很可能在反覆項目移除項目。 請參閱範例的[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)。  
   
 ##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**先前的項目在清單中的值。  
+ 取得所識別的清單項目*rPosition*，然後設定*rPosition*先前的項目在清單中的位置值。  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -249,20 +249,20 @@ TYPE GetPrev(POSITION& rPosition) const;
  *型別*  
  指定此清單中包含的項目類型的樣板參數。  
   
- `rPosition`  
- 參考**位置**傳回先前值`GetPrev`或其他成員函式呼叫。  
+ *rPosition*  
+ 傳回先前的位置值的參考`GetPrev`或其他成員函式呼叫。  
   
 ### <a name="return-value"></a>傳回值  
- 如果清單透過指標存取**const CTypedPtrList**，然後`GetPrev`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
+ 如果清單透過指標存取`const CTypedPtrList`，然後`GetPrev`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
   
  如果清單直接或透過指標存取`CTypedPtrList`，然後`GetPrev`傳回的範本參數所指定之類型的指標的參考*類型*。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用`GetPrev`反向反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetTailPosition`或**尋找**。  
+ 您可以使用`GetPrev`反向反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetTailPosition`或`Find`。  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
+ 您必須確定您位置的值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
- 如果擷取的項目是在清單中，第一則的新值`rPosition`設**NULL**。  
+ 如果擷取的項目是在清單中，第一則的新值*rPosition*設為 NULL。  
   
 ##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  取得代表標頭項目，此清單的指標。  
@@ -277,7 +277,7 @@ TYPE GetTail() const;
  指定儲存在清單中的項目類型的樣板參數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果清單透過指標存取**const CTypedPtrList**，然後`GetTail`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
+ 如果清單透過指標存取`const CTypedPtrList`，然後`GetTail`傳回範本參數所指定之類型的指標*類型*。 這允許只能用在指派陳述式右邊的函式，並因此防止修改的清單。  
   
  如果清單直接或透過指標存取`CTypedPtrList`，然後`GetTail`傳回的範本參數所指定之類型的指標的參考*類型*。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
@@ -326,19 +326,19 @@ void SetAt(POSITION pos, TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
- **位置**来設定的項目。  
+ *pos*  
+ 要設定之項目的位置。  
   
  *型別*  
  基底類別清單中所儲存的項目類型。  
   
- `newElement`  
+ *newElement*  
  要寫入至清單的物件指標。  
   
 ### <a name="remarks"></a>備註  
- 類型的變數**位置**是索引鍵的清單。 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `SetAt` 寫入指定的位置清單中的物件指標。  
+ 位置類型的變數是索引鍵的清單。 它不是索引，相同，您無法處理您自己的位置值。 `SetAt` 寫入指定的位置清單中的物件指標。  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
+ 您必須確定您位置的值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
  如需詳細註解，請參閱[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)。  
   

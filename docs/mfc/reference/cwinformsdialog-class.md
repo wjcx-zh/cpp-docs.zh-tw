@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371555"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122493"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 類別
 裝載 Windows Form 使用者控制項的 MFC 對話方塊類別包裝函式。  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDTemplate`  
+ *nIDTemplate*  
  包含的對話方塊範本資源的識別碼。 使用對話方塊編輯器建立對話方塊範本，並將其儲存在應用程式的資源指令碼檔案。 如需有關對話方塊範本的詳細資訊，請參閱[CDialog 類別](../../mfc/reference/cdialog-class.md)。  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  布林值，指定應用程式已設輸入的焦點的控制項在對話方塊中。 如果`OnInitDialog`傳回非零，Windows 將輸入的焦點設定到第一個控制項在對話方塊中。 只有當應用程式已明確設定輸入的焦點為其中一個控制項在對話方塊中，這個方法可以傳回 0。  
   
 ### <a name="remarks"></a>備註  
- MFC 對話方塊中建立時 (使用[建立](../../mfc/reference/cdialog-class.md#create)， [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)，或[DoModal](../../mfc/reference/cdialog-class.md#domodal)方法繼承自[CDialog](../../mfc/reference/cdialog-class.md))， `WM_INITDIALOG`傳送訊息，且在呼叫這個方法。 它會建立 Windows Form 控制項在對話方塊中的執行個體，並調整大小以配合使用者控制項的大小 對話方塊。 然後它會裝載新的控制項 [MFC] 對話方塊中。  
+ MFC 對話方塊中建立時 (使用[建立](../../mfc/reference/cdialog-class.md#create)， [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)，或[DoModal](../../mfc/reference/cdialog-class.md#domodal)方法繼承自[CDialog](../../mfc/reference/cdialog-class.md))，WM_INITDIALOG 訊息傳送，並在呼叫這個方法。 它會建立 Windows Form 控制項在對話方塊中的執行個體，並調整大小以配合使用者控制項的大小 對話方塊。 然後它會裝載新的控制項 [MFC] 對話方塊中。  
   
  如果您需要執行特殊處理對話方塊中初始化時，請覆寫此成員函式。 如需有關如何使用這個方法的詳細資訊，請參閱[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。  
   

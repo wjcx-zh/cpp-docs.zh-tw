@@ -1,7 +1,7 @@
 ---
 title: sampler 類別 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-amp
 ms.topic: reference
@@ -22,197 +22,204 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9788b62385f7c6f5eb82e3fbc69d63d3120cc2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7261a28f5dea4a8de4af3c169f9b67537e5f3088
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693337"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121847"
 ---
 # <a name="sampler-class"></a>sampler 類別
-取樣器類別會彙總使用的紋理取樣的取樣組態資訊。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class sampler;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[取樣器建構函式](#ctor)|多載。 建構的取樣器執行個體。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[get_address_mode](#get_address_mode)|傳回`address_mode`的取樣器物件與相關聯。|  
-|[get_border_color](#get_border_color)|傳回之取樣器物件與相關聯的框線色彩。|  
-|[get_filter_mode](#get_filter_mode)|傳回`filter_mode`的取樣器物件與相關聯。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[operator=](#operator_eq)|多載。 指派運算子。|  
-  
-### <a name="public-data-members"></a>公用資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[address_mode](#address_mode)|取得的地址模式`sampler`物件。|  
-|[border_color](#border_color)|取得框線的色彩`sampler`物件。|  
-|[filter_mode](#filter_mode)|取得的篩選模式`sampler`物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `sampler`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** amp_graphics.h  
-  
- **命名空間：** concurrency:: graphics  
-  
-##  <a name="ctor"></a> 取樣器 
 
- 建構的執行個體[sampler 類別](sampler-class.md)。  
-  
-```  
-sampler() restrict(cpu);
+取樣器類別會彙總使用的紋理取樣的取樣組態資訊。
 
- *// [1] default constructor  
- 
-sampler(// [2] constructor  
+## <a name="syntax"></a>語法
+
+```cpp
+class sampler;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[取樣器建構函式](#ctor)|多載。 建構的取樣器執行個體。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[get_address_mode](#get_address_mode)|傳回`address_mode`的取樣器物件與相關聯。|
+|[get_border_color](#get_border_color)|傳回之取樣器物件與相關聯的框線色彩。|
+|[get_filter_mode](#get_filter_mode)|傳回`filter_mode`的取樣器物件與相關聯。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[operator=](#operator_eq)|多載。 指派運算子。|
+
+### <a name="public-data-members"></a>公用資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[address_mode](#address_mode)|取得的地址模式`sampler`物件。|
+|[border_color](#border_color)|取得框線的色彩`sampler`物件。|
+|[filter_mode](#filter_mode)|取得的篩選模式`sampler`物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`sampler`
+
+## <a name="requirements"></a>需求
+
+**標頭：** amp_graphics.h
+
+**命名空間：** concurrency:: graphics
+
+##  <a name="ctor"></a> 取樣器
+
+建構的執行個體[sampler 類別](sampler-class.md)。
+
+```cpp
+sampler() restrict(cpu);    // [1] default constructor
+
+sampler(                    // [2] constructor
     filter_mode _Filter_mode) restrict(cpu);
 
- 
-sampler(// [3] constructor  
-    address_mode _Address_mode,  
+
+sampler(                    // [3] constructor
+    address_mode _Address_mode,
     float_4 _Border_color = float_4(0.0f,
     0.0f,
     0.0f,
     0.0f)) restrict(cpu);
 
- 
-sampler(// [4] constructor  
-    filter_mode _Filter_mode,  
-    address_mode _Address_mode,  
+
+sampler(                    // [4] constructor
+    filter_mode _Filter_mode,
+    address_mode _Address_mode,
     float_4 _Border_color = float_4(0.0f,
     0.0f,
     0.0f,
     0.0f)) restrict(cpu);
 
- 
-sampler(// [5] copy constructor  
+
+sampler(                    // [5] copy constructor
     const sampler& _Other) restrict(amp,
     cpu);
 
- 
-sampler(// [6] move constructor  
+
+sampler(                    // [6] move constructor
     sampler&& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>參數  
- `_Filter_mode`  
- 要在取樣中使用的篩選模式。  
-  
- `_Address_mode`  
- 要用於取樣的所有維度的定址模式。  
-  
- `_Border_color`  
- 如果位址模式是 address_border 使用之框線色彩。 預設值是 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`。  
-  
- `_Other`  
- [5] 複製建構函式  
- `sampler`要複製到新物件`sampler`執行個體。  
-  
- [6] 移動建構函式  
- `sampler`移動到新物件`sampler`執行個體。  
-  
-##  <a name="address_mode"></a> address_mode 
+```
 
- 取得的地址模式`sampler`物件。  
-  
-```  
-__declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
-```  
-  
-##  <a name="border_color"></a> border_color 
+### <a name="parameters"></a>參數
 
- 取得框線的色彩`sampler`物件。  
-  
-```  
-__declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
-```  
-  
-##  <a name="filter_mode"></a> filter_mode 
+*_Filter_mode*  
+ 要在取樣中使用的篩選模式。
 
- 取得的篩選模式`sampler`物件。  
-  
-```  
-__declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
-```  
-  
-##  <a name="get_address_mode"></a> get_address_mode 
+*_Address_mode*  
+ 要用於取樣的所有維度的定址模式。
 
- 傳回這個設定的篩選模式`sampler`。  
-  
-```  
-Concurrency::graphics::address_mode get_address_mode() const __GPU;  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 已針對之取樣器位址模式。  
-  
-##  <a name="get_border_color"></a> get_border_color 
+*_Border_color*  
+ 如果位址模式是 address_border 使用之框線色彩。 預設值是 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`。
 
- 傳回這個設定的框線色彩`sampler`。  
-  
-```  
+*_Other*  
+[5] 複製建構函式  
+`sampler`要複製到新物件`sampler`執行個體。
+
+[6] 移動建構函式  
+`sampler`移動到新物件`sampler`執行個體。
+
+##  <a name="address_mode"></a> address_mode
+
+取得的地址模式`sampler`物件。
+
+```cpp
+__declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;
+```
+
+##  <a name="border_color"></a> border_color
+
+取得框線的色彩`sampler`物件。
+
+```cpp
+__declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
+```
+
+##  <a name="filter_mode"></a> filter_mode
+
+取得的篩選模式`sampler`物件。
+
+```cpp
+__declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;
+```
+
+##  <a name="get_address_mode"></a> get_address_mode
+
+傳回這個設定的篩選模式`sampler`。
+
+```cpp
+Concurrency::graphics::address_mode get_address_mode() const __GPU;
+```
+
+### <a name="return-value"></a>傳回值
+
+已針對之取樣器位址模式。
+
+##  <a name="get_border_color"></a> get_border_color
+
+傳回這個設定的框線色彩`sampler`。
+
+```cpp
 Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
-```  
-  
-### <a name="return-value"></a>傳回值  
- Float_4 包含框線色彩。  
-  
-##  <a name="get_filter_mode"></a> get_filter_mode 
+```
 
- 傳回這個設定的篩選模式`sampler`。  
-  
-```  
+### <a name="return-value"></a>傳回值
+
+Float_4 包含框線色彩。
+
+##  <a name="get_filter_mode"></a> get_filter_mode
+
+傳回這個設定的篩選模式`sampler`。
+
+```cpp
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
-```  
-  
-### <a name="return-value"></a>傳回值  
- 已針對之取樣器的篩選模式。  
-  
-##  <a name="operator_eq"></a> 運算子 = 
+```
 
- 將另一個取樣器物件的值指派給現有的取樣器。  
-  
-```  
-sampler& operator= (// [1] copy assignment operator const sampler& _Other) restrict(amp,
-    cpu);
+### <a name="return-value"></a>傳回值
 
- 
-sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(amp,
-    cpu);
-```  
-  
-### <a name="parameters"></a>參數  
- `_Other`  
- [1] 複製指派運算子  
- `sampler`要複製到這個物件`sampler`。  
-  
- [2] 移動指派運算子  
- `sampler`物件將移至這`sampler`。  
-  
-### <a name="return-value"></a>傳回值  
- 此取樣器執行個體的參考。  
-  
-## <a name="see-also"></a>另請參閱  
- [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
+已針對之取樣器的篩選模式。
+
+##  <a name="operator_eq"></a> 運算子 =
+
+將另一個取樣器物件的值指派給現有的取樣器。
+
+```cpp
+sampler& operator= (    // [1] copy assignment operator
+    const sampler& _Other) restrict(amp, cpu);
+
+sampler& operator= (    // [2] move assignment operator 
+    sampler&& _Other) restrict(amp, cpu);
+```
+
+### <a name="parameters"></a>參數
+
+*_Other*  
+[1] 複製指派運算子  
+`sampler`要複製到這個物件`sampler`。
+
+[2] 移動指派運算子  
+`sampler`物件將移至這`sampler`。
+
+### <a name="return-value"></a>傳回值
+
+此取樣器執行個體的參考。
+
+## <a name="see-also"></a>另請參閱
+
+[Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)  

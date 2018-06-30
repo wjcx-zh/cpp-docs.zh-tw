@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e82dce1d80ee241c8bffae99457c2e25555818
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370545"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121711"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 類別
 提供可將 Windows Form 控制項裝載為 MFC 檢視的一般功能。  
@@ -78,7 +78,7 @@ CWinFormsView(System::Type^ pManagedViewType);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pManagedViewType`  
+ *pManagedViewType*  
  Windows Form 使用者控制項的資料類型的指標。   
   
 ### <a name="example"></a>範例  

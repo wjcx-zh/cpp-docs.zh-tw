@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89de8dddae6d6549fe12086b84e6bb656afcbc4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95e05c071057025bda8e841be2cd5c6b17971626
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374984"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122564"
 ---
 # <a name="cstdiofile-class"></a>Cgopherfile 類別
 代表執行階段函式所開啟的 C 執行階段資料流檔案[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
@@ -109,28 +109,28 @@ CStdioFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pOpenStream`  
+ *pOpenStream*  
  指定 C 執行階段函式呼叫所傳回的檔案指標[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
   
- `lpszFileName`  
+ *lpszFileName*  
  指定所需的檔案路徑的字串。 路徑可以是相對或絕對。  
   
- `nOpenFlags`  
- 指定用來建立檔案、 檔案共用和檔案存取模式選項。 您可以指定多個選項，藉由使用位元 OR ( `|`) 運算子。  
+ *nOpenFlags*  
+ 指定用來建立檔案、 檔案共用和檔案存取模式選項。 您可以指定多個選項，藉由使用位元 OR ( **|** ) 運算子。  
   
  其中一個檔案存取模式選項是必要的。其他模式是選擇性的。 請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)模式選項和其他旗標的清單。 在 MFC 3.0 版和更新版本中，允許共用旗標。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標。  
   
 ### <a name="remarks"></a>備註  
  預設建構函式不會附加至檔案`CStdioFile`物件。 當使用這個建構函式，您必須使用`CStdioFile::Open`方法來開啟檔案，並將其附加至`CStdioFile`物件。  
   
- 單一參數建構函式會將附加至開啟的檔案資料流`CStdioFile`物件。 允許指標的值包括預先定義的輸入/輸出檔案指標`stdin`， `stdout`，或`stderr`。  
+ 單一參數建構函式會將附加至開啟的檔案資料流`CStdioFile`物件。 允許指標的值包括預先定義的輸入/輸出檔案指標*stdin*， *stdout*，或*stderr*。  
   
  兩個參數的建構函式建立`CStdioFile`物件，並開啟對應的檔案，以指定的路徑。  
   
- 如果您要傳入`NULL`針對`pOpenStream`或`lpszFileName`，建構函式會擲回`CInvalidArgException*`。  
+ 如果您要傳入任何 NULL *pOpenStream*或*lpszFileName*，建構函式會擲回`CInvalidArgException*`。  
   
  如果無法開啟或建立檔案，建構函式會擲回`CFileException*`。  
   
@@ -145,7 +145,7 @@ FILE* m_pStream;
 ```  
   
 ### <a name="remarks"></a>備註  
- 它是**NULL**如果從未開啟檔案，或已關閉。  
+ 如果從未開啟的檔案，或已關閉，它可以是 NULL。  
   
 ##  <a name="open"></a>  CStdioFile::Open  
  多載。 開啟適用於與預設`CStdioFile`建構函式。  
@@ -165,25 +165,25 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  所需的檔案的路徑字串。 路徑可以是相對或絕對。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  共用及存取模式。 指定開啟檔案時要採取的動作。 您可以藉由使用位元 OR 結合選項 (&#124;) 運算子。 一個存取權限，以及一個共用選項是必要的。modeCreate 和 modeNoInherit 模式是選擇性的。  
   
- `pError`  
+ *pError*  
  將會收到失敗的作業狀態的現有檔案例外狀況物件指標。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為 `TRUE`，否則為 `FALSE`。  
+ 如果成功，則為 TRUE，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="readstring"></a>  CStdioFile::ReadString  
- 文字資料讀入緩衝區中，最大的限制`nMax`-1 個字元，與關聯的檔案從`CStdioFile`物件。  
+ 文字資料讀入緩衝區中，最大的限制*nMax*-1 個字元，與關聯的檔案從`CStdioFile`物件。  
   
 ```  
 virtual LPTSTR ReadString(
@@ -194,25 +194,25 @@ virtual BOOL ReadString(CString& rString);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpsz`  
+ *lpsz*  
  指定使用者提供的緩衝區會接收以 null 結尾的文字字串的指標。  
   
- `nMax`  
+ *nMax*  
  指定要讀取的字元數目上限，不計結束的 null 字元。  
   
- `rString`  
+ *rString*  
  若要參考`CString`函式傳回時，將包含字串的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 包含文字資料的緩衝區指標。 **NULL**或檔案結尾已到達未讀取任何資料; 如果布林值，如果**FALSE**如果檔案結尾已到達未讀取的任何資料。  
+ 包含文字資料的緩衝區指標。 如果檔案結尾已到達未讀取任何資料，則為 NULL或如果布林值，如果檔案結尾，則為 FALSE。 已到達未讀取的任何資料。  
   
 ### <a name="remarks"></a>備註  
- 停止讀取第一個新行字元。 如果在此情況下，少於`nMax`已讀取-1 個字元、 新行字元會儲存在緩衝區中。 在任一情況下，會附加 null 字元 ('\0')。  
+ 停止讀取第一個新行字元。 如果在此情況下，少於*nMax*已讀取-1 個字元、 新行字元會儲存在緩衝區中。 在任一情況下，會附加 null 字元 ('\0')。  
   
  [CFile::Read](../../mfc/reference/cfile-class.md#read)也會提供的文字模式的輸入，但它不會終止歸位字元傳回換行字元組。  
   
 > [!NOTE]
->  `CString`此函式版本會移除`'\n'`存在; 如果`LPTSTR`版本並不會。  
+>  `CString`此函式版本會移除`'\n'`存在; 如果 LPTSTR 版本則否。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
@@ -227,17 +227,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lOff`  
+ *lOff*  
  要移動指標的位元組數目。  
   
- `nFrom`  
+ *nFrom*  
  指標移動模式。 必須是下列值之一：  
   
-- `CFile::begin`： 移動檔案指標`lOff`將從檔案開頭的位元組。  
+- `CFile::begin`： 移動檔案指標*lOff*將從檔案開頭的位元組。  
   
-- `CFile::current`： 移動檔案指標`lOff`位元組從檔案中的目前位置。  
+- `CFile::current`： 移動檔案指標*lOff*位元組從檔案中的目前位置。  
   
-- `CFile::end`： 移動檔案指標`lOff`從檔案結尾的位元組。 請注意，`lOff`必須負到現有的搜尋檔案進行; 正數值將會搜尋超出檔案結尾。  
+- `CFile::end`： 移動檔案指標*lOff*從檔案結尾的位元組。 請注意， *lOff*必須負到現有的搜尋檔案進行; 正數值將會搜尋超出檔案結尾。  
   
 ### <a name="return-value"></a>傳回值  
  如果要求的位置是合法的`Seek`從檔案開頭傳回新的位元組位移。 否則，傳回值未定義和`CFileException`物件就會擲回。  
@@ -262,15 +262,15 @@ virtual void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpsz`  
+ *lpsz*  
  指定包含以 null 結束的字串緩衝區的指標。  
   
 ### <a name="remarks"></a>備註  
- 結束的 null 字元 ( `\0`) 不會寫入至檔案。 這個方法會寫入新行字元`lpsz`作為歸位字元/換行對檔案。  
+ 結束的 null 字元 ( `\0`) 不會寫入至檔案。 這個方法會寫入新行字元*lpsz*作為歸位字元/換行對檔案。  
   
  如果您想要寫入的資料，不是以 null 結束的檔案時，使用`CStdioFile::Write`或[CFile::Write](../../mfc/reference/cfile-class.md#write)。  
   
- 這個方法會擲回`CInvalidArgException*`如果您指定`NULL`如`lpsz`參數。  
+ 這個方法會擲回`CInvalidArgException*`如果您指定 NULL *lpsz*參數。  
   
  這個方法會擲回`CFileException*`以回應檔案系統錯誤。  
   

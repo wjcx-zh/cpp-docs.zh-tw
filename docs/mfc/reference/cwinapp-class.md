@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105e8860746c4de4086e9481b06417b186ddc9ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aab01b0f55d19ef3c9d39fed38b42471f559ba8d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378712"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123197"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 Windows 應用程式物件所衍生自的基底類別。  
@@ -238,7 +238,7 @@ class CWinApp : public CWinThread
 |[CWinApp::DelRegTree](#delregtree)|刪除指定的索引鍵和其所有子機碼。|  
 |[CWinApp::DoMessageBox](#domessagebox)|實作[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)應用程式。|  
 |[CWinApp::DoWaitCursor](#dowaitcursor)|開啟和關閉，則會將等待游標。|  
-|[CWinApp::EnableD2DSupport](#enabled2dsupport)|可讓應用程式`D2D`支援。 初始化主視窗之前先呼叫這個方法。|  
+|[CWinApp::EnableD2DSupport](#enabled2dsupport)|可讓應用程式 D2D 支援。 初始化主視窗之前先呼叫這個方法。|  
 |[CWinApp::EnableHtmlHelp](#enablehtmlhelp)|實作 HTMLHelp 應用程式，而不是 WinHelp。|  
 |[CWinApp::EnableTaskbarInteraction](#enabletaskbarinteraction)|可讓工作列互動。|  
 |[CWinApp::ExitInstance](#exitinstance)|覆寫您的應用程式終止時清除。|  
@@ -301,13 +301,13 @@ class CWinApp : public CWinThread
 |[CWinApp::EnableShellOpen](#enableshellopen)|可讓使用者從 Windows 檔案管理員開啟資料檔案。|  
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|載入標準。INI 檔案設定而且可讓您最近使用的檔案清單功能。|  
 |[CWinApp::OnContextHelp](#oncontexthelp)|處理應用程式中的 SHIFT + F1 說明。|  
-|[CWinApp::OnFileNew](#onfilenew)|實作`ID_FILE_NEW`命令。|  
-|[CWinApp::OnFileOpen](#onfileopen)|實作`ID_FILE_OPEN`命令。|  
-|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|實作`ID_FILE_PRINT_SETUP`命令。|  
+|[CWinApp::OnFileNew](#onfilenew)|實作 ID_FILE_NEW 命令。|  
+|[CWinApp::OnFileOpen](#onfileopen)|實作 ID_FILE_OPEN 命令。|  
+|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|實作 ID_FILE_PRINT_SETUP 命令。|  
 |[CWinApp::OnHelp](#onhelp)|在應用程式 (使用目前的內容) 中處理 F1 說明。|  
-|[CWinApp::OnHelpFinder](#onhelpfinder)|處理 `ID_HELP_FINDER` 和 `ID_DEFAULT_HELP` 命令。|  
-|[CWinApp::OnHelpIndex](#onhelpindex)|處理 `ID_HELP_INDEX` 命令並提供預設的說明主題。|  
-|[CWinApp::OnHelpUsing](#onhelpusing)|處理 `ID_HELP_USING` 命令。|  
+|[CWinApp::OnHelpFinder](#onhelpfinder)|處理 ID_HELP_FINDER 和 ID_DEFAULT_HELP 命令。|  
+|[CWinApp::OnHelpIndex](#onhelpindex)|處理 ID_HELP_INDEX 命令，並提供預設的說明主題。|  
+|[CWinApp::OnHelpUsing](#onhelpusing)|處理 ID_HELP_USING 命令。|  
 |[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|註冊應用程式的所有文件類型與 Windows 檔案管理員。|  
 |[CWinApp::SetAppID](#setappid)|應用程式會明確設定應用程式使用者模型識別碼。 任何使用者介面呈現給使用者 （最好是應用程式的建構函式） 之前，應該呼叫這個方法。|  
 |[CWinApp::SetRegistryKey](#setregistrykey)|會儲存在登錄中，而不是應用程式設定。INI 檔案。|  
@@ -365,7 +365,7 @@ class CWinApp : public CWinThread
   
 - `CWinApp`索引鍵可覆寫。  
   
- **M_hPrevInstance**資料成員不存在。 如需有關偵測的上一個執行個體詳細`CWinApp`，請參閱知識庫文件 「 如何來識別前一個執行個體的應用程式 」 (KB106385)，網址[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385)。  
+ `m_hPrevInstance`資料成員不存在。 如需有關偵測的上一個執行個體詳細`CWinApp`，請參閱知識庫文件 「 如何來識別前一個執行個體的應用程式 」 (KB106385)，網址[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -387,7 +387,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTemplate`  
+ *pTemplate*  
  指標`CDocTemplate`加入。  
   
 ### <a name="remarks"></a>備註  
@@ -397,14 +397,14 @@ void AddDocTemplate(CDocTemplate* pTemplate);
  [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]  
   
 ##  <a name="addtorecentfilelist"></a>  CWinApp::AddToRecentFileList  
- 呼叫此成員函式，以新增`lpszPathName`MRU 檔案清單。  
+ 呼叫此成員函式，以新增*lpszPathName* MRU 檔案清單。  
   
 ```  
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  檔案的路徑。  
   
 ### <a name="remarks"></a>備註  
@@ -423,7 +423,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpvParam`  
+ [in]*lpvParam*  
  保留供未來使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -444,8 +444,8 @@ void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEndSession`  
- 指定要結束 Windows 工作階段。 它是**TRUE**如果工作階段正在結束; 否則為**FALSE**。  
+ *bEndSession*  
+ 指定要結束 Windows 工作階段。 它為 TRUE，如果工作階段正在結束。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  呼叫[HideApplication](#hideapplication)之前先呼叫`CloseAllDocuments`。  
@@ -458,7 +458,7 @@ BOOL CreatePrinterDC(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dc`  
+ *dc*  
  對印表機裝置內容的參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -470,15 +470,15 @@ BOOL CreatePrinterDC(CDC& dc);
  如果函式成功，當您完成列印時，您必須終結裝置內容。 您可以讓的解構函式[CDC](../../mfc/reference/cdc-class.md)物件執行動作，或您可以明確地執行呼叫[CDC::DeleteDC](../../mfc/reference/cdc-class.md#deletedc)。  
   
 ##  <a name="cwinapp"></a>  CWinApp::CWinApp  
- 建構`CWinApp`物件，並傳遞`lpszAppName`儲存為應用程式名稱。  
+ 建構`CWinApp`物件，並傳遞*lpszAppName*儲存為應用程式名稱。  
   
 ```  
 CWinApp(LPCTSTR lpszAppName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszAppName`  
- 以 null 結束的字串，包含 Windows 使用的應用程式名稱。 如果未提供這個引數，或為**NULL**，`CWinApp`使用的資源字串**AFX_IDS_APP_TITLE**或可執行檔的檔名。  
+ *lpszAppName*  
+ 以 null 結束的字串，包含 Windows 使用的應用程式名稱。 如果未提供這個引數，或為 NULL，`CWinApp`使用的資源字串 AFX_IDS_APP_TITLE 或可執行檔的檔名。  
   
 ### <a name="remarks"></a>備註  
  您應該建構一個全域物件您`CWinApp`-衍生的類別。 您只能有一個`CWinApp`應用程式中的物件。 建構函式儲存的指標`CWinApp`物件以便`WinMain`可以呼叫物件的成員函式來初始化和執行應用程式。  
@@ -528,10 +528,10 @@ virtual int DoMessageBox(
  *lpszPrompt*  
  在訊息方塊文字的位址。  
   
- `nType`  
+ *n*  
  訊息方塊[樣式](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)。  
   
- `nIDPrompt`  
+ *nIDPrompt*  
  索引以說明內容字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -550,7 +550,7 @@ virtual void DoWaitCursor(int nCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCode`  
+ *則 nCode*  
  如果這個參數是 1，則會顯示等待游標。 如果為 0，將等待游標會還原不遞增參考計數。 如果-1，便會結束等待游標。  
   
 ### <a name="remarks"></a>備註  
@@ -575,10 +575,10 @@ DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```  
   
 ### <a name="parameters"></a>參數  
- `d2dFactoryType`  
+ *d2dFactoryType*  
  D2D factory 和它所建立的資源的執行緒模型。  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  值，指定是否將共用或隔離寫入 factory 物件  
   
 ### <a name="return-value"></a>傳回值  
@@ -614,17 +614,17 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
- 指定是否要啟用 Windows 7 工作列互動 ( `TRUE`)，或停用 ( `FALSE`)。  
+ *bEnable*  
+ 指定與 Windows 7 工作列互動應該 (TRUE)，啟用或停用 (FALSE)。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果工作列互動可以啟用或停用。  
+ 如果工作列互動可以啟用或停用，則傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 建立主視窗之前，必須呼叫這個方法，否則它會判斷提示，並傳回`FALSE`。  
+ 建立主視窗之前，必須呼叫這個方法，否則它會判斷提示，會傳回 FALSE。  
   
 ##  <a name="exitinstance"></a>  CWinApp::ExitInstance  
- 由架構呼叫從**執行**成員函式來結束應用程式的這個執行個體。  
+ 由架構呼叫從`Run`成員函式來結束應用程式的這個執行個體。  
   
 ```  
 virtual int ExitInstance();
@@ -634,7 +634,7 @@ virtual int ExitInstance();
  應用程式的結束代碼。0 表示沒有錯誤，和大於 0 的值表示錯誤。 此值做為傳回的值從`WinMain`。  
   
 ### <a name="remarks"></a>備註  
- 請勿呼叫此成員函式從任何地方但內**執行**成員函式。  
+ 請勿呼叫此成員函式從任何地方但內`Run`成員函式。  
   
  此函式的預設實作會寫入應用程式的架構選項。INI 檔案。 覆寫您的應用程式終止時清除此函式。  
   
@@ -652,7 +652,7 @@ virtual LPVOID GetApplicationRecoveryParameter();
  應用程式的復原方法預設輸入的參數。  
   
 ### <a name="remarks"></a>備註  
- 此函式的預設行為會傳回`NULL`。  
+ 此函式的預設行為會傳回 NULL。  
   
  如需詳細資訊，請參閱[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。  
   
@@ -688,13 +688,13 @@ virtual DWORD GetApplicationRestartFlags();
   
  重新啟動管理員旗標的可能值如下所示：  
   
-- `RESTART_NO_CRASH`  
+- RESTART_NO_CRASH  
   
-- `RESTART_NO_HANG`  
+- RESTART_NO_HANG  
   
-- `RESTART_NO_PATCH`  
+- RESTART_NO_PATCH  
   
-- `RESTART_NO_REBOOT`  
+- RESTART_NO_REBOOT  
   
 ##  <a name="getappregistrykey"></a>  CWinApp::GetAppRegistryKey  
  傳回的索引鍵為 HKEY_CURRENT_USER\\\RegistryKey\ProfileName 「 軟體 」。  
@@ -704,11 +704,11 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功則應用程式金鑰否則`NULL`。  
+ 如果函式成功則應用程式金鑰否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
   
@@ -725,7 +725,7 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 ### <a name="remarks"></a>備註  
  重新啟動管理員會使用每個應用程式必須有一個執行個體[CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)。 這個類別會負責監視開啟的文件和自動儲存檔案。 行為`CDataRecoveryHandler`重新啟動管理員的組態而定。 如需詳細資訊，請參閱[CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)。  
   
- 這個方法會傳回`NULL`早於 Windows Vista 作業系統上。 重新啟動管理員不早於 Windows Vista 支援作業系統上。  
+ 這個方法會傳回 NULL 作業系統上稍早於 Windows Vista。 重新啟動管理員不早於 Windows Vista 支援作業系統上。  
   
  如果應用程式目前沒有資料復原處理常式，這個方法會建立一個，並傳回的指標。  
   
@@ -737,10 +737,10 @@ POSITION GetFirstDocTemplatePosition() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果清單是空的。  
+ 位置值，可用於反覆項目或物件指標擷取。如果清單是空的則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 使用**位置**的呼叫中傳回值[GetNextDocTemplate](#getnextdoctemplate)取得第一個[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件。  
+ 使用傳回的呼叫中的位置值[GetNextDocTemplate](#getnextdoctemplate)取得第一個[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件。  
   
 ##  <a name="gethelpmode"></a>  CWinApp::GetHelpMode  
  擷取說明的應用程式所使用的型別。  
@@ -753,15 +753,15 @@ AFX_HELP_TYPE GetHelpMode();
  使用應用程式的說明類型。 請參閱[CWinApp::m_eHelpType](#m_ehelptype)如需詳細資訊。  
   
 ##  <a name="getnextdoctemplate"></a>  CWinApp::GetNextDocTemplate  
- 取得所識別的文件範本`pos`，然後設定`pos`至**位置**值。  
+ 取得所識別的文件範本*pos*，然後設定*pos*位置值。  
   
 ```  
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
- 若要參考**位置**先前呼叫所傳回的值`GetNextDocTemplate`或[GetFirstDocTemplatePosition](#getfirstdoctemplateposition)。 此呼叫的下一個位置更新的值。  
+ *pos*  
+ 先前呼叫所傳回的位置值的參考`GetNextDocTemplate`或[GetFirstDocTemplatePosition](#getfirstdoctemplateposition)。 此呼叫的下一個位置更新的值。  
   
 ### <a name="return-value"></a>傳回值  
  指標[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件。  
@@ -769,9 +769,9 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ### <a name="remarks"></a>備註  
  您可以使用`GetNextDocTemplate`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetFirstDocTemplatePosition`。  
   
- 您必須確定您**位置**值是否有效。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
+ 您必須確定您位置的值無效。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
- 如果擷取的文件範本是最後一個可用，然後的新值`pos`設**NULL**。  
+ 如果擷取的文件範本是最後一個可用，然後的新值*pos*設為 NULL。  
   
 ##  <a name="getprinterdevicedefaults"></a>  CWinApp::GetPrinterDeviceDefaults  
  呼叫此成員函式，以準備進行列印印表機裝置內容。  
@@ -824,7 +824,7 @@ BOOL GetProfileBinary(
  此成員函式不區分大小寫，因此在字串*lpszSection*和*lpszEntry*參數可能大小寫不同。  
   
 > [!NOTE]
-> **GetProfileBinary**會配置一個緩衝區，並傳回其位址中的\* *ppData*。 呼叫端會負責釋放緩衝區使用**delete []**。  
+> `GetProfileBinary` 會配置一個緩衝區，並傳回其位址中的\* *ppData*。 呼叫端會負責釋放緩衝區使用**delete []**。  
   
 > [!IMPORTANT]
 >  這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
@@ -845,22 +845,22 @@ UINT GetProfileInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSection`  
+ *lpszSection*  
  指向以 null 終止的字串，這個字串指定包含項目的區段。  
   
- `lpszEntry`  
+ *lpszEntry*  
  指向以 null 終止的字串，其中包含要擷取其值的項目。  
   
- `nDefault`  
+ *nDefault*  
  指定架構找不到項目時要傳回的預設值。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，在指定項目後面之字串的整數值。 如果函式找不到項目，則傳回值為 `nDefault` 參數的值。 如果對應到指定項目的值不是整數，則傳回值為 0。  
+ 如果函式成功，在指定項目後面之字串的整數值。 傳回值是值*nDefault*參數如果函數找不到項目。 如果對應到指定項目的值不是整數，則傳回值為 0。  
   
- 此成員函式支援 .INI 檔中值的十六進位標記法。 當您擷取帶正負號的整數時，您應該將值轉型為 `int`。  
+ 此成員函式支援 .INI 檔中值的十六進位標記法。 當您擷取帶正負號的整數時，您應該將值轉換成**int**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式不區分大小寫，因此，`lpszSection` 和 `lpszEntry` 參數的字串在大小寫上可能不同。  
+ 此成員函式不區分大小寫，因此在字串*lpszSection*和*lpszEntry*參數可能大小寫不同。  
   
 > [!IMPORTANT]
 >  這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
@@ -881,17 +881,17 @@ CString GetProfileString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSection`  
+ *lpszSection*  
  指向以 null 終止的字串，這個字串指定包含項目的區段。  
   
- `lpszEntry`  
- 指向以 null 終止的字串，包含要擷取其字串的項目。 此值不能**NULL**。  
+ *lpszEntry*  
+ 指向以 null 終止的字串，包含要擷取其字串的項目。 此值必須不是 NULL。  
   
- `lpszDefault`  
+ *lpszDefault*  
  預設字串值，指定的項目，如果初始設定檔案中找不到進入點。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回值是從應用程式的字串。INI 檔案或`lpszDefault`如果找不到字串。 Framework 所支援的最大字串長度是`_MAX_PATH`。 如果`lpszDefault`是**NULL**，傳回的值為空字串。  
+ 傳回值是從應用程式的字串。INI 檔案或*lpszDefault*如果找不到字串。 _MAX_PATH framework 所支援最大字串長度。 如果*lpszDefault*是 NULL，傳回的值為空字串。  
   
 ### <a name="remarks"></a>備註  
   
@@ -913,14 +913,14 @@ CAtlTransactionManager* pTM = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSection`  
+ *lpszSection*  
  要取得之索引鍵名稱。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功則的區段索引鍵否則`NULL`。  
+ 如果函式成功則的區段索引鍵否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
   
@@ -941,11 +941,11 @@ virtual void HtmlHelp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwData`  
- 指定其他資料。 所使用的值取決於值`nCmd`參數。  
+ *dwData*  
+ 指定其他資料。 所使用的值取決於值*nCmd*參數。  
   
- `nCmd`  
- 指定要求的說明類型。 如需可能的值，以及它們如何影響`dwData`參數，請參閱`uCommand`有關 HTMLHelp 應用程式開發介面函式在 Windows SDK 中所述的參數。  
+ *nCmd*  
+ 指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱*uCommand*有關 HTMLHelp 應用程式開發介面函式在 Windows SDK 中所述的參數。  
   
 ### <a name="remarks"></a>備註  
  架構也會呼叫此函式來叫用 HTMLHelp 應用程式。  
@@ -968,7 +968,7 @@ virtual BOOL InitInstance();
  覆寫`InitInstance`初始化每個在 Windows 下執行的應用程式的新執行個體。 通常，您會覆寫`InitInstance`來建構主視窗物件和設定`CWinThread::m_pMainWnd`指向該視窗的資料成員。 如需覆寫此成員函式的詳細資訊，請參閱[CWinApp： 應用程式類別](../../mfc/cwinapp-the-application-class.md)。  
   
 > [!NOTE]
->  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中您`InitInstance`覆寫中，指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
+>  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中您`InitInstance`覆寫中，指定 COINIT_APARTMENTTHREADED （而非 COINIT_MULTITHREADED）。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]  
@@ -981,27 +981,27 @@ virtual BOOL IsTaskbarInteractionEnabled();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果`EnableTaskbarInteraction`已呼叫和作業系統是 Windows 7 或更高版本。  
+ 如果為 true`EnableTaskbarInteraction`已呼叫和作業系統是 Windows 7 或更高版本。  
   
 ### <a name="remarks"></a>備註  
  工作列互動表示 MDI 應用程式，會在滑鼠指標移至應用程式的工作列按鈕時，會出現的個別索引標籤式縮圖中顯示 MDI 子視窗的內容。  
   
 ##  <a name="loadcursor"></a>  CWinApp::LoadCursor  
- 載入所命名的游標資源`lpszResourceName`或所指定`nIDResource`從目前的可執行檔。  
+ 載入所命名的游標資源*lpszResourceName*或所指定*nIDResource*從目前的可執行檔。  
   
 ```  
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向以 null 終止的字串，包含游標資源的名稱。 您可以使用`CString`這個引數。  
   
- `nIDResource`  
+ *nIDResource*  
  游標資源的識別碼。 如需資源的清單，請參閱[LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功; 資料指標控制代碼否則**NULL**。  
+ 如果成功; 資料指標控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  `LoadCursor` 只有當它先前載入; 資料指標載入記憶體否則，它會擷取現有的資源的控制代碼。  
@@ -1012,21 +1012,21 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
  [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]  
   
 ##  <a name="loadicon"></a>  CWinApp::LoadIcon  
- 載入所命名的圖示資源`lpszResourceName`或所指定`nIDResource`從可執行檔。  
+ 載入所命名的圖示資源*lpszResourceName*或所指定*nIDResource*從可執行檔。  
   
 ```  
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向以 null 終止的字串，包含的圖示資源的名稱。 您也可以使用`CString`這個引數。  
   
- `nIDResource`  
+ *nIDResource*  
  識別碼的圖示資源。  
   
 ### <a name="return-value"></a>傳回值  
- 圖示成功; 如果控制代碼否則**NULL**。  
+ 圖示成功; 如果控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  `LoadIcon` 只有當它先前載入; 載入圖示否則，它會擷取現有的資源的控制代碼。  
@@ -1034,21 +1034,21 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
  您可以使用[LoadStandardIcon](#loadstandardicon)或[LoadOEMIcon](#loadoemicon)成員函式來存取預先定義的 Windows 圖示。  
   
 > [!NOTE]
->  此成員函式會呼叫 Win32 API 函式[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，其只可載入的圖示的大小符合**SM_CXICON**和**SM_CYICON**系統度量值。  
+>  此成員函式會呼叫 Win32 API 函式[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，其只可載入其大小符合 SM_CXICON 和 SM_CYICON 系統度量值的圖示。  
   
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor  
- 載入 Windows 預先定義的資料指標所指定的資源`nIDCursor`。  
+ 載入 Windows 預先定義的資料指標所指定的資源*nIDCursor*。  
   
 ```  
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDCursor`  
- **OCR_** 資訊清單常數指定預先定義的 Windows 資料指標的識別項。 您必須擁有 **#define OEMRESOURCE**之前 **#include \<afxwin.h >** 存取**OCR_** WINDOWS 中的常數。H.  
+ *nIDCursor*  
+ **OCR_** 資訊清單常數指定預先定義的 Windows 資料指標的識別項。 您必須擁有`#define OEMRESOURCE`之前`#include \<afxwin.h>`存取**OCR_** WINDOWS 中的常數。H.  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功; 資料指標控制代碼否則**NULL**。  
+ 如果成功; 資料指標控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  使用`LoadOEMCursor`或[LoadStandardCursor](#loadstandardcursor)存取預先定義的 Windows 資料指標的成員函式。  
@@ -1059,59 +1059,59 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
  [!code-cpp[NVC_MFCWindowing#46](../../mfc/reference/codesnippet/cpp/cwinapp-class_13.cpp)]  
   
 ##  <a name="loadoemicon"></a>  CWinApp::LoadOEMIcon  
- 載入 Windows 預先定義所指定的圖示資源`nIDIcon`。  
+ 載入 Windows 預先定義所指定的圖示資源*nIDIcon*。  
   
 ```  
 HICON LoadOEMIcon(UINT nIDIcon) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDIcon`  
- **OIC_** 資訊清單常數指定預先定義的 Windows 圖示的識別項。 您必須擁有 **#define OEMRESOURCE**之前 **#include \<afxwin.h >** 存取**OIC_** WINDOWS 中的常數。H.  
+ *nIDIcon*  
+ **OIC_** 資訊清單常數指定預先定義的 Windows 圖示的識別項。 您必須擁有`#define OEMRESOURCE`之前`#include \<afxwin.h>`存取**OIC_** WINDOWS 中的常數。H.  
   
 ### <a name="return-value"></a>傳回值  
- 圖示成功; 如果控制代碼否則**NULL**。  
+ 圖示成功; 如果控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  使用`LoadOEMIcon`或[LoadStandardIcon](#loadstandardicon)成員函式來存取預先定義的 Windows 圖示。  
   
 ##  <a name="loadstandardcursor"></a>  CWinApp::LoadStandardCursor  
- 載入 Windows 預先定義的游標資源的`lpszCursorName`指定。  
+ 載入 Windows 預先定義的游標資源的*lpszCursorName*指定。  
   
 ```  
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszCursorName`  
- **IDC_** 資訊清單常數指定預先定義的 Windows 資料指標的識別項。 在 WINDOWS 中定義這些識別項。H. 下列清單顯示可能的預先定義的值和意義`lpszCursorName`:  
+ *lpszCursorName*  
+ **IDC_** 資訊清單常數指定預先定義的 Windows 資料指標的識別項。 在 WINDOWS 中定義這些識別項。H. 下列清單顯示可能的預先定義的值和意義*lpszCursorName*:  
   
-- **IDC_ARROW**標準箭號游標  
+- 標準 IDC_ARROW 的箭號游標  
   
-- **IDC_IBEAM**標準文字插入游標  
+- IDC_IBEAM 標準文字插入游標  
   
-- **IDC_WAIT** Windows 會執行耗時的工作時使用的沙漏游標  
+- Windows 會執行耗時的工作時使用的 IDC_WAIT 沙漏游標  
   
-- **IDC_CROSS**交叉線資料指標選取範圍  
+- 選取項目 IDC_CROSS 十字形游標  
   
-- **IDC_UPARROW**垂直向上箭號  
+- 垂直的 IDC_UPARROW 箭號  
   
-- **IDC_SIZE**過時並不支援; 使用**IDC_SIZEALL**  
+- IDC_SIZE 過時和不受支援;使用 IDC_SIZEALL  
   
-- **IDC_SIZEALL**四向箭號。 要用於調整視窗大小游標。  
+- IDC_SIZEALL A 四向箭號。 要用於調整視窗大小游標。  
   
-- **IDC_ICON**過時和不受支援。 使用**IDC_ARROW**。  
+- IDC_ICON 過時和不受支援。 使用 IDC_ARROW。  
   
-- **IDC_SIZENWSE**兩個方向的箭頭，在左上方和較低權限的端點  
+- 在左上方和較低權限的端點的 IDC_SIZENWSE 雙箭號  
   
-- **IDC_SIZENESW**兩個方向的箭頭，在右邊和較低的左上方的端點  
+- IDC_SIZENESW 雙箭號與向右鍵和較低的左上方的結尾  
   
-- **IDC_SIZEWE**水平的雙箭頭  
+- IDC_SIZEWE 水平的雙箭頭  
   
-- **IDC_SIZENS**垂直的雙箭頭  
+- IDC_SIZENS 垂直的雙箭頭  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功; 資料指標控制代碼否則**NULL**。  
+ 如果成功; 資料指標控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  使用`LoadStandardCursor`或[LoadOEMCursor](#loadoemcursor)存取預先定義的 Windows 資料指標的成員函式。  
@@ -1120,18 +1120,18 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
  [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]  
   
 ##  <a name="loadstandardicon"></a>  CWinApp::LoadStandardIcon  
- 載入 Windows 預先定義的圖示資源的`lpszIconName`指定。  
+ 載入 Windows 預先定義的圖示資源的*lpszIconName*指定。  
   
 ```  
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszIconName`  
+ *lpszIconName*  
  指定預先定義的 Windows 圖示資訊清單常數識別碼。 在 WINDOWS 中定義這些識別項。H. 可能的預先定義的值及其描述的清單，請參閱*lpIconName*中的參數[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
- 圖示成功; 如果控制代碼否則**NULL**。  
+ 圖示成功; 如果控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  使用`LoadStandardIcon`或[LoadOEMIcon](#loadoemicon)成員函式來存取預先定義的 Windows 圖示。  
@@ -1144,21 +1144,21 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMaxMRU`  
+ *nMaxMRU*  
  最近使用追蹤檔案數目。  
   
 ### <a name="remarks"></a>備註  
- 如果`nMaxMRU`是 0，則沒有 MRU 清單仍會維護。  
+ 如果*nMaxMRU*是 0，則沒有 MRU 清單仍會維護。  
   
 ##  <a name="m_bhelpmode"></a>  CWinApp::m_bHelpMode  
- **TRUE**應用程式是否在說明內容模式 （依照慣例用來叫用 SHIFT + F1）; 否則**FALSE**。  
+ 如果應用程式 （通常用來叫用 SHIFT + F1）; 的說明內容模式，則為 TRUE。否則為 FALSE。  
   
 ```  
 BOOL m_bHelpMode;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 在說明內容模式中，游標會變成問號，使用者可以將它移關於畫面。 如果您想要實作特殊處理，在說明模式時，請檢查此旗標。 `m_bHelpMode` 這類型的公用變數**BOOL**。  
+ 在說明內容模式中，游標會變成問號，使用者可以將它移關於畫面。 如果您想要實作特殊處理，在說明模式時，請檢查此旗標。 `m_bHelpMode` 是 BOOL 類型的公用變數。  
   
 ##  <a name="m_dwrestartmanagersupportflags"></a>  CWinApp::m_dwRestartManagerSupportFlags  
  決定重新啟動管理員的操作方式的旗標。  
@@ -1173,26 +1173,26 @@ DWORD m_dwRestartManagerSupportFlags;
 |||  
 |-|-|  
 |旗標|描述|  
-|`AFX_RESTART_MANAGER_SUPPORT_RESTART`|使用註冊應用程式[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。 重新啟動管理員會負責重新啟動應用程式，如果意外結束。|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY`|重新啟動管理員註冊應用程式並重新啟動管理員呼叫復原回呼函式時重新啟動應用程式。 預設復原回撥函數是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|  
-|- `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`|已啟用 並重新啟動管理員時，自動儲存任何開啟的文件時重新啟動應用程式。|  
-|- `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`|已啟用 並重新啟動管理員時，自動儲存任何開啟的文件以固定間隔。 間隔由定義[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|  
-|- `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`|重新啟動管理員會重新啟動應用程式和非預期的結束之後開啟先前開啟的文件。 [CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)處理儲存開啟的文件的清單，並加以還原。|  
-|- `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`|重新啟動管理員會提示使用者重新啟動應用程式之後還原 autosaved 檔案。 `CDataRecoveryHandler`類別會向使用者查詢。|  
-|- `AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE`|聯集的`AFX_RESTART_MANAGER_SUPPORT_RESTART`， `AFX_RESTART_MANAGER_SUPPORT_RECOVER`，和`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`。|  
-|- `AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS`|聯集的`AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE`， `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`， `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`，和`AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`。|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS`|聯集的`AFX_RESTART_MANAGER_SUPPORT_RESTART`， `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`， `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`，和`AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`。|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS`|聯集的`AFX_RESTART_MANAGER_SUPPORT_RECOVERY`， `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`， `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`，和`AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`。|  
+|AFX_RESTART_MANAGER_SUPPORT_RESTART|使用註冊應用程式[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。 重新啟動管理員會負責重新啟動應用程式，如果意外結束。|  
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|重新啟動管理員註冊應用程式並重新啟動管理員呼叫復原回呼函式時重新啟動應用程式。 預設復原回撥函數是[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|  
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|已啟用 並重新啟動管理員時，自動儲存任何開啟的文件時重新啟動應用程式。|  
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|已啟用 並重新啟動管理員時，自動儲存任何開啟的文件以固定間隔。 間隔由定義[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)。|  
+|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|重新啟動管理員會重新啟動應用程式和非預期的結束之後開啟先前開啟的文件。 [CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)處理儲存開啟的文件的清單，並加以還原。|  
+|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|重新啟動管理員會提示使用者重新啟動應用程式之後還原 autosaved 檔案。 `CDataRecoveryHandler`類別會向使用者查詢。|  
+|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER 及 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 的聯集。|  
+|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE 及 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL，AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的聯集。|  
+|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART 及 AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES，AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 的聯集。|  
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|等位 ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、 AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、 AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 和 AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|  
   
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType  
- 此資料成員的類型是列舉型別**AFX_HELP_TYPE**，定義內`CWinApp`類別。  
+ 此資料成員的類型是列舉型別 AFX_HELP_TYPE，定義內`CWinApp`類別。  
   
 ```  
 AFX_HELP_TYPE m_eHelpType;  
 ```  
   
 ### <a name="remarks"></a>備註  
- **AFX_HELP_TYPE**列舉的定義，如下所示：  
+ AFX_HELP_TYPE 列舉的定義方式如下：  
   
 ```  
 enum AFX_HELP_TYPE {  
@@ -1201,32 +1201,32 @@ enum AFX_HELP_TYPE {
     };  
 ```  
   
--   若要設定 HTML 說明的應用程式的說明，請呼叫[SetHelpMode](#sethelpmode)並指定**afxHTMLHelp**。  
+-   若要設定 HTML 說明的應用程式的說明，請呼叫[SetHelpMode](#sethelpmode)並指定`afxHTMLHelp`。  
   
--   若要設定 WinHelp 應用程式的說明，請呼叫`SetHelpMode`並指定**afxWinHelp**。  
+-   若要設定 WinHelp 應用程式的說明，請呼叫`SetHelpMode`並指定`afxWinHelp`。  
   
 ##  <a name="m_hinstance"></a>  CWinApp::m_hInstance  
- 對應至`hInstance`參數傳遞至 windows `WinMain`。  
+ 對應至*hInstance*參數傳遞至 windows `WinMain`。  
   
 ```  
 HINSTANCE m_hInstance;  
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hInstance`資料成員是在 Windows 下執行的應用程式的目前執行個體的控制代碼。 全域函式都會傳回這個[AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)。 `m_hInstance` 這類型的公用變數`HINSTANCE`。  
+ `m_hInstance`資料成員是在 Windows 下執行的應用程式的目前執行個體的控制代碼。 全域函式都會傳回這個[AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)。 `m_hInstance` 是型別 HINSTANCE 的公用變數。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]  
   
 ##  <a name="m_lpcmdline"></a>  CWinApp::m_lpCmdLine  
- 對應至`lpCmdLine`參數傳遞至 windows `WinMain`。  
+ 對應至*lpCmdLine*參數傳遞至 windows `WinMain`。  
   
 ```  
 LPTSTR m_lpCmdLine;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 指向以 null 終止的字串，指定命令列應用程式。 使用`m_lpCmdLine`使用者輸入應用程式啟動時存取任何命令列引數。 `m_lpCmdLine` 這類型的公用變數`LPTSTR`。  
+ 指向以 null 終止的字串，指定命令列應用程式。 使用`m_lpCmdLine`使用者輸入應用程式啟動時存取任何命令列引數。 `m_lpCmdLine` 是 LPTSTR 類型的公用變數。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]  
@@ -1242,14 +1242,14 @@ int m_nAutosaveInterval;
  您可以設定自動儲存開啟的文件的重新啟動管理員設定的間隔。 如果您的應用程式不自動儲存檔，此參數沒有任何作用。  
   
 ##  <a name="m_ncmdshow"></a>  CWinApp::m_nCmdShow  
- 對應至`nCmdShow`參數傳遞至 windows `WinMain`。  
+ 對應至*nCmdShow*參數傳遞至 windows `WinMain`。  
   
 ```  
 int m_nCmdShow;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 您應該傳遞`m_nCmdShow`做為引數，當您呼叫[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)應用程式的主視窗。 `m_nCmdShow` 這類型的公用變數`int`。  
+ 您應該傳遞`m_nCmdShow`做為引數，當您呼叫[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)應用程式的主視窗。 `m_nCmdShow` 這類型的公用變數**int**。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]  
@@ -1258,7 +1258,7 @@ int m_nCmdShow;
  您可以使用此資料成員來儲存具有您 OLE 伺服器應用程式就地啟動 OLE 容器應用程式的主視窗的指標。  
   
 ### <a name="remarks"></a>備註  
- 如果此資料成員是**NULL**，應用程式不是就地啟用作用中。  
+ 如果此資料成員為 NULL，應用程式不是就地啟用作用中。  
   
  就地啟動 OLE 容器應用程式框架視窗時，架構會設定這個成員變數。  
   
@@ -1280,7 +1280,7 @@ LPCTSTR m_pszAppName;
 ```  
   
 ### <a name="remarks"></a>備註  
- 應用程式名稱可能是來自傳遞給參數[CWinApp](#cwinapp)建構函式，或者，如果未指定為識別碼為的資源字串**AFX_IDS_APP_TITLE**。 如果在資源中找不到應用程式名稱，其來自該程式。EXE 檔名。  
+ 應用程式名稱可能是來自傳遞給參數[CWinApp](#cwinapp)建構函式，或者，如果未指定為識別碼的 AFX_IDS_APP_TITLE 的資源字串。 如果在資源中找不到應用程式名稱，其來自該程式。EXE 檔名。  
   
  全域函式傳回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 這類型的公用變數**const char\***。  
   
@@ -1395,7 +1395,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
  [!code-cpp[NVC_MFCWindowing#48](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]  
   
 ##  <a name="onfilenew"></a>  CWinApp::OnFileNew  
- 實作`ID_FILE_NEW`命令。  
+ 實作 ID_FILE_NEW 命令。  
   
 ```  
 afx_msg void OnFileNew();
@@ -1412,7 +1412,7 @@ afx_msg void OnFileNew();
  [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
 ##  <a name="onfileopen"></a>  CWinApp::OnFileOpen  
- 實作`ID_FILE_OPEN`命令。  
+ 實作 ID_FILE_OPEN 命令。  
   
 ```  
 afx_msg void OnFileOpen();
@@ -1429,7 +1429,7 @@ afx_msg void OnFileOpen();
  [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
 ##  <a name="onfileprintsetup"></a>  CWinApp::OnFilePrintSetup  
- 實作**ID_FILE_PRINT_SETUP**命令。  
+ 實作 ID_FILE_PRINT_SETUP 命令。  
   
 ```  
 afx_msg void OnFilePrintSetup();
@@ -1462,7 +1462,7 @@ afx_msg void OnHelp();
  覆寫此成員函式視窗、 對話方塊、 功能表項目或目前具有焦點的工具列按鈕以外的項目設定的說明內容。 呼叫`WinHelp`與想要的說明內容識別碼。  
   
 ##  <a name="onhelpfinder"></a>  CWinApp::OnHelpFinder  
- 處理**ID_HELP_FINDER**和**ID_DEFAULT_HELP**命令。  
+ 處理 ID_HELP_FINDER 和 ID_DEFAULT_HELP 命令。  
   
 ```  
 afx_msg void OnHelpFinder();
@@ -1472,7 +1472,7 @@ afx_msg void OnHelpFinder();
  您必須新增`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )`陳述式，以您`CWinApp`類別訊息對應，以啟用此成員函式。 如果啟用，架構會呼叫此訊息處理常式函式的應用程式在使用者選取叫用的說明搜尋命令時`WinHelp`標準**HELP_FINDER**主題。  
   
 ##  <a name="onhelpindex"></a>  CWinApp::OnHelpIndex  
- 處理**ID_HELP_INDEX**命令，並提供預設的說明主題。  
+ 處理 ID_HELP_INDEX 命令，並提供預設的說明主題。  
   
 ```  
 afx_msg void OnHelpIndex();
@@ -1482,7 +1482,7 @@ afx_msg void OnHelpIndex();
  您必須新增`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )`陳述式，以您`CWinApp`類別訊息對應，以啟用此成員函式。 如果啟用，架構會呼叫此訊息處理常式函式的應用程式在使用者選取說明索引命令，來叫用時`WinHelp`標準**HELP_INDEX**主題。  
   
 ##  <a name="onhelpusing"></a>  CWinApp::OnHelpUsing  
- 處理**ID_HELP_USING**命令。  
+ 處理 ID_HELP_USING 命令。  
   
 ```  
 afx_msg void OnHelpUsing();
@@ -1499,8 +1499,8 @@ virtual BOOL OnIdle(LONG lCount);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lCount`  
- 每次遞增計數器`OnIdle`應用程式的訊息佇列是空的時呼叫。 這個計數會重設為 0 每次處理新訊息時。 您可以使用`lCount`參數，來判斷相對的應用程式而不處理訊息已閒置的時間長度。  
+ *lCount*  
+ 每次遞增計數器`OnIdle`應用程式的訊息佇列是空的時呼叫。 這個計數會重設為 0 每次處理新訊息時。 您可以使用*lCount*參數，來判斷相對的應用程式而不處理訊息已閒置的時間長度。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，接收更多閒置處理時間;如果沒有更多閒置的時間就是 0。  
@@ -1508,27 +1508,27 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="remarks"></a>備註  
  `OnIdle` 預設訊息迴圈中時呼叫應用程式的訊息佇列是空的。 您可以使用覆寫來呼叫您自己的背景工作閒置處理常式。  
   
- `OnIdle` 應傳回 0 表示沒有閒置的處理時間為必要。 `lCount`參數就會遞增每次`OnIdle`時呼叫的訊息佇列是空的而且會重設為 0 每次處理新訊息時。 您可以呼叫您不同閒置基礎常式，此計數。  
+ `OnIdle` 應傳回 0 表示沒有閒置的處理時間為必要。 *LCount*參數就會遞增每次`OnIdle`時呼叫的訊息佇列是空的而且會重設為 0 每次處理新訊息時。 您可以呼叫您不同閒置基礎常式，此計數。  
   
  閒置迴圈處理彙總如下：  
   
-1.  如果 Microsoft Foundation 類別庫中的訊息迴圈會檢查訊息佇列，而不尋找暫止訊息則會呼叫`OnIdle`應用程式物件和提供 0 做為`lCount`引數。  
+1.  如果 Microsoft Foundation 類別庫中的訊息迴圈會檢查訊息佇列，而不尋找暫止訊息則會呼叫`OnIdle`應用程式物件和提供 0 做為*lCount*引數。  
   
 2. `OnIdle` 執行一些處理，並傳回非零值，表示它應該重新呼叫進行進一步的處理。  
   
-3.  訊息迴圈會檢查訊息佇列一次。 如果沒有訊息正在暫止，則會呼叫`OnIdle`同樣地，遞增`lCount`引數。  
+3.  訊息迴圈會檢查訊息佇列一次。 如果沒有訊息正在暫止，則會呼叫`OnIdle`同樣地，遞增*lCount*引數。  
   
 4.  最後，`OnIdle`完成處理所有閒置的工作，並傳回 0。 這樣做會告知訊息迴圈，以停止呼叫`OnIdle`直到從訊息佇列接收下一個訊息，此時的閒置週期設定為 0 的引數。  
   
  不會執行長時間工作期間`OnIdle`因為您的應用程式無法處理使用者輸入，直到`OnIdle`傳回。  
   
 > [!NOTE]
->  預設實作`OnIdle`更新命令的使用者介面物件，例如功能表項目和工具列按鈕，而它執行清除內部的資料結構。 因此，如果您覆寫`OnIdle`，您必須呼叫`CWinApp::OnIdle`與`lCount`在您覆寫的版本中。 第一次呼叫閒置處理的所有基底類別 (亦即，直到基底類別`OnIdle`傳回 0)。 如果您需要執行工作的基底類別處理完成之前，檢閱要選取適當的基底類別實作`lCount`期間用來執行您的工作。  
+>  預設實作`OnIdle`更新命令的使用者介面物件，例如功能表項目和工具列按鈕，而它執行清除內部的資料結構。 因此，如果您覆寫`OnIdle`，您必須呼叫`CWinApp::OnIdle`與`lCount`在您覆寫的版本中。 第一次呼叫閒置處理的所有基底類別 (亦即，直到基底類別`OnIdle`傳回 0)。 如果您需要執行工作的基底類別處理完成之前，檢閱要選取適當的基底類別實作*lCount*期間用來執行您的工作。  
   
- 如果您不想`OnIdle`呼叫從訊息佇列擷取訊息時，您可以覆寫[CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)。 如果應用程式已設定的非常短的計時器，或系統傳送**WM_SYSTIMER**訊息，然後`OnIdle`會重複呼叫，而且會降低效能。  
+ 如果您不想`OnIdle`呼叫從訊息佇列擷取訊息時，您可以覆寫[CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)。 如果應用程式已設定的非常短的計時器，或系統正在 WM_SYSTIMER 訊息，然後`OnIdle`會重複呼叫，而且會降低效能。  
   
 ### <a name="example"></a>範例  
- 下列兩個範例示範如何使用`OnIdle`。 第一個範例會處理兩個閒置的工作，使用`lCount`工作優先順序的引數。 第一個工作是高優先順序，以及應該在執行盡可能。 第二個工作是較不重要，應該只在使用者輸入的長暫停時，才能完成。 請注意呼叫的基底類別版本`OnIdle`。 第二個範例會管理一組具有不同優先順序的閒置工作。  
+ 下列兩個範例示範如何使用`OnIdle`。 第一個範例會處理兩個閒置的工作，使用*lCount*工作優先順序的引數。 第一個工作是高優先順序，以及應該在執行盡可能。 第二個工作是較不重要，應該只在使用者輸入的長暫停時，才能完成。 請注意呼叫的基底類別版本`OnIdle`。 第二個範例會管理一組具有不同優先順序的閒置工作。  
   
  [!code-cpp[NVC_MFCWindowing#51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]  
   
@@ -1542,14 +1542,14 @@ BOOL bAddToMRU = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszFileName`  
+ [in]*lpszFileName*  
  要開啟的檔案名稱。  
   
- [輸入] `bAddToMRU`  
- `TRUE` 表示文件是其中一個最新的檔案。`FALSE`指出文件不是其中一個最新的檔案。  
+ [in]*bAddToMRU*  
+ TRUE 表示文件是其中一個最新的檔案。FALSE 表示文件不是其中一個最新的檔案。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CDocument`如果成功，否則`NULL`。  
+ 指標`CDocument`如果成功，否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  如果已使用該名稱的文件已開啟，則包含該文件的第一個框架視窗會收到焦點。 如果應用程式支援多個文件範本，架構會使用下列位置找到適當的文件範本來嘗試載入文件副檔名。 如果成功的話，文件範本然後建立框架視窗與文件的檢視。  
@@ -1565,7 +1565,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rCmdInfo`  
+ *rCmdInfo*  
  若要參考[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1591,7 +1591,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMsg`  
+ *pMsg*  
  指標[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1607,10 +1607,10 @@ virtual BOOL ProcessMessageFilter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `code`  
- 指定攔截的程式碼。 此成員函式來判斷如何處理使用程式碼 `lpMsg.`  
+ *程式碼*  
+ 指定攔截的程式碼。 此成員函式會使用程式碼來判斷如何處理*lpMsg。*  
   
- `lpMsg`  
+ *lpMsg*  
  Windows 的指標[MSG](../../mfc/reference/msg-structure1.md)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1622,18 +1622,18 @@ virtual BOOL ProcessMessageFilter(
  如果您覆寫此進階的功能，請務必呼叫基底類別版本來維護架構的攔截 (hook) 處理。  
   
 ##  <a name="processshellcommand"></a>  CWinApp::ProcessShellCommand  
- 此成員函式會呼叫[InitInstance](#initinstance)接受的參數，傳遞從`CCommandLineInfo`所識別的物件`rCmdInfo`，並執行指定的動作。  
+ 此成員函式會呼叫[InitInstance](#initinstance)接受的參數，傳遞從`CCommandLineInfo`所識別的物件*rCmdInfo*，並執行指定的動作。  
   
 ```  
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rCmdInfo`  
+ *rCmdInfo*  
  若要參考[CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
- 非零，如果已成功處理 shell 命令。 如果為 0，則傳回**FALSE**從[InitInstance](#initinstance)。  
+ 非零，如果已成功處理 shell 命令。 如果 0，則傳回 FALSE 從[InitInstance](#initinstance)。  
   
 ### <a name="remarks"></a>備註  
  當您啟動新的 MFC 專案，使用應用程式精靈時，應用程式精靈將建立的本機執行個體`CCommandLineInfo`，然後呼叫`ProcessShellCommand`和[ParseCommandLine](#parsecommandline)中`InitInstance`成員函式。 命令列會遵循下述的路由：  
@@ -1673,11 +1673,11 @@ virtual LRESULT ProcessWndProcException(
  *e*  
  無法攔截的例外狀況的指標。  
   
- `pMsg`  
+ *pMsg*  
  A [MSG](../../mfc/reference/msg-structure1.md)結構，其中包含導致擲回例外狀況架構的 windows 訊息的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
- 應該傳回至 Windows 的值。 這通常是 0 L windows 訊息，1l ( **TRUE**) 命令訊息。  
+ 應該傳回至 Windows 的值。 通常這是 0 L windows 訊息，L 1 (TRUE) 的命令訊息。  
   
 ### <a name="remarks"></a>備註  
  請勿直接呼叫此成員函式。  
@@ -1707,8 +1707,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bCompat`  
- `TRUE` 新增登錄項目，適用於列印和列印至，允許使用者直接從殼層，或將檔案拖曳到印表機物件列印檔案的 shell 命令。 它也會加入 DefaultIcon 索引鍵。 根據預設，這個參數是`FALSE`回溯相容性。  
+ [in]*bCompat*  
+ TRUE 會將列印和列印至，允許使用者直接從殼層，或將檔案拖曳到印表機物件列印檔案的 shell 命令的登錄項目。 它也會加入 DefaultIcon 索引鍵。 根據預設，此參數為 FALSE 的回溯相容性。  
   
 ### <a name="remarks"></a>備註  
  這可讓使用者開啟按兩下它從檔案管理員 中建立您的應用程式的資料檔案。 呼叫`RegisterShellFileTypes`呼叫之後[AddDocTemplate](#adddoctemplate)每個應用程式中的文件範本。 同時也呼叫[EnableShellOpen](#enableshellopen)成員函式呼叫時`RegisterShellFileTypes`。  
@@ -1743,36 +1743,36 @@ DWORD dwCallbackFlags);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `bRegisterRecoveryCallback`|`TRUE` 指出這個執行個體的應用程式使用復原的回呼函式。`FALSE`表示沒有作用。 非預期地結束應用程式時，架構會呼叫復原回呼函式。 如需詳細資訊，請參閱[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|  
-|[輸入] `strRestartIdentifier`|識別這個執行個體重新啟動管理員的唯一字串。 重新啟動管理員識別項是唯一的應用程式的每個執行個體。|  
-|[輸入] `pwzCommandLineArgs`|字串，包含任何額外的引數，從命令列。|  
-|[輸入] `dwRestartFlags`|重新啟動管理員的選擇性旗標。 如需詳細資訊，請參閱＜備註＞一節。|  
-|[輸入] `pRecoveryCallback`|復原回撥函式。 這個函式必須接受`LPVOID`參數做為輸入並傳回`DWORD`。 預設復原回撥函數是`CWinApp::ApplicationRecoveryCallback`。|  
-|[輸入] `lpvParam`|復原回撥函式的輸入的參數。 如需詳細資訊，請參閱[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|  
-|[輸入] `dwPingInterval`|要傳回之復原回撥函式的重新啟動管理員等候的時間長度。 這個參數是以毫秒為單位。|  
-|[輸入] `dwCallbackFlags`|旗標傳遞至復原的回呼函式。 保留供未來使用。|  
+|[in]*bRegisterRecoveryCallback*|TRUE 表示這個執行個體的應用程式會使用復原的回呼函式。FALSE 表示，則否。 非預期地結束應用程式時，架構會呼叫復原回呼函式。 如需詳細資訊，請參閱[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|  
+|[in]*strRestartIdentifier*|識別這個執行個體重新啟動管理員的唯一字串。 重新啟動管理員識別項是唯一的應用程式的每個執行個體。|  
+|[in]*pwzCommandLineArgs*|字串，包含任何額外的引數，從命令列。|  
+|[in]*dwRestartFlags*|重新啟動管理員的選擇性旗標。 如需詳細資訊，請參閱＜備註＞一節。|  
+|[in]*pRecoveryCallback*|復原回撥函式。 此函式必須接受 LPVOID 參數做為輸入，並傳回 DWORD。 預設復原回撥函數是`CWinApp::ApplicationRecoveryCallback`。|  
+|[in]*lpvParam*|復原回撥函式的輸入的參數。 如需詳細資訊，請參閱[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|  
+|[in]*dwPingInterval*|要傳回之復原回撥函式的重新啟動管理員等候的時間長度。 這個參數是以毫秒為單位。|  
+|[in]*dwCallbackFlags*|旗標傳遞至復原的回呼函式。 保留供未來使用。|  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功。否則為錯誤碼。  
+ S_OK，如果方法成功。否則為錯誤碼。  
   
 ### <a name="remarks"></a>備註  
  如果您的應用程式會使用預設的 MFC 實作自動儲存檔案，您應該使用的簡單版本`RegisterWithRestartManager`。 使用複雜版本`RegisterWithRestartManager`如果您想要自訂您的應用程式的自動儲存行為。  
   
- 如果您呼叫此方法為空字串時`strRestartIdentifier`，`RegisterWithRestartManager`管理員來建立這個執行個體重新啟動的唯一識別碼字串。  
+ 如果您呼叫此方法為空字串時*strRestartIdentifier*，`RegisterWithRestartManager`管理員來建立這個執行個體重新啟動的唯一識別碼字串。  
   
  當應用程式意外結束時，重新啟動管理員會重新啟動應用程式從命令列，並提供唯一的重新啟動識別碼，則為選擇性的引數。 在此案例中，架構會呼叫`RegisterWithRestartManager`兩次。 第一個呼叫是來自[Afxenablecontrolcontainer](#initinstance)以空字串的字串識別項。 然後，此方法[CWinApp::ProcessShellCommand](#processshellcommand)呼叫`RegisterWithRestartManager`具有唯一的重新啟動識別項。  
   
- 您重新啟動管理員中註冊應用程式之後，重新啟動管理員會監視應用程式。 如果應用程式意外結束，重新啟動管理員會關機程序期間呼叫復原回呼函式。 重新啟動管理員等候`dwPingInterval`復原回呼函式的回應。 如果此時間內復原回呼函式沒有回應，應用程式會結束而不執行復原的回呼函式。  
+ 您重新啟動管理員中註冊應用程式之後，重新啟動管理員會監視應用程式。 如果應用程式意外結束，重新啟動管理員會關機程序期間呼叫復原回呼函式。 重新啟動管理員等候*dwPingInterval*復原回呼函式的回應。 如果此時間內復原回呼函式沒有回應，應用程式會結束而不執行復原的回呼函式。  
   
- 根據預設，dwRestartFlags 不支援，但是可供未來使用。 可能值`dwRestartFlags`如下：  
+ 根據預設，dwRestartFlags 不支援，但是可供未來使用。 可能值*dwRestartFlags*如下：  
   
-- `RESTART_NO_CRASH`  
+- RESTART_NO_CRASH  
   
-- `RESTART_NO_HANG`  
+- RESTART_NO_HANG  
   
-- `RESTART_NO_PATCH`  
+- RESTART_NO_PATCH  
   
-- `RESTART_NO_REBOOT`  
+- RESTART_NO_REBOOT  
   
 ##  <a name="reopenpreviousfilesatrestart"></a>  CWinApp::ReopenPreviousFilesAtRestart  
  決定是否重新啟動管理員會重新開啟應用程式意外結束時未開啟的檔案。  
@@ -1782,7 +1782,7 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 指出重新啟動管理員再次開啟先前開啟的檔案。`FALSE`指出並不會重新啟動管理員。  
+ TRUE 表示重新啟動管理員會重新開啟先前開啟的檔案。FALSE 表示並不會重新啟動管理員。  
   
 ##  <a name="restartinstance"></a>  CWinApp::RestartInstance  
  處理起始重新啟動管理員的應用程式重新啟動。  
@@ -1792,12 +1792,12 @@ virtual BOOL CWinApp::RestartInstance();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果資料復原處理常式會開啟先前開啟的文件。`FALSE`如果資料復原處理常式發生錯誤，或沒有先前開啟的文件。  
+ 如果資料復原處理常式會開啟先前開啟的文件，則為 TRUE如果資料復原處理常式發生錯誤，或沒有先前開啟的文件，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  當重新啟動管理員重新啟動應用程式時，架構會呼叫這個方法。 這個方法會擷取資料復原處理常式，並還原 autosaved 檔案。 這個方法會呼叫[CDataRecoveryHandler::RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments)來判斷使用者是否想要還原 autosaved 檔案。  
   
- 這個方法會傳回`FALSE`如果[CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)決定已開啟的文件。 如果沒有任何開啟的文件，在應用程式通常啟動。  
+ 如果此方法會傳回 FALSE [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)決定已開啟的文件。 如果沒有任何開啟的文件，在應用程式通常啟動。  
   
 ##  <a name="restoreautosavedfilesatrestart"></a>  CWinApp::RestoreAutosavedFilesAtRestart  
  決定是否在重新啟動管理員還原 autosaved 檔案時重新啟動應用程式。  
@@ -1807,7 +1807,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 指出重新啟動管理員還原 autosaved 檔案;`FALSE`指出並不會重新啟動管理員。  
+ TRUE 表示重新啟動管理員會還原 autosaved 檔案。FALSE 表示並不會重新啟動管理員。  
   
 ##  <a name="run"></a>  Cwinapp:: Run  
  提供預設訊息迴圈。  
@@ -1817,12 +1817,12 @@ virtual int Run();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `int`所傳回的值`WinMain`。  
+ **Int**所傳回的值`WinMain`。  
   
 ### <a name="remarks"></a>備註  
- **執行**取得和分派視窗訊息，直到應用程式收到**WM_QUIT**訊息。 如果應用程式的訊息佇列目前不包含的任何訊息，**執行**呼叫[OnIdle](#onidle)執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式**TranslateMessage**標準鍵盤翻譯; 最後， **DispatchMessage**呼叫 Windows 函式。  
+ `Run` 取得，直到應用程式收到 WM_QUIT 訊息分派視窗訊息。 如果應用程式的訊息佇列目前不包含的任何訊息，`Run`呼叫[OnIdle](#onidle)執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式`TranslateMessage`標準鍵盤翻譯; 最後，`DispatchMessage`呼叫 Windows 函式。  
   
- **執行**很少會覆寫，但是您可以覆寫它，以便提供特殊的行為。  
+ `Run` 很少會覆寫，但是您可以覆寫它，以便提供特殊的行為。  
   
 ##  <a name="runautomated"></a>  CWinApp::RunAutomated  
  呼叫此函式可判斷是否" **/Automation**「 或 」 **-自動化**」 選項已存在，表示用戶端應用程式是否已啟動伺服器應用程式。  
@@ -1851,7 +1851,7 @@ BOOL RunEmbedded();
  如果有的話，會從命令列移除的選項。 如需有關內嵌的詳細資訊，請參閱文章[伺服器： 實作伺服器](../../mfc/servers-implementing-a-server.md)。  
   
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified  
- 由架構呼叫以儲存所有文件時應用程式的主框架視窗會關閉，或透過`WM_QUERYENDSESSION`訊息。  
+ 呼叫架構，以儲存所有文件時應用程式的主框架視窗會關閉，或是透過 WM_QUERYENDSESSION 訊息。  
   
 ```  
 virtual BOOL SaveAllModified();
@@ -1874,17 +1874,17 @@ void SelectPrinter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hDevNames`  
+ *hDevNames*  
  控制代碼[DEVNAMES](../../mfc/reference/devnames-structure.md)識別驅動程式、 裝置與特定印表機的輸出連接埠名稱的結構。  
   
- `hDevMode`  
+ *hDevMode*  
  控制代碼[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)結構，指定裝置的初始化和印表機的環境的相關資訊。  
   
  *bFreeOld*  
  釋放先前選取的印表機。  
   
 ### <a name="remarks"></a>備註  
- 如果兩個`hDevMode`和`hDevNames`是**NULL**，`SelectPrinter`會使用目前的預設印表機。  
+ 如果兩個*hDevMode*和*hDevNames*都是 NULL，`SelectPrinter`會使用目前的預設印表機。  
   
 ##  <a name="sethelpmode"></a>  CWinApp::SetHelpMode  
  設定應用程式的說明類型。  
@@ -1894,13 +1894,13 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```  
   
 ### <a name="parameters"></a>參數  
- `eHelpType`  
+ *eHelpType*  
  指定要使用說明的類型。 請參閱[CWinApp::m_eHelpType](#m_ehelptype)如需詳細資訊。  
   
 ### <a name="remarks"></a>備註  
  設定應用程式的說明類型。  
   
- 若要設定 HTMLHelp 應用程式的說明類型，您可以呼叫[EnableHTMLHelp](#enablehtmlhelp)。 一旦呼叫`EnableHTMLHelp`，您的應用程式必須使用 HTMLHelp 為其說明應用程式。 如果您想要使用 WinHelp 變更，您可以呼叫`SetHelpMode`並設定`eHelpType`至**afxWinHelp**。  
+ 若要設定 HTMLHelp 應用程式的說明類型，您可以呼叫[EnableHTMLHelp](#enablehtmlhelp)。 一旦呼叫`EnableHTMLHelp`，您的應用程式必須使用 HTMLHelp 為其說明應用程式。 如果您想要使用 WinHelp 變更，您可以呼叫`SetHelpMode`並設定*eHelpType*至`afxWinHelp`。  
   
 ##  <a name="setregistrykey"></a>  CWinApp::SetRegistryKey  
  會造成應用程式設定儲存在登錄中，而不是 INI 檔案。  
@@ -1928,7 +1928,7 @@ virtual BOOL SupportsApplicationRecovery() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 指出重新啟動管理員復原應用程式。`FALSE`指出並不會重新啟動管理員。  
+ TRUE 表示重新啟動管理員復原應用程式。FALSE 表示並不會重新啟動管理員。  
   
 ##  <a name="supportsautosaveatinterval"></a>  CWinApp::SupportsAutosaveAtInterval  
  決定是否重新啟動管理員時，自動儲存開啟的文件以固定間隔。  
@@ -1938,7 +1938,7 @@ virtual BOOL SupportsAutosaveAtInterval() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 指出重新啟動管理員時，自動儲存開啟的文件。`FALSE`指出並不會重新啟動管理員。  
+ TRUE 表示重新啟動管理員時，自動儲存開啟的文件。FALSE 表示並不會重新啟動管理員。  
   
 ##  <a name="supportsautosaveatrestart"></a>  CWinApp::SupportsAutosaveAtRestart  
  決定是否重新啟動管理員時，自動儲存任何開啟的文件時重新啟動應用程式。  
@@ -1948,7 +1948,7 @@ virtual BOOL SupportsAutosaveAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 指出重新啟動管理員時，自動儲存開啟的文件時重新啟動應用程式。`FALSE`指出並不會重新啟動管理員。  
+ TRUE 表示重新啟動管理員時，自動儲存開啟的文件時重新啟動應用程式。FALSE 表示並不會重新啟動管理員。  
   
 ##  <a name="supportsrestartmanager"></a>  CWinApp::SupportsRestartManager  
  判斷應用程式是否支援重新啟動管理員。  
@@ -1958,7 +1958,7 @@ virtual BOOL SupportsRestartManager() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 指出應用程式支援重新啟動管理員。`FALSE`指出應用程式並不會。  
+ TRUE 表示應用程式支援重新啟動管理員。FALSE 表示應用程式並不會。  
   
 ##  <a name="unregister"></a>  CWinApp::Unregister  
  取消註冊登錄的應用程式物件的所有檔案。  
@@ -1992,11 +1992,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwData`  
- 指定其他資料。 所使用的值取決於值`nCmd`參數。  
+ *dwData*  
+ 指定其他資料。 所使用的值取決於值*nCmd*參數。  
   
- `nCmd`  
- 指定要求的說明類型。 如需可能的值，以及它們如何影響`dwData`參數，請參閱[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows 函式。  
+ *nCmd*  
+ 指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows 函式。  
   
 ### <a name="remarks"></a>備註  
  架構也會呼叫此函式來叫用 WinHelp 應用程式。  
@@ -2018,16 +2018,16 @@ BOOL WriteProfileBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSection`  
+ *lpszSection*  
  指向以 null 終止的字串，這個字串指定包含項目的區段。 如果區段不存在，則會建立它。 區段的名稱是大小寫無關。這個字串可能是任何大寫和小寫字母。  
   
- `lpszEntry`  
+ *lpszEntry*  
  指向以 null 終止的字串，包含的值是要寫入其中的項目。 如果指定的區段中沒有項目，就會建立它。  
   
- `pData`  
+ *pData*  
  要寫入的資料點。  
   
- `nBytes`  
+ *nBytes*  
  包含要寫入的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2051,13 +2051,13 @@ BOOL WriteProfileInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSection`  
+ *lpszSection*  
  指向以 null 終止的字串，這個字串指定包含項目的區段。 如果區段不存在，則會建立它。 區段的名稱是大小寫無關。這個字串可能是任何大寫和小寫字母。  
   
- `lpszEntry`  
+ *lpszEntry*  
  指向以 null 終止的字串，包含的值是要寫入其中的項目。 如果指定的區段中沒有項目，就會建立它。  
   
- `nValue`  
+ *n 值*  
  包含要寫入的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2081,14 +2081,14 @@ BOOL WriteProfileString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSection`  
+ *lpszSection*  
  指向以 null 終止的字串，這個字串指定包含項目的區段。 如果區段不存在，則會建立它。 區段的名稱是大小寫無關。這個字串可能是任何大寫和小寫字母。  
   
- `lpszEntry`  
- 指向以 null 終止的字串，包含的值是要寫入其中的項目。 如果指定的區段中沒有項目，就會建立它。 如果這個參數是`NULL`，指定之區段`lpszSection`被刪除。  
+ *lpszEntry*  
+ 指向以 null 終止的字串，包含的值是要寫入其中的項目。 如果指定的區段中沒有項目，就會建立它。 如果這個參數是 NULL，由指定區段*lpszSection*被刪除。  
   
- `lpszValue`  
- 指向要寫入字串。 如果這個參數是`NULL`，指定的項目`lpszEntry`刪除參數。  
+ *lpszValue*  
+ 指向要寫入字串。 如果此參數為 NULL 時，所指定之項目的*lpszEntry*刪除參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -2106,7 +2106,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpcszAppID`  
+ *lpcszAppID*  
  指定應用程式使用者模型識別碼。  
   
 ### <a name="remarks"></a>備註  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376391"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121860"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 類別
 為指標對應類別 `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`和 `CMapStringToPtr`的物件提供類型安全「包裝函式」。  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>參數  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  基底類別的具類型的指標對應類別; 事件類別必須是指標對應類別 ( `CMapPtrToPtr`， `CMapPtrToWord`， `CMapWordToPtr`，或`CMapStringToPtr`)。  
   
- `KEY`  
+ *KEY*  
  做為索引鍵對應的物件類別。  
   
- `VALUE`  
+ *值*  
  儲存在 map 中的物件類別。  
   
 ## <a name="members"></a>成員  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPosition`  
- 指定的參考**位置**傳回先前值`GetNextAssoc`或`BASE_CLASS` **:: GetStartPosition**呼叫。  
+ *rPosition*  
+ 指定傳回先前的位置值的參考`GetNextAssoc`或`BASE_CLASS` **:: GetStartPosition**呼叫。  
   
  *KEY*  
  指定對應的索引鍵的類型樣板參數。  
   
- `rKey`  
+ *rKey*  
  指定傳回的索引鍵的擷取的項目。  
   
  *值*  
  指定的對應值的類型樣板參數。  
   
- `rValue`  
+ *rValue*  
  指定的擷取的項目傳回的值。  
   
 ### <a name="remarks"></a>備註  
  此函式是最適合用來逐一查看對應中的所有項目。 請注意，位置順序不一定與索引鍵值順序相同。  
   
- 如果擷取的項目是在對應中，最後則新值`rNextPosition`設**NULL**。  
+ 如果擷取的項目是在對應中，最後則新值`rNextPosition`設為 NULL。  
   
  此內嵌函式呼叫`BASE_CLASS` **:: GetNextAssoc**。  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  指定此對應之類別的基底類別的樣板參數。  
   
- `key`  
+ *key*  
  要查閱之項目的索引鍵。  
   
  *值*  
  指定此地圖中所儲存值的類型樣板參數。  
   
- `rValue`  
+ *rValue*  
  指定的擷取的項目傳回的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *值*  
  指定此地圖中所儲存值的類型樣板參數。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  指定此對應之類別的基底類別的樣板參數。  
   
- `key`  
+ *key*  
  要進行查閱或建立對應中的項目索引鍵。  
   
 ### <a name="remarks"></a>備註  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  指定對應的索引鍵的類型樣板參數。  
   
- `key`  
+ *key*  
  要移除的項目索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  指定對應的索引鍵的類型樣板參數。  
   
- `key`  
+ *key*  
  指定的索引鍵值的 newValue。  
   
- `newValue`  
+ *newValue*  
  指定的物件指標做為新項目的值。  
   
 ### <a name="remarks"></a>備註  

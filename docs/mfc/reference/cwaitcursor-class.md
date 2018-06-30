@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372504"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122667"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 類別
 可讓您以使用一行程式碼的方式，在執行長時間作業期間顯示等待游標，這通常顯示為沙漏。  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  由於其建構函式和解構函式的運作方式，`CWaitCursor`物件一律會宣告為區域變數 — 它們永遠不會宣告為全域變數，也不會以它們配置**新**。  
   
- 如果您執行的作業可能會造成變更，例如顯示訊息方塊或對話方塊中，呼叫游標[還原](#restore)成員函式以還原將等待游標。 可以呼叫**還原**甚至等待游標目前顯示時。  
+ 如果您執行的作業可能會造成變更，例如顯示訊息方塊或對話方塊中，呼叫游標[還原](#restore)成員函式以還原將等待游標。 可以呼叫`Restore`甚至等待游標目前顯示時。  
   
  若要使用的組合是另一種方式顯示等待游標[CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)， [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)，也可能[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). 不過，`CWaitCursor`更輕鬆地使用，因為您不需要資料指標設定為先前的資料指標，當您完成長時間作業。  
   
@@ -106,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫正常**還原**甚至將等待游標目前顯示時。  
+ 呼叫正常`Restore`甚至將等待游標目前顯示時。  
   
  如果您需要還原以外，在其中一個函式中的將等待游標`CWaitCursor`宣告物件，您可以呼叫[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。  
   

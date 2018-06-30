@@ -1,7 +1,7 @@
 ---
 title: 建立 Web 瀏覽器樣式的 MFC 應用程式 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374519"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122549"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 Web 瀏覽器樣式應用程式可以存取資訊 （例如 HTML 或主動式文件） 網際網路或內部網路，以及資料夾，在本機檔案系統和網路上。 藉由從應用程式的檢視類別的衍生[CHtmlView](../../mfc/reference/chtmlview-class.md)，有效地您藉由提供 WebBrowser 控制項的檢視進行應用程式的網頁瀏覽器。  
@@ -50,30 +50,30 @@ Web 瀏覽器樣式應用程式可以存取資訊 （例如 HTML 或主動式文
   
  `CHtmlView` 做為 Web 瀏覽器控制項，可讓您的應用程式到 Web 或 HTML 網頁檢視的包裝函式。 精靈會建立覆寫， [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)函式在檢視類別中，提供導覽連結至 Visual c + + 的 Microsoft 網站：  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+您可以使用您自己，取代此站台，或者您可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成員函式來開啟 HTML 網頁位於專案的資源指令碼，做為檢視的預設內容。 例如:   
   
- 您可以使用您自己，取代此站台，或者您可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成員函式來開啟 HTML 網頁位於專案的資源指令碼，做為檢視的預設內容。 例如:   
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>另請參閱  

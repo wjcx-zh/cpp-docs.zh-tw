@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da29c1b3c62769157735bca556eedc7557a4268d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375502"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121808"
 ---
 # <a name="cstringarray-class"></a>CStringArray 類別
 支援陣列[CString](../../atl-mfc-shared/using-cstring.md)物件。  
@@ -120,7 +120,7 @@ class CStringArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CStringArray` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果 `CString` 物件的陣列儲存至封存檔，請使用多載插入運算子或 `Serialize` 成員函式，依次對每一個項目進行序列化。  
+ `CStringArray` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果 `CString` 物件的陣列儲存至封存檔，請使用多載插入運算子或 `Serialize` 成員函式，依次對每一個項目進行序列化。  
   
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  

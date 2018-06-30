@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371927"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121509"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>MFC 加入類別精靈、文件範本字串
 精靈的這個頁面只是為了符合下列準則的類別有：  
@@ -43,7 +43,7 @@ ms.locfileid: "33371927"
  適用於建立使用者文件的應用程式。 使用者可以開啟和儲存的文件更輕鬆地如果文件類型的副檔名和檔案類型識別碼。 因為它們由系統中，而不是由使用者使用，這些項目不會進行當地語系化。  
   
  **副檔名**  
- 設定這個表單應用程式的文件類型相關聯的副檔名。 類別名稱為基礎的檔案副檔名預設值。 例如，如果新的 MFC 類別的名稱為**CWidget**，根據預設，檔案的副檔名是。 wid 檔案的副檔名用於檔案篩選器和**開啟**和**存**對話方塊。  
+ 設定這個表單應用程式的文件類型相關聯的副檔名。 類別名稱為基礎的檔案副檔名預設值。 例如，如果新的 MFC 類別的名稱為`CWidget`，根據預設，檔案的副檔名是。 wid 檔案的副檔名用於檔案篩選器和**開啟**和**存**對話方塊。  
   
  如果您變更副檔名時，變更會反映在**篩選器名稱**方塊。  
   
@@ -63,10 +63,10 @@ ms.locfileid: "33371927"
  設定使用者可以指定要尋找指定的檔案類型的檔案的名稱。 此選項可從**檔案類型**和**存檔類型**標準的 Windows 中的選項**開啟**和**存**對話方塊。 根據預設，名稱根據專案名稱加上檔案，然後再由延伸所示**副檔名**。 例如，如果您的專案名稱為 Widget，且副檔名為.wid，**篩選器名稱**預設為 Widget 檔案 (*.wid)。  
   
  **檔案的新簡短名稱**  
- 設定標準的視窗中顯示的名稱`New`對話方塊中，如果專案具有一個以上的文件範本。 如果您的應用程式是[Automation 伺服程式](../../mfc/automation-servers.md)，這個名稱會當做 Automation 物件的簡短名稱。 根據預設，這個名稱根據類別名稱。  
+ 設定標準的視窗中顯示的名稱**新增**對話方塊中，如果專案具有一個以上的文件範本。 如果您的應用程式是[Automation 伺服程式](../../mfc/automation-servers.md)，這個名稱會當做 Automation 物件的簡短名稱。 根據預設，這個名稱根據類別名稱。  
   
  **檔案類型完整名稱**  
- 設定系統登錄中的檔案類型名稱。 Automation 伺服應用程式時，此名稱會為您的 Automation 物件的完整名稱。 根據預設，這個名稱根據類別名稱加上。文件。 例如，如果類別名稱是**CWidget**、**檔案類型完整名稱**是 Widget 文件。  
+ 設定系統登錄中的檔案類型名稱。 Automation 伺服應用程式時，此名稱會為您的 Automation 物件的完整名稱。 根據預設，這個名稱根據類別名稱加上。文件。 例如，如果類別名稱是`CWidget`、**檔案類型完整名稱**是 Widget 文件。  
   
  **文件類別**  
  表示專案的文件類別。 根據預設，這個類別是主應用程式的文件類別，如下所示[檢視產生的類別](../../mfc/reference/generated-classes-mfc-application-wizard.md)MFC 應用程式精靈頁面。 如果您在專案中加入了其他文件類別，您可以從清單中，選取另一個文件類別。  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374093"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122065"
 ---
 # <a name="csyncobject-class"></a>CSyncObject 類別
 在 Win32 中提供同步處理物件常見功能的純虛擬類別。  
@@ -89,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>參數  
- `pstrName`  
- 物件的名稱。 如果**NULL**， *pstrName*將會是 null。  
+ *pstrName*  
+ 物件的名稱。 如果是 NULL， *pstrName*將會是 null。  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  呼叫此函式可存取由同步處理物件所控制的資源。  
@@ -100,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwTimeout`  
- 以毫秒為單位，等候同步處理物件，才能使用指定的時間量 （發出訊號）。 如果**無限**，`Lock`會等候，直到物件傳回之前收到信號。  
+ *dwTimeout*  
+ 以毫秒為單位，等候同步處理物件，才能使用指定的時間量 （發出訊號）。 如果是無限的`Lock`會等候，直到物件傳回之前收到信號。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則便是 0。  
@@ -124,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功的話，與同步處理物件的控制代碼否則， **NULL**。  
+ 如果成功的話，與同步處理物件的控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  您可以直接呼叫 Windows Api 中使用控制代碼。  
@@ -139,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lCount`  
+ *lCount*  
  不使用預設的實作。  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  不使用預設的實作。  
   
 ### <a name="return-value"></a>傳回值  
- 預設實作一定會傳回**TRUE**。  
+ 預設實作一定會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 預設實作的兩個參數宣告一律會傳回**TRUE**。 您可以呼叫此函式釋放呼叫的執行緒所擁有的同步處理物件的存取權。 第二個宣告提供同步處理物件，例如號誌，可讓多個受控制資源的存取。  
+ 兩個參數宣告一律都的預設實作會傳回 TRUE。 您可以呼叫此函式釋放呼叫的執行緒所擁有的同步處理物件的存取權。 第二個宣告提供同步處理物件，例如號誌，可讓多個受控制資源的存取。  
   
 ## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   

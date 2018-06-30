@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373536"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122192"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>MFC 應用程式精靈、文件樣板字串
 在 MFC 應用程式精靈的這個頁面上，提供或修改下列選項，以協助文件管理和當地語系化。 文件樣板字串可包含應用程式，供**文件/檢視架構支援**中[應用程式類型](../../mfc/reference/application-type-mfc-application-wizard.md)。 不提供對話方塊。 因為大部分的文件樣板字串是否可見並使用應用程式的使用者，他們會當地語系化成**資源語言**中指出**應用程式類型**精靈頁面。  
@@ -43,7 +43,7 @@ ms.locfileid: "33373536"
 |**主框架標題**|設定出現在主應用程式框架最上方的文字。 根據預設，專案名稱。|  
 |**文件類型名稱**|識別您可以在其下群組應用程式的文件的文件的類型。 根據預設，專案名稱。 變更預設不會變更在此對話方塊中的任何其他選項。|  
 |**篩選器名稱**|設定您的使用者可以指定要尋找的檔案類型的檔案名稱。 此選項可從**檔案類型**和**存檔類型**標準的 Windows 中的選項**開啟**和**存**對話方塊。 根據預設，專案名稱和檔案的內容，後面接著在提供的擴充功能**副檔名**。 例如，如果您的專案名稱為 Widget，且副檔名為.wgt，**篩選器名稱**預設為 Widget 檔案 (*.wgt)。|  
-|**檔案的新簡短名稱**|設定標準的視窗中顯示的名稱`New`對話方塊中，如果有多個新的文件範本。 如果您的應用程式是[Automation 伺服程式](../../mfc/automation-servers.md)，這個名稱會當做 Automation 物件的簡短名稱。 根據預設，專案名稱。|  
+|**檔案的新簡短名稱**|設定標準的視窗中顯示的名稱**新增**對話方塊中，如果有多個新的文件範本。 如果您的應用程式是[Automation 伺服程式](../../mfc/automation-servers.md)，這個名稱會當做 Automation 物件的簡短名稱。 根據預設，專案名稱。|  
 |**檔案類型完整名稱**|設定系統登錄中的檔案類型名稱。 Automation 伺服應用程式時，此名稱會為您的 Automation 物件的完整名稱。 根據預設，專案名稱加上。文件。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322279"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122976"
 ---
 # <a name="dispatch-maps"></a>分派對應
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>備註
 
-使用`DECLARE_DISPATCH_MAP`巨集，在類別宣告的結尾。 然後，在。CPP 檔案，可定義成員函式類別，請使用`BEGIN_DISPATCH_MAP`巨集。 然後將巨集項目包含每個類別的公開方法和屬性 ( `DISP_FUNCTION`，`DISP_PROPERTY`等等)。 最後，使用`END_DISPATCH_MAP`巨集。
+在類別宣告結尾使用 DECLARE_DISPATCH_MAP 巨集。 然後，在。定義成員函式類別 CPP 檔案使用 BEGIN_DISPATCH_MAP 巨集。 然後您的類別公開的方法和屬性 （DISP_FUNCTION、 DISP_PROPERTY，等等） 的每個包含巨集項目。 最後，使用 END_DISPATCH_MAP 巨集。
 
 > [!NOTE]
-> 如果您宣告之後的任何成員`DECLARE_DISPATCH_MAP`，您必須指定新的存取類型 (**公用**，**私人**，或**保護**) 它們。
+> 如果您宣告 DECLARE_DISPATCH_MAP 之後的任何成員，您必須指定新的存取類型 (**公用**，**私人**，或**保護**) 它們。
 
 應用程式精靈和程式碼精靈會協助和維護分派對應中建立自動化的類別。 如需有關分派對應的詳細資訊，請參閱[automation 伺服程式](../../mfc/automation-servers.md)。
 
@@ -84,7 +84,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="remarks"></a>備註
 
-在為您的類別定義成員函式的實作 (.cpp) 檔案中，使用 `BEGIN_DISPATCH_MAP` 巨集啟動分派對應，為每個分派函式和屬性新增巨集項目，然後使用 `END_DISPATCH_MAP` 巨集完成分派對應。
+在定義類別的成員函式實作 (.cpp) 檔案中，與 BEGIN_DISPATCH_MAP 巨集啟動分派對應，針對每個分派函式和屬性新增巨集項目，並完成 END_DISPATCH_ 的分派對應對應巨集。
 
 ### <a name="requirements"></a>需求
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>備註
 
-必須與 `BEGIN_DISPATCH_MAP` 搭配使用。
+它必須用於 BEGIN_DISPATCH_MAP 搭配使用。
 
 ### <a name="requirements"></a>需求
 
@@ -138,23 +138,23 @@ DISP_FUNCTION(
 
 ### <a name="remarks"></a>備註
 
-*VtRetVal*引數屬於類型**VARTYPE**。 下列可能的值，這個引數取自`VARENUM`列舉型別：
+*VtRetVal*引數屬於類型 VARTYPE。 下列可能的值，這個引數取自`VARENUM`列舉型別：
 
 |符號|傳回型別|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 *VtsParams*引數是以空格分隔的清單中的值`VTS_*`常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如，套用至物件的
 
@@ -166,31 +166,31 @@ DISP_FUNCTION(
 
 |符號|參數型別|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` 或 `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` 或 `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__short\*__|
-|`VTS_PI4`|__長\*__|
-|`VTS_PR4`|__浮點數\*__|
-|`VTS_PR8`|__double\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|沒有參數|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` 或 `CY*`|
+|VTS_DATE|DATE|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*` 或 `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__short\*__|
+|VTS_PI4|__長\*__|
+|VTS_PR4|__浮點數\*__|
+|VTS_PR8|__double\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|沒有參數|
 
 ### <a name="requirements"></a>需求
 
@@ -224,22 +224,22 @@ DISP_PROPERTY(
 
 ### <a name="remarks"></a>備註
 
-*VtPropType*引數屬於類型**VARTYPE**。 這個引數的可能值取自`VARENUM`列舉型別：
+*VtPropType*引數屬於類型**VARTYPE**。 這個引數的可能值取自 VARENUM 列舉：
 
 |符號|屬性類型|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 當外部用戶端變更的屬性，指定的成員變數的值*memberName*變更; 沒有任何變更的通知。
 
@@ -281,7 +281,7 @@ DISP_PROPERTY_EX(
 
 *MemberGet*和*成員集合*函式具有簽章由*vtPropType*引數。 *MemberGet*函式不接受引數和傳回值所指定之類型的*vtPropType*。 *成員集合*函式所指定之類型的引數*vtPropType*並傳回任何項目。
 
-*VtPropType*引數屬於類型`VARTYPE`。 這個引數的可能值取自`VARENUM`列舉型別。 如需這些值的清單，請參閱的 < 備註 > *vtRetVal*中的參數[DISP_FUNCTION](#disp_function)。 請注意， `VT_EMPTY`，列於`DISP_FUNCTION`註解，不允許做為屬性資料類型。
+*VtPropType*引數屬於類型 VARTYPE。 這個引數的可能值取自 VARENUM 列舉型別。 如需這些值的清單，請參閱的 < 備註 > *vtRetVal*中的參數[DISP_FUNCTION](#disp_function)。 請注意，VT_EMPTY，列出 DISP_FUNCTION 註解中不允許做為屬性資料類型。
 
 ### <a name="requirements"></a>需求
 
@@ -319,24 +319,24 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="remarks"></a>備註
 
-像屬性以定義`DISP_PROPERTY`，與定義的屬性`DISP_PROPERTY_NOTIFY`會自動呼叫所指定的函數*pfnAfterSet*屬性變更時。
+像 DISP_PROPERTY 所定義的屬性，定義與 DISP_PROPERTY_NOTIFY 的屬性會自動呼叫所指定的函數*pfnAfterSet*屬性變更時。
 
-*VtPropType*引數屬於類型`VARTYPE`。 這個引數的可能值取自`VARENUM`列舉型別：
+*VtPropType*引數屬於類型 VARTYPE。 這個引數的可能值取自 VARENUM 列舉：
 
 |符號|屬性類型|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>需求
 
@@ -378,7 +378,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>備註
 
-不同於`DISP_PROPERTY_EX`巨集，此巨集可以可讓您指定之屬性的參數清單。 這可用於實作會編製索引或參數化的屬性。
+不同於 DISP_PROPERTY_EX 巨集，此巨集可讓您指定之屬性的參數清單。 這可用於實作會編製索引或參數化的屬性。
 
 ### <a name="example"></a>範例
 
@@ -386,7 +386,7 @@ DISP_PROPERTY_PARAM(
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-這些會對應至下列`DISP_PROPERTY_PARAM`控制項分派對應中的巨集：
+這些會對應至下列控制項分派對應中的 DISP_PROPERTY_PARAM 巨集：
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ DISP_PROPERTY_PARAM(
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-這些會對應至下列`DISP_PROPERTY_PARAM`控制項分派對應中的巨集：
+這些會對應至下列控制項分派對應中的 DISP_PROPERTY_PARAM 巨集：
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

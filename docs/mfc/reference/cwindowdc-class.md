@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368478"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121538"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 類別
 衍生自 `CDC`。  
@@ -48,7 +48,7 @@ class CWindowDC : public CDC
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|`HWND`這個`CWindowDC`附加。|  
+|[CWindowDC::m_hWnd](#m_hwnd)|這個 HWND`CWindowDC`附加。|  
   
 ## <a name="remarks"></a>備註  
  呼叫 Windows 函式[GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)在建構階段和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx)在解構階段。 這表示`CWindowDC`物件存取整個螢幕區域[CWnd](../../mfc/reference/cwnd-class.md) （用戶端和非工作區）。  
@@ -66,14 +66,14 @@ class CWindowDC : public CDC
  標頭： afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- 建構`CWindowDC`物件存取整個螢幕區域 （用戶端和非工作） 的`CWnd`指向的物件`pWnd`。  
+ 建構`CWindowDC`物件存取整個螢幕區域 （用戶端和非工作） 的`CWnd`指向的物件*pWnd*。  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  視窗裝置內容物件存取其工作區中。  
   
 ### <a name="remarks"></a>備註  
@@ -85,14 +85,14 @@ explicit CWindowDC(CWnd* pWnd);
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- `HWND`的`CWnd`指標用來建構`CWindowDC`物件。  
+ HWND`CWnd`指標用來建構`CWindowDC`物件。  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hWnd` 這是受保護的型別變數`HWND`。  
+ `m_hWnd` 是受保護的類型之變數的 HWND。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CWindowDC::CWindowDC](#cwindowdc)。  

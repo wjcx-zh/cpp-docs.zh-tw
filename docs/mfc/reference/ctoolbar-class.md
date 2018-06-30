@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a80ea4cb188d879b9af0a7901ffbe89b8673df6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d6dc2c196e40daf4aa793f6643da95206b12be0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376362"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123132"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 類別
 有一列點陣圖按鈕和選擇性分隔線的控制列。  
@@ -128,7 +128,7 @@ class CToolBar : public CControlBar
   
  在工具列中的所有按鈕影像是都取自一個點陣圖，它必須包含一個影像，為每個按鈕。 所有映像必須是相同的大小。預設為 16 個像素寬和高 15 像素。 映像必須在點陣圖中的並排顯示。  
   
- `SetButtons`函式會採用控制項 Id 的陣列中指定的項目數的整數陣列的指標。 函式設定每個按鈕 ID 的值陣列的對應項目，並指派每個按鈕影像索引，指定點陣圖中按鈕的映像的位置。 如果陣列元素值**ID_SEPARATOR**，指派任何映像索引。  
+ `SetButtons`函式會採用控制項 Id 的陣列中指定的項目數的整數陣列的指標。 函式設定每個按鈕 ID 的值陣列的對應項目，並指派每個按鈕影像索引，指定點陣圖中按鈕的映像的位置。 如果陣列項目具有 ID_SEPARATOR 值時，會不指派任何映像索引。  
   
  在點陣圖中的映像的順序通常是的順序中，它們會繪製在畫面上，但您可以使用[SetButtonInfo](#setbuttoninfo)函式變更影像的順序和繪圖順序之間的關聯性。  
   
@@ -145,9 +145,9 @@ class CToolBar : public CControlBar
   
  若要指派要顯示在按鈕上的文字，請呼叫[GetButtonText](#getbuttontext)來擷取文字，會出現在 [] 按鈕，然後再呼叫[SetButtonText](#setbuttontext)設定文字。  
   
- 若要建立核取方塊按鈕，將它指派樣式**TBBS_CHECKBOX**或使用`CCmdUI`物件的`SetCheck`成員函式中的`ON_UPDATE_COMMAND_UI`處理常式。 呼叫`SetCheck`按鈕將變為核取方塊按鈕。 傳遞`SetCheck`引數 0 已核取，或 2 的未選取，1 為不定。  
+ 建立核取方塊按鈕、 將其指派的樣式 TBBS_CHECKBOX 或使用`CCmdUI`物件的`SetCheck`ON_UPDATE_COMMAND_UI 處理常式中的成員函式。 呼叫`SetCheck`按鈕將變為核取方塊按鈕。 傳遞`SetCheck`引數 0 已核取，或 2 的未選取，1 為不定。  
   
- 若要建立選項按鈕，請呼叫[CCmdUI](../../mfc/reference/ccmdui-class.md)物件的[SetRadio](../../mfc/reference/ccmdui-class.md#setradio)成員函式，從`ON_UPDATE_COMMAND_UI`處理常式。 傳遞`SetRadio`未核取或為非零，檢查的引數 0。 為了提供選項群組互斥的行為，您必須擁有`ON_UPDATE_COMMAND_UI`所有的按鈕群組中的處理常式。  
+ 若要建立選項按鈕，請呼叫[CCmdUI](../../mfc/reference/ccmdui-class.md)物件的[SetRadio](../../mfc/reference/ccmdui-class.md#setradio) ON_UPDATE_COMMAND_UI 處理常式成員函式。 傳遞`SetRadio`未核取或為非零，檢查的引數 0。 為了提供選項群組互斥的行為，您必須 ON_UPDATE_COMMAND_UI 處理常式，如所有的按鈕群組中。  
   
  如需有關使用`CToolBar`，請參閱文章[MFC 工具列實作](../../mfc/mfc-toolbar-implementation.md)和[技術提示 31： 控制列](../../mfc/tn031-control-bars.md)。  
   
@@ -173,7 +173,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDFind`  
+ *nIDFind*  
  工具列按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -190,31 +190,31 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  工具列的父視窗的指標。  
   
- `dwStyle`  
+ *dwStyle*  
  工具列的樣式。 支援的其他工具列樣式如下：  
   
-- `CBRS_TOP` 控制列是在框架視窗的頂端。  
+- CBRS_TOP 控制列是在框架視窗的頂端。  
   
-- `CBRS_BOTTOM` 控制列是在框架視窗的底部。  
+- CBRS_BOTTOM 控制列是在框架視窗的底部。  
   
-- `CBRS_NOALIGN` 父代重新調整大小時未重新置放控制列。  
+- 父代重新調整大小時，不會重新定位 CBRS_NOALIGN 控制列。  
   
-- `CBRS_TOOLTIPS` 控制列會顯示工具提示。  
+- CBRS_TOOLTIPS 控制列會顯示工具提示。  
   
-- **CBRS_SIZE_DYNAMIC**控制列是動態的。  
+- CBRS_SIZE_DYNAMIC 控制列是動態的。  
   
-- **CBRS_SIZE_FIXED**固定的控制列。  
+- CBRS_SIZE_FIXED 控制列被固定的。  
   
-- **CBRS_FLOATING**浮動控制列。  
+- 浮動 CBRS_FLOATING 控制列。  
   
-- `CBRS_FLYBY` 狀態列會顯示按鈕的相關資訊。  
+- CBRS_FLYBY 狀態列會顯示按鈕的相關資訊。  
   
-- **CBRS_HIDE_INPLACE**控制列不會顯示給使用者。  
+- CBRS_HIDE_INPLACE 控制列不會顯示給使用者。  
   
- `nID`  
+ *nID*  
  工具列的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -243,19 +243,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  工具列的父視窗的指標。  
   
- `dwCtrlStyle`  
- 建立內嵌的其他樣式[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)物件。 根據預設，這個值設為**TBSTYLE_FLAT**。 Toolbar 樣式的完整清單，請參閱`dwStyle`。  
+ *dwCtrlStyle*  
+ 建立內嵌的其他樣式[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)物件。 根據預設，這個值設定為 TBSTYLE_FLAT。 Toolbar 樣式的完整清單，請參閱*dwStyle*。  
   
- `dwStyle`  
+ *dwStyle*  
  工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK 中針對適當的樣式清單。  
   
  *rcBorders*  
  A [CRect](../../atl-mfc-shared/reference/crect-class.md)工具列視窗框線的寬度定義的物件。 預設值，進而導致無邊界工具列視窗會將這些框線設 0,0,0,0。  
   
- `nID`  
+ *nID*  
  工具列的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -264,7 +264,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  它也可以設定工具列高度設為預設值。  
   
- 使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要建立內嵌的工具列控制項時出現。 例如，設定`dwCtrlStyle`至**TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT**來建立類似 Internet Explorer 4 工具列的工具列。  
+ 使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要建立內嵌的工具列控制項時出現。 例如，設定*dwCtrlStyle*至 TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT 來建立類似 Internet Explorer 4 工具列的工具列。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
@@ -291,22 +291,22 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  工具列按鈕或分隔符號是擷取其資訊的索引。  
   
- `nID`  
- 若要參考**UINT**設定按鈕的命令 id。  
+ *nID*  
+ 設定按鈕的命令 id UINT 參考。  
   
- `nStyle`  
- 若要參考**UINT**設按鈕的樣式。  
+ *nStyle*  
+ 設定按鈕的樣式為 UINT 參考。  
   
- `iImage`  
+ *iImage*  
  按鈕的影像點陣圖內索引設為整數的參考。  
   
 ### <a name="remarks"></a>備註  
- 這些值會指派給所參考的變數`nID`， `nStyle`，和`iImage`。 映像索引是包含所有工具列按鈕的影像點陣圖內影像的位置。 第一個影像都是在位置 0。  
+ 這些值會指派給所參考的變數*nID*， *nStyle*，和*iImage*。 映像索引是包含所有工具列按鈕的影像點陣圖內影像的位置。 第一個影像都是在位置 0。  
   
- 如果`nIndex`指定分隔符號，`iImage`設分隔符號寬度的像素。  
+ 如果*nIndex*指定分隔符號， *iImage*設分隔符號寬度的像素。  
   
 ##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
  呼叫此成員函式可擷取按鈕或工具列上的分隔符號的樣式。  
@@ -316,11 +316,11 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取的工具列按鈕或分隔符號的樣式索引。  
   
 ### <a name="return-value"></a>傳回值  
- 按鈕或所指定的分隔符號的樣式`nIndex`。  
+ 按鈕或所指定的分隔符號的樣式*nIndex*。  
   
 ### <a name="remarks"></a>備註  
  按鈕的樣式會判斷按鈕的顯示方式，以及它如何回應使用者輸入。 請參閱[SetButtonStyle](#setbuttonstyle)按鈕樣式的範例。  
@@ -337,10 +337,10 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取之文字的索引。  
   
- `rString`  
+ *rString*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)會包含要擷取文字的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -350,24 +350,24 @@ void GetButtonText(
  這個成員的第二個表單函式的填滿`CString`具有字串文字物件。  
   
 ##  <a name="getitemid"></a>  CToolBar::GetItemID  
- 此成員函式傳回的命令識別碼會以按鈕或所指定的分隔符號`nIndex`。  
+ 此成員函式傳回的命令識別碼會以按鈕或所指定的分隔符號*nIndex*。  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  ID 是要擷取之項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 命令 ID 的按鈕或所指定的分隔符號`nIndex`。  
+ 命令 ID 的按鈕或所指定的分隔符號*nIndex*。  
   
 ### <a name="remarks"></a>備註  
- 分隔符號傳回**ID_SEPARATOR**。  
+ 分隔符號傳回 ID_SEPARATOR。  
   
 ##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
- 此成員函式會填滿`RECT`其位址包含在結構`lpRect`按鈕或分隔符號所指定的座標`nIndex`。  
+ 此成員函式會填滿`RECT`其位址包含在結構*lpRect*按鈕或分隔符號所指定的座標*nIndex*。  
   
 ```  
 virtual void GetItemRect(
@@ -376,10 +376,10 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  要擷取的項目的索引 （按鈕或分隔符號） 的矩形座標。  
   
- `lpRect`  
+ *lpRect*  
  位址[RECT](../../mfc/reference/rect-structure1.md)結構將會包含項目的座標。  
   
 ### <a name="remarks"></a>備註  
@@ -417,10 +417,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszResourceName`  
+ *lpszResourceName*  
  要載入點陣圖的資源名稱的指標。  
   
- `nIDResource`  
+ *nIDResource*  
  點陣圖的資源識別碼載入。  
   
 ### <a name="return-value"></a>傳回值  
@@ -433,7 +433,7 @@ BOOL LoadBitmap(UINT nIDResource);
 > `CToolBar` 支援最多 16 個色彩的點陣圖。 當您將映像載入工具列編輯器時，Visual Studio 會自動將影像轉換為 16 色點陣圖，如有必要，並顯示一則警告訊息，如果映像已轉換。 如果您使用的影像超過 16 個色彩 （使用外部編輯器編輯映像） 時，應用程式可能會如預期般運作。  
   
 ##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
- 呼叫此成員函式，以載入所指定的工具列`lpszResourceName`或`nIDResource`。  
+ 呼叫此成員函式，以載入所指定的工具列*lpszResourceName*或*nIDResource*。  
   
 ```  
 BOOL LoadToolBar(LPCTSTR lpszResourceName);  
@@ -441,10 +441,10 @@ BOOL LoadToolBar(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszResourceName`  
+ *lpszResourceName*  
  要載入的工具列資源名稱的指標。  
   
- `nIDResource`  
+ *nIDResource*  
  工具列的資源識別碼載入。  
   
 ### <a name="return-value"></a>傳回值  
@@ -485,44 +485,44 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  按鈕或設定資訊的分隔符號的以零為起始的索引。  
   
- `nID`  
+ *nID*  
  設定按鈕的命令 ID 的值。  
   
- `nStyle`  
+ *nStyle*  
  將新的按鈕樣式。 支援下列按鈕樣式：  
   
-- **TBBS_BUTTON**標準按鈕 （預設值）  
+- TBBS_BUTTON 標準按鈕 （預設值）  
   
-- **TBBS_SEPARATOR**分隔符號  
+- TBBS_SEPARATOR 分隔符號  
   
-- **TBBS_CHECKBOX**自動核取方塊按鈕  
+- TBBS_CHECKBOX 自動核取方塊按鈕  
   
-- **TBBS_GROUP**標記的按鈕群組的開頭  
+- TBBS_GROUP 標記的按鈕群組的開頭  
   
-- **TBBS_CHECKGROUP**標示的核取方塊按鈕群組開始  
+- TBBS_CHECKGROUP 標示核取方塊按鈕群組的開始  
   
-- **TBBS_DROPDOWN**建立下拉式選單按鈕。  
+- TBBS_DROPDOWN 建立下拉式選單按鈕。  
   
-- **TBBS_AUTOSIZE**按鈕的寬度會以按鈕的文字，而非影像的大小計算。  
+- TBBS_AUTOSIZE 算出按鈕的寬度不在影像的大小上的按鈕的文字為基礎。  
   
-- **TBBS_NOPREFIX**按鈕的文字不會與其相關聯的對應前置詞。  
+- TBBS_NOPREFIX 按鈕的文字不會有與其相關聯的對應前置詞。  
   
- `iImage`  
+ *iImage*  
  按鈕的影像點陣圖內的新索引。  
   
 ### <a name="remarks"></a>備註  
- 分隔符號，其具有樣式**TBBS_SEPARATOR**，此函式像素為單位的值儲存在設定的分隔符號寬度`iImage`。  
+ 此函式分隔符號，具有樣式 TBBS_SEPARATOR，像素為單位的值儲存在設定的分隔符號寬度*iImage*。  
   
 > [!NOTE]
->  您也可以設定使用的按鈕狀態`nStyle`參數; 不過，因為按鈕狀態受到[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)任何處理常式中，狀態使用設定`SetButtonInfo`將會遺失在下次閒置處理程序。 請參閱[如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控制列](../../mfc/tn031-control-bars.md)如需詳細資訊。  
+>  您也可以設定使用的按鈕狀態*nStyle*參數; 不過，因為按鈕狀態受到[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)任何處理常式中，狀態使用設定`SetButtonInfo`將會遺失在下次閒置處理。 請參閱[如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控制列](../../mfc/tn031-control-bars.md)如需詳細資訊。  
   
  點陣圖影像和按鈕上的資訊，請參閱[CToolBar](../../mfc/reference/ctoolbar-class.md)概觀和[CToolBar::LoadBitmap](#loadbitmap)。  
   
 ##  <a name="setbuttons"></a>  CToolBar::SetButtons  
- 此成員函式會將每個工具列按鈕的命令 ID 設定為陣列的對應項目所指定的值`lpIDArray`。  
+ 此成員函式會將每個工具列按鈕的命令 ID 設定為陣列的對應項目所指定的值*lpIDArray*。  
   
 ```  
 BOOL SetButtons(
@@ -531,21 +531,21 @@ BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpIDArray`  
- 命令 Id 的陣列指標。 它可以是**NULL**配置空的按鈕。  
+ *lpIDArray*  
+ 命令 Id 的陣列指標。 它可以是 NULL 配置空的按鈕。  
   
- `nIDCount`  
- 所指陣列中的項目數`lpIDArray`。  
+ *nIDCount*  
+ 所指陣列中的項目數*lpIDArray*。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果陣列的項目值**ID_SEPARATOR**，分隔符號會在對應工具列的位置中建立。 此函式也會將每個按鈕樣式設定為**TBBS_BUTTON**和每個分隔符號樣式**TBBS_SEPARATOR**，並將映像索引指派給每個按鈕。 映像索引指定按鈕的影像點陣圖內的位置。  
+ 如果陣列的項目值 ID_SEPARATOR，分隔符號會建立在對應工具列的位置。 此函式也會將每個按鈕樣式設定為 TBBS_BUTTON 和 TBBS_SEPARATOR，每個分隔符號的樣式，並將映像索引指派給每個按鈕。 映像索引指定按鈕的影像點陣圖內的位置。  
   
  您不需要分隔符號，點陣圖中的帳戶，因為此函式不會指派分隔符號的影像索引。 如果工具列有按鈕在位置 0，1 和 3 和分隔符號，以在位置 2，在點陣圖中的位置 0、 1 和 2 的映像會指派給按鈕位置 0、 1 和 3，分別。  
   
- 如果`lpIDArray`是**NULL**，此函式所指定項目數的配置空間`nIDCount`。 使用[SetButtonInfo](#setbuttoninfo)來設定每個項目的屬性。  
+ 如果*lpIDArray*是 NULL，此函式所指定項目數的配置空間*nIDCount*。 使用[SetButtonInfo](#setbuttoninfo)來設定每個項目的屬性。  
   
 ##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
  呼叫此成員函式設定樣式的按鈕或分隔符號，或將按鈕分組。  
@@ -557,27 +557,27 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  按鈕或分隔符號設定為其資訊的索引。  
   
- `nStyle`  
+ *nStyle*  
  將按鈕樣式。 支援下列按鈕樣式：  
   
-- **TBBS_BUTTON**標準按鈕 （預設值）  
+- TBBS_BUTTON 標準按鈕 （預設值）  
   
-- **TBBS_SEPARATOR**分隔符號  
+- TBBS_SEPARATOR 分隔符號  
   
-- **TBBS_CHECKBOX**自動核取方塊按鈕  
+- TBBS_CHECKBOX 自動核取方塊按鈕  
   
-- **TBBS_GROUP**標記的按鈕群組的開頭  
+- TBBS_GROUP 標記的按鈕群組的開頭  
   
-- **TBBS_CHECKGROUP**標示的核取方塊按鈕群組開始  
+- TBBS_CHECKGROUP 標示核取方塊按鈕群組的開始  
   
-- **TBBS_DROPDOWN**建立下拉式按鈕  
+- TBBS_DROPDOWN 建立下拉式按鈕  
   
-- **TBBS_AUTOSIZE**按鈕的寬度會以按鈕的文字，而非影像的大小計算  
+- 按鈕的寬度會計算的 TBBS_AUTOSIZE 根據按鈕，不能在影像大小的文字  
   
-- **TBBS_NOPREFIX**按鈕的文字不會與其相關聯的對應前置詞  
+- TBBS_NOPREFIX 按鈕文字並不會與其相關聯的對應前置詞  
   
 ### <a name="remarks"></a>備註  
  按鈕的樣式會判斷按鈕的顯示方式，以及它如何回應使用者輸入。  
@@ -585,7 +585,7 @@ void SetButtonStyle(
  然後再呼叫`SetButtonStyle`，呼叫[GetButtonStyle](#getbuttonstyle)成員函式來擷取按鈕或分隔符號的樣式。  
   
 > [!NOTE]
->  您也可以設定使用的按鈕狀態`nStyle`參數; 不過，因為按鈕狀態受到[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)任何處理常式中，狀態使用設定`SetButtonStyle`將會遺失在下次閒置處理程序。 請參閱[如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控制列](../../mfc/tn031-control-bars.md)如需詳細資訊。  
+>  您也可以設定使用的按鈕狀態*nStyle*參數; 不過，因為按鈕狀態受到[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)任何處理常式中，狀態使用設定`SetButtonStyle`將會遺失在下次閒置處理。 請參閱[如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控制列](../../mfc/tn031-control-bars.md)如需詳細資訊。  
   
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  呼叫此函式可設定 5d; 按鈕的文字。  
@@ -597,10 +597,10 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  設定為其文字的按鈕索引。  
   
- `lpszText`  
+ *lpszText*  
  指向要在設定按鈕的文字。  
   
 ### <a name="return-value"></a>傳回值  
@@ -610,14 +610,14 @@ BOOL SetButtonText(
   請參閱範例的[CToolBar::GetToolBarCtrl](#gettoolbarctrl)。  
   
 ##  <a name="setheight"></a>  CToolBar::SetHeight  
- 此成員函式的值，以像素中指定設定工具列的高度`cyHeight`。  
+ 此成員函式的值，以像素中指定設定工具列的高度*cyHeight*。  
   
 ```  
 void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cyHeight`  
+ *cyHeight*  
  像素為單位，工具列的高度。  
   
 ### <a name="remarks"></a>備註  
@@ -638,11 +638,11 @@ void SetSizes(
  *sizeButton*  
  單位為像素的每個按鈕的大小。  
   
- `sizeImage`  
+ *sizeImage*  
  每個映像素為單位的大小。  
   
 ### <a name="remarks"></a>備註  
- `sizeImage`參數必須包含在工具列的點陣圖影像像素為單位的大小。 中的維度*sizeButton*必須足以儲存映像加上 7 個像素額外的寬度和高度額外 6 個像素。 此函式也會設定成按鈕的工具列高度。  
+ *SizeImage*參數必須包含在工具列的點陣圖影像像素為單位的大小。 中的維度*sizeButton*必須足以儲存映像加上 7 個像素額外的寬度和高度額外 6 個像素。 此函式也會設定成按鈕的工具列高度。  
   
  呼叫此成員函式只會針對未遵循工具列*軟體設計的 Windows 介面指導方針*按鈕和映像大小的建議。  
   

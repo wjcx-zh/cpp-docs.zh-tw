@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce997441c11287626e9681a661f858e33ccdde24
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322208"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122385"
 ---
 # <a name="event-maps"></a>事件對應
 
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>備註
 
-使用`DECLARE_EVENT_MAP`巨集，在類別宣告的結尾。 接著，在定義類別的成員函式的.cpp 檔案，使用`BEGIN_EVENT_MAP`巨集，每個控制項的事件，巨集項目和`END_EVENT_MAP`巨集來宣告事件清單的結尾。
+在類別宣告結尾使用 DECLARE_EVENT_MAP 巨集。 接著，在定義類別的成員函式的.cpp 檔案，使用 BEGIN_EVENT_MAP 巨集、 巨集項目針對每個控制項的事件，以及 END_EVENT_MAP 巨集來宣告事件清單的結尾。
 
 如需事件對應的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
 
@@ -97,9 +97,9 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="remarks"></a>備註
 
-在定義類別的成員函式的實作 (.cpp) 檔案，啟動 事件對應與`BEGIN_EVENT_MAP`巨集，然後將巨集項目加入每個事件，並完成的事件對應`END_EVENT_MAP`巨集。
+在實作 (.cpp) 檔案中定義為類別成員函式，事件對應開頭 BEGIN_EVENT_MAP 巨集，然後新增巨集項目針對每個事件，並完成 END_EVENT_MAP 巨集的事件對應。
 
-如需有關事件對應和`BEGIN_EVENT_MAP`巨集，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
+如需有關事件對應和 BEGIN_EVENT_MAP 巨集的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -107,7 +107,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-使用`END_EVENT_MAP`巨集，以結束事件對應的定義。
+您可以使用 END_EVENT_MAP 巨集來結束事件對應的定義。
 
 ```cpp
 END_EVENT_MAP()
@@ -148,36 +148,36 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 |符號|參數型別|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_COLOR`|`OLE_COLOR`|
-|`VTS_CY`|`CURRENCY`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|**const** __char\*__|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_FONT`|`IFontDispatch*`|
-|`VTS_HANDLE`|`HANDLE`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_OPTEXCLUSIVE`|`OLE_OPTEXCLUSIVE`|
-|`VTS_PICTURE`|`IPictureDisp*`|
-|`VTS_TRISTATE`|`OLE_TRISTATE`|
-|`VTS_XPOS_PIXELS`|`OLE_XPOS_PIXELS`|
-|`VTS_YPOS_PIXELS`|`OLE_YPOS_PIXELS`|
-|`VTS_XSIZE_PIXELS`|`OLE_XSIZE_PIXELS`|
-|`VTS_YSIZE_PIXELS`|`OLE_YSIZE_PIXELS`|
-|`VTS_XPOS_HIMETRIC`|`OLE_XPOS_HIMETRIC`|
-|`VTS_YPOS_HIMETRIC`|`OLE_YPOS_HIMETRIC`|
-|`VTS_XSIZE_HIMETRIC`|`OLE_XSIZE_HIMETRIC`|
-|`VTS_YSIZE_HIMETRIC`|`OLE_YSIZE_HIMETRIC`|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_COLOR|OLE_COLOR|
+|VTS_CY|貨幣|
+|VTS_DATE|DATE|
+|VTS_BSTR|**const** __char\*__|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_FONT|`IFontDispatch*`|
+|VTS_HANDLE|HANDLE|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE|
+|VTS_PICTURE|`IPictureDisp*`|
+|VTS_TRISTATE|OLE_TRISTATE|
+|VTS_XPOS_PIXELS|OLE_XPOS_PIXELS|
+|VTS_YPOS_PIXELS|OLE_YPOS_PIXELS|
+|VTS_XSIZE_PIXELS|OLE_XSIZE_PIXELS|
+|VTS_YSIZE_PIXELS|OLE_YSIZE_PIXELS|
+|TS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
+|VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
+|VTS_XSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
+|VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 所有的 variant 類型已定義其他的 variant 常數例外`VTS_FONT`和`VTS_PICTURE`，可提供 variant 資料常數指標。 這些常數會使用名為`VTS_Pconstantname`慣例。 例如，`VTS_PCOLOR`是指向`VTS_COLOR`常數。
+> 對於所有 variant 類型，除了 VTS_FONT 和 VTS_PICTURE，提供指向 variant 資料常數的已定義其他變數的常數。 這些常數會使用名為`VTS_Pconstantname`慣例。 例如，VTS_PCOLOR 是 VTS_COLOR 常數指標。
 
 ### <a name="requirements"></a>需求
 
@@ -251,7 +251,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-值*lpMsg*， *hWndParent*，和*lpRect*參數取自的對應參數**IOleObject::DoVerb**成員函式。
+值*lpMsg*， *hWndParent*，和*lpRect*參數取自的對應參數`IOleObject::DoVerb`成員函式。
 
 ### <a name="requirements"></a>需求
 
@@ -275,7 +275,7 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="remarks"></a>備註
 
-格式是標準動詞索引`OLEIVERB_`，後面接著動作。 `OLEIVERB_SHOW`、`OLEIVERB_HIDE` 和 `OLEIVERB_UIACTIVATE` 是標準動詞的一些範例。
+格式是標準動詞索引`OLEIVERB_`，後面接著動作。 OLEIVERB_SHOW、 OLEIVERB_HIDE 和 OLEIVERB_UIACTIVATE 是標準動詞的一些範例。
 
 請參閱[ON_OLEVERB](#on_oleverb)要做為函式原型的說明*memberFxn*參數。
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1198c85b8366d7dec4d38d002b65468c38347c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372631"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121724"
 ---
 # <a name="csocketfile-class"></a>CSocketFile 類別
 `CFile` 物件，用於透過 Windows Sockets 在網路上傳送和接收資料。  
@@ -48,11 +48,11 @@ class CSocketFile : public CFile
  若要序列化 （傳送） 資料，您將其插入到封存呼叫`CSocketFile`成員函式來將資料寫入`CSocket`物件。 若要還原序列化 （接收） 從封存解壓縮資料。 這會導致呼叫封存`CSocketFile`成員函式從中讀取資料`CSocket`物件。  
   
 > [!TIP]
->  除了使用`CSocketFile`如此處所描述，您可以使用它定義為獨立的檔案物件，如同您與`CFile`、 其基底類別。 您也可以使用`CSocketFile`與任何封存型 MFC 序列化函式。 因為`CSocketFile`不支援的所有`CFile`的功能，某些預設 MFC 序列化函式與不相容`CSocketFile`。 特別的是`CEditView`類別。 您不應嘗試序列化`CEditView`資料透過`CArchive`物件附加至`CSocketFile`物件使用`CEditView::SerializeRaw`; 使用**CEditView::Serialize**改為。 `SerializeRaw`函數必須要有 「 檔案 」 物件具有函式，例如`Seek`、 該`CSocketFile`沒有。  
+>  除了使用`CSocketFile`如此處所描述，您可以使用它定義為獨立的檔案物件，如同您與`CFile`、 其基底類別。 您也可以使用`CSocketFile`與任何封存型 MFC 序列化函式。 因為`CSocketFile`不支援的所有`CFile`的功能，某些預設 MFC 序列化函式與不相容`CSocketFile`。 特別的是`CEditView`類別。 您不應嘗試序列化`CEditView`資料透過`CArchive`物件附加至`CSocketFile`物件使用`CEditView::SerializeRaw`; 使用`CEditView::Serialize`改為。 `SerializeRaw`函數必須要有 「 檔案 」 物件具有函式，例如`Seek`、 該`CSocketFile`沒有。  
   
- 當您使用`CArchive`與`CSocketFile`和`CSocket`，您可能會遇到的情況其中**CSocket::Receive**進入迴圈 (由**PumpMessages(FD_READ)**) 等候要求的位元組數量。 這是因為 Windows 通訊端可以只有一個接收呼叫每個 FD_READ 告知但`CSocketFile`和`CSocket`允許每個 FD_READ 的多個接收呼叫。 如果可讀取的資料時，您會收到 FD_READ，應用程式停止回應。 如果您永遠不會收到另一個 FD_READ，就會停止應用程式透過通訊端進行通訊。  
+ 當您使用`CArchive`與`CSocketFile`和`CSocket`，您可能會遇到的情況其中`CSocket::Receive`進入迴圈 (由`PumpMessages(FD_READ)`) 正在等待要求的位元組數量。 這是因為 Windows 通訊端可以只有一個接收呼叫每個 FD_READ 告知但`CSocketFile`和`CSocket`允許每個 FD_READ 的多個接收呼叫。 如果可讀取的資料時，您會收到 FD_READ，應用程式停止回應。 如果您永遠不會收到另一個 FD_READ，就會停止應用程式透過通訊端進行通訊。  
   
- 您可以解決這個問題，如下所示。 在`OnReceive`通訊端類別，呼叫方法**CAsyncSocket::IOCtl (FIONREAD，...)** 之前先呼叫`Serialize`訊息類別時要從通訊端讀取預期的資料超過一個 TCP 封包 （最大傳輸單位的網路中，通常至少 1096 個位元組） 的大小的方法。 如果可用的資料大小小於所需，等待接收和才能啟動讀取的作業的所有資料。  
+ 您可以解決這個問題，如下所示。 在`OnReceive`通訊端類別，呼叫方法`CAsyncSocket::IOCtl(FIONREAD, ...)`之前先呼叫`Serialize`訊息類別時要從通訊端讀取預期的資料超過一個 TCP 封包的網路中 （最大傳輸單位的大小的方法通常至少 1096 位元組為單位)。 如果可用的資料大小小於所需，等待接收和才能啟動讀取的作業的所有資料。  
   
  在下列範例中，`m_dwExpected`是大約使用者希望接收的位元組數目。 它會假設，您將它宣告其他位置中您的程式碼。  
   
@@ -80,17 +80,17 @@ explicit CSocketFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSocket`  
+ *pSocket*  
  若要附加至通訊端`CSocketFile`物件。  
   
- `bArchiveCompatible`  
- 指定 「 檔案 」 物件是否為用於`CArchive`物件。 傳遞**FALSE**只有當您想要使用`CSocketFile`物件以獨立的方式，如同在獨立`CFile`物件，但有特定限制。 這個旗標變更如何`CArchive`物件附加至`CSocketFile`物件會管理其進行讀取的緩衝區。  
+ *bArchiveCompatible*  
+ 指定 「 檔案 」 物件是否為用於`CArchive`物件。 傳遞 FALSE，只有當您想要使用`CSocketFile`物件以獨立的方式，如同在獨立`CFile`物件，但有特定限制。 這個旗標變更如何`CArchive`物件附加至`CSocketFile`物件會管理其進行讀取的緩衝區。  
   
 ### <a name="remarks"></a>備註  
  物件的解構函式本身解除與關聯通訊端物件超出範圍的物件，或刪除時。  
   
 > [!NOTE]
->  A`CSocketFile`也可用以 （有限制） 的檔案，而不做`CArchive`物件。 根據預設，`CSocketFile`建構函式的`bArchiveCompatible`參數是**TRUE**。 這會指定 「 檔案 」 物件是用於封存。 若要使用 「 檔案 」 物件，但未封存，傳遞**FALSE**中`bArchiveCompatible`參數。  
+>  A`CSocketFile`也可用以 （有限制） 的檔案，而不做`CArchive`物件。 根據預設，`CSocketFile`建構函式的*bArchiveCompatible*參數為 TRUE。 這會指定 「 檔案 」 物件是用於封存。 若要使用 「 檔案 」 物件，但未封存，傳遞 FALSE 中的*bArchiveCompatible*參數。  
   
  在 「 封存相容 」 模式下，`CSocketFile`物件提供更佳的效能並減少的 < 死結 >。 傳送和接收通訊端等候另一方，或一般資源時，就會發生死結。 如果發生這種情況，可能會`CArchive`物件使用過`CSocketFile`中一樣的方式`CFile`物件。 與`CFile`，封存可以假設如果收到比要求的位元組更少，具有已到達檔案結尾。  
   

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86250968fa8f6dfd9cb1a3b9a790549f70baa569
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375842"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039104"
 ---
 # <a name="cimagelist-class"></a>CImageList 類別
 提供 Windows 通用影像清單控制項的功能。  
@@ -189,16 +189,16 @@ int Add(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pbmImage`  
+ *pbmImage*  
  指標，包含影像的點陣圖。 映像數目會推斷從點陣圖的寬度。  
   
- `pbmMask`  
+ *pbmMask*  
  包含遮罩點陣圖的指標。 如果沒有遮罩影像清單搭配使用，則會忽略這個參數。  
   
- `crMask`  
+ *crMask*  
  用於產生遮罩的色彩。 此指定點陣圖中色彩的每個像素會變更為黑色，且對應的位元遮罩設為一。  
   
- `hIcon`  
+ *hIcon*  
  點陣圖和新的映像的遮罩包含圖示的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -218,7 +218,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hImageList`  
+ *hImageList*  
  影像清單物件控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -237,10 +237,10 @@ BOOL BeginDrag(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImage`  
+ *nImage*  
  要拖曳的影像以零為起始的索引。  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  開始拖放到位置 （通常，資料指標位置） 的座標。 座標是相對於映像的左上角。  
   
 ### <a name="return-value"></a>傳回值  
@@ -280,10 +280,10 @@ BOOL Copy(
  *iDst*  
  使用做為複製作業的目的地之影像的以零為起始的索引。  
   
- `iSrc`  
+ *iSrc*  
  要做為複製作業的來源映像的以零為起始的索引。  
   
- `uFlags`  
+ *uFlags*  
  位元旗標值，指定要進行複製作業的類型。 這個參數可以是下列值之一：  
   
 |值|意義|  
@@ -291,7 +291,7 @@ BOOL Copy(
 |`ILCF_MOVE`|來源映像會複製到目的地映像的索引。 此作業會產生指定之影像的多個執行個體。 `ILCF_MOVE` 是預設值。|  
 |`ILCF_SWAP`|來源和目的地影像交換內的影像清單的位置。|  
   
- `pSrc`  
+ *pSrc*  
  指標`CImageList`的複製作業目標的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -338,13 +338,13 @@ BOOL Create(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cx`  
+ */cx*  
  單位為像素的每個影像的維度。  
   
- `cy`  
+ *cy*  
  單位為像素的每個影像的維度。  
   
- `nFlags`  
+ *nFlags*  
  指定要建立影像清單的類型。 這個參數可以是下列值的組合，但是它可以包含的其中之一`ILC_COLOR`值。  
   
 |值|意義|  
@@ -358,53 +358,53 @@ BOOL Create(CImageList* pImageList);
 |`ILC_COLORDDB`|使用裝置而異的點陣圖。|  
 |`ILC_MASK`|使用遮罩。 影像清單包含兩個點陣圖，其中是當做遮罩的單色點陣圖。 如果不包含此值，則影像清單包含只有一個點陣圖。 請參閱[從影像清單的繪圖影像](../../mfc/drawing-images-from-an-image-list.md)遮罩影像上的其他資訊。|  
   
- `nInitial`  
+ *nInitial*  
  一開始包含影像清單的映像數目。  
   
- `nGrow`  
+ *nGrow*  
  依據系統需要調整大小以讓出空間給新的映像清單時所能成長的影像清單的映像數目。 這個參數代表調整大小的影像清單可包含的新映像的數目。  
   
- `nBitmapID`  
+ *nBitmapID*  
  資源識別碼點陣圖的影像清單與相關聯。  
   
- `crMask`  
+ *crMask*  
  用於產生遮罩的色彩。 此指定點陣圖中色彩的每個像素變更為黑色，和對應的位元遮罩設為一。  
   
- `lpszBitmapID`  
+ *lpszBitmapID*  
  字串，包含資源的映像的識別碼。  
   
- `imagelist1`  
+ *不會繪製影像的左邊的 x 座標和 y 軸上方的像素。*  
  對 `CImageList` 物件的參考。  
   
- `nImage1`  
- 第一個現有的映像的索引。  
+ *fStyle*  
+ 旗標，指定繪製樣式，並選擇性地將重疊影像。  
   
- `imagelist2`  
+ *將重疊影像上，請參閱 < 備註 > 一節的資訊。*  
  對 `CImageList` 物件的參考。  
   
- `nImage2`  
- 第二個現有映像的索引。  
+ *MFC 預設實作、 *，繪製影像的影像清單中使用的背景色彩。*  
+ 如果背景色彩是繪製影像的值，以透明的方式使用遮罩。  
   
- `dx`  
- 中的第一個影像，單位為像素的關聯性的第二個影像的 x 軸的位移。  
+ *dx*  
+ 其他可能的樣式會下所述fStyle隸屬IMAGELISTDRAWPARAMS結構。  
   
- `dy`  
- 第二個映像的關聯性的第一個影像，單位為像素的 y 軸的位移。  
+ *dy*  
+ 值，指定的點陣作業程式碼。  
   
- `pImageList`  
+ *pImageList*  
  指標`CImageList`物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CImageList`分成兩個步驟。 首先，呼叫建構函式，然後呼叫`Create`，建立映像清單，並將它附加至`CImageList`物件。  
+ 您建構`CImageList`分成兩個步驟。 這些程式碼會定義來源矩形的色彩資料目的地矩形來達成的完稿色彩的色彩資料的合併方式。`Create``CImageList`  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CImageList#7](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]  
   
 ##  <a name="deleteimagelist"></a>  CImageList::DeleteImageList  
- 呼叫此函式來刪除影像清單。  
+ MFC 的預設實作， SRCCOPY，複製到目的地矩形的直接來源矩形。  
   
 ```  
 BOOL DeleteImageList();
@@ -417,7 +417,7 @@ BOOL DeleteImageList();
  [!code-cpp[NVC_MFC_CImageList#8](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]  
   
 ##  <a name="deletetempmap"></a>  CImageList::DeleteTempMap  
- 會自動呼叫`CWinApp`閒置時間處理常式，`DeleteTempMap`刪除任何暫存`CImageList`所建立的物件[FromHandle](#fromhandle)，但不會終結任何控制代碼 ( `hImageList`) 暫時相關聯與**ImageList**物件。  
+ 這個參數已忽略如果`CWinApp`fStyle`DeleteTempMap`參數不包括`CImageList`ILD_ROP[旗標](#fromhandle)。`hImageList`  
   
 ```  
 static void PASCAL DeleteTempMap();
@@ -427,7 +427,7 @@ static void PASCAL DeleteTempMap();
  [!code-cpp[NVC_MFC_CImageList#9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]  
   
 ##  <a name="detach"></a>  CImageList::Detach  
- 呼叫此函式可從影像清單物件卸離`CImageList`物件。  
+ 其他可能的值底下所述`CImageList`dwRop隸屬IMAGELISTDRAWPARAMS結構。  
   
 ```  
 HIMAGELIST Detach();
@@ -437,13 +437,13 @@ HIMAGELIST Detach();
  影像清單物件控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 此函式傳回的控制代碼的影像清單物件。  
+ rgbBack  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CImageList::Attach](#attach)。  
+  映像的背景色彩，根據預設[CImageList::Attach](#attach)。  
   
 ##  <a name="dragenter"></a>  CImageList::DragEnter  
- 在拖曳作業時，會鎖定更新所指定視窗`pWndLock`，並顯示所指定的位置拖曳影像`point`。  
+ 這個參數可以是應用程式定義的 RGB 值，或下列值之一：  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -452,58 +452,58 @@ static BOOL PASCAL DragEnter(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndLock`  
- 擁有拖曳影像的視窗指標。  
+ *預設背景色彩。*  
+ 使用影像清單的背景色彩繪製影像。  
   
- `point`  
- 顯示拖曳影像的位置。 座標是相對於視窗 （非工作區） 的左上角。  
+ *點*  
+ 沒有背景色彩。 以透明的方式繪製影像。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 座標是相對於視窗左上角，因此指定座標時，您必須補償視窗項目，例如框線、 標題列和功能表列的寬度。  
+ rgbFore  
   
- 如果`pWndLock`是**NULL**、 這個函式桌面視窗中，與相關聯的顯示內容中繪製影像和座標是相對於螢幕左上角。  
+ 映像預設前景色彩 *。  
   
- 此函式在拖曳作業期間鎖定特定視窗的所有其他更新。 如果您需要在拖曳作業，例如反白顯示拖放作業的目標期間進行繪圖可以暫時隱藏被拖曳的影像使用[CImageList::DragLeave](#dragleave)函式。  
+ 預設前景色彩。 如果您需要在拖曳作業期間進行繪圖，例如反白顯示拖放作業的目標，您可以使用 [CImageList::DragLeave](#dragleave) 成員函式暫時隱藏被拖曳的影像。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CImageList::BeginDrag](#begindrag)。  
+  映像的背景色彩，根據預設[CImageList::BeginDrag](#begindrag)。  
   
 ##  <a name="dragleave"></a>  CImageList::DragLeave  
- 解除鎖定由所指定視窗`pWndLock`並隱藏拖曳影像，讓 [更新] 視窗。  
+ 影像會與目的地裝置內容的色彩混合。  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndLock`  
- 擁有拖曳影像的視窗指標。  
+ *預設背景色彩。*  
+ 使用影像清單的背景色彩繪製影像。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CImageList::EndDrag](#enddrag)。  
+  只有當使用這個參數[fStyle](#enddrag)包含或旗標。  
   
 ##  <a name="dragmove"></a>  CImageList::DragMove  
- 呼叫此函式將拖放作業期間被拖曳的影像。  
+ fState  
   
 ```  
 static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
- 新的拖曳位置。  
+ *pt*  
+ 指定繪製狀態旗標。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此函式通常稱為以回應`WM_MOUSEMOVE`訊息。 若要開始拖曳作業，請使用`BeginDrag`成員函式。  
+ 這個成員可以包含`WM_MOUSEMOVE`一或多個映像清單狀態旗標。 會影響 saturate 和 alpha 透明混色效果的行為`BeginDrag`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CImageList#4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]  
@@ -516,17 +516,17 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bShow`  
- 指定是否要顯示拖曳影像。  
+ *bShow*  
+ 當搭配ILS_SATURATE，這個成員會保有加入 RGB 數，每個像素圖示中的每個色彩元件的值。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- [CImageList::DragEnter](#dragenter)函式在拖曳作業期間鎖定視窗的所有更新。 此函式，不過，不會鎖定視窗。  
+ 當搭配[ILS_APLHA](#dragenter)，這個成員保留 alpha 色板的值。 這個值可以介於 0 到 255，0 表示完全透明，而且 255 完全不透明。  
   
 ##  <a name="draw"></a>  Cimagelist:: Draw  
- 呼叫此函式可繪製拖放作業期間被拖曳的影像。  
+ crEffect  
   
 ```  
 BOOL Draw(
@@ -537,31 +537,31 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
- 目的地裝置內容的指標。  
+ *pDC*  
+ A COLORREF光暈和陰影效果所使用的值。  
   
- `nImage`  
- 要繪製之影像的以零為起始的索引。  
+ *nImage*  
+ TRUE如果映像已成功地繪製否則FALSE。  
   
- `pt`  
- 要繪製指定的裝置內容中的位置。  
+ *pt*  
+ 如果您想要自行填入 Win32 結構，請使用第一個版本。  
   
- `nStyle`  
- 旗標，指定繪製樣式。 它可以是下列其中一個或多個這些值：  
+ *nStyle*  
+ 如果您想要充分利用一或多個 MFC 的預設引數，或避免管理結構，請使用第二個版本。 覆疊影像是繪製在主要映像，這個成員函式中指定之上的映像nImage參數。  
   
 |值|意義|  
 |-----------|-------------|  
-|`ILD_BLEND25`**ILD_FOCUS**|繪製影像，混合使用系統醒目提示色彩的 25%。 如果影像清單不包含遮罩，此值沒有任何作用。|  
-|`ILD_BLEND50`**ILD_SELECTED**， **ILD_BLEND**|繪製影像，混合使用系統醒目提示色彩的 50%。 如果影像清單不包含遮罩，此值沒有任何作用。|  
-|**ILD_MASK**|繪製遮罩。|  
-|`ILD_NORMAL`|繪製影像的影像清單中使用的背景色彩。 如果背景色彩是`CLR_NONE`以透明的方式使用遮罩繪製影像的值。|  
-|`ILD_TRANSPARENT`|繪製影像以透明的方式使用遮罩，不論的背景色彩。|  
+|`ILD_BLEND25`使用來繪製覆疊遮罩`ILD_BLEND25`繪製**成員函式，以 1 為基底的索引使用指定的覆疊遮罩**INDEXTOOVERLAYMASK巨集。**|呼叫此函式來結束拖曳作業。 呼叫此函式可建立為基礎的映像和其相關的遮罩影像清單中的圖示。|  
+|`ILD_BLEND50`映像的以零為起始的索引。**|如果成功; 圖示的控制代碼否則NULL。 呼叫此函式可建立為基礎的映像和其相關的遮罩影像清單中的圖示。|  
+|`ILD_MASK`|這個方法會依賴的行為ImageList_ExtractIcon巨集，以建立圖示。|  
+|`ILD_NORMAL`|請參閱ImageList_ExtractIcon巨集，如需詳細資訊，圖示的建立和清除。 `CLR_NONE`指定映像清單。|  
+|`ILD_TRANSPARENT`|如果尚未附加至控制代碼，暫存物件會建立並附加。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[cimagelist:: Setoverlayimage](#setoverlayimage)。  
+  映像的背景色彩，根據預設[CImageList::SetOverlayImage](#setoverlayimage)。  
   
 ##  <a name="drawex"></a>  CImageList::DrawEx  
  指定的裝置內容中繪製的映像清單項目。  
@@ -578,26 +578,26 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
- 目的地裝置內容的指標。  
+ *pDC*  
+ A COLORREF光暈和陰影效果所使用的值。  
   
- `nImage`  
- 要繪製之影像的以零為起始的索引。  
+ *nImage*  
+ TRUE如果映像已成功地繪製否則FALSE。  
   
- `pt`  
- 要繪製指定的裝置內容中的位置。  
+ *pt*  
+ 如果您想要自行填入 Win32 結構，請使用第一個版本。  
   
- `sz`  
- 要繪製影像的左上角相對的影像部分的大小。 請參閱`dx`和*dy*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ *sz*  
+ 呼叫此函式可擷取影像清單目前的背景色彩。 RGB 色彩值*物件背景色彩。  
   
- *clrBk*  
- 映像的背景色彩。 請參閱*rgbBk*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ *請參閱範例的*CImageList::SetBkColor*。*  
+ 位址點結構接收目前拖曳位置。 lpPointHotSpot  
   
  *clrFg*  
- 映像的前景色彩。 請參閱*rgbFg*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ 如果成功，指向暫存影像的清單，用於拖曳;否則， NULL。 呼叫此函式可擷取的影像清單中的影像數目。  
   
- `nStyle`  
- 旗標，指定繪製樣式。 請參閱*fStyle*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK 中。  
+ *nStyle*  
+ 如果您想要充分利用一或多個 MFC 的預設引數，或避免管理結構，請使用第二個版本。 映像數目。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -609,7 +609,7 @@ BOOL DrawEx(
  [!code-cpp[NVC_MFC_CImageList#10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]  
   
 ##  <a name="drawindirect"></a>  CImageList::DrawIndirect  
- 呼叫此成員函式，從影像清單繪製影像。  
+ 請參閱範例的CImageList::ExtractIcon。  
   
 ```  
 BOOL DrawIndirect(IMAGELISTDRAWPARAMS* pimldp);
@@ -631,33 +631,33 @@ BOOL DrawIndirect(
 ```  
   
 ### <a name="parameters"></a>參數  
- *pimldp*  
- 指標[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)結構，其中包含繪圖作業的相關資訊。  
+ *呼叫此函式可擷取映像的相關資訊。*  
+ pImageInfo  
   
- `pDC`  
- 目的地裝置內容的指標。 您必須刪除此[CDC](../../mfc/reference/cdc-class.md)物件與它完成時。  
+ *pDC*  
+ 指標IMAGEINFO接收映像的相關資訊的結構。 在此結構中的資訊可以用來直接操作影像的點陣圖。  
   
- `nImage`  
- 要繪製影像的以零為起始的索引。  
+ *nImage*  
+ 結構包含一個影像清單中的映像的相關資訊。  
   
- `pt`  
- A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)結構，其中包含 x 和 y 座標來繪製影像。  
+ *pt*  
+ 呼叫此函式可擷取[m_hImageList](http://msdn.microsoft.com/library/windows/desktop/dd162805)資料成員。  
   
- `sz`  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，表示要繪製影像的大小。  
+ *sz*  
+ 附加的影像清單控制代碼否則[NULL](http://msdn.microsoft.com/library/windows/desktop/dd145106)如果附加的物件。  
   
- *ptOrigin*  
- A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)包含 x 和 y 座標指定左上的角相對於映像本身繪圖作業的結構。 不會繪製影像的左邊的 x 座標和 y 軸上方的像素。  
+ *附加至這個物件的影像清單控制代碼。*  
+ HIMAGELIST m_hImageList; M_hImageList資料成員是類型的公用變數。  
   
- `fStyle`  
- 旗標，指定繪製樣式，並選擇性地將重疊影像。 將重疊影像上，請參閱 < 備註 > 一節的資訊。 MFC 預設實作、 `ILD_NORMAL`，繪製影像的影像清單中使用的背景色彩。 如果背景色彩是`CLR_NONE`繪製影像的值，以透明的方式使用遮罩。  
+ *使用此運算子，以取得附加的控制代碼的*物件。*  
+ 如果成功，影像清單控制代碼來表示物件; 否則NULL。 呼叫此函式可從封存讀取影像清單。 pArchive 指標`CLR_NONE`從中影像清單是要讀取的物件。  
   
- 其他可能的樣式會下所述**fStyle**隸屬[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)結構。  
+ 其他可能的樣式會下所述*fStyle*隸屬[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)結構。  
   
  *dwRop*  
- 值，指定的點陣作業程式碼。 這些程式碼會定義來源矩形的色彩資料目的地矩形來達成的完稿色彩的色彩資料的合併方式。 MFC 的預設實作， **SRCCOPY**，複製到目的地矩形的直接來源矩形。 這個參數已忽略如果`fStyle`參數不包括**ILD_ROP**旗標。  
+ 值，指定的點陣作業程式碼。 這些程式碼會定義來源矩形的色彩資料目的地矩形來達成的完稿色彩的色彩資料的合併方式。 MFC 的預設實作， **SRCCOPY**，複製到目的地矩形的直接來源矩形。 這個參數已忽略如果*fStyle*參數不包括**ILD_ROP**旗標。  
   
- 其他可能的值底下所述**dwRop**隸屬[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)結構。  
+ 其他可能的值底下所述*dwRop*隸屬[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)結構。  
   
  *rgbBack*  
  映像的背景色彩，根據預設`CLR_DEFAULT`。 這個參數可以是應用程式定義的 RGB 值，或下列值之一：  
@@ -675,7 +675,7 @@ BOOL DrawIndirect(
 |`CLR_DEFAULT`|預設前景色彩。 使用系統醒目提示色彩為前景色彩來繪製影像。|  
 |`CLR_NONE`|Blend 色彩。 影像會與目的地裝置內容的色彩混合。|  
   
- 只有當使用這個參數`fStyle`包含`ILD_BLEND25`或`ILD_BLEND50`旗標。  
+ 只有當使用這個參數*fStyle*包含`ILD_BLEND25`或`ILD_BLEND50`旗標。  
   
  *fState*  
  指定繪製狀態旗標。 這個成員可以包含一或多個映像清單狀態旗標。  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>備註  
  如果您想要自行填入 Win32 結構，請使用第一個版本。 如果您想要充分利用一或多個 MFC 的預設引數，或避免管理結構，請使用第二個版本。  
   
- 覆疊影像是繪製在主要映像，這個成員函式中指定之上的映像`nImage`參數。 使用來繪製覆疊遮罩[繪製](#draw)成員函式，以 1 為基底的索引使用指定的覆疊遮罩[INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408)巨集。  
+ 覆疊影像是繪製在主要映像，這個成員函式中指定之上的映像*nImage*參數。 使用來繪製覆疊遮罩[繪製](#draw)成員函式，以 1 為基底的索引使用指定的覆疊遮罩[INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408)巨集。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -709,7 +709,7 @@ static void PASCAL EndDrag();
 ```  
   
 ### <a name="remarks"></a>備註  
- 若要開始拖曳作業，請使用`BeginDrag`成員函式。  
+ 會影響 saturate 和 alpha 透明混色效果的行為。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CImageList#5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]  
@@ -722,7 +722,7 @@ HICON ExtractIcon(int nImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImage`  
+ *nImage*  
  映像的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -742,7 +742,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hImageList`  
+ *hImageList*  
  指定映像清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -762,7 +762,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hImageList`  
+ *hImageList*  
  指定映像清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -797,7 +797,7 @@ static CImageList* PASCAL GetDragImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpPoint`  
+ *lpPoint*  
  位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)結構接收目前拖曳位置。  
   
  *lpPointHotSpot*  
@@ -829,7 +829,7 @@ BOOL GetImageInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImage`  
+ *nImage*  
  映像的以零為起始的索引。  
   
  *pImageInfo*  
@@ -889,7 +889,7 @@ BOOL Read(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pArchive`  
+ *pArchive*  
  指標`CArchive`從中影像清單是要讀取的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -906,14 +906,14 @@ BOOL Remove(int nImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImage`  
+ *nImage*  
  要移除之影像的以零為起始索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 之後的所有項目`nImage`現在下移一個位置。 例如，如果影像清單包含兩個項目，刪除第一個項目會導致要現在會在第一個位置中的剩餘項目。 `nImage`= 0，第一個位置中的項目。  
+ 之後的所有項目*nImage*現在下移一個位置。 例如，如果影像清單包含兩個項目，刪除第一個項目會導致要現在會在第一個位置中的剩餘項目。 *nImage*= 0，第一個位置中的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
@@ -934,22 +934,22 @@ int Replace(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImage`  
+ *nImage*  
  要取代之影像的以零為起始索引。  
   
- `pbmImage`  
+ *pbmImage*  
  指標，包含影像的點陣圖。  
   
- `pbmMask`  
+ *pbmMask*  
  包含遮罩點陣圖指標。 如果沒有遮罩影像清單搭配使用，則會忽略這個參數。  
   
- `hIcon`  
+ *hIcon*  
  包含點陣圖和新的映像的遮罩之圖示的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  傳回的版本**BOOL**傳回非零，如果成功，則為，否則為 0。  
   
- 傳回的版本`int`傳回映像的以零為起始的索引; 如果成功，否則為-1。  
+ 傳回的版本**int**傳回映像的以零為起始的索引; 如果成功，否則為-1。  
   
 ### <a name="remarks"></a>備註  
  呼叫此成員函式之後呼叫[SetImageCount](#setimagecount)若要指派新，有效的映像以預留位置影像的索引編號。  
@@ -965,7 +965,7 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `cr`  
+ *cr*  
  若要設定的背景色彩。 它可以是`CLR_NONE`。 在此情況下，影像會繪製以透明的方式使用遮罩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -987,7 +987,7 @@ BOOL SetDragCursorImage(
  *nDrag*  
  新的映像，以結合拖曳影像的索引。  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  作用中新的映像的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1028,7 +1028,7 @@ BOOL SetOverlayImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nImage`  
+ *nImage*  
  要當做覆疊遮罩的影像以零為起始的索引。  
   
  *nOverlay*  
@@ -1053,7 +1053,7 @@ BOOL Write(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pArchive`  
+ *pArchive*  
  指標`CArchive`影像清單為儲存的物件。  
   
 ### <a name="return-value"></a>傳回值  

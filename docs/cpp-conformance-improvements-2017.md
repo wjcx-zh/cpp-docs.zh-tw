@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7c6a3c3384debb33a9192dc2e887725088bc3f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238587"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042325"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 版中的 C++ 一致性改善
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 版中的 C++ 一致性改善
 
 Microsoft Visual C++ 編譯器支援一般化的 constexpr 和 NSDMI 彙總，現在完整呈現 C++14 標準中新增的功能。 請注意，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 請參閱 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)，以取得顯示編譯器目前狀態的表格。
 
@@ -339,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 對 `std::traits_type` 成員函式 `length`、`compare` 及 `find` 進行變更，以使 `std::string_view` 能在常數運算式中使用。 (在 Visual Studio 2017 15.6 版中，僅支援 Clang/LLVM。 在 15.7 版 Preview 2 中，也幾乎完全支援 CIXX。)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Visual Studio 15.0、[15.3](#update_153)、[15.5](#update_155) 及 [15.7](#update_157) 版中的 Bug 修正
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Visual Studio 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157) 和 [15.8](#update_158) 版中的 Bug 修正
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -1621,6 +1621,211 @@ int main() {
     return 0;
 }
 
+```
+
+## <a name="update_158"></a> Visual Studio 2017 15.8 版中的 Bug 修正及行為變更
+
+### <a name="typename-on-unqualified-identifiers"></a>非限定識別碼上的 typename
+
+在 [/permissive-](build/reference/permissive-standards-conformance.md) 模式中，編譯器不再接受別名範本定義中非限定識別碼上的假性 `typename` 關鍵字。 下列程式碼現在會產生 C7511「T': 'typename' 關鍵字後面必須接著限定名稱」：
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+若要修正此錯誤，只需要將第二行變更為 `using  X = T;` 即可。
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>別名範本定義右側的 __declspec()
+
+不再允許 [__declspec](cpp/declspec.md) 位於別名範本定義的右側。 編譯器先前接受此用法，但此用法完全被忽略，且永遠不會在使用別名時產生淘汰警告。
+
+可以改為使用標準 C++ 屬性 [\[\[deprecated\]\]](cpp/attributes.md)，並將從 Visual Studio 2017 15.6 版開始採用此屬性。 下列程式碼現在會產生 C2760「語法錯誤：非預期的語彙基元 '__declspec'，必須是類型規範」：
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+若要修正此錯誤，請變更為下列程式碼 (使用位於別名定義 '=' 之前的屬性)：
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>兩階段名稱查閱診斷
+
+兩階段名稱查閱需要讓範本能夠在定義時看到範本主體中使用的非相依名稱。 之前，Microsoft C++ 編譯器會在具現化時期之前將找不到的名稱保持未查閱。 現在，它需要在範本主體中繫結非相依名稱。
+
+表示這種情況的其中一個方法是使用相依基底類別的查詢。 之前，編譯器允許使用相依基底類別中定義的名稱，因為在解析所有類型時，會在具現化期間查閱這些名稱。 現在，該程式碼則會被視為錯誤。 在這些情況下，您可以強制在具現化時期查閱變數，方法是使用基底類別類型進行限定，或以其他方式使其相依，例如新增 `this->` 指標。
+
+在 **/permissive-** 模式中，下列程式碼現在會引發 C3861：「'base_value': 找不到識別碼」：
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+若要修正此錯誤，請將 `return` 陳述式變更為 `return this->base_value;`。
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>命名空間 std 中的向前宣告和定義
+
+C++ 標準不允許使用者將向前宣告或定義新增到命名空間 `std` 中。 將宣告或定義新增至命名空間 `std` 或新增至命名空間 std 內的命名空間，現在會導致發生未定義的行為。
+
+在未來的某個時間，Microsoft 將會移動一些 STL 類型定義所在的位置。 發生這種情況時，它會中斷將向前宣告新增至命名空間 `std` 的現有程式碼。 新警告 C4643 有助於識別這類來源問題。 警告在 **/default** 模式中已啟用且預設為關閉。 它會影響使用 **/Wall** 或 **/WX** 編譯的程式。 
+
+下列程式碼現在引發 C4643：「C++ 標準不允許在命名空間 std 中向前宣告 'vector'」。 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+若要修正此錯誤，請使用 **include** 指示詞，而不是向前宣告：
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>委派給其本身的建構函式
+
+C++ 標準建議編譯器應該在建構函式委派給其本身時發出診斷。 Microsoft C++ 編譯器在 [/std:c++17](build/reference/std-specify-language-standard-version.md) 和 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 模式中現在會引發 C7535：「'X::X': 委派建構函式呼叫其本身」。
+
+若未出現此錯誤，下列程式會進行編譯，但將產生無限迴圈：
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+若要避免無限迴圈，請委派給不同的建構函式：
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>使用常數運算式的 offsetof
+
+[offsetof](c-runtime-library/reference/offsetof-macro.md) 傳統上使用需要 [reinterpret_cast](cpp/reinterpret-cast-operator.md) 的巨集來實作。 這在需要常數運算式的內容中並不合法，但 Microsoft C++ 編譯器傳統上會允許此做法。 隨附為 STL 一部分的 offsetof 巨集會正確使用編譯器內建函式 (**__builtin_offsetof**)，但有許多人已使用巨集技巧來定義自己的 **offsetof**。  
+
+在 Visual Studio 2017 15.8 版中，編譯器會限制預設模式中可以顯示這些 reinterpret_cast 的區域，以協助程式碼符合標準的 C++ 行為。 在 [/permissive-](build/reference/permissive-standards-conformance.md) 下，條件約束更為嚴格。 在需要常數運算式的地方使用 offsetof 的結果，可能會導致程式碼發出警告 C4644「在常數運算式中使用以巨集為基礎的 offsetof 模式是非標準用法；請改為使用 C++ 標準程式庫中定義的 offsetof」或 C2975「範本引數無效，必須是編譯時期常數運算式」。
+
+下列程式碼會在 **/default** 和 **/std:c++17** 模式中引發 C4644，並在 **/permissive-** 模式中引發 C2975： 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+若要修正此錯誤，請使用透過 \<cstddef> 定義的 **offsetof**：
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>基底類別的 CV 限定詞受限於套件展開
+
+如果基底類別也受限於套件展開，舊版的 Microsoft C++ 編譯器不會偵測到基底類別具有 CV 限定詞。 
+
+在 Visual Studio 2017 15.8 版的 **/permissive-** 模式中，下列程式碼會引發 C3770「'const S': 不是有效的基底類別」： 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>template 關鍵字和巢狀名稱規範
+
+在 **/permissive-** 模式中，編譯器現在需要 `template` 關鍵字位於範本名稱之前，並接在相依的巢狀名稱規範之後。 
+
+下列程式碼在 **/permissive-** 模式中現在會引發 C7510：「'foo': 使用相依範本名稱時，前面必須加上 'template'。注意：請查看所編譯之類別範本具現化 'X<T>' 的參考」：
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+若要修正此錯誤，請將 `template` 關鍵字新增至 `Base<T>::foo<int>();` 陳述式，如下列範例所示：
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
 ```
 
 ## <a name="see-also"></a>另請參閱

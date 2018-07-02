@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705601"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271392"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1585,7 +1585,7 @@ Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 
 - 加入類別類型的分號。
 - 完成原始字串常值的括號。
-- 完成多行註解 (/* */)
+- 完成多行註解 (/\* \*/)
 
 在顯示文字比對清單後，[尋找所有參考] 現在會自動解析並在背景中篩選參考。
 

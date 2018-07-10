@@ -41,9 +41,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379337"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft 對 C 和 C++ 的擴充功能
 Visual C++ 擴充 ANSI C 和 ANSI C++ 標準如下。  

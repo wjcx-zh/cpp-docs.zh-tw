@@ -1,5 +1,5 @@
 ---
-title: CCtrlView 類別 |Microsoft 文件
+title: CCtrlView 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336328"
 ---
 # <a name="cctrlview-class"></a>CCtrlView 類別
 調整文件檢視架構來配合 Windows 98 和 Windows NT 3.51 版 (含) 以後版本支援的通用控制項。  
@@ -65,7 +65,7 @@ class CCtrlView : public CView
 |[CCtrlView::m_strClass](#m_strclass)|包含檢視類別的 Windows 類別名稱。|  
   
 ## <a name="remarks"></a>備註  
- 類別`CCtrlView`和其衍生項目， [CEditView](../../mfc/reference/ceditview-class.md)， [CListView](../../mfc/reference/clistview-class.md)， [CTreeView](../../mfc/reference/ctreeview-class.md)，和[CRichEditView](../../mfc/reference/cricheditview-class.md)，調整與新的通用控制項的文件檢視架構支援 Windows 95/98、 Windows NT 3.51 及更新版本。 如需有關文件檢視架構的詳細資訊，請參閱[文件/檢視架構](../../mfc/document-view-architecture.md)。  
+ 此類別`CCtrlView`及其衍生項目， [CEditView](../../mfc/reference/ceditview-class.md)， [CListView](../../mfc/reference/clistview-class.md)， [CTreeView](../../mfc/reference/ctreeview-class.md)，並[CRichEditView](../../mfc/reference/cricheditview-class.md)，調整與新的通用控制項的文件檢視架構支援 Windows 95/98 和 Windows NT 3.51 和更新版本的版本。 如需有關文件檢視架構的詳細資訊，請參閱[文件/檢視架構](../../mfc/document-view-architecture.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,11 +94,11 @@ CCtrlView(
  *lpszClass*  
  檢視類別的 Windows 類別名稱。  
   
- *dwStyle*  
+ *cheaderctrl:: Create*  
  檢視類別的樣式。  
   
 ### <a name="remarks"></a>備註  
- 建立新的框架視窗或分隔視窗時，架構會呼叫建構函式。 覆寫[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)初始化之後附加文件的檢視。 呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)建立 Windows 物件。  
+ 建立新的框架視窗或分隔視窗時，架構會呼叫建構函式。 覆寫[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)初始化之後附加文件的檢視。 呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或是[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)建立 Windows 物件。  
   
 ##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
  包含檢視類別的 Windows 類別名稱。  
@@ -143,16 +143,16 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
  A [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603)結構。  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果應該繼續建立視窗。0，表示建立失敗。  
+ 非零值，如果應該繼續視窗建立;0 表示建立失敗。  
   
 ### <a name="remarks"></a>備註  
  永遠不會直接呼叫此函式。  
   
- 此函式的預設實作會檢查**NULL**視窗類別名稱並換成適當的預設值。 若要修改此成員函式會覆寫`CREATESTRUCT`結構建立視窗之前。  
+ 此函式的預設實作會檢查有 NULL 視窗類別名稱，並換成適當的預設值。 若要修改此成員函式會覆寫`CREATESTRUCT`結構之前建立的視窗。  
   
- 每個類別衍生自`CCtrlView`將自己的功能加入至其覆寫`PreCreateWindow`。 根據設計，這些衍生的`PreCreateWindow`未記載。 若要判斷用於每個類別和樣式之間的相依性的樣式，您可以檢查您的應用程式基底類別的 MFC 原始程式碼。 如果您選擇覆寫`PreCreateWindow`，您可以判斷您的應用程式基底類別中使用的樣式是否提供您需要藉由從 MFC 原始程式碼所收集資訊的功能。  
+ 每個類別衍生自`CCtrlView`自己的功能將其覆寫`PreCreateWindow`。 根據設計，這些衍生的`PreCreateWindow`並未記載。 若要判斷用於每個類別和樣式之間的相互依存性的樣式，您可以檢查您的應用程式基底類別的 MFC 原始程式碼。 如果您選擇覆寫`PreCreateWindow`，您可以判斷您的應用程式基底類別中所使用的樣式是否提供您需要使用從 MFC 原始程式檔所收集資訊的功能。  
   
- 如需有關如何變更視窗樣式的詳細資訊，請參閱[變更 MFC 所建立的視窗樣式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
+ 如需有關如何變更視窗樣式的詳細資訊，請參閱 <<c0> [ 變更 MFC 所建立的視窗樣式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CView 類別](../../mfc/reference/cview-class.md)   

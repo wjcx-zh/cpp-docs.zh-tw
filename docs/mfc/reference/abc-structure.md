@@ -1,5 +1,5 @@
 ---
-title: ABC 結構 |Microsoft 文件
+title: ABC 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b5f67247b556b37cdf934f94c30947675533e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c9aac181edb12df8904a2bc6d891d59c0067ecc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339315"
 ---
 # <a name="abc-structure"></a>ABC 結構
-**ABC**結構包含 TrueType 字型中的字元寬度。  
+`ABC`結構包含 TrueType 字型字元的寬度。  
   
 ## <a name="syntax"></a>語法  
   

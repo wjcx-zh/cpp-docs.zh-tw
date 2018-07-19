@@ -1,5 +1,5 @@
 ---
-title: CByteArray 類別 |Microsoft 文件
+title: CByteArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 22e138b586070a0e47ffa399d2c76d086fd4b951
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335850"
 ---
 # <a name="cbytearray-class"></a>CByteArray 類別
 支援動態位元組陣列。  
@@ -69,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CByteArray`類別成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代**位元組**。  
+ 成員函式`CByteArray`類別的成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代為位元組。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CByteArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|傳回給定索引的值。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|取得此陣列中項目的數目。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是 NULL。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|取得此陣列中項目的數目。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|傳回最大的有效索引。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
@@ -112,12 +112,12 @@ class CByteArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CByteArray` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果封存，不論是透過多載插入儲存的位元組陣列 ( **<<**) 運算子或`Serialize`成員函式，每個項目，接著再，序列化。  
+ `CByteArray` 納入 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果位元組陣列儲存封存，不論是使用多載的插入 ( **<<**) 運算子或`Serialize`成員函式，每個項目是，進而，序列化。  
   
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
- 如果您需要偵錯輸出陣列中的個別項目，您必須設定的深度`CDumpContext`1 或更大的物件。  
+ 如果您需要偵錯輸出陣列中的個別項目，您必須設定的深度`CDumpContext`為 1 或更高的物件。  
   
  如需有關使用`CByteArray`，請參閱文章[集合](../../mfc/collections.md)。  
   

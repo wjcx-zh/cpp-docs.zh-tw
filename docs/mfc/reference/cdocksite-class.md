@@ -1,5 +1,5 @@
 ---
-title: CDockSite 類別 |Microsoft 文件
+title: CDockSite 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336835"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -162,9 +162,9 @@ class CDockSite: public CBasePane
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>備註  
- 架構會建立`CDockSite`自動物件，當您呼叫[cframewndex:: Enabledocking](../../mfc/reference/cframewndex-class.md#enabledocking)。 停駐位置視窗位於主框架視窗上用戶端區域的邊緣。  
+ 此架構會建立`CDockSite`當您呼叫自動物件[cframewndex:: Enabledocking](../../mfc/reference/cframewndex-class.md#enabledocking)。 停駐位置視窗位於主框架視窗上用戶端區域的邊緣。  
   
- 您通常不必呼叫停駐因為提供的服務[CFrameWndEx 類別](../../mfc/reference/cframewndex-class.md)會處理這些服務。  
+ 您通常不必呼叫停駐位置提供，因為服務[CFrameWndEx 類別](../../mfc/reference/cframewndex-class.md)會處理這些服務。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何建立 `CDockSite` 類別的物件。  
@@ -277,7 +277,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  [in]*dwStyleEx*  
- [in]*dwStyle*  
+ [in]*cheaderctrl:: Create*  
  [in]*rect*  
  [in]*pParentWnd*  
  [in]*dwControlBarStyle*  
@@ -334,13 +334,13 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>參數  
  [in][out]*pBarToDock*  
- 要左邊的停駐窗格的指標*pTargetBar*。  
+ 左邊的停駐窗格的指標*pTargetBar*。  
   
  [in][out]*pTargetBar*  
- [目標] 窗格的指標。  
+ 對 [目標] 窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已成功; 停駐窗格，否則， `FALSE`。  
+ 如果已成功; 停駐窗格中，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -367,7 +367,7 @@ CPane* FindPaneByID(UINT nID);
  要尋找窗格的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 使用指定的命令 ID，窗格的指標或`NULL`如果找不到的窗格。  
+ 窗格中，使用指定的命令 ID 或如果找不到 [] 窗格中，則為 NULL 指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -417,7 +417,7 @@ const CObList& GetDockSiteRowsList() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
- 傳回停駐在停駐位置的窗格的清單。  
+ 傳回一份停駐在停駐位置的窗格。  
   
 ```  
 const CObList& GetPaneList() const;  
@@ -615,10 +615,10 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="parameters"></a>參數  
  [in]*pt*  
- 要擷取之窗格的螢幕座標中的點。  
+ 中的 [擷取] 窗格的螢幕座標的點。  
   
 ### <a name="return-value"></a>傳回值  
- 位於指定點的窗格的指標或`NULL`如果沒有窗格已存在於指定的點。  
+ 指向 [] 窗格中位於指定的點，或如果沒有窗格已存在於指定的點，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
   
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>參數  
  [in][out]*pBar*  
- 顯示或隱藏窗格指標。  
+ 指標，要顯示或隱藏窗格。  
   
  [in]*bShow*  
- `TRUE` 若要指定窗格會顯示;`FALSE`指定窗格為隱藏。  
+ TRUE 表示指定的窗格是顯示;如果為 false，則指定要隱藏窗格。  
   
  [in]*bDelay*  
- `TRUE` 若要指定窗格的配置，應延遲窗格之後，才會顯示。否則， `FALSE`。  
+ 若要指定，版面配置 窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。  
   
  [in]*bActivate*  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果窗格已顯示或隱藏成功。 `FALSE` 如果指定的窗格不屬於此停駐位置。  
+ 如果窗格已顯示或隱藏成功，則為 TRUE。 如果指定的窗格不屬於此停駐站台，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以顯示或隱藏停駐的窗格。 一般來說，您不需要呼叫`CDockSite::ShowPane`直接管理，因為它會呼叫父框架視窗或基底的窗格。  
+ 呼叫這個方法來顯示或隱藏停駐的窗格。 一般來說，您就不必呼叫`CDockSite::ShowPane`直接，因為它會呼叫父框架視窗或 [基本] 窗格。  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

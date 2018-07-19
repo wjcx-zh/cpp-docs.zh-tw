@@ -1,5 +1,5 @@
 ---
-title: CFtpFileFind 類別 |Microsoft 文件
+title: CFtpFileFind 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336015"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 類別
 協助 FTP 伺服器的網際網路檔案搜尋。  
@@ -54,17 +54,17 @@ class CFtpFileFind : public CFileFind
 |----------|-----------------|  
 |[Cftpfilefind:: Findfile](#findfile)|尋找 FTP 伺服器上的檔案。|  
 |[Cftpfilefind:: Findnextfile](#findnextfile)|會繼續從先前呼叫檔案搜尋[FindFile](#findfile)。|  
-|[CFtpFileFind::GetFileURL](#getfileurl)|取得 URL，包括找到的檔案路徑。|  
+|[CFtpFileFind::GetFileURL](#getfileurl)|取得 URL，包括路徑，找到的檔案。|  
   
 ## <a name="remarks"></a>備註  
- `CFtpFileFind` 包含 開始搜尋，找出檔案，並傳回 URL 或檔案的其他描述性資訊的成員函式。  
+ `CFtpFileFind` 包含開始搜尋，找出檔案，並傳回的 URL 或其他檔案的描述性資訊的成員函式。  
   
- 設計網際網路和搜尋的本機檔案包含其他 MFC 類別[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFileFind](../../mfc/reference/cfilefind-class.md)。 搭配`CFtpFileFind`，這些類別會提供無縫式的機制，來尋找特定的檔案，不論伺服器通訊協定或檔案類型 （本機電腦或遠端伺服器） 用戶端。 請注意，搜尋在 HTTP 伺服器上，HTTP 不支援所需的搜尋直接在檔案操作作業，因為沒有 MFC 類別。  
+ 設計的網際網路和搜尋的本機檔案包含其他 MFC 類別[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)並[CFileFind](../../mfc/reference/cfilefind-class.md)。 搭配`CFtpFileFind`，這些類別提供無縫式的機制，讓用戶端尋找特定的檔案，不論伺服器 （本機電腦或遠端伺服器） 的通訊協定或檔案類型。 請注意，來搜尋 HTTP 伺服器上，因為 HTTP 不支援直接與檔案操作所需的搜尋沒有任何 MFC 類別。  
   
  如需有關如何使用`CFtpFileFind`和其他 WinInet 類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會示範如何列舉 FTP 伺服器的目前目錄中的所有檔案。  
+ 下列程式碼示範如何列舉在 FTP 伺服器的目前目錄中的所有檔案。  
   
  [!code-cpp[NVC_MFCWinInet#8](../../mfc/codesnippet/cpp/cftpfilefind-class_1.cpp)]  
   
@@ -79,7 +79,7 @@ class CFtpFileFind : public CFileFind
  **標頭：** afxinet.h  
   
 ##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
- 呼叫此成員函式會建構`CFtpFileFind`物件。  
+ 此成員函式呼叫來建構`CFtpFileFind`物件。  
   
 ```  
 explicit CFtpFileFind(
@@ -89,19 +89,19 @@ explicit CFtpFileFind(
   
 ### <a name="parameters"></a>參數  
  *pConnection*  
- 指標`CFtpConnection`物件。 您可以藉由呼叫取得 FTP 連接[cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)。  
+ `CFtpConnection` 物件的指標。 您可以藉由呼叫來取得 FTP 連線[cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)。  
   
  *dwContext*  
- 內容識別項`CFtpFileFind`物件。 請參閱**備註**如需有關此參數。  
+ 內容識別碼`CFtpFileFind`物件。 請參閱**備註**如需有關此參數。  
   
 ### <a name="remarks"></a>備註  
- 預設值為*dwContext* MFC 所傳送的`CFtpFileFind`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CFtpFileFind`物件。 您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
+ 預設值*dwContext* MFC，以便傳送`CFtpFileFind`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CFtpFileFind`物件。 您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。  
   
 ### <a name="example"></a>範例  
-  請參閱本主題稍早類別概觀中的範例。  
+  請參閱稍早在本主題中的類別概觀中的範例。  
   
 ##  <a name="findfile"></a>  Cftpfilefind:: Findfile  
- 呼叫此成員函式可尋找 FTP 檔案。  
+ 呼叫此成員函式，來尋找 FTP 檔案。  
   
 ```  
 virtual BOOL FindFile(
@@ -111,60 +111,60 @@ virtual BOOL FindFile(
   
 ### <a name="parameters"></a>參數  
  *pstrName*  
- 包含要尋找的檔案名稱的字串指標。 如果**NULL**，呼叫將會搜尋萬用字元 （*）。  
+ 包含要尋找的檔案名稱的字串指標。 如果是 NULL，則呼叫會執行萬用字元搜尋 （*）。  
   
  *dwFlags*  
- 描述如何處理此工作階段旗標。 可以與位元 OR 運算子結合這些旗標 (&#124;)，如下：  
+ 描述如何處理此工作階段旗標。 可與位元的 OR 運算子結合這些旗標 (&#124;)，如下所示：  
   
--   INTERNET_FLAG_RELOAD 從線上取得資料，即使在本機快取。 這是預設旗標。  
+-   INTERNET_FLAG_RELOAD 從網路取得的資料，即使在本機快取。 這是預設旗標。  
   
--   INTERNET_FLAG_DONT_CACHE 不會快取資料，在本機或任何閘道。  
+-   在本機或在任何閘道，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。  
   
--   INTERNET_FLAG_RAW_DATA 覆寫預設值，傳回未經處理資料 ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) ftp 結構)。  
+-   INTERNET_FLAG_RAW_DATA 覆寫預設值，傳回的未經處理資料 ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) ftp 結構)。  
   
--   使用安全通訊端層或 PCT 網路上的 INTERNET_FLAG_SECURE 保護交易 這個旗標適用於只使用 HTTP 要求。  
+-   INTERNET_FLAG_SECURE 保護與安全通訊端層或 PCT 在網路上的交易 這個旗標適用於僅限 HTTP 要求。  
   
--   INTERNET_FLAG_EXISTING_CONNECT 如果可能的話，請重複使用現有的連接到伺服器對於新**FindFile**要求，而非建立新的工作階段，針對每個要求。  
+-   INTERNET_FLAG_EXISTING_CONNECT 如果可能的話，請重複使用現有的連線到伺服器新`FindFile`要求，而非建立新的工作階段，針對每個要求。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
- 在呼叫**FindFile**擷取第一個 FTP 檔案，您可以呼叫[FindNextFile](#findnextfile)擷取後續 FTP 檔案。  
+ 之後呼叫`FindFile`若要擷取的第一個 FTP 檔案，您可以呼叫[FindNextFile](#findnextfile)來擷取後續的 FTP 檔案。  
   
 ### <a name="example"></a>範例  
-  請參閱本主題中較早的範例。  
+  請參閱本主題中先前的範例。  
   
 ##  <a name="findnextfile"></a>  Cftpfilefind:: Findnextfile  
- 呼叫此成員函式，繼續呼叫開始檔案搜尋[FindFile](#findfile)成員函式。  
+ 呼叫此成員函式，以繼續檔案搜尋，開始藉由呼叫[FindFile](#findfile)成員函式。  
   
 ```  
 virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果有多個檔案。如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案會在目錄中，最後一個檔案，或如果沒有相符的檔案可以找到`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
+ 非零值，如果有多個檔案;如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案是在目錄中，最後一個檔案，或如果沒有相符，就可以找到檔案，`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
   
 ### <a name="remarks"></a>備註  
- 您必須至少一次呼叫任何屬性函式之前呼叫此函式 (請參閱[CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。  
+ 您必須呼叫此函式呼叫的任何屬性函式之前，至少一次 (請參閱[CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。  
   
- `FindNextFile` 包裝的 Win32 函式[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
+ `FindNextFile` 包裝 Win32 函式[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
   
 ### <a name="example"></a>範例  
-  請參閱本主題稍早的範例。  
+  請參閱本主題前面的範例。  
   
 ##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
- 呼叫此成員函式可取得指定之檔案的 URL。  
+ 呼叫此成員函式，以取得指定之檔案的 URL。  
   
 ```  
 CString GetFileURL() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 檔案和路徑的通用資源定位器 (URL)。  
+ 檔案和路徑的統一資源定位器 (URL)。  
   
 ### <a name="remarks"></a>備註  
- `GetFileURL` 成員函式類似[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)，不同之處在於它的形式傳回 URL `ftp://moose/dir/file.txt`。  
+ `GetFileURL` 此成員函式類似[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)，只不過它傳回的 URL 格式`ftp://moose/dir/file.txt`。  
   
 ## <a name="see-also"></a>另請參閱  
  [CFileFind 類別](../../mfc/reference/cfilefind-class.md)   

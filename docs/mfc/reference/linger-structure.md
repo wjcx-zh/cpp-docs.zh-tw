@@ -1,5 +1,5 @@
 ---
-title: LINGER 結構 |Microsoft 文件
+title: LINGER 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339367"
 ---
 # <a name="linger-structure"></a>LINGER 結構
-`LINGER`結構用於操作**SO_LINGER**和**SO_DONTLINGER**選項`CAsyncSocket::GetSockOpt`。  
+`LINGER`結構用於操作的 SO_LINGER 和 SO_DONTLINGER 選項`CAsyncSocket::GetSockOpt`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>備註  
- 設定**SO_DONTLINGER**選項可防止封鎖成員函式**關閉**等候要傳送的未傳送資料。 設定此選項相當於設定**SO_LINGER**與**l_onoff**設為 0。  
+ 將 SO_DONTLINGER 選項可防止封鎖成員函式`Close`等候要傳送之未傳送資料。 設定此選項相當於設定與 SO_LINGER`l_onoff`設為 0。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** winsock2.h  

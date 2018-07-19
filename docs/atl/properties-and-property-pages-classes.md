@@ -1,5 +1,5 @@
 ---
-title: 屬性和屬性頁類別 (ATL) |Microsoft 文件
+title: 屬性和屬性頁類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355003"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953796"
 ---
 # <a name="properties-and-property-pages-classes"></a>屬性和屬性頁類別
 下列類別支援屬性和屬性頁：  
@@ -32,15 +32,15 @@ ms.locfileid: "32355003"
   
 -   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md)實作 ATL 支援的內建屬性  
   
--   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md)存取物件的屬性頁中的資訊。  
+-   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md)存取物件的屬性頁面中的資訊。  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)將物件的屬性儲存在用戶端提供的屬性包。  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)會將物件的屬性儲存在用戶端提供的屬性包。  
   
 -   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md)管理特定的屬性頁中的屬性工作表。  
   
--   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)類似`IPropertyPageImpl`，但也可讓用戶端在屬性頁中選取特定的屬性。  
+-   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)類似於`IPropertyPageImpl`，但也可讓用戶端屬性頁中選取特定的屬性。  
   
--   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)取得的物件所支援之屬性頁 Clsid。  
+-   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)取得之物件所支援的屬性頁面的 Clsid。  
   
 ## <a name="related-articles"></a>相關文章  
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  

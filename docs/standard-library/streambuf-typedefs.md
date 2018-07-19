@@ -7,12 +7,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 8fb1713dfbc2d9766c488f21d324d801a4886d68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81c7cd875c6083ee77701116f6b1179760373ec0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953988"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; typedef
 
@@ -22,7 +22,7 @@ ms.locfileid: "33854212"
 
 ## <a name="streambuf"></a>  streambuf
 
-會使用 `char` 做為範本參數的 `basic_streambuf` 特製化。
+特製化`basic_streambuf`使用**char**做為樣板參數。
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
@@ -30,11 +30,11 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 ### <a name="remarks"></a>備註
 
-這個類型與 [basic_streambuf](../standard-library/basic-streambuf-class.md) 同義，已針對具有預設字元特性的 `char` 類型項目進行特製化。
+型別是此範本類別同義[basic_streambuf](../standard-library/basic-streambuf-class.md)類型的項目所特製化**char**具有預設字元特性。
 
 ## <a name="wstreambuf"></a>  wstreambuf
 
-會使用 `wchar_t` 做為範本參數的 `basic_streambuf` 特製化。
+特製化`basic_streambuf`使用**wchar_t**做為樣板參數。
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
@@ -42,7 +42,7 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>備註
 
-這個類型與 [basic_streambuf](../standard-library/basic-streambuf-class.md) 同義，已針對具有預設字元特性的 `wchar_t` 類型項目進行特製化。
+型別是此範本類別同義[basic_streambuf](../standard-library/basic-streambuf-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
 
 ## <a name="see-also"></a>另請參閱
 

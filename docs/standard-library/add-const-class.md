@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954063"
 ---
 # <a name="addconst-class"></a>add_const 類別
 
@@ -37,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要修改的類型。
+*Ty*来修改的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 為參考、函式或 const 限定類型，類型 modifier 的執行個體會保留修改的類型為 `Ty`，否則為 `const Ty`。
+類型修飾詞的執行個體保留修改的類型所*Ty*如果*Ty*是參考、 函式或 const 限定的類型，否則`const Ty`。
 
 ## <a name="example"></a>範例
 

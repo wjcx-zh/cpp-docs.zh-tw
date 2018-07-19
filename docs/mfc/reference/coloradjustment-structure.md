@@ -1,5 +1,5 @@
 ---
-title: COLORADJUSTMENT 結構 |Microsoft 文件
+title: COLORADJUSTMENT 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 03c5346a59ea52ca6b2428652d5da69aacf6ea5b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37077951"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849083"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT 結構
-`COLORADJUSTMENT`結構會定義 windows 所使用的色彩調整值`StretchBlt`和`StretchDIBits`函式時`StretchBlt`模式是**半色調**。  
+`COLORADJUSTMENT`結構會定義 Windows 所使用的色彩調整值`StretchBlt`並`StretchDIBits`函式時`StretchBlt`模式是半色調。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,70 +47,70 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
   
 #### <a name="parameters"></a>參數  
  *caSize*  
- 指定的結構大小，以位元組為單位。  
+ 指定結構的大小，以位元組為單位。  
   
  *caFlags*  
- 指定應該如何準備輸出映像。 這個成員可以設定為**NULL**或下列值的任何組合：  
+ 指定應如何準備輸出映像。 這個成員可以設定為 NULL 或下列值的任何組合：  
   
-- **CA_NEGATIVE**指定應該顯示原始的映像的負值。  
+- CA_NEGATIVE 指定，會顯示原始的映像的負值。  
   
-- **CA_LOG_FILTER**指定對數函式應該要套用至最終輸出色彩的密度。 這會增加的色彩對比，較低亮度時。  
+- CA_LOG_FILTER 指定一個對數函式，應該套用至最終輸出色彩的密度。 明亮度較低時，這會增加的色彩對比。  
   
  *caIlluminantIndex*  
- 指定檢視的映像物件時的光源的亮度。 這個成員可以設定為下列值之一：  
+ 指定用以檢視映像物件的光源的亮度。 這個成員可以設定為下列值之一：  
   
-- **ILLUMINANT_EQUAL_ENERGY**  
+- ILLUMINANT_EQUAL_ENERGY  
   
-- **ILLUMINANT_A**  
+- ILLUMINANT_A  
   
-- **ILLUMINANT_B**  
+- ILLUMINANT_B  
   
-- **ILLUMINANT_C**  
+- ILLUMINANT_C  
   
-- **ILLUMINANT_D50**  
+- ILLUMINANT_D50  
   
-- **ILLUMINANT_D55**  
+- ILLUMINANT_D55  
   
-- **ILLUMINANT_D65**  
+- ILLUMINANT_D65  
   
-- **ILLUMINANT_D75**  
+- ILLUMINANT_D75  
   
-- **ILLUMINANT_F2**  
+- ILLUMINANT_F2  
   
-- **ILLUMINANT_TURNGSTEN**  
+- ILLUMINANT_TURNGSTEN  
   
-- **ILLUMINANT_DAYLIGHT**  
+- ILLUMINANT_DAYLIGHT  
   
-- **ILLUMINANT_FLUORESCENT**  
+- ILLUMINANT_FLUORESCENT  
   
-- **ILLUMINANT_NTSC**  
+- ILLUMINANT_NTSC  
   
  *caRedGamma*  
- 指定來源色彩的紅色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
+ 指定來源色彩的紅色主要的第 n 個電源 gamma 修正值。 值必須是介於 2,500 65000 之間。 值為 10,000 表示 gamma 修正。  
   
  *caGreenGamma*  
- 指定來源色彩的綠色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
+ 指定來源色彩的綠色主要的第 n 個電源 gamma 修正值。 值必須是介於 2,500 65000 之間。 值為 10,000 表示 gamma 修正。  
   
  *caBlueGamma*  
- 指定來源色彩的藍色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
+ 指定來源色彩藍色原色的第 n 個電源 gamma 修正值。 值必須是介於 2,500 65000 之間。 值為 10,000 表示 gamma 修正。  
   
  *caReferenceBlack*  
- 指定來源色彩為黑色的參考。 要比這個深的任何色彩會被視為黑色。 值必須是介於 0 到 4000。  
+ 指定來源色彩為黑色的參考。 任何節點要深一點的色彩會被視為黑色。 值必須是介於 0 到 4000。  
   
  *caReferenceWhite*  
- 指定來源色彩為白色的參考。 這比淡的任何色彩會被視為空白。 值必須在 10000 到 6000 的範圍內。  
+ 指定來源色彩為白色的參考。 任何會比這更亮的色彩會被視為空白。 值必須是介於 6,000 為 10,000。  
   
  *caContrast*  
- 指定的數量的對比，以套用到來源物件。 值必須在 100 到-100 的範圍內。 值為 0 表示無對比調整。  
+ 指定要套用至來源物件的對比數量。 值必須介於-100 到 100 之間。 值為 0 表示無對比調整。  
   
  *caBrightness*  
- 指定要套用到來源物件的亮度。 值必須在 100 到-100 的範圍內。 值為 0 表示無亮度調整。  
+ 指定要套用至來源物件的亮度。 值必須介於-100 到 100 之間。 值為 0 表示無亮度調整。  
   
  *caColorfulness*  
- 指定要套用到來源物件 colorfulness 數量。 值必須在 100 到-100 的範圍內。 值為 0 表示無 colorfulness 調整。  
+ 指定要套用至來源物件的 colorfulness 數量。 值必須介於-100 到 100 之間。 值為 0 表示無 colorfulness 調整。  
   
  *caRedGreenTint*  
- 指定要套用到來源物件的紅色或綠色濃淡調整數量。 值必須在 100 到-100 的範圍內。 正數會調整朝向紅色而負數調整朝向綠色。 0 表示無濃淡調整。  
+ 指定要套用至來源物件的紅色或綠色濃淡調整數量。 值必須介於-100 到 100 之間。 正數會調整針對 red 和負數的數字調整朝向綠色。 0 表示無濃淡調整。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** wingdi.h  

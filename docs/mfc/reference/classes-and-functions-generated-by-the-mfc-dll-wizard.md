@@ -1,5 +1,5 @@
 ---
-title: 類別和 MFC DLL 精靈所產生的函式 |Microsoft 文件
+title: 類別和 MFC DLL 精靈所產生的函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339575"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 精靈產生的類別和函式
-MFC DLL 精靈產生的程式碼會取決於您所建立的 DLL 和您所選取的選項的種類。 MFC DLL 精靈產生兩種形式的標準 MFC Dll 相同的程式碼。  
+MFC DLL 精靈產生的程式碼取決於您所建立的 DLL 和您所選取的選項的種類。 MFC DLL 精靈產生兩種形式的標準 MFC Dll 相同的程式碼。  
   
-|類型的 DLL|選項|類別|函式|  
+|一種 DLL|選項|類別|函式|  
 |-----------------|------------|-------------|---------------|  
 |[擴充功能](../../build/extension-dlls-overview.md)|無|無|`DllMain`|  
 |[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|無|應用程式類別衍生自 `CWinApp`|無|  
-|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automation|應用程式類別衍生自 `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
+|[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automation|應用程式類別衍生自 `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
 |[擴充功能](../../build/extension-dlls-overview.md)|視窗通訊端|無|`DllMain`|  
 |[規則](../../build/regular-dlls-dynamically-linked-to-mfc.md)|視窗通訊端|應用程式類別衍生自 `CWinApp`|`InitInstance` 包含呼叫 `AfxSocketInit`|  
   

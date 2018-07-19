@@ -1,5 +1,5 @@
 ---
-title: CDaoDatabaseInfo 結構 |Microsoft 文件
+title: CDaoDatabaseInfo 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 0815d248b6726d830fc50af9886c729c34ba2f29
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336470"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 結構
 `CDaoDatabaseInfo`結構包含的資料存取物件 (DAO) 定義的資料庫物件的相關資訊。  
@@ -44,68 +44,68 @@ struct CDaoDatabaseInfo
   
 #### <a name="parameters"></a>參數  
  *m_strName*  
- 唯一名稱的資料庫物件。 若要直接擷取這個屬性，請呼叫[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
+ 唯一名稱的資料庫物件。 若要直接擷取此屬性，請呼叫[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)。 如需詳細資訊，請參閱 DAO [說明] 中的 「 名稱屬性 」。  
   
  *m_bUpdatable*  
- 指出是否可以變更資料庫。 若要直接擷取這個屬性，請呼叫[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
+ 指出是否可以對資料庫進行變更。 若要直接擷取此屬性，請呼叫[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)。 如需詳細資訊，請參閱 DAO [說明] 中的 「 可更新屬性 」。  
   
  *m_bTransactions*  
- 指出資料來源是否支援交易，稍後可回復的變更一系列的記錄 （取消） 或認可 （儲存）。 如果資料庫根據 Microsoft Jet 資料庫引擎，交易屬性為非零值，而且您可以使用交易。 其他的資料庫引擎可能不支援交易。 若要直接擷取這個屬性，請呼叫[CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact)。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 交易屬性 」。  
+ 指出資料來源是否支援交易，錄製一系列的稍後復原回來的變更 （取消） 或認可 （儲存）。 如果資料庫以 Microsoft Jet 資料庫引擎為基礎，交易屬性為非零值，而且您可以使用交易。 其他資料庫引擎可能不支援交易。 若要直接擷取此屬性，請呼叫[CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact)。 如需詳細資訊，請參閱 DAO [說明] 中的 「 交易屬性 」。  
   
  *m_strVersion*  
- 表示 Microsoft Jet 資料庫引擎的版本。 若要直接擷取這個屬性的值，請呼叫資料庫物件的[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 版本屬性 」。  
+ 表示 Microsoft Jet 資料庫引擎的版本。 若要直接擷取這個屬性的值，呼叫資料庫物件的[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)成員函式。 如需詳細資訊，請參閱 DAO [說明] 中的 「 版本屬性 」。  
   
  *m_lCollatingOrder*  
- 指定文字的字串比較或排序的排序次序的順序。 可能的值包括：  
+ 指定文字字串比較或排序的排序次序的順序。 可能的值包括：  
   
-- **dbSortGeneral**使用一般 （英文、 法文、 德文、 葡萄牙文、 義大利文和現代西班牙文） 的排序順序。  
+- `dbSortGeneral` 使用一般 （英文、 法文、 德文、 葡萄牙文、 義大利文、 和現代的西班牙文） 的排序順序。  
   
-- **dbSortArabic**使用阿拉伯文排序順序。  
+- `dbSortArabic` 使用阿拉伯文排序次序。  
   
-- **dbSortCyrillic**使用俄文排序順序。  
+- `dbSortCyrillic` 使用俄文的排序次序。  
   
-- **dbSortCzech**使用捷克文的排序順序。  
+- `dbSortCzech` 使用捷克文的排序次序。  
   
-- **dbSortDutch**使用荷蘭排序順序。  
+- `dbSortDutch` 使用荷蘭的排序次序。  
   
-- **dbSortGreek**使用希臘文的排序順序。  
+- `dbSortGreek` 使用希臘文的排序次序。  
   
-- **dbSortHebrew**使用希伯來文排序順序。  
+- `dbSortHebrew` 使用希伯來文排序次序。  
   
-- **dbSortHungarian**使用匈牙利文字排序順序。  
+- `dbSortHungarian` 使用匈牙利的排序次序。  
   
-- **dbSortIcelandic**使用 Icelandic 排序順序。  
+- `dbSortIcelandic` 使用 Icelandic 的排序次序。  
   
-- **dbSortNorwdan**使用挪威文或丹麥文的排序順序。  
+- `dbSortNorwdan` 使用挪威或丹麥的排序次序。  
   
-- **dbSortPDXIntl**使用 Paradox 國際排序順序。  
+- `dbSortPDXIntl` 使用 Paradox 國際排序順序。  
   
-- **dbSortPDXNor**使用 Paradox 挪威文或丹麥文的排序次序。  
+- `dbSortPDXNor` 使用 Paradox 挪威或丹麥的排序次序。  
   
-- **dbSortPDXSwe**使用 Paradox 瑞典文或芬蘭文的排序次序。  
+- `dbSortPDXSwe` 使用 Paradox 瑞典文或芬蘭文的排序次序。  
   
-- **dbSortPolish**使用波蘭文的排序順序。  
+- `dbSortPolish` 使用波蘭文的排序次序。  
   
-- **dbSortSpanish**使用西班牙文的排序順序。  
+- `dbSortSpanish` 使用西班牙文的排序次序。  
   
-- **dbSortSwedFin**使用瑞典文或芬蘭文的排序順序。  
+- `dbSortSwedFin` 使用瑞典文或芬蘭文的排序次序。  
   
-- **dbSortTurkish**使用土耳其文的排序順序。  
+- `dbSortTurkish` 使用土耳其文的排序次序。  
   
-- **dbSortUndefined**的排序順序是未定義或未知。  
+- `dbSortUndefined` 未定義或未知的排序次序。  
   
- 如需詳細資訊，請參閱 < 自訂 Windows 登錄設定的資料存取 > DAO [說明] 中的主題。  
+ 如需詳細資訊，請參閱本主題中的 < 自訂 Windows 登錄設定的資料存取 」 DAO 幫助。  
   
  *m_nQueryTimeout*  
- ODBC 資料庫上執行查詢時，就會發生 Microsoft Jet 資料庫引擎在逾時錯誤之前等候的秒數。 預設逾時值為 60 秒。 當 QueryTimeout 設定為 0 時，不會逾時，就會發生;這可能會造成程式停止回應。 若要直接擷取這個屬性的值，請呼叫資料庫物件的[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < QueryTimeout 屬性 >。  
+ ODBC 資料庫上執行查詢時，就會發生 Microsoft Jet 資料庫引擎在逾時錯誤之前等候的秒數。 預設逾時值為 60 秒。 當 QueryTimeout 設定為 0 時，不會逾時，就會發生;這會造成程式停止回應。 若要直接擷取這個屬性的值，呼叫資料庫物件的[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)成員函式。 如需詳細資訊，請參閱 DAO [說明] 中的 < QueryTimeout 屬性 >。  
   
  *m_strConnect*  
- 提供有關開啟的資料庫來源的資訊。 資訊關於連接字串，並直接擷取這個屬性的值的相關資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 連接屬性 >。  
+ 提供的已開啟的資料庫來源的相關資訊。 如需資訊即將連接字串，和直接擷取值，這個屬性的相關資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 [連接屬性]。  
   
 ## <a name="remarks"></a>備註  
- 資料庫是基礎類別的 MFC 物件的 DAO 物件[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)。 參考主要、 次要資料庫，且所有上述表示所傳回的資訊是如何[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式。  
+ 資料庫是基礎類別的 MFC 物件的 DAO 物件[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)。 主要、 次要資料庫，且上述所有的參考會指出所傳回的資訊是如何[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式。  
   
- 所擷取的資訊[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式會儲存在`CDaoDatabaseInfo`結構。 呼叫`GetDatabaseInfo`如`CDaoWorkspace`資料庫物件會儲存其資料庫集合中的物件。 `CDaoDatabaseInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoDatabaseInfo`物件。  
+ 所擷取的資訊[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式會儲存在`CDaoDatabaseInfo`結構。 呼叫`GetDatabaseInfo`針對`CDaoWorkspace`資料庫物件會儲存其資料庫集合中的物件。 `CDaoDatabaseInfo` 也會定義`Dump`成員函式，在偵錯組建。 您可以使用`Dump`傾印的內容`CDaoDatabaseInfo`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  

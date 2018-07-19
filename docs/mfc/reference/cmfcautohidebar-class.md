@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideBar 類別 |Microsoft 文件
+title: CMFCAutoHideBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337009"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。  
@@ -80,7 +80,7 @@ class CMFCAutoHideBar : public CPane
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(覆寫 `CPane::AllowShowOnPaneMenu`。)|  
 |[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(覆寫[cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|  
-|[CMFCAutoHideBar::Create](#create)|建立控制列，並將它附加至[CPane](../../mfc/reference/cpane-class.md)物件。 (覆寫[cpane:: Create](../../mfc/reference/cpane-class.md#create)。)|  
+|[CMFCAutoHideBar::Create](#create)|會建立一種控制列，並將它附加至[CPane](../../mfc/reference/cpane-class.md)物件。 (覆寫[cpane:: Create](../../mfc/reference/cpane-class.md#create)。)|  
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||  
 |[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||  
 |[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|當特殊窗格功能表即將顯示時由架構呼叫。 (覆寫[cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|  
@@ -96,10 +96,10 @@ class CMFCAutoHideBar : public CPane
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|當使用者將滑鼠游標置於目前的時間間隔[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)和目前的架構時顯示相關聯的視窗。|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|當使用者將滑鼠游標置於上方之間的時間延遲[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)和目前在架構顯示相關聯的視窗。|  
   
 ## <a name="remarks"></a>備註  
- 當使用者將停駐窗格切換為自動隱藏模式時，架構會自動建立 `CMFCAutoHideBar` 物件。 它也會建立必要[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)和[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)物件。 每個 `CAutoHideDockSite` 物件與一個個別的 `CMFCAutoHideButton` 相關聯。  
+ 當使用者將停駐窗格切換為自動隱藏模式時，架構會自動建立 `CMFCAutoHideBar` 物件。 它也會建立必要[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)並[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)物件。 每個 `CAutoHideDockSite` 物件與一個個別的 `CMFCAutoHideButton` 相關聯。  
   
  當使用者的滑鼠停留在 `CMFCAutoHideButton` 上方時，`CMFCAutoHideBar` 類別會實作 `CAutoHideDockSite` 的顯示。 當工具列收到 WM_MOUSEMOVE 訊息時，`CMFCAutoHideBar` 會啟動計時器。 當計時器完成時，會將 WM_TIMER 事件通知傳送給工具列。 工具列會藉由檢查滑鼠指標是否放置在相同的自動隱藏按鈕上方 (在計時器啟動時所放置)，以處理此事件。 如果是，則顯示附加的 `CAutoHideDockSite`。  
   
@@ -145,15 +145,15 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- *DwAlignment*參數表示自動隱藏按鈕在應用程式所在的位置。 這個參數可以是下列任何一個值：  
+ *DwAlignment*參數會指出自動隱藏按鈕的應用程式中的所在位置。 這個參數可以是下列任何一個值：  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -208,7 +208,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  [in]*lpszClassName*  
- [in]*dwStyle*  
+ [in]*cheaderctrl:: Create*  
  [in]*rect*  
  [in]*pParentWnd*  
  [in]*nID*  
@@ -244,7 +244,7 @@ int GetVisibleCount();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- 當使用者將滑鼠游標置於目前的時間間隔[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)和目前的架構時顯示相關聯的視窗。  
+ 當使用者將滑鼠游標置於上方之間的時間延遲[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)和目前在架構顯示相關聯的視窗。  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
@@ -346,7 +346,7 @@ virtual CSize StretchPane(
  這是基底實作中未使用的值。 在衍生實作中，這個值可用來表示已調整窗格的長度。  
   
  [in]*bVert*  
- 這是基底實作中未使用的值。 在衍生實作中，使用`TRUE`以處理的情況，其中自動隱藏列垂直摺疊，和`FALSE`其中自動隱藏列是水平摺疊的案例。  
+ 這是基底實作中未使用的值。 在衍生實作中，使用 true 以控制代碼，自動隱藏列垂直摺疊，大小寫和 FALSE，自動隱藏列是水平摺疊案例。  
   
 ### <a name="return-value"></a>傳回值  
  產生的已調整窗格大小。  

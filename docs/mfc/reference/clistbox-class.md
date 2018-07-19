@@ -1,5 +1,5 @@
 ---
-title: CListBox 類別 |Microsoft 文件
+title: CListBox 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34baec7ddcb04cb3de564484a2b4afd04e36eae9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 22e48299b6a97f4cb6acba87c7c7bf9a68b16240
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339250"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 提供 Windows 清單方塊的功能。  
@@ -140,98 +140,98 @@ class CListBox : public CWnd
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CListBox::AddString](#addstring)|將字串新增至清單方塊。|  
-|[CListBox::CharToItem](#chartoitem)|若要提供自訂的覆寫`WM_CHAR`主控描繪清單方塊中沒有字串處理。|  
+|[CListBox::AddString](#addstring)|將字串加入至清單方塊中。|  
+|[CListBox::CharToItem](#chartoitem)|覆寫，以提供自訂的 WM_CHAR 為主控描繪清單方塊沒有字串處理。|  
 |[CListBox::CompareItem](#compareitem)|由架構呼叫以判斷新的項目已排序的主控描繪清單方塊中的位置。|  
 |[CListBox::Create](#create)|建立 Windows 清單方塊，並將它附加至`CListBox`物件。|  
-|[CListBox::DeleteItem](#deleteitem)|當使用者從主控描繪清單方塊刪除項目時由架構呼叫。|  
-|[CListBox::DeleteString](#deletestring)|刪除清單方塊中的字串。|  
+|[CListBox::DeleteItem](#deleteitem)|當使用者從主控描繪清單方塊刪除項目時，由架構呼叫。|  
+|[CListBox::DeleteString](#deletestring)|從清單方塊中，刪除字串。|  
 |[CListBox::Dir](#dir)|將檔案名稱、 磁碟機，或從目前的目錄加入至清單方塊中。|  
 |[CListBox::DrawItem](#drawitem)|當主控描繪清單方塊中變更的視覺外觀時，架構呼叫。|  
-|[CListBox::FindString](#findstring)|搜尋字串，以在清單方塊中。|  
-|[CListBox::FindStringExact](#findstringexact)|尋找符合指定之字串的第一個清單方塊字串。|  
-|[CListBox::GetAnchorIndex](#getanchorindex)|擷取清單方塊中目前的錨定項目以零為起始的索引。|  
-|[CListBox::GetCaretIndex](#getcaretindex)|判斷具有焦點矩形，在多重選擇清單方塊中的項目索引。|  
-|[CListBox::GetCount](#getcount)|在清單方塊中，傳回字串數目。|  
-|[CListBox::GetCurSel](#getcursel)|在清單方塊中，傳回目前所選取字串之以零為起始的索引。|  
-|[CListBox::GetHorizontalExtent](#gethorizontalextent)|傳回清單方塊可以水平捲動的像素為單位的寬度。|  
-|[CListBox::GetItemData](#getitemdata)|傳回與清單方塊項目相關聯的 32 位元值。|  
+|[Clistbox:: Findstring](#findstring)|搜尋清單方塊中的字串。|  
+|[CListBox::FindStringExact](#findstringexact)|尋找符合指定的字串的第一個清單方塊字串。|  
+|[CListBox::GetAnchorIndex](#getanchorindex)|擷取清單方塊中目前的錨點項目的以零為起始的索引。|  
+|[CListBox::GetCaretIndex](#getcaretindex)|判斷具有焦點矩形的多重選擇清單方塊中的項目索引。|  
+|[CListBox::GetCount](#getcount)|清單方塊中，傳回字串的數目。|  
+|[CListBox::GetCurSel](#getcursel)|清單方塊中，會傳回目前所選字串之以零為起始索引。|  
+|[CListBox::GetHorizontalExtent](#gethorizontalextent)|傳回在清單方塊可以水平捲動的像素的寬度。|  
+|[CListBox::GetItemData](#getitemdata)|傳回清單方塊項目相關聯的 32 位元值。|  
 |[CListBox::GetItemDataPtr](#getitemdataptr)|讓指標回到清單方塊項目。|  
-|[CListBox::GetItemHeight](#getitemheight)|決定清單方塊中項目的高度。|  
+|[CListBox::GetItemHeight](#getitemheight)|判斷清單方塊中的項目的高度。|  
 |[CListBox::GetItemRect](#getitemrect)|傳回目前顯示的清單方塊項目的週框。|  
-|[CListBox::GetListBoxInfo](#getlistboxinfo)|擷取每個資料行的項目數目。|  
+|[CListBox::GetListBoxInfo](#getlistboxinfo)|擷取每個資料行的項目數。|  
 |[CListBox::GetLocale](#getlocale)|擷取清單方塊的地區設定識別碼。|  
-|[CListBox::GetSel](#getsel)|傳回清單方塊項目的選取狀態。|  
-|[CListBox::GetSelCount](#getselcount)|傳回字串的多重選擇清單方塊中目前選取的數字。|  
+|[CListBox::GetSel](#getsel)|傳回的清單方塊項目之選取狀態。|  
+|[CListBox::GetSelCount](#getselcount)|傳回目前選取的多重選擇清單方塊中的字串數目。|  
 |[CListBox::GetSelItems](#getselitems)|傳回目前在清單方塊中選取之字串的索引。|  
 |[CListBox::GetText](#gettext)|將清單方塊項目複製到緩衝區。|  
 |[CListBox::GetTextLen](#gettextlen)|傳回的長度，以位元組為單位的清單方塊項目。|  
-|[CListBox::GetTopIndex](#gettopindex)|在清單方塊中會傳回第一個可見字串的索引。|  
-|[CListBox::InitStorage](#initstorage)|Preallocates 清單方塊項目和字串的記憶體區塊。|  
-|[CListBox::InsertString](#insertstring)|在清單方塊中指定位置插入的字串。|  
-|[CListBox::ItemFromPoint](#itemfrompoint)|傳回最接近的點的清單方塊項目的索引。|  
-|[CListBox::MeasureItem](#measureitem)|判斷清單方塊維度建立主控描繪清單方塊時由架構呼叫。|  
+|[CListBox::GetTopIndex](#gettopindex)|清單方塊中，會傳回第一個顯示字串的索引。|  
+|[CListBox::InitStorage](#initstorage)|會預先配置清單方塊項目和字串的記憶體的區塊。|  
+|[CListBox::InsertString](#insertstring)|清單方塊中的特定位置插入的字串。|  
+|[CListBox::ItemFromPoint](#itemfrompoint)|傳回最接近點的清單方塊項目的索引。|  
+|[CListBox::MeasureItem](#measureitem)|若要判斷清單方塊的維度建立主控描繪清單方塊時，由架構呼叫。|  
 |[CListBox::ResetContent](#resetcontent)|清除清單方塊中的所有項目。|  
 |[CListBox::SelectString](#selectstring)|搜尋並選取單一選取清單方塊中的字串。|  
-|[CListBox::SelItemRange](#selitemrange)|選取或取消選取範圍的多重選擇清單方塊中的字串。|  
-|[CListBox::SetAnchorIndex](#setanchorindex)|設定在多重選擇清單方塊中，開始的延伸選取範圍的錨點。|  
-|[CListBox::SetCaretIndex](#setcaretindex)|在多重選擇清單方塊中指定索引處的項目設定焦點矩形。|  
+|[CListBox::SelItemRange](#selitemrange)|選取或取消選取範圍，以複選清單方塊中的字串。|  
+|[CListBox::SetAnchorIndex](#setanchorindex)|設定在多重選擇清單方塊中，若要開始以擴充的選取的錨點。|  
+|[CListBox::SetCaretIndex](#setcaretindex)|多重選擇清單方塊中，指定索引處的項目設定焦點矩形。|  
 |[CListBox::SetColumnWidth](#setcolumnwidth)|設定多重資料行的清單方塊的資料行寬度。|  
-|[CListBox::SetCurSel](#setcursel)|選取清單方塊字串。|  
-|[CListBox::SetHorizontalExtent](#sethorizontalextent)|清單方塊可以水平捲動的像素為單位設定寬度。|  
-|[CListBox::SetItemData](#setitemdata)|設定的清單方塊項目相關聯的 32 位元值。|  
+|[CListBox::SetCurSel](#setcursel)|選取清單方塊的字串。|  
+|[CListBox::SetHorizontalExtent](#sethorizontalextent)|設定在清單方塊可以水平捲動的像素的寬度。|  
+|[CListBox::SetItemData](#setitemdata)|設定清單方塊項目相關聯的 32 位元值。|  
 |[CListBox::SetItemDataPtr](#setitemdataptr)|清單方塊項目設定的指標。|  
-|[CListBox::SetItemHeight](#setitemheight)|在清單方塊中，設定項目的高度。|  
+|[CListBox::SetItemHeight](#setitemheight)|清單方塊中，設定項目的高度。|  
 |[CListBox::SetLocale](#setlocale)|設定清單方塊的地區設定識別碼。|  
-|[CListBox::SetSel](#setsel)|選取或取消選取清單方塊項目在多重選擇清單方塊中。|  
-|[CListBox::SetTabStops](#settabstops)|設定在清單方塊中的定位停駐點位置。|  
-|[CListBox::SetTopIndex](#settopindex)|在清單方塊中設定的第一個可見的字串以零為起始的索引。|  
-|[CListBox::VKeyToItem](#vkeytoitem)|若要提供自訂的覆寫`WM_KEYDOWN`清單方塊處理**LBS_WANTKEYBOARDINPUT**樣式設定。|  
+|[CListBox::SetSel](#setsel)|選取或取消選取多重選擇清單方塊中的清單方塊項目。|  
+|[CListBox::SetTabStops](#settabstops)|設定清單方塊中的定位停駐點位置。|  
+|[CListBox::SetTopIndex](#settopindex)|清單方塊中設定的第一個可見的字串以零為起始的索引。|  
+|[CListBox::VKeyToItem](#vkeytoitem)|覆寫，以提供自訂的 WM_KEYDOWN LBS_WANTKEYBOARDINPUT 設定樣式的清單方塊處理。|  
   
 ## <a name="remarks"></a>備註  
- 清單方塊會顯示項目，例如檔案名稱，使用者可以檢視和選取清單。  
+ 清單方塊會顯示一份項目，例如檔案名稱，使用者可以檢視和選取。  
   
- 在單一選擇清單方塊中，使用者可以選取一個項目。 在多重選擇清單方塊中，您可以選取範圍的項目。 當使用者選取項目時，它會反白顯示和清單方塊會傳送通知訊息至父視窗。  
+ 在單一選取清單方塊中，使用者可以選取一個項目。 在多重選擇清單方塊中，您可以選取的項目範圍。 當使用者選取項目時，它會反白顯示和清單方塊會將通知訊息傳送至父視窗。  
   
- 從對話方塊範本，或是直接在您的程式碼中，您可以建立清單方塊。 若要直接建立，請建構`CListBox`物件，然後呼叫[建立](#create)成員函式來建立 Windows 清單方塊控制項，並將其附加至`CListBox`物件。 若要使用清單方塊的對話方塊範本中，宣告清單方塊中的變數對話方塊類別，然後使用`DDX_Control`在對話方塊類別的`DoDataExchange`函式，來連接至控制項的成員變數。 （這是為您自動加入您的對話方塊類別的控制變數時。）  
+ 從對話方塊範本，或是直接在您的程式碼中，您可以建立一個清單方塊。 若要直接建立，建構`CListBox`物件，然後呼叫[建立](#create)成員函式來建立 Windows 清單方塊控制項，並將其附加至`CListBox`物件。 若要使用的對話方塊範本中的清單方塊，清單方塊中宣告變數對話方塊類別，然後使用`DDX_Control`在您的對話方塊類別的`DoDataExchange`函式來連線至控制項的成員變數。 （這是為了自動控制變數加入您的對話方塊類別時。）  
   
  建構可以是單一步驟中的處理序類別，衍生自`CListBox`。 寫入的建構函式在衍生的類別並呼叫`Create`從建構函式內。  
   
- 如果您想要處理 Windows 通知訊息傳送至其父代清單方塊 (通常的類別衍生自[CDialog](../../mfc/reference/cdialog-class.md))，將訊息對應項目和訊息處理常式成員函式加入至每個訊息的父類別。  
+ 如果您想要處理的清單方塊傳送給其父代的 Windows 通知訊息 (通常是從衍生的類別[CDialog](../../mfc/reference/cdialog-class.md))，將訊息對應項目和訊息處理常式成員函式新增至每個訊息的父類別。  
   
- 每個訊息對應項目有下列形式：  
+ 每個訊息對應項目都會使用下列格式：  
   
  `ON_Notification( id, memberFxn )`  
   
- 其中`id`指定傳送通知的清單方塊控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。  
+ 何處`id`指定傳送通知的清單方塊控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。  
   
- 在父系的函式原型如下所示：  
+ 父代的函式原型如下所示：  
   
  `afx_msg void memberFxn( );`  
   
- 以下是一份潛在的訊息對應項目和描述，它們就會傳送到父代的案例：  
+ 以下是一份潛在的訊息對應項目並在其中它們就會傳送到父代的案例的描述：  
   
-- **ON_LBN_DBLCLK**使用者按兩下清單方塊中的字串。 只有清單方塊具有[LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式會傳送這項通知訊息。  
+- ON_LBN_DBLCLK 使用者按兩下清單方塊中的字串。 僅有的清單方塊[LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式會傳送此通知訊息。  
   
-- **ON_LBN_ERRSPACE**清單方塊無法配置足夠的記憶體可符合要求。  
+- ON_LBN_ERRSPACE 清單方塊無法配置足夠的記憶體，以滿足要求。  
   
-- **ON_LBN_KILLFOCUS**清單方塊正失去輸入的焦點。  
+- ON_LBN_KILLFOCUS 清單方塊正失去輸入的焦點。  
   
-- **ON_LBN_SELCANCEL**會取消目前的清單方塊選取。 清單方塊時，才會傳送此訊息**LBS_NOTIFY**樣式。  
+- ON_LBN_SELCANCEL 取消目前的清單方塊選取項目。 當清單方塊具有 LBS_NOTIFY 樣式時，才會傳送此訊息。  
   
-- **ON_LBN_SELCHANGE**清單方塊中的選取範圍已變更。 如果選取範圍已變更，不會傳送這個通知[CListBox::SetCurSel](#setcursel)成員函式。 此通知只適用於具有之清單方塊**LBS_NOTIFY**樣式。 **LBN_SELCHANGE**會傳送通知訊息的多重選擇清單方塊的使用者按下方向鍵，即使選取範圍不會變更。  
+- ON_LBN_SELCHANGE 清單方塊中選取項目已變更。 如果選取項目已變更，不會傳送此通知[CListBox::SetCurSel](#setcursel)成員函式。 此通知僅適用於具有 LBS_NOTIFY 樣式的清單方塊。 LBN_SELCHANGE 通知訊息會傳送多重選擇清單方塊，使用者按下方向鍵，即使選取範圍不會變更。  
   
-- **ON_LBN_SETFOCUS**清單方塊會接收輸入的焦點。  
+- ON_LBN_SETFOCUS 清單方塊會收到輸入的焦點。  
   
-- **ON_WM_CHARTOITEM**主控描繪清單方塊的任何字串接收`WM_CHAR`訊息。  
+- ON_WM_CHARTOITEM 有沒有任何主控描繪清單方塊中，會收到 WM_CHAR 訊息。  
   
-- **ON_WM_VKEYTOITEM**具有的清單方塊**LBS_WANTKEYBOARDINPUT**樣式接收`WM_KEYDOWN`訊息。  
+- LBS_WANTKEYBOARDINPUT 樣式 ON_WM_VKEYTOITEM 的清單方塊中，會收到 WM_KEYDOWN 訊息。  
   
- 如果您建立`CListBox`物件 （透過對話方塊資源），對話方塊內`CListBox`使用者關閉對話方塊時，即會自動終結物件。  
+ 如果您建立`CListBox` 對話方塊中 （透過對話方塊資源），物件`CListBox`使用者關閉對話方塊時，即會自動終結物件。  
   
- 如果您建立`CListBox`物件在視窗中，您可能要終結`CListBox`物件。 如果您建立`CListBox`物件在堆疊上，會自動終結。 如果您建立`CListBox`使用堆積上的物件**新**函式，您必須呼叫**刪除**使用者關閉的父視窗時終結該物件上。  
+ 如果您建立`CListBox`物件內的視窗中，您可能需要終結`CListBox`物件。 如果您建立`CListBox`物件在堆疊上，它會自動終結。 如果您建立`CListBox`使用堆積上的物件**新**函式，您必須呼叫**刪除**終結它，當使用者關閉父視窗物件。  
   
- 如果您配置任何記憶體`CListBox`物件，請覆寫`CListBox`解構函式來處置的配置。  
+ 如果您配置任何記憶體`CListBox`物件，覆寫`CListBox`解構函式來進行處置的配置。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -246,7 +246,7 @@ class CListBox : public CWnd
  **標題:** afxwin.h  
   
 ##  <a name="addstring"></a>  CListBox::AddString  
- 將字串新增至清單方塊。  
+ 將字串加入至清單方塊中。  
   
 ```  
 int AddString(LPCTSTR lpszItem);
@@ -254,21 +254,21 @@ int AddString(LPCTSTR lpszItem);
   
 ### <a name="parameters"></a>參數  
  *lpszItem*  
- 指向以 null 結束的字串被加入。  
+ 指向以 null 結束的字串，會加入。  
   
 ### <a name="return-value"></a>傳回值  
- 清單方塊中的字串以零為起始的索引。 傳回值是**LB_ERR**如果發生錯誤。 傳回的值是**LB_ERRSPACE**如果空間不足，無法使用存放新的字串。  
+ 清單方塊中的字串以零為起始的索引。 如果發生錯誤，傳回的值會為 LB_ERR如果空間不足無法存放新的字串，傳回的值會是 LB_ERRSPACE。  
   
 ### <a name="remarks"></a>備註  
- 如果不使用建立清單方塊[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，字串會新增至清單的結尾。 否則，字串會插入清單中，而且排序清單。 如果使用清單方塊建立**LBS_SORT**但不是設定樣式[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，架構會將清單排序一或多個呼叫`CompareItem`成員函式。  
+ 如果清單方塊不以建立[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，字串會新增至清單的結尾。 否則，字串插入至清單中，而且排序清單。 是否使用 LBS_SORT 樣式建立的清單方塊而非[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，framework 排序清單由一或多個呼叫`CompareItem`成員函式。  
   
- 使用[InsertString](#insertstring)以將字串插入清單方塊內的特定位置。  
+ 使用[InsertString](#insertstring)將清單方塊內的特定位置插入的字串。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
 ##  <a name="chartoitem"></a>  CListBox::CharToItem  
- 當清單方塊的父視窗收到時由架構呼叫`WM_CHARTOITEM`從清單方塊的訊息。  
+ 當清單方塊的父視窗收到 WM_CHARTOITEM 訊息在清單方塊中，由架構呼叫。  
   
 ```  
 virtual int CharToItem(
@@ -278,28 +278,28 @@ virtual int CharToItem(
   
 ### <a name="parameters"></a>參數  
  *nKey*  
- ANSI 程式碼的使用者輸入的字元。  
+ ANSI 程式碼的使用者所輸入的字元。  
   
  *nIndex*  
- 目前的清單方塊插入號位置。  
+ 目前的清單方塊的插入號位置。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回-1 或 2，任何進一步的動作或負的數字的按鍵輸入執行預設動作的清單方塊項目的索引。 預設實作會傳回-1。  
+ 傳回-1 或 2，任何進一步的動作或非負數的數字，指定要執行預設動作的按鍵輸入清單方塊項目的索引。 預設實作會傳回-1。  
   
 ### <a name="remarks"></a>備註  
- `WM_CHARTOITEM`收到時，傳送訊息的清單方塊`WM_CHAR`訊息，但只看清單方塊是否符合這些準則的所有：  
+ 當它收到 WM_CHAR 訊息，但只有在清單方塊符合這些準則的所有清單方塊所傳送 WM_CHARTOITEM 訊息：  
   
 -   是主控描繪清單方塊。  
   
--   沒有[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式設定。  
+-   沒有[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式集。  
   
--   有一個以上的項目。  
+-   具有至少一個項目。  
   
- 您不應該自行呼叫此函式。 覆寫此函式可提供您自己的自訂處理鍵盤訊息。  
+ 您永遠不應該自己呼叫這個函式。 覆寫此函式可提供您自己的自訂處理鍵盤訊息。  
   
- 在覆寫中，您必須傳回值來向架構指出您要執行什麼動作。 傳回值為-1 或 2 表示您處理所有層面的選取項目，並不需要任何進一步動作的清單方塊。 再傳回-1 或-2，您無法設定選取項目或移動插入號，或兩者。 若要設定選取範圍，請使用[SetCurSel](#setcursel)或[SetSel](#setsel)。 若要移動插入號，請使用[SetCaretIndex](#setcaretindex)。  
+ 在您的覆寫中，您必須傳回值來向架構指出您已執行哪些動作。 傳回值為-1 或 2 表示您處理選取的項目的所有層面，並不需要任何進一步的動作清單方塊。 再傳回-1 或-2，您可以設定選取項目或移動插入號，或兩者。 若要設定選取項目，請使用[SetCurSel](#setcursel)或是[SetSel](#setsel)。 若要移動插入號，請使用[SetCaretIndex](#setcaretindex)。  
   
- 等於或大於 0 的傳回值會指定清單方塊中項目的索引，並指出清單方塊應該對指定的項目上的按鍵動作執行預設動作。  
+ 大於或等於 0 的傳回值的清單方塊中指定的項目索引，並指出清單方塊應該執行的預設動作，在指定的項目上的按鍵輸入。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
@@ -329,18 +329,18 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
  長指標`COMPAREITEMSTRUCT`結構。  
   
 ### <a name="return-value"></a>傳回值  
- 表示兩個項目中所述的相對位置[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)結構。 它可能是下列值之一：  
+ 指出兩個項目中所述的相對位置[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)結構。 它可能是下列值之一：  
   
 |值|意義|  
 |-----------|-------------|  
 |-1|項目 1 排序項目 2 之前。|  
 |0|項目 1 和 2 的項目排序相同。|  
-|1|項目 1 排序項目 2 之後。|  
+|1|項目 2 之後，排序項目 1。|  
   
  請參閱[CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)的說明`COMPAREITEMSTRUCT`結構。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，此成員函式沒有任何作用。 如果您建立主控描繪清單方塊**LBS_SORT**樣式，您必須覆寫此成員函式，以協助架構排序加入至清單方塊的新項目。  
+ 根據預設，此成員函式沒有任何作用。 如果您建立主控描繪清單方塊的 LBS_SORT 樣式時，您必須覆寫此成員函式，以協助架構排序新的項目加入至清單方塊中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
@@ -357,14 +357,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- *dwStyle*  
- 指定清單方塊的樣式。 套用的任何組合[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)到方塊。  
+ *cheaderctrl:: Create*  
+ 指定清單方塊的樣式。 套用的任何組合[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)至方塊。  
   
  *rect*  
  指定清單方塊的大小和位置。 可以是`CRect`物件或`RECT`結構。  
   
  *pParentWnd*  
- 指定清單方塊的父視窗 (通常`CDialog`物件)。 它不得為**NULL**。  
+ 指定清單方塊的父視窗 (通常`CDialog`物件)。 它必須不是 NULL。  
   
  *nID*  
  指定清單方塊的控制項 id。  
@@ -375,31 +375,31 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  您建構`CListBox`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，其中初始化 Windows 清單方塊，並將它附加至`CListBox`物件。  
   
- 當`Create`執行時，Windows 會傳送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)清單方塊控制項的訊息。  
+ 當`Create`執行時，Windows 會傳送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，並[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)清單方塊控制項的訊息。  
   
- 這些訊息會由預設的[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成員函式在`CWnd`基底類別。 若要擴充的預設訊息處理，衍生自`CListBox`、 將訊息對應新增到新的類別，並覆寫先前的訊息處理常式成員函式。 覆寫`OnCreate`，例如，若要執行所需的初始化新的類別。  
+ 根據預設，處理這些訊息[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，以及[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成員函式在 `CWnd`基底類別。 若要擴充的預設訊息處理，衍生的類別`CListBox`、 將訊息對應新增至新的類別，並覆寫先前的訊息處理常式成員函式。 覆寫`OnCreate`，例如，若要執行的新類別所需的初始設定。  
   
- 套用下列[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)至清單方塊控制項。  
+ 套用下列[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)至清單方塊控制項。  
   
-- **WS_CHILD**一律  
+- WS_CHILD 一律  
   
-- **WS_VISIBLE**通常  
+- WS_VISIBLE 通常  
   
-- **WS_DISABLED**很少  
+- WS_DISABLED 很少  
   
-- **WS_VSCROLL**將垂直捲軸  
+- WS_VSCROLL 若要新增 垂直捲軸  
   
-- **WS_HSCROLL**新增水平捲軸  
+- WS_HSCROLL 若要新增 水平捲軸  
   
-- **WS_GROUP**群組控制項  
+- WS_GROUP 群組控制項  
   
-- **WS_TABSTOP**允許這個控制項的定位停駐  
+- WS_TABSTOP，以允許這個控制項定位停駐點  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
 ##  <a name="deleteitem"></a>  CListBox::DeleteItem  
- 當使用者從主控描繪刪除項目時由架構呼叫`CListBox`物件或終結清單方塊。  
+ 由架構呼叫，當使用者刪除的項目從主控描繪`CListBox`物件或終結清單方塊。  
   
 ```  
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -407,10 +407,10 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
   
 ### <a name="parameters"></a>參數  
  *lpDeleteItemStruct*  
- Windows 的長指標[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)結構，其中包含已刪除項目的相關資訊。  
+ Windows 的長指標[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)結構，包含已刪除的項目相關的資訊。  
   
 ### <a name="remarks"></a>備註  
- 此函式的預設實作不做任何動作。 覆寫這個函式來進行重繪視主控描繪清單方塊。  
+ 此函式的預設實作不做任何動作。 覆寫這個函式來重繪視主控描繪清單方塊。  
   
  請參閱[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)的說明`DELETEITEMSTRUCT`結構。  
   
@@ -418,7 +418,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
 ##  <a name="deletestring"></a>  CListBox::DeleteString  
- 刪除位置中的項目`nIndex`從清單方塊。  
+ 刪除位置中的項目*nIndex*從清單方塊。  
   
 ```  
 int DeleteString(UINT nIndex);
@@ -426,19 +426,19 @@ int DeleteString(UINT nIndex);
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 指定要刪除字串之以零為起始的索引。  
+ 指定要刪除之字串的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 字串清單中所剩餘的計數。 傳回值是**LB_ERR**如果*nIndex*指定索引的項目數大於清單中。  
+ 在清單中所剩餘的字串數目。 如果，則傳回的值為 LB_ERR *nIndex*指定索引的項目數大於清單中。  
   
 ### <a name="remarks"></a>備註  
- 之後的所有項目*nIndex*現在下移一個位置。 例如，如果清單方塊包含兩個項目，刪除第一個項目會導致要現在會在第一個位置中的剩餘項目。 *nIndex*= 0，第一個位置中的項目。  
+ 之後的所有項目*nIndex*現在向下移動一個位置。 比方說，如果清單方塊包含兩個項目，刪除第一個項目會導致要現在是在第一個位置中的其餘項目。 *nIndex*= 0 中的第一個位置的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
 ##  <a name="dir"></a>  CListBox::Dir  
- 將加入的檔案名稱、 磁碟機，或兩者都在清單方塊的清單。  
+ 加入檔案名稱、 磁碟機，或兩者都為清單方塊的清單。  
   
 ```  
 int Dir(
@@ -448,24 +448,24 @@ int Dir(
   
 ### <a name="parameters"></a>參數  
  *attr*  
- 可以是任何組合的**列舉**值中所述**CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus)，或任何組合的下列值：  
+ 可以是任意的組合**enum**值中所述`CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)，或任何組合的下列值：  
   
 |值|意義|  
 |-----------|-------------|  
 |0x0000|可讀取或寫入檔案。|  
-|0x0001|可以讀取但是不會寫入檔案。|  
-|0x0002|檔案隱藏的且不會出現在目錄清單中。|  
+|0x0001|可以讀取但不是會寫入至檔案。|  
+|0x0002|檔案隱藏的而且沒有出現在目錄清單中。|  
 |0x0004|檔案是系統檔案。|  
 |0x0010|所指定的名稱*lpszWildCard*指定的目錄。|  
-|0x0020|已封存檔案。|  
-|0x4000|包含符合所指定之名稱的所有磁碟機*lpszWildCard*。|  
-|0x8000|Exclusive 旗標。 如果設定 exclusive 旗標，會列出指定類型的檔案。 否則，會列出指定之型別的的檔案，除了 「 標準 」 檔案。|  
+|0x0020|封存的檔案。|  
+|0x4000|包含符合指定之名稱的所有磁碟機*lpszWildCard*。|  
+|0x8000|獨佔的旗標。 如果設定專屬的旗標，會列出指定類型的檔案。 否則會列出指定型別的的檔案，除了 「 正常 」 的檔案。|  
   
  *lpszWildCard*  
  指向檔案規格字串。 字串可以包含萬用字元 (例如，*。\*)。  
   
 ### <a name="return-value"></a>傳回值  
- 加入至清單的最後一個檔案名稱的以零為起始的索引。 傳回值是**LB_ERR**如果發生錯誤。 傳回的值是**LB_ERRSPACE**空間不足，無法是否可用來儲存新的字串。  
+ 最後一個新增至清單的檔名的以零起始的索引。 如果發生錯誤，傳回的值會為 LB_ERR如果空間不足無法存放新的字串，傳回的值會是 LB_ERRSPACE。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
@@ -479,20 +479,20 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>參數  
  *lpDrawItemStruct*  
- 長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含所需的繪圖的類型資訊。  
+ 長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含的所需的繪圖類型的相關資訊。  
   
 ### <a name="remarks"></a>備註  
- **ItemAction**和**itemState**成員`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
+ `itemAction`並`itemState`的成員`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
   
- 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CListBox`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件*lpDrawItemStruct*之前此成員函式會結束。  
+ 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作活動，抽獎獲得主控描繪`CListBox`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件*lpDrawItemStruct*之前此成員函式會結束。  
   
  請參閱[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)的說明`DRAWITEMSTRUCT`結構。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="findstring"></a>  CListBox::FindString  
- 包含指定的前置詞，而不需要變更清單方塊選取項目在清單方塊中，尋找第一個字串。  
+##  <a name="findstring"></a>  Clistbox:: Findstring  
+ 尋找第一個字串，而不需要變更清單方塊選取項目包含指定的前置詞的清單方塊中。  
   
 ```  
 int FindString(
@@ -502,13 +502,13 @@ int FindString(
   
 ### <a name="parameters"></a>參數  
  *nStartAfter*  
- 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目*nStartAfter*。 如果*nStartAfter*為-1，整個清單方塊會從一開始搜尋。  
+ 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到底部的清單方塊中時，它會繼續從清單方塊的上方回到指定的項目*nStartAfter*。 如果*nStartAfter*為-1，整個清單方塊會從一開始搜尋。  
   
  *lpszItem*  
- 指向以 null 結束的字串，其中包含要搜尋的前置詞。 搜尋是大小寫無關，因此這個字串可能包含任何大寫和小寫字母。  
+ 指向以 null 結束的字串，其中包含要搜尋的前置詞。 搜尋會是大小寫無關，因此這個字串可能包含任何大寫和小寫字母。  
   
 ### <a name="return-value"></a>傳回值  
- 相符的項目以零為起始索引或**LB_ERR**如果搜尋失敗。  
+ 相符的項目或如果搜尋成功 LB_ERR 的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
  使用[SelectString](#selectstring)尋找和選取字串的成員函式。  
@@ -517,7 +517,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
 ##  <a name="findstringexact"></a>  CListBox::FindStringExact  
- 尋找符合指定字串的第一個清單方塊字串*lpszFind*。  
+ 尋找符合指定之字串的第一個清單方塊字串*lpszFind*。  
   
 ```  
 int FindStringExact(
@@ -527,95 +527,95 @@ int FindStringExact(
   
 ### <a name="parameters"></a>參數  
  *nIndexStart*  
- 指定要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目*nIndexStart*。 如果*nIndexStart*為-1，整個清單方塊會從一開始搜尋。  
+ 指定要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到底部的清單方塊中時，它會繼續從清單方塊的上方回到指定的項目*nIndexStart*。 如果*nIndexStart*為-1，整個清單方塊會從一開始搜尋。  
   
  *lpszFind*  
- 指向以 null 結束的字串搜尋。 這個字串可以包含完整的檔名，包括副檔名。 搜尋不區分大小寫，因此字串可以包含任何大寫和小寫字母。  
+ 指向以 null 結束的字串搜尋。 此字串可以包含完整的檔名，包括副檔名。 搜尋不區分大小寫，因此字串可以包含任何大寫和小寫字母。  
   
 ### <a name="return-value"></a>傳回值  
- 相符的項目索引或**LB_ERR**如果搜尋失敗。  
+ 相符的項目或如果搜尋成功 LB_ERR 的索引。  
   
 ### <a name="remarks"></a>備註  
- 如果使用清單方塊但不含建立主控描繪樣式[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，`FindStringExact`成員函式會嘗試比對的值的 doubleword 值*lpszFind*。  
+ 如果使用清單方塊但建立主控描繪樣式[LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式`FindStringExact`成員函式會嘗試比對的值 doubleword 值*lpszFind*。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
 ##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex  
- 擷取清單方塊中目前的錨定項目以零為起始的索引。  
+ 擷取清單方塊中目前的錨點項目的以零為起始的索引。  
   
 ```  
 int GetAnchorIndex() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前錨定項目索引，如果登錄成功。否則**LB_ERR**。  
+ 目前錨點項目的索引，如果登錄成功。否則 LB_ERR。  
   
 ### <a name="remarks"></a>備註  
- 在多重選擇清單方塊中，錨定項目是連續的選取項目的區塊中的第一個或最後一個項目。  
+ 在多重選擇清單方塊中，錨點項目是連續的選取項目的區塊中的第一個或最後一個項目。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CListBox::SetAnchorIndex](#setanchorindex)。  
+  範例，請參閱[CListBox::SetAnchorIndex](#setanchorindex)。  
   
 ##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex  
- 判斷具有焦點矩形，在多重選擇清單方塊中的項目索引。  
+ 判斷具有焦點矩形的多重選擇清單方塊中的項目索引。  
   
 ```  
 int GetCaretIndex() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 具有焦點矩形，在清單方塊中的項目以零為起始的索引。 如果清單方塊會是單一選取清單方塊，傳回的值如果有的話，就會為已選取項目的索引。  
+ 在清單方塊具有焦點矩形的項目以零為起始的索引。 如果清單方塊會是單一選取清單方塊，如果有任何傳回的值為已選取項目的索引。  
   
 ### <a name="remarks"></a>備註  
- 可能還是無法選取項目。  
+ 項目可能會或可能未選取。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CListBox::SetCaretIndex](#setcaretindex)。  
+  範例，請參閱[CListBox::SetCaretIndex](#setcaretindex)。  
   
 ##  <a name="getcount"></a>  CListBox::GetCount  
- 擷取清單方塊中的項目數目。  
+ 擷取清單方塊中的項目數。  
   
 ```  
 int GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在清單方塊中的項目數或**LB_ERR**如果發生錯誤。  
+ 在清單方塊中或 LB_ERR 發生錯誤的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 傳回的計數是比最後一個項目 （索引以零為起始） 的索引值大一。  
+ 傳回的計數是一個大於索引值的最後一個項目 （索引以零為起始）。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
 ##  <a name="getcursel"></a>  CListBox::GetCurSel  
- 如果有的話，在單一選取清單方塊中，擷取目前選取的項目，以零為起始的索引。  
+ 如果有的話，單一選取清單方塊中，擷取目前選取的項目，為起始的索引。  
   
 ```  
 int GetCurSel() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果它是單一選取清單方塊目前選取之項目的以零為起始的索引。 它是`LB_ERR`如果目前不選取任何項目。  
+ 目前選取的項目，如果它是單一選取清單方塊的以零為起始的索引。 如果目前未不選取任何項目，它就會是 LB_ERR。  
   
  在多重選擇清單方塊中，具有焦點之項目的索引。  
   
 ### <a name="remarks"></a>備註  
- 請勿呼叫`GetCurSel`多重選擇清單方塊。 使用[CListBox::GetSelItems](#getselitems)改為。  
+ 請勿呼叫`GetCurSel`多重選擇清單方塊。 使用[CListBox::GetSelItems](#getselitems)改。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
 ##  <a name="gethorizontalextent"></a>  CListBox::GetHorizontalExtent  
- 擷取從清單方塊中，它可以水平捲動的像素寬度。  
+ 擷取從清單方塊的寬度，以供它可以是水平捲動的像素為單位。  
   
 ```  
 int GetHorizontalExtent() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 可捲動的清單方塊中，單位為像素寬度。  
+ 清單方塊中，像素為單位的可捲動的寬度。  
   
 ### <a name="remarks"></a>備註  
  這是清單方塊有水平捲軸時，才適用。  
@@ -624,7 +624,7 @@ int GetHorizontalExtent() const;
  [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
 ##  <a name="getitemdata"></a>  CListBox::GetItemData  
- 擷取與指定的清單方塊項目相關聯的應用程式提供 doubleword 值。  
+ 擷取指定的清單方塊項目相關聯的應用程式提供 doubleword 值。  
   
 ```  
 DWORD_PTR GetItemData(int nIndex) const;  
@@ -632,19 +632,19 @@ DWORD_PTR GetItemData(int nIndex) const;
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 清單方塊中指定項目的以零為起始的索引。  
+ 在清單方塊中指定項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 項目，與關聯的 32 位元值或**LB_ERR**如果發生錯誤。  
+ 如果發生錯誤相關聯的項目或 LB_ERR 32 位元值。  
   
 ### <a name="remarks"></a>備註  
- Doubleword 值*dwItemData*參數[SetItemData](#setitemdata)呼叫。  
+ Doubleword 值*dwItemData*的參數[SetItemData](#setitemdata)呼叫。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- 擷取應用程式提供 32 位元相關聯的值與指定的清單方塊項目，做為指標 ( **void\***)。  
+ 擷取應用程式所提供的 32 位元值，而此一做為指標指定的清單方塊項目相關聯 ( **void\***)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -652,16 +652,16 @@ void* GetItemDataPtr(int nIndex) const;
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 清單方塊中指定項目的以零為起始的索引。  
+ 在清單方塊中指定項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 擷取是指標，則為-1，如果發生錯誤。  
+ 如果發生錯誤，請擷取是指標，則為-1。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
 ##  <a name="getitemheight"></a>  CListBox::GetItemHeight  
- 決定清單方塊中項目的高度。  
+ 判斷清單方塊中的項目的高度。  
   
 ```  
 int GetItemHeight(int nIndex) const;  
@@ -669,16 +669,16 @@ int GetItemHeight(int nIndex) const;
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 清單方塊中指定項目的以零為起始的索引。 使用這個參數只有當清單方塊中含有**LBS_OWNERDRAWVARIABLE**樣式; 否則它應該設定為 0。  
+ 在清單方塊中指定項目的以零為起始的索引。 此參數在清單方塊中含有 LBS_OWNERDRAWVARIABLE 樣式; 時，才會使用否則，它應該設定為 0。  
   
 ### <a name="return-value"></a>傳回值  
- 高度 （像素為單位的清單方塊中的項目）。 如果清單方塊中含有[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，則傳回值是所指定項目的高度*nIndex*。 如果發生錯誤，傳回值是**LB_ERR**。  
+ 高度，單位為像素的清單方塊中的項目。 如果清單方塊中含有[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，則傳回值是所指定項目的高度*nIndex*。 如果發生錯誤，則傳回的值會是 LB_ERR。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
 ##  <a name="getitemrect"></a>  CListBox::GetItemRect  
- 擷取矩形的維度該界限清單方塊項目是目前顯示在清單方塊視窗中。  
+ 擷取矩形的維度的界限清單方塊項目目前顯示在清單方塊 視窗中。  
   
 ```  
 int GetItemRect(
@@ -694,13 +694,13 @@ int GetItemRect(
  指定的長指標[RECT 結構](../../mfc/reference/rect-structure1.md)接收項目的清單方塊用戶端座標。  
   
 ### <a name="return-value"></a>傳回值  
- **LB_ERR**如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
 ##  <a name="getlistboxinfo"></a>  CListBox::GetListBoxInfo  
- 擷取每個資料行的項目數目。  
+ 擷取每個資料行的項目數。  
   
 ```  
 DWORD GetListBoxInfo() const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  每個資料行的項目數`CListBox`物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式模擬的功能[LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  擷取清單方塊所使用的地區設定。  
@@ -723,10 +723,10 @@ LCID GetLocale() const;
  清單方塊中的字串，地區設定識別碼 (LCID) 值。  
   
 ### <a name="remarks"></a>備註  
- 會使用地區設定，例如，以判斷在已排序的清單方塊中的字串的排序次序。  
+ 使用地區設定是，比方說，若要判斷已排序的清單方塊中字串的排序次序。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CListBox::SetLocale](#setlocale)。  
+  範例，請參閱[CListBox::SetLocale](#setlocale)。  
   
 ##  <a name="getsel"></a>  CListBox::GetSel  
  擷取項目的選取狀態。  
@@ -740,31 +740,31 @@ int GetSel(int nIndex) const;
  指定項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 選取指定的項目; 如果是正數否則，它可以是 0。 傳回值是`LB_ERR`如果發生錯誤。  
+ 如果指定的項目已選取;，正數否則，它會是 0。 如果發生錯誤時，傳回的值將為 LB_ERR。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會搭配兩個單一和多重選擇清單方塊。  
+ 此成員函式搭配兩個單一和多重選擇清單方塊。  
   
- 若要擷取目前選取的清單方塊項目的索引，使用[CListBox::GetCurSel](#getcursel)。  
+ 若要擷取目前選取的清單方塊項目的索引，請使用[CListBox::GetCurSel](#getcursel)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
 ##  <a name="getselcount"></a>  CListBox::GetSelCount  
- 擷取多重選擇清單方塊中選取的項目的總數。  
+ 擷取多重選擇清單方塊中選取的項目總數。  
   
 ```  
 int GetSelCount() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 清單方塊中選取項目的計數。 如果清單方塊會是單一選取清單方塊，則傳回值是**LB_ERR**。  
+ 清單方塊中選取的項目數目。 如果清單方塊會是單一選取清單方塊，則傳回的值會是 LB_ERR。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CListBox::GetSelItems](#getselitems)。  
+  範例，請參閱[CListBox::GetSelItems](#getselitems)。  
   
 ##  <a name="getselitems"></a>  CListBox::GetSelItems  
- 在多重選擇清單方塊中指定選取之項目的項目編號的整數陣列中填入緩衝區。  
+ 多重選擇清單方塊中指定選取之項目的項目編號的整數陣列中填入緩衝區。  
   
 ```  
 int GetSelItems(
@@ -774,13 +774,13 @@ int GetSelItems(
   
 ### <a name="parameters"></a>參數  
  *nMaxItems*  
- 指定的項目編號要置於緩衝區中的選取項目數目上限。  
+ 指定選取的項目編號要放置在緩衝區中的項目數目上限。  
   
  *rgIndex*  
- 指定緩衝區夠大的整數所指定數目的指標*nMaxItems*。  
+ 指定的緩衝區不夠大，所指定的整數數目的指標*nMaxItems*。  
   
 ### <a name="return-value"></a>傳回值  
- 項目實際數目會放在緩衝區中。 如果清單方塊會是單一選取清單方塊，則傳回值是`LB_ERR`。  
+ 實際數目的項目放到緩衝區。 如果清單方塊會是單一選取清單方塊，則傳回值是`LB_ERR`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
@@ -803,22 +803,22 @@ void GetText(
  指定要擷取之字串的以零為起始的索引。  
   
  *lpszBuffer*  
- 指向接收字串的緩衝區。 緩衝區必須有足夠的空間，如字串和結束的 null 字元。 可以事先決定字串的大小，藉由呼叫`GetTextLen`成員函式。  
+ 要接收字串之緩衝區的點。 緩衝區必須有足夠的空間，如字串和結束的 null 字元。 可以事先判斷字串的大小，藉由呼叫`GetTextLen`成員函式。  
   
  *rString*  
  對 `CString` 物件的參考。  
   
 ### <a name="return-value"></a>傳回值  
- 字串，但不包括結束的 null 字元的長度 （以位元組為單位）。 如果*nIndex*未指定有效的索引，則傳回值是**LB_ERR**。  
+ 字串，但不包含終止的 null 字元的長度 （以位元組為單位）。 如果*nIndex*未指定有效的索引，則傳回值是 LB_ERR。  
   
 ### <a name="remarks"></a>備註  
- 這個成員的第二個表單函式的填滿`CString`具有字串文字物件。  
+ 這個成員的第二種形式的函式會填滿`CString`具有字串文字物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
 ##  <a name="gettextlen"></a>  CListBox::GetTextLen  
- 清單方塊項目中取得字串的長度。  
+ 取得字串的長度，在清單方塊項目。  
   
 ```  
 int GetTextLen(int nIndex) const;  
@@ -829,20 +829,20 @@ int GetTextLen(int nIndex) const;
  指定字串之以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 以字元為單位，但不包括結束的 null 字元字串的長度。 如果*nIndex*未指定有效的索引，則傳回值是**LB_ERR**。  
+ 以字元為單位，但不包含終止的 null 字元字串的長度。 如果*nIndex*未指定有效的索引，則傳回值是 LB_ERR。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CListBox::GetText](#gettext)。  
+  範例，請參閱[CListBox::GetText](#gettext)。  
   
 ##  <a name="gettopindex"></a>  CListBox::GetTopIndex  
- 擷取清單方塊中的第一個可見項目以零為起始索引。  
+ 擷取的清單方塊中的第一個可見項目以零為起始的索引。  
   
 ```  
 int GetTopIndex() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功的話，在清單方塊中的第一個可見項目以零為起始索引**LB_ERR**否則。  
+ 如果成功，清單方塊中的第一個可見項目以零為起始索引 LB_ERR，否則為。  
   
 ### <a name="remarks"></a>備註  
  一開始，項目 0 頂端的清單方塊中，但如果捲動清單方塊，另一個項目可能會在頂端。  
@@ -851,7 +851,7 @@ int GetTopIndex() const;
  [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
 ##  <a name="initstorage"></a>  CListBox::InitStorage  
- 配置記憶體來儲存清單方塊項目。  
+ 儲存清單方塊項目會配置記憶體。  
   
 ```  
 int InitStorage(
@@ -864,17 +864,17 @@ int InitStorage(
  指定要加入項目數目。  
   
  *nBytes*  
- 指定的記憶體數量，以位元組為單位，來配置項目的字串。  
+ 指定的記憶體數量，以位元組為單位，來配置項目字串。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，最大數目的項目之前需要的記憶體配置，否則，清單方塊可以儲存**LB_ERRSPACE**，這表示沒有足夠的記憶體可用。  
+ 如果成功，清單方塊可以儲存在記憶體重新配置之前的項目最大數目是有需要否則為 LB_ERRSPACE，這表示沒有足夠記憶體可供使用。  
   
 ### <a name="remarks"></a>備註  
- 新增大量項目之前呼叫此函式`CListBox`。  
+ 新增大量的項目之前呼叫此函式`CListBox`。  
   
- 此函式可協助加速有大量的項目 (超過 100) 的清單方塊的初始化。 它 preallocates 讓後續的記憶體數量指定[AddString](#addstring)， [InsertString](#insertstring)，和[Dir](#dir)函式接受最短的時間。 您可以使用估計值的參數。 如果增長時，會配置一些額外的記憶體。如果您低估，超過預先配置的量的項目使用一般配置。  
+ 此函式可協助加速有大量的項目 (超過 100) 的清單方塊的初始化。 它會預先配置的指定讓後續的記憶體數量[AddString](#addstring)， [InsertString](#insertstring)，並[Dir](#dir)函式接受最短的時間。 您可以使用估計值的參數。 如果在增長時，會配置一些額外的記憶體;如果您低估，一般配置使用超過預先配置的量的項目。  
   
- 只有 Windows 95/98: *nItems*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，在清單方塊中項目的總大小只會受到可用記憶體。  
+ Windows 95/98 只： *nItems*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，總大小的清單方塊中的項目只會受到可用記憶體。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
@@ -890,22 +890,22 @@ int InsertString(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 指定要插入的字串之位置的以零為起始的索引。 如果這個參數是-1，則會將字串加入至清單的結尾。  
+ 指定插入至字串位置的以零為起始的索引。 如果這個參數是-1，則會將字串加入至清單的結尾。  
   
  *lpszItem*  
  指向要插入的 null 結尾字串。  
   
 ### <a name="return-value"></a>傳回值  
- 已插入字串之位置以零為基底的索引。 傳回值是**LB_ERR**如果發生錯誤。 傳回的值是**LB_ERRSPACE**如果空間不足，無法使用存放新的字串。  
+ 已插入字串之位置以零為基底的索引。 如果發生錯誤，傳回的值會為 LB_ERR如果空間不足無法存放新的字串，傳回的值會是 LB_ERRSPACE。  
   
 ### <a name="remarks"></a>備註  
- 不同於[AddString](#addstring)成員函式，`InsertString`不會造成與清單[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)排序樣式。  
+ 不同於[AddString](#addstring)成員函式`InsertString`不會造成與清單[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)排序樣式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
 ##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
- 決定最接近的指定點的清單方塊項目*pt*。  
+ 決定最接近指定點的清單方塊項目*pt*。  
   
 ```  
 UINT ItemFromPoint(
@@ -914,23 +914,23 @@ UINT ItemFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- *pt*  
- 要尋找最接近的項目，指定相對於清單方塊的工作區的左上角的點。  
+ *太平洋時間*  
+ 要尋找最接近的項目，指定相對於清單方塊的用戶端區域左上角的點。  
   
  *bOutside*  
- 參考`BOOL`變數會設定為`TRUE`如果`pt`超出最接近的清單方塊項目的工作區`FALSE`如果*pt*在用戶端區域的最接近的清單方塊項目內。  
+ 參考會設為 TRUE 的 BOOL 變數*pt*超出工作區的最接近的清單方塊項目，false *pt*的最接近的清單方塊項目在用戶端區域內。  
   
 ### <a name="return-value"></a>傳回值  
- 最接近的項目中指定的點索引*pt*。  
+ 最接近的項目中指定點的索引*pt*。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用此函式來判斷哪一個清單方塊項目上方移動滑鼠游標。  
+ 您可以使用此函式來判斷在滑鼠游標移哪一個清單方塊項目。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CListBox::SetAnchorIndex](#setanchorindex)。  
+  範例，請參閱[CListBox::SetAnchorIndex](#setanchorindex)。  
   
 ##  <a name="measureitem"></a>  CListBox::MeasureItem  
- 建立具有擁有者繪製樣式的清單方塊時由架構呼叫。  
+ 建立具有主控描繪樣式的清單方塊時，由架構呼叫。  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -941,11 +941,11 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
  長指標[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)結構。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，並填寫`MEASUREITEMSTRUCT`結構，以通知 Windows 清單方塊的維度。 如果清單方塊以建立[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，架構會呼叫此成員函式的清單方塊中的每個項目。 否則，這個成員是只能呼叫一次。  
+ 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，並填寫`MEASUREITEMSTRUCT`結構以通知 Windows 清單方塊的維度。 如果清單方塊以建立[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，架構會呼叫此成員函式的清單方塊中的每個項目。 否則，這個成員是只呼叫一次。  
   
- 以進一步了解使用[LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)以建立主控描繪清單方塊中的樣式`SubclassDlgItem`成員函式`CWnd`，請參閱[技術附註 14](../../mfc/tn014-custom-controls.md).  
+ 如需使用的進一步資訊[LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)以建立主控描繪清單方塊中的樣式`SubclassDlgItem`成員函式`CWnd`，請參閱中的討論[技術附註 14](../../mfc/tn014-custom-controls.md).  
   
- 請參閱[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)的說明`MEASUREITEMSTRUCT`結構 **。**  
+ 請參閱[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)的說明`MEASUREITEMSTRUCT`結構。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
@@ -961,7 +961,7 @@ void ResetContent();
  [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
 ##  <a name="selectstring"></a>  CListBox::SelectString  
- 搜尋符合指定的字串中，清單方塊項目和如果找到相符的項目，它會選取項目。  
+ 搜尋清單方塊項目符合指定的字串，以及如果找到相符的項目，則它會選取項目。  
   
 ```  
 int SelectString(
@@ -971,28 +971,28 @@ int SelectString(
   
 ### <a name="parameters"></a>參數  
  *nStartAfter*  
- 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目*nStartAfter*。 如果*nStartAfter*為-1，整個清單方塊會從一開始搜尋。  
+ 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到底部的清單方塊中時，它會繼續從清單方塊的上方回到指定的項目*nStartAfter*。 如果*nStartAfter*為-1，整個清單方塊會從一開始搜尋。  
   
  *lpszItem*  
- 指向以 null 結束的字串，其中包含要搜尋的前置詞。 搜尋是大小寫無關，因此這個字串可能包含任何大寫和小寫字母。  
+ 指向以 null 結束的字串，其中包含要搜尋的前置詞。 搜尋會是大小寫無關，因此這個字串可能包含任何大寫和小寫字母。  
   
 ### <a name="return-value"></a>傳回值  
- 如果搜尋成功選取之項目的索引。 如果搜尋成功，則傳回值是**LB_ERR**且不會變更目前的選取範圍。  
+ 如果搜尋成功，所選取項目的索引。 如果搜尋成功，則傳回值是 LB_ERR 並不會變更目前的選取範圍。  
   
 ### <a name="remarks"></a>備註  
- 捲動清單方塊中，如有必要，將選取的項目帶入檢視。  
+ 捲動清單方塊，如有必要，將選取的項目帶入檢視。  
   
- 此成員函式不能與清單方塊具有[LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式。  
+ 此成員函式不能搭配具有的清單方塊[LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式。  
   
- 只有當其初始的字元 （從起點） 符合所指定的字串中的字元，選取一個項目*lpszItem*。  
+ 只有當其起始的字元 （從起點） 符合所指定的字串中的字元，選取項目*lpszItem*。  
   
- 使用`FindString`成員函式，以尋找字串，而不需選取項目。  
+ 使用`FindString`成員函式，若要尋找的字串，而不需選取項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
 ##  <a name="selitemrange"></a>  CListBox::SelItemRange  
- 在多重選擇清單方塊中選取多個連續的項目。  
+ 多重選擇清單方塊中選取多個連續的項目。  
   
 ```  
 int SelItemRange(
@@ -1003,7 +1003,7 @@ int SelItemRange(
   
 ### <a name="parameters"></a>參數  
  *bSelect*  
- 指定如何設定選取範圍。 如果*bSelect*是**TRUE**，字串的選取，而且反白顯示; 如果**FALSE**，反白顯示，會移除，且不會再選取 字串。  
+ 指定如何設定選取項目。 如果*bSelect*為 TRUE，即選取字串，並將其反白顯示; 如果為 FALSE，移除反白顯示的字串不會再選取。  
   
  *nFirstItem*  
  指定要設定的第一個項目以零為起始的索引。  
@@ -1012,16 +1012,16 @@ int SelItemRange(
  指定要設定的最後一個項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- **LB_ERR**如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式只適用於多重選擇清單方塊中。 如果您要在多重選擇清單方塊中選取一個項目，也就是如果*nFirstItem*等於*nLastItem* — 呼叫[SetSel](#setsel)成員函式。  
+ 此成員函式只適用於多重選擇清單方塊中。 如果您要在多重選擇清單方塊中選取一個項目 — 也就是，如果*nFirstItem*等於*nLastItem* — 呼叫[SetSel](#setsel)成員函式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
 ##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex  
- 設定在多重選擇清單方塊中，開始的延伸選取範圍的錨點。  
+ 設定在多重選擇清單方塊中，若要開始以擴充的選取的錨點。  
   
 ```  
 void SetAnchorIndex(int nIndex);
@@ -1032,13 +1032,13 @@ void SetAnchorIndex(int nIndex);
  指定將會是錨點的清單方塊項目以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 在多重選擇清單方塊中，錨定項目是連續的選取項目的區塊中的第一個或最後一個項目。  
+ 在多重選擇清單方塊中，錨點項目是連續的選取項目的區塊中的第一個或最後一個項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
 ##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex  
- 在多重選擇清單方塊中指定索引處的項目設定焦點矩形。  
+ 多重選擇清單方塊中，指定索引處的項目設定焦點矩形。  
   
 ```  
 int SetCaretIndex(
@@ -1048,22 +1048,22 @@ int SetCaretIndex(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 指定要接收焦點矩形，清單方塊中的項目以零為起始的索引。  
+ 指定要接收焦點矩形，在清單方塊中的項目以零為起始的索引。  
   
  *bScroll*  
- 如果此值為 0，直到可以完全看見捲動項目。 如果此值不是 0，此項目會捲動，直到至少部分顯示。  
+ 如果此值為 0，直到可以完全看見捲動項目。 如果此值不是 0，此項目捲動直到至少部分可見。  
   
 ### <a name="return-value"></a>傳回值  
- **LB_ERR**如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 如果看不到項目，它會捲動到檢視。  
+ 如果看不到項目，它被捲動檢視。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
 ##  <a name="setcolumnwidth"></a>  CListBox::SetColumnWidth  
- 在多重資料行的清單方塊中設定像素為單位的所有資料行的寬度 (以建立[LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式)。  
+ 多重資料行的清單方塊中設定像素為單位的所有資料行的寬度 (以建立[LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式)。  
   
 ```  
 void SetColumnWidth(int cxWidth);
@@ -1084,18 +1084,18 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>參數  
- *請選取*  
- 指定選取字串之以零為起始的索引。 如果*選取*為-1，清單方塊設定成有沒有選取項目。  
+ *n 請選取*  
+ 指定要選取字串之以零為起始索引。 如果*n 請選取*為-1，清單方塊設定成有沒有選取項目。  
   
 ### <a name="return-value"></a>傳回值  
- `LB_ERR` 如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 選取新的字串時，清單方塊會反白顯示，移除先前選取的字串。  
+ 選取新的字串時，清單方塊會從先前選取的字串移除反白顯示。  
   
- 此成員函式只適用於單一選擇清單方塊中。  
+ 此成員函式只能用於單一選取清單方塊中。  
   
- 若要設定或移除選擇多重選擇清單方塊中，使用[CListBox::SetSel](#setsel)。  
+ 若要設定或移除複選清單方塊中的選取項目，使用[CListBox::SetSel](#setsel)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
@@ -1109,12 +1109,12 @@ void SetHorizontalExtent(int cxExtent);
   
 ### <a name="parameters"></a>參數  
  *cxExtent*  
- 指定之清單方塊可以水平捲動的像素數目。  
+ 指定的清單方塊可以水平捲動的像素數。  
   
 ### <a name="remarks"></a>備註  
- 如果清單方塊的大小小於此值，水平捲軸會水平捲動清單方塊中的項目。 如果清單方塊會比此值較大，則會隱藏水平捲軸。  
+ 如果清單方塊的大小小於此值，水平捲軸會水平捲動清單方塊中的項目。 如果清單方塊一樣大，或大於此值，則會隱藏水平捲軸。  
   
- 若要回應呼叫`SetHorizontalExtent`，清單方塊必須已定義與[WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles)樣式。  
+ 呼叫以回應`SetHorizontalExtent`，清單方塊必須已有定義[WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles)樣式。  
   
  此成員函式不適用於多重資料行的清單方塊。 若是多重資料行的清單方塊中，呼叫`SetColumnWidth`成員函式。  
   
@@ -1122,7 +1122,7 @@ void SetHorizontalExtent(int cxExtent);
  [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
 ##  <a name="setitemdata"></a>  CListBox::SetItemData  
- 設定在清單方塊中指定的項目相關聯的 32 位元值。  
+ 設定清單方塊中指定的項目相關聯的 32 位元值。  
   
 ```  
 int SetItemData(
@@ -1135,16 +1135,16 @@ int SetItemData(
  指定項目的以零為起始的索引。  
   
  *dwItemData*  
- 指定要與此項目相關聯的值。  
+ 指定要與項目相關聯的值。  
   
 ### <a name="return-value"></a>傳回值  
- **LB_ERR**如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- 設定與指定的項目在清單方塊中，會指定的指標相關聯的 32 位元值 ( **void\***)。  
+ 設定為指定的指標清單方塊中指定的項目相關聯的 32 位元值 ( **void\***)。  
   
 ```  
 int SetItemDataPtr(
@@ -1157,19 +1157,19 @@ int SetItemDataPtr(
  指定項目的以零為起始的索引。  
   
  *pData*  
- 指定要與此項目相關聯的指標。  
+ 指定要與項目相關聯的指標。  
   
 ### <a name="return-value"></a>傳回值  
- **LB_ERR**如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 此指標會保持有效存留期之清單方塊中，即使在清單方塊內的項目相對位置可能會變更為新增或移除項目。 因此，可以變更方塊內項目的索引，但指標都可靠。  
+ 此指標會保持有效存留期內的清單方塊中，即使新增或移除項目時，可能會變更的項目在清單方塊內的相對位置。 因此，在方塊內項目的索引可能會變更，但，指標都是可靠。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
 ##  <a name="setitemheight"></a>  CListBox::SetItemHeight  
- 在清單方塊中，設定項目的高度。  
+ 清單方塊中，設定項目的高度。  
   
 ```  
 int SetItemHeight(
@@ -1179,16 +1179,16 @@ int SetItemHeight(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 清單方塊中指定項目的以零為起始的索引。 使用這個參數只有當清單方塊中含有**LBS_OWNERDRAWVARIABLE**樣式; 否則它應該設定為 0。  
+ 在清單方塊中指定項目的以零為起始的索引。 此參數在清單方塊中含有 LBS_OWNERDRAWVARIABLE 樣式; 時，才會使用否則，它應該設定為 0。  
   
  *cyItemHeight*  
  指定高度，單位為像素的項目。  
   
 ### <a name="return-value"></a>傳回值  
- **LB_ERR**如果高度的索引無效。  
+ 如果是無效的索引或高度，LB_ERR。  
   
 ### <a name="remarks"></a>備註  
- 如果清單方塊中含有[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，此函式會將所指定項目的高度*nIndex*。 否則，此函式會將清單方塊中的所有項目高度。  
+ 如果清單方塊中含有[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式，此函式會設定所指定項目的高度*nIndex*。 否則，此函式會設定所有項目的高度清單方塊中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
@@ -1202,19 +1202,19 @@ LCID SetLocale(LCID nNewLocale);
   
 ### <a name="parameters"></a>參數  
  *nNewLocale*  
- 要設定的清單方塊的新的地區設定識別碼 (LCID) 值。  
+ 要設定的清單方塊的新地區設定識別碼 (LCID) 值。  
   
 ### <a name="return-value"></a>傳回值  
  此清單方塊上一個地區設定識別碼 (LCID) 值。  
   
 ### <a name="remarks"></a>備註  
- 如果**SetLocale**不呼叫時，預設的地區設定從系統取得。 可以修改此系統的預設地區設定，使用 [控制台] 的地區 （或國際標準） 的應用程式。  
+ 如果`SetLocale`不呼叫時，預設的地區設定從系統取得。 此系統預設地區設定可以修改使用 [控制台] 的區域 （或國際） 的應用程式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
 ##  <a name="setsel"></a>  CListBox::SetSel  
- 在多重選擇清單方塊中選取的字串。  
+ 多重選擇清單方塊中選取一個字串。  
   
 ```  
 int SetSel(
@@ -1224,24 +1224,24 @@ int SetSel(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 包含要設定之字串的以零為起始的索引。 如果-1，選取項目已加入或移除的值而定的所有字串從*bSelect*。  
+ 包含要設定的字串以零為起始的索引。 如果為-1，選取項目加入或移除的值而定的所有字串*bSelect*。  
   
  *bSelect*  
- 指定如何設定選取範圍。 如果*bSelect*是`TRUE`，字串的選取，而且反白顯示; 如果`FALSE`，反白顯示，會移除，且不會再選取 字串。 指定的字串的選取，而且預設反白顯示。  
+ 指定如何設定選取項目。 如果*bSelect*為 TRUE，即選取字串，並將其反白顯示; 如果為 FALSE，移除反白顯示的字串不會再選取。 已選取指定的字串，並反白顯示的預設值。  
   
 ### <a name="return-value"></a>傳回值  
- `LB_ERR` 如果發生錯誤。  
+ LB_ERR 發生錯誤。  
   
 ### <a name="remarks"></a>備註  
  此成員函式只適用於多重選擇清單方塊中。  
   
- 若要從單一選取清單方塊選取項目，使用[CListBox::SetCurSel](#setcursel)。  
+ 若要從單一選取清單方塊中選取項目，請使用[CListBox::SetCurSel](#setcursel)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
 ##  <a name="settabstops"></a>  CListBox::SetTabStops  
- 設定在清單方塊中的定位停駐點位置。  
+ 設定清單方塊中的定位停駐點位置。  
   
 ```  
 void SetTabStops();  
@@ -1255,23 +1255,23 @@ BOOL SetTabStops(
   
 ### <a name="parameters"></a>參數  
  *cxEachStop*  
- 定位停駐點會在設定每個*cxEachStop*對話方塊單位。 請參閱*rgTabStops*對話方塊單位的描述。  
+ 在設定定位停駐點，會每隔*cxEachStop*對話方塊單位。 請參閱*rgTabStops*對話方塊單位的描述。  
   
  *nTabStops*  
- 指定清單方塊中的定位停駐點數目。  
+ 指定在清單方塊中的定位停駐點數目。  
   
  *rgTabStops*  
- 指向陣列的第一個成員包含在對話方塊單位中的定位停駐點位置的整數。 對話方塊單位是水平或垂直距離。 一個水平對話方塊單位等於目前對話方塊基底寬度單位的四分之一，而且一個垂直對話方塊單位等於目前對話方塊基底高度單位的八分之一。 對話方塊基本單位是根據目前系統字型的高度和寬度計算。 **GetDialogBaseUnits** Windows 函式會傳回目前對話方塊基本單位像素為單位。 必須排序定位停駐點，以遞增順序排列;不允許背景索引標籤。  
+ 指向陣列的第一個成員包含在對話方塊單位中的定位停駐點位置的整數。 對話方塊單位是水平或垂直距離。 一個水平對話方塊單位等於目前對話方塊基底寬度單位的四分之一，而且一個垂直對話方塊單位等於目前對話方塊基底的高度單位的八分之一。 對話方塊基本單位是根據目前系統字型的高度和寬度計算。 `GetDialogBaseUnits` Windows 函式會傳回目前對話方塊基底的單位像素為單位。 定位停駐點必須以遞增順序排序不允許反向索引標籤。  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果已設定的所有索引標籤。否則便是 0。  
+ 如果已設定的所有索引標籤，為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 若要設定定位停駐點為預設大小的 2 對話方塊單位，呼叫此成員函式的無參數的版本。 若要設定定位停駐點 2 以外的大小，呼叫與版本*cxEachStop*引數。  
+ 若要設定定位停駐點的預設大小的 2 個對話方塊單位，呼叫此成員函式的無參數的版本。 若要設定定位停駐點到 2 以外的大小，呼叫的版本與*cxEachStop*引數。  
   
- 若要設定定位停駐點大小的陣列，使用的版本與*rgTabStops*和*nTabStops*引數。 定位停駐點將會針對每個值中設定*rgTabStops*，最多指定的數字*nTabStops*。  
+ 若要設定定位停駐點大小的陣列，使用的版本與*rgTabStops*並*nTabStops*引數。 將設定中每個值的定位停駐點*rgTabStops*，最多指定數目*nTabStops*。  
   
- 若要回應呼叫`SetTabStops`成員函式，清單方塊必須已建立[LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式。  
+ 呼叫以回應`SetTabStops`成員函式，在清單方塊必須已建立[LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
@@ -1288,7 +1288,7 @@ int SetTopIndex(int nIndex);
  指定清單方塊項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，零或**LB_ERR**如果發生錯誤。  
+ 如果成功，為零或 LB_ERR 發生錯誤。  
   
 ### <a name="remarks"></a>備註  
  系統會將清單方塊捲動直到其中一個所指定的項目*nIndex*會出現在清單頂端或最大捲軸範圍已達到。  
@@ -1297,7 +1297,7 @@ int SetTopIndex(int nIndex);
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
 ##  <a name="vkeytoitem"></a>  CListBox::VKeyToItem  
- 當清單方塊的父視窗收到時由架構呼叫`WM_VKEYTOITEM`從清單方塊的訊息。  
+ 當清單方塊的父視窗收到 WM_VKEYTOITEM 訊息在清單方塊中，由架構呼叫。  
   
 ```  
 virtual int VKeyToItem(
@@ -1307,28 +1307,28 @@ virtual int VKeyToItem(
   
 ### <a name="parameters"></a>參數  
  *nKey*  
- 索引鍵的虛擬按鍵碼的使用者按下。 標準虛擬按鍵碼的清單，請參閱 Winuser.h  
+ 索引鍵的虛擬按鍵碼使用者按下。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
   
  *nIndex*  
- 目前的清單方塊插入號位置。  
+ 目前的清單方塊的插入號位置。  
   
 ### <a name="return-value"></a>傳回值  
- 會傳回-2 沒有進一步動作、-1 表示預設動作或為負數來指定要執行預設動作的按鍵輸入清單方塊項目的索引。  
+ 傳回-2 沒有進一步的動作、-1 表示預設的動作或為負數來指定要執行的按鍵輸入的預設動作的清單方塊項目的索引。  
   
 ### <a name="remarks"></a>備註  
- `WM_VKEYTOITEM`收到時，傳送訊息的清單方塊`WM_KEYDOWN`訊息，但只有是否在清單方塊符合下列兩個：  
+ WM_VKEYTOITEM 訊息所傳送的清單方塊中，當它收到 WM_KEYDOWN 訊息，但只有在清單方塊會符合下列兩個：  
   
--   具有[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式設定。  
+-   已[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式集。  
   
--   有一個以上的項目。  
+-   具有至少一個項目。  
   
- 您不應該自行呼叫此函式。 覆寫此函式可提供您自己的自訂處理鍵盤訊息。  
+ 您永遠不應該自己呼叫這個函式。 覆寫此函式可提供您自己的自訂處理鍵盤訊息。  
   
- 您必須傳回值來向架構指出您的覆寫執行什麼動作。 傳回值-2 表示應用程式處理所有層面的選取項目，並不需要任何進一步動作的清單方塊。 之前傳回-2，您無法設定選取項目或移動插入號，或兩者。 若要設定選取範圍，請使用[SetCurSel](#setcursel)或[SetSel](#setsel)。 若要移動插入號，請使用[SetCaretIndex](#setcaretindex)。  
+ 您必須傳回值，來告知架構您的覆寫執行什麼動作。 傳回值-2 表示應用程式處理的選取項目所有層面，並不需要任何進一步的動作清單方塊。 之前傳回-2，您可以設定選取項目或移動插入號，或兩者。 若要設定選取項目，請使用[SetCurSel](#setcursel)或是[SetSel](#setsel)。 若要移動插入號，請使用[SetCaretIndex](#setcaretindex)。  
   
- 傳回值為-1 表示清單方塊應該執行的預設動作，以回應按鍵。預設實作會傳回-1。  
+ 傳回值為-1 表示清單方塊應該執行的預設動作，以回應按鍵輸入。預設實作會傳回-1。  
   
- 等於或大於 0 的傳回值會指定清單方塊中項目的索引，並指出清單方塊應該對指定的項目上的按鍵動作執行預設動作。  
+ 大於或等於 0 的傳回值的清單方塊中指定的項目索引，並指出清單方塊應該執行的預設動作，在指定的項目上的按鍵輸入。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]  

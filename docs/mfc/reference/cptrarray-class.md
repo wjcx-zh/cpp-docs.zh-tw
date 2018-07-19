@@ -1,5 +1,5 @@
 ---
-title: CPtrArray 類別 |Microsoft 文件
+title: CPtrArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078022"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851287"
 ---
 # <a name="cptrarray-class"></a>CPtrArray 類別
 支援 void 指標的陣列。  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CPtrArray`類別成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值的指標予以替代**void**。  
+ 成員函式`CPtrArray`類別的成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代指標**void**。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,14 +112,14 @@ class CPtrArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CPtrArray` 結合 `IMPLEMENT_DYNAMIC` 巨集，支援 `CDumpContext` 物件的執行階段類型存取和傾印。 如果您需要個別的指標陣列元素的傾印，您必須設定為 1 或更大的傾印內容的深度。  
+ `CPtrArray` 併入 IMPLEMENT_DYNAMIC 巨集，以支援執行階段類型存取和傾印`CDumpContext`物件。 如果您需要個別的指標陣列元素的傾印，您必須設定為 1 或更高的傾印內容的深度。  
   
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
  無法序列化的指標陣列。  
   
- 刪除指標陣列時，或移除其項目時，只會移除指標，而非它們參考的實體。  
+ 刪除時的指標陣列，或移除其項目時，會移除僅指標，不將它們參考的實體。  
   
  如需有關使用`CPtrArray`，請參閱文章[集合](../../mfc/collections.md)。  
   

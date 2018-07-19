@@ -1,5 +1,5 @@
 ---
-title: CFieldExchange 類別 |Microsoft 文件
+title: CFieldExchange 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336503"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 類別
 支援資料庫類別使用的資料錄欄位交換 (RFX) 和大量資料錄欄位交換 (Bulk RFX) 常式。  
@@ -42,28 +42,28 @@ class CFieldExchange
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CFieldExchange::IsFieldType](#isfieldtype)|如果目前的作業為非零，傳回適用於更新之欄位的類型。|  
-|[CFieldExchange::SetFieldType](#setfieldtype)|指定類型的資料錄集資料成員 — 資料行或參數-由所有下列呼叫 RFX 函式，直到下次呼叫`SetFieldType`。|  
+|[CFieldExchange::IsFieldType](#isfieldtype)|傳回非零值，如果目前的作業是適當的更新之欄位的類型。|  
+|[CFieldExchange::SetFieldType](#setfieldtype)|指定資料錄集的資料成員的型別 — 資料行或參數-由所有下列呼叫 RFX 函式，直到下次呼叫`SetFieldType`。|  
   
 ## <a name="remarks"></a>備註  
  `CFieldExchange` 沒有基底類別。  
   
- 如果您要撰寫資料交換常式的自訂資料類型，或當您實作大量資料列擷取;，使用這個類別否則，您不會直接使用這個類別。 RFX 和 Bulk RFX 之間交換資料的資料錄集物件的欄位資料成員和資料來源上目前的記錄之對應欄位。  
+ 使用這個類別，如果您正在撰寫的自訂資料類型，或當您實作大量資料列擷取; 的資料交換常式否則，您不會直接使用這個類別。 RFX 和 Bulk RFX 之間交換資料的資料錄集物件的欄位資料成員和資料來源上目前的記錄之對應欄位。  
   
 > [!NOTE]
->  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)改為。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
+>  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)改。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
   
- A`CFieldExchange`物件提供內容資訊所需的資料錄欄位交換或要採取的大量資料錄欄位交換放置。 `CFieldExchange` 物件支援數個作業，包括繫結參數和欄位資料成員，並在目前資料錄的欄位上設定各種旗標。 RFX 和 Bulk RFX 作業所定義之類型的資料錄集類別資料成員上**列舉** **FieldType**中`CFieldExchange`。 可能**FieldType**的值為：  
+ A`CFieldExchange`物件提供內容資訊所需的資料錄欄位交換 」 或 「 大量資料錄欄位交換才會放置。 `CFieldExchange` 物件支援多個作業，包括繫結參數和欄位資料成員，以及目前的資料錄的欄位上設定各種旗標。 RFX 和 Bulk RFX 作業將會在資料錄集類別的型別所定義的資料成員**enum** **FieldType**在`CFieldExchange`。 可能**FieldType**的值為：  
   
-- **CFieldExchange::outputColumn**欄位資料成員。  
+- `CFieldExchange::outputColumn` 欄位資料成員。  
   
-- **CFieldExchange::inputParam**或**CFieldExchange::param**為輸入的參數資料成員。  
+- `CFieldExchange::inputParam` 或`CFieldExchange::param`輸入的參數之資料成員。  
   
-- **CFieldExchange::outputParam**為輸出參數資料成員。  
+- `CFieldExchange::outputParam` 輸出參數之資料成員。  
   
-- **CFieldExchange::inoutParam**輸入/輸出參數之資料成員。  
+- `CFieldExchange::inoutParam` 輸入/輸出參數之資料成員。  
   
- 大部分的類別的成員函式和資料成員可供撰寫您自己的自訂 RFX 常式。 您將使用`SetFieldType`常見問題。 如需詳細資訊，請參閱文章[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。 如需大量資料列擷取資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 如需 RFX 和 Bulk RFX 全域函式的詳細資訊，請參閱[資料錄欄位交換函式](../../mfc/reference/record-field-exchange-functions.md)MFC 巨集和全域變數區段，此參考中。  
+ 大部分的類別的成員函式和資料成員可供撰寫您自己的自訂 RFX 常式。 您將使用`SetFieldType`常見問題。 如需詳細資訊，請參閱文章[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)並[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。 如需大量資料列擷取資訊，請參閱文章[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 如需 RFX 和 Bulk RFX 全域函式的詳細資訊，請參閱[記錄欄位交換函式](../../mfc/reference/record-field-exchange-functions.md)此參考的 MFC 巨集和全域區段中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CFieldExchange`  
@@ -72,7 +72,7 @@ class CFieldExchange
  **標頭：** afxdb.h  
   
 ##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
- 如果您撰寫您自己 RFX 函式，呼叫`IsFieldType`您若要判斷目前的作業是否可對特定欄位或參數資料成員類型的函式的開頭 ( **CFieldExchange::outputColumn**， **CFieldExchange::inputParam**， **CFieldExchange::param**， **CFieldExchange::outputParam**，或**CFieldExchange::inoutParam**).  
+ 如果您撰寫您自己的 RFX 函式，呼叫`IsFieldType`在您的函式，以判斷是否可以在特定欄位或參數的資料成員類型上執行目前的操作開頭 ( `CFieldExchange::outputColumn`， `CFieldExchange::inputParam`， `CFieldExchange::param`， `CFieldExchange::outputParam`，或`CFieldExchange::inoutParam`)。  
   
 ```  
 BOOL IsFieldType(UINT* pnField);
@@ -80,16 +80,16 @@ BOOL IsFieldType(UINT* pnField);
   
 ### <a name="parameters"></a>參數  
  *pnField*  
- 這個參數中傳回之欄位或參數的資料成員的序號。 此數字中的資料成員的順序對應[CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)函式。  
+ 此參數中傳回之欄位或參數的資料成員的序號。 此數字中的資料成員的順序對應[CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或是[CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)函式。  
   
 ### <a name="return-value"></a>傳回值  
- 如果目前的作業可以執行在目前的欄位或參數類型為非零。  
+ 如果目前的作業可對目前的欄位或參數類型為非零。  
   
 ### <a name="remarks"></a>備註  
- 請遵循現有 RFX 函式的模型。  
+ 請遵循現有的 RFX 函式的模型。  
   
 ##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
- 您必須呼叫`SetFieldType`在您的資料錄集類別[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)覆寫。  
+ 您必須呼叫`SetFieldType`在您的資料錄集類別[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或是[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)覆寫。  
   
 ```  
 void SetFieldType(UINT nFieldType);
@@ -97,33 +97,33 @@ void SetFieldType(UINT nFieldType);
   
 ### <a name="parameters"></a>參數  
  *nFieldType*  
- 值為**列舉 FieldType**中宣告`CFieldExchange`，它可以是下列其中之一：  
+ 值為`enum FieldType`中宣告`CFieldExchange`，它可以是下列其中一項：  
   
-- **CFieldExchange::outputColumn**  
+- `CFieldExchange::outputColumn`  
   
-- **CFieldExchange::inputParam**  
+- `CFieldExchange::inputParam`  
   
-- **CFieldExchange::param**  
+- `CFieldExchange::param`  
   
-- **CFieldExchange::outputParam**  
+- `CFieldExchange::outputParam`  
   
-- **CFieldExchange::inoutParam**  
+- `CFieldExchange::inoutParam`  
   
 ### <a name="remarks"></a>備註  
- 欄位資料成員，您必須呼叫`SetFieldType`和參數**CFieldExchange::outputColumn**，後面接著呼叫 RFX 或 Bulk RFX 函式。 如果您未實作大量資料列擷取，則 ClassWizard 會將這`SetFieldType`的欄位對應區段中，為您呼叫`DoFieldExchange`。  
+ 欄位資料成員，您必須呼叫`SetFieldType`搭配參數`CFieldExchange::outputColumn`，後面接著呼叫 RFX 或 Bulk RFX 函式。 如果您未實作大量資料列擷取，則 ClassWizard 會放置這`SetFieldType`的欄位對應區段，為您呼叫`DoFieldExchange`。  
   
- 如果您將參數化資料錄集類別，您必須呼叫`SetFieldType`同樣地，之外任何欄位對應區段中，後面接著 RFX 呼叫的參數資料成員。 每種類型的參數資料成員必須有它自己`SetFieldType`呼叫。 下表可區別不同的值，您可以傳遞給`SetFieldType`來代表您的類別的參數資料成員：  
+ 如果您將參數化資料錄集類別，您必須呼叫`SetFieldType`同樣地，之外任何欄位對應 區段中，後面接著 RFX 呼叫所有參數的資料成員。 每種類型的參數資料成員必須有它自己`SetFieldType`呼叫。 下表可區別不同的值，您可以傳遞給`SetFieldType`來代表您的類別的參數資料成員：  
   
-|SetFieldType 參數值|參數資料成員型別|  
+|SetFieldType 參數值|參數的資料成員的型別|  
 |----------------------------------|-----------------------------------|  
-|**CFieldExchange::inputParam**|輸入的參數。 值，這個值會傳遞至資料錄集的查詢或預存程序。|  
-|**CFieldExchange::param**|與相同**CFieldExchange::inputParam**。|  
-|**CFieldExchange::outputParam**|輸出參數。 資料錄集的預存程序傳回值。|  
-|**CFieldExchange::inoutParam**|輸入/輸出參數。 值，這個值會傳遞給方法以及從資料錄集的預存程序傳回。|  
+|`CFieldExchange::inputParam`|輸入的參數。 值，這個值會傳遞至資料錄集的查詢或預存程序。|  
+|' ieldExchange::param * *`ame as **CFieldExchange::inputParam`。|  
+|`CFieldExchange::outputParam`|輸出參數。 資料錄集的預存程序的傳回值。|  
+|`CFieldExchange::inoutParam`|輸入/輸出參數。 值，這個值會傳遞給方法以及從資料錄集的預存程序傳回。|  
   
- 一般情況下，每個群組的欄位資料成員或參數資料成員相關聯的 RFX 函式呼叫的前面必須有呼叫`SetFieldType`。 *NFieldType*每個參數`SetFieldType`呼叫識別遵循 RFX 函式呼叫所代表的資料成員的型別`SetFieldType`呼叫。  
+ 一般情況下，每個群組的欄位資料成員或參數的資料成員相關聯的 RFX 函式呼叫的前面必須有呼叫`SetFieldType`。 *NFieldType*每個參數`SetFieldType`呼叫識別遵循 RFX 函式呼叫所代表的資料成員的型別`SetFieldType`呼叫。  
   
- 如需有關處理輸出和輸入/輸出參數的詳細資訊，請參閱`CRecordset`成員函式[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 如需 RFX 和 Bulk RFX 函式的詳細資訊，請參閱主題[資料錄欄位交換函式](../../mfc/reference/record-field-exchange-functions.md)。 如需大量資料列擷取的相關資訊，請參閱文章[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+ 如需有關如何處理輸出和輸入/輸出參數的詳細資訊，請參閱 <<c0> `CRecordset` 成員函式[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 如需 RFX 和 Bulk RFX 函式的詳細資訊，請參閱主題[記錄欄位交換函式](../../mfc/reference/record-field-exchange-functions.md)。 如需大量資料列擷取的相關資訊，請參閱文章[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
 ### <a name="example"></a>範例  
  此範例示範數個呼叫 RFX 函式及隨附的呼叫`SetFieldType`。 請注意，`SetFieldType`透過呼叫`pFX`指標`CFieldExchange`物件。  

@@ -1,5 +1,5 @@
 ---
-title: CException 類別 |Microsoft 文件
+title: CException 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e9bf8348adbe3e3547dddf0eda86e65486addf87
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338505"
 ---
 # <a name="cexception-class"></a>CException 類別
 MFC 程式庫中所有例外狀況的基底類別。  
@@ -54,7 +54,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CException::ReportError](#reporterror)|向使用者回報的訊息方塊中的錯誤訊息。|  
   
 ## <a name="remarks"></a>備註  
- 因為`CException`是抽象的基底類別，您無法建立`CException`物件直接; 您必須建立衍生類別的物件。 如果您要建立您自己`CException`-樣式類別，請使用其中一個衍生的類別做為模型上面所列。 請確定您的衍生的類別，也會使用`IMPLEMENT_DYNAMIC`。  
+ 因為`CException`抽象的基底類別，您無法建立`CException`物件直接; 您必須建立衍生類別的物件。 如果您要建立您自己`CException`-樣式類別，請使用其中一個衍生的類別做為模型上面所列。 請確定您的衍生的類別，也會使用`IMPLEMENT_DYNAMIC`。  
   
  衍生的類別和其說明如下：  
   
@@ -64,23 +64,23 @@ class AFX_NOVTABLE CException : public CObject
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|無效的引數例外狀況|  
 |[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|記憶體不足例外狀況|  
 |[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|不支援的作業要求|  
-|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|封存特定的例外狀況|  
-|[CFileException](../../mfc/reference/cfileexception-class.md)|檔案特定的例外狀況|  
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|找不到或無法建立 Windows 資源|  
+|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|封存特有例外狀況|  
+|[CFileException](../../mfc/reference/cfileexception-class.md)|檔案特定例外狀況|  
+|[CResourceException](../../mfc/reference/cresourceexception-class.md)|找不到或無法建立的 Windows 資源|  
 |[COleException](../../mfc/reference/coleexception-class.md)|OLE 例外狀況|  
-|[CDBException](../../mfc/reference/cdbexception-class.md)|資料庫例外狀況 （亦即，例外狀況所造成的開放式資料庫連接為基礎之 MFC 資料庫類別）|  
+|[CDBException](../../mfc/reference/cdbexception-class.md)|資料庫例外狀況 （亦即，例外狀況所造成的開放式資料庫連接為基礎的 MFC 資料庫類別）|  
 |[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE 分派 (automation) 例外狀況|  
-|[CUserException](../../mfc/reference/cuserexception-class.md)|表示找不到資源的例外狀況|  
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|資料存取物件的例外狀況 （亦即，例外狀況條件適用於 DAO 類別時所產生）|  
+|[CUserException](../../mfc/reference/cuserexception-class.md)|例外狀況，指出找不到資源|  
+|[CDaoException](../../mfc/reference/cdaoexception-class.md)|資料存取物件的例外狀況 （亦即，例外狀況所造成的 DAO 類別）|  
 |[CInternetException](../../mfc/reference/cinternetexception-class.md)|網際網路例外狀況 （亦即，例外狀況所造成的網際網路類別）。|  
   
- 這些例外狀況用來搭配[擲回](exception-processing.md#throw)， [THROW_LAST](exception-processing.md#throw_last)，[再試一次](exception-processing.md#try)，[攔截](exception-processing.md#catch)， [and_catch](exception-processing.md#and_catch)，和[end_catch](exception-processing.md#end_catch)巨集。 如需有關例外狀況的詳細資訊，請參閱[例外狀況處理](exception-processing.md)，或請參閱文章[例外狀況處理 (MFC)](../exception-handling-in-mfc.md)。  
+ 這些例外狀況要搭配[擲回](exception-processing.md#throw)， [THROW_LAST](exception-processing.md#throw_last)，[試](exception-processing.md#try)，[攔截](exception-processing.md#catch)， [and_catch](exception-processing.md#and_catch)，並[end_catch](exception-processing.md#end_catch)巨集。 如需有關例外狀況的詳細資訊，請參閱[例外狀況處理](exception-processing.md)，或請參閱文章[例外狀況處理 (MFC)](../exception-handling-in-mfc.md)。  
   
- 若要攔截特定例外狀況，請使用適當的衍生的類別。 若要攔截所有例外狀況類型，使用`CException`，然後使用[cobject:: Iskindof](cobject-class.md#iskindof)來區別`CException`-衍生的類別。 請注意，`CObject::IsKindOf`只適用於類別宣告[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)巨集，若要利用動態類型檢查。 任何`CException`-您所建立的衍生的類別應該使用`IMPLEMENT_DYNAMIC`巨集，太。  
+ 若要攔截特定例外狀況，使用適當的衍生的類別。 若要擷取所有類型的例外狀況，使用`CException`，然後使用[cobject:: Iskindof](cobject-class.md#iskindof)區別`CException`-衍生的類別。 請注意，`CObject::IsKindOf`僅適用於類別宣告[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)巨集，若要利用動態型別檢查。 任何`CException`-您所建立的衍生的類別應使用`IMPLEMENT_DYNAMIC`巨集，太。  
   
- 您可以對使用者的例外狀況的相關報告詳細資料，藉由呼叫[GetErrorMessage](cfileexception-class.md#geterrormessage)或[ReportError](#reporterror)、 兩個成員函式使用的任何`CException`的衍生類別。  
+ 您可以對使用者的例外狀況的相關報告詳細資料，藉由呼叫[GetErrorMessage](cfileexception-class.md#geterrormessage)或是[ReportError](#reporterror)、 兩個成員函式搭配任一`CException`的衍生類別。  
   
- 如果巨集，其中所攔截到例外狀況`CException`物件則會自動刪除; 請勿將它刪除自己。 如果使用攔截到例外狀況**攔截**關鍵字，不會自動刪除。 請參閱文章[例外狀況處理 (MFC)](../exception-handling-in-mfc.md)如需有關何時要刪除的例外狀況物件。  
+ 如果其中一個巨集、 攔截到例外狀況`CException`物件會自動刪除; 請勿刪除它自己。 如果透過攔截到例外狀況**攔截**關鍵字，不會自動刪除。 請參閱文章[例外狀況處理 (MFC)](../exception-handling-in-mfc.md)如需有關何時要刪除的例外狀況物件。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](cobject-class.md)  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>參數  
  *b_AutoDelete*  
- 指定**TRUE**如果的記憶體`CException`已在堆積上配置物件。 這會導致`CException`時刪除物件`Delete`呼叫成員函式會刪除例外狀況。 指定**FALSE**如果`CException`物件在堆疊上，或全域物件。 在此情況下，`CException`物件沒有被刪除時`Delete`呼叫成員函式。  
+ 指定 TRUE，如果記憶體`CException`已在堆積上配置物件。 這會導致`CException`物件時刪除`Delete`呼叫成員函式可刪除例外狀況。 如果指定 FALSE`CException`物件在堆疊上，或為全域物件。 在此情況下，`CException`物件將不會刪除`Delete`呼叫成員函式。  
   
 ### <a name="remarks"></a>備註  
- 您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該使用其中一個 MFC 擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 擲回預先定義的類型。 這份文件只為完整性而提供。  
+ 您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生的類別並呼叫其建構函式，則應該使用下列其中一個 MFC 擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)擲回預先定義的類型。 這份文件是只為完整性而提供。  
   
 ##  <a name="delete"></a>  CException::Delete  
- 此函式會查看`CException`堆積上建立物件，如果是的話，它會呼叫**刪除**物件上的運算子。  
+ 此函式會檢查是否要`CException`堆積上建立物件，如果是的話，它會呼叫**刪除**物件上的運算子。  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>備註  
- 刪除時`CException`物件，請使用`Delete`成員函式來刪除例外狀況。 請勿使用**刪除**運算子直接管理，因為`CException`物件可能全域物件，或在堆疊上建立。  
+ 刪除時`CException`物件，請使用`Delete`成員函式來刪除例外狀況。 請勿使用**刪除**運算子直接，因為`CException`物件可能全域物件，或已建立在堆疊上。  
   
- 您可以指定在物件建構時，是否應刪除物件。 如需詳細資訊，請參閱[CException::CException](#cexception)。  
+ 您可以指定的物件建構時是否應該刪除的物件。 如需詳細資訊，請參閱 < [CException::CException](#cexception)。  
   
- 您只需要呼叫`Delete`如果您使用 c + +**再試一次**- **攔截**機制。 如果您使用 MFC 巨集**再試一次**和**攔截**，則這些巨集將會自動呼叫此函式。  
+ 您只需要呼叫`Delete`如果您使用 c + +**試**- **攔截**機制。 如果您使用 MFC 巨集**嘗試**並**攔截**，則這些巨集將會自動呼叫此函式。  
   
 ### <a name="example"></a>範例  
  ```cpp  
@@ -169,7 +169,7 @@ if (pFile != NULL)
  ```
   
 ##  <a name="reporterror"></a>  CException::ReportError  
- 在訊息方塊中，使用者呼叫此成員函式，來報告錯誤文字。  
+ 在訊息方塊中對使用者呼叫此成員函式，以報告錯誤文字。  
   
 ```  
 virtual int ReportError(
@@ -179,16 +179,16 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>參數  
  *n*  
- 指定訊息方塊樣式。 套用的任何組合[訊息方塊樣式](styles-used-by-mfc.md#message-box-styles)到方塊。 如果您未指定這個參數，預設值是**MB_OK**。  
+ 指定訊息方塊的樣式。 套用的任何組合[訊息方塊樣式](styles-used-by-mfc.md#message-box-styles)至方塊。 如果您未指定此參數，預設會為 MB_OK。  
   
  *nMessageID*  
  指定要顯示的例外狀況物件不具有錯誤訊息時的訊息的資源識別碼 （字串資料表項目）。 如果為 0，訊息 「 沒有錯誤訊息已使用 」 隨即出現。  
   
 ### <a name="return-value"></a>傳回值  
- `AfxMessageBox`值; 否則為 0，表示記憶體不足，無法顯示訊息方塊。 請參閱[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)提供可能的傳回值。  
+ `AfxMessageBox`值; 否則為 0，如果沒有足夠的記憶體來顯示訊息方塊。 請參閱[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)可能的傳回值。  
   
 ### <a name="example"></a>範例  
- 以下是使用的範例`CException::ReportError`。 如需其他範例，請參閱範例的[攔截](exception-processing.md#catch)。  
+ 以下是使用的範例`CException::ReportError`。 如需其他範例，請參閱範例[攔截](exception-processing.md#catch)。  
   
 ```cpp  
 CFile fileInput;

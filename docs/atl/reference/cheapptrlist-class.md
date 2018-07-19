@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrList 類別 |Microsoft 文件
+title: CHeapPtrList 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5b164fda27775a7b3fb272d8718c31815cb1ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd3342e7c64a13761830073cd3ed82b627b8c407
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358811"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879292"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList 類別
-建構堆積指標清單時，這個類別會提供有用的方法。  
+建構一份堆積指標時，這個類別會提供有用的方法。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ class CHeapPtrList
 ```  
   
 #### <a name="parameters"></a>參數  
- `E`  
- 要儲存於集合類別的物件類型。  
+ *E*  
+ 要儲存在集合類別的物件類型。  
   
- `Allocator`  
+ *配置器*  
  要使用的記憶體配置類別。 預設值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。  
   
 ## <a name="members"></a>成員  
@@ -56,7 +56,7 @@ class CHeapPtrList
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|建構函式。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供建構函式，並衍生方法[CAtlList](../../atl/reference/catllist-class.md)和[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)協助儲存堆積的指標集合類別物件的建立。  
+ 這個類別提供建構函式，並衍生方法從[CAtlList](../../atl/reference/catllist-class.md)並[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)協助儲存堆積指標集合類別物件的建立。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -74,11 +74,11 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBlockSize`  
+ *nBlockSize*  
  區塊大小。  
   
 ### <a name="remarks"></a>備註  
- 區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小減少記憶體配置常式，呼叫，但使用較多資源。  
+ 區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小會減少記憶體配置常式，呼叫，但使用較多資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlList 類別](../../atl/reference/catllist-class.md)   

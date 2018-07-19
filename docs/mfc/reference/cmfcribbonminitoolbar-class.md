@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonMiniToolBar 類別 |Microsoft 文件
+title: CMFCRibbonMiniToolBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041746"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852883"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 類別
 實作內容快顯工具列。  
@@ -56,7 +56,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |名稱|描述|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(覆寫 `CMFCPopupMenu::IsRibbonMiniToolBar`。)|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|設定要顯示在工具列上的命令清單。|  
@@ -102,13 +102,13 @@ void SetCommands(
  要顯示的按鈕搜尋迷你工具列功能區列。  
   
  [in]*lstCommands*  
- 顯示迷你工具列上的命令清單。 所有的功能區分類會搜尋以尋找相關聯的按鈕。  
+ 若要顯示在迷你工具列上的命令清單。 所有的功能區分類會搜尋以尋找相關聯的按鈕。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用此函式來設定顯示迷你工具列中的命令清單。  
+ 此函式可用於設定要顯示在迷你工具列中的命令清單。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`SetCommands`方法`CMFCRibbonMiniToolBar`類別。 此程式碼片段是部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`SetCommands`方法的`CMFCRibbonMiniToolBar`類別。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -123,13 +123,13 @@ BOOL Show(
   
 ### <a name="parameters"></a>參數  
  [in]*x*  
- 指定螢幕座標的迷你工具列的水平位置。  
+ 螢幕座標中指定迷你工具列的水平的位置。  
   
  [in]*y*  
- 指定螢幕座標的迷你工具列的垂直位置。  
+ 螢幕座標中指定迷你工具列的垂直的位置。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已成功; 顯示迷你工具列否則， `FALSE`。  
+ 如果已成功; 顯示迷你工具列，則為 TRUE。否則為 FALSE。  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  顯示迷你工具列以及操作功能表。  
@@ -144,22 +144,22 @@ BOOL ShowWithContextMenu(
   
 ### <a name="parameters"></a>參數  
  [in]*x*  
- 在螢幕座標中指定的內容功能表的水平位置。  
+ 螢幕座標中指定的內容功能表的水平位置。  
   
  [in]*y*  
- 在螢幕座標中指定的內容功能表的垂直位置。  
+ 螢幕座標中指定的內容功能表的垂直位置。  
   
  [in]*uiMenuResID*  
  指定要顯示內容功能表中的資源 ID。  
   
  [in]*pWndOwner*  
- 識別視窗操作功能表中接收訊息的視窗。  
+ 識別從內容功能表中接收訊息的視窗。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已成功; 顯示內容功能表否則， `FALSE`。  
+ 如果已成功; 顯示內容功能表，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 使用這個函數來顯示內容功能表的迷你工具列。 內容功能表是迷你工具列下方的定位 15 像素。  
+ 您可以使用此函式，顯示具有操作功能表的迷你工具列。 操作功能表是迷你工具列下方的定位 15 像素。  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

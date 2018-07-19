@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846073"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953230"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 類別
 
@@ -80,7 +80,7 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此類別描述產生類型 `bool` 的值的分佈，此分佈是根據白努利分佈離散可能性函式進行分佈。 下表提供各個成員的文章連結。
+此類別描述產生之類型的值分佈**bool**、 分佈是根據白努利分佈離散可能性函式。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -178,7 +178,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p*儲存`p`分佈參數。
+*p*預存`p`分佈參數。
 
 *parm* `param_type`結構，用來建構分佈。
 
@@ -200,7 +200,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p*儲存`p`分佈參數。
+*p*預存`p`分佈參數。
 
 ### <a name="remarks"></a>備註
 

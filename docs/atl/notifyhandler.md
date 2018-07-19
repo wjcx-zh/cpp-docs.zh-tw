@@ -1,5 +1,5 @@
 ---
-title: NotifyHandler |Microsoft 文件
+title: NotifyHandler |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356449"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848333"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-函式的第三個參數所識別的名稱`NOTIFY_HANDLER`中訊息對應巨集。  
+訊息對應中 NOTIFY_HANDLER 巨集的第三個參數所識別的函式名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +39,14 @@ ms.locfileid: "32356449"
 ```  
   
 #### <a name="parameters"></a>參數  
- `idCtrl`  
- 傳送訊息之控制項的識別項。  
+ *idCtrl*  
+ 傳送訊息的控制項識別項。  
   
  *pnmh*  
- 位址[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)結構，其中包含通知程式碼和其他資訊。 對於某些通知的訊息，此參數會指向具有較大結構**NMHDR**結構做為其第一個成員。  
+ 位址[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)結構，包含通知程式碼和其他資訊。 對於某些通知的訊息，此參數會指向較大的結構，其`NMHDR`做為其第一個成員的結構。  
   
- `bHandled`  
- 訊息對應集`bHandled`至**TRUE**之前*NotifyHandler*呼叫。 如果*NotifyHandler*完全不會處理訊息，它應該設定`bHandled`至**FALSE**以指出需要進一步處理的訊息。  
+ *bHandled*  
+ 訊息對應集*bHandled*設為 TRUE 之前*NotifyHandler*呼叫。 如果*NotifyHandler*不會完全處理訊息，它應該設定*bHandled*來**FALSE**以指出訊息必須進一步處理。  
   
 ## <a name="return-value"></a>傳回值  
  訊息處理的結果。 0，表示成功。  

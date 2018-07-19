@@ -1,5 +1,5 @@
 ---
-title: CPrimitiveElementTraits 類別 |Microsoft 文件
+title: CPrimitiveElementTraits 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359139"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885805"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 類別
-這個類別會提供預設的方法和集合類別的函式組成的基本資料類型。  
+這個類別會提供預設方法，集合類別的函式是由基本資料類型所組成。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +37,8 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 集合類別物件中儲存的資料類型。  
+ *T*  
+ 集合類別物件中儲存的資料型別。  
   
 ## <a name="members"></a>成員  
   
@@ -46,13 +46,13 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|  
 |[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供預設靜態函式和方法來移動、 複製、 比較和雜湊儲存在集合類別物件的基本資料型別項目。  
+ 這個類別會提供預設的靜態函式和移動、 複製、 比較和雜湊儲存在集合類別物件的基本資料型別項目所用的方法。  
   
- 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
+ 如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -69,7 +69,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
  **標頭：** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
- 要用來將項目加入至集合的類別物件的資料類型。  
+ 要用於將項目加入至集合的類別物件的資料類型。  
   
 ```
 typedef T INARGTYPE;

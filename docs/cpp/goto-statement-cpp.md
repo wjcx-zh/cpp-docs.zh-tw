@@ -1,5 +1,5 @@
 ---
-title: goto 陳述式 （c + +） |Microsoft 文件
+title: goto 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953391"
 ---
 # <a name="goto-statement-c"></a>goto 陳述式 (C++)
-`goto` 陳述式無條件地將控制項傳送至所指定識別項標記的陳述式。  
+**Goto**陳述式無條件地將控制權傳輸至指定的識別項所標記的陳述式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,16 +35,16 @@ goto identifier;
 ## <a name="remarks"></a>備註  
  `identifier` 所指定之標記的陳述式必須位於目前的函式。 所有 `identifier` 名稱是內部命名空間的成員，因此不會干擾其他識別項。  
   
- 陳述式標籤只對 `goto` 陳述式有意義，否則會忽略陳述式標籤。 標籤不能重新宣告。  
+ 陳述式標籤是僅有意義**goto**陳述式; 否則會忽略陳述式標籤。 標籤不能重新宣告。  
   
- 理想的程式設計風格是盡可能先使用 `break`、`continue` 和 `return` 陳述式，而不是 `goto` 陳述式。 不過，因為 `break` 陳述式只從一層迴圈結束，您可能必須使用 `goto` 陳述式來結束深度巢狀迴圈。  
+ 它是理想的程式設計風格，使用**中斷**，**繼續**，和**傳回**陳述式，而不是**goto**陳述式時可能的。 不過，因為**中斷**陳述式會結束迴圈的只有一個層級，您可能必須使用**goto**陳述式來結束深度巢狀的迴圈。  
   
- 如需標籤和`goto`陳述式，請參閱[標記陳述式](../cpp/labeled-statements.md)和[使用標籤與 goto 陳述式](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe)。  
+ 如需標籤和**goto**陳述式，請參閱[標記陳述式](../cpp/labeled-statements.md)。  
   
 ## <a name="example"></a>範例  
- 在這個範例中，當 `i` 等於 3 時，`goto` 陳述式會將控制項傳送至標記 `stop` 的點。  
+ 在此範例中， **goto**陳述式將控制權傳輸至標示的點`stop`當`i`等於 3。  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

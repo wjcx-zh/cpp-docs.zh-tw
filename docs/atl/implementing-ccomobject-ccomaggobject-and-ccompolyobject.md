@@ -1,5 +1,5 @@
 ---
-title: 實作 Ccomobject<、 CComAggObject 和 CComPolyObject |Microsoft 文件
+title: 實作 CComObject、 CComAggObject 和 CComPolyObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,28 +21,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3b1f8a0cf466e5364907dd87eefe8bbdc0a003d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356337"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848359"
 ---
-# <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>實作 Ccomobject<、 CComAggObject 和 CComPolyObject
-樣板類別[Ccomobject<](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，和[CComPolyObject](../atl/reference/ccompolyobject-class.md)一律會繼承鏈結中最常衍生的類別。 他們要負責處理的方法中的所有**IUnknown**: `QueryInterface`， `AddRef`，和**發行**。 此外，`CComAggObject`和`CComPolyObject`（當用於彙總的物件） 提供特殊的參考計數和`QueryInterface`內部未知所需的語意。  
+# <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>實作 CComObject、 CComAggObject 和 CComPolyObject
+範本類別[CComObject](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，並[CComPolyObject](../atl/reference/ccompolyobject-class.md)一律會繼承鏈結中的最具衍生性的類別。 其須負責處理的方法中的所有`IUnknown`: `QueryInterface`， `AddRef`，和`Release`。 颾魤 ㄛ`CComAggObject`並`CComPolyObject`（使用彙總的物件） 時提供特殊的參考計數和`QueryInterface`所需的內部未知的語意。  
   
  是否`CComObject`， `CComAggObject`，或`CComPolyObject`用取決於您宣告一個 （或無） 下列巨集：  
   
 |巨集|作用|  
 |-----------|------------|  
-|`DECLARE_NOT_AGGREGATABLE`|一律會使用`CComObject`。|  
-|`DECLARE_AGGREGATABLE`|使用`CComAggObject`如果已彙總物件和`CComObject`如果不是。 `CComCoClass` 包含此巨集，如果沒有任何**DECLARE_\*_AGGREGATABLE**巨集宣告在類別中，這會是預設值。|  
-|`DECLARE_ONLY_AGGREGATABLE`|一律會使用`CComAggObject`。 如果物件不會彙總，則傳回錯誤。|  
-|`DECLARE_POLY_AGGREGATABLE`|ATL 建立的執行個體**CComPolyObject\<CYourClass >** 時**IClassFactory::CreateInstance**呼叫。 在建立期間，會檢查的外部未知的值。 如果是**NULL**， **IUnknown**實作非彙總的物件。 如果不是外部未知**NULL**， **IUnknown**彙總物件，則實作。|  
+|DECLARE_NOT_AGGREGATABLE|一律會使用`CComObject`。|  
+|DECLARE_AGGREGATABLE|會使用`CComAggObject`如果已彙總物件和`CComObject`如果不是。 `CComCoClass` 包含此巨集，如果沒有 DECLARE_ * _AGGREGATABLE 巨集是在類別中宣告，這是預設值。|  
+|DECLARE_ONLY_AGGREGATABLE|一律會使用`CComAggObject`。 如果物件不會彙總，會傳回錯誤。|  
+|DECLARE_POLY_AGGREGATABLE|ATL 建立的執行個體**CComPolyObject\<CYourClass >** 當`IClassFactory::CreateInstance`呼叫。 在建立期間，會檢查的外部未知的值。 如果它是 NULL，`IUnknown`實作非彙總的物件。 如果不是 NULL，外部未知`IUnknown`會彙總物件的實作。|  
   
- 使用的優點`CComAggObject`和`CComObject`的實作**IUnknown**最適合用於所建立物件的類型。 比方說，非彙總的物件只需要一個參考計數，而彙總的物件需要內部未知的參考計數和外部未知的指標。  
+ 使用的優點`CComAggObject`並`CComObject`的實作`IUnknown`最適合用於建立物件的類型。 比方說，非彙總的物件只需要一個參考計數，而彙總的物件需要的內部的未知參考計數和外部未知的指標。  
   
- 使用的優點`CComPolyObject`是，您可以避免必須同時`CComAggObject`和`CComObject`處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 這表示您可以在模組中存在 vtable 只能有一個複本和一份函式。 如果您的 vtable 很大，這可以大幅降低模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`會造成較大的模組大小因為沒有最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
+ 使用的優點`CComPolyObject`避免擁有`CComAggObject`和`CComObject`處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 這表示只有一個複本的 vtable 和一份函式存在於您的模組。 如果您的 vtable 很大，這可以大幅降低您的模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`可能會導致稍微大一點的模組大小因為它不會最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
   
 ## <a name="see-also"></a>另請參閱  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)   

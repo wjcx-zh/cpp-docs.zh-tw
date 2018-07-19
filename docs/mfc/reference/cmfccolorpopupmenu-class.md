@@ -1,5 +1,5 @@
 ---
-title: CMFCColorPopupMenu 類別 |Microsoft 文件
+title: CMFCColorPopupMenu 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037300"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852990"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 類別
-表示使用者使用文件或應用程式中選取色彩的快顯功能表。  
+代表使用者使用文件或應用程式中選取色彩的快顯功能表。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,9 +55,9 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |||  
 |-|-|  
 |名稱|描述|  
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|建立可停駐撕色軸。 (覆寫[CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)。)|  
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|建立可停駐 tear-off 色彩列。 (覆寫[CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)。)|  
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) ，內嵌於快顯功能表。 (覆寫[CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)。)|  
-|`CMFCColorPopupMenu::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
+|`CMFCColorPopupMenu::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
 |[CMFCColorPopupMenu::SetPropList](#setproplist)|設定的屬性方格控制項物件嵌入的`CMFCColorBar`物件。|  
   
 ### <a name="data-members"></a>資料成員  
@@ -66,12 +66,12 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |-|-|  
 |名稱|描述|  
 |`m_bEnabledInCustomizeMode`|布林值，決定是否要顯示色軸。|  
-|`m_wndColorBar`|`CMFCColorBar`提供色彩選取的物件。|  
+|`m_wndColorBar`|`CMFCColorBar`提供色彩選取範圍的物件。|  
   
 ### <a name="remarks"></a>備註  
- 這個類別繼承的快顯功能表功能`CMFCPopupMenu`類別，並管理`CMFCColorBar`提供色彩選取的物件。 當工具列 framework 處於自訂模式和`m_bEnabledInCustomizeMode`成員設定為`FALSE`，不會顯示色軸物件。 如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+ 這個類別繼承的快顯功能表功能`CMFCPopupMenu`類別，並管理`CMFCColorBar`提供色彩選取範圍的物件。 當工具列 framework 處於自訂模式和`m_bEnabledInCustomizeMode`成員設定為 FALSE，不會顯示色軸物件。 如需有關自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
   
- 如需有關`CMFCColorBar`，請參閱[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)。  
+ 如需詳細資訊`CMFCColorBar`，請參閱 < [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -134,44 +134,44 @@ CMFCColorPopupMenu(
   
 ### <a name="parameters"></a>參數  
  [in]*色彩*  
- 架構會顯示快顯功能表的色彩的陣列。  
+ 陣列，架構會顯示快顯功能表的色彩。  
   
  [in]*色彩*  
  選取的預設色彩。  
   
  [in]*lpszAutoColor*  
- 文字標籤*自動*（預設值） 的色彩按鈕，或`NULL`。  
+ 文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
   
- 自動按鈕的標準標籤是**自動**。  
+ 標準自動按鈕的標籤**自動**。  
   
  [in]*lpszOtherColor*  
- 文字標籤*其他*按鈕則顯示更多色彩選擇，或`NULL`。  
+ 文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
   
- 其他按鈕的標準標籤是**更多色彩...**.  
+ [其他] 按鈕的標準標籤是**其他色彩...**.  
   
  [in]*lpszDocColors*  
- 文件色彩按鈕文字標籤。 文件色彩調色盤會列出所有文件目前使用的色彩。  
+ 文件的 [色彩] 按鈕的文字標籤。 文件色彩調色盤會列出所有的文件目前使用的色彩。  
   
  [in]*lstDocColors*  
- 文件目前使用的色彩清單。  
+ 一份文件目前使用的色彩。  
   
  [in]*nColumns*  
  具有色彩陣列的資料行數目。  
   
  [in]*nHorzDockRows*  
- 色軸具有水平停駐時的資料列數目。  
+ 可在色軸水平的停駐時的資料列數目。  
   
  [in]*nVertDockColumns*  
- 色軸具有為垂直的停駐時的資料行數目。  
+ 可在色軸垂直的停駐時的資料行數目。  
   
  [in]*colorAutomatic*  
- 當您按一下 [自動] 按鈕時，適用於架構的預設色彩。  
+ 當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
   
  [in]*uiCommandID*  
  色軸控制項命令識別碼。  
   
  [in]*bStdColorDlg*  
- 布林值，指出是否要顯示標準系統色彩 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  對話方塊。  
+ 布林值，指出是否要顯示標準系統的 [色彩] 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  對話方塊。  
   
  [in]*pParentBtn*  
  父代按鈕指標。  
@@ -180,7 +180,7 @@ CMFCColorPopupMenu(
  命令 ID。  
   
 ### <a name="remarks"></a>備註  
- 每個多載建構函式`m_bEnabledInCustomizeMode`成員`FALSE`。  
+ 每個多載建構函式集`m_bEnabledInCustomizeMode`成員設為 FALSE。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何建構`CMFCColorPopupMenu`物件。  
@@ -188,7 +188,7 @@ CMFCColorPopupMenu(
  [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
 ##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar  
- 建立可停駐撕色軸。  
+ 建立可停駐 tear-off 色彩列。  
   
 ```  
 virtual CPane* CreateTearOffBar(
@@ -210,7 +210,7 @@ virtual CPane* CreateTearOffBar(
  新的分割控制列物件的指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會建立[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件，並將它轉換成[CPane 類別](../../mfc/reference/cpane-class.md)指標。 您可以將此值轉換回[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)使用其中一種中所述的轉換巨集的指標[類型轉型的 MFC 類別物件](../../mfc/reference/type-casting-of-mfc-class-objects.md)。  
+ 這個方法會建立[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件，並將它轉換成[CPane 類別](../../mfc/reference/cpane-class.md)指標。 您可以將此值轉換回[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)使用其中一種中所述的轉換巨集的指標[型別轉型的 MFC 類別物件](../../mfc/reference/type-casting-of-mfc-class-objects.md)。  
   
 ##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
  傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) ，內嵌於快顯功能表。  
@@ -223,7 +223,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
  內嵌的指標`CMFCPopupMenuBar`。  
   
 ### <a name="remarks"></a>備註  
- 色彩的快顯功能表還包含內嵌[CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)物件。 如果您的應用程式使用不同的內嵌的類型，請覆寫這個方法在衍生類別中。  
+ 色彩的快顯功能表還包含內嵌[CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)物件。 如果您的應用程式會使用不同的內嵌的類型，請覆寫這個方法在衍生類別中。  
   
 ##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
  設定的屬性方格控制項物件嵌入的`CMFCColorBar`物件。  

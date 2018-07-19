@@ -1,5 +1,5 @@
 ---
-title: CMFCPopupMenu 類別 |Microsoft 文件
+title: CMFCPopupMenu 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f92f600d5005fbc85b1dd82ce66274020adb4b2
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3b80dbc4383b18f3e8183ae06d2259398b5e1223
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042192"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852545"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 實作 Windows 快顯功能表功能，並加入功能 (例如 Tear-Off 功能表和工具提示) 進行擴充。
@@ -202,27 +202,27 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||  
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|設定是否啟用快顯功能表來顯示使用者定義類型的空項目。|  
 |[CMFCPopupMenu::AreAllCommandsShown](#areallcommandsshown)||  
-|[CMFCPopupMenu::CheckArea](#checkarea)|決定相對於快顯功能表原點的位置。|  
+|[CMFCPopupMenu::CheckArea](#checkarea)|決定一個點相對的快顯功能表的位置。|  
 |[CMFCPopupMenu::CloseMenu](#closemenu)||  
 |[CMFCPopupMenu::Create](#create)|建立快顯功能表，並將它附加至`CMFCPopupMenu`物件。|  
 |[CMFCPopupMenu::DefaultMouseClickOnClose](#defaultmouseclickonclose)||  
 |[CMFCPopupMenu::EnableMenuLogo](#enablemenulogo)|初始化快顯功能表的標誌。|  
-|[CMFCPopupMenu::EnableMenuSound](#enablemenusound)|可讓功能表音效。|  
+|[CMFCPopupMenu::EnableMenuSound](#enablemenusound)|可讓功能表的音效。|  
 |[CMFCPopupMenu::EnableResize](#enableresize)||  
 |[CMFCPopupMenu::EnableScrolling](#enablescrolling)||  
 |[CMFCPopupMenu::EnableVertResize](#enablevertresize)||  
 |[CMFCPopupMenu::FindSubItemByCommand](#findsubitembycommand)||  
 |[CMFCPopupMenu::GetActiveMenu](#getactivemenu)|傳回目前使用中的功能表。|  
-|[CMFCPopupMenu::GetAnimationSpeed](#getanimationspeed)|傳回動畫的速度快顯功能表。|  
-|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|傳回目前的快顯功能表動畫類型。|  
+|[CMFCPopupMenu::GetAnimationSpeed](#getanimationspeed)|傳回快顯功能表的動畫速度。|  
+|[CMFCPopupMenu::GetAnimationType](#getanimationtype)|傳回目前的快顯功能表的動畫類型。|  
 |[CMFCPopupMenu::GetDropDirection](#getdropdirection)||  
-|[CMFCPopupMenu::GetForceMenuFocus](#getforcemenufocus)|指出是否要將焦點傳回至功能表列顯示快顯功能表時。|  
+|[CMFCPopupMenu::GetForceMenuFocus](#getforcemenufocus)|表示是否要將焦點傳回至功能表列的快顯功能表顯示時。|  
 |[CMFCPopupMenu::GetForceShadow](#getforceshadow)||  
 |[CMFCPopupMenu::GetHMenu](#gethmenu)|傳回附加的功能表資源的控制代碼。|  
-|[CMFCPopupMenu::GetMenuBar](#getmenubar)|傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)內嵌於快顯功能表。|  
-|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|讓指標回到指定索引處的功能表項目。|  
-|[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|傳回快顯功能表中的項目數目。|  
-|[CMFCPopupMenu::GetMessageWnd](#getmessagewnd)|讓指標回到 framework 要路由傳送快顯功能表訊息視窗。|  
+|[CMFCPopupMenu::GetMenuBar](#getmenubar)|傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)內嵌在快顯功能表。|  
+|[CMFCPopupMenu::GetMenuItem](#getmenuitem)|讓指標回到指定的索引處的功能表項目。|  
+|[CMFCPopupMenu::GetMenuItemCount](#getmenuitemcount)|在快顯功能表中，傳回的項目數。|  
+|[CMFCPopupMenu::GetMessageWnd](#getmessagewnd)|讓指標回到的視窗，架構會將路由快顯功能表訊息。|  
 |[CMFCPopupMenu::GetParentArea](#getparentarea)||  
 |[CMFCPopupMenu::GetParentButton](#getparentbutton)|讓指標回到父工具列按鈕。|  
 |[CMFCPopupMenu::GetParentPopupMenu](#getparentpopupmenu)|讓指標回到父快顯功能表。|  
@@ -231,36 +231,36 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu::GetQuickCustomizeType](#getquickcustomizetype)||  
 |[CMFCPopupMenu::GetSelItem](#getselitem)|讓指標回到目前選取的功能表命令。|  
 |[CMFCPopupMenu::HasBeenResized](#hasbeenresized)||  
-|[CMFCPopupMenu::HideRarelyUsedCommands](#hiderarelyusedcommands)|指出快顯功能表是否可以隱藏很少使用的命令。|  
+|[CMFCPopupMenu::HideRarelyUsedCommands](#hiderarelyusedcommands)|表示快顯功能表是否可以隱藏很少使用的命令。|  
 |[CMFCPopupMenu::InCommand](#incommand)||  
-|[CMFCPopupMenu::InsertItem](#insertitem)|將新的項目插入至指定的位置快顯功能表。|  
-|[CMFCPopupMenu::InsertSeparator](#insertseparator)|在指定的位置快顯功能表中插入分隔符號。|  
+|[CMFCPopupMenu::InsertItem](#insertitem)|在指定的位置快顯功能表中插入新項目。|  
+|[CMFCPopupMenu::InsertSeparator](#insertseparator)|插入指定位置的快顯功能表中的分隔符號。|  
 |[CMFCPopupMenu::IsAlwaysClose](#isalwaysclose)||  
 |[CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry](#isalwaysshowemptytoolsentry)||  
-|[CMFCPopupMenu::IsCustomizePane](#iscustomizepane)|指出是否有快顯功能表就做**QuickCustomizePane**。|  
+|[CMFCPopupMenu::IsCustomizePane](#iscustomizepane)|指出是否有快顯功能表當作**QuickCustomizePane**。|  
 |[CMFCPopupMenu::IsEscClose](#isescclose)||  
-|[CMFCPopupMenu::IsIdle](#isidle)|指出是否目前閒置快顯功能表。|  
+|[CMFCPopupMenu::IsIdle](#isidle)|指出快顯功能表是否目前處於閒置狀態。|  
 |[CMFCPopupMenu::IsMenuSound](#ismenusound)||  
-|[CMFCPopupMenu::IsQuickCustomize](#isquickcustomize)|決定是否關聯[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)處於 QuickCustomize 模式。|  
+|[CMFCPopupMenu::IsQuickCustomize](#isquickcustomize)|決定是否相關聯[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)處於 QuickCustomize 模式。|  
 |[CMFCPopupMenu::IsResizeble](#isresizeble)||  
-|[CMFCPopupMenu::IsRightAlign](#isrightalign)|表示功能表是否靠右或靠左對齊。|  
+|[CMFCPopupMenu::IsRightAlign](#isrightalign)|指出功能表是否靠右或靠左對齊。|  
 |[CMFCPopupMenu::IsScrollable](#isscrollable)||  
-|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|指出當使用者從快顯功能表選取命令，架構是否通知父框架。|  
-|[CMFCPopupMenu::IsShown](#isshown)|指出快顯功能表目前是否為可見。|  
+|[CMFCPopupMenu::IsSendMenuSelectMsg](#issendmenuselectmsg)|指出當使用者從快顯功能表中選取的命令時，framework 是否通知父框架。|  
+|[CMFCPopupMenu::IsShown](#isshown)|指出是否為目前可看見快顯功能表。|  
 |[CMFCPopupMenu::MoveTo](#moveto)||  
 |[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|(覆寫 `CFrameWnd::OnCmdMsg`。)|  
 |[CMFCPopupMenu::PostCommand](#postcommand)||  
 |[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|(覆寫 `CFrameWnd::PreTranslateMessage`。)|  
-|[CMFCPopupMenu::RecalcLayout](#recalclayout)|當標準主控項列切換為開啟或關閉，或調整框架視窗的大小時，由架構呼叫。 (覆寫[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|  
-|[CMFCPopupMenu::RemoveAllItems](#removeallitems)|清除所有項目從快顯功能表。|  
+|[CMFCPopupMenu::RecalcLayout](#recalclayout)|當標準主控項列切換為開或關或框架視窗調整大小時，由架構呼叫。 (覆寫[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|  
+|[CMFCPopupMenu::RemoveAllItems](#removeallitems)|清除快顯功能表中的所有項目。|  
 |[CMFCPopupMenu::RemoveItem](#removeitem)|從快顯功能表中移除指定的項目。|  
 |[CMFCPopupMenu::SaveState](#savestate)||  
-|[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)|設定動畫的速度快顯功能表。|  
+|[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)|設定快顯功能表的動畫速度。|  
 |[CMFCPopupMenu::SetAnimationType](#setanimationtype)|設定快顯功能表的動畫類型。|  
 |[CMFCPopupMenu::SetAutoDestroy](#setautodestroy)||  
 |[CMFCPopupMenu::SetDefaultItem](#setdefaultitem)|設定快顯功能表的預設命令。|  
-|[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)|強制輸入的焦點返回到功能表列顯示快顯功能表時。|  
-|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|強制時快顯功能表出現在主框架之外繪製功能表陰影架構。|  
+|[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)|會強制以返回 功能表列的快顯功能表出現時輸入的焦點。|  
+|[CMFCPopupMenu::SetForceShadow](#setforceshadow)|強制主框架外的快顯功能表出現時，繪製功能表陰影的架構。|  
 |[CMFCPopupMenu::SetMaxWidth](#setmaxwidth)|設定快顯功能表的最大寬度。|  
 |[CMFCPopupMenu::SetMessageWnd](#setmessagewnd)||  
 |[CMFCPopupMenu::SetParentRibbonElement](#setparentribbonelement)||  
@@ -282,10 +282,10 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu::OnChooseItem](#onchooseitem)||  
   
 ### <a name="remarks"></a>備註  
- 一般來說，MFC 會自動建立快顯功能表。 如果您想要建立`CMFCPopupMenu`手動物件、 配置在堆積上的其中一個，然後呼叫[CMFCPopupMenu::Create](#create)。  
+ 一般來說，MFC 會自動建立快顯功能表。 如果您想要建立`CMFCPopupMenu`手動物件，配置在堆積上的其中一個，然後呼叫[CMFCPopupMenu::Create](#create)。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何設定快顯功能表物件。 此範例示範如何設定標誌和快顯功能表的音效、 設定動畫的速度和類型、 外部主框架就會出現快顯功能表時，繪製功能表陰影、 設定最大寬度，以及設定快顯功能表的右邊的功能表對齊方式。 此程式碼片段是部分[自訂網頁範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何設定快顯功能表物件。 此範例示範如何設定標誌和快顯功能表的音效、 設定動畫的速度和類型、 繪製功能表陰影主框架外的快顯功能表出現時，設定的最大寬度，並設定快顯功能表的右邊的功能表對齊。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]  
   
@@ -331,7 +331,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bShow*  
- `TRUE` 如果快顯功能表可顯示空的項目。`FALSE`否則。  
+ 如果快顯功能表可顯示空的項目，則為 TRUEFALSE 否則。  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
@@ -345,7 +345,7 @@ BOOL AreAllCommandsShown() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="checkarea"></a>  CMFCPopupMenu::CheckArea  
- 決定相對於快顯功能表原點的位置。  
+ 決定一個點相對的快顯功能表的位置。  
   
 ```  
 MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;  
@@ -356,7 +356,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
  螢幕座標中的點。  
   
 ### <a name="return-value"></a>傳回值  
- 表示點相對於快顯功能表 MENUAREA_TYPE 參數。  
+ 表示相對於快顯功能表中的點所在的 MENUAREA_TYPE 參數。  
   
 ### <a name="remarks"></a>備註  
  MENUAREA_TYPE 參數可以有下列值之一。  
@@ -365,13 +365,13 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
   
 -   標誌- *ptScreen*標誌區域上方。  
   
--   TEAROFF_CAPTION- *ptScreen*撕標題上方。  
+-   TEAROFF_CAPTION- *ptScreen*分割標題上方。  
   
--   SHADOW_BOTTOM- *ptScreen*上方的快顯功能表下陰影。  
+-   SHADOW_BOTTOM- *ptScreen*是透過快顯功能表的底部陰影。  
   
 -   SHADOW_RIGHT- *ptScreen*是透過快顯功能表的陰影。  
   
--   功能表- *ptScreen*是透過命令。  
+-   功能表中， *ptScreen*是透過命令。  
   
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
@@ -402,7 +402,7 @@ CMFCPopupMenu(
  包含的功能表標題的字串。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會將的資源配置`CMFCPopupMenu`。 若要建立快顯功能表項目，呼叫[CMFCPopupMenu::Create](#create)。  
+ 這個方法會配置的資源`CMFCPopupMenu`。 若要建立快顯功能表項目，呼叫[CMFCPopupMenu::Create](#create)。  
   
 ##  <a name="create"></a>  CMFCPopupMenu::Create  
  建立快顯功能表，並將它附加至[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件。  
@@ -422,28 +422,28 @@ virtual BOOL Create(
  父視窗`CMFCPopupMenu`。  
   
  [in]*x*  
- 水平的螢幕座標的位置快顯功能表  
+ 水平螢幕座標，快顯功能表的位置  
   
  [in]*y*  
- 垂直的螢幕快顯功能表的位置座標。  
+ 快顯功能表的位置的垂直螢幕座標。  
   
  [in]*hMenu*  
  功能表資源控制代碼。  
   
  [in]*封鎖*  
- 表示功能表是否可自訂的布林參數。 `FALSE` 表示可自訂的快顯功能表。  
+ 布林值參數，指出功能表是否可自訂。 FALSE 表示快顯功能表自訂。  
   
  [in]*bOwnMessage*  
- 布林值參數，指出此架構將功能表訊息的路由。 請參閱 < 備註 > 一節，如需詳細資訊。  
+ 布林值參數，指出如何架構會將路由的功能表訊息。 請參閱 < 備註 > 一節，如需詳細資訊。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果方法成功。否則`FALSE`。  
+ 如果方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如果*bOwnMessage*是`TRUE`，架構會傳送到任何功能表訊息*pWndParent*。 *pWndParent*不得`NULL`如果*bOwnMessage*是`TRUE.`如果*bOwnMessage*是`FALSE`，架構會將功能表訊息路由至父快顯功能表.  
+ 如果*bOwnMessage*為 TRUE 時，framework 路由至任何功能表訊息*pWndParent*。 *pWndParent*不得為 NULL，如果*bOwnMessage*為 TRUE。 如果*bOwnMessage*為 FALSE 時，framework 路由至父快顯功能表的功能表訊息。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`Create`方法`CMFCPopuMenu`類別。 此程式碼片段是部分[自訂網頁範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`Create`方法的`CMFCPopuMenu`類別。 此程式碼片段是一部分[自訂頁面範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
@@ -491,15 +491,15 @@ void EnableMenuLogo(
  標誌，像素為單位的大小。  
   
  [in]*nLogoLocation*  
- 列舉的資料型別表示的商標的位置。  
+ 列舉的資料類型，表示標誌的位置。  
   
 ### <a name="remarks"></a>備註  
- 若要顯示標誌，請實作方法[CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo)主框架視窗中。  
+ 若要顯示的標誌，實作方法[CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo)主框架視窗中。  
   
  可能值*nLogoLocation* MENU_LOGO_LEFT、 MENU_LOGO_RIGHT、 MENU_LOGO_TOP，和 MENU_LOGO_BOTTOM。  
   
 ##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
- 可讓功能表音效。  
+ 可讓功能表的音效。  
   
 ```  
 static void EnableMenuSound(BOOL bEnable = TRUE);
@@ -507,10 +507,10 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bEnable*  
- `TRUE` 若要啟用聲音`FALSE`否則。  
+ 否則為 FALSE 啟用音效，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如果您啟用聲音，架構會呼叫[PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426)當使用者開啟快顯功能表，或選取功能表命令的方法。 根據預設，會啟用這項功能。  
+ 如果您啟用音效，架構會呼叫[PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426)方法，當使用者開啟快顯功能表，或選取功能表命令。 根據預設，會啟用這項功能。  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 
@@ -570,23 +570,23 @@ static CMFCPopupMenu* GetActiveMenu();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 使用中的快顯功能表或如果沒有快顯功能表是目前作用中的 NULL 指標。  
+ 作用中的快顯功能表或如果沒有快顯功能表是目前作用中的 NULL 指標。  
   
 ### <a name="remarks"></a>備註  
  每個應用程式可以有最多一個作用中快顯功能表。  
   
 ##  <a name="getanimationspeed"></a>  CMFCPopupMenu::GetAnimationSpeed  
- 傳回動畫的速度快顯功能表。  
+ 傳回快顯功能表的動畫速度。  
   
 ```  
 static UINT GetAnimationSpeed();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 整數，表示的時間，以毫秒為單位，快顯功能表動畫會完成。  
+ 整數，表示的時間，以毫秒為單位，完成所需的快顯功能表的動畫。  
   
 ### <a name="remarks"></a>備註  
- 動畫速度是全域的值。 使用[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)變更動畫的速度快顯功能表。  
+ 動畫速度是一個全域值。 使用[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)來變更快顯功能表的動畫速度。  
   
 ##  <a name="getanimationtype"></a>  CMFCPopupMenu::GetAnimationType  
  傳回目前的快顯動畫類型。  
@@ -597,24 +597,24 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
   
 ### <a name="parameters"></a>參數  
  [in]*bNoSystem*  
- 布林值參數，指出是否此方法會檢查全域值。 FALSE，此方法以傳回這個執行個體的動畫樣式[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)。  
+ 布林值參數，指出是否此方法會檢查的全域值。 若要讓此方法以傳回動畫樣式，這個執行個體，則為 FALSE。 [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
  描述動畫類型的列舉的值。  
   
 ### <a name="remarks"></a>備註  
- 動畫的快顯功能表的樣式可適用於您的應用程式。 使用[CMFCPopupMenu::SetAnimationType](#setanimationtype)設定動畫樣式。  
+ 針對快顯功能表樣式是動畫的全域應用程式。 使用[CMFCPopupMenu::SetAnimationType](#setanimationtype)來設定動畫樣式。  
   
- 下表列出的可能動畫型別。  
+ 下表列出可能的動畫類型。  
   
  NO_ANIMATION  
- 快顯功能表沒有顯示動畫，則會立即出現。  
+ 快顯功能表沒有建立動畫，並會立即顯示。  
   
  展開  
- 架構會顯示快顯功能表從左上角到右下角。  
+ 此架構會顯示快顯功能表從左上角到右下角。  
   
  投影片  
- 快顯功能表會從頁首移到下。  
+ 快顯功能表會從上往下。  
   
  淡出  
  第一次出現 透明快顯功能表，並逐漸 solidifies。  
@@ -631,17 +631,17 @@ DROP_DIRECTION GetDropDirection() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getforcemenufocus"></a>  CMFCPopupMenu::GetForceMenuFocus  
- 指出是否要將焦點傳回至功能表列顯示快顯功能表時。  
+ 表示是否要將焦點傳回至功能表列的快顯功能表顯示時。  
   
 ```  
 static BOOL GetForceMenuFocus();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果輸入的焦點傳回至功能表列中顯示快顯功能表時。`FALSE`如果快顯功能表保留焦點。  
+ 如果會顯示快顯功能表; 時，將會傳回至功能表列的輸入的焦點，則為 TRUE。如果快顯功能表保留焦點，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，您的應用程式不會不將焦點傳回至功能表列。 若要變更此設定，請使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)。  
+ 根據預設，您的應用程式不會傳回焦點功能表列。 若要變更此設定，請使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)。  
   
 ##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow  
 
@@ -662,7 +662,7 @@ HMENU GetHMenu();
 ```  
   
 ##  <a name="getmenubar"></a>  CMFCPopupMenu::GetMenuBar  
- 傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)內嵌於快顯功能表。  
+ 傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)內嵌在快顯功能表。  
   
 ```  
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -672,10 +672,10 @@ virtual CMFCPopupMenuBar* GetMenuBar();
  內嵌的指標`CMFCPopupMenuBar`。  
   
 ### <a name="remarks"></a>備註  
- 快顯功能表還包含內嵌`CMFCPopupMenuBar`物件。 如果您使用不同的內嵌的類別，您必須覆寫這個方法在衍生類別中。  
+ 快顯功能表已內嵌`CMFCPopupMenuBar`物件。 如果您使用不同的內嵌的類別，您必須覆寫這個方法在衍生類別中。  
   
 ##  <a name="getmenuitem"></a>  CMFCPopupMenu::GetMenuItem  
- 讓指標回到指定索引處的功能表項目。  
+ 讓指標回到指定的索引處的功能表項目。  
   
 ```  
 CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;  
@@ -683,10 +683,10 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
   
 ### <a name="parameters"></a>參數  
  [in]*iIndex*  
- 功能表項目以零為起始的索引。  
+ 功能表項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 功能表項目的指標。 `NULL` 如果索引是無效的。  
+ 功能表項目的指標。 如果索引無效，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  功能表項目都由[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)。 當您呼叫這個方法時，它讓指標回到適當`CMFCToolBarMenuButton`。  
@@ -702,17 +702,17 @@ int GetMenuItemCount() const;
  在功能表中的項目數目。  
   
 ##  <a name="getmessagewnd"></a>  CMFCPopupMenu::GetMessageWnd  
- 讓指標回到 framework 要路由傳送快顯功能表訊息視窗。  
+ 讓指標回到的視窗，架構會將路由快顯功能表訊息。  
   
 ```  
 CWnd* GetMessageWnd() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 接收快顯功能表訊息; 視窗的指標`NULL`如果沒有視窗。  
+ 接收快顯功能表訊息視窗的指標如果沒有任何視窗，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 當您使用的方法[CMFCPopupMenu::Create](#create)若要建立快顯功能表，您指定哪些視窗會收到功能表訊息。  
+ 當您使用的方法[CMFCPopupMenu::Create](#create)若要建立快顯功能表，您指定哪些視窗接收到的功能表訊息。  
   
 ##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea  
 
@@ -736,12 +736,12 @@ CMFCToolBarMenuButton* GetParentButton() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- [父] 工具列按鈕指標。 `NULL` 如果快顯功能表沒有父工具列按鈕。  
+ [父] 工具列按鈕指標。 如果快顯功能表已沒有 [父] 工具列按鈕，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- A`CMFCPopupMenu`可以與 [] 功能表上的按鈕相關聯。 在此案例中，當使用者選取父工具列按鈕，會出現快顯功能表。  
+ A`CMFCPopupMenu`可以是 [] 功能表上的按鈕相關聯。 在此案例中，當使用者選取 [父] 工具列按鈕，會出現快顯功能表。  
   
- 如果快顯功能表捷徑功能表，會有任何父工具列按鈕。  
+ 如果快顯功能表的捷徑功能表，會有任何父工具列按鈕。  
   
 ##  <a name="getparentpopupmenu"></a>  CMFCPopupMenu::GetParentPopupMenu  
  讓指標回到父快顯功能表。  
@@ -751,10 +751,10 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 父代的指標`CMFCPopupMenu`物件;`NULL`如果沒有父快顯功能表。  
+ 父代指標`CMFCPopupMenu`物件;如果沒有父快顯功能表，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 快顯功能表具有父代`CMFCPopupMenu`物件是否子功能表。  
+ 快顯功能表有父代`CMFCPopupMenu`物件是否為子功能表。  
   
 ##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement  
 
@@ -775,10 +775,10 @@ CMFCToolBar* GetParentToolBar() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為父工具列指標。 `NULL` 如果快顯功能表沒有父工具列。  
+ 為父工具列指標。 如果快顯功能表還包含沒有父工具列，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 如果`CMFCPopupMenu`是快顯功能表，則其沒有父工具列。  
+ 如果`CMFCPopupMenu`是快顯功能表，它將包含沒有父工具列。  
   
 ##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType  
 
@@ -799,10 +799,10 @@ CMFCToolBarMenuButton* GetSelItem();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指向目前選取的功能表命令。`NULL`如果不選取任何項目。  
+ 指向目前選取之功能表命令如果在不選取任何項目，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 在快顯功能表的功能表命令都由[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)，或類別衍生自`CMFCToolBarMenuButton`。  
+ 以快顯功能表的功能表命令都由[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)，或衍生自類別`CMFCToolBarMenuButton`。  
   
 ##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized  
 
@@ -816,17 +816,17 @@ BOOL HasBeenResized() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hiderarelyusedcommands"></a>  CMFCPopupMenu::HideRarelyUsedCommands  
- 指出快顯功能表是否可以隱藏很少使用的命令。  
+ 表示快顯功能表是否可以隱藏很少使用的命令。  
   
 ```  
 BOOL HideRarelyUsedCommands() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果快顯功能表可以隱藏很少使用的命令。否則`FALSE`。  
+ 如果快顯功能表可以隱藏很少使用的命令;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會指定是否可以隱藏快顯功能表只有很少使用的命令，除非該設定已啟用。 快顯功能表可以隱藏很少使用的命令，如果它具有父系按鈕以及父視窗衍生自[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)啟用這項功能和[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)來判斷目前是否已啟用此功能。 您必須為父視窗呼叫這兩種方法。  
+ 這個方法會指定是否可以隱藏快顯功能表只有很少使用的命令，如果已啟用該設定。 快顯功能表可以隱藏很少使用的命令，如果它具有父代按鈕和父視窗衍生自[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)若要啟用這項功能並[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)來判斷目前是否已啟用此功能。 您必須呼叫這兩種方法在父視窗。  
   
 ##  <a name="incommand"></a>  CMFCPopupMenu::InCommand  
 
@@ -840,7 +840,7 @@ virtual BOOL InCommand();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="insertitem"></a>  CMFCPopupMenu::InsertItem  
- 將新的項目插入至指定的位置快顯功能表。  
+ 在指定的位置快顯功能表中插入新項目。  
   
 ```  
 int InsertItem(
@@ -850,19 +850,19 @@ int InsertItem(
   
 ### <a name="parameters"></a>參數  
  [in]*按鈕*  
- 若要加入之功能表項目的參考。  
+ 要加入功能表項目參考。  
   
  [in]*iInsertAt*  
- 新項目的以零為起始的索引。 如果*iInsertAt*為-1，將項目會加入功能表的結束。  
+ 將新項目的以零為起始的索引。 如果*iInsertAt*為-1，將項目加入功能表的尾端。  
   
 ### <a name="return-value"></a>傳回值  
- 項目已插入的位置以零為起始的索引。 如果方法失敗-1。  
+ 已插入之項目的位置以零為起始的索引。 如果方法失敗，為-1。  
   
 ### <a name="remarks"></a>備註  
- 如果您提供的值無效，這個方法將會失敗*iInsertAt*，例如大於目前的快顯功能表的項目數的整數。  
+ 如果您提供的值無效，這個方法將會失敗*iInsertAt*，例如大於目前在快顯功能表上的項目數的整數。  
   
 ##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
- 在指定的位置快顯功能表中插入分隔符號。  
+ 插入指定位置的快顯功能表中的分隔符號。  
   
 ```  
 int InsertSeparator(int iInsertAt = -1);
@@ -870,13 +870,13 @@ int InsertSeparator(int iInsertAt = -1);
   
 ### <a name="parameters"></a>參數  
  [in]*iInsertAt*  
- 這個方法會在其中插入分隔符號位置的以零為起始的索引。  
+ 這個方法會在該處插入分隔符號的位置以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 插入分隔符號位置以零為起始的索引。 如果此方法失敗-1。  
+ 分隔符號的插入位置的以零為起始的索引。 如果此方法失敗，為-1。  
   
 ### <a name="remarks"></a>備註  
- 值為-1 代表*iInsertAt*表示這個方法會加入快顯功能表的結束分隔符號。  
+ 值為-1 *iInsertAt*表示這個方法將會加入快顯功能表的尾端分隔符號。  
   
  如果這個方法會失敗*iInsertAt*是無效的值。  
   
@@ -903,17 +903,17 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="iscustomizepane"></a>  CMFCPopupMenu::IsCustomizePane  
- 指出是否有快顯功能表就做**QuickCustomizePane**。  
+ 指出是否有快顯功能表當作**QuickCustomizePane**。  
   
 ```  
 BOOL IsCustomizePane();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果快顯視窗是**QuckCustomizePane**，否則為`FALSE`。  
+ 如果快顯視窗中，則為 TRUE **QuckCustomizePane**，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 使用**QuickCustomizePane** ，讓使用者直接來自訂快顯功能表。 **QuickCustomizePane**是`CMFCPopupMenu`使用者在進行直接編輯工具列按鈕時出現。  
+ 使用**QuickCustomizePane** ，讓使用者直接來自訂快顯功能表。 **QuickCustomizePane**是`CMFCPopupMenu`顯示當使用者按一下工具列按鈕，以直接進行編輯。  
   
  您的應用程式應該呼叫這個方法期間[CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)。  
   
@@ -929,17 +929,17 @@ BOOL IsEscClose();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isidle"></a>  CMFCPopupMenu::IsIdle  
- 指出是否目前閒置快顯功能表。  
+ 指出快顯功能表是否目前處於閒置狀態。  
   
 ```  
 virtual BOOL IsIdle() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果快顯功能表處於閒置模式;否則`FALSE`。  
+ 如果快顯功能表處於閒置模式，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，快顯功能表就處於閒置模式顯示動畫完成，而且使用者不可捲動快顯功能表。  
+ 根據預設，快顯功能表時處於閒置模式顯示動畫完成，而且使用者不可捲動快顯功能表。  
   
 ##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound  
 
@@ -953,14 +953,14 @@ static UINT __stdcall IsMenuSound();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isquickcustomize"></a>  CMFCPopupMenu::IsQuickCustomize  
- 決定是否關聯[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)處於 QuickCustomize 模式。  
+ 決定是否相關聯[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)處於 QuickCustomize 模式。  
   
 ```  
 BOOL IsQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果相關聯的功能表按鈕處於 QuickCustomize 模式;否則`FALSE`。 這個方法也會傳回`FALSE`如果不是與相關聯的快顯功能表`CMFCToolBarMenuButton`。  
+ 如果相關聯的功能表按鈕為 QuickCustomize 模式，則為 TRUE否則為 FALSE。 如果不是與相關聯的快顯功能表，這個方法也會傳回 FALSE `CMFCToolBarMenuButton`。  
   
 ### <a name="remarks"></a>備註  
  在 QuickCustomize 模式的使用者會選取直接自訂按鈕的工具列上的按鈕。  
@@ -977,19 +977,19 @@ BOOL IsResizeble() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isrightalign"></a>  CMFCPopupMenu::IsRightAlign  
- 表示功能表是否靠右或靠左對齊。  
+ 指出功能表是否靠右或靠左對齊。  
   
 ```  
 BOOL IsRightAlign() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果是靠右對齊。`FALSE`如果功能表靠左對齊。  
+ 如果功能表是靠右對齊;，則為 TRUE。如果功能表靠左對齊，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用[CMFCPopupMenu::SetRightAlign](#setrightalign)設定功能表對齊方式。 根據預設，快顯功能表使用靠左對齊。  
+ 您可以使用[CMFCPopupMenu::SetRightAlign](#setrightalign)設定功能表對齊方式。 根據預設，快顯功能表，請使用靠左對齊。  
   
- 功能表對齊的全域設定並不會因快顯功能表。  
+ 功能表對齊不是全域設定，和快顯功能表而有所不同。  
   
 ##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable  
 
@@ -1003,27 +1003,27 @@ BOOL IsScrollable() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="issendmenuselectmsg"></a>  CMFCPopupMenu::IsSendMenuSelectMsg  
- 指出當使用者從快顯功能表選取命令，架構是否通知父框架。  
+ 指出當使用者從快顯功能表中選取的命令時，framework 是否通知父框架。  
   
 ```  
 static BOOL IsSendMenuSelectMsg();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果架構通知父框架。否則`FALSE`。  
+ 如果架構通知父框架;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 架構會使用選取功能表命令時將它傳送 WM_MENUSELECT 訊息通知父框架。  
+ 架構會使用選取的功能表命令時將它傳送 WM_MENUSELECT 訊息通知父框架。  
   
 ##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
- 指出快顯功能表目前是否為可見。  
+ 指出是否為目前可看見快顯功能表。  
   
 ```  
 BOOL IsShown() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果快顯功能表是可見的。否則`FALSE`。  
+ 如果快顯功能表會顯示;，則為 TRUE。否則為 FALSE。  
   
 ##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo  
 
@@ -1123,7 +1123,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="removeallitems"></a>  CMFCPopupMenu::RemoveAllItems  
- 清除所有項目從快顯功能表。  
+ 清除快顯功能表中的所有項目。  
   
 ```  
 void RemoveAllItems();
@@ -1138,13 +1138,13 @@ BOOL RemoveItem(int iIndex);
   
 ### <a name="parameters"></a>參數  
  [in]*iIndex*  
- 若要刪除的項目以零為起始的索引。  
+ 要刪除之項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果方法成功。否則`FALSE`。  
+ 如果方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會自動排列受影響的項目移除任何分隔字元。 如需架構如何重新排列分隔字元的詳細資訊，請參閱[CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)。  
+ 這個方法會自動排列受影響的項目移除任何分隔字元。 如需此架構如何重新排列分隔符號的詳細資訊，請參閱[CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)。  
   
 ##  <a name="savestate"></a>  CMFCPopupMenu::SaveState  
 
@@ -1156,7 +1156,7 @@ virtual void SaveState();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setanimationspeed"></a>  CMFCPopupMenu::SetAnimationSpeed  
- 設定動畫的速度快顯功能表。  
+ 設定快顯功能表的動畫速度。  
   
 ```  
 static void SetAnimationSpeed(UINT nElapse);
@@ -1167,9 +1167,9 @@ static void SetAnimationSpeed(UINT nElapse);
  新動畫的速度，以毫秒為單位。  
   
 ### <a name="remarks"></a>備註  
- 動畫速度是全域的值，而且會影響應用程式中的所有快顯功能表。 這個值會指定花費的時間完成快顯功能表的動畫。  
+ 動畫速度是一個全域值，而且會影響應用程式中的所有快顯功能表。 這個值會指定花多少時間才能完成快顯功能表的動畫。  
   
- 根據預設，此參數設定為 30 毫秒。 有效值範圍*nElapse*是從 0 到 200。  
+ 根據預設，此參數會設定為 30 的毫秒。 有效值範圍*nElapse*是從 0 到 200。  
   
 ##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  設定這個快顯功能表的動畫類型。  
@@ -1180,10 +1180,10 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 ### <a name="parameters"></a>參數  
  [in]*類型*  
- 列舉的資料型別指定動畫的類型。  
+ 指定的動畫類型列舉的資料型別。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[CMFCPopupMenu::GetAnimationType](#getanimationtype)的有效值清單*類型*。  
+ 請參閱[CMFCPopupMenu::GetAnimationType](#getanimationtype)如需有效值的清單*型別*。  
   
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
@@ -1209,10 +1209,10 @@ void SetDefaultItem(UINT uiCmd);
  新的預設命令的功能表命令識別碼。  
   
 ### <a name="remarks"></a>備註  
- 快顯功能表中的預設命令是顯示快顯功能表時所選取的命令。  
+ 快顯功能表中的預設命令是快顯功能表出現時選取的命令。  
   
 ##  <a name="setforcemenufocus"></a>  CMFCPopupMenu::SetForceMenuFocus  
- 強制輸入的焦點返回到功能表列顯示快顯功能表時。  
+ 會強制以返回 功能表列的快顯功能表出現時輸入的焦點。  
   
 ```  
 static void SetForceMenuFocus(BOOL bValue);
@@ -1220,13 +1220,13 @@ static void SetForceMenuFocus(BOOL bValue);
   
 ### <a name="parameters"></a>參數  
  [in]*bValue*  
- `TRUE` 如果您想要的 framework 就能強制輸入的焦點時快顯功能表的功能表列會顯示。 `FALSE` 如果您想要保留焦點快顯功能表。  
+ 如果您想要強制在功能表列的快顯功能表出現時輸入的焦點的架構，則為 TRUE。 如果您想要保留焦點快顯功能表，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會設定為全域應用程式中的所有快顯功能表的旗標。 根據預設，不會啟用此功能。  
+ 這個方法會設定為全域應用程式中的所有快顯功能表的旗標。 根據預設，未啟用這項功能。  
   
 ##  <a name="setforceshadow"></a>  CMFCPopupMenu::SetForceShadow  
- 強制時快顯功能表出現在主框架之外繪製功能表陰影架構。  
+ 強制主框架外的快顯功能表出現時，繪製功能表陰影的架構。  
   
 ```  
 static void SetForceShadow(BOOL bValue);
@@ -1234,10 +1234,10 @@ static void SetForceShadow(BOOL bValue);
   
 ### <a name="parameters"></a>參數  
  [in]*bValue*  
- `TRUE` 如果您想要繪製功能表陰影 framework`FALSE`否則。  
+ 如果您想要的架構，否則為 FALSE 繪製功能表陰影，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 當您呼叫這個方法時，它在應用程式中設定全域旗標。 這個旗標會影響應用程式中的所有快顯功能表。  
+ 當您呼叫這個方法時，它會在您的應用程式中設定全域旗標。 這個旗標會影響您的應用程式中的所有快顯功能表。  
   
 ##  <a name="setmaxwidth"></a>  CMFCPopupMenu::SetMaxWidth  
  設定快顯功能表的最大寬度。  
@@ -1248,10 +1248,10 @@ void SetMaxWidth(int iMaxWidth);
   
 ### <a name="parameters"></a>參數  
  [in]*iMaxWidth*  
- 快顯功能表的 像素為單位的最大寬度。  
+ 快顯功能表的 像素為單位最大寬度。  
   
 ### <a name="remarks"></a>備註  
- 如果相關聯的功能表命令的文字不符合最大寬度，則會遭到截斷，並不適合的部分取代為三個點。  
+ 如果與功能表命令相關聯的文字所無法容納的最大寬度，則會遭到截斷，而不符合的組件會取代三個點。  
   
 ##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd  
 
@@ -1307,10 +1307,10 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bRightAlign*  
- 布林值，指出功能表對齊方式。 `TRUE` 指出靠右對齊，`FALSE`指出靠左的對齊。  
+ 布林值，指出功能表對齊方式。 TRUE 表示靠右對齊，FALSE 表示靠左的對齊。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，所有快顯功能表，是靠左對齊。  
+ 根據預設，所有的快顯功能表會是靠左對齊。  
   
 ##  <a name="setsendmenuselectmsg"></a>  CMFCPopupMenu::SetSendMenuSelectMsg  
  設定會控制當使用者選取命令時，快顯功能表是否告知其父框架的旗標。  
@@ -1321,10 +1321,10 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bSet*  
- `TRUE` 如果快顯功能表通知其父框架，`FALSE`否則。  
+ 快顯功能表會告知其父框架中，FALSE 否則，其值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 這是應用程式中的所有快顯功能表的通用選項。 如果已啟用，將會傳送快顯功能表`WM_MENUSELECT`父框架，當使用者選取命令的訊息。  
+ 這是全域應用程式中的所有快顯功能表選項。 如果已啟用，則快顯功能表會在使用者選取命令時傳送 WM_MENUSELECT 訊息給父框架。  
   
 ##  <a name="showallcommands"></a>  CMFCPopupMenu::ShowAllCommands  
  會強制快顯功能表以顯示所有命令。  
@@ -1354,10 +1354,10 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
   
 ### <a name="parameters"></a>參數  
  [in]*lprectScreen*  
- 指定要更新的區域在螢幕座標中的矩形。  
+ 螢幕座標中指定要更新的區域的矩形。  
   
 ### <a name="remarks"></a>備註  
- 動畫的控制項或其他具有動態內容的視窗上顯示快顯功能表時，這個方法會很有用。  
+ 當動畫的控制項或其他具有動態內容的視窗上顯示快顯功能表時，此方法相當實用。  
   
 ##  <a name="updateshadow"></a>  CMFCPopupMenu::UpdateShadow  
  更新快顯功能表的陰影。  
@@ -1368,7 +1368,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
   
 ### <a name="parameters"></a>參數  
  [in]*lprectScreen*  
- 矩形中，在螢幕座標中，指定要更新的區域界限。  
+ 矩形，在螢幕座標中，指定要更新的區域界限。  
   
 ### <a name="remarks"></a>備註  
  當有陰影的快顯功能表重疊動畫的影像，請呼叫這個方法。  

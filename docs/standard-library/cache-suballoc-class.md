@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850303"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954319"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 類別
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |參數|描述|
 |---------------|-----------------|
-|`Sz`|陣列中要配置的項目數。|
+|*sz*|所配置陣列中的元素數。|
 
 ## <a name="remarks"></a>備註
 
-cache_suballoc 樣板類別使用 `freelist<sizeof(Type), max_unbounded>` 將已解除配置的記憶體區塊 (Block) 儲存在不限長度的可用清單中，並在可用清單為空白時，對以 `operator new` 配置之較大區塊 (Chunk) 中的記憶體區塊 (Block) 進行子配置。
+Cache_suballoc 樣板類別會儲存已解除配置的記憶體區塊長度的可用清單中使用`freelist<sizeof(Type), max_unbounded>`，和 suballocates 之較大的區塊，以配置的記憶體區塊**new 運算子**時可用的清單空的。
 
-每個區塊會保留 `Sz * Nelts` 個位元組的可用記憶體，以及 `operator new` 和 `operator delete` 所需的資料。 永遠不會釋放已配置的區塊。
+每個區塊會保留`Sz * Nelts`個位元組的可用記憶體，以及資料的**new 運算子**並**運算子 delete**需要。 永遠不會釋放已配置的區塊。
 
 ### <a name="constructors"></a>建構函式
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`count`|所配置陣列中的元素數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`count`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f121912a13d6e4dac1692d2dab1b5ffd34bd6d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f379500f9455ed9ad9a581966e0f8ed7bfed13f7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953910"
 ---
 # <a name="makeunsigned-class"></a>make_unsigned 類別
 
@@ -42,11 +42,11 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 |參數|描述|
 |---------------|-----------------|
-|`T`|要修改的類型。|
+|*T*|要修改的類型。|
 
 ## <a name="remarks"></a>備註
 
-如果 `is_unsigned<T>` 為 true，則 modifier 類型的執行個體所保留的修改類型是 `T`。 否則是最小的帶正負號類型 `ST`，其中 `sizeof (T) <= sizeof (ST)`。
+類型修飾詞的執行個體保留修改的類型所*T*如果`is_unsigned<T>`保存，則為 true。 否則是最小的帶正負號類型 `ST`，其中 `sizeof (T) <= sizeof (ST)`。
 
 ## <a name="requirements"></a>需求
 

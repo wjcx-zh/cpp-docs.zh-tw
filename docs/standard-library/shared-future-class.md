@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac125b068de5111a2b98800956c12a0c979737f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859660"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954990"
 ---
 # <a name="sharedfuture-class"></a>shared_future 類別
 
@@ -102,7 +102,7 @@ void get() const;
 
 就部分特製化 `shared_future<Ty&>` 而言，預存值實際上是對傳遞給「非同步提供者」作為傳回值之物件的參考。
 
-由於沒有特製化 `shared_future<void>` 適用的任何預存值存在，因此這個方法會傳回 `void`。
+因為沒有預存的值存在特製化`shared_future<void>`，則方法會傳回**void**。
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -115,7 +115,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>參數
 
-`Right` A`shared_future`物件。
+*右*A`shared_future`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -123,9 +123,9 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>備註
 
-針對第一個運算子，`Right` 在作業完成之後就不再具有相關聯的非同步狀態。
+第一個運算子，如*右*不再具有相關聯的非同步狀態，在作業之後。
 
-針對第二個方法，`Right` 會保留它的相關聯非同步狀態。
+第二個方法中，*右*維護其相關聯的非同步狀態。
 
 ## <a name="shared_future"></a>  shared_future::shared_future 建構函式
 
@@ -140,15 +140,15 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>參數
 
-`Right` A[未來](../standard-library/future-class.md)或`shared_future`物件。
+*右*A[未來](../standard-library/future-class.md)或`shared_future`物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構沒有「相關聯的非同步狀態」的 `shared_future` 物件。
 
-第二個建構函式會建構 `shared_future` 物件，並從 `Right` 中轉移相關聯的非同步狀態。 `Right` 已不再具有相關聯的非同步狀態。
+第二個和第三個建構函式建構`shared_future`物件，並傳送相關聯的非同步狀態，從*右*。 *右*不再具有相關聯的非同步狀態。
 
-第四個建構函式所建構的 `shared_future` 物件，會具備與 `Right` 相同的相關聯非同步狀態。
+第四個建構函式建構`shared_future`具有相同的物件相關聯非同步狀態，表示為*右*。
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -160,7 +160,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。
+**true**如果物件有相關聯的非同步狀態; 否則**false**。
 
 ## <a name="wait"></a>  shared_future:: wait
 
@@ -186,7 +186,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>參數
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md)物件，指定最大時間間隔，則執行緒會封鎖。
+*Rel_time* A [chrono::](../standard-library/duration-class.md)物件，指定最大時間間隔，則執行緒會封鎖。
 
 ### <a name="return-value"></a>傳回值
 
@@ -208,7 +208,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>參數
 
-`Abs_time` A [chrono:: time_point<steady_clock>](../standard-library/time-point-class.md)指定的時間之後, 可以解除封鎖執行緒的物件。
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)指定的時間之後，可以解除封鎖執行緒的物件。
 
 ### <a name="return-value"></a>傳回值
 

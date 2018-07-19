@@ -1,5 +1,5 @@
 ---
-title: CComObjectNoLock 類別 |Microsoft 文件
+title: CComObjectNoLock 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7f9fa0ac67592c5fca805eaa4bb4ec4b0ca153
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361471"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884112"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 類別
-這個類別會實作**IUnknown**的非彙總的物件，但是不會遞增中建構函式的模組鎖定計數。  
+這個類別會實作`IUnknown`的非彙總的物件，但是不會遞增模組鎖定計數的建構函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,8 +39,8 @@ class CComObjectNoLock : public Base
 ```  
   
 #### <a name="parameters"></a>參數  
- `Base`  
- 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要在物件上支援從任何其他介面呼叫也一樣。  
+ *基底*  
+ 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。  
   
 ## <a name="members"></a>成員  
   
@@ -55,12 +55,12 @@ class CComObjectNoLock : public Base
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComObjectNoLock::AddRef](#addref)|在物件上的參考計數遞增。|  
+|[CComObjectNoLock::AddRef](#addref)|遞增參考計數物件上。|  
 |[CComObjectNoLock::QueryInterface](#queryinterface)|傳回所要求介面的指標。|  
 |[CComObjectNoLock::Release](#release)|遞減參考計數物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComObjectNoLock` 類似於[Ccomobject<](../../atl/reference/ccomobject-class.md) ，它會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非彙總的物件; 不過，`CComObjectNoLock`建構函式中沒有增量模組鎖定計數。  
+ `CComObjectNoLock` 類似於[CComObject](../../atl/reference/ccomobject-class.md) ，因為它會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非彙總的物件; 不過，`CComObjectNoLock`中建構函式會遞增模組的鎖定計數。  
   
  使用 ATL`CComObjectNoLock`內部的 class factory。 一般情況下，您不會直接使用這個類別。  
   
@@ -73,17 +73,17 @@ class CComObjectNoLock : public Base
  **標頭：** atlcom.h  
   
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef  
- 在物件上的參考計數遞增。  
+ 遞增參考計數物件上。  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 值，可用於診斷或測試。  
+ 值，這個值可能有助於診斷或測試。  
   
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
- 建構函式。 不同於[Ccomobject<](../../atl/reference/ccomobject-class.md)，不會遞增模組鎖定計數。  
+ 建構函式。 不同於[CComObject](../../atl/reference/ccomobject-class.md)，不會遞增模組鎖定計數。  
   
 ```
 CComObjectNoLock(void* = NULL);
@@ -112,14 +112,14 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
- [in]所要求介面的識別項。  
+ *iid*  
+ [in]所要求的介面識別碼。  
   
- `ppvObject`  
- [out]所識別的介面指標的指標`iid`。 如果物件不支援這個介面，`ppvObject`設**NULL**。  
+ *ppvObject*  
+ [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ##  <a name="release"></a>  CComObjectNoLock::Release  
  遞減參考計數物件。  
@@ -129,7 +129,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
+ 在偵錯組建`Release`傳回值，這個值可能有助於診斷或測試。 在非偵錯組建中，`Release`一律會傳回 0。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

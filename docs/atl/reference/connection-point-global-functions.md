@@ -1,5 +1,5 @@
 ---
-title: 連接點全域函式 |Microsoft 文件
+title: 連接點全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b85da5991357f1b67c6d2249d854e6084ee48c23
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362787"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884057"
 ---
 # <a name="connection-point-global-functions"></a>連接點全域函式
 這些函式提供的連接點的支援，並接收對應。  
@@ -34,7 +34,7 @@ ms.locfileid: "32362787"
 |||  
 |-|-|  
 |[AtlAdvise](#atladvise)|建立物件連接點與用戶端接收器之間的連接。|  
-|[AtlUnadvise](#atlunadvise)|透過建立的連接會終止`AtlAdvise`。|  
+|[AtlUnadvise](#atlunadvise)|終止透過所建立的連線`AtlAdvise`。|  
 |[AtlAdviseSinkMap](#atladvisesinkmap)|建議，或取消通知事件接收對應中的項目。|  
 
 ## <a name="requirements"></a>需求  
@@ -55,29 +55,29 @@ HRESULT    AtlAdvise(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkCP`  
- [in]指標**IUnknown**物件的用戶端想要用來連接。  
+ *pUnkCP*  
+ [in]指標`IUnknown`物件的用戶端想要使用連線。  
   
  *pUnk*  
- [in]用戶端的指標**IUnknown**。  
+ [in]指標，用戶端的`IUnknown`。  
   
- `iid`  
- [in]連接點的 GUID。 一般而言，這是輸出連接點所管理的介面相同。  
+ *iid*  
+ [in]連接點的 GUID。 一般而言，這是連接點所管理之輸出介面相同。  
   
- `pdw`  
- [out]指標，可唯一識別連線的 cookie。  
+ *pdw*  
+ [out]指標，可唯一識別連接 cookie。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 接收實作連接點所支援的輸出介面。 用戶端使用`pdw`cookie 傳遞至移除該連接[AtlUnadvise](#atlunadvise)。  
+ 接收器會實作連接點所支援之輸出介面。 用戶端會使用*pdw*傳遞至移除連線的 cookie [AtlUnadvise](#atlunadvise)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
 ##  <a name="atlunadvise"></a>  AtlUnadvise  
- 透過建立的連接會終止[AtlAdvise](#atladvise)。  
+ 終止透過所建立的連線[AtlAdvise](#atladvise)。  
   
 > [!IMPORTANT]
 >  此函式不能在 Windows 執行階段中執行的應用程式。  
@@ -90,14 +90,14 @@ HRESULT    AtlUnadvise(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkCP`  
- [in]指標**IUnknown**用戶端會連接到的物件。  
+ *pUnkCP*  
+ [in]指標`IUnknown`的用戶端連接使用的物件。  
   
- `iid`  
- [in]連接點的 GUID。 一般而言，這是輸出連接點所管理的介面相同。  
+ *iid*  
+ [in]連接點的 GUID。 一般而言，這是連接點所管理之輸出介面相同。  
   
- `dw`  
- [in]可唯一識別連線的 cookie。  
+ *dw*  
+ [in]可唯一識別連接 cookie。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
@@ -116,11 +116,11 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```  
   
 ### <a name="parameters"></a>參數  
- *pT*  
+ *太平洋時間*  
  [in]包含接收對應的物件指標。  
   
- `bAdvise`  
- [in]**true**如果接收的所有項目會接到通知。**false**如果要 unadvised 則接收的所有項目。  
+ *bAdvise*  
+ [in]如果接到; 接收的所有項目，則為 TRUE。如果要 unadvised 接收的所有項目，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  

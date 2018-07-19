@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3941464c80d254b6675e1982dac952c3f29a0f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954050"
 ---
 # <a name="initializerlist-class"></a>initializer_list 類別
 
@@ -44,7 +44,7 @@ class initializer_list
 
 |參數|描述|
 |---------------|-----------------|
-|`Type`|要存放在 `initializer_list` 中的項目資料類型。|
+|*類型*|要存放在 `initializer_list` 中的項目資料類型。|
 
 
 ## <a name="remarks"></a>備註
@@ -127,8 +127,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |參數|描述|
 |---------------|-----------------|
-|`First`|要複製的元素範圍中第一個元素的位置。|
-|`Last`|超出要複製之元素範圍的第一個元素的位置。|
+|*第一個*|要複製的元素範圍中第一個元素的位置。|
+|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
 
 ### <a name="remarks"></a>備註
 

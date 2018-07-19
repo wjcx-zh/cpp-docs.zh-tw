@@ -1,5 +1,5 @@
 ---
-title: WINDOWPOS 結構 1 |Microsoft 文件
+title: WINDOWPOS 結構 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db51e8f9924d69406989b3a9ac12b45f0e55e870
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379290"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885958"
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 結構 1
-`WINDOWPOS`結構包含之大小和視窗的位置相關資訊。  
+`WINDOWPOS`結構包含大小和視窗位置資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,48 +45,48 @@ typedef struct tagWINDOWPOS { /* wp */
  識別視窗。  
   
  *hwndInsertAfter*  
- 識別其後放置於此視窗的視窗。  
+ 識別此視窗會放置其後的視窗。  
   
  *x*  
- 指定視窗的左邊緣位置。  
+ 指定視窗的左邊緣的位置。  
   
  *y*  
  指定視窗的右邊緣的位置。  
   
- `cx`  
- 指定的視窗寬度，單位為像素。  
+ *cx*  
+ 指定視窗的寬度，單位為像素。  
   
- `cy`  
+ *cy*  
  指定視窗的高度，單位為像素。  
   
- `flags`  
- 指定視窗位置選項。 這個成員可以是下列值之一：  
+ *flags*  
+ 指定視窗定位的選項。 這個成員可以是下列值之一：  
   
-- **SWP_DRAWFRAME**繪製視窗周圍框架 （定義於類別描述視窗）。 視窗收到`WM_NCCALCSIZE`訊息。  
+- SWP_DRAWFRAME 繪製視窗周圍框架 （定義於視窗類別描述）。 視窗收到 WM_NCCALCSIZE 訊息。  
   
-- **SWP_FRAMECHANGED**傳送`WM_NCCALCSIZE`訊息視窗中，即使不變更視窗的大小。 如果未指定這個旗標，`WM_NCCALCSIZE`視窗的大小已經變更時，才會傳送。  
+- SWP_FRAMECHANGED 傳送 WM_NCCALCSIZE 訊息至 視窗中，即使未變更視窗的大小。 如果未指定此旗標，則只在視窗的大小變更時，才傳送 WM_NCCALCSIZE。  
   
-- **SWP_HIDEWINDOW**隱藏視窗。  
+- SWP_HIDEWINDOW 隱藏視窗。  
   
-- `SWP_NOACTIVATE` 不會啟動視窗。  
+- SWP_NOACTIVATE 不會啟動視窗。  
   
-- **SWP_NOCOPYBITS**捨棄工作區的整個內容。 如果未指定這個旗標，用戶端區域的有效內容所儲存且之後視窗大小或重新調整位置複製到工作區。  
+- SWP_NOCOPYBITS 捨棄工作區的整個內容。 如果未指定此旗標，工作區的有效內容就會儲存，並複製回工作區之後的視窗大小或重新調整位置。  
   
-- `SWP_NOMOVE` 保留目前的位置 (會忽略**x**和**y**成員)。  
+- SWP_NOMOVE 會保留目前的位置 (會忽略`x`和`y`成員)。  
   
-- **SWP_NOOWNERZORDER**不會變更圖層順序中的主控視窗的位置。  
+- SWP_NOOWNERZORDER 不會變更疊置順序中的主控視窗的位置。  
   
-- `SWP_NOSIZE` 會保留目前的大小 (會忽略**cx**和**cy**成員)。  
+- SWP_NOSIZE 會保留目前的大小 (會忽略`cx`和`cy`成員)。  
   
-- **SWP_NOREDRAW**不會重新繪製的變更。  
+- SWP_NOREDRAW 不重繪其變更。  
   
-- **SWP_NOREPOSITION**相同**SWP_NOOWNERZORDER**。  
+- SWP_NOREPOSITION SWP_NOOWNERZORDER 與相同。  
   
-- **SWP_NOSENDCHANGING**防止接收視窗`WM_WINDOWPOSCHANGING`訊息。  
+- SWP_NOSENDCHANGING 會防止視窗接收 WM_WINDOWPOSCHANGING 訊息。  
   
-- `SWP_NOZORDER` 會保留目前的順序 (會忽略**hwndInsertAfter**成員)。  
+- SWP_NOZORDER 會保留目前的訂購 (會忽略`hwndInsertAfter`成員)。  
   
-- **SWP_SHOWWINDOW**顯示視窗。  
+- SWP_SHOWWINDOW 顯示視窗。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  

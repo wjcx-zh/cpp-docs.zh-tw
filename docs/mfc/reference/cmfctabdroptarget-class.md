@@ -1,5 +1,5 @@
 ---
-title: CMFCTabDropTarget 類別 |Microsoft 文件
+title: CMFCTabDropTarget 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040983"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852964"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
-提供索引標籤控制項和 OLE 程式庫之間的溝通機制。  
+提供索引標籤控制項和 OLE 程式庫之間的通訊機制。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,16 +56,16 @@ class CMFCTabDropTarget : public COleDropTarget
 |||  
 |-|-|  
 |名稱|描述|  
-|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|在使用者拖曳物件到索引標籤視窗時，由架構呼叫。 (覆寫[COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。)|  
-|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|在使用者拖曳物件之外的索引標籤視窗具有焦點時，由架構呼叫。 (覆寫[COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave)。)|  
-|[CMFCTabDropTarget::OnDragOver](#ondragover)|當使用者將物件拖曳至 [索引標籤] 視窗具有焦點時，由架構呼叫。 (覆寫[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)。)|  
+|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|當使用者拖曳物件到索引標籤視窗時，由架構呼叫。 (覆寫[COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。)|  
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|當使用者拖曳物件擁有焦點的索引標籤視窗之外，由架構呼叫。 (覆寫[COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave)。)|  
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|當使用者拖曳物件拖曳至索引標籤視窗具有焦點時，由架構呼叫。 (覆寫[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)。)|  
 |[CMFCTabDropTarget::OnDropEx](#ondropex)|當使用者放開滑鼠按鈕，在拖曳作業結束時由架構呼叫。 (覆寫[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。)|  
-|[CMFCTabDropTarget::Register](#register)|可以做為 OLE 拖放作業目標的其中一個註冊控制項。|  
+|[CMFCTabDropTarget::Register](#register)|將控制項註冊為可以是 OLE 拖放作業目標的其中一個。|  
   
 ### <a name="remarks"></a>備註  
- 這個類別提供拖放支援`CMFCBaseTabCtrl`類別。 如果您的應用程式來初始化 OLE 程式庫[AfxOleInit](ole-initialization.md#afxoleinit)函式，`CMFCBaseTabCtrl`物件本身註冊為拖放作業。  
+ 這個類別會提供拖放支援`CMFCBaseTabCtrl`類別。 如果您的應用程式來初始化 OLE 程式庫[AfxOleInit](ole-initialization.md#afxoleinit)函式，`CMFCBaseTabCtrl`物件會將本身報名拖放作業。  
   
- `CMFCTabDropTarget`類別會擴充其基底類別，藉由拖曳作業發生作用中時，游標下的是 [] 索引標籤。 如需拖放作業的詳細資訊，請參閱[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
+ `CMFCTabDropTarget`類別會擴充其基底類別，藉由拖曳作業發生作用中時，游標下的是 [] 索引標籤。 如需拖放作業的詳細資訊，請參閱 <<c0> [ 拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何建構 `CMFCTabDropTarget` 物件及使用其 `Register` 方法。  
@@ -85,7 +85,7 @@ class CMFCTabDropTarget : public COleDropTarget
  **標頭：** afxbasetabctrl.h  
   
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter  
- 在使用者拖曳物件到索引標籤視窗時，由架構呼叫。  
+ 當使用者拖曳物件到索引標籤視窗時，由架構呼叫。  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -102,29 +102,29 @@ virtual DROPEFFECT OnDragEnter(
 |參數|描述|  
 |[in]*pWnd*|未使用。|  
 |[in]*pDataObject*|在使用者拖曳物件的指標。|  
-|[in]*dwKeyState*|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[in]*點*|用戶端座標中的資料指標的位置。|  
+|[in]*dwKeyState*|包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
+|[in]*點*|工作區座標中的游標位置。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果下拉式清單，就會發生在所指定的位置會造成的效果*點*。 它可以是下列一或多個項目：  
+ 如果下拉式清單，就會發生在所指定的位置會造成的影響*點*。 它可以是下列其中一個或多個項目：  
   
-- `DROPEFFECT_NONE`  
+- DROPEFFECT_NONE  
   
-- `DROPEFFECT_COPY`  
+- DROPEFFECT_COPY  
   
-- `DROPEFFECT_MOVE`  
+- DROPEFFECT_MOVE  
   
-- `DROPEFFECT_LINK`  
+- DROPEFFECT_LINK  
   
-- `DROPEFFECT_SCROLL`  
+- DROPEFFECT_SCROLL  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳回`DROPEFFECT_NONE`如果工具列架構不是自訂模式，或無法使用剪貼簿資料格式。 否則，它會傳回呼叫`CMFCBaseTabCtrl::OnDragEnter`與提供的參數。  
+ 如果工具列架構並不會在自訂模式，或無法使用剪貼簿資料格式，這個方法會傳回 DROPEFFECT_NONE。 否則，它會傳回呼叫`CMFCBaseTabCtrl::OnDragEnter`使用提供的參數。  
   
- 如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
+ 如需有關自訂模式的詳細資訊，請參閱 < [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
 ##  <a name="ondragleave"></a>  CMFCTabDropTarget::OnDragLeave  
- 在使用者拖曳物件之外的索引標籤視窗具有焦點時，由架構呼叫。  
+ 當使用者拖曳物件擁有焦點的索引標籤視窗之外，由架構呼叫。  
   
 ```  
 virtual void OnDragLeave(CWnd* pWnd);
@@ -141,7 +141,7 @@ virtual void OnDragLeave(CWnd* pWnd);
  這個方法會呼叫`CMFCBaseTabCtrl::OnDragLeave`方法，以執行拖曳作業。  
   
 ##  <a name="ondragover"></a>  CMFCTabDropTarget::OnDragOver  
- 當使用者將物件拖曳至 [索引標籤] 視窗具有焦點時，由架構呼叫。  
+ 當使用者拖曳物件拖曳至索引標籤視窗具有焦點時，由架構呼叫。  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -158,26 +158,26 @@ virtual DROPEFFECT OnDragOver(
 |參數|描述|  
 |[in]*pWnd*|未使用。|  
 |[in]*pDataObject*|在使用者拖曳物件的指標。|  
-|[in]*dwKeyState*|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[in]*點*|滑鼠指標在用戶端座標中的位置。|  
+|[in]*dwKeyState*|包含的輔助按鍵的狀態。 這是任意數目的下列組合： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。|  
+|[in]*點*|在 工作區座標中滑鼠指標的位置。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果下拉式清單，就會發生在所指定的位置會造成的效果*點*。 它可以是下列一或多個項目：  
+ 如果下拉式清單，就會發生在所指定的位置會造成的影響*點*。 它可以是下列其中一個或多個項目：  
   
-- `DROPEFFECT_NONE`  
+- DROPEFFECT_NONE  
   
-- `DROPEFFECT_COPY`  
+- DROPEFFECT_COPY  
   
-- `DROPEFFECT_MOVE`  
+- DROPEFFECT_MOVE  
   
-- `DROPEFFECT_LINK`  
+- DROPEFFECT_LINK  
   
-- `DROPEFFECT_SCROLL`  
+- DROPEFFECT_SCROLL  
   
 ### <a name="remarks"></a>備註  
- 這個方法會在拖曳作業發生作用中時，游標下的是 [] 索引標籤。 它會傳回`DROPEFFECT_NONE`如果工具列架構不是自訂模式，或無法使用剪貼簿資料格式。 否則，它會傳回呼叫`CMFCBaseTabCtrl::OnDragOver`與提供的參數。  
+ 這個方法會在拖曳作業發生作用中時，游標下的是 [] 索引標籤。 如果工具列架構並不會在自訂模式，或無法使用剪貼簿資料格式，則會傳回 DROPEFFECT_NONE。 否則，它會傳回呼叫`CMFCBaseTabCtrl::OnDragOver`使用提供的參數。  
   
- 如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
+ 如需有關自訂模式的詳細資訊，請參閱 < [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
 ##  <a name="ondropex"></a>  CMFCTabDropTarget::OnDropEx  
  當使用者放開滑鼠按鈕，在拖曳作業結束時由架構呼叫。  
@@ -198,30 +198,30 @@ virtual DROPEFFECT OnDropEx(
 |參數|描述|  
 |[in]*pWnd*|未使用。|  
 |[in]*pDataObject*|在使用者拖曳物件的指標。|  
-|[in]*dropEffect*|預設拖放作業。|  
+|[in]*dropEffect*|預設的拖放作業。|  
 |[in]*下拉清單*|未使用。|  
-|[in]*點*|滑鼠指標在用戶端座標中的位置。|  
+|[in]*點*|在 工作區座標中滑鼠指標的位置。|  
   
 ### <a name="return-value"></a>傳回值  
- 產生的置放效果。 它可以是下列一或多個項目：  
+ 產生的拖放效果。 它可以是下列其中一個或多個項目：  
   
-- `DROPEFFECT_NONE`  
+- DROPEFFECT_NONE  
   
-- `DROPEFFECT_COPY`  
+- DROPEFFECT_COPY  
   
-- `DROPEFFECT_MOVE`  
+- DROPEFFECT_MOVE  
   
-- `DROPEFFECT_LINK`  
+- DROPEFFECT_LINK  
   
-- `DROPEFFECT_SCROLL`  
+- DROPEFFECT_SCROLL  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫`CMFCBaseTabCtrl::OnDrop`如果工具列 framework 是以自訂模式，可剪貼簿資料格式。 如果呼叫`CMFCBaseTabCtrl::OnDrop`傳回非零值，這個方法會傳回所指定的預設置放效果*dropEffect*。 否則，這個方法會傳回`DROPEFFECT_NONE`。 如需拖放效果的詳細資訊，請參閱[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。  
+ 這個方法會呼叫`CMFCBaseTabCtrl::OnDrop`如果工具列架構已自訂模式，而且可用的剪貼簿資料格式。 如果在呼叫`CMFCBaseTabCtrl::OnDrop`傳回非零值，這個方法會傳回所指定的預設置放效果*dropEffect*。 否則，這個方法會傳回 DROPEFFECT_NONE。 如需拖放效果的詳細資訊，請參閱[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。  
   
- 如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
+ 如需有關自訂模式的詳細資訊，請參閱 < [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
 ##  <a name="register"></a>  CMFCTabDropTarget::Register  
- 可以做為 OLE 拖放作業目標的其中一個註冊控制項。  
+ 將控制項註冊為可以是 OLE 拖放作業目標的其中一個。  
   
 ```  
 BOOL Register(CMFCBaseTabCtrl *pOwner);
@@ -235,7 +235,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |[in]*pOwner*|要登錄為置放目標的索引標籤控制項。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果登錄成功，則為非零否則便是 0。  
+ 非零值，如果登錄成功;否則為 0。  
   
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register)註冊拖放作業的控制項。  

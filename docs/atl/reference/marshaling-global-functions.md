@@ -1,5 +1,5 @@
 ---
-title: 封送處理全域函式 |Microsoft 文件
+title: 封送處理全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362823"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879330"
 ---
-# <a name="marshaling-global-functions"></a>封送處理的全域函式
+# <a name="marshaling-global-functions"></a>封送處理全域函式
 這些函式提供封送處理，並將封送處理資料轉換成介面指標的支援。  
   
 > [!IMPORTANT]
@@ -31,9 +31,9 @@ ms.locfileid: "32362823"
   
 |||  
 |-|-|  
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|釋放的封送處理資料和`IStream`指標。|  
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|釋出的封送處理資料和`IStream`指標。|  
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|建立新的資料流物件，並封送處理指定的介面指標。|  
-|[AtlUnmarshalPtr](#atlunmarshalptr)|將資料流的封送處理資料轉換成的介面指標。|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|將資料流的封送處理資料轉換成介面指標。|  
 
 ## <a name="requirements"></a>需求：
 **標頭：** atlbase.h
@@ -46,11 +46,11 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStream`  
+ *pStream*  
  [in]指標`IStream`上用來封送處理的資料流介面。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
+  範例，請參閱[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
   
 ##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc  
  建立新的資料流物件、將 Proxy 的 CLSID 寫入資料流，並且藉由將初始化 Proxy 所需的資料寫入資料流的方式封送處理指定的介面指標。  
@@ -66,21 +66,21 @@ HRESULT AtlMarshalPtrInProc(
  *pUnk*  
  [in]要封送處理介面的指標。  
   
- `iid`  
+ *iid*  
  [in]封送處理介面的 GUID。  
   
- `ppStream`  
+ *ppStream*  
  [out]指標`IStream`上用來封送處理的新資料流物件的介面。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- **MSHLFLAGS_TABLESTRONG**讓指標可以封送處理至多個資料流，設定旗標。 指標也可以解除封送處理多次。  
+ MSHLFLAGS_TABLESTRONG 旗標會設定，因此指標可以封送處理至多個資料流。 指標也可以解除封送處理多次。  
   
  如果封送處理會失敗，則會釋放資料流指標。  
   
- `AtlMarshalPtrInProc` 僅能在同處理序物件的指標。  
+ `AtlMarshalPtrInProc` 僅適用於同處理序物件的指標。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
@@ -96,20 +96,20 @@ HRESULT AtlUnmarshalPtr(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStream`  
+ *pStream*  
  [in]正在 marshaling 資料流的指標。  
   
- `iid`  
+ *iid*  
  [in]正在 marshaling 介面的 GUID。  
   
- `ppUnk`  
+ *ppUnk*  
  [out]解除封送處理介面的指標。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
+  範例，請參閱[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
   
 ## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

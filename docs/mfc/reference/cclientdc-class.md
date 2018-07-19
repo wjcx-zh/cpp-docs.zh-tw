@@ -1,5 +1,5 @@
 ---
-title: CClientDC 類別 |Microsoft 文件
+title: CClientDC 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338577"
 ---
 # <a name="cclientdc-class"></a>CClientDC 類別
-呼叫 Windows 函式會負責[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在建構階段和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在解構階段。  
+呼叫 Windows 函式會負責[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在建構階段並[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在解構階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,12 +48,12 @@ class CClientDC : public CDC
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND`之視窗的這個`CClientDC`有效。|  
+|[CClientDC::m_hWnd](#m_hwnd)|這個視窗的 HWND`CClientDC`有效。|  
   
 ## <a name="remarks"></a>備註  
  這表示，與相關聯的裝置內容`CClientDC`物件是視窗工作區。  
   
- 如需有關`CClientDC`，請參閱[裝置內容](../../mfc/device-contexts.md)。  
+ 如需詳細資訊`CClientDC`，請參閱 <<c2> [ 裝置內容](../../mfc/device-contexts.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **標題:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- 建構`CClientDC`物件存取的工作區[CWnd](../../mfc/reference/cwnd-class.md)指向*pWnd*。  
+ 建構`CClientDC`存取的工作區的物件[CWnd](../../mfc/reference/cwnd-class.md)所指*pWnd*。  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -74,18 +74,18 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>參數  
  *pWnd*  
- 視窗裝置內容物件存取其工作區中。  
+ 視窗的裝置內容物件將會存取其工作區中。  
   
 ### <a name="remarks"></a>備註  
  建構函式會呼叫 Windows 函式[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)。  
   
- 例外狀況 (型別`CResourceException`) 則會擲回 Windows`GetDC`呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有已配置所有其可用的裝置內容。 您的應用程式競爭的五個一般顯示內容可用在任何指定的時間，在 Windows 下。  
+ 例外狀況 (型別的`CResourceException`) 便會擲回 Windows`GetDC`呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有配置所有其可用的裝置內容。 您的應用程式競爭五個一般顯示的可用內容，在 Windows 下一次。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
- `HWND`的`CWnd`指標用來建構`CClientDC`物件。  
+ `HWND`的`CWnd`指標，用來建構`CClientDC`物件。  
   
 ```  
 HWND m_hWnd;  
@@ -95,7 +95,7 @@ HWND m_hWnd;
  *m_hWnd*是受保護的變數。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CClientDC::CClientDC](#cclientdc)。  
+  範例，請參閱[CClientDC::CClientDC](#cclientdc)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   

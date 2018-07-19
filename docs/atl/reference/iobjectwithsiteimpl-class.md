@@ -1,5 +1,5 @@
 ---
-title: IObjectWithSiteImpl 類別 |Microsoft 文件
+title: IObjectWithSiteImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362035"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883784"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 類別
-這個類別會提供讓物件與其站台通訊的方法。  
+這個類別提供方法讓其站台與通訊的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ template <class T>
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IObjectWithSiteImpl`。  
   
 ## <a name="members"></a>成員  
@@ -50,21 +50,21 @@ template <class T>
 |名稱|描述|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::GetSite](#getsite)|查詢的介面指標的站台。|  
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|提供的物件與站台的**IUnknown**指標。|  
-|[IObjectWithSiteImpl::SetSite](#setsite)|提供的物件與站台的**IUnknown**指標。|  
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|物件提供站台的`IUnknown`指標。|  
+|[IObjectWithSiteImpl::SetSite](#setsite)|物件提供站台的`IUnknown`指標。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|管理站台的**IUnknown**指標。|  
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|管理站台的`IUnknown`指標。|  
   
 ## <a name="remarks"></a>備註  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)介面讓物件與其站台通訊。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)介面允許其站台與通訊的物件。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
- `IObjectWithSiteImpl` 指定兩種方法。 用戶端會先呼叫`SetSite`，傳遞站台的**IUnknown**指標。 此指標會儲存在物件內，稍後可以透過呼叫擷取`GetSite`。  
+ `IObjectWithSiteImpl` 指定兩個方法。 用戶端會先呼叫`SetSite`，將站台的`IUnknown`指標。 此指標會儲存在物件中，並稍後可以透過呼叫來擷取`GetSite`。  
   
- 一般而言，衍生您的類別從`IObjectWithSiteImpl`當您建立的物件，不是控制項。 控制項，衍生您的類別從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)，這樣也會提供站台的指標。 不是您的類別衍生自`IObjectWithSiteImpl`和`IOleObjectImpl`。  
+ 一般而言，您衍生您的類別，從`IObjectWithSiteImpl`當您建立物件，並不是控制項。 對於控制項，衍生您的類別，從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)，這也會提供站台的指標。 不是您的類別衍生自兩者`IObjectWithSiteImpl`和`IOleObjectImpl`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IObjectWithSite`  
@@ -75,7 +75,7 @@ template <class T>
  **標頭：** atlcom.h  
   
 ##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
- 查詢所識別的介面指標的站台`riid`。  
+ 查詢所識別之介面指標的站台`riid`。  
   
 ```
 STDMETHOD(GetSite)(
@@ -84,22 +84,22 @@ STDMETHOD(GetSite)(
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果站台支援這個介面，指標會傳回透過`ppvSite`。 否則，`ppvSite`設**NULL**。  
+ 如果站台支援這個介面，透過傳回的指標`ppvSite`。 否則，`ppvSite`設為 NULL。  
   
  請參閱[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK 中。  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
- 管理站台的**IUnknown**指標。  
+ 管理站台的`IUnknown`指標。  
   
 ```
 CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_spUnkSite` 一開始會接收這個指標透過呼叫[SetSite](#setsite)。  
+ `m_spUnkSite` 一開始會收到這個指標，透過呼叫[SetSite](#setsite)。  
   
 ##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
- 提供的物件與站台的**IUnknown**指標。  
+ 物件提供站台的`IUnknown`指標。  
   
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -107,13 +107,13 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
   
 ### <a name="parameters"></a>參數  
  *pUnkSite*  
- [in]指標**IUnknown**管理此物件的站台的介面指標。 如果是 NULL，應該呼叫物件`IUnknown::Release`任何時間點的物件不會再知道其站台的現有站台上。  
+ [in]指標`IUnknown`管理此物件的站台的介面指標。 如果是 NULL，應呼叫物件`IUnknown::Release`上任何現有的站台，屆時物件不再知道其站台。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 `S_OK`。  
+ 傳回 S_OK。  
   
 ##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
- 提供的物件與站台的**IUnknown**指標。  
+ 物件提供站台的`IUnknown`指標。  
   
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);

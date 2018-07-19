@@ -1,5 +1,5 @@
 ---
-title: 灰色和遞色點陣圖函式 |Microsoft 文件
+title: 灰色和遞色點陣圖函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339393"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和遞色點陣圖函式
 **灰色點陣圖函式**  
@@ -62,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指向目的地 DC。  
   
  *x*  
@@ -71,10 +71,10 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  目的地 y 座標。  
   
- `rSrc`  
+ *rSrc*  
  來源點陣圖。  
   
- `crBackground`  
+ *crBackground*  
  新的背景色彩 (通常是灰色，例如 COLOR_MENU)。  
   
 ### <a name="remarks"></a>備註  
@@ -99,13 +99,13 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSrc`  
+ *rSrc*  
  來源點陣圖。  
   
- `pDest`  
+ *pDest*  
  目的點陣圖。  
   
- `crBackground`  
+ *crBackground*  
  新的背景色彩 (通常是灰色，例如 COLOR_MENU)。  
   
 ### <a name="remarks"></a>備註  
@@ -120,7 +120,7 @@ void AFXAPI AfxGetGrayBitmap(
  **標題:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- 繪製點陣圖，以遞色 （檢查程式） 樣式取代它的背景。  
+ 繪製點陣圖，它的背景取代為遞色 （檢查程式） 模式。  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -133,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指向目的地 DC。  
   
  *x*  
@@ -142,17 +142,17 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  目的地 y 座標。  
   
- `rSrc`  
+ *rSrc*  
  來源點陣圖。  
   
- `cr1`  
+ *cr1*  
  兩個遞色色彩之一，通常為白色。  
   
- `cr2`  
+ *cr2*  
  另一個遞色色彩，通常是淺灰色 (COLOR_MENU)。  
   
 ### <a name="remarks"></a>備註  
- 含有兩個色彩的目的地 DC 上繪製的來源點陣圖 (`cr1`和`cr2`) 棋盤式的圖樣取代點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
+ 含有兩個色彩的目的地 DC 上繪製的來源點陣圖 (*cr1*並*cr2*) 棋盤式的圖樣取代點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
   
  ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
@@ -175,20 +175,20 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSrc`  
+ *rSrc*  
  來源點陣圖。  
   
- `pDest`  
+ *pDest*  
  目的點陣圖。  
   
- `cr1`  
+ *cr1*  
  兩個遞色色彩之一，通常為白色。  
   
- `cr2`  
+ *cr2*  
  另一個遞色色彩，通常是淺灰色 (COLOR_MENU)。  
   
 ### <a name="remarks"></a>備註  
- 將來源點陣圖複製到目的地點陣圖與兩個色彩 (`cr1`和`cr2`) 棋盤式的圖樣取代來源點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
+ 來源點陣圖複製到目的地點陣圖與兩個色彩 (*cr1*並*cr2*) 棋盤式的圖樣，取代來源點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
   
  ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
@@ -199,4 +199,4 @@ void AFXAPI AfxGetDitheredBitmap(
  **標題:** afxwin.h  
   
 ## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+ [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

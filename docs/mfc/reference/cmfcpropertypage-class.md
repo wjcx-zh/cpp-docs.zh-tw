@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyPage 類別 |Microsoft 文件
+title: CMFCPropertyPage 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042078"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848732"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 類別
-`CMFCPropertyPage`類別支援在屬性頁上顯示快顯功能表。  
+`CMFCPropertyPage`類別支援的快顯功能表顯示在 [屬性] 頁面上。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,14 +48,14 @@ class CMFCPropertyPage : public CPropertyPage
 |名稱|描述|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|`CMFCPropertyPage::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
-|`CMFCPropertyPage::OnSetActive`|此成員函式是由架構呼叫，當頁面由使用者選擇，並會變成使用中的頁面。 (覆寫[cpropertypage:: Onsetactive](../../mfc/reference/cpropertypage-class.md#onsetactive)。)|  
-|`CMFCPropertyPage::PreTranslateMessage`|將視窗訊息轉譯分派至之前[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需詳細資訊和方法語法，請參閱[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CPropertyPage::PreTranslateMessage`。)|  
+|`CMFCPropertyPage::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
+|`CMFCPropertyPage::OnSetActive`|此成員函式是由架構呼叫，當頁面由使用者選擇而變成使用中的頁面。 (覆寫[cpropertypage:: Onsetactive](../../mfc/reference/cpropertypage-class.md#onsetactive)。)|  
+|`CMFCPropertyPage::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需詳細資訊及方法語法，請參閱 < [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CPropertyPage::PreTranslateMessage`。)|  
   
 ## <a name="remarks"></a>備註  
- `CMFCPropertyPage`類別表示屬性工作表，亦稱為索引標籤對話方塊的個別頁面。  
+ `CMFCPropertyPage`類別表示屬性工作表，亦稱為索引標籤對話方塊中的個別頁面。  
   
- 使用`CMFCPropertyPage`類別搭配[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)類別。 若要在屬性頁上，使用功能表，取代所有出現之`CPropertyPage`類別`CMFCPropertyPage`類別。  
+ 使用`CMFCPropertyPage`類別搭配[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)類別。 若要使用的屬性頁功能表，取代所有出現之`CPropertyPage`類別搭配`CMFCPropertyPage`類別。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,18 +89,18 @@ CMFCPropertyPage(
   
 ### <a name="parameters"></a>參數  
  *nIDTemplate*  
- 此頁面的範本資源 ID。  
+ 此頁面的範本的資源識別碼。  
   
  *nIDCaption*  
- 資源識別碼的標籤放置在此頁面 索引標籤。 如果為 0，名稱被取自此頁面的對話方塊範本中。 預設值為 0。  
+ 資源識別碼的標籤將放在這個頁面的索引標籤。 如果為 0，名稱被取自此頁面的對話方塊範本中。 預設值為 0。  
   
  *lpszTemplateName*  
- 此頁面的範本名稱點。 不能`NULL`。  
+ 此頁面的範本名稱點。 不可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- 如需建構函式參數的詳細資訊，請參閱[CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。  
+ 如需有關建構函式參數的詳細資訊，請參閱[CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

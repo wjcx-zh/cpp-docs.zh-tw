@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845641"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953071"
 ---
 # <a name="gslicearray-class"></a>gslice_array 類別
 
@@ -76,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 [gslice](../standard-library/gslice-class.md) 類別的 **gs** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。
+此類別描述可儲存物件的參考`va`類別的[valarray](../standard-library/valarray-class.md)**\<型別 >**，以及物件`gs`類別的[gslice](../standard-library/gslice-class.md)其中描述要從選取的元素序列`valarray<Type>`物件。
 
-您只能藉由撰寫 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式來建構 **gslice_array\<Type>** 物件。 gslice_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。
+您建構`gslice_array<Type>`物件只能藉由撰寫運算式的形式[va&#91;gs&#93;](../standard-library/valarray-class.md#op_at)。 Gslice_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。
 
-此範本類別是由某些 valarray 運算間接建立的，無法直接在程式中使用。 配量註標運算子會改用內部輔助範本類別：
+此樣板類別是由某些 valarray 運算間接建立的，無法直接在程式中使用。 配量註標運算子會改用內部輔助範本類別：
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**)。
 
-您只能藉由撰寫 **va[gsl]** 格式的運算式，為 valarray **va** 的配量 **gsl** 建構 **gslice_array\<Type>** 物件。 gslice_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。 gslice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即第一個配量中第一個元素的索引、每個配量中的元素數目，以及每個配量中元素之間的距離。
+您建構`gslice_array<Type>`物件只能藉由撰寫運算式的形式`va[gsl]`，配量`gsl`valarray 的`va`。 Gslice_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。 gslice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即第一個配量中第一個元素的索引、每個配量中的元素數目，以及每個配量中元素之間的距離。
 
 在以下範例中：
 

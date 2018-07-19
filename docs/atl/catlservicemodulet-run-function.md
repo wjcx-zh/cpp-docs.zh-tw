@@ -1,5 +1,5 @@
 ---
-title: CAtlServiceModuleT::Run 函式 |Microsoft 文件
+title: 'Catlservicemodulet:: Run 函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a07ad6b09fa10a81b500625531226dc18fc6281a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e509ad88a744f6ebaaca41ecd0d6455d68c2585c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355121"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850650"
 ---
-# <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run 函式
-**執行**包含呼叫`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 之後，呼叫`PreMessageLoop`先儲存服務的執行緒識別碼。 服務會使用這個識別碼來自動關閉傳送**WM_QUIT**訊息使用 Win32 API 函式[PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)。  
+# <a name="catlservicemoduletrun-function"></a>Catlservicemodulet:: Run 函式
+`Run` 包含呼叫`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 在被呼叫之後`PreMessageLoop`第一次儲存服務的執行緒 id。 服務會使用此 ID 來傳送 WM_QUIT 訊息使用 Win32 API 函式，就可以將它關閉本身[PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)。  
   
- `PreMessageLoop` 然後呼叫`InitializeSecurity`。 根據預設，`InitializeSecurity`呼叫[CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736)與安全性描述元設定為 NULL，這表示任何使用者可以對您物件的存取。  
+ `PreMessageLoop` 然後呼叫`InitializeSecurity`。 根據預設，`InitializeSecurity`呼叫[CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736)與安全性描述元設定為 NULL，這表示任何使用者可對您物件的存取。  
   
- 如果您不想要指定自己的安全性服務，會覆寫`PreMessageLoop`和不要呼叫`InitializeSecurity`，COM 然後會判斷登錄的安全性設定。 設定登錄設定的簡便方法是使用[DCOMCNFG](../atl/dcomcnfg.md)本章節稍後所討論的公用程式。  
+ 如果您不想要指定自己的安全性服務，會覆寫`PreMessageLoop`，且不要呼叫`InitializeSecurity`，COM 然後會判斷來自登錄的安全性設定。 若要設定登錄設定方便的方法是使用[DCOMCNFG](../atl/dcomcnfg.md)本章節稍後所討論的公用程式。  
   
- 安全性指定之後，物件是使用 COM 註冊，使新的用戶端可以連線到程式。 最後，程式執行，而且程式會進入訊息迴圈會告知服務控制管理員 (SCM)。 直到它發出一個結束的訊息在服務關閉時，仍繼續執行程式。  
+ 安全性指定之後，物件會向 COM，讓新的用戶端可以連線到的程式。 最後，程式執行，而且程式進入的訊息迴圈會告知服務控制管理員 (SCM)。 在服務關閉時將 quit 的訊息張貼之後，直到執行程式。  
   
 ## <a name="see-also"></a>另請參閱  
  [服務](../atl/atl-services.md)   
  [CSecurityDesc 類別](../atl/reference/csecuritydesc-class.md)   
  [CSid 類別](../atl/reference/csid-class.md)   
  [CDacl 類別](../atl/reference/cdacl-class.md)   
- [CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)
+ [Catlservicemodulet:: Run](../atl/reference/catlservicemodulet-class.md#run)
 

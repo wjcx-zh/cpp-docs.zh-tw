@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953058"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function 類別
 
@@ -43,17 +43,17 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`pfunc` 要轉換將二元函式。
+*pfunc*来轉換的二元函式。
 
-`left` 物件，  *\*pfunc*上呼叫。
+*左*物件所 *\*pfunc*上呼叫。
 
 ## <a name="return-value"></a>傳回值
 
-此範本類別會儲存 **pfunc** 的複本。 它會在傳回 (\* **pfunc**)(_ *Left*) 時定義其成員函式 `operator()`。
+此範本類別會儲存一份`pfunc`。 它會在傳回 (\* **pfunc**)(_ *Left*) 時定義其成員函式 `operator()`。
 
 ## <a name="remarks"></a>備註
 
-一元函式指標是函式物件，可傳遞至需要一元函式當作參數的任何 C++ 標準程式庫演算法，但它不具可調適性。 若要使用它來搭配配接器 (例如與值繫結) 或使用它搭配否定運算子，您都必須提供它能夠進行這類調適的巢狀型別：**argument_type** 和 **result_type**。 透過 `pointer_to_unary_function` 的轉換可讓函式配接器使用二元函式指標。
+一元函式指標是函式物件，可傳遞至需要一元函式當作參數的任何 C++ 標準程式庫演算法，但它不具可調適性。 若要使用它來搭配配接器，例如與值繫結到它，或使用它搭配否定，它必須提供的巢狀類型`argument_type`和`result_type`，進行這類調適。 透過 `pointer_to_unary_function` 的轉換可讓函式配接器使用二元函式指標。
 
 ## <a name="example"></a>範例
 

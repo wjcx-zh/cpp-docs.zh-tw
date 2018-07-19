@@ -1,5 +1,5 @@
 ---
-title: CMFCCaptionButton 類別 |Microsoft 文件
+title: CMFCCaptionButton 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 356aa3448c3912c1842d5e04c697fc86fc9714c0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338395"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
-`CMFCCaptionButton`類別實作停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
+`CMFCCaptionButton`類別實作的停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,23 +62,23 @@ class CMFCCaptionButton : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCCaptionButton::GetHit](#gethit)|傳回按鈕所代表的命令。|  
-|[CMFCCaptionButton::GetIconID](#geticonid)|傳回與按鈕相關聯的映像識別碼。|  
+|[CMFCCaptionButton::GetHit](#gethit)|傳回按鈕表示的命令。|  
+|[CMFCCaptionButton::GetIconID](#geticonid)|傳回與按鈕關聯的映像識別碼。|  
 |[CMFCCaptionButton::GetRect](#getrect)|傳回按鈕所佔據的矩形。|  
 |[CMFCCaptionButton::GetSize](#getsize)|傳回按鈕的高度與寬度。|  
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|指出是否要將標題列的高度設定為小型的大小。|  
-|[CMFCCaptionButton::Move](#move)|設定按鈕繪製位置和視窗顯示狀態。|  
+|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|指出是否要將標題列的高度設定為小型大小。|  
+|[CMFCCaptionButton::Move](#move)|設定視窗的顯示狀態與按鈕繪製位置。|  
 |[CMFCCaptionButton::OnDraw](#ondraw)|繪製標題按鈕。|  
 |[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|設定迷你標題列的大小。|  
   
 ## <a name="remarks"></a>備註  
- 您也可以衍生自[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)和使用受保護的方法， `AddButton`、 加入迷你框架視窗標題按鈕。  
+ 您可以衍生的類別[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)，並使用受保護的方法，`AddButton`要加入的迷你框架視窗的標題按鈕。  
   
  CPaneFrameWnd.h 定義兩種類型的標題按鈕的命令識別碼：  
   
-- `AFX_CAPTION_BTN_PIN`其中顯示固定按鈕停駐窗格支援自動隱藏模式時。  
+- AFX_CAPTION_BTN_PIN，停駐窗格支援自動隱藏模式時，會顯示 pin 碼 按鈕。  
   
-- `AFX_CAPTION_BTN_CLOSE`用來顯示**關閉**按鈕時，可以關閉或隱藏窗格。  
+- AFX_CAPTION_BTN_CLOSE，它會顯示**關閉**按鈕窗格可以關閉或隱藏時。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何建構`CMFCCaptionButton`物件，並設定迷你標題列的大小。  
@@ -107,22 +107,22 @@ CMFCCaptionButton(
   
 ### <a name="parameters"></a>參數  
  [in]*nHit*  
- 命令與按鈕相關聯。  
+ 與按鈕關聯的命令。  
   
  [in]*bLeftAlign*  
  指定按鈕是否靠左對齊。  
   
- 下表列出可能的值為*nHit*參數。  
+ 下表列出可能的值，如*nHit*參數。  
   
 |值|命令|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|[關閉] 按鈕。|  
-|`HTMINBUTTON`|最小化按鈕。|  
-|`HTMAXBUTTON`|最大化 按鈕。|  
-|`AFX_HTLEFTBUTTON`|向左箭號按鈕。|  
-|`AFX_HTRIGHTBUTTON`|向右箭號按鈕。|  
-|`AFX_HTMENU`|向下箭號 功能表按鈕。|  
-|`HTNOWHERE`|預設值。表示沒有命令。|  
+|AFX_HTCLOSE|[關閉] 按鈕。|  
+|HTMINBUTTON|最小化按鈕。|  
+|HTMAXBUTTON|最大化 按鈕。|  
+|AFX_HTLEFTBUTTON|向左箭號按鈕。|  
+|AFX_HTRIGHTBUTTON|向右箭號按鈕。|  
+|AFX_HTMENU|向下箭號 功能表按鈕。|  
+|HTNOWHERE|預設值;不代表任何命令。|  
   
 ### <a name="remarks"></a>備註  
  根據預設，標題按鈕不會與命令相關聯。  
@@ -130,29 +130,29 @@ CMFCCaptionButton(
  在右或向左對齊標題按鈕。  
   
 ##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
- 傳回按鈕所代表的命令。  
+ 傳回按鈕表示的命令。  
   
 ```  
 UINT GetHit() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 命令按鈕所表示。  
+ 命令按鈕表示。  
   
  下表列出可能的傳回值。  
   
 |值|命令|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|[關閉] 按鈕。|  
-|`HTMINBUTTON`|最小化按鈕。|  
-|`HTMAXBUTTON`|最大化 按鈕。|  
-|`AFX_HTLEFTBUTTON`|向左箭號按鈕。|  
-|`AFX_HTRIGHTBUTTON`|向右箭號按鈕。|  
-|`AFX_HTMENU`|向下箭號 功能表按鈕。|  
-|`HTNOWHERE`|預設值。表示沒有命令。|  
+|AFX_HTCLOSE|[關閉] 按鈕。|  
+|HTMINBUTTON|最小化按鈕。|  
+|HTMAXBUTTON|最大化 按鈕。|  
+|AFX_HTLEFTBUTTON|向左箭號按鈕。|  
+|AFX_HTRIGHTBUTTON|向右箭號按鈕。|  
+|AFX_HTMENU|向下箭號 功能表按鈕。|  
+|HTNOWHERE|預設值;不代表任何命令。|  
   
 ##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
- 傳回與按鈕相關聯的映像識別碼。  
+ 傳回與按鈕關聯的映像識別碼。  
   
 ```  
 virtual CMenuImages::IMAGES_IDS GetIconID(
@@ -162,16 +162,16 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
   
 ### <a name="parameters"></a>參數  
  [in]*bHorz*  
- `TRUE` 左或向右箭號映像識別碼;`FALSE`的向上或向下箭號影像 Id。  
+ 適用於左或向右箭號映像識別碼;FALSE 表示向上或向下箭號映像識別碼。  
   
  [in]*bMaximized*  
- `TRUE` 最大化映像識別碼;`FALSE`最小化映像識別碼。  
+ 適用於最大化映像識別碼;FALSE 表示最小化映像識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  映像識別碼。  
   
 ### <a name="remarks"></a>備註  
- 參數會指定最小化的映像識別碼，或最大化標題按鈕。  
+ 參數指定的最小化的映像識別碼，或最大化標題按鈕。  
   
 ##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  傳回按鈕所佔據的矩形。  
@@ -181,10 +181,10 @@ virtual CRect GetRect() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 表示按鈕的位置的矩形。  
+ 矩形，表示按鈕的位置。  
   
 ### <a name="remarks"></a>備註  
- 如果看不到按鈕，傳回的大小為 0。  
+ 如果看不到按鈕，則傳回大小為 0。  
   
 ##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  傳回按鈕的高度與寬度。  
@@ -194,25 +194,25 @@ static CSize GetSize();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 按鈕的外部的維度。  
+ 按鈕的外部的大小。  
   
 ### <a name="remarks"></a>備註  
- 傳回的大小包含按鈕邊界和邊框。  
+ 傳回的大小包含按鈕的邊界和邊框。  
   
 ##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
- 指出是否要將標題列的高度設定為小型的大小。  
+ 指出是否要將標題列的高度設定為小型大小。  
   
 ```  
 BOOL IsMiniFrameButton() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果標題設定為迷你大小;否則`FALSE`。  
+ 如果標題設定為小型大小;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="move"></a>  CMFCCaptionButton::Move  
- 設定按鈕繪製位置和視窗顯示狀態。  
+ 設定視窗的顯示狀態與按鈕繪製位置。  
   
 ```  
 void Move(
@@ -241,7 +241,7 @@ virtual void OnDraw(
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 按鈕的裝置內容的指標。  
+ 按鈕的裝置內容指標。  
   
  [in]*bActive*  
  是否要繪製作用中的按鈕影像。  
@@ -253,7 +253,7 @@ virtual void OnDraw(
  是否要繪製最大化的按鈕影像。  
   
  [in]*bDisabled*  
- 是否要繪製啟用的按鈕影像。  
+ 是否要繪製已啟用 按鈕影像。  
   
 ### <a name="remarks"></a>備註  
  *BMaximized*參數會使用最大化 按鈕時，或最小化按鈕。  
@@ -267,7 +267,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bSet*  
- `TRUE` 迷你標題列的高度;`FALSE`預設標題列的高度。  
+ 適用於小型的標題列的高度;預設標題列的高度，則為 FALSE。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

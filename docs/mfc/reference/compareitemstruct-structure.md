@@ -1,5 +1,5 @@
 ---
-title: COMPAREITEMSTRUCT 結構 |Microsoft 文件
+title: COMPAREITEMSTRUCT 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6c42f356cb323bb7690b6c39b1fc7bd9ce0485f3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078254"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850585"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 結構
-`COMPAREITEMSTRUCT`結構提供的識別項和應用程式提供兩個項目的已排序的主控描繪清單方塊或下拉式方塊中的資料。  
+`COMPAREITEMSTRUCT`結構提供的識別項和應用程式提供兩個項目已排序的主控描繪清單方塊或下拉式方塊中的資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,28 +42,28 @@ typedef struct tagCOMPAREITEMSTRUCT {
   
 #### <a name="parameters"></a>參數  
  *CtlType*  
- **ODT_LISTBOX** （指定主控描繪清單方塊） 或**ODT_COMBOBOX** （指定主控描繪下拉式方塊）。  
+ ODT_LISTBOX （可指定主控描繪清單方塊） 或 ODT_COMBOBOX （可指定主控描繪下拉式方塊）。  
   
  *CtlID*  
- 清單方塊或下拉式方塊控制項 ID。  
+ 清單方塊或下拉式方塊控制項識別碼。  
   
  *hwndItem*  
  控制項的視窗控制代碼。  
   
  *itemID1*  
- 在清單方塊或下拉式方塊所比較的第一個項目索引。  
+ 在清單方塊或下拉式方塊要比較的第一個項目索引。  
   
  *itemData1*  
- 要比較的第一個項目的應用程式提供資料。 將項目加入至組合或清單方塊的呼叫中傳遞此值。  
+ 應用程式提供要比較的第一個項目資料。 將項目加入至下拉式方塊或清單方塊的呼叫中傳遞此值。  
   
  *itemID2*  
- 在清單方塊或下拉式方塊所比較的第二個項目索引。  
+ 在清單方塊或下拉式方塊所比較之第二個項目的索引。  
   
  *itemData2*  
- 應用程式提供的資料進行比較的第二個項目。 將項目加入至組合或清單方塊的呼叫中傳遞此值。  
+ 應用程式提供要比較的第二個項目資料。 將項目加入至下拉式方塊或清單方塊的呼叫中傳遞此值。  
   
 ## <a name="remarks"></a>備註  
- 每當應用程式會將新的項目加入至主控描繪清單方塊或下拉式方塊以建立**CBS_SORT**或**LBS_SORT**樣式，Windows 會傳送擁有者 WM_COMPAREITEM 訊息。 *LParam*訊息參數包含的長指標`COMPAREITEMSTRUCT`結構。 收到訊息時，擁有者會比較兩個項目，並傳回值，指出哪一個項目排序之前另。  
+ 只要應用程式會將新的項目新增至主控描繪清單方塊或下拉式方塊以 CBS_SORT 或 LBS_SORT 樣式，Windows 會將擁有者傳送 WM_COMPAREITEM 訊息。 *LParam*訊息參數中包含的長指標`COMPAREITEMSTRUCT`結構。 在收到訊息時，擁有者會比較兩個項目，並傳回值，指出哪一個項目排序在其他。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  

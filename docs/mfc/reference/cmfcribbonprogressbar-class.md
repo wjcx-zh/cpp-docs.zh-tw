@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonProgressBar 類別 |Microsoft 文件
+title: CMFCRibbonProgressBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: eec19c574d9555fdfefaedd1b5ac05d896d15152
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040216"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850757"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 類別
 實作以視覺效果指示長時間作業進度的控制項。  
@@ -68,17 +68,17 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|傳回目前範圍的最大值。|  
 |[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|傳回目前範圍的最小值。|  
 |[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|  
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|指定是否在無限模式工作進度列。|  
+|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|指定是否在無限模式工作的進度列。|  
 |[CMFCRibbonProgressBar::OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[cmfcribbonbaseelement:: Ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|  
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|設定無限的模式中工作的進度列。|  
+|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|設定進度列在無限的模式下運作。|  
 |[CMFCRibbonProgressBar::SetPos](#setpos)|設定目前的進度。|  
 |[CMFCRibbonProgressBar::SetRange](#setrange)|設定最小和最大值。|  
   
 ## <a name="remarks"></a>備註  
- A`CMFCRibbonProgressBar`可以在兩種模式下操作： 一般和無限。 在標準模式中，進度列會從左到右填滿，並停止到達最大值時。 在無限模式中，進度列會重複填滿從最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但是完成時間不明。  
+ A`CMFCRibbonProgressBar`可以在兩個模式下操作： 一般和無限。 在一般的模式中，進度列填滿從左到右，並停止時它達到最大值。 在無限的模式中，進度列重複從填入的最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但是完成時間不明。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的`CMFCRibbonProgressBar`類別。 設定最小和最大值進度列，以及設定進度列的目前位置，範例會示範如何設定中 （其中一項作業的完成時間是未知） 的無限模式下，工作的進度列。 此程式碼片段是部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用中的各種方法`CMFCRibbonProgressBar`類別。 設定進度列的最小和最大值，並設定進度列的目前位置，範例會示範如何設定要使用無限的模式 （其中一項作業的完成時間是未知） 中，進度列。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
   
@@ -107,29 +107,29 @@ CMFCRibbonProgressBar(
   
 ### <a name="parameters"></a>參數  
  [in]*nID*  
- 指定功能區進度列的命令 ID。  
+ 指定功能區的進度列的命令 ID。  
   
  [in]*nWidth*  
- 指定的寬度，以像素的功能區進度列。  
+ 指定寬度，單位為像素功能區的進度列。  
   
  [in]*nHeight*  
- 指定高度，單位為像素的功能區進度列。  
+ 指定高度，單位為像素功能區的進度列。  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
- 傳回目前進度列的位置。  
+ 傳回目前的進度列位置。  
   
 ```  
 int GetPos () const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 值，表示目前進度列的位置。  
+ 值，表示目前的進度列位置。  
   
 ### <a name="remarks"></a>備註  
  正在設定的範圍必須是所指定的範圍內[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
   
 ##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
- 傳回進度列的目前最大值。  
+ 傳回目前進度列的最大值。  
   
 ```  
 int GetRangeMax() const;  
@@ -141,7 +141,7 @@ int GetRangeMax() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
- 進度列的目前會傳回最小範圍值。  
+ 傳回目前進度列的最小範圍值。  
   
 ```  
 int GetRangeMin() const;  
@@ -165,17 +165,17 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode  
- 指定是否在無限模式工作進度列。  
+ 指定是否在無限模式工作的進度列。  
   
 ```  
 BOOL IsInfiniteMode() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果進度列為無限的模式;否則， `FALSE`。  
+ 如果進度列為無限的模式，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 在無限模式中，進度列填滿重複從最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但是完成時間不明。  
+ 在無限的模式中，進度列填滿重複從最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但是完成時間不明。  
   
 ##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -190,7 +190,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode  
- 設定無限的模式中工作的進度列。  
+ 設定進度列在無限的模式下運作。  
   
 ```  
 void SetInfiniteMode(BOOL bSet = TRUE);
@@ -198,13 +198,13 @@ void SetInfiniteMode(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bSet*  
- `TRUE` 若要指定無限的模式，進度列否則， `FALSE`。  
+ 若要指定進度列是無限的模式，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 通常，如果進度列是無限的模式，它在告訴使用者作業正在進行中，但完成時間不明。 因此，進度列填滿重複從最小值的最大值。  
+ 通常，如果進度列是無限的模式，它在告訴使用者的作業正在進行，但完成時間不明。 因此，進度列填滿重複從最小值的最大值。  
   
 ##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
- 設定目前進度列的位置。  
+ 設定進度列目前位置。  
   
 ```  
 void SetPos(
@@ -239,7 +239,7 @@ void SetRange(
  指定範圍的最大值。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法來定義進度列範圍，藉由設定 最小和最大值。  
+ 使用此方法來定義進度列範圍設定最小和最大值。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

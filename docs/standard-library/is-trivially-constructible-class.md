@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954743"
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible 類別
 
@@ -37,13 +37,13 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
-`Args` 引數類型的建構函式中要比對`T`。
+*引數*引數類型的建構函式中要比對*T*。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是可藉由使用 `Args` 中的引數類型透過極簡方式建構的類型，類型述詞執行個體的值就會是 true，否則會是 false。 如果變數定義 `T t(std::declval<Args>()...);` 格式正確，且已知不會呼叫任何非極簡作業，類型 `T` 便是可透過極簡方式建構的類型。 `T` 和 `Args` 中的所有類型必須都是完整類型 `void`，或是界限未知的陣列。
+如果型別述詞的執行個體保留 true 型別*T*是可透過極簡方式建構使用中的引數型別*Args*，否則為 false。 型別*T*是可透過極簡方式建構如果變數定義`T t(std::declval<Args>()...);`而言是否格式正確，且已知呼叫任何非 trivial 作業。 兩者*T*和中的所有型別*Args*必須是完整類型**void**，或界限未知的陣列。
 
 ## <a name="requirements"></a>需求
 

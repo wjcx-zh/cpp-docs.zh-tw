@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954014"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -36,7 +36,7 @@ ms.locfileid: "33847191"
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
-> 使用編譯的程式碼中 **/clr**，此標頭會遭到封鎖。
+> 在編譯使用的程式碼 **/clr**，此標頭會遭到封鎖。
 
 「非同步提供者」會儲存函式呼叫的結果。 「非同步傳回物件」可用來擷取函式呼叫的結果。 「相關非同步狀態」可提供非同步提供者與一或多個非同步傳回物件之間的通訊。
 
@@ -48,7 +48,7 @@ ms.locfileid: "33847191"
 
 範本函式 `async` 及範本類別 `promise` 和 `packaged_task` 是非同步提供者。 範本類別 `future` 和 `shared_future` 則描述非同步傳回物件。
 
-範本類別 `promise`、`future` 和 `shared_future` 中每一個都具有 `void` 類型的特製化，以及可依參考來儲存和擷取值的部分特製化。 這些特製化與主要範本只有在儲存和擷取傳回值的函式簽章及語意上有差異。
+每個範本類別`promise`， `future`，並`shared_future`具有類型的特製化**void**和部分特製化來儲存和擷取值的參考。 這些特製化與主要範本只有在儲存和擷取傳回值的函式簽章及語意上有差異。
 
 範本類別 `future` 和 `shared_future` 除了為回溯相容性保留的情況之外，一律不會在其解構函式中進行封鎖：與所有其他 future 不同，針對連結至開頭為 `std::async` 之工作的 `future` (或最後一個 `shared_future`)，如果該工作尚未完成，解構函式就會進行封鎖；也就是說，如果此執行緒尚未呼叫 `.get()` 或 `.wait()` 且該工作仍在執行，解構函式就會進行封鎖。 下列可用性附註已經在草稿標準中新增到 `std::async` 的描述：「[附註：如果將從 std::async 取得的 future 移到區域範圍外，其他使用該 future 的程式碼必須知悉該 future 的解構函式可能進行封鎖來讓共用狀態變成就緒。—結束附註]」在所有其他情況下，都必須要有 `future` 和 `shared_future` 解構函式，並且保證它們一律不進行封鎖。
 

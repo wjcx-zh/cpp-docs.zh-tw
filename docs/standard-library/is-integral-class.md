@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954027"
 ---
 # <a name="isintegral-class"></a>is_integral 類別
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是其中一個整數類型，或其中一個整數類型的 `cv-qualified` 形式，則類型述詞的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是其中一個整數類資料類型，或`cv-qualified`形式的其中一個整數型別，否則為 false。
 
-整數類型是下列其中之一：`bool`、`char`、`unsigned char`、`signed char`、`wchar_t`、`short`、`unsigned short`、`int`、`unsigned int`、`long` 和 `unsigned long`。 此外，在使用提供整數的編譯器時，整數類型可以是 `long long`、`unsigned long long`、`__int64` 和 `unsigned __int64` 的其中之一。
+整數類資料類型是其中一個**bool**， **char**， **unsigned char**， **char&lt;3**， **wchar_t**， **簡短**， **unsigned short**， **int**，**不帶正負號的 int**，**長**，與**unsigned long**。 此外，以提供它們的編譯器，整數型別可以是其中一個**長長**， **unsigned long long**， **__int64**，和**不帶正負號的 __int64**.
 
 ## <a name="example"></a>範例
 

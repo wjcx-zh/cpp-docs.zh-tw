@@ -1,5 +1,5 @@
 ---
-title: OLE 初始化 |Microsoft 文件
+title: OLE 初始化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8224cf27313b056b95990f514e02eb9d9c08cad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 330701c4fcc75d40e782d25baa55044b88852f50
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337789"
 ---
 # <a name="ole-initialization"></a>OLE 初始化
-應用程式必須先初始化 OLE 系統 DLL 並驗證 DLL 版本是否正確，才可以使用 OLE 系統服務。 **AfxOleInit**函式會初始化 OLE 系統 Dll。  
+應用程式必須先初始化 OLE 系統 DLL 並驗證 DLL 版本是否正確，才可以使用 OLE 系統服務。 `AfxOleInit`函式會初始化 OLE 系統 Dll。  
   
 ### <a name="ole-initialization"></a>OLE 初始化  
   
@@ -51,30 +51,30 @@ void AfxEnableControlContainer( );
 
   
 ##  <a name="afxoleinit"></a>  AfxOleInit  
- 初始化 OLE 應用程式的支援。  
+ 初始化 OLE 支援應用程式。  
   
 ``` 
 BOOL AFXAPI AfxOleInit(); 
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為非零如果初始化失敗，可能是因為安裝的 OLE 系統 Dll 不正確的版本是 0。  
+ 如果成功則為非零0，如果初始化失敗，可能是因為已安裝正確版本的 OLE 系統 Dll。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式以初始化 OLE 支援的 MFC 應用程式。 呼叫此函式時，執行下列動作：  
+ 呼叫此函式以初始化 OLE 的 MFC 應用程式對的支援。 呼叫此函式時，便會執行下列動作：  
   
--   初始化 COM 程式庫上呼叫的應用程式目前的 apartment。 如需詳細資訊，請參閱[OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134)。  
+-   初始化 COM 程式庫上呼叫的應用程式的目前 apartment。 如需詳細資訊，請參閱 < [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134)。  
   
--   建立訊息篩選物件，實作[IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740)介面。 此訊息篩選條件可以存取透過呼叫[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)。  
-  
-> [!NOTE]
->  如果**AfxOleInit**呼叫從 MFC DLL，則呼叫會失敗。 因為函式會假設，如果呼叫的 dll，OLE 系統原先已初始化呼叫的應用程式，就會發生故障。  
+-   建立訊息篩選物件，實作[IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740)介面。 可存取此訊息篩選，藉由呼叫[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)。  
   
 > [!NOTE]
->  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中您`InitInstance`覆寫中，指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
+>  如果**AfxOleInit**稱為從 MFC DLL，則呼叫會失敗。 函式會假設，如果從 DLL 呼叫它時，OLE 系統先前已初始化所呼叫的應用程式，就會發生失敗。  
+  
+> [!NOTE]
+>  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h
 
 ## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+ [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

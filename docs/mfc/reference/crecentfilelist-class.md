@@ -1,5 +1,5 @@
 ---
-title: CRecentFileList 類別 |Microsoft 文件
+title: CRecentFileList 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 680c09a402f5143169021403305805dc141ff5a9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079012"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853091"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 類別
 支援最近使用的 (MRU) 檔案清單控制項。  
@@ -60,26 +60,26 @@ class CRecentFileList
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CRecentFileList::Add](#add)|將檔案加入至 MRU 檔案清單。|  
-|[CRecentFileList::GetDisplayName](#getdisplayname)|提供的 MRU 檔名的功能表顯示的顯示名稱。|  
-|[CRecentFileList::GetSize](#getsize)|擷取最近使用的檔案清單中的檔案數目。|  
-|[CRecentFileList::ReadList](#readlist)|從登錄讀取 MRU 檔案清單或。INI 檔案。|  
-|[CRecentFileList::Remove](#remove)|從 MRU 檔案清單移除檔案。|  
-|[CRecentFileList::UpdateMenu](#updatemenu)|更新的功能表顯示的最近使用的檔案清單。|  
-|[CRecentFileList::WriteList](#writelist)|從登錄中寫入 MRU 檔案清單或。INI 檔案。|  
+|[CRecentFileList::Add](#add)|將檔案加入至最近使用的檔案清單。|  
+|[CRecentFileList::GetDisplayName](#getdisplayname)|提供功能表顯示最近使用檔案名稱的顯示名稱。|  
+|[CRecentFileList::GetSize](#getsize)|擷取 MRU 檔案清單中的檔案的數目。|  
+|[CRecentFileList::ReadList](#readlist)|從登錄中讀取的最近使用的檔案清單或。INI 檔案。|  
+|[CRecentFileList::Remove](#remove)|從最近使用的檔案清單移除檔案。|  
+|[CRecentFileList::UpdateMenu](#updatemenu)|更新的功能表顯示的 MRU 檔案清單。|  
+|[CRecentFileList::WriteList](#writelist)|從登錄寫入 MRU 檔案清單或。INI 檔案。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CRecentFileList::operator]](#operator_at)|傳回`CString`的指定位置的物件。|  
+|[CRecentFileList::operator]](#operator_at)|傳回`CString`物件中指定的位置。|  
   
 ## <a name="remarks"></a>備註  
- 可以加入或從 MRU 檔案清單中刪除檔案，可讀取或寫入登錄的檔案清單或。可以更新 INI 檔案，並顯示最近使用的檔案清單的功能表。  
+ 檔案可以加入或刪除從最近使用的檔案清單，可讀取或寫入登錄的檔案清單或。可以更新 INI 檔，並顯示最近使用的檔案清單的功能表。  
   
- 如需 MRU 功能表項目，請參閱  
+ MRU 功能表項目的相關的詳細資訊，請參閱  
   
--   知識庫文章 Q243751： 如何： 新增的 MRU 功能表項目，在 MFC 應用程式的命令處理常式  
+-   眭妎踱恅 Q243751： 如何： 新增 MRU 功能表項目，在 MFC 應用程式的命令處理常式  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CRecentFileList`  
@@ -88,7 +88,7 @@ class CRecentFileList
  **標頭：** afxadv.h  
   
 ##  <a name="add"></a>  CRecentFileList::Add  
- 將檔案加入至最近使用的 (MRU) 檔案清單。  
+ 將檔案加入至最近使用過的 (MRU) 檔案清單。  
   
 ```  
 virtual void Add(LPCTSTR lpszPathName);
@@ -122,16 +122,16 @@ void Add(
  指定應用程式的應用程式使用者模型識別碼。  
   
  *pItem*  
- 指定要加入至清單的殼層項目的指標。  
+ 指定要加入至清單的 Shell 項目的指標。  
   
  *pLink*  
- 指定殼層連結加入至清單的指標。  
+ 指定殼層連結新增至清單的指標。  
   
  *pidl*  
- 指定應該加入至新的文件資料夾的 shell 項目 IDLIST。  
+ 指定殼層項目應加入至新的 docs 資料夾 IDLIST。  
   
 ### <a name="remarks"></a>備註  
- 檔案名稱會新增至 MRU 清單頂端。 如果檔案名稱已經存在 MRU 清單中，它將會移到頂端。  
+ 檔案名稱會新增至 MRU 清單頂端。 如果 MRU 清單中的檔案名稱已經存在，則它會移至頂端。  
   
 ##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
  建構 `CRecentFileList` 物件。  
@@ -146,14 +146,14 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>參數  
- *nStart*  
- 在功能表上顯示的 MRU （最近使用的） 檔案清單編號的位移。  
+ *n*  
+ 在功能表顯示的 MRU （最近使用的） 檔案清單編號的位移。  
   
  *lpszSection*  
- 指向名稱登錄或應用程式的一節。其中 MRU 檔案清單會讀取及/或寫入的 INI 檔案。  
+ 指向名稱登錄或應用程式的一節。其中 MRU 檔案清單會讀取和/或寫入的 INI 檔案。  
   
  *lpszEntryFormat*  
- 指向用於儲存在登錄或應用程式的項目名稱的格式字串。INI 檔案。  
+ 指向要用於儲存在登錄或應用程式的項目名稱的格式字串。INI 檔案。  
   
  *nSize*  
  MRU 檔案清單中的檔案數目上限。  
@@ -162,10 +162,10 @@ CRecentFileList(
  最大長度，以字元為單位，可供常用的檔案清單中的檔名的功能表顯示。  
   
 ### <a name="remarks"></a>備註  
- 格式字串所指向*lpszEntryFormat*應該包含"%d"，用於取代每個最近使用之項目的索引。 例如，如果格式字串是`"file%d"`項目將會命名為`file0`， `file1`，依此類推。  
+ 格式字串所指向*lpszEntryFormat*應該包含"%d"，這將用於取代每個 MRU 項目的索引。 例如，如果格式字串`"file%d"`則將具名項目`file0`， `file1`，依此類推。  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
- 取得檔案的 MRU 檔案清單中，用於功能表顯示的 MRU 清單中的顯示名稱。  
+ 取得在 MRU 檔案清單中，檔案以供使用，在功能表顯示的 MRU 清單的顯示名稱。  
   
 ```  
 virtual BOOL GetDisplayName(
@@ -178,38 +178,38 @@ virtual BOOL GetDisplayName(
   
 ### <a name="parameters"></a>參數  
  *strName*  
- 顯示功能表清單中的最近使用的檔案名稱的檔案的完整路徑。  
+ 要顯示在功能表的 MRU 檔案清單中的檔案名稱的完整路徑。  
   
  *nIndex*  
- MRU 檔案清單中的檔案以零為起始的索引。  
+ MRU 檔案清單中檔案的以零為起始的索引。  
   
  *lpszCurDir*  
- 儲存目前的目錄的字串。  
+ 保存目前的目錄的字串。  
   
  *nCurDir*  
  目前的目錄字串的長度。  
   
  *bAtLeastName*  
- 如果是非零值，指出基底檔案名稱應該傳回，即使它已超過最大顯示長度 (以傳遞*nMaxDispLen*參數`CRecentFileList`建構函式)。  
+ 如果是非零值，指出應該傳回檔案的基底名稱項目，即使它已超過最大可顯示長度 (以傳遞*nMaxDispLen*參數來`CRecentFileList`建構函式)。  
   
 ### <a name="return-value"></a>傳回值  
- **FALSE**如果沒有任何檔名指定的索引中最近使用的 (MRU) 檔案清單。  
+ **FALSE**如果任何檔名指定的索引中沒有最近使用過的 (MRU) 檔案清單。  
   
 ### <a name="remarks"></a>備註  
- 如果檔案是在目前的目錄，函式會使關閉顯示器的目錄。 如果檔名太長，則會予以去除目錄和擴充功能。 除非如果仍然太長檔名，將顯示名稱會設定為空字串*bAtLeastName*為非零值。  
+ 如果檔案是在目前的目錄，則函式會使顯示關閉的目錄。 如果檔案名稱太長，則會予以去除目錄和延伸模組。 如果仍然太長檔名，顯示名稱設為空字串除非*bAtLeastName*為非零值。  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
- 擷取最近使用的檔案清單中的檔案數目。  
+ 擷取 MRU 檔案清單中的檔案的數目。  
   
 ```  
 int GetSize() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在目前的檔案數目最常使用 (的 MRU) 檔案清單。  
+ 在目前的檔案數目最常使用 (MRU) 檔案清單。  
   
 ##  <a name="operator_at"></a>  CRecentFileList::operator]  
- 多載註標 ( `[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定*nIndex*。  
+ 多載註標 (`[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定*nIndex*。  
   
 ```  
 CString& operator[ ](int nindex);
@@ -217,7 +217,7 @@ CString& operator[ ](int nindex);
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 以零為起始的索引`CString`中一組`CString`s。  
+ 以零為起始的索引`CString`中的一組`CString`s。  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
  讀取最近使用過的 (MRU) 檔案清單，從登錄或應用程式。INI 檔案。  
@@ -227,7 +227,7 @@ virtual void ReadList();
 ```  
   
 ##  <a name="remove"></a>  CRecentFileList::Remove  
- 從 MRU 檔案清單移除檔案。  
+ 從最近使用的檔案清單移除檔案。  
   
 ```  
 virtual void Remove(int nIndex);
@@ -235,10 +235,10 @@ virtual void Remove(int nIndex);
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 要從最近使用的 (MRU) 檔案清單中移除的檔案以零為起始的索引。  
+ 要從最近使用過的 (MRU) 檔案清單中移除之檔案的以零為起始的索引。  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
- 更新的功能表顯示的最近使用的檔案清單。  
+ 更新的功能表顯示的 MRU 檔案清單。  
   
 ```  
 virtual void UpdateMenu(CCmdUI* pCmdUI);
@@ -246,10 +246,10 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
   
 ### <a name="parameters"></a>參數  
  *pCmdUI*  
- 指標[CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用的 (MRU) 檔案清單功能表的物件。  
+ 指標[CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用過的 (MRU) 檔案清單功能表的物件。  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  
- 寫入到登錄或應用程式的最最近使用過的 (MRU) 檔案清單。INI 檔案。  
+ 寫入至登錄或應用程式的大部分最近使用過的 (MRU) 檔案清單。INI 檔案。  
   
 ```  
 virtual void WriteList();

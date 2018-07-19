@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39549a277a203d9daa894f48437224caf50a0521
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853374"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953452"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function 類別
 
@@ -44,19 +44,19 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`pfunc` 要轉換將二元函式。
+*pfunc*来轉換的二元函式。
 
-`left` 左物件 *\*pfunc*上呼叫。
+*左*的左側物件 *\*pfunc*上呼叫。
 
-`right` 右物件 *\*pfunc*上呼叫。
+*右*的右側物件 *\*pfunc*上呼叫。
 
 ## <a name="return-value"></a>傳回值
 
-此樣板類別會儲存 **pfunc** 的複本。 它會將其成員函式 `operator()`定義為傳回的 (\* **pfunc**)(_ *Left*, \_ *Right*)。
+此範本類別會儲存一份`pfunc`。 它會將其成員函式 `operator()`定義為傳回的 (\* **pfunc**)(_ *Left*, \_ *Right*)。
 
 ## <a name="remarks"></a>備註
 
-二元函式指標是函式物件，可傳遞至預期二元函式做為參數的任何 C++ 標準程式庫演算法，但它不具可調適性。 若要使用它來搭配配接器 (例如與值繫結或使用它搭配否定運算子)，您都必須提供它能夠進行這類調適的巢狀類型：**first_argument_type**、**second_argument_type** 和 **result_type**。 透過 `pointer_to_binary_function` 的轉換可讓函式配接器使用二元函式指標。
+二元函式指標是函式物件，可傳遞至預期二元函式做為參數的任何 C++ 標準程式庫演算法，但它不具可調適性。 若要使用它來搭配配接器，例如與值繫結到它，或使用它搭配否定，它必須提供的巢狀類型`first_argument_type`， `second_argument_type`，和`result_type`，進行這類調適。 透過 `pointer_to_binary_function` 的轉換可讓函式配接器使用二元函式指標。
 
 ## <a name="example"></a>範例
 

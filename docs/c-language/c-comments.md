@@ -1,7 +1,7 @@
 ---
 title: C 註解 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384342"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121740"
 ---
 # <a name="c-comments"></a>C 註解
 「註解」是一個以正斜線和星號組合 (<b>/\*</b>) 為開頭的字元序列，編譯器會將其視為一個空白字元或直接忽略。 註解可以包含可表示字元集的任何字元組合，其中包括新行字元，但不包括「結尾註解」分隔符號 (<b>\*/</b>)。 註解可佔用一行以上，但不可以是巢狀。  
@@ -68,15 +68,15 @@ printf( "Hello\n" );  /* Comments can go here */
   
  雖然您在測試時可以使用註解來呈現數行程式碼，使其無法作用，不過若要達成此目的，使用前置處理器指示詞 `#if` 和 `#endif` 和條件式編譯會更有用。 如需詳細資訊，請參閱《前置處理器參考》中的[前置處理器指示詞](../preprocessor/preprocessor-directives.md)。  
   
- **Microsoft 特定的**  
+ **Microsoft 專屬**  
   
- Microsoft 編譯器也支援使用兩個正斜線的單行註解 (**//**)。 如果您使用 /Za 編譯 (ANSI 標準)，這些註解會產生錯誤。 這些註解不可延伸到第二行。  
+ Microsoft 編譯器也支援使用兩個正斜線的單行註解 (__//__)。 如果您使用 /Za 編譯 (ANSI 標準)，這些註解會產生錯誤。 這些註解不可延伸到第二行。  
   
 ```  
 // This is a valid comment  
 ```  
   
- 以兩個正斜線 (**//**) 做為開頭的註解，會以前方沒有逸出字元的下一個新行字元做為結束字元。 在下一個範例中，位於反斜線 (**\\**) 後方的新行字元會建立一個「逸出序列」。 此逸出序列會使編譯器將下一行視為上一行的一部分。 (如需詳細資訊，請參閱[逸出序列](../c-language/escape-sequences.md))。  
+ 以兩個正斜線 (__//__) 做為開頭的註解，會以前方沒有逸出字元的下一個新行字元做為結束字元。 在下一個範例中，位於反斜線 (**\\**) 後方的新行字元會建立一個「逸出序列」。 此逸出序列會使編譯器將下一行視為上一行的一部分。 (如需詳細資訊，請參閱[逸出序列](../c-language/escape-sequences.md))。  
   
 ```  
 // my comment \  
@@ -87,7 +87,7 @@ printf( "Hello\n" );  /* Comments can go here */
   
  Microsoft C 預設會啟用 Microsoft 擴充功能。 使用 /Za 可停用這些擴充功能。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>請參閱  
  [C 語彙基元](../c-language/c-tokens.md)

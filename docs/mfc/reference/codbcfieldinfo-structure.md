@@ -1,5 +1,5 @@
 ---
-title: CODBCFieldInfo 結構 |Microsoft 文件
+title: CODBCFieldInfo 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040190"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853078"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 結構
-`CODBCFieldInfo`結構包含在 ODBC 資料來源中欄位的相關資訊。  
+`CODBCFieldInfo`結構包含 ODBC 資料來源中的欄位的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ struct CODBCFieldInfo
  欄位的名稱。  
   
  *m_nSQLType*  
- SQL 資料類型的欄位。 這可以是 ODBC SQL 資料類型或驅動程式專屬 SQL 資料類型。 如需有效的 ODBC SQL 資料類型的清單，請參閱 Windows SDK 中的 < SQL 資料類型 >。 如需驅動程式特有的 SQL 資料類型資訊，請參閱驅動程式的文件。  
+ SQL 資料類型的欄位。 這可以是 ODBC SQL 資料類型或驅動程式專屬的 SQL 資料型別。 如需有效的 ODBC SQL 資料類型的清單，請參閱 Windows SDK 中的 < SQL 資料類型 >。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。  
   
  *m_nPrecision*  
  欄位的最大有效位數。 如需詳細資訊，請參閱 Windows SDK 中的 「 有效位數、 小數位數、 長度和顯示大小 」。  
@@ -54,10 +54,10 @@ struct CODBCFieldInfo
  欄位的小數位數。 如需詳細資訊，請參閱 Windows SDK 中的 「 有效位數、 小數位數、 長度和顯示大小 」。  
   
  *m_nNullability*  
- 是否欄位可接受 Null 值。 這可以是兩個值之一： **SQL_NULLABLE**如果欄位可接受 Null 值，或**SQL_NO_NULLS**如果欄位不接受 Null 值。  
+ 是否欄位可接受 Null 值。 這可以是兩個值之一： SQL_NULLABLE 欄位可接受 Null 值，則 SQL_NO_NULLS 如果欄位不接受 Null 值。  
   
 ## <a name="remarks"></a>備註  
- 若要擷取這項資訊，請呼叫[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)。  
+ 若要擷取此資訊，請呼叫[CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdb.h  

@@ -1,5 +1,5 @@
 ---
-title: CD2DRectF 類別 |Microsoft 文件
+title: CD2DRectF 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338268"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 類別
 `D2D1_RECT_F`的包裝函式。  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 ( **null**)。|  
+|[CD2DRectF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -65,7 +65,7 @@ class CD2DRectF : public D2D1_RECT_F;
  **標頭：** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
- 建構來自 CRect 物件 CD2DRectF 物件。  
+ 建構 CD2DRectF 物件從 CRect 物件。  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -88,10 +88,10 @@ CD2DRectF(
  來源左方的座標  
   
  *fTop*  
- 來源的上方座標  
+ 來源上方座標  
   
  *驚喜*  
- 來源右方座標  
+ 來源座標  
   
  *fBottom*  
  來源下方座標  
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 矩形的頂端、 左邊、 下框線和右值所有等於 0; 如果為 TRUE否則為 FALSE。  
+ 如果矩形的頂端、 左邊、 底部、 與正確的值設為 0，所有相等，則為 TRUE。否則為 FALSE。  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
- 將 CD2DRectF 轉換 CRect 物件。  
+ CD2DRectF 將 CRect 物件。  
   
 ```  
 operator CRect();

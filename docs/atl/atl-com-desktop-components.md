@@ -1,5 +1,5 @@
 ---
-title: ATL COM 桌面元件 |Microsoft 文件
+title: ATL COM 桌面元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,44 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255989"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953845"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
-ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化程式設計的元件物件模型 (COM) 物件。 若要充分利用 ATL，強烈建議 COM 工作熟悉。  
+ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化元件物件模型 (COM) 物件的程式設計。 若要完全利用 ATL，強烈建議 COM 工作熟悉。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ATL 類別概觀](../atl/atl-class-overview.md)  
- 提供的連結和依類別目錄組織，ATL 類別的簡短描述。  
+ 提供的連結和依類別目錄的 ATL 類別的簡短描述。  
   
  [類別與結構](../atl/reference/atl-classes.md)  
  提供參考資料的類別和結構依照字母順序排列。  
   
  [ATL 函式](../atl/reference/atl-functions.md)  
- 提供參考資料上依照字母順序排列的全域函式。 包含主題組織成類別目錄的函式。  
+ 提供全域依照字母順序排列的函式的參考資料。 包含將功能組織成類別目錄的主題。  
   
  [ATL 全域變數](../atl/reference/atl-global-variables.md)  
- 提供參考資料上依照字母順序排列的全域變數。  
+ 提供參考資料，依照字母順序排列這些全域變數。  
   
  [ATL 巨集](../atl/reference/atl-macros.md)  
- 提供參考資料上依照字母順序排列的巨集。 包含組成各種分類組織巨集的主題。  
+ 提供參考資料上依照字母順序排列的巨集。 包含主題組織成類別目錄的巨集。  
   
  [ATL Typedef](../atl/reference/atl-typedefs.md)  
  依照字母順序排列的 typedef 上提供的參考資料  
   
  [背景工作原型](../atl/reference/worker-archetype.md)  
- 提供 ATL 工作者原型的連結。  
-  
- [過時的 ATL 主題](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- 提供類別、 巨集，以及為過時或已被取代的函式的參考資料。  
+ 提供 ATL 背景工作原型的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 主題提供如何使用 Active Template Library (ATL) 程式設計。  
+ 提供有關如何使用 Active Template Library (ATL) 進行程式設計的主題。  
   
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
  將引導您完成建立控制項，並示範一些程序中的 ATL 基本概念。  

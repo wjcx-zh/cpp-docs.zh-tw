@@ -1,5 +1,5 @@
 ---
-title: 物件安全性類別 (ATL) |Microsoft 文件
+title: 物件安全性類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355616"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953700"
 ---
-# <a name="object-safety-classes"></a>物件的安全性類別
+# <a name="object-safety-classes"></a>物件安全性類別
 下列類別的物件安全性提供支援：  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md)讓物件會標記為安全可供初始化或安全用於指令碼。  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md)讓物件標示為安全初始化或安全用於指令碼。  
   
 ## <a name="related-articles"></a>相關文章  
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  

@@ -1,5 +1,5 @@
 ---
-title: ATL 字串和文字類別 |Microsoft 文件
+title: ATL 字串和文字類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 953afd2ba9f2a575eddb4140e71bada46e71dae3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362196"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848947"
 ---
 # <a name="string-and-text-classes"></a>字串和文字類別
-這些類別會提供用於字串和文字字串轉換支援。  
+這些類別提供字串和文字字串轉換的支援。  
   
--   [CA2AEX](../atl/reference/ca2aex-class.md)這個類別由字串轉換巨集`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。  
+-   [CA2AEX](../atl/reference/ca2aex-class.md)字串轉換巨集 CA2TEX 和 typedef CA2A CT2AEX，會使用這個類別。  
   
--   [CA2CAEX](../atl/reference/ca2caex-class.md)這個類別由字串轉換巨集`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md)字串轉換巨集 CA2CTEX 和 typedef CA2CA CT2CAEX，會使用這個類別。  
   
--   [CA2WEX](../atl/reference/ca2wex-class.md)這個類別由字串轉換巨集`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
+-   [CA2WEX](../atl/reference/ca2wex-class.md)字串轉換巨集 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W 使用這個類別。  
   
--   [CW2AEX](../atl/reference/cw2aex-class.md)這個類別由字串轉換巨集`CT2AEX`， `CW2TEX`， `CW2CTEX`，和`CT2CAEX`，和 typedef **CW2A**。  
+-   [CW2AEX](../atl/reference/cw2aex-class.md)字串轉換巨集 CT2AEX、 CW2TEX、 CW2CTEX，和 CT2CAEX 和 typedef CW2A 使用這個類別。  
   
--   [CW2CWEX](../atl/reference/cw2cwex-class.md)這個類別由字串轉換巨集`CW2CTEX`和`CT2CWEX`，和 typedef **CW2CW**。  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md)字串轉換巨集 CW2CTEX 和 typedef CW2CW CT2CWEX，會使用這個類別。  
   
--   [CW2WEX](../atl/reference/cw2wex-class.md)這個類別由字串轉換巨集`CW2TEX`和`CT2WEX`，和 typedef `CW2W`。  
+-   [CW2WEX](../atl/reference/cw2wex-class.md)字串轉換巨集 CW2TEX 和 typedef CW2W CT2WEX，會使用這個類別。  
   
--   [CComBSTR](../atl/reference/ccombstr-class.md)這個類別是包裝函式`BSTR`s。  
+-   [CComBSTR](../atl/reference/ccombstr-class.md)這個類別是 Bstr 的包裝函式。  
   
--   [_U_STRINGorID](../atl/reference/u-stringorid-class.md)這個引數的介面卡類別可讓任一資源名稱 (`LPCTSTR`s) 或資源識別碼 (**UINT**s) 而不需要呼叫者使用的字串轉換成識別碼傳遞至函式**MAKEINTRESOURCE**巨集。  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md)這個引數的配接器類別可讓任一資源名稱 (`LPCTSTR`s) 或資源識別碼 （所） 傳遞至函式，而不需要呼叫者，轉換為使用 MAKEINTRESOURCE 巨集的字串識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   

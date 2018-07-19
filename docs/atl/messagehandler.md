@@ -1,5 +1,5 @@
 ---
-title: MessageHandler |Microsoft 文件
+title: MessageHandler |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0fd88def88f7d31fce078fec0c860f4f21f51c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcd02396fa76e9e68fce628783fb17bc6adab36e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356363"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848398"
 ---
 # <a name="messagehandler"></a>MessageHandler
-**MessageHandler**函式的第二個參數所識別的名稱`MESSAGE_HANDLER`中訊息對應巨集。  
+`MessageHandler` 是 MESSAGE_HANDLER 巨集訊息對應中的第二個參數所識別的函式的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,17 +40,17 @@ ms.locfileid: "32356363"
 ```  
   
 #### <a name="parameters"></a>參數  
- `uMsg`  
+ *uMsg*  
  指定的訊息。  
   
- `wParam`  
- 其他訊息的特定資訊。  
+ *wParam*  
+ 其他特定訊息資訊。  
   
- `lParam`  
- 其他訊息的特定資訊。  
+ *lParam*  
+ 其他特定訊息資訊。  
   
- `bHandled`  
- 訊息對應集`bHandled`至**TRUE**之前`MessageHandler`呼叫。 如果`MessageHandler`完全不會處理訊息，它應該設定`bHandled`至**FALSE**以指出需要進一步處理的訊息。  
+ *bHandled*  
+ 訊息對應集*bHandled*設為 TRUE 之前`MessageHandler`呼叫。 如果`MessageHandler`完全不會處理訊息，它應該設定*bHandled*為 FALSE，以指出需要進一步處理的訊息。  
   
 ## <a name="return-value"></a>傳回值  
  訊息處理的結果。 0，表示成功。  

@@ -1,5 +1,5 @@
 ---
-title: 連結至 ATL 專案中 CRT |Microsoft 文件
+title: 連結到 ATL 專案中 CRT |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,27 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0d93f8770ebbd893491c0e8b8eed239396e00a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8209c680a782bd9800215e1e0affc7e2a98c8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356379"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852493"
 ---
-# <a name="linking-to-the-crt-in-your-atl-project"></a>連結到該 CRT，在您的 ATL 專案
-[C 執行階段程式庫](../c-runtime-library/crt-library-features.md)(CRT) 提供許多有用的函式可讓程式設計工作更輕鬆在 ATL 開發期間。 所有的 ATL 專案將連結到 CRT 程式庫。 您可以看到連結中的方法的優缺點[優點和權衡取捨的方法用來連結到該 CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)。  
+# <a name="linking-to-the-crt-in-your-atl-project"></a>連結到 ATL 專案中的 CRT
+[C 執行階段程式庫](../c-runtime-library/crt-library-features.md)(CRT) 提供許多有用的功能，可以讓程式設計更容易在 ATL 開發。 所有的 ATL 專案連結到 CRT 程式庫。 您所見連結中的方法的優缺點[優點和權衡取捨的方法用來連結到 CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)。  
   
-## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>連結到 CRT 的程式映像上的效果  
- 如果您以靜態方式連結到該 CRT，CRT 的程式碼會在您可執行檔映像中，您不需要執行您的映像的系統上有 CRT DLL。 如果您以動態方式連結到該 CRT，CRT DLL 中的程式碼的參考會放置在您的映像，但不是程式碼本身。 為了讓您指定的系統上執行的映像，必須是該系統上有 CRT DLL。 即使當您以動態方式連結到 CRT 的資訊，您可能會發現某些程式碼可以以靜態方式連結 (例如， **DllMainCRTStartup**)。  
+## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>連結到 CRT 程式映像上的效果  
+ 如果您以靜態方式連結到 CRT，CRT 的程式碼放在您的可執行檔映像，您不需要對系統執行您的映像中的 CRT DLL。 如果您以動態方式連結到 CRT，CRT DLL 中的程式碼的參考會放在您的映像，但不是程式碼本身中。 為了讓您指定的系統上執行的映像，此 CRT DLL 必須存在於該系統上。 即使當您以動態方式連結到 CRT，您可能會發現一些程式碼可以以靜態方式連結 (例如`DllMainCRTStartup`)。  
   
- 當您連結您的映像時，您明確或隱含指定的作業系統會在載入映像之後呼叫的進入點。 預設進入點的 DLL、 **DllMainCRTStartup**。 EXE，對於**WinMainCRTStartup**。 您可以覆寫使用 /ENTRY 連結器選項的預設值。 提供的實作，CRT **DllMainCRTStartup**， **WinMainCRTStartup**，和**wWinMainCRTStartup** （Unicode 進入點的 EXE）。 這些 CRT 提供進入點的全域物件上呼叫建構函式，並初始化有些 CRT 函式所使用的其他資料結構。 啟始程式碼會將大約 25 K 加入至您的映像中，如果它以靜態方式連結。 如果動態連結，大部分的程式碼位於 DLL，讓您的映像大小會維持小。  
+ 當您連結您的映像時，您明確或隱含指定的作業系統將會呼叫之後載入映像的進入點。 預設進入點的 DLL， `DllMainCRTStartup`。 Exe，它是`WinMainCRTStartup`。 您可以覆寫 /ENTRY 連結器選項的預設值。 CRT 提供實作`DllMainCRTStartup`， `WinMainCRTStartup`，和`wWinMainCRTStartup`（Unicode 進入點的 exe）。 這些 CRT 提供進入點通用的物件上呼叫建構函式，並初始化其他有些 CRT 函式所使用的資料結構。 此啟動程式碼會將大約 25 K 加入至您的映像中，如果它以靜態方式連結。 如果它以動態方式連結，大多數的程式碼是 DLL，因此您的映像大小保持小。  
   
  如需詳細資訊，請參閱連結器主題[/ENTRY （進入點符號）](../build/reference/entry-entry-point-symbol.md)。  
   
 ## <a name="optimization-options"></a>最佳化選項  
- 使用連結器選項 /OPT:NOWIN98 可以進一步減少 10k，預設 ATL 控制項損失的增加載入 Windows 98 系統上的時間。 如需有關連結選項的詳細資訊，請參閱[/editandcontinue （最佳化）](../build/reference/opt-optimizations.md)。  
+ 使用連結器選項/opt:nowin98 可以進一步減少 10 K、 預設 ATL 控制項損失的增加載入 Windows 98 系統上的時間。 如需有關連結選項的詳細資訊，請參閱[/OPT （最佳化）](../build/reference/opt-optimizations.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [ATL 和 C 執行階段程式碼的程式設計](../atl/programming-with-atl-and-c-run-time-code.md)   
+ [使用 ATL 和 C 執行階段程式碼進行程式設計](../atl/programming-with-atl-and-c-run-time-code.md)   
  [DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)
 

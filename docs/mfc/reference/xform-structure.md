@@ -1,5 +1,5 @@
 ---
-title: XFORM 結構 |Microsoft 文件
+title: XFORM 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379482"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885880"
 ---
 # <a name="xform-structure"></a>XFORM 結構
 `XFORM`結構具有下列格式：  
@@ -40,14 +40,14 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>備註  
- `XFORM`結構指定的分頁空間轉換到世界空間。 **EDx**和**eDy**成員分別指定水平及垂直轉譯的元件。 下表顯示其他成員使用方式，視作業而定：  
+ `XFORM`結構指定的分頁空間轉換至世界空間。 `eDx`和`eDy`成員分別指定水平及垂直轉譯元件。 下表顯示其他成員使用方式，視作業而定：  
   
 |運算|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|旋轉角度的餘弦函數|旋轉角度的正弦函數|負數的旋轉角度的正弦函數|旋轉角度的餘弦函數|  
-|**縮放比例**|水平縮放的元件|Nothing|Nothing|垂直縮放的元件|  
-|**傾斜**|Nothing|水平的比例常數|垂直的比例常數|Nothing|  
-|**反映**|水平反映元件|Nothing|Nothing|垂直反映元件|  
+|`Rotation`|旋轉角度的餘弦值|旋轉角度的正弦值|負數的旋轉角度的正弦值|旋轉角度的餘弦值|  
+|`Scaling`|水平縮放的元件|Nothing|Nothing|垂直縮放的元件|  
+|`Shear`|Nothing|水平的比例常數|垂直的比例常數|Nothing|  
+|`Reflection`|水平的反映元件|Nothing|Nothing|垂直反映元件|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** wingdi.h  

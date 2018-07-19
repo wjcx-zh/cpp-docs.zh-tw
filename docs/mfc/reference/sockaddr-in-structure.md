@@ -1,5 +1,5 @@
 ---
-title: SOCKADDR_IN 結構 |Microsoft 文件
+title: SOCKADDR_IN 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373634"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885734"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN 結構
-在網際網路位址系列產品中`SOCKADDR_IN`結構可由 Windows 通訊端來指定連接通訊端的本機或遠端的端點位址。  
+在網際網路位址家族，`SOCKADDR_IN`結構由 Windows 通訊端用來指定要連接的通訊端的本機或遠端端點位址。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>參數  
  *sin_family*  
- 位址家族 (必須是**AF_INET**)。  
+ 通訊協定家族 （必須是 AF_INET）。  
   
  *sin_port*  
  IP 通訊埠。  
@@ -48,12 +48,12 @@ struct in_addr sin_addr;
  IP 位址。  
   
  *sin_zero*  
- 將結構做為相同的調整大小的填補`SOCKADDR`。  
+ 讓結構大小相同的填補`SOCKADDR`。  
   
 ## <a name="remarks"></a>備註  
- 這是的形式`SOCKADDR`結構特有的網際網路位址系列，而且可以轉換成`SOCKADDR`。  
+ 這是種`SOCKADDR`結構特有的網際網路位址家族，並可以轉換成`SOCKADDR`。  
   
- 此結構的 IP 位址元件屬於型別**IN_ADDR**。 **IN_ADDR** Windows Sockets 標頭檔 WINSOCK 中所定義的結構。H，如下所示：  
+ 此結構的 IP 位址元件是型別的`IN_ADDR`。 `IN_ADDR` Windows Sockets 標頭檔 WINSOCK 來定義結構。H，如下所示：  
   
 ```  
 struct in_addr {

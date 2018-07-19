@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonUndoButton 類別 |Microsoft 文件
+title: CMFCRibbonUndoButton 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041243"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848764"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 類別
-`CMFCRibbonUndoButton`類別實作，其中包含最新的使用者命令中的下拉式清單按鈕。 使用者可以從要取消復原或復原這些下拉式清單中選取一或多個最新的命令。  
+`CMFCRibbonUndoButton`類別實作，其中包含最新的使用者命令中的下拉式清單按鈕。 使用者可以選取一或多個最新的命令，從下拉式清單中，重做或復原。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,22 +48,22 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|建構新`CMFCRibbonUndoButton`使用您指定的命令識別碼、 文字標籤和映像從影像清單的父物件的物件。|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|建構新`CMFCRibbonUndoButton`使用您指定的命令識別碼、 文字標籤和映像從映像清單中的父物件的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|將新的動作加入至動作的清單。|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|清除動作清單，這是下拉式清單。|  
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|決定使用者從下拉式清單中選取的項目數目。|  
-|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|指出物件是否包含功能表。|  
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|動作清單中加入新的動作。|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|清除動作清單，也就是下拉式清單。|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|判斷使用者從下拉式清單中選取的項目數目。|  
+|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|指出物件是否包含一個功能表。|  
   
 ## <a name="remarks"></a>備註  
- `CMFCRibbonUndoButton`類別來代表下拉式清單使用的堆疊。  
+ `CMFCRibbonUndoButton`類別使用堆疊來代表下拉式清單。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCRibbonUndoButton`類別，並加入新的動作的動作清單。 此程式碼片段是部分[功能區小工具範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何建構的物件`CMFCRibbonUndoButton`類別，並將新的動作新增至動作的清單。 此程式碼片段是一部分[功能區小工具範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
@@ -82,7 +82,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
  **標頭：** afxribbonundobutton.h  
   
 ##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
- 將新的動作加入至動作的清單。  
+ 動作清單中加入新的動作。  
   
 ```  
 void AddUndoAction(LPCTSTR lpszLabel);
@@ -90,17 +90,17 @@ void AddUndoAction(LPCTSTR lpszLabel);
   
 ### <a name="parameters"></a>參數  
  [in]*lpszLabel*  
- 將會顯示在下拉式清單中的動作標籤。  
+ 動作標籤會顯示在下拉式清單中。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
- 清除動作清單，這是下拉式清單。  
+ 清除動作清單，也就是下拉式清單。  
   
 ```  
 void CleanUpUndoList();
 ```  
   
 ##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- 建構新`CMFCRibbonUndoButton`使用您指定的命令識別碼、 文字標籤和映像從影像清單的父物件的物件。  
+ 建構新`CMFCRibbonUndoButton`使用您指定的命令識別碼、 文字標籤和映像從映像清單中的父物件的物件。  
   
 ```  
 CMFCRibbonUndoButton(
@@ -124,16 +124,16 @@ CMFCRibbonUndoButton(
  指定按鈕的文字標籤。  
   
  [in]*nSmallImageIndex*  
- 按鈕的小型影像的父物件的影像清單中以零為起始的索引。  
+ 影像清單中的按鈕的小型影像的父物件的以零為起始的索引。  
   
  [in]*nLargeImageIndex*  
- 以零為起始的索引的父物件的影像清單中的按鈕的大型影像。  
+ 以零起始的索引中的父物件的影像清單的按鈕的大型影像。  
   
  [in]*hIcon*  
- 您可以使用做為按鈕的影像圖示的控制代碼。  
+ 您可以使用為按鈕的影像圖示控制代碼。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
- 決定使用者從下拉式清單中選取的項目數目。  
+ 判斷使用者從下拉式清單中選取的項目數目。  
   
 ```  
 int GetActionNumber() const;  
@@ -143,14 +143,14 @@ int GetActionNumber() const;
  使用者選取的項目數目。  
   
 ##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
- 指出物件是否包含功能表。  
+ 指出物件是否包含一個功能表。  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 一律傳回 `TRUE`。  
+ 一律會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
   

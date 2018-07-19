@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953019"
 ---
 # <a name="resultof-class"></a>result_of 類別
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>參數
 
-`Fn` 要查詢的可呼叫類型。
+*Fn*要查詢的可呼叫類型。
 
-`ArgTypes` 要查詢的可呼叫類型的引數清單的類型。
+*ArgTypes*要查詢的可呼叫類型的引數清單的類型。
 
 ## <a name="remarks"></a>備註
 
-使用此樣板來判斷編譯時期 `Fn`(`ArgTypes`) 的結果類型，其中 `Fn` 是可呼叫的類型、函式的參考或可呼叫類型的參考，其是使用 `ArgTypes` 中類型的引數清單來叫用。 如果未經評估的運算式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 格式正確，即會將樣板類別的 `type` 成員命名為 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 的結果類型。 否則，樣板類別不會有 `type` 成員。 `Fn` 類型和參數封裝 `ArgTypes` 中的所有類型必須是完整類型、`void` 或界限未知的陣列。
+此範本可用來判斷在編譯時期的結果型別`Fn`(`ArgTypes`)，其中*Fn*是可呼叫的型別、 函式參考或可呼叫的型別，叫用中使用的類型引數清單的參考*ArgTypes*。 如果未經評估的運算式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 格式正確，即會將樣板類別的 `type` 成員命名為 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 的結果類型。 否則，樣板類別不會有 `type` 成員。 型別*Fn*和參數的組件中的所有型別*ArgTypes*必須是完整類型**void**，或是界限未知的陣列。
 
 ## <a name="requirements"></a>需求
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953897"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 類別
 
@@ -50,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-`_Locname` 地區設定名稱。
+*_Locname*  
+ 地區設定名稱。
 
-`_Refs` 初始參考計數。
+*_Refs*  
+ 初始參考計數。
 
 ## <a name="remarks"></a>備註
 
-其行為取決於[具名](../standard-library/locale-class.md#name)地區設定 `_Locname`。 每個建構函式會以 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`) 初始化其基底物件。
+其行為取決於[名為](../standard-library/locale-class.md#name)地區設定 *_Locname*。 每個建構函式會初始化其基底物件[time_put](../standard-library/time-put-class.md#time_put)\<CharType，OutputIterator > (`_Refs`)。
 
 ## <a name="requirements"></a>需求
 

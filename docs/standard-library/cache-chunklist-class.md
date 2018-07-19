@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844942"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953256"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 類別
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |參數|描述|
 |---------------|-----------------|
-|`Sz`|陣列中要配置的項目數。|
+|*sz*|所配置陣列中的元素數。|
 
 ## <a name="remarks"></a>備註
 
-此樣板類別使用 `operator new` 來配置原始記憶體的區塊 (Chunk)，並視需要對區塊 (Block) 進行子配置以為記憶體區塊 (Block) 配置儲存體；它會將已解除配置的記憶體區塊 (Block) 儲存在每個區塊 (Chunk) 的個別可用清單中，並在其記憶體區塊 (Block) 不再使用時，使用 `operator delete` 解除配置區塊 (Chunk)。
+使用此範本類別**new 運算子**配置的未經處理的記憶體區塊，suballocating 封鎖來配置記憶體區塊時所需的儲存體，它會解除配置的記憶體區塊儲存在每個區塊，個別可用清單，並使用**運算子 delete**解除配置區塊，其記憶體區塊中沒有任何使用中時。
 
-每個記憶體區塊 (Block) 會保留 `Sz` 個位元組的可用記憶體，以及其所屬區塊 (Chunk) 的指標。 每個區塊 (Chunk) 會保留 `Nelts` 個記憶體區塊 (Block)、三個指標、一個 int，以及 `operator new` 和 `operator delete` 所需的資料。
+每個記憶體區塊會保留*Sz*個位元組的可用記憶體，以及其所屬區塊的指標。 每個區塊會保留`Nelts`記憶體區塊、 三個指標、 整數和資料所**new 運算子**並**運算子 delete**需要。
 
 ### <a name="constructors"></a>建構函式
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`count`|所配置陣列中的元素數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`count`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 

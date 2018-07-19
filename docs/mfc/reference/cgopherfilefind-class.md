@@ -1,5 +1,5 @@
 ---
-title: CGopherFileFind 類別 |Microsoft 文件
+title: CGopherFileFind 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,18 +36,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339617"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 類別
 協助網際網路檔案搜尋 Gopher 伺服器。  
   
 > [!NOTE]
->  類別`CGopherConnection`， `CGopherFile`， `CGopherFileFind`，`CGopherLocator`及它們的成員已被取代，因為它們無法在 Windows XP 平台運作，但他們仍會繼續在舊版平台上運作。  
+>  類別`CGopherConnection`， `CGopherFile`， `CGopherFileFind`，`CGopherLocator`和其成員已被取代，因為它們不在 Windows XP 平台上運作，但它們會繼續在舊版平台上運作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,7 +67,7 @@ class CGopherFileFind : public CFileFind
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CGopherFileFind::FindFile](#findfile)|尋找在 gopher 伺服器上的檔案。|  
+|[CGopherFileFind::FindFile](#findfile)|尋找 gopher 伺服器上的檔案。|  
 |[CGopherFileFind::FindNextFile](#findnextfile)|會繼續從先前呼叫檔案搜尋[FindFile](#findfile)。|  
 |[CGopherFileFind::GetCreationTime](#getcreationtime)|取得指定的檔案建立的時間。|  
 |[CGopherFileFind::GetLastAccessTime](#getlastaccesstime)|取得指定的檔案上次被存取的時間。|  
@@ -75,12 +75,12 @@ class CGopherFileFind : public CFileFind
 |[CGopherFileFind::GetLength](#getlength)|取得找到的檔案，以位元組為單位的長度。|  
 |[CGopherFileFind::GetLocator](#getlocator)|取得`CGopherLocator`物件。|  
 |[CGopherFileFind::GetScreenName](#getscreenname)|取得 gopher 螢幕的名稱。|  
-|[CGopherFileFind::IsDots](#isdots)|測試目前的目錄和父代目錄資料標記逐一查看檔案時。|  
+|[CGopherFileFind::IsDots](#isdots)|測試目前的目錄和父代目錄資料標記在逐一查看檔案。|  
   
 ## <a name="remarks"></a>備註  
  `CGopherFileFind` 包含成員函式的開始搜尋，找出檔案，並傳回檔案的 URL。  
   
- 設計網際網路和搜尋的本機檔案包含其他 MFC 類別[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)和[CFileFind](../../mfc/reference/cfilefind-class.md)。 搭配`CGopherFileFind`，這些類別會提供無縫式的機制，讓使用者可用來尋找特定的檔案，不論伺服器通訊協定、 檔案類型或位置 （本機電腦或遠端伺服器。）請注意，搜尋在 HTTP 伺服器上，HTTP 不支援搜尋所需的直接在檔案操作作業，因為沒有 MFC 類別。  
+ 設計的網際網路和搜尋的本機檔案包含其他 MFC 類別[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)並[CFileFind](../../mfc/reference/cfilefind-class.md)。 搭配`CGopherFileFind`，這些類別提供無縫式的機制，讓使用者可用來尋找特定的檔案，不論伺服器通訊協定、 檔案類型或位置 （本機電腦或遠端伺服器。）請注意，來搜尋 HTTP 伺服器上，因為 HTTP 不支援直接與檔案操作所需的搜尋沒有任何 MFC 類別。  
   
 > [!NOTE]
 > `CGopherFileFind` 不支援其基底類別的下列成員函式[CFileFind](../../mfc/reference/cfilefind-class.md):  
@@ -95,7 +95,7 @@ class CGopherFileFind : public CFileFind
   
 - [GetFileURL](../../mfc/reference/cfilefind-class.md#getfileurl)  
   
- 此外，當搭配`CGopherFileFind`、`CFileFind`成員函式[IsDots](../../mfc/reference/cfilefind-class.md#isdots)一律**FALSE**。  
+ 此外，當搭配`CGopherFileFind`，則`CFileFind`成員函式[IsDots](../../mfc/reference/cfilefind-class.md#isdots)永遠是 FALSE。  
   
  如需有關如何使用`CGopherFileFind`和其他 WinInet 類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
@@ -110,7 +110,7 @@ class CGopherFileFind : public CFileFind
  **標頭：** afxinet.h  
   
 ##  <a name="cgopherfilefind"></a>  CGopherFileFind::CGopherFileFind  
- 呼叫此成員函式會建構`CGopherFileFind`物件。  
+ 此成員函式呼叫來建構`CGopherFileFind`物件。  
   
 ```  
 explicit CGopherFileFind(
@@ -123,10 +123,10 @@ explicit CGopherFileFind(
  指標[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)物件。  
   
  *dwContext*  
- 作業的內容識別碼。 請參閱**備註**如需有關*dwContext*。  
+ 作業的內容識別碼。 請參閱**備註**如需詳細資訊*dwContext*。  
   
 ### <a name="remarks"></a>備註  
- 預設值為*dwContext* MFC 所傳送的`CGopherFileFind`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CGopherFileFind`物件。 當您建構`CGopherFileFind`物件，您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
+ 預設值*dwContext* MFC，以便傳送`CGopherFileFind`物件[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CGopherFileFind`物件。 當您建構`CGopherFileFind`物件時，您可以覆寫預設值可設定的內容識別碼以您選擇的值。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供，它識別之物件的狀態。 請參閱文章[網際網路前幾個步驟： WinInet](../../mfc/wininet-basics.md)取得的內容識別碼的詳細資訊。  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  呼叫此成員函式，以尋找 gopher 檔案。  
@@ -145,7 +145,7 @@ virtual BOOL FindFile(
   
 ### <a name="parameters"></a>參數  
  *refLocator*  
- 若要參考[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件。  
+ 參考[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件。  
   
  *pstrString*  
  包含檔案名稱的字串指標。  
@@ -153,29 +153,29 @@ virtual BOOL FindFile(
  *dwFlags*  
  描述如何處理此工作階段旗標。 有效的旗標如下：  
   
--   INTERNET_FLAG_RELOAD 從遠端伺服器取得資料，即使在本機快取。  
+-   INTERNET_FLAG_RELOAD 從遠端伺服器取得的資料，即使在本機快取。  
   
--   INTERNET_FLAG_DONT_CACHE 不會快取資料，在本機或任何閘道。  
+-   在本機或在任何閘道，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。  
   
--   INTERNET_FLAG_SECURE 要求使用安全通訊端層或 PCT 網路上的安全交易 這個旗標適用於只使用 HTTP 要求。  
+-   INTERNET_FLAG_SECURE 要求使用安全通訊端層或 PCT 在網路上的安全交易 這個旗標適用於僅限 HTTP 要求。  
   
--   INTERNET_FLAG_USE_EXISTING 如果可能的話，請重複使用現有的連接到伺服器對於新**FindFile**要求，而不是建立新的工作階段，針對每個要求。  
+-   INTERNET_FLAG_USE_EXISTING 如果可能的話，請重複使用現有的連線到伺服器新`FindFile`要求，而不是建立新的工作階段，針對每個要求。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
- 在呼叫**FindFile**若要擷取的第一個 gopher 物件，您可以呼叫[FindNextFile](#findnextfile)擷取後續 gopher 檔案。  
+ 之後呼叫`FindFile`若要擷取的第一個 gopher 物件，您可以呼叫[FindNextFile](#findnextfile)擷取後續 gopher 檔案。  
   
 ##  <a name="findnextfile"></a>  CGopherFileFind::FindNextFile  
- 呼叫此成員函式，繼續呼叫開始檔案搜尋[CGopherFileFind::FindFile](#findfile)。  
+ 呼叫此成員函式，以繼續檔案搜尋，開始藉由呼叫[CGopherFileFind::FindFile](#findfile)。  
   
 ```  
 virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果有多個檔案。如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案會在目錄中，最後一個檔案，或如果沒有相符的檔案可以找到`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
+ 非零值，如果有多個檔案;如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案是在目錄中，最後一個檔案，或如果沒有相符，就可以找到檔案，`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  取得目前檔案的建立時間。  
@@ -190,16 +190,16 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。  
   
  *refTime*  
- 若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
+ 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為非零0，如果不成功。 `GetCreationTime` 只會傳回 0 [FindNextFile](#findnextfile)從未上呼叫`CGopherFileFind`物件。  
+ 如果成功則為非零0，如果不成功。 `GetCreationTime` 會傳回 0，只有當[FindNextFile](#findnextfile)從未在此呼叫`CGopherFileFind`物件。  
   
 ### <a name="remarks"></a>備註  
- 您必須呼叫[FindNextFile](#findnextfile)至少一次之前先呼叫`GetCreationTime`。  
+ 您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`GetCreationTime`。  
   
 > [!NOTE]
->  並非所有的檔案系統會使用相同的語意，來實作此函式所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域的本機電腦已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277)應用程式開發介面，如需詳細資訊。  
+>  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API，如需詳細資訊。  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  取得指定的檔案上次被存取的時間。  
@@ -211,22 +211,22 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
   
 ### <a name="parameters"></a>參數  
  *refTime*  
- 若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
+ 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
  *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為非零0，如果不成功。 `GetLastAccessTime` 只會傳回 0 [FindNextFile](#findnextfile)從未上呼叫`CGopherFileFind`物件。  
+ 如果成功則為非零0，如果不成功。 `GetLastAccessTime` 會傳回 0，只有當[FindNextFile](#findnextfile)從未在此呼叫`CGopherFileFind`物件。  
   
 ### <a name="remarks"></a>備註  
- 您必須呼叫[FindNextFile](#findnextfile)至少一次之前先呼叫`GetLastAccessTime`。  
+ 您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`GetLastAccessTime`。  
   
 > [!NOTE]
->  並非所有的檔案系統會使用相同的語意，來實作此函式所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域的本機電腦已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277)應用程式開發介面，如需詳細資訊。  
+>  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API，如需詳細資訊。  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
- 取得上次變更檔案的時間。  
+ 取得已變更檔案的最後一次。  
   
 ```  
 virtual BOOL GetLastWriteTime(FILETIME* pTimeStamp) const;  
@@ -238,38 +238,38 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。  
   
  *refTime*  
- 若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
+ 參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為非零0，如果不成功。 `GetLastWriteTime` 只會傳回 0 [FindNextFile](#findnextfile)從未上呼叫`CGopherFileFind`物件。  
+ 如果成功則為非零0，如果不成功。 `GetLastWriteTime` 會傳回 0，只有當[FindNextFile](#findnextfile)從未在此呼叫`CGopherFileFind`物件。  
   
 ### <a name="remarks"></a>備註  
- 您必須呼叫[FindNextFile](#findnextfile)至少一次之前先呼叫`GetLastWriteTime`。  
+ 您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`GetLastWriteTime`。  
   
 > [!NOTE]
->  並非所有的檔案系統會使用相同的語意，來實作此函式所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域的本機電腦已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277)應用程式開發介面，如需詳細資訊。  
+>  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API，如需詳細資訊。  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
- 呼叫此成員函式，取得長度，以位元組為單位找到的檔案。  
+ 呼叫此成員函式，若要取得長度，以位元組為單位，找到的檔案。  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 找到的檔案長度，以位元組為單位。  
+ 找到檔案的長度，以位元組為單位。  
   
 ### <a name="remarks"></a>備註  
  `GetLength` 會使用 Win32 結構[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)取得以位元組為單位的檔案大小的值。  
   
 > [!NOTE]
->  從 MFC 7.0 開始`GetLength`支援 64 位元整數類型。 先前存在程式庫的這個較新版本建置的程式碼可能會導致截斷警告。  
+>  從 MFC 7.0`GetLength`支援 64 位元整數類型。 先前存在這個較新版本的程式庫所建置的程式碼可能會導致截斷警告。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) （基底類別實作）。  
+  範例，請參閱[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) （基底類別實作）。  
   
 ##  <a name="getlocator"></a>  CGopherFileFind::GetLocator  
- 呼叫此成員函式可取得[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件[FindFile](#findfile)用來尋找 gopher 檔案。  
+ 呼叫以取得此成員函式[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件[FindFile](#findfile)用來尋找 gopher 檔案。  
   
 ```  
 CGopherLocator GetLocator() const;  
@@ -279,7 +279,7 @@ CGopherLocator GetLocator() const;
  `CGopherLocator` 物件。  
   
 ##  <a name="getscreenname"></a>  CGopherFileFind::GetScreenName  
- 呼叫此成員函式可取得 gopher 螢幕的名稱。  
+ 呼叫此成員函式，以取得 gopher 螢幕的名稱。  
   
 ```  
 CString GetScreenName() const;  
@@ -289,17 +289,17 @@ CString GetScreenName() const;
  Gopher 螢幕的名稱。  
   
 ##  <a name="isdots"></a>  CGopherFileFind::IsDots  
- 測試目前的目錄和父代目錄資料標記逐一查看檔案時。  
+ 測試目前的目錄和父代目錄資料標記在逐一查看檔案。  
   
 ```  
 virtual BOOL IsDots() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果找到的檔案名稱 」。 「 或 」 …"，表示找到的檔案是實際的目錄。 否則便是 0。  
+ 非零值，如果找到的檔案名稱 」。 「 或 」...」，表示找到的檔案是實際的目錄。 否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 您必須呼叫[FindNextFile](#findnextfile)至少一次之前先呼叫`IsDots`。  
+ 您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`IsDots`。  
   
 ## <a name="see-also"></a>另請參閱  
  [CFileFind 類別](../../mfc/reference/cfilefind-class.md)   

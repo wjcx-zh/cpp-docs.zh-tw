@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 311f4f26b1f63c089c1771e36ac70060fab6b894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d841428be45ae47eee94bec8c2f40d42e65e29a7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953243"
 ---
 # <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable 類別
 
@@ -36,11 +36,11 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 具有 nothrow 移動指派運算子，則類型述詞的執行個體會保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*具有 nothrow 移動指派運算子，否則為 false。
 
 ## <a name="requirements"></a>需求
 

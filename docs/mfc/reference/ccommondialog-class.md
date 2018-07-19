@@ -1,5 +1,5 @@
 ---
-title: CCommonDialog 類別 |Microsoft 文件
+title: CCommonDialog 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950631"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335911"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 類別
 封裝 Windows 通用對話方塊功能之類別的基底類別。  
@@ -43,7 +43,7 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|建構 `CCommonDialog` 物件。|  
   
 ## <a name="remarks"></a>備註  
- 下列類別會封裝 Windows 通用對話方塊功能：  
+ 下列類別會封裝 Windows 通用對話方塊的功能：  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -84,7 +84,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>參數  
  *pParentWnd*  
- 指向的父系或擁有者的視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
+ 指向的父系或擁有者的視窗物件 (型別的[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果它是 NULL 時，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  
  請參閱[CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog)如需完整資訊。  

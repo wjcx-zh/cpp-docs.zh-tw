@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditCtrl 類別 |Microsoft 文件
+title: CHtmlEditCtrl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338564"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 類別
 在 MFC 視窗中提供 WebBrowser ActiveX 控制項的功能。  
@@ -54,11 +54,11 @@ class CHtmlEditCtrl: public CWnd,
 |名稱|描述|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::Create](#create)|建立 WebBrowser ActiveX 控制項，並將它附加至`CHtmlEditCtrl`物件。 此函式會自動會將 WebBrowser ActiveX 控制項進入編輯模式。|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)自主 WebBrowser 控制項中目前載入文件上的介面。|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|擷取預設文件中所包含的 WebBrowser 控制項載入的 URL。|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)內含的 WebBrowser 控制項中目前載入文件上的介面。|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|擷取預設文件載入所包含的 WebBrowser 控制項中的 URL。|  
   
 ## <a name="remarks"></a>備註  
- 託管的 WebBrowser 控制項自動進入編輯模式，會在建立之後。  
+ 在建立之後，裝載的 WebBrowser 控制項自動放入編輯模式。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- 建立 WebBrowser ActiveX 控制項，並將它附加至`CHtmlEditCtrl`物件。 WebBrowser ActiveX 控制項自動瀏覽到預設文件，並接著會置於編輯模式，此函式。  
+ 建立 WebBrowser ActiveX 控制項，並將它附加至`CHtmlEditCtrl`物件。 WebBrowser ActiveX 控制項自動瀏覽至預設文件，則會放在編輯模式，此函式。  
   
 ```  
 virtual BOOL Create(
@@ -98,26 +98,26 @@ virtual BOOL Create(
  *lpszWindowName*  
  不使用這個參數。  
   
- *dwStyle*  
+ *cheaderctrl:: Create*  
  不使用這個參數。  
   
  *rect*  
  指定控制項的大小和位置。  
   
  *pParentWnd*  
- 指定控制項的父視窗。 它不得為**NULL**。  
+ 指定控制項的父視窗。 它必須不是 NULL。  
   
  *nID*  
- 指定控制項的 id。  
+ 指定控制項的識別碼。  
   
  *pContext*  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- 擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)自主 WebBrowser 控制項中目前載入文件上的介面  
+ 擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)內含的 WebBrowser 控制項中目前載入文件上的介面  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -125,10 +125,10 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
   
 ### <a name="parameters"></a>參數  
  *ppDocument*  
- 文件介面。  
+ 文件介面中。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- 擷取預設文件中所包含的 WebBrowser 控制項載入的 URL。  
+ 擷取預設文件載入所包含的 WebBrowser 控制項中的 URL。  
   
 ```  
 virtual LPCTSTR GetStartDocument();

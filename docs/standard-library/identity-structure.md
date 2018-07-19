@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844402"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952993"
 ---
 # <a name="identity-structure"></a>identity 結構
 
@@ -40,13 +40,13 @@ struct identity {
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|要識別的值。|
+|*left*|要識別的值。|
 
 ## <a name="remarks"></a>備註
 
 此類別包含公用類型定義 `type`，這與範本參數 Type 相同。 它是與範本函式 [forward](../standard-library/utility-functions.md#forward) 搭配使用，以確保函式參數具有所需的類型。
 
-為了與舊版程式碼相容，此類別也會定義識別函式 `operator()`，此函式會傳回其引數 `left`。
+為了與舊版程式碼相容，此類別亦定義識別函式`operator()`它會傳回其引數*左*。
 
 ## <a name="requirements"></a>需求
 

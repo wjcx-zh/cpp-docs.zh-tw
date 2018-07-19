@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853319"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953822"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他單一引數輸出資料流操作工具
 
-以下範例使用類型為 `long` 的類別 `money`。 `setpic` 操作工具會附加格式「圖片」字串到類別，可由類別 `money` 的多載資料流插入運算子使用。 圖片字串會當作靜態變數儲存於 `money` 類別，而不是資料流類別的資料成員，因此您不需要衍生新的輸出資料流類別。
+下列範例會使用類別`money`，即**長**型別。 `setpic` 操作工具會附加格式「圖片」字串到類別，可由類別 `money` 的多載資料流插入運算子使用。 圖片字串會當作靜態變數儲存於 `money` 類別，而不是資料流類別的資料成員，因此您不需要衍生新的輸出資料流類別。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: CD2DSizeF 類別 |Microsoft 文件
+title: CD2DSizeF 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954474"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336109"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 類別
 D2D1_SIZE_F 包裝函式。  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 ( **null**)。|  
+|[CD2DSizeF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -65,7 +65,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
  **標頭：** afxrendertarget.h  
   
 ##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- 建構來自 CSize 物件 CD2DSizeF 物件。  
+ 建構 CD2DSizeF 物件從 CSize 物件。  
   
 ```  
 CD2DSizeF(const CSize& size);  
@@ -80,9 +80,9 @@ CD2DSizeF(
   
 ### <a name="parameters"></a>參數  
  *size*  
- 來源的大小  
+ 來源大小  
   
- */cx*  
+ *cx*  
  來源寬度  
   
  *cy*  
@@ -96,7 +96,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果寬度和高度是空的則為 TRUE否則為 FALSE。  
+ 如果是空的; 的寬度和高度，則為 TRUE。否則為 FALSE。  
   
 ##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
  將 CD2DSizeF 轉換 CSize 物件。  

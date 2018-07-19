@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846541"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953550"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 類別
 
-`void` 類型的範本類別配置器特製化，用於定義在此內容中具有意義的類型。
+範本類別配置器類型的特製化**void**，定義在此內容中有意義的型別。
 
 ## <a name="syntax"></a>語法
 
@@ -51,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>備註
 
-此類別明確地特製化 *void* 類型的範本類別 [allocator](../standard-library/allocator-class.md)。 其建構函式和指派運算子的行為與範本類別相同，但只會定義下列類型︰
+此類別明確特製化樣板類別[allocator](../standard-library/allocator-class.md)型別的**void**。 其建構函式和指派運算子的行為與範本類別相同，但只會定義下列類型︰
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer)。
 

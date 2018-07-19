@@ -1,5 +1,5 @@
 ---
-title: MEASUREITEMSTRUCT 結構 |Microsoft 文件
+title: MEASUREITEMSTRUCT 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336955"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 結構
-`MEASUREITEMSTRUCT`結構會告知 Windows 的主控描繪控制項或功能表項目的維度。  
+`MEASUREITEMSTRUCT`結構會通知 Windows 的主控描繪控制項或功能表項目的維度。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,28 +40,28 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>參數  
- `CtlType`  
- 包含的控制項類型。 控制項類型的值如下：  
+ *CtlType*  
+ 包含的控制項型別。 控制項類型的值如下：  
   
-- **ODT_COMBOBOX**主控描繪下拉式方塊  
+- ODT_COMBOBOX 主控描繪下拉式方塊  
   
-- **ODT_LISTBOX**主控描繪清單方塊  
+- ODT_LISTBOX 主控描繪清單方塊  
   
-- **ODT_MENU**主控描繪功能表  
+- ODT_MENU 主控描繪功能表  
   
- `CtlID`  
- 包含下拉式方塊、 清單方塊或按鈕的控制項 ID。 這個成員無法用於功能表。  
+ *CtlID*  
+ 包含下拉式方塊、 清單方塊或按鈕的控制項識別碼。 這個成員無法用於功能表。  
   
- `itemID`  
- 包含功能表的功能表項目識別碼或變數高度下拉式方塊或清單方塊的清單方塊項目識別碼。 這個成員不是使用固定高度下拉式方塊或清單方塊或按鈕。  
+ *項目識別碼*  
+ 包含功能表的功能表項目識別碼或變動高度下拉式方塊或清單方塊的清單方塊項目識別碼。 固定高度下拉式方塊或清單方塊或按鈕時，不會使用這個成員。  
   
  *itemWidth*  
- 指定功能表項目的寬度。 它會傳回訊息之前的主控描繪功能表項目擁有者必須填入這個成員。  
+ 指定功能表項目的寬度。 主控描繪功能表項目的擁有者必須填妥此成員，它會傳回訊息之前。  
   
  *itemHeight*  
- 指定在清單方塊或功能表中的個別項目的高度。 它會傳回訊息的主控描繪下拉式方塊中，擁有者才能清單方塊或功能表項目必須填寫此成員。 清單方塊項目的最大高度為 255。  
+ 指定清單方塊或功能表中的個別項目的高度。 它會傳回訊息的主控描繪下拉式方塊中，擁有者才能清單方塊或功能表項目必須填寫此成員。 清單方塊項目的的最大高度為 255。  
   
- `itemData`  
+ *itemData*  
  對於下拉式方塊或清單方塊，這個成員會包含已由下列其中一項傳遞至清單方塊的值：  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -80,7 +80,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- 這可讓 Windows 才能正確處理使用者與控制項互動。 填寫中的適當成員失敗`MEASUREITEMSTRUCT`結構會導致不適當的控制項作業。  
+ 這可讓 Windows 才能正確處理使用者與控制項互動。 若未填妥中的適當成員`MEASUREITEMSTRUCT`結構會導致控制項的作業不正確。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  

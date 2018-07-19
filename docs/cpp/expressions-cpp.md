@@ -1,5 +1,5 @@
 ---
-title: 運算式 （c + +） |Microsoft 文件
+title: 運算式 （c + +） |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414583"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953359"
 ---
 # <a name="expressions-c"></a>運算式 (C++)
 本節將描述 C++ 運算式。 運算式是提供下列其中一種或多種用途的運算子和運算元序列：  
@@ -30,7 +30,7 @@ ms.locfileid: "32414583"
   
 -   產生「副作用」 (副作用是評估運算式之外的任何動作，例如修改物件的值)。  
   
- 在 C++ 中，運算子可以多載，而且其意義可以是使用者所定義。 然而，其優先順序和接受的運算元數目不能修改。 本節將描述語言所提供、未多載的運算子語法和語意。 除了[運算式的型別](../cpp/types-of-expressions.md)和[運算式語意](../cpp/semantics-of-expressions.md)，涵蓋下列主題：  
+ 在 C++ 中，運算子可以多載，而且其意義可以是使用者所定義。 然而，其優先順序和接受的運算元數目不能修改。 本節將描述語言所提供、未多載的運算子語法和語意。 除了[運算式的型別](../cpp/types-of-expressions.md)並[運算式的語意](../cpp/semantics-of-expressions.md)，涵蓋下列主題：  
   
 -   [主要運算式](../cpp/primary-expressions.md)  
   
@@ -45,8 +45,6 @@ ms.locfileid: "32414583"
 -   [條件運算子](../cpp/conditional-operator-q.md)  
   
 -   [常數運算式](../cpp/cpp-constant-expressions.md)  
-  
--   [使用明確類型轉換的運算式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [轉型運算子](../cpp/casting-operators.md)  
   

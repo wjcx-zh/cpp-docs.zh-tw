@@ -1,5 +1,5 @@
 ---
-title: CMultiPaneFrameWnd 類別 |Microsoft 文件
+title: CMultiPaneFrameWnd 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039202"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852335"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 類別
-`CMultiPaneFrameWnd`類別會擴充[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。 這可以支援多個窗格。 而不是一種控制列的單一內嵌控制代碼`CMultiPaneFrameWnd`包含[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)物件，可讓使用者將一一停駐`CMultiPaneFrameWnd`到另一個，並以動態方式建立多個浮點，定位windows。  
+`CMultiPaneFrameWnd`類別會擴充[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。 這可以支援多個窗格。 而不是一種控制列的單一內嵌控制代碼`CMultiPaneFrameWnd`包含[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)物件，可讓使用者將一一停駐`CMultiPaneFrameWnd`到另一個，並以動態方式建立多個浮動、 索引標籤式windows。  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -137,7 +137,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::LoadState](#loadstate)|從登錄載入窗格的狀態。 (覆寫[CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate)。)|  
 |[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|將迷你框架視窗固定在其最近的位置上。 (覆寫[CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos)。)|  
 |[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|停止彙總計時器。 (覆寫[CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer)。)|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|調整迷你框架視窗內顯示窗格的配置。 (覆寫[CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)。)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|調整迷你框架視窗中窗格的配置。 (覆寫[CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)。)|  
 |[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|設定彙總計時器。 (覆寫[CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer)。)|  
 |[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|在隱藏或顯示迷你框架視窗中的窗格時，由架構呼叫。 (覆寫[CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane)。)|  
 |[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果在迷你框架視窗內包含使用者提供的點，則會傳回一個窗格。 (覆寫[CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint)。)|  
@@ -155,14 +155,14 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 ## <a name="remarks"></a>備註  
  大部分的方法，這個類別中覆寫的方法[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)類別。  
   
- 如果窗格使用`AFX_CBRS_AUTO_ROLLUP`樣式和使用者窗格停駐於該多窗格框架視窗中，使用者可以彙總不論樣式設定停駐窗格的視窗。  
+ 如果窗格會使用 AFX_CBRS_AUTO_ROLLUP 樣式，而且使用者窗格停駐於該多窗格框架視窗，使用者可以彙總視窗中，不論其他停駐窗格的樣式設定中。  
   
- 架構會自動建立`CMultiPaneFrameWnd`時使用者浮動窗格中會使用物件`CBRS_FLOAT_MULTI`樣式。  
+ 架構會自動建立`CMultiPaneFrameWnd`時使用者會浮動窗格使用 CBRS_FLOAT_MULTI 樣式的物件。  
   
- 如需衍生自`CPaneFrameWnd`類別，並以動態方式建立，請參閱[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。  
+ 如需衍生的類別`CPaneFrameWnd`類別，並以動態方式建立，請參閱[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何擷取指標`CMultiPaneFrameWnd`物件。 此程式碼片段是部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何擷取變數的指標，`CMultiPaneFrameWnd`物件。 此程式碼片段是一部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 日期和時間 |Microsoft 文件
+title: 日期和時間 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355557"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879555"
 ---
 # <a name="date-and-time"></a>日期和時間
-MFC 支援的日期和時間使用數個不同的方式。 它們包括：  
+MFC 支援使用日期和時間的數個不同的方式。 它們包括：  
   
--   一般用途的時間類別。 [CTime](../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)類別會封裝大部分的時間中宣告的 ANSI 標準階段程式庫相關聯的功能。H.  
+-   一般用途的時間類別。 [CTime](../atl-mfc-shared/reference/ctime-class.md)並[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)類別會封裝大部分的時間中宣告的 ANSI 標準階段程式庫相關聯的功能。H.  
   
--   支援的系統時鐘。 支援加入至 mfc 3.0 版， `CTime` win32`SYSTEMTIME`和`FILETIME`資料型別。  
+-   系統時鐘的支援。 Mfc 3.0 版，支援已新增至`CTime`win32`SYSTEMTIME`和`FILETIME`資料型別。  
   
--   支援自動化[日期資料型別](../atl-mfc-shared/date-type.md)。 **日期**支援日期、 時間和日期/時間值。 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)和[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)類別會封裝這項功能。 可使用[COleVariant](../mfc/reference/colevariant-class.md)類別使用自動化支援。  
+-   支援自動化[日期資料型別](../atl-mfc-shared/date-type.md)。 日期支援日期、 時間和日期/時間值。 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)並[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)類別會封裝這項功能。 能配合[COleVariant](../mfc/reference/colevariant-class.md)類別使用自動化的支援。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [日期和時間：一般用途類別](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

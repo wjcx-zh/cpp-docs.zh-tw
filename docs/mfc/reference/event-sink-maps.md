@@ -1,5 +1,5 @@
 ---
-title: 事件接收對應 |Microsoft 文件
+title: 事件接收對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336601"
 ---
 # <a name="event-sink-maps"></a>事件接收對應
-當內嵌的 OLE Automation 控制項引發某個事件時，控制項的容器會使用由 MFC 提供的機制 (稱為「事件接收對應」) 來接收事件。 這個事件接收對應會指定每個特定事件的處理常式，以及那些事件函式的參數。 如需事件接收對應的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
+當內嵌的 OLE Automation 控制項引發某個事件時，控制項的容器會使用由 MFC 提供的機制 (稱為「事件接收對應」) 來接收事件。 這個事件接收對應會指定每個特定事件的處理常式，以及那些事件函式的參數。 如需有關事件接收對應的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
   
 ### <a name="event-sink-maps"></a>事件接收對應  
   
@@ -48,16 +48,16 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 指定的事件接收對應的控制項類別名稱。  
+ *theClass*  
+ 指定的事件接收對應的控制項類別的名稱。  
   
- `baseClass`  
- 指定 `theClass` 基底類別的名稱。  
+ *baseClass*  
+ 指定的基底類別的名稱*theClass*。  
   
 ### <a name="remarks"></a>備註  
- 在定義類別的成員函式的實作 (.cpp) 檔案，啟動 事件接收對應與`BEGIN_EVENTSINK_MAP`巨集，然後將巨集項目，每個事件通知，並完成的事件接收對應`END_EVENTSINK_MAP`巨集。  
+ 在定義您的類別成員函式的實作 (.cpp) 檔案，啟動事件接收對應 BEGIN_EVENTSINK_MAP 巨集，則新增巨集項目，每個事件通知，並完成事件接收對應 END_EVENTSINK_MAP 巨集。  
   
- 如需事件接收對應與 OLE 控制項容器的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
+ 如需有關事件接收對應和 OLE 控制項容器的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
@@ -70,9 +70,9 @@ DECLARE_EVENTSINK_MAP()
 ```  
   
 ### <a name="remarks"></a>備註  
- 使用`DECLARE_EVENTSINK_MAP`巨集，在類別宣告的結尾。 然後，在。CPP 檔案，可定義成員函式類別，請使用`BEGIN_EVENTSINK_MAP`巨集，每個要收到通知，事件的巨集項目和`END_EVENTSINK_MAP`巨集來宣告事件接收清單的結尾。  
+ 在類別宣告結尾使用 DECLARE_EVENTSINK_MAP 巨集。 然後，在。定義類別，該成員函式的 CPP 檔案使用 BEGIN_EVENTSINK_MAP 巨集、 巨集項目，針對每個通知的事件和 END_EVENTSINK_MAP 巨集，來宣告事件接收清單的結尾。  
   
- 如需事件接收對應的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
+ 如需有關事件接收對應的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxwin.h  
@@ -88,34 +88,34 @@ END_EVENTSINK_MAP()
   **標頭**afxdisp.h  
   
 ##  <a name="on_event"></a>  ON_EVENT  
- 使用`ON_EVENT`OLE 控制項所引發的巨集來定義事件的事件處理常式函式。  
+ 您可以使用 ON_EVENT 巨集來定義 OLE 控制項所引發事件的事件處理常式函式。  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 這個事件接收對應所屬的類別。  
+ *theClass*  
+ 這個事件接收對應所屬類別。  
   
- `id`  
- OLE 控制項的控制項 ID。  
+ *id*  
+ OLE 控制項的控制項識別碼。  
   
- `dispid`  
- 控制項所引發之事件分派識別碼。  
+ *dispid*  
+ 控制項所引發事件的分派 ID。  
   
- `pfnHandler`  
- 處理事件的成員函式的指標。 此函式應該具有**BOOL**傳回型別和參數型別符合事件的參數 (請參閱`vtsParams`)。 函式應傳回**TRUE**指出事件已處理，否則**FALSE**。  
+ *pfnHandler*  
+ 處理事件的成員函式的指標。 此函式應該具有 BOOL 傳回類型和參數類型符合事件的參數 (請參閱*vtsParams*)。 函式應傳回 TRUE 表示已處理事件;否則為 FALSE。  
   
- `vtsParams`  
- 一連串的**VTS_** 指定事件的參數類型的常數。 這些都是相同的常數，例如用於分派對應項目`DISP_FUNCTION`。  
+ *vtsParams*  
+ 一連串**VTS_** 指定事件的參數類型的常數。 這些是分派對應項目，例如 DISP_FUNCTION 中所使用的同一個常數。  
   
 ### <a name="remarks"></a>備註  
- `vtsParams`引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
+ *VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定清單，後面接著的短整數，其中包含**BOOL**。  
+ 指定包含後面接著 BOOL 的短整數的清單。  
   
  取得一份**VTS_** 常數，請參閱[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
@@ -123,46 +123,46 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
   **標頭**afxdisp.h  
   
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
- 使用`ON_EVENT_RANGE`有連續範圍的識別碼中的控制項 ID 的任何 OLE 控制項所引發的巨集來定義事件的事件處理常式函式。  
+ 您可以使用 ON_EVENT_RANGE 巨集來定義事件處理常式函式有連續範圍的識別碼內的控制項識別碼的任何 OLE 控制項所引發的事件。  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 這個事件接收對應所屬的類別。  
+ *theClass*  
+ 這個事件接收對應所屬類別。  
   
- `idFirst`  
- 範圍中的第一個 OLE 控制項的控制項 ID。  
+ *idFirst*  
+ 範圍中的第一個 OLE 控制項的控制項識別碼。  
   
- `idLast`  
- 範圍中的最後一個 OLE 控制項的控制項 ID。  
+ *idLast*  
+ 範圍中的最後一個 OLE 控制項的控制項識別碼。  
   
- `dispid`  
- 控制項所引發之事件分派識別碼。  
+ *dispid*  
+ 控制項所引發事件的分派 ID。  
   
- `pfnHandler`  
- 處理事件的成員函式的指標。 此函式應該具有**BOOL**傳回類型，類型的第一個參數**UINT** （適用於 「 控制項 ID)，以及額外的參數型別符合事件的參數 (請參閱`vtsParams`)。 函式應傳回**TRUE**指出事件已處理，否則**FALSE**。  
+ *pfnHandler*  
+ 處理事件的成員函式的指標。 此函式應該具有 BOOL 傳回類型、 類型單位 （適用於 「 控制項 ID) 和其他的參數類型符合事件的參數的第一個參數 (請參閱*vtsParams*)。 函式應傳回 TRUE 表示已處理事件;否則為 FALSE。  
   
- `vtsParams`  
- 一連串的**VTS_** 指定事件的參數類型的常數。 第一個常數的類型應為**VTS_I4**，如控制項 id。 這些都是相同的常數，例如用於分派對應項目`DISP_FUNCTION`。  
+ *vtsParams*  
+ 一連串**VTS_** 指定事件的參數類型的常數。 第一個常數應該是型別的 VTS_I4，控制項 id。 這些是分派對應項目，例如 DISP_FUNCTION 中所使用的同一個常數。  
   
 ### <a name="remarks"></a>備註  
- `vtsParams`引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
+ *VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定清單，後面接著的短整數，其中包含**BOOL**。  
+ 指定包含後面接著 BOOL 的短整數的清單。  
   
  取得一份**VTS_** 常數，請參閱[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
 ### <a name="example"></a>範例  
- 下列範例會示範事件處理常式，如 MouseDown 事件中，針對三個控制項實作 (`IDC_MYCTRL1`透過`IDC_MYCTRL3`)。 事件處理常式函式`OnRangeMouseDown`，在對話方塊類別的標頭檔中宣告 ( `CMyDlg`) 為：  
+ 下列範例示範實作針對三個控制項的 MouseDown 事件的事件處理常式，(透過 IDC_MYCTRL3 IDC_MYCTRL1)。 事件處理常式函式`OnRangeMouseDown`，在對話方塊類別的標頭檔中宣告 ( `CMyDlg`) 為：  
   
  [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
- 下列程式碼被定義在對話方塊類別的實作檔。  
+ 下列程式碼是在對話方塊類別的實作檔案中定義。  
   
  [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
@@ -170,33 +170,33 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
   **標頭**afxdisp.h  
   
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
- `ON_EVENT_REFLECT`巨集，使用在事件接收對應的 OLE 控制項的包裝函式類別，接收控制項的容器處理前控制項所引發的事件。  
+ ON_EVENT_REFLECT 巨集時使用的事件接收對應的 OLE 控制項的包裝函式類別，接收控制項的容器處理前，控制項所引發的事件。  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 這個事件接收對應所屬的類別。  
+ *theClass*  
+ 這個事件接收對應所屬類別。  
   
  dispid  
- 控制項所引發之事件分派識別碼。  
+ 控制項所引發事件的分派 ID。  
   
- `pfnHandler`  
- 處理事件的成員函式的指標。 此函式應該具有**BOOL**傳回型別和參數型別符合事件的參數 (請參閱`vtsParams`)。 函式應傳回**TRUE**指出事件已處理，否則**FALSE**。  
+ *pfnHandler*  
+ 處理事件的成員函式的指標。 此函式應該具有 BOOL 傳回類型和參數類型符合事件的參數 (請參閱*vtsParams*)。 函式應傳回 TRUE 表示已處理事件;否則為 FALSE。  
   
- `vtsParams`  
- 一連串的**VTS_** 指定事件的參數類型的常數。 這些都是相同的常數，例如用於分派對應項目`DISP_FUNCTION`。  
+ *vtsParams*  
+ 一連串**VTS_** 指定事件的參數類型的常數。 這些是分派對應項目，例如 DISP_FUNCTION 中所使用的同一個常數。  
   
 ### <a name="remarks"></a>備註  
- `vtsParams`引數是以空格分隔的清單中的值**VTS_** 常數。  
+ *VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。  
   
  一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定清單，後面接著的短整數，其中包含**BOOL**。  
+ 指定包含後面接著 BOOL 的短整數的清單。  
   
  取得一份**VTS_** 常數，請參閱[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
@@ -204,7 +204,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
   **標頭**afxdisp.h  
   
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
- 使用`ON_PROPNOTIFY`巨集，以定義來處理 OLE 控制項的屬性通知的事件接收對應項目。  
+ 您可以使用 ON_PROPNOTIFY 巨集來定義的事件接收對應項目處理 OLE 控制項的屬性通知。  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
@@ -212,32 +212,32 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 這個事件接收對應所屬的類別。  
+ *theClass*  
+ 這個事件接收對應所屬類別。  
   
- `id`  
- OLE 控制項的控制項 ID。  
+ *id*  
+ OLE 控制項的控制項識別碼。  
   
- `dispid`  
- 與通知相關屬性的分派 ID。  
+ *dispid*  
+ 在通知中所涉及之屬性的分派識別碼。  
   
- `pfnRequest`  
- 成員函式會處理指標**OnRequestEdit**通知這個屬性。 此函式應該具有**BOOL**傳回型別和**BOOL\*** 參數。 此函式應該將參數設定為**TRUE**允許要變更的屬性和**FALSE**不允許。 函式應傳回**TRUE**表示通知的處理，否則**FALSE**。  
+ *pfnRequest*  
+ 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該有傳回型別 BOOL 和**BOOL\*** 參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
   
- `pfnChanged`  
- 成員函式會處理指標**OnChanged**通知這個屬性。 此函式應該具有**BOOL**傳回型別和**UINT**參數。 函式應傳回**TRUE**表示通知的處理，否則**FALSE**。  
+ *pfnChanged*  
+ 處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該有傳回型別和 UINT 參數 BOOL。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `vtsParams`引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
+ *VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 指定清單，後面接著的短整數，其中包含**BOOL**。  
+ 指定包含後面接著 BOOL 的短整數的清單。  
   
  取得一份**VTS_** 常數，請參閱[EVENT_CUSTOM](event-maps.md#event_custom)。  
   
 ##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
- 使用`ON_PROPNOTIFY_RANGE`巨集，以定義來處理從任何有連續範圍的識別碼中的控制項 ID 的 OLE 控制項的屬性通知的事件接收對應項目。  
+ 您可以使用 ON_PROPNOTIFY_RANGE 巨集來定義事件接收對應項目來處理從任何有連續範圍的識別碼內的控制項 ID 的 OLE 控制項的屬性通知。  
   
 ```  
  
@@ -246,29 +246,29 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 這個事件接收對應所屬的類別。  
+ *theClass*  
+ 這個事件接收對應所屬類別。  
   
- `idFirst`  
- 範圍中的第一個 OLE 控制項的控制項 ID。  
+ *idFirst*  
+ 範圍中的第一個 OLE 控制項的控制項識別碼。  
   
- `idLast`  
- 範圍中的最後一個 OLE 控制項的控制項 ID。  
+ *idLast*  
+ 範圍中的最後一個 OLE 控制項的控制項識別碼。  
   
- `dispid`  
- 與通知相關屬性的分派 ID。  
+ *dispid*  
+ 在通知中所涉及之屬性的分派識別碼。  
   
- `pfnRequest`  
- 成員函式會處理指標**OnRequestEdit**通知這個屬性。 此函式應該具有**BOOL**傳回型別和**UINT**和**BOOL\*** 參數。 函式應該將參數設定為**TRUE**允許要變更的屬性和**FALSE**不允許。 函式應傳回**TRUE**表示通知的處理，否則**FALSE**。  
+ *pfnRequest*  
+ 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該要有傳回型別 BOOL 和 UINT 並**BOOL\*** 參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
   
- `pfnChanged`  
- 成員函式會處理指標**OnChanged**通知這個屬性。 此函式應該具有**BOOL**傳回型別和**UINT**參數。 函式應傳回**TRUE**表示通知的處理，否則**FALSE**。  
+ *pfnChanged*  
+ 處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該有傳回型別和 UINT 參數 BOOL。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
- `ON_PROPNOTIFY_REFLECT`巨集，使用在事件接收對應的 OLE 控制項的包裝函式類別，接收控制項的容器處理前，由控制項傳送的屬性通知。  
+ ON_PROPNOTIFY_REFLECT 巨集時使用的事件接收對應的 OLE 控制項的包裝函式類別，會接收由控制項的容器處理之前，由控制項傳送的屬性通知。  
   
 ```  
  
@@ -277,20 +277,20 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
- 這個事件接收對應所屬的類別。  
+ *theClass*  
+ 這個事件接收對應所屬類別。  
   
- `dispid`  
- 與通知相關屬性的分派 ID。  
+ *dispid*  
+ 在通知中所涉及之屬性的分派識別碼。  
   
- `pfnRequest`  
- 成員函式會處理指標**OnRequestEdit**通知這個屬性。 此函式應該具有**BOOL**傳回型別和**BOOL\*** 參數。 此函式應該將參數設定為**TRUE**允許要變更的屬性和**FALSE**不允許。 函式應傳回**TRUE**表示通知的處理，否則**FALSE**。  
+ *pfnRequest*  
+ 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該有傳回型別 BOOL 和**BOOL\*** 參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
   
- `pfnChanged`  
- 成員函式會處理指標**OnChanged**通知這個屬性。 此函式應該具有**BOOL**傳回型別和任何參數。 函式應傳回**TRUE**表示通知的處理，否則**FALSE**。  
+ *pfnChanged*  
+ 處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該具有 BOOL 傳回類型和任何參數。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
     
 ## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+ [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

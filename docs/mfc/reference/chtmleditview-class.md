@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditView 類別 |Microsoft 文件
+title: CHtmlEditView 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339539"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 類別
 在 MFC 的文件/檢視架構內容中提供 WebBrowser 編輯平台的功能。  
@@ -53,8 +53,8 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 |名稱|描述|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|建立新的視窗物件。|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|傳回**IHTMLDocument2**介面上目前文件。|  
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|擷取這個檢視的預設文件名稱。|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|傳回`IHTMLDocument2`介面上目前的文件。|  
+|[CHtmlEditView::GetStartDocument](#getstartdocument)|擷取此檢視的預設文件的名稱。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -101,31 +101,31 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *lpszClassName*  
- 指向以 null 結束的字元字串，Windows 類別命名。 類別名稱可以是任何名稱登錄與[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式或**RegisterClass** Windows 函式。 如果**NULL**，會使用預先定義的預設[CFrameWnd](../../mfc/reference/cframewnd-class.md)屬性。  
+ 指向以 null 結束的字元字串，可命名 Windows 類別。 類別名稱可以是任何名稱向[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式或`RegisterClass`Windows 函式。 如果是 NULL，會使用預先定義的預設[CFrameWnd](../../mfc/reference/cframewnd-class.md)屬性。  
   
  *lpszWindowName*  
  指向以 null 結束的字元字串，表示視窗名稱。  
   
- *dwStyle*  
- 指定視窗的樣式屬性。 根據預設， **WS_VISIBLE**和**WS_CHILD**設定視窗樣式。  
+ *cheaderctrl:: Create*  
+ 指定視窗的樣式屬性。 根據預設，會設定 WS_VISIBLE 和 WS_CHILD Windows 樣式。  
   
  *rect*  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值，可讓 Windows，指定新的視窗位置與大小。  
+ 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。  
   
  *pParentWnd*  
  控制項的父視窗指標。  
   
  *nID*  
- 檢視的識別碼。 根據預設，設定為**AFX_IDW_PANE_FIRST**。  
+ 檢視的識別碼。 根據預設，設定為 AFX_IDW_PANE_FIRST。  
   
  *pContext*  
- 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**預設。  
+ 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 預設為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 這個方法也會呼叫包含的 WebBrowser**瀏覽**方法以載入預設文件 (請參閱[CHtmlEditView::GetStartDocument](#getstartdocument))。  
+ 這個方法也會呼叫包含的 WebBrowser`Navigate`方法以載入預設文件 (請參閱 < [CHtmlEditView::GetStartDocument](#getstartdocument))。  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
- 傳回**IHTMLDocument2**介面上目前文件。  
+ 傳回`IHTMLDocument2`介面上目前的文件。  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -136,7 +136,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)介面。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
- 擷取這個檢視的預設文件名稱。  
+ 擷取此檢視的預設文件的名稱。  
   
 ```  
 virtual LPCTSTR GetStartDocument();

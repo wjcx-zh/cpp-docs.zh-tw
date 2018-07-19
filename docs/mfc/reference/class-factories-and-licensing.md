@@ -1,5 +1,5 @@
 ---
-title: Class Factory 和授權 |Microsoft 文件
+title: Class Factory 和授權 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: abb9d5ca169edf28bb3f72c26e644894c12ccb93
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336218"
 ---
 # <a name="class-factories-and-licensing"></a>Class Factory 和授權
 若要建立 OLE 控制項的執行個體，容器應用程式會呼叫控制項之 Class Factory 的成員函式。 由於您的控制項是一個實際的 OLE 物件，Class Factory 會負責為您的控制項建立執行個體。 每個 OLE 控制項類別必須有一個 Class Factory。  
@@ -49,12 +49,12 @@ DECLARE_OLECREATE_EX(class_name)
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 控制項類別名稱。  
+ 控制項類別的名稱。  
   
 ### <a name="remarks"></a>備註  
- 使用這個巨集不支援授權控制項的控制項類別標頭檔中。  
+ 使用這個巨集不支援授權的控制項的控制項類別標頭檔中。  
   
- 請注意，此巨集相同的目的為下列程式碼範例：  
+ 請注意，這個巨集有相同的用途，下列程式碼範例為：  
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
@@ -83,22 +83,22 @@ IMPLEMENT_OLECREATE_EX(
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 控制項屬性頁類別名稱。  
+ 控制項屬性頁類別的名稱。  
   
- *external_name*  
- 應用程式所公開物件名稱。  
+ *無法使用 external_name*  
+ 對應用程式公開物件名稱。  
   
- *l、 w1、 w2、 b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
- 此類別的元件**CLSID**。 如需這些參數的詳細資訊，請參閱備註[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
+ *l、 w1、 w2、 b1，b2，b3、 b4、 b5、 b6、 b7、 b8*  
+ 元件類別的 CLSID。 如需有關這些參數的詳細資訊，請參閱的 < 備註 > [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
   
 ### <a name="remarks"></a>備註  
- 這個巨集必須使用任何控制項類別的實作檔中出現`DECLARE_OLECREATE_EX`巨集或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`巨集。 External name 是公開給其他應用程式的 OLE 控制項的識別碼。 容器會使用此名稱來要求此控制類別的物件。  
+ 這個巨集必須出現在任何使用 DECLARE_OLECREATE_EX 巨集或 BEGIN_OLEFACTORY 和 END_OLEFACTORY 巨集的控制項類別的實作檔案中。 External name 是公開給其他應用程式的 OLE 控制項的識別項。 容器會使用此名稱來要求這個控制項類別的物件。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
 ##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
- 開始您的類別處理站，您的控制項類別的標頭檔中宣告。  
+ 開始您的類別處理站，您的控制項類別的標頭檔中的宣告。  
   
 ``` 
 BEGIN_OLEFACTORY(class_name)  
@@ -106,16 +106,16 @@ BEGIN_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 指定的控制項類別的類別處理站，這是名稱。  
+ 指定控制項類別這是其類別處理站的名稱。  
   
 ### <a name="remarks"></a>備註  
- 宣告授權函式的類別處理站應該開始之後立即`BEGIN_OLEFACTORY`。  
+ 授權函式的類別處理站的宣告應 BEGIN_OLEFACTORY 之後立即開始。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
 ##  <a name="end_olefactory"></a>  END_OLEFACTORY  
- 宣告的結尾控制項的 class factory。  
+ 結束控制項的 class factory 的宣告。  
   
 ```  
 END_OLEFACTORY(class_name)   
@@ -123,7 +123,7 @@ END_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 這是其類別處理站控制項類別的名稱。  
+ 這是其類別 factory 類別的控制項名稱。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
@@ -141,22 +141,22 @@ BOOL AFXAPI AfxVerifyLicFile(
   
 ### <a name="parameters"></a>參數  
  *hInstance*  
- 執行個體控制代碼與授權控制項相關聯的 dll。  
+ 授權的控制項相關聯的 dll 執行個體控制代碼。  
   
  *pszLicFileName*  
- 指向以 null 結尾字元字串，包含授權檔名。  
+ 指向以 null 結束的字元字串，包含授權檔名。  
   
  *pszLicFileContents*  
- 必須符合授權檔案的開頭找到序列的位元組序列的點。  
+ 必須符合授權檔案的開頭，請參閱序列的位元組序列的點。  
   
  *cch*  
  中的字元數*pszLicFileContents*。  
   
 ### <a name="return-value"></a>傳回值  
- 如果授權檔案存在，而且在中的字元序列的開頭為非零*pszLicFileContents*; 否則為 0。  
+ 如果授權檔案存在，而且中的字元序列的開頭為非零*pszLicFileContents*，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果*cch*為-1，這個函式使用：  
+ 如果*cch*為-1，此函式會使用：  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
@@ -164,4 +164,4 @@ BOOL AFXAPI AfxVerifyLicFile(
   **標頭**afxctl.h  
 
 ## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+ [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

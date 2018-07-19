@@ -1,5 +1,5 @@
 ---
-title: CDragListBox 類別 |Microsoft 文件
+title: CDragListBox 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a32963ebb6bfbfcb1063e8eda678693bec872e79
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955985"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337280"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別
 除了提供 Windows 清單方塊中，功能`CDragListBox`類別可讓使用者在清單方塊內移動清單方塊項目，例如檔案名稱。  
@@ -61,18 +61,18 @@ class CDragListBox : public CListBox
 |[CDragListBox::BeginDrag](#begindrag)|在拖曳作業開始時由架構呼叫。|  
 |[CDragListBox::CancelDrag](#canceldrag)|在取消拖曳作業時，由架構呼叫。|  
 |[CDragListBox::Dragging](#dragging)|在拖曳作業期間，由架構呼叫。|  
-|[CDragListBox::DrawInsert](#drawinsert)|繪製拖放到清單方塊的插入的導線。|  
+|[CDragListBox::DrawInsert](#drawinsert)|繪製拖曳清單方塊的插入輔助線。|  
 |[CDragListBox::Dropped](#dropped)|已卸除項目之後，由架構呼叫。|  
-|[CDragListBox::ItemFromPt](#itemfrompt)|傳回座標正在拖曳的項目。|  
+|[CDragListBox::ItemFromPt](#itemfrompt)|傳回所拖曳的項目座標。|  
   
 ## <a name="remarks"></a>備註  
- 使用這項功能的清單方塊讓使用者排序項目在清單中的方式是它們最有用。 根據預設，清單方塊會移到清單中的新位置的項目。 不過，`CDragListBox`可以自訂物件，以複製項目，而不需要移動它們。  
+ 使用這項功能的清單方塊中，可讓使用者排序的項目清單中以任何方式是對他們最有用。 根據預設，清單方塊會移至新的位置清單中的項目。 不過，`CDragListBox`可以自訂物件，以複製的項目，而不需要移動它們。  
   
- 清單方塊控制項相關聯`CDragListBox`類別不能**LBS_SORT**或**LBS_MULTIPLESELECT**樣式。 如需清單方塊樣式的說明，請參閱[清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)。  
+ 清單方塊控制項相關聯`CDragListBox`類別不能 LBS_SORT 或 LBS_MULTIPLESELECT 樣式。 如需清單方塊樣式的描述，請參閱 <<c0> [ 清單方塊樣式](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)。  
   
- 若要使用現有的對話方塊中的應用程式中拖放到清單方塊，清單方塊控制項新增至您使用對話方塊編輯器的對話方塊範本，然後指派成員變數 (類別目錄的`Control`和變數類型`CDragListBox`) 對應至清單方塊在對話方塊範本中控制。  
+ 若要使用拖曳清單方塊中，在現有的應用程式] 對話方塊中，新增清單方塊控制項至您使用對話方塊編輯器的對話方塊範本，然後指派的成員變數 (類別目錄的`Control`和 [變數型別`CDragListBox`) 對應到清單方塊在您的對話方塊範本中的控制。  
   
- 如需有關如何將控制項指派給成員變數的詳細資訊，請參閱[定義對話方塊控制項的成員變數的捷徑](../../windows/defining-member-variables-for-dialog-controls.md)。  
+ 如需有關如何將控制項指派給成員變數的詳細資訊，請參閱 <<c0> [ 定義對話方塊控制項的成員變數的快顯](../../windows/defining-member-variables-for-dialog-controls.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,21 +89,21 @@ class CDragListBox : public CListBox
  **標頭：** afxcmn.h  
   
 ##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
- 由呼叫發生事件時，framework 就可以開始拖曳作業，例如按下滑鼠左的按鈕。  
+ 呼叫 framework 發生事件時，無法開始拖曳作業，例如按下滑鼠左的按鈕。  
   
 ```  
 virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- *pt*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含正在拖曳的項目座標。  
+ *太平洋時間*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含要拖曳之項目的座標。  
   
 ### <a name="return-value"></a>傳回值  
- 非零，如果拖曳允許，否則為 0。  
+ 如果拖曳允許，否則為 0，非零值。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要控制在拖曳作業開始時，會發生什麼事，請覆寫這個函式。 預設實作會擷取滑鼠，並會保持在拖放到模式，直到使用者按下滑鼠左鍵或右鍵按鈕或按 esc 鍵，此時取消拖曳作業。  
+ 如果您想要控制在拖曳作業開始時，會發生什麼情況，請覆寫這個函式。 預設實作會捕捉到滑鼠，並處於拖曳模式，直到使用者按下滑鼠左鍵或右鍵按鈕或按下 esc 鍵，此時取消拖曳作業。  
   
 ##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  在取消拖曳作業時，由架構呼叫。  
@@ -113,11 +113,11 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- *pt*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含正在拖曳的項目座標。  
+ *太平洋時間*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含要拖曳之項目的座標。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個函式，以處理您的清單方塊控制項的任何特殊處理。  
+ 覆寫這個函式以處理您的清單方塊控制項的任何特殊處理。  
   
 ##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  建構 `CDragListBox` 物件。  
@@ -134,23 +134,23 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- *pt*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含 x 和 y 螢幕座標的資料指標。  
+ *太平洋時間*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，包含 x 和 y 螢幕座標的資料指標。  
   
 ### <a name="return-value"></a>傳回值  
- 要顯示的游標資源識別碼。 下列是可能值：  
+ 要顯示的游標資源識別碼。 可能的值如下：  
   
-- `DL_COPYCURSOR` 表示將複製的項目。  
+- DL_COPYCURSOR 表示項目會複製。  
   
-- `DL_MOVECURSOR` 表示將會移動項目。  
+- DL_MOVECURSOR 指示將移動的項目。  
   
-- `DL_STOPCURSOR` 指出目前置放目標不是可接受。  
+- DL_STOPCURSOR 表示目前置放目標不是可接受。  
   
 ### <a name="remarks"></a>備註  
- 傳回的預設行為`DL_MOVECURSOR`。 如果您想要提供額外的功能，請覆寫這個函式。  
+ 預設行為會傳回 DL_MOVECURSOR。 如果您想要提供額外的功能，請覆寫這個函式。  
   
 ##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
- 由架構呼叫以繪製具有指定之索引的項目之前插入的導線。  
+ 由架構呼叫以繪製具有指定索引的項目之前插入輔助線。  
   
 ```  
 virtual void DrawInsert(int nItem);
@@ -161,10 +161,10 @@ virtual void DrawInsert(int nItem);
  插入點的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 值為-1 清除插入輔助線。 覆寫此函式可修改的外觀或行為插入輔助線。  
+ 值為-1 會清除插入輔助線。 若要修改的外觀或行為插入指南的這個函式會覆寫。  
   
 ##  <a name="dropped"></a>  CDragListBox::Dropped  
- 在卸除項目時由架構呼叫`CDragListBox`物件。  
+ 在卸除項目時，由架構呼叫`CDragListBox`物件。  
   
 ```  
 virtual void Dropped(
@@ -174,13 +174,13 @@ virtual void Dropped(
   
 ### <a name="parameters"></a>參數  
  *nSrcIndex*  
- 指定已卸除字串之以零為起始的索引。  
+ 指定已卸除的字串之以零為起始索引。  
   
- *pt*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含拖放站台的座標。  
+ *太平洋時間*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，包含放置站台的座標。  
   
 ### <a name="remarks"></a>備註  
- 預設行為會將清單方塊項目和其資料複製到新位置，然後再刪除原始的項目。 覆寫此函式可自訂的預設行為，例如啟用清單項目拖曳到清單內的其他位置的複本。  
+ 預設行為會將清單方塊項目和其資料複製到新的位置，，然後刪除原始的項目。 覆寫此函式可自訂的預設行為，例如啟用拖曳到清單中的其他位置的清單方塊項目的複本。  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  呼叫此函式可擷取的清單方塊項目以零為起始的索引位於*pt*。  
@@ -192,14 +192,14 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>參數  
- *pt*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含在清單方塊內的點的座標。  
+ *太平洋時間*  
+ A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，包含在清單方塊內的點的座標。  
   
  *bAutoScroll*  
- 非零，如果允許捲動，否則為 0。  
+ 如果允許捲動，則為 0，非零值。  
   
 ### <a name="return-value"></a>傳回值  
- 拖放到清單方塊項目的以零為起始的索引。  
+ 拖曳清單方塊項目的以零為起始的索引。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 TSTCON](../../visual-cpp-samples.md)   

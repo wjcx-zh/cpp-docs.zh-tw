@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: f98e5fc9521165d5599f904975e348276f346ea4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 354632a3c001f2352821d9a1d0b493291c21a337
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853283"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953933"
 ---
 # <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; 函式
 
@@ -49,8 +49,8 @@ void swap(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`sstream` 物件的參考。|
-|`right`|`sstream` 物件的參考。|
+|*left*|`sstream` 物件的參考。|
+|*right*|`sstream` 物件的參考。|
 
 ### <a name="remarks"></a>備註
 

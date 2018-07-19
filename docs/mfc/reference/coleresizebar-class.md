@@ -1,5 +1,5 @@
 ---
-title: COleResizeBar 類別 |Microsoft 文件
+title: COleResizeBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3706521108d848535742bf2314142fedf46f1746
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040112"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852708"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 類別
 支援就地 OLE 項目調整大小的控制列類型。  
@@ -48,7 +48,7 @@ class COleResizeBar : public CControlBar
   
 |名稱|描述|  
 |----------|-----------------|  
-|[COleResizeBar::Create](#create)|建立和初始化 Windows 子視窗，並產生關聯來`COleResizeBar`物件。|  
+|[COleResizeBar::Create](#create)|建立並初始化 Windows 子視窗，並將它`COleResizeBar`物件。|  
   
 ## <a name="remarks"></a>備註  
  `COleResizeBar` 物件會顯示為[CRectTracker](../../mfc/reference/crecttracker-class.md)具有陰影的框線和外部調整大小控點。  
@@ -79,7 +79,7 @@ COleResizeBar();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫**建立**建立調整列物件。  
+ 呼叫`Create`建立調整列物件。  
   
 ##  <a name="create"></a>  COleResizeBar::Create  
  建立子視窗，並將其與相關聯`COleResizeBar`物件。  
@@ -93,16 +93,16 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *pParentWnd*  
- 父視窗的大小調整列的指標。  
+ 大小調整列的父視窗的指標。  
   
- *dwStyle*  
- 指定[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)屬性。  
+ *cheaderctrl:: Create*  
+ 指定[styl okna](../../mfc/reference/styles-used-by-mfc.md#window-styles)屬性。  
   
  *nID*  
  大小調整列的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已建立的大小調整列; 非零，否則便是 0。  
+ 非零值，如果已建立的大小調整列;否則為 0。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 SUPERPAD](../../visual-cpp-samples.md)   

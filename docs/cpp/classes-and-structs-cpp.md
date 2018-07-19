@@ -1,5 +1,5 @@
 ---
-title: 類別和結構 （c + +） |Microsoft 文件
+title: 類別和結構 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413241"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954173"
 ---
 # <a name="classes-and-structs-c"></a>類別和結構 (C++)
 本節介紹 C++ 類別和結構。 這兩個建構在 C++ 中相同，差異在於結構中的預設存取範圍是公用，而類別中的預設值是私用。  
@@ -58,15 +58,15 @@ ms.locfileid: "32413241"
   
 -   [C++ 位元欄位](../cpp/cpp-bit-fields.md)  
   
- 三個類別類型是結構、類別和等位。 其宣告使用[結構](../cpp/struct-cpp.md)，[類別](../cpp/class-cpp.md)，和[union](../cpp/unions.md)關鍵字 (請參閱[定義類別類型](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da))。 下表顯示這三個類別類型的差異。  
+ 三個類別類型是結構、類別和等位。 它們使用宣告[結構](../cpp/struct-cpp.md)，[類別](../cpp/class-cpp.md)，並[union](../cpp/unions.md)關鍵字。 下表顯示這三個類別類型的差異。  
   
- 如需等位的詳細資訊，請參閱[等位](../cpp/unions.md)。 如需 managed 的類別和結構的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
+ 如需有關等位的詳細資訊，請參閱[等位](../cpp/unions.md)。 如需 managed 的類別和結構的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>結構、類別和等位的存取控制和條件約束  
   
 |結構|類別|等位|  
 |----------------|-------------|------------|  
-|類別索引鍵是 `struct`|類別索引鍵是**類別**|類別索引鍵是**等位**|  
+|類別索引鍵是**結構**|類別索引鍵是**類別**|類別索引鍵是**聯集**|  
 |預設存取權是 public|預設存取權是 private|預設存取權是 public|  
 |沒有使用條件約束|沒有使用條件約束|一次只使用一個成員|  
   

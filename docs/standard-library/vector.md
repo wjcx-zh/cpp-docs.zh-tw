@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857632"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953858"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -83,13 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>參數
 
-輸入的向量中儲存的資料類型的樣板參數。
+*類型*  
+ 儲存在向量中之資料類型的樣板參數。
 
-配置器負責記憶體配置和解除配置的預存配置器物件的範本參數。
+*配置器*  
+ 儲存之配置器物件的樣板參數，負責記憶體配置和解除配置。
 
-`left` 比較作業中的第一個 （左） 向量
+*left*  
+ 比較作業中的第一個 (左) 向量
 
-`right` 比較作業中的第二個 （右） 向量。
+*right*  
+ 比較作業中的第二個 (右) 向量。
 
 ### <a name="operators"></a>運算子
 

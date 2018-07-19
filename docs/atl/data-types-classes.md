@@ -1,5 +1,5 @@
 ---
-title: 資料類型類別 (ATL) |Microsoft 文件
+title: 資料類型類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab8c9d6839fad12459e65b396878f719a60c6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353854"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851310"
 ---
 # <a name="data-types-classes"></a>資料型別類別
-下列類別包裝的 c + + 資料類型：  
+下列類別會包裝 c + + 資料類型：  
   
 -   [CComBSTR](../atl/reference/ccombstr-class.md)包裝`BSTR`資料型別。  
   
--   [CComVariant](../atl/reference/ccomvariant-class.md)包裝**VARIANT**資料型別。  
+-   [CComVariant](../atl/reference/ccomvariant-class.md)包裝`VARIANT`資料型別。  
   
 -   [CComCurrency](../atl/reference/ccomcurrency-class.md)包含方法和運算子建立及管理`CURRENCY`物件。  
   

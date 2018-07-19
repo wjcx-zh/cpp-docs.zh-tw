@@ -1,5 +1,5 @@
 ---
-title: COM 對應巨集 |Microsoft 文件
+title: COM 對應巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358419"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879305"
 ---
 # <a name="com-map-macros"></a>COM 對應巨集
 這些巨集會定義 COM 介面對應。  
   
 |||  
 |-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|標記 COM 介面的對應項目的開頭。|  
-|[END_COM_MAP](#end_com_map)|COM 介面的對應項目結束標記。|  
+|[BEGIN_COM_MAP](#begin_com_map)|標記 COM 介面對應項目的開頭。|  
+|[END_COM_MAP](#end_com_map)|標記 COM 介面對應項目的結尾。|  
 
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
@@ -44,14 +44,14 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>參數  
  *x*  
- [in]您正在公開介面的類別物件的名稱。  
+ [in]您要公開的介面的類別物件的名稱。  
   
 ### <a name="remarks"></a>備註  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) COM 對應中只會傳回介面指標。 啟動您的介面對應與`BEGIN_COM_MAP`巨集，將項目加入您的介面，以及每個[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)巨集，或其中一個變數，並完成的對應[END_COM_MAP](#end_com_map)巨集。  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) COM 對應中只會傳回介面指標。 開始 BEGIN_COM_MAP 巨集的介面對應、 將項目加入您的介面，以及每個[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)巨集或其中一個變數，並完成地圖[END_COM_MAP](#end_com_map)巨集。  
 
   
 ### <a name="example"></a>範例  
- 與 ATL[呼叫器](../../visual-cpp-samples.md)範例：  
+ Atl[呼叫器](../../visual-cpp-samples.md)範例：  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   

@@ -1,5 +1,5 @@
 ---
-title: COleStreamFile 類別 |Microsoft 文件
+title: COleStreamFile 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041441"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852754"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 類別
-表示資料的資料流 ( `IStream`) 在複合檔案中做為 OLE 結構化儲存體的一部分。  
+表示在複合檔案中做為 OLE 結構化儲存體之一部分的資料流 (`IStream`)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,20 +59,20 @@ class COleStreamFile : public CFile
 |名稱|描述|  
 |----------|-----------------|  
 |[COleStreamFile::Attach](#attach)|將資料流與物件產生關聯。|  
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|從全域記憶體中建立的資料流，並將其與物件相關聯。|  
-|[COleStreamFile::CreateStream](#createstream)|建立資料流，並將其與物件相關聯。|  
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|從全域記憶體中建立的資料流，並將它與物件相關聯。|  
+|[COleStreamFile::CreateStream](#createstream)|建立資料流，並將它與物件相關聯。|  
 |[COleStreamFile::Detach](#detach)|解除關聯之物件的資料流。|  
 |[COleStreamFile::GetStream](#getstream)|傳回目前資料流。|  
-|[COleStreamFile::OpenStream](#openstream)|安全無虞地開啟資料流，並將其與物件相關聯。|  
+|[COleStreamFile::OpenStream](#openstream)|安全地開啟資料流，並將它與物件相關聯。|  
   
 ## <a name="remarks"></a>備註  
  `IStorage`物件必須存在才能開啟或建立，除非它是記憶體資料流資料流。  
   
- `COleStreamFile` 物件完全一樣管理[CFile](../../mfc/reference/cfile-class.md)物件。  
+ `COleStreamFile` 物件完全相同的操作[CFile](../../mfc/reference/cfile-class.md)物件。  
   
- 如需操作資料流與儲存的詳細資訊，請參閱文章[容器： 複合檔案](../../mfc/containers-compound-files.md)...  
+ 如需有關如何管理資料流和儲存體的詳細資訊，請參閱[容器： 複合檔案](../../mfc/containers-compound-files.md)...  
   
- 如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)和[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)並[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,7 +85,7 @@ class COleStreamFile : public CFile
  **標頭：** afxole.h  
   
 ##  <a name="attach"></a>  COleStreamFile::Attach  
- 將具有提供的 OLE 資料流`COleStreamFile`物件。  
+ 將使用提供的 OLE 資料流`COleStreamFile`物件。  
   
 ```  
 void Attach(LPSTREAM lpStream);
@@ -93,12 +93,12 @@ void Attach(LPSTREAM lpStream);
   
 ### <a name="parameters"></a>參數  
  *lpStream*  
- 指向 OLE 資料流 ( `IStream`) 與物件相關聯。 不能**NULL**。  
+ 指向 OLE 資料流 (`IStream`) 與物件相關聯。 不可以是 NULL。  
   
 ### <a name="remarks"></a>備註  
- 物件已經不得與 OLE 資料流相關聯。  
+ 物件已經不可與 OLE 資料流相關聯。  
   
- 如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  建立 `COleStreamFile` 物件。  
@@ -112,12 +112,12 @@ COleStreamFile(LPSTREAM lpStream = NULL);
  要與物件相關聯之 OLE 資料流指標。  
   
 ### <a name="remarks"></a>備註  
- 如果*lpStream*是**NULL**物件不是與 OLE 資料流相關聯，否則物件是提供的 OLE 資料流相關聯。  
+ 如果*lpStream*是 NULL，物件不是與 OLE 資料流相關聯，否則物件與提供的 OLE 資料流相關聯。  
   
- 如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
- 安全地建立新的資料流通用的共用記憶體不足失敗所在的標準模式、 預期的條件。  
+ 安全地建立新的資料流通用的共用記憶體不足，失敗情形是一般的預期。  
   
 ```  
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -125,18 +125,18 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>參數  
  *pError*  
- 指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或**NULL** ，表示建立作業的完成狀態。 如果您想要監視可能嘗試建立資料流所產生的例外狀況，請提供這個參數。  
+ 指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或 NULL，表示建立作業的完成狀態。 如果您想要監視產生的嘗試建立資料流的可能例外狀況，請提供這個參數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已成功; 建立資料流，則為非零否則便是 0。  
+ 如果成功，建立資料流，非零值。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 配置的記憶體是由 OLE 子系統。  
+ OLE 子系統所配置記憶體。  
   
- 如需詳細資訊，請參閱[CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK 中。  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
- 提供的儲存體物件失敗所在正常、 預期的狀況中，安全地建立新的資料流。  
+ 安全地建立新的資料流，其中失敗情形是一般的預期提供的儲存體物件中。  
   
 ```  
 BOOL CreateStream(
@@ -148,24 +148,24 @@ BOOL CreateStream(
   
 ### <a name="parameters"></a>參數  
  *lpStorage*  
- 指向包含要建立的資料流 OLE 儲存物件。 不能**NULL**。  
+ 指向包含要建立的資料流的 OLE 儲存體物件。 不可以是 NULL。  
   
  *lpszStreamName*  
- 若要建立資料流名稱。 不能**NULL**。  
+ 要建立之資料流的名稱。 不可以是 NULL。  
   
  *nOpenFlags*  
- 開啟資料流時要使用的存取模式。 獨佔，讀取/寫入，並建立模式由預設值。 如需可用的模式的完整清單，請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
+ 開啟資料流時要使用的存取模式。 獨佔、 讀取/寫入，並建立模式由預設值。 可用的模式的完整清單，請參閱 < [CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
  *pError*  
- 指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或**NULL**。 如果您想要監視可能嘗試建立資料流所產生的例外狀況，請提供這個參數。  
+ 指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或 NULL。 如果您想要監視產生的嘗試建立資料流的可能例外狀況，請提供這個參數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已成功; 建立資料流，則為非零否則便是 0。  
+ 如果成功，建立資料流，非零值。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果開啟作業失敗，則擲回檔案例外狀況和*pError*不**NULL**。  
+ 如果開啟失敗檔案例外狀況將會擲回並*pError*不是 NULL。  
   
- 如需詳細資訊，請參閱[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
  解除關聯物件的資料流，而不需要關閉資料流。  
@@ -175,12 +175,12 @@ LPSTREAM Detach();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 資料流的指標 ( `IStream`) 是與物件相關聯。  
+ 資料流的指標 (`IStream`) 是與物件相關聯。  
   
 ### <a name="remarks"></a>備註  
- 在程式終止之前，資料流必須先關閉其他方式。  
+ 程式終止之前，必須透過其他方式關閉資料流。  
   
- 如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  呼叫此函式可傳回目前資料流的指標。  
@@ -190,7 +190,7 @@ IStream* GetStream() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前資料流介面的指標 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
+ 目前的資料流介面的指標 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
   
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  開啟現有的資料流。  
@@ -205,24 +205,24 @@ BOOL OpenStream(
   
 ### <a name="parameters"></a>參數  
  *lpStorage*  
- 指向包含要開啟的資料流 OLE 儲存物件。 不能**NULL**。  
+ 指向包含要開啟的資料流的 OLE 儲存體物件。 不可以是 NULL。  
   
  *lpszStreamName*  
- 若要開啟資料流名稱。 不能**NULL**。  
+ 若要開啟資料流名稱。 不可以是 NULL。  
   
  *nOpenFlags*  
- 開啟資料流時要使用的存取模式。 獨佔和讀/寫模式所使用預設值。 可用的模式的完整清單，請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
+ 開啟資料流時要使用的存取模式。 專有和讀/寫模式所使用預設值。 可用的模式的完整清單，請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)。  
   
  *pError*  
- 指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或**NULL**。 如果您想要監視可能嘗試開啟資料流所產生的例外狀況，請提供這個參數。  
+ 指向[CFileException](../../mfc/reference/cfileexception-class.md)物件或 NULL。 如果您想要監視可能嘗試開啟資料流所產生的例外狀況，請提供這個參數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功; 開啟資料流，則為非零否則便是 0。  
+ 如果成功; 開啟資料流，則為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果開啟作業失敗，則擲回檔案例外狀況和*pError*不**NULL**。  
+ 如果開啟失敗檔案例外狀況將會擲回並*pError*不是 NULL。  
   
- 如需詳細資訊，請參閱[IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [CFile 類別](../../mfc/reference/cfile-class.md)   

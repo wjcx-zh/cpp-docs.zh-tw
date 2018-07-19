@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideButton 類別 |Microsoft 文件
+title: CMFCAutoHideButton 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3135c95ddc32c198bb7abc6ddea4ef5aea5a1d8a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338015"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 類別
 可顯示或隱藏 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) (設定為隱藏) 的按鈕。  
@@ -107,7 +107,7 @@ class CMFCAutoHideButton : public CObject
 |[CMFCAutoHideButton::UnSetAutoHideMode](#unsetautohidemode)||  
   
 ## <a name="remarks"></a>備註  
- 在建立，`CMFCAutoHideButton`物件附加至[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。 `CDockablePane` 物件會隨著使用者與 `CMFCAutoHideButton` 物件的互動隱藏或顯示。  
+ 在建立後，`CMFCAutoHideButton`物件附加至[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。 `CDockablePane` 物件會隨著使用者與 `CMFCAutoHideButton` 物件的互動隱藏或顯示。  
   
  根據預設，當使用者開啟自動隱藏時，架構會自動建立 `CMFCAutoHideButton`。 架構可以建立自訂 UI 類別而不是 `CMFCAutoHideButton` 類別的項目。 若要指定架構應該使用的自訂 UI 類別，請將靜態成員變數 `CMFCAutoHideBar::m_pAutoHideButtonRTS` 設定為等於自訂 UI 類別。 根據預設，此變數會設為 `CMFCAutoHideButton`。  
   
@@ -151,23 +151,23 @@ virtual BOOL Create(
  指標[CDockablePane](../../mfc/reference/cdockablepane-class.md)物件。 此自動隱藏按鈕隱藏和顯示`CDockablePane`。  
   
  [in]*dwAlignment*  
- 值，指定按鈕的對齊方式，與主框架視窗。  
+ 值，指定主框架視窗按鈕的對齊方式。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 當您建立`CMFCAutoHideButton`物件，您必須使自動隱藏按鈕與特定`CDockablePane`。 使用者可以使用 [自動隱藏] 按鈕以隱藏和顯示相關聯`CDockablePane`。  
+ 當您建立`CMFCAutoHideButton`物件，您必須將 [自動隱藏] 按鈕關聯特定`CDockablePane`。 使用者可以使用 [自動隱藏] 按鈕隱藏和顯示相關聯`CDockablePane`。  
   
- *DwAlignment*參數表示自動隱藏按鈕在應用程式所在的位置。 這個參數可以是下列任何一個值：  
+ *DwAlignment*參數會指出自動隱藏按鈕的應用程式中的所在位置。 這個參數可以是下列任何一個值：  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  擷取自動隱藏按鈕的對齊方式。  
@@ -177,18 +177,18 @@ DWORD GetAlignment() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A`DWORD`值，包含目前的自動隱藏按鈕的對齊方式。  
+ DWORD 值，其中包含目前的自動隱藏按鈕的對齊方式。  
   
 ### <a name="remarks"></a>備註  
- 自動隱藏按鈕的對齊方式表示應用程式上的按鈕所在位置。 它可以是下列值之一：  
+ 自動隱藏按鈕的對齊方式會指示按鈕上的應用程式所在的位置。 它可以是下列值之一：  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CRBS_ALIGN_TOP`  
+- CRBS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  傳回[CDockablePane](../../mfc/reference/cdockablepane-class.md)自動隱藏按鈕相關聯的物件。  
@@ -201,7 +201,7 @@ CDockablePane* GetAutoHideWindow() const;
  相關聯的指標`CDockablePane`物件。  
   
 ### <a name="remarks"></a>備註  
- 若要關聯與自動隱藏按鈕`CDockablePane`，傳遞`CDockablePane`當做參數[CMFCAutoHideButton::Create](#create)方法。  
+ 若要將使用 [自動隱藏] 按鈕`CDockablePane`，傳遞`CDockablePane`做為參數[CMFCAutoHideButton::Create](#create)方法。  
   
 ##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
@@ -236,7 +236,7 @@ CSize GetSize() const;
  A`CSize`物件，其中包含按鈕的大小。  
   
 ### <a name="remarks"></a>備註  
- 計算的大小會包括自動隱藏按鈕的框線大小。  
+ 導出的大小包含自動隱藏按鈕的框線大小。  
   
 ##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
  傳回自動隱藏按鈕文字標籤的大小。  
@@ -246,7 +246,7 @@ virtual CSize GetTextSize() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含的自動隱藏按鈕的文字大小。  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含自動隱藏按鈕的文字的大小。  
   
 ##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  指出自動隱藏按鈕是否為作用中。  
@@ -256,10 +256,10 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 自動隱藏按鈕是否作用中。`FALSE`否則。  
+ 如果自動隱藏按鈕作用;，則為 TRUE。FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
- 自動隱藏按鈕時，使用中關聯[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)顯示視窗。  
+ 自動隱藏按鈕時，作用中相關聯[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)顯示視窗。  
   
 ##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  判斷自動隱藏按鈕是水平或垂直。  
@@ -269,10 +269,10 @@ BOOL IsHorizontal() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果按鈕是水平，則為非零否則為 0。  
+ 非零值，如果按鈕是水平;否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 架構設定的方向[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)物件時建立它。  您可以使用來控制方向`dwAlignment`中的參數[CMFCAutoHideButton::Create](#create)方法。  
+ 架構設定的方向[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)物件時建立它。  您可以使用來控制方向*dwAlignment*中的參數[CMFCAutoHideButton::Create](#create)方法。  
   
 ##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
@@ -293,7 +293,7 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果按鈕是可見的。`FALSE`否則。  
+ 如果可以看到; 按鈕，則為 TRUE。FALSE 否則。  
   
 ##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  當它繪製自動隱藏按鈕時，架構會呼叫這個方法。  
@@ -307,7 +307,7 @@ virtual void OnDraw(CDC* pDC);
  裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要自訂您的應用程式中的自動隱藏按鈕的外觀，建立新的類別衍生自`CMFCAutoHideButton`。 在您的衍生類別中覆寫這個方法。  
+ 如果您想要自訂您的應用程式中的自動隱藏按鈕的外觀，建立新的類別衍生自`CMFCAutoHideButton`。 在衍生類別中，覆寫這個方法。  
   
 ##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  當它繪製自動隱藏按鈕的邊框時，架構會呼叫這個方法。  
@@ -324,13 +324,13 @@ virtual void OnDrawBorder(
  裝置內容的指標。  
   
  [in]*rectBounds*  
- 自動隱藏按鈕的週框。  
+ [自動隱藏] 按鈕的週框。  
   
  [in]*rectBorderSize*  
- 自動隱藏按鈕的每一端框線粗細。  
+ 每一側的自動隱藏按鈕的框線粗細。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要自訂每個應用程式中的自動隱藏按鈕的框線，建立新的類別衍生自`CMFCAutoHideButton`。 在您的衍生類別中覆寫這個方法。  
+ 如果您想要自訂您的應用程式中的每個自動隱藏 按鈕的框線，建立新的類別衍生自`CMFCAutoHideButton`。 在衍生類別中，覆寫這個方法。  
   
 ##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  當它填入自動隱藏按鈕的背景時，架構會呼叫這個方法。  
@@ -346,10 +346,10 @@ virtual void OnFillBackground(
  裝置內容的指標。  
   
  [in]*rect*  
- 自動隱藏按鈕的週框。  
+ [自動隱藏] 按鈕的週框。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要自訂您的應用程式中的自動隱藏按鈕的背景，建立新的類別衍生自`CMFCAutoHideButton`。 在您的衍生類別中覆寫這個方法。  
+ 如果您想要自訂您的應用程式中的 [自動隱藏] 按鈕的背景，建立新的類別衍生自`CMFCAutoHideButton`。 在衍生類別中，覆寫這個方法。  
   
 ##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
  顯示或隱藏相關聯[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。  
@@ -360,7 +360,7 @@ void ShowAttachedWindow(BOOL bShow);
   
 ### <a name="parameters"></a>參數  
  [in]*bShow*  
- 布林值，指定是否這個方法會顯示附加`CDockablePane`。  
+ 布林值，指定這個方法是否會顯示附加`CDockablePane`。  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  顯示或隱藏自動隱藏按鈕。  
@@ -371,7 +371,7 @@ virtual void ShowButton(BOOL bShow);
   
 ### <a name="parameters"></a>參數  
  [in]*bShow*  
- 布林值，指定是否要顯示自動隱藏按鈕。  
+ 布林值，指定是否要顯示 [自動隱藏] 按鈕。  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
@@ -419,7 +419,7 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>參數  
  *bHighlight*  
- 指定新的自動隱藏按鈕狀態。 `TRUE` 表示按鈕會反白顯示，`FALSE`表示按鈕不會反白顯示。  
+ 指定新的自動隱藏按鈕狀態。 TRUE 表示  按鈕會反白顯示，FALSE 表示不反白顯示的按鈕。  
   
 ### <a name="remarks"></a>備註  
   
@@ -431,7 +431,7 @@ virtual BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`自動隱藏按鈕反白顯示，否則如果`FALSE`。  
+ 傳回值為 TRUE 的自動隱藏 按鈕會反白顯示;否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   

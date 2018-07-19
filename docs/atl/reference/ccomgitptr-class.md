@@ -1,5 +1,5 @@
 ---
-title: CComGITPtr 類別 |Microsoft 文件
+title: CComGITPtr 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363622"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884170"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 類別
-這個類別會提供處理介面指標的方法和全域介面表 (GIT)。  
+這個類別提供方法來處理介面指標和全域介面表 (GIT)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,9 +58,9 @@ class CComGITPtr
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComGITPtr::Attach](#attach)|呼叫此方法以在全域介面表 (GIT) 中註冊的介面指標。|  
-|[CComGITPtr::CopyTo](#copyto)|呼叫此方法以將介面從全域介面表 (GIT) 複製到傳入的指標。|  
-|[CComGITPtr::Detach](#detach)|呼叫這個方法來取消關聯的介面，從`CComGITPtr`物件。|  
+|[CComGITPtr::Attach](#attach)|呼叫這個方法來註冊全域介面表 (GIT) 的介面指標。|  
+|[CComGITPtr::CopyTo](#copyto)|呼叫這個方法來複製全域介面表 (GIT) 中的介面，以傳遞的指標。|  
+|[CComGITPtr::Detach](#detach)|呼叫這個方法來取消關聯的介面`CComGITPtr`物件。|  
 |[CComGITPtr::GetCookie](#getcookie)|呼叫此方法以傳回從 cookie`CComGITPtr`物件。|  
 |[CComGITPtr::Revoke](#revoke)|呼叫這個方法來移除全域介面表 (GIT) 的介面。|  
   
@@ -75,19 +75,19 @@ class CComGITPtr
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComGITPtr::m_dwCookie](#m_dwcookie)|Cookie。|  
+|[CComGITPtr::m_dwCookie](#m_dwcookie)|在 cookie 中。|  
   
 ## <a name="remarks"></a>備註  
- 彙總無限制執行緒封送處理器，且需要使用取自其他物件的介面指標的物件必須採取額外步驟以確保介面會正確地封送處理。 通常這項作業包括將介面指標儲存在 GIT 從 GIT 每次使用時取得的指標。 類別`CComGITPtr`提供可協助您使用儲存在 GIT 中的介面指標。  
+ 彙總無限制執行緒封送處理器，而且需要使用從其他物件中取得的介面指標的物件必須採取額外步驟以確保介面會正確地封送處理。 通常這牽涉到儲存在 GIT 中的介面指標，是每次從 GIT 取得滑鼠指標。 此類別`CComGITPtr`可協助您使用儲存在 GIT 中的介面指標。  
   
 > [!NOTE]
->  只有使用 dcom 1.1 版的 Windows 95 和更新版本、 Windows 98、 Windows NT 4.0 Service Pack 3 和更新版本，以及 Windows 2000 上的全域介面資料表設備。  
+>  只有使用 dcom 1.1 版的 Windows 95 和更新版本、 Windows 98、 Windows NT 4.0 Service Pack 3 和更新版本和 Windows 2000 上全域介面表功能。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
 ##  <a name="attach"></a>  CComGITPtr::Attach  
- 呼叫此方法以在全域介面表 (GIT) 中註冊的介面指標。  
+ 呼叫這個方法來註冊全域介面表 (GIT) 的介面指標。  
   
 ```
 HRESULT Attach(T* p) throw();
@@ -96,17 +96,17 @@ HRESULT Attach(DWORD dwCookie) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  要加入至 GIT 的介面指標。  
   
- `dwCookie`  
- Cookie，用來識別的介面指標。  
+ *dwCookie*  
+ 用來識別的介面指標的 cookie。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 在偵錯組建中，如果 GIT 無效，或如果 cookie 等於 NULL，會發生判斷提示錯誤。  
+ 在偵錯組建，或如果 GIT 不是有效的如果 cookie 是等於 NULL，會發生判斷提示錯誤。  
   
 ##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr  
  建構函式。  
@@ -120,22 +120,22 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `p`  
- 要儲存在全域介面表 (GIT) 介面指標。  
+ [in]*p*  
+ 若要儲存在全域介面表 (GIT) 介面指標。  
   
- [輸入] `git`  
+ [in]*git*  
  若要將現有的參考`CComGITPtr`物件。  
   
- [輸入] `dwCookie`  
- 此 cookie 會用來識別的介面指標。  
+ [in]*dwCookie*  
+ Cookie，用來識別的介面指標。  
   
- [輸入] `rv`  
- 來源`CComGITPtr`可以移動資料的物件。  
+ [in]*rv*  
+ 來源`CComGITPtr`移動的資料物件。  
   
 ### <a name="remarks"></a>備註  
- 建立新`CComGITPtr`物件，您可以選擇使用現有`CComGITPtr`物件。  
+ 建立新`CComGITPtr`物件，或者使用 現有`CComGITPtr`物件。  
   
- 建構函式使用`rv`是移動建構函式。 將資料從來源移`rv`，然後`rv`已清除。  
+ 建構函式利用*rv*是移動建構函式。 將資料從來源移*rv*，然後*rv*已清除。  
   
 ##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr  
  解構函式。  
@@ -148,24 +148,24 @@ CComGITPtr(CComGITPtr&& rv);
  介面移除全域介面表 (GIT)，使用[CComGITPtr::Revoke](#revoke)。  
   
 ##  <a name="copyto"></a>  CComGITPtr::CopyTo  
- 呼叫此方法以將介面從全域介面表 (GIT) 複製到傳入的指標。  
+ 呼叫這個方法來複製全域介面表 (GIT) 中的介面，以傳遞的指標。  
   
 ```
 HRESULT CopyTo(T** pp) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `pp`  
+ *前置處理*  
  也就是接收的介面指標。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 從 GIT 介面會複製到傳入的指標。 已不再需要時，必須由呼叫端釋放指標。  
+ 從 GIT 介面會複製到傳入的指標。 當不再需要時，指標必須釋放由呼叫端。  
   
 ##  <a name="detach"></a>  CComGITPtr::Detach  
- 呼叫這個方法來取消關聯的介面，從`CComGITPtr`物件。  
+ 呼叫這個方法來取消關聯的介面`CComGITPtr`物件。  
   
 ```
 DWORD Detach() throw();
@@ -175,7 +175,7 @@ DWORD Detach() throw();
  傳回從 cookie`CComGITPtr`物件。  
   
 ### <a name="remarks"></a>備註  
- 若要移除介面從 GIT，呼叫端負責決定是否使用[CComGITPtr::Revoke](#revoke)。  
+ 它是由要移除介面從 GIT，呼叫者使用[CComGITPtr::Revoke](#revoke)。  
   
 ##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
  呼叫此方法以傳回從 cookie`CComGITPtr`物件。  
@@ -191,7 +191,7 @@ DWORD GetCookie() const;
  Cookie 是用來識別介面和其位置的變數。  
   
 ##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie  
- Cookie。  
+ 在 cookie 中。  
   
 ```
 DWORD m_dwCookie;
@@ -211,26 +211,26 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `p`  
+ [in]*p*  
  介面的指標。  
   
- [輸入] `git`  
+ [in]*git*  
  對 `CComGITPtr` 物件的參考。  
   
- [輸入] `dwCookie`  
- 此 cookie 會用來識別的介面指標。  
+ [in]*dwCookie*  
+ Cookie，用來識別的介面指標。  
   
- [輸入] `rv`  
- `CComGITPtr`移動的資料。  
+ [in]*rv*  
+ `CComGITPtr`移動資料。  
   
 ### <a name="return-value"></a>傳回值  
  傳回已更新`CComGITPtr`物件。  
   
 ### <a name="remarks"></a>備註  
- 指派新值`CComGITPtr`物件、 從現有的物件或從全域介面資料表的參考。  
+ 指派新值到`CComGITPtr`從現有的物件，或從全域介面表參考的物件。  
   
 ##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
- 傳回與相關聯的 cookie`CComGITPtr`物件。  
+ 傳回具有相關聯的 cookie`CComGITPtr`物件。  
   
 ```  
 operator DWORD() const;
@@ -240,14 +240,14 @@ operator DWORD() const;
  Cookie 是用來識別介面和其位置的變數。  
   
 ##  <a name="revoke"></a>  CComGITPtr::Revoke  
- 呼叫此方法以從全域介面表 (GIT) 中移除目前的介面。  
+ 呼叫這個方法來移除全域介面表 (GIT) 目前的介面。  
   
 ```
 HRESULT Revoke() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
  從 GIT 中移除介面。  

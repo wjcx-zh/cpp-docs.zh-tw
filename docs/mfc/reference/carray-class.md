@@ -1,5 +1,5 @@
 ---
-title: CArray 類別 |Microsoft 文件
+title: CArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339432"
 ---
 # <a name="carray-class"></a>CArray 類別
-支援類似 C 陣列，但可以動態減少或增加視的陣列。  
+支援類似 C 陣列，但可以動態地減少或增加視的陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,10 +71,10 @@ class CArray : public CObject
   
 #### <a name="parameters"></a>參數  
  *型別*  
- 指定儲存在陣列中的物件類型的樣板參數。 *型別*是所傳回的參數`CArray`。  
+ 指定儲存在陣列中的物件類型的樣板參數。 *型別*是參數，由`CArray`。  
   
  *ARG* *_* *類型*  
- 指定用來存取儲存在陣列中物件的引數類型的樣板參數。 通常參考*類型*。 *Arg_type 這個*是參數，傳遞至`CArray`。  
+ 指定用來存取儲存在陣列中的物件的引數類型的樣板參數。 通常參考*型別*。 *Arg_type 這個*是參數，傳遞至`CArray`。  
   
 ## <a name="members"></a>成員  
   
@@ -89,13 +89,13 @@ class CArray : public CObject
 |名稱|描述|  
 |----------|-----------------|  
 |[CArray::Add](#add)|將項目加入至陣列結尾；必要時讓陣列增長。|  
-|[Carray:: Append](#append)|將其他陣列附加至陣列。如有必要，讓陣列成長|  
+|[Carray:: Append](#append)|將其他陣列附加至的陣列;必要時讓陣列成長|  
 |[Carray:: Copy](#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|  
 |[CArray::ElementAt](#elementat)|傳回陣列中項目指標的臨時參考。|  
 |[CArray::FreeExtra](#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
 |[CArray::GetAt](#getat)|傳回給定索引的值。|  
 |[CArray::GetCount](#getcount)|取得此陣列中項目的數目。|  
-|[CArray::GetData](#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
+|[CArray::GetData](#getdata)|容許存取陣列中的項目。 可以是 NULL。|  
 |[CArray::GetSize](#getsize)|取得此陣列中項目的數目。|  
 |[CArray::GetUpperBound](#getupperbound)|傳回最大的有效索引。|  
 |[CArray::InsertAt](#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
@@ -113,21 +113,21 @@ class CArray : public CObject
 |[operator&#91;&#93;](#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- 陣列索引一律從開始位置 0。 您可以決定是否要修正上限，或是啟用以展開，當您新增超過目前的繫結項目陣列。 記憶體配置連續的上限，即使某些項目都是 null。  
+ 陣列索引一律從開始位置 0。 您可以決定是否要修正的上限，或啟用展開，當您新增超過目前的繫結的項目陣列。 記憶體配置，連續的上限，即使某些項目都是 null。  
   
 > [!NOTE]
->  調整大小的大部分方法`CArray`物件或加入項目，它使用[memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)来移動的項目。 這是一個問題，因為`memcpy_s`不相容的任何要求所要呼叫建構函式的物件。 如果中的項目`CArray`與不相容`memcpy_s`，您必須建立新`CArray`適當的大小。 然後，您必須使用[carray:: Copy](#copy)和[CArray::SetAt](#setat)來填入新的陣列，因為這些方法會使用指派運算子，而不是`memcpy_s`。  
+>  調整大小的大部分方法`CArray`物件，或新增項目，它會使用[memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)移動項目。 這會是問題，因為`memcpy_s`任何需要的物件所要呼叫的建構函式與不相容。 如果中的項目`CArray`與不相容`memcpy_s`，您必須建立新`CArray`的適當的大小。 然後您必須使用[carray:: Copy](#copy)並[CArray::SetAt](#setat)用來填入新陣列，因為這些方法會使用指派運算子，而不是`memcpy_s`。  
   
- 如同 C 陣列、 存取時間`CArray`索引的項目是常數，而且陣列大小無關。  
+ 如同 C 陣列，存取時間`CArray`索引的項目為常數，而且是獨立的陣列大小。  
   
 > [!TIP]
->  使用陣列，之前先使用[SetSize](#setsize)建立其大小，並為它配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
+>  使用陣列之前, 使用[SetSize](#setsize)建立其大小，並為它配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
- 如果您需要在陣列中的個別項目的傾印，您必須設定的深度[CDumpContext](../../mfc/reference/cdumpcontext-class.md)為 1 或更大的物件。  
+ 如果您需要個別的項目陣列中的傾印，您必須設定的深度[CDumpContext](../../mfc/reference/cdumpcontext-class.md)為 1 或更大的物件。  
   
- 全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分的使用`CArray`類別。 請參閱主題[集合類別 Helper](../../mfc/reference/collection-class-helpers.md) MFC 巨集和全域變數的區段中。  
+ 全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分使用`CArray`類別。 請參閱主題[集合類別 Helper](../../mfc/reference/collection-class-helpers.md) MFC 巨集和全域變數一節。  
   
- 陣列類別衍生，就像衍生清單。  
+ 陣列類別衍生，就像是清單衍生。  
   
  如需有關如何使用`CArray`，請參閱文章[集合](../../mfc/collections.md)。  
   
@@ -140,7 +140,7 @@ class CArray : public CObject
  `Header:` afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
- 將新的項目加入至陣列，1 成長陣列的結尾。  
+ 加入新元素的陣列，陣列成長 1 結尾。  
   
 ```  
 INT_PTR Add(ARG_TYPE newElement);
@@ -148,16 +148,16 @@ INT_PTR Add(ARG_TYPE newElement);
   
 ### <a name="parameters"></a>參數  
  *ARG_TYPE 這個*  
- 指定的參考項目，這個陣列中的引數類型的樣板參數。  
+ 指定的引數參考此陣列中的項目類型的樣板參數。  
   
  *newElement*  
- 要加入此陣列的項目。  
+ 要加入至這個陣列的項目。  
   
 ### <a name="return-value"></a>傳回值  
- 加入項目的索引。  
+ 加入之項目的索引。  
   
 ### <a name="remarks"></a>備註  
- 如果[SetSize](#setsize)已搭配*nGrowBy*值大於 1，則額外的記憶體可以配置。 不過，只有 1 提高上限。  
+ 如果[SetSize](#setsize)已`nGrowBy`可能配置大於 1，則額外的記憶體值。 不過，只有 1 將增加上限。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -171,7 +171,7 @@ INT_PTR Append(const CArray& src);
   
 ### <a name="parameters"></a>參數  
  *src*  
- 要附加至陣列元素的來源。  
+ 要附加至陣列項目的來源。  
   
 ### <a name="return-value"></a>傳回值  
  第一個附加的項目索引。  
@@ -192,7 +192,7 @@ CArray();
 ```  
   
 ### <a name="remarks"></a>備註  
- 陣列逐漸增加一個項目，一次。  
+ 陣列會增加一個項目，一次。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
@@ -209,9 +209,9 @@ void Copy(const CArray& src);
  要複製到陣列之項目的來源。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此成員函式，另一個陣列的項目以覆寫一個陣列的項目。  
+ 呼叫此成員函式，以覆寫另一個陣列元素的一個陣列項目。  
   
- **複製**不會釋放記憶體; 不過，如有必要，`Copy`可能會配置額外的記憶體來容納的項目複製到陣列。  
+ `Copy` 不會釋放記憶體;不過，如果有必要，`Copy`可能會配置額外的記憶體來容納的項目複製到陣列。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -226,29 +226,29 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
   
 ### <a name="return-value"></a>傳回值  
  陣列項目的參考。  
   
 ### <a name="remarks"></a>備註  
- 它用來實作的左側的指派運算子的陣列。  
+ 它用來實作陣列的左邊的指派運算子。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[GetSize](#getsize)。  
+  範例，請參閱[GetSize](#getsize)。  
   
 ##  <a name="freeextra"></a>  CArray::FreeExtra  
- 釋出時已成長陣列配置任何額外的記憶體。  
+ 釋放任何額外的記憶體配置時已成長的陣列。  
   
 ```  
 void FreeExtra();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會有任何影響陣列的大小或上限。  
+ 此函式無效的大小或陣列的上限。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[GetData](#getdata)。  
+  範例，請參閱[GetData](#getdata)。  
   
 ##  <a name="getat"></a>  CArray::GetAt  
  傳回指定索引處的陣列元素。  
@@ -263,10 +263,10 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  指定的陣列元素的類型樣板參數。  
   
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
   
 ### <a name="return-value"></a>傳回值  
- 在這個索引的目前陣列項目。  
+ 目前在此索引陣列項目。  
   
 ### <a name="remarks"></a>備註  
  傳遞負數的值所傳回的值大於`GetUpperBound`會導致失敗的判斷提示。  
@@ -275,7 +275,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
 ##  <a name="getcount"></a>  CArray::GetCount  
- 傳回陣列元素的數目。  
+ 傳回陣列元素數目。  
   
 ```  
 INT_PTR GetCount() const;  
@@ -285,7 +285,7 @@ INT_PTR GetCount() const;
  陣列中的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以擷取陣列中的項目數。 因為索引會以零為起始，大小為 1 大於最大的索引。 呼叫這個方法會產生相同結果[CArray::GetSize](#getsize)方法。  
+ 呼叫這個方法來擷取陣列中的項目數。 因為是以零起始的索引，大小為 1 大於最大的索引。 呼叫這個方法會產生相同結果[CArray::GetSize](#getsize)方法。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
@@ -303,12 +303,12 @@ TYPE* GetData();
  指定的陣列元素的類型樣板參數。  
   
 ### <a name="return-value"></a>傳回值  
- 陣列項目的指標。  
+ 陣列元素的指標。  
   
 ### <a name="remarks"></a>備註  
- 如果沒有元素可用`GetData`會傳回 null 值。  
+ 如果沒有項目可供使用，`GetData`傳回 null 值。  
   
- 雖然直接存取陣列的項目可協助您更快速地處理，請呼叫時謹慎小心`GetData`; 您直接進行的任何錯誤會影響您陣列的項目。  
+ 而直接存取陣列的項目可協助您更快速地運作，請呼叫時使用注意`GetData`; 您直接提出任何錯誤會影響您陣列的元素。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
@@ -321,7 +321,7 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 因為索引會以零為起始，大小為 1 大於最大的索引。 呼叫這個方法會產生相同結果[CArray::GetCount](#getcount)方法。  
+ 因為是以零起始的索引，大小為 1 大於最大的索引。 呼叫這個方法會產生相同結果[CArray::GetCount](#getcount)方法。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
@@ -334,15 +334,15 @@ INT_PTR GetUpperBound() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 因為是以零為起始的陣列索引，此函數會傳回值 1 小於`GetSize`。  
+ 因為是以零為起始的陣列索引，此函數會傳回 1 的值小於`GetSize`。  
   
  條件`GetUpperBound( )`=-1 表示陣列是否包含任何項目。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CArray::GetAt](#getat)。  
+  範例，請參閱[CArray::GetAt](#getat)。  
   
 ##  <a name="insertat"></a>  CArray::InsertAt  
- 第一個版本`InsertAt`陣列中指定索引處插入一個項目 （或多個項目的複本）。  
+ 第一版`InsertAt`陣列中指定索引處插入一個項目 （或多個項目複本）。  
   
 ```  
 void InsertAt(
@@ -360,13 +360,13 @@ void InsertAt(
  可能會大於所傳回的值的整數索引`GetUpperBound`。  
   
  *ARG_TYPE 這個*  
- 這個陣列中指定的項目類型的樣板參數。  
+ 此陣列中指定的項目類型的樣板參數。  
   
  *newElement*  
  要放在這個陣列的項目。  
   
  *nCount*  
- 這個項目應該是次數插入 （預設值為 1）。  
+ 次數，此項目應該插入 （預設值為 1）。  
   
  *nStartIndex*  
  可能會大於所傳回的值的整數索引[GetUpperBound](#getupperbound)。  
@@ -375,11 +375,11 @@ void InsertAt(
  另一個陣列，包含要加入至這個陣列的項目。  
   
 ### <a name="remarks"></a>備註  
- 在過程中，它會往上移動這個索引及它在現有的項目移位上面的所有項目 （依遞增索引）。  
+ 在過程中，它會往上移動這個索引，並在現有的項目移位其上方的所有項目 （依遞增的索引）。  
   
- 第二個版本從另一個插入的所有項目`CArray`集合中，開始*nStartIndex*位置。  
+ 第二個版本會將所有項目插入從另一個`CArray`集合，從開始*nStartIndex*位置。  
   
- `SetAt`函式，相較之下，取代一個指定的陣列項目，並且不移動任何項目。  
+ `SetAt`函式，相較之下，取代一個指定的陣列項目，並不會不位移任何項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
@@ -392,10 +392,10 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果陣列不包含任何項目; 非零，否則便是 0。  
+ 非零值，如果陣列不包含任何項目;否則為 0。  
   
 ##  <a name="operator_at"></a>  CArray::operator \[\]  
- 這些註標運算子是方便的替代[SetAt](#setat)和[GetAt](#getat)函式。  
+ 這些註標運算子會很方便的替代[SetAt](#setat)並[GetAt](#getat)函式。  
   
 ```  
 TYPE& operator[](int_ptr nindex);  
@@ -404,21 +404,21 @@ const TYPE& operator[](int_ptr nindex) const;
   
 ### <a name="parameters"></a>參數  
  *型別*  
- 這個陣列中指定的項目類型的樣板參數。  
+ 此陣列中指定的項目類型的樣板參數。  
   
  *nIndex*  
  若要存取的項目索引。  
   
 ### <a name="remarks"></a>備註  
- 針對陣列不是呼叫第一個運算子， **const**，可能的權限 （右值） 或指派陳述式的左邊 （左值） 上使用。 第二個，針對呼叫**const**陣列可能只能用在右邊。  
+ 陣列未呼叫的第一個運算子**const**，可用於上的權限 （右值） 或指派陳述式左邊 （左值）。 第二個，呼叫**const**陣列可能只能用在右邊。  
   
- 偵錯版本的程式庫判斷提示的註標 （請在左邊或右邊指派陳述式） 是否超出範圍。  
+ 偵錯版本的程式庫判斷提示的註標 （請在左邊或右邊則在指派陳述式） 是否超出範圍。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
 ##  <a name="relocateelements"></a>  CArray::RelocateElements  
- 當陣列應該成長或壓縮時，基底位址資料到新的緩衝區。  
+ 當陣列應該成長或壓縮時，請重新資料放置到新的緩衝區。  
   
 ```  
 template<class TYPE, class ARG_TYPE>  
@@ -433,17 +433,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
  新的緩衝區陣列的項目。  
   
  *pData*  
- 舊的項目陣列。  
+ 項目的舊的陣列。  
   
  *nCount*  
- 舊的陣列中的元素數目。  
+ 舊的陣列中的項目數目。  
   
 ### <a name="remarks"></a>備註  
  *pNewData*一律為足以容納所有*pData*項目。  
   
- [CArray](../../mfc/reference/carray-class.md)實作會使用這個方法時，要複製的舊資料到新的緩衝區陣列應該擴張或縮小 (當[SetSize](#setsize)或[FreeExtra](#freeextra)稱為)。 預設實作只複製資料。  
+ [CArray](../../mfc/reference/carray-class.md)實作會使用這個方法將舊的資料複製到新的緩衝區，當陣列應該成長或壓縮時 (當[SetSize](#setsize)或是[FreeExtra](#freeextra)稱為)。 預設實作只會複製資料。  
   
- 對於陣列，其中某個元素包含它自己的成員，其中的指標或另一個結構包含其中一個陣列元素的指標，不會更新指標中純文字複本。 在此情況下，您可以更正指標實作的特製化`RelocateElements`與相關的型別。 您必須也負責複製資料。  
+ 陣列項目包含它自己的成員，其中的指標，或另一個結構包含的其中一個陣列元素的指標，指標中不會更新一般的複製。 在此情況下，您可以更正指標實作的特製化`RelocateElements`與相關的型別。 您也會負責將資料複製。  
   
 ##  <a name="removeall"></a>  CArray::RemoveAll  
  從此陣列移除所有項目。  
@@ -453,7 +453,7 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果陣列已經是空的此函式仍能運作。  
+ 如果已經為空陣列，此函式仍能運作。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
@@ -469,15 +469,15 @@ void RemoveAt(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
   
  *nCount*  
  要移除的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 在過程中，它會進入下移除的項目上方的所有項目。 它遞減上層陣列的繫結，但不是會釋放記憶體。  
+ 在過程中，它會進入關閉已移除的項目上方的所有項目。 它遞減右上角的陣列繫結，但不會釋放記憶體。  
   
- 如果您嘗試移除比上述移除點陣列中所包含的項目，然後判斷提示的程式庫的偵錯版本。  
+ 如果您嘗試移除比上述移除點陣列中包含的項目，然後判斷提示的程式庫的偵錯版本。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
@@ -491,21 +491,21 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
   
  *ARG_TYPE 這個*  
- 指定的引數是用來參考陣列項目類型的樣板參數。  
+ 指定用來參考陣列元素的引數的類型樣板參數。  
   
  *newElement*  
  新的項目值儲存在指定的位置。  
   
 ### <a name="remarks"></a>備註  
- `SetAt` 不會導致要成長的陣列。 使用[SetAtGrow](#setatgrow)如果您想要自動成長的陣列。  
+ `SetAt` 不會造成要成長的陣列。 使用[SetAtGrow](#setatgrow)如果您想要自動成長的陣列。  
   
- 您必須確定您的索引值，代表陣列中的有效位置。 如果它超出範圍時，偵錯版本的程式庫判斷提示。  
+ 您必須確定您的索引值代表陣列中的有效位置。 如果它超出範圍時，偵錯版本的程式庫判斷提示。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[GetAt](#getat)。  
+  範例，請參閱[GetAt](#getat)。  
   
 ##  <a name="setatgrow"></a>  CArray::SetAtGrow  
  設定指定索引處的陣列項目。  
@@ -519,13 +519,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
  大於或等於 0 的整數索引。  
   
  *ARG_TYPE 這個*  
- 陣列中指定的項目類型的樣板參數。  
+ 指定陣列中的項目類型的樣板參數。  
   
  *newElement*  
- 要加入此陣列的項目。 A **NULL**允許值。  
+ 要加入至這個陣列的項目。 允許 NULL 值。  
   
 ### <a name="remarks"></a>備註  
- 必要時自動成長陣列 （也就是上限會調整來容納新項目）。  
+ 陣列在必要時自動成長 （亦即，以容納新的項目調整上限）。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
@@ -544,17 +544,17 @@ void SetSize(
  新陣列的大小 （數字的項目）。 必須是大於或等於 0。  
   
  *nGrowBy*  
- 如果是必要的大小增加配置項目位置最小數目。  
+ 如果是必要的大小增加配置的項目位置的數目下限。  
   
 ### <a name="remarks"></a>備註  
  如果新的大小小於舊的大小，然後陣列會被截斷，並釋放所有未使用的記憶體。  
   
- 使用這個函數來開始使用陣列之前，設定您的陣列的大小。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
+ 此函式可用於開始使用陣列之前，設定您陣列的大小。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
- *NGrowBy*陣列成長的情況時，參數會影響內部記憶體配置。 其用途並不會影響陣列大小所報告[GetSize](#getsize)和[GetUpperBound](#getupperbound)。 如果使用預設值時，MFC 會配置記憶體的方式計算，以避免記憶體分散的情形，並最佳化大部分的情況下的效率。  
+ *NGrowBy*參數會影響內部記憶體配置，而陣列成長。 其用途並不會影響陣列大小所回報[GetSize](#getsize)並[GetUpperBound](#getupperbound)。 如果使用預設值，MFC 會配置記憶體，以避免記憶體分散情形，並將效益最大化，在大部分情況下的計算的方式。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[GetData](#getdata)。  
+  範例，請參閱[GetData](#getdata)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   

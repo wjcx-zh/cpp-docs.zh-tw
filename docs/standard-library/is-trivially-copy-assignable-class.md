@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36808d375dd774286c3663a02fdc308cc4b2790
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953962"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable 類別
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `T` 類型是具有 trivial 複製指派運算子的類別，則 predicate 類型的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*T*是具有 trivial 複製指派運算子，否則為 false 的類別。
 
-類別 `T` 的指派建構函式如果符合下列條件，便是極簡指派建構函式：提供此指派建構函式時是以隱含方式提供、類別 `T` 沒有任何虛擬函式、類別 `T` 沒有任何虛擬基底、類別類型之所有非靜態資料成員的類別都具有極簡指派運算子，以及類別之陣列類型的所有非靜態資料成員的類別都具有極簡指派運算子。
+類別的指派建構函式*T*微不足道，如果它以隱含方式提供，類別*T*沒有虛擬函式類別*T*沒有虛擬基底類別類別類型的所有非靜態資料成員都有 trivial 指派運算子和陣列的類別類型的所有非靜態資料成員的類別具有 trivial 指派運算子。
 
 ## <a name="requirements"></a>需求
 

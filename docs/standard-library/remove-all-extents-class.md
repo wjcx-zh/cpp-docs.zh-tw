@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d027f2c1e9d8f5d4172fd3deff179d9ec8336baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853397"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953875"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents 類別
 
@@ -40,11 +40,11 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>參數
 
-`T` 要修改的類型。
+*T*来修改的類型。
 
 ## <a name="remarks"></a>備註
 
-`remove_all_extents<T>` 執行個體儲存修改的類型，這是已移除所有陣列維度之陣列類型 `T` 的項目類型，如果 `T` 不是陣列類型則為 `T`。
+執行個體`remove_all_extents<T>`儲存修改的類型是陣列類型的元素型別*T*所有陣列維度移除，或*T*如果*T*不是陣列類型。
 
 ## <a name="example"></a>範例
 

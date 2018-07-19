@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954098"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963663"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible 類別
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `T` 類型是具有 trivial 複製建構函式的類別，則 predicate 類型的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*T*是具有 trivial 複製建構函式，否則為 false 的類別。
 
-類別 `T` 的複製建構函式如果符合下列條件，便是極簡複製建構函式：宣告此複製建構函式時是以隱含方式宣告、類別 `T` 沒有任何虛擬函式或虛擬基底、類別 `T` 的所有直接基底都具有極簡複製建構函式、類別類型之所有非靜態資料成員的類別都具有極簡複製建構函式，以及類別之陣列類型的所有非靜態資料成員的類別都具有極簡複製建構函式。
+類別的複製建構函式*T*只是如果它以隱含方式宣告，此類別的一般*T*沒有虛擬函式或虛擬基底類別的所有直接基底*T*有trivial 複製建構函式，類別類型的所有非靜態資料成員的類別具有 trivial 複製建構函式和類別的類型陣列的所有非靜態資料成員的類別具有 trivial 複製建構函式。
 
 ## <a name="requirements"></a>需求
 

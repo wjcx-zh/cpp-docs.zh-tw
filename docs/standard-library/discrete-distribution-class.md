@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af8f5c543847c91903c9cb4ddf2502c0cc59dfa0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847217"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964206"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 類別
 
@@ -82,7 +82,7 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*整數結果類型中，預設值為`int`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -209,19 +209,19 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstW*建構分佈的清單中的第一個迭代器。
+*firstW*要建構分佈的清單中的第一個迭代器。
 
-*lastW*從中要建構分佈的 （非內含，因為迭代器結尾使用空的項目） 清單中的最後一個迭代器。
+*lastW*要建構分佈 （非內含，因為迭代器端使用空的項目） 的清單中的最後一個迭代器。
 
-*weightlist* [initializer_list](../cpp/initializers.md)從中要建構分佈。
+*weightlist* [initializer_list](../cpp/initializers.md)從中建構分佈。
 
 *計數*分佈範圍中的項目數。 若 `count==0`，則相當於預設建構函式 (一律產生零)。
 
 *低*分佈範圍中的最小值。
 
-*高*分佈範圍中的最高值。
+*高*分佈範圍中的最大值。
 
-*weightfunc*表示分佈的可能性函式的物件。 參數和傳回值都必須可以轉換為 `double`。
+*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
 
 *parm* `param_type`結構，用來建構分佈。
 
@@ -269,21 +269,21 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*firstW*建構分佈的清單中的第一個迭代器。
+*firstW*要建構分佈的清單中的第一個迭代器。
 
-*lastW*從中要建構分佈的 （非內含，因為迭代器結尾使用空的項目） 清單中的最後一個迭代器。
+*lastW*要建構分佈 （非內含，因為迭代器端使用空的項目） 的清單中的最後一個迭代器。
 
-*weightlist* [initializer_list](../cpp/initializers.md)從中要建構分佈。
+*weightlist* [initializer_list](../cpp/initializers.md)從中建構分佈。
 
 *計數*分佈範圍中的項目數。 若 *count* 為 0，此項目就相當於預設建構函式 (一律產生零)。
 
 *低*分佈範圍中的最小值。
 
-*高*分佈範圍中的最高值。
+*高*分佈範圍中的最大值。
 
-*weightfunc*表示分佈的可能性函式的物件。 參數和傳回值都必須可以轉換為 `double`。
+*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
 
-*右*`param_type`這要比較的物件。
+*右*`param_type`来比較此物件。
 
 ### <a name="remarks"></a>備註
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eab6d6ce44655177d20073ca5c5cda3859cb8b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864043"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966377"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic 類別
 
@@ -37,11 +37,11 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是一個宣告或繼承虛擬函式的類別，則 predicate 類型的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是類別，宣告或繼承虛擬函式，否則為 false。
 
 ## <a name="example"></a>範例
 

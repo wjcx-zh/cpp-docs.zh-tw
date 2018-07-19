@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848631"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966598"
 ---
 # <a name="fpos-class"></a>fpos 類別
 
@@ -34,7 +34,7 @@ ms.locfileid: "33848631"
 
 - 位元組位移，屬於 [streamoff](../standard-library/ios-typedefs.md#streamoff) 類型。
 
-- 轉換狀態 (供 basic_filebuf 類別的物件使用)，屬於 **St** 類型，通常是 `mbstate_t`。
+- 轉換狀態，以供屬於類別 basic_filebuf 的物件型別的`St`，通常是`mbstate_t`。
 
 它也可以儲存 `fpos_t` 類型的任意檔案位置，以供 [basic_filebuf](../standard-library/basic-filebuf-class.md) 類別的物件使用。 但在大小受限的環境中，`streamoff` 與 `fpos_t` 有時候可以互換使用。 若環境中沒有任何資料流有依存於狀態的編碼，實際上可能不會用到 `mbstate_t`。 因此，儲存的成員物件數目可能會不同。
 
@@ -92,17 +92,17 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>參數
 
-`_Off` 資料流中的位移。
+*_Off*資料流中的位移。
 
-`_State` 開始狀態`fpos`物件。
+*_State*的開始狀態`fpos`物件。
 
 *_Filepos*資料流中的位移。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會儲存相對於檔案開頭和初始轉換狀態 (如果重要的話) 中的 `_Off` 位移。 如果 `_Off` 為 -1，產生的物件代表無效的資料流位置。
+第一個建構函式儲存的位移 *_Off*，相對於檔案開頭和初始轉換狀態 （如果重要的話）。 如果 *_Off*為-1，產生的物件代表無效的資料流位置。
 
-第二個建構函式會儲存一個零位移及 `_State` 物件。
+第二個建構函式會儲存一個零位移與物件 *_State*。
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -114,7 +114,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 比較檔案位置指標。
+*右*來比較的檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -186,7 +186,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>參數
 
-`_Off` 要遞增檔案位置指標位移。
+*_Off*的位移，以您想用來遞增檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -210,7 +210,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>參數
 
-`_Off` 要遞增檔案位置指標位移。
+*_Off*的位移，以您想用來遞增檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -218,7 +218,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>備註
 
-成員函式會將 `_Off` 新增至預存的位移成員物件，然後傳回 **\*this**。 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。
+成員函式會將 *_Off*至預存的位移的成員物件，然後傳回**\*這**。 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。
 
 ### <a name="example"></a>範例
 
@@ -236,9 +236,9 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 檔案位置。
+*右*檔案位置。
 
-`_Off` 資料流位移。
+*_Off* Stream 位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -258,7 +258,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>參數
 
-`_Off` 資料流位移。
+*_Off* Stream 位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 比較檔案位置指標。
+*右*來比較的檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -355,7 +355,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>參數
 
-`_State` 新的轉換狀態。
+*_State*新的轉換狀態。
 
 ### <a name="return-value"></a>傳回值
 
@@ -363,7 +363,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會傳回儲存在 **St** 成員物件中的值。 第二個成員函式會將 `_State` 儲存在 **St** 成員物件中。
+第一個成員函式傳回值儲存在`St`成員物件。 第二個成員函式存放區 *_State*在`St`成員物件。
 
 ### <a name="example"></a>範例
 

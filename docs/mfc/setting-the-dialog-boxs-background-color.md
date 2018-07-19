@@ -1,7 +1,7 @@
 ---
-title: 設定對話方塊的背景色彩 |Microsoft 文件
+title: 設定對話方塊的背景色彩 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,15 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 57aa0dc35d2cc47eea4df072a9df7efde9812c23
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951213"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034698"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>設定對話方塊的背景色彩
-您可以藉由處理對話方塊視窗的 WM_CTLCOLOR 訊息設定您的對話方塊的背景色彩。 設定的色彩只會用於指定的對話方塊。  
+您可以藉由處理對話方塊視窗的 WM_CTLCOLOR 訊息設定您的對話方塊的背景色彩。 設定的色彩只會用於指定的對話方塊。
+
+請參閱[codexpert 部落格](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/)的範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   

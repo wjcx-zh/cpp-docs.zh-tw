@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842868"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963546"
 ---
 # <a name="constructing-input-stream-objects"></a>建構輸入資料流物件
 
@@ -33,7 +33,7 @@ ms.locfileid: "33842868"
 
 下列兩種方式可用來建立輸入檔案資料流：
 
-- 使用 `void` 引數建構函式，然後呼叫 `open` 成員函式：
+- 使用**void**引數建構函式，然後呼叫`open`成員函式：
 
    ```cpp
    ifstream myFile; // On the stack

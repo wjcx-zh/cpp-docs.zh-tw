@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863604"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963520"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 類別
 
-樣板類別 ostream_iterator 描述輸出迭代器物件，這個物件使用擷取 **operator <<** 在輸出資料流中寫入後續項目。
+樣板類別 ostream_iterator 描述輸出迭代器物件寫入輸出資料流，使用擷取後續項目， `operator <<`。
 
 ## <a name="syntax"></a>語法
 
@@ -44,9 +44,9 @@ class ostream_iterator
 
 *型別*要插入至輸出資料流的物件類型。
 
-`CharType` 表示的字元類型的型別`ostream_iterator`。 這個引數是選擇性的，而且預設值是 `char`。
+*CharType*表示的字元類型的型別`ostream_iterator`。 這個引數是選擇性的預設值是**char**。
 
-`Traits` 表示的字元類型的型別`ostream_iterator`。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*Traits*表示的字元類型的型別`ostream_iterator`。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
 
 ostream_iterator 類別必須符合輸出迭代器的需求。 使用 `ostream_iterator`，演算法可以直接寫入輸出資料流。
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型是範本參數 `CharType`的同義字。
 
 ### <a name="example"></a>範例
 
@@ -236,11 +236,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-`val` 類型物件的值`Type`来插入至輸出資料流。
+*val*型別的物件的值`Type`要插入至輸出資料流。
 
 ### <a name="return-value"></a>傳回值
 
-運算子會將 `val` 插入至與物件相關聯的輸出資料流，後面接著在 [ostream_iterator 建構函式](#ostream_iterator)中指定的分隔符號 (如果有的話)，然後將參考傳回 `ostream_iterator`。
+運算子會將*val*與物件相關聯的輸出資料流，後面接著中指定的分隔符號[ostream_iterator 建構函式](#ostream_iterator)（如果有的話），然後傳回的參考`ostream_iterator`.
 
 ### <a name="remarks"></a>備註
 
@@ -294,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>參數
 
-`_Ostr` 型別之輸出資料流[ostream_iterator:: ostream_type](#ostream_type)來重複處理。
+*_Ostr*類型的輸出資料流[ostream_iterator:: ostream_type](#ostream_type)来反覆運算。
 
-`_Delimiter` 插入至輸出資料流值之間的分隔符號。
+*（_d)* 插入至輸出資料流值之間的分隔符號。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會使用 `&_Ostr` 初始化輸出資料流指標。 分隔符號字串指標指定為空字串。
 
-第二個建構函式會使用 `&_Ostr` 初始化輸出資料流指標，使用 `_Delimiter` 初始化分隔符號字串指標。
+第二個建構函式會初始化輸出資料流指標`&_Ostr`和 使用分隔符號字串指標 *（_d)*。
 
 ### <a name="example"></a>範例
 
@@ -377,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Traits** 同義。
+此類型是範本參數 `Traits`的同義字。
 
 ### <a name="example"></a>範例
 

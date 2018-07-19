@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962396"
 ---
 # <a name="conditional-class"></a>conditional 類別
 
@@ -40,15 +40,15 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>參數
 
-`B` 判斷所選的類型的值。
+*B*判斷所選的類型的值。
 
-`T1` B 為 true 時的類型結果。
+*T1* B 為 true 時的類型結果。
 
-`T2` B 為 false 時的類型結果。
+*T2* B 為 false 時的類型結果。
 
 ## <a name="remarks"></a>備註
 
-當 `conditional<B, T1, T2>::type` 判斷值為 `T1` 時，樣板成員 typedef `B` 判斷值為 `true`，當 `T2` 判斷值為 `B` 時，判斷值為 `false`。
+範本成員 typedef`conditional<B, T1, T2>::type`評估為*T1*當*B*評估 **，則為 true**，並且判斷值為*T2*時*B*評估為**false**。
 
 ## <a name="requirements"></a>需求
 

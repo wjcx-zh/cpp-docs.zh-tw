@@ -7,12 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852604"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964957"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函式
 
@@ -22,7 +22,7 @@ ms.locfileid: "33852604"
 
 ## <a name="nothrow"></a>  nothrow
 
-為 **new** 和 **delete** 的 `nothrow` 版本提供要用來作為引數的物件。
+提供要用來做為引數物件**nothrow**新版**新**並**刪除**。
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -38,7 +38,7 @@ extern const std::nothrow_t nothrow;
 
 ## <a name="set_new_handler"></a>  set_new_handler
 
-安裝要在 `operator new` 嘗試配置記憶體失敗時呼叫的使用者函式。
+安裝時要呼叫的使用者函式**new 運算子**中嘗試配置記憶體失敗。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -46,7 +46,8 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>參數
 
-`Pnew` 若要安裝 new_handler。
+*Pnew*  
+`new_handler`安裝。
 
 ### <a name="return-value"></a>傳回值
 
@@ -54,7 +55,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>備註
 
-此函式會在它所維護的靜態[新處理常式](../standard-library/new-typedefs.md#new_handler)指標中儲存 `Pnew`，然後傳回先前在該指標中儲存的值。 新處理常式會由 [operator new](../standard-library/new-operators.md#op_new)( **size_t**) 使用。
+此函式會*Pnew*的靜態[新的處理常式](../standard-library/new-typedefs.md#new_handler)指標，它會維護，然後傳回先前儲存的指標的值。 新的處理常式會由[new 運算子](../standard-library/new-operators.md#op_new)(**size_t**)。
 
 ### <a name="example"></a>範例
 

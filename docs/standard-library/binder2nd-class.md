@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962720"
 ---
 # <a name="binder2nd-class"></a>binder2nd 類別
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-`Func` 要轉換成一元函式物件的二元函式物件。
+*func*二元函式物件轉換成一元函式物件。
 
-`right` 二元函式物件的第二個引數會繫結的值。
+*右*二元函式物件的第二個引數所繫結的值。
 
-`left` 調整的二進位物件比較的第二個引數的固定值的引數的值。
+*左*改寫的二進位物件比較的第二個引數的固定值的引數的值。
 
 ## <a name="return-value"></a>傳回值
 
-透過將二元函式物件的第二個引數繫結至 `right.` 值，所產生的一元函式物件。
+一元函式物件所產生的繫結至值的二元函式物件的第二個引數*右*。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別會將二元函式物件 _ *Func* 的複本儲存在 **op** 中，並將 `right` 的複本儲存在 **value** 中。 它會在傳回下列項目時定義其成員函式 `operator()`：**op**( `left`, **value**)。
+此範本類別會儲存一份二元函式物件 _ *Func*中`op`，和一份*右*在`value`。 它會在傳回下列項目時定義其成員函式 `operator()`：**op**( `left`, **value**)。
 
-如果 `Func` 是 **Operation** 類型的物件且 c 是常數，則 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) 相當於 `binder2nd` 類別建構函式 `binder2nd`\< **Operation**> ( `Func`, `c` )，而且更方便。
+如果`Func`是型別的物件`Operation`和 c 是常數，則[bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`， `c` ) 相當於`binder2nd`類別建構函式`binder2nd` \< **作業**> ( `Func`， `c` )、 更方便。
 
 ## <a name="example"></a>範例
 

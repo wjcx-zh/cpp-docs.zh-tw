@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861697"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966546"
 ---
 # <a name="moneyget-class"></a>money_get 類別
 
@@ -46,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 在程式內用於編碼地區設定中的字元類型。
+*CharType*程式內使用地區設定中的字元編碼的類型。
 
-`InputIterator` Get 函式讀取其輸入的迭代器的類型。
+*InputIterator* get 函式讀取其輸入的迭代器的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型與樣板參數 *CharType* 同義。
 
 ## <a name="do_get"></a>  money_get::do_get
 
@@ -113,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-`first` 輸入迭代器定址序列，要轉換的開頭。
+*第一個*輸入迭代器，定址要轉換之序列的開頭。
 
-`last` 輸入迭代器，定址要轉換的序列結尾。
+*最後一個*輸入迭代器，定址要轉換之序列的結尾。
 
-`Intl` 布林值，指出必須是序列中的貨幣符號的類型： **true**如果國際**false**如果國內。
+*Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
 
-`Iosbase` 一種格式將其加上旗標時組表示貨幣符號是選擇性的。否則，它是必要的。
+*Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要。
 
-`State` 設定適當位元遮罩項目為根據的作業是否成功的資料流狀態。
+*狀態*設定資料流的狀態來根據作業是否成功或不適當的位元遮罩元素。
 
-`val` 字串，儲存轉換的序列。
+*val*儲存已轉換的序列的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -131,9 +131,9 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的貨幣輸入欄位為止。 如果成功，它就會將此欄位轉換成含一或多個十進位數字的序列 (視需要在前面加上減號 ( `-`)) 以代表總額，並將結果儲存在 [string_type](#string_type) 物件 `val` 中。 它會傳回迭代器，此迭代器指定貨幣輸入欄位後的第一個元素。 否則，此函式會在 `val` 中儲存空序列，並在 `State` 中設定 `ios_base::failbit`。 它會傳回迭代器，此迭代器指定有效貨幣輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `State` 中設定 `ios_base::eofbit`。
+第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的貨幣輸入欄位為止。 如果成功，它將此欄位轉換為一連串的一或多個十進位數字可以選擇性加上負號 ( `-`)，以代表承諾用量金額，並將結果[string_type](#string_type)物件*val*. 它會傳回迭代器，此迭代器指定貨幣輸入欄位後的第一個元素。 否則，函式會儲存在空的序列*val*並設定`ios_base::failbit`中*狀態*。 它會傳回迭代器，此迭代器指定有效貨幣輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `State` 中設定 `ios_base::eofbit`。
 
-第二個虛擬受保護成員函式的行為與第一個相同，不同的是，如果成功，它就會將視需要帶正負號的數字序列轉換成 `long double` 類型的值，然後將該值儲存在 `val` 中。
+第二個受保護的虛擬成員函式行為與第一個相同，不同之處在於如果成功的話就選擇性帶正負號的數字將序列轉換成類型的值**長雙精度**並將該值儲存在*val*.
 
 貨幣輸入欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class)**fac** (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。
 
@@ -189,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-`first` 輸入迭代器定址序列，要轉換的開頭。
+*第一個*輸入迭代器，定址要轉換之序列的開頭。
 
-`last` 輸入迭代器，定址要轉換的序列結尾。
+*最後一個*輸入迭代器，定址要轉換之序列的結尾。
 
-`Intl` 布林值，指出必須是序列中的貨幣符號的類型： **true**如果國際**false**如果國內。
+*Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
 
-`Iosbase` 一種格式將其加上旗標時組表示貨幣符號是選擇性的。否則，便需要
+*Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要
 
-`State` 設定適當位元遮罩項目為根據的作業是否成功的資料流狀態。
+*狀態*設定適當位元遮罩元素為資料流狀態，根據作業是否成功。
 
-`val` 字串，儲存轉換的序列。
+*val*儲存已轉換的序列的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -280,11 +280,11 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 

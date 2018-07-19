@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847620"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965665"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-定義容器範本類別**複雜**以及其支援的範本。
+定義容器範本類別`complex`以及其支援的範本。
 
 ## <a name="syntax"></a>語法
 
@@ -46,13 +46,13 @@ ms.locfileid: "33847620"
 
 - 加法和乘法運算是可交換和可結合的，且乘法可分配到加法，和實數體上的實數加法與乘法如出一轍。
 
-- 複數 （0，0） 為加法和 （1，0） 為乘法。
+- 複數 （0，0） 為加法單位和 （1，0） 為乘法單位元素。
 
-- 針對複數的加法反元素 (， *b*) 是 (-、-*b*)，並為所有這類複數的乘法逆元除了 （0，0） 是
+- 複數加法反元素 (， *b*) 是 (-、-*b*)，以及所有這類複數的乘法反元素除了 （0，0） 是
 
    (/ (<sup>2</sup> + *b*<sup>2</sup>)、-*b*/ (<sup>2</sup> + *b*<sup>2</sup>))
 
-來表示複數*z* = (， *b*) 形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，規則，實數集合的代數可以套用至一組複數集合和其元件。 例如: 
+藉由代表複數*z* = (， *b*) 形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，規則可以套用的實際數字集合的代數，一組複數集合和其分量。 例如: 
 
    (1 + 2*i*) \* (2 + 3*i*)  
    = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -60,7 +60,7 @@ ms.locfileid: "33847620"
    = (2 - 6) + (3 + 4)*i*  
    = -4 + 7*i*
 
-複數系統為體，但不為有序體。 任何排序複數之因為沒有欄位的實際數字和及其子集，所以不等式不適用於複雜的數字時為實數。
+複數系統為體，但不為有序體。 任何排序複數的因為沒有欄位的實際數字和其子集，所以不等式不適用於複數至實際數字。
 
 有三種常用來表示複數 *z* 的形式：
 
@@ -76,11 +76,11 @@ ms.locfileid: "33847620"
 
 - 虛數的笛卡兒座標分量，或虛數部分 *b*。
 
-- 模數或複數的絕對值*r*。
+- 絕對值複數的模數*r*。
 
-- 引數角或相角*p*以弧度為單位。
+- 引數或階段的角度*p*以弧度為單位。
 
-除非另行指定，可傳回多個值的函式所要傳回其引數之主值大於-π 且小於高於或等於 + π 地進行單一值。 所有角度必須以弧度為單位，都表示其中一個圓為 2 π 弧度 （360 度）。
+除非另有指定，可以傳回多個值的函式所要傳回其引數的主體值大於-π 且小於於或等於 + π 以方便單一值。 所有角度必須以弧度為單位，都表示其中一個圓為 2 π 弧度 （360 度為單位）。
 
 ### <a name="functions"></a>函式
 
@@ -122,9 +122,9 @@ ms.locfileid: "33847620"
 
 |類別|描述|
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**double**，其中第一個代表複數的實數部分，而第二個代表虛部。|
-|[complex\<float>](../standard-library/complex-float.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**float**，其中第一個代表複數的實數部分，而第二個代表虛部。|
-|[complex\<long double>](../standard-library/complex-long-double.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**長雙精度**，其中第一個代表複數的實數部分，而第二個代表虛部。|
+|[complex\<double>](../standard-library/complex-double.md)|此明確特製化的樣板類別描述可儲存已排序的配對的物件，這兩個型別**double**，其中第一個代表複數的實數部分，而第二個代表虛數部分。|
+|[complex\<float>](../standard-library/complex-float.md)|此明確特製化的樣板類別描述可儲存已排序的配對的物件，這兩個型別**浮點數**，其中第一個代表複數的實數部分，而第二個代表虛數部分。|
+|[complex\<long double>](../standard-library/complex-long-double.md)|此明確特製化的樣板類別描述可儲存已排序的配對的物件，這兩個型別**長雙精度**，其中第一個代表複數的實數部分，而第二個代表虛數部分。|
 |[complex](../standard-library/complex-class.md)|此範本類別描述用來代表複數系統，並執行複數算術運算的物件。|
 
 ### <a name="literals"></a>常值

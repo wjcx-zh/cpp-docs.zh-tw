@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961970"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine 類別
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>參數
 
-`Engine` 基底引擎類型。
+*引擎*基底引擎類型。
 
-`K` **資料表大小**。 緩衝區 (資料表) 中的項目數。 **前置條件**：`0 < K`
+*K* **資料表大小**。 緩衝區 (資料表) 中的項目數。 **前置條件**：`0 < K`
 
 ## <a name="members"></a>成員
 
@@ -60,7 +60,7 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>備註
 
-此範例類別描述「引擎配接器」，會透過重新排列其基底引擎所傳回的值來產生值。 每個建構函式會將內部資料表填入基底引擎傳回的 `K` 值，並在要求值時，從資料表選取隨機項目。
+此範例類別描述「引擎配接器」，會透過重新排列其基底引擎所傳回的值來產生值。 每個建構函式會將內部資料表填滿*K*基底引擎所傳回的值和值，要求時從資料表選取隨機項目。
 
 ## <a name="requirements"></a>需求
 

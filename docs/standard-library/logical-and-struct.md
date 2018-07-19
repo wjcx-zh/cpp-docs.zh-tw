@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0abc8da68d16ea88b08ff7b9d54e06655e44c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1df2f932290caac5253da3cc859abda9a05f8a41
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859484"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964856"
 ---
 # <a name="logicaland-struct"></a>logical_and 結構
 
-在其引數上執行邏輯結合運算 ( `operator&&`) 的預先定義函式物件。
+執行邏輯結合運算的預先定義的函式物件 (`operator&&`) 在其引數。
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator&&`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator&&`會指定或推斷類型的運算元。
 
-`Left` 邏輯結合運算的左的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*邏輯結合運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 邏輯結合運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*邏輯結合運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912871"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964752"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -37,7 +37,7 @@ ms.locfileid: "33912871"
 
 ## <a name="remarks"></a>備註
 
-`numeric_limits` 類別的明確特製化可說明基本類型的許多屬性，包括字元、整數和浮點類型，以及由實作所定義，而非由 C++ 語言的規則所修正的 `bool`。 \<limits> 中所描述的屬性包括精確度、最小和最大表示法、捨入和訊號類型錯誤。
+明確特製化`numeric_limits`類別描述的基本類型，包括字元、 整數和浮點類型的許多屬性和**bool**所定義，而不是由固定的實作c + + 語言的規則。 \<limits> 中所描述的屬性包括精確度、最小和最大表示法、捨入和訊號類型錯誤。
 
 ### <a name="enumerations"></a>列舉
 

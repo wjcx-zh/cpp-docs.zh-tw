@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 692c5243a7fe2984d43a1e70fc39616de5cbcc9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d21fcc27b5b4f92b690d8fae7669a18a5fcc1c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845358"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964933"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference 類別
 
@@ -37,11 +37,11 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是物件或函式的參考，則 predicate 類型的執行個體為 true，否則為 false。 請注意，`Ty` 不可以是 rvalue 參考。 如需有關 rvalue 的詳細資訊，請參閱 [Rvalue 參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+如果這個型別述詞執行個體保留 true 的型別*Ty*物件或函式，否則為 false 的參考。 請注意， *Ty*可能不是右值參考。 如需有關 rvalue 的詳細資訊，請參閱 [Rvalue 參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="requirements"></a>需求
 

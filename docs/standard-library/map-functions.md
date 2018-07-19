@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: d6f62868d17cec9215b18451527c3a2e4e22b7f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854918"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966364"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 函式
 
@@ -33,13 +33,13 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`right` 提供待交換，項目在地圖或地圖，其元素要與對應的交換`left`。
+*右*提供要交換之元素的地圖或地圖其項目要與 map 交換*左*。
 
-`left` 其元素要與對應的交換的對應`right`。
+*左*對應，其項目要與 map 交換*右*。
 
 ### <a name="remarks"></a>備註
 
-樣板函式是演算法特製化的容器類別對應，以執行此成員函式`left`。[交換](../standard-library/map-class.md#swap)( `right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 演算法類別中樣板函式的一般版本 **template** \< **class T**> **void swap**( **T&**, **T&**) 會依指派運作，且作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。
+範本函式是在執行成員函式的容器類別 map 特製化的演算法`left`。[交換](../standard-library/map-class.md#swap)( `right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 演算法類別中樣板函式的一般版本 **template** \< **class T**> **void swap**( **T&**, **T&**) 會依指派運作，且作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。
 
 ### <a name="example"></a>範例
 
@@ -58,13 +58,13 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`right` Multimap 提供待交換，項目或其項目要與 multimap 的交換的 multimap `left`。
+*右*提供要交換之元素的 multimap 或其項目要與 multimap 交換的 multimap*左*。
 
-`left` 其元素要與 multimap 的交換的 multimap `right`。
+*左*其項目要與 multimap 交換的 multimap*右*。
 
 ### <a name="remarks"></a>備註
 
-樣板函式是演算法特製化的容器類別 multimap 執行成員函式上執行的容器類別對應`left`。[交換](../standard-library/multimap-class.md#swap)( `right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 演算法類別中樣板函式的一般版本 **template** \< **class T**> **void swap**( **T&**, **T&**) 會依指派運作，且作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。
+範本函式是在容器類別 multimap，來執行成員函式上執行的容器類別 map 特製化的演算法`left`。[交換](../standard-library/multimap-class.md#swap)(`right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 演算法類別中樣板函式的一般版本 **template** \< **class T**> **void swap**( **T&**, **T&**) 會依指派運作，且作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。
 
 ### <a name="example"></a>範例
 

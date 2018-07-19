@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112da495673517f86a00437672ccc52429fbd251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c4a96224b86cb12af4e3abfed1f02b33e8a2594
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842738"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966559"
 ---
 # <a name="isnothrowconstructible-class"></a>is_nothrow_constructible 類別
 
@@ -37,13 +37,13 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
-`Args` 引數類型的建構函式中要比對`T`。
+*引數*引數類型的建構函式中要比對*T*。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是可藉由使用 `Args` 中的引數類型來建構的類型，且編譯器已知該建構函式不會擲回，類型述詞執行個體的值就會是 true；否則會是 false。 如果變數定義 `T t(std::declval<Args>()...);` 格式正確，類型 `T` 便是可建構的類型。 `T` 和 `Args` 中的所有類型必須都是完整類型 `void`，或是界限未知的陣列。
+如果型別述詞的執行個體保留 true 類型*T*使用中的引數類型是可建構*Args*，並建構函式已知的編譯器不會擲回; 否則為 false。 型別*T*是可建構如果變數定義`T t(std::declval<Args>()...);`而言是否格式正確。 兩者*T*和中的所有型別*Args*必須是完整類型**void**，或界限未知的陣列。
 
 ## <a name="requirements"></a>需求
 

@@ -1,5 +1,5 @@
 ---
-title: CNoWorkerThread 類別 |Microsoft 文件
+title: CNoWorkerThread 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16eafd8c33bf1c9a42b95c31a333ff1df55b3495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962500"
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 類別
-使用此類別做為引數`MonitorClass`樣板參數，如果您想要停用動態快取維護的快取類別。  
+使用這個類別做為引數`MonitorClass`樣板參數，如果您想要停用動態快取維護的快取類別。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,9 +58,9 @@ class CNoWorkerThread
 |[CNoWorkerThread::Shutdown](#shutdown)|非功能上的等同[CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown)。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別會提供相同的公用介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)。 此介面必須由提供`MonitorClass`快取類別樣板參數。  
+ 這個類別會提供相同的公用介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)。 此介面必須由`MonitorClass`快取類別的樣板參數。  
   
- 此類別中的方法會實作不做任何動作。 一律會傳回 HRESULT，方法會傳回 S_OK 時，並一律傳回的控制代碼或執行緒識別碼的方法會傳回 0。  
+ 此類別中的方法的實作可以不執行任何動作。 一律會傳回 HRESULT，方法會傳回 s_ok 時，並一律傳回的控制代碼或執行緒識別碼的方法會傳回 0。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlutil.h  

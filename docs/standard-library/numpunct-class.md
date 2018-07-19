@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa161e1eec0e02097f22bb15f825542a6928111b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861174"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965561"
 ---
 # <a name="numpunct-class"></a>numpunct 類別
 
@@ -60,7 +60,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 在程式內用於編碼地區設定中的字元類型。
+*CharType*程式內使用地區設定中的字元編碼的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -85,14 +85,14 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|傳回地區設定特定項目以做為小數點。|
 |[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。|
-|[do_falsename](#do_falsename)|受保護的虛擬成員函式，呼叫以傳回要當做 `false` 值的文字表示的字串。|
+|[do_falsename](#do_falsename)|受保護的虛擬成員函式，呼叫以傳回要做為值的文字表示的字串**false**。|
 |[do_grouping](#do_grouping)|受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。|
 |[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。|
-|[do_truename](#do_truename)|受保護的虛擬成員函式，呼叫以傳回要當做 `true` 值的文字表示的字串。|
-|[falsename](#falsename)|傳回字串，做為 `false` 值的文字表示。|
+|[do_truename](#do_truename)|受保護的虛擬成員函式，呼叫以傳回要當做 **true** 值的文字表示的字串。|
+|[falsename](#falsename)|傳回字串，做為 **false** 值的文字表示。|
 |[grouping](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|
 |[thousands_sep](#thousands_sep)|傳回地區設定特定項目以做為千位分隔符號。|
-|[truename](#truename)|傳回字串，做為 `true` 值的文字表示。|
+|[truename](#truename)|傳回字串，做為 **true** 值的文字表示。|
 
 ## <a name="requirements"></a>需求
 
@@ -209,7 +209,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱 [grouping](#grouping) 的範例，其中 **grouping** 會呼叫虛擬成員函式。
+範例，請參閱[分組](#grouping)，其中虛擬成員函式會呼叫`grouping`。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -225,7 +225,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會傳回類型 **CharType** 的地區設定特定項目，當作任何小數點左側的群組分隔符號。
+受保護虛擬成員函式傳回的地區設定特定項目型別`CharType`作為任何小數點左邊的群組分隔符號。
 
 ### <a name="example"></a>範例
 
@@ -259,7 +259,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>傳回值
 
-字串，包含當作 **false** 值的文字表示的 **CharType** 序列。
+字串，包含一連串`CharType`以使用以值的文字表示法**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -354,11 +354,11 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -368,7 +368,7 @@ explicit numpunct(size_t _Refs = 0);
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
+建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
 ## <a name="string_type"></a>  numpunct::string_type
 

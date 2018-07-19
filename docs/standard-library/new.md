@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2039da5462d360648f83ebd8890de2f2beba884
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03d4019f86f99c73ccb25c5cf570637dbf0d7753
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966497"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -42,7 +42,7 @@ ms.locfileid: "33864422"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|為 **new** 和 **delete** 的 `nothrow` 版本提供要用來作為引數的物件。|
+|[nothrow](../standard-library/new-functions.md#nothrow)|提供要用來做為引數物件**nothrow**新版**新**並**刪除**。|
 
 ### <a name="typedefs"></a>Typedefs
 

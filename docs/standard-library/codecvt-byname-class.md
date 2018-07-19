@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b1d6e93aa929d95032c04a58b5b419ca312f8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964368"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname 類別
 
@@ -53,15 +53,15 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-`_Locname` 具名的地區設定。
+*_Locname*具名地區設定。
 
-`_Refs` 初始參考計數。
+*_Refs*初始參考計數。
 
 ## <a name="remarks"></a>備註
 
 建構具名地區設定時，會自動建立 Byname Facet。
 
-其行為取決於具名地區設定 `_Locname`。 每個建構函式會以 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基底物件。
+其行為取決於具名地區設定 *_Locname*。 每個建構函式會以 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基底物件。
 
 ## <a name="requirements"></a>需求
 

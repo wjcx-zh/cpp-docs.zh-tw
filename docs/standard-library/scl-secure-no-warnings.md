@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854349"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965496"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-C + + 標準程式庫中呼叫任何可能不安全的方法會導致[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要停用此警告，請在程式碼中定義 **_SCL_SECURE_NO_WARNINGS** 巨集：
+C + + 標準程式庫中呼叫任何可能不安全的方法會導致[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要停用這個警告，請定義巨集 _SCL_SECURE_NO_WARNINGS 程式碼中：
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-如果您使用先行編譯標頭，此指示詞先行編譯標頭檔中之前，先讓您包含任何 C 執行階段程式庫或標準程式庫標頭。 如果您將其置於個別來源程式碼檔案加入先行編譯標頭檔之前，編譯器會忽略它。
+如果您使用先行編譯標頭，將此指示詞放先行編譯標頭檔中加入任何 C 執行階段程式庫或標準程式庫標頭之前。 如果您將它放入個別來源程式碼檔案加入先行編譯標頭檔之前，編譯器會忽略它。
 
 ## <a name="remarks"></a>備註
 

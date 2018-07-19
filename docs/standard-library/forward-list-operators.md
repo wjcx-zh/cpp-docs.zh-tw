@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 7966d428dd200f0cbb280c679c4072e1ad75757a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dd02275364b611ef5f9011041840a10709aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846746"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965626"
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; 運算子
 
@@ -48,8 +48,8 @@ bool operator==(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`forward_list` 類型的物件。|
-|`right`|`forward_list` 類型的物件。|
+|*left*|`forward_list` 類型的物件。|
+|*right*|`forward_list` 類型的物件。|
 
 ### <a name="remarks"></a>備註
 
@@ -69,8 +69,8 @@ bool operator!=(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`forward_list` 類型的物件。|
-|`right`|`forward_list` 類型的物件。|
+|*left*|`forward_list` 類型的物件。|
+|*right*|`forward_list` 類型的物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -94,12 +94,12 @@ bool operator<(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`forward_list` 類型的物件。|
-|`right`|`forward_list` 類型的物件。|
+|*left*|`forward_list` 類型的物件。|
+|*right*|`forward_list` 類型的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的清單小於但不等於右邊的清單，即為 `true`；否則為 `false`。
+如果運算子左邊的清單小於但不等於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。
 
 ### <a name="remarks"></a>備註
 
@@ -119,12 +119,12 @@ bool operator<=(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`forward_list` 類型的物件。|
-|`right`|`forward_list` 類型的物件。|
+|*left*|`forward_list` 類型的物件。|
+|*right*|`forward_list` 類型的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-若運算子左邊的清單小於或等於右邊的清單，即為 `true`；否則為 `false`。
+如果運算子左邊的清單小於或等於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。
 
 ### <a name="remarks"></a>備註
 
@@ -144,12 +144,12 @@ bool operator>(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`forward_list` 類型的物件。|
-|`right`|`forward_list` 類型的物件。|
+|*left*|`forward_list` 類型的物件。|
+|*right*|`forward_list` 類型的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的清單大於右邊的清單，即為 `true`；否則為 `false`。
+如果運算子左邊的清單大於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。
 
 ### <a name="remarks"></a>備註
 
@@ -169,12 +169,12 @@ bool operator>=(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`forward_list` 類型的物件。|
-|`right`|`forward_list` 類型的物件。|
+|*left*|`forward_list` 類型的物件。|
+|*right*|`forward_list` 類型的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果運算子左邊的轉送清單大於或等於右邊的轉送清單，即為 `true`；否則為 `false`。
+**真**如果運算子左邊的轉送清單大於或等於運算子右邊的轉送清單，否則為**false**。
 
 ### <a name="remarks"></a>備註
 

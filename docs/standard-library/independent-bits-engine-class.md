@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844493"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964219"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine 類別
 
@@ -36,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>參數
 
-`Engine` 基底引擎類型。
+*引擎*基底引擎類型。
 
-`W` **字組大小**。 每個所產生數字的大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **字組大小**。 每個所產生數字的大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*不帶正負號的整數結果型別。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="members"></a>成員
 
@@ -53,7 +53,7 @@ class independent_bits_engine;
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述一個「引擎配接器」(engine adaptor)*`W`，此配接器會將來自其基底引擎所傳回值的位元重新封裝來產生值，而導致產生*  位元值。
+此範本類別描述*引擎配接器*產生的值導致其基底引擎所傳回的值的位元重新封裝*W*-位元值。
 
 ## <a name="requirements"></a>需求
 

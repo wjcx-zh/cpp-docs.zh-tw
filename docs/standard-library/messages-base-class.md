@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964843"
 ---
 # <a name="messagesbase-class"></a>messages_base 類別
 
-基底類別，描述訊息目錄的 `int` 類型。
+基底類別會描述**int**類型類別目錄的訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>備註
 
-catalog 類型與描述可能從 messages:: [do_open](../standard-library/messages-class.md#do_open) 傳回之值的 `int` 類型同義。
+類型目錄是類型的同義字**int**描述可能的傳回值，從訊息:: [do_open](../standard-library/messages-class.md#do_open)。
 
 ## <a name="requirements"></a>需求
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858766"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964128"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread 類別
 
@@ -44,7 +44,7 @@ class sync_per_thread
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*快取*|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ## <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`count`|陣列中要配置的項目數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="remarks"></a>備註
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`count`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -113,12 +113,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|同步處理篩選的快取物件。|
-|`Other`|要比較是否相等的快取物件。|
+|*快取*|同步處理篩選的快取物件。|
+|*其他*|要比較是否相等的快取物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果未針對目前的執行緒或目前執行緒中的 `Other` 配置任何快取物件，即會傳回 `false`。 否則會傳回將 `operator==` 套用到這兩個快取物件的結果。
+**false**針對這個物件或如果已配置任何快取物件*其他*目前執行緒中。 否則會傳回將 `operator==` 套用到這兩個快取物件的結果。
 
 ### <a name="remarks"></a>備註
 

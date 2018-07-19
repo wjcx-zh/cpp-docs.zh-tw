@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964381"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator 類別
 
@@ -40,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>參數
 
-`Container` 要插入元素的最上層容器類型`front_insert_iterator`。
+*容器*前面插入元素的容器類型`front_insert_iterator`。
 
 ## <a name="remarks"></a>備註
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Container** 同義。
+此類型與範本參數 *Container* 同義。
 
 ### <a name="example"></a>範例
 
@@ -125,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>參數
 
-`_Cont` 容器物件，其中`front_insert_iterator`會插入項目。
+*_Cont*所在的容器物件`front_insert_iterator`是插入項目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -191,7 +191,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>備註
 
-用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果 **Iter** 是以序列中元素為定址對象的迭代器，則 **\*Iter** = **value** 會以值取代該元素，而不會變更序列中的元素總數。
+用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果`Iter`是迭代器，定址的項目順序，然後 **\*Iter** = **值**會以值取代該元素，並不會變更總數序列中的項目。
 
 ### <a name="example"></a>範例
 
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>參數
 
-`val` 要指派給容器的值。
+*val*来指派給容器的值。
 
 ### <a name="return-value"></a>傳回值
 

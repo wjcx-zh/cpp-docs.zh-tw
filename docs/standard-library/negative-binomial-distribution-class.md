@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854986"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964404"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 類別
 
@@ -77,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>參數
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-## Remarks
+## <a name="remarks"></a>備註
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+此範本類別描述產生使用者指定之整數的值類型**int**如果未提供，根據負二項式分佈離散可能性函式的分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+屬性成員`k()`並`p()`會傳回目前儲存的分佈參數值*k*並*p*分別。
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+如需負二項式分佈離散可能性函式的詳細資訊，請參閱 Wolfram MathWorld 文章[負二項式分佈](http://go.microsoft.com/fwlink/p/?linkid=400516)。
 
-## Example
+## <a name="example"></a>範例
 
 ```cpp
 // compile with: /EHsc /W4
@@ -246,7 +246,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* `p`分佈參數。
 
-*parm*用於建構分佈的參數結構。
+*parm*用來建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -270,7 +270,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* `p`分佈參數。
 
-*右*`param_type`結構用來比較。
+*右*`param_type`結構，用來比較。
 
 ### <a name="remarks"></a>備註
 

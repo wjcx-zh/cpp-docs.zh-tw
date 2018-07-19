@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56c5ef5f8cc5a3061b18ec2ffcdc83bf850d641
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853930"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965726"
 ---
 # <a name="plus-struct"></a>plus 結構
 
@@ -49,11 +49,11 @@ struct plus<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援二進位的型別`operator+`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援二進位的型別`operator+`會指定或推斷類型的運算元。
 
-`Left` 加法運算的左的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*加法運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 加法運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*加法運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 

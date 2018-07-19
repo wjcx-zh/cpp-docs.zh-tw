@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1248c8efd06069863a9f78a94378fe7aed651011
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ae0db2b789e16a39396a329a64dfb8794eef5775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961905"
 ---
 # <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable 類別
 
@@ -36,19 +36,19 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是具有 trivial 移動指派運算子的類別，則 predicate 類型的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是具有 trivial 移動指派運算子，否則為 false 的類別。
 
-在下列情況下，類別 `Ty` 的移動指派運算子是 trivial：
+類別的移動指派運算子*Ty*輕而易舉的事如果：
 
 它會隱含地提供
 
-類別 `Ty` 沒有虛擬函式
+此類別*Ty*沒有虛擬函式
 
-類別 `Ty` 沒有虛擬基底
+此類別*Ty*沒有虛擬基底
 
 類別類型的所有非靜態資料成員的類別具有 trivial 移動指派運算子
 

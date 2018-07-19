@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852200"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962669"
 ---
 # <a name="maskarray-class"></a>mask_array 類別
 
@@ -31,11 +31,11 @@ ms.locfileid: "33852200"
 
 ## <a name="remarks"></a>備註
 
-此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 [valarray\<bool>](../standard-library/valarray-bool-class.md) 類別的 **ba** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。
+此類別描述可儲存物件的參考`va`類別的[valarray](../standard-library/valarray-class.md)**\<型別 >**，以及物件`ba`類別的[valarray\<bool >](../standard-library/valarray-bool-class.md)，其中描述要從選取的元素序列`valarray<Type>`物件。
 
-您只能藉由撰寫 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式來建構 **mask_array\<Type>** 物件。 mask_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。
+您建構`mask_array<Type>`物件只能藉由撰寫運算式的形式[va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)。 Mask_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。
 
-序列最多包含 **ba.size** 個項目。 只有在 *ba* [ **J**] 為 true 時才會包含項目 *J*。 因此，序列中的項目數會和 **ba**中的 true 項目數相同。 如果 `I` 是 **ba**中最低 true 項目的索引，則 **va**[ `I`] 便是選取之序列中的第零個項目。
+序列最多包含`ba.size`項目。 只有在 *ba* [ **J**] 為 true 時才會包含項目 *J*。 因此，有多個序列中項目中的 true 項`ba`。 如果`I`中最低 true 項目的索引`ba`，然後**va**[ `I`] 是選取之序列中的零個項目。
 
 ## <a name="example"></a>範例
 

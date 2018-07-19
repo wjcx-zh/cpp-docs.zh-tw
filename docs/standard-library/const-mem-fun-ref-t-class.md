@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c86f71912c5fe4cf3f5d2fc0df37c8530a8517
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961245"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t 類別
 
@@ -41,9 +41,9 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>參數
 
-`Pm` 類別成員函式的指標**類型**轉換成函式物件。
+*Pm*類別的成員函式的指標`Type`轉換成函式物件。
 
-`left` 物件，`Pm`上呼叫成員函式。
+*左*物件所*Pm*上呼叫成員函式。
 
 ## <a name="return-value"></a>傳回值
 
@@ -51,7 +51,7 @@ class const_mem_fun_ref_t
 
 ## <a name="remarks"></a>備註
 
-此範本類別會在私用成員物件中儲存一份 `Pm` 的複本，這必須是 **Type** 類別之成員函式的指標。 它會定義其成員函式`operator()`為傳回 (**左**。\*`Pm`) （) **const**。
+此範本類別會儲存一份*Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會定義其成員函式`operator()`做為傳回 (**左**。\*`Pm`) （) **const**。
 
 ## <a name="example"></a>範例
 

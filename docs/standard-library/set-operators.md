@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a7ec98b2c6fc4de1a85b0f942dd109dfe94839f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861762"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965639"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 運算子
 
@@ -46,9 +46,9 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**設定**。
+*左*型別的物件`set`。
 
-`right` 型別的物件**設定**。
+*右*型別的物件`set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -105,9 +105,9 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**設定**。
+*左*型別的物件`set`。
 
-`right` 型別的物件**設定**。
+*右*型別的物件`set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -164,9 +164,9 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**設定**。
+*左*型別的物件`set`。
 
-`right` 型別的物件**設定**。
+*右*型別的物件`set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -230,9 +230,9 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**設定**。
+*左*型別的物件`set`。
 
-`right` 型別的物件**設定**。
+*右*型別的物件`set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -289,9 +289,9 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**設定**。
+*左*型別的物件`set`。
 
-`right` 型別的物件**設定**。
+*右*型別的物件`set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -348,9 +348,9 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**設定**。
+*左*型別的物件`set`。
 
-`right` 型別的物件**設定**。
+*右*型別的物件`set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -414,9 +414,9 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`multiset`。
+*左*型別的物件`multiset`。
 
-`right` 型別的物件`multiset`。
+*右*型別的物件`multiset`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -473,9 +473,9 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`multiset`。
+*左*型別的物件`multiset`。
 
-`right` 型別的物件`multiset`。
+*右*型別的物件`multiset`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -536,9 +536,9 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`multiset`。
+*左*型別的物件`multiset`。
 
-`right` 型別的物件`multiset`。
+*右*型別的物件`multiset`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -608,9 +608,9 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`multiset`。
+*左*型別的物件`multiset`。
 
-`right` 型別的物件`multiset`。
+*右*型別的物件`multiset`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -667,9 +667,9 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`multiset`。
+*左*型別的物件`multiset`。
 
-`right` 型別的物件`multiset`。
+*右*型別的物件`multiset`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -730,9 +730,9 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`multiset`。
+*左*型別的物件`multiset`。
 
-`right` 型別的物件`multiset`。
+*右*型別的物件`multiset`。
 
 ### <a name="return-value"></a>傳回值
 

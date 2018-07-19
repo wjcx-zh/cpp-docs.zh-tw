@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67ffb39df8f02df233a31cfffeea5ab5ddcdf933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cb34fd44214ac503c8b9e201d07dbe1a6eb85de
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965762"
 ---
 # <a name="slicearray-class"></a>slice_array 類別
 
@@ -58,7 +58,7 @@ public:
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`)。
 
-您只能藉由撰寫 [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式，為 valarray **va** 的配量 **sl** 建構 **slice_array\<Type>** 物件。 slice_array 類別的成員函式接著會像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的項目序列會受到影響。 slice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即配量中第一個項目的索引、項目數，以及項目之間的距離。 從由 **va**[ `slice`(2, 5, 3)] 所宣告之 valarray **va** 所剪下的 slice_array，會選取含有 **va** 之索引 2、5、8、11 及 14 的項目。 索引必須有效，程序才能有效。
+您建構`slice_array<Type>`物件只能藉由撰寫運算式的形式[va&#91;sl&#93;](../standard-library/valarray-class.md#op_at)，配量`sl`的 valarray `va`。 Slice_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。 slice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即配量中第一個項目的索引、項目數，以及項目之間的距離。 從 valarray 剪下的 slice_array`va`宣告**va**[ `slice`（2、 5、 3）] 選取項目，以索引 2、 5、 8、 11 和 14 的`va`。 索引必須有效，程序才能有效。
 
 ## <a name="example"></a>範例
 

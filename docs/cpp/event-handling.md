@@ -1,5 +1,5 @@
 ---
-title: 事件處理 |Microsoft 文件
+title: 事件處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09029f3afef0a9a28fdc572b9b7d8685cf76e811
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27ff977bf3e4132f7782c0ffcb85bebefd42d68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414616"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961437"
 ---
 # <a name="event-handling"></a>事件處理
-事件處理主要是支援 COM 類別 (c + + 類別可實作 COM 物件，通常會使用 ATL 類別或[coclass](../windows/coclass.md)屬性)。  如需詳細資訊，請參閱[COM 中的事件處理](../cpp/event-handling-in-com.md)。  
+事件處理主要是支援 COM 類別 (c + + 類別可實作 COM 物件，通常會使用 ATL 類別或[coclass](../windows/coclass.md)屬性)。  如需詳細資訊，請參閱 < [COM 中的事件處理](../cpp/event-handling-in-com.md)。  
   
- 事件處理也支援原生 C++ 類別 (不實作 COM 物件的 C++ 類別)，不過該項支援已被取代，將在未來版本中移除。  如需詳細資訊，請參閱[原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)。  
+ 事件處理也支援原生 C++ 類別 (不實作 COM 物件的 C++ 類別)，不過該項支援已被取代，將在未來版本中移除。  如需詳細資訊，請參閱 <<c0> [ 原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)。  
   
  事件處理支援單一和多執行緒的使用方式，並在同時由多個執行緒存取時保護資料。 它也可讓您從事件來源或接收器類別衍生子類別，並在衍生類別中支援擴充的事件來源或接收。  
   
@@ -42,6 +42,5 @@ ms.locfileid: "32414616"
 |[__unhook](../cpp/unhook.md)|解除處理常式方法與事件的關聯。|  
   
 ## <a name="see-also"></a>另請參閱  
- [C + + 語言參考](../cpp/cpp-language-reference.md)   
+ [C++ 語言參考](../cpp/cpp-language-reference.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
- [事件處理範例](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

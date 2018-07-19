@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fbcf91b2b863312374fad96239a9585bb3b38c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966481"
 ---
 # <a name="enableif-class"></a>enable_if 類別
 
-有條件地建立類型的執行個體，以進行 SFINAE 多載解析。 只有 `enable_if<Condition,Type>::type` 為 `Type` 時，才會有巢狀 typedef `Condition` (而且是 `true` 的同義字)。
+有條件地建立類型的執行個體，以進行 SFINAE 多載解析。 巢狀的 typedef`enable_if<Condition,Type>::type`存在 — 和同義`Type`— 如果且只有`Condition`是**true**。
 
 ## <a name="syntax"></a>語法
 
@@ -37,15 +37,15 @@ struct enable_if;
 
 ### <a name="parameters"></a>參數
 
-`B` 值，決定產生的型別存在。
+*B*的值會決定產生的型別是否存在。
 
-`T` 如果具現化類型`B`為 true。
+*T*具現化，如果型別*B*為 true。
 
 ## <a name="remarks"></a>備註
 
-如果 `B` 為 true，則 `enable_if<B, T>` 具有名稱為 "type" 的巢狀 typedef (其為 `T` 的同義字)。
+如果*B*為 true，`enable_if<B, T>`具有名為 「 類型 」 同義的巢狀的 typedef *T*。
 
-如果 `B` 為 false，則 `enable_if<B, T>` 沒有名稱為 "type" 的巢狀 typedef。
+如果*B*為 false，`enable_if<B, T>`沒有巢狀的 typedef，名為 「 類型 」。
 
 會提供此別名範本：
 
@@ -100,7 +100,7 @@ s) {// ...
 
 情節 1 未使用建構函式和轉換運算子，因為它們沒有傳回類型。
 
-情節 2 會將參數保持為未命名。 您可以指定 `::type Dummy = BAR`，但是名稱 `Dummy` 為無關，而賦予它名稱可能會觸發「未參考的參數」警告。 您需要選擇 `FOO` 函式參數類型和 `BAR` 預設引數。  您可以指定 `int` 和 `0`，但是您程式碼的使用者可能會因此而意外地將會遭到忽略的額外整數傳遞給函式。 建議您改用 `void **` 和 `0` 或 `nullptr`，因為幾乎沒有項目可以轉換成 `void **`：
+情節 2 會將參數保持為未命名。 您可以指定 `::type Dummy = BAR`，但是名稱 `Dummy` 為無關，而賦予它名稱可能會觸發「未參考的參數」警告。 您需要選擇 `FOO` 函式參數類型和 `BAR` 預設引數。  您可以說**int**和`0`，但接著您的程式碼的使用者可以不小心將傳遞至函式會遭到忽略的額外整數。 相反地，我們建議您使用`void **`以及`0`或是**nullptr**因為幾乎沒有可以轉換成`void **`:
 
 ```cpp
 template <your_stuff>
@@ -135,7 +135,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-在此範例中，`make_pair("foo", "bar")` 會傳回 `pair<const char *, const char *>`。 多載解析必須判斷您要的 `func()`。 `pair<A, B>` 具有來自 `pair<X, Y>` 的隱含轉換建構函式。  這不是新功能，而是 C++98 中的功能。 不過，在 C++98/03 中，一律會有隱含轉換建構函式的簽章，即使是 `pair<int, int>(const pair<const char *, const char *>&)` 也是一樣。  多載解析不在意具現化該建構函式的嘗試急遽增加，因為 `const char *` 不會隱含地轉換為 `int`；在函式定義具現化之前，它只會查看簽章。  因此，此範例程式碼會模稜兩可，因為有簽章可以將 `pair<const char *, const char *>` 轉換為 `pair<int, int>` 和 `pair<string, string>`。
+在此範例中，`make_pair("foo", "bar")` 會傳回 `pair<const char *, const char *>`。 多載解析必須判斷您要的 `func()`。 `pair<A, B>` 具有來自 `pair<X, Y>` 的隱含轉換建構函式。  這不是新功能，而是 C++98 中的功能。 不過，在 C++98/03 中，一律會有隱含轉換建構函式的簽章，即使是 `pair<int, int>(const pair<const char *, const char *>&)` 也是一樣。  多載解析不在意，嘗試具現化該建構函式急遽增加，因為`const char *`不是隱含地轉換成**int**; 它只會查看簽章、 函式之前定義為具現化。  因此，此範例程式碼會模稜兩可，因為有簽章可以將 `pair<const char *, const char *>` 轉換為 `pair<int, int>` 和 `pair<string, string>`。
 
 C++11 已解決這項模稜兩可，方法是使用 `enable_if` 來確定**僅有當**  `const X&` 可隱含轉換為 `A` 且 `const Y&` 可隱含轉換為 `B` 時，`pair<A, B>(const pair<X, Y>&)` 才存在。  這讓多載解析可以判斷 `pair<const char *, const char *>` 不可轉換為 `pair<int, int>`，而且採用 `pair<string, string>` 的多載是可行的。
 

@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 7ee458d0d84b63de52a2840a7a86903afed1704d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79e3361d58165ac356e2ef75c0a3fd1a4cb4f26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845982"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963637"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedef
 
@@ -35,7 +35,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別 [basic_ios](../standard-library/basic-ios-class.md) 同義，該範本類別是為具有預設字元特性之 `char` 類型的元素特製化的範本類別。
+類型是範本類別同義[basic_ios](../standard-library/basic-ios-class.md)類型的項目所特製化**char**具有預設字元特性。
 
 ## <a name="streamoff"></a>  streamoff
 
@@ -51,7 +51,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>備註
 
-此類型是帶正負號的整數，描述可儲存與各種資料流定位作業有關之位元組位移的物件。 其表示法至少有 32 值位元。 它不一定大到足以代表資料流內的任意位元組位置。 **streamoff(-1)** 值通常表示有錯誤的位移。
+此類型是帶正負號的整數，描述可儲存與各種資料流定位作業有關之位元組位移的物件。 其表示法至少有 32 值位元。 它不一定大到足以代表資料流內的任意位元組位置。 值`streamoff(-1)`通常表示有錯誤的位移。
 
 ## <a name="streampos"></a>  streampos
 
@@ -134,7 +134,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別 [basic_ios](../standard-library/basic-ios-class.md) 同義，該範本類別是為具有預設字元特性之 `wchar_t` 類型的元素特製化的範本類別。
+類型是範本類別同義[basic_ios](../standard-library/basic-ios-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
 
 ## <a name="wstreampos"></a>  wstreampos
 

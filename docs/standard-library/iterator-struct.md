@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963624"
 ---
 # <a name="iterator-struct"></a>iterator 結構
 
-空的基底結構，用來確保使用者定義的迭代器類別能夠與 **iterator_trait** 正常搭配運作。
+空的基底結構，用來確保使用者定義的迭代器類別能夠適當運作與`iterator_trait`s。
 
 ## <a name="syntax"></a>語法
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `iterator_category` (與範本參數 `Category` 同義)。
 
-- `value_type` (與範本參數 **Type** 同義)。
+- `value_type` (與範本參數 `Type` 同義)。
 
 - `difference_type` (與範本參數 `Distance` 同義)。
 
@@ -57,7 +57,7 @@ struct iterator {
 
 - `reference` (與範本參數 `Reference` 同義)。
 
-請注意，`value_type` 不應該是常數類型，即使 **pointer** 指向 const **Type** 的物件且參考指定的物件是 const **Type** 亦同。
+請注意，`value_type`不應該是常數的類型，即使`pointer`指向的物件**const** `Type`且參考指定的物件**const** `Type`。
 
 ## <a name="example"></a>範例
 

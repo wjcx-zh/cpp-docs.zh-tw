@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858208"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962184"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 函式和變數
 
@@ -50,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>參數
 
-`Flag` A [once_flag](../standard-library/once-flag-structure.md)物件，以確保可呼叫物件只能呼叫一次。
+*旗標*A [once_flag](../standard-library/once-flag-structure.md)物件，可確保可呼叫物件只呼叫一次。
 
-`F` 可呼叫物件。
+*F*可呼叫物件。
 
-`A` 引數清單。
+*A*引數清單。
 
 ### <a name="remarks"></a>備註
 
-如果 `Flag` 無效，此函式就會擲回一個錯誤碼為 `invalid_argument` 的 [system_error](../standard-library/system-error-class.md)。 否則，此範本函式會使用其 `Flag` 引數，來確保不論此範本函式被呼叫多少次，它都只確切成功呼叫 `F(A...)` 一次。 如果 `F(A...)` 透過擲回例外狀況來結束，即表示該呼叫不成功。
+如果*旗標*不是有效的函式會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`invalid_argument`。 否則，此範本函式會使用其*旗標*引數，以確保它呼叫`F(A...)`成功一次，不論多少次範本函式呼叫。 如果 `F(A...)` 透過擲回例外狀況來結束，即表示該呼叫不成功。
 
 ## <a name="defer_lock"></a>  defer_lock 變數
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb4cc6588b61563d547cdbf8e332c66d1909e94d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 568eb077a2006bdb33eb08e0fa5618b7c38a6cb1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962633"
 ---
 # <a name="iscopyconstructible-class"></a>is_copy_constructible 類別
 
@@ -36,11 +36,11 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是具有複製建構函式的類別，則類型述詞的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是複製建構函式，否則為 false 的類別。
 
 ## <a name="example"></a>範例
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cad92eb5ce664d22cc5ee0ad8b4c26d41c88d883
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13883e1426be22c8cf3d329be33258c69511900d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842842"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966008"
 ---
 # <a name="container-classreference"></a>容器類別::reference
 
@@ -37,7 +37,7 @@ typedef T2 reference;
 
 ## <a name="remarks"></a>備註
 
-在此將其描述為未指定之 **T2** (通常為 **Alloc::reference**) 類型的同義字。 **reference** 類型的物件可以轉型為 [const_reference](../standard-library/container-class-const-reference.md) 類型的物件。
+其描述為未指定類型的同義字`T2`(通常`Alloc::reference`)。 型別的物件`reference`型別的物件可以轉型[const_reference](../standard-library/container-class-const-reference.md)。
 
 ## <a name="see-also"></a>另請參閱
 

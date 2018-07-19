@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964492"
 ---
 # <a name="onceflag-structure"></a>once_flag 結構
 
-表示搭配樣板函式 [call_once](../standard-library/mutex-functions.md#call_once) 使用的 `struct`，以確保即使執行多個執行緒，該初始化程式碼僅會呼叫一次。
+代表**struct**搭配範本函式[call_once](../standard-library/mutex-functions.md#call_once)以確保該初始化程式碼會呼叫一次，即使執行多個執行緒。
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +31,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
 
 ## <a name="remarks"></a>備註
 
-`once_flag` `struct`只有預設建構函式。
+`once_flag` **Struct**只有預設建構函式。
 
 可以建立 `once_flag` 類型的物件，但無法複製它們。
 

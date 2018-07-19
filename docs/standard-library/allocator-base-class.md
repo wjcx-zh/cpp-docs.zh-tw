@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847776"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962448"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 類別
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |參數|描述|
 |---------------|-----------------|
-|`Type`|配置器所配置的元素類型。|
-|`Sync`|配置器的同步處理原則，即 [sync_none 類別](../standard-library/sync-none-class.md)、[sync_per_container 類別](../standard-library/sync-per-container-class.md)、[sync_per_thread 類別](../standard-library/sync-per-thread-class.md)或 [sync_shared 類別](../standard-library/sync-shared-class.md)。|
+|*類型*|配置器所配置的元素類型。|
+|*同步處理*|配置器的同步處理原則，即 [sync_none 類別](../standard-library/sync-none-class.md)、[sync_per_container 類別](../standard-library/sync-per-container-class.md)、[sync_per_thread 類別](../standard-library/sync-per-thread-class.md)或 [sync_shared 類別](../standard-library/sync-shared-class.md)。|
 
 ### <a name="constructors"></a>建構函式
 
@@ -95,14 +95,14 @@ class allocator_base
 
 |成員函式|描述|
 |-|-|
-|[_Charalloc](#charalloc)|為類型 `char` 的陣列配置儲存體。|
-|[_Chardealloc](#chardealloc)|為包含類型 `char` 之元素的陣列釋放儲存體。|
+|[_Charalloc](#charalloc)|配置儲存體陣列的型別**char**。|
+|[_Chardealloc](#chardealloc)|釋放儲存體陣列，包含類型的項目**char**。|
 |[address](#address)|尋找指定值所屬物件的位址。|
 |[allocate](#allocate)|配置夠大的記憶體區塊，至少儲存某些指定的項目數。|
 |[construct](#construct)|在指定值初始化的指定位址上，建構特定類型的物件。|
 |[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
 |[destroy](#destroy)|呼叫物件解構函式，而不取消配置儲存物件的記憶體。|
-|[max_size](#max_size)|傳回在可用記憶體用完之前，無法由類別配置器的物件配置之類型 `Type` 的元素數。|
+|[max_size](#max_size)|傳回在可用記憶體用完之前，無法由 allocator 類別的物件所配置之類型 *Type* 的元素數。|
 
 ## <a name="requirements"></a>需求
 
@@ -112,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a> allocator_base::_Charalloc
 
-為類型 `char` 的陣列配置儲存體。
+配置儲存體陣列的型別**char**。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |參數|描述|
 |---------------|-----------------|
-|`count`|所配置陣列中的元素數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -134,7 +134,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a> allocator_base::_Chardealloc
 
-為包含類型 `char` 之元素的陣列釋放儲存體。
+釋放儲存體陣列，包含類型的項目**char**。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,8 +144,8 @@ void _Chardealloc(void* ptr, size_type count);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`count`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -163,7 +163,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>參數
 
-`val` Const 或 nonconst 搜尋的位址之物件的值。
+*val*其位址所搜尋之物件的 const 或 nonconst 值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -188,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Nx`|所配置陣列中的元素數。|
-|`_Hint`|這個參數已忽略。|
+|*_Nx*|所配置陣列中的元素數。|
+|*_Hint*|這個參數已忽略。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -214,7 +214,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要複製的配置器物件。|
+|*right*|要複製的配置器物件。|
 
 ### <a name="remarks"></a>備註
 
@@ -248,8 +248,8 @@ void construct(pointer ptr, const Type& val);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要建構物件之位置的指標。|
-|`val`|用來初始化所建構物件的值。|
+|*ptr*|要建構物件之位置的指標。|
+|*val*|用來初始化所建構物件的值。|
 
 ### <a name="remarks"></a>備註
 
@@ -267,8 +267,8 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`_Nx`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*_Nx*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -286,7 +286,7 @@ void destroy(pointer ptr);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|指定要終結之物件位址的指標。|
+|*ptr*|指定要終結之物件位址的指標。|
 
 ### <a name="remarks"></a>備註
 

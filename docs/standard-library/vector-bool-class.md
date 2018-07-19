@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863396"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962776"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
-`vector<bool>` 類別是 `bool` 類型項目的 [vector](../standard-library/vector-class.md) 部分特製化。 它具有特製化所使用基礎類型的配置器，透過每個位元儲存一個 `bool` 值來提供空間最佳化。
+`vector<bool>`類別是部分特製化[向量](../standard-library/vector-class.md)類型的項目**bool**。 它具有特製化，提供空間最佳化，將儲存其中使用的基礎類型的配置器**bool**每個位元的值。
 
 ## <a name="syntax"></a>語法
 
@@ -47,14 +47,14 @@ class vector<bool, Allocator>
 
 這個類別範本特製化的行為就像 vector，除了在本文中說明的差異之外。
 
-處理 `bool` 類型的作業會對應至容器儲存體中的值。 `allocator_traits::construct` 不用來建構這些值。
+處理作業**bool**型別對應至容器的儲存體中的值。 `allocator_traits::construct` 不用來建構這些值。
 
 ### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可做為常數指標指向 `vector<bool>` 的布林值項目。|
-|[const_reference](#const_reference)|`bool` 的 typedef。 在初始化之後，就無法觀察原始值的更新。|
+|[const_reference](#const_reference)|Typedef **bool**。 在初始化之後，就無法觀察原始值的更新。|
 |[pointer](#pointer)|`iterator` 的 typedef，可做為指標指向 `vector<bool>` 的布林值項目。|
 
 ### <a name="member-functions"></a>成員函式
@@ -153,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |參數|描述|
 |-|-|
-|`Pos`|`vector<bool>` 項目的位置。|
+|*pos*|`vector<bool>` 項目的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -163,7 +163,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>備註
 
-如果在 `_ITERATOR_DEBUG_LEVEL` 設定時編譯，當您嘗試存取在向量界限以外的項目時，會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+如果您 _ITERATOR_DEBUG_LEVEL 組編譯時，如果您嘗試存取向量界限以外的項目，就會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -268,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-提供從 `vector<bool>::reference` 至 `bool` 的隱含轉換。
+提供的隱含轉換`vector<bool>::reference`要**bool**。
 
 ```cpp
 operator bool() const;
@@ -293,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-`Right` 其值會指派給位元的項目參考。
+*右邊*  
+ 值會指派給位元的項目參考。
 
-`Val` 要指派給位元的布林值。
+*val*  
+ 要指派給位元的布林值。
 
 #### <a name="example"></a>範例
 
@@ -380,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>參數
 
-`Left` 要與交換的項目`Right`項目。
+*左邊*  
+ 要與交換的項目*右*項目。
 
-`Right` 要與交換的項目`Left`項目。
+*右邊*  
+ 要與交換的項目*左*項目。
 
 ### <a name="remarks"></a>備註
 

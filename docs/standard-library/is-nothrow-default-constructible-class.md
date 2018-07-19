@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962984"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible 類別
 
@@ -36,11 +36,11 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 具有非擲回預設建構函式，則述詞類型的執行個體會保存 true，否則保存 false。 類型述詞的執行個體相當於 `is_nothrow_constructible<Ty>`。
+如果型別述詞的執行個體保留 true 的型別*Ty* nothrow 預設建構函式，否則為 false。 類型述詞的執行個體相當於 `is_nothrow_constructible<Ty>`。
 
 ## <a name="requirements"></a>需求
 

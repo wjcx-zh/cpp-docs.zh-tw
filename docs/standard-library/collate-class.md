@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2b6c5e4847737ce0208b35a2db9fac783c225f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966455"
 ---
 # <a name="collate-class"></a>collate 類別
 
@@ -52,11 +52,11 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 用於程式內部字元編碼類型。
+*CharType*程式內用來編碼字元的類型。
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。在某些語言中，字元視為單一字元群組及處理，而且在其他語言中，個別字元視為兩個字元。 collate 類別提供的定序服務提供排序這些案例的方式。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取其預存值時，會在 `id` 中儲存唯一的正值。 在某些語言中，字元視為單一字元群組及處理，而且在其他語言中，個別字元視為兩個字元。 collate 類別提供的定序服務提供排序這些案例的方式。
 
 ### <a name="constructors"></a>建構函式
 
@@ -90,7 +90,7 @@ class collate : public locale::facet;
 
 ## <a name="char_type"></a>  collate::char_type
 
-類型，描述 **CharType** 類型的字元。
+類型，描述 `CharType` 類型之字元。
 
 ```cpp
 typedef CharType char_type;
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 **CharType** 的同義字。
+此類型是範本參數 `CharType`的同義字。
 
 ## <a name="collate"></a>  collate::collate
 
@@ -117,13 +117,13 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
-`_Locname` 地區設定名稱。
+*_Locname*地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -146,13 +146,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-`first1` 要比較的第一個序列中的第一個元素的指標。
+*first1*要比較的第一個序列中的第一個元素指標。
 
-`last1` 要比較的第一個序列中的最後一個元素的指標。
+*last1*要比較的第一個序列中的最後一個元素指標。
 
-`first2` 要比較的第二個序列中的第一個元素的指標。
+*first2*第二個序列中的第一個元素的指標進行比較。
 
-`last2` 要比較的第二個序列中的最後一個元素的指標。
+*last2*第二個序列中的最後一個元素的指標進行比較。
 
 ### <a name="return-value"></a>傳回值
 
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-`first1` 要比較的第一個序列中的第一個元素的指標。
+*first1*要比較的第一個序列中的第一個元素指標。
 
-`last1` 要比較的第一個序列中的最後一個元素的指標。
+*last1*要比較的第一個序列中的最後一個元素指標。
 
-`first2` 要比較的第二個序列中的第一個元素的指標。
+*first2*第二個序列中的第一個元素的指標進行比較。
 
-`last2` 要比較的第二個序列中的最後一個元素的指標。
+*last2*第二個序列中的最後一個元素的指標進行比較。
 
 ### <a name="return-value"></a>傳回值
 
@@ -228,7 +228,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會比較在序列 [* first1，Last1) * 與在順序 *[first2，last2*)。 它會在 **CharType** 類型的對應元素配對之間套用 **operator<**，以比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
+受保護虛擬成員函式會比較 [* first1，Last1) * 與在順序 *[first2，last2*)。 它會比較值，藉由套用`operator<`類型的對應項目配對之間`CharType`。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
 
 ### <a name="example"></a>範例
 
@@ -244,9 +244,9 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 其具有值序列中的第一個字元的指標是所決定。
+*第一個*是決定其序列值的第一個字元的指標。
 
-`last` 其具有值序列中的最後一個字元的指標是所決定。
+*最後一個*是決定其序列值的最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -270,9 +270,9 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>參數
 
-`first` 要轉換的序列中的第一個字元指標。
+*第一個*轉換之序列中的第一個字元的指標。
 
-`last` 要轉換的序列的最後一個字元指標。
+*最後一個*轉換之序列中的最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -296,9 +296,9 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 其具有值序列中的第一個字元的指標是所決定。
+*第一個*是決定其序列值的第一個字元的指標。
 
-`last` 其具有值序列中的最後一個字元的指標是所決定。
+*最後一個*是決定其序列值的最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -340,7 +340,7 @@ int main( )
 
 ## <a name="string_type"></a>  collate::string_type
 
-類型，描述包含 **CharType** 類型字元的 `basic_string` 類型字串。
+類型，描述包含 `basic_string` 類型字元的 `CharType` 類型字串。
 
 ```cpp
 typedef basic_string<CharType> string_type;
@@ -364,9 +364,9 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 要轉換的序列中的第一個字元指標。
+*第一個*轉換之序列中的第一個字元的指標。
 
-`last` 要轉換的序列的最後一個字元指標。
+*最後一個*轉換之序列中的最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 [do_transform](#do_transform)( `first`, `last`)。
+此成員函式會傳回[do_transform](#do_transform)(`first`， `last`)。
 
 ### <a name="example"></a>範例
 

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965844"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare 類別 (&lt;map&gt;)
 
@@ -45,7 +45,7 @@ protected:
 
 ## <a name="remarks"></a>備註
 
-由 `value_compare` 提供在對應所包含全部 **value_types** 項目之間的比較準則，是透過輔助類別建構函式在個別項目之間的索引鍵比較而導出。 成員函式運算子會使用型別 `key_compare` 的物件 **comp**，該物件儲存於由 `value_compare` 提供的函式物件中，來比較兩個項目的排序鍵元件。
+所提供的比較準則`value_compare`之間`value_types`整個對應所包含的項目引發從個別的項目，透過輔助類別建構的索引鍵之間的比較。 成員函式運算子會使用物件`comp`型別的`key_compare`所提供的函式物件中儲存`value_compare`來比較兩個項目的排序鍵元件。
 
 對於集和多重集而言 (這些是簡單容器，其中索引鍵值和項目值相同)，`value_compare` 相當於 `key_compare`；但對於對應和多重對應則否，因為項目型別 `pair` 的值與項目的索引鍵值不同。
 

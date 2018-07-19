@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961918"
 ---
 # <a name="binarynegate-class"></a>binary_negate 類別
 
@@ -44,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`Func` 將二元函式来成為相反值。
+*Func*要變為負值之二元函式。
 
-`left` 要成為相反值將二元函式的左的運算元。
+*左*要變為負值之二元函式的左的運算元。
 
-`right` 要成為相反值將二元函式的右運算元。
+*右*要變為負值之二元函式的右運算元。
 
 ## <a name="return-value"></a>傳回值
 

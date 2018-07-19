@@ -1,5 +1,5 @@
 ---
-title: UI 支援類別 (ATL) |Microsoft 文件
+title: UI 支援類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044fecc07d0d6ee252a966e0395f30415c7527bd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd98d71fe52f9ecfb1410593506ab6487540d4e5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360282"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961951"
 ---
-# <a name="ui-support-classes"></a>支援的 UI 類別
+# <a name="ui-support-classes"></a>UI 支援類別
 下列類別會提供一般的 UI 支援：  
   
--   [IDocHostUIHandlerDispatch](../atl/reference/idochostuihandlerdispatch-interface.md)的 Microsoft HTML 剖析和轉譯引擎的介面。  
+-   [IDocHostUIHandlerDispatch](../atl/reference/idochostuihandlerdispatch-interface.md)介面的 Microsoft HTML 剖析和轉譯引擎。  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)提供控制，透過此容器進行通訊的主要方法。 管理啟用和停用就地控制項的作業。  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)與控制項提供透過其中一個容器進行通訊的主要方法。 管理啟用和停用就地控制項的作業。  
   
--   [IOleInPlaceObjectWindowlessImpl](../atl/reference/ioleinplaceobjectwindowlessimpl-class.md)管理就地控制項重新啟動。 啟用無視窗控制項接收訊息，以及參與拖放作業。  
+-   [IOleInPlaceObjectWindowlessImpl](../atl/reference/ioleinplaceobjectwindowlessimpl-class.md)管理就地控制項重新啟動。 啟用無視窗控制項以接收訊息，以及參與拖放作業。  
   
--   [IOleInPlaceActiveObjectImpl](../atl/reference/ioleinplaceactiveobjectimpl-class.md)協助就地控制項及其容器之間的通訊。  
+-   [IOleInPlaceActiveObjectImpl](../atl/reference/ioleinplaceactiveobjectimpl-class.md)協助就地控制項與其容器之間的通訊。  
   
--   [IViewObjectExImpl](../atl/reference/iviewobjecteximpl-class.md)啟用直接顯示本身並通知使用者變更其顯示中的容器控制項。 提供閃爍的繪圖、 非矩形和透明控制項及點擊測試的支援。  
+-   [IViewObjectExImpl](../atl/reference/iviewobjecteximpl-class.md)啟用控制項，使其直接顯示，並通知其顯示變更的容器。 提供無重繪閃動的繪圖、 非矩形和透明的控制項，並支援點擊測試。  
   
 ## <a name="related-articles"></a>相關文章  
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  

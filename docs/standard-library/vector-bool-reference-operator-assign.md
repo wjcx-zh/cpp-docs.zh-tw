@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6413737b6b442313b77f0f2b2115631a260cc40b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965611"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -41,9 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-`Right` 其值會指派給位元的項目參考。
+*右邊*  
+ 值會指派給位元的項目參考。
 
-`Val` 要指派給位元的布林值。
+*val*  
+ 要指派給位元的布林值。
 
 ## <a name="example"></a>範例
 
@@ -127,5 +129,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="see-also"></a>另請參閱
 
-[向量\<bool >:: 參考類別](../standard-library/vector-bool-reference-class.md)<br/>
+[向量\<bool >:: reference 類別](../standard-library/vector-bool-reference-class.md)<br/>
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

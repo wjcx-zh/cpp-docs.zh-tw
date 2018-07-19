@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860251"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964778"
 ---
 # <a name="submatch-class"></a>sub_match 類別
 
@@ -65,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 子相符項目的迭代器類型。
+*BidIt*  
+ 子相符項目的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 要比較子相符項目。
+*right*  
+ 要比較子相符項目。
 
-`str` 要比較的字串。
+*str*  
+ 要比較的字串。
 
-`ptr` 要比較的 null 結束的序列。
+*ptr*  
+ 要比較的以 null 終止的序列。
 
 ### <a name="remarks"></a>備註
 
@@ -373,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>備註
 
-只有與 `true` 相關聯的擷取群組曾經是規則運算式比對的一部分時，成員才保留 `*this` 。
+成員保留**真**與相關聯之擷取群組時，才`*this`是規則運算式比對的一部分。
 
 ### <a name="example"></a>範例
 

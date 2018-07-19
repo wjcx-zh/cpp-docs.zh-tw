@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963468"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "33845722"
 ```
 
 > [!NOTE]
-> 使用編譯的程式碼中 **/clr**，此標頭會遭到封鎖。
+> 在編譯使用的程式碼 **/clr**，此標頭會遭到封鎖。
 
 ### <a name="remarks"></a>備註
 
@@ -59,9 +59,9 @@ while (condition is false)
 
 - `wait_for` 會等候指定的 `time interval`。
 
-每種方法皆有兩個多載的版本。 其中一個只會等待，並可能會假喚醒。 另一個則會使用述詞中定義的其他範本引數。 要等到述詞為 `true` 之後，才會傳回方法。
+每種方法皆有兩個多載的版本。 其中一個只會等待，並可能會假喚醒。 另一個則會使用述詞中定義的其他範本引數。 方法不會傳回的述詞是直到 **，則為 true**。
 
-每個類別也有兩種方法，用來在其條件為 `true` 時通知條件變數。
+每個類別也有兩種方法，用來通知其條件是條件變數 **，則為 true**。
 
 - `notify_one` 會喚醒正在等候條件變數的其中一個執行緒。
 

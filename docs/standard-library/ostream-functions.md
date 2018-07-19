@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: e85ce2728aaaa8ae9b23067bfb1dcbb3ff2db7d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855542"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962318"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函式
 
-這些是全域範本函式中定義&lt;ostream&gt;。 成員函式，請參閱[basic_ostream 類別](basic-ostream-class.md)文件。
+這些是定義的通用範本函式&lt;ostream&gt;。 成員函式，請參閱[basic_ostream 類別](basic-ostream-class.md)文件。
 
 ||||
 |-|-|-|
@@ -44,7 +44,7 @@ basic_ostream<Elem, Tr>& endl(
 
 *Elem*項目類型。
 
-*Ostr*型別的物件**basic_ostream**。
+*Ostr*類型的物件**basic_ostream**。
 
 *Tr*字元特性。
 
@@ -54,7 +54,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>備註
 
-操作工具呼叫*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Ostr*。[加寬](../standard-library/basic-ios-class.md#widen)('\n'))，然後再呼叫*Ostr*。[排清](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
+操作工具呼叫*Ostr*。[放](../standard-library/basic-ostream-class.md#put)(*Ostr*。[widen](../standard-library/basic-ios-class.md#widen)('\n'))，然後呼叫*Ostr*。[排清](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -88,17 +88,17 @@ basic_ostream<Elem, Tr>& ends(
 
 *Elem*項目類型。
 
-*Ostr*型別的物件**basic_ostream**。
+*Ostr*型別的物件`basic_ostream`。
 
 *Tr*字元特性。
 
 ### <a name="return-value"></a>傳回值
 
-型別的物件**basic_ostream**。
+`basic_ostream` 類型的物件。
 
 ### <a name="remarks"></a>備註
 
-操作工具呼叫*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Elem*('\0'))。 它會傳回*Ostr*。
+操作工具呼叫*Ostr*。[放](../standard-library/basic-ostream-class.md#put)(*Elem*('\0'))。 它會傳回*Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -134,13 +134,13 @@ basic_ostream<Elem, Tr>& flush(
 
 *Elem*項目類型。
 
-*Ostr*型別的物件**basic_ostream**。
+*Ostr*型別的物件`basic_ostream`。
 
 *Tr*字元特性。
 
 ### <a name="return-value"></a>傳回值
 
-型別的物件**basic_ostream**。
+`basic_ostream` 類型的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -166,7 +166,7 @@ testing
 
 ## <a name="swap"></a>swap
 
-交換兩個值**basic_ostream**物件。
+交換兩個 `basic_ostream` 物件的值。
 
 ```cpp
 template <class Elem, class Tr>
@@ -181,13 +181,13 @@ void swap(
 
 *Tr*字元特性。
 
-*左*的 lvalue 參考**basic_ostream**物件。
+*左*左值參考`basic_ostream`物件。
 
-*右*的 lvalue 參考**basic_ostream**物件。
+*右*左值參考`basic_ostream`物件。
 
 ### <a name="remarks"></a>備註
 
-樣板函式**交換**執行`left.swap(right)`。
+樣板函式 `swap` 會執行 `left.swap(right)`。
 
 ## <a name="see-also"></a>另請參閱
 

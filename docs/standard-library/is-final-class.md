@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844051"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962009"
 ---
 # <a name="isfinal-class"></a>is_final 類別
 
@@ -37,11 +37,11 @@ struct is_final;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是標示為 `final` 的類別類型，類型述詞執行個體的值就會是 true，否則會是 false。 如果 `T` 是類別類型，就必須是完整類型。
+如果型別述詞的執行個體保留 true 的型別*T*標示為類別類型`final`，否則為 false。 如果*T*是類別類型，它必須是完整的型別。
 
 ## <a name="requirements"></a>需求
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850010"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963491"
 ---
 # <a name="allocators"></a>配置器
 
@@ -38,7 +38,7 @@ C++ 標準程式庫提供配置器的預設實作。 在 C++11 和更新版本�
 
 ## <a name="writing-your-own-allocator-c11"></a>撰寫您自己的配置器 (C++11)
 
-預設配置器使用 `new` 和 `delete` 來配置和取消配置記憶體。 如果您想要使用不同的記憶體配置方法，例如使用共用記憶體，則必須建立您自己的配置器。 如果您的目標是 C++11，而且需要撰寫新的自訂配置器，請儘可能撰寫成最小配置器。 即使您已實作舊式的配置器，還是請考慮修改為「最小配置器」，以善用自動為您提供的更有效率 `construct()` 方法。
+預設配置器會使用**新**並**刪除**配置及取消配置記憶體。 如果您想要使用不同的記憶體配置方法，例如使用共用記憶體，則必須建立您自己的配置器。 如果您的目標是 C++11，而且需要撰寫新的自訂配置器，請儘可能撰寫成最小配置器。 即使您已實作舊式的配置器，還是請考慮修改為「最小配置器」，以善用自動為您提供的更有效率 `construct()` 方法。
 
 最小配置器需要極少的樣板，可讓您專注於執行所有工作的 `allocate` 和 `deallocate` 成員函式。 建立最小配置器時，以下範例所示的成員除外，請勿實作任何成員：
 

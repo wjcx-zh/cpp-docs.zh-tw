@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963221"
 ---
 # <a name="stack-class"></a>stack 類別
 
@@ -52,15 +52,15 @@ class stack
 
 *型別*来儲存在堆疊中的項目資料類型。
 
-`Container` 用來實作堆疊基礎容器類型。 預設值是 `deque`*\<Type>* 類別。
+*容器*用來實作堆疊的基礎容器類型。 預設值是 `deque`*\<Type>* 類別。
 
 ## <a name="remarks"></a>備註
 
-堆疊物件第一個樣板參數中約定之類別 **Type** 的項目，與 [value_type](#value_type) 同義，且必須符合第二個樣板參數所約定之基礎容器類別 **Container** 中的項目類型。 **Type** 必須是可指派的，如此就能複製該類型的物件，並將值指派給該類型的變數。
+類別的元素`Type`中的第一個範本約定堆疊物件的參數是同義詞[value_type](#value_type) ，而且必須符合的基礎容器類別中的項目類型`Container`所規定第二個樣板參數。 `Type`必須是可指派，，如此就可以複製該類型的物件，並將值指派給該類型的變數。
 
-堆疊適用的基礎容器類別包括 [deque](../standard-library/deque-class.md), [list 類別](../standard-library/list-class.md)及 [vector 類別](../standard-library/vector-class.md)，或任何其他支援 **back**、`push_back` 及 `pop_back` 作業的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
+適當的堆疊的基礎容器類別包括[deque](../standard-library/deque-class.md)， [list 類別](../standard-library/list-class.md)，並[vector 類別](../standard-library/vector-class.md)，或任何其他支援的作業序列容器`back`， `push_back`，和`pop_back`。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
 
-堆疊物件唯有在類別 **Type** 的項目可進行等號比較時才可進行等號比較，並且唯有在類別 **Type** 的項目可進行小於比較時才可進行小於比較。
+堆疊物件是否相等比較，並且只有當類別的元素`Type`進行等號比較，小於-比比較，並且只有當類別的項目`Type`小於-比較。
 
 - Stack 類別支援後進先出 (LIFO) 的資料結構。 就好像盤子的堆疊一樣，這是一種較為貼切好記的類比。 項目 (盤子) 可能會插入、檢查，或只從堆疊頂端移除，這是基底容器尾端的最後一個項目。 限制只存取最上層項目是使用 stack 類別的原因。
 
@@ -227,7 +227,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-`val` 加入至堆疊的頂端的項目。
+*val*將元素加入至堆疊的頂端。
 
 ### <a name="remarks"></a>備註
 
@@ -334,7 +334,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要複製建構的堆疊的容器。
+*右*要從中複製所建構的堆疊的容器。
 
 ### <a name="example"></a>範例
 
@@ -393,7 +393,7 @@ const_reference top() const;
 
 堆疊不得為空，才能套用成員函式。 堆疊頂端是最近新增項目所佔用的位置，也是位於容器結尾的最後一個項目。
 
-如果已將 **top** 的傳回值指派給 `const_reference`，則無法修改堆疊物件。 如果已將 **top** 的傳回值指派給 **reference**，則可修改堆疊物件。
+如果傳回值`top`指派給`const_reference`，無法修改堆疊物件。 如果傳回值`top`指派給`reference`，可以修改堆疊物件。
 
 ### <a name="example"></a>範例
 

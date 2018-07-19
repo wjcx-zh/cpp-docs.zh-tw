@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083ef4cea345e7b600782c09a7bdfdc09b4af3d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962854"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-描述可儲存皆為 `long double` 類型之物件的有序對，第一個代表複數的實部，而第二個代表虛部。
+描述可儲存型別之物件的排序的配對**長雙精度**，第一個代表第二個複數的實數部分代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -47,19 +47,19 @@ complex(
 
 ### <a name="parameters"></a>參數
 
-`_RealVal` 型別的值**長雙精度**的建構中複數實部。
+*_RealVal*類型的值**長雙精度**建構中複數的實數部分。
 
-`_ImagVal` 型別的值`long double`建構中複數的虛數部分。
+*_ImagVal*類型的值**長雙精度**的建構中複數之虛數部分。
 
-`complexNum` 類型的複數**double**或型別**float**其實部及虛部用於初始化類型的複數`long double`所建構。
+*complexNum*類型的複數**double**或型別的**float**其實部及虛部用於初始化類型的複數**long double**所建構。
 
 ## <a name="return-value"></a>傳回值
 
-`long double` 類型的複數。
+類型的複數**長雙精度**。
 
 ## <a name="remarks"></a>備註
 
-針對 `long double` 類型的複數類別之複數範本類別明確特製化，和此範本類別的差異只在於其定義的建構函式。 允許從 `long double` 到 **float** 的隱含轉換，但從 **double** 轉換成 `long double` 必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
+類型的複數類別之範本類別明確特製化**長雙精度**不同於樣板類別，只在它所定義的建構函式中。 從轉換**長雙精度**來**float**允許隱含的但從轉換**double**至**長雙精度**需要要**明確**。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
 
 如需 `complex` 範本類別的詳細資訊，請參閱 [complex 類別](../standard-library/complex-class.md)。 如需範本類別 `complex` 的成員清單，請參閱
 

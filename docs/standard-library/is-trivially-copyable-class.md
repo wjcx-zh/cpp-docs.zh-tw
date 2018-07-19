@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177ba6e688f6d7ed2b4c76eb0ede95cc288b1d5d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 19bed4a455ea2b0b894ba842f349aa304e9f261d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857528"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964679"
 ---
 # <a name="istriviallycopyable-class"></a>is_trivially_copyable 類別
 
@@ -37,11 +37,11 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是可透過極簡方式複製的類型，類型述詞執行個體的值就會是 true，否則會是 false。 可透過極簡方式複製的類型沒有任何非極簡的複製作業、移動作業或解構函式。 一般而言，如果能以位元複製方式實作複製作業，該複製作業即可視為極簡。 內建類型和可透過極簡方式複製的類型陣列，都是可透過極簡方式複製的類型。
+如果型別述詞的執行個體保留 true 的型別*T*是可完整複製類型，否則為 false。 可透過極簡方式複製的類型沒有任何非極簡的複製作業、移動作業或解構函式。 一般而言，如果能以位元複製方式實作複製作業，該複製作業即可視為極簡。 內建類型和可透過極簡方式複製的類型陣列，都是可透過極簡方式複製的類型。
 
 ## <a name="requirements"></a>需求
 

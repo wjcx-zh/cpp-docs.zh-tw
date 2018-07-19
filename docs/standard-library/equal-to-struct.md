@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1ef431fdba40ef9e8fd46b8c0e5d9cf7b32eda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843999"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961648"
 ---
 # <a name="equalto-struct"></a>equal_to 結構
 
-在其引數執行等號比較運算 ( `operator==`) 的二元述詞。
+執行等號比較運算的二元述詞 (`operator==`) 在其引數。
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator==`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator==`會指定或推斷類型的運算元。
 
-`Left` 等號比較運算的左的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*等號比較運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 等號比較運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*等號比較運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -61,7 +61,7 @@ struct equal_to<void>
 
 ## <a name="remarks"></a>備註
 
-`Type` 類型的物件必須可進行等號比較。 在物件集合上定義的 `operator==` 必須符合等價關聯的數學屬性，才能進行此作業。 所有內建的數字和指標類型皆符合這項需求。
+類型的物件*型別*必須能進行相等比較。 在物件集合上定義的 `operator==` 必須符合等價關聯的數學屬性，才能進行此作業。 所有內建的數字和指標類型皆符合這項需求。
 
 ## <a name="example"></a>範例
 

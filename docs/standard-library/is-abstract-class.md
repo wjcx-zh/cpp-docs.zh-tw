@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65939df15feeb7654f48246d75d128237c393b10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f58436bb281af2746197e5d979e1b038a6a5ce1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844324"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961691"
 ---
 # <a name="isabstract-class"></a>is_abstract 類別
 
@@ -37,11 +37,11 @@ struct is_abstract;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是具有至少一個純虛擬函式的類別，則 predicate 類型的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是具有至少一個純虛擬函式，否則為 false 的類別。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: CMFCReBar 類別 |Microsoft 文件
+title: CMFCReBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 292de0795033e40d93a30840be620e10369f87ce
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037957"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028212"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 A`CMFCReBar`物件是提供版面配置、 持續性和 rebar 控制項的狀態資訊的控制列。  
@@ -69,16 +69,16 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|可直接存取基礎[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)通用控制項。|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(覆寫[cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(覆寫[CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest)。)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/e139f06a-9793-4ee2-bc3d-517389368c77)。)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77)。)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(覆寫[CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment)。)|  
   
 ## <a name="remarks"></a>備註  
- A`CMFCReBar`物件可以包含各種子視窗。 這包括編輯方塊、 工具列和清單方塊。 您可以調整 rebar 以程式設計的方式，或使用者可以手動拖曳調整大小 rebar 的移駐夾列。 您也可以設定 rebar 物件的背景，您所選擇的點陣圖。  
+ A`CMFCReBar`物件可以包含各種不同的子視窗。 這包括編輯方塊、 工具列和清單方塊。 您也可以以程式設計的方式，調整 rebar 或使用者可以手動拖曳調整大小 rebar 的移駐夾列。 您也可以設定 rebar 物件的背景，您選擇的點陣圖。  
   
- Rebar 物件的行為類似工具列物件。 Rebar 控制項可以包含一或多個群組列，而且每個群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗。  
+ Rebar 物件的操作方式類似工具列物件。 Rebar 控制項可以包含一或多個群組列，而且每個群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的`CMFCReBar`類別。 此範例示範如何建立 rebar 控制項和將頻外。 頻外做為內部的工具列。 此程式碼片段是部分[Rebar 測試範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用中的各種方法`CMFCReBar`類別。 此範例示範如何建立 rebar 控制項並加入它的頻外。 此群組列做為內部的工具列。 此程式碼片段是一部分[Rebar 測試範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]  
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]  
@@ -111,25 +111,25 @@ BOOL AddBar(
   
 ### <a name="parameters"></a>參數  
  [in][out]*pBar*  
- 是要插入至 rebar 的子視窗的指標。 參考的物件必須具有**WS_CHILD**視窗樣式。  
+ 要插入至 rebar 的子視窗指標。 參考的物件必須有**WS_CHILD**視窗樣式。  
   
  [in]*pszText*  
- 指定要顯示在 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示在 rebar 本身。  
+ 指定要顯示 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示 rebar 本身。  
   
  [in][out]*pbmp*  
  指定要顯示 rebar 背景點陣圖。  
   
- [in]*dwStyle*  
+ [in]*cheaderctrl:: Create*  
  包含要套用至群組列的樣式。 頻外樣式的完整清單，請參閱的描述`fStyle`中[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK 文件中的結構。  
   
  [in]*clrFore*  
- 代表 rebar 的前景色彩。  
+ 表示 rebar 的前景色彩。  
   
  [in]*clrBack*  
- 代表 rebar 的背景色彩。  
+ 表示 rebar 的背景色彩。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果頻外已成功新增至 rebar;否則， `FALSE`。  
+ 如果群組列已成功新增至 rebar;，則為 TRUE。否則為 FALSE。  
   
 ##  <a name="create"></a>  CMFCReBar::Create  
  建立 rebar 控制項，並將它附加至[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)物件。  
@@ -144,19 +144,19 @@ BOOL Create(
   
 ### <a name="parameters"></a>參數  
  [in][out]*pParentWnd*  
- 這個 rebar 控制項的父視窗指標。  
+ 此 rebar 控制項的父視窗指標。  
   
  [in]*dwCtrlStyle*  
- 指定 rebar 控制項的樣式。 預設樣式的值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項上的線條。 如需有效樣式的清單，請參閱[Rebar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 文件中。  
+ 指定 rebar 控制項的樣式。 預設樣式值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項上的線條。 如需有效的樣式清單，請參閱 < [Rebar 控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 文件。  
   
- [in]*dwStyle*  
- Rebar 控制項的視窗樣式。 如需有效樣式的清單，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+ [in]*cheaderctrl:: Create*  
+ Rebar 控制項的視窗樣式。 如需有效的樣式清單，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
  [in]*nID*  
  Rebar 的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已成功; 建立 rebar否則， `FALSE`。  
+ 如果已成功; 建立 rebar，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -168,10 +168,10 @@ CReBarCtrl& GetReBarCtrl() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 參考的基礎`CReBarCtrl`物件。  
+ 參考基礎`CReBarCtrl`物件。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，以充分利用 Windows rebar 通用控制項功能，自訂您 rebar 時。  
+ 呼叫這個方法，以善用 Windows rebar 通用控制項功能自訂您 rebar 時。  
   
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
 

@@ -14,12 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862610"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961538"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 運算子
 
@@ -70,15 +70,15 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`left` 要比較的左側的物件。
+*左*来比較的左側的物件。
 
-`right` 要比較的右側物件。
+*右*来比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`left` 要比較的左側的物件。
+*左*来比較的左側的物件。
 
-`right` 要比較的右側物件。
+*右*来比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
-每個範本運算子會將其引數轉換為字串類型，並且只有在 `left` 的轉換值比較小於 `right` 的轉換值時才會傳回 true。
+每個範本運算子將其引數轉換成字串類型，會傳回 true，只有當轉換的值*左*比較的轉換值大於或等於*右*。
 
 ### <a name="example"></a>範例
 
@@ -262,17 +262,17 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>參數
 
-`Elem` 元素類型。
+*Elem*項目類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`os` 輸出資料流。
+*os*輸出資料流。
 
-`right` 要插入的物件。
+*右*来插入的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -342,15 +342,15 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`left` 要比較的左側的物件。
+*左*来比較的左側的物件。
 
-`right` 要比較的右側物件。
+*右*来比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
@@ -452,15 +452,15 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`left` 要比較的左側的物件。
+*左*来比較的左側的物件。
 
-`right` 要比較的右側物件。
+*右*来比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
@@ -571,15 +571,15 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`left` 要比較的左側的物件。
+*左*来比較的左側的物件。
 
-`right` 要比較的右側物件。
+*右*来比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
@@ -677,15 +677,15 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 迭代器類型。
+*BidIt*迭代器類型。
 
-`IOtraits` 字串特性類別。
+*IOtraits*字串特性類別。
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`left` 要比較的左側的物件。
+*左*来比較的左側的物件。
 
-`right` 要比較的右側物件。
+*右*来比較的右側物件。
 
 ### <a name="remarks"></a>備註
 

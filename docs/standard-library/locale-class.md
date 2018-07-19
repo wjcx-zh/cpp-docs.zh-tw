@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a3f60a4cbcde76a681b33ed9201e81f313bac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963790"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -213,27 +213,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>備註
 
-此類型與 `int` 類型同義，int 類型可代表 locale 類別本機位元遮罩類型的一組不同元素，或可用來代表任何對應的 C locale 類別。 這些元素如下：
+類型是同義字**int**類型，可代表一組不同的位元遮罩的項目輸入本機或可用來代表任何對應的 C locale 類別。 這些元素如下：
 
-- **collate**：與 C 分類 LC_COLLATE 對應
+- `collate`與 C 分類 LC_COLLATE 對應
 
-- **ctype**：與 C 分類 LC_CTYPE 對應
+- `ctype`與 C 分類 LC_CTYPE 對應
 
-- **monetary**：與 C 分類 LC_MONETARY 對應
+- `monetary`與 C 分類 LC_MONETARY 對應
 
-- **numeric**：與 C 分類 LC_NUMERIC 對應
+- `numeric`與 C 分類 LC_NUMERIC 對應
 
-- **time**：與 C 分類 LC_TIME 對應
+- `time`與 C 分類 LC_TIME 對應
 
-- **messages**：與 Posix 分類 LC_MESSAGES 對應
+- `messages`與 Posix 分類 LC_MESSAGES 對應
 
 此外，兩個有用的值如下：
 
-- **none**：與任何 C 分類都不對應
+- `none`對應至任何 C 分類
 
-- **all**：與 C 所有分類 LC_ALL 的聯集對應
+- `all`對應至所有分類 LC_ALL 的 C 等位
 
-您可以像在 **monetary** &#124; **time** 中一樣，使用 `OR` 搭配這些常數來代表任意的分類群組。
+您可以使用代表任意的分類群組`OR`搭配這些常數，如下所示`monetary` &#124; `time`。
 
 ## <a name="classic"></a>  locale::classic
 
@@ -301,11 +301,11 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>參數
 
-`Loc` 包含要插入至目標地區設定 facet 的地區設定。
+*Loc*包含要插入至目標地區設定 facet 的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式會傳回地區設定物件，此物件會在 **\*this** 中取代或新增 `Loc` 中所列的 facet `Facet`。
+此成員函式傳回地區設定物件，在取代或新增**\*這**facet`Facet`中所列*Loc*。
 
 ### <a name="example"></a>範例
 
@@ -369,7 +369,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-`Loc` 要做為預設的地區設定的程式地區設定。
+*Loc*程式所做的預設地區設定的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -415,7 +415,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 
 ### <a name="remarks"></a>備註
 
-此成員類別描述每個唯一的地區設定 facet 所需的靜態成員物件。 請注意，您無法複製或指派 **id** 類別的物件。
+此成員類別描述每個唯一的地區設定 facet 所需的靜態成員物件。 請注意，您無法複製或指派類別的物件`id`。
 
 ## <a name="locale"></a>  locale::locale
 
@@ -436,35 +436,35 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>參數
 
-`Locname` 地區設定的名稱。
+*Locname*地區設定名稱。
 
-`Loc` 將複製建構新的地區設定的地區設定。
+*Loc*之複製建構新的地區設定的地區設定。
 
-`Other` 要從中選取類別目錄的地區設定。
+*其他*從中選取分類的地區設定。
 
-`Cat` 會取代至建構的地區設定分類。
+*Cat*要代入到建構之地區設定分類。
 
-`Fac` 會取代至建構的地區設定 facet。
+*Fac*要代入到建構之地區設定 facet。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會將物件初始化以符合全域地區設定。 第二個和第三個建構函式會將所有地區設定類別初始化，以地區設定名稱 `Locname` 讓行為保持一致。 其餘的建構函式會複製 `Loc`，但需注意下列例外：
+第一個建構函式會將物件初始化以符合全域地區設定。 第二個和第三個建構函式初始化讓行為保持一致與地區設定名稱的所有地區設定分類*Locname*。 其餘的建構函式複製*Loc*，，例外狀況：
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-會從 `Other` 取代與 C & `Cat` 不為零之分類 C 對應的 facet。
+會取代從*其他*facet 之分類 C 對應的 C & *Cat*為非零值。
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-會從 `locale(Locname, _All)` 取代與 C & `Cat` 不為零之分類 C 對應的 facet。
+會取代從`locale(Locname, _All)`之分類 C 對應的 C facet & *Cat*為非零值。
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-如果 `Fac` 不是 Null 指標，就會在 `Loc` 中取代 (或新增) facet `Fac`。
+中取代 （或加入） *Loc* facet *Fac*，如果*Fac*不是 null 指標。
 
-如果地區設定名稱 `Locname` 是 Null 指標或無效，函式就會擲回 [runtime_error](../standard-library/runtime-error-class.md)。
+如果地區設定名稱*Locname*為 null 指標，或其他方面無效，函式會擲回[runtime_error](../standard-library/runtime-error-class.md)。
 
 ### <a name="example"></a>範例
 
@@ -555,7 +555,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 若要測試不相等的地區設定的其中一個。
+*右*其中一個要測試是否不相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -618,9 +618,9 @@ bool operator()(
 
 ### <a name="parameters"></a>參數
 
-`left` 左邊的字串。
+*左*左邊的字串。
 
-`right` 右邊的字串。
+*右*右邊的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -685,7 +685,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 若要測試相等的地區設定的其中一個。
+*右*其中一個要測試是否相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
 

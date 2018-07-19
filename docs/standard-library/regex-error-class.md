@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae7d6e9e3a50ad6a0b78d2b47a732b6b5fa9fc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964141"
 ---
 # <a name="regexerror-class"></a>regex_error 類別
 
@@ -111,11 +111,11 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>參數
 
-`error` 錯誤碼。
+*錯誤*錯誤碼。
 
 ### <a name="remarks"></a>備註
 
-建構函式會建構物件以保留 `error`值。
+建構函式會建構一個物件，會保留值*錯誤*。
 
 ### <a name="example"></a>範例
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865598"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963455"
 ---
 # <a name="syncshared-class"></a>sync_shared 類別
 
@@ -44,7 +44,7 @@ class sync_shared
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*快取*|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ### <a name="member-functions"></a>成員函式
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`count`|所配置陣列中的元素數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`count`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -113,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|與同步處理篩選相關聯的快取類型。|
-|`Other`|要比較是否相等的快取。|
+|*快取*|與同步處理篩選相關聯的快取類型。|
+|*其他*|要比較是否相等的快取。|
 
 ### <a name="return-value"></a>傳回值
 
-如果 `cache.equals(Other.cache)` 的結果 (其中 `cache` 代表快取物件) 是 `true`，即為 `true`，否則為 `false`。
+**true**如果的結果`cache.equals(Other.cache)`，其中`cache`代表的快取物件，是 **，則為 true**; 否則**false**。
 
 ### <a name="remarks"></a>備註
 

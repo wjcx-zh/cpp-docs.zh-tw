@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eea1a8fe89e9cabcfbe1bf9aa69f1c3fda775c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dde45090a534fc8d5aff09ee12b1b4fe838d9492
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840647"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966272"
 ---
 # <a name="allocatornewdel-class"></a>allocator_newdel 類別
 
-實作配置器，以使用 `operator delete` 來解除配置記憶體區塊，以及使用 `operator new` 來配置記憶體區塊。
+實作會使用配置器**delete 運算子**解除配置記憶體區塊並**new 運算子**來配置記憶體區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -41,11 +41,11 @@ class allocator_newdel;
 
 |參數|描述|
 |---------------|-----------------|
-|`Type`|配置器所配置的元素類型。|
+|*類型*|配置器所配置的元素類型。|
 
 ## <a name="remarks"></a>備註
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 巨集會將此類別傳遞為下列陳述式中的 `name` 參數：`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)巨集傳遞此類別做*名稱*下列陳述式中的參數： `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>需求
 

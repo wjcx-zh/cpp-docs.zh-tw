@@ -1,5 +1,5 @@
 ---
-title: 單一繼承 |Microsoft 文件
+title: 單一繼承 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028618"
 ---
 # <a name="single-inheritance"></a>單一繼承
 在「單一繼承」(一種常見的繼承形式) 中，任何類別都只能有一個基底類別。 請考慮下圖中說明的關係。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  請注意圖中的其他項目：`Book` 同時為衍生類別 (來自 `PrintedDocument`) 和基底類別 (`PaperbackBook` 衍生自 `Book`)。 這種類別階層架構的基本架構宣告如下列範例所示：  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,21 +53,21 @@ class PaperbackBook : public Book {};
   
  每個類別的衍生基底類別都是在宣告衍生類別之前宣告。 它並不足以提供基底類別的向前參考宣告，且必須是完整的宣告。  
   
- 在上述範例中，存取規範**公用**用。 Public、 protected 和 private 繼承的意義述[成員存取控制。](../cpp/member-access-control-cpp.md)  
+ 在上述範例中，存取規範**公開**用。 Public、 protected 和 private 繼承的意義說明[成員存取控制。](../cpp/member-access-control-cpp.md)  
   
  類別可做為許多特定類別的基底類別，如下圖所示。  
   
- ![導向非循環圖](../cpp/media/vc38xj2.gif "vc38XJ2")  
+ ![有向非循環圖](../cpp/media/vc38xj2.gif "vc38XJ2")  
 導向非循環圖的範例  
   
  上圖中 (稱為「導向非循環圖」或 "DAG") 的某些類別是多個衍生類別的基底類別。 不過，反向並不成立：其中只有一個指定衍生類別的直接基底類別。 此圖中描述了一個「單一繼承」結構。  
   
 > [!NOTE]
->  導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。 此主題涵蓋在[多重繼承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)。  
+>  導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。 本主題涵蓋[多重繼承](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)。  
   
  在繼承中，衍生類別包含基底類別的成員以及您加入的新成員。 因此，除非在衍生類別中重新定義這些成員，否則衍生類別可能會參考基底類別的成員。 當這些成員在衍生類別中重新定義時，可以使用範圍解析運算子 (`::`) 來參考直接或間接基底類別的成員。 請考量以下範例：  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  請注意，`Book` 的建構函式 (即 `Book::Book`) 可以存取資料成員 `Name`。 在程式中可以建立及使用 `Book` 類型的物件，如下所示：  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  如上述範例中所示，類別成員和繼承的資料和函式的使用方式是相同的。 如果類別 `Book` 的實作呼叫 `PrintNameOf` 函式的重新實作，則只能使用範圍解析 (`Document`) 運算子呼叫屬於 `::` 類別中的函式：  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  如果有一個可存取且明確的基底類別，衍生類別的指標和參考便可以隱含轉換為其基底類別的指標和參考。 下列程式碼使用指標示範這個概念 (相同原則適用於參考)：  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  

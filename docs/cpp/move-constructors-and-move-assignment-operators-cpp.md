@@ -1,5 +1,5 @@
 ---
-title: 如何： 定義移動建構函式和移動指派運算子 （c + +） |Microsoft 文件
+title: 如何： 定義移動建構函式和移動指派運算子 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028147"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動建構函式和移動指派運算子 (C++)
-本主題說明如何撰寫*移動建構函式*和移動指派運算子的 c + + 類別。 移動建構函式可讓您無需先行複製變成左值的右值物件所擁有的資源。 如需移動語意的詳細資訊，請參閱[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+本主題說明如何撰寫*移動建構函式*和 c + + 類別的移動指派運算子。 移動建構函式可讓要移至左值，而不複製右值物件所擁有的資源。 如需有關移動語意的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  這個主題是以下列管理記憶體緩衝區的 C++ 類別 `MemoryBlock` 為基礎。  
   
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  如果您同時為類別提供移動建構函式和移動指派運算子，可以撰寫移動建構函式來呼叫移動指派運算子，藉此去除冗餘碼。 下列範例示範呼叫移動指派運算子的修訂版移動建構函式。  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [Std:: move](../standard-library/utility-functions.md#move)函式會保留的右值屬性`other`參數。  
+ [Std:: move](../standard-library/utility-functions.md#move)函式會保留的右值屬性*其他*參數。  
   
 ## <a name="see-also"></a>另請參閱  
- [右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<公用程式 > 移動](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<公用程式 > 移動](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

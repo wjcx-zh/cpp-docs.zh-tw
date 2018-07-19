@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 53a7c666684783a85b2aeb0318cfedd738cc4b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862763"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962467"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函式
 
@@ -69,7 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -123,7 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -195,7 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -205,7 +208,7 @@ Valarray，其中的項目和輸入之 valarray 項目的反正弦值相等。
 
 傳回的項目單位是以弧度為單位。
 
-傳回值是主體值之間 + pi/2 和-pi/2 的正弦值一致值的輸入。
+傳回值是主體，值介於 + pi/2 和 pi/2，與正弦值一致值輸入。
 
 ### <a name="example"></a>範例
 
@@ -267,7 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -277,7 +281,7 @@ Valarray，其中的項目和輸入之 valarray 項目的反正切值相等。
 
 傳回的項目單位是以弧度為單位。
 
-傳回值是主體值之間 + pi/2 和-pi/2 的正切函數一致值的輸入。
+傳回值是主體，值介於 + pi/2 和 pi/2，與正切函數一致值輸入。
 
 ### <a name="example"></a>範例
 
@@ -348,9 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 常數值的資料類型或輸入 valarray 的項目提供反正切值引數的 y 座標值。
+*left*  
+ 常數數值資料型別，或其項目提供反正切值引數 y 座標值的輸入 valarray。
 
-`right` 常數值的資料類型或輸入 valarray 的項目提供值的反正切值引數的 x 座標。
+*right*  
+ 常數數值資料型別，或其項目提供反正切值引數 x 座標值的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -366,9 +372,9 @@ Valarray，其項目 `I` 等同於以下的反正切值：
 
 傳回的項目單位是以弧度為單位。
 
-此函式會保留遺失標準的正切函數的引數中的元件的符號相關資訊，這項知識的四分色方塊可讓傳回值，指定唯一的角度，介於 + pi 和-pi。
+此函式會保留正負號資訊便會失去標準正切函數函式的引數中的元件，這項象限知識可讓傳回值，指派唯一的角度，介於 + pi 和-pi。
 
-如果 `left` 和 `right` 的項目數目不同，則結果為未定義。
+如果*左*並*右*有不同數目的項目，則結果為未定義。
 
 ### <a name="example"></a>範例
 
@@ -434,7 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -510,7 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -592,7 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -654,7 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -716,7 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -795,9 +806,11 @@ pow(
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其中的項目提供每個項目進行 exponentiated 的基底。
+*left*  
+ 輸入 valarray，其中的項目提供每個要指數化之項目的基底。
 
-`right` 輸入的 valarray，其中的項目提供每個項目是 exponentiated 電源。
+*right*  
+ 輸入 valarray，其中的項目提供每個要指數化之項目的次方。
 
 ### <a name="return-value"></a>傳回值
 
@@ -811,7 +824,7 @@ Valarray，其中的項目 `I` 相同於：
 
 ### <a name="remarks"></a>備註
 
-如果 `left` 和 `right` 的項目數目不同，則結果為未定義。
+如果*左*並*右*有不同數目的項目，則結果為未定義。
 
 ### <a name="example"></a>範例
 
@@ -875,7 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -951,7 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1033,7 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1090,8 +1106,8 @@ void swap(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`valarray` 類型的物件。|
-|`right`|`valarray` 類型的物件。|
+|*left*|`valarray` 類型的物件。|
+|*right*|`valarray` 類型的物件。|
 
 ### <a name="remarks"></a>備註
 
@@ -1108,7 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1184,7 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 輸入的 valarray，其元素要由成員函式。
+*left*  
+ 要由成員函式操作其項目的輸入 valarray。
 
 ### <a name="return-value"></a>傳回值
 

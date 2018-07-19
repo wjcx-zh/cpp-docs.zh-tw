@@ -1,5 +1,5 @@
 ---
-title: Microsoft 專有的修飾詞 |Microsoft 文件
+title: Microsoft 專有的修飾詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8490a50f30d366a53a9e3288417a8d83032c556d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c67c1eab1be6cb1e9e1eadbaaba780bbf23b5a30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964895"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 專有的修飾詞
 本節將描述下列各層面 Microsoft 專有的 C++ 擴充功能：  
@@ -30,21 +30,3 @@ ms.locfileid: "32420219"
   
 -   [__W64](../cpp/w64.md)關鍵字  
   
- 許多 Microsoft 專有關鍵字可用來將宣告子修改為衍生類型。 如需宣告子的詳細資訊，請參閱[宣告子](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
-  
-### <a name="microsoft-specific-keywords"></a>Microsoft 專有關鍵字  
-  
-|關鍵字|意義|是否用來形成衍生類型？|  
-|-------------|-------------|---------------------------------|  
-|[__based](../cpp/based-grammar.md)|後面的名稱會將 32 位元位移宣告為宣告中包含的 32 位元基底。|[是]|  
-|[__cdecl](../cpp/cdecl.md)|後面的名稱會使用 C 命名和呼叫慣例。|[是]|  
-|[__declspec](../cpp/declspec.md)|後面的名稱會指定 Microsoft 專有的儲存類別屬性。|否|  
-|[__fastcall](../cpp/fastcall.md)|後面的名稱會將函式宣告為使用暫存器 (如果有的話)，而不使用可進行引數傳遞的堆疊。|[是]|  
-|[__restrict](../cpp/extension-restrict.md)|類似於 __declspec ([限制](../cpp/restrict.md))，但是用於變數。|否|  
-|[__stdcall](../cpp/stdcall.md)|後面的名稱會指定採用標準呼叫慣例的函式。|[是]|  
-|[__w64](../cpp/w64.md)|在 64 位元編譯器上將資料類型標示為較大。|否|  
-|[__unaligned](../cpp/unaligned.md)|指出某個類型或其他資料的指標未對齊。|否|  
-|[__vectorcall](../cpp/vectorcall.md)|後面的名稱會將函式宣告為只要有暫存器可用即使用暫存器 (包括 SSE 暫存器)，而不使用可進行引數傳遞的堆疊。|[是]|  
-  
-## <a name="see-also"></a>另請參閱  
- [C++ 語言參考](../cpp/cpp-language-reference.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843596"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966442"
 ---
 # <a name="isclass-class"></a>is_class 類別
 
@@ -37,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是定義為 `class` 或 `struct` 的類型，或定義為上述其中一個的 `cv-qualified` 表單，則類型述詞的執行個體為 true。
+如果型別述詞的執行個體保留 true 的型別*Ty*型別定義為**類別**或**結構**，或`cv-qualified`形式的其中一項，否則為 false。
 
 ## <a name="example"></a>範例
 

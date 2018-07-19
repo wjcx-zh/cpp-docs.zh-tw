@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c22a260130d38a4ed1dfbf1a49bbc5d670357c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d549d3440de902bf9888fa399e5636b93001ca29
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964882"
 ---
 # <a name="set-class"></a>set 類別
 
@@ -118,13 +118,13 @@ class set
 
 ### <a name="parameters"></a>參數
 
-`Key` 要儲存在集合中的項目資料類型。
+*索引鍵*来儲存於集中的項目資料類型。
 
-`Traits` 類型，提供可以比較兩個項目值做為排序索引鍵，來判斷集合中的相對順序的函式物件。 這是選擇性引數，而二元述詞 **less** *\<Key>* 為預設值。
+*Traits*類型，提供函式物件可比較兩個項目值做為排序鍵來判斷集合中的相對順序。 這是選擇性引數，而二元述詞 **less** *\<Key>* 為預設值。
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-`Allocator` 表示封裝有關集合的配置和解除配置記憶體的詳細資訊的預存配置器物件的型別。 這個引數是選擇性的而且預設值是 **配置器 * * *\<金鑰 >。*
+*配置器*表示預存配置器物件，封裝有關集合的配置和解除配置之記憶體的詳細資訊的型別。 這個引數為選擇性，而且預設值是 **allocator *\<機碼 >。*
 
 ## <a name="remarks"></a>備註
 
@@ -161,10 +161,10 @@ set 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 set 物件的 `allocator` 類別。|
-|[const_iterator](#const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取集合中的 `const` 項目。|
-|[const_pointer](#const_pointer)|類型，提供集合中 `const` 項目之指標。|
-|[const_reference](#const_reference)|類型，提供儲存在集合中供讀取和執行 `const` 作業之 `const` 項目的參考。|
-|[const_reverse_iterator](#const_reverse_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取集合中的任何 `const` 項目。|
+|[const_iterator](#const_iterator)|一種類型，提供可讀取 set 中 **const** 項目的雙向迭代器。|
+|[const_pointer](#const_pointer)|一種類型，提供 set 中 **const** 項目的指標。|
+|[const_reference](#const_reference)|一種類型，提供儲存在 set 中用於讀取和執行 **const** 運算之 **const** 項目的參考。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取 set 中任何 **const** 項目的雙向迭代器。|
 |[difference_type](#difference_type)|帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的項目) 中集合的項目數。|
 |[iterator](#iterator)|類型，提供可以讀取或修改集合中之任何項目的雙向迭代器。|
 |[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在集合中的相對順序。|
@@ -228,7 +228,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-**allocator_type** 與樣板參數 [Allocator](../standard-library/set-class.md) 同義。
+`allocator_type` 範本參數同義[Allocator](../standard-library/set-class.md)。
 
 傳回 multiset 用來排序其項目的函式物件，亦即樣板參數 `Allocator`。
 
@@ -254,7 +254,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-如果將 **begin** 的傳回值指派給 `const_iterator`，則無法修改 set 物件中的項目。 如果將 **begin** 的傳回值指派給 **iterator**，則可修改 set 物件中的項目。
+如果傳回值`begin`指派給`const_iterator`，無法修改 set 物件中的項目。 如果傳回值`begin`指派給`iterator`，可修改 set 物件中的項目。
 
 ### <a name="example"></a>範例
 
@@ -297,7 +297,7 @@ The first element of s1 is now 2
 
 ## <a name="cbegin"></a>  set::cbegin
 
-傳回 `const` 迭代器，為範圍中的第一個項目定址。
+傳回**const**迭代器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -305,13 +305,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-`const` 雙向存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。
+A **const**雙向存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為支援 `begin()` 和 `cbegin()`、任何種類的可修改 (非 `const`) 容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -323,7 +323,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  set::cend
 
-傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
+傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -331,13 +331,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向範圍結尾之外的 `const` 雙向存取迭代器。
+A **const**雙向存取迭代器，指向範圍結尾之外。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -484,7 +484,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要從集合中比對之項目的索引鍵。
+*索引鍵*要從集合比對項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -709,7 +709,7 @@ emplace(
 
 |參數|描述|
 |-|-|
-|`args`|除非 set 已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
+|*引數*|除非 set 已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -791,8 +791,8 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|`args`|除非 set 已經包含該項目，或者，更常見的說法是，除非它已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
-|`where`|要開始搜尋正確的插入點的地方。 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|
+|*引數*|除非 set 已經包含該項目，或者，更常見的說法是，除非它已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
+|*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
 
@@ -929,7 +929,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之 set 中元素的排序索引鍵比較的引數索引鍵。
+*索引鍵*要與所搜尋之 set 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1013,13 +1013,13 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-`Where` 要移除之項目的位置。
+*其中*要移除之項目的位置。
 
-`First` 要移除的第一個元素的位置。
+*第一個*要移除之第一個項目的位置。
 
-`Last` 要移除的最後一個元素之後的位置。
+*最後一個*要移除的最後一個元素之後的位置。
 
-`Key` 要移除之項目的索引鍵值。
+*索引鍵*要移除之項目的索引鍵的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1121,17 +1121,17 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要比對所搜尋之 set 中元素的排序索引鍵索引鍵值。
+*索引鍵*所搜尋之 set 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
-一個迭代器，表示具有指定索引鍵的項目位置，或者，如果沒有找到索引鍵的相符項，則表示 set 中最後一個項目之後的位置 (`set::end()`)。
+迭代器，表示具有指定索引鍵的元素位置，或者，如果沒有找到索引鍵的符合項，表示 set 中最後一個元素之後的位置 (`set::end()`)。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回迭代器，其表示 set 中排序鍵 (在二元述詞下根據較少的比較性關聯引發排序) 等於引數 `key` 的元素。
+此成員函式會傳回迭代器，參考集合中的項目索引鍵等於引數*金鑰*下引發在根據小於可比較性關聯對排序的二元述詞。
 
-如果將 **find** 的傳回值指派給**const_iterator**，則無法修改 set 物件。 如果將 **find** 的傳回值指派給 **iterator**，則可修改 set 物件。
+如果傳回值`find`指派給`const_iterator`，無法修改 set 物件。 如果傳回值`find`指派給`iterator`，可以修改 set 物件
 
 ### <a name="example"></a>範例
 
@@ -1316,17 +1316,17 @@ IList);
 
 |參數|描述|
 |-|-|
-|`Val`|除非其中包含了值已經過對等地排序的元素，否則為要插入 set 中的元素值。|
-|`Where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `Where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|
-|`ValTy`|樣板參數，指定 set 可用於建構 [value_type](../standard-library/map-class.md#value_type) 項目的引數類型，並將 `Val` 當做引數完美轉送。|
-|`First`|要複製之第一個元素的位置。|
-|`Last`|要複製之最一個元素後方的位置。|
-|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
-|`IList`|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|除非其中包含了值已經過對等地排序的元素，否則為要插入 set 中的元素值。|
+|*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
+|*ValTy*|指定 set 可用於建構的元素的引數類型的範本參數[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
+|*第一個*|要複製之第一個元素的位置。|
+|*最後一個*|要複製之最一個元素後方的位置。|
+|*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
+|*IList*|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>傳回值
 
-單一項目成員函式 (1) 和 (2) 會傳回 [pair](../standard-library/pair-structure.md)，若已執行插入，其 `bool` 元件會是 true，若 set 已經包含對等排序值的項目，則為 false。 若 `bool` 元件為 True，傳回值組的迭代器元件會指向最新插入的元素；若 `bool` 元件為 False，則會指向現有元素。
+單一元素成員函式 （1） 和 (2)，傳回[配對](../standard-library/pair-structure.md)其**bool**元件是，如果已進行插入，則為 true，若集合已包含相等的值中的項目，則為 false。排序。 傳回值組的迭代器元件會指向新插入的項目，如果**bool**元件為 true，或指向現有元素如果**bool**元件為 false。
 
 具有提示的單一元素成員函式 (3) 及 (4) 會傳回指向位置的迭代器，該位置是新元素插入 set 中的位置，或者，若具有對等索引鍵的元素已存在，則指向現有元素。
 
@@ -1336,7 +1336,7 @@ IList);
 
 在只插入一個元素的期間，若擲出例外狀況，則不會修改容器的狀態。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
-若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。
+若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取**bool**元件，請使用`pr.second`。 例如，請參閱本文中稍後的範例程式碼。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而針對 set，`set<V>::value_type` 是 `const V` 類型。
 
@@ -1455,7 +1455,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。
+範例，請參閱[開始](#begin)如需如何宣告及使用的範例`iterator`。
 
 ## <a name="key_comp"></a>  set::key_comp
 
@@ -1479,7 +1479,7 @@ key_compare key_comp() const;
 
 如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。
 
-請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與範本參數 `Traits` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -1546,7 +1546,7 @@ typedef Traits key_compare;
 
 如需 `Traits` 的詳細資訊，請參閱 [set 類別](../standard-library/set-class.md)主題。
 
-請注意，`key_compare` 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，同時`key_compare`並[value_compare](#value_compare)是範本參數的同義字`Traits`。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -1566,7 +1566,7 @@ typedef Key key_type;
 
 如需 `Key` 的詳細資訊，請參閱 [set 類別](../standard-library/set-class.md)主題的＜備註＞一節。
 
-請注意，`key_type` 和 [value_type](#value_type) 都與樣板參數 **Key** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，同時`key_type`並[value_type](#value_type)是範本參數的同義字`Key`。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -1584,7 +1584,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之 set 中元素的排序索引鍵比較的引數索引鍵。
+*索引鍵*要與所搜尋之 set 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1685,13 +1685,13 @@ set& operator=(set&& right);
 
 |參數|描述|
 |-|-|
-|`right`|`set` 會提供要指派給這個 `set` 的新項目。|
+|*right*|`set` 會提供要指派給這個 `set` 的新項目。|
 
 ### <a name="remarks"></a>備註
 
-第一個 `operator=` 版本會使用 `right` 的 [lvalue 參考](../cpp/lvalue-reference-declarator-amp.md)，將項目從 `right` 複製到這個 `set`。
+第一版`operator=`會使用[左值參考](../cpp/lvalue-reference-declarator-amp.md)如*右*、 要複製元素的*右*至此`set`。
 
-第二個版本會使用 right 的 [rvalue 參考](../cpp/rvalue-reference-declarator-amp-amp.md)。 它會將項目從 `right` 移到這個 `set`。
+第二個版本會使用 right 的 [rvalue 參考](../cpp/rvalue-reference-declarator-amp-amp.md)。 移動中的項目*右*至此`set`。
 
 這個 `set` 中的所有項目都會在運算子函式執行之前遭到捨棄。
 
@@ -2001,12 +2001,12 @@ set(
 
 |參數|描述|
 |-|-|
-|`Al`|要用於此 set 物件的儲存體配置器類別，預設為 **Allocator**。|
-|`Comp`|`const Traits` 類型的比較函式，可用來排序 set 中的項目，預設為 `Compare`。|
-|`Rght`|要從中複製所建構之 set 的 set。|
-|`First`|要複製的元素範圍中第一個元素的位置。|
-|`Last`|超出要複製之元素範圍的第一個元素的位置。|
-|`IList`|從中複製項目的 initializer_list。|
+|*Al*|儲存體配置器類別，要用於此 set 物件，其預設為`Allocator`。|
+|*Comp*|`const Traits` 類型的比較函式，可用來排序 set 中的項目，預設為 `Compare`。|
+|*右方*|要從中複製所建構之 set 的 set。|
+|*第一個*|要複製的元素範圍中第一個元素的位置。|
+|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*IList*|從中複製項目的 initializer_list。|
 
 ### <a name="remarks"></a>備註
 
@@ -2014,15 +2014,15 @@ set(
 
 所有建構函式都會將其 set 初始化。
 
-所有建構函式都會儲存一個 **Traits** 類型的函式物件，此物件可用來在 set 的索引鍵之間建立順序，而且之後可藉由呼叫 [key_comp](#key_comp) 傳回此物件。
+所有建構函式會儲存函式物件的型別`Traits`用來設定的索引鍵之間建立順序和，稍後再傳回藉由呼叫[key_comp](#key_comp)。
 
-前三個建構函式會指定空的初始 set、第二個建構函式會指定建立項目順序時要使用的比較函式類型 ( `comp`)，而第三個建構函式則會明確指定要使用的配置器類型 ( `al`)。 關鍵字 **explicit** 會隱藏某些種類的自動類型轉換。
+前三個建構函式會指定空的初始 set、 第二個指定的比較函式類型 (`comp`) 建立的項目，且第三個順序是使用明確指定的配置器類型 (`al`) 是使用此項目。 關鍵字 **explicit** 會隱藏某些類型的自動類型轉換。
 
 第四個建構函式會指定 set `right` 的複本。
 
 接下來的三個建構函式會使用 initializer_list 來指定項目。
 
-接下來的三個建構函式會複製 set 的範圍 [ `first`, `last`)，其會以越來越明確的方式指定類別 **Traits** 和 **Allocator** 的比較函式類型。
+接下來三個建構函式會將範圍複製 [ `first`， `last`) 以越來越明確指定的比較函式的類別類型的一組`Traits`並**配置器**。
 
 第八個建構函式會藉由移動 `right` 來指定 set 的複本。
 
@@ -2203,7 +2203,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`right` 設定為提供項目與目標交換的引數。
+*右*的引數可讓您設定提供要與目標 set 交換之元素。
 
 ### <a name="remarks"></a>備註
 
@@ -2271,11 +2271,11 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之 set 中元素的排序索引鍵比較的引數索引鍵。
+*索引鍵*要與所搜尋之 set 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
-**iterator** 或 `const_iterator`，定址對象是 set 中索引鍵大於引數索引鍵的項目位置，或者，如果找不到與該索引鍵相符的項目，定址對象就是 set 中最後一個項目後面的位置。
+`iterator`或`const_iterator`，位址中的索引鍵大於引數索引鍵或項目，定址下一個位置定址集合中的最後一個項目，如果沒有符合一組項目的位置找到索引鍵。
 
 ### <a name="example"></a>範例
 
@@ -2348,7 +2348,7 @@ value_compare value_comp() const;
 
 如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。
 
-請注意，[key_compare](#value_compare) 和 [value_compare](#key_compare) 都與樣板參數 **Traits** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，[key_compare](#value_compare) 和 [value_compare](#key_compare) 都與範本參數 `Traits` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -2415,7 +2415,7 @@ typedef key_compare value_compare;
 
 如需 `Traits` 的詳細資訊，請參閱 [set 類別](../standard-library/set-class.md)主題。
 
-請注意，[key_compare](#key_compare) 和 **value_compare** 都與樣板參數 **Traits** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，同時[key_compare](#key_compare)並`value_compare`是範本參數的同義字`Traits`。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -2435,7 +2435,7 @@ typedef Key value_type;
 
 如需 `Key` 的詳細資訊，請參閱 [set 類別](../standard-library/set-class.md)主題的＜備註＞一節。
 
-請注意，[key_type](#key_type) 和 `value_type` 都與樣板參數 **Key** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，同時[key_type](#key_type)並`value_type`是範本參數的同義字`Key`。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 

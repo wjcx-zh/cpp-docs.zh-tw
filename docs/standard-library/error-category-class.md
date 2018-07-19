@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847698"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028225"
 ---
 # <a name="errorcategory-class"></a>error_category 類別
 
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`_Errval`|要儲存在 [error_condition](../standard-library/error-condition-class.md) 中的錯誤碼值。|
+|*_Errval*|要儲存在 [error_condition](../standard-library/error-condition-class.md) 中的錯誤碼值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -112,13 +112,13 @@ virtual bool equivalent(const error_code& _Code,
 
 |參數|描述|
 |---------------|-----------------|
-|`_Errval`|要比較的錯誤碼值。|
-|`_Cond`|要比較的 [error_condition](../standard-library/error-condition-class.md) 物件。|
-|`_Code`|要比較的 [error_code](../standard-library/error-code-class.md) 物件。|
+|*_Errval*|要比較的錯誤碼值。|
+|*_Cond*|要比較的 [error_condition](../standard-library/error-condition-class.md) 物件。|
+|*（_c)*|要比較的 [error_code](../standard-library/error-code-class.md) 物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果分類和值相等，即為 `true`；否則為 `false`。
+**真**如果分類和值相等，否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -138,11 +138,11 @@ virtual string message(error_code::value_type val) const = 0;
 
 |參數|描述|
 |---------------|-----------------|
-|`val`|要描述的錯誤碼值。|
+|*val*|要描述的錯誤碼值。|
 
 ### <a name="return-value"></a>傳回值
 
-傳回分類的 `val` 錯誤碼描述性名稱。
+傳回的錯誤程式碼的描述性名稱*val*分類。
 
 ### <a name="remarks"></a>備註
 
@@ -172,7 +172,7 @@ bool operator==(const error_category& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要測試是否相等的物件。|
+|*right*|要測試是否相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -194,11 +194,11 @@ bool operator!=(const error_category& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要測試是否不相等的物件。|
+|*right*|要測試是否不相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果 `error_category` 不等於傳入 `right` 的 `error_category` 物件，即為 **true**；否則為 **false**。
+**true**如果`error_category`物件是否不等於`error_category`傳入物件*右*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -216,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要比較的 `error_category` 物件。|
+|*right*|要比較的 `error_category` 物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -236,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型定義與 `int` 同義。
+此類型定義是同義**int**。
 
 ## <a name="see-also"></a>另請參閱
 

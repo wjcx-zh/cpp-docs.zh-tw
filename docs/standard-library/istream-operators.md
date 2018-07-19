@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961109"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 運算子
 
@@ -64,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>參數
 
-`Ch` 一個字元。
+*Ch*字元。
 
-`Istr` 資料流。
+*Istr*資料流。
 
-`str` 字串。
+*str*字串。
 
-`val` 型別。
+*val*型別。
 
 ### <a name="return-value"></a>傳回值
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-最多會擷取 *N* - 1 個元素，並將其儲存在開頭為 _ *Str* 的陣列中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大於零，則 *N* 為 `Istr`. **width**；否則它會是可宣告的最大 **Elem** 陣列的大小。 此函式一律會在所儲存的任何已擷取元素之後儲存 **Elem()** 值。 不論是在檔案結尾、在值為 **Elem**(0) (不擷取的值) 的字元上，還是在 [ws](../standard-library/istream-functions.md#ws) 會捨棄的任何元素 (不擷取的元素) 上，都會提前停止擷取。 如果此函式未擷取任何元素，則會呼叫 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，它都會呼叫 `Istr`. **width**(0)，並傳回 `Istr`。
+最多會擷取 *N* - 1 個元素，並將其儲存在開頭為 _ *Str* 的陣列中。 如果 `Istr`. [width](../standard-library/ios-base-class.md#width) 大於零，則 *N* 為 `Istr`. **寬度**; 否則它是一維陣列的最大大小`Elem`可宣告。 函式一律會儲存值`Elem()`任何已擷取的元素之後。 不論是在檔案結尾、在值為 **Elem**(0) (不擷取的值) 的字元上，還是在 [ws](../standard-library/istream-functions.md#ws) 會捨棄的任何元素 (不擷取的元素) 上，都會提前停止擷取。 如果此函式未擷取任何元素，則會呼叫 `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情況下，它都會呼叫 `Istr`. **寬度**(0)，並傳回*Istr*。
 
-**安全性注意事項**：要從輸入資料流中擷取的以 Null 結束字串不得超過目的緩衝區 `str` 的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性注意事項**要從輸入資料流擷取 null 終止的字串不得超過目的緩衝區的大小*str*。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
 
 範本函式：
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-會擷取元素 (如果可能)，並將其儲存在 `Ch` 中。 否則會呼叫 **is**。 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，它都會傳回 `Istr`。
+會擷取一個元素，它是可行的並將其儲存在*Ch*。 否則會呼叫 **is**。 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，它會傳回*Istr*。
 
 範本函式：
 

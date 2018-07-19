@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843440"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965411"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable 類別
 
-測試是否可將 `From` 類型的值指派給 `To` 類型，且該指派已知不會擲回。
+測試的值是否*從*型別可以指派給*到*類型和指派已知不會擲回。
 
 ## <a name="syntax"></a>語法
 
@@ -37,13 +37,13 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>參數
 
-若要接收指派的物件類型。
+*若要*接收指派的物件型別。
 
-從提供的值的物件類型。
+*從*提供值的物件型別。
 
 ## <a name="remarks"></a>備註
 
-運算式 `declval<To>() = declval<From>()` 必須格式正確，且編譯器必須已知它不會擲回。 `From` 和 `To` 兩者必須是完整類型 `void`，或是界限未知的陣列。
+運算式 `declval<To>() = declval<From>()` 必須格式正確，且編譯器必須已知它不會擲回。 兩者*從*並*要*必須是完整的類型**void**，或界限未知的陣列。
 
 ## <a name="requirements"></a>需求
 

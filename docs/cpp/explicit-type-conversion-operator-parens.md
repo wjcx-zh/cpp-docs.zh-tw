@@ -1,5 +1,5 @@
 ---
-title: '明確類型轉換運算子: （) |Microsoft 文件'
+title: '明確類型轉換運算子: （) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966931"
 ---
 # <a name="explicit-type-conversion-operator-"></a>明確類型轉換運算子：()
 C++ 允許使用類似函式呼叫的語法進行明確的類型轉換。  
@@ -34,9 +35,9 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>備註  
- A*簡單類型名稱*後面*運算式清單*括在括號建構使用指定的運算式所指定型別的物件。 下列範例顯示將類型明確地轉換為類型 int：  
+ A*簡單類型名稱*後面*運算式清單*括在括號建構使用指定的運算式指定之型別的物件。 下列範例顯示將類型明確地轉換為類型 int：  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
@@ -44,7 +45,7 @@ int i = int( d );
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  雖然上述範例示範的是使用常數進行明確類型轉換，相同的技巧也可以在物件上進行這些轉換。 下列程式碼片段示範這項功能：  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  使用「轉換」語法也可以指定明確類型轉換。 上述範例若是使用轉換語法重新撰寫則會如下所示：  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  從單一值進行轉換時，轉換和函式樣式轉換的結果相同。 不過，在函式樣式語法中，您可以在轉換時指定一個以上的引數。 這項差異對於使用者定義的類型而言是很重要的。 請考慮 `Point` 類別及其轉換：  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- 上述範例中，使用函式樣式轉換，可示範如何將兩個值 (一個用於*x* ，另一個用於*y*) 使用者定義型別`Point`。  
+ 上述範例中，使用函式樣式轉換，其中示範如何將兩個值 (一個用於*x* ，另一個用於*y*) 使用者定義型別`Point`。  
   
 > [!CAUTION]
 >  由於其中覆寫了 C++ 編譯器的內建類型檢查，因此請小心使用明確類型轉換。  
   
- [轉換](../cpp/cast-operator-parens.md)標記法，必須使用轉換為類型沒有*簡單類型名稱*（例如，指標或參考類型）。 轉換為型別，可以使用表示*簡單類型名稱*可以採任一格式寫入。 請參閱[類型規範](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4)如需有關何者構成*簡單類型名稱*。  
+ [Cast](../cpp/cast-operator-parens.md)轉換為不需要的類型，必須使用標記法*簡單類型名稱*（比方說，指標或參考類型）。 可以表示的類型轉換*簡單類型名稱*以任一形式。  
   
  在轉換中定義類型是不合法。  
   

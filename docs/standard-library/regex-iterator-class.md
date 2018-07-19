@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861294"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962552"
 ---
 # <a name="regexiterator-class"></a>regex_iterator 類別
 
@@ -75,11 +75,11 @@ private:
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 子相符項目的迭代器類型。
+*BidIt*子相符項目的迭代器類型。
 
-`Elem` 要符合的項目類型。
+*Elem*要符合的項目類型。
 
-`RXtraits` 項目的 traits 類別。
+*RXtraits*項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
 
@@ -223,7 +223,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 比較迭代器。
+*右*来比較的迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -395,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 比較迭代器。
+*右*来比較的迭代器。
 
 ### <a name="remarks"></a>備註
 
-如果 `*this` 和 `right` 都是或都不是結束序列 (end-of-sequence) 迭代器，而且 `begin == right.begin`、 `end == right.end`、 `pregex == right.pregex`且 `flags == right.flags`，則此成員函式會傳回 true。 否則會傳回 false。
+如果為 true，則傳回此成員函式`*this`並*右*結束序列迭代器或都不是結束序列迭代器和`begin == right.begin`， `end == right.end`， `pregex == right.pregex`，和`flags == right.flags`。 否則會傳回 false。
 
 ### <a name="example"></a>範例
 
@@ -625,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>參數
 
-`first` 要比對之序列的開頭。
+*第一個*之比對的序列的開頭。
 
-`last` 要比對之序列的結尾。
+*最後一個*來比對之序列的結尾。
 
-`re` 規則運算式相符項目。
+*re*規則運算式相符項目。
 
-`f` 比對的旗標。
+*f*旗標的相符項目。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構結束序列 (end-of-sequence) 迭代器。 第二個建構函式會以 `begin` 初始化儲存值 `first`、以 `end` 初始化儲存值 `last`、以 `pregex` 初始化儲存值 `&re`，並以 `flags` 初始化儲存值 `f`。 然後呼叫 `regex_search(begin, end, match, *pregex, flags)`。 如果搜尋失敗，此運算子便會將物件設定為結束序列迭代器。
+第一個建構函式會建構結束序列 (end-of-sequence) 迭代器。 第二個建構函式會初始化儲存的值`begin`與*第一個*，儲存的值`end`與*最後一個*，則預存值`pregex`與`&re`，和預存值`flags`具有*f*。 然後呼叫 `regex_search(begin, end, match, *pregex, flags)`。 如果搜尋失敗，此運算子便會將物件設定為結束序列迭代器。
 
 ### <a name="example"></a>範例
 

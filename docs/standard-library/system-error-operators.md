@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963689"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 運算子
 
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|要測試是否相等的物件。|
-|`right`|要測試是否相等的物件。|
+|*left*|要測試是否相等的物件。|
+|*right*|要測試是否相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|要測試是否不相等的物件。|
-|`right`|要測試是否不相等的物件。|
+|*left*|要測試是否不相等的物件。|
+|*right*|要測試是否不相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果 `left` 中傳入的物件不等於 `right` 中傳入的物件，即為 **true**；否則為 **false**。
+**true**如果傳入的物件*左*是否不等於傳入的物件*右*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|要比較的物件。|
-|`right`|要比較的物件。|
+|*left*|要比較的物件。|
+|*right*|要比較的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果 `left` 中傳入的物件小於 `right` 中傳入的物件，即為 **true**；否則為 **false**。
+**真**如果傳入的物件*左*少於傳入的物件*右*;否則，請**false**。
 
 ### <a name="remarks"></a>備註
 

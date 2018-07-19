@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860901"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964791"
 ---
 # <a name="packagedtask-class"></a>packaged_task 類別
 
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>參數
 
-`Right` A`packaged_task`物件。
+*右*A`packaged_task`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -131,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>備註
 
-在作業完成後，`Right` 不再具有相關聯的非同步狀態。
+作業之後，*右*不再具有相關聯的非同步狀態。
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。
+**true**如果物件有相關聯的非同步狀態; 否則**false**。
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task 建構函式
 
@@ -178,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-`Right` A`packaged_task`物件。
+*右*A`packaged_task`物件。
 
-`alloc` 記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
+*配置*記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
 
-`fn` 函式物件。
+*fn*函式物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構不具有「相關聯非同步狀態」的 `packaged_task` 物件。
+第一個建構函式會建構沒有「相關聯的非同步狀態」的 `packaged_task` 物件。
 
-第二個建構函式建構 `packaged_task` 物件並從 `Right` 中轉移關聯的非同步狀態。 在作業完成後，`Right` 不再具有相關聯的非同步狀態。
+第二個建構函式建構`packaged_task`物件，並將轉移相關聯的非同步狀態，從*右*。 作業之後，*右*不再具有相關聯的非同步狀態。
 
-第三個建構函式建構 `packaged_task` 物件，其 `fn` 複本儲存在其相關的非同步狀態中。
+第三個建構函式建構`packaged_task`物件具有一份*fn*儲存在其相關聯的非同步狀態。
 
-第四個建構函式建構 `packaged_task` 物件，其 `fn` 複本儲存在其相關的非同步狀態中，並使用 `alloc` 供記憶體配置。
+第四個建構函式建構`packaged_task`物件具有一份*fn*儲存在其相關聯的非同步狀態，並使用`alloc`進行記憶體配置。
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 解構函式
 
@@ -228,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Right` A`packaged_task`物件。
+*右*A`packaged_task`物件。
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -240,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。
+**true**如果物件有相關聯的非同步狀態; 否則**false**。
 
 ## <a name="see-also"></a>另請參閱
 

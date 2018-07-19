@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9c56ecc8b27b18498de225bbba6f0d110d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6223151acbce299178101735db05f7b4bd516f2f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965509"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout 類別
 
@@ -39,11 +39,11 @@ struct is_standard_layout;
 
 |參數|描述|
 |---------------|-----------------|
-|`Ty`|要查詢的類型|
+|*Ty*|要查詢的類型|
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 在記憶體中是具有成員物件之標準配置的類別，則類型述詞的執行個體會保留 true，否則保留 false。
+如果這個型別述詞執行個體保留 true 的型別*Ty*是具有成員物件的標準版面配置在記憶體中，否則為 false 的類別。
 
 ## <a name="requirements"></a>需求
 

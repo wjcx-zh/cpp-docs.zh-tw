@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964908"
 ---
 # <a name="collatebyname-class"></a>collate_byname 類別
 
@@ -49,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-`_Locname` 具名的地區設定。
+*_Locname*具名地區設定。
 
-`_Refs` 初始參考計數。
+*_Refs*初始參考計數。
 
 ## <a name="remarks"></a>備註
 
-範本類別描述的物件，可作為 [collate](../standard-library/collate-class.md#collate)\<CharType> 類型的[地區設定 Facet](../standard-library/locale-class.md#facet_class)。 其行為取決於[具名](../standard-library/locale-class.md#name)地區設定 `_Locname`。 每個建構函式會以 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基底物件。
+範本類別描述的物件，可作為 [collate](../standard-library/collate-class.md#collate)\<CharType> 類型的[地區設定 Facet](../standard-library/locale-class.md#facet_class)。 其行為取決於[名為](../standard-library/locale-class.md#name)地區設定 *_Locname*。 每個建構函式會以 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基底物件。
 
 ## <a name="requirements"></a>需求
 

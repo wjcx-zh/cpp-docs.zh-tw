@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1b13fefbb48ebd28b27f87e0a5622fd3cd5ec4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94207895eb88e0d799289e2c730f99668ca32cef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849856"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963192"
 ---
 # <a name="allocatorfixedsize-class"></a>allocator_fixed_size 類別
 
-描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_fixed_size](../standard-library/max-fixed-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。
+描述物件，此物件可管理之類型的物件儲存體配置和釋放*型別*使用類型的快取[cache_freelist](../standard-library/cache-freelist-class.md)所管理的長度與[max_fixed_size](../standard-library/max-fixed-size-class.md).
 
 ## <a name="syntax"></a>語法
 
@@ -41,11 +41,11 @@ class allocator_fixed_size;
 
 |參數|描述|
 |---------------|-----------------|
-|`Type`|配置器所配置的元素類型。|
+|*類型*|配置器所配置的元素類型。|
 
 ## <a name="remarks"></a>備註
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 巨集會將此類別傳遞為下列陳述式中的 `name` 參數：`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)巨集傳遞此類別做*名稱*下列陳述式中的參數： `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
 ## <a name="requirements"></a>需求
 

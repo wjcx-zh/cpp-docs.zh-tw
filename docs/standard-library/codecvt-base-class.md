@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843258"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965388"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base 類別
 
-codecvt 類別的基底類別，用來定義當做 **result** 參考的列舉類型，用作 facet 成員函式的傳回型別以表示轉換結果。
+Codecvt 類別用來定義列舉類型的基底類別稱為`result`用作 facet 成員函式的傳回類型，表示轉換的結果。
 
 ## <a name="syntax"></a>語法
 
@@ -50,13 +50,13 @@ protected:
 
 此類別描述樣板類別 [codecvt](../standard-library/codecvt-class.md) 之所有特製化通用的列舉。 列舉結果描述可能從 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 傳回的值：
 
-- 如果內部和外部字元編碼之間的轉換成功，則為 **ok**。
+- `ok` 如果內部和外部字元編碼之間的轉換會成功。
 
-- 如果目的地不夠大，無法成功轉換，則為 **partial**。
+- `partial` 如果目的地無法夠大，才能成功轉換。
 
-- 如果來源序列的格式不正確，則為 **error**。
+- `error` 如果來源序列的格式不，正確。
 
-- 如果函式不會執行任何轉換，則為 **noconv**。
+- `noconv` (如果函式不會執行任何轉換)。
 
 ## <a name="requirements"></a>需求
 

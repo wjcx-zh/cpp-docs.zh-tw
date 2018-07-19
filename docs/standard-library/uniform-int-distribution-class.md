@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f59e7f6595d89b0078e650ab1ce8a36139f03486
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859744"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961574"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 類別
 
@@ -81,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*整數結果類型中，預設值為`int`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -200,17 +200,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-隨機值，內含的下限。
+*a*  
+隨機值的下限 (內含)。
 
-*b*隨機值，內含的上限。
+*b*  
+隨機值的上限 (內含)。
 
-*parm* `param_type`結構，用來建構分佈。
+*parm*  
+用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
 **前置條件：**`a ≤ b`
 
-第一個建構函式建構的物件，其預存的 `a` 值具有 *a* 值，而其預存的 `b` 值具有 *b* 值。
+第一個建構函式會建構一個物件的預存值具有值 ，且預存*b*值保留值*b*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
@@ -233,11 +236,14 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-隨機值，內含的下限。
+*a*  
+隨機值的下限 (內含)。
 
-*b*隨機值，內含的上限。
+*b*  
+隨機值的上限 (內含)。
 
-*右*`param_type`這要比較的物件。
+*right*  
+要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 

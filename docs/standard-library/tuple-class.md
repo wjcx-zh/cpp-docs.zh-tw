@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963922"
 ---
 # <a name="tuple-class"></a>元組類別
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>參數
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ 第 N 個 tuple 項目類型。
 
-## Remarks
+## <a name="remarks"></a>備註
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+此範本類別描述可儲存 n 名的物件型別的`T1`， `T2`，...，`TN`分別、 where `0 <= N <= Nmax`。 元組執行個體的範圍`tuple<T1, T2, ..., TN>`是數字`N`樣板引數。 樣板引數的索引`Ti`，而且該類型之對應預存值`i - 1`。 因此，我們數字中的類型從 1 到 N 這份文件，而對應的索引值的範圍是從 0 to N – 1。
 
-## Example
+## <a name="example"></a>範例
 
 ```cpp
 // tuple.cpp
@@ -153,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>參數
 
-`UN` 元組項目複製的第 n 個類型。
+*取消*  
+ 第 N 個複製的元組項目類型。
 
-`right` 若要從複製 tuple。
+*right*  
+ 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
 
-前兩個成員運算子會將 `right` 元素指派給 `*this` 對應元素。 第三個成員運算子會將 `right.first` 指派給位於索引 0 的元素 `*this`，並將 `right.second` 指派給位於索引 1 的元素。 這三個成員運算子都會傳回 `*this`。
+前兩個成員運算子將指派的項目*右*的對應項目至`*this`。 第三個成員運算子會將 `right.first` 指派給位於索引 0 的元素 `*this`，並將 `right.second` 指派給位於索引 1 的元素。 這三個成員運算子都會傳回 `*this`。
 
 其餘的成員運算子都類似上述的運算子，但具有[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -226,8 +229,8 @@ template <class... Types>
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|其元素要與 tuple `right` 交換的 tuple。|
-|`right`|其元素要與 tuple `left` 交換的 tuple。|
+|*left*|其項目要與 tuple 交換的 tuple*右*。|
+|*right*|其項目要與 tuple 交換的 tuple*左*。|
 
 ### <a name="remarks"></a>備註
 
@@ -260,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>參數
 
-`UN` 元組項目複製的第 n 個類型。
+*取消*  
+ 第 N 個複製的元組項目類型。
 
-`right` 若要從複製 tuple。
+*right*  
+ 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
 
@@ -270,7 +275,7 @@ template <class U1, class U2>
 
 第二個建構函式會建構其項目複製建構自引數 `P1`、`P2`、...、`PN` 的物件，其中每個 `Pi` 會初始化索引 `i - 1` 處的項目。
 
-第三個和第四個建構函式會建構其項目複製建構自 `right` 之對應項目的物件。
+第三個和第四個建構函式會建構其項目是複製建構自的對應項目物件*右*。
 
 第五個建構函式會建構其索引 0 處的項目複製建構自 `right.first`，而其索引 1 處的項目複製建構自 `right.second` 的物件。
 

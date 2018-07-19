@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847724"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961479"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -37,7 +37,7 @@ ms.locfileid: "33847724"
 
 ## <a name="remarks"></a>備註
 
-操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流執行動作，例如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 其中一種範本類別的特製化。 例如，[noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 會清除 **str** 物件中的格式旗標 `ios_base::skipws`，這可能是這些類型其中之一。
+操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流執行動作，例如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 其中一種範本類別的特製化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除的格式旗標`ios_base::skipws`物件中`str`，這可以是其中一種類型。
 
 基於針對衍生自 `ios_base` 的類別提供的特殊插入和擷取作業，您也可以將操作工具插入輸出資料流中，或從輸入資料流中加以擷取，以呼叫操作工具。 例如: 
 

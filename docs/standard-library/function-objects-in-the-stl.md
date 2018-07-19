@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845449"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964921"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準程式庫的函式物件
 
@@ -58,7 +58,7 @@ template <class Key,
 class set
 ```
 
-第二個樣板引數是函式物件 `less`。 如果第一個傳遞的參數小於第二個傳遞的參數，這個函式物件會傳回 `true` 。 由於某些容器會排序其項目，因此容器需要用於比較兩個項目的方式，透過函式物件可以達成這個目的。 您可以建立一個函式物件，並在容器的樣板清單中指定這個物件，來為容器定義自己的排序準則。
+第二個樣板引數是函式物件 `less`。 這個函式物件會傳回 **，則為 true**的第一個參數傳遞至其是否小於第二個參數傳遞。 由於某些容器會排序其項目，因此容器需要用於比較兩個項目的方式，透過函式物件可以達成這個目的。 您可以建立一個函式物件，並在容器的樣板清單中指定這個物件，來為容器定義自己的排序準則。
 
 ## <a name="function-objects-and-algorithms"></a>函式物件和演算法
 
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-傳遞給 `remove_if` 的最後一個引數是傳回布林值 ( *「述詞」*(Predicate)) 的函式物件。 如果函式物件的結果為 `true`，則會從迭代器 `first` 和 `last` 所存取的容器中移除該項目。 您可以使用引數 `pred` 的 [\<functional>](../standard-library/functional.md) 標頭中所宣告的任何函式物件，或自行建立。
+傳遞給 `remove_if` 的最後一個引數是傳回布林值 ( *「述詞」*(Predicate)) 的函式物件。 函式物件的結果是否 **，則為 true**，則會從迭代器所存取的容器中移除之項目的`first`和`last`。 您可以使用引數 `pred` 的 [\<functional>](../standard-library/functional.md) 標頭中所宣告的任何函式物件，或自行建立。
 
 ## <a name="see-also"></a>另請參閱
 

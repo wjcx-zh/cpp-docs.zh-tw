@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840696"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962109"
 ---
 # <a name="alignedunion-class"></a>aligned_union 類別
 
@@ -39,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>參數
 
-`Len` 對齊值，此等位中最大的類型。
+*Len*等位中的最大類型的對齊值。
 
-`Types` 基礎等位中不同的類型。
+*型別*基礎等位中不同的類型。
 
 ## <a name="remarks"></a>備註
 
-使用此範本類別，即可取得將等位儲存在未初始化儲存空間中所需的對齊和大小。 成員 typedef `type` 會命名適合儲存 `Types` 中所列之任何類型的 POD 類型；大小下限為 `Len`。 類型 `std::size_t` 的靜態成員 `alignment_value` 包含 `Types` 中所列之所有類型需要的最嚴格對齊。
+使用此範本類別，即可取得將等位儲存在未初始化儲存空間中所需的對齊和大小。 成員 typedef`type`名稱的 POD 類型適用於中所列出的任何類型的儲存體*型別*; 大小下限是*Len*。 靜態成員`alignment_value`型別的`std::size_t`包含中列出的所有類型的所需的最嚴格對齊*型別*。
 
 ## <a name="example"></a>範例
 

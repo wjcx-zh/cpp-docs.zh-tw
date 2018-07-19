@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965454"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 運算子
 
-\<array> 標頭包含這些 `array` 非成員比較範本函式。
+\<陣列 > 標頭包含這些**陣列**非成員比較範本函式。
 
 ||||
 |-|-|-|
@@ -42,13 +42,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要比較的左側的容器。
+*左*来比較的左的容器。
 
-`right` 要比較的右容器。
+*右*来比較的右容器。
 
 ### <a name="remarks"></a>備註
 
@@ -111,13 +111,13 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要比較的左側的容器。
+*左*来比較的左的容器。
 
-`right` 要比較的右容器。
+*右*来比較的右容器。
 
 ### <a name="remarks"></a>備註
 
@@ -181,13 +181,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要比較的左側的容器。
+*左*来比較的左的容器。
 
-`right` 要比較的右容器。
+*右*来比較的右容器。
 
 ### <a name="remarks"></a>備註
 
@@ -251,13 +251,13 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要比較的左側的容器。
+*左*来比較的左的容器。
 
-`right` 要比較的右容器。
+*右*来比較的右容器。
 
 ### <a name="remarks"></a>備註
 
@@ -321,13 +321,13 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要比較的左側的容器。
+*左*来比較的左的容器。
 
-`right` 要比較的右容器。
+*右*来比較的右容器。
 
 ### <a name="remarks"></a>備註
 
@@ -391,13 +391,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要比較的左側的容器。
+*左*来比較的左的容器。
 
-`right` 要比較的右容器。
+*右*来比較的右容器。
 
 ### <a name="remarks"></a>備註
 

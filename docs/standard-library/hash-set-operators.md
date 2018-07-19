@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847256"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966650"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 運算子
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_set`。
+*左*型別的物件`hash_set`。
 
-`right` 型別的物件`hash_set`。
+*右*型別的物件`hash_set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -48,7 +48,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 hash_set 物件之間的比較是以其元素之間的成對比較為基礎。 兩個 hash_set 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。
 
-成員[< hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)標頭檔位於[stdext 命名空間](../standard-library/stdext-namespace.md)。
+成員[< p >](../standard-library/hash-map.md)並[< hash_set >](../standard-library/hash-set.md)標頭檔位於[stdext 命名空間](../standard-library/stdext-namespace.md)。
 
 ### <a name="example"></a>範例
 
@@ -102,9 +102,9 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_set`。
+*左*型別的物件`hash_set`。
 
-`right` 型別的物件`hash_set`。
+*右*型別的物件`hash_set`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -166,9 +166,9 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_multiset`。
+*左*型別的物件`hash_multiset`。
 
-`right` 型別的物件`hash_multiset`。
+*右*型別的物件`hash_multiset`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -230,9 +230,9 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_multiset`。
+*左*型別的物件`hash_multiset`。
 
-`right` 型別的物件`hash_multiset`。
+*右*型別的物件`hash_multiset`。
 
 ### <a name="return-value"></a>傳回值
 

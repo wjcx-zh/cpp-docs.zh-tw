@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858509"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965873"
 ---
 # <a name="slice-class"></a>slice 類別
 
@@ -146,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>參數
 
-`_StartIndex` Valarray 索引子集的第一個項目。
+*_StartIndex* valarray 索引子集的第一個元素。
 
-`_Len` 子集中的項目數目。
+*_Len*子集中的項目數。
 
-`stride` 子集中的項目之間的距離。
+*stride*子集中的項目之間的距離。
 
 ### <a name="return-value"></a>傳回值
 
-預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個建構函式會針對起始索引儲存 `_StartIndex`、針對總長度儲存 `_Len`，以及針對分散儲存 `stride`。
+預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個建構函式儲存 *_StartIndex*起始的索引，如 *_Len*的總長度，並*stride*針對分散。
 
 ### <a name="remarks"></a>備註
 

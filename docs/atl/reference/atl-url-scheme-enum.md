@@ -1,5 +1,5 @@
 ---
-title: ATL_URL_SCHEME 列舉 |Microsoft 文件
+title: ATL_URL_SCHEME 列舉 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d180454b3189988752c9002ddc462eb460d51ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7dc33d4806e02541f45bfde2ecb5acdc0133ad3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962220"
 ---
 # <a name="atlurlscheme"></a>ATL_URL_SCHEME  
 
-這個列舉的成員提供常數所了解配置[CUrl](curl-class.md)。  
+這個列舉型別的成員提供了解配置常數[CUrl](curl-class.md)。  
   
 ## <a name="syntax"></a>語法  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1686900fe876d1fd884c8321654b7a7f866647
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966533"
 ---
 # <a name="isnullpointer-class"></a>is_null_pointer 類別
 
@@ -37,11 +37,11 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是 `std::nullptr_t`，類型述詞執行個體的值就會是 true，否則會是 false。
+如果型別述詞的執行個體保留 true 的型別*T*是`std::nullptr_t`，否則為 false。
 
 ## <a name="requirements"></a>需求
 

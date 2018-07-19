@@ -1,5 +1,5 @@
 ---
-title: 主要運算式 |Microsoft 文件
+title: 主要運算式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c419bf65a02d13359335bc6cb527fc189d596d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966941"
 ---
 # <a name="primary-expressions"></a>主要運算式
 主要運算式為更複雜運算式的建置組塊。 它們是常值、名稱，以及範圍解析運算子 (`::`) 所限定的名稱。  主要運算式可以具有下列任何形式：  
   
 ```  
   
-      literal  
-      this  
-:: namename( expression )  
+literal  
+this
+name  
+::name ( expression )  
 ```  
   
  A*常值*是常數主要運算式。 它的類型取決於其規格形式。 請參閱[常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)有關指定常值的完整資訊。  
   
  **這**關鍵字是類別物件的指標。 它可在非靜態成員函式中使用，並且指向針對其叫用函式的類別執行個體。 **這**關鍵字不能用在類別成員函式主體之外。  
   
- 型別**這**指標`type`  **\*const** (其中`type`是類別名稱) 未特別修改函式內**此**指標。 下列範例會示範成員函式宣告和類型的**這**:  
+ 型別**這**指標`type`  **\*const** (其中`type`是類別名稱) 在未具體修改函式內**此**指標。 下列範例會示範成員函式宣告和類型**這**:  
   
-```  
+```cpp 
 // expre_Primary_Expressions.cpp  
 // compile with: /LD  
 class Example  
@@ -52,17 +54,15 @@ public:
 };  
 ```  
   
- 請參閱[this 指標](this-pointer.md)如需有關修改的類型**這**指標。  
+ 請參閱[這個指標](this-pointer.md)如需有關修改的型別**這**指標。  
   
  後面接的名稱的範圍解析運算子 (`::`) 會構成主要運算式。  這類名稱必須是全域範圍的名稱，而不是成員名稱。  這個運算式的類型是由名稱的宣告所決定。 如果宣告名稱是左值，它就是左值 (也就是說，它可以出現在指派運算子運算式左邊)。 範圍解析運算子允許參考全域名稱，即使該名稱在目前範圍中為隱藏狀態。 請參閱[範圍](../cpp/scope-visual-cpp.md)如需如何使用範圍解析運算子的範例。  
   
  以括號括住的運算式為主要運算式，其類型和值與未以括號括住之運算式的類型和值相同。 如果未以括號括住的運算式為左值，它就是左值。  
   
- 主要運算式語法，上面所列的內容中*名稱*表示任何項目中所述的語法[名稱](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db)，不過，當使用名稱型別名稱前面的範圍解析運算子只能在類別中不允許。  這類名稱包括使用者定義的轉換函式名稱和解構函式名稱。  
-  
  主要運算式的範例包括：  
   
-```  
+```cpp 
 100 // literal  
 'c' // literal  
 this // in a member function, a pointer to the class instance  
@@ -74,7 +74,7 @@ this // in a member function, a pointer to the class instance
   
  下列範例會將被視為*名稱*，並因此為主要運算式中各種形式：  
   
-```  
+```cpp 
 MyClass // a identifier  
 MyClass::f // a qualified name  
 operator = // an operator function name  

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1c987ac2034fa11de72ad96c5e85669ee7ee9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 191dee69d9c25df677e9e30fb0b1d451b520f5ac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962409"
 ---
 # <a name="container-classsizetype"></a>容器類別::size_type
 
@@ -37,7 +37,7 @@ typedef T0 size_type;
 
 ## <a name="remarks"></a>備註
 
-在此將其描述為未指定之 **T0** (通常為 **Alloc::size_type**) 類型的同義字。
+其描述為未指定類型的同義字`T0`(通常`Alloc::size_type`)。
 
 ## <a name="see-also"></a>另請參閱
 

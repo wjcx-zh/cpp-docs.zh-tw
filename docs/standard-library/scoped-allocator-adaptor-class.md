@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403e0133818846deb08bb336adc98618e944bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962926"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 類別
 
@@ -131,9 +131,9 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>參數
 
-`count` 要配置足夠的儲存空間的項目數。
+*計數*配置足夠的儲存體的項目數。
 
-`hint` 指標，以協助找出要求之前配置的物件位址的配置器物件。
+*提示*可協助找出要求之前所配置的物件位址的配置器物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -168,19 +168,19 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 要建構物件的記憶體位置指標。
+*ptr*是要建構物件之記憶體位置的指標。
 
-`args` 引數清單。
+*args*引數清單。
 
-`first` 配對中第一種類型的物件。
+*第一個*配對中第一種類型的物件。
 
-`second` 配對中第二個型別的物件。
+*第二個*配對中第二個類型的物件。
 
-`right` 若要移動或複製現有的物件。
+*右*移動或複製現有的物件。
 
 ### <a name="remarks"></a>備註
 
-第一個方法會藉由呼叫 `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`，在 `ptr` 上建構物件，其中 `xargs...` 是下列其中一項。
+第一種方法建構的物件*ptr*藉由呼叫`Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`，其中`xargs...`是下列其中之一。
 
 - 如果 `uses_allocator<Ty, inner_allocator_type>` 保留 false，則 `xargs...` 是 `args...`。
 
@@ -188,7 +188,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 - 如果 `uses_allocator<Ty, inner_allocator_type>` 保留 true，而且 `is_constructible<Ty, args..., inner_allocator()>` 保留 true，則 `xargs...` 是 `args..., inner_allocator()`。
 
-第二個方法會藉由呼叫 `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)` (其中 `xargs...` 是如上述清單中修改的 `first...`) 及 `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)` (其中 `xargs...` 是如上述清單中修改的 `second...`)，在 `ptr` 上建構配對物件。
+第二個方法會建構配對物件*ptr*藉由呼叫`Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`，其中`xargs...`會`first...`如上述清單中，修改並`Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`，其中`xargs...`是`second...`修改如上述清單中。
 
 第三個方法的行為與 `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)` 相同。
 
@@ -208,9 +208,9 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 開始位置解除配置物件的指標。
+*ptr*解除配置物件的起始位置的指標。
 
-`count` 若要解除配置的物件數目。
+*計數*解除配置的物件數目。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +223,7 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>參數
 
-`ptr` 要終結物件的指標。
+*ptr*即將終結物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -294,15 +294,15 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>參數
 
-`right` 現有`scoped_allocator_adaptor`。
+*右*現有`scoped_allocator_adaptor`。
 
-`al` 要做為外部的配置器的現有配置器。
+*al*用作外部配置器的現有配置器。
 
-`rest` 要做為內部的配置器的配置器的清單。
+*rest*来做為內部的配置器的配置器的清單。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式預設會建構它的預存配置器物件。 後續三個建構函式的每一個都會從 `right` 的對應物件中建構它的預存配置器物件。 最後一個建構函式會從引數清單的對應引數中建立它的預存配置器物件。
+第一個建構函式預設會建構它的預存配置器物件。 每個後續三個建構函式會建構中對應的物件從其預存配置器物件*右*。 最後一個建構函式會從引數清單的對應引數中建立它的預存配置器物件。
 
 ## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
 
@@ -314,7 +314,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>傳回值
 
-這個方法會有效地傳回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 結果是新的 `scoped_allocator_adaptor` 物件，以及對於對應配置器 `al` 呼叫 `al.select_on_container_copy_construction()` 來初始化的每個預存配置器物件。
+這個方法會有效地傳回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 結果是新`scoped_allocator_adaptor`物件，初始化藉由呼叫一個預存配置器物件`al.select_on_container_copy_construction()`對應的配置器*al*。
 
 ## <a name="see-also"></a>另請參閱
 

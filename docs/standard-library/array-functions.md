@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840771"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961067"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函式
 
-\<array> 標頭包含兩個非成員函式 `get` 和 `swap` 以作業於 `array` 物件。
+\<陣列 > 標頭包含兩個非成員函式`get`並`swap`，以運作於**陣列**物件。
 
 |||
 |-|-|
@@ -50,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Index` 項目位移。
+*索引*項目位移。
 
-`T` 項目的類型。
+*T*元素的類型。
 
-`N` 陣列中的項目數目。
+*N*陣列中的項目數。
 
-`arr` 要從選取的陣列。
+*arr*要從選取的陣列。
 
 ### <a name="example"></a>範例
 
@@ -92,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-交換兩個 `array` 物件之 `std::swap` 的非成員範本特製化。
+非成員範本特製化`std::swap`可交換兩個**陣列**物件。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -101,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>參數
 
-`Ty` 項目的類型。
+*Ty*元素的類型。
 
-`N` 陣列的大小。
+*N*陣列的大小。
 
-`left` 要交換的第一個陣列。
+*左*来交換的第一個陣列。
 
-`right` 要交換的第二個陣列。
+*右*来交換的第二個陣列。
 
 ### <a name="remarks"></a>備註
 

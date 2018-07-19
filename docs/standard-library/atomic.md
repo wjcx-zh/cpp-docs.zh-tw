@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74dc0fde7ea066707bb6e93592420009b882ee21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848264"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966637"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ ms.locfileid: "33848264"
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
-> 使用編譯的程式碼中 **/clr**，此標頭會遭到封鎖。
+> 在編譯使用的程式碼 **/clr**，此標頭會遭到封鎖。
 
 不可部分完成作業有兩個重要屬性，可協助您使用多個執行緒來正確操作物件，而不使用 Mutex 鎖定。
 
@@ -90,7 +90,7 @@ ms.locfileid: "33848264"
 
 **C++11**：如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 為 true，則在訊號處理常式中，您可以在 `obj` 物件上執行不可部分完成作業。
 
-[atomic_flag](../standard-library/atomic-flag-structure.md) 類別提供可保留 `bool` 旗標的最小不可部分完成類型。 它的作業永遠是無鎖定。
+此類別[atomic_flag](../standard-library/atomic-flag-structure.md)提供的最小的不可部分完成類型可保存**bool**旗標。 它的作業永遠是無鎖定。
 
 範本類別 `atomic<T>` 會儲存其引數類型 `T` 的物件，並提供該儲存值的不可部分完成存取。 您可以將它具現化，方法是使用可使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 進行複製以及使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 測試是否相等的任何類型。 特別的是，您可以將它與符合這些需求的使用者定義類型搭配使用，而且在許多情況下，也可以與浮點類型搭配使用。
 
@@ -110,20 +110,20 @@ ms.locfileid: "33848264"
 
 |`atomic_integral` 型別|整數類型|`atomic_is_lock_free` 巨集|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_uchar`|`unsigned char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_char16_t`|`char16_t`|`ATOMIC_CHAR16_T_LOCK_FREE`|
-|`atomic_char32_t`|`char32_t`|`ATOMIC_CHAR32_T_LOCK_FREE`|
-|`atomic_wchar_t`|`wchar_t`|`ATOMIC_WCHAR_T_LOCK_FREE`|
-|`atomic_short`|`short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_ushort`|`unsigned short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_int`|`int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_uint`|`unsigned int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_long`|`long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_ulong`|`unsigned long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|
-|`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|
+|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**帶正負號的 char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
 
 具有 typedef 名稱可特製化標頭 \<inttypes.h> 中所定義之部分類型的不可部分完成範本。
 
@@ -165,7 +165,7 @@ ms.locfileid: "33848264"
 |名稱|描述|
 |----------|-----------------|
 |[atomic 結構](../standard-library/atomic-structure.md)|描述在預存值上執行不可部分完成作業的物件。|
-|[atomic_flag 結構](../standard-library/atomic-flag-structure.md)|描述以不可部分完成方式設定和清除 `bool` 旗標的物件。|
+|[atomic_flag 結構](../standard-library/atomic-flag-structure.md)|描述的物件，以不可分割方式設定，並清除**bool**旗標。|
 
 ## <a name="enums"></a>列舉
 
@@ -195,10 +195,10 @@ ms.locfileid: "33848264"
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|將現有預存值減去指定的值。|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|對指定的值和現有預存值執行位元 `exclusive or`。|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|對指定的值和現有預存值執行位元 `exclusive or`。|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|將 `atomic_flag` 物件中的旗標設定為 `false`。|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|將 `atomic_flag` 物件中的旗標設定為 `false`。|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|將 `atomic_flag` 物件中的旗標設定為 `true`。|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|將 `atomic_flag` 物件中的旗標設定為 `true`。|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|設定的旗標`atomic_flag`物件至**false**。|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|設定的旗標`atomic_flag`物件至**false**。|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|設定的旗標`atomic_flag`物件至 **，則為 true**。|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|設定的旗標`atomic_flag`物件至 **，則為 true**。|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|設定 `atomic` 物件中的預存值。|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定所指定物件上的不可部分完成作業是否為「無鎖定」。|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|以不可部分完成的方式擷取值。|

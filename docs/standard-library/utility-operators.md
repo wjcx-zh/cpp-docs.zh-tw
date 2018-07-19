@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962022"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 運算子
 
@@ -48,9 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**組。**
+*left*  
+ `pair` 類型的物件。
 
-`right` 型別的物件`pair`。
+*right*  
+ `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -118,9 +120,9 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**組。**
+*左*型別的物件`pair`。
 
-`right` 型別的物件`pair`。
+*右*型別的物件`pair`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -179,9 +181,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`pair`運算子的左邊。
+*left*  
+ 運算子左側 `pair` 類型的物件。
 
-`right` 型別的物件`pair`運算子的右邊。
+*right*  
+ 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -189,7 +193,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>備註
 
-`left` `pair`物件，即所謂必小於`right``pair`物件，如果`left`小於且不等於`right`。
+`left` `pair`物件，即所謂必小於`right``pair`物件如果*左*小於且不等於*右*。
 
 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。
 
@@ -254,9 +258,11 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`pair`運算子的左邊。
+*left*  
+ 運算子左側 `pair` 類型的物件。
 
-`right` 型別的物件`pair`運算子的右邊。
+*right*  
+ 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -337,9 +343,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`pair`運算子的左邊。
+*left*  
+ 運算子左側 `pair` 類型的物件。
 
-`right` 型別的物件`pair`運算子的右邊。
+*right*  
+ 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -347,7 +355,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>備註
 
-`left` `pair`物件，即所謂必大於`right``pair`物件，如果`left`大於且不等於`right`。
+`left` `pair`即所謂必大於`right``pair`物件如果*左*大於且不等於*右*。
 
 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。
 
@@ -422,9 +430,11 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`pair`運算子的左邊。
+*left*  
+ 運算子左側 `pair` 類型的物件。
 
-`right` 型別的物件`pair`運算子的右邊。
+*right*  
+ 運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 

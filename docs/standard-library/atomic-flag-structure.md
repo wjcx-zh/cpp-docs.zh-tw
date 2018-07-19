@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06959bd5a22c65077f447f0f0e776025cbe5ced5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6a5162057944ac3d91d2465cfefe99c68dd5fb3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961407"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag 結構
 
-描述以不可部分完成方式設定和清除 `bool` 旗標的物件。 不可部分完成的旗標之作業永遠是無鎖定。
+描述的物件，以不可分割方式設定，並清除**bool**旗標。 不可部分完成的旗標之作業永遠是無鎖定。
 
 ## <a name="syntax"></a>語法
 
@@ -39,8 +39,8 @@ struct atomic_flag;
 
 |名稱|描述|
 |----------|-----------------|
-|[clear](#clear)|將已儲存的旗標設定為 `false`。|
-|[test_and_set](#test_and_set)|將已儲存的旗標設定為 `true` 並傳回初始旗標值。|
+|[clear](#clear)|若要設定儲存的旗標**false**。|
+|[test_and_set](#test_and_set)|若要設定儲存的旗標 **，則為 true** ，並傳回初始旗標值。|
 
 ## <a name="remarks"></a>備註
 
@@ -54,7 +54,7 @@ struct atomic_flag;
 
 ## <a name="clear"></a>  atomic_flag::clear
 
-在指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束內，將儲存在 `*this` 中的 `bool` 旗標設定為 `false`。
+集合**bool**旗標，會儲存在`*this`要**false**，在指定[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束。
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -63,11 +63,11 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-在指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束內，將儲存在 `*this` 中的 `bool` 旗標設定為 `true`。
+集合**bool**旗標，會儲存在`*this`要 **，則為 true**，在指定[memory_order](../standard-library/atomic-enums.md#memory_order_enum)條件約束。
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -76,7 +76,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>參數
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
 

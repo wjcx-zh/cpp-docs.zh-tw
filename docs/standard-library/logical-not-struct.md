@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860014"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961635"
 ---
 # <a name="logicalnot-struct"></a>logical_not 結構
 
-在其引數上執行邏輯 NOT 運算 ( `operator!`) 的預先定義函式物件。
+預先定義的函式物件執行邏輯 not 運算 (`operator!`) 在其引數。
 
 ## <a name="syntax"></a>語法
 
@@ -49,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>參數
 
-`Type` 支援任何型別`operator!`接受指定或推斷類型的運算元。
+*型別*支援任何型別`operator!`會指定或推斷類型的運算元。
 
-`Left` 運算元的邏輯 not 運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `Type` 推斷類型的左值和右值參考引數。
+*左*之運算元的邏輯 not 運算。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*型別*。
 
 ## <a name="return-value"></a>傳回值
 

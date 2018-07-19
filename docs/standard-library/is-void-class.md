@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13fee96611e2a2618de6ea6e1671ece9986a22d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 35a40b016fa8fb25782393ea462b5cff2a3c3fac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857580"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963249"
 ---
 # <a name="isvoid-class"></a>is_void 類別
 
@@ -37,11 +37,11 @@ struct is_void;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是 `void` 或 `void`的 cv 限定表單，則類型述詞的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*T*是**void**或的 cv 限定表單**void**，否則為 false。
 
 ## <a name="example"></a>範例
 

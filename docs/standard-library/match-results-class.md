@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964479"
 ---
 # <a name="matchresults-class"></a>match_results 類別
 
@@ -69,9 +69,9 @@ class match_results {
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 子相符項目的迭代器類型。
+*BidIt*子相符項目的迭代器類型。
 
-`Alloc` 管理儲存體的配置器類型。
+*配置*管理儲存體的配置器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -93,7 +93,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>備註
 
-typedef 是範本引數 `Alloc`的同義字。
+此 typedef 是範本引數的同義字*Alloc*。
 
 ### <a name="example"></a>範例
 
@@ -1066,17 +1066,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>參數
 
-`OutIt` 輸出迭代器類型。
+*OutIt*輸出迭代器類型。
 
-`out` 要寫入輸出資料流。
+*out*寫入的輸出資料流。
 
-`fmt` 格式字串。
+*fmt*格式字串。
 
-`flags` 格式旗標。
+*旗標*格式旗標。
 
 ### <a name="remarks"></a>備註
 
-受 `fmt` 格式的控制下，每個成員函式產生格式化文字。 第一個成員函式將格式化文字寫入其引數 `out` 所定義的序列，並傳回 `out`。 第二個成員函式會傳回保存格式化文件複本的字串物件。
+每個成員函式會產生格式化的文字格式的控制之下*fmt*。 第一個成員函式會將格式化的文字寫入其引數所定義的順序*放大*，然後傳回*出*。第二個成員函式會傳回保存格式化文件複本的字串物件。
 
 若要產生格式化文字， 格式字串中的常值文字通常會複製到目標序列。 格式字串中的每個逸出序列由所代表的文字取代。 複製和取代的詳細資料受到傳遞至函式的格式旗標控制。
 
@@ -1441,7 +1441,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>參數
 
-`sub` 子相符項目的索引。
+*sub*子相符項目的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-`alloc` 要儲存的配置器物件。
+*配置*来儲存的配置器物件。
 
-`right` 要複製的 match_results 物件。
+*右*来複製的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構不含子相符項目的 `match_results` 物件。 第二個建構函式會建構是 `right` 之複本的 `match_results` 物件。
+第一個建構函式會建構不含子相符項目的 `match_results` 物件。 第二個建構函式建構`match_results`物件，是一份*右*。
 
 ### <a name="example"></a>範例
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要複製的 match_results 物件。
+*右*来複製的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將 `*this` 所控制的序列取代為 `right` 所控制之序列的複本。
+此成員運算子會取代所控制的序列`*this`所控制之序列的複本*右*。
 
 ### <a name="example"></a>範例
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>參數
 
-`n` 子相符項目的索引。
+*n*子相符項目的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回受控制序列之項目 `n` 的參考；如果 `sub_match` 或擷取群組 `size() <= n` 不是比對的一部分，則傳回空白 `n` 物件的參考。
+此成員函式會傳回元素的參考*n*的受控制的序列或設為空白參考`sub_match`物件`size() <= n`或擷取群組*n*不是比對的一部分。
 
 ### <a name="example"></a>範例
 
@@ -2066,7 +2066,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>參數
 
-`sub` 子相符項目的索引。
+*sub*子相符項目的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -2675,7 +2675,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>參數
 
-`sub` 子相符項目的索引。
+*sub*子相符項目的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>參數
 
-`right` 要交換的 match_results 物件。
+*右*来交換的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會定時交換 `*this` 和 `right` 的內容，但不會擲回例外狀況。
+此成員函式的內容交換`*this`並*右*以常數時間並不會擲回例外狀況。
 
 ### <a name="example"></a>範例
 

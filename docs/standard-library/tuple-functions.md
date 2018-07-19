@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858808"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966403"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函式
 
@@ -64,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>參數
 
-`Index` 要取得之項目的索引。
+*Tuple*  
+ 要取得的項目索引。
 
-`Types` Tuple，按宣告順序中宣告的類型序列。
+*型別*  
+ Tuple 中宣告的類型序列，按宣告順序。
 
-`T` 要取得之項目的類型。
+*T*  
+ 要取得的元素類型。
 
-`Tuple` Std:: tuple，其中包含任何數目的元素。
+*Tuple*  
+ 包含任何數目元素的 Std::tuple。
 
 ### <a name="remarks"></a>備註
 
-範本函式傳回位於索引 `Index`的值參考，或 `T` 物件中的類型 `tuple` 。
+範本函式會傳回索引處的值的參考*Index*，或型別的*T*在`tuple`物件。
 
 如果 Tuple 不是包含剛剛好一個類型 T 的元素，呼叫 `get<T>(Tuple)` 就會產生編譯器錯誤。
 
@@ -118,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>參數
 
-`TN` Nth 函式參數的型別。
+*TN*  
+ 第 N 個函式參數的類型。
 
-`tN` Nth 函式參數的值。
+*TN*  
+ 第 N 個函式參數的值。
 
 ### <a name="remarks"></a>備註
 
@@ -174,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>參數
 
-`TN` Tuple 第 n 個項目的基底類型。
+*TN*  
+ 第 N 個 tuple 元素的基底類型。
 
 ### <a name="remarks"></a>備註
 

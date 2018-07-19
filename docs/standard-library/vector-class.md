@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea70adff4f162c432fea96c25e37ecca917d96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba8ef2a2044c55da258c4dbcde6690112d52f1a9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963598"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -116,9 +116,11 @@ class vector
 
 ### <a name="parameters"></a>參數
 
-*型別*向量中儲存的項目資料類型
+*類型*  
+ 要儲存在向量中的項目資料類型
 
-`Allocator` 表示封裝有關向量之配置和解除配置記憶體的詳細資訊的預存配置器物件的型別。 這個引數是選擇性，而且預設值是 **配置器 * * *\<類型 >。*
+*配置器*  
+ 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的預設值是 **allocator *\<類型 >。*
 
 ## <a name="remarks"></a>備註
 
@@ -143,10 +145,10 @@ class vector
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|代表向量物件之 `allocator` 類別的類型。|
-|[const_iterator](#const_iterator)|提供可讀取向量中 `const` 項目之隨機存取迭代器的類型。|
-|[const_pointer](#const_pointer)|提供向量中 `const` 項目之指標的類型。|
-|[const_reference](#const_reference)|提供儲存在向量中供讀取和執行 `const` 作業之 `const` 項目參考的類型。|
-|[const_reverse_iterator](#const_reverse_iterator)|提供可讀取向量中任何 `const` 項目之隨機存取迭代器的類型。|
+|[const_iterator](#const_iterator)|一種類型，提供可讀取向量中 **const** 項目之隨機存取迭代器。|
+|[const_pointer](#const_pointer)|一種類型，提供向量中 **const** 元素的指標。|
+|[const_reference](#const_reference)|一種類型，提供儲存在向量中供讀取和執行 **const** 運算之 **const** 元素的參考。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取向量中任何 **const** 項目之隨機存取迭代器。|
 |[difference_type](#difference_type)|提供向量中兩個項目位址之間差異的類型。|
 |[iterator](#iterator)|提供可讀取或修改向量中任何項目之隨機存取迭代器的類型。|
 |[pointer](#pointer)|提供向量中某個項目指標的類型。|
@@ -212,7 +214,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-`allocator_type` 與範本參數 **Allocator** 同義。
+`allocator_type` 與樣板參數 `Allocator` 同義。
 
 ### <a name="example"></a>範例
 
@@ -232,15 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>參數
 
-`First` 要複製之元素範圍中第一個項目的位置。
+*第一個*  
+ 項目範圍中要複製的第一個項目位置。
 
-`Last` 超出要複製之元素範圍的第一個元素的位置。
+*最後一個*  
+ 項目範圍之外要複製的第一個項目位置。
 
-`Count` 插入向量的項目複本數目。
+*計數*  
+ 插入向量的項目複本數目。
 
-`Val` 插入向量的元素值。
+*val*  
+ 插入向量之項目的值。
 
-`IList` Initializer_list，包含要插入的項目。
+*IList*  
+ 包含要插入之項目的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -306,15 +313,16 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>參數
 
-`_Pos` 註標或位置來參考在向量中項目的數目。
+*_Pos*  
+ 向量中要參考之項目的註標或位置編號。
 
 ### <a name="return-value"></a>傳回值
 
-引數中加上註標的項目參考。 如果 `_Off` 大於向量的大小，**at** 會擲回例外狀況。
+引數中加上註標的項目參考。 如果`_Off`向量，大小大於`at`會擲回例外狀況。
 
 ### <a name="remarks"></a>備註
 
-如果 **at** 的傳回值已指派給 `const_reference`，則不可修改向量物件。 如果 **at** 的傳回值已指派給 **reference**，則可以修改向量物件。
+如果 `at` 的傳回值已指派給 `const_reference`，則無法修改向量物件。 如果 `at` 的傳回值指派給 `reference`，則可以修改向量物件。
 
 ### <a name="example"></a>範例
 
@@ -360,7 +368,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>備註
 
-如果 **back** 的傳回值已指派給 `const_reference`，則不可修改向量物件。 如果 **back** 的傳回值已指派給 **reference**，則可以修改向量物件。
+如果 `back` 的傳回值已指派給 `const_reference`，則無法修改向量物件。 如果 `back` 的傳回值指派給 `reference`，則可以修改向量物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空向量中的元素，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -498,7 +506,7 @@ The length of storage allocated is now 2.
 
 ## <a name="cbegin"></a>  vector::cbegin
 
-傳回 `const` 迭代器，為範圍中的第一個項目定址。
+傳回**const**迭代器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -506,13 +514,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-`const` 隨機存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。
+A **const**隨機存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 且可修改的任何種類 (非 `const`) 容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -524,7 +532,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  vector::cend
 
-傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
+傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -532,13 +540,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向範圍結尾之外的 `const` 隨機存取迭代器。
+A **const**指向範圍結尾之外的隨機存取迭代器。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -902,8 +910,8 @@ iterator emplace(
 
 |參數|描述|
 |-|-|
-|`_Where`|第一個項目插入[向量](../standard-library/vector-class.md)中的位置。|
-|`val`|插入 `vector` 的項目值。|
+|*_Where*|第一個項目插入[向量](../standard-library/vector-class.md)中的位置。|
+|*val*|插入 `vector` 的項目值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -968,7 +976,7 @@ void emplace_back(Types&&... _Args);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Args`|建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。|
+|*_Args*|建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。|
 
 ### <a name="example"></a>範例
 
@@ -1041,7 +1049,7 @@ const_iterator end() const;
 
 ### <a name="remarks"></a>備註
 
-如果 **end** 的傳回值指派給 `const_iterator` 類型的變數，則不可修改向量物件。 如果 **end** 的傳回值指派給 **iterator** 類型的變數，則可以修改向量物件。
+如果傳回值`end`指派給類型的變數`const_iterator`，無法修改向量物件。 如果傳回值`end`指派給類型的變數`iterator`，可以修改向量物件。
 
 ### <a name="example"></a>範例
 
@@ -1086,9 +1094,9 @@ iterator erase(
 
 |參數|描述|
 |-|-|
-|`_Where`|要從向量中移除之項目的位置。|
-|`first`|從向量中移除之第一個項目的位置。|
-|`last`|從向量中移除的最後一個項目之後的位置。|
+|*_Where*|要從向量中移除之項目的位置。|
+|*first*|從向量中移除之第一個項目的位置。|
+|*最後一個*|從向量中移除的最後一個項目之後的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1253,11 +1261,11 @@ void insert(
 
 |參數|描述|
 |-|-|
-|`_Where`|第一個項目插入向量中的位置。|
-|`val`|插入向量之項目的值。|
-|`count`|插入向量的項目數。|
-|`first`|要複製的元素範圍中第一個元素的位置。|
-|`last`|超出要複製之元素範圍的第一個元素的位置。|
+|*_Where*|第一個項目插入向量中的位置。|
+|*val*|插入向量之項目的值。|
+|*count*|插入向量的項目數。|
+|*first*|要複製的元素範圍中第一個元素的位置。|
+|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1265,7 +1273,7 @@ void insert(
 
 ### <a name="remarks"></a>備註
 
-前提是 `first` 和 `last` 不得為向量中的迭代器，否則行為未定義。 任何插入作業都可能高度耗費資源，請參閱 [vector 類別](../standard-library/vector-class.md)中有關 `vector` 效能的討論。
+成套*第一個*並*最後一個*不得迭代器，到向量，或行為是未定義。 任何插入作業都可能高度耗費資源，請參閱 [vector 類別](../standard-library/vector-class.md)中有關 `vector` 效能的討論。
 
 ### <a name="example"></a>範例
 
@@ -1392,7 +1400,7 @@ const_reference operator[](size_type Pos) const;
 
 |參數|描述|
 |-|-|
-|`Pos`|vector 項目的位置。|
+|*pos*|vector 項目的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1439,11 +1447,11 @@ vector& operator=(vector&& right);
 
 |參數|描述|
 |-|-|
-|`right`|複製到 `vector` 的[向量](../standard-library/vector-class.md)。|
+|*right*|複製到 `vector` 的[向量](../standard-library/vector-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-清除 `vector` 中的任何現有項目之後，`operator=` 會將 `right` 的內容複製或移到 `vector` 中。
+在清除任何現有的項目，在之後`vector`，`operator=`複製或移動的內容*右*到`vector`。
 
 ### <a name="example"></a>範例
 
@@ -1553,7 +1561,7 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>參數
 
-`Val` 要指派給向量的結尾處加入元素的值。
+*Val*来加入至向量結尾的項目指派的值。
 
 ### <a name="example"></a>範例
 
@@ -1717,7 +1725,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>參數
 
-`count` 配置給向量的儲存體最小長度。
+*count*  
+ 配置給向量的最小儲存空間長度。
 
 ### <a name="example"></a>範例
 
@@ -1758,13 +1767,15 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>參數
 
-`Newsize` 向量的新大小。
+*Newsize*  
+ 向量的新大小。
 
-`Val` 初始化新項目的值加入至向量，如果新的大小較大的原始大小。 如果省略此值，則新的物件會使用其預設建構函式。
+*val*  
+ 如果新的大小大於原始大小，則已將新元素的初始化值加入至向量。 如果省略此值，則新的物件會使用其預設建構函式。
 
 ### <a name="remarks"></a>備註
 
-如果容器的大小小於所要求的大小 (`Newsize`)，則除非達到所要求的大小，否則會將元素加入至向量。 如果容器的大小大於所要求的大小，則除非容器達到大小 `Newsize`，否則會刪除最接近容器結尾的元素。 如果容器現在的大小與所要求的大小相同，則不會採取任何動作。
+如果容器的大小小於所要求的大小*Newsize*，直到達到所要求的大小，將會加入至向量的項目。 如果容器的大小大於所要求的大小，除非容器達到大小，會刪除最接近容器結尾的元素*Newsize*。 如果容器現在的大小與所要求的大小相同，則不會採取任何動作。
 
 [size](#size) 會反映向量的目前大小。
 
@@ -1998,9 +2009,11 @@ friend void swap(
 
 ### <a name="parameters"></a>參數
 
-`right` 提供待交換，項目或向量，其元素要與向量交換`left`。
+*right*  
+ 提供要交換之元素的向量或其項目要與向量交換的向量*左*。
 
-`left` 向量，其元素要與向量交換`right`。
+*left*  
+ 其項目要與向量交換的向量*右*。
 
 ### <a name="example"></a>範例
 
@@ -2051,7 +2064,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 與範本參數 **Type** 同義。
+`value_type` 與樣板參數 `Type` 同義。
 
 ### <a name="example"></a>範例
 
@@ -2099,27 +2112,27 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 
 |參數|描述|
 |-|-|
-|`Al`|搭配這個物件使用的配置器類別。 [get_allocator](#get_allocator) 會傳回物件的配置器類別。|
-|`Count`|已建構向量中的項目數。|
-|`Val`|已建構向量中的項目值。|
-|`Right`|已建構向量為其複本的向量。|
-|`First`|項目範圍中要複製的第一個項目位置。|
-|`Last`|項目範圍之外要複製的第一個項目位置。|
-|`IList`|initializer_list，包含欲複製的項目。|
+|*Al*|搭配這個物件使用的配置器類別。 [get_allocator](#get_allocator) 會傳回物件的配置器類別。|
+|*計數*|已建構向量中的項目數。|
+|*val*|已建構向量中的項目值。|
+|*右邊*|已建構向量為其複本的向量。|
+|*第一個*|項目範圍中要複製的第一個項目位置。|
+|*最後一個*|項目範圍之外要複製的第一個項目位置。|
+|*IList*|initializer_list，包含欲複製的項目。|
 
 ### <a name="remarks"></a>備註
 
-所有建構函式都會儲存配置器物件 (`Al`) 並初始化向量。
+所有建構函式會儲存配置器物件 (*Al*) 並初始化向量。
 
-前兩個建構函式會指定空的初始向量。 第二個建構函式會明確指定要使用的配置器類型 (`Al`)。
+前兩個建構函式會指定空的初始向量。 第二個明確指定的配置器類型 (*Al*) 使用。
 
-第三個建構函式會指定類別 `Type` 之指定數目 (`Count`) 的項目重複預設值。
+第三個建構函式會指定重複指定數字 (*計數*) 類別的預設值的項目`Type`。
 
-第四及第五個建構函式指定 `Val` 值的 (`Count`) 元素數的重複。
+第四個和第五個建構函式指定的重複 (*計數*) 值之項目的*Val*。
 
-第六個建構函式會指定向量 `Right` 的複本。
+第六個建構函式指定向量的複本*右*。
 
-第七個建構函式會移動向量 `Right`。
+第七個建構函式會移動向量*右*。
 
 第八個建構函式使用 initializer_list 來指定元素。
 

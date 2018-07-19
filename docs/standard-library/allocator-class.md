@@ -44,16 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa9ab355456c912617bfcc1d803fa980ff21669
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964505"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
-此範本類別所描述的物件管理 **Type** 類型物件陣列的儲存空間配置和釋放。 **allocator** 類別的物件是建構函式中指定的預設配置器物件，為針對 C++ 標準程式庫中的數個容器範本類別所指定。
+此範本類別描述物件管理之物件型別陣列的儲存體配置和釋放`Type`。 類別的物件`allocator`是 c + + 標準程式庫中的數個容器範本類別的建構函式中指定的預設配置器物件。
 
 ## <a name="syntax"></a>語法
 
@@ -64,11 +64,11 @@ class allocator
 
 ### <a name="parameters"></a>參數
 
-*型別*要儲存的物件類型的配置或取消配置。
+*型別*，正在儲存體物件的型別配置或取消配置。
 
 ## <a name="remarks"></a>備註
 
-所有 C++ 標準程式庫容器都具有範本參數，預設值為 **allocator**。 建構包含自訂配置器的容器可控制該容器之項目的配置與釋放。
+所有 c + + 標準程式庫容器都具有樣板參數，預設值為`allocator`。 建構包含自訂配置器的容器可控制該容器之項目的配置與釋放。
 
 例如，配置器物件可在私密堆積或共用記憶體中配置儲存體，或是可針對小型或大型物件最佳化。 它也能指定透過其提供的類型定義，透過管理共用記憶體的特殊存取子物件來存取項目，或是執行自動化記憶體回收。 因此，使用配置器物件來配置儲存區的類別，應該使用這些類型來宣告指標和參考物件，如 C++ 標準程式庫中的容器所做的一般。
 
@@ -76,15 +76,15 @@ class allocator
 
 因此，配置器會定義下列類型：
 
-- [pointer](#pointer) 行為類似於 **Type** 的指標。
+- [指標](#pointer)行為類似指標`Type`。
 
-- [const_pointer](#const_pointer) 行為類似於 **Type** 的 const 指標。
+- [const_pointer](#const_pointer)行為類似的 const 指標`Type`。
 
-- [reference](#reference) 行為類似於 **Type** 的參考。
+- [參考](#reference)行為類似的參考`Type`。
 
-- [const_reference](#const_reference) 行為類似於 **Type** 的 const 參考。
+- [const_reference](#const_reference)行為類似的 const 參考`Type`。
 
-這些 **Type** 指定指標和參考必須為所配置元素接受的格式 ([allocator::pointer](#pointer) 不一定與所有配置器的 **Type**\* 相同，即使它針對 **allocator** 類別明顯定義此類型也是如此)。
+這些`Type`指定指標和參考必須採取的配置元素的格式。 ( [allocator:: pointer](#pointer)不一定相同`Type*`所有配置器物件，即使它有類別明顯定義此`allocator`。)
 
 **C++ 11 和更新版本：** 若要在您的配置器中啟用移動運算，請使用最小的配置器介面與實作複製建構函式、== 和 != 運算子、配置及解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
 
@@ -143,7 +143,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>參數
 
-`val` Const 或 nonconst 搜尋的位址之物件的值。
+*val*其位址所搜尋之物件的 const 或 nonconst 值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -151,7 +151,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="remarks"></a>備註
 
-這些成員函式會傳回 `val` 的位址，而且格式是指標必須為所配置元素接受的格式。
+成員函式傳回的位址*val*中指標必須採取的表單配置項目。
 
 ### <a name="example"></a>範例
 
@@ -207,9 +207,9 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>參數
 
-`count` 要配置足夠的儲存空間的項目數。
+*計數*配置足夠的儲存體的項目數。
 
-*_Hint*有助於配置器物件是 const 指標滿足儲存體要求找出要求之前配置的物件的位址。
+*_Hint* const 指標，可協助配置器物件符合儲存體的要求藉由找出要求之前所配置物件的位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -217,7 +217,7 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="remarks"></a>備註
 
-成員函式會配置 **Type** 類型之計算元素陣列的儲存空間，方法是呼叫運算子 new( `count`)。 它會傳回所配置物件的指標。 提示引數可協助部分配置器改善參考區域性；有效的選擇是相同配置器物件稍早所配置但尚未解除配置之物件的位址。 若不要提供提示，請改用 Null 指標引數。
+此成員函式會配置儲存體陣列的類型之計算元素`Type`，方法是呼叫新的運算子 (*計數*)。 它會傳回所配置物件的指標。 提示引數可協助部分配置器改善參考區域性；有效的選擇是相同配置器物件稍早所配置但尚未解除配置之物件的位址。 若不要提供提示，請改用 Null 指標引數。
 
 ### <a name="example"></a>範例
 
@@ -268,7 +268,7 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要複製的配置器物件。
+*右*来複製的配置器物件。
 
 ### <a name="remarks"></a>備註
 
@@ -347,7 +347,7 @@ typedef const value_type *const_pointer;
 
 ### <a name="remarks"></a>備註
 
-此指標類型所描述的物件 **ptr** 可以透過運算式 **\*ptr** 來指定範本類別配置器物件可配置的任何 const 物件。
+指標類型所描述的物件`ptr`，可以指定，透過運算式`*ptr`，範本類別配置器物件可配置的任何 const 物件。
 
 ### <a name="example"></a>範例
 
@@ -471,9 +471,9 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 會建構物件的位置指標。
+*ptr*建構物件之位置的指標。
 
-`val` 要建構的物件都要初始化的值。
+*val*正在建構的物件都要初始化的值。
 
 ### <a name="remarks"></a>備註
 
@@ -538,13 +538,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 從儲存體取消配置第一個物件的指標。
+*ptr*要從儲存體解除配置的第一個物件的指標。
 
-`count` 從儲存體解除配置的物件數目。
+*計數*要從儲存體解除配置的物件數目。
 
 ### <a name="remarks"></a>備註
 
-成員函式釋放的計數類型的物件陣列的儲存體**類型**開始`ptr`，藉由呼叫`operator delete(ptr)`。 之前必須已傳回指標 `ptr`，方法是呼叫等於 **\*this** 之配置器物件的 [allocate](#allocate)，並配置相同大小和類型的陣列物件。 `deallocate` 絕不會擲回例外狀況。
+此成員函式釋放之計算物件的類型陣列的儲存體`Type`開始*ptr*，藉由呼叫`operator delete(ptr)`。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件**\*這**，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -560,11 +560,11 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 指定要終結物件的位址指標。
+*ptr*指標，指定要終結物件的位址。
 
 ### <a name="remarks"></a>備註
 
-成員函式所指定的物件已遭終結`ptr`，藉由呼叫解構函式`ptr->`**類型**::**~ 類型**。
+此成員函式會終結指定的物件*ptr*，藉由呼叫解構函式`ptr->`**類型**::**~ 類型**。
 
 ### <a name="example"></a>範例
 
@@ -678,7 +678,7 @@ The difference between the integer's addresses is: 8.
 
 ## <a name="max_size"></a> allocator::max_size
 
-傳回在可用記憶體用完之前，無法由 allocator 類別的物件所配置之類型 **Type** 的元素數。
+傳回在可用記憶體用完之前，無法由類別配置器的物件配置之類型 `Type` 的元素數。
 
 ```cpp
 size_type max_size() const;
@@ -756,7 +756,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要指派至另一個這類物件的配置器物件。
+*右*配置器物件指派給另一個這類物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -817,7 +817,7 @@ typedef value_type *pointer;
 
 ### <a name="remarks"></a>備註
 
-此指標類型所描述的物件 **ptr** 可以透過運算式 **\*ptr** 來指定範本類別配置器物件可配置的任何物件。
+指標類型所描述的物件`ptr`，可以指定，透過運算式 **\*ptr**，範本類別配置器物件可配置的任何物件。
 
 ### <a name="example"></a>範例
 
@@ -870,7 +870,7 @@ struct rebind {    typedef allocator<_Other> other ;    };
 ```
 ### <a name="parameters"></a>參數
 
-*其他*被配置記憶體的項目的型別。
+*其他*所配置記憶體的元素的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -878,7 +878,7 @@ struct rebind {    typedef allocator<_Other> other ;    };
 
 此成員範本類別會定義 other 類型。 其唯一目的是提供類型名稱 **allocator**\<_ **Other**>，但前提是類型名稱 **allocator**\< **Type**>。
 
-例如，如果指定 **A**類型的 allocator 物件 **al**，您可以使用下列運算式來配置類型 **_Other** 的物件︰
+例如，指定配置器物件`al`型別的`A`，您可以配置類型的物件`_Other`使用運算式：
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -1030,7 +1030,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 **Type** 的同義字。
+此類型是範本參數 `Type`的同義字。
 
 ### <a name="example"></a>範例
 

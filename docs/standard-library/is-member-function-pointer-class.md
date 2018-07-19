@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c8f72191a84661749db87958a2c08807c00d446
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 669e6f8d26b8ce6255d1c8195a089d07ff028b64
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845033"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965775"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer 類別
 
@@ -37,11 +37,11 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是成員函式的指標，或 `cv-qualified` 是成員函式的指標，則類型述詞的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*成員函式的指標或`cv-qualified`成員函式指標，否則為 false。
 
 ## <a name="example"></a>範例
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964251"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible 類別
 
@@ -36,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `T` 類型是具有預設建構函式的類別類型，則類型述詞的執行個體為 true，否則為 false。 這相當於述詞 `is_constructible<T>`。 類型 `T` 必須是完整的類型、 `void`或界限未知的陣列。
+如果型別述詞的執行個體保留 true 的型別*T*是類別類型具有預設建構函式，否則為 false。 這相當於述詞 `is_constructible<T>`。 型別*T*必須是完整的型別**void**，或是界限未知的陣列。
 
 ## <a name="example"></a>範例
 

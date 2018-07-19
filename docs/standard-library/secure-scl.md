@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e7153fa77c7a0aa213bfb01587f2ea080c6ddd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6a9fa05a4cb8c421a511a30fd62310d69003fde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966429"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
 已由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 所取代，這個巨集會定義是否要啟用[已檢查的迭代器](../standard-library/checked-iterators.md)。 預設會在偵錯組建中啟用已檢查的迭代器，並在零售組建中停用。
 
 > [!IMPORTANT]
-> 目前已不再直接使用 `_SECURE_SCL` 巨集。 請改用 `_ITERATOR_DEBUG_LEVEL` 來控制已檢查的迭代器設定。 如需詳細資訊，請參閱 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。
+> 直接使用 _SECURE_SCL 巨集已被取代。 請改用 _ITERATOR_DEBUG_LEVEL 控制檢查迭代器設定。 如需詳細資訊，請參閱 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。
 
 ## <a name="remarks"></a>備註
 
-若啟用了已檢查的迭代器，則使用不安全的迭代器會造成執行階段錯誤，並終止程式。 若要啟用已檢查的迭代器，將 `_ITERATOR_DEBUG_LEVEL` 設為 1 或 2。 這等同於將 `_SECURE_SCL` 設為 1 或 enabled：
+若啟用了已檢查的迭代器，則使用不安全的迭代器會造成執行階段錯誤，並終止程式。 若要啟用已檢查的迭代器，設定為 1 或 2 的 _ITERATOR_DEBUG_LEVEL。 這相當於 _SECURE_SCL 如果設定為 1，或啟用：
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-若要停用已檢查的迭代器，將 `_ITERATOR_DEBUG_LEVEL` 設為 0。 這等同於將 `_SECURE_SCL` 設為 0 或 disabled：
+若要停用已檢查的迭代器，請設定 _ITERATOR_DEBUG_LEVEL 設為 0。 這相當於 _SECURE_SCL 若設定為 0，或停用：
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0

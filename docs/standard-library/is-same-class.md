@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964973"
 ---
 # <a name="issame-class"></a>is_same 類別
 
@@ -37,13 +37,13 @@ struct is_same;
 
 ### <a name="parameters"></a>參數
 
-`Ty1` 要查詢的第一個類型。
+*Ty1*要查詢的第一個類型。
 
-`Ty2` 要查詢的第二個類型。
+*Ty2*要查詢的第二個類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty1` 與 `Ty2` 相同，則類型述詞的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 類型*Ty1*並*Ty2*相同的型別，否則為 false。
 
 ## <a name="example"></a>範例
 

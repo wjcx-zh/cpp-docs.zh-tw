@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4e07c4869bd345e77f0af4f30f694773aed114
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 973f183980e89ac0be268e5cbbec42de83a378f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965811"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-定義數個範本類別，以依據 [codecvt](../standard-library/codecvt-class.md) 範本類別描述物件。 這些物件可以作為[地區設定 Facet](../standard-library/locale-class.md#facet_class)，以控制 `Elem` 類型的值序列和 `char` 類型的值序列之間的轉換。
+定義數個範本類別，以依據 [codecvt](../standard-library/codecvt-class.md) 範本類別描述物件。 這些物件可作為[地區設定 facet](../standard-library/locale-class.md#facet_class) ，以控制類型的值序列之間的轉換`Elem`和一系列的值型別的**char**。
 
 ## <a name="syntax"></a>語法
 
@@ -45,7 +45,7 @@ ms.locfileid: "33845137"
 
 - UTF-16 會在程式內以 Unicode 編碼為一個或兩個 16 位元整數。 (請注意，這並不符合標準 C 或標準 C++ 有效寬字元編碼的所有需求， 但這卻是廣泛使用的情況)。
 
-若是位元組資料流 (儲存在檔案、以位元組序列傳輸，或儲存在 `char` 陣列中的程式內)：
+若是位元組資料流 (儲存在檔案、 傳輸的位元組序列，或儲存在陣列中的程式內**char**):
 
 - UTF-8 會在位元組資料流內以 Unicode 編碼為一或多個 8 位元位元組 (按具決定性的位元組順序)。
 

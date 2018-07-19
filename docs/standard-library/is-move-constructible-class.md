@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87eac720b205560993a7d6995be8a8fe6ad6194
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 979e726e1374ac37844472d9e2f9ae8ddd5ddf4d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965798"
 ---
 # <a name="ismoveconstructible-class"></a>is_move_constructible 類別
 
@@ -36,11 +36,11 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-要評估的 T 類型
+*T*来評估的型別
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是可藉由使用移動作業來建構的類型，類型述詞就會評估為 true。 這個述詞相當於 `is_constructible<T, T&&>`。
+類型述詞評估為 true 的型別*T*可以藉由使用移動作業建構。 這個述詞相當於 `is_constructible<T, T&&>`。
 
 ## <a name="requirements"></a>需求
 

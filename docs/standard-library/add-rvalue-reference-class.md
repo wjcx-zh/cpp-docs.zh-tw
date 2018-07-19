@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966613"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference 類別
 
@@ -39,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>參數
 
-T 要修改的類型。
+*T*来修改的類型。
 
 ## <a name="remarks"></a>備註
 
-`add_rvalue_reference` 類別具有名為 `type` 的成員，這是範本參數 `T` 之右值參考類型的別名。 參考摺疊的語意表示，針對非物件和非函式類型 `T`，`T&&` 是 `T`。 例如，當`T`是左值參考類型，`add_rvalue_reference<T>::type`是左值參考類型，而不是右值參考。
+`add_rvalue_reference`類別具有名為成員`type`，這是範本參數之右值參考類型的別名*T*。參考摺疊的語意所代表的是，非物件和非函式型別的*T*，`T&&`是*T*。例如，當*T*是左值參考類型，`add_rvalue_reference<T>::type`是左值參考類型，而不是右值參考。
 
-為了方便起見， \<type_traits > 定義協助程式範本時， `add_rvalue_reference_t`，該別名`type`隸屬`add_rvalue_reference`。
+為了方便起見， \<type_traits > 定義協助程式範本`add_rvalue_reference_t`，、 該別名`type`的成員`add_rvalue_reference`。
 
 ## <a name="example"></a>範例
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843245"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964306"
 ---
 # <a name="extent-class"></a>extent 類別
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
-`I` 陣列繫結至查詢。
+*我*陣列繫結至查詢。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 是至少有 `I` 個維度的陣列類型，則類型查詢會保留 `I` 所指定之維度中的項目數。 如果 `Ty` 不是陣列型別或其等級小於 `I`，或者如果 `I` 為零，而且 `Ty` 的類型是「`U` 的未知界限陣列」，則類型查詢會保留 0 值。
+如果*Ty*至少要有陣列類型*我*維度，則類型查詢會保留的項目數中所指定之維度*我*。如果*Ty*不是陣列型別或其等級小於*我*，或如果*我*為零並*Ty*屬於類型"未知界限陣列的`U`」，則類型查詢會保留 0 值。
 
 ## <a name="example"></a>範例
 

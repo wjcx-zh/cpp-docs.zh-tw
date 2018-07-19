@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 965ff7aadb4add306061599bbe55466bbfb87f94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964455"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函式
 
@@ -64,17 +64,17 @@ void advance(
 
 ### <a name="parameters"></a>參數
 
-`InIt` 迭代器，是要遞增且必須符合輸入迭代器的需求。
+*InIt*要遞增且必須符合輸入迭代器需求的迭代器。
 
-`Off` 整數類型轉換為迭代器的差異類型，且指定的迭代器位置是為進階的增量數目。
+*關閉*整數型別，會轉換為迭代器的差異類型，並指定位置的迭代器會為進階的增量數目。
 
 ### <a name="remarks"></a>備註
 
 這個前移範圍必須為非奇異，而迭代器必須是可取值或超出結尾。
 
-如果 **InputIterator** 滿足雙向迭代器的需求，則 `Off` 可以是負數。 如果 **InputIterator** 是輸入或正向迭代器類型，`Off` 就必須是非負值。
+如果`InputIterator`滿足雙向迭代器類型的需求，然後*關閉*可以是負數。 如果`InputIterator`是輸入或正向迭代器類型，*關閉*不可為負值。
 
-當 **InputIterator** 滿足隨機存取迭代器的需求時，advance 函式會具有常數複雜度；否則，它會具有線性複雜度，因此可能會耗用相當多的資源。
+Advance 函式會具有常數複雜度時`InputIterator`滿足需求的隨機存取迭代器; 否則它具有線性複雜度，因此可能相當耗費資源。
 
 ### <a name="example"></a>範例
 
@@ -134,11 +134,11 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>參數
 
-`_Cont` 後端插入所要執行所在的容器。
+*_Cont*執行後端插入容器。
 
 ### <a name="return-value"></a>傳回值
 
-與容器物件 `_Cont` 關聯的 `back_insert_iterator`。
+A`back_insert_iterator`容器物件相關聯 *_Cont*。
 
 ### <a name="remarks"></a>備註
 
@@ -212,15 +212,15 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>參數
 
-`cont` 容器中。
+*cont*容器。
 
-`array` 類型的物件陣列`Ty`。
+*陣列*類型之物件的陣列`Ty`。
 
 ### <a name="return-value"></a>傳回值
 
 前兩個樣板函式會傳回 `cont.begin()`。 第一個函式是非常數，第二個是常數。
 
-第三個樣板函式會傳回 `array`。
+第三個範本函式會傳回*陣列*。
 
 ### <a name="example"></a>範例
 
@@ -305,7 +305,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>參數
 
-`cont` 容器或 initializer_list。
+*cont*容器或 initializer_list。
 
 ### <a name="return-value"></a>傳回值
 
@@ -315,7 +315,7 @@ auto cbegin(const Container& cont)
 
 這個函式可以與所有「C++ 標準程式庫」容器和與 [initializer_list](../standard-library/initializer-list-class.md) 搭配運作。
 
-您可以使用此成員函式取代 `begin()` 樣板函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器或 `initializer_list`。
+您可以使用此成員函式取代 `begin()` 樣板函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 容器或`initializer_list`的任何一種支援`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -337,7 +337,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>參數
 
-`cont` 容器或 initializer_list。
+*cont*容器或 initializer_list。
 
 ### <a name="return-value"></a>傳回值
 
@@ -347,7 +347,7 @@ auto cend(const Container& cont)
 
 這個函式可以與所有「C++ 標準程式庫」容器和與 [initializer_list](../standard-library/initializer-list-class.md) 搭配運作。
 
-您可以使用此成員函式來取代 [end()](../standard-library/iterator-functions.md#end) 範本函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `end()` 和 `cend()` 的可修改 (非 `const`) 容器或 `initializer_list`。
+您可以使用此成員函式來取代 [end()](../standard-library/iterator-functions.md#end) 範本函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 容器或`initializer_list`的任何一種支援`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -368,17 +368,17 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>參數
 
-`first` 在第二個距離是決定第一個迭代器。
+*第一個*第一個迭代器，並與第二個距離是所決定。
 
-`last` 第二個迭代器從第一個距離是所決定。
+*最後一個*第二個迭代器，並從第一個距離是所決定。
 
 ### <a name="return-value"></a>傳回值
 
-必須遞增 `first` 直到與 `last` 相等的次數。
+的次數*第一*必須等於直到遞增*最後一個*。
 
 ### <a name="remarks"></a>備註
 
-當 **InputIterator** 滿足隨機存取迭代器的需求時，distance 函式會具有常數複雜度；否則，它會具有線性複雜度，因此可能會耗用相當多的資源。
+Distance 函式會具有常數複雜度時`InputIterator`滿足需求的隨機存取迭代器; 否則它具有線性複雜度，因此可能相當耗費資源。
 
 ### <a name="example"></a>範例
 
@@ -447,9 +447,9 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>參數
 
-`cont` 容器中。
+*cont*容器。
 
-`array` 類型的物件陣列`Ty`。
+*陣列*類型之物件的陣列`Ty`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -472,11 +472,11 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>參數
 
-`_Cont` 容器物件，其最上層具有項目插入。
+*_Cont*容器物件，其前方會有項目插入。
 
 ### <a name="return-value"></a>傳回值
 
-與容器物件 `_Cont` 關聯的 `front_insert_iterator`。
+A`front_insert_iterator`容器物件相關聯 *_Cont*。
 
 ### <a name="remarks"></a>備註
 
@@ -545,9 +545,9 @@ inserter(
 
 ### <a name="parameters"></a>參數
 
-`_Cont` 要加入新項目屬於容器。
+*_Cont*的新項目要加入的容器。
 
-`_Where` 迭代器，尋找插入點。
+*_Where*迭代器，找出插入點。
 
 ### <a name="remarks"></a>備註
 
@@ -618,11 +618,11 @@ checked_array_iterator<Iter>
 
 ### <a name="parameters"></a>參數
 
-`Ptr` 目的陣列的指標。
+*Ptr*目的地陣列的指標。
 
-`Size` 目的陣列的大小。
+*大小*目的地陣列的大小。
 
-`Index` 陣列中的選擇性索引。
+*索引*陣列中的選擇性索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -704,7 +704,7 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>參數
 
-`_It` 迭代器儲存在新的移動迭代器。
+*_It*儲存在新的迭代器移動迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -725,7 +725,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>參數
 
-`Ptr` 目的陣列的指標。
+*Ptr*目的地陣列的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -802,17 +802,17 @@ InputIterator next(
 
 ### <a name="parameters"></a>參數
 
-`first` 目前的位置。
+*第一個*目前的位置。
 
-`_Off` 反覆運算次數。
+*_Off*逐一查看的次數。
 
 ### <a name="return-value"></a>傳回值
 
-在逐一查看 `_Off` 次之後，傳回新的迭代器位置。
+傳回新的迭代器位置後逐一查看 *_Off*時間。
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回遞增 `_Off` 次後的 `next`
+範本函式會傳回`next`遞增 *_Off*時間
 
 ## <a name="prev"></a>  prev
 
@@ -827,9 +827,9 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>參數
 
-`first` 目前的位置。
+*第一個*目前的位置。
 
-`_Off` 反覆運算次數。
+*_Off*逐一查看的次數。
 
 ### <a name="remarks"></a>備註
 

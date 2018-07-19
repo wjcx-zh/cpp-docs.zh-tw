@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963572"
 ---
 # <a name="addpointer-class"></a>add_pointer 類別
 
@@ -44,7 +44,7 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>備註
 
-成員 typedef `type` 名稱與 `remove_reference<T>::type*` 的類型相同。 `add_pointer_t` 別名是存取成員 typedef `type` 的捷徑。
+成員**typedef** `type`名稱相同的型別`remove_reference<T>::type*`。 別名`add_pointer_t`是存取成員的捷徑**typedef** `type`。
 
 由於不能從參考建立指標，因此在建立類型指標之前，`add_pointer` 會從指定的類型移除參考 (如果有的話)。 因此，您可以使用類型與 `add_pointer`，而不用擔心類型是否為參考。
 

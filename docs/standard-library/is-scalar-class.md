@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851898"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962367"
 ---
 # <a name="isscalar-class"></a>is_scalar 類別
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-類型述詞執行個體為 true，表示類型 `Ty` 是整數類型、浮點類型、列舉類型、指標類型、成員指標類型，或前述其中之一的 `cv-qualified` 形式，否則為 false。
+如果型別述詞的執行個體保留 true 類型*Ty*是整數類型、 浮點類型、 列舉類型、 指標類型或指標成員的型別，或`cv-qualified`形式的其中一項，否則為 false。
 
 ## <a name="example"></a>範例
 

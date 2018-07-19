@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50ec60ef094660dfa722a3a5c1f73fd9141aeef4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbac9637083a61b7fce03a844201530116b882b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964355"
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream 類別
 
@@ -42,15 +42,15 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`Elem` 字串的基本項目的類型。
+*Elem*字串的基本元素的類型。
 
-*Tr*字元特性，則字串的基本項目上特製化。
+*Tr*字元特性之字串的基本項目特製化。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述一個物件，該物件可控制如何使用具有 **Elem** 類型元素之 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 類別的資料流緩衝區來插入及擷取元素和編碼物件；其中該類型的字元特性是由 **Tr** 類別所決定，而其元素是由 `Alloc` 類別的配置器所配置。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
+此範本類別描述的物件可控制插入及擷取元素和編碼的物件使用類別的資料流緩衝區[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>，類型的項目`Elem`，其字元特性由類別`Tr`，和其項目由類別配置器配置`Alloc`。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
 
 ### <a name="constructors"></a>建構函式
 
@@ -97,15 +97,15 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>參數
 
-`_Mode` 其中一個列舉中[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`str` 型別的物件`basic_string`。
+*str*型別的物件`basic_string`。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會藉由呼叫 [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) 初始化基底類別，其中 **sb** 是 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 類別的預存物件。 它也會藉由呼叫 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode`) 初始化 **sb**。
+第一個建構函式初始化基底類別，藉由呼叫[basic_iostream](../standard-library/basic-iostream-class.md)( **sb**)，其中`sb`是類別的預存的物件[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**， `Alloc`>。 它也會初始化`sb`藉由呼叫 basic_stringbuf< < **Elem**， **Tr**， `Alloc`> ( `_Mode`)。
 
-第二個建構函式會藉由呼叫 basic_iostream( **sb**) 初始化基底類別。 它也會藉由呼叫 basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode`) 初始化 **sb**。
+第二個建構函式會藉由呼叫 basic_iostream( **sb**) 初始化基底類別。 它也會初始化`sb`藉由呼叫 basic_stringbuf< < **Elem**， **Tr**， `Alloc`> (_ *Str*， `_Mode`)。
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -117,7 +117,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>傳回值
 
-basic_stringbuf< **Elem**, **Tr**, `Alloc`> 的 **pointer** 類型之預存資料流緩衝區的位址。
+類型的預存資料流緩衝區的位址`pointer`basic_stringbuf < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="example"></a>範例
 
@@ -137,7 +137,7 @@ void str(
 
 ### <a name="parameters"></a>參數
 
-`_Newstr` 新的字串。
+*_Newstr*新的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -149,7 +149,7 @@ void str(
 
 ### <a name="example"></a>範例
 
-如需使用 **str** 的範例，請參閱 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)。
+請參閱[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)如需範例，會使用`str`。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964154"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 結構
 
@@ -45,7 +45,7 @@ struct binary_function {
 
 **const second_argument_type&** ) **const**
 
-所有這類二元函式會以 **first_argument_type** 來表示其第一個引數類型、以 **second_argument_type** 來表示其第二個引數類型，並以 ***result_type*** 來表示其傳回型別。
+所有此類二元函式可以參考做為其第一個引數型別`first_argument_type`，其第二個引數類型為`second_argument_type`，並為其傳回型別***result_type***。
 
 ## <a name="example"></a>範例
 

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baef962ab3a71e9dd350c3429c5b8f85d3adb9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849011"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965467"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset 類別
 
@@ -119,11 +119,11 @@ class hash_multiset
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来存放在 hash_multiset 中的項目資料類型。
+*索引鍵*来儲存在 hash_multiset 中的項目資料類型。
 
-`Traits` 包含兩個函式物件的類型，其中一個類別也就是比較能夠比較兩個項目值做為排序索引鍵，以決定其相對順序是不帶正負號之項目的一元述詞對應索引鍵值的雜湊函式的二元述詞整數型別的**size_t**。 這個引數是選擇性的而`hash_compare` *< 索引鍵，* **小於 * * *\<金鑰 >>* 是預設值。
+*Traits*包含兩個函式物件，其中一個類別的型別也就是比較能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞對應索引鍵值的雜湊函式的二元述詞不帶正負號的整數類型的項目`size_t`。 這個引數是選擇性的而`hash_compare` *< 索引鍵，* **無 * * *\<金鑰 >>* 做為預設值。
 
-`Allocator` 表示封裝有關 hash_multiset 之配置和解除配置記憶體的詳細資訊的預存配置器物件的型別。 這個引數是選擇性的而且預設值是 **配置器 * * *\<金鑰 >。*
+*配置器*表示預存配置器物件，封裝有關 hash_multiset 的配置和解除配置之記憶體的詳細資訊的型別。 這個引數為選擇性，而且預設值是 **allocator *\<機碼 >。*
 
 ## <a name="remarks"></a>備註
 
@@ -145,7 +145,7 @@ hash_multiset 是：
 
 當關聯值與其索引鍵的條件由應用程式滿足時，hash_multiset 應該是首選的關聯容器。 hash_multiset 的項目可以是多重，並當做自己的排序鍵，因此索引鍵不是唯一的。 例如，這種結構的模型是文字的已排序清單，其中文字可以出現多次。 如果不允許文字的多個項目，則 hash_set 是適當的容器結構。 如果唯一定義做為值附加至唯一關鍵字清單，則 hash_map 是包含這個資料的適當結構。 如果定義不是唯一的，則 hash_multimap 是首選容器。
 
-hash_multiset 會藉由呼叫 [value_compare](#value_compare) 類型的預存雜湊特性物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須如同物件的類別相同`hash_compare` *< 索引鍵，* **小於 * * *\<金鑰 >>。* 更明確地說，針對 **Key** 類型的所有 *Key* 值，**Trait**( *Key*) 呼叫會產生 **size_t** 類型值的分佈。
+hash_multiset 會藉由呼叫 [value_compare](#value_compare) 類型的預存雜湊特性物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與類別的物件相同`hash_compare` *< 索引鍵* **無 *\<金鑰 >>。* 尤其是針對所有數值*金鑰*型別的`Key`，呼叫**特性**(*金鑰*) 會產生類型的值分佈`size_t`。
 
 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 x 和 y 以及傳回值 true 或 false 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x*, *y*) 和 *f*( *y*, *x*) 皆為 false 時即相等，則施加於 hash_multiset 的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 
@@ -164,10 +164,10 @@ hash_multiset 類別提供的迭代器是雙向迭代器，但類別成員函式
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `hash_multiset` 類別。|
-|[const_iterator](#const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的 `hash_multiset` 項目。|
-|[const_pointer](#const_pointer)|類型，提供 `const` 中 `hash_multiset` 項目之指標。|
-|[const_reference](#const_reference)|類型，提供儲存在 `const` 中供讀取和執行 `hash_multiset` 作業之 `const` 項目的參考。|
-|[const_reverse_iterator](#const_reverse_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的任何 `hash_multiset` 項目。|
+|[const_iterator](#const_iterator)|一種類型，提供雙向迭代器可讀取**const**中的項目`hash_multiset`。|
+|[const_pointer](#const_pointer)|此類型提供的指標**const**中的項目`hash_multiset`。|
+|[const_reference](#const_reference)|提供的參考型別**const**項目儲存在`hash_multiset`供讀取和執行**const**作業。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供雙向迭代器可以讀取任何**const**中的項目`hash_multiset`。|
 |[difference_type](#difference_type)|提供為相同 `hash_multiset` 中項目定址之兩個迭代器間差異的帶正負號的整數類型。|
 |[iterator](#iterator)|類型，其提供可讀取或修改 `hash_multiset` 中任何項目的雙向迭代器。|
 |[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `hash_multiset` 中的相對順序。|
@@ -255,7 +255,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-如果將 **begin** 的傳回值指派給 `const_iterator`，便無法修改 hash_multiset 物件中的元素。 如果將 **begin** 的傳回值指派給 **iterator**，則可以修改 hash_multiset 物件中的元素。
+如果傳回值`begin`指派給`const_iterator`，無法修改 hash_multiset 物件中的項目。 如果傳回值`begin`指派給`iterator`，可以修改 hash_multiset 物件中的項目。
 
 ### <a name="example"></a>範例
 
@@ -551,7 +551,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要從 hash_multiset 中比對之項目的索引鍵。
+*索引鍵*從 hash_multiset 中比對項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -801,7 +801,7 @@ iterator insert(ValTy&& val);
 
 |參數|描述|
 |-|-|
-|`val`|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
+|*val*|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -853,8 +853,8 @@ iterator insert(
 
 |參數|描述|
 |-|-|
-|`val`|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
-|`_Where`|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|
+|*val*|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
+|*_Where*|要開始搜尋正確的插入點的地方。 (如果插入點緊接在平攤常數時間的詳細資訊，而不是對數時間，可能會插入 *_Where*。)|
 
 ### <a name="return-value"></a>傳回值
 
@@ -862,7 +862,7 @@ iterator insert(
 
 ### <a name="remarks"></a>備註
 
-如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入。
+如果插入點緊接在平攤常數時間的詳細資訊，而不是對數時間，可能會插入 *_Where*。
 
 ### <a name="example"></a>範例
 
@@ -958,7 +958,7 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-**end** 是用來測試迭代器是否已到達其 hash_multiset 的結尾。 不應該對 **end** 所傳回的值進行取值。
+`end` 用來測試是否迭代器已到達其 hash_multiset 的結尾。 `end` 所傳回的值不應該取值。
 
 ### <a name="example"></a>範例
 
@@ -1017,7 +1017,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要比較的項目從 hash_multiset 中要搜尋的排序索引鍵與引數索引鍵。
+*索引鍵*要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1105,13 +1105,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-`_Where` 若要從 hash_multiset 移除項目的位置。
+*_Where*要從 hash_multiset 移除項目的位置。
 
-`first` 從 hash_multiset 移除第一個項目的位置。
+*第一個*從 hash_multiset 移除第一個元素的位置。
 
-`last` 從 hash_multiset 移除最後一個項目之外的位置。
+*最後一個*從 hash_multiset 移除最後一個元素之後的位置。
 
-`key` 若要從 hash_multiset 移除項目索引鍵。
+*索引鍵*要從 hash_multiset 移除項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1222,7 +1222,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要從 hash_multiset 中要搜尋的項目排序鍵比對引數索引鍵。
+*索引鍵*所搜尋之 hash_multiset 中元素的排序鍵比對的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1230,9 +1230,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回迭代器，定址對象是 hash_multiset 中，在根據小於可比較性關聯來引發排序的二元述詞下，其排序鍵**等於**引數索引鍵的元素。
+此成員函式會傳回迭代器，其排序索引鍵是的 hash_multiset 中元素`equivalent`引數來引發排序的二元述詞下的索引鍵在根據小於-比對關聯性。
 
-如果將 **find** 的傳回值指派給 `const_iterator`，便無法修改 hash_multiset 物件。 如果將 **find** 的傳回值指派給 **iterator**，則可以修改 hash_multiset 物件。
+如果傳回值`find`指派給`const_iterator`，無法修改 hash_multiset 物件。 如果傳回值`find`指派給`iterator`，可以修改 hash_multiset 物件。
 
 ### <a name="example"></a>範例
 
@@ -1413,12 +1413,12 @@ hash_multiset(
 
 |參數|描述|
 |-|-|
-|`Al`|要用於此 `hash_multiset` 物件的儲存體配置器類別，預設為 `Allocator`。|
-|`Comp`|類型為 `const Traits` 並用來排序 `hash_multiset` 中元素的比較函式，預設為 `hash_compare`。|
-|`Right`|要從中複製所建構之 `hash_multiset` 的 `hash_multiset`。|
-|`First`|要複製的元素範圍中第一個元素的位置。|
-|`Last`|超出要複製之元素範圍的第一個元素的位置。|
-|`IList`|包含要複製之項目的 initializer_list。|
+|*Al*|要用於此 `hash_multiset` 物件的儲存體配置器類別，預設為 `Allocator`。|
+|*Comp*|類型為 `const Traits` 並用來排序 `hash_multiset` 中元素的比較函式，預設為 `hash_compare`。|
+|*右邊*|要從中複製所建構之 `hash_multiset` 的 `hash_multiset`。|
+|*第一個*|要複製的元素範圍中第一個元素的位置。|
+|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*IList*|包含要複製之項目的 initializer_list。|
 
 ### <a name="remarks"></a>備註
 
@@ -1428,9 +1428,9 @@ hash_multiset(
 
 所有建構函式都會儲存一個 `Traits` 類型的函式物件，此物件可用來在 `hash_multiset` 的索引鍵之間建立順序，且之後藉由呼叫 [hash_multiset::key_comp](#key_comp) 即可傳回此物件。 如需有關 `Traits` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
 
-前三個建構函式會指定空的初始 `hash_multiset`，第二個建構函式會指定建立元素順序時所要使用的比較函式類型 ( `Comp`)，而第三個建構函式則會明確指定所要使用的配置器類型 ( `Al`)。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
+前三個建構函式指定空的初始`hash_multiset`，則第二個指定的比較函式類型 (*Comp*) 來建立項目，並明確指定的順序配置器類型 (*Al*) 使用。 關鍵字 **explicit** 會隱藏某些類型的自動類型轉換。
 
-第四個建構函式移動`hash_multiset` `Right`。
+第四個建構函式移`hash_multiset` `Right`。
 
 第五、第六及第七個建構函式會使用 initializer_list。
 
@@ -1482,11 +1482,11 @@ iterator insert(
 
 |參數|描述|
 |-|-|
-|`Val`|要插入到 hash_multiset 中之元素的值，除非 hash_multiset 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
-|`Where`|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|
-|`First`|要從 hash_multiset 複製之第一個元素的位置。|
-|`Last`|緊接在要從 hash_multiset 複製之最後一個元素後面的位置。|
-|`IList`|包含要複製之元素的 initializer_list。|
+|*val*|要插入到 hash_multiset 中之元素的值，除非 hash_multiset 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
+|*Where*|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|
+|*第一個*|要從 hash_multiset 複製之第一個元素的位置。|
+|*最後一個*|緊接在要從 hash_multiset 複製之最後一個元素後面的位置。|
+|*IList*|包含要複製之元素的 initializer_list。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1498,7 +1498,7 @@ iterator insert(
 
 ### <a name="remarks"></a>備註
 
-針對插入的提示版本，如果插入點緊接在 `Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入。
+如果插入點緊接在分攤的常數時間插入，而不是對數時間的提示版本可能會插入*其中*。
 
 ## <a name="iterator"></a>  hash_multiset::iterator
 
@@ -1513,11 +1513,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>備註
 
-類型 **iterator** 可用來修改元素的值。
+型別`iterator`可用來修改元素的值。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。
+範例，請參閱[開始](#begin)如需如何宣告及使用的範例`iterator`。
 
 ## <a name="key_comp"></a>  hash_multiset::key_comp
 
@@ -1532,9 +1532,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回 hash_multiset 範本參數 `Traits`，其中包含用來雜湊處理及排序容器元素的函式物件。
+傳回 hash_multiset 範本參數*特性*，其中包含用來進行雜湊及排序容器元素的函式物件。
 
-如需有關 `Traits` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
+如需詳細資訊*Traits*請參閱[hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
 
 ### <a name="remarks"></a>備註
 
@@ -1544,7 +1544,7 @@ key_compare key_comp() const;
 
 如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。
 
-請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。
+請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 *Traits* 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -1608,11 +1608,11 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>備註
 
-**key_compare** 與範本參數 `Traits` 同義。
+`key_compare` 範本參數同義*特性*。
 
-如需有關 `Traits` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
+如需詳細資訊*Traits*請參閱[hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
 
-請注意，`key_compare` 和 value_compare 都與範本參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。
+請注意，`key_compare` 和 value_compare 都與範本參數 *Traits* 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -1631,11 +1631,11 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-**key_type** 與範本參數 `Key` 同義。
+`key_type` 範本參數同義*金鑰*。
 
-請注意，`key_type` 和 [value_type](../standard-library/hash-set-class.md#value_type) 都與範本參數 **Key** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，`key_type` 和 [value_type](../standard-library/hash-set-class.md#value_type) 都與樣板參數 *Key* 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
-如需有關 `Key` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題的＜備註＞一節。
+如需詳細資訊*金鑰*，請參閱 < 備註 > 一節[hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
 
 ### <a name="example"></a>範例
 
@@ -1656,7 +1656,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要比較的項目從 hash_multiset 中要搜尋的排序索引鍵與引數索引鍵。
+*索引鍵*要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1762,11 +1762,11 @@ hash_multiset& operator=(hash_multiset&& right);
 
 |參數|描述|
 |-|-|
-|`right`|要複製到 `hash_multiset` 中的 [hash_multiset](../standard-library/hash-multiset-class.md)。|
+|*right*|要複製到 `hash_multiset` 中的 [hash_multiset](../standard-library/hash-multiset-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-清除 `hash_multiset` 中的任何現有項目之後，`operator=` 會將 `right` 的內容複製或移到 `hash_multiset` 中。
+在清除任何現有的項目，在之後`hash_multiset`，`operator=`複製或移動的內容*右*到`hash_multiset`。
 
 ### <a name="example"></a>範例
 
@@ -1819,7 +1819,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>備註
 
-**pointer** 類型可用來修改項目的值。
+型別`pointer`可用來修改元素的值。
 
 在大多數情況下，應該使用 [iterator](#iterator) 來存取 multiset 物件中的元素。
 
@@ -2138,7 +2138,7 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 引數 hash_multiset 提供要與目標 hash_multiset 交換的項目。
+*右*提供要與目標 hash_multiset 交換之元素的引數 hash_multiset。
 
 ### <a name="remarks"></a>備註
 
@@ -2213,7 +2213,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要比較的項目從 hash_multiset 中要搜尋的排序索引鍵與引數索引鍵。
+*索引鍵*要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2289,9 +2289,9 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>傳回值
 
-傳回 hash_multiset 範本參數 `Traits`，其中包含用來雜湊處理及排序容器元素的函式物件。
+傳回 hash_multiset 範本參數*特性*，其中包含用來雜湊處理及排序元素的容器的函式物件。
 
-如需有關 `Traits` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
+如需詳細資訊*Traits*請參閱[hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
 
 ### <a name="remarks"></a>備註
 
@@ -2301,7 +2301,7 @@ value_compare value_comp() const;
 
 如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。
 
-請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。
+請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 *Traits* 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 
@@ -2370,11 +2370,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>備註
 
-**value_compare** 與範本參數 `Traits` 同義。
+`value_compare` 範本參數同義*特性*。
 
-如需有關 `Traits` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
+如需詳細資訊*Traits*請參閱[hash_multiset 類別](../standard-library/hash-multiset-class.md)主題。
 
-請注意，[key_compare](#key_compare) 和 **value_compare** 都與範本參數 **Traits** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意，同時[key_compare](#key_compare)並`value_compare`是範本參數的同義字*Traits*。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 ### <a name="example"></a>範例
 

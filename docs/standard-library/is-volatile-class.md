@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5485fee6ae0d8a7de8c9212e7e27c76f430ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8e3ec18d00c50db29c6a08956d4c3375a4dc7ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962380"
 ---
 # <a name="isvolatile-class"></a>is_volatile 類別
 
@@ -37,11 +37,11 @@ struct is_volatile;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 是 `volatile-qualified`，類型述詞的執行個體會保留 true。
+如果型別述詞的執行個體保留 true *Ty*是`volatile-qualified`。
 
 ## <a name="example"></a>範例
 

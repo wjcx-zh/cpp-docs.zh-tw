@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8980119a3414159018102b8a0d1ad7fb0e8fe76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee35bd9fd138dce5e9163fe1712083f5671caaa1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850518"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964319"
 ---
 # <a name="isnothrowdestructible-class"></a>is_nothrow_destructible 類別
 
@@ -37,11 +37,11 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是易損壞的類型，且編譯器已知該建構函式不會擲回，類型述詞執行個體的值就會是 true。 否則值會是 false。
+如果型別述詞的執行個體保留 true 的型別*T*易損壞的類型，且編譯器已知解構函式不是用來擲回。 否則值會是 false。
 
 ## <a name="requirements"></a>需求
 

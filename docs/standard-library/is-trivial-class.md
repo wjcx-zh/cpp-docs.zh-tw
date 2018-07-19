@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b30b634a84dc47d839e1288bc34437b440e914c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eef350723dd8658bfc349495e905466e8179db1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864118"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965915"
 ---
 # <a name="istrivial-class"></a>is_trivial 類別
 
@@ -37,11 +37,11 @@ struct is_trivial;
 
 ### <a name="parameters"></a>參數
 
-`T` 要查詢的類型。
+*T*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `T` 是 trivial 類型，則類型述詞的執行個體為 true，否則為 false。 trivial 類型是純量類型、可完整複製類別類型、這些類型的陣列和 cv 限定版本。
+如果型別述詞的執行個體保留 true 的型別*T*是 trivial 類型，否則為 false。 trivial 類型是純量類型、可完整複製類別類型、這些類型的陣列和 cv 限定版本。
 
 ## <a name="requirements"></a>需求
 

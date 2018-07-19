@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5fe5c06dd3017e867e73cf1107e619ec2c1edaf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 059ad07e50fb6325850d1095940ce084893bf70b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966496"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t 類別
 
@@ -41,11 +41,11 @@ class const_mem_fun1_t
 
 ### <a name="parameters"></a>參數
 
-`_Pm` 類別成員函式的指標**類型**轉換成函式物件。
+*_Pm*類別的成員函式的指標`Type`轉換成函式物件。
 
-`_Pleft` **Const**物件`_Pm`上呼叫成員函式。
+*_Pleft* **const**物件 *_Pm*上呼叫成員函式。
 
-`right` 引數指定給`_Pm`。
+*右*所指定的引數 *_Pm*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -53,7 +53,7 @@ class const_mem_fun1_t
 
 ## <a name="remarks"></a>備註
 
-此範本類別會在私用成員物件中儲存一份 `_Pm` 的複本，這必須是 **Type** 類別之成員函式的指標。 它會定義其成員函式`operator()`為傳回 ( **_Pleft** -> \* * Pm) (***右邊**) **const**。
+此範本類別會儲存一份 *_Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會定義其成員函式`operator()`做為傳回 ( **_Pleft** -> \* * Pm) (***右邊**) **const**。
 
 ## <a name="example"></a>範例
 

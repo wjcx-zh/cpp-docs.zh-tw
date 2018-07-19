@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 1f5f523b19581fe11f01266c90e6b8612da125fc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858867"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964810"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 
@@ -49,9 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`thread::id`物件。
+*左邊*  
+ 左 `thread::id` 物件。
 
-`Right` 右邊`thread::id`物件。
+*右邊*  
+ 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -73,9 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`thread::id`物件。
+*左邊*  
+ 左 `thread::id` 物件。
 
-`Right` 右邊`thread::id`物件。
+*右邊*  
+ 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -97,9 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`thread::id`物件。
+*左邊*  
+ 左 `thread::id` 物件。
 
-`Right` 右邊`thread::id`物件。
+*右邊*  
+ 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -121,13 +127,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`thread::id`物件。
+*左邊*  
+ 左 `thread::id` 物件。
 
-`Right` 右邊`thread::id`物件。
+*右邊*  
+ 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 `Left` 在總排序中位於 `Right` 之前，即為 `true`，否則為 `false`。
+**true**如果*左*前面*右邊*總排序; 中，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -147,9 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`thread::id`物件。
+*左邊*  
+ 左 `thread::id` 物件。
 
-`Right` 右邊`thread::id`物件。
+*右邊*  
+ 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -170,14 +180,16 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>參數
+ 
+*左邊*  
+ 左 `thread::id` 物件。
 
-`Left` 左邊`thread::id`物件。
-
-`Right` 右邊`thread::id`物件。
+*右邊*  
+ 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果這兩個物件代表執行的同一個執行緒，或者這兩個物件都未代表執行的執行緒，即為 `true`，否則為 `false`。
+**真**如果兩個物件代表在相同的執行緒，或都未代表執行; 的執行緒，否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -195,17 +207,19 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-`Ostr` A [basic_ostream](../standard-library/basic-ostream-class.md)物件。
+*Ostr*  
+ [basic_ostream](../standard-library/basic-ostream-class.md) 物件。
 
-`Id` A`thread::id`物件。
+*Id*  
+ `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-`Ostr`.
+*Ostr*。
 
 ### <a name="remarks"></a>備註
 
-此函式會將 `Id` 插入 `Ostr`。
+此函式會插入*識別碼*成*Ostr*。
 
 如果有兩個 `thread::id` 物件要比較是否相等，則這些物件插入的文字表示會一樣。
 

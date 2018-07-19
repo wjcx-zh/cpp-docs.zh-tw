@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965684"
 ---
 # <a name="moneybase-class"></a>money_base 類別
 
@@ -38,17 +38,17 @@ struct pattern
 
 ## <a name="remarks"></a>備註
 
-**part** 列舉描述結構模式中陣列欄位元素的可能值。 **part** 的值如下：
+列舉型別`part`描述結構模式中陣列欄位的項目中的可能值。 值`part`是：
 
-- **none**：比對零個或多個空格，或不產生任何項目。
+- `none` 若要比對零或多個空格，或產生任何項目。
 
-- **sign**：比對或產生正負號。
+- `sign` 若要比對或產生正負號。
 
-- **space**：比對零個或多個空格，或是產生空格。
+- `space` 若要比對零或多個空格，或是產生空格。
 
-- **symbol**：比對或產生貨幣符號。
+- `symbol` 若要比對或產生貨幣符號。
 
-- **value**：比對或產生貨幣值。
+- `value` 若要比對或產生貨幣值。
 
 ## <a name="requirements"></a>需求
 

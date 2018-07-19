@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844532"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962529"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant 類別、bool_constant 類別
 
@@ -54,7 +54,7 @@ struct integral_constant {
 
 以整數類型 *T* 和該類型的值 *v* 將 `integral_constant` 範本類別特製化時，此類別會代表持有該整數類型之常數並具有指定值的物件。 名為 `type` 的成員是所產生範本特製化類型的別名，而 `value` 成員則持有用來建立特製化的值 *v*。
 
-`bool_constant` 範本類別是使用 `bool` 作為 *T* 引數之 `integral_constant` 的明確部分特製化。
+`bool_constant`範本類別是的明確部分特製化`integral_constant`使用**bool**作為*T*引數。
 
 ## <a name="example"></a>範例
 

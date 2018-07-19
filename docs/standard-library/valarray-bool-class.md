@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291abd2cc3ec1d40a448e593b5dc09d64ab95ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6b9cd3778ceb90e5e73a927f098c62d2c1e9bad
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964293"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 類別
 
-針對 `bool` 型別項目之樣板類別 **valarray\<Type>** 的特製化版本。
+此樣板類別特製化的版本**valarray\<類型 >** 類型的元素**bool**。
 
 ## <a name="syntax"></a>語法
 

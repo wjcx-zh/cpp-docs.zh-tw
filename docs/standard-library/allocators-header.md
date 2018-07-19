@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847308"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965739"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -87,7 +87,7 @@ _List0 會配置具有 `allocator_chunklist` 的節點以及預設同步處理�
 
 _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](../standard-library/sync-per-thread-class.md)同步處理篩選。
 
-區塊配置器是快取或篩選。 快取是接受 std::size_t 類型之一個引數的範本類別。 它會定義區塊配置器，以配置和解除配置單一大小的記憶體區塊。 它必須取得記憶體 using 運算子 `new`，但不需要個別呼叫每個區塊的運算子 `new`。 例如，它會從較大的區塊進行子配置，或快取已解除配置的區塊以進行後續重新配置。
+區塊配置器是快取或篩選。 快取是接受 std::size_t 類型之一個引數的範本類別。 它會定義區塊配置器，以配置和解除配置單一大小的記憶體區塊。 它必須取得記憶體 using 運算子**新**，但它不需要讓個別呼叫運算子**新**針對每個區塊。 例如，它會從較大的區塊進行子配置，或快取已解除配置的區塊以進行後續重新配置。
 
 如果編譯器無法編譯重新繫結在具現化範本時所使用的 std::size_t 引數值，則不一定是傳遞給快取成員函式配置和解除配置的 _Sz 引數值。
 
@@ -151,7 +151,7 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](..
 |[allocator_base](../standard-library/allocator-base-class.md)|定義從同步處理篩選條件建立使用者定義的配置器時所需的基底類別和一般功能。|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|描述物件，該物件使用 [cache_chunklist](../standard-library/cache-chunklist-class.md) 類型的快取來管理物件的儲存空間配置和釋放。|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_fixed_size](../standard-library/max-fixed-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|實作配置器，以使用 `operator delete` 來解除配置記憶體區塊，以及使用 `operator new` 來配置記憶體區塊。|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|實作會使用配置器**delete 運算子**解除配置記憶體區塊並**new 運算子**來配置記憶體區塊。|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|描述物件，該物件使用 [cache_suballoc](../standard-library/cache-suballoc-class.md) 類型的快取來管理 `Type`類型之物件的儲存空間配置和釋放。|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_unbounded](../standard-library/max-unbounded-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_variable_size](../standard-library/max-variable-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。|

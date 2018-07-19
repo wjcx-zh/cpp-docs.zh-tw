@@ -1,7 +1,7 @@
 ---
-title: 如何： 建立和使用 weak_ptr 執行個體 |Microsoft 文件
+title: 如何： 建立和使用 weak_ptr 執行個體 |Microsoft Docs
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,28 +12,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415141"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034812"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：建立和使用 weak_ptr 執行個體
-有時物件必須儲存存取的基礎物件的方法`shared_ptr`而不會造成參考計數遞增。 一般而言，這種情況您有會發生之間有循環參考`shared_ptr`執行個體。  
-  
- 最好的設計是儘可能避免共用擁有權的指標。 不過，如果您必須有共用的擁有權`shared_ptr`執行個體，避免兩者之間有循環參考。 當有循環參考不可避免的或甚至比基於某些原因，請使用`weak_ptr`讓一或多個擁有者的弱式參考另一個`shared_ptr`。 使用`weak_ptr`，您可以建立`shared_ptr`聯結至現有集合的相關執行個體，但僅限於基礎的記憶體資源是否仍然有效。 A`weak_ptr`本身不會參與參考計數，因此，它無法防止的參考計數，送到零。 不過，您可以使用`weak_ptr`來嘗試取得一份新`shared_ptr`與它已初始化。 如果記憶體已被刪除， **bad_weak_ptr**擲回例外狀況。 如果仍然有效的記憶體，則新的共用的指標會遞增參考計數，而且不保證記憶體才有效，只要`shared_ptr`變數會保持在範圍內。  
-  
+有時候物件必須儲存存取的基礎物件的方法`shared_ptr`而不會造成參考計數遞增。 一般而言，這種情況發生時有循環參考之間`shared_ptr`執行個體。  
+
+ 最好的設計是儘可能避免共用的指標擁有。 不過，如果您必須有共用的擁有權`shared_ptr`情況下，避免兩者之間的循環參考。 當循環參考無法避免，或者甚至比基於某些原因，請使用`weak_ptr`提供一或多個擁有者之間的弱式參考`shared_ptr`。 藉由使用`weak_ptr`，您可以建立`shared_ptr`以聯結相關的執行個體，但僅限於一組現有的基礎記憶體資源是否仍然有效。 A`weak_ptr`本身不會參與參考計數，因此，它無法防止參考計數變成零。 不過，您可以使用`weak_ptr`來嘗試取得一份新`shared_ptr`與初始化。 如果已刪除的記憶體，`bad_weak_ptr`擲回例外狀況。 如果記憶體仍然有效，新的共用的指標會遞增參考計數，並保證記憶體才有效，只要`shared_ptr`變數保持在範圍內。  
+
 ## <a name="example"></a>範例  
- 下列程式碼範例示範案例其中`weak_ptr`用來確保適當刪除具有循環相依性物件。 當您檢查此範例，假設它已建立在考量替代方案之後，才。 `Controller`物件代表某方面的機器的處理程序，以及它們是獨立運作。 每個控制站必須能夠在任何時候，查詢的其他控制站狀態，每一個包含私用`vector<weak_ptr<Controller>>`針對此目的。 每個向量中包含循環參考，因此`weak_ptr`而不是使用執行個體`shared_ptr`。  
-  
+ 下列程式碼範例所示的範例位置`weak_ptr`用來確保正確刪除有循環相依性的物件。 當您檢查的範例，假設它建立在考慮替代方案之後，才。 `Controller`物件代表機器程序的某些層面，以及其個別運作。 每個控制站必須能夠隨時查詢其他控制器的狀態，而且每個包含私用`vector<weak_ptr<Controller>>`針對此目的。 每個向量包含循環參考，因此`weak_ptr`執行個體來取代`shared_ptr`。  
+
  [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
-  
+
 ```Output  
-Creating Controller0Creating Controller1Creating Controller2Creating Controller3Creating Controller4push_back to v[0]: 1push_back to v[0]: 2push_back to v[0]: 3push_back to v[0]: 4push_back to v[1]: 0push_back to v[1]: 2push_back to v[1]: 3push_back to v[1]: 4push_back to v[2]: 0push_back to v[2]: 1push_back to v[2]: 3push_back to v[2]: 4push_back to v[3]: 0push_back to v[3]: 1push_back to v[3]: 2push_back to v[3]: 4push_back to v[4]: 0push_back to v[4]: 1push_back to v[4]: 2push_back to v[4]: 3use_count = 1Status of 1 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 3 = OnDestroying Controller0Destroying Controller1Destroying Controller2Destroying Controller3Destroying Controller4Press any key  
+Creating Controller0  
+Creating Controller1  
+Creating Controller2  
+Creating Controller3  
+Creating Controller4  
+push_back to v[0]: 1  
+push_back to v[0]: 2  
+push_back to v[0]: 3  
+push_back to v[0]: 4  
+push_back to v[1]: 0  
+push_back to v[1]: 2  
+push_back to v[1]: 3  
+push_back to v[1]: 4  
+push_back to v[2]: 0  
+push_back to v[2]: 1  
+push_back to v[2]: 3  
+push_back to v[2]: 4  
+push_back to v[3]: 0  
+push_back to v[3]: 1  
+push_back to v[3]: 2  
+push_back to v[3]: 4  
+push_back to v[4]: 0  
+push_back to v[4]: 1  
+push_back to v[4]: 2  
+push_back to v[4]: 3
+use_count = 1  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = O  
+nStatus of 1 = On  
+Status of 2 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Destroying Controller0  
+Destroying Controller1  
+Destroying Controller2  
+Destroying Controller3  
+Destroying Controller4  
+Press any key  
 ```  
-  
- 做一個試驗，修改向量`others`是`vector<shared_ptr<Controller>>`，在輸出中，注意沒有解構函式會叫用時`TestRun`傳回。  
-  
+
+ 做一個試驗，修改向量`others`要`vector<shared_ptr<Controller>>`，然後在輸出中，請注意任何解構函式會叫用時`TestRun`傳回。  
+
 ## <a name="see-also"></a>另請參閱  
  [智慧型指標](../cpp/smart-pointers-modern-cpp.md)

@@ -1,7 +1,7 @@
 ---
-title: 如何： 使用 Windows 10 SDK 中的 Windows 桌面應用程式 |Microsoft 文件
+title: 如何： 使用 Windows 10 SDK，在 Windows 桌面應用程式 |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 04/19/2018
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -13,32 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882820"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034776"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
-當您建立傳統 Windows 桌面專案在 Visual Studio 2017 時，它會設定預設使用 c + + 桌面工作負載已安裝，或上次更新時已安裝的 Windows 10 sdk 版本來建置。 這個 Windows SDK 版本是與所有最新的 Windows 版本相容。 如果您想要以較早版本的 SDK 為目標，您可以開啟專案 |屬性，然後選擇 從可用的 Windows SDK 版本下拉式清單中的其他 SDK 版本。  
+當您在 Visual Studio 2017 中建立傳統 Windows 桌面專案時，它會設定預設為使用已安裝 c + + 桌面工作負載，或上次更新時所安裝的 Windows 10 sdk 版本來建置。 這個版本的 Windows SDK 是相容的 Windows 7 和更新版本。 請參閱[使用 Windows 標頭](/windows/desktop/WinProg/using-the-windows-headers)的目標設為特定的 Windows 版本的詳細資訊。
+
+如果您想要的目標是舊版的 SDK，您可以開啟**專案 |屬性**，然後選擇 從可用的 Windows SDK 版本下拉式清單中的其他 SDK 版本。
   
- Visual Studio 2015 及 Windows 10 SDK 起，CRT 程式庫已分成兩個部分 (ucrtbase) 包含函式可接受用於通用 Windows 應用程式，以及包含其他項目 (vcruntime140)。 由於 Windows 10 SDK 包含新的函式，例如許多 C99 函式，因此您必須遵循下列步驟以使用這些函式。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。  
+ 從 Visual Studio 2015 和 Windows 10 SDK 開始，CRT 程式庫已分成兩個部分 (ucrtbase) 包含的函式可接受用於通用 Windows 應用程式，以及包含其他項目 (vcruntime140)。 由於 Windows 10 SDK 包含新的函式，例如許多 C99 函式，因此您必須遵循下列步驟以使用這些函式。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。  
   
 ### <a name="to-target-the-windows-10-sdk"></a>以 Windows 10 SDK 為目標  
   
-1.  確定已安裝 Windows 10 SDK。 Windows 10 SDK 安裝的一部份**的 c + + 桌面應用程式開發**工作負載。 獨立版本將會位於[下載和工具適用於 Windows 10](https://developer.microsoft.com/windows/downloads)。
+1.  確定已安裝 Windows 10 SDK。 Windows 10 SDK 已安裝的一部分**使用 c + + 的桌面開發**工作負載。 獨立版本[下載和工具適用於 Windows 10](https://developer.microsoft.com/windows/downloads)。
 
   
 2.  開啟專案節點的捷徑功能表，然後選擇 [重定 SDK 版本目標] 。  
   
-     ![將目標重定 SDK 版本](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
+     ![重定 SDK 版本目標](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
   
      [檢閱方案動作]  對話方塊隨即出現。  
   
      ![檢閱方案動作](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3.  在**目標平台版本**下拉式清單中，選擇您要當做目標的 Windows 10 sdk 版本。 選擇 [確定] 按鈕以套用變更。  
+3.  在 **目標平台版本**下拉式清單中，選擇您想要為目標的 Windows 10 sdk 版本。 選擇 [確定] 按鈕以套用變更。  
   
      請注意，此處的 8.1 是指 Windows SDK 版本，該版本也與舊版 Windows 8、Windows Server 2012、Windows 7、Windows Server 2008 和 Windows Vista 相容。  
   
@@ -50,11 +52,11 @@ ms.locfileid: "33882820"
   
      ![平台版本為目標](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，在 Visual c + + 目錄 區段中的 專案屬性 對話方塊中，選擇其中一個 Include 目錄 等屬性，以開啟下拉式清單中，然後選擇 \<編輯 >。 [Include 目錄]  對話方塊隨即出現。  
+     這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，在 Visual c + + 目錄 區段的 專案屬性 對話方塊中，選擇其中一個屬性，例如 Include 目錄中，選擇開啟下拉式清單中，並選擇 \<編輯 >。 [Include 目錄]  對話方塊隨即出現。  
   
      ![包含目錄對話方塊](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     選擇**巨集 >>** 按鈕，然後向下捲動至 Windows SDK 巨集，以查看所有新的值的巨集的清單。  
+     選擇**巨集 >>** 按鈕，然後向下捲動到 Windows SDK 巨集，以查看所有的新值的巨集的清單。  
   
      ![Windows SDK 巨集](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   

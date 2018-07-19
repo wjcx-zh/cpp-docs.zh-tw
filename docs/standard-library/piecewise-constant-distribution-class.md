@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560cad54e315aa1304e26456392b2b82404d4933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858977"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963533"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 類別
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型，預設值為`double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點結果類型，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -258,23 +258,23 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-`firstI` 分佈範圍中第一個項目的輸入迭代器。
+*firstI*分佈範圍中的第一個元素的輸入迭代器。
 
-`lastI` 分佈範圍中最後一個項目的輸入迭代器。
+*lastI*分佈範圍中最後一個項目的輸入迭代器。
 
-`firstW` 加權範圍中第一個項目的輸入迭代器。
+*firstW*加權範圍中的第一個元素的輸入迭代器。
 
-`intervals` [Initializer_list](../cpp/initializers.md)和分佈的間隔。
+*間隔* [initializer_list](../cpp/initializers.md)具有分佈間隔。
 
-`count` 分佈範圍中的項目數目。
+*計數*分佈範圍中的項目數。
 
-`xmin` 分佈範圍中最低的值。
+*xmin*分佈範圍中的最小值。
 
-`xmax` 分佈範圍中最高的值。 必須大於 `xmin`。
+*xmax*分佈範圍中的最大值。 必須大於 *xmin*。
 
-`weightfunc` 物件，表示分佈的可能性函式。 參數和傳回值都必須可以轉換為 `double`。
+*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
 
-`parm` 用於建構分佈的參數結構。
+*parm*用來建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -297,7 +297,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-建構分佈物件，而分佈物件具有來自初始設定式清單 `intervals` 的間隔，以及透過函式 `weightfunc` 產生的加權。
+建構分佈物件具有來自初始設定式清單的間隔*間隔*並從函式所產生的加權*weightfunc*。
 
 建構函式定義為
 ```cpp
@@ -306,14 +306,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-建構分佈物件，其具有平均分佈在 [`xmin,xmax`] 的 `count` 個間隔 (根據函式 `weightfunc` 指派每個間隔加權)，而且 `weightfunc` 必須接受一個參數並有一個傳回值 (兩者都可以轉換為 `double`)。 **前置條件：**`xmin < xmax`
+建構分佈物件具有*計數*間隔平均分佈在 [ `xmin,xmax`]，根據函式進行指派每個間隔加權*weightfunc*，和*weightfunc*必須接受一個參數並傳回值，這兩者都是可以轉換成`double`。 **前置條件：**`xmin < xmax`
 
 建構函式定義為
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-使用 `parm` 做為儲存參數結構，以建構分佈物件。
+建構分佈物件，使用*parm*預存的參數結構。
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 

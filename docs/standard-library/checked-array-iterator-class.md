@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ac7686706aad871b95f8b94d2bb11b459a64e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848683"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961736"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 類別
 
@@ -253,11 +253,11 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>參數
 
-`ptr` 陣列的指標。
+*ptr*陣列的指標。
 
-`size` 陣列的大小。
+*大小*陣列的大小。
 
-`index` （選擇性）陣列，來初始化迭代器中的項目。  根據預設，迭代器會初始化為陣列中的第一個元素。
+*索引*（選擇性） 陣列中的項目來初始化迭代器。  根據預設，迭代器會初始化為陣列中的第一個元素。
 
 ### <a name="remarks"></a>備註
 
@@ -325,7 +325,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` `checked_array_iterator`據以檢查是否相等。
+*右*`checked_array_iterator`對其檢查是否相等。
 
 ### <a name="remarks"></a>備註
 
@@ -380,7 +380,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` `checked_array_iterator`據以檢查是否不相等。
+*右*`checked_array_iterator`對其檢查是否不相等。
 
 ### <a name="remarks"></a>備註
 
@@ -435,7 +435,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` `checked_array_iterator`據以檢查是否不相等。
+*右*`checked_array_iterator`對其檢查是否不相等。
 
 ### <a name="remarks"></a>備註
 
@@ -490,7 +490,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` `checked_array_iterator`與進行比較。
+*右*`checked_array_iterator`用來比較。
 
 ### <a name="remarks"></a>備註
 
@@ -508,7 +508,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` `checked_array_iterator`與進行比較。
+*右*`checked_array_iterator`用來比較。
 
 ### <a name="remarks"></a>備註
 
@@ -526,7 +526,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` `checked_array_iterator`與進行比較。
+*右*`checked_array_iterator`用來比較。
 
 ### <a name="remarks"></a>備註
 
@@ -756,7 +756,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>參數
 
-`_Off` 要遞增迭代器的位移。
+*_Off*遞增迭代器的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>參數
 
-`_Off` 要加入至位移`checked_array_iterator`。
+*_Off*的位移，要加入至`checked_array_iterator`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -850,7 +850,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>參數
 
-`_Off` 要遞增迭代器的位移。
+*_Off*遞增迭代器的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -900,7 +900,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>參數
 
-`_Off` 要從遞減位移`checked_array_iterator`。
+*_Off*遞減從位移`checked_array_iterator`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -922,7 +922,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>參數
 
-`_Off` 從位移`checked_array_iterator`位址。
+*_Off*時差`checked_array_iterator`位址。
 
 ### <a name="return-value"></a>傳回值
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862464"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964830"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 運算子
 
@@ -78,9 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>參數
 
-`left` 兩個其項目要測試不相等的 valarray 中的第一個。
+*left*  
+ 要測試不相等項目之兩個 valarray 的第一個。
 
-`right` 第二個兩個 valarray 其項目要測試不相等。
+*right*  
+ 要測試不相等項目之兩個 valarray 的第二個。
 
 ### <a name="return-value"></a>傳回值
 
@@ -94,9 +96,9 @@ operator!=(
 
 第一個範本運算子會傳回類別的物件[valarray\<bool >](../standard-library/valarray-bool-class.md)，每個項目`I`是`left[I] != right[I]`。
 
-第二個範本運算子會將項目中儲存`I` `left[I] != right`。
+第二個範本運算子會將儲存在項目`I` `left[I] != right`。
 
-第三個範本運算子會將項目中儲存`I` `left != right[I]`。
+第三個範本運算子會將儲存在項目`I` `left != right[I]`。
 
 ### <a name="example"></a>範例
 
@@ -171,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>參數
 
-`left` 值的另一個值當做被除數的 valarray 是要當做被除數。
+*left*  
+ 當作被除數的值或是 valarray，除以另一個值或 valarray。
 
-`right` 值，做為除數並，將另一個值除以的 valarray 或 valarray。
+*right*  
+ 當作除數的值或 valarray，除另一個值或 valarray。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其項目是項目餘數的`left`除以`right`。
+Valarray，其項目為餘數的*左*除以*右*。
 
 ### <a name="example"></a>範例
 
@@ -252,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>參數
 
-`left` 其個別項目要與位元結合兩個 valarray 中的第一個**AND**或指定要結合位元 valarray 的每個項目之項目類型的值。
+*left*  
+ 要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-`right` 第二個其個別項目要與位元結合兩個 valarray **AND**或指定要結合位元 valarray 的每個項目之項目類型的值。
+*right*  
+ 要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其中的項目是項目組合的位元 AND 運算的`left`和`right`。
+Valarray，其項目為項目位元的 AND 運算的*左*並*右*。
 
 ### <a name="remarks"></a>備註
 
-位元運算僅能用於操作 `char` 和 `int` 資料型別及變體的位元，並且無法用於 **float**、**double**、**longdouble**、`void`、`bool`，或是其他更複雜的資料型別。
+僅可用於位元運算操作中的位元**char**並**int**的資料型別及變體而不是在**float**， **double**， **longdouble**， **void**， **bool**或其他更複雜的資料型別。
 
-位元 **AND** 與邏輯 **AND** 有相同的真值表，但是適用於個別位元層級上的資料型別。 [operator&&](../standard-library/valarray-operators.md#amp) 適用於項目層級，會將所有非零的值視為 true，且結果為布林值的 valarray。 相反地，位元 **ANDoperator&** 會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
+位元 `AND` 與邏輯 `AND` 有相同的真值表，但是適用於個別位元層級上的資料型別。 [operator&&](../standard-library/valarray-operators.md#amp) 適用於項目層級，會將所有非零的值視為 true，且結果為布林值的 valarray。 相反地，位元 **ANDoperator&** 會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
 
 ### <a name="example"></a>範例
 
@@ -339,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>參數
 
-`left` 其個別項目要與邏輯結合兩個 valarray 中的第一個**AND**或指定要結合 valarray 的每個項目之項目類型的值。
+*left*  
+ 要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
-`right` 第二個其個別項目要與邏輯結合兩個 valarray **AND**或指定要結合 valarray 的每個項目之項目類型的值。
+*right*  
+ 要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其中的項目類型為 bool 的而且是邏輯項目組合**AND**作業`left`和`right`。
+Valarray，其項目會 bool 類型和邏輯的項目組合`AND`營運*左*並*右*。
 
 ### <a name="remarks"></a>備註
 
-邏輯 **ANDoperator&&** 適用於項目層級，會將所有非零的值視為 true，且結果為布林值的 valarray。 相反地，位元版本的 **AND**、[operator&](../standard-library/valarray-operators.md#op_amp)，會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
+邏輯`ANDoperator&&`適用於項目層級中，所有的非零值視為 true，且結果為布林值的 valarray。 位元版本的`AND`，[運算子 &、](../standard-library/valarray-operators.md#op_amp)，相較之下，可能會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
 
 ### <a name="example"></a>範例
 
@@ -424,17 +432,19 @@ operator>(
 
 ### <a name="parameters"></a>參數
 
-`left` 第一個其項目要進行比較的兩個 valarray 或指定的值進行比較 valarray 的每個項目。
+*left*  
+ 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-`right` 其項目要進行比較的兩個 valarray 的第二個或指定的值進行比較 valarray 的每個項目。
+*right*  
+ 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
 布林值的 valarray，其中每個為：
 
-- 如果 `left` 項目或值大於對應的 `right` 項目或值，則為 **true**。
+- **真**如果*左*項目或值大於對應*右*項目或值。
 
-- 如果 `left` 項目或值不大於對應的 `right` 項目或值，則為 **false**。
+- **false**如果*左*項目或值不大於對應*右*項目或值。
 
 ### <a name="remarks"></a>備註
 
@@ -513,17 +523,19 @@ operator>=(
 
 ### <a name="parameters"></a>參數
 
-`left` 第一個其項目要進行比較的兩個 valarray 或指定的值進行比較 valarray 的每個項目。
+*left*  
+ 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-`right` 其項目要進行比較的兩個 valarray 的第二個或指定的值進行比較 valarray 的每個項目。
+*right*  
+ 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
 布林值的 valarray，其中每個為：
 
-- 如果 `left` 項目或值大於或等於對應的 `right` 項目或值，則為 **true**。
+- **真**如果*左*項目或值是否大於或等於對應*右*項目或值。
 
-- 如果 `left` 項目或值小於對應的 `right` 項目或值，則為 **false**。
+- **false**如果*左*項目或值小於對應*右*項目或值。
 
 ### <a name="remarks"></a>備註
 
@@ -602,9 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>參數
 
-`left` 要移位的值或其項目要移位的 valarray。
+*left*  
+ 要移位的值，或是其項目要移位的 valarray。
 
-`right` 值，指出量向右移位或 valarray，其元素表示的項目向右移位量。
+*right*  
+ 指出右移數量的值，或是其項目指出項目右移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -687,17 +701,19 @@ operator<(
 
 ### <a name="parameters"></a>參數
 
-`left` 第一個其項目要進行比較的兩個 valarray 或指定的值進行比較 valarray 的每個項目。
+*left*  
+ 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-`right` 其項目要進行比較的兩個 valarray 的第二個或指定的值進行比較 valarray 的每個項目。
+*right*  
+ 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
 布林值的 valarray，其中每個為：
 
-- 如果 `left` 項目或值小於對應的 `right` 項目或值，則為 **true**。
+- **真**如果*左*項目或值小於對應*右*項目或值。
 
-- 如果 `left` 項目或值不小於對應的 `right` 項目或值，則為 **false**。
+- **false**如果*左*項目或值不小於對應*右*項目或值。
 
 ### <a name="remarks"></a>備註
 
@@ -776,17 +792,19 @@ operator<=(
 
 ### <a name="parameters"></a>參數
 
-`left` 第一個其項目要進行比較的兩個 valarray 或指定的值進行比較 valarray 的每個項目。
+*left*  
+ 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-`right` 其項目要進行比較的兩個 valarray 的第二個或指定的值進行比較 valarray 的每個項目。
+*right*  
+ 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
 布林值的 valarray，其中每個為：
 
-- 如果 `left` 項目或值小於或等於對應的 `right` 項目或值，則為 **true**。
+- **真**如果*左*項目或值小於或等於對應*右*項目或值。
 
-- 如果 `left` 項目或值大於對應的 `right` 項目或值，則為 **false**。
+- **false**如果*左*項目或值大於對應*右*項目或值。
 
 ### <a name="remarks"></a>備註
 
@@ -865,9 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>參數
 
-`left` 要移位的值或其項目要移位的 valarray。
+*left*  
+ 要移位的值，或是其項目要移位的 valarray。
 
-`right` 值，指出量左的移或 valarray，其元素表示向左移位項目數量。
+*right*  
+ 指出左移數量的值，或是其項目指出項目左移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -950,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>參數
 
-`left` 第一個其項目要乘上兩個 valarray 或指定的值與 valarray 的每個元素的乘積。
+*left*  
+ 要相乘其項目之兩個 valarray 的第一個，或是 valarray 每個項目要乘以的指定值。
 
-`right` 兩個 valarray，其元素要相乘的第二個或指定的值相乘以 valarray 的每個項目。
+*right*  
+ 要相乘其項目之兩個 valarray 的第二個，或是 valarray 每個項目要乘以的指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其項目是項目乘積的`left`和`right`。
+Valarray，其項目是項目乘積的*左*並*右*。
 
 ### <a name="example"></a>範例
 
@@ -1031,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>參數
 
-`left` 第一個其項目要加入兩個 valarray 或指定的值来在加入 valarray 的每個項目。
+*left*  
+ 要相加其項目之兩個 valarray 的第一個，或是要加上 valarray 每個項目的指定值。
 
-`right` 第二個其項目要加入兩個 valarray 指定的值来加入或與 valarray 的每個項目。
+*right*  
+ 要相加其項目之兩個 valarray 的第二個，或是要加上 valarray 每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其項目是項目總和的`left`和`right`。
+Valarray，其項目是項目總和的*左*並*右*。
 
 ### <a name="example"></a>範例
 
@@ -1112,13 +1136,15 @@ operator-(
 
 ### <a name="parameters"></a>參數
 
-`left` 值或做為其他值或 valarray 要從中減去中形成差異被減數的 valarray。
+*left*  
+ 當作被減數的值或 valarray，要減去其他值或 valarray 以得出差。
 
-`right` 值或 valarray，做為其他值或 valarray 中形成差異被減去減數。
+*right*  
+ 當作減數的值或 valarray，要與其他值或 valarray 相減以得出差。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其項目是項目差異的`left`和`right`。
+Valarray，其項目是項目的差的*左*並*右*。
 
 ### <a name="remarks"></a>備註
 
@@ -1199,13 +1225,15 @@ operator/(
 
 ### <a name="parameters"></a>參數
 
-`left` 值的另一個值當做被除數的 valarray 是要當做被除數的商數建立程序。
+*left*  
+ 當作被除數的值或是 valarray，除以另一個值或 valarray 以得出商。
 
-`right` 值或做為除數，可將另一個值或 valarray 中形成商數的 valarray。
+*right*  
+ 當作除數的值或 valarray，除另一個值或 valarray 以得出商。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其項目是項目之商數的`left`除以`right`。
+Valarray，其項目為商的*左*除以*右*。
 
 ### <a name="remarks"></a>備註
 
@@ -1286,9 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>參數
 
-`left` 兩個其項目要測試相等的 valarray 中的第一個。
+*left*  
+ 要測試相等項目之兩個 valarray 的第一個。
 
-`right` 第二個兩個 valarray 其項目要測試相等。
+*right*  
+ 要測試相等項目之兩個 valarray 的第二個。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1300,7 +1330,7 @@ operator==(
 
 ### <a name="remarks"></a>備註
 
-第一個範本運算子會傳回類別的物件[valarray\<bool >](../standard-library/valarray-bool-class.md)，每個項目`I`是`left[I] == right[I]`。 第二個範本運算子會將項目中儲存`I` `left[I] == right`。 第三個範本運算子會將項目中儲存`I` `left == right[I]`。
+第一個範本運算子會傳回類別的物件[valarray\<bool >](../standard-library/valarray-bool-class.md)，每個項目`I`是`left[I] == right[I]`。 第二個範本運算子會將儲存在項目`I` `left[I] == right`。 第三個範本運算子會將儲存在項目`I` `left == right[I]`。
 
 ### <a name="example"></a>範例
 
@@ -1375,17 +1405,19 @@ operator^(
 
 ### <a name="parameters"></a>參數
 
-`left` 其個別項目要與位元結合兩個 valarray 中的第一個**XOR**或指定要結合位元 valarray 的每個項目之項目類型的值。
+*left*  
+ 要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-`right` 第二個其個別項目要與位元結合兩個 valarray **XOR**或指定要結合位元 valarray 的每個項目之項目類型的值。
+*right*  
+ 要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其中的項目是項目組合的位元**XOR**作業`left`和`right`。
+Valarray，其項目為項目位元**XOR**營運*左*並*右*。
 
 ### <a name="remarks"></a>備註
 
-位元運算只可用來操作中的位元`char`和`int`資料型別和 variant 而不是在**float**， **double**， `long double`， `void`， `bool`或其他更複雜的資料類型。
+僅可用於位元運算操作中的位元**char**並**int**的資料型別及變體而不是在**float**， **double**， **長雙精度**， **void**， **bool**或其他更複雜的資料型別。
 
 位元互斥 `OR` (**XOR**) 具有下列語意：假設位元 *b*1 和 *b*2，如果其中只有一個位元為 true，則 *b*1 **XOR** *b*2 為 **true**；如果兩個位元均為 true 或 false，則為 **false**。
 
@@ -1466,17 +1498,19 @@ operator|(
 
 ### <a name="parameters"></a>參數
 
-`left` 其個別項目要與位元結合兩個 valarray 中的第一個`OR`或指定要結合位元 valarray 的每個項目之項目類型的值。
+*left*  
+ 要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-`right` 第二個其個別項目要與位元結合兩個 valarray`OR`或指定要結合位元 valarray 的每個項目之項目類型的值。
+*right*  
+ 要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray，其中的項目是項目組合的位元`OR`作業`left`和`right`。
+Valarray，其項目為項目位元`OR`營運*左*並*右*。
 
 ### <a name="remarks"></a>備註
 
-位元運算僅能用於操作 `char` 和 `int` 資料型別及變體的位元，並且無法用於 **float**、**double**、**longdouble**、`void`、`bool`，或是其他更複雜的資料型別。
+僅可用於位元運算操作中的位元**char**並**int**的資料型別及變體而不是在**float**， **double**， **longdouble**， **void**， **bool**或其他更複雜的資料型別。
 
 位元 OR 與邏輯 `OR` 有相同的真值表，但是適用於個別位元層級上的資料型別。 假設位元 *b*1 和 *b*2，如果至少有一個位元為 true，則 *b*1 `OR` *b*2 為 **true**，或如果兩個位元均為 false，則為 **false**。 邏輯 `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor) 適用於項目層級，會將所有非零的值視為 **true**，且結果為布林值的 valarray。 相反地，位元 OR `operator|` 會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
 
@@ -1557,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>參數
 
-`left` 其個別項目要與邏輯結合兩個 valarray 中的第一個`OR`或指定要結合 valarray 的每個項目之項目類型的值。
+*left*  
+ 要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
-`right` 第二個其個別項目要與邏輯結合兩個 valarray`OR`或指定要結合 valarray 的每個項目之項目類型的值。
+*right*  
+ 要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
-Valarray 的項目屬於型別`bool`邏輯 OR 運算的項目組合和`left`和`right`。
+Valarray，其項目型別的**bool**和邏輯 OR 運算的項目組合*左*並*右*。
 
 ### <a name="remarks"></a>備註
 
-邏輯`OR``operator||`計算所有的非零值，做為項目層級上套用**true**，且結果為布林值的 valarray。 相反地，位元版本的 `OR`、[operator&#124;](../standard-library/valarray-operators.md#op_or)，會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
+邏輯`OR``operator||`適用於所有非零的值，做為項目層級 **，則為 true**，且結果為布林值的 valarray。 相反地，位元版本的 `OR`、[operator&#124;](../standard-library/valarray-operators.md#op_or)，會導致 valarray 的值非 0 即 1，取決於位元運算的結果。
 
 ### <a name="example"></a>範例
 

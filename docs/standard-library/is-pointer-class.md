@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962812"
 ---
 # <a name="ispointer-class"></a>is_pointer 類別
 
@@ -37,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是 `void` 的指標、物件的指標、函式的指標，或形成其中之一的 `cv-qualified` 的指標，則類型述詞的執行個體為 true，否則為 false。 請注意，如果 `Ty` 是成員的指標或成員函式的指標，則 `is_pointer` 會保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是一個指向**void**、 物件、 指標或函式的指標或`cv-qualified`形式的其中一項，否則為 false。 請注意，`is_pointer`保存 false if *Ty*成員的指標或成員函式的指標。
 
 ## <a name="example"></a>範例
 

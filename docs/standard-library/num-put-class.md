@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a860f7c266685e7e10f9b4cbe46c280c356f2681
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862032"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965986"
 ---
 # <a name="numput-class"></a>num_put 類別
 
@@ -45,9 +45,9 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 在程式內用於編碼地區設定中的字元類型。
+*CharType*程式內使用地區設定中的字元編碼的類型。
 
-`OutputIterator` 其輸出寫入的數值 put 函式的迭代器類型。
+*OutputIterator*數值 put 函式的迭代器的型別將其輸出寫入。
 
 ## <a name="remarks"></a>備註
 
@@ -89,11 +89,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型是範本參數 `CharType`的同義字。
 
 ## <a name="do_put"></a>  num_put::do_put
 
-虛擬函式，呼叫此函式可將數字轉換成 **CharType** 序列，以代表為特定地區設定格式化的數字。
+虛擬函式，呼叫以將數字轉換成 `CharType` 序列，表示為特定地區設定格式化的數字。
 
 ```cpp
 virtual iter_type do_put(
@@ -153,13 +153,13 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-`next` 迭代器定址插入字串的第一個元素中。
+*下一步*迭代器，定址對象所插入字串的第一個元素。
 
-`_Iosbase` 指定的資料流，其中包含與用來插入的輸出和格式化輸出的旗標 numpunct facet 的地區設定。
+*_Iosbase*指定資料流，其中包含帶有 numpunct facet 施加的輸出和旗標設定輸出格式使用地區設定。
 
-`_Fill` 使用做為空格的字元。
+*_Fill*間距所使用的字元。
 
-`val` 輸出是布林類型的數目。
+*val*的數字或布林值類型的輸出。
 
 ### <a name="return-value"></a>傳回值
 
@@ -167,21 +167,21 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>備註
 
-第一個虛擬的受保護成員函式會從 `next` 開始產生一系列元素，以從 `val` 的值產生整數輸出欄位。 此函式會傳回迭代器，此迭代器指定在所產生的整數輸出欄位後下一個要插入元素的位置。
+第一個虛擬的受保護的成員函式會產生開始的循序元素*下一步*產生整數輸出欄位的值從*val*。 此函式會傳回迭代器，此迭代器指定在所產生的整數輸出欄位後下一個要插入元素的位置。
 
-產生整數輸出欄位的規則，與列印函式在將一系列 `char` 元素產生至檔案時所使用的規則相同。 每個這類 char 元素都會被假設為與 **CharType** 類型的對等元素以簡單、一對一的對應方式對應。 不過，在列印函式使用空格或數字 0 來填補欄位的地方，`do_put` 會改用 **fill**。 對等的列印轉換規格是以下列方式決定：
+列印函式用於產生一系列的相同規則所產生整數輸出欄位**char**至檔案的項目。 每個這類 char 元素都會被假設為型別之對等項目的`CharType`簡單、 一對一的對應。 在列印函式來填補欄位使用空格或數字 0，不過，其中`do_put`改為使用`fill`。 對等的列印轉換規格是以下列方式決定：
 
-- 如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)，則轉換規格為 **lo**。
+- 如果 **iosbase**. [旗標](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)，則轉換規格是`lo`。
 
-- 如果 **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)，則轉換規格為 **lx**。
+- 如果**iosbase.flags** & **ios_base:: basefield** == `ios_base::`[十六進位](../standard-library/ios-functions.md#hex)，則轉換規格是`lx`。
 
-- 否則，轉換規格會是 **ld**。
+- 否則，轉換規格會是 `ld`。
 
 如果 **iosbase**. [width](../standard-library/ios-base-class.md#width) 不是零，就會在前面加上此值的欄位寬度。 接著，函式會呼叫 **iosbase**. **width**(0) 將欄位寬度重設為零。
 
-只有當指定輸出欄位所需的元素數目下限 *N* 小於 **iosbase**. [width](../standard-library/ios-base-class.md#width) 時，才需要進行填補。 此類填補所組成的序列*N* - **寬度**副本**填滿**。 接著，填補會以下列方式進行：
+只有當指定輸出欄位所需的元素數目下限 *N* 小於 **iosbase**. [width](../standard-library/ios-base-class.md#width) 時，才需要進行填補。 這類填補組成一連串*N* - **寬度**份**填滿**。 接著，填補會以下列方式進行：
 
-- 如果 **iosbase**. **旗標** & `ios_base::adjustfield` == `ios_base::`[左](../standard-library/ios-functions.md#left)，旗標**-** 前面加上。 (填補的發生位置是在已產生的文字之後)。
+- 如果 **iosbase**. **旗標** & `ios_base::adjustfield` == `ios_base::`[左](../standard-library/ios-functions.md#left)，旗標**-** 前面會加上。 (填補的發生位置是在已產生的文字之後)。
 
 - 如果 **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal)，就會在前面加上 **0** 旗標。 (就數字輸出欄位而言，會在列印函式以 0 填補的地方進行填補)。
 
@@ -210,7 +210,7 @@ virtual iter_type do_put(iter_type next,
     unsigned long val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 **lu** 取代 **ld** 轉換規格。
+行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。
 
 第三個虛擬的受保護成員函式：
 
@@ -223,11 +223,11 @@ virtual iter_type do_put(iter_type next,
 
 行為與第一個相同，不同的是，它會從 **val** 的值產生浮點數輸出欄位。 **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) 會決定將整數與小數分隔的序列。 對等的列印轉換規格是以下列方式決定：
 
-- 如果 **iosbase**. **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed)，則轉換規格為 **lf**。
+- 如果 **iosbase**. **旗標** & `ios_base::floatfield` == `ios_base::`[修正](../standard-library/ios-functions.md#fixed)，則轉換規格是`lf`。
 
-- 如果 **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific)，則轉換規格為 `le`。 如果 **iosbase**. **flags** & `ios_base::`[uppercase](../standard-library/ios-functions.md#uppercase) 不是零，就會以 **E** 取代 **e**。
+- 如果 **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific)，則轉換規格為 `le`。 如果 **iosbase**. **旗標** & `ios_base::`[大寫](../standard-library/ios-functions.md#uppercase)為非零值，`e`會取代`E`。
 
-- 否則，轉換規格會是 **lg**。 如果 **iosbase**. **flags** & **ios_base::uppercase** 不是零，就會以 **G** 取代 **g**。
+- 否則，轉換規格會是 **lg**。 如果 **iosbase**. **旗標** & **ios_base:: uppercase**為非零值，`g`取代`G`。
 
 如果 **iosbase**. **flags** & **ios_base::fixed** 不是零，或如果 **iosbase**. [precision](../standard-library/ios-base-class.md#precision) 大於零，就會在轉換規格前面加上值為 **iosbase**. **precision** 的有效位數。 所有填補行為都與整數輸出欄位的填補行為相同。 填補字元為 **fill**。 最後：
 
@@ -244,7 +244,7 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-行為與第三個相同，不同的是，轉換規格中的限定詞 **l** 會被 **L** 取代。
+第三個不同之處在於的行為相同限定詞`l`在轉換規格會取代`L`。
 
 第五個虛擬的受保護成員函式：
 
@@ -266,7 +266,7 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```
 
-行為與第一個相同，不同的是，它會從 `val` 產生布林值輸出欄位。
+行為與第一個相同，不同之處在於它會產生布林值輸出欄位從*val*。
 
 布林值輸出欄位採用下列兩種形式其中之一。 如果 **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 為 **false**，成員函式就會傳回 `do_put`(_ *Next*, \_ *Iosbase*, \_ *Fill*, ( **long**) `val`)，這通常會產生一個 0 (代表 **false**) 或 1 (代表 **true**) 的產生序列。 否則，產生的序列會是 **fac**. [falsename](../standard-library/numpunct-class.md#falsename)`)` (代表 **false**) 或 **fac**. [truename](../standard-library/numpunct-class.md#truename) (代表 **true**)。
 
@@ -279,7 +279,7 @@ virtual iter_type do_put(iter_type next,
     long long val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 **lld** 取代 **ld** 轉換規格。
+行為與第一個相同，不同的是，它會以 `lld` 取代 `ld` 轉換規格。
 
 第八個虛擬的受保護成員函式：
 
@@ -318,11 +318,11 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -336,7 +336,7 @@ explicit num_put(size_t _Refs = 0);
 
 ## <a name="put"></a>  num_put::put
 
-將數字轉換成 **CharType** 序列，以代表為特定地區設定格式化的數字。
+將數字轉換成一連串的`CharType`，代表數字格式化為特定地區設定。
 
 ```cpp
 iter_type put(
@@ -397,13 +397,13 @@ iter_type put(
 
 ### <a name="parameters"></a>參數
 
-`dest` 迭代器定址插入字串的第一個元素中。
+*dest*迭代器，定址對象所插入字串的第一個元素。
 
-`_Iosbase` 指定與用來插入的輸出和格式化輸出的旗標 numpunct facet 包含地區設定的資料流。
+*_Iosbase*指定包含帶有 numpunct facet 施加的輸出和旗標設定輸出格式使用地區設定的資料流。
 
-`_Fill` 使用做為空格的字元。
+*_Fill*間距所使用的字元。
 
-`val` 輸出是布林類型的數目。
+*val*的數字或布林值類型的輸出。
 
 ### <a name="return-value"></a>傳回值
 

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff022d6bf28904328ace7cab543fe72b60236b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863422"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027741"
 ---
 # <a name="map-class"></a>map 類別
 
@@ -123,15 +123,15 @@ class map;
 
 ### <a name="parameters"></a>參數
 
-`Key` 要儲存在對應中的索引鍵資料類型。
+*索引鍵*来儲存在對應中的索引鍵的資料類型。
 
-`Type` 要儲存在對應中的項目資料類型。
+*型別*来儲存在對應中的項目資料類型。
 
-`Traits` 類型，提供可以比較兩個項目值做為排序鍵以判斷它們在對應中的相對順序的函式物件。 這個引數是選用引數，且預設值是二元述詞 `less<Key>`。
+*Traits*提供可以比較兩個項目值做為排序鍵來判斷其相對順序，在對應中的函式物件的型別。 這個引數是選用引數，且預設值是二元述詞 `less<Key>`。
 
 在 C++14 中，指定沒有型別參數的 std::less<> 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-`Allocator` 表示封裝有關對應之配置和解除配置記憶體的詳細資訊的預存配置器物件的型別。 這個引數是選擇性的，而且預設值是 `allocator<pair<const Key, Type> >`。
+*配置器*表示預存配置器物件，封裝有關對應的配置和解除配置之記憶體的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>備註
 
@@ -158,7 +158,7 @@ map 類別提供的迭代器是雙向迭代器，但 [insert](#insert) 和 [map]
 map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，排序它所控制的元素。 這個預存物件是可藉由呼叫 [key_comp](#key_comp) 方法來存取的比較函式。 一般而言，任何兩個特定項目會進行比較，判斷一個是否小於另一個或兩者是否相等。 當比較所有項目，會建立已排序的非對等項目序列。
 
 > [!NOTE]
-> 比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 f(x,y) 是有兩個引數物件 x 和 y 以及傳回值 `true` 或 `false` 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 f(x,y) 和 f(y,x) 皆為 `false` 時即相等，則施加於集合的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
+> 比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 f 是函式物件，有兩個引數物件 x 和 y 和傳回值 **，則為 true**或**false**。 於集合的順序是嚴格弱式排序如果二元述詞為非反身屬性，則施加、 可轉移的而且如果等價是可轉移的其中兩個物件 x 和 y 定義為相等 f 和是非時**false**. 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 >
 > 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)
 
@@ -175,16 +175,16 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|對應物件之 `allocator` 類別的 typedef。|
-|[const_iterator](#const_iterator)|可以在對應中讀取 `const` 項目的雙向迭代器的 typedef。|
-|[const_pointer](#const_pointer)|在對應中指向 `const` 項目的指標之 typedef。|
-|[const_reference](#const_reference)|指向儲存在對應中的 `const` 項目的參考之 typedef，用以讀取和執行 `const` 作業。|
-|[const_reverse_iterator](#const_reverse_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取對應中的任何 `const` 項目。|
+|[const_iterator](#const_iterator)|可讀取的雙向迭代器的 typedef **const**對應中的項目。|
+|[const_pointer](#const_pointer)|指標的 typedef **const**對應中的項目。|
+|[const_reference](#const_reference)|如需參考之 typedef **const**項目儲存在 map 中供讀取和執行**const**作業。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取 map 中任何 **const** 元素的雙向迭代器。|
 |[difference_type](#difference_type)|範圍 (介於迭代器所指的項目) 中對應的項目數量的帶正負號整數 typedef。|
 |[iterator](#iterator)|雙向迭代器的 typedef，可以讀取或修改對應中的任何項目。|
 |[key_compare](#key_compare)|函式物件之 typedef，可比較兩個排序鍵以判斷兩個項目在對應中的相對順序。|
 |[key_type](#key_type)|對應中每個項目所儲存之排序鍵的 typedef。|
 |[mapped_type](#mapped_type)|對應中每個項目所儲存之資料的 typedef。|
-|[pointer](#pointer)|在對應中指向 `const` 項目的指標之 typedef。|
+|[pointer](#pointer)|指標的 typedef **const**對應中的項目。|
 |[reference](#reference)|對應中預存項目的參考之 typedef。|
 |[reverse_iterator](#reverse_iterator)|雙向迭代器的 typedef，可以讀取或修改反轉對應中的項目。|
 |[size_type](#size_type)|不帶正負號的整數 typedef，表示對應中的項目數。|
@@ -204,7 +204,7 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 |[crend](#crend)|傳回反轉對應中，指向最後一個項目後面的位置之常數迭代器。|
 |[emplace](#emplace)|將就地建構的項目插入對應中。|
 |[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入對應中。|
-|[empty](#empty)|如果對應是空的，傳回 `true`。|
+|[empty](#empty)|傳回 **，則為 true**如果 map 是空的。|
 |[end](#end)|傳回超出結尾 (past-the-end) 迭代器。|
 |[equal_range](#equal_range)|傳回一對迭代器。 配對中第一個迭代器指向 `map` 中索引鍵大於指定索引鍵的第一個項目。 配對中第二個迭代器指向 `map` 中索引鍵等於或大於指定索引鍵的第一個項目。|
 |[erase](#erase)|從對應中的指定位置移除項目或某個項目範圍。|
@@ -261,7 +261,7 @@ const Type& at(const Key& key) const;
 |參數|描述|
 |-|-|
 |參數|描述|
-|`key`|要尋找的索引鍵值。|
+|*key*|要尋找的索引鍵值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -354,7 +354,7 @@ The first element of m1 is now 1
 
 ## <a name="cbegin"></a>  map::cbegin
 
-傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
+傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
 ```cpp
 const_iterator cbegin() const;
@@ -362,13 +362,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-`const` 雙向迭代器，定址範圍中的第一個項目，或定址空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。
+A **const**雙向迭代器，定址範圍或空白範圍結尾之外的位置中的第一個項目 (空白範圍， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -380,7 +380,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  map::cend
 
-傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
+傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -388,13 +388,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向範圍結尾之外的 `const` 雙向存取迭代器。
+A **const**雙向存取迭代器，指向範圍結尾之外。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -464,7 +464,7 @@ typedef implementation-defined const_iterator;
 
 map 所定義的 `const_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`\< **constKey**, **Type**>，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。
 
-取值 （dereference) `const_iterator` `cIter`指向對應中的項目，使用**->** 運算子。
+取值 （dereference) `const_iterator` `cIter`指向對應中的項目，使用`->`運算子。
 
 若要存取該元素的索引鍵值，請使用 `cIter` -> **first**，這等同於 (\* `cIter`). **first**。
 
@@ -550,13 +550,13 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 map。
 
-`const_reverse_iterator`地圖點的物件項目所定義[value_type](#value_type)，也就是類型的`pair<const Key, Type>`、 其第一個成員是索引鍵的項目和其成員則是項目所保留的對應的資材的第二個。
+`const_reverse_iterator`所對應之物件的項目指向定義[value_type](#value_type)，也就是型別的`pair<const Key, Type>`其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
-若要對指向 map 中某個元素的 `const_reverse_iterator crIter` 進行取值，請使用 **->** 運算子。
+取值 （dereference)`const_reverse_iterator crIter`指向對應中的項目，使用`->`運算子。
 
-若要存取項目的索引鍵的值，請使用`crIter`  -> **第一個**，這相當於 (\* `crIter`)。**第一個**。
+若要存取元素的索引鍵的值，請使用`crIter`  -> **第一次**，這相當於 (\* `crIter`)。**第一個**。
 
-若要存取的項目對應的資料值，請使用`crIter`  -> **第二個**，這相當於 (\* `crIter`)。**第一個**。
+若要存取的項目對應的資料，請使用`crIter`  -> **第二個**，這相當於 (\* `crIter`)。**第一個**。
 
 ### <a name="example"></a>範例
 
@@ -572,7 +572,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要從對應中比對之項目的索引鍵值。
+*索引鍵*要比對對應中元素的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -804,13 +804,13 @@ emplace(
 |參數|描述|
 |-|-|
 |參數|描述|
-|`args`|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
+|*引數*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
 
 ### <a name="return-value"></a>傳回值
 
-如果已進行插入，就會傳回 `bool` 元件為 true 的 [pair](../standard-library/pair-structure.md)，如果 map 已經包含具有對等排序值的元素，則會傳回 false。 若 `bool` 元件為 True，傳回值組的迭代器元件會指向最新插入的元素；若 `bool` 元件為 False，則會指向現有元素。
+A[配對](../standard-library/pair-structure.md)其**bool**元件是，如果已進行插入，則為 true 和 false 如果 map 已經包含對等排序值的項目。 傳回值組的迭代器元件會指向新插入的項目，如果**bool**元件為 true，或指向現有元素如果**bool**元件為 false。
 
-若要存取的迭代器元件`pair` `pr`，使用`pr.first`; 若要它取值 （dereference），請使用`*pr.first`。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。
+若要存取的迭代器元件`pair` `pr`，使用`pr.first`; 若要取其值，請使用`*pr.first`。 若要存取**bool**元件，請使用`pr.second`。 例如，請參閱本文中稍後的範例程式碼。
 
 ### <a name="remarks"></a>備註
 
@@ -893,8 +893,8 @@ iterator emplace_hint(
 |參數|描述|
 |-|-|
 |參數|描述|
-|`args`|所轉接以建構要插入到對應中之元素的引數，除非該對應中已經包含該元素，或更廣泛地說，即除非它已經包含索引鍵以同等方式排序的元素。|
-|`where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|
+|*引數*|所轉接以建構要插入到對應中之元素的引數，除非該對應中已經包含該元素，或更廣泛地說，即除非它已經包含索引鍵以同等方式排序的元素。|
+|*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1017,9 +1017,9 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-**end** 是用來測試迭代器是否已超過其 map 的結尾。
+`end` 用來測試是否迭代器已超過其 map 的結尾。
 
-不應該對 **end** 所傳回的值進行取值。
+`end` 所傳回的值不應該取值。
 
 如需程式碼範例，請參閱 [map::find](#find)。
 
@@ -1035,7 +1035,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之對應元素的排序索引鍵比較的引數索引鍵的值。
+*索引鍵*引數索引鍵值所搜尋之對應中元素的排序鍵進行比較。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1121,13 +1121,13 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-`Where` 要移除之項目的位置。
+*其中*要移除之項目的位置。
 
-`First` 要移除的第一個元素的位置。
+*第一個*要移除之第一個項目的位置。
 
-`Last` 要移除的最後一個元素之後的位置。
+*最後一個*要移除的最後一個元素之後的位置。
 
-`Key` 要移除之項目的索引鍵值。
+*索引鍵*要移除之項目的索引鍵的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1229,17 +1229,17 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要比對所搜尋之對應元素的排序索引鍵索引鍵值。
+*索引鍵*所搜尋之對應中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，參考對象是具有指定索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，則是 map 中最後一個元素後面的位置 ( `map::end()`)。
+是指具有指定之索引鍵的項目位置或下一個位置定址在對應中的最後一個元素的迭代器 (`map::end()`) 如果找到索引鍵的相符項目。
 
 ### <a name="remarks"></a>備註
 
 成員函式會傳回迭代器，參考對象是 map 中，在根據小於可比較性關聯來引發排序的二元述詞下，其排序鍵等於引數索引鍵的元素。
 
-如果將 **find** 的傳回值指派給 **const_iterator**，便無法修改 map 物件。 如果將 **find** 的傳回值指派給 **iterator**，則可以修改 map 物件。
+如果將 `find` 的傳回值指派給 `const_iterator`，便無法修改 map 物件。 如果傳回值`find`指派給`iterator`，可以修改 map 物件
 
 ### <a name="example"></a>範例
 
@@ -1422,17 +1422,17 @@ IList);
 |參數|描述|
 |-|-|
 |參數|描述|
-|`Val`|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入對應中的項目值。|
-|`Where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `Where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|
-|`ValTy`|範本參數，可指定 map 可用來建構 [value_type](#value_type) 之元素的引數類型，並將 `Val` 以引數形式完整轉送。|
-|`First`|要複製之第一個元素的位置。|
-|`Last`|要複製之最一個元素後方的位置。|
-|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](#value_type) 物件的類型。|
-|`IList`|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入對應中的項目值。|
+|*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
+|*ValTy*|指定地圖可用來建構的元素的引數類型的範本參數[value_type](#value_type)，和完美轉送*Val*做為引數。|
+|*第一個*|要複製之第一個元素的位置。|
+|*最後一個*|要複製之最一個元素後方的位置。|
+|*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](#value_type) 物件的類型。|
+|*IList*|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>傳回值
 
-如果已進行插入，單一元素成員函式 (1) 和 (2) 就會傳回一個 `bool` 元件為 true 的 [pair](../standard-library/pair-structure.md)，如果 map 已經包含索引鍵具有對等排序值的元素，則會傳回 false。 若 `bool` 元件為 True，傳回值組的迭代器元件會指向最新插入的元素；若 `bool` 元件為 False，則會指向現有元素。
+單一元素成員函式 （1） 和 (2)，傳回[配對](../standard-library/pair-structure.md)其**bool**元件是，如果已進行插入，則為 true，如果 map 已經包含索引鍵具有對等的值的項目，則為 false。依順序排列。 傳回值組的迭代器元件會指向新插入的項目，如果**bool**元件為 true，或指向現有元素如果**bool**元件為 false。
 
 具有提示的單一項目成員函式 (3) 及 (4) 會傳回指向位置的迭代器，該位置是新項目插入對應中的位置，或者，若對等索引鍵已存在，則指向現有項目。
 
@@ -1442,7 +1442,7 @@ IList);
 
 在只插入一個元素的期間，若擲出例外狀況，則不會修改容器的狀態。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
-若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。
+若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取**bool**元件，請使用`pr.second`。 例如，請參閱本文中稍後的範例程式碼。
 
 容器的 [value_type](#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
@@ -1561,15 +1561,15 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>備註
 
-**迭代器**地圖點的物件項目所定義[value_type](#value_type)，也就是類型的`pair` * \< * **constKey**，**類型 * * * >*、 其第一個成員是索引鍵的項目和其成員則是項目所保留的對應的資材的第二個。
+`iterator`所對應之物件的項目指向定義[value_type](#value_type)，也就是型別的`pair` * \< * **constKey**，**類型 * * * >* 其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
-若要對指向 map 中某個元素的 **iterator**`Iter` 進行取值，請使用 **->** 運算子。
+取值 （dereference)**迭代器**`Iter`指向對應中的項目，使用`->`運算子。
 
 若要存取該元素的索引鍵值，請使用 `Iter` -> **first**，這等同於 (\* `Iter`). **first**。 若要存取該元素的已對應資料值，請使用 `Iter` -> **second**，這等同於 (\* `Iter`). **second**。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。
+範例，請參閱[開始](#begin)如需如何宣告及使用的範例`iterator`。
 
 ## <a name="key_comp"></a>  map::key_comp
 
@@ -1652,9 +1652,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>備註
 
-`key_compare` 與樣板參數 `Traits` 同義。
+`key_compare` 範本參數同義*特性*。
 
-如需有關 `Traits` 的詳細資訊，請參閱 [map 類別](../standard-library/map-class.md)主題。
+如需詳細資訊*Traits*請參閱[map 類別](../standard-library/map-class.md)主題。
 
 ### <a name="example"></a>範例
 
@@ -1670,9 +1670,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-`key_type` 與樣板參數 `Key` 同義。
+`key_type` 範本參數同義*金鑰*。
 
-如需有關 `Key` 的詳細資訊，請參閱 [map 類別](../standard-library/map-class.md)主題的＜備註＞一節。
+如需詳細資訊*金鑰*，請參閱 < 備註 > 一節[map 類別](../standard-library/map-class.md)主題。
 
 ### <a name="example"></a>範例
 
@@ -1690,13 +1690,13 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之對應元素的排序索引鍵比較的引數索引鍵的值。
+*索引鍵*引數索引鍵值所搜尋之對應中元素的排序鍵進行比較。
 
 ### <a name="return-value"></a>傳回值
 
-**iterator** 或 `const_iterator`，定址對象是 map 中索引鍵等於或大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 map 中最後一個元素後面的位置。
+`iterator`或`const_iterator`，地址中索引鍵等於或大於引數索引鍵或項目，定址下一個位置定址在對應中的最後一個項目，如果沒有相符項目的位置找到索引鍵。
 
-如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 map 物件。 如果將 `lower_bound` 的傳回值指派給 **iterator**，則可以修改 map 物件。
+如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 map 物件。 如果傳回值`lower_bound`指派給`iterator`，可以修改 map 物件。
 
 ### <a name="example"></a>範例
 
@@ -1804,12 +1804,12 @@ map(
 |參數|描述|
 |-|-|
 |參數|描述|
-|`Al`|要用於此 map 物件的儲存體配置器類別，預設為 `Allocator`。|
-|`Comp`|類型為 `const Traits` 並用來排序 map 中元素的比較函式，預設為 `hash_compare`。|
-|`Right`|要從中複製所建構之集合的對應。|
-|`First`|要複製的元素範圍中第一個元素的位置。|
-|`Last`|超出要複製之元素範圍的第一個元素的位置。|
-|`IList`|要從中複製元素的 initializer_list。|
+|*Al*|要用於此 map 物件的儲存體配置器類別，預設為 `Allocator`。|
+|*Comp*|類型為 `const Traits` 並用來排序 map 中元素的比較函式，預設為 `hash_compare`。|
+|*右邊*|要從中複製所建構之集合的對應。|
+|*第一個*|要複製的元素範圍中第一個元素的位置。|
+|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*IList*|要從中複製元素的 initializer_list。|
 
 ### <a name="remarks"></a>備註
 
@@ -1819,11 +1819,11 @@ map(
 
 所有建構函式都會儲存一個 Traits 類型的函式物件，此物件可用來在 map 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。
 
-前三個建構函式會指定空的初始 map，第二個建構函式會指定建立元素順序時所要使用的比較函式類型 ( `Comp`)，而第三個建構函式則會明確指定所要使用的配置器類型 ( `Al`)。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
+前三個建構函式指定空的初始 map，第二個指定的比較函式類型 (*Comp*) 明確建立的項目，且第三個順序會使用指定的配置器類型 (*Al*) 使用。 關鍵**明確**會隱藏某些類型的自動類型轉換。
 
-第四個建構函式會指定 map `Right` 的複本。
+第四個建構函式會指定對應的複本*右*。
 
-第五個建構函式會藉由移動 `Right` 來指定 map 的複本。
+第五個建構函式會指定對應的複本移動*右*。
 
 第六、第七及第八個建構函式會使用 initializer_list 來從中複製成員。
 
@@ -1956,9 +1956,9 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>備註
 
-類型 `mapped_type` 與類別的 `Type` 範本參數同義。
+型別`mapped_type`類別的同義*型別*樣板參數。
 
-如需有關 `Type` 的詳細資訊，請參閱 [map 類別](../standard-library/map-class.md)主題。
+如需詳細資訊*型別*請參閱[map 類別](../standard-library/map-class.md)主題。
 
 ### <a name="example"></a>範例
 
@@ -2012,7 +2012,7 @@ Type& operator[](Key&& key);
 |參數|描述|
 |-|-|
 |參數|描述|
-|`key`|所要插入之元素的索引鍵值。|
+|*key*|所要插入之元素的索引鍵值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -2022,7 +2022,7 @@ Type& operator[](Key&& key);
 
 如果找不到引數索引鍵值，則將它與資料類型的預設值一起插入。
 
-`operator[]` 可用來將元素插入到對應 `m` 中，方法是使用 `m[ key] = DataValue;`，其中 `DataValue` 是索引鍵值為 `key` 之元素的 `mapped_type` 值。
+`operator[]` 可用來將元素插入到對應`m`使用`m[ key] = DataValue;`所在`DataValue`的值`mapped_type`使用的索引鍵值的項目*金鑰*。
 
 當使用 `operator[]` 插入項目時，傳回的參考不會指出插入是變更預先存在的項目，還是建立新的項目。 成員函式 [find](#find) 和 [insert](#insert) 可用來判斷具有指定索引鍵的元素在插入之前是否已經存在。
 
@@ -2112,11 +2112,11 @@ map& operator=(map&& right);
 |參數|描述|
 |-|-|
 |參數|描述|
-|`right`|要複製到 `map` 中的 [map](../standard-library/map-class.md)。|
+|*right*|要複製到 `map` 中的 [map](../standard-library/map-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-清除 `map` 中任何現有的元素之後，`operator=` 會將 `right` 的內容複製或移到 map 中。
+在清除任何現有的項目，在之後`map`，`operator=`複製或移動的內容*右*到對應。
 
 ### <a name="example"></a>範例
 
@@ -2165,7 +2165,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-**pointer** 類型可用來修改項目的值。
+型別`pointer`可用來修改元素的值。
 
 在大多數情況下，應該使用 [iterator](#iterator) 來存取 map 物件中的元素。
 
@@ -2402,9 +2402,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 類型 `reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 map。
 
-`reverse_iterator`地圖點的物件項目所定義[value_type](#value_type)，也就是類型的`pair` * \< * **constKey**，**型別 * * * >*、 其第一個成員是索引鍵的項目和其成員則是項目所保留的對應的資材的第二個。
+`reverse_iterator`所對應之物件的項目指向定義[value_type](#value_type)，也就是型別的`pair` * \< * **constKey**，**類型 * * * >* 其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
-取值 （dereference) `reverse_iterator` `rIter`指向對應中的項目，使用**->** 運算子。
+取值 （dereference) `reverse_iterator` `rIter`指向對應中的項目，使用`->`運算子。
 
 若要存取該元素的索引鍵值，請使用 `rIter` -> **first**，這等同於 (\* `rIter`). **first**。 若要存取該元素的已對應資料值，請使用 `rIter` -> **second**，這等同於 (\* `rIter`). **first**。
 
@@ -2479,7 +2479,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`right` 提供待交換與目標地圖元素的引數對應。
+*右*提供要與目標 map 交換之元素的引數 map。
 
 ### <a name="remarks"></a>備註
 
@@ -2549,13 +2549,13 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 引數索引鍵值來比較與排序索引鍵值所搜尋之對應的項目。
+*索引鍵*引數索引鍵值與所搜尋之對應中元素的排序鍵值比較。
 
 ### <a name="return-value"></a>傳回值
 
-**iterator** 或 `const_iterator`，定址對象是 map 中索引鍵大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 map 中最後一個元素後面的位置。
+`iterator`或`const_iterator`，地址中索引鍵大於引數索引鍵或項目，定址下一個位置定址在對應中的最後一個項目，如果沒有相符項目的位置找到索引鍵。
 
-如果將傳回值指派給 `const_iterator`，便無法修改 map 物件。 如果將傳回值指派給 **iterator**，則可以修改 map 物件。
+如果將傳回值指派給 `const_iterator`，便無法修改 map 物件。 如果傳回的值指派給`iterator`，可以修改 map 物件。
 
 ### <a name="example"></a>範例
 
@@ -2738,7 +2738,7 @@ int main( )
 
 ## <a name="see-also"></a>另請參閱
 
-[\<對應 > 成員](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<對應 > 成員](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

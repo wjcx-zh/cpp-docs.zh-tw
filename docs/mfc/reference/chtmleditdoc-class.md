@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditDoc 類別 |Microsoft 文件
+title: CHtmlEditDoc 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335600"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 類別
-與[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)，提供 WebBrowser 編輯平台的 MFC 文件檢視架構內容中的功能。  
+具有[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)，提供 WebBrowser 編輯平台在 MFC 的文件檢視架構內容中的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 |名稱|描述|  
 |----------|-----------------|  
 |[CHtmlEditDoc::GetView](#getview)|擷取`CHtmlEditView`物件附加至這份文件。|  
-|[CHtmlEditDoc::IsModified](#ismodified)|傳回相關聯的檢視 WebBrowser 控制項是否包含使用者已修改的文件。|  
+|[CHtmlEditDoc::IsModified](#ismodified)|傳回相關聯的檢視 WebBrowser 控制項是否包含已由使用者修改文件。|  
 |[CHtmlEditDoc::OpenURL](#openurl)|開啟的 URL。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **Header:** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- 建構**CHtmlEditDoc**物件。  
+ 建構 `CHtmlEditDoc` 物件。  
   
 ```  
 CHtmlEditDoc();
@@ -83,10 +83,10 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 讓指標回到文件的**CHtmlEditView**物件。  
+ 讓指標回到文件的`CHtmlEditView`物件。  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
- 傳回相關聯的檢視 WebBrowser 控制項是否包含使用者已修改的文件。  
+ 傳回相關聯的檢視 WebBrowser 控制項是否包含已由使用者修改文件。  
   
 ```  
 virtual BOOL IsModified();
@@ -101,10 +101,10 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
   
 ### <a name="parameters"></a>參數  
  *lpszURL*  
- 若要開啟 URL。  
+ 要開啟的 URL。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ## <a name="see-also"></a>另請參閱  
  [HTMLEdit 範例](../../visual-cpp-samples.md)   

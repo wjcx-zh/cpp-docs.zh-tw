@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 83a1d50c0041c3cd66abbd3d52d2e2b49231c81c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847074"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027393"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函式
 
@@ -46,7 +46,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>參數
 
-`policy` A[啟動](../standard-library/future-enums.md#launch)值。
+*原則*A[啟動](../standard-library/future-enums.md#launch)值。
 
 ### <a name="remarks"></a>備註
 
@@ -64,11 +64,9 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 除非 `decay<Fn>::type` 是 launch 以外的類型，否則第二個函式不會參與多載解析。
 
-如果 `policy` 是 `launch::any`，則函式可能會選擇 `launch::async` 或 `launch::deferred`。 在此實作中，此函式會使用 `launch::async`。
+C + + 標準指出，是否原則是 launch::async，函式會建立新的執行緒。 不過 Microsoft 實作目前不合格。 它會從 Windows 執行緒集區，這在某些情況下可能會回收的執行緒，而不是一個新提供取得其執行緒。 這表示`launch::async`原則實際上會實作為`launch::async|launch::deferred`。  執行緒集區式實作的另一項含意是，則無法保證執行緒完成時，會終結執行緒區域變數。 如果執行緒是回收，但提供的新呼叫`async`，仍會存在的舊的變數。 因此建議您不要使用執行緒區域變數使用`async`。
 
-如果 `policy` 是 `launch::async`，此函式就會建立一個評估 `INVOKE(dfn, dargs..., Ty)` 的執行緒。 此函式在建立執行緒後便會返回，而不會等待結果。 如果系統無法開始一個新的執行緒，此函式將會擲回一個錯誤碼為 `resource_unavailable_try_again` 的 [system_error](../standard-library/system-error-class.md)。
-
-如果 `policy` 是 `launch::deferred`，此函式就會將其相關非同步狀態標示為持有「deferred 函式」並返回。 第一次呼叫任何等待相關非同步狀態變成就緒的非計時函式時，實際上會透過評估 `INVOKE(dfn, dargs..., Ty)` 來呼叫 deferred 函式。
+如果*原則*是`launch::deferred`，此函式會將標示為持有其相關聯非同步狀態*deferred 函式*，並傳回。 第一次呼叫任何等待相關非同步狀態變成就緒的非計時函式時，實際上會透過評估 `INVOKE(dfn, dargs..., Ty)` 來呼叫 deferred 函式。
 
 在所有情況下，`future` 物件的相關非同步狀態都不會設定成「就緒」，直到透過擲回例外狀況或正常返回來完成 `INVOKE(dfn, dargs..., Ty)` 評估為止。 如果擲回例外狀況，相關非同步狀態的結果就會是例外狀況，否則會是評估所傳回的任何值。
 
@@ -95,7 +93,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc)可識別回報的錯誤值。
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc)識別報告的錯誤值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -111,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc)可識別回報的錯誤值。
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc)識別報告的錯誤值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -131,9 +129,9 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`promise`物件。
+*左*左側`promise`物件。
 
-`Right` 右邊`promise`物件。
+*右*右`promise`物件。
 
 ## <a name="see-also"></a>另請參閱
 

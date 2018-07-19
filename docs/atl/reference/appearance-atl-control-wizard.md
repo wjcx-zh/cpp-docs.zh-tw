@@ -1,5 +1,5 @@
 ---
-title: 外觀，ATL 控制項精靈 |Microsoft 文件
+title: 外觀，ATL 控制項精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,87 +16,86 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1d27b46f529d8423bdaf733928a9f3e46b3f185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358598"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025876"
 ---
 # <a name="appearance-atl-control-wizard"></a>外觀, ATL 控制項精靈
-在這裡插入摘要的 「 搜尋結果 」。  
+在這裡插入 [搜尋結果] 摘要。  
   
- 使用精靈的這個頁面來識別控制項的其他使用者項目選項。 此頁面適用於控制項識別為**標準控制項**下**控制項類型**上[選項，ATL 控制項精靈](../../atl/reference/options-atl-control-wizard.md)頁面。  
+ 您可以使用精靈的這個頁面來識別控制項的其他使用者的項目選項。 此頁面可供控制項視為**標準控制項**下方**控制項類型**上[選項，ATL 控制項精靈](../../atl/reference/options-atl-control-wizard.md)頁面。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **檢視狀態**  
- 設定容器內控制項的外觀。  
+**檢視狀態**  
+設定容器內控制項的外觀。  
   
--   **不透明**： 集`VIEWSTATUS_OPAQUE`位元[forced VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)列舉型別和繪製整個控制項矩形傳遞至[CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)方法。 該控制項會出現完全不透明和任何容器控制項界限會顯示。  
+ -   **不透明**： 設定位元 VIEWSTATUS_OPAQUE [forced VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)列舉型別和繪製整個控制項矩形傳遞給[CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)方法。 完全不透明的會出現這個控制項，並沒有任何容器顯示控制項界限後方。      
+      
+        此設定可協助更快速地繪製控制項的容器。 如果未選取此選項，控制項可以包含透明的組件。  
+      
+        只有不透明的控制項有單純的背景。  
+      
+ -   設定位元 forced VIEWSTATUS 列舉 VIEWSTATUS_SOLIDBKGND。 控制項的背景會顯示為任何模式的純色。  
+      
+  會提供這個選項才**不透明**也會選取選項。  
   
-     此設定可協助您更快速地繪製控制項的容器。 如果未選取此選項，此控制項可以包含透明的組件。  
-  
-     只有不透明的控制項可以有透明背景。  
-  
--   設定`VIEWSTATUS_SOLIDBKGND`位元`VIEWSTATUS`列舉型別。 控制項的背景會顯示為純色任何模式。  
-  
-     會提供這個選項才**不透明**也會選取選項。  
-  
- **加入控制項**  
- 設定是根據 Windows 控制項類型所加入的控制項[CContainedWindow](ccontainedwindowt-class.md)来實作此控制項的類別資料成員。 此外，它也會加入訊息對應和訊息處理常式函式來處理控制項的視窗訊息。 從清單中選擇您想要建立時，如果有任何的 Windows 控制項的類型。  
+**新增控制項**  
+設定以根據加上 Windows 控制項類型的控制項[CContainedWindow](ccontainedwindowt-class.md)實作控制項的類別資料成員。 此外，它也會新增訊息對應和訊息處理常式函式來處理控制項的 Windows 訊息。 從清單中選擇您想要建立此項目，如果有任何的 Windows 控制項的型別。  
 
+ -   `Button`  
+      
+ -   `ListBox`  
+      
+ -   `SysAnimate32`  
+      
+ -   `SysListView32`  
+      
+ -   `ComboBox`  
+      
+ -   `RichEdit`  
+      
+ -   `SysDateTimePick32`  
+      
+ -   `SysMonthCal32`  
+      
+ -   `ComboBoxEx32`  
+      
+ -   `ScrollBar`  
+      
+ -   `SysHeader32`  
+      
+ -   `SysTabControl32`  
+      
+ -   `Edit`  
+      
+ -   `Static`  
+      
+ -   `SysIPAddress32`  
+      
+ -   `SysTreeView32`  
   
--   `Button`  
+**其他狀態**  
+設定其他控制項的外觀和行為選項。  
   
--   `ListBox`  
+ -   **在執行階段不可見**： 設定要在執行階段是不可見的控制項。 您可以使用不可見的控制項來執行作業在背景中，例如定期引發事件。  
+      
+ -   **作用就像按鈕**： 設定位元 OLEMISC_ACTSLIKEBUTTON [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)列舉型別，以控制来處理像是按鈕。 如果容器已標示為預設按鈕的控制項的用戶端站台，則選取此選項可讓您藉由繪製本身有較粗框架將本身顯示為預設按鈕的按鈕控制項。 請參閱[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)如需詳細資訊。  
+      
+  -   **作用就像標籤**： 設定位元 OLEMISC 列舉 OLEMISC_ACTSLIKELABEL，若要啟用的控制項取代容器的原生的標籤。 容器會判斷該如何處理這個旗標，如果任何項目。  
   
--   `SysAnimate32`  
+**其他**  
+設定控制項的其他行為選項。  
   
--   `SysListView32`  
-  
--   `ComboBox`  
-  
--   `RichEdit`  
-  
--   `SysDateTimePick32`  
-  
--   `SysMonthCal32`  
-  
--   `ComboBoxEx32`  
-  
--   `ScrollBar`  
-  
--   `SysHeader32`  
-  
--   `SysTabControl32`  
-  
--   `Edit`  
-  
--   `Static`  
-  
--   `SysIPAddress32`  
-  
--   `SysTreeView32`  
-  
- **其他狀態**  
- 設定其他控制項的外觀和行為選項。  
-  
--   **在執行階段隱藏**： 設定要在執行階段是不可見的控制項。 您可以使用不可見的控制項在背景中，例如引發事件定期執行作業。  
-  
--   **按鈕就像是**： 集`OLEMISC_ACTSLIKEBUTTON`位元[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)列舉型別，以啟用控制項的作用類似按鈕。 如果容器已標示為預設按鈕控制項的用戶端站台，選取此選項可讓您的按鈕控制項來顯示本身為預設按鈕，藉由繪製本身粗框架。 請參閱[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)如需詳細資訊。  
-  
--   **標籤就像是**： 集`OLEMISC_ACTSLIKELABEL`位元`OLEMISC`列舉型別，以控制，以取代容器的原生的標籤。 容器會判斷該如何處理這個旗標，任何項目。  
-  
- **其他**  
- 設定控制項的其他行為的選項。  
-  
--   **正規化 DC**： 設定控制項來繪製本身呼叫時，建立標準化的裝置內容。 這個動作會標準化控制項的外觀，但會讓繪製比較沒有效率。  
-  
--   **僅適用於視窗**： 指定控制項不能是無視窗。 如果您未選取此選項，您的控制項已自動無視窗在容器中可支援無視窗物件，而自動視窗中不支援無視窗物件的容器。 選取此選項會強制您為視窗型的即使支援無視窗物件的容器中的控制項。  
-  
--   **可插入**： 選取此選項可讓您的控制項出現在**插入物件**Word 和 Excel 之類的應用程式的對話方塊。 支援透過此對話方塊中的內嵌的物件的任何應用程式可以再插入您的控制項。  
+ -   **標準化 DC**： 設定控制項來建立標準化的裝置內容，當呼叫它來繪製本身。 這個動作會標準化控制項的外觀，但會讓繪製比較沒有效率。  
+      
+ -   **僅適用於視窗**： 指定您的控制項不能是無視窗。 如果您未選取此選項，您的控制項是支援無視窗物件的容器中會自動無視窗，而且自動視窗不支援無視窗物件的容器中。 選取此選項會強制您的控制項設為視窗型的即使支援無視窗物件的容器中。  
+      
+ -   **可插入**： 選取此選項可讓您的控制項中出現**插入物件**Word 和 Excel 等應用程式的對話方塊。 您的控制項則可以插入任何應用程式支援透過此對話方塊中的內嵌的物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)   
- [SUBEDIT 範例： Superclasses 標準 Windows 控制項](http://msdn.microsoft.com/en-us/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [SUBEDIT 範例： 超級類別的標準 Windows 控制項](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
 

@@ -1,7 +1,7 @@
 ---
-title: 'Comptr:: Asiid 方法 |Microsoft 文件'
+title: 'Comptr:: Asiid 方法 |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870086"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025899"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
 傳回 ComPtr 物件，代表指定介面 ID 所識別的介面。  
@@ -41,7 +41,7 @@ WRL_NOTHROW HRESULT AsIID(
  介面識別碼。  
   
  `p`  
- 如果支援，指定的介面的雙向間接指標`riid`參數，否則 IUnknown 的指標。  
+ 如果物件具有其識別碼等於的介面`riid`，所指定之介面的雙向間接指標`riid`參數，否則 IUnknown 指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  

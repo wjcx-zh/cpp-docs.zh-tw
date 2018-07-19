@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846320"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025935"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -34,11 +34,11 @@ ms.locfileid: "33846320"
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<實驗/filesystem >**命名空間：** std::experimental::filesystem
+**標頭：** \<experimental/filesystem> >**命名空間：** std::experimental::filesystem
 
 ## <a name="copy_options"></a>  copy_options
 
-此位元遮罩值的列舉可搭配 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函式來指定行為。
+此位元遮罩值的列舉可搭配 [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函式來指定行為。
 
 ### <a name="syntax"></a>語法
 

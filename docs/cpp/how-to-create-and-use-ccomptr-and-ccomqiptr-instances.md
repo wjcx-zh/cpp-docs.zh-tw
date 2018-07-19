@@ -1,5 +1,5 @@
 ---
-title: 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體 |Microsoft 文件
+title: 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體 |Microsoft Docs
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c63eb1657cd00580197e0571a40e9a7545688dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415448"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026905"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
-在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 如需 COM 基本概念的資訊，請參閱 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
+在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 COM 的基本概念的相關資訊，請參閱[元件物件模型 (COM)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
   
  當您具現化元件物件模型 (COM) 物件時，請將介面指標存放於 COM 智慧型指標，它在解構函式中使用 `AddRef` 和 `Release` 呼叫來執行參考計數。 如果您使用 Active Template Library (ATL) 或 MFC 程式庫，則使用 `CComPtr` 智慧型指標。 如果您不使用 ATL 或 MFC，則使用 `_com_ptr_t`。 由於沒有 `std::unique_ptr`的 COM 對等用法，為單一擁有者和多擁有者案例中使用這些智慧型指標。 `CComPtr` 和 `ComQIPtr` 都支援有右值參考的移動作業。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "32415448"
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` 及其相關項目是 ATL 的一部分且已定義在\<atlcomcli.h >。 `_com_ptr_t` 宣告中\<comip.h >。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。  
+ `CComPtr` 和其相關是 ATL 的一部分，且會定義在\<atlcomcli.h >。 `_com_ptr_t` 宣告於\<comip.h >。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。  
   
 ## <a name="example"></a>範例  
  ATL 也提供 `CComQIPtr`，查詢 COM 物件以擷取其他介面的語法更簡單。 然而，建議使用 `CComPtr` ，因為 `CComQIPtr` 可以執行的所有作業，它也可以執行，而且在語意上與原始 COM 介面指標更加一致。 如果您使用 `CComPtr` 查詢介面，新介面指標是放在 out 參數中。 如果呼叫失敗，傳回 HRESULT，這是一般的 COM 模式。 使用 `CComQIPtr`，傳回值是指標本身，而且如果呼叫失敗，無法存取內部 HRESULT 傳回值。 下列兩行顯示 `CComPtr` 和 `CComQIPtr` 的錯誤處理機制之間的差異。  

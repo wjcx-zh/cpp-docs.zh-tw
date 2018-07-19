@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202add45c335adea086087aed9ce3374e56a7e39
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847864"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027335"
 ---
 # <a name="errorcondition-class"></a>error_condition 類別
 
@@ -97,12 +97,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |參數|描述|
 |---------------|-----------------|
-|`val`|要儲存在 `error_code` 中的錯誤碼值。|
-|`_Cat`|要儲存在 `error_code` 中的錯誤分類。|
+|*val*|要儲存在 `error_code` 中的錯誤碼值。|
+|*與*|要儲存在 `error_code` 中的錯誤分類。|
 
 ### <a name="remarks"></a>備註
 
-成員函式會儲存 `val` 作為錯誤碼值，並儲存 `_Cat` 的指標。
+此成員函式會*val*作為錯誤碼值和指標*與*。
 
 ## <a name="category"></a>  error_condition::category
 
@@ -149,15 +149,15 @@ error_condition(_Enum _Errcode,
 
 |參數|描述|
 |---------------|-----------------|
-|`val`|要儲存在 `error_condition` 中的錯誤碼值。|
-|`_Cat`|要儲存在 `error_condition` 中的錯誤分類。|
-|`_Errcode`|要儲存在 `error_condition` 中的列舉值。|
+|*val*|要儲存在 `error_condition` 中的錯誤碼值。|
+|*與*|要儲存在 `error_condition` 中的錯誤分類。|
+|*_Errcode*|要儲存在 `error_condition` 中的列舉值。|
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會儲存零的錯誤碼值以及 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
-第二個建構函式會儲存 `val` 作為錯誤碼值，並儲存 [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8) 的指標。
+第二個建構函式儲存*val*作為錯誤碼值和指標[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
 
 第三個建構函式會儲存 `(value_type)_Errcode` 作為錯誤碼值，並儲存 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
@@ -189,7 +189,7 @@ bool operator==(const error_condition& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要測試是否相等的物件。|
+|*right*|要測試是否相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -211,11 +211,11 @@ bool operator!=(const error_condition& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要測試是否不相等的物件。|
+|*right*|要測試是否不相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果 `error_condition` 不等於傳入 `right` 的 `error_condition` 物件，即為 **true**；否則為 **false**。
+**true**如果`error_condition`物件是否不等於`error_condition`傳入物件*右*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -233,7 +233,7 @@ bool operator<(const error_condition& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要比較的 `error_condition` 物件。|
+|*right*|要比較的 `error_condition` 物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -259,7 +259,7 @@ error_condition(_Enum error,
 
 |參數|描述|
 |---------------|-----------------|
-|`_Errcode`|要指派給 `error_condition` 物件的列舉值。|
+|*_Errcode*|要指派給 `error_condition` 物件的列舉值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -283,7 +283,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>備註
 
-只有當 [value](#value) 不等於零時，運算子才會傳回可以轉換成 `true` 的值。 傳回類型僅可轉換為 `bool`，而非 `void *` 或其他已知的純量類型。
+此運算子會傳回值轉換為 **，則為 true**只有當[值](#value)不等於零。 傳回的型別會轉換才能**bool**，而非`void *`或其他已知的純量類型。
 
 ## <a name="value"></a>  error_condition::value
 
@@ -309,7 +309,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型定義與 `int` 同義。
+類型定義是同義**int**。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCheckBox 類別 |Microsoft 文件
+title: CMFCRibbonCheckBox 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042052"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027176"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 `CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。  
@@ -77,9 +77,9 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-其中*nID*是核取方塊命令識別碼和*lpszText*是核取方塊的文字標籤。  
+其中*nID*  核取方塊的命令識別碼並*lpszText*文字標籤，核取方塊。  
   
- 您可以將核取方塊加入 功能區面板使用[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
+ 您也可以使用功能區面板新增核取方塊[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,7 +94,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
  **標頭：** afxribboncheckbox.h  
   
 ##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
- 功能區核取方塊，物件建構函式  
+ 功能區核取方塊物件的建構函式  
   
 ```  
 CMFCRibbonCheckBox(
@@ -126,7 +126,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 指標`CDC`相關聯的核取方塊。  
+ 核取方塊相關聯的 CDC 的指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`CSize`物件，其中包含核取方塊的壓縮大小。  
@@ -143,13 +143,13 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 指標`CDC`此核取方塊相關聯。  
+ 指標，此核取方塊相關聯的 CDC。  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`物件，其中包含中繼核取方塊的大小。  
+ A`CSize`物件，包含中繼核取方塊的大小。  
   
 ### <a name="remarks"></a>備註  
- 如果未覆寫，會計算為預設核取方塊大小的中繼大小 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 再加上文字的大小，再加上邊界。  
+ 如果未覆寫，會計算為預設核取方塊大小中繼的大小 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 再加上文字的大小，再加上邊界。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  取得規則的核取方塊大小。  
@@ -160,10 +160,10 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 指標`CDC`此核取方塊相關聯的物件。  
+ 此核取方塊相關聯的 CDC 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`CSize`物件，其中包含一般大小的核取方塊。  
+ 傳回`CSize`物件，其中包含規則的核取方塊大小。  
   
 ### <a name="remarks"></a>備註  
  如果未覆寫，會傳回中繼核取方塊的大小。  
@@ -176,7 +176,7 @@ virtual BOOL IsDrawTooltipImage() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果沒有核取方塊，與相關聯的工具提示映像或`FALSE`如果不是。  
+ 如果有工具提示的映像相關聯的核取方塊，或如果沒有，則為 FALSE，則傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -189,12 +189,12 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 指標`CDC`要在其中繪製此核取方塊。  
+ 若要在其中繪製核取方塊 CDC 的指標。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
- 由架構呼叫以繪製功能表影像核取方塊。  
+ 由架構呼叫以繪製功能表圖像的核取方塊。  
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -202,19 +202,19 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>參數  
  [in]*CDC**  
- 指標`CDC`相關聯的核取方塊。  
+ 核取方塊相關聯的 CDC 的指標。  
   
  [in]*CRect*  
- A`CRect`物件，指定要在其中繪製的功能表影像的矩形。  
+ A`CRect`物件，指定要繪製的功能表影像的矩形。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果繪製影像或`FALSE`如果不是。  
+ 傳回已繪製的影像，如果為 TRUE 或 FALSE，如果不是。  
   
 ### <a name="remarks"></a>備註  
- 如果未覆寫，就會傳回`FALSE`。  
+ 如果未覆寫，會傳回 FALSE。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
- 由架構呼叫以繪製命令清單方塊中的核取方塊。  
+ 由架構呼叫以繪製命令的清單方塊中的核取方塊。  
   
 ```  
 virtual void OnDrawOnList(
@@ -228,27 +228,27 @@ virtual void OnDrawOnList(
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 在其中繪製此核取方塊的裝置內容的指標。  
+ 在其中繪製核取方塊的裝置內容指標。  
   
- [in]*strText*  
+ [in]*先把 strText*  
  顯示文字。  
   
  [in]*nTextOffset*  
- 距離，單位為像素，從清單方塊來顯示文字的左邊。  
+ 距離，以像素為單位，從左側的清單方塊的顯示文字。  
   
  [in]*rect*  
- 核取方塊的顯示矩形。  
+ 核取方塊顯示矩形。  
   
  [in]*bIsSelected*  
- `TRUE` 如果選取此核取方塊，或`FALSE`如果不是。  
+ 如果核取方塊為選取狀態，或如果沒有，則為 FALSE，則為 TRUE。  
   
  [in]*bHighlighted*  
- `TRUE` 如果核取方塊會反白顯示，或`FALSE`如果不是。  
+ 如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
- 設定核取方塊的協助工具資料。  
+ 設定協助工具資料的核取方塊。  
   
 ```  
 virtual BOOL SetACCData(
@@ -261,13 +261,13 @@ virtual BOOL SetACCData(
  核取方塊的父視窗。  
   
  *data*  
- 核取方塊的協助工具資料。  
+ 協助工具資料的核取方塊。  
   
 ### <a name="return-value"></a>傳回值  
- 一律傳回 `TRUE`。  
+ 一律會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 依預設這個方法會設定協助工具資料的核取方塊，一律會傳回`TRUE`。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。  
+ 依預設這個方法會設定協助工具資料的核取方塊，並一律會傳回 TRUE。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: 使用 CString |Microsoft 文件
+title: 使用 CString |Microsoft Docs
 ms.custom: ''
 ms.date: 06/18/2018
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 92807995183d2e5a34391250b36129e9bea01d66
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238717"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025840"
 ---
 # <a name="using-cstring"></a>使用 CString
 本節中的主題會描述如何使用 `CString` 進行程式設計。 如需參考文件`CString`類別，請參閱文件[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  
   
  若要使用 `CString`，請包括 `atlstr.h` 標頭。  
   
- `CString`， `CStringA`，和`CStringW`類別會呼叫在類別樣板的特製化[CStringT](../atl-mfc-shared/reference/cstringt-class.md)根據它們支援的字元資料類型。  
+ `CString`， `CStringA`，並`CStringW`類別會呼叫在類別樣板的特製化[CStringT](../atl-mfc-shared/reference/cstringt-class.md)根據它們所支援的字元資料類型。  
   
- `CStringW` 物件包含 `wchar_t` 類型，且支援 Unicode 字串。 `CStringA` 物件包含 `char` 類型，且支援單一位元組和多位元組 (MBCS) 字串。 `CString` 物件支援 `char` 類型或 `wchar_t` 類型，具體取決於編譯時是定義 `MBCS` 符號，還是 `UNICODE` 符號。  
+ A`CStringW`物件包含**wchar_t**類型，且支援 Unicode 字串。 A`CStringA`物件包含**char**類型，以及支援單一位元組和多位元組 (MBCS) 字串。 A`CString`物件支援**char**型別或`wchar_t`類型，取決於是否定義符號 MBCS 或 UNICODE 符號在編譯時期。  
   
- `CString` 物件會在 `CStringData` 物件中保留字元資料。 `CString` 接受`null`-終止 C 樣式字串。 `CString` 追蹤進行更快的效能，但是它的字串長度也會保留`null`支援轉換成 LPCWSTR 預存的字元資料中的字元。 `CString` 這會匯出 C 樣式字串時，請包含 null 結束字元。 您可以插入`null`中其他位置`CString`，但它可能會產生非預期的結果。  
+ `CString` 物件會在 `CStringData` 物件中保留字元資料。 `CString` 可接受 NULL 結束的 C 樣式字串。 `CString` 會追蹤字串長度，更快的效能，但它也會保留預存的字元資料，以支援 LPCWSTR 轉換中的 NULL 字元。 `CString` 它會匯出 C 樣式字串時，請包括 null 結束字元。 您可以在其他位置中插入 NULL `CString`，但它可能會產生非預期的結果。  
   
  使用下列字串類別集時，可以不連結 MFC 程式庫、及具有或不具有 CRT 支援：`CAtlString`、`CAtlStringA` 和 `CAtlStringW`。  
   
@@ -65,7 +65,7 @@ int main() {
  描述如何使用類似 C 樣式 null 結尾字串的方式，來操作 `CString` 物件的內容。  
   
  [針對 BSTR 配置及釋放記憶體](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
- 討論如何針對 `BSTR` 及 COM 物件使用記憶體。  
+ 討論如何使用 BSTR 和 COM 物件的記憶體。  
   
  [CString 例外狀況清除](../atl-mfc-shared/cstring-exception-cleanup.md)  
  解釋 MFC 3.0 及以後版本中不再需要明確清除。  

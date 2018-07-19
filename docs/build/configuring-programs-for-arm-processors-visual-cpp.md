@@ -1,7 +1,7 @@
 ---
-title: 為 ARM 處理器設定 Visual c + + |Microsoft 文件
+title: 適用於 ARM 處理器設定 Visual c + + |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -12,14 +12,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b249e2b54085f87c4895ba026d4f34e9ed195a49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd54543f4fc35a204aaa349ce2ac8f41f912caf
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366896"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026315"
 ---
-# <a name="configure-visual-c-for-arm-processors"></a>為 ARM 處理器設定 Visual c + +
+# <a name="configure-visual-c-for-arm-processors"></a>適用於 ARM 處理器設定 Visual c + +
 
 本文件的這一節包含如何使用 Visual C++ 建置工具，將 ARM 硬體做為目標。  
   
@@ -28,13 +28,19 @@ ms.locfileid: "32366896"
 [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)  
 描述由 Windows on ARM 用於暫存器使用方式的應用程式二進位介面，呼叫慣例和例外狀況處理。  
   
+[ARM64 ABI 慣例概觀](../build/arm64-windows-abi-conventions.md)  
+描述 Windows 上 ARM64 用於暫存器使用方式，呼叫慣例和例外狀況處理的應用程式二進位介面。  
+  
 [Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)  
 描述通常假定可跨架構移植的 C++ 程式碼項目，但其會針對 ARM 與 x86 和 x64 產生不同的結果。  
   
 [ARM 例外狀況處理](../build/arm-exception-handling.md)  
 描述在 Windows on ARM 中處理結構化例外狀況期間，堆疊回溯的編碼配置。  
-  
+
+[ARM64 例外狀況處理](../build/arm64-exception-handling.md)  
+描述在 ARM64 上的 Windows 中的結構化例外狀況處理期間的堆疊回溯的編碼配置。  
+
 ## <a name="related-sections"></a>相關章節  
   
 [ARM 內建](../intrinsics/arm-intrinsics.md)  
-描述使用 ARM 架構之處理器的編譯器內建功能。
+描述使用 ARM 架構之處理器的編譯器內建功能。  

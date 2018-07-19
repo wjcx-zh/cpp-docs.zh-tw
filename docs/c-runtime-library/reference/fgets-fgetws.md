@@ -1,7 +1,7 @@
 ---
 title: fgets、fgetws | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402016"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027163"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -70,7 +70,7 @@ wchar_t *fgetws(
 *str*<br/>
 資料的儲存位置。
 
-*NumChars*<br/>
+*numChars*<br/>
 要讀取的字元數上限。
 
 *資料流*<br/>
@@ -78,17 +78,17 @@ wchar_t *fgetws(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式傳回*str*。 **NULL**傳回表示錯誤或檔案結尾條件。 使用**feof**或**ferror**來判斷是否發生錯誤。 如果*str*或*資料流*為 null 指標，或*numChars*小於或等於零，此函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
+每一種函式都會傳回*str*。 **NULL**傳回表示錯誤或檔案結尾條件。 使用**feof**或是**ferror**來判斷是否發生錯誤。 如果*str*或是*串流*為 null 指標，或*numChars*小於或等於零，此函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**NULL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fgets**函式會從輸入讀取字串*資料流*引數並將其儲存在*str*。 **fgets**自目前資料流位置，包括第一個新行字元結尾，為資料流讀取字元，或直到讀取的字元數，等於*numChars* -1，第一個為準。 結果會儲存在*str*加上 null 字元。 讀取的新行字元包含在字串中。
+**Fgets**函式會從輸入讀取字串*串流*引數並將其儲存在*str*。 **fgets**讀取字元與目前的資料流位置，以包括第一次的新行字元中，為資料流結尾或直到讀取的字元數，等於*numChars* -1，視何者先。 結果會儲存在*str*會附加 null 字元。 讀取的新行字元包含在字串中。
 
 **fgetws**是寬字元版本的**fgets**。
 
-**fgetws**讀取寬字元引數*str*為多位元組字元字串或寬字元字串是否根據*資料流*在文字模式或二進位模式中，開啟分別。 如需在 Unicode 和多位元組資料流 I/O 中使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
+**fgetws**讀取寬字元引數*str*為多位元組字元字串或寬字元字串，根據*串流*開啟以文字模式還是二進位模式中，分別。 如需在 Unicode 和多位元組資料流 I/O 中使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -109,9 +109,8 @@ wchar_t *fgetws(
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 

@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44de89891f3380f71e4fa590626ba4e275782f9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848033"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027228"
 ---
 # <a name="errorcode-class"></a>error_code 類別
 
@@ -100,12 +100,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |參數|描述|
 |---------------|-----------------|
-|`val`|要儲存在 `error_code` 中的錯誤碼值。|
-|`_Cat`|要儲存在 `error_code` 中的錯誤分類。|
+|*val*|要儲存在 `error_code` 中的錯誤碼值。|
+|*與*|要儲存在 `error_code` 中的錯誤分類。|
 
 ### <a name="remarks"></a>備註
 
-成員函式會儲存 `val` 作為錯誤碼值，並儲存 `_Cat` 的指標。
+此成員函式會*val*作為錯誤碼值和指標*與*。
 
 ## <a name="category"></a>  error_code::category
 
@@ -164,15 +164,15 @@ error_code(_Enum _Errcode,
 
 |參數|描述|
 |---------------|-----------------|
-|`val`|要儲存在 `error_code` 中的錯誤碼值。|
-|`_Cat`|要儲存在 `error_code` 中的錯誤分類。|
-|`_Errcode`|要儲存在 `error_code` 中的列舉值。|
+|*val*|要儲存在 `error_code` 中的錯誤碼值。|
+|*與*|要儲存在 `error_code` 中的錯誤分類。|
+|*_Errcode*|要儲存在 `error_code` 中的列舉值。|
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會儲存零的錯誤碼值以及 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
-第二個建構函式會儲存 `val` 作為錯誤碼值，並儲存 [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8) 的指標。
+第二個建構函式儲存*val*作為錯誤碼值和指標[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
 
 第三個建構函式會儲存 `(value_type)_Errcode` 作為錯誤碼值，並儲存 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
@@ -204,7 +204,7 @@ bool operator==(const error_code& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要測試是否相等的物件。|
+|*right*|要測試是否相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -226,11 +226,11 @@ bool operator!=(const error_code& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要測試是否不相等的物件。|
+|*right*|要測試是否不相等的物件。|
 
 ### <a name="return-value"></a>傳回值
 
-如果 `error_code` 不等於傳入 `right` 的 `error_code` 物件，即為 **true**；否則為 **false**。
+**true**如果`error_code`物件是否不等於`error_code`傳入物件*右*; 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-測試 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件是否小於傳入以進行比較的 `error_code` 物件。
+測試 [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件是否小於傳入以進行比較的 `error_code` 物件。
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -248,7 +248,7 @@ bool operator<(const error_code& right) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`right`|要比較的 error_code 物件。|
+|*right*|要比較的 error_code 物件。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -260,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-將新的列舉值指派給 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件。
+將新的列舉值指派給 [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件。
 
 ```cpp
 template <class _Enum>
@@ -273,7 +273,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 
 |參數|描述|
 |---------------|-----------------|
-|`_Errcode`|要指派給 `error_code` 物件的列舉值。|
+|*_Errcode*|要指派給 `error_code` 物件的列舉值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -297,7 +297,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>備註
 
-只有當 [value](#value) 不等於零時，運算子才會傳回可以轉換成 `true` 的值。 傳回類型僅可轉換為 `bool`，而非 `void *` 或其他已知的純量類型。
+此運算子會傳回值轉換為 **，則為 true**只有當[值](#value)不等於零。 傳回的型別會轉換才能**bool**，而非`void *`或其他已知的純量類型。
 
 ## <a name="value"></a>  error_code::value
 
@@ -323,7 +323,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型定義與 `int` 同義。
+此類型定義是同義**int**。
 
 ## <a name="see-also"></a>另請參閱
 

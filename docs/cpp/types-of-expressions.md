@@ -1,5 +1,5 @@
 ---
-title: 運算式的型別 |Microsoft 文件
+title: 運算式的型別 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422419"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026561"
 ---
 # <a name="types-of-expressions"></a>運算式的類型
 C++ 運算式分為幾個類別：  
@@ -30,13 +30,13 @@ C++ 運算式分為幾個類別：
   
 -   [具有一元運算子構成的運算式](../cpp/expressions-with-unary-operators.md)。 一元運算子只會在運算式中的一個運算元上作用。  
   
--   [以二元運算子構成的運算式](../cpp/expressions-with-binary-operators.md)。 二元運算子會在運算式中的兩個運算元上作用。  
+-   [具有二元運算子構成的運算式](../cpp/expressions-with-binary-operators.md)。 二元運算子會在運算式中的兩個運算元上作用。  
   
--   [使用條件運算子的運算式](../cpp/conditional-operator-q.md)。 條件運算子是三元運算子，也是 C++ 語言中唯一的三元運算子，它會使用三個運算元。  
+-   [含條件運算子的運算式](../cpp/conditional-operator-q.md)。 條件運算子是三元運算子，也是 C++ 語言中唯一的三元運算子，它會使用三個運算元。  
   
 -   [常數運算式](../cpp/cpp-constant-expressions.md)。 常數運算式完全是由常數資料所構成。  
   
--   [使用明確類型轉換的運算式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)。 運算式中可以使用明確類型轉換，或稱為「轉換」(Cast)。  
+-   [使用明確類型轉換的運算式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)。 運算式中可以使用明確類型轉換，或稱為「轉換」(Cast)。  
   
 -   [使用成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。  
   

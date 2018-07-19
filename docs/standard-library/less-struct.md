@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac4528c976e99a77ceec8bc170323846a0e3a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858912"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954351"
 ---
 # <a name="less-struct"></a>less 結構
 
-在其引數上執行小於運算 ( `operator<`) 的二元述詞。
+二元述詞執行小於-運算 (`operator<`) 在其引數。
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ struct less<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator<`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator<`會指定或推斷類型的運算元。
 
-`Left` 小於的左的運算元的運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*的左的運算元小於-運算。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 小於右運算元的運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*小於右運算元-運算。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -61,7 +61,7 @@ struct less<void>
 
 ## <a name="remarks"></a>備註
 
-二元述詞 `less`< `Type`> 會提供嚴格弱式排序來將一組 `Type` 類型的元素值分割成等價類別，但只有在此類型滿足以此方式排序的標準數學需求時，才會這麼做。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。
+二元述詞`less` <  `Type`> 提供嚴格弱式順序的一組項目值的型別*類型*成等價類別，如果且只有此類型滿足數學標準因此要排序的需求。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。
 
 ## <a name="example"></a>範例
 

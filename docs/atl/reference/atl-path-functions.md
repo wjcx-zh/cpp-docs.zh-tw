@@ -1,5 +1,5 @@
 ---
-title: ATL 路徑函式 |Microsoft 文件
+title: ATL 路徑函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -47,16 +47,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad0db4641731f4c92550fad075b759957383c52a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366532"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027572"
 ---
 # <a name="atl-path-functions"></a>ATL 路徑函式
 
-ATL 提供 ATLPath 類別操作的表單中的路徑[CPathT](cpatht-class.md)。 此程式碼位於 atlpath.h。  
+ATL 提供 ATLPath 類別，以管理路徑的形式[CPathT](cpatht-class.md)。 此程式碼可以找到 atlpath.h 中。  
   
 ### <a name="related-classes"></a>相關的類別  
   
@@ -195,7 +195,7 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
   
 
 ## <a name="combine"></a> ATLPath::Combine 
-此函式是多載包裝函式[PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571)。  
+此函式是多載包裝函式[PathCombine](https://msdn.microsoft.com/library/windows/desktop/bb773571)。  
 
 ### <a name="syntax"></a>語法  
 ```
@@ -350,7 +350,7 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory 
-此函式是多載包裝函式[PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621)。
+此函式是多載包裝函式[PathIsDirectory](https://msdn.microsoft.com/library/windows/desktop/bb773621)。
 
 ```  
 inline BOOL IsDirectory(const char* pszPath);

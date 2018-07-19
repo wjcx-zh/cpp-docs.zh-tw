@@ -1,5 +1,5 @@
 ---
-title: ATL HTTP 公用程式函式 |Microsoft 文件
+title: ATL HTTP 公用程式函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476ca29de5a44e8ebb20d53ec0b88834c7b03eea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363780"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026084"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -21,13 +21,13 @@ ms.locfileid: "32363780"
 
 |||  
 |-|-|  
-|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes URL，包括將 unsafe 字元和空格轉換成逸出序列。|  
-|[AtlCombineUrl](#atlcombineurl)|將基底 URL 和相對 URL 結合成單一、 標準的 URL。|  
-|[AtlEscapeUrl](#atlescapeurl)|所有 unsafe 字元轉換成逸出序列。|  
+|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes URL，其中包括將 unsafe 字元和空格轉換成逸出序列。|  
+|[AtlCombineUrl](#atlcombineurl)|將基底 URL 和相對 URL 結合成單一、 標準的 URL 中。|  
+|[AtlEscapeUrl](#atlescapeurl)|將所有 unsafe 字元逸出序列轉換。|  
 |[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|取得與特定網際網路通訊協定或配置相關聯的預設連接埠號碼。|  
-|[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|判斷字元是否為安全可供在 URL 中使用。|  
+|[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|判斷字元是否為安全的 URL 中使用。|  
 |[AtlUnescapeUrl](#atlunescapeurl)|轉換回其原始值的逸出字元。|  
-|[RGBToHtml](#rgbtohtml)|將轉換[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色彩值的 HTML 文字的值。|
+|[RGBToHtml](#rgbtohtml)|將轉換[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色彩值相對應的 HTML 文字的值。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|呼叫此函式將系統時間轉換成採用適合在 HTTP 標頭中使用之格式的字串。|
 
 ## <a name="requirements"></a>需求  
@@ -45,31 +45,31 @@ inline BOOL AtlCanonicalizeUrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `szUrl`  
- 要規範化 URL。  
+ *szUrl*  
+ 要規範化的 URL。  
   
- `szCanonicalized`  
- 呼叫端配置緩衝區接收正式的 URL。  
+ *szCanonicalized*  
+ 要接收的正式的 URL 的呼叫端配置緩衝區。  
   
- `pdwMaxLength`  
- 變數，其中包含以字元為單位的長度指標`szCanonicalized`。 如果函式成功，變數就會收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
+ *pdwMaxLength*  
+ 指標變數，其中包含以字元為單位的長度*szCanonicalized*。 如果函式成功，變數就會收到包含結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數就會收到所需的長度以位元組為單位的緩衝區，包括結束的 null 字元的空白字元。  
   
- `dwFlags`  
- ATL_URL 旗標控制此函式的行為。 
+ *dwFlags*  
+ ATL_URL 旗標來控制此函式的行為。 
 
-- `ATL_URL_BROWSER_MODE` 不會進行編碼或解碼字元之後"#"或"？"，並不會移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
-- `ATL_URL_DECODE` 將所有 %xx 序列都轉換成字元，包括逸出序列之前在剖析 URL。
-- `ATL_URL_ENCODE_PERCENT` 任何遇到的百分比符號會將編碼。 根據預設，未編碼的百分比符號。
-- `ATL_URL_ENCODE_SPACES_ONLY` 空間只會將編碼。
-- `ATL_URL_ESCAPE` 將所有逸出序列 （%xx) 轉換成其對應的字元。
-- `ATL_URL_NO_ENCODE` 不會轉換成逸出序列不安全的字元。
-- `ATL_URL_NO_META` 不會移除中繼序列 (例如"。"和"..") 從 URL。 
+- ATL_URL_BROWSER_MODE 不會進行編碼或解碼"#"之後的字元或"？"，並不會移除尾端空白字元之後"？"。 如果未指定此值，編碼整個 URL，並移除尾端空白字元。
+- ATL_URL_DECODE 會將所有 %xx 序列都轉換成字元，才會剖析 URL，包括逸出序列。
+- ATL_URL_ENCODE_PERCENT 編碼發現任何百分比符號。 根據預設，不被編碼百分比符號。
+- ATL_URL_ENCODE_SPACES_ONLY 編碼空間只。
+- ATL_URL_ESCAPE 將轉換的所有逸出序列 （%xx) 到其對應的字元。
+- ATL_URL_NO_ENCODE 不會轉換成逸出序列的不安全字元。
+- ATL_URL_NO_META 不會移除中繼序列 (例如"。"和"..") 從 URL。 
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 行為類似的目前版本[InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ，但不需要安裝的 WinInet 或 Internet Explorer。  
+ 就等於目前的版本[InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)但不需要安裝的 WinInet 或 Internet Explorer。  
   
 ### <a name="see-also"></a>另請參閱  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
@@ -93,20 +93,20 @@ inline BOOL AtlCombineUrl(
  *szRelativeUrl*  
  相對於基底 URL 的 URL。  
   
- `szBuffer`  
- 呼叫端配置緩衝區接收正式的 URL。  
+ *szBuffer*  
+ 要接收的正式的 URL 的呼叫端配置緩衝區。  
   
- `pdwMaxLength`  
- 變數，其中包含以字元為單位的長度指標`szBuffer`。 如果函式成功，變數就會收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
+ *pdwMaxLength*  
+ 指標變數，其中包含以字元為單位的長度*szBuffer*。 如果函式成功，變數就會收到包含結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數就會收到所需的長度以位元組為單位的緩衝區，包括結束的 null 字元的空白字元。  
   
- `dwFlags`  
- 控制此函式的行為的旗標。 請參閱[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
+ *dwFlags*  
+ 控制此函式行為的旗標。 請參閱[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 行為類似的目前版本[InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ，但不需要安裝的 WinInet 或 Internet Explorer。  
+ 就等於目前的版本[InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355)但不需要安裝的 WinInet 或 Internet Explorer。  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  呼叫此函式會將所有 Unsafe 字元轉換成逸出序列。  
@@ -128,25 +128,25 @@ inline BOOL AtlEscapeUrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszStringIn`  
+ *lpszStringIn*  
  要轉換的 URL。  
   
- `lpszStringOut`  
- 呼叫端配置的緩衝區，將寫入已轉換的 URL。  
+ *lpszStringOut*  
+ 呼叫端配置的緩衝區，已轉換的 URL 將會寫入至其中。  
   
- `pdwStrLen`  
- DWORD 變數的指標。 如果函式成功，`pdwStrLen`收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。 使用此方法的寬字元版本時`pdwStrLen`接收要求的字元數目，不是位元組的數目。  
+ *pdwStrLen*  
+ DWORD 變數的指標。 如果此函數成功， *pdwStrLen*接收寫入包括結束的 null 字元緩衝區的字元數。 如果函式失敗，變數就會收到所需的長度以位元組為單位的緩衝區，包括結束的 null 字元的空白字元。 使用這個方法，寬字元版本時會*pdwStrLen*收到所需，不是位元組的數目的字元數目。  
   
- `dwMaxLength`  
- 緩衝區的大小`lpszStringOut`。  
+ *dwMaxLength*  
+ 緩衝區的大小*lpszStringOut*。  
   
- `dwFlags`  
- ATL_URL 旗標控制此函式的行為。 請參閱[ATLCanonicalizeUrl](#atlcanonicalizeurl)可能的值。  
+ *dwFlags*  
+ ATL_URL 旗標來控制此函式的行為。 請參閱[ATLCanonicalizeUrl](#atlcanonicalizeurl)可能的值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
-## <a name="atlgetdefaulturlport"></a> 
+## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
  呼叫此函式可取得與特定網際網路通訊協定或配置相關聯的預設通訊埠編號。  
   
 ```  
@@ -158,7 +158,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
  [ATL_URL_SCHEME](atl-url-scheme-enum.md)識別您要取得的連接埠號碼的配置值。  
   
 ### <a name="return-value"></a>傳回值  
- [ATL_URL_PORT](atl-typedefs.md#atl_url_port)與指定的配置或 ATL_URL_INVALID_PORT_NUMBER 相關，如果無法辨識的配置。  
+ [ATL_URL_PORT](atl-typedefs.md#atl_url_port)與指定的配置或 ATL_URL_INVALID_PORT_NUMBER 相關聯，如果無法辨識的配置。  
 
 ## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  呼叫此函式可了解在 URL 中使用某個字元是否安全。  
@@ -168,14 +168,14 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `chIn`  
+ *chIn*  
  要測試為安全的字元。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**輸入的字元是不安全，如果**FALSE**否則。  
+ 傳回為 true，則如果輸入的字元因不安全，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 不應在 Url 中的字元可以使用這個函式進行測試，並使用轉換[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
+ 不應在 Url 中的字元可以使用此函式進行測試，並且使用轉換[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
   
 ## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  呼叫此函式將逸出字元轉換回其原始值。  
@@ -195,26 +195,26 @@ inline BOOL AtlUnescapeUrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszStringIn`  
+ *lpszStringIn*  
  要轉換的 URL。  
   
- `lpszStringOut`  
- 呼叫端配置的緩衝區，將寫入已轉換的 URL。  
+ *lpszStringOut*  
+ 呼叫端配置的緩衝區，已轉換的 URL 將會寫入至其中。  
   
- `pdwStrLen`  
- DWORD 變數的指標。 如果函式成功，變數就會收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
+ *pdwStrLen*  
+ DWORD 變數的指標。 如果函式成功，變數就會收到包含結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數就會收到所需的長度以位元組為單位的緩衝區，包括結束的 null 字元的空白字元。  
   
- `dwMaxLength`  
- 緩衝區的大小`lpszStringOut`。  
+ *dwMaxLength*  
+ 緩衝區的大小*lpszStringOut*。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 反轉所套用的轉換程序[AtlEscapeUrl](#atlescapeurl)。  
+ 反轉所套用的轉換過程[AtlEscapeUrl](#atlescapeurl)。  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-將轉換[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色彩值的 HTML 文字的值。  
+將轉換[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色彩值相對應的 HTML 文字的值。  
   
 ```  
 bool inline RGBToHtml(  
@@ -224,20 +224,20 @@ bool inline RGBToHtml(
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  RGB 色彩值。  
   
- `pbOut`  
- 呼叫端配置緩衝區接收 HTML 色彩值的文字。 緩衝區空間必須為至少 8 個字元，包括 null 結束字元的空間）。  
+ *pbOut*  
+ 呼叫端配置緩衝區，以接收 HTML 色彩值的文字。 緩衝區必須具有至少 8 個字元，包括 null 結束字元的空間空間）。  
   
  *nBuffer*  
  以位元組為單位 （包括 null 結束字元的空間） 的緩衝區大小。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- HTML 色彩值是井字號後面接著 6 位數的十六進位值，使用 2 位數的每個色彩的紅色、 綠色和藍色元件 （例如，#FFFFFF 是白色）。  
+ HTML 色彩值是井字號，後面接著 6 位數的十六進位值，針對每個色彩的紅色、 綠色和藍色元件使用的 2 個數字 （例如 #FFFFFF 是白色）。  
   
 ## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 呼叫此函式將系統時間轉換成採用適合在 HTTP 標頭中使用之格式的字串。  
@@ -249,11 +249,11 @@ inline void SystemTimeToHttpDate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `st`  
- 為 HTTP 格式字串來取得系統時間。  
+ *st*  
+ 若要以 HTTP 的格式字串來取得系統時間。  
   
  *strTime*  
- 接收 HTTP 日期時間，如 RFC 2616 中定義的字串變數的參考 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) 和 RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt))。  
+ 接收 HTTP 日期時間，如 RFC 2616 中所定義的字串變數的參考 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) 和 RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt))。  
   
 ## <a name="see-also"></a>另請參閱  
  [概念](../../atl/active-template-library-atl-concepts.md)   

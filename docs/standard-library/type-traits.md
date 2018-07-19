@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863370"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026347"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -36,7 +36,7 @@ ms.locfileid: "33863370"
 
 ## <a name="remarks"></a>備註
 
-類別和中的範本\<type_traits > 可用來支援類型推斷、 分類，以及在編譯時期偵測類型相關的錯誤，並協助您最佳化您的泛型程式碼的轉換。 這些類別和範本包含描述類型屬性的一元類型特性、描述類型之間關係的二元類型特性，以及修改類型屬性的轉換特性。
+類別和範本\<type_traits > 用來支援型別推斷、 分類及在編譯時期偵測類型相關的錯誤，並協助您最佳化您的一般程式碼的轉換。 這些類別和範本包含描述類型屬性的一元類型特性、描述類型之間關係的二元類型特性，以及修改類型屬性的轉換特性。
 
 若要支援類型特性，則定義 Helper 類別 `integral_constant`。 它具有範本特製化 `true_type` 和 `false_type`，可形成類型述詞的基底類別。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞「為 True」時，會直接或間接地公開衍生自 [true_type](../standard-library/type-traits-typedefs.md#true_type)。 當類型述詞「為 False」時，會直接或間接地公開衍生自 [false_type](../standard-library/type-traits-typedefs.md#false_type)。
 
@@ -74,7 +74,7 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|測試類型是否為 `void`。|
+|[is_void](../standard-library/is-void-class.md)|測試類型是否**void**。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|測試類型是否為 `std::nullptr_t`。|
 |[is_integral](../standard-library/is-integral-class.md)|測試類型是否為整數。|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|測試類型是否為浮點。|
@@ -95,7 +95,7 @@ Helper 類別和 typedef
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|測試類型是否為參考。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|測試類型是否為算術。|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|測試類型是否為 `void` 或算術。|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|測試類型是否**void**或算術。|
 |[is_object](../standard-library/is-object-class.md)|測試類型是否為物件類型。|
 |[is_scalar](../standard-library/is-scalar-class.md)|測試類型是否為純量。|
 |[is_compound](../standard-library/is-compound-class.md)|測試類型是否不是純量。|
@@ -105,8 +105,8 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|測試類型是否為 `const`。|
-|[is_volatile](../standard-library/is-volatile-class.md)|測試類型是否為 `volatile`。|
+|[is_const](../standard-library/is-const-class.md)|測試類型是否**const**。|
+|[is_volatile](../standard-library/is-volatile-class.md)|測試類型是否**volatile**。|
 |[is_trivial](../standard-library/is-trivial-class.md)|測試類型是否為 trivial。|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|測試類型是否可完整複製。|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|測試類型是否為標準配置類型。|
@@ -142,7 +142,7 @@ Helper 類別和 typedef
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|測試類型是否可指派複製，且已知指派不會擲回。|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|測試類型是否可指派移動，且已知指派不會擲回。|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|測試類型是否可破壞，且已知解構函式不會擲回。|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|測試類型是否有虛擬解構函式。|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|測試類型是否有虛擬解構函式。|
 
 類型屬性的查詢
 
@@ -164,9 +164,9 @@ Helper 類別和 typedef
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|從類型產生 `const` 類型。|
-|[add_volatile](../standard-library/add-volatile-class.md)|從類型產生 `volatile` 類型。|
-|[add_cv](../standard-library/add-cv-class.md)|從類型產生 `const volatile` 類型。|
+|[add_const](../standard-library/add-const-class.md)|會產生**const**從型別類型。|
+|[add_volatile](../standard-library/add-volatile-class.md)|會產生**volatile**從型別類型。|
+|[add_cv](../standard-library/add-cv-class.md)|會產生**const volatile**從型別類型。|
 |[remove_const](../standard-library/remove-const-class.md)|從類型產生非常數類型。|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|從類型產生非 volatile 類型。|
 |[remove_cv](../standard-library/remove-cv-class.md)|從類型產生非常數非 volatile 類型。|

@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownToolBar 類別 |Microsoft 文件
+title: CMFCDropDownToolBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042114"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027306"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 當使用者按住最上層工具列按鈕時出現的工具列。  
@@ -59,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(覆寫 `CMFCToolBar::OnSendCommand`。)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80)。)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80)。)|  
   
 ### <a name="remarks"></a>備註  
- A`CMFCDropDownToolBar`物件結合工具列的視覺外觀與行為的快顯功能表。 當使用者按住下拉式工具列按鈕 (請參閱[CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md))、 下拉式清單出現工具列，而且使用者可以選取從下拉式清單工具列按鈕，請捲動，放開滑鼠按鈕。 使用者選取下拉式清單工具列中的按鈕之後，該按鈕會顯示為最上層工具列上的 [目前] 按鈕。  
+ A`CMFCDropDownToolBar`物件會結合行為的快顯功能表中的視覺外觀的工具列。 當使用者按住下拉式工具列按鈕 (請參閱[CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)) 下拉式工具列隨即出現，且使用者可以向下捲動到它，然後放開滑鼠從下拉式清單 工具列中選取一個按鈕按鈕。 使用者選取下拉式清單 工具列中的按鈕之後，該按鈕會顯示為最上層工具列上的 目前 按鈕。  
   
- 下拉式工具列無法自訂或停駐，而且它並沒有分割的狀態。  
+ 無法自訂或停駐之後，下拉式工具列，而且它並沒有分割的狀態。  
   
  下圖顯示`CMFCDropDownToolBar`物件：  
   
  ![Cmfcdropdowntoolbar 範例](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- 您建立`CMFCDropDownToolBar`物件相同的方式建立一般工具列 (請參閱[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md))。  
+ 您建立`CMFCDropDownToolBar`物件相同的方式，您建立一般的工具列 (請參閱 < [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md))。  
   
- 插入為父工具列的下拉式清單工具列：  
+ 要插入為父工具列的下拉工具列：  
   
  1. 為父工具列資源的按鈕保留假的資源 ID。  
   
- 2. 建立`CMFCDropDownToolBarButton`物件，其中包含下拉式工具列 (如需詳細資訊，請參閱[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。  
+ 2. 建立`CMFCDropDownToolBarButton`物件，其中包含下拉式工具列 (如需詳細資訊，請參閱 < [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。  
   
- 3. 取代的 dummy 按鈕`CMFCDropDownToolBarButton`物件使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
+ 3. 取代使用假的按鈕`CMFCDropDownToolBarButton`使用的物件[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
   
- 如需有關工具列按鈕的詳細資訊，請參閱[逐步解說： 將工具列控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 如需下拉式工具列的範例，請參閱範例專案 VisualStudioDemo。  
+ 如需有關工具列按鈕的詳細資訊，請參閱[逐步解說： 將工具列控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)。 例如下拉式工具列中，請參閱範例專案 VisualStudioDemo。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`Create`方法中的`CMFCDropDownToolBar`類別。 此程式碼片段是部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`Create`方法中的`CMFCDropDownToolBar`類別。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -143,7 +143,7 @@ virtual BOOL LoadBitmap(
  參考標準功能表影像之點陣圖的資源 ID。  
   
  [in]*封鎖*  
- `TRUE` 若要鎖定工具列，否則`FALSE`。  
+ True 表示要鎖定工具列，否則為 FALSE。  
   
  [in]*uiDisabledResID*  
  參考已停用工具列影像之點陣圖的資源 ID。  
@@ -155,7 +155,7 @@ virtual BOOL LoadBitmap(
  如果方法成功，則為非零，否則為零。  
   
 ### <a name="remarks"></a>備註  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法會呼叫這個方法來載入與工具列相關聯的映像。 覆寫這個方法可執行影像資源的自訂載入。  
+ [Cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法會呼叫這個方法來載入與工具列相關聯的映像。 覆寫這個方法可執行影像資源的自訂載入。  
   
  呼叫 `LoadBitmapEx` 方法可在建立工具列之後載入其他影像。  
   

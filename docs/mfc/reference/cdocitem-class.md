@@ -1,5 +1,5 @@
 ---
-title: CDocItem 類別 |Microsoft 文件
+title: CDocItem 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88c30418f886cd791a7119367c5ddbccc19003fa
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335577"
 ---
 # <a name="cdocitem-class"></a>CDocItem 類別
 文件項目的基底類別，這些項目是文件資料的元件。  
@@ -46,7 +46,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|判斷項目是否包含任何資訊。|  
   
 ## <a name="remarks"></a>備註  
- `CDocItem` 物件可用來代表用戶端和伺服器文件中的 OLE 項目。  
+ `CDocItem` 物件用來代表用戶端和伺服器的文件中的 OLE 項目。  
   
  如需詳細資訊，請參閱文章[容器： 實作容器](../../mfc/containers-implementing-a-container.md)。  
   
@@ -68,23 +68,23 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指向文件，其中包含項目。**NULL**，如果項目不是文件的一部分。  
+ 包含項目; 的文件指標NULL，如果項目不是文件的一部分。  
   
 ### <a name="remarks"></a>備註  
- 此函式在衍生類別中覆寫[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)，傳回的指標為[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)物件。  
+ 此函式會在衍生類別中覆寫[COleClientItem](../../mfc/reference/coleclientitem-class.md)並[COleServerItem](../../mfc/reference/coleserveritem-class.md)，將指標傳回至[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或有[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)物件。  
   
 ##  <a name="isblank"></a>  CDocItem::IsBlank  
- 預設的序列化發生時由架構呼叫。  
+ 預設的序列化發生時，由架構呼叫。  
   
 ```  
 virtual BOOL IsBlank() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果項目不包含任何資訊。否則便是 0。  
+ 非零值，如果項目不包含任何資訊;否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，`CDocItem`物件不是空白。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)物件有時候是空白因為它們直接衍生自`CDocItem`。 不過， [COleServerItem](../../mfc/reference/coleserveritem-class.md)物件永遠為空白。 根據預設，OLE 應用程式包含`COleClientItem`物件沒有 x 或 y 範圍會序列化。 這是藉由傳回**TRUE**的覆寫從`IsBlank`項目時有任何 x 或 y 範圍。  
+ 根據預設，`CDocItem`物件不是空白。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)物件是有時空白因為它們直接衍生自`CDocItem`。 不過， [COleServerItem](../../mfc/reference/coleserveritem-class.md)物件永遠為空白。 根據預設，OLE 應用程式包含`COleClientItem`沒有 x 或 y 的物件範圍會序列化。 這是藉由傳回 TRUE 的覆寫從`IsBlank`項目時有任何 x 或 y 的範圍。  
   
  如果您想要在序列化期間實作其他動作，請覆寫這個函式。  
   

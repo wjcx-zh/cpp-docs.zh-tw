@@ -1,5 +1,5 @@
 ---
-title: IRegistrar 介面 |Microsoft 文件
+title: IRegistrar 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363743"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993564"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 介面
-這個介面定義在 atliface.h，而供內部 CAtlModule 成員函式例如[UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)。   
+這個介面會定義在 atliface.h，而且會在內部使用 CAtlModule 成員函式這類[UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)。   
   
 ## <a name="syntax"></a>語法  
   
@@ -50,13 +50,13 @@ typedef interface IRegistrar IRegistrar;
 |名稱|描述|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|註冊資源。 |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 取消註冊資源。|  
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| 取消註冊該資源。|  
 |[IRegistrar::FileRegister](#fileregister)|註冊檔案。|  
 |[IRegistrar::FileUnregister](#fileunregister)|取消登錄該檔案。|  
-|[IRegistrar::StringRegister](#stringregister)|登錄字串。|  
-|[IRegistrar::StringUnregister](#stringunregister)|取消登錄字串|  
+|[IRegistrar::StringRegister](#stringregister)|註冊的字串。|  
+|[IRegistrar::StringUnregister](#stringunregister)|取消註冊的字串|  
 |[IRegistrar::ResourceRegister](#resourceregister)|註冊資源。|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|取消註冊資源。| 
+|[IRegistrar::ResourceUnregister](#resourceunregister)|取消註冊該資源。| 
   
 
  
@@ -76,7 +76,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
  
   
 ##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- 取消註冊資源。
+ 取消註冊該資源。
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
@@ -132,7 +132,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
    
   
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- 取消註冊資源。  
+ 取消註冊該資源。  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 

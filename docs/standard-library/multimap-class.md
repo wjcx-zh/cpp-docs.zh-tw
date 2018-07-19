@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25dffabfe01bb68af180d67b5b47dfee44ce30ff
-ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
+ms.openlocfilehash: 5c5bf13a675280b12872c5a5e7bbf19367ff0143
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34153141"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027728"
 ---
 # <a name="multimap-class"></a>multimap 類別
 
@@ -119,15 +119,15 @@ class multimap;
 
 ### <a name="parameters"></a>參數
 
-`Key` 要儲存在 multimap 中索引鍵的資料類型。
+*索引鍵*来儲存在 multimap 中索引鍵的資料類型。
 
-`Type` 要儲存 multimap 中的項目資料類型。
+*型別*来儲存在 multimap 中的項目資料類型。
 
-`Traits` 類型，提供可以比較兩個項目值做為決定其相對順序 multimap 中排序鍵的函式物件。 二元述詞 `less<Key>` 是預設值。
+*Traits*類型，提供函式物件可比較兩個項目值做為排序鍵來判斷 multimap 中的相對順序。 二元述詞 `less<Key>` 是預設值。
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)。
 
-`Allocator` 表示封裝有關對應之配置和解除配置記憶體的詳細資訊的預存配置器物件的型別。 這個引數是選擇性的，而且預設值是 `allocator<pair <const Key, Type> >`。
+*配置器*表示預存配置器物件，封裝有關對應的配置和解除配置之記憶體的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 `allocator<pair <const Key, Type> >`。
 
 ## <a name="remarks"></a>備註
 
@@ -168,19 +168,19 @@ multimap 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `multimap` 類別。|
-|[const_iterator](#const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的 `multimap` 項目。|
-|[const_pointer](#const_pointer)|類型，提供 `const` 中 `multimap` 項目之指標。|
-|[const_reference](#const_reference)|類型，提供儲存在 `const` 中供讀取和執行 `multimap` 作業之 `const` 項目的參考。|
-|[const_reverse_iterator](#const_reverse_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的任何 `multimap` 項目。|
+|[const_iterator](#const_iterator)|一種類型，提供雙向迭代器可讀取**const**中的項目`multimap`。|
+|[const_pointer](#const_pointer)|此類型提供的指標**const**中的項目`multimap`。|
+|[const_reference](#const_reference)|提供的參考型別**const**項目儲存在`multimap`供讀取和執行**const**作業。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供雙向迭代器可以讀取任何**const**中的項目`multimap`。|
 |[difference_type](#difference_type)|帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的項目) 中 `multimap` 的項目數。|
 |[iterator](#iterator)|類型，提供兩個參考相同 `multimap` 內項目的迭代器之間的差異。|
 |[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `multimap` 中的相對順序。|
 |[key_type](#key_type)|類型，描述構成 `multimap` 每個元素的排序鍵物件。|
 |[mapped_type](#mapped_type)|類型，表示儲存在 `multimap` 中的資料類型。|
-|[pointer](#pointer)|類型，提供 `const` 中 `multimap` 項目之指標。|
+|[pointer](#pointer)|此類型提供的指標**const**中的項目`multimap`。|
 |[reference](#reference)|類型，提供儲存在 `multimap` 中之項目的參考。|
 |[reverse_iterator](#reverse_iterator)|類型，提供可以讀取或修改反轉 `multimap` 中之項目的雙向迭代器。|
-|[size_type](#size_type)|不帶正負號的整數類型，提供 `const` 中 `multimap` 項目之指標。|
+|[size_type](#size_type)|不帶正負號的整數類型，提供的指標**const**中的項目`multimap`。|
 |[value_type](#value_type)|類型，提供可將兩個項目做為排序鍵進行比較之函式物件，以判斷項目在 `multimap` 中的相對順序。|
 
 ### <a name="member-functions"></a>成員函式
@@ -296,7 +296,7 @@ First element of m1 is now 1
 
 ## <a name="cbegin"></a>  multimap::cbegin
 
-傳回 `const` 迭代器，為範圍中的第一個項目定址。
+傳回**const**迭代器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -304,13 +304,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-`const` 雙向存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。
+A **const**雙向存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -322,7 +322,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multimap::cend
 
-傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
+傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -330,13 +330,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-指向範圍結尾之外的 `const` 雙向存取迭代器。
+A **const**雙向存取迭代器，指向範圍結尾之外。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -404,7 +404,7 @@ typedef implementation-defined const_iterator;
 
 類型 `const_iterator` 無法用來修改元素的值。
 
-`const_iterator` Multimap 指向的物件所定義[value_type](#value_type)，類型`pair` * \< * **const 金鑰**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+`const_iterator` Multimap 指向的物件所定義[value_type](#value_type)，這是型別的`pair` * \< * **const Key**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
 取值 （dereference) `const_iterator` `cIter`指向 multimap 中的項目，使用**->** 運算子。
 
@@ -490,7 +490,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 multimap。
 
-`const_reverse_iterator` Multimap 指向的物件所定義[value_type](#value_type)，類型`pair` * \< * **const 金鑰**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+`const_reverse_iterator` Multimap 指向的物件所定義[value_type](#value_type)，這是型別的`pair` * \< * **const Key**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
 取值 （dereference) `const_reverse_iterator` `crIter`指向 multimap 中的項目，使用**->** 運算子。
 
@@ -510,7 +510,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要從 multimap 中比對之項目的索引鍵。
+*索引鍵*從 multimap 中比對項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -522,7 +522,7 @@ size_type count(const Key& key) const;
 
 [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )
 
-中索引鍵值為 `key` 的項目數。
+具有索引鍵值*金鑰*。
 
 ### <a name="example"></a>範例
 
@@ -681,7 +681,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>備註
 
-`difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type`通常用來代表範圍中的項目數 [*第一個*，*最後*) 迭代器間`first`和`last`，包括指向的元素由`first`和項目，但不是包括的範圍，指向元素`last`。
+`difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type`通常用來代表範圍中的項目數 [*第一次*，*最後一個*) 的迭代器之間`first`和`last`，包括指向的項目藉由`first`項目，但不是包含範圍] 項目所指的並`last`。
 
 請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援的雙向迭代器類別，但只有隨機存取容器 (例如 vector) 所提供的隨機存取迭代器，才支援迭代器之間的減法。
 
@@ -742,7 +742,7 @@ iterator emplace(Args&&... args);
 
 |參數|描述|
 |-|-|
-|`args`|轉送以建構要插入到 multimap 中之元素的引數。|
+|*引數*|轉送以建構要插入到 multimap 中之元素的引數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -813,8 +813,8 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|`args`|轉送以建構要插入到 multimap 中之元素的引數。|
-|`where`|要開始搜尋正確的插入點的地方。 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|
+|*引數*|轉送以建構要插入到 multimap 中之元素的引數。|
+|*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
 
@@ -910,7 +910,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之 multimap 中元素的排序索引鍵比較的引數索引鍵。
+*索引鍵*要與所搜尋之 multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -996,13 +996,13 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-`Where` 要移除之項目的位置。
+*其中*要移除之項目的位置。
 
-`First` 要移除的第一個元素的位置。
+*第一個*要移除之第一個項目的位置。
 
-`Last` 要移除的最後一個元素之後的位置。
+*最後一個*要移除的最後一個元素之後的位置。
 
-`Key` 要移除之項目的索引鍵。
+*索引鍵*要移除之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1027,17 +1027,17 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要比對所搜尋之 multimap 中元素的排序索引鍵索引鍵值。
+*索引鍵*所搜尋之 multimap 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，參考對象是具有指定索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，則是 multimap 中最後一個元素後面的位置 ( `multimap::end()`)。
+迭代器，表示具有指定索引鍵的元素位置，或者，如果沒有找到索引鍵的符合項，表示 multimap 中最後一個元素之後的位置 (`multimap::end()`)。
 
 ### <a name="remarks"></a>備註
 
 成員函式會傳回迭代器，其表示 multimap 中排序鍵 (在二元述詞下根據較少的比較性關聯引發排序) 等於引數索引鍵的元素。
 
-如果將 **find** 的傳回值指派給 **const_iterator**，便無法修改 multimap 物件。 如果將 **find** 的傳回值指派給 **iterator**，則可以修改 multimap 物件。
+如果將 `find` 的傳回值指派給 `const_iterator`，便無法修改 multimap 物件。 如果傳回值`find`指派給`iterator`，可以修改 multimap 物件。
 
 ### <a name="example"></a>範例
 
@@ -1221,13 +1221,13 @@ IList);
 
 |參數|描述|
 |-|-|
-|`Val`|要插入至 multimap 的元素值。|
-|`Where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `Where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|
-|`ValTy`|範本參數，可指定 map 可用來建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 以引數形式完整轉送。|
-|`First`|要複製之第一個元素的位置。|
-|`Last`|要複製之最一個元素後方的位置。|
-|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
-|`IList`|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
+|*val*|要插入至 multimap 的元素值。|
+|*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
+|*ValTy*|指定地圖可用來建構的元素的引數類型的範本參數[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
+|*第一個*|要複製之第一個元素的位置。|
+|*最後一個*|要複製之最一個元素後方的位置。|
+|*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
+|*IList*|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1243,7 +1243,7 @@ IList);
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 map 而言，`multimap<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-範圍成員函式 (5) 會將元素值序列插入 multimap，而 multimap 對應至範圍 `[First, Last)` 中迭代器指定的每個元素；因此不會插入 `Last`。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。
+範圍成員函式 (5) 會將項目值的序列插入對應至指定迭代器範圍中的每個元素的 multimap `[First, Last)`; 因此，*上次*不會插入。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。
 
 初始設定式清單成員函式 (6) 會使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 map。
 
@@ -1350,17 +1350,17 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>備註
 
-**迭代器**multimap 指向的物件所定義[value_type](#value_type)，類型`pair` * \< * **const 金鑰**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+`iterator` Multimap 指向的物件所定義[value_type](#value_type)，這是型別的`pair` * \< * **const Key**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
-若要對指向 multimap 中某個元素的 **iterator**`Iter` 進行取值，請使用 **->** 運算子。
+取值 （dereference)**迭代器**`Iter`指向 multimap 中的項目，使用`->`運算子。
 
 若要存取該元素的索引鍵值，請使用 `Iter` -> **first**，這等同於 (\* `Iter`). **first**。 若要存取該元素的已對應資料值，請使用 `Iter` -> **second**，這等同於 (\* `Iter`). **second**。
 
-類型 **iterator** 可用來修改元素的值。
+型別`iterator`可用來修改元素的值。
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。
+如需如何宣告及使用 `iterator` 的範例，請參閱 [begin](#begin) 的範例。
 
 ## <a name="key_comp"></a>  multimap::key_comp
 
@@ -1443,7 +1443,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>備註
 
-**key_compare** 與範本參數 `Traits` 同義。
+`key_compare` 與樣板參數 `Traits` 同義。
 
 如需有關 `Traits` 的詳細資訊，請參閱 [multimap 類別](../standard-library/multimap-class.md)主題。
 
@@ -1461,7 +1461,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-**key_type** 與範本參數 `Key` 同義。
+`key_type` 與樣板參數 `Key` 同義。
 
 如需有關 `Key` 的詳細資訊，請參閱 [multimap 類別](../standard-library/multimap-class.md)主題的＜備註＞一節。
 
@@ -1481,7 +1481,7 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之 multimap 中元素的排序索引鍵比較的引數索引鍵。
+*索引鍵*要與所搜尋之 multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1661,12 +1661,12 @@ multimap(
 
 |參數|描述|
 |-|-|
-|`Al`|要用於此 multimap 物件的儲存體配置器類別，預設為 Allocator。|
-|`Comp`|類型為 **constTraits** 並用來排序 map 中元素的比較函式，預設為 **Traits**。|
-|`Right`|要從中複製所建構之集合的對應。|
-|`First`|要複製的元素範圍中第一個元素的位置。|
-|`Last`|超出要複製之元素範圍的第一個元素的位置。|
-|`IList`|從中複製項目的 initializer_list。|
+|*Al*|要用於此 multimap 物件的儲存體配置器類別，預設為 Allocator。|
+|*Comp*|類型為 `constTraits` 並用來排序 map 中元素的比較函式，預設為 `Traits`。|
+|*右邊*|要從中複製所建構之集合的對應。|
+|*第一個*|要複製的元素範圍中第一個元素的位置。|
+|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*IList*|從中複製項目的 initializer_list。|
 
 ### <a name="remarks"></a>備註
 
@@ -1676,15 +1676,15 @@ multimap(
 
 所有建構函式都會儲存一個 `Traits` 類型的函式物件，此物件可用來在 multimap 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。
 
-前三個建構函式會指定空的初始 multimap，第二個建構函式會指定建立元素順序時所要使用的比較函式類型 ( `Comp`)，而第三個建構函式則會明確指定所要使用的配置器類型 ( `Al`)。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
+前三個建構函式指定空的初始 multimap，第二個指定的比較函式類型 (*Comp*) 明確建立的項目，且第三個順序會使用指定的配置器類型(*Al*) 使用。 關鍵**明確**會隱藏某些類型的自動類型轉換。
 
-第四個建構函式會指定 multimap `Right` 的複本。
+第四個建構函式會指定 multimap 的複本*右*。
 
-第五個建構函式會藉由移動 `Right` 來指定 multimap 的複本。
+第五個建構函式會指定 multimap 的複本移動*右*。
 
 第六、第七及第八個建構函式會複製 initializer_list 的成員。
 
-接下來的三個建構函式會複製 map 的範圍 `[First, Last)`，其中會以越來越明確的方式指定類別 **Traits** 的比較函式及配置器的類型。
+接下來的三個建構函式會複製 map 的範圍 `[First, Last)`，其中會以越來越明確的方式指定類別 `Traits` 的比較函式及配置器的類型。
 
 ### <a name="example"></a>範例
 
@@ -1809,11 +1809,11 @@ multimap& operator=(multimap&& right);
 
 |參數|描述|
 |-|-|
-|`right`|要複製到 `multimap` 中的 [multimap](../standard-library/multimap-class.md)。|
+|*right*|要複製到 `multimap` 中的 [multimap](../standard-library/multimap-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-清除 `multimap` 中的任何現有項目之後，`operator=` 會將 `right` 的內容複製或移到 `multimap` 中。
+在清除任何現有的項目，在之後`multimap`，`operator=`複製或移動的內容*右*到`multimap`。
 
 ### <a name="example"></a>範例
 
@@ -1862,7 +1862,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-**pointer** 類型可用來修改項目的值。
+型別`pointer`可用來修改元素的值。
 
 在大多數情況下，應該使用 [iterator](#iterator) 來存取 multimap 物件中的元素。
 
@@ -2099,7 +2099,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 類型 `reverse_iterator` 是用來反向逐一查看 multimap。
 
-`reverse_iterator` Multimap 指向的物件所定義[value_type](#value_type)，類型`pair` * \< * **const 金鑰**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+`reverse_iterator` Multimap 指向的物件所定義[value_type](#value_type)，這是型別的`pair` * \< * **const Key**，**類型 * * * >*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
 取值 （dereference) `reverse_iterator` `rIter`指向 multimap 中的項目，使用-> 運算子。
 
@@ -2176,7 +2176,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`right` Multimap 提供待交換，項目或其項目要與 multimap 的交換的 multimap `left`。
+*右*提供要交換之元素的 multimap 或其項目要與 multimap 交換的 multimap `left`。
 
 ### <a name="remarks"></a>備註
 
@@ -2245,13 +2245,13 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-`key` 要與所搜尋之 multimap 中元素的排序索引鍵比較的引數索引鍵。
+*索引鍵*要與所搜尋之 multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 iterator 或 `const_iterator`，定址對象是 multimap 中索引鍵大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 multimap 中最後一個元素後面的位置。
 
-如果將傳回值指派給 `const_iterator`，便無法修改 multimap 物件。 如果將傳回值指派給 **iterator**，則可以修改 multimap 物件。
+如果將傳回值指派給 `const_iterator`，便無法修改 multimap 物件。 如果傳回的值指派給`iterator`，可以修改 multimap 物件。
 
 ### <a name="example"></a>範例
 
@@ -2445,7 +2445,7 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<對應 > 成員](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<對應 > 成員](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

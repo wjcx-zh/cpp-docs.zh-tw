@@ -1,5 +1,5 @@
 ---
-title: CDockablePaneAdapter 類別 |Microsoft 文件
+title: CDockablePaneAdapter 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951029"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026302"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 類別
 提供 `CWnd`衍生窗格的停駐支援。  
@@ -47,14 +47,14 @@ class CDockablePaneAdapter : public CDockablePane
 |名稱|描述|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|傳回已包裝的視窗。|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>備註  
- 通常，架構會具現化這個類別的物件時使用[cmfcbasetabctrl::](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)或[cmfcbasetabctrl:: Inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)方法。  
+ 通常，架構會具現化這個類別的物件使用時[:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)或是[cmfcbasetabctrl:: Inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)方法。  
   
- 如果您想要自訂`CDockablePaneAdapter`行為，只要從它衍生新類別，並使用索引標籤式視窗設定執行階段類別資訊[:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)。  
+ 如果您想要自訂`CDockablePaneAdapter`行為，只要從中衍生新類別，並使用將執行階段類別資訊設為索引標籤式視窗[:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -67,14 +67,14 @@ class CDockablePaneAdapter : public CDockablePane
  **標頭：** afxDockablePaneAdapter.h  
   
 ##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
- 傳回可停駐窗格配接器為基礎的視窗。  
+ 傳回可停駐窗格配接器的基礎視窗。  
   
 ```  
 virtual CWnd* GetWrappedWnd() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 已包裝的視窗的指標。  
+ 已包裝的視窗指標。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此函式來存取已包裝的視窗。  
@@ -104,7 +104,7 @@ virtual BOOL LoadState(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
- 將窗格的狀態儲存至登錄。  
+ 將窗格的狀態儲存至登錄中。  
   
 ```  
 virtual BOOL SaveState(
@@ -118,7 +118,7 @@ virtual BOOL SaveState(
  設定檔名稱。  
   
  [in]*nIndex*  
- 設定檔索引 （預設為視窗的控制項 ID）。  
+ 設定檔的索引 （預設為視窗的控制項 ID）。  
   
  [in]*uiID*  
  窗格中的識別碼。  
@@ -128,7 +128,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
- 設定可停駐窗格配接器基礎的視窗。  
+ 設定可停駐窗格配接器的基礎視窗。  
   
 ```  
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -136,7 +136,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
   
 ### <a name="parameters"></a>參數  
  [in]*pWnd*  
- 將窗格配接器視窗的指標。  
+ 視窗窗格配接器要包裝的指標。  
   
 ### <a name="return-value"></a>傳回值  
   

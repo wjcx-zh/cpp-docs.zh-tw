@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848241"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026403"
 ---
 # <a name="complex-class"></a>complex 類別
 
-此範本類別描述一個物件，該物件會儲存兩個類型皆為 **Type** 的物件，其中一個代表複數的實數部分，而另一個代表虛數部分。
+此範本類別描述可儲存兩個物件的型別`Type`，一個代表複數，而另一個代表虛數部分的實數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>備註
 
-**Type** 類別的物件：
+類別的物件`Type`:
 
 - 具有公用預設建構函式、解構函式、複製建構函式和指派運算子，且這些都具有傳統行為。
 
@@ -50,9 +50,9 @@ class complex
 
 - 可視需要定義算術運算子和數學函式，將其定義為具有傳統行為的浮點類型。
 
-特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 **Type** 類別物件的作業可能不會擲回例外狀況。
+特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 沒有任何類別的物件上作業`Type`可能會擲回例外狀況。
 
-有三個浮點類型具備 complex 範本類別的明確特製化。 在這項實作中，任何 **Type** 類型以外的值皆會轉換類型為 **double** 以進行實際計算，並將 **double** 結果指派回 **Type**`.` 類型的預存物件。
+有三個浮點類型具備 complex 範本類別的明確特製化。 在此實作中，任何其他類型的值`Type`類型轉換成**double**進行實際計算，與**double**結果指派回類型的預存物件 `Type``.`
 
 ### <a name="constructors"></a>建構函式
 
@@ -108,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>參數
 
-`_RealVal` 用來初始化建構中複數之實數部分的值。
+*_RealVal*用來初始化建構中複數之實數部分的值。
 
-`_ImagVal` 用於初始化建構中複數之虛數部分的值。
+*_ImagVal*用來初始化建構中複數之虛數部分的值。
 
-`complexNum` 其實部及虛部用於初始化建構中複數的複數。
+*complexNum*其實部及虛部用於初始化建構中複數的複數。
 
 ### <a name="remarks"></a>備註
 
@@ -187,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 其虛數的值是要擷取的複數。
+*右*其虛數的值是要擷取的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -243,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 複數，或是目標複數做為參數相同類型的數字。
+*右*複數或數字為目標複數的參數相同類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -326,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 複數，或是目標複數做為參數相同類型的數字。
+*右*複數或數字為目標複數的參數相同類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -428,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 要從目標複數減去一個複數。
+*complexNum*複數，為目標複數的減數。
 
-`_RealPart` 被減去目標複數的實數。
+*_RealPart*為目標複數的減數的實數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -534,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 要從目標複數減去一個複數。
+*complexNum*複數，為目標複數的減數。
 
-`_RealPart` 被減去目標複數的實數。
+*_RealPart*為目標複數的減數的實數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -634,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 複數，或是目標複數做為參數相同類型的數字。
+*右*複數或數字為目標複數的參數相同類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -711,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 其實際的值是要擷取的複數。
+*右*其真正的值是要擷取的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -763,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 是 complex 類別 **Type** 範本參數的同義字。
+`value_type` 同義類別複雜`Type`樣板參數。
 
 ### <a name="example"></a>範例
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>另請參閱
 
-[複雜的成員](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[complex 成員](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

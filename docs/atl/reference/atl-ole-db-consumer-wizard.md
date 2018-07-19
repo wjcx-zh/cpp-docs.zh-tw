@@ -1,5 +1,5 @@
 ---
-title: ATL OLE DB 消費者精靈 |Microsoft 文件
+title: ATL OLE DB 消費者精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -18,120 +18,120 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121685"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025980"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
-這個精靈設定 OLE DB 取用者類別與資料繫結到指定的 OLE DB 提供者存取指定的資料來源所需。  
+這個精靈設定的 OLE DB 取用者類別與資料繫結到指定的 OLE DB 提供者存取指定的資料來源所需的。  
   
 > [!NOTE]
->  此精靈會要求您按一下**資料來源**按鈕來選取資料來源中的名稱之前，請先`Class`和 **.h 檔案**欄位。  
+>  此精靈會要求您按**資料來源**按鈕來選取資料來源中的名稱之前，請先`Class`並 **.h 檔案**欄位。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **資料來源**  
- **資料來源**按鈕可讓您設定使用指定的 OLE DB 提供者的指定的資料來源。 當您按一下這個按鈕，**資料連結屬性** 對話方塊隨即出現。 如需有關建置連接字串和**資料連結屬性**對話方塊中，請參閱[資料連結 API 概觀](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK 文件中。  
+**資料來源**  
+**資料來源**按鈕可讓您設定使用指定的 OLE DB 提供者的指定的資料來源。 當您按一下此按鈕時，**資料連結屬性** 對話方塊隨即出現。 如需有關建置連接字串和**資料連結屬性** 對話方塊中，請參閱[資料連結 API 概觀](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK 文件。  
   
 > [!NOTE]
->  在舊版中，Shift 按一下**資料來源**按鈕開啟 [開啟檔案] 對話方塊，讓您選取的資料連結 (.udl) 檔案。 不再支援此功能。  
+>  在舊版中，Shift 鍵按一下**資料來源**按鈕開啟 開啟舊檔的對話方塊，讓您選取的資料連結 (.udl) 檔案。 不再支援這項功能。  
   
- 此對話方塊包含四個索引標籤：  
+此對話方塊有四個索引標籤：  
   
-- **提供者** 索引標籤  
+ - **提供者** 索引標籤  
   
-- **連接** 索引標籤  
+ - **連接** 索引標籤  
   
-- **進階** 索引標籤  
+ - **進階** 索引標籤  
   
-- **所有** 索引標籤  
+ - **所有** 索引標籤  
   
-     下列資訊描述中的索引標籤**資料連結屬性** 對話方塊。  
+下列的其他資訊將說明中的索引標籤**資料連結屬性** 對話方塊。  
   
-     按一下**確定**完成。 **選取資料庫物件** 對話方塊隨即出現。 從這個對話方塊中，選取資料表、 檢視或取用者將使用的預存程序。  
+按一下 **確定**才能完成。 **選取資料庫物件** 對話方塊隨即出現。 從這個對話方塊中，選取資料表、 檢視或取用者會使用的預存程序。  
   
  **提供者**  
-     選取適當的提供者來管理資料來源的連接。 提供者的類型通常取決於您所連接的資料庫的類型。 按一下`Next`按鈕，或按一下**連接** 索引標籤。  
+   選取適當的提供者來管理資料來源的連接。 提供者的類型通常取決於您所連接的資料庫的類型。 按一下 [**下一步**按鈕，或按一下**連線**] 索引標籤。  
   
  **連線**  
-     此索引標籤的內容取決於您選取的提供者。 雖然有許多類型的提供者，此章節將涵蓋這兩個連線最常見： SQL 和 ODBC 的資料。 其他則類似的變體，此處所述的欄位。  
+   此索引標籤的內容取決於您選取的提供者。 雖然有許多類型的提供者，但此章節將涵蓋這兩個連線最常見： SQL 和 ODBC 的資料。 有些則是類似的變體，在此處所述的欄位。  
   
-     對於 SQL 資料：  
+  對於 SQL 資料：  
   
-    1. **選取或輸入伺服器名稱：** 按一下以顯示所有已註冊的資料伺服器在網路上，下拉式清單功能表，然後選取其中一個。  
+   1. **選取或輸入伺服器名稱：** 按一下下拉式清單中要顯示的功能表已註冊之資料的所有伺服器在網路上，然後選取其中一個。  
   
-    2. **輸入要登入伺服器的資訊：** 輸入使用者名稱和密碼來登入資料伺服器。  
+   2. **輸入要登入伺服器的資訊：** 輸入使用者名稱和密碼來登入的資料伺服器。  
   
-    3. **選取的資料庫伺服器上：** 按一下下拉式清單功能表以顯示所有已註冊的資料庫伺服器上的資料，然後選取其中一個。  
+   3. **選取的伺服器上的資料庫：** 按一下下拉式清單功能表來顯示所有已註冊的資料庫伺服器上的資料，然後選取其中一個。  
   
          -或-  
   
- **附加資料庫檔案做為資料庫名稱：** 指定要做為資料庫檔案，輸入明確的路徑名稱。  
+    **附加資料庫檔案做為資料庫名稱：** 指定要做為資料庫檔案，輸入明確的路徑名稱。  
   
-        > [!NOTE]
-        >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
+    > [!NOTE]
+    >  沒有與 [資料連結屬性] 對話方塊中的 「 允許儲存密碼 」 功能的安全性問題。 在 輸入資訊以登入伺服器 」，有兩個選項按鈕：  
   
- **使用 Windows NT 整合式安全性**  
+    **使用 Windows NT 整合式安全性**  
   
- **使用特定的使用者名稱和密碼**  
+    **使用特定的使用者名稱和密碼**  
   
-         If you select **Use a specific user name and password**, you have the option of saving the password (using the check box for "Allow saving password"); however, this option is not secure. It is recommended that you select **Use Windows NT integrated security**; this option is secure because it encrypts the password.  
+     如果您選取**使用特定的使用者名稱和密碼**，您可以選擇儲存密碼 （使用如 「 允許儲存密碼 」 的核取方塊）; 不過，這是不安全的選項。 建議您選取**使用 Windows NT 整合式安全性**; 這個選項很安全，因為它會加密密碼。  
   
-         There might be situations in which you want to select "Allow saving password." For example, if you are releasing a library with a private database solution, you should not access the database directly but instead use a middle-tier application to verify the user (through whatever authentication scheme you choose) and then limit the sort of data available to the user.  
+     可能會有一些情況，您要在其中選取 「 允許儲存密碼。 」 比方說，如果您要釋出一個私用的資料庫解決方案的程式庫，您應該直接存取資料庫，但改為使用中介層應用程式驗證使用者 （透過您選擇的驗證配置），並接著限制之資料的排序提供給使用者。  
   
-         For ODBC data:  
+     對於 ODBC 資料：  
   
-         1. **Specify the source of data:** You can use a data source name or a connection string.  
+     1. **指定的資料來源：** 您可以使用資料來源名稱或連接字串。  
   
- **使用資料來源名稱：** 這個下拉式清單會顯示在您的電腦中註冊的資料來源。 您可以設定資料來源使用 ODBC 資料來源管理員事先-或-**使用連接字串：** ，或者輸入的連接字串，您已取得，或按一下**建置**按鈕。**選取資料來源** 對話方塊隨即出現。 選取檔案或電腦的資料來源，然後按一下**確定**。  
+    **使用資料來源名稱：** 這個下拉式清單會顯示在您的電腦中註冊的資料來源。 您可以設定資料來源使用 ODBC 資料來源管理員事先-或-**使用的連接字串：** 輸入您已取得，或按一下 [連接字串**建置**按鈕;**選取資料來源**] 對話方塊隨即出現。 選取檔案或機器的資料來源，然後按一下**確定**。  
   
-        > [!NOTE]
-        >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
+     > [!NOTE]
+     >  您可以在 伺服器總管 中，檢視現有連接的屬性，以取得連接字串，或您可以建立連線，按兩下**加入連接**伺服器總管 中。  
   
-         2. **Enter information to log on to the server:** Enter a user name and password to log on to the data server.  
+     2. **輸入要登入伺服器的資訊：** 輸入使用者名稱和密碼來登入的資料伺服器。  
   
-         3. Enter the initial catalog to use.  
+     3. 輸入要使用的初始目錄。  
   
-         4. Click **Test Connection**; if the test succeeds, click **OK**. If not, check your logon information, try another database, or try another data server.  
+     4. 按一下 **測試連接**; 如果測試成功，按一下**確定**。 如果沒有，檢查您的登入資訊，請嘗試另一個資料庫，或嘗試另一部資料伺服器。  
   
- **進階**  
- **網路設定：** 指定**模擬等級**（的伺服器才可使用時模擬用戶端; 直接對應至 RPC 模擬層級的模擬層級） 和**保護層級**（用戶端與伺服器之間傳送的資料保護層級直接對應至 RPC 保護層級）。  
+**進階**  
+  **網路設定：** 指定**模擬層級**（伺服器允許使用時模擬用戶端; 直接對應至 RPC 模擬層級的模擬層級） 和**保護層級**（用戶端與伺服器之間傳送的資料保護的層級直接對應至 RPC 保護層級）。  
   
- **其他：** 中**連接逾時**，指定的逾時發生之前所允許的閒置時間的秒數。 在**存取權限**，指定資料連接的存取權限。  
+  **其他：** 中**連接的逾時值**，指定的逾時之前所允許的閒置時間的秒數。 在 **存取權限**，資料連線指定的存取權限。  
   
-     如需進階的初始化屬性的詳細資訊，請參閱每個特定的 OLE DB 提供者所隨附的文件。  
+    For more information about advanced initialization properties, refer to the documentation provided with each specific OLE DB provider.  
   
- **All**  
-     此索引標籤會顯示您所指定的連接與資料來源的初始化內容的摘要。 您可以編輯這些值。  
+**All**  
+     此索引標籤會顯示您所指定的連接與資料來源初始化屬性的摘要。 您可以編輯這些值。  
   
-     按一下**確定**完成。 **選取資料庫物件** 對話方塊隨即出現。 從這個對話方塊中，選取資料表、 檢視或取用者將使用的預存程序。  
+     Click **OK** to finish. The **Select Database Object** dialog box appears. From this dialog box, select the table, view, or stored procedure that the consumer will use.  
   
  `Class`  
- 選取資料來源之後，此方塊會填入基礎資料表或您所選取的預存程序的預設類別名稱 (請參閱**選取資料來源**下方)。 您可以編輯的類別名稱。  
+ 選取資料來源之後，根據資料表或您所選取的預存程序的預設類別名稱填入這個方塊 (請參閱**Zdroj dat**下方)。 您可以編輯的類別名稱。  
   
  **.h 檔案**  
- 選取資料來源之後，此方塊會填入資料表或您所選取的預存程序為基礎的預設標頭類別名稱 (請參閱**選取資料來源**下方)。 您可以編輯的標頭檔的名稱，或選取現有的標頭檔。  
+ 選取資料來源之後，以根據您選取的預存程序的資料表預設標頭的類別名稱填入這個方塊 (請參閱**Zdroj dat**下方)。 您可以編輯的標頭檔的名稱，或選取現有的標頭檔。  
   
  **使用屬性**  
- 這個選項會指定精靈是否將建立使用屬性或樣板宣告的取用者類別。 當您選取此選項時，精靈會使用屬性代替樣板宣告 （這是預設選項）。 當您取消選取此選項時，精靈會使用樣板宣告，而非屬性。  
+ 這個選項會指定精靈是否會建立使用屬性或宣告範本的取用者類別。 當您選取此選項時，精靈會使用屬性代替樣板宣告 （這是預設選項）。 當您取消選取此選項時，精靈會使用樣板宣告，而非屬性。  
   
--   如果您選擇的消費者**類型**的資料表，精靈會使用`db_source`和**db_table**屬性來建立資料表和資料表的存取子類別宣告，並使用**db_column**以建立資料行對應，例如：  
+ -   如果您選取消費者**型別**的資料表，精靈會使用`db_source`並`db_table`屬性來建立資料表和資料表的存取子類別宣告，並使用`db_column`建立資料行對應，例如：  
   
- ``` 
+```
  // Inject table class and table accessor class declarations  
  [db_source("<initialization_string>"), db_table("dbo.Orders")]  
  ... 
  // Column map  
  [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
  [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
- ...  
- ```  
+ ...
+```
   
-     而不是使用`CTable`樣板類別，來宣告資料表和資料表的存取子類別和 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 巨集，以建立資料行對應，例如：  
+   而不是使用`CTable`範本類別來宣告資料表和資料表的存取子類別和 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 巨集來建立資料行對應，例如：  
   
- ``` 
+``` 
  // Table accessor class  
     class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
@@ -142,19 +142,19 @@ ms.locfileid: "37121685"
     COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)  
  ...  
     END_COLUMN_MAP() 
- ```  
+```  
   
--   如果您選擇的消費者**類型**的命令，此精靈會使用`db_source`和**db_command**屬性，並使用**db_column**以建立資料行對應，例如:  
+-   如果您選取消費者**型別**的命令，精靈會使用`db_source`並`db_command`屬性，並使用`db_column`建立資料行對應，例如：  
   
- ```  
+```  
  [db_source("<initialization_string>"), db_command("SQL_command")]  
  ... 
  // Column map using db_column is the same as for consumer type of 'table'  
- ```  
+```  
   
-     而不使用的命令和命令的存取子類別宣告中命令類別的.h 檔案中，例如：  
+   而不使用的命令和命令存取子類別宣告中之命令類別的.h 檔案中，例如：  
   
- ```  
+```  
     Command accessor class:  
     class CListOrdersAccessor;  
     Command class:  
@@ -162,24 +162,24 @@ ms.locfileid: "37121685"
  ... 
  // Column map using BEGIN_COLUMN_MAP ... END_COLUMN_MAP is the same as
  // for consumer type of 'table'  
- ```  
+```  
   
  請參閱[屬性的基本機制](../../windows/basic-mechanics-of-attributes.md)如需詳細資訊。  
   
  **Type**  
- 選取其中一個選項按鈕來指定是否將取用者類別衍生自`CTable`或`CCommand`（預設值）。  
+ 選取其中一個這些選項按鈕，以指定是否將取用者類別衍生自`CTable`或`CCommand`（預設值）。  
   
  **資料表**  
- 選取此選項，如果您想要使用`CTable`或**db_table**建立資料表和資料表的存取子類別宣告。  
+ 如果您想要使用，請選取此選項`CTable`或`db_table`來建立資料表和資料表的存取子類別宣告。  
   
  **命令**  
- 選取此選項，如果您想要使用`CCommand`或**db_command**建立命令和命令的存取子類別宣告。 這是預設選取項目。  
+ 如果您想要使用，請選取此選項`CCommand`或`db_command`建立命令和命令的存取子類別宣告。 這是預設選項。  
   
  **支援**  
- 選取指定的更新 （預設值為 none） 取用者必須支援類型的核取方塊。 下列各項將會設定[DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx)和適當的項目，如[DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx)屬性中設定對應。  
+ 選取核取方塊，以指定的取用者 （預設值為 none） 支援的更新類型。 下列各項將會設定[DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx)和適當的項目，如[DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx)屬性中設定對應。  
   
  **變更**  
- 指定資料列集中取用者支援更新的資料列的資料。  
+ 指定取用者，在資料列集支援的資料列資料的更新。  
   
  **插入**  
  指定取用者支援插入資料列集的資料列。  
@@ -190,4 +190,4 @@ ms.locfileid: "37121685"
 ## <a name="see-also"></a>另請參閱  
  [ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [連接字串] 和 [資料連結 (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [連接字串和資料連結 (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

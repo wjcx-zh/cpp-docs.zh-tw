@@ -1,5 +1,5 @@
 ---
-title: 使用 CObject |Microsoft 文件
+title: 使用 CObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,31 +20,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 235bf1f4130f59a8af9548fcbf35e36d82255f14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382294"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027147"
 ---
 # <a name="using-cobject"></a>使用 CObject
-[CObject](../mfc/reference/cobject-class.md)適用於大部分 Microsoft Foundation 類別庫 (MFC) 是根基底類別。 `CObject`類別包含許多有用的功能，您可能想要併入您自己的程式物件，包括序列化支援、 執行階段類別資訊，以及物件的診斷輸出。 如果您衍生您的類別從`CObject`，您的類別可以利用這些弱點`CObject`功能。  
+[CObject](../mfc/reference/cobject-class.md)是適用於大部分的 Microsoft Foundation Class 程式庫 (MFC) 的根的基底類別。 `CObject`類別包含許多實用的功能，您可能想要併入您自己的程式物件，包括序列化支援、 執行階段類別資訊，以及物件的診斷輸出。 如果您衍生您的類別，從`CObject`，您的類別可以利用這些弱點`CObject`功能。  
   
-## <a name="what-do-you-want-to-do"></a>您想要做什麼  
+## <a name="what-do-you-want-to-do"></a>您要做什麼  
   
 -   [從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)  
   
--   [我在衍生類別中加入執行階段類別資訊、 動態建立和序列化支援](../mfc/specifying-levels-of-functionality.md)  
+-   [將執行階段類別資訊、 動態建立和序列化的支援新增至我在衍生類別](../mfc/specifying-levels-of-functionality.md)  
   
 -   [存取執行階段類別資訊](../mfc/accessing-run-time-class-information.md)  
   
 -   [動態建立物件](../mfc/dynamic-object-creation.md)  
   
--   [為方便診斷傾印物件的資料](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [傾印物件的資料，供診斷之用](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
   
--   驗證物件的內部狀態 (請參閱[MFC ASSERT_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   驗證物件的內部狀態 (請參閱[MFC ASSERT_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
--   [具有永續性儲存體序列化它本身的類別](../mfc/serialization-in-mfc.md)  
+-   [有永續性儲存體序列化本身的類別](../mfc/serialization-in-mfc.md)  
   
 -   看到一份[CObject 常見問題集](../mfc/cobject-class-frequently-asked-questions.md)  
   

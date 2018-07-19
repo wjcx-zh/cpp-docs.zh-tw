@@ -1,5 +1,5 @@
 ---
-title: _bstr_t 類別 |Microsoft 文件
+title: _bstr_t 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415279"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027244"
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- A`_bstr_t`物件封裝[BSTR 資料類型](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228)。 這個類別會管理資源配置和解除配置函式呼叫來透過**SysAllocString**和**SysFreeString**和其他`BSTR`Api 在適當的情況。 `_bstr_t` 類別會使用參考計數避免過多的額外負荷。  
+ A`_bstr_t`物件會封裝[BSTR 資料型別](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)。 此類別管理資源配置和解除配置函式呼叫，以透過`SysAllocString`並`SysFreeString`和其他`BSTR`時適當的 Api。 `_bstr_t` 類別會使用參考計數避免過多的額外負荷。  
   
 ### <a name="construction"></a>建構  
   
@@ -53,18 +53,18 @@ ms.locfileid: "32415279"
 |||  
 |-|-|  
 |[operator =](../cpp/bstr-t-operator-equal.md)|將新值指派給現有的 `_bstr_t` 物件。|  
-|[運算子 + =](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|  
+|[operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|  
 |[運算子 +](../cpp/bstr-t-operator-add-equal-plus.md)|串連兩個字串。|  
-|[運算子 !](../cpp/bstr-t-operator-logical-not.md)|如果會檢查封裝`BSTR`是**NULL**字串。|  
+|[運算子 !](../cpp/bstr-t-operator-logical-not.md)|檢查封裝`BSTR`是 NULL 字串。|  
 |[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比較兩個 `_bstr_t` 物件。|  
 |[運算子 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|將指標擷取至封裝的 Unicode 或多位元組的 `BSTR` 物件。|  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** \<comutil.h >  
   
- **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
+ **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱 < [/zc: wchar_t （wchar_t 是原生型別）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

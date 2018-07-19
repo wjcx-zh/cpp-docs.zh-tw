@@ -1,5 +1,5 @@
 ---
-title: 從 CObject 衍生類別 |Microsoft 文件
+title: 從 CObject 衍生類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,52 +23,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349353"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026113"
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
-這篇文章描述最小的步驟，自[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`類別文章說明利用特定的所需的步驟`CObject`功能，例如序列化和診斷的偵錯支援。  
+這篇文章描述衍生的類別所需的最小步驟[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`類別的文章將說明利用特定所需的步驟`CObject`功能，例如序列化和診斷的偵錯支援。  
   
- 中的討論`CObject`，常使用的術語 「 介面檔案 」 和 「 實作檔案 」。 介面檔案 (通常稱為標頭檔，或。H 檔案） 包含在類別宣告和使用類別時所需的任何其他資訊。 實作檔 （或。CPP 檔案） 包含的類別定義，以及實作類別成員函式的程式碼。 例如，對於類別，名為`CPerson`，您通常會建立名為 PERSON 介面檔案。H 與實作檔名為 PERSON。CPP。 不過，有些不會在應用程式之間共用的小型類別，可能會很容易結合介面和實作在單一。CPP 檔案。  
+ 在討論中旁聽的`CObject`，較常使用的詞彙 「 介面檔案 」 和 「 實作檔案 」。 介面檔案 (通常稱為標頭檔，或。H 檔案） 包含在類別宣告和使用類別時所需的任何其他資訊。 實作檔案 （或）。CPP 檔案） 包含的類別定義，以及實作類別成員函式的程式碼。 例如，對於類別，名為`CPerson`，您通常會建立名為 PERSON 介面檔案。H 與實作檔名為 PERSON。CPP。 不過，有些不會在應用程式之間共用的小型類別，可能會很結合的介面和實作到單一的工作變得更容易。CPP 檔案。  
   
- 衍生的類別時，您可以選擇從四個層級的功能`CObject`:  
+ 衍生的類別時，您可以選擇從四個功能層級`CObject`:  
   
--   基本功能： 不支援執行階段類別資訊或序列化，但包括診斷的記憶體管理。  
+-   基本功能： 不支援執行階段類別資訊或序列化，但包括診斷記憶體管理。  
   
--   基本功能，以及支援執行階段類別資訊。  
+-   基本功能以及支援執行階段類別資訊。  
   
--   基本功能，以及執行階段類別資訊和動態建立的支援。  
+-   基本功能以及支援執行階段類別資訊和動態建立。  
   
--   基本功能，以及執行階段類別資訊、 動態建立和序列化支援。  
+-   基本功能以及支援執行階段類別資訊、 動態建立，以及序列化。  
   
- （其會將稍後會做為基底類別） 的重複使用而設計的類別應該至少包含執行階段類別支援和序列化支援，如果不需要在未來的序列化不預期。  
+ 專為重複使用 （其會在稍後將做為基底類別） 的類別應該至少包含執行階段類別支援和序列化支援，如果預期未來序列化需要。  
   
- 您選擇的功能層級使用的宣告和衍生自類別的實作中特定的宣告和實作巨集`CObject`。  
+ 您選擇的功能等級使用的宣告和實作的衍生類別中特定的宣告和實作巨集`CObject`。  
   
  下表顯示用來支援序列化和執行階段資訊的巨集之間的關聯性。  
   
 ### <a name="macros-used-for-serialization-and-run-time-information"></a>用於序列化和執行階段資訊的巨集  
   
-|使用巨集|Cobject:: Iskindof|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|  
+|使用的巨集|Cobject:: Iskindof|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|  
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
 |基本`CObject`功能|否|否|否|  
 |`DECLARE_DYNAMIC`|是|否|否|  
 |`DECLARE_DYNCREATE`|是|是|否|  
 |`DECLARE_SERIAL`|是|是|[是]|  
   
-#### <a name="to-use-basic-cobject-functionality"></a>若要使用基本 CObject 功能  
+#### <a name="to-use-basic-cobject-functionality"></a>使用 CObject 的基本功能  
   
-1.  用於衍生您的類別，從一般的 c + + 語法`CObject`(或從衍生自類別`CObject`)。  
+1.  使用一般的 c + + 語法來衍生您的類別，從`CObject`(或從衍生自類別`CObject`)。  
   
-     下列範例顯示簡單的情況下，從類別的衍生`CObject`:  
+     下列範例顯示簡單的情況下，類別的衍生`CObject`:  
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- 一般來說，不過，您可能想要覆寫的部分`CObject`的成員函式來處理您的新類別的特性。 例如，您通常可以覆寫`Dump`函式的`CObject`提供偵錯輸出的類別內容。 如需如何覆寫的詳細資訊`Dump`，請參閱文章[診斷： 傾印物件內容](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)。 您也可以覆寫`AssertValid`函式的`CObject`提供自訂的測試，驗證資料成員的類別物件的一致性。 如需說明如何覆寫的`AssertValid`，請參閱[MFC ASSERT_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6)。  
+ 一般來說，不過，您可能想要覆寫某些`CObject`的成員函式來處理您的新類別的詳細資訊。 例如，您通常可以覆寫`Dump`函式的`CObject`以供您類別的內容中的偵錯輸出。 如需有關如何覆寫`Dump`，請參閱文章[診斷： 傾印物件內容](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)。 您也可以覆寫`AssertValid`函式的`CObject`提供自訂的測試，以驗證資料成員的類別物件的一致性。 如需如何覆寫的說明`AssertValid`，請參閱 < [MFC ASSERT_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6)。  
   
  發行項[指定功能層級](../mfc/specifying-levels-of-functionality.md)描述如何指定其他層級的功能，包括執行階段類別資訊、 動態物件建立和序列化。  
   

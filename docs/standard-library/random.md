@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862906"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956501"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ ms.locfileid: "33862906"
 
 ### <a name="quick-tips"></a>快速提示
 
-以下是使用時，請記住一些秘訣\<隨機 >:
+以下是一些秘訣，請記住，當使用\<隨機 >:
 
 - 在大部分的用途中，URNG 都會產生必須由分佈所圖形化的原始位元 (需要注意的例外狀況是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，原因是它直接使用 URNG)。
 
@@ -59,7 +59,7 @@ ms.locfileid: "33862906"
 
 - 大部分應用程式的最實用配對是 `mt19937` 引擎搭配 `uniform_int_distribution` (如本文稍後的[程式碼範例](#code)所示)。
 
-有許多選項可以選擇在\<隨機 > 標頭，而且其中任何最好過期的 C 執行階段函式是`rand()`。 如需相關問題資訊`rand()`以及\<隨機 > 解決這些缺點，請參閱[這段影片](http://go.microsoft.com/fwlink/p/?linkid=397615)。
+有許多選項可選擇從\<隨機 > 標頭，而且其中任何最好使用過時的 C 執行階段函式是`rand()`。 如需何不妥`rand()`以及如何\<隨機 > 解決這些缺點，請參閱[這段影片](http://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a> 範例
 
@@ -228,7 +228,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 3. **品質**：產生的序列有多接近真正亂數。 這通常稱為「隨機性」。
 
-下列章節會列出統一亂數產生器 (Urng) 中提供\<隨機 > 標頭。
+下列各節列出統一亂數產生器 (Urng) 中提供\<隨機 > 標頭。
 
 ####  <a name="rd"></a> 不具決定性產生器
 
@@ -258,13 +258,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 - `mt19937_64`：64 位元梅森旋轉引擎 (Matsumoto 和 Nishimura，2000 年)。
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`
 
-- `ranlux24` 24 位元 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994 年）。
+- `ranlux24` 24 位元 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`
 
 - `ranlux24_base`：用做 `ranlux24` 的基底。
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-- `ranlux48` 48 位元 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994 年）。
+- `ranlux48` 48 位元 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`
 
 - `ranlux48_base`：用做 `ranlux48` 的基底。
@@ -294,7 +294,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ###  <a name="distributions"></a> 亂數分佈
 
-下列章節會列出中提供的分佈\<隨機 > 標頭。 分佈是一個後續處理機制，通常使用 URNG 輸出做為輸入，並透過定義的統計可能性密度函式來散發輸出。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。
+下列各節列出中提供的分佈\<隨機 > 標頭。 分佈是一個後續處理機制，通常使用 URNG 輸出做為輸入，並透過定義的統計可能性密度函式來散發輸出。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。
 
 #### <a name="uniform-distributions"></a>統一分佈
 
@@ -310,7 +310,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |||
 |-|-|
-|[bernoulli_distribution 類別](../standard-library/bernoulli-distribution-class.md)|產生 `bool` 值的白努利分佈。|
+|[bernoulli_distribution 類別](../standard-library/bernoulli-distribution-class.md)|產生白努利分佈**bool**值。|
 |[binomial_distribution 類別](../standard-library/binomial-distribution-class.md)|產生整數值的二項式分佈。|
 |[geometric_distribution 類別](../standard-library/geometric-distribution-class.md)|產生整數值的幾何分佈。|
 |[negative_binomial_distribution 類別](../standard-library/negative-binomial-distribution-class.md)|產生整數值的負二項式分佈。|
@@ -323,7 +323,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|
 |[cauchy_distribution 類別](../standard-library/cauchy-distribution-class.md)|產生實數 (浮點) 值的柯西分佈。|
 |[chi_squared_distribution 類別](../standard-library/chi-squared-distribution-class.md)|產生實數 (浮點) 值的卡方分佈。|
-|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|產生的 F 分佈 （也稱為 Snedecor 的 F 分佈或費雪 Snedecor 分佈） 實數 （浮點） 值。|
+|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|會產生 F 分佈進行分佈 （也稱為 Snedecor 的 F 分佈或費雪 Snedecor 分佈） 實數 （浮點） 值。|
 |[lognormal_distribution 類別](../standard-library/lognormal-distribution-class.md)|產生實數 (浮點) 值的對數常態分佈。|
 |[normal_distribution 類別](../standard-library/normal-distribution-class.md)|產生實數 (浮點) 值的常態 (高斯) 分佈。|
 |[student_t_distribution 類別](../standard-library/student-t-distribution-class.md)|產生實數 (浮點) 值的學生 *t* 分佈。|
@@ -354,7 +354,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="utility-functions"></a>公用程式函式
 
-此區段會列出所提供的一般公用程式函數\<隨機 > 標頭。
+此區段會列出中提供的一般公用程式函數\<隨機 > 標頭。
 
 |||
 |-|-|
@@ -373,13 +373,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="engdist"></a> 引擎和分佈
 
-以下幾節，如每個範本類別分類中定義的詳細資訊，請參閱\<隨機 >。 這兩個範本類別分類採用類型做為引數，並使用共用範本參數名稱，以描述允許做為實際引數類型的類型屬性，如下所示：
+下列各節，如需每個範本類別分類中定義的詳細資訊，請參閱\<隨機 >。 這兩個範本類別分類採用類型做為引數，並使用共用範本參數名稱，以描述允許做為實際引數類型的類型屬性，如下所示：
 
-- `IntType` 指出 `short`、`int`、`long`、`long long`、`unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。
+- `IntType` 指出**簡短**， **int**，**長**， **long long**， **unsigned short**， **不帶正負號的 int**，**不帶正負號長**，或**unsigned long long**。
 
-- `UIntType` 指出 `unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。
+- `UIntType` 指出**unsigned short**，**不帶正負號的 int**， **unsigned long**，或**unsigned long long**。
 
-- `RealType` 指出 `float`、`double` 或 `long double`。
+- `RealType` 指出**浮點數**， **double**，或**長雙精度**。
 
 ### <a name="engines"></a>引擎
 

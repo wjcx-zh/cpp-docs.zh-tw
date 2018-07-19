@@ -1,5 +1,5 @@
 ---
-title: CHtmlView 類別 |Microsoft 文件
+title: CHtmlView 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039345"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027855"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 在 MFC 的文件/檢視架構內容中提供 WebBrowser 控制項的功能。  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|擷取 WebBrowser 目前顯示的資源 URL。|  
 |[CHtmlView::GetMenuBar](#getmenubar)|擷取決定是否顯示功能表列的值。|  
 |[CHtmlView::GetOffline](#getoffline)|擷取決定控制項是否離線的值。|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|擷取 `IDispatch` 介面的指標。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|擷取 `IDispatch` 介面的指標。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。|  
 |[CHtmlView::GetProperty](#getproperty)|擷取與指定物件相關聯屬性目前的值。|  
 |[CHtmlView::GetReadyState](#getreadystate)|擷取網頁瀏覽器物件的就緒狀態。|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|指出 WebBrowser 控制項是否註冊為目標名稱解析的最上層瀏覽器進行。|  
@@ -267,7 +267,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::Navigate2](#navigate2)|巡覽至依 URL 找到的資源或依完整路徑找到的檔案。|  
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|在給定的 WebBrowser 中發生巡覽前呼叫 (無論是在視窗或框架項目上)。|  
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|呼叫以通知應用程式， 網頁瀏覽器命令啟用的狀態已經變更。|  
-|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|呼叫以通知應用程式，文件已達到 `READYSTATE_COMPLETE` 狀態。|  
+|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|呼叫以通知應用程式的文件到達 READYSTATE_COMPLETE 狀態。|  
 |[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281)呼叫，這會在容器文件視窗啟用或停用時，通知使用中的就地物件。|  
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|呼叫以通知應用程式，巡覽作業已經啟動。|  
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|當巡覽作業結束、暫止或失敗時呼叫。|  
@@ -369,7 +369,7 @@ class CHtmlView : public CFormView
  **Header:** afxhtml.h  
   
 ##  <a name="create"></a>  CHtmlView::Create  
- 呼叫此成員函式建立 WebBrowser 控制項或容器 Internet Explorer 的可執行檔。  
+ 呼叫此成員函式，建立 WebBrowser 控制項或容器的 Internet Explorer 可執行檔。  
   
 ```  
 virtual BOOL Create(
@@ -384,25 +384,25 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *lpszClassName*  
- 指向以 null 結束的字元字串，Windows 類別命名。 類別名稱可以是任何名稱登錄與[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全域函式或**RegisterClass** Windows 函式。 如果**NULL**，會使用預先定義的預設[CFrameWnd](../../mfc/reference/cframewnd-class.md)屬性。  
+ 指向以 null 結束的字元字串，可命名 Windows 類別。 類別名稱可以是任何名稱向[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全域函式或`RegisterClass`Windows 函式。 如果是 NULL，會使用預先定義的預設[CFrameWnd](../../mfc/reference/cframewnd-class.md)屬性。  
   
  *lpszWindowName*  
  指向以 null 結束的字元字串，表示視窗名稱。  
   
- *dwStyle*  
- 指定視窗的樣式屬性。 根據預設， **WS_VISIBLE**和**WS_CHILD**設定視窗樣式。  
+ *cheaderctrl:: Create*  
+ 指定視窗的樣式屬性。 根據預設，會設定 WS_VISIBLE 和 WS_CHILD Windows 樣式。  
   
  *rect*  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值，可讓 Windows，指定新的視窗位置與大小。  
+ 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。  
   
  *pParentWnd*  
  控制項的父視窗指標。  
   
  *nID*  
- 檢視的識別碼。 根據預設，設定為**AFX_IDW_PANE_FIRST**。  
+ 檢視的識別碼。 根據預設，設定為 AFX_IDW_PANE_FIRST。  
   
  *pContext*  
- 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**預設。  
+ 指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 預設為 NULL。  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
  可覆寫，用來建立主控表單上之控制項的控制項網站執行個體。  
@@ -420,19 +420,19 @@ virtual BOOL CreateControlSite(
  指標[COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md)包含控制項的物件。  
   
  *ppSite*  
- 指標的指標[COleControlSite](../../mfc/reference/colecontrolsite-class.md)提供控制項的站台的物件。  
+ 指標的指標[COleControlSite](../../mfc/reference/colecontrolsite-class.md)物件，並提供控制項的站台。  
   
  *nID*  
- 裝載控制項的識別碼。  
+ 裝載控制項的識別項。  
   
  *clsid*  
  裝載控制項的 CLSID  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則傳回 TRUE 失敗，則為 FALSE。  
+ 如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 您可以覆寫此成員函式，以傳回自己的控制項站台類別的執行個體。  
+ 您可以覆寫此成員函式，以傳回您自己的控制項站台類別的執行個體。  
   
 ##  <a name="execformscommand"></a>  CHtmlView::ExecFormsCommand  
  使用 `IOleCommandTarget::Exec` 方法執行指定的命令。  
@@ -446,22 +446,22 @@ HRESULT ExecFormsCommand(
   
 ### <a name="parameters"></a>參數  
  *dwCommandID*  
- 要執行的命令。 此命令必須屬於**CMDSETID3_Forms3**群組。  
+ 要執行的命令。 此命令必須屬於 CMDSETID3_Forms3 群組。  
   
  *pVarIn*  
- 指標**VARIANT**結構，其中包含輸入引數。 可以是**NULL**。  
+ 指標`VARIANT`結構，其中包含輸入引數。 可以是 NULL。  
   
  *pVarOut*  
- 指標**VARIANT**接收命令輸出的結構。 可以是**NULL**。  
+ 指標`VARIANT`接收命令輸出的結構。 可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。 如需可能值的完整清單，請參閱[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) Windows SDK 中。  
+ 標準的 HRESULT 值。 如需可能值的完整清單，請參閱 < [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
- **ExecFormsCommand**實作的行為[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)方法。  
+ `ExecFormsCommand` 實作的行為[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)方法。  
   
 ##  <a name="execwb"></a>  CHtmlView::ExecWB  
- 呼叫此成員函式在 WebBrowser 或 Internet Explorer 中執行命令。  
+ 呼叫此成員函式，WebBrowser 或 Internet Explorer 中執行命令。  
   
 ```  
 void ExecWB(
@@ -495,26 +495,26 @@ BOOL GetAddressBar() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果 [網址] 列是可見的。否則為零。  
+ 非零值，如果 [網址] 列是可見的。否則為零。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="getapplication"></a>  CHtmlView::GetApplication  
- 呼叫此成員函式可擷取包含 WebBrowser 控制項的應用程式支援的 automation 物件。  
+ 呼叫此成員函式，來擷取包含 WebBrowser 控制項的應用程式所支援的 automation 物件。  
   
 ```  
 LPDISPATCH GetApplication() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標`IDispatch`主動式文件物件的介面。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 指標`IDispatch`主動式文件物件的介面。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getbusy"></a>  CHtmlView::GetBusy  
- 呼叫此成員函式可判斷 WebBrowser 控制項是否參與瀏覽或下載作業。  
+ 呼叫此成員函式，以判斷 WebBrowser 控制項是否參與瀏覽或下載作業。  
   
 ```  
 BOOL GetBusy() const;  
@@ -527,7 +527,7 @@ BOOL GetBusy() const;
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getcontainer"></a>  CHtmlView::GetContainer  
- 呼叫此成員函式可擷取評估為網頁瀏覽器的容器物件。  
+ 呼叫此成員函式，來擷取容器的 web 瀏覽器會評估物件。  
   
 ```  
 LPDISPATCH GetContainer() const;  
@@ -547,23 +547,23 @@ CString GetFullName() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含目前所顯示的檔案名稱與路徑。 如果沒有路徑和檔案名稱存在，`GetFullName`傳回空`CString`。  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，包含目前所顯示的檔案名稱與路徑。 如果沒有路徑和檔案名稱存在，請`GetFullName`會傳回空白`CString`。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="getfullscreen"></a>  CHtmlView::GetFullScreen  
- 呼叫此成員函式可判斷 WebBrowser 控制項是否在全螢幕模式或標準視窗模式中操作。  
+ 呼叫此成員函式，來判斷 WebBrowser 控制項是否在全螢幕模式或標準視窗模式中運作。  
   
 ```  
 BOOL GetFullScreen() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果 WebBrowser 正以全螢幕模式，則為非零否則為零。  
+ WebBrowser 正以全螢幕模式; 如果為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
- 在全螢幕模式中，Internet Explorer 主視窗最大化並隱藏狀態列、 工具列、 功能表列和標題列。  
+ 在全螢幕模式中，Internet Explorer 主視窗最大化，並會隱藏狀態列、 工具列、 功能表列和標題列。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
@@ -578,7 +578,7 @@ long GetHeight() const;
  控制項的框架視窗高度，單位為像素。  
   
 ##  <a name="gethtmldocument"></a>  CHtmlView::GetHtmlDocument  
- 呼叫此成員函式可擷取現用的文件的 HTML 文件。  
+ 呼叫此成員函式，來擷取使用中文件的 HTML 文件。  
   
 ```  
 LPDISPATCH GetHtmlDocument() const;  
@@ -591,7 +591,7 @@ LPDISPATCH GetHtmlDocument() const;
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getleft"></a>  CHtmlView::GetLeft  
- 呼叫此成員函式可擷取 WebBrowser 控制項的內部的左邊的緣和其容器的左邊的緣之間的距離。  
+ 呼叫此成員函式可擷取 WebBrowser 控制項內部左邊的緣和其容器左邊的緣之間的距離。  
   
 ```  
 long GetLeft() const;  
@@ -604,32 +604,32 @@ long GetLeft() const;
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getlocationname"></a>  CHtmlView::GetLocationName  
- 呼叫此成員函式可取得的 WebBrowser 中所顯示的資源名稱。  
+ 呼叫此成員函式，以取得所顯示的 WebBrowser 中的資源名稱。  
   
 ```  
 CString GetLocationName() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含資源的 WebBrowser 中目前顯示的名稱。  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，包含資源的 WebBrowser 中目前顯示的名稱。  
   
 ### <a name="remarks"></a>備註  
- 如果資源是全球資訊網的 HTML 網頁，則名稱會是該頁面的標題。 如果資源是資料夾或網路或本機電腦上的檔案，名稱為的 UNC 或資料夾或檔案的完整路徑。  
+ 如果資源是全球資訊網上的 HTML 網頁，則名稱會是該頁面的標題。 如果資源是資料夾或網路或本機電腦上的檔案，名稱會是 UNC 或資料夾或檔案的完整路徑。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getlocationurl"></a>  CHtmlView::GetLocationURL  
- 呼叫此成員函式可擷取 WebBrowser 控制項目前顯示資源的 URL。  
+ 呼叫此成員函式可擷取目前顯示在 WebBrowser 控制項的資源 URL。  
   
 ```  
 CString GetLocationURL() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含目前顯示的 WebBrowser 中資源的 URL。  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，包含目前顯示的 WebBrowser 中資源的 URL。  
   
 ### <a name="remarks"></a>備註  
- 如果資源是資料夾或網路或本機電腦上的檔案，名稱為的 UNC 或資料夾或檔案的完整路徑。  
+ 如果資源是資料夾或網路或本機電腦上的檔案，名稱會是 UNC 或資料夾或檔案的完整路徑。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
@@ -641,20 +641,20 @@ BOOL GetMenuBar() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果在功能表列是可見的。否則為零。  
+ 非零值，如果在功能表列是可見的。否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getoffline"></a>  CHtmlView::GetOffline  
- 呼叫此成員函式，來判斷是否離線運作的網頁瀏覽器。  
+ 呼叫此成員函式，來判斷是否要離線運作的 web 瀏覽器。  
   
 ```  
 BOOL GetOffline() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 當網頁瀏覽器目前離線，則為非零否則為零。  
+ 非零值，當網頁瀏覽器目前離線;否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -673,7 +673,7 @@ LPDISPATCH GetParentBrowser() const;
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getproperty"></a>  CHtmlView::GetProperty  
- 呼叫此成員函式可取得目前與控制項相關聯屬性的值。  
+ 呼叫此成員函式，以取得目前與控制項相關聯的屬性值。  
   
 ```  
 BOOL GetProperty(
@@ -687,11 +687,11 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
  *lpszProperty*  
  包含要擷取之屬性的字串指標。  
   
- *StrValue*  
- 若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)收到之屬性的目前值的物件。  
+ *strValue*  
+ 參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收屬性的目前值的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 在第一個版本中，如果成功，則為非零否則為零。 在第二個版本中， [COleVariant](../../mfc/reference/colevariant-class.md)物件。  
+ 在第一個版本中，如果順利完成，非零值。否則為零。 在第二個版本中， [COleVariant](../../mfc/reference/colevariant-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -704,52 +704,52 @@ READYSTATE GetReadyState() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)值，Windows SDK 中所述。  
+ A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)值，在 Windows SDK 中所述。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getregisterasbrowser"></a>  CHtmlView::GetRegisterAsBrowser  
- 呼叫此成員函式，以判斷是否已註冊為目標名稱解析的最上層瀏覽器的 WebBrowser 物件。  
+ 呼叫此成員函式，以判斷是否要將 WebBrowser 物件登錄為目標的名稱解析的最上層瀏覽器。  
   
 ```  
 BOOL GetRegisterAsBrowser() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果瀏覽器是否註冊為最上層的瀏覽器; 非零，否則為零。  
+ 如果瀏覽器會註冊為最上層的瀏覽器中，為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getregisterasdroptarget"></a>  CHtmlView::GetRegisterAsDropTarget  
- 呼叫此成員函式，以判斷是否 WebBrowser 控制項是否註冊為巡覽的置放目標。  
+ 呼叫此成員函式，以判斷是否要將 WebBrowser 控制項註冊為巡覽的置放目標。  
   
 ```  
 BOOL GetRegisterAsDropTarget() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果瀏覽器登錄為置放目標，則為非零否則為零。  
+ 非零值，如果瀏覽器登錄為置放目標;否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getsilent"></a>  CHtmlView::GetSilent  
- 呼叫此成員函式可判斷 WebBrowser 控制項是否會顯示任何對話方塊。  
+ 呼叫此成員函式，以判斷是否可以在 WebBrowser 控制項中顯示任何對話方塊。  
   
 ```  
 BOOL GetSilent() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果無法從 WebBrowser 控制項，顯示對話方塊否則為零。  
+ 如果無法從 WebBrowser 控制項中，顯示對話方塊，非零值。否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="getsource"></a>  CHtmlView::GetSource  
- 呼叫此成員函式可擷取 web 網頁的 HTML 原始程式碼。  
+ 呼叫此成員函式，來擷取 web 網頁的 HTML 原始程式碼。  
   
 ```  
 BOOL GetSource(CString& strRef);
@@ -763,23 +763,23 @@ BOOL GetSource(CString& strRef);
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)將保留的原始程式碼。  
   
 ### <a name="remarks"></a>備註  
- 此函式相當於 [檢視原始檔] 命令，在 Internet Explorer 中，不同之處在於中傳回的原始碼`CString`。  
+ 此函式相當於 [檢視來源] 命令，在 Internet Explorer 中，不同之處在於會傳入原始碼`CString`。  
   
 ##  <a name="getstatusbar"></a>  CHtmlView::GetStatusBar  
- 呼叫此成員函式可判斷 WebBrowser 控制項是否顯示狀態列。  
+ 呼叫此成員函式，以判斷 WebBrowser 控制項是否顯示狀態列。  
   
 ```  
 BOOL GetStatusBar() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果可以顯示狀態列。否則為零。  
+ 如果可以顯示狀態列，為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="gettheatermode"></a>  CHtmlView::GetTheaterMode  
- 呼叫此成員函式可判斷 web 瀏覽器是否為劇場模式。  
+ 呼叫此成員函式，以判斷網頁瀏覽器是否為劇場模式。  
   
 ```  
 BOOL GetTheaterMode() const;  
@@ -789,7 +789,7 @@ BOOL GetTheaterMode() const;
  網頁瀏覽器為劇場模式; 如果為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
- 劇場模式的網頁瀏覽器時，瀏覽器主視窗填滿整個螢幕，瀏覽工具的最小集合包含的工具列會出現，而狀態列會出現在畫面右上角。  
+ 劇場模式的 web 瀏覽器時，瀏覽器的主視窗填滿整個畫面，包含導覽工具的最少的工具列會出現，而狀態列會出現在畫面右上角。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
@@ -801,7 +801,7 @@ int GetToolBar() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 值，指出工具列是否可見。 為非零，如果工具列是可見的。否則為零。  
+ 值，指出工具列是否可見。 如果工具列為可見;，非零值。否則為零。  
   
 ##  <a name="gettop"></a>  CHtmlView::GetTop  
  呼叫此成員函式可擷取 WebBrowser 控制項的主視窗的上邊緣的螢幕座標。  
@@ -811,7 +811,7 @@ long GetTop() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 此變數會接收主視窗的上邊緣的螢幕座標的位址。  
+ 此變數會接收的主視窗的上邊緣的螢幕座標的位址。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -824,13 +824,13 @@ BOOL GetTopLevelContainer() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，容器是最上層的容器。否則為零。  
+ 非零值是容器的最上層的容器;否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="gettype"></a>  CHtmlView::GetType  
- 呼叫此成員函式可擷取包含使用中文件的型別名稱。  
+ 呼叫此成員函式，來擷取包含使用中文件的型別名稱。  
   
 ```  
 CString GetType() const;  
@@ -850,7 +850,7 @@ BOOL GetVisible() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果物件是可見的。否則為零。  
+ 非零值，如果物件是可見的。否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -876,7 +876,7 @@ void GoBack();
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="goforward"></a>  CHtmlView::GoForward  
- 瀏覽歷程記錄清單中的正向一個項目。  
+ 瀏覽歷程記錄清單的正向一個項目。  
   
 ```  
 void GoForward();
@@ -893,7 +893,7 @@ void GoHome();
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="gosearch"></a>  CHtmlView::GoSearch  
- 巡覽至目前的搜尋頁面，指定在 Internet explorer [網際網路選項] 對話方塊或 [網際網路內容] 對話方塊中，從控制台存取。  
+ 瀏覽至目前搜尋頁面上，在 Internet Explorer [網際網路選項] 對話方塊或 [網際網路內容] 對話方塊中，指定從控制台存取。  
   
 ```  
 void GoSearch();
@@ -938,28 +938,28 @@ void Navigate(
   
 ### <a name="parameters"></a>參數  
  *URL*  
- 呼叫端配置的字串，包含要瀏覽至 URL 或要顯示之檔案的完整路徑。  
+ 呼叫端配置的字串，包含要瀏覽至的 URL 或要顯示之檔案的完整路徑。  
   
  *dwFlags*  
- 變數會指定是否要將此資源新增至歷程記錄清單、 是否要讀取或寫入快取中，從以及是否要在新視窗中顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)列舉型別。  
+ 此變數會指定是否要將資源新增至歷程記錄清單、 是否要從快取中，若要讀取或寫入以及是否要在新視窗顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)列舉型別。  
   
  *lpszTargetFrameName*  
- 包含要在其中顯示資源的框架名稱的字串指標。  
+ 包含要在其中顯示該資源的框架名稱的字串指標。  
   
  *lpszHeaders*  
- 指定要傳送至伺服器的 HTTP 標頭值的指標。 這些標頭會新增至預設的 Internet Explorer 標頭。 標頭可以指定這類事件的伺服器，正在傳遞給伺服器或狀態碼的資料類型所需的動作。 這個參數已忽略如果*URL*不是 HTTP URL。  
+ 指定要傳送至伺服器的 HTTP 標頭值的指標。 這些標頭新增至預設的 Internet Explorer 標頭。 標頭可以指定等項目，做為所需的伺服器，也就是傳遞至伺服器或狀態碼的資料類型的動作。 如果這個參數就會忽略*URL*不是 HTTP URL。  
   
  *lpvPostData*  
- 要傳送的 HTTP POST 交易的資料指標。 例如，POST 交易用來傳送 HTML 表單所收集的資料。 如果這個參數未指定任何張貼的資料，**瀏覽**發出 HTTP GET 的交易。 這個參數已忽略如果*URL*不是 HTTP URL。  
+ 要與 HTTP POST 交易傳送的資料指標。 例如，POST 交易用來傳送 HTML 格式所收集的資料。 如果這個參數未指定任何張貼的資料，`Navigate`發出 HTTP GET 的交易。 如果這個參數就會忽略*URL*不是 HTTP URL。  
   
  *dwPostDataLen*  
- 使用 HTTP POST 交易傳送資料。 例如，POST 交易用來傳送 HTML 表單所收集的資料。 如果這個參數未指定任何張貼的資料，**瀏覽**發出 HTTP GET 的交易。 這個參數已忽略如果*URL*不是 HTTP URL。  
+ 要與 HTTP POST 交易傳送的資料。 例如，POST 交易用來傳送 HTML 格式所收集的資料。 如果這個參數未指定任何張貼的資料，`Navigate`發出 HTTP GET 的交易。 如果這個參數就會忽略*URL*不是 HTTP URL。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="navigate2"></a>  CHtmlView::Navigate2  
- 呼叫此成員函式，來巡覽至依 URL 找到的資源或依完整路徑找到的檔案。  
+ 呼叫此成員函式以巡覽至依 URL 找到的資源或完整路徑所識別的檔案。  
   
 ```  
 void Navigate2(
@@ -990,28 +990,28 @@ void Navigate2(
  指標[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)結構。  
   
  *dwFlags*  
- 變數會指定是否要將此資源新增至歷程記錄清單、 是否要讀取或寫入快取中，從以及是否要在新視窗中顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)列舉型別。  
+ 此變數會指定是否要將資源新增至歷程記錄清單、 是否要從快取中，若要讀取或寫入以及是否要在新視窗顯示資源的旗標。 變數可以是所定義之值的組合[BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx)列舉型別。  
   
  *lpszTargetFrameName*  
- 包含要在其中顯示資源的框架名稱的字串指標。  
+ 包含要在其中顯示該資源的框架名稱的字串指標。  
   
  *lpszURL*  
- 包含 URL 的字串指標。  
+ 字串，包含 URL 的指標。  
   
  *lpvPostData*  
- 使用 HTTP POST 交易傳送資料。 例如，POST 交易用來傳送 HTML 表單所收集的資料。 如果這個參數未指定任何張貼的資料，`Navigate2`發出 HTTP GET 的交易。 這個參數已忽略如果*URL*並不是 HTTP 或 HTTPS URL。  
+ 要與 HTTP POST 交易傳送的資料。 例如，POST 交易用來傳送 HTML 格式所收集的資料。 如果這個參數未指定任何張貼的資料，`Navigate2`發出 HTTP GET 的交易。 如果這個參數就會忽略*URL*並不是 HTTP 或 HTTPS URL。  
   
  *dwPostDataLen*  
- 所指向的資料長度 （位元組） *lpvPostData*參數。  
+ 所指向之資料的位元組長度*lpvPostData*參數。  
   
  *lpszHeaders*  
- 指定要傳送至伺服器的 HTTP 或 HTTPS 標頭值的指標。 這些標頭會新增至預設的 Internet Explorer 標頭。 標頭可以指定這類事件的伺服器，正在傳遞給伺服器或狀態碼的資料類型所需的動作。 這個參數已忽略如果*URL*並不是 HTTP 或 HTTPS URL。  
+ 指定要傳送至伺服器的 HTTP 或 HTTPS 標頭值的指標。 這些標頭新增至預設的 Internet Explorer 標頭。 標頭可以指定等項目，做為所需的伺服器，也就是傳遞至伺服器或狀態碼的資料類型的動作。 如果這個參數就會忽略*URL*並不是 HTTP 或 HTTPS URL。  
   
  *baPostedData*  
- 若要參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。  
+ 參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式擴充**瀏覽**支援瀏覽功能的特殊資料夾，例如桌面和我的電腦 參數都由成員函式*pIDL*。  
+ 此成員函式會擴充`Navigate`成員函式，藉由支援上特殊資料夾，例如桌上型電腦和我的電腦，表示參數的瀏覽*pIDL*。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
@@ -1019,7 +1019,7 @@ void Navigate2(
  [!code-cpp[NVC_MFCHtmlHttp#7](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]  
   
 ##  <a name="onbeforenavigate2"></a>  CHtmlView::OnBeforeNavigate2  
- 此成員函式會呼叫，讓網頁瀏覽器中發生巡覽前引發事件的 framework。  
+ 此成員函式是在 web 瀏覽器中發生巡覽前引發事件的架構所呼叫。  
   
 ```  
 virtual void OnBeforeNavigate2(
@@ -1033,25 +1033,25 @@ virtual void OnBeforeNavigate2(
   
 ### <a name="parameters"></a>參數  
  *lpszURL*  
- 包含導覽至 URL 的字串指標。  
+ 字串，包含要巡覽至 URL 的指標。  
   
  *nFlags*  
  保留供未來使用。  
   
  *lpszTargetFrameName*  
- 字串，包含要在其中顯示資源，畫面格名稱或**NULL**如果不具名的畫面格的目標資源。  
+ 字串，其中包含要顯示的資源，或如果沒有具名的畫面格以資源為目標，則為 NULL 的框架名稱。  
   
  *baPostedData*  
- 若要參考`CByteArray`物件，其中包含要傳送至伺服器，如果正在使用 HTTP POST 交易的資料。  
+ 參考`CByteArray`物件，其中包含要傳送至伺服器，如果正在使用 HTTP POST 交易的資料。  
   
  *lpszHeaders*  
- 包含要傳送至伺服器 (HTTP Url) 的其他 HTTP 標頭的字串指標。 標頭可以指定這類事件的伺服器，正在傳遞給伺服器或狀態碼的資料類型所需的動作。  
+ 包含傳送到伺服器 (HTTP Url) 的其他 HTTP 標頭的字串指標。 標頭可以指定等項目，做為所需的伺服器，也就是傳遞至伺服器或狀態碼的資料類型的動作。  
   
  *pbCancel*  
- 取消旗標指標。 應用程式可以將這個參數設定為非零值，以取消瀏覽作業，或為零，讓它繼續。  
+ 取消旗標的指標。 應用程式可以將這個參數設定為非零值，以取消瀏覽作業，或為零，以允許它繼續。  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
- 此成員函式會呼叫架構，以通知應用程式的網頁瀏覽器命令啟用的狀態已變更。  
+ 此成員函式會通知應用程式的 web 瀏覽器命令啟用的狀態已變更的架構所呼叫。  
   
 ```  
 virtual void OnCommandStateChange(
@@ -1061,13 +1061,13 @@ virtual void OnCommandStateChange(
   
 ### <a name="parameters"></a>參數  
  *nCommand*  
- 其已啟用的狀態已變更的命令的識別碼。  
+ 其已啟用的狀態已變更的命令識別碼。  
   
  *bEnable*  
- 啟用的狀態。 如果命令已啟用，或如果已停用，則為非零，此參數。  
+ 啟用的狀態。 如果命令已啟用，或如果已停用則為零，則此參數為非零值。  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
- 此成員函式呼叫的架構，以通知應用程式的文件已達到`READYSTATE_COMPLETE`狀態。  
+ 此成員函式會通知應用程式的文件到達 READYSTATE_COMPLETE 狀態的架構所呼叫。  
   
 ```  
 virtual void OnDocumentComplete(LPCTSTR lpszURL);
@@ -1075,15 +1075,15 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
   
 ### <a name="parameters"></a>參數  
  *lpszURL*  
- 評估為 URL，UNC 字串的指標檔案的名稱，或所巡覽的 PIDL （項目識別項清單的指標）。  
+ 評估為 URL，也就是 UNC 字串的指標檔案的名稱，或巡覽至的 PIDL （項目識別項清單指標）。  
   
 ### <a name="remarks"></a>備註  
- 並非每個畫面格就會引發此事件，但引發的每個畫面格[OnDownloadBegin](#ondownloadbegin)事件就會引發對應`OnDocumentComplete`事件。  
+ 並非每個畫面格會引發此事件，但每個畫面格，就會引發[OnDownloadBegin](#ondownloadbegin)事件就會引發對應`OnDocumentComplete`事件。  
   
- URL 由*lpszURL*可以不同於瀏覽器已告知瀏覽至，因為此 URL 是正式且完整的 URL 的 URL。 比方說，如果應用程式指定的 URL"www.microsoft.com"的呼叫中要[瀏覽](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會是"http://www.microsoft.com/"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL、 重新導向的 URL 將會反映這裡。  
+ 所指定的 URL *lpszURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 http://www.microsoft.com/ "。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
- 從 Internet Explorer 或 MSHTML 實作的 **IOleInPlaceActiveObject::OnDocWindowActivate**呼叫，這會在容器文件視窗啟用或停用時，通知使用中的就地物件。  
+ 從 Internet Explorer 或 MSHTML 實作的呼叫`IOleInPlaceActiveObject::OnDocWindowActivate`，這會在容器文件視窗啟用或停用時通知作用中的就地物件。  
   
 ```  
 virtual HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -1091,23 +1091,23 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
   
 ### <a name="parameters"></a>參數  
  *fActivate*  
- 表示文件視窗的狀態。 如果這個值是零，正在啟用視窗。 如果此值為零，正在停用視窗。  
+ 表示文件視窗的狀態。 如果此值為非零值，正在啟動視窗。 如果此值為零，會在視窗已停用。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnDocWindowActivate`反應`OnDocWindowActivate`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnDocWindowActivate`回應`OnDocWindowActivate`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin  
- 若要開始下載文件架構會呼叫此成員函式。  
+ 開始下載文件的架構會呼叫此成員函式。  
   
 ```  
 virtual void OnDownloadBegin();
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個事件一經引發後，馬上[OnBeforeNavigate2](#onbeforenavigate2)事件，除非則會取消巡覽。 此事件應該連接的任何動畫或 「 忙碌 」 容器需要顯示的指示。  
+ 時會引發此事件後不久[OnBeforeNavigate2](#onbeforenavigate2)事件，除非則會取消巡覽。 任何動畫或 「 忙碌 」 的容器需要顯示的指示，都應該連接到此事件。  
   
 ##  <a name="ondownloadcomplete"></a>  CHtmlView::OnDownloadComplete  
  表示巡覽作業結束、 暫止或失敗，架構會呼叫此成員函式。  
@@ -1125,13 +1125,13 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
   
 ### <a name="parameters"></a>參數  
  *fEnable*  
- 指出主機的非強制回應對話方塊會啟用或停用。 如果此值為非零，則會啟用非強制回應對話方塊。 如果此值為零，則會停用非強制回應對話方塊。  
+ 指出主機的非強制回應對話方塊已啟用或停用。 如果此值為非零值，則會啟用非強制回應對話方塊。 如果此值為零，則會停用非強制回應對話方塊。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 啟用或停用非強制回應對話方塊，當容器建立或終結強制回應對話方塊。 覆寫`OnEnableModeless`反應`EnableModeless`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)如需詳細資訊的 Windows SDK 中。  
+ 啟用或停用非強制回應對話方塊，當容器建立或終結強制回應對話方塊。 覆寫`OnEnableModeless`回應`EnableModeless`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject  
  Internet Explorer 或 MSHTML 在主機上呼叫，允許主機替換 Internet Explorer 或 MSHTML 的資料物件。  
@@ -1147,13 +1147,13 @@ virtual HRESULT OnFilterDataObject(
  位址[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Internet Explorer 或 MSHTML 所提供的介面。  
   
  *ppDataObject*  
- 接收的地址`IDataObject`主機所提供的介面指標。 此參數的內容應該都會初始化為**NULL**，即使方法失敗。  
+ 接收的地址`IDataObject`主應用程式提供的介面指標。 此參數的內容應該一律先初始化為 NULL，即使方法失敗。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果取代的資料物件， **S_FALSE**未取代的資料物件，或 OLE 定義的錯誤程式碼，如果發生錯誤。  
+ 如果資料物件會被取代，為 S_OK、 S_FALSE，如果資料物件不會被取代或 OLE 定義的錯誤程式碼發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnFilterDataObject`反應`FilterDataObject`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnFilterDataObject`回應`FilterDataObject`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate  
  從 [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。  
@@ -1164,13 +1164,13 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
   
 ### <a name="parameters"></a>參數  
  *fActivate*  
- 指出容器的最上層框架視窗的狀態。 如果這個值是零，正在啟用視窗。 如果此值為零，正在停用視窗。  
+ 表示容器的最上層框架視窗的狀態。 如果此值為非零值，正在啟動視窗。 如果此值為零，會在視窗已停用。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnFrameWindowActivate`反應`OnFrameWindowActivate`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnFrameWindowActivate`回應`OnFrameWindowActivate`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen  
  此成員函式由架構呼叫時[全螢幕](https://msdn.microsoft.com/library/aa752119.aspx)屬性已變更。  
@@ -1181,7 +1181,7 @@ virtual void OnFullScreen(BOOL bFullScreen);
   
 ### <a name="parameters"></a>參數  
  *bFullScreen*  
- 如果 Internet Explorer 處於全螢幕模式，則為非零否則為零。  
+ 如果 Internet Explorer 為全螢幕模式，為非零否則為零。  
   
 ##  <a name="ongetdroptarget"></a>  CHtmlView::OnGetDropTarget  
  當它用做為置放目標，讓主機提供另一個 `IDropTarget`。  
@@ -1197,13 +1197,13 @@ virtual HRESULT OnGetDropTarget(
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer 或 MSHTML 建議使用。  
   
  *ppDropTarget*  
- 位址`IDropTarget`接收`IDropTarget`主應用程式想要提供的介面指標。  
+ 位址`IDropTarget`接收`IDropTarget`主機想要提供的介面指標。  
   
 ### <a name="return-value"></a>傳回值  
- 請參閱[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)的傳回程式碼清單的 Windows SDK 中。  
+ 請參閱[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows SDK，如需傳回碼的清單中。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnGetDropTarget`反應`GetDropTarget`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnGetDropTarget`回應`GetDropTarget`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal  
  由 Internet Explorer 或 MSHTML 呼叫，以取得主機的 `IDispatch` 介面。  
@@ -1214,13 +1214,13 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
   
 ### <a name="parameters"></a>參數  
  *lppDispatch*  
- 接收的位址指標`IDispatch`主應用程式的介面指標。 如果主應用程式公開 Automation 介面，它可以提供 Internet Explorer 或 MSHTML 透過此參數的參考。 此參數的內容應該都會初始化為**NULL**，即使方法失敗。  
+ 收到的位址指標`IDispatch`主應用程式的介面指標。 如果主應用程式公開 Automation 介面，它可以提供 Internet Explorer 或 MSHTML 透過此參數的參考。 此參數的內容應該一律先初始化為 NULL，即使方法失敗。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnGetExternal`反應`GetExternal`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnGetExternal`回應`GetExternal`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo  
  擷取 Internet Explorer 或 MSHTML 主機的 UI 功能。  
@@ -1234,13 +1234,13 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
  位址[DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx)接收主機的 UI 功能的結構。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnGetHostInfo`反應`GetHostInfo`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnGetHostInfo`回應`GetHostInfo`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath  
- 呼叫此成員函式可取得的登錄機碼下，Internet Explorer 或 MSHTML 儲存使用者喜好設定。  
+ 呼叫此成員函式，以取得在其下，Internet Explorer 或 MSHTML 儲存使用者喜好設定的登錄機碼。  
   
 ```  
 virtual HRESULT OnGetOptionKeyPath(
@@ -1250,16 +1250,16 @@ virtual HRESULT OnGetOptionKeyPath(
   
 ### <a name="parameters"></a>參數  
  *pchKey*  
- 位址`LPOLESTR`接收主機儲存它的預設選項的登錄子機碼字串。 這個子機碼將會在 HKEY_CURRENT_USER 機碼底下。 配置此記憶體使用[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)。 呼叫的應用程式會負責釋放此記憶體使用[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)。 這個參數應該一律會初始化為**NULL**，即使方法失敗。  
+ 解決的`LPOLESTR`接收主機儲存它的預設選項的位置的登錄子機碼字串。 這個子機碼會在 HKEY_CURRENT_USER 機碼底下。 配置此記憶體使用[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)。 釋放這個記憶體使用的呼叫端的應用程式負責[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)。 這個參數應該一律先初始化為 NULL，即使方法失敗。  
   
  *dwReserved*  
  保留供未來使用。 目前無法使用。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或**S_FALSE**否則。 如果**S_FALSE**，Internet Explorer 或 mshtml 呼叫將會預設為它自己的使用者選項。  
+ 如果成功，為 S_OK 或否則為 S_FALSE。 如果 S_FALSE、 Internet Explorer 或 MSHTML 會預設為它自己的使用者選項。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnGetOptionKeyPath`反應`GetOptionKeyPath`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnGetOptionKeyPath`回應`GetOptionKeyPath`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI  
  當 Internet Explorer 或 MSHTML 移除其功能表與工具列時，此成員函式是由架構呼叫。  
@@ -1269,10 +1269,10 @@ virtual HRESULT OnHideUI();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnHideUI`反應`HideUI`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnHideUI`回應`HideUI`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar  
  此成員函式由架構呼叫時[MenuBar](https://msdn.microsoft.com/library/aa752131.aspx)屬性已變更。  
@@ -1283,10 +1283,10 @@ virtual void OnMenuBar(BOOL bMenuBar);
   
 ### <a name="parameters"></a>參數  
  *bMenuBar*  
- 為非零，如果 Internet Explorer 的功能表列是可見的。否則為零。  
+ 非零值，如果 Internet Explorer 的功能表列是可見的。否則為零。  
   
 ##  <a name="onnavigatecomplete2"></a>  CHtmlView::OnNavigateComplete2  
- （視窗或框架項目） 上的超連結的巡覽完畢後，此成員函式是由架構呼叫。  
+ （無論是視窗或框架項目） 上的超連結巡覽完畢後，此成員函式是由架構呼叫。  
   
 ```  
 virtual void OnNavigateComplete2(LPCTSTR strURL);
@@ -1294,12 +1294,12 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
   
 ### <a name="parameters"></a>參數  
  *strURL*  
- 字串運算式評估為 URL，UNC 檔案名稱或所巡覽的 PIDL （項目識別項清單的指標）。  
+ 字串運算式評估為 URL，UNC 檔案名稱或巡覽至的 PIDL （項目識別項清單指標）。  
   
 ### <a name="remarks"></a>備註  
  URL 參數可以是在沒有 URL 表示法是殼層名稱空間實體的情況下 PIDL。  
   
- 請注意，在 URL 中包含*strURL*可以不同於瀏覽器已告知瀏覽至，因為此 URL 是正式且完整的 URL 的 URL。 比方說，如果應用程式指定的 URL"www.microsoft.com"的呼叫中要[瀏覽](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會是"http://www.microsoft.com/"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL、 重新導向的 URL 將會反映這裡。  
+ 請注意，URL 中包含*strURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 http://www.microsoft.com/ "。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。  
   
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError  
  巡覽至超連結失敗時，由架構呼叫。  
@@ -1314,24 +1314,24 @@ virtual void OnNavigateError(
   
 ### <a name="parameters"></a>參數  
  *lpszURL*  
- 無法瀏覽的 URL。  
+ 無法瀏覽 URL。  
   
  *lpszFrame*  
- 資源是為顯示，或 NULL 表示沒有具名的畫面格的目標資源所在的框架名稱。  
+ 要顯示，則為 NULL，如果沒有具名的畫面格的目標資源之資源的框架名稱。  
   
  *dwError*  
  錯誤狀態碼，如果有的話。 如需可能的 HRESULT 和 HTTP 狀態碼的清單，請參閱[NavigateError 事件狀態碼。](https://msdn.microsoft.com/library/aa768365.aspx)  
   
  *pbCancel*  
- 指定是否要取消瀏覽到錯誤頁面或任何進一步的自動搜尋。 如果**TRUE** （預設值），繼續瀏覽到錯誤頁面或自動搜尋; 如果**FALSE**，取消瀏覽到錯誤頁面或自動搜尋。  
+ 指定是否要取消瀏覽到錯誤頁面或任何進一步的自動搜尋。 如果為 TRUE （預設值），請繼續瀏覽到錯誤頁面或自動搜尋;如果為 FALSE，則取消瀏覽到錯誤頁面或自動搜尋。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個方法以提供自訂瀏覽錯誤處理。  
+ 覆寫這個方法，以提供自訂的瀏覽的錯誤處理。  
   
  如需詳細資訊，請參閱[DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)  
   
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2  
- 要為顯示資源建立在新視窗開啟時，此成員函式是由架構呼叫。  
+ 為顯示資源建立新的視窗時，此成員函式是由架構呼叫。  
   
 ```  
 virtual void OnNewWindow2(
@@ -1341,16 +1341,16 @@ virtual void OnNewWindow2(
   
 ### <a name="parameters"></a>參數  
  *ppDisp*  
- 可選擇性地接收的介面指標的指標`IDispatch`新的 WebBrowser 或 Internet Explorer 物件的介面指標。  
+ 可選擇性地接收的介面指標的指標`IDispatch`新 WebBrowser 或 Internet Explorer 物件的介面指標。  
   
  *取消*  
- 取消旗標指標。 應用程式可以將這個參數設定為非零值，以取消瀏覽作業，或為零，讓它繼續。  
+ 取消旗標的指標。 應用程式可以將這個參數設定為非零值，以取消瀏覽作業，或為零，以允許它繼續。  
   
 ### <a name="remarks"></a>備註  
- 此事件之前建立的 WebBrowser 中的新視窗。  
+ 此事件在之前建立從 WebBrowser 中新的視窗。  
   
 ##  <a name="onprogresschange"></a>  CHtmlView::OnProgressChange  
- 此成員函式會呼叫以通知應用程式，下載作業的進度已經更新架構。  
+ 此成員函式會通知應用程式，下載作業的進度已經更新的架構所呼叫。  
   
 ```  
 virtual void OnProgressChange(
@@ -1360,16 +1360,16 @@ virtual void OnProgressChange(
   
 ### <a name="parameters"></a>參數  
  *nProgress*  
- 以顯示或-1 進度完成時的整體進度數量。  
+ 顯示，或-1 的進度完成時的整體進度數量。  
   
  *nProgressMax*  
- 最大進度值。  
+ 最大的進度值。  
   
 ### <a name="remarks"></a>備註  
- 顯示目前下載的位元組數，或更新進度列指示器，容器就可以使用此事件所提供的資訊。  
+ 容器可以使用這個事件所提供的資訊，以顯示到目前為止下載的位元組數目，或更新進度列指示器。  
   
 ##  <a name="onpropertychange"></a>  CHtmlView::OnPropertyChange  
- 架構，以通知應用程式會呼叫此成員函式， [PutProperty](#putproperty)已變更屬性的值。  
+ 此成員函式會呼叫以通知應用程式的架構可[PutProperty](#putproperty)已變更屬性的值。  
   
 ```  
 virtual void OnPropertyChange(LPCTSTR lpszProperty);
@@ -1380,7 +1380,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
  包含屬性名稱的字串指標。  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
- 此成員函式會呼叫以通知應用程式 Internet Explorer 應用程式準備好要結束的架構。  
+ 此成員函式呼叫來告知 Internet Explorer 應用程式已經可以結束應用程式架構。  
   
 ```  
 virtual void OnQuit();
@@ -1404,13 +1404,13 @@ virtual HRESULT OnResizeBorder(
  已變更其框線框架或文件視窗物件的介面指標。  
   
  *fFrameWindow*  
- **TRUE**如果框架視窗呼叫[ioleinplaceactiveobject:: Resizeborder](http://msdn.microsoft.com/library/windows/desktop/ms680053)，否則為**FALSE**。  
+ 如果框架視窗呼叫，則為 TRUE [ioleinplaceactiveobject:: Resizeborder](http://msdn.microsoft.com/library/windows/desktop/ms680053)，否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnResizeBorder`反應`ResizeBorder`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnResizeBorder`回應`ResizeBorder`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu  
  當它正要顯示內容功能表時，從 Internet Explorer 或 MSHTML 呼叫。  
@@ -1425,22 +1425,22 @@ virtual HRESULT OnShowContextMenu(
   
 ### <a name="parameters"></a>參數  
  *dwID*  
- 要顯示的內容功能表的識別碼。 請參閱**IDocHostUIHandler::ShowContextMenu**值清單的 Windows SDK 中。  
+ 要顯示的內容功能表的識別碼。 請參閱`IDocHostUIHandler::ShowContextMenu`值清單的 Windows SDK 中。  
   
  *ppt*  
  功能表的螢幕座標。  
   
  *pcmdtReserved*  
- [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)介面用來查詢命令的狀態，並在此物件上執行命令。  
+ [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)介面用來查詢命令狀態，並在此物件上執行命令。  
   
  *pdispReserved*  
- 在螢幕座標之物件的 IDispatch 介面。 這可讓主機區分特定物件，以提供更特定的內容。  
+ 在螢幕座標之物件的 IDispatch 介面。 這可讓主機區分特定的物件，以提供更特定的內容。  
   
 ### <a name="return-value"></a>傳回值  
  請參閱[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)值清單的 Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnShowContextMenu`反應`ShowContextMenu`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnShowContextMenu`回應`ShowContextMenu`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI  
  在 Internet Explorer 或 MSHTML 顯示其功能表與工具列之前呼叫。  
@@ -1459,13 +1459,13 @@ virtual HRESULT OnShowUI(
  保留供未來使用。  
   
  *pActiveObject*  
- [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)目前作用中物件的介面。  
+ [和](http://msdn.microsoft.com/library/windows/desktop/ms691299)目前作用中物件的介面。  
   
  *pCommandTarget*  
- [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)介面的物件。  
+ [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)物件的介面。  
   
  *pFrame*  
- [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)介面的物件。 此為所需功能表和工具列。  
+ [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)物件的介面。 這被必要的功能表和工具列。  
   
  *pDoc*  
  [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716)物件介面。 這被必要的工具列。  
@@ -1474,7 +1474,7 @@ virtual HRESULT OnShowUI(
  請參閱[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)值清單的 Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnShowUI`反應`ShowUI`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnShowUI`回應`ShowUI`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar  
  此成員函式由架構呼叫時[StatusBar](https://msdn.microsoft.com/library/aa768270.aspx)屬性已變更。  
@@ -1485,10 +1485,10 @@ virtual void OnStatusBar(BOOL bStatusBar);
   
 ### <a name="parameters"></a>參數  
  *bStatusBar*  
- 如果 Internet Explorer 狀態列會顯示為非零或零，否則為。  
+ 如果 Internet Explorer 的 [狀態] 列會顯示為非零或否則為零。  
   
 ##  <a name="onstatustextchange"></a>  CHtmlView::OnStatusTextChange  
- 此成員函式會呼叫架構，以通知應用程式，WebBrowser 控制項相關聯的狀態列文字已經變更。  
+ 通知的應用程式，WebBrowser 控制項相關聯的狀態列文字已經變更，架構會呼叫此成員函式。  
   
 ```  
 virtual void OnStatusTextChange(LPCTSTR lpszText);
@@ -1507,10 +1507,10 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
   
 ### <a name="parameters"></a>參數  
  *bTheaterMode*  
- 如果 Internet Explorer 為劇場模式，則為非零否則為零。  
+ Internet Explorer 為劇場模式; 如果為非零否則為零。  
   
 ##  <a name="ontitlechange"></a>  CHtmlView::OnTitleChange  
- 此成員函式會呼叫以通知應用程式，如果 WebBrowser 控制項中文件的標題就會變成可用的 framework 或變更。  
+ WebBrowser 控制項中文件的標題就會變成可用時，通知應用程式的架構或變更會呼叫此成員函式。  
   
 ```  
 virtual void OnTitleChange(LPCTSTR lpszText);
@@ -1521,7 +1521,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
  新的文件標題。  
   
 ### <a name="remarks"></a>備註  
- Html，可能會變更標題。雖然 HTML 仍在下載中，文件的 URL 會設為標題。 實際的標題 （如果有的話） 從剖析 HTML 之後，標題會變更以反映實際的標題。  
+ Html，可能會變更標題;雖然 HTML 仍在下載中，文件的 URL 會設為標題。 實際的標題 （如果有的話） 從剖析 HTML 之後，標題會變更以反映實際的標題。  
   
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar  
  此成員函式由架構呼叫時[工具列](https://msdn.microsoft.com/library/aa768274.aspx)屬性已變更。  
@@ -1532,7 +1532,7 @@ virtual void OnToolBar(BOOL bToolBar);
   
 ### <a name="parameters"></a>參數  
  *bToolBar*  
- 如果 Internet Explorer 工具列會顯示為非零或零，否則為。  
+ 如果 Internet Explorer 工具列為可見，非零值。 否則為零。  
   
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator  
  當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) 或 [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。  
@@ -1555,10 +1555,10 @@ virtual HRESULT OnTranslateAccelerator(
  命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或**S_FALSE**否則。  
+ 如果成功，為 S_OK 或否則為 S_FALSE。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnTranslateAccelerator`反應`TranslateAccelerator`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnTranslateAccelerator`回應`TranslateAccelerator`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl  
  由 Internet Explorer 或 MSHTML 呼叫，讓主機有機會修改要載入的 URL。  
@@ -1575,16 +1575,16 @@ virtual HRESULT OnTranslateUrl(
  保留供未來使用。  
   
  *pchURLIn*  
- 提供由 Internet Explorer 或 mshtml 呼叫，表示要轉譯的 URL 字串的位址。  
+ 提供的 Internet Explorer 或 mshtml 呼叫，表示要轉譯的 URL 字串的位址。  
   
  *ppchURLOut*  
- 接收的已翻譯的 URL 位址的字串指標的位址。 主機會配置緩衝區使用的工作記憶體配置器。 此參數的內容應該都會初始化為**NULL**，即使不會轉譯 URL 或方法失敗。  
+ 接收轉譯的 URL 位址的字串指標的位址。 主機會配置緩衝區使用的工作記憶體配置器。 此參數的內容應該一律先初始化為 NULL，即使不會轉譯 URL 或方法失敗。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果已轉譯的 URL， **S_FALSE**如果 URL 不翻譯，或 OLE 定義的錯誤程式碼，如果發生錯誤。  
+ `S_OK` 如果 URL 已轉譯，如果 URL 不翻譯，S_FALSE 或 OLE 定義的錯誤程式碼如果發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 覆寫`OnTranslateUrl`反應`TranslateUrl`來自 Microsoft 的 Web 瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)如需詳細資訊的 Windows SDK 中。  
+ 覆寫`OnTranslateUrl`回應`TranslateUrl`從 Microsoft 網頁瀏覽器控制項的通知。 請參閱[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) Windows sdk for 的詳細資訊。  
   
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI  
  通知主機命令狀態已變更。  
@@ -1594,13 +1594,13 @@ virtual HRESULT OnUpdateUI();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果成功，或 OLE 定義的錯誤程式碼，否則。  
+ 如果成功，為 S_OK 或 OLE 定義的錯誤程式碼，否則。  
   
 ### <a name="remarks"></a>備註  
- 主機應該更新工具列按鈕的狀態。 會呼叫這個方法的傳回值不論`ShowUI`。 覆寫`OnUpdateUI`反應`UpdateUI`來自 Microsoft 的 Web 瀏覽器控制項的通知。  
+ 主機應該更新工具列按鈕的狀態。 這個方法會呼叫從傳回的值為何`ShowUI`。 覆寫`OnUpdateUI`回應`UpdateUI`從 Microsoft 網頁瀏覽器控制項的通知。  
   
 ##  <a name="onvisible"></a>  CHtmlView::OnVisible  
- 要顯示或隱藏的 webbrowser 視窗時，此成員函式是由架構呼叫。  
+ 當 WebBrowser 的視窗應該要顯示或隱藏，此成員函式是由架構呼叫。  
   
 ```  
 virtual void OnVisible(BOOL bVisible);
@@ -1608,13 +1608,13 @@ virtual void OnVisible(BOOL bVisible);
   
 ### <a name="parameters"></a>參數  
  *bVisible*  
- 如果該物件為可見則為非零或零，否則為。  
+ 如果物件為可見，非零值。 否則為零。  
   
 ### <a name="remarks"></a>備註  
- 這可讓 Internet Explorer 視窗會有的行為以相同方式運作主機視窗控制項物件。  
+ 這可讓物件控制主機視窗，以其運作方式與 Internet Explorer 視窗以相同方式運作。  
   
 ##  <a name="putproperty"></a>  CHtmlView::PutProperty  
- 呼叫此成員函式可設定與指定物件相關聯的屬性。  
+ 呼叫此成員函式，若要設定與指定物件相關聯的屬性。  
   
 ```  
 void PutProperty(
@@ -1647,7 +1647,7 @@ void PutProperty(
  字串，包含要設定的屬性。  
   
  *vtValue*  
- 新屬性的值所指示*lpszProperty*。  
+ 新屬性的值由*lpszProperty*。  
   
  *lpszPropertyName*  
  包含要設定的屬性名稱的字串指標。  
@@ -1680,25 +1680,25 @@ HRESULT QueryFormsCommand(
   
 ### <a name="parameters"></a>參數  
  *dwCommandID*  
- 要查詢的命令識別碼。  
+ 要查詢的命令識別項。  
   
  *pbSupported*  
- 指標**BOOL**指定如果命令 (由*dwCommandID*) 支援。 如果為 TRUE，將支援該命令。否則為 FALSE。  
+ 指標，BOOL，指定如果命令 (由*dwCommandID*) 支援。 如果為 TRUE，支援的命令;否則為 FALSE。  
   
  *pbEnabled*  
- 指標**BOOL**指定如果命令 (由*dwCommandID*) 已啟用。 如果為 TRUE，將支援該命令。否則為 FALSE。  
+ 指標，BOOL，指定如果命令 (由*dwCommandID*) 已啟用。 如果為 TRUE，支援的命令;否則為 FALSE。  
   
  *pbChecked*  
- 指標**BOOL**指定如果命令 (由*dwCommandID*) 會檢查。 如果為 TRUE，將支援該命令。否則為 FALSE。  
+ 指標，BOOL，指定如果命令 (由*dwCommandID*) 核取。 如果為 TRUE，支援的命令;否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。 如需可能值的完整清單，請參閱[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK 中。  
+ 標準的 HRESULT 值。 如需可能值的完整清單，請參閱 < [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
  `QueryFormsCommand` 實作的行為[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法。  
   
 ##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB  
- 呼叫此成員函式，以查詢命令狀態。  
+ 呼叫此成員函式來查詢命令狀態。  
   
 ```  
 OLECMDF QueryStatusWB(OLECMDID cmdID) const;  
@@ -1706,10 +1706,10 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
   
 ### <a name="parameters"></a>參數  
  *cmdID*  
- [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264)命令，呼叫端需要狀態資訊的值。  
+ [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) ，呼叫端需要狀態資訊的命令的值。  
   
 ### <a name="return-value"></a>傳回值  
- 位址[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)接收命令的狀態的值。  
+ 地址[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)接收命令的狀態的值。  
   
 ### <a name="remarks"></a>備註  
  `QueryStatusWB` 實作的行為[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法。  
@@ -1717,19 +1717,19 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="refresh"></a>  CHtmlView::Refresh  
- 重新載入的 URL 或檔案目前顯示的網頁瀏覽器。  
+ 重新載入的 URL 或網頁瀏覽器目前顯示的檔案。  
   
 ```  
 void Refresh();
 ```  
   
 ### <a name="remarks"></a>備註  
- **重新整理**不含任何參數，來設定重新整理層級。  
+ `Refresh` 不含任何參數，來設定重新整理層級。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="refresh2"></a>  CHtmlView::Refresh2  
- 重新載入目前顯示 Internet Explorer 的檔案。  
+ 重新載入 Internet Explorer 目前顯示的檔案。  
   
 ```  
 void Refresh2(int nLevel);
@@ -1737,7 +1737,7 @@ void Refresh2(int nLevel);
   
 ### <a name="parameters"></a>參數  
  *nLevel*  
- 指定的重新整理層級變數的位址。 可能的變數定義在[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)，Windows SDK 中。  
+ 指定的重新整理層級變數的位址。 可能的變數中定義[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)，Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
  不同於[重新整理](#refresh)，`Refresh2`包含指定的重新整理層級的參數。  
@@ -1745,7 +1745,7 @@ void Refresh2(int nLevel);
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="setaddressbar"></a>  CHtmlView::SetAddressBar  
- 呼叫此成員函式，以顯示或隱藏 Internet Explorer 物件的網址列。  
+ 呼叫此成員函式，以顯示或隱藏 Internet Explorer 物件的 [網址] 列。  
   
 ```  
 void SetAddressBar(BOOL bNewValue);
@@ -1753,13 +1753,13 @@ void SetAddressBar(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 為非零，以顯示網址 列中。否則為零。  
+ 非零值，以顯示網址 列中;否則為零。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="setfullscreen"></a>  CHtmlView::SetFullScreen  
- 呼叫此成員函式，將 Internet Explorer 設定為任一種全螢幕或標準視窗模式下。  
+ 呼叫此成員函式，將 Internet Explorer 設定為任一種全螢幕] 或 [標準視窗模式。  
   
 ```  
 void SetFullScreen(BOOL bNewValue);
@@ -1770,12 +1770,12 @@ void SetFullScreen(BOOL bNewValue);
  非零代表全螢幕模式;否則為零。  
   
 ### <a name="remarks"></a>備註  
- 在全螢幕模式中，Internet Explorer 主視窗最大化並隱藏狀態列、 工具列、 功能表列和標題列。  
+ 在全螢幕模式中，Internet Explorer 主視窗最大化，並會隱藏狀態列、 工具列、 功能表列和標題列。  
   
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="setheight"></a>  CHtmlView::SetHeight  
- 呼叫此成員函式設定 Internet Explorer 主視窗的高度。  
+ 呼叫此成員函式，來設定 Internet Explorer 主視窗的高度。  
   
 ```  
 void SetHeight(long nNewValue);
@@ -1783,7 +1783,7 @@ void SetHeight(long nNewValue);
   
 ### <a name="parameters"></a>參數  
  *nNewValue*  
- 以像素主視窗的高度。  
+ 像素為單位，在主視窗的高度。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -1808,13 +1808,13 @@ void SetMenuBar(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 為非零，以顯示功能表列。否則為零。  
+ 非零值，以顯示功能表列;否則為零。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="setoffline"></a>  CHtmlView::SetOffline  
- 呼叫此成員函式可設定值，指出 WebBrowser 控制項目前在離線模式中作業。  
+ 呼叫此成員函式，來設定值，指出 WebBrowser 控制項目前在離線模式中作業。  
   
 ```  
 void SetOffline(BOOL bNewValue);
@@ -1822,15 +1822,15 @@ void SetOffline(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 若要從本機快取中; 讀取則為非零否則為零。  
+ 若要從本機快取中; 讀取 Nonzero否則為零。  
   
 ### <a name="remarks"></a>備註  
- 在離線模式中，瀏覽器可讀取的 HTML 網頁，從本機快取，而不是從來源文件。  
+ 在離線模式中，瀏覽器會讀取 HTML 頁面，從本機快取，而不是從來源文件。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="setregisterasbrowser"></a>  CHtmlView::SetRegisterAsBrowser  
- 呼叫此成員函式設定值，指出 WebBrowser 控制項是否註冊為目標名稱解析的最上層瀏覽器。  
+ 呼叫此成員函式，來設定值，指出 WebBrowser 控制項是否註冊為目標名稱解析的最上層瀏覽器。  
   
 ```  
 void SetRegisterAsBrowser(BOOL bNewValue);
@@ -1838,15 +1838,15 @@ void SetRegisterAsBrowser(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 決定是否要將 Internet Explorer 註冊為最上層瀏覽器。 如果是非零值，網頁瀏覽器是否註冊為最上層的瀏覽器;如果是零，它不是最上層瀏覽器。 預設值是零。  
+ 判斷是否要將 Internet Explorer 登錄做為最上層的瀏覽器。 如果是非零值，網頁瀏覽器會註冊為最上層的瀏覽器;如果是零，它不是最上層的瀏覽器。 預設值是零。  
   
 ### <a name="remarks"></a>備註  
- 最上層瀏覽器是設定在登錄中的預設瀏覽器以瀏覽器。  
+ 最上層的瀏覽器是在登錄中的預設瀏覽器設定的瀏覽器。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="setregisterasdroptarget"></a>  CHtmlView::SetRegisterAsDropTarget  
- 呼叫此成員函式設定值，指出 WebBrowser 控制項是否註冊為巡覽的置放目標。  
+ 呼叫此成員函式，來設定值，指出 WebBrowser 控制項是否註冊為巡覽的置放目標。  
   
 ```  
 void SetRegisterAsDropTarget(BOOL bNewValue);
@@ -1854,7 +1854,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 決定如果 WebBrowser 控制項是否註冊為巡覽的置放目標。 如果是非零值，物件已登錄為置放目標。如果是零，它不在置放目標。  
+ 決定如果 WebBrowser 控制項是否註冊為巡覽的置放目標。 如果是非零值，該物件會註冊為置放目標;如果是零，它不是置放目標。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -1874,7 +1874,7 @@ void SetSilent(BOOL bNewValue);
  適用於 Internet Explorer 和 WebBrowser。  
   
 ##  <a name="setstatusbar"></a>  CHtmlView::SetStatusBar  
- 呼叫此成員函式會顯示狀態列。  
+ 呼叫此成員函式，以顯示 [狀態] 列。  
   
 ```  
 void SetStatusBar(BOOL bNewValue);
@@ -1882,10 +1882,10 @@ void SetStatusBar(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 為非零，如果 [狀態] 列是可見的。否則為零。  
+ 非零值，如果 [狀態] 列是可見的。否則為零。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="settheatermode"></a>  CHtmlView::SetTheaterMode  
  呼叫此成員函式設定值，指出 WebBrowser 控制項是否為劇場模式。  
@@ -1896,10 +1896,10 @@ void SetTheaterMode(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 將 WebBrowser 控制項為劇場模式，則為非零否則為零。 預設值是零。  
+ 非零的值設為劇場模式; 的 WebBrowser 控制項否則為零。 預設值是零。  
   
 ### <a name="remarks"></a>備註  
- 劇場模式的網頁瀏覽器時，瀏覽器主視窗填滿整個螢幕，瀏覽工具的最小集合包含的工具列會出現，而狀態列會出現在畫面右上角。  
+ 劇場模式的 web 瀏覽器時，瀏覽器的主視窗填滿整個畫面，包含導覽工具的最少的工具列會出現，而狀態列會出現在畫面右上角。  
   
  適用於 Internet Explorer 和 WebBrowser。  
   
@@ -1912,13 +1912,13 @@ void SetToolBar(int nNewValue);
   
 ### <a name="parameters"></a>參數  
  *nNewValue*  
- 指出是否要顯示的工具列。 工具列會顯示; 如果為非零否則為零。  
+ 指出是否要顯示工具列。 如果工具列顯示; 為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
- 適用於 Internet Explorer。 如果您使用這個呼叫使用 WebBrowser 控制項，它會傳回任何錯誤，但它將會忽略此呼叫。  
+ 適用於 Internet Explorer。 如果您使用 WebBrowser 控制項使用這個呼叫，它會傳回任何錯誤，但它將會忽略這個呼叫。  
   
 ##  <a name="settop"></a>  CHtmlView::SetTop  
- 呼叫此成員函式設定 WebBrowser 控制項的內部的上邊緣和其容器的上邊緣之間的距離  
+ 呼叫此成員函式設定的 WebBrowser 控制項內部的上邊緣和其容器頂端之間的距離  
   
 ```  
 void SetTop(long nNewValue);
@@ -1926,7 +1926,7 @@ void SetTop(long nNewValue);
   
 ### <a name="parameters"></a>參數  
  *nNewValue*  
- 主視窗的上邊緣的螢幕座標。  
+ 在主視窗的上邊緣的螢幕座標。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -1940,7 +1940,7 @@ void SetVisible(BOOL bNewValue);
   
 ### <a name="parameters"></a>參數  
  *bNewValue*  
- 為非零，如果控制項是可見的。否則為零。  
+ 非零值，如果控制項為可見的。否則為零。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -1954,10 +1954,10 @@ void SetWidth(long nNewValue);
   
 ### <a name="parameters"></a>參數  
  *nNewValue*  
- 寬度 （以像素的 Internet Explorer 主視窗）。  
+ 寬度，單位為像素的 Internet Explorer 主視窗。  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  
- 呼叫此成員函式來取消任何暫止的巡覽，或下載作業並停止任何動態頁面項目，例如背景聲音和動畫。  
+ 呼叫此成員函式，以取消任何暫止的瀏覽或下載作業，並停止任何動態頁面項目，例如背景聲音和動畫。  
   
 ```  
 void Stop();

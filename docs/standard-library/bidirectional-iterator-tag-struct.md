@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 108397f6c3c3c088839230f2b48b505300149345
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a04265a68a03edc9f957161991d2ddd91a8e6096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844389"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958175"
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag 結構
 
-類別，為表示雙向迭代器的 **iterator_category** 函式提供傳回型別。
+這個類別提供的傳回型別`iterator_category`表示雙向迭代器函式。
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 
 分類標籤類別會用作演算法選擇的編譯標籤。 樣板函式必須尋找其迭代器引數最精確的分類，如此一來在編譯時間就可以使用最有效率的演算法。 對於 `Iterator` 類型的每個迭代器，必須將 `iterator_traits`< `Iterator`>:: **iterator_category** 定義為描述迭代器行為最精確的分類標籤。
 
-當 **Iter** 描述的物件可當作雙向迭代器時，此類型與 **iterator**\< **Iter**>:: **iterator_category** 相同。
+型別是相同**迭代器**\< **Iter**>:: **iterator_category**時`Iter`描述可以做為雙向的物件迭代器。
 
 ## <a name="example"></a>範例
 

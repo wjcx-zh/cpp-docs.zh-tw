@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954795"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -66,8 +66,8 @@ ms.locfileid: "33862153"
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|測試兩個大小相等之 valarray 的對應項目是否不相等，或測試 valarray 的所有項目是否都和 valarray 的項目類型指定值不相等。|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|取得兩個相等大小 valarray 之對應項目相除的餘數，或 valarray 除以此 valarray 項目類型指定值的餘數，或指定值除以 valarray 的餘數。|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|取得兩個相同大小 valarray 對應項目之間，或 valarray 和該項目型別指定值之間的位元 **AND**。|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間的邏輯 **AND**。|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|取得兩個相同大小 valarray 項目之間、或 valarray 和該項目類型指定值之間的位元 `AND`。|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|取得兩個相同大小 valarray 項目之間、或 valarray 和該 valarray 的項目類型指定值之間的邏輯 `AND`。|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|測試一個 valarray 的項目是否大於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或小於此 valarray 的項目類型指定值。|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|測試一個 valarray 的項目是否大於或等於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或等於、小於或等於指定值。|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|依位置的指定數目或依第二個 valarray 指定的項目數量，將 valarray 的每個項目之位元右移。|
@@ -93,13 +93,13 @@ ms.locfileid: "33862153"
 |[mask_array 類別](../standard-library/mask-array-class.md)|可藉由提供子集之間的作業，以布林運算式指定，並支援父代 valarray 子集物件的內部、輔助的範本類別。|
 |[slice 類別](../standard-library/slice-class.md)|valarray 的一個公用程式類別，用來定義 valarray 的一維、類似向量的子集。|
 |[slice_array 類別](../standard-library/slice-array-class.md)|可藉由提供 valarray 之切割所定義的子集陣列之間的作業，支援切割物件的內部、輔助的範本類別。|
-|[valarray 類別](../standard-library/valarray-class.md)|此樣板類別描述一個物件，它控制儲存成陣列之型別 **Type** 的項目序列，係針對執行高速的數學運算所設計，以及針對計算效能最佳化。|
+|[valarray 類別](../standard-library/valarray-class.md)|此範本類別描述控制序列的項目型別的物件`Type`會儲存成陣列，專門設計來執行高速的數學運算，針對計算效能最佳化。|
 
 ### <a name="specializations"></a>特製化
 
 |||
 |-|-|
-|[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|針對 `bool` 型別項目之樣板類別 valarray\<**Type** 的特製化版本。|
+|[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|範本類別 valarray 的特製化的版本\<**型別**> 項目型別的**bool**。|
 
 ## <a name="see-also"></a>另請參閱
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfcb554b374d035e85d53d769d04317e52e4193b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861119"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958201"
 ---
 # <a name="thread-class"></a>thread 類別
 
@@ -52,7 +52,7 @@ class thread;
 
 ## <a name="remarks"></a>備註
 
-您可以使用 `thread` 物件，來觀察和管理應用程式內執行的執行緒。 使用預設建構函式建立的執行緒物件不會與執行的任何執行緒產生關聯。 使用可呼叫物件建構的執行緒物件會建立執行的新執行緒，並在該執行緒中呼叫可呼叫的物件。 執行緒物件可以移動，但無法複製。 因此，執行的執行緒只能與一個執行緒物件產生關聯。
+您可以使用**執行緒**物件來觀察和管理應用程式內執行的執行緒。 使用預設建構函式建立的執行緒物件不會與執行的任何執行緒產生關聯。 使用可呼叫物件建構的執行緒物件會建立執行的新執行緒，並在該執行緒中呼叫可呼叫的物件。 執行緒物件可以移動，但無法複製。 因此，執行的執行緒只能與一個執行緒物件產生關聯。
 
 執行的每個執行緒都有 `thread::id` 類型的唯一識別碼。 函式 `this_thread::get_id` 會傳回呼叫執行緒的識別碼。 成員函式 `thread::get_id` 會傳回執行緒物件所管理之執行緒的識別碼。 針對預設建構的執行緒物件，`thread::get_id` 方法所傳回的物件值會與所有預設建構的執行緒物件相同，但不同於 `this_thread::get_id` 針對可在呼叫期間加入之執行的任何執行緒所傳回的值。
 
@@ -68,25 +68,25 @@ class thread;
 
 |名稱|描述|
 |----------|-----------------|
-|[thread](#thread)|建構 `thread` 物件。|
+|[thread](#thread)|建構**執行緒**物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[detach](#detach)|從 `thread` 物件中斷連結相關聯的執行緒。|
+|[detach](#detach)|卸離相關聯的執行緒，從**執行緒**物件。|
 |[get_id](#get_id)|傳回相關聯執行緒的唯一識別碼。|
 |[hardware_concurrency](#hardware_concurrency)|靜態。 傳回硬體執行緒內容的估計數目。|
 |[join](#join)|封鎖，直到相關聯的執行緒完成為止。|
-|[可加入](#joinable)|指定是否可加入相關聯的執行緒。|
+|[可聯結](#joinable)|指定是否可加入相關聯的執行緒。|
 |[native_handle](#native_handle)|傳回代表執行緒控制代碼的實作特定類型。|
-|[swap](#swap)|與指定 `thread` 物件交換物件狀態。|
+|[swap](#swap)|交換物件狀態與指定**執行緒**物件。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|將執行緒關聯至目前的 `thread` 物件。|
+|[thread::operator=](#op_eq)|將與目前的執行緒**執行緒**物件。|
 
 ## <a name="requirements"></a>需求
 
@@ -172,7 +172,7 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果「可加入」相關聯的執行緒，即為 `true`；否則為 `false`。
+**true**相關聯的執行緒是否*聯結*; 否則**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -200,7 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`thread`物件。
+*其他*  
+ A**執行緒**物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -214,7 +215,7 @@ thread& operator=(thread&& Other) noexcept;
 
 ## <a name="swap"></a>  thread:: swap
 
-與指定 `thread` 物件的狀態交換物件狀態。
+交換物件狀態與指定**執行緒**物件。
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -222,11 +223,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`thread`物件。
+*其他*  
+ A**執行緒**物件。
 
 ## <a name="thread"></a>  thread::thread 建構函式
 
-建構 `thread` 物件。
+建構**執行緒**物件。
 
 ```cpp
 thread() noexcept;
@@ -238,17 +240,20 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`F` 若要由執行緒執行應用程式定義的函數。
+*F*  
+ 由執行緒執行的應用程式定義函式。
 
-`A` 要傳遞給引數清單`F`。
+*A*  
+ 要傳遞至引數清單*F*。
 
-`Other` 現有`thread`物件。
+*其他*  
+ 將現有**執行緒**物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構未關聯至執行之執行緒的物件。 針對建構物件呼叫 `get_id` 所傳回的值是 `thread::id()`。
 
-第二個建構函式會建構與執行的新執行緒相關聯的物件，並執行虛擬函式 `INVOKE` (定義於 [\<functional>](../standard-library/functional.md))。 如果沒有足夠的資源可用來啟動新的執行緒，此函式就會擲回 [system_error](../standard-library/system-error-class.md) 物件，且錯誤碼為 `resource_unavailable_try_again`。 如果呼叫 `F` 因發生無法攔截的例外狀況而終止，則會呼叫 [terminate](../standard-library/exception-functions.md#terminate)。
+第二個建構函式會建構與執行的新執行緒相關聯的物件，並執行虛擬函式 `INVOKE` (定義於 [\<functional>](../standard-library/functional.md))。 如果沒有足夠的資源可用來啟動新的執行緒，此函式就會擲回 [system_error](../standard-library/system-error-class.md) 物件，且錯誤碼為 `resource_unavailable_try_again`。 如果在呼叫*F*無法攔截的例外狀況，終止[終止](../standard-library/exception-functions.md#terminate)呼叫。
 
 第三個建構函式會建構與 `Other` 相關聯之執行緒相關聯的物件。 接著會將 `Other` 設為預設建構狀態。
 

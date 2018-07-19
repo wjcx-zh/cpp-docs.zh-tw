@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841293"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958886"
 ---
 # <a name="addvolatile-class"></a>add_volatile 類別
 
-從指定類型建立 volatile 類型。
+可讓**volatile**類型從指定的型別。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +44,7 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ## <a name="remarks"></a>備註
 
-如果 *T* 是參考、函式或 volatile 限定類型，`add_volatile<T>` 執行個體具有為 *T* 的成員 typedef `type`，否則為 `volatile` *T*。`add_volatile_t` 別名是存取成員 typedef `type` 的捷徑。
+執行個體`add_volatile<T>`有一個成員**typedef** `type`也就是說*T*如果*T*為參考、 函式或 volatile 限定類型，否則為**volatile** *T*。別名`add_volatile_t`是存取成員的捷徑**typedef** `type`。
 
 ## <a name="example"></a>範例
 

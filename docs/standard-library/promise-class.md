@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8508cab7afc7e6614c29b64d78849383f5bc2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958548"
 ---
 # <a name="promise-class"></a>promise 類別
 
@@ -107,7 +107,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`promise`物件。
+*其他*A`promise`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -115,7 +115,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>備註
 
-此運算子會從 `Other` 轉移相關聯非同步狀態。 轉移之後，`Other` 是空的。
+此運算子轉移相關聯的非同步狀態，從*其他*。 轉移之後，*其他*是*空白*。
 
 ## <a name="promise"></a>  promise::promise 建構函式
 
@@ -130,17 +130,17 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Al` 記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
+*Al*記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
 
-`Other` A`promise`物件。
+*其他*A`promise`物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構空的 `promise` 物件。
 
-第二個建構函式會建構空的 `promise` 物件，並使用 `Al` 進行記憶體配置。
+第二個建構函式會建構空`promise`物件，並使用*Al*進行記憶體配置。
 
-第三個建構函式會建構 `promise` 物件，並從 `Other` 中轉移相關聯非同步狀態，並將 `Other` 保留為空的。
+第三個建構函式建構`promise`物件，並將轉移相關聯的非同步狀態，從*其他*，並將保留*其他*空白。
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -152,7 +152,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>參數
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)由這個方法儲存為例外狀況結果。
+*專有* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)由這個方法儲存為例外狀況結果。
 
 ### <a name="remarks"></a>備註
 
@@ -172,7 +172,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>參數
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)由這個方法儲存為例外狀況結果。
+*專有* [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)由這個方法儲存為例外狀況結果。
 
 ### <a name="remarks"></a>備註
 
@@ -195,7 +195,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>參數
 
-`Val` 要儲存為結果的值。
+*Val*来儲存為結果的值。
 
 ### <a name="remarks"></a>備註
 
@@ -205,11 +205,11 @@ void promise<void>::set_value();
 
 由於此方法的緣故，封鎖於相關聯非同步狀態上的任何執行緒會解除封鎖。
 
-第一個方法也會擲回將 `Val` 複製到相關聯非同步狀態時所擲回的任何例外狀況。 在此情況下，相關聯非同步狀態將不會設定為就緒。
+第一種方法也會擲回任何例外狀況時擲回*Val*複製到相關聯的非同步狀態。 在此情況下，相關聯非同步狀態將不會設定為就緒。
 
-第二個方法也會擲回將 `Val` 移動到相關聯非同步狀態時所擲回的任何例外狀況。 在此情況下，相關聯非同步狀態將不會設定為就緒。
+第二種方法也會擲回任何例外狀況時擲回*Val*移至相關聯的非同步狀態。 在此情況下，相關聯非同步狀態將不會設定為就緒。
 
-對於部分特製化的 `promise<Ty&>`，儲存值實際上是 `Val` 的參考。
+部分特製化`promise<Ty&>`，儲存的值實際上是參考*Val*。
 
 對於特製化的 `promise<void>`，儲存值不存在。
 
@@ -226,7 +226,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>參數
 
-`Val` 要儲存為結果的值。
+*Val*来儲存為結果的值。
 
 ### <a name="remarks"></a>備註
 
@@ -236,11 +236,11 @@ void promise<void>::set_value_at_thread_exit();
 
 與 `set_value` 相反，直到目前執行緒的所有執行緒區域物件皆已終結後，才會將相關聯非同步狀態設為就緒。 通常，除非目前的執行緒結束，否則被封鎖於關聯非同步狀態的執行緒不會解除封鎖。
 
-第一個方法也會擲回將 `Val` 複製到相關聯非同步狀態時所擲回的任何例外狀況。
+第一種方法也會擲回任何例外狀況時擲回*Val*複製到相關聯的非同步狀態。
 
-第二個方法也會擲回將 `Val` 移動到相關聯非同步狀態時所擲回的任何例外狀況。
+第二種方法也會擲回任何例外狀況時擲回*Val*移至相關聯的非同步狀態。
 
-對於部分特製化的 `promise<Ty&>`，儲存值實際上是 `Val` 的參考。
+部分特製化`promise<Ty&>`，預存的值實際上是參考*Val*。
 
 對於特製化的 `promise<void>`，儲存值不存在。
 
@@ -254,7 +254,7 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`promise`物件。
+*其他*A`promise`物件。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: fbe74dbd1218aec211bb600f1db6a1c2300f18e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f6ed544bd4726b8bed2b63394a8b28c54c339
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956068"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函式
 
@@ -64,7 +64,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-`Loc` 要測試存在 facet 的地區設定。
+*Loc*要測試是否有 facet 的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -106,9 +106,9 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的英數字元項目。
+*Ch*要測試之英數字元元素。
 
-`Loc` 地區設定，其中包含要測試的英數字元項目。
+*Loc*包含要測試之英數字元元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -171,9 +171,9 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的字母項目。
+*Loc*包含要測試之字母元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -234,9 +234,9 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -297,9 +297,9 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -360,9 +360,9 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -423,9 +423,9 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -486,9 +486,9 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -548,9 +548,9 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -611,9 +611,9 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -674,9 +674,9 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -737,9 +737,9 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要測試的項目。
+*Ch*要測試的項目。
 
-`Loc` 地區設定，其中包含要測試的項目。
+*Loc*包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -802,9 +802,9 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要轉換成小寫字元。
+*ch*来轉換成小寫的字元。
 
-`Loc` 地區設定，其中包含要轉換的字元。
+*Loc*包含要轉換的字元的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -849,9 +849,9 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-`Ch` 要轉換成大寫的字元。
+*ch*轉換為大寫的字元。
 
-`Loc` 地區設定，其中包含要轉換的字元。
+*Loc*包含要轉換的字元的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -896,7 +896,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-`Loc` Const 地區設定，其中包含所參考的 facet 的型別。
+*Loc*常數的地區設定，其中包含所參考的 facet 的型別。
 
 ### <a name="return-value"></a>傳回值
 

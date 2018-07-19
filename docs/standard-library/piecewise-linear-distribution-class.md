@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858951"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959468"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution 類別
 
@@ -90,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`RealType` 浮點結果類型，預設值為`double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點結果類型，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -258,23 +258,23 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstI*分佈範圍中第一個項目的輸入迭代器。
+*firstI*分佈範圍中的第一個元素的輸入迭代器。
 
 *lastI*分佈範圍中最後一個項目的輸入迭代器。
 
-*firstW*加權範圍中第一個項目的輸入迭代器。
+*firstW*加權範圍中的第一個元素的輸入迭代器。
 
-*間隔* [initializer_list](../cpp/initializers.md)和分佈的間隔。
+*間隔* [initializer_list](../cpp/initializers.md)具有分佈間隔。
 
 *計數*分佈範圍中的項目數。
 
 *xmin*分佈範圍中的最小值。
 
-*xmax*分佈範圍中的最高值。 必須大於 *xmin*。
+*xmax*分佈範圍中的最大值。 必須大於 *xmin*。
 
-*weightfunc*表示分佈的可能性函式的物件。 參數和傳回值都必須可以轉換為 `double`。
+*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
 
-*parm*用於建構分佈的參數結構。
+*parm*用來建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-建構分佈物件，而分佈物件具有序列 [`firstI`, `lastI`) 上來自迭代器的間隔，以及從 `firstW` 開始的相符加權序列。
+建構分佈物件具有而從迭代器，序列 [ `firstI`， `lastI`) 和的相符加權序列開頭*firstW*。
 
 初始設定式清單建構函式
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-建構分佈物件，而分佈物件具有來自初始設定式清單 `intervals` 的間隔，以及透過函式 `weightfunc` 產生的加權。
+建構分佈物件具有來自初始設定式清單的間隔*間隔*並從函式所產生的加權*weightfunc*。
 
 建構函式定義為
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-建構分佈物件，其具有平均分佈在 [`xmin,xmax`] 的 `count` 個間隔 (根據函式 `weightfunc` 指派每個間隔加權)，而且 `weightfunc` 必須接受一個參數並有一個傳回值 (兩者都可以轉換為 `double`)。 **前置條件：**`xmin < xmax`。
+建構分佈物件具有*計數*間隔平均分佈在 [ `xmin,xmax`]，根據函式進行指派每個間隔加權*weightfunc*，和*weightfunc*必須接受一個參數並傳回值，這兩者都是可以轉換成`double`。 **前置條件：**`xmin < xmax`。
 
 建構函式定義為
 
@@ -322,7 +322,7 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-使用 `parm` 做為儲存參數結構，以建構分佈物件。
+建構分佈物件，使用*parm*預存的參數結構。
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec5ca351f6ac96fd8420ee921ca95b78ee2f487d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959744"
 ---
 # <a name="basicregex-class"></a>basic_regex 類別
 
@@ -84,19 +84,19 @@ class basic_regex {
 
 ### <a name="parameters"></a>參數
 
-`Elem` 要符合的項目類型。
+*Elem*要符合的項目類型。
 
-`RXtraits` 項目的 traits 類別。
+*RXtraits*項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述保存規則運算式的物件。 此樣板類別的物件可以傳遞至樣板函式[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，和[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及適當的文字字串引數，搜尋符合規則運算式的文字。 這個樣板類別有兩個特製化：類型定義 [regex](../standard-library/regex-typedefs.md#regex) 適用於 `char` 類型元素，[wregex](../standard-library/regex-typedefs.md#wregex) 適用於 `wchar_t` 類型元素。
+此樣板類別描述保存規則運算式的物件。 此樣板類別的物件可以傳遞至樣板函式[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，並[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及適當的文字字串引數，若要搜尋符合規則運算式的文字。 有兩個特製化的類型定義這個樣板類別[regex](../standard-library/regex-typedefs.md#regex)類型的項目**char**，並[wregex](../standard-library/regex-typedefs.md#wregex)類型的項目**wchar_t**。
 
-樣板引數 `RXtraits` 描述此樣板類別支援之規則運算式語法的各種重要屬性。 指定這些規則運算式特性的類別必須具有和 [regex_traits Class](../standard-library/regex-traits-class.md) 樣板類別物件相同的外部介面。
+樣板引數*RXtraits*描述此樣板類別支援的規則運算式的語法的各種重要屬性。 指定這些規則運算式特性的類別必須具有和 [regex_traits Class](../standard-library/regex-traits-class.md) 樣板類別物件相同的外部介面。
 
 有些函式會接受定義規則運算式的運算元序列。 您可以透過數種方法指定這類運算元序列：
 
-`ptr` -- 以 null 終止的序列 (例如 C 字串，用於 `Elem` 類型的 `char`)，開始位置在 `ptr` (這不可以是 null 指標)，其中終端項目為 `value_type()` 值，而且不是運算元序列的一部分
+`ptr` -以 null 終止的序列 (例如 C 字串，如*Elem*型別的**char**) 開始`ptr`（這不可以是 null 指標），其中終端項目是值`value_type()`並不是運算元序列的一部分
 
 `ptr`, `count` -- `count` 項目序列，開始位置在 `ptr` (這不可以是 null 指標)
 
@@ -106,7 +106,7 @@ class basic_regex {
 
 `right` -- `basic_regex` 物件 `right`
 
-除了 `flags` 類型描述的以外，這些成員函式也接受引數 `RXtraits`，為規則運算式解譯指定各種選項。
+這些成員函式也接受引數`flags`，指定各種選項以外所描述的規則運算式解譯*RXtraits*型別。
 
 ## <a name="requirements"></a>需求
 
@@ -148,27 +148,27 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>參數
 
-`STtraits` 字串來源的 traits 類別。
+*STtraits*字串來源的 Traits 類別。
 
-`STalloc` 字串來源的 allocator 類別。
+*STalloc*字串來源的配置器類別。
 
-`InIt` 輸入範圍來源的迭代器類型。
+*InIt*輸入範圍來源的迭代器類型。
 
-`right` 要複製的 Regex 來源。
+*右*来複製的 Regex 來源。
 
-`ptr` 要複製之序列開頭的指標。
+*ptr*来複製之序列開頭的指標。
 
-`flags` 若要在複製時加入語法選項旗標。
+*旗標*語法選項旗標，以在複製時加入。
 
-`len/TD>` 要複製之序列的長度。
+*len/t d >* 要複製之序列的長度。
 
-`str` 要複製的字串。
+*str*来複製的字串。
 
-`first` 要複製之序列的開頭。
+*第一個*来複製之序列的開頭。
 
-`last` 要複製之序列的結尾。
+*最後一個*来複製之序列的結尾。
 
-`IList` 要複製的 initializer_list。
+*IList*来複製的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -293,27 +293,27 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>參數
 
-`STtraits` 字串來源的 traits 類別。
+*STtraits*字串來源的 Traits 類別。
 
-`STalloc` 字串來源的 allocator 類別。
+*STalloc*字串來源的配置器類別。
 
-`InIt` 輸入範圍來源的迭代器類型。
+*InIt*輸入範圍來源的迭代器類型。
 
-`right` 要複製的 Regex 來源。
+*右*来複製的 Regex 來源。
 
-`ptr` 要複製之序列開頭的指標。
+*ptr*来複製之序列開頭的指標。
 
-`flags` 若要在複製時加入語法選項旗標。
+*旗標*語法選項旗標，以在複製時加入。
 
-`len/TD>` 要複製之序列的長度。
+*len/t d >* 要複製之序列的長度。
 
-`str` 要複製的字串。
+*str*来複製的字串。
 
-`first` 要複製之序列的開頭。
+*第一個*来複製之序列的開頭。
 
-`last` 要複製之序列的結尾。
+*最後一個*来複製之序列的結尾。
 
-`IList` 要複製的 initializer_list。
+*IList*来複製的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -321,7 +321,7 @@ explicit basic_regex(
 
 第一個建構函式會建構空的 `basic_regex` 物件。 其他建構函式會建構 `basic_regex` 物件，其保存運算元序列所描述的規則運算式。
 
-空白`basic_regex`物件不符合任何字元序列時傳遞至[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，或[regex_replace](../standard-library/regex-functions.md#regex_replace)。
+空`basic_regex`物件不符合任何字元序列時傳遞給[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，或[regex_replace](../standard-library/regex-functions.md#regex_replace)。
 
 ### <a name="example"></a>範例
 
@@ -706,7 +706,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-`loc` 要儲存的地區設定物件。
+*loc*来儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1006,13 +1006,13 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>參數
 
-`STtraits` 字串來源的 traits 類別。
+*STtraits*字串來源的 Traits 類別。
 
-`STalloc` 字串來源的 allocator 類別。
+*STalloc*字串來源的配置器類別。
 
-`right` 要複製的 Regex 來源。
+*右*来複製的 Regex 來源。
 
-`str` 要複製的字串。
+*str*来複製的字串。
 
 ### <a name="remarks"></a>備註
 
@@ -1113,11 +1113,11 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>參數
 
-`right` 要交換的規則運算式物件。
+*右*来交換的規則運算式物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會在 `*this` 和 `right`之間交換規則運算式。 它會在固定時間執行但不會擲回任何例外狀況。
+此成員函式會交換之間的規則運算式`*this`並*右*。 它會在固定時間執行但不會擲回任何例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -1214,7 +1214,7 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Elem`的同義字。
+類型是範本參數的同義字*Elem*。
 
 ### <a name="example"></a>範例
 

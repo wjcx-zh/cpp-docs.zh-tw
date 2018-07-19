@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960303"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函式
 
@@ -41,9 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>參數
 
-`val` 將會收到 new_val 值的物件。
+*val*  
+ 將會收到 new_val 值的物件。
 
-`new_val` 物件，其值會複製或移動到 val。
+*new_val*  
+ 其值會複製或移動到 val 的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -99,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |參數|描述|
 |---------------|-----------------|
-|`Type`|傳入 `Arg` 的實值類型，可能不同於 `Arg` 的類型。 通常由轉送函式的樣板引數所決定。|
-|`Arg`|要轉型的引數。|
+|*類型*|傳入值的型別*Arg*，這可能會不同的型別*Arg*。 通常由轉送函式的樣板引數所決定。|
+|*引數*|要轉型的引數。|
 
 ### <a name="return-value"></a>傳回值
 
-如果傳入 `Arg` 的值最初是右值或右值參考，則傳回 `Arg` 的右值參考，否則傳回 `Arg` 而不修改其類型。
+傳回右值參考*Arg*如果值傳入*Arg*原本是右值或右值參考，否則會傳回*Arg*而不需要修改它的型別。
 
 ### <a name="remarks"></a>備註
 
@@ -161,21 +163,25 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Index` 指定之項目的以 0 起始索引。
+*Tuple*  
+ 指定元素的以 0 為基底的索引。
 
-`T1` 第一個配對項目的類型。
+*T1*  
+ 第一個配對項目的類型。
 
-`T2` 第二個配對項目的類型。
+*T2*  
+ 第二個配對項目的類型。
 
-`pr` 要從選取的配對。
+*提取要求*  
+ 要從中選取的配對。
 
 ### <a name="remarks"></a>備註
 
 範本函式各自傳回其 `pair` 引數項目的參考。
 
-如為索引的多載，如果 `Index` 的值為 0，則函式會傳回 `pr.first` ；如果 `Index` 的值為 1，則函式會傳回 `pr.second`。 類型 `RI` 是傳回元素的類型。
+索引的多載，如果的值*索引*是函式會傳回的 0`pr.first`如果的值*的索引*為函式會傳回的 1 `pr.second`。 類型 `RI` 是傳回元素的類型。
 
-對於不具有索引參數的多載，要傳回的元素是由類型引數推算。 如果 `get<T>(Tuple)` 不是包含剛剛好一個類型 T 的元素，呼叫 `pr` 就會產生編譯器錯誤。
+對於不具有索引參數的多載，要傳回的元素是由類型引數推算。 呼叫`get<T>(Tuple)`會產生編譯器錯誤，如果*pr*包含多於或少於一個項目的 t 型別。
 
 ### <a name="example"></a>範例
 
@@ -228,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>參數
 
-`Val1` 值，初始化的第一個元素`pair`。
+*val1*  
+ 值，初始化 `pair` 的第一個項目。
 
-`Val2` 值，初始化第二個元素`pair`。
+*Val2*  
+ 值，初始化 `pair` 的第二個項目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -269,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |參數|描述|
 |---------------|-----------------|
-|`Type`|根據傳入 `Arg` 之引數的類型 (以及參考摺疊規則) 推算的類型。|
-|`Arg`|要轉型的引數。 雖然 `Arg` 的類型似乎當做右值參考指定，`move` 也接受左值引數，因為左值參考可以繫結到右值參考。|
+|*類型*|傳入的引數類型推算類型*Arg*，以及參考摺疊規則。|
+|*引數*|要轉型的引數。 雖然的型別*Arg*指定為右值參考，會出現`move`也接受左值引數，因為左值參考可以繫結至右值參考。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -278,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>備註
 
-樣板引數 `Type` 並非要明確指定，而是根據傳入 `Arg` 之值的類型推算。 `Type` 的類型是根據參考摺疊規則進一步調整。
+樣板引數*型別*不是明確地指定，但從傳入值的類型推算*Arg*。 型別*型別*根據參考摺疊規則進一步調整。
 
-`move` 不會移動它的引數。 相反地，透過無條件地將其引數 (可以是左值) 轉型為右值參考，如果其類型已啟用移動，它可以讓編譯器後續移動 (而不是複製) 傳入 `Arg` 的值。 如果其類型未啟用移動，會複製它。
+`move` 不會移動它的引數。 相反地，透過無條件地轉型其引數，這可能會是左值 — 至右值參考，它可讓編譯器後續移動，而不是複製中傳遞的值*Arg*如果其類型已啟用移動。 如果其類型未啟用移動，會複製它。
 
-如果傳入`Arg` 的值為左值 (也就是它有名稱或它的位址可以使用)，當移動時它會失效。 在移動之後，請不要使用它的名稱或位址來參考傳入 `Arg` 的值。
+如果傳入的值*Arg*是左值 — 也就是它具有名稱，或可以取得自己的位址，當移動時，它會失效。 傳入的值未參照*Arg*依名稱或位址已移動之後。
 
 ## <a name="swap"></a>  swap
 
@@ -297,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |參數|描述|
 |---------------|-----------------|
-|`left`|`pair` 類型的物件。|
-|`right`|`pair` 類型的物件。|
+|*left*|`pair` 類型的物件。|
+|*right*|`pair` 類型的物件。|
 
 ### <a name="remarks"></a>備註
 

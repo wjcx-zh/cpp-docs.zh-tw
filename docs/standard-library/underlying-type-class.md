@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853218"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957577"
 ---
 # <a name="underlyingtype-class"></a>underlying_type 類別
 
@@ -37,11 +37,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>參數
 
-`T` 要修改的類型。
+*T*  
+ 要修改的類型。
 
 ## <a name="remarks"></a>備註
 
-當 `T` 為列舉類型時，樣板類別的 `type` 成員 typedef 會命名 `T` 的基礎整數類型，否則沒有成員 typedef `type`。
+`type`範本類別的成員 typedef 名稱的基礎整數類資料類型*T*，當*T*是列舉類型，否則沒有任何成員 typedef `type`。
 
 ## <a name="requirements"></a>需求
 

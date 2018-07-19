@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bd408a6dd2c04bc3b2ab0c4969c17635410b56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d09513fa0f8b53c13ad1302533d4c0606b28743c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956527"
 ---
 # <a name="container-classreverseiterator"></a>容器類別::reverse_iterator
 
@@ -37,7 +37,7 @@ typedef T7 reverse_iterator;
 
 ## <a name="remarks"></a>備註
 
-在此將其描述為未指定之 **T7** (通常為 `reverse_iterator` **\<**[iterator](../standard-library/container-class-iterator.md)**>**) 類型的同義字。
+其描述為未指定類型的同義字`T7`(通常`reverse_iterator` **\<**[迭代器](../standard-library/container-class-iterator.md)**>**)。
 
 ## <a name="see-also"></a>另請參閱
 

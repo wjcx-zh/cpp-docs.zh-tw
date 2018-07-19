@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451559"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960927"
 ---
 # <a name="regextraits-class"></a>regex_traits 類別
 
@@ -92,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`Elem` 描述字元項目類型。
+*Elem*字元項目型別描述。
 
 ## <a name="remarks"></a>備註
 
-範本類別會描述類型 `Elem`的各種規則運算式特性。 範本類別 [basic_regex 類別](../standard-library/basic-regex-class.md)會使用此資訊來管理 `Elem` 類型的項目。
+此範本類別描述各種類型的規則運算式特性*Elem*。 此範本類別[basic_regex 類別](../standard-library/basic-regex-class.md)使用此資訊來管理項目型別的*Elem*。
 
 每個 `regex_traits` 物件都擁有一個類型 `regex_traits::locale` 的物件，這種類型可為其部分成員函式使用。 預設的地區設定是 `regex_traits::locale()`的複本。 成員函式 `imbue` 取代了地區設定物件，而成員函式 `getloc` 會傳回地區設定物件的複本。
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-`loc` 要儲存的地區設定物件。
+*loc*来儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式會將 `loc` 複製到儲存的 `locale` 物件，並傳回已儲存 `locale` 物件之先前值的複本。
+成員函式複製*loc*至預存`locale`物件，並傳回一份儲存的先前值`locale`物件。
 
 ### <a name="example"></a>範例
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>參數
 
-`ch` 要測試的項目。
+*ch*測試的項目。
 
-`cls` 若要測試的類別。
+*符合 cls*来測試的類別。
 
 ### <a name="remarks"></a>備註
 
-只有在字元 `ch` 位於 `cls`所指定的字元類別時，此成員函式才會傳回 true。
+此成員函式為 true，則只有當傳回字元*ch*中所指定的字元類別*cls*。
 
 ### <a name="example"></a>範例
 
@@ -541,7 +541,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>參數
 
-`str`
+*str*
 
 Null 終止的序列。
 
@@ -714,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 要查閱之序列的開頭。
+*第一個*来查閱之序列的開頭。
 
-`last` 要查閱之序列的結尾。
+*最後一個*查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -808,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 要查閱之序列的開頭。
+*第一個*来查閱之序列的開頭。
 
-`last` 要查閱之序列的結尾。
+*最後一個*查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -1149,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 要轉換之序列的開頭。
+*第一個*之轉換的序列的開頭。
 
-`last` 要轉換之序列的結尾。
+*最後一個*轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -1239,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-`first` 要轉換之序列的開頭。
+*第一個*之轉換的序列的開頭。
 
-`last` 要轉換之序列的結尾。
+*最後一個*轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -1328,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-`ch` 要轉換的項目。
+*ch*来轉換的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -1415,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-`ch` 要轉換的項目。
+*ch*来轉換的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>參數
 
-`ch` 要轉換的項目。
+*ch*来轉換的項目。
 
-`radix` 若要使用的基底的算術運算。
+*基底*的算術基底使用。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回以基底 `ch` 中字元 `radix`表示的值；如果 `ch` 不是基底 `radix`中的有效數字，則傳回 -1。 此函式只會透過 8，10 或 16 的 `radix` 引數進行呼叫。
+此成員函式傳回值的字元來表示*ch*基底*基數*，或-1 *ch*不是有效的數字的基底中*基數*. 此函式才會呼叫具有*基數*8、 10 或 16 的引數。
 
 ### <a name="example"></a>範例
 

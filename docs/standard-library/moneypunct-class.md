@@ -56,16 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862503"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957505"
 ---
 # <a name="moneypunct-class"></a>moneypunct 類別
 
-此樣板類別描述可以做為地區設定 facet 的物件，以描述用來表示貨幣輸入欄位或貨幣輸出欄位之 `CharType` 類型的序列。 如果樣板參數 `Intl` 為 `true`，則遵守國際慣例。
+此範本類別描述可以做為物件，來描述類型的序列地區設定 facet *CharType*用來表示貨幣輸入的欄位或貨幣輸出欄位。 如果範本參數*Intl*是 *，則為 true*，則遵守國際慣例。
 
 ## <a name="syntax"></a>語法
 
@@ -76,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 用於程式內部字元編碼類型。
+*CharType*程式內用來編碼字元的類型。
 
-`Intl` 旗標，指定是否要遵守國際慣例。
+*Intl*旗標，指定是否要遵守國際慣例。
 
 ## <a name="remarks"></a>備註
 
 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
 
-常數靜態物件 intl 會儲存範本參數 **Intl** 的值。
+常數靜態物件 intl 會儲存範本參數 *Intl* 的值。
 
 ### <a name="constructors"></a>建構函式
 
@@ -285,7 +285,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱 [grouping](#grouping) 的範例，其中會由 **grouping** 呼叫此虛擬成員函式。
+範例，請參閱[分組](#grouping)，其中虛擬成員函式會呼叫`grouping`。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -297,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>傳回值
 
-受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 **pattern::field** 的四個元素每一個可擁有的值如下：
+受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 每四個項目的`pattern::field`可以有值：
 
-- **none**：比對零個或多個空格，或不產生任何項目。
+- `none` 若要比對零或多個空格，或產生任何項目。
 
-- **sign**：比對或產生正負號。
+- `sign` 若要比對或產生正負號。
 
-- **space**：比對零個或多個空格，或是產生空格。
+- `space` 若要比對零或多個空格，或是產生空格。
 
-- **symbol**：比對或產生貨幣符號。
+- `symbol` 若要比對或產生貨幣符號。
 
-- **value**：比對或產生貨幣值。
+- `value` 若要比對或產生貨幣值。
 
-系統會依照這些元素在 **pattern::field** 中的出現順序，產生貨幣輸出欄位的元件，以及比對貨幣輸入欄位的元件。 **sign**、**symbol**、**value** 當中每一個值，以及 **none** 或 **space**，必須確切出現一次。 **none** 值不得第一個出現。 space 值「不得」第一個或最後一個出現。 如果 **Intl** 為 true，順序便是 **symbol**、**sign**、**none**，然後 **value**。
+產生貨幣輸出欄位的元件，以及這些項目中出現的順序在比對貨幣輸入欄位的元件`pattern::field`。 每個值`sign`， `symbol`， `value`，以及`none`或`space`必須確切出現一次。 值`none`不會出現第一次。 space 值「不得」第一個或最後一個出現。 如果`Intl`為 true，順序`symbol`， `sign`， `none`，然後`value`。
 
 `moneypunct`\< **CharType**, **Intl**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
@@ -531,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 

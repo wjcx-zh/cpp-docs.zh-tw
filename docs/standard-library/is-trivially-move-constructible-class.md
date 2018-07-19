@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4368fa2b88d22f0b07bc10bba4769d05375041
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316ffdee4905ff8a35baef7137ff7f28a2846786
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859247"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958188"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible 類別
 
@@ -36,25 +36,25 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是具有 trivial 移動建構函式的類別，則 predicate 類型的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是具有 trivial 移動建構函式，否則為 false 的類別。
 
-在下列情況下，類別 `Ty` 的移動建構函式是 trivial：
+類別的移動建構函式*Ty*輕而易舉的事如果：
 
 它是隱含宣告
 
 其參數類型相等於隱含宣告的參數類型
 
-類別 `Ty` 沒有虛擬函式
+此類別*Ty*沒有虛擬函式
 
-類別 `Ty` 沒有虛擬基底
+此類別*Ty*沒有虛擬基底
 
 類別沒有任何變動性的非靜態資料成員
 
-類別 `Ty` 的所有直接基底都有 trivial 移動建構函式
+所有直接基都底類別的*Ty*具有 trivial 移動建構函式
 
 類別類型的所有非靜態資料成員的類別都具有 trivial 移動建構函式
 

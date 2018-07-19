@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1db124d7fa73a9483d2c77f0a1e78349224023
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864514"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957117"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 類別
 
@@ -40,7 +40,7 @@ class sync_per_container
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*快取*|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ### <a name="member-functions"></a>成員函式
 
@@ -66,12 +66,12 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|同步處理篩選的快取物件。|
-|`Other`|要比較是否相等的快取物件。|
+|*快取*|同步處理篩選的快取物件。|
+|*其他*|要比較是否相等的快取物件。|
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式一律會傳回 `false`。
+此成員函式一律會傳回**false**。
 
 ### <a name="remarks"></a>備註
 

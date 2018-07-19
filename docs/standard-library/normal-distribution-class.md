@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855756"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959853"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 類別
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為`double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據常態分佈進行分佈。 下表提供各個成員的文章連結。
+此範本類別描述產生使用者指定之整數的值類型**double**如果未提供，根據常態分佈的分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-屬性函式 `mean()` 和 `stddev()` 會分別傳回儲存的分佈參數 `mean` 和 `stddev` 的值。
+屬性函式`mean()`並`stddev()`會傳回預存的分佈參數值*表示*並*stddev*分別。
 
 屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
 
@@ -212,7 +212,7 @@ explicit normal_distribution(const param_type& parm);
 
 *stddev* `stddev`分佈參數。
 
-*parm*用於建構分佈的參數結構。
+*parm*用來建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -243,7 +243,7 @@ struct param_type {
 
 *stddev* `stddev`分佈參數。
 
-*右*`param_type`結構用來比較。
+*右*`param_type`結構，用來比較。
 
 ### <a name="remarks"></a>備註
 

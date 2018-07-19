@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00484c170ba3e42ceb9925861def9e7a4617e324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847578"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959887"
 ---
 # <a name="basicfstream-class"></a>basic_fstream 類別
 
@@ -46,9 +46,9 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-`Elem` 將檔案緩衝區的基本項目。
+*Elem*檔案緩衝區的基本項目。
 
-`Tr` 將檔案緩衝區基本項目的特性 (通常`char_traits` <  `Elem`>)。
+*Tr*的基本項目，將檔案緩衝區的特性 (通常`char_traits` <  `Elem`>)。
 
 ## <a name="remarks"></a>備註
 
@@ -135,17 +135,17 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>參數
 
-`_Filename` 若要開啟的檔案名稱。
+*_Filename*来開啟之檔案的名稱。
 
-`_Mode` 其中一個列舉中[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`_Prot` 預設的檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會藉由呼叫 [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) 初始化基底類別，其中 **sb** 是 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 類別的預存物件。 它也會藉由呼叫 `basic_filebuf`\< **Elem**, **Tr**> 初始化 **sb**。
+第一個建構函式初始化基底類別，藉由呼叫[basic_iostream](../standard-library/basic-iostream-class.md)(`sb`)，其中`sb`是類別的預存的物件[basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**， **Tr**>。 它也會初始化`sb`藉由呼叫`basic_filebuf` \< **Elem**， **Tr**>。
 
-第二個和第三個建構函式會藉由呼叫 `basic_iostream`( **sb**) 初始化基底類別。 它也會藉由呼叫 `basic_filebuf`\< **Elem**, **Tr**>，再呼叫 **sb.**[open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode`) 初始化 **sb**。 如果第二個函式會傳回 null 指標，建構函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。
+第二個和第三個建構函式會藉由呼叫 `basic_iostream`( **sb**) 初始化基底類別。 它也會初始化`sb`藉由呼叫`basic_filebuf` \< **Elem**， **Tr**>，然後**open**[開啟](../standard-library/basic-filebuf-class.md#open)(_*檔名*， `_Mode`)。 如果第二個函式會傳回 null 指標，建構函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。
 
 第四個建構函式會使用視為右值參考的 `right` 內容初始化物件。
 
@@ -167,7 +167,7 @@ void close();
 
 ### <a name="example"></a>範例
 
-如需如何使用 **close** 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
+如需如何使用 `close` 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
 
 ## <a name="is_open"></a>  basic_fstream::is_open
 
@@ -215,19 +215,19 @@ void open(
 
 ### <a name="parameters"></a>參數
 
-`_Filename` 若要開啟的檔案名稱。
+*_Filename*来開啟之檔案的名稱。
 
-`_Mode` 其中一個列舉中[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`_Prot` 預設的檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode`)。 如果該函式會傳回 null 指標，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。
+此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode`)。 如果該函式會傳回 null 指標，函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`)。
 
 ### <a name="example"></a>範例
 
-如需如何使用 **open** 的範例，請參閱 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)。
+請參閱[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open)如需如何使用的範例`open`。
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -239,7 +239,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 左值參考`basic_fstream`物件。
+*右*左值參考`basic_fstream`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -247,7 +247,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會使用 `right` 的內容 (被視為 rvalue 參考) 來取代物件的內容。
+成員運算子會取代物件的內容使用的內容*右*，視為右值參考。
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 
@@ -275,11 +275,11 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>參數
 
-`right` `lvalue`參考`basic_fstream`物件。
+*右*`lvalue`參考`basic_fstream`物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式會將此物件的內容與 `right` 的內容交換。
+成員函式會交換這個物件的內容和內容*右*。
 
 ## <a name="see-also"></a>另請參閱
 

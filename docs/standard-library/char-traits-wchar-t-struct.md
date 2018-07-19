@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957070"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 結構
 
-類別，其為類型 `wchar_t` 之元素的樣板結構 **char_traits\<CharType>** 的特製化。
+類別是特製化的樣板結構**char_traits\<CharType >** 類型之項目的**wchar_t**。
 
 ## <a name="syntax"></a>語法
 
@@ -37,7 +37,7 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>備註
 
-特製化可讓結構利用操作此 `wchar_t` 類型物件的程式庫函式。
+特製化可讓結構利用操作此類型物件的程式庫函式**wchar_t**。
 
 ## <a name="requirements"></a>需求
 

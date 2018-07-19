@@ -9,12 +9,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: 20d92a0bf759c9f8170464985bd2b8af4d2bec08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bea06c9799783feafaff1f68f4019463e452a4f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852265"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958851"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt; typedef
 
@@ -25,7 +25,7 @@ ms.locfileid: "33852265"
 
 ## <a name="iostream"></a>  iostream
 
-`char` 的特殊化類型 `basic_iostream`。
+型別`basic_iostream`特殊化**char**。
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -33,11 +33,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別 [basic_iostream](../standard-library/basic-iostream-class.md) 同義，該範本類別是為具有預設字元特性之 `char` 類型的元素特製化的範本類別。
+類型是範本類別同義[basic_iostream](../standard-library/basic-iostream-class.md)類型的項目所特製化**char**具有預設字元特性。
 
 ## <a name="istream"></a>  istream
 
-`char` 的特殊化類型 `basic_istream`。
+型別`basic_istream`特殊化**char**。
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -45,11 +45,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別 [basic_istream](../standard-library/basic-istream-class.md) 同義，該範本類別是為具有預設字元特性之 `char` 類型的元素特製化的範本類別。
+類型是範本類別同義[basic_istream](../standard-library/basic-istream-class.md)類型的項目所特製化**char**具有預設字元特性。
 
 ## <a name="wiostream"></a>  wiostream
 
-`wchar_t` 的特殊化類型 `basic_iostream`。
+型別`basic_iostream`特殊化**wchar_t**。
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -57,11 +57,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別 [basic_iostream](../standard-library/basic-iostream-class.md) 同義，該範本類別是為具有預設字元特性之 `wchar_t` 類型的元素特製化的範本類別。
+類型是範本類別同義[basic_iostream](../standard-library/basic-iostream-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
 
 ## <a name="wistream"></a>  wistream
 
-`wchar_t` 的特殊化類型 `basic_istream`。
+型別`basic_istream`特殊化**wchar_t**。
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -69,7 +69,7 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別 [basic_istream](../standard-library/basic-istream-class.md) 同義，該範本類別是為具有預設字元特性之 `wchar_t` 類型的元素特製化的範本類別。
+類型是範本類別同義[basic_istream](../standard-library/basic-istream-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
 
 ## <a name="see-also"></a>另請參閱
 

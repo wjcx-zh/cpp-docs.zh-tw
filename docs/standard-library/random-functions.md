@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852812"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954154"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt; 函式
 
@@ -31,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>參數
 
-`RealType` 浮點整數類資料類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點整數類資料類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-`Bits` 隨機號碼產生器。
+*位元*亂數產生器。
 
-`Gen` 隨機號碼產生器。
+*Gen*亂數產生器。
 
 ### <a name="remarks"></a>備註
 
-範本函式會重複呼叫 `operator()` 的 `Gen`，並將傳回的值封裝到類型 `x` 的浮點值 `RealType` 中，直到其在 `x` 中收集到指定的尾數位元數為止。 指定的數是 `Bits` (其必須為非零值) 的較小值，以及 `RealType` 中尾數位元的完整數。 第一次呼叫會提供最低位位元數。 函式會傳回 `x`。
+範本函式會呼叫`operator()`的*Gen*重複和組件傳回的值，轉換浮點數的值`x`型別的*RealType*直到它已收集了指定的數目尾數中的位元`x`。 指定的數字是較小的一個*位元*（其必須為非零） 和完整的尾數中的位元數目*RealType*。 第一次呼叫會提供最低位位元數。 函式會傳回 `x`。
 
 ## <a name="see-also"></a>另請參閱
 

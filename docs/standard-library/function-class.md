@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847838"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959925"
 ---
 # <a name="function-class"></a>function 類別
 
@@ -89,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`Fty` 要包裝的函式類型。
+*Fty*来包裝的函式類型。
 
-`Ax` 配置器函式。
+*Ax*配置器函式。
 
 ## <a name="remarks"></a>備註
 
@@ -164,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-`_Func` 可呼叫物件。
+*_Func*可呼叫物件。
 
-`_Fnref` 參考包裝函式，其中包含可呼叫物件。
+*_Fnref*包含可呼叫物件的參考包裝函式。
 
-`Ax` 配置器物件。
+*Ax*配置器物件。
 
 ### <a name="remarks"></a>備註
 
-每個成員函式皆會將 `*this` 所保留的 `callable object` 取代為以 `operand` 傳遞的可呼叫物件。 兩者皆會配置儲存體的配置器物件 `Ax`。
+每個成員函式皆會將 `*this` 所保留的 `callable object` 取代為以 `operand` 傳遞的可呼叫物件。 兩者皆會配置的配置器物件的儲存體*Ax*。
 
 ## <a name="function"></a>  function::function
 
@@ -199,17 +199,17 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-`right` 要複製的函式物件。
+*右*来複製的函式物件。
 
-`Fx` 可呼叫物件的類型。
+*Fx*可呼叫物件的類型。
 
-`_Func` 要包裝的可呼叫物件。
+*_Func*来包裝的可呼叫物件。
 
-`Alloc` 配置器類型。
+*配置*的配置器類型。
 
-`Ax` 配置器。
+*Ax*配置器。
 
-`_Fnref` 要包裝的可呼叫物件參考。
+*_Fnref*来包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
 
@@ -295,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>備註
 
-僅有當物件不是空的時，運算子才會傳回值，且該值會轉換為 `bool` 並含有 true 值。 您可以使用它來測試物件是否是空的。
+此運算子會傳回值，轉換成**bool**只有當物件不是空的則為 true 值。 您可以使用它來測試物件是否是空的。
 
 ### <a name="example"></a>範例
 
@@ -340,9 +340,9 @@ result_type operator()(
 
 ### <a name="parameters"></a>參數
 
-`TN` 第 n 個型別呼叫引數。
+*TN*第 n 個呼叫引數的類型。
 
-`tN` 第 n 個呼叫的引數。
+*tN*第 n 個呼叫引數。
 
 ### <a name="remarks"></a>備註
 
@@ -391,13 +391,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>參數
 
-`npc` Null 指標常數。
+*npc* null 指標常數。
 
-`right` 要複製的函式物件。
+*右*来複製的函式物件。
 
-`fn` 要包裝的可呼叫物件。
+*fn*来包裝的可呼叫物件。
 
-`fnref` 要包裝的可呼叫物件參考。
+*fnref*来包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
 
@@ -506,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要交換的函式物件。
+*右*来交換的函式物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會在 `*this` 和 `right` 之間交換目標物件。 它會在固定時間執行但不會擲回任何例外狀況。
+此成員函式會交換目標物件之間`*this`並*右*。 它會在固定時間執行但不會擲回任何例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -567,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>參數
 
-`Fty2` 要測試的目標可呼叫物件類型。
+*Fty2*来測試的目標可呼叫物件類型。
 
 ### <a name="remarks"></a>備註
 
-對 `T1, T2, ..., TN` 引數類型和 `Ret` 傳回類型來說，`Fty2` 類型必須是可呼叫的。 如果 `target_type() == typeid(Fty2)`，成員範本函式會傳回目標物件的位址；否則會傳回 0。
+型別*Fty2*必須是可呼叫的引數型別`T1, T2, ..., TN`和傳回型別`Ret`。 如果 `target_type() == typeid(Fty2)`，成員範本函式會傳回目標物件的位址；否則會傳回 0。
 
-如果對 `Fty2, T1, T2, ..., TN` 類型的個別左值 `fn, t1, t2, ..., tN` 來說，`INVOKE(fn, t1, t2, ..., tN)` 是語式正確，而且 `Ret` 不是 `void`，則針對 `T1, T2, ..., TN` 引數類型和 `Ret` 傳回類型，`Fty2` 類型為可呼叫的，且會轉換為 `Ret`。
+型別*Fty2*為可呼叫的引數型別`T1, T2, ..., TN`和傳回型別`Ret`if、 for 左值`fn, t1, t2, ..., tN`型別的`Fty2, T1, T2, ..., TN`分別`INVOKE(fn, t1, t2, ..., tN)`而言是否格式正確而且，如果`Ret`不是**void**，則會轉換至`Ret`。
 
 ### <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: 控制內含項目類別 (ATL) |Microsoft 文件
+title: 控制項內含項目類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353b4a1a9acaeccd64d99e8ee18914681353ca86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a54da05cb71114f455b24d18004049b2fa91b2a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959335"
 ---
 # <a name="control-containment-classes"></a>控制項內含項目類別
-下列類別會提供控制項裝載的內含項目支援：  
+下列類別會提供裝載控制項內含項目支援：  
   
 -   [CAxWindow](../atl/reference/caxwindow-class.md)提供方法來管理裝載 ActiveX 控制項的視窗。  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md)提供方法來管理裝載 ActiveX 控制項，而且具有支援裝載已授權的 ActiveX 控制項的視窗。  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md)提供方法來管理裝載 ActiveX 控制項，也有支援授權的 ActiveX 控制項裝載的視窗。  
   
--   [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md)這個介面來設定裝載控制項可用之環境屬性上呼叫方法。  
+-   [IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md)此介面，以便將可用的環境屬性設定為裝載的控制項上呼叫的方法。  
   
--   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md)建立及/或將控制項附加至主機物件，或從裝載控制項取得的介面，此介面上呼叫方法。  
+-   [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md)這個介面，建立及/或將控制項附加至主機物件，或從裝載控制項取得介面上呼叫的方法。  
   
 ## <a name="related-articles"></a>相關文章  
  [ATL 控制項內含項目常見問題集](../atl/atl-control-containment-faq.md)  

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845995"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960657"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 類別
 
-此類別可將範本類別 **ctype\<CharType**> 明確特製化為 `char` 類型，並描述可以作為地區設定 Facet 的物件，以表示 `char` 類型字元的各種屬性特性。
+類別是範本類別明確特製化`ctype\<CharType>`鍵入**char**，描述可以做為地區設定 facet 的型別之字元各種屬性特性的物件**char**.
 
 ## <a name="syntax"></a>語法
 
@@ -132,15 +132,15 @@ protected:
 
 明確特製化和範本類別有下列幾項差異：
 
-- ctype< `char`> 類別的物件會儲存 ctype 遮罩資料表的第一個元素指標，亦即 **ctype_base::mask** 類型的UCHAR_MAX + 1 元素陣列。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。
+- Ctype 類別的物件 < `char`> 會儲存 ctype 遮罩資料表的第一個元素，陣列的 UCHAR_MAX + 1 個元素的類型指標`ctype_base::mask`。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。
 
-- 其唯一的公用建構函式可讓您指定**tab**、ctype 遮罩資料表、**del** (為 true 的 Boolean 物件，代表應在 ctype< `char`> 物件已終結時刪除陣列)，以及參考計數參數 refs。
+- 其唯一的公用建構函式可讓您指定`tab`，ctype 遮罩資料表中，並`del`，如果陣列應該則為 true 的布林值物件刪除 ctype < `char`> 物件終結時，以及參考計數參數 refs。
 
-- 受保護的成員函式 **table** 會傳回預存的 ctype 遮罩資料表。
+- 受保護的成員函式`table`傳回預存的 ctype 遮罩資料表。
 
-- 靜態成員物件 **table_size** 可指定 ctype 遮罩資料表中的元素數下限。
+- 靜態成員物件`table_size`ctype 遮罩資料表中指定的項目數目下限。
 
-- 受保護的靜態成員函式 **classic_table**( 會傳回適用於 "C" 地區設定的 ctype 遮罩資料表。
+- 受保護的靜態成員函式`classic_table`（傳回 ctype 遮罩資料表適用於"C"地區設定。
 
 - 系統並沒有提供 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is) 或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not) 這幾個受保護的虛擬成員函式。 對應的公用成員函式會自行執行對等作業。
 

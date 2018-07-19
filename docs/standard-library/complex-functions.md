@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 040104eeb43ccfe6225821b7318346bc1fe60f92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848605"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959988"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函式
 
@@ -73,7 +73,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 複數的模數來判定。
+*complexNum*判斷其模數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -159,7 +159,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 其引數是所決定的複數。
+*complexNum*判斷為其引數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -167,7 +167,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="remarks"></a>備註
 
-*引數*為一角度使正數真實軸複數平面中的複雜的向量。 針對複數*a + bi*，引數等於 arctan (*b / a*)。 從正實軸逆時針方向測得的角度為正向；順時針方向測得的角度為負向。 主體的值為大於-pi 且小於高於或等於 + pi。
+*引數*是一種可在複平面正實軸的複向量角度。 為複數*a + bi*、 引數等於 arctan (*b / a*)。 從正實軸逆時針方向測得的角度為正向；順時針方向測得的角度為負向。 主體的值為大於-pi 且小於於或等於 + pi。
 
 ### <a name="example"></a>範例
 
@@ -245,7 +245,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 要傳回其複數的共軛複數。
+*complexNum*傳回其共軛複數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -253,7 +253,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="remarks"></a>備註
 
-複數的複數的共軛*a + bi*是 *-bi*。 複數乘積和其共軛為數字 *a*2 + *b*2 的範數。
+複數的共軛複數*a + bi*是*a – bi*。 複數乘積和其共軛為數字 *a*2 + *b*2 的範數。
 
 ### <a name="example"></a>範例
 
@@ -319,7 +319,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷它的餘弦的複數。
+*complexNum*要判斷它的餘弦的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -409,7 +409,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其雙曲餘弦的複數。
+*complexNum*正在判斷其雙曲線餘弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -499,7 +499,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 複雜的數字的指數所決定。
+*complexNum*複雜數字的指數要判斷。
 
 ### <a name="return-value"></a>傳回值
 
@@ -569,7 +569,7 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 複數的實數部分要擷取。
+*complexNum*的實數部分是要擷取的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -620,7 +620,7 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其自然對數的複數。
+*complexNum*要判斷其自然對數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -689,7 +689,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其基底 10 對數的複數。
+*complexNum*要判斷其基底 10 對數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -758,7 +758,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 複數的範數決定。
+*complexNum*是判斷其範數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -840,9 +840,9 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Modulus*正在輸入的複數的模數。
+*_Modulus*輸入複數的模數。
 
-*_Argument*正在輸入的複數的引數。
+*_Argument*輸入複數的引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -850,7 +850,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="remarks"></a>備註
 
-極座標圖的複數形式提供模數*r*和引數*p*，這些參數的實部和虛部的笛卡兒座標元件相關的所在和*b*方程式由 = r \* cos *p*和*b* = *r* \* sin *p*。
+複數的極座標形式可提供模數*r*並將引數*p*，其中這些參數相關的實數和虛數的笛卡兒座標元件和*b* ，方程式 = r \* cos *p*並*b* = *r* \* sin *p*。
 
 ### <a name="example"></a>範例
 
@@ -924,9 +924,9 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>參數
 
-`_Base` 複數的複數是基底，做為乘冪成員函式的參數類型的數字。
+*（_b)* 複數或數字，到成員函式乘冪之基底複數的參數類型。
 
-*（_p)* 整數或複數或數字，其參數的類型是基底，就是成員函式乘的乘冪的複數。
+*電源 （_p)* 的整數或複數或數字的基底，就是成員函式乘冪的複數的參數類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1058,7 +1058,7 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 複數的實數部分要擷取。
+*complexNum*的實數部分是要擷取的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1109,7 +1109,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其正弦值的複數。
+*complexNum*要判斷其正弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1199,7 +1199,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其雙曲正弦值的複數。
+*complexNum*要判斷其雙曲正弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1289,7 +1289,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 找不到為其平方根的複數。
+*complexNum*找不到為其平方根的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1365,7 +1365,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其正切函數的複數。
+*complexNum*要判斷其正切值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1453,7 +1453,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-`complexNum` 正在判斷其雙曲正切值的複數。
+*complexNum*要判斷其雙曲正切值的複數。
 
 ### <a name="return-value"></a>傳回值
 

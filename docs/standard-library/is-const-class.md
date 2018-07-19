@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956081"
 ---
 # <a name="isconst-class"></a>is_const 類別
 
@@ -37,11 +37,11 @@ struct is_const;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 是 `const-qualified`，類型述詞的執行個體會保留 true。
+如果型別述詞的執行個體保留 true *Ty*是`const-qualified`。
 
 ## <a name="example"></a>範例
 

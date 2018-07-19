@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842995"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958461"
 ---
 # <a name="isassignable-class"></a>is_assignable 類別
 
@@ -36,13 +36,13 @@ struct is_assignable;
 
 ### <a name="parameters"></a>參數
 
-若要接收指派的物件類型。
+若要接收指派的物件型別。
 
-從提供的值的物件類型。
+從提供的值物件的型別。
 
 ## <a name="remarks"></a>備註
 
-未評估的運算式 `declval<To>() = declval<From>()` 必須格式正確。 `From` 和 `To` 兩者必須是完整類型 `void`，或是界限未知的陣列。
+未評估的運算式 `declval<To>() = declval<From>()` 必須格式正確。 兩者`From`並`To`必須是完整的類型**void**，或是界限未知的陣列。
 
 ## <a name="requirements"></a>需求
 

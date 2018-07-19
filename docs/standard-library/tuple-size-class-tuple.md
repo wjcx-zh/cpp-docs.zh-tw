@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958262"
 ---
 # <a name="tuplesize-class"></a>tuple_size 函式
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>參數
 
-*Tuple* tuple 的類型。
+*Tuple*  
+Tuple 的類型。
 
-*Elem*陣列項目的類型。
+*Elem*  
+陣列元素的類型。
 
-*大小*陣列的大小。
+*Size*  
+陣列的大小。
 
-*T1*的第一個配對成員的類型。
+*T1*  
+第一個配對成員的類型。
 
-*T2*組的第二個成員的型別。
+*T2*  
+第二個配對成員的類型。
 
-*型別*tuple 項目類型。
+*型別*  
+元組元素的類型。
 
 ## <a name="remarks"></a>備註
 
-範本類別有一個成員 `value` 是整數常數運算式，其值為 tuple 類型 `Tuple`的範圍。
+此樣板類別具有成員`value`也就是整數常數運算式的值是 tuple 型別程度*Tuple*。
 
-陣列的樣板特製化有一個成員 `value`，其是值為 `Size` 的整數常數運算式，而該值是陣列的大小。
+陣列的樣板特製化有一個成員`value`也就是整數常數運算式的值是*大小*，這是陣列的大小。
 
 配對的樣板特製化有一個成員 `value`，其是值為 2 的整數常數運算式。
 
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<tuple >**標頭：** \<陣列 > （適用於陣列特製化）**標頭：** \<公用程式 > （適用於組特製化）
+**標頭：** \<tuple >**標頭：** \<陣列 > （用於陣列特製化）**標頭：** \<公用程式 > （用於配對特製化）
 
 **命名空間：** std
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855899"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960446"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函式
 
@@ -54,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>參數
 
-`Rel_time` A[持續時間](../standard-library/duration-class.md)物件，指定時間間隔。
+*Rel_time*  
+ [duration](../standard-library/duration-class.md) 物件，可指定時間間隔。
 
 ### <a name="remarks"></a>備註
 
-函式會封鎖呼叫執行緒，至少是 `Rel_time` 指定的時間。 這個函式不會擲回任何例外狀況。
+函式會封鎖呼叫執行緒至少由所指定的時間*Rel_time*。 這個函式不會擲回任何例外狀況。
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -73,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>參數
 
-`Abs_time` 表示時間點。
+*Abs_time*  
+ 表示時間點。
 
 ### <a name="remarks"></a>備註
 
@@ -81,7 +83,7 @@ void sleep_until(const xtime *Abs_time);
 
 ## <a name="swap"></a>  swap
 
-交換兩個 `thread` 物件的狀態。
+交換兩個狀態**執行緒**物件。
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`thread`物件。
+*左邊*  
+ 左邊**執行緒**物件。
 
-`Right` 右邊`thread`物件。
+*右邊*  
+ 右**執行緒**物件。
 
 ### <a name="remarks"></a>備註
 

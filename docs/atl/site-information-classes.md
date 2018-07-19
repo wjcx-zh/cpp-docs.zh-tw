@@ -1,5 +1,5 @@
 ---
-title: 站台資訊類別 (ATL) |Microsoft 文件
+title: 站台資訊類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2279eb951888a1b323455f3e8a2545cc1b1d7f2d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959952"
 ---
-# <a name="site-information-classes"></a>站台資訊類別
-下列類別允許物件與其站台通訊：  
+# <a name="site-information-classes"></a>網站資訊類別
+下列類別允許物件與其站台與通訊：  
   
 -   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md)擷取和設定物件的站台的指標。 用於不是控制項的物件。  
   

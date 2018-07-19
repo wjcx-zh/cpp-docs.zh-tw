@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: aa5c2a662fb5e827978a7c00aa3035dcc6cc97f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 135922bb88b02c00849a577fb8d8457b6fb21989
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847295"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958233"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 運算子
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_map`。
+*左*型別的物件`hash_map`。
 
-`right` 型別的物件`hash_map`。
+*右*型別的物件`hash_map`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -48,7 +48,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 hash_map 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_map 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。
 
-成員[< hash_map >](hash-map.md)和[< hash_set >](hash-set.md)標頭檔中[stdext 命名空間](stdext-namespace.md)。
+成員[< p >](hash-map.md)並[< hash_set >](hash-set.md)標頭檔中[stdext 命名空間](stdext-namespace.md)。
 
 ### <a name="example"></a>範例
 
@@ -103,9 +103,9 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_map`。
+*左*型別的物件`hash_map`。
 
-`right` 型別的物件`hash_map`。
+*右*型別的物件`hash_map`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -168,9 +168,9 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_multimap`。
+*左*型別的物件`hash_multimap`。
 
-`right` 型別的物件`hash_multimap`。
+*右*型別的物件`hash_multimap`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -233,9 +233,9 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`hash_multimap`。
+*左*型別的物件`hash_multimap`。
 
-`right` 型別的物件`hash_multimap`。
+*右*型別的物件`hash_multimap`。
 
 ### <a name="return-value"></a>傳回值
 

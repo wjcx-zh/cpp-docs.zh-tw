@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f6ef4f70807e753c24d3a3595ab3665b45fdbe42
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955697"
 ---
 # <a name="isunsigned-class"></a>is_unsigned 類別
 
@@ -37,11 +37,11 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是不帶正負號的整數類型或 `cv-qualified` 不帶正負號的整數類型，則述詞類型的執行個體保存 true，否則保存 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是不帶正負號的整數類資料類型或`cv-qualified`不帶正負號整數類資料類型，否則為 false。
 
 ## <a name="example"></a>範例
 

@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe7108c2eb370739494a2c6b8bc95fbdc1001840
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b32031103e6e6d9922fdb3b0fc3a0d95e5eb280c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957037"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;regex&gt; typedefs
 
@@ -105,7 +105,7 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `char` 類型項目之範本類別 [basic_regex 類別](../standard-library/basic-regex-class.md)的特製化。
+此類型描述範本類別的特製化[basic_regex 類別](../standard-library/basic-regex-class.md)類型的項目**char**。
 
 > [!NOTE]
 > 高位元字元搭配 `regex` 將會有未預期的結果。 超出 0 到 127 範圍以外的值可能會導致未定義的行為。
@@ -216,7 +216,7 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 `wchar_t` 類型項目之範本類別 [basic_regex 類別](../standard-library/basic-regex-class.md)的特製化。
+此類型描述範本類別的特製化[basic_regex 類別](../standard-library/basic-regex-class.md)類型的項目**wchar_t**。
 
 ## <a name="wsmatch"></a>  wsmatch Typedef
 

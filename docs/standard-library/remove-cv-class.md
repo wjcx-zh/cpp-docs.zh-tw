@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb046dfbc01a4a65a565d8d9aa6b012bbde1d9e6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b14733ea906fa47e7339c23efb8942763e928828
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956305"
 ---
 # <a name="removecv-class"></a>remove_cv 類別
 
@@ -40,11 +40,11 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>參數
 
-`T` 要修改的類型。
+*T*来修改的類型。
 
 ## <a name="remarks"></a>備註
 
-`remove_cv<T>` 執行個體儲存修改的類型，如果 `T1` 的格式為 `T`、`const T1` 或 `volatile T1`，類型為 `const volatile T1`，否則為 `T`。
+執行個體`remove_cv<T>`儲存修改的類型是`T1`當*T*的格式`const T1`， `volatile T1`，或`const volatile T1`，否則為*T*。
 
 ## <a name="example"></a>範例
 

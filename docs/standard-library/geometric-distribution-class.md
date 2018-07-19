@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846866"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960290"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
 
@@ -76,7 +76,7 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*整數結果類型中，預設值為`int`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 *URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
@@ -230,7 +230,7 @@ explicit geometric_distribution(const param_type& parm);
 
 *p* `p`分佈參數。
 
-*parm*用於建構分佈的參數結構。
+*parm*用來建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 

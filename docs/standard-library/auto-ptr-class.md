@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83c211617752a9c9701f513373d8fe796a26a1c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957999"
 ---
 # <a name="autoptr-class"></a>auto_ptr 類別
 
@@ -65,13 +65,13 @@ public:
 ```
 ### <a name="parameters"></a>參數
 
-`right` `auto_ptr`要從中取得現有資源。
+*右*`auto_ptr`從中取得現有的資源。
 
-`ptr` 指標指定了要取代儲存的指標。
+*ptr*此指標指定成取代儲存的指標。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述智慧型指標，呼叫`auto_ptr`，配置物件。 這個指標必須是 null，或指定 `new` 所配置的物件。 如果將 `auto_ptr` 的儲存值指派給另一個物件，則會轉移擁有權。 (轉移後，會以 null 指標取代儲存值。)`auto_ptr<Type>` 的解構函式會刪除配置物件。 `auto_ptr<Type>` 可確保當控制離開區塊時 (即使是透過擲回例外狀況)，會自動刪除配置物件。 您不應該建構兩個擁有相同物件的 `auto_ptr<Type>` 物件。
+此範本類別描述一個智慧型指標，呼叫`auto_ptr`，配置的物件。 滑鼠指標必須是 null，或指定所配置的物件**新**。 如果將 `auto_ptr` 的儲存值指派給另一個物件，則會轉移擁有權。 (轉移後，會以 null 指標取代儲存值。)`auto_ptr<Type>` 的解構函式會刪除配置物件。 `auto_ptr<Type>` 可確保當控制離開區塊時 (即使是透過擲回例外狀況)，會自動刪除配置物件。 您不應該建構兩個擁有相同物件的 `auto_ptr<Type>` 物件。
 
 您可以將 `auto_ptr<Type>` 物件當做函式呼叫的引數，以傳值方式來傳遞。 `auto_ptr` 不能是任何標準程式庫容器的項目。 您無法透過 C++ 標準程式庫容器可靠地管理一系列的 `auto_ptr<Type>` 物件。
 
@@ -95,7 +95,7 @@ public:
 |-|-|
 |[get](#get)|這個成員函式會傳回儲存的指標 `myptr`。|
 |[release](#release)|這個成員會以 null 指標取代儲存的指標 `myptr`，並傳回先前儲存的指標。|
-|[reset](#reset)|這個成員函式只有在儲存的指標值 `myptr` 因函式呼叫而變更時，才會評估運算式 `delete myptr`。 然後會以 `ptr` 取代儲存的指標。|
+|[reset](#reset)|這個成員函式只有在儲存的指標值 `myptr` 因函式呼叫而變更時，才會評估運算式 `delete myptr`。 它接著會將儲存的指標取代為 *ptr*。|
 
 ### <a name="operators"></a>運算子
 
@@ -130,17 +130,17 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>參數
 
-`ptr` 物件的指標，`auto_ptr`封裝。
+*ptr*物件的指標，`auto_ptr`封裝。
 
-`right` `auto_ptr`複製建構函式的物件。
+*右*`auto_ptr`複製建構函式物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會將 `ptr` 儲存在 **myptr**，後者就是所配置物件的預存指標。 第二個建構函式會儲存 `right`，以轉移 `right` 中所儲存指標的擁有權。 **myptr**中的 [release](#release)。
+第一個建構函式儲存*ptr*在`myptr`，儲存所配置物件的指標。 第二個建構函式將儲存在指標的擁有權*右*，藉由儲存*右*。 [釋放](#release)在`myptr`。
 
-第三個建構函式的行為與第二個建構函式相同，差異在於它會儲存 **right**. `ref`. **release** 於 **myptr**，其中 `ref` 是 `right` 中所儲存的參考。
+第三個建構函式行為與第二個，相同，不同之處在於它會儲存`right`。 `ref`. `release` 在  `myptr`，其中`ref`會參考儲存在`right`。
 
-範本建構函式的行為與第二個建構函式相同，但前提是 **Other** 的指標可以隱含地轉換為 **Type** 的指標。
+範本建構函式的行為相同的第二個建構函式，前提是指標`Other`能夠隱含轉換成指標`Type`。
 
 ### <a name="example"></a>範例
 
@@ -203,7 +203,7 @@ Destructing 00311AF8
 
 ## <a name="element_type"></a> auto_ptr::element_type
 
-此類型是範本參數 **Type** 的同義字。
+此類型是範本參數 `Type`的同義字。
 
 ```cpp
 
@@ -212,7 +212,7 @@ typedef Type element  _type;
 
 ## <a name="get"></a> auto_ptr::get
 
-這個成員函式會傳回儲存的指標 **myptr**。
+這個成員函式會傳回儲存的指標 `myptr`。
 
 ```cpp
 Type *get() const throw();
@@ -220,7 +220,7 @@ Type *get() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-儲存的指標 **myptr**。
+已儲存的指標`myptr`。
 
 ### <a name="example"></a>範例
 
@@ -282,7 +282,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>參數
 
-`right` 型別的物件`auto_ptr`。
+*右*型別的物件`auto_ptr`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -290,7 +290,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="remarks"></a>備註
 
-只有在儲存的指標 **myptr** 因指派而變更時，這項指派才會評估運算式 **delete myptr**。 它接著會儲存 \_*Right*，以轉移 _*Right* 中所儲存指標的擁有權。 **myptr**中的 [release](#release)。 此函式會傳回 **\*this**。
+指派才會評估運算式`delete myptr`，但只有當已儲存的指標`myptr`因指派而變更。 它接著會儲存 \_*Right*，以轉移 _*Right* 中所儲存指標的擁有權。 [釋放](#release)在`myptr`。 此函式會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -306,7 +306,7 @@ Type& operator*() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-指標所擁有 **Type** 類型之物件的參考。
+型別的物件的參考`Type`指標所擁有。
 
 ### <a name="remarks"></a>備註
 
@@ -326,11 +326,11 @@ Type * operator->() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-**auto_ptr** 所擁有物件的成員。
+物件的成員，`auto_ptr`擁有。
 
 ### <a name="remarks"></a>備註
 
-選取運算子會傳回 [get](#get)`( )`，如此一來，運算式 *ap*-> **member** 的運作方式會與下列運算式相同：(*ap*. **get**( ) )-> **member**，其中 *ap* 是類別 `auto_ptr`\< **Type**> 的物件。 因此，儲存的指標不得為 Null，而且 **Type** 必須是包含 **member** 成員的類別、結構或等位類型。
+選取運算子會傳回 [get](#get)`( )`，如此一來，運算式 *ap*-> **member** 的運作方式會與下列運算式相同：(*ap*. **get**( ) )-> **member**，其中 *ap* 是類別 `auto_ptr`\< **Type**> 的物件。 因此，儲存的指標不得為 null，並`Type`必須是類別、 結構或等位型別與`member`成員。
 
 ### <a name="example"></a>範例
 
@@ -368,7 +368,7 @@ int main()
 
 ## <a name="op_auto_ptr_ref_lt_other_gt"></a> auto_ptr::operator auto_ptr_ref&lt;Other&gt;
 
-從 `auto_ptr` 轉型成 **auto_ptr_ref**。
+從 `auto_ptr` 轉換成 `auto_ptr_ref`。
 
 ```cpp
 template <class Other>
@@ -429,7 +429,7 @@ main exiting
 
 ## <a name="release"></a> auto_ptr::release
 
-這個成員會以 Null 指標取代儲存的指標 **myptr**，並傳回先前儲存的指標。
+這個成員會以 null 指標取代儲存的指標 `myptr`，並傳回先前儲存的指標。
 
 ```cpp
 Type *release() throw();
@@ -441,7 +441,7 @@ Type *release() throw();
 
 ### <a name="remarks"></a>備註
 
-這個成員會以 Null 指標取代儲存的指標 **myptr**，並傳回先前儲存的指標。
+這個成員會以 null 指標取代儲存的指標 `myptr`，並傳回先前儲存的指標。
 
 ### <a name="example"></a>範例
 
@@ -491,7 +491,7 @@ Destructing 00311B88 Value: 6
 
 ## <a name="reset"></a> auto_ptr::reset
 
-成員函式會評估運算式**刪除** **myptr**，不過，只有儲存的指標值**myptr**變更函式呼叫的結果。 它接著會將儲存的指標取代為 **ptr**。
+此成員函式評估的運算式`delete myptr`，但只有當儲存的指標值`myptr`函式呼叫而變更。 然後會以 `ptr` 取代儲存的指標。
 
 ```cpp
 void reset(Type* ptr = 0);
@@ -499,7 +499,7 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 指標指定了要取代儲存的指標**myptr**。
+*ptr*此指標指定成取代儲存的指標`myptr`。
 
 ### <a name="example"></a>範例
 

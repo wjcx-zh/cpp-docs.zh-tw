@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954639"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 類別
 
@@ -186,9 +186,9 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>參數
 
-`Types` 引數清單型別。
+*型別*引數清單類型。
 
-`args` 引數清單。
+*args*引數清單。
 
 ### <a name="remarks"></a>備註
 
@@ -229,9 +229,9 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要包裝的類型。
+*Ty*来包裝的類型。
 
-`val` 要包裝的值。
+*val*来包裝的值。
 
 ### <a name="remarks"></a>備註
 

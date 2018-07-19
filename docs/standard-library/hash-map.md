@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959770"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -32,7 +32,7 @@ ms.locfileid: "33850049"
 
 ## <a name="syntax"></a>語法
 
-> #<a name="include-hashmap"></a>包含 < hash_map >
+> #<a name="include-hashmap"></a>包含 < p >
 
 ### <a name="operators"></a>運算子
 
@@ -51,7 +51,7 @@ ms.locfileid: "33850049"
 
 |類別|描述|
 |-|-|
-|[hash_compare 類別](hash-compare-class.md)|描述一個物件，該物件可由任一雜湊相關聯的容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 當成預設 **Traits** 參數物件使用，以便排序與雜湊處理所包含的項目。|
+|[hash_compare 類別](hash-compare-class.md)|描述可由任一雜湊關聯容器的物件 — hash_map、 hash_multimap、 hash_set 或 hash_multiset — 預設值為`Traits`參數物件，以便排序與雜湊所包含的元素。|
 |[value_compare 類別](value-compare-class.md)|提供函式物件，該物件可透過比較 hash_map 項目的索引鍵值來比較項目，以判斷項目在 hash_map 中的相對順序。|
 |[hash_map 類別](hash-map-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值唯一) 和相關聯資料值的配對。|
 |[hash_multimap 類別](hash-multimap-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值可重複) 和相關聯資料值的配對。|

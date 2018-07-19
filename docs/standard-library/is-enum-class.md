@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493c3dc0faf42e0f08f88afd3ac405cfbd7404aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960995"
 ---
 # <a name="isenum-class"></a>is_enum 類別
 
@@ -37,11 +37,11 @@ struct is_enum;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是列舉類型或列舉類型的 `cv-qualified` 形式，則類型述詞的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是列舉類型或`cv-qualified`形式的列舉型別，否則為 false。
 
 ## <a name="example"></a>範例
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955810"
 ---
 # <a name="gslice-class"></a>gslice 類別
 
@@ -39,9 +39,9 @@ valarray 的一個公用程式類別，用來定義 valarray 的多維度子集�
 
 - 起始索引。
 
-- **valarray<size_t>** 類別的長度向量。
+- 類別的長度向量`valarray<size_t>`。
 
-- **valarray<size_t>** 類別的跨度向量。
+- 類別的跨度向量`valarray<size_t>`。
 
 兩個向量的長度必須相同。
 
@@ -84,19 +84,19 @@ gslice(
 
 ### <a name="parameters"></a>參數
 
-`_StartIndex` Valarray 索引子集的第一個項目。
+*_StartIndex* valarray 索引子集的第一個元素。
 
-`_LenArray` 陣列，每個配量中指定的項目數。
+*_LenArray*每個配量中指定的項目數的陣列。
 
-`_IncArray` 陣列，指定每個配量中分散。
+*_IncArray*指定在每個配量的跨度的陣列。
 
 ### <a name="return-value"></a>傳回值
 
-預設建構函式會針對起始索引儲存零，以及針對長度和跨度向量儲存零長度向量。 第二個建構函式會針對起始索引儲存 `_StartIndex`、針對長度陣列儲存 `_LenArray`，以及針對跨度陣列儲存 `_IncArray`。
+預設建構函式會針對起始索引儲存零，以及針對長度和跨度向量儲存零長度向量。 第二個建構函式儲存 *_StartIndex*起始的索引，如 *_LenArray*針對長度陣列，並 *_IncArray*針對跨度陣列。
 
 ### <a name="remarks"></a>備註
 
-**gslice** 會定義 valarray 的子集，此子集由該 valarray 的多個配量所構成，其中每個配量都起始於相同的指定元素。 使用陣列來定義多個配量的能力是 `gslice` 與 [slice::slice](../standard-library/slice-class.md#slice) 之間唯一的差異。 第一個配量具有索引為 `_StartIndex` 的第一個元素、`_LenArray` 的第一個元素所指定的元素數目，以及 `_IncArray` 的第一個元素所指定的跨度。 下一組正交配量的第一個元素會由第一個配量指定。 `_LenArray` 的第二個元素會指定元素數目。 跨度是由 `_IncArray` 的第二個元素指定。 配量的第三維度會以二維陣列的元素作為起始元素，然後以類似的方式繼續進行
+**gslice** 會定義 valarray 的子集，此子集由該 valarray 的多個配量所構成，其中每個配量都起始於相同的指定元素。 使用陣列來定義多個配量的能力是 `gslice` 與 [slice::slice](../standard-library/slice-class.md#slice) 之間唯一的差異。 第一個配量會有索引的第一個項目 *_StartIndex*，第一個項目所指定項目數目 *_LenArray*，和第一個元素的跨度 *_IncArray*. 下一組正交配量的第一個元素會由第一個配量指定。 第二個元素 *_LenArray*指定元素數目。 第二個項目所指定步距 *_IncArray*。 配量的第三維度會以二維陣列的元素作為起始元素，然後以類似的方式繼續進行
 
 ### <a name="example"></a>範例
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce6e3a51cb63a448568f3cf31525f6f153637ec7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fb0027ba6afbceed8cc5f1daafef8cb183759ce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955230"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream 類別
 
@@ -42,15 +42,15 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-`Alloc` 配置器類別。
+*配置*的配置器類別。
 
-`Elem` 字串的基本項目的類型。
+*Elem*字串的基本元素的類型。
 
-*Tr*字元特性，則字串的基本項目上特製化。
+*Tr*字元特性之字串的基本項目特製化。
 
 ## <a name="remarks"></a>備註
 
-此類別描述一個物件，該物件可控制如何將元素和編碼物件插入具有 **Elem** 類型之元素的資料流緩衝區；其中該類型的字元特性是由 **Tr** 類別所決定，而其元素是由 `Alloc` 類別的配置器所配置。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
+此類別描述的物件可控制插入的項目和編碼的物件的資料流緩衝區，類型的項目`Elem`，其字元特性由類別`Tr`，且其項目會配置器所配置類別`Alloc`。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
 
 ### <a name="constructors"></a>建構函式
 
@@ -62,7 +62,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 |類型名稱|描述|
 |-|-|
-|[allocator_type](#allocator_type)|此類型是範本參數 `Alloc`的同義字。|
+|[allocator_type](#allocator_type)|類型是範本參數的同義字*Alloc*。|
 
 ### <a name="member-functions"></a>成員函式
 
@@ -79,7 +79,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ## <a name="allocator_type"></a>  basic_ostringstream::allocator_type
 
-此類型是範本參數 `Alloc`的同義字。
+類型是範本參數的同義字*Alloc*。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -97,19 +97,19 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>參數
 
-`_Mode` 其中一個列舉中[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`str` 型別的物件`basic_string`。
+*str*型別的物件`basic_string`。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會藉由呼叫 [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**) 初始化基底類別，其中 **sb** 是 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 類別的預存物件。 它也會藉由呼叫 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`) 初始化 **sb**。
+第一個建構函式初始化基底類別，藉由呼叫[basic_ostream](../standard-library/basic-ostream-class.md)( **sb**)，其中`sb`是類別的預存的物件[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**， `Alloc`>。 它也會藉由呼叫 basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`) 初始化 **sb**。
 
-第二個建構函式會藉由呼叫 basic_ostream( **sb**) 初始化基底類別。 它也會藉由呼叫 basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode` &#124; `ios_base::out`) 初始化 **sb**。
+第二個建構函式會藉由呼叫 basic_ostream( **sb**) 初始化基底類別。 它也會初始化`sb`藉由呼叫 basic_stringbuf< < **Elem**， **Tr**， `Alloc`> (_ *Str*， `_Mode` &#124; `ios_base::out`).
 
 ## <a name="rdbuf"></a>  basic_ostringstream::rdbuf
 
-將 **pointer** 類型之預存資料流緩衝區的位址傳回至 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>。
+傳回類型的預存資料流緩衝區的位址`pointer`要[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**， **Tr**， `Alloc`>。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -117,11 +117,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>傳回值
 
-basic_stringbuf< **Elem**, **Tr**, `Alloc`> 的 **pointer** 類型之預存資料流緩衝區的位址。
+類型的預存資料流緩衝區，地址`pointer`basic_stringbuf < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將 **pointer** 類型之預存資料流緩衝區的位址傳回至 basic_stringbuf< **Elem**, **Tr**, `Alloc`>。
+此成員函式會傳回類型的預存資料流緩衝區的位址`pointer`basic_stringbuf < **Elem**， **Tr**， `Alloc`>。
 
 ### <a name="example"></a>範例
 
@@ -141,7 +141,7 @@ void str(
 
 ### <a name="parameters"></a>參數
 
-`_Newstr` 新的字串。
+*_Newstr*新的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -153,7 +153,7 @@ void str(
 
 ### <a name="example"></a>範例
 
-如需使用 **str** 的範例，請參閱 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)。
+請參閱[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)如需範例，會使用`str`。
 
 ## <a name="see-also"></a>另請參閱
 

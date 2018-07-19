@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954730"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible 類別
 
@@ -36,21 +36,21 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是具有 trivial 建構函式的類別，則類型述詞的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是具有 trivial 建構函式，否則為 false 的類別。
 
-在下列情況下，類別 `Ty` 的預設建構函式是 trivial：
+類別預設建構函式*Ty*輕而易舉的事如果：
 
 - 它是以隱含方式宣告的預設建構函式
 
-- 類別 `Ty` 沒有虛擬函式
+- 此類別*Ty*沒有虛擬函式
 
-- 類別 `Ty` 沒有虛擬基底
+- 此類別*Ty*沒有虛擬基底
 
-- 類別 `Ty` 的所有直接基底都有 trivial 建構函式
+- 所有直接基都底類別的*Ty*具有 trivial 建構函式
 
 - 類別類型的所有非靜態資料成員的類別都具有 trivial 建構函式
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864926"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955890"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex 類別
 
@@ -106,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `mutex` 的擁有權，或是呼叫執行緒已經擁有 `mutex`，即為 `true`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex**; otherwise, **false`。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有 `mutex`，函式會立即傳回 `true`，而先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`，則函數會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
 
 ## <a name="unlock"></a>  unlock
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 6135a3dc51b372c85545f01f52c70cbc6f236e64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 838a63fc43ef71561c0911cfa4c85c76cf04bc08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959661"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error&gt; 函式
 
@@ -38,7 +38,7 @@ extern const error_category& generic_category();
 
 ### <a name="remarks"></a>備註
 
-`generic_category`物件是實作[error_category](../standard-library/error-category-class.md)。
+`generic_category`物件會實作[error_category](../standard-library/error-category-class.md)。
 
 ## <a name="make_error_code"></a>  make_error_code
 
@@ -52,7 +52,7 @@ error_code make_error_code(generic_errno _Errno);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Errno`|要儲存於錯誤碼物件中的列舉值。|
+|*_Errno*|要儲存於錯誤碼物件中的列舉值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -72,7 +72,7 @@ error_condition make_error_condition(generic_errno _Errno);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Errno`|要儲存於錯誤條件物件中的列舉值。|
+|*_Errno*|要儲存於錯誤條件物件中的列舉值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -90,7 +90,7 @@ extern const error_category& system_category();
 
 ### <a name="remarks"></a>備註
 
-`system_category`物件是實作[error_category](../standard-library/error-category-class.md)。
+`system_category`物件會實作[error_category](../standard-library/error-category-class.md)。
 
 ## <a name="see-also"></a>另請參閱
 

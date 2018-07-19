@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955302"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 類別
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>參數
 
-`UIntType` 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*  
+ 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-`W` **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **短延隔**。 整數值數目。 **前置條件**：`0 < S < R`
+*S*  
+ **短延隔**。 整數值數目。 **前置條件**：`0 < S < R`
 
-`R` **長延隔**。 決定所產生數列中的週期。
+*R*  
+ **長延隔**。 決定所產生數列中的週期。
 
 ## <a name="members"></a>Members
 
@@ -68,7 +72,7 @@ class subtract_with_carry_engine;
 
 `substract_with_carry_engine` 樣板類別是針對 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) 的改良。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。
 
-此引擎會使用週期關聯 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 來產生使用者指定的不帶正負號整數類型值，其中，如果 `x(i - S) - x(i - R) - cy(i - 1) < 0`，則 `cy(i)` 的值為 `1`，否則為 `0`，而`M` 的值為 `2`<sup>W</sup>。引擎的狀態是一個進位指標加上 `R` 值。 這些值包含已至少呼叫 `R` `operator()` 次時所傳回的最後一個 `R` 值，否則為已傳回的 `N` 值，以及種子的最後一個 `R - N` 值。
+此引擎會使用週期關聯 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 來產生使用者指定的不帶正負號整數類型值，其中，如果 `x(i - S) - x(i - R) - cy(i - 1) < 0`，則 `cy(i)` 的值為 `1`，否則為 `0`，而`M` 的值為 `2`<sup>W</sup>。引擎的狀態是一個進位指標加上*R*值。 這些值包含的最後*R*值時所傳回`operator()`已至少呼叫*R*逾，否則`N`傳回的值，而最後`R - N`之種子的值。
 
 範本引數 `UIntType` 必須夠大，才能保留最多 `M - 1` 個值。
 

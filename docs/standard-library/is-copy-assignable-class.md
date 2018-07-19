@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842816"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960777"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable 類別
 
@@ -36,11 +36,11 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是具有複製指派運算子的類別，則 predicate 類型的執行個體保留 true，否則保留 false。 相當於 is_assignable\<Ty&, const Ty&>。
+如果型別述詞的執行個體保留 true 的型別*Ty*是具有複製指派運算子，否則為 false 的類別。 相當於 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="requirements"></a>需求
 

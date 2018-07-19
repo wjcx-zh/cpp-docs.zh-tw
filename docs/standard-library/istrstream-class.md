@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855314"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957281"
 ---
 # <a name="istrstream-class"></a>istrstream 類別
 
@@ -82,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>參數
 
-`count` 緩衝區長度 ( `ptr`)。
+*計數*緩衝區的長度 (*ptr*)。
 
-`ptr` 初始化緩衝區的內容。
+*ptr*將緩衝區初始化所用的內容。
 
 ### <a name="remarks"></a>備註
 
-所有建構函式都會呼叫 [istream](../standard-library/istream-typedefs.md#istream)( **sb**) 來將基底類別初始化，其中 **sb** 是 [strstreambuf](../standard-library/strstreambuf-class.md) 類別的預存物件。 前兩個建構函式還會一併呼叫 `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ) 來將 **sb** 初始化。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
+所有建構函式初始化基底類別，藉由呼叫[istream](../standard-library/istream-typedefs.md#istream)(**sb**)，其中`sb`是類別的預存的物件[strstreambuf](../standard-library/strstreambuf-class.md)。 前兩個建構函式也會初始化`sb`藉由呼叫`strstreambuf`(( **const** `char` \*) `ptr`，0)。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -128,7 +128,7 @@ char *str();
 
 ### <a name="example"></a>範例
 
-如需使用 **str** 的範例，請參閱 [strstream::str](../standard-library/strstreambuf-class.md#str)。
+請參閱[strstream:: str](../standard-library/strstreambuf-class.md#str)如需範例，會使用`str`。
 
 ## <a name="see-also"></a>另請參閱
 

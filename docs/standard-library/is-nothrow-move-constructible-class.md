@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd7ab0593d3a8d6486f2f29cd796656407e14cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1883f051a1df74256da533cf2aba19626b9f19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959455"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible 類別
 
@@ -36,11 +36,11 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 具有 nothrow 移動建構函式，則述詞類型的執行個體為 true，否則為 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*具有 nothrow 移動建構函式，否則為 false。
 
 ## <a name="requirements"></a>需求
 

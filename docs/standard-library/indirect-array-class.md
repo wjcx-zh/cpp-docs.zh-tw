@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845761"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959503"
 ---
 # <a name="indirectarray-class"></a>indirect_array 類別
 
@@ -31,11 +31,11 @@ ms.locfileid: "33845761"
 
 ## <a name="remarks"></a>備註
 
-此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 **valarray<size_t>** 類別的 **xa** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。
+此類別描述可儲存物件的參考`va`類別的[valarray](../standard-library/valarray-class.md)**\<型別 >**，以及物件`xa`類別的`valarray<size_t>`，其中描述要從選取的元素序列`valarray<Type>`物件。
 
-您只能藉由撰寫 **va[xa]** 格式的運算式來建構 **indirect_array\<Type>** 物件。 indirect_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。
+您建構`indirect_array<Type>`只能藉由撰寫運算式的格式物件`va[xa]`。 Indirect_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。
 
-此序列是由 **xa.**[size](../standard-library/valarray-class.md#size) 元素所構成，其中元素 `I` 會變成 **va** 內的索引 **xa**[ `I`]。
+序列組成**xa。**[大小](../standard-library/valarray-class.md#size)項目，其中項目`I`會變成索引**xa**[ `I`] 內`va`。
 
 ## <a name="example"></a>範例：
 

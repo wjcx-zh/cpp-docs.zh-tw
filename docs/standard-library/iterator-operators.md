@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954691"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 運算子
 
@@ -53,9 +53,9 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**迭代器**。
+*左*型別的物件`iterator`。
 
-`right` 型別的物件**迭代器**。
+*右*型別的物件`iterator`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -155,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-`left` 類型迭代器物件。
+*左*類型迭代器的物件。
 
-`right` 類型迭代器物件。
+*右*類型迭代器的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果迭代器物件相等，便會傳回 `true`；如果迭代器物件不相等，則會傳回 `false`。
+**true**迭代器物件是否相等;**false**迭代器物件是否不相等。
 
 ### <a name="remarks"></a>備註
 
 一個迭代器物件與另一個迭代器物件如果定址對象是容器中的相同元素，兩者便相等。 如果兩個迭代器指向容器中不同的元素，它們便不相等。
 
-前兩個範本運算子只有在 `left` 和 `right` 都儲存相同的迭代器時，才會傳回 true。 第三個範本運算子只有在 `left` 和 `right` 都儲存相同的資料流指標時，才會傳回 true。 第四個範本運算子會傳回 ` left.equal ( right)`。
+第一次的兩個範本運算子會傳回則為 true，只有當這兩個*左*並*右*儲存相同的迭代器。 第三個範本運算子會傳回 true，只有當這兩個*左*並*右*儲存相同的資料流指標。 第四個範本運算子會傳回 ` left.equal ( right)`。
 
 ### <a name="example"></a>範例
 
@@ -242,9 +242,9 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**迭代器**。
+*左*型別的物件`iterator`。
 
-`right` 型別的物件**迭代器**。
+*右*型別的物件`iterator`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -331,9 +331,9 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>參數
 
-`left` 類型迭代器物件。
+*左*類型迭代器的物件。
 
-`right` 類型迭代器物件。
+*右*類型迭代器的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -424,9 +424,9 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>參數
 
-`left` 類型迭代器物件。
+*左*類型迭代器的物件。
 
-`right` 類型迭代器物件。
+*右*類型迭代器的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -511,9 +511,9 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>參數
 
-`left` 類型迭代器物件。
+*左*類型迭代器的物件。
 
-`right` 類型迭代器物件。
+*右*類型迭代器的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -613,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>參數
 
-`_Off` Const move_iterator 或 const reverse_iterator，是要位移位置數目。
+*_Off*為常數 move_iterator 或常數 reverse_iterator 是位移的位置數目。
 
-`right` 位移迭代器。
+*右*位移的迭代器。
 
 ### <a name="return-value"></a>傳回值
 
-傳回總和 `right` + `_Off`。
+傳回總和*右* + *_Off*。
 
 ### <a name="example"></a>範例
 
@@ -688,9 +688,9 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>參數
 
-`left` 迭代器。
+*左*迭代器。
 
-`right` 迭代器。
+*右*迭代器。
 
 ### <a name="return-value"></a>傳回值
 

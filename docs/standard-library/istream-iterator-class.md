@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74c62c1d6d80f21054f03f78e0151c2cddf00e2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859221"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959857"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 類別
 
@@ -46,13 +46,13 @@ class istream_iterator
 
 ### <a name="parameters"></a>參數
 
-`Type` 要從輸入資料流擷取的物件類型。
+*型別*要從輸入資料流擷取的物件類型。
 
-`CharType` 表示的字元類型的型別`istream_iterator`。 這個引數是選擇性的，而且預設值是 `char`。
+*CharType*表示的字元類型的型別`istream_iterator`。 這個引數是選擇性的預設值是**char**。
 
-`Traits` 表示的字元類型的型別`istream_iterator`。 這個引數是選用引數，且預設值是 `char_traits`< `CharType`>。
+*Traits*表示的字元類型的型別`istream_iterator`。 這個引數是選用引數，且預設值是 `char_traits`< `CharType`>。
 
-`Distance` 帶正負號的整數類資料類型表示的差異類型`istream_iterator`。 這個引數是選擇性的，而且預設值是 `ptrdiff_t`。
+*距離*的帶正負號的整數類資料類型表示的差異類型`istream_iterator`。 這個引數是選擇性的，而且預設值是 `ptrdiff_t`。
 
 在建構或遞增具有非 null 儲存指標的 istream_iterator 類別物件之後，物件會嘗試從關聯的輸入資料流擷取和儲存 `Type` 類型物件。 如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。
 
@@ -94,7 +94,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Chartype** 同義。
+此類型是範本參數 `Chartype`的同義字。
 
 ### <a name="example"></a>範例
 
@@ -144,11 +144,11 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>參數
 
-`_Istr` 要讀取使用輸入資料流初始化`istream_iterator`。
+*_Istr*會讀取使用的輸入資料流來初始化`istream_iterator`。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會使用 Null 指標將輸入資料流指標初始化，並建立資料流結尾迭代器。 第二個建構函式會使用 *&_Istr* 將輸入資料流指標初始化，然後嘗試擷取並儲存 **Type** 類型的物件。
+第一個建構函式會使用 Null 指標將輸入資料流指標初始化，並建立資料流結尾迭代器。 第二個建構函式初始化帶有的輸入資料流指標 *& _Istr*，然後嘗試擷取並儲存型別的物件`Type`。
 
 資料流結尾迭代器可以用來測試 `istream_iterator` 是否已到達資料流的結尾。
 
@@ -204,7 +204,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ## <a name="op_star"></a>  istream_iterator::operator*
 
-取值運算子會傳回 **Type** 類型 (由 `istream_iterator` 定址) 的預存物件。
+取值運算子傳回 `Type` 類型 (由 `istream_iterator` 定址) 的儲存物件。
 
 ```cpp
 const Type& operator*() const;
@@ -212,7 +212,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>傳回值
 
-**Type** 類型的預存物件。
+類型的預存的物件`Type`。
 
 ### <a name="example"></a>範例
 
@@ -308,7 +308,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員運算會傳回對 **Type** 類型之遞增物件 (擷取自輸入資料流) 的參考，而第二個成員函式則會傳回該物件的複本。
+第一個成員運算子會傳回參考類型之遞增物件`Type`擷取自輸入資料流與第二個成員函式傳回之物件的複本。
 
 ### <a name="example"></a>範例
 
@@ -352,7 +352,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Traits** 同義。
+此類型與範本參數 *Traits* 同義。
 
 ### <a name="example"></a>範例
 

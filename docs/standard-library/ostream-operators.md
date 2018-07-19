@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e818c267f5fed9bd98b5c5998f4b0eac0c09f3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955929"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 運算子
 
@@ -88,17 +88,17 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-`_Ch` 一個字元。
+*_Ch*字元。
 
-`_Elem` 元素類型。
+*_Elem*項目類型。
 
-`_Ostr` A`basic_ostream`物件。
+*_Ostr* A`basic_ostream`物件。
 
-`str` 字元字串。
+*str*字元字串。
 
-`_Tr` 字元特性。
+*_Tr*字元特性。
 
-`val` 型別
+*val*類型
 
 ### <a name="return-value"></a>傳回值
 
@@ -117,7 +117,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-決定開頭位於 `str` 之序列的長度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)，然後插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，則函式會另外插入重複的 `_Ostr.width` - N 填滿字元。 在以下情況重複項目會排在序列之前：當 (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 函式會傳回 `_Ostr`。
+決定長度 N = `traits_type::`[長度](../standard-library/char-traits-struct.md#length)(`str`) 的序列開頭*str*，並將插入順序。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，則函式會另外插入重複的 `_Ostr.width` - N 填滿字元。 重複前面的序列，如果 (`_Ostr`。 [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 此函數會傳回 *_Ostr*。
 
 樣板函式
 
@@ -128,7 +128,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-插入項目 `_Ch`。 如果 1 < `_Ostr.width`，則函式會另外插入 `_Ostr.width` - 1 填滿字元的重複項目。 在以下情況重複項目會排在序列之前：當 `_Ostr.flags & adjustfield != left`。 否則，重複項目會接在序列後面。 它會傳回 `_Ostr`。
+插入項目 `_Ch`。 如果 1 < `_Ostr.width`，則函式會另外插入 `_Ostr.width` - 1 填滿字元的重複項目。 在以下情況重複項目會排在序列之前：當 `_Ostr.flags & adjustfield != left`。 否則，重複項目會接在序列後面。 它會傳回 *_Ostr*。
 
 樣板函式
 
@@ -148,7 +148,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-不同之處在於開頭位於 `str` 之序列的每個項目 `_Ch` 會呼叫 `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) 來轉換為類型 `Elem` 的物件。
+不同之處在於每個項目 *_Ch*的序列開頭*str*轉換為型別的物件`Elem`藉由呼叫`_Ostr.`[放](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[加寬](../standard-library/basic-ios-class.md#widen)(`_Ch`))。
 
 樣板函式
 
@@ -168,7 +168,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-不同之處在於 `_Ch` 會呼叫 `_Ostr.put`( `_Ostr.widen`( `_Ch`)) 來轉換為類型 `Elem` 的物件。
+不同之處在於 *_Ch*轉換為類型的物件`Elem`藉由呼叫`_Ostr.put`( `_Ostr.widen`( `_Ch`))。
 
 樣板函式
 
@@ -208,7 +208,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(插入 `_Ch` 之前並不需要擴展它)。
+(沒有以擴大 *_Ch*之前將其插入。)
 
 樣板函式
 
@@ -219,7 +219,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-傳回 `_Ostr` << ( `const char *`) `str`。
+會傳回`_Ostr`<< (`const char *`) `str`。
 
 樣板函式
 
@@ -230,7 +230,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-傳回 `_Ostr` << ( `char`) `_Ch`。
+會傳回`_Ostr`<< (`char`) `_Ch`。
 
 範本函式：
 
@@ -241,7 +241,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-傳回 `_Ostr` << ( `const char *`) `str`。
+會傳回`_Ostr`<< (`const char *`) `str`。
 
 範本函式：
 
@@ -252,9 +252,9 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-傳回 `_Ostr` << ( `char`) `_Ch`。
+會傳回`_Ostr`<< (`char`) `_Ch`。
 
-樣板函式：
+範本函式：
 
 ```cpp
 template <class _Elem, class _Tr, class T>

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab496a5de8062f6888b92b318788ff72345bc7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e76bd39477c92d075f1dba8cf14b912c0f616e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955906"
 ---
 # <a name="badalloc-class"></a>bad_alloc 類別
 
@@ -39,7 +39,7 @@ virtual ~bad_alloc();
 
 ## <a name="remarks"></a>備註
 
-**what** 所傳回的值是一個實作定義的 C 字串。 所有成員函式都不會擲回任何例外狀況。
+所傳回的值`what`是一個實作定義的 C 字串。 所有成員函式都不會擲回任何例外狀況。
 
 ## <a name="requirements"></a>需求
 

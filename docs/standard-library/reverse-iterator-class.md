@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30151d18126d86256c189355c19f61a694bb3267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1610013027305d75a9520c8882b1900fe18c016c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955367"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 類別
 
@@ -52,13 +52,13 @@ RandomIterator 代表要調整為反向操作的迭代器的類型。
 
 ## <a name="remarks"></a>備註
 
-現有的 C++ 標準程式庫容器也會定義 `reverse_iterator` 和 `const_reverse_iterator` 類型，並且具有可傳回反向迭代器的成員函式 `rbegin` 和 `rend`。 這些迭代器有覆寫語意。 `reverse_iterator`配接器，補充這項功能，因為它提供插入語意，也可以搭配資料流。
+現有的 C++ 標準程式庫容器也會定義 `reverse_iterator` 和 `const_reverse_iterator` 類型，並且具有可傳回反向迭代器的成員函式 `rbegin` 和 `rend`。 這些迭代器有覆寫語意。 `reverse_iterator`配接器會補充這項功能，因為它提供插入語意，也可以搭配資料流。
 
-`reverse_iterator`需要雙向的迭代器不可以呼叫任何成員函式`operator+=`， `operator+`， `operator-=`， `operator-`，或`operator[]`，這可能只用於隨機存取迭代器。
+`reverse_iterator`需要雙向迭代器不可以呼叫任何成員函式`operator+=`， `operator+`， `operator-=`， `operator-`，或`operator[]`，這可能僅適用於隨機存取迭代器。
 
-迭代器的範圍是 [*第一個*，*最後*)，其中在左邊的大括號表示包含*第一個*和右括號表示包含的項目，但不含*最後*本身。 反向序列中包含相同項目 [ **rev** - *第一個*， **rev** - *最後*)，如果*最後*是一個過去的結尾中的項目序列，則第一個項目**rev** - *第一個*在反向的序列點\*(*最後*-1)。 將所有反向迭代器與其基礎迭代器關聯的識別為：
+迭代器範圍 [*第一個*，*上次*)，其中左方括號表示包含*第一個*和右括號表示包含項目，但不含*最後一個*本身。 相同的項目會包含在反向序列 [ **rev** - *第一個*， **rev** - *上次*) 讓如果*上次*是一個過去-結尾中的項目序列，則第一個項目**rev** - *第一個*中的反向的序列點\*(*上次*-1)。 將所有反向迭代器與其基礎迭代器關聯的識別為：
 
-&\*( **reverse_iterator** (*我*)) = = （& s)\*(*我*-1)。
+&\*( **reverse_iterator** (*我*)) = = &\*(*我*-1)。
 
 實際上，這表示在反向序列中 reverse_iterator 會參考迭代器在原始序列中所參考項目之外 (右側) 一個位置的項目。 因此，如果迭代器定址序列 (2, 4, 6, 8) 中的項目 6，則 `reverse_iterator` 會定址反向序列 (8, 6, 4, 2) 中的項目 4。
 
@@ -275,7 +275,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 
 ### <a name="parameters"></a>參數
 
-`Off` 要加入的反向迭代器的位移。
+*關閉*可以加入至反向迭代器的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -423,7 +423,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 
 ### <a name="parameters"></a>參數
 
-`Off` 要遞增迭代器的位移。
+*關閉*遞增迭代器的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -495,7 +495,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 
 ### <a name="parameters"></a>參數
 
-`Off` 要從 reverse_iterator 減去位移。
+*關閉*要從 reverse_iterator 中減去的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -644,7 +644,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 ### <a name="parameters"></a>參數
 
-`Off` 要減去的位移`reverse_iterator`。
+*關閉*要從中減去的位移`reverse_iterator`。
 
 ### <a name="remarks"></a>備註
 
@@ -797,7 +797,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="parameters"></a>參數
 
-`Off` 從位移`reverse_iterator`位址。
+*關閉*時差`reverse_iterator`位址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -950,7 +950,7 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="example"></a>範例
 
-如需如何宣告和使用 **reference** 的範例，請參閱 [reverse_iterator::operator&#91;&#93;](#op_at) 或 [reverse_iterator::operator*](#op_star)。
+請參閱[reverse_iterator:: operator&#91; &#93; ](#op_at)或是[reverse_iterator:: operator *](#op_star)如需如何宣告及使用的範例`reference`。
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -966,7 +966,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 迭代器，是要調整為`reverse_iterator`。
+*右*迭代器，為適用於`reverse_iterator`。
 
 ### <a name="return-value"></a>傳回值
 

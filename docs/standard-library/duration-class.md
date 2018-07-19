@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847942"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956862"
 ---
 # <a name="duration-class"></a>duration 類別
 
@@ -120,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>參數
 
-`Rep2` 算術類型來表示的刻度數。
+*Rep2*代表刻度數目的算術類型。
 
-`Period2` A`std::ratio`來代表刻度期間單位的秒數的樣板特製化。
+*Period2* A`std::ratio`範本特製化，表示單位的滴答期間的秒數。
 
-`R` 預設期間的刻度數。
+*R*預設期間的滴答數。
 
-`Dur` 一段時間所指定的刻度數`Period2`。
+*工期*所指定的期間的滴答數字*Period2*。
 
 ### <a name="remarks"></a>備註
 
 預設建構函式會建構未初始化的物件。 使用空的大括號初始化的值，可初始化物件，以表示零個時鐘刻度的時間間隔。
 
-第二，範本引數建構函式 (1) 會使用預設的 `std::ratio<1>` 週期建構一個物件，代表 `R` 個時鐘刻度的時間間隔。 若要避免無條件捨去刻度計數，從表示法型別 `Rep2` 建構持續時間物件，這是錯誤，因為當`duration::rep` 無法被視為浮點型別，該型別可被視為浮點型別。
+第二個、 一個範本引數建構函式會建構一個物件所表示的時間間隔*R*時鐘刻度使用的預設期間`std::ratio<1>`。 若要避免無條件捨去刻度計數，它是建構持續時間物件，表示型別從錯誤*Rep2* ，可被視為浮點類型`duration::rep`無法被視為浮點型別。
 
-第三，範本引數建構函式 (2) 會建構一個物件，表示其長度是 `Dur` 所指定之時間間隔的時間間隔。 為了避免截斷滴答計數，而透過另一個類型為 *incommensurable* 的 duration 物件搭配目標類型，來建構 duration 物件，這是錯誤的做法。
+第三個、 兩個範本引數建構函式會建構一個物件，表示其長度是所指定的時間間隔的時間間隔*Dur*。 為了避免截斷滴答計數，而透過另一個類型為 *incommensurable* 的 duration 物件搭配目標類型，來建構 duration 物件，這是錯誤的做法。
 
 如果 `D2` 無法被視為浮點類型，而且 [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) 不是 1，則 duration 類型 `D1` 是搭配另一個 duration 類型 `D2` 的 *incommensurable*。
 
-除非 `Rep2` 可以隱含轉換為 `rep`，且 `treat_as_floating_point<rep>` *為 true* 或 `treat_as_floating_point<Rep2>` *為 false*，否則第二個建構函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
+除非*Rep2*隱含地轉換成`rep`任一個`treat_as_floating_point<rep>`*成立*或`treat_as_floating_point<Rep2>` *false*，第二個建構函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
 
 除非轉換沒有引發溢位，且 `treat_as_floating_point<rep>`*為 true*，或 `ratio_divide<Period2, period>::den` 等於 1 且 `treat_as_floating_point<Rep2>` *為 false*，否則第三個建構函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
 
@@ -202,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>參數
 
-`Div` 第一個方法，`Div`代表滴答計數。 若為第二個方法，`Div` 是包含滴答計數的 `duration` 物件。
+*Div*第一種方法，如*Div*代表滴答計數。 第二個方法中， *Div*是`duration`物件，其中包含滴答計數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -218,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>參數
 
-`Mult` 所指定型別的值`duration::rep`。
+*Mult*所指定型別的值`duration::rep`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -234,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>參數
 
-`Div` 所指定型別的值`duration::rep`。
+*Div*所指定型別的值`duration::rep`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -274,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-`Dur` A`duration`物件。
+*工期*A`duration`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -290,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-`Dur` A`duration`物件。
+*工期*A`duration`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -314,7 +314,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>參數
 
-`Div` 除數，它會持續時間物件或代表滴答計數的值。
+*Div*除數，它是持續時間物件或代表滴答計數的值。
 
 ### <a name="remarks"></a>備註
 

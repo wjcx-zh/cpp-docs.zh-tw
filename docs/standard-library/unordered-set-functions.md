@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 515d16cf8b9f11f5e9eb0b9699a0f72a19a64053
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856605"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956666"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 函式
 
@@ -34,17 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`Key` 索引鍵的類型。
+*Key*  
+ 索引鍵類型。
 
-`Hash` 雜湊函式物件類型。
+*雜湊*  
+ 雜湊函式物件類型。
 
-`Pred` 相等比較函式物件類型。
+*預測*  
+ 相等比較函式物件類型。
 
-`Alloc` 配置器類別。
+*配置*  
+ 配置器類別。
 
-`left` 要交換的第一個容器。
+*left*  
+ 要交換的第一個容器。
 
-`right` 要交換的第二個容器。
+*right*  
+ 要交換的第二個容器。
 
 ### <a name="remarks"></a>備註
 
@@ -120,17 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-`Key` 索引鍵的類型。
+*Key*  
+ 索引鍵類型。
 
-`Hash` 雜湊函式物件類型。
+*雜湊*  
+ 雜湊函式物件類型。
 
-`Pred` 相等比較函式物件類型。
+*預測*  
+ 相等比較函式物件類型。
 
-`Alloc` 配置器類別。
+*配置*  
+ 配置器類別。
 
-`left` 要交換的第一個容器。
+*left*  
+ 要交換的第一個容器。
 
-`right` 要交換的第二個容器。
+*right*  
+ 要交換的第二個容器。
 
 ### <a name="remarks"></a>備註
 

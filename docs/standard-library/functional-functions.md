@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14e656d77247984ba3306d6efff78e6cca713cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9033ba128714edde2593a09fbfb46f9f65d195ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957447"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函式
 
@@ -70,19 +70,19 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>參數
 
-`Fty` 要呼叫的物件類型。
+*Fty*要呼叫的物件類型。
 
-`TN` 第 n 個型別呼叫引數。
+*TN*第 n 個呼叫引數的類型。
 
-`fn` 要呼叫的物件。
+*fn*来呼叫的物件。
 
-`tN` 第 n 個呼叫的引數。
+*tN*第 n 個呼叫引數。
 
 ### <a name="remarks"></a>備註
 
 `Fty, T1, T2, ..., TN` 類型必須是複製建構，且對於 `w1, w2, ..., wN` 某些值來說，`INVOKE(fn, t1, ..., tN)` 必須是有效的運算式。
 
-第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 效果`g(u1, u2, ..., uM)`是`INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`，其中`cv`是的 cv 限定詞`g`值和繫結的引數型別`v1, v2, ..., vN`判定為以下指定。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。
+第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 效果`g(u1, u2, ..., uM)`已`INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`，其中`cv`是 cv 限定詞`g`的值和類型的繫結的引數`v1, v2, ..., vN`判定為以下指定。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。
 
 第二個範本函式會傳回含 `result_type` 巢狀類型的轉送呼叫包裝函式 `g`，該類型與 `Ret` 同義。 `g(u1, u2, ..., uM)` 的效果為 `INVOKE(f, v1, v2, ..., vN, Ret)`，其中 `cv` 是 `g` 的 cv 限定詞，而繫結引數 `v1, v2, ..., vN` 的值和類型則依下列指定方式來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單和指定的傳回類型，來製作可呼叫物件。
 
@@ -90,7 +90,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 如果 `ti` 是 `reference_wrapper<T>` 類型，`vi` 引數即為 `ti.get()`，而其 `Vi` 類型為 `T&`；
 
-如果 `std::is_bind_expression<Ti>::value` 的值是 `true`，`vi` 引數即為 `ti(u1, u2, ..., uM)`，而其 `Vi` 類型為 `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`；
+如果值`std::is_bind_expression<Ti>::value`已 **，則為 true**引數`vi`是`ti(u1, u2, ..., uM)`及其類型`Vi`是`result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
 如果 `std::is_placeholder<Ti>::value` 的 `j` 值不是零，`vi` 引數即為 `uj`，而其 `Vi` 類型為 `Uj&`；
 
@@ -165,19 +165,19 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>參數
 
-`func` 要轉換成一元函式物件的二元函式物件。
+*func*二元函式物件轉換成一元函式物件。
 
-`left` 二元函式物件的第一個引數會繫結的值。
+*左*二元函式物件的第一個引數所繫結的值。
 
 ### <a name="return-value"></a>傳回值
 
-一元函式物件所產生的繫結至值的二元函式物件的第一個引數`left`。
+一元函式物件所產生的繫結至值的二元函式物件的第一個引數*左*。
 
 ### <a name="remarks"></a>備註
 
 函式繫結器是一種函式配接器，其會傳回函式物件，因此可用於特定類型的函式組合，以建構更複雜且強大的運算式。
 
-如果 `func` 是 `Operation` 類型的物件且 `c` 是常數，則 `bind1st` ( `func`, `c`) 相當於 [binder1st](../standard-library/binder1st-class.md) 類別建構函式 `binder1st`< `Operation`> ( `func`, `c`)，而且更方便。
+如果*func*是類型的物件`Operation`並`c`是常數，則`bind1st`( `func`， `c`) 相當於[binder1st](../standard-library/binder1st-class.md)類別建構函式`binder1st` <  `Operation`> ( `func`， `c`) 而且更方便。
 
 ### <a name="example"></a>範例
 
@@ -257,19 +257,19 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>參數
 
-`func` 要轉換成一元函式物件的二元函式物件。
+*func*二元函式物件轉換成一元函式物件。
 
-`right` 二元函式物件的第二個引數會繫結的值。
+*右*二元函式物件的第二個引數所繫結的值。
 
 ### <a name="return-value"></a>傳回值
 
-一元函式物件所產生的繫結至值的二元函式物件的第二個引數`right`。
+一元函式物件所產生的繫結至值的二元函式物件的第二個引數*右*。
 
 ### <a name="remarks"></a>備註
 
 函式繫結器是一種函式配接器，其會傳回函式物件，因此可用於特定類型的函式組合，以建構更複雜且強大的運算式。
 
-如果 `func` 是 **Operation** 類型的物件且 `c` 是常數，則 `bind2nd` ( `func`, `c` ) 相當於 [binder2nd](../standard-library/binder2nd-class.md) 類別建構函式 **binder2nd\<Operation>** ( `func`, `c` )，而且更方便。
+如果*func*是類型的物件`Operation`並`c`是常數，則`bind2nd`( `func`， `c` ) 相當於[binder2nd](../standard-library/binder2nd-class.md)類別建構函式**binder2nd\<作業 >** ( `func`， `c` )、 更方便。
 
 ### <a name="example"></a>範例
 
@@ -362,11 +362,11 @@ struct bit_and<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator&`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator&`會指定或推斷類型的運算元。
 
-`Left` 左的運算元的位元 AND 運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*位元的 AND 運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 右運算元的位元 AND 運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*位元的 AND 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -398,9 +398,9 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>參數
 
-`Type` 支援的一元 （unary） 的型別`operator~`。
+*型別*支援的一元 （unary） 的型別`operator~`。
 
-`Right` 位元補數運算的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完整轉寄 `Type` 推斷類型的左值或右值參考引數。
+*右*位元補數運算的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送 lvalue 或 rvalue 參考類型的引數推斷*型別*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -434,11 +434,11 @@ struct bit_or<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator|`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator|`會指定或推斷類型的運算元。
 
-`Left` 位元 OR 運算的左的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*位元 OR 運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 位元 OR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*位元 OR 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -472,11 +472,11 @@ struct bit_xor<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator^`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator^`會指定或推斷類型的運算元。
 
-`Left` 左的運算元的位元 XOR 運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*位元 XOR 運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 右運算元的位元 XOR 運算。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*位元 XOR 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -500,9 +500,9 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>參數
 
-`Ty` 將引數的型別。
+*Ty*包裝的引數的類型。
 
-`arg` 將引數。
+*arg*包裝的引數。
 
 ### <a name="remarks"></a>備註
 
@@ -552,17 +552,17 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>參數
 
-`Ret` 包裝函式傳回型別。
+*Ret*包裝函式的傳回型別。
 
-`Ty` 成員函式指標的類型。
+*Ty*成員函式指標的類型。
 
 ### <a name="remarks"></a>備註
 
 範本函式會傳回含弱式結果類型的簡單呼叫包裝函式 `cw`，以讓運算式 `cw(t, a2, ..., aN)` 相當於 `INVOKE(pm, t, a2, ..., aN)`。 它不會擲回任何例外狀況。
 
-僅有當 `Ty` 類型是含有 cv 限定詞 `cv` 的成員函式指標 (不需使用引數) 時，傳回的呼叫包裝函式會衍生自 `std::unary_function<cv Ty*, Ret>` (因此 `result_type` 巢狀類型會定義為與 `Ret` 同義，而 `argument_type` 巢狀類型則與 `cv Ty*` 同義)。
+傳回的呼叫包裝函式衍生自`std::unary_function<cv Ty*, Ret>`(進而定義巢狀的類型`result_type`同義*Ret*和巢狀型別`argument_type`同義`cv Ty*`) 只有當類型*Ty*是使用 cv 限定詞的成員函式的指標`cv`採用任何引數。
 
-僅有當 `Ty` 類型是含有 cv 限定詞 `cv` 的成員函式指標 (需使用 `T2` 類型的一個引數) 時，傳回的呼叫包裝函式會衍生自 `std::binary_function<cv Ty*, T2, Ret>` (因此 `result_type` 巢狀類型會定義為與 `Ret` 同義、`first argument_type` 巢狀類型與 `cv Ty*` 同義，且 `second argument_type` 巢狀類型與 `T2` 同義)。
+傳回的呼叫包裝函式衍生自`std::binary_function<cv Ty*, T2, Ret>`(進而定義巢狀的類型`result_type`同義*Ret*，則巢狀類型`first argument_type`同義`cv Ty*`，以及巢狀的類型`second argument_type`的同義字`T2`) 只有當型別*Ty*是使用 cv 限定詞的成員函式的指標`cv`採用一個引數的型別`T2`。
 
 ### <a name="example"></a>範例
 
@@ -623,7 +623,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>參數
 
-`pmem` 類別成員函式的指標**類型**轉換成函式物件。
+*pmem*類別的成員函式的指標`Type`轉換成函式物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -709,11 +709,11 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>參數
 
-`pmem` 類別成員函式的指標`Type`轉換成函式物件。
+*pmem*類別的成員函式的指標`Type`轉換成函式物件。
 
 ### <a name="return-value"></a>傳回值
 
-類別為 `mem_fun_ref_t` 或 `mem_fun1_ref_t` 的 `const` 或 `non_const` 函式物件 。
+A **const**或是`non_const`函式物件的型別`mem_fun_ref_t`或`mem_fun1_ref_t`。
 
 ### <a name="example"></a>範例
 
@@ -804,7 +804,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>參數
 
-`pred` 要成為相反值的一元述詞。
+*pred*要變為負值的一元述詞。
 
 ### <a name="return-value"></a>傳回值
 
@@ -875,7 +875,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>參數
 
-`func` 二元述詞来成為相反值。
+*func*要變為負值的二元述詞。
 
 ### <a name="return-value"></a>傳回值
 
@@ -953,7 +953,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>參數
 
-`pfunc` 要轉換成可調適性函式的一元或二元函式指標。
+*pfunc*一元或二元函式指標轉換成可調適性函式。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1072,11 +1072,11 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>參數
 
-`Fty` 函式物件所控制的類型。
+*Fty*函式物件所控制的類型。
 
-`f1` 第一個函式物件。
+*f1*第一個函式物件。
 
-`f2` 第二個函式物件。
+*f2*第二個函式物件。
 
 ### <a name="remarks"></a>備註
 

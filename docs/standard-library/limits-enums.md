@@ -7,12 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960644"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列舉
 
@@ -35,11 +35,11 @@ enum float_denorm_style {
 
 此列舉會傳回：
 
-- **denorm_indeterminate**，表示在轉譯階段無法判斷反正規化形式是否存在。
+- `denorm_indeterminate` 如果無法判斷反正規化形式是否存在，在轉譯時。
 
-- **denorm_absent**，表示反正規化形式不存在。
+- `denorm_absent` 如果反正規化的形式不存在。
 
-- **denorm_present**，表示反正規化形式存在。
+- `denorm_present` 如果反正規化的形式存在。
 
 ### <a name="example"></a>範例
 
@@ -62,15 +62,15 @@ enum float_round_style {
 
 此列舉會傳回：
 
-- **round_indeterminate**，表示無法判斷捨入方法。
+- `round_indeterminate` 如果無法判斷捨入方法。
 
-- **round_toward_zero**，表示捨入至零。
+- `round_toward_zero` 如果在輪趨近於零。
 
-- **round_to_nearest**，表示捨入至最接近的整數。
+- `round_to_nearest` 如果在輪到最接近的整數。
 
-- **round_toward_infinity**，表示以背離於零的方式捨入。
+- `round_toward_infinity` 如果背離零。
 
-- **round_toward_neg_infinity**，表示捨入至較小的負數。
+- `round_toward_neg_infinity` 如果在輪負值的整數。
 
 ### <a name="example"></a>範例
 

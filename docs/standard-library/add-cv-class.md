@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958139"
 ---
 # <a name="addcv-class"></a>add_cv 類別
 
-從類型建立 const volatile 類型。
+可讓**const volatile**從型別類型。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +44,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>備註
 
-除非 *T* 已經有 cv 限定詞、是參考，或是函式，否則等同於 [add_volatile](../standard-library/add-volatile-class.md) 和 [add_const](../standard-library/add-const-class.md) 所修改之 *T* 的已修改類型 `add_cv<T>` 執行個體具有 `type` 成員 typedef。
+已修改類型的執行個體`add_cv<T>`已經`type`成員**typedef**相當於*T*所修改之[add_volatile](../standard-library/add-volatile-class.md)和[add_const](../standard-library/add-const-class.md)，除非*T*已經有 cv 限定詞、 是參考，或為函式。
 
 `add_cv_t<T>` 協助程式類型是存取 `add_cv<T>` 成員 typedef `type` 的捷徑。
 

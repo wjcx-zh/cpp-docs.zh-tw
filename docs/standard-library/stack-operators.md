@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 5d3bafd2d3112a2f4155f55a554b6c9c2e351b1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c4e2f6b0b86e7b13c917eaf50d7f7dd0a55d9d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955757"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; 運算子
 
@@ -44,9 +44,9 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**堆疊**。
+*左*型別的物件`stack`。
 
-`right` 型別的物件**堆疊**。
+*右*型別的物件`stack`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -107,9 +107,9 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**堆疊**。
+*左*型別的物件`stack`。
 
-`right` 型別的物件**堆疊**。
+*右*型別的物件`stack`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -189,9 +189,9 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**堆疊**。
+*左*型別的物件`stack`。
 
-`right` 型別的物件**堆疊**。
+*右*型別的物件`stack`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -254,9 +254,9 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**堆疊**。
+*左*型別的物件`stack`。
 
-`right` 型別的物件**堆疊**。
+*右*型別的物件`stack`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -317,9 +317,9 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**堆疊**。
+*左*型別的物件`stack`。
 
-`right` 型別的物件**堆疊**。
+*右*型別的物件`stack`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -384,9 +384,9 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**堆疊**。
+*左*型別的物件`stack`。
 
-`right` 型別的物件**堆疊**。
+*右*型別的物件`stack`。
 
 ### <a name="return-value"></a>傳回值
 

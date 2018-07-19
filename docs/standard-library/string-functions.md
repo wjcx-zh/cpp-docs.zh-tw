@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0089a7259601b766bff3b470c5ba23c1b9952fb6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954899"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函式
 
@@ -85,39 +85,39 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>參數
 
-`is` 輸入資料流，從中所要擷取的字串。
+*是*輸入的字串是要擷取的資料流。
 
-`str` 字串，其中會從輸入資料流讀取字元。
+*str*其中會從輸入資料流讀取字元的字串。
 
-`delim` 行的分隔符號。
+*delim*行的分隔符號。
 
 ### <a name="return-value"></a>傳回值
 
-輸入資料流 `is`。
+輸入資料流*是*。
 
 ### <a name="remarks"></a>備註
 
-標記為 `(1)` 的一對函式簽章，會從 `is` 擷取字元，直到找到 `delim`，並將字元儲存在 `str` 中。
+一對函式簽章標示`(1)`擷取其字元*是*直到*delim*找到，則將它們儲存在*str*。
 
-標記為 `(2)` 的一對函式簽章，會使用新行做為預設的行分隔符號，並表現為 **getline**( `is`, `str`, `is`. `widen`(' `\n`'))。
+一對函式簽章標示`(2)`新行字元做為預設的行分隔符號，並表現**getline**(`is`， `str`， `is`。 `widen`(' `\n`'))。
 
 每對的第二個函式是第一個函式的類比，以支援 [rvalue 參考](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 當發生下列其中一項時，會停止擷取：
 
-- 在檔案結尾，`is` 的內部狀態旗標設定為 `ios_base::eofbit`。
+- 在檔案結尾，在此情況下的內部狀態旗標*已*設定為`ios_base::eofbit`。
 
-- 函式擷取比較等於 **delim** 的項目之後，既未放回項目，也未將項目附加到受控制的序列。
+- 此函式擷取到與 `delim` 比較為相等的元素之後；在此情況下，不會將此元素放回或附加至受控制的序列。
 
-- 函式擷取 `str.`[max_size](../standard-library/basic-string-class.md#max_size) 項目之後，將 `is` 的內部狀態旗標設為 `ios_base::failbit`。
+- 在函式擷取`str.` [max_size](../standard-library/basic-string-class.md#max_size)項目，在其中案例的內部狀態旗標*會*設為`ios_base::failbit`。
 
-- 這些以外的其他錯誤先前已列出，其中 `is` 的內部狀態旗標設定為 `ios_base::badbit`。
+- 以外的一些其他錯誤先前已列出，在此情況下的內部狀態旗標*是*設為 `ios_base::badbit`
 
 如需內部狀態旗標相關的資訊，請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。
 
-如果函式沒有擷取任何元素，`is` 的內部狀態旗標會設定為 `ios_base::failbit`。 在任何情況下，`getline` 會傳回 `is`。
+如果函式未不擷取任何項目，內部狀態旗標*已*設定為`ios_base::failbit`。 在任何情況下，`getline`會傳回*是*。
 
-如果擲回例外狀況，`is` 和 `str` 會處於有效狀態。
+如果擲回例外狀況，*已*並*str*處於有效狀態。
 
 ### <a name="example"></a>範例
 
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="stod"></a>  stod
 
-將字元序列轉換為 `double`。
+將字元序列**double**。
 
 ```cpp
 double stod(
@@ -182,16 +182,16 @@ double stod(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
 
 ### <a name="return-value"></a>傳回值
 
-`double` 值。
+**Double**值。
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `double` 值，如同藉由呼叫 `strtod( str.c_str(), _Eptr)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**double**如同呼叫`strtod( str.c_str(), _Eptr)`，其中`_Eptr`是內部函式的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="stof"></a>  stof
 
@@ -211,8 +211,8 @@ float stof(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -220,7 +220,7 @@ float stof(
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `float` 值，如同藉由呼叫 `strtof( str.c_str(), _Eptr)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**float**如同呼叫`strtof( str.c_str(), _Eptr)`，其中`_Eptr`是內部函式的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="stoi"></a>  stoi
 
@@ -246,21 +246,21 @@ int stoi(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|傳回時包含第一個未轉換字元的索引。|
-|`base`|要使用的數字基底。|
+|*str*|要轉換的字元序列。|
+|*idx*|傳回時包含第一個未轉換字元的索引。|
+|*base*|要使用的數字基底。|
 
 ### <a name="remarks"></a>備註
 
-函式 `stoi` 會將 `str` 中的字元序列轉換為類型 `int`，並傳回值。 例如，若傳遞字元序列 "10"，則 `stoi` 的傳回值是整數 10。
+函式`stoi`中的字元序列轉換*str*類型的值**int** ，並傳回值。 例如，若傳遞字元序列 "10"，則 `stoi` 的傳回值是整數 10。
 
 以 `stoi` 呼叫時， `strtol` 運作起來就像單一位元組字元的 `strtol( str.c_str(), _Eptr, idx)` 函式，其中 `_Eptr` 是函式內部的物件；但以類似的方式 `wcstol` 呼叫時，則類似寬字元的 `wcstol(Str.c_str(), _Eptr, idx)` 函式。 如需詳細資訊，請參閱[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)。
 
-如果`str.c_str() == *_Eptr`，`stoi`類型的物件就會擲回`invalid_argument`。 如果這類呼叫會設定 `errno`，或傳回的值無法代表類型 `int` 的物件，就會擲回類型 `out_of_range` 的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr - str.c_str()` 儲存於 `*idx` 中。
+如果`str.c_str() == *_Eptr`，`stoi`類型的物件就會擲回`invalid_argument`。 如果這類呼叫會設定`errno`，則傳回的值無法表示為型別的物件**int**，就會擲回的型別物件`out_of_range`。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr - str.c_str()`在`*idx`。
 
 ## <a name="stol"></a>  stol
 
-將字元序列轉換為 `long`。
+將字元序列**長**。
 
 ```cpp
 long stol(
@@ -278,9 +278,9 @@ long stol(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
-|`base`|要使用的數字基底。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
+|*base*|要使用的數字基底。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -288,11 +288,11 @@ long stol(
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `long` 值，如同藉由呼叫 `strtol( str.c_str(), _Eptr, idx)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**long**如同呼叫`strtol( str.c_str(), _Eptr, idx)`，其中`_Eptr`是內部函式的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="stold"></a>  stold
 
-將字元序列轉換為 `long double`。
+將字元序列**長雙精度**。
 
 ```cpp
 double stold(
@@ -308,20 +308,20 @@ double stold(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
 
 ### <a name="return-value"></a>傳回值
 
-`long double` 值。
+**長雙精度**值。
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `long double` 值，如同藉由呼叫 `strtold( str.c_str(), _Eptr)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**長雙精度**如同呼叫`strtold( str.c_str(), _Eptr)`，其中`_Eptr`是內部函式的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="stoll"></a>  stoll
 
-將字元序列轉換為 `long long`。
+將字元序列**long long**。
 
 ```cpp
 long long stoll(
@@ -339,17 +339,17 @@ long long stoll(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
-|`base`|要使用的數字基底。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
+|*base*|要使用的數字基底。|
 
 ### <a name="return-value"></a>傳回值
 
-`long long` 值。
+**Long long**值。
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `long long` 值，如同藉由呼叫 `strtoll( str.c_str(), _Eptr, idx)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**long long**如同呼叫`strtoll( str.c_str(), _Eptr, idx)`，其中`_Eptr`是內部函式的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="stoul"></a>  stoul
 
@@ -371,9 +371,9 @@ unsigned long stoul(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
-|`base`|要使用的數字基底。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
+|*base*|要使用的數字基底。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -381,11 +381,11 @@ unsigned long stoul(
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `unsigned long` 值，如同藉由呼叫 `strtoul( str.c_str(), _Eptr, idx)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**unsigned long**如同呼叫`strtoul( str.c_str(), _Eptr, idx)`，其中`_Eptr`是內部函式的物件. 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="stoull"></a>  stoull
 
-將字元序列轉換為 `unsigned long long`。
+將字元序列**unsigned long long**。
 
 ```cpp
 unsigned long long stoull(
@@ -403,17 +403,17 @@ unsigned long long stoull(
 
 |參數|描述|
 |---------------|-----------------|
-|`str`|要轉換的字元序列。|
-|`idx`|第一個未轉換的字元的索引值。|
-|`base`|要使用的數字基底。|
+|*str*|要轉換的字元序列。|
+|*idx*|第一個未轉換的字元的索引值。|
+|*base*|要使用的數字基底。|
 
 ### <a name="return-value"></a>傳回值
 
-`unsigned long long` 值。
+**Unsigned long long**值。
 
 ### <a name="remarks"></a>備註
 
-函式會將 `str` 中的元素序列轉換為類型 `val` 的 `unsigned long long` 值，如同藉由呼叫 `strtoull( str.c_str(), _Eptr, idx)` 一樣，其中 `_Eptr` 是函式內部的物件。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果 `idx` 不是 Null 指標，此函式會將 `*_Eptr -  str.c_str()` 儲存於 `*idx` 中，並傳回 `val`。
+函式會轉換中的元素序列*str*的值`val`型別的**unsigned long long**如同呼叫`strtoull( str.c_str(), _Eptr, idx)`，其中`_Eptr`是內部物件函式。 如果 ` str.c_str() == *_Eptr`，其會擲回 `invalid_argument` 類型的物件。 如果這類呼叫會設定 `errno`，其會擲回 `out_of_range` 類型的物件。 否則，如果*idx*不是 null 指標，此函式會`*_Eptr -  str.c_str()`中`*idx`，並傳回`val`。
 
 ## <a name="swap"></a>  swap
 
@@ -426,13 +426,13 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>參數
 
-`left` 一個字串，其元素要與另一個字串交換。
+*左*一個字串，其項目要與另一個字串交換。
 
-`right` 另一個字串，其元素要與第一個字串交換。
+*右*其項目要交換的第一個字串的字串。
 
 ### <a name="remarks"></a>備註
 
-樣板函式會執行特殊的成員函式*左*。[交換](../standard-library/basic-string-class.md#swap)(*右*) 字串，可保證常數的複雜性。
+範本函式會執行特殊的成員函式*左*。[交換](../standard-library/basic-string-class.md#swap)(*右*) 針對字串，可保證常數的複雜性。
 
 ### <a name="example"></a>範例
 
@@ -489,7 +489,7 @@ string to_string(long double Val);
 
 |參數|描述|
 |---------------|-----------------|
-|`Val`|要轉換的值。|
+|*val*|要轉換的值。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -497,23 +497,23 @@ string to_string(long double Val);
 
 ### <a name="remarks"></a>備註
 
-函式會將 `Val` 轉換為函式內部的 `Buf` 陣列物件所儲存的項目序列，就像呼叫 `sprintf(Buf, Fmt, Val)` 一樣，其中 `Fmt` 為
+函式會轉換*Val*陣列物件中儲存的項目序列`Buf`函式內部如同呼叫`sprintf(Buf, Fmt, Val)`，其中`Fmt`是
 
-- 如果 `"%d"` 有 `Val` 類型，則為 `int`。
+- `"%d"` 如果`Val`具有類型**int**
 
-- 若 `"%u"` 有類型 `Val`，則為 `unsigned int`
+- `"%u"` 如果`Val`具有類型**不帶正負號的 int**
 
-- 若 `"%ld"` 有類型 `Val`，則為 `long`
+- `"%ld"` 如果`Val`具有類型**長**
 
-- 若 `"%lu"` 有類型 `Val`，則為 `unsigned long`
+- `"%lu"` 如果`Val`具有類型**不帶正負號長時間**
 
-- 若 `"%lld"` 有類型 `Val`，則為 `long long`
+- `"%lld"` 如果`Val`具有類型**long long**
 
-- 若 `"%llu"` 有類型 `Val`，則為 `unsigned long long`
+- `"%llu"` 如果`Val`具有類型**unsigned long long**
 
-- 如果 `"%f"` 有 `Val` 或 `float` 類型，則為 `double`。
+- `"%f"` 如果`Val`具有類型**浮點數**或**double**
 
-- 若 `"%Lf"` 有類型 `Val`，則為 `long double`
+- `"%Lf"` 如果`Val`具有類型**長雙精度**
 
 函式會傳回 `string(Buf)`。
 
@@ -547,21 +547,21 @@ wstring to_wstring(long double Val);
 
 函式會將 `Val` 轉換為函式內部的 `Buf` 陣列物件所儲存的項目序列，就像呼叫 `swprintf(Buf, Len, Fmt, Val)` 一樣，其中 `Fmt` 為
 
-- 如果 `L"%d"` 有 `Val` 類型，則為 `int`。
+- `L"%d"` 如果`Val`具有類型**int**
 
-- 若 `L"%u"` 有類型 `Val`，則為 `unsigned int`
+- `L"%u"` 如果`Val`具有類型**不帶正負號的 int**
 
-- 若 `L"%ld"` 有類型 `Val`，則為 `long`
+- `L"%ld"` 如果`Val`具有類型**長**
 
-- 若 `L"%lu"` 有類型 `Val`，則為 `unsigned long`
+- `L"%lu"` 如果`Val`具有類型**不帶正負號長時間**
 
-- 若 `L"%lld"` 有類型 `Val`，則為 `long long`
+- `L"%lld"` 如果`Val`具有類型**long long**
 
-- 若 `L"%llu"` 有類型 `Val`，則為 `unsigned long long`
+- `L"%llu"` 如果`Val`具有類型**unsigned long long**
 
-- 如果 `L"%f"` 有 `Val` 或 `float` 類型，則為 `double`。
+- `L"%f"` 如果`Val`具有類型**浮點數**或**double**
 
-- 若 `L"%Lf"` 有類型 `Val`，則為 `long double`
+- `L"%Lf"` 如果`Val`具有類型**長雙精度**
 
 函式會傳回 `wstring(Buf)`。
 

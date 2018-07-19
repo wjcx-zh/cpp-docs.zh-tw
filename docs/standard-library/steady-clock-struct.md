@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569894"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959721"
 ---
 # <a name="steadyclock-struct"></a>steady_clock 結構
 
@@ -43,22 +43,22 @@ struct steady_clock;
 
 |名稱|描述|
 |----------|-----------------|
-|`steady_clock::duration`|同義字`nanoseconds`，定義在\<chrono >。|
-|`steady_clock::period`|同義字`nano`，定義在\<比率 >。|
-|`steady_clock::rep`|同義字**長****長**，用來代表包含具現化的時脈週期數目的型別`duration`。|
+|`steady_clock::duration`|同義字`nanoseconds`，其定義於\<chrono >。|
+|`steady_clock::period`|同義字`nano`，其定義於\<比例 >。|
+|`steady_clock::rep`|同義字**長****長**，用來代表包含具現化的時鐘刻度數目的型別`duration`。|
 |`steady_clock::time_point`|`chrono::time_point<steady_clock>` 的同義字。|
 
 ## <a name="public-functions"></a>公用函式
 
 |功能|描述|
 |--------------|-----------------|
-|`now`|傳回目前的時間為`time_point`值。|
+|`now`|傳回目前時間`time_point`值。|
 
 ## <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|`steady_clock::is_steady`|保有 `true` `steady_clock` 為 steady。|
+|`steady_clock::is_steady`|保存 **，則為 true**。 `steady_clock` 為 steady。|
 
 ## <a name="requirements"></a>需求
 

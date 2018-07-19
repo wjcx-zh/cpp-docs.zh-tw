@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb1eec82e7f9e39f508bd0c9559cec787f6ec9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847633"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960001"
 ---
 # <a name="insertiterator-class"></a>insert_iterator 類別
 
@@ -40,11 +40,11 @@ class insert_iterator;
 
 ### <a name="parameters"></a>參數
 
-`Container` 容器項目是要插入到其中的型別`insert_iterator`。
+`Container` 項目會插入到其中的容器型別`insert_iterator`。
 
 ## <a name="remarks"></a>備註
 
-**Container** 類型的容器必須滿足可變大小容器的需求，而且具有一個雙引數插入成員函式，其中參數的類型為 **Container::iterator** 和 **Container::value_type**，並且傳回 **Container::iterator** 類型。 「C++ 標準程式庫」序列容器和已排序關聯容器可滿足這些需求，並可調整來與 `insert_iterator` 搭配使用。 對於關聯容器，位置引數視為提示，可能會根據提示品質改善或降低效能。 `insert_iterator` 一定要以其容器初始化。
+類型的容器`Container`必須滿足可變大小容器的需求，而且有兩個引數插入成員函式的參數都屬於型別`Container::iterator`並`Container::value_type`，以及傳回型別`Container::iterator`。 「C++ 標準程式庫」序列容器和已排序關聯容器可滿足這些需求，並可調整來與 `insert_iterator` 搭配使用。 對於關聯容器，位置引數視為提示，可能會根據提示品質改善或降低效能。 `insert_iterator` 一定要以其容器初始化。
 
 ### <a name="constructors"></a>建構函式
 
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Container** 同義。
+此類型與範本參數 *Container* 同義。
 
 ### <a name="example"></a>範例
 
@@ -125,9 +125,9 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>參數
 
-`_Cont` 所在的容器`insert_iterator`會插入項目。
+*_Cont*所在的容器`insert_iterator`是插入項目。
 
-`_It` 插入位置。
+*_It*插入的位置。
 
 ### <a name="remarks"></a>備註
 
@@ -193,7 +193,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>備註
 
-用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果 **Iter** 是以序列中元素為定址對象的迭代器，則 **\*Iter** = **value** 會以值取代該元素，而不會變更序列中的元素總數。
+用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果`Iter`是迭代器，定址的項目順序，然後 **\*Iter** = **值**會以值取代該元素，並不會變更總數序列中的項目。
 
 ### <a name="example"></a>範例
 
@@ -241,7 +241,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>  insert_iterator::operator++
 
-將 **insert_iterator** 遞增至可儲存值的下一個位置。
+將 `insert_iterator` 遞增至可儲存值的下一個位置。
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -317,7 +317,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>參數
 
-`val` 要指派給容器的值。
+*val*来指派給容器的值。
 
 ### <a name="return-value"></a>傳回值
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c844416151874714aa86a2ffe9762949c6a62a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33a251b2b9bf9b010367a88a4c9f566a73acb544
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856094"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956777"
 ---
 # <a name="sample-container-members"></a>範例容器成員
 
@@ -40,7 +40,7 @@ ms.locfileid: "33856094"
 |[reference](../standard-library/container-class-reference.md)|描述的物件可作為受控制序列的項目參考。|
 |[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|描述的物件可作為受控制序列的反向迭代器。|
 |[size_type](../standard-library/container-class-size-type.md)|描述的物件可代表任何受控制序列的長度。|
-|[value_type](../standard-library/container-class-value-type.md)|作為 **Ty** 樣板參數的同義字。|
+|[value_type](../standard-library/container-class-value-type.md)|做為範本參數的同義字`Ty`。|
 
 ## <a name="member-functions"></a>成員函式
 

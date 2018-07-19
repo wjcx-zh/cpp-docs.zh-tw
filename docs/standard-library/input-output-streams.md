@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955718"
 ---
 # <a name="inputoutput-streams"></a>輸入/輸出資料流
 
@@ -32,7 +32,7 @@ ms.locfileid: "33845927"
 
 衍生自 `basic_iostream` 的是類別範本 `basic_fstream`，此範本可用來將字元資料串流處理至檔案，或從檔案串流處理字元資料。
 
-此外，也有提供 `basic_fstream` 之字元特定特製化的 typedef。 這包括 `fstream` (以 `char` 為基礎的 I/O 資料流) 和 `wfstream` (以 `wchar_t` 為基礎的 I/O 資料流)。 如需詳細資訊，請參閱 [basic_fstream 類別](../standard-library/basic-fstream-class.md)、[fstream](../standard-library/basic-fstream-class.md) 及 [wfstream](../standard-library/basic-fstream-class.md)。 使用這些 typedef 時，必須包含標頭檔 \<fstream>。
+此外，也有提供 `basic_fstream` 之字元特定特製化的 typedef。 它們`fstream`，這是檔案 I/O 資料流為基礎**char**，以及`wfstream`，這是檔案 I/O 資料流為基礎**wchar_t**。 如需詳細資訊，請參閱 [basic_fstream 類別](../standard-library/basic-fstream-class.md)、[fstream](../standard-library/basic-fstream-class.md) 及 [wfstream](../standard-library/basic-fstream-class.md)。 使用這些 typedef 時，必須包含標頭檔 \<fstream>。
 
 > [!NOTE]
 > 當使用 `basic_fstream` 物件來執行檔案 I/O 時，雖然基礎緩衝區包含個別指定的讀取和寫入位置，但目前的輸入和輸出位置是繫結在一起的，因此讀取某些資料時會移動輸出位置。

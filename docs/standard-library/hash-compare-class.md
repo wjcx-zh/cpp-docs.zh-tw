@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956570"
 ---
 # <a name="hashcompare-class"></a>hash_compare 類別
 
@@ -33,15 +33,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>備註
 
-每個雜湊關聯容器都會儲存 **Traits** 類型 (範本參數) 的雜湊特性物件。 您可以選擇性地覆寫特定函式與物件，從特製的 hash_compare 衍生類別，或如果您符合特定的基本需求，則可以提供您自己這個類別的版本。 更明確地說，針對 **hash_compare\<Key, Traits>** 類型的 hash_comp 物件，上述容器必須要有下列行為：
+每個雜湊關聯容器都會儲存類型的雜湊特性物件`Traits`（範本參數）。 您可以選擇性地覆寫特定函式與物件，從特製的 hash_compare 衍生類別，或如果您符合特定的基本需求，則可以提供您自己這個類別的版本。 尤其是針對類型的 hash_comp 物件`hash_compare<Key, Traits>`，上述容器需要下列行為：
 
-- 針對 **Key** 類型的所有 `key` 值，**hash_comp**( `key`) 呼叫會作為雜湊函式，這會產生 **size_t** 類型值的分佈。 hash_compare 所提供的函式會傳回 `key`。
+- 所有值`key`型別的`Key`，在呼叫**hash_comp**(`key`) 做為雜湊函式，會產生類型的值分佈`size_t`。 hash_compare 所提供的函式會傳回 `key`。
 
-- 針對序列中位於 `key2` 之前且具有相同雜湊值 (雜湊函式所傳回的值) 之任何 **Key** 類型的 `key1` 值，**hash_comp**( `key2`, `key1`) 會是 false。 函式必須在 **Key** 類型的值上強制加上總排序。 hash_compare 所提供的函式會傳回 *comp*( `key2`, `key1`) `,`，其中 *comp* 是 **Traits** 類型的預存物件，您可以在建構 hash_comp 物件時指定此物件。 針對預設的 **Traits** 參數類型 **less\<Key>**，排序鍵的值一律不會縮減。
+- 每個值`key1`型別的`Key`前面`key2`序列中且具有相同雜湊值 （值的雜湊函式所傳回）， **hash_comp**(`key2`， `key1`) 為 false。 函式必須加上總排序類型的值`Key`。 Hash_compare 所提供的函式會傳回*comp*(`key2`， `key1`)`,`其中*comp*是類型的預存的物件`Traits`，您可以指定當您建構 hash_comp 物件。 預設值`Traits`參數類型`less<Key>`，永遠不會減少值中的排序索引鍵。
 
-- 整數常數 **bucket_size** 可指定容器在每個「值區」(雜湊資料表項目) 中不應超過的平均元素數目。 此數目必須大於零。 hash_compare 所提供的值為 4。
+- 整數常數`bucket_size`指定項目，每個 「 值區 」 （雜湊資料表項目） 的容器應該不能超過的平均數目。 此數目必須大於零。 hash_compare 所提供的值為 4。
 
-- 整數常數 **min_buckets** 可指定雜湊資料表中要維護的值區數目下限。 此數目必須是二次方且大於零。 hash_compare 所提供的值為 8。
+- 整數常數`min_buckets`指定貯體，以維護雜湊表中的最小數目。 此數目必須是二次方且大於零。 hash_compare 所提供的值為 8。
 
 ## <a name="example"></a>範例
 

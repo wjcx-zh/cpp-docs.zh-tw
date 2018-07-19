@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c8d98157e81f087bf382c3733a2ade909349a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862776"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954873"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 類別
 
@@ -100,13 +100,13 @@ class numeric_limits
 
 ### <a name="parameters"></a>參數
 
-`Type` 基本項目資料類型，其內容正在進行測試、 查詢或設定。
+*型別*正在其屬性的基本項目資料型別測試、 查詢或設定。
 
 ## <a name="remarks"></a>備註
 
-這個標頭定義 `wchar_t`、 `bool`、 `char`、 `signed char`、 `unsigned char`、 `short`、 `unsigned short`、 `int`、 `unsigned int`、 `long`、 `unsigned long`、 `float`、 `double`、 `long double`**、** `long long`、 `unsigned long long`、 `char16_t`和 `char32_t`類型的明確特製化。 針對這些明確特製化，成員 [numeric_limits::is_specialized](#is_specialized) 為 `true`，而且所有相關成員都包含有意義的值。 這個程式可提供額外的明確特製化。 類別的大部分成員函式都在描述或測試 `float`的可能實作。
+標頭會定義類型的明確特製化**wchar_t**， **bool**， **char**， **char&lt;3**，**不帶正負號char**，**簡短**， **unsigned short**， **int**，**不帶正負號的整數**，**長時間**，**不帶正負號長**， **float**， **double**，**長雙精度浮點數 *** **長的長時間**， **unsigned long long**， `char16_t`，和`char32_t`。 針對這些明確特製化，成員[numeric_limits:: is_specialized](#is_specialized)是 **，則為 true**，而且所有相關成員都包含有意義的值。 這個程式可提供額外的明確特製化。 大部分的成員函式類別的描述，或測試的可能實作**浮點數**。
 
-針對任意特製化，沒有任何成員包含有意義的值。 未包含有意義的值的成員物件會儲存零 (或 `false`)，而未傳回有意義的值的成員函式會傳回 `Type(0)`。
+針對任意特製化，沒有任何成員包含有意義的值。 並沒有有意義的值成員物件會儲存零 (或**假**)，並不會傳回有意義的值的成員函式傳回`Type(0)`。
 
 ### <a name="static-functions-and-constants"></a>靜態函式和常數
 
@@ -165,9 +165,9 @@ static Type denorm_min() throw();
 
 ### <a name="remarks"></a>備註
 
-`long double` 與 C++ 編譯器的 **double** 相同。
+**長雙精度**等同**double** c + + 編譯器。
 
-此函式會傳回該類型的最小值，如果 [has_denorm](#has_denorm) 不等於 **denorm_present**，最小值就會與 [min](#min) 相同。
+函式會傳回型別，也就是相同的最小值為[最小](#min)如果[has_denorm](#has_denorm)是否不等於`denorm_present`。
 
 ### <a name="example"></a>範例
 
@@ -364,7 +364,7 @@ static const float_denorm_style has_denorm = denorm_absent;
 
 ### <a name="remarks"></a>備註
 
-成員會針對具有反正規化值 (實際上就是數目可變的指數位元) 的浮點數類型儲存 **denorm_present**。
+成員存放區`denorm_present`針對具有反正規化浮點類型值，有效地指數的位元變數的數目。
 
 ### <a name="example"></a>範例
 
@@ -1010,7 +1010,7 @@ static Type lowest() throw();
 
 ### <a name="remarks"></a>備註
 
-傳回類型的最大負數有限值 (通常是`min()`整數類型和`-max()`浮點類型)。 如果 `is_bounded` 是 `true`，則傳回值有意義。
+傳回類型的最大負數有限值 (通常是`min()`整數類型和`-max()`浮點類型)。 傳回的值才有意義如果`is_bounded`已 **，則為 true**。
 
 ## <a name="max"></a>  numeric_limits::max
 
@@ -1026,7 +1026,7 @@ static Type max() throw();
 
 ### <a name="remarks"></a>備註
 
-`int` 類型的最大有限值是 INT_MAX，**float** 類型的最大有限值則是 FLT_MAX。 如果 [is_bounded](#is_bounded) 為 **true**，傳回值便有意義。
+最大有限值的型別是 INT_MAX **int** flt_max 型別**float**。 如果 [is_bounded](#is_bounded) 為 **true**，傳回值便有意義。
 
 ### <a name="example"></a>範例
 
@@ -1176,7 +1176,7 @@ static Type min() throw();
 
 ### <a name="remarks"></a>備註
 
-`int` 類型的最小正規化值是 INT_MIN，`float` 類型的最大正規化值則是 FLT_MIN。 如果 [is_bounded](#is_bounded) 為 `true`，或如果 [is_signed](#is_signed) 為 `false`，傳回值便有意義。
+類型的最小正規化的值是 INT_MIN **int** flt_min 型別**float**。 傳回的值才有意義如果[is_bounded](#is_bounded)是 **，則為 true**或者[is_signed](#is_signed)是**false**。
 
 ### <a name="example"></a>範例
 
@@ -1535,7 +1535,7 @@ static const bool tinyness_before = false;
 
 ### <a name="return-value"></a>傳回值
 
-如果該類型可以偵測到捨入前的微小值，便會傳回 `true`；否則會傳回 `false`。
+**true**如果類型可偵測微小值捨入; 前**false**如果不行。
 
 ### <a name="remarks"></a>備註
 

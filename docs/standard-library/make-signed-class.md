@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859364"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957343"
 ---
 # <a name="makesigned-class"></a>make_signed 類別
 
@@ -40,11 +40,11 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>參數
 
-`T` 要修改的類型。
+*T*来修改的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `is_signed<T>` 為 true，則 modifier 類型的執行個體所保留的修改類型是 `T`。 否則，是最小的未帶正負號類型 `UT`，其中 `sizeof (T) <= sizeof (UT)`。
+類型修飾詞的執行個體保留修改的類型所*T*如果`is_signed<T>`保存，則為 true。 否則，是最小的未帶正負號類型 `UT`，其中 `sizeof (T) <= sizeof (UT)`。
 
 ## <a name="requirements"></a>需求
 

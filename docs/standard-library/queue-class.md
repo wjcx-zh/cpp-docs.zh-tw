@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954912"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -54,15 +54,15 @@ class queue
 
 *型別*来儲存在佇列中的項目資料類型
 
-`Container` 用來實作佇列的基礎容器類型。
+*容器*用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註
 
-佇列物件第一個範本參數中約定的類別 **Type** 的項目，與 [value_type](#value_type) 同義，且必須符合第二個範本參數約定之基礎容器類別 **Container** 中的項目類型。 **Type** 必須是可指派，以便可以複製該類型的物件，並將值指派給該類型的變數。
+類別的元素`Type`約定的第一個範本中的佇列物件的參數是同義詞[value_type](#value_type) ，而且必須符合的基礎容器類別中的項目類型`Container`所規定第二個樣板參數。 `Type`必須是可指派，，如此就可以複製該類型的物件，並將值指派給該類型的變數。
 
-適當的佇列基礎容器類別包括 [deque](../standard-library/deque-class.md) 和 [list](../standard-library/list-class.md)，或任何其他支援 `front`、**back**、`push_back` 和 `pop_front` 作業的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
+適當的佇列的基礎容器類別包括[deque](../standard-library/deque-class.md)並[清單](../standard-library/list-class.md)，或任何其他支援的作業序列容器`front`， `back`， `push_back`，和`pop_front`。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
 
-佇列物件唯有在類別 **Type** 的項目可進行等號比較時才可進行等號比較，並且唯有在類別 **Type** 的項目可進行小於比較時才可進行小於比較。
+佇列物件是否相等比較，並且只有當類別的元素`Type`進行等號比較，並小於-比比較，並且只有當類別的項目`Type`小於-比較。
 
 有三種由 C++ 標準程式庫定義的容器配接器類型：stack、queue 和 priority_queue。 每個類型都會限制某些基礎容器類別的功能，以精確地提供標準資料結構受控制的介面。
 
@@ -119,7 +119,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>備註
 
-如果 **back** 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果 **back** 的傳回值已指派給 **reference**，則可以修改佇列物件。
+如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果傳回值`back`指派給`reference`，可以修改佇列物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -229,9 +229,9 @@ const_reference front() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果 `front` 的傳回值已指派給 **reference**，則可以修改佇列物件。
+如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果傳回值`front`指派給`reference`，可以修改佇列物件。
 
-成員函式會傳回受控制序列的第一個項目的 **reference**，絕對不能空白。
+成員函式傳回`reference`受控制序列的第一個元素，絕對不能空白。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -331,7 +331,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-`val` 加入至佇列的最下層的項目。
+*val*將元素加入至佇列的後端。
 
 ### <a name="remarks"></a>備註
 
@@ -381,7 +381,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-`right` **Const**建構的佇列是要複製其中的容器。
+*右* **const**其中建構的佇列是要從中複製的容器。
 
 ### <a name="remarks"></a>備註
 

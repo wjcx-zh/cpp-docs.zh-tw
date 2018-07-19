@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b604a4c9a2fc11a9c7274d0e29ab98acfd260907
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955562"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 類別
 
@@ -37,13 +37,13 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>參數
 
-若要接收指派的物件類型。
+若要接收指派的物件型別。
 
-從提供的值的物件類型。
+從提供的值物件的型別。
 
 ## <a name="remarks"></a>備註
 
-運算式 `declval<To>() = declval<From>()` 必須格式正確，且編譯器必須已知它不需要任何非極簡作業。 `From` 和 `To` 兩者必須是完整類型 `void`，或是界限未知的陣列。
+運算式 `declval<To>() = declval<From>()` 必須格式正確，且編譯器必須已知它不需要任何非極簡作業。 兩者`From`並`To`必須是完整的類型**void**，或是界限未知的陣列。
 
 ## <a name="requirements"></a>需求
 

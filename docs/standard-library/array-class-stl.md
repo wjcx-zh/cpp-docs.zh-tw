@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99b7416339350ae7e5f8d342974a750584acdd73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848933"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960039"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -257,11 +257,11 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>參數
 
-`val` 要指派的值。
+*val*来指派的值。
 
 ### <a name="remarks"></a>備註
 
-成員函式會將 `*this` 所控制的序列取代為 `val` 值的 `N` 元素重複。
+此成員函式會取代所控制的序列`*this`重複`N`值之項目的*val*。
 
 ### <a name="example"></a>範例
 
@@ -313,11 +313,11 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-`off` 若要存取項目的位置。
+*關閉*存取項目的位置。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回位於 `off` 位置的受控制序列項目的參考。 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。
+成員函式會傳回位置的受控制序列的項目參考*關閉*。 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。
 
 ### <a name="example"></a>範例
 
@@ -444,7 +444,7 @@ int main()
 
 ## <a name="cbegin"></a> array::cbegin
 
-傳回 `const` 迭代器，為範圍中的第一個項目定址。
+傳回**const**迭代器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -452,13 +452,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-`const` 隨機存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。
+A **const**隨機存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮使用 `Container` 作為支援 `begin()` 和 `cbegin()` 之任何種類的可修改 (非 `const`) 容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
 
 ```cpp
 auto i1 = Container.begin();
@@ -470,7 +470,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> array::cend
 
-傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
+傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -484,7 +484,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
 
 ```cpp
 auto i1 = Container.end();
@@ -983,7 +983,7 @@ void fill(const Type& val);
 
 |參數|描述|
 |-|-|
-|`val`|插入陣列中之項目的值。|
+|*val*|插入陣列中之項目的值。|
 
 ### <a name="remarks"></a>備註
 
@@ -1173,13 +1173,13 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-`off` 若要存取項目的位置。
+*關閉*存取項目的位置。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回位於 `off` 位置的受控制序列項目的參考。 如果位置不正確，就不會定義行為。
+成員函式會傳回位置的受控制序列的項目參考*關閉*。 如果位置不正確，就不會定義行為。
 
-也會提供非成員 [get](array-functions.md#get) 函式，以取得 `array` 之元素的參考。
+另外還有非成員[取得](array-functions.md#get)函式可用來取得參考之項目的**陣列**。
 
 ### <a name="example"></a>範例
 
@@ -1225,11 +1225,11 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>參數
 
-若要複製的右容器。
+*右*来複製的容器。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會將 `right` 的每個元素指派給受控制序列的對應元素，然後傳回 `*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。
+此成員運算子會將指派的每個項目*右*受控制序列的對應項目，然後傳回`*this`。 您使用它來取代受控制的序列中的受控制序列的複本*右*。
 
 ### <a name="example"></a>範例
 
@@ -1602,13 +1602,13 @@ void swap(array& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要交換內容的陣列。
+*右*来交換內容的陣列。
 
 ### <a name="remarks"></a>備註
 
-成員函式會交換 `*this` 和 `right` 之間受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
+此成員函式會交換之間受控制的序列`*this`並*右*。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
 
-也會有非成員 [swap](array-functions.md#swap) 函式可用來交換兩個 `array` 執行個體。
+另外還有非成員[交換](array-functions.md#swap)函式可用來交換兩個**陣列**執行個體。
 
 ### <a name="example"></a>範例
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860641"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959267"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 類別
 
@@ -39,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>參數
 
-`UIntType` 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*不帶正負號的整數結果型別。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-`W` **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **狀態大小**。 狀態序列中的元素數 (值)。
+*N* **狀態大小**。 狀態序列中的元素數 (值)。
 
-`M` **移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件**：`0 < M ≤ N`
+*M* **移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件**：`0 < M ≤ N`
 
-`R` **遮罩位元**。 **前置條件**：`R ≤ W`
+*R* **遮罩位元**。 **前置條件**：`R ≤ W`
 
-`A` **XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`
+*A* **XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`
 
-`U``S`， `T`， `L` **Tempering 移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`
+*U*， *S*， *T*， *L* **Tempering 移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`
 
-`D``B`， `C` **Tempering 位元遮罩參數**。 用做編碼 (調和) 期間的位元遮罩值。 前置條件：`D,B,C ≤ (1u<<W) - 1u`
+*D*， *B*， *C* **Tempering 位元遮罩參數**。 用做編碼 (調和) 期間的位元遮罩值。 前置條件：`D,B,C ≤ (1u<<W) - 1u`
 
-`F` **初始化乘數**。 用於協助初始化序列。 前置條件：`F ≤ (1u<<W) - 1u`
+*F* **初始化乘數**。 用於協助初始化序列。 前置條件：`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Members
 
@@ -70,9 +70,9 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述亂數引擎，會傳回封閉間隔 [ `0`, `2`<sup>W</sup> - `1`] 的值。 它會保留具有 `W * (N - 1) + R` 位元的大整數值。 它一次會從這個大數值擷取 `W` 位元，而且使用所有位元時，它會使用移位和混合位元旋轉大數值，使其具有一組要從中擷取的新位元。 如果至少已呼叫 `N` `W` 次，則引擎狀態是最後使用的 `operator()` 個 `N` 位元值，否則為已使用的 `M` 個 `W` 位元值以及上一次種子的最後 `N - M` 個值。
+此範本類別描述亂數引擎，會傳回封閉間隔 [ `0`, `2`<sup>W</sup> - `1`] 的值。 它會保留具有 `W * (N - 1) + R` 位元的大整數值。 它會擷取*W*一次從這個大數值，並使用所有位元的位元它旋轉大數值移位和混合位元，使其具有一組新的位元為單位來擷取。 引擎的狀態是最後`N` `W`-位元值，如果使用`operator()`已至少呼叫*N*逾，否則`M` `W`-位元已使用的值，而最後`N - M`種子的值。
 
-產生器會旋轉它所保留的大數值，方法是使用移位值 `N` 和 `M` 所定義的已旋轉一般化回饋移位暫存器、旋轉值 `R` 和條件式 XOR 遮罩 `A`。 此外，還會根據值 `U`、`D`、`S`、`B`、`T`、`C` 和 `L` 所定義的位元編碼矩陣，來編碼 (調和) 原始移位暫存器的位元。
+產生器反轉的大數值，它會使用移位值所定義的旋轉一般化的回饋移位暫存器保留*N*並*M*，旋轉值*R*，和條件式 XOR 遮罩*A*。此外，原始移位暫存的位元變碼 （調和） 值所定義的位元編碼矩陣*U*， *D*， *S*， *B*， *T*， *C*，和*L*。
 
 範本引數 `UIntType` 必須大到足以保留多達 `2`<sup>W</sup> - `1` 的值。 其他範本引數的值必須滿足下列需求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 

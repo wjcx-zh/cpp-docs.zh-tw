@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847555"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956634"
 ---
 # <a name="future-class"></a>future 類別
 
@@ -94,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`future`物件。
+*其他*A`future`物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構沒有任何相關非同步狀態的 `future` 物件。
 
-第二個建構函式建構 `future` 物件並從 `Other` 中轉移關聯的非同步狀態。 `Other` 已不再具有相關的非同步狀態。
+第二個建構函式建構`future`物件，並將轉移相關聯的非同步狀態，從*其他*。 *其他*不再具有相關聯的非同步狀態。
 
 ## <a name="get"></a>  future::get
 
@@ -120,7 +120,7 @@ Ty get();
 
 就部分特製化 `future<Ty&>` 而言，預存值實際上是對傳遞給非同步提供者作為傳回值之物件的參考。
 
-由於沒有特製化 `future<void>` 適用的任何預存值存在，因此這個方法會傳回 `void`。
+因為沒有預存的值存在特製化`future<void>`，則方法會傳回**void**。
 
 在其他特製化中，此方法會從預存值中移動其傳回值。 因此，請只呼叫此方法一次。
 
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Right` A`future`物件。
+*右*A`future`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -142,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>備註
 
-在轉移之後，`Right` 便不再具有相關的非同步狀態。
+轉移之後，*右*不再具有相關聯的非同步狀態。
 
 ## <a name="share"></a>  future::share
 
@@ -166,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。
+**true**如果物件有相關聯的非同步狀態; 否則**false**。
 
 ## <a name="wait"></a>  future::wait
 
@@ -191,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>參數
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md)物件，指定最大時間間隔，則執行緒會封鎖。
+*Rel_time* A [chrono::](../standard-library/duration-class.md)物件，指定最大時間間隔，則執行緒會封鎖。
 
 ### <a name="return-value"></a>傳回值
 
@@ -212,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>參數
 
-`Abs_time` A [chrono:: time_point<steady_clock>](../standard-library/time-point-class.md)指定的時間之後, 可以解除封鎖執行緒的物件。
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)指定的時間之後，可以解除封鎖執行緒的物件。
 
 ### <a name="return-value"></a>傳回值
 

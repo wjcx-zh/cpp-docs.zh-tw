@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856618"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959634"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 結構
 
@@ -45,17 +45,17 @@ struct iterator_traits {
 
 範本結構會定義成員類型
 
-- **iterator_category**：與 **Iterator::iterator_category** 同義。
+- `iterator_category`： 同義`Iterator::iterator_category`。
 
-- `value_type`：與 **Iterator::value_type** 同義。
+- `value_type`： 同義`Iterator::value_type`。
 
-- `difference_type`：與 **Iterator::difference_type** 同義。
+- `difference_type`： 同義`Iterator::difference_type`。
 
-- `distance_type`：與 **Iterator::difference_type** 同義。
+- `distance_type`： 的同義字 `Iterator::difference_type.`
 
-- **pointer**：與 **Iterator::pointer** 同義。
+- `pointer`： 同義`Iterator::pointer`。
 
-- **reference**：與 **Iterator::reference** 同義。
+- `reference`： 同義`Iterator::reference`。
 
 部分特製化會決定與 **Type \*** 或 const **Type \*** 類型之物件指標關聯的重要類型。
 

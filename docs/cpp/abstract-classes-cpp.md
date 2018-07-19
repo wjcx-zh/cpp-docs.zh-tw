@@ -1,5 +1,5 @@
 ---
-title: 抽象類別 （c + +） |Microsoft 文件
+title: 抽象類別 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705357"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957944"
 ---
 # <a name="abstract-classes-c"></a>抽象類別 (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "34705357"
 
 至少包含一個純虛擬函式的類別會被視為抽象類別。 衍生自抽象類別的類別必須實作純虛擬函式，否則這些類別也是抽象類別。
 
-虛擬函式宣告可為 「 單純的 」 透過*純規範*語法 (述[類別通訊協定實作](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5))。 中的範例，請考慮[虛擬函式](../cpp/virtual-functions.md)。 `Account` 類別的目的是要提供一般功能，但 `Account` 類型的物件則過於籠統，實用性不高。 因此，`Account` 非常適合作為抽象類別：
+中的範例，請考慮[虛擬函式](../cpp/virtual-functions.md)。 `Account` 類別的目的是要提供一般功能，但 `Account` 類型的物件則過於籠統，實用性不高。 因此，`Account` 非常適合作為抽象類別：
 
 ```cpp
 // deriv_AbstractClasses.cpp

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845748"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956135"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this 類別
 
@@ -46,13 +46,13 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-`Ty` 共用指標所控制的類型。
+*Ty*共用指標所控制的類型。
 
 ## <a name="remarks"></a>備註
 
-衍生自 `enable_shared_from_this` 的物件可以使用成員函式中的 `shared_from_this` 方法，來建立執行個體的 [shared_ptr](../standard-library/shared-ptr-class.md) 擁有者，其與現有 `shared_ptr` 擁有者共用擁有權。 否則，如果您使用 `this` 建立新的 `shared_ptr`，它與現有 `shared_ptr` 擁有者不同，可能會導致參考無效，或物件遭到重複刪除。
+衍生自 `enable_shared_from_this` 的物件可以使用成員函式中的 `shared_from_this` 方法，來建立執行個體的 [shared_ptr](../standard-library/shared-ptr-class.md) 擁有者，其與現有 `shared_ptr` 擁有者共用擁有權。 否則，如果您建立新`shared_ptr`利用**這**，它是不同於現有`shared_ptr`擁有者，可能會導致參考無效，或導致超過一次刪除的物件。
 
-建構函式、解構函式和指派運算子會受到保護以防止意外誤用。 範本引數類型 `Ty` 必須是衍生類別的類型。
+建構函式、解構函式和指派運算子會受到保護以防止意外誤用。 範本引數型別*Ty*必須在衍生類別的型別。
 
 如需使用方式的範例，請參閱 [enable_shared_from_this::shared_from_this](#shared_from_this)。
 
@@ -73,7 +73,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>備註
 
-當您從 `enable_shared_from_this` 基底類別衍生物件時，`shared_from_this` 範本成員函式會傳回 [shared_ptr 類別](../standard-library/shared-ptr-class.md)物件，其與現有的 `shared_ptr` 擁有者共用此執行個體的擁有權。 否則，如果您從 `this` 建立新的 `shared_ptr`，它與現有 `shared_ptr` 擁有者不同，可能會導致參考無效，或物件遭到重複刪除。 如果 `shared_ptr` 物件不再擁有某個執行個體，而您呼叫其中的 `shared_from_this`，則行為是未定義的。
+當您從 `enable_shared_from_this` 基底類別衍生物件時，`shared_from_this` 範本成員函式會傳回 [shared_ptr 類別](../standard-library/shared-ptr-class.md)物件，其與現有的 `shared_ptr` 擁有者共用此執行個體的擁有權。 否則，如果您建立新`shared_ptr`從**這**，它是不同於現有`shared_ptr`擁有者，可能會導致參考無效，或導致超過一次刪除的物件。 如果 `shared_ptr` 物件不再擁有某個執行個體，而您呼叫其中的 `shared_from_this`，則行為是未定義的。
 
 ### <a name="example"></a>範例
 
@@ -111,5 +111,5 @@ sp2->val == 3
 
 ## <a name="see-also"></a>另請參閱
 
-[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
+[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
 [shared_ptr 類別](../standard-library/shared-ptr-class.md)<br/>

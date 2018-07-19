@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862870"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957518"
 ---
 # <a name="sharedptr-class"></a>shared_ptr 類別
 
@@ -261,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>備註
 
-此運算子會傳回值為`true`時`get() != nullptr`，否則為`false`。
+此運算子會傳回值 **，則為 true**當`get() != nullptr`，否則為**false**。
 
 ### <a name="example"></a>範例
 
@@ -351,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>參數
 
-`sp` 要複製的共用的指標。
+*預存程序*来複製的共用的指標。
 
-`ap` 要複製的自動指標。
+*ap*来複製的自動指標。
 
 ### <a name="remarks"></a>備註
 
@@ -441,11 +441,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>參數
 
-`ptr` `lvalue`參考`shared_ptr`或`weak_ptr`。
+*ptr* `lvalue`參考`shared_ptr`或`weak_ptr`。
 
 ### <a name="remarks"></a>備註
 
-如果樣板成員函式會傳回 true`*this`是`ordered before` `ptr`。
+範本成員函式會傳回 true，如果`*this`已`ordered before` `ptr`。
 
 ## <a name="reset"></a>  shared_ptr::reset
 
@@ -466,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>參數
 
-`Other` 引數指標所控制的類型。
+*其他*引數指標所控制的類型。
 
-`D` 刪除者的類型。
+*D*刪除者的類型。
 
-`ptr` 要複製的指標。
+*ptr*来複製的指標。
 
-`dtor` 若要複製的刪除者。
+*dtor*来複製的刪除者。
 
-`A` 配置器的類型。
+*A*配置器類型。
 
-`alloc` 若要複製配置器。
+*配置*来複製的配置器。
 
 ### <a name="remarks"></a>備註
 
@@ -581,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>參數
 
-`Other` 引數指標所控制的類型。
+*其他*引數指標所控制的類型。
 
-`ptr` 要複製的指標。
+*ptr*来複製的指標。
 
-`D` 刪除者的類型。
+*D*刪除者的類型。
 
-`A` 配置器的類型。
+*A*配置器類型。
 
-`dtor` 刪除者。
+*dtor*刪除者。
 
-`ator` 配置器。
+*in*配置器。
 
-`sp` 要複製的智慧型指標。
+*預存程序*来複製的智慧型指標。
 
-`wp` 弱式的指標。
+*wp*弱式指標。
 
-`ap` 要複製的自動指標。
+*ap*来複製的自動指標。
 
 ### <a name="remarks"></a>備註
 
@@ -722,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>參數
 
-`sp` 要交換共用的指標。
+*預存程序*来交換的共用的指標。
 
 ### <a name="remarks"></a>備註
 
-成員函式會保留原先由 `*this` 擁有且後續由 `sp` 擁有的資源，以及原先由 `sp` 擁有且後續由 `*this` 擁有的資源。 此函式不會變更這兩個資源的參考計數，且不會擲回任何例外狀況。
+此成員函式會保留原先所擁有的資源`*this`擁有且後續由*sp*，以及原先所擁有的資源*預存程序*擁有且後續由`*this`。 此函式不會變更這兩個資源的參考計數，且不會擲回任何例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -792,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>備註
 
-如果沒有其他 `shared_ptr` 物件擁有 `*this` 所擁有的資源，成員函式就會傳回 `true`，否則會傳回 `false`。
+此成員函式會傳回**真**如果沒有任何其他`shared_ptr`物件擁有之資源的擁有者`*this`，否則為**false**。
 
 ### <a name="example"></a>範例
 

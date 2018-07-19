@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0734c4044dba77e07ec4b18fc6381618b7592d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 802e831fc884762c169b2752ae06fad7e46db2d8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960361"
 ---
 # <a name="container-classdifferencetype"></a>容器類別::difference_type
 
@@ -37,7 +37,7 @@ typedef T1 difference_type;
 
 ## <a name="remarks"></a>備註
 
-在此將其描述為未指定之 **T1** (通常為 **Alloc::difference_type**) 類型的同義字。
+其描述為未指定類型的同義字`T1`(通常`Alloc::difference_type`)。
 
 ## <a name="see-also"></a>另請參閱
 

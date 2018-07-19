@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954860"
 ---
 # <a name="weakptr-class"></a>weak_ptr 類別
 
@@ -77,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-`Ty` 弱式指標所控制的類型。
+*Ty*  
+ 弱式指標所控制的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -104,7 +105,7 @@ public:
 |[element_type](#element_type)|項目的類型。|
 |[expired](#expired)|測試擁有權是否已到期。|
 |[lock](#lock)|取得資源的獨佔擁有權。|
-|[owner_before](#owner_before)|如果這個 `weak_ptr` 排序在所提供的指標之前 (或小於)，則傳回 `true`。|
+|[owner_before](#owner_before)|傳回**真**如果這個`weak_ptr`排序之前 (或小於) 所提供的指標。|
 |[reset](#reset)|釋放所擁有的資源。|
 |[swap](#swap)|交換兩個 `weak_ptr` 物件。|
 |[use_count](#use_count)|指定之 `shared_ptr` 物件的計數數目。|
@@ -168,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `*this` 已過期則成員函式傳回 `true`，否則為 `false`。
+此成員函式會傳回**真**如果`*this`已過期，否則為**false**。
 
 ### <a name="example"></a>範例
 
@@ -226,7 +227,7 @@ shared_ptr<Ty> lock() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回空的 shared_ptr 物件，如果`*this`已過期; 否則它會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 物件所擁有的資源`*this`指向。
+如果此成員函式會傳回空的 shared_ptr 物件`*this`已過期; 否則會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 所擁有之資源物件`*this`指向。
 
 ### <a name="example"></a>範例
 
@@ -289,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-`Other` 引數共用/弱式指標所控制的類型。
+*其他*  
+ 引數共用/弱式指標所控制的類型。
 
-`wp` 要複製的弱式指標。
+*wp*  
+ 要複製的弱式指標。
 
-`sp` 要複製的共用的指標。
+*預存程序*  
+ 要複製的共用指標。
 
 ### <a name="remarks"></a>備註
 
@@ -333,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>  owner_before
 
-如果這個 `weak_ptr` 排序在所提供的指標之前 (或小於)，則傳回 `true`。
+傳回**真**如果這個`weak_ptr`排序之前 (或小於) 所提供的指標。
 
 ```cpp
 template <class Other>
@@ -345,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>參數
 
-`ptr` `lvalue`參考`shared_ptr`或`weak_ptr`。
+*ptr*  
+ 針對 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
-樣板成員函式會傳回`true`如果`*this`是`ordered before` `ptr`。
+範本成員函式會傳回**真**如果`*this`是`ordered before` `ptr`。
 
 ## <a name="reset"></a>  reset
 
@@ -404,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>參數
 
-`wp` 要交換的弱式指標。
+*wp*  
+ 要交換的弱式指標。
 
 ### <a name="remarks"></a>備註
 
-成員函式會使原先 `*this` 所指向的資源後續由 `wp` 指向，而原先 `wp` 所指向的資源後續則由 `*this` 指向。 函式不會變更兩個資源的參考計數，且不會擲回任何例外狀況。
+此成員函式會保留原先所指向的資源`*this`後續所指的*wp*，和原先所指向的資源*wp*後續指向`*this`. 此函式不會變更這兩個資源的參考計數，且不會擲回任何例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -523,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-`Other` 引數共用/弱式指標所控制的類型。
+*其他*  
+ 引數共用/弱式指標所控制的類型。
 
-`wp` 要複製的弱式指標。
+*wp*  
+ 要複製的弱式指標。
 
-`sp` 要複製的共用的指標。
+*預存程序*  
+ 要複製的共用指標。
 
 ### <a name="remarks"></a>備註
 

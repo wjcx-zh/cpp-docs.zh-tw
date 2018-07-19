@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1cd2b4882c4b5e62a2f6574b3011b74747e412b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9a46294156c1f7beffecb997569221a388b3394
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957307"
 ---
 # <a name="removevolatile-class"></a>remove_volatile 類別
 
@@ -40,11 +40,11 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>參數
 
-`T` 要修改的類型。
+*T*来修改的類型。
 
 ## <a name="remarks"></a>備註
 
-`remove_volatile<T>` 執行個體儲存修改的類型，如果 `T1` 的格式為 `T`，類型為 `volatile T1`，否則為 `T`。
+執行個體`remove_volatile<T>`儲存修改的類型是`T1`當*T*的格式`volatile T1`，否則為*T*。
 
 ## <a name="example"></a>範例
 

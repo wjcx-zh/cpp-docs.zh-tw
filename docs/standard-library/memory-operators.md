@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857187"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954231"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 運算子
 
@@ -56,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-`left` 其中一個要測試不相等的物件。
+*左*其中一個要測試是否不相等的物件。
 
-`right` 其中一個要測試不相等的物件。
+*右*其中一個要測試是否不相等的物件。
 
-`Ty1` 左側共用指標所控制的類型。
+*Ty1*左邊所控制的類型共用指標。
 
-`Ty2` 右側共用指標所控制的類型。
+*Ty2*權限所控制的類型共用指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -154,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-`left` 其中一個要測試相等的物件。
+*左*其中一個要測試是否相等的物件。
 
-`right` 其中一個要測試相等的物件。
+*右*其中一個要測試是否相等的物件。
 
-`Ty1` 左側共用指標所控制的類型。
+*Ty1*左邊所控制的類型共用指標。
 
-`Ty2` 右側共用指標所控制的類型。
+*Ty2*權限所控制的類型共用指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果物件不相等，則為 `true`；如果物件相等，則為 `false`。
+**true**物件是否相等，如果**false**物件是否不相等。
 
 ### <a name="remarks"></a>備註
 
 第一個範本運算子會傳回 true。 (所有的預設配置器相等)。
 
-第二個和第三個範本運算子會傳回 ` left.get() ==  right.get()`。
+第二個和第三個範本運算子會傳回 `left.get() ==  right.get()`。
 
 ### <a name="example"></a>範例
 
@@ -258,17 +258,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-`left` 其中一個要比較的物件。
+*左*其中一個要比較的物件。
 
-`right` 其中一個要比較的物件。
+*右*其中一個要比較的物件。
 
-`Ty1` 左側共用指標所控制的類型。
+*Ty1*左邊所控制的類型共用指標。
 
-`Ty2` 右側共用指標所控制的類型。
+*Ty2*權限所控制的類型共用指標。
 
 ### <a name="remarks"></a>備註
 
-範本運算子會傳回`left.get() >= right.get()`。
+這個範本運算子會傳回`left.get() >= right.get()`。
 
 ## <a name="op_lt"></a> operator&lt;
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-`left` 其中一個要比較的物件。
+*左*其中一個要比較的物件。
 
-`right` 其中一個要比較的物件。
+*右*其中一個要比較的物件。
 
-`Ty1` 左側指標所控制的類型。
+*Ty1*左側指標所控制的類型。
 
-`Ty2` 右側指標所控制的類型。
+*Ty2*右側指標所控制的類型。
 
 ## <a name="op_lt_eq"></a> operator&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-`left` 其中一個要比較的物件。
+*左*其中一個要比較的物件。
 
-`right` 其中一個要比較的物件。
+*右*其中一個要比較的物件。
 
-`Ty1` 左側共用指標所控制的類型。
+*Ty1*左邊所控制的類型共用指標。
 
-`Ty2` 右側共用指標所控制的類型。
+*Ty2*權限所控制的類型共用指標。
 
 ### <a name="remarks"></a>備註
 
-範本運算子會傳回 `left.get() <= right.get()`
+這個範本運算子會傳回 `left.get() <= right.get()`
 
 ## <a name="op_gt"></a> operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-`left` 其中一個要比較的物件。
+*左*其中一個要比較的物件。
 
-`right` 其中一個要比較的物件。
+*右*其中一個要比較的物件。
 
-`Ty1` 左側共用指標所控制的類型。
+*Ty1*左邊所控制的類型共用指標。
 
-`Ty2` 右側共用指標所控制的類型。
+*Ty2*權限所控制的類型共用指標。
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
 
@@ -364,15 +364,15 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>參數
 
-`Elem` 資料流的項目類型。
+*Elem*資料流元素的類型。
 
-`Tr` 類型的資料流的項目特性。
+*Tr*型別資料流元素特性。
 
-`Ty` 共用指標所控制的類型。
+*Ty*共用指標所控制的類型。
 
-`out` 輸出資料流。
+*out*輸出資料流。
 
-`sp` 共用的指標。
+*預存程序*共用的指標。
 
 ### <a name="remarks"></a>備註
 

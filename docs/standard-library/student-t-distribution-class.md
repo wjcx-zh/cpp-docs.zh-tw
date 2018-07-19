@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858896"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961008"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution 類別
 
@@ -74,11 +74,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為`double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數類型值的分佈 (若未提供，則為 `double` 類型)，而這是根據學生的 *t* 分佈進行分佈。 下表提供各個成員的文章連結。
+此範本類別描述產生使用者指定之整數的值類型**雙**如果未提供，根據學生的分佈*t*-發佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -183,7 +183,8 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*n* `n`分佈參數。
+*n*  
+ `n` 分佈參數。
 
 *parm*用來建構分佈的參數封裝。
 
@@ -212,9 +213,11 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*n* `n`分佈參數。
+*n*  
+`n` 分佈參數。
 
-*右*`param_type`這要比較的物件。
+*right*  
+要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 

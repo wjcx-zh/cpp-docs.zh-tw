@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856296"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956448"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc 類別
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |參數|描述|
 |---------------|-----------------|
-|`Cache`|包含在陣列中的快取執行個體類型， 這可以是 [cache_chunklist Class](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
+|*快取*|包含在陣列中的快取執行個體類型， 這可以是 [cache_chunklist Class](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
 ## <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`count`|所配置陣列中的元素數。|
+|*count*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -84,7 +84,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `caches[_IDX].allocate(count)`，其中索引 `_IDX` 是透過要求的區塊大小 `count` 來判斷，或者，如果 `count` 太大，它會傳回 `operator new(count)`。 `cache`，代表快取物件。
+此成員函式會傳回`caches[_IDX].allocate(count)`，其中索引`_IDX`取決於要求的區塊大小*計數*，或者，如果*計數*是太大，它會傳回`operator new(count)`。 `cache`，代表快取物件。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|
-|`count`|要從儲存空間解除配置的物件數目。|
+|*ptr*|要從儲存體解除配置之第一個物件的指標。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
-成員函式會呼叫 `caches[_IDX].deallocate(ptr, count)`，其中索引 `_IDX` 是透過要求的區塊大小 `count` 來判斷，或者，如果 `count` 太大，它會傳回 `operator delete(ptr)`。
+成員函式呼叫`caches[_IDX].deallocate(ptr, count)`，其中索引`_IDX`取決於要求的區塊大小*計數*，或者，如果*計數*是太大，它會傳回`operator delete(ptr)`。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |參數|描述|
 |---------------|-----------------|
-|`_Cache`|與篩選條件相關聯的快取物件。|
-|`_Other`|要比較是否相等的快取物件。|
+|*_Cache*|與篩選條件相關聯的快取物件。|
+|*_Other*|要比較是否相等的快取物件。|
 
 ### <a name="remarks"></a>備註
 
-若結果是 `caches[0].equals(other.caches[0])`，即為 `true`，否則為 `false`。 `caches` 代表快取物件的陣列。
+**真**如果的結果`caches[0].equals(other.caches[0])`，否則**false**。 `caches` 代表快取物件的陣列。
 
 ## <a name="see-also"></a>另請參閱
 

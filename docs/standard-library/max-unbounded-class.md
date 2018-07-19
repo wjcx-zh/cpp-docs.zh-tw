@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679db380dabf15786776a6896c931f584ef46fce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3bf2d24ad916a9f7dba5a61ecb7745c3d86573c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955795"
 ---
 # <a name="maxunbounded-class"></a>max_unbounded 類別
 
@@ -71,11 +71,11 @@ void allocated(std::size_t _Nx = 1);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Nx`|遞增值。|
+|*_Nx*|遞增值。|
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次 `cache_freelist::allocate` 成功呼叫運算子 `new` 之後，都會呼叫它。 引數 `_Nx` 是運算子 `new` 所配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 它依每次成功呼叫之後呼叫`cache_freelist::allocate`運算子**新**。 引數 *_Nx*運算子所配置之區塊中的記憶體區塊數目**新**。
 
 ## <a name="deallocated"></a>  max_unbounded::deallocated
 
@@ -89,11 +89,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Nx`|遞增值。|
+|*_Nx*|遞增值。|
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次 `cache_freelist::deallocate` 呼叫運算子 `delete` 之後，都會呼叫此成員函式。 引數 `_Nx` 是運算子 `delete` 所解除配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 此成員函式會依每次呼叫之後呼叫`cache_freelist::deallocate`運算子**刪除**。 引數 *_Nx*是由運算子解除配置之區塊中的記憶體區塊數目**刪除**。
 
 ## <a name="full"></a>  max_unbounded::full
 
@@ -105,11 +105,11 @@ bool full();
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式一律會傳回 `false`。
+此成員函式一律會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果此呼叫傳回 `true`，`deallocate` 便會將記憶體區塊放到可用清單上，如果傳回 false，`deallocate` 則會呼叫運算子 `delete` 來將區塊解除配置。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回 **，則為 true**，`deallocate`如果傳回 false，記憶體區塊放到可用的清單;`deallocate`呼叫運算子**刪除**解除配置的區塊。
 
 ## <a name="released"></a>  max_unbounded::released
 

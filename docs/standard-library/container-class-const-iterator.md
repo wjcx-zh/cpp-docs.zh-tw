@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb5e2511dadb9b9003dc760b9edc89dd2a95996
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 104ac3531d371eb1a4e35905fa974a381b6f8334
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955744"
 ---
 # <a name="container-classconstiterator"></a>容器類別::const_iterator
 
@@ -37,7 +37,7 @@ typedef T6 const_iterator;
 
 ## <a name="remarks"></a>備註
 
-在此將其描述為未指定之 **T6** 類型的同義字。
+其描述為未指定類型的同義字`T6`。
 
 ## <a name="see-also"></a>另請參閱
 

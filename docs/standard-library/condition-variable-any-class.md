@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959228"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 類別
 
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>參數
 
-`Lck` A`mutex`任何型別的物件。
+*Lck* A`mutex`任何型別的物件。
 
-`Pred` 傳回的任何運算式`true`或`false`。
+*預計*傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>參數
 
-`Lck` A`mutex`任何型別的物件。
+*Lck* A`mutex`任何型別的物件。
 
-`Rel_time` A`chrono::duration`喚醒的物件，指定的執行緒之前的時間量。
+*Rel_time* A`chrono::duration`物件，指定的執行緒之前的時間喚醒。
 
-`Pred` 傳回的任何運算式`true`或`false`。
+*預計*傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="return-value"></a>傳回值
 
-如果因已歷時 `Rel_time` 而等候終止時，第一個方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。
+第一種方法會傳回`cv_status::timeout`而等候終止時，如果*Rel_time*已過。 否則，方法會傳回 `cv_status::no_timeout`。
 
-第二個方法會傳回 `Pred` 的值。
+第二個方法會傳回值*Pred*。
 
 ### <a name="remarks"></a>備註
 
-系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 的呼叫通知，或已歷時 `Rel_time` 時間間隔為止。 它也可能會假性喚醒。
+第一種方法會封鎖直到`condition_variable_any`物件的呼叫所收到[notify_one](../standard-library/condition-variable-class.md#notify_one)或[notify_all](../standard-library/condition-variable-class.md#notify_all)，或之前的時間間隔*Rel_time*經過。 它也可能會假性喚醒。
 
 第二種方法則會執行下列程式碼。
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>參數
 
-`Lck` Mutex 物件。
+*Lck* mutex 物件。
 
-`Abs_time` A [chrono:: time_point<steady_clock>](../standard-library/time-point-class.md)物件。
+*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)物件。
 
-`Pred` 傳回的任何運算式`true`或`false`。
+*預計*傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="return-value"></a>傳回值
 
-如果因歷時 `Abs_time` 而等候終止時，傳回 `cv_status` 類型的方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。
+方法會傳回`cv_status`類型傳回`cv_status::timeout`而等候終止時，如果*Abs_time*耗盡。 否則，方法會傳回 `cv_status::no_timeout`。
 
-傳回 `bool` 的方法會傳回 `Pred` 的值。
+方法會傳回`bool`傳回的值*Pred*。
 
 ### <a name="remarks"></a>備註
 
-系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 的呼叫訊號，或直到 `Abs_time` 為止。 它也可能會假性喚醒。
+第一種方法會封鎖直到`condition_variable`物件的呼叫所收到[notify_one](../standard-library/condition-variable-class.md#notify_one)或是[notify_all](../standard-library/condition-variable-class.md#notify_all)，或直到*Abs_time*。 它也可能會假性喚醒。
 
 第二種方法則會執行下列程式碼。
 

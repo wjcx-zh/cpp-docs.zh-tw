@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958526"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 
@@ -78,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為`double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據對數常態分佈進行分佈。 下表提供各個成員的文章連結。
+此範本類別描述產生使用者指定之整數的值類型**double**如果未提供，分散根據對數常態分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -240,7 +240,7 @@ struct param_type {
 
 *s* `s`分佈參數。
 
-*右*`param_type`結構用來比較。
+*右*`param_type`結構，用來比較。
 
 ### <a name="remarks"></a>備註
 

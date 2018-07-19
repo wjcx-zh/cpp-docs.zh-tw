@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 69a53ae6b54248f5b9938e2c9137a24f441c061d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a43528b270571a9994187711e2a21ca5a0e1f096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958899"
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 運算子
 
@@ -32,13 +32,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`unordered_map`。
+*left*  
+ `unordered_map` 類型的物件。
 
-`right` 型別的物件`unordered_map`。
+*right*  
+ `unordered_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_map 不相等為 `true`；如果相等則為 `false`。
+**true**如果 unordered_map 不相等。**false**兩者是否相等。
 
 ### <a name="remarks"></a>備註
 
@@ -95,13 +97,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`unordered_map`。
+*left*  
+ `unordered_map` 類型的物件。
 
-`right` 型別的物件`unordered_map`。
+*right*  
+ `unordered_map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_map 相等為 `true`；如果不相等則為 `false`。
+**true**如果 unordered_map 相等;**false**如果不相等。
 
 ### <a name="remarks"></a>備註
 
@@ -158,13 +162,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`unordered_multimap`。
+*left*  
+ `unordered_multimap` 類型的物件。
 
-`right` 型別的物件`unordered_multimap`。
+*right*  
+ `unordered_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_multimap 不相等為 `true`；如果相等則為 `false`。
+**true**如果 unordered_multimap 不相等。**false**兩者是否相等。
 
 ### <a name="remarks"></a>備註
 
@@ -222,13 +228,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件`unordered_multimap`。
+*left*  
+ `unordered_multimap` 類型的物件。
 
-`right` 型別的物件`unordered_multimap`。
+*right*  
+ `unordered_multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果 unordered_multimap 相等為 `true`；如果不相等則為 `false`。
+**true**如果 unordered_multimap 相等;**false**如果不相等。
 
 ### <a name="remarks"></a>備註
 

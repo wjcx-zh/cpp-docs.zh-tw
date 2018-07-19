@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b72b49f545b4ba04c92840cb4d15f2258f08680
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850609"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958500"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 類別
 
@@ -46,9 +46,9 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-`Elem` 將檔案緩衝區的基本項目。
+*Elem*檔案緩衝區的基本項目。
 
-`Tr` 將檔案緩衝區基本項目的特性 (通常`char_traits` <  `Elem`>)。
+*Tr*的基本項目，將檔案緩衝區的特性 (通常`char_traits` <  `Elem`>)。
 
 ## <a name="remarks"></a>備註
 
@@ -141,11 +141,11 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>參數
 
-`_Filename` 若要開啟的檔案名稱。
+*_Filename*来開啟之檔案的名稱。
 
-`_Mode` 其中一個列舉中[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`_Prot` 預設的檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*預設檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -194,7 +194,7 @@ void close();
 
 ### <a name="example"></a>範例
 
-如需使用 **close** 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。
+如需使用 `close` 的範例，請參閱 [basic_filebuf:: close](../standard-library/basic-filebuf-class.md#close)。
 
 ## <a name="is_open"></a>  basic_ifstream::is_open
 
@@ -210,7 +210,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式傳回[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。
+此成員函式會傳回[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。
 
 ### <a name="example"></a>範例
 
@@ -242,19 +242,19 @@ void open(
 
 ### <a name="parameters"></a>參數
 
-`_Filename` 若要開啟的檔案名稱。
+*_Filename*来開啟之檔案的名稱。
 
-`_Mode` 其中一個列舉中[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
 
-`_Prot` 預設的檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*預設檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果開啟失敗，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)，而可能擲回 ios_base::failure 例外狀況。
+此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果開啟失敗，函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)，這可能會擲回 ios_base:: failure 例外狀況。
 
 ### <a name="example"></a>範例
 
-如需使用 **open** 的範例，請參閱 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)。
+請參閱[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open)如需範例，會使用`open`。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -266,7 +266,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 右值參考`basic_ifstream`物件。
+*右*的右值參考`basic_ifstream`物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -274,7 +274,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會使用 `right` 的內容 (被視為 rvalue 參考) 來取代物件的內容。 如需詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成員運算子會取代物件的內容使用的內容*右*，視為右值參考。 如需詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 
@@ -302,11 +302,11 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 另一個資料流緩衝區的參考。
+*右*另一個資料流緩衝區的參考。
 
 ### <a name="remarks"></a>備註
 
-成員函式會將此物件的內容與 `right` 的內容交換。
+此成員函式交換的內容，此物件的內容*右*。
 
 ## <a name="see-also"></a>另請參閱
 

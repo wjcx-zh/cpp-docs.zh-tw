@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854427"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955328"
 ---
 # <a name="pair-structure"></a>pair 結構
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>參數
 
-`Val1` 值，初始化的第一個元素`pair`。
+*Val1*值，初始化的第一個元素`pair`。
 
-`Val2` 值，初始化第二個元素`pair`。
+*Val2*值，初始化的第二個項目`pair`。
 
-`Right` 其值要用來初始化另一個配對項目組。
+*右*組，其值要用來初始化的另一組項目。
 
 ## <a name="return-value"></a>傳回值
 
-第一個 (預設) 建構函式會初始化此配對的第一個項目為 **T1** 類型的預設值，並且將第二個項目初始化為 **T2** 類型的預設值。
+第一個 （預設） 建構函式初始化的類型為預設值組的第一個項目`T1`並且將第二個項目類型的預設`T2`。
 
-第二個建構函式會初始化該配對的第一個項目為 `Val1`，並且將第二個項目初始化為 *Val2*。
+第二個建構函式會初始化至配對的第一個項目*Val1*和第二個*Val2。*
 
 第三個 (範本) 建構函式會初始化該配對的第一個項目為 `Right`. **first** 和第二個項目為 `Right`. **second**。
 
-第四個建構函式會使用[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)，初始化該配對的第一個項目為 `Val1`，並且將第二個項目初始化為 *Val2*。
+第四個建構函式會初始化至配對的第一個項目*Val1*和第二個*Val2*使用[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="remarks"></a>備註
 
-範本結構會分別儲存一組 **T1** 和 **T2** 類型物件的配對。 類型 **first_type** 等同於範本參數 **T1**，而類型 **second_type** 等同於範本參數 **T2**。 **T1** 和 **T2** 各自只需要提供預設建構函式、單一引數建構函式和解構函式。 類型 `pair` 的所有成員是公用的，因為該類型宣告為 `struct`，而不是 **class**。 配對最常見的兩種用途是當作函式的傳回類型，這些函式會傳回兩個值，以及當作關聯容器類別 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)的項目，這些類別都具有與每個項目相關聯的索引鍵和實值類型。 後者滿足成對關聯容器的需求，也具有 `pair`< **const**`key_type`, `mapped_type`> 形式的實值類型。
+範本結構會儲存一組物件的型別`T1`和`T2`分別。 型別`first_type`等同於範本參數`T1`並輸入`second_type`等同於範本參數`T2`。 `T1` 和`T2`各自需要提供只有預設建構函式、 單一引數建構函式和解構函式。 類型 `pair` 的所有成員是公用的，因為該類型宣告為 `struct`，而不是 **class**。 配對最常見的兩種用途是當作函式的傳回類型，這些函式會傳回兩個值，以及當作關聯容器類別 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)的項目，這些類別都具有與每個項目相關聯的索引鍵和實值類型。 後者滿足成對關聯容器的需求，也具有 `pair`< **const**`key_type`, `mapped_type`> 形式的實值類型。
 
 ## <a name="example"></a>範例
 

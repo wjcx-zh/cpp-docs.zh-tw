@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853150"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960599"
 ---
 # <a name="rank-class"></a>rank 類別
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-類型查詢會保存陣列類型 `Ty` 的維度數目的值，或如果 `Ty` 不是陣列類型，則保存 0。
+類型查詢會保存陣列類型的維度數目的值*Ty*，或 0 *Ty*不是陣列類型。
 
 ## <a name="example"></a>範例
 

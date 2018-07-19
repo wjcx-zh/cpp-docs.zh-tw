@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855821"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959065"
 ---
 # <a name="tupleelement-class"></a>tuple_element 類別
 
@@ -66,29 +66,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>參數
 
-*索引*指定之項目的索引。
+*Tuple*  
+指定之項目的索引。
 
-*Tuple* tuple 的類型。
+*Tuple*  
+Tuple 的類型。
 
-*Elem*陣列項目的類型。
+*Elem*  
+陣列元素的類型。
 
-*大小*陣列的大小。
+*Size*  
+陣列的大小。
 
-*T1* 配對中第一個元素的類型。
+*T1*  
+配對中第一個項目型別。
 
-*T2*配對中第二個項目類型。
+*T2*  
+配對中第二個元素的類型。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別 `tuple_element` 具有巢狀的 typedef `type`，和在 tuple 類型 `Tuple` 索引處 `Index` 的類型同義。
+此範本類別`tuple_element`具有巢狀的 typedef`type`也就是在索引類型的同義字*Index* tuple 型別*Tuple*。
 
 typedef `tuple_element_t` 是 `tuple_element<Index, Tuple>::type` 的方便別名。
 
-陣列的樣板類別特製化會提供介面給 `array`，當做 `Size` 元素的 tuple，其中每一個都有相同的類型。 每個特製化都具有巢狀的 typedef `type` ，也就是類型的同義字 `Index` 的 `array`元素類型的同義字，保留了任何 const-volatile 限定性條件。
+陣列的樣板類別特製化會提供介面給 `array`，當做 `Size` 元素的 tuple，其中每一個都有相同的類型。 每個特製化有巢狀的 typedef`type`也就是類型的同義字*Index*項目`array`，包含保留的任何 const volatile 限定性條件。
 
 `pair` 類型的樣板特製化都提供單一成員 typedef，`type`，也就是在配對中指定位置的元素類型同義字，保留了任何 const 及/或 volatile 限定性條件。 typedef `tuple_element_t` 是 `tuple_element<N, pair<T1, T2>>::type` 的方便別名。
 
-使用[get 函式&lt;公用程式&gt;](../standard-library/utility-functions.md#get)傳回項目中指定的位置，或指定的型別。
+使用[取得函式&lt;公用程式&gt;](../standard-library/utility-functions.md#get)傳回在指定的位置，或指定型別的項目。
 
 ## <a name="example"></a>範例
 
@@ -178,7 +184,7 @@ int main() {
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<tuple >**標頭：** \<陣列 > （適用於陣列特製化）**標頭：** \<公用程式 > （適用於組特製化） **命名空間：** std
+**標頭：** \<tuple >**標頭：** \<陣列 > （用於陣列特製化）**標頭：** \<公用程式 > （用於配對特製化） **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 

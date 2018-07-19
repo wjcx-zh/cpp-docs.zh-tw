@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810f565d85a923379a25f49c6fe1c7d7cc4efbc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859276"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960586"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 類別
 
@@ -49,15 +49,15 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>參數
 
-`CharType` 表示 istreambuf_iterator 的字元類型的型別。
+*CharType*表示 istreambuf_iterator 的字元類型的型別。
 
-`Traits` 表示 istreambuf_iterator 的字元類型的型別。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*Traits*表示 istreambuf_iterator 的字元類型的型別。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
 
 ## <a name="remarks"></a>備註
 
 istreambuf_iterator 類別必須符合輸入迭代器的需求。
 
-在建構或遞增具有非 Null 預存指標的 istreambuf_iterator 類別物件之後，物件會實際嘗試從關聯的輸入資料流中擷取和儲存 **CharType** 類型物件。 然而，擷取可能會延遲，直到物件實際上已取值或複製。 如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。
+在建構或遞增具有非 Null 預存指標的 istreambuf_iterator 類別物件之後，物件會實際嘗試從關聯的輸入資料流中擷取和儲存 *CharType* 類型物件。 然而，擷取可能會延遲，直到物件實際上已取值或複製。 如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。
 
 ### <a name="constructors"></a>建構函式
 
@@ -105,7 +105,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型與樣板參數 *CharType* 同義。
 
 ### <a name="example"></a>範例
 
@@ -150,7 +150,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>參數
 
-`right` 這是要檢查相等的迭代器。
+*右*迭代器，用來檢查是否相等。
 
 ### <a name="return-value"></a>傳回值
 
@@ -158,7 +158,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>備註
 
-範圍是由指向目前位置的 `istreambuf_iterator` 和資料流結尾迭代器所定義，但由於所有非資料流結尾迭代器在 **equal** 成員函式下都相等，因此無法使用 `istreambuf_iterator` 來定義任何子範圍。 `==` 和 `!=` 運算子的語意相同。
+所定義的範圍`istreambuf_iterator`目前的位置和資料流結尾迭代器，但由於所有非-資料流結尾迭代器相等底下`equal`成員函式，不可以定義使用任何子範圍`istreambuf_iterator`s。 `==` 和 `!=` 運算子的語意相同。
 
 ### <a name="example"></a>範例
 
@@ -198,7 +198,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與 **Traits::int_type** 同義。
+這個類型與 `Traits::int_type`同義。
 
 ### <a name="example"></a>範例
 
@@ -246,13 +246,13 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>參數
 
-`strbuf` 輸入資料流緩衝區`istreambuf_iterator`正在附加。
+*strbuf*的輸入資料流緩衝區`istreambuf_iterator`附加。
 
-`_Istr` 輸入資料流的`istreambuf_iterator`正在附加。
+*_Istr*的輸入資料流`istreambuf_iterator`附加。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會使用 `strbuf` 將輸入資料流緩衝區指標初始化。 第二個建構函式會使用 `_Istr` 將輸入資料流緩衝區指標初始化。 最後，`rdbuf` 會接著嘗試擷取並儲存 **CharType** 類型的物件。
+第一個建構函式初始化帶有的輸入資料流緩衝區指標*strbuf*。 第二個建構函式初始化帶有的輸入資料流緩衝區指標 *_Istr*。 `rdbuf`然後最後嘗試擷取並儲存型別的物件`CharType`。
 
 ### <a name="example"></a>範例
 
@@ -341,7 +341,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>備註
 
-第一個運算子最後會嘗試從關聯的輸入資料流中擷取並儲存 **CharType** 類型的物件。 第二個運算子會複製物件、遞增物件，然後傳回複本。
+第一個運算子最後會嘗試擷取並儲存型別的物件`CharType`從相關聯的輸入資料流。 第二個運算子會複製物件、遞增物件，然後傳回複本。
 
 ### <a name="example"></a>範例
 
@@ -397,7 +397,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 **istreambuf_type** 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator)。
+如需如何宣告及使用 `istreambuf_type` 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator)。
 
 ## <a name="traits_type"></a>  istreambuf_iterator::traits_type
 
@@ -409,7 +409,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Traits** 同義。
+此類型與範本參數 *Traits* 同義。
 
 ### <a name="example"></a>範例
 

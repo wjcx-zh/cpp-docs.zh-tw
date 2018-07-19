@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954189"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 于组织*C++ 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO C++ 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。   
@@ -46,7 +46,7 @@ ms.locfileid: "32417199"
  [標準轉換](../cpp/standard-conversions.md)  
  內建 (或「基本」) 類型之間的類型轉換。 另外還有算術轉換，以及指標、參考與成員指標類型之間的轉換。  
   
- [運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+ [運算子、 優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
  C++ 中的運算子。  
   
  [運算式](../cpp/expressions-cpp.md)  
@@ -61,26 +61,23 @@ ms.locfileid: "32417199"
  [宣告和定義](declarations-and-definitions-cpp.md)  
  儲存類別指定名稱、函式定義、初始化、列舉、類別、結構以及等位宣告和 typedef 宣告。 另外還有內嵌函式、const 關鍵字和命名空間。  
   
- [宣告子](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)  
- 宣告陳述式中為物件、類型或函式命名的部分。 抽象宣告子、類型名稱、初始設定式、函式宣告與定義、陣列、參考。  
-  
  [類別、 結構和等位](../cpp/classes-and-structs-cpp.md)  
- 類別、結構和等位簡介。 此外，成員函式、 特殊成員函式、 資料成員、 位元欄位、 this 指標、 巢狀的類別。  
+ 類別、結構和等位簡介。 此外，成員函式、 特殊成員函式、 資料成員、 位元欄位，此指標、 巢狀的類別。  
   
  [在衍生的類別](../cpp/inheritance-cpp.md)  
- 單一和多重繼承、虛擬函式、多重基底類別、抽象類別、範圍規則。 此外，__super 和\__interface 關鍵字。  
+ 單一和多重繼承、虛擬函式、多重基底類別、抽象類別、範圍規則。 此外，還有 __super 和\_（_i） 關鍵字。  
   
  [成員存取控制](../cpp/member-access-control-cpp.md)  
  控制類別成員的存取：public、private 和 protected 關鍵字。 Friend 函式和類別。  
   
- [多載化](operator-overloading.md)  
- 多載的運算子時，多載運算子的規則。  
+ [多載](operator-overloading.md)  
+ 多載的運算子，運算子多載規則。  
   
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)  
  C++ 例外狀況處理、結構化例外狀況處理 (SEH)、用於撰寫例外狀況處理陳述式的關鍵字。  
   
  [判斷提示和使用者提供的訊息](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- `#error` 指示詞、`static_assert` 關鍵字、`assert` 巨集。  
+ `#error` 指示詞**static_assert**關鍵字，`assert`巨集。  
   
  [範本](../cpp/templates-cpp.md)  
  樣板規格、函式樣板、類別樣板、typename 關鍵字、樣板與巨集、樣板和智慧型指標。  
@@ -89,7 +86,7 @@ ms.locfileid: "32417199"
  宣告事件及事件處理常式。  
   
  [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)  
- Microsoft C++ 專有的修飾詞。 記憶體定址、 呼叫慣例、 naked 函式、 擴充儲存類別屬性 (__declspec)、 \__w64。  
+ Microsoft C++ 專有的修飾詞。 記憶體定址、 呼叫慣例、 naked 函式、 擴充儲存類別屬性 （）， \__w64。  
   
  [內嵌組合語言](../assembler/inline/inline-assembler.md)  
  在 __asm 區塊中使用組合語言和 C++。  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52b5d47908fd2889452a6c517b510930cbe2a10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862140"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960963"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator 類別
 
@@ -87,11 +87,11 @@ private:
 
 ### <a name="parameters"></a>參數
 
-`BidIt` 子相符項目的迭代器類型。
+*BidIt*子相符項目的迭代器類型。
 
-`Elem` 要符合的項目類型。
+*Elem*要符合的項目類型。
 
-`RXtraits` 項目的 traits 類別。
+*RXtraits*項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
 
@@ -335,7 +335,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 比較迭代器。
+*右*来比較的迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -679,7 +679,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-以滑鼠右鍵要比較的迭代器。
+*右*来比較的迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -1144,13 +1144,13 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>參數
 
-`first` 要比對之序列的開頭。
+*第一個*之比對的序列的開頭。
 
-`last` 要比對之序列的結尾。
+*最後一個*來比對之序列的結尾。
 
-`re` 規則運算式相符項目。
+*re*規則運算式相符項目。
 
-`f` 比對的旗標。
+*f*旗標的相符項目。
 
 ### <a name="remarks"></a>備註
 

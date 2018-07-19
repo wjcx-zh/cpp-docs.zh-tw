@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89dd2c01b4eea80fcd284a6eed44383c3eec9c5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a045abd8bb6a41e96febf972d21bae80b9b4f7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955412"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer 類別
 
@@ -37,11 +37,11 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果類型 `Ty` 是成員物件的指標，或 `cv-qualified` 是成員物件的指標，則類型述詞的執行個體為 true，否則為 false。 請注意，如果 `Ty` 是成員函式的指標，則 `is_member_object_pointer` 會保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是成員物件的指標或`cv-qualified`成員物件指標，否則為 false。 請注意，`is_member_object_pointer`保存 false if *Ty*是成員函式的指標。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: 參考 （c + +） |Microsoft 文件
+title: 參考 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956589"
 ---
 # <a name="references-c"></a>參考 (C++)
 參考 (例如指標) 會儲存位在記憶體中其他位置之物件的位址。 與指標不同，參考在初始化之後不能參照不同的物件，或設為 null。 有兩種類型的參考： 左值參考參照具名變數，右值參考參照[暫存物件](../cpp/temporary-objects.md)。 & 運算子表示左值參考，而 && 運算子根據內容會表示右值參考或通用參考 (右值或左值)。  
@@ -48,34 +49,34 @@ ms.lasthandoff: 05/03/2018
   
 -   選擇性的儲存類別規範。  
   
--   選擇性**const**及/或`volatile`限定詞。  
+-   選擇性**const**及/或**volatile**限定詞。  
   
 -   類型指定名稱：類型的名稱。  
   
 -   2. 宣告子：  
   
--   選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
+-   選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
   
 -   & 運算子或 && 運算子。  
   
--   選擇性**const**及/或`volatile`限定詞。  
+-   選擇性**const**及/或**volatile**限定詞。  
   
 -   識別碼。  
   
  3. 選擇性的初始設定式。  
   
- 更複雜的宣告子形式的指標陣列和函式也適用於參考陣列和函式，請參閱[指標](../cpp/pointers-cpp.md)和[宣告子](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
+ 較複雜的宣告子表單的指標陣列和函式也適用於參考陣列和函式，請參閱[指標](../cpp/pointers-cpp.md)。  
   
  多個宣告子和初始設定式可能會出現在逗號分隔清單中，後面接著一個宣告指定名稱。 例如:   
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  參考、指標和物件可以同時宣告：  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

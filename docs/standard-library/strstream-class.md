@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245391a0625d94fee0a4457f87e7b633ba3d03ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955731"
 ---
 # <a name="strstream-class"></a>strstream 類別
 
@@ -77,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>參數
 
-`_Freezeit` A`bool`指出您是否要凍結的資料流。
+*_Freezeit*  
+ A **bool**指出您是否要凍結的資料流。
 
 ### <a name="remarks"></a>備註
 
@@ -85,7 +86,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="example"></a>範例
 
-如需使用 **freeze** 的範例，請參閱 [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze)。
+請參閱[strstreambuf:: freeze](../standard-library/strstreambuf-class.md#freeze)如需範例，會使用`freeze`。
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -121,7 +122,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>備註
 
-成員函式會將類型 **pointer** 的已儲存資料流緩衝區位址傳回 [strstreambuf](../standard-library/strstreambuf-class.md)。
+此成員函式會傳回類型的預存資料流緩衝區的位址`pointer`要[strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>範例
 
@@ -145,7 +146,7 @@ char *str();
 
 ### <a name="example"></a>範例
 
-如需使用 **str** 的範例，請參閱 [strstreambuf::str](../standard-library/strstreambuf-class.md#str)。
+請參閱[strstreambuf:: str](../standard-library/strstreambuf-class.md#str)如需範例，會使用`str`。
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -161,19 +162,22 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>參數
 
-`count` 緩衝區的大小。
+*count*  
+ 緩衝區的大小。
 
-`_Mode` 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*  
+ 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
-`ptr` 緩衝區。
+*ptr*  
+ 緩衝區。
 
 ### <a name="remarks"></a>備註
 
-這兩個建構函式會呼叫 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) 來初始化基底類別，其中 **sb** 是類別 [strstreambuf](../standard-library/strstreambuf-class.md) 的已儲存物件。 第一個建構函式也會呼叫 [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf) 來初始化 **sb**。 第二個建構函式會使用下列其中一種方法來初始化基底類別：
+這兩個建構函式初始化基底類別，藉由呼叫[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**)，其中`sb`是類別的預存的物件[strstreambuf](../standard-library/strstreambuf-class.md)。 第一個建構函式也會初始化`sb`藉由呼叫[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)。 第二個建構函式會使用下列其中一種方法來初始化基底類別：
 
-- 如果 `_Mode` & **ios_base::app**== 0，則 `ptr` 必須指定 `count` 項目陣列的第一個項目，且建構函式會呼叫 `strstreambuf`( `ptr`, `count`, `ptr`)。
+- 如果`_Mode`  &  **ios_base:: app**= = 0，然後*ptr*必須指定陣列的第一個項目`count`項目，以及建構函式呼叫`strstreambuf`( `ptr`, `count`, `ptr`).
 
-- 否則，`ptr` 必須指定 count 項目陣列 (包含 C 字串) 第一個項目，其第一個項目是由 `ptr` 指定，且建構函式會呼叫 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) )。
+- 否則，請*ptr*必須指定 count 項目之陣列包含 C 字串的第一個項目所指定的第一個元素*ptr*，並建構函式呼叫`strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>另請參閱
 

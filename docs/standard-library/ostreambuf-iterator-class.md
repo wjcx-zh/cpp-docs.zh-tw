@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861210"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958249"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 類別
 
@@ -45,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>參數
 
-`CharType` 表示 ostreambuf_iterator 的字元類型的型別。 這個引數是選擇性的，而且預設值是 `char`。
+*CharType*表示 ostreambuf_iterator 的字元類型的型別。 這個引數是選擇性的預設值是**char**。
 
-`Traits` 表示 ostreambuf_iterator 的字元類型的型別。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*Traits*表示 ostreambuf_iterator 的字元類型的型別。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
 
 ## <a name="remarks"></a>備註
 
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型是範本參數 `CharType`的同義字。
 
 ### <a name="example"></a>範例
 
@@ -294,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>參數
 
-`_Char` 要插入至資料流緩衝區的字元。
+*_Char*来插入至資料流緩衝區的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -346,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>參數
 
-`strbuf` 輸出 streambuf 物件用來初始化輸出資料流緩衝區指標。
+*strbuf*用來初始化輸出資料流緩衝區指標的輸出 streambuf 物件。
 
-`Ostr` 用來初始化輸出資料流緩衝區指標的輸出資料流物件。
+*Ostr*輸出資料流物件，用來初始化輸出資料流緩衝區指標。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會使用 `strbuf` 初始化輸出資料流緩衝區指標。
+第一個建構函式會初始化輸出資料流緩衝區指標*strbuf*。
 
 第二個建構函式會使用 `Ostr` 初始化輸出資料流緩衝區指標。 `rdbuf`. 儲存的指標不能是 null 指標。
 
@@ -415,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與 `basic_streambuf`\< **CharType**, **Traits**> 同義，在特製化為字元類型 `char` 時會變成 `streambuf` 的 I/O 緩衝區資料流類別。
+類型是同義字`basic_streambuf` \< **CharType**，**特性**>，成為 I/O 緩衝區資料流類別`streambuf`時特製化為字元類型**char**。
 
 ### <a name="example"></a>範例
 
@@ -431,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 **Traits** 同義。
+此類型是範本參數 `Traits`的同義字。
 
 ### <a name="example"></a>範例
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f87ae764372990a96515a73789b373d2d6d7d01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f8b516a3e5f5e19731a372a6531d9f26cb94fa6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958912"
 ---
 # <a name="greaterequal-struct"></a>greater_equal 結構
 
-在其引數上執行大於或等於運算 ( `operator>=`) 的二元述詞。
+執行更新版本比-或-等於運算的二元述詞 (`operator>=`) 在其引數。
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ struct greater_equal<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援任何型別`operator>=`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援任何型別`operator>=`會指定或推斷類型的運算元。
 
-`Left` 大於比-或-等於運算的左的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*大於-比-或-等於運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 大於比-或-等於運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*大於-比-或-等於運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -61,7 +61,7 @@ struct greater_equal<void>
 
 ## <a name="remarks"></a>備註
 
-二元述詞 `greater_equal`< `Type`> 會提供嚴格弱式排序來將一組 `Type` 類型的元素值分割成等價類別，但只有在此類型滿足以此方式排序的標準數學需求時，才會這麼做。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。
+二元述詞`greater_equal` <  `Type`> 提供嚴格弱式順序的一組項目值的型別*類型*成等價類別，如果且只有此類型滿足數學標準因此要排序的需求。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。
 
 ## <a name="example"></a>範例
 

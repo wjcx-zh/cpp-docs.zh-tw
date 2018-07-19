@@ -1,5 +1,5 @@
 ---
-title: 加入 ATL 控制項 |Microsoft 文件
+title: 新增 ATL 控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954678"
 ---
-# <a name="adding-an-atl-control"></a>加入 ATL 控制項
-您可以使用此精靈，將使用者介面物件加入至所有可能容器支援介面的專案。 若要支援這些介面，專案必須已建立以 ATL 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[MFC 應用程式中加入 ATL 物件](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
+# <a name="adding-an-atl-control"></a>新增 ATL 控制項
+您可以使用這個精靈來加入專案的所有可能的容器支援介面的使用者介面物件。 若要支援這些介面，專案必須已建立以 ATL 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[將 ALT 物件新增至 MFC 應用程式](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，以實作 MFC 應用程式的 ATL 支援。  
   
 ### <a name="to-add-an-atl-control-to-your-project"></a>將 ATL 控制項新增至您的專案  
   
-1.  在**方案總管 中**或[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，以滑鼠右鍵按一下您要加入 ATL 簡單物件的專案名稱。  
+1.  採用**方案總管**或[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下您要新增 ATL 簡單物件專案的名稱。  
   
-2.  按一下**新增**從捷徑功能表，然後再按一下**加入類別**。  
+2.  按一下 **新增**從捷徑功能表，然後按一下**加入類別**。  
   
-3.  在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**ATL 控制項**，然後按一下 **新增**顯示[ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)。  
+3.  在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**ATL 控制項**，然後按一下**新增**以顯示[ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)。  
   
- 使用**ATL 控制項精靈**，您可以建立三種控制項類型的其中一個：  
+ 使用**ATL 控制項精靈**，您可以建立一個三種類型的控制項：  
   
 -   標準控制項  
   
@@ -46,5 +46,4 @@ ms.locfileid: "32356931"
 ## <a name="see-also"></a>另請參閱  
  [將功能加入至複合控制項](../../atl/adding-functionality-to-the-composite-control.md)   
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire 範例](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
 

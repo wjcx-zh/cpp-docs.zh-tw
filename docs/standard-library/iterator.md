@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5066e793c58dca9ccc12ccc159a010654df3efbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860667"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955448"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -89,22 +89,22 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 
 |類別|描述|
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將元素插入到 **Container** 類型的容器中，其中會透過它所儲存的受保護 **pointer** 物件 (稱為容器) 來存取該容器。|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一種類別，可為代表雙向迭代器的 **iterator_category** 函式提供傳回類型。|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示雙向迭代器函式。|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|類別，使用隨機存取、已檢查的迭代器來存取陣列。 **注意：** 這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|一種類別，可為代表正向迭代器的 **iterator_category** 函式提供傳回類型。|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將元素插入到 **Container** 類型的容器中，其中會透過它所儲存的受保護 **pointer** 物件 (稱為容器) 來存取該容器。|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|一種類別，可為代表輸入迭代器的 **iterator_category** 函式提供傳回類型。|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將元素插入到 **Container** 類型的容器中，其中會透過它所儲存的受保護 **pointer** 物件 (稱為容器) 來存取該容器。 它也會儲存 **Container::iterator** 類別的受保護 **iterator** 物件 (稱為 **iter**)。|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會從輸入資料流擷取 **Ty** 類別的物件，其中會透過它所儲存的物件 (屬於 `basic_istream`\<**Elem**, **Tr**> 的 pointer 類型) 來存取該資料流。|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會將 **Elem** 類別的元素插入到輸出資料流緩衝區中，其中會透過它所儲存的物件 (屬於 `basic_streambuf`\<**Elem**, **Tr**> 的 **pointer** 類型) 來存取該緩衝區。|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`代表正向迭代器的函式。|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`代表輸入迭代器的函式。|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。 它也會儲存受保護`iterator`類別的物件`Container::iterator`稱為`iter`。|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會擷取類別的物件`Ty`它會透過它所儲存之類型指標的物件存取輸入資料流`basic_istream` \< **Elem**， **Tr**>。|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會插入項目類別的`Elem`輸出資料流緩衝區中，存取物件透過其儲存的型別`pointer`要`basic_streambuf` \< **Elem**， **Tr**>。|
 |[iterator](../standard-library/iterator-struct.md)|此樣板類別做為所有迭代器的基底類型。|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|樣板協助程式類別，提供與不同迭代器類型相關聯的關鍵類型，因此可以相同方式參考這些不同迭代器類型。|
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` 物件儲存 `RandomIterator` 類型的隨機存取迭代器。 它的行為就像隨機存取迭代器 (除非取值時)。 `operator*` 的結果會隱含轉型為 `value_type&&:` 以建立 `rvalue reference`。|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將 **Type** 類別的物件插入到輸出資料流中，其中會透過它所儲存的物件 (屬於 `basic_ostream`\<**Elem**, **Tr**> 的 **pointer** 類型) 來存取該資料流。|
-|[ostreambuf_iterator 類別](../standard-library/ostreambuf-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將 **Elem** 類別的元素插入到輸出資料流緩衝區中，其中會透過它所儲存的物件 (屬於 `basic_streambuf`\<**Elem**, **Tr**> 的 pointer 類型) 來存取該緩衝區。|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|一種類別，可為代表輸出迭代器的 **iterator_category** 函式提供傳回類型。|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|一種類別，可為代表隨機存取迭代器的 **iterator_category** 函式提供傳回類型。|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會插入類別的物件`Type`輸出資料流中，存取物件透過其儲存的型別`pointer`要`basic_ostream` \< **Elem**， **Tr**>。|
+|[ostreambuf_iterator 類別](../standard-library/ostreambuf-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會插入類別的元素`Elem`輸出資料流緩衝區，它會透過它所儲存之類型指標的物件存取這`basic_streambuf` \< **Elem**， **Tr**>。|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示輸出迭代器函式。|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示隨機存取迭代器函式。|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此樣板類別描述行為類似隨機存取迭代器，只不過是反向方向的物件。|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|類別，使用隨機存取、未檢查的迭代器來存取陣列。 **注意：** 這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 

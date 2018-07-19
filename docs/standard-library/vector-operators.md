@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 779fe61bec63f55d7f3b8b3bb7f2e0d084fbab5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4dac24b73e2b0a228f712453b124ff01e5c13c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863952"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959679"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 運算子
 
@@ -44,9 +44,9 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**向量**。
+*左*型別的物件`vector`。
 
-`right` 型別的物件**向量**。
+*右*型別的物件`vector`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -93,9 +93,11 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**向量**。
+*left*  
+ `vector` 類型的物件。
 
-`right` 型別的物件**向量**。
+*right*  
+ `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -142,9 +144,11 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**向量**。
+*left*  
+ `vector` 類型的物件。
 
-`right` 型別的物件**向量**。
+*right*  
+ `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -191,9 +195,11 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**向量**。
+*left*  
+ `vector` 類型的物件。
 
-`right` 型別的物件**向量**。
+*right*  
+ `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -240,9 +246,11 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**向量**。
+*left*  
+ `vector` 類型的物件。
 
-`right` 型別的物件**向量**。
+*right*  
+ `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -290,9 +298,11 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>參數
 
-`left` 型別的物件**向量**。
+*left*  
+ `vector` 類型的物件。
 
-`right` 型別的物件**向量**。
+*right*  
+ `vector` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 

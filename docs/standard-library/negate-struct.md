@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852386"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956930"
 ---
 # <a name="negate-struct"></a>negate 結構
 
@@ -49,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>參數
 
-`Type` 支援任何型別`operator-`接受指定或推斷類型的運算元。
+*型別*支援任何型別`operator-`會指定或推斷類型的運算元。
 
-`Left` 要成為相反值運算元。 此特製化的範本會完美地轉送 `Type` 推斷類型的左值和右值參考引數。
+*左*要否定的運算元。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*型別*。
 
 ## <a name="return-value"></a>傳回值
 

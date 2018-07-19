@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594f3aaa45638ff2ab5d184a771070d87dbeb0bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856579"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957104"
 ---
 # <a name="valuecompare-class"></a>value_compare 類別
 
@@ -49,7 +49,7 @@ protected:
 
 ## <a name="remarks"></a>備註
 
-由 value_compare 提供在 hash_map 所包含全部 **value_types** 項目之間的比較準則，是透過輔助類別建構函式在個別項目之間的索引鍵比較而導出。 成員函式運算子會使用型別 `key_compare` 的物件 **comp**，該物件儲存於由 value_compare 提供的函式物件中，來比較兩個項目的排序鍵元件。
+提供由 value_compare 之間的比較準則`value_types`項目在 hash_map 所包含引發從個別的項目，透過輔助類別建構的索引鍵之間的比較。 成員函式運算子會使用物件`comp`型別的`key_compare`儲存於由 value_compare 來比較兩個項目的排序鍵元件提供的函式物件。
 
 對於 hash_sets 和 hash_multisets 而言 (這些是簡單容器，其中索引鍵值和項目值相同)，value_compare 相當於 `key_compare`；但對於 hash_maps 和 hash_multimaps 則否，因為項目型別 `pair` 的值與項目的索引鍵值不同。
 

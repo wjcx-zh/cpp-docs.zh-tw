@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956550"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -40,8 +40,8 @@ ms.locfileid: "33852373"
 
 |類型名稱|描述|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|`char` 的特殊化類型 `basic_iostream`。|
-|[istream](../standard-library/istream-typedefs.md#istream)|`char` 的特殊化類型 `basic_istream`。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|型別`basic_iostream`特殊化**char**。|
+|[istream](../standard-library/istream-typedefs.md#istream)|型別`basic_istream`特殊化**char**。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|針對 **wchar** 特殊化的 `basic_iostream` 類型。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|針對 **wchar** 特殊化的 `basic_istream` 類型。|
 
@@ -63,7 +63,7 @@ ms.locfileid: "33852373"
 |類別|描述|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可執行輸入和輸出的資料流類別。|
-|[basic_istream](../standard-library/basic-istream-class.md)|此範本類別描述一個物件，此物件可控制如何從具有 **Elem** 類型 (也稱為 [char_type](../standard-library/basic-ios-class.md#char_type)) 之元素的資料流緩衝區擷取元素和編碼物件，其中該類型的字元特性是由 **Tr** 類別 (也稱為 [traits_type](../standard-library/basic-ios-class.md#traits_type)) 所決定。|
+|[basic_istream](../standard-library/basic-istream-class.md)|此範本類別描述的物件可控制擷取元素和編碼的物件從資料流緩衝區類型的項目`Elem`也稱為[char_type](../standard-library/basic-ios-class.md#char_type)，其字元特性由類別`Tr`也稱為[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
 
 ## <a name="see-also"></a>另請參閱
 

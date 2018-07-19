@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846307"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957681"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 類別
 
@@ -81,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*整數結果類型中，預設值為`int`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 *URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數類型的值的分佈 (若無提供則為 `int` 類型)，而這是根據二項式分佈離散可能性函式進行分佈。 下表提供各個成員的文章連結。
+此範本類別描述產生使用者指定之整數的值類型**int**如果未提供，根據二項式分佈離散可能性函式的分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-屬性成員 `t()` 和 `p()` 會分別傳回目前儲存的分佈參數值 `t` 和 `p`。
+屬性成員`t()`並`p()`會傳回目前儲存的分佈參數值*t*並*p*分別。
 
 屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
 
@@ -260,9 +260,9 @@ explicit binomial_distribution(const param_type& parm);
 
 **前置條件：**`0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一個建構函式建構的物件，其預存的 `p` 值具有 *p* 值，而其預存的 `t` 值具有 *t* 值。
+第一個建構函式會建構一個物件的預存*p*值具有值*p* ，且預存*t*值保留值*t*。
 
-第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
+第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
 ## <a name="param_type"></a>  binomial_distribution::param_type
 
@@ -286,7 +286,7 @@ struct param_type {
 
 *p* `p`分佈參數。
 
-*右*`param_type`這要比較的物件。
+*右*`param_type`来比較此物件。
 
 ### <a name="remarks"></a>備註
 

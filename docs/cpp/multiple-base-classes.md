@@ -1,5 +1,5 @@
 ---
-title: 多重基底類別 |Microsoft 文件
+title: 多重基底類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955461"
 ---
 # <a name="multiple-base-classes"></a>多個基底類別
-中所述[多重繼承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)，可以從一個以上的基底類別衍生一個類別。 在多重繼承模型中 （其中類別均衍生自多個基底類別），使用指定的基底類別*基底清單*文法項目。 例如，可以指定衍生自 `CollectionOfBook` 和 `Collection` 的 `Book` 類別宣告：  
+類別可以衍生自多個基底類別。 在多重繼承模型中 （類別衍生自多個基底類別），使用指定的基底類別*基底清單*文法項目。 例如，可以指定衍生自 `CollectionOfBook` 和 `Collection` 的 `Book` 類別宣告：  
   
-```  
+```cpp 
 // deriv_MultipleBaseClasses.cpp  
 // compile with: /LD  
 class Collection {  
@@ -39,14 +40,14 @@ class CollectionOfBook : public Book, public Collection {
   
  除非是在叫用建構函式和解構函式的特定情況下，否則指定基底類別的順序並不重要。 在這些情況下，指定基底類別的順序會影響下列各項：  
   
--   建構函式進行初始化的順序。 如果程式碼要求 `Book` 的 `CollectionOfBook` 部分必須在 `Collection` 部分之前初始化，則指定的順序就很重要。 指定類別中的順序的初始化發生*基底清單*。  
+-   建構函式進行初始化的順序。 如果程式碼要求 `Book` 的 `CollectionOfBook` 部分必須在 `Collection` 部分之前初始化，則指定的順序就很重要。 初始化發生在類別中所指定的順序*基底清單*。  
   
--   叫用解構函式進行清除的順序。 同樣地，如果類別的特定「部分」必須在其他部分終結時存在，則順序就很重要。 解構函式呼叫中所指定類別的反向順序*基底清單*。  
+-   叫用解構函式進行清除的順序。 同樣地，如果類別的特定「部分」必須在其他部分終結時存在，則順序就很重要。 解構函式呼叫中指定的類別的相反*基底清單*。  
   
     > [!NOTE]
     >  基底類別的指定順序可能會影響類別的記憶體配置。 請不要依據記憶體中基底成員的順序做出任何程式設計上的決策。  
   
- 當指定*基底清單*，您無法多次指定相同的類別名稱。 不過，類別可以多次做為衍生類別的間接基底。  
+ 指定時*基底清單*，您無法多次指定相同的類別名稱。 不過，類別可以多次做為衍生類別的間接基底。  
   
 ## <a name="virtual-base-classes"></a>虛擬基底類別  
  由於類別可以多次做為衍生類別的間接基底類別，因此 C++ 針對此類的基底類別工作提供一種最佳化的方式。 虛擬基底類別可節省空間，並在使用多重繼承的類別階層架構時避免出現模稜兩可的問題。  
@@ -69,7 +70,7 @@ class CollectionOfBook : public Book, public Collection {
   
  請注意，`Queue` 物件中有兩個 `LunchCashierQueue` 子物件。 下列程式碼會將 `Queue` 宣告為虛擬基底類別：  
   
-```  
+```cpp 
 // deriv_VirtualBaseClasses.cpp  
 // compile with: /LD  
 class Queue {};  
@@ -78,7 +79,7 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};  
 ```  
   
- 使用 `virtual` 關鍵字可確保只會包含一個 `Queue` 子物件的複本 (請參閱下圖)。  
+ **虛擬**關鍵字可確保只有一個子物件的複本`Queue`功能 （請參閱下圖）。  
   
  ![模擬的午餐&#45;行 」 物件、 虛擬基底類別](../cpp/media/vc38xp3.gif "vc38XP3")  
 含有虛擬基底類別的模擬 Lunch-Line 物件  
@@ -90,7 +91,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  在圖中，`CashierQueue` 和 `LunchQueue` 使用 `Queue` 做為虛擬基底類別。 不過，`TakeoutQueue` 指定 `Queue` 做為基底類別，而不是虛擬基底類別。 因此，`LunchTakeoutCashierQueue` 內含兩個類型為 `Queue` 的子物件：一個是來自包含 `LunchCashierQueue` 的繼承路徑，另一個是來自包含 `TakeoutQueue` 的路徑。 下圖中說明此情形。  
   
- ![中的物件配置的虛擬和非虛擬繼承](../cpp/media/vc38xp5.gif "vc38XP5")  
+ ![物件配置中的虛擬和非虛擬繼承](../cpp/media/vc38xp5.gif "vc38XP5")  
 具有虛擬和非虛擬繼承的物件配置  
   
 > [!NOTE]
@@ -98,12 +99,12 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  如果衍生類別會覆寫從虛擬基底類別繼承的虛擬函式，且衍生基底類別的建構函式或解構函式使用虛擬基底類別的指標呼叫函式，編譯器可能會在內含虛擬基底的類別中採用額外的隱藏 [vtordisp] 欄位。 /vd0 編譯器選項會抑制隱藏 vtordisp 建構函式/解構函式替代成員的加入。 /vd1 編譯器選項 (預設值) 會在必要時啟用它們。 請只有在您確定所有類別建構函式和解構函式都會實際呼叫虛擬函式時，才關閉 vtordisps。  
   
- /vd 編譯器選項會影響整個編譯模組。 使用**vtordisp**隱藏並再重新啟用 vtordisp 欄位類別的類別為基礎的 pragma:  
+ /vd 編譯器選項會影響整個編譯模組。 使用**vtordisp**隱藏並再重新啟用 vtordisp 欄位的類別為基礎的 pragma:  
   
-```  
+```cpp 
 #pragma vtordisp( off )  
 class GetReal : virtual public { ... };  
-#pragma vtordisp( on )  
+\#pragma vtordisp( on )  
 ```  
   
 ## <a name="name-ambiguities"></a>名稱語意模糊  
@@ -111,7 +112,7 @@ class GetReal : virtual public { ... };
   
  參考類別成員的所有運算式都必須進行明確參考。 下列範例將示範如何發展出模稜兩可的情況：  
   
-```  
+```cpp 
 // deriv_NameAmbiguities.cpp  
 // compile with: /LD  
 // Declare two base classes, A and B.  
@@ -134,7 +135,7 @@ class C : public A, public B {};
   
  以上述類別宣告為例，下面這類程式碼就是模稜兩可，因為不清楚 `b` 是參考 `b` 還是 `A` 中的 `B`：  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->b();  
@@ -148,11 +149,11 @@ pc->b();
   
 2.  如果多載函式並非模稜兩可，就會進行解析 
   
-3.  如果對名稱的存取違反成員存取的權限，則會產生錯誤訊息  (如需詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。)  
+3.  如果對名稱的存取違反成員存取的權限，則會產生錯誤訊息  (如需詳細資訊，請參閱 <<c0> [ 成員存取控制](../cpp/member-access-control-cpp.md)。)  
   
  當運算式透過繼承產生模稜兩可的情況時，您可以使用類別名稱限定所指的名稱，藉此手動解析該名稱。 若要讓上述範例正確編譯而不發生模稜兩可的情況，請使用如下所示的程式碼：  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->B::a();  
@@ -166,7 +167,7 @@ pc->B::a();
   
  如果兩個類別中皆定義了該名稱，且某個類別是衍生自另一個類別，則其名稱優先於另一個名稱。 主要名稱是衍生類別中的名稱，這個名稱會在出現模稜兩可時使用，如下列範例所示：  
   
-```  
+```cpp 
 // deriv_Dominance.cpp  
 // compile with: /LD  
 class A {  
@@ -192,16 +193,16 @@ public:
   
 -   宣告類型為 `D` 的物件。  
   
--   套用傳址運算子的效果 (**&**) 給該物件。 請注意，傳址運算子一律會提供該物件的基底位址。  
+-   套用傳址運算子的效果 (**&**) 該物件。 請注意，傳址運算子一律會提供該物件的基底位址。  
   
 -   將使用傳址運算子取得的指標明確轉換為基底類別類型 `A` 的作用。 請注意，若強制將物件位址設為 `A*` 類型，編譯器永遠無法得到足以判斷應選取哪一個 `A` 類型之子物件的資訊；在這種情況下，會同時存在兩個子物件。  
   
- ![模稜兩可的基底類別的指標轉換](../cpp/media/vc38xt1.gif "vc38XT1")  
+ ![模稜兩可的基底類別指標的轉換](../cpp/media/vc38xt1.gif "vc38XT1")  
 指標不明確地轉換為基底類別  
   
  類型 `A*` (`A` 的指標) 的轉換是模稜兩可的，因為沒有辦法分辨哪一個 `A` 類型的子物件是正確的。 請注意，您可以明確指定要使用的子物件，以避免模稜兩可的情況，如下所示：  
   
-```  
+```cpp 
 (A *)(B *)&d       // Use B subobject.  
 (A *)(C *)&d       // Use C subobject.  
 ```  
@@ -211,7 +212,7 @@ public:
   
  下圖顯示物件使用虛擬和非虛擬繼承的組成方式。  
   
- ![虛擬衍生和非虛擬衍生](../cpp/media/vc38xr1.gif "vc38XR1")  
+ ![虛擬衍生和非虛擬的衍生](../cpp/media/vc38xr1.gif "vc38XR1")  
 虛擬與非虛擬的衍生  
   
  在圖中，透過非虛擬基底類別存取類別 `A` 的所有成員會產生模稜兩可的情況，編譯器不會提供是否要使用與 `B` 關聯的子物件，或使用與 `C` 關聯之子物件的資訊。 不過，當 `A` 指定為虛擬基底類別時，沒有存取子物件的問題。  

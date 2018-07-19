@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0580d6e2128a75f7457541cc82caf2fece958b81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfc3f744da2deb804f1a3e3445fbed3da3fac0b5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955782"
 ---
 # <a name="divides-struct"></a>divides 結構
 
-在其引數執行除法運算 ( `operator/`) 的預先定義函式物件。
+執行除法運算的預先定義的函式物件 (`operator/`) 在其引數。
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ struct divides<void>
 
 ### <a name="parameters"></a>參數
 
-`Type``T`，`U`支援的型別`operator/`，其接受指定或推斷類型的運算元。
+*型別*， *T*， *U*支援的型別`operator/`會指定或推斷類型的運算元。
 
-`Left` 除法運算的左的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。
+*左*除法運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-`Right` 除法運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。
+*右*除法運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 

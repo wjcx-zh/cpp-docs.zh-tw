@@ -1,5 +1,5 @@
 ---
-title: 成員存取控制 （c + +） |Microsoft 文件
+title: 成員存取控制 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957382"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
-存取控制可讓您區隔[公用](../cpp/public-cpp.md)介面的類別，以從[私人](../cpp/private-cpp.md)實作詳細資料和[保護](../cpp/protected-cpp.md)成員只使用在衍生的類別。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。  
+存取控制項可讓您區隔[公用](../cpp/public-cpp.md)介面的類別[私人](../cpp/private-cpp.md)實作詳細資料和[保護](../cpp/protected-cpp.md)僅適用於的成員使用在衍生的類別。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。  
   
-```  
+```cpp 
 class Point  
 {  
 public:                   
@@ -42,17 +43,17 @@ protected:      // Declare protected function for derived classes only.
     Point ToWindowCoords();  
 };  
   
-```  
+``` 
   
- 預設存取權是類別中的 `private` 以及 結構或等位中的 `public` 您可以依任意順序使用類別中的存取規範任何次數。 類別類型物件的儲存配置依實作而定，不過，成員一定會具有存取指定名稱之間指派的後續較高之記憶體位址。  
+ 預設存取**私人**在類別中，並**公用**結構或等位中。 您可以依任意順序使用類別中的存取規範任何次數。 類別類型物件的儲存配置依實作而定，不過，成員一定會具有存取指定名稱之間指派的後續較高之記憶體位址。  
   
 ### <a name="member-access-control"></a>成員存取控制  
   
 |存取的類型|意義|  
 |--------------------|-------------|  
-|[private](../cpp/private-cpp.md)|只有成員函式和類別的 friend (類別或函式) 可以使用宣告為 `private` 的類別成員。|  
-|[protected](../cpp/protected-cpp.md)|成員函式和類別的 friend (類別或函式) 可以使用宣告為 `protected` 的類別成員。 此外，類別所衍生的類別也可以使用這些類別成員。|  
-|[public](../cpp/public-cpp.md)|類別成員宣告為**公用**可供任何函式。|  
+|[private](../cpp/private-cpp.md)|類別成員宣告為**私人**可只由成員函式和類別的 friend （類別或函式）。|  
+|[protected](../cpp/protected-cpp.md)|類別成員宣告為**保護**可由成員函式和類別的 friend （類別或函式）。 此外，類別所衍生的類別也可以使用這些類別成員。|  
+|[public](../cpp/public-cpp.md)|類別成員宣告為**公開**可供任何函式。|  
   
  存取控制有助於避免您誤用物件。 執行明確類型轉換 (轉型) 時，會失去這項保護。  
   
@@ -62,7 +63,7 @@ protected:      // Declare protected function for derived classes only.
 ## <a name="access-control-in-derived-classes"></a>衍生類別中的存取控制  
  在衍生類別中可存取哪些基底類別的成員是由兩個因素所控制，這些相同的因素可控制在衍生類別中對於繼承成員的存取：  
   
--   在衍生的類別是否宣告基底類別使用**公用**存取規範中的*類別標頭*(*類別標頭*的文法>一節所述[定義類別類型](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da))。  
+-   在衍生的類別宣告基底類別使用的是否**公開**存取規範。  
   
 -   要存取哪些基底類別的成員。  
   
@@ -78,7 +79,7 @@ protected:      // Declare protected function for derived classes only.
   
  下面這個範例可說明這點：  
   
-```  
+```cpp 
 // access_specifiers_for_base_classes.cpp  
 class BaseClass  
 {  
@@ -108,45 +109,45 @@ int main()
   
  在 `DerivedClass2` 中，因為 `PublicFunc` 是 private 基底類別，因此會將函式 `ProtectedFunc` 和 `BaseClass` 視為是 private 成員。 同樣地，`PrivateFunc` 對 `BaseClass` 而言是 private，且無法存取任何衍生類別。  
   
- 您可以在未使用基底類別存取指定名稱的情況下宣告衍生類別。 在這種情況下，衍生視為 private 如果衍生的類別宣告使用**類別**關鍵字。 如果衍生類別宣告使用 `struct` 關鍵字，則會將該衍生視為 public。 例如，下列程式碼：  
+ 您可以在未使用基底類別存取指定名稱的情況下宣告衍生類別。 在此情況下，衍生視為 private 如果使用衍生的類別宣告**類別**關鍵字。 衍生視為 public，如果使用衍生的類別宣告**結構**關鍵字。 例如，下列程式碼：  
   
-```  
+```cpp 
 class Derived : Base  
 ...  
 ```  
   
  等於：  
   
-```  
+```cpp 
 class Derived : private Base  
 ...  
 ```  
   
  同樣地，下列程式碼：  
   
-```  
+```cpp 
 struct Derived : Base  
 ...  
 ```  
   
  等於：  
   
-```  
+```cpp 
 struct Derived : public Base  
 ...  
 ```  
   
- 請注意，宣告為具有 private 存取權限的成員無法存取函式或衍生類別，除非那些函式或類別在基底類別中是使用 `friend` 宣告加以宣告。  
+ 請注意，宣告為具有私用存取的成員無法存取函式或衍生類別，除非那些函式或類別則使用宣告**friend**基底類別中的宣告。  
   
- A **union**類型不能有基底類別。  
+ A**聯集**類型不能有基底類別。  
   
 > [!NOTE]
->  指定 private 基底類別時，建議明確使用 `private` 關鍵字加以指定，讓衍生類別的使用者能夠了解成員存取。  
+>  在指定的私用的基底類別時，建議您最好明確使用**私人**關鍵字，讓衍生類別的使用者了解成員存取。  
   
 ## <a name="access-control-and-static-members"></a>存取控制和靜態成員  
- 當您將基底類別指定為 `private` 時，只會影響到非靜態成員。 在衍生類別中仍然可以存取公用的靜態成員。 不過，使用指標、參考或物件存取基底類別的成員可能需要進行轉換，此時會重新套用存取控制。 參考下列範例：  
+ 當您指定做為基底類別**私人**，它會影響只有非靜態成員。 在衍生類別中仍然可以存取公用的靜態成員。 不過，使用指標、參考或物件存取基底類別的成員可能需要進行轉換，此時會重新套用存取控制。 參考下列範例：  
   
-```  
+```cpp 
 // access_control.cpp  
 class Base  
 {  
@@ -178,16 +179,16 @@ int Derived2::ShowCount()
 }  
 ```  
   
- 在上述程式碼中，存取控制項禁止從 `Derived2` 的指標轉換為 `Base` 的指標。 **這**指標可以隱含轉換為型別`Derived2 *`。 若要選取`CountOf`函式，**這**必須轉換成輸入`Base *`。 由於 `Base` 是 `Derived2` 的私用間接基底類別，因此不允許進行這類轉換。 只有直接衍生類別的指標可以轉換為私用的基底類別類型。 因此，`Derived1 *` 類型的指標可以轉換成 `Base *` 類型。  
+ 在上述程式碼中，存取控制項禁止從 `Derived2` 的指標轉換為 `Base` 的指標。 **這**指標可以隱含轉換為型別`Derived2 *`。 若要選取`CountOf`函式**這**必須轉換成輸入`Base *`。 由於 `Base` 是 `Derived2` 的私用間接基底類別，因此不允許進行這類轉換。 只有直接衍生類別的指標可以轉換為私用的基底類別類型。 因此，`Derived1 *` 類型的指標可以轉換成 `Base *` 類型。  
   
  請注意，明確呼叫 `CountOf` 函式，而不使用指標、參考或物件加以選取，表示沒有進行轉換。 因此，可以進行呼叫。  
   
  衍生類別的成員和 friend (即 `T`) 可以將 `T` 的指標轉換為 `T` 的私用直接基底類別的指標。  
   
 ## <a name="access-to-virtual-functions"></a>存取虛擬函式  
- 存取控制套用至[虛擬](../cpp/virtual-cpp.md)函式由用來進行呼叫的函式的類型。 覆寫函式的宣告不會影響特定類型的存取控制。 例如:   
+ 存取控制套用至[虛擬](../cpp/virtual-cpp.md)函式取決於用來進行呼叫的函式的類型。 覆寫函式的宣告不會影響特定類型的存取控制。 例如:   
   
-```  
+```cpp 
 // access_to_virtual_functions.cpp  
 class VFuncBase  
 {  

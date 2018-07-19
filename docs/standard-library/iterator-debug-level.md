@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7219ed039e77d0857151c54e73a03a0d1f6a3f5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4163542d0ba741e6f0a123cbdcdc44dbbec470d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957787"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
-`_ITERATOR_DEBUG_LEVEL` 巨集可控制是否啟用[已檢查的迭代器](../standard-library/checked-iterators.md)和[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。 此巨集取代及結合了舊版 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 巨集的功能。
+_ITERATOR_DEBUG_LEVEL 巨集可控制是否[檢查的迭代器](../standard-library/checked-iterators.md)並[偵錯迭代器支援](../standard-library/debug-iterator-support.md)已啟用。 這個巨集取代，並結合了較舊的 _SECURE_SCL 和 _HAS_ITERATOR_DEBUGGING 巨集的功能。
 
 ## <a name="macro-values"></a>巨集值
 
-下表摘要說明 `_ITERATOR_DEBUG_LEVEL` 巨集的可能值。
+下表摘要說明您 _ITERATOR_DEBUG_LEVEL 巨集的可能值。
 
 |編譯模式|巨集值|描述|
 |----------------------|----------------|-----------------|
@@ -41,13 +41,13 @@ ms.locfileid: "33864134"
 ||0 (預設)|停用已檢查的迭代器。|
 ||1|啟用已檢查的迭代器；與迭代器偵錯功能無關。|
 
-在發行模式下，如果您將 `_ITERATOR_DEBUG_LEVEL` 指定為 2，編譯器會產生錯誤。
+在發行模式中，編譯器會產生錯誤，如果您指定 _ITERATOR_DEBUG_LEVEL 為 2。
 
 ## <a name="remarks"></a>備註
 
-`_ITERATOR_DEBUG_LEVEL` 巨集可控制是否啟用[已檢查的迭代器](../standard-library/checked-iterators.md)，而在「偵錯」模式下，則可控制是否啟用[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。 如果將 `_ITERATOR_DEBUG_LEVEL` 定義為 1 或 2，已檢查的迭代器便可確保您容器的界限不會被覆寫。 如果 `_ITERATOR_DEBUG_LEVEL` 是 0，則不會檢查迭代器。 當 `_ITERATOR_DEBUG_LEVEL` 定義為 1 時，任何不安全的迭代器使用方式都會導致執行階段錯誤，而使程式終止。 當 `_ITERATOR_DEBUG_LEVEL` 定義為 2 時，不安全的迭代器使用方式會導致顯示判斷提示和執行階段錯誤對話方塊，讓您可以中斷偵錯工具。
+_ITERATOR_DEBUG_LEVEL 巨集可控制是否[檢查的迭代器](../standard-library/checked-iterators.md)已啟用，以及在偵錯模式、 是否[偵錯迭代器支援](../standard-library/debug-iterator-support.md)已啟用。 如果 _ITERATOR_DEBUG_LEVEL 定義為 1 或 2，已檢查的迭代器會確保您容器的界限不會覆寫。 如果 _ITERATOR_DEBUG_LEVEL 為 0，不會檢查的迭代器。 當 _ITERATOR_DEBUG_LEVEL 定義為 1 時，任何不安全的迭代器使用會造成執行階段錯誤，則會終止程式。 當 _ITERATOR_DEBUG_LEVEL 定義為 2 時，不安全的迭代器會使用顯示判斷提示和執行階段錯誤對話方塊，可讓您中斷偵錯工具的原因。
 
-由於 `_ITERATOR_DEBUG_LEVEL` 巨集支援的功能與 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 巨集類似，因此您可能會不確定在特定情況下要使用哪個巨集和巨集值。 為了避免混淆，建議您只使用 `_ITERATOR_DEBUG_LEVEL` 巨集。 下表說明在現有的程式碼中，針對 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 的各種值，要使用的對等 `_ITERATOR_DEBUG_LEVEL` 巨集值。
+因為 _ITERATOR_DEBUG_LEVEL 巨集支援 _SECURE_SCL 和 _HAS_ITERATOR_DEBUGGING 巨集類似的功能，您可能會不確定哪個巨集和巨集要在特定情況下使用的值。 為了避免混淆，我們建議您使用 _ITERATOR_DEBUG_LEVEL 巨集。 下表描述要用於 _SECURE_SCL 和 _HAS_ITERATOR_DEBUGGING 現有程式碼中的各種值的對等的 _ITERATOR_DEBUG_LEVEL 巨集值。
 
 |**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
 |---|---|---|
@@ -59,7 +59,7 @@ ms.locfileid: "33864134"
 
 ### <a name="example"></a>範例
 
-若要指定 `_ITERATOR_DEBUG_LEVEL` 巨集的值，請在命令列上使用 [/D](../build/reference/d-preprocessor-definitions.md) 編譯器選項來定義它，或在您原始程式檔所含的「C++ 標準程式庫」標頭之前使用 `#define`。 例如，在命令列上，若要以偵錯模式編譯 *sample.cpp* 並使用偵錯迭代器支援，您可以指定 `_ITERATOR_DEBUG_LEVEL` 巨集定義：
+若要指定 _ITERATOR_DEBUG_LEVEL 巨集的值，請使用[/D](../build/reference/d-preprocessor-definitions.md)編譯器選項，來定義命令列上，或使用`#define`之前 c + + 標準程式庫標頭會包含在原始程式檔。 比方說，在命令列上，若要編譯*sample.cpp*偵錯模式中，並使用偵錯迭代器支援，您可以指定 _ITERATOR_DEBUG_LEVEL 巨集定義：
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

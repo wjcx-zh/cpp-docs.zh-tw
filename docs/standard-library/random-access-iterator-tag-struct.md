@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957369"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 結構
 
-類別，為表示隨機存取迭代器的 **iterator_category** 函式提供傳回類型。
+這個類別提供的傳回型別`iterator_category`表示隨機存取迭代器函式。
 
 ## <a name="syntax"></a>語法
 
@@ -38,7 +38,7 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 分類標籤類別會用來當作可供選取演算法的編譯標籤。 範本函式必須尋找其迭代器引數的最明確分類，如此它才能在編譯階段使用最有效率的演算法。 對於 `Iterator` 類型的每個迭代器，必須將 `iterator_traits`< `Iterator`> **::iterator_category** 定義為描述迭代器行為最精確的分類標籤。
 
-當 **Iter** 描述的物件可當作隨機存取迭代器時，此類型與 **iterator**\< **Iter**> **::iterator_category** 相同。
+型別是相同**迭代器**\< **Iter**> **:: iterator_category**時`Iter`描述可以做為物件隨機存取迭代器。
 
 ## <a name="example"></a>範例
 

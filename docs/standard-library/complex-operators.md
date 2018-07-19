@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957694"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 運算子
 
@@ -58,9 +58,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-`left` 複雜字或不等比較要測試其參數類型的物件。
+*左*複數或其參數型別，要測試是否不相等的物件。
 
-`right` 複雜字或不等比較要測試其參數類型的物件。
+*右*複數或其參數型別，要測試是否不相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>參數
 
-`left` 兩個複數相加或數字是所要乘以的複數的參數類型中的第一個 * 作業。
+*左*兩個複數或數字，所要乘以的複數的參數類型的第一個 * 作業。
 
-`right` 兩個複數相加或所要乘以的複數的參數類型的數字的第二個 * 作業。
+*右*兩個複數或數字，所要乘以的複數的參數類型的第二個 * 作業。
 
 ### <a name="return-value"></a>傳回值
 
@@ -295,9 +295,9 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 兩個複數相加或數字是由要新增的複數的參數類型中的第一個 + 作業。
+*左*兩個複數相加或所要新增為複數的參數類型的數字的第一個 + 作業。
 
-`right` 兩個複數相加或複數，所要加入的參數類型的數字的第二個 + 作業。
+*右*兩個複數相加或所要新增為複數的參數類型的數字的第二個 + 作業。
 
 ### <a name="return-value"></a>傳回值
 
@@ -305,7 +305,7 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="remarks"></a>備註
 
-系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。 一元運算子會傳回`left`。
+系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。 一元運算子會傳回*左*。
 
 ### <a name="example"></a>範例
 
@@ -433,13 +433,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-`left` 兩個複數相加，或是針對複數減去-作業的參數類型的數字的第一個。
+*左*的兩個複數或數字是以-運算相減之複數的參數類型的第一個。
 
-`right` 兩個複數相加，或是針對複數減去-作業的參數類型的數字的第二個。
+*右*的兩個複數或數字是以-運算相減之複數的參數類型的第二個。
 
 ### <a name="return-value"></a>傳回值
 
-`left` 和 `right` 相減得出的複數，這兩個數字的值由參數輸入來指定。
+減得出的複數*右*從*左*，其值由參數輸入兩個數字。
 
 ### <a name="remarks"></a>備註
 
@@ -570,9 +570,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>參數
 
-`left` 複數或要除以的分母分子複數的參數類型的數字 / 作業。
+*左*某個複數或數字，是要除以的分母與分子的複數的參數類型 / 作業。
 
-`right` 複數或數字則是用來除以的分子分母的複數的參數類型為 / 作業。
+*右*某個複數或數字，分母設為用來與相除之複數的參數類型 / 作業。
 
 ### <a name="return-value"></a>傳回值
 
@@ -678,13 +678,13 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-`Ostr` 輸出資料流正在輸入到其中的複數。
+*Ostr*在其中輸入複數的輸出資料流。
 
-`right` 複數輸入到輸出資料流
+*右*複數插入輸出資料流輸入
 
 ### <a name="return-value"></a>傳回值
 
-以笛卡兒座標格式 ( *實數部分, 虛數部分* )，將指定複數的值寫入 `Ostr`。
+若要指定複數的值寫入*Ostr*笛卡兒座標格式: (*實數部分，虛數部分*)。
 
 ### <a name="remarks"></a>備註
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-`left` 複雜字或不等比較要測試其參數類型的物件。
+*左*複數或其參數型別，要測試是否不相等的物件。
 
-`right` 複雜字或不等比較要測試其參數類型的物件。
+*右*複數或其參數型別，要測試是否不相等的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -877,13 +877,13 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>參數
 
-`Istr` 從中擷取複數的輸入資料流。
+*Istr*從中擷取複數的輸入資料流。
 
-`right` 正在從輸入資料流擷取複數。
+*右*正在從輸入資料流擷取複數。
 
 ### <a name="return-value"></a>傳回值
 
-讀取從指定的複數值`Istr`並傳回其`right`。
+讀取的值從指定的複數*Istr*並將它傳入*右*。
 
 ### <a name="remarks"></a>備註
 

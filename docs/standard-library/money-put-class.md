@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954808"
 ---
 # <a name="moneyput-class"></a>money_put 類別
 
@@ -47,9 +47,9 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 在程式內用於編碼地區設定中的字元類型。
+*CharType*程式內使用地區設定中的字元編碼的類型。
 
-`OutputIterator` 其輸出寫入迭代器的貨幣 put 函式的類型。
+*OutputIterator*迭代器的貨幣 put 函式的型別將其輸出寫入。
 
 ## <a name="remarks"></a>備註
 
@@ -117,15 +117,15 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-`next` 迭代器定址插入字串的第一個元素中。
+*下一步*迭代器，定址對象所插入字串的第一個元素。
 
-`_Intl` 布林值，指出必須是序列中的貨幣符號的類型： **true**如果國際**false**如果國內。
+*_Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
 
-`_Iosbase` 一種格式將其加上旗標時組表示貨幣符號是選擇性的。否則，便需要
+*_Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要
 
-`_Fill` 用做為空格字元。
+*_Fill*間距所使用的字元。
 
-`val` 要轉換的字串物件。
+*val*来轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -133,9 +133,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>備註
 
-第一個虛擬的受保護成員函式會從 `next` 開始產生一系列元素，以從 [string_type](#string_type) 物件 `val` 產生貨幣輸出欄位。 所控制的序列`val`必須以一個或多個十進位的數字，選擇性地加上減號 （-），表示量開頭。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。
+第一個虛擬的受保護的成員函式會產生開始的循序元素*下一步*產生貨幣輸出欄位從[string_type](#string_type)物件*val*。 所控制的序列*val*必須開始一個或多個小數位數，選擇性地加上減號 （-），以代表總額。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。
 
-第二個虛擬受保護成員函式的行為與第一個相同，不同的是，它會先將 `val` 實際轉換成十進位數字的序列，視需要在前面加上減號，然後依上述方式轉換該序列。
+第二個受保護的虛擬成員函式的行為與第一個相同除了其第一個有效的轉換*val*為一連串十進位數字，選擇性地加上負號，然後將轉換為上述該序列。
 
 貨幣輸出欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class) fac (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。
 
@@ -195,11 +195,11 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -234,15 +234,15 @@ iter_type put(
 
 ### <a name="parameters"></a>參數
 
-`next` 迭代器定址插入字串的第一個元素中。
+*下一步*迭代器，定址對象所插入字串的第一個元素。
 
-`_Intl` 布林值，指出必須是序列中的貨幣符號的類型： **true**如果國際**false**如果國內。
+*_Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
 
-`_Iosbase` 一種格式將其加上旗標時組表示貨幣符號是選擇性的。否則，便需要
+*_Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要
 
-`_Fill` 用做為空格字元。
+*_Fill*間距所使用的字元。
 
-`val` 要轉換的字串物件。
+*val*来轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -286,7 +286,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a>  money_put::string_type
 
-一種類型，描述包含 **CharType** 類型字元的字串。
+類型，描述包含 `CharType` 類型字元的字串。
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

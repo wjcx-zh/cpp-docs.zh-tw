@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8452c106c5a4d0d005ec61278c8e0d7cb75723ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b9b58235d404b523629a0e9d24121182d1119c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960326"
 ---
 # <a name="issigned-class"></a>is_signed 類別
 
@@ -37,11 +37,11 @@ struct is_signed;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是帶正負號的整數類型或 `cv-qualified` 帶正負號的整數類型，則 predicate 類型的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*是帶正負號的整數類資料類型或`cv-qualified`帶正負號整數類資料類型，否則為 false。
 
 ## <a name="example"></a>範例
 

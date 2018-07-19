@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e72f9c584f818de69b0c341ff8dba66892816d8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861990"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955243"
 ---
 # <a name="moveiterator-class"></a>move_iterator 類別
 
@@ -64,9 +64,9 @@ class move_iterator;
 |類型名稱|描述|
 |-|-|
 |[iterator_type](#iterator_type)|`RandomIterator` 樣板參數的同義字。|
-|[iterator_category](#iterator_category)|同名、較長 `typename` 運算式的同義字，`iterator_category` 識別迭代器的一般功能。|
-|[value_type](#value_type)|同名、較長 `typename` 運算式的同義字，`value_type` 描述迭代器項目的類型。|
-|[difference_type](#difference_type)|同名、較長 `typename` 運算式的同義字，`difference_type` 描述表示項目之間的差異值所需的整數類資料類型。|
+|[iterator_category](#iterator_category)|較長的同義字**typename**運算式相同的名稱，`iterator_category`識別迭代器的一般功能。|
+|[value_type](#value_type)|較長的同義字**typename**運算式相同的名稱，`value_type`描述輸入迭代器元素的內容。|
+|[difference_type](#difference_type)|較長的同義字**typename**運算式相同的名稱，`difference_type`描述項目之間的快速的差異值所需的整數類資料類型。|
 |[pointer](#pointer)|`RandomIterator` 樣板參數的同義字。|
 |[reference](#reference)|`rvalue` 參考 `value_type&&` 的同義字。|
 
@@ -157,7 +157,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-`right` 要做為預存迭代器迭代器。
+*右*迭代器，做為預存迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>參數
 
-`_Off` 若要加入至目前的位置，以便判斷新的目前位置位移。
+*_Off*来加入至目前位置，以判斷新的目前位置的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -181,7 +181,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>備註
 
-此運算子會將 `_Off` 加入該預存迭代器。 接著傳回 `*this`。
+此運算子會將 *_Off*預存迭代器。 接著傳回 `*this`。
 
 ## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
 
@@ -299,7 +299,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-`pointer` 類型是以 `move_iterator` 的隨機迭代器 `RandomIterator` 為基礎的 `typedef`，可交替使用。
+型別`pointer`是**typedef**隨機迭代器為基礎`RandomIterator`如`move_iterator`，以及可與其交替。
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -311,7 +311,7 @@ typedef RandomIterator  pointer;
 
 ## <a name="reference"></a>  move_iterator::reference
 
-類型 `reference` 是一個 `typedef`，以 `move_iterator` 的 `value_type&&` 為基礎，可與 `value_type&&` 交替使用。
+型別`reference`是**typedef**根據`value_type&&`for `move_iterator`，以及可與其交替使用`value_type&&`。
 
 ```cpp
 typedef value_type&& reference;

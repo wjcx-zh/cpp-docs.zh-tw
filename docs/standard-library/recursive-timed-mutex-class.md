@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957619"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 類別
 
@@ -112,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `mutex` 的擁有權，或是呼叫執行緒已經擁有 `mutex`，即為 `true`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex`，否則**false**。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有 `mutex`，函式會立即傳回 `true`，而先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`，則函數會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -129,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>參數
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md)物件，指定最大值的方法嘗試取得的擁有權的時間量`mutex`。
+*Rel_time* A [chrono:: duration](../standard-library/duration-class.md)物件，指定這個方法會嘗試取得的擁有權的時間的最大數量`mutex`。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `mutex` 的擁有權，或是呼叫執行緒已經擁有 `mutex`，即為 `true`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex`，否則**false**。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有 `mutex`，方法會立即傳回 `true`，而先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`，方法會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -152,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-`Abs_time` 指定的臨界值的方法就不再嘗試取得的擁有權之後的時間點`mutex`。
+*Abs_time*指定的臨界值的方法不會再嘗試取得的擁有權之後的時間點`mutex`。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `mutex` 的擁有權，或是呼叫執行緒已經擁有 `mutex`，即為 `true`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex`，否則**false**。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有 `mutex`，方法會立即傳回 `true`，而先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`，方法會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
 
 ## <a name="unlock"></a>  unlock
 

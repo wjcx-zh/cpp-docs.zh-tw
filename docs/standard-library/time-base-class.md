@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957294"
 ---
 # <a name="timebase-class"></a>time_base 類別
 
-此類別會當成基底類別提供給樣板類別 time_get 的 facet，僅定義列舉類型 **dateorder** 和此類型的數個常數。
+類別可做為 facet 的基底類別的樣板類別 time_get，只會將列舉型別定義`dateorder`和此類型的數個常數。
 
 ## <a name="syntax"></a>語法
 
@@ -48,15 +48,15 @@ public:
 
 每個常數特性都會以不同的方式描述，來將日期元件排序。 這些常數如下：
 
-- **no_order** 不會指定特定順序。
+- `no_order` 指定沒有特定順序。
 
-- **dmy** 指定該順序依序為日、月、年，如 2 日 12 月 1979 年。
+- `dmy` 指定該順序天、 月、 年，如 2 年 12 月 1979 年。
 
-- **mdy** 指定該順序依序為月、日、年，如 12 月 2 日，1979 年。
+- `mdy` 指定該順序月、 日、 年，如 12 月 2 日，1979 年。
 
-- **ymd** 指定該順序依序為年、月、日，如 1979/12/2。
+- `ymd` 指定該順序年、 月、 日，1979年/12/2 如。
 
-- **ydm** 指定該順序依序為年、日、月，如 1979：2 日 12 月。
+- `ydm` 指定該順序年、 日、 月，如 1979:2 年 12 月。
 
 ## <a name="requirements"></a>需求
 

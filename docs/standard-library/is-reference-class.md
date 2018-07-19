@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb9e4d9fdc285535860b1cfeb34d664927798cc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7882bdd68d6d35994752c8332329e6a92b74fbfa
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864199"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959790"
 ---
 # <a name="isreference-class"></a>is_reference 類別
 
@@ -37,11 +37,11 @@ struct is_reference;
 
 ### <a name="parameters"></a>參數
 
-`Ty` 要查詢的類型。
+*Ty*要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果 `Ty` 類型是物件或函式的參考，則 predicate 類型的執行個體保留 true，否則保留 false。
+如果型別述詞的執行個體保留 true 的型別*Ty*物件或函式，否則為 false 的參考。
 
 ## <a name="example"></a>範例
 

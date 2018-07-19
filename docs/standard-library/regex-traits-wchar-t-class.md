@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853946"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958954"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 類別
 
@@ -36,7 +36,7 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>備註
 
-此類別是針對類型 `wchar_t` 的項目明確特製化的範本類別 [regex_traits](../standard-library/regex-traits-class.md) (使其能夠運用程式庫函式來管理此類型的物件)。
+類別是範本類別明確特製化[regex_traits](../standard-library/regex-traits-class.md)類型的項目**wchar_t** （使其能夠運用操作此類型物件的程式庫函式）。
 
 ## <a name="requirements"></a>需求
 

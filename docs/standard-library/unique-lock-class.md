@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9888b847c3e52cd8b6a034e95e35ca73933acd3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861827"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956472"
 ---
 # <a name="uniquelock-class"></a>unique_lock 類別
 
@@ -34,9 +34,9 @@ class unique_lock;
 
 ## <a name="remarks"></a>備註
 
-範本引數 `Mutex` 必須命名 *mutex 類型*。
+範本引數 `Mutex` 必須指定一個「mutex 類型」。
 
-就內部而言，`unique_lock` 會將指標儲存至相關聯的 `mutex` 物件，以及表示目前的執行緒是否擁有 `mutex` 的 `bool`。
+就內部而言，`unique_lock`儲存至相關聯的指標`mutex`物件並**bool** ，表示目前的執行緒是否擁有`mutex`。
 
 ## <a name="members"></a>成員
 
@@ -94,11 +94,11 @@ void lock();
 
 ### <a name="remarks"></a>備註
 
-如果已儲存 `mutex` 指標為 `null`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果預存`mutex`指標為 NULL，這個方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
 
 如果呼叫的執行緒已經擁有相關聯 `mutex`，此方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
-否則，這個方法會在相關聯 `mutex` 上呼叫 `lock`，並將內部執行緒擁有權旗標設定為 `true`。
+否則，這個方法會呼叫`lock`上相關聯`mutex`並將內部執行緒擁有權旗標設定為 **，則為 true**。
 
 ## <a name="mutex"></a>  mutex
 
@@ -118,7 +118,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>傳回值
 
-如果執行緒擁有 mutex 則為 `true`，否則為 `false`。
+**真**如果執行緒擁有 mutex; 否則為**false**。
 
 ## <a name="op_eq"></a>  operator=
 
@@ -130,7 +130,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`unique_lock`物件。
+*其他*  
+ `unique_lock` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -140,7 +141,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 如果呼叫的執行緒擁有先前的相關聯 `mutex`，在此方法於 `mutex` 上呼叫 `unlock` 之前，它會指派新的值。
 
-複製之後，這個方法會將 `Other` 設定為預設建構狀態。
+複製之後，這個方法會設定*其他*為預設建構狀態。
 
 ## <a name="owns_lock"></a>  owns_lock
 
@@ -152,7 +153,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果執行緒擁有 `mutex` 則為 `true`，否則為 `false`。
+**真**如果執行緒擁有`mutex`，否則**false**。
 
 ## <a name="release"></a>  release
 
@@ -168,7 +169,7 @@ mutex_type *release() noexcept;
 
 ### <a name="remarks"></a>備註
 
-此方法會將已儲存 `mutex` 指標的值設為 0，並將內部 `mutex` 擁有權旗標設為 `false`。
+這個方法會設定的預存值`mutex`為 0，將內部指標`mutex`擁有權旗標**false**。
 
 ## <a name="swap"></a>  swap
 
@@ -180,7 +181,8 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-`Other` A`unique_lock`物件。
+*其他*  
+ `unique_lock` 物件。
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -192,11 +194,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `true` 的擁有權，就是 `mutex`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`，否則**false**。
 
 ### <a name="remarks"></a>備註
 
-如果已儲存 `mutex` 指標為 `null`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果預存`mutex`指標為 NULL，則方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -212,15 +214,16 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>參數
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md)物件，指定最大值的方法嘗試取得的擁有權的時間量`mutex`。
+*Rel_time*  
+ [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `true` 的擁有權，就是 `mutex`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`，否則**false**。
 
 ### <a name="remarks"></a>備註
 
-如果已儲存 `mutex` 指標為 `null`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果預存`mutex`指標為 NULL，則方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -237,15 +240,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-`Abs_time` 指定的臨界值的方法就不再嘗試取得的擁有權之後的時間點`mutex`。
+*Abs_time*  
+ 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功取得 `true` 的擁有權，就是 `mutex`，否則為 `false`。
+**真**如果方法成功取得擁有權`mutex`，否則**false**。
 
 ### <a name="remarks"></a>備註
 
-如果已儲存 `mutex` 指標為 `null`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
+如果預存`mutex`指標為 NULL，則方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -279,21 +283,25 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>參數
 
-`Mtx` Mutex 型別物件。
+*Mtx*  
+ mutex 類型物件。
 
-`Rel_time` A [chrono::](../standard-library/duration-class.md)物件，指定最大值的方法嘗試取得的擁有權的時間量`mutex`。
+*Rel_time*  
+ [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
-`Abs_time` 指定的臨界值的方法就不再嘗試取得的擁有權之後的時間點`mutex`。
+*Abs_time*  
+ 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
-`Other` A`unique_lock`物件。
+*其他*  
+ `unique_lock` 物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構相關聯 mutex 指標值為 0 的物件。
 
-第二個建構函式會移動 `Other` 的相關聯 mutex 狀態。 移動之後，`Other` 不再與 mutex 相關聯。
+第二個建構函式會移動相關聯的 mutex 狀態從*其他*。 移動之後，*其他*已不再與 mutex 相關聯。
 
-其餘的建構函式會將 & `Mtx` 儲存為已儲存 `mutex` 指標。 `mutex` 的擁有權取決於第二個引數 (如果存在的話)。
+其餘的建構函式存放區 & *Mtx*設為儲存`mutex`指標。 `mutex` 的擁有權取決於第二個引數 (如果存在的話)。
 
 |||
 |-|-|
@@ -328,7 +336,7 @@ void unlock();
 
 如果呼叫的執行緒不擁有相關聯 `mutex`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
 
-否則，這個方法會在相關聯 `mutex` 上呼叫 `unlock`，並將內部執行緒擁有權旗標設定為 `false`。
+否則，這個方法會呼叫`unlock`上相關聯`mutex`並將內部執行緒擁有權旗標設定為**false**。
 
 ## <a name="see-also"></a>另請參閱
 

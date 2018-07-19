@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6f4a8779bcc92b48896fa016944df27c58903
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850700"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960950"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 類別
 
@@ -80,13 +80,13 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為`double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 *URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述產生使用者指定之浮點類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據柯西分佈進行分佈。 下表提供各個成員的文章連結。
+此範本類別描述產生值，使用者指定的浮點類型**double**如果未提供，分佈根據柯西分佈進行分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -295,7 +295,7 @@ struct param_type {
 
 *b* `b`分佈參數。
 
-*右*`param_type`這要比較的物件。
+*右*`param_type`来比較此物件。
 
 ### <a name="remarks"></a>備註
 

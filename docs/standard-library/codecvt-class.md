@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253d1c4a9e46b8c7c49fce1a2ee7a9d1b5857f4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848826"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956803"
 ---
 # <a name="codecvt-class"></a>codecvt 類別
 
@@ -70,17 +70,17 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 用於程式內部字元編碼類型。
+*CharType*程式內用來編碼字元的類型。
 
-`Byte` 用於程式外部字元編碼類型。
+*位元組*用於程式外部字元編碼類型。
 
-`StateType` 類型，可用來表示的字元表示的內部與外部類型之間的轉換中繼狀態。
+*StateType*可用來表示的字元表示的內部和外部類型之間的轉換中繼狀態的類型。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述一個物件，該物件可作為[地區設定 Facet](../standard-library/locale-class.md#facet_class)，以控制 `CharType` 類型的值序列與 `Byte` 類型的值序列之間的轉換。 類別 `StateType` 表示轉換特性，而類別 `StateType` 的物件儲存轉換期間任何必要的狀態資訊。
+此範本類別描述可以做為物件[地區設定 facet](../standard-library/locale-class.md#facet_class)，以控制類型的值序列之間的轉換*CharType*類型的值序列和*位元組*. 此類別*StateType*特性轉換-和類別的物件*StateType*會儲存在轉換期間任何必要的狀態資訊。
 
-內部編碼使用表示搭配每個字元固定的位元組數，通常是 `char` 類型或 `wchar_t` 類型。
+內部編碼使用表示搭配固定的每個字元的位元組數輸入通常**char**或型別**wchar_t**。
 
 如同所有地區設定 facet，靜態物件 `id` 有初始儲存值零。 第一次嘗試存取其預存值時，會在 `id` 中儲存唯一的正值。
 
@@ -92,19 +92,19 @@ C++ 標準程式庫定義數個明確特製化：
 
 `codecvt<wchar_t, char, mbstate_t>`
 
-在 `wchar_t` 和 `char` 序列之間轉換。
+之間轉換**wchar_t**並**char**序列。
 
 `template<>`
 
 `codecvt<char16_t, char, mbstate_t>`
 
-在編碼為 UTF-16 的 `char16_t` 序列和編碼為 UTF-8 的 `char` 序列之間轉換。
+之間轉換`char16_t`編碼為 utf-16 的順序並**char**序列編碼為 utf-8。
 
 `template<>`
 
 `codecvt<char32_t, char, mbstate_t>`
 
-在編碼為 UTF-32 (UCS-4) 的 `char32_t` 序列和編碼為 UTF-8 的 `char` 序列之間轉換。
+之間轉換`char32_t`序列編碼為 UTF-32 (ucs-4) 和**char**序列編碼為 utf-8。
 
 ### <a name="constructors"></a>建構函式
 
@@ -206,11 +206,11 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -230,7 +230,7 @@ virtual bool do_always_noconv() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-此受保護的虛擬成員函式只有在每次呼叫 [do_in](#do_in) 或 [do_out](#do_out) 傳回 **noconv** 時，才會傳回 **true**。
+受保護虛擬成員函式會傳回 **，則為 true**只有當每次呼叫[do_in](#do_in)或是[do_out](#do_out)傳回`noconv`。
 
 樣板版本一律會傳回 **true**。
 
@@ -240,7 +240,7 @@ virtual bool do_always_noconv() const throw();
 
 ## <a name="do_encoding"></a>  codecvt::do_encoding
 
-虛擬函式，測試 **Byte** 資料流的編碼是否與狀態相關，所用的 **Byte** 和所產生的 **CharType** 之間的比率是否為常數，而且，如果是的話，判斷該比率的值。
+如果所測試的虛擬函式的編碼方式`Byte`資料流是否為狀態相關，之間的比率`Byte`使用的秒和`CharType`產生會為常數，而且如果是的話，判斷該比率的值。
 
 ```cpp
 virtual int do_encoding() const throw();
@@ -250,7 +250,7 @@ virtual int do_encoding() const throw();
 
 此受保護的虛擬成員函式會傳回：
 
-- -1，如果序列的類型的編碼方式`extern_type`與狀態。
+- -1，如果型別的序列的編碼`extern_type`與狀態相關。
 
 - 0 (如果編碼與不同長度的序列有關)。
 
@@ -262,7 +262,7 @@ virtual int do_encoding() const throw();
 
 ## <a name="do_in"></a>  codecvt::do_in
 
-虛擬函式，呼叫以將外部 **Byte** 序列轉換為內部 **CharType** 序列。
+虛擬函式，呼叫以將轉換為外部`Byte`的內部序列`CharType`s。
 
 ```cpp
 virtual result do_in(
@@ -277,35 +277,35 @@ virtual result do_in(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first1` 要轉換的序列開頭的指標。
+*first1*来轉換之序列的開頭的指標。
 
-`last1` 要轉換的序列結尾指標。
+*last1*来轉換之序列的結尾指標。
 
-`next1` 將轉換的序列，第一個未轉換字元結尾以外的指標。
+*next1*指標的第一個未轉換字元已轉換序列結尾以外的位置。
 
-`first2` 已轉換的序列開頭的指標。
+*first2*的已轉換序列開頭的指標。
 
-`last2` 已轉換的序列結尾指標。
+*last2*已轉換序列結尾的指標。
 
-`next2` 指標**CharType**所附的最後一個轉換後**CharType**，目標序列中的第一個未改變的字元。
+*next2*指標`CharType`所附在上一個轉換之後`CharType`，目的序列中的第一個未變更的字元。
 
 ### <a name="return-value"></a>傳回值
 
 指出作業成功、部分成功或失敗的傳回值。 此函式會傳回：
 
-- **codecvt_base::error** (如果來源序列的格式不正確)。
+- `codecvt_base::error` 如果來源序列的格式不，正確。
 
 - `codecvt_base::noconv` (如果函式不會執行任何轉換)。
 
-- **codecvt_base::ok** (如果轉換成功)。
+- `codecvt_base::ok` 如果轉換成功。
 
-- **codecvt_base::partial** (如果來源不足或目的地不夠大，無法成功轉換)。
+- `codecvt_base::partial` 如果來源不足，或目的地是沒有夠大，才能成功轉換。
 
 ### <a name="remarks"></a>備註
 
-`_State` 必須是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 否則不會指定其預存值。
+*_State*必須代表是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 否則不會指定其預存值。
 
 ### <a name="example"></a>範例
 
@@ -313,7 +313,7 @@ virtual result do_in(
 
 ## <a name="do_length"></a>  codecvt::do_length
 
-虛擬函式，判斷外部 **Byte** 指定的序列有多少個 **Byte** 產生不超過指定的內部 **CharType** 數目，並傳回 **Byte** 的數目。
+虛擬函式，判斷外部 `Byte` 指定的序列有多少個 `Byte` 產生不超過指定的內部 `CharType` 數目，並傳回 `Byte` 的數字。
 
 ```cpp
 virtual int do_length(
@@ -325,33 +325,33 @@ virtual int do_length(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first1` 外部序列開頭的指標。
+*first1*外部序列開頭的指標。
 
-`last1` 外部序列結尾指標。
+*last1*外部序列結尾的指標。
 
-`_Len2` 最大數目**位元組**成員函式會傳回 s。
+*_Len2*的最大數目`Byte`的成員函式可傳回。
 
 ### <a name="return-value"></a>傳回值
 
-代表轉換數目上限的整數，不得大於 [ `first1`, `last1`) 之外部來源序列所定義的 `_Len2`。
+整數，表示轉換，不大於最大數目的計數 *_Len2*外部來源序列所定義、 [ `first1`， `last1`)。
 
 ### <a name="remarks"></a>備註
 
-此受保護的虛擬成員函式會針對 `_State` (狀態複本)、某些緩衝區 `_Buf` 以及指標 `next1` 和 `next2`，有效呼叫 `do_in`( `_State`, `first1`, `last1`, `next1`, `_Buf`, `_Buf` + `_Len2`, `next2`)。
+受保護虛擬成員函式會有效地呼叫`do_in`( `_State`， `first1`， `last1`， `next1`， `_Buf`， `_Buf`  +  `_Len2`， `next2`) 針對 *_State* （狀態的複本），某些緩衝區`_Buf`，和指標`next1`和`next2`。
 
-然後它會傳回`next2`  - **覆蓋 buf**。 再計算轉換數目上限，該數目不得大於 [ `first1`, `last1`) 的來源序列所定義的 `_Len2`。
+然後它會傳回`next2`  -  `buf`。 因此，它會計算的轉換，不大於最大數目 *_Len2*來源序列所定義、 [ `first1`， `last1`)。
 
-範本版本永遠傳回較小的`last1`  -  `first1`和`_Len2`。
+樣板版本一律會傳回較小的數目*last1* - *first1*並 *_Len2*。
 
 ### <a name="example"></a>範例
 
-請參閱 [length](#length) 的範例，其會呼叫 **do_length**。
+範例，請參閱[長度](#length)，其會呼叫`do_length`。
 
 ## <a name="do_max_length"></a>  codecvt::do_max_length
 
-虛擬函式，傳回產生一個內部 **CharType** 所需的外部 **Byte** 數目上限。
+傳回外部最大數目的虛擬函式`Byte`產生一個內部所需`CharType`。
 
 ```cpp
 virtual int do_max_length() const throw();
@@ -359,11 +359,11 @@ virtual int do_max_length() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-產生一個 **CharType** 所需的 **Byte** 數目上限。
+最大數目`Byte`產生一個所需`CharType`。
 
 ### <a name="remarks"></a>備註
 
-此受保護的虛擬成員函式會傳回 [do_length](#do_length)( `first1`, `last1`, 1) 可針對 `first1` 和 `last1` 的任意有效值傳回的最大允許值。
+受保護虛擬成員函式會傳回可傳回的最大允許值[do_length](#do_length)( `first1`， `last1`，1) 的任意有效值*first1*並*last1*。
 
 ### <a name="example"></a>範例
 
@@ -371,7 +371,7 @@ virtual int do_max_length() const throw();
 
 ## <a name="do_out"></a>  codecvt::do_out
 
-虛擬函式，呼叫以將內部 **CharType** 序列轉換為外部 **Byte** 序列。
+虛擬函式，呼叫以將內部 `CharType` 序列轉換為外部 `Byte` 序列。
 
 ```cpp
 virtual result do_out(
@@ -386,35 +386,35 @@ virtual result do_out(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first1` 要轉換的序列開頭的指標。
+*first1*来轉換之序列的開頭的指標。
 
-`last1` 要轉換的序列結尾指標。
+*last1*来轉換之序列的結尾指標。
 
-`next1` 第一個指標參考轉換**CharType**，最後一個之後**CharType**轉換。
+*next1*的第一個指標參考轉換`CharType`，最後一個之後`CharType`轉換。
 
-`first2` 已轉換的序列開頭的指標。
+*first2*的已轉換序列開頭的指標。
 
-`last2` 已轉換的序列結尾指標。
+*last2*已轉換序列結尾的指標。
 
-`next2` 第一個指標參考轉換**位元組**，最後一個之後**位元組**轉換。
+*next2*的第一個指標參考轉換`Byte`，最後一個之後`Byte`轉換。
 
 ### <a name="return-value"></a>傳回值
 
 此函式會傳回：
 
-- **codecvt_base::error** (如果來源序列的格式不正確)。
+- `codecvt_base::error` 如果來源序列的格式不，正確。
 
 - `codecvt_base::noconv` (如果函式不會執行任何轉換)。
 
-- **codecvt_base::ok** (如果轉換成功)。
+- `codecvt_base::ok` 如果轉換成功。
 
-- **codecvt_base::partial** (如果來源不足或目的地不夠大，無法成功轉換)。
+- `codecvt_base::partial` 如果來源不足，或目的地的逸出序列並不夠大，才能成功轉換。
 
 ### <a name="remarks"></a>備註
 
-`_State` 必須是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 否則不會指定其預存值。
+*_State*必須代表是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 否則不會指定其預存值。
 
 ### <a name="example"></a>範例
 
@@ -422,7 +422,7 @@ virtual result do_out(
 
 ## <a name="do_unshift"></a>  codecvt::do_unshift
 
-虛擬函式，呼叫以提供狀態相關轉換所需的 **Byte**，以完成 **Byte** 序列的最後一個字元。
+虛擬函式，呼叫以提供狀態相關轉換所需的 `Byte`，以完成 `Byte` 序列的最後一個字元。
 
 ```cpp
 virtual result do_unshift(
@@ -434,31 +434,31 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first2` 目的範圍中的第一個位置的指標。
+*first2*目的範圍中第一個位置的指標。
 
-`last2` 目的範圍中最後一個位置的指標。
+*last2*目的範圍中最後一個位置的指標。
 
-`next2` 第一個未改變序列中項目的指標。
+*next2*指向目的序列中第一個未變更的元素。
 
 ### <a name="return-value"></a>傳回值
 
 此函式會傳回：
 
-- **codecvt_base::error** (如果 _ *State* 表示無效的狀態)
+- `codecvt_base::error` 如果 _*狀態*表示無效的狀態
 
 - `codecvt_base::noconv` (如果函式不會執行任何轉換)
 
-- **codecvt_base::ok** (如果轉換成功)
+- `codecvt_base::ok` 如果轉換成功
 
-- **codecvt_base::partial** (如果目的地不夠大，無法成功轉換)
+- `codecvt_base::partial` 如果目的地無法夠大，才能成功轉換
 
 ### <a name="remarks"></a>備註
 
-此受保護的虛擬成員函式會嘗試將結束元素 **Byte**(0) 以外的來源元素 **CharType**(0)，轉換為儲存在 [ `first2`, `last2`) 中的目的序列。 它一律會將目的序列中第一個未變更的元素指標儲存在 `next2` 中。
+受保護虛擬成員函式會嘗試將轉換的來源元素`CharType`(0) 的目的序列儲存在 [ `first2`， `last2`)，除了終端項目`Byte`(0)。 它一律會儲存在*next2*指向目的序列中第一個未變更的元素。
 
-_ *State* 必須是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 一般而言，轉換來源元素 **CharType**(0) 會保留初始轉換狀態的目前狀態。
+_ *State* 必須是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 一般而言，轉換的來源項目`CharType`(0) 的初始轉換狀態中離開目前的狀態。
 
 ### <a name="example"></a>範例
 
@@ -466,7 +466,7 @@ _ *State* 必須是新來源序列開頭的初始轉換狀態。 此函式會視
 
 ## <a name="encoding"></a>  codecvt::encoding
 
-測試 **Byte** 資料流的編碼是否與狀態相關，所用的 **Byte** 和所產生的 **CharType** 之間的比率是否為常數，而且，如果是的話，判斷該比率的值。
+測試 `Byte` 資料流的編碼方式是否為狀態相關，所用的 `Byte` 和所產生的 `CharType` 之間的比率是否為常數，而且，如果是的話，判斷該比率的值。
 
 ```cpp
 int encoding() const throw();
@@ -474,11 +474,11 @@ int encoding() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果傳回值為正數，則該值是產生 **CharType** 字元所需之固定數目的 **Byte** 字元。
+如果傳回的值為正數，則該值是固定數目`Byte`以產生所需字元`CharType`字元。
 
 此受保護的虛擬成員函式會傳回：
 
-- -1，如果序列的類型的編碼方式`extern_type`與狀態。
+- -1，如果型別的序列的編碼`extern_type`與狀態相關。
 
 - 0 (如果編碼與不同長度的序列有關)。
 
@@ -525,11 +525,11 @@ typedef Byte extern_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **Byte** 同義。
+此類型是範本參數 `Byte`的同義字。
 
 ## <a name="in"></a>  codecvt::in
 
-將 **Byte** 序列的外部表示轉換為 **CharType** 序列的內部表示。
+將 `Byte` 序列的外部表示轉換為 `CharType` 序列的內部表示。
 
 ```cpp
 result in(
@@ -544,35 +544,35 @@ result in(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first1` 要轉換的序列開頭的指標。
+*first1*来轉換之序列的開頭的指標。
 
-`last1` 要轉換的序列結尾指標。
+*last1*来轉換之序列的結尾指標。
 
-`next1` 第一個未轉換的字元轉換的序列結尾以外的指標。
+*next1*指標的第一個未轉換字元已轉換序列結尾以外的位置。
 
-`first2` 已轉換的序列開頭的指標。
+*first2*的已轉換序列開頭的指標。
 
-`last2` 已轉換的序列結尾指標。
+*last2*已轉換序列結尾的指標。
 
-`next2` 指標**CharType**所附的最後一個轉換後**Chartype**目的地序列中的第一個未改變的字元。
+*next2*指標`CharType`所附在上一個轉換之後`Chartype`目的序列中的第一個未變更的字元。
 
 ### <a name="return-value"></a>傳回值
 
 指出作業成功、部分成功或失敗的傳回值。 此函式會傳回：
 
-- **codecvt_base::error** (如果來源序列的格式不正確)。
+- `codecvt_base::error` 如果來源序列的格式不，正確。
 
 - `codecvt_base::noconv` (如果函式不會執行任何轉換)。
 
-- **codecvt_base::ok** (如果轉換成功)。
+- `codecvt_base::ok` 如果轉換成功。
 
-- **codecvt_base::partial** (如果來源不足或目的地不夠大，無法成功轉換)。
+- `codecvt_base::partial` 如果來源不足，或目的地的逸出序列並不夠大，才能成功轉換。
 
 ### <a name="remarks"></a>備註
 
-`_State` 必須是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 部分轉換後，`_State` 必須設為允許在新字元到達時繼續轉換。
+*_State*必須代表是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 部分轉換後, *_State*必須設為允許新字元到達時繼續轉換。
 
 此成員函式會傳回 [do_in](#do_in)( `_State`, _ *First1,  last1,  next1, First2, _Llast2,  next2*)。
 
@@ -623,11 +623,11 @@ typedef CharType intern_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型是範本參數 `CharType`的同義字。
 
 ## <a name="length"></a>  codecvt::length
 
-判斷外部 **Byte** 指定的序列有多少個 **Byte** 產生不超過指定的內部 **CharType** 數目，並傳回 **Byte** 的數目。
+判斷外部 `Byte` 指定的序列有多少個 `Byte` 產生不超過指定的內部 `CharType` 數目，並傳回 `Byte` 的數字。
 
 ```cpp
 int length(
@@ -639,17 +639,17 @@ int length(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first1` 外部序列開頭的指標。
+*first1*外部序列開頭的指標。
 
-`last1` 外部序列結尾指標。
+*last1*外部序列結尾的指標。
 
-`_Len2` 成員函式可傳回的位元組數目上限。
+*_Len2*的成員函式可傳回的位元組數目上限。
 
 ### <a name="return-value"></a>傳回值
 
-代表轉換數目上限的整數，不得大於 [ `first1`, `last1`) 之外部來源序列所定義的 `_Len2`。
+整數，表示轉換，不大於最大數目的計數 *_Len2*外部來源序列所定義、 [ `first1`， `last1`)。
 
 ### <a name="remarks"></a>備註
 
@@ -686,7 +686,7 @@ The length of the string is: 50.
 
 ## <a name="max_length"></a>  codecvt::max_length
 
-傳回產生一個內部 **CharType** 所需的外部 **Byte** 數目上限。
+傳回產生一個內部 `Byte` 所需的外部 `CharType` 數目上限。
 
 ```cpp
 int max_length() const throw();
@@ -694,7 +694,7 @@ int max_length() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-產生一個 **CharType** 所需的 **Byte** 數目上限。
+最大數目`Byte`產生一個所需`CharType`。
 
 ### <a name="remarks"></a>備註
 
@@ -725,7 +725,7 @@ int main( )
 
 ## <a name="out"></a>  codecvt::out
 
-將內部 **CharType** 序列轉換為外部 **Byte** 序列。
+將內部 `CharType` 序列轉換為外部 `Byte` 序列。
 
 ```cpp
 result out(
@@ -740,19 +740,19 @@ result out(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first1` 要轉換的序列開頭的指標。
+*first1*来轉換之序列的開頭的指標。
 
-`last1` 要轉換的序列結尾指標。
+*last1*来轉換之序列的結尾指標。
 
-`next1` 第一個指標參考轉換**CharType**最後一個之後**CharType**轉換。
+*next1*的第一個指標參考轉換`CharType`最後一個之後`CharType`轉換。
 
-`first2` 已轉換的序列開頭的指標。
+*first2*的已轉換序列開頭的指標。
 
-`last2` 已轉換的序列結尾指標。
+*last2*已轉換序列結尾的指標。
 
-`next2` 第一個指標參考轉換**位元組**上次轉換之後**位元組**。
+*next2*的第一個指標參考轉換`Byte`在上一個轉換之後`Byte`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -809,11 +809,11 @@ typedef StateType state_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **StateType** 同義。
+此類型是範本參數 `StateType`的同義字。
 
 ## <a name="unshift"></a>  codecvt::unshift
 
-提供狀態相關轉換所需的 **Byte**，以完成 **Byte** 序列的最後一個字元。
+提供`Byte`若要完成之序列中的最後一個字元狀態相關轉換所需的 s `Byte`s。
 
 ```cpp
 result unshift(
@@ -825,31 +825,31 @@ result unshift(
 
 ### <a name="parameters"></a>參數
 
-`_State` 成員函式的呼叫之間維護，轉換狀態。
+*_State*成員函式的呼叫之間所保留的轉換狀態。
 
-`first2` 目的範圍中的第一個位置的指標。
+*first2*目的範圍中第一個位置的指標。
 
-`last2` 目的範圍中最後一個位置的指標。
+*last2*目的範圍中最後一個位置的指標。
 
-`next2` 第一個未改變序列中項目的指標。
+*next2*指向目的序列中第一個未變更的元素。
 
 ### <a name="return-value"></a>傳回值
 
 此函式會傳回：
 
-- **codecvt_base::error** (如果狀態表示無效的狀態)。
+- `codecvt_base::error` 如果狀態表示無效的狀態。
 
 - `codecvt_base::noconv` (如果函式不會執行任何轉換)。
 
-- **codecvt_base::ok** (如果轉換成功)。
+- `codecvt_base::ok` 如果轉換成功。
 
-- **codecvt_base::partial** (如果目的地不夠大，無法成功轉換)。
+- `codecvt_base::partial` 如果目的地無法夠大，才能成功轉換。
 
 ### <a name="remarks"></a>備註
 
-此受保護的虛擬成員函式會嘗試將結束元素 **Byte**(0) 以外的來源元素 **CharType**(0)，轉換為儲存在 [ `first2`, `last2`) 中的目的序列。 它一律會將目的序列中第一個未變更的元素指標儲存在 `next2` 中。
+受保護虛擬成員函式會嘗試將轉換的來源元素`CharType`(0) 的目的序列儲存在 [ `first2`， `last2`)，除了終端項目`Byte`(0)。 它一律會儲存在*next2*指向目的序列中第一個未變更的元素。
 
-`_State` 必須是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 一般而言，轉換來源元素 **CharType**(0) 會保留初始轉換狀態的目前狀態。
+*_State*必須代表是新來源序列開頭的初始轉換狀態。 此函式會視需要改變其預存值，以反映成功轉換的目前狀態。 一般而言，轉換的來源項目`CharType`(0) 的初始轉換狀態中離開目前的狀態。
 
 此成員函式會傳回 [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2` )。
 

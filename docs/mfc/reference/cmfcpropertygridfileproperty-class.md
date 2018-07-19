@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty 類別 |Microsoft 文件
+title: CMFCPropertyGridFileProperty 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038909"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851596"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟檔案選取對話方塊的屬性清單控制項項目。  
@@ -47,7 +47,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
 |名稱|描述|  
 |----------|-----------------|  
-|`CMFCPropertyGridFileProperty::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
+|`CMFCPropertyGridFileProperty::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
 |`CMFCPropertyGridFileProperty::OnClickButton`|(覆寫[cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton)。)|  
   
 ### <a name="remarks"></a>備註  
@@ -82,22 +82,22 @@ CMFCPropertyGridFileProperty(
  屬性名稱。  
   
  [in]*bOpenFileDialog*  
- `TRUE` 若要開啟**開啟檔案** 對話方塊。`FALSE`開啟**儲存檔案** 對話方塊。  
+ True 會開放**開啟檔案**此對話方塊。若要開啟，則為 FALSE**儲存檔案** 對話方塊。  
   
  [in]*strFileName*  
  初始檔案名稱。  
   
  [in]*lpszDefExt*  
- 一或多個副檔名的字串。 預設值是 `NULL`。  
+ 一或多個副檔名的字串。 預設值是 NULL。  
   
  [in]*dwFlags*  
- 對話方塊旗標。 預設值是 `OFN_HIDEREADONLY` 和 `OFN_OVERWRITEPROMPT` 的位元組合 (OR)。  
+ 對話方塊旗標。 預設值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的位元組合 (OR)。  
   
  [in]*lpszFilter*  
- 一或多個檔案篩選條件的字串。 預設值是 `NULL`。  
+ 一或多個檔案篩選條件的字串。 預設值是 NULL。  
   
  [in]*lpszDescr*  
- 屬性項目說明。 預設值是 `NULL`。  
+ 屬性項目說明。 預設值是 NULL。  
   
  [in]*dwData*  
  屬性項目相關聯的應用程式專屬資料。 例如，32 位元整數或其他資料的指標。 預設值為 0。  
@@ -105,10 +105,10 @@ CMFCPropertyGridFileProperty(
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- 如需可用旗標的完整清單，請參閱[OPENFILENAME 結構](https://msdn.microsoft.com/library/ms646839.aspx)。  
+ 可用的旗標完整清單，請參閱 < [OPENFILENAME 結構](https://msdn.microsoft.com/library/ms646839.aspx)。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用 `CMFCPropertyGridFileProperty` 類別的建構函式來建立物件 。 這個範例是屬於[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用 `CMFCPropertyGridFileProperty` 類別的建構函式來建立物件 。 此範例中是屬於[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]  
   

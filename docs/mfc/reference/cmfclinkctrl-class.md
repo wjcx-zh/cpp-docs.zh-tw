@@ -1,5 +1,5 @@
 ---
-title: CMFCLinkCtrl 類別 |Microsoft 文件
+title: CMFCLinkCtrl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038350"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851583"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 類別
-`CMFCLinkCtrl`類別顯示按鈕為超連結，並在按下按鈕時叫用連結的目標。  
+`CMFCLinkCtrl`類別顯示為超連結的按鈕，並按一下按鈕時叫用連結的目標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,8 +47,8 @@ class CMFCLinkCtrl : public CMFCButton
 |名稱|描述|  
 |----------|-----------------|  
 |[CMFCLinkCtrl::SetURL](#seturl)|顯示指定的 URL 做為按鈕文字。|  
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|設定隱含的通訊協定 (例如，"http:") 的 url。|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|調整大小，以包含按鈕文字或點陣圖按鈕。|  
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|設定隱含的通訊協定 (例如，"http:") 的 URL。|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|調整包含按鈕的文字或點陣圖按鈕。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
@@ -57,10 +57,10 @@ class CMFCLinkCtrl : public CMFCButton
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|繪製焦點矩形的按鈕前，由架構呼叫。|  
   
 ## <a name="remarks"></a>備註  
- 當您按一下按鈕，衍生自`CMFCLinkCtrl`類別，此架構將按鈕的 URL 做為參數來`ShellExecute`方法。 然後在`ShellExecute`方法開啟的 URL 目標。  
+ 當您按一下按鈕，衍生自`CMFCLinkCtrl`類別，架構就會將按鈕的 URL 傳遞做為參數`ShellExecute`方法。 則`ShellExecute`方法開啟的 URL 目標。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何設定的大小`CMFCLinkCtrl`物件，以及如何設定 url 和中的工具提示`CMFCLinkCtrl`物件。 這個範例是屬於[新控制項範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何設定的大小`CMFCLinkCtrl`物件，以及如何設定 url 和中的工具提示`CMFCLinkCtrl`物件。 此範例中是屬於[新的控制項範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
@@ -95,7 +95,7 @@ virtual void OnDrawFocusRect(
  裝置內容的指標。  
   
  [in]*rectClient*  
- 範圍連結控制項的矩形。  
+ 之界限的連結控制項的矩形。  
   
 ### <a name="remarks"></a>備註  
  當您想要使用自己的程式碼繪製按鈕的焦點矩形，請覆寫這個方法。  
@@ -114,7 +114,7 @@ void SetURL(LPCTSTR lpszURL);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
- 設定隱含的通訊協定 (例如，"http:") 的 url。  
+ 設定隱含的通訊協定 (例如，"http:") 的 URL。  
   
 ```  
 void SetURLPrefix(LPCTSTR lpszPrefix);
@@ -125,10 +125,10 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
  URL 通訊協定前置詞。  
   
 ### <a name="remarks"></a>備註  
- 若要設定的 URL 前置詞使用此方法。 前置詞不會顯示在按鈕的圖示，但您可以使用它來協助瀏覽至的 URL 目標。  
+ 這個方法可用於設定 URL 前置詞。 前置詞不會顯示在按鈕的臉部，但您可以使用它來瀏覽至的 URL 目標。  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
- 調整大小，以包含按鈕文字或點陣圖按鈕。  
+ 調整包含按鈕的文字或點陣圖按鈕。  
   
 ```  
 virtual CSize SizeToContent(
@@ -138,10 +138,10 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>參數  
  [in]*bVCenter*  
- `TRUE` 若要按鈕文字和點陣圖頂端和底部的連結控制; 之間的垂直置中否則， `FALSE`。 預設值是 `FALSE`。  
+ 為 true，則按鈕文字和點陣圖的頂端和底部的連結控制中; 之間的垂直置中對齊否則為 FALSE。 預設值為 FALSE。  
   
  [in]*bHCenter*  
- `TRUE` 若要按鈕文字和點陣圖的左邊和右邊的連結控制; 之間的水平置中否則， `FALSE`。 預設值是 `FALSE`。  
+ 為 true，則按鈕文字和點陣圖的左邊和右邊的連結控制中; 之間的水平置中對齊否則為 FALSE。 預設值為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含連結控制項的新大小。  

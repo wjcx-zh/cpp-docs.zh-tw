@@ -1,5 +1,5 @@
 ---
-title: COleException 類別 |Microsoft 文件
+title: COleException 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370467"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851388"
 ---
 # <a name="coleexception-class"></a>COleException 類別
 表示與 OLE 作業相關的例外狀況。  
@@ -42,7 +42,7 @@ class COleException : public CException
   
 |名稱|描述|  
 |----------|-----------------|  
-|[COleException::Process](#process)|將轉譯成 OLE 傳回程式碼攔截的例外狀況。|  
+|[COleException::Process](#process)|將轉譯成 OLE 傳回碼攔截的例外狀況。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -51,11 +51,11 @@ class COleException : public CException
 |[COleException::m_sc](#m_sc)|包含指出例外狀況原因的狀態碼。|  
   
 ## <a name="remarks"></a>備註  
- `COleException`類別包含保存之原因的例外狀況的狀態碼的公用資料成員。  
+ `COleException`類別包含公用資料成員包含例外狀況原因的狀態碼。  
   
  一般情況下，您不應建立`COleException`物件直接; 相反地，您應該呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
   
- 如需有關例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況： OLE 例外狀況](../../mfc/exceptions-ole-exceptions.md)。  
+ 如需有關例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)並[例外狀況： OLE 例外狀況](../../mfc/exceptions-ole-exceptions.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -77,13 +77,13 @@ SCODE m_sc;
 ### <a name="remarks"></a>備註  
  這個變數的值由設定[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
   
- 如需有關`SCODE`，請參閱[結構 COM 錯誤碼的](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK 中。  
+ 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
 ##  <a name="process"></a>  COleException::Process  
- 呼叫**程序**成員函式以轉譯 OLE 狀態碼到攔截的例外狀況。  
+ 呼叫**程序**成員函式以轉譯 OLE 狀態程式碼攔截的例外狀況。  
   
 ```  
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -91,20 +91,20 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>參數  
  *pAnyException*  
- 攔截的例外狀況的指標。  
+ 若要攔截的例外狀況的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 的 OLE 狀態碼。  
+ OLE 狀態程式碼中。  
   
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
 >  此函式是**靜態**。  
   
- 如需有關`SCODE`，請參閱[結構 COM 錯誤碼的](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK 中。  
+ 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
+  範例，請參閱[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   

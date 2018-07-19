@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonComboBox 類別 |Microsoft 文件
+title: CMFCRibbonComboBox 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040742"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849665"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
-`CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區的快顯功能表的下拉式方塊控制項。  
+`CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區快顯功能表的下拉式方塊控制項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -78,28 +78,28 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCRibbonComboBox::AddItem](#additem)|將唯一的項目附加至清單方塊。|  
-|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|從清單方塊中刪除指定的項目。|  
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|指定清單方塊是否可以卸除向下變更大小。|  
+|[CMFCRibbonComboBox::AddItem](#additem)|將唯一的項目附加至清單方塊中。|  
+|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|從清單方塊中，刪除指定的項目。|  
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|指定當它下拉，清單方塊是否可以變更大小。|  
 |[CMFCRibbonComboBox::FindItem](#finditem)|傳回符合指定的字串清單方塊中的第一個項目的索引。|  
-|[CMFCRibbonComboBox::GetCount](#getcount)|清單方塊中，傳回的項目數。|  
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|清單方塊中，取得目前選取之項目的索引。|  
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|下拉式清單方塊時，取得清單方塊的高度。|  
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|傳回中繼模式中顯示下拉式方塊的大小。|  
-|[CMFCRibbonComboBox::GetItem](#getitem)|傳回與清單方塊中的指定索引處的項目相關聯的字串。|  
+|[CMFCRibbonComboBox::GetCount](#getcount)|在清單方塊中，傳回的項目數。|  
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|在清單方塊中，取得目前選取項目的索引。|  
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|當清單方塊已下拉，請取得清單方塊的高度。|  
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|傳回的大小下拉式方塊的中繼模式中所示。|  
+|[CMFCRibbonComboBox::GetItem](#getitem)|傳回字串與清單方塊中的指定索引處的項目相關聯。|  
 |[CMFCRibbonComboBox::GetItemData](#getitemdata)|傳回與清單方塊中的指定索引處的項目相關聯的資料。|  
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|表示控制項是否包含編輯方塊。|  
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|指出控制項是否包含編輯方塊。|  
 |[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|指出可以調整大小的清單方塊。|  
 |[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|當使用者選取項目在清單方塊中，由架構呼叫。|  
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|刪除所有項目從清單方塊，並清除 [編輯] 方塊。|  
-|[CMFCRibbonComboBox::SelectItem](#selectitem)|清單方塊中選取項目。|  
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|從清單方塊會刪除所有項目，並清除 [編輯] 方塊。|  
+|[CMFCRibbonComboBox::SelectItem](#selectitem)|在清單方塊中選取項目。|  
 |[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|向下拖曳時，請設定清單方塊的高度。|  
   
 ## <a name="remarks"></a>備註  
- 功能區下拉式方塊包含結合的靜態標籤 」 或 「 使用者可以編輯的標籤清單方塊。 您必須指定您想要建立您在功能區下拉式方塊的型別。  
+ 功能區下拉式方塊是由清單方塊，結合靜態標籤或使用者可以編輯的標籤所組成。 您必須指定當您建立您的功能區下拉式方塊，您需要哪種的類型。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCRibbonComboBox`類別、 將項目加入至下拉式方塊、 下拉式方塊中，選取項目和面板加入下拉式方塊。  
+ 下列範例示範如何建構的物件`CMFCRibbonComboBox`類別、 新增項目至下拉式方塊、 下拉式方塊中，選取項目和面板加入下拉式方塊。  
   
  [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
   
@@ -118,7 +118,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
  **標頭：** afxribboncombobox.h  
   
 ##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
- 將唯一的項目附加至清單方塊。  
+ 將唯一的項目附加至清單方塊中。  
   
 ```  
 virtual INT_PTR AddItem(
@@ -131,7 +131,7 @@ virtual INT_PTR AddItem(
  要加入之項目的字串。  
   
  [in]*dwData*  
- 要加入的項目與相關的資料。  
+ 要加入的項目相關聯的資料。  
   
 ### <a name="return-value"></a>傳回值  
  附加的項目以零為起始的索引。  
@@ -157,22 +157,22 @@ CMFCRibbonComboBox();
  下拉式方塊的識別碼。  
   
  [in]*bHasEditBox*  
- `TRUE` 如果您想編輯方塊控制項; 內`FALSE`否則。  
+ 如果您想要編輯方塊內的控制項，則為 TRUEFALSE 否則。  
   
  [in]*nWidth*  
- 像素為單位; 下拉式方塊的寬度或-1 可進行的預設寬度。  
+ 像素為單位; 中的下拉式方塊的寬度-1 則代表的預設寬度。  
   
  [in]*lpszLabel*  
- 下拉式方塊顯示標籤。  
+ 下拉式方塊的顯示標籤。  
   
- [in]*nImage*  
+ [in]*n*  
  下拉式方塊的小型影像索引。  
   
 ### <a name="remarks"></a>備註  
  預設寬度是 108 像素為單位。  
   
 ##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
- 從清單方塊中刪除指定的項目。  
+ 從清單方塊中，刪除指定的項目。  
   
 ```  
 BOOL DeleteItem(int iIndex);
@@ -183,21 +183,21 @@ BOOL DeleteItem(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>參數  
  [in]*iIndex*  
- 要刪除的項目以零為起始的索引。  
+ 要刪除之項目的以零為起始的索引。  
   
  [in]*dwData*  
- 要刪除的項目與相關的資料。  
+ 要刪除的項目相關聯的資料。  
   
  [in]*lpszText*  
- 要刪除之項目的字串。 如果有多個項目，使用相同的字串，則會刪除第一個項目。  
+ 要刪除之項目的字串。 如果有多個相同的字串項目，則會刪除第一個項目。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果指定的項目已遭到刪除。否則， `FALSE`。  
+ 如果已刪除指定的項目，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
- 指定清單方塊是否可以卸除向下變更大小。  
+ 指定當它下拉，清單方塊是否可以變更大小。  
   
 ```  
 void EnableDropDownListResize(BOOL bEnable=FALSE);
@@ -205,10 +205,10 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
   
 ### <a name="parameters"></a>參數  
  [in]*bEnable*  
- `TRUE` 若要啟用 調整大小;`FALSE`停用調整大小。  
+ True 表示啟用調整大小;若要停用 調整大小，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 啟用時調整大小，清單方塊將會變更大小，以符合它所顯示的項目。  
+ 啟用調整大小後，清單方塊會變更大小，以符合它所顯示的項目。  
   
 ##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
  傳回符合指定的字串清單方塊中的第一個項目的索引。  
@@ -219,49 +219,49 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="parameters"></a>參數  
  [in]*lpszText*  
- 清單方塊中項目的字串。  
+ 在清單方塊項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
- 以零起始的索引的項目。或是-1，如果找不到項目。  
+ 項目的以零起始的索引或-1，如果找不到項目。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
- 清單方塊中，傳回的項目數。  
+ 在清單方塊中，傳回的項目數。  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在清單方塊中或 0，表示清單方塊不包含的任何項目中的項目數目。  
+ 在清單方塊中或 0，如果清單方塊中不包含任何項目中的項目數目。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
- 清單方塊中，取得目前選取之項目的索引。  
+ 在清單方塊中，取得目前選取項目的索引。  
   
 ```  
 int GetCurSel() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在清單方塊中，目前選取之項目的以零起始的索引則為-1 會選取任何項目。  
+ 清單方塊中目前選取項目的以零起始的索引則為-1 會選取任何項目。  
   
 ##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
- 下拉式清單方塊時，取得清單方塊的高度。  
+ 當清單方塊已下拉，請取得清單方塊的高度。  
   
 ```  
 int GetDropDownHeight();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 高度 （像素為單位的清單方塊）。  
+ 像素為單位，清單方塊的高度。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
- 傳回中繼模式中顯示下拉式方塊的大小。  
+ 傳回的大小下拉式方塊的中繼模式中所示。  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -269,16 +269,16 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 下拉式方塊的裝置內容的指標。  
+ 下拉式方塊的裝置內容指標。  
   
 ### <a name="return-value"></a>傳回值  
  下拉式方塊的大小。  
   
 ### <a name="remarks"></a>備註  
- 顯示小型影像時傳回的大小會根據下拉式方塊的大小。  
+ 顯示小型影像時，傳回的大小根據下拉式方塊的大小。  
   
 ##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
- 傳回與清單方塊中的指定索引處的項目相關聯的字串。  
+ 傳回字串與清單方塊中的指定索引處的項目相關聯。  
   
 ```  
 LPCTSTR GetItem(int iIndex) const;  
@@ -289,7 +289,7 @@ LPCTSTR GetItem(int iIndex) const;
  清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 項目; 相關聯的字串指標否則，`NULL`如果索引參數無效，或者索引參數是-1，下拉式方塊中選取任何項目。  
+ 項目; 相關聯的字串指標否則為 NULL 的索引參數無效，則索引參數是-1 且沒有在下拉式方塊中選取的項目。  
   
 ### <a name="remarks"></a>備註  
   
@@ -305,17 +305,17 @@ DWORD_PTR GetItemData(int iIndex) const;
  清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 與項目; 相關聯的資料0 或如果此項目不存在，或者索引參數是-1，清單方塊中沒有選取項目。  
+ 與項目; 相關聯的資料則為 0 的項目不存在，則索引參數是-1，而且在清單方塊中沒有選取項目。  
   
 ##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
- 表示控制項是否包含編輯方塊。  
+ 指出控制項是否包含編輯方塊。  
   
 ```  
 BOOL HasEditBox() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果控制項包含編輯方塊。否則， `FALSE`。  
+ 如果控制項包含編輯方塊中，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -327,7 +327,7 @@ BOOL IsResizeDropDownList() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果清單方塊可以調整大小;否則`FALSE`。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+ 如果可以調整清單方塊的大小;，則為 TRUE。否則為 FALSE。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
 ### <a name="remarks"></a>備註  
  您可以使用調整大小的清單方塊來啟用[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)方法。  
@@ -341,13 +341,13 @@ virtual void OnSelectItem(int nItem);
   
 ### <a name="parameters"></a>參數  
  [in]*nItem*  
- 選取之項目的索引。  
+ 選取的項目索引。  
   
 ### <a name="remarks"></a>備註  
  如果您想要處理使用者輸入選取範圍，請覆寫這個方法。  
   
 ##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
- 刪除所有項目從清單方塊，並清除 [編輯] 方塊。  
+ 從清單方塊會刪除所有項目，並清除 [編輯] 方塊。  
   
 ```  
 void RemoveAllItems();
@@ -356,7 +356,7 @@ void RemoveAllItems();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
- 清單方塊中選取項目。  
+ 在清單方塊中選取項目。  
   
 ```  
 BOOL SelectItem(int iIndex);
@@ -370,13 +370,13 @@ BOOL SelectItem(LPCTSTR lpszText);
  清單方塊中的項目以零為起始的索引。  
   
  [in]*dwData*  
- 清單方塊中的項目與相關的資料。  
+ 使用清單方塊中的項目相關聯的資料。  
   
  [in]*lpszText*  
- 清單方塊中項目的字串。  
+ 在清單方塊項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果該方法成功。否則`FALSE`。  
+ 如果方法成功，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -389,10 +389,10 @@ void SetDropDownHeight(int nHeight);
   
 ### <a name="parameters"></a>參數  
  [in]*nHeight*  
- 高度 （像素為單位的清單方塊）。  
+ 像素為單位，清單方塊的高度。  
   
 ### <a name="remarks"></a>備註  
- 預設高度為 150 像素。  
+ 預設高度為 150 個像素。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

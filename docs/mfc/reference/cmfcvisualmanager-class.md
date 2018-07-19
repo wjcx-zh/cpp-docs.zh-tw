@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77049c53f3e1e536f8d4b036ee15084a8d650a91
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123184"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853559"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
 提供在全域層級上變更應用程式外觀的支援。 `CMFCVisualManager` 類別會使用一致的樣式，與提供繪製應用程式 GUI 控制項指令的類別搭配使用。 這些其他類別稱為視覺管理員，並且繼承自 `CMFCBaseVisualManager`。  
@@ -636,7 +636,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
  `TRUE` 如果 3D 索引標籤應會反白顯示。  
   
 ### <a name="remarks"></a>備註  
- 覆寫衍生的視覺管理員中此函式並傳回`TRUE`如果 3D 索引標籤應該一律會反白顯示。 這個方法的預設實作會傳回`FALSE`。  
+ 在衍生的視覺管理員及傳回則為 TRUE，如果 3D 索引標籤應該一律會反白顯示此函式會覆寫。 這個方法的預設實作會傳回 FALSE。  
   
 ##  <a name="cmfcvisualmanager"></a>  CMFCVisualManager::CMFCVisualManager  
 
@@ -954,7 +954,7 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
   
 ### <a name="parameters"></a>參數  
  [in]*bSmall*  
- 布林值，指出參數是否`GetNcBtnSize`應該擷取小型或大型的系統按鈕的大小。 如果*bSmall*是`TRUE`，`GetNcBtnSize`傳回小型的系統按鈕的大小。 否則，它會傳回大型系統按鈕的大小。  
+ 布林值，指出參數是否`GetNcBtnSize`應該擷取小型或大型的系統按鈕的大小。 如果*bSmall*為 TRUE，`GetNcBtnSize`傳回小型的系統按鈕的大小。 否則，它會傳回大型系統按鈕的大小。  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，指出系統按鈕的大小。  
@@ -1217,19 +1217,19 @@ virtual void GetTabFrameColors(
  參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
   
  [out]*clrBlack*  
- 參考`COLORREF`參數，此方法將儲存的索引標籤視窗框線的色彩。 框線的預設色彩為黑色。  
+ 這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。  
   
  [out]*clrHighlight*  
- 參考`COLORREF`參數，這個方法儲存的色彩反白顯示視窗的狀態 索引標籤的位置。  
+ 這個方法儲存的色彩反白顯示視窗的狀態 索引標籤的位置 COLORREF 參數的參考。  
   
  [out]*clrFace*  
- 參考`COLORREF`參數，此方法將儲存的索引標籤視窗的色彩。  
+ 這個方法儲存的索引標籤視窗的色彩 COLORREF 參數的參考。  
   
  [out]*clrDarkShadow*  
- 參考`COLORREF`參數，此方法將儲存的索引標籤視窗陰影的色彩。  
+ 這個方法儲存的索引標籤視窗陰影的色彩 COLORREF 參數的參考。  
   
  [out]*clrLight*  
- 參考`COLORREF`參數，此方法將儲存淺視窗邊緣的索引標籤的色彩。  
+ 這個方法儲存淺視窗邊緣的索引標籤的色彩 COLORREF 參數的參考。  
   
  [out]*pbrFace*  
  筆刷的參考指標。 這個方法會將儲存的筆刷，用來填滿 索引標籤 視窗，此參數中的臉部。  
@@ -1467,7 +1467,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 若要自動隱藏按鈕上重疊;`FALSE`如果不相符。  
+ 若要自動隱藏按鈕上重疊;，則為 TRUE。如果不相符，則為 FALSE。  
   
 ##  <a name="isautodestroy"></a>  CMFCVisualManager::IsAutoDestroy  
 
@@ -1502,7 +1502,7 @@ virtual BOOL IsDockingTabHasBorder();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果視覺化管理員繪製窗格停駐和索引標籤式; 周圍的框線`FALSE`否則。  
+ 如果視覺化管理員繪製窗格停駐和索引標籤式; 周圍的框線，則為 TRUE。FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  當多個窗格停駐在相同的位置時，成為索引標籤式停駐的窗格。  
@@ -1601,7 +1601,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
  視覺管理員會顯示 Office XP 樣式功能表; 如果為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)必須繪製陰影的功能表時呼叫這個方法。 根據預設，這個方法會傳回`FALSE`。 如果您想要在 Office XP 中使用類似於快顯功能表快顯功能表中，覆寫自訂的視覺管理員中，這個方法，並傳回`TRUE`。  
+ [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)必須繪製陰影的功能表時呼叫這個方法。 根據預設，這個方法會傳回 FALSE。 如果您想要在 Office XP 中使用類似於快顯功能表快顯功能表，自訂的視覺管理員中置換此方法，而傳回 TRUE。  
   
 ##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManager::IsOffsetPressedButton  
 
@@ -1622,7 +1622,7 @@ virtual BOOL IsOwnerDrawCaption();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果應用程式中的所有框架視窗都具有主控描繪標題;`FALSE`否則。  
+ 如果應用程式中的所有框架視窗都具有主控描繪標題;，則為 TRUE。FALSE 否則。  
   
 ##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManager::IsOwnerDrawMenuCheck  
 
@@ -1781,7 +1781,7 @@ virtual BOOL OnDrawBrowseButton(
  參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數。 這是保留的值，而且目前未使用。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則為 `TRUE`，否則為 `FALSE`。  
+ 如果成功，則為 TRUE，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個函式在衍生類別中的，如果您想要自訂的執行個體中的瀏覽 按鈕的外觀[CMFCEditBrowseCtrl 類別](../../mfc/reference/cmfceditbrowsectrl-class.md)。 按鈕狀態的可能值是`ButtonsIsRegular`， `ButtonsIsPressed`，和`ButtonsIsHighlighted`。  
@@ -2246,7 +2246,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
  布林值，指定的排序箭號方向。  
   
 ### <a name="remarks"></a>備註  
- 如果*bIsUp*是`TRUE`，視覺化管理員繪製最新的排序箭號。 如果是`FALSE`，視覺化管理員繪製的向下的排序箭號。 覆寫`OnDrawHeaderCtrlSortArrow`自訂排序按鈕的外觀的衍生類別中。  
+ 如果*bIsUp*為 TRUE 時，視覺管理員繪製最新的排序箭號。 如果是 FALSE，則視覺管理員會繪製向下的排序箭號。 覆寫`OnDrawHeaderCtrlSortArrow`自訂排序按鈕的外觀的衍生類別中。  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
 
@@ -2385,7 +2385,7 @@ virtual void OnDrawMenuScrollButton(
  指定捲軸按鈕的界限的矩形。  
   
  [in]*bIsScrollDown*  
- 布林值，指出哪一種按鈕繪製的視覺管理員。 值為`TRUE`表示視覺管理員繪製下拉按鈕。  
+ 布林值，指出哪一種按鈕繪製的視覺管理員。 如果為 true 值表示視覺管理員繪製下拉按鈕。  
   
  [in]*bIsHighlited*  
  布林值，指出按鈕會反白顯示。  
@@ -2459,7 +2459,7 @@ virtual void OnDrawMenuSystemButton(
 ### <a name="remarks"></a>備註  
  功能表系統按鈕**關閉**，**最小化**，**最大化**，以及**還原**按鈕位於標題列。  
   
- 這個方法的預設實作會呼叫[CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol)與`DFC_CAPTION`型別。 覆寫此方法在衍生的視覺管理員類別自訂的系統按鈕的外觀。  
+ 這個方法的預設實作會呼叫[CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol) DFC_CAPTION 類型。 覆寫此方法在衍生的視覺管理員類別自訂的系統按鈕的外觀。  
   
 ##  <a name="ondrawminiframeborder"></a>  CMFCVisualManager::OnDrawMiniFrameBorder  
 
@@ -3172,7 +3172,7 @@ virtual void OnDrawRibbonProgressBar(
  指定進度列的周圍區域的界限的矩形。  
   
  [in]*bInfiniteMode*  
- 布林值參數，表示進度列的模式。 值為`TRUE`表示橫條圖是無限的模式。 預設實作不會使用此參數。  
+ 布林值參數，表示進度列的模式。 值為 TRUE，表示在列為無限的模式。 預設實作不會使用此參數。  
   
 ### <a name="remarks"></a>備註  
  自訂外觀，進度列的衍生類別中，這個方法會覆寫。  
@@ -3306,7 +3306,7 @@ virtual void OnDrawRibbonSliderZoomButton(
  在功能區滑桿指定的顯示比例按鈕界限的矩形。  
   
  [in]*bIsZoomOut*  
- 布林值參數，指出哪一個按鈕 framework 繪製。 值為`TRUE`表示與左鍵"-"的縮小。值為`FALSE`表示"+"zoom 中使用滑鼠右鍵。  
+ 布林值參數，指出哪一個按鈕 framework 繪製。 TRUE 值表示左的按鈕，使用"-"的縮小。FALSE 值表示與 「 + 」 中的 zoom 右邊的按鈕。  
   
  [in]*bIsHighlighted*  
  布林值參數，指出按鈕會反白顯示。  
@@ -3415,7 +3415,7 @@ virtual void OnDrawSeparator(
  指定分隔符號的界限的矩形。  
   
  [in]*bIsHoriz*  
- 布林值參數，表示停駐窗格的方向。 值為`TRUE`表示窗格停駐在水平。 值為`FALSE`表示窗格停駐在垂直。  
+ 布林值參數，表示停駐窗格的方向。 如果為 true 值表示的窗格即停駐水平。 FALSE 值表示的窗格即停駐垂直。  
   
 ### <a name="remarks"></a>備註  
  控制列上使用分隔符號來分隔群組相關的圖示。 這個方法的預設實作會顯示標準的分隔符號。 覆寫此方法在衍生的視覺管理員，以自訂分隔符號的外觀。  
@@ -3460,7 +3460,7 @@ virtual void OnDrawSpinButtons(
  旗標，指出微調控制項的狀態。 如需詳細資訊，請參閱＜備註＞一節。  
   
  [in]*bOrientation*  
- 布林值參數，指定的微調控制項的方向。 值為`TRUE`表示微調控制項為水平。 否則，它是垂直。  
+ 布林值參數，指定的微調控制項的方向。 如果為 true 值表示微調控制項是水平。 否則，它是垂直。  
   
  [in]*pSpinCtrl*  
  微調控制項指標。 Framework 繪製此控制項的按鈕。  
@@ -3593,10 +3593,10 @@ virtual void OnDrawStatusBarProgress(
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。  
   
  [in]*clrProgressBarDest*  
- A`COLORREF`表示進度列的色彩漸層的結束的參數。 如果*clrProgressBarDest*為-1，此架構不能繪製進度列的色彩漸層作為。 相反地，它以填滿整個進度列所指定的色彩*clrBar*。  
+ 表示進度列的色彩漸層的結束 COLORREF 參數。 如果*clrProgressBarDest*為-1，此架構不能繪製進度列的色彩漸層作為。 相反地，它以填滿整個進度列所指定的色彩*clrBar*。  
   
  [in]*clrProgressText*  
- A`COLORREF`參數，指出目前的進度的文字表示的文字色彩。 如果這個參數就會忽略*bProgressText*設定為`FALSE`。  
+ COLORREF 參數，指出目前的進度的文字表示的文字色彩。 如果這個參數就會忽略*bProgressText*設為 FALSE。  
   
  [in]*bProgressText*  
  布林值參數，指出是否要顯示的目前進度的文字表示法。  
@@ -3813,10 +3813,10 @@ virtual void OnDrawTasksGroupAreaBorder(
  在 [工作] 窗格指定的群組區域的界限的矩形。  
   
  [in]*bSpecial*  
- 布林值參數，指定框線會反白顯示。 值為`TRUE`指出框線會反白顯示。  
+ 布林值參數，指定框線會反白顯示。 TRUE 值會指出框線會反白顯示。  
   
  [in]*bNoTitle*  
- 布林值參數，指定 [群組] 區域是否有標題。 值為`TRUE`表示群組區域沒有標題。  
+ 布林值參數，指定 [群組] 區域是否有標題。 TRUE 值表示的群組區域沒有標題。  
   
 ### <a name="remarks"></a>備註  
  若要自訂工作窗格上的群組區域周圍的框線在衍生類別中此函式會覆寫。  
@@ -3895,7 +3895,7 @@ virtual void OnDrawTearOffCaption(
  指定標題的界限的矩形。  
   
  [in]*bIsActive*  
- `TRUE` 如果標題為作用中;`FALSE`否則。  
+ 如果標題為作用中;，則為 TRUE。FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  由架構呼叫此函式時`CMFCPopupMenu`物件處理 WM_PAINT 訊息，並必須繪製分割標題。  
@@ -3934,7 +3934,7 @@ virtual BOOL OnEraseMDIClientArea(
  指定在 MDI 工作區的界限的矩形。  
   
 ### <a name="return-value"></a>傳回值  
- 保留的值。 預設實作會傳回 `FALSE`。  
+ 保留的值。 預設實作會傳回 FALSE。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以執行自訂程式碼時的視覺管理員會清除在 MDI 工作區。  
@@ -4031,7 +4031,7 @@ virtual BOOL OnEraseTabsFrame(
  索引標籤視窗的指標。 此架構會清除的框架`CMFCBaseTabCtrl`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果方法成功，`FALSE`否則。  
+ 如果方法成功，則為 TRUEFALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  這個方法會填入所指定的區域*rect*與作用中的索引標籤的背景色彩。它時，會呼叫`CMFCBaseTabCtrl`物件處理 WM_PAINT 訊息，並清除 索引標籤上的框架。  
@@ -4488,7 +4488,7 @@ virtual void OnFillTab(
  此架構，填滿背景索引標籤的以零為起始的索引標籤索引。  
   
  [in]*bIsActive*  
- `TRUE` 如果 [] 索引標籤為作用中;否則`FALSE`。  
+ [] 索引標籤作用中; 如果為 TRUE否則為 FALSE。  
   
  [in]*pTabWnd*  
  在父索引標籤控制項的指標。  
@@ -4624,7 +4624,7 @@ virtual BOOL OnNcPaint(
  指定的非工作區界限的矩形。  
   
 ### <a name="return-value"></a>傳回值  
- 保留的值。 預設實作會傳回 `FALSE`。  
+ 保留的值。 預設實作會傳回 FALSE。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，若要自訂的視窗框架和標題按鈕的外觀。  
@@ -4646,7 +4646,7 @@ virtual BOOL OnSetWindowRegion(
  視窗的大小。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果方法成功，`FALSE`否則。  
+ 如果方法成功，則為 TRUEFALSE 否則。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法，以通知框架和快顯功能表已設定區域的視覺管理員。 如需詳細資訊，請參閱 < [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)。  

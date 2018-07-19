@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLinkCtrl 類別 |Microsoft 文件
+title: CMFCRibbonLinkCtrl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039007"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851492"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 類別
 實作放置在功能區上的超連結。 當您按一下時，超連結會開啟網頁。  
@@ -85,7 +85,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|設定超連結的值。|  
   
 ## <a name="remarks"></a>備註  
- 建立超連結之後，將它加入至面板藉由呼叫[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
+ 建立超連結之後，將它新增至面板藉由呼叫[cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -107,16 +107,16 @@ CMFCRibbonLinkCtrl(
   
 ### <a name="parameters"></a>參數  
  [in]*nID*  
- 指定當按下連結控制項時執行的命令的命令識別碼。  
+ 指定當按下連結控制項時執行命令的命令識別碼。  
   
  [in]*lpszText*  
- 指定要連結控制項上所顯示的標籤。  
+ 指定要在連結控制項上顯示標籤。  
   
  [in]*lpszLink*  
  指定連結控制項相關聯的超連結。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用的建構函式`CMFCRibbonLinkCtrl`類別。 此程式碼片段是部分[功能區小工具範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用的建構函式`CMFCRibbonLinkCtrl`類別。 此程式碼片段是一部分[功能區小工具範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -250,7 +250,7 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已成功; 開啟相關聯的 Web 網頁否則， `FALSE`。  
+ 如果已成功; 開啟相關聯的網頁，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  開啟網頁，使用相關聯的超連結`CMFCRibbonLinkCtrl`物件。  

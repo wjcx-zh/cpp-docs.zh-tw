@@ -1,5 +1,5 @@
 ---
-title: CRichEditCntrItem 類別 |Microsoft 文件
+title: CRichEditCntrItem 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078604"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849323"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 類別
-與[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供豐富的編輯控制項的 MFC 的文件檢視架構內容中的功能。  
+具有[CRichEditView](../../mfc/reference/cricheditview-class.md)並[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供 rich edit 控制項的 MFC 的文件檢視架構內容中的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,13 +51,13 @@ class CRichEditCntrItem : public COleClientItem
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|啟動為其他類型的項目。|  
   
 ## <a name="remarks"></a>備註  
- 「 Rich edit 控制項 」 是一個視窗，使用者可以輸入和編輯文字。 文字字元和段落格式，可以指派，而且可包含內嵌的 OLE 物件。 Rich edit 控制項來格式化文字，提供程式設計介面。 然而，應用程式必須實作所有必要的使用者介面元件，讓使用者能夠執行格式化作業。  
+ 「 Rich edit 控制項 」 是一個視窗，讓使用者輸入及編輯文字。 文字字元和段落格式，可指派，而且可以包含內嵌的 OLE 物件。 Rich edit 控制項的格式化文字，提供程式設計介面。 然而，應用程式必須實作所有必要的使用者介面元件，讓使用者能夠執行格式化作業。  
   
- `CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc` 維護檢視表中的 OLE 用戶端項目的清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目的存取權給容器端。  
+ `CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc` 會維護檢視中的 OLE 用戶端項目清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目的存取權給容器端。  
   
- 這個 Windows 通用控制項 (因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用於在 Windows 95/98、 Windows NT 的版本 3.51 下執行的程式和更新版本。  
+ 這個 Windows 通用控制項 (因而[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用於 Windows 95/98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。  
   
- 在 MFC 應用程式中使用豐富的編輯容器項目，例如，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。  
+ 如需範例 MFC 應用程式中使用豐富的編輯容器項目，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -74,7 +74,7 @@ class CRichEditCntrItem : public COleClientItem
  **標頭：** afxrich.h  
   
 ##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem  
- 呼叫此函式可建立`CRichEditCntrItem`物件，並將它加入至容器文件。  
+ 呼叫此函式可建立`CRichEditCntrItem`物件，並將它新增至容器文件。  
   
 ```  
 CRichEditCntrItem(
@@ -84,18 +84,18 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>參數  
  *preo*  
- 指標[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構包含這個 OLE 項目。 如果*preo*是**NULL**，用戶端項目是空的。  
+ 指標[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構這個 OLE 項目。 如果*preo*是 NULL 時，用戶端項目是空的。  
   
  *pContainer*  
- 容器文件會包含此項目的指標。 如果*pContainer*是**NULL**，您必須明確呼叫[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)將這個用戶端項目加入至文件。  
+ 容器文件會包含此項目的指標。 如果*pContainer*是 NULL 時，您必須明確呼叫[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)將此用戶端項目新增至文件。  
   
 ### <a name="remarks"></a>備註  
  此函式不會執行任何 OLE 初始化。  
   
- 如需詳細資訊，請參閱[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的結構。  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- 呼叫此函式可同步處理裝置層面， [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個`CRichEditCntrltem`所指定的*reo*。  
+ 呼叫此函式，以同步處理裝置外觀[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個`CRichEditCntrltem`來指定*reo*。  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -106,7 +106,7 @@ void SyncToRichEditObject(REOBJECT& reo);
  若要參考[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 WORDPAD](../../visual-cpp-samples.md)   

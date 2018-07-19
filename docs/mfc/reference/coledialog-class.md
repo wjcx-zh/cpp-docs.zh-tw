@@ -1,5 +1,5 @@
 ---
-title: COleDialog 類別 |Microsoft 文件
+title: COleDialog 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368656"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853617"
 ---
 # <a name="coledialog-class"></a>COleDialog 類別
 提供 OLE 對話方塊通用的功能。  
@@ -43,7 +43,7 @@ class COleDialog : public CCommonDialog
 |[COleDialog::GetLastError](#getlasterror)|取得對話方塊所傳回的錯誤碼。|  
   
 ## <a name="remarks"></a>備註  
- Microsoft Foundation 類別庫會提供數個類別衍生自`COleDialog`:  
+ Microsoft Foundation 類別庫提供數個類別衍生自`COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -63,7 +63,7 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- 如需 OLE 特定對話方塊的詳細資訊，請參閱文章[中 OLE 對話方塊](../../mfc/dialog-boxes-in-ole.md)。  
+ 如需有關特定 OLE 對話方塊的詳細資訊，請參閱[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ class COleDialog : public CCommonDialog
  **標頭：** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- 呼叫`GetLastError`成員函式來取得其他錯誤資訊時`DoModal`傳回**IDABORT**。  
+ 呼叫`GetLastError`成員函式來取得其他錯誤資訊時`DoModal`傳回 IDABORT。  
   
 ```  
 UINT GetLastError() const;  

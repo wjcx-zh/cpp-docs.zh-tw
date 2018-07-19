@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonSeparator 類別 |Microsoft 文件
+title: CMFCRibbonSeparator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039790"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849760"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 類別
 實作功能區分隔符號。  
@@ -62,26 +62,26 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |||  
 |-|-|  
 |名稱|描述|  
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|加入分隔符號，**命令**清單中**自訂** 對話方塊。 (覆寫[CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。)|  
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|加入分隔符號**命令**列入**自訂** 對話方塊。 (覆寫[CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。)|  
 |`CMFCRibbonSeparator::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|`CMFCRibbonSeparator::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
+|`CMFCRibbonSeparator::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
 |||  
 |-|-|  
 |名稱|描述|  
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|複製方法，可設定的分隔符號成員變數，從另一個物件。|  
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|傳回分隔線的大小。|  
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|複製方法，以從另一個物件設定為分隔符號的成員變數。|  
+|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|傳回分隔符號的大小。|  
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|指出這是否為分隔符號。|  
 |[CMFCRibbonSeparator::IsTabStop](#istabstop)|指出這是否為定位停駐點。|  
 |[CMFCRibbonSeparator::OnDraw](#ondraw)|若要快速存取工具列或功能區上繪製分隔符號系統呼叫。|  
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|由系統上繪製分隔符號呼叫**命令**清單。|  
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|呼叫系統上繪製分隔符號**命令**清單。|  
   
 ## <a name="remarks"></a>備註  
- 功能區分隔符號是垂直或水平列，以邏輯方式分隔功能區項目。 在功能區控制項、 主應用程式功能表中，功能區狀態列，以及快速存取工具列上，可以繪製分隔符號。  
+ 功能區分隔符號是垂直或水平的一行，以邏輯方式分隔功能區項目。 在功能區控制項、 主應用程式 功能表、 功能區狀態列，以及快速存取工具列上，可以繪製分隔符號。  
   
- 若要在應用程式中使用分隔符號，建構新的物件，並將它加入至主應用程式功能表，如下所示：  
+ 若要使用分隔符號，在您的應用程式中，建構新的物件，並將它新增至主應用程式功能表，如下所示：  
   
 ```  
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -91,7 +91,7 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...  
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```  
-呼叫[CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator)加入功能區面板的分隔符號。 分隔符號會配置並在內部新增`AddSeparator`方法。  
+呼叫[CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator)加入功能區面板中的分隔符號。 分隔符號會配置並在內部新增`AddSeparator`方法。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -104,7 +104,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
  **標頭：** afxbaseribbonelement.h  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
- 加入分隔符號，**命令**清單中**自訂** 對話方塊。  
+ 加入分隔符號**命令**列入**自訂** 對話方塊。  
   
 ```  
 virtual int AddToListBox(
@@ -114,13 +114,13 @@ virtual int AddToListBox(
   
 ### <a name="parameters"></a>參數  
  [in]*pWndListBox*  
- 指標**命令**其中加入分隔符號的清單。  
+ 指標**命令**加入分隔符號的位置清單。  
   
  [in]*bDeep*  
  忽略。  
   
 ### <a name="return-value"></a>傳回值  
- 以零為起始的索引，以在清單方塊中所指定的字串*pWndListBox*。  
+ 在清單方塊中所指定的字串以零起始的索引*pWndListBox*。  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  建構 `CMFCRibbonSeparator` 物件。  
@@ -131,7 +131,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
   
 ### <a name="parameters"></a>參數  
  [in]*bIsHoriz*  
- 如果`TRUE`，分隔符號是水平; 如果`FALSE`，分隔符號是垂直。  
+ 如果為 TRUE，分隔符號是水平;如果為 FALSE，分隔符號是垂直。  
   
 ### <a name="remarks"></a>備註  
  應用程式功能表中，會使用水平分隔符號。 工具列中，會使用垂直分隔符號。  
@@ -142,7 +142,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
  [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
- 複製方法，可設定的分隔符號成員變數，從另一個物件。  
+ 複製方法，以從另一個物件設定為分隔符號的成員變數。  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -153,7 +153,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
  要複製的來源功能區項目。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
- 傳回分隔線的大小。  
+ 傳回分隔符號的大小。  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -161,7 +161,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>參數  
  [in]*pDC*  
- 裝置內容的指標。  
+ 裝置內容指標。  
   
 ### <a name="return-value"></a>傳回值  
  指定的裝置內容的分隔符號的大小。  
@@ -174,7 +174,7 @@ virtual BOOL IsSeparator() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 一律`TRUE`這個類別。  
+ 一律適用於這個類別。  
   
 ##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
  指出這是否為定位停駐點。  
@@ -184,10 +184,10 @@ virtual BOOL IsTabStop() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 一律`FALSE`這個類別。  
+ 永遠為 FALSE 的這個類別。  
   
 ### <a name="remarks"></a>備註  
- 功能區分隔符號不定位停駐點。  
+ 功能區分隔符號不是定位停駐點。  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
  若要快速存取工具列或功能區上繪製分隔符號系統呼叫。  
@@ -201,7 +201,7 @@ virtual void OnDraw(CDC* pDC);
  裝置內容的指標。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
- 由系統上繪製分隔符號呼叫**命令**清單。  
+ 呼叫系統上繪製分隔符號**命令**清單。  
   
 ```  
 virtual void OnDrawOnList(
@@ -219,9 +219,9 @@ virtual void OnDrawOnList(
 |-|-|  
 |參數|描述|  
 |[in]*pDC*|裝置內容的指標。|  
-|[in]*strText*|在清單上顯示的文字。|  
-|[in]*nTextOffset*|與文字之間的週框左邊的間距。|  
-|[in]*rect*|指定的周框。|  
+|[in]*先把 strText*|在清單上顯示的文字。|  
+|[in]*nTextOffset*|與文字之間的週框矩形左邊的間距。|  
+|[in]*rect*|指定週框矩形。|  
 |[in]*bIsSelected*|忽略。|  
 |[in]*bHighlighted*|忽略。|  
   

@@ -1,5 +1,5 @@
 ---
-title: CMonikerFile 類別 |Microsoft 文件
+title: CMonikerFile 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037265"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853643"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 類別
-表示資料的資料流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 名為[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
+表示資料的資料流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 所命名[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,10 +56,10 @@ class CMonikerFile : public COleStreamFile
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMonikerFile::Close](#close)|卸離並釋放資料流並釋放 moniker。|  
+|[CMonikerFile::Close](#close)|卸離並釋放資料流並釋放的 moniker。|  
 |[CMonikerFile::Detach](#detach)|卸離`IMoniker`從此`CMonikerFile`物件。|  
 |[CMonikerFile::GetMoniker](#getmoniker)|傳回目前的 moniker。|  
-|[CMonikerFile::Open](#open)|開啟指定的檔案取得資料流。|  
+|[CMonikerFile::Open](#open)|開啟指定的檔案取得的資料流。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
@@ -68,13 +68,13 @@ class CMonikerFile : public COleStreamFile
 |[CMonikerFile::CreateBindContext](#createbindcontext)|取得繫結內容，或建立的預設值初始化繫結內容。|  
   
 ## <a name="remarks"></a>備註  
- Moniker 包含非常類似檔案的路徑名稱的資訊。 如果您有 moniker 物件的指標`IMoniker`介面，可以取得已識別檔案的存取權，而不需要任何其他特定相關檔案所在位置實際資訊。  
+ Moniker 包含非常類似檔案的路徑名稱的資訊。 如果您有 moniker 物件的指標`IMoniker`介面，可以取得已識別檔案的存取權，而不需要任何其他特定資訊檔案位於其中實際。  
   
- 衍生自`COleStreamFile`，`CMonikerFile`取得 moniker 或者可以製作成 moniker 的字串表示法，並繫結至資料流 moniker 的名稱。 您可以讀取並寫入該資料流。 實際用途`CMonikerFile`是提供簡單的存取權`IStream`s 命名`IMoniker`s，讓您不必自己繫結至資料流，尚未擁有`CFile`資料流的功能。  
+ 衍生自`COleStreamFile`， `CMonikerFile` moniker 或它可以製作成 moniker 的字串表示，並繫結至資料流之 moniker 的名稱。 然後，您可以閱讀，並寫入該資料流。 真正目的`CMonikerFile`是要提供簡單的存取權`IStream`s 命名`IMoniker`s，如此一來，不用自己繫結至資料流，還沒有`CFile`資料流的功能。  
   
- `CMonikerFile` 不能繫結至資料流以外的任何項目。 如果您想要繫結至儲存體或物件，您必須使用`IMoniker`直接介面。  
+ `CMonikerFile` 不用來繫結至資料流以外的任何項目。 如果您想要繫結至儲存體或物件，您必須使用`IMoniker`直接介面。  
   
- 如需有關資料流和 moniker 的詳細資訊，請參閱[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 參考*和[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)和[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)中Windows SDK。  
+ 如需有關資料流和 moniker 的詳細資訊，請參閱[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 參考 》* 並[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)並[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)中Windows SDK。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,7 +89,7 @@ class CMonikerFile : public COleStreamFile
  **標頭：** afxole.h  
   
 ##  <a name="close"></a>  CMonikerFile::Close  
- 呼叫此函式來卸離，並釋放資料流，並釋放 moniker。  
+ 呼叫此函式來卸離，並釋放資料流，並釋放的 moniker。  
   
 ```  
 virtual void Close();
@@ -106,7 +106,7 @@ CMonikerFile();
 ```  
   
 ##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
- 呼叫此函式來建立預設值初始化繫結內容。  
+ 呼叫此函式來建立預設會初始化繫結內容。  
   
 ```  
 IBindCtx* CreateBindContext(CFileException* pError);
@@ -114,13 +114,13 @@ IBindCtx* CreateBindContext(CFileException* pError);
   
 ### <a name="parameters"></a>參數  
  *pError*  
- 檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
+ 檔案例外狀況的指標。 發生錯誤時，它會設定為原因。  
   
 ### <a name="return-value"></a>傳回值  
- 繫結內容的指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)要與繫結，如果成功，否則**NULL**。 如果執行個體以開啟`IBindHost`介面，繫結內容擷取從`IBindHost`。 如果沒有任何`IBindHost`介面或介面無法傳回繫結內容、 繫結內容建立。 如需說明的[IBindHost](http://msdn.microsoft.com/library/ie/ms775076)介面，請參閱 Windows SDK。  
+ 繫結內容的指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)要與繫結，如果成功，否則為 NULL。 如果執行個體以開啟`IBindHost`介面，從擷取的繫結內容`IBindHost`。 如果沒有任何`IBindHost`介面無法傳回繫結內容、 繫結內容建立。 如需描述[IBindHost](http://msdn.microsoft.com/library/ie/ms775076)介面中，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
- 繫結內容是儲存在特定的 moniker 繫結作業的相關資訊的物件。 您可以覆寫此函式可提供自訂的繫結內容。  
+ 繫結內容是儲存特定的 moniker 繫結作業的相關資訊的物件。 您可以覆寫這個函式，以提供自訂的繫結內容。  
   
 ##  <a name="detach"></a>  CMonikerFile::Detach  
  呼叫此函式來關閉資料流。  
@@ -131,13 +131,13 @@ BOOL Detach(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>參數  
  *pError*  
- 檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
+ 檔案例外狀況的指標。 發生錯誤時，它會設定為原因。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
- 呼叫此函式可擷取目前 moniker 的指標。  
+ 呼叫此函式可擷取目前的 moniker 的指標。  
   
 ```  
 IMoniker* GetMoniker() const;  
@@ -147,10 +147,10 @@ IMoniker* GetMoniker() const;
  目前的 moniker 介面的指標 ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
   
 ### <a name="remarks"></a>備註  
- 因為`CMonikerFile`不是介面，傳回的指標不會遞增參考計數 (透過[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，並釋放 moniker 時`CMonikerFile`釋放物件。 如果您想要保留 moniker 或自行發行，您必須`AddRef`它。  
+ 由於`CMonikerFile`不是介面，傳回的指標，不會遞增參考次數 (透過[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，且放開 moniker 時`CMonikerFile`釋放物件。 如果您想要保留的 moniker，或自行發行，您必須`AddRef`它。  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
- 呼叫此成員函式，以開啟檔案或 moniker 物件。  
+ 呼叫此成員函式，若要開啟的檔案或 moniker 物件。  
   
 ```  
 virtual BOOL Open(
@@ -168,18 +168,18 @@ virtual BOOL Open(
  URL 或開啟檔案的檔案名稱。  
   
  *pError*  
- 檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
+ 檔案例外狀況的指標。 發生錯誤時，它會設定為原因。  
   
  *pMoniker*  
- Moniker 介面的指標`IMoniker`用來取得資料流。  
+ Moniker 介面的指標`IMoniker`來取得的資料流。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- *LpszURL*參數不能在 Macintosh。 只有*pMoniker*形式**開啟**可以用於 Macintosh。  
+ *LpszURL*參數不能用在 Macintosh 上。 只有*pMoniker*形式的`Open`可用在 Macintosh 上。  
   
- 您可以使用 URL 或檔案名稱*lpszURL*參數。 例如:   
+ 您可以使用 URL 或檔名*lpszURL*參數。 例如:   
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

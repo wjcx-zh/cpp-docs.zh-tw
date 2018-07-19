@@ -1,5 +1,5 @@
 ---
-title: 設計集合和列舉程式介面 (ATL) |Microsoft 文件
+title: 設計集合和列舉程式介面 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05649cce0e80af6f54327545cef7b663d69babf9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354915"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851323"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和列舉程式介面的設計原則
-有不同的設計原則，之後每一種介面：  
+有不同的設計原則，每一種介面背後：  
   
--   集合介面提供*隨機*存取*單一*透過集合中的項目**項目**方法，它可讓用戶端探索集合中有多少項目透過**計數**屬性，而且通常允許用戶端加入和移除項目。  
+-   集合介面會提供*隨機*存取權*單一*透過集合中的項目`Item`方法，它可讓用戶端探索透過集合中有多少項目`Count`屬性，並通常可讓用戶端加入和移除項目。  
   
--   列舉程式介面提供*序列*存取*多個*集合中的項目，它並不允許用戶端探索 （直到列舉值可讓您停止傳回集合中有多少項目項目），以及它並不提供任何方式加入或移除項目。  
+-   列舉值介面會提供*序列*存取權*多重*集合中的項目，它並不允許用戶端能夠探索 （直到過了列舉值可讓您停止傳回集合中有多少項目項目），而它也未提供任何方式加入或移除項目。  
   
- 每一種介面扮演不同角色中提供存取集合中的項目。  
+ 每一種介面扮演不同的角色提供存取集合中的項目。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合和列舉程式](../atl/atl-collections-and-enumerators.md)

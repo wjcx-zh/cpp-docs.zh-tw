@@ -1,5 +1,5 @@
 ---
-title: CPalette 類別 |Microsoft 文件
+title: CPalette 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079677"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849401"
 ---
 # <a name="cpalette-class"></a>CPalette 類別
 封裝 Windows 調色盤。  
@@ -58,34 +58,34 @@ class CPalette : public CGdiObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPalette::CPalette](#cpalette)|建構`CPalette`物件沒有附加的 Windows 調色盤。 您必須先初始化`CPalette`物件使用初始化的成員函式才可以使用其中一個。|  
+|[CPalette::CPalette](#cpalette)|建構`CPalette`物件沒有附加的 Windows 調色盤。 您必須初始化`CPalette`物件與其中一個成員函式初始化才能使用。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Cpalette:: Animatepalette](#animatepalette)|會取代調色盤中的邏輯所識別的項目`CPalette`物件。 應用程式不必更新其工作區，因為 Windows 立即對應系統調色盤將新項目。|  
-|[CPalette::CreateHalftonePalette](#createhalftonepalette)|建立裝置內容的半色調調色盤，並將它附加至`CPalette`物件。|  
-|[CPalette::CreatePalette](#createpalette)|建立 Windows 色彩調色盤，並將它附加至`CPalette`物件。|  
+|[Cpalette:: Animatepalette](#animatepalette)|取代項目中所識別的邏輯調色盤`CPalette`物件。 應用程式並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。|  
+|[CPalette::CreateHalftonePalette](#createhalftonepalette)|建立 半色調調色盤的 裝置內容，並將它附加至`CPalette`物件。|  
+|[CPalette::CreatePalette](#createpalette)|建立 Windows 的色板，並將它附加至`CPalette`物件。|  
 |[CPalette::FromHandle](#fromhandle)|將指標傳回至`CPalette`物件控制代碼提供給 Windows 調色盤物件時。|  
-|[CPalette::GetEntryCount](#getentrycount)|擷取邏輯的調色盤中的調色盤項目數目。|  
-|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|最接近的色彩值的邏輯調色盤中傳回的項目索引。|  
-|[CPalette::GetPaletteEntries](#getpaletteentries)|擷取調色盤中的項目邏輯色板的範圍。|  
-|[CPalette::ResizePalette](#resizepalette)|所指定的邏輯色板的大小變更`CPalette`物件指定的項目數目。|  
-|[CPalette::SetPaletteEntries](#setpaletteentries)|RGB 色彩值和旗標範圍內設定邏輯調色盤中的項目。|  
+|[CPalette::GetEntryCount](#getentrycount)|擷取邏輯調色盤中的調色盤項目數目。|  
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|在最接近的色彩值的邏輯色板中傳回的項目索引。|  
+|[CPalette::GetPaletteEntries](#getpaletteentries)|擷取一組邏輯調色盤中的調色盤項目。|  
+|[CPalette::ResizePalette](#resizepalette)|變更所指定的邏輯色板的大小`CPalette`物件，以指定的項目數目。|  
+|[CPalette::SetPaletteEntries](#setpaletteentries)|設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HPALETTE CPalette::operator](#operator_hpalette)|傳回`HPALETTE`附加至`CPalette`。|  
+|[CPalette::operator HPALETTE](#operator_hpalette)|傳回 HPALETTE 附加至`CPalette`。|  
   
 ## <a name="remarks"></a>備註  
- 調色盤提供應用程式和色彩輸出裝置 （例如顯示裝置） 之間的介面。 介面可讓應用程式以利用完整的色彩功能的輸出裝置，而不會嚴重妨礙的其他應用程式所顯示的色彩。 Windows 使用應用程式的邏輯色板 （所需的色彩清單） 和系統調色盤 （會定義可用的色彩） 來決定所使用的色彩。  
+ 調色盤提供色彩輸出裝置 （例如顯示裝置） 和應用程式之間的介面。 介面可讓應用程式以充分利用輸出裝置的色彩功能而不會嚴重妨礙其他應用程式所顯示的色彩。 Windows 會使用應用程式的邏輯調色盤 （所需的色彩的清單） 和系統調色盤 （會定義可用的色彩），以判斷所使用的色彩。  
   
- A`CPalette`物件提供成員函式的物件操作調色盤參考。 建構`CPalette`物件，並使用其成員函式，以建立實際的調色盤，圖形裝置介面 (GDI) 物件，並管理它的項目和其他屬性。  
+ A`CPalette`物件提供成員函式物件所操作的調色盤參考。 建構`CPalette`物件，並使用其成員函式，來建立實際的調色盤，圖形裝置介面 (GDI) 物件，並操作其項目和其他屬性。  
   
- 如需有關使用`CPalette`，請參閱[圖形物件](../../mfc/graphic-objects.md)。  
+ 如需有關使用`CPalette`，請參閱 <<c2> [ 圖形物件](../../mfc/graphic-objects.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,18 +109,18 @@ void AnimatePalette(
   
 ### <a name="parameters"></a>參數  
  *nStartIndex*  
- 指定要建立動畫的調色盤，第一個項目。  
+ 指定要建立動畫的調色盤中的第一個項目。  
   
  *nNumEntries*  
- 若要建立動畫調色盤中指定的項目數。  
+ 要建立動畫的調色盤中指定的項目數。  
   
  *lpPaletteColors*  
- 指向陣列的第一個成員[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目*nStartIndex*和*nNumEntries*。  
+ 指向陣列的第一個成員[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目*nStartIndex*並*nNumEntries*。  
   
 ### <a name="remarks"></a>備註  
- 當應用程式呼叫`AnimatePalette`，它並沒有要更新其工作區，因為 Windows 立即對應系統調色盤將新項目。  
+ 當應用程式呼叫`AnimatePalette`，它並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。  
   
- `AnimatePalette`函式只會變更的項目**PC_RESERVED**旗標設在對應**palPaletteEntry**隸屬[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構附加至`CPalette`物件。 請參閱**LOGPALETTE** Windows SDK 中針對此結構的詳細資訊。  
+ `AnimatePalette`函式只會變更 PC_RESERVED 旗標設定在對應的項目`palPaletteEntry`隸屬[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構附加至`CPalette`物件。 LOGPALETTE Windows SDK 中針對此結構的詳細資訊，請參閱。  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  建構 `CPalette` 物件。  
@@ -130,10 +130,10 @@ CPalette();
 ```  
   
 ### <a name="remarks"></a>備註  
- 物件有任何附加的調色盤，直到您呼叫`CreatePalette`將其中一個。  
+ 物件會有任何附加的調色盤，直到您呼叫`CreatePalette`將其中一個。  
   
 ##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
- 建立裝置內容的半色調調色盤。  
+ 建立裝置內容半色調調色盤。  
   
 ```  
 BOOL CreateHalftonePalette(CDC* pDC);
@@ -147,12 +147,12 @@ BOOL CreateHalftonePalette(CDC* pDC);
  如果函式成功則為非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 當裝置內容的縮放模式設定為應用程式應該建立半色調調色盤**半色調**。 傳回邏輯半色調調色盤[CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503)成員函式應該然後選取並放入裝置內容，才能實現[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[Stretchdibits 做](http://msdn.microsoft.com/library/windows/desktop/dd145121)呼叫函式。  
+ 當裝置內容的縮放模式設為 半色調，應用程式應該建立半色調調色盤。 傳回邏輯半色調調色盤[CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503)成員函式應該再選取和裝置內容，然後才到實現[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[Stretchdibits 做](http://msdn.microsoft.com/library/windows/desktop/dd145121)呼叫函式。  
   
- 請參閱 Windows SDK，如需詳細資訊，關於`CreateHalftonePalette`和**stretchdibits 做**。  
+ 請參閱 Windows SDK，如需詳細資訊，關於`CreateHalftonePalette`和`StretchDIBits`。  
   
 ##  <a name="createpalette"></a>  CPalette::CreatePalette  
- 初始化`CPalette`藉由建立 Windows 邏輯調色盤，並將它來連接物件`CPalette`物件。  
+ 初始化`CPalette`藉由建立 Windows 邏輯色板，並附加到物件`CPalette`物件。  
   
 ```  
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
@@ -160,13 +160,13 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>參數  
  *lpLogPalette*  
- 指向[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，其中包含邏輯的調色盤色彩的相關資訊。  
+ 指向[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，其中包含邏輯調色盤色彩的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 請參閱 Windows SDK，如需詳細資訊，關於**LOGPALETTE**結構。  
+ 請參閱 Windows SDK，如需詳細資訊，關於`LOGPALETTE`結構。  
   
 ##  <a name="fromhandle"></a>  CPalette::FromHandle  
  將指標傳回至`CPalette`物件控制代碼提供給 Windows 調色盤物件時。  
@@ -177,26 +177,26 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
   
 ### <a name="parameters"></a>參數  
  *hPalette*  
- Windows GDI 色彩調色盤的控制代碼。  
+ Windows GDI 調色盤控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CPalette`物件，如果成功，否則**NULL**。  
+ 指標`CPalette`如果成功，否則為 NULL 的物件。  
   
 ### <a name="remarks"></a>備註  
- 如果`CPalette`物件已經不附加到 Windows 調色盤，暫存`CPalette`物件會建立並附加。 此暫存`CPalette`僅直到下一次應用程式有其事件迴圈中的閒置時間，在這次所有暫存圖形已刪除物件，物件才有效。 換句話說，暫存物件只在一個視窗訊息的處理期間有效。  
+ 如果`CPalette`物件尚未附加至 Windows 調色盤，暫存`CPalette`建立物件並將其連結。 此暫存`CPalette`物件是否有效，直到下一次應用程式在其事件迴圈中有閒置的時間，在那所有暫存的圖形物件，會刪除只。 換句話說，暫存物件只在一個視窗訊息的處理期間有效。  
   
 ##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
- 呼叫此成員函式可擷取的物件中指定的邏輯色板的項目數目。  
+ 呼叫此成員函式，來擷取指定的邏輯調色盤中的項目數。  
   
 ```  
 int GetEntryCount();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 邏輯調色盤中的項目數。  
+ 在邏輯調色盤中的項目數。  
   
 ##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
- 邏輯調色盤最符合指定的色彩值中傳回的項目索引。  
+ 在最接近指定的色彩值的邏輯色板中傳回的項目索引。  
   
 ```  
 UINT GetNearestPaletteIndex(COLORREF crColor) const;  
@@ -207,10 +207,10 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
  指定要比對的色彩。  
   
 ### <a name="return-value"></a>傳回值  
- 邏輯調色盤中的項目索引。 項目包含最幾乎符合指定的色彩的色彩。  
+ 邏輯調色盤中的項目索引。 項目會包含最幾乎符合指定的色彩的色彩。  
   
 ##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
- 擷取調色盤中的項目邏輯色板的範圍。  
+ 擷取一組邏輯調色盤中的調色盤項目。  
   
 ```  
 UINT GetPaletteEntries(
@@ -221,34 +221,34 @@ UINT GetPaletteEntries(
   
 ### <a name="parameters"></a>參數  
  *nStartIndex*  
- 指定要擷取邏輯的調色盤中的第一個項目。  
+ 指定要擷取邏輯調色盤中的第一個項目。  
   
  *nNumEntries*  
- 要擷取邏輯的調色盤中指定的項目數。  
+ 要擷取邏輯調色盤中指定的項目數。  
   
  *lpPaletteColors*  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含所指定的數目，至少資料結構*nNumEntries*。  
+ 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。  
   
 ### <a name="return-value"></a>傳回值  
- 從邏輯色板; 擷取的項目數目如果函式失敗，，0。  
+ 擷取邏輯色板; 中的項目數目0，表示失敗的函式。  
   
-##  <a name="operator_hpalette"></a>  HPALETTE CPalette::operator  
- 使用此運算子，以取得附加的 Windows GDI 控制代碼的`CPalette`物件。  
+##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
+ 使用這個運算子來取得附加的 Windows GDI 控制代碼的`CPalette`物件。  
   
 ```  
 operator HPALETTE() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，Windows GDI 物件的控制代碼來表示`CPalette`物件; 否則**NULL**。  
+ 如果成功，Windows GDI 物件的控制代碼所表示`CPalette`物件; 否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 這位操作員便轉型運算子，可支援直接使用`HPALETTE`物件。  
+ 這位操作員便轉型運算子，可支援直接使用 HPALETTE 物件。  
   
- 如需使用 圖形物件的詳細資訊，請參閱文章[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- 變更附加到邏輯色板的大小`CPalette`物件所指定的項目數*nNumEntries*。  
+ 變更附加至邏輯色板的大小`CPalette`物件所指定項目數*nNumEntries*。  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
@@ -256,18 +256,18 @@ BOOL ResizePalette(UINT nNumEntries);
   
 ### <a name="parameters"></a>參數  
  *nNumEntries*  
- 已調整大小之後，調色盤中指定的項目數。  
+ 已調整大小之後，請在調色盤中指定的項目數。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已成功調整調色盤; 非零，否則便是 0。  
+ 非零值，如果已成功調整調色盤;否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果應用程式呼叫`ResizePalette`以減少大小的調色盤，剩餘大小經過調整的調色盤中的項目維持不變。 如果應用程式呼叫`ResizePalette`為加大調色盤，其他調色盤項目則設定為黑色 （紅色、 綠色和藍色值會是所有 0），以及所有其他項目的旗標都會設為 0。  
+ 如果應用程式呼叫`ResizePalette`以減少大小的調色盤，剩餘的已調整大小的調色盤中的項目不會變更。 如果應用程式呼叫`ResizePalette`放大調色盤，其他的調色盤項目設為黑色 （紅色、 綠色和藍色值均為 0），以及所有其他項目的旗標會設為 0。  
   
- 如需有關 Windows API `ResizePalette`，請參閱[ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) Windows SDK 中。  
+ 如需有關 Windows API `ResizePalette`，請參閱 < [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) Windows SDK 中。  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
- RGB 色彩值和旗標範圍內設定邏輯調色盤中的項目。  
+ 設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。  
   
 ```  
 UINT SetPaletteEntries(
@@ -278,21 +278,21 @@ UINT SetPaletteEntries(
   
 ### <a name="parameters"></a>參數  
  *nStartIndex*  
- 指定第一個項目設定邏輯的調色盤。  
+ 指定要設定的邏輯調色盤中的第一個項目。  
   
  *nNumEntries*  
- 設定邏輯調色盤中指定的項目數。  
+ 若要設定邏輯調色盤中指定的項目數。  
   
  *lpPaletteColors*  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含所指定的數目，至少資料結構*nNumEntries*。  
+ 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。  
   
 ### <a name="return-value"></a>傳回值  
- 設定邏輯調色盤; 中的項目數目如果函式失敗，，0。  
+ 設定邏輯調色盤; 中的項目數目0，表示失敗的函式。  
   
 ### <a name="remarks"></a>備註  
- 如果邏輯色板會放入裝置內容中時選取應用程式呼叫`SetPaletteEntries`，變更將不會生效，直到應用程式呼叫[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。  
+ 當應用程式呼叫時，如果要邏輯的調色盤選取放入裝置內容`SetPaletteEntries`，變更將不會生效，直到應用程式會呼叫[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。  
   
- 如需有關 Windows 結構**PALETTEENTRY**，請參閱[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) Windows SDK 中。  
+ 如需有關 Windows 結構`PALETTEENTRY`，請參閱 < [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 DIBLOOK](../../visual-cpp-samples.md)   

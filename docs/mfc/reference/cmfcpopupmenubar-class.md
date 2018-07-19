@@ -1,5 +1,5 @@
 ---
-title: CMFCPopupMenuBar 類別 |Microsoft 文件
+title: CMFCPopupMenuBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037750"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853630"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 類別
 內嵌於快顯功能表的功能表列。  
@@ -78,34 +78,34 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|立即重新計算顯示窗格的配置。 (覆寫[CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)。)|  
-|[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|從指定的功能表資源載入快顯功能表項目。|  
-|[CMFCPopupMenuBar::CloseDelayedSubMenu](#closedelayedsubmenu)|延遲的快顯功能表按鈕會關閉。|  
-|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|建置的快顯功能表按鈕的功能表。|  
+|[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|立即重新計算 窗格的配置。 (覆寫[CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)。)|  
+|[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|從指定的功能表資源載入的快顯功能表項目。|  
+|[CMFCPopupMenuBar::CloseDelayedSubMenu](#closedelayedsubmenu)|關閉延遲的快顯功能表按鈕。|  
+|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|建置從快顯功能表按鈕的功能表。|  
 |[CMFCPopupMenuBar::FindDestintationToolBar](#finddestintationtoolbar)|尋找工具列指定的點的所在位置。|  
 |[CMFCPopupMenuBar::GetCurrentMenuImageSize](#getcurrentmenuimagesize)|表示功能表按鈕影像的大小。|  
-|[CMFCPopupMenuBar::GetDefaultMenuId](#getdefaultmenuid)|傳回預設的功能表項目的識別項。|  
+|[CMFCPopupMenuBar::GetDefaultMenuId](#getdefaultmenuid)|傳回預設的功能表項目的識別碼。|  
 |[CMFCPopupMenuBar::GetLastCommandIndex](#getlastcommandindex)|取得最近叫用的功能表命令的索引。|  
 |[CMFCPopupMenuBar::GetOffset](#getoffset)|取得快顯功能表列的資料列位移。|  
 |[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|匯入快顯功能表按鈕，從指定的功能表。|  
-|[CMFCPopupMenuBar::IsDropDownListMode](#isdropdownlistmode)|指出快顯功能表列是否為下拉式選單模式。|  
-|[CMFCPopupMenuBar::IsPaletteMode](#ispalettemode)|指出快顯功能表列是否為調色盤模式。|  
-|[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|指出這是否為功能區面板 (`FALSE`依預設)。|  
-|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|指出這是否以一般模式的功能區面板 (`FALSE`依預設)。|  
-|[CMFCPopupMenuBar::LoadFromHash](#loadfromhash)|載入保存的功能表。|  
-|[CMFCPopupMenuBar::RestoreDelayedSubMenu](#restoredelayedsubmenu)|還原延遲的功能表按鈕關閉快顯功能表列。|  
+|[CMFCPopupMenuBar::IsDropDownListMode](#isdropdownlistmode)|指出是否在下拉式清單清單模式快顯功能表列。|  
+|[CMFCPopupMenuBar::IsPaletteMode](#ispalettemode)|表示快顯功能表列是否為調色盤模式。|  
+|[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|指出這是否為功能區面板 (預設為 FALSE)。|  
+|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|指出這是否為功能區面板，以一般模式 (預設為 FALSE)。|  
+|[CMFCPopupMenuBar::LoadFromHash](#loadfromhash)|載入已封存的功能表。|  
+|[CMFCPopupMenuBar::RestoreDelayedSubMenu](#restoredelayedsubmenu)|還原延遲的功能表按鈕來關閉快顯功能表列。|  
 |[CMFCPopupMenuBar::SetButtonStyle](#setbuttonstyle)|設定指定索引處的工具列按鈕的樣式。 (覆寫[CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle)。)|  
-|[CMFCPopupMenuBar::SetOffset](#setoffset)|設定快顯功能表列的資料列位移。|  
+|[CMFCPopupMenuBar::SetOffset](#setoffset)|設定快顯功能表列的資料列的位移。|  
 |[CMFCPopupMenuBar::StartPopupMenuTimer](#startpopupmenutimer)|啟動指定的延遲快顯功能表按鈕的計時器。|  
   
 ### <a name="data-members"></a>資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|指定應用程式有 Windows XP 外觀時，是否會顯示灰色提要欄位。|  
+|[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|指定應用程式具有 Windows XP 外觀時，是否會顯示灰色提要欄位。|  
   
 ## <a name="remarks"></a>備註  
- `CMFCPopupMenuBar`建立在相同的時間，做為[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)和內嵌在它之內。 `CMFCPopupMenuBar`涵蓋整個工作區`CMFCPopupMenu`物件。 它支援鍵盤和滑鼠輸入。 它也會進行通訊的輸入要`CMFCPopupMenu`和最上層框架視窗。  
+ `CMFCPopupMenuBar`建立與同時[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)和內嵌在其中。 `CMFCPopupMenuBar`涵蓋整個工作區`CMFCPopupMenu`物件。 它支援鍵盤和滑鼠輸入。 它也會進行通訊的輸入要`CMFCPopupMenu`和最上層框架視窗。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何初始化`CMFCPopupMenuBar`物件從`CMFCPopupMenu`物件。 這段程式碼片段是 [Draw 用戶端範例](../../visual-cpp-samples.md)的一部分。  
@@ -141,12 +141,12 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
   
 ### <a name="parameters"></a>參數  
  [in]*bRecalcLayout*  
- `TRUE` 若要自動重新計算配置的快顯功能表列 窗格中。否則， `FALSE`。  
+ 自動重新計算的快顯功能表列 窗格中，版面配置，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="buildorigitems"></a>  CMFCPopupMenuBar::BuildOrigItems  
- 從指定的功能表資源載入快顯功能表項目。  
+ 從指定的功能表資源載入的快顯功能表項目。  
   
 ```  
 BOOL BuildOrigItems(UINT uiMenuResID);
@@ -157,7 +157,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
  指定要載入功能表資源的功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果成功或`FALSE`如果不是。  
+ 如果成功則為 TRUE 或 FALSE，否則會傳回。  
   
 ### <a name="remarks"></a>備註  
   
@@ -171,14 +171,14 @@ virtual void CloseDelayedSubMenu();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu  
- 建置的快顯功能表按鈕的功能表。  
+ 建置從快顯功能表按鈕的功能表。  
   
 ```  
 virtual HMENU ExportToMenu() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回新功能表的控制代碼。  
+ 傳回新的功能表的控制代碼。  
   
 ### <a name="remarks"></a>備註  
   
@@ -194,7 +194,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
  在螢幕上的點。  
   
 ### <a name="return-value"></a>傳回值  
- 將控制代碼傳回至工具列點所在的位置，如果 therei 的話，或`NULL`如果不是。  
+ 傳回的控制代碼工具列點所在的位置，如果有的話，或如果不為 NULL。  
   
 ### <a name="remarks"></a>備註  
   
@@ -211,14 +211,14 @@ virtual CSize GetCurrentMenuImageSize() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getdefaultmenuid"></a>  CMFCPopupMenuBar::GetDefaultMenuId  
- 傳回預設的功能表項目的識別項。  
+ 傳回預設的功能表項目的識別碼。  
   
 ```  
 UINT GetDefaultMenuId() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回快顯功能表列中的預設功能表項目的識別碼。  
+ 在快顯功能表列中會傳回預設的功能表項目的識別碼。  
   
 ### <a name="remarks"></a>備註  
   
@@ -242,10 +242,10 @@ int GetOffset() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回快顯功能表列的資料列位移。  
+ 傳回快顯功能表列的資料列的位移。  
   
 ### <a name="remarks"></a>備註  
- 這個值會設定使用[CMFCPopupMenuBar::SetOffset](#setoffset)。  
+ 此值會設定使用[CMFCPopupMenuBar::SetOffset](#setoffset)。  
   
 ##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu  
  匯入快顯功能表按鈕，從指定的功能表。  
@@ -258,67 +258,67 @@ virtual BOOL ImportFromMenu(
   
 ### <a name="parameters"></a>參數  
  [in]*hMenu*  
- 要從中匯入的快顯功能表按鈕功能表。  
+ 要從中匯入快顯功能表按鈕功能表。  
   
  [in]*bShowAllCommands*  
- `TRUE` 如果功能表上的所有命令匯入，或`FALSE`如果很少使用的項目可能會隱藏起來。  
+ 如果所有功能表命令會匯入，或如果很少使用的項目可能會隱藏則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`功能表按鈕已順利匯入從功能表中，如果或`FALSE`如果不是。  
+ 如果功能表按鈕已成功匯入從功能表中或 false 不，傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode  
- 指出快顯功能表列是否為下拉式選單模式。  
+ 指出是否在下拉式清單清單模式快顯功能表列。  
   
 ```  
 BOOL IsDropDownListMode() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`快顯功能表列在下拉式清單清單模式中，如果或`FALSE`如果不是。  
+ 如果快顯功能表列不是在下拉式清單清單模式中或 false，則傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode  
- 指出快顯功能表列是否為調色盤模式。  
+ 表示快顯功能表列是否為調色盤模式。  
   
 ```  
 BOOL IsPaletteMode() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果調色盤模式已啟用，或`FALSE`如果不是。  
+ 如果調色盤模式已啟用，則為 TRUE 或 FALSE，否則會傳回。  
   
 ### <a name="remarks"></a>備註  
- 當功能表列設定為調色盤模式時，功能表項目出現在多個資料行以及有限的數目的資料列。  
+ 當功能表列設定為調色盤模式時，功能表項目會出現在多個資料行和資料列數量有限。  
   
 ##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel  
- 指出這是否為功能區面板 (`FALSE`依預設)。  
+ 指出這是否為功能區面板 (預設為 FALSE)。  
   
 ```  
 virtual BOOL IsRibbonPanel() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`FALSE`根據預設值，指出這不在功能區面板。  
+ 根據預設值，指出這不功能區面板，會傳回 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
- 指出這是否以一般模式的功能區面板 (`FALSE`依預設)。  
+ 指出這是否為功能區面板，以一般模式 (預設為 FALSE)。  
   
 ```  
 virtual BOOL IsRibbonPanelInRegularMode() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`FALSE`根據預設，表示這不在功能區面板一般模式。  
+ 根據預設值，指出這不功能區面板以一般模式，會傳回 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash  
- 載入保存的功能表。  
+ 載入已封存的功能表。  
   
 ```  
 BOOL LoadFromHash(HMENU hMenu);
@@ -326,27 +326,27 @@ BOOL LoadFromHash(HMENU hMenu);
   
 ### <a name="parameters"></a>參數  
  [in]*hMenu*  
- 載入 [封存] 功能表的控制代碼。  
+ 若要載入 [封存] 功能表控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果成功，載入功能表或`FALSE`如果不是。  
+ 如果功能表是載入成功，或如果沒有，則為 FALSE，則傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
- 表示包含 Windows XP 外觀時，您的應用程式是否有灰色提要欄位的布林參數。  
+ 布林值參數，指出具有 Windows XP 外觀時，您的應用程式是否有灰色提要欄位。  
   
 ```  
 BOOL m_bDisableSideBarInXPMode;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果此成員變數會設為`FALSE`您的應用程式和 Windows XP 外觀，架構應用程式中繪製灰色提要欄位。  
+ 如果此成員變數設定為 FALSE，而且您的應用程式具有 Windows XP 外觀，架構會在您的應用程式中繪製灰色提要欄位。  
   
- 預設值是 `FALSE`。  
+ 預設值為 FALSE。  
   
 ##  <a name="restoredelayedsubmenu"></a>  CMFCPopupMenuBar::RestoreDelayedSubMenu  
- 還原延遲的功能表按鈕關閉快顯功能表列。  
+ 還原延遲的功能表按鈕來關閉快顯功能表列。  
   
 ```  
 virtual void RestoreDelayedSubMenu();
@@ -365,7 +365,7 @@ virtual void SetButtonStyle(
   
 ### <a name="parameters"></a>參數  
  [in]*nIndex*  
- 工具列按鈕的樣式是要設定的以零為起始的索引。  
+ 工具列按鈕的樣式是設為起始的索引。  
   
  [in]*nStyle*  
  按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
@@ -373,7 +373,7 @@ virtual void SetButtonStyle(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset  
- 設定快顯功能表列的資料列位移。  
+ 設定快顯功能表列的資料列的位移。  
   
 ```  
 void SetOffset(int iOffset);
@@ -396,10 +396,10 @@ void StartPopupMenuTimer(
   
 ### <a name="parameters"></a>參數  
  [in]*pMenuButton*  
- 要設定延遲計時器的功能表按鈕的指標。  
+ 要設定延遲計時器的 [功能表] 按鈕的指標。  
   
  [in]*nDelayFactor*  
- 延遲因素，等於至少一個，乘以標準功能表的延遲時間 （通常之間半秒和 5 秒）。  
+ 延遲因素，等於至少一個要乘以的標準功能表延遲時間 （通常在下半秒，且五秒）。  
   
 ### <a name="remarks"></a>備註  
   

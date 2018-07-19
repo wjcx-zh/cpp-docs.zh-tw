@@ -1,5 +1,5 @@
 ---
-title: CMFCMenuButton 類別 |Microsoft 文件
+title: CMFCMenuButton 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040164"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849785"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 類別
 顯示快顯功能表和報告使用者功能表選取的按鈕。  
@@ -60,26 +60,26 @@ class CMFCMenuButton : public CMFCButton
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|要轉譯的視窗訊息，再分派這些架構呼叫。 (覆寫 `CMFCButton::PreTranslateMessage`。)|  
-|[CMFCMenuButton::SizeToContent](#sizetocontent)|根據其文字和影像的大小 按鈕的大小變更。|  
+|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|由架構呼叫以轉譯視窗訊息，再將它們分派。 (覆寫 `CMFCButton::PreTranslateMessage`。)|  
+|[CMFCMenuButton::SizeToContent](#sizetocontent)|變更其文字和影像的大小根據按鈕大小。|  
   
 ### <a name="data-members"></a>資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|指定是否要顯示預設的系統快顯功能表，或者使用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。|  
+|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|指定是否要顯示的預設系統的快顯功能表，或使用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|指定是否快顯功能表會出現下方或右邊的按鈕。|  
-|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|指定功能表按鈕是否要變更其狀態之後，使用者放開按鈕。|  
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|附加的 Windows 功能表的控制代碼。|  
-|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|識別項，表示哪些項目從快顯功能表選取的使用者。|  
+|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|指定之後，使用者放開按鈕的功能表按鈕是否變更其狀態。|  
+|[CMFCMenuButton::m_hMenu](#m_hmenu)|附加的 Windows 功能表控制代碼。|  
+|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|識別項，表示哪一個項目從快顯功能表中選取使用者。|  
   
 ## <a name="remarks"></a>備註  
- `CMFCMenuButton`類別衍生自[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)依次，衍生自[CButton 類別](../../mfc/reference/cbutton-class.md)。 因此，您可以使用`CMFCMenuButton`在您的程式碼會使用的相同方式`CButton`。  
+ `CMFCMenuButton`類別衍生自[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)反而，衍生自[CButton 類別](../../mfc/reference/cbutton-class.md)。 因此，您可以使用`CMFCMenuButton`在您的程式碼會使用的相同方式`CButton`。  
   
- 當您建立`CMFCMenuButton`，您必須傳遞給相關聯的快顯功能表中的控制代碼。 接下來，呼叫此函式`CMFCMenuButton::SizeToContent`。 `CMFCMenuButton::SizeToContent` 檢查足以包含指向快顯視窗出現的位置-也就是下或右邊的按鈕位置箭號按鈕的大小。  
+ 當您建立`CMFCMenuButton`，您必須傳遞控制代碼相關聯的快顯功能表。 接下來，呼叫此函式`CMFCMenuButton::SizeToContent`。 `CMFCMenuButton::SizeToContent` 檢查足以包含指向的位置的快顯視窗中出現的位置-也就是下或右邊的按鈕箭號按鈕的大小。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何設定附加至按鈕的功能表的控制代碼、 調整大小的按鈕，根據其文字和影像的大小，以及設定架構所顯示的快顯功能表。 此程式碼片段是部分[新控制項範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何設定附加至按鈕的功能表的控制代碼、 調整大小的按鈕，根據其文字和影像的大小，以及設定此架構會顯示快顯功能表。 此程式碼片段是一部分[新的控制項範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]  
@@ -108,36 +108,36 @@ CMFCMenuButton();
 ```  
   
 ##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
- 架構會顯示一個布林成員變數，指出哪一個快顯功能表。  
+ 一個布林成員變數，指出哪一個快顯功能表，架構會顯示。  
   
 ```  
 BOOL m_bOSMenu;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果`m_bOSMenu`是`TRUE`，架構會呼叫繼承`TrackPopupMenu`此物件的方法。 否則，架構會呼叫[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。  
+ 如果`m_bOSMenu`為 TRUE 時，架構會呼叫繼承`TrackPopupMenu`此物件的方法。 否則，架構會呼叫[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。  
   
 ##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
- 布林成員變數，指出快顯功能表的位置。  
+ 布林值的成員變數，指出快顯功能表的位置。  
   
 ```  
 BOOL m_bRightArrow;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 當使用者按下功能表按鈕時，應用程式會顯示快顯功能表。 架構會顯示快顯功能表在按鈕下方或右邊的按鈕。 此按鈕還有一個小箭號，指出快顯功能表上出現的位置。 如果`m_bRightArrow`是`TRUE`，架構會顯示快顯功能表按鈕的右邊。 否則，它會顯示在按鈕下方的快顯功能表。  
+ 當使用者按下功能表按鈕時，應用程式會顯示快顯功能表。 此架構會顯示快顯功能表程式 按鈕或使用右邊的按鈕。 此按鈕還有一個小箭號，指出快顯功能表會出現的位置。 如果`m_bRightArrow`為 TRUE 時，架構會顯示快顯功能表按鈕的右邊。 否則，它會顯示快顯功能表 按鈕下方。  
   
 ##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
- 雖然使用者會從快顯功能表選取項目，則按下布林成員變數，指出是否顯示功能表按鈕。  
+ 布林值的成員變數，指出是否要顯示的功能表按鈕按下時使用者會從快顯功能表選取項目。  
   
 ```  
 BOOL m_bStayPressed;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果`m_bStayPressed`成員是`FALSE`，功能表不會不會變成按下按鈕時使用者按下按鈕。 在此情況下，架構會顯示快顯的功能表。  
+ 如果`m_bStayPressed`成員設為 FALSE，功能表不會不會按下按鈕時使用者按下按鈕。 在此情況下，架構會顯示快顯功能表。  
   
- 如果`m_bStayPressed`成員是`TRUE`，當使用者按一下按鈕時，會變成已按下功能表按鈕。 它會直到已按下保持使用者關閉快顯功能表上，可以在選取範圍，或取消後。  
+ 如果`m_bStayPressed`成員為 TRUE，當使用者按一下按鈕時，會變成已按下功能表按鈕。 它之後會保持已按下，直到使用者關閉快顯功能表上，藉由確定選取範圍，或取消。  
   
 ##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
  要附加的功能表的控制代碼。  
@@ -147,20 +147,20 @@ HMENU m_hMenu;
 ```  
   
 ### <a name="remarks"></a>備註  
- 架構會顯示由這個成員變數，當使用者按一下功能表按鈕的功能表。  
+ 架構會顯示使用者按下功能表按鈕時，此成員變數所指定的功能表。  
   
 ##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
- 整數，表示哪些項目會從快顯功能表選取使用者。  
+ 整數，指出哪一個項目從快顯功能表中選取使用者。  
   
 ```  
 int m_nMenuResult;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個成員變數的值為零，如果使用者取消功能表而不在選取範圍，或發生錯誤。  
+ 此成員變數的值為零，如果使用者取消 [] 功能表，而不進行選取，或發生錯誤。  
   
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
- 要轉譯的視窗訊息，再分派這些架構呼叫。  
+ 由架構呼叫以轉譯視窗訊息，再將它們分派。  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -171,7 +171,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
  指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
- 如果訊息已轉譯，而且不應該分派; 非零，如果訊息不翻譯，而且應該分派是 0。  
+ 非零值，如果訊息已轉譯，而且不應該分派;如果訊息未被翻譯，因此應該分派，0。  
   
 ### <a name="remarks"></a>備註  
   
@@ -187,12 +187,12 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
  布林值參數，指出是否此方法會調整大小的按鈕。  
   
 ### <a name="return-value"></a>傳回值  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定新按鈕的大小。  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定按鈕的新大小。  
   
 ### <a name="remarks"></a>備註  
- 如果您呼叫此函式和*bCalcOnly*是`TRUE`，`SizeToContent`會計算按鈕的新大小。  
+ 如果您呼叫此函式和*bCalcOnly*為 TRUE，`SizeToContent`會計算按鈕的新大小。  
   
- 新按鈕的大小計算為符合按鈕文字、 影像和箭號。 架構也會加入 10 個像素水平的邊緣和垂直邊緣 5 像素的預先定義的邊界。  
+ 新按鈕的大小會計算成按鈕文字、 影像和箭號。 此架構也會加入預先定義的 10 個像素水平的邊緣和垂直邊緣的 5 個像素的邊界。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

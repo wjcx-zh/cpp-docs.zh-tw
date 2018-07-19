@@ -1,5 +1,5 @@
 ---
-title: CMFCHeaderCtrl 類別 |Microsoft 文件
+title: CMFCHeaderCtrl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037657"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850078"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 `CMFCHeaderCtrl`類別支援排序標題控制項中的多個資料行。  
@@ -70,12 +70,12 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 |名稱|描述|  
 |----------|-----------------|  
 |[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|啟用或停用*多個資料行排序*目前標頭控制項模式。|  
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|指出資料行未排序，或以遞增或遞減順序排序。|  
-|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|擷取的第一個標題控制項中排序資料行以零為起始的索引。|  
-|`CMFCHeaderCtrl::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|指出資料行並未排序，或以遞增或遞減順序排序。|  
+|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|擷取的第一個排序的資料行標題控制項中以零為起始的索引。|  
+|`CMFCHeaderCtrl::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
 |[CMFCHeaderCtrl::IsAscending](#isascending)|指出是否以遞增順序排序標題控制項中的任何資料行。|  
 |[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|指出對話方塊是否包含目前標頭控制項的父視窗。|  
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|指出是否在目前的標頭控制項*多個資料行排序*模式。|  
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|指出目前的標頭控制項處於*多個資料行排序*模式。|  
 |[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|排序資料行清單中移除指定的資料行。|  
 |[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|設定控制項中的指定資料行的排序次序。|  
   
@@ -83,9 +83,9 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|由架構呼叫以繪製的標頭控制項的資料行。|  
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|由架構呼叫以繪製排序箭號。|  
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|標頭控制資料行的背景填滿架構呼叫。|  
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|由架構呼叫以繪製標頭控制項資料行。|  
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|由架構呼叫以繪製的排序箭號。|  
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|由架構呼叫以填滿標頭控制項資料行的背景。|  
   
 ## <a name="example"></a>範例  
  下列範例示範如何建構的物件`CMFCHeaderCtrl`類別，以及如何啟用*多個資料行排序*目前標頭控制項模式。  
@@ -93,7 +93,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
  [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
   
 ## <a name="remarks"></a>備註  
- `CMFCHeaderCtrl`類別繪製排序箭號，表示已排序的資料行的標頭控制項的資料行上。 使用*多個資料行排序*如果一組父系清單控制項中的資料行模式 ( [CMFCListCtrl 類別](../../mfc/reference/cmfclistctrl-class.md)) 可以在同一時間排序。  
+ `CMFCHeaderCtrl`類別來表示已排序資料行的標頭控制項資料行上繪製的排序箭號。 使用*多個資料行排序*模式，如果一組父清單控制項中的資料行 ( [CMFCListCtrl 類別](../../mfc/reference/cmfclistctrl-class.md)) 可以在相同的時間排序。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,17 +117,17 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個建構函式會初始化為指定的值的下列成員變數：  
+ 這個建構函式會初始化為指定值的下列成員變數：  
   
 |成員變數|值|  
 |---------------------|-----------|  
-|`m_bIsMousePressed`|`FALSE`|  
-|`m_bMultipleSort`|`FALSE`|  
-|`m_bAscending`|`TRUE`|  
+|`m_bIsMousePressed`|false|  
+|`m_bMultipleSort`|false|  
+|`m_bAscending`|true|  
 |`m_nHighlightedItem`|-1|  
-|`m_bTracked`|`FALSE`|  
-|`m_bIsDlgControl`|`FALSE`|  
-|`m_hFont`|`NULL`|  
+|`m_bTracked`|false|  
+|`m_bIsDlgControl`|FALSE|  
+|`m_hFont`|NULL|  
   
 ##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
  啟用或停用*多個資料行排序*目前標頭控制項模式。  
@@ -138,7 +138,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bEnable*  
- `TRUE` 若要啟用多個資料行排序模式;`FALSE`停用多個資料行排序模式，以及從已排序的資料行的清單中移除任何資料行。 預設值是 `TRUE`。  
+ 若要啟用多個資料行排序模式;，則為 TRUE若要停用多個資料行排序模式，並移除已排序的資料行清單中的任何資料行，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  若要啟用或停用多個資料行排序模式中使用這個方法。 兩個或多個資料行可以參與排序標題控制項是否在多個資料行排序模式。  
@@ -152,10 +152,10 @@ int GetColumnState(int iColumn) const;
   
 ### <a name="parameters"></a>參數  
  [in]*iColumn*  
- 在資料行以零為起始的索引。  
+ 資料行的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 值，表示指定的資料行的排序狀態。 下表列出可能的值：  
+ 值，這個值表示指定的資料行的排序狀態。 下表列出可能的值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -166,17 +166,17 @@ int GetColumnState(int iColumn) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
- 擷取的第一個標題控制項中排序資料行以零為起始的索引。  
+ 擷取的第一個排序的資料行標題控制項中以零為起始的索引。  
   
 ```  
 int GetSortColumn() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 排序的資料行，則為-1 位於任何已排序的資料行的索引。  
+ 排序的資料行或-1，如果不找到任何排序的資料行的索引。  
   
 ### <a name="remarks"></a>備註  
- 如果此標題控制項處於*多個資料行排序*模式，而且您編譯應用程式在偵錯模式中，這個方法會判斷提示，提示您使用[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)方法改為。 如果此標題控制項在多個資料行排序模式，且編譯正式版本的模式中的應用程式，這個方法會傳回-1。  
+ 如果標頭控制項處於*多個資料行排序*模式，而且您編譯應用程式在偵錯模式中，這個方法會判斷提示，並提示您使用[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)方法改為。 如果此標題控制項是在多個資料行排序模式編譯正式版本的模式中的應用程式，則這個方法會傳回-1。  
   
 ##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
  指出是否以遞增順序排序標題控制項中的任何資料行。  
@@ -186,10 +186,10 @@ BOOL IsAscending() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果標題控制項中的任何資料行以遞增順序排序否則， `FALSE`。  
+ 如果標題控制項中的任何資料行以遞增順序排序，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法傳回的值用於標頭控制項項目中顯示適當的排序箭號。 使用[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)設定排序順序的方法。  
+ 這個方法傳回的值用來顯示標頭的控制項項目上的適當的排序箭號。 使用[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)方法來設定排序順序。  
   
 ##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
  指出對話方塊是否包含目前標頭控制項的父視窗。  
@@ -199,23 +199,23 @@ BOOL IsDialogControl() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果目前的標頭控制項的父視窗對話方塊。否則， `FALSE`。  
+ 如果目前的標頭控制項的父視窗的對話方塊中，則為 TRUE否則為 FALSE。  
   
 ##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
- 指出是否在目前的標頭控制項*多個資料行排序*模式。  
+ 指出目前的標頭控制項處於*多個資料行排序*模式。  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已啟用多個資料行排序模式;否則， `FALSE`。  
+ 如果已啟用多個資料行排序模式，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)方法啟用或停用多個資料行排序模式。 兩個或多個資料行可以參與排序標題控制項是否在多個資料行排序模式。  
+ 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)方法可啟用或停用多個資料行排序模式。 兩個或多個資料行可以參與排序標題控制項是否在多個資料行排序模式。  
   
 ##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
- 由架構呼叫以繪製的標頭控制項的資料行。  
+ 由架構呼叫以繪製標頭控制項資料行。  
   
 ```  
 virtual void OnDrawItem(
@@ -237,13 +237,13 @@ virtual void OnDrawItem(
  要繪製之項目的週框。  
   
  [in]*bIsPressed*  
- `TRUE` 若要在按下狀態; 繪製項目否則， `FALSE`。  
+ TRUE 表示繪製項目處於已按下狀態;否則為 FALSE。  
   
  [in]*bIsHighlighted*  
- `TRUE` 若要繪製項目中反白顯示的狀態。否則， `FALSE`。  
+ TRUE 表示繪製反白顯示的狀態; 中的項目否則為 FALSE。  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
- 由架構呼叫以繪製排序箭號。  
+ 由架構呼叫以繪製的排序箭號。  
   
 ```  
 virtual void OnDrawSortArrow(
@@ -256,10 +256,10 @@ virtual void OnDrawSortArrow(
  裝置內容的指標。  
   
  [in]*rectArrow*  
- 排序箭號的週框。  
+ 週框的排序箭號。  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
- 標頭控制資料行的背景填滿架構呼叫。  
+ 由架構呼叫以填滿標頭控制項資料行的背景。  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
@@ -280,7 +280,7 @@ void RemoveSortColumn(int iColumn);
   
 ### <a name="parameters"></a>參數  
  [in]*iColumn*  
- 若要移除的資料行以零為起始的索引。  
+ 要移除的資料行之以零起始的索引。  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  設定控制項中的指定資料行的排序次序。  
@@ -294,22 +294,22 @@ void SetSortColumn(
   
 ### <a name="parameters"></a>參數  
  [in]*iColumn*  
- 標頭控制項的資料行以零為起始的索引。 如果這個參數小於零，則這個方法會移除所有資料行的排序資料行清單中。  
+ 標頭控制項資料行之以零起始的索引。 如果此參數小於零，則這個方法會移除所有資料行的排序資料行清單中。  
   
  [in]*bAscending*  
- 指定資料行的排序次序， *iColumn*參數指定。 `TRUE` 若要設定遞增的順序。`FALSE`設遞減的順序。 預設值是 `TRUE`。  
+ 指定資料行的排序次序所*iColumn*參數指定。 若要設定遞增順序，則為 TRUE若要設定遞減排序，則為 FALSE。 預設值為 TRUE。  
   
  [in]*bAdd*  
- `TRUE` 若要設定資料行的排序次序*iColumn*參數指定。  
+ True，以設定資料行的排序次序*iColumn*參數指定。  
   
- 如果目前的標頭控制項在*多個資料行排序*模式中，這個方法會將指定的資料行加入至排序資料行的清單。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)設定多個資料行排序模式。  
+ 如果目前的標頭控制項處於*多個資料行排序*模式中，這個方法會將排序資料行清單中的指定資料行。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)來設定多個資料行排序模式。  
   
- 如果未設定多個資料行排序模式，而且這個方法會編譯偵錯模式中，這個方法會判斷提示。 如果未設定多個資料行排序模式，且這個方法在零售模式中編譯，這個方法會先移除所有資料行排序資料行清單，並將其指定之資料行加入清單。  
+ 如果未設定多個資料行排序模式，而且這個方法在偵錯模式中編譯，此方法會判斷提示。 如果未設定多個資料行排序模式，這個方法在零售模式中編譯，這個方法會先排序資料行 清單中移除所有資料行，然後將指定的資料行新增至清單。  
   
- `FALSE` 為第一個排序資料行清單中移除所有資料行，然後將指定的資料行加入至清單。 預設值是 `FALSE`。  
+ 為 FALSE，則第一個排序資料行清單中移除所有資料行，然後再加入至清單的 指定資料行。 預設值為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 若要設定資料行的排序順序中使用這個方法。 如有必要，這個方法會加入資料行的排序資料行清單。 標題控制項繪製排序箭號，指向向上或向下使用的排序順序。  
+ 這個方法可用於設定資料行的排序次序。 如有必要，這個方法會將資料行的排序資料行清單。 標題控制項使用的排序順序，來繪製點向上或向下的排序箭號。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

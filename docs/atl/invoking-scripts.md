@@ -1,5 +1,5 @@
 ---
-title: 叫用指令碼 (ATL) |Microsoft 文件
+title: 叫用指令碼 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d11b86b2b7cf17ef90ab701b06c6f31b272691
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e5bc5572a88f3df94811c3628333c8697a539b2
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362267"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849365"
 ---
 # <a name="invoking-scripts"></a>叫用指令碼
-[使用可置換的參數 （登錄器的前置處理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)討論取代對應，會提及的註冊機構方法**AddReplacement**。 在註冊機構有八個特定的指令碼之後，其他方法下表, 描述了所有。  
+[使用可置換的參數 （登錄器的前置處理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)討論替代對應，提及的註冊機構方法**AddReplacement**。 註冊機構都有八個其他特定指令碼的方法，並在下表描述了所有。  
   
 |方法|語法/描述|  
 |------------|-------------------------|  
-|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **，UINT** `nID` **，LPCOLESTR** `szType` **);** <br /><br /> 登錄模組資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 `nID` 和`szType`分別包含資源的識別碼和型別。|  
-|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **，UINT** `nID` **，LPCOLESTR** `szType` **);** <br /><br /> 取消註冊模組資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 `nID` 和`szType`分別包含資源的識別碼和型別。|  
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **，LPCOLESTR***szID* **，LPCOLESTR** `szType`**);** <br /><br /> 登錄模組資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*和`szType`分別包含資源的字串識別項和類型。|  
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **，LPCOLESTR***szID* **，LPCOLESTR** `szType` **);** <br /><br /> 取消註冊模組資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*和`szType`分別包含資源的字串識別項和類型。|  
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);** <br /><br /> 登錄的指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|  
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);** <br /><br /> 取消註冊的指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|  
-|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***資料***);** <br /><br /> 在字串中登錄的指令碼。 *資料*包含指令碼本身。|  
-|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***資料***);** <br /><br /> 取消註冊在字串中的指令碼。 *資料*包含指令碼本身。|  
+|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***resFileName* **，UINT** `nID` **，LPCOLESTR** `szType` **);** <br /><br /> 登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *nID*並*szType*分別包含資源的識別碼和類型。|  
+|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***resFileName* **，UINT** `nID` **，LPCOLESTR** `szType` **);** <br /><br /> 取消登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *nID*並*szType*分別包含資源的識別碼和類型。|  
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **，LPCOLESTR***szID* **，LPCOLESTR** `szType`**);** <br /><br /> 登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*並*szType*分別包含資源的字串識別項和型別。|  
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **，LPCOLESTR***szID* **，LPCOLESTR** `szType` **);** <br /><br /> 取消登錄模組的資源中包含的指令碼。 *resFileName*表示模組本身的 UNC 路徑。 *szID*並*szType*分別包含資源的字串識別項和型別。|  
+|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***檔名***);** <br /><br /> 註冊指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|  
+|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***檔名***);** <br /><br /> 取消註冊的指令碼檔案中。 *檔名*是包含 （或） 的資源指令碼檔案的 UNC 路徑。|  
+|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***資料***);** <br /><br /> 註冊指令碼字串中。 *資料*包含指令碼本身。|  
+|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***資料***);** <br /><br /> 取消註冊的指令碼中的字串。 *資料*包含指令碼本身。|  
   
- **ResourceRegisterSz**和**ResourceUnregisterSz**，類似於**ResourceRegister**和**ResourceUnregister**，但可讓您指定的字串識別項。  
+ **ResourceRegisterSz**並**ResourceUnregisterSz**，類似於**ResourceRegister**並**ResourceUnregister**，但可讓您指定的字串識別項。  
   
- 方法**FileRegister**和**FileUnregister**會很有用，如果您不想在資源指令碼，或您想要在其專屬檔案的指令碼。 方法**StringRegister**和**StringUnregister**讓.rgs 檔案儲存在動態配置的字串。  
+ 方法**FileRegister**並**FileUnregister**如果您不想在資源中的指令碼，或如果您想要自己的檔案中的指令碼是很實用。 方法**StringRegister**並**StringUnregister**讓.rgs 檔案儲存在動態配置的字串。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立登錄器指令碼](../atl/creating-registrar-scripts.md)

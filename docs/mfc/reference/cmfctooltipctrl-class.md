@@ -1,5 +1,5 @@
 ---
-title: CMFCToolTipCtrl 類別 |Microsoft 文件
+title: CMFCToolTipCtrl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 094aa35d985d51019254bd4478ffbc8c534854a9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042065"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849535"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 類別
 根據 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)的擴充工具提示實作。 根據 `CMFCToolTipCtrl` 類別的工具提示可以顯示圖示、標籤和描述。 您可以使用漸層填滿、自訂文字和框線色彩、粗體文字、圓角或氣球樣式，自訂其視覺外觀。  
@@ -87,11 +87,11 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::SetParams](#setparams)|使用 `CMFCToolTipInfo` 物件指定工具提示的視覺外觀。|  
   
 ## <a name="remarks"></a>備註  
- 使用`CMFCToolTipCtrl`， `CMFCToolTipInfo`，和[CTooltipManager 類別](../../mfc/reference/ctooltipmanager-class.md)在一起，以在您的應用程式中實作自訂的工具提示的物件。  
+ 使用`CMFCToolTipCtrl`， `CMFCToolTipInfo`，並[CTooltipManager 類別](../../mfc/reference/ctooltipmanager-class.md)應用程式中實作自訂的工具提示的物件。  
   
  例如，若要使用氣球樣式工具提示，請依照下列步驟：  
   
- 1. 使用[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)方法，以初始化應用程式中的工具提示管理員。  
+ 1. 使用[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)方法以初始化應用程式中的工具提示管理員。  
   
  2. 建立 `CMFCToolTipInfo` 結構來指定您想要的視覺樣式：  
   
@@ -122,7 +122,7 @@ CMFCToolTipInfo params;
 
  }  
 ```  
-3. 使用[Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams)方法使用定義的樣式來設定應用程式中的所有工具提示的視覺樣式的`CMFCToolTipInfo`物件：  
+3. 使用[Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams)方法，將所有的工具提示的視覺樣式應用程式中設定使用中定義的樣式`CMFCToolTipInfo`物件：  
   
 ```  
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,  
@@ -191,7 +191,7 @@ const CMFCToolTipInfo& GetParams() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的工具提示顯示設定，儲存在[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件。  
+ 目前的工具提示顯示設定，會儲存在[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件。  
   
 ##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder  
  繪製工具提示的框線。  
@@ -214,7 +214,7 @@ virtual void OnDrawBorder(
  框線色彩。  
   
 ### <a name="remarks"></a>備註  
- 覆寫此方法以自訂工具提示框線外觀的衍生類別中。  
+ 覆寫這個方法在衍生類別來自訂工具提示框線外觀。  
   
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription  
 
@@ -252,10 +252,10 @@ virtual BOOL OnDrawIcon(
  圖示的座標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已經繪製圖示。 否則`FALSE`。  
+ 所繪製的圖示，其值為 TRUE。 否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 覆寫此方法以顯示自訂圖示的衍生類別中。 您也必須覆寫[CMFCToolTipCtrl::GetIconSize](#geticonsize)啟用工具提示，以正確計算文字與描述的配置。  
+ 覆寫此方法在衍生的類別，以顯示自訂圖示。 您也必須覆寫[CMFCToolTipCtrl::GetIconSize](#geticonsize)若要啟用以正確計算文字與描述的版面配置的工具提示。  
   
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  繪製工具提示的標籤，或計算標籤的大小。  
@@ -272,16 +272,16 @@ virtual CSize OnDrawLabel(
  裝置內容的指標。  
   
  [in]*rect*  
- 標籤區域的週框。  
+ [標籤] 區域的周框。  
   
  [in]*bCalcOnly*  
- 如果`TRUE`，標籤不會被繪製。  
+ 如果為 TRUE，就不會繪製標籤。  
   
 ### <a name="return-value"></a>傳回值  
- 像素為單位指定標籤的大小。  
+ 標籤，像素為單位的大小。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要自訂工具提示標籤的外觀，請覆寫這個方法在衍生類別中。  
+ 如果您想要自訂的工具提示標籤外觀，請覆寫這個方法在衍生類別中。  
   
 ##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
  工具提示中的標籤和描述之間繪製分隔符號。  
@@ -299,16 +299,16 @@ virtual void OnDrawSeparator(
  裝置內容的指標。  
   
  [in]*x1*  
- 水平分隔符號的左邊的座標。  
+ 水平分隔符號的左邊座標。  
   
  [in]*x2*  
- 水平座標分隔符號的右邊。  
+ 水平分隔符號的右邊座標。  
   
  [in]*Y*  
- 在分隔符號的垂直座標。  
+ 分隔線的垂直座標。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會繪製一條線從點 (x1，y) 的點 (x2，y)。  
+ 預設實作會繪製一條線從點 (x1，y) 到點 (x2，y)。  
   
  覆寫這個方法來自訂外觀，分隔符號的衍生類別中。  
   
@@ -328,7 +328,7 @@ virtual void OnFillBackground(
  裝置內容的指標。  
   
  [in]*rect*  
- 指定要填滿區域的周框矩形。  
+ 指定要填滿區域的週框矩形。  
   
  [in]*clrText*  
  工具提示的前景色彩。  
@@ -337,9 +337,9 @@ virtual void OnFillBackground(
  色彩的框線和分隔符號之間的線條標籤和描述。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會填入所指定的矩形*rect*色彩或最新的呼叫所指定的模式與[CMFCToolTipCtrl::SetParams](#setparams)。  
+ 預設實作會填滿所指定的矩形*rect*使用的色彩或最新的呼叫所指定的圖樣[CMFCToolTipCtrl::SetParams](#setparams)。  
   
- 如果您想要自訂工具提示的外觀，請覆寫這個方法在衍生類別中。  
+ 如果您想要自訂的工具提示外觀，請覆寫這個方法在衍生類別中。  
   
 ##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription  
  設定要由工具提示顯示的描述。  
@@ -353,7 +353,7 @@ virtual void SetDescription(const CString strDesrciption);
  描述文字。  
   
 ### <a name="remarks"></a>備註  
- 描述文字會顯示在下方分隔符號的工具提示。  
+ 描述文字會顯示在工具提示下分隔符號。  
   
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
 
@@ -395,7 +395,7 @@ void SetLocation(CPoint pt);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
- 使用指定的工具提示視覺外觀[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件。  
+ 使用指定的工具提示的視覺外觀[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件。  
   
 ```  
 void SetParams(CMFCToolTipInfo* pParams);
@@ -403,10 +403,10 @@ void SetParams(CMFCToolTipInfo* pParams);
   
 ### <a name="parameters"></a>參數  
  [in]*pParams*  
- 指標[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件，其中包含顯示參數。  
+ 指標[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件，包含顯示參數。  
   
 ### <a name="remarks"></a>備註  
- 顯示工具提示，它使用色彩來繪製視覺樣式，每當*pParams*指定。 值*pParams*會儲存在受保護成員`m_Params`，可由衍生類別會覆寫來存取[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)， [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)， [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)， [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)，或[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)維護指定的外觀。  
+ 會顯示工具提示，使用色彩來繪製視覺化樣式，每當*pParams*指定。 值*pParams*會儲存在受保護的成員`m_Params`，存取由衍生類別覆寫[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)， [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)， [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)， [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)，或[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)維護指定的外觀。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

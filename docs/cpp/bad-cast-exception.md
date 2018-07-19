@@ -1,5 +1,5 @@
 ---
-title: bad_cast 例外狀況 |Microsoft 文件
+title: bad_cast 例外狀況 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942624"
 ---
 # <a name="badcast-exception"></a>bad_cast 例外狀況
 若轉型為參考類型失敗，則 `bad_cast` 運算子會擲回 `dynamic_cast` 例外狀況。  
@@ -37,7 +38,7 @@ catch (bad_cast)
 ## <a name="remarks"></a>備註  
  `bad_cast` 的介面為：  
   
-```  
+```cpp 
 class bad_cast : public exception {  
 public:  
    bad_cast(const char * _Message = "bad cast");  
@@ -48,7 +49,7 @@ public:
   
  下列程式碼範例包含失敗的 `dynamic_cast`，會擲回 `bad_cast` 例外狀況。  
   
-```  
+```cpp 
 // expre_bad_cast_Exception.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -77,16 +78,16 @@ int main() {
 }  
 ```  
   
- 擲回例外狀況是因為所轉型的物件 (圖形) 不是衍生自指定的轉換類型 (圓形)。 若要避免例外狀況，請將這些宣告加入至 `main`：  
+ 擲回例外狀況是因為所轉型的物件 (圖形) 不是衍生自指定的轉換類型 (圓形)。 若要避免例外狀況，這些將宣告加入至**主要**:  
   
-```  
+```cpp 
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- 然後在 `try` 區塊中反向轉型的意義，如下所示：  
+ 再反向轉換中的意義**嘗試**封鎖，如下所示：  
   
-```  
+```cpp 
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   

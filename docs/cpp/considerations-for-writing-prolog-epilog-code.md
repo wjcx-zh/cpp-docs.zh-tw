@@ -1,5 +1,5 @@
 ---
-title: 撰寫初構終解程式碼的考量 |Microsoft 文件
+title: 撰寫初構-終解程式碼的考量 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414766"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942103"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>撰寫初構/終解程式碼的考量
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
- 在您撰寫自己的初構和終解程式碼序列之前，務必先了解堆疊框架的配置方式。也很有用了解如何使用 **__LOCAL_SIZE**符號。  
+ 在您撰寫自己的初構和終解程式碼序列之前，務必先了解堆疊框架的配置方式。最好也要知道如何使用 __LOCAL_SIZE 符號。  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> 堆疊框架配置  
  這個範例將示範可能出現在 32 位元函式中的標準初構程式碼：  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  堆疊一律從高到低排列 (從高到低記憶體位址)。 基底指標 (`ebp`) 會指向 `ebp` 的推送值。 區域是從 `ebp-4` 開始。 若要存取區域變數，請從 `ebp` 減去適當的值計算 `ebp` 的位移。  
   
 ##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
- 編譯器會提供一種符號， **__LOCAL_SIZE**，用於函式初構程式碼的內嵌組合語言區塊中。 這個符號是用來在自訂初構程式碼中堆疊框架上為區域變數配置空間。  
+ 編譯器會提供一種符號，__LOCAL_SIZE，函式初構程式碼的內嵌組合語言區塊中使用。 這個符號是用來在自訂初構程式碼中堆疊框架上為區域變數配置空間。  
   
- 編譯器會判斷 **__LOCAL_SIZE** 的值。 其值是所有使用者定義之區域變數和編譯器所產生之暫存變數的位元組總數。 **__LOCAL_SIZE** 只能作為即時運算元，不能在運算式中使用。 您不得變更或重新定義這個符號的值。 例如:   
+ 編譯器會判斷 __LOCAL_SIZE 的值。 其值是所有使用者定義之區域變數和編譯器所產生之暫存變數的位元組總數。 __LOCAL_SIZE 只做為即時運算元，它不能用在運算式中。 您不得變更或重新定義這個符號的值。 例如:   
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- 下列範例 naked 函式包含自訂初構和終解序列使用 **__LOCAL_SIZE**初構序列中的符號：  
+ 下列範例包含自訂初構和終解序列之 naked 函式的初構序列中使用 __LOCAL_SIZE 符號：  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -84,7 +84,7 @@ __declspec ( naked ) int main() {
 }  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [Naked 函式呼叫](../cpp/naked-function-calls.md)

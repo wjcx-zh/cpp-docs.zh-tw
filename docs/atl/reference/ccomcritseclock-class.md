@@ -1,5 +1,5 @@
 ---
-title: CComCritSecLock 類別 |Microsoft 文件
+title: CComCritSecLock 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358882"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880247"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 類別
-這個類別會提供用以鎖定及解除鎖定的關鍵區段物件的方法。  
+這個類別會提供鎖定和解除鎖定重要區段物件的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ template<class TLock> class CComCritSecLock
   
 #### <a name="parameters"></a>參數  
  *TLock*  
- 要鎖定及解除鎖定的物件。  
+ 要鎖定和解除鎖定的物件。  
   
 ## <a name="members"></a>成員  
   
@@ -53,11 +53,11 @@ template<class TLock> class CComCritSecLock
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComCritSecLock::Lock](#lock)|呼叫此方法以鎖定的重要區段的物件。|  
-|[CComCritSecLock::Unlock](#unlock)|呼叫這個方法來解除鎖定的重要區段的物件。|  
+|[CComCritSecLock::Lock](#lock)|呼叫這個方法來鎖定重要區段物件。|  
+|[CComCritSecLock::Unlock](#unlock)|呼叫這個方法來解除鎖定重要區段物件。|  
   
 ## <a name="remarks"></a>備註  
- 使用這個類別來鎖定和解除鎖定的物件，以更安全方式比搭配[CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)或[CComAutoCriticalSection 類別](../../atl/reference/ccomautocriticalsection-class.md)。  
+ 使用這個類別來鎖定和解除鎖定物件，比使用更安全的方式[CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)或是[CComAutoCriticalSection 類別](../../atl/reference/ccomautocriticalsection-class.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
@@ -71,13 +71,13 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
   
 ### <a name="parameters"></a>參數  
  *cs*  
- 重要區段的物件。  
+ 重要區段物件。  
   
- `bInitialLock`  
- 初始鎖定狀態： **true**鎖定的方法。  
+ *bInitialLock*  
+ 初始鎖定狀態： **，則為 true**鎖定的方法。  
   
 ### <a name="remarks"></a>備註  
- 初始化關鍵區段的物件。  
+ 重要區段物件初始化。  
   
 ##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
  解構函式。  
@@ -87,30 +87,30 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ```  
   
 ### <a name="remarks"></a>備註  
- 解除鎖定的重要區段的物件。  
+ 解除鎖定重要區段物件。  
   
 ##  <a name="lock"></a>  CComCritSecLock::Lock  
- 呼叫此方法以鎖定的重要區段的物件。  
+ 呼叫這個方法來鎖定重要區段物件。  
   
 ```
 HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果物件已成功地鎖定或在失敗的 HRESULT 錯誤。  
+ 在失敗時傳回 S_OK，如果已成功鎖定的物件或錯誤的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
  如果物件已鎖定，會在偵錯組建中發生判斷提示錯誤。  
   
 ##  <a name="unlock"></a>  CComCritSecLock::Unlock  
- 呼叫這個方法來解除鎖定的重要區段的物件。  
+ 呼叫這個方法來解除鎖定重要區段物件。  
   
 ```
 void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果物件已解除鎖定，會在偵錯組建中發生判斷提示錯誤。  
+ 如果物件已經解除鎖定，會在偵錯組建中發生判斷提示錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   

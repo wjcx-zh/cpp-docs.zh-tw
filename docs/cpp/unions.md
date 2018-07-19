@@ -1,5 +1,5 @@
 ---
-title: 等位 |Microsoft 文件
+title: 等位 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425695"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939205"
 ---
 # <a name="unions"></a>等位
-`union` 是所有成員都共用相同記憶體位置的使用者定義類型。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。  
+A**聯集**是使用者定義的類型，其所有成員都共用相同的記憶體位置。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。  
   
  如果具有許多物件且 (或) 記憶體有限，則等位可能適用於節省記憶體。 不過，正確使用它們時需要特別小心，因為您有責任確保一律存取寫入的最後一個成員。 如果任何成員類型具有非一般建構函式，則您必須撰寫額外的程式碼來明確建構和終結該成員。 使用等位之前，請考慮使用基底類別和衍生類別是否可以更恰當地表示您正嘗試解決的問題。  
   
@@ -36,16 +36,16 @@ union [name]  { member-list };
 ```  
   
 #### <a name="parameters"></a>參數  
- `name`  
+ *name*  
  提供給等位的類型名稱。  
   
- `member-list`  
+ *成員清單*  
  等位可以包含的成員。 請參閱＜備註＞。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="declaring-a-union"></a>宣告等位  
- 使用 `union` 關鍵字開始宣告等位，並且用大括號括住成員清單：  
+ 開始使用等位宣告**聯集**關鍵字，並將成員清單括在大括號：  
   
 ```cpp  
 // declaring_a_union.cpp  
@@ -67,7 +67,7 @@ int main()
 ```  
   
 ## <a name="using-unions"></a>使用等位  
- 在先前的範例中，任何存取等位的程式碼都需要知道哪個成員保有資料。 這個問題的最常見解決方法是將等位含括在結構中，以及具有其他列舉成員指出目前正儲存在等位中的資料類型。 這稱為*差別聯集*和下列範例示範基本模式。  
+ 在先前的範例中，任何存取等位的程式碼都需要知道哪個成員保有資料。 這個問題的最常見解決方法是將等位含括在結構中，以及具有其他列舉成員指出目前正儲存在等位中的資料類型。 這就叫做*差別聯集*與下列範例示範基本模式。  
   
 ```cpp  
 #include "stdafx.h"  
@@ -638,11 +638,11 @@ int main()
   
  `NumericType` 等位會依照下圖中所示的方式在記憶體內部排列 (概念上)。  
   
- ![數值類型等位中資料的儲存體](../cpp/media/vc38ul1.png "vc38UL1")  
+ ![數值類型等位中的資料的儲存體](../cpp/media/vc38ul1.png "vc38UL1")  
 在 NumericType 等位中儲存資料  
   
 ## <a name="anonymous_unions"></a> 匿名等位  
- 匿名等位是等位沒有宣告*類別名稱*或*宣告子清單*。  
+ 匿名等位是不含宣告的等位*類別名稱*或是*宣告子清單*。  
   
 ```cpp  
 union  {  member-list  }    
@@ -650,9 +650,9 @@ union  {  member-list  }
   
 匿名等位中宣告的名稱會直接使用，就像非成員變數一般。 因此，在周圍範圍中，匿名等位中所宣告的名稱必須是唯一的。  
   
-具名的等位的限制，除了匿名等位會遵守這些其他的限制：  
+具名的等位的限制，除了匿名等位受限於這些額外的限制：  
   
--   它們也必須宣告為**靜態**如果在檔案或命名空間範圍中宣告。  
+-   它們也必須宣告為**靜態**如果檔案或命名空間範圍中宣告。  
   
 -   它們只能擁有 Public 成員，Private 和 Protected 成員在匿名等位中會產生錯誤。  
   

@@ -1,5 +1,5 @@
 ---
-title: volatile （c + +） |Microsoft 文件
+title: volatile （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295654586a3fe251526a4764d54f80f3a70c7014
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423949"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940963"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 類型限定詞，可以用來宣告程式中的物件可以由硬體修改。  
@@ -39,31 +39,31 @@ volatile declarator ;
 ## <a name="remarks"></a>備註  
  您可以使用[/volatile](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器參數，修改編譯器如何解譯這個關鍵字。  
   
- Visual Studio 會根據目標架構，對`volatile` 關鍵字做不一樣的解譯。 若是 ARM、 如果有任何 **/volatile**指定編譯器選項時，編譯器會執行如同 **/volatile:iso**所指定。 針對 ARM，如果沒有以外的架構 **/volatile**指定編譯器選項時，編譯器會執行如同 **/volatile: ms**指定; 因此，對於架構以外 ARM 我們強烈建議您指定 **/volatile:iso**，並在處理跨執行緒共用的記憶體時使用明確的同步處理原始類型和編譯器內建函式。  
+ Visual Studio 會解譯**volatile**以不同的方式根據目標架構的關鍵字。 為 ARM，如果沒有 **/volatile**指定編譯器選項時，編譯器會執行如同 **/volatile:iso**所指定。 適用於 ARM，如果沒有以外的架構 **/volatile**指定編譯器選項時，編譯器會執行如同 **/volatile: ms**指定; 因此，對於架構以外 ARM 我們強烈建議您指定 **/volatile:iso**，並使用明確的同步處理原始物件和編譯器內建函式，當您處理跨執行緒共用的記憶體。  
   
- 您可以使用 `volatile` 限定詞存取非同步處理序 (例如中斷處理常式) 所用的記憶體位置。  
+ 您可以使用**volatile**限定詞存取非同步處理序，例如中斷處理常式所使用的記憶體位置。  
   
- 當`volatile`上也有變數使用[__restrict](../cpp/extension-restrict.md)關鍵字，`volatile`優先。  
+ 時**volatile**的變數，也有適用於[__restrict](../cpp/extension-restrict.md)關鍵字**變動性**會優先使用。  
   
- 如果 `struct` 成員被標記為 `volatile`，則 `volatile` 會傳播至整個結構。 如果結構沒有足夠的長度，可透過單一指令複製到目前的架構，`volatile` 在該結構上可能會完全遺失。  
+ 如果**結構**成員會標示為**volatile**，然後**volatile**傳播至整個結構。 如果結構沒有長度，可複製目前架構上使用一個指令**volatile**可能會完全遺失該結構上。  
   
- 如果下列其中一個條件成立，`volatile` 關鍵字可能對欄位無效：  
+ **Volatile**關鍵字可能不會影響欄位，如果其中一個下列條件成立：  
   
 -   volatile 欄位長度超過可透過單一指令複製到目前架構的大小上限。  
   
--   最外層包含 `struct` 的長度，或者如果是可能巢狀 `struct` 的成員，超過可透過單一指令複製到目前架構的大小上限。  
+-   最外層包含長度**結構**— 或者它是可能巢狀的成員**結構**— 超過可透過單一指令複製到目前架構的大小上限。  
   
- 雖然處理器不會重新排列不可快取的記憶體存取，不可快取的變數必須標記成 `volatile` 以確保編譯器不會重新排列記憶體存取。  
+ 雖然處理器不會不會重新排列不可快取的記憶體存取，必須標示為不可快取的變數**volatile**以確保編譯器不重新排列記憶體存取。  
   
- 宣告成 `volatile` 的物件不用於某些最佳化，因為它們的值可能隨時會變更。  即使先前指令要求相同物件的值，再次被要求時，系統一定會讀取暫時性物件目前的值。  此外，物件的值會在指派時立即被寫入。  
+ 宣告為物件**volatile**不會用於某些最佳化功能因為隨時都可以變更其值。  即使先前指令要求相同物件的值，再次被要求時，系統一定會讀取暫時性物件目前的值。  此外，物件的值會在指派時立即被寫入。  
   
 ## <a name="iso-compliant"></a>符合 ISO 標準  
- 如果您是熟悉 C# volatile 關鍵字或熟悉的行為`volatile`在舊版的 Visual c + + 中，請注意，C + + 11 ISO 標準`volatile`關鍵字是不同，適用於 Visual Studio 時[//volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器選項已指定。 (對於 ARM 系統來說，預設為指定)。 `volatile` 關鍵字在 C++11 ISO 標準程式碼中只用於硬體存取；請勿將它用於執行緒間通訊。 用於執行緒間通訊使用機制如[std::atomic\<T >](../standard-library/atomic.md)從[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。  
+ 如果您是熟悉 C# volatile 關鍵字，或熟悉的行為**volatile**在舊版的 Visual c + + 中，請注意，c++11 ISO Standard **volatile**關鍵字是不同，Visual Studio 支援時[/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定編譯器選項。 (對於 ARM 系統來說，預設為指定)。 **Volatile**關鍵字在 C + + 11 ISO 標準的程式碼是只用於硬體存取; 請勿使用它對於執行緒間通訊。 對於執行緒間通訊使用機制如[std:: atomic\<T >](../standard-library/atomic.md)從[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。  
   
 ## <a name="end-of-iso-compliant"></a>符合 ISO 標準結尾  
   
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
- 時 **/volatile: ms**編譯器選項使用 — ARM 以外的架構做為目標時，根據預設，編譯器會產生額外的程式碼維護除了維護暫時性物件參考的順序其他全域物件參考的順序。 特別之處在於：  
+ 當 **/volatile: ms**使用編譯器選項 — ARM 以外的架構為目標時，預設情況 — 編譯器會產生額外的程式碼來維護對 volatile 物件除了維護參考的順序其他全域物件參考的順序。 特別之處在於：  
   
 -   暫時性物件的寫入 (也稱為暫時性寫入) 有 Release 語義，也就是說，在指令序列中暫時性物件寫入之前的全域或靜態物件參考，會在已編譯二進位檔中的暫時性寫入之前發生。  
   
@@ -72,9 +72,9 @@ volatile declarator ;
  這可讓暫時性物件用於多執行緒應用程式的記憶體鎖定和記憶體釋放。  
   
 > [!NOTE]
->  當它是倚賴時具有所提供的增強型保證 **/volatile: ms**編譯器選項時，程式碼是不可移植。  
+>  當它需倚賴時具有所提供的增強型保證 **/volatile: ms**編譯器選項時，程式碼是不可移植。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   

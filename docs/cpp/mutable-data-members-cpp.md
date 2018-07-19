@@ -1,5 +1,5 @@
 ---
-title: 可變動的資料成員 （c + +） |Microsoft 文件
+title: 可變動的資料成員 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943000"
 ---
 # <a name="mutable-data-members-c"></a>可變動的資料成員 (C++)
-這個關鍵字只能套用至非靜態和非常數類別的資料成員。 如果資料成員宣告`mutable`，則將值指派給這個資料成員，從**const**成員函式。  
+這個關鍵字只能套用至非靜態和非常數類別的資料成員。 如果資料成員宣告**可變**，則將值指派給這個資料成員，從**const**成員函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,9 +34,9 @@ mutable member-variable-declaration;
 ```  
   
 ## <a name="remarks"></a>備註  
- 例如，下列程式碼會在沒有錯誤的情況下完成編譯，因為 `m_accessCount` 已宣告為 `mutable`，因此，即使 `GetFlag` 是常數成員函式，`GetFlag` 也可以進行修改。  
+ 例如，下列程式碼會編譯無誤因為`m_accessCount`被宣告為**可變動**，，因此可以藉由修改`GetFlag`即使`GetFlag`為 const 成員函式。  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

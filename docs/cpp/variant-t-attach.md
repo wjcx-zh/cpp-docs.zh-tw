@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Attach |Microsoft 文件
+title: _variant_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,34 +19,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942977"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 附加**VARIANT**物件插入`_variant_t`物件。  
+ 附加`VARIANT`物件插入`_variant_t`物件。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
   
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>參數  
  *varSrc*  
- A **VARIANT**物件附加至這個`_variant_t`物件。  
+ A`VARIANT`要附加至此物件`_variant_t`物件。  
   
 ## <a name="remarks"></a>備註  
- 取得擁有權**VARIANT**透過封裝方式。 此成員函式會釋放所有現有的封裝**VARIANT**，然後複製提供**VARIANT**，並設定其**VARTYPE**至`VT_EMPTY`以確定其只有由釋放資源`_variant_t`解構函式。  
+ 取得擁有權的`VARIANT`透過封裝方式。 此成員函式會釋放所有現有的封裝`VARIANT`，然後複製提供`VARIANT`，並設定其`VARTYPE`設為 VT_EMPTY 以確定其可以只會釋放資源`_variant_t`解構函式。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

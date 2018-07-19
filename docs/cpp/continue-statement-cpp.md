@@ -1,5 +1,5 @@
 ---
-title: 繼續陳述式 （c + +） |Microsoft 文件
+title: continue 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942996"
 ---
 # <a name="continue-statement-c"></a>continue 陳述式 (C++)
-強制將控制項傳輸至最小的封入的控制運算式[不要](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，或[時](../cpp/while-statement-cpp.md)迴圈。  
+強制將控制項傳輸至最小的封入的控制運算式[請勿](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，或[雖然](../cpp/while-statement-cpp.md)迴圈。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +35,15 @@ continue;
 ## <a name="remarks"></a>備註  
  目前反覆項目中其餘的任何陳述式都不會執行。 迴圈中下一個反覆項目的判斷方式如下：  
   
--   在 `do` 或 `while` 迴圈中，下一個反覆項目是藉由重新計算 `do` 或 `while` 陳述式的控制運算式的值開始。  
+-   中**請勿**或**雖然**藉由重新評估的控制運算式的迴圈下, 一個反覆項目開始**執行**或**時**陳述式。  
   
--   在 `for` 迴圈中 (使用語法 `for`(`init-expr`; `cond-expr`; `loop-expr`)) 會執行 `loop-expr` 子句。 然後會重新求出 `cond-expr` 子句的值，而根據結果，迴圈會結束或另一個反覆項目會發生。  
+-   在  **for**迴圈 (使用語法`for`(`init-expr`;`cond-expr`;`loop-expr`))，則`loop-expr`子句執行。 然後會重新求出 `cond-expr` 子句的值，而根據結果，迴圈會結束或另一個反覆項目會發生。  
   
- 下列範例將示範如何使用 `continue` 陳述式略過程式碼區段及開始迴圈的下一個反覆項目。  
+ 下列範例示範如何**繼續**陳述式可用來略過的程式碼區段及開始迴圈的下一個反覆項目。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

@@ -1,5 +1,5 @@
 ---
-title: CComClassFactoryAutoThread 類別 |Microsoft 文件
+title: CComClassFactoryAutoThread 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 601f67d4a753dd617b9d7a3d5856ca64588a66c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363119"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883056"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 類別
 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，並允許在多個 apartment 中建立的物件。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,12 +47,12 @@ class CComClassFactoryAutoThread
 |名稱|描述|  
 |----------|-----------------|  
 |[CComClassFactoryAutoThread::CreateInstance](#createinstance)|建立指定的 CLSID 的物件。|  
-|[CComClassFactoryAutoThread::LockServer](#lockserver)|鎖定在記憶體中的 class factory。|  
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|鎖定記憶體中的 class factory。|  
   
 ## <a name="remarks"></a>備註  
- `CComClassFactoryAutoThread` 類似於[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)，但允許在多個 apartment 中建立的物件。 若要利用這項支援，衍生您的 EXE 模組從[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
+ `CComClassFactoryAutoThread` 類似於[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)，但允許在多個 apartment 中建立的物件。 若要利用這項支援，衍生您的 EXE 模組，從[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
   
- ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)物件的類別定義中的巨集。 例如:   
+ ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)物件的類別定義中的巨集。 例如:   
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
@@ -69,7 +69,7 @@ class CComClassFactoryAutoThread
  **標頭：** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
- 建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
+ 建立指定的 CLSID 的物件，並擷取此物件的介面指標。  
   
 ```
 STDMETHODIMP CreateInstance(
@@ -79,39 +79,39 @@ STDMETHODIMP CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkOuter`  
- [in]如果物件建立為彙總時，部分然後`pUnkOuter`必須是外部未知。 否則，`pUnkOuter`必須**NULL**。  
+ *pUnkOuter*  
+ [in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。  
   
- `riid`  
- [in]所要求介面的 IID。 如果`pUnkOuter`是非**NULL**，`riid`必須**IID_IUnknown**。  
+ *riid*  
+ [in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。  
   
- `ppvObj`  
- [out]所識別的介面指標的指標`riid`。 如果物件不支援這個介面，`ppvObj`設**NULL**。  
+ *ppvObj*  
+ [out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObj*設為 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如果您的模組衍生自[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)，`CreateInstance`會先選取執行緒相關聯的 apartment 中建立物件。  
+ 如果您的模組是衍生自[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)，`CreateInstance`第一次選取執行緒相關聯的 apartment 中建立物件。  
   
 ##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer  
- 遞增和遞減模組鎖定計數藉由呼叫 **_Module::Lock**和 **_Module::Unlock**分別。  
+ 遞增和遞減模組鎖定計數藉由呼叫`_Module::Lock`和`_Module::Unlock`分別。  
   
 ```
 STDMETHODIMP LockServer(BOOL fLock);
 ```  
   
 ### <a name="parameters"></a>參數  
- `fLock`  
- [in]如果**TRUE**、 鎖定計數遞增; 否則鎖定計數會遞減。  
+ *fLock*  
+ [in]如果為 TRUE，就會遞增的鎖定計數;否則，鎖定計數會遞減。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 當使用`CComClassFactoryAutoThread`， **_Module**通常是指全域執行個體[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
+ 使用時`CComClassFactoryAutoThread`，`_Module`通常是指全域執行個體[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
   
- 呼叫`LockServer`允許用戶端保留 class factory，以便可以快速地建立多個物件。  
+ 呼叫`LockServer`允許用戶端，以便可以快速建立多個物件保留的 class factory。  
   
 ## <a name="see-also"></a>另請參閱  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   

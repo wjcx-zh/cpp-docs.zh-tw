@@ -1,5 +1,5 @@
 ---
-title: __if_exists 陳述式 |Microsoft 文件
+title: __if_exists 陳述式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942676"
 ---
 # <a name="ifexists-statement"></a>__if_exists 陳述式
-`__if_exists` 陳述式會測試指定識別項是否存在。 如果識別項存在，就會執行指定的陳述式區塊。  
+**__If_exists**陳述式會測試是否存在指定的識別項。 如果識別項存在，就會執行指定的陳述式區塊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +41,27 @@ statements
 |參數|描述|  
 |---------------|-----------------|  
 |`identifier`|要測試其是否存在的識別項。|  
-|`statements`|如果執行的一或多個陳述式`identifier`存在。|  
+|`statements`|若要執行的一或多個陳述式`identifier`存在。|  
   
 ## <a name="remarks"></a>備註  
   
 > [!CAUTION]
->  為取得最可靠的結果，使用 `__if_exists` 陳述式時請遵循下列條件約束。  
+>  若要達到最可靠的結果，使用 **__if_exists**低於下列條件約束陳述式。  
   
--   只能將 `__if_exists` 陳述式套用至簡單類型，而不能套用於範本。  
+-   適用於 **__if_exists**只是簡單類型，而不是範本的陳述式。  
   
--   將 `__if_exists` 陳述式套用至類別內外的識別項。 勿將 `__if_exists` 陳述式套用至區域變數。  
+-   適用於 **__if_exists**類別內外的識別項的陳述式。 不適用 **__if_exists**至區域變數的陳述式。  
   
--   只在函式本體中使用 `__if_exists` 陳述式。 在函式的主體之外，`__if_exists` 陳述式只能測試完整定義的類型。  
+-   使用 **__if_exists**只能在函式主體中的陳述式。 函式的主體的外面 **__if_exists**完整定義的類型只能測試陳述式。  
   
 -   當您對多載函式進行測試時，無法對特定形式的多載進行測試。  
   
- 補數`__if_exists`陳述式是[__if_not_exists](../cpp/if-not-exists-statement.md)陳述式。  
+ 若要補充 **__if_exists**陳述式是[__if_not_exists](../cpp/if-not-exists-statement.md)陳述式。  
   
 ## <a name="example"></a>範例  
  請注意，這個範例會使用範本，但不建議這樣做。  
   
-```  
+```cpp 
 // the__if_exists_statement.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -119,7 +120,7 @@ int main() {
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 In X<T>::Dump()  
 In A::Dump()  
 In X<T>::Dump()  
@@ -129,6 +130,6 @@ C::f exists
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [選擇陳述式](../cpp/selection-statements-cpp.md)   
+ [選取範圍陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [__if_not_exists 陳述式](../cpp/if-not-exists-statement.md)

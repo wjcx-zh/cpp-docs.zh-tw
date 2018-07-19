@@ -1,5 +1,5 @@
 ---
-title: _com_error::HRESULTToWCode |Microsoft 文件
+title: _com_error::HRESULTToWCode |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3955fcda665e08e5415652a1e8f1f232d0fe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412260"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941713"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 32 位元會對應`HRESULT`至 16 位元`wCode`。  
+ 對應到 16 位元的 32 位元 HRESULT `wCode`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,16 +38,16 @@ ms.locfileid: "32412260"
 ```  
   
 #### <a name="parameters"></a>參數  
- `hr`  
- 32 位元`HRESULT`對應到 16 位元`wCode`。  
+ *hr*  
+ 對應到 16 位元的 32 位元 HRESULT `wCode`。  
   
 ## <a name="return-value"></a>傳回值  
- 16 位元`wCode`從 32 位元對應`HRESULT`。  
+ 16 位元`wCode`從 32 位元 HRESULT 對應。  
   
 ## <a name="remarks"></a>備註  
  請參閱[_com_error:: wcode](../cpp/com-error-wcode.md)如需詳細資訊。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_com_error:: wcode](../cpp/com-error-wcode.md)   

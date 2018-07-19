@@ -1,5 +1,5 @@
 ---
-title: CDefaultHashTraits 類別 |Microsoft 文件
+title: CDefaultHashTraits 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361508"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886241"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 類別
 這個類別提供靜態函式來計算雜湊值。  
@@ -36,8 +36,8 @@ class CDefaultHashTraits
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 若要儲存在集合中的資料類型。  
+ *T*  
+ 若要在集合中儲存的資料型別。  
   
 ## <a name="members"></a>成員  
   
@@ -48,9 +48,9 @@ class CDefaultHashTraits
 |[CDefaultHashTraits::Hash](#hash)|（靜態）呼叫此函式來計算雜湊值的指定項目。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別包含單一的靜態函式，傳回指定之項目的雜湊值。 這個類別使用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。  
+ 這個類別包含單一的靜態函式會傳回指定項目的雜湊值。 這個類別會利用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。  
   
- 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
+ 如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
@@ -63,7 +63,7 @@ static ULONG Hash(const T& element) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `element`  
+ *項目*  
  元素。  
   
 ### <a name="return-value"></a>傳回值  

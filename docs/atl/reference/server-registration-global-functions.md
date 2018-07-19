@@ -1,5 +1,5 @@
 ---
-title: 伺服器註冊全域函式 |Microsoft 文件
+title: 伺服器註冊全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364701"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883276"
 ---
 # <a name="server-registration-global-functions"></a>伺服器註冊全域函式
-這些函式可註冊及取消註冊物件對應中的伺服器物件的支援。  
+這些函式會提供註冊和取消註冊伺服器物件，物件對應中的支援。  
   
 > [!IMPORTANT]
 >  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
@@ -36,8 +36,8 @@ ms.locfileid: "32364701"
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|呼叫此函式可在物件對應中註冊每個物件。|  
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|呼叫此函式可在物件對應中移除每個物件的註冊。|  
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|呼叫此函式可註冊類別物件。|  
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|您可以呼叫此函式撤銷類別物件，從 COM 模組。|  
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|呼叫此函式，以取得類別物件。|  
+|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|若要撤銷從 COM 模組類別物件，會呼叫此函數。|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|此函式會呼叫以取得類別物件。|  
 
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
@@ -53,22 +53,22 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pComModule`  
+ *pComModule*  
  COM 模組指標。  
   
- `bRegTypeLib`  
- 如果類型程式庫註冊，則為 TRUE。  
+ *bRegTypeLib*  
+ 如果型別程式庫是要註冊，則為 TRUE。  
   
- `pCLSID`  
- 指向 CLSID 要註冊的物件。 如果是 NULL，就會註冊在物件對應中的所有物件。  
+ *Createtable*  
+ 要註冊之物件的 clsid 點。 如果是 NULL，將會登錄在物件對應中的所有物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `AtlComModuleRegisterServer` 將逐步引導 ATL 自動產生物件的對應，對應中註冊每個物件。 如果`pCLSID`不是 NULL，則只將所參考的物件`pCLSID`註冊; 否則會註冊的所有物件。  
+ `AtlComModuleRegisterServer` ATL 自動產生物件對應並且在對應中註冊每個物件。 如果*Createtable*不是 NULL，則只有所參考的物件*Createtable*註冊; 否則會註冊的所有物件。  
   
- 會呼叫此函式[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)。  
+ 此函式會呼叫[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)。  
   
 ##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  呼叫此函式可在物件對應中移除每個物件的註冊。  
@@ -81,22 +81,22 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pComModule`  
+ *pComModule*  
  COM 模組指標。  
   
- `bUnRegTypeLib`  
- 如果類型程式庫註冊，則為 TRUE。  
+ *bUnRegTypeLib*  
+ 如果型別程式庫是要註冊，則為 TRUE。  
   
- `pCLSID`  
- 要移除註冊物件的 clsid 點。 如果是 NULL 的物件對應中的所有物件都將取消登錄。  
+ *Createtable*  
+ 要移除註冊物件的 clsid 點。 如果 NULL 物件對應中的所有物件將都會取消註冊。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `AtlComModuleUnregisterServer` 將逐步引導 ATL 物件對應，並取消註冊對應中的每個物件。 如果`pCLSID`不是 NULL，則只將所參考的物件`pCLSID`已取消註冊，否則所有物件會取消註冊。  
+ `AtlComModuleUnregisterServer` 將逐步引導的 ATL 物件對應，並取消註冊在對應中的每個物件。 如果*Createtable*不是 NULL，則只有所參考的物件*Createtable*取消註冊; 否則會傳回所有物件都取消註冊。  
   
- 會呼叫此函式[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)。  
+ 此函式會呼叫[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)。  
   
 ##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  呼叫此函式可註冊類別物件。  
@@ -109,20 +109,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pComModule`  
+ *pComModule*  
  COM 模組指標。  
   
- `dwClsContext`  
+ *dwClsContext*  
  指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 請參閱[CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716)如需詳細資訊。  
   
- `dwFlags`  
+ *dwFlags*  
  決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 請參閱[REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697)如需詳細資訊。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個 helper 函式使用[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) （ATL 7.0 中已過時） 和[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)。  
+ 此協助程式函式會利用[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) （已過時的 ATL 7.0） 和[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)。  
   
 ##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  呼叫此函式可從執行中的物件表格移除 Class Factory。  
@@ -132,14 +132,14 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pComModule`  
+ *pComModule*  
  COM 模組指標。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個 helper 函式使用[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) （ATL 7.0 中已過時） 和[CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)。  
+ 此協助程式函式會利用[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) （已過時的 ATL 7.0） 和[CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)。  
   
 ##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  呼叫此函式會傳回 Class Factory。  
@@ -153,23 +153,23 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pComModule`  
+ *pComModule*  
  COM 模組指標。  
   
- `rclsid`  
- 建立物件的 CLSID。  
+ *rclsid*  
+ 若要建立之物件的 CLSID。  
   
- `riid`  
- 所要求介面的 IID。  
+ *riid*  
+ 要求的介面 IID。  
   
- `ppv`  
- 所識別的介面指標的指標`riid`。 如果物件不支援這個介面，`ppv`設為 NULL。  
+ *ppv*  
+ 所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppv*設為 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個 helper 函式使用[CComModule::GetClassObject](ccommodule-class.md#getclassobject) （ATL 7.0 中已過時） 和[CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject)。  
+ 此協助程式函式會利用[CComModule::GetClassObject](ccommodule-class.md#getclassobject) （已過時的 ATL 7.0） 和[CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject)。  
   
 ## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

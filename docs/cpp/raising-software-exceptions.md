@@ -1,5 +1,5 @@
 ---
-title: 引發軟體例外狀況 |Microsoft 文件
+title: 引發軟體例外狀況 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,22 +23,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942973"
 ---
 # <a name="raising-software-exceptions"></a>引發軟體例外狀況
 某些常見的程式錯誤來源是系統未標示為例外狀況。 例如，如果您嘗試配置記憶體區塊，但是沒有足夠的記憶體，執行階段或 API 函式不會引發例外狀況，而是傳回錯誤碼。  
   
- 不過，您可以將任何條件視為例外狀況在您的程式碼中偵測到該條件，然後藉由呼叫報告它[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函式。 以這種方式標幟錯誤，您就可以將結構化例外狀況處理的優點運用到任何類型的執行階段錯誤。  
+ 不過，您可以將任何條件視為例外狀況偵測該情況，進而在您的程式碼中，然後再呼叫報告[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函式。 以這種方式標幟錯誤，您就可以將結構化例外狀況處理的優點運用到任何類型的執行階段錯誤。  
   
  若要使用結構化例外狀況處理錯誤：  
   
 -   定義您自己的事件例外狀況代碼。  
   
--   呼叫**RaiseException**您偵測到問題時。  
+-   呼叫`RaiseException`時偵測到問題時。  
   
 -   使用例外狀況處理篩選條件測試您所定義的例外狀況代碼。  
   
@@ -52,26 +53,26 @@ ms.lasthandoff: 05/03/2018
   
  您可以將前兩個位元設定為 11 二進位以外的設定 (如果您想要這樣做)，不過「錯誤」設定適用於大部分例外狀況。 重要的是，記得依照上表所示設定位元 29 和 28。  
   
- 應有因此產生的錯誤碼最高的四個位元設為十六進位 E。例如，下列定義所定義的例外狀況代碼不會產生衝突與任何 Windows 例外狀況代碼。 (不過，您可能需要查看協力廠商 DLL 使用哪些代碼)。  
+ 產生的錯誤程式碼應該因此會有最高的四個位元設為十六進位 e。比方說，下列定義會定義與任何 Windows 例外狀況代碼，不會衝突例外狀況代碼。 (不過，您可能需要查看協力廠商 DLL 使用哪些代碼)。  
   
-```  
+```cpp 
 #define STATUS_INSUFFICIENT_MEM       0xE0000001  
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
  定義例外狀況代碼之後，就可以用它來引發例外狀況。 例如，下列代碼會引發 STATUS_INSUFFICIENT_MEM 例外狀況，以回應記憶體配置問題：  
   
-```  
+```cpp 
 lpstr = _malloc( nBufferSize );  
 if (lpstr == NULL)  
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- 如果您只想要引發例外狀況，可以將最後三個參數設為 0。 在傳遞額外資訊以及設定旗標防止處理常式繼續執行時，最後三個參數會很有用。 請參閱[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函式在[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]如需詳細資訊。  
+ 如果您只想要引發例外狀況，可以將最後三個參數設為 0。 在傳遞額外資訊以及設定旗標防止處理常式繼續執行時，最後三個參數會很有用。 請參閱[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函式中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]如需詳細資訊。  
   
  然後就可以在您的例外狀況處理篩選條件中，測試您所定義的代碼。 例如:   
   
-```  
+```cpp 
 __try {  
     ...  
 }  

@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrList 類別 |Microsoft 文件
+title: CAutoPtrList 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357541"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883589"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 類別
-建構的智慧型指標清單時，這個類別會提供有效的方法。  
+建構的智慧型指標清單時，這個類別會提供有用的方法。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>參數  
- `E`  
+ *E*  
  指標類型。  
   
 ## <a name="members"></a>成員  
@@ -52,9 +52,9 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|建構函式。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供建構函式，並衍生方法[CAtlList](../../atl/reference/catllist-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)協助清單物件儲存智慧型指標的建立。 類別[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)的陣列物件提供類似的功能。  
+ 這個類別提供建構函式，並衍生方法從[CAtlList](../../atl/reference/catllist-class.md)並[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)來協助建立儲存智慧型指標的清單物件。 此類別[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)的陣列物件提供類似的函式。  
   
- 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
+ 如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -72,11 +72,11 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBlockSize`  
- 區塊大小，預設值是 10。  
+ *nBlockSize*  
+ 區塊的大小，預設值是 10。  
   
 ### <a name="remarks"></a>備註  
- 區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小減少記憶體配置常式，呼叫，但使用較多資源。  
+ 區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小會減少記憶體配置常式，呼叫，但使用較多資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlList 類別](../../atl/reference/catllist-class.md)   

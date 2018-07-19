@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961232"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "33848007"
 
 演算法需要兩種類型的函式物件：一元和二元。 一元函式物件需要一個引數，而二元函式物件需要兩個引數。 函式物件和函式指標都可當作述詞來傳遞給演算法，但函式物件還具有可調適性，因此能增加「C++ 標準程式庫」的範圍、彈性及效率。 例如，如果值需要在傳遞給演算法之前繫結至函式，則無法使用函式指標。 函式配接器會將函式指標轉換成可繫結至值的可調適性函式物件。 \<functional> 標頭也包含成員函式配接器，可允許將成員函式當作可調適性函式物件來呼叫。 如果函式具有指定其引數和傳回型別的巢狀類型宣告，則具有可調適性。 C++ 標準要求這個可調適性的實作方式，必須是讓所有標準物件類別都繼承自 unary_function 或 binary_function 基底類別。 函式物件及其配接器可讓「C++ 標準程式庫」升級現有的應用程式，並協助將程式庫整合到 C++ 程式設計環境中。
 
-中的函式物件的 Visual c + + 實作\<功能 > 包含*transparent operator functor*，這項標準的特製化函式物件，並不採取任何範本參數，並執行的函式引數完美轉送和結果的完美傳回。 這項功能是 C++14 草稿標準規格的一部分。 當您叫用算術、比較、邏輯和位元運算子函子時，這些樣板特製化不會要求您指定引數類型。 您可以針對自己所擁有的類型或類型的異質組合，多載算術、比較、邏輯或位元運算子，然後使用透明運算子函子做為函式引數。 例如，如果您的 *MyType* 類型實作 `operator<`，則您可以呼叫 `sort(my_collection.begin(), my_collection.end(), less<>())`，而不是明確指定 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` 類型。
+中的函式物件的 Visual c + + 實作\<功能 > 包含*透明運算子函子*，這是標準的特製化函式物件，並不接受任何範本參數，以及執行的函式引數完美轉送和結果的完美傳回。 這項功能是 C++14 草稿標準規格的一部分。 當您叫用算術、比較、邏輯和位元運算子函子時，這些樣板特製化不會要求您指定引數類型。 您可以針對自己所擁有的類型或類型的異質組合，多載算術、比較、邏輯或位元運算子，然後使用透明運算子函子做為函式引數。 例如，如果您的 *MyType* 類型實作 `operator<`，則您可以呼叫 `sort(my_collection.begin(), my_collection.end(), less<>())`，而不是明確指定 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` 類型。
 
 ## <a name="c11c14-implementation"></a>C++11/C++14 實作
 
@@ -100,10 +100,10 @@ C++11/C++14 的 Visual C++ 實作中已新增下列功能：
 |[hash](../standard-library/hash-class.md)|此類別可以計算值的雜湊碼。|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|此類別測試呼叫 `bind` 時是否產生特定類型。|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|此類別測試特定類型是否為預留位置。|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|配接器類別，可允許將不接受任何引數的 **non_const** 成員函式在以參考引數初始化時，當作一元函式物件來呼叫。|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|配接器類別，可允許將不接受任何引數的 **non_const** 成員函式在以指標引數初始化時，當作一元函式物件來呼叫。|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|配接器類別，可允許將接受單一引數的 **non_const** 成員函式在以參考引數初始化時，當作二元函式物件來呼叫。|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|配接器類別，可允許將接受單一引數的 **non_const** 成員函式在以指標引數初始化時，當作二元函式物件來呼叫。|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|配接器類別，可讓`non_const`接受任何引數，當作一元函式物件以參考引數初始化時要呼叫成員函式。|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|配接器類別，可讓`non_const`接受任何引數，當作一元函式物件的指標引數初始化時要呼叫成員函式。|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|配接器類別，可讓`non_const`接受單一引數時，當作二元函式物件以參考引數初始化呼叫成員函式。|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|配接器類別，可讓`non_const`接受單一引數當做二元函式物件的指標引數初始化時要呼叫成員函式。|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|將二元函式指標轉換成可調適性二元函式。|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|將一元函式指標轉換成可調適性一元函式。|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|包裝參考的類別。|

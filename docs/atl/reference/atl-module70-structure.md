@@ -1,5 +1,5 @@
 ---
-title: _ATL_MODULE70 結構 |Microsoft 文件
+title: _ATL_MODULE70 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255462"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886215"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 結構
 包含每個 ATL 模組所使用的資料。  
@@ -42,19 +42,19 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>成員  
  `cbSize`  
- 用來進行版本控制的結構大小。  
+ 結構，用來進行版本設定的大小。  
   
  `m_nLockCnt`  
- 參考計數決定多久模組應該保持作用中。  
+ 參考計數來決定多久模組應該保持作用中。  
   
- **m_pTermFuncs**  
- 已登錄為 ATL 關閉時呼叫的追蹤函式。  
+ `m_pTermFuncs`  
+ 追蹤已登錄為 ATL 關閉時呼叫的函式。  
   
- **m_csStaticDataInitAndTypeInfo**  
- 用來協調在多執行緒的情況下的內部資料的存取權。  
+ `m_csStaticDataInitAndTypeInfo`  
+ 用來協調多執行緒的情況下的內部資料的存取權。  
   
 ## <a name="remarks"></a>備註  
- [_ATL_MODULE](atl-typedefs.md#_atl_module)定義為 typedef 的`_ATL_MODULE70`。  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module)定義的 typedef 的`_ATL_MODULE70`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  

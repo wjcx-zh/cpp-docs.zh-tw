@@ -1,5 +1,5 @@
 ---
-title: 記憶體管理與 CStringT |Microsoft 文件
+title: 使用 CStringT 管理記憶體 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354703"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886189"
 ---
-# <a name="memory-management-with-cstringt"></a>CStringT 使用記憶體管理
-類別[CStringT](../atl-mfc-shared/reference/cstringt-class.md)是範本類別，用來操作可變長度的字元字串。 要保留這些字串的記憶體配置和釋放與每個執行個體相關聯的字串管理員物件透過`CStringT`。 MFC 和 ATL 提供的預設具現化`CStringT`，稱為`CString`， `CStringA`，和`CStringW`的操作不同的字元類型的字串。 這些字元類型屬於類型**TCHAR**， `char`，和`wchar_t`分別。 這些預設字串型別會使用字串管理員，會從程序中的堆積 （ATL) 或 （MFC) 中的 CRT 堆積配置記憶體。 對於一般應用程式，此記憶體配置方案已足夠。 不過，大量的程式碼使用的字串 （或多執行緒程式碼），預設記憶體管理員可能無法充分執行。 本主題說明如何覆寫的預設記憶體管理行為`CStringT`，特別建立的配置器適合手邊的工作。  
+# <a name="memory-management-with-cstringt"></a>使用 CStringT 管理記憶體
+類別[CStringT](../atl-mfc-shared/reference/cstringt-class.md)是範本類別，用來操作變數長度字元字串。 要保留這些字串的記憶體配置和釋放與每個執行個體相關聯的字串管理員物件透過`CStringT`。 MFC 和 ATL 提供的預設值具現化`CStringT`，稱為`CString`， `CStringA`，和`CStringW`，其操作的不同字元類型的字串。 這些字元類型屬於類型 TCHAR 之外**char**，和`wchar_t`分別。 這些預設字串型別會使用字串管理員，會從程序中的堆積 （ATL) 或 （MFC) 中的 CRT 堆積配置記憶體。 對於一般應用程式，此記憶體配置方案已足夠。 不過，進行大量的程式碼使用的字串 （或多執行緒程式碼） 的預設記憶體管理員可能不會以最佳方式執行。 本主題描述如何覆寫的預設記憶體管理行為`CStringT`，特別建立配置器適用於手邊的工作。  
   
 -   [自訂字串管理員實作 (基本方法)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32354703"
   
 -   [自訂字串管理員實作 (進階方法)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
   
--   [CFixedStringT： 範例的自訂字串管理員](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
+-   [CFixedStringT︰ 的自訂字串管理員範例](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [CustomString 範例](../visual-cpp-samples.md)

@@ -1,5 +1,5 @@
 ---
-title: IEnumOnSTLImpl 類別 |Microsoft 文件
+title: IEnumOnSTLImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365252"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883004"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
-這個類別定義根據 c + + 標準程式庫集合的列舉程式介面。  
+這個類別會定義根據 c + + 標準程式庫集合的列舉值介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,19 +44,19 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```  
   
 #### <a name="parameters"></a>參數  
- `Base`  
+ *基底*  
  COM 列舉值 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 介面。  
   
- `piid`  
- 列舉程式介面的介面 ID 的指標。  
+ *piid*  
+ 指標的列舉值介面的介面 ID。  
   
- `T`  
- 列舉程式介面所公開的項目類型。  
+ *T*  
+ 列舉值介面所公開的項目類型。  
   
- `Copy`  
+ *複製*  
  A[複製原則類別](../../atl/atl-copy-policy-classes.md)。  
   
- `CollType`  
+ *CollType*  
  C + + 標準程式庫容器類別。  
   
 ## <a name="members"></a>成員  
@@ -76,18 +76,18 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 |名稱|描述|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::m_iter](#m_iter)|迭代器，表示集合中的列舉值的目前位置。|  
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|C + + 標準程式庫容器保留要列舉的項目指標。|  
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|**IUnknown**提供集合物件的指標。|  
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|C + + 標準程式庫容器保存要列舉項目的指標。|  
+|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|`IUnknown`提供集合之物件的指標。|  
   
 ## <a name="remarks"></a>備註  
- `IEnumOnSTLImpl` 提供列舉的項目中的 c + + 標準程式庫相容容器的儲存位置的 COM 列舉程式介面的實作。 這個類別是類似於[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)陣列為基礎的類別，可提供列舉值介面的實作。  
+ `IEnumOnSTLImpl` 提供 c + + 標準程式庫相容的容器中儲存所列舉之項目的 COM 列舉程式介面的實作。 這個類別是類似[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)陣列為基礎的類別，可提供列舉值介面的實作。  
   
 > [!NOTE]
->  請參閱[CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)如進一步之間差異的詳細資訊`CComEnumImpl`和`IEnumOnSTLImpl`。  
+>  請參閱[CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)如需有關進一步之間的差異`CComEnumImpl`和`IEnumOnSTLImpl`。  
   
- 一般而言，您將*不*必須建立您自己的列舉值類別衍生自這個介面實作。 如果您想要使用 c + + 標準程式庫容器所根據的 ATL 提供列舉值，則更常見建立的執行個體[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或若要建立由衍生自傳回的列舉值的集合類別[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。  
+ 一般而言，您將會*不*需要建立自己的列舉值類別，藉由衍生自這個介面實作。 如果您想要使用 c + + 標準程式庫容器為基礎的 ATL 提供列舉值，是要建立的執行個體更常見[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或建立集合類別，傳回的列舉值，藉由衍生自[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。  
   
- 不過，如果您需要提供自訂的列舉值 （例如，一個公開除了列舉程式介面的介面），您可以從這個類別衍生。 在此情況下可能是，您必須覆寫[複製](#clone)方法以提供您自己的實作。  
+ 不過，如果您需要提供自訂的列舉值 （例如，一個公開除了列舉程式介面的介面），您可以衍生自這個類別。 在此情況下很有可能，您必須覆寫[複製品](#clone)方法，以提供您自己的實作。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Base`  
@@ -107,63 +107,63 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkForRelease`  
- [in]**IUnknown**指標必須保持運作的列舉值的存留期間的物件。 傳遞**NULL**如果物件不存在。  
+ *pUnkForRelease*  
+ [in]`IUnknown`必須保持運作的存留期間列舉值物件的指標。 如果物件不存在，請傳遞 NULL。  
   
- `collection`  
- C + + 標準程式庫容器，其中含有要列舉的項目參考。  
+ *collection*  
+ 包含要列舉的項目 c + + 標準程式庫容器的參考。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如果您要傳入`Init`集合的參考保留在另一個物件，您可以使用`pUnkForRelease`參數，以確保物件和集合，它會保留，可用的只要列舉程式需要它。  
+ 如果您傳遞`Init`集合的參考保留在另一個物件，您可以使用*pUnkForRelease*參數，確保，物件和集合當中，僅適用於只要列舉值需要它。  
   
- 您必須將指標傳遞給列舉值介面傳回給任何用戶端之前呼叫這個方法。  
+ 您必須先呼叫這個方法，才能將指標傳遞給任何用戶端的列舉值介面。  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- 這個方法提供實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法藉由建立型別的物件`CComEnumOnSTL`，初始化具有相同的集合和目前物件所使用的迭代器，並在傳回介面新建立的物件。  
+ 這個方法可實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法，藉由建立型別的物件`CComEnumOnSTL`，初始化具有相同的集合與目前物件所使用的迭代器，並傳回介面新建立的物件。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppEnum`  
- [out]從目前的列舉值，複製新建立的物件上的列舉程式介面。  
+ *ppEnum*  
+ [out]從目前的列舉值，複製新建立的物件上的列舉值介面。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
- **IUnknown**提供集合物件的指標。  
+ `IUnknown`提供集合之物件的指標。  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個智慧型指標會維持對傳遞至的物件參考[IEnumOnSTLImpl::Init](#init)，確保保持運作的列舉值的存留期間。  
+ 這個智慧型指標會維持對傳遞至的物件參考[IEnumOnSTLImpl::Init](#init)，確保它仍然保持運作的列舉值的存留期間。  
   
 ##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
- 這個成員會指向提供資料驅動的列舉程式介面實作的集合。  
+ 這個成員會指向集合提供資料驅動的列舉值介面的實作。  
   
 ```
 CollType* m_pcollection;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個成員由呼叫來初始化[IEnumOnSTLImpl::Init](#init)。  
+ 此成員已初始化的呼叫所[IEnumOnSTLImpl::Init](#init)。  
   
 ##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
- 這個成員保留用來標示集合中目前的位置，並瀏覽至後續元素的迭代器。  
+ 這個成員保留迭代器，用來將標記在集合中目前的位置，並瀏覽至後續項目。  
   
 ```
 CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- 這個方法提供實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
+ 這個方法可實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
   
 ```
 STDMETHOD(Next)(
@@ -173,41 +173,41 @@ STDMETHOD(Next)(
 ```  
   
 ### <a name="parameters"></a>參數  
- `celt`  
+ *celt*  
  [in]要求的元素數目。  
   
- `rgelt`  
+ *rgelt*  
  [out]要填入之項目的陣列。  
   
- `pceltFetched`  
- [out]中實際傳回的項目數目`rgelt`。 這可以是小於`celt`如果少於`celt`保留在 項目。  
+ *pceltFetched*  
+ [out]中實際傳回項目數*rgelt*。 這可以是小於*celt*如果少於*celt*仍然在清單中的項目。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- 這個方法提供實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
+ 這個方法可實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
   
 ```
 STDMETHOD(Reset)(void);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- 這個方法提供實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
+ 這個方法可實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);
 ```  
   
 ### <a name="parameters"></a>參數  
- `celt`  
+ *celt*  
  [in]略過的項目數目。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

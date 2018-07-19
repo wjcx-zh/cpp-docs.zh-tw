@@ -1,5 +1,5 @@
 ---
-title: CComPtr 類別 |Microsoft 文件
+title: CComPtr 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358536"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881587"
 ---
 # <a name="ccomptr-class"></a>CComPtr 類別
 用來管理 COM 介面指標的智慧型指標類別。  
@@ -36,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 指定要儲存的指標類型的 COM 介面。  
+ *T*  
+ COM 介面，用來指定要儲存的指標的類型。  
   
 ## <a name="members"></a>成員  
   
@@ -51,18 +51,18 @@ class CComPtr
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComPtr::operator =](#operator_eq)|將指標指派給成員指標。|  
+|[CComPtr::operator =](#operator_eq)|將指標指派給成員的指標。|  
   
 ## <a name="remarks"></a>備註  
- 使用 ATL`CComPtr`和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)來管理 COM 介面指標。 兩者都衍生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，並同時執行自動參考計數。  
+ 使用 ATL`CComPtr`並[CComQIPtr](../../atl/reference/ccomqiptr-class.md)來管理 COM 介面指標。 兩者都衍生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，並同時執行自動參考計數。  
   
- **CComPtr**和[CComQIPtr](../../atl/reference/ccomqiptr-class.md)類別可協助執行自動參考計數來排除記憶體流失。  下列函式同時執行相同的邏輯作業;不過，請注意如何第二個版本可能會較不容易出錯使用**CComPtr**類別：  
+ `CComPtr`並[CComQIPtr](../../atl/reference/ccomqiptr-class.md)類別可以幫助您執行自動參考計數來排除記憶體流失。  下列函式同時執行相同的邏輯作業;不過，請注意如何第二個版本可能較不容易出錯使用`CComPtr`類別：  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- 在偵錯組建中，連結程式碼追蹤的 atlsd.lib。  
+ 在偵錯組建中連結程式碼追蹤的 atlsd.lib。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -82,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>參數  
- `lp`  
- 用來初始化的介面指標。  
+ *lp*  
+ 用來初始化介面指標。  
   
- `T`  
+ *T*  
  COM 介面。  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  
@@ -100,7 +100,7 @@ T* operator= (const CComPtr<T>& lp) throw ();
  讓指標回到更新`CComPtr`物件  
   
 ### <a name="remarks"></a>備註  
- 現有的物件，如果有一個存在此作業 AddRefs 新物件和版本。  
+ 現有的物件，如果有一個存在這個作業 AddRefs 新的物件和版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComPtr::CComPtr](#ccomptr)   

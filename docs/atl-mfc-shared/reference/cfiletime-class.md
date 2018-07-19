@@ -1,5 +1,5 @@
 ---
-title: CFileTime 類別 |Microsoft 文件
+title: CFileTime 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92acaa02ada550f1a2dcbf33a0e0e67b88347a5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365291"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880943"
 ---
 # <a name="cfiletime-class"></a>CFileTime 類別
-這個類別會提供管理與檔案相關聯的日期和時間值的方法。  
+這個類別提供方法來管理與檔案相關聯的日期和時間值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,24 +58,24 @@ class CFileTime :  public FILETIME
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CFileTime::GetCurrentTime](#getcurrenttime)|呼叫此靜態函式可擷取`CFileTime`物件，代表目前的系統日期和時間。|  
-|[CFileTime::GetTime](#gettime)|呼叫此方法以擷取從時間`CFileTime`物件。|  
-|[CFileTime::LocalToUTC](#localtoutc)|呼叫此方法以本機檔案時間轉換成國際標準時間 (UTC) 上的檔案時間。|  
+|[CFileTime::GetCurrentTime](#getcurrenttime)|呼叫此靜態函式來擷取`CFileTime`物件，表示目前的系統日期和時間。|  
+|[CFileTime::GetTime](#gettime)|呼叫這個方法來擷取從時間`CFileTime`物件。|  
+|[CFileTime::LocalToUTC](#localtoutc)|呼叫這個方法來將本機檔案時間轉換為以 Coordinated Universal Time (UTC) 上檔案時間。|  
 |[CFileTime::SetTime](#settime)|呼叫此方法以設定的日期和時間儲存`CFileTime`物件。|  
-|[CFileTime::UTCToLocal](#utctolocal)|呼叫這個方法來轉換以時間為基礎的國際標準時間 (UTC) 到本機檔案的時間。|  
+|[CFileTime::UTCToLocal](#utctolocal)|呼叫這個方法來轉換以時間為基礎在 Coordinated Universal Time (UTC) 到本機檔案的時間。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CFileTime::operator-](#operator_-)|此運算子用在上執行減法`CFileTime`或`CFileTimeSpan`物件。|  
+|[CFileTime::operator-](#operator_-)|此運算子用上執行減法`CFileTime`或`CFileTimeSpan`物件。|  
 |[CFileTime::operator ！ =](#operator_neq)|此運算子比較兩個`CFileTime`物件是否不相等。|  
 |[CFileTime::operator +](#operator_add)|此運算子用在 `CFileTimeSpan` 物件上執行加法。|  
 |[CFileTime::operator + =](#operator_add_eq)|此運算子用在 `CFileTimeSpan` 物件上執行加法並指派結果給目前物件。|  
 |[CFileTime::operator &lt;](#operator_lt)|此運算子比較兩個 `CFileTime` 物件來判斷何者較小。|  
 |[CFileTime::operator &lt;=](#operator_lt_eq)|此運算子比較兩個 `CFileTime` 物件來判斷是否相等或何者較小。|  
 |[CFileTime::operator =](#operator_eq)|指派運算子。|  
-|[CFileTime::operator =](#operator_-_eq)|此運算子用在上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。|  
+|[CFileTime::operator =](#operator_-_eq)|此運算子用上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。|  
 |[CFileTime::operator = =](#operator_eq_eq)|此運算子比較兩個 `CFileTime` 物件是否相等。|  
 |[CFileTime::operator &gt;](#operator_gt)|此運算子比較兩個 `CFileTime` 物件來判斷何者較大。|  
 |[CFileTime::operator &gt;=](#operator_gt_eq)|此運算子比較兩個 `CFileTime` 物件來判斷是否相等或何者較大。|  
@@ -86,28 +86,28 @@ class CFileTime :  public FILETIME
 |----------|-----------------|  
 |[CFileTime::Day](#day)|構成一天儲存 100 奈秒間隔數的靜態資料成員。|  
 |[CFileTime::Hour](#hour)|靜態資料成員，用來儲存構成一小時的 100 奈秒間隔數。|  
-|[CFileTime::Millisecond](#millisecond)|構成一毫秒儲存 100 奈秒間隔數的靜態資料成員。|  
-|[CFileTime::Minute](#minute)|構成一分鐘儲存 100 奈秒間隔數的靜態資料成員。|  
-|[CFileTime::Second](#second)|組成一個第二個儲存 100 奈秒間隔數的靜態資料成員。|  
+|[CFileTime::Millisecond](#millisecond)|靜態資料成員，用來儲存構成一毫秒的 100 奈秒間隔數。|  
+|[CFileTime::Minute](#minute)|靜態資料成員，用來儲存構成一分鐘的 100 奈秒間隔數。|  
+|[CFileTime::Second](#second)|組成一個第二個儲存的 100 奈秒間隔數的靜態資料成員。|  
 |[CFileTime::Week](#week)|靜態資料成員，用來儲存構成一週的 100 奈秒間隔數。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別會提供管理與建立、 存取和修改檔案相關聯的日期和時間值的方法。 方法與這個類別的資料通常用於搭配`CFileTimeSpan`處理相對的時間值的物件。  
+ 這個類別提供方法來管理與建立、 存取和修改檔案相關聯的日期和時間值。 這個類別的資料會使用方法和經常搭配`CFileTimeSpan`處理相對時間值的物件。  
   
- 日期和時間值會儲存為 64 位元值的 100 奈秒間隔數表示自 1601 年 1 月 1 日。 這是國際標準時間 (UTC) 格式。  
+ 日期和時間值會儲存為 64 位元值，表示自 1601 年 1 月 1 日起的 100 奈秒間隔數。 這是國際標準時間 (UTC) 格式。  
   
- 提供下列靜態 const 成員變數的目的是為了簡化計算：  
+ 以下列靜態 const 成員變數會提供簡化的計算：  
   
-|成員變數|100 奈秒間隔數|  
+|成員變數|100 奈秒間隔的數目|  
 |---------------------|-----------------------------------------|  
 |Millisecond|10,000|  
 |Second|毫秒 * 1000|  
 |Minute|第二個 * 60|  
 |Hour|分鐘 * 60|  
 |Day|小時 * 24|  
-|週|日 * 7|  
+|一週|天 * 7|  
   
- **請注意**並非所有的檔案系統可以記錄建立和上次存取時間和並非所有的檔案系統會將這些記錄的方式相同。 範例中的，在 Windows NT FAT 檔案系統上，建立時間具備 10 毫秒的解析度、 寫入時間發生的解析度為 2 秒，且存取時間的解析度為 1 天 （存取日期）。 NTFS，存取時間有 1 小時的解析度。 此外，FAT 記錄磁碟上的時間，以本地時間，但 NTFS 會記錄在磁碟上的時間-utc 時區。 如需詳細資訊，請參閱[檔案時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)。  
+ **請注意**並非所有的檔案系統可以記錄建立和上次存取時間和不是所有的檔案系統會將其記錄在相同的方式。 範例中的，在 Windows NT FAT 檔案系統中，建立時間的解析度為 10 毫秒，寫入時間有解析度為 2 秒，而且存取時間有 1 天 （存取的日期） 的解決方案。 在 NTFS，存取時間會有 1 小時的解決方案。 此外，FAT 當地時間，記錄在磁碟上的時間，但 NTFS 會記錄在磁碟上的時間-utc 時區。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `FILETIME`  
@@ -127,14 +127,14 @@ CFileTime(ULONGLONG nTime) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  A [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構。  
   
- `nTime`  
- 日期和時間，以表示 64 位元值。  
+ *n*  
+ 表示日期和時間做為 64 位元值。  
   
 ### <a name="remarks"></a>備註  
- `CFileTime`物件可以使用現有的日期和時間建立`FILETIME`結構，或以 （在本機或國際標準時間 (UTC) 時間格式） 的 64 位元值。 預設建構函式會將時間設定為 0。  
+ `CFileTime`物件可以使用現有的日期和時間建立`FILETIME`結構，或表示成 64 位元值 （在本機或 Coordinated Universal Time (UTC) 時間格式）。 預設建構函式會設定為 0 的時間。  
   
 ##  <a name="day"></a>  CFileTime::Day  
  構成一天儲存 100 奈秒間隔數的靜態資料成員。  
@@ -144,30 +144,30 @@ static const ULONGLONG Day = Hour* 24;
 ```  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CFileTime::Millisecond](#millisecond)。  
+ 範例，請參閱[CFileTime::Millisecond](#millisecond)。  
   
 ##  <a name="getcurrenttime"></a>  CFileTime::GetCurrentTime  
- 呼叫此靜態函式可擷取`CFileTime`物件，代表目前的系統日期和時間。  
+ 呼叫此靜態函式來擷取`CFileTime`物件，表示目前的系統日期和時間。  
   
 ```
 static CFileTime GetCurrentTime() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 以國際標準時間 (UTC) 格式傳回目前的系統日期和時間。  
+ 傳回目前的系統日期和時間，格式為 Coordinated Universal Time (UTC)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#41](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_1.cpp)]  
   
 ##  <a name="gettime"></a>  CFileTime::GetTime  
- 呼叫此方法以擷取從時間`CFileTime`物件。  
+ 呼叫這個方法來擷取從時間`CFileTime`物件。  
   
 ```
 ULONGLONG GetTime() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回日期和時間，表示為 64 位元數字，可能位於本機或國際標準時間 (UTC) 格式。  
+ 傳回的日期和時間為 64 位元數字，可能會在本機或 Coordinated Universal Time (UTC) 格式。  
   
 ##  <a name="hour"></a>  CFileTime::Hour  
  靜態資料成員，用來儲存構成一小時的 100 奈秒間隔數。  
@@ -177,10 +177,10 @@ static const ULONGLONG Hour = Minute* 60;
 ```  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CFileTime::Millisecond](#millisecond)。  
+ 範例，請參閱[CFileTime::Millisecond](#millisecond)。  
   
 ##  <a name="localtoutc"></a>  CFileTime::LocalToUTC  
- 呼叫此方法以本機檔案時間轉換成國際標準時間 (UTC) 上的檔案時間。  
+ 呼叫這個方法來將本機檔案時間轉換為以 Coordinated Universal Time (UTC) 上檔案時間。  
   
 ```
 CFileTime LocalToUTC() const throw();
@@ -190,10 +190,10 @@ CFileTime LocalToUTC() const throw();
  傳回`CFileTime`物件，其中包含時間以 UTC 格式。  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CFileTime::UTCToLocal](#utctolocal)。  
+ 範例，請參閱[CFileTime::UTCToLocal](#utctolocal)。  
   
 ##  <a name="millisecond"></a>  CFileTime::Millisecond  
- 構成一毫秒儲存 100 奈秒間隔數的靜態資料成員。  
+ 靜態資料成員，用來儲存構成一毫秒的 100 奈秒間隔數。  
   
 ```
 static const ULONGLONG Millisecond = 10000;
@@ -203,17 +203,17 @@ static const ULONGLONG Millisecond = 10000;
  [!code-cpp[NVC_MFCFiles#44](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_2.cpp)]  
   
 ##  <a name="minute"></a>  CFileTime::Minute  
- 構成一分鐘儲存 100 奈秒間隔數的靜態資料成員。  
+ 靜態資料成員，用來儲存構成一分鐘的 100 奈秒間隔數。  
   
 ```
 static const ULONGLONG Minute = Second* 60;
 ```  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CFileTime::Millisecond](#millisecond)。  
+ 範例，請參閱[CFileTime::Millisecond](#millisecond)。  
   
 ##  <a name="operator_-"></a>  CFileTime::operator-  
- 此運算子用在上執行減法`CFileTime`或`CFileTimeSpan`物件。  
+ 此運算子用上執行減法`CFileTime`或`CFileTimeSpan`物件。  
   
 ```
 CFileTime operator-(CFileTimeSpan span) const throw();
@@ -221,10 +221,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `span`  
+ *範圍*  
  `CFileTimeSpan` 物件。  
   
- `ft`  
+ *全文檢索*  
  `CFileTime` 物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -238,11 +238,11 @@ bool operator!=(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  要比較的 `CFileTime` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**所比較的項目是否不等於`CFileTime`物件，否則為**false**。  
+ 要比較的項目是否不相等，則傳回 TRUE`CFileTime`物件，否則為 FALSE。  
   
 ##  <a name="operator_add"></a>  CFileTime::operator +  
  此運算子用在 `CFileTimeSpan` 物件上執行加法。  
@@ -252,11 +252,11 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `span`  
+ *範圍*  
  `CFileTimeSpan` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`CFileTime`物件，代表原始時間加上的相對時間結果。  
+ 傳回`CFileTime`物件，表示結果的原始時間加上相對的時間。  
   
 ##  <a name="operator_add_eq"></a>  CFileTime::operator + =  
  此運算子用在 `CFileTimeSpan` 物件上執行加法並指派結果給目前物件。  
@@ -266,7 +266,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `span`  
+ *範圍*  
  `CFileTimeSpan` 物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -280,11 +280,11 @@ bool operator<(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  要比較的 `CFileTime` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**的第一個物件是否小於 （稍早的時間），第二個**false**否則。  
+ 為 true，則會傳回第一個物件是否小於 （稍早的時間），第二個，FALSE 否則。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#43](../../atl-mfc-shared/reference/codesnippet/cpp/cfiletime-class_3.cpp)]  
@@ -297,11 +297,11 @@ bool operator<=(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  要比較的 `CFileTime` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**的第一個物件是否小於 （先前的時間） 或等於第二個，否則**false**。  
+ 會傳回 TRUE，如果第一個物件小於 （早的時間） 或等於第二個，否則為 FALSE。  
   
 ##  <a name="operator_eq"></a>  CFileTime::operator =  
  指派運算子。  
@@ -311,21 +311,21 @@ CFileTime& operator=(const FILETIME& ft) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  A`CFileTime`物件，其中包含新的時間和日期。  
   
 ### <a name="return-value"></a>傳回值  
  傳回已更新`CFileTime`物件。  
   
 ##  <a name="operator_-_eq"></a>  CFileTime::operator =  
- 此運算子用在上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。  
+ 此運算子用上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。  
   
 ```
 CFileTime& operator-=(CFileTimeSpan span) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `span`  
+ *範圍*  
  A`CFileTimeSpan`物件，其中包含要減去的相對時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -339,11 +339,11 @@ bool operator==(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  `CFileTime`来比較的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**如果物件相等，否則為**false**。  
+ 如果物件相等，否則為 FALSE，則傳回 TRUE。  
   
 ##  <a name="operator_gt"></a>  CFileTime::operator &gt;  
  此運算子比較兩個 `CFileTime` 物件來判斷何者較大。  
@@ -353,11 +353,11 @@ bool operator>(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  要比較的 `CFileTime` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**的第一個物件 （稍後時間） 是否大於第二個，否則**false**。  
+ 會傳回 TRUE，如果第一個物件大於 （稍後時間） 第二個，否則為 FALSE。  
   
 ##  <a name="operator_gt_eq"></a>  CFileTime::operator &gt;=  
  此運算子比較兩個 `CFileTime` 物件來判斷是否相等或何者較大。  
@@ -367,11 +367,11 @@ bool operator>=(CFileTime ft) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `ft`  
+ *全文檢索*  
  要比較的 `CFileTime` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**的第一個物件是否 （稍後以時間表示） 大於或等於第二個，否則**false**。  
+ 會傳回 TRUE，如果第一個物件 （稍後時間） 大於或等於第二個，否則為 FALSE。  
   
 ##  <a name="second"></a>  CFileTime::Second  
  構成一天儲存 100 奈秒間隔數的靜態資料成員。  
@@ -381,7 +381,7 @@ static const ULONGLONG Second = Millisecond* 1000;
 ```  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CFileTime::Millisecond](#millisecond)。  
+ 範例，請參閱[CFileTime::Millisecond](#millisecond)。  
   
 ##  <a name="settime"></a>  CFileTime::SetTime  
  呼叫此方法以設定的日期和時間儲存`CFileTime`物件。  
@@ -391,11 +391,11 @@ void SetTime(ULONGLONG nTime) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTime`  
- 64 位元代表之值的日期和時間，在本機或國際標準時間 (UTC) 格式。  
+ *n*  
+ 64 位元值，其代表的日期和時間，請在本機或 Coordinated Universal Time (UTC) 格式。  
   
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal  
- 呼叫這個方法來轉換以時間為基礎的國際標準時間 (UTC) 到本機檔案的時間。  
+ 呼叫這個方法來轉換以時間為基礎在 Coordinated Universal Time (UTC) 到本機檔案的時間。  
   
 ```
 CFileTime UTCToLocal() const throw();
@@ -415,7 +415,7 @@ static const ULONGLONG Week = Day* 7;
 ```  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CFileTime::Millisecond](#millisecond)。  
+ 範例，請參閱[CFileTime::Millisecond](#millisecond)。  
   
 ## <a name="see-also"></a>另請參閱  
  [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   

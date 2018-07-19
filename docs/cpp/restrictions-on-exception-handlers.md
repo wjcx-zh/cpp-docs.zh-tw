@@ -1,5 +1,5 @@
 ---
-title: 例外狀況處理常式的限制 |Microsoft 文件
+title: 例外狀況處理常式的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f739152b502a156dc62dfab279e5ad044cfff99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420200"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938779"
 ---
 # <a name="restrictions-on-exception-handlers"></a>例外狀況處理常式的限制
-在程式碼中使用例外狀況處理常式的主要限制是，您不能使用 `goto` 陳述式跳入 `__try` 陳述式區塊。 您必須改為透過一般控制流程進入陳述式區塊。 您可以跳出 `__try` 陳述式區塊，並且依您選擇的方式將例外狀況處理常式巢狀化。  
+程式碼中使用例外狀況處理常式的主要限制是，您無法使用**goto**陳述式跳入 **__try**陳述式區塊。 您必須改為透過一般控制流程進入陳述式區塊。 您可以跳出 **__try**陳述式區塊和巢狀例外狀況處理常式，如您所選擇。  
   
 ## <a name="see-also"></a>另請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   

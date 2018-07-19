@@ -1,5 +1,5 @@
 ---
-title: 呼叫範例的結果 |Microsoft 文件
+title: 呼叫範例的結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc5d5f96b5ffabd5397f26b6ff1372232fe0cd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421415"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939103"
 ---
 # <a name="results-of-calling-example"></a>呼叫範例的結果
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -35,18 +35,18 @@ ms.locfileid: "32421415"
 __cdecl 呼叫慣例  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall 和 thiscall  
- C 裝飾名稱 (`__stdcall`) 是 「_MyFunc@20。 」 C++ 裝飾名稱為機密。  
+ C 裝飾名稱 (**__stdcall**) 是 「_MyFunc@20。 」 C++ 裝飾名稱為機密。  
   
  ![&#95;&#95;stdcall 和 thiscall 呼叫慣例](../cpp/media/vc37i02.gif "vc37I02")  
 __stdcall 和 thiscall 呼叫慣例  
   
 ## <a name="fastcall"></a>__fastcall  
- C 裝飾名稱 (`__fastcall`) 是 「@MyFunc@20。 」 C++ 裝飾名稱為機密。  
+ C 裝飾名稱 (**__fastcall**) 是 「@MyFunc@20。 」 C++ 裝飾名稱為機密。  
   
- ![呼叫慣例&#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
+ ![呼叫慣例，如&#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
 __fastcall 呼叫慣例  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [呼叫範例：函式原型和呼叫](../cpp/calling-example-function-prototype-and-call.md)

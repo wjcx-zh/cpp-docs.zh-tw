@@ -1,5 +1,5 @@
 ---
-title: 執行階段類型資訊 |Microsoft 文件
+title: 執行階段類型資訊 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419988"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938911"
 ---
 # <a name="run-time-type-information"></a>執行階段類型資訊
 執行階段類型資訊 (RTTI) 是一項機制，可在程式執行期間判斷物件的類型。 C++ 語言中加入 RTTI 的原因在於，有許多類別庫的廠商本身實作這項功能。 這樣會導致程式庫之間不相容。 因此，在語言層級支援執行階段類型資訊的需求變得很明確。  
@@ -42,7 +42,7 @@ ms.locfileid: "32419988"
   
 -   [Type_info](../cpp/type-info-class.md)類別。  
   
-     用來保存 `typeid` 運算子傳回的類型資訊。  
+     用來保存所傳回的型別資訊**typeid**運算子。  
   
 ## <a name="see-also"></a>另請參閱  
  [轉型](../cpp/casting.md)

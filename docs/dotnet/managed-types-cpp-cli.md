@@ -1,5 +1,5 @@
 ---
-title: Managed 類型 (C + + /CLI) |Microsoft 文件
+title: Managed 類型 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,33 +12,227 @@ helpviewer_keywords:
 - managed data types [C++]
 - .NET Framework [C++], managed types
 - data types [C++], .NET feature access
+- main function, in managed applications
+- managed code, main() function
+- .NET Framework [C++], C++ equivalents
+- __nogc type declarations
+- __value keyword, issues when nesting
+- equality, testing for
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3be1f6d3bf0ac76565ec3f7bf69c84fbe7496266
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a14b217df2bdc8aec8e8d823df7661e8b4754b38
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137673"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39092990"
 ---
 # <a name="managed-types-ccli"></a>Managed 類型 (C++/CLI)
-Visual c + + 可讓您透過 managed 型別，以便支援 common language runtime 的功能並受限於的優點和限制的執行階段的.NET 功能存取。  
+Visual c + + 可讓您透過 managed 型別，其提供通用語言執行平台功能的支援，但有可能的優點和限制的執行階段的.NET 功能的存取權。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="main_functions"></a> Managed 的類型和 main 函式
+撰寫應用程式使用時 **/clr**的引數**main （)** 函式不能是 managed 型別。  
   
--   [Managed 的類型和 main 函式](../dotnet/managed-types-and-the-main-function-cpp-cli.md)  
+ 是適當的簽章的範例：  
   
--   [C++ 原生類型的 .NET Framework 對等項 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)  
+```cpp  
+// managed_types_and_main.cpp  
+// compile with: /clr  
+int main(int, char*[], char*[]) {}  
+```  
+
+## <a name="dotnet"></a> C + + 原生類型的.NET framework 對應項
+下表顯示內建的 Visual c + + 類型，也就是預先定義的型別的別名的關鍵字中**系統**命名空間。  
   
--   [在原生類型中巢狀化之實值型別的版本問題 (C++/CLI)](../dotnet/version-issues-for-value-types-nested-in-native-types-cpp-cli.md)  
+|Visual c + + 類型|.NET Framework 類型|  
+|-----------------------|-------------------------|  
+|**bool**|**System.Boolean**|  
+|**char&lt;3** (請參閱 < [/J](../build/reference/j-default-char-type-is-unsigned.md)如需詳細資訊)|**System.SByte**|  
+|**unsigned char**|**System.Byte**|  
+|**wchar_t**|**System.Char**|  
+|**雙精度浮點**和**長雙精度**|**System.Double**|  
+|**float**|**System.Single**|  
+|**int**，**帶正負號 int**， **long**，和**帶正負號長時間**|**System.Int32**|  
+|**不帶正負號的 int**和**不帶正負號長時間**|**System.UInt32**|  
+|**__int64**和**帶正負號的 __int64**|**System.Int64**|  
+|**unsigned __int64**|**System.UInt64**|  
+|**簡短**和**帶正負號短**|**System.Int16**|  
+|**unsigned short**|**System.UInt16**|  
+|**void**|**System.Void**|  
   
--   [如何：測試是否相等 (C++/CLI)](../dotnet/how-to-test-for-equality-cpp-cli.md)  
+## <a name="version_issues"></a> 在原生類型中巢狀的實值型別的版本問題
+請考慮用來建置用戶端組件的帶正負號 （強式名稱） 組件元件。 元件包含在用戶端當做類型使用的原生的等位、 類別或陣列成員的實值型別。 如果未來版本的元件變更的大小或值類型的配置，就必須重新編譯用戶端。  
   
--   [如何：診斷和修正組件相容性問題 (C++/CLI)](../dotnet/how-to-diagnose-and-fix-assembly-compatibility-problems-cpp-cli.md)  
+ 建立與 keyfile [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`)。  
   
+### <a name="example"></a>範例  
+ 下列範例是元件。  
+  
+```cpp 
+// nested_value_types.cpp  
+// compile with: /clr /LD  
+using namespace System::Reflection;  
+[assembly:AssemblyVersion("1.0.0.*"),   
+assembly:AssemblyKeyFile("mykey.snk")];  
+  
+public value struct S {  
+   int i;  
+   void Test() {  
+      System::Console::WriteLine("S.i = {0}", i);  
+   }  
+};  
+```  
+  
+### <a name="example"></a>範例  
+ 這個範例是用戶端：  
+  
+```cpp  
+// nested_value_types_2.cpp  
+// compile with: /clr  
+#using <nested_value_types.dll>  
+  
+struct S2 {  
+   S MyS1, MyS2;  
+};  
+  
+int main() {  
+   S2 MyS2a, MyS2b;  
+   MyS2a.MyS1.i = 5;  
+   MyS2a.MyS2.i = 6;  
+   MyS2b.MyS1.i = 10;  
+   MyS2b.MyS2.i = 11;  
+  
+   MyS2a.MyS1.Test();  
+   MyS2a.MyS2.Test();  
+   MyS2b.MyS1.Test();  
+   MyS2b.MyS2.Test();  
+}  
+```  
+  
+### <a name="output"></a>輸出  
+  
+```  
+S.i = 5  
+S.i = 6  
+S.i = 10  
+S.i = 11  
+```  
+  
+### <a name="comments"></a>註解  
+ 不過，如果您新增另一個成員，才能`struct S`nested_value_types.cpp，在 (例如`double d;`) 並重新編譯元件，不需要重新編譯用戶端，結果就是未處理的例外狀況 (型別的<xref:System.IO.FileLoadException?displayProperty=fullName>)。  
+
+## <a name="test_equality"></a> 如何： 測試是否相等
+在下列範例中，使用 Managed Extensions for c + + 的相等測試為基礎的控制代碼的參考。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// mcppv2_equality_test.cpp  
+// compile with: /clr /LD  
+using namespace System;  
+  
+bool Test1() {  
+   String ^ str1 = "test";  
+   String ^ str2 = "test";  
+   return (str1 == str2);  
+}  
+```  
+  
+ 此程式 IL 顯示使用 op_Equality 呼叫實作傳回的值。  
+  
+```  
+IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,  
+                                                               string)  
+```  
+
+## <a name="diagnose_fix"></a> 如何： 診斷和修正組件相容性問題
+本主題說明在編譯時期參考的組件的版本不符合在執行階段，參考的組件的版本時，會發生什麼情況，以及如何避免發生問題。  
+  
+ 當編譯組件時，可能會使用參考其他組件`#using`語法。 在編譯期間，這些組件是由編譯器所存取。 這些組件中的資訊用來進行最佳化的決策。  
+  
+ 不過，如果變更或重新編譯參考的組件時，您不重新編譯參考的組件相依於它的組件可能不相容。 在有效的最佳化決策第一次可能不是正確的新組件版本。 多個執行階段錯誤可能是因為這些不相容情況。 沒有特定的例外狀況會在此情況下產生。 在執行階段回報的失敗的方式取決於程式碼變更造成問題的本質。  
+  
+ 這些錯誤不應最終的實際執行程式碼中的問題，只要您的產品發行版本都會建立整個應用程式。 公開發行的組件應該標示官方的版本號碼，如此可確保可避免這些問題。 如需詳細資訊，請參閱[組件版本控制](/dotnet/framework/app-domains/assembly-versioning)。  
+  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>診斷和修復不相容錯誤  
+  
+1.  如果您遇到執行階段例外狀況或其他參考另一個組件，程式碼中發生的錯誤狀況，而且找不到問題起因，您可能會處理過期的組件。  
+  
+2.  首先，找出並重現或其他錯誤狀況的例外狀況。 因為發生過期的例外狀況，就會發生的問題應該是可重現。  
+  
+3.  請檢查您的應用程式中參考的任何組件的時間戳記。  
+  
+4.  如果任何參考組件的時間戳記晚於您的應用程式的最後一個編譯的時間戳記，您的應用程式已過期。 如果發生這種情況，重新編譯您的應用程式的最新的組件，並進行任何所需的程式碼變更。  
+  
+5.  重新執行應用程式，請執行重現問題，並確認不會不會發生例外狀況的步驟。  
+  
+### <a name="example"></a>範例  
+ 下列程式說明的問題，透過減少; 方法的協助工具，並嘗試存取另一個組件中的該方法不需要重新編譯。 嘗試編譯`changeaccess.cpp`第一次。 這是所參考的組件會變更。 然後，編譯`referencing.cpp`。 編譯會成功。 現在，以減少呼叫的方法的存取範圍。 重新編譯`changeaccess.cpp`旗標`/DCHANGE_ACCESS`。 這會讓方法受到保護，而非私用，因此您可以再呼叫合法。 不需要重新編譯`referencing.exe`，重新執行應用程式。 例外狀況<xref:System.MethodAccessException>會產生。  
+  
+```cpp  
+// changeaccess.cpp  
+// compile with: /clr:safe /LD  
+// After the initial compilation, add /DCHANGE_ACCESS and rerun  
+// referencing.exe to introduce an error at runtime. To correct  
+// the problem, recompile referencing.exe  
+  
+public ref class Test {  
+#if defined(CHANGE_ACCESS)  
+protected:  
+#else  
+public:  
+#endif  
+  
+  int access_me() {  
+    return 0;  
+  }  
+  
+};  
+  
+```  
+  
+```cpp  
+// referencing.cpp  
+// compile with: /clr:safe   
+#using <changeaccess.dll>  
+  
+// Force the function to be inline, to override the compiler's own  
+// algorithm.  
+__forceinline  
+int CallMethod(Test^ t) {  
+  // The call is allowed only if access_me is declared public  
+  return t->access_me();  
+}  
+  
+int main() {  
+  Test^ t = gcnew Test();  
+  try  
+  {  
+    CallMethod(t);  
+    System::Console::WriteLine("No exception.");  
+  }  
+  catch (System::Exception ^ e)  
+  {  
+    System::Console::WriteLine("Exception!");  
+  }  
+  return 0;  
+}  
+  
+```  
+
 ## <a name="see-also"></a>另請參閱  
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+ [與其他 .NET 語言間的互通性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+
+ [Managed 類型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)
+
+ [#using 指示詞](../preprocessor/hash-using-directive-cpp.md) 

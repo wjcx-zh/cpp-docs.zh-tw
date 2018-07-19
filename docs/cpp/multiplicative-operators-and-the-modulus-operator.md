@@ -1,5 +1,5 @@
 ---
-title: 乘法類運算子和模數運算子 |Microsoft 文件
+title: 乘法類運算子和模數運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942995"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
 ## <a name="syntax"></a>語法  
@@ -51,17 +52,17 @@ expression % expression
   
  這些二進位運算子具有由左至右的順序關聯性。  
   
- 乘法類運算子接受算術類型的運算元。 模數運算子 (`%`) 具有較嚴格的要求，其運算元必須為整數類資料類型  (若要取得浮點除法的餘數，請使用執行階段函式[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵蓋的轉換[標準轉換](standard-conversions.md)適用於運算元，結果會是轉換後的類型。  
+ 乘法類運算子接受算術類型的運算元。 模數運算子 (`%`) 具有較嚴格的要求，其運算元必須為整數類資料類型  (若要取得浮點除法的餘數，請使用執行階段函式[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵蓋的轉換[標準轉換](standard-conversions.md)適用於運算元，結果是已轉換的型別。  
   
  乘法運算子會產生第一個運算元與第二個運算元相乘的結果。  
   
  除法運算子會產生第一個運算元除以第二個運算元的結果。  
   
- 模數運算子會產生下列運算式中，所提供的其餘部分其中*e1*是第一個運算元和*e2*是第二個： *e1* -(*e1* /  *e2*) \* *e2*，其中兩個運算元都是整數類資料類型。  
+ 模數運算子會根據下列運算式會將剩餘所在*e1*是第一個運算元並*e2*是第二個： *e1* -(*e1* /  *e2*) \* *e2*，其中的兩個運算元都是整數類資料類型。  
   
  在除法或模數運算式中除以 0 並未定義，而且會產生執行階段錯誤。 因此，下列運算式會產生未定義的錯誤結果：  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -74,15 +75,15 @@ f / 0.0
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
  在 Microsoft C++ 中，模數運算式的結果一律與第一個運算元的正負號相同。  
   
-**結束 Microsoft 特定的**  
- 如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，計算的值的-11 / 3 是-3.666666666。 該整數除法的結果是-3。  
+**結束 Microsoft 專屬**  
+ 如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，-11 的計算的值 / 3 為-3.666666666。 該整數除法的結果是-3。  
   
- 乘法類運算子之間的關聯性由身分識別提供 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
+ 乘法類運算子之間的關聯性根據身分識別 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
   
 ## <a name="example"></a>範例  
- 下列程式將示範乘法類運算子。 請注意的任一個運算元`10 / 3`必須明確轉換為類型`float`避免發生截斷，如此這兩個運算元都是類型`float`除法之前。  
+ 下列程式將示範乘法類運算子。 請注意的任一個運算元`10 / 3`必須明確地轉換為類型**浮點數**若要避免發生截斷，使兩個運算元的型別**float**除法之前。  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  

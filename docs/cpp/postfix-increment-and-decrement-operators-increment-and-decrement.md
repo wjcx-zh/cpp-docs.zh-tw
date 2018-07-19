@@ -1,5 +1,5 @@
 ---
-title: '後置遞增和遞減運算子: + + 和-|Microsoft 文件'
+title: '後置遞增和遞減運算子: + + 和-|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942880"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 ## <a name="syntax"></a>語法  
@@ -39,27 +40,27 @@ postfix-expression --
 ```  
   
 ## <a name="remarks"></a>備註  
- C++ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增和遞減運算子。 (如需詳細資訊，請參閱[前置遞增和遞減運算子](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)。)兩者之間的差異是在後置標記法中，會出現在運算子*後置運算式*，而在前置標記法中，運算子會出現之前*運算式。* 下列範例顯示後置遞增運算子：  
+ C++ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增和遞減運算子。 (如需詳細資訊，請參閱 <<c0> [ 前置遞增和遞減運算子](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)。)兩者之間的差異是在後置標記法中，會出現在運算子*後置運算式*，而在前置標記法中，運算子會出現之前*運算式。* 下列範例顯示後置遞增運算子：  
   
-```  
+```cpp 
 i++;  
 ```  
   
- 套用後置遞增運算子 (`++`) 的作用是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子的效果 (**--**) 是運算元的值會減少一個單位的適當類型。  
+ 套用後置遞增運算子 (`++`) 的作用是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子的效果 (**--**) 是運算元的值會減少一個單位的適當的型別。  
   
- 請務必注意後, 置遞增或遞減運算式會評估運算式的值為**之前**個別運算子的應用程式。 遞增或遞減作業，就會發生**之後**則會評估運算元。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。  
+ 請務必請注意，後置遞增或遞減運算式會評估運算式的值為*之前*個別運算子的應用程式。 遞增或遞減運算，就會發生*之後*則會評估運算元。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。  
   
  使用後置運算子當做函式的引數時，引數的值在傳遞至函式之前不保證會遞增或遞減。  如需詳細資訊，請參閱 C++ 標準中的 1.9.17 一節。  
   
- 將後置遞增運算子套用至類型的物件陣列的指標**長**實際上是新增四個指標的內部表示法。 這個行為會導致指標先前參考*n*th 項目來參考陣列的 (*n*+ 1) 個項目。  
+ 將後置遞增運算子套用至類型的物件陣列的指標**長**實際上是新增四個指標的內部表示法。 這個行為會導致先前參考的指標*n*個元素的陣列，請參閱 (*n*+ 1) 個項目。  
   
- 後置遞增和後置遞減運算子的運算元必須是可修改 (不**const**) 是算術或指標類型的左值。 結果型別是屬於相同*後置運算式*，但已不再是左值。  
+ 後置遞增和後置遞減運算子的運算元必須是可修改 (不**const**) 左值的算術或指標類型。 結果的型別是相同*後置運算式*，但已不再是左值。  
   
-**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元的後置遞增或遞減運算子可能不是型別`bool`。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元的後置遞增或遞減運算子可能不是類型**bool**。
   
  下列程式碼示範後置遞增運算子：  
   
-```  
+```cpp 
 // expre_Postfix_Increment_and_Decrement_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -74,7 +75,7 @@ int main() {
   
  不支援在列舉類型上進行後置遞增和後置遞減運算：  
   
-```  
+```cpp 
 enum Compass { North, South, East, West );  
 Compass myCompass;  
 for( myCompass = North; myCompass != West; myCompass++ ) // Error  

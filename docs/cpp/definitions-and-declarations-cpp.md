@@ -1,5 +1,5 @@
 ---
-title: 定義和宣告 （c + +） |Microsoft 文件
+title: 定義和宣告 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411763"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940907"
 ---
 # <a name="definitions-and-declarations-c"></a>定義和宣告 (C++)
 ## <a name="microsoft-specific"></a>Microsoft 特定的
- DLL 介面會參考已知由系統中匯出的某些程式的所有項 （函式和資料）也就是說，所有的項目宣告為`dllimport`或`dllexport`。 DLL 介面中的所有宣告都必須都指定`dllimport`或`dllexport`屬性。 不過，此定義只能指定 `dllexport` 屬性。 例如，下列函式定義會產生編譯器錯誤：
+ DLL 介面會參考已知由系統; 中匯出的某些程式的所有項 （函式和資料）也就是說，所有的項目宣告為**dllimport**或是**dllexport**。 DLL 介面中的所有宣告都必須都指定**dllimport**或是**dllexport**屬性。 不過，定義必須只指定**dllexport**屬性。 例如，下列函式定義會產生編譯器錯誤：
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- 使用`dllexport`隱含了定義，而`dllimport`隱含了宣告。 您必須使用 `extern` 關鍵字搭配 `dllexport` 以強制進行宣告，否則其中會隱含宣告。 因此，下列範例是正確的：
+ 善用**dllexport**隱含了定義，而**dllimport**隱含了宣告。 您必須使用**extern**關鍵字搭配**dllexport**強制宣告; 定義隱含的否則為。 因此，下列範例是正確的：
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -73,7 +73,7 @@ void func() {
 }
 ```
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
  [dllexport、dllimport](../cpp/dllexport-dllimport.md)

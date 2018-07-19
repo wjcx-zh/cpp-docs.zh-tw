@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Detach |Microsoft 文件
+title: _bstr_t::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 117a2df667b9aa9ee13fc30dd0eff4bd201907c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408948"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940247"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  傳回 `BSTR` 所包裝的 `_bstr_t`，並將 `BSTR` 與 `_bstr_t` 中斷連結。  
   
@@ -40,9 +40,9 @@ BSTR Detach( ) throw;
  `BSTR` 包裝 `_bstr_t`。  
   
 ## <a name="example"></a>範例  
- 請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)範例使用**卸離**。  
+ 請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)範例使用`Detach`。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

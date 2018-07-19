@@ -1,5 +1,5 @@
 ---
-title: IPerPropertyBrowsingImpl 類別 |Microsoft 文件
+title: IPerPropertyBrowsingImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9fffd6151405eaf53e99f770281139d7664b01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e5c202ed5e4c7e58ab8c503cece3750f2dd606e3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364904"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883101"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 類別
-這個類別會實作**IUnknown**並可讓用戶端存取物件的屬性頁中的資訊。  
+這個類別會實作`IUnknown`，並可讓用戶端來存取物件的屬性頁中的資訊。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IPerPropertyBrowsingImpl`。  
   
 ## <a name="members"></a>成員  
@@ -56,15 +56,15 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 |名稱|描述|  
 |----------|-----------------|  
 |[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|擷取字串，描述指定的屬性。|  
-|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|擷取指定的屬性可以接受的值相對應字串的陣列。|  
-|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|擷取**VARIANT**包含所指定的 DISPID 識別屬性的值。 從擷取的字串名稱是相關聯 DISPID `GetPredefinedStrings`。 ATL 實作會傳回**E_NOTIMPL**。|  
-|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|擷取與指定屬性相關聯的屬性頁的 CLSID。|  
+|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|擷取對應至指定的屬性可以接受的值的字串陣列。|  
+|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|擷取變數，包含所指定的 DISPID 識別屬性的值。 從擷取的字串名稱是相關聯的 DISPID `GetPredefinedStrings`。 ATL 實作會傳回 E_NOTIMPL。|  
+|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|擷取指定的屬性相關聯的屬性頁 CLSID。|  
   
 ## <a name="remarks"></a>備註  
- [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432)介面允許用戶端存取物件的屬性頁中的資訊。 類別`IPerPropertyBrowsingImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ [IPerPropertyBrowsing](http://msdn.microsoft.com/library/windows/desktop/ms678432)介面允許用戶端存取物件的屬性頁中的資訊。 類別`IPerPropertyBrowsingImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
 > [!NOTE]
->  如果您使用 Microsoft Access 作為容器應用程式，您必須在衍生類別從`IPerPropertyBrowsingImpl`。 否則，存取不會載入您的控制項。  
+>  如果您使用 Microsoft Access 作為容器應用程式，您必須衍生您的類別，從`IPerPropertyBrowsingImpl`。 否則，存取將不會載入您的控制項。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -99,13 +99,13 @@ STDMETHOD(GetPredefinedStrings)(
 ```  
   
 ### <a name="return-value"></a>傳回值  
- ATL 的實作[GetPredefinedValue](#getpredefinedvalue)傳回**E_NOTIMPL**。  
+ ATL 的實作[GetPredefinedValue](#getpredefinedvalue)傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) Windows SDK 中。  
   
 ##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
- 擷取**VARIANT**包含所指定的 DISPID 識別屬性的值。 從擷取的字串名稱是相關聯 DISPID `GetPredefinedStrings`。  
+ 擷取變數，包含所指定的 DISPID 識別屬性的值。 從擷取的字串名稱是相關聯的 DISPID `GetPredefinedStrings`。  
   
 ```
 STDMETHOD(GetPredefinedValue)(
@@ -115,15 +115,15 @@ STDMETHOD(GetPredefinedValue)(
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**E_NOTIMPL**。  
+ 傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- ATL 的實作[GetPredefinedStrings](#getpredefinedstrings)擷取任何對應的字串。  
+ ATL 的實作[GetPredefinedStrings](#getpredefinedstrings)會抓取沒有對應的字串。  
   
  請參閱[IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) Windows SDK 中。  
   
 ##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
- 擷取與指定屬性相關聯的屬性頁的 CLSID。  
+ 擷取與指定的屬性相關聯的屬性頁 CLSID。  
   
 ```
 STDMETHOD(MapPropertyToPage)(
@@ -132,7 +132,7 @@ STDMETHOD(MapPropertyToPage)(
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 會使用物件的屬性對應，來取得這項資訊。  
+ ATL 會使用物件的屬性對應，以取得此資訊。  
   
  請參閱[IPerPropertyBrowsing::MapPropertyToPage](http://msdn.microsoft.com/library/windows/desktop/ms694476) Windows SDK 中。  
   

@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::GetInterfacePtr |Microsoft 文件
+title: _com_ptr_t::GetInterfacePtr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba50965199128726f325fc0dcf9260c6415bf0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e81484f7b40417320078700332b512cbc81d7e6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942656"
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  傳回封裝的介面指標。  
   
@@ -31,14 +32,14 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      Interface* GetInterfacePtr( ) const throw( );   
+Interface* GetInterfacePtr( ) const throw( );   
 Interface*& GetInterfacePtr() throw();  
 ```  
   
 ## <a name="remarks"></a>備註  
- 傳回封裝的介面指標，這可能是**NULL**。  
+ 傳回封裝的介面指標，可能是 NULL。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

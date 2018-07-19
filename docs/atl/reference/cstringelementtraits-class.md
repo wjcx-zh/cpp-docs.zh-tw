@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraits 類別 |Microsoft 文件
+title: CStringElementTraits 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0c6ed9fb68e685a7b8a59b049277e61f41fd2ce
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363981"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885721"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits 類別
-這個類別會提供所儲存的集合類別使用的靜態函式`CString`物件。  
+這個類別會提供使用儲存的集合類別的靜態函式`CString`物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,8 +42,8 @@ class CStringElementTraits
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 若要儲存在集合中的資料類型。  
+ *T*  
+ 若要在集合中儲存的資料型別。  
   
 ## <a name="members"></a>成員  
   
@@ -51,39 +51,39 @@ class CStringElementTraits
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CStringElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
+|[CStringElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|  
 |[CStringElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CStringElementTraits::CompareElements](#compareelements)|（靜態）呼叫此函式來比較兩個字串元素相等。|  
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式來比較兩個字串元素。|  
+|[CStringElementTraits::CompareElements](#compareelements)|（靜態）呼叫此函式來比較兩個字串項目相等。|  
+|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式來比較兩個字串項目。|  
 |[CStringElementTraits::CopyElements](#copyelements)|（靜態）呼叫此函式來複製`CString`集合類別物件中儲存的項目。|  
-|[CStringElementTraits::Hash](#hash)|（靜態）呼叫此函式來計算雜湊值的指定的字串的項目。|  
+|[CStringElementTraits::Hash](#hash)|（靜態）呼叫此函式來計算雜湊值，指定的字串項目。|  
 |[CStringElementTraits::RelocateElements](#relocateelements)|（靜態）呼叫此函式來重新放置`CString`集合類別物件中儲存的項目。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供靜態函式來複製、 移動和比較字串以及建立雜湊值。 當使用來儲存字串為基礎之資料的集合類別，這些函式會很有用。 使用[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)需要不區分大小寫的比較時。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)字串物件要處理做為參考。  
+ 這個類別提供靜態函式，如複製、 移動和比較字串，以及如何建立雜湊值。 使用集合類別來儲存字串為基礎的資料時，則這些函式會很有用。 使用[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)需要不區分大小寫的比較時。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)字串物件時處理做為參考。  
   
- 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
+ 如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** cstringt.h  
   
 ##  <a name="compareelements"></a>  CStringElementTraits::CompareElements  
- 呼叫此靜態函式來比較兩個字串元素相等。  
+ 呼叫此靜態函式來比較兩個字串項目相等。  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>參數  
- `str1`  
+ *str1*  
  第一個字串項目。  
   
- `str2`  
+ *str2*  
  第二個字串項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -97,14 +97,14 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>參數  
- `str1`  
+ *str1*  
  第一個字串項目。  
   
- `str2`  
+ *str2*  
  第二個字串項目。  
   
 ### <a name="return-value"></a>傳回值  
- 如果是相同的字串則為零，< 0 如果`str1`是小於`str2`，或 > 0 如果`str1`大於`str2`。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。  
+ 若字串相同的零，< 0 如果*str1*是小於*str2*，或 > 0 如果*str1*大於*str2*。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。  
 
   
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
@@ -118,34 +118,34 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDest`  
+ *pDest*  
  將接收複製的資料的第一個元素的指標。  
   
- `pSrc`  
+ *pSrc*  
  若要複製的第一個元素的指標。  
   
- `nElements`  
+ *nElements*  
  要複製的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 來源和目的地的項目不應該重疊。  
+ 不應該重疊的來源和目的地的項目。  
   
 ##  <a name="hash"></a>  CStringElementTraits::Hash  
- 呼叫此靜態函式來計算雜湊值的指定的字串的項目。  
+ 呼叫此靜態函式來計算雜湊值，指定的字串項目。  
   
 ```
 static ULONG Hash(INARGTYPE str);
 ```  
   
 ### <a name="parameters"></a>參數  
- `str`  
- 字串項目。  
+ *str*  
+ 字串項目中。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回使用字串的內容來計算雜湊值。  
+ 傳回使用字串的內容計算的雜湊值。  
   
 ##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
- 要用來將項目加入至集合的類別物件的資料類型。  
+ 要用於將項目加入至集合的類別物件的資料類型。  
   
 ```
 typedef T::PCXSTR INARGTYPE;
@@ -169,17 +169,17 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDest`  
- 將會收到重新配置的資料的第一個元素的指標。  
+ *pDest*  
+ 將會收到重新定位的資料的第一個元素的指標。  
   
- `pSrc`  
- 第一個項目，即可重新定位指標。  
+ *pSrc*  
+ 重新定位之第一個元素的指標。  
   
- `nElements`  
- 重新定位的項目數目。  
+ *nElements*  
+ 若要重新配置的元素數目。  
   
 ### <a name="remarks"></a>備註  
- 此靜態函式呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大多數的資料類型。 如果要移動的物件包含它們自己的成員的指標，此靜態函式必須覆寫。  
+ 此靜態函式會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大部分的資料類型。 如果要移動的物件包含其本身的成員的指標，此靜態函式必須覆寫。  
   
 ## <a name="see-also"></a>另請參閱  
  [CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)   

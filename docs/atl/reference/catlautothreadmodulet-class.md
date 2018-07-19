@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModuleT 類別 |Microsoft 文件
+title: CAtlAutoThreadModuleT 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361414"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883069"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 類別
-這個類別會提供實作在集區執行緒的 apartment model COM 伺服器的方法。  
+這個類別提供方法實作在執行緒集區的 apartment model COM 伺服器。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 類別會實作的 COM 伺服器。  
+ *T*  
+ 類別會實作 COM 伺服器。  
   
- `ThreadAllocator`  
+ *ThreadAllocator*  
  管理執行緒的選取項目類別。 預設值是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。  
   
- `dwWait`  
- 指定的逾時間隔，以毫秒為單位。 預設為無限，表示永遠不會超過方法的逾時間隔。  
+ *dwWait*  
+ 指定逾時間隔，以毫秒為單位。 預設值為 INFINITE，這表示永遠不會超過方法的逾時間隔。  
   
 ## <a name="members"></a>成員  
   
@@ -59,10 +59,10 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 |[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|此靜態函式會動態計算，並傳回 EXE 模組，根據處理器數目的執行緒數目上限。|  
   
 ## <a name="remarks"></a>備註  
- 類別[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)衍生自`CAtlAutoThreadModuleT`為了實作在集區執行緒的 apartment model COM 伺服器。 它會取代過時類別[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
+ 此類別[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)衍生自`CAtlAutoThreadModuleT`才能實作在執行緒集區的 apartment model COM 伺服器。 它取代了過時的類別[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
   
 > [!NOTE]
->  這個類別不應在 DLL 中，預設值為`dwWait`的無限值在卸載 DLL 時，會造成死結。  
+>  這個類別不應在 DLL 中，為預設值*dwWait*的無限值在卸載 DLL 時，會造成死結。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IAtlAutoThreadModule`  
@@ -80,10 +80,10 @@ static int GetDefaultThreads();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 要建立 EXE 模組中的執行緒數目。  
+ 在 EXE 模組中建立的執行緒數目。  
   
 ### <a name="remarks"></a>備註  
- 如果您想要使用不同的方法來計算的執行緒數目，請覆寫這個方法。 根據預設，執行緒數目根據處理器數目。  
+ 如果您想要使用不同的方法來計算執行緒數目，請覆寫這個方法。 根據預設，執行緒數目根據處理器數目。  
   
 ## <a name="see-also"></a>另請參閱  
  [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   

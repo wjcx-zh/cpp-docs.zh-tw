@@ -1,5 +1,5 @@
 ---
-title: IPersistStreamInitImpl 類別 |Microsoft 文件
+title: IPersistStreamInitImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,18 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b862d6b0fc99184232621432ec1c2a1027f8a9d5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360452"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881499"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 類別
-這個類別會實作**IUnknown**和提供的預設實作[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
+這個類別會實作`IUnknown`，並提供的預設實作[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IPersistStreamInitImpl`。  
   
 ## <a name="members"></a>成員  
@@ -57,14 +57,14 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 |名稱|描述|  
 |----------|-----------------|  
 |[IPersistStreamInitImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|  
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|擷取儲存物件的資料所需的資料流的大小。 ATL 實作會傳回**E_NOTIMPL**。|  
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|擷取儲存物件的資料所需的資料流的大小。 ATL 實作會傳回 E_NOTIMPL。|  
 |[IPersistStreamInitImpl::InitNew](#initnew)|初始化新建立的物件。|  
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|檢查自上次儲存後，是否已變更物件的資料。|  
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|會檢查自上次儲存後，是否已變更物件的資料。|  
 |[IPersistStreamInitImpl::Load](#load)|從指定的資料流載入物件的屬性。|  
-|[IPersistStreamInitImpl::Save](#save)|將物件的屬性儲存至指定的資料流。|  
+|[IPersistStreamInitImpl::Save](#save)|將指定的資料流物件的屬性。|  
   
 ## <a name="remarks"></a>備註  
- [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面可讓用戶端要求載入您的物件，並將其永續性資料儲存至單一資料流。 類別`IPersistStreamInitImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面可讓用戶端要求載入您的物件，並將其持續性資料儲存至單一資料流。 類別`IPersistStreamInitImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -84,7 +84,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
+ 請參閱[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
 ##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  擷取儲存物件的資料所需的資料流的大小。  
@@ -94,7 +94,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**E_NOTIMPL**。  
+ 傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) Windows SDK 中。  
@@ -110,7 +110,7 @@ STDMETHOD(InitNew)();
  請參閱[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) Windows SDK 中。  
   
 ##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
- 檢查自上次儲存後，是否已變更物件的資料。  
+ 會檢查自上次儲存後，是否已變更物件的資料。  
   
 ```
 STDMETHOD(IsDirty)();
@@ -132,14 +132,14 @@ STDMETHOD(Load)(LPSTREAM pStm);
  請參閱[IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) Windows SDK 中。  
   
 ##  <a name="save"></a>  IPersistStreamInitImpl::Save  
- 將物件的屬性儲存至指定的資料流。  
+ 將指定的資料流物件的屬性。  
   
 ```
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 會使用物件的屬性對應儲存這項資訊。  
+ ATL 會使用物件的屬性對應來儲存這項資訊。  
   
  請參閱[IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) Windows SDK 中。  
   

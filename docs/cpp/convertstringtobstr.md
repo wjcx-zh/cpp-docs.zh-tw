@@ -1,5 +1,5 @@
 ---
-title: ConvertStringToBSTR |Microsoft 文件
+title: ConvertStringToBSTR |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942640"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 將轉換**char \*** 值設定為`BSTR`。  
+ 將轉換**char \*** 值`BSTR`。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
   
-      BSTR __stdcall ConvertStringToBSTR(  
-   const char* pSrc  
-)  
+BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>參數  
- `pSrc`  
+ *pSrc*  
  A **char \*** 變數。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // ConvertStringToBSTR.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -66,12 +65,12 @@ char * text: Test
 BSTR text: Test  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** \<comutil.h >  
   
- **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
+ **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱 < [/zc: wchar_t （wchar_t 是原生型別）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器 COM 全域函式](../cpp/compiler-com-global-functions.md)

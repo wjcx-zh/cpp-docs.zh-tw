@@ -1,5 +1,5 @@
 ---
-title: 繼承關鍵字 |Microsoft 文件
+title: 繼承關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,14 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942836"
 ---
 # <a name="inheritance-keywords"></a>繼承關鍵字
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
 ```  
 class [__single_inheritance] class-name;
@@ -50,20 +51,20 @@ class [__virtual_inheritance] class-name;
   
  C++ 可讓您在定義類別之前宣告類別成員的指標。 例如:   
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- 在上述程式碼中`p`宣告為類別 s 的整數成員指標。不過，`class S`具有尚未定義在此程式碼; 它僅宣告而已。 當編譯器遇到這類指標時，必須將指標的表示法一般化。 表示法的大小取決於指定的繼承模型。 有四種方式可將繼承模型指定至編譯器：  
+ 在上述程式碼中`p`會宣告為類別 s 的整數成員指標不過，`class S`具有尚未定義在此程式碼; 它僅宣告而已。 當編譯器遇到這類指標時，必須將指標的表示法一般化。 表示法的大小取決於指定的繼承模型。 有四種方式可將繼承模型指定至編譯器：  
   
 -   在 IDE 中**成員指標表示法**  
   
--   在命令列使用[/vmg](../build/reference/vmb-vmg-representation-method.md)切換  
+-   在命令列中使用[/vmg](../build/reference/vmb-vmg-representation-method.md)切換  
   
 -   使用[pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
   
--   使用繼承關鍵字 `__single_inheritance`、`__multiple_inheritance` 和 `__virtual_inheritance`。 這項技術能夠以每個類別為基礎控制繼承模型。  
+-   使用繼承關鍵字 **__single_inheritance**， **__multiple_inheritance**，並 **__virtual_inheritance**。 這項技術能夠以每個類別為基礎控制繼承模型。  
   
     > [!NOTE]
     >  如果您總是在定義類別之後宣告類別成員的指標，就不需要使用上述任何選項。  
@@ -72,7 +73,7 @@ int S::*p;
   
  如果上述範例變更為：  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  
@@ -82,7 +83,7 @@ int S::*p;
 > [!NOTE]
 >  類別成員指標表示法的同一個向前宣告應出現在宣告該類別成員指標的每一個轉譯單位中，而且宣告應在成員指標宣告之前發生。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)

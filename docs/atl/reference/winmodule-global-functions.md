@@ -1,5 +1,5 @@
 ---
-title: 全域函式 WinModule |Microsoft 文件
+title: WinModule 全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514703e2c7c968035e9defc7677943377778a761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac96acaf337ad3ee73f0b6f93ae6893632962e9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362293"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884558"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全域函式
-這些函式提供的支援`_AtlCreateWndData`結構的作業。  
+這些函式提供的支援`_AtlCreateWndData`結構作業。  
   
 > [!IMPORTANT]
 >  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
@@ -47,17 +47,17 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWinModule`  
+ *pWinModule*  
  模組的指標[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構。  
   
- `pData`  
- 指標[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構來初始化及加入至目前的模組。  
+ *pData*  
+ 指標[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)會初始化並新增至目前模組的結構。  
   
- `pObject`  
+ *pObject*  
  物件的指標**這**指標。  
   
 ### <a name="remarks"></a>備註  
- 初始化`_AtlCreateWndData`結構，也就用來儲存**這**指標用來參考類別執行個體，並將它加入至清單的模組參考之`_ATL_WIN_MODULE70`結構。 由呼叫[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)。  
+ 初始化`_AtlCreateWndData`結構，也就用來儲存**這**指標用來參考類別執行個體，並將它加入至模組參考之清單`_ATL_WIN_MODULE70`結構。 由呼叫[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)。  
   
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
  呼叫此函式可擷取現有的 `_AtlCreateWndData` 結構。  
@@ -67,7 +67,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWinModule`  
+ *pWinModule*  
  模組的指標[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構。  
   
 ### <a name="return-value"></a>傳回值  

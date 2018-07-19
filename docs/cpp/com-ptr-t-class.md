@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t 類別 |Microsoft 文件
+title: _com_ptr_t 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942684"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 類別
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- `_com_ptr_t` 物件會封裝 COM 介面指標，並且稱為「智慧型」指標。 此範本類別管理資源配置和解除配置函式呼叫來透過**IUnknown**成員函式： `QueryInterface`， `AddRef`，和**發行**。  
+ `_com_ptr_t` 物件會封裝 COM 介面指標，並且稱為「智慧型」指標。 此範本類別管理資源配置和解除配置函式呼叫，以透過`IUnknown`成員函式： `QueryInterface`， `AddRef`，和`Release`。  
   
- 所提供的 typedef 定義所參考的智慧型指標通常 **_COM_SMARTPTR_TYPEDEF**巨集。 這個巨集會採用介面名稱和 IID，並且使用介面的名稱加上 `_com_ptr_t` 後置詞宣告 `Ptr` 的特製化。 例如:   
+ 智慧型指標通常是由 _COM_SMARTPTR_TYPEDEF 巨集所提供的 typedef 定義參考。 這個巨集會採用介面名稱和 IID，並且使用介面的名稱加上 `_com_ptr_t` 後置詞宣告 `Ptr` 的特製化。 例如:   
   
-```  
+```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- 宣告`_com_ptr_t`特製化**IMyInterfacePtr**。  
+ 宣告`_com_ptr_t`特製化`IMyInterfacePtr`。  
   
- 一組[函式範本](../cpp/relational-function-templates.md)，不屬於此範本類別，支援的比較運算子右側的智慧型指標比較。  
+ 一組[函式範本](../cpp/relational-function-templates.md)，不屬於此範本類別，支援與比較運算子右方的智慧型指標的比較。  
   
 ### <a name="construction"></a>建構  
   
@@ -47,29 +48,29 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[AddRef](../cpp/com-ptr-t-addref.md)|呼叫`AddRef`成員函式**IUnknown**封裝的介面指標上。|  
+|[AddRef](../cpp/com-ptr-t-addref.md)|呼叫`AddRef`成員函式`IUnknown`上封裝的介面指標。|  
 |[Attach](../cpp/com-ptr-t-attach.md)|封裝這個智慧型指標類型的一般介面指標。|  
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|建立指定物件的新執行個體**CLSID**或**ProgID**。|  
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|建立指定物件的新執行個體`CLSID`或`ProgID`。|  
 |[Detach](../cpp/com-ptr-t-detach.md)|擷取和傳回封裝的介面指標。|  
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|將附加至現有的執行個體的指定物件**CLSID**或**ProgID**。|  
+|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|將附加至現有的執行個體的物件的給定`CLSID`或`ProgID`。|  
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|傳回封裝的介面指標。|  
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|呼叫`QueryInterface`成員函式**IUnknown**封裝的介面指標上。|  
-|[發行](../cpp/com-ptr-t-release.md)|呼叫**發行**成員函式**IUnknown**封裝的介面指標上。|  
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|呼叫`QueryInterface`成員函式`IUnknown`上封裝的介面指標。|  
+|[發行](../cpp/com-ptr-t-release.md)|呼叫`Release`成員函式`IUnknown`上封裝的介面指標。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
 |[operator =](../cpp/com-ptr-t-operator-equal.md)|將新值指派給現有的 `_com_ptr_t` 物件。|  
-|[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比較智慧型指標物件與另一個智慧型指標、 一般介面指標或**NULL**。|  
+|[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比較智慧型指標物件與另一個智慧型指標、 一般介面指標，或為 NULL。|  
 |[擷取器](../cpp/com-ptr-t-extractors.md)|擷取封裝的 COM 介面指標。|  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** \<comip.h >  
   
- **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
+ **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱 < [/zc: wchar_t （wchar_t 是原生型別）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

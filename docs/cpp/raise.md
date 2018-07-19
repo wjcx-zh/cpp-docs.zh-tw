@@ -1,5 +1,5 @@
 ---
-title: __raise |Microsoft 文件
+title: __raise |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942688"
 ---
 # <a name="raise"></a>__raise
 強調事件的呼叫位置。  
@@ -30,23 +31,21 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>備註  
  在 Managed 程式碼中，只能從已定義的類別內引發事件。 請參閱[事件](../windows/event-cpp-component-extensions.md)如需詳細資訊。  
   
- 如果您呼叫的不是事件，則關鍵字 `__raise` 會導致錯誤發出。  
+ 關鍵字 **__raise**會導致當您呼叫與事件，就會發出錯誤。  
   
 > [!NOTE]
 >  樣板類別或結構不能包含事件。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

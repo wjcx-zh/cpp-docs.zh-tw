@@ -1,5 +1,5 @@
 ---
-title: CComContainedObject 類別 |Microsoft 文件
+title: CComContainedObject 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360171"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881054"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 類別
-這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以**IUnknown**。  
+這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以`IUnknown`。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,8 +45,8 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>參數  
- `Base`  
- 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)。  
+ *基底*  
+ 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)。  
   
 ## <a name="members"></a>成員  
   
@@ -61,13 +61,13 @@ class CComContainedObject : public Base
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComContainedObject::AddRef](#addref)|擁有者物件上的參考計數遞增。|  
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|擷取擁有者物件`IUnknown`。|  
-|[CComContainedObject::QueryInterface](#queryinterface)|擷取擁有者物件上所要求介面的指標。|  
+|[CComContainedObject::AddRef](#addref)|擁有者物件上的參考計數會遞增。|  
+|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|擷取擁有者物件的`IUnknown`。|  
+|[CComContainedObject::QueryInterface](#queryinterface)|擷取要求的擁有者物件的介面指標。|  
 |[CComContainedObject::Release](#release)|擁有者物件的參考計數遞減。|  
   
 ## <a name="remarks"></a>備註  
- 使用 ATL`CComContainedObject`類別中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以**IUnknown**。 （擁有者是在外部物件的彙總或為其建立的分割介面的物件）。`CComContainedObject`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`、 透過所有繼承`Base`。  
+ 使用 ATL`CComContainedObject`類別中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以`IUnknown`。 （擁有者是彙總，則外部物件或為其建立的分割介面的物件）。`CComContainedObject`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，並`OuterRelease`，所有透過繼承`Base`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Base`  
@@ -78,14 +78,14 @@ class CComContainedObject : public Base
  **標頭：** atlcom.h  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  
- 擁有者物件上的參考計數遞增。  
+ 擁有者物件上的參考計數會遞增。  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 值，可用於診斷或測試。  
+ 值，這個值可能有助於診斷或測試。  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  建構函式。  
@@ -95,11 +95,11 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pv`  
- [in]擁有者物件**IUnknown**。  
+ *pv*  
+ [in]擁有者物件的`IUnknown`。  
   
 ### <a name="remarks"></a>備註  
- 設定`m_pOuterUnknown`成員指標 (透過繼承`Base`類別) 至`pv`。  
+ 設定組`m_pOuterUnknown`成員指標 (透過繼承`Base`類別) 來*pv*。  
   
 ##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  解構函式。  
@@ -112,20 +112,20 @@ CComContainedObject(void* pv);
  釋放所有配置的資源。  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- 傳回`m_pOuterUnknown`成員指標 (透過繼承*基底*類別)，其中保存擁有者物件**IUnknown**。  
+ 傳回`m_pOuterUnknown`成員指標 (透過繼承*基底*類別) 包含擁有者物件的`IUnknown`。  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 擁有者物件**IUnknown**。  
+ 擁有者物件的`IUnknown`。  
   
 ### <a name="remarks"></a>備註  
  這個方法可能是虛擬如果`Base`已宣告[DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)巨集。  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
- 擷取擁有者物件上所要求介面的指標。  
+ 擷取要求的擁有者物件的介面指標。  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -134,17 +134,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
- [in]所要求介面的識別項。  
+ *iid*  
+ [in]所要求的介面識別碼。  
   
- `ppvObject`  
- [out]所識別的介面指標的指標`iid`。 如果物件不支援這個介面，`ppvObject`設**NULL**。  
+ *ppvObject*  
+ [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。  
   
- `pp`  
- [out]型別所識別的介面指標的指標`Q`。 如果物件不支援這個介面，`pp`設**NULL**。  
+ *前置處理*  
+ [out]依類型識別之介面指標的指標`Q`。 如果物件不支援這個介面， *pp*設為 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
  擁有者物件的參考計數遞減。  
@@ -154,7 +154,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
+ 在偵錯組建`Release`傳回值，這個值可能有助於診斷或測試。 在非偵錯組建中，`Release`一律會傳回 0。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

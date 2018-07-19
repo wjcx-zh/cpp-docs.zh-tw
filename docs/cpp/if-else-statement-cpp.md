@@ -1,5 +1,5 @@
 ---
-title: if else 陳述式 （c + +） |Microsoft 文件
+title: if-else 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942635"
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
-控制條件分支。 中的陳述式*if 區塊*才會執行*if 運算式*評估為非零值 (或`true`)。 如果值*運算式*非零， *statement1*區塊中的任何其他陳述式執行和 else 區塊，如果有的話，會略過。 如果值*運算式*為零，則會略過 if 區塊和執行其他的區塊，如果有的話。 評估為非零的運算式
-- `true`
+控制條件分支。 中的陳述式*if 區塊*才會執行*if 運算式*評估為非零值 （或 TRUE）。 如果值*運算式*為非零值， *statement1*和區塊中的任何其他陳述式會執行 else 區塊，如果有的話，會略過。 如果值*運算式*為零，則會略過 if 區塊和 else 區塊，如果存在，則會執行。 評估為非零的運算式
+- true
 - 非 null 指標，
 - 任何非零的算術值，或 
-- 類別型別定義的模稜兩可的轉換到算術、 布林值或指標類型。 (如需轉換的資訊，請參閱[標準轉換](../cpp/standard-conversions.md)。)   
+- 類別型別定義的模稜兩可的轉換到算術、 布林值或指標類型。 (如需轉換的詳細資訊，請參閱 <<c0> [ 標準轉換](../cpp/standard-conversions.md)。)   
   
 ## <a name="syntax"></a>語法  
   
@@ -71,8 +72,10 @@ else  // optional
    ...
 } 
 ```  
+
 ## <a name="example"></a>範例  
-```  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -118,7 +121,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>如果初始設定式的陳述式
-**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**陳述式也可能包含宣告和初始化具名的變數的運算式。 如果區塊範圍內的變數只在需要時，請使用這種形式的 if 陳述式。 
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**陳述式也可能包含宣告和初始化具名的變數的運算式。 變數只需要在 if 區塊的範圍內時，請使用這種形式的 if 陳述式。 
 
 ```cpp
 ## Example  
@@ -166,12 +169,12 @@ int main()
 }
 ```
 
- 在所有表單中的**如果**陳述式，*運算式*，且可以包含建立結構，以外的任何值會評估，包括所有副作用。 控制權會傳遞從**如果**陳述式中程式的下一個陳述式，除非其中一個*陳述式*s 包含[中斷](../cpp/break-statement-cpp.md)，[繼續](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。  
+ 在所有表單中的**如果**陳述式*運算式*，且可以包含結構以外的任何值會評估，包括所有副作用。 控制權會傳遞從**如果**陳述式中程式的下一個陳述式，除非其中一個*陳述式*s 包含[中斷](../cpp/break-statement-cpp.md)，[繼續](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。  
   
- **Else**子句`if...else`陳述式是相關聯的最接近先前**如果**陳述式沒有相對應位於相同範圍**else**陳述式。   
+ **Else**子句`if...else`陳述式是相關聯的最接近上一個**如果**陳述式中相同範圍中沒有任何對應**其他**陳述式。   
 
 ## <a name="constexpr-if-statements"></a>constexpr 如果陳述式
-**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**constexpr 如果**做出編譯時期分支不含陳述式不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （需要沒有零參數多載）： 
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用`constexpr if`陳述式，而不必訴諸於多個進行編譯時間分支決策函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）： 
 
 ```cpp
 template <class T, class... Rest>
@@ -196,6 +199,6 @@ void f(T&& t, Rest&&... r)
   
  
 ## <a name="see-also"></a>另請參閱  
- [選擇陳述式](../cpp/selection-statements-cpp.md)   
+ [選取範圍陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)

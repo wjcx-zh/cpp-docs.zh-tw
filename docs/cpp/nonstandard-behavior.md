@@ -1,5 +1,5 @@
 ---
-title: 非標準行為 |Microsoft 文件
+title: 非標準行為 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420291"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941794"
 ---
 # <a name="nonstandard-behavior"></a>非標準行為
 以下各節列出 C++ 的 Visual C++ 實作與 C++ 標準不一致的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。  
   
- 不一致的說明與 c + + 標準中定義之編譯器限制清單[編譯器限制](../cpp/compiler-limits.md)。  
+ 編譯器限制不同於 c + + 標準中所定義的清單已列入[編譯器限制](../cpp/compiler-limits.md)。  
   
 ## <a name="covariant-return-types"></a>Covariant 傳回型別  
  當虛擬函式具有可變數目的引數時，不支援虛擬基底類別做為 Covariant 傳回類型。 不符合 C++ ISO 規格第 7 段的第 10.3 節。 下列範例無法編譯，讓編譯器錯誤[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
@@ -78,10 +78,10 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used  
 ```  
   
- 如需例外狀況規格的詳細資訊，請參閱[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)。  
+ 如需有關例外狀況規格的詳細資訊，請參閱[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)。  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual C++ 編譯器會對 `char` 類型強制執行這項條件約束，但不會對 `wchar_t` 類型強制執行。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。  
+ C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，但不適用於類型`wchar_t`。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。  
   
 ```cpp  
 #include <iostream>  

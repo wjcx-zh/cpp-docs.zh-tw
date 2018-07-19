@@ -1,5 +1,5 @@
 ---
-title: CInterfaceArray 類別 |Microsoft 文件
+title: CInterfaceArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359458"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882709"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 類別
 建構 COM 介面指標的陣列時，這個類別會提供有用的方法。  
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>參數  
- `I`  
- 指定要儲存的指標類型的 COM 介面。  
+ *I*  
+ COM 介面，用來指定要儲存的指標的類型。  
   
- `piid`  
- 指向 IID 的`I`。  
+ *piid*  
+ 指向 IID*我*。  
   
 ## <a name="members"></a>成員  
   
@@ -53,9 +53,9 @@ class CInterfaceArray :
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|介面陣列建構函式。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供建構函式和衍生的方法來建立 COM 介面指標的陣列。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)清單時所需。  
+ 這個類別會提供建構函式和衍生的方法，來建立 COM 介面指標的陣列。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)清單何時需要。  
   
- 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
+ 如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CAtlArray`  

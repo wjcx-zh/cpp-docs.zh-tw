@@ -1,5 +1,5 @@
 ---
-title: 格式化的經過時間： Automation 類別 |Microsoft 文件
+title: 格式化時間： Automation 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 710faeef504e9d2963837f721200c51386540d64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354951"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882094"
 ---
-# <a name="formatting-time-automation-classes"></a>格式化的經過時間： Automation 類別
+# <a name="formatting-time-automation-classes"></a>格式化時間： Automation 類別
 #### <a name="to-format-a-time"></a>若要設定時間的格式  
   
-1.  使用**格式**成員函式中的其中一個[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)或[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)建立字元字串，代表經過時間。  
+ 使用`Format`成員函式的其中一個[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)或是[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)建立字元字串，代表經過時間。  
   
      [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
   
  如需詳細資訊，請參閱類別[COleVariant](../mfc/reference/colevariant-class.md)。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [一般日期與時間程式設計，在 MFC 中](../atl-mfc-shared/date-and-time.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 編譯器 COM 支援類別 |Microsoft 文件
+title: 編譯器 COM 支援類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411233"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939815"
 ---
 # <a name="compiler-com-support-classes"></a>編譯器 COM 支援類別
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 標準類別用來支援某些 COM 類型。 類別定義於\<comdef.h > 和產生類型程式庫的標頭檔。  
+ 標準類別用來支援某些 COM 類型。 類別定義在\<comdef.h > 以及產生自類型程式庫標頭檔。  
   
 |類別|用途|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|包裝 `BSTR` 類型可提供有用的運算子和方法。|  
-|[_com_error](../cpp/com-error-class.md)|定義所擲回的錯誤物件[_com_raise_error](../cpp/com-raise-error.md)中最多失敗。|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|封裝 COM 介面指標，以及自動化所需的呼叫`AddRef`，**發行**，和`QueryInterface`。|  
-|[_variant_t](../cpp/variant-t-class.md)|包裝**VARIANT**可提供有用的運算子和方法的型別。|  
+|[_com_error](../cpp/com-error-class.md)|定義所擲回的錯誤物件[_com_raise_error](../cpp/com-raise-error.md)中最常見的失敗。|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|封裝 COM 介面指標，以及自動化所需的呼叫`AddRef`， `Release`，和`QueryInterface`。|  
+|[_variant_t](../cpp/variant-t-class.md)|包裝 `VARIANT` 類型可提供有用的運算子和方法。|  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援](../cpp/compiler-com-support.md)   

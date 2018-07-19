@@ -1,5 +1,5 @@
 ---
-title: 使用結束或傳回 |Microsoft 文件
+title: 使用結束或傳回 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942667"
 ---
 # <a name="using-exit-or-return"></a>結束 exit 或 return
-當您呼叫**結束**或執行`return`陳述式從**主要**，靜態物件會初始化其反向順序終結。 下列範例將示範這類初始化和清除如何運作：  
+當您呼叫**結束**或執行**會傳回**陳述式從`main`，靜態物件會在其初始化的反向順序終結。 下列範例將示範這類初始化和清除如何運作：  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- 在上述範例中，靜態物件 `sd1` 和 `sd2` 會在進入 `main` 之前建立並初始化。 使用 `return` 陳述式終止這個程式之後，第一個 `sd2` 就會終結，然後是 `sd1`。 `ShowData` 類別的解構函式會關閉與這些靜態物件相關聯的檔案    
+ 在上述範例中，靜態物件 `sd1` 和 `sd2` 會在進入 `main` 之前建立並初始化。 此程式會終止使用之後**會傳回**陳述式中，第一個`sd2`終結，然後`sd1`。 `ShowData` 類別的解構函式會關閉與這些靜態物件相關聯的檔案    
   
  另一種撰寫這個程式碼的方式，是使用區塊範圍宣告 `ShowData` 物件，讓物件能夠在超出範圍時終結：  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

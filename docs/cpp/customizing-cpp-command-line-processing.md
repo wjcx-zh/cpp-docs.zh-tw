@@ -1,5 +1,5 @@
 ---
-title: 自訂 c + + 命令列處理 |Microsoft 文件
+title: 自訂 c + + 命令列處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,22 +24,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2691ba3b83cd536c6f0a152bf4de2a855f81e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411107"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939048"
 ---
 # <a name="customizing-c-command-line-processing"></a>自訂 C++ 命令列處理
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
- 如果您的程式不接受命令列引數，您可以隱藏執行命令列處理的程式庫常式用法，藉此稍微節省空間。 這個常式稱為 **_setargv**並且中會描述[萬用字元展開](../cpp/wildcard-expansion.md)。 若要隱藏其用途，定義不包含的檔案中做任何動作的常式**主要**函式，並將其命名 **_setargv**。 若要呼叫 **_setargv**然後符合您定義 **_setargv**，且不會載入程式庫版本。  
+ 如果您的程式不接受命令列引數，您可以隱藏執行命令列處理的程式庫常式用法，藉此稍微節省空間。 這個常式稱為`_setargv`述[萬用字元展開](../cpp/wildcard-expansion.md)。 若要隱藏其用途，定義 沒有任何作用中檔案包含的常式`main`函式，並將它命名`_setargv`。 在呼叫`_setargv`再經定義`_setargv`，且不會載入程式庫版本。  
   
- 同樣地，如果您永遠不會存取環境資料表透過`envp`引數，您可以提供您自己空的常式，用以取代 **_setenvp**，環境處理常式。 就像 **_setargv**函式， **_setenvp**必須宣告為**extern"C"**。  
+ 同樣地，如果您從未存取環境資料表，透過`envp`引數，您可以提供您自己空的常式以取代`_setenvp`，環境處理常式。 正如同`_setargv`函式`_setenvp`必須宣告為**extern"C"**。  
   
- 您的程式可能會呼叫**繁衍**或`exec`系列 C 執行階段程式庫中的常式。 如果是這種情況，您就不應該隱藏環境處理常式，因為這個常式會用來將環境從父處理序傳遞至子處理序。  
+ 您的程式可能會呼叫`spawn`或`exec`系列 C 執行階段程式庫中的常式。 如果是這種情況，您就不應該隱藏環境處理常式，因為這個常式會用來將環境從父處理序傳遞至子處理序。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [main：程式啟動](../cpp/main-program-startup.md)

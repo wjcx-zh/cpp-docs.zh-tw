@@ -1,5 +1,5 @@
 ---
-title: 暫存物件 |Microsoft 文件
+title: 暫存物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942660"
 ---
 # <a name="temporary-objects"></a>暫存物件
 在某些情況下，編譯器必須建立暫存物件。 可能需要建立這些暫存物件的原因如下：  
   
--   為了初始化 `const` 參考而使用的初始設定式類型，與所要初始化之參考的基礎類型初始設定式不同。  
+-   若要初始化**const**要初始化之參考的基礎類型的不同類型的初始設定式的參考。  
   
 -   為了儲存傳回使用者定義類型之函式的傳回值。 只有在您的程式不會將傳回值複製到物件時，才會建立這些暫存物件。 例如:   
   
-    ```  
+    ```cpp 
     UDT Func1();    //  Declare a function that returns a user-defined  
                     //   type.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
      由於傳回值不會複製到另一個物件，因此會建立暫存物件。 建立暫存物件的更常見案例是在評估運算式期間，必須呼叫多載運算子函式時。 這些多載運算子函式傳回的使用者定義類型通常不會複製到另一個物件。  
   
-     以 `ComplexResult = Complex1 + Complex2 + Complex3` 運算式為例。 `Complex1 + Complex2` 運算式會加以評估，而且結果會儲存在暫存物件中。 下一步，運算式*暫存*`+ Complex3`評估，且結果會複製到`ComplexResult`（假設指派運算子無法多載）。  
+     以 `ComplexResult = Complex1 + Complex2 + Complex3` 運算式為例。 `Complex1 + Complex2` 運算式會加以評估，而且結果會儲存在暫存物件中。 下一步，運算式*暫時*`+ Complex3`評估，而且結果複製到`ComplexResult`（假設指派運算子未多載）。  
   
 -   為了將轉型的結果儲存為使用者定義類型。 當特定類型的物件明確轉換成使用者定義類型時，該新物件會建構為暫存物件。  
   
@@ -51,6 +52,6 @@ ms.lasthandoff: 05/03/2018
   
 |建立暫存的原因|終結點|  
 |------------------------------|-----------------------|  
-|運算式評估結果|因為運算式評估而建立的所有暫存物件，都會在運算式陳述式結束時 (也就是於分號處)，或是在 `for`、`if`、`while`、`do` 和 `switch` 陳述式的控制運算式結束時終結。|  
-|初始化 `const` 參考|如果初始設定式不是與所要初始化的參考相同類型的左值，則會建立基礎物件類型的暫存，並且使用初始化運算式進行初始化。 這個暫存物件會在其所繫結的參考物件終結時立即終結。|  
+|運算式評估結果|因為運算式評估而建立的所有暫存會都終結運算式陳述式的結尾 (也就是於分號)，或的控制運算式的結尾**for**，**如果**，**雖然**，**請勿**，並**切換**陳述式。|  
+|初始化**const**參考|如果初始設定式不是與所要初始化的參考相同類型的左值，則會建立基礎物件類型的暫存，並且使用初始化運算式進行初始化。 這個暫存物件會在其所繫結的參考物件終結時立即終結。|  
   

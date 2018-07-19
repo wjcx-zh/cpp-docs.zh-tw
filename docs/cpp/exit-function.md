@@ -1,5 +1,5 @@
 ---
-title: exit 函式 |Microsoft 文件
+title: exit 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5767f6b08b4adcd3d1a8d367c6286a746eeecec3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d08ac1375fa383543eaafb5b3ce49cd2bbfbc4da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412526"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941076"
 ---
 # <a name="exit-function"></a>exit 函式
-**結束**函式，在標準 include 檔中宣告\<stdlib.h >，會終止 c + + 程式。  
+`exit`函式，在標準 include 檔中宣告\<stdlib.h >，會終止 c + + 程式。  
   
- 做為引數所提供的值**結束**傳回作業系統做為程式的傳回碼或結束代碼。 依照慣例，傳回碼為零，表示程式順利完成。  
+ 提供做為引數的值`exit`會傳回到作業系統與程式的傳回碼或結束程式碼。 依照慣例，傳回碼為零，表示程式順利完成。  
   
 > [!NOTE]
->  您可以使用常數`EXIT_FAILURE`和`EXIT_SUCCESS`，定義在\<stdlib.h >，以指示成功或失敗的程式。  
+>  您可以使用 EXIT_FAILURE 和 EXIT_SUCCESS、 中定義的常數\<stdlib.h >，以指出成功或失敗的程式。  
   
- 發出`return`陳述式從**主要**函式相當於呼叫**結束**函式傳回的值做為其引數。  
+ 發出**會傳回**陳述式，從`main`函式相當於呼叫`exit`函式傳回的值作為其引數。  
   
- 如需詳細資訊，請參閱[結束](../c-runtime-library/reference/exit-exit-exit.md)中*執行階段程式庫參考*。  
+ 如需詳細資訊，請參閱 <<c0> [ 結束](../c-runtime-library/reference/exit-exit-exit.md)中*執行階段程式庫參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [程式終止](../cpp/program-termination.md)

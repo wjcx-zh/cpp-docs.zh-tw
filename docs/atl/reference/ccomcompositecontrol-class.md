@@ -1,5 +1,5 @@
 ---
-title: CComCompositeControl 類別 |Microsoft 文件
+title: CComCompositeControl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365405"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885242"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 類別
 這個類別會提供實作複合控制項所需的方法。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,8 +47,8 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要針對複合控制項支援從任何其他介面呼叫也一樣。  
+ *T*  
+ 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)、 您想要從任何其他介面以支援您的複合控制項。  
   
 ## <a name="members"></a>成員  
   
@@ -63,10 +63,10 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|呼叫這個方法來通知或取消通知複合控制項所裝載的所有控制項。|  
-|[CComCompositeControl::CalcExtent](#calcextent)|呼叫這個方法來計算的大小以**HIMETRIC**用來裝載複合控制項的對話方塊資源的單位。|  
-|[CComCompositeControl::Create](#create)|這個方法會呼叫建立複合控制項的控制項視窗。|  
-|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|呼叫此方法以建立 [控制] 視窗，並建議任何裝載的控制項。|  
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|呼叫這個方法來通知或取消通知，複合控制項所裝載的所有控制項。|  
+|[CComCompositeControl::CalcExtent](#calcextent)|呼叫這個方法來計算以 himetric 為單位，用來裝載複合控制項的對話方塊資源的大小。|  
+|[CComCompositeControl::Create](#create)|建立複合控制項的 [控制] 視窗，會呼叫這個方法。|  
+|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|呼叫這個方法來建立控制項的視窗，也建議任何裝載的控制項。|  
 |[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|呼叫此方法以設定使用容器的背景色彩的複合控制項的背景色彩。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
@@ -74,22 +74,22 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 |名稱|描述|  
 |----------|-----------------|  
 |[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|背景筆刷。|  
-|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|目前擁有焦點的視窗控制代碼。|  
+|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|目前具有焦點的視窗控制代碼。|  
   
 ## <a name="remarks"></a>備註  
- 類別衍生自類別`CComCompositeControl`繼承 ActiveX 複合控制項的功能。 ActiveX 控制項衍生自`CComCompositeControl`所裝載的標準對話方塊。 這些類型的控制項稱為複合控制項，因為它們是能夠裝載其他控制項 （原生的 Windows 控制項和 ActiveX 控制項）。  
+ 類別衍生自類別`CComCompositeControl`繼承 ActiveX 複合控制項的功能。 ActiveX 控制項衍生自`CComCompositeControl`所裝載的標準對話方塊。 這些類型的控制項稱為複合控制項，因為他們就能夠裝載其他控制項 （Windows 的原生控制項和 ActiveX 控制項）。  
   
- `CComCompositeControl` 識別用來尋找列舉中的資料成員的子類別建立複合控制項的對話方塊資源。 IDD 這個子類別的成員會設定為將做為控制項的視窗對話方塊資源的資源識別碼。 下列是範例資料成員的類別衍生自`CComCompositeControl`來識別要用於將控制項的視窗對話方塊資源應包含：  
+ `CComCompositeControl` 識別用來建立複合控制項所尋找的子類別中的列舉的資料成員的對話方塊資源。 IDD 這個子類別的成員會設定為將用於控制項的視窗對話方塊資源的資源識別碼。 以下是此類別衍生自資料成員的範例`CComCompositeControl`來識別要用於控制項的視窗對話方塊資源應該包含：  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
 > [!NOTE]
->  複合控制項一律是視窗型控制項，不過它們可以包含無視窗控制項。  
+>  複合控制項一律是視窗型控制項，但可以包含無視窗控制項。  
   
- 所實作的控制項`CComCompositeControl`-衍生的類別已按下 tab 鍵內建行為的預設值。 如果控制項取得焦點所中包含的應用程式所定位，連續按 TAB 鍵會讓焦點移到循環所有複合控制項所包含的控制項，則超出複合控制項和中的下一個項目容器的定位順序。 裝載控制項的定位順序取決於對話方塊資源，並且決定的順序在哪一個按下 tab 鍵將會發生。  
+ 藉由將控制項`CComCompositeControl`-衍生的類別有預設的定位停駐點內建的行為。 當控制項被定位停駐到包含的應用程式所收到焦點時，連續按 TAB 鍵，會導致將焦點轉給循環所有的複合控制項的包含的控制項，然後從複合控制項並到下一個項目容器的定位順序。 裝載控制項的定位順序取決於對話方塊資源，並決定的順序在哪一個定位停駐點將會發生。  
   
 > [!NOTE]
->  為了讓加速器才能正常使用`CComCompositeControl`，它是為了載入快速鍵對應表，在建立控制項時，傳遞控制代碼和回加速器數目[IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)，和控制發行時，最後摧毀資料表。  
+>  為了讓使用適當的加速器`CComCompositeControl`，就必須在建立控制項時，載入快速鍵對應表，則會傳遞的控制代碼和回加速器的數目[IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)，及當使用者放開控制項，最後終結資料表。  
   
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#14](../../atl/codesnippet/cpp/ccomcompositecontrol-class_2.h)]  
@@ -107,57 +107,57 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
  **標頭：** atlctl.h  
   
 ##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
- 呼叫這個方法來通知或取消通知複合控制項所裝載的所有控制項。  
+ 呼叫這個方法來通知或取消通知，複合控制項所裝載的所有控制項。  
   
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAdvise`  
- 所有控制項接到通知; 如果為 true否則為 false。  
+ *bAdvise*  
+ 如果接到; 的所有控制項都是，則為 true。否則為 false。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`  
- 所有控制事件接收對應已連線，或從其事件來源已成功中斷連線。  
+ S_OK  
+ 所有控制項中的事件接收對應已連線或已成功中斷連接其事件來源。  
   
- **E_FAIL**  
- 並非所有控制在事件接收器對應無法連線或已成功中斷其事件來源。  
+ E_FAIL  
+ 並非所有控制在事件接收對應無法連線，或從其事件來源已成功中斷連接。  
   
- `E_POINTER`  
- 此錯誤通常表示控制項的事件接收對應中的項目有問題或是中使用的樣板引數與問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。  
+ E_POINTER  
+ 此錯誤通常表示控制項的事件接收對應中的項目有問題或樣板引數中所使用的問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。  
   
- **CONNECT_E_ADVISELIMIT**  
+ CONNECT_E_ADVISELIMIT  
  連接點已達到其限制的連線，並無法接受更多。  
   
- **CONNECT_E_CANNOTCONNECT**  
- 接收器不支援此連接點所需的介面。  
+ CONNECT_E_CANNOTCONNECT  
+ 接收不支援這個連接點所需的介面。  
   
- **CONNECT_E_NOCONNECTION**  
- Cookie 值並未代表有效的連接。 此錯誤通常表示控制項的事件接收對應中的項目有問題或是中使用的樣板引數與問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。  
+ CONNECT_E_NOCONNECTION  
+ Cookie 值不代表有效的連接。 此錯誤通常表示控制項的事件接收對應中的項目有問題或樣板引數中所使用的問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。  
   
 ### <a name="remarks"></a>備註  
- 這個方法的基底實作搜尋項目在事件接收器對應。 然後，它會建議或取消通知事件接收對應接收項目所描述的 COM 物件指向的連接。 這個成員的方法也會依賴在衍生的類別繼承自一個執行個體的事實`IDispEventImpl`為建議使用或 unadvised 接收對應中每一個控制項。  
+ 這個方法的基底實作會搜尋所有項目在事件接收器對應。 它接著會建議，或取消通知事件接收對應的接收項目所描述之 COM 物件的連接點。 這個成員方法也會依賴衍生的類別繼承自一個執行個體的事實`IDispEventImpl`將建議或 unadvised 接收對應中的每一個控制項。  
   
 ##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
- 呼叫這個方法來計算的大小以**HIMETRIC**用來裝載複合控制項的對話方塊資源的單位。  
+ 呼叫這個方法來計算以 himetric 為單位，用來裝載複合控制項的對話方塊資源的大小。  
   
 ```
 BOOL CalcExtent(SIZE& size);
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
- 若要參考**大小**結構，可以由這個方法。  
+ *size*  
+ 參考`SIZE`填滿由這個方法的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果控制項裝載在對話方塊中，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 中會傳回大小`size`參數。  
+ 大小會傳入*大小*參數。  
   
 ##  <a name="create"></a>  CComCompositeControl::Create  
- 這個方法會呼叫建立複合控制項的控制項視窗。  
+ 建立複合控制項的 [控制] 視窗，會呼叫這個方法。  
   
 ```
 HWND Create(
@@ -167,20 +167,20 @@ HWND Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hWndParent`  
+ *hWndParent*  
  控制項的父視窗控制代碼。  
   
- `rcPos`  
+ *rcPos*  
  保留的。  
   
- `dwInitParam`  
- 要在建立控制項期間傳遞給控制項的資料。 做為傳遞資料`dwInitParam`會顯示為**LPARAM**參數[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)訊息，取得建立時將會傳送至複合控制項。  
+ *dwInitParam*  
+ 在建立控制項期間傳遞給控制項的資料。 將資料當做*dwInitParam*會顯示為的 LPARAM 參數[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)訊息，這會在建立時傳送至複合控制項。  
   
 ### <a name="return-value"></a>傳回值  
- 新建立的複合控制項對話方塊控制代碼。  
+ 到新建立的複合控制項 對話方塊中的控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 通常在控制項的就地啟用期間呼叫這個方法。  
+ 這個方法通常會在控制項的就地啟用期間呼叫。  
   
 ##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  建構函式。  
@@ -190,7 +190,7 @@ CComCompositeControl();
 ```  
   
 ### <a name="remarks"></a>備註  
- 初始化[CComCompositeControl::m_hbrBackground](#m_hbrbackground)和[CComCompositeControl::m_hWndFocus](#m_hwndfocus)為 NULL 的資料成員。  
+ 初始化[CComCompositeControl::m_hbrBackground](#m_hbrbackground)並[CComCompositeControl::m_hWndFocus](#m_hwndfocus)為 NULL 的資料成員。  
   
 ##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  解構函式。  
@@ -200,10 +200,10 @@ CComCompositeControl();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果存在的話，請刪除背景物件。  
+ 若有的話，請刪除背景的物件。  
   
 ##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
- 呼叫此方法以建立 [控制] 視窗，並建議任何裝載的控制項。  
+ 呼叫這個方法來建立控制項的視窗，也建議任何裝載的控制項。  
   
 ```
 virtual HWND CreateControlWindow(
@@ -212,17 +212,17 @@ virtual HWND CreateControlWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hWndParent`  
+ *hWndParent*  
  控制項的父視窗控制代碼。  
   
- `rcPos`  
- 複合控制項，用戶端中的位置矩形座標相對於`hWndParent`。  
+ *rcPos*  
+ 用戶端中的複合控制項的位置矩形座標相對於*hWndParent*。  
   
 ### <a name="return-value"></a>傳回值  
  傳回新建立的複合控制項 對話方塊的控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫[CComCompositeControl::Create](#create)和[CComCompositeControl::AdviseSinkMap](#advisesinkmap)。  
+ 這個方法會呼叫[CComCompositeControl::Create](#create)並[CComCompositeControl::AdviseSinkMap](#advisesinkmap)。  
   
 ##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  背景筆刷。  
@@ -232,7 +232,7 @@ HBRUSH m_hbrBackground;
 ```  
   
 ##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
- 目前擁有焦點的視窗控制代碼。  
+ 目前具有焦點的視窗控制代碼。  
   
 ```
 HWND m_hWndFocus;
@@ -246,7 +246,7 @@ HRESULT SetBackgroundColorFromAmbient();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   

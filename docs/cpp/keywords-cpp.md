@@ -1,5 +1,5 @@
 ---
-title: 關鍵字 （c + +） |Microsoft 文件
+title: 關鍵字 （c + +） |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25bb47c0297d7e1e472f69334c17aa458aaa57b6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424759"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940445"
 ---
 # <a name="keywords-c"></a>關鍵字 （c + +）
 關鍵字是具有特殊意義的預先定義保留識別項。 您不能在程式中將關鍵字當做識別項使用。 下列是 Microsoft C++ 的保留關鍵字。 名稱前面有底線的就是 Microsoft 擴充功能。  
@@ -41,8 +41,8 @@ ms.locfileid: "32424759"
 |[__interface](../cpp/interface.md)|[__leave](../cpp/try-finally-statement.md)|[__m128](../cpp/m128.md)|  
 |[__m128d](../cpp/m128d.md)|[__m128i](../cpp/m128i.md)|[__m64](../cpp/m64.md)|  
 |[__multiple_inheritance](../cpp/inheritance-keywords.md)|[__nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__noop](../intrinsics/noop.md)|  
-|`__pin` <sup>2</sup>|`__property` <sup>2</sup>|[__raise](../cpp/raise.md)|  
-|`__sealed` <sup>2</sup>|[__single_inheritance](../cpp/inheritance-keywords.md)|[__stdcall](../cpp/stdcall.md)|  
+|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__raise](../cpp/raise.md)|  
+|**__sealed** <sup>2</sup>|[__single_inheritance](../cpp/inheritance-keywords.md)|[__stdcall](../cpp/stdcall.md)|  
 |[__super](../cpp/super.md)|[__thiscall](../cpp/thiscall.md)|[__try /\__except](../cpp/try-except-statement.md)， [__try /\___identifier](../cpp/try-finally-statement.md)|  
 |[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[__unaligned](../cpp/unaligned.md)|[__unhook](../cpp/unhook.md) <sup>3</sup>|  
 |[__uuidof](../cpp/uuidof-operator.md)|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|[__virtual_inheritance](../cpp/inheritance-keywords.md)|  
@@ -77,30 +77,30 @@ ms.locfileid: "32424759"
 |[執行緒](../cpp/thread.md) <sup>1</sup>|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|[true](../cpp/true-cpp.md)|  
 |[try](../cpp/try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](../cpp/typeid-operator.md)|  
 |[typeid](../windows/typeid-cpp-component-extensions.md)|[typename](../cpp/typename.md)|[union](../cpp/unions.md)|  
-|[unsigned](../cpp/fundamental-types-cpp.md)|[使用](../cpp/using-declaration.md)宣告，[使用](namespaces-cpp.md#using_directives)指示詞|[uuid](../cpp/uuid-cpp.md) <sup>1</sup>|  
+|[unsigned](../cpp/fundamental-types-cpp.md)|[使用](../cpp/using-declaration.md)宣告[使用](namespaces-cpp.md#using_directives)指示詞|[uuid](../cpp/uuid-cpp.md) <sup>1</sup>|  
 |[實值類別](../windows/classes-and-structs-cpp-component-extensions.md)|[實值結構](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](../cpp/virtual-cpp.md)|  
 |[void](../cpp/void-cpp.md)|[volatile](../cpp/volatile-cpp.md)|[while](../cpp/while-statement-cpp.md)|  
   
- 1 擴充屬性`__declspec`關鍵字。  
+ 1 個擴充屬性 **__declspec**關鍵字。  
   
  2 適用於 Managed Extensions for c + + 只。 這個語法現在不建議使用。  
   
- 3 內建函式用於事件處理。  
+ 3 個內建函式用於事件處理。  
   
  請參閱[執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)如需詳細資訊。  
   
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
  在 Microsoft C++ 中，有兩個前置底線的識別項是保留給編譯器實作。 因此，Microsoft 慣例就是在 Microsoft 專有關鍵字前面加上雙底線。 這些字詞不可做為識別項名稱使用。  
   
- Microsoft 擴充功能預設為啟用。 若要確保您的程式具完整可攜性，您可以停用 Microsoft 擴充功能指定 ANSI 相容[/Za](../build/reference/za-ze-disable-language-extensions.md)期間編譯的命令列選項 （基於 ANSI 相容性編譯）。 如果您這樣做，Microsoft 專有關鍵字就會停用。  
+ Microsoft 擴充功能預設為啟用。 若要確保您的程式具完整可攜性，您可以停用 Microsoft 擴充功能指定符合 ansi [/Za](../build/reference/za-ze-disable-language-extensions.md)在編譯期間的命令列選項 （基於 ANSI 相容性編譯）。 如果您這樣做，Microsoft 專有關鍵字就會停用。  
   
- 啟用 Microsoft 擴充功能後，您可以在程式中使用 Microsoft 專有的關鍵字。 為符合 ANSI 標準，這些關鍵字前面都加上雙底線。 為了提供回溯相容性，支援 `__except`、`__finally`、`__leave` 和 `__try` 以外的所有其他雙底線關鍵字的單底線版本。 此外，`__cdecl` 可以不使用前置底線。  
+ 啟用 Microsoft 擴充功能後，您可以在程式中使用 Microsoft 專有的關鍵字。 為符合 ANSI 標準，這些關鍵字前面都加上雙底線。 回溯相容性，所有其他雙底線關鍵字的單底線版本 **__except**， **__finally**， **__leave**，和 **__finally**支援。 颾魤 ㄛ **__cdecl**適用於沒有前置的底線。  
   
- `__asm` 關鍵字取代 C++ `asm` 語法。 保留 `asm` 以與其他 C++ 實作相容，但沒有實作。 使用 `__asm`。  
+ **__Asm**關鍵字取代 c + +`asm`語法。 保留 `asm` 以與其他 C++ 實作相容，但沒有實作。 使用 **__asm**。  
   
- `__based` 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。  
+ **__based** 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)   

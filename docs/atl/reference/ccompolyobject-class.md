@@ -1,5 +1,5 @@
 ---
-title: CComPolyObject 類別 |Microsoft 文件
+title: CComPolyObject 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383a83a2e2b09c9652e7185592a5891179416e0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5bd2a384af6e73ae0c113bf8c27ae9d0c7529a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364098"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881096"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 類別
-這個類別會實作**IUnknown**彙總或非彙總物件。  
+這個類別會實作`IUnknown`彙總或非彙總物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,8 +46,8 @@ class CComPolyObject : public IUnknown,
 ```  
   
 #### <a name="parameters"></a>參數  
- `contained`  
- 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要在物件上支援從任何其他介面呼叫也一樣。  
+ *包含*  
+ 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。  
   
 ## <a name="members"></a>成員  
   
@@ -62,31 +62,31 @@ class CComPolyObject : public IUnknown,
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComPolyObject::AddRef](#addref)|物件的參考計數遞增。|  
-|[CComPolyObject::CreateInstance](#createinstance)|（靜態）可讓您建立新**CComPolyObject <** `contained` **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
-|[CComPolyObject::FinalConstruct](#finalconstruct)|會執行最後的初始化`m_contained`。|  
+|[CComPolyObject::AddRef](#addref)|物件的參考計數會遞增。|  
+|[CComPolyObject::CreateInstance](#createinstance)|（靜態）可讓您建立新**CComPolyObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComPolyObject::FinalConstruct](#finalconstruct)|執行最後的初始化`m_contained`。|  
 |[CComPolyObject::FinalRelease](#finalrelease)|執行最終解構`m_contained`。|  
 |[CComPolyObject::QueryInterface](#queryinterface)|擷取所要求介面的指標。|  
-|[CComPolyObject::Release](#release)|物件的參考計數遞減。|  
+|[CComPolyObject::Release](#release)|遞減物件的參考計數。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComPolyObject::m_contained](#m_contained)|委派**IUnknown**呼叫的外部未知，如果物件彙總或**IUnknown**如果物件不會彙總的物件。|  
+|[CComPolyObject::m_contained](#m_contained)|委派`IUnknown`呼叫的外部未知，如果物件已彙總或`IUnknown`如果物件不會彙總的物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComPolyObject` 實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總或非彙總物件。  
+ `CComPolyObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總或非彙總物件。  
   
- 執行個體時`CComPolyObject`建立時，外部值不明已核取。 如果是**NULL**， **IUnknown**實作非彙總的物件。 如果不是外部未知**NULL**， **IUnknown**彙總物件，則實作。  
+ 執行個體時`CComPolyObject`會建立值的外部未知已核取。 如果它是 NULL，`IUnknown`實作非彙總的物件。 如果不是 NULL，外部未知`IUnknown`會彙總物件的實作。  
   
- 使用的優點`CComPolyObject`是，您可以避免必須同時[CComAggObject](../../atl/reference/ccomaggobject-class.md)和[Ccomobject<](../../atl/reference/ccomobject-class.md)處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 這表示您可以在模組中存在 vtable 只能有一個複本和一份函式。 如果您的 vtable 很大，這可以大幅降低模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`會造成較大的模組大小因為沒有最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
+ 使用的優點`CComPolyObject`避免擁有[CComAggObject](../../atl/reference/ccomaggobject-class.md)並[CComObject](../../atl/reference/ccomobject-class.md)處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 這表示只有一個複本的 vtable 和一份函式存在於您的模組。 如果您的 vtable 很大，這可以大幅降低您的模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`可能會導致稍微大一點的模組大小因為它不會最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
   
- 如果`DECLARE_POLY_AGGREGATABLE`巨集在您的物件類別定義中，指定`CComPolyObject`將用來建立您的物件。 `DECLARE_POLY_AGGREGATABLE` 會自動被宣告為如果您使用 ATL 專案精靈來建立完整控制權 」 或 Internet Explorer 控制項。  
+ 如果在您的物件類別定義中，指定 DECLARE_POLY_AGGREGATABLE 巨集`CComPolyObject`會用來建立您的物件。 如果您使用 [ATL 專案精靈] 來建立完整控制權 」 或 「 Internet Explorer 的控制項，將會自動宣告 DECLARE_POLY_AGGREGATABLE。  
   
- 如果彙總，`CComPolyObject`物件都有它自己**IUnknown**、 分開的外部物件**IUnknown**，並維護其本身的參考計數。 `CComPolyObject` 使用[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)委派給外部未知。  
+ 如果彙總，`CComPolyObject`物件都有它自己`IUnknown`，為分開的外部物件`IUnknown`，並維護其本身的參考計數。 `CComPolyObject` 會使用[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)委派給外部未知。  
   
- 如需彙總的詳細資訊，請參閱文章[ATL COM 物件基礎觀念](../../atl/fundamentals-of-atl-com-objects.md)。  
+ 如需有關彙總的詳細資訊，請參閱[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CComObjectRootBase`  
@@ -101,14 +101,14 @@ class CComPolyObject : public IUnknown,
  **標頭：** atlcom.h  
   
 ##  <a name="addref"></a>  CComPolyObject::AddRef  
- 在物件上的參考計數遞增。  
+ 遞增參考計數物件上。  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 值，可用於診斷或測試。  
+ 值，這個值可能有助於診斷或測試。  
   
 ##  <a name="ccompolyobject"></a>  CComPolyObject::CComPolyObject  
  建構函式。  
@@ -118,13 +118,13 @@ CComPolyObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pv`  
- [in]如果物件是要彙總的外部未知的指標或**NULL**如果物件不會彙總的物件。  
+ *pv*  
+ [in]如果物件是彙總，或如果為 NULL 的外部未知的指標的物件，如果物件不會彙總。  
   
 ### <a name="remarks"></a>備註  
- 初始化`CComContainedObject`資料成員[m_contained](#m_contained)，和模組鎖定計數遞增。  
+ 初始化`CComContainedObject`資料成員[m_contained](#m_contained)，並遞增模組鎖定計數。  
   
- 解構函式遞減模組鎖定計數。  
+ 解構函式會遞減模組鎖定計數。  
   
 ##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject  
  解構函式。  
@@ -134,10 +134,10 @@ CComPolyObject(void* pv);
 ```  
   
 ### <a name="remarks"></a>備註  
- 會釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，並遞減模組鎖定計數。  
+ 釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，並遞減模組鎖定計數。  
   
 ##  <a name="createinstance"></a>  CComPolyObject::CreateInstance  
- 可讓您建立新**CComPolyObject <** `contained` **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 可讓您建立新**CComPolyObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -146,16 +146,16 @@ static HRESULT WINAPI CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pp`  
- [out]指標**CComPolyObject <** `contained` **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
+ *前置處理*  
+ [out]指標**CComPolyObject <** `contained` **>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 傳回的物件有參考計數為零，因此呼叫`AddRef`立即，然後使用**發行**當您完成時釋放物件指標的參考。  
+ 傳回的物件擁有的參考計數為零，因此呼叫`AddRef`立即執行，然後使用`Release`釋放物件指標的參考，當您完成時。  
   
- 如果您不需要直接存取物件，但仍想要建立新的物件沒有的額外負荷`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)改為。  
+ 如果您不需要直接存取物件，但仍想要建立新的物件，而不需要的額外負荷`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)改。  
   
 ##  <a name="finalconstruct"></a>  CComPolyObject::FinalConstruct  
  在物件建構的最後階段期間呼叫，這個方法會執行任何最後的初始化上[m_contained](#m_contained)資料成員。  
@@ -165,10 +165,10 @@ HRESULT FinalConstruct();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ##  <a name="finalrelease"></a>  CComPolyObject::FinalRelease  
- 在對物件解構期間呼叫，這個方法會釋放[m_contained](#m_contained)資料成員。  
+ 在物件解構期間呼叫，這個方法會釋放[m_contained](#m_contained)資料成員。  
   
 ```
 void FinalRelease();
@@ -182,11 +182,11 @@ CComContainedObject<contained> m_contained;
 ```  
   
 ### <a name="parameters"></a>參數  
- `contained`  
- [in]您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要在物件上支援從任何其他介面呼叫也一樣。  
+ *包含*  
+ [in]您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。  
   
 ### <a name="remarks"></a>備註  
- **IUnknown**透過呼叫`m_contained`如果已彙總物件，或以委派給外部未知**IUnknown**如果物件不會彙總此物件。  
+ `IUnknown` 透過呼叫`m_contained`如果已彙總物件，或委派給外部未知`IUnknown`如果物件不會彙總此物件。  
   
 ##  <a name="queryinterface"></a>  CComPolyObject::QueryInterface  
  擷取所要求介面的指標。  
@@ -198,23 +198,23 @@ HRESULT QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `Q`  
+ *Q*  
  COM 介面。  
   
- `iid`  
- [in]所要求介面的識別項。  
+ *iid*  
+ [in]所要求的介面識別碼。  
   
- `ppvObject`  
- [out]所識別的介面指標的指標`iid`。 如果物件不支援這個介面，`ppvObject`設**NULL**。  
+ *ppvObject*  
+ [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。  
   
- `pp`  
- [out]所識別的介面指標 **__uuidof(Q)**。  
+ *前置處理*  
+ [out]所識別之介面指標`__uuidof(Q)`。  
   
 ### <a name="return-value"></a>傳回值  
- 標準 `HRESULT` 值。  
+ 標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 彙總物件，如果要求的介面是**IUnknown**，`QueryInterface`讓指標回到彙總物件本身**IUnknown**並遞增參考計數。 否則，此方法會查詢介面透過`CComContainedObject`資料成員[m_contained](#m_contained)。  
+ 彙總的物件，如果要求的介面`IUnknown`，`QueryInterface`讓指標回到彙總物件本身`IUnknown`並遞增參考計數。 否則，這個方法會查詢透過介面`CComContainedObject`資料成員[m_contained](#m_contained)。  
   
 ##  <a name="release"></a>  CComPolyObject::Release  
  遞減參考計數物件。  
@@ -224,7 +224,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
+ 在偵錯組建`Release`傳回值，這個值可能有助於診斷或測試。 在非偵錯組建中，`Release`一律會傳回 0。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   

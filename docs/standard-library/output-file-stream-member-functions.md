@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1cba80b18f94d5a833b238e19be8190a442146
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858457"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959929"
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
 
@@ -27,9 +27,9 @@ ms.locfileid: "33858457"
 
 ## <a name="the-open-function-for-output-streams"></a>輸出資料流的 open 函式
 
-若要使用輸出檔案資料流 ([ofstream](../standard-library/basic-ofstream-class.md))，您必須在建構函式或是 **open** 函式中，將該資料流與特定的磁碟檔案建立關聯。 如果您使用 **open** 函式，您就可以重複使用相同的資料流物件搭配一系列檔案。 不論使用哪一種，描述檔案的引數都一樣。
+若要使用的輸出檔案資料流 ([ofstream](../standard-library/basic-ofstream-class.md))，您必須使該資料流與特定的磁碟檔案的建構函式或`open`函式。 如果您使用`open`函式，您可以重複使用相同的資料流物件，使用一系列的檔案。 不論使用哪一種，描述檔案的引數都一樣。
 
-當您開啟與輸出資料流相關聯的檔案時，通常會指定 **open_mode** 旗標。 您可以使用位元 OR ( &#124; ) 運算子，來合併這些在 `ios` 類別中定義為列舉程式的旗標。 如需列舉程式的清單，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+當您開啟輸出資料流相關聯的檔案時，您通常會指定`open_mode`旗標。 您可以使用位元 OR ( &#124; ) 運算子，來合併這些在 `ios` 類別中定義為列舉程式的旗標。 如需列舉程式的清單，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 有三種常見的輸出資料流情況會牽涉到模式選項：
 
@@ -75,7 +75,7 @@ cout <<'A'; // Format arguments 'width' and 'fill' apply
 
 ## <a name="the-write"></a>寫入
 
-**write** 函式會寫入輸出檔案資料流的記憶體區塊。 長度引數會指定要寫入的位元組數目。 這個範例會建立輸出檔案資料流，並將 `Date` 結構的二進位值寫入它：
+`write`函式會寫入輸出檔案資料流中的記憶體區塊。 長度引數會指定要寫入的位元組數目。 這個範例會建立輸出檔案資料流，並將 `Date` 結構的二進位值寫入它：
 
 ```cpp
 // write_function.cpp
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-**write** 函式遇到 null 字元時並不會停止，因此會寫入完整的類別結構。 此函式會採用兩個引數：`char` 指標和要寫入的字元計數。 請注意，在結構物件的位址之前必須轉型成 **char\***。
+`write`函式不會停止，當它遇到 null 字元，因此在撰寫完整的類別結構。 此函數會採用兩個引數： **char**指標和要寫入的字元計數。 請注意，在結構物件的位址之前必須轉型成 **char\***。
 
 ## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函式
 
@@ -104,9 +104,9 @@ int main( )
 
 ## <a name="the-close-function-for-output-streams"></a>輸出資料流的 close 函式
 
-**close** 成員函式會關閉與輸出檔案資料流相關聯的磁碟檔案。 若要完成所有的磁碟輸出，必須先關閉檔案。 如有必要，`ofstream` 解構函式能為您關閉檔案，但如果您需要在相同的資料流物件中開啟另一個檔案，您可以使用 **close** 函式。
+`close`成員函式會關閉與輸出檔案資料流相關聯的磁碟檔案。 若要完成所有的磁碟輸出，必須先關閉檔案。 如果有必要，請`ofstream`解構函式會關閉檔案，但您可以使用`close`函式，如果您需要開啟相同的資料流物件的另一個檔案。
 
-輸出資料流解構函式只有在建構函式或是 **open** 成員函式開啟檔案後，才會自動關閉資料流的檔案。 如果您將已開啟之檔案的檔案描述元傳遞給建構函式，或使用 **attach** 成員函式，您必須明確地關閉檔案。
+輸出資料流解構函式會自動關閉資料流的檔案才建構函式或`open`成員函式開啟的檔案。 如果您已開啟之檔案或使用的檔案描述元傳遞建構函式`attach`成員函式，您必須明確地關閉檔案。
 
 ## <a name="vclrferrorprocessingfunctionsanchor10"></a> 錯誤處理函式
 
@@ -115,13 +115,13 @@ int main( )
 |功能|傳回值|
 |--------------|------------------|
 |[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果有無法復原的錯誤，則傳回 **true**。|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 在呼叫不具有引數的 **clear** 之後，通常可以繼續處理。|
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 通常可以在呼叫之後繼續處理`clear`使用零引數。|
 |[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果沒有任何錯誤狀況 (無論是否可復原) 且未設定檔案結尾旗標，則會傳回 **true**。|
 |[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|針對檔案結尾條件傳回 **true**。|
 |[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|設定內部錯誤狀態。 如果使用預設引數呼叫，它會清除所有錯誤位元。|
 |[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|傳回目前的錯誤狀態。|
 
-**!** 運算子會多載以執行與 **fail** 函式相同的功能。 因此運算式︰
+**!** 運算子會多載以執行相同的功能`fail`函式。 因此運算式︰
 
 ```cpp
 if(!cout)...
@@ -145,7 +145,7 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-**void\*()** 運算子不等於 **good**，因為它並不會測試檔案結尾。
+**Void\*（)** 運算子不等於`good`因為它不會測試檔案結尾。
 
 ## <a name="see-also"></a>另請參閱
 

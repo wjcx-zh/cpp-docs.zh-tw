@@ -1,5 +1,5 @@
 ---
-title: return 陳述式在程式終止 （c + +） |Microsoft 文件
+title: return 陳述式在程式終止 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942628"
 ---
 # <a name="return-statement-in-program-termination-c"></a>程式終止中的 return 陳述式 (C++)
-發出`return`陳述式從**主要**功能上相當於呼叫**結束**函式。 參考下列範例：  
+發出`return`陳述式，從**主要**功能上相當於呼叫**結束**函式。 參考下列範例：  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- **結束**和`return`在上述範例中的陳述式會運作方式相同。 不過，C++ 要求使用具有傳回類型 (非 `void`) 的函式傳回一個值。 `return`陳述式可讓您傳回值，以從**主要**。  
+ **結束**並**傳回**在上述範例中的陳述式會在功能上完全相同。 不過，c + + 需要具有函式傳回型別以外**void**傳回值。 **會傳回**陳述式可讓您傳回值，以從`main`。  
   
 ## <a name="see-also"></a>另請參閱  
  [程式終止](../cpp/program-termination.md)

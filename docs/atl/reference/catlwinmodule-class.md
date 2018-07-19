@@ -1,5 +1,5 @@
 ---
-title: CAtlWinModule 類別 |Microsoft 文件
+title: CAtlWinModule 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cbbee8a404b679c8411470215821b8cdcccc695e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358048"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885217"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 類別
 這個類別提供 ATL 視窗化元件的支援。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 |[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|傳回視窗模組資料物件的指標。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別會提供所有的 ATL 類別需要視窗化功能的支援。  
+ 這個類別會提供所有 ATL 類別所需的時間範圍功能的支援。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)  
@@ -67,17 +67,17 @@ class CAtlWinModule : public _ATL_WIN_MODULE
  **標頭：** atlbase.h  
   
 ##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData  
- 這個方法會初始化並新增`_AtlCreateWndData`結構。  
+ 這個方法會初始化，並將`_AtlCreateWndData`結構。  
   
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pData`  
- 指標`_AtlCreateWndData`結構來初始化及加入至目前的模組。  
+ *pData*  
+ 指標`_AtlCreateWndData`會初始化並新增至目前模組的結構。  
   
- `pObject`  
+ *pObject*  
  物件的指標**這**指標。  
   
 ### <a name="remarks"></a>備註  
@@ -91,7 +91,7 @@ CAtlWinModule();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果初始化失敗， **EXCEPTION_NONCONTINUABLE**引發例外狀況。  
+ 如果初始化失敗， **EXCEPTION_NONCONTINUABLE**引發的例外狀況。  
   
 ##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  解構函式。  
@@ -104,14 +104,14 @@ CAtlWinModule();
  釋放所有配置的資源。  
   
 ##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData  
- 這個方法會傳回指標`_AtlCreateWndData`結構。  
+ 這個方法傳回的指標`_AtlCreateWndData`結構。  
   
 ```
 void* ExtractCreateWndData();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 將指標傳回至`_AtlCreateWndData`先前加入的結構[CAtlWinModule::AddCreateWndData](#addcreatewnddata)，或如果沒有物件可供使用，則為 NULL。  
+ 將指標傳回至`_AtlCreateWndData`結構之前加[CAtlWinModule::AddCreateWndData](#addcreatewnddata)，或如果沒有物件，則為 NULL。  
   
 ## <a name="see-also"></a>另請參閱  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   

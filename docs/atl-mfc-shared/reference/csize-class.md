@@ -1,5 +1,5 @@
 ---
-title: CSize 類別 |Microsoft 文件
+title: CSize 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c48ccf2d1d7f424ca9b95f9dcbf7a2953a52aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d0494b22d3166ebfd75a6aeaceba839f80b84bc1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362952"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884401"
 ---
 # <a name="csize-class"></a>CSize 類別
 類似於實作相對座標或位置的 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 結構。  
@@ -51,18 +51,18 @@ class CSize : public tagSIZE
 |----------|-----------------|  
 |[CSize::operator-](#operator_-)|減去兩個大小。|  
 |[CSize::operator ！ =](#operator_neq)|檢查相等`CSize`和大小。|  
-|[CSize::operator +](#operator_add)|將兩個大小。|  
+|[CSize::operator +](#operator_add)|新增兩個大小。|  
 |[CSize::operator + =](#operator_add_eq)|將大小`CSize`。|  
-|[CSize::operator =](#operator_-_eq)|將來自大小減去`CSize`。|  
+|[CSize::operator =](#operator_-_eq)|減去大小`CSize`。|  
 |[CSize::operator = =](#operator_eq_eq)|檢查是否相等`CSize`和大小。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別衍生自**大小**結構。 這表示您可以傳遞`CSize`中呼叫的參數**大小**的資料成員**大小**結構是可存取的資料成員的`CSize`。  
+ 此類別衍生自`SIZE`結構。 這表示您可以傳遞`CSize`中的參數，呼叫`SIZE`且的資料成員`SIZE`結構是否可存取資料成員`CSize`。  
   
- **Cx**和**cy**成員**大小**(和`CSize`) 都是公用的。 此外，`CSize`實作成員函式來管理**大小**結構。  
+ `cx`並`cy`的成員`SIZE`(和`CSize`) 都是公用的。 颾魤 ㄛ`CSize`實作成員函式來操作`SIZE`結構。  
   
 > [!NOTE]
->  如需有關共用 公用程式類別 (例如`CSize`)，請參閱[共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。  
+>  如需有關共用 公用程式類別 (例如`CSize`)，請參閱 <<c2> [ 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `tagSIZE`  
@@ -85,22 +85,22 @@ CSize( DWORD dwSize) throw();
   
 ### <a name="parameters"></a>參數  
  *initCX*  
- 設定**cx**成員`CSize`。  
+ 設定組`cx`成員`CSize`。  
   
  *initCY*  
- 設定**cy**成員`CSize`。  
+ 設定組`cy`成員`CSize`。  
   
- `initSize`  
- [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`用來初始化物件`CSize`。  
+ *initSize*  
+ [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，用來初始化`CSize`。  
   
- `initPt`  
- [點](../../mfc/reference/point-structure1.md)結構或`CPoint`用來初始化物件`CSize`。  
+ *initPt*  
+ [點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件，用來初始化`CSize`。  
   
- `dwSize`  
- `DWORD` 用來初始化`CSize`。 低序位字組是**cx**成員且高序位文字已**cy**成員。  
+ *dwSize*  
+ DWORD 用來初始化`CSize`。 低序位字`cx`成員與高序位文字是`cy`成員。  
   
 ### <a name="remarks"></a>備註  
- 如果任何引數不指定**cx**和**cy**初始化為零。  
+ 如果指定沒有引數`cx`和`cy`初始化為零。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]  
@@ -113,7 +113,7 @@ BOOL operator==(SIZE size) const throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 傳回的大小是否相等則為非零，otherwize 0。  
+ 傳回非零值，如果大小相等的 otherwize 0。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]  
@@ -126,13 +126,13 @@ BOOL operator!=(SIZE size) const throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 傳回的大小是否不相等，則為非零，否則為 0。  
+ 傳回非零值，如果大小不相等，否則為 0。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CSize::operator + =  
- 新增至該大小`CSize`。  
+ 將大小加入至這個`CSize`。  
   
 ```   
 void operator+=(SIZE size) throw(); 
@@ -142,7 +142,7 @@ void operator+=(SIZE size) throw();
  [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]  
   
 ##  <a name="operator_-_eq"></a>  CSize::operator =  
- 將從這個大小減去`CSize`。  
+ 減去大小，以從這個`CSize`。  
   
 ```   
 void operator-=(SIZE size) throw(); 
@@ -152,7 +152,7 @@ void operator-=(SIZE size) throw();
  [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>  CSize::operator +  
- 這些運算子加入`CSize`值參數的值。  
+ 這些運算子將此新增`CSize`值參數的值。  
   
 ```   
 CSize operator+(SIZE size) const throw();
@@ -165,9 +165,9 @@ CRect operator+(const RECT* lpRect) const throw();
   
 - **運算子 + (** `size` **)** 這項作業會加入兩個`CSize`值。  
   
-- **運算子 + (** `point` **)** 這項作業的位移 （移動）[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值由此`CSize`值。 **Cx**和**cy** this 的成員`CSize`值會加入至**x**和**y**資料成員**點**值。 它相當於新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子 + (** `point` **)** 這項作業的位移 （移動）[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值，這個`CSize`值。 **Cx**並**cy**這個成員`CSize`值會新增至**x**並**y**資料成員的**點**值。 它相當於新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
-- **運算子 + (** `lpRect` **)** 這項作業的位移 （移動） [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值由此`CSize`值。 **Cx**和**cy** this 的成員`CSize`值會加入至**左**，**頂端**，**右邊**，和**底部**資料成員`RECT`值。 它相當於新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子 + (** `lpRect` **)** 這項作業的位移 （移動） [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值，這個`CSize`值。 **Cx**並**cy**這個成員`CSize`值會新增至**左**，**頂端**，**右邊**，並**底部**的資料成員`RECT`值。 它相當於新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
@@ -187,11 +187,11 @@ CSize operator-() const throw();
   
 - **運算子-(** `size` **)** 這項作業，減去兩個`CSize`值。  
   
-- **運算子-(** `point` **)** 這項作業的位移 （移動）[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)加法反元素，這個值`CSize`值。 **Cx**和**cy**這個`CSize`值都會從減去**x**和**y**資料成員**點**值。 它相當於新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子-(** `point` **)** 這項作業的位移 （移動）[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)或是[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)加法反元素，這個值`CSize`值。 **Cx**並**cy**這個`CSize`值減去**x**並**y**的資料成員**點**值。 它相當於新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
-- **運算子-(** `lpRect` **)** 這項作業的位移 （移動） [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)或[CRect](../../atl-mfc-shared/reference/crect-class.md)加法反元素，這個值`CSize`值。 **Cx**和**cy** this 的成員`CSize`值都會從減去**左**，**頂端**，**右邊**，和**底部**資料成員`RECT`值。 它相當於新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子-(** `lpRect` **)** 這項作業的位移 （移動） [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)加法反元素，這個值`CSize`值。 **Cx**並**cy**這個成員`CSize`值減去**左**，**頂端**，**右邊**，並**下方**的資料成員`RECT`值。 它相當於新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
-- **運算子-（)** 此操作會傳回這個加法反元素`CSize`值。  
+- **運算子-（)** 這項作業會傳回這個加法反元素`CSize`值。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#103](../../atl-mfc-shared/codesnippet/cpp/csize-class_7.cpp)]  

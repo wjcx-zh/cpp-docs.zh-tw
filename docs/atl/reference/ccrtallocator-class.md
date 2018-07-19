@@ -1,5 +1,5 @@
 ---
-title: CCRTAllocator 類別 |Microsoft 文件
+title: CCRTAllocator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f026610469c75f37e49df6f42358a3ff378cb0e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363443"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879581"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator 類別
-這個類別會提供用來管理記憶體使用 CRT 記憶體常式方法。  
+這個類別提供方法來管理使用 CRT 記憶體常式的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,11 +43,11 @@ class ATL::CCRTAllocator
 |名稱|描述|  
 |----------|-----------------|  
 |[Ccrtallocator:: Allocate](#allocate)|（靜態）呼叫這個方法來配置記憶體。|  
-|[Ccrtallocator:: Free](#free)|（靜態）呼叫此方法以釋放記憶體。|  
+|[Ccrtallocator:: Free](#free)|（靜態）呼叫這個方法來釋放記憶體。|  
 |[Ccrtallocator:: Reallocate](#reallocate)|（靜態）呼叫這個方法來重新配置記憶體。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別由[CHeapPtr](../../atl/reference/cheapptr-class.md)提供 CRT 記憶體配置常式。 對應項目類別、 [CComAllocator](../../atl/reference/ccomallocator-class.md)，提供相同的方法使用 COM 常式。  
+ 此類別由[CHeapPtr](../../atl/reference/cheapptr-class.md)提供 CRT 記憶體配置常式。 對應類別[CComAllocator](../../atl/reference/ccomallocator-class.md)，提供相同的方法使用 COM 常式。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlcore.h  
@@ -60,7 +60,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBytes`  
+ *nBytes*  
  要配置的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -70,18 +70,18 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
  配置記憶體。 請參閱[malloc](../../c-runtime-library/reference/malloc.md)如需詳細資訊。  
   
 ##  <a name="free"></a>  Ccrtallocator:: Free  
- 呼叫此靜態函式，以釋放記憶體。  
+ 呼叫此靜態函式來釋放記憶體。  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  配置的記憶體之指標。  
   
 ### <a name="remarks"></a>備註  
- 釋放配置的記憶體。 請參閱[可用](../../c-runtime-library/reference/free.md)如需詳細資訊。  
+ 釋放配置的記憶體。 請參閱[免費](../../c-runtime-library/reference/free.md)如需詳細資訊。  
   
 ##  <a name="reallocate"></a>  Ccrtallocator:: Reallocate  
  呼叫此靜態函式以重新配置記憶體。  
@@ -91,10 +91,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  配置的記憶體之指標。  
   
- `nBytes`  
+ *nBytes*  
  要重新配置的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  

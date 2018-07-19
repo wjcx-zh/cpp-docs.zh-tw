@@ -1,5 +1,5 @@
 ---
-title: noinline |Microsoft 文件
+title: noinline |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f81ab892fd7f406292925f424bebc7514fd7ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942907"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
- **__declspec （noinline)** 告知編譯器永遠不要內嵌特定成員函式 （在類別中的函式）。  
+ **__declspec （noinline)** 會告知編譯器永遠不要內嵌特定成員函式 （在類別中的函式）。  
   
  如果函式不大，而且對程式碼的效能不重要，建議不要內嵌函式。 也就是，如果函式不大且可能不常被呼叫，例如處理錯誤條件的函式。  
   
- 請記住，如果函式已標記為 `noinline`，呼叫函式會較小，因而本身即為編譯器的內嵌候選項。  
+ 請記住，如果函式標示**noinline**，呼叫的函式會較小，因此，本身為編譯器的內嵌的候選項目。  
   
-```  
+```cpp 
 class X {  
    __declspec(noinline) int mbrfunc() {  
       return 0;   
@@ -39,7 +40,7 @@ class X {
 };  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__declspec](../cpp/declspec.md)   

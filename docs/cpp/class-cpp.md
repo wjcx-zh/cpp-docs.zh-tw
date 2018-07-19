@@ -1,5 +1,5 @@
 ---
-title: 類別 （c + +） |Microsoft 文件
+title: 類別 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bffa79760e9c597c5a6d736104dc856fc1de16b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bf975a9d64508368ac5d61c82fecc07edda28b5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942663"
 ---
 # <a name="class-c"></a>class (C++)
-`class` 關鍵字宣告類別類型或定義類別類型的物件。  
+**類別**關鍵字宣告類別類型，或定義類別類型的物件。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
   
-      [template-spec]  
-       class [ms-decl-spec] [tag [: base-list ]]  
+[template-spec]  
+class [ms-decl-spec] [tag [: base-list ]]  
 {  
    member-list  
 } [declarators];  
@@ -39,26 +40,26 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>參數  
- `template-spec`  
+ *範本規格*  
  選擇性樣板規格。 如需詳細資訊，請參閱[範本](templates-cpp.md)。  
   
- `class`  
- `class` 關鍵字。  
+ *class*  
+ **類別**關鍵字。  
   
- `ms-decl-spec`  
+ *ms-decl-modifier-規格*  
  選擇性儲存類別規格。 如需詳細資訊，請參閱[__declspec](../cpp/declspec.md)關鍵字。  
   
- `tag`  
- 提供給類別的類型名稱。 標記會變成類別範圍內的保留字。 標記是選擇項。 如果省略，則會定義匿名類別。 如需詳細資訊，請參閱[匿名類別類型](../cpp/anonymous-class-types.md)。  
+ *標記*  
+ 提供給類別的類型名稱。 標記會變成類別範圍內的保留字。 標記是選擇項。 如果省略，則會定義匿名類別。 如需詳細資訊，請參閱 <<c0> [ 匿名類別類型](../cpp/anonymous-class-types.md)。  
   
- `base-list`  
- 這個類別從中衍生其成員的選擇性類別或結構清單。 請參閱[基底類別](../cpp/base-classes.md)如需詳細資訊。 每個基底類別或結構名稱前面可以有存取規範 ([公用](../cpp/public-cpp.md)，[私人](../cpp/private-cpp.md)，[保護](../cpp/protected-cpp.md)) 和[虛擬](../cpp/virtual-cpp.md)關鍵字。 請參閱中的成員存取表[控制對類別成員存取](member-access-control-cpp.md)如需詳細資訊。  
+ *基底清單*  
+ 這個類別從中衍生其成員的選擇性類別或結構清單。 請參閱[基底類別](../cpp/base-classes.md)如需詳細資訊。 每個基底類別或結構名稱可以加上存取規範 ([公開金鑰](../cpp/public-cpp.md)，[私人](../cpp/private-cpp.md)，[保護](../cpp/protected-cpp.md)) 和[虛擬](../cpp/virtual-cpp.md)關鍵字。 請參閱中的成員存取表[控制對類別成員存取](member-access-control-cpp.md)如需詳細資訊。  
   
- `member-list`  
+ *成員清單*  
  類別成員的清單。 請參閱[類別成員概觀](../cpp/class-member-overview.md)如需詳細資訊。  
   
- `declarators`  
- 宣告子清單，指定類別類型的一個或多個執行個體名稱。 如果類別的所有資料成員都是 `public`，則宣告子可包含初始設定式清單。 在結構中根據預設資料成員是 `public`，這種情況比在類別中更常見。 請參閱[宣告子概觀](../cpp/overview-of-declarators.md)如需詳細資訊。  
+ *宣告子*  
+ 宣告子清單，指定類別類型的一個或多個執行個體名稱。 如果類別的所有資料成員宣告子可包含初始設定式清單**公開**。 這是在結構中，資料成員是較常見**公開**根據預設，比在類別。 請參閱[的宣告子概觀](../cpp/overview-of-declarators.md)如需詳細資訊。  
   
 ## <a name="remarks"></a>備註  
  一般來說，如需類別的詳細資訊，請參閱下列其中一個主題：  
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // class.cpp  
 // compile with: /EHsc  
 // Example of the class keyword  

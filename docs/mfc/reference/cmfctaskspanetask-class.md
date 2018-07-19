@@ -1,5 +1,5 @@
 ---
-title: CMFCTasksPaneTask 類別 |Microsoft 文件
+title: CMFCTasksPaneTask 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040697"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853965"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 類別
-`CMFCTasksPaneTask`類別是 helper 類別，表示工作窗格控制項的工作 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 工作物件，代表工作群組中的項目 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每個工作可以有命令，當使用者按一下工作與工作名稱左邊的圖示時，Framework 就會執行這個命令。  
+`CMFCTasksPaneTask`類別是一個 helper 類別，代表工作的工作窗格控制項 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 工作物件代表的工作群組中的項目 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每個工作可以有命令，當使用者按一下工作與工作名稱左邊的圖示時，Framework 就會執行這個命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,21 +75,21 @@ class CMFCTasksPaneTask : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|判斷是否會自動終結 [工作] 視窗。|  
-|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|決定是否架構會以粗體文字繪製工作標籤。|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|包含使用者定義的資料與工作產生關聯的架構。 如果工作沒有相關聯的資料，請設定為零。|  
+|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|判斷是否自動終結 [工作] 視窗。|  
+|[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|判斷 framework 是否會繪製工作標籤，以粗體文字。|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|包含 framework 將與工作相關聯的使用者定義資料。 如果工作沒有任何相關聯的資料，請設定為零。|  
 |[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|[工作] 視窗控制代碼。|  
-|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|影像清單的 framework 顯示在工作旁邊的映像中的索引。|  
-|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|[工作] 視窗的高度。 如果工作不有任何工作 視窗，這個值會是零。|  
+|[CMFCTasksPaneTask::m_nIcon](#m_nicon)|架構會顯示工作旁邊之映像的映像清單中的索引。|  
+|[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|[工作] 視窗的高度。 如果工作不有任何 [工作] 視窗，這個值會是零。|  
 |[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|指標`CMFCTasksPaneTaskGroup`所屬這項工作。|  
 |[CMFCTasksPaneTask::m_rect](#m_rect)|指定工作的週框矩形。|  
 |[CMFCTasksPaneTask::m_strName](#m_strname)|工作的名稱。|  
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|指定的命令，framework 就會在使用者按一下工作時執行的命令識別碼。 如果此值不是有效的命令 ID，工作會被視為簡單的標籤。|  
+|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|指定的命令，架構就會在使用者按一下工作時執行的命令識別碼。 如果此值不是有效的命令識別碼，此工作會被視為簡單的標籤。|  
   
 ## <a name="remarks"></a>備註  
  下圖顯示包含三個工作的工作群組：  
   
- ![展開的工作群組](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![工作群組中，展開](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
 > [!NOTE]
 >  如果工作沒有有效的命令識別碼，它會被視為簡單的標籤。  
@@ -119,7 +119,7 @@ CMFCTasksPaneTask(
   
 ### <a name="parameters"></a>參數  
  *pGroup*  
- 指定[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)所屬的工作。  
+ 指定[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)所屬工作。  
   
  *lpszName*  
  指定工作的名稱。  
@@ -128,7 +128,7 @@ CMFCTasksPaneTask(
  影像清單中指定工作的映像的索引。  
   
  *uiCommandID*  
- 指定按一下工作時所執行的命令的命令識別碼。  
+ 指定命令時按一下工作所執行的命令識別碼。  
   
  *dwUserData*  
  使用者定義的資料。  
@@ -137,7 +137,7 @@ CMFCTasksPaneTask(
  指定 [工作] 視窗的控制代碼。  
   
  *bAutoDestroyWindow*  
- 如果`TRUE`，[工作] 視窗將會自動終結。  
+ 如果為 TRUE，[工作] 視窗將會自動終結。  
   
  *nWindowHeight*  
  指定 [工作] 視窗的高度。  
@@ -145,27 +145,27 @@ CMFCTasksPaneTask(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
- 判斷是否會自動終結 [工作] 視窗。  
+ 判斷是否自動終結 [工作] 視窗。  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 設定為`TRUE`來指定 [工作] 視窗 ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 自動; 否則應該予以終結`FALSE`。  
+ 設定為 TRUE，以指定 [工作] 視窗 ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 應該予以終結自動; 否則為 FALSE。  
   
 ##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
- 決定是否要將工作標籤繪製以粗體文字。  
+ 決定是否要將工作的標籤繪製以粗體文字。  
   
 ```  
 BOOL m_bIsBold;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個成員設定為`TRUE`工作標籤粗體文字顯示。  
+ 這個成員設定為 true 會顯示粗體工作標籤文字。  
   
 ##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
- 包含與工作相關聯的使用者定義資料。 如果沒有資料會與工作相關聯，則設定為零。  
+ 包含與工作相關聯的使用者定義資料。 如果沒有資料與工作相關聯，請設定為零。  
   
 ```  
 DWORD m_dwUserData;  
@@ -181,10 +181,10 @@ HWND m_hwndTask;
 ```  
   
 ### <a name="remarks"></a>備註  
- 若要加入工作 視窗，呼叫[CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)。  
+ 若要新增工作 視窗，請呼叫[CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)。  
   
 ##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
- 識別指定的工作旁會顯示影像的影像清單中的索引位置。  
+ 識別指定的工作旁邊顯示的映像的映像清單中的索引位置。  
   
 ```  
 int m_nIcon;  
@@ -193,10 +193,10 @@ int m_nIcon;
 ### <a name="remarks"></a>備註  
  影像清單由設定[CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist)。  
   
- 設定`m_nIcon`為-1，如果您想要顯示的工作，而映像。  
+ 設定`m_nIcon`為-1，如果您想要顯示的工作，如果沒有影像。  
   
 ##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
- [工作] 視窗的高度。 如果工作不有任何工作 視窗，這個值會是零。  
+ [工作] 視窗的高度。 如果工作不有任何 [工作] 視窗，這個值會是零。  
   
 ```  
 int m_nWindowHeight;  
@@ -212,7 +212,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ```  
   
 ### <a name="remarks"></a>備註  
- 每項工作都必須有父群組。 將群組加入至工作窗格的藉由呼叫[cmfctaskspane:: Addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
+ 每個工作都必須有父群組。 將群組新增至工作窗格的藉由呼叫[cmfctaskspane:: Addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
  指定工作的週框矩形。  
@@ -222,7 +222,7 @@ CRect m_rect;
 ```  
   
 ### <a name="remarks"></a>備註  
- 繪製工作時，這個值會計算由架構。  
+ 繪製工作時由架構計算此值。  
   
 ##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
  工作的名稱。  
@@ -234,7 +234,7 @@ CString m_strName;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
- 指定當使用者按一下工作執行命令的命令識別碼。 如果此值不是有效的命令 ID，工作會被視為簡單的標籤。  
+ 指定當使用者按一下工作執行命令的命令識別碼。 如果此值不是有效的命令識別碼，此工作會被視為簡單的標籤。  
   
 ```  
 UINT m_uiCommandID;  
@@ -256,10 +256,10 @@ virtual BOOL SetACCData(
  表示目前工作的父視窗。  
   
  [out]*資料*  
- 型別的物件`CAccessibilityData`填入目前的工作的協助工具資料。  
+ 型別的物件`CAccessibilityData`，並填入目前的工作的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果*資料*參數已成功填入目前的工作的協助工具資料，否則`FALSE`。  
+ 則為 TRUE*資料*參數，則已成功填入目前的工作的協助工具資料; 否則為 FALSE。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

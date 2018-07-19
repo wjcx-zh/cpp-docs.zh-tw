@@ -1,5 +1,5 @@
 ---
-title: 左的移和右移運算子 (&gt; &gt;和&lt; &lt;) |Microsoft 文件
+title: 左的移和右移運算子 (&gt; &gt;並&lt; &lt;) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8835d096575f3f7a9d50c7be26fa435e5d6bcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422393"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939724"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;和&lt; &lt;)
-位元移位運算子是右移位運算子 (>>)，會將位元的*shift 運算式*右到左移位運算子 (<<)，會將位元的*移位運算式*左邊。 <sup>1</sup>  
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;並&lt; &lt;)
+位元移位運算子是右移位運算子 (>>)，會將位元*shift 運算式*右側，和左移運算子 (<<)，會將位元的*shift 運算式*左邊。 <sup>1</sup>  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,9 +44,9 @@ ms.locfileid: "32422393"
 > 下列說明和範例適用於 x86 和 x64 架構的 Windows。 左移位和右移位運算子在 Windows RT for ARM 裝置的實作非常不同。 如需詳細資訊，請參閱的 < 移位運算子 > 一節[Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx)部落格文章。  
   
 ## <a name="left-shifts"></a>左移位  
- 左移位運算子會使中的位元*shift 運算式*數所指定的位置向左移位*加法運算式*。 移位作業空出的位元位置以零填補。 左移是邏輯移位 (會捨棄移出結尾的位元，包括正負號位元)。 如需類型的位元移位的詳細資訊，請參閱[位元移位](http://en.wikipedia.org/wiki/Bitwise_shift)。  
+ 左移位運算子會導致中的位元*shift 運算式*所指定的位置數目，向左移位*加法運算式*。 移位作業空出的位元位置以零填補。 左移是邏輯移位 (會捨棄移出結尾的位元，包括正負號位元)。 如需此類位元移位的詳細資訊，請參閱[位元移位](http://en.wikipedia.org/wiki/Bitwise_shift)。  
   
- 下列範例示範使用不帶正負號數字的左移位作業。 此範例以值代表 bitset 說明位元的行為。 如需詳細資訊，請參閱[bitset 類別](../standard-library/bitset-class.md)。  
+ 下列範例示範使用不帶正負號數字的左移位作業。 此範例以值代表 bitset 說明位元的行為。 如需詳細資訊，請參閱 < [bitset 類別](../standard-library/bitset-class.md)。  
   
 ```cpp  
 #include <iostream>  
@@ -92,7 +92,7 @@ int main() {
 ```  
   
 ## <a name="right-shifts"></a>右移位  
- 右移位運算子會使中的位元模式*shift 運算式*數所指定的位置向右移位*加法運算式*。 若是不帶正負號的數字，移位作業空出的位元位置以零填補。 若是帶正負號的數字，會使用正負號位元填補空出的位元位置。 換句話說，如果是正數就會使用 0，負數則使用 1。  
+ 向右移位運算子會導致中的位元模式*shift 運算式*所指定的位置數目，向右移位*加法運算式*。 若是不帶正負號的數字，移位作業空出的位元位置以零填補。 若是帶正負號的數字，會使用正負號位元填補空出的位元位置。 換句話說，如果是正數就會使用 0，負數則使用 1。  
   
 > [!IMPORTANT]
 > 將帶正負號負數向右移的結果與實作相關。 雖然 Visual C++ 使用正負號位元填補空出來的位元位置，但不保證其他實作也會如此。  
@@ -176,9 +176,9 @@ int main() {
 ```  
   
 ## <a name="shifts-and-promotions"></a>移位和提升  
- 移位運算子兩邊的運算式都必須是整數類型。 根據規則中所述執行整數提升[標準轉換](standard-conversions.md)。 結果型別是相同的類型與提升*shift 運算式*。  
+ 移位運算子兩邊的運算式都必須是整數類型。 根據規則中所述執行整數提升[標準轉換](standard-conversions.md)。 結果的型別是相同的類型與提升*shift 運算式*。  
   
- 下列範例會將屬於 `char` 類型的變數提升為 `int`。  
+ 在下列範例中，類型的變數**char**升級到**int**。  
   
 ```cpp  
 #include <iostream>  
@@ -198,7 +198,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>其他詳細資料  
- 如果移位運算的結果是未定義*加法運算式*是負數或*加法運算式*大於或等於 （已提升） 中的位元數*shift 運算式*。 如果執行任何移位作業*加法運算式*為 0。  
+ 如果移位運算的結果是未定義*加法運算式*為負數或者*加法運算式*大於或等於 （已提升） 中的位元數*shift 運算式*。 如果執行任何移位作業*加法運算式*為 0。  
   
 ```cpp  
 #include <iostream>  
@@ -224,11 +224,11 @@ int main() {
 ```  
   
 ## <a name="footnotes"></a>註腳  
- 1 以下是描述的移位運算子中的 C + + 11 ISO 規格 （INCITS/ISO/IEC 14882-2011[2012])、 5.8.2 和 5.8.3 節的區段。  
+ 1 以下是 c++11 ISO 規格 （INCITS/ISO/IEC 14882-2011[2012])，5.8.2 和 5.8.3 節的移位運算子的說明  
   
- 值**E1 << E2**是**E1**向左移位**E2**位元位置; 空出個位元都是零填滿。 如果**E1**具有不帶正負號的類型，結果的值是**E1 × 2**<sup>**E2**</sup>、 減少模數大於可在顯示的最大值結果型別。 否則，如果**E1**有帶正負號的類型和非負數值和**E1 × 2**<sup>**E2** </sup>是對應的不帶正負號類型可以顯示結果的類型，轉換為結果類型的值，則產生的值;否則，則行為是未定義。  
+ `E1 << E2` 的值是向左移位 `E1` 的 `E2` 位元位置；空出的位元會以零填補。 如果`E1`具有不帶正負號的類型，結果的值是**E1 × 2**<sup>**E2**</sup>，少比結果類型中可顯示的最大值的一個餘數。 否則，如果`E1`帶正負號的類型且具有非負數值，並**E1 × 2**<sup>**E2** </sup>就對應不帶正負號類型的結果型別中可顯示值，轉換為結果型別是所產生的值;否則行為未定義。  
   
- 值**E1 >> E2**是**E1**向右移位**E2**位元位置。 如果**E1**具有不帶正負號的類型如果**E1**具有帶正負號的類型和非負數值，結果的值是不可或缺的一部分的商數**E1/2** <sup>**E2**</sup>。 如果**E1**具有帶正負號的類型，而且負值，產生的值是由實作定義。  
+ `E1 >> E2` 的值是 `E1` 向右移位 `E2` 個位元位置。 如果`E1`具有不帶正負號的類型或是`E1`具有帶正負號的類型，而且具有非負數值，結果的值是不可或缺的一部分的商數**E1/2**<sup>**E2** </sup>. 如果 `E1` 的類型帶正負號，且具有負數值，結果產生的值由實作決定。  
   
 ## <a name="see-also"></a>另請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   

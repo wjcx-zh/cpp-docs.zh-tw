@@ -1,5 +1,5 @@
 ---
-title: CDefaultCharTraits 類別 |Microsoft 文件
+title: CDefaultCharTraits 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361723"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881850"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 類別
 這個類別提供兩個靜態函式之間大寫和小寫字元轉換。  
@@ -37,8 +37,8 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 若要儲存在集合中的資料類型。  
+ *T*  
+ 若要在集合中儲存的資料型別。  
   
 ## <a name="members"></a>成員  
   
@@ -50,7 +50,7 @@ class CDefaultCharTraits
 |[CDefaultCharTraits::CharToUpper](#chartoupper)|（靜態）呼叫此函式可將字元轉換成小寫。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別會提供類別所使用的函式[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
+ 這個類別會提供函式所使用的類別[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  

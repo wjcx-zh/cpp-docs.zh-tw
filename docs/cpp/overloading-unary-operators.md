@@ -1,5 +1,5 @@
 ---
-title: 多載一元運算子 |Microsoft 文件
+title: 多載一元運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421054"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941687"
 ---
 # <a name="overloading-unary-operators"></a>多載一元運算子
 可以多載的一元運算子如下：  
@@ -35,7 +35,7 @@ ms.locfileid: "32421054"
   
 2.  `&` ([傳址](../cpp/address-of-operator-amp.md))  
   
-3.  `~` ([一補數](../cpp/one-s-complement-operator-tilde.md))  
+3.  `~` ([一進位補數](../cpp/one-s-complement-operator-tilde.md))  
   
 4.  `*` ([指標取值 （dereference)](../cpp/indirection-operator-star.md))  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32421054"
   
 9. 轉換運算子  
   
- 後置遞增和遞減運算子 (`++`和**--**) 中需分開處理[遞增和遞減](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
+ 後置遞增和遞減運算子 (`++`並`--`) 中需分開處理[遞增和遞減](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
   
  轉換運算子也會討論不同的主題。請參閱[使用者定義型別轉換](../cpp/user-defined-type-conversions-cpp.md)。  
   

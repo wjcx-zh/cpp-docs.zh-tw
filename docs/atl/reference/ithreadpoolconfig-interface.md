@@ -1,5 +1,5 @@
 ---
-title: IThreadPoolConfig 介面 |Microsoft 文件
+title: IThreadPoolConfig 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363725"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880150"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig 介面
-這個介面會提供設定執行緒集區的方法。  
+這個介面會提供方法，以設定執行緒集區。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,12 +48,12 @@ __interface
 |||  
 |-|-|  
 |[GetSize](#getsize)|呼叫這個方法來取得集區中的執行緒數目。|  
-|[GetTimeout](#gettimeout)|呼叫這個方法，以毫秒為單位，執行緒集區將會等到關閉執行緒取得最大時間。|  
+|[GetTimeout](#gettimeout)|呼叫這個方法，以取得最長的時間，以毫秒為單位，執行緒集區會等待關閉執行緒。|  
 |[SetSize](#setsize)|呼叫此方法以設定集區中的執行緒數目。|  
-|[SetTimeout](#settimeout)|呼叫此方法以設定以毫秒為單位，執行緒集區關閉執行緒的等候時間上限。|  
+|[SetTimeout](#settimeout)|呼叫這個方法來設定以毫秒為單位，執行緒集區會等待執行緒關閉的時間上限。|  
   
 ## <a name="remarks"></a>備註  
- 這個介面由實作[CThreadPool](../../atl/reference/cthreadpool-class.md)。  
+ 此介面由實作[CThreadPool](../../atl/reference/cthreadpool-class.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlutil.h  
@@ -66,28 +66,28 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pnNumThreads`  
- [out]此變數會在成功時，接收的執行緒數目位址集區中的位址。  
+ *pnNumThreads*  
+ [out]成功時，執行緒數目的集區中接收變數的位址。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- 呼叫這個方法，以毫秒為單位，執行緒集區將會等到關閉執行緒取得最大時間。  
+ 呼叫這個方法，以取得最長的時間，以毫秒為單位，執行緒集區會等待關閉執行緒。  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pdwMaxWait`  
- [out]位址之變數的成功時，收到的最長時間的執行緒集區會關閉執行緒等候的毫秒數。  
+ *pdwMaxWait*  
+ [out]變數的位址，成功時，收到的最長時間的執行緒集區會關閉執行緒等候的毫秒數。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="example"></a>範例  
  請參閱[IThreadPoolConfig::GetSize](#getsize)。  
@@ -100,32 +100,32 @@ STDMETHOD(SetSize)int nNumThreads);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nNumThreads`  
+ *nNumThreads*  
  執行緒集區中的要求的數目。  
   
- 如果`nNumThreads`是負數，其絕對值將會乘以取得的執行緒總數機器的處理器數目。  
+ 如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。  
   
- 如果`nNumThreads`為零， [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)將會乘以取得的執行緒總數機器的處理器數目。  
+ 如果*nNumThreads*為零， [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)將乘以中取得的執行緒總數機器的處理器數目。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="example"></a>範例  
  請參閱[IThreadPoolConfig::GetSize](#getsize)。  
   
 ##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- 呼叫此方法以設定以毫秒為單位，執行緒集區關閉執行緒的等候時間上限。  
+ 呼叫這個方法來設定以毫秒為單位，執行緒集區會等待執行緒關閉的時間上限。  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwMaxWait`  
- 以毫秒為單位，執行緒集區將會等到關閉執行緒要求的最大時間。  
+ *dwMaxWait*  
+ 以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="example"></a>範例  
  請參閱[IThreadPoolConfig::GetSize](#getsize)。  

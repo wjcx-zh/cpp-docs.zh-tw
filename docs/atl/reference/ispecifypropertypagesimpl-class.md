@@ -1,5 +1,5 @@
 ---
-title: ISpecifyPropertyPagesImpl 類別 |Microsoft 文件
+title: ISpecifyPropertyPagesImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362228"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879568"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 類別
-這個類別會實作**IUnknown**和提供的預設實作[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面。  
+這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`ISpecifyPropertyPagesImpl`。  
   
 ## <a name="members"></a>成員  
@@ -51,13 +51,13 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填滿計算 UUID 陣列值。 每個 UUID 會對應至其中一個可以顯示物件的屬性工作表中的屬性頁 CLSID。|  
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填滿計算 UUID 的陣列值。 每個 UUID 會對應至其中一個可顯示物件的屬性工作表中的屬性頁的 CLSID。|  
   
 ## <a name="remarks"></a>備註  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面可讓用戶端取得的物件所支援之屬性頁 Clsid 的清單。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面可讓用戶端取得物件所支援的屬性頁 Clsid 的清單。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
 > [!NOTE]
->  不會公開**ISpecifyPropertyPages**介面，如果您的物件不支援屬性頁。  
+>  不會公開`ISpecifyPropertyPages`介面，如果您的物件不支援屬性頁。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -70,14 +70,14 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **標頭：** atlcom.h  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- 填入陣列[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)結構具有可以顯示物件的屬性工作表中的屬性頁的 Clsid。  
+ 填入陣列[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)結構可以顯示物件的屬性工作表中之屬性頁面的 Clsid。  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 會擷取每個 CLSID 使用物件的屬性對應。  
+ ATL 會使用物件的屬性對應，來擷取每個 CLSID。  
   
  請參閱[ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) Windows SDK 中。  
   

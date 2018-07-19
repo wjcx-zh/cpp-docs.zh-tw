@@ -1,5 +1,5 @@
 ---
-title: _com_error::_com_error |Microsoft 文件
+title: _com_error::_com_error |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d26239f6edf98e90f9d4d773d654025da410a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942852"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  建構 `_com_error` 物件。  
   
@@ -31,43 +32,41 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _com_error(  
+_com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
-   bool fAddRef=false  
-) throw( );  
-_com_error(  
-   const _com_error& that   
-) throw( );  
+   bool fAddRef=false) throw( );  
+
+_com_error( const _com_error& that ) throw( );  
 ```  
   
 #### <a name="parameters"></a>參數  
- `hr`  
- `HRESULT` 資訊。  
+ *hr*  
+ HRESULT 資訊。  
   
- `perrinfo`  
- **IErrorInfo**物件。  
+ *perrinfo*  
+ `IErrorInfo` 物件  
   
- **bool fAddRef = false**  
- 導致建構函式，以在非 null 值上呼叫 AddRef **IErrorInfo**介面。 如此可在將介面的擁有權傳入 `_com_error` 物件的一般情況下，提供正確的參考計數，例如：  
+ `bool fAddRef=false`  
+ 會導致非 null 值上呼叫 AddRef 的建構函式`IErrorInfo`介面。 如此可在將介面的擁有權傳入 `_com_error` 物件的一般情況下，提供正確的參考計數，例如：  
   
-```  
+```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- 如果您不想要傳送擁有權，以您的程式碼`_com_error`物件，而`AddRef`才能位移**發行**中`_com_error`解構函式建構物件，如下所示：  
+ 如果您不想要傳送擁有權轉移給您的程式碼`_com_error`物件，而`AddRef`才能位移`Release`在`_com_error`解構函式，建構物件，如下所示：  
   
-```  
+```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
- `that`  
+ *,*  
  現有的 `_com_error` 物件。  
   
 ## <a name="remarks"></a>備註  
- 第一個建構函式會建立新的物件，指定`HRESULT`和選擇性**IErrorInfo**物件。 第二個方法會建立現有 `_com_error` 物件的複本。  
+ 第一個建構函式會建立新的物件，指定的 HRESULT 和選擇性`IErrorInfo`物件。 第二個方法會建立現有 `_com_error` 物件的複本。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_com_error 類別](../cpp/com-error-class.md)

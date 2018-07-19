@@ -1,5 +1,5 @@
 ---
-title: CSecurityAttributes 類別 |Microsoft 文件
+title: CSecurityAttributes 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357502"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879335"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 類別
 這個類別是安全性屬性結構的精簡型包裝函式。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,12 +50,12 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Csecurityattributes:: Set](#set)|呼叫此方法以設定的屬性`CSecurityAttributes`物件。|  
+|[Csecurityattributes:: Set](#set)|呼叫這個方法來設定的屬性`CSecurityAttributes`物件。|  
   
 ## <a name="remarks"></a>備註  
- **ATTRIBUTES**結構包含[安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa379561)用於建立物件，並指定擷取透過指定此結構的控制代碼是否可繼承。  
+ `SECURITY_ATTRIBUTES`結構包含[安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa379561)用於建立物件，並指定是否可繼承控制代碼藉由指定此結構擷取。  
   
- 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `SECURITY_ATTRIBUTES`  
@@ -74,32 +74,32 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  安全性描述元的參考。  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  指定是否在建立新處理序時繼承傳回的控制代碼。 如果此成員為 true，新處理序會繼承控制代碼。  
   
 ##  <a name="set"></a>  Csecurityattributes:: Set  
- 呼叫此方法以設定的屬性`CSecurityAttributes`物件。  
+ 呼叫這個方法來設定的屬性`CSecurityAttributes`物件。  
   
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  安全性描述元的參考。  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  指定是否在建立新處理序時繼承傳回的控制代碼。 如果此成員為 true，新處理序會繼承控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 這個方法可由建構函式來初始化`CSecurityAttributes`物件。  
+ 這個方法建構函式用來初始化`CSecurityAttributes`物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
- [SECURITY ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
+ [ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)

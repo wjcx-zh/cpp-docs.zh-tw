@@ -1,5 +1,5 @@
 ---
-title: CA2CAEX 類別 |Microsoft 文件
+title: CA2CAEX 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357798"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879240"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 類別
-這個類別由字串轉換巨集`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
+這個類別會使用字串轉換巨集 CA2CTEX CT2CAEX 和 typedef CA2CA。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,8 +40,8 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>參數  
- `t_nBufferLength`  
- 轉譯程序中使用之緩衝區的大小。 預設長度為 128 個位元組。  
+ *t_nBufferLength*  
+ 轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。  
   
 ## <a name="members"></a>成員  
   
@@ -62,24 +62,24 @@ class CA2CAEX
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CA2CAEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
+|[CA2CAEX::m_psz](#m_psz)|儲存在來源字串資料成員。|  
   
 ## <a name="remarks"></a>備註  
- 除非需要額外的功能，則使用`CA2CTEX`， `CT2CAEX`，或**CA2CA**自己的程式碼中。  
+ 除非需要額外的功能，使用 CA2CTEX、 CT2CAEX 或 CA2CA 在自己的程式碼。  
   
- 這個類別是安全地在迴圈中使用，而且不會產生堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
+ 這個類別能夠安全地在迴圈中使用，而且不會堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
   
  下列巨集根據此類別：  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
- 下列 typedef 根據此類別：  
+ 下列的 typedef 根據此類別：  
   
-- **CA2CA**  
+- CA2CA  
   
- 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
+ 如需這些文字轉換巨集的討論，請參閱 < [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
   
 ## <a name="example"></a>範例  
  請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
@@ -96,11 +96,11 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>參數  
- `psz`  
+ *psz*  
  要轉換的文字字串。  
   
- `nCodePage`  
- 此類別中未使用。  
+ *nCodePage*  
+ 未使用這個類別中。  
   
 ### <a name="remarks"></a>備註  
  建立做為轉換所需的緩衝區。  
@@ -113,10 +113,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 釋放已配置的緩衝區。  
+ 釋放配置的緩衝區。  
   
 ##  <a name="m_psz"></a>  CA2CAEX::m_psz  
- 儲存在來源字串的資料成員。  
+ 儲存在來源字串資料成員。  
   
 ```
 LPCSTR m_psz;
@@ -130,7 +130,7 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回文字字串做為類型`LPCSTR`。  
+ 當輸入 LPCSTR，傳回文字字串。  
   
 ## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   

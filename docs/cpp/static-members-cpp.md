@@ -1,5 +1,5 @@
 ---
-title: 靜態成員 （c + +） |Microsoft 文件
+title: 靜態成員 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca75d2e54c951e20de842b984f8619dc6639dc00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421067"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941976"
 ---
 # <a name="static-members-c"></a>靜態成員 (C++)
-類別可以包含靜態資料成員和成員函式。 當資料成員宣告為**靜態**，只能有一個複本的資料會保留類別的所有物件。
+類別可以包含靜態資料成員和成員函式。 當資料成員宣告為**靜態**，只有一份資料會保留類別的所有物件。
   
  靜態資料成員不是特定類別類型之物件的一部分。 因此，靜態資料成員的宣告不視為定義。 資料成員是在類別範圍中宣告的，不過，定義是在檔案範圍執行。 這些靜態成員具有外部連結。 下面這個範例可說明這點：  
   
@@ -72,7 +72,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 和**->**) 運算子。 例如:   
+ 若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 並**->**) 運算子。 例如:   
   
 ```cpp  
 BufferedOutput Console;  
@@ -84,7 +84,7 @@ long nBytes = Console.bytecount;
   
  靜態資料成員是受類別成員存取規則規範，因此，只有類別成員函式和 friend 才能進行靜態資料成員的私用存取。 這些規則所述[成員存取控制](../cpp/member-access-control-cpp.md)。 例外狀況是不管其存取限制，靜態資料成員必須在檔案範圍中定義。 如果資料成員將明確初始化，定義中必須提供初始設定式。  
   
- 靜態成員的類型未以類別名稱限定。 因此，`BufferedOutput::bytecount` 的類型是 `long`。  
+ 靜態成員的類型未以類別名稱限定。 因此，該類`BufferedOutput::bytecount`已**長**。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

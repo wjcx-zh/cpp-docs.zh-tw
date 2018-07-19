@@ -1,5 +1,5 @@
 ---
-title: _ATL_WIN_MODULE70 結構 |Microsoft 文件
+title: _ATL_WIN_MODULE70 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256076"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883030"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 結構
 ATL 中的視窗化程式碼使用  
@@ -42,19 +42,19 @@ struct _ATL_WIN_MODULE70 {
   
 ## <a name="members"></a>成員  
  `cbSize`  
- 用來進行版本控制的結構大小。  
+ 結構，用來進行版本設定的大小。  
   
  `m_csWindowCreate`  
- 用來序列化視窗註冊程式碼存取。 供內部使用 atl。  
+ 用來序列化存取視窗註冊碼。 供內部使用 ATL  
   
- **m_pCreateWndList**  
- 用來將 windows 繫結至其物件。 供內部使用 atl。  
+ `m_pCreateWndList`  
+ 用來繫結至其物件的 windows。 供內部使用 ATL  
   
- **m_rgWindowClassAtoms**  
- 用來追蹤視窗類別註冊，讓它們可以適當地取消註冊，在終止。 供內部使用 atl。  
+ `m_rgWindowClassAtoms`  
+ 用來追蹤視窗類別註冊，讓它們可以適當地取消註冊，在終止。 供內部使用 ATL  
   
 ## <a name="remarks"></a>備註  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)定義為 typedef 的`_ATL_WIN_MODULE70`。  
+ [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)定義的 typedef 的`_ATL_WIN_MODULE70`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  

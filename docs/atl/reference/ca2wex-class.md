@@ -1,5 +1,5 @@
 ---
-title: CA2WEX 類別 |Microsoft 文件
+title: CA2WEX 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218e0d8f5e93a9e6c41ff855ff086cc7bfa6c766
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358742"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882815"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 類別
-這個類別由字串轉換巨集`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
+這個類別會使用字串轉換巨集 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,8 +41,8 @@ class CA2WEX
 ```  
   
 #### <a name="parameters"></a>參數  
- `t_nBufferLength`  
- 轉譯程序中使用之緩衝區的大小。 預設長度為 128 個位元組。  
+ *t_nBufferLength*  
+ 轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。  
   
 ## <a name="members"></a>成員  
   
@@ -63,33 +63,33 @@ class CA2WEX
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CA2WEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
+|[CA2WEX::m_psz](#m_psz)|儲存在來源字串資料成員。|  
 |[CA2WEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存已轉換的字串。|  
   
 ## <a name="remarks"></a>備註  
- 除非需要額外的功能，則使用`CA2TEX`， `CA2CTEX`， `CT2WEX`， `CT2CWEX`，或**CA2W**程式碼中。  
+ 除非需要額外的功能，使用 CA2TEX、 CA2CTEX、 CT2WEX、 CT2CWEX 或 CA2W 程式碼中。  
   
- 這個類別包含固定大小的靜態緩衝區可用來儲存轉換的結果。 如果結果太大，不符合靜態緩衝區，則類別會使用 `malloc` 來配置記憶體，當物件超出範圍時，即釋放記憶體。 如此可確保，不同於文字轉換巨集可用在舊版的 ATL，這個類別會安全地在迴圈中使用，而且它將不會產生堆疊溢位。  
+ 這個類別包含固定大小的靜態緩衝區可用來儲存轉換的結果。 如果結果太大而無法放入靜態緩衝區，類別配置的記憶體使用**malloc**，當物件超出範圍時，即釋放記憶體。 這可確保，不同於文字轉換巨集可在舊版的 ATL，這個類別能夠安全地在迴圈中使用，而且它不會堆疊溢位。  
   
- 如果類別嘗試失敗與堆積上配置記憶體，它會呼叫`AtlThrow`使用引數**E_OUTOFMEMORY**。  
+ 如果類別嘗試失敗與堆積上配置記憶體時，它會呼叫`AtlThrow`E_OUTOFMEMORY 引數。  
   
- 根據預設，ATL 轉換類別和巨集使用目前的執行緒 ANSI 字碼頁來進行轉換。 如果您想要覆寫特定轉換的行為，請為類別的建構函式的第二個參數指定的字碼頁。  
+ 根據預設，ATL 轉換類別和巨集會使用目前的執行緒 ANSI 字碼頁轉換。 如果您想要覆寫特定轉換，行為，請做為類別的建構函式的第二個參數指定的字碼頁。  
   
  下列巨集根據此類別：  
   
-- `CA2TEX`  
+- CA2TEX  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2WEX`  
+- CT2WEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
- 下列 typedef 根據此類別：  
+ 下列的 typedef 根據此類別：  
   
-- **CA2W**  
+- CA2W  
   
- 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
+ 如需這些文字轉換巨集的討論，請參閱 < [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
   
 ## <a name="example"></a>範例  
  請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
@@ -106,11 +106,11 @@ CA2WEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>參數  
- `psz`  
+ *psz*  
  要轉換的文字字串。  
   
- `nCodePage`  
- 若要執行轉換所用的字碼頁。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
+ *nCodePage*  
+ 使用的字碼頁來執行轉換。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
   
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  
@@ -123,10 +123,10 @@ CA2WEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 釋放已配置的緩衝區。  
+ 釋放配置的緩衝區。  
   
 ##  <a name="m_psz"></a>  CA2WEX::m_psz  
- 儲存在來源字串的資料成員。  
+ 儲存在來源字串資料成員。  
   
 ```
 LPWSTR m_psz;
@@ -147,7 +147,7 @@ operator LPWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回文字字串做為類型**LPWSTR。**  
+ 傳回文字字串，當輸入 LPWSTR。  
   
 ## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   

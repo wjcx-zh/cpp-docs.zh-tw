@@ -1,5 +1,5 @@
 ---
-title: CPtrList 類別 |Microsoft 文件
+title: CPtrList 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078617"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853890"
 ---
 # <a name="cptrlist-class"></a>CPtrList 類別
 支援 void 指標的清單。  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>成員  
- 成員函式`CPtrList`類別成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值的指標予以替代**void**。  
+ 成員函式`CPtrList`類別的成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代指標**void**。  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -44,7 +44,7 @@ class CPtrList : public CObject
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>備註  
- `CPtrList` 結合 `IMPLEMENT_DYNAMIC` 巨集，支援 `CDumpContext` 物件的執行階段類型存取和傾印。 如果您需要個別指標清單項目傾印，您必須將傾印內容的深度設定為 1 (含) 以上。  
+ `CPtrList` 併入 IMPLEMENT_DYNAMIC 巨集，以支援執行階段類型存取和傾印`CDumpContext`物件。 如果您需要個別指標清單項目傾印，您必須將傾印內容的深度設定為 1 (含) 以上。  
   
  指標清單不可序列化。  
   

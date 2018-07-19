@@ -1,5 +1,5 @@
 ---
-title: COM 介面進入巨集會 |Microsoft 文件
+title: COM 介面項目巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -28,39 +28,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3ba41a05813c4112c1e5dd51bfe447d2c8debf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366584"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883371"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集  
- 這些巨集會輸入至其 COM 對應物件的介面，以便存取它們所`QueryInterface`。 COM 對應中的項目順序是順序介面會檢查相符**IID**期間`QueryInterface`。  
+ 這些巨集會輸入到其 COM 對應物件的介面，讓他們可以存取`QueryInterface`。 COM 對應中的項目順序是訂單介面將會檢查比對期間 iid `QueryInterface`。  
 
  |||
  |-|-|
- |[COM_INTERFACE_ENTRY](#com_interface_entry)|輸入的 COM 介面對應的介面。|  
-|[COM_INTERFACE_ENTRY2](#com_interface_entry2)|使用這個巨集，以釐清兩個繼承的分支。|  
-|[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|使用此巨集輸入到 COM 對應的介面，並指定其 IID。|  
-|[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|與相同[COM_INTERFACE_ENTRY2](#com_interface_entry2)，不過您可以指定不同的 IID。|  
-|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|當介面由`iid`查詢，`COM_INTERFACE_ENTRY_AGGREGATE`轉送給`punk`。|  
-|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`。|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非`punk`是**NULL**，它會自動建立所描述的彙總`clsid`。|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`，而且如果`punk`是**NULL**、 自動建立所描述的彙總`clsid`。|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時指定的介面中查詢。|  
-|[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|將每個執行個體的特定介面的資料儲存。|  
+ |[COM_INTERFACE_ENTRY](#com_interface_entry)|輸入 COM 介面對應的介面。|  
+|[COM_INTERFACE_ENTRY2](#com_interface_entry2)|使用這個巨集，以釐清繼承的兩個分支。|  
+|[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|您可以使用這個巨集來輸入到 COM 對應的介面，並指定其 IID。|  
+|[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|與相同[COM_INTERFACE_ENTRY2](#com_interface_entry2)，但您可以指定不同的 IID。|  
+|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|當介面會由*iid*查詢，`COM_INTERFACE_ENTRY_AGGREGATE`轉送給`punk`。|  
+|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*。|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非*punk*是 NULL，它會自動建立所描述的彙總*clsid*。|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*，而如果*punk*為 NULL，就會自動建立所描述的彙總*clsid*。|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。|  
+|[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|儲存每個執行個體的指定介面的資料。|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|會公開您 tear-off 介面。|  
-|[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|處理 COM 對應的基底類別處理到達這個 COM 對應中的項目時。|  
-|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|連結至 ATL 的一般機制`QueryInterface`邏輯。|  
-|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|與相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，不同之處在於任何 IID 的查詢會導致呼叫`func`。|  
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|傳回**E_NOINTERFACE**並終止 COM 對應處理時，查詢指定的介面。|  
+|[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|處理到達這個 COM 對應中的項目時，請處理 COM 對應的基底類別。|  
+|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|連結到 ATL 的一般機制`QueryInterface`邏輯。|  
+|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|與相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，差異在於查詢任何 IID 的呼叫會導致*func*。|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|會傳回 E_NOINTERFACE 並結束 COM 對應會處理查詢指定的介面時。|  
 
 ## <a name="requirements"></a>需求
 **標頭：** atlcom.h
 
 ## <a name="com_interface_entry"></a> COM_INTERFACE_ENTRY
-輸入的 COM 介面對應的介面。
+輸入 COM 介面對應的介面。
 
 ### <a name="syntax"></a>語法
 
@@ -69,7 +69,7 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>參數
 
-[in] 介面的名稱 x 類別物件衍生自直接。
+[in] 介面名稱的 x 類別物件衍生自直接。
 
 ### <a name="remarks"></a>備註
 一般而言，這是您最常使用的項目類型。
@@ -86,7 +86,7 @@ END_COM_MAP()
 **標頭：** atlcom.h
   
 ##  <a name="com_interface_entry2"></a>  COM_INTERFACE_ENTRY2  
- 使用這個巨集，以釐清兩個繼承的分支。  
+ 使用這個巨集，以釐清繼承的兩個分支。  
   
 ```
 COM_INTERFACE_ENTRY2(x, x2)
@@ -96,67 +96,67 @@ COM_INTERFACE_ENTRY2(x, x2)
  *x*  
  [in]您要從您的物件公開的介面名稱。  
   
- `x2`  
- [in]從中繼承分支名稱*x*公開。  
+ *x2*  
+ [in]要從中繼承分支名稱*x*公開。  
   
 ### <a name="remarks"></a>備註  
- 例如，如果您衍生您的類別物件，這兩個雙介面，您公開`IDispatch`使用`COM_INTERFACE_ENTRY2`因為`IDispatch`可以取自之介面的其中一個。  
+ 比方說，如果您衍生您的類別物件，這兩個雙重介面，公開`IDispatch`使用自 COM_INTERFACE_ENTRY2`IDispatch`可以取自其中之一的介面。  
   
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
 ##  <a name="com_interface_entry_iid"></a>  COM_INTERFACE_ENTRY_IID  
- 使用此巨集輸入到 COM 對應的介面，並指定其 IID。  
+ 您可以使用這個巨集來輸入到 COM 對應的介面，並指定其 IID。  
   
 ```
 COM_INTERFACE_ENTRY_IID(iid, x)
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
+ *iid*  
  [in]公開介面的 GUID。  
   
  *x*  
- [in]其 vtable 即將公開為所識別的介面的類別名稱`iid`。  
+ [in]其 vtable 即將公開為所識別的介面的類別名稱*iid*。  
   
  
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
 ##  <a name="com_interface_entry2_iid"></a>  COM_INTERFACE_ENTRY2_IID  
- 與相同[COM_INTERFACE_ENTRY2](#com_interface_entry2)，不過您可以指定不同的 IID。  
+ 與相同[COM_INTERFACE_ENTRY2](#com_interface_entry2)，但您可以指定不同的 IID。  
   
 ```
 COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 ```   
   
 ### <a name="parameters"></a>參數  
- `iid`  
- [in]您要指定介面的 GUID。  
+ *iid*  
+ [in]您指定介面的 GUID。  
   
  *x*  
- [in]類別物件直接衍生自介面的名稱。  
+ [in]您類別的物件直接衍生自介面的名稱。  
   
- `x2`  
- [in]第二個介面類別物件直接衍生自的名稱。  
+ *x2*  
+ [in]您類別的物件直接衍生自第二個介面的名稱。  
   
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE  
- 當介面由`iid`查詢，`COM_INTERFACE_ENTRY_AGGREGATE`轉送給`punk`。  
+ 當介面會由*iid*查詢的 COM_INTERFACE_ENTRY_AGGREGATE 轉送給*punk*。  
   
 ```
 COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
+ *iid*  
  [in]查詢介面的 GUID。  
   
- `punk`  
- [in]名稱**IUnknown**指標。  
+ *punk*  
+ [in]名稱`IUnknown`指標。  
   
 ### <a name="remarks"></a>備註  
- `punk`參數會假設為指向內部未知的彙總或**NULL**，在此情況下會忽略此項目。 一般而言，您會**CoCreate**中的彙總`FinalConstruct`。  
+ *Punk*參數會假設以指向內部彙總的未知或 NULL，在此情況下的項目會被忽略。 一般而言，您就`CoCreate`中的彙總`FinalConstruct`。  
   
   
   
@@ -164,15 +164,15 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
  [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
 ##  <a name="com_interface_entry_aggregate_blind"></a>  COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
- 與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`。  
+ 與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*。  
   
 ```
 COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 ```  
   
 ### <a name="parameters"></a>參數  
- `punk`  
- [in]名稱**IUnknown**指標。  
+ *punk*  
+ [in]名稱`IUnknown`指標。  
   
 ### <a name="remarks"></a>備註  
  如果介面查詢將會失敗，會繼續處理 COM 對應。  
@@ -184,21 +184,21 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
   
 
 ##  <a name="com_interface_entry_autoaggregate"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE  
- 與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非`punk`是**NULL**，它會自動建立所描述的彙總`clsid`。  
+ 與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非*punk*是 NULL，它會自動建立所描述的彙總*clsid*。  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 ```   
   
 ### <a name="parameters"></a>參數  
- `iid`  
+ *iid*  
  [in]查詢介面的 GUID。  
   
- `punk`  
- [in]名稱**IUnknown**指標。 必須是包含 COM 對應之類別的成員。  
+ *punk*  
+ [in]名稱`IUnknown`指標。 必須是包含 COM 對應之類別的成員。  
   
- `clsid`  
- [in]如果建立的彙總的識別碼`punk`是**NULL**。  
+ *clsid*  
+ [in]如果會建立彙總的識別碼*punk*是 NULL。  
   
 ### <a name="remarks"></a>備註  
   
@@ -207,18 +207,18 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
 ##  <a name="com_interface_entry_autoaggregate_blind"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
- 與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`，而且如果`punk`是**NULL**、 自動建立所描述的彙總`clsid`。  
+ 與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*，而如果*punk*為 NULL，就會自動建立所描述的彙總*clsid*。  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 ```  
   
 ### <a name="parameters"></a>參數  
- `punk`  
- [in]名稱**IUnknown**指標。 必須是包含 COM 對應之類別的成員。  
+ *punk*  
+ [in]名稱`IUnknown`指標。 必須是包含 COM 對應之類別的成員。  
   
- `clsid`  
- [in]如果建立的彙總的識別碼`punk`是**NULL**。  
+ *clsid*  
+ [in]如果會建立彙總的識別碼*punk*是 NULL。  
   
 ### <a name="remarks"></a>備註  
  如果介面查詢將會失敗，會繼續處理 COM 對應。  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- 會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時指定的介面中查詢。  
+ 會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -237,32 +237,32 @@ COM_INTERFACE_ENTRY_BREAK(x)
   
 ### <a name="parameters"></a>參數  
  *x*  
- [in]用來建構介面識別項的文字。  
+ [in]文字用來建構的介面識別項。  
   
 ### <a name="remarks"></a>備註  
- 藉由附加建構 IID 的介面*x*至`IID_`。 例如，如果*x*是`IPersistStorage`，將 IID `IID_IPersistStorage`。  
+ 介面的 IID 將建構附加*x*至`IID_`。 例如，如果*x*是`IPersistStorage`，將 IID `IID_IPersistStorage`。  
   
   
   
 ##  <a name="com_interface_entry_cached_tear_off"></a>  COM_INTERFACE_ENTRY_CACHED_TEAR_OFF  
- 將每個執行個體的特定介面的資料儲存。  
+ 儲存每個執行個體的指定介面的資料。  
   
 ```
 COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 ```   
   
 ### <a name="parameters"></a>參數  
- `iid`  
- [in]撕下介面的 GUID。  
+ *iid*  
+ [in]分割介面的 GUID。  
   
  *x*  
  [in]實作介面的類別名稱。  
   
- `punk`  
- [in]名稱**IUnknown**指標。 必須是包含 COM 對應之類別的成員。 應該初始化為**NULL**類別物件的建構函式中。  
+ *punk*  
+ [in]名稱`IUnknown`指標。 必須是包含 COM 對應之類別的成員。 應該初始化為 NULL 類別物件的建構函式中。  
   
 ### <a name="remarks"></a>備註  
- 如果未使用的介面，這可減少整體的執行個體大小的物件。  
+ 如果未使用的介面，這會降低整體的執行個體大小的物件。  
   
   
   
@@ -277,14 +277,14 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
- [in]撕下介面的 GUID。  
+ *iid*  
+ [in]分割介面的 GUID。  
   
  *x*  
  [in]實作介面的類別名稱。  
   
 ### <a name="remarks"></a>備註  
- 撕下介面的實作如下查詢每次它所代表的介面具現化的個別物件。 一般而言，您建置您的介面為撕如果很少使用的介面，因為這樣可以節省您的主要物件的每個執行個體的 vtable 指標。 分割時，會刪除其參考計數變成零時。 實作分割的類別應該衍生自`CComTearOffObjectBase`，而且有它自己的 COM 對應。  
+ 分割介面被實作查詢具現化每次它所代表之介面的個別物件。 通常，您會建置您的介面分割為如果很少使用的介面，因為這會將 vtable 指標儲存在您的主要物件的每個執行個體。 分割會刪除其參考計數變成零。 實作分割的類別應該衍生自`CComTearOffObjectBase`，而且有它自己的 COM 對應。  
   
   
   
@@ -292,7 +292,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 ##  <a name="com_interface_entry_chain"></a>  COM_INTERFACE_ENTRY_CHAIN  
- 處理 COM 對應的基底類別處理到達這個 COM 對應中的項目時。  
+ 處理到達這個 COM 對應中的項目時，請處理 COM 對應的基底類別。  
   
 ```
 COM_INTERFACE_ENTRY_CHAIN(classname)
@@ -307,58 +307,58 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
   
  [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
   
- 請注意 COM 對應中的第一個項目必須包含 COM 對應的物件上的介面。 因此，您無法啟動您的 COM 對應項目與`COM_INTERFACE_ENTRY_CHAIN`，因而導致 COM 對應，不同處要搜尋的物件位置**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** 會出現在物件的 COM 對應。 如果您想要搜尋的另一個物件的 COM 對應，首先，新增介面項目**IUnknown**到 COM 對應，然後鏈結的其他物件的 COM 對應。 例如:   
+ 請注意，在 COM 對應中的第一個項目必須是包含 COM 對應的物件上的介面。 因此，您無法讓您的 COM 對應項目開始 COM_INTERFACE_ENTRY_CHAIN，這會導致不同的物件，要搜尋之處的 COM 對應所在**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** 物件的 COM 對應中會出現。 如果您想要先搜尋另一個物件的 COM 對應中，新增介面項目`IUnknown`到 COM 對應，然後鏈結的其他物件的 COM 對應。 例如:   
   
  [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
   
   
   
 ##  <a name="com_interface_entry_func"></a>  COM_INTERFACE_ENTRY_FUNC  
- 連結至 ATL 的一般機制`QueryInterface`邏輯。  
+ 連結到 ATL 的一般機制`QueryInterface`邏輯。  
   
 ```
 COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 ```   
   
 ### <a name="parameters"></a>參數  
- `iid`  
+ *iid*  
  [in]公開介面的 GUID。  
   
- `dw`  
- [in]為參數傳遞到`func`。  
+ *dw*  
+ [in]為參數傳遞給*func*。  
   
- `func`  
- [in]將傳回的函式指標`iid`。  
+ *func*  
+ [in]將傳回的函式指標*iid*。  
   
 ### <a name="remarks"></a>備註  
- 如果*iid*符合介面中查詢，則函式所指定的 IID`func`呼叫。 函式宣告應該是：  
+ 如果*iid*比對，查詢的介面，然後藉由指定的函式的 IID *func*呼叫。 函式宣告應該是：  
   
  `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`  
   
- 您的函式呼叫時，`pv`指向類別物件。 `riid`參數是指，要查詢的介面`ppv`函式應該儲存介面的指標位置的指標和`dw`是您指定的項目中的參數。 函式應該設定\*`ppv`至**NULL**並傳回**E_NOINTERFACE**或**S_FALSE**如果選擇不是要傳回的介面。 與**E_NOINTERFACE**，COM 對應處理作業會終止。 與**S_FALSE**，COM 對應處理會繼續，即使沒有介面指標傳回。 如果函式會傳回介面指標，它應該傳回`S_OK`。  
+ 您的函式呼叫時，`pv`指向您類別的物件。 *Riid*參數是指，查詢的介面`ppv`函式應在其中儲存介面指標的位置的指標和*dw*參數您指定的項目中。 函式應該設定\* `ppv` NULL，並傳回 E_NOINTERFACE 或 S_FALSE 如果選擇不傳回的介面。 具有 E_NOINTERFACE，COM 對應處理作業會終止。 S_FALSE，與 COM 對應處理會繼續，即使沒有介面指標傳回。 如果函數傳回的介面指標，它應該會傳回 S_OK。  
   
   
   
 ##  <a name="com_interface_entry_func_blind"></a>  COM_INTERFACE_ENTRY_FUNC_BLIND  
- 與相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，不同之處在於任何 IID 的查詢會導致呼叫`func`。  
+ 與相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，差異在於查詢任何 IID 的呼叫會導致*func*。  
   
 ```
 COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 ```  
   
 ### <a name="parameters"></a>參數  
- `dw`  
- [in]為參數傳遞到`func`。  
+ *dw*  
+ [in]為參數傳遞給*func*。  
   
- `func`  
- [in]取得處理 COM 對應中的此項目時呼叫的函式。  
+ *func*  
+ [in]取得在處理 COM 對應中的此項目時所呼叫的函式。  
   
 ### <a name="remarks"></a>備註  
- 任何失敗會導致處理作業能夠繼續的 COM 對應上。 如果函式會傳回介面指標，它應該傳回`S_OK`。  
+ 任何失敗會導致處理作業能夠繼續在 COM 對應上。 如果函數傳回的介面指標，它應該會傳回 S_OK。  
   
   
 ##  <a name="com_interface_entry_nointerface"></a>  COM_INTERFACE_ENTRY_NOINTERFACE  
- 傳回**E_NOINTERFACE**並終止 COM 對應處理時，查詢指定的介面。  
+ 會傳回 E_NOINTERFACE 並結束 COM 對應會處理查詢指定的介面時。  
   
 ```
 COM_INTERFACE_ENTRY_NOINTERFACE(x)
@@ -366,11 +366,11 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
   
 ### <a name="parameters"></a>參數  
  *x*  
- [in]用來建構介面識別項的文字。  
+ [in]文字用來建構的介面識別項。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用這個巨集，以防止在特定情況下使用的介面。 例如，您可以將這個巨集，插入您的 COM 對應前`COM_INTERFACE_ENTRY_AGGREGATE_BLIND`以防止被轉送到彙總內部的未知的查詢介面。  
+ 您可以使用這個巨集，以防止在特定情況下使用的介面。 例如，您可以將這個巨集插入之前防止介面的查詢轉送到彙總的內部未知 COM_INTERFACE_ENTRY_AGGREGATE_BLIND COM 對應。  
   
- 藉由附加建構 IID 的介面*x*至`IID_`。 例如，如果*x*是`IPersistStorage`，將 IID `IID_IPersistStorage`。  
+ 介面的 IID 將建構附加*x*至`IID_`。 例如，如果*x*是`IPersistStorage`，將 IID `IID_IPersistStorage`。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 明確預設和已刪除函數 |Microsoft 文件
+title: 明確預設和刪除函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942876"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明確的預設和被刪除的函式
 在 C++11 中，預設和已刪除的函式可讓您明確控制是否要自動產生特殊成員函式。 被刪除的函式也提供您簡單語言，防止在所有類型函式 (特殊成員函式，一般成員函式和非成員函式) 的引數中發生有問題的類型提升 (原本可能會導致不必要的函式呼叫)。  
   
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>明確預設和已刪除的函式的優點  
- 在 C++ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。 這些函式稱為*特殊成員函式*，及它們可讓簡單使用者定義型別在 c + + 行為與 c 中的結構相同也就是說，您可以建立、 複製和終結它們，而不需要任何額外的程式碼撰寫工作。 C++11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。  
+ 在 C++ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。 這些函式稱為*特殊成員函式*，以及它們可讓簡單使用者定義型別在 c + + 像在 c 中的結構相同的行為也就是說，您可以建立、 複製和終結它們，而不需要任何額外的編碼工作。 C++11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。  
   
  這對簡單類型而言十分方便，但是複雜類型通常會自行定義一個或多個特殊成員函式，而且這可以防止自動產生其他特殊成員函式。 實際上：  
   
@@ -50,11 +51,11 @@ ms.lasthandoff: 05/03/2018
 >   
 >  在這兩種情況下，Visual Studio 會繼續自動隱含產生必要函式，且不會發出警告。  
   
- 這些規則的結果也可能滲入物件階層架構中。 例如，如果基底類別因故無法取得衍生類別可呼叫的預設建構函式 (也就是不接受任何參數的 `public` 或 `protected` 建構函式)，則從它衍生的類別無法自動產生自己的預設建構函式。  
+ 這些規則的結果也可能滲入物件階層架構中。 比方說，如果因為任何原因的基底類別無法有預設建構函式可從衍生類別呼叫 — 亦即**公用**或**保護**不接受任何參數的建構函式 — 然後類別衍生自無法自動產生它自己的預設建構函式。  
   
  這些規則會讓應該簡單的實作、使用者定義類型和一般 C++ 慣用語更加複雜；例如，私下宣告複製建構函式和複製指派運算子，但未進行定義，以將使用者定義類型設定為不可複製。  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() {};  
@@ -77,7 +78,7 @@ private:
   
  在 C++11 中，non-copyable 慣用語可以用更直接的方式來實作。  
   
-```  
+```cpp 
 struct noncopyable  
 {  
   noncopyable() =default;  
@@ -103,7 +104,7 @@ struct noncopyable
   
  透過宣告，即可預設特殊成員函式宣告 (如此範例所示)：  
   
-```  
+```cpp 
 struct widget  
 {  
   widget()=default;  
@@ -121,7 +122,7 @@ inline widget& widget::operator=(const widget&) =default;
 ## <a name="deleted-functions"></a>已刪除的函式  
  您可以刪除特殊成員函式以及一般成員函式和非成員函式，以防止定義或呼叫它們。 刪除特殊成員函式，提供更簡潔的方法來防止編譯器產生您不想要的特殊成員函式。 函式必須在宣告時被刪除；不能透過可以先宣告再預設函式的方式之後刪除。  
   
-```  
+```cpp 
 struct widget  
 {  
   // deleted operator new prevents widget from being dynamically allocated.  
@@ -131,15 +132,15 @@ struct widget
   
  刪除一般成員函式或非成員函式，可防止有問題的類型提升呼叫非預期的函式。 這種方式適用，因為已刪除的函式仍參與多載解析，而且提供的相符程度高於提升類型之後可呼叫的函式。 函式呼叫解析為更特定、但已刪除的函式，且造成編譯器錯誤。  
   
-```  
+```cpp 
 // deleted overload prevents call through type promotion of float to double from succeeding.  
 void call_with_true_double_only(float) =delete;  
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- 請注意，在上述範例中，使用 `call_with_true_double_only` 引數呼叫 `float` 會造成編譯器錯誤，但如果使用 `call_with_true_double_only` 引數呼叫 `int` 卻不會導致問題。在 `int` 案例中，引數會從 `int` 提升為 `double` 並成功呼叫 `double` 版本的函式，即使這不是一開始的目的。 若要確定使用 non-double 引數呼叫這個函式會造成編譯器錯誤，您可以宣告被刪除的函式的範本版本。  
+ 請注意，在上述範例中，呼叫`call_with_true_double_only`利用**浮點數**引數會導致編譯器錯誤，但呼叫`call_with_true_double_only`利用**int**引數不會; 在**int**的情況下，將會從升級的引數**int**要**double**並成功呼叫**double**版本的函式，即使這可能不是目的為何。 若要確定使用 non-double 引數呼叫這個函式會造成編譯器錯誤，您可以宣告被刪除的函式的範本版本。  
   
-```  
+```cpp 
 template < typename T >  
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   

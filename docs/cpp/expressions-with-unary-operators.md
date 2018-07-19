@@ -1,5 +1,5 @@
 ---
-title: 具有一元運算子的運算式 |Microsoft 文件
+title: 具有一元運算子的運算式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416167"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941154"
 ---
 # <a name="expressions-with-unary-operators"></a>具有一元運算子的運算式
 一元運算子只會在運算式中的一個運算元上作用。 一元運算子如下：  
@@ -50,9 +50,9 @@ ms.locfileid: "32416167"
   
 -   [__alignof 運算子](../cpp/alignof-operator.md)  
   
--   [New 運算子](../cpp/new-operator-cpp.md)  
+-   [new 運算子](../cpp/new-operator-cpp.md)  
   
--   [delete 運算子](../cpp/delete-operator-cpp.md)  
+-   [刪除操作員](../cpp/delete-operator-cpp.md)  
   
  這些運算子具有由右到左的順序關聯性。 一元運算式的語法通常會置於後置或主要運算式的前方。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "32416167"
   
 -   `--` *一元運算式*  
   
--   *一元運算子**轉型運算式*  
+-   *一元運算子* *cast 運算式*  
   
--   `sizeof` *一元運算式*  
+-   **sizeof** *一元運算式*  
   
--   `sizeof(` *型別名稱* `)`  
+-   `sizeof(` *類型名稱* `)`  
   
 -   `decltype(` *運算式* `)`  
   
@@ -76,15 +76,15 @@ ms.locfileid: "32416167"
   
 -   *解除配置運算式*  
   
- 任何*後置運算式*會被視為*一元運算式*，以及因為任何主要運算式被視為*後置運算式*，是任何主要運算式視為*一元運算式*也。 如需詳細資訊，請參閱[後置運算式](../cpp/postfix-expressions.md)和[主要運算式](../cpp/primary-expressions.md)。  
+ 任何*後置運算式*會被視為*一元運算式*，以及因為任何主要運算式皆視為*後置運算式*，是任何主要運算式被視為*一元運算式*也。 如需詳細資訊，請參閱 <<c0> [ 後置運算式](../cpp/postfix-expressions.md)並[主要運算式](../cpp/primary-expressions.md)。  
   
  A*一元運算子*組成一或多個下列符號： `* & + - ! ~`  
   
- *轉型運算式*是一元運算式，但變更類型的選擇性轉換。 如需詳細資訊，請參閱[轉型運算子: （)](../cpp/cast-operator-parens.md)。  
+ *轉型運算式*是一元運算式，但若要變更類型的選擇性轉換。 如需詳細資訊，請參閱[轉型運算子: （)](../cpp/cast-operator-parens.md)。  
   
- *運算式*可以是任何運算式。 如需詳細資訊，請參閱[運算式](../cpp/expressions-cpp.md)。  
+ *運算式*可以是任何運算式。 如需詳細資訊，請參閱 <<c0> [ 運算式](../cpp/expressions-cpp.md)。  
   
- *配置運算式*指`new`運算子。 *解除配置運算式*指`delete`運算子。 如需詳細資訊，請參閱本主題稍早的連結。  
+ *配置運算式*是指**新**運算子。 *解除配置運算式*是指**刪除**運算子。 如需詳細資訊，請參閱本主題稍早的連結。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式的類型](../cpp/types-of-expressions.md)

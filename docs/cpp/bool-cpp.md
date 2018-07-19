@@ -1,5 +1,5 @@
 ---
-title: bool （c + +） |Microsoft 文件
+title: bool （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af648b2b93d2d01eaf66f5b642b6514063577d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410859"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939308"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-這個關鍵字是內建類型。 此類型的變數可以有值[true](../cpp/true-cpp.md)和[false](../cpp/false-cpp.md)。 條件運算式具有 `bool` 類型，因此具有 `bool` 類型的值。 例如，`i!=0`現在具有**true**或**false**的值而定`i`。  
+這個關鍵字是內建類型。 此類型的變數可以有值[，則為 true](../cpp/true-cpp.md)並[false](../cpp/false-cpp.md)。 條件運算式具有類型**bool** ，因此有值的型別**bool**。 例如，`i!=0`現在有 為 TRUE 或 FALSE 的值而定`i`。  
 
-**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元置或後置遞增或遞減運算子可能不是型別**bool**。 換句話說，提供變數**b**型別的**bool**，不再允許這些運算式：
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元的後置或前置詞遞增或遞減運算子可能不是類型**bool**。 換句話說，指定變數`b`型別的**bool**，不再允許這些運算式：
 
 ```cpp
     b++;
@@ -38,7 +38,7 @@ ms.locfileid: "32410859"
     --b;
 ```
   
-值**true**和**false**具有下列關聯性：  
+TRUE 和 FALSE 的值具有下列關聯性：  
   
 ```cpp  
 !false == true  
@@ -51,14 +51,14 @@ ms.locfileid: "32410859"
 if (condexpr1) statement1;   
 ```  
   
-如果`condexpr1`是**true**，`statement1`一定會執行，如果`condexpr1`是**false**，`statement1`永遠不會執行。  
+如果`condexpr1`為 TRUE 時，`statement1`一定會執行，如果`condexpr1`為 FALSE，`statement1`永遠不會執行。  
   
-後置或前置詞時**++** 運算子會套用至類型的變數**bool**，此變數設為**true**。 
-**Visual Studio 2017 15.3 和更新版本**: operator + + 的**bool**已移除的語言，因此已不再支援。
+當置或後置**++** 運算子會套用至型別的變數**bool**，變數會設為 TRUE。 
+**Visual Studio 2017 版本 15.3 和更新版本**： 的 operator + + **bool**已移除的語言並不受支援。
 
 後置或前置詞**--** 無法將運算子套用至這個類型的變數。  
   
- **Bool**類型會參與整數提升。 類型的右**bool**可以轉換成類型的右**int**，與**false**變成零和**true**變成一。 為不同的類型， **bool**參與多載解析。  
+ **Bool**類型會參與整數提升。 類型的右值**bool**可以轉換成的型別**int**、 與 FALSE 成為零，變成一，則為 TRUE。 做為不同的類型， **bool**參與多載解析。  
   
 ## <a name="see-also"></a>另請參閱
 

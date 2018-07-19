@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse 類別 |Microsoft 文件
+title: CSimpleMapEqualHelperFalse 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70cea341e7f78032cdaca260e3c891f4c762e0b6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360014"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882620"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 類別
 這個類別是 helper [CSimpleMap](../../atl/reference/csimplemap-class.md)類別。  
@@ -43,12 +43,12 @@ class CSimpleMapEqualHelperFalse
 |名稱|描述|  
 |----------|-----------------|  
 |[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|（靜態）測試兩個索引鍵相等。|  
-|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|（靜態）傳回 false。|  
+|[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|（靜態）會傳回 false。|  
   
 ## <a name="remarks"></a>備註  
- 這個特性類別是補強`CSimpleMap`類別。 它提供方法來比較兩個項目中包含`CSimpleMap`物件，特別是兩個值項目或兩個索引鍵的項目。  
+ 此特性類別是補充`CSimpleMap`類別。 它提供一種方法來比較兩個項目中包含`CSimpleMap`物件，特別是兩個值的項目或兩個索引鍵的項目。  
   
- 值比較永遠會傳回 false，而且此外，會呼叫`ATLASSERT`false 曾經正在參考它的引數。 在等號比較測試未充分定義所在的情況下，這個類別可讓對應，其包含要對於大部分方法正確運作，但以妥善定義的方式，例如視比較的方法失敗的索引鍵/值組[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。  
+ 值比較一律會傳回 false，並且另外，呼叫`ATLASSERT`是 false，如果曾被參考的引數。 在等號比較測試不充分定義所在的情況下，這個類別可讓對應，其包含索引鍵/值組，以正確運作，大多數的方法，但在定義完善的方式，例如取決於比較的方法中失敗[CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsimpcoll.h  
@@ -61,10 +61,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>參數  
- `k1`  
+ *版 k1 的 powerapps*  
  第一個索引鍵。  
   
- `k2`  
+ *k2*  
  第二個索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -84,7 +84,7 @@ static bool IsEqualValue(const TVal&, const TVal&);
  傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 這個方法一律會傳回 false，並將呼叫`ATLASSERT`false 曾經正在參考它的引數。 目的`CSimpleMapEqualHelperFalse::IsEqualValue`是強制方法使用的比較時沒有充分定義等號比較測試，以妥善定義的方式失敗。  
+ 這個方法一律會傳回 false，而且會呼叫`ATLASSERT`是 false，如果曾被參考的引數。 目的`CSimpleMapEqualHelperFalse::IsEqualValue`是強制方法使用時有充分定義等號比較測試，以定義完善的方式失敗的比較。  
   
 ## <a name="see-also"></a>另請參閱  
  [CSimpleMapEqualHelper 類別](../../atl/reference/csimplemapequalhelper-class.md)   

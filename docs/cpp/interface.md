@@ -1,5 +1,5 @@
 ---
-title: __interface |Microsoft 文件
+title: __interface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942871"
 ---
 # <a name="interface"></a>__interface
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  Visual C++ 介面可定義為如下：  
   
@@ -43,16 +44,15 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>備註  
- C + +[類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)無法實作與上述規則，但`__interface`強制套用這些。  
+ C + +[類別](../cpp/class-cpp.md)或是[結構](../cpp/struct-cpp.md)可能會實作這些規則，但 **__interface**強制執行這些。  
   
  例如，以下是介面定義範例：  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
@@ -63,16 +63,16 @@ __interface IMyInterface {
   
  請注意，您不需要明確表明 `CommitX` 和 `get_X` 函式是純虛擬函式。 第一個函式的同等宣告如下：  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` 表示[novtable](../cpp/novtable.md) `__declspec`修飾詞。  
+ **__interface**意味著[novtable](../cpp/novtable.md) **__declspec**修飾詞。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用在介面中宣告的屬性。  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  
@@ -150,7 +150,7 @@ p->int_data = 100
 bstr_data = Testing  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: 陣列 （c + +） |Microsoft 文件
+title: 陣列 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942879"
 ---
 # <a name="arrays-c"></a>陣列 (C++)
 陣列是同類物件的集合。 最簡單的陣列案例就是向量，可以依照下列順序宣告：  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   選擇性的儲存類別規範。  
   
--   選擇性**const**及/或`volatile`規範。  
+-   選擇性**const**及/或**volatile**規範。  
   
 -   陣列元素的類型名稱。  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   識別碼。  
   
--   方括號括住的整數類資料類型常數運算式 **[]。** 如果使用其他方括號宣告多個維度，常數運算式可以省略第一方括號組。  
+-   方括號括住的整數類資料類型常數運算式 **[]**。 如果使用額外的括號宣告多個維度，第一組括號可省略的常數運算式。  
   
 -   括住常數運算式的選擇性額外括號。  
   
  3. 選擇性的初始設定式。  請參閱[初始設定式](../cpp/initializers.md)。  
   
- 陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，而最後一個項目 (*n*-1) 項目，其中*n*是陣列可以包含的元素數目。 *常數運算式*必須屬於整數型別，而且必須大於 0。 只有當陣列中的最後一個欄位的大小為零的陣列是合法`struct`或**union**而且已啟用 Microsoft 擴充功能 (/Ze) 時。  
+ 陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，和最後一個元素是 (*n*-1) 項目，其中*n*是陣列可以包含的項目數目。 *常數運算式*必須是整數類資料類型，且必須大於 0。 大小為零的陣列是合法的只有當陣列中的最後一個欄位**struct**或是**聯集**和啟用 Microsoft 擴充功能 (/Ze) 時。  
   
  下列範例將示範如何在執行階段定義陣列：  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- 陣列是衍生類型，因此可以從任何其他衍生或基本類型建構，但不包括函式、參考和 `void`。  
+ 陣列也是衍生型別，因此可以從以外的任何其他衍生或基本類型函式、 參考，建構並**void**。  
   
  從其他陣列建構的陣列是多維陣列。 這些多維陣列是藉由依序放置多個包含括號的常數運算式所指定。 例如，以下列宣告為例：  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- 它會指定類型為 `int`、在概念上以五列七行的二維矩陣排列的陣列，如下圖所示：  
+ 它會指定類型的陣列**int**、 在概念上排列的二維矩陣的五個資料列和七個資料行，如下圖所示：  
   
- ![多重的概念性配置&#45;二維陣列](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![多重的概念性配置&#45;維陣列](../cpp/media/vc38rc1.gif "vc38RC1")  
 多維陣列的概念性配置  
   
- 在宣告中的多維陣列初始設定式清單 (如所述[初始設定式](../cpp/initializers.md))，可以省略指定第一個維度界限的常數運算式。 例如:   
+ 在宣告中的多維陣列初始設定式清單 (如中所述[初始設定式](../cpp/initializers.md))，可以省略指定第一個維度界限的常數運算式。 例如:   
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>範例  
  省略多維陣列中第一個維度之界限規格的技術也可用於函式宣告，如下所示：  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

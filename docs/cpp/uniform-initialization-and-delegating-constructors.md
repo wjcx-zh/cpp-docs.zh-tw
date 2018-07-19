@@ -1,5 +1,5 @@
 ---
-title: 統一初始設定和委派建構函式 |Microsoft 文件
+title: 統一初始設定和委派建構函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423518"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939828"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>統一初始設定和委派建構函式
-在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不等號。 此外，您可以使用委派建構函式，來簡化您的程式碼，當您有多個建構函式會執行類似的工作。  
+在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不需要在等號。 此外，您可以使用委派的建構函式來簡化您的程式碼，當您具有執行類似工作的多個建構函式。  
   
-## <a name="brace-initialization"></a>大括號初始化  
- 您可以使用大括號初始設定的任何類別、 結構或等位。 如果類型具有預設建構函式，以隱含或明確宣告，您可以使用預設的大括號初始化 （具有空大括號）。 例如，下列類別可能初始化使用預設值和非預設的大括號初始化：  
+## <a name="brace-initialization"></a>括號初始設定  
+ 您可以使用括號初始設定的任何類別、 結構或等位。 如果類型具有預設建構函式，以隱含或明確宣告，您可以使用預設的大括號進行初始化 （空的大括號）。 比方說，可能會使用預設值和非預設的大括號初始設定初始化下列類別：  
   
 ```cpp  
 #include <string>  
@@ -53,7 +53,7 @@ int main()
   
 ```  
   
- 如果類別具有非預設建構函式，在哪一個類別成員會出現在大括號初始設定式的順序是對應的參數建構函式中出現的順序，不將成員宣告的順序 (如同`class_a`中上述範例）。 否則，如果類型具有未宣告建構函式，成員的大括號初始設定式中出現的順序是依其宣告; 的順序相同在此情況下，您可以初始化最大數量的公用成員為您想，但無法略過任何成員。 下列範例會顯示所使用的順序中的大括號初始化沒有宣告建構函式時：  
+ 如果類別具有非預設建構函式，在哪一個類別中成員則是在大括號初始設定式中出現的順序是對應的參數建構函式中出現的順序，不將成員宣告的順序 (如同`class_a`中先前的範例）。 否則，如果類型具有沒有宣告建構函式，成員的大括號初始設定式中出現的順序是它們會在其中宣告; 的順序相同在此情況下，您可以初始化多個公用成員想要的話，但您無法略過任何成員。 沒有宣告建構函式時，下列範例會顯示已用的順序，在括號初始設定：  
   
 ```cpp  
 class class_d {  
@@ -75,7 +75,7 @@ int main()
 }   
 ```  
   
- 如果預設建構函式明確宣告，但標示為已刪除，無法使用預設的大括號初始化：  
+ 如果預設建構函式已明確宣告，但標示為已刪除，無法使用預設的大括號初始化：  
   
 ```cpp  
 class class_f {  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- 您可以使用大括號初始化任何地方您通常會執行初始化 — 例如，做為函式參數或傳回值，或使用`new`關鍵字：  
+ 您可以使用括號初始設定任何地方您通常會執行初始化 — 例如，函式參數或傳回值，或利用**新**關鍵字：  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -101,7 +101,7 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list 建構函式  
- [Initializer_list 類別](../standard-library/initializer-list-class.md)代表一份可用在建構函式，並在其他內容中之指定型別的物件。 您可以使用大括號初始設定，以建構 initializer_list:  
+ [Initializer_list 類別](../standard-library/initializer-list-class.md)表示可用在建構函式，並在其他內容中指定類型之物件的清單。 您可以建構 initializer_list 使用括號初始設定：  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
@@ -110,7 +110,7 @@ initializer_list<int> int_list{5, 6, 7};
 > [!IMPORTANT]
 >  若要使用這個類別，您必須包含[< initializer_list >](../standard-library/initializer-list.md)標頭。  
   
- `initializer_list`可以複製。 在此情況下，新清單的成員會將原始清單成員的參考：  
+ `initializer_list`可以複製。 在此情況下，新中的成員是清單的原始清單成員的參考：  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -120,7 +120,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- 標準程式庫容器類別，以及`string`， `wstring`，和`regex`，有`initializer_list`建構函式。 下列範例顯示如何執行這些建構函式進行初始化大括弧括住：  
+ 標準程式庫容器類別，以及`string`， `wstring`，並`regex`，有`initializer_list`建構函式。 下列範例示範如何執行這些建構函式進行初始化大括弧括住：  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -130,7 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>委派建構函式  
- 許多具有執行類似動作的多個建構函式 — 例如，驗證的參數：  
+ 許多類別都有多個建構函式會執行類似的動作 — 例如，驗證參數：  
   
 ```cpp  
 class class_c {  
@@ -155,7 +155,7 @@ public:
 };  
 ```  
   
- 您無法減少重複的程式碼將會執行所有的驗證，但的程式碼的函式`class_c`會比較容易了解和維護如果一個建構函式可以委派一些至另一個工作。 若要加入委派建構函式，請使用`constructor (. . .) : constructor (. . .)`語法：  
+ 您可以減少重複的程式碼將會執行所有的驗證，但程式碼的函式`class_c`容易了解和維護如果一個建構函式可以委派一些到另一個工作。 若要新增委派的建構函式，請使用`constructor (. . .) : constructor (. . .)`語法：  
   
 ```cpp  
 class class_c {  
@@ -181,9 +181,9 @@ int main() {
   
 ```  
   
- 當您逐步執行先前的範例，請注意，建構函式`class_c(int, int, int)`建構函式會先呼叫`class_c(int, int)`，接著呼叫`class_c(int)`。 每個建構函式會執行不會執行的其他建構函式的工作。  
+ 當您逐步執行先前的範例，請注意，建構函式`class_c(int, int, int)`建構函式會先呼叫`class_c(int, int)`，接著呼叫`class_c(int)`。 每個建構函式會執行不由其他建構函式執行的工作。  
   
- 呼叫的第一個建構函式會初始化物件，使其所有成員都會在該點初始化。 您無法執行委派給另一個建構函式的建構函式中的成員初始設定，如下所示：  
+ 呼叫第一個建構函式會初始化物件，以便在該點，其所有成員會初始化。 您無法執行委派給另一個建構函式的建構函式中的成員初始設定，如下所示：  
   
 ```cpp  
 class class_a {  
@@ -204,7 +204,7 @@ public:
   
 ```  
   
- 下一個範例顯示非靜態資料成員初始設定式的使用。 請注意，是否建構函式也會初始化給定的資料成員，成員初始設定式會覆寫：  
+ 下一個範例示範如何使用非靜態資料成員初始設定式。 請注意，是否建構函式也會初始化為指定的資料成員，成員初始設定式會覆寫：  
   
 ```cpp  
 class class_a {  
@@ -222,7 +222,7 @@ int main() {
 }  
 ```  
   
- 建構函式委派語法不會防止意外建立建構函式遞迴 — Constructor1 呼叫 Constructor2 呼叫 Constructor1 — 和堆疊溢位之前就會擲回任何錯誤。 您必須負責避免循環。  
+ 建構函式委派語法不會防止意外建立建構函式的遞迴 — Constructor1 呼叫會呼叫 Constructor1 Constructor2 — 和堆疊溢位之前，會擲回任何錯誤。 您必須負責避免循環。  
   
 ```cpp  
 class class_f{  

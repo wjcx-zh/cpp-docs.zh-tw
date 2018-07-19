@@ -1,5 +1,5 @@
 ---
-title: '_bstr_t:: operator = |Microsoft 文件'
+title: '_bstr_t:: operator = |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5537f4ad3abbac9686272e15d06bfa5df0bfca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43e28aa7d7b3682c45f4f8b7a94e990374d83b46
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942627"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator =
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  將新值指派給現有的 `_bstr_t` 物件。  
   
@@ -32,37 +33,29 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator=(  
-   const _bstr_t& s1   
-) throw ( );  
-_bstr_t& operator=(  
-   const char* s2   
-);  
-_bstr_t& operator=(  
-   const wchar_t* s3   
-);  
-_bstr_t& operator=(  
-   const _variant_t& var   
-);  
+_bstr_t& operator=(const _bstr_t& s1) throw ( );  
+_bstr_t& operator=(const char* s2);  
+_bstr_t& operator=(const wchar_t* s3);  
+_bstr_t& operator=(const _variant_t& var);  
 ```  
   
 #### <a name="parameters"></a>參數  
- *S1*  
+ *s1*  
  `_bstr_t` 物件，將被指派給現有的 `_bstr_t` 物件。  
   
- *S2*  
+ *s2*  
  多位元組字串，將被指派給現有的 `_bstr_t` 物件。  
   
- `s3`  
+ *s3*  
  Unicode 字串，將被指派給現有的 `_bstr_t` 物件。  
   
- `var`  
+ *var*  
  `_variant_t` 物件，將被指派給現有的 `_bstr_t` 物件。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="example"></a>範例  
- 請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)的使用範例`operator=`。  
+ 請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)如需使用的範例**運算子 =**。  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

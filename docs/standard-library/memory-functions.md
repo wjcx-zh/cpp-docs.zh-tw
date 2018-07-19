@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 676f6522a5625103a00310c6ce5353ce40da9359
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957421"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -113,11 +113,11 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>參數
 
-`Val` 物件或函式為其取得真正的位址。
+*Val*物件或函式為其取得真正的位址。
 
 ### <a name="return-value"></a>傳回值
 
-`Val` 所參考物件或函式的實際位址，即使多載的 `operator&()` 存在。
+物件或函式所參考的實際位址*Val*，即使多載`operator&()`存在。
 
 ### <a name="remarks"></a>備註
 
@@ -136,23 +136,23 @@ void* align(
 
 ### <a name="parameters"></a>參數
 
-`Alignment` 嘗試繫結的對齊方式。
+*對齊*嘗試繫結的對齊方式。
 
-`Size` 以位元組為單位對齊儲存體大小。
+*大小*對齊儲存體的位元組大小。
 
-`Ptr` 若要使用的可用連續儲存集區的起始位址。 這個參數也是一個 output 參數，並設定為包含新的起始位址，如果對齊成功。 如果 `align()` 不成功，則不會修改這個參數。
+*Ptr*可用連續儲存集區使用的起始位址。 這個參數也是一個 output 參數，並設定為包含新的起始位址，如果對齊成功。 如果 `align()` 不成功，則不會修改這個參數。
 
-`Space` 可用的總空間`align()`用來建立對齊儲存體。 這個參數也是輸出參數，在對齊儲存體和任何關聯的額外負荷減去之後，會包含儲存緩衝區中剩下的調整空間。
+*空間*可用的總空間`align()`以用來建立對齊儲存體。 這個參數也是輸出參數，在對齊儲存體和任何關聯的額外負荷減去之後，會包含儲存緩衝區中剩下的調整空間。
 
 如果 `align()` 不成功，則不會修改這個參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果所要求的對齊緩衝區不會放入可用空間，則為 null 指標，否則為 `Ptr` 的新值。
+如果可用空間，不符合要求的對齊的緩衝區為 null 指標否則，新的值*Ptr*。
 
 ### <a name="remarks"></a>備註
 
-修改的 `Ptr` 和 `Space` 參數可讓您在相同緩衝區上重複呼叫 `align()`，可能使用 `Alignment` 和 `Size` 的不同值。 下列程式碼片段示範`align()` 的一個用法。
+已修改*Ptr*並*空間*參數可讓您呼叫`align()`重複在同一個緩衝區，可能包含不同的值*對齊*和*大小*。 下列程式碼片段示範`align()` 的一個用法。
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -189,13 +189,13 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>參數
 
-`Alloc` 用來建立物件的配置器。
+*配置*用來建立物件的配置器。
 
-`Args` 零或多個引數成為物件。
+*Args*成為物件的零或多個引數。
 
 ### <a name="remarks"></a>備註
 
-此函式會建立 `shared_ptr<Type>` 物件，這是 `Alloc` 所配置和建構之 `Type(Args...)` 的指標。
+函式會建立物件`shared_ptr<Type>`，指向`Type(Args...)`所配置和建構之*配置*。
 
 ## <a name="const_pointer_cast"></a>  const_pointer_cast
 
@@ -209,15 +209,15 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-`Ty` 傳回共用指標所控制的類型。
+*Ty*控制所傳回的類型共用指標。
 
-`Other` 引數共用指標所控制的類型。
+*其他*引數共用指標所控制的類型。
 
-`Other` 引數共用的指標。
+*其他*引數共用的指標。
 
 ### <a name="remarks"></a>備註
 
-樣板函式會傳回空的 shared_ptr 物件，如果`const_cast<Ty*>(sp.get())`傳回 null 指標; 否則它會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 所擁有之資源物件`sp`。 運算式 `const_cast<Ty*>(sp.get())` 必須有效。
+範本函式會傳回空的 shared_ptr 物件，如果`const_cast<Ty*>(sp.get())`會傳回 null 指標; 否則會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 擁有之資源的擁有者的物件`sp`。 運算式 `const_cast<Ty*>(sp.get())` 必須有效。
 
 ### <a name="example"></a>範例
 
@@ -258,12 +258,12 @@ void declare_no_pointers(
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|已不再包含可追蹤指標的第一個位元位址。|
-|`_Size`|起始位置在 `ptr` 之未包含任何可追蹤指標的區塊大小。|
+|*ptr*|已不再包含可追蹤指標的第一個位元位址。|
+|*大小) (_s*|開始區塊的大小*ptr* ，其中包含任何可追蹤指標。|
 
 ### <a name="remarks"></a>備註
 
-此函式會通知的任何記憶體回收行程的位址範圍`[ ptr, ptr + _Size)`不再包含可追蹤的指標。 （任何指標至配置的儲存體必須不取值除非進行連線。）
+函式會通知任何記憶體回收行程的位址範圍`[ ptr, ptr + _Size)`不再包含可追蹤的指標。 （任何指向已配置的儲存體必須不取值除非進行連線。）
 
 ## <a name="declare_reachable"></a>  declare_reachable
 
@@ -275,15 +275,15 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>參數
 
-`ptr` 指標可以連線，配置，有效的儲存體區域。
+*ptr*連線、 配置、 有效儲存區域的指標。
 
 ### <a name="remarks"></a>備註
 
-如果 `ptr` 不是 Null，此函式便會通知任何記憶體回收行程，指出 `ptr` 此後即可供存取 (指向有效的已配置儲存體)。
+如果*ptr*不是 null，函式會通知任何記憶體回收行程所*ptr*以下是供存取 （指向有效的已配置儲存體）。
 
 ## <a name="default_delete"></a>  default_delete
 
-刪除使用 `operator new` 配置的物件。 適合搭配 `unique_ptr` 使用。
+刪除配置的物件**new 運算子**。 適合搭配 `unique_ptr` 使用。
 
 ```cpp
 struct default_delete {
@@ -296,13 +296,13 @@ struct default_delete {
 
 ### <a name="parameters"></a>參數
 
-`Ptr` 要刪除的物件指標。
+*Ptr*刪除物件的指標。
 
 其他陣列中要刪除的項目類型。
 
 ### <a name="remarks"></a>備註
 
-此範本類別描述 `deleter`，它會刪除與 `operator new` 一起配置的純量物件，適合與範本類別 `unique_ptr` 一起使用。 它也具有明確的特製化 `default_delete<Type[]>`。
+此範本類別描述`deleter`刪除配置的純量物件**new 運算子**適用於範本的類別、 `unique_ptr`。 它也具有明確的特製化 `default_delete<Type[]>`。
 
 ## <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast
 
@@ -316,15 +316,15 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-`Ty` 傳回共用指標所控制的類型。
+*Ty*控制所傳回的類型共用指標。
 
-`Other` 引數共用指標所控制的類型。
+*其他*引數共用指標所控制的類型。
 
-`sp` 引數共用的指標。
+*預存程序*引數共用的指標。
 
 ### <a name="remarks"></a>備註
 
-樣板函式會傳回空的 shared_ptr 物件，如果`dynamic_cast<Ty*>(sp.get())`傳回 null 指標; 否則它會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 所擁有之資源物件`sp`。 運算式 `dynamic_cast<Ty*>(sp.get())` 必須有效。
+範本函式會傳回空的 shared_ptr 物件，如果`dynamic_cast<Ty*>(sp.get())`會傳回 null 指標; 否則會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 擁有之資源的擁有者的物件*預存程序*. 運算式 `dynamic_cast<Ty*>(sp.get())` 必須有效。
 
 ### <a name="example"></a>範例
 
@@ -373,15 +373,15 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>參數
 
-`D` 刪除者的類型。
+*D*刪除者的類型。
 
-`Ty` 共用指標所控制的類型。
+*Ty*共用指標所控制的類型。
 
-`sp` 共用的指標。
+*預存程序*共用的指標。
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回一個指標，指向屬於 [shared_ptr 類別](../standard-library/shared-ptr-class.md)物件 `sp` 之 `D` 類型的刪除者。 如果 `sp` 沒有任何刪除者，或其刪除者的類型不是 `D`，此函式就會傳回 0。
+範本函式傳回的指標類型的刪除者*D*屬於[shared_ptr 類別](../standard-library/shared-ptr-class.md)物件*sp*。 如果*sp*沒有任何刪除者或其刪除者不是型別的*D*函式會傳回 0。
 
 ### <a name="example"></a>範例
 
@@ -438,7 +438,7 @@ pointer_safety get_pointer_safety();
 
 ### <a name="remarks"></a>備註
 
-函數會傳回任何自動的記憶體回收行程所假設之指標安全的類型。
+此函式傳回任何自動的記憶體回收行程所假設的指標安全的類型。
 
 ## <a name="get_temporary_buffer"></a>  get_temporary_buffer
 
@@ -451,7 +451,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>參數
 
-`count` 最大項目數要求記憶體是配置。
+*計數*項目要求的記憶體最大數目是配置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -510,7 +510,7 @@ make_shared(Types&&... _Args);
 
 |參數|描述|
 |---------------|-----------------|
-|`_Args`|零或多個建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。|
+|*_Args*|零或多個建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。|
 
 ### <a name="remarks"></a>備註
 
@@ -619,15 +619,15 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>參數
 
-`T` 物件的類型，`unique_ptr`會指向。
+*T*的物件型別，`unique_ptr`會指向。
 
-`Types` 建構函式引數所指定的型別`Args`。
+*型別*建構函式引數所指定的型別*Args*。
 
-`Args` 要傳遞給型別物件的建構函式的引數`T`。
+*引數*傳遞至類型的物件的建構函式的引數*T*。
 
-`Elem` 項目類型的陣列`T`。
+*Elem*型別的項目陣列*T*。
 
-`Size` 配置空間給新陣列中的項目數目。
+*大小*配置空間的新陣列中的項目數。
 
 ### <a name="remarks"></a>備註
 
@@ -645,7 +645,7 @@ make_unique(Types&&...) = delete;
 
 ## <a name="owner_less"></a>  owner_less
 
-允許按擁有權混合比較共用指標和弱式指標。 如果成員函式 `owner_before` 將 left 參數排序在 right 參數之前，便會傳回 `true`。
+允許按擁有權混合比較共用指標和弱式指標。 傳回**真**如果 left 的參數排序在 right 參數之前，由成員函式`owner_before`。
 
 ```cpp
 template <class Type>
@@ -684,9 +684,9 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>參數
 
-`_left` 共用或弱式指標。
+*_left*共用或弱式指標。
 
-`right` 共用或弱式指標。
+*右*共用或弱式指標。
 
 ### <a name="remarks"></a>備註
 
@@ -759,15 +759,15 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-`Ty` 傳回共用指標所控制的類型。
+*Ty*控制所傳回的類型共用指標。
 
-`Other` 引數共用指標所控制的類型。
+*其他*引數共用指標所控制的類型。
 
-`Other` 引數共用的指標。
+*其他*引數共用的指標。
 
 ### <a name="remarks"></a>備註
 
-樣板函式會傳回空的 shared_ptr 物件，如果`sp`是空白`shared_ptr`物件; 否則它會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty >所擁有之資源的物件`sp`. 運算式 `static_cast<Ty*>(sp.get())` 必須有效。
+範本函式會傳回空的 shared_ptr 物件，如果`sp`為空`shared_ptr`物件; 否則會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 擁有之資源的擁有者的物件`sp`. 運算式 `static_cast<Ty*>(sp.get())` 必須有效。
 
 ### <a name="example"></a>範例
 
@@ -818,13 +818,13 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>參數
 
-`Ty` 左側共用/弱式指標所控制的類型。
+*Ty*左側共用/弱式指標所控制的類型。
 
-`Other` 右側共用/弱式指標所控制的類型。
+*其他*右側共用/弱式指標所控制的類型。
 
-`left` 左側共用/弱式指標。
+*左*左側共用/弱式指標。
 
-`right` 右側共用/弱式指標。
+*右*右側共用/弱式指標。
 
 ### <a name="remarks"></a>備註
 
@@ -895,11 +895,11 @@ void undeclare_no_pointers(
 
 ### <a name="remarks"></a>備註
 
-此函式會通知的任何記憶體回收行程的位址範圍`[ptr, ptr + _Size)`現在可能會包含可追蹤的指標。
+函式會通知任何記憶體回收行程的位址範圍`[ptr, ptr + _Size)`現在可能會包含可追蹤的指標。
 
 ## <a name="undeclare_reachable"></a>  undeclare_reachable
 
-撤銷指定的記憶體位置的連線的宣告。
+撤銷指定的記憶體位置的連線能力的宣告。
 
 ```cpp
 template <class Type>
@@ -910,11 +910,11 @@ Type *undeclare_reachable(Type* ptr);
 
 |參數|描述|
 |---------------|-----------------|
-|`ptr`|指向要宣告為不可存取之記憶體位置的指標。|
+|*ptr*|指向要宣告為不可存取之記憶體位置的指標。|
 
 ### <a name="remarks"></a>備註
 
-如果`ptr`不`nullptr`，函式會通知的任何記憶體回收行程，`ptr`已無法再連線。 它會傳回等於比較安全地衍生指標`ptr`。
+如果*ptr*不是**nullptr**，函式會通知任何記憶體回收行程所*ptr*不再可供存取。 它會傳回以安全方式衍生的指標比較相等*ptr*。
 
 ## <a name="uninitialized_copy"></a>  uninitialized_copy
 
@@ -927,15 +927,15 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>參數
 
-`first` 輸入迭代器定址來源範圍中的第一個項目。
+*第一個*輸入迭代器定址來源範圍中的第一個項目。
 
-`last` 輸入迭代器定址來源範圍中的最後一個項目。
+*最後一個*輸入迭代器定址來源範圍中的最後一個項目。
 
-`dest` 正向迭代器，定址目的範圍中的第一個項目。
+*dest*正向迭代器，定址目的範圍中的第一個項目。
 
 ### <a name="return-value"></a>傳回值
 
-正向迭代器定址目的範圍，超過第一個位置除非來源範圍是空的。
+正向迭代器，定址目的範圍之外的第一個位置，除非來源範圍是空白。
 
 ### <a name="remarks"></a>備註
 
@@ -1032,15 +1032,15 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>參數
 
-`first` 輸入迭代器，要複製的物件。
+*第一個*輸入迭代器指向要複製的物件。
 
-`count` 帶正負號或不帶正負號的整數類型，指定的次數来複製的物件。
+*計數*的帶正負號或不帶正負號的整數型別指定的次數，複製物件。
 
-`dest` 正向迭代器指向新複本的位置。
+*dest*正向迭代器，表示新的複本在哪裡。
 
 ### <a name="return-value"></a>傳回值
 
-正向迭代器，定址目的之外的第一個位置。 如果來源範圍是空的迭代器位址`first`。
+正向迭代器，定址目的之外的第一個位置。 如果來源範圍是空的迭代器定址*第一個*。
 
 ### <a name="remarks"></a>備註
 
@@ -1066,11 +1066,11 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>參數
 
-`first` 正向迭代器定址為起始的目的範圍中的第一個項目。
+*第一個*正向迭代器，定址對象是要起始之目的範圍中的第一個元素。
 
-`last` 正向迭代器定址為起始的目的範圍中最後一個項目。
+*最後一個*正向迭代器，定址對象是要起始之目的範圍中的最後一個元素。
 
-`val` 要用來初始化目的範圍的值。
+*val*来用來初始化目的範圍的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1135,11 +1135,11 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>參數
 
-`first` 正向迭代器，定址目的範圍中的第一個項目起始。
+*第一個*正向迭代器，定址目的範圍中的第一個項目起始。
 
-`count` 要初始化的項目數目。
+*計數*来初始化的項目數。
 
-`val` 要用來初始化目的範圍的值。
+*val*来用來初始化目的範圍的值。
 
 ### <a name="remarks"></a>備註
 

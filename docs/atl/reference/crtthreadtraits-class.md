@@ -1,5 +1,5 @@
 ---
-title: CRTThreadTraits 類別 |Microsoft 文件
+title: CRTThreadTraits 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f08f0d6ea57aa5a153d190b357785911e64d6f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c182840ed3592a229b8d6c7b98930ade57a18b25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358162"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883017"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 類別
-這個類別會提供 CRT 執行緒建立函式。 如果執行緒會使用 CRT 函式，請使用這個類別。  
+這個類別會提供建立函式的 CRT 往來文章。 如果執行緒會使用 CRT 函式，請使用這個類別。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,24 +45,24 @@ class CRTThreadTraits
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CRTThreadTraits::CreateThread](#createthread)|（靜態）呼叫此函式可建立的執行緒，可以使用 CRT 函式。|  
+|[CRTThreadTraits::CreateThread](#createthread)|（靜態）呼叫此函式來建立可以使用 CRT 函式的執行緒。|  
   
 ## <a name="remarks"></a>備註  
- 執行緒特性是執行緒的提供特定類型建立函式的類別。 建立函式有相同的簽章和語意與 Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函式。  
+ 執行緒的特性是執行緒的提供特定類型建立函式的類別。 為 Windows 建立函式具有相同的簽章和語意[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函式。  
   
- 下列類別會使用執行緒特性：  
+ 下列類別會使用執行緒的特性：  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- 如果執行緒將不會使用 CRT 函式，使用[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)改為。  
+ 如果執行緒將不使用 CRT 函式，使用[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)改。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
 ##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
- 呼叫此函式可建立的執行緒，可以使用 CRT 函式。  
+ 呼叫此函式來建立可以使用 CRT 函式的執行緒。  
   
 ```
 static HANDLE CreateThread(
@@ -75,31 +75,31 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpsa`  
+ *lpsa*  
  新的執行緒安全性屬性。  
   
- `dwStackSize`  
- 新執行緒的堆疊大小。  
+ *dwStackSize*  
+ 新的執行緒堆疊大小。  
   
- `pfnThreadProc`  
+ *pfnThreadProc*  
  新執行緒的執行緒程序。  
   
- `pvParam`  
- 要傳遞給執行緒的程序的參數。  
+ *pvParam*  
+ 要傳遞至執行緒程序的參數。  
   
- `dwCreationFlags`  
+ *dwCreationFlags*  
  建立旗標 （0 或 CREATE_SUSPENDED）。  
   
- `pdwThreadId`  
- [out]DWORD 變數的成功時，接收新建立執行緒的執行緒 ID 的位址。  
+ *pdwThreadId*  
+ [out]變數的位址 DWORD，成功時，接收新建立的執行緒的執行緒識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回新建立的執行緒或 NULL 的控制代碼失敗。 呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)若要取得延伸錯誤資訊。  
+ 傳回新建立的執行緒或 NULL 的控制代碼，在失敗。 呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)若要取得延伸錯誤資訊。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)更多有關這個函式的參數。  
+ 請參閱[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)更多有關此函數的參數。  
   
- 此函數會呼叫[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)建立執行緒。  
+ 此函式會呼叫[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)建立執行緒。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

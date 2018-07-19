@@ -1,5 +1,5 @@
 ---
-title: using 宣告 |Microsoft 文件
+title: 使用宣告 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c40a69e9c8d584d91a1b6401ec0da57368641975
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424466"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941521"
 ---
 # <a name="using-declaration"></a>using 宣告
-Using 宣告引入宣告式所在區域名稱 using 宣告會出現。  
+Using 宣告引入的名稱，在其中的宣告式區域至使用宣告會出現。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ using declarator-list ;
   
 ### <a name="parameters"></a>參數
   
-*巢狀命名規範*  
-    範圍解析運算子所終止的命名空間、 類別或列舉型別名稱和範圍解析運算子 （:）、 序列。 單一的範圍解析運算子可能用於全域命名空間中導入的名稱。 關鍵字`typename`是選擇性的而且可用來解析相依時引入從基底類別的類別樣板的名稱。  
+*巢狀名稱規範*  
+    結束範圍解析運算子的命名空間、 類別或列舉型別名稱和範圍解析運算子 （:）、 序列。 單一的範圍解析運算子可用來從全域命名空間引入名稱使用。 關鍵字**typename**是選擇性的可用來解析相依時引入從基底類別的類別樣板的名稱。  
   
 *非限定識別碼*  
-    不合格的識別碼的運算式，這可能是識別項、 多載的運算子名稱、 使用者定義常值運算子或轉換函式名稱、 類別解構函式名稱或範本名稱和引數清單。  
+    不合格的識別碼的運算式，可能是識別項、 多載的運算子名稱、 使用者定義常值運算子或轉換函式名稱、 類別解構函式名稱或範本的名稱和引數清單。  
   
 *宣告子清單*  
-    以逗號分隔清單的 [`typename`]*巢狀命名規範**不合格識別碼*宣告子，後面接選擇省略符號。
+    以逗號分隔清單的 [**typename**]*巢狀名稱規範**非限定識別碼*宣告子，後面接選擇省略符號。
     
 ## <a name="remarks"></a>備註  
-A using 宣告實體的同義字形式引進了非限定的名稱宣告其他位置。 它可讓單一從特定命名空間沒有明確宣告區域出現的位置中的限定名稱。 這是相對於[using 指示詞](../cpp/namespaces-cpp.md#using_directives)，可讓*所有*無限制使用的命名空間中的名稱。 `using`關鍵字也用於[輸入別名](../cpp/aliases-and-typedefs-cpp.md)。  
+Using 宣告導入了實體的同義字的非限定的名稱宣告其他位置。 它可讓特定的命名空間，而不用明確限定性條件，在出現的宣告區域中的單一名稱。 這是相對於[using 指示詞](../cpp/namespaces-cpp.md#using_directives)，可讓*所有*無限制使用的命名空間中的名稱。 **使用**關鍵字也可用於[輸入別名](../cpp/aliases-and-typedefs-cpp.md)。  
   
 ## <a name="example"></a>範例  
- A 可以使用 using 宣告的類別定義中。  
+ A 可以使用 using 宣告類別定義中。  
   
 ```cpp  
 // using_declaration1.cpp  
@@ -96,7 +96,7 @@ In B::g()
 ```  
   
 ## <a name="example"></a>範例  
-當用來宣告成員，使用宣告必須參考的基底類別成員。  
+當用來宣告的成員，使用宣告必須參考的基底類別成員。  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -135,7 +135,7 @@ In B::f()
 ```  
   
 ## <a name="example"></a>範例  
-成員宣告使用 using 宣告可透過明確限定參考。 `::`前置詞是指全域命名空間。  
+使用 using 宣告的成員宣告可以參考使用明確限定性條件。 `::`前置詞是指全域命名空間。  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -174,9 +174,9 @@ In A::g
 ```  
   
 ## <a name="example"></a>範例  
-使用時進行宣告，宣告所建立的同義字只是指在使用有效的定義宣告。 定義使用之後新增到命名空間宣告不是有效的同義字。  
+使用時進行宣告，宣告所建立的同義字只是指在使用有效的定義宣告。 定義在使用之後新增到命名空間宣告不是有效的同義字。  
   
-所定義的名稱`using`宣告為其原始名稱的別名。 它不會影響類型、 連結或其他原始宣告的屬性。  
+定義的名稱**使用**宣告為其原始名稱的別名。 它不會影響類型、 連結或原始宣告的其他屬性。  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -202,7 +202,7 @@ void b() {
 ```  
   
 ## <a name="example"></a>範例  
-命名空間，如果本機宣告的一組中的函式而言，使用單一名稱所指定的宣告式區域中，它們必須全部參考相同的實體，或它們必須所有參考函式的宣告。  
+對於在命名空間，如果一組本機宣告的函式並使用宣告來宣告的區域會提供一個名稱，它們必須全部參考相同的實體，或它們必須全部參考函式。  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -221,10 +221,10 @@ void g() {
 }  
 ```  
   
- 在上述範例`using B::i`陳述式會導致第二個`int i`中宣告`g()`函式。 `using B::f`陳述式未與衝突`f(char)`運作，因為所導入的函式名稱`B::f`有不同的參數型別。  
+ 在上述範例`using B::i`陳述式會導致第二個`int i`宣告於`g()`函式。 `using B::f`陳述式沒有與衝突`f(char)`函式，因為所導入的函式名稱`B::f`有不同的參數類型。  
   
 ## <a name="example"></a>範例  
- 區域函式宣告不能有相同的名稱和型別，由 using 宣告引入的函式。 例如:   
+ 區域函式宣告不能有和由 using 宣告引入的函式名稱和類型相同。 例如:   
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -250,7 +250,7 @@ void h() {
 ```  
   
 ## <a name="example"></a>範例  
- 相對於繼承時 using, 宣告引入名稱從基底類別衍生的類別範圍，在衍生的類別覆寫虛擬成員函式中相同的名稱和引數型別，基底類別中的成員函式。  
+ 對於繼承中，使用時宣告引入名稱從基底類別衍生的類別範圍內，在衍生的類別覆寫虛擬成員函式中具有相同的名稱和引數類型的基底類別的成員函式。  
   
 ```cpp  
 // using_declaration_inheritance1.cpp  
@@ -307,7 +307,7 @@ In D::g(char)
 ```  
   
 ## <a name="example"></a>範例  
-所有執行個體名稱中使用所述的宣告必須是可存取。 特別是，如果衍生的類別可讓您使用的 using 宣告，以存取基底類別成員名稱的成員必須是可存取。 如果名稱就是多載的成員函式，則所有函式必須是可存取。  
+所有的執行個體名稱中使用所述的宣告必須是可存取。 特別是，如果在衍生的類別可讓您使用 using 宣告，以存取基底類別的成員名稱的成員必須可存取。 如果名稱就是多載的成員函式，則所有函式必須是可存取。  
   
 如需協助工具成員的詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。  
   

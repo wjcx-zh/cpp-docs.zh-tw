@@ -1,5 +1,5 @@
 ---
-title: 識別項 （c + +） |Microsoft 文件
+title: 識別項 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415403"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941768"
 ---
 # <a name="identifiers-c"></a>識別項 （c + +）
 識別項是字元序列，用來表示下列其中一項：  
@@ -55,7 +55,7 @@ A B C D E F G H I J K L M
 N O P Q R S T U V W X Y Z  
 ```  
   
- 識別項中也允許特定範圍的通用字元名稱。  識別項中的通用字元名稱無法指定控制字元或基本來源字元集中的字元。 如需詳細資訊，請參閱[字元集](../cpp/character-sets.md)。 下列 Unicode 字碼指標數字範圍可做為通用字元名稱，以代表識別項中的任何字元：  
+ 識別項中也允許特定範圍的通用字元名稱。  識別項中的通用字元名稱無法指定控制字元或基本來源字元集中的字元。 如需詳細資訊，請參閱 <<c0> [ 字元集](../cpp/character-sets.md)。 下列 Unicode 字碼指標數字範圍可做為通用字元名稱，以代表識別項中的任何字元：  
   
 -   00A8、00AA、00AD、00AF、00B2-00B5、00B7-00BA、00BC-00BE、00C0-00D6、00D8-00F6、00F8-00FF、0100-02FF、0370-167F、1681-180D、180F-1DBF、1E00-1FFF、200B-200D、202A-202E、203F-2040、2054、2060-206F、2070-20CF、2100-218F、2460-24FF、2776-2793、2C00-2DFF、2E80-2FFF、3004-3007、3021-302F、3031-303F、3040-D7FF、F900-FD3D、FD40-FDCF、FDF0-FE1F、FE30-FE44、FE47-FFFD、10000-1FFFD、20000-2FFFD、30000-3FFFD、40000-4FFFD、50000-5FFFD、60000-6FFFD、70000-7FFFD、80000-8FFFD、90000-9FFFD、A0000-AFFFD、B0000-BFFFD、C0000-CFFFD、D0000-DFFFD、E0000-EFFFD  
   
@@ -102,7 +102,7 @@ int main() {
   
  識別項的第一個字元必須是字母 (大寫或小寫) 字元或底線 ( **_** )。 由於 C++ 識別項要區分大小寫， `fileName` 與 `FileName`不同。  
   
- 識別項的拼字、大小寫不能與關鍵字完全相同。 包含關鍵字的識別項是合法的。 例如， `Pint` 是合法的識別項，即使它包含關鍵字 `int`。  
+ 識別項的拼字、大小寫不能與關鍵字完全相同。 包含關鍵字的識別項是合法的。 例如，`Pint`是合法的識別項，即使它包含**int**，這是一個關鍵字。  
   
  在識別項開頭使用兩個連續底線字元 ( **__** )，或者單一前置底線後面接著一個大寫字母，皆為保留給 C++ 在所有範圍中實作。 因為可能與目前或未來保留的識別項相衝突，您應該避免在具有檔案範圍的名稱中使用一個後面接著小寫字母的前置底線。  
   

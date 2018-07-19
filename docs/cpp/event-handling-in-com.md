@@ -1,5 +1,5 @@
 ---
-title: COM 中的事件處理 |Microsoft 文件
+title: COM 中的事件處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,34 +26,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942703"
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件處理
-在 COM 事件處理中，您將使用的事件來源和事件接收器設定[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = **com**。這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。  
+在 COM 事件處理中，您將設定使用事件來源和事件接收器[event_source](../windows/event-source.md)並[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `com`. 這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。  
   
 ## <a name="declaring-events"></a>宣告事件  
- 在 事件來源類別中，使用[__event](../cpp/event.md)關鍵字在 interface 宣告來宣告為事件介面的方法。 當您以介面方法呼叫它們時，會引發該介面的事件。 事件介面上的方法可以有零個或多個參數 (應該都是**中**參數)。 傳回型別可為 void 或任何整數類型。  
+ 在 事件來源類別中，使用[__event](../cpp/event.md)在介面宣告來宣告介面的方法，做為事件的關鍵字。 當您以介面方法呼叫它們時，會引發該介面的事件。 事件介面的方法可以有零個或多個參數 (應該都是`in`參數)。 傳回型別可為 void 或任何整數類型。  
   
 ## <a name="defining-event-handlers"></a>定義事件處理常式  
- 在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。 COM 事件的呼叫慣例不必相符;請參閱[配置相依的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)下方如需詳細資訊。  
+ 在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。 COM 事件的呼叫慣例不需要相符;請參閱[版面配置相依的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)如下如需詳細資訊。  
   
 ## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式  
- 也在事件接收器類別中，您要使用內建函式[__hook](../cpp/hook.md)使事件與事件處理常式和[__unhook](../cpp/unhook.md)來取消事件的事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。  
+ 此外如在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)事件處理常式相關聯的事件並[__unhook](../cpp/unhook.md)來取消事件與事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。  
   
 > [!NOTE]
->  通常，有兩種方法可以讓 COM 事件接收器存取事件來源介面定義。 第一種是共用常見的標頭檔，如下所示。 第二個是使用[#import](../preprocessor/hash-import-directive-cpp.md)與`embedded_idl`匯入限定詞，以便將事件來源類型程式庫寫入.tlh 檔案，並保留屬性產生程式碼。  
+>  通常，有兩種方法可以讓 COM 事件接收器存取事件來源介面定義。 第一種是共用常見的標頭檔，如下所示。 第二個是使用[#import](../preprocessor/hash-import-directive-cpp.md)使用`embedded_idl`匯入限定詞，以便事件來源的型別程式庫寫入.tlh 檔案，以保留屬性產生程式碼。  
   
 ## <a name="firing-events"></a>引發事件  
- 若要引發事件，只要呼叫在事件來源類別中使用 `__event` 關鍵字宣告之介面的方法即可。 如果在事件中攔截到處理常式，則會呼叫處理常式。  
+ 若要引發事件，只要呼叫中的方法宣告之介面 **__event**關鍵字在事件來源類別。 如果在事件中攔截到處理常式，則會呼叫處理常式。  
   
 ### <a name="com-event-code"></a>COM 事件代碼  
  下列範例示範如何在 COM 中引發事件。 若要編譯和執行這個範例，請參閱程式碼中的註解。  
   
-```  
+```cpp 
 // evh_server.h  
 #pragma once  
   
@@ -72,7 +73,7 @@ class DECLSPEC_UUID("530DF3AD-6936-3214-A83B-27B63C7997C4") CSource;
   
  伺服器端的程式碼如下：  
   
-```  
+```cpp 
 // evh_server.cpp  
 // compile with: /LD  
 // post-build command: Regsvr32.exe /s evh_server.dll  
@@ -97,7 +98,7 @@ public:
   
  用戶端的程式碼如下：  
   
-```  
+```cpp 
 // evh_client.cpp  
 // compile with: /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES 1  
@@ -155,7 +156,7 @@ int main() {
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output  
 MyHandler1 was called with value 123.  
 MyHandler2 was called with value 123.  
 ```  
@@ -163,20 +164,20 @@ MyHandler2 was called with value 123.
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 配置相依的 COM 事件  
  配置相依性是只有 COM 程式設計才有的問題。 在原生與 Managed 事件處理中，處理常式的簽章 (傳回型別、呼叫慣例和引數) 必須與其事件相符，不過，處理常式的名稱不必與其事件相符。  
   
- 不過，在 COM 事件處理中，當您設定*layout_dependent*參數**event_receiver**至**true**，強制執行名稱和簽章比對。 這表示事件接收器中處理常式的名稱和簽章必須與所要攔截之事件的名稱和簽章完全相符。  
+ 不過，在 COM 事件處理，當您設定*event_receiver*的參數`event_receiver`要 **，則為 true**，名稱和簽章比對會強制執行。 這表示事件接收器中處理常式的名稱和簽章必須與所要攔截之事件的名稱和簽章完全相符。  
   
- 當*layout_dependent*設**false**，呼叫慣例和儲存類別 （虛擬、 靜態等等） 可以混搭之間在引發事件方法和攔截方法 （其委派）。 會有稍微更有效率*layout_dependent*=**true**。  
+ 當*event_receiver*設為**false**，呼叫慣例和儲存體類別 （虛擬、 靜態的依此類推） 可以混搭之間引發事件方法和攔截方法 （其委派）。 會有稍微更有效率*event_receiver*=**true**。  
   
  例如，假設已定義的 `IEventSource` 中內含下列方法：  
   
-```  
+```cpp 
 [id(1)] HRESULT MyEvent1([in] int value);  
 [id(2)] HRESULT MyEvent2([in] int value);  
 ```  
   
  假設事件來源的格式如下：  
   
-```  
+```cpp 
 [coclass, event_source(com)]  
 class CSource : public IEventSource {  
 public:  
@@ -192,7 +193,7 @@ public:
   
  然後，在事件接收器中，所有在 `IEventSource` 的方法中攔截到的處理常式必須符合其名稱和簽章，如下所示：  
   
-```  
+```cpp 
 [coclass, event_receiver(com, true)]  
 class CReceiver {  
 public:  

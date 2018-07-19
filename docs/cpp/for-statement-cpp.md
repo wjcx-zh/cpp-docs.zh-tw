@@ -1,5 +1,5 @@
 ---
-title: 陳述式 （c + +） |Microsoft 文件
+title: 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417180"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940815"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C++)
-重複執行陳述式，直到條件變成 false。 範圍架構 for 陳述式上的資訊，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
+重複執行陳述式，直到條件變成 false。 如需有關範圍架構 for 陳述式，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,19 +32,19 @@ for ( init-expression ; cond-expression ; loop-expression )
 ```  
   
 ## <a name="remarks"></a>備註  
- 使用 `for` 陳述式建構必須執行指定次數的迴圈。  
+ 使用**針對**陳述式來建構必須執行指定的次數的迴圈。  
   
- 如下表所示，`for` 陳述式包含三個選擇性部分。  
+ **針對**陳述式包含三個選擇性部分下, 表所示。  
   
 ### <a name="for-loop-elements"></a>for 迴圈項目  
   
 |語法名稱|何時執行|描述|  
 |-----------------|-------------------|-----------------|  
-|`init-expression`|之前的任何其他項目**如**陳述式，`init-expression`執行一次。 之後就會將控制項傳遞給 `cond-expression`。|通常用來初始迴圈索引。 它可能包含運算式或宣告。|  
+|`init-expression`|之前的任何其他項目**for**陳述式，`init-expression`只執行一次。 之後就會將控制項傳遞給 `cond-expression`。|通常用來初始迴圈索引。 它可能包含運算式或宣告。|  
 |`cond-expression`|在執行 `statement` 的每個反覆項目之前，包括第一個反覆項目。 除非 `statement` 判斷值為 true (非零)，否則不會執行 `cond-expression`。|判斷值為整數類型的運算式或具有整數類型明確轉換的類別類型。 通常用來測試迴圈終止準則。|  
 |`loop-expression`|每個 `statement` 反覆項目的結尾。 在 `loop-expression` 執行後會評估 `cond-expression`。|通常用來遞增迴圈索引。|  
   
- 下列範例示範使用 `for` 陳述式的不同方式。  
+ 下列範例顯示使用的不同方式**針對**陳述式。  
   
 ```cpp  
 #include <iostream>  
@@ -106,11 +106,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18  
 ```  
   
- A`for`時就會終止迴圈[中斷](../cpp/break-statement-cpp.md)，[傳回](../cpp/return-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md) (加上標籤的陳述式之外**如**迴圈) 內`statement`執行。 A[繼續](../cpp/continue-statement-cpp.md)陳述式中的`for`迴圈終止只有目前的反覆項目。  
+ A**針對**迴圈終止時[中斷](../cpp/break-statement-cpp.md)，[傳回](../cpp/return-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md) (加上標籤的陳述式之外**的**迴圈) 內`statement`執行。 A[繼續](../cpp/continue-statement-cpp.md)中的陳述式**如**迴圈終止只有目前的反覆項目。  
   
- 如果`cond-expression`已省略，就會被視為 true 和**如**迴圈將不會終止不`break`， `return`，或`goto`內`statement`。  
+ 如果`cond-expression`是省略，它會被視為 true， **for**迴圈不會終止而不需要**中斷**，**傳回**，或**goto**內`statement`。  
   
- 雖然 `for` 陳述式的三個欄位通常用於初始化、測試終止及遞增，但它們不只限於這些用途。 例如，下列程式碼會列印數字 0 到 4。 在這個範例中，`statement` 是 Null 陳述式：  
+ 雖然三個欄位的**針對**陳述式通常用於初始化、 測試終止及遞增，它們並不限於這些用途。 例如，下列程式碼會列印數字 0 到 4。 在這個範例中，`statement` 是 Null 陳述式：  
   
 ```cpp  
 #include <iostream>  
@@ -126,7 +126,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>for 迴圈和 C++ 標準  
- C++ 標準說明，在 `for` 迴圈中宣告的變數應在 `for` 迴圈結束時超出範圍。 例如:   
+ C + + 標準所規定中所宣告的變數**for**迴圈應該消失後**如**迴圈結束。 例如:   
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
@@ -135,11 +135,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope  
 ```  
   
- 根據預設，在[/Ze](../build/reference/za-ze-disable-language-extensions.md)，在宣告的變數`for`迴圈會保留在範圍中，直到`for`迴圈的封閉範圍結束。  
+ 根據預設，底下[/Ze](../build/reference/za-ze-disable-language-extensions.md)，在宣告的變數**如**迴圈會維持在範圍中，直到**的**迴圈的封閉範圍結束。  
   
  [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)啟用標準的行為，而不需要指定 /Za 宣告於 for 迴圈的變數。  
   
- 您也可以使用 `for` 迴圈的範圍差異在 /Ze 底下重新宣告變數，如下所示：  
+ 您也可使用的範圍差異**針對**迴圈來將變數在 /Ze 底下重新宣告，如下所示：  
   
 ```cpp  
 // for_statement5.cpp  
@@ -151,7 +151,7 @@ int main(){
 }  
 ```  
   
- 此範例更精確地模擬在 `for` 迴圈中所宣告之變數的標準行為，也就是要求在 `for` 迴圈中宣告的變數於迴圈結束後超出範圍。 若變數是在 `for` 迴圈中宣告的，編譯器會在內部將它升級至 `for` 迴圈封閉範圍中的區域變數，即使已經有相同名稱的區域變數。  
+ 這更精確地模擬中宣告之變數的標準行為**for**迴圈，而這需要中宣告的變數**如**於迴圈結束後超出範圍的迴圈。 當變數宣告中**for**迴圈中，編譯器在內部將其升級中的區域變數**的**迴圈的封閉範圍，即使已經有具有相同名稱的本機變數。  
   
 ## <a name="see-also"></a>另請參閱  
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   

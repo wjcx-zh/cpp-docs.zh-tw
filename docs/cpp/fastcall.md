@@ -1,5 +1,5 @@
 ---
-title: __fastcall |Microsoft 文件
+title: __fastcall |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
-ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
+ms.openlocfilehash: f50239d42c164e2f9c6876e26389eb60e710ed34
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34153115"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940091"
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft 專屬**  
   
- `__fastcall` 呼叫慣例會指定函式的引數應該盡可能在暫存器中傳遞。 這個呼叫慣例僅適用於 x86 架構。 下列清單會顯示這個呼叫慣例的實作。  
+ **__Fastcall**呼叫慣例會指定函數的引數會傳入暫存器，盡可能中。 這個呼叫慣例僅適用於 x86 架構。 下列清單會顯示這個呼叫慣例的實作。  
   
-|項目|實作|  
+|元素|實作|  
 |-------------|--------------------|  
 |引數傳遞順序|引數清單中的前兩個 DWORD 引數或較小引數會由左至右傳入 ECX 和 EDX 暫存器，所有其他引數則由右至左傳遞至堆疊上。|  
 |堆疊維護責任|所呼叫的函式會從堆疊取出引數。|  
@@ -38,9 +38,9 @@ ms.locfileid: "34153115"
 > [!NOTE]
 >  未來的編譯器版本可能會使用不同的暫存器來儲存參數。  
   
- 使用[/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會導致編譯成模組中的每個函式`__fastcall`除非使用衝突的屬性宣告的函式或函式的名稱是`main`。  
+ 使用[/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會造成編譯為模組中的每個函式 **__fastcall**除非使用衝突的屬性，宣告的函式或函式的名稱是`main`.  
   
- 目標為 ARM 和 x64 架構的編譯器會接受並忽略 `__fastcall` 關鍵字，而按照慣例，在 x64 晶片上的前四個引數會傳入暫存器 (可能的話)，其他引數則會傳遞至堆疊上。 如需詳細資訊，請參閱[概觀 x64 呼叫慣例](../build/overview-of-x64-calling-conventions.md)。 在 ARM 晶片上，最多可以在暫存器中傳遞四個整數引數和八個浮點引數，而其他引數則是在堆疊上傳遞。  
+ **__Fastcall**關鍵字會接受並忽略 ARM 和 x64 為目標的編譯器架構; 在 x64 晶片，依照慣例前, 四個引數會傳入暫存器，可能的話，請傳遞額外引數在堆疊中。 如需詳細資訊，請參閱 <<c0> [ 概觀的 x64 呼叫慣例](../build/overview-of-x64-calling-conventions.md)。 在 ARM 晶片上，最多可以在暫存器中傳遞四個整數引數和八個浮點引數，而其他引數則是在堆疊上傳遞。  
   
  對於非靜態類別函式，如果函式是以非正規的方式定義，則不需要在非正規定義上指定呼叫慣例修飾詞。 也就是說，對於類別非靜態成員方法而言，宣告時所指定的呼叫慣例是在定義時假設。 如果已指定此類別定義：  
   

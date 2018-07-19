@@ -1,5 +1,5 @@
 ---
-title: 請勿-while 陳述式 （c + +） |Microsoft 文件
+title: 請勿-do-while 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2de180d58c31f4bd6c8b15eb69076b99f8b57b0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942943"
 ---
 # <a name="do-while-statement-c"></a>do-while 陳述式 (C++)
-執行*陳述式*重複直到指定的終止條件 (*運算式*) 會評估為零。  
+執行*陳述式*重複直到指定的終止條件 (*運算式*) 評估為零。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +38,18 @@ while ( expression ) ;
 ```  
   
 ## <a name="remarks"></a>備註  
- 終止條件的測試是在每次執行迴圈之後進行；因此，`do-while` 迴圈會執行一次或多次取決於終止運算式的值。 `do-while`陳述式也可以終止時[中斷](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[傳回](../cpp/return-statement-cpp.md)陳述式主體內執行陳述式。  
+ 終止條件的測試會在迴圈中; 每次執行之後因此，**請勿-雖然**迴圈會執行一次以上，取決於終止運算式的值。 **請勿-雖然**陳述式也可能會終止時[中斷](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[傳回](../cpp/return-statement-cpp.md)陳述式主體中執行陳述式。  
   
  *expression* 必須有算術或指標類型。 執行程序如下所示：  
   
 1.  會執行陳述式主體。  
   
-2.  接下來會評估 *expression*。 如果 *expression* 為 false，`do-while` 陳述式會終止，而並將控制項傳遞至程式中的下一個陳述式。 如果 *expression* 為 true (非零)，則會從步驟 1 開始重複處理序。  
+2.  接下來會評估 *expression*。 如果*運算式*為 false，**請勿-雖然**陳述式會終止，而控制權會傳遞至程式中的下一個陳述式。 如果 *expression* 為 true (非零)，則會從步驟 1 開始重複處理序。  
   
 ## <a name="example"></a>範例  
- 以下範例示範 `do-while` 陳述式：  
+ 下列範例會示範**請勿-雖然**陳述式：  
   
-```  
+```cpp 
 // do_while_statement.cpp  
 #include <stdio.h>  
 int main()  

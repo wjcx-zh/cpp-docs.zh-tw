@@ -1,5 +1,5 @@
 ---
-title: reinterpret_cast 運算子 |Microsoft 文件
+title: reinterpret_cast 運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942864"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 運算子
 可將所有指標轉換成任何其他指標類型。 也可將任何整數類資料類型轉換成任何指標類型 (反之亦然)。  
@@ -32,19 +33,19 @@ reinterpret_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>備註  
- 誤用 `reinterpret_cast` 運算子非常不安全。 除非所需的轉換本質屬於低階轉換，否則您應使用其他任一轉型運算子。  
+ 誤用**reinterpret_cast**運算子可以很輕易就不安全。 除非所需的轉換本質屬於低階轉換，否則您應使用其他任一轉型運算子。  
   
- `reinterpret_cast` 運算子可用於進行 `char*` 至 `int*` 或 `One_class*` 至 `Unrelated_class*` 之類的轉換，這類轉換原本就不安全。  
+ **Reinterpret_cast**運算子可用來轉換這類`char*`要`int*`，或`One_class*`至`Unrelated_class*`，這是原本就不安全。  
   
- 除了轉型為原始類型外，無法將 `reinterpret_cast` 的結果用於其他安全的用途。 其他用途的最佳情況是不可攜。  
+ 結果**reinterpret_cast**無法安全地用於要轉換回其原始型別以外的任何項目。 其他用途的最佳情況是不可攜。  
   
- `reinterpret_cast`運算子不能沒有**const**， `volatile`，或 **__unaligned**屬性。 請參閱[const_cast 運算子](../cpp/const-cast-operator.md)如需移除這些屬性的資訊。  
+ **Reinterpret_cast**運算子不能**const**， **volatile**，或 **__unaligned**屬性。 請參閱[const_cast 運算子](../cpp/const-cast-operator.md)如需移除這些屬性的詳細資訊。  
   
- `reinterpret_cast` 運算子會將 null 指標值轉換為目的類型的 null 指標值。  
+ **Reinterpret_cast**運算子會將 null 指標值轉換成目的地類型的 null 指標值。  
   
- `reinterpret_cast` 的實際用途之一是用於雜湊函式，雜湊函式會將值對應至索引，使兩個不同的值罕見地以相同索引結束。  
+ 實際用途之一**reinterpret_cast**雜湊函式，並對應至兩個不同的方式中的索引值的值罕見結束註冊具有相同索引中。  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` 允許將指標視為整數類資料類型。 結果隨即位元移位並與其本身 XOR，以產生唯一的索引 (高可攜性獨有)。 之後，標準 C-Style 轉換會將該索引截斷為函式的傳回型別。  
+ **Reinterpret_cast**允許將指標視為整數類資料類型。 結果隨即位元移位並與其本身 XOR，以產生唯一的索引 (高可攜性獨有)。 之後，標準 C-Style 轉換會將該索引截斷為函式的傳回型別。  
   
 ## <a name="see-also"></a>另請參閱  
  [轉型運算子](../cpp/casting-operators.md)   

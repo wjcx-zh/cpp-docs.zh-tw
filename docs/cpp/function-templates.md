@@ -1,5 +1,5 @@
 ---
-title: 函式範本 |Microsoft 文件
+title: 函式範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414533"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941063"
 ---
 # <a name="function-templates"></a>函式樣板
 類別樣板會根據在具現化時傳遞至類別的型別引數，定義一系列相關的類別。 函式樣板與類別樣板類似，但其定義一系列的函式。 使用函式樣板時，您可以指定一組根據相同的程式碼，但在不同類型或類別上運作的函式。 下列函式樣板會交換兩個項目：  
@@ -37,9 +37,9 @@ int main() {
 }  
 ```  
   
- 此程式碼會定義一系列交換引數值的函式。 從這個範本，您可以產生會交換函式**int**和**長**型別以及使用者定義型別。 如果已正確定義類別的複製建構函式和指派運算子，則 `MySwap` 甚至會交換類別。  
+ 此程式碼會定義一系列交換引數值的函式。 從這個範本中，您可以產生函式，將會交換**int**並**長**類型以及使用者定義型別。 如果已正確定義類別的複製建構函式和指派運算子，則 `MySwap` 甚至會交換類別。  
   
- 此外，因為編譯器會在編譯時期得知 `a` 和 `b` 參數的類型，因此函式樣板將不會讓您交換不同類型的物件。  
+ 此外，函式樣板會讓您交換類型的物件不同，因為編譯器知道的型別並*b*在編譯時期的參數。  
   
  雖然使用 void 指標可讓這個函式由非樣板化的函式執行，但樣板版本仍是 typesafe。 請考慮下列呼叫：  
   
@@ -64,7 +64,7 @@ int main(int j) {
 }  
 ```  
   
- 明確指定樣板引數時，一般會完成隱含轉換，以便將函式引數轉換為對應函式樣板參數的類型。 在上述範例中，編譯器會將轉換`char j`輸入`int`。  
+ 明確指定樣板引數時，一般會完成隱含轉換，以便將函式引數轉換為對應函式樣板參數的類型。 在上述範例中，編譯器會將轉換`char j`鍵入**int**。  
   
 ## <a name="see-also"></a>另請參閱  
  [範本](../cpp/templates-cpp.md)   

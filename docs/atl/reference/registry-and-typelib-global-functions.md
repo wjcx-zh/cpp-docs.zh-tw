@@ -1,5 +1,5 @@
 ---
-title: 登錄和 TypeLib 全域函式 |Microsoft 文件
+title: 登錄和 TypeLib 全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84328c35ceb9a4cf2631f27e9f860a1f60e33c55
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365503"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885411"
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
-這些函式提供載入及註冊類型程式庫支援。  
+這些函式會提供載入及註冊類型程式庫的支援。  
   
 > [!IMPORTANT]
 >  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
@@ -47,25 +47,25 @@ ms.locfileid: "32365503"
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|註冊預覽處理常式的協助程式。|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| 用來取消註冊預覽處理常式的協助程式。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|呼叫此函式可註冊類型程式庫。|  
-|[AtlUnRegisterTypeLib](#atlunregistertypelib)|若要取消註冊類型程式庫會呼叫此函式|  
+|[AtlUnRegisterTypeLib](#atlunregistertypelib)|若要取消註冊類型程式庫呼叫此函式|  
 |[AfxRegOpenKey](#afxregopenkey)|開啟指定的登錄機碼。|
 |[AfxRegOpenKeyEx](#afxregopenkeyex)|開啟指定的登錄機碼。|
 |[AtlLoadTypeLib](#atlloadtypelib)|呼叫此函式可載入類型程式庫。|  
 |[AtlUpdateRegistryFromResourceD](#atlupdateregistryfromresourced)|呼叫此函式可更新所提供資源的登錄。|  
 |[RegistryDataExchange](#registrydataexchange)|呼叫此函式可對系統登錄執行讀取或寫入。 由呼叫[登錄資料交換巨集](../../atl/reference/registry-data-exchange-macros.md)。|  
   
- 這些函式會控制哪些程式會使用將資訊儲存在登錄中的節點。  
+ 這些函式會控制哪一個程式用來存放資訊的登錄中的節點。  
   
 |||  
 |-|-|  
-|[AtlGetPerUserRegistration](#atlgetperuserregistration)|擷取應用程式將登錄存取重新導向是否**HKEY_CURRENT_USER** ( **HKCU**) 節點。|  
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|設定應用程式將登錄存取重新導向是否**HKEY_CURRENT_USER** ( **HKCU**) 節點。|  
+|[AtlGetPerUserRegistration](#atlgetperuserregistration)|擷取應用程式重新導向登錄存取權是否**HKEY_CURRENT_USER** ( **HKCU**) 節點。|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|設定應用程式重新導向登錄存取權是否**HKEY_CURRENT_USER** ( **HKCU**) 節點。|  
 
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
 ## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
-使用此函數來判斷應用程式是否將登錄存取重新導向**HKEY_CURRENT_USER** (**HKCU**) 節點。  
+使用此函式來判斷應用程式是否將登錄存取重新導向**HKEY_CURRENT_USER** (**HKCU**) 節點。  
   
 ### <a name="syntax"></a>語法  
   
@@ -74,16 +74,16 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `pEnabled`  
- `TRUE` 指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
+ [out]*pEnabled*  
+ TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功，否則`HRESULT`如果發生錯誤的錯誤碼。  
+ 如果方法成功 s_ok 時，否則 HRESULT 錯誤的程式碼發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取**HKEY_CURRENT_USER\Software\Classes**。  
+ 預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取權**HKEY_CURRENT_USER\Software\Classes**。  
   
- 重新導向不是全域的。 僅適用的 MFC 和 ATL 架構會受到登錄重新導向。  
+ 重新導向不是全域的。 只有 MFC 和 ATL 架構會受到此登錄重新導向。  
   
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
@@ -98,20 +98,20 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ```  
   
 ### <a name="parameters"></a>參數  
- `hKey`  
+ *hKey*  
  開啟登錄機碼的控制代碼。  
   
- `lpSubKey`  
- 此函式會開啟或建立索引鍵名稱。  
+ *lpSubKey*  
+ 此函式會開啟或建立的索引鍵名稱。  
   
- `phkResult`  
- 此變數會接收到已開啟或建立機碼的控制代碼指標。  
+ *phkResult*  
+ 收到的開啟或建立金鑰的控制代碼變數的指標。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值會是 Winerror.h 中定義的非零的錯誤代碼。  
+ 如果此函數成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回的值就會為 Winerror.h 中定義的非零的錯誤碼。  
 
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
@@ -126,17 +126,17 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 ```  
   
 ### <a name="parameters"></a>參數  
- `hKey`  
+ *hKey*  
  開啟登錄機碼的控制代碼。  
   
- `lpSubKey`  
- 要刪除之索引鍵名稱。  
+ *lpSubKey*  
+ 要刪除的金鑰名稱。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值會是 Winerror.h 中定義的非零的錯誤代碼。  
+ 如果此函數成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回的值就會為 Winerror.h 中定義的非零的錯誤碼。  
   
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
@@ -151,13 +151,13 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszCLSID`  
+ *lpszCLSID*  
  指定處理常式的 CLSID。  
   
- `lpszShortTypeName`  
+ *lpszShortTypeName*  
  指定處理常式的 ProgID。  
   
- `lpszFilterExt`  
+ *lpszFilterExt*  
  指定已向此處理常式註冊的副檔名。  
   
 ### <a name="requirements"></a>需求  
@@ -172,17 +172,17 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hInstTypeLib`  
+ *hInstTypeLib*  
  模組執行個體控制代碼。  
   
- `lpszIndex`  
- 格式字串"\\\N"，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。  
+ *lpszIndex*  
+ 格式字串"\\\N 」，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個 helper 函式使用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)和[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
+ 此協助程式函式會利用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)並[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
@@ -196,20 +196,20 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ```  
   
 ### <a name="parameters"></a>參數  
- `hKey`  
+ *hKey*  
  開啟登錄機碼的控制代碼。  
   
- `lpSubKey`  
- 此函式會開啟或建立索引鍵名稱。  
+ *lpSubKey*  
+ 此函式會開啟或建立的索引鍵名稱。  
   
- `phkResult`  
- 收到建立的機碼的控制代碼變數的指標。  
+ *phkResult*  
+ 收到建立的索引鍵的控制代碼變數的指標。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值會是 Winerror.h 中定義的非零的錯誤代碼。  
+ 如果此函數成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回的值就會為 Winerror.h 中定義的非零的錯誤碼。  
   
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
@@ -224,26 +224,26 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ```  
   
 ### <a name="parameters"></a>參數  
- `hKey`  
+ *hKey*  
  開啟登錄機碼的控制代碼。  
   
- `lpSubKey`  
- 此函式會開啟或建立索引鍵名稱。  
+ *lpSubKey*  
+ 此函式會開啟或建立的索引鍵名稱。  
   
- `ulOptions`  
- 這個參數已保留，而且必須是零。  
+ *ulOptions*  
+ 這個參數已保留，而且必須為零。  
   
- `samDesired`  
+ *samDesired*  
  遮罩，指定索引鍵的所需的存取權限。  
   
- `phkResult`  
- 此變數會接收已開啟的索引鍵的控制代碼指標。  
+ *phkResult*  
+ 此變數會接收開啟金鑰的控制代碼指標。  
   
- `pTM`  
+ *pTM*  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值會是 Winerror.h 中定義的非零的錯誤代碼。  
+ 如果此函數成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回的值就會為 Winerror.h 中定義的非零的錯誤碼。  
   
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
@@ -258,14 +258,14 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszCLSID`  
+ *lpszCLSID*  
  指定要取消註冊之處理常式的 CLSID。  
   
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
-設定應用程式將登錄存取重新導向是否**HKEY_CURRENT_USER** (**HKCU**) 節點。  
+設定應用程式重新導向登錄存取權是否**HKEY_CURRENT_USER** (**HKCU**) 節點。  
   
 ### <a name="syntax"></a>語法  
   
@@ -274,16 +274,16 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
- `TRUE` 指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
+ [in]*bEnable*  
+ TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK` 如果方法成功，否則`HRESULT`如果發生錯誤的錯誤碼。  
+ 如果方法成功 s_ok 時，否則 HRESULT 錯誤的程式碼發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取**HKEY_CURRENT_USER\Software\Classes**。  
+ 預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取權**HKEY_CURRENT_USER\Software\Classes**。  
   
- 重新導向不是全域的。 僅適用的 MFC 和 ATL 架構會受到登錄重新導向。  
+ 重新導向不是全域的。 只有 MFC 和 ATL 架構會受到此登錄重新導向。  
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
 
@@ -298,17 +298,17 @@ ATLAPI AtlUnRegisterTypeLib(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hInstTypeLib`  
+ *hInstTypeLib*  
  模組執行個體控制代碼。  
   
- `lpszIndex`  
- 格式字串"\\\N"，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。  
+ *lpszIndex*  
+ 格式字串"\\\N 」，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個 helper 函式使用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)和[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
+ 此協助程式函式會利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)並[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
@@ -325,23 +325,23 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hInstTypeLib`  
- 類型程式庫相關聯的模組的控制代碼。  
+ *hInstTypeLib*  
+ 型別程式庫相關聯的模組的控制代碼。  
   
- `lpszIndex`  
- 格式字串"\\\N"，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。  
+ *lpszIndex*  
+ 格式字串"\\\N 」，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。  
   
  *pbstrPath*  
- 在成功傳回時，包含型別程式庫相關聯的模組的完整路徑。  
+ 在成功傳回時，包含與型別程式庫相關聯的模組的完整路徑。  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  在成功傳回時，包含要載入的型別程式庫指標的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個 helper 函式使用[AtlRegisterTypeLib](#atlregistertypelib)和[AtlUnRegisterTypeLib](#atlunregistertypelib)。  
+ 此協助程式函式會利用[AtlRegisterTypeLib](#atlregistertypelib)並[AtlUnRegisterTypeLib](#atlunregistertypelib)。  
   
 ##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  此函式在 Visual Studio 2013 中已被取代並在 Visual Studio 2015 中移除。  
@@ -364,28 +364,28 @@ HRESULT RegistryDataExchange(
 ```  
   
 ### <a name="parameters"></a>參數  
- *pT*  
+ *太平洋時間*  
  目前物件的指標。  
   
  *rdxOp*  
- 列舉值，指出哪一項作業應該執行此函式。 請參閱 < 備註 > 一節的允許值的資料表。  
+ 列舉值，指出哪一個作業應該執行的函式。 請參閱 < 備註 > 一節針對允許的值。  
   
- `pItem`  
+ *pItem*  
  要讀取或寫入登錄的資料指標。 資料也可以代表要刪除的登錄機碼。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 巨集[BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map)和[END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map)呼叫的函式展開`RegistryDataExchange`。  
+ 巨集會[BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map)並[END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map)呼叫的函式展開`RegistryDataExchange`。  
   
- 可能的列舉值，指出應執行作業的函式是下表所示：  
+ 下表會顯示可能的列舉值，指出應執行作業的函式：  
   
 |列舉值|運算|  
 |----------------|---------------|  
 |eReadFromReg|從登錄讀取資料。|  
-|eWriteToReg|資料寫入登錄。|  
-|eDeleteFromReg|從登錄刪除機碼。|  
+|eWriteToReg|將資料寫入至登錄。|  
+|eDeleteFromReg|從登錄中刪除金鑰。|  
   
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h

@@ -1,5 +1,5 @@
 ---
-title: while 陳述式 （c + +） |Microsoft 文件
+title: while 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942700"
 ---
 # <a name="while-statement-c"></a>while 陳述式 (C++)
-執行*陳述式*重複直到*運算式*判斷值為零。  
+執行*陳述式*之前重複*運算式*評估為零。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>備註  
- 測試*運算式*將之前每次執行迴圈; 因此，`while`迴圈會執行零次以上。 *運算式*必須是整數類型、 指標類型，或類別類型，可明確轉換為整數或指標類型。  
+ 測試*運算式*迴圈; 每次執行之前將因此**雖然**迴圈會執行零次以上。 *運算式*必須是整數類資料類型、 指標類型，或類別類型，可明確轉換為整數或指標類型。  
   
- A`while`迴圈可以也會終止時[中斷](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[傳回](../cpp/return-statement-cpp.md)主體就會執行的陳述式中。 使用[繼續](../cpp/continue-statement-cpp.md)終止目前的反覆項目，但不結束`while`迴圈。 **繼續**將控制項傳遞至下一個反覆運算`while`迴圈。  
+ A**雖然**迴圈也可能終止時[中斷](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[傳回](../cpp/return-statement-cpp.md)陳述式內執行主體。 使用[繼續](../cpp/continue-statement-cpp.md)終止目前的反覆項目，而不結束**雖然**迴圈。 **繼續**會將控制項傳遞到下一個反覆運算**雖然**迴圈。  
   
- 下列程式碼使用 `while` 迴圈修剪字串中的結尾底線：  
+ 下列程式碼會使用**雖然**迴圈修剪尾端底線從字串：  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

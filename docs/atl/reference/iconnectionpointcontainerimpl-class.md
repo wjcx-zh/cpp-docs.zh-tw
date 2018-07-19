@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl 類別 |Microsoft 文件
+title: IConnectionPointContainerImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af5e8b1bc1af0a515cc8fad0500c3f7d040b1eb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d70989be8e8535336c831cb59fb9422c6e2c63e0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361166"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886228"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl 類別
-這個類別會實作用於管理集合的連接點容器[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件。  
+這個類別會實作連接點容器來管理集合[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IConnectionPointContainerImpl`。  
   
 ## <a name="members"></a>成員  
@@ -49,17 +49,17 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|建立列舉值逐一查看支援可連接物件的連接點。|  
+|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|建立列舉值以逐一查看支援可連接物件的連接點。|  
 |[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|擷取支援指定的 IID 的連接點的介面指標。|  
   
 ## <a name="remarks"></a>備註  
- `IConnectionPointContainerImpl` 實作連接點容器管理集合的[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件。 `IConnectionPointContainerImpl` 提供兩種用戶端可以呼叫以擷取可連接物件的相關資訊：  
+ `IConnectionPointContainerImpl` 實作連接點容器來管理集合[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)物件。 `IConnectionPointContainerImpl` 提供用戶端可以呼叫以擷取可連接物件的相關資訊的兩種：  
   
-- `EnumConnectionPoints` 可讓用戶端決定哪些傳出介面物件支援。  
+- `EnumConnectionPoints` 允許用戶端，以判斷哪一個連出介面物件支援。  
   
-- `FindConnectionPoint` 可讓用戶端決定物件是否支援特定的輸出介面。  
+- `FindConnectionPoint` 允許用戶端，以判斷物件是否支援特定的輸出介面。  
   
- ATL 中使用的連接點相關資訊，請參閱文章[連接點](../../atl/atl-connection-points.md)。  
+ 如需使用 ATL 中的連接點的資訊，請參閱文章[連接點](../../atl/atl-connection-points.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IConnectionPointContainer`  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
  **標頭：** atlcom.h  
   
 ##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints  
- 建立列舉值逐一查看支援可連接物件的連接點。  
+ 建立列舉值以逐一查看支援可連接物件的連接點。  
   
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);

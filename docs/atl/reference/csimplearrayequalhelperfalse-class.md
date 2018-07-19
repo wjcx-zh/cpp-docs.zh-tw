@@ -1,5 +1,5 @@
 ---
-title: CSimpleArrayEqualHelperFalse 類別 |Microsoft 文件
+title: CSimpleArrayEqualHelperFalse 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e22d67634f29b60bdc983c892c5fe266df61d08
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a325da2edd4af8b8b0e6e965dc60df8c11bf8d30
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358197"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882854"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse 類別
 這個類別是 helper [CSimpleArray](../../atl/reference/csimplearray-class.md)類別。  
@@ -36,7 +36,7 @@ class CSimpleArrayEqualHelperFalse
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  在衍生的類別中。  
   
 ## <a name="members"></a>成員  
@@ -45,10 +45,10 @@ class CSimpleArrayEqualHelperFalse
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|（靜態）傳回 false。|  
+|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|（靜態）會傳回 false。|  
   
 ## <a name="remarks"></a>備註  
- 這個特性類別是一個補充`CSimpleArray`類別。 It 一律傳回 false，並另外，將會呼叫`ATLASSERT`false 曾經正在參考它的引數。 在等號比較測試未充分定義所在的情況下，這個類別可讓陣列，其中包含大部分方法正確運作，但以妥善定義的方式，例如視比較的方法失敗的項目[CSimpleArray::尋找](../../atl/reference/csimplearray-class.md#find)。  
+ 此特性類別是一個補充`CSimpleArray`類別。 It 一律傳回 false，並另外，會呼叫`ATLASSERT`是 false，如果曾被參考的引數。 在等號比較測試不充分定義所在的情況下，這個類別可讓陣列，其中包含大部分方法的正確運作，但在定義完善的方式，例如取決於比較的方法中失敗的項目[CSimpleArray::尋找](../../atl/reference/csimplearray-class.md#find)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsimpcoll.h  
@@ -64,7 +64,7 @@ static bool IsEqual(const T&, const T&);
  傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 這個方法一律會傳回 false，並將呼叫`ATLASSERT`是 false，如果參考的引數。 目的`CSimpleArrayEqualHelperFalse::IsEqual`是強制方法使用的比較時沒有充分定義等號比較測試，以妥善定義的方式失敗。  
+ 這個方法一律會傳回 false，而且會呼叫`ATLASSERT`使用引數參考為 false。 目的`CSimpleArrayEqualHelperFalse::IsEqual`是強制方法使用時有充分定義等號比較測試，以定義完善的方式失敗的比較。  
   
 ## <a name="see-also"></a>另請參閱  
  [CSimpleArrayEqualHelper 類別](../../atl/reference/csimplearrayequalhelper-class.md)   

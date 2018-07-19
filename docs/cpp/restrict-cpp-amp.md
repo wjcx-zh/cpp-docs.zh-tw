@@ -1,5 +1,5 @@
 ---
-title: 限制 (c + + AMP) |Microsoft 文件
+title: 限制 (c + + AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe3bd4f737cfb26a326a1f0d83b731c36e6c7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942924"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 限制規範可以套用到函式和 Lambda 宣告。 它會在函式中的程式碼上強制執行限制，以及在使用 C++ Accelerated Massive Parallelism (C++ AMP) 的應用程式中函式的行為上強制執行限制。  
   
 > [!NOTE]
->  如需有關資訊`restrict`關鍵字屬於`__declspec`儲存類別屬性，請參閱[限制](../cpp/restrict.md)。  
+>  如需**限制**屬於關鍵字 **__declspec**儲存類別屬性，請參閱[限制](../cpp/restrict.md)。  
   
- `restrict` 子句的格式如下：  
+ **限制**子句的格式如下：  
   
 |子句|描述|  
 |------------|-----------------|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 |`restrict(cpu)` 和 `restrict(amp)` 的序列。|函式必須同時符合 `restrict(cpu)` 和 `restrict(amp)` 的限制。 函式可由使用 `restrict(cpu)`、`restrict(amp)`、`restrict(cpu, amp)` 或 `restrict(amp, cpu)` 宣告的函式呼叫。<br /><br /> `restrict(A) restrict(B)` 格式可以撰寫為 `restrict(A,B)`。|  
   
 ## <a name="remarks"></a>備註  
- `restrict` 關鍵字是內容關鍵字。 限制規範、`cpu` 和 `amp` 不是保留字。 規範的清單無法擴充。 未內含 `restrict` 子句的函式與內含 `restrict(cpu)` 子句的函式。  
+ **限制**關鍵字是內容關鍵字。 限制規範、`cpu` 和 `amp` 不是保留字。 規範的清單無法擴充。 函式沒有**限制**子句是函式具有相同`restrict(cpu)`子句。  
   
  內含 `restrict(amp)` 子句的函式具有下列限制：  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
 -   函式必須為可內嵌。  
   
--   函式可以只宣告 `int`、`unsigned int`、`float` 和 `double` 變數，以及只內含這些類型的類別和結構。 如果是在複合類型中使用，則也可以使用 `bool`，不過必須對齊 4 位元組。  
+-   函式只可以宣告**int**，**不帶正負號的 int**， **float**，並**double**變數和類別和結構，其中只包含這些型別。 **bool**也允許，但它必須是 4 位元組對齊若複合類型中使用它。  
   
 -   Lambda 函式無法透過參考方式擷取，也無法擷取指標。  
   
@@ -68,30 +69,30 @@ ms.lasthandoff: 05/03/2018
   
     -   指標的指標。  
   
-    -   `goto` 陳述式。  
+    -   **goto**陳述式。  
   
     -   標記陳述式。  
   
-    -   `try`、`catch` 或 `throw` 陳述式。  
+    -   **請嘗試**，**攔截**，或**擲回**陳述式。  
   
     -   全域變數。  
   
-    -   靜態變數。 使用[tile_static 關鍵字](../cpp/tile-static-keyword.md)改為。  
+    -   靜態變數。 使用[tile_static 關鍵字](../cpp/tile-static-keyword.md)改。  
   
-    -   `dynamic_cast` 轉換。  
+    -   **dynamic_cast**轉換 （cast)。  
   
-    -   `typeid` 運算子。  
+    -   **Typeid**運算子。  
   
     -   asm 宣告。  
   
     -   Varargs。  
   
- 如需函式限制的討論，請參閱[restrict （amp) 限制](http://go.microsoft.com/fwlink/p/?LinkId=251089)。  
+ 如需函式限制的討論，請參閱 < [restrict （amp) 限制](http://go.microsoft.com/fwlink/p/?LinkId=251089)。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用`restrict(amp)`子句。  
   
-```  
+```cpp 
   
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   

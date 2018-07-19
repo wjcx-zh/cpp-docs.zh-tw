@@ -1,5 +1,5 @@
 ---
-title: CPoint 類別 |Microsoft 文件
+title: CPoint 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365389"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880087"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 類似於 Windows `POINT` 結構。  
@@ -49,29 +49,29 @@ class CPoint : public tagPOINT
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPoint::Offset](#offset)|將值加入到**x**和**y**成員`CPoint`。|  
+|[CPoint::Offset](#offset)|將值加入至`x`並`y`的成員`CPoint`。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPoint::operator-](#operator_-)|傳回的差異`CPoint`和大小或一個點或兩個點或位移的負值大小的大小差異的否定。|  
-|[CPoint::operator ！ =](#operator_neq)|檢查兩個點之間不相等。|  
-|[CPoint::operator +](#operator_add)|傳回的總和`CPoint`和大小或點，或`CRect`位移的大小。|  
-|[CPoint::operator + =](#operator_add_eq)|位移`CPoint`加入大小或點。|  
+|[CPoint::operator-](#operator_-)|傳回的差異`CPoint`和大小或一個點，或兩個點或以負值大小的位移大小差異的負值。|  
+|[CPoint::operator ！ =](#operator_neq)|檢查兩個點之間的不等比較。|  
+|[CPoint::operator +](#operator_add)|傳回的總和`CPoint`和大小或點，或`CRect`位移大小。|  
+|[CPoint::operator + =](#operator_add_eq)|位移`CPoint`加上大小或點。|  
 |[CPoint::operator =](#operator_-_eq)|位移`CPoint`減去大小或點。|  
 |[CPoint::operator = =](#operator_eq_eq)|檢查兩個點之間相等。|  
   
 ## <a name="remarks"></a>備註  
- 它也包含成員函式來管理`CPoint`和[點](../../mfc/reference/point-structure1.md)結構。  
+ 它也包含成員函式來操作`CPoint`並[點](../../mfc/reference/point-structure1.md)結構。  
   
- A`CPoint`物件可以使用的地方`POINT`使用結構。 這個類別的 「 大小 」 進行互動的運算子都接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，因為這兩個可以互換。  
-  
-> [!NOTE]
->  這個類別衍生自`tagPOINT`結構。 (名稱`tagPOINT`是較不常使用的名稱`POINT`結構。)這表示的資料成員`POINT`結構`x`和`y`，可存取的資料成員的`CPoint`。  
+ A`CPoint`物件可以是任一處使用`POINT`使用結構。 這個類別的 「 大小 」 進行互動的運算子都接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，因為這兩個是可互換。  
   
 > [!NOTE]
->  如需有關共用 公用程式類別 (例如`CPoint`)，請參閱[共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。  
+>  此類別衍生自`tagPOINT`結構。 (名稱`tagPOINT`是較不常使用的名稱`POINT`結構。)這表示的資料成員`POINT`結構`x`並`y`，可存取的資料成員的`CPoint`。  
+  
+> [!NOTE]
+>  如需有關共用 公用程式類別 (例如`CPoint`)，請參閱 <<c2> [ 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `tagPOINT`  
@@ -93,20 +93,20 @@ CPoint(LPARAM dwPoint) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `initX`  
+ *initX*  
  指定 `x` 之 `CPoint` 成員的值。  
   
- `initY`  
+ *initY*  
  指定 `y` 之 `CPoint` 成員的值。  
   
- `initPt`  
- [點](../../mfc/reference/point-structure1.md)結構或`CPoint`指定值，用來初始化`CPoint`。  
+ *initPt*  
+ [點](../../mfc/reference/point-structure1.md)結構或`CPoint`，指定用來初始化值`CPoint`。  
   
- `initSize`  
- [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)指定值，用來初始化`CPoint`。  
+ *initSize*  
+ [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用來初始化值`CPoint`。  
   
- `dwPoint`  
- 將 `x` 成員設定為 `dwPoint` 的低階層文字，並將 `y` 成員設定為 `dwPoint` 的高階層文字。  
+ *dwPoint*  
+ 設定組`x`的低序位字組的成員*dwPoint*並`y`高序位字組的成員*dwPoint*。  
   
 ### <a name="remarks"></a>備註  
  如果未提供引數，`x` 和 `y` 成員都會設定為 0。  
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
 ##  <a name="offset"></a>  CPoint::Offset  
- 將值加入到**x**和**y**成員`CPoint`。  
+ 將值加入至`x`並`y`的成員`CPoint`。  
   
 ```  
 void Offset(int xOffset, int yOffset) throw();
@@ -149,16 +149,16 @@ void Offset(SIZE size) throw();
   
 ### <a name="parameters"></a>參數  
  *xOffset*  
- 指定的位移數量**x**隸屬`CPoint`。  
+ 指定的位移數量`x`隸屬`CPoint`。  
   
  *yOffset*  
- 指定的位移數量**y**隸屬`CPoint`。  
+ 指定的位移數量`y`隸屬`CPoint`。  
   
- `point`  
- 指定數量 ([點](../../mfc/reference/point-structure1.md)或`CPoint`) 位移`CPoint`。  
+ *點*  
+ 指定的數量 ([點](../../mfc/reference/point-structure1.md)或是`CPoint`) 位移`CPoint`。  
   
- `size`  
- 指定數量 ([大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或[CSize](../../atl-mfc-shared/reference/csize-class.md)) 位移`CPoint`。  
+ *size*  
+ 指定的數量 ([大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](../../atl-mfc-shared/reference/csize-class.md)) 位移`CPoint`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
@@ -171,34 +171,34 @@ BOOL operator==(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件。  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，點是否相等。否則便是 0。  
+ 非零的點是否相等;否則為 0。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
 ##  <a name="operator_neq"></a>  CPoint::operator ！ =  
- 檢查兩個點之間不相等。  
+ 檢查兩個點之間的不等比較。  
   
 ```  
 BOOL operator!=(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件。  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果點不相等。否則便是 0。  
+ 點是否不相等; 如果為非零否則為 0。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CPoint::operator + =  
- 第一個多載加入大小`CPoint`。  
+ 第一個多載會加入至大小`CPoint`。  
   
 ```  
 void operator+=(SIZE size) throw(); 
@@ -206,24 +206,24 @@ void operator+=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
- `point`  
+ *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- 第二個多載加入至點`CPoint`。  
+ 第二個多載會加入指向`CPoint`。  
   
- 在這兩種情況下，加法是藉由新增**x** (或**cx**) 成員的右運算元的**x**隸屬`CPoint`並加入**y** (或**cy**) 成員的右運算元**y**隸屬`CPoint`。  
+ 在這兩種情況下，新增會藉由新增`x`(或`cx`) 成員的右運算元`x`隸屬`CPoint`並新增`y`(或`cy`) 的右運算元的成員`y`隸屬`CPoint`。  
   
- 例如，加入`CPoint(5, -7)`給變數，其中包含`CPoint(30, 40)`變更的變數`CPoint(35, 33)`。  
+ 例如，新增`CPoint(5, -7)`，其中包含此變數`CPoint(30, 40)`變更變數`CPoint(35, 33)`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
 ##  <a name="operator_-_eq"></a>  CPoint::operator =  
- 第一個多載減去大小，以從`CPoint`。  
+ 第一個多載減去大小`CPoint`。  
   
 ```  
 void operator-=(SIZE size) throw(); 
@@ -231,24 +231,24 @@ void operator-=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
- `point`  
+ *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- 第二個多載減去點從`CPoint`。  
+ 第二個多載減去的點`CPoint`。  
   
- 在這兩種情況下，減法由減去**x** (或**cx**) 成員從右方運算元的**x**隸屬`CPoint`減去**y** (或**cy**) 成員的右運算元**y**隸屬`CPoint`。  
+ 在這兩種情況下，用減法，是藉由減去`x`(或`cx`) 成員的右運算元`x`的成員`CPoint`然後減去`y`(或`cy`) 的右手邊的成員從運算元`y`隸屬`CPoint`。  
   
- 例如，減去`CPoint(5, -7)`的變數，其中包含從`CPoint(30, 40)`變更的變數`CPoint(25, 47)`。  
+ 比方說，減去`CPoint(5, -7)`變數，其中包含來自`CPoint(30, 40)`變更變數`CPoint(25, 47)`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>  CPoint::operator +  
- 使用此運算子来位移`CPoint`由`CPoint`或`CSize`物件，或位移`CRect`由`CPoint`。  
+ 使用這個運算子來位移`CPoint`所`CPoint`或`CSize`物件，或位移`CRect`由`CPoint`。  
   
 ```  
 CPoint operator+(SIZE size) const throw();
@@ -257,28 +257,28 @@ CRect operator+(const RECT* lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
- `point`  
+ *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
   
- `lpRect`  
+ *lpRect*  
  包含的指標[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
- A`CPoint`大小，可經由**CPoint**點，可經由或**CRect**依點位移。  
+ A`CPoint`大小，位移`CPoint`的位移點，或`CRect`點位移。  
   
 ### <a name="remarks"></a>備註  
- 比方說，使用其中一種前兩個多載，來彌補點`CPoint(25, -19)`點`CPoint(15, 5)`或大小`CSize(15, 5)`傳回的值`CPoint(40, -14)`。  
+ 例如，使用前兩個多載的其中一個位移點`CPoint(25, -19)`原點`CPoint(15, 5)`] 或 [大小`CSize(15, 5)`傳回的值`CPoint(40, -14)`。  
   
- 將矩形加入至某個點之後所要位移傳回的矩形**x**和**y**指定點中的值。 例如，使用最後一個多載，來彌補矩形`CRect(125, 219, 325, 419)`點`CPoint(25, -19)`傳回`CRect(150, 200, 350, 400)`。  
+ 將矩形加入至某個點之後要位移傳回周框`x`和`y`點中指定的值。 例如，使用最後一個多載位移的矩形`CRect(125, 219, 325, 419)`原點`CPoint(25, -19)`傳回`CRect(150, 200, 350, 400)`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
 ##  <a name="operator_-"></a>  CPoint::operator-  
- 使用其中一種前兩個多載減去`CPoint`或`CSize`物件從`CPoint`。  
+ 使用其中一種的前兩個多載減法`CPoint`或是`CSize`物件從`CPoint`。  
   
 ```  
 CSize operator-(POINT point) const throw();
@@ -288,28 +288,28 @@ CPoint operator-() const throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  A[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
   
- `size`  
+ *size*  
  A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
- `lpRect`  
+ *lpRect*  
  指標[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`也就是兩個點之間的差異`CPoint`否定的大小，可經由`CRect`否定點的位移或`CPoint`也就是一個點的否定運算。  
+ A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位移的資料點，否定或`CPoint`也就是一個點的否定運算。  
   
 ### <a name="remarks"></a>備註  
- 第三個多載位移`CRect`由否定`CPoint`。 最後，使用要變換正負號的一元運算子`CPoint`。  
+ 第三個多載位移`CRect`的否定`CPoint`。 最後，使用要變換正負號的一元運算子`CPoint`。  
   
- 例如，使用第一個多載來尋找兩個點之間的差異`CPoint(25, -19)`和`CPoint(15, 5)`傳回`CSize(10, -24)`。  
+ 例如，使用第一個多載，來尋找兩個點之間的差異`CPoint(25, -19)`並`CPoint(15, 5)`傳回`CSize(10, -24)`。  
   
- 減去`CSize`從`CPoint`並未與上述相同的計算，但傳回`CPoint`物件，不`CSize`物件。 例如，使用第二個多載來尋找點之間的差異`CPoint(25, -19)`和大小`CSize(15, 5)`傳回`CPoint(10, -24)`。  
+ 減去`CSize`從`CPoint`並未與上述相同的計算，但會傳回`CPoint`物件，不`CSize`物件。 例如，若要尋找的點之間的差異使用第二個多載`CPoint(25, -19)`和大小`CSize(15, 5)`傳回`CPoint(10, -24)`。  
   
- 減去從某個點的矩形的否定傳回矩形位移**x**和**y**指定點中的值。 例如，使用最後一個多載，來彌補矩形`CRect(125, 200, 325, 400)`點`CPoint(25, -19)`傳回`CRect(100, 219, 300, 419)`。  
+ 減去一個矩形從點傳回的矩形位移的否定`x`和`y`點中指定的值。 例如，使用最後一個多載位移的矩形`CRect(125, 200, 325, 400)`點`CPoint(25, -19)`傳回`CRect(100, 219, 300, 419)`。  
   
- 要變換正負號的點使用一元運算子。 例如，使用一元運算子與點`CPoint(25, -19)`傳回`CPoint(-25, 19)`。  
+ 要變換正負號的點使用一元運算子。 例如，使用與點的一元運算子`CPoint(25, -19)`傳回`CPoint(-25, 19)`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  

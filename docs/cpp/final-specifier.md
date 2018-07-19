@@ -1,5 +1,5 @@
 ---
-title: final 規範 |Microsoft 文件
+title: final 規範 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942639"
 ---
 # <a name="final-specifier"></a>final 規範
-您可以使用 `final` 關鍵字指定無法在衍生類別中覆寫的虛擬函式。 您也可以用它來指定無法被繼承的類別。  
+您可以使用**最終**關鍵字指定無法在衍生類別中覆寫虛擬函式。 您也可以用它來指定無法被繼承的類別。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>備註  
- `final` 具有內容相關性，而且只有在函式宣告或類別名稱之後使用時才具有特殊意義，否則它不是保留的關鍵字。  
+ **最終**具備內容相關性，有特殊意義，只有當它用函式宣告之後，或類別名稱; 否則它不是保留的關鍵字。  
   
- 當 `final` 用於類別宣告時，`base-classes` 是宣告中的選擇性部分。  
+ 當**最終**會在類別宣告`base-classes`屬於選擇性宣告。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `final` 關鍵字來指定無法覆寫的虛擬函式。  
+ 下列範例會使用**最終**關鍵字來指定無法覆寫虛擬函式。  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- 如需如何指定可覆寫成員函式的資訊，請參閱[覆寫規範](../cpp/override-specifier.md)。  
+ 如需有關如何指定可以覆寫成員函式的資訊，請參閱[覆寫規範](../cpp/override-specifier.md)。  
   
- 下一個範例會使用 `final` 關鍵字來指定無法被繼承的類別。  
+ 下一個範例會使用**最終**關鍵字來指定類別無法被繼承。  
   
 ```cpp  
 class BaseClass final   

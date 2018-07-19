@@ -1,5 +1,5 @@
 ---
-title: CSacl 類別 |Microsoft 文件
+title: CSacl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363580"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879947"
 ---
 # <a name="csacl-class"></a>CSacl 類別
 這個類別是 SACL （系統存取控制清單） 結構的包裝函式。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,9 +54,9 @@ class CSacl : public CAcl
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CSacl::AddAuditAce](#addauditace)|將稽核存取控制項目 (ACE) 加入至`CSacl`物件。|  
-|[CSacl::GetAceCount](#getacecount)|傳回中的存取控制項目 (Ace) 數目`CSacl`物件。|  
-|[CSacl::RemoveAce](#removeace)|移除特定的 ACE （存取控制的項目） **CSacl**物件。|  
+|[CSacl::AddAuditAce](#addauditace)|將稽核的存取控制項目 (ACE) 加入至`CSacl`物件。|  
+|[CSacl::GetAceCount](#getacecount)|在傳回的存取控制項目 (Ace) 數目`CSacl`物件。|  
+|[CSacl::RemoveAce](#removeace)|移除特定的 ACE （存取控制項目）`CSacl`物件。|  
 |[CSacl::RemoveAllAces](#removeallaces)|移除所有的 Ace 中包含`CSacl`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
@@ -66,13 +66,13 @@ class CSacl : public CAcl
 |[CSacl::operator =](#operator_eq)|指派運算子。|  
   
 ## <a name="remarks"></a>備註  
- SACL 包含指定的網域控制站的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 請注意，SACL 會產生記錄項目只嘗試存取發生所在的網域控制站，而非每個網域控制站，其中包含物件的複本。  
+ SACL 包含指定的網域控制站的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 請注意，SACL 會產生記錄項目只在嘗試存取的發生位置的網域控制站上，而不是在每個網域控制站，其中包含物件的複本。  
   
- 若要設定或擷取物件的安全性描述元中 SACL，必須啟用 SE_SECURITY_NAME 權限要求之執行緒的存取權杖中。 系統管理員群組已經依預設，授與此權限，它可以授與給其他使用者或群組。 需要權限授與便不需要的所有： 在執行特殊權限所定義的作業之前，權限必須在啟用安全性的存取權杖才能生效。 此模型可讓權限可以為僅適用於特定的系統作業，然後在不再需要時停用。 請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)啟用 SE_SECURITY_NAME 的範例。  
+ 若要設定或擷取物件的安全性描述元中 SACL，SE_SECURITY_NAME 權限必須能夠存取權杖的要求的執行緒中。 系統管理員群組已經依預設，授與此權限，它可以授與其他使用者或群組。 具有權限授與並不是全部所需： 在執行權限所定義的作業之前，將權限必須啟用安全性的存取權杖中才能生效。 模型可讓您只能針對特定的系統作業，啟用與則停用時不再需要的權限。 請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)並[AtlSetSacl](security-global-functions.md#atlsetsacl)啟用 SE_SECURITY_NAME 的範例。  
   
- 使用要加入、 移除、 建立和刪除 Ace 從提供的類別方法**SACL**物件。 另請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)。  
+ 使用提供給加入、 移除、 建立和刪除從 Ace 類別方法`SACL`物件。 另請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)並[AtlSetSacl](security-global-functions.md#atlsetsacl)。  
   
- 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -83,7 +83,7 @@ class CSacl : public CAcl
  **標頭：** atlsecurity.h  
   
 ##  <a name="addauditace"></a>  CSacl::AddAuditAce  
- 將稽核存取控制項目 (ACE) 加入至`CSacl`物件。  
+ 將稽核的存取控制項目 (ACE) 加入至`CSacl`物件。  
   
 ```
 bool AddAuditAce(
@@ -104,34 +104,34 @@ bool AddAuditAce(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSid`  
+ *rSid*  
  [CSid](../../atl/reference/csid-class.md)物件。  
   
- `AccessMask`  
- 指定要稽核的存取權限的遮罩指定`CSid`物件。  
+ *AccessMask*  
+ 指定要稽核的存取權限遮罩指定`CSid`物件。  
   
- `bSuccess`  
- 指定是否要稽核會允許的存取嘗試次數。 設定此旗標，true 會啟用稽核。否則，將它設定為 false。  
+ *bSuccess*  
+ 指定是否要稽核允許的存取嘗試。 設定此旗標，true 以啟用稽核;否則，請將它設定為 false。  
   
  *bFailure*  
- 指定是否要稽核會拒絕的存取嘗試次數。 設定此旗標，true 會啟用稽核。否則，將它設定為 false。  
+ 指定是否要稽核拒絕的存取嘗試。 設定此旗標，true 以啟用稽核;否則，請將它設定為 false。  
   
- `AceFlags`  
+ *AceFlags*  
  一組控制 ACE 繼承的位元旗標。  
   
- `pObjectType`  
+ *pObjectType*  
  物件類型。  
   
- `pInheritedObjectType`  
- 繼承的物件類型。  
+ *pInheritedObjectType*  
+ 繼承的物件型別。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**如果 ACE 新增至`CSacl`物件**false**失敗。  
+ 會傳回 TRUE，如果 ACE 新增至`CSacl`物件，FALSE 失敗。  
   
 ### <a name="remarks"></a>備註  
- A`CSacl`物件包含指定的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 這個方法會加入至這類 ACE`CSacl`物件。  
+ A`CSacl`物件包含指定的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 此方法會將這類 ACE 以`CSacl`物件。  
   
- 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
+ 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)如需可以在中設定各種旗標的說明*AceFlags*參數。  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  建構函式。  
@@ -142,11 +142,11 @@ CSacl(const ACL& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rhs`  
- 現有**ACL** （存取控制清單） 結構。  
+ *rhs*  
+ 將現有`ACL`（存取控制清單） 結構。  
   
 ### <a name="remarks"></a>備註  
- `CSacl`物件可以選擇性地建立使用現有**ACL**結構。 確定此參數是系統存取控制清單 (SACL) 並不是判別存取控制清單 (DACL)。 在偵錯組建中，如果未提供 DACL，則會發生判斷提示。 在發行組建會忽略來自 DACL 的任何項目。  
+ `CSacl`物件可以選擇性地建立使用現有`ACL`結構。 請確定這個參數是系統存取控制清單 (SACL) 和非判別存取控制清單 (DACL)。 在偵錯組建中，如果未提供 DACL，則會發生判斷提示。 在發行組建中 DACL 的任何項目都會被忽略。  
   
 ##  <a name="dtor"></a>  CSacl::~CSacl  
  解構函式。  
@@ -156,10 +156,10 @@ CSacl(const ACL& rhs) throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 解構函式會釋放物件，包括所有存取控制項目 (Ace) 來取得所有資源。  
+ 解構函式會釋放取得的物件，包括所有存取控制項目 (Ace) 的任何資源。  
   
 ##  <a name="getacecount"></a>  CSacl::GetAceCount  
- 傳回中的存取控制項目 (Ace) 數目`CSacl`物件。  
+ 在傳回的存取控制項目 (Ace) 數目`CSacl`物件。  
   
 ```
 UINT GetAceCount() const throw();
@@ -176,35 +176,35 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rhs`  
- **ACL** （存取控制清單），將指派給現有的物件。  
+ *rhs*  
+ `ACL` （存取控制清單） 指派給現有的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 將參考傳回給更新`CSacl`物件。 請確認**ACL**參數是實際系統存取控制清單 (SACL) 而不是判別存取控制清單 (DACL)。 在偵錯組建，就會進行判斷提示，並在發行組建中**ACL**參數將會被忽略。  
+ 傳回已更新的參考`CSacl`物件。 請確認`ACL`參數是實際系統存取控制清單 (SACL) 而非判別存取控制清單 (DACL)。 在判斷提示，就會發生的偵錯組建和發行組建中`ACL`參數將會被忽略。  
   
 ##  <a name="removeace"></a>  CSacl::RemoveAce  
- 移除特定的 ACE （存取控制的項目） **CSacl**物件。  
+ 移除特定的 ACE （存取控制項目）`CSacl`物件。  
   
 ```
 void RemoveAce(UINT nIndex) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
- 若要移除 ACE 項目索引。  
+ *nIndex*  
+ 若要移除的 ACE 項目索引。  
   
 ### <a name="remarks"></a>備註  
  這個方法衍生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
 ##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
- 移除存取控制項目 (Ace) 中所包含的所有`CSacl`物件。  
+ 移除所有存取控制項目 (Ace) 中包含`CSacl`物件。  
   
 ```
 void RemoveAllAces() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 移除每個**ACE**結構 （如果有的話）`CSacl`物件。  
+ 移除每個`ACE`結構 （如果有的話）`CSacl`物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAcl 類別](../../atl/reference/cacl-class.md)   

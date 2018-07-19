@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t 擷取器 |Microsoft 文件
+title: _com_ptr_t 擷取器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,14 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942939"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 擷取器
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  擷取封裝的 COM 介面指標。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,19 +56,19 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>備註  
   
--   **operator Interface&\*** 傳回封裝的介面指標，這可能是**NULL**。  
+-   **運算子 Interface&\*** 傳回封裝的介面指標，可能是 NULL。  
   
--   **operator Interface& &** 將參考傳回給封裝的介面指標，並會發出錯誤，如果指標位於**NULL**。  
+-   **運算子 Interface& &** 傳回封裝的介面指標的參考，並發出錯誤，如果指標為 NULL。  
   
 -   **運算子\*** 可讓智慧型指標物件作用就如同實際封裝的介面取值時一樣。  
   
--   **operator->** 可讓智慧型指標物件作用就如同實際封裝的介面取值時一樣。  
+-   **operator->** 可讓智慧型指標物件，如同它已實際封裝的介面取值時採取行動。  
   
--   **運算子 （& s)** 釋放任何封裝的介面指標，它與取代**NULL**，並傳回封裝的指標的位址。 這可讓智慧型指標的位址傳遞至函式具有**出**透過它傳回介面指標的參數。  
+-   **運算子 &** 釋放任何封裝的介面指標，它取代為 NULL，並傳回封裝的指標位址。 這可讓智慧型指標的位址傳遞至函式*出*透過它傳回介面指標的參數。  
   
--   **運算子 bool**允許條件運算式中使用智慧型指標物件。 這個運算子會傳回**true**如果指標不是**NULL**。  
+-   **運算子 bool**讓智慧型指標物件可用於條件運算式。 如果指標不是 NULL，這個運算子會傳回 TRUE。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861957"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954886"
 ---
 # <a name="messages-class"></a>messages 類別
 
@@ -54,7 +54,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>參數
 
-`CharType` 在程式內用於編碼地區設定中的字元類型。
+*CharType*程式內使用地區設定中的字元編碼的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -114,7 +114,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-`_Catval` 若要關閉目錄。
+*_Catval*關閉目錄。
 
 ### <a name="remarks"></a>備註
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-`_Catval` 若要關閉目錄。
+*_Catval*關閉目錄。
 
 ### <a name="remarks"></a>備註
 
-此受保護的成員函式會關閉訊息目錄 `_Catval`，這必須是透過先前對 [do_open](#do_open) 的呼叫來開啟的目錄。
+受保護的成員函式會關閉訊息目錄 *_Catval*，其必須已開啟的先前呼叫[do_open](#do_open)。
 
 *_Catval* 必須是從先前開啟且尚未關閉的目錄取得。
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>參數
 
-`_Catval` 識別值，指定要搜尋的訊息目錄。
+*_Catval*識別值，指定要搜尋的訊息目錄。
 
-`_Set` 識別第一個用來尋找訊息的訊息目錄中。
+*_ 設定*第一個識別用來找出訊息目錄中的訊息。
 
-`_Message` 第二個識別用來尋找訊息的訊息目錄中。
+*訊息 （_m)* 第二個識別用來找出訊息目錄中的訊息。
 
-`_Dfault` 要在失敗時傳回的字串。
+*_Dfault*失敗而被傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
-它會在失敗時傳回 `_Dfault` 的複本。 否則，會傳回所指定訊息序列的複本。
+它會傳回一份 *_Dfault*失敗。 否則，會傳回所指定訊息序列的複本。
 
 ### <a name="remarks"></a>備註
 
-此受保護的成員函式會嘗試從訊息目錄 `_Catval` 取得訊息序列。 這麼做時，它可能會利用 `_Set`、`_Message` 及 `_Dfault`。
+受保護的成員函式會嘗試從訊息目錄中取得訊息序列 *_Catval*。 它可能會使用 *（_s)*，*訊息 （_m)*，並 *_Dfault*在此情況下。
 
 ### <a name="example"></a>範例
 
@@ -188,9 +188,9 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>參數
 
-`_Catname` 要搜尋的目錄名稱。
+*_Catname*要搜尋的目錄名稱。
 
-`_Loc` 要搜尋的目錄中的地區設定。
+*_Loc*所搜尋的目錄中的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -198,7 +198,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>備註
 
-此受保護的成員函式會嘗試開啟名稱為 `_Catname` 的訊息目錄。 這麼做時，它可能會利用地區設定 `_Loc`。
+受保護的成員函式會嘗試開啟訊息目錄，其名稱是 *_Catname*。 它可能會利用地區設定 *_Loc*在此情況下
 
 傳回值應該用來作為稍後對 [close](#close) 進行呼叫時的引數。
 
@@ -220,17 +220,17 @@ string_type get(
 
 ### <a name="parameters"></a>參數
 
-`_Catval` 識別值，指定要搜尋的訊息目錄。
+*_Catval*識別值，指定要搜尋的訊息目錄。
 
-`_Set` 識別第一個用來尋找訊息的訊息目錄中。
+*_ 設定*第一個識別用來找出訊息目錄中的訊息。
 
-`_Message` 第二個識別用來尋找訊息的訊息目錄中。
+*訊息 （_m)* 第二個識別用來找出訊息目錄中的訊息。
 
-`_Dfault` 要在失敗時傳回的字串。
+*_Dfault*失敗而被傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
-它會在失敗時傳回 `_Dfault` 的複本。 否則，會傳回所指定訊息序列的複本。
+它會傳回一份 *_Dfault*失敗。 否則，會傳回所指定訊息序列的複本。
 
 ### <a name="remarks"></a>備註
 
@@ -251,13 +251,13 @@ protected: messages(
 
 ### <a name="parameters"></a>參數
 
-`_Refs` 用來指定物件的記憶體管理類型的整數值。
+*_Refs*用來指定物件的記憶體管理類型的整數值。
 
-`_Locname` 地區設定名稱。
+*_Locname*地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-`_Refs` 參數的可能值和其意義如下：
+可能值 *_Refs*參數和其意義如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -281,9 +281,9 @@ catalog open(
 
 ### <a name="parameters"></a>參數
 
-`_Catname` 要搜尋的目錄名稱。
+*_Catname*要搜尋的目錄名稱。
 
-`_Loc` 要搜尋的目錄中的地區設定。
+*_Loc*所搜尋的目錄中的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -295,7 +295,7 @@ catalog open(
 
 ## <a name="string_type"></a>  messages::string_type
 
-一種類型，描述包含 **CharType** 類型字元的 `basic_string` 類型字串。
+類型，描述包含 `basic_string` 類型字元的 `CharType` 類型字串。
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

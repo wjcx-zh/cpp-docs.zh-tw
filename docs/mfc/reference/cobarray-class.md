@@ -1,5 +1,5 @@
 ---
-title: CObArray 類別 |Microsoft 文件
+title: CObArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1c29a317ff2d4d8e40d6aca0d6b46ee3ba2fd88
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040203"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853832"
 ---
 # <a name="cobarray-class"></a>CObArray 類別
 支援 `CObject` 指標的陣列。  
@@ -74,7 +74,7 @@ class CObArray : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CObArray::CObArray](#cobarray)|建構空陣列，以便`CObject`指標。|  
+|[CObArray::CObArray](#cobarray)|建構空的陣列`CObject`指標。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -87,7 +87,7 @@ class CObArray : public CObject
 |[CObArray::FreeExtra](#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
 |[CObArray::GetAt](#getat)|傳回給定索引的值。|  
 |[CObArray::GetCount](#getcount)|取得此陣列中項目的數目。|  
-|[CObArray::GetData](#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
+|[CObArray::GetData](#getdata)|容許存取陣列中的項目。 可以是 NULL。|  
 |[CObArray::GetSize](#getsize)|取得此陣列中項目的數目。|  
 |[CObArray::GetUpperBound](#getupperbound)|傳回最大的有效索引。|  
 |[CObArray::InsertAt](#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
@@ -105,24 +105,24 @@ class CObArray : public CObject
 |[CObArray::operator]](#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- 這些物件的陣列都類似 C 陣列，但可以動態壓縮及根據需要增大。  
+ 這些物件的陣列會類似 C 陣列，但是它們可以動態壓縮，並需要增大。  
   
- 陣列索引一律從開始位置 0。 您可以決定是否要修正上限，或允許展開，當您新增超過目前的繫結項目陣列。 記憶體配置連續的上限，即使某些項目都是 null。  
+ 陣列索引一律從開始位置 0。 您可以決定是否要修正的上限，或允許展開，當您新增超過目前的繫結的項目陣列。 記憶體配置，連續的上限，即使某些項目都是 null。  
   
- 在 Win32 中，大小`CObArray`物件只限於可用的記憶體。  
+ 在 Win32 中，大小`CObArray`物件只限於可用記憶體。  
   
- 如同 C 陣列、 存取時間`CObArray`索引的項目是常數，而且陣列大小無關。  
+ 如同 C 陣列，存取時間`CObArray`索引的項目為常數，而且是獨立的陣列大小。  
   
- `CObArray` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果陣列`CObject`指標會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CObject`以及其陣列的索引，依次序列化項目。  
+ `CObArray` 納入 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果陣列`CObject`指標會儲存至封存，或是利用多載的插入運算子`Serialize`成員函式，每個`CObject`序列化項目，接著，以及其陣列索引。  
   
- 如果您需要個別的傾印`CObject`陣列中的項目，您必須設定的深度`CDumpContext`1 或更大的物件。  
+ 如果您需要個別的傾印`CObject`陣列中的項目，您必須設定的深度`CDumpContext`為 1 或更高的物件。  
   
- 當`CObArray`物件被刪除，或當其項目會遭到移除，只`CObject`會移除指標，參考不是物件。  
+ 當`CObArray`物件被刪除，或當其項目會遭到移除，只有`CObject`會移除指標，它們會參考不是物件。  
   
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
- 清單衍生相似的陣列類別衍生。 特殊用途的清單類別衍生的詳細資訊，請參閱文章[集合](../../mfc/collections.md)。  
+ 陣列類別衍生是類似於清單衍生。 如需特殊用途清單類別衍生的詳細資訊，請參閱文章[集合](../../mfc/collections.md)。  
   
 > [!NOTE]
 >  如果您想要序列化的陣列，您必須在衍生類別的實作中使用 IMPLEMENT_SERIAL 巨集。  
@@ -136,7 +136,7 @@ class CObArray : public CObject
  **標頭：** afxcoll.h  
   
 ##  <a name="add"></a>  CObArray::Add  
- 將新的項目加入至陣列，1 成長陣列的結尾。  
+ 加入新元素的陣列，陣列成長 1 結尾。  
   
 ```  
 INT_PTR Add(CObject* newElement);
@@ -144,27 +144,27 @@ INT_PTR Add(CObject* newElement);
   
 ### <a name="parameters"></a>參數  
  *newElement*  
- `CObject`加入此陣列的指標。  
+ `CObject`可以加入至這個陣列的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 加入項目的索引。  
+ 加入之項目的索引。  
   
 ### <a name="remarks"></a>備註  
- 如果[SetSize](#setsize)已搭配*nGrowBy*值大於 1，則額外的記憶體可以配置。 不過，只有 1 提高上限。  
+ 如果[SetSize](#setsize)已*nGrowBy*可能配置大於 1，則額外的記憶體值。 不過，只有 1 將增加上限。  
   
  下表顯示其他成員函式，類似於`CObArray::Add`。  
   
 |類別|成員函式|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**新增 INT_PTR (位元組** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**新增 INT_PTR (DWORD** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**新增 INT_PTR (void\***  `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**新增 INT_PTR (LPCTSTR** `newElement` **); 擲回 (CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**新增 INT_PTR (UINT** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**新增 INT_PTR (WORD** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR 新增 (位元組** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR 新增 (DWORD** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR 新增 (void\***  `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR 新增 (LPCTSTR** `newElement` **)，會擲回 (CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR 新增 (UINT** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR 新增 (WORD** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
   
 ### <a name="example"></a>範例  
-  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
   
@@ -177,7 +177,7 @@ INT_PTR Add(CObject* newElement);
  `[1] = a CAge at $4468 40`  
   
 ##  <a name="append"></a>  CObArray::Append  
- 呼叫此成員函式，將另一個陣列的內容新增至所指陣列的結尾。  
+ 呼叫此成員函式，將另一個陣列的內容新增至指定陣列的結尾。  
   
 ```  
 INT_PTR Append(const CObArray& src);
@@ -185,7 +185,7 @@ INT_PTR Append(const CObArray& src);
   
 ### <a name="parameters"></a>參數  
  *src*  
- 要附加至陣列元素的來源。  
+ 要附加至陣列項目的來源。  
   
 ### <a name="return-value"></a>傳回值  
  第一個附加的項目索引。  
@@ -207,12 +207,12 @@ INT_PTR Append(const CObArray& src);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR 附加 (const CWordArray &** *src* **);**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
 ##  <a name="copy"></a>  CObArray::Copy  
- 呼叫此成員函式，以覆寫另一個相同類型的陣列的項目與指定的陣列項目。  
+ 呼叫此成員函式，以覆寫相同類型的另一個陣列的項目與指定的陣列項目。  
   
 ```  
 void Copy(const CObArray& src);
@@ -237,7 +237,7 @@ void Copy(const CObArray& src);
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void 複製 (const CWordArray &** *src* **);**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
@@ -249,7 +249,7 @@ CObArray();
 ```  
   
 ### <a name="remarks"></a>備註  
- 陣列逐漸增加一個項目，一次。  
+ 陣列會增加一個項目，一次。  
   
  下表顯示類似於其他建構函式`CObArray::CObArray`。  
   
@@ -274,13 +274,13 @@ CObject*& ElementAt(INT_PTR nIndex);
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
 ### <a name="return-value"></a>傳回值  
- 若要參考`CObject`指標。  
+ 參考`CObject`指標。  
   
 ### <a name="remarks"></a>備註  
- 它用來實作的左側的指派運算子的陣列。 請注意，這應該只能用來實作特殊陣列運算子進階函式。  
+ 它用來實作陣列的左邊的指派運算子。 請注意，這是進階的功能，應該只能用來實作特殊陣列運算子。  
   
  下表顯示其他成員函式，類似於`CObArray::ElementAt`。  
   
@@ -291,20 +291,20 @@ CObject*& ElementAt(INT_PTR nIndex);
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt (INT_PTR** `nIndex` **);**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & ElementAt (INT_PTR** `nIndex` **);**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & ElementAt (INT_PTR** `nIndex` **);**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**文字 & ElementAt (INT_PTR** `nIndex` **);**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD 與 ElementAt (INT_PTR** `nIndex` **);**|  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CObArray::GetSize](#getsize)。  
+  範例，請參閱[CObArray::GetSize](#getsize)。  
   
 ##  <a name="freeextra"></a>  CObArray::FreeExtra  
- 釋出時已成長陣列配置任何額外的記憶體。  
+ 釋放任何額外的記憶體配置時已成長的陣列。  
   
 ```  
 void FreeExtra();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會有任何影響陣列的大小或上限。  
+ 此函式無效的大小或陣列的上限。  
   
  下表顯示其他成員函式，類似於`CObArray::FreeExtra`。  
   
@@ -318,7 +318,7 @@ void FreeExtra();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra （);**|  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CObArray::GetData](#getdata)。  
+  範例，請參閱[CObArray::GetData](#getdata)。  
   
 ##  <a name="getat"></a>  CObArray::GetAt  
  傳回指定索引處的陣列元素。  
@@ -329,10 +329,10 @@ CObject* GetAt(INT_PTR nIndex) const;
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
 ### <a name="return-value"></a>傳回值  
- `CObject`指標目前在此索引的項目。  
+ `CObject`指標目前在這個索引處的項目。  
   
 ### <a name="remarks"></a>備註  
   
@@ -351,12 +351,12 @@ CObject* GetAt(INT_PTR nIndex) const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
 ##  <a name="getcount"></a>  CObArray::GetCount  
- 傳回陣列元素的數目。  
+ 傳回陣列元素數目。  
   
 ```  
 INT_PTR GetCount() const;  
@@ -366,7 +366,7 @@ INT_PTR GetCount() const;
  陣列中的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以擷取陣列中的項目數。 因為索引會以零為起始，大小為 1 大於最大的索引。  
+ 呼叫這個方法來擷取陣列中的項目數。 因為是以零起始的索引，大小為 1 大於最大的索引。  
   
  下表顯示其他成員函式，類似於`CObArray::GetCount`。  
   
@@ -380,7 +380,7 @@ INT_PTR GetCount() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Const; 的 INT_PTR GetCount （)**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
@@ -397,23 +397,23 @@ CObject** GetData();
  陣列指標`CObject`指標。  
   
 ### <a name="remarks"></a>備註  
- 如果沒有元素可用`GetData`會傳回 null 值。  
+ 如果沒有項目可供使用，`GetData`傳回 null 值。  
   
- 雖然直接存取陣列的項目可協助您更快速地處理，請呼叫時謹慎小心`GetData`; 您直接進行的任何錯誤會影響您陣列的項目。  
+ 而直接存取陣列的項目可協助您更快速地運作，請呼叫時使用注意`GetData`; 您直接提出任何錯誤會影響您陣列的元素。  
   
  下表顯示其他成員函式，類似於`CObArray::GetData`。  
   
 |類別|成員函式|  
 |-----------|---------------------|  
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**const 位元組\*const; GetData （)位元組\*GetData （);**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData （） const; DWORD\* GetData （);**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData （） 的常數; DWORD\* GetData （);**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const void\* \* GetData （) const; void\* \* GetData （);**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* const; GetData （)CString\* GetData （);**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* const; GetData （)UINT\* GetData （);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**const WORD\* const; GetData （)WORD\* GetData （);**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
@@ -425,7 +425,7 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 由於索引以零為起始，大小為 1 大於最大的索引。  
+ 因為是以零起始的索引，大小為 1 大於最大的索引。  
   
  下表顯示其他成員函式，類似於`CObArray::GetSize`。  
   
@@ -439,7 +439,7 @@ INT_PTR GetSize() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Const; 的 INT_PTR GetSize （)**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
@@ -451,12 +451,12 @@ INT_PTR GetUpperBound() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 上限 （以零為起始） 的索引。  
+ 上限 （以零為起始） 索引。  
   
 ### <a name="remarks"></a>備註  
- 因為是以零為起始的陣列索引，此函數會傳回值 1 小於`GetSize`。  
+ 因為是以零為起始的陣列索引，此函數會傳回 1 的值小於`GetSize`。  
   
- 條件**GetUpperBound （)** =-1 表示陣列是否包含任何項目。  
+ 條件`GetUpperBound( )`=-1 表示陣列是否包含任何項目。  
   
  下表顯示其他成員函式，類似於`CObArray::GetUpperBound`。  
   
@@ -470,7 +470,7 @@ INT_PTR GetUpperBound() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Const; 的 INT_PTR GetUpperBound （)**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
@@ -494,10 +494,10 @@ void InsertAt(
  可能會大於所傳回的值的整數索引`GetUpperBound`。  
   
  *newElement*  
- `CObject`放置在這個陣列的指標。 A *newElement*值的**NULL**允許。  
+ `CObject`放在這個陣列的指標。 A *newElement*允許 NULL 的值。  
   
  *nCount*  
- 這個項目應該是次數插入 （預設值為 1）。  
+ 次數，此項目應該插入 （預設值為 1）。  
   
  *nStartIndex*  
  可能會大於所傳回的值的整數索引`GetUpperBound`。  
@@ -506,11 +506,11 @@ void InsertAt(
  另一個陣列，包含要加入至這個陣列的項目。  
   
 ### <a name="remarks"></a>備註  
- 第一個版本`InsertAt`陣列中指定索引處插入一個項目 （或多個項目的複本）。 在過程中，它會往上移動這個索引及它在現有的項目移位上面的所有項目 （依遞增索引）。  
+ 第一版`InsertAt`陣列中指定索引處插入一個項目 （或多個項目複本）。 在過程中，它會往上移動這個索引，並在現有的項目移位其上方的所有項目 （依遞增的索引）。  
   
- 第二個版本從另一個插入的所有項目`CObArray`集合中，開始*nStartIndex*位置。  
+ 第二個版本會將所有項目插入從另一個`CObArray`集合，從開始*nStartIndex*位置。  
   
- `SetAt`函式，相較之下，取代一個指定的陣列項目，並且不移動任何項目。  
+ `SetAt`函式，相較之下，取代一個指定的陣列項目，並不會不位移任何項目。  
   
  下表顯示其他成員函式，類似於`CObArray::InsertAt`。  
   
@@ -519,12 +519,12 @@ void InsertAt(
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，位元組** `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CByteArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，DWORD** `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CDWordArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，void\***  `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CPtrArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，是使用 LPCTSTR** `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CStringArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，LPCTSTR** `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CStringArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，UINT** `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CUIntArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **，WORD** `newElement` **，int** `nCount` **= 1);**<br /><br /> **擲回 (CMemoryException\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **，CWordArray\***  `pNewArray` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
   
 ### <a name="example"></a>範例  
-  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
   
@@ -546,10 +546,10 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果陣列是空的則為非零否則便是 0。  
+ 如果陣列是空的則為非零否則為 0。  
   
 ##  <a name="operator_at"></a>  CObArray::operator]  
- 這些註標運算子是方便的替代`SetAt`和`GetAt`函式。  
+ 這些註標運算子會很方便的替代`SetAt`和`GetAt`函式。  
   
 ```  
 CObject*& operator[](int_ptr nindex);  
@@ -557,37 +557,37 @@ CObject* operator[](int_ptr nindex) const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 針對陣列不是呼叫第一個運算子， **const**，可能的權限 （右值） 或指派陳述式的左邊 （左值） 上使用。 第二個，針對呼叫**const**陣列可能只能用在右邊。  
+ 陣列未呼叫的第一個運算子**const**，可用於上的權限 （右值） 或指派陳述式左邊 （左值）。 第二個，呼叫**const**陣列可能只能用在右邊。  
   
- 偵錯版本的程式庫判斷提示的註標 （請在左邊或右邊指派陳述式） 是否超出範圍。  
+ 偵錯版本的程式庫判斷提示的註標 （請在左邊或右邊則在指派陳述式） 是否超出範圍。  
   
- 下表顯示類似於其他運算子**CObArray::operator []**。  
+ 下表顯示類似於其他運算子`CObArray::operator []`。  
   
 |類別|運算子|  
 |-----------|--------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**位元組 & 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **BYTE 運算子 [] (int_ptr** `nindex`  **\) const;**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**位元組 & 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **運算子 byte (int_ptr** `nindex`  **\) const;**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **DWORD 運算子 [] (int_ptr** `nindex`  **\) const;**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex`  **\) const;**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **CString operator [] (int_ptr** `nindex`  **\) const;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT （&) 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **UINT operator [] (int_ptr** `nindex`  **\) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **UINT operator [] (int_ptr** `nindex`  **\) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & 運算子 [] (int_ptr** `nindex`  **\);**<br /><br /> **WORD operator [] (int_ptr** `nindex`  **\) const;**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
 ##  <a name="removeall"></a>  CObArray::RemoveAll  
- 從此陣列移除所有的指標，但不會實際刪除`CObject`物件。  
+ 從這個陣列中移除所有的指標，但不會實際刪除`CObject`物件。  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果陣列已經是空的此函式仍能運作。  
+ 如果已經為空陣列，此函式仍能運作。  
   
- `RemoveAll`函式會釋放所有記憶體的指標儲存區。  
+ `RemoveAll`函式會釋放所有記憶體的指標儲存區使用。  
   
  下表顯示其他成員函式，類似於`CObArray::RemoveAll`。  
   
@@ -601,7 +601,7 @@ void RemoveAll();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll （);**|  
   
 ### <a name="example"></a>範例  
- 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+ 請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
@@ -616,15 +616,15 @@ void RemoveAt(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
  *nCount*  
  要移除的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 在過程中，它會進入下移除的項目上方的所有項目。 它遞減上層陣列的繫結，但不是會釋放記憶體。  
+ 在過程中，它會進入關閉已移除的項目上方的所有項目。 它遞減右上角的陣列繫結，但不會釋放記憶體。  
   
- 如果您嘗試移除比上述移除點陣列中所包含的項目，然後判斷提示的程式庫的偵錯版本。  
+ 如果您嘗試移除比上述移除點陣列中包含的項目，然後判斷提示的程式庫的偵錯版本。  
   
  `RemoveAt`函式移除`CObject`指標陣列，但它並不會刪除物件本身。  
   
@@ -640,7 +640,7 @@ void RemoveAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt (INT_PTR** `nIndex` **，INT_PTR** *nCount* **= 1);**|  
   
 ### <a name="example"></a>範例  
-  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
   
@@ -661,15 +661,15 @@ void SetAt(
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 整數索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
+ 一個整數的索引大於或等於 0 且小於或等於所傳回的值`GetUpperBound`。  
   
  *newElement*  
- 要插入此陣列中的物件指標。 A **NULL**允許值。  
+ 要插入此陣列中的物件指標。 允許 NULL 值。  
   
 ### <a name="remarks"></a>備註  
- `SetAt` 不會導致要成長的陣列。 使用`SetAtGrow`如果您想要自動成長的陣列。  
+ `SetAt` 不會造成要成長的陣列。 使用`SetAtGrow`如果您想要自動成長的陣列。  
   
- 您必須確定您的索引值，代表陣列中的有效位置。 如果它超出範圍時，偵錯版本的程式庫判斷提示。  
+ 您必須確定您的索引值代表陣列中的有效位置。 如果它超出範圍時，偵錯版本的程式庫判斷提示。  
   
  下表顯示其他成員函式，類似於`CObArray::SetAt`。  
   
@@ -678,12 +678,12 @@ void SetAt(
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **，位元組** `newElement` **);**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **，DWORD** `newElement` **);**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **，void\***  `newElement` **);**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt (INT_PTR** `nIndex` **，是使用 LPCTSTR** `newElement` **);**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt (INT_PTR** `nIndex` **，LPCTSTR** `newElement` **);**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAt (INT_PTR** `nIndex` **，UINT** `newElement` **);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **，WORD** `newElement` **);**|  
   
 ### <a name="example"></a>範例  
-  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
   
@@ -709,10 +709,10 @@ void SetAtGrow(
  大於或等於 0 的整數索引。  
   
  *newElement*  
- 要加入此陣列的物件指標。 A **NULL**允許值。  
+ 要加入至這個陣列的物件指標。 允許 NULL 值。  
   
 ### <a name="remarks"></a>備註  
- 必要時自動成長陣列 （也就是上限會調整來容納新項目）。  
+ 陣列在必要時自動成長 （亦即，以容納新的項目調整上限）。  
   
  下表顯示其他成員函式，類似於`CObArray::SetAtGrow`。  
   
@@ -721,12 +721,12 @@ void SetAtGrow(
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，位元組** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，DWORD** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，void\***  `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，是使用 LPCTSTR** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，LPCTSTR** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，UINT** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **，WORD** `newElement` **);**<br /><br /> **擲回 (CMemoryException\* );**|  
   
 ### <a name="example"></a>範例  
-  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如的清單`CAge`所有集合範例中使用的類別。  
+  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)如需清單`CAge`集合的所有範例中所使用的類別。  
   
  [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
   
@@ -756,14 +756,14 @@ void SetSize(
  新陣列的大小 （數字的項目）。 必須是大於或等於 0。  
   
  *nGrowBy*  
- 如果是必要的大小增加配置項目位置最小數目。  
+ 如果是必要的大小增加配置的項目位置的數目下限。  
   
 ### <a name="remarks"></a>備註  
- 如果新的大小小於舊的大小，然後陣列會被截斷，並釋放所有未使用的記憶體。 為了提高效率，呼叫`SetSize`使用之前，先設定陣列的大小。 這可防止重新配置，並將陣列複製項目加入每次需要。  
+ 如果新的大小小於舊的大小，然後陣列會被截斷，並釋放所有未使用的記憶體。 為了提高效率，呼叫`SetSize`使用它之前，請先設定陣列的大小。 這可避免需要重新配置和複製陣列每個項目加入的時間。  
   
- *NGrowBy*陣列成長的情況時，參數會影響內部記憶體配置。 其用途並不會影響陣列大小所報告`GetSize`和`GetUpperBound`。  
+ *NGrowBy*參數會影響內部記憶體配置，而陣列成長。 其用途並不會影響陣列大小所回報`GetSize`和`GetUpperBound`。  
   
- 如果陣列的大小成長，所有新配置**CObject \*** 指標設定為 NULL。  
+ 如果陣列的大小成長，所有新配置**CObject \*** 指標都會設定為 NULL。  
   
  下表顯示其他成員函式，類似於`CObArray::SetSize`。  
   
@@ -777,7 +777,7 @@ void SetSize(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **，int** `nGrowBy` **=-1);**<br /><br /> **擲回 (CMemoryException\* );**|  
   
 ### <a name="example"></a>範例  
-  請參閱範例的[CObArray::GetData](#getdata)。  
+  範例，請參閱[CObArray::GetData](#getdata)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   

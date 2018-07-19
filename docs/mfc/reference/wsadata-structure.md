@@ -1,5 +1,5 @@
 ---
-title: WSADATA 結構 |Microsoft 文件
+title: WSADATA 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c98f792e1d72d3e6d4a8e15b8347c653b32f46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadc502900285d879f2fd77af69b1fcf08a4ba1e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380080"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880927"
 ---
 # <a name="wsadata-structure"></a>WSADATA 結構
 `WSADATA` 結構用於儲存由呼叫傳回至 `AfxSocketInit` 全域函式的 Windows 通訊端初始化資訊。  
@@ -45,19 +45,19 @@ struct WSAData {
  Windows 通訊端 DLL 要求呼叫端使用的 Windows 通訊端規格版本。  
   
  *wHighVersion*  
- 這個 DLL 可支援的最高 Windows 通訊端規格版本 (編碼如上所示)。 一般來說，這是與相同**wVersion**。  
+ 這個 DLL 可支援的最高 Windows 通訊端規格版本 (編碼如上所示)。 通常，這是相同*wVersion*。  
   
  *szDescription*  
  Windows 通訊端 DLL 在以 null 終止之 ASCII 字串複製 Windows Sockets 實作的描述，包括廠商身分識別。 文字 (長度最多 256 個字元) 可以包含任何字元，不過，廠商會被告誡包含控制項和格式化字元：應用程式最可能將此值顯示 (可能以截斷方式) 在狀態訊。  
   
  *szSystemStatus*  
- Windows 通訊端 DLL 在以 null 終止之 ASCII 字串複製相關狀態或組態資訊。 Windows Sockets DLL 的資訊可能會有所幫助使用者或支援人員; 時，才使用這個欄位不應視為，來擴充**szDescription**欄位。  
+ Windows 通訊端 DLL 在以 null 終止之 ASCII 字串複製相關狀態或組態資訊。 Windows Sockets DLL 應該使用此欄位的資訊可能會有所幫助使用者或支援人員; 時，才可以不應視為的擴充功能*szDescription*欄位。  
   
  *iMaxSockets*  
- 單一處理序可能會開啟的最大通訊端數目。 Windows 通訊端實作可提供通訊端全域集區以配置到任何處理序，或者也依照通訊端的每個處理序資源進行配置。 數字完全反映 Windows 通訊端 DLL 或網路軟體組態的設定方式。 應用程式撰寫者可以使用這個數字當成 Windows Sockets 實作是否可由應用程式使用的指示。 例如，X Windows 伺服器可能會檢查**iMaxSockets**初次啟動時： 如果少於 8，應用程式會顯示錯誤訊息指示使用者重新設定網路軟體。 (這是在其中的狀況**szSystemStatus**文字可能會使用。)顯然並不保證特定應用程式可以實際配置**iMaxSockets**通訊端，因為可能有使用中的其他 Windows 通訊端應用程式。  
+ 單一處理序可能會開啟的最大通訊端數目。 Windows 通訊端實作可提供通訊端全域集區以配置到任何處理序，或者也依照通訊端的每個處理序資源進行配置。 數字完全反映 Windows 通訊端 DLL 或網路軟體組態的設定方式。 應用程式撰寫者可以使用這個數字當成 Windows Sockets 實作是否可由應用程式使用的指示。 例如，X Windows 伺服器可能會檢查*iMaxSockets*初次啟動時： 如果少於 8，應用程式會顯示錯誤訊息，指示使用者重新設定網路軟體。 (這是的情況*szSystemStatus*文字可能會使用。)很顯然並不保證特定應用程式可以實際配置*iMaxSockets*通訊端，因為可能有使用中的其他 Windows 通訊端應用程式。  
   
  *iMaxUdpDg*  
- 可由 Windows 通訊端應用程式傳送或接收的最大使用者資料包通訊協定 (UDP) 資料包的位元組大小。 如果實作沒有施加限制， **iMaxUdpDg**為零。 在 Berkeley 通訊端的許多實作中，UDP 資料包上有 8192 位元組的隱含限制 (必要時會分散)。 Windows 通訊端實作可以根據片段重組緩衝區的配置施加限制。 最小值**iMaxUdpDg**相容的 Windows Sockets 實作是 512。 請注意，不論值**iMaxUdpDg**，不得嘗試傳送大於比最大傳輸單位 (MTU) 網路的廣播的資料包。 (Windows 通訊端 API 不提供機制來尋找 MTU，不過不得少於 512 位元組)。  
+ 可由 Windows 通訊端應用程式傳送或接收的最大使用者資料包通訊協定 (UDP) 資料包的位元組大小。 如果實作沒有施加限制， *iMaxUdpDg*為零。 在 Berkeley 通訊端的許多實作中，UDP 資料包上有 8192 位元組的隱含限制 (必要時會分散)。 Windows 通訊端實作可以根據片段重組緩衝區的配置施加限制。 最小值*iMaxUdpDg*相容的 Windows 通訊端實作為 512。 請注意，不論值為何*iMaxUdpDg*，它會嘗試傳送大於比最大傳輸單位 (MTU) 網路的廣播的資料包。 (Windows 通訊端 API 不提供機制來尋找 MTU，不過不得少於 512 位元組)。  
   
  *lpVendorInfo*  
  廠商特定資料結構的遠端指標。 這個結構的定義 (如果有提供) 超出 Windows 通訊端規格的範圍。  

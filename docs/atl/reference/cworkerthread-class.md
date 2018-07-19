@@ -1,5 +1,5 @@
 ---
-title: CWorkerThread 類別 |Microsoft 文件
+title: CWorkerThread 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,18 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365516"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885636"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
-這個類別建立背景工作執行緒或使用現有，等候一或多個核心物件控點，而且其中一個控點會收到信號時，執行指定的用戶端函式。  
+這個類別會建立背景工作執行緒或使用現有工作區、 等候一或多個核心物件控制代碼，而且其中一個控點而收到信號時，執行指定的用戶端函式。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,8 +46,8 @@ class CWorkerThread
 ```  
   
 #### <a name="parameters"></a>參數  
- `ThreadTraits`  
- 類別提供執行緒的建立函式，例如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。  
+ *ThreadTraits*  
+ 類別提供執行緒建立函式，例如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或是[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。  
   
 ## <a name="members"></a>成員  
   
@@ -61,20 +61,20 @@ class CWorkerThread
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CWorkerThread::CWorkerThread](#cworkerthread)|背景工作執行緒的建構函式。|  
+|[CWorkerThread::CWorkerThread](#cworkerthread)|背景工作執行緒建構函式。|  
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|背景工作執行緒的解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CWorkerThread::AddHandle](#addhandle)|呼叫此方法，將可等候物件的控制代碼加入至背景工作執行緒所維護的清單。|  
-|[CWorkerThread::AddTimer](#addtimer)|呼叫此方法以將定期可等候計時器加入至背景工作執行緒所維護的清單。|  
-|[CWorkerThread::GetThreadHandle](#getthreadhandle)|呼叫這個方法，取得工作者執行緒的執行緒控制代碼。|  
-|[CWorkerThread::GetThreadId](#getthreadid)|呼叫這個方法，取得工作者執行緒的執行緒 ID。|  
+|[CWorkerThread::AddHandle](#addhandle)|呼叫這個方法將可等候物件的控制代碼新增至背景工作執行緒所維護的清單。|  
+|[CWorkerThread::AddTimer](#addtimer)|呼叫這個方法，以將定期的可等候計時器加入至背景工作執行緒所維護的清單。|  
+|[CWorkerThread::GetThreadHandle](#getthreadhandle)|呼叫這個方法來取得背景工作執行緒的執行緒控制代碼。|  
+|[CWorkerThread::GetThreadId](#getthreadid)|呼叫這個方法來取得背景工作執行緒的執行緒識別碼。|  
 |[CWorkerThread::Initialize](#initialize)|呼叫此方法以初始化背景工作執行緒。|  
 |[CWorkerThread::RemoveHandle](#removehandle)|呼叫這個方法來移除可等候物件的清單中的控制代碼。|  
-|[CWorkerThread::Shutdown](#shutdown)|呼叫這個方法關閉背景工作執行緒。|  
+|[CWorkerThread::Shutdown](#shutdown)|呼叫此方法以關閉 背景工作執行緒。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -84,15 +84,15 @@ class CWorkerThread
   
 2.  呼叫[CWorkerThread::Initialize](#initialize)。  
   
-3.  呼叫[CWorkerThread::AddHandle](#addhandle)與核心物件和指標的實作的控制代碼[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。  
+3.  呼叫[CWorkerThread::AddHandle](#addhandle)與核心物件和實作之指標的控制代碼[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。  
   
      - 或 -  
   
-     呼叫[CWorkerThread::AddTimer](#addtimer)指標的實作[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。  
+     呼叫[CWorkerThread::AddTimer](#addtimer)實作之指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。  
   
-4.  實作[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)時要採取某些動作的控制代碼或計時器收到信號。  
+4.  實作[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼或計時器而收到信號時採取某些動作。  
   
-5.  若要從可等候物件的清單中移除物件，請呼叫[CWorkerThread::RemoveHandle](#removehandle)。  
+5.  若要移除的可等候物件清單中的物件，請呼叫[CWorkerThread::RemoveHandle](#removehandle)。  
   
 6.  若要終止執行緒，呼叫[CWorkerThread::Shutdown](#shutdown)。  
   
@@ -100,7 +100,7 @@ class CWorkerThread
  **標頭：** atlutil.h  
   
 ##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
- 呼叫此方法，將可等候物件的控制代碼加入至背景工作執行緒所維護的清單。  
+ 呼叫這個方法將可等候物件的控制代碼新增至背景工作執行緒所維護的清單。  
   
 ```
 HRESULT AddHandle(
@@ -110,23 +110,23 @@ HRESULT AddHandle(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hObject`  
+ *hObject*  
  可等候物件的控制代碼。  
   
- `pClient`  
+ *pClient*  
  將指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)控制代碼會收到信號時要呼叫物件上的介面。  
   
- `dwParam`  
- 要傳遞給參數[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼會收到信號。  
+ *dwParam*  
+ 要傳遞至參數[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼會收到信號。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)會透過呼叫`pClient`時控制代碼， `hObject`，收到信號。  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)會透過呼叫*pClient*時的控制代碼*hObject*，收到信號。  
   
 ##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
- 呼叫此方法以將定期可等候計時器加入至背景工作執行緒所維護的清單。  
+ 呼叫這個方法，以將定期的可等候計時器加入至背景工作執行緒所維護的清單。  
   
 ```
 HRESULT AddTimer(
@@ -138,24 +138,24 @@ HRESULT AddTimer(
   
 ### <a name="parameters"></a>參數  
  *dwInterval*  
- 指定的計時器，以毫秒為單位。  
+ 指定期間的計時器，以毫秒為單位。  
   
- `pClient`  
+ *pClient*  
  將指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)控制代碼會收到信號時要呼叫物件上的介面。  
   
- `dwParam`  
- 要傳遞給參數[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼會收到信號。  
+ *dwParam*  
+ 要傳遞至參數[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼會收到信號。  
   
- `phTimer`  
- [out]所成功時，接收新建立的計時器的控制代碼的控制代碼變數位址。  
+ *phTimer*  
+ [out]如果成功，接收新建立的計時器的控制代碼的控制代碼變數位址。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)會透過呼叫`pClient`計時器會收到信號。  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)會透過呼叫*pClient*計時器會收到信號。  
   
- 將傳遞計時器控制代碼與`phTimer`至[CWorkerThread::RemoveHandle](#removehandle)關閉計時器。  
+ 將傳遞計時器控點距離*phTimer*要[CWorkerThread::RemoveHandle](#removehandle)關閉計時器。  
   
 ##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  建構函式。  
@@ -175,24 +175,24 @@ CWorkerThread() throw();
  呼叫[CWorkerThread::Shutdown](#shutdown)。  
   
 ##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
- 呼叫這個方法，取得工作者執行緒的執行緒控制代碼。  
+ 呼叫這個方法來取得背景工作執行緒的執行緒控制代碼。  
   
 ```
 HANDLE GetThreadHandle() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的執行緒控制代碼或為 NULL，如果背景工作執行緒尚未初始化。  
+ 如果尚未初始化背景工作執行緒，會傳回執行緒控制代碼或 NULL。  
   
 ##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
- 呼叫這個方法，取得工作者執行緒的執行緒 ID。  
+ 呼叫這個方法來取得背景工作執行緒的執行緒識別碼。  
   
 ```
 DWORD GetThreadId() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的執行緒 ID 或為 NULL，如果背景工作執行緒尚未初始化。  
+ 如果尚未初始化背景工作執行緒，會傳回執行緒識別碼或 NULL。  
   
 ##  <a name="initialize"></a>  CWorkerThread::Initialize  
  呼叫此方法以初始化背景工作執行緒。  
@@ -204,18 +204,18 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `pThread`  
+ *pThread*  
  現有的背景工作執行緒。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 應該呼叫這個方法，以初始化物件，在建立之後，或是呼叫後[CWorkerThread::Shutdown](#shutdown)。  
+ 應該呼叫這個方法，來初始化物件，在建立之後，或是在呼叫之後[CWorkerThread::Shutdown](#shutdown)。  
   
- 若要有兩個或多個`CWorkerThread`物件使用相同的工作者執行緒，其中一個，而不傳遞任何引數然後將指標傳遞給該物件來初始化`Initialize`的其他方法。 使用指標初始化的物件應該關閉之前用來初始化的物件。  
+ 有兩個或多個`CWorkerThread`物件使用相同的背景工作執行緒，其中一個，未傳遞任何引數則會將指標傳遞至該物件初始化`Initialize`的其他方法。 使用指標初始化的物件應該關閉之前用來將它們初始化的物件。  
   
- 請參閱[CWorkerThread::Shutdown](#shutdown)上初始化使用現有物件的指標時，該方法的行為如何變更的資訊。  
+ 請參閱[CWorkerThread::Shutdown](#shutdown)上初始化使用現有的物件指標時，該方法的行為如何變更的資訊。  
   
 ##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  呼叫這個方法來移除可等候物件的清單中的控制代碼。  
@@ -225,33 +225,33 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `hObject`  
- 要移除的控制代碼。  
+ *hObject*  
+ 若要移除的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 移除此控制代碼時[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)將與已傳遞至相關聯的物件上呼叫[AddHandle](#addhandle)。 如果這個呼叫失敗，`CWorkerThread`會呼叫 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)控制代碼上的函式。  
+ 移除控制代碼時[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)將傳遞至相關聯物件上呼叫[AddHandle](#addhandle)。 如果這個呼叫失敗，`CWorkerThread`會呼叫 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)控制代碼上的函式。  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
- 呼叫這個方法關閉背景工作執行緒。  
+ 呼叫此方法以關閉 背景工作執行緒。  
   
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwWait`  
- 以毫秒為單位等待背景工作執行緒關閉的時間。 ATL_WORKER_THREAD_WAIT 預設為 10 秒。 如有必要，您可以再包含 atlutil.h 定義您自己的值，這個符號。 
+ *dwWait*  
+ 以毫秒為單位來等待背景工作執行緒關閉時間。 ATL_WORKER_THREAD_WAIT 預設為 10 秒。 如有必要，您可以定義您自己的值，這個符號包含 atlutil.h 之前。 
   
 ### <a name="return-value"></a>傳回值  
- 在成功或失敗，例如，如果發生錯誤的 HRESULT 會傳回 S_OK 逾時值， `dwWait`，超過。  
+ 在成功或失敗，例如，如果發生錯誤的 HRESULT 會傳回 S_OK 的逾時值*dwWait*，超過。  
   
 ### <a name="remarks"></a>備註  
  若要重複使用物件，呼叫[CWorkerThread::Initialize](#initialize)之後呼叫這個方法。  
   
- 請注意，呼叫**關機**物件的指標，另一個以初始化`CWorkerThread`物件沒有任何作用，而且一律會傳回 S_OK。  
+ 請注意，呼叫`Shutdown`初始化的指標，另一個物件上`CWorkerThread`物件沒有任何作用，而且一律傳回 S_OK。  
   
 ## <a name="see-also"></a>另請參閱  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   

@@ -1,5 +1,5 @@
 ---
-title: break 陳述式 （c + +） |Microsoft 文件
+title: break 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942868"
 ---
 # <a name="break-statement-c"></a>break 陳述式 (C++)
-`break` 陳述式會在最接近的封閉式迴圈或條件陳述式出現的位置結束執行。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。  
+**中斷**陳述式會結束執行的最接近的封閉式迴圈或條件出現的陳述式。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,16 +33,16 @@ break;
 ```  
   
 ## <a name="remarks"></a>備註  
- `break`陳述式搭配條件式[切換](../cpp/switch-statement-cpp.md)陳述式與[不要](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，和[時](../cpp/while-statement-cpp.md)迴圈陳述式。  
+ **中斷**陳述式搭配條件式[切換](../cpp/switch-statement-cpp.md)陳述式與[請勿](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，和[時](../cpp/while-statement-cpp.md)迴圈陳述式。  
   
- 在 `switch` 陳述式中，`break` 陳述式會使程式執行 `switch` 陳述式以外的下一個陳述式。 若沒有 `break` 陳述式，則會執行相符之 `case` 標籤到 `switch` 陳述式結尾之間的每一個陳述式，包含 `default` 子句。  
+ 在 **切換**陳述式**中斷**陳述式會執行下一個陳述式外部程式**切換**陳述式。 不含**中斷**陳述式中，每個陳述式，從相符**案例**結尾標籤**切換**陳述式，包括**預設**子句，會執行。  
   
- 在迴圈中，`break` 陳述式會結束最接近的封閉式 `do`、`for` 或 `while` 陳述式的執行。 控制會傳遞到已結束之陳述式的下一個陳述式 (如果有的話)。  
+ 在迴圈中，**中斷**陳述式會結束執行的最接近的封閉式**不要**，**如**，或**雖然**陳述式。 控制會傳遞到已結束之陳述式的下一個陳述式 (如果有的話)。  
   
- 在巢狀陳述式中，`break` 陳述式只會結束 `do`、`for`、`switch` 或立即將它封閉的 `while` 陳述式。 您可以使用 `return` 或 `goto` 陳述式從結構更複雜的巢狀結構轉移控制權。  
+ 在巢狀陳述式中，**中斷**陳述式只會結束**進行**，**如**，**切換**，或**時**立即將它關閉的陳述式。 您可以使用**會傳回**或是**goto**陳述式將控制項從更深的巢狀結構。  
   
 ## <a name="example"></a>範例  
- 下列程式碼示範如何在 `break` 迴圈中使用 `for` 陳述式。  
+ 下列程式碼示範如何使用**中斷**中的陳述式**如**迴圈。  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- 下列程式碼示範如何在 `break` 迴圈和 `while` 迴圈中使用 `do`。  
+ 下列程式碼示範如何使用**中斷**中**雖然**迴圈並**執行**迴圈。  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- 下列程式碼示範如何在 switch 陳述式中使用 `break`。 如果您想要個別處理每一個案例，每次都必須使用 `break`；如果不使用 `break`，程式碼執行繼續進行下一個案例。  
+ 下列程式碼示範如何使用**中斷**switch 陳述式中。 您必須使用**中斷**在所有情況下，如果您要個別; 處理每個案例中，如果您不使用**中斷**，執行程式碼便會略過下一個案例。  
   
 ```cpp  
 #include <iostream>  

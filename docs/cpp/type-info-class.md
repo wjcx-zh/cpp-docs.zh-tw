@@ -1,5 +1,5 @@
 ---
-title: type_info 類別 |Microsoft 文件
+title: type_info 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422432"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941037"
 ---
 # <a name="typeinfo-class"></a>type_info 類別
-**Type_info**類別描述編譯器所產生的程式中的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 **Type_info**類別也會儲存編碼的值，適用於比較是否相等的兩個型別或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
+`type_info`類別描述在程式內，編譯器所產生的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 `type_info`類別也會儲存編碼的值適用於比較是否相等的兩種類型，或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
   
- `<typeinfo>`標頭檔必須包含才能使用**type_info**類別。 介面**type_info**類別是：  
+ `<typeinfo>`標頭檔必須包含才能使用`type_info`類別。 介面`type_info`類別是：  
   
 ```cpp
 class type_info {  
@@ -42,19 +42,19 @@ public:
 };  
 ```  
   
- 您無法具現化的物件**type_info**類別直接管理，因為類別只有 private 複製建構函式。 唯一的方式來建構 （暫存） **type_info**物件是使用[typeid](../cpp/typeid-operator.md)運算子。 指派運算子也是私人的因為您無法複製或類別的物件指派**type_info**。  
+ 您無法具現化的物件`type_info`類別，因為類別只有 private 複製建構函式。 建構 （暫存） 的唯一辦法`type_info`物件是使用[typeid](../cpp/typeid-operator.md)運算子。 因為指派運算子也是私人的您無法複製或指派類別的物件`type_info`。  
   
- **type_info:: hash_code**定義適用於對應的型別值的雜湊函式**typeinfo**索引值的分佈。  
+ `type_info::hash_code` 定義適用於類型的值對應的雜湊函式`typeinfo`到索引值的分佈。  
   
- 運算子`==`和`!=`可以用來與其他相等和不等比較**type_info**分別物件。  
+ 運算子`==`並`!=`可以用來與其他比較是否相等和不等比較`type_info`物件，分別。  
   
- 類型的排序順序和繼承關係之間並無連結。 使用**type_info**成員函式來判斷定序順序的型別。 不保證， **type_info**都會產生不同的程式或甚至執行相同程式中相同的結果。 這種方式， **type_info**類似於位址的 **(&)** 運算子。  
+ 類型的排序順序和繼承關係之間並無連結。 使用`type_info::before`成員函式，來判斷型別的定序序列。 不保證，`type_info::before`會產生不同的程式或甚至執行相同程式的相同的結果。 如此一來，在`type_info::before`類似於位址的`(&)`運算子。  
   
- **Type_info:: name**成員函式傳回**const char\*** 以 null 終止的字串代表人類看得懂的型別名稱。 所指向的記憶體會加以快取，且絕不可直接取消配置。  
+ `type_info::name`成員函式傳回`const char*`以 null 終止的字串，表示型別的人類看得懂的名稱。 所指向的記憶體會加以快取，且絕不可直接取消配置。  
   
- **Type_info:: raw_name**成員函式傳回**const char\*** 以 null 終止的字串表示裝飾的名稱的物件類型。 這個名稱實際上是以其裝飾形式儲存，以節省空間。 因此，此函式的速度比**type_info:: name**因為它不需要快速的名稱。 所傳回的字串**type_info:: raw_name**函式是在比較作業中很有用，但不是可讀取。 如果您需要人類看得懂的字串，使用**type_info:: name**函式。  
+ `type_info::raw_name`成員函式傳回`const char*`以 null 終止的字串，代表物件類型的裝飾的名稱。 這個名稱實際上是以其裝飾形式儲存，以節省空間。 因此，此函式的速度比`type_info::name`因為它不需要解除名稱裝飾。 所傳回的字串`type_info::raw_name`函式是在比較作業中很有用，但不是可讀取。 如果您需要人類看得懂的字串，使用`type_info::name`函式。  
   
- 多型類別才會產生型別資訊[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)編譯器選項已指定。  
+ 多型類別才會產生類型資訊[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)指定編譯器選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段類型資訊](../cpp/run-time-type-information.md)

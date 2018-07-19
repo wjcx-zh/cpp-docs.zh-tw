@@ -1,5 +1,5 @@
 ---
-title: 再試一次、 throw 和 catch 陳述式 （c + +） |Microsoft 文件
+title: try、 throw 和 catch 陳述式 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,26 +29,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac31e9a31ab560973e986e37b4cf56f5d7e4621
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: da07786c3aac6bfce2f74a16088b3c09184a8106
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942679"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 陳述式 (C++)
-若要在 C++ 中實作例外狀況處理，您可以使用 `try`、`throw` 和 `catch` 運算式。  
+若要實作的 c + + 例外狀況處理，您使用**嘗試**，**擲回**，並**攔截**運算式。  
   
- 首先，使用 `try` 區塊包含一個或多個可能會擲回例外狀況的陳述式。  
+ 首先，使用**嘗試**區塊包含可能會擲回例外狀況的一或多個陳述式。  
   
- `throw` 運算式會發出 `try` 區塊發生例外狀況的訊號 (通常是錯誤)。 您可以將任何類型的物件當成 `throw` 運算式的運算元使用。 這個物件通常用來傳達與錯誤有關的資訊。 在大部分情況下，我們建議您使用[std:: exception](../standard-library/exception-class.md)類別或其中一個標準程式庫中定義的衍生類別。 如果有任何不適用的類別，建議您從 `std::exception` 自行衍生例外狀況類別。  
+ A**擲回**運算式表示的例外狀況，通常是錯誤 — 中發生**嘗試**區塊。 您可以使用任何類型的物件作為運算元**擲回**運算式。 這個物件通常用來傳達與錯誤有關的資訊。 在大部分情況下，我們建議您使用[std:: exception](../standard-library/exception-class.md)類別或其中一個衍生類別中的標準程式庫所定義。 如果有任何不適用的類別，建議您從 `std::exception` 自行衍生例外狀況類別。  
   
- 若要處理可能擲回的例外狀況，請在 `catch` 區塊之後緊接著實作一個或多個 `try` 區塊。 每個 `catch` 區塊皆會指定可處理的例外狀況類型。  
+ 若要處理可能會擲回的例外狀況，實作一或多個**攔截**區塊之後緊接著**嘗試**區塊。 每個**攔截**區塊指定它可以處理的例外狀況類型。  
   
- 此範例示範 `try` 區塊及其處理常式。 假設 `GetNetworkResource()` 透過網路連線取得資料，且兩個例外狀況類型是衍生自 `std::exception` 的使用者定義類別。 請注意，`const` 陳述式的 `catch` 參考會攔截例外狀況。 建議您依照值擲回例外狀況並依 const 參考攔截這些例外狀況。  
+ 此範例示範**嘗試**區塊和其處理常式。 假設 `GetNetworkResource()` 透過網路連線取得資料，且兩個例外狀況類型是衍生自 `std::exception` 的使用者定義類別。 請注意，例外狀況所捕捉**const**參考中**攔截**陳述式。 建議您依照值擲回例外狀況並依 const 參考攔截這些例外狀況。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
   
 MyData md;  
 try {  
@@ -82,11 +83,11 @@ MyData GetNetworkResource()
 ```  
   
 ## <a name="remarks"></a>備註  
- `try` 子句之後的程式碼是程式碼的保護區段。 `throw`運算式*會擲回*— 也就是引發 — 例外狀況。 `catch` 子句之後的程式碼區塊是例外狀況處理常式。 這是此處理常式，*攔截*則會擲回的例外狀況中的型別`throw`和`catch`運算式都相容。 如需管理中的型別符合規則的清單`catch`區塊，請參閱[評估如何 Catch 區塊的](../cpp/how-catch-blocks-are-evaluated-cpp.md)。 如果 `catch` 陳述式指定省略符號 (...) 而不是類型，則 `catch` 區塊會處理例外狀況的每一種類型。 當您編譯與[/EHa](../build/reference/eh-exception-handling-model.md)選項，其中可以包括 C 結構化例外狀況，例如記憶體保護，除數為零，以及浮點數違規的系統產生，或應用程式產生非同步例外狀況. 由於會按照程式順序處理 `catch` 區塊，以尋找相符的類型，因此省略符號處理常式必須是相關聯的 `try` 區塊中的最後一個處理常式。 使用 `catch(...)` 時請小心；除非 catch 區塊知道如何處理所攔截到的特定例外狀況，否則不可允許程式繼續執行。 通常，`catch(...)` 區塊的用途是在程式停止執行之前記錄錯誤和執行特殊清除。  
+ 後面的程式碼**嘗試**子句是程式碼的保護的區段。 **擲回**運算式*就會擲回*— 也就是引發，例外狀況。 之後的程式碼區塊**攔截**子句是例外狀況處理常式。 這個處理常式，*攔截*便會擲回的例外狀況中的型別**擲回**並**攔截**運算式都相容。 如需管理中的型別符合規則的清單**攔截**區塊，請參閱[如何 Catch 區塊的評估](../cpp/how-catch-blocks-are-evaluated-cpp.md)。 如果**攔截**陳述式指定省略符號 （...） 而不是類型，**攔截**區塊處理的例外狀況的每個型別。 當您編譯[/EHa](../build/reference/eh-exception-handling-model.md)選項，這些可能包括 C 結構化例外狀況和系統產生或應用程式所產生的非同步例外，例如記憶體保護、 除以-零和浮點違規. 因為**攔截**區塊會處理程式的順序，找不到相符的類型、 省略符號處理常式必須是最後一個處理常式相關聯**嘗試**區塊。 使用 `catch(...)` 時請小心；除非 catch 區塊知道如何處理所攔截到的特定例外狀況，否則不可允許程式繼續執行。 通常，`catch(...)` 區塊的用途是在程式停止執行之前記錄錯誤和執行特殊清除。  
   
- 不含運算元的 `throw` 運算式會重新擲回目前正在處理的例外狀況。 重新擲回例外狀況時，建議使用此表單，因為其中保留了原始例外狀況的多型類型資訊。 這類運算式只能在 `catch` 處理常式中或從 `catch` 處理常式內部呼叫的函式中使用。 重新擲回的例外狀況物件是原始的例外狀況物件，而不是複本。  
+ A**擲回**不含運算元的運算式會重新擲回目前正在處理的例外狀況。 重新擲回例外狀況時，建議使用此表單，因為其中保留了原始例外狀況的多型類型資訊。 這類運算式只能在**攔截**處理常式或從呼叫的函式**攔截**處理常式。 重新擲回的例外狀況物件是原始的例外狀況物件，而不是複本。  
   
-```  
+```cpp 
 try {  
    throw CSomeOtherException();  
 }  

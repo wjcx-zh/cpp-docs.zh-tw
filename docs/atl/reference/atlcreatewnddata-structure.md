@@ -1,5 +1,5 @@
 ---
-title: _AtlCreateWndData 結構 |Microsoft 文件
+title: _AtlCreateWndData 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255791"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880004"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 結構
 此結構包含在 ATL 中的視窗化程式碼中的類別執行個體資料  
@@ -40,13 +40,13 @@ ms.locfileid: "34255791"
 ```  
   
 ## <a name="members"></a>成員  
- **m_pThis**  
- **這**用來取得存取權的類別執行個體視窗程序中的指標。  
+ `m_pThis`  
+ **這**用來取得視窗程序中的存取權的類別執行個體的指標。  
   
  `m_dwThreadID`  
  目前的類別執行個體的執行緒 ID。  
   
- **m_pNext**  
+ `m_pNext`  
  下一個指標`_AtlCreateWndData`物件。  
   
 ## <a name="requirements"></a>需求  

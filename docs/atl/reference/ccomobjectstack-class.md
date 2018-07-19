@@ -1,5 +1,5 @@
 ---
-title: CComObjectStack 類別 |Microsoft 文件
+title: CComObjectStack 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3abbd69a69205b0dd7f4ee9fb43d5889e2824552
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360739"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882712"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 類別
-這個類別會建立暫存的 COM 物件，並提供的架構實作**IUnknown**。  
+這個類別建立暫存的 COM 物件，並為它提供的架構實作`IUnknown`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,8 +41,8 @@ class CComObjectStack
 ```  
   
 #### <a name="parameters"></a>參數  
- `Base`  
- 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要在物件上支援從任何其他介面呼叫也一樣。  
+ *基底*  
+ 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。  
   
 ## <a name="members"></a>成員  
   
@@ -58,23 +58,23 @@ class CComObjectStack
 |名稱|描述|  
 |----------|-----------------|  
 |[CComObjectStack::AddRef](#addref)|傳回零。 在偵錯模式中，呼叫`_ASSERTE`。|  
-|[CComObjectStack::QueryInterface](#queryinterface)|傳回**E_NOINTERFACE**。 在偵錯模式中，呼叫`_ASSERTE`。|  
+|[CComObjectStack::QueryInterface](#queryinterface)|傳回 E_NOINTERFACE。 在偵錯模式中，呼叫`_ASSERTE`。|  
 |[CComObjectStack::Release](#release)|傳回零。 在偵錯模式中，呼叫`_ASSERTE`。 ~|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|包含**HRESULT**在建構期間傳回`CComObjectStack`物件。|  
+|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|包含在建構期間所傳回的 HRESULT`CComObjectStack`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComObjectStack` 用來建立暫存的 COM 物件，並提供物件的架構實作**IUnknown**。 一般來說，物件作為一個函式 （也就，推入堆疊） 內的區域變數。 因為函數完成時，會終結物件，參考計數不會執行提高效率。  
+ `CComObjectStack` 用來建立暫存的 COM 物件，並提供物件的架構實作`IUnknown`。 一般來說，物件用做為本機變數內有一個函式 （也就，推送到堆疊）。 因為函式完成時，會終結物件，參考計數不會執行提高效率。  
   
- 下列範例會示範如何建立用於函式內的 COM 物件：  
+ 下列範例示範如何建立 COM 物件，用於函式內：  
   
  [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
   
- 暫存物件`Tempobj`推入至堆疊，並會自動消失的函數完成時。  
+ 暫存物件`Tempobj`推入堆疊和函式完成時，會自動消失。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Base`  
@@ -105,7 +105,7 @@ CComObjectStack(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫`FinalConstruct`，然後設定[m_hResFinalConstruct](#m_hresfinalconstruct)至`HRESULT`傳回`FinalConstruct`。 如果您有不衍生基底類別從[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，您必須提供自己`FinalConstruct`方法。 此解構函式會呼叫 `FinalRelease`。  
+ 呼叫`FinalConstruct`，然後設定[m_hResFinalConstruct](#m_hresfinalconstruct)所傳回的 HRESULT 來`FinalConstruct`。 如果您有不衍生的基底類別從[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，您必須提供您自己`FinalConstruct`方法。 此解構函式會呼叫 `FinalRelease`。  
   
 ##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  解構函式。  
@@ -118,14 +118,14 @@ CComObjectStack();
  釋放所有配置的資源並呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)。  
   
 ##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
- 包含`HRESULT`從呼叫傳回`FinalConstruct`在建構期間`CComObjectStack`物件。  
+ 包含從呼叫傳回的 HRESULT`FinalConstruct`的建構期間`CComObjectStack`物件。  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
 ##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
- 傳回**E_NOINTERFACE**。  
+ 傳回 E_NOINTERFACE。  
   
 ```
 HRESULT    QueryInterface(REFIID, void**)
@@ -133,7 +133,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**E_NOINTERFACE**。  
+ 傳回 E_NOINTERFACE。  
   
 ### <a name="remarks"></a>備註  
  在偵錯模式中，呼叫`_ASSERTE`。  
@@ -153,6 +153,6 @@ STDMETHOD_(ULONG, Release)();
   
 ## <a name="see-also"></a>另請參閱  
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
- [Ccomobject< 類別](../../atl/reference/ccomobject-class.md)   
+ [CComObject 類別](../../atl/reference/ccomobject-class.md)   
  [CComObjectGlobal 類別](../../atl/reference/ccomobjectglobal-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

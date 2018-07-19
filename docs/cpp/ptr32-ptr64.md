@@ -1,5 +1,5 @@
 ---
-title: __ptr32、 __ptr64 |Microsoft 文件
+title: __ptr32，__ptr64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704811"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941700"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 
 **Microsoft 專屬**
 
-`__ptr32` 代表 32 位元系統上的原生指標，而 `__ptr64` 代表 64 位元系統上的原生指標。
+**__ptr32**代表原生指標在 32 位元系統上，雖然 **__ptr64**代表 64 位元系統上的原生指標。
 
 下列範例將示範如何宣告每一個這些類型的指標：
 
@@ -42,14 +42,14 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- 在 32 位元系統上，使用 `__ptr64` 宣告的指標會截斷為 32 位元指標。 在 64 位元系統上，使用 `__ptr32` 宣告的指標會強制轉型為 64 位元指標。
+ 在 32 位元系統上，指標使用的宣告 **__ptr64**截斷為 32 位元指標。 在 64 位元系統上，指標使用的宣告 **__ptr32**會強制轉型為 64 位元指標。
 
 > [!NOTE]
-> 您無法使用`__ptr32`或`__ptr64`編譯時 **/clr: pure**。 否則，會產生編譯器錯誤 C2472。 **/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+> 您無法使用 **__ptr32**或是 **__ptr64**進行編譯時 **/clr: pure**。 否則，會產生編譯器錯誤 C2472。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 ## <a name="example"></a>範例
 
-下列範例將示範如何使用 `__ptr32` 和 `__ptr64` 關鍵字宣告和配置指標。
+下列範例示範如何宣告和配置與指標 **__ptr32**並 **__ptr64**關鍵字。
 
 ```cpp
 #include <cstdlib>

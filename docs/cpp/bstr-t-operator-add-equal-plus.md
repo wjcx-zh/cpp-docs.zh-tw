@@ -1,5 +1,5 @@
 ---
-title: '_bstr_t:: operator + =，+ |Microsoft 文件'
+title: '_bstr_t:: operator + =，+ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942691"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=、+
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  將字元附加至 `_bstr_t` 物件的結尾或串連兩個字串。  
   
@@ -33,44 +34,34 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator+=(  
-   const _bstr_t& s1   
-);  
-_bstr_t operator+(  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const char* s2,  
-   const _bstr_t& s1   
-);  
-friend _bstr_t operator+(  
-   const wchar_t* s3,  
-   const _bstr_t& s1   
-);  
+_bstr_t& operator+=( const _bstr_t& s1 );  
+_bstr_t operator+( const _bstr_t& s1 );  
+friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
+friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);  
 ```  
   
 #### <a name="parameters"></a>參數  
- *S1*  
+ *s1*  
  `_bstr_t` 物件。  
   
- *S2*  
+ *s2*  
  多位元組字串。  
   
- `s3`  
+ *s3*  
  Unicode 字串。  
   
 ## <a name="remarks"></a>備註  
  這些運算子會執行字串串連：  
   
--   **運算子 + = (***s1***)** 將附加至封裝中的字元`BSTR`的*s1*到這個物件封裝結尾`BSTR`.      
+-   **operator + = (***s1***)** 在封裝中的字元附加至`BSTR`的*s1*到這個物件封裝結尾`BSTR`.      
   
--   **operator + (***s1***)** 傳回新`_bstr_t`，藉由串連此物件的正確`BSTR`與*s1*。      
+-   **operator + (***s1***)** 傳回新`_bstr_t`，藉由串連此物件會形成`BSTR`與*s1*。      
   
--   **operator + (***s2***&#124;***s1***)** 傳回新`_bstr_t`，會串連起來所構成多位元組字串*s2*，轉換成 Unicode，與`BSTR`封裝在*s1*。          
+-   **operator + (***s2***&#124;***s1***)** 傳回新`_bstr_t`，會串連起來所構成多位元組字串*s2*轉換為 Unicode，與`BSTR`中所封裝*s1*。          
   
--   **operator + (** `s3` **，***s1***)** 傳回新`_bstr_t`Unicode 字串的串連，形成`s3`與`BSTR`封裝在*s1*。        
+-   **operator + (***s3* **，***s1***)** 傳回新`_bstr_t`，藉由串連 Unicode 字串格式*s3*具有`BSTR`中所封裝*s1*。        
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

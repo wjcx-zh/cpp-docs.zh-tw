@@ -1,5 +1,5 @@
 ---
-title: _ATL_COM_MODULE70 結構 |Microsoft 文件
+title: _ATL_COM_MODULE70 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255657"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883709"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 結構
-使用 COM 相關 ATL 中的程式碼  
+ATL 中的 COM 相關程式碼使用  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,22 +43,22 @@ struct _ATL_COM_MODULE70 {
   
 ## <a name="members"></a>成員  
  `cbSize`  
- 用來進行版本控制的結構大小。  
+ 結構，用來進行版本設定的大小。  
   
  `m_hInstTypeLib`  
- 類型程式庫，針對此模組控制代碼的執行個體。  
+ 型別程式庫，此模組控制代碼的執行個體。  
   
- **m_ppAutoObjMapFirst**  
+ `m_ppAutoObjMapFirst`  
  指出此模組的物件對應項目開頭的陣列元素的位址。  
   
- **m_ppAutoObjMapLast**  
- 指出此模組的物件對應項目結尾的陣列元素的位址。  
+ `m_ppAutoObjMapLast`  
+ 指出物件的對應項目，此模組結束陣列元素的位址。  
   
  `m_csObjMap`  
- 序列化物件的對應項目存取的重要區段。 供內部使用 atl。  
+ 將序列化物件的對應項目存取的重要區段。 供內部使用 ATL  
   
 ## <a name="remarks"></a>備註  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)定義為 typedef 的`_ATL_COM_MODULE70`。  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)定義為 _ATL_COM_MODULE70 的 typedef。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  

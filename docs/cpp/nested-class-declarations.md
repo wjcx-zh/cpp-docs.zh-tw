@@ -1,5 +1,5 @@
 ---
-title: 巢狀類別宣告 |Microsoft 文件
+title: 巢狀類別宣告 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942728"
 ---
 # <a name="nested-class-declarations"></a>巢狀類別宣告
 可以在某個類別的範圍內宣告另一個類別。 這種類別稱為「巢狀類別」。 巢狀類別被視為在封入類別的範圍內，可在該範圍內使用。 若要在直接封入範圍以外參考巢狀類別，則必須使用完整名稱。  
   
  下列範例顯示如何宣告巢狀類別：  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  巢狀類別宣告範圍可視性的例外是同時宣告類型名稱和向前宣告。  在這種情況下，向前宣告所宣告的類別名稱會在封入類別以外顯示，且其範圍定義為最小的封入非類別範圍。  例如:   
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -104,7 +105,7 @@ int main()
 ## <a name="member-functions-in-nested-classes"></a>巢狀類別中的成員函式  
  在巢狀類別中宣告的成員函式可以在檔案範圍中定義。 上一個範例可能已撰寫：  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- 在上述範例中，*限定類型名稱*語法用於宣告函式名稱。 該宣告：  
+ 在上述範例中，*限定類型名稱*語法用來宣告的函式名稱。 該宣告：  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- 表示「`read` 函式是 `BufferedInput` 類別的成員，而該類別在 `BufferedIO` 類別的範圍中」。 因為這個宣告會使用*限定類型名稱*語法中，可能會在下列形式的建構：  
+ 表示「`read` 函式是 `BufferedInput` 類別的成員，而該類別在 `BufferedIO` 類別的範圍中」。 因為這個宣告會使用*限定類型名稱*語法中，可能會建構下列形式：  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- 上述宣告等於前一個宣告，但此宣告使用 `typedef` 名稱取代類別名稱。  
+ 上述宣告等於前一個位置，但它會使用**typedef**名稱來取代類別名稱。  
   
 ## <a name="friend-functions-in-nested-classes"></a>巢狀類別中的 friend 函式  
  在巢狀類別中宣告的 friend 函式會被視為在巢狀類別的範圍內，而非封入類別的範圍內。 因此，friend 函式不會取得對封入類別之成員或成員函式的特殊存取權限。 如果您想要使用在 friend 函式的巢狀類別中宣告的名稱，而且 friend 函式是在檔案範圍中定義，請使用限定類型名稱，如下所示：  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  下列程式碼示範宣告為 friend 函式的 `GetExtendedErrorStatus` 函式。 在檔案範圍內定義的函式中，訊息會從靜態陣列複製到類別成員。 請注意，較理想的 `GetExtendedErrorStatus` 實作是將其宣告為：  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

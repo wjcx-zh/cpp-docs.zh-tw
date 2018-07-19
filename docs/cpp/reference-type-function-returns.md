@@ -1,5 +1,5 @@
 ---
-title: 參考類型函式傳回 |Microsoft 文件
+title: 參考類型函式傳回 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942664"
 ---
 # <a name="reference-type-function-returns"></a>參考類型函式傳回
 函式可宣告為傳回參考類型。 進行此類宣告有兩個原因：  
@@ -31,14 +32,14 @@ ms.lasthandoff: 05/03/2018
   
 -   傳回函式時，referred-to 物件不會超出範圍。  
   
- 就像它可以是傳遞大型物件比較有效率*至*函式所參考，它也可以更有效率的方式傳回大型物件*從*所參考的函式。 使用參考傳回通訊協定就不需要在傳回之前將物件複製到暫存位置。  
+ 它可能會更有效率傳遞大型物件一樣*要*所參考的函式，這也可能是更有效率的方式傳回大型物件*從*函式的參考。 使用參考傳回通訊協定就不需要在傳回之前將物件複製到暫存位置。  
   
- 當函式必須評估為左值時，參考傳回類型可能也會很有用。 大部分的多載運算子都屬於此類，特別是指派運算子。 中涵蓋多載運算子[多載運算子](../cpp/operator-overloading.md)。  
+ 當函式必須評估為左值時，參考傳回類型可能也會很有用。 大部分的多載運算子都屬於此類，特別是指派運算子。 多載運算子所述[多載運算子](../cpp/operator-overloading.md)。  
   
 ## <a name="example"></a>範例  
  請考量 `Point` 範例：  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  除了下列情況下之外，參考類型的宣告必須包含初始設定式：  
   
--   明確宣告 `extern`  
+-   明確**extern**宣告  
   
 -   類別成員的宣告  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>傳回區域變數位址注意事項  
  如果您宣告區域範圍的物件，則會在傳回函式時終結該物件。 如果函式傳回該物件的參考，則呼叫端嘗試使用 null 參考時，該參考可能會在執行階段造成存取違規。  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  

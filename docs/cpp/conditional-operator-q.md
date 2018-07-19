@@ -1,5 +1,5 @@
 ---
-title: '條件運算子： 嗎？ : |Microsoft 文件'
+title: '條件運算子:？ : |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 807754bb13f8302fe9583b6f4a8219e3aea81086
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 273572fd6ad79ba45ae2aabbf91296afd6e8308e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942867"
 ---
-# <a name="conditional-operator--"></a>條件運算子： 嗎？ :
+# <a name="conditional-operator--"></a>條件運算子:？ :
 ## <a name="syntax"></a>語法  
   
-```  
+``` 
   
 expression ? expression : expression  
-```  
+``` 
   
 ## <a name="remarks"></a>備註  
- 條件運算子 (**？:**) 是一種三元運算子 （它會採用三個運算元）。 條件運算子運作方式如下：  
+ 條件運算子 (**？:**) 是三元運算子 （它會採用三個運算元）。 條件運算子運作方式如下：  
   
--   第一個運算元會隱含轉換成 `bool`。 接著會對它進行評估，並且完成所有副作用，再繼續執行。  
+-   第一個運算元會隱含轉換成**bool**。 接著會對它進行評估，並且完成所有副作用，再繼續執行。  
   
--   如果第一個運算元判斷值為**true** (1)，會評估第二個運算元。  
+-   如果第一個運算元評估為 **，則為 true** (1)，會評估第二個運算元。  
   
--   如果第一個運算元判斷值為**false** (0)，會評估第三個運算元。  
+-   如果第一個運算元評估為**false** (0)，會評估第三個運算元。  
   
  條件運算子的結果會是所評估運算元 (也就是第二個或第三個運算元) 的結果。 在條件運算式中，只會評估後兩個運算元的其中一個。  
   
@@ -47,7 +48,7 @@ expression ? expression : expression
   
 -   如果這兩個運算元屬於相同類型，則結果為該類型。  
   
--   如果這兩個運算元都是算術或列舉類型，一般算術轉換 (涵蓋在[標準轉換](standard-conversions.md)) 會執行，以將它們轉換成一般類型。  
+-   如果兩個運算元都是算術或列舉類型，一般算術轉換 (涵蓋[標準轉換](standard-conversions.md)) 會執行，以將它們轉換成一般類型。  
   
 -   如果這兩個運算元都是指標類型，或者其中一個是指標類型，另一個是判斷值為 0 的常數運算式，則會進行指標轉換，將它們轉換成一般類型。  
   
@@ -66,7 +67,7 @@ expression ? expression : expression
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // expre_Expressions_with_the_Conditional_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate conditional operator  

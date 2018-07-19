@@ -1,5 +1,5 @@
 ---
-title: _set_com_error_handler |Microsoft 文件
+title: _set_com_error_handler |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341a2d7ee9f6220922dbdde95e19020fe085892
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942900"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  取代 COM 錯誤處理所使用的預設函式。  
   
@@ -37,23 +38,23 @@ void __stdcall _set_com_error_handler(
 ```  
   
 #### <a name="parameters"></a>參數  
- `pHandler`  
+ *pHandler*  
  取代函式的指標。  
   
- `hr`  
- `HRESULT` 資訊。  
+ *hr*  
+ HRESULT 資訊。  
   
- `perrinfo`  
+ *perrinfo*  
  `IErrorInfo` 物件  
   
 ## <a name="remarks"></a>備註  
- 根據預設， [_com_raise_error](../cpp/com-raise-error.md)處理所有 COM 錯誤。 您可以使用 `_set_com_error_handler` 呼叫您自己的錯誤處理函式來變更這個行為。  
+ 根據預設， [_com_raise_error](../cpp/com-raise-error.md)會處理所有 COM 錯誤。 您可以使用 `_set_com_error_handler` 呼叫您自己的錯誤處理函式來變更這個行為。  
   
  取代函式擁有的簽章必須相當於 `_com_raise_error` 的簽章。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // _set_com_error_handler.cpp  
 // compile with /EHsc  
 #include <stdio.h>  
@@ -95,7 +96,7 @@ Exception raised: Unable to establish the connection!
 ## <a name="requirements"></a>需求  
  **標頭：** \<comdef.h >  
   
- **Lib:** 如果**wchar_t 是原生類型**編譯器選項已開啟，請使用 comsuppw.lib 或 comsuppwd.lib。 如果**wchar_t 是原生類型**已關閉，請使用 comsupp.lib。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+ **Lib:** 如果**wchar_t 是原生型別**編譯器選項已開啟，請使用 comsuppw.lib 或 comsuppwd.lib。 如果**wchar_t 是原生型別**已關閉，請使用 comsupp.lib。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器 COM 全域函式](../cpp/compiler-com-global-functions.md)

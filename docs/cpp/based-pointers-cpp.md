@@ -1,5 +1,5 @@
 ---
-title: 基底指標 （c + +） |Microsoft 文件
+title: 基底指標 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cc2e45574d30ae1a544da78a4f7a75321a1156
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f24c2ad56f91be3ed413f6967e6e40749693fe1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942712"
 ---
 # <a name="based-pointers-c"></a>Based 指標 (C++)
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- `__based` 關鍵字可讓您以指標為基礎 (從現有指標位移的指標) 宣告指標。  
+ **__Based**關鍵字可讓您宣告指標 （會從現有指標位移的指標） 為基礎的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,11 +39,11 @@ type __based( base ) declarator
 ```  
   
 ## <a name="remarks"></a>備註  
- 以指標位址為基礎的指標是 `__based` 關鍵字在 32 位元或 64 位元編譯中有效的唯一形式。 對於 Microsoft 32 位元 C/C++ 編譯器，基底指標是來自 32 位元指標基底的 32 位元位移。 在 64 位元環境中保留了一個類似的限制，其中基底指標是來自 64 位元基底的 64 位元位移。  
+ 指標位址為基礎的指標都是唯一的形式 **__based**關鍵字在 32 位元或 64 位元編譯中有效。 對於 Microsoft 32 位元 C/C++ 編譯器，基底指標是來自 32 位元指標基底的 32 位元位移。 在 64 位元環境中保留了一個類似的限制，其中基底指標是來自 64 位元基底的 64 位元位移。  
   
  以指標為基礎之指標的其中一項用途，就是包含指標的持續性識別項。 以指標為基礎的指標所組成的連結清單可以儲存至磁碟，然後以仍然有效的指標重新載入至記憶體中的另一個位置。 例如:   
   
-```  
+```cpp 
 // based_pointers1.cpp  
 // compile with: /c  
 void *vpBuffer;  
@@ -55,16 +56,16 @@ struct llist_t {
  為指標 `vpBuffer` 所指派的記憶體位址，會在程式稍後的位置中進行配置。 連結清單會重新配置相對於 `vpBuffer` 的值。  
   
 > [!NOTE]
->  包含指標的持續性識別項也可以使用來完成[記憶體對應檔](http://msdn.microsoft.com/library/windows/desktop/aa366556)。  
+>  包含指標的持續性識別項也可藉由使用[記憶體對應檔案](http://msdn.microsoft.com/library/windows/desktop/aa366556)。  
   
  對基底指標取值時，該基底必須透過宣告明確指定或以隱含方式得知。  
   
- 為了與舊版中，相容 **_based**同義`__based`。  
+ 為了與舊版中，相容性 **_based**同義 **__based**。  
   
 ## <a name="example"></a>範例  
  下列程式碼示範如何變更其基底以變更基底指標。  
   
-```  
+```cpp 
 // based_pointers2.cpp  
 // compile with: /EHsc  
 #include <iostream>  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67a509c17558c7b388aa288612d73ea26062ec0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5338ddeb802d13d100e5e3026152793f866c90f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846658"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961021"
 ---
 # <a name="algorithms"></a>演算法
 
@@ -43,7 +43,7 @@ ms.locfileid: "33846658"
 
 - *X* - *Y* 這類運算式，其中 *X* 和 *Y* 可以是隨機存取迭代器以外的迭代器，用於數學領域。 函式在必須判斷這類值時不一定會評估 operator**-**。 這同樣也適用於 *X* + *N* 和 *X* - *N*，其中 *N* 是整數類型。
 
-有數種演算法使用會執行 pairwise 比較 (例如與 `operator==`) 的述詞來產生 `bool` 結果。 述詞函式 `operator==` (或任何替代項目) 不可變更其任一運算元。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。
+有數種演算法使用的述詞執行的成對比較，例如，使用`operator==`，以產生**bool**結果。 述詞函式 `operator==` (或任何替代項目) 不可變更其任一運算元。 它必須產生相同**bool**造成每次評估時，它必須產生相同的結果，如果任一個運算元的複本替代運算元。
 
 有數個演算法使用必須對序列中的元素配對強制執行嚴格弱式順序的述詞。 就述詞 `pr`(*X*, *Y*) 而言：
 
@@ -53,11 +53,11 @@ ms.locfileid: "33846658"
 
 - 排序表示 `pr`(*X*, *Y*) && `pr`(*Y*, Z) 意指 `pr`(*X*, Z)。
 
-其中有部分演算法會隱含地使用述詞 *X* \< *Y*。其他通常符合嚴格弱式排序需求的述詞包括 *X* > *Y*、**less**(*X*, *Y*) 和 `greater`(*X*, *Y*)。 但請注意，*X* \<= *Y* 和 *X* >= *Y* 之類的述詞並不符合此需求。
+其中有部分演算法會隱含地使用述詞 *X* \< *Y*。其他通常符合嚴格弱式排序需求的述詞包括*X* > *Y*， `less`(*X*， *Y*)，並`greater`(*X*， *Y*)。 但請注意，*X* \<= *Y* 和 *X* >= *Y* 之類的述詞並不符合此需求。
 
-迭代器在範圍 [`First`, `Last`) 中指定的一序列元素，會是依 operator**<** 排序的序列，前提是，對於範圍 [0, `Last` - `First`) 中的每個 *N*，以及範圍 (N, `Last` - `First`) 中的每個 *M*，述詞 !(\*(`First` + *M*) < \*(*First* + *N*)) 為 true。 (請注意，元素會以遞增順序排序)。述詞函式 **operator<** (或任何替代項目) 不可變更其任一運算元。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。 此外，它必須對它所比較的運算元強制執行嚴格弱式排序。
+迭代器在範圍 [`First`, `Last`) 中指定的一序列元素，會是依 operator**<** 排序的序列，前提是，對於範圍 [0, `Last` - `First`) 中的每個 *N*，以及範圍 (N, `Last` - `First`) 中的每個 *M*，述詞 !(\*(`First` + *M*) < \*(*First* + *N*)) 為 true。 (請注意，元素會以遞增順序排序)。述詞函式 `operator<` (或任何替代項目) 不可變更其任一運算元。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。 此外，它必須對它所比較的運算元強制執行嚴格弱式排序。
 
-迭代器在範圍 [`First`, `Last`) 中指定的一序列元素，會是依 **operator<** 排序的堆積，前提是，對於範圍 [1, `Last` - `First`) 中的每個 *N*述詞 !(\*`First` < \*(`First` + *N*)) 為 true。 (第一個元素最大。)其內部結構否則只有知道樣板函式[make_heap](../standard-library/algorithm-functions.md#make_heap)， [pop_heap](../standard-library/algorithm-functions.md#pop_heap)，和[push_heap](../standard-library/algorithm-functions.md#push_heap)。 與排序順序相同，述詞函式 **operator<** (或任何替代項目) 不可變更其任一運算元，且必須對它所比較的運算元強制執行嚴格弱式排序。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。
+迭代器範圍中所指定的元素序列 [`First`， `Last`) 的已排序的堆積`operator<`if、 每個*N*在範圍 [1， `Last`  -  `First`)述詞 ！(\*`First` < \*(`First` + *N*)) 為 true。 (第一個元素最大。)其內部結構否則只有知道範本函式[make_heap](../standard-library/algorithm-functions.md#make_heap)， [pop_heap](../standard-library/algorithm-functions.md#pop_heap)，並[push_heap](../standard-library/algorithm-functions.md#push_heap)。 與排序順序相同，述詞函式`operator<`，或任何替代項目，不可變更其任一運算元，且它必須強制執行嚴格弱式排序它所比較的運算元。 它必須產生相同**bool**造成每次評估時，它必須產生相同的結果，如果任一個運算元的複本替代運算元。
 
 C++ 標準程式庫演算法位於 [\<algorithm>](../standard-library/algorithm.md) 和 [\<numeric>](../standard-library/numeric.md) 標頭檔中。
 

@@ -1,5 +1,5 @@
 ---
-title: __uuidof 運算子 |Microsoft 文件
+title: __uuidof 運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942856"
 ---
 # <a name="uuidof-operator"></a>__uuidof 運算子
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  擷取附加至運算式的 GUID。  
   
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>備註  
- *運算式*可以是型別名稱、 指標、 參考或該類型的陣列，這些型別或這些類型的變數上的特製化樣板。 只要編譯器可以用它來尋找附加的 GUID，則引數有效。  
+ *運算式*可能型別名稱、 指標、 參考或該型別的陣列，這些類型或這些類型的變數上的特製化樣板。 只要編譯器可以用它來尋找附加的 GUID，則引數有效。  
   
- 這個內建特殊案例是當任一**0**或**NULL**提供做為引數。 在這種情況下，`__uuidof` 會傳回由零組成的 GUID。  
+ 此內建函式的特殊案例是當任一**0**或做為引數提供了 NULL。 在此情況下， **__uuidof**會傳回零組成的 GUID。  
   
  使用這個關鍵字擷取附加至下列項目的 GUID：  
   
 -   物件的[uuid](../cpp/uuid-cpp.md)擴充的屬性。  
   
--   使用建立的程式庫區[模組](../windows/module-cpp.md)屬性。  
+-   使用建立程式庫區塊[模組](../windows/module-cpp.md)屬性。  
   
 > [!NOTE]
->  在偵錯組建，`__uuidof` 永遠動態地初始化物件 (在執行階段)。 在發行組建中，`__uuidof` 可以靜態地 (在編譯時期) 初始化物件。  
+>  在偵錯組建中， **__uuidof**一律會初始化物件以動態方式 （在執行階段）。 在發行組建，而 **__uuidof**可以靜態 （在編譯時期） 初始化物件。  
   
 ## <a name="example"></a>範例  
  下列程式碼 (以 ole32.lib 編譯) 會顯示以模組屬性所建立之程式庫區塊的 uuid：  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,13 +76,13 @@ int main() {
 ```  
   
 ## <a name="comments"></a>註解  
- 在範圍中不會再為程式庫名稱的情況下，您可以使用 __LIBID\_而不是`__uuidof`。 例如:   
+ 在範圍中不再是程式庫名稱的情況下，您可以使用`__LIBID_`而非 **__uuidof**。 例如:   
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   

@@ -1,5 +1,5 @@
 ---
-title: CComMultiThreadModel 類別 |Microsoft 文件
+title: CComMultiThreadModel 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89af8507150ee708ad381be2d47201c9266f763
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364538"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880501"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 類別
-`CComMultiThreadModel` 提供具備執行緒安全的方法來遞增和遞減變數的值。  
+`CComMultiThreadModel` 提供安全執行緒方法遞增和遞減變數的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +58,7 @@ class CComMultiThreadModel
 |[CComMultiThreadModel::Increment](#increment)|（靜態）以執行緒安全的方式遞增指定變數的值。|  
   
 ## <a name="remarks"></a>備註  
- 通常，您會使用`CComMultiThreadModel`透過下列其中兩個`typedef`名稱，其中一個 [CComObjectThreadModel] (atl typedefs.md #ccomobjectthreadmodel 或 [CComGlobalsThreadModel] (atl typedefs.md #ccomglobalsthreadmodel。 每個參考類別`typedef`取決於使用的執行緒模型下, 表所示：  
+ 一般而言，您可以使用`CComMultiThreadModel`透過其中兩個**typedef**名稱，其中一個 [CComObjectThreadModel] (atl typedefs.md #ccomobjectthreadmodel 或 [CComGlobalsThreadModel] (atl typedefs.md #ccomglobalsthreadmodel。 每個參考的類別**typedef**取決於執行緒模型，如下表所示：  
   
 |typedef|單一執行緒處理|Apartment 執行緒|無限制執行緒|  
 |-------------|----------------------|-------------------------|--------------------|  
@@ -67,20 +67,20 @@ class CComMultiThreadModel
   
  S = `CComSingleThreadModel`;M = `CComMultiThreadModel`  
   
- `CComMultiThreadModel` 本身定義三個`typedef`名稱。 `AutoCriticalSection` 和`CriticalSection`參考提供方法來取得及釋放關鍵區段的擁有權的類別。 `ThreadModelNoCS` 參考類別 [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md)。  
+ `CComMultiThreadModel` 本身會定義三個**typedef**名稱。 `AutoCriticalSection` 和`CriticalSection`參考類別，可提供方法取得和釋放重要區段的擁有權。 `ThreadModelNoCS` 參考類別 [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
 ##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection  
- 當使用`CComMultiThreadModel`、`typedef`名稱`AutoCriticalSection`參考類別[CComAutoCriticalSection](ccomautocriticalsection-class.md)，可提供方法取得和釋放重要區段物件的擁有權。  
+ 使用時`CComMultiThreadModel`，則**typedef**名稱`AutoCriticalSection`參考類別[CComAutoCriticalSection](ccomautocriticalsection-class.md)，這會提供方法，來取得和釋放重要區段的擁有權物件。  
   
 ```
 typedef CComAutoCriticalSection AutoCriticalSection;
 ```  
   
 ### <a name="remarks"></a>備註  
- [CComSingleThreadModel](ccomsinglethreadmodel-class.md)和[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)也包含定義`AutoCriticalSection`。 下表顯示執行緒模型類別所參考的重要區段類別之間的關聯性`AutoCriticalSection`:  
+ [CComSingleThreadModel](ccomsinglethreadmodel-class.md)並[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)也包含定義`AutoCriticalSection`。 下表顯示執行緒的模型類別所參考的關鍵區段類別之間的關聯性`AutoCriticalSection`:  
   
 |在定義類別|參考類別|  
 |----------------------|----------------------|  
@@ -88,10 +88,10 @@ typedef CComAutoCriticalSection AutoCriticalSection;
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|  
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|  
   
- 除了`AutoCriticalSection`，您可以使用`typedef`名稱[CriticalSection](#criticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要排除 CRT 啟始程式碼中。  
+ 除了`AutoCriticalSection`，您可以使用**typedef**名稱[CriticalSection](#criticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要消除 CRT 啟始程式碼中。  
   
 ### <a name="example"></a>範例  
- 下列程式碼會建立模型之後[CComObjectRootEx](ccomobjectrootex-class.md)，並示範`AutoCriticalSection`執行緒環境中使用。  
+ 下列程式碼仿造[CComObjectRootEx](ccomobjectrootex-class.md)，並示範`AutoCriticalSection`執行緒環境中使用。  
   
 
 ```cpp  
@@ -120,31 +120,31 @@ private:
    LONG m_dwRef;
 ```  
   
- 下表顯示的結果`InternalAddRef`和`Lock`方法，取決於**ThreadModel**樣板參數和應用程式所使用的執行緒模型：  
+ 下表顯示的結果`InternalAddRef`並`Lock`方法，取決於`ThreadModel`樣板參數和應用程式所使用的執行緒模型：  
   
 ### <a name="threadmodel--ccomobjectthreadmodel"></a>ThreadModel = CComObjectThreadModel  
   
-|方法|使用 single 或 Apartment 執行緒|無限制執行緒|  
+|方法|單一或 Apartment 執行緒|無限制執行緒|  
 |------------|-----------------------------------|--------------------|  
-|`InternalAddRef`|增量不具備執行緒安全。|增量是安全執行緒。|  
-|`Lock`|沒有任何作用。沒有任何鎖定的重要區段。|關鍵區段已鎖定。|  
+|`InternalAddRef`|增量不具備執行緒安全。|的增量是安全執行緒。|  
+|`Lock`|沒有任何作用;沒有任何鎖定的重要區段。|已鎖定重要區段。|  
   
 ### <a name="threadmodel--ccomobjectthreadmodelthreadmodelnocs"></a>ThreadModel = CComObjectThreadModel::ThreadModelNoCS  
   
-|方法|使用 single 或 Apartment 執行緒|無限制執行緒|  
+|方法|單一或 Apartment 執行緒|無限制執行緒|  
 |------------|-----------------------------------|--------------------|  
-|`InternalAddRef`|增量不具備執行緒安全。|增量是安全執行緒。|  
-|`Lock`|沒有任何作用。沒有任何鎖定的重要區段。|沒有任何作用。沒有任何鎖定的重要區段。|  
+|`InternalAddRef`|增量不具備執行緒安全。|的增量是安全執行緒。|  
+|`Lock`|沒有任何作用;沒有任何鎖定的重要區段。|沒有任何作用;沒有任何鎖定的重要區段。|  
   
 ##  <a name="criticalsection"></a>  CComMultiThreadModel::CriticalSection  
- 當使用`CComMultiThreadModel`、`typedef`名稱`CriticalSection`參考類別[CComCriticalSection](ccomcriticalsection-class.md)，可提供方法取得和釋放重要區段物件的擁有權。  
+ 使用時`CComMultiThreadModel`，則**typedef**名稱`CriticalSection`參考類別[CComCriticalSection](ccomcriticalsection-class.md)，這會提供方法，來取得和釋放重要區段物件的擁有權。  
   
 ```
 typedef CComCriticalSection CriticalSection;
 ```  
   
 ### <a name="remarks"></a>備註  
- [CComSingleThreadModel](ccomsinglethreadmodel-class.md)和[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)也包含定義`CriticalSection`。 下表顯示執行緒模型類別所參考的重要區段類別之間的關聯性`CriticalSection`:  
+ [CComSingleThreadModel](ccomsinglethreadmodel-class.md)並[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)也包含定義`CriticalSection`。 下表顯示執行緒的模型類別所參考的關鍵區段類別之間的關聯性`CriticalSection`:  
   
 |在定義類別|參考類別|  
 |----------------------|----------------------|  
@@ -152,56 +152,56 @@ typedef CComCriticalSection CriticalSection;
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|  
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|  
   
- 除了`CriticalSection`，您可以使用`typedef`名稱[AutoCriticalSection](#autocriticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要排除 CRT 啟始程式碼中。  
+ 除了`CriticalSection`，您可以使用**typedef**名稱[AutoCriticalSection](#autocriticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要消除 CRT 啟始程式碼中。  
   
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)。  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- 此靜態函式會呼叫 Win32 函式[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，變數的值所指向的遞減`p`。  
+ 此靜態函式會呼叫 Win32 函式[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，變數的值所指向的遞減*p*。  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  [in]要遞減之變數的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果遞減的結果為 0，則`Decrement`傳回 0。 如果遞減的結果為非零，傳回值也為非零，但可能不等於遞減的結果。  
+ 如果遞減的結果是 0，則`Decrement`會傳回 0。 如果是非零值的遞減結果，傳回值也為非零值，但可能不等於遞減的結果。  
   
 ### <a name="remarks"></a>備註  
- **InterlockedDecrement**防止多個執行緒同時使用此變數。  
+ `InterlockedDecrement` 防止多個執行緒同時使用此變數。  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- 此靜態函式會呼叫 Win32 函式[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，其中變數所指向的值遞增`p`。  
+ 此靜態函式會呼叫 Win32 函式[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，這會遞增變數所指向的值*p*。  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  [in]要遞增之變數的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果增量的結果為 0，則**遞增**傳回 0。 如果增量的結果為非零，傳回值也為非零值，但可能不會等於增量的結果。  
+ 如果增量的結果是 0，則`Increment`會傳回 0。 如果增量的結果為非零值，傳回的值也是零，但可能不會等於增量的結果。  
   
 ### <a name="remarks"></a>備註  
- **InterlockedIncrement**防止多個執行緒同時使用此變數。  
+ `InterlockedIncrement` 防止多個執行緒同時使用此變數。  
   
 ##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS  
- 當使用`CComMultiThreadModel`、`typedef`名稱`ThreadModelNoCS`參考類別[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)。  
+ 使用時`CComMultiThreadModel`，則**typedef**名稱`ThreadModelNoCS`參考類別[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)。  
   
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```  
   
 ### <a name="remarks"></a>備註  
- `CComMultiThreadModelNoCS` 提供安全執行緒方法遞增和遞減的變數。不過，它不提供重要區段。  
+ `CComMultiThreadModelNoCS` 遞增和遞減變數，提供安全執行緒方法不過，它不會提供重要的區段。  
   
- [CComSingleThreadModel](ccomsinglethreadmodel-class.md)和`CComMultiThreadModelNoCS`也包含定義`ThreadModelNoCS`。 下表顯示執行緒模型類別所參考類別之間的關聯性`ThreadModelNoCS`:  
+ [CComSingleThreadModel](ccomsinglethreadmodel-class.md)並`CComMultiThreadModelNoCS`也包含定義`ThreadModelNoCS`。 下表顯示執行緒的模型類別與所參考的類別之間的關聯性`ThreadModelNoCS`:  
   
 |在定義類別|參考類別|  
 |----------------------|----------------------|  

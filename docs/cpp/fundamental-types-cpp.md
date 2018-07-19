@@ -1,5 +1,5 @@
 ---
-title: 基本類型 （c + +） |Microsoft 文件
+title: 基本類型 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -53,17 +53,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d91971b7d96b09fe1fd0d14a2a711f7771503a6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417323"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941472"
 ---
 # <a name="fundamental-types--c"></a>基本類型 (C++)
 C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料類型能夠處理整數。 浮點類型可以指定可能有小數部分的值。  
   
- [void](../cpp/void-cpp.md) 類型描述一組空值。 不可以指定 `void` 類型的變數 -- 該類型主要是用來宣告沒有傳回值的函式，或是將泛型指標宣告為不具類型或任意具類型的資料。 所有運算式都可以明確轉換或轉型為類型 `void`。 不過，這類運算式僅限於下列用法：  
+ [void](../cpp/void-cpp.md) 類型描述一組空值。 任何類型的變數**void**可以指定 — 它主要用來宣告沒有傳回值的函式或宣告泛型指標不具類型或任意具型別資料。 任何運算式可以明確地轉換或轉型為**void**。 不過，這類運算式僅限於下列用法：  
   
 -   運算陳述式 (如需詳細資訊，請參閱 [運算式](../cpp/expressions-cpp.md))。  
   
@@ -77,19 +77,19 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
   
 |分類|類型|內容|  
 |--------------|----------|--------------|  
-|整數|`char`|`char` 類型是通常包含基本執行字元集成員的整數類資料類型；根據預設，這是 Microsoft C++ 中的 ASCII。<br /><br /> C++ 編譯器會將類型為 `char`, `signed` `char`和 `unsigned` `char` 的變數視為具有不同的類型。 除非使用 /J 編譯選項，否則會將 `char` 類型的變數提升為 `int` ，就如同這些變數已預設為 `signed` `char` 類型一樣。 在這種情況下，會將這些變數視為 `unsigned` `char` 類型，並提升為不帶正負號的 `int` 。|  
-||`bool`|`bool` 類型是可以具有 `true` 或 `false`兩個值之一的整數類資料類型。 它的大小並未指定。|  
-||`short`|`short` `int` (或只是 `short`) 類型是大於或等於 `char`類型大小，但短於或等於 `int`類型大小的整數類資料類型。<br /><br /> `short` 類型的物件可以宣告為 `signed` `short` 或 `unsigned short`。 `Signed short` 與 `short`同義。|  
-||`int`|`int` 類型是大於或等於 `short` `int`類型大小，但短於或等於 `long`類型大小的整數類資料類型。<br /><br /> `int` 類型的物件可以宣告為 `signed` `int` 或 `unsigned` `int`。 `Signed` `int` 與 `int`同義。|  
-||`__int8`、 `__int16`、 `__int32`、 `__int64`|可調整大小的整數 `__int n`，其中 `n` 是整數變數的大小 (以位元為單位)。 `__int8`、 `__int16`、 `__int32` 和 `__int64` 是 Microsoft 特定的關鍵字。 並非所有類型都都適用於所有架構。 `(__int128` 不支援。）|  
-||`long`|`long` (或 `long` `int`) 類型是大於或等於 `int`類型大小的整數類資料類型。<br /><br /> `long` 類型的物件可以宣告為 `signed` `long` 或 `unsigned` `long`。 `Signed` `long` 與 `long`同義。|  
-||`long` `long`|大於不帶正負號的 `long`。<br /><br /> `long long` 類型的物件可以宣告為 `signed` `long long` 或 `unsigned` `long long`。 `signed` `long long` 是的同義字`long long`。|  
-||`wchar_t`, `__wchar_t`|`wchar_t` 類型的變數指定寬字元或多位元組字元類型。 根據預設， `wchar_t` 是原生類型，但是您可以使用 [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ，將 `wchar_t` 設為 `unsigned short`的 typedef。 `__wchar_t` 是 Microsoft 特定的類型，與原生 `wchar_t` 類型同義。<br /><br /> 在字元或字串常數之前使用 L 前置詞，指定寬字元類型。|  
-|浮點|`float`|`float` 類型是最小的浮點類型。|  
-||`double`|`double` 類型是大於或等於 `float`類型，但短於或等於 `long` `double`類型大小的浮點類型。<br /><br /> Microsoft 特定的： `long double` 和 `double` 的表示法相同。 不過， `long double` 和 `double` 是不同的類型。|  
-||`long double`|`long` `double` 類型是大於或等於 `double`類型的浮點類型。|  
+|整數|**char**|型別**char**是整數類資料類型通常包含基本執行字元集的成員 — 根據預設，這是 Microsoft c + + 中的 ASCII。<br /><br /> C + + 編譯器會將類型的變數**char**， **char&lt;3**，並**unsigned char**為具有不同的型別。 類型的變數**char**升級到**int**彷彿它們是型別**char&lt;3**根據預設，除非使用 /J 編譯選項。 在此情況下則會視為型別**unsigned char**並且升級到**int**不帶正負。|  
+||**bool**|型別**bool**是整數類資料類型可以有兩個值的其中一個 **，則為 true**或是**false**。 它的大小並未指定。|  
+||**short**|型別**short int** (簡稱**簡短**) 是大於或等於類型大小的整數類資料型別**char**，但短於或等於類型大小的**int**。<br /><br /> 類型的物件**簡短**可以宣告為**帶正負號短**或是**unsigned short**。 **帶正負號短**同義**簡短**。|  
+||**int**|型別**int**大於或等於類型大小的整數類資料類型**short int**，但短於或等於類型大小**長**。<br /><br /> 類型的物件**int**可以宣告為**帶正負號 int**或是**不帶正負號的 int**。**帶正負號 int**同義**int**。|  
+||**__int8**， **__int16**， **__int32**， **__int64**|可調整大小的整數 `__int n`，其中 `n` 是整數變數的大小 (以位元為單位)。 **__int8**， **__int16**， **__int32**並 **__int64**是 Microsoft 專有的關鍵字。 並非所有類型都都適用於所有架構。 (**__int128**不支援。)|  
+||**long**|型別**長**(或**long int**) 是大於或等於類型大小的整數類資料型別**int**。<br /><br /> 類型的物件**長**可以宣告為**帶正負號長**或是**不帶正負號長**。 **帶正負號長**同義**長**。|  
+||**long long**|大於不帶正負號**長**。<br /><br /> 類型的物件**長長**可以宣告為**簽署 long long**或**unsigned long long**。 **帶正負號長長**同義**long long**。|  
+||**wchar_t**， **__wchar_t**|類型的變數**wchar_t**指定寬字元或多位元組字元類型。 根據預設， **wchar_t**原生類型，但您可以使用[/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)進行**wchar_t** typedef **unsigned short**。 **__Wchar_t**類型是原生 Microsoft 特有同義字**wchar_t**型別。<br /><br /> 在字元或字串常數之前使用 L 前置詞，指定寬字元類型。|  
+|浮點|**float**|型別**浮點數**是最小的浮點類型。|  
+||**double**|型別**雙**浮點數類型是大於或等於**float**，但短於或等於類型大小**長雙精度**。<br /><br /> Microsoft 專有： 的表示法**長雙精度**並**double**完全相同。 不過，**長雙精度**並**double**是不同的類型。|  
+||**long double**|型別**長雙精度**是浮動點類型是大於或等於**double**。|  
   
- **Microsoft 特定的**  
+ **Microsoft 專屬**  
   
  下表列出 Microsoft C++ 的基本類型所需的儲存空間量。  
   
@@ -97,12 +97,12 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
   
 |類型|大小|  
 |----------|----------|  
-|`bool`、 `char`、 `unsigned char`、 `signed char`、 `__int8`|1 個位元組|  
-|`__int16`、 `short`、 `unsigned short`、 `wchar_t`、 `__wchar_t`|2 個位元組|  
-|`float`、 `__int32`、 `int`、 `unsigned int`、 `long`、 `unsigned long`|4 個位元組|  
-|`double`、 `__int64`、 `long double`、 `long long`|8 個位元組|  
+|**bool**， **char**， **unsigned char**， **char&lt;3**， **__int8**|1 個位元組|  
+|**__int16**，**簡短**， **unsigned short**， **wchar_t**， **__wchar_t**|2 個位元組|  
+|**浮點數**， **__int32**， **int**，**不帶正負號的 int**， **long**，**不帶正負號長時間**|4 個位元組|  
+|**雙精度浮點**， **__int64**，**長雙精度**， **long long**|8 個位元組|  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
  如需每個類型值範圍的摘要，請參閱 [資料類型範圍](../cpp/data-type-ranges.md) 。  
   

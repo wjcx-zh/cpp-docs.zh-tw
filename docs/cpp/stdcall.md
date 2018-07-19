@@ -1,5 +1,5 @@
 ---
-title: __stdcall |Microsoft 文件
+title: __stdcall |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422666"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939841"
 ---
 # <a name="stdcall"></a>__stdcall
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- `__stdcall` 呼叫慣例用於呼叫 Win32 API 函式。 被呼叫端會清除堆疊，因此編譯器會建立**vararg**函式`__cdecl`。 使用這個呼叫慣例的函式需要函式原型。  
+ **__Stdcall**呼叫慣例用於呼叫 Win32 API 函式。 被呼叫端會清除堆疊，因此編譯器會建立**vararg**函式 **__cdecl**。 使用這個呼叫慣例的函式需要函式原型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ return-type __stdcall function-name[(argument-list)]
 ## <a name="remarks"></a>備註  
  下列清單會顯示這個呼叫慣例的實作。  
   
-|項目|實作|  
+|元素|實作|  
 |-------------|--------------------|  
 |引數傳遞順序|由右至左。|  
 |引數傳遞慣例|以傳值方式，除非傳遞指標或參考類型。|  
@@ -46,11 +46,11 @@ return-type __stdcall function-name[(argument-list)]
 |名稱裝飾慣例|名稱前面會加底線 (_)。 名稱後面加上 @ 符號，再接著引數清單中的位元組數目 (十進位)。 因此，宣告為 `int func( int a, double b )` 的函式會裝飾為如下：`_func@12`|  
 |大小寫轉譯慣例|無|  
   
- [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會指定`__stdcall`所有未以不同呼叫慣例明確宣告的函式。  
+ [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會指定 **__stdcall**所有未明確宣告為具有不同呼叫慣例的函式。  
   
- 使用宣告的函式`__stdcall`修飾詞的傳回值做為使用宣告的函式的相同方式[__cdecl](../cpp/cdecl.md)。  
+ 使用宣告的函式 **__stdcall**修飾詞的傳回值做為使用宣告的函式的相同方式[__cdecl](../cpp/cdecl.md)。  
   
- 在 ARM 和 x64 處理器上，編譯器會接受並忽略 `__stdcall` 關鍵字；在 ARM 和 x64 結構上，依照慣例，引數會盡可能在暫存器中傳遞，而後續引數會在堆疊上傳遞。  
+ 在 ARM 和 x64 處理器 **__stdcall**會接受並忽略編譯器; 在 ARM 和 x64 架構，依照慣例，引數會傳入暫存器，如果可能的話，和在堆疊上傳遞後續的引數。  
   
  對於非靜態類別函式，如果函式是以非正規的方式定義，則不需要在非正規定義上指定呼叫慣例修飾詞。 也就是說，對於類別非靜態成員方法而言，宣告時所指定的呼叫慣例是在定義時假設。 如果已指定此類別定義，  
   
@@ -73,7 +73,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>範例  
- 在下列範例中，使用 __**stdcall**會導致所有`WINAPI`函式類型被當成標準呼叫處理：  
+ 在下列範例中，使用 __**stdcall**造成所有`WINAPI`函式類型被當成標準呼叫處理：  
   
 ```cpp  
 // Example of the __stdcall keyword  

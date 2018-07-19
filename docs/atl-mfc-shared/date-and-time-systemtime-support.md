@@ -1,5 +1,5 @@
 ---
-title: 日期和時間： SYSTEMTIME 支援 |Microsoft 文件
+title: 日期和時間： SYSTEMTIME 支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355396"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883563"
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和時間： SYSTEMTIME 支援
-[CTime](../atl-mfc-shared/reference/ctime-class.md)類別具有建構函式會接受從 Win32 系統及檔案時間。 如果您使用 `CTime` 物件來進行這些目的，則必須相應地修改其初始化，如本文章所述。  
+[CTime](../atl-mfc-shared/reference/ctime-class.md)類別具有建構函式會接受來自 Win32 的系統及檔案時間。 如果您使用 `CTime` 物件來進行這些目的，則必須相應地修改其初始化，如本文章所述。  
   
  SYSTEMTIME 結構的詳細資訊，請參閱[SYSTEMTIME](../mfc/reference/systemtime-structure1.md)。 FILETIME 結構的詳細資訊，請參閱[FILETIME](../mfc/reference/filetime-structure.md)。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "32355396"
   
 -   CTime (const FILETIME&AMP; & `fileTime`);  
   
- `fileTime` 參數是對 Win32 `FILETIME` 結構的參考，後者以 64 位元的值來代表時間，這種格式比 `SYSTEMTIME` 結構更方便用於內部儲存，也是 Win32 用來代表檔案建立時間的格式。  
+ *FileTime*參數是 Win32 的參考`FILETIME`結構，用來表示時間為 64 位元值時，更方便的格式進行內部儲存比`SYSTEMTIME`結構和 Win32 來所使用的格式代表檔案建立時間。  
   
  如果您的程式碼包含以系統時間初始化的 `CTime` 物件，則您應該使用 Win32 中的 `SYSTEMTIME` 建構函式。  
   
- 您很可能不會使用`CTime``FILETIME`直接初始化。 如果您使用`CFile`物件來操作檔案、 [Getstatus](../mfc/reference/cfile-class.md#getstatus)透過擷取檔案時間戳記`CTime`物件使用初始化`FILETIME`結構。  
+ 您很可能不會使用`CTime``FILETIME`直接初始化。 如果您使用`CFile`物件來管理檔案， [Cfile](../mfc/reference/cfile-class.md#getstatus)讓您透過擷取檔案時間戳記`CTime`物件初始化`FILETIME`結構。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [一般日期與時間程式設計，在 MFC 中](../atl-mfc-shared/date-and-time.md)  
   

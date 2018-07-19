@@ -1,5 +1,5 @@
 ---
-title: IRunnableObjectImpl 類別 |Microsoft 文件
+title: IRunnableObjectImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a08fec0fd38e30729c9131def1831e5e5d8f633e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a98456d3d7d0d2e4600267a81151c44e38993c5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364111"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885577"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl 類別
-這個類別會實作**IUnknown**和提供的預設實作[IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面。  
+這個類別會實作`IUnknown`，並提供的預設實作[IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ class IRunnableObjectImpl
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IRunnableObjectImpl`。  
   
 ## <a name="members"></a>成員  
@@ -56,14 +56,14 @@ class IRunnableObjectImpl
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|傳回執行中控制項的 CLSID。 ATL 實作設定的 CLSID`GUID_NULL`並傳回**E_UNEXPECTED**。|  
-|[IRunnableObjectImpl::IsRunning](#isrunning)|決定控制項是否正在執行。 ATL 實作會傳回**TRUE**。|  
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|鎖定控制項進入執行狀態。 ATL 實作會傳回`S_OK`。|  
-|[IRunnableObjectImpl::Run](#run)|強制執行控制項。 ATL 實作會傳回`S_OK`。|  
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|表示控制項內嵌。 ATL 實作會傳回`S_OK`。|  
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|傳回執行控制項的 CLSID。 ATL 實作設 GUID_NULL 的 CLSID，並傳回 E_UNEXPECTED。|  
+|[IRunnableObjectImpl::IsRunning](#isrunning)|判斷控制項是否正在執行。 ATL 實作會傳回 TRUE。|  
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|鎖定控制項進入執行狀態。 ATL 實作會傳回 S_OK。|  
+|[IRunnableObjectImpl::Run](#run)|強制執行控制項。 ATL 實作會傳回 S_OK。|  
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|表示控制項內嵌。 ATL 實作會傳回 S_OK。|  
   
 ## <a name="remarks"></a>備註  
- [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面可讓容器判斷是否執行控制項、 強制執行，或鎖定進入執行狀態。 類別`IRunnableObjectImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面可讓容器，以判斷控制項是否正在執行，強制執行，或鎖定進入執行狀態。 類別`IRunnableObjectImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -76,27 +76,27 @@ class IRunnableObjectImpl
  **標頭：** atlctl.h  
   
 ##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass  
- 傳回執行中控制項的 CLSID。  
+ 傳回執行控制項的 CLSID。  
   
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- ATL 實作集\* *lpClsid*至`GUID_NULL`並傳回**E_UNEXPECTED**。  
+ ATL 實作集合\* *lpClsid* GUID_NULL，然後傳回 E_UNEXPECTED。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) Windows SDK 中。  
   
 ##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
- 決定控制項是否正在執行。  
+ 判斷控制項是否正在執行。  
   
 ```
 virtual BOOL IsRunning();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- ATL 實作會傳回**TRUE**。  
+ ATL 實作會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) Windows SDK 中。  
@@ -109,7 +109,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- ATL 實作會傳回`S_OK`。  
+ ATL 實作會傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) Windows SDK 中。  
@@ -122,7 +122,7 @@ HRESULT Run(LPBINDCTX lpbc);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- ATL 實作會傳回`S_OK`。  
+ ATL 實作會傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) Windows SDK 中。  
@@ -135,7 +135,7 @@ HRESULT SetContainedObject(BOOL fContained);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- ATL 實作會傳回`S_OK`。  
+ ATL 實作會傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IRunnableObject::SetContainedObject](http://msdn.microsoft.com/library/windows/desktop/ms693710) Windows SDK 中。  

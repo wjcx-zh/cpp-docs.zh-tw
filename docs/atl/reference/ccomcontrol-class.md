@@ -1,5 +1,5 @@
 ---
-title: CComControl 類別 |Microsoft 文件
+title: CComControl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,18 +29,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365544"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883446"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
-這個類別會提供方法來建立及管理 ATL 的控制項。  
+這個類別提供方法來建立及管理 ATL 的控制項。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,11 +51,11 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  實作控制項的類別。  
   
  *WinBase*  
- 實作視窗化函式的基底類別。 預設為[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。  
+ 實作視窗化函式的基底類別。 預設值為[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。  
   
 ## <a name="members"></a>成員  
   
@@ -72,13 +72,13 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|擷取所要求介面的指標。|  
 |[CComControl::CreateControlWindow](#createcontrolwindow)|建立控制項的視窗。|  
 |[CComControl::FireOnChanged](#fireonchanged)|通知容器接收已變更的控制項屬性。|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|控制項屬性即將變更和物件要如何繼續執行已要求接收通知的容器接收。|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|控制項屬性即將變更，而且物件會要求接收器要如何繼續進行，請通知容器的接收。|  
 |[CComControl::MessageBox](#messagebox)|呼叫這個方法來建立、 顯示和操作訊息方塊。|  
   
 ## <a name="remarks"></a>備註  
- `CComControl` 是一組很有用的 helper 函式和 ATL 的控制項的必要資料成員。 當您建立標準控制項或 DHTML 控制項使用 ATL 控制項精靈時，精靈會自動衍生您的類別，從`CComControl`。 `CComControl` 衍生大部分從其方法[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)。  
+ `CComControl` 是一組實用的控制項 helper 函式和 ATL 的控制項的基本資料成員。 當您建立標準控制項或 DHTML 控制項使用 ATL 控制項精靈時，精靈會自動衍生您的類別，從`CComControl`。 `CComControl` 衍生大部分的方法從[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)。  
   
- 如需有關建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。 如需 ATL 專案精靈的詳細資訊，請參閱文章[ATL 專案建立](../../atl/reference/creating-an-atl-project.md)。  
+ 如需建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。 如需 ATL 專案精靈 的詳細資訊，請參閱文章[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)。  
   
  如需示範`CComControl`方法和資料成員，請參閱[CIRC](../../visual-cpp-samples.md)範例。  
   
@@ -110,34 +110,34 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ```  
   
 ### <a name="parameters"></a>參數  
- `iid`  
+ *iid*  
  [in]所要求介面的 GUID。  
   
- `ppv`  
- [out]所識別的介面指標的指標`iid`，或**NULL**如果找不到介面。  
+ *ppv*  
+ [out]所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 只處理 COM 對應表格中的介面。  
+ 只會處理 COM 對應表格中的介面。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
- 根據預設，會建立控制項的視窗呼叫`CWindowImpl::Create`。  
+ 根據預設，建立控制項的視窗呼叫`CWindowImpl::Create`。  
   
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hWndParent`  
- [in]父系或擁有者視窗的控制代碼。 必須提供有效的視窗控制代碼。 [控制] 視窗會侷限於其父視窗的區域。  
+ *hWndParent*  
+ [in]父系或擁有者的視窗控制代碼。 必須提供有效的視窗控制代碼。 [控制] 視窗會侷限於其父視窗的區域。  
   
- `rcPos`  
+ *rcPos*  
  [in]初始大小和位置來建立視窗。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個方法，如果您想要執行某個動作以外建立的單一視窗中，例如，若要建立兩個視窗，其中會變成工具列控制項。  
+ 如果您想要執行一些動作，請覆寫此方法以外建立的單一視窗，比方說，若要建立兩個視窗，其中會變成工具列控制項。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如果您的控制項類別衍生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，這個方法會呼叫[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有連接`IPropertyNotifySink`介面指定的控制項屬性已變更。 如果您的控制項類別不是衍生自`IPropertyNotifySink`，這個方法會傳回`S_OK`。 
+ 如果您的控制項類別衍生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，這個方法會呼叫[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有連線`IPropertyNotifySink`介面指定的控制項屬性已變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。 
   
  這個方法可以安全地呼叫，即使您的控制項不支援連接點。  
   
@@ -165,7 +165,7 @@ HRESULT FireOnChanged(DISPID dispID);
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
- 控制項屬性即將變更和物件要如何繼續執行已要求接收通知的容器接收。  
+ 控制項屬性即將變更，而且物件會要求接收器要如何繼續進行，請通知容器的接收。  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如果您的控制項類別衍生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，這個方法會呼叫[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有連接`IPropertyNotifySink`介面指定控制項屬性即將變更。 如果您的控制項類別不是衍生自`IPropertyNotifySink`，這個方法會傳回`S_OK`。  
+ 如果您的控制項類別衍生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，這個方法會呼叫[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有連線`IPropertyNotifySink`介面指定控制項屬性即將變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。  
 
   
  這個方法可以安全地呼叫，即使您的控制項不支援連接點。  
@@ -198,20 +198,20 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
+ *lpszText*  
  要在訊息方塊中顯示的文字。  
   
- `lpszCaption`  
- 對話方塊的標題。 如果 NULL （預設值），使用 「 錯誤 」 的標題。  
+ *lpszCaption*  
+ 對話方塊的標題。 如果 NULL （預設值），在使用 「 錯誤 」 的標題。  
   
- `nType`  
- 指定的內容和對話方塊的行為。 請參閱[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)清單的 Windows SDK 文件可用的不同的訊息方塊中的項目。 預設值提供簡單**確定** 按鈕。  
+ *n*  
+ 指定的內容和對話方塊的行為。 請參閱[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)清單的 Windows SDK 文件可用的不同的訊息方塊中的項目。 預設提供的簡單**確定** 按鈕。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回整數值，指定底下所列的功能表項目值的其中一個[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 文件中。  
+ 傳回整數值，指定之下所列的功能表項目值的其中一個[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 文件。  
   
 ### <a name="remarks"></a>備註  
- `MessageBox` 在開發期間，以輕鬆地向使用者顯示的錯誤或警告訊息，則會很有用。  
+ `MessageBox` 同時在開發期間，以及輕鬆地向使用者顯示錯誤或警告訊息，則會很有用。  
   
 ## <a name="see-also"></a>另請參閱  
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   

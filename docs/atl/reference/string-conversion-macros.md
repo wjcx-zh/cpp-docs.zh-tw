@@ -1,5 +1,5 @@
 ---
-title: 字串轉換巨集 |Microsoft 文件
+title: 字串轉換巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362971"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885151"
 ---
 # <a name="string-conversion-macros"></a>字串轉換巨集
 
@@ -34,11 +34,11 @@ ms.locfileid: "32362971"
  
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL 和 MFC 字串轉換巨集
 
-這裡討論的字串轉換巨集對於 ATL 及 MFC 而言都有效。 如需 MFC 字串轉換的詳細資訊，請參閱[TN059： 使用的 MFC MBCS/Unicode 轉換巨集](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)和[MFC 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
+這裡討論的字串轉換巨集對於 ATL 及 MFC 而言都有效。 如需有關 MFC 字串轉換的詳細資訊，請參閱[TN059： 使用的 MFC MBCS/Unicode 轉換巨集](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)並[MFC 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE 和 TEXTMETRIC 字串轉換巨集
 
-這些巨集建立一份[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)或[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)結構，並將新的結構中的字串轉換成新的字串類型。 巨集在堆疊上的記憶體配置新的結構，並將指標傳回至新的結構。  
+這些巨集建立一份[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)或是[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)結構，並將新的結構內的字串轉換成新的字串類型。 巨集為新的結構配置堆疊上的記憶體，並將指標傳回至新的結構。  
   
 ```cpp
 MACRONAME( address_of_structure )
@@ -54,15 +54,15 @@ MACRONAME( address_of_structure )
   
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
-巨集名稱，來源結構中的字串類型會在左邊 (比方說， **A**)，且目的地結構中的字串類型在右側 (比方說， **W**)。 **A**代表`LPSTR`， **OLE**代表`LPOLESTR`， **T**代表`LPTSTR`，和**W**代表`LPWSTR`。  
+左邊，在巨集名稱 中，是來源結構中的字串類型 (例如**A**) 和目的地結構中的字串類型會在右側 (比方說， **W**)。 **A** LPSTR，代表**OLE** LPOLESTR，代表**T**代表 LPTSTR，和**W**代表 LPWSTR。  
   
-因此， **DEVMODEA2W**複本`DEVMODE`結構和`LPSTR`字串至`DEVMODE`結構和`LPWSTR`字串**TEXTMETRICOLE2T**複製`TEXTMETRIC`結構和`LPOLESTR`字串至`TEXTMETRIC`結構和`LPTSTR`字串，等等。  
+DEVMODEA2W 因此，複製`DEVMODE`LPSTR 結構字串到`DEVMODE`結構的字串 LPWSTR TEXTMETRICOLE2T 複本`TEXTMETRIC`LPOLESTR 結構字串到`TEXTMETRIC`結構和 LPTSTR 字串等等。  
   
-轉換中的兩個字串`DEVMODE`結構是裝置名稱 (`dmDeviceName`) 和表單名稱 (`dmFormName`)。 `DEVMODE`字串轉換巨集也會更新的結構大小 (`dmSize`)。  
+轉換中的兩個字串`DEVMODE`結構是裝置名稱 (`dmDeviceName`) 和表單名 (`dmFormName`)。 `DEVMODE`字串轉換巨集也會更新的結構大小 (`dmSize`)。  
   
 轉換中的四個字串`TEXTMETRIC`結構是第一個字元 (`tmFirstChar`)，最後一個字元 (`tmLastChar`)，預設的字元 (`tmDefaultChar`)，和符號字元 (`tmBreakChar`)。
   
-行為`DEVMODE`和`TEXTMETRIC`字串轉換巨集取決於編譯器中的指示詞效果，如果有的話。 如果來源與目的類型相同，則不會發生轉換。 編譯器指示詞變更**T**和**OLE** ，如下所示：  
+行為`DEVMODE`和`TEXTMETRIC`字串轉換巨集取決於編譯器中的指示詞的效果，如果有的話。 如果來源與目的類型相同，則不會發生轉換。 變更編譯器指示詞**T**並**OLE** ，如下所示：  
   
 |作用中的編譯器指示詞|T 變為|OLE 變為|  
 |----------------------------------|---------------|-----------------|  
@@ -75,10 +75,10 @@ MACRONAME( address_of_structure )
   
 |||  
 |-|-|  
-|`DEVMODEA2W`|`TEXTMETRICA2W`|  
-|`DEVMODEOLE2T`|`TEXTMETRICOLE2T`|  
-|`DEVMODET2OLE`|`TEXTMETRICT2OLE`|  
-|`DEVMODEW2A`|`TEXTMETRICW2A`|  
+|DEVMODEA2W|TEXTMETRICA2W|  
+|DEVMODEOLE2T|TEXTMETRICOLE2T|  
+|DEVMODET2OLE|TEXTMETRICT2OLE|  
+|DEVMODEW2A|TEXTMETRICW2A|  
 
 ## <a name="see-also"></a>另請參閱
 

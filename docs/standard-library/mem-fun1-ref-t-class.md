@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852360"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960826"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 類別
 
-配接器類別，可允許將接受單一引數的 **non_const** 成員函式在以參考引數初始化時，當作二元函式物件來呼叫。
+配接器類別，可讓`non_const`接受單一引數時，當作二元函式物件以參考引數初始化呼叫成員函式。
 
 ## <a name="syntax"></a>語法
 
@@ -44,11 +44,11 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>參數
 
-`_Pm` 類別成員函式的指標**類型**轉換成函式物件。
+*_Pm*類別的成員函式的指標`Type`轉換成函式物件。
 
-`left` 物件，`_Pm`上呼叫成員函式。
+*左*物件所 *_Pm*上呼叫成員函式。
 
-`right` 引數指定給`_Pm`。
+*右*所指定的引數 *_Pm*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -56,7 +56,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ## <a name="remarks"></a>備註
 
-此範本類別會在私用成員物件中儲存一份 `_Pm` 的複本，這必須是 **Type** 類別之成員函式的指標。 它會定義其成員函式`operator()`為傳回 (**左**。\*`_Pm`) (**右**)。
+此範本類別會儲存一份 *_Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會定義其成員函式`operator()`做為傳回 (**左**。\*`_Pm`) (**右**)。
 
 ## <a name="example"></a>範例
 

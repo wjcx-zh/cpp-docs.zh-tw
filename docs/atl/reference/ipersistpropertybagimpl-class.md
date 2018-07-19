@@ -1,5 +1,5 @@
 ---
-title: IPersistPropertyBagImpl 類別 |Microsoft 文件
+title: IPersistPropertyBagImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f214a112c1baedd507a9eeeca02e955aeceedd3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363427"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879211"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 類別
-這個類別會實作**IUnknown** ，並可讓用戶端提供的屬性包以儲存其屬性的物件。  
+這個類別會實作`IUnknown`，可讓用戶端提供的屬性包以儲存其屬性的物件。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IPersistPropertyBagImpl`。  
   
 ## <a name="members"></a>成員  
@@ -52,14 +52,14 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |名稱|描述|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|初始化新建立的物件。 ATL 實作會傳回`S_OK`。|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|初始化新建立的物件。 ATL 實作會傳回 S_OK。|  
 |[IPersistPropertyBagImpl::Load](#load)|從用戶端提供的屬性包中載入物件的屬性。|  
-|[IPersistPropertyBagImpl::Save](#save)|將物件的屬性儲存到用戶端提供的屬性包。|  
+|[IPersistPropertyBagImpl::Save](#save)|將物件的屬性儲存到用戶端提供的屬性包中。|  
   
 ## <a name="remarks"></a>備註  
- [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)介面可讓用戶端提供的屬性包以儲存其屬性的物件。 類別`IPersistPropertyBagImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)介面可讓用戶端提供的屬性包以儲存其屬性的物件。 類別`IPersistPropertyBagImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
- **IPersistPropertyBag**可搭配[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)和[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)。 用戶端必須實作這些後者的兩個介面。 透過`IPropertyBag`，用戶端會將儲存並載入物件的個別屬性。 透過**IErrorLog**，物件與用戶端可以報告遇到的任何錯誤。  
+ `IPersistPropertyBag` 可搭配[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)並[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)。 用戶端必須實作這些後者的兩個介面。 透過`IPropertyBag`，用戶端儲存及載入物件的個別屬性。 透過`IErrorLog`，物件與用戶端可以報告遇到的任何錯誤。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
+ 請參閱[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
 ##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
  初始化新建立的物件。  
@@ -89,7 +89,7 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 `S_OK`。  
+ 傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK 中。  
@@ -107,7 +107,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
  請參閱[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) Windows SDK 中。  
   
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save  
- 將物件的屬性儲存到用戶端提供的屬性包。  
+ 將物件的屬性儲存到用戶端提供的屬性包中。  
   
 ```
 STDMETHOD(Save)(
@@ -117,7 +117,7 @@ STDMETHOD(Save)(
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 會使用物件的屬性對應儲存這項資訊。 根據預設，這個方法會儲存所有屬性的值為何*fSaveAllProperties*。  
+ ATL 會使用物件的屬性對應來儲存這項資訊。 根據預設，這個方法會儲存所有屬性的值為何*fSaveAllProperties*。  
   
  請參閱[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK 中。  
   

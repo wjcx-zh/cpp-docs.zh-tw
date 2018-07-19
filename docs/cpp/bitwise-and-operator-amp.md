@@ -1,5 +1,5 @@
 ---
-title: 位元 AND 運算子： &amp; |Microsoft 文件
+title: 位元 AND 運算子： &amp; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942647"
 ---
 # <a name="bitwise-and-operator-amp"></a>位元 AND 運算子： &amp;
+
 ## <a name="syntax"></a>語法  
   
-```  
-  
-expression   
-&  
- expression  
-  
-```  
+```
+
+expression & expression  
+
+```
   
 ## <a name="remarks"></a>備註  
  運算式可以是其他 and 運算式或 (受限於如下所述的限制) 相等的運算式、關聯運算式，加法運算式、乘法運算式、成員運算式的指標、cast 運算式、一元運算式、後置運算式或主要運算式。  
   
- 位元 AND 運算子 (**&**) 比較的第二個運算元的對應位元的第一個運算元的每個位元。 如果兩個位元皆為 1，則對應的結果位元會設為 1。 否則，對應結果位元會設為 0。  
+ 位元的 AND 運算子 (**&**) 比較的第二個運算元的對應位元的第一個運算元的每個位元。 如果兩個位元皆為 1，則對應的結果位元會設為 1。 否則，對應結果位元會設為 0。  
   
  位元 AND 運算子的兩個運算元都必須為整數類型。 中涵蓋的一般算術轉換[標準轉換](standard-conversions.md)，適用於這些運算元。  
   
 ## <a name="operator-keyword-for-"></a>運算子關鍵字 （& s)  
- `bitand`運算子相當於文字的**&**。 有兩種方式來存取`bitand`您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
+ **Bitand**運算子是相等的文字**&**。 有兩種方式來存取**bitand**在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // expre_Bitwise_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate bitwise AND  

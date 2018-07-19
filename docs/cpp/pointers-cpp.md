@@ -1,5 +1,5 @@
 ---
-title: 指標 （c + +） |Microsoft 文件
+title: 指標 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942863"
 ---
 # <a name="pointers-c"></a>指標 （c + +）
 指標是使用下列序列宣告。  
@@ -39,25 +40,25 @@ ms.lasthandoff: 05/03/2018
   
  1. 宣告指定名稱：  
   
--   選擇性的儲存類別規範。 如需詳細資訊，請參閱[規範](../cpp/specifiers.md)。  
+    - 選擇性的儲存類別規範。 如需詳細資訊，請參閱 <<c0> [ 規範](../cpp/specifiers.md)。  
   
--   選擇性套用至將指向之物件類型的 `const` 或 `volatile` 關鍵字。  
+    - 選擇性**const**或是**volatile**關鍵字套用至將指向的物件型別。  
   
--   類型指定名稱：表示將指向之物件類型的類型名稱。  
+    - 類型指定名稱：表示將指向之物件類型的類型名稱。  
   
  2. 宣告子：  
   
--   選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
+    - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
   
--   `*` 運算子。  
+    - `*` 運算子。  
   
--   選擇性套用至指標本身的 `const` 或 `volatile` 關鍵字。  
+    - 選擇性**const**或是**volatile**關鍵字套用至指標本身。  
   
--   識別碼。  
+    - 識別碼。  
   
--   選擇性的初始設定式。  
+    - 選擇性的初始設定式。  
   
- 函式指標的宣告子如下所示：  
+     函式指標的宣告子如下所示：  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ ms.lasthandoff: 05/03/2018
   
  指標宣告的簡單範例如下：  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- 上述宣告中將 `pch` 指定為指向類型為 `char` 的物件。  
+ 上述宣告會指定`pch`指向的物件型別的**char**。  
   
  較複雜的範例為：  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- 上述宣告中指定`ptr`為常數指標類型的物件`unsigned``int`有靜態儲存期。  
+ 上述宣告會指定`ptr`是常數指標類型的物件**不帶正負號** **int**具有靜態儲存期。  
   
  下列範例顯示如何宣告及初始化多個指標：  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- 上述範例中，指標 p 和 q 皆指向類型為 `int` 的物件，並分別初始化為 i 和 j 的位址。  兩個指標皆會套用儲存類別指定名稱 `static`。  
+ 在上述範例中，指標 p 和 q 皆指向類型的物件**int**並分別初始化為 i 和 j 的位址。  儲存類別規範**靜態**適用於這兩個指標。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>範例  
  另一個範例示範如何在資料結構中使用指標，此例中為連結清單。  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

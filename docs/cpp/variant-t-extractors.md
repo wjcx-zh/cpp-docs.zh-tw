@@ -1,5 +1,5 @@
 ---
-title: _variant_t 擷取器 |Microsoft 文件
+title: _variant_t 擷取器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,17 +58,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a8480a645728808ef4eae7a42c5080313d9fc6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423314"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940341"
 ---
 # <a name="variantt-extractors"></a>_variant_t 擷取器
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 從封裝擷取資料**VARIANT**物件。  
+ 資料擷取封裝`VARIANT`物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -95,7 +95,7 @@ operator unsigned __int64() const;
 ```  
   
 ## <a name="remarks"></a>備註  
- 從封裝中擷取未經處理資料**VARIANT**。 如果**VARIANT**還不適當的類型， **VariantChangeType**使用嘗試進行轉換，而且在失敗時產生的錯誤：  
+ 從封裝擷取未經處理資料`VARIANT`。 如果`VARIANT`已經是不是適當的類型，`VariantChangeType`用來嘗試轉換，而且在失敗時產生的錯誤：  
   
 -   **運算子 short （)** 擷取**簡短**整數值。  
   
@@ -105,21 +105,21 @@ operator unsigned __int64() const;
   
 -   **運算子 double （)** 擷取**double**整數值。  
   
--   **運算子 CY （）** 擷取**CY**物件。  
+-   **運算子 CY （）** 擷取`CY`物件。  
   
--   **運算子 bool （)** 擷取`bool`值。  
+-   **運算子 bool （)** 擷取**bool**值。  
   
--   **運算子 DECIMAL （）** 擷取**十進位**值。  
+-   **運算子 DECIMAL （）** 擷取`DECIMAL`值。  
   
--   **運算子 BYTE （）** 擷取**位元組**值。  
+-   **運算子 BYTE （）** 擷取`BYTE`值。  
   
--   **運算子 _bstr_t （)** 擷取封裝在字串`_bstr_t`物件。  
+-   **運算子 _bstr_t （)** 擷取的字串，會封裝在`_bstr_t`物件。  
   
--   **運算子 IDispatch\*（)** 從封裝擷取分配介面指標**VARIANT**。 `AddRef` 呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
+-   **運算子 IDispatch\*（)** 從封裝擷取分配介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。  
   
--   **運算子 IUnknown\*（)** 從封裝擷取 COM 介面指標**VARIANT**。 `AddRef` 呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
+-   **運算子 IUnknown\*（)** 從封裝擷取 COM 介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

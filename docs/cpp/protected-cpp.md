@@ -1,5 +1,5 @@
 ---
-title: 受保護 （c + +） |Microsoft 文件
+title: protected （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be866cda09ddc1770cf8d4b1ac0433e3c2701520
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b01c2f9ec4fa48cd2f11bd4176110384c1f8d288
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942652"
 ---
 # <a name="protected-c"></a>protected (C++)
 ## <a name="syntax"></a>語法  
@@ -33,7 +34,7 @@ protected base-class
 ```  
   
 ## <a name="remarks"></a>備註  
- `protected`關鍵字會指定在類別成員的存取權*成員清單*到下一個存取規範 (**公用**或`private`) 或類別定義結尾。 宣告為 `protected` 的類別成員只能用於下列各項：  
+ **保護**關鍵字會指定存取中的類別成員*成員清單*到下一個存取規範 (**公用**或**私用**) 或類別定義結尾。 類別成員宣告為**保護**可用只能由下列：  
   
 -   原本宣告這些成員之類別的成員函式。  
   
@@ -43,25 +44,25 @@ protected base-class
   
 -   直接以 private 方式衍生的類別，這些類別也具有對 protected 成員的 private 存取權限。  
   
- `protected` 關鍵字加在基底類別的名稱前面時，會將基底類別的 public 和 protected 成員指定為其衍生類別的 protected 成員。  
+ 當基底類別，在名稱前面**保護**關鍵字會指定基底類別的 public 和 protected 成員是其衍生類別的 protected 的成員。  
   
- 受保護的成員是不一樣為私用`private`成員，只有其宣告，但這些不是做為公用類別的成員才能存取**公用**會員，也就是在任何函式中存取。  
+ 受保護的成員並不是做為私用**私人**成員，也就是只在其中宣告它們，但它們不是做為公用類別的成員可以存取**公用**中可存取的成員任何函式。  
   
- 受保護的成員也宣告為**靜態**可存取衍生任何的類別 friend 或成員函式。 受保護的成員不是宣告為**靜態**friend 和成員函式只能透過指標、 參考或衍生類別的物件在衍生類別中存取。  
+ 受保護的成員，也會宣告為**靜態**存取衍生任何的類別 friend 或成員函式。 Protected 成員未宣告為可**靜態**存取朋友和衍生類別只能透過指標、 參考或衍生類別中的物件中的成員函式。  
   
  如需相關資訊，請參閱[friend](../cpp/friend-cpp.md)，[公用](../cpp/public-cpp.md)，[私人](../cpp/private-cpp.md)，和中的成員存取表[控制對類別成員存取](member-access-control-cpp.md).  
   
 ## <a name="clr-specific"></a>/clr 專屬資訊  
- 在 CLR 類型中，c + + 存取規範關鍵字 (**公用**， `private`，和`protected`) 可能會影響的可見性的型別和組件方面的方法。 如需詳細資訊，請參閱[成員存取控制](member-access-control-cpp.md)。  
+ 在 CLR 類型中，c + + 存取指定名稱關鍵字 (**公用**，**私人**，和**保護**) 可能會影響型別和方法在組件方面的可見性。 如需詳細資訊，請參閱 <<c0> [ 成員存取控制](member-access-control-cpp.md)。  
   
 > [!NOTE]
->  與已編譯的檔案[/LN](../build/reference/ln-create-msil-module.md)不會受到這個行為。 在這種情況下，所有 Managed 類別 (public 或 private) 都會是可見。  
+>  使用檔案編譯[/LN](../build/reference/ln-create-msil-module.md)不會受到這個行為。 在這種情況下，所有 Managed 類別 (public 或 private) 都會是可見。  
   
 ## <a name="end-clr-specific"></a>/clr 專屬資訊結束  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // keyword_protected.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -94,5 +95,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [控制對類別成員存取](member-access-control-cpp.md)   
+ [控制對類別成員的存取](member-access-control-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)

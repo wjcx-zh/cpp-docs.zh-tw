@@ -1,5 +1,5 @@
 ---
-title: 命名空間 （c + +） |Microsoft 文件
+title: 命名空間 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2017
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423672"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941180"
 ---
 # <a name="namespaces-c"></a>命名空間 (C++)
-命名空間是提供其內識別項 (類型、函式、變數等的名稱) 範圍的宣告式區域。 命名空間用來將程式碼組織成邏輯群組，以及防止特別在程式碼基底包含多個程式庫時可能會發生的名稱衝突。 在命名空間範圍的所有識別項都可以看得到彼此，沒有限制。 命名空間外部的識別項可以使用完整的名稱，每個識別項，例如存取成員`std::vector<std::string> vec;`，或藉由[using 宣告](../cpp/using-declaration.md)單一識別項 (`using std::string`)，或[using 指示詞](../cpp/namespaces-cpp.md#using_directives)針對命名空間中的所有識別項 (`using namespace std;`)。 標頭檔中的程式碼應該一律使用完整命名空間名稱。  
+命名空間是提供其內識別項 (類型、函式、變數等的名稱) 範圍的宣告式區域。 命名空間用來將程式碼組織成邏輯群組，以及防止特別在程式碼基底包含多個程式庫時可能會發生的名稱衝突。 在命名空間範圍的所有識別項都可以看得到彼此，沒有限制。 命名空間以外的識別項可以利用完整的名稱，為每個識別碼，例如存取成員`std::vector<std::string> vec;`，或是藉由[using 宣告](../cpp/using-declaration.md)針對以單一識別項 (`using std::string`)，或[using 指示詞](../cpp/namespaces-cpp.md#using_directives)命名空間中的所有識別項 (`using namespace std;`)。 標頭檔中的程式碼應該一律使用完整命名空間名稱。  
   
  下列範例顯示一個命名空間宣告，以及命名空間外部的程式碼可以存取其成員的三種方式。  
   
@@ -74,7 +74,7 @@ Func(mgr);
 ```  
   
 ## <a id="using_directives"></a> using 指示詞  
- `using`指示詞可讓中的所有名稱**命名空間**沒有*命名空間名稱*做為明確限定詞。 使用 using 指示詞在實作檔 (也就是 *.cpp) 如果您使用數個不同的識別項中的命名空間。如果您只使用一個或兩個識別項，然後考慮使用 using 宣告只這些識別項帶入範圍並不是所有的識別項命名空間中。 如果區域變數的名稱和命名空間變數相同，命名空間變數將會隱藏。 命名空間變數的名稱與全域變數名稱相同，會產生錯誤。  
+ **使用**指示詞允許在所有名稱**命名空間**而不用*命名空間名稱*做為明確限定詞。 使用 using 指示詞在實作檔 (亦即 *.cpp) 如果您在命名空間中; 使用數個不同的識別項如果您只要使用一個或兩個識別項，請考慮使用只有這些識別項帶入範圍並不是所有識別項命名空間中的宣告。 如果區域變數的名稱和命名空間變數相同，命名空間變數將會隱藏。 命名空間變數的名稱與全域變數名稱相同，會產生錯誤。  
   
 > [!NOTE]
 >  using 指示詞可以放在 .cpp 檔案頂端 (在檔案範圍中) 或是類別或函式定義內。  
@@ -95,7 +95,7 @@ namespace ContosoDataServer
 }  
 ```  
   
- 即使您放置在 contosodata.cpp 函式實作應該使用完整限定的名稱，`using`指示詞檔案的頂端：  
+ 在 contosodata.cpp 函式實作應該使用完整限定的名稱，即使您將`using`指示詞在檔案頂端：  
   
 ```cpp  
 #include "contosodata.h"  
@@ -112,7 +112,7 @@ int ContosoDataServer::Bar(){return 0;}
   
  命名空間可以宣告在單一檔案的多個區塊中以及多個檔案中。 編譯器會在前置處理期間將組件加在一起，而產生的命名空間包含所有組件中宣告的所有成員。 其中一個範例是標準程式庫之每個標頭檔中所宣告的 std 命名空間。  
   
- 具名命名空間的成員可以明確定義的名稱限定所宣告的命名空間外部定義。 不過，定義必須出現在命名空間中含括宣告之命名空間的宣告位置後面。 例如:   
+ 具名命名空間的成員可以定義命名空間外部的外顯的限定性條件所定義的名稱來宣告它們。 不過，定義必須出現在命名空間中含括宣告之命名空間的宣告位置後面。 例如:   
   
 ```cpp  
 // defining_namespace_members.cpp  
@@ -133,7 +133,7 @@ namespace V {
  如果跨多個標頭檔宣告命名空間成員，而且您尚未以正確的順序包括這些標頭，則會發生此錯誤。  
   
 ## <a name="the-global-namespace"></a>全域命名空間  
- 如果明確命名空間中未宣告識別項，則它是隱含全域命名空間的一部分。 一般情況下，嘗試避免進行宣告，在全域範圍，如果可能的話，除了的進入點[main 函式](../c-language/main-function-and-program-execution.md)，所需全域命名空間中。 若要明確限定全域識別項，請使用沒有名稱的範圍解析運算子 (如在 `::SomeFunction(x);` 中)。 這會區分識別項與任何其他命名空間中具有相同名稱的任何項目，也有助於讓其他人容易了解您的程式碼。  
+ 如果明確命名空間中未宣告識別項，則它是隱含全域命名空間的一部分。 一般情況下，嘗試避免進行宣告，在全域範圍，可能的話，請進入點除外[main 函式](../c-language/main-function-and-program-execution.md)，這必要項目會在全域命名空間。 若要明確限定全域識別項，請使用沒有名稱的範圍解析運算子 (如在 `::SomeFunction(x);` 中)。 這會區分識別項與任何其他命名空間中具有相同名稱的任何項目，也有助於讓其他人容易了解您的程式碼。  
   
 ## <a name="the-std-namespace"></a>std 命名空間  
  所有 c + + 標準程式庫類型和函式中宣告`std`命名空間或命名空間巢狀方式置於`std`。  
@@ -275,7 +275,7 @@ namespace
 }  
 ```  
   
- 這稱為未命名或匿名命名空間，而且您想要讓其他檔案中的變數宣告看不到程式碼時很有用 （也就是提供其內部連結） 而不需要建立具名命名空間。 相同檔案中的所有程式碼都可以看到未命名的命名空間中的識別項，但在該檔案外部 (或更精確地來說是外部轉譯單位) 看不到識別碼以及命名空間本身。  
+ 這稱為未命名或匿名命名空間，以及您想要在其他檔案中看不到程式碼的變數宣告時，它會很有用 （也就是提供其內部連結） 而不需要建立具名命名空間。 相同檔案中的所有程式碼都可以看到未命名的命名空間中的識別項，但在該檔案外部 (或更精確地來說是外部轉譯單位) 看不到識別碼以及命名空間本身。  
   
 ## <a name="see-also"></a>另請參閱  
  [宣告和定義](declarations-and-definitions-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: CCRTHeap 類別 |Microsoft 文件
+title: CCRTHeap 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83655bddfb56bdd0e532b520b2389278e3fbd762
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68c99d1ef7b28a9325d59db2144be11fa63cc99f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363842"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883043"
 ---
 # <a name="ccrtheap-class"></a>CCRTHeap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 CRT 堆積函式。  
@@ -44,15 +44,15 @@ class CCRTHeap : public IAtlMemMgr
 |名稱|描述|  
 |----------|-----------------|  
 |[Ccrtheap:: Allocate](#allocate)|呼叫這個方法來配置記憶體區塊。|  
-|[Ccrtheap:: Free](#free)|呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。|  
-|[CCRTHeap::GetSize](#getsize)|呼叫這個方法，取得配置此記憶體管理員所配置的記憶體區塊的大小。|  
+|[Ccrtheap:: Free](#free)|呼叫這個方法來釋放此記憶體管理員所配置的記憶體區塊。|  
+|[CCRTHeap::GetSize](#getsize)|呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。|  
 |[Ccrtheap:: Reallocate](#reallocate)|呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。|  
   
 ## <a name="remarks"></a>備註  
- `CCRTHeap` 實作記憶體配置函式使用 CRT 堆積函式，包括[malloc](../../c-runtime-library/reference/malloc.md)，[可用](../../c-runtime-library/reference/free.md)， [realloc](../../c-runtime-library/reference/realloc.md)，和[_msize](../../c-runtime-library/reference/msize.md)。  
+ `CCRTHeap` 實作記憶體配置函式使用 CRT 堆積函式，包括[malloc](../../c-runtime-library/reference/malloc.md)，[免費](../../c-runtime-library/reference/free.md)， [realloc](../../c-runtime-library/reference/realloc.md)，以及[_msize](../../c-runtime-library/reference/msize.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
+ 範例，請參閱[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IAtlMemMgr`  
@@ -70,40 +70,40 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nBytes`  
+ *nBytes*  
  在新記憶體區塊中要求的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
  傳回新配置記憶體區塊開頭的指標。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[ccrtheap:: Free](#free)或[ccrtheap:: Reallocate](#reallocate)釋放這個方法所配置的記憶體。  
+ 呼叫[ccrtheap:: Free](#free)或是[ccrtheap:: Reallocate](#reallocate)釋放這個方法所配置的記憶體。  
   
  使用實作[malloc](../../c-runtime-library/reference/malloc.md)。  
   
 ##  <a name="free"></a>  Ccrtheap:: Free  
- 呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。  
+ 呼叫這個方法來釋放此記憶體管理員所配置的記憶體區塊。  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
- 此記憶體管理員先前所配置之記憶體的指標。 NULL 是有效的值，且不做任何動作。  
+ *p*  
+ 此記憶體管理員先前所配置之記憶體的指標。 NULL 是有效的值，且沒有任何作用。  
   
 ### <a name="remarks"></a>備註  
- 使用實作[可用](../../c-runtime-library/reference/free.md)。  
+ 使用實作[免費](../../c-runtime-library/reference/free.md)。  
   
 ##  <a name="getsize"></a>  CCRTHeap::GetSize  
- 呼叫這個方法，取得配置此記憶體管理員所配置的記憶體區塊的大小。  
+ 呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  此記憶體管理員先前所配置之記憶體的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -120,10 +120,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  此記憶體管理員先前所配置之記憶體的指標。  
   
- `nBytes`  
+ *nBytes*  
  在新記憶體區塊中要求的位元組數目。  
   
 ### <a name="return-value"></a>傳回值  

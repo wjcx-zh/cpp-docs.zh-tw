@@ -1,5 +1,5 @@
 ---
-title: 初始設定式 |Microsoft 文件
+title: 初始設定式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424302"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939856"
 ---
 # <a name="initializers"></a>初始設定式
 初始設定式指定變數的初始值。 您可以初始化下列內容中的變數：  
@@ -124,8 +124,8 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a> 預設值初始化  
- 類別、結構和等位的預設初始化是使用預設建構函式的初始化。 可以呼叫沒有初始化運算式或具有 `new` 關鍵字的預設建構函式：  
+### <a name="default_initialization"></a> 預設初始化  
+ 類別、結構和等位的預設初始化是使用預設建構函式的初始化。 可以呼叫預設建構函式，或未使用初始化運算式**新**關鍵字：  
   
 ```cpp  
 MyClass mc1;  
@@ -180,7 +180,7 @@ int main() {
 }  
 ```  
   
- 如需全域靜態物件初始化的詳細資訊，請參閱[其他啟動考量](../cpp/additional-startup-considerations.md)。  
+ 如需全域靜態物件初始化的詳細資訊，請參閱 <<c0> [ 其他啟動考量](../cpp/additional-startup-considerations.md)。  
   
 ### <a name="value-initialization"></a>值初始化  
  在下列情況下，會發生值初始化：  
@@ -189,7 +189,7 @@ int main() {
   
 -   使用空括號或大括號初始化匿名暫存物件。  
   
--   使用 `new` 關鍵字加上空括號或大括號初始化物件。  
+-   物件初始化**新**關鍵字加上空括號或大括號  
   
  值初始化會執行下列作業：  
   
@@ -230,7 +230,7 @@ int main() {
   
 -   使用等號初始化非靜態資料成員  
   
--   複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 請參閱[彙總初始化](#agginit)範例。  
+-   複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 請參閱[彙總初始化](#agginit)的範例。  
   
  下列程式碼示範數個複製初始化範例：  
   
@@ -279,9 +279,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   使用非空白大括號或括號初始化變數。  
   
--   使用 `new` 關鍵字加上非空白大括號或括號初始化變數。  
+-   使用初始化的變數**新**關鍵字加上非空白大括號或括號  
   
--   使用 `static_cast` 初始化變數。  
+-   變數會使用初始化**static_cast**  
   
 -   在建構函式中，會使用初始設定式清單初始化基底類別和非靜態成員。  
   
@@ -321,7 +321,7 @@ int main(){
   
 -   初始化變數  
   
--   使用 `new` 關鍵字初始化類別  
+-   類別會使用初始化**新**關鍵字  
   
 -   從函式傳回物件  
   
@@ -378,7 +378,7 @@ int main() {
 -   沒有虛擬成員函式  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->在 Visual Studio 2015 和更早版本，不允許彙總有大括號或等號初始設定式的非靜態成員。 這項限制已移除的 C + + 14 標準，並在 Visual Studio 2017 中實作。 
   
  彙總初始設定式包含以大括號括住的初始化清單 (包含或不含等號) (如下列範例所示)：  
   
@@ -425,7 +425,7 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  陣列成員已宣告但未明確初始化彙總初始化期間為零，像是`myArr3`上方。  
+>  陣列成員已宣告但未明確初始化彙總初始化期間初始化為零，如同`myArr3`上方。  
   
 #### <a name="initializing-unions-and-structs"></a>初始化等位和結構  
  如果等位沒有建構函式，則可以使用單一值 (或使用等位的另一個執行個體) 將它初始化。 該值用於初始化第一個非靜態欄位。 此初始化與結構初始化不同，後者會使用初始化設定式中的第一個值初始化第一個欄位、第二個值初始化第二個欄位，依此類推。 比較下列範例中的等位初始化和結構初始化：  
@@ -516,7 +516,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   宣告明確指定為 `extern` 的變數。 例如:   
+-   明確地指定為變數的宣告**extern**。 例如:   
   
     ```  
     extern int& iVal;  
@@ -524,13 +524,13 @@ int main()
   
  初始化參考類型變數時，編譯器會使用下圖所示的決策圖，在建立物件參考或建立參考指向之暫存物件之間做選擇。  
   
- ![初始化參考類型決策圖形](../cpp/media/vc38s71.gif "vc38S71")  
+ ![初始化參考類型的決策圖形](../cpp/media/vc38s71.gif "vc38S71")  
 初始化參考類型決策圖  
   
- 參考`volatile`類型 (宣告為`volatile` *typename * * * （& s)** *識別碼*) 可以使用初始化`volatile`或處理的相同類型的物件未宣告為物件`volatile`。 不過，以初始化**const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename * * * （& s)** *識別碼*) 可以是使用初始化**const**相同類型的物件 (或任何項目已轉換成該類型，或者使用尚未宣告為**const**)。 不過，不能以該類型的 `volatile` 物件初始化。  
+ 參考**volatile**類型 (宣告為**volatile** *typename * &** *識別碼*) 可以初始化具有**volatile**物件的相同型別，或者使用尚未宣告為**volatile**。 它們不能不過，nelze s položkami **const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename * &** *識別碼*) 可以是s položkami **const**相同類型的物件 (或任何項目轉換成該類型，或者使用尚未宣告為**const**)。 它們不能不過，nelze s položkami **volatile**該類型的物件。  
   
- 使用未限定參考**const**或`volatile`關鍵字可以初始化只能搭配物件宣告為**const**也`volatile`。  
+ 使用未限定的參考**const**或**volatile**關鍵字可以只使用宣告為物件初始化**const**也**volatile**。  
   
 ### <a name="initialization-of-external-variables"></a>外部變數的初始化  
- 自動 （靜態） 和外部變數的宣告可以包含初始設定式。 不過，只有在不將變數宣告為 `extern` 時，外部變數宣告才能包含初始設定式。
+ 自動 （靜態） 和外部變數的宣告可以包含初始設定式。 不過，外部變數宣告可以包含初始設定式未宣告為變數時，才**extern**。
   

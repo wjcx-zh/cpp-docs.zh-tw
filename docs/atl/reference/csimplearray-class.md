@@ -1,5 +1,5 @@
 ---
-title: CSimpleArray 類別 |Microsoft 文件
+title: CSimpleArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ef8a6a9b803cb7e1828537027bbf09b2ffd2067
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364260"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881629"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 類別
-這個類別會提供管理簡單陣列的方法。  
+這個類別提供方法來管理簡單的陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,11 +44,11 @@ class CSimpleArray
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 陣列中儲存的資料類型。  
+ *T*  
+ 若要儲存在陣列中的資料型別。  
   
- `TEqual`  
- 定義項目類型的等號比較測試特性物件`T`。  
+ *TEqual*  
+ 特性物件，並定義等號比較測試類型的項目*T*。  
   
 ## <a name="members"></a>成員  
   
@@ -66,11 +66,11 @@ class CSimpleArray
 |[CSimpleArray::Add](#add)|將新的項目加入至陣列。|  
 |[CSimpleArray::Find](#find)|陣列中尋找的項目。|  
 |[CSimpleArray::GetData](#getdata)|傳回陣列中儲存的資料指標。|  
-|[CSimpleArray::GetSize](#getsize)|傳回儲存在陣列中元素數目。|  
+|[CSimpleArray::GetSize](#getsize)|傳回儲存在陣列中的項目數目。|  
 |[CSimpleArray::Remove](#remove)|從陣列中移除指定的項目。|  
-|[CSimpleArray::RemoveAll](#removeall)|從陣列中移除所有項目。|  
+|[CSimpleArray::RemoveAll](#removeall)|從陣列移除所有項目。|  
 |[CSimpleArray::RemoveAt](#removeat)|從陣列中移除指定的項目。|  
-|[CSimpleArray::SetAtIndex](#setatindex)|指定的元素設定陣列中。|  
+|[CSimpleArray::SetAtIndex](#setatindex)|設定指定的項目陣列中。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -81,11 +81,11 @@ class CSimpleArray
 
   
 ## <a name="remarks"></a>備註  
- `CSimpleArray` 提供方法來建立及管理簡單的陣列，任何給定的類型`T`。  
+ `CSimpleArray` 提供方法來建立及管理簡單的陣列，任何指定類型的`T`。  
   
- 參數`TEqual`提供一種定義兩個項目類型的等號比較函式`T`。 藉由建立類別類似於[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)，便可變更任何指定之陣列的等號比較測試的行為。 例如，當處理指標的陣列，可能很有用來定義為相等，取決於指標所參考的值。 預設實作會利用**operator=()**。  
+ 參數`TEqual`提供方法來定義兩個項目類型的等號比較函式`T`。 藉由建立類別類似於[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)，就可以變更任何指定之陣列的等號比較測試的行為。 例如，當處理的指標陣列，可能適合用來定義為相等，取決於指標所參考的值。 預設實作會利用**operator=()**。  
   
- 同時`CSimpleArray`和[CSimpleMap](../../atl/reference/csimplemap-class.md)專為小型的元素數目。 [CAtlArray](../../atl/reference/catlarray-class.md)和[CAtlMap](../../atl/reference/catlmap-class.md)此陣列包含大量項目時，應使用。  
+ 兩者`CSimpleArray`並[CSimpleMap](../../atl/reference/csimplemap-class.md)專為少量的項目。 [CAtlArray](../../atl/reference/catlarray-class.md)並[CAtlMap](../../atl/reference/catlmap-class.md)陣列包含大量項目時，應使用。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsimpcoll.h  
@@ -105,7 +105,7 @@ BOOL Add(const T& t);
  要加入至陣列的項目。  
   
 ### <a name="return-value"></a>傳回值  
- 如果項目已成功新增到陣列，FALSE 否則為 true，則傳回。  
+ 如果項目已成功新增至陣列，也就是 FALSE 否則為 true，則傳回。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
@@ -123,7 +123,7 @@ CSimpleArray();
  現有的 `CSimpleArray` 物件。  
   
 ### <a name="remarks"></a>備註  
- 初始化資料成員，建立新的空白`CSimpleArray`物件或將現有的複本`CSimpleArray`物件。  
+ 初始化資料成員，建立新的空`CSimpleArray`物件或將現有的複本`CSimpleArray`物件。  
   
 ##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  解構函式。  
@@ -163,14 +163,14 @@ T* GetData() const;
  傳回陣列中的資料指標。  
   
 ##  <a name="getsize"></a>  CSimpleArray::GetSize  
- 傳回儲存在陣列中元素數目。  
+ 傳回儲存在陣列中的項目數目。  
   
 ```
 int GetSize() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回儲存在陣列中元素數目。  
+ 傳回儲存在陣列中的項目數目。  
   
 ##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  從陣列中擷取項目。  
@@ -180,11 +180,11 @@ T& operator[](int nindex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  項目索引。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回所參考的陣列的項目`nIndex`。  
+ 傳回所參考的陣列的項目*nIndex*。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
@@ -206,7 +206,7 @@ CSimpleArray<T, TEqual>
  讓指標回到更新`CSimpleArray`物件。  
   
 ### <a name="remarks"></a>備註  
- 複製所有項目從`CSimpleArray`所參考物件*src*成目前的陣列物件，取代所有現有的資料。  
+ 複製所有項目從`CSimpleArray`所參考的物件*src*成目前的陣列物件，取代所有現有的資料。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
@@ -223,13 +223,13 @@ BOOL Remove(const T& t);
  要從陣列中移除的項目。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回為 true，則如果項目因找到並移除，則為 FALSE。  
+ 為 true，則會傳回項目是否找到並移除，否則為 FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
- 移除項目時，重新編號陣列中其餘的項目以填滿空的空間。  
+ 移除項目時，陣列中其餘的項目會重新編號，以填滿空的空間。  
   
 ##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
- 從陣列中移除所有項目。  
+ 從陣列移除所有項目。  
   
 ```
 void RemoveAll();
@@ -246,17 +246,17 @@ BOOL RemoveAtint nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
- 要移除的項目所指向的索引。  
+ *nIndex*  
+ 指向要移除之元素的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 為 true，則會傳回項目是否已移除，如果索引不正確，則為 FALSE。  
+ 為 true，則會傳回項目是否已移除，則為 FALSE 的索引無效。  
   
 ### <a name="remarks"></a>備註  
- 移除項目時，重新編號陣列中其餘的項目以填滿空的空間。  
+ 移除項目時，陣列中其餘的項目會重新編號，以填滿空的空間。  
   
 ##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
- 陣列中設定指定的項目。  
+ 設定指定的項目陣列中。  
   
 ```
 BOOL SetAtIndex(
@@ -265,14 +265,14 @@ BOOL SetAtIndex(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  若要變更項目的索引。  
   
  *t*  
  要指派給指定項目的值。  
   
 ### <a name="return-value"></a>傳回值  
- 如果，傳回 TRUE 成功，則為 FALSE 如果索引不正確。  
+ 傳回為 true，則如果成功，則為 FALSE 如果索引無效。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

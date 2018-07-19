@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetBSTR |Microsoft 文件
+title: _bstr_t::GetBSTR |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c9903170f62652357264a3ea2de0839496e9e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3041e8a4ece0ddff813b7ef9cd2ccb258e520a82
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409094"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940478"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  指向由 `BSTR` 所包裝之 `_bstr_t` 的開頭。  
   
@@ -40,12 +40,12 @@ BSTR& GetBSTR( );
  由 `BSTR` 所包裝之 `_bstr_t` 的開頭。  
   
 ## <a name="remarks"></a>備註  
- `GetBSTR` 會影響所有共用 `_bstr_t` 的 `BSTR` 物件。 一個以上的 `_bstr_t` 可以使用複製建構函式和 `BSTR` 來共用 `operator=`。  
+ `GetBSTR` 會影響所有共用 `_bstr_t` 的 `BSTR` 物件。 多個`_bstr_t`態度`BSTR`透過使用複製建構函式和並**運算子 =**。  
   
 ## <a name="example"></a>範例  
  請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)的使用範例`GetBSTR`。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 左值參考宣告子： &amp; |Microsoft 文件
+title: 左值參考宣告子： &amp; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943007"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>左值參考宣告子： &amp;
 保存物件的位址，但語法上的行為與物件相似。  
@@ -38,12 +39,12 @@ type-id & cast-expression
   
  只要物件的位址可以轉換為指定的指標類型，則該物件也可轉換為類似的參考類型。 例如，只要物件的位址可以轉換成 `char *` 類型，該物件也可轉換成 `char &` 類型。  
   
- 請勿混淆參考宣告與使用[傳址運算子](../cpp/address-of-operator-amp.md)。 當`&`*識別碼*前面加上型別，例如`int`或`char`，*識別碼*宣告為類型的參考。 當`&`*識別碼*前面沒有由型別，其用法即的傳址運算子。  
+ 請勿混淆參考宣告中的，以善用[傳址運算子](../cpp/address-of-operator-amp.md)。 當`&`*識別項*前面加上一個型別，例如**int**或**char**，*識別碼*宣告為參考型別。 當`&`*識別碼*前面沒有由型別，其用法即的傳址運算子。  
   
 ## <a name="example"></a>範例  
  下列範例示範宣告 `Person` 物件和該物件之參考的參考宣告子。 因為 `rFriend` 是 `myFriend` 的參考，無論更新哪一個變數都會變更同一個物件。  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

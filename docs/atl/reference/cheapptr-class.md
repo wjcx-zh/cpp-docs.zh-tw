@@ -1,5 +1,5 @@
 ---
-title: CHeapPtr 類別 |Microsoft 文件
+title: CHeapPtr 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a728f84a2eaa3f0138e2b0a95c25f8867c17432e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06c66f274ab2302689afdeda195c735d7a6e5069
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359939"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884489"
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 類別
 用來管理堆積指標的智慧型指標類別。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  要儲存在堆積上的物件類型。  
   
- `Allocator`  
+ *配置器*  
  要使用的記憶體配置類別。  
   
 ## <a name="members"></a>成員  
@@ -69,7 +69,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |[CHeapPtr::operator =](#operator_eq)|指派運算子。|  
   
 ## <a name="remarks"></a>備註  
- `CHeapPtr` 衍生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)和預設使用 CRT 常式 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 來配置和釋放記憶體。 類別[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可能用來建構堆積指標的清單。 另請參閱[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它會使用 COM 記憶體配置常式。  
+ `CHeapPtr` 衍生自[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) ，並預設使用的 CRT 常式 (在[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) 來配置和釋放記憶體。 此類別[CHeapPtrList](../../atl/reference/cheapptrlist-class.md)可用來建構清單的堆積指標。 另請參閱[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)，它會使用 COM 記憶體配置常式。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -87,14 +87,14 @@ bool Allocate(size_t nElements = 1) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nElements`  
- 用來計算要配置的記憶體數量的項目數目。 預設值為 1。  
+ *nElements*  
+ 用來計算配置的記憶體數量的項目數目。 預設值為 1。  
   
 ### <a name="return-value"></a>傳回值  
- 如果記憶體已成功則傳回 true 配置失敗，false。  
+ 如果記憶體已成功，則傳回 true 配置失敗的 false。  
   
 ### <a name="remarks"></a>備註  
- 配置器常式可用來保留足夠的記憶體來儲存堆積*nElement*建構函式中定義之型別的物件。  
+ 配置器常式用來保留足夠的記憶體來儲存堆積*nElement*物件的建構函式中定義的類型。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
@@ -109,11 +109,11 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  現有的堆積指標或`CHeapPtr`。  
   
 ### <a name="remarks"></a>備註  
- 堆積指標可以選擇性地建立使用現有的指標，或`CHeapPtr`物件。 如果是的話，新`CHeapPtr`物件負責管理新的指標和資源。  
+ 堆積指標可以選擇性地建立使用現有的指標，或`CHeapPtr`物件。 如果是的話，新`CHeapPtr`物件負責管理資源與新的指標。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
@@ -127,11 +127,11 @@ CHeapPtr<T, Allocator>& operator=(
 ```  
   
 ### <a name="parameters"></a>參數  
- `p`  
+ *p*  
  現有的 `CHeapPtr` 物件。  
   
 ### <a name="return-value"></a>傳回值  
- 將參考傳回給更新`CHeapPtr`。  
+ 傳回已更新的參考`CHeapPtr`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
@@ -144,11 +144,11 @@ bool Reallocate(size_t nElements) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `nElements`  
- 新的用來計算要配置的記憶體數量的項目數目。  
+ *nElements*  
+ 新的用來計算配置的記憶體數量的項目數目。  
   
 ### <a name="return-value"></a>傳回值  
- 如果記憶體已成功則傳回 true 配置失敗，false。  
+ 如果記憶體已成功，則傳回 true 配置失敗的 false。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  

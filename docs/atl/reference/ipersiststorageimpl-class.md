@@ -1,5 +1,5 @@
 ---
-title: IPersistStorageImpl 類別 |Microsoft 文件
+title: IPersistStorageImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,18 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f03ba235fdfc14dba22f1759240bd5fb72bafd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 634a7a7373f6686ad36b645a73613a4ae350bbab
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364658"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884697"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 類別
 這個類別會實作[IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)介面。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IPersistStorageImpl`。  
   
 ## <a name="members"></a>成員  
@@ -56,17 +56,17 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 |名稱|描述|  
 |----------|-----------------|  
 |[IPersistStorageImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|  
-|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|指示要釋放所有的儲存體物件並輸入 HandsOff 模式的物件。 ATL 實作會傳回`S_OK`。|  
-|[IPersistStorageImpl::InitNew](#initnew)|初始化新的存放裝置。|  
-|[IPersistStorageImpl::IsDirty](#isdirty)|檢查自上次儲存後，是否已變更物件的資料。|  
+|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|指示要釋放所有的儲存體物件並輸入 HandsOff 模式的物件。 ATL 實作會傳回 S_OK。|  
+|[IPersistStorageImpl::InitNew](#initnew)|初始化新的儲存體。|  
+|[IPersistStorageImpl::IsDirty](#isdirty)|會檢查自上次儲存後，是否已變更物件的資料。|  
 |[IPersistStorageImpl::Load](#load)|從指定的儲存體中載入物件的屬性。|  
-|[IPersistStorageImpl::Save](#save)|將物件的屬性儲存至指定的儲存體。|  
-|[IPersistStorageImpl::SaveCompleted](#savecompleted)|告知可返回一般模式將寫入其儲存體物件的物件。 ATL 實作會傳回`S_OK`。|  
+|[IPersistStorageImpl::Save](#save)|將指定的儲存體物件的屬性。|  
+|[IPersistStorageImpl::SaveCompleted](#savecompleted)|通知可以回到正常模式才能寫入至其儲存體物件的物件。 ATL 實作會傳回 S_OK。|  
   
 ## <a name="remarks"></a>備註  
- `IPersistStorageImpl` 實作[IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)介面，可讓用戶端要求的物件載入並儲存使用的儲存體持續性資料。  
+ `IPersistStorageImpl` 會實作[IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)介面，可讓用戶端要求的物件載入並儲存持續性資料使用儲存體。  
   
- 這個類別的實作必須有類別`T`進行的實作`IPersistStreamInit`可透過介面`QueryInterface`。 通常這表示該類別`T`應衍生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的項目`IPersistStreamInit`中[COM 對應](http://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)，並使用[屬性對應](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)來描述此類別的永續性資料。  
+ 這個類別的實作需要類別`T`進行的實作`IPersistStreamInit`可透過介面`QueryInterface`。 通常這表示該類別`T`應該衍生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的項目`IPersistStreamInit`中[COM 對應](http://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)，並使用[屬性對應](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)來描述類別的永續性資料。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
+ 請參閱[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
 ##  <a name="handsoffstorage"></a>  IPersistStorageImpl::HandsOffStorage  
  指示要釋放所有的儲存體物件並輸入 HandsOff 模式的物件。  
@@ -96,32 +96,32 @@ STDMETHOD(HandsOffStorage)(void);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 `S_OK`。  
+ 傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) Windows SDK 中。  
   
 ##  <a name="initnew"></a>  IPersistStorageImpl::InitNew  
- 初始化新的存放裝置。  
+ 初始化新的儲存體。  
   
 ```
 STDMETHOD(InitNew)(IStorage*);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 實作會委派至[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
+ ATL 實作會委派給[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
   
  請參閱[IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) Windows SDK 中。  
   
 ##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty  
- 檢查自上次儲存後，是否已變更物件的資料。  
+ 會檢查自上次儲存後，是否已變更物件的資料。  
   
 ```
 STDMETHOD(IsDirty)(void);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 實作會委派至[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
+ ATL 實作會委派給[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
   
  請參閱[IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) Windows SDK 中。  
   
@@ -133,31 +133,31 @@ STDMETHOD(Load)(IStorage* pStorage);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 實作會委派至[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。 **負載**使用名為 「 內容 」 的資料流中擷取物件的資料。 [儲存](#save)方法原本會建立此資料流。  
+ ATL 實作會委派給[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。 `Load` 您可以使用名為 [內容] 的資料流來擷取物件的資料。 [儲存](#save)方法原本建立此資料流。  
   
  請參閱[IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) Windows SDK 中。  
   
 ##  <a name="save"></a>  IPersistStorageImpl::Save  
- 將物件的屬性儲存至指定的儲存體。  
+ 將指定的儲存體物件的屬性。  
   
 ```
 STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 實作會委派至[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。 當**儲存**這是第一次呼叫，它會建立指定的儲存體上名為 「 內容 」 的資料流。 這個資料流之後會用來稍後呼叫**儲存**在呼叫[負載](#load)。  
+ ATL 實作會委派給[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。 當`Save`這是第一次呼叫，它會建立名為指定的儲存體上的 [內容] 的資料流。 這個資料流則會在稍後呼叫`Save`及呼叫[負載](#load)。  
   
  請參閱[IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) Windows SDK 中。  
   
 ##  <a name="savecompleted"></a>  IPersistStorageImpl::SaveCompleted  
- 告知可返回一般模式將寫入其儲存體物件的物件。  
+ 通知可以回到正常模式才能寫入至其儲存體物件的物件。  
   
 ```
 STDMETHOD(SaveCompleted)(IStorage*);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 `S_OK`。  
+ 傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStorage:SaveCompleted](http://msdn.microsoft.com/library/windows/desktop/ms679713) Windows SDK 中。  

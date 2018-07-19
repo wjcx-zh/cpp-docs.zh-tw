@@ -1,5 +1,5 @@
 ---
-title: _ATL_FUNC_INFO 結構 |Microsoft 文件
+title: _ATL_FUNC_INFO 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa81e83d353c542ea5b2b6e8e5e8fe32f7c57606
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 8852deacfd36ba988b9b31bdad363c05aee12b6e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255618"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882204"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 結構
-包含用來描述上的分配介面的方法或屬性的型別資訊。  
+包含用來描述在分配介面上的方法或屬性的型別資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,32 +41,32 @@ struct _ATL_FUNC_INFO {
 ```  
   
 ## <a name="members"></a>成員  
- **cc**  
- 呼叫慣例。 當使用這個結構[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)類別，這個成員必須是**CC_STDCALL**。 `CC_CDECL` 是唯一的選項中為 Windows CE 支援`CALLCONV`欄位`_ATL_FUNC_INFO`結構。 不支援的任何其他值，因此其行為未定義。  
+ `cc`  
+ 呼叫慣例。 使用這個結構時[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)類別，這個成員必須是 CC_STDCALL。 `CC_CDECL` 是唯一的選項，支援 Windows CE`CALLCONV`欄位`_ATL_FUNC_INFO`結構。 任何其他值都不支援因此其行為未定義。  
   
- **vtReturn**  
+ `vtReturn`  
  Variant 類型函式的傳回值。  
   
- **nParams**  
- 函式的參數數目。  
+ `nParams`  
+ 函式參數數目。  
   
- **pVarTypes**  
- 陣列的變異數的函式參數的類型。  
+ `pVarTypes`  
+ 函式參數的 variant 類型的陣列。  
   
 ## <a name="remarks"></a>備註  
- 就內部而言，ATL 會使用此結構來保存從類型程式庫取得的資訊。 您可能需要直接操作此結構，如果您提供型別搭配使用的事件處理常式資訊[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)類別和[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)巨集。  
+ 就內部而言，ATL 還會使用此結構來容納從類型程式庫取得的資訊。 如果您提供搭配使用的事件處理常式的型別資訊直接操作此結構時，您可能需要[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)類別和[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)巨集。  
   
 ## <a name="example"></a>範例  
- 指定 IDL 中定義的分配介面方法：  
+ 指定在 IDL 中定義的 dispinterface 方法：  
   
  [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
   
- 您要定義`_ATL_FUNC_INFO`結構：  
+ 您會定義`_ATL_FUNC_INFO`結構：  
   
  [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
 ## <a name="requirements"></a>需求  
- **標頭：** atlcom.h  
+ 標頭： atlcom.h  
   
 ## <a name="see-also"></a>另請參閱  
   [類別和結構](../../atl/reference/atl-classes.md)  

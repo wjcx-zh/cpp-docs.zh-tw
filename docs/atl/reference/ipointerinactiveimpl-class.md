@@ -1,5 +1,5 @@
 ---
-title: IPointerInactiveImpl 類別 |Microsoft 文件
+title: IPointerInactiveImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28eb8d6db520bd1c2d5de5642098263508c0f6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d916d2e2f8f42a4162966a1d0ddc7de55eb6bd4b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360328"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883576"
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 類別
-這個類別會實作**IUnknown**和[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面方法。  
+這個類別會實作`IUnknown`而[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面方法。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ class IPointerInactiveImpl
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  您的類別，衍生自`IPointerInactiveImpl`。  
   
 ## <a name="members"></a>成員  
@@ -52,16 +52,16 @@ class IPointerInactiveImpl
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|擷取目前物件的啟用原則。 ATL 實作會傳回**E_NOTIMPL**。|  
-|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|通知物件，將滑鼠指標移過它，表示物件可以引發滑鼠事件。 ATL 實作會傳回**E_NOTIMPL**。|  
-|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|將滑鼠指標設定為非作用中的物件。 ATL 實作會傳回**E_NOTIMPL**。|  
+|[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|擷取目前啟用的原則物件。 ATL 實作會傳回 E_NOTIMPL。|  
+|[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|將滑鼠指標已移至其上方，表示物件的物件可以引發滑鼠事件的通知。 ATL 實作會傳回 E_NOTIMPL。|  
+|[IPointerInactiveImpl::OnInactiveSetCursor](#oninactivesetcursor)|設定滑鼠指標為非作用中的物件。 ATL 實作會傳回 E_NOTIMPL。|  
   
 ## <a name="remarks"></a>備註  
- 非作用中的物件是只載入或執行。 不同於作用中的物件，非作用中的物件無法接收 Windows 滑鼠和鍵盤訊息。 因此，非作用中的物件使用較少的資源，而且通常更有效率。  
+ 另一個則是只要載入或執行非使用中的物件。 不同於作用中的物件，非作用中的物件無法接收 Windows 滑鼠和鍵盤訊息。 因此，非作用中的物件會使用較少的資源，並且通常更有效率。  
   
- [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面可讓支援滑鼠互動，同時保持非使用中最低的層級的物件。 這項功能是控制項特別有用。  
+ [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面允許支援滑鼠互動，同時維持非使用中的最低層級物件。 這項功能是特別有用的控制項。  
   
- 類別`IPointerInactiveImpl`實作`IPointerInactive`方法只要傳回**E_NOTIMPL**。 不過，它會實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
+ 類別`IPointerInactiveImpl`實作`IPointerInactive`藉由只傳回 E_NOTIMPL 的方法。 不過，它會實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -74,20 +74,20 @@ class IPointerInactiveImpl
  **標頭：** atlctl.h  
   
 ##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy  
- 擷取目前物件的啟用原則。  
+ 擷取目前啟用的原則物件。  
   
 ```
 HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**E_NOTIMPL**。  
+ 傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) Windows SDK 中。  
   
 ##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
- 通知物件，將滑鼠指標移過它，表示物件可以引發滑鼠事件。  
+ 將滑鼠指標已移至其上方，表示物件的物件可以引發滑鼠事件的通知。  
   
 ```
 HRESULT OnInactiveMouseMove(
@@ -98,13 +98,13 @@ HRESULT OnInactiveMouseMove(
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**E_NOTIMPL**。  
+ 傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) Windows SDK 中。  
   
 ##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
- 將滑鼠指標設定為非作用中的物件。  
+ 設定滑鼠指標為非作用中的物件。  
   
 ```
 HRESULT OnInactiveSetCursor(
@@ -116,7 +116,7 @@ HRESULT OnInactiveSetCursor(
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**E_NOTIMPL**。  
+ 傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) Windows SDK 中。  

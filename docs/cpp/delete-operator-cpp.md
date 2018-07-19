@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b523f5c10cbd28dfb2d584ea8241bc1518cf925
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89ad061dc2be090abbcfbc147f1ea5fbddb8ae6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942692"
 ---
 # <a name="delete-operator-c"></a>delete 運算子 (C++)
 取消配置記憶體區塊。  
@@ -35,34 +36,34 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- *轉型運算式*引數必須是先前建立的物件配置的記憶體區塊的指標[new 運算子](../cpp/new-operator-cpp.md)。 **刪除**運算子的結果類型是`void`，因此不會傳回值。 例如:   
+ *轉型運算式*引數必須是先前建立的物件配置的記憶體區塊的指標[new 運算子](../cpp/new-operator-cpp.md)。 **刪除**運算子的結果是型別**void** ，因此不會傳回值。 例如:   
   
-```  
+```cpp 
 CDialog* MyDialog = new CDialog;  
 // use MyDialog  
 delete MyDialog;  
 ```  
   
- 使用**刪除**上不會配置與物件的指標**新**產生無法預期的結果。 不過，您可以使用**刪除**值為 0 的指標。 這項佈建表示，當**新**失敗時，刪除失敗結果會傳回 0**新**是無害的作業。 請參閱[新和 delete 運算子](../cpp/new-and-delete-operators.md)如需詳細資訊。  
+ 使用**刪除**不會配置與物件的指標**新**會產生無法預期的結果。 不過，您可以使用**刪除**值為 0 的指標。 此佈建表示，當**新**失敗時，刪除失敗的結果會傳回 0**新**作業不會有影響。 請參閱[新和 delete 運算子](../cpp/new-and-delete-operators.md)如需詳細資訊。  
   
- **新**和**刪除**運算子也可以用於內建類型，包括陣列。 如果 `pointer` 指的是陣列，請在 `pointer` 前面放置空大括號：  
+ **新**並**刪除**運算子也可以用於內建類型，包括陣列。 如果 `pointer` 指的是陣列，請在 `pointer` 前面放置空大括號：  
   
-```  
+```cpp 
 int* set = new int[100];  
 //use set[]  
 delete [] set;  
 ```  
   
- 使用**刪除**物件上的運算子取消配置其記憶體。 在刪除物件之後將指標取值的程式可能會有無法預期的結果或損毀。  
+ 使用**刪除**運算子，在物件解除配置其記憶體。 在刪除物件之後將指標取值的程式可能會有無法預期的結果或損毀。  
   
- 當**刪除**是用來取消配置 c + + 類別物件，此物件的解構函式之前，會呼叫 （如果物件具有解構函式），會取消配置物件的記憶體。  
+ 當**刪除**是用來取消配置 c + + 類別物件，物件的解構函式呼叫之前 （如果物件具有解構函式），會解除配置物件的記憶體。  
   
- 如果運算元**刪除**運算子是可修改左值，其值在刪除物件之後為未定義。  
+ 如果運算元**刪除**操作員是可修改左值之後刪除物件,，其值為未定義。  
   
 ## <a name="using-delete"></a>使用 delete  
- 有兩種語法變化[delete 運算子](../cpp/delete-operator-cpp.md)： 一個適用於單一物件，而另一個則用於物件的陣列。 下列程式碼片段示範兩者不同之處：  
+ 有兩種語法變化[delete 運算子](../cpp/delete-operator-cpp.md)： 一個用於單一物件，而另一個則用於物件的陣列。 下列程式碼片段示範兩者不同之處：  
   
-```  
+```cpp 
 // expre_Using_delete.cpp  
 struct UDType   
 {  

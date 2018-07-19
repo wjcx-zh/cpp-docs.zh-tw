@@ -1,5 +1,5 @@
 ---
-title: 遞增和遞減運算子多載 （c + +） |Microsoft 文件
+title: 遞增和遞減運算子多載 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943020"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>遞增和遞減運算子多載 (C++)
 遞增和遞減運算子屬於特殊的分類，因為每個運算子都有兩種變數：  
@@ -30,14 +31,14 @@ ms.lasthandoff: 05/03/2018
   
 -   前置遞減和後置遞減  
   
- 當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 若要區別這兩者，請遵守下列規則：運算子的前置格式宣告方式就和其他一元運算子完全相同，後置格式可接受類型為 `int` 的其他引數。  
+ 當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 若要區別這兩個，遵守下列規則： 運算子的前置格式宣告為任何其他一元 （unary） 運算子; 完全相同的方式後置格式可接受類型的其他引數**int**。  
   
 > [!NOTE]
->  為多載運算子指定遞增或遞減運算子的後置格式時，其他引數必須為 `int` 類型，指定其他類型會產生錯誤。  
+>  當指定遞增或遞減運算子的後置格式的多載的運算子，額外的引數必須是類型**int**; 指定任何其他型別會產生錯誤。  
   
  下列範例顯示如何為 `Point` 類別定義前置和後置遞增及遞減運算子：  
   
-```  
+```cpp  
 // increment_and_decrement1.cpp  
 class Point  
 {  
@@ -98,16 +99,16 @@ int main()
   
  相同的運算子可以在檔案範圍 (全域) 中使用下列函式標頭加以定義：  
   
-```  
+```cpp  
 friend Point& operator++( Point& )      // Prefix increment  
 friend Point& operator++( Point&, int ) // Postfix increment  
 friend Point& operator--( Point& )      // Prefix decrement  
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- 用於表示遞增或遞減運算子之後置格式的類型 `int` 引數，通常不會用於傳遞引數。 它通常包含值 0。 不過，可以依如下的方式使用：  
+ 類型引數**int**表示後置格式的遞增或遞減運算子通常不會用來將引數傳遞。 它通常包含值 0。 不過，可以依如下的方式使用：  
   
-```  
+```cpp  
 // increment_and_decrement2.cpp  
 class Int  
 {  

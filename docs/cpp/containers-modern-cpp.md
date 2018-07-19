@@ -1,5 +1,5 @@
 ---
-title: 容器 （現代 c + +） |Microsoft 文件
+title: 容器 （現代 c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 1/18/2018
 ms.technology:
@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a77234b679fd61d801bb78d751891467d6b4e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2eb9419562382d3494e64dd7fb0472882fe73c13
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412071"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939035"
 ---
 # <a name="containers-modern-c"></a>容器 (現代 C++)
 
@@ -27,7 +27,7 @@ vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-使用[對應](../standard-library/map-class.md)(不`unordered_map`) 做為預設關聯容器。 使用[設定](../standard-library/set-class.md)， [multimap](../standard-library/multimap-class.md)，和[multiset](../standard-library/multiset-class.md)變質 & 多情況下。
+使用[地圖](../standard-library/map-class.md)(不`unordered_map`) 做為預設關聯容器。 使用[設定](../standard-library/set-class.md)， [multimap](../standard-library/multimap-class.md)，並[multiset](../standard-library/multiset-class.md)變質 & 多案例。
 
 ```cpp
 map<string, string> apple_color;
@@ -37,15 +37,15 @@ apple_color["Granny Smith"] = "Green";
 
 當需要效能最佳化時，請考慮使用：
 
-- [陣列](../standard-library/array-class-stl.md)輸入內嵌很重要的比方說，做為成員。
+- [陣列](../standard-library/array-class-stl.md)輸入當內嵌很重要的比方說，做為類別成員。
 
-- 例如，未排序關聯容器[unordered_map](../standard-library/unordered-map-class.md)。 這些具有額外負荷較低的每個元素，並定時查閱，但它們可能不容易使用正確且有效率。
+- 這類未排序關聯容器[unordered_map](../standard-library/unordered-map-class.md)。 這些額外負荷已降低每個項目和固定時間搜尋，但它們可以是使用正確且有效率的工作變得更難。
 
-- 排序**向量**。 如需詳細資訊，請參閱[演算法](../cpp/algorithms-modern-cpp.md)。
+- 排序`vector`。 如需詳細資訊，請參閱[演算法](../cpp/algorithms-modern-cpp.md)。
 
-不使用 C 樣式的陣列。 適用於較舊需要直接存取資料的 Api，使用存取子方法例如`f(vec.data(), vec.size());`改為。
+請勿使用 c-style 陣列。 對於較舊的 Api 需要直接存取資料，使用存取子方法例如`f(vec.data(), vec.size());`改。
 
-如需容器的詳細資訊，請參閱[c + + 標準程式庫容器](../standard-library/stl-containers.md)。
+如需有關容器的詳細資訊，請參閱 < [c + + 標準程式庫容器](../standard-library/stl-containers.md)。
 
 ## <a name="see-also"></a>另請參閱
 

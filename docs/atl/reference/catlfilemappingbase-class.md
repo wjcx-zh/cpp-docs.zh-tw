@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMappingBase 類別 |Microsoft 文件
+title: CAtlFileMappingBase 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364440"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883241"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 類別
 此類別代表的記憶體對應檔。  
   
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,25 +58,25 @@ class CAtlFileMappingBase
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::CopyFrom](#copyfrom)|呼叫此方法以複製的檔案對應物件。|  
-|[CAtlFileMappingBase::GetData](#getdata)|呼叫此方法以從檔案對應物件取得資料。|  
-|[CAtlFileMappingBase::GetHandle](#gethandle)|呼叫此方法以傳回的檔案控制代碼。|  
-|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|呼叫這個方法，從檔案對應物件中取得對應大小。|  
+|[CAtlFileMappingBase::CopyFrom](#copyfrom)|呼叫這個方法來複製檔案對應物件。|  
+|[CAtlFileMappingBase::GetData](#getdata)|呼叫這個方法來取得檔案對應物件中的資料。|  
+|[CAtlFileMappingBase::GetHandle](#gethandle)|呼叫這個方法傳回的檔案控制代碼。|  
+|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|呼叫這個方法來取得對應大小的檔案對應物件。|  
 |[CAtlFileMappingBase::MapFile](#mapfile)|呼叫這個方法來建立檔案對應物件。|  
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|呼叫這個方法來建立檔案對應物件，可讓您完整存取所有處理程序。|  
-|[CAtlFileMappingBase::OpenMapping](#openmapping)|呼叫此方法以傳回檔案對應物件的控制代碼。|  
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|呼叫這個方法來建立檔案對應物件，以允許所有處理程序的完整存取。|  
+|[CAtlFileMappingBase::OpenMapping](#openmapping)|呼叫這個方法來傳回檔案對應物件的控制代碼。|  
 |[CAtlFileMappingBase::Unmap](#unmap)|呼叫這個方法來取消對應檔案對應物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::operator =](#operator_eq)|目前的檔案對應物件設定為另一個檔案對應物件。|  
+|[CAtlFileMappingBase::operator =](#operator_eq)|設定目前的檔案對應物件到另一個檔案對應物件。|  
   
 ## <a name="remarks"></a>備註  
- 檔案對應是檔案的內容與關聯的處理序的虛擬位址空間的一部分。 這個類別會提供方法來建立檔案對應物件，允許程式輕鬆地存取和共用資料。  
+ 檔案對應是與之間的關聯檔案的內容的處理程序虛擬位址空間的一部分。 這個類別提供方法來建立允許程式輕鬆地存取及共用資料的檔案對應物件。  
   
- 如需詳細資訊，請參閱[檔案對應](http://msdn.microsoft.com/library/windows/desktop/aa366556)Windows SDK 中。  
+ 如需詳細資訊，請參閱 <<c0> [ 檔案對應](http://msdn.microsoft.com/library/windows/desktop/aa366556)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlfile.h  
@@ -90,11 +90,11 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `orig`  
+ *orig*  
  若要建立新的物件複製原始的檔案對應物件。  
   
 ### <a name="remarks"></a>備註  
- 建立新的檔案對應物件，您可以選擇使用現有的物件。 仍然必須呼叫[CAtlFileMappingBase::MapFile](#mapfile)開啟或建立特定檔案的檔案對應物件。  
+ 建立新的檔案對應物件，選擇性地使用現有的物件。 仍然必須呼叫[CAtlFileMappingBase::MapFile](#mapfile)開啟或建立特定的檔案所需的檔案對應物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
@@ -110,21 +110,21 @@ CAtlFileMappingBase() throw();
  會釋放所有資源配置的類別並呼叫[CAtlFileMappingBase::Unmap](#unmap)方法。  
   
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
- 呼叫此方法以複製的檔案對應物件。  
+ 呼叫這個方法來複製檔案對應物件。  
   
 ```
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `orig`  
- 要複製的原始的檔案對應物件。  
+ *orig*  
+ 若要從複製原始的檔案對應物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
- 呼叫此方法以從檔案對應物件取得資料。  
+ 呼叫這個方法來取得檔案對應物件中的資料。  
   
 ```
 void* GetData() const throw();
@@ -134,7 +134,7 @@ void* GetData() const throw();
  傳回資料的指標。  
   
 ##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
- 呼叫此方法以傳回檔案對應物件的控制代碼。  
+ 呼叫這個方法來傳回檔案對應物件的控制代碼。  
   
 ```
 HANDLE GetHandle() throw ();
@@ -144,20 +144,20 @@ HANDLE GetHandle() throw ();
  傳回檔案對應物件的控制代碼。  
   
 ##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
- 呼叫這個方法，從檔案對應物件中取得對應大小。  
+ 呼叫這個方法來取得對應大小的檔案對應物件。  
   
 ```
 SIZE_T GetMappingSize() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回對應大小。  
+ 傳回對應的大小。  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
+ 範例，請參閱[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
   
 ##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
- 呼叫這個方法來開啟或建立檔案對應物件，為指定的檔案。  
+ 呼叫這個方法來開啟或建立的指定檔案的檔案對應物件。  
   
 ```
 HRESULT MapFile(
@@ -169,32 +169,32 @@ HRESULT MapFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hFile`  
- 要從中建立對應物件的檔案控制代碼。 `hFile` 必須有效，而且不能設定為 INVALID_HANDLE_VALUE。  
+ *hFile*  
+ 要從中建立對應物件的檔案控制代碼。 *hFile*必須有效，而且不能設為 INVALID_HANDLE_VALUE。  
   
- `nMappingSize`  
- 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案的目前大小*hFile。*  
+ *nMappingSize*  
+ 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別之檔案的目前大小*hFile。*  
   
- `nOffset`  
- 對應是要開始檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
+ *nOffset*  
+ 對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
   
- `dwMappingProtection`  
- 保護所需要的檔案檢視對應檔。 請參閱`flProtect`中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
+ *dwMappingProtection*  
+ 在對應檔案時，檔案檢視所需的保護。 請參閱*flProtect*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
   
- `dwViewDesiredAccess`  
- 指定存取檔案檢視，因此，對應的分頁檔案的保護類型。 請參閱`dwDesiredAccess`中[mapviewoffileex 在](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK 中。  
+ *dwViewDesiredAccess*  
+ 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 建立檔案對應物件之後，檔案的大小不得超過檔案對應物件; 的大小若是如此，並非所有檔案的內容將可供共用。 如需詳細資訊，請參閱[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)和[mapviewoffileex 在](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK 中。  
+ 已建立的檔案對應物件之後，檔案大小不得超過檔案對應物件的大小若是如此，不是所有檔案的內容可供共用。 如需詳細資訊，請參閱 < [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)並[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
- 請參閱範例的[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
+ 範例，請參閱[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
   
 ##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
- 呼叫這個方法來建立檔案對應物件，可讓您完整存取所有處理程序。  
+ 呼叫這個方法來建立檔案對應物件，以允許所有處理程序的完整存取。  
   
 ```
 HRESULT MapSharedMem(
@@ -207,32 +207,32 @@ HRESULT MapSharedMem(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMappingSize`  
- 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小 `szName.`  
+ *nMappingSize*  
+ 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小*szName*。  
   
- `szName`  
+ *szName*  
  對應物件的名稱。  
   
  *pbAlreadyExisted*  
- 指向 BOOL 值設為 TRUE，否則對應物件已經存在。  
+ 指向 BOOL 值，設為 TRUE 的對應物件已經存在。  
   
- `lpsa`  
- 將指標**ATTRIBUTES**結構，決定子處理序是否可以繼承傳回的控制代碼。 請參閱*lpAttributes*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
+ *lpsa*  
+ 將指標`SECURITY_ATTRIBUTES`判斷子處理序是否可以繼承傳回的控制代碼的結構。 請參閱*lpAttributes*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
   
- `dwMappingProtection`  
- 在對應檔案時，檔案檢視中，想要保護。 請參閱`flProtect`中**CreateFileMapping** Windows SDK 中。  
+ *dwMappingProtection*  
+ 在對應檔案時，針對 [檔案] 檢視中，所需的保護。 請參閱*flProtect*在`CreateFileMapping`Windows SDK 中。  
   
- `dwViewDesiredAccess`  
- 指定存取檔案檢視，因此，對應的分頁檔案的保護類型。 請參閱`dwDesiredAccess`中[mapviewoffileex 在](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK 中。  
+ *dwViewDesiredAccess*  
+ 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- **MapShareMem**可讓現有的檔案對應物件，由[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)，以處理序之間共用。  
+ `MapShareMem` 可讓現有的檔案對應物件，由[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)、 處理序之間共用。  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
- 呼叫這個方法，以開啟具名的檔案對應物件，為指定的檔案。  
+ 呼叫這個方法，以開啟已命名的檔案對應物件，指定的檔案。  
   
 ```
 HRESULT OpenMapping(
@@ -243,33 +243,33 @@ HRESULT OpenMapping(
 ```  
   
 ### <a name="parameters"></a>參數  
- `szName`  
- 對應物件的名稱。 如果沒有這個名稱的檔案對應物件的開啟控制代碼，而且對應物件的安全性描述元未與衝突`dwViewDesiredAccess`參數，開啟作業成功。  
+ *szName*  
+ 對應物件的名稱。 如果沒有這個名稱的檔案對應物件的開啟控制代碼，而且沒有與衝突上的對應物件的安全性描述元*dwViewDesiredAccess*參數，開啟作業成功。  
   
- `nMappingSize`  
- 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小 `szName.`  
+ *nMappingSize*  
+ 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小*szName*。  
   
- `nOffset`  
- 對應是要開始檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
+ *nOffset*  
+ 對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
   
- `dwViewDesiredAccess`  
- 指定存取檔案檢視，因此，對應的分頁檔案的保護類型。 請參閱`dwDesiredAccess`中[mapviewoffileex 在](http://msdn.microsoft.com/library/windows/desktop/aa366763)Windows SDK 中。  
+ *dwViewDesiredAccess*  
+ 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
  在偵錯組建中，如果輸入的參數無效，會發生判斷提示錯誤。  
   
 ##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
- 目前的檔案對應物件設定為另一個檔案對應物件。  
+ 設定目前的檔案對應物件到另一個檔案對應物件。  
   
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```  
   
 ### <a name="parameters"></a>參數  
- `orig`  
+ *orig*  
  目前的檔案對應物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -283,10 +283,10 @@ HRESULT Unmap() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
+ 會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[unmapviewoffile 在](http://msdn.microsoft.com/library/windows/desktop/aa366882)更多詳細資料的 Windows SDK 中。  
+ 請參閱[UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882)在 Windows SDK 中，如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlFileMapping 類別](../../atl/reference/catlfilemapping-class.md)   

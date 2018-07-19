@@ -1,5 +1,5 @@
 ---
-title: 省略符號和 Variadic 範本 |Microsoft 文件
+title: 省略符號和 Variadic 範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eddd87660d996e0d726c4453e0eb732a5553b99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416654"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941001"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略符號和 Variadic 範本
-本文示範如何使用省略符號 (`...`) 與 c + + 的 variadic 樣板。 省略符號已在 C 和 c + + 中的許多用途。 其中包括對於函式的變數引數清單。 `printf()`函式的 C 執行階段程式庫是其中一個最知名的範例。  
+這篇文章示範如何使用省略符號 (`...`) 與 c + + variadic 範本。 省略符號已在 C 和 c + + 中的許多用途。 這些包括函式的變數引數清單。 `printf()` C 執行階段程式庫函式是眾所皆知的範例之一。  
   
- A *variadic 樣板*是支援任意數目的引數的類別或函式範本。 這項機制是對於 c + + 程式庫開發人員特別有用，因為您可以將它套用到類別樣板和函式樣板，並藉此提供各種不同的型別安全和非簡單式的功能與彈性。  
+ A *variadic 樣板*是支援任意數目的引數的類別或函式範本。 這項機制是 c + + 程式庫開發人員特別有幫助，因為您可以將它套用至類別樣板和函式樣板，並藉此提供各種不同的型別安全和重要的功能和彈性。  
   
 ## <a name="syntax"></a>語法  
- Variadic 範本是在兩種方式中使用省略符號。 參數名稱左邊，它表示*參數封裝*，參數名稱右邊，它展開參數封裝至不同的名稱。  
+ 省略符號用於兩種方式，在 variadic 範本。 參數名稱左邊，它表示*參數封裝*，和右邊的參數名稱，它會展開參數封裝至不同的名稱。  
   
- 以下是基本範例*variadic 樣板類別*定義語法：  
+ 以下是基本的範例*variadic 樣板類別*定義語法：  
   
 ```cpp  
 template<typename... Arguments> class classname;  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  請注意，本文使用第一個範例中顯示的慣例 (省略符號附加至 `typename`)。  
   
- 在前述範例中，`Arguments` 是參數封裝。 類別`classname`可以接受變動數目的引數，如下列範例所示：  
+ 在前述範例中，`Arguments` 是參數封裝。 此類別`classname`可以接受變動數目的引數，如下列範例所示：  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -66,15 +66,15 @@ template <typename First, typename... Rest> class classname;
   
 ```  
   
- 以下是基本範例*variadic 樣板函式*語法：  
+ 以下是基本的範例*variadic 樣板函式*語法：  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- `Arguments`下一節中所示，供使用，然後展開參數封裝**了解 variadic 樣板**。  
+ `Arguments`下一節所示，供使用，然後展開參數封裝**了解 variadic 範本**。  
   
- 可能會使用其他形式的 variadic 樣板函式語法，包括但不是限於這些範例：  
+ 可能會有其他形式的 variadic 樣板函式語法，包括但不是限於這些範例：  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments&... args);   
@@ -82,21 +82,21 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- 規範喜歡`const`也允許：  
+ 規範喜歡**const**也允許：  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
   
 ```  
   
- 做為 variadic 樣板類別定義，您可以進行需要至少一個參數的函式：  
+ 為使用 variadic 樣板類別定義，您可以進行需要至少一個參數的函式：  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
   
 ```  
   
- Variadic 範本使用`sizeof...()`運算子 (與舊版不相關`sizeof()`運算子):  
+ 使用 Variadic 樣板`sizeof...()`運算子 (不相關的舊版`sizeof()`運算子):  
   
 ```cpp  
 template<typename... Arguments>  
@@ -114,9 +114,9 @@ void tfunc(const Arguments&... args)
 ## <a name="more-about-ellipsis-placement"></a>進一步了解省略符號位置  
  在過去，本文說明了定義參數封裝和展開的省略符號位置，「在參數名稱左邊的它表示參數封裝，在參數名稱右邊，它展開參數封裝至不同的名稱」。 這在技術上是對的，但是在轉譯程式碼上可能會造成混淆。 請考慮：  
   
--   樣板參數清單中 (`template <parameter-list>`)，`typename...`引入樣板參數封裝。  
+-   在範本參數清單 (`template <parameter-list>`)，`typename...`引入樣板參數封裝。  
   
--   在參數宣告子句 (`func(parameter-list)`)、 「 最上層 」 的省略符號導入了函式參數封裝，並省略符號位置，請務必：  
+-   在參數宣告子句 (`func(parameter-list)`)、 「 最上層 」 省略符號引入函式參數封裝，並省略符號位置非常重要：  
   
     ```cpp  
     // v1 is NOT a function parameter pack:  
@@ -129,7 +129,7 @@ void tfunc(const Arguments&... args)
 -   若省略符號在參數名稱之後顯示，您有參數封裝展開。  
   
 ## <a name="example"></a>範例  
- 說明 variadic 樣板函式機制的好方法是使用中的某些功能的重新撰寫`printf`:  
+ 說明 variadic 範本功能機制的好方法是使用它在重寫的部分的功能`printf`:  
   
 ```cpp  
 #include <iostream>  
@@ -174,5 +174,5 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  大部分併入 variadic 樣板函式的實作使用某種形式中，遞迴，但是稍有不同於傳統的遞迴。  傳統的遞迴牽涉到使用相同的簽章來呼叫本身的函式。 （它可能多載或樣板化，但相同的簽章會選擇每次）。Variadic 遞迴牽涉到使用不同的 （幾乎遞減） 數目的引數，並藉此戳記出不同的簽章每次呼叫 variadic 函式樣板。 「 基底大小寫 」 仍需要，但遞迴方式不同。  
+>  合併 variadic 樣板函式的大部分實作會使用遞迴的某種形式，但它是與傳統遞迴稍有不同。  傳統遞迴涉及使用相同的簽章來呼叫本身函式。 （可能是多載或設為範本，但每次都會選擇相同的簽章）。Variadic 遞迴包含使用不同 （幾乎一定會減少） 的數字的引數，並藉此戳記不同的簽章每次呼叫 variadic 函式樣板。 「 基底案例 」 仍需要，但遞迴性質不同。  
   

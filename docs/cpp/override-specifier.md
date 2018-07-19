@@ -1,5 +1,5 @@
 ---
-title: 覆寫規範 |Microsoft 文件
+title: 覆寫規範 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420177"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940650"
 ---
 # <a name="override-specifier"></a>override 規範
-您可以使用 `override` 關鍵字指定可覆寫基底類別中之虛擬函式的成員函式。  
+您可以使用**覆寫**關鍵字指定成員覆寫基底類別中的虛擬函式的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>備註  
- `override` 具有內容相關性，而且只有在成員函式宣告之後使用時才具有特殊意義，否則不是保留的關鍵字。  
+ **覆寫**具備內容相關性，具有特殊意義時，才使用成員函式宣告之後; 否則它不是保留的關鍵字。  
   
 ## <a name="example"></a>範例  
- 使用 `override` 有助於防止程式碼中發生意外的繼承行為。 下列範例將示範在不使用 `override` 的情況下，衍生類別可能產生的非預期成員函式行為。 編譯器不會對這個程式碼發出任何錯誤。  
+ 使用**覆寫**來協助防止意外的繼承行為，在您的程式碼。 下列範例將示範在不用**覆寫**，衍生的類別成員函式行為可能會非預期。 編譯器不會對這個程式碼發出任何錯誤。  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- 當您使用 `override` 時，編譯器會產生錯誤，而不是以無訊息方式建立新的成員函式。  
+ 當您使用**覆寫**，編譯器會產生錯誤，而不是以無訊息方式建立新的成員函式。  
   
 ```cpp  
 class BaseClass  

@@ -1,5 +1,5 @@
 ---
-title: CAccessorRowset 類別 |Microsoft 文件
+title: CAccessorRowset 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,47 @@ f1_keywords:
 - CAccessorRowset
 - ATL.CAccessorRowset
 - ATL::CAccessorRowset
+- CAccessorRowset.Bind
+- CAccessorRowset::Bind
+- CAccessorRowset::CAccessorRowset
+- CAccessorRowset.CAccessorRowset
+- CAccessorRowset
+- ATL.CAccessorRowset.CAccessorRowset
+- ATL::CAccessorRowset::CAccessorRowset
+- CAccessorRowset.Close
+- CAccessorRowset::Close
+- CAccessorRowset::FreeRecordMemory
+- CAccessorRowset.FreeRecordMemory
+- FreeRecordMemory
+- GetColumnInfo
+- CAccessorRowset.GetColumnInfo
+- CAccessorRowset::GetColumnInfo
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorRowset class
+- CAccessorRowset class, methods
+- CAccessorRowset class, members
+- Bind method
+- CAccessorRowset class, constructor
+- Close method
+- FreeRecordMemory method
+- GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090966"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181181"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
-封裝資料列集，以及其相關聯的存取子中的單一類別。  
+封裝資料列集和其相關聯的存取子，單一類別中。  
   
 ## <a name="syntax"></a>語法
 
@@ -37,12 +59,15 @@ template <class TAccessor = CNoAccessor,
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
-#### <a name="parameters"></a>參數  
- `TAccessor`  
+### <a name="parameters"></a>參數  
+ *TAccessor*  
  存取子類別。  
   
- `TRowset`  
+ *TRowset*  
  資料列集類別。  
+
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
 ## <a name="members"></a>成員  
   
@@ -50,17 +75,85 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[繫結](../../data/oledb/caccessorrowset-bind.md)|建立繫結 (使用時**bBind**指定為 false，在[ccommand:: Open](../../data/oledb/ccommand-open.md))。|  
-|[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|建構函式。|  
-|[關閉](../../data/oledb/caccessorrowset-close.md)|關閉資料列集和任何存取子。|  
-|[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|釋出不再需要將目前記錄中的任何資料行。|  
-|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|實作[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)。|  
+|[繫結](#bind)|建立繫結 (使用的時機`bBind`指定為**false**中[ccommand:: Open](../../data/oledb/ccommand-open.md))。|  
+|[CAccessorRowset](#caccessorrowset)|建構函式。|  
+|[關閉](#close)|關閉資料列集和任何存取子。|  
+|[FreeRecordMemory](#freerecordmemory)|釋出任何需要先釋放目前記錄中的資料行。|  
+|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)。|  
   
 ## <a name="remarks"></a>備註  
  類別`TAccessor`管理存取子。 類別*TRowset*管理資料列集。  
+
+## <a name="bind"></a> Caccessorrowset:: Bind
+建立繫結，如果您指定`bBind`作為**假**中[ccommand:: Open](../../data/oledb/ccommand-open.md)。  
   
-## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT Bind();  
+  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 標準的 HRESULT。  
+
+## <a name="caccessorrowset"></a> Caccessorrowset:: Caccessorrowset
+初始化 `CAccessorRowset` 物件。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+CAccessorRowset();  
+  
+```  
+
+## <a name="close"></a> Caccessorrowset:: Close
+釋放使用中的任何存取子和資料列集。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+void Close();  
+  
+```  
+  
+### <a name="remarks"></a>備註  
+ 釋放任何相關聯的記憶體。  
+
+## <a name="freerecordmemory"></a> Caccessorrowset:: Freerecordmemory
+釋出任何需要先釋放目前記錄中的資料行。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+void FreeRecordMemory();  
+  
+```  
+
+## <a name="getcolumninfo"></a> Caccessorrowset:: Getcolumninfo
+從開啟的資料列集取得資料行資訊。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
+   DBCOLUMNINFO** ppColumnInfo,  
+   LPOLESTR* ppStrings) const;  
+
+HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+   DBCOLUMNINFO** ppColumnInfo);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
+  
+### <a name="return-value"></a>傳回值  
+ 標準的 HRESULT。  
+  
+### <a name="remarks"></a>備註  
+ 使用者必須釋放字串緩衝區與傳回的資料行資訊。 使用此方法的第二個版本，當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要覆寫繫結。  
+  
+ 如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

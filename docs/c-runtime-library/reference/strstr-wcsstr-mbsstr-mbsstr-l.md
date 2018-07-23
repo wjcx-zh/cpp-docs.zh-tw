@@ -54,18 +54,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbb937cfdce7ed933c637cb48d370515134b66dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ea5ed6c4441ebd98462562ac9405d6f8c115c61
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415705"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181090"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 傳回字串中第一次出現的搜尋字串指標。
 
 > [!IMPORTANT]
-> **_mbsstr**和 **_mbsstr_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 在 Windows 執行階段中執行的應用程式中無法使用 `_mbsstr` 和 `_mbsstr_l`。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -136,33 +136,33 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="return-value"></a>傳回值
 
-讓指標回到第一個出現*strSearch*中*str*，或**NULL**如果*strSearch*不會顯示在*str*. 如果*strSearch*指向函式會傳回長度為零的字串*str*。
+讓指標回到第一個出現*strSearch*中*str*，則為 NULL 如果*strSearch*不會顯示在*str*。 如果*strSearch*指向長度為零的字串函式會傳回*str*。
 
 ## <a name="remarks"></a>備註
 
-**Strstr**函式會傳回第一個出現的指標*strSearch*中*str*。 搜尋不包含終止的 Null 字元。 **wcsstr**是寬字元版本的**strstr**和 **_mbsstr**是多位元組字元版本。 引數和傳回值**wcsstr**是寬字元字串; **_mbsstr**是多位元組字元字串。 **_mbsstr**會驗證其參數。 如果*str*或*strSearch*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_mbsstr**設定**errno**至**EINVAL**並傳回 0。 **strstr**和**wcsstr**不會驗證它們的參數。 除此之外，這三個函式的行為相同。
+`strstr`函式會將讓指標回到第一個出現*strSearch*中*str*。 搜尋不包含終止的 Null 字元。 `wcsstr` 為 `strstr` 的寬字元版本，而 `_mbsstr` 則為多位元組字元版本。 `wcsstr` 的引數和傳回值是寬字元字串；`_mbsstr` 的引數則是多位元組字元字串。 `_mbsstr` 會驗證其參數。 如果*str*或是*strSearch*是 NULL 時，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續，請執行`_mbsstr`設定`errno`EINVAL，然後傳回 0。 `strstr` 和 `wcsstr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
 
 > [!IMPORTANT]
 > 這些函式可能帶來因緩衝區滿溢問題引發的威脅。 緩衝區滿溢問題可用來攻擊系統，因為它們允許執行任意程式碼，這會造成非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
 
-在 C 中，這些函數會使用 * * const * * 的第一個引數的指標。 在 C++ 中，可使用兩個多載。 接受的指標的多載 * * const * * 將指標傳回至**const **; 版本採用一個指向非**const * * 將指標傳回至非**const **。巨集 **_CRT_CONST_CORRECT_OVERLOADS**如果兩個定義**const * * 和非-** const * * 這些函式的版本可供使用。如果您需要非**const * * 對於這兩個 c + + 多載中，行為會定義符號 **_CONST_RETURN**。
+在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 採用指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**傳回的指標，非**const**。 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**兩個 c + + 多載，行為定義符號 _CONST_RETURN。
 
-輸出值會受到地區設定分類設定**LC_CTYPE**; 如需詳細資訊，請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。 不需要這些函式的版本 **_l**後置詞使用針對此與地區設定相關行為使用目前地區設定; 具有 **_l**尾碼是一樣的只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到 LC_CTYPE; 的地區設定分類設定如需詳細資訊，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)。 不需要這些函式的版本 **_l**後置字元在針對此與地區設定相關行為使用目前的地區設定; 具有 **_l**尾碼都相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsstr**|**strstr**|**_mbsstr**|**wcsstr**|
-|**n/a**|**n/a**|**_mbsstr_l**|**n/a**|
+|`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|
+|**n/a**|**不適用**|`_mbsstr_l`|**n/a**|
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strstr**|\<string.h>|
-|**wcsstr**|\<string.h> 或 \<wchar.h>|
-|**_mbsstr**， **_mbsstr_l**|\<mbstring.h>|
+|`strstr`|\<string.h>|
+|`wcsstr`|\<string.h> 或 \<wchar.h>|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

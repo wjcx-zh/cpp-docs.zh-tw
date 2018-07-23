@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2ba300275f0154e84f7d2ced21b0893bbe3d85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c76ae09f491ff163391f0ee46564af7bb629fe
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401681"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181168"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -92,20 +92,20 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的第一個位置的指標*c*中*緩衝區*。 否則它會傳回**NULL**。
+如果成功，傳回的第一個位置的指標*c*中*緩衝區*。 否則會傳回 NULL。
 
 ## <a name="remarks"></a>備註
 
-**memchr**和**wmemchr**尋找第一個出現*c*在第一個*計數*位元組*緩衝區*。 它會停止在找到時*c*或當其已簽入第一個*計數*位元組。
+`memchr` 並`wmemchr`尋找第一個出現*c*在第一個*計數*位元組*緩衝區*。 它會停止時發現*c*或當其已簽入第一個*計數*位元組。
 
-在 C 中，這些函數會使用 * * const * * 的第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載 * * const * * 將指標傳回至**const **; 版本採用一個指向非**const * * 將指標傳回至非**const **。如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const * * 和非-** const * * 這些函式的版本可供使用。如果您需要非**const * * 這兩個 c + + overloadsin c + + 行為定義符號 _CONST_RETURN。
+在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**將指標傳回至非**const**. 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**這兩個 c + + 中 c + + 行為定義符號 _CONST_RETURN。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**memchr**|\<memory.h> 或 \<string.h>|
-|**wmemchr**|\<wchar.h>|
+|`memchr`|\<memory.h> 或 \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 

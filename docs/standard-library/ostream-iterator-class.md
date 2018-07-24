@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963520"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207915"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 類別
 
@@ -68,9 +68,9 @@ ostream_iterator 類別必須符合輸出迭代器的需求。 使用 `ostream_i
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x`。|
+|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式\* `i`  =  `x`。|
 |[operator++](#op_add_add)|無作用的遞增運算子，傳回 `ostream_iterator`，指向在呼叫作業之前它所定址的相同物件。|
-|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x`，以寫入輸出資料流。|
+|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式\* `i`  =  `x`以寫入輸出資料流。|
 
 ## <a name="requirements"></a>需求
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-指派運算子，用來實作 output_iterator 運算式 * `i` = `x`，以寫入輸出資料流。
+指派運算子，用來實作 output_iterator 運算式\* `i`  =  `x`以寫入輸出資料流。
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="remarks"></a>備註
 
-針對輸出迭代器的需求，`ostream_iterator` 必須滿足僅要求運算式 * `ii` = `t` 有效，且本身不涉及運算子或 operator=。 此成員運算子會傳回 `*this`。
+輸出迭代器的需求，`ostream_iterator`必須滿足僅要求運算式\* `ii`  =  `t`有效，且本身不涉及運算子或運算子 = 靠自己。 此成員運算子會傳回 `*this`。
 
 ### <a name="example"></a>範例
 

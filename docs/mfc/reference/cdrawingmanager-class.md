@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337417"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209166"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 `CDrawingManager`類別會實作複雜繪圖演算法。  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>備註  
  這個方法會失敗並發生錯誤，如果有任一*k1*或是*k2*小於零。 如果這兩個參數會設定為 0，則方法會傳回`RGB(0, 0, 0)`。  
   
- 加權的比例使用下列公式計算: (color1 * 版 k1 的 powerapps + 色 2 \* k2) /(k1 + k2)。 決定的加權的比例之後，方法會計算的混合色彩的亮度。 它接著會將由亮度*dblLumRatio*。 如果值大於 1.0，方法會設定為新值的混合色彩的亮度。 否則，亮度會設定為 1.0。  
+ 加權的比例使用下列公式計算: (color1\*版 k1 的 powerapps + 色 2 \* k2) /(k1 + k2)。 決定的加權的比例之後，方法會計算的混合色彩的亮度。 它接著會將由亮度*dblLumRatio*。 如果值大於 1.0，方法會設定為新值的混合色彩的亮度。 否則，亮度會設定為 1.0。  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  旋轉 90 度的來源 DC 給定矩形內的內容。  

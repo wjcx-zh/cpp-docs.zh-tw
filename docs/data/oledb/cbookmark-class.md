@@ -1,5 +1,5 @@
 ---
-title: CBookmark 類別 |Microsoft 文件
+title: CBookmark 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,82 @@ f1_keywords:
 - CBookmark
 - ATL.CBookmark<nSize>
 - ATL::CBookmark
+- CBookmark<0>.CBookmark<0>
+- CBookmark::CBookmark
+- ATL.CBookmark.CBookmark
+- CBookmark.CBookmark
+- CBookmark
+- ATL::CBookmark<0>::CBookmark<0>
+- ATL.CBookmark<0>.CBookmark<0>
+- CBookmark<0>::CBookmark<0>
+- ATL::CBookmark::CBookmark
+- ATL.CBookmark<0>.GetBuffer
+- ATL.CBookmark.GetBuffer
+- ATL::CBookmark<0>::GetBuffer
+- ATL::CBookmark::GetBuffer
+- CBookmark.GetBuffer
+- ATL::CBookmark<nSize>::GetBuffer
+- ATL.CBookmark<nSize>.GetBuffer
+- CBookmark<0>.GetBuffer
+- CBookmark<nSize>::GetBuffer
+- CBookmark<0>::GetBuffer
+- CBookmark<nSize>.GetBuffer
+- CBookmark::GetBuffer
+- CBookmark::GetSize
+- ATL.CBookmark<nSize>.GetSize
+- CBookmark<nSize>.GetSize
+- CBookmark.GetSize
+- ATL::CBookmark::GetSize
+- CBookmark<0>::GetSize
+- ATL::CBookmark<nSize>::GetSize
+- ATL.CBookmark<0>.GetSize
+- ATL::CBookmark<0>::GetSize
+- ATL.CBookmark.GetSize
+- CBookmark<0>.GetSize
+- CBookmark<nSize>::GetSize
+- CBookmark<0>::SetBookmark
+- ATL.CBookmark<0>.SetBookmark
+- CBookmark<0>.SetBookmark
+- SetBookmark
+- ATL::CBookmark::SetBookmark
+- ATL::CBookmark<0>::SetBookmark
+- CBookmark.SetBookmark
+- ATL.CBookmark.SetBookmark
+- CBookmark::SetBookmark
+- CBookmark<0>::operator=
+- CBookmark<0>.operator=
+- ATL.CBookmark.operator=
+- CBookmark::operator=
+- ATL.CBookmark<0>.operator=
+- ATL::CBookmark<0>::operator=
+- CBookmark.operator=
+- ATL::CBookmark::operator=
 dev_langs:
 - C++
 helpviewer_keywords:
 - CBookmark class
+- CBookmark class, constructor
+- GetBuffer method
+- GetSize method
+- SetBookmark method
+- = operator, with OLE DB templates
+- operator =, bookmarks
+- operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c14fde6fb07a35ef9e2955ce61f991bede6b11a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7545a9a31ff9bd7426002ef97176c59dd308dd49
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094747"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209140"
 ---
 # <a name="cbookmark-class"></a>CBookmark 類別
-保存的書籤值在其緩衝區中。  
+保留的書籤值在其緩衝區中。  
   
 ## <a name="syntax"></a>語法
 
@@ -41,9 +98,12 @@ template <>
 class CBookmark< 0 > : public CBookmarkBase  
 ```  
   
-#### <a name="parameters"></a>參數  
- `nSize`  
- 以位元組為單位的書籤緩衝區的大小。 當`nSize`是零，則在執行階段會以動態方式建立書籤緩衝區。  
+### <a name="parameters"></a>參數  
+ *nSize*  
+ 以位元組為單位的書籤緩衝區的大小。 當*nSize*為零，在執行階段會以動態方式建立書籤緩衝區。  
+
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
 ## <a name="members"></a>成員  
   
@@ -51,23 +111,102 @@ class CBookmark< 0 > : public CBookmarkBase
   
 |||  
 |-|-|  
-|[CBookmark](../../data/oledb/cbookmark-class.md)|建構函式|  
-|[GetBuffer](../../data/oledb/cbookmark-getbuffer.md)|擷取緩衝區的指標。|  
-|[GetSize](../../data/oledb/cbookmark-getsize.md)|擷取以位元組為單位的緩衝區大小。|  
-|[SetBookmark](../../data/oledb/cbookmark-setbookmark.md)|設定書籤值。|  
+|[CBookmark](#cbookmark)|建構函式|  
+|[GetBuffer](#getbuffer)|擷取到緩衝區的指標。|  
+|[GetSize](#getsize)|擷取以位元組為單位的緩衝區大小。|  
+|[SetBookmark](#setbookmark)|設定書籤值。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator =](../../data/oledb/cbookmark-operator-equal.md)|會指派一個`CBookmark`到另一個類別。|  
+|[operator =](#operator)|會指派一個`CBookmark`到另一個類別。|  
   
 ## <a name="remarks"></a>備註  
- **CBookmark\<0 >** 的樣板特製化`CBookmark`; 在執行階段動態建立其緩衝區。  
+ `CBookmark<0>` 是的樣板特製化`CBookmark`; 在執行階段以動態方式建立它的緩衝區。  
+
+## <a name="cbookmark"></a> Cbookmark:: Cbookmark
+建構函式。  
   
-## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+### <a name="syntax"></a>語法  
   
+```cpp
+      CBookmark();   
+
+CBookmark(DBLENGTH nSize);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *nSize*  
+ [in] 書籤緩衝區的大小 (以位元組為單位)。  
+  
+### <a name="remarks"></a>備註  
+ 第一個函式會設定為 NULL，而且設為 0 的緩衝區大小的緩衝區。 第二個函式會將緩衝區大小設定為*nSize*，將緩衝區的位元組陣列*nSize*位元組。  
+  
+> [!NOTE]
+>  此函式僅供以`CBookmark<0>`。 
+  
+## <a name="getbuffer"></a> Cbookmark:: Getbuffer
+擷取書籤緩衝區的指標。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+virtual BYTE* GetBuffer() const throw();  
+  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 書籤緩衝區的指標。 
+
+## <a name="getsize"></a> Cbookmark:: Getsize
+擷取書籤緩衝區的大小。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+virtual DBLENGTH GetSize() const throw();  
+  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 以位元組為單位的緩衝區大小。  
+
+## <a name="setbookmark"></a> Cbookmark:: Setbookmark
+將所參考的書籤值複製*pBuffer*要`CBookmark`緩衝區，並將緩衝區大小設定為*nSize*。  
+  
+### <a name="syntax"></a>語法  
+  
+```
+HRESULT SetBookmark(DBLENGTH nSize,  
+  BYTE* pBuffer) throw();  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *nSize*  
+ [in]書籤緩衝區的大小。  
+  
+ *pBuffer*  
+ [in]包含書籤值的位元組陣列指標。  
+  
+### <a name="return-value"></a>傳回值  
+ 標準的 HRESULT。  
+  
+### <a name="remarks"></a>備註  
+ 此函式僅供以`CBookmark<0>`。 
+
+## <a name="operator"></a> Cbookmark:: Operator =
+指派 `CBookmark` 物件給另一個。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      CBookmark& operator =(const CBookmark& bookmark) throw();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此運算子只有在需要`CBookmark<0>`。   
+
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954626"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208522"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 類別
 
@@ -69,8 +69,8 @@ class raw_storage_iterator
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式 * `ii` = `x`。|
-|[operator=](#op_eq)|指派運算子，用來實作原始儲存體迭代器運算式 * `i` = `x` 以儲存於記憶體中。|
+|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式\* `ii`  =  `x`。|
+|[operator=](#op_eq)|指派運算子，用來實作原始儲存體迭代器運算式\* `i`  =  `x`儲存在記憶體中。|
 |[operator++](#op_add_add)|原始儲存體迭代器的前置遞增和後置遞增運算子。|
 
 ## <a name="requirements"></a>需求
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 此類型是範本參數 `ForwardIterator`的同義字。
 
-## <a name="op_star"></a>  raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator:: operator\*
 
 取值運算子，用來實作原始儲存體迭代器運算式 \* *ii* = *x*。
 

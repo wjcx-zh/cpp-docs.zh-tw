@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942090"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208545"
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- 請注意，`strlen()`並`wcslen()`不包含結束的 null 字元，其大小等於字串類型的項目大小的大小： char * 字串上的一個位元組、 wchar_t 上的兩個位元組\*或 char16_t\*字串，和 char32_t 上的四個位元組\*字串。  
+ 請注意，`strlen()`並`wcslen()`不包含結束的 null 字元，其大小等於字串類型的項目大小的大小： char 上的一個位元組\*string、 wchar_t 上的兩個位元組\*或 char16_t\*字串，以及 char32_t 上的四個位元組\*字串。  
   
  字串常值的長度上限為 65535 個位元組。 這個限制適用於半形字串常值和全形字串常值。  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>含通用字元名稱的字串常值  
- 原生 (非原始) 的字串常值可以使用通用字元名稱來代表任何字元，只要通用字元名稱可以編碼為字串類型中的一或多個字元。  例如，通用字元名稱表示的擴充字元無法編碼在使用 ANSI 字碼頁的半形字串中，但可以編碼在某些多位元組字碼頁的半形字串中，或編碼在 UTF-8 字串或全形字串中。 在 C + + 11 中，Unicode 支援已擴充的 char16_t * 和 char32_t\*字串類型：  
+ 原生 (非原始) 的字串常值可以使用通用字元名稱來代表任何字元，只要通用字元名稱可以編碼為字串類型中的一或多個字元。  例如，通用字元名稱表示的擴充字元無法編碼在使用 ANSI 字碼頁的半形字串中，但可以編碼在某些多位元組字碼頁的半形字串中，或編碼在 UTF-8 字串或全形字串中。 在 C + + 11 中，Unicode 支援已擴充的 char16_t\*和 char32_t\*字串類型：  
   
 ```cpp  
 // ASCII smiling face  

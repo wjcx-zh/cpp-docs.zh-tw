@@ -1,5 +1,5 @@
 ---
-title: CDBPropIDSet 類別 |Microsoft 文件
+title: CDBPropIDSet 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,31 +9,59 @@ f1_keywords:
 - CDBPropIDSet
 - ATL.CDBPropIDSet
 - ATL::CDBPropIDSet
+- CDBPropIDSet.AddPropertyID
+- CDBPropIDSet::AddPropertyID
+- AddPropertyID
+- ATL.CDBPropIDSet.AddPropertyID
+- ATL::CDBPropIDSet::AddPropertyID
+- ATL::CDBPropIDSet::CDBPropIDSet
+- CDBPropIDSet
+- CDBPropIDSet.CDBPropIDSet
+- CDBPropIDSet::CDBPropIDSet
+- ATL.CDBPropIDSet.CDBPropIDSet
+- CDBPropIDSet.operator=
+- ATL.CDBPropIDSet.operator=
+- ATL::CDBPropIDSet::operator=
+- CDBPropIDSet::operator=
+- CDBPropIDSet.SetGUID
+- ATL::CDBPropIDSet::SetGUID
+- SetGUID
+- ATL.CDBPropIDSet.SetGUID
+- CDBPropIDSet::SetGUID
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDBPropIDSet class
+- AddPropertyID method
+- CDBPropIDSet class, constructor
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
+- SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67bfd11a46d8e0c852c1881ff8874b7fbd817164
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096947"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207581"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
-繼承自**DBPROPIDSET**結構，並將建構函式會初始化索引鍵欄位，以及[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)存取方法。  
+繼承自`DBPROPIDSET`結構，並新增初始化索引鍵欄位的建構函式，以及[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)存取方法。  
   
 ## <a name="syntax"></a>語法
 
 ```cpp
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
+
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h
   
 ## <a name="members"></a>成員  
   
@@ -41,21 +69,76 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|新增屬性至屬性 ID 集。|  
-|[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|建構函式。|  
-|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|集合的屬性 ID 集的 GUID。|  
+|[AddPropertyID](#addpropertyid)|將屬性加入至屬性 ID 集。|  
+|[CDBPropIDSet](#cdbpropidset)|建構函式。|  
+|[SetGUID](#setguid)|設定的屬性 ID 集的 GUID。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator =](../../data/oledb/cdbpropidset-operator-equal.md)|指派的一個屬性 ID 集的內容至另一個。|  
+|[operator =](#op_equal)|指派的一個屬性 ID 集的內容到另一個。|  
   
 ## <a name="remarks"></a>備註  
- OLE DB 取用者使用**DBPROPIDSET**結構傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 在單一識別屬性[DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx)結構屬於一個屬性集。  
+ OLE DB 取用者使用`DBPROPIDSET`結構，以傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 識別在單一的屬性[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)結構屬於一個屬性集。  
+
+## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
+將屬性 ID 加入至屬性 ID 集。  
   
-## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      bool AddPropertyID(DBPROPID propid) throw();  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *propid*  
+ [in] 要加入至屬性 ID 集的屬性 ID。  
+
+## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
+建構函式。 初始化`rgProperties`， `cProperties`，以及 （選擇性）`guidPropertySet`的欄位[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)結構。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      CDBPropIDSet(const GUID& guid);  
+
+CDBPropIDSet(const CDBPropIDSet& propidset);  
+
+CDBPropIDSet();  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *guid*  
+ [in]GUID; 用來初始化`guidPropertySet`欄位。  
+  
+ *propidset*  
+ [in] 複製建構的另一個 `CDBPropIDSet` 物件。  
+
+## <a name="setguid"></a> Cdbpropidset:: Setguid
+設定 [GUID] 欄位中`DBPROPIDSET`結構。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      void SetGUID(const GUID& guid) throw();  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *guid*  
+ [in]GUID; 用來設定`guidPropertySet`欄位[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)結構。  
+  
+### <a name="remarks"></a>備註  
+ 可以設定此欄位[建構函式](../../data/oledb/cdbpropidset-cdbpropidset.md)以及。 如果您為這個類別使用預設建構函式，則呼叫此函式。  
+
+## <a name="op_equal"></a> Cdbpropidset:: Operator =
+將一個屬性 ID 集的內容指派至另一個 ID 屬性集。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

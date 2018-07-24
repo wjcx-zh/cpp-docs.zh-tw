@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorIterator 類別 |Microsoft 文件
+title: 2&gt;platform::collections::vectoriterator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,17 +15,17 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68198edb54c79d0872b3181d4ffe36df21a8cf02
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092528"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208467"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 類別
-衍生自 Windows Runtime IVector 介面的物件提供標準樣板程式庫迭代器。  
+衍生自 Windows 執行階段 IVector 介面的物件提供標準樣板程式庫迭代器。  
   
- VectorIterator 是 proxy 迭代器可以儲存的型別 VectorProxy 元素\<T >。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ VectorIterator 會儲存類型 VectorProxy 項目的 proxy 迭代器\<T >。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,8 +46,8 @@ class VectorIterator;
 |----------|-----------------|  
 |`difference_type`|指標差異 (ptrdiff_t)。|  
 |`iterator_category`|隨機存取迭代器的分類 (::std::random_access_iterator_tag)。|  
-|`pointer`|Platform::Collections::Details::VectorProxy 內部類型指標\<T >，也就是 VectorIterator 實作所需。|  
-|`reference`|Platform::Collections::Details::VectorProxy 內部類型參考\<T >，也就是，VectorIterator 實作所需。|  
+|`pointer`|內部類型 Platform::Collections::Details::VectorProxy 指標\<T >，也就是 VectorIterator 實作所需。|  
+|`reference`|內部類型 Platform::Collections::Details::VectorProxy 參考\<T >，也就是 VectorIterator 實作所需。|  
 |`value_type`|`T` typename。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
@@ -117,11 +117,11 @@ VectorIterator operator--(int);
 ### <a name="remarks"></a>備註  
  第一種 VectorIterator 語法會預先遞減目前的 VectorIterator。  
   
- 第二種語法會後置遞減目前的 VectorIterator。 `int`第二個語法中的類型代表後置遞減作業，而不是實際的整數運算元。  
+ 第二種語法會後置遞減目前的 VectorIterator。 `int`第二個語法中的類型表示後置遞減作業，而不是實際的整數運算元。  
   
 
 
-## <a name="operator-dereference"></a>  Vectoriterator:: Operator * 運算子
+## <a name="operator-dereference"></a>  Vectoriterator:: Operator\*運算子
 擷取目前 VectorIterator 指定的項目位址。  
   
 ### <a name="syntax"></a>語法  
@@ -168,7 +168,7 @@ bool operator>(const VectorIterator& other) const
  另一個 VectorIterator。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果目前 VectorIterator 大於`other`，否則`false`。  
+ `true` 如果目前 VectorIterator 大於`other`; 否則`false`。  
   
 
 
@@ -224,7 +224,7 @@ bool operator!=(const VectorIterator& other) const;
  另一個 VectorIterator。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果目前 VectorIterator 是否不等於`other`，否則`false`。  
+ `true` 如果目前 VectorIterator 是否不等於`other`; 否則`false`。  
   
 
 
@@ -262,7 +262,7 @@ bool operator<=(const VectorIterator& other) const
  另一個 VectorIterator。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果目前 VectorIterator 是否小於或等於`other`，否則`false`。  
+ `true` 如果目前 VectorIterator 是否小於或等於`other`; 否則`false`。  
   
 
 
@@ -286,7 +286,7 @@ difference_type operator-(const VectorIterator& other) const;
  另一個 VectorIterator。  
   
 ### <a name="return-value"></a>傳回值  
- 第一個運算子語法則傳回的 VectorIterator 物件是`n`目前 VectorIterator 大於或等於的項目。 第二個運算子語法會傳回項目數目之間目前和`other`VectorIterator。  
+ 第一個運算子語法會傳回的 VectorIterator 物件`n`目前 VectorIterator 大於或等於的項目。 第二個運算子語法則傳回的項目之間目前和`other`VectorIterator。  
   
 
 
@@ -397,7 +397,7 @@ explicit VectorIterator(
  IVector\<T > 物件。  
   
 ### <a name="remarks"></a>備註  
- 第一個語法範例是預設建構函式。 第二個語法範例是用來從 Ivector<platform 建構 VectorIterator 明確建構函式\<T > 物件。  
+ 第一個語法範例是預設建構函式。 第二個語法範例是明確建構函式用來建構從 Ivector<platform VectorIterator\<T > 物件。  
   
 
 

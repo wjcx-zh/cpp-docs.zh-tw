@@ -1,5 +1,5 @@
 ---
-title: ldexp ldexpf，ldexpl |Microsoft 文件
+title: ldexp、 ldexpf、 ldexpl |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,14 +44,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401411"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208411"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp ldexpf ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp、 ldexpf、 ldexpl
 
 將浮點數與 2 的整數冪相乘。
 
@@ -90,17 +90,17 @@ long double ldexpl(
 
 ## <a name="return-value"></a>傳回值
 
-**Ldexp**函式傳回的值*x* * 2<sup>*exp* </sup>如果成功的話。 溢位且根據正負號的*x*， **ldexp**傳回 + /- **HUGE_VAL**; **errno**值設定為**為 ERANGE**.
+**Ldexp**函式會傳回的值*x* \* 2<sup>*exp* </sup>如果成功。 溢位時，以及每種的正負號*x*， **ldexp**會傳回 + /- **HUGE_VAL**; **errno**值設定為**ERANGE**.
 
-如需有關**errno**和可能的錯誤，傳回值，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需詳細資訊**errno**和可能的錯誤，傳回值，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**ldexp**採用**float**或**長** **double**型別。 在 C 程式中， **ldexp**一律採用**double**和**int**並傳回**double**。
+C + + 允許多載，因為您可以呼叫多載**ldexp**採用**float**或是**長** **double**類型。 在 C 程式中， **ldexp**一律採用**double**並**int** ，並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|C 標頭|C++ 標頭|
+|常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
 |**ldexp**， **ldexpf**， **ldexpl**|\<math.h>|\<cmath>|
 

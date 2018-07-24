@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2bcb774d7ebe7e71c3877af326177bbf8d7160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 480bf65d61581866fe447c9563a267d08d17c838
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406998"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207649"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -63,24 +63,24 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>參數
 
-*numer*<br/>
+*號碼*<br/>
 分子。
 
 *denom*<br/>
 分母。
 
-*目前*<br/>
+*/quo*<br/>
 用來儲存具有正負號和商數近似大小的整數的指標。
 
 ## <a name="return-value"></a>傳回值
 
-**remquo**傳回浮點餘數*x* / *y*。 如果值*y*為 0.0， **remquo**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**傳回的浮點餘數*x* / *y*。 如果值*y*是 0.0， **remquo**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Remquo**函式會計算浮點數餘數*f*的*x* / *y*使得*x*  = *我* * *y* + *f*，其中*我*是一個整數*f*具有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
+**Remquo**函式會計算浮點餘數*f*的*x* / *y*使得*x*  = *我* \* *y* + *f*，其中*我*是整數*f*有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
 
-C + + 允許多載，所以您可以呼叫的多載**remquo**採用並傳回**float**或**長** **double**值。 在 C 程式中， **remquo**一律會採用兩個**double**引數並傳回**double**。
+C + + 允許多載，因此您可以呼叫多載**remquo**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **remquo**一律會採用兩個**double**引數並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

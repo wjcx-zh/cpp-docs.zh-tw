@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880943"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208659"
 ---
 # <a name="cfiletime-class"></a>CFileTime 類別
 這個類別提供方法來管理與檔案相關聯的日期和時間值。  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |成員變數|100 奈秒間隔的數目|  
 |---------------------|-----------------------------------------|  
 |Millisecond|10,000|  
-|Second|毫秒 * 1000|  
-|Minute|第二個 * 60|  
-|Hour|分鐘 * 60|  
-|Day|小時 * 24|  
-|一週|天 * 7|  
+|Second|毫秒\*1000|  
+|Minute|第二個\*60|  
+|Hour|分鐘\*60|  
+|Day|小時\*24|  
+|一週|天\*7|  
   
  **請注意**並非所有的檔案系統可以記錄建立和上次存取時間和不是所有的檔案系統會將其記錄在相同的方式。 範例中的，在 Windows NT FAT 檔案系統中，建立時間的解析度為 10 毫秒，寫入時間有解析度為 2 秒，而且存取時間有 1 天 （存取的日期） 的解決方案。 在 NTFS，存取時間會有 1 小時的解決方案。 此外，FAT 當地時間，記錄在磁碟上的時間，但 NTFS 會記錄在磁碟上的時間-utc 時區。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)。  
   

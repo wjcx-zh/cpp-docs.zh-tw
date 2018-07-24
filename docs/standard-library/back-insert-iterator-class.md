@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 22f96b81836a8c1a9daa971ff8fb1961edb60cfb
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958616"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209000"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 類別
 
@@ -63,9 +63,9 @@ class back_insert_iterator;
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式 *`i` = `x` 以進行後端插入。|
+|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式\* `i`  =  `x`的後端插入。|
 |[operator++](#op_add_add)|將 `back_insert_iterator` 遞增至可儲存值的下一個位置。|
-|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式 *`i` = `x` 以進行後端插入。|
+|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式\* `i`  =  `x`的後端插入。|
 
 ## <a name="requirements"></a>需求
 
@@ -191,7 +191,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="op_star"></a> back_insert_iterator::operator*
+## <a name="op_star"></a>  back_insert_iterator:: operator\*
 
 取值運算子，用來實作輸出迭代器運算式 \* *i* = *x*。
 

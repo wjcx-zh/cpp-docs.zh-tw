@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 atomic 建構 |Microsoft 文件
+title: 2.6.4 atomic 建構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688124"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208129"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic 建構
-`atomic`指示詞可確保特定的記憶體位置會以不可分割方式，更新，而不是公開多個可能性同時撰寫執行緒。 語法`atomic`指示詞時，如下所示：  
+`atomic`指示詞可讓您確保特定記憶體位置會以不可分割的方式，更新，而不是將其公開到可能的多個同時撰寫執行緒。 語法`atomic`指示詞時，如下所示：  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- 在運算式陳述式必須具有下列格式之一：  
+ 運算陳述式必須具有下列格式之一：  
   
  *x binop*= *expr*  
   
@@ -40,19 +40,19 @@ ms.locfileid: "33688124"
   
  在上述的運算式：  
   
--   *x*是純量型別左值運算式。  
+-   *x*是純量類型的左值運算式。  
   
--   *expr*具有純量類型的運算式，且未參考指定之物件*x*。  
+-   *expr*是純量類型，使用運算式，而不會參考所指定的物件*x*。  
   
--   `binop` 多載的運算子並不是其中一個 +、 *、-、 /、 &、 ^， &#124;，<\<，或 >>。  
+-   `binop` 多載的運算子並不是其中一個 +， \*、-、 /、 &、 ^、 &#124;，<\<，或 >>。  
   
- 雖然它是由實作定義是否實作會取代所有`atomic`指示詞與**重大**指示詞具有相同的唯一*名稱*、`atomic`指示詞允許更佳的最佳化。 使用的硬體指示通常可執行不可部分完成的更新具有最少額外負荷。  
+ 雖然它是由實作定義是否實作會取代所有`atomic`使用指示詞**重要**指示詞具有相同的唯一*名稱*，則`atomic`指示詞允許更好的最佳化。 通常是硬體指示可執行不可部分完成的更新具有最少額外負荷。  
   
- 只有負載和所指定的物件存放區*x*是不可部分完成; 評估*expr*不是不可部分完成。 若要避免競爭情形，所有更新的位置，以平行方式應該都受到`atomic`指示詞，除了已知為免費提供的競爭情形。  
+ 只有負載和所指定的物件存放區*x*是不可部分完成; 評估*expr*不是不可部分完成。 若要避免競爭情形，所有更新的位置，以平行方式應該都受到`atomic`指示詞，除了已知為免費的競爭情形。  
   
- 若要限制`atomic`指示詞如下：  
+ 若要限制`atomic`指示詞如下所示：  
   
--   在整個程式的儲存位置 x 不可部分完成的所有參考都需要有相容的類型。  
+-   在整個程式的儲存體位置 x 不可部分完成的所有參考，都才能有相容的類型。  
   
 ## <a name="examples"></a>例如：  
   

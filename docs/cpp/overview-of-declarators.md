@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942695"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208558"
 ---
 # <a name="overview-of-declarators"></a>宣告子概觀
 宣告子是用來指定物件或函式名稱的宣告元件。 宣告子也可將具名物件指定為物件、指標、參考或陣列。  當宣告子未指定基底類型時，會將基底類型中的類型資訊修改為指定的衍生類型，如指標、參考和陣列。  套用至函式時，宣告子會搭配類型規範，將函式的傳回類型完整指定為物件、指標或參考。 (規範，所述[宣告和定義](declarations-and-definitions-cpp.md)，傳達等型別和儲存類別屬性。 在本節中，然後在討論的修飾詞[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)，宣告子修改。)下圖顯示 `MyFunction` 的完整宣告，以及呼叫宣告的元件。  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- 可能看起來像是宣告**int**指標，函式傳回`int*`，但不是。  那是因為 * 屬於 `i` 的宣告子，而不是屬於 `f` 的宣告子。  
+ 可能看起來像是宣告**int**指標，函式傳回`int*`，但不是。  這是因為\*是的宣告子的一部分`i`不屬於的宣告子、 `f`。  
   
  **使用 typedef 簡化宣告子語法**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - 並*指標運算子*是其中一個：  
   
-  - * [cv 限定詞]  
-  - & [cv 限定詞]:: 巢狀名稱規範 * [cv 限定詞]  
+  - \* [cv 限定詞]  
+  - & [cv 限定詞]:: 巢狀名稱規範\*[cv 限定詞]  
 
   
  由於宣告子可能包含其他宣告子，因此可以使用上述規則建構較複雜的衍生類型 (例如指標的陣列、傳回函式指標陣列的函式)。  若要進行建構的每個步驟，可從表示基底資料類型的識別項，以及使用先前的運算式做為 `declarator`，套用上述語法規則開始。  套用語法規則的順序應該與以英文所述運算式的方式相反。  如果套用*指標運算子*語法規則的陣列或函式的運算式，會使用括號，如果您想要的指標陣列或函式，如在下表中的最後一個資料列所示。  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |10 的陣列|`(*i)[10]`|4|  
 |指向|`*((*i)[10])`|6，然後 5|  
   
- 如果使用多個指標、參考、陣列或函式修飾詞，宣告子可能會變得相當複雜。  本主題[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)描述如何讀取更複雜的宣告子語法。  主題是適用於 C 和 c + +，雖然 c + +、 任何位置 * 用來表示的指標，限定的名稱，例如 MyClass::\*可用來指定類別成員的指標。
+ 如果使用多個指標、參考、陣列或函式修飾詞，宣告子可能會變得相當複雜。  本主題[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)描述如何讀取更複雜的宣告子語法。  主題是適用於 C 和 c + +，雖然 c + +，隨處\*用來表示的指標，限定的名稱，例如 MyClass::\*可用來指定類別成員的指標。

@@ -1,5 +1,5 @@
 ---
-title: fmod、 fmodf，fmodl |Microsoft 文件
+title: fmod、 fmodf、 fmodl |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -39,14 +39,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6cc8cc10c026c5ecd621657c556da883c187f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c473b5cb6822df07f4972ff2c964c828b14b5966
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399032"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207529"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf、 fmodl
 
 計算浮點餘數。
 
@@ -82,13 +82,13 @@ long double fmodl(
 
 ## <a name="return-value"></a>傳回值
 
-**fmod**傳回浮點餘數*x* / *y*。 如果值*y*為 0.0， **fmod**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**傳回的浮點餘數*x* / *y*。 如果值*y*是 0.0， **fmod**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fmod**函式會計算浮點數餘數*f*的*x* / *y*使得*x* = *我* * *y* + *f*，其中*我*是整數， *f*具有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
+**Fmod**函式會計算浮點餘數*f*的*x* / *y*使得*x* = *我* \* *y* + *f*，其中*我*是一個整數， *f*有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
 
-C + + 允許多載，所以您可以呼叫的多載**fmod**採用並傳回**float**和**長** **double**值。 在 C 程式中， **fmod**一律會採用兩個**double**引數並傳回**double**。
+C + + 允許多載，因此您可以呼叫多載**fmod**採用並傳回**float**並**長** **double**值。 在 C 程式中， **fmod**一律會採用兩個**double**引數並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

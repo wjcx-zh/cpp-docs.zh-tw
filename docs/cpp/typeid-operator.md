@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943056"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207448"
 ---
 # <a name="typeid-operator"></a>typeid 運算子
 ## <a name="syntax"></a>語法  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   類別的參考  
   
--   已透過 * 取值的指標  
+-   使用取值的指標 \*  
   
 -   註標的指標 (也就是 [ ])。 (請注意，使用具有多型類型指標的註標通常並不安全)。  
   

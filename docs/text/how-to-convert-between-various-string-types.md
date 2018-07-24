@@ -1,5 +1,5 @@
 ---
-title: 如何： 各種字串類型之間轉換 |Microsoft 文件
+title: 如何： 各種字串類型之間轉換 |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d54cafaa2f0b4d3db79e8b4c8fc381457952794
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861223"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208327"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>如何：在各種字串類型之間轉換
-本主題示範如何將各種 Visual c + + 字串型別轉換成其他字串。 涵蓋的字串類型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情況下，轉換為新類型時，是由字串的複本。 新的字串所做的變更將不會影響原始的字串，反之亦然。  
+本主題示範如何將各種 Visual c + + 字串類型轉換成其他字串。 涵蓋的字串類型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情況下，轉換為新的型別時，都會產生字串的複本。 新的字串所做的變更不會影響原始的字串，反之亦然。  
   
-## <a name="converting-from-char-"></a>轉換從 char *  
+## <a name="converting-from-char-"></a>從 char 轉換 \*  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`char *`上面所列的其他字串類型。 A`char *`字串 （也稱為 C 樣式字串） 會使用 null 字元來表示字串的結尾。 C 樣式字串通常會需要一個位元組，每個字元，但也可以使用兩個位元組。 在以下範例中，`char *`字串有時稱為多位元組字元字串由於天時，從 Unicode 字串轉換的字串資料。 單一位元組和多位元組字元 (`MBCS`) 函式可以操作的`char *`字串。  
+ 此範例示範如何將轉換`char *`上面所列的其他字串類型。 A`char *`字串 （也稱為 C style 字串） 會使用 null 字元來表示字串的結尾。 C style 字串通常會需要一個位元組，每個字元，但也可以使用兩個位元組。 在以下範例中，`char *`字串有時稱為多位元組字元字串由於從 Unicode 字串轉換所產生的字串資料。 單一位元組和多位元組字元 (`MBCS`) 的函式可以操作`char *`字串。  
   
 ### <a name="code"></a>程式碼  
   
@@ -128,12 +128,12 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-wchart-"></a>轉換的 wchar_t *  
+## <a name="converting-from-wchart-"></a>從 wchar_t 轉換 \*  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`wchar_t *`上面所列的其他字串類型。 數個字串類型，包括`wchar_t *`，實作寬字元格式。 若要轉換多位元組和寬字元格式之間的字串，您可以使用單一函數呼叫，例如`mbstowcs_s`或是類別建構函式引動過程，像是`CStringA`。  
+ 此範例示範如何將轉換`wchar_t *`上面所列的其他字串類型。 有些字串類型，包括`wchar_t *`，實作寬字元格式。 若要轉換多位元組和寬字元格式之間的字串，您可以使用單一函數呼叫，例如`mbstowcs_s`或是想要的類別建構函式引動過程`CStringA`。  
   
 ### <a name="code"></a>程式碼  
   
@@ -258,7 +258,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`_bstr_t`上面所列的其他字串類型。 `_bstr_t`物件是一種封裝的寬字元`BSTR`字串。 BSTR 字串的長度值，而不使用 null 字元以終止的字串，但您將轉換成字串類型可能需要結束的 null。  
+ 此範例示範如何將轉換`_bstr_t`上面所列的其他字串類型。 `_bstr_t`物件是用來封裝寬字元`BSTR`字串。 BSTR 字串具有長度值，並不會使用 null 字元結束字串，但是您將轉換成字串類型可能需要結束的 null。  
   
 ### <a name="code"></a>程式碼  
   
@@ -359,7 +359,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`CComBSTR`上面所列的其他字串類型。 _Bstr_t，像是`CComBSTR`物件是一種封裝的寬字元的 BSTR 字串。 BSTR 字串的長度值，而不使用 null 字元以終止的字串，但您將轉換成字串類型可能需要結束的 null。  
+ 此範例示範如何將轉換`CComBSTR`上面所列的其他字串類型。 與 _bstr_t 類似，`CComBSTR`物件是用來封裝寬字元 BSTR 字串。 BSTR 字串具有長度值，並不會使用 null 字元結束字串，但是您將轉換成字串類型可能需要結束的 null。  
   
 ### <a name="code"></a>程式碼  
   
@@ -470,9 +470,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`CString`上面所列的其他字串類型。 `CString` 根據 TCHAR 資料型別，相依於是否符號`_UNICODE`定義。 如果`_UNICODE`未定義`TCHAR`定義成 char 和`CString`包含多位元組字元字串; 如果`_UNICODE`定義，`TCHAR`定義為`wchar_t`和`CString`包含寬字元字串。  
+ 此範例示範如何將轉換`CString`上面所列的其他字串類型。 `CString` 以 TCHAR 資料類型，而這又取決於是否為基礎的符號`_UNICODE`定義。 如果`_UNICODE`未定義`TCHAR`定義為 char 和`CString`包含的多位元組字元字串; 如果`_UNICODE`定義，則`TCHAR`會定義為`wchar_t`和`CString`包含寬字元字串。  
   
- `CStringA` 多位元組字串一律版本`CString`，`CStringW`是寬字元字串的唯一版本。 既不`CStringA`也`CStringW`使用`_UNICODE`來判斷如何編譯。 `CStringA` 和`CStringW`釐清微小差異之處緩衝區大小配置和輸出處理在這個範例中使用。  
+ `CStringA` 是一律多位元組字串版本`CString`，`CStringW`是寬字元字串的唯一版本。 既不`CStringA`也`CStringW`使用`_UNICODE`來判斷應該如何編譯。 `CStringA` 和`CStringW`釐清緩衝區大小配置中的細微差異，並輸出處理用於這個範例。  
   
 ### <a name="code"></a>程式碼  
   
@@ -619,7 +619,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`basic_string`上面所列的其他字串類型。  
+ 此範例示範如何將轉換`basic_string`上面所列的其他字串類型。  
   
 ### <a name="code"></a>程式碼  
   
@@ -711,7 +711,7 @@ Hello, World! (CStringW)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-systemstring"></a>轉換 system:: string  
+## <a name="converting-from-systemstring"></a>從 system:: string 轉換  
   
 ## <a name="example"></a>範例  
   
@@ -821,7 +821,7 @@ Hello, World! (basic_string)
   
 ## <a name="see-also"></a>另請參閱  
  [ATL 和 MFC 字串轉換巨集](../atl/reference/string-conversion-macros.md)   
- [為 C 樣式字串相關的 Cstring](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
+ [與 C 樣式字串相關的 CString 作業](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
  [如何： 將標準字串轉換為 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)   
  [如何： 將 system:: string 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)   
  [如何： 將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   

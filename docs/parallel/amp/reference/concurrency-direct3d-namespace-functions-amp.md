@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: direct3d 命名空間函式 (AMP) |Microsoft 文件'
+title: Concurrency::direct3d 命名空間函式 (AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -28,14 +28,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693724"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208948"
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空間函式 (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空間函式 (AMP)
 ||||  
 |-|-|-|  
 |[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
@@ -49,7 +49,7 @@ ms.locfileid: "33693724"
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>需求
-**標頭：** amp.h**命名空間：** 並行
+**標頭：** amp.h**命名空間：** 並行存取
   
 ##  <a name="abs"></a>  abs  
  傳回引數的絕對值  
@@ -65,8 +65,8 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值。  
   
-##  <a name="clamp"></a>  有縮短時間差  
- 計算壓制為範圍的第二個和第三個指定的引數所定義的第一個指定引數的值。  
+##  <a name="clamp"></a>  clamp  
+ 計算的值壓制為範圍，第二個和第三個指定的引數所定義的第一個指定引數。  
   
 ```  
 inline float clamp(
@@ -83,19 +83,19 @@ inline int clamp(
   
 ### <a name="parameters"></a>參數  
  `_X`  
- 要被縮減的值  
+ 值，以限制在  
   
  `_Min`  
- Clamping 範圍的下限。  
+ 限制範圍的下限。  
   
  `_Max`  
- Clamping 範圍的上限。  
+ 限制範圍的上限。  
   
 ### <a name="return-value"></a>傳回值  
- 值壓制的`_X`。  
+ 受限的值`_X`。  
   
 ##  <a name="countbits"></a>  countbits  
- 計算集合中的位元 _X 數目  
+ 計算 _X 中的設定位元數  
   
 ```  
 inline unsigned int countbits(unsigned int _X) restrict(amp);
@@ -106,10 +106,10 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
  不帶正負號的整數值  
   
 ### <a name="return-value"></a>傳回值  
- 傳回在 _X 組位元數  
+ 傳回 _X 中的設定位元數目  
 
 ## <a name="create_accelerator_view"></a> create_accelerator_view  
-建立[accelerator_view](accelerator-view-class.md)指標 Direct3D 裝置介面的物件。  
+會建立[accelerator_view](accelerator-view-class.md)從指標到 Direct3D 裝置介面的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -126,30 +126,30 @@ accelerator_view create_accelerator_view(
   
 #### <a name="parameters"></a>參數  
  `_Accelerator`  
- 所建立的新 accelerator_view 快速鍵。  
+ 建立新 accelerator_view 所在的加速器。  
   
  `_D3D_device`  
- 要 Direct3D 裝置介面的指標。  
+ Direct3D 裝置介面指標。  
   
  `_Disable_timeout`  
- 布林值參數指定為新建立的 accelerator_view 是否應該停用逾時。 這對應至建立 Direct3D 裝置的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 旗標，用來表示作業系統是否應該允許執行，而不重設裝置的 Windows 逾時每 2 秒以上的工作負載偵測和復原機制。 如果您需要執行耗時的工作上 accelerator_view，建議使用這個旗標。  
+ 布林值參數指定的新建立的 accelerator_view 是否應該停用逾時。 這對應到 Direct3D 裝置建立的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 旗標，用來指出作業系統是否應該允許需要超過 2 秒的時間執行，而不將裝置重設每個 Windows 逾時的工作負載偵測和復原機制。 如果您需要在 accelerator_view 執行費時的工作，建議使用這個旗標。  
   
  `_Qmode`  
- [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)用於新建 accelerator_view。 此參數有預設值是`queuing_mode_automatic`。  
+ [Queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)来用於新建立的 accelerator_view。 此參數的預設值是`queuing_mode_automatic`。  
   
 ## <a name="return-value"></a>傳回值  
- `accelerator_view`傳遞 Direct3D 裝置介面建立物件。  
+ `accelerator_view`從傳遞的 Direct3D 裝置介面建立物件。  
   
 ## <a name="remarks"></a>備註  
- 此函式會建立新`accelerator_view`從現有指標 Direct3D 裝置介面的物件。 如果函式呼叫成功，此參數的參考計數會遞增藉由`AddRef`呼叫的介面。 當它已不再需要 DirectX 的程式碼中，您可以安全地釋放物件。 如果方法呼叫失敗， [runtime_exception](runtime-exception-class.md)就會擲回。  
+ 此函式會建立新`accelerator_view`從現有指標到 Direct3D 裝置介面的物件。 如果函式呼叫成功，此參數的參考計數會遞增藉由`AddRef`的介面呼叫。 它不再需要 DirectX 程式碼時，您可以安全地釋放物件。 如果方法呼叫失敗， [runtime_exception](runtime-exception-class.md)就會擲回。  
   
- `accelerator_view`物件，您使用此函式建立具備執行緒安全。 您必須同步處理的同時使用`accelerator_view`物件。 未同步處理的同時使用`accelerator_view`物件和原始 ID3D11Device 介面會導致未定義的行為。  
+ `accelerator_view`您使用此函式建立的物件為安全執行緒。 您必須同步處理同時使用`accelerator_view`物件。 非同步並行使用方式的`accelerator_view`物件和原始 ID3D11Device 介面會導致未定義的行為。  
   
- C + + AMP 執行階段會提供詳細的錯誤資訊，偵錯模式中使用 D3D 偵錯的圖層，如果您使用`D3D11_CREATE_DEVICE_DEBUG`旗標。  
+ C + + AMP 執行階段會提供詳細的錯誤資訊，偵錯模式中使用 D3D 偵錯層，如果您使用`D3D11_CREATE_DEVICE_DEBUG`旗標。  
   
   
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock  
- 取得 accelerator_view，為了安全地 D3D 上執行的作業與 accelerator_view 共用資源鎖定。 Accelerator_view 和與此 accelerator_view 內部相關聯的所有 c + + AMP 資源進行此鎖定執行作業時，會封鎖，而另一個執行緒保留 D3D 存取鎖定。 這個鎖定是非遞迴： 它是未定義從已經保留鎖定的執行緒呼叫此函式的行為。 它是未定義的行為 accelerator_view 或從保留 D3D 存取鎖定的執行緒 accelerator_view 相關聯的任何資料容器上執行作業。 另請參閱 scoped_d3d_access_lock，RAII 樣式類別的範圍為基礎的 D3D 存取鎖定。  
+ 取得對 accelerator_view 來安全地執行與 accelerator_view 共用的資源執行 D3D 作業鎖定。 Accelerator_view 和內部與這個 accelerator_view 相關聯的所有 c + + AMP 資源取得這個鎖定執行作業時，會封鎖，而另一個執行緒持有 D3D 存取鎖定。 這個鎖定是非遞迴： 它是未定義的行為，可從已經保留鎖定的執行緒呼叫此函式。 它是未定義的行為，來執行對 accelerator_view 或任何與 accelerator_view，要從保持 D3D 存取鎖定的執行緒相關聯的資料容器的作業。 另請參閱 scoped_d3d_access_lock，範圍為基礎的 D3D 存取鎖定的 RAII 式類別。  
   
 ```  
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -157,10 +157,10 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>參數  
  `_Av`  
- 若要鎖定 accelerator_view。  
+ 鎖定的 accelerator_view。  
   
 ##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock  
- 嘗試取得 accelerator_view D3D 存取鎖定，而不會封鎖。  
+ 嘗試取得對 accelerator_view 的 D3D 存取鎖定，而不會封鎖。  
   
 ```  
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
@@ -168,13 +168,13 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>參數  
  `_Av`  
- 若要鎖定 accelerator_view。  
+ 鎖定的 accelerator_view。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已取得鎖定，則為 true 或 false，如果它目前由另一個執行緒。  
+ 如果已取得鎖定，則為 true 或 false，如果它目前保留由另一個執行緒。  
   
 ##  <a name="d3d_access_unlock"></a>  d3d_access_unlock  
- 釋放指定 accelerator_view 的 D3D 存取鎖定。 如果呼叫執行緒 accelerator_view 沒有已鎖定的結果便未定義。  
+ 釋放特定 accelerator_view 的 D3D 存取鎖定。 如果呼叫執行緒不適 accelerator_view 的鎖定是未定義的結果。  
   
 ```  
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
@@ -182,10 +182,10 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>參數  
  `_Av`  
- Accelerator_view，釋出鎖定的。  
+ 要釋放鎖定的 accelerator_view。  
   
 ##  <a name="firstbithigh"></a>  firstbithigh  
- 取得 _X，從最高序位位元和體制的最低順序位元中的第一組位元位置。  
+ 取得從最高序位位元開始，並採用最低順序位元的 _X 中第一個設定位元的位置。  
   
 ```  
 inline int firstbithigh(int _X) restrict(amp);
@@ -196,10 +196,10 @@ inline int firstbithigh(int _X) restrict(amp);
  整數值  
   
 ### <a name="return-value"></a>傳回值  
- 第一個設定位元位置  
+ 第一個設定位元的位置  
   
 ##  <a name="firstbitlow"></a>  firstbitlow  
- 取得 _X，以最低順序位元為開頭，並使用小組的最高序位位元中的第一組位元位置。  
+ 取得從最低順序位元開始，朝 最高序位位元的 _X 中第一個設定位元的位置。  
   
 ```  
 inline int firstbitlow(int _X) restrict(amp);
@@ -213,7 +213,7 @@ inline int firstbitlow(int _X) restrict(amp);
  傳回的第一個設定位元的位置  
   
 ##  <a name="get_buffer"></a>  get_buffer  
- 取得指定的陣列的基礎 Direct3D 緩衝區介面。  
+ 取得指定的陣列基礎 Direct3D 緩衝區介面。  
   
 ```  
 template<
@@ -232,13 +232,13 @@ IUnknown *get_buffer(
  陣列陣序。  
   
  `_Array`  
- 在 Direct3D accelerator_view 基礎 Direct3D 緩衝區介面則傳回陣列。  
+ 這傳回基礎 Direct3D 緩衝區介面之 Direct3D accelerator_view 上陣列。  
   
 ### <a name="return-value"></a>傳回值  
- 對應至基礎陣列 Direct3D 緩衝區 IUnknown 介面指標。  
+ IUnknown 介面指標對應至陣列的 Direct3D 緩衝區。  
   
 ##  <a name="imax"></a>  imax  
- 判斷的最大的數值引數  
+ 判斷引數的最大數值  
   
 ```  
 inline int imax(
@@ -276,7 +276,7 @@ inline int imin(
  傳回引數的最小數值  
   
 ##  <a name="is_timeout_disabled"></a>  is_timeout_disabled  
- 傳回布林值旗標，指出是否停用的指定 accelerator_view 的逾時。 這會對應至建立 Direct3D 裝置的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 旗標。  
+ 傳回布林值旗標，指出是否停用指定的 accelerator_view 的逾時。 這會對應到 Direct3D 裝置建立的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 旗標。  
   
 ```  
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
@@ -284,13 +284,13 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
   
 ### <a name="parameters"></a>參數  
  `_Accelerator_view`  
- Accelerator_view，停用設定的逾時是查詢。  
+ 要查詢停用設定的逾時的 accelerator_view。  
   
 ### <a name="return-value"></a>傳回值  
- 表示逾時已停用的指定 accelerator_view 的布林值旗標。  
+ 布林值的旗標，表示是否停用指定的 accelerator_view 的逾時。  
   
 ##  <a name="mad"></a>  mad  
- 會計算產品的第一個和第二個指定的引數，然後將第三個指定的引數。  
+ 計算乘積的第一個和第二個指定引數，然後新增第三個指定的引數。  
   
 ```  
 inline float mad(
@@ -328,10 +328,10 @@ inline unsigned int mad(
  第三個指定的引數。  
   
 ### <a name="return-value"></a>傳回值  
- 結果`_X`  *  `_Y`  +  `_Z`。  
+ 結果`_X` \* `_Y`  +  `_Z`。  
   
 ##  <a name="make_array"></a>  make_array  
- 建立從 Direct3D 緩衝區介面指標的陣列。  
+ 從 Direct3D 緩衝區介面指標建立陣列。  
   
 ```  
 template<
@@ -346,22 +346,22 @@ array<value_type, _Rank> make_array(
   
 ### <a name="parameters"></a>參數  
  `value_type`  
- 要建立之陣列的項目類型。  
+ 要建立之陣列的項目型別。  
   
  `_Rank`  
  要建立之陣列的陣序規範。  
   
  `_Extent`  
- 描述外觀陣列彙總的範圍。  
+ 描述陣列彙總圖形的範圍。  
   
  `_Rv`  
- D3D 加速器檢視所建立的陣列。  
+ 所建立的陣列的 D3D 加速器檢視。  
   
  `_D3D_buffer`  
  若要建立從陣列的 D3D 緩衝區的 IUnknown 介面指標。  
   
 ### <a name="return-value"></a>傳回值  
- 建立使用所提供的 Direct3D 緩衝區的陣列。  
+ 使用提供的 Direct3D 緩衝區建立陣列。  
   
 ##  <a name="noise"></a>  雜訊  
  產生使用 Perlin 雜訊演算法的隨機值  
@@ -372,13 +372,13 @@ inline float noise(float _X) restrict(amp);
   
 ### <a name="parameters"></a>參數  
  `_X`  
- 要從中產生 Perlin 雜訊的浮點值。  
+ 要從中產生 Perlin 雜訊的浮點值  
   
 ### <a name="return-value"></a>傳回值  
- 傳回介於-1 和 1 之間的 Perlin 雜訊值的範圍內  
+ 傳回介於-1 和 1 之間的範圍內的 Perlin 雜訊值  
   
 ##  <a name="radians"></a>  弧度為單位  
- 將 _X 從角度轉換成弧度  
+ 將 _X 從角度轉換為弧度  
   
 ```  
 inline float radians(float _X) restrict(amp);
@@ -389,10 +389,10 @@ inline float radians(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回從角度轉換成弧度 _X  
+ 傳回 _X 從角度轉換成弧度  
   
 ##  <a name="rcp"></a>  rcp  
- 使用快速的近似值，計算指定的引數的倒數。  
+ 使用快速近似值計算指定的引數的倒數。  
   
 ```  
 inline float rcp(float _X) restrict(amp);
@@ -403,13 +403,13 @@ inline double rcp(double _X) restrict(amp);
   
 ### <a name="parameters"></a>參數  
  `_X`  
- 用來計算倒數值。  
+ 要計算其倒數的值。  
   
 ### <a name="return-value"></a>傳回值  
- 對等的指定的引數。  
+ 指定的引數的倒數。  
   
 ##  <a name="reversebits"></a>  reversebits  
- 反轉 _X 的位元的順序  
+ 反轉 _X 的位元組順序  
   
 ```  
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
@@ -420,10 +420,10 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
  不帶正負號的整數值  
   
 ### <a name="return-value"></a>傳回值  
- 傳回值的位元順序反轉 _X 中  
+ 反轉 _X 中的位元順序會傳回值  
   
 ##  <a name="saturate"></a>  saturate  
- 強加 _X 0 到 1 的範圍內  
+ 將 _X 介於 0 到 1 的限制  
   
 ```  
 inline float saturate(float _X) restrict(amp);
@@ -434,10 +434,10 @@ inline float saturate(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回在 0 到 1 的範圍內壓制 _X  
+ 傳回 _X 限制在 0 到 1 的範圍內  
   
 ##  <a name="sign"></a>  符號  
- 判斷指定的引數的符號。  
+ 判斷指定的引數的正負號。  
   
 ```  
 inline int sign(int _X) restrict(amp);
@@ -451,7 +451,7 @@ inline int sign(int _X) restrict(amp);
  的引數的符號。  
   
 ##  <a name="smoothstep"></a>  smoothstep  
- 介於 0 和 1，傳回的 smooth Hermite 插補，_X 是否在範圍 [_Min，（_m）]。  
+ 如果 _X 的範圍 [_Min，_Max] 會傳回 0 和 1 之間的平滑 Hermite 插補。  
   
 ```  
 inline float smoothstep(
@@ -471,7 +471,7 @@ inline float smoothstep(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 0，如果 _X 小於 _Min;如果 _X 大於 （_m）;，1否則，值介於 0 和 1 _X 是否在範圍 [_Min，（_m）]  
+ 會傳回 0，如果 _X 小於 _Min;1 如果 _X 大於 _Max;否則，值介於 0 和 1，如果 _X 的範圍 [_Min，_Max]  
   
 ##  <a name="step"></a>  步驟  
  比較兩個值，傳回 0 或 1 為基礎的值大於  
@@ -490,10 +490,10 @@ inline float step(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 1，_X 是否大於或等於平均數。否則為 0  
+ 會傳回 1，如果 _X 大於或等於 _Y;否則，便是 0  
   
 ##  <a name="umax"></a>  umax  
- 判斷的最大的數值引數  
+ 判斷引數的最大數值  
   
 ```  
 inline unsigned int umax(

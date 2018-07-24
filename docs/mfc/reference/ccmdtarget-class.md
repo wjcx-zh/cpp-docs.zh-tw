@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027650"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208685"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 Microsoft Foundation 類別庫訊息對應架構的基底類別。  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  指標的指標`ITypeInfo`介面。  
   
 ### <a name="return-value"></a>傳回值  
- HRESULT，指出成功或失敗的呼叫。 如果成功，* *ppTypeInfo*指向類型資訊介面。  
+ HRESULT，指出成功或失敗的呼叫。 如果成功， \* *ppTypeInfo*指向類型資訊介面。  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  型別程式庫取得的指標。  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  指標的指標`ITypeLib`介面。  
   
 ### <a name="return-value"></a>傳回值  
- HRESULT，指出成功或失敗的呼叫。 如果成功，* *ppTypeLib*指向類型程式庫介面。  
+ HRESULT，指出成功或失敗的呼叫。 如果成功， \* *ppTypeLib*指向類型程式庫介面。  
   
 ### <a name="remarks"></a>備註  
  在衍生的類別應該覆寫此成員函式 (如果未覆寫，`GetTypeLib`傳回 TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeInfoCount`和`GetTypeLibCache`。  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*則 nCode*值|*pExtra*值|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>範例  

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 699a68d973f905b094bec681400dffb033d83aec
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b6c883ef9c0c5866db1edf60668efcea7e819fc5
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027618"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208763"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 類別
 `CComCurrency` 有方法和運算子可建立及管理 CURRENCY 物件。  
@@ -266,7 +266,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]  
   
-##  <a name="operator_star_eq"></a>  CComCurrency::operator * =  
+##  <a name="operator_star_eq"></a>  CComCurrency::operator \*=  
  此運算子用在 `CComCurrency` 物件上執行乘法並指派結果。  
   
 ```

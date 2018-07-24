@@ -1,5 +1,5 @@
 ---
-title: _scalb，_scalbf |Microsoft 文件
+title: _scalb、 _scalbf |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,14 +37,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406260"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207516"
 ---
-# <a name="scalb-scalbf"></a>_scalb _scalbf
+# <a name="scalb-scalbf"></a>_scalb、 _scalbf
 
 將引數依 2 的乘冪進位。
 
@@ -71,17 +71,17 @@ float _scalbf(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回指數值。 在溢位 (根據正負號的*x*)， **_scalb**傳回 + /- **HUGE_VAL**; **errno**變數會設為**為 ERANGE**。
+如果成功，則傳回指數值。 發生溢位 (根據的正負號*x*)， **_scalb**會傳回 + /- **HUGE_VAL**; **errno**變數會設為**ERANGE**。
 
 如需此傳回碼與其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Scalb**函式計算的值*x* * 2<sup>*exp*</sup>。
+**_Scalb**函式會計算的值*x* \* 2<sup>*exp*</sup>。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_scalb**， **_scalbf**|\<float.h>|
 

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885447"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209218"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 這個類別會使用以 COM 為基礎的記憶體常式的智慧型指標類別提供基礎。  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|轉換運算子。|  
 |[CComPtrBase::operator ！](#operator_not)|NOT 運算子。|  
 |[CComPtrBase::operator （& s)](#operator_amp)|& 運算子。|  
-|[CComPtrBase::operator *](#operator_star)|* 運算子。|  
+|[CComPtrBase::operator *](#operator_star)|\* 運算子。|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小於-than 運算子。|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|等號比較運算子。|  
 |[CComPtrBase::operator->](#operator_ptr)|指標至成員運算子中。|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>傳回值  
  傳回所指物件的位址`CComPtrBase`物件。  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * 運算子。  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ \* 運算子。  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>傳回值  
  如果由目前物件的指標，則傳回 true 小於要它所比較的指標。  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  轉換運算子。  
   
 ```  

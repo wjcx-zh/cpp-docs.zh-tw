@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorViewIterator 類別 |Microsoft 文件
+title: Vectorviewiterator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,12 +15,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee104956bdfb5c7b72d20195fb3fb7a2789e236c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093058"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207701"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 類別
 提供標準樣板程式庫迭代器物件衍生自 Windows 執行階段`IVectorView`介面。  
@@ -69,7 +69,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator++ 運算子](#operator-increment)|遞增目前 VectorViewIterator。|  
 |[VectorViewIterator::operator+= 運算子](#operator-plus-assign)|依指定的位移遞增目前 VectorViewIterator。|  
 |[VectorViewIterator::operator< 運算子](#operator-less-than)|指出目前 VectorViewIterator 是否小於指定的 VectorViewIterator。|  
-|[Vectorviewiterator::\<= 運算子](#operator-less-than-or-equals)|指出目前 VectorViewIterator 是否小於或等於指定的 VectorViewIterator。|  
+|[Vectorviewiterator:: Operator\<= 運算子](#operator-less-than-or-equals)|指出目前 VectorViewIterator 是否小於或等於指定的 VectorViewIterator。|  
 |[VectorViewIterator::operator-= 運算子](#operator-minus-assign)|依指定的位移值遞減目前 VectorViewIterator。|  
 |[Vectorviewiterator:: Operator == 運算子](#operator-equality)|指出目前 VectorViewIterator 是否等於指定的 VectorViewIterator。|  
 |[VectorViewIterator::operator> 運算子](#operator-greater-than)|指出目前 VectorViewIterator 是否大於指定的 VectorViewIterator。|  
@@ -116,11 +116,11 @@ VectorViewIterator operator--(int);
 ### <a name="remarks"></a>備註  
  第一種 VectorViewIterator 語法會前置遞減目前 VectorViewIterator。  
   
- 第二種語法會後置遞減目前 VectorViewIterator。 `int`第二個語法中的類型代表後置遞減作業，而不是實際的整數運算元。  
+ 第二種語法會後置遞減目前 VectorViewIterator。 `int`第二個語法中的類型表示後置遞減作業，而不是實際的整數運算元。  
   
 
 
-## <a name="operator-dereference"></a>  Vectorviewiterator:: Operator * 運算子
+## <a name="operator-dereference"></a>  Vectorviewiterator:: Operator\*運算子
 擷取目前 VectorViewIterator 指定的元素的參考。  
   
 ### <a name="syntax"></a>語法  
@@ -148,11 +148,11 @@ bool operator==(const VectorViewIterator& other) const;
  另一個 VectorViewIterator。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果目前 VectorViewIterator 是否等於`other`，否則`false`。  
+ `true` 如果目前 VectorViewIterator 是否等於`other`; 否則`false`。  
   
 
 
-## <a name="operator-greater-than"></a>  Vectorviewiterator::&gt;運算子
+## <a name="operator-greater-than"></a>  Vectorviewiterator:: Operator&gt;運算子
 指出目前 VectorViewIterator 是否大於指定的 VectorViewIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -171,7 +171,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::&gt;= 運算子
+## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator:: Operator&gt;= 運算子
 指出目前 VectorViewIterator 是否大於或等於指定的 VectorViewIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -225,11 +225,11 @@ bool operator!=(const VectorViewIterator& other) const;
  另一個 VectorViewIterator。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果目前 VectorViewIterator 是否不等於`other`，否則`false`。  
+ `true` 如果目前 VectorViewIterator 是否不等於`other`; 否則`false`。  
   
 
 
-## <a name="operator-less-than"></a>  Vectorviewiterator::&lt;運算子
+## <a name="operator-less-than"></a>  Vectorviewiterator:: Operator&lt;運算子
 指出目前 VectorIterator 是否小於指定的 VectorIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -247,7 +247,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::&lt;= 運算子
+## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator:: Operator&lt;= 運算子
 指出目前 VectorIterator 是否小於或等於指定的 VectorIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -262,7 +262,7 @@ bool operator<=(const VectorViewIterator& other) const;
  另一個 VectorIterator。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果目前 VectorIterator 是否小於或等於`other`，否則`false`。  
+ `true` 如果目前 VectorIterator 是否小於或等於`other`; 否則`false`。  
   
 
 
@@ -396,7 +396,7 @@ explicit VectorViewIterator(
  IVectorView\<T > 物件。  
   
 ### <a name="remarks"></a>備註  
- 第一個語法範例是預設建構函式。 第二個語法範例是用來從 IVectorView 建構 VectorViewIterator 的明確建構函式\<T > 物件。  
+ 第一個語法範例是預設建構函式。 第二個語法範例是用來建構從 IVectorView VectorViewIterator 的明確建構函式\<T > 物件。  
   
 
   

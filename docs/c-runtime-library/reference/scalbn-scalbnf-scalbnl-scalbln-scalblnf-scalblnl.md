@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407073"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209452"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -112,15 +112,15 @@ long double scalblnl(
 
 ## <a name="return-value"></a>傳回值
 
-**Scalbn**函式傳回的值*x* * **FLT_RADIX**<sup>exp</sup>成功時。 在溢位 (根據正負號的*x*)， **scalbn**傳回 + /- **HUGE_VAL**; **errno**值設定為**為 ERANGE**.
+**Scalbn**函式會傳回的值*x* \* **FLT_RADIX**<sup>exp</sup>時成功。 發生溢位 (根據的正負號*x*)， **scalbn**會傳回 + /- **HUGE_VAL**; **errno**值設定為**ERANGE**.
 
-如需有關**errno**和可能的錯誤，傳回值，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需詳細資訊**errno**和可能的錯誤，傳回值，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**FLT_RADIX**中定義\<float.h > 作為原生浮點基數; 在二進位系統中，其值為 2，和**scalbn**相當於[ldexp](ldexp.md)。
+**FLT_RADIX**定義於\<float.h > 作為原生浮點基數; 在二進位系統中，其值為 2，並**scalbn**相當於[ldexp](ldexp.md)。
 
-因為 c + + 允許多載，所以您可以呼叫的多載**scalbn**和**scalbln**採用並傳回**float**或**長** **double**型別。 在 C 程式中， **scalbn**一律採用**double**和**int**並傳回**double**，和**scalbln**一律採用**double**和**長**並傳回**double**。
+C + + 允許多載，因為您可以呼叫多載**scalbn**並**scalbln**採用並傳回**float**或是**長** **雙**型別。 在 C 程式中， **scalbn**一律採用**double**並**int** ，並傳回**double**，和**scalbln**一律採用**雙**並**長**，並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

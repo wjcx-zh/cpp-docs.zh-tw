@@ -1,7 +1,7 @@
 ---
-title: 並行執行階段 |Microsoft 文件
+title: 並行執行階段 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693519"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208385"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的平行應用程式。 它會引發抽象的層級，讓您不需要管理並行存取相關的基礎結構詳細資料。 您也可以使用它來指定符合您應用程式服務需求品質的排程原則。 使用這些資源以協助您開始使用並行執行階段。  
   
- 參考文件，請參閱[參考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。  
+ 如需參考文件，請參閱[參考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。  
   
 > [!TIP]
->  並行執行階段非常依賴 C++11 功能，並採用更現代的 C++ 樣式。 若要深入了解，閱讀[歡迎回到 c + +](../../cpp/welcome-back-to-cpp-modern-cpp.md)。  
+>  並行執行階段非常依賴 C++11 功能，並採用更現代的 C++ 樣式。 若要進一步了解，請閱讀[歡迎回到 c + +](../../cpp/welcome-back-to-cpp-modern-cpp.md)。  
   
 ## <a name="choosing-concurrency-runtime-features"></a>選擇並行執行階段功能  
   
 |||  
 |-|-|  
 |[概觀](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|教導為何並行執行階段很重要，並說明其重要功能。|  
-|[與其他並行模型的比較](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|顯示並行執行階段如何與其他並行模型進行比較，例如 Windows 執行緒集區和 OpenMP，以讓您可以使用最符合您應用程式需求的並行存取模型。|  
+|[相較於其他並行模型](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|顯示並行執行階段如何與其他並行模型進行比較，例如 Windows 執行緒集區和 OpenMP，以讓您可以使用最符合您應用程式需求的並行存取模型。|  
 |[從 OpenMP 移轉至並行執行階段](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|比較 OpenMP 與並行執行階段，並提供有關如何移轉現有的 OpenMP 程式碼以使用並行執行階段的範例。|  
 |[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|為您介紹提供平行迴圈、工作和平行容器的 PPL。|  
 |[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)|為您介紹如何使用非同步代理程式和訊息傳遞來輕鬆地將資料流程與流水線操作工作納入您的應用程式中。|  
@@ -70,9 +70,9 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
   
 |||  
 |-|-|  
-|[在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重要觀念，當您使用並行執行階段產生非同步作業的 UWP 應用程式時，請記住。|  
-|[逐步解說：使用工作和 XML HTTP 要求連接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|示範如何將 ppl 與結合`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的介面。|  
-|[Windows 執行階段應用程式範例](http://code.msdn.microsoft.com/windowsapps)|包含可下載程式碼範例和示範應用程式適用於 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|  
+|[在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重點来牢記在心，當您使用並行執行階段產生非同步作業的 UWP 應用程式中。|  
+|[逐步解說：使用工作和 XML HTTP 要求連接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|顯示如何結合使用 PPL 工作`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的介面。|  
+|[Windows 執行階段應用程式範例](http://code.msdn.microsoft.com/windowsapps)|包含可下載的程式碼範例和示範應用程式，針對 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的資料流程程式撰寫  
   
@@ -108,9 +108,9 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |||  
 |-|-|  
 |[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|  
-|[並行執行階段和 Visual Studio 2010 中的平行模式程式庫的程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|  
+|[並行執行階段和 Visual Studio 2010 中的平行模式程式庫程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|  
 |[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|  
-|[C + + 和機器碼論壇中的平行運算](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|  
+|[在 c + + 和機器碼論壇中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|  
 |[平行程式設計](/dotnet/standard/parallel-programming/index)|教導您有關可用於 [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]的平行程式設計模型。|  
   
 ## <a name="see-also"></a>另請參閱  

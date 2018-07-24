@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f277292f413e09b9c41a87cd82e438e0e1e883a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96d87a213029ab33e4d3c0269c4e7ba41e1aed43
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406663"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209413"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -71,13 +71,13 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ## <a name="return-value"></a>傳回值
 
-浮點數的其餘部分*x* / *y*。 如果值*y*為 0.0，**餘數**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+浮點餘數*x* / *y*。 如果值*y*是 0.0，**餘數**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**餘數**函數會計算浮點數餘數*r*的*x* / *y*使得*x*  =  *n* * *y* + *r*，其中*n*是整數值到最接近*x* / *y*和*n*甚至是每當&#124; *n*  - *x* / *y* &#124; = 1/2。 當*r* = 0， *r*具有相同的簽章為*x*。
+**餘數**函式會計算浮點餘數*r*的*x* / *y*使得*x*  =  *n* \* *y* + *r*，其中*n*是值最接近的整數*x* / *y*並*n*甚至是每當&#124; *n*  - *x* / *y* &#124; = 1/2。 當*r* = 0， *r*具有相同的簽章為*x*。
 
-因為 c + + 允許多載，所以您可以呼叫的多載**餘數**採用並傳回**float**或**長** **double**值。 在 C 程式中，**餘數**一律會採用兩個**double**引數並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**餘數**採用並傳回**float**或**長** **double**值。 在 C 程式中，**餘數**一律會採用兩個**double**引數並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4237 |Microsoft 文件
+title: 連結器工具警告 LNK4237 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5acccf52d3738985c7a83432342952af03bf78b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcc109fe3ccf06e0461deed449517850271a2024
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302863"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209387"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>連結器工具警告 LNK4237
-從 'dll'; 匯入時指定了請使用 /subsystem: console 或 /subsystem: windows。  
+指定時從 'dll'; 匯入了請使用 /subsystem: console 或 /subsystem: windows。  
   
- [了](../../build/reference/subsystem-specify-subsystem.md)指定當建置 (Win32) windows 應用程式，直接使用一或多個項目：  
+ [了](../../build/reference/subsystem-specify-subsystem.md)時建置的 windows (Win32) 應用程式直接使用一或多個項目指定：  
   
 -   kernel32.dll  
   
@@ -34,6 +34,6 @@ ms.locfileid: "33302863"
   
 -   user32.dll  
   
--   msvcrt * dll 的其中一個。  
+-   其中一個 msvcrt\* dll。  
   
- 未指定解決這個警告**了**。
+ 解決這個警告不指定**了**。

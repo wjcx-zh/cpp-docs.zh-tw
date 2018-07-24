@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958474"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208828"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>參數
 
-*str* std:: string、 char *、 字串常值或原始字串常值或其中任何一項的寬版本 (例如 std:: wstring、 wchar_t\*)。
+*str* std:: string、 char\*，字串常值或原始字串常值或其中任何一項的寬版本 (例如 std:: wstring、 wchar_t\*)。
 
 *分隔符號*的使用者指定的字元或寬字元，用以做為分隔符號的開頭和結尾的字串。
 

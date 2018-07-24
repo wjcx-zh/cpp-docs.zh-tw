@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336770"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208006"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 提供 Windows 通用 SysLink 控制項的功能。  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |參數|描述|  
 |---------------|-----------------|  
 |[in]*cxMaxWidth*|連結，像素為單位的最大寬度。|  
-|[out] * *pSize*|Windows 的指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|  
+|[out]\* *pSize*|Windows 的指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|  
   
 ### <a name="return-value"></a>傳回值  
  連結文字、 像素為單位的慣用的高度。 傳回值是相同的值*cy*隸屬`SIZE`結構。  

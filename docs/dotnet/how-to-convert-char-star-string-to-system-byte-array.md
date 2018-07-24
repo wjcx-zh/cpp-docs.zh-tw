@@ -1,5 +1,5 @@
 ---
-title: '如何： 轉換 char * 字串為 system:: byte 陣列 |Microsoft 文件'
+title: '如何： 將 char * 字串 system:: byte 陣列 |Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e42294ad2c2e0bef77d29f6d47a5373dc0f728bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1afb7548af704fc81d7cab8ac4e1a2476d661717
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129485"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209439"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>如何：將 char * 字串轉換為 System::Byte 陣列
-要轉換的最有效方式`char *`字串至<xref:System.Byte>陣列是使用<xref:System.Runtime.InteropServices.Marshal>類別。  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>如何： 將 char 轉換\*system:: byte 陣列的字串
+要轉換的最有效方式`char *`字串<xref:System.Byte>陣列是使用<xref:System.Runtime.InteropServices.Marshal>類別。  
   
 ## <a name="example"></a>範例  
   

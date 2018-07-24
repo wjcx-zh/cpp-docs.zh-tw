@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027962"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209114"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
@@ -248,25 +248,25 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 |位元組 1|位元組 2|位元組 3|位元組 4|Opsize|說明|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> 其中，X 為 (Code & 0x7F) * 4|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> 其中 X 為 (Code & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> 其中，如果是 Code & 0x2000，則會彈出 LR，如果在 Code & 0x1FFF 中設定對應位元，則會彈出 r0-r12|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> 其中，X 為 Code & 0x0F|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> 其中，X 為 (Code & 0x03) + 4，如果為 Code & 0x04，則會彈出 LR|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> 其中，X 為 (Code & 0x03) + 8，如果為 Code & 0x04，則會彈出 LR|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> 其中，X 為 (Code & 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> 其中，X 為 (Code & 0x03FF) * 4|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> 其中 X 為 (Code & 0x03FF) \* 4|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> 其中，如果是 Code & 0x0100，則會彈出 LR，如果在 Code & 0x00FF 中設定對應位元，則會彈出 r0-r7|
 |EE|00-0F|||16|Microsoft 專有|
 |EE|10-FF|||16|可用|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> 其中，X 為 (Code & 0x000F) * 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> 其中 X 為 (Code & 0x000F) \* 4|
 |EF|10-FF|||32|可用|
 |F0-F4||||-|可用|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> 其中，S 為 (Code & 0x00F0) >> 4 而 E 為 Code & 0x000F|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> 其中，S 為 ((Code & 0x00F0) >> 4) + 16 而 E 為 (Code & 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> 其中，X 為 (Code & 0x00FFFF) * 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> 其中，X 為 (Code & 0x00FFFFFF) * 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> 其中，X 為 (Code & 0x00FFFF) * 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> 其中，X 為 (Code & 0x00FFFFFF) * 4|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> 其中 X 為 (Code & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> 其中 X 為 (Code & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> 其中 X 為 (Code & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> 其中 X 為 (Code & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 位元)|
 |FC||||32|nop (32 位元)|
 |FD||||16|end + 16 位元 nop (結尾中)|
@@ -751,3 +751,4 @@ Function:
 
 [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)  
 [Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)  
+

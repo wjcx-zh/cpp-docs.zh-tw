@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337443"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209127"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 從單一使用者的登入到登出，管理受密碼保護的具名資料庫工作階段。  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>參數  
  *lpszDefaultUser*  
- 預設的使用者名稱。 使用者名稱可以是 1 到 20 個字元，並將包含字母字元、 重音的字元、 數字、 空格和符號，除了:"（引號） / （斜線），\\ （反斜線）， \[ \] （括號）: （冒號）， &#124; (管道）， \< (較少-符號)，> (大於-符號)、 + （加號）、 = （等於正負號），;（以分號），（逗號），（問號） * （星號），前置空格和控制字元 (ASCII 00 到 ASCII 31)。 如需相關資訊，請參閱 DAO [說明] 中的 「 使用者名稱屬性 」。  
+ 預設的使用者名稱。 使用者名稱可以是 1 到 20 個字元，並將包含字母字元、 重音的字元、 數字、 空格和符號，除了:"（引號） / （斜線），\\ （反斜線）， \[ \] （括號）: （冒號）， &#124; (管道）， \< (較少-符號)，> (大於-符號)、 + （加號）、 = （等於正負號），;（以分號），（逗號），（問號）， \* （星號），前置空格和控制字元 (ASCII 00 到 ASCII 31)。 如需相關資訊，請參閱 DAO [說明] 中的 「 使用者名稱屬性 」。  
   
 ### <a name="remarks"></a>備註  
  您所設定的預設使用者名稱適用於您在呼叫後建立新的工作區。 當您建立後續的工作區時，您不需要指定使用者名稱[建立](#create)呼叫。  

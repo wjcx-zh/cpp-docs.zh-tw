@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027936"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209296"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>備註
 
-`swap` 應該優先使用到 i **ter_swap**，這基於回溯相容性包含於 C++ 標準中。 如果 `Fit1` 和 `Fit2` 是正向迭代器，則 `iter_swap` (`Fit1`, `Fit2`) 等於 `swap` (* `Fit1`, \* `Fit2`)。
+`swap` 應該優先使用到 i **ter_swap**，這基於回溯相容性包含於 C++ 標準中。 如果`Fit1`並`Fit2`是正向迭代器，則`iter_swap`( `Fit1`， `Fit2` )，相當於`swap`( \* `Fit1`， \* `Fit2` )。
 
 輸入正向迭代器的實值類型值必須相同。
 

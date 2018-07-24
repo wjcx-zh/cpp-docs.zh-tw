@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271392"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209049"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1494,7 +1494,7 @@ Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 - 別名範本。
 - 刪除的函式。
 - 非靜態資料成員初始設定式 (NSDMI)。
-- 預設的函式。 *
+- 預設的函式。 \*
 - 支援下列 ISO C99 語言功能：
 - _Bool
 - 複合常值。

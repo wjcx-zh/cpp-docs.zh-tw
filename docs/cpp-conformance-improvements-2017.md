@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042325"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209088"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) 版中的 C++ 一致性改善
 
@@ -81,7 +81,7 @@ Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱
 
 當列舉的定義未導入列舉程式，且來源使用 list-initialization 語法時，從範圍列舉的基礎類型到列舉本身之間現在已有隱含/非縮小的轉換。 如需詳細資訊，請參閱[列舉類別值的建構規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)。
 
-### <a name="capturing-this-by-value"></a>以值擷取 *this
+### <a name="capturing-this-by-value"></a>以值擷取 \*this
 
 Lambda 運算式中的 `*this` 物件現已可以值擷取。 這可用在平行及非同步作業中叫用 Lambda 的案例，特別是在較新的電腦架構上。 如需詳細資訊，請參閱[Lambda 透過值將 \*this 擷取為 [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html) \(英文\)。
 

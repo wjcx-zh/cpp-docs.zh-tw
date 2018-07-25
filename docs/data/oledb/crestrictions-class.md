@@ -1,5 +1,5 @@
 ---
-title: CRestrictions 類別 |Microsoft 文件
+title: CRestrictions 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,22 +9,27 @@ f1_keywords:
 - ATL::CRestrictions
 - CRestrictions
 - ATL.CRestrictions
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
 dev_langs:
 - C++
 helpviewer_keywords:
 - CRestrictions class
+- Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b0b174a8e53f72b0077d10fd1728c4e726e0f218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa95eb630fac2fe30014e378cc79bdbac285dbdb
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098481"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233499"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 類別
 泛型類別，可讓您指定的結構描述資料列限制。  
@@ -38,14 +43,17 @@ class CRestrictions :
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  用來存取子類別。  
   
- `nRestrictions`  
- 限制資料行的結構描述資料列集數目。  
+ *nRestrictions*  
+ 結構描述資料列的限制資料行數目。  
   
- `pguid`  
+ *pguid*  
  結構描述的 GUID 指標。  
+
+## <a name="requirements"></a>需求  
+ **標頭：** atldbsch.h 
   
 ## <a name="members"></a>成員  
   
@@ -53,11 +61,44 @@ class CRestrictions :
   
 |||  
 |-|-|  
-|[開啟](../../data/oledb/crestrictions-open.md)|傳回的結果集根據使用者所提供的限制。|  
+|[開啟](#open)|傳回結果集，根據使用者提供的限制。|   
+
+## <a name="open"></a> Crestrictions:: Open
+傳回結果集，根據使用者提供的限制。  
   
-## <a name="requirements"></a>需求  
- **標頭：** atldbsch.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT Open(const CSession& session,  
+   LPCTSTR lpszParam 1 = NULL,  
+   LPCTSTR lpszParam 2 = NULL,  
+   LPCTSTR lpszParam 3 = NULL,  
+   LPCTSTR lpszParam 4 = NULL,  
+   LPCTSTR lpszParam 5 = NULL,  
+   LPCTSTR lpszParam 6 = NULL,  
+   LPCTSTR lpszParam 7 = NULL,  
+   bool bBind = true);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *工作階段*  
+ [in]指定用來連接到資料來源的現有工作階段物件。  
+  
+ *lpszParam*  
+ [in]在 結構描述資料列上指定的限制。  
+  
+ *bBind*  
+ [in]指定是否要自動繫結資料行對應。 預設值是 **，則為 true**，因而導致自動繫結的資料行對應。 設定*bBind*要**false**可防止自動繫結的資料行對應，讓您以手動方式可以繫結。 （手動繫結是 OLAP 使用者特別感興趣的）。  
+  
+### <a name="return-value"></a>傳回值  
+ 其中一個標準的 HRESULT 值。  
+  
+### <a name="remarks"></a>備註  
+ 您可以指定最多七個限制的結構描述資料列集。  
+  
+ 請參閱[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)如每個結構描述資料列集上定義的限制相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)    
+ [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

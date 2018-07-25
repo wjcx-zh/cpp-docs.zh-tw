@@ -1,5 +1,5 @@
 ---
-title: CTable 類別 |Microsoft 文件
+title: CTable 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,30 @@ f1_keywords:
 - ATL::CTable
 - ATL.CTable
 - CTable
+- ATL.CTable.Open
+- ATL::CTable::Open
+- CTable::Open
+- CTable.Open
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTable class
+- Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e12ec9f7cc7db4da78df8f3b49ed4fdadef3f769
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7dc1383199b5e8167936d99d487bdfc3eb15bddb
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100141"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233486"
 ---
 # <a name="ctable-class"></a>CTable 類別
-提供方法來直接存取簡單資料列集 （不含任何參數）。  
+提供方法來直接存取簡單的資料列集 （不含任何參數的其中一個）。  
   
 ## <a name="syntax"></a>語法
 
@@ -38,12 +43,15 @@ class CTable :
    public CAccessorRowset <TAccessor, TRowset>  
 ```  
   
-#### <a name="parameters"></a>參數  
- `TAccessor`  
+### <a name="parameters"></a>參數  
+ *TAccessor*  
  存取子類別。  
   
- `TRowset`  
+ *TRowset*  
  資料列集類別。  
+
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
 ## <a name="members"></a>成員  
   
@@ -51,15 +59,60 @@ class CTable :
   
 |||  
 |-|-|  
-|[開啟](../../data/oledb/ctable-open.md)|開啟資料表。|  
+|[開啟](#open)|開啟資料表。|  
   
 ## <a name="remarks"></a>備註  
- 請參閱[CCommand](../../data/oledb/ccommand-class.md)如需有關如何執行命令，以存取資料列集資訊。  
+ 請參閱[CCommand](../../data/oledb/ccommand-class.md)如需有關如何執行命令來存取資料列集資訊。  
+
+## <a name="open"></a> Ctable:: Open
+開啟資料表。  
   
-## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT Open(const CSession& session,  
+   LPCWSTR wszTableName,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+
+
+HRESULT Open(const CSession& session,  
+   LPCSTR szTableName,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+
+
+HRESULT Open(const CSession& session,  
+   DBID& dbid,  
+   DBPROPSET* pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw ();  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *工作階段*  
+ [in]開啟該表格中的工作階段。  
+  
+ *wszTableName*  
+ [in]若要開啟，資料表名稱傳遞為 Unicode 字串。  
+  
+ *szTableName*  
+ [in]若要開啟，資料表名稱傳遞為 ANSI 字串。  
+  
+ *dbid*  
+ [in]`DBID`来開啟的資料表。  
+  
+ *pPropSet*  
+ [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。  
+  
+ *ulPropSets*  
+ [in]數目[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構傳入*Dbpropset*引數。  
+  
+### <a name="return-value"></a>傳回值  
+ 標準的 HRESULT。  
+  
+### <a name="remarks"></a>備註  
+ 如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](https://msdn.microsoft.com/library/ms716724.aspx)中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   

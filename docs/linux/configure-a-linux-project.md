@@ -14,15 +14,15 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34422676"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207898"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
-本主題描述如何設定 Visual Studio Linux 專案。 如需 CMake Linux 專案的資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
+本主題說明如何在 Visual Stuidio 中設定 C++ Linux 專案。 如需 Visual Studio 中 CMake Linux 專案的相關資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
 ## <a name="general-settings"></a>一般設定
 使用 Visual Studio，可以設定 Linux 專案的各種選項。  若要檢視這些選項，請選取 [專案] > [屬性] 功能表，或在**方案總管**中以滑鼠右鍵按一下專案，然後從操作功能表中選取 [屬性]。 [一般] 設定隨即出現。

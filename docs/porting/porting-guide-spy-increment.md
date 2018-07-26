@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848774"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208805"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- 巨集 `MOUT` 會解析成 *g_pmout，這是 `mstream` 類型的物件。 mstream 類別衍生自標準輸出字串類別 `std::basic_ostream<TCHAR>.`。不過，由於字串常值周圍的 _T (我們為了準備轉換成 Unicode 所放入)，運算子 << 的多載解析會失敗並發生發生下列錯誤訊息：  
+ 巨集 `MOUT` 會解析成 \*g_pmout，這是類型 `mstream` 的物件。 mstream 類別衍生自標準輸出字串類別 `std::basic_ostream<TCHAR>.`。不過，由於字串常值周圍的 _T (我們為了準備轉換成 Unicode 所放入)，運算子 << 的多載解析會失敗並發生發生下列錯誤訊息：  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

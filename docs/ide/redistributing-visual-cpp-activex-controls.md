@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331015"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207953"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>轉散發 Visual C++ ActiveX 控制項
 Visual C++ 6.0 提供您可以在後來要轉散發的應用程式中使用的 ActiveX 控制項。 Visual C++ 已不再包含這些控制項。 根據 Visual C++ 6.0 的授權合約，您可以與使用 Visual C++ 開發的應用程式一起轉散發這些控制項。  
@@ -34,11 +34,11 @@ Visual C++ 6.0 提供您可以在後來要轉散發的應用程式中使用的 A
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   

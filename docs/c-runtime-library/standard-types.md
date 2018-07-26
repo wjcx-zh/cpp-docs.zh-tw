@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418519"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208776"
 ---
 # <a name="standard-types"></a>標準類型
 Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。  
@@ -218,7 +218,7 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`fpos_t` (長整數、`__int64` 或結構，視目標平台而定)|由 [fgetpos](../c-runtime-library/reference/fgetpos.md) 和 [fsetpos](../c-runtime-library/reference/fsetpos.md) 使用，可記錄獨特指定檔案中每個位置的資訊。|STDIO.H|  
 |`_fsize_t`(不帶正負號長整數)|用來表示檔案的大小。|IO.H,<br /><br /> WCHAR.H|  
 |`_HEAPINFO` 結構|包含下一個 [_heapwalk](../c-runtime-library/reference/heapwalk.md) 堆積輸入的相關資訊。|MALLOC.H|  
-|`_HFILE` (void *)|作業系統檔案控制代碼。|CRTDBG.H|  
+|`_HFILE` (void \*)|作業系統檔案控制代碼。|CRTDBG.H|  
 |`imaxdiv_t`|由 [imaxdiv](../c-runtime-library/reference/imaxdiv.md) 函式傳回的值類型，包含商和餘數。|inttypes.h|  
 |`ino_t`, `_ino_t` (unsigned short)|用於傳回狀態資訊。|WCHAR.H|  
 |`intmax_t`|帶正負號的整數類型可以代表任何帶正負號的整數類型的任何值。|stdint.h|  

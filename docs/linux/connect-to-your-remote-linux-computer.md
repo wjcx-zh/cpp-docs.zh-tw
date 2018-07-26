@@ -1,7 +1,8 @@
 ---
-title: 連線到遠端 Linux 電腦 | Microsoft Docs
+title: 在 Visual Studio 中連線至您的遠端 Linux 電腦 | Microsoft Docs
+description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦。
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329318"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207662"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>連線到遠端 Linux 電腦
 
-建置時，會將 Linux 程式碼複製到遠端 Linux 電腦，然後根據 Visual Studio 中所選擇的設定，在該系統上進行編譯。  設定此遠端連線：
+在 Visual Studio 中建置 C++ Linux 專案時，Linux 程式碼會複製到您的遠端 Linux 電腦，然後根據 Visual Studio 設定編譯。 設定此遠端連線：
 
 1. 第一次建置專案，或選取 [工具] > [選項] 手動建立新項目，並開啟 [跨平台] > [連線管理員] 節點，然後按一下 [新增] 按鈕。
 

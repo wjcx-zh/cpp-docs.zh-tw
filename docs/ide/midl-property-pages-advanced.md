@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330800"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207756"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 屬性頁：進階
 **MIDL** 資料夾中的 [進階] 屬性頁指定下列 MIDL 編譯器選項：  
@@ -48,7 +48,7 @@ ms.locfileid: "33330800"
   
 -   檢查 Stub 資料 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   驗證參數 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   驗證參數 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   結構成員對齊 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   

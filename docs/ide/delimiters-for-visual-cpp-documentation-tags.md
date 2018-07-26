@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337570"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208571"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文件標記的分隔符號
 使用文件標記時需要分隔符號，以向編譯器指出文件註解的開始和結束位置。  
@@ -51,7 +51,7 @@ ms.locfileid: "33337570"
     /** <summary>text</summary> */  
     ```  
   
--   編譯器套用模式 " * " 以忽略第二行和第三行開頭。  
+-   編譯器會採用 " \* " 的模式，來忽略第二行和第三行開頭。  
   
     ```  
     /**  

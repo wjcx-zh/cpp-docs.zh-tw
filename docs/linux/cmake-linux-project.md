@@ -1,7 +1,8 @@
 ---
 title: 在 Visual Studio 中設定 Linux CMake 專案 | Microsoft Docs
+description: 如何在 Visual Studio 中設定 Linux CMake 專案
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,22 +15,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849255"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207783"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
 **Visual Studio 2017 15.4 版和更新版本**  
-當您安裝 Linux C++ 工作負載時，預設會選取適用於 Linux 的 CMake 支援。 您現在可以使用採用 CMake 的現有程式碼基底，而不必將它轉換成 Visual Studio 專案。 如果程式碼基底為跨平台，您可以從 Visual Studio 內將 Windows 和 Linux 鎖定為目標。
+當您為 Visual Studio 安裝 Linux C++ 工作負載時，預設會選取適用於 Linux 的 CMake 支援。 您現在可以使用採用 CMake 的現有程式碼基底，而不必將它轉換成 Visual Studio 專案。 如果程式碼基底為跨平台，您可以從 Visual Studio 內將 Windows 和 Linux 鎖定為目標。
 
 本主題假設您對 Visual Studio 中的 CMake 支援有基本認識。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 如需 CMake 本身的詳細資訊，請參閱 [Build, Test and Package Your Software With CMake](https://cmake.org/) (使用 CMake 建置、測試及封裝您的軟體)。
 
 > [!NOTE]  
-> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如果您的套件管理員提供舊版的 CMake，可以採取的因應措施為[從來源建置 CMake](#build-a-supported-cmake release-from-source) 或從官方 [CMake 下載頁面](https://cmake.org/download/)來加以下載。
+> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如果您的套件管理員提供舊版的 CMake，可以採取的因應措施為[從來源建置 CMake](#build-a-supported-cmake release-from-source) 或從官方 [CMake 下載頁面](https://cmake.org/download/)來加以下載。 如需由 Microsoft 提供，可在 Visual Studio 中支援 [CMake Targets View](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的 CMake 變體，請下載最新的預先建置二進位檔，下載位置：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。
 
 ## <a name="open-a-folder"></a>開啟資料夾
 
@@ -143,7 +144,7 @@ sudo make install
 cmake -E capabilities
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用專案屬性](../ide/working-with-project-properties.md)  
 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)  

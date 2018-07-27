@@ -1,5 +1,5 @@
 ---
-title: OLE DB 提供者樣板的巨集 |Microsoft 文件
+title: OLE DB 提供者樣板的巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,6 +7,27 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
+- BEGIN_PROPERTY_SET
+- BEGIN_PROPERTY_SET_EX
+- BEGIN_PROPSET_MAP
+- CHAIN_PROPERTY_SET
+- END_PROPERTY_SET
+- END_PROPSET_MAP
+- PROPERTY_INFO_ENTRY
+- PROPERTY_INFO_ENTRY_EX
+- PROPERTY_INFO_ENTRY_VALUE
+- BEGIN_PROVIDER_COLUMN_MAP
+- END_PROVIDER_COLUMN_MAP
+- PROVIDER_COLUMN_ENTRY
+- PROVIDER_COLUMN_ENTRY_FIXED
+- PROVIDER_COLUMN_ENTRY_GN
+- PROVIDER_COLUMN_ENTRY_LENGTH
+- PROVIDER_COLUMN_ENTRY_STR
+- PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+- PROVIDER_COLUMN_ENTRY_WSTR
+- BEGIN_SCHEMA_MAP
+- END_SCHEMA_MAP
+- SCHEMA_ENTRY
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,60 +35,564 @@ helpviewer_keywords:
 - macros, OLE DB Provider Templates
 - Provider Template macros (OLE DB)
 - OLE DB Provider Template macros
+- BEGIN_PROPERTY_SET macro
+- BEGIN_PROPERTY_SET_EX macro
+- BEGIN_PROPSET_MAP macro
+- CHAIN_PROPERTY_SET macro
+- END_PROPERTY_SET macro
+- END_PROPSET_MAP macro
+- PROPERTY_INFO_ENTRY macro
+- PROPERTY_INFO_ENTRY_EX macro
+- PROPERTY_INFO_ENTRY_VALUE macro
+- BEGIN_PROVIDER_COLUMN_MAP macro
+- END_PROVIDER_COLUMN_MAP macro
+- PROVIDER_COLUMN_ENTRY macro
+- PROVIDER_COLUMN_ENTRY_FIXED macro
+- PROVIDER_COLUMN_ENTRY_GN macro
+- PROVIDER_COLUMN_ENTRY_LENGTH macro
+- PROVIDER_COLUMN_ENTRY_STR macro
+- PROVIDER_COLUMN_ENTRY_TYPE_LENGTH macro
+- PROVIDER_COLUMN_ENTRY_WSTR macro
+- BEGIN_SCHEMA_MAP macro
+- END_SCHEMA_MAP macro
+- SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab7611c49f625a36023b4e31bf6aff47ab16f156
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1845f2e2404604aa187a8569954b3cb289ae3ec
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111731"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39321925"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
-OLE DB 樣板提供者巨集提供下列分類中的功能：  
+OLE DB 範本提供巨集提供以下類別的功能：  
   
-### <a name="property-set-map-macros"></a>屬性會設定對應巨集  
-  
-|||  
-|-|-|  
-|[BEGIN_PROPERTY_SET](../../data/oledb/begin-property-set.md)|標記的屬性集的開頭。|  
-|[BEGIN_PROPERTY_SET_EX](../../data/oledb/begin-property-set-ex.md)|標記的屬性集的開頭。|  
-|[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)|屬性的開頭設定的標記可以隱藏或定義範圍以外的提供者。|  
-|[CHAIN_PROPERTY_SET](../../data/oledb/chain-property-set.md)|鏈結在一起，屬性群組。|  
-|[END_PROPERTY_SET](../../data/oledb/end-property-set.md)|標示屬性集的結尾。|  
-|[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)|結束標記的屬性集對應。|  
-|[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)|設定特定的屬性中將屬性設定為預設值。|  
-|[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)|設定特定的屬性中將屬性設定為您所提供的值。 也可讓您設定旗標和選項。|  
-|[PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)|設定特定的屬性中將屬性設定為您所提供的值。|  
-  
-### <a name="column-map-macros"></a>資料行對應巨集  
+## <a name="property-set-map-macros"></a>屬性會設定對應巨集  
   
 |||  
 |-|-|  
-|[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)|標記提供者的資料行對應項目的開頭。|  
-|[END_PROVIDER_COLUMN_MAP](../../data/oledb/end-provider-column-map.md)|提供者的資料行對應項目結束標記。|  
-|[PROVIDER_COLUMN_ENTRY](../../data/oledb/provider-column-entry.md)|表示提供者支援的特定資料行。|  
-|[PROVIDER_COLUMN_ENTRY_GN](../../data/oledb/provider-column-entry-gn.md)|表示提供者支援的特定資料行。 您可以指定資料行的大小、 資料類型、 有效位數、 小數位數和結構描述資料列集 GUID。|  
-|[PROVIDER_COLUMN_ENTRY_FIXED](../../data/oledb/provider-column-entry-fixed.md)|表示提供者支援的特定資料行。 您可以指定資料行資料類型。|  
-|[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)|表示提供者支援的特定資料行。 您可以指定資料行大小。|  
-|[PROVIDER_COLUMN_ENTRY_STR](../../data/oledb/provider-column-entry-str.md)|表示提供者支援的特定資料行。 它會假設資料行類型為字串。|  
-|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|表示提供者支援的特定資料行。 喜歡 PROVIDER_COLUMN_ENTRY_LENGTH，但也可讓您指定資料行的資料類型，以及大小。|  
-|[PROVIDER_COLUMN_ENTRY_WSTR](../../data/oledb/provider-column-entry-wstr.md)|表示提供者支援的特定資料行。 它會假設資料行類型是 Unicode 字元字串。|  
+|[BEGIN_PROPERTY_SET](#begin_property_set)|將標記屬性集的開頭。|  
+|[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|將標記屬性集的開頭。|  
+|[BEGIN_PROPSET_MAP](#begin_propset_map)|標記屬性的開頭設定，可以隱藏或定義範圍以外的提供者。|  
+|[CHAIN_PROPERTY_SET](#chain_property_set)|鏈結在一起，屬性群組。|  
+|[END_PROPERTY_SET](#end_property_set)|將標記屬性集的結尾。|  
+|[END_PROPSET_MAP](#end_propset_map)|結束標記的屬性集對應。|  
+|[PROPERTY_INFO_ENTRY](#property_info_entry)|您可以設定特定的屬性中將屬性設定為預設值。|  
+|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|將屬性設定為您所提供的值中設定特定的屬性。 也可讓您設定旗標和選項。|  
+|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|將屬性設定為您所提供的值中設定特定的屬性。|  
   
-### <a name="schema-rowset-macros"></a>結構描述資料列集巨集  
+## <a name="column-map-macros"></a>資料行對應巨集  
   
 |||  
 |-|-|  
-|[BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)|標記結構描述對應的開頭。|  
-|[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|關聯類別的 GUID。|  
-|[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|結束標記的結構描述對應。|  
+|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|標記提供者的資料行對應項目的開頭。|  
+|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|標記提供者的資料行對應項目的結尾。|  
+|[PROVIDER_COLUMN_ENTRY](#provider_column_entry)|表示提供者支援的特定資料行。|  
+|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|表示提供者支援的特定資料行。 您可以指定資料行資料類型。|  
+|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|表示提供者支援的特定資料行。 您可以指定資料行的大小、 資料類型、 有效位數、 小數位數和結構描述資料列集的 GUID。|  
+|[PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length)|表示提供者支援的特定資料行。 您可以指定資料行大小。|  
+|[PROVIDER_COLUMN_ENTRY_STR](#provider_column_entry_str)|表示提供者支援的特定資料行。 它會假設資料行類型是字串。|  
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|表示提供者支援的特定資料行。 PROVIDER_COLUMN_ENTRY_LENGTH，但也可讓您指定資料行的資料類型，以及大小。|  
+|[PROVIDER_COLUMN_ENTRY_WSTR](#provider_column_entry_wstr)|表示提供者支援的特定資料行。 它會假設資料行類型是 Unicode 字元字串。|  
+  
+## <a name="schema-rowset-macros"></a>結構描述資料列集巨集  
+  
+|||  
+|-|-|  
+|[BEGIN_SCHEMA_MAP](#begin_schema_map)|標記結構描述對應的開頭。|  
+|[END_SCHEMA_MAP](#end_schema_map)|結束標記的結構描述對應。|  
+|[SCHEMA_ENTRY](#schema_entry)|關聯類別的 GUID。|  
+
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
+
+### <a name="begin_property_set"></a> BEGIN_PROPERTY_SET
+標記屬性的開頭設定的屬性中設定對應。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+BEGIN_PROPERTY_SET(guid)  
+  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *guid*  
+ [in]屬性的 GUID。  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
+標記屬性的開頭設定的屬性中設定對應。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+BEGIN_PROPERTY_SET_EX(guid  
+, flags )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *guid*  
+ [in]屬性的 GUID。  
+  
+ *flags*  
+ [in]任何屬性集，您不想公開 （expose），或提供者公開的屬性定義的提供者的範圍外的 UPROPSET_PASSTHROUGH UPROPSET_HIDDEN。  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
+標記屬性的開頭設定的對應項目。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+BEGIN_PROPSET_MAP(Class)  
+  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *類別*  
+ [in]指定設定這個屬性的類別。 屬性集，請指定下列的 OLE DB 物件：  
+  
+-   [資料來源物件](https://msdn.microsoft.com/library/ms721278.aspx)  
+  
+-   [工作階段物件](https://msdn.microsoft.com/library/ms711572.aspx)  
+  
+-   [命令](https://msdn.microsoft.com/library/ms724608.aspx)  
+  
+#### <a name="example"></a>範例  
+ 以下是範例屬性集對應：  
+  
+ [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
+
+### <a name="chain_property_set"></a> CHAIN_PROPERTY_SET
+這個巨集鏈結在一起，屬性群組。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+CHAIN_PROPERTY_SET(ChainClass)  
+  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *ChainClass*  
+ [in]要鏈結屬性之類別的名稱。 這是已經包含對應 （例如工作階段、 命令或資料來源物件類別） [ATL 專案精靈] 產生的類別。  
+  
+#### <a name="remarks"></a>備註  
+ 您可以鏈結至您自己的類別，從另一個類別屬性集，然後直接從您的類別存取的屬性。  
+  
+> [!CAUTION]
+>  謹慎使用這個巨集。 不當使用，可能會導致失敗的 OLE DB 一致性測試的取用者。  
+
+### <a name="end_property_set"></a> END_PROPERTY_SET
+將標記屬性集的結尾。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+END_PROPERTY_SET(guid)  
+  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *guid*  
+ [in]屬性的 GUID。  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="end_propset_map"></a> END_PROPSET_MAP
+標記屬性的結尾會設定對應項目。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+END_PROPSET_MAP()  
+  
+```  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
+代表屬性集中的特定屬性。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROPERTY_INFO_ENTRY(dwPropID)  
+  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *dwPropID*  
+ [in]A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx)值可以用於搭配屬性集 GUID 以識別屬性。  
+  
+#### <a name="remarks"></a>備註  
+ 此巨集會將 `DWORD` 類型的屬性值設定為 ATLDB 中定義的預設值。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)。 若要設定[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)並[DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx)同時屬性，使用[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
+代表屬性集中的特定屬性。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROPERTY_INFO_ENTRY_EX(dwPropID  
+, vt, dwFlags, value, options )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *dwPropID*  
+ [in]A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx)值可以用於搭配屬性集 GUID 以識別屬性。  
+  
+ *vt*  
+ [in][VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)的此屬性項目。  
+  
+ *dwFlags*  
+ [in]A [DBPROPFLAGS](https://msdn.microsoft.com/library/ms724342.aspx)值，描述此屬性項目。  
+  
+ *值*  
+ [in] `DWORD`類型的屬性值。  
+  
+ *options*  
+ Dbpropoptions_required 時或 DBPROPOPTIONS_SETIFCHEAP 中。 一般而言，提供者不需要設定*選項*因為它由取用者設定。  
+  
+#### <a name="remarks"></a>備註  
+ 透過這個巨集，您可以直接指定 `DWORD` 類型的屬性值，以及選項和旗標。 若只要將屬性設定為 ATLDB.H 中定義的預設值，請使用 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)。 若要將屬性設定為您選擇的值，請使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)，而不需要設定屬性的選項或旗標。  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
+代表屬性集中的特定屬性。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROPERTY_INFO_ENTRY_VALUE(dwPropID  
+, value )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *dwPropID*  
+ [in]A [DBPROPID](https://msdn.microsoft.com/library/ms723882.aspx)值可以用於搭配屬性集 GUID 以識別屬性。  
+  
+ *值*  
+ [in] `DWORD`類型的屬性值。  
+  
+#### <a name="remarks"></a>備註  
+ 使用這個巨集，您可以直接指定類型的屬性值`DWORD`。 若要將屬性設定為 ATLDB 中定義的預設值。H、 使用[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)。 若要設定的值、 旗標和屬性的選項，使用[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。  
+  
+#### <a name="example"></a>範例  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+### <a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
+標記提供者的資料行對應項目的開頭。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+BEGIN_PROVIDER_COLUMN_MAP(theClass)  
+  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *theClass*  
+ [in]此對應所屬的類別名稱。  
+  
+#### <a name="example"></a>範例  
+ 以下是範例提供者的資料行對應：  
+  
+ [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
+
+### <a name="end_provider_column_map"></a> END_PROVIDER_COLUMN_MAP
+標記提供者的資料行對應項目的結尾。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+END_PROVIDER_COLUMN_MAP()  
+  
+```  
+  
+#### <a name="example"></a>範例  
+ 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。  
+
+### <a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY (name  
+, ordinal, member )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *成員*  
+ [in]中的成員變數`dataClass` 資料行對應。  
+
+### <a name="provider_column_entry_fixed"></a> PROVIDER_COLUMN_ENTRY_FIXED
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY_FIXED(name  
+, ordinal, dbtype, member )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *dbtype*  
+ [in]中的資料類型[DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx)。  
+  
+ *成員*  
+ [in]中的成員變數`dataClass`，儲存資料。  
+  
+#### <a name="remarks"></a>備註  
+ 可讓您指定資料行資料類型。  
+  
+#### <a name="example"></a>範例  
+ 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。  
+
+### <a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY_GN (name  
+, ordinal, flags, colSize, dbtype, precision, scale, guid )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *flags*  
+ [in]指定傳回資料的方式。 請參閱`dwFlags`中的說明[DBBINDING 結構](https://msdn.microsoft.com/library/ms716845.aspx)。  
+  
+ *colSize*  
+ [in]資料行大小。  
+  
+ *dbtype*  
+ [in]表示值的資料類型。 請參閱`wType`中的說明[DBBINDING 結構](https://msdn.microsoft.com/library/ms716845.aspx)。  
+  
+ *precision*  
+ [in]指出如果取得資料時所要使用的有效位數*dbType* DBTYPE_NUMERIC 或 DBTYPE_DECIMAL。 請參閱`bPrecision`中的說明[DBBINDING 結構](https://msdn.microsoft.com/library/ms716845.aspx)。  
+  
+ *小數位數*  
+ [in]表示如果 dbType DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 取得資料時所要使用的比例。 請參閱`bScale`中的說明[DBBINDING 結構](https://msdn.microsoft.com/library/ms716845.aspx)。  
+  
+ *guid*  
+ 結構描述資料列集的 GUID。 請參閱[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。  
+  
+#### <a name="remarks"></a>備註  
+ 可讓您指定資料行的大小、 資料類型、 有效位數、 小數位數和結構描述資料列集的 GUID。  
+
+### <a name="provider_column_entry_length"></a> PROVIDER_COLUMN_ENTRY_LENGTH
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY_LENGTH(name  
+, ordinal, size, member )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *size*  
+ [in]資料行大小 （位元組）。  
+  
+ *成員*  
+ [in]中的成員變數`dataClass`儲存資料行的資料。  
+  
+#### <a name="remarks"></a>備註  
+ 可讓您指定資料行大小。  
+  
+#### <a name="example"></a>範例  
+ 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。 
+
+### <a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY_STR(name  
+, ordinal, member )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *成員*  
+ [in]將資料儲存的資料類別中成員變數。  
+  
+#### <a name="remarks"></a>備註  
+ 當資料行的資料皆必須使用這個巨集[DBTYPE_STR](https://msdn.microsoft.com/library/ms711251.aspx)。  
+  
+#### <a name="example"></a>範例  
+ 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。   
+
+### <a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name  
+, ordinal, dbtype, size, member )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *dbtype*  
+ [in]中的資料類型[DBTYPE](https://msdn.microsoft.com/library/ms711251.aspx)。  
+  
+ *size*  
+ [in]資料行大小 （位元組）。  
+  
+ *成員*  
+ [in]將資料儲存的資料類別中成員變數。  
+  
+#### <a name="remarks"></a>備註  
+ 類似於[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)也可讓您指定資料行的資料類型，以及大小。  
+
+### <a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
+表示提供者支援的特定資料行。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+PROVIDER_COLUMN_ENTRY_WSTR(name  
+, ordinal, member )  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *name*  
+ [in]資料行名稱。  
+  
+ *序數*  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
+  
+ *成員*  
+ [in]將資料儲存的資料類別中成員變數。  
+  
+#### <a name="remarks"></a>備註  
+ 使用這個巨集，資料行的資料是以 null 結束的 Unicode 字元字串，當[DBTYPE_WSTR](https://msdn.microsoft.com/library/ms711251.aspx)。  
+
+### <a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
+表示結構描述對應的開頭。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+      BEGIN_SCHEMA_MAP(SchemaClass);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *SchemaClass*  
+ 包含對應的類別。 通常這會是工作階段類別。  
+  
+#### <a name="remarks"></a>備註  
+ 請參閱[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)結構描述資料列集的詳細資訊的 Windows SDK 中。  
+
+### <a name="end_schema_map"></a> END_SCHEMA_MAP
+表示結構描述對應的結尾。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+END_SCHEMA_MAP()  
+  
+```  
+  
+#### <a name="see-also"></a>另請參閱  
+ [IDBSchemaRowsetImpl 類別](../../data/oledb/idbschemarowsetimpl-class.md)
+
+### <a name="schema_entry"></a> SCHEMA_ENTRY
+關聯類別的 GUID。  
+  
+#### <a name="syntax"></a>語法  
+  
+```cpp
+      SCHEMA_ENTRY(guid,  
+   rowsetClass);   
+```  
+  
+#### <a name="parameters"></a>參數  
+ *guid*  
+ 結構描述資料列集的 GUID。 請參閱[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。  
+  
+ *rowsetClass*  
+ 將建立來代表結構描述資料列集類別。  
+  
+#### <a name="remarks"></a>備註  
+ [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)可以接著查詢取得 Guid，一份地圖，或如果它有一個 GUID，它可以建立一個資料列集。 結構描述資料列`IDBSchemaRowsetImpl`會建立類似於標準`CRowsetImpl`-衍生類別，但它必須提供`Execute`具有下列簽章的方法：  
+  
+```cpp  
+HRESULT Execute (LONG* pcRowsAffected,  
+    ULONG cRestrictions,  
+    const VARIANT* rgRestrictions);  
+```  
+  
+ 這`Execute`函式會將資料列集的資料填入。 [ATL 專案精靈] 建立，如中所述[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)中*OLE DB 程式設計人員參考*，三個初始的三個必要的 OLE DB 結構描述的每個專案中的結構描述資料列：  
+  
+-   DBSCHEMA_TABLES  
+  
+-   DBSCHEMA_COLUMNS  
+  
+-   DBSCHEMA_PROVIDER_TYPES  
+  
+ 精靈也會將三個對應的項目中的結構描述對應。 請參閱[建立 OLE DB 範本提供者](../../data/oledb/creating-an-ole-db-provider.md)如需使用精靈來建立提供者的詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)   
- [OLE DB 提供者範本參考](../../data/oledb/ole-db-provider-templates-reference.md)
+ [OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)    
+ [OLE DB 提供者範本的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   

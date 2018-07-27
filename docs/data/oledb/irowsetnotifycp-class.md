@@ -1,5 +1,5 @@
 ---
-title: IRowsetNotifyCP 類別 |Microsoft 文件
+title: IRowsetNotifyCP 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,25 +7,43 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyCP
+- Fire_OnFieldChange
+- ATL::IRowsetNotifyCP::Fire_OnFieldChange
+- ATL.IRowsetNotifyCP.Fire_OnFieldChange
+- IRowsetNotifyCP.Fire_OnFieldChange
+- IRowsetNotifyCP::Fire_OnFieldChange
+- IRowsetNotifyCP.Fire_OnRowChange
+- ATL.IRowsetNotifyCP.Fire_OnRowChange
+- Fire_OnRowChange
+- ATL::IRowsetNotifyCP::Fire_OnRowChange
+- IRowsetNotifyCP::Fire_OnRowChange
+- Fire_OnRowsetChange
+- IRowsetNotifyCP::Fire_OnRowsetChange
+- IRowsetNotifyCP.Fire_OnRowsetChange
+- ATL::IRowsetNotifyCP::Fire_OnRowsetChange
+- ATL.IRowsetNotifyCP.Fire_OnRowsetChange
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetNotifyCP class
+- Fire_OnFieldChange method
+- Fire_OnRowChange method
+- Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 19147710ce8965222eed998e1a7ab4baa1e32caf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207128da3e46da492ebc812b68d9ef09847045e5
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109231"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322120"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 類別
-實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。  
+實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)。  
   
 ## <a name="syntax"></a>語法
 
@@ -39,18 +57,21 @@ class IRowsetNotifyCP :
    public ReentrantEventSync  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  類別衍生自`IRowsetNotifyCP`。  
   
- `ReentrantEventSync`  
- 支援重新進入的 mutex 類別 (預設值是**CComSharedMutex**)。 Mutex 是允許執行緒互斥存取資源的同步處理物件。  
+ *ReentrantEventSync*  
+ 支援重新進入的 mutex 類別 (預設值是`CComSharedMutex`)。 Mutex 是同步處理物件，可讓一個執行緒互斥資源的存取權。  
   
- `piid`  
- 介面識別碼指標 (**IID\***) 的**IRowsetNotify**連接點介面。 預設值是 **& __uuidof(IRowsetNotify)**。  
+ *piid*  
+ 介面識別碼指標 (`IID*`) 的`IRowsetNotify`連接點的介面。 預設值是 `&__uuidof(IRowsetNotify)`。  
   
- `DynamicUnkArray`  
- 類型的陣列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，即為動態配置的陣列**IUnknown**指標給用戶端接收的介面。  
+ *DynamicUnkArray*  
+ 類型的陣列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，這是動態配置的陣列的`IUnknown`指標給用戶端接收器介面。 
+
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h   
   
 ## <a name="members"></a>成員  
   
@@ -58,19 +79,66 @@ class IRowsetNotifyCP :
   
 |||  
 |-|-|  
-|[Fire_OnFieldChange](../../data/oledb/irowsetnotifycp-fire-onfieldchange.md)|通知變更的資料行值的取用者。|  
-|[Fire_OnRowChange](../../data/oledb/irowsetnotifycp-fire-onrowchange.md)|通知變更會影響資料列的取用者。|  
-|[Fire_OnRowsetChange](../../data/oledb/irowsetnotifycp-fire-onrowsetchange.md)|通知變更會影響整個資料列集取用的者。|  
+|[Fire_OnFieldChange](#onfieldchange)|告知消費者的資料行的值變更。|  
+|[Fire_OnRowChange](#onrowchange)|告知消費者，影響資料列的變更。|  
+|[Fire_OnRowsetChange](#onrowsetchange)|告知消費者，影響整個資料列集的變更。|  
   
 ## <a name="remarks"></a>備註  
- `IRowsetNotifyCP` 實作廣播函式來通知接聽程式連接點上**IID_IRowsetNotify**的資料列集內容的變更。  
+ `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
   
- 請注意，您也必須實作並註冊`IRowsetNotify`上取用者 （也稱為 「 接收 」） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 請參閱[接收通知](../../data/oledb/receiving-notifications.md)有關上取用者實作連接點介面。  
+ 請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為 「 接收 」） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 請參閱[接收通知](../../data/oledb/receiving-notifications.md)需於取用者實作連接點介面。  
   
- 實作通知的詳細資訊，請參閱 [支援的通知]，在[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)。  
+ 實作通知的詳細資訊，請參閱 「 支援通知 」，在[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)。  
+
+## <a name="onfieldchange"></a> Irowsetnotifycp:: Fire_onfieldchange
+廣播[OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx)事件來通知取用者的資料行的值變更。  
   
-## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT Fire_OnFieldChange(IRowset* pRowset,  
+   HROW hRow,  
+   DBORDINAL cColumns,  
+   DBORDINAL* rgColumns,  
+   DBREASON eReason,  
+   DBEVENTPHASE ePhase,  
+   BOOL fCantDeny);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/library/ms715961.aspx)中*OLE DB 程式設計人員參考*。 
+
+## <a name="onrowchange"></a> Irowsetnotifycp:: Fire_onrowchange
+廣播[OnRowChange](https://msdn.microsoft.com/library/ms722694.aspx)事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響資料列。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT Fire_OnRowChange(IRowset* pRowset,  
+   DBCOUNTITEM cRows,  
+   const HROW rghRows[],  
+   DBREASON eReason,  
+   DBEVENTPHASE ePhase,  
+   BOOL fCantDeny);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[irowsetnotify:: Onrowchange](https://msdn.microsoft.com/library/ms722694.aspx)中*OLE DB 程式設計人員參考*。  
+
+## <a name="onrowsetchange"></a> Irowsetnotifycp:: Fire_onrowsetchange
+廣播[OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx)事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響整個資料列集。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+HRESULT Fire_OnRowsetChange(IRowset* pRowset,  
+   DBREASON eReason,  
+   DBEVENTPHASE ePhase,  
+   BOOL fCantDeny);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/library/ms722669.aspx)中*OLE DB 程式設計人員參考*。
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

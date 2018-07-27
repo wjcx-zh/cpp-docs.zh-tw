@@ -1,5 +1,5 @@
 ---
-title: IConvertTypeImpl 類別 |Microsoft 文件
+title: IConvertTypeImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,29 @@ f1_keywords:
 - ATL.IConvertTypeImpl
 - ATL::IConvertTypeImpl
 - ATL::IConvertTypeImpl<T>
+- IConvertTypeImpl.CanConvert
+- CanConvert
+- IConvertTypeImpl::CanConvert
 dev_langs:
 - C++
 helpviewer_keywords:
 - IConvertTypeImpl class
+- CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9a8fdef3abf0c33fb6fca857086e6490ec959e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dfa073226dc4ddb3cd14b2aae31375a6f6ccc25
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100040"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269779"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 類別
-提供的實作[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)介面。  
+提供實作[IConvertType](https://msdn.microsoft.com/library/ms715926.aspx)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -39,9 +43,12 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  您的類別，衍生自`IConvertTypeImpl`。  
+
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -49,13 +56,27 @@ class ATL_NO_VTABLE IConvertTypeImpl
   
 |||  
 |-|-|  
-|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|命令或上一個資料列集，請提供可用性資訊的型別轉換。|  
+|[CanConvert](#canconvert)|命令或上一個資料列集，請提供可用性資訊的類型轉換。|  
   
 ## <a name="remarks"></a>備註  
- 此介面上是強制的命令、 資料列集和索引資料列集。 **IConvertTypeImpl**委派給 OLE DB 所提供的轉換物件，以實作介面。  
+ 這個介面是命令、 資料列集和索引資料列集時的必要參數。 `IConvertTypeImpl` 委派給 OLE DB 所提供的轉換物件，以實作介面。  
+
+## <a name="canconvert"></a> Iconverttypeimpl:: Canconvert
+命令或上一個資料列集，請提供可用性資訊的類型轉換。  
   
-## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(CanConvert)(DBTYPE wFromType,   
+   DBTYPE wToType,   
+   DBCONVERTFLAGS dwConvertFlags);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[IConvertType::CanConvert](https://msdn.microsoft.com/library/ms711224.aspx)中*OLE DB 程式設計人員參考*。  
+  
+### <a name="remarks"></a>備註  
+ 使用中的 OLE DB 資料轉換`MSADC.DLL`。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

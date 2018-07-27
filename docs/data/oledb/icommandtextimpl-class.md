@@ -1,5 +1,5 @@
 ---
-title: ICommandTextImpl 類別 |Microsoft 文件
+title: ICommandTextImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,25 +7,41 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - ICommandText
+- GetCommandText
+- ICommandTextImpl.GetCommandText
+- ICommandTextImpl::GetCommandText
+- ATL::ICommandTextImpl::m_strCommandText
+- ICommandTextImpl<T>::m_strCommandText
+- m_strCommandText
+- ICommandTextImpl.m_strCommandText
+- ICommandTextImpl::m_strCommandText
+- ATL::ICommandTextImpl<T>::m_strCommandText
+- ATL.ICommandTextImpl.m_strCommandText
+- ICommandTextImpl.SetCommandText
+- ICommandTextImpl::SetCommandText
+- SetCommandText
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICommandText class
+- GetCommandText method
+- m_strCommandText
+- SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f49326dba4868ad490dc1a7122eed68271bdfa15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100196"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269487"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 類別
-提供的實作[ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx)介面。  
+提供實作[ICommandText](https://msdn.microsoft.com/library/ms714914.aspx)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -35,9 +51,12 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 命令類別衍生自**ICommandTextImpl**。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 命令類別衍生自**ICommandTextImpl**。 
+
+## <a name="requirements"></a>需求  
+ **標頭：** altdb.h  
   
 ## <a name="members"></a>成員  
   
@@ -45,20 +64,53 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 |||  
 |-|-|  
-|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|傳回上次呼叫所設定的文字命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。|  
-|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|設定命令文字，取代現有的命令文字。|  
+|[GetCommandText](#getcommandtext)|傳回上次呼叫所設定的文字命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。|  
+|[SetCommandText](#setcommandtext)|設定命令文字，取代現有的命令文字。|  
   
 ### <a name="data-members"></a>資料成員  
   
 |||  
 |-|-|  
-|[m_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|儲存命令文字。|  
+|[m_strCommandText](#strcommandtext)|儲存命令文字。|  
   
 ## <a name="remarks"></a>備註  
  在命令中的強制介面。  
+ 
+## <a name="getcommandtext"></a> Icommandtextimpl:: Getcommandtext
+傳回上次呼叫所設定的文字命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。  
   
-## <a name="requirements"></a>需求  
- **標頭：** altdb.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+   LPOLESTR * ppwszCommand);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[ICommandText::GetCommandText](https://msdn.microsoft.com/library/ms709825.aspx)中*OLE DB 程式設計人員參考*。 *PguidDialect*依預設，會忽略參數。  
+
+## <a name="setcommandtext"></a> Icommandtextimpl:: Setcommandtext
+設定命令文字，取代現有的命令文字。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+   LPCOLESTR pwszCommand);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[icommandtext:: Setcommandtext](https://msdn.microsoft.com/library/ms709757.aspx)中*OLE DB 程式設計人員參考*。 
+
+## <a name="strcommandtext"></a> Icommandtextimpl:: M_strcommandtext
+儲存命令的文字字串。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+CComBSTR m_strCommandText;  
+  
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

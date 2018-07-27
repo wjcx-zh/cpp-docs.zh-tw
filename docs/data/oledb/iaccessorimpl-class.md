@@ -1,5 +1,5 @@
 ---
-title: IAccessorImpl 類別 |Microsoft 文件
+title: IAccessorImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,25 +7,56 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - IAccessorImpl
+- ATL.IAccessorImpl.IAccessorImpl
+- ATL::IAccessorImpl::IAccessorImpl
+- IAccessorImpl::IAccessorImpl
+- IAccessorImpl.IAccessorImpl
+- IAccessorImpl
+- ATL::IAccessorImpl::AddRefAccessor
+- AddRefAccessor
+- IAccessorImpl::AddRefAccessor
+- IAccessorImpl.AddRefAccessor
+- ATL.IAccessorImpl.AddRefAccessor
+- IAccessorImpl::CreateAccessor
+- CreateAccessor
+- ATL::IAccessorImpl::CreateAccessor
+- IAccessorImpl.CreateAccessor
+- ATL.IAccessorImpl.CreateAccessor
+- IAccessorImpl.GetBindings
+- ATL::IAccessorImpl::GetBindings
+- IAccessorImpl::GetBindings
+- GetBindings
+- ATL.IAccessorImpl.GetBindings
+- ReleaseAccessor
+- IAccessorImpl::ReleaseAccessor
+- ATL.IAccessorImpl.ReleaseAccessor
+- ATL::IAccessorImpl::ReleaseAccessor
+- IAccessorImpl.ReleaseAccessor
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAccessorImpl class
+- IAccessorImpl class, constructor
+- IAccessorImpl constructor
+- AddRefAccessor method
+- CreateAccessor method
+- GetBindings method
+- ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d62deeb487fded5895bbd47332a0f8a6ad7bbce6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ac22d8ee45209ad6a20dcb34a75c06dd9b80b58
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102520"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269884"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 類別
-提供的實作[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)介面。  
+提供實作[IAccessor](https://msdn.microsoft.com/library/ms719672.aspx)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -36,38 +67,106 @@ template <class T,
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 您的資料列集或命令的物件類別。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 您的資料列集或指令的物件類別。  
   
- `BindType`  
- 存放裝置的繫結資訊。 預設值是**ATLBINDINGS**結構 （請參閱為 atldb）。  
+ *BindType*  
+ 存放裝置的繫結資訊。 預設值是`ATLBINDINGS`結構 （請參閱為 atldb.h）。  
   
- `BindingVector`  
- 存放裝置的資料行資訊。 預設值是[CAtlMap](../../atl/reference/catlmap-class.md)所在的索引鍵的項目**HACCESSOR**值和值的項目是指標`BindType`結構。  
+ *BindingVector*  
+ 資料行資訊的儲存體單位。 預設值是[CAtlMap](../../atl/reference/catlmap-class.md)其中的索引鍵的項目是 HACCESSOR 的值，而值的項目是指標`BindType`結構。  
   
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
+
 ## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)|建構函式。|  
+|[IAccessorImpl](#iaccessorimpl)|建構函式。|  
   
 ### <a name="interface-methods"></a>介面方法  
   
 |||  
 |-|-|  
-|[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|將參考計數加入至現有的存取子。|  
-|[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|從一組繫結建立存取子。|  
-|[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|傳回的繫結的存取子中。|  
-|[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|釋放存取子。|  
+|[AddRefAccessor](#addrefaccessor)|將現有的存取子中的參考計數。|  
+|[CreateAccessor](#createaccessor)|從一組繫結建立存取子。|  
+|[GetBindings](#getbindings)|傳回的繫結的存取子中。|  
+|[ReleaseAccessor](#releaseaccessor)|釋放存取子。|  
   
 ## <a name="remarks"></a>備註  
- 這是必要的資料列集和命令。 OLE DB 需要實作的提供者**HACCESSOR**，即為陣列的標記[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)結構。 **HACCESSOR**所提供的 s`IAccessorImpl`是位址`BindType`結構。 根據預設，`BindType`定義為**ATLBINDINGS**中`IAccessorImpl`的樣板定義。 `BindType` 提供所使用的機制`IAccessorImpl`追蹤中的項目數其**DBBINDING**以及參考計數和存取子旗標的陣列。  
+ 這是資料列集和命令的必要參數。 OLE DB 會要求提供者實作 HACCESSOR，這是標記的陣列[DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx)結構。 所提供的 HACCESSORs`IAccessorImpl`是位址`BindType`結構。 根據預設，`BindType`指`ATLBINDINGS`在`IAccessorImpl`的範本定義。 `BindType` 提供所使用的機制`IAccessorImpl`追蹤中的項目數其`DBBINDING`陣列以及參考計數和存取子旗標。  
+
+## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
+建構函式。  
   
-## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+IAccessorImpl();  
+  
+```  
+
+## <a name="addrefaccessor"></a> Iaccessorimpl:: Addrefaccessor
+將現有的存取子中的參考計數。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,  
+   DBREFCOUNT* pcRefCount);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[IAccessor::AddRefAccessor](https://msdn.microsoft.com/library/ms714978.aspx)中*OLE DB 程式設計人員參考*。
+
+## <a name="createaccessor"></a> Iaccessorimpl:: Createaccessor
+從一組繫結建立存取子。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,  
+   DBCOUNTITEM cBindings,  
+   const DBBINDING rgBindings[],  
+   DBLENGTH cbRowSize,  
+   HACCESSOR* phAccessor,  
+   DBBINDSTATUS rgStatus[]);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[iaccessor:: Createaccessor](https://msdn.microsoft.com/library/ms720969.aspx)中*OLE DB 程式設計人員參考*。  
+
+## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
+從存取子中取用者會傳回基本的資料行繫結。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(GetBindings)(HACCESSOR hAccessor,  
+   DBACCESSORFLAGS* pdwAccessorFlags,  
+   DBCOUNTITEM* pcBindings,  
+   DBBINDING** prgBindings);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[IAccessor::GetBindings](https://msdn.microsoft.com/library/ms721253.aspx)中*OLE DB 程式設計人員參考*。 
+
+## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
+釋放存取子。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,  
+   DBREFCOUNT* pcRefCount);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[iaccessor:: Releaseaccessor](https://msdn.microsoft.com/library/ms719717.aspx)中*OLE DB 程式設計人員參考*。
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

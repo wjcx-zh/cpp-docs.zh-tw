@@ -1,5 +1,5 @@
 ---
-title: ICommandPropertiesImpl 類別 |Microsoft 文件
+title: ICommandPropertiesImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,33 @@ f1_keywords:
 - ICommandPropertiesImpl
 - ATL.ICommandPropertiesImpl
 - ATL::ICommandPropertiesImpl
+- ICommandPropertiesImpl::GetProperties
+- ICommandPropertiesImpl.GetProperties
+- GetProperties
+- ICommandPropertiesImpl.SetProperties
+- ICommandPropertiesImpl::SetProperties
+- SetProperties
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICommandPropertiesImpl class
+- GetProperties method
+- SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25be1548bd41f832a007f102c138fc01f8818774
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f170aa27cdc52b98729b0953568575292f6f6b
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098997"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269582"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 類別
-提供的實作[ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx)介面。  
+提供實作[ICommandProperties](https://msdn.microsoft.com/library/ms723044.aspx)介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -37,12 +45,15 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  您的類別，衍生自  
   
- `PropClass`  
+ *PropClass*  
  您屬性的類別。  
+
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -50,14 +61,42 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|傳回在目前要求的資料列集的資料列集屬性群組中的屬性清單。|  
-|[SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)|在資料列集屬性群組中設定屬性。|  
+|[GetProperties](#getproperties)|目前要求的資料列集的資料列集屬性群組中傳回屬性的清單。|  
+|[SetProperties](#setproperties)|設定資料列集屬性群組中的屬性。|  
   
 ## <a name="remarks"></a>備註  
- 這是必要的命令。 所定義的靜態函式所提供的實作[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)巨集。  
+ 這是命令的必要參數。 所定義的靜態函式提供實作[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)巨集。  
+
+## <a name="getproperties"></a> Icommandpropertiesimpl:: Getproperties
+傳回使用命令的屬性對應的所有要求的屬性集。  
   
-## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[icommandproperties:: Getproperties](https://msdn.microsoft.com/library/ms723119.aspx)中*OLE DB 程式設計人員參考*。  
+  
+### <a name="remarks"></a>備註  
+ 請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+  
+## <a name="setproperties"></a> Icommandpropertiesimpl:: Setproperties
+設定命令物件的屬性。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp
+      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 請參閱[icommandproperties:: Setproperties](https://msdn.microsoft.com/library/ms711497.aspx)中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

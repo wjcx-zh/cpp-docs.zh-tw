@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4395f19367cac69ad1e1d20b3d637437b5614603
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233461"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338216"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 類別
 
@@ -156,7 +156,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      typedef CDynamicParameterAccessor _ParamClass;  
+typedef CDynamicParameterAccessor _ParamClass;  
 CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
    DBLENGTH nBlobSize = 8000 )   
    : CDynamicAccessor(eBlobHandling, nBlobSize )  
@@ -179,7 +179,7 @@ CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFA
   
 ```cpp
 template <class ctype>bool GetParam(DBORDINAL nParam,   
-  ctype* pData) const throw();  
+   ctype* pData) const throw();  
 
 template <class ctype> bool GetParam(TCHAR* pParamName,   
    ctype* pData) const throw();  
@@ -214,7 +214,6 @@ void* GetParam(TCHAR* pParamName) const throw();
   
 ```cpp
 DB_UPARAMS GetParamCount() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -257,7 +256,7 @@ enum DBPARAMIOENUM {
   
 ```cpp
 bool GetParamLength(DBORDINAL nParam,  
-  DBLENGTH* pLength);  
+   DBLENGTH* pLength);  
 
 DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();  
 ```  
@@ -278,7 +277,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
+LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -295,7 +294,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
   
 ```cpp
 bool GetParamStatus(DBORDINAL nParam,  
-  DBSTATUS* pStatus);  
+   DBSTATUS* pStatus);  
 
 DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();  
 ```  
@@ -317,11 +316,17 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
   
 ```cpp
 bool GetParamString(DBORDINAL nParam,  
-  CSimpleStringA& strOutput) throw();bool GetParamString(DBORDINAL nParam,  
-  CSimpleStringW& strOutput) throw();bool GetParamString(DBORDINAL nParam,  
-  CHAR* pBuffer,  
-   size_t* pMaxLen) throw();bool GetParamString(DBORDINAL nParam,  
-  WCHAR* pBuffer,  
+   CSimpleStringA& strOutput) throw();
+
+bool GetParamString(DBORDINAL nParam,  
+   CSimpleStringW& strOutput) throw();
+   
+bool GetParamString(DBORDINAL nParam,  
+   CHAR* pBuffer,  
+   size_t* pMaxLen) throw();
+
+bool GetParamString(DBORDINAL nParam,  
+   WCHAR* pBuffer,  
    size_t* pMaxLen) throw();  
 ```  
   
@@ -356,7 +361,7 @@ bool GetParamString(DBORDINAL nParam,
   
 ```cpp
 bool GetParamType(DBORDINAL nParam,  
-  DBTYPE* pType) const throw();  
+   DBTYPE* pType) const throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -377,13 +382,13 @@ bool GetParamType(DBORDINAL nParam,
 ```cpp
 template <class ctype>
 bool SetParam(DBORDINAL nParam,  
-               constctype* pData,  
-               DBSTATUS status = DBSTATUS_S_OK) throw();  
+   constctype* pData,  
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 
 template <class ctype>  
 bool SetParam(TCHAR* pParamName,  
-               const ctype* pData,  
-               DBSTATUS status = DBSTATUS_S_OK) throw();  
+   const ctype* pData,  
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -402,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in]要包含的資料寫入緩衝區記憶體的指標。  
   
  *status*  
- [in]DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+ [in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="return-value"></a>傳回值  
  傳回**真**成功或**false**失敗。  

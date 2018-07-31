@@ -211,7 +211,7 @@ f1_keywords:
 - CRowset<TAccessor>.UpdateAll
 - ATL.CRowset<TAccessor>.UpdateAll
 - UpdateAll
-- CRowset.UpdateAll
+- CRowset.UpdateAl
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d65f9c7c796724a77935693690ac73357867dab0
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233512"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338229"
 ---
 # <a name="crowset-class"></a>CRowset 類別
 封裝的 OLE DB 資料列集物件，以及數個相關的介面，並提供資料列集資料的操作方法。  
@@ -266,7 +266,7 @@ template <class TAccessor = CAccessorBase>
 class CRowset  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *TAccessor*  
  存取子類別。 預設為 `CAccessorBase`。  
   
@@ -316,7 +316,6 @@ class CRowset
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -332,7 +331,6 @@ HRESULT AddRefRows() throw();
   
 ```cpp
 void Close() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
@@ -373,7 +371,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CRowset();   
+CRowset();   
 
 CRowset(IRowset* pRowset);  
 ```  
@@ -389,7 +387,6 @@ CRowset(IRowset* pRowset);
   
 ```cpp
 HRESULT Delete() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -402,7 +399,7 @@ HRESULT Delete() const throw();
   
 ```cpp
 HRESULT FindNextRow(DBCOMPAREOP op,   
-  BYTE* pData,   
+   BYTE* pData,   
    DBTYPE wType,   
    DBLENGTH nLength,   
    BYTE bPrecision,   
@@ -481,7 +478,6 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 ```cpp
 HRESULT GetData() throw();   
 
-
 HRESULT GetData(int nAccessor) throw();  
 ```  
   
@@ -502,7 +498,7 @@ HRESULT GetData(int nAccessor) throw();
   
 ```cpp
 HRESULT GetDataHere(int nAccessor,   
-  void* pBuffer) throw();  
+   void* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -525,7 +521,6 @@ HRESULT GetDataHere(int nAccessor,
   
 ```cpp
 HRESULT GetOriginalData() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -610,7 +605,6 @@ HRESULT IsSameRow(HROW hRow) const throw();
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -626,7 +620,6 @@ HRESULT MoveFirst() throw();
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -643,7 +636,9 @@ HRESULT MoveLast() throw();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-HRESULT MoveNext() throw();HRESULT MoveNext(LONG lSkip,   
+HRESULT MoveNext() throw();
+
+HRESULT MoveNext(LONG lSkip,   
    bool bForward= true) throw();  
 ```  
   
@@ -675,7 +670,6 @@ HRESULT MoveNext() throw();HRESULT MoveNext(LONG lSkip,
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -748,7 +742,6 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
 ```cpp
 HRESULT ReleaseRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -761,7 +754,6 @@ HRESULT ReleaseRows() throw();
   
 ```cpp
 HRESULT SetData() const throw();   
-
 
 HRESULT SetData(int nAccessor) const throw();  
 ```  

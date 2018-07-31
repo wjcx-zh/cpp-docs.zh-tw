@@ -1,5 +1,5 @@
 ---
-title: 輸出參數 |Microsoft 文件
+title: 輸出參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104382"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339022"
 ---
 # <a name="output-parameters"></a>輸出參數
-呼叫預存程序是類似於叫用 SQL 命令。 主要差異在於預存程序使用輸出參數 （或 「 outparameters"） 和傳回值。  
+呼叫預存程序是類似於叫用 SQL 命令。 主要差異是預存程序使用輸出參數 （或 「 outparameters"），並傳回值。  
   
- 下列預存程序，第一個 '？ '是傳回的值 (phone)，而第二個'？ ' 是輸入的參數 （名稱）：  
+ 下列預存程序，第一個 '？ '的傳回值 (phone) 和第二個是'？ ' 是輸入的參數 （名稱）：  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- 您可以在參數對應中指定 in 和 out 參數：  
+ 您可以指定 in 和 out 參數在參數對應：  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -46,14 +46,14 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 您的應用程式必須處理從預存程序傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數和傳回值在結果處理期間的不同時間。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不會不提供輸出參數和傳回碼之前，取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。  
+ 您的應用程式必須處理從預存程序所傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數，並傳回結果處理期間的不同時間的值。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不會不提供輸出參數和傳回碼，直到取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。  
   
 ## <a name="row-count"></a>資料列計數  
- 如果您要執行的預存程序具有 outparameters 使用 OLE DB 消費者樣板，直到您關閉資料列集未設定的資料列計數。  
+ 如果您執行具有 outparameters 的預存程序使用 OLE DB 消費者樣板，直到您關閉資料列集未設定的資料列計數。  
   
  例如，請考慮使用資料列集和具預存程序：  
   
-```  
+```sql  
 create procedure sp_test  
    @_rowcount integer output  
 as  
@@ -62,7 +62,7 @@ as
 return 0  
 ```  
   
- @_rowcount具報告測試資料表實際上未傳回資料列數目。 不過，此預存程序最多 50 個資料列數目限制。 例如，如果測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 資料列）。 如果資料表中只是有 30 個資料列，資料列計數就是 30。 您必須呼叫**關閉**或**CloseAll**填入具之前擷取其值。  
+ @_rowcount具報告測試資料表中實際傳回多少資料列。 不過，此預存程序會限制為最多 50 個資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 您必須呼叫`Close`或`CloseAll`填入具之前擷取其值。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用預存程序](../../data/oledb/using-stored-procedures.md)

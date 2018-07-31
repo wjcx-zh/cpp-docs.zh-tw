@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207798"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338255"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 類別
 管理與資料來源的連線。  
@@ -133,8 +133,7 @@ class CDataConnection
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CDataConnection();   
-
+CDataConnection();   
 CDataConnection(const CDataConnection &ds);  
 ```  
   
@@ -153,7 +152,7 @@ CDataConnection(const CDataConnection &ds);
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CDataConnection& Copy(const CDataConnection & ds) throw();  
+CDataConnection& Copy(const CDataConnection & ds) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -202,7 +201,6 @@ HRESULT OpenNewSession(CSession & session) throw();
   
 ```cpp
 operator BOOL() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
@@ -215,7 +213,6 @@ operator BOOL() throw();
   
 ```cpp
 operator bool() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
@@ -228,7 +225,6 @@ operator bool() throw();
   
 ```cpp
 operator const CDataSource&() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
@@ -248,7 +244,6 @@ operator const CDataSource&() throw();
   
 ```cpp
 operator const CDataSource*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
@@ -263,7 +258,6 @@ operator const CDataSource*() throw();
   
 ```cpp
 operator const CSession&();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
@@ -283,7 +277,6 @@ operator const CSession&();
   
 ```cpp
 operator const CSession*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>備註  

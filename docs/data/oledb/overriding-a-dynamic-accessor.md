@@ -1,5 +1,5 @@
 ---
-title: 覆寫動態存取子 |Microsoft 文件
+title: 覆寫動態存取子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9309180b05a6d91e6749f80c7a7b717b1bc57526
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1d6d3277f27c20f7b1c002590fd26e1e2f08eb7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107853"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340026"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>覆寫動態存取子
-當您使用動態存取子例如`CDynamicAccessor`，命令**開啟**方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制完全資料行的繫結方式。  
+當您使用動態存取子這類`CDynamicAccessor`，此命令`Open`方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制確切方式的資料行繫結。  
   
- 若要覆寫動態存取子，將傳遞**false**作為最後一個參數，以`CCommand::Open`方法。 這可防止**開啟**自動建立存取子。 您可以接著呼叫`GetColumnInfo`呼叫`AddBindEntry`您想要繫結每個資料行。 下列程式碼顯示如何執行它：  
+ 若要覆寫動態存取子，請傳遞**假**做為最後一個參數`CCommand::Open`方法。 這可防止`Open`自動建立存取子。 您可以接著呼叫`GetColumnInfo`並呼叫`AddBindEntry`您想要繫結每個資料行。 下列程式碼顯示如何執行此動作：  
   
-```  
+```cpp  
 USES_CONVERSION;  
 double   dblProductID;  
   

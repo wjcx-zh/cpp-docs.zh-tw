@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269682"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338115"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 類別
 實作 OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx)介面，加入至記錄，以及從資料成員擷取的記錄 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的型別**CAtlArray <** `RecordClass`**>**.  
@@ -138,7 +138,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -154,7 +154,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -170,7 +170,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -186,7 +186,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -202,7 +202,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -218,7 +218,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ OLE DB 記錄物件中傳回記錄的數目。
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -300,10 +300,7 @@ OLE DB 記錄物件中傳回記錄的數目。
 ### <a name="syntax"></a>語法  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

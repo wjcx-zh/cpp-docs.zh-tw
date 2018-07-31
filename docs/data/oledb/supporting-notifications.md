@@ -1,5 +1,5 @@
 ---
-title: 支援告知 |Microsoft 文件
+title: 支援告知 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,22 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f750346b0fdd8821800b012b3cdff7acc12f7897
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fea13ef4a89ee2a1105702db4fe692c12643d2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112091"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337936"
 ---
 # <a name="supporting-notifications"></a>支援告知
-## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>上的提供者和取用者實作連接點介面  
- 若要實作通知，提供者類別必須繼承自[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)和[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。  
+
+## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>實作連接點介面上的提供者和取用者  
+ 若要實作通知，提供者類別必須繼承自[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)並[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。  
   
- `IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。 `IRowsetNotifyCP` 實作廣播函式來通知接聽程式連接點上**IID_IRowsetNotify**的資料列集內容的變更。  
+ `IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)。 `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
   
- 請注意，您也必須實作並註冊`IRowsetNotify`上取用者 （也稱為接收） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 在取用者實作連接點介面的詳細資訊，請參閱[接收通知](../../data/oledb/receiving-notifications.md)。  
+ 請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為接收） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 在取用者實作連接點介面的詳細資訊，請參閱[接收通知](../../data/oledb/receiving-notifications.md)。  
   
- 此外，類別也必須包含的地圖，定義的連接點項目，就像這樣：  
+ 此外，類別也必須包含的地圖，定義連接點項目，像這樣：  
   
 ```  
 BEGIN_CONNECTION_POINT_MAP  
@@ -43,13 +44,13 @@ BEGIN_CONNECTION_POINT_MAP
 END_CONNECTION_POINT_MAP  
 ```  
   
-## <a name="adding-irowsetnotify"></a>加入 IRowsetNotify  
- 若要加入`IRowsetNotify`，您需要加入`IConnectionPointContainerImpl<rowset-name>`和`IRowsetNotifyCP<rowset-name>`繼承鏈結。  
+## <a name="adding-irowsetnotify"></a>新增 IRowsetNotify  
+ 若要新增`IRowsetNotify`，您需要新增`IConnectionPointContainerImpl<rowset-name>`和`IRowsetNotifyCP<rowset-name>`繼承鏈結。  
   
- 例如，以下是的繼承鏈結`RUpdateRowset`中[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f):  
+ 例如，以下是的繼承鏈結`RUpdateRowset`中[UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f):  
   
 > [!NOTE]
->  從此處; 所列的範例程式碼可能會與不同您應該將範例程式碼視為最新的版本。  
+>  範例程式碼可能會與不同功能為此處所列;您應該將範例程式碼做為較新版本。  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -65,17 +66,17 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
 ```  
   
 ### <a name="setting-com-map-entries"></a>設定 COM 對應項目  
- 您還需要 COM 中的對應資料列集加上下列：  
+ 您也需要將下列內容新增至您的資料列集中的 COM 對應：  
   
 ```  
 COM_INTERFACE_ENTRY(IConnectionPointContainer)  
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)  
 ```  
   
- 這些巨集可以讓任何人呼叫`QueryInterface`連接點容器 (的基礎`IRowsetNotify`) 來尋找您的提供者上要求的介面。 如需如何使用連線點的範例，請參閱 ATL 多邊形範例與教學課程。  
+ 這些巨集可以讓任何人呼叫`QueryInterface`為您的連接點容器 (的基礎`IRowsetNotify`) 來尋找您的提供者上要求的介面。 如需如何使用連接點的範例，請參閱 ATL 多邊形的範例和教學課程。  
   
-### <a name="setting-connection-point-map-entries"></a>設定連線點對應項目  
- 您也需要加入連接點對應。 它看起來應該像這樣：  
+### <a name="setting-connection-point-map-entries"></a>設定連接點對應項目  
+ 您也需要新增一個連接點對應。 它應該看起來像：  
   
 ```  
 BEGIN_CONNECTION_POINT_MAP(rowset-name)  
@@ -83,28 +84,28 @@ BEGIN_CONNECTION_POINT_MAP(rowset-name)
 END_CONNECTION_POINT_MAP()  
 ```  
   
- 此連接點對應可讓元件尋找`IRowsetNotify`介面，以在您的提供者中找到它。  
+ 這個連接點對應可讓元件，尋求`IRowsetNotify`介面，以在您的提供者中找到它。  
   
 ### <a name="setting-properties"></a>設定屬性  
- 您也需要將下列屬性加入至您的提供者。 您只需要加入您所支援的介面為基礎的屬性。  
+ 您也需要將下列屬性新增至您的提供者。 您只需要新增您所支援的介面為基礎的屬性。  
   
-|屬性|支援時應加入|  
+|屬性|新增 如果您支援|  
 |--------------|------------------------|  
-|**DBPROP_IConnectionPointContainer**|永遠|  
-|**DBPROP_NOTIFICATIONGRANULARITY**|永遠|  
-|**DBPROP_NOTIFICATIONPHASES**|永遠|  
-|**DBPROP_NOTIFYCOLUMNSET**|`IRowsetChange`|  
-|**DBPROP_NOTIFYROWDELETE**|`IRowsetChange`|  
-|**DBPROP_NOTIFYROWINSERT**|`IRowsetChange`|  
-|**DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE**|永遠|  
-|**DBPROP_NOTIFYROWFIRSTCHANGE**|`IRowsetUpdate`|  
-|**DBPROP_NOTIFYROWSETRELEASE**|永遠|  
-|**DBPROP_NOTIFYROWUNDOCHANGE**|`IRowsetUpdate`|  
-|**DBPROP_NOTIFYROWUNDODELETE**|`IRowsetUpdate`|  
-|**DBPROP_NOTIFYROWUNDOINSERT**|`IRowsetUpdate`|  
-|**DBPROP_NOTIFYROWUPDATE**|`IRowsetUpdate`|  
+|`DBPROP_IConnectionPointContainer`|永遠|  
+|`DBPROP_NOTIFICATIONGRANULARITY`|永遠|  
+|`DBPROP_NOTIFICATIONPHASES`|永遠|  
+|`DBPROP_NOTIFYCOLUMNSET`|`IRowsetChange`|  
+|`DBPROP_NOTIFYROWDELETE`|`IRowsetChange`|  
+|`DBPROP_NOTIFYROWINSERT`|`IRowsetChange`|  
+|`DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE`|永遠|  
+|`DBPROP_NOTIFYROWFIRSTCHANGE`|`IRowsetUpdate`|  
+|`DBPROP_NOTIFYROWSETRELEASE`|永遠|  
+|`DBPROP_NOTIFYROWUNDOCHANGE`|`IRowsetUpdate`|  
+|`DBPROP_NOTIFYROWUNDODELETE`|`IRowsetUpdate`|  
+|`DBPROP_NOTIFYROWUNDOINSERT`|`IRowsetUpdate`|  
+|`DBPROP_NOTIFYROWUPDATE`|`IRowsetUpdate`|  
   
- 大部分的通知的實作已內嵌於 OLE DB 提供者樣板。 如果您需要新增`IRowsetNotifyCP`至您的繼承鏈結，編譯器會移除所有的程式碼編譯資料流，而讓程式碼大小較小。  
+ 通知的實作大多已內嵌在 OLE DB 提供者樣板。 如果您沒有加入`IRowsetNotifyCP`到您的繼承鏈結，編譯器會移除所有程式碼從編譯資料流，因而讓您的程式碼大小較小。  
   
 ## <a name="see-also"></a>另請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

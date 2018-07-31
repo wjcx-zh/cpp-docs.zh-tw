@@ -1,5 +1,5 @@
 ---
-title: 往返簡單資料列集 |Microsoft 文件
+title: 往返簡單資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102947"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336650"
 ---
 # <a name="traversing-a-simple-rowset"></a>往返簡單資料列集
-下列範例顯示不包含命令的快速簡便的資料庫存取。 下列的消費者程式碼，在 ATL 專案中，從名為的資料表擷取記錄*演出者*在 Microsoft Access 資料庫中使用 Microsoft OLE DB Provider for ODBC。 程式碼會建立[CTable](../../data/oledb/ctable-class.md)資料表物件的存取子，根據使用者資料錄類別`CArtists`。 它會開啟連接、 開啟連線時，工作階段並開啟工作階段上的資料表。  
+下列範例顯示不包含命令的快速簡便的資料庫存取。 下列的取用者程式碼，在 ATL 專案中，從呼叫資料表擷取資料錄*演出者*在 Microsoft Access 資料庫中使用 Microsoft OLE DB Provider for ODBC。 程式碼會建立[CTable](../../data/oledb/ctable-class.md)存取子使用的資料表物件會根據使用者記錄類別`CArtists`。 它會開啟連接、 開啟連線時，工作階段並開啟工作階段上的資料表。  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -55,7 +55,7 @@ while (artists.MoveNext() == S_OK)
   
  使用者資料錄`CArtists`，看起來像這樣：  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

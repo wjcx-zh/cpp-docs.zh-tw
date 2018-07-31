@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd3281aa21cfd20caa902572e9ad39e16a18e6f6
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: e2212a10269b852d0df6f10a87e08370c1d27cf8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269822"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340621"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl 類別
 提供實作`IOpenRowset`介面。  
@@ -67,8 +67,7 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    DBID* pTableID,  
    DBID* pIndexID,  

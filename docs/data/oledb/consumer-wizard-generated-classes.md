@@ -1,5 +1,5 @@
 ---
-title: 消費者精靈產生的類別 |Microsoft 文件
+title: 消費者精靈產生的類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091981"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338735"
 ---
 # <a name="consumer-wizard-generated-classes"></a>消費者精靈產生的類別
 當您使用 [ATL OLE DB 消費者精靈] 產生消費者時，您可以選擇使用 OLE DB 樣板或 OLE DB 屬性。 在這兩種情況下，精靈都會產生一個命令類別和一個使用者記錄類別。 命令類別包含程式碼，可以開啟資料來源和您在精靈中指定的資料列集。 使用者記錄類別包含您所選取之資料庫資料表的資料行對應。 不過，所產生的程式碼在每個案例中會有所不同：  
@@ -47,9 +47,9 @@ ms.locfileid: "33091981"
 >  如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
   
 > [!NOTE]
->  [ATL OLE DB 消費者精靈] 使用 **DB_NUMERIC** 類型來繫結數值資料類型。 它先前使用 **DBTYPE_VARNUMERIC** ( **DB_VARNUMERIC** 類型所述的格式；請參閱 Oledb.h)。 如果您不使用精靈來建立消費者，建議您使用 **DB_NUMERIC**。  
+>  [ATL OLE DB 消費者精靈] 會使用`DB_NUMERIC`來繫結數值資料類型的類型。 它先前使用`DBTYPE_VARNUMERIC`(所述的格式是`DB_VARNUMERIC`類型; 請參閱 Oledb.h)。 如果您不使用精靈來建立消費者，建議您改用`DB_NUMERIC`。  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>資料列集屬性  
  接下來，精靈會設定資料列集屬性。 如果您在 [ATL OLE DB 消費者精靈] 中選取了 [變更] 、[插入] 或 [刪除]  ，在這裡會設定適當的屬性 (一律會設定 DBPROP_IRowsetChange，然後分別為 DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT 和/或 DBPROPVAL_UP_DELETE 的其中一或多個)。  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>命令或資料表類別  
  如果您指定命令類別，精靈會宣告命令類別。對於樣板化程式碼，命令看起來如下：  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>類別宣告  
  最後，精靈會產生命令類別宣告，如下所示：  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  在下列範例中，精靈會產生類別 `COrders`的宣告，但因為屬性將其插入，所以不會出現使用者記錄類別 `COrdersAccessor` 。  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

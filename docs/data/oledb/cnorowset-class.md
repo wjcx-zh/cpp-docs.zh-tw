@@ -1,5 +1,5 @@
 ---
-title: CNoRowset 類別 |Microsoft 文件
+title: CNoRowset 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87d005dc19ef286bc4b0da927ecabcd90e6f0235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098156"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339558"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 類別
-可用來當做範本引數 (`TRowset`) 的[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md)。  
+可用來當做樣板引數 (`TRowset`) 的[CCommand](../../data/oledb/ccommand-class.md)或是[CTable](../../data/oledb/ctable-class.md)。  
   
 ## <a name="syntax"></a>語法
 
@@ -38,28 +38,28 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset  
 ```  
   
-#### <a name="parameters"></a>參數  
- `TAccessor`  
- 存取子類別。 預設值為 `CAccessorBase`。  
+### <a name="parameters"></a>參數  
+ *TAccessor*  
+ 存取子類別。 預設為 `CAccessorBase`。  
   
 ## <a name="remarks"></a>備註  
- 使用`CNoRowset`作為範本引數，如果命令未傳回資料列集。  
+ 使用`CNoRowset`做為範本引數，如果命令未傳回資料列集。  
   
- `CNoRowset` 會實作下列的虛設常式方法，其中每一個都對應至其他存取子類別的方法：  
+ `CNoRowset` 會實作下列的虛設常式方法，其中每一個對應到其他存取子類別的方法：  
   
--   **BindFinished** -表示當繫結完成時 (傳回`S_OK`)。  
+-   `BindFinished` -代表當繫結完成時 (傳回`S_OK`)。  
   
--   **關閉**-釋放資料列和目前的 IRowset 介面。  
+-   `Close` -釋放資料列和目前的 IRowset 介面。  
   
 -   `GetIID` -擷取連接點的介面 ID。  
   
--   **GetInterface** -擷取介面。  
+-   `GetInterface` -擷取介面。  
   
 -   `GetInterfacePtr` -擷取封裝的介面指標。  
   
--   **SetAccessor** -設定存取子的指標。  
+-   `SetAccessor` -設定存取子的指標。  
   
--   **SetupOptionalRowsetInterfaces** -設定選擇性的資料列集介面。  
+-   `SetupOptionalRowsetInterfaces` -設定的資料列集的選擇性介面。  
   
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  

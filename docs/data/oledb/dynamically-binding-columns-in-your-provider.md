@@ -1,5 +1,5 @@
 ---
-title: 您的提供者內動態繫結資料行 |Microsoft 文件
+title: 您的提供者內動態繫結資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 566a7248fabc1fcdb66224ccbc302e3f8038c5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101688"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336686"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
-請確定您真正需要的是動態的資料行繫結。 因為您可能需要它：  
+請確定您真的需要動態的資料行繫結。 因為您可能需要它：  
   
--   您的資料列集資料行不是在編譯時期定義。  
+-   您的資料列集資料行不會在編譯時期定義。  
   
--   您支援書籤等項目可加入資料行。  
+-   您支援的書籤等的項目，將資料行。  
   
 ### <a name="to-implement-dynamic-column-binding"></a>若要實作動態資料行繫結  
   
-1.  移除任何**PROVIDER_COLUMN_MAP**從您的程式碼。  
+1.  移除任何`PROVIDER_COLUMN_MAP`從您的程式碼。  
   
-2.  在使用者記錄 （結構） 中，加入下列宣告：  
+2.  在使用者記錄 （您的結構） 中，加入下列宣告：  
   
-    ```  
+    ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33101688"
   
      下列範例所示`GetColumnInfo`函式。  
   
-    ```  
+    ```cpp  
     // Check the property flag for bookmarks, if it is set, set the zero  
     // ordinal entry in the column map with the bookmark information.  
     CAgentRowset* pRowset = (CAgentRowset*) pThis;  

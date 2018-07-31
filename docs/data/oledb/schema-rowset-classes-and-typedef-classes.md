@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250650"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338294"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>結構描述資料列集類別和 Typedef 類別
 結構描述是資料庫物件所擁有，或由特定使用者已建立的集合。 目錄可以包含一或多個結構描述，但必須永遠包含稱為 INFORMATION_SCHEMA，其中包含檢視表和網域資訊結構描述的結構描述。 OLE DB 中的結構描述資訊使用預先定義的結構描述資料列集擷取，並包含型別、 資料表、 資料行、 索引、 檢視、 判斷提示和條件約束、 統計資料、 字元集，定序和網域。  

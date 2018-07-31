@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cc48b48c6d95cc07314030d6c7954898758e178
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 51593d14967e2814d69cb0a912d937b689dc3632
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269423"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337111"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
 提供的實作`IDBProperties`介面。  
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetProperties)(ULONG cPropertySets,   
+STDMETHOD(GetProperties)(ULONG cPropertySets,   
    const DBPROPIDSET rgPropertySets[],   
    ULONG * pcProperties,   
    DBPROPSET ** prgProperties);  
@@ -104,7 +104,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,   
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,   
    const DBPROPIDSET rgPropertySets[],   
    ULONG * pcPropertyInfoSets,   
    DBPROPINFOSET ** prgPropertyInfoSets,   
@@ -130,7 +130,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+STDMETHOD(SetProperties)(ULONG cPropertySets,   
    DBPROPSET rgPropertySets[]);  
 ```  
   

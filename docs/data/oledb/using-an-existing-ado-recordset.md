@@ -1,5 +1,5 @@
 ---
-title: 使用現有的 ADO 資料錄集 |Microsoft 文件
+title: 使用現有的 ADO 資料錄集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c74ec0d17c296707334930736d0cf237ecfe7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103560"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338934"
 ---
 # <a name="using-an-existing-ado-recordset"></a>使用現有的 ADO 資料錄集
-混合 OLE DB 消費者樣板和作用中 Data Objects (ADO)，使用 ADO 來開啟資料錄集 （OLE DB 消費者樣板中的資料列集對應）。 當您有一個資料錄集時，執行下列命令來連接到 OLE DB 資料列集：  
+若要混合使用 OLE DB 消費者範本和 Active Data Objects (ADO)、 使用 ADO 開啟資料錄集 （相當於 OLE DB 消費者樣板中的資料列集）。 當您有一個資料錄集時，執行下列命令來連接到 OLE DB 資料列集：  
   
-1.  呼叫`QueryInterface`如`IRowset`和`IAccessor`指標。  
+1.  呼叫`QueryInterface`for`IRowset`和`IAccessor`指標。  
   
-    ```  
+    ```cpp  
     IRowset* lpRowset = NULL;  
     IAccessor* lpAccessor = NULL;  
     lpUnk->QueryInterface(IID_IRowset, (void**)&lpRowset);  
@@ -37,11 +37,11 @@ ms.locfileid: "33103560"
     ```  
   
     > [!NOTE]
-    >  *lpUnk*指向**IUnknown** ADO 資料錄集的物件。  
+    >  *lpUnk*指向`IUnknown`ADO 資料錄集物件。  
   
-2.  附加至其適當的 OLE DB 消費者樣板類別的存取子和資料列集。  
+2.  附加至其適當的 OLE DB 消費者範本類別的存取子和資料列集。  
   
-    ```  
+    ```cpp  
     CRowset rs;  
     CAccessor accessor;  
   

@@ -1,5 +1,5 @@
 ---
-title: 發出參數型的查詢 |Microsoft 文件
+title: 發出參數型的查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104571"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339532"
 ---
 # <a name="issuing-a-parameterized-query"></a>發出參數型查詢
-下列範例會發出簡單參數化的查詢，以便從 Microsoft Access 資料庫中的資料表擷取時間欄位 （亦即超過 30） 的記錄。 若要支援此參數，使用者資料錄必須擁有其他的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而不是`CTable`中前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。  
+下列範例會發出簡單參數化的查詢來擷取從 Microsoft Access 資料庫中的資料表的時間欄位 （也就是大於 30） 的記錄。 若要支援此參數，使用者資料錄必須額外的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而非`CTable`在前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,7 +53,7 @@ while (artists.MoveNext() == S_OK)
   
  使用者資料錄`CArtists`，看起來像這樣：  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

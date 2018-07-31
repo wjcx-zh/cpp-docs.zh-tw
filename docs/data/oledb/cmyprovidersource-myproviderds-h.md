@@ -1,5 +1,5 @@
 ---
-title: CMyProviderSource (MyProviderDS.H) |Microsoft 文件
+title: CMyProviderSource (MyProviderDS.H) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f141ad7565a78ff4e7a02b3847287879b81ccd6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 848f940c9aa974c838a4600235ab97d099bcbd06
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098650"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340146"
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
-提供者類別使用多重繼承。 下列程式碼顯示資料來源物件的繼承鏈結：  
+提供者類別會使用多重繼承。 下列程式碼顯示資料來源物件的繼承鏈結：  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
@@ -42,12 +42,12 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- 所有 COM 元件會都衍生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供的所有實作**IUnknown**介面。 它可以處理任何執行緒模型。 `CComCoClass` 處理所需的任何錯誤支援。 如果您想要更豐富的錯誤資訊傳送給用戶端，您可以使用某些錯誤應用程式開發介面中`CComCoClass`。  
+ 所有 COM 元件會都衍生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供所有實作`IUnknown`介面。 它可以處理任何執行緒模型。 `CComCoClass` 處理所需的任何錯誤支援。 如果您想要更豐富的錯誤資訊傳送給用戶端，您可以使用一些錯誤 Api 中`CComCoClass`。  
   
- 資料來源物件也會從數個 'Impl' 類別繼承。 每個類別會提供介面的實作。 資料來源物件實作`IPersist`， `IDBProperties`， **IDBInitialize**，和**IDBCreateSession**介面。 每個介面會實作所需 OLE db 資料來源物件。 您可以選擇支援或不支援繼承，或不繼承自其中一個 'Impl' 類別的特定功能。 如果您想要支援**IDBDataSourceAdmin**介面，繼承自**IDBDataSourceAdminImpl**類別，以取得所需的功能。  
+ 資料來源物件也會繼承來自數個 'Impl' 類別。 每個類別會提供介面的實作。 資料來源物件實作`IPersist`， `IDBProperties`， `IDBInitialize`，和`IDBCreateSession`介面。 每個介面會實作所需 OLE db 資料來源物件。 您可以選擇支援或不支援繼承或不繼承自其中一個 'Impl' 類別的特定功能。 如果您想要支援`IDBDataSourceAdmin`介面，繼承自`IDBDataSourceAdminImpl`類別，以取得所需的功能。  
   
 ## <a name="com-map"></a>COM 對應  
- 每當用戶端呼叫`QueryInterface`對於資料來源上的介面，它將經歷下列 COM 對應：  
+ 每當用戶端呼叫`QueryInterface`對於資料來源上的介面，它會經歷下列 COM 對應：  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -59,7 +59,7 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- 來自 ATL COM_INTERFACE_ENTRY 巨集，並告知的實作`QueryInterface`中`CComObjectRootEx`傳回適當的介面。  
+ COM_INTERFACE_ENTRY 巨集是從 ATL，並表達的實作`QueryInterface`在`CComObjectRootEx`傳回適當的介面。  
   
 ## <a name="property-map"></a>屬性對應  
  屬性對應會指定提供者所指定的所有屬性：  
@@ -132,11 +132,11 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- OLE DB 中的屬性分組。 資料來源物件具有兩個群組的內容： 一個用於**DBPROPSET_DATASOURCEINFO**集，另一個用於**DBPROPSET_DBINIT**設定。 **DBPROPSET_DATASOURCEINFO**集對應至提供者和其資料來源相關的屬性。 **DBPROPSET_DBINIT**集對應於用在初始化屬性。 OLE DB 提供者樣板處理 PROPERTY_SET 巨集的這些設定。 巨集建立區塊，其中包含屬性的陣列。 每當用戶端呼叫`IDBProperties`介面，提供者使用的屬性對應。  
+ OLE DB 中的屬性分組。 資料來源物件具有兩個群組的屬性： 一個用於 DBPROPSET_DATASOURCEINFO 設定，另一個用於 DBPROPSET_DBINIT 設定。 DBPROPSET_DATASOURCEINFO 集對應至提供者和其資料來源相關的屬性。 DBPROPSET_DBINIT 集對應至在初始化時使用的屬性。 OLE DB 提供者範本處理這些 PROPERTY_SET 巨集的集合。 巨集來建立包含的屬性陣列的區塊。 每當用戶端呼叫`IDBProperties`介面，提供者使用的屬性對應。  
   
- 您不需要實作規格中的每個屬性。 不過，您必須支援所需的屬性。如需詳細資訊層級 0 一致性規格，請參閱。 如果您不想要支援的屬性，您可以在對應中移除它。 如果您想要支援的屬性，將它加入到對應使用 PROPERTY_INFO_ENTRY 巨集。 巨集對應於**UPROPINFO**結構中的下列程式碼所示：  
+ 您不需要實作規格中的每個屬性。 不過，您必須支援所需的屬性;如需詳細資訊層級 0 一致性規格，請參閱。 如果您不想要支援的屬性，您可以從對應移除它。 如果您想要支援的屬性，將它加入至地圖使用 PROPERTY_INFO_ENTRY 巨集。 巨集對應於`UPROPINFO`結構，如下列程式碼所示：  
   
-```  
+```cpp  
 struct UPROPINFO  
 {  
    DBPROPID    dwPropId;  
@@ -152,18 +152,18 @@ struct UPROPINFO
 };  
 ```  
   
- 在結構中的每個項目代表可處理屬性的資訊。 它包含**DBPROPID**判斷 GUID 和 ID 的屬性。 它也包含項目，以判斷型別和屬性的值。  
+ 在結構中的每個項目表示處理屬性的資訊。 它包含`DBPROPID`判斷 GUID 和 ID 的屬性。 它也會包含項目，以判斷型別和屬性的值。  
   
- 如果您想要變更預設值的屬性 （請注意，取用者可以隨時變更可寫入屬性的值），您可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 巨集。 這些巨集可讓您指定的對應屬性的值。 PROPERTY_INFO_ENTRY_VALUE 巨集是速記標記法，可讓您變更的值。 PROPERTY_INFO_ENTRY_VALUE 巨集呼叫 PROPERTY_INFO_ENTRY_EX 巨集。 這個巨集可讓您新增或變更中屬性的所有**UPROPINFO**結構。  
+ 如果您想要變更預設屬性的值 （請注意，取用者可以隨時變更可寫入屬性的值），您可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 巨集。 這些巨集可讓您指定的對應屬性的值。 PROPERTY_INFO_ENTRY_VALUE 巨集是縮寫標記法，可讓您變更的值。 PROPERTY_INFO_ENTRY_VALUE 巨集呼叫 PROPERTY_INFO_ENTRY_EX 巨集。 這個巨集可讓您新增或變更中屬性的所有`UPROPINFO`結構。  
   
- 如果您想要定義您自己的屬性集，您可以加入一個藉額外的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 組合。 您要定義的屬性集 GUID，然後定義您自己的屬性。 如果您有提供者特有的屬性，請將其加入到新的屬性，而不是使用現有設定。 這可避免更新版本的 OLE DB 中的問題。  
+ 如果您想要定義您自己的屬性集，您可以加入一個藉由其他的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 組合。 您需要定義的屬性集 GUID，然後定義您自己的屬性。 如果您有提供者特有的屬性，請將它們加入新的屬性，而不是使用現有設定。 這可避免更新版本的 OLE DB 中的問題。  
   
 ## <a name="user-defined-property-sets"></a>使用者定義的屬性集  
- Visual c + + 支援使用者定義的屬性集。 您沒有覆寫**GetProperties**或`GetPropertyInfo`。 相反地，範本會偵測到任何使用者定義的屬性集，並將它加入至適當的物件。  
+ Visual c + + 支援使用者定義的屬性集。 您沒有覆寫`GetProperties`或`GetPropertyInfo`。 相反地，範本會偵測到任何使用者定義的屬性集，並將它新增至適當的物件。  
   
- 如果您有一個需要使用在初始化階段的使用者定義的屬性集 (亦即，取用者呼叫之前**idbinitialize:: Initialize**)，您可以使用來指定這**UPROPSET_USERINIT**搭配 BEGIN_PROPERTY_SET_EX 巨集的旗標。 此工作 （如有需要的 OLE DB 規格） 的資料來源物件必須是屬性集。 例如:   
+ 如果您有必須可在初始化階段的使用者定義的屬性集 (亦即，取用者呼叫之前`IDBInitialize::Initialize`)，您可以指定此 BEGIN_PROPERTY_SET_EX 巨集搭配使用 UPROPSET_USERINIT 旗標。 此工作 （如 OLE DB 規格需要） 的資料來源物件必須是屬性集。 例如:   
   
-```  
+```cpp  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
    PROPERTY_INFO_ENTRY(DBPROP_MYPROP)  
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)  

@@ -1,5 +1,5 @@
 ---
-title: CDynamicStringAccessorA 類別 |Microsoft 文件
+title: CDynamicStringAccessorA 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096479"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341019"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA 類別
-可讓您存取資料來源，當您在不知道資料庫結構描述 （基礎結構）。  
+可讓您存取資料來源，當您有不了解資料庫結構描述 （基礎結構）。  
   
 ## <a name="syntax"></a>語法
 
@@ -34,16 +34,16 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```  
   
 ## <a name="remarks"></a>備註  
- 它們都要求提供者擷取從資料存放區做為字串資料存取的所有資料，但`CDynamicStringAccessor`要求 ANSI 字串資料。  
+ 兩者都要求提供者擷取所有的資料存取資料存放區做為字串資料，但`CDynamicStringAccessor`要求 ANSI 字串資料。  
   
- `CDynamicStringAccessorA` 繼承**GetString**和`SetString`從`CDynamicStringAccessor`。 當您使用這些方法進行`CDynamicStringAccessorA`物件***BaseType***是**CHAR**。  
+ `CDynamicStringAccessorA` 繼承`GetString`並`SetString`從`CDynamicStringAccessor`。 當您使用中的這些方法時`CDynamicStringAccessorA`物件， ***BaseType***是**CHAR**。  
   
 ## <a name="requirements"></a>需求  
  **標頭檔**：atldbcli.h  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 類別](../../data/oledb/caccessor-class.md)   
  [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)   

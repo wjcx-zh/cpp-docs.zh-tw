@@ -37,12 +37,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ccf4d6b34362d4c8b7875319af444f755d741e7
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322032"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337069"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 提供實作[IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx)介面。  
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
+STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,  
    const DBPROPIDSET rgPropertyIDSets[],  
    ULONG* pcPropertySets,  
    DBPROPSET** prgPropertySets);  
@@ -100,7 +100,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
+STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,  
    REFIID riid,  
    IUnknown** ppReferencedRowset);  
 ```  
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (GetSpecification )(REFIID riid,  
+STDMETHOD (GetSpecification )(REFIID riid,  
    IUnknown** ppSpecification);  
 ```  
   

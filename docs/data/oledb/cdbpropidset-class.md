@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5e77b92822ac82a4fbea06fe354952c9dbd79378
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207581"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336936"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 繼承自`DBPROPIDSET`結構，並新增初始化索引鍵欄位的建構函式，以及[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)存取方法。  
@@ -88,7 +88,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      bool AddPropertyID(DBPROPID propid) throw();  
+bool AddPropertyID(DBPROPID propid) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -101,7 +101,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CDBPropIDSet(const GUID& guid);  
+CDBPropIDSet(const GUID& guid);  
 
 CDBPropIDSet(const CDBPropIDSet& propidset);  
 
@@ -121,7 +121,7 @@ CDBPropIDSet();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -137,7 +137,7 @@ CDBPropIDSet();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
+CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

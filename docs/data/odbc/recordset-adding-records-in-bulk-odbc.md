@@ -1,5 +1,5 @@
 ---
-title: 資料錄集： 加入大量 (ODBC) |Microsoft 文件
+title: 資料錄集： 加入大量 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089281"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337225"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>資料錄集：加入大量資料錄 (ODBC)
 本主題適用於 MFC ODBC 類別。  
   
- MFC [CRecordset](../../mfc/reference/crecordset-class.md)類別具有的全新最佳化功能，當您新增新記錄大量資料表，因此可以提升效率。  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md)類別有一個新的最佳化，可改善效率，當您要大量新增新記錄資料表。  
   
 > [!NOTE]
->  本主題適用於衍生自物件`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  本主題適用於物件衍生自`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 這個新選項**dwOptions**參數[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)成員函式， **optimizeBulkAdd**，可改善效能，當您新增多筆記錄連續而不需呼叫**Requery**或**關閉**。 只會在第一個已變更的欄位**更新**呼叫都標示為中途的後續`AddNew` /**更新**呼叫。  
+ 新的選項，如*dwOptions*參數來[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)成員函式， `optimizeBulkAdd`，可以改善效能，當您要連續新增多筆記錄，而不需要呼叫`Requery`或`Close`。 只有在有錯誤之前，先的欄位`Update`呼叫會標示為已變更後續`AddNew` / `Update`呼叫。  
   
- 如果您使用資料庫類別若要善用 **:: SQLSetPos** ODBC API 函式加入、 編輯和刪除資料錄，此最佳化是不必要的。  
+ 如果您使用資料庫類別以善用`::SQLSetPos`ODBC API 函式加入、 編輯和刪除記錄，此最佳化是不必要。  
   
- 如果載入 ODBC 資料指標程式庫或 ODBC 驅動程式不支援新增、 編輯和刪除透過 **:: SQLSetPos**，此最佳化改善大量增加效能。 若要開啟此最佳化，將**dwOptions**中的參數**開啟**呼叫下資料錄集：  
+ 如果載入 ODBC 資料指標程式庫或 ODBC 驅動程式不支援加入、 編輯和刪除透過`::SQLSetPos`，此最佳化會改善大量加入的效能。 若要開啟此最佳化，請設定*dwOptions*中的參數`Open`呼叫下列資料錄集：  
   
 ```  
 appendOnly | optimizeBulkAdd  

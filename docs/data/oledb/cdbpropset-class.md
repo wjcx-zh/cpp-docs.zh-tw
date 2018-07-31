@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207834"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337593"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 繼承自`DBPROPSET`結構，並新增初始化索引鍵欄位的建構函式以及`AddProperty`存取方法。  
@@ -136,7 +136,7 @@ bool AddProperty(DWORD dwPropertyID,
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);  
 
 CDBPropSet(const CDBPropSet& propset);  
 
@@ -156,7 +156,7 @@ CDBPropSet();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -172,7 +172,7 @@ CDBPropSet();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+CDBPropSet& operator =(CDBPropSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

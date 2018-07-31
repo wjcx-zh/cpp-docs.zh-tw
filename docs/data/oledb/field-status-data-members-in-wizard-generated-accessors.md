@@ -1,5 +1,5 @@
 ---
-title: 欄位狀態資料成員，在精靈產生的存取子中 |Microsoft 文件
+title: 欄位狀態資料成員，在精靈產生存取子中的 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f1017c3decacfee223f0e0f89267b192208fe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104395"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336436"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
-當您使用 ATL OLE DB 消費者精靈 建立消費者時，精靈會在您指定資料行對應中每個欄位的使用者記錄類別中產生的資料成員。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。  
+當您使用 [ATL OLE DB 消費者精靈] 建立消費者時，精靈會在您指定資料行對應中的每個欄位的使用者記錄類別中產生資料成員。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。  
   
- 例如，對於資料成員*m_OwnerID*，精靈會產生額外的資料成員的欄位狀態 (*dwOwnerIDStatus*) 和另一種用於欄位長度 (*dwOwnerIDLength*). 它也會產生一個資料行對應，包含`COLUMN_ENTRY_LENGTH_STATUS`項目。  
+ 例如，對於資料成員*m_OwnerID*，精靈會產生額外的資料成員的欄位狀態 (*dwOwnerIDStatus*)，另一個則欄位長度 (*dwOwnerIDLength*). 它也會產生資料行對應與 COLUMN_ENTRY_LENGTH_STATUS 項。  
   
- 下列程式碼所示：  
+ 這是由下列程式碼所示：  
   
-```  
+```cpp  
 [db_source("insert connection string")]  
 [db_command(" \  
    SELECT \  
@@ -81,22 +81,22 @@ END_COLUMN_MAP()
 > [!NOTE]
 >  如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
   
- 您可以使用 status 值以進行偵錯。 如果 ATL OLE DB 消費者精靈產生的程式碼會產生編譯錯誤例如**DB_S_ERRORSOCCURRED**或**DB_E_ERRORSOCCURRED**，您應該先查看目前的值的欄位狀態資料成員。 具有非零值會對應至衝突的資料行。  
+ 您可以使用 [狀態] 值，以進行偵錯。 如果 ATL OLE DB 消費者精靈產生的程式碼會產生編譯錯誤，例如 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，您應該先查看欄位狀態資料成員的目前值。 具有非零的值會對應至衝突的資料行。  
   
- 您也可以使用 status 值來設定特定欄位的 NULL 值。 這樣可協助您在您要區分欄位值為 NULL，而不是零的情況下。 這是由您決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義**DBSTATUS_S_ISNULL**指定泛型的 NULL 值的正確方法。 如果取用者讀取資料，而且值為 null，則 [狀態] 欄位會設定為**DBSTATUS_S_ISNULL**。 如果取用者想要將 NULL 值，取用者會將狀態的值設定為**DBSTATUS_S_ISNULL**之前呼叫提供者。  
+ 您也可以使用 [狀態] 值來設定特定欄位的 NULL 值。 這樣可協助您的情況下您想用來區別欄位值為 NULL，而不是零。 它是您必須決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義為 DBSTATUS_S_ISNULL 指定泛用的 NULL 值的正確方法。 如果取用者讀取資料，此值為 null，會將 [狀態] 欄位設為 DBSTATUS_S_ISNULL。 如果取用者想要設定為 NULL 值，取用者狀態值設定為 DBSTATUS_S_ISNULL 之前呼叫提供者。  
   
- 接下來，開啟 Oledb.h 並搜尋**DBSTATUSENUM**。 您可以再比對針對狀態則為非零的數值**DBSTATUSENUM**列舉值。 如果列舉型別名稱不足夠，告訴您是有什麼問題，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的相關資訊，請參閱 「 長度 」 主題，在相同的區段。  
+ 接下來，開啟 Oledb.h 並搜尋`DBSTATUSENUM`。 您可以接著比對的非零值的狀態，針對數值`DBSTATUSENUM`列舉值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱 「 長度 」 主題中的相同區段。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取的長度或資料行的狀態  
- 您可以擷取可變長度資料行的長度或資料行的狀態 (檢查**DBSTATUS_S_ISNULL**，例如):  
+ 您可以擷取可變長度資料行的長度或資料行 （例如檢查 DBSTATUS_S_ISNULL，） 的狀態：  
   
--   若要取得長度，請使用`COLUMN_ENTRY_LENGTH`巨集。  
+-   若要取得長度，請使用 COLUMN_ENTRY_LENGTH 巨集。  
   
--   若要取得的狀態，請使用`COLUMN_ENTRY_STATUS`巨集。  
+-   若要取得狀態，請使用 COLUMN_ENTRY_STATUS 巨集。  
   
--   若要取得這兩種情況，請使用`COLUMN_ENTRY_LENGTH_STATUS`，如下所示。  
+-   若要取得這兩個，請使用 COLUMN_ENTRY_LENGTH_STATUS，，如下所示。  
   
-```  
+```cpp  
 class CProducts  
 {  
 public:  
@@ -123,7 +123,7 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- 當您使用`CDynamicAccessor`，長度和狀態會為您會自動繫結。 若要擷取的長度和狀態的值，請使用`GetLength`和**GetStatus**成員函式。  
+ 當您使用`CDynamicAccessor`，長度和狀態會為您會自動繫結。 若要擷取的長度和狀態的值，請使用`GetLength`和`GetStatus`成員函式。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

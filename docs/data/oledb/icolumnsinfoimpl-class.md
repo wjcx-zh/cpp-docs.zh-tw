@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1aa70a8efea82660632cf0219c76009eea44f606
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269809"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337238"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 類別
 提供實作[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)介面。  
@@ -82,7 +82,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
+STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
    DBCOLUMNINFO** prgInfo,  
    OLECHAR** ppStringsBuffer);  
 ```  
@@ -96,7 +96,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
+STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
    const DBID rgColumnIDs[],  
    DBORDINAL rgColumns[]);  
 ```  

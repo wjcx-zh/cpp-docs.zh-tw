@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b0cf71ce31d9f4d96d2064ebafd28b7ea5ff70d
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: f94e1100398b3f338fdc34839aee9a1e8f67871c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233448"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338372"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 類別
 代表設計供進階使用存取子類型。  
@@ -188,7 +188,7 @@ HRESULT CreateAccessor(int nBindEntries,
   
 ```cpp
 HRESULT CreateParameterAccessor(int nBindEntries,   
-  void* pBuffer,   
+   void* pBuffer,   
    DBLENGTH nBufferSize) throw();  
 ```  
   

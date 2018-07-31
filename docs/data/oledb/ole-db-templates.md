@@ -1,5 +1,5 @@
 ---
-title: OLE DB 樣板 |Microsoft 文件
+title: OLE DB 樣板 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33109569"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339431"
 ---
 # <a name="ole-db-templates"></a>OLE DB 樣板
-OLE DB 範本可讓 OLE DB 資料存取更為容易。 Visual c + + 提供的範本類別，其中實作許多常用的 OLE DB 介面。 您可以使用 Visual c + + 取用者範本撰寫 OLE DB 用戶端 （消費者） 應用程式，以及提供者範本撰寫應用程式伺服器 （提供者）。  
+OLE DB 範本可讓 OLE DB 資料存取更為容易。 Visual c + + 提供實作許多常用的 OLE DB 介面的範本類別。 您可以使用 Visual c + + 取用者範本撰寫 OLE DB 用戶端 （消費者） 應用程式和提供者範本撰寫伺服器 （提供者） 應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-reference.md)  
- 提供使用方式所列出的 OLE DB 消費者樣板類別的連結。  
+ 提供的連結，依照使用量排列的 OLE DB 消費者範本類別。  
   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-reference.md)  
- 提供的連結，列出所使用的 OLE DB 提供者範本類別。  
+ 提供的連結，依照使用量排列的 OLE DB 提供者範本類別。  
   
 ## <a name="related-sections"></a>相關章節  
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)  
- 說明 OLE DB 是什麼，並討論在 OLE DB 通用資料存取。  
+ 說明 OLE DB 的功能，並討論 OLE DB 中的通用資料存取。  
   
- [OLE DB 程式設計人員參考](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- 提供 OLE DB 的 Windows SDK 文件的連結。  
+ [OLE DB 程式設計人員參考](https://msdn.microsoft.com/library/ms713643.aspx)  
+ OLE DB 提供的 Windows SDK 文件的連結。  
   
  [OLE DB 範本範例](../../visual-cpp-samples.md)  
- 提供 OLE DB 範本範例，示範如何在您的專案中使用 OLE DB 的連結。  
+ 提供 OLE DB 範本範例，示範如何在專案中使用 OLE DB 的連結。  
   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- 關於 OLE DB 消費者樣板討論概念性資料。  
+ 關於 OLE DB 消費者樣板討論概念性的內容。  
   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)  
- 關於 OLE DB 提供者樣板討論概念性資料。  
+ 關於 OLE DB 提供者樣板討論概念性的內容。  
   
  [建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer.md)  
- 描述如何建立 OLE DB 樣板取用者，不論有無 ATL OLE DB 消費者精靈。  
+ 描述如何建立 OLE DB 範本取用者，不論有 [ATL OLE DB 消費者精靈]。  
   
  [建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)  
  描述如何建立簡單唯讀提供者讀取一組字串。  

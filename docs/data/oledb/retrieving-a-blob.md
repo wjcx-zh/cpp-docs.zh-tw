@@ -1,5 +1,5 @@
 ---
-title: 擷取 BLOB |Microsoft 文件
+title: 擷取 BLOB |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcd166e205f35133fe2c466175e07ea82970e31f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105201"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339271"
 ---
 # <a name="retrieving-a-blob"></a>擷取 BLOB
-您可以擷取各種二進位大型物件 (BLOB)。 您可以使用**DBTYPE_BYTES**擷取 BLOB 以位元組為單位的序列，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱[BLOB 與 OLE 物件](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程式設計人員參考*。  
+您可以擷取各種方式二進位大型物件 (BLOB)。 您可以使用`DBTYPE_BYTES`擷取成位元組序列的 BLOB，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱 < [BLOB 與 OLE 物件](https://msdn.microsoft.com/library/ms711511.aspx)中*OLE DB 程式設計人員參考*。  
   
- 下列程式碼示範如何擷取 BLOB 使用`ISequentialStream`。 巨集[BLOB_ENTRY](../../data/oledb/blob-entry.md)可讓您指定的介面，而且介面使用的旗標。 開啟資料表之後, 程式碼會呼叫**讀取**重複在`ISequentialStream`從 BLOB 讀取的位元組。 程式碼會呼叫**發行**處置的介面指標，然後再呼叫`MoveNext`取得下一筆記錄。  
+ 下列程式碼示範如何擷取 BLOB 使用`ISequentialStream`。 巨集會[BLOB_ENTRY](../../data/oledb/blob-entry.md)可讓您指定的介面和介面使用的旗標。 開啟資料表之後, 程式碼會呼叫`Read`重複在`ISequentialStream`從 BLOB 讀取位元組。 程式碼會呼叫`Release`來進行處置的介面指標，然後再呼叫`MoveNext`來取得下一筆記錄。  
   
-```  
+```cpp  
 class CCategories  
 {  
 public:  
@@ -57,7 +57,7 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- 處理 BLOB 資料的巨集的詳細資訊，請參閱"資料行對應巨集 」，在[巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
+ 多個處理 BLOB 資料的巨集的詳細資訊，請參閱 「 資料行對應巨集 」，在[巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)   

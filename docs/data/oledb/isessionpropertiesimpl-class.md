@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a3759b67ef5d9ee9832649b3b0d516dbfb04440b
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 5da668814888c11c5aaa0734be5ebc39b943778e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322016"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337251"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 類別
 提供實作[ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx)介面。  
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(GetProperties)(ULONG cPropertyIDSets,   
+STDMETHOD(GetProperties)(ULONG cPropertyIDSets,   
    const DBPROPIDSET rgPropertyIDSets[],   
    ULONG * pcPropertySets,   
    DBPROPSET ** prgPropertySets);  
@@ -87,7 +87,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD(SetProperties)(ULONG cPropertySets,   
+STDMETHOD(SetProperties)(ULONG cPropertySets,   
    DBPROPSET rgPropertySets[]);  
 ```  
   

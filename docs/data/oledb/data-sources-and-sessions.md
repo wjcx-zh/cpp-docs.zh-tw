@@ -1,5 +1,5 @@
 ---
-title: 資料來源和工作階段 |Microsoft 文件
+title: 資料來源和工作階段 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d93f6aba8e9fad27054c731d37e6df28b54eacda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfa91db63aaf0266fa6fef7c0b07210575dc70d8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100001"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339824"
 ---
 # <a name="data-sources-and-sessions"></a>資料來源和工作階段
-下圖顯示連接和存取資料來源支援的類別。 每個類別為基礎的標準 OLE DB 元件實作。  
+下圖顯示連接和存取資料來源所支援的類別。 每個類別根據標準的 OLE DB 元件實作。  
   
  ![資料來源和工作階段類別](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses")  
 資料來源與工作階段類別  
   
- 類別包括：  
+ 這些類別是：  
   
--   [CDataSource](../../data/oledb/cdatasource-class.md)這個類別具現化的資料來源物件，以建立和管理透過 OLE DB 提供者的資料來源的連接。 資料來源取得資訊，例如資料來源地址和驗證資訊的連接字串的形式。  
+-   [CDataSource](../../data/oledb/cdatasource-class.md)這個類別會具現化資料來源物件，以建立和管理透過 OLE DB 提供者的資料來源的連接。 資料來源需要資訊，例如資料來源位址和驗證資訊的連接字串的形式。  
   
-     它也值得注意的是，協助程式類別[CEnumerator](../../data/oledb/cenumerator-class.md)常用來取得一份可用的提供者登錄在系統上建立任何連接之前。 這可讓您選取的提供者做為資料來源。 例如，**資料連結屬性**對話方塊會使用這個類別提供者清單填入上**提供者** 索引標籤。它相當於**SQLBrowseConnect**或**SQLDriverConnect**函式。  
+     另外值得注意的是，協助程式類別[CEnumerator](../../data/oledb/cenumerator-class.md)通常用來取得一份可用的系統上註冊的提供者建立任何連線之前。 這可讓您選取做為資料來源的提供者。 例如，**資料連結屬性** 對話方塊中會使用這個類別上填入 seznam zprostředkovatelů**提供者** 索引標籤。它相當於`SQLBrowseConnect`或`SQLDriverConnect`函式。  
   
--   [CSession](../../data/oledb/csession-class.md)這個類別具現化的工作階段物件，表示單一的存取工作階段資料來源。 不過，您可以在資料來源上建立多個工作階段。 每個工作階段，您可以建立資料來源存取資料的資料列集、 命令及其他物件。 工作階段會處理交易。  
+-   [CSession](../../data/oledb/csession-class.md)這個類別會具現化工作階段物件，代表資料來源的單一存取工作階段。 不過，您可以建立多個工作階段上的資料來源。 每個工作階段，您可以建立從資料來源存取資料的資料列集、 命令和其他物件。 工作階段處理的交易。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

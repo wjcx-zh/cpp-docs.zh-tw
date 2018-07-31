@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 986626fa391971ce342f8d80b9e3e7f8ec979b63
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322172"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338385"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
 實作 OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx)介面，它會從資料列集提取任意的資料列。  
@@ -128,7 +128,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
+STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmark1,  
    const BYTE* pBookmark1,  
    DBBKMARK cbBookmark2,  
@@ -158,7 +158,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
+STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
    HCHAPTER hReserved2,  
    DBBKMARK cbBookmark,  
    const BYTE* pBookmark,  
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const DBBKMARK rgcbBookmarks[],  
    const BYTE* rgpBookmarks,  
@@ -205,7 +205,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
+STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmarks,  
    const DBBKMARK* rgcbBookmarks[],  
    const BYTE* rgpBookmarks[],  
@@ -226,7 +226,6 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
 ```cpp
 CAtlArray<DBROWCOUNT> m_rgBookmarks;  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

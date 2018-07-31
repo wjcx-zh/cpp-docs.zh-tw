@@ -1,5 +1,5 @@
 ---
-title: 異動物件介面 |Microsoft 文件
+title: 異動物件介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 415fdec8397b72bf8f391865fb5af418f95fdf03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104548"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339750"
 ---
 # <a name="transaction-object-interfaces"></a>異動物件介面
-交易物件上的資料來源定義不可部分完成的工作單位，並判斷這些工作單位如何彼此相關。 此物件不直接支援 OLE DB 提供者樣板 （也就是說，您必須建立自己的物件）。  
+交易物件的資料來源上定義不可部分完成的工作單位，並判斷這些工作單位如何互相關聯性。 此物件不直接支援 OLE DB 提供者範本 （也就是您必須建立自己的物件）。  
   
- 下表顯示 OLE DB 為交易物件所定義的強制與選用介面。  
+ 下表顯示由 OLE DB 定義的交易物件的必要和選用的介面。  
   
 |介面|是否為必要項？|實作 OLE DB 範本嗎？|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|強制|否|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|強制|否|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|否|  
+|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|強制|否|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|否|  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

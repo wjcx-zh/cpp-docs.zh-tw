@@ -1,5 +1,5 @@
 ---
-title: 使用 OLE DB 消費者樣板 |Microsoft 文件
+title: 使用 OLE DB 消費者樣板 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108259"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340052"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 消費者樣板
-下列主題提供如何在一般情況下使用 OLE DB 消費者樣板的部分範例：  
+下列主題提供如何在常見的案例中使用 OLE DB 消費者樣板的一些範例：  
   
 -   [以資料庫屬性簡化資料存取](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -58,15 +58,15 @@ ms.locfileid: "33108259"
   
 -   [接收通知](../../data/oledb/receiving-notifications.md)  
   
- 如需建立和實作 OLE DB 消費者的範例，請參閱[建立簡單消費者](../../data/oledb/creating-an-ole-db-consumer.md)。  
+ 如需建立和實作 OLE DB 取用者的範例，請參閱 <<c0> [ 建立簡單消費者](../../data/oledb/creating-an-ole-db-consumer.md)。  
   
- 您也可以找到如何在下列範例中使用 OLE DB 消費者樣板的範例：  
+ 您也可以找到有關如何在下列範例中使用 OLE DB 消費者樣板的範例：  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

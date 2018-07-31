@@ -1,5 +1,5 @@
 ---
-title: 資料錄集： 書籤和絕對位置 (ODBC) |Microsoft 文件
+title: 資料錄集： 書籤和絕對位置 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,34 +32,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84288a5da836661bfda5720872008adf248fb246
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091313"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338323"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>資料錄集：書籤和絕對位置 (ODBC)
 本主題適用於 MFC ODBC 類別。  
   
- 當巡覽資料錄集，您通常需要傳回至特定資料錄的方式。 資料錄的書籤和絕對位置提供兩個這類方法。  
+ 瀏覽時的資料錄集，您通常需要一種將傳回給特定的記錄。 資料錄的書籤和絕對位置提供兩個這類方法。  
   
  本主題說明：  
   
 -   [如何使用書籤](#_core_bookmarks_in_mfc_odbc)。  
   
--   [如何設定為使用絕對位置的目前記錄](#_core_absolute_positions_in_mfc_odbc)。  
+-   [如何設定使用絕對位置的目前記錄](#_core_absolute_positions_in_mfc_odbc)。  
   
 ##  <a name="_core_bookmarks_in_mfc_odbc"></a> MFC ODBC 中的書籤  
- 書籤記錄的唯一識別。 當您巡覽資料錄集時，您不能永遠依賴一筆記錄的絕對位置因為從資料錄集，可以刪除記錄。 可靠的方式來追蹤記錄的位置是使用它的書籤。 類別`CRecordset`提供成員函式：  
+ 書籤可唯一識別一筆記錄。 當您瀏覽資料錄集時，您不能永遠依賴一筆記錄的絕對位置因為可以從資料錄集刪除資料錄。 可靠的方式，來追蹤記錄的位置是使用它的書籤。 類別`CRecordset`提供成員函式：  
   
--   取得目前的記錄上的書籤，以便在變數中儲存 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark))。  
+-   取得目前資料錄，書籤，因此您可以將它儲存在變數 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark))。  
   
--   藉由指定您稍早在變數中儲存的書籤，快速移動到指定的資料錄 ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark))。  
+-   藉由指定您稍早在變數中儲存的書籤，快速地移動到指定的記錄 ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark))。  
   
- 下列範例將說明如何使用這些成員函式標示為目前的記錄，並於稍後返回：  
+ 下列範例說明如何使用這些成員函式標示目前的記錄，並於稍後返回：  
   
-```  
+```cpp  
 // rs is a CRecordset or  
 // CRecordset-derived object  
   
@@ -72,21 +72,21 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );  
 ```  
   
- 您不需要擷取基礎資料類型從[CDBVariant 類別](../../mfc/reference/cdbvariant-class.md)物件。 指派的值與`GetBookmark`並返回與該書籤`SetBookmark`。  
+ 您不需要解壓縮基礎資料類型從[CDBVariant 類別](../../mfc/reference/cdbvariant-class.md)物件。 指派的值與`GetBookmark`，然後返回具有該書籤`SetBookmark`。  
   
 > [!NOTE]
->  根據您的 ODBC 驅動程式和資料錄集類型，可能不支援書籤。 您可以輕易地判斷是否支援書籤，以藉由呼叫[CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)。 此外，如果支援書籤，您必須明確地選擇實作它們藉由指定**CRecordset::useBookmarks**選項[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)成員函式。 您也應該檢查特定資料錄集作業之後的書籤的持續性。 例如，如果您**Requery**資料錄集，書籤可能不再有效。 呼叫[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)來檢查您是否能安全地呼叫`SetBookmark`。  
+>  根據您的 ODBC 驅動程式和資料錄集類型，可能不支援書籤。 您可以輕鬆判斷是否支援書籤，以藉由呼叫[CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)。 此外，如果支援書籤，您必須明確選擇實作它們藉由指定`CRecordset::useBookmarks`選項[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)成員函式。 您也應該檢查書籤之後特定資料錄集作業的持續的性。 例如，如果您`Requery`資料錄集，書籤可能不再有效。 呼叫[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)若要檢查您是否能安全地呼叫`SetBookmark`。  
   
 ##  <a name="_core_absolute_positions_in_mfc_odbc"></a> MFC ODBC 中的絕對位置  
- 書籤，除了類別`CRecordset`可讓您藉由指定的序數位置設定為目前的記錄。 這稱為絕對位置。  
+ 書籤，除了類別`CRecordset`可讓您指定的序數位置來設定目前的記錄。 這稱為絕對位置。  
   
 > [!NOTE]
->  絕對位置並不適用於使用順向資料錄集。 如需順向資料錄集的詳細資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。  
+>  絕對位置不適用於順向資料錄集。 如需有關順向資料錄集的詳細資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。  
   
- 若要移動使用絕對位置目前的記錄指標，呼叫[CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)。 當您將值傳遞至`SetAbsolutePosition`、 對應到序數位置就會成為目前的記錄的記錄。  
+ 若要移動使用絕對位置的目前記錄指標，呼叫[CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)。 當您將值傳遞到`SetAbsolutePosition`、 對應到序數位置就會成為目前的記錄的記錄。  
   
 > [!NOTE]
->  記錄的絕對位置是可能不可靠。 如果使用者刪除資料錄集的資料錄，任何後續的記錄變更的序數位置。 書籤是建議的方法來移動目前的記錄。 如需詳細資訊，請參閱[MFC ODBC 中的書籤](#_core_bookmarks_in_mfc_odbc)。  
+>  一筆記錄的絕對位置是可能不可靠。 如果使用者刪除記錄集的資料錄，任何後續的記錄變更的序數位置。 書籤是移動目前的資料錄的建議的方法。 如需詳細資訊，請參閱 < [MFC ODBC 中的書籤](#_core_bookmarks_in_mfc_odbc)。  
   
  如需有關資料錄集瀏覽的詳細資訊，請參閱[資料錄集： 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。  
   

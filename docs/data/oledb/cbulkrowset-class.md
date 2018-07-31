@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207623"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337718"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 擷取和操作處理大量資料擷取的單一呼叫的多個資料列控制代碼的資料列。  
@@ -166,7 +166,6 @@ class CBulkRowset : public CRowset<TAccessor>
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -179,7 +178,6 @@ HRESULT AddRefRows() throw();
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> Cbulkrowset:: Movefirst
@@ -189,7 +187,6 @@ CBulkRowset();
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -202,7 +199,6 @@ HRESULT MoveFirst() throw();
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -215,7 +211,6 @@ HRESULT MoveLast() throw();
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -228,7 +223,6 @@ HRESULT MoveNext() throw();
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -240,7 +234,7 @@ HRESULT MovePrev() throw();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="syntax"></a>語法  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ### <a name="syntax"></a>語法  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>傳回值  
@@ -300,7 +293,7 @@ HRESULT ReleaseRows() throw();
 ### <a name="syntax"></a>語法  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  

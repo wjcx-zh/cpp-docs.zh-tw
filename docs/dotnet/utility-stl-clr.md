@@ -1,5 +1,5 @@
 ---
-title: 公用程式 (STL/CLR) |Microsoft 文件
+title: 公用程式 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -49,19 +49,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fcc97e5037898b3a9c39a6c72ed21b2c19a4c777
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: e1150fb6d3df325fd9d5d9b4180318fa029102c3
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306017"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375912"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
-包括 STL/CLR 標頭`<cliext/utility>`來定義範本類別`pair`和數個支援的樣板函式。  
+包含 STL/CLR 標頭`<cliext/utility>`來定義範本類別`pair`和數個支援的樣板函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 #include <utility>  
 ```
 
@@ -74,20 +74,20 @@ ms.locfileid: "36306017"
   
 |類別|描述|  
 |-----------|-----------------|  
-|[pair (STL/CLR)](#pair)|包裝元素配對。|  
+|[pair (STL/CLR)](#pair)|換行組的項目。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[operator== (pair) (STL/CLR)](#op_eq)|配對相等比較。|  
+|[operator== (pair) (STL/CLR)](#op_eq)|對等於比較。|  
 |[operator!= (pair) (STL/CLR)](#op_neq)|配對不相等比較。|  
-|[operator< (pair) (STL/CLR)](#op_lt)|配對小於比較。|  
-|[運算子\<= （組） (STL/CLR)](#op_lteq)|小於或等於配對的比較。|  
-|[operator> (pair) (STL/CLR)](#op_gt)|比較大於配對。|  
-|[operator>= (pair) (STL/CLR)](#op_gteq)|對大於或等於比較。|  
+|[operator< (pair) (STL/CLR)](#op_lt)|組小於比較。|  
+|[運算子\<= （配對） (STL/CLR)](#op_lteq)|配對小於或等於比較。|  
+|[operator> (pair) (STL/CLR)](#op_gt)|大於比較的配對。|  
+|[operator>= (pair) (STL/CLR)](#op_gteq)|對大於或等於的比較。|  
   
 |功能|描述|  
 |--------------|-----------------|  
-|[make_pair (STL/CLR)](#make_pair)|請從一組值的配對。|  
+|[make_pair (STL/CLR)](#make_pair)|請一組來自一組值。|  
 
 ## <a name="members"></a>成員
 
@@ -96,42 +96,42 @@ ms.locfileid: "36306017"
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     ref class pair;  
 ```  
   
 #### <a name="parameters"></a>參數  
- Value1  
+ *Value1*  
  第一個包裝值類型。  
   
- Value2  
- 第二個換行的值類型。  
+ *Value2*  
+ 第二個包裝值的型別。  
   
 ## <a name="members"></a>成員  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
-|[pair::first_type (STL/CLR)](#first_type)|第一個包裝的值類型。|  
-|[pair::second_type (STL/CLR)](#second_type)|第二個包裝值類型。|  
+|[pair::first_type (STL/CLR)](#first_type)|第一個包裝值類型。|  
+|[pair::second_type (STL/CLR)](#second_type)|第二個包裝值的型別。|  
   
 |成員物件|描述|  
 |-------------------|-----------------|  
 |[pair::first (STL/CLR)](#first)|第一個預存的值。|  
-|[pair::second (STL/CLR)](#second)|第二個儲存的值。|  
+|[pair::second (STL/CLR)](#second)|第二個預存的值。|  
   
 |成員函式|描述|  
 |---------------------|-----------------|  
-|[pair::pair (STL/CLR)](#pair_pair)|建構組物件。|  
-|[pair::swap (STL/CLR)](#swap)|交換兩對的內容。|  
+|[pair::pair (STL/CLR)](#pair_pair)|建構配對物件。|  
+|[pair::swap (STL/CLR)](#swap)|交換兩個配對的內容。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
 |[pair::operator= (STL/CLR)](#op_as)|取代預存的值的配對。|  
   
 ## <a name="remarks"></a>備註  
- 此物件會儲存一組值。 您可以使用此範本類別，將兩個值結合成單一物件。 此外，物件`cliext::pair`（此處所述） 存放區僅限受管理類型; 若要儲存對 unmanaged 的類型使用`std::pair`中宣告`<utility>`。  
+ 這個物件會儲存一組值。 您可以使用此範本類別來將兩個值合併成單一物件。 此外，該物件`cliext::pair`（此處所述） 存放區只有 managed 類型; 若要儲存的未受管理的一組使用型別`std::pair`中宣告`<utility>`。  
 
 
 ## <a name="first"></a> pair::first (STL/CLR)
@@ -139,12 +139,12 @@ template<typename Value1,
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 Value1 first;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 此物件會儲存已包裝的第一個值。  
+ 這個物件會儲存第一個包裝的值。  
   
 ### <a name="example"></a>範例  
   
@@ -163,7 +163,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -171,16 +170,16 @@ int main()
 ```  
 
 ## <a name="first_type"></a> pair::first_type (STL/CLR)
-第一個包裝的值類型。  
+第一個包裝值類型。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef Value1 first_type;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型是範本參數 `Value1`的同義字。  
+ 類型是範本參數的同義字*Value1*。  
   
 ### <a name="example"></a>範例  
   
@@ -198,8 +197,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -211,16 +209,16 @@ int main()
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>參數  
- 向右  
+ *right*  
  要複製組。  
   
 ### <a name="remarks"></a>備註  
- 成員運算子複製`right`物件，然後傳回`*this`。 您使用它來儲存一對值中的複本取代預存的值的配對`right`。  
+ 成員運算子複製*右*物件，然後傳回`*this`。 您使用它來取代儲存的值一組以一份儲存的值在一組*右*。  
   
 ### <a name="example"></a>範例  
   
@@ -239,8 +237,7 @@ int main()
     c2 = c1;   
     System::Console::WriteLine("[{0}, {1}]", c2.first, c2.second);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -249,11 +246,11 @@ int main()
 ```  
 
 ## <a name="pair_pair"></a> pair::pair (STL/CLR)
-建構組物件。  
+建構配對物件。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 pair();  
 pair(pair<Coll>% right);  
 pair(pair<Coll>^ right);  
@@ -261,13 +258,13 @@ pair(Value1 val1, Value2 val2);
 ```  
   
 #### <a name="parameters"></a>參數  
- 向右  
- 要儲存組。  
+ *right*  
+ 若要儲存的配對。  
   
- val1  
+ *val1*  
  要儲存的第一個值。  
   
- val2  
+ *Val2*  
  要儲存的第二個值。  
   
 ### <a name="remarks"></a>備註  
@@ -275,23 +272,23 @@ pair(Value1 val1, Value2 val2);
   
  `pair();`  
   
- 初始化具有預設建構值的預存的組。  
+ 初始化預存的配對，其中建構的預設值。  
   
  建構函式：  
   
  `pair(pair<Value1, Value2>% right);`  
   
- 初始化與預存的配對`right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)和`right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。  
+ 初始化預存的配對，其中`right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)並`right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。  
   
  `pair(pair<Value1, Value2>^ right);`  
   
- 初始化與預存的配對`right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)和`right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。  
+ 初始化預存的配對，其中`right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)並`right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。  
   
  建構函式：  
   
  `pair(Value1 val1, Value2 val2);`  
   
- 初始化具有與預存的組`val1`和`val2`。  
+ 初始化與使用預存的配對*val1*並*val2*。  
   
 ### <a name="example"></a>範例  
   
@@ -320,8 +317,7 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c4.first, c4.second);   
   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -332,16 +328,16 @@ int main()
 ```  
 
 ## <a name="second"></a> pair::second (STL/CLR)
-第二個換行的值。  
+第二個包裝值。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 Value2 second;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 此物件會儲存已包裝的第二個值。  
+ 這個物件會儲存第二個包裝的值。  
   
 ### <a name="example"></a>範例  
   
@@ -360,7 +356,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -368,16 +363,16 @@ int main()
 ```  
 
 ## <a name="second_type"></a> pair::second_type (STL/CLR)
-第二個包裝值類型。  
+第二個包裝值的型別。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 typedef Value2 second_type;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型是範本參數 `Value2`的同義字。  
+ 類型是範本參數的同義字*Value2*。  
   
 ### <a name="example"></a>範例  
   
@@ -395,8 +390,7 @@ int main()
     cliext::pair<wchar_t, int>::second_type second_val = c1.second;   
     System::Console::WriteLine("[{0}, {1}]", first_val, second_val);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -404,20 +398,20 @@ int main()
 ```    
 
 ## <a name="swap"></a> pair::swap (STL/CLR)
-交換兩對的內容。  
+交換兩個配對的內容。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void swap(pair<Value1, Value2>% right);  
 ```  
   
 #### <a name="parameters"></a>參數  
- 向右  
+ *right*  
  要交換內容的配對。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會交換預存的值之間的配對`*this`和`right`。  
+ 此成員函式會交換預存的值之間的配對`*this`並*右*。  
   
 ### <a name="example"></a>範例  
   
@@ -459,8 +453,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -475,27 +468,27 @@ a b c
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
 #### <a name="parameters"></a>參數  
- `Value1`  
- 第一個包裝的值類型。  
+ *Value1*  
+ 第一個包裝值類型。  
   
- `Value2`  
- 第二個包裝值類型。  
+ *Value2*  
+ 第二個包裝值的型別。  
   
- `first`  
+ *first*  
  要包裝的第一個值。  
   
- `second`  
- 第二個換行的值。  
+ *second*  
+ 要包裝的第二個值。  
   
 ### <a name="remarks"></a>備註  
- 此範本函式會傳回 `pair<Value1, Value2>(first, second)`。 使用它來建構`pair<Value1, Value2>`從一組值的物件。  
+ 此範本函式會傳回 `pair<Value1, Value2>(first, second)`。 您會使用它來建構`pair<Value1, Value2>`從一組值的物件。  
   
 ### <a name="example"></a>範例  
   
@@ -513,7 +506,6 @@ int main()
     System::Console::WriteLine("[{0}, {1}]", c1.first, c1.second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -521,12 +513,12 @@ int main()
 [y, 4]  
 ```  
 
-## <a name="op_neq"></a> 運算子 ！ = （組） (STL/CLR)
+## <a name="op_neq"></a> 運算子 ！ = （配對） (STL/CLR)
 配對不相等比較。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator!=(pair<Value1, Value2>% left,  
@@ -534,14 +526,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>參數  
- 左  
+ *left*  
  要比較的左的組。  
   
- 向右  
+ *right*  
  要比較的右組。  
   
 ### <a name="remarks"></a>備註  
- 運算子函式會傳回`!(left == right)`。 使用它來測試是否`left`未經過排序相同`right`兩組時項目所比較的項目。  
+ 運算子函式會傳回`!(left == right)`。 您會使用它來測試是否*左*未經過排序相同*右*兩組時由項目相比較的項目。  
   
 ### <a name="example"></a>範例  
   
@@ -562,8 +554,7 @@ int main()
     System::Console::WriteLine("[x 3] != [x 4] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -573,12 +564,12 @@ int main()
 [x 3] != [x 4] is True  
 ```  
   
-## <a name="op_lt"></a> 運算子&lt;（組） (STL/CLR)
-配對小於比較。  
+## <a name="op_lt"></a> 運算子&lt;（配對） (STL/CLR)
+組小於比較。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<(pair<Value1, Value2>% left,  
@@ -586,14 +577,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>參數  
- 左  
+ *left*  
  要比較的左的組。  
   
- 向右  
+ *right*  
  要比較的右組。  
   
 ### <a name="remarks"></a>備註  
- 運算子函式會傳回`left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`。 使用它來測試是否`left`排序之前`right`兩組時項目所比較的項目。  
+ 運算子函式會傳回`left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`。 您會使用它來測試是否*左*排序之前*右*兩組時由項目相比較的項目。  
   
 ### <a name="example"></a>範例  
   
@@ -614,8 +605,7 @@ int main()
     System::Console::WriteLine("[x 3] < [x 4] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -625,12 +615,12 @@ int main()
 [x 3] < [x 4] is True  
 ```  
 
-## <a name="op_lteq"></a> 運算子&lt;= （組） (STL/CLR)
-小於或等於配對的比較。  
+## <a name="op_lteq"></a> 運算子&lt;= （配對） (STL/CLR)
+配對小於或等於比較。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator<=(pair<Value1, Value2>% left,  
@@ -638,14 +628,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>參數  
- 左  
+ *left*  
  要比較的左的組。  
   
- 向右  
+ *right*  
  要比較的右組。  
   
 ### <a name="remarks"></a>備註  
- 運算子函式會傳回`!(right < left)`。 使用它來測試是否`left`未經過排序之後`right`兩組時項目所比較的項目。  
+ 運算子函式會傳回`!(right < left)`。 您會使用它來測試是否*左*未經過排序之後*右*兩組時由項目相比較的項目。  
   
 ### <a name="example"></a>範例  
   
@@ -666,8 +656,7 @@ int main()
     System::Console::WriteLine("[x 4] <= [x 3] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -677,12 +666,12 @@ int main()
 [x 4] <= [x 3] is False  
 ```  
   
-## <a name="op_eq"></a> 運算子 = = （組） (STL/CLR)
-配對相等比較。  
+## <a name="op_eq"></a> 運算子 = = （配對） (STL/CLR)
+對等於比較。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator==(pair<Value1, Value2>% left,  
@@ -690,14 +679,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>參數  
- 左  
+ *left*  
  要比較的左的組。  
   
- 向右  
+ *right*  
  要比較的右組。  
   
 ### <a name="remarks"></a>備註  
- 運算子函式會傳回`left.first ==` `right.first &&` `left.second ==` `right.second`。 使用它來測試是否`left`排序相同`right`兩組時項目所比較的項目。  
+ 運算子函式會傳回`left.first ==` `right.first &&` `left.second ==` `right.second`。 您會使用它來測試是否*左*排序相同*右*兩組時由項目相比較的項目。  
   
 ### <a name="example"></a>範例  
   
@@ -718,8 +707,7 @@ int main()
     System::Console::WriteLine("[x 3] == [x 4] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -729,12 +717,12 @@ int main()
 [x 3] == [x 4] is False  
 ```  
 
-## <a name="op_gt"></a> 運算子&gt;（組） (STL/CLR)
-比較大於配對。  
+## <a name="op_gt"></a> 運算子&gt;（配對） (STL/CLR)
+大於比較的配對。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>(pair<Value1, Value2>% left,  
@@ -742,14 +730,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>參數  
- 左  
+ *left*  
  要比較的左的組。  
   
- 向右  
+ *right*  
  要比較的右組。  
   
 ### <a name="remarks"></a>備註  
- 運算子函式會傳回`right` `<` `left`。 使用它來測試是否`left`排序後`right`兩組時項目所比較的項目。  
+ 運算子函式會傳回`right` `<` `left`。 您會使用它來測試是否*左*經過排序之後*右*兩組時由項目相比較的項目。  
   
 ### <a name="example"></a>範例  
   
@@ -770,8 +758,7 @@ int main()
     System::Console::WriteLine("[x 4] > [x 3] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -781,12 +768,12 @@ int main()
 [x 4] > [x 3] is True  
 ```  
 
-## <a name="op_gteq"></a> 運算子&gt;= （組） (STL/CLR)
-對大於或等於比較。  
+## <a name="op_gteq"></a> 運算子&gt;= （配對） (STL/CLR)
+對大於或等於的比較。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Value1,  
     typename Value2>  
     bool operator>=(pair<Value1, Value2>% left,  
@@ -794,14 +781,14 @@ template<typename Value1,
 ```  
   
 #### <a name="parameters"></a>參數  
- 左  
+ *left*  
  要比較的左的組。  
   
- 向右  
+ *right*  
  要比較的右組。  
   
 ### <a name="remarks"></a>備註  
- 運算子函式會傳回`!(left < right)`。 使用它來測試是否`left`之前未經過排序`right`兩組時項目所比較的項目。  
+ 運算子函式會傳回`!(left < right)`。 使用它來測試是否*左*未經過排序再*右*兩組時由項目相比較的項目。  
   
 ### <a name="example"></a>範例  
   
@@ -822,8 +809,7 @@ int main()
     System::Console::WriteLine("[x 3] >= [x 4] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -831,4 +817,4 @@ int main()
 [x, 4]  
 [x 3] >= [x 3] is True  
 [x 3] >= [x 4] is False  
-```  
+``` 

@@ -1,5 +1,5 @@
 ---
-title: 功能 (STL/CLR) |Microsoft 文件
+title: 功能 (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,15 +73,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 04596cd043b90d8016cd0f9b1ebfe05a9bf82f72
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 98640997536bc48330beeda793a6067e3da97b5f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305900"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376361"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
-包括 STL/CLR 標頭`<cliext/functional>`來定義範本類別和相關的範本委派函式的數目。  
+包含 STL/CLR 標頭`<cliext/functional>`來定義範本類別和相關的範本委派和函式的數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36305900"
 ```  
 
 ## <a name="requirements"></a>需求  
- **標頭：** \<功能 cliext/>  
+ **標頭：** \<cliext/功能 >  
   
  **命名空間：** cliext 
 
@@ -99,47 +99,47 @@ ms.locfileid: "36305900"
 |Delegate - 委派|描述|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](#binary_delegate)|兩個引數的委派。|  
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|傳回兩個引數委派`void`。|  
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|兩個引數傳回的委派**void**。|  
 |[unary_delegate (STL/CLR)](#unary_delegate)|其中一個引數的委派。|  
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|傳回的單一引數委派`void`。|  
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|傳回的單一引數委派**void**。|  
   
 |類別|描述|  
 |-----------|-----------------|  
-|[binary_negate (STL/CLR)](#binary_negate)|要變換正負號的雙引數函式的函式。|  
-|[binder1st (STL/CLR)](#binder1st)|若要將第一個引數繫結至兩個引數函式的函式。|  
-|[binder2nd (STL/CLR)](#binder2nd)|第二個引數繫結至兩個引數函式的函式。|  
-|[divides (STL/CLR)](#divides)|將多個函式。|  
+|[binary_negate (STL/CLR)](#binary_negate)|要變換正負號的雙引數的仿函式的函式。|  
+|[binder1st (STL/CLR)](#binder1st)|若要繫結至兩個引數的仿函式的第一個引數的函式。|  
+|[binder2nd (STL/CLR)](#binder2nd)|第二個引數繫結至兩個引數的仿函式的函式。|  
+|[divides (STL/CLR)](#divides)|將分割仿函式。|  
 |[equal_to (STL/CLR)](#equal_to)|相等比較函式。|  
-|[greater (STL/CLR)](#greater)|大於比較仿函式。|  
+|[greater (STL/CLR)](#greater)|更高的比較函式。|  
 |[greater_equal (STL/CLR)](#greater_equal)|大於或等於比較仿函式。|  
 |[less (STL/CLR)](#less)|較少的比較函式。|  
-|[less_equal (STL/CLR)](#less_equal)|小於或等於比較仿函式。|  
+|[less_equal (STL/CLR)](#less_equal)|小於或等於的比較函式。|  
 |[logical_and (STL/CLR)](#logical_and)|邏輯 AND 仿函式。|  
 |[logical_not (STL/CLR)](#logical_not)|邏輯不仿函式。|  
 |[logical_or (STL/CLR)](#logical_or)|邏輯 OR 仿函式。|  
 |[minus (STL/CLR)](#minus)|減去仿函式。|  
 |[modulus (STL/CLR)](#modulus)|模數仿函式。|  
-|[multiplies (STL/CLR)](#multiplies)|乘以仿函式。|  
+|[multiplies (STL/CLR)](#multiplies)|Multiply 仿函式。|  
 |[negate (STL/CLR)](#negate)|傳回否定其引數的函式。|  
-|[not_equal_to (STL/CLR)](#not_equal_to)|不等於比較仿函式。|  
+|[not_equal_to (STL/CLR)](#not_equal_to)|不等於的比較函式。|  
 |[plus (STL/CLR)](#plus)|新增仿函式。|  
-|[unary_negate (STL/CLR)](#unary_negate)|要變換正負號的單一引數函式的函式。|  
+|[unary_negate (STL/CLR)](#unary_negate)|要變換正負號的單一引數的仿函式的函式。|  
   
 |功能|描述|  
 |--------------|-----------------|  
-|[bind1st (STL/CLR)](#bind1st)|會產生 binder1st 引數和函式。|  
-|[bind2nd (STL/CLR)](#bind2nd)|會產生 binder2nd 引數和函式。|  
-|[not1 (STL/CLR)](#not1)|會產生 unary_negate 函式的。|  
-|[not2 (STL/CLR)](#not2)|會產生 binary_negate 函式的。|  
+|[bind1st (STL/CLR)](#bind1st)|會產生 binder1st 引數和仿函式。|  
+|[bind2nd (STL/CLR)](#bind2nd)|會產生 binder2nd 引數和仿函式。|  
+|[not1 (STL/CLR)](#not1)|會產生 unary_negate 的仿函式。|  
+|[not2 (STL/CLR)](#not2)|會產生 binary_negate 的仿函式。|  
    
 ## <a name="members"></a>成員
 
 ## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
-Genereic 類別描述兩個引數的委派。 您可以使用它指定的委派，以其引數和傳回型別。  
+Genereic 類別會描述兩個引數的委派。 您在使用指定的委派，根據其引數和傳回類型。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2,  
     typename Result>  
@@ -147,19 +147,19 @@ generic<typename Arg1,
 ```  
   
 #### <a name="parameters"></a>參數  
- arg1  
+ *arg1*  
  第一個引數型別。  
   
- arg2  
- 第二個引數的型別。  
+ *Arg2*  
+ 第二個引數的類型。  
   
- 結果  
+ *結果*  
  傳回型別。  
   
 ### <a name="remarks"></a>備註  
- Genereic 委派說明的兩個引數函式。  
+ Genereic 委派描述兩個引數的函式。  
   
- 請注意，如：  
+ 請注意，針對：  
   
  `binary_delegate<int, int, int> Fun1;`  
   
@@ -171,7 +171,7 @@ generic<typename Arg1,
   
  `delegate int Fun2(int, int);`  
   
- 它們不是相同的類型。  
+ 它們不是相同的型別。  
   
 ### <a name="example"></a>範例  
   
@@ -199,7 +199,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -209,27 +208,27 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
-Genereic 類別描述兩個引數委派，會傳回`void`。 您可以使用它指定的委派，根據其引數。  
+Genereic 類別描述兩個引數的委派，會傳回**void**。 您在使用指定的委派，根據其引數。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 generic<typename Arg1,  
     typename Arg2>  
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
 #### <a name="parameters"></a>參數  
- arg1  
+ *arg1*  
  第一個引數型別。  
   
- arg2  
- 第二個引數的型別。  
+ *Arg2*  
+ 第二個引數的類型。  
   
 ### <a name="remarks"></a>備註  
- Genereic 委派描述兩個引數函式會傳回`void`。  
+ Genereic 委派描述兩個引數函式會傳回**void**。  
   
- 請注意，如：  
+ 請注意，針對：  
   
  `binary_delegate_noreturn<int, int> Fun1;`  
   
@@ -241,7 +240,7 @@ generic<typename Arg1,
   
  `delegate void Fun2(int, int);`  
   
- 它們不是相同的類型。  
+ 它們不是相同的型別。  
   
 ### <a name="example"></a>範例  
   
@@ -267,7 +266,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -277,11 +275,11 @@ compare(b, a) = False
 ```  
 
 ## <a name="binary_negate"></a> binary_negate (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回邏輯不屬於其預存的兩個引數函式。 您可以使用它指定根據其預存函式的函式物件。  
+此範本類別描述仿函式，呼叫時，會傳回邏輯不是其預存的兩個引數函式。 您在使用指定的函式物件，根據其預存的仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binary_negate  
     { // wrap operator()  
@@ -304,8 +302,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- Fun  
- 預存仿函式的類型。  
+ *樂趣*  
+ 預存的仿函式的型別。  
   
 ## <a name="member-functions"></a>成員函式  
   
@@ -314,22 +312,22 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
-|stored_function_type|仿函式的類型。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
+|stored_function_type|仿函式的型別。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|binary_negate|建構仿函式。|  
+|binary_negate|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type^()|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type^()|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式儲存其他兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回邏輯的預存仿函式未呼叫兩個引數。  
+ 此範本類別描述兩個引數仿函數時，會儲存其他兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回邏輯不是預存的仿函式呼叫使用兩個引數。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -378,7 +376,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -389,11 +386,11 @@ int main()
 ```  
 
 ## <a name="bind1st"></a> bind1st (STL/CLR)
-會產生`binder1st`引數和函式。  
+會產生`binder1st`引數和仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder1st<Fun> bind1st(Fun% functor,  
@@ -401,21 +398,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>範本參數  
- 引數  
+ *引數*  
  引數型別。  
   
- Fun  
- 仿函式的類型。  
+ *樂趣*  
+ 仿函式的型別。  
   
 #### <a name="function-parameters"></a>函式參數  
- 仿函式  
+ *仿函式*  
  包裝函式。  
   
- 左  
+ *left*  
  第一個引數，用來包裝。  
   
 ### <a name="remarks"></a>備註  
- 範本函式會傳回[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`。 您可以使用它作為便利的方式來包裝單一引數函式呼叫與第二個引數中的兩個引數函式和其第一個引數。  
+ 範本函式會傳回[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`。 您可以使用它作為便利的方式來將兩個引數的仿函式和其第一個引數包裝在單一引數仿函數時，呼叫以第二個引數。  
   
 ### <a name="example"></a>範例  
   
@@ -457,7 +454,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -467,11 +463,11 @@ int main()
 ```  
 
 ## <a name="bind2nd"></a> bind2nd (STL/CLR)
-會產生`binder2nd`引數和函式。  
+會產生`binder2nd`引數和仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun,  
     typename Arg>  
     binder2nd<Fun> bind2nd(Fun% functor,  
@@ -479,21 +475,21 @@ template<typename Fun,
 ```  
   
 #### <a name="template-parameters"></a>範本參數  
- 引數  
+ *引數*  
  引數型別。  
   
- Fun  
- 仿函式的類型。  
+ *樂趣*  
+ 仿函式的型別。  
   
 #### <a name="function-parameters"></a>函式參數  
- 仿函式  
+ *仿函式*  
  包裝函式。  
   
- 向右  
- 將第二個引數。  
+ *right*  
+ 第二個引數，用來包裝。  
   
 ### <a name="remarks"></a>備註  
- 範本函式會傳回[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`。 您可以使用它作為便利的方式來包裝單一引數函式會呼叫第一個引數中的兩個引數函式和其第二個引數。  
+ 範本函式會傳回[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`。 您可以使用它作為便利的方式來將兩個引數的仿函式和其第二個引數包裝在單一引數函式呼叫與第一個引數。  
   
 ### <a name="example"></a>範例  
   
@@ -535,7 +531,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -545,11 +540,11 @@ int main()
 ```  
 
 ## <a name="binder1st"></a> binder1st (STL/CLR)
-此範本類別描述一個引數函式，呼叫時，傳回其預存的雙引數仿函式呼叫的預存的第一個引數與提供的第二個引數。 您可以使用它指定根據其預存函式的函式物件。  
+此範本類別描述單一引數的仿函式，呼叫時，會傳回其預存的雙引數函式呼叫其預存的第一個引數與所提供的第二個引數。 您在使用指定的函式物件，根據其預存的仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder1st  
     { // wrap operator()  
@@ -571,8 +566,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- Fun  
- 預存仿函式的類型。  
+ *樂趣*  
+ 預存的仿函式的型別。  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -581,22 +576,22 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
-|stored_function_type|仿函式的類型。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
+|stored_function_type|仿函式的型別。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|binder1st|建構仿函式。|  
+|binder1st|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type^()|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type^()|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述一個引數函式，其中儲存兩個引數函式與第一個引數。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回呼叫預存仿函式的預存的第一個引數而提供的第二個引數的結果。  
+ 此範本類別描述單一引數仿函數時，會儲存兩個引數的仿函式和第一個引數。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回呼叫預存的仿函數與預存的第一個引數和所提供的第二個引數的結果。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -638,7 +633,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -648,11 +642,11 @@ int main()
 ```  
 
 ## <a name="binder2nd"></a> binder2nd (STL/CLR)
-此範本類別描述一個引數函式，呼叫時，會傳回與提供的第一個引數和其預存的第二個引數呼叫其預存的雙引數函式。 您可以使用它指定根據其預存函式的函式物件。  
+此範本類別描述單一引數的仿函式，呼叫時，會傳回其預存的兩個引數仿函數呼叫所提供的第一個引數和其預存的第二個引數。 您在使用指定的函式物件，根據其預存的仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class binder2nd  
     { // wrap operator()  
@@ -674,8 +668,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- Fun  
- 預存仿函式的類型。  
+ *樂趣*  
+ 預存的仿函式的型別。  
   
 ## <a name="member-functions"></a>成員函式  
   
@@ -684,22 +678,22 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
-|stored_function_type|仿函式的類型。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
+|stored_function_type|仿函式的型別。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|binder2nd|建構仿函式。|  
+|binder2nd|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type^()|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type^()|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述一個引數函式，其中儲存兩個引數函式與第二個引數。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回呼叫預存的第二個引數提供的第一個引數與預存仿函式的結果。  
+ 此範本類別描述單一引數仿函數時，會儲存兩個引數的仿函式和第二個引數。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回呼叫的預存的第二個引數所提供的第一個引數與預存的仿函式的結果。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -741,7 +735,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -750,12 +743,12 @@ int main()
 0 -1  
 ```  
   
-## <a name="divides"></a> 將分割 (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回第一個引數除以第二個。 您可以使用它指定其引數類型方面的函式物件。  
+## <a name="divides"></a> 除以 (STL/CLR)
+此範本類別描述仿函式，呼叫時，傳回第一個引數除以第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class divides  
     { // wrap operator()  
@@ -777,8 +770,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
- 引數和傳回值的類型。  
+ *引數*  
+ 引數和傳回值類型。  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -787,21 +780,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|divides|建構仿函式。|  
+|divides|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type^()|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type^()|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回第一個引數除以第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回第一個引數除以第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -840,7 +833,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -850,11 +842,11 @@ int main()
 ```  
 
 ## <a name="equal_to"></a> equal_to (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數是等於第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，則傳回 true 只有第一個引數是等於第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class equal_to  
     { // wrap operator()  
@@ -876,7 +868,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -886,21 +878,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|equal_to|建構仿函式。|  
+|equal_to|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type^()|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type^()|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數是否等於第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數是否等於第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -939,7 +931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,11 +940,11 @@ int main()
 ```  
 
 ## <a name="greater"></a> 大於 (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數是大於第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，則傳回 true 的第一個引數大於第二個時，才。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater  
     { // wrap operator()  
@@ -975,7 +966,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -985,21 +976,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|greater|建構仿函式。|  
+|greater|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數是否大於第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數是否大於第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1038,7 +1029,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1048,11 +1038,11 @@ int main()
 ```  
 
 ## <a name="greater_equal"></a> greater_equal (STL/CLR)
-此範本類別描述函式，呼叫時，只會傳回 true 的第一個引數是否大於或等於第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，只會傳回 true 的第一個引數是否大於或等於第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class greater_equal  
     { // wrap operator()  
@@ -1074,7 +1064,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -1084,21 +1074,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|greater_equal|建構仿函式。|  
+|greater_equal|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數是否大於或等於第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數是否大於或等於第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1137,7 +1127,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1147,11 +1136,11 @@ int main()
 ```  
 
 ## <a name="less"></a> 較少 (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true 只有當第一個引數小於第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，則傳回 true 只有當第一個引數小於第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less  
     { // wrap operator()  
@@ -1173,7 +1162,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -1183,21 +1172,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|less|建構仿函式。|  
+|less|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個參數是否小於第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數是否小於第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1236,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1246,11 +1234,11 @@ int main()
 ``` 
 
 ## <a name="less_equal"></a> less_equal (STL/CLR)
-此範本類別描述函式，呼叫時，只會傳回 true 的第一個參數是否小於或等於第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，只會傳回 true 的第一個引數是否小於或等於第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class less_equal  
     { // wrap operator()  
@@ -1272,7 +1260,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -1282,21 +1270,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|less_equal|建構仿函式。|  
+|less_equal|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個參數是否小於或等於第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數是否小於或等於第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1335,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1345,11 +1332,11 @@ int main()
 ``` 
 
 ## <a name="logical_and"></a> logical_and (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true 的第一個引數和第二個測試為 true 時，才。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，則傳回 true 的第一個引數和第二項測試為 true 時，才。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_and  
     { // wrap operator()  
@@ -1371,7 +1358,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -1381,21 +1368,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|logical_and|建構仿函式。|  
+|logical_and|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數和第二個測試為 true。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數和做為第二項測試為 true。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1434,7 +1421,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1444,11 +1430,11 @@ int main()
 ``` 
 
 ## <a name="logical_not"></a> logical_not (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true，才可能是它的引數為 false 會測試。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，如果傳回 true 只是它的引數測試為 false。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_not  
     { // wrap operator()  
@@ -1468,30 +1454,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
-|argument_type|仿函式引數的型別。|  
+|argument_type|仿函式引數的類型。|  
 |delegate_type|泛型委派類型。|  
 |result_type|仿函式結果的型別。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|logical_not|建構仿函式。|  
+|logical_not|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述一個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 當其引數測試才會為 false。  
+ 此範本類別描述單一引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 如果其引數會測試為 false。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1523,7 +1509,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1532,11 +1517,11 @@ int main()
 ``` 
 
 ## <a name="logical_or"></a> logical_or (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true 的第一個引數或第二個測試，做為 true 時，才。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，則傳回 true 的第一個引數或第二個測試，做為 true 時，才。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class logical_or  
     { // wrap operator()  
@@ -1558,7 +1543,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -1568,21 +1553,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|logical_or|建構仿函式。|  
+|logical_or|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數或做為第二個測試為 true。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數或做為第二個測試為 true。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1621,7 +1606,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1631,11 +1615,11 @@ int main()
 ```      
 
 ## <a name="minus"></a> 減號 (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回第一個引數減第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，會傳回第一個引數減去第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class minus  
     { // wrap operator()  
@@ -1657,8 +1641,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
- 引數和傳回值的類型。  
+ *引數*  
+ 引數和傳回值類型。  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -1667,21 +1651,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|minus|建構仿函式。|  
+|minus|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回第二個減去第一個引數。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回第一個引數減去第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1720,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1730,11 +1713,11 @@ int main()
 ``` 
 
 ## <a name="modulus"></a> 模數 (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回第一個引數，第二個模數。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，會傳回第一個引數，第二個模數。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class modulus  
     { // wrap operator()  
@@ -1756,8 +1739,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
- 引數和傳回值的類型。  
+ *引數*  
+ 引數和傳回值類型。  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -1766,21 +1749,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|模數|建構仿函式。|  
+|模數|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回第一個引數，第二個模數。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回第一個引數，第二個模數。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1819,7 +1802,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1829,11 +1811,11 @@ int main()
 ```   
 
 ## <a name="multiplies"></a> 乘以 (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回第一個引數，第二個時間。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，會傳回第二個時間的第一個引數。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class multiplies  
     { // wrap operator()  
@@ -1855,8 +1837,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
- 引數和傳回值的類型。  
+ *引數*  
+ 引數和傳回值類型。  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -1865,21 +1847,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|multiplies|建構仿函式。|  
+|multiplies|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回第一個引數，第二個時間。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回第二個時間的第一個引數。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -1918,7 +1900,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1928,11 +1909,11 @@ int main()
 ```  
 
 ## <a name="negate"></a> negate (STL/CLR)
-此範本類別描述函式，呼叫時，傳回否定其引數。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，會傳回否定其引數。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class negate  
     { // wrap operator()  
@@ -1952,30 +1933,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
-|argument_type|仿函式引數的型別。|  
+|argument_type|仿函式引數的類型。|  
 |delegate_type|泛型委派類型。|  
 |result_type|仿函式結果的型別。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|negate|建構仿函式。|  
+|negate|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述一個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回否定其引數。  
+ 此範本類別描述單一引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回否定其引數。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -2007,7 +1988,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2016,11 +1996,11 @@ int main()
 ``` 
 
 ## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
-此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數不是等於第二個。 您可以使用它指定其引數類型方面的函式物件。  
+此範本類別描述仿函式，呼叫時，則傳回 true 只有第一個引數不是等於第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class not_equal_to  
     { // wrap operator()  
@@ -2042,7 +2022,7 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數的型別。  
   
 ### <a name="member-functions"></a>成員函式  
@@ -2052,21 +2032,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|not_equal_to|建構仿函式。|  
+|not_equal_to|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數是否不等於第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它只會傳回 true 的第一個引數是否不等於第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -2105,7 +2085,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2115,25 +2094,25 @@ int main()
 ```   
 
 ## <a name="not1"></a> not1 (STL/CLR)
-會產生`unary_negate`的函式。  
+會產生`unary_negate`的仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>範本參數  
- Fun  
- 仿函式的類型。  
+ *樂趣*  
+ 仿函式的型別。  
   
 #### <a name="function-parameters"></a>函式參數  
- 仿函式  
+ *仿函式*  
  包裝函式。  
   
 ### <a name="remarks"></a>備註  
- 範本函式會傳回[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`。 您可以使用它作為便利的方式來將單一引數函式包裝在函式，提供其邏輯 NOT。  
+ 範本函式會傳回[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`。 您可以使用它作為便利的方式來將單一引數的仿函式包裝在仿函數時，提供其邏輯 NOT。  
   
 ### <a name="example"></a>範例  
   
@@ -2174,7 +2153,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2184,25 +2162,25 @@ int main()
 ```  
 
 ## <a name="not2"></a> not2 (STL/CLR)
-會產生`binary_negate`的函式。  
+會產生`binary_negate`的仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
 #### <a name="template-parameters"></a>範本參數  
- Fun  
- 仿函式的類型。  
+ *樂趣*  
+ 仿函式的型別。  
   
 #### <a name="function-parameters"></a>函式參數  
- 仿函式  
+ *仿函式*  
  包裝函式。  
   
 ### <a name="remarks"></a>備註  
- 範本函式會傳回[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`。 您可以將它當做方便的方式將兩個引數函式包裝在函式，提供其邏輯 NOT。  
+ 範本函式會傳回[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`。 您可以使用它作為便利的方式來將兩個引數的仿函式包裝在仿函數時，提供其邏輯 NOT。  
   
 ### <a name="example"></a>範例  
   
@@ -2251,7 +2229,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2261,12 +2238,12 @@ int main()
 1 0  
 ```  
 
-## <a name="plus"></a> 加上 (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回第一個引數，加上第二個。 您可以使用它指定其引數類型方面的函式物件。  
+## <a name="plus"></a> 再加上 (STL/CLR)
+此範本類別描述仿函式，呼叫時，會傳回第一個引數再加上第二個。 您在使用指定的函式物件，其引數類型方面。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Arg>  
     ref class plus  
     { // wrap operator()  
@@ -2288,8 +2265,8 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
- 引數和傳回值的類型。  
+ *引數*  
+ 引數和傳回值類型。  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -2298,21 +2275,21 @@ public:
 |delegate_type|泛型委派類型。|  
 |first_argument_type|仿函式的第一個引數型別。|  
 |result_type|仿函式結果的型別。|  
-|second_argument_type|仿函式的第二個引數的型別。|  
+|second_argument_type|仿函式的第二個引數的類型。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|plus|建構仿函式。|  
+|plus|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|運算子 delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|運算子 delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回第一個引數，加上第二個。  
+ 此範本類別描述兩個引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回第一個引數再加上第二個。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -2351,7 +2328,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2361,27 +2337,27 @@ int main()
 ```  
 
 ## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
-Genereic 類別描述一個引數的委派。 您可以使用它指定的委派，以其引數和傳回型別。  
+Genereic 類別描述單一引數的委派。 您在使用指定的委派，根據其引數和傳回類型。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 generic<typename Arg,  
     typename Result>  
     delegate Result unary_delegate(Arg);  
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數型別。  
   
- 結果  
+ *結果*  
  傳回型別。  
   
 ### <a name="remarks"></a>備註  
- Genereic 委派說明的單一引數函式。  
+ Genereic 委派描述單一引數的函式。  
   
- 請注意，如：  
+ 請注意，針對：  
   
  `unary_delegare<int, int> Fun1;`  
   
@@ -2393,7 +2369,7 @@ generic<typename Arg,
   
  `delegate int Fun2(int);`  
   
- 它們不是相同的類型。  
+ 它們不是相同的型別。  
   
 ### <a name="example"></a>範例  
   
@@ -2416,7 +2392,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2425,23 +2400,23 @@ hash(L'b') = 22
 ```  
 
 ## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
-Genereic 類別描述一個引數委派，會傳回`void`。 您可以使用它指定其引數類型方面的委派。  
+Genereic 類別描述單一引數的委派，會傳回**void**。 您在使用指定的委派，根據其引數型別。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
 #### <a name="parameters"></a>參數  
- 引數  
+ *引數*  
  引數型別。  
   
 ### <a name="remarks"></a>備註  
- Genereic 委派說明的單一引數函式會傳回`void`。  
+ Genereic 委派描述單一引數函式會傳回**void**。  
   
- 請注意，如：  
+ 請注意，針對：  
   
  `unary_delegare_noreturn<int> Fun1;`  
   
@@ -2453,7 +2428,7 @@ generic<typename Arg>
   
  `delegate void Fun2(int);`  
   
- 它們不是相同的類型。  
+ 它們不是相同的型別。  
   
 ### <a name="example"></a>範例  
   
@@ -2477,7 +2452,6 @@ int main()
     myhash(L'b');   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2486,11 +2460,11 @@ hash(b) = 22
 ```  
 
 ## <a name="unary_negate"></a> unary_negate (STL/CLR)
-此範本類別描述函式，呼叫時，會傳回邏輯不屬於其預存的單一引數函式。 您可以使用它指定根據其預存函式的函式物件。  
+此範本類別描述仿函式，呼叫時，會傳回邏輯不是其預存的單一引數函式。 您在使用指定的函式物件，根據其預存的仿函式。  
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename Fun>  
     ref class unary_negate  
     { // wrap operator()  
@@ -2511,30 +2485,30 @@ public:
 ```  
   
 #### <a name="parameters"></a>參數  
- Fun  
- 預存仿函式的類型。  
+ *樂趣*  
+ 預存的仿函式的型別。  
   
 ### <a name="member-functions"></a>成員函式  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
-|argument_type|仿函式引數的型別。|  
+|argument_type|仿函式引數的類型。|  
 |delegate_type|泛型委派類型。|  
 |result_type|仿函式結果的型別。|  
   
 |成員|描述|  
 |------------|-----------------|  
-|unary_negate|建構仿函式。|  
+|unary_negate|建構函式。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|operator()|計算所需的函數。|  
-|delegate_type ^|會轉換成委派仿函式。|  
+|operator()|計算所需的函式。|  
+|delegate_type ^|將轉換成委派仿函式。|  
   
 ### <a name="remarks"></a>備註  
- 此範本類別描述一個引數函式儲存其他單一引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回邏輯的預存仿函式不使用引數呼叫。  
+ 此範本類別描述單一引數仿函數時，會儲存其他單一引數的仿函式。 它會定義此成員運算子`operator()`這麼一來，該物件為函式呼叫時，它會傳回邏輯不是預存的仿函式呼叫的引數。  
   
- 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
+ 您也可以將物件傳遞為函式引數型別是`delegate_type^`並會適當地加以轉換。  
   
 ### <a name="example"></a>範例  
   
@@ -2575,7 +2549,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

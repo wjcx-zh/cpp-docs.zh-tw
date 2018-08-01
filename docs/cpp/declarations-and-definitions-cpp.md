@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942896"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403715"
 ---
 # <a name="declarations-and-definitions-c"></a>宣告和定義 (C++)
 宣告會引入名稱在程式中，例如變數、 命名空間、 函式和類別的名稱。 宣告也會指定類型資訊，以及所宣告物件的其他特性。 名稱必須先宣告才能使用；在 C++ 中，名稱的宣告位置可決定編譯器是否可以看到它。 您不能參考函式或宣告稍後編譯單位; 中的類別您可以使用*向前宣告*來克服這項限制。  
@@ -61,7 +61,6 @@ public:
  某些不是定義的宣告如下：  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  

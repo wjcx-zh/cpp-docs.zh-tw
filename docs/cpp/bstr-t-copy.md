@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b7032d9344ec9375059d5584d080854ffe5c775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942951"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405336"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Microsoft 專屬**  
@@ -32,13 +32,12 @@ ms.locfileid: "37942951"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>參數  
  *fCopy*  
- 如果為 TRUE，`copy`會傳回一份內含`BSTR`，否則為`copy`傳回實際的 BSTR。  
+ 如果為 TRUE，**複製**會傳回一份內含`BSTR`，否則為**複製**傳回實際的 BSTR。  
   
 ## <a name="remarks"></a>備註  
  傳回新配置已封裝 `BSTR` 物件的複本。  

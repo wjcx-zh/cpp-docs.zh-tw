@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0e9e3d7f16e40d41774dd1def89ef9bdd0ba1c82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942684"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404593"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 類別
 **Microsoft 專屬**  
   
- `_com_ptr_t` 物件會封裝 COM 介面指標，並且稱為「智慧型」指標。 此範本類別管理資源配置和解除配置函式呼叫，以透過`IUnknown`成員函式： `QueryInterface`， `AddRef`，和`Release`。  
+ A **_com_ptr_t**物件會封裝 COM 介面指標，稱為 「 智慧型 」 指標。 此範本類別管理資源配置和解除配置函式呼叫，以透過`IUnknown`成員函式： `QueryInterface`， `AddRef`，和`Release`。  
   
- 智慧型指標通常是由 _COM_SMARTPTR_TYPEDEF 巨集所提供的 typedef 定義參考。 這個巨集會採用介面名稱和 IID，並且使用介面的名稱加上 `_com_ptr_t` 後置詞宣告 `Ptr` 的特製化。 例如:   
+ 智慧型指標通常是由 _COM_SMARTPTR_TYPEDEF 巨集所提供的 typedef 定義參考。 這個巨集會採用介面名稱和 IID，並宣告的特製化 **_com_ptr_t**介面，再加上後的置字元的名稱取代`Ptr`。 例如:   
   
 ```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- 宣告`_com_ptr_t`特製化`IMyInterfacePtr`。  
+ 宣告 **_com_ptr_t**特製化`IMyInterfacePtr`。  
   
  一組[函式範本](../cpp/relational-function-templates.md)，不屬於此範本類別，支援與比較運算子右方的智慧型指標的比較。  
   
@@ -42,7 +42,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|建構 `_com_ptr_t` 物件。|  
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|建構 **_com_ptr_t**物件。|  
   
 ### <a name="low-level-operations"></a>低階作業  
   
@@ -61,7 +61,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-ptr-t-operator-equal.md)|將新值指派給現有的 `_com_ptr_t` 物件。|  
+|[operator =](../cpp/com-ptr-t-operator-equal.md)|將新的值指派給現有 **_com_ptr_t**物件。|  
 |[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比較智慧型指標物件與另一個智慧型指標、 一般介面指標，或為 NULL。|  
 |[擷取器](../cpp/com-ptr-t-extractors.md)|擷取封裝的 COM 介面指標。|  
   

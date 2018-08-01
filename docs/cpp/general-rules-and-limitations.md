@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a704036ffac974bc99d93996d083733f59d0d4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c1b3c3048bbd335fa43113c6d8876824475ad925
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943003"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408485"
 ---
 # <a name="general-rules-and-limitations"></a>一般規則和限制
 ## <a name="microsoft-specific"></a>Microsoft 特定的  

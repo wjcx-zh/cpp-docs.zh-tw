@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943000"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402916"
 ---
 # <a name="mutable-data-members-c"></a>可變動的資料成員 (C++)
 這個關鍵字只能套用至非靜態和非常數類別的資料成員。 如果資料成員宣告**可變**，則將值指派給這個資料成員，從**const**成員函式。  
@@ -29,7 +29,6 @@ ms.locfileid: "37943000"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   

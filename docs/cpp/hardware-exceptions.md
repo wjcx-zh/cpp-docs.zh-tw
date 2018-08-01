@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce55a0eb7f6fe3861f3a5ab398e7d186449dc2e9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941570"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402103"
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 大部分可由作業系統辨識的標準例外狀況是硬體定義的例外狀況。 Windows 可辨識某些低階軟體例外狀況，不過，作業系統通常最適合處理這些例外狀況。  

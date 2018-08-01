@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ff47c9a1b5aed197381a0d3ab0f24456fe75bad4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943007"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405145"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>左值參考宣告子： &amp;
 保存物件的位址，但語法上的行為與物件相似。  
@@ -30,7 +30,6 @@ ms.locfileid: "37943007"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 type-id & cast-expression  
 ```  
   

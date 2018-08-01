@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942038"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404859"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>混合 C (結構化) 和 C++ 例外狀況
 如果您要撰寫更具可攜性的程式碼，不建議您在 C ++ 程式中使用結構化的例外狀況處理。 不過，您有時可以使用編譯 **/EHa**混用結構化例外狀況和 c + + 原始程式碼，並需要能夠處理這兩種例外狀況。 結構化例外狀況處理常式並沒有物件或類型的例外狀況的概念，因為它無法處理 c + + 程式碼; 擲回的例外狀況不過，c + +**攔截**處理常式可以處理結構化例外狀況。 為這類，c + + 例外狀況處理語法 (**嘗試**，**擲回**，**攔截**) 不接受 C 編譯器，但結構化例外狀況處理語法 (**__try**， **__except**， **__finally**) 支援 c + + 編譯器。  

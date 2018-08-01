@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939308"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407399"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ if (condexpr1) statement1;
  **Bool**類型會參與整數提升。 類型的右值**bool**可以轉換成的型別**int**、 與 FALSE 成為零，變成一，則為 TRUE。 做為不同的類型， **bool**參與多載解析。  
   
 ## <a name="see-also"></a>另請參閱
-
-[關鍵字](../cpp/keywords-cpp.md)<br/>
-[基本類型](../cpp/fundamental-types-cpp.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)  
+[基本類型](../cpp/fundamental-types-cpp.md)  

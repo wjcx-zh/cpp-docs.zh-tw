@@ -1,5 +1,5 @@
 ---
-title: 函式樣板 （c + +） 的部分排序 |Microsoft 文件
+title: 函式樣板 （c + +） 的部分排序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75689c07718bf066105920b566087c08a220a7de
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408803"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函式樣板的部分排序 (C++)
 
 提供多個符合函式呼叫之引數清單的函式樣板。 C++ 可定義函式樣板的部分排序，以指定應呼叫哪些函式。 進行部分排序是因為某些樣板會被視為等同於特製化。
 
-編譯器會從可能相符的項目中選取最特殊的範本函式。 比方說，如果函式樣板採用類型__T__，和另一個的函式樣板採用__T\*__ 可用， __T\*__ 稱為版本為多個特製化和泛型優於__T__版本每當引數是指標類型，即使兩者都是允許的相符項目。
+編譯器會從可能相符的項目中選取最特殊的範本函式。 比方說，如果函式樣板採用型別__T__，並採用的另一個函式樣板__T\*__ 可供使用， __T\*__ 版本稱為為進一步特製化和泛型優於__T__版本時的引數是指標類型，即使兩者都是允許的相符項目。
 
 請使用下列程序來判斷某個函式樣板是否為特製化程度較高的候選項目：
 
@@ -36,21 +37,21 @@ ms.lasthandoff: 05/03/2018
 
 4. 以相反順序對 T1 和 T2 重複進行相同的程序。
 
-5. 如果某個樣板是其他範本的有效樣板引數清單，但反之則不然，則該範本會被視為比其他範本的特製化程度更低。 如果使用上一個步驟表單有效的引數的每個其他兩個範本，則視為是相等的特製化，而且會產生模稜兩可的呼叫當您嘗試使用它們。
+5. 如果某個樣板是其他範本的有效樣板引數清單，但反之則不然，則該範本會被視為比其他範本的特製化程度更低。 如果使用先前步驟表單有效的引數的每個其他兩個範本，然後被視為相等的特製化，而模稜兩可的呼叫會產生當您嘗試使用它們。
 
 6. 請使用下列規則：
 
      1. 特定類型的樣板特製化比採用泛型型別引數的樣板特製化程度更高。
 
-     2. 只接受一個範本__T\*__ 更具特製化比一個將只__T__，因為假設輸入__X\*__ 是有效引數__T__樣板引數，但__X__不是有效的引數，如__T\*__ 樣板引數。
+     2. 範本僅採取__T\*__ 更具特製化，比起一個採取只__T__，因為假設輸入__X\*__ 是有效引數__T__樣板引數，但__X__不是有效的引數，如__T\*__ 樣板引數。
 
-     3. __const T__更具特製化比__T__，因為__const X__是有效的引數，如__T__樣板引數，但__X__是不是有效引數的__const T__樣板引數。
+     3. __const T&__ 更具特製化比__T__，因為__const X__是有效的引數，如__T__樣板引數，但__X__是不是有效引數的__const T>__ 樣板引數。
 
-     4. __const T\*__ 更具特製化比__T\*__，因為__const X\*__ 是有效的引數，如__T\*__ 樣板引數，但__X\*__ 不是有效的引數，如__const T\*__ 樣板引數。
+     4. __const T&\*__ 更具特製化，比__T\*__，因為__const X\*__ 是有效的引數，如__T\*__ 樣板引數，但__X\*__ 不是有效的引數，如__const T&\*__ 樣板引數。
 
 ## <a name="example"></a>範例
 
-下列範例所述的標準中的運作方式：
+下列範例適用於標準中所指定：
 
 ```cpp
 // partial_ordering_of_function_templates.cpp
@@ -85,12 +86,11 @@ int main() {
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output  
 Less specialized function called  
 More specialized function called  
 Even more specialized function for const T*  
 ```  
   
 ## <a name="see-also"></a>另請參閱
-
-[函式樣板](../cpp/function-templates.md)
+ [函式樣板](../cpp/function-templates.md)

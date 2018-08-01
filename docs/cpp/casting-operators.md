@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5b2aa683f539e643127f8f71ff536d4c2ca2c9c0
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941621"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407522"
 ---
 # <a name="casting-operators"></a>轉型運算子
 C++ 語言有幾個特有的轉型運算子。 這些運算子的目的在於移除舊式 C 語言轉型固有的模稜兩可和危險。 這些運算子如下所列：  
@@ -35,7 +35,7 @@ C++ 語言有幾個特有的轉型運算子。 這些運算子的目的在於移
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)用來產生可驗證的 MSIL。  
   
- `const_cast` 和 `reinterpret_cast` 建議做為最後手段使用，因為這些運算子與舊類型轉換存在相同危險。 然而，為了完全取代舊類型轉換，這些運算子仍有其必要。  
+ 使用**const_cast**並**reinterpret_cast**做最後的手段，因為這些運算子存在相同危險與舊類型轉換。 然而，為了完全取代舊類型轉換，這些運算子仍有其必要。  
   
 ## <a name="see-also"></a>另請參閱  
  [轉型](../cpp/casting.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: df532fca3c1ecbb19126a8692377517d240bd2f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954189"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408212"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 于组织*C++ 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO C++ 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。   
@@ -59,16 +59,16 @@ ms.locfileid: "38954189"
  運算式、null、複合、選取、反覆項目、跳躍和宣告陳述式。  
   
  [宣告和定義](declarations-and-definitions-cpp.md)  
- 儲存類別指定名稱、函式定義、初始化、列舉、類別、結構以及等位宣告和 typedef 宣告。 另外還有內嵌函式、const 關鍵字和命名空間。  
+ 儲存類別規範、 函式定義、 初始化、 列舉型別**類別**，**結構**，並**union**宣告，和**typedef**宣告。 此外，**內嵌**函式**const**關鍵字、 命名空間。  
   
  [類別、 結構和等位](../cpp/classes-and-structs-cpp.md)  
- 類別、結構和等位簡介。 此外，成員函式、 特殊成員函式、 資料成員、 位元欄位，此指標、 巢狀的類別。  
+ 類別、結構和等位簡介。 此外，成員函式、 特殊成員函式中，資料成員，位元欄位，**這**指標、 巢狀的類別。  
   
  [在衍生的類別](../cpp/inheritance-cpp.md)  
- 單一和多重繼承、虛擬函式、多重基底類別、抽象類別、範圍規則。 此外，還有 __super 和\_（_i） 關鍵字。  
+ 單一和多重繼承**虛擬**函式、 多個基底類別**抽象**類別、 範圍規則。 此外， **__super**並 **__interface**關鍵字。  
   
  [成員存取控制](../cpp/member-access-control-cpp.md)  
- 控制類別成員的存取：public、private 和 protected 關鍵字。 Friend 函式和類別。  
+ 控制對類別成員的存取：**公開金鑰**，**私人**，和**保護**關鍵字。 Friend 函式和類別。  
   
  [多載](operator-overloading.md)  
  多載的運算子，運算子多載規則。  
@@ -80,16 +80,16 @@ ms.locfileid: "38954189"
  `#error` 指示詞**static_assert**關鍵字，`assert`巨集。  
   
  [範本](../cpp/templates-cpp.md)  
- 樣板規格、函式樣板、類別樣板、typename 關鍵字、樣板與巨集、樣板和智慧型指標。  
+ 樣板規格、 函式樣板、 類別樣板**typename**關鍵字、 樣板與巨集、 樣板和智慧型指標。  
   
  [事件處理](../cpp/event-handling.md)  
  宣告事件及事件處理常式。  
   
  [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)  
- Microsoft C++ 專有的修飾詞。 記憶體定址、 呼叫慣例、 naked 函式、 擴充儲存類別屬性 （）， \__w64。  
+ Microsoft C++ 專有的修飾詞。 記憶體定址、 呼叫慣例**naked**函數，擴充儲存類別屬性 (**__declspec**)， **__w64**。  
   
  [內嵌組合語言](../assembler/inline/inline-assembler.md)  
- 在 __asm 區塊中使用組合語言和 C++。  
+ 使用組件的語言和 c + + **__asm**區塊。  
   
  [編譯器 COM 支援](../cpp/compiler-com-support.md)  
  Microsoft 專有類別和全域函式的參考，可用來支援 COM 類型。  

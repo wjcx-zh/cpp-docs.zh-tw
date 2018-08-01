@@ -1,5 +1,5 @@
 ---
-title: 相依類型的名稱解析 |Microsoft 文件
+title: 相依類型的名稱解析 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419907"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402682"
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
-使用**typename**在給定的限定的名稱識別的類型會告訴編譯器樣板定義中的限定名稱。 如需詳細資訊，請參閱[typename](../cpp/typename.md)。  
+使用**typename**在告訴編譯器將指定的限定的名稱識別類型的樣板定義中的限定名稱。 如需詳細資訊，請參閱 < [typename](../cpp/typename.md)。  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- 相依名稱的名稱查閱會檢查從樣板定義內容的名稱，這個內容會在下列範例中，尋找`myFunction(char)`— 和樣板具現化的內容。在下列範例中，樣板具現化在 main 中因此，`MyNamespace::myFunction`是可見的具現化的點，並且可挑選為較佳的相符項目。 如果 `MyNamespace::myFunction` 已重新命名，則會改為呼叫 `myFunction(char)`。  
+ 相依名稱的名稱查閱會檢查從樣板定義內容的名稱，這個內容會在下列範例中，尋找`myFunction(char)`— 和範本具現化的內容。在下列範例中，樣板具現化在 main;因此，`MyNamespace::myFunction`是可見的具現化的點，並且可挑選為較佳的相符項目。 如果 `MyNamespace::myFunction` 已重新命名，則會改為呼叫 `myFunction(char)`。  
   
  所有名稱都會做為相依名稱解析。 儘管如此，如果可能發生任何衝突，仍建議您使用完整限定名稱。  
   
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>樣板去除混淆  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 會強制執行 C++98/03/11 標準規則，以便釐清 "template" 關鍵字。 在下列範例中，Visual c + + 2010年會接受的不一致的程式行及合格的行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 接受只有合格的線條。  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 會強制執行 C++98/03/11 標準規則，以便釐清 "template" 關鍵字。 在下列範例中，Visual c + + 2010年會接受不合格的行和相符的程式碼行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 接受只有相符的程式碼行。  
   
 ```cpp  
 #include <iostream>  

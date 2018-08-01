@@ -1,5 +1,5 @@
 ---
-title: noalias |Microsoft 文件
+title: noalias |Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420115"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404391"
 ---
 # <a name="noalias"></a>noalias
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
-`noalias` 表示的函式呼叫不修改也不參考可見的全域狀態，只會修改所指向的記憶體*直接*指標參數 （第一層間接取值）。
+**noalias**表示，函式呼叫不修改也不參考可見的全域狀態，只會修改指向的記憶體*直接*指標參數 （第一層間接取值）。
 
-如果函式標註為 `noalias`，則除了參數本身外，最佳化程式可以假設函式內只參考或修改指標參數的第一層間接取值。 這個可見的全域狀態是在編譯範圍外未定義或未參考的所有資料，而且不會採用其位址。 在編譯範圍是所有原始程式檔 ([/LTCG （連結時間程式碼產生）](../build/reference/ltcg-link-time-code-generation.md)建置) 或單一來源檔案 (非 **/LTCG**建置)。
+如果函式做為標註**noalias**，則最佳化工具可以假設，除了參數本身只會將第一層間接取值的指標參數所參考或修改函式內。 這個可見的全域狀態是在編譯範圍外未定義或未參考的所有資料，而且不會採用其位址。 編譯範圍是所有原始程式檔 ([/LTCG （連結時間程式碼產生）](../build/reference/ltcg-link-time-code-generation.md)組建) 或單一原始程式檔 (非 **/LTCG**建置)。
 
-`noalias`註釋只適用於標註函式主體內。 標示為函式`__declspec(noalias)`不會影響函數所傳回的指標的別名。
+**Noalias**註釋只適用於已標註函式主體內。 標記為函式 **__declspec(noalias)** 並不會影響別名的函式所傳回的指標。
 
-可能會影響別名的另一個註解，請參閱[__declspec （restrict)](../cpp/restrict.md)。
+可能會影響別名的另一個註解，請參閱 < [__declspec(restrict)](../cpp/restrict.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用`__declspec(noalias)`。
+下列範例示範如何使用 **__declspec(noalias)**。
 
-當函式`multiply`存取記憶體已標註`__declspec(noalias)`，它會告訴編譯器此函式不會修改全域狀態除了透過其參數清單中的指標。
+當函式`multiply`存取記憶體都會標註 **__declspec(noalias)**，它會告訴編譯器設定，此函式不會修改除了透過其參數清單中之指標的全域狀態。
 
 ```C
 // declspec_noalias.c
@@ -109,7 +109,6 @@ int main()
 ```
 
 ## <a name="see-also"></a>另請參閱
-
-[__declspec](../cpp/declspec.md)  
-[關鍵字](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+ [__declspec](../cpp/declspec.md)  
+ [關鍵字](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

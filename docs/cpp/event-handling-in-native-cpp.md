@@ -1,5 +1,5 @@
 ---
-title: 原生 c + + 中的事件處理 |Microsoft 文件
+title: 原生 c + + 中的事件處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b233c8329119753e5753e19fd641c6bea5d8e42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414177"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405778"
 ---
 # <a name="event-handling-in-native-c"></a>原生 C++ 中的事件處理
 
-在原生 c + + 事件處理中，您將使用的事件來源和事件接收器設定[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。
+在原生 c + + 事件處理中，您將設定使用事件來源和事件接收器[event_source](../windows/event-source.md)並[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。
 
 ## <a name="declaring-events"></a>宣告事件
 
@@ -35,7 +35,7 @@ ms.locfileid: "32414177"
   
 ## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式  
 
-也在事件接收器類別中，您要使用內建函式[__hook](../cpp/hook.md)使事件與事件處理常式和[__unhook](../cpp/unhook.md)來取消事件的事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。  
+此外如在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)事件處理常式相關聯的事件並[__unhook](../cpp/unhook.md)來取消事件與事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。  
   
 ## <a name="firing-events"></a>引發事件  
 
@@ -99,6 +99,4 @@ MyHandler1 was called with value 123.
 ```  
   
 ## <a name="see-also"></a>另請參閱
-
-[事件處理](../cpp/event-handling.md)  
-
+ [事件處理](../cpp/event-handling.md)  

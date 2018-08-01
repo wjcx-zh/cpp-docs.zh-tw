@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942077"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407013"
 ---
 # <a name="friend-c"></a>friend (C++)
 在某些情況下，它會授與成員層級存取不是類別的成員函式或個別的類別中的所有成員更方便項目。 只有類別實作器才能宣告它的 friend 是誰。 函式或類別不能將它自己宣告為任何類別的 friend。 在類別定義中，使用**friend**關鍵字和非成員函式或其存取權授與您類別的 private 和 protected 成員的其他類別的名稱。 在範本定義中，類型參數可以宣告為 friend。  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- 如果最內層的命名空間中找不到任何現有的類別，該名稱，則第一種形式導入了新的類別 F。  **C + + 11**： 第二個表單不會引進新的類別，可以使用已宣告的類別，並使用必須在宣告樣板類型參數或為 friend 的 typedef 時使用。  
+ 如果最內層的命名空間中找不到任何現有的類別，該名稱，則第一種形式導入了新的類別 F。 **C + + 11**： 第二個表單不會引進新的類別，可以使用已宣告的類別，並使用必須在宣告樣板類型參數或為 friend 的 typedef 時使用。  
   
  使用`class friend F`時參考的型別具有尚未宣告：  
   

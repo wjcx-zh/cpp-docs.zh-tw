@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941547"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406038"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>物件存留期和資源管理 (現代 C++)
 不同於 Managed 語言，C++ 沒有記憶體回收 (GC)，其會在程式執行時自動釋出不再使用的記憶體資源。 在 C++ 中，資源管理與物件存留期有直接關係。 本文件說明影響 C++ 之物件存留期的因素，以及其管理方式。  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  使用`unique_ptr`唯一的擁有權，例如，在*pimpl*慣用語。 (請參閱[編譯時間封裝的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)。)製作`unique_ptr`的主要目標的所有明確**新**運算式。  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  需要效能最佳化時，您可能必須使用*封裝良好*擁有指標和要刪除的明確呼叫。 範例為實作自己的低階資料結構。  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942651"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403903"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ void Assign(
  要複製到 `BSTR` 所包裝之 `BSTR` 中的 `_bstr_t`。  
   
 ## <a name="remarks"></a>備註  
- `Assign` 會執行二進位複製，這表示不論內容為何，都會複製 `BSTR` 的整個長度。  
+ **指派**沒有二進位複製，這表示的整個長度`BSTR`複製時，不論內容為何。  
   
 ## <a name="example"></a>範例  
   

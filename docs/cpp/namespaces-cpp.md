@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941180"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405479"
 ---
 # <a name="namespaces-c"></a>命名空間 (C++)
 命名空間是提供其內識別項 (類型、函式、變數等的名稱) 範圍的宣告式區域。 命名空間用來將程式碼組織成邏輯群組，以及防止特別在程式碼基底包含多個程式庫時可能會發生的名稱衝突。 在命名空間範圍的所有識別項都可以看得到彼此，沒有限制。 命名空間以外的識別項可以利用完整的名稱，為每個識別碼，例如存取成員`std::vector<std::string> vec;`，或是藉由[using 宣告](../cpp/using-declaration.md)針對以單一識別項 (`using std::string`)，或[using 指示詞](../cpp/namespaces-cpp.md#using_directives)命名空間中的所有識別項 (`using namespace std;`)。 標頭檔中的程式碼應該一律使用完整命名空間名稱。  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  使用 using 指示詞，將命名空間中的所有項目帶入範圍中：  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> using 指示詞  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- 在 contosodata.cpp 函式實作應該使用完整限定的名稱，即使您將`using`指示詞在檔案頂端：  
+ 即使您將在 contosodata.cpp 函式實作應該使用完整限定的名稱，**使用**指示詞在檔案頂端：  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  您可以使用內嵌命名空間做為版本設定機制，來管理程式庫的公用介面變更。 例如，您可以建立單一父命名空間，並封裝父命名空間內其專屬巢狀命名空間中的每個介面版本。 保留最新或慣用版本的命名空間限定為內嵌，因此予以公開，就像它是父命名空間的直接成員一樣。 叫用 Parent::Class 的用戶端程式碼將會自動繫結至新的程式碼。 偏好使用舊版本的用戶端還是可以使用具有該程式碼之巢狀命名空間的完整路徑來存取它。  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> 命名空間別名  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>匿名或未命名的命名空間  

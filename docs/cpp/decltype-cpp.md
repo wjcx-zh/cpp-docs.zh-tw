@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 343aa01d9f8e7b3146976fe046c6b2d7473ca1ec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941284"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407243"
 ---
 # <a name="decltype--c"></a>decltype （C++）
-`decltype` 類型規範會產生指定之運算式的類型。 `decltype`類型規範，搭配[auto 關鍵字](../cpp/auto-cpp.md)，是主要是撰寫樣板程式庫的開發人員很有用。 使用**自動**和`decltype`宣告樣板函式的傳回類型取決於樣板引數的類型。 或者，您也可以使用**自動**和`decltype`宣告樣板函式會包裝另一個函式呼叫，並接著會傳回包裝函式的傳回型別。  
+**Decltype**類型規範會產生指定之運算式的類型。 **Decltype**類型規範，搭配[auto 關鍵字](../cpp/auto-cpp.md)，是主要是撰寫樣板程式庫的開發人員很有用。 使用**自動**並**decltype**宣告樣板函式的傳回類型取決於樣板引數的類型。 或者，您也可以使用**自動**並**decltype**宣告樣板函式會包裝另一個函式呼叫，並接著會傳回包裝函式的傳回型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ decltype( expression )
  型別*運算式*參數。  
   
 ## <a name="remarks"></a>備註  
- `decltype` 類型規範在 Visual C++ 2010 (含) 以後版本支援，可以搭配原生或 Managed 程式碼使用。 Visual Studio 2015 和更新版本支援 `decltype(auto)` (C++14)。  
+ **Decltype**類型規範支援 Visual c + + 2010年或更新版本中，而且可以搭配原生或 managed 程式碼。 Visual Studio 2015 和更新版本支援 `decltype(auto)` (C++14)。  
   
  編譯器會使用下列規則來判斷型別*運算式*參數。  
   
@@ -55,7 +55,7 @@ decltype( expression )
   
 -   如果*運算式*參數是[右值](../cpp/lvalues-and-rvalues-visual-cpp.md)，`decltype(expression)`是種*運算式*。 如果*運算式*參數是[左值](../cpp/lvalues-and-rvalues-visual-cpp.md)，`decltype(expression)`是[左值參考](../cpp/lvalue-reference-declarator-amp.md)的型別*運算式*。  
   
- 下列程式碼範例示範 `decltype` 類型規範的一些用法。 首先，假設您撰寫了下列陳述式。  
+ 下列程式碼範例示範的一些用法**decltype**類型規範。 首先，假設您撰寫了下列陳述式。  
   
 ```cpp  
 int var;  
@@ -64,7 +64,7 @@ struct A { double x; }
 const A* a = new A();  
 ```  
   
- 接著，檢查由下表中四個 `decltype` 陳述式所傳回的類型。  
+ 接下來，檢查由四個型別**decltype**下表中的陳述式。  
   
 |陳述式|類型|注意|  
 |---------------|----------|-----------|  
@@ -76,16 +76,16 @@ const A* a = new A();
 ## <a name="decltype-and-auto"></a>Decltype 和 Auto  
  在 C++ 14 中，你可以使用`decltype(auto)`不带尾随返回类型来声明其返回类型的模板函数取决于其模板自变量的类型。   
   
- 在 C + + 11 中，您可以使用`decltype`類型規範的尾端傳回類型上，搭配**自動**關鍵字來宣告的樣板函式的傳回型別取決於樣板引數的類型。 例如，請考慮下列程式碼範例，其中樣板函式的傳回型別取決於樣板引數的類型。 在程式碼範例中，*未知*預留位置表示不能指定傳回型別。  
+ 在 C + + 11 中，您可以使用**decltype**類型規範的尾端傳回類型上，搭配**自動**關鍵字來宣告的樣板函式的傳回型別取決於其範本的類型引數。 例如，請考慮下列程式碼範例，其中樣板函式的傳回型別取決於樣板引數的類型。 在程式碼範例中，*未知*預留位置表示不能指定傳回型別。  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- `decltype` 類型規範的引入可讓開發人員取得樣板函式傳回的運算式類型。 使用*替代函式宣告語法*稍後所示**自動**關鍵字，而`decltype`類型規範來宣告*晚期指定*傳回型別。 晚期指定的傳回型別是在編譯宣告時決定，而不是在撰寫程式時決定。  
+ 引進**decltype**類型規範可讓開發人員取得樣板函式會傳回運算式的類型。 使用*替代函式宣告語法*稍後所示**自動**關鍵字，而**decltype**類型規範來宣告*晚期指定*傳回型別。 晚期指定的傳回型別是在編譯宣告時決定，而不是在撰寫程式時決定。  
   
- 下列原型說明替代函式宣告的語法。 請注意， **const**並**volatile**限定詞，而**擲回**[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)是選擇性的。 *Function_body*預留位置代表指定該函式的複合陳述式。 基於作法撰寫程式碼的最佳*運算式*中的預留位置`decltype`陳述式應該符合所指定的運算式**傳回**陳述式，如果有的話中*function_body*.  
+ 下列原型說明替代函式宣告的語法。 請注意， **const**並**volatile**限定詞，而**擲回**[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)是選擇性的。 *Function_body*預留位置代表指定該函式的複合陳述式。 基於作法撰寫程式碼的最佳*運算式*中的預留位置**decltype**陳述式應該符合所指定的運算式**傳回**陳述式，如果有的話，在*function_body*。  
   
  **自動** *function_name* **(** *參數*<sub>選擇</sub> **)** **const**<sub>opt</sub> **volatile**<sub>選擇</sub> **->** **decltype (***運算式* **)** **擲回**<sub>選擇</sub> **{** *function_body***};**  
   
@@ -101,16 +101,15 @@ auto myFunc(T&& t, U&& u) -> decltype (forward<T>(t) + forward<U>(u))
 template<typename T, typename U>  
 decltype(auto) myFunc(T&& t, U&& u)   
         { return forward<T>(t) + forward<U>(u); };  
-  
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>decltype 和轉送函式 (C++11)  
  轉送函式會包裝對其他函式的呼叫。 試想一個轉送其引數，或者包含這些引數的運算式結果到其他函式的函式樣板。 此外，轉送函式會傳回呼叫其他函式的結果。 在這個案例中，轉送函式的傳回型別應該會與包裝函式的傳回型別相同。  
   
- 在這個案例中，您必須使用 `decltype` 類型規範才能撰寫適當的類型運算式。 `decltype` 類型規範可進行泛型轉送函式，因為它不會遺失函式是否傳回參考類型的必要資訊。 如需轉送函式的程式碼範例，請參閱先前的 `myFunc` 樣板函式範例。  
+ 在此案例中，您無法寫入適當的類型運算式**decltype**類型規範。 **Decltype**類型規範可進行泛型轉送函式，因為它不會遺失函式是否傳回參考類型的必要的資訊。 如需轉送函式的程式碼範例，請參閱先前的 `myFunc` 樣板函式範例。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會宣告樣板函式 `Plus()` 的晚期指定傳回類型。 `Plus` 函式處理其使用 `operator+` 多載的兩個運算元。 因此，加號運算子 (+) 的解譯和 `Plus` 函式的傳回類型取決於函式引數的類型。  
+ 下列程式碼範例會宣告樣板函式 `Plus()` 的晚期指定傳回類型。 `Plus`函式會處理具有兩個運算元**operator +** 多載。 因此，加號運算子 (+) 的解譯和 `Plus` 函式的傳回類型取決於函式引數的類型。  
   
 ```cpp  
 // decltype_1.cpp  
@@ -210,4 +209,3 @@ static_assert(test2, "PASS2");
  Visual C++ 2010 (含) 以後版本。  
   
  `decltype(auto)` 需要 Visual Studio 2015 或更新版本。  
-  

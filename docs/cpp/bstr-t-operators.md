@@ -1,5 +1,5 @@
 ---
-title: _bstr_t 運算子 |Microsoft 文件
+title: _bstr_t 運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d9776579aef7ef4cd32a2fe61fd1f1758e0640
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5db61b6106d34725e2edba8b5681391c6a7147a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407980"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405677"
 ---
 # <a name="bstrt-operators"></a>_bstr_t 運算子
-如需有關資訊`_bstr_t`運算子，請參閱[_bstr_t 類別](../cpp/bstr-t-class.md)。  
+如需`_bstr_t`運算子，請參閱[_bstr_t 類別](../cpp/bstr-t-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

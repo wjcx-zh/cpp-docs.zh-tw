@@ -1,5 +1,5 @@
 ---
-title: 預設引數 |Microsoft 文件
+title: 預設引數 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409193"
 ---
 # <a name="default-arguments"></a>預設引數
 在許多情況下，函式的引數不常使用，因此使用預設值即已足夠。 為解決此問題，預設引數機能只能用於指定在特定呼叫中具有意義之函式的這些引數。 為了說明這個概念，請考慮中的範例[函式多載](../cpp/function-overloading.md)。  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,16 +40,16 @@ int print( double dvalue, int prec );  // Print a double with a
   
  許多應用程式可以提供 `prec` 適用的合理預設值，因此不需要兩個函式：  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
 //  given precision.  
 ```  
   
- 實作`print`函式會稍有變更以反映類型只能有一個這類函式存在事實**double**:  
+ 實作`print`函式已稍微變更成反映類型只有一個這類函式存在的事實**double**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  若要叫用新的 `print` 函式，請使用如下所示的程式碼：  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   預設引數僅用於忽略結尾引數的函式呼叫，這些引數必須是最後的引數。 因此，下列程式碼是不合法的：  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   即使重新定義與原始定義完全相同，之後宣告時也不能重新定義預設引數。 因此，下列程式碼會產生錯誤：  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -116,9 +117,6 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   可以對函式指標提供預設引數。 例如:   
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>另請參閱  
- 

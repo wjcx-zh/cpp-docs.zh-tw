@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940815"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401570"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C++)
 重複執行陳述式，直到條件變成 false。 如需有關範圍架構 for 陳述式，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  根據預設，底下[/Ze](../build/reference/za-ze-disable-language-extensions.md)，在宣告的變數**如**迴圈會維持在範圍中，直到**的**迴圈的封閉範圍結束。  
   
- [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)啟用標準的行為，而不需要指定 /Za 宣告於 for 迴圈的變數。  
+ [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)啟用的 for 迴圈中宣告而不需要指定變數的標準行為`/Za`。  
   
- 您也可使用的範圍差異**針對**迴圈來將變數在 /Ze 底下重新宣告，如下所示：  
+ 您也可使用的範圍差異**for**迴圈來重新宣告變數，在`/Ze`，如下所示：  
   
 ```cpp  
 // for_statement5.cpp  

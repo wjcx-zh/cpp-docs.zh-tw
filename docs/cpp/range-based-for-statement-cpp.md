@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942908"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407029"
 ---
 # <a name="range-based-for-statement-c"></a>以範圍為基礎的 for 陳述式 (C++)
 對於 `statement` 中的每個項目，重複且循序地執行 `expression`。  
@@ -25,7 +25,6 @@ ms.locfileid: "37942908"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 for ( for-range-declaration : expression )  
    statement   
 ```  
@@ -90,7 +89,6 @@ int main()
     cout << endl;  
     cout << "end of vector test" << endl;  
 }  
-  
 ```  
   
  輸出如下：  

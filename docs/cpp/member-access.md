@@ -1,5 +1,5 @@
 ---
-title: 成員存取 |Microsoft 文件
+title: 成員存取 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420078"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402363"
 ---
 # <a name="member-access"></a>成員存取
-多載成員存取運算子也可以控制類別成員存取 (**->**)。 在這種用法中，這個運算子會視為一元運算子，而多載運算子函式必須是類別成員函式。 因此，這類函式的宣告如下：  
+可以控制類別成員存取多載成員存取運算子 (**->**)。 在這種用法中，這個運算子會視為一元運算子，而多載運算子函式必須是類別成員函式。 因此，這類函式的宣告如下：  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 class-type *operator->()  
 ```  
   
 ## <a name="remarks"></a>備註  
- 其中*類別類型*是這個運算子所屬的類別的名稱。 成員存取運算子函式必須是非靜態成員函式。  
+ 何處*類別型別*是這個運算子所屬的類別的名稱。 成員存取運算子函式必須是非靜態成員函式。  
   
  這個運算子 (通常會搭配指標取值運算子) 會用來實作「智慧型指標」，這類指標會在取值或計數用法之前驗證指標。  
   

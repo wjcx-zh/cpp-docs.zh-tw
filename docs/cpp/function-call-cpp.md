@@ -1,5 +1,5 @@
 ---
-title: 函式呼叫 （c + +） |Microsoft 文件
+title: 函式呼叫 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409353"
 ---
 # <a name="function-call-c"></a>函式呼叫 (C++)
 使用括號叫用的函式呼叫運算子是二元運算子。  
@@ -33,7 +34,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
@@ -42,14 +42,14 @@ primary-expression ( expression-list )
   
  函數呼叫運算子在多載時，不會修改呼叫函式的方式；而是會修改運算子在套用到特定類別類型的物件時如何解譯。 例如，下列程式碼通常會沒有意義：  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
  但若是有適當多載的函式呼叫運算子，此語法可以用來將 `x` 座標偏移 3 個單位，`y` 座標偏移 2 個單位。 下列程式碼表示此定義：  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  

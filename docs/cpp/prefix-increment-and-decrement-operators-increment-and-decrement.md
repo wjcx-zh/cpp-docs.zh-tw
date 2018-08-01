@@ -1,5 +1,5 @@
 ---
-title: '前置遞增和遞減運算子: + + 和-|Microsoft 文件'
+title: '前置遞增和遞減運算子: + + 和-|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071f21080bd093e5cb299471c8de7009741482f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1af68c630717a71df11e4ac22b96058356354f1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409213"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>前置遞增和遞減運算子：++ 和 --
 ## <a name="syntax"></a>語法  
@@ -38,15 +39,15 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- 前置遞增運算子 (`++`) 會將其運算元加一，這個增量值是運算式的結果。 運算元必須是左值的型別不**const**。 結果會是與運算元相同類型的左值。  
+ 前置遞增運算子 (**++**) 新增至其運算元，這個增量的值是運算式的結果。 運算元必須是左值不是類型**const**。 結果會是與運算元相同類型的左值。  
   
- 前置遞減運算子 (**--**) 相當於前置遞增運算子，不同之處在於，運算元會減一且結果是這個減量值。  
+ 前置遞減運算子 (**--**) 相當於前置遞增運算子，不同之處在於，運算元會減一且結果為這個減量值。  
 
- **Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 遞增或遞減運算子的運算元不可以是型別`bool`。
+ **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 不可能是遞增或遞減運算子的運算元類型**bool**。
   
- 前置和後置遞增和遞減運算子都會影響其運算元。 它們之間的主要差異在於遞增或遞減在運算式評估中發生的順序 。 (如需詳細資訊，請參閱[後置遞增和遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)。)在前置形式中，遞增或遞減會在運算式評估中使用值之前發生，因此運算式的值會與運算元的值不同。 在後置形式中，遞增或遞減會在運算式評估中使用值之後發生，因此運算式的值會與運算元的值相同。 例如，下列程式會列印 "`++i = 6`"：  
+ 前置和後置遞增和遞減運算子都會影響其運算元。 它們之間的主要差異在於遞增或遞減在運算式評估中發生的順序 。 (如需詳細資訊，請參閱 <<c0> [ 後置遞增和遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)。)在前置形式中，遞增或遞減會在運算式評估中使用值之前發生，因此運算式的值會與運算元的值不同。 在後置形式中，遞增或遞減會在運算式評估中使用值之後發生，因此運算式的值會與運算元的值相同。 例如，下列程式會列印 "`++i = 6`"：  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -61,9 +62,9 @@ int main() {
   
  整數或浮點類型的運算元會以整數值 1 遞增或遞減。 結果的類型與運算元類型相同。 指標類型的運算元會以其定址之物件的大小遞增或遞減。 遞增指標會指向下一個物件，遞減指標則指向上一個物件。  
   
- 由於遞增和遞減運算子在使用中的遞增或遞減運算子的運算式有副作用，[前置處理器巨集](../preprocessor/macros-c-cpp.md)可以有非預期的結果。 請考量以下範例：  
+ 由於遞增和遞減運算子會有副作用，正在使用中的遞增或遞減運算子的運算式[前置處理器巨集](../preprocessor/macros-c-cpp.md)可以有非預期的結果。 請考量以下範例：  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators2.cpp  
 #define max(a,b) ((a)<(b))?(b):(a)  
   
@@ -76,7 +77,7 @@ int main()
   
  巨集會展開為：  
   
-```  
+```cpp 
 k = ((++i)<(j))?(j):(++i);  
 ```  
   

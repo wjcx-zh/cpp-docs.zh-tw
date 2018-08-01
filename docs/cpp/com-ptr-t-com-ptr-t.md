@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939067"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403822"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 專屬**  
   
- 建構 `_com_ptr_t` 物件。  
+ 建構 **_com_ptr_t**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  如果為 TRUE，`AddRef`稱為遞增封裝的介面指標的參考計數。  
   
  *cp*  
- `_com_ptr_t` 物件。  
+ A **_com_ptr_t**物件。  
   
  *p*  
- 原始的介面指標，其類型與 `_com_ptr_t` 物件的智慧型指標類型不同。  
+ 原始的介面指標，它不同的智慧型指標類型的型別 **_com_ptr_t**物件。  
   
  *varSrc*  
  `_variant_t` 物件。  

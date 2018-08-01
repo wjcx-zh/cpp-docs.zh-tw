@@ -1,5 +1,5 @@
 ---
-title: 基本概念 （c + +） |Microsoft 文件
+title: 基本概念 （c + +） |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52e1dcd3ab6697a2d4643389d1a70cda86b04f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409572"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403572"
 ---
 # <a name="basic-concepts--c"></a>基本概念 （c + +）
-本節說明了解 c + + 對很重要的概念。 C 程式設計人員會熟悉許多這些概念，但有些微的差異，可能會造成非預期的程式結果。 其中包含下列主題：  
+本節說明務必了解 c + + 的概念。 C 程式設計人員都熟悉許多這些概念，但有些微的差異，可能會導致非預期的計劃結果。 其中包含下列主題：  
   
 -   [宣告和定義](../cpp/declarations-and-definitions-cpp.md)  
   
--   [在 c + + 物件或函式的範圍](../cpp/scope-visual-cpp.md)  
+-   [C + + 物件或函式的範圍](../cpp/scope-visual-cpp.md)  
   
 -   [程式定義和連結規則](../cpp/program-and-linkage-cpp.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32409572"
   
 -   [alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)  
   
--   [簡單式 」、 標準配置和 POD 類型](../cpp/trivial-standard-layout-and-pod-types.md)  
+-   [Trivial、 標準配置和 POD 類型](../cpp/trivial-standard-layout-and-pod-types.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943019"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406249"
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
 列舉是使用者定義類型，其中包含一組具名的整數常數，稱為列舉值。  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  指派給列舉值 `Diamonds` 的值為 `1`。 後續列舉值，如果未提供其明確值，則接收前一個列舉值的值加一。 在上述範例中，`Hearts` 會有值 2，而 `Clubs` 會有 3，依此類推。  
   
- 每個列舉值會被視為常數，而且在定義 `enum` 的範圍內 (適用於不限範圍的列舉) 或在列舉本身內 (適用於限定範圍列舉) 必須有唯一名稱。 指定給名稱的值不需要是唯一的。 例如，如果不限範圍的列舉 `Suit` 宣告如下：  
+ 每個列舉值會被視為常數，而且必須具有唯一的名稱範圍內， **enum**定義 （適用於不限範圍列舉） 或內**enum**本身 （適用於限定範圍列舉）。 指定給名稱的值不需要是唯一的。 例如，如果不限範圍的列舉 `Suit` 宣告如下：  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  要轉換需要轉型**int**範圍或不限範圍的列舉值。 不過，您可以將不限範圍的列舉值提升為整數值，而不需要轉型。  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  請注意，程式行 `hand = account_num;` 仍然會導致因為不限範圍的列舉而發生的錯誤，如上所示。 使用明確轉換時，允許這個行為。 不過，使用限定範圍列舉時，不再允許在沒有明確轉型的情況下，於下一個陳述式 `account_num = Suit::Hearts;` 中嘗試轉換。 

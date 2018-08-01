@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c48da9a0ff3b9cadf0b7e228f3108277154e8417
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942978"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402880"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft 專屬**  
@@ -32,7 +32,6 @@ ms.locfileid: "37942978"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 void Attach( Interface* pInterface ) throw( );  
 void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
@@ -46,7 +45,7 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
   
 ## <a name="remarks"></a>備註  
   
--   **附加 (***pInterface***)** `AddRef`就不會呼叫。     介面的擁有權會傳遞至這個 `_com_ptr_t` 物件。 `Release` 呼叫以遞減先前封裝之指標的參考計數。  
+-   **附加 (***pInterface***)** `AddRef`就不會呼叫。 介面的擁有權會傳遞至這個 `_com_ptr_t` 物件。 `Release` 呼叫以遞減先前封裝之指標的參考計數。  
   
 -   **附加 (***pInterface* **，***fAddRef***)** 如果*fAddRef*為 TRUE， `AddRef`呼叫以遞增封裝的介面指標的參考計數。       如果*fAddRef*為 FALSE，這`_com_ptr_t`物件會取得擁有權的一般介面指標，而不需呼叫`AddRef`。 `Release` 呼叫以遞減先前封裝之指標的參考計數。  
   

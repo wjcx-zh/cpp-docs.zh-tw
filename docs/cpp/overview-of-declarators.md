@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208558"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404934"
 ---
 # <a name="overview-of-declarators"></a>宣告子概觀
 宣告子是用來指定物件或函式名稱的宣告元件。 宣告子也可將具名物件指定為物件、指標、參考或陣列。  當宣告子未指定基底類型時，會將基底類型中的類型資訊修改為指定的衍生類型，如指標、參考和陣列。  套用至函式時，宣告子會搭配類型規範，將函式的傳回類型完整指定為物件、指標或參考。 (規範，所述[宣告和定義](declarations-and-definitions-cpp.md)，傳達等型別和儲存類別屬性。 在本節中，然後在討論的修飾詞[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)，宣告子修改。)下圖顯示 `MyFunction` 的完整宣告，以及呼叫宣告的元件。  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - 指標運算子的宣告子   
   - （宣告）  
 
-  
 - 並*指標運算子*是其中一個：  
   
   - \* [cv 限定詞]  
   - & [cv 限定詞]:: 巢狀名稱規範\*[cv 限定詞]  
 
-  
  由於宣告子可能包含其他宣告子，因此可以使用上述規則建構較複雜的衍生類型 (例如指標的陣列、傳回函式指標陣列的函式)。  若要進行建構的每個步驟，可從表示基底資料類型的識別項，以及使用先前的運算式做為 `declarator`，套用上述語法規則開始。  套用語法規則的順序應該與以英文所述運算式的方式相反。  如果套用*指標運算子*語法規則的陣列或函式的運算式，會使用括號，如果您想要的指標陣列或函式，如在下表中的最後一個資料列所示。  
   
  下列範例顯示建構「10 個類型為 int 指標的陣列指標」。  

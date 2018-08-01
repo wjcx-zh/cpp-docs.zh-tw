@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942990"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407776"
 ---
 # <a name="pointers-to-members"></a>成員的指標
 成員指標宣告是特殊的指標宣告。  函式是使用下列序列宣告：  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- 在上述範例中，`pwCaption`類別的任何成員的指標`Window`具有型別**char\***。 `pwCaption` 的類型是 `char * Window::* `。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。  
+ 在上述範例中，`pwCaption`類別的任何成員的指標`Window`具有類型`char*`。 `pwCaption` 的類型是 `char * Window::* `。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  之間的差異 **。\*** 並**-> \*** 運算子 （成員指標運算子） 在於 **。\*** 運算子會選取指定物件或物件參考，而**-> \*** 運算子會選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
- 成員指標運算子的結果是成員的型別 — 在此情況下， **char \*** 。  
+ 成員指標運算子的結果是成員的型別 — 在此情況下， `char *`。  
   
  下一個程式碼片段會使用成員指標叫用 `GetCaption` 和 `SetCaption` 成員函式：  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>另請參閱  
- 

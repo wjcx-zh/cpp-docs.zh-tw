@@ -1,5 +1,5 @@
 ---
-title: constexpr c + + 中的 Lambda 運算式 |Microsoft 文件
+title: constexpr Lambda 運算式，在 c + + |Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e01f41aaf8b761020f57625e7cbf06f8fba2659
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418896"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408199"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>constexpr c + + 中的 Lambda 運算式
-**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 可能會做為宣告的 lambda 運算式`constexpr`或 contant 運算式中使用時的每個資料成員初始設定它擷取或導入了常數運算式中允許使用。  
+# <a name="constexpr-lambda-expressions-in-c"></a>constexpr Lambda 運算式，在 c + +
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): lambda 運算式可宣告為**constexpr**或常數運算式中使用時的每個初始設定它會擷取或導入的資料成員是常數運算式內允許的。  
 
 ```cpp
     int y = 32;
@@ -36,9 +36,8 @@ ms.locfileid: "32418896"
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
-Lambda 會隱含地`constexpr`如果它的結果符合需求的`constexpr`函式：
+Lambda 會以隱含方式**constexpr**如果結果符合需求**constexpr**函式：
 ```cpp
     auto answer = [](int n) 
     {
@@ -47,7 +46,7 @@ Lambda 會隱含地`constexpr`如果它的結果符合需求的`constexpr`函式
 
     constexpr int response = answer(10);
 ``` 
-如果 lambda 是隱含或明確地`constexpr`，並將它轉換成函式指標、 產生的函數也是`constexpr`:
+如果 lambda 是隱含或明確**constexpr**，並將它轉換成函式指標，產生的函數也**constexpr**:
 
 ```cpp
     auto Increment = [](int n)
@@ -59,7 +58,7 @@ Lambda 會隱含地`constexpr`如果它的結果符合需求的`constexpr`函式
 ```
   
 ## <a name="see-also"></a>另請參閱  
- [C + + 語言參考](../cpp/cpp-language-reference.md)   
+ [C++ 語言參考](../cpp/cpp-language-reference.md)   
  [C + + 標準程式庫中的函式物件](../standard-library/function-objects-in-the-stl.md)   
  [函式呼叫](../cpp/function-call-cpp.md)   
  [for_each](../standard-library/algorithm-functions.md#for_each)

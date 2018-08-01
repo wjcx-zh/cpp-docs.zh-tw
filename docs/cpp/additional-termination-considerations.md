@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54780b11e07819ca78eba89d9af5a8ba018cc9e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941245"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401804"
 ---
 # <a name="additional-termination-considerations"></a>其他終止考量
-您可以使用來終止 c + + 程式**結束**，**會傳回**，或**中止**。 您可以使用 `atexit` 函式加入結束處理。 這些將在下列章節中討論。  
+您可以使用來終止 c + + 程式`exit`，**會傳回**，或`abort`。 您可以使用 `atexit` 函式加入結束處理。 這些將在下列章節中討論。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動和終止](../cpp/startup-and-termination-cpp.md)

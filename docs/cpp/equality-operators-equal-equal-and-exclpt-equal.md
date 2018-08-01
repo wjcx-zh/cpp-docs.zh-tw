@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaf0c52cc9811e84fab026e333ee3c0808d4effd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 073e642b99dea4eb6f77fd1e79731713748f1f61
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942981"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403111"
 ---
 # <a name="equality-operators--and-"></a>等號比較運算子：== 和 !=
 ## <a name="syntax"></a>語法  

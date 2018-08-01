@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f78a122837fc2cb9a89083d5be8fd2b488c1772
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939220"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401478"
 ---
 # <a name="main-program-startup"></a>main：程式啟動
-名為的特殊函式`main`是執行所有的 C 和 c + + 程式的起點。 如果您要撰寫的程式碼遵守 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 程式設計模型，您可以使用 `wmain` (寬字元版本的 `main`)。  
+名為的特殊函式**主要**是執行所有的 C 和 c + + 程式的起點。 如果您是撰寫程式碼遵守[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]程式設計模型，您可以使用`wmain`，這是寬字元版本**主要**。  
   
- 編譯器不會預先定義 `main` 函式。 必須在程式文字中提供這個函式。  
+ **主要**函式不會預先定義的編譯器。 必須在程式文字中提供這個函式。  
   
- `main` 的宣告語法是  
+ 宣告語法**主要**是  
   
 ```cpp 
 int main();  
@@ -59,9 +59,9 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- 您也可以使用在 TCHAR.h 中定義的 `_tmain`。 除非定義 _UNICODE，否則 `_tmain` 會解析成 `main`。 在此情況下，`_tmain` 會解析成 `wmain`。  
+ 您也可以使用在 TCHAR.h 中定義的 `_tmain`。 `_tmain` 會解析成**主要**除非定義 _UNICODE。 在此情況下，`_tmain` 會解析成 `wmain`。  
   
- 或者，`main`並`wmain`函式可以宣告為傳回**void** （沒有傳回值）。 如果您宣告`main`或是`wmain`傳回**void**，您也無法使用父處理序或作業系統傳回的結束代碼[傳回](../cpp/return-statement-in-program-termination-cpp.md)陳述式。 要傳回的結束代碼時`main`或是`wmain`宣告為**void**，您必須使用[結束](../cpp/exit-function.md)函式。  
+ 或者，**主要**並`wmain`函式可以宣告為傳回**void** （沒有傳回值）。 如果您宣告**主要**或是`wmain`傳回**void**，您也無法使用父處理序或作業系統傳回的結束代碼[傳回](../cpp/return-statement-in-program-termination-cpp.md)陳述式。 傳回結束代碼時**主要**或是`wmain`宣告為**void**，您必須使用[結束](../cpp/exit-function.md)函式。  
   
 **結束 Microsoft 專屬**  
  `argc` 和 `argv` 的類型是由語言定義。 `argc`、`argv` 和 `envp` 都是傳統名稱，但編譯器不需使用。 如需詳細資訊和範例，請參閱 <<c0> [ 引數定義](../cpp/argument-definitions.md)。  

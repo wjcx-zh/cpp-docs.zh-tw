@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8890a128ff625ead27ef34be6d057e879b22a5f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943015"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402730"
 ---
 # <a name="anonymous-class-types"></a>匿名類別類型
 可以是匿名的類別 — 也就是它們可以宣告沒有*識別碼*。 這是很有用，當您取代類別名稱取代**typedef**名稱，如下所示：  
@@ -101,4 +101,3 @@ int main()
 ```  
   
 **結束 Microsoft 專屬**  
-  

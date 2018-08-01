@@ -1,5 +1,5 @@
 ---
-title: 逗號運算子:，|Microsoft 文件
+title: 逗號運算子:，|Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8533012a921cbfb2861bcc7e1c5f2a6de81aadd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409183"
 ---
 # <a name="comma-operator-"></a>逗號運算子：,
 允許將兩個陳述式設為群組，其中一個是必要項。  
@@ -28,7 +29,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 expression , expression  
 ```  
   
@@ -41,11 +41,11 @@ expression , expression
   
  *e1* ， *e2*  
   
- 類型和值的運算式是類型和值*e2*; 的評估結果*e1*會被捨棄。 如果右運算元是左值，則結果會是左值。  
+ 型別和運算式的值是類型和值*e2*; 評估的結果*e1*會被捨棄。 如果右運算元是左值，則結果會是左值。  
   
  逗號通常做為分隔符號使用 (例如，在函式的實際引數中或彙總初始設定式中)，而逗號運算子及其運算元必須以括號括住。 例如:   
   
-```  
+```cpp 
 func_one( x, y + 2, z );  
 func_two( (x--, y + 2), z );  
 ```  
@@ -54,7 +54,7 @@ func_two( (x--, y + 2), z );
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // cpp_comma_operator.cpp  
 #include <stdio.h>  
 int main () {  

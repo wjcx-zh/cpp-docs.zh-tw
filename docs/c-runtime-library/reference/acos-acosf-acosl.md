@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392766"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401934"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -67,34 +67,34 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*<br/>
-介於-1 和 1，這是要計算反餘弦 （反餘弦） 之間的值。
+*x*  
+值介於-1 和 1，要計算反餘弦 (inverse cosine)。
 
 ## <a name="return-value"></a>傳回值
 
-**Acos**函式會傳回的反餘弦*x*中介於範圍 0 到 π 弧度為單位。
+**Acos**函式會傳回的反餘弦*x*中範圍介於 0 到 π 弧度為單位。
 
-根據預設，如果*x*小於-1 或大於 1， **acos**傳回無限期。
+根據預設，如果*x*小於-1 或大於 1， **acos**傳回不定。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± ∞|**無效**|**_DOMAIN**|
-|± QNAN、IND|無|**_DOMAIN**|
-|&#124;x&#124;>1|**無效**|**_DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN、IND|無|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**acos**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **acos**一律採用並傳回**double**。
+因為 c + + 允許多載，您可以呼叫多載**acos**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **acos**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**acos**， **acosf**， **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>範例
 
-此程式會提示範圍介於 -1 到 1 的值。 在這個範圍之外輸入的值不會產生 **_DOMAIN**錯誤訊息。 如果輸入有效的值，則程式會列印該值的反正弦值及反餘弦值。
+此程式會提示範圍介於 -1 到 1 的值。 輸入此範圍外的值會產生 `_DOMAIN` 錯誤訊息。 如果輸入有效的值，則程式會列印該值的反正弦值及反餘弦值。
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>另請參閱
 
-[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[asin、asinf、asinl](asin-asinf-asinl.md)<br/>
-[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos、cosf、cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin、sinf、sinl](sin-sinf-sinl.md)<br/>
-[tan、tanf、tanl](tan-tanf-tanl.md)<br/>
+[浮點支援](../../c-runtime-library/floating-point-support.md)  
+[asin、asinf、asinl](asin-asinf-asinl.md)  
+[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos、cosf、cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin、sinf、sinl](sin-sinf-sinl.md)  
+[tan、tanf、tanl](tan-tanf-tanl.md)  

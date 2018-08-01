@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4bf56e87b8b7949048b1e6006d3aa32f00af1462
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940988"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404255"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Microsoft 專屬**  
@@ -31,13 +31,11 @@ ms.locfileid: "37940988"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 void AddRef( );  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 呼叫`IUnknown::AddRef`封裝的介面指標，E_POINTER 錯誤才增加指標為 NULL。  
+ 呼叫`IUnknown::AddRef`封裝的介面指標，引發`E_POINTER`指標為 NULL 時的錯誤。  
   
  **結束 Microsoft 專屬**  
   

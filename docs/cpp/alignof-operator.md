@@ -1,5 +1,5 @@
 ---
-title: __alignof 運算子 |Microsoft 文件
+title: __alignof 運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,22 +22,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6a7ab2eb5f33db2a62e745756971ee29f84c25c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408823"
 ---
 # <a name="alignof-operator"></a>__alignof 運算子
-C++11 引進 `alignof` 運算子，以傳回所指定類型的對齊 (位元組)。 若要獲得最高可攜性，您應該使用 alignof 運算子，而不是 Microsoft-specific __alignof 運算子。  
+C++11 引進**alignof**運算子，傳回的對齊方式，以位元組為單位指定的型別。 若要獲得最高可攜性，您應該使用 alignof 運算子，而不是 Microsoft-specific __alignof 運算子。  
   
- **Microsoft 特定的**  
+ **Microsoft 專屬**  
   
- 傳回值的型別**size_t**也就是類型的對齊需求。  
+ 傳回值的型別`size_t`也就是類型的對齊需求。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
   __alignof( type )
 ```  
   
@@ -47,33 +48,33 @@ C++11 引進 `alignof` 運算子，以傳回所指定類型的對齊 (位元組)
 |運算式|值|  
 |----------------|-----------|  
 |**__alignof( char )**|1|  
-|**__alignof （短整數）**|2|  
+|**__alignof （短）**|2|  
 |**__alignof (int)**|4|  
 |**__alignof( \__int64 )**|8|  
-|**__alignof (float)**|4|  
+|**__alignof （浮點數）**|4|  
 |**__alignof( double )**|8|  
 |**__alignof( char\* )**|4|  
   
- `__alignof` 值與基本類型之 `sizeof` 的值相同。 不過，請考慮這個範例：  
+ **__Alignof**的值相同`sizeof`適用於基本類型。 不過，請考慮這個範例：  
   
-```  
+```cpp 
 typedef struct { int a; double b; } S;  
 // __alignof(S) == 8  
 ```  
   
- 在這個案例中，`__alignof` 值是結構中最大項目的對齊需求。  
+ 在此情況下， **__alignof**值是最大的項目在結構中的對齊需求。  
   
  同樣地，針對  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; } S;  
 ```  
   
  `__alignof(S)` 等於 `32`。  
   
- `__alignof` 的其中一種用法會是做為您其中一個記憶體配置常式的參數。 例如，假設有下列定義的結構 `S`，您可以呼叫名為 `aligned_malloc` 的記憶體配置常式，至特定對齊界限上配置記憶體。  
+ 用法之一 **__alignof**會做為其中一個您自己的記憶體配置常式的參數。 例如，假設有下列定義的結構 `S`，您可以呼叫名為 `aligned_malloc` 的記憶體配置常式，至特定對齊界限上配置記憶體。  
   
-```  
+```cpp 
 typedef __declspec(align(32)) struct { int a; double b; } S;  
 int n = 50; // array size  
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));  
@@ -95,7 +96,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   

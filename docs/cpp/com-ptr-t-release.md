@@ -17,28 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a8a734eae486ca5e88009301b13d71b21473d9f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c5da56c3c85c17bcd2cd91f9fa5a5f8399e9528
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939252"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404271"
 ---
 # <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Microsoft 專屬**  
   
- 呼叫`Release`成員函式`IUnknown`上封裝的介面指標。  
+ 呼叫**Release**成員函式`IUnknown`上封裝的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 void Release( );  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 呼叫`IUnknown::Release`封裝的介面指標，E_POINTER 錯誤才增加此介面的指標為 NULL。  
+ 呼叫`IUnknown::Release`封裝的介面指標，引發`E_POINTER`錯誤，如果此介面的指標為 NULL。  
   
  **結束 Microsoft 專屬**  
   

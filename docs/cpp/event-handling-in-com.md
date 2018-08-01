@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942703"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406863"
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件處理
 在 COM 事件處理中，您將設定使用事件來源和事件接收器[event_source](../windows/event-source.md)並[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `com`. 這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。  
   
 ## <a name="declaring-events"></a>宣告事件  
- 在 事件來源類別中，使用[__event](../cpp/event.md)在介面宣告來宣告介面的方法，做為事件的關鍵字。 當您以介面方法呼叫它們時，會引發該介面的事件。 事件介面的方法可以有零個或多個參數 (應該都是`in`參數)。 傳回型別可為 void 或任何整數類型。  
+ 在 事件來源類別中，使用[__event](../cpp/event.md)在介面宣告來宣告介面的方法，做為事件的關鍵字。 當您以介面方法呼叫它們時，會引發該介面的事件。 事件介面的方法可以有零個或多個參數 (應該都是*在*參數)。 傳回型別可為 void 或任何整數類型。  
   
 ## <a name="defining-event-handlers"></a>定義事件處理常式  
  在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。 COM 事件的呼叫慣例不需要相符;請參閱[版面配置相依的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)如下如需詳細資訊。  

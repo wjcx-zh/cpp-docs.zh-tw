@@ -1,5 +1,5 @@
 ---
-title: 已被取代 （c + +） |Microsoft 文件
+title: 已被取代 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -17,29 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ec2506b406166ac5316de4724db27a6cd7ffcc1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3efc793e5030fa86c3bd1214ef4b8b408361a4ef
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409083"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及何時使用與 Microsoft 專有 declspec 或 pragma，該屬性的指導方針請參閱[c + + 標準屬性](attributes.md)。
+本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及與 Microsoft 專有 declspec 或 pragma，該屬性的使用時機的指引請參閱[c + + 標準屬性](attributes.md)。
 
- 下面，例外狀況**取代**宣告可提供相同的功能[已被取代](../preprocessor/deprecated-c-cpp.md)pragma:  
+ 例外狀況，如下所示**過時**宣告可提供相同的功能[已被取代](../preprocessor/deprecated-c-cpp.md)pragma:  
   
--   **取代**宣告可讓您指定特定形式的函式多載，為已被取代，而 pragma 形式會套用至所有的多載形式的函式名稱。  
+-   **已被取代**宣告可讓您指定特定形式的函式多載，為已被取代，而 pragma 形式套用至所有的多載形式的函式名稱。  
   
--   **取代**宣告可讓您指定將會在編譯時期顯示的訊息。 訊息的文字可以來自巨集。  
+-   **已被取代**宣告可讓您指定將在編譯時期顯示的訊息。 訊息的文字可以來自巨集。  
   
--   巨集，才可以標示為已被取代的**取代**pragma。  
+-   巨集，才可以標示為使用已被取代**已被取代**pragma。  
   
- 如果編譯器遇到取代識別項或標準使用[ `[[deprecated]]` ](attributes.md)屬性[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告就會擲回。  
+ 如果編譯器遇到使用已被取代的識別項或標準[ `[[deprecated]]` ](attributes.md)屬性[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告就會擲回。  
   
 ## <a name="example"></a>範例  
  下列範例將示範使用 deprecated 函式時，如何將函式標示為取代以及如何指定要在編譯時期顯示的訊息。  
   
-```  
+```cpp 
 // deprecated.cpp  
 // compile with: /W3  
 #define MY_TEXT "function is deprecated"  
@@ -59,7 +60,7 @@ int main() {
 ## <a name="example"></a>範例  
  下列範例將示範使用 deprecated 類別時，如何將類別標示為取代以及如何指定要在編譯時期顯示的訊息。  
   
-```  
+```cpp 
 // deprecate_class.cpp  
 // compile with: /W3  
 struct __declspec(deprecated) X {  

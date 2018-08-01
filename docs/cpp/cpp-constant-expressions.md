@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026698"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408108"
 ---
 # <a name="c-constant-expressions"></a>C++ 常數運算式
 A*常數*值是指不會變更。 C++ 提供兩個關鍵字，以讓您表示不要修改物件的意圖，以及施行該意圖。  
@@ -53,7 +53,7 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-在常數運算式中明確轉換成整數類資料類型是合法的，所有其他類型和衍生類型都不合法，但做為 `sizeof` 運算子的運算元使用時除外。  
+明確轉換成整數類資料類型是合法的常數運算式;所有其他類型和衍生型別是除了時做為運算元不合法**sizeof**運算子。  
   
 逗號運算子和指派運算子不能在常數運算式中使用。  
   

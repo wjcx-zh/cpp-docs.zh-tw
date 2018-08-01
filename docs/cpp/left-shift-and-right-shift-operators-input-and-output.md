@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 50a177468795ae0e288910fa51192d9cc9a24502
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939724"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403150"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;並&lt; &lt;)
 位元移位運算子是右移位運算子 (>>)，會將位元*shift 運算式*右側，和左移運算子 (<<)，會將位元的*shift 運算式*左邊。 <sup>1</sup>  
@@ -66,7 +66,6 @@ int main() {
     bitset<16> bitset3{short3};  
     cout << bitset3 << endl;  // 0000000000010000  
 }  
-  
 ```  
   
  如果將帶正負號的數字左移，以影響正負號位元，結果會是未定義。 下列範例示範在 Visual C++ 中將一個 1 位元左移到帶正負號位元位置時的情況。  

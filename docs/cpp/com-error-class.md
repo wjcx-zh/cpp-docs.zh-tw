@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026630"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407757"
 ---
 # <a name="comerror-class"></a>_com_error 類別
 **Microsoft 專屬**  
   
- A`_com_error`物件表示偵測到的錯誤處理包裝函式產生自類型程式庫標頭檔中或其中一個 COM 支援類別的例外狀況。 `_com_error`類別會封裝的 HRESULT 錯誤碼和任何相關聯`IErrorInfo Interface`物件。  
+ A **_com_error**物件表示偵測到的錯誤處理包裝函式產生自類型程式庫標頭檔中或其中一個 COM 支援類別的例外狀況。 **_Com_error**類別會封裝的 HRESULT 錯誤碼和任何相關聯`IErrorInfo Interface`物件。  
   
 ### <a name="construction"></a>建構  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|建構 `_com_error` 物件。|  
+|[_com_error](../cpp/com-error-com-error.md)|建構 **_com_error**物件。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|將現有的 `_com_error` 物件指派給另一個物件。|  
+|[operator =](../cpp/com-error-operator-equal.md)|指派的現有 **_com_error**到另一個物件。|  
   
 ### <a name="extractor-functions"></a>擷取程式函式  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026630"
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|擷取字串訊息的 HRESULT 儲存`_com_error`物件。|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|擷取字串訊息的 HRESULT 儲存 **_com_error**物件。|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode HRESULT 對應程式  
   

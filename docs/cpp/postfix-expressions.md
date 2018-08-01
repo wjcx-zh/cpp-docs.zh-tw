@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943023"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403137"
 ---
 # <a name="postfix-expressions"></a>後置運算式
 後置運算式包含主要運算式，或後置運算子後面接著主要運算式的運算式。 下表列出後置運算子。  
@@ -34,13 +34,12 @@ ms.locfileid: "37943023"
 |[函式呼叫運算子](../cpp/function-call-operator-parens.md)|**( )**|  
 |[明確類型轉換運算子](../cpp/explicit-type-conversion-operator-parens.md)|*類型名稱* **（)**|  
 |[成員存取運算子](../cpp/member-access-operators-dot-and.md)|**.** 或 **->**|  
-|[後置遞增運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[後置遞增運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[後置遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  下列語法描述可能的後置陳述式：  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 上述運算式中，func 是一個主要運算式，func(1) 是一個函式後置運算式，func(1)->GetData 是指定類別成員的後置陳述式，func(1)->GetData() 是另一個函式後置運算式，然後，整個運算式是一個會將 GetData 傳回值遞增的後置陳述式。  整個運算式的意義是傳遞 1 做為呼叫 func 的引數，並取得類別的指標做為傳回值。  然後呼叫該類別的 GetValue()，再將傳回的值遞增。  
+ 在上述運算式中，`func`是主要運算式中，`func(1)`是函式後置運算式`func(1)->GetData`是後置運算式，指定類別的成員`func(1)->GetData()`是另一個函式後置運算式，並將整個運算式是遞增 GetData 傳回值的後置運算式。  整個運算式的意義是傳遞 1 做為呼叫 func 的引數，並取得類別的指標做為傳回值。  然後呼叫`GetValue()`該類別，然後傳回的值遞增。  
   
  以上列出的運算式為指派運算式，表示這些運算式的結果必須是右值。  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- 上述程式會宣告接受兩個引數的函式 `print`。 不過，第二個引數 `terminator` 的預設值為 `"\n"`。 在 `main`前, 兩個呼叫`print`允許預設第二個引數提供新的一行，來終止列印的字串。 第三個呼叫會為第二個引數指定明確的值。 程式的輸出為  
+ 上述程式會宣告接受兩個引數的函式 `print`。 不過，第二個引數*結束字元*，預設值為`"\n"`。 在 `main`前, 兩個呼叫`print`允許預設第二個引數提供新的一行，來終止列印的字串。 第三個呼叫會為第二個引數指定明確的值。 程式的輸出為  
   
 ```Output 
 hello,  

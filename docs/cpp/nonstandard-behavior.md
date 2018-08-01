@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941794"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405375"
 ---
 # <a name="nonstandard-behavior"></a>非標準行為
 以下各節列出 C++ 的 Visual C++ 實作與 C++ 標準不一致的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。  
@@ -67,7 +67,6 @@ int main() {
     g('c');  
 }  
 // Output: f(char)  
-  
 ```  
   
 ## <a name="function-exception-specifiers"></a>函式例外狀況規範  
@@ -81,7 +80,7 @@ void g() throw();    // parsed and used
  如需有關例外狀況規格的詳細資訊，請參閱[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)。  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，但不適用於類型`wchar_t`。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。  
+ C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，而不是用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。  
   
 ```cpp  
 #include <iostream>  

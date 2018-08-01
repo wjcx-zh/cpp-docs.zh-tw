@@ -1,5 +1,5 @@
 ---
-title: _bstr_t 成員函式 |Microsoft 文件
+title: _bstr_t 成員函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 848d4a09c0422a09d62e7e6c6e3324dd4b9d2aac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a6fd3b9959e6c029a6a0b670771e6671404739b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408188"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404131"
 ---
 # <a name="bstrt-member-functions"></a>_bstr_t 成員函式
-如需有關資訊`_bstr_t`成員函式，請參閱[_bstr_t 類別](../cpp/bstr-t-class.md)。  
+如需`_bstr_t`成員函式，請參閱[_bstr_t 類別](../cpp/bstr-t-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

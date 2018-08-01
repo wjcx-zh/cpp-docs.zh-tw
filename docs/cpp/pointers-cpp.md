@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aa741a794d0e6735ae2cecea07a87481abc18cec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942863"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404105"
 ---
 # <a name="pointers-c"></a>指標 （c + +）
 指標是使用下列序列宣告。  
@@ -32,7 +32,7 @@ ms.locfileid: "37942863"
 [ms-modifier] declarator ;  
 ```  
   
- 其中可能會使用 `declarator` 的任何有效的指標宣告子。  簡單指標宣告子的語法如下：  
+ 其中可能會使用 `declarator` 的任何有效的指標宣告子。 簡單指標宣告子的語法如下：  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -249,8 +249,7 @@ int main() {
 ```  
   
 ```Output  
-  
-      a  
+a  
 45  
 d  
 a  

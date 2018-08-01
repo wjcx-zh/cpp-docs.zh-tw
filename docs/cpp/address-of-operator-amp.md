@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958581"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406002"
 ---
 # <a name="address-of-operator-amp"></a>傳址運算子： &amp;
 ## <a name="syntax"></a>語法  
@@ -37,7 +37,7 @@ ms.locfileid: "38958581"
   
  傳址運算子僅適用於基本、結構、類別或等位型別是在檔案範圍層級宣告的變數，或是註標的陣列參考。 在這些運算式中，未包含傳址運算子的常數運算式可以在傳址運算式中進行加法或減法運算。  
   
- 套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為類型**char**，運算式的結果屬於類型指標**char**。 傳址運算子套用至**const**或是**volatile**物件，會評估為**const 類型\*** 或**volatile 類型\*** ，其中**型別**是原始物件的型別。  
+ 套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為類型**char**，運算式的結果屬於類型指標**char**。 傳址運算子套用至**const**或是**volatile**物件，會評估為`const type *`或`volatile type *`，其中**類型**是原始的型別物件。  
   
  當傳址運算子套用到限定名稱時，結果會取決於是否*限定名稱*指定靜態成員。 如果是，則結果為成員宣告中所指定類型的指標。 如果在成員不是靜態的結果是成員的指標*名稱*所表示的類別*限定類別名稱*。 (請參閱[主要運算式](../cpp/primary-expressions.md)如需詳細資訊*限定類別名稱*。)下列程式碼片段將示範成員是否為靜態的結果差異：  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,7 +109,7 @@ int main() {
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 25  
 ```  
   

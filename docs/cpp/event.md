@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942883"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407821"
 ---
 # <a name="event"></a>__event
 宣告事件。  
@@ -31,7 +31,6 @@ ms.locfileid: "37942883"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  請參閱[原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)範例程式碼。  
   
 ## <a name="com-events"></a>COM 事件  
- COM 事件是介面。 在 事件來源介面方法的參數應該是`in`參數 （但這不會嚴格強制執行），因為`out`參數不是多點傳送時很有用。 如果您使用，就會發出層級 1 警告`out`參數。  
+ COM 事件是介面。 在 事件來源介面方法的參數應該是*中*參數 （但這不會嚴格強制執行），因為*出*參數不是多點傳送時很有用。 如果您使用，就會發出層級 1 警告*出*參數。  
   
  傳回的型別通常是 HRESULT 或**void**，但可以是任何整數類型，包括**enum**。 當事件使用整數傳回型別且事件處理常式傳回非零值時，會是錯誤條件，在此情況下，所引發的事件會中止呼叫其他委派。 請注意，編譯器會自動將標示為事件來源介面[來源](../windows/source-cpp.md)所產生的 IDL 中。  
   

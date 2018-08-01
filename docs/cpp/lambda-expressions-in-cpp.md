@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941963"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402961"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 在 C + + 11 和更新版本，lambda 運算式，通常稱為*lambda*— 是方便的方式定義匿名函式物件的 ( *closure*) 的位置，它會在此叫用，或做為引數傳遞函式。 Lambda 通常用來封裝要傳遞給演算法或非同步方法的數行程式碼。 本文定義什麼是 Lambda、Lambda 與其他程式設計技術的比較、描述 Lamdba 的優點並提供基本範例。  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  下圖顯示 Lambda 的組件：  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- 若要在類別方法主體中使用 Lambda 運算式，請將 `this` 指標傳遞給擷取子句，以提供對封入類別之方法和資料成員的存取。 
+ 若要使用類別方法的主體中的 lambda 運算式，傳遞**這**給擷取子句，以提供存取封入類別的方法和資料成員的指標。 
  
 **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**這**指標可能傳值方式擷取，藉由指定`*this`capture 子句中。 表示整個值，藉以擷取*closure*，這是匿名函式物件，該 encapulates lambda 運算式，會複製到每個呼叫站台，會在叫用 lambda。 值，藉以擷取時，lambda 將執行中的平行或非同步作業，尤其是在特定硬體架構，例如 NUMA。 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  在  **c + + 14**，如果參數類型是泛型，您可以使用 auto 關鍵字做為類型指定名稱。 這會告訴編譯器建立函式呼叫運算子做為樣板。 參數清單中的每個 auto 執行個體都相當於不同的類型參數。  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Lambda 會以隱含方式`constexpr`如果結果符合需求的`constexpr`函式：
 ```cpp

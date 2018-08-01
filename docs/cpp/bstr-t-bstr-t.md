@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ba2935dcec7863e43c0dd6a0a4e55ee5c4f3d28d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941261"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401642"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Microsoft 專屬**  
@@ -81,7 +81,7 @@ _bstr_t(
 |`_bstr_t( char*`  `s2`  `)`|透過呼叫 `_bstr_t` 建構 `SysAllocString` 以建立新的 `BSTR` 物件並加以封裝。<br /><br /> 這個建構函式會先執行多位元組對 Unicode 的轉換。|  
 |`_bstr_t( wchar_t*`  `s3`  `)`|透過呼叫 `_bstr_t` 建構 `SysAllocString` 以建立新的 `BSTR` 物件並加以封裝。|  
 |`_bstr_t( _variant_t&`  `var`  `)`|先從封裝的 VARIANT 物件擷取 `_bstr_t` 物件，以從 `_variant_t` 物件建構 `BSTR` 物件。|  
-|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|從現有的 `_bstr_t` 建構 `BSTR` 物件 (而非 `wchar_t*` 字串)。 如果 `fCopy` 是 false，則供應的 `BSTR` 會附加至新的物件，而不使用 `SysAllocString` 製作新複本。<br /><br /> 類型程式庫標題中的包裝函式會使用此建構函式封裝，並取得以介面方法傳回之 `BSTR` 的擁有權。|  
+|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|從現有的 `_bstr_t` 建構 `BSTR` 物件 (而非 `wchar_t*` 字串)。 如果*fCopy*為 false，提供`BSTR`會附加至新的物件，而不建立新的複本與`SysAllocString`。<br /><br /> 類型程式庫標題中的包裝函式會使用此建構函式封裝，並取得以介面方法傳回之 `BSTR` 的擁有權。|  
   
  **結束 Microsoft 專屬**  
   

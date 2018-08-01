@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b3c4592255c56aae6bc4d959757164fd9c11f2a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940195"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407805"
 ---
 # <a name="algorithms-modern-c"></a>演算法 (現代 C++)
 對於現代 c + + 程式設計，我們建議您使用中的演算法[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。 以下是一些重要的範例：  
@@ -69,14 +69,14 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ### <a name="range-based-for-loops"></a>範圍架構的 for 迴圈  
  以範圍為基礎**針對**迴圈是 C + + 11 語言功能，而不是 c + + 標準程式庫演算法。 但是，有必要需迴圈在此討論中的提及。 範圍架構**for**迴圈是的延伸模組**的**關鍵字並提供便利且有效率的方式，來逐一查看值範圍的迴圈重複寫入。 C + + 標準程式庫容器、 字串和陣列是現成可供範圍架構**針對**迴圈。 若要啟用您的使用者定義型別，這個新的反覆項目語法，加入下列支援：  
   
--   A**開始**方法會傳回迭代器至結構開頭並**結束**方法會傳回迭代器至結構結尾。  
+-   A`begin`方法會傳回迭代器至結構開頭和`end`傳回迭代器至結構結尾的方法。  
   
 -   在這些方法的迭代器的支援: * * 運算子 ***運算子 ！ =**，並**operator + +** （前置版本）。  
   
  這些方法可以是成員或獨立函式。  
   
 ## <a name="random-numbers"></a>隨機數字  
- 大家，舊的 CRT **rand （)** 函式已有已長時間的討論中 c + + 社群中的許多缺點。 在現代 c + + 中，您不需要處理這些缺點，也不必發明自己統一分佈亂數產生器，因為中所示的工具，快速且輕鬆地建立這些c++標準程式庫，可用[\<隨機 >](../standard-library/random.md)。  
+ 大家，舊的 CRT`rand()`函式已有已長時間的討論中 c + + 社群中的許多缺點。 在現代 c + + 中，您不需要處理這些缺點，也不必發明自己統一分佈亂數產生器，因為中所示的工具，快速且輕鬆地建立這些c++標準程式庫，可用[\<隨機 >](../standard-library/random.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   

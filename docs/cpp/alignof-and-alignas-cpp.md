@@ -1,5 +1,5 @@
 ---
-title: alignof 和 alignas （c + +） |Microsoft 文件
+title: alignof 和 alignas （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407978"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402412"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
-`alignas` 類型規範是可攜性的 C++ 標準方式，用來指定變數和使用者定義類型的自訂對齊方式。 `alignof` 運算子同樣是標準的可攜性方式，用來取得指定類型或變數的對齊方式。  
+**Alignas**類型規範，以指定的變數和使用者定義類型的自訂對齊方式的可攜性，c + + 標準方式。 **Alignof**運算子同樣是標準的可移植的方式，來取得指定的類型或變數的對齊方式。  
   
 ## <a name="example"></a>範例  
- 您可以對類別、結構或等位，或個別成員使用 `alignas`。 當遇到多個 `alignas` 規範時，編譯器會選擇最嚴格的一個 (具有最大值者)。  
+ 您可以使用**alignas**對類別、 結構或等位，或個別成員。 當多個**alignas**遇到規範時，編譯器會選擇最嚴格的一個 （最大值）。  
   
 ```cpp  
 // alignas_alignof.cpp

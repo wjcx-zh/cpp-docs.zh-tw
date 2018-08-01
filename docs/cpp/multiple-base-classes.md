@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955461"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406187"
 ---
 # <a name="multiple-base-classes"></a>多個基底類別
 類別可以衍生自多個基底類別。 在多重繼承模型中 （類別衍生自多個基底類別），使用指定的基底類別*基底清單*文法項目。 例如，可以指定衍生自 `CollectionOfBook` 和 `Collection` 的 `Book` 類別宣告：  
@@ -97,9 +97,9 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 > [!NOTE]
 >  與使用非虛擬繼承相比較，使用虛擬繼承在大小方面提供相當大的優勢。 不過，它可能會增加額外的處理負擔。  
   
- 如果衍生類別會覆寫從虛擬基底類別繼承的虛擬函式，且衍生基底類別的建構函式或解構函式使用虛擬基底類別的指標呼叫函式，編譯器可能會在內含虛擬基底的類別中採用額外的隱藏 [vtordisp] 欄位。 /vd0 編譯器選項會抑制隱藏 vtordisp 建構函式/解構函式替代成員的加入。 /vd1 編譯器選項 (預設值) 會在必要時啟用它們。 請只有在您確定所有類別建構函式和解構函式都會實際呼叫虛擬函式時，才關閉 vtordisps。  
+ 如果衍生類別會覆寫從虛擬基底類別繼承的虛擬函式，且衍生基底類別的建構函式或解構函式使用虛擬基底類別的指標呼叫函式，編譯器可能會在內含虛擬基底的類別中採用額外的隱藏 [vtordisp] 欄位。 `/vd0`編譯器選項會抑制隱藏的 vtordisp 建構函式/解構函式替代成員。 `/vd1`編譯器選項，預設值，可讓它們不需要。 請只有在您確定所有類別建構函式和解構函式都會實際呼叫虛擬函式時，才關閉 vtordisps。  
   
- /vd 編譯器選項會影響整個編譯模組。 使用**vtordisp**隱藏並再重新啟用 vtordisp 欄位的類別為基礎的 pragma:  
+ `/vd`編譯器選項會影響整個編譯模組。 使用`vtordisp`隱藏並再重新啟用的 pragma`vtordisp`類別的類別為基礎的欄位：  
   
 ```cpp 
 #pragma vtordisp( off )  

@@ -1,5 +1,5 @@
 ---
-title: extern （c + +） |Microsoft 文件
+title: extern （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.reviewer: ''
@@ -24,27 +24,27 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b9f94d02443163f45b83d64702fe49622597cd
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 133cbb01ba54ccc8bc0ce0c31b5d7b4436c2488d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261056"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403039"
 ---
 # <a name="extern-c"></a>extern （c + +）
 
-**Extern**關鍵字套用至全域變數、 函式或樣板宣告來指定該動作的名稱有*外部連結*。 如需連結和為什麼使用全域變數，否則不建議的背景資訊，請參閱[程式和連結](program-and-linkage-cpp.md)。
+**Extern**關鍵字是否套用至指定的名稱具有全域變數、 函式或樣板宣告*外部連結*。 如需連結和為什麼使用全域變數，否則不建議的背景資訊，請參閱[程式和連結](program-and-linkage-cpp.md)。
 
 **Extern**關鍵字有四個意義視內容而定：
 
-1. 在非 const 全域變數宣告中， **extern**指定變數或函式在另一個轉譯單位中定義。 **Extern**必須套用以外所有檔案會定義變數中。
-1. 在 const 變數宣告中，它會指定該變數具有外部連結。 **Extern**必須套用到所有的檔案中的所有宣告。 （全域 const 變數會具有內部連結的預設值）。
-1. **extern"C"** 指定其他位置定義的函式，並使用 C 語言的呼叫慣例。 Extern"C"修飾詞也可套用至多個區塊中的函式宣告。
-1. 在樣板宣告中，它會指定的範本已經產生其他位置。 這是告訴編譯器，它可以重複使用其他具現化，而不是建立一個新的目前位置的最佳化。 如需有關這種使用**extern**，請參閱[範本](templates-cpp.md)。
+1. 在非 const 全域變數宣告中， **extern**指定變數或函式在另一個轉譯單位中定義。 **Extern**必須套用在其中定義的變數以外所有的檔案。
+1. 在 const 變數宣告中，它會指定該變數具有外部連結。 **Extern**必須套用到所有的檔案中的所有宣告。 （全域的 const 變數會具有內部連結的預設值）。
+1. **extern"C"** 指定函式在其他地方定義，並使用 C 語言的呼叫慣例。 Extern"C"修飾詞也可能會套用至多個區塊中的函式宣告。
+1. 在範本宣告中，它會指定，範本已經產生其他位置。 這是會告知編譯器，它可以重複使用其他具現化，而不是建立一個新的目前位置的最佳化。 如需有關此善用**extern**，請參閱[範本](templates-cpp.md)。
 
-## <a name="extern-linkage-for-non-const-globals"></a>外部連結的非 const 全域變數
+## <a name="extern-linkage-for-non-const-globals"></a>非 const 的全域的外部連結
 
-當連結器會看到**extern**全域變數宣告之前，它會尋找其他轉譯單位中定義。 在全域範圍的非 const 變數的宣告式預設為外部。僅適用於**extern**不提供定義宣告。
+當連結器看到**extern**全域變數宣告之前，它會尋找另一個轉譯單位中的定義。 在全域範圍的非 const 變數的宣告式預設為外部;僅適用於**extern**不提供定義宣告。
 
 ```cpp
 //fileA.cpp
@@ -61,9 +61,9 @@ int i = 43; // LNK2005! 'i' already has a definition.
 extern int i = 43; // same error (extern is ignored on definitions)
 ```
 
-## <a name="extern-linkage-for-const-globals"></a>外部連結的 const 全域變數
+## <a name="extern-linkage-for-const-globals"></a>const 的全域變數的外部連結
 
-A **const**預設全域變數具有內部連結。 如果您想要有外部連結的變數，適用於**extern**關鍵字來定義以及對於其他檔案中的所有其他宣告：
+A **const**預設全域變數具有內部連結。 如果您想要具有外部連結的變數時，套用**extern**關鍵字加入定義以及其他檔案中的所有其他宣告有關：
 
 ```cpp
 //fileA.cpp
@@ -73,15 +73,15 @@ extern const int i = 42; // extern const definition
 extern const int i;  // declaration only. same as i in FileA
 ```
 
-## <a name="extern-constexpr-linkage"></a>外部 constexpr 連結
+## <a name="extern-constexpr-linkage"></a>extern constexpr 連結
 
-在 Visual Studio 2017 15.3 或更早版本，編譯器一律會讓 constexpr 變數內部連結即使標示為 extern 變數。 在 Visual Studio 2017 15.5 版中，新的編譯器參數 ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)) 讓行為可正確且符合標準。 這最後終究會成為預設值。
+在 Visual Studio 2017 15.3 和更早版本，編譯器一律會指定 constexpr 變數內部連結即使變數已標示為 extern。 在 Visual Studio 2017 15.5 版中，新的編譯器參數 ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)) 讓行為可正確且符合標準。 這最後終究會成為預設值。
 
 ```cpp
 extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 ```
 
-如果標頭檔包含變數的宣告的 extern constexpr，應標記為 **__declspec （selectany)** 才能正確地結合其重複宣告：
+如果標頭檔包含變數的宣告的 extern constexpr，它必須標示 **__declspec （selectany)** 才能正確地合併其重複宣告：
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
@@ -89,13 +89,13 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"C + +"函式宣告
 
- C + + 中為字串，搭配使用時**extern**指定使用宣告子使用另一種語言的慣例。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。
+ C + + 中為字串，搭配使用時**extern**指定另一種語言的連接慣例用於宣告子使用。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。
 
- Microsoft c + + 支援字串 **"C"** 和 **"C + +"** 中*字串常值*欄位。 所有標準，包括檔案使用**extern** "C"語法，以允許用於 c + + 程式中的執行階段程式庫函式。
+ Microsoft c + + 支援字串 **"C"** 並 **「 c + +"** 中*字串常值*欄位。 所有標準，包括檔案使用**extern** "C"語法，以允許使用 c + + 程式中的執行階段程式庫函式。
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何宣告具有 C 連結的名稱：
+下列範例示範如何宣告具有 C 連結的名稱：
 
 ```cpp
 // Declare printf with C linkage.
@@ -148,9 +148,8 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>另請參閱
-
-- [關鍵字](../cpp/keywords-cpp.md)
-- [程式和連結](program-and-linkage-cpp.md)
-- [extern C 中的儲存類別規範](../c-language/extern-storage-class-specifier.md) 
-- [在 C 中的識別項的行為](../c-language/behavior-of-identifiers.md) 
-- [在 C 中的連結](../c-language/linkage.md)
+ [關鍵字](../cpp/keywords-cpp.md)  
+ [程式和連結](program-and-linkage-cpp.md)  
+ [extern 儲存類別規範 c](../c-language/extern-storage-class-specifier.md)  
+ [在 C 中的識別項的行為](../c-language/behavior-of-identifiers.md)  
+ [在 C 中的連結](../c-language/linkage.md)

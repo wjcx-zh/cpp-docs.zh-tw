@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Attach |Microsoft 文件
+title: _bstr_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb114a33d3ac356bff16aeab47b8d894b7513e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9f69811b7b25a793d11ef6d53aaf0638c752a11
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409103"
 ---
 # <a name="bstrtattach"></a>_bstr_t::Attach
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  將 `_bstr_t` 包裝函式連結至 `BSTR`。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      void Attach(  
+void Attach(  
    BSTR s  
 );  
 ```  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>範例  
  請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)的使用範例**附加**。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

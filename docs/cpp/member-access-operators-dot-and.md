@@ -1,5 +1,5 @@
 ---
-title: 成員存取運算子:。 和-&gt; |Microsoft 文件
+title: 成員存取運算子:。 和-&gt; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408783"
 ---
 # <a name="member-access-operators--and--gt"></a>成員存取運算子:。 和-&gt;
 ## <a name="syntax"></a>語法  
@@ -39,18 +40,18 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>備註  
- 成員存取運算子**。** 和**->** 用來參考結構、 等位和類別的成員。 成員存取運算式具有選定成員的值和類型。  
+ 成員存取運算子 **。** 並**->** 用來參考的結構、 等位和類別成員。 成員存取運算式具有選定成員的值和類型。  
   
  成員存取運算式有兩種形式：  
   
-1.  在第一種形式，*後置運算式*代表結構、 類別或等位型別，值和*名稱*指定的結構、 等位或類別的成員命名。 作業的值是*名稱*如果是左值和*後置運算式*是左值。  
+1.  在第一個表單中，*後置運算式*代表值的結構、 類別或等位型別，並*名稱*指定的結構、 等位或類別的成員命名。 作業的值是*名稱*和是左值，如果*後置運算式*是左值。  
   
-2.  在第二個表單中，*後置運算式*結構、 等位或類別，代表的指標和*名稱*指定的結構、 等位或類別的成員命名。 值是*名稱*而且是左值。 **->** 運算子會取值指標。 因此，運算式 *e***->**`member`和 **(\****e***)**。`member` (其中*e*代表的指標) 產生相同的結果 (除非運算子**->** 或**\*** 經過多載)。  
+2.  在第二個表單中，*後置運算式*代表結構、 等位或類別的指標並*名稱*指定的結構、 等位或類別的成員命名。 值是*名稱*，而且是左值。 **->** 運算子會取值指標。 因此，運算式 *e***->**`member`和 **(\****e***)**。`member` (其中*e*代表的指標) 產生相同的結果 (除非運算子**->** 或**\*** 經過多載)。  
   
 ## <a name="example"></a>範例  
  下列範例示範成員存取運算子的兩種形式。  
   
-```  
+```cpp 
 // expre_Selection_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  

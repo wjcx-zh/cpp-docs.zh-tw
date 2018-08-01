@@ -1,5 +1,5 @@
 ---
-title: 運算式中的陣列 |Microsoft 文件
+title: 運算式中的陣列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3e57a97d9be3ef6245c09c6112caf72318fe784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b792bc02cf620cbd961830a99e35ae0c61898fed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409343"
 ---
 # <a name="arrays-in-expressions"></a>運算式中的陣列
-當陣列型別的識別項會出現在運算式中以外`sizeof`，傳址 (**&**)，或初始化的參考，它會轉換成第一個陣列元素的指標。 例如:   
+當陣列型別的識別項出現在運算式中以外`sizeof`，傳址 (**&**)，或初始化的參考，則會轉換成第一個陣列元素的指標。 例如:   
   
-```  
+```cpp 
 char szError1[] = "Error: Disk drive not ready.";  
 char *psz = szError1;  
 ```  
   
  指標 `psz` 會指向陣列 `szError1` 的第一個元素。 請注意，陣列 (和指標不同) 不是可修改的左值。 因此，下列指派是不合法的：  
   
-```  
+```cpp 
 szError1 = psz;  
 ```  
   

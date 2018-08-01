@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::length |Microsoft 文件
+title: _bstr_t::length |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2979b9db6fc7b36d8f0d5581ae9397acf65b6977
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc853ce15a8c7cfdbe67a3469f33189e89e55c3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409133"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403335"
 ---
 # <a name="bstrtlength"></a>_bstr_t::length
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  在 `_bstr_t` 中傳回封裝 `BSTR` 的字元數目，不計結束的 null 字元。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 unsigned int length ( ) const throw( );  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

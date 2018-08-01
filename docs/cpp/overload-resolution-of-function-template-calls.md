@@ -1,5 +1,5 @@
 ---
-title: 函式樣板呼叫的多載解析 |Microsoft 文件
+title: 函式樣板呼叫的多載解析 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d4a0e2867c5057eb5808c4d39687961eabba6dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62041f78af18d6ac2f521fea763a11bb2859fbf5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420024"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401921"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>函式樣板呼叫的多載解析
-函式樣板可以多載相同名稱的非樣板函式。 在這種情節中，函式呼叫會先使用樣板引數推算解析，以具現化具有唯一特製化的函式樣板。 如果樣板引數推算失敗，才會考慮使用其他函式多載解析呼叫。 這些其他多載也稱為候選集合，包括非樣板函式和其他具現化的函式樣板。 如果樣板引數推算成功，則會依照多載解析的規則將產生的函式與其他函式進行比較，以判斷最符合的項目。 如需詳細資訊，請參閱[函式多載](function-overloading.md)。  
+函式樣板可以多載相同名稱的非樣板函式。 在這種情節中，函式呼叫會先使用樣板引數推算解析，以具現化具有唯一特製化的函式樣板。 如果樣板引數推算失敗，才會考慮使用其他函式多載解析呼叫。 這些其他多載也稱為候選集合，包括非樣板函式和其他具現化的函式樣板。 如果樣板引數推算成功，則會依照多載解析的規則將產生的函式與其他函式進行比較，以判斷最符合的項目。 如需詳細資訊，請參閱 <<c0> [ 函式多載](function-overloading.md)。  
   
 ## <a name="example"></a>範例
 
@@ -90,7 +90,5 @@ void f(T1, T2)
 ```  
   
 ## <a name="see-also"></a>另請參閱
-
  [名稱解析](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- 

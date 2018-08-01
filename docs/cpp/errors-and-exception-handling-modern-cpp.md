@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939736"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407230"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
 在現代 c + +，在大部分情況下，報告和處理邏輯錯誤和執行階段錯誤的慣用的方法是使用例外狀況。 堆疊可能包含數個函式呼叫之間偵測到錯誤的函式和函式具有要知道如何處理它的內容時，這是特別有用。 例外狀況會提供正式、 明確定義方法的程式碼來偵測錯誤的呼叫堆疊資訊傳遞出去。  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外狀況是如果封鎖*擲回*會*攔截*之第一個相關聯**攔截**其類型符合該區塊例外狀況。 換句話說，執行會從跳**擲回**陳述式來**攔截**陳述式。 如果找不到任何可用的 catch 區塊，`std::terminate`叫用並結束程式。 在 c + +，任何型別可能會擲回;不過，我們建議您擲回直接或間接衍生自類型`std::exception`。 在上一個範例中，例外狀況型別[invalid_argument](../standard-library/invalid-argument-class.md)中的標準程式庫中定義[ \<stdexcept> >](../standard-library/stdexcept.md)標頭檔。 C + + 不提供，而且不需要，**最後**區塊以確保如果發生例外狀況時釋放所有資源。 「 資源擷取是初始化 (RAII) 慣用語，其使用智慧型指標，提供必要的功能資源清除。 如需詳細資訊，請參閱 <<c0> [ 如何： 例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。 如需 c + + 堆疊回溯機制的資訊，請參閱[例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。  
@@ -97,7 +96,7 @@ int main()
  例外狀況和判斷提示會在程式中偵測到執行階段錯誤的兩個不同機制。 使用判斷提示，不應為 true，如果您的程式碼是正確的開發期間，測試條件。 沒有任何點在處理這類錯誤就使用例外狀況，因為此錯誤表示在程式碼中的項目，必須加以修正，並不代表程式必須在執行階段從復原的條件。 判斷提示會停止執行的陳述式，因此您可以檢查偵錯工具; 中的程式狀態例外狀況會繼續執行，從第一個適當的 catch 處理常式。 使用例外狀況檢查可能發生在執行階段中，即使您的程式碼是正確的比方說，「 找不到檔案 」 或 「 記憶體不足。 」 的錯誤狀況 您可能想要復原這些情況中，即使復原只是將訊息輸出至記錄檔，並結束程式。 使用例外狀況，一律檢查公用函式的引數。 即使您的函式是無錯誤，您可能沒有使用者可能會傳遞給它的引數的完整控制權。  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>與 Windows SEH 例外狀況的 c + + 例外狀況  
- C 和 c + + 程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中。 SEH 的概念類似 c + + 例外狀況，不同之處在於會使用 SEH `__try`， `__except`，和`__finally`而不是建構**試**並**攔截**。 Visual c + +，c + + 例外狀況是針對 SEH 實作。 不過，當您撰寫 c + + 程式碼時，使用 c + + 例外狀況語法。  
+ C 和 c + + 程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中。 SEH 的概念類似 c + + 例外狀況，不同之處在於會使用 SEH **__try**， **__except**，並 **__finally**而不是建構**嘗試**並**攔截**。 Visual c + +，c + + 例外狀況是針對 SEH 實作。 不過，當您撰寫 c + + 程式碼時，使用 c + + 例外狀況語法。  
   
  如需 SEH 的詳細資訊，請參閱[Structured Exception Handling （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)。  
   

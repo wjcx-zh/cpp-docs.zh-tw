@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408963"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子:。* 和 -&gt;*
 ## <a name="syntax"></a>語法  
@@ -36,9 +37,9 @@ expression ->* expression
 ```  
   
 ## <a name="remarks"></a>備註  
- 成員指標運算子。 * and->\*，傳回指定運算式的左側的物件的特定類別成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：  
+ 成員指標運算子。 * 和->\*，傳回指定運算式的左邊的物件的特定類別成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -89,16 +90,16 @@ m_func1
   
  二元運算子 .* 會將其第一個運算元 (該運算元必須是類別類型的物件) 與其第二個運算元 (該運算元必須是成員指標類型) 結合。  
   
- 二元運算子-> * 結合其第一個運算元必須是類別類型的物件的指標與第二個運算元必須是成員指標類型。  
+ 二元運算子-> * 結合其第一個運算元必須是類別類型物件的指標使用其第二個運算元，必須是成員指標類型。  
   
  在包含 .* 運算子的運算式中，第一個運算元必須是第二個運算元中所指定成員指標本身所屬且可存取的類別類型，或是該類別所明確衍生且可存取的類型。  
   
- 在運算式中包含-> * 運算子的第一個運算元必須類型的 「 類別類型指標 」 類型指定在第二個運算元，或它必須類型的明確衍生自該類別。  
+ 在運算式中包含-> * 運算子的第一個運算元的類型的 「 類別類型的指標 」 類型中必須指定第二個運算元，或必須是類型的明確衍生自該類別。  
   
 ## <a name="example"></a>範例  
  以下列類別和程式碼片段為例：  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -134,11 +135,10 @@ int main() {
 }  
 ```  
   
- 結果。 * 或->\*成員指標運算子是物件或函式的成員指標宣告中指定的型別。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。  
+ 結果。 * 或->\*成員指標運算子是物件或成員指標宣告中指定之類型的函式。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。  
   
 > [!NOTE]
 >  如果其中一個成員指標運算子的結果是函式，則結果只能做為函式呼叫運算子的運算元使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

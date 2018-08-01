@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966931"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406779"
 ---
 # <a name="explicit-type-conversion-operator-"></a>明確類型轉換運算子：()
 C++ 允許使用類似函式呼叫的語法進行明確的類型轉換。  
@@ -108,15 +108,12 @@ d = float( i );
  使用「轉換」語法也可以指定明確類型轉換。 上述範例若是使用轉換語法重新撰寫則會如下所示：  
   
 ```cpp
-
 d = (float)i;  
-
 ```  
   
  從單一值進行轉換時，轉換和函式樣式轉換的結果相同。 不過，在函式樣式語法中，您可以在轉換時指定一個以上的引數。 這項差異對於使用者定義的類型而言是很重要的。 請考慮 `Point` 類別及其轉換：  
   
 ```cpp
-
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -125,7 +122,6 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-
 ```
   
  上述範例中，使用函式樣式轉換，其中示範如何將兩個值 (一個用於*x* ，另一個用於*y*) 使用者定義型別`Point`。  

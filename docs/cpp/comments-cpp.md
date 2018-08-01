@@ -1,5 +1,5 @@
 ---
-title: 註解 （c + +） |Microsoft 文件
+title: 註解 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919c40dce53dd5d1c8847287099c61c3e1b229cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411750"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405054"
 ---
 # <a name="comments-c"></a>註解 （c + +）
-註解是會被編譯器忽略，但對程式設計人員而言很有用的文字。 註解通常用來標註程式碼供未來參考。 編譯器會將它們視為空白字元。 您可以使用在測試中的註解，讓特定的程式碼行未啟用;不過， `#if` / `#endif`效果更好，前置處理器指示詞，因為您可以圍繞包含註解的程式碼，但是您無法巢狀註解。  
+註解是會被編譯器忽略，但對程式設計人員而言很有用的文字。 註解通常用來標註程式碼供未來參考。 編譯器會將它們視為空白字元。 您可以使用在測試中的註解來停用特定行程式碼;不過， `#if` / `#endif`效果更好，前置處理器指示詞，這因為您可以圍繞包含註解的程式碼，但您無法巢狀註解。  
   
  C++ 註解以下列其中一種方式撰寫：  
   

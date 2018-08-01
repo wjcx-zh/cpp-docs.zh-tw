@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7d7c9ccf70286040d06e7e01400299b806157e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 07e05e3a1c1b25e87053e15244f3c5fb9db442d9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940970"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404157"
 ---
 # <a name="nullptr"></a>nullptr
 指定類型為 `std::nullptr_t` 的 Null 指標常數，此指標常數可以轉換成任何原始指標類型。  雖然您可以使用關鍵字**nullptr**不含任何標頭中，如果您的程式碼會使用型別`std::nullptr_t`，則您必須定義它所包含的標頭`<cstddef>`。  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5fe9e5c1099f6c30483cdb20c48daf9c35fbed8e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942840"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404973"
 ---
 # <a name="aliases-and-typedefs-c"></a>別名和 typedef (C++)
 您可以使用*別名宣告*宣告先前宣告的類型使用的同義字的名稱。 (這項機制也非正式地稱為*類型別名*)。 您也可以使用這項機制來建立*別名範本*，可能會特別適用於自訂配置器。  
@@ -31,10 +31,10 @@ using identifier = type;
 ```  
   
 ## <a name="remarks"></a>備註  
- `identifier`  
+ *identifier*  
  別名的名稱。  
   
- `type`  
+ *type*  
  您要建立別名的類型識別項。  
   
  別名不會引入新的類型，而且無法變更現有類型名稱的意義。  
@@ -177,7 +177,6 @@ int main()
 // typedef UL back in scope  
 ```  
  
-  
 ```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  

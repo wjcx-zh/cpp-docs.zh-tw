@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 677d3dcab98b9bff8df7a49ba584900bd0b72925
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942847"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407214"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Microsoft 專屬**  
@@ -31,7 +31,6 @@ ms.locfileid: "37942847"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
@@ -68,7 +67,7 @@ HRESULT CreateInstance(
 ## <a name="remarks"></a>備註  
  這些成員函式會呼叫 `CoCreateInstance` 建立新的 COM 物件，然後查詢這個智慧型指標的介面類型。 然後產生的指標就會封裝在這個 `_com_ptr_t` 物件內。 `Release` 呼叫以遞減先前封裝之指標的參考計數。 此常式會傳回指出成功或失敗的 HRESULT。  
   
--   **CreateInstance (***rclsid* **，***dwClsContext***)** 會建立新的執行個體，指定的物件`CLSID`.        
+-   **CreateInstance (***rclsid* **，***dwClsContext***)** 會建立新的執行個體，指定的物件`CLSID`.  
   
 -   **CreateInstance (***clsidString* **，***dwClsContext***)** 建立指定之物件的新執行個體Unicode 字串，其中保存`CLSID`(開頭為"**{**") 或`ProgID`。        
   

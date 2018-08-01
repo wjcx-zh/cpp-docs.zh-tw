@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943043"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403465"
 ---
 # <a name="class-member-overview"></a>類別成員概觀
 類別或結構包含其成員。 類別所執行的工作是由其成員函式執行。 它所維護的狀態會儲存在其資料成員中。 初始化成員由建構函式，並清除工作，例如釋放的記憶體和資源的釋放是解構函式。 在 C++11 和更新版本中，可以 (且通常應該) 在宣告時初始化資料成員。  
@@ -124,7 +124,6 @@ int TestRun::_instances{ 0 };
  在 C++11 和更新版本中，非靜態成員宣告子可以包含初始設定式。  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  

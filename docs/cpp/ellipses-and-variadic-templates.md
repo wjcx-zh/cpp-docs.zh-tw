@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941001"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402942"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略符號和 Variadic 範本
 這篇文章示範如何使用省略符號 (`...`) 與 c + + variadic 範本。 省略符號已在 C 和 c + + 中的許多用途。 這些包括函式的變數引數清單。 `printf()` C 執行階段程式庫函式是眾所皆知的範例之一。  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  請注意，本文使用第一個範例中顯示的慣例 (省略符號附加至 `typename`)。  
   
- 在前述範例中，`Arguments` 是參數封裝。 此類別`classname`可以接受變動數目的引數，如下列範例所示：  
+ 在上述範例中，*引數*是參數封裝。 此類別`classname`可以接受變動數目的引數，如下列範例所示：  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  藉由使用 variadic 樣板類別定義，您也可以要求至少一個參數：  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  以下是基本的範例*variadic 樣板函式*語法：  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- `Arguments`下一節所示，供使用，然後展開參數封裝**了解 variadic 範本**。  
+ *引數*下一節所示，供使用，然後展開參數封裝**了解 variadic 範本**。  
   
  可能會有其他形式的 variadic 樣板函式語法，包括但不是限於這些範例：  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  為使用 variadic 樣板類別定義，您可以進行需要至少一個參數的函式：  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  使用 Variadic 樣板`sizeof...()`運算子 (不相關的舊版`sizeof()`運算子):  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>進一步了解省略符號位置  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>輸出  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  合併 variadic 樣板函式的大部分實作會使用遞迴的某種形式，但它是與傳統遞迴稍有不同。  傳統遞迴涉及使用相同的簽章來呼叫本身函式。 （可能是多載或設為範本，但每次都會選擇相同的簽章）。Variadic 遞迴包含使用不同 （幾乎一定會減少） 的數字的引數，並藉此戳記不同的簽章每次呼叫 variadic 函式樣板。 「 基底案例 」 仍需要，但遞迴性質不同。  
-  

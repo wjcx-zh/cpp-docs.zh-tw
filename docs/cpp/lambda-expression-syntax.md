@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938937"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405038"
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 運算式語法
 本文示範 Lambda 運算式的語法和結構化項目。 如需 lambda 運算式的說明，請參閱 < [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>註解  
  在範例中，第三個引數**for_each**函式是 lambda。 `[&evenCount]` 組件指定運算式的擷取子句、`(int n)` 指定參數清單，而其餘組件則指定運算式的主體。  
   
 ## <a name="example-2-using-a-function-object"></a>範例 2：使用函式物件  
- 有時候，Lambda 的靈巧度較差，因此擴充程度無法超越上一個範例。 下一個範例中使用而不是 lambda、 函式物件搭配**for_each**函式，以產生與範例 1 相同的結果。 這兩個範例都會將偶數計數儲存在 `vector` 物件中。 為了維護作業的狀態，`FunctorClass` 類別會以傳址方式儲存 `m_evenCount` 變數做為成員變數。 `FunctorClass` 會實作函式呼叫運算子 `operator()` 以執行此作業。 Visual C++ 編譯器會產生與範例 1. 中 Lambda 程式碼大小和效能相當的程式碼。 就本文所述此類基礎問題而言，較簡單的 Lambda 設計應該比函式物件的設計好。 不過，如果您認為未來可能會需要大幅擴充，那麼使用函式物件設計會讓程式碼較容易維護。  
+ 有時候，Lambda 的靈巧度較差，因此擴充程度無法超越上一個範例。 下一個範例中使用而不是 lambda、 函式物件搭配**for_each**函式，以產生與範例 1 相同的結果。 這兩個範例都會將偶數計數儲存在 `vector` 物件中。 為了維護作業的狀態，`FunctorClass` 類別會以傳址方式儲存 `m_evenCount` 變數做為成員變數。 若要執行的作業，`FunctorClass`實作的函式呼叫運算子**operator （)**。 Visual C++ 編譯器會產生與範例 1. 中 Lambda 程式碼大小和效能相當的程式碼。 就本文所述此類基礎問題而言，較簡單的 Lambda 設計應該比函式物件的設計好。 不過，如果您認為未來可能會需要大幅擴充，那麼使用函式物件設計會讓程式碼較容易維護。  
   
- 如需詳細資訊`operator()`，請參閱 <<c2> [ 函式呼叫](../cpp/function-call-cpp.md)。 如需詳細資訊**for_each**函式中，請參閱[for_each](../standard-library/algorithm-functions.md#for_each)。  
+ 如需詳細資訊**operator （)**，請參閱[函式呼叫](../cpp/function-call-cpp.md)。 如需詳細資訊**for_each**函式中，請參閱[for_each](../standard-library/algorithm-functions.md#for_each)。  
   
 ### <a name="code"></a>程式碼  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>輸出  
@@ -166,7 +164,6 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940114"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407968"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：例外狀況和非例外狀況代碼之間的介面
 本文說明如何在 C++ 模組實作一致的例外狀況處理，以及如何將這些例外狀況與在例外狀況界限上的錯誤碼來回轉譯。  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>從非例外狀況程式碼呼叫例外狀況程式碼  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  當您將例外狀況轉換為錯誤碼時，一個可能發生的問題是錯誤碼通常不包含例外狀況可以儲存的豐富資訊。 若要解決此問題，您可以提供**攔截**區塊的每個特定的例外狀況類型可能會擲回，並執行它轉換為錯誤碼之前記錄例外狀況的詳細資料。 這種方法可以建立許多重複的程式碼，如果多個函式都會使用相同的一組**攔截**區塊。 若要避免重複的程式碼的好方法是重構這些區塊至一個私用公用程式函式實作**嘗試**並**攔截**區塊，以及接受中會叫用的函式物件**嘗試**區塊。 在每個公用函式，將程式碼做為 Lambda 運算式傳遞至這個公用程式函式。  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  下列範例顯示如何撰寫定義仿函式的 Lambda 運算式。 當仿函式用 Lambda 運算式「內嵌」定義時，通常比寫入為具名函式物件更為容易讀取。  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  

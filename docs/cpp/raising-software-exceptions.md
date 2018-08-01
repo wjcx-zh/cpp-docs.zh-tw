@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942973"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405184"
 ---
 # <a name="raising-software-exceptions"></a>引發軟體例外狀況
 某些常見的程式錯誤來源是系統未標示為例外狀況。 例如，如果您嘗試配置記憶體區塊，但是沒有足夠的記憶體，執行階段或 API 函式不會引發例外狀況，而是傳回錯誤碼。  
@@ -60,7 +60,7 @@ ms.locfileid: "37942973"
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
- 定義例外狀況代碼之後，就可以用它來引發例外狀況。 例如，下列代碼會引發 STATUS_INSUFFICIENT_MEM 例外狀況，以回應記憶體配置問題：  
+ 定義例外狀況代碼之後，就可以用它來引發例外狀況。 例如，下列程式碼會引發`STATUS_INSUFFICIENT_MEM`例外狀況以回應記憶體配置問題：  
   
 ```cpp 
 lpstr = _malloc( nBufferSize );  

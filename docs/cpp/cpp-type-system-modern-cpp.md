@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027270"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407857"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 概念*型別*c + + 中非常重要。 每個變數、函式引數和函式傳回值都必須有類型才能編譯。 此外，在評估之前，編譯器會以隱含的方式指定每一個運算式 (包括常值) 的類型。 類型的一些範例包括**int**可儲存整數值， **double**可儲存浮點數值 (也稱為*純量*資料類型)，或標準程式庫類別[std:: basic_string](../standard-library/basic-string-class.md)來儲存文字。 您可以建立您自己的類型定義**類別**或是**結構**。 此類型會指定配置給變數 (或運算式結果) 的記憶體數量、可在該變數中存放的值種類、這些值 (位元模式) 的解譯方式，以及可對其執行的作業。 本文包含 C++ 類型系統主要功能的簡略概觀。  
@@ -41,7 +41,6 @@ ms.locfileid: "39027270"
  下列範例示範一些簡單的變數宣告，這些宣告各有一些描述。 這個範例也會示範編譯器如何使用類型資訊允許或不允許對變數進行某些後續作業。  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>基本 (內建) 類型  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  **Const**限定詞廣泛使用在函式和變數宣告和 「 常數正確性 」 是 c + + 中的重要概念; 基本上就是使用**const**確保該值在編譯時期，值不會無意間遭到修改。 如需詳細資訊，請參閱 < [const](../cpp/const-cpp.md)。  
   
- A **const**型別會區別其非 const 版本; 比方說，`const int`是從不同的型別**int**。您可以使用 c + + **const_cast**運算子，在這些極少數的情況下，當您必須移除*const 性質*變數中。 如需詳細資訊，請參閱 <<c0> [ 型別轉換和類型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。  
+ A **const**型別會區別其非 const 版本; 比方說， **const int**是不同的型別，從**int**。您可以使用 c + + **const_cast**運算子，在這些極少數的情況下，當您必須移除*const 性質*變數中。 如需詳細資訊，請參閱 <<c0> [ 型別轉換和類型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)。  
   
 ## <a name="string-types"></a>字串類型  
- 嚴格來說，c + + 語言有沒有內建字串型別;**char**並`wchar_t`儲存單一字元-您必須宣告的近似的字串，這些型別陣列加入結尾的 null 值 (例如，ASCII `'\0'`) 的陣列項目的其中一個過去的最後一個有效字元 (也稱為*C 樣式字串*)。 C-Style 字串需要撰寫更多程式碼或使用外部字串公用程式庫函式。 在現代 c + + 中，我們有標準程式庫類型，但是`std::string`(8 位元**char**-輸入字元字串) 或`std::wstring`(用於 16 位元`wchar_t`-輸入字元字串)。 這些 c + + 標準程式庫容器可以視為原生字串類型因為它們是包含在任何相容的 c + + 建置環境中的標準程式庫的一部分。 只要使用 `#include <string>` 指示詞，即可在您的程式中使用這些類型。 (如果您正在使用 MFC 或 ATL，CString 類別也是可用的，但是它不是 C++ 標準的一部分)。強烈建議您不要在現代 C++ 中使用以 null 終止的字元陣列 (舊稱 C-Style 字串)。  
+ 嚴格來說，c + + 語言有沒有內建字串型別;**char**並**wchar_t**儲存單一字元-您必須宣告的近似的字串，這些型別陣列加入結尾的 null 值 (例如，ASCII `'\0'`) 給其中一個陣列元素過去的最後一個有效的字元 (也稱為*C 樣式字串*)。 C-Style 字串需要撰寫更多程式碼或使用外部字串公用程式庫函式。 在現代 c + + 中，我們有標準程式庫類型，但是`std::string`(8 位元**char**-輸入字元字串) 或`std::wstring`(用於 16 位元**wchar_t**-輸入字元字串)。 這些 c + + 標準程式庫容器可以視為原生字串類型因為它們是包含在任何相容的 c + + 建置環境中的標準程式庫的一部分。 只要使用 `#include <string>` 指示詞，即可在您的程式中使用這些類型。 (如果您正在使用 MFC 或 ATL，CString 類別也是可用的，但是它不是 C++ 標準的一部分)。強烈建議您不要在現代 C++ 中使用以 null 終止的字元陣列 (舊稱 C-Style 字串)。  
   
 ## <a name="user-defined-types"></a>使用者定義類型  
  當您定義**類別**，**結構**， **union**，或**列舉**，如同它是基本類型，您的程式碼的其餘部分都會使用該建構. 它在記憶體中的大小已知，而且套用了有關其在編譯時間檢查、執行階段和程式存留期之使用方式的特定規則。 基本內建類型和使用者定義類型之間的主要差異如下：  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  您首先應該知道的事就是，宣告原始指標變數時只會配置，在儲存該指標在被取值時所參考之記憶體位置位址時所需的記憶體。 資料值本身的記憶體配置 (也稱為*備份存放區*) 尚未配置。 換句話說，宣告原始指標變數，即是在建立記憶體位址變數，而不是實際資料變數。 在確定變數包含可用於備份存放區的有效位址之前就先取值指標變數，會導致程式中產生未定義的行為 (通常是嚴重錯誤)。 下列範例示範這種錯誤：  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  這個範例會對指標類型取值，但不配置任何記憶體的來儲存指派給它的實際整數資料或有效記憶體位址。 下列程式碼示範這些錯誤：  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  更正的程式碼範例會使用本機堆疊記憶體，建立 `pNumber` 所指向的備份存放區。 我們為了簡單起見使用基本類型。 在實務上，指標的備份存放區是大部分通常的使用者定義型別，會以動態方式配置的記憶體稱為區域*堆積*(或*可用存放區*) 使用**新**關鍵字 (在 c-style 程式設計中，較舊`malloc()`C 執行階段程式庫函式)。 配置之後，這些變數通常稱為物件，特別是當它們所根據的類別定義。 配置與記憶體**新**必須有對應來刪除**刪除**陳述式 (或者，如果您使用`malloc()`函式配置，C 執行階段函式`free()`)。  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  不過，很容易忘記刪除動態配置物件-尤其是在複雜的程式碼，這會造成資源 bug，稱為*記憶體流失*。 因此，強烈建議您不要在現代 C++ 使用原始指標。 最好是幾乎都在原始指標包裝[智慧型指標](../cpp/smart-pointers-modern-cpp.md)，（當程式碼超出智慧型指標的範圍），則會叫用其解構函式; 時，這將會自動釋放記憶體使用智慧型指標您幾乎排除了整個類別的 c + + 程式中的 bug。 下列範例中，假設 `MyClass` 是具有公用方法 `DoSomeWork();` 的使用者定義類型  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  如需智慧型指標的詳細資訊，請參閱[智慧型指標](../cpp/smart-pointers-modern-cpp.md)。  

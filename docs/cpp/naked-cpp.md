@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942680"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402492"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft 專屬**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  編譯器無法產生內嵌函式標記為 naked 屬性中，函式，即使函式也標記著[__forceinline](inline-functions-cpp.md)關鍵字。  
 
-  
  編譯器會發出錯誤，如果**naked**屬性會套用至非成員方法定義以外的任何項目。  
   
 ## <a name="examples"></a>範例  

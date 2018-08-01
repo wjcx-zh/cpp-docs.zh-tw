@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942920"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406964"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -30,7 +30,7 @@ ms.locfileid: "37942920"
   
  這種 **__declspec**可以套用至任何類別宣告，但應該只會套用至純介面類別，也就是將不會自行執行個體化的類別。 **__Declspec**讓編譯器產生建構函式和類別的解構函式中初始化 vfptr 的程式碼停止。 在大部分情況下，這樣只能移除與類別相關的 vtable 參考，因此連結器會將它移除。 使用這種 **__declspec**可能會導致大幅縮小程式碼大小。  
   
- 如果您嘗試將標記為 `novtable` 的類別執行個體化，然後存取類別成員，您會收到存取違規 (AV)。  
+ 如果您嘗試具現化類別，以標示**novtable**然後存取類別成員，您會收到存取違規 (AV)。  
   
 ## <a name="example"></a>範例  
   

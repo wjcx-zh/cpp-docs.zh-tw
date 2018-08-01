@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f073f82114c2d58b6d4d94bfeb35048b9e676c45
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942993"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405531"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>評估 Catch 區塊的方式 (C++)
 C++ 可讓您擲回任何類型的例外狀況，不過，一般建議擲回衍生自 std::exception 的類型。 ，就可以攔截 c + + 例外狀況**攔截**指定相同的型別，擲回的例外狀況，或由可攔截任何類型的例外狀況處理常式的處理常式。  

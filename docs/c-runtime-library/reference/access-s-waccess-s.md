@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82390f7afe45b48539fb5c33130900ef75cf1967
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392087"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403299"
 ---
 # <a name="accesss-waccesss"></a>_access_s、_waccess_s
 
@@ -66,27 +66,27 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>參數
 
-*path*<br/>
+*path*  
 檔案或目錄路徑。
 
-*mode*<br/>
+*mode*  
 權限設定。
 
 ## <a name="return-value"></a>傳回值
 
-如果檔案有指定模式，每個函式都會傳回 0。 如果具名檔案不存在或無法在指定模式中存取，則函式會傳回錯誤碼。 在此情況下，函式，如下所示，從集合傳回錯誤碼，也會設定**errno**為相同的值。
+如果檔案有指定模式，每個函式都會傳回 0。 如果具名檔案不存在或無法在指定模式中存取，則函式會傳回錯誤碼。 在此情況下，函式會如下所示從集合傳回錯誤代碼，也會將 `errno` 設為相同的值。
 
 |errno 值|條件|
 |-|-|
-**EACCES**|存取遭拒。 檔案的權限設定不允許指定的存取。
-**ENOENT**|找不到檔案名稱或路徑。
-**EINVAL**|無效的參數。
+`EACCES`|存取遭拒。 檔案的權限設定不允許指定的存取。
+`ENOENT`|找不到檔案名稱或路徑。
+`EINVAL`|無效的參數。
 
 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-當搭配檔案 **_access_s**函式會判斷指定的檔案是否存在，且無法做為存取的值所指定*模式*。 當搭配目錄 **_access_s**只會判斷指定的目錄是否存在。 在 Windows 2000 和更新版本的作業系統中，所有目錄具有讀取和寫入存取。
+當搭配檔案使用時 **_access_s**函式會判斷指定的檔案是否存在，而且可以存取為指定的值所*模式*。 搭配目錄使用時 **_access_s**只判斷指定的目錄是否存在。 在 Windows 2000 和更新版本的作業系統中，所有目錄具有讀取和寫入存取。
 
 |模式值|檢查檔案|
 |----------------|---------------------|
@@ -95,21 +95,21 @@ errno_t _waccess_s(
 |04|讀取權限。|
 |06|讀取和寫入權限。|
 
-讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案由另一個處理序鎖定，它可能無法存取即使 **_access_s**傳回 0。
+讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個處理序鎖定，它可能無法存取即使 **_access_s**會傳回 0。
 
-**_waccess_s**是寬字元版本的 **_access_s**，其中*路徑*引數 **_waccess_s**是寬字元字串。 否則， **_waccess_s**和 **_access_s**行為即會相同。
+**_waccess_s**是寬字元版本的 **_access_s**，其中*路徑*引數 **_waccess_s**是寬字元字串。 否則，請 **_waccess_s**並 **_access_s**運作方式完全相同。
 
-這些函式會驗證它們的參數。 如果*路徑*是**NULL**或*模式*未指定有效的模式中，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+這些函式會驗證它們的參數。 如果*路徑*為 NULL 或*模式*未指定有效的模式中，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
 |Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess_s**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> 或 \<io.h>|\<errno.h>|
@@ -160,9 +160,9 @@ File crt_access_s.c does not have write permission.
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案處理](../../c-runtime-library/file-handling.md)<br/>
-[_access、_waccess](access-waccess.md)<br/>
-[_chmod、_wchmod](chmod-wchmod.md)<br/>
-[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open、_wopen](open-wopen.md)<br/>
-[_stat、_wstat 函式](stat-functions.md)<br/>
+[檔案處理](../../c-runtime-library/file-handling.md)  
+[_access、_waccess](access-waccess.md)  
+[_chmod、_wchmod](chmod-wchmod.md)  
+[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open、_wopen](open-wopen.md)  
+[_stat、_wstat 函式](stat-functions.md)  

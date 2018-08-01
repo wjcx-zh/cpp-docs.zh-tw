@@ -1,5 +1,5 @@
 ---
-title: ABI 界限 （現代 c + +） 上的可攜性 |Microsoft 文件
+title: ABI 界限 （現代 c + +） 的可攜性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214ed18e5afec51f52514abdd73e0e5b658635a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb9ce8012db8617afc7af3183bd7439ddeb8fab7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419657"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402347"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>ABI 界限上的可攜性 (現代 C++)
-使用可攜式類型與慣例二進位介面邊界。 「可攜式類型」是一種 C 內建的類型，或是只包含 C 內建類型的結構。 類別型別只能在呼叫端和被呼叫端同意在配置，呼叫慣例，依此類推。兩者都使用相同的編譯器和編譯器設定編譯時，這樣做才可行。  
+使用二進位介面邊界的可攜式類型和慣例。 「可攜式類型」是一種 C 內建的類型，或是只包含 C 內建類型的結構。 類別類型僅適用於當呼叫端和被呼叫端同意版面配置，呼叫慣例等。兩者都使用相同的編譯器和編譯器設定編譯時，這樣做才可行。  
   
 ## <a name="how-to-flatten-a-class-for-c-portability"></a>如何簡化 C 可攜性的類別  
- 當呼叫端可能會與其他編譯器/語言進行編譯，則 「 簡化 」 為**extern"C"** API 與特定的呼叫慣例：  
+ 當呼叫端可能會與其他編譯器/語言進行編譯，則 「 簡化 」 為**extern"C"** 與特定的呼叫慣例的 API:  
   
 ```cpp  
 // class widget {  
@@ -41,5 +41,5 @@ extern "C" {        // functions using explicit "this"
   
 ## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 語言參考](../cpp/cpp-language-reference.md)   
+ [C++ 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

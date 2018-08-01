@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f722d1c4e8fc3d534403c2d18713e64dc2069011
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939672"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404895"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Microsoft 專屬**  
@@ -31,13 +31,11 @@ ms.locfileid: "37939672"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 _bstr_t Source() const;  
-  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回的結果`IErrorInfo::GetSource`for`IErrorInfo`物件記錄`_com_error`物件。 產生的 BSTR 會封裝在 `_bstr_t` 物件內。 如果沒有`IErrorInfo`是記錄，它會傳回空`_bstr_t`。  
+ 傳回的結果`IErrorInfo::GetSource`for`IErrorInfo`物件記錄`_com_error`物件。 產生的 `BSTR` 會封裝在 `_bstr_t` 物件內。 如果沒有`IErrorInfo`是記錄，它會傳回空`_bstr_t`。  
   
 ## <a name="remarks"></a>備註  
  呼叫時的任何失敗`IErrorInfo::GetSource`方法會被忽略。  

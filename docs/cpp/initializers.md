@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939856"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408160"
 ---
 # <a name="initializers"></a>初始設定式
 初始設定式指定變數的初始值。 您可以初始化下列內容中的變數：  
@@ -46,7 +46,6 @@ ms.locfileid: "37939856"
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  初始設定式可能會有下列格式：  
@@ -93,7 +92,7 @@ ms.locfileid: "37939856"
   
 -   Char 變數初始化為`'\0'`。  
   
--   指標初始化為 `nullptr`。  
+-   若要初始化的指標**nullptr**。  
   
 -   陣列， [POD](../standard-library/is-pod-class.md)類別、 結構和等位成員一定會初始化為零的值。  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>複製初始化  
@@ -533,4 +531,3 @@ int main()
   
 ### <a name="initialization-of-external-variables"></a>外部變數的初始化  
  自動 （靜態） 和外部變數的宣告可以包含初始設定式。 不過，外部變數宣告可以包含初始設定式未宣告為變數時，才**extern**。
-  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940756"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406659"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- 只有其中一個前述的兩種形式可以表示特定類別。 第一種形式接受單一引數的型別**void \***，其中包含要解除配置物件的指標。 第二種形式，調整大小解除配置，會採用兩個引數，其中的第一個是解除配置之記憶體區塊指標，且其中的第二個是要解除配置的位元組數目。 這兩種形式的傳回型別是**void** (**運算子 delete**無法傳回值)。  
+ 只有其中一個前述的兩種形式可以表示特定類別。 第一種形式接受單一引數的型別`void *`，其中包含要解除配置物件的指標。 第二種形式，調整大小解除配置，會採用兩個引數，其中的第一個是解除配置之記憶體區塊指標，且其中的第二個是要解除配置的位元組數目。 這兩種形式的傳回型別是**void** (**運算子 delete**無法傳回值)。  
   
  第二種形式的目的是加速搜尋要刪除之物件的正確大小類別通常不儲存在本身的配置附近且可能取消快取;第二種形式時特別有用**運算子 delete**從基底類別的函數用來刪除衍生類別的物件。  
   
- **運算子 delete**函式為靜態，因此無法為虛擬。 `operator delete`函式中所述，請遵守存取控制[成員存取控制](../cpp/member-access-control-cpp.md)。  
+ **運算子 delete**函式為靜態，因此無法為虛擬。 **Delete 運算子**中所述，函式會遵守存取控制[成員存取控制](../cpp/member-access-control-cpp.md)。  
   
  下列範例示範使用者定義**new 運算子**並**運算子 delete**旨在記錄配置和取消配置的記憶體的函式：  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

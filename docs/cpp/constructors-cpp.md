@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940881"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403059"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -30,7 +30,6 @@ ms.locfileid: "37940881"
 建構函式 （選擇性） 可以採用成員初始化清單。 這是更有效率的方式，來初始化類別成員，與指派建構函式主體中的值。 下列範例示範類別`Box`具有三個多載建構函式。 這兩個使用 init 成員清單：
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 當您宣告類別的執行個體時，編譯器會選擇要叫用的建構函式為基礎的多載解析規則：
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - 建構函式可以宣告為**內嵌**，[明確](#explicit_constructors)， **friend**或是[constexpr](#constexpr_constructors)。
@@ -87,7 +83,6 @@ int main()
 使用成員初始設定式清單是偏好透過指派建構函式主體中的值，因為它會直接初始化的成員。 在下列範例中顯示的成員初始設定式清單包含所有**identifier(argument)** 冒號後面的運算式：
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 如果您依賴的隱含預設建構函式時，務必初始化成員在類別定義中，在上述範例所示。 這些初始設定式中，成員會是未初始化而 Volume() 呼叫會產生記憶體回收的值。 一般情況下，最好來初始化成員，如此一來，即使不依賴隱含的預設建構函式。
@@ -141,7 +135,6 @@ int main() {
 您可以防止編譯器產生的隱含預設建構函式定義為[刪除](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 如果類別沒有預設建構函式，該類別的物件陣列無法透過單獨使用方括號語法來建構。 例如，根據上述程式碼區塊，Boxes 陣列無法宣告如下：
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 不過，您可以使用一組初始設定式清單初始化物件的陣列：
@@ -205,7 +196,6 @@ A*複製建構函式*從相同類型的物件複製的成員值來初始化物�
 複製建構函式可能具有其中一個這些簽章：
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Box(Box&& other);
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 如果類別未定義的移動建構函式，編譯器會產生隱含的其中一個，如果沒有任何使用者宣告複製建構函式、 複製指派運算子、 移動指派運算子或解構函式。 如果沒有明確或隱含的移動建構函式定義，否則會使用移動建構函式的作業會改為使用複製建構函式。 如果類別宣告移動建構函式或移動指派運算子，以隱含方式宣告的複製建構函式會定義為刪除。
@@ -338,7 +325,6 @@ public:
 - 所有非靜態資料成員和基底類別的子物件會初始化;
 - 如果類別是具有 variant 的成員，（a) 等位，或 （b） 具有匿名等位，會將其中一個等位成員初始化;
 - 類別類型的每個非靜態資料成員和所有基底類別的子物件具有的 constexpr 建構函式
-
 
 ## <a name="init_list_constructors"></a> 初始設定式清單建構函式
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 在某些情況下，這類轉換十分有用，但它們可能更常導致您程式碼中的細微但嚴重的錯誤。 一般而言，您應該使用**明確**關鍵字的建構函式 （和使用者定義運算子） 以避免這種隱含類型轉換：
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 下列範例顯示在衍生類別的建構函式中呼叫基底類別和成員建構函式的順序。 首先會呼叫基底建構函式，然後依其出現在類別宣告中的順序初始化基底類別成員，最後會呼叫衍生的建構函式。
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 輸出如下：
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-衍生類別建構函式一定會呼叫基底類別建構函式，因此，它可以依賴完全建構的基底類別，才進行任何額外的工作。 基底類別建構函式是按照衍生的順序進行呼叫，例如，如果 ClassA 衍生自 ClassB，後者衍生自 ClassC，會先呼叫 ClassC 建構函式，然後呼叫 ClassB 建構函式，最後呼叫 ClassA 建構函式。
+衍生類別建構函式一定會呼叫基底類別建構函式，因此，它可以依賴完全建構的基底類別，才進行任何額外的工作。 基底類別建構函式會呼叫衍生的順序 — 比方說，如果`ClassA`衍生自`ClassB`，其係衍生自`ClassC`，則`ClassC`首先，呼叫建構函式則`ClassB`建構函式，則`ClassA`建構函式。
 
 如果基底類別沒有預設建構函式，您必須在衍生類別建構函式中提供基底類別建構函式參數：
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 可預期下列輸出：
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> 建構函式中的虛擬函式
@@ -587,7 +566,7 @@ int main() {
 
 輸出如下：
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 using 陳述式會將基底類別的所有建構函式帶入範圍中，但衍生類別中具有建構函式之相同的簽章的建構函式除外。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 如果多個基底類別的建構函式具有相同簽章，則衍生類別無法繼承自這些基底類別。

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c95a67df03f62279b7b9c46ef41b6cafe7ff3df1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940650"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408147"
 ---
 # <a name="override-specifier"></a>override 規範
 您可以使用**覆寫**關鍵字指定成員覆寫基底類別中的虛擬函式的函式。  
@@ -27,7 +27,6 @@ ms.locfileid: "37940650"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 function-declaration override;  
 ```  
   
@@ -56,9 +55,7 @@ class DerivedClass: public BaseClass
     virtual void funcC(double = 0.0); // DerivedClass::funcC(double) has a different  
                                       // parameter type than BaseClass::funcC(int), so  
                                       // DerivedClass::funcC(double) is a new member function  
-  
 };  
-  
 ```  
   
  當您使用**覆寫**，編譯器會產生錯誤，而不是以無訊息方式建立新的成員函式。  
@@ -86,7 +83,6 @@ class DerivedClass: public BaseClass
     void funcD() override; // compiler error: DerivedClass::funcD() does not   
                            // override the non-virtual BaseClass::funcD()  
 };  
-  
 ```  
   
  若要指定無法覆寫函式和類別無法被繼承，請使用[最終](../cpp/final-specifier.md)關鍵字。  
@@ -94,4 +90,3 @@ class DerivedClass: public BaseClass
 ## <a name="see-also"></a>另請參閱  
  [final 規範](../cpp/final-specifier.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
- 

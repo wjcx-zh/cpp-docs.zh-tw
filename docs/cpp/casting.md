@@ -1,5 +1,5 @@
 ---
-title: 轉型 |Microsoft 文件
+title: 轉型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c7dfe18c65fcde7cbfa0ea2121234f2896a2723
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411724"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405015"
 ---
 # <a name="casting"></a>轉型
 C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生，則該基底類別類型的指標可以用來呼叫衍生類別物件內虛擬函式的實作。 包含虛擬函式的類別有時稱為「多型類別」(Polymorphic Class)。  
@@ -37,14 +37,14 @@ C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生�
   
  如下圖所示，`C` 類型的物件可以視覺化。  
   
- ![類別 C 子&#45;B 和 A 物件](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![具有子類別 C&#45;物件 B 和 A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 具備 B 子物件和 A 子物件的類別 C  
   
  假設有 `C` 類別的執行個體，則會有 `B` 子物件和 `A` 子物件。 `C` 的執行個體 (包括 `A` 和 `B` 子物件) 就是「完整物件」。  
   
- 若使用執行階段類型資訊，就可以檢查指標是否確實指向完整物件，並且可以安全地轉型為指向其階層中的另一個物件。 [Dynamic_cast](../cpp/dynamic-cast-operator.md)運算子可用來進行這些類型的轉換 （cast）。 它也會執行安全作業所必要的執行階段檢查。  
+ 若使用執行階段類型資訊，就可以檢查指標是否確實指向完整物件，並且可以安全地轉型為指向其階層中的另一個物件。 [Dynamic_cast](../cpp/dynamic-cast-operator.md)運算子可以用來進行這類轉型。 它也會執行安全作業所必要的執行階段檢查。  
   
- 對於非多型類型轉換，您可以使用[static_cast](../cpp/static-cast-operator.md)運算子 （本主題將說明靜態和動態轉型轉換之間，則會適當地使用每個差異）。  
+ 對於非多型類型的轉換，您可以使用[static_cast](../cpp/static-cast-operator.md) （本主題會說明靜態和動態轉型轉換之間，以及適用於每個時的差異） 的運算子。  
   
  本章節涵蓋下列主題：  
   

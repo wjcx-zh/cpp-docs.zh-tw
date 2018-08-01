@@ -1,5 +1,5 @@
 ---
-title: Microsoft 擴充功能 |Microsoft 文件
+title: Microsoft 擴充功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419819"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408371"
 ---
 # <a name="microsoft-extensions"></a>Microsoft 擴充功能
 *asm 陳述式*:  
@@ -33,9 +33,9 @@ ms.locfileid: "32419819"
  *組譯碼指令* **;***組件指示清單* **;** 選擇加入  
   
  *ms 修飾詞清單*:  
- *ms 修飾詞 ms 修飾詞清單*選擇加入  
+ *ms 修飾詞 ms 修飾詞清單*選擇  
   
- *ms-modifier*:  
+ *ms 修飾詞*:  
  **__cdecl**  
   
  **__fastcall**  

@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391749"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408124"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -76,27 +76,27 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*n*  
 數值。
 
 ## <a name="return-value"></a>傳回值
 
-**Abs**，**實驗室**， **llabs**和 **_abs64**函式會傳回參數的絕對值*n*. 不會傳回錯誤。
+**Abs**，**實驗室**， **llabs**並 **_abs64**函式會傳回參數的絕對值*n*. 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載**abs**採用並傳回**長**，**長****長**， **float**， **double**，和**長** **double**值。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回 int。
+因為 c + + 允許多載，您可以呼叫多載**abs**採用並傳回**長**，**長****長**， **浮點數**， **double**，和**long** **double**值。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回**int**。
 
-**Microsoft 特定的**： 因為負數的整數，可以使用任何整數類資料類型表示的範圍超過可使用該類型表示的整數範圍，便可提供這些引數無法轉換的函式。 如果無法以傳回型別，表示引數的絕對值**abs**函式會傳回引數值不變。 具體來說，`abs(INT_MIN)`傳回**INT_MIN**，`labs(LONG_MIN)`傳回**LONG_MIN**，`llabs(LLONG_MIN)`傳回**LLONG_MIN**，和`_abs64(_I64_MIN)`傳回 **_I64_MIN**。 這表示**abs**函式無法用來保證正數值。
+**Microsoft 專有**： 因為可以使用任何整數類資料類型表示的負整數範圍大於可使用該類型表示的正整數範圍，就可以提供這些引數無法轉換的函式。 如果引數的絕對值無法傳回的型別，表示**abs**函式會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函式無法用來保證正值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的 C 標頭|必要的 C++ 標頭|
+|常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|-----------------------|---------------------------|
 |**abs**，**實驗室**， **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要使用的多載的版本**abs**在 c + +，您必須包含\<h > 標頭。
+若要使用的多載的版**abs**在 c + +，您必須包含\<cmath> > 標頭。
 
 ## <a name="example"></a>範例
 
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>另請參閱
 
-[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[資料轉換](../../c-runtime-library/data-conversion.md)  
+[浮點支援](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

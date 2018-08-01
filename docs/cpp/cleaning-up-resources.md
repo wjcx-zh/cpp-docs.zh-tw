@@ -1,5 +1,5 @@
 ---
-title: 清除資源 |Microsoft 文件
+title: 清除資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408733"
 ---
 # <a name="cleaning-up-resources"></a>清除資源
-在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 有可能在配置所有資源之前，`__try` 陳述式區塊就已中斷，此時並非所有資源皆已開啟。  
+在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 可以 **__try**陳述式區塊就已中斷之前所配置的所有資源，因此，並非所有資源皆已都開啟。  
   
  因此，為了安全起見，您應該先檢查哪些資源已實際開啟，再繼續進行終止處理的清除作業。 建議的程序是：  
   
 1.  將控制代碼初始化為 NULL。  
   
-2.  在 `__try` 陳述式區塊中配置資源。 資源一配置，控制代碼就會設定為正值。  
+2.  在  **__try**陳述式區塊中配置資源。 資源一配置，控制代碼就會設定為正值。  
   
-3.  在 `__finally` 陳述式區塊中，釋放對應控制代碼或旗標變數為非零或非 NULL 的每個資源。  
+3.  在  **__finally**陳述式區塊，釋出其對應的控制代碼或旗標變數為非零值的每個資源，或 not NULL。  
   
 ## <a name="example"></a>範例  
- 例如，下列程式碼會使用終止處理常式關閉三個檔案和一個在 `__try` 陳述式區塊中配置的記憶體區塊。 在清除資源之前，程式碼會先檢查資源是否已配置。  
+ 例如，下列程式碼會使用終止處理常式關閉三個檔案和已配置的記憶體區塊 **__try**陳述式區塊。 在清除資源之前，程式碼會先檢查資源是否已配置。  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  

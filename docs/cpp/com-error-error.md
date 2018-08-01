@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21f2da8c10b9b796740144f81d0390f1af124cab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6a7ddaefcf3bd46bf40b03c03d2d1fb00cf8fbbb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942051"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408423"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
 **Microsoft 專屬**  
@@ -32,9 +32,7 @@ ms.locfileid: "37942051"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 HRESULT Error( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>傳回值  

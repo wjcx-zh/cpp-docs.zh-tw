@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30d17c929316efe5e3b6c8c71f90591bb05868c3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940247"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401404"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Microsoft 專屬**  
@@ -31,16 +31,14 @@ ms.locfileid: "37940247"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 BSTR Detach( ) throw;  
-  
 ```  
   
 ## <a name="return-value"></a>傳回值  
  `BSTR` 包裝 `_bstr_t`。  
   
 ## <a name="example"></a>範例  
- 請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)範例使用`Detach`。  
+ 請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)範例使用**卸離**。  
   
  **結束 Microsoft 專屬**  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957382"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407383"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 存取控制項可讓您區隔[公用](../cpp/public-cpp.md)介面的類別[私人](../cpp/private-cpp.md)實作詳細資料和[保護](../cpp/protected-cpp.md)僅適用於的成員使用在衍生的類別。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  預設存取**私人**在類別中，並**公用**結構或等位中。 您可以依任意順序使用類別中的存取規範任何次數。 類別類型物件的儲存配置依實作而定，不過，成員一定會具有存取指定名稱之間指派的後續較高之記憶體位址。  

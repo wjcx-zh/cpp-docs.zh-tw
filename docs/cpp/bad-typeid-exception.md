@@ -1,5 +1,5 @@
 ---
-title: bad_typeid 例外狀況 |Microsoft 文件
+title: bad_typeid 例外狀況 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55718522bdbf618fb656eedc5c6afd59bfcaca08
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409003"
 ---
 # <a name="badtypeid-exception"></a>bad_typeid 例外狀況
-`bad_typeid`所擲回例外狀況[typeid 運算子](../cpp/typeid-operator.md)時的運算元`typeid`為 NULL 指標。  
+**Bad_typeid**所擲回例外狀況[typeid 運算子](../cpp/typeid-operator.md)時的運算元**typeid**為 NULL 指標。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      catch (bad_typeid)  
+catch (bad_typeid)  
    statement  
 ```  
   
 ## <a name="remarks"></a>備註  
- `bad_typeid` 的介面為：  
+ 介面**bad_typeid**是：  
   
-```  
+```cpp 
 class bad_typeid : public exception  
 {  
 public:  
@@ -48,9 +48,9 @@ public:
 };  
 ```  
   
- 下列範例顯示擲回 `typeid` 例外狀況的 `bad_typeid`。  
+ 下列範例所示**typeid**擲回運算子**bad_typeid**例外狀況。  
   
-```  
+```cpp 
 // expre_bad_typeid.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -78,7 +78,7 @@ catch (bad_typeid){
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output 
 Object is NULL  
 ```  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943027"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402746"
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 ## <a name="syntax"></a>語法  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` 形式的程式碼在 C++ 程式中很少見，若要執行遞增作業，使用下列形式會更好：`pIntArray++` 或 `pIntArray += 1`。  
   
 ## <a name="pointer-subtraction"></a>指標減法  
- 如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生帶正負號的整數結果型別的**ptrdiff_t** (在標準 include 檔中定義\<stddef.h >)。  
+ 如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生帶正負號的整數結果型別的`ptrdiff_t`(在標準 include 檔中定義\<stddef.h >)。  
   
  兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法運算的值是指標 (*n* - *我*) 個陣列項目，其中*n*項目所指向的原始指標和*我*是第二個運算元的整數值。  
   

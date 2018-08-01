@@ -1,5 +1,5 @@
 ---
-title: 指派運算子 |Microsoft 文件
+title: 指派運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408983"
 ---
 # <a name="assignment-operators"></a>指派運算子
 ## <a name="syntax"></a>語法  
@@ -59,13 +60,13 @@ assignment-operator : one of
 ```  
   
 ## <a name="remarks"></a>備註  
- 指派運算子會將值儲存在左運算元所指定的物件。 有三種指派運算： 
+ 指派運算子會將值儲存在左運算元所指定的物件。 有三種類型的指派作業： 
 
-1. 簡單指派，第二個運算元的值儲存在第一個運算元所指定的物件中。 1. 複合指派，算術、 移位或位元運算儲存結果之前已執行。
-1. 在無需先行複製傳送哪些資源移動指派 （適用於類別類型）。
+1. 簡單指派，第二個運算元的值儲存在第一個運算元所指定的物件中。 1. 複合指派，在其中的算術、 移位或位元運算在儲存結果之前執行。
+1. 移動 （針對類別類型） 的指派會傳輸哪些資源，而不複製。
 
 
-下表中的所有設定運算子都 except = 和 （& s) （& a) = 運算子都是複合指派運算子。  
+所有的指派運算子下, 表中除了 = 和 & & = 運算子都是複合指派運算子。  
   
 ### <a name="assignment-operators"></a>指派運算子  
   
@@ -82,7 +83,7 @@ assignment-operator : one of
 |**&=**|取得第一和第二個運算元的位元 AND；將結果儲存在第一個運算元所指定的物件。|  
 |**^=**|取得第一和第二個運算元的位元排除 OR；將結果儲存在第一個運算元所指定的物件。|  
 |**\|=**|取得第一和第二個運算元的位元包含 OR；將結果儲存在第一個運算元所指定的物件。|
-|**&&=**| 移動指派運算子 （只有類別類型）。 如果第二個運算元是右值，其將資源移至第一個運算元 （而不將它們複製）。 請參閱[移動建構函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)如需詳細資訊。|
+|**&&=**| 移動指派運算子 （只有類別類型）。 如果第二個運算元是右值，其將資源移動到第一個運算元 （而不將它們複製）。 請參閱[移動建構函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)如需詳細資訊。|
   
  **運算子關鍵字**  
   
@@ -94,11 +95,11 @@ assignment-operator : one of
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- 有兩種方式可存取您程式中的這些運算子關鍵字： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
+ 有兩種方式來存取您程式中的這些運算子關鍵字： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -129,7 +130,7 @@ int main() {
   
  只要物件是從指定基底類別明確衍生的任何類別，就可以指派給該基底類別的物件。 反向則不成立，因為可從衍生類別隱含轉換為基底類別，但無法從基底類別轉換為衍生類別。 例如:   
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  對於類別類型的物件而言，指派與初始化不同。 為說明指派與初始化的不同之處，假設下列程式碼  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  上述程式碼示範初始化設定式；它會呼叫建構函式 `UserType2`，此建構函式接受屬於類型 `UserType1` 的引數。 假設下列程式碼  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  指派陳述式  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,7 +190,7 @@ B = A;
 -   呼叫建構函式 `UserType2::UserType2`，前提是這類建構函式存在，而且接受 `UserType1` 引數並複製結果。  
   
 ## <a name="compound-assignment"></a>複合指派  
- 複合指派運算子，表中所示[指派運算子](../cpp/assignment-operators.md)，在表單中指定*e1* `op` =  *e2*，其中*e1*可修改左值不屬於 const 類型和*e2*是下列其中之一：  
+ 複合指派運算子，表中所示[指派運算子](../cpp/assignment-operators.md)，在表單中指定*e1* `op` =  *e2*，其中*e1*是可修改左值不是 const 類型並*e2*是下列其中之一：  
   
 -   算術類型  
   

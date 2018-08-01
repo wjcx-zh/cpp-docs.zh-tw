@@ -1,5 +1,5 @@
 ---
-title: 類別樣板 |Microsoft 文件
+title: 類別樣板 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415682"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405090"
 ---
 # <a name="class-templates"></a>類別樣板
-本主題描述的特定 c + + 類別範本規則。  
+本主題描述專屬於 c + + 類別樣板的規則。  
   
 ## <a name="member-functions-of-class-templates"></a>類別樣板的成員函式  
  成員函式可以在類別樣板內部或外部定義。 如果是類別樣板外部定義，這些函式的定義方式就像函式樣板。  
@@ -81,11 +81,10 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
 ## <a name="nested-class-templates"></a>巢狀的類別樣板  
- 樣板可以在類別或類別樣板內定義，在這種情況下，這些樣板稱為成員樣板。 本身是類別的成員樣板稱為巢狀類別樣板。 成員樣板函式的會討論[成員函式樣板](../cpp/member-function-templates.md)。  
+ 樣板可以在類別或類別樣板內定義，在這種情況下，這些樣板稱為成員樣板。 本身是類別的成員樣板稱為巢狀類別樣板。 成員樣板函式中會討論[成員函式樣板](../cpp/member-function-templates.md)。  
   
  巢狀類別樣板會在外部類別的範圍內宣告為類別樣板。 這些樣板可以在封入類別的內部或外部定義。  
   
@@ -418,8 +417,8 @@ A
 a  
 ```  
   
-## <a name="reuse-of-template-parameters"></a>重複使用的樣板參數  
- 樣板參數可以重複使用的樣板參數清單中。 例如，下列程式碼是可行的：  
+## <a name="reuse-of-template-parameters"></a>重複使用的範本參數  
+ 可重複使用範本參數的樣板參數清單中。 例如，下列程式碼是可行的：  
   
 ```cpp  
 // template_specifications2.cpp  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1843331afc6fa686446e7b3d7515d8701b9cf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 24f9e4e5b3d157f23c18d46f2857b29e6960e82e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026207"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405752"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>複製建構函式和複製指派運算子 (C++)
 > [!NOTE]
@@ -94,4 +94,3 @@ int main()
  這些影響類似複製建構函式的影響。 當引數類型不是時**const**，從指派**const**物件會產生錯誤。 反向執行則不成立： 如果**const**的值指派給值不是**const**，指派會成功。  
   
  如需有關多載的指派運算子的詳細資訊，請參閱 <<c0> [ 指派](../cpp/assignment.md)。  
-  

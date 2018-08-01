@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942676"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405940"
 ---
 # <a name="ifexists-statement"></a>__if_exists 陳述式
 **__If_exists**陳述式會測試是否存在指定的識別項。 如果識別項存在，就會執行指定的陳述式區塊。  
@@ -40,8 +40,8 @@ statements
   
 |參數|描述|  
 |---------------|-----------------|  
-|`identifier`|要測試其是否存在的識別項。|  
-|`statements`|若要執行的一或多個陳述式`identifier`存在。|  
+|*identifier*|要測試其是否存在的識別項。|  
+|*陳述式*|若要執行的一或多個陳述式*識別碼*存在。|  
   
 ## <a name="remarks"></a>備註  
   

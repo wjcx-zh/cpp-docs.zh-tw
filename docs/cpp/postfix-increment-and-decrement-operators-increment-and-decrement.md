@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942880"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404050"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 ## <a name="syntax"></a>語法  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- 套用後置遞增運算子 (`++`) 的作用是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子的效果 (**--**) 是運算元的值會減少一個單位的適當的型別。  
+ 套用後置遞增運算子的效果 (**++**) 是運算元的值會增加一個單位的適當的型別。 同樣地，套用後置遞減運算子的效果 (**--**) 是運算元的值會減少一個單位的適當的型別。  
   
  請務必請注意，後置遞增或遞減運算式會評估運算式的值為*之前*個別運算子的應用程式。 遞增或遞減運算，就會發生*之後*則會評估運算元。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。  
   

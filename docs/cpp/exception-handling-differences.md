@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942884"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404619"
 ---
 # <a name="exception-handling-differences"></a>例外狀況處理差異
 結構化例外狀況處理和 c + + 例外狀況處理的主要差異是，c + + 例外狀況處理模型是處理類型，而 C 結構化例外狀況處理模型處理例外狀況的一種類型 — 具體來說， **不帶正負號的 int**。也就是說，C 例外狀況是以不帶正負號的整數值來識別，而 C++ 例外狀況則是以資料類型來識別。 在 C 中引發例外狀況時，每個可能的處理常式都會執行一個篩選器，以檢查 C 例外狀況內容並判斷應接受該例外狀況、將其傳遞至其他處理常式，或是要予以忽略。 C++ 中擲回例外狀況時，它可能是任何類型。  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  若要使用這個類別，您必須安裝內部例外狀況處理機制在每次擲回 C 例外狀況時呼叫的自訂 C 例外狀況轉譯函式。 在您的轉譯函式，您可以擲回任何類型的例外狀況 (或許`SE_Exception`類型或類別類型衍生自`SE_Exception`)，就可以攔截適當的比對 c + +**攔截**處理常式。 轉譯函式可以單純傳回，表示並未處理例外狀況。 如果轉譯函式自行引發 C 例外狀況[終止](../c-runtime-library/reference/terminate-crt.md)呼叫。  

@@ -1,5 +1,5 @@
 ---
-title: 明確覆寫 （c + +） |Microsoft 文件
+title: 明確覆寫 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda87a0241e61cfc3fa26d4829f0504b784e8ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7b333d42f5e5e309ffa17e8c267dcb22ec30e6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409443"
 ---
 # <a name="explicit-overrides-c"></a>明確覆寫 (C++)
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 如果要將相同的虛擬函式宣告在兩個或多個[介面](../cpp/interface.md)，如果類別衍生自這些介面，您可以明確覆寫每個虛擬函式。  
+ 如果要將相同的虛擬函式宣告中兩個或以上[介面](../cpp/interface.md)如果類別衍生自這些介面，您可以明確覆寫每個虛擬函式。  
   
- 使用新 managed 的語法的 managed 程式碼中的覆寫明確的詳細資訊，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 針對使用新 managed 的語法的 managed 程式碼中的覆寫明確的詳細資訊，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="example"></a>範例  
  下列程式碼範例示範如何使用明確覆寫：  
   
-```  
+```cpp 
 // deriv_ExplicitOverrides.cpp  
 // compile with: /GR  
 extern "C" int printf_s(const char *, ...);  

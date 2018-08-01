@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942723"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406567"
 ---
 # <a name="function-overloading"></a>函式多載
 C++ 允許在相同範圍內指定多個同名的函式。 這些稱為*多載*函式。 多載函式可讓您提供不同的語意是函式，根據型別和引數數目。 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  上面的陳述式會建置兩個集合：  
   
-|集合 1：第一個引數為 Fraction 類型的候選函式|集合 2：第二個引數可以轉換成 int 類型的候選函式|  
+|集合 1：第一個引數為 Fraction 類型的候選函式|集合 2： 候選函式的第二個引數可以轉換成類型**int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Variant 1|Variant 1 (**int**可以轉換成**長**使用標準轉換)|  
 |Variant 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  上述函式呼叫會建立下列集合：  
   
-|集合 1：第一個引數為 int 類型的候選函式|集合 2：第二個引數為 int 類型的候選函式|  
+|集合 1： 候選項目有第一個引數的類型的函式**int**|集合 2： 候選函式，具有第二個引數的型別**int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (**int**可以轉換成**長**使用標準轉換)|Variant 1 (**int**可以轉換成**長**使用標準轉換)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  使用標準轉換的相符項目。 未分類為完全相符或使用提升的相符項目，而且只包含標準轉換和一般轉換的任何序列，都會分類為使用標準轉換的相符項目。 這個分類適用下列規則：  
   
-    -   從指標轉換為衍生的類別，以直接或間接基底類別的指標，最好將轉換成**void \*** 或是**const void \*** 。  
+    -   從指標轉換為衍生的類別，以直接或間接基底類別的指標，最好將轉換成`void *`或`const void *`。  
   
     -   從指標轉換成衍生類別、轉換成基底類別的指標會產生較佳的相符項目，基底類別也會越接近直接基底類別。 假設類別階層架構如下圖所示。  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>多載的限制  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     上述兩個函式擁有相同的引數清單。 `PSTR` 為類型的同義字**char \*** 。 在成員範圍內，這個程式碼會產生錯誤。  
+     上述兩個函式擁有相同的引數清單。 `PSTR` 為類型的同義字`char *`。 在成員範圍內，這個程式碼會產生錯誤。  
   
 -   列舉類型是不同的類型，可以用來區別多載函式。  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
 ## <a name="see-also"></a>另請參閱  
  [函式 (C++)](../cpp/functions-cpp.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a46e7d314281bd19773a5c86e70a63f3c93e14
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940315"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404606"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -82,7 +82,7 @@ int sum(int a, int b)
 
 函式宣告的選擇性組件如下：
 
-1. **constexpr**，表示函式的傳回值是常數值可以在編譯時期計算。
+1. `constexpr`，表示函式的傳回值是常數值，可在編譯時期計算。
 
     ```cpp
     constexpr float exp(float x, int n)
@@ -114,7 +114,7 @@ int sum(int a, int b)
 
      如需詳細資訊，請參閱 <<c0> [ 內嵌函式](../cpp/inline-functions-cpp.md)。
 
-1. A **noexcept**運算式，指定是否函式可能會擲回例外狀況。 在下列範例中，此函式不會擲回例外狀況如果`is_pod`運算式會評估 **，則為 true**。
+1. A`noexcept`運算式，指定是否函式可能會擲回例外狀況。 在下列範例中，此函式不會擲回例外狀況如果`is_pod`運算式會評估 **，則為 true**。
 
     ```cpp
     #include <type_traits>
@@ -127,7 +127,7 @@ int sum(int a, int b)
 
 1. （只有成員函式）Cv 限定詞，指定函式是否**const**或是**volatile**。
 
-1. （只有成員函式）**虛擬**，**覆寫**，或**最終**。 **虛擬**指定可以在衍生類別中覆寫函式。 **覆寫**表示在衍生類別中的函式會覆寫虛擬函式。 **最終**表示函式不能覆寫任何進一步衍生的類別。 如需詳細資訊，請參閱 <<c0> [ 虛擬函式](../cpp/virtual-functions.md)。
+1. （只有成員函式）**虛擬**， `override`，或`final`。 **虛擬**指定可以在衍生類別中覆寫函式。 `override` 表示衍生類別中的函式會覆寫虛擬函式。 `final` 表示無法覆寫任何進一步衍生類別中的函式。 如需詳細資訊，請參閱 <<c0> [ 虛擬函式](../cpp/virtual-functions.md)。
 
 1. （只有成員函式）**靜態**套用至成員函式表示函式不是任何物件類別的執行個體相關聯。
 
@@ -170,7 +170,7 @@ A*函式定義*宣告和函式主體中，括在大括號，其中包含區域�
 
 您可以宣告為成員函式**const**指定函式，不允許變更的任何類別中的資料成員的值。 藉由宣告成員函式做**const**，協助強制執行編譯器*常數正確性*。 有人不小心嘗試修改的物件使用的函式宣告為**const**，就會引發編譯器錯誤。 如需詳細資訊，請參閱 < [const](const-cpp.md)。
 
-宣告為函式**constexpr**它所產生的值時可能可以在編譯時期決定。 Constexpr 函式通常比一般函式更快執行。 如需詳細資訊，請參閱 < [constexpr](constexpr-cpp.md)。
+宣告為函式`constexpr`它所產生的值時可能可以在編譯時期決定。 Constexpr 函式通常比一般函式更快執行。 如需詳細資訊，請參閱 < [constexpr](constexpr-cpp.md)。
 
 ## <a name="function-templates"></a>函式樣板
 
@@ -269,11 +269,11 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 函式主體內宣告的變數稱為*區域變數*或只是*本機*。 非靜態區域變數只顯示於函式主體內，如果它們宣告於堆疊上，則會在函式結束時消失。 如果建構區域變數並以傳值方式傳回區域變數，則編譯器通常會執行傳回值最佳化，以避免不必要的複製作業。 如果您以傳址方式傳回區域變數，則編譯器會發出警告，因為呼叫端使用該參考的任何嘗試都是在終結區域變數之後。
 
-在 C++ 中，區域變數可能宣告為靜態。 變數只會顯示在函式主體內，但函式的所有執行個體都有變數的單一複本。 區域靜態物件會在指定的終止時終結**atexit**。 如果因為程式的控制流程略過其宣告而未建構靜態物件，就不會嘗試終結該物件。
+在 C++ 中，區域變數可能宣告為靜態。 變數只會顯示在函式主體內，但函式的所有執行個體都有變數的單一複本。 區域靜態物件會在 `atexit` 指定的終止時被終結。 如果因為程式的控制流程略過其宣告而未建構靜態物件，就不會嘗試終結該物件。
 
 ##  <a name="type_deduction"></a> 傳回型別 (C + + 14) 中的類型推斷
 
-在 c++14 中，您可以使用**自動**指示編譯器推斷傳回型別，從函式主體，而不需要提供尾端傳回型別。 請注意，**自動**一律會推斷為傳值傳回。 使用**自動 & &** 可指示編譯器推斷參考。
+在 c++14 中，您可以使用**自動**指示編譯器推斷傳回型別，從函式主體，而不需要提供尾端傳回型別。 請注意，**自動**一律會推斷為傳值傳回。 使用 `auto&&` 指示編譯器推斷參考。
 
 在此範例中，**自動**會推斷為 lhs 與 rhs 總和的非常數值複本。
 
@@ -435,10 +435,9 @@ int (*myFunction(char* s))(int);
 上述宣告相當於上面使用 typedef 的宣告。
 
 ## <a name="see-also"></a>另請參閱
-
-- [函式多載](../cpp/function-overloading.md)
-- [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)
-- [明確的預設和已刪除的函式](../cpp/explicitly-defaulted-and-deleted-functions.md)
-- [函式上的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
-- [預設引數](../cpp/default-arguments.md)
-- [內嵌函式](../cpp/inline-functions-cpp.md)
+ [函式多載](../cpp/function-overloading.md)  
+ [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)  
+ [明確的預設和已刪除的函式](../cpp/explicitly-defaulted-and-deleted-functions.md)  
+ [函式上的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
+ [預設引數](../cpp/default-arguments.md)  
+ [內嵌函式](../cpp/inline-functions-cpp.md)

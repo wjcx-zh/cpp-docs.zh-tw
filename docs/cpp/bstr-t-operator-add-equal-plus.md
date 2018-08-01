@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2ea7cd3b93f7445190f16a92a580fe9628a976
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: aad73939b8fd011fd6e1c9bf16f8dfe6eb303ff3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942691"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405739"
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=、+
 **Microsoft 專屬**  
@@ -33,7 +33,6 @@ ms.locfileid: "37942691"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 _bstr_t& operator+=( const _bstr_t& s1 );  
 _bstr_t operator+( const _bstr_t& s1 );  
 friend _bstr_t operator+( const char* s2, const _bstr_t& s1);  
@@ -53,9 +52,9 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 ## <a name="remarks"></a>備註  
  這些運算子會執行字串串連：  
   
--   **operator + = (***s1***)** 在封裝中的字元附加至`BSTR`的*s1*到這個物件封裝結尾`BSTR`.      
+-   **operator + = (***s1***)** 在封裝中的字元附加至`BSTR`的*s1*到這個物件封裝結尾`BSTR`.  
   
--   **operator + (***s1***)** 傳回新`_bstr_t`，藉由串連此物件會形成`BSTR`與*s1*。      
+-   **operator + (***s1***)** 傳回新`_bstr_t`，藉由串連此物件會形成`BSTR`與*s1*。  
   
 -   **operator + (***s2***&#124;***s1***)** 傳回新`_bstr_t`，會串連起來所構成多位元組字串*s2*轉換為 Unicode，與`BSTR`中所封裝*s1*。          
   

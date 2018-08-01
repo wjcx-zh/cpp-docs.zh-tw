@@ -1,5 +1,5 @@
 ---
-title: '位元互斥 OR 運算子: ^ |Microsoft 文件'
+title: '位元互斥 OR 運算子: ^ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409848"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406672"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>位元互斥 OR 運算子：^
 ## <a name="syntax"></a>語法  
@@ -35,12 +35,12 @@ expression ^ expression
 ```  
   
 ## <a name="remarks"></a>備註  
-位元互斥 OR 運算子 (**^**) 會比較其第二個運算元的對應位元的第一個運算元的每個位元。 如果其中一個位元為 0，而另一個位元為 1，則會將對應的結果位元設為 1。 否則，對應結果位元會設為 0。  
+使用位元排除 OR 運算子 (**^**) 會比較其第二個運算元的對應位元的第一個運算元的每個位元。 如果其中一個位元為 0，而另一個位元為 1，則會將對應的結果位元設為 1。 否則，對應結果位元會設為 0。  
   
 位元互斥 OR 運算子的兩個運算元都必須為整數類資料類型。 中涵蓋的一般算術轉換[標準轉換](standard-conversions.md)適用於這些運算元。  
   
 ## <a name="operator-keyword-for-"></a>^ 的運算子關鍵字  
-**Xor**運算子相當於文字的**^**。 有兩種方式來存取**xor**您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
+**Xor**運算子是相等的文字**^**。 有兩種方式來存取**xor**在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
 ## <a name="example"></a>範例  
   
@@ -60,5 +60,3 @@ int main() {
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

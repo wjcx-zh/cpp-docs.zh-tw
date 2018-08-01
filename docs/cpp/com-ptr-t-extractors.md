@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8414fb0e3478b5aae906db3e511757d5d7df71d3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942939"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404092"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 擷取器
 **Microsoft 專屬**  
@@ -45,7 +45,6 @@ ms.locfileid: "37942939"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   

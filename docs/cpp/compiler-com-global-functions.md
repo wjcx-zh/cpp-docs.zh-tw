@@ -1,5 +1,5 @@
 ---
-title: 編譯器 COM 全域函式 |Microsoft 文件
+title: 編譯器 COM 全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4116d82ef38d7aaab29fe682e0881ac2e2ff5903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa138b045fcb5851a65b68d898b99a8cab269f6e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412185"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402529"
 ---
 # <a name="compiler-com-global-functions"></a>編譯器 COM 全域函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  下列為可用的處理常式：  
   
 |功能|描述|  
 |--------------|-----------------|  
-|[_com_raise_error](../cpp/com-raise-error.md)|擲回[_com_error](../cpp/com-error-class.md)以回應失敗。|  
+|[_com_raise_error](../cpp/com-raise-error.md)|會擲回[_com_error](../cpp/com-error-class.md)以回應失敗。|  
 |[_set_com_error_handler](../cpp/set-com-error-handler.md)|取代 COM 錯誤處理所使用的預設函式。|  
-|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|將轉換`BSTR`值設定為**char \*** 。|  
-|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|將轉換**char \*** 值設定為`BSTR`。|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|將轉換`BSTR`值`char *`。|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|將轉換`char *`值`BSTR`。|  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)   

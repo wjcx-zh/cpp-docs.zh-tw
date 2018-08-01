@@ -1,5 +1,5 @@
 ---
-title: 參考類型函式引數 |Microsoft 文件
+title: 參考類型函式引數 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409053"
 ---
 # <a name="reference-type-function-arguments"></a>參考類型函式引數
 通常更有效率的方式是傳遞參考，而不是傳遞大型物件給函式。 這可讓編譯器傳遞物件位址，同時又可維護將用來存取物件的語法。 請考慮下列會使用 `Date` 結構的範例。  
   
-```  
+```cpp 
 // reference_type_function_arguments.cpp  
 struct Date  
 {  
@@ -66,17 +67,17 @@ int main()
 }  
 ```  
   
- 上述程式碼會顯示參考所傳遞的結構成員會使用成員選取運算子存取 (**。**) 而非指標成員選取運算子 (**->**)。  
+ 上述程式碼顯示的傳址方式傳遞的結構成員會使用成員選取運算子存取 (**。**) 而不是指標成員選取運算子 (**->**)。  
   
- 雖然傳遞做為參考型別引數會遵守非指標類型的語法，但是它們會保留指標類型的一項重要特性： 它們是宣告為可修改**const**。 由於上述程式碼的目的不是要修改物件 `GDate`，因此更適當的函式原型為：  
+ 雖然傳遞做為參考型別引數會遵守非指標類型的語法，它們會保留指標類型的一項重要特性： 它們是除非宣告為可修改**const**。 由於上述程式碼的目的不是要修改物件 `GDate`，因此更適當的函式原型為：  
   
-```  
+```cpp 
 long JulianFromGregorian( const Date& GDate );  
 ```  
   
  此原型可確保 `JulianFromGregorian` 函式不會變更其引數。  
   
- 任何函式原型採用參考類型都可以接受其所在位置相同類型的物件，因為沒有標準轉換轉換*typename*至 * typename ***&**。  
+ 任何函式原型都採用參考類型可以接受在其位置相同型別的物件，因為沒有標準轉換轉換*typename*至 * typename ***&**。  
   
 ## <a name="see-also"></a>另請參閱  
  [參考](../cpp/references-cpp.md)

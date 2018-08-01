@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 30910f6850fc3728ee101ab0662638fdebcd3775
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942868"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405440"
 ---
 # <a name="break-statement-c"></a>break 陳述式 (C++)
 **中斷**陳述式會結束執行的最接近的封閉式迴圈或條件出現的陳述式。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。  

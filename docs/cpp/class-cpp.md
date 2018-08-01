@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf975a9d64508368ac5d61c82fecc07edda28b5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8a3c3defdfb882db69f7789c97feba11d346e540
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942663"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405582"
 ---
 # <a name="class-c"></a>class (C++)
 **類別**關鍵字宣告類別類型，或定義類別類型的物件。  
@@ -30,7 +30,6 @@ ms.locfileid: "37942663"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [template-spec]  
 class [ms-decl-spec] [tag [: base-list ]]  
 {  

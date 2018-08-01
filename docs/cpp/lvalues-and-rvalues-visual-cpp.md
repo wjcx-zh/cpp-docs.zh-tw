@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940182"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403919"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
 
@@ -79,5 +79,6 @@ int main()
 條款*左值*並*右值*通常會在您參考的物件參考時所使用。 如需參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)並[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
-
- [基本概念](../cpp/basic-concepts-cpp.md)[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md) [右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [基本概念](../cpp/basic-concepts-cpp.md)  
+ [左值參考宣告子：&](../cpp/lvalue-reference-declarator-amp.md)  
+ [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

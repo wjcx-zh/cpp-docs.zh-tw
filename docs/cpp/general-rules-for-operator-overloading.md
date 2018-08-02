@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942711"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403452"
 ---
 # <a name="general-rules-for-operator-overloading"></a>運算子多載的一般規則
 下列規則限制多載運算子的實作方式。 不過，它們並不適用於[新](../cpp/new-operator-cpp.md)並[刪除](../cpp/delete-operator-cpp.md)個別說明的運算子。  
@@ -59,7 +59,7 @@ ms.locfileid: "37942711"
   
 -   多載運算子不可以有預設引數。  
   
--   除了指派 (`operator=`)，所有的多載運算子都由衍生類別繼承。  
+-   所有多載運算子，除了指派 (**運算子 =**) 都由衍生類別繼承。  
   
 -   成員函式多載運算子的第一個引數，一定是叫用運算子之物件的類別類型 (宣告該運算子的類別，或者從該類別衍生的類別)。 不會對第一個引數提供任何轉換。  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- 多載運算子的類別類型無法依賴這個識別。 此外，就多載運算子而言，基本類型使用這些運算子的某些隱含條件比較不嚴謹。 例如，套用於基本類型時，加法/指派運算子 `+=` 會要求左運算元是左值；多載運算子時則沒有此項要求。  
+ 多載運算子的類別類型無法依賴這個識別。 此外，就多載運算子而言，基本類型使用這些運算子的某些隱含條件比較不嚴謹。 比方說，加法/指派運算子**+=**，要求左的運算元是左值時套用到基本的型別，沒有這類的需求時多載運算子。  
   
 > [!NOTE]
 > 為求一致，最好的作法通常是在定義多載運算子時遵循內建類型的模型。 如果多載運算子的語意與其在其他內容中的意義大不相同，可能會比較容易混淆。  

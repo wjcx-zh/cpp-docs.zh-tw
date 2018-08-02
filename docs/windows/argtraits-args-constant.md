@@ -1,5 +1,5 @@
 ---
-title: 'Argtraits:: Args 常數 |Microsoft 文件'
+title: 'Argtraits:: Args 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855769"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466552"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args 常數
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>備註  
- 保留的叫用方法的委派介面上的參數數目的計數。  
+ 將保存的參數數目的計數`Invoke`委派介面的方法。  
   
 ## <a name="remarks"></a>備註  
- 當`args`等於-1 表示可以有沒有相符的叫用方法簽章。  
+ 當`args`等於-1 表示可能有不相符`Invoke`方法簽章。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

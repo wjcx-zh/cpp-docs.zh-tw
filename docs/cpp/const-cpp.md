@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73e030ede8305db4ea05826f0ce7704420ac0400
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9c3e42cf2dad7e227636582baa4deabcfc05bc1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403397"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466539"
 ---
 # <a name="const-c"></a>const (C++)
 修改資料宣告時**const**關鍵字可讓您指定的物件或變數不是可修改。  
@@ -131,7 +131,7 @@ int main()
 }  
 ```  
   
-## <a name="c-and-c-const-differences"></a>C 和 C++ 常數的差異  
+## <a name="c-and-c-const-differences"></a>C 和 c + + 常數的差異  
  當您宣告一個變數**const** C 原始程式碼檔案，在您這麼做：  
   
 ```cpp 
@@ -169,7 +169,7 @@ extern "C" const int x=10;
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [#define](../preprocessor/hash-define-directive-c-cpp.md)。  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)

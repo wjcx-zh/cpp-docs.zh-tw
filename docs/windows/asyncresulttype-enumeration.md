@@ -1,5 +1,5 @@
 ---
-title: AsyncResultType 列舉 |Microsoft 文件
+title: AsyncResultType 列舉 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4a8465dd61e52425a0335e171cf516591ae589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863305"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465281"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列舉
-指定 GetResults() 方法所傳回的結果類型。  
+指定所傳回的結果的型別`GetResults()`方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,8 +39,8 @@ enum AsyncResultType;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`MultipleResults`|多個結果之間開始狀態，並在呼叫 close （） 之前漸進式呈現的一組。|  
-|`SingleResult`|單一結果，會顯示完整的事件發生之後。|  
+|`MultipleResults`|多個結果，以漸進方式之間會顯示一組`Start`狀態，以及之前`Close()`呼叫。|  
+|`SingleResult`|單一結果，就會顯示完整的事件發生之後。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

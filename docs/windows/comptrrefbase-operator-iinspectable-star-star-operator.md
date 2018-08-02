@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c23ba7ba476b44b44f48b76119776e2f2cb188e
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 19e04f5415f9f7a736371c888dff7559df6c6c66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181142"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462332"
 ---
 # <a name="comptrrefbaseoperator-iinspectable-operator"></a>Comptrrefbase:: Operator IInspectable\* \*運算子
 
@@ -36,9 +36,9 @@ operator IInspectable**() const;
 
 ## <a name="remarks"></a>備註
 
-將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對 IInspectable 介面。
+將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對`IInspectable`介面。
 
-如果目前的 ComPtrRefBase 不是衍生自 IInspectable，就會發出錯誤。
+會發出錯誤，如果目前**ComPtrRefBase**不是衍生自`IInspectable`。
 
 這項轉換可才 **&#95; &#95;WRL_CLASSIC_COM&#95; &#95;** 定義。
 
@@ -49,6 +49,5 @@ operator IInspectable**() const;
 **命名空間：** Microsoft::WRL::Details
 
 ## <a name="see-also"></a>另請參閱
-
 [ComPtrRefBase 類別](../windows/comptrrefbase-class.md)   
 [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

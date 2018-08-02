@@ -1,5 +1,5 @@
 ---
-title: 可繫結 |Microsoft 文件
+title: 可繫結 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861801"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467140"
 ---
 # <a name="bindable"></a>bindable
-表示屬性支援資料繫結。  
+表示支援資料繫結的屬性。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- **可繫結**c + + 屬性具有相同的功能[可繫結](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 屬性。 您可以使用它定義與屬性上[propget](../windows/propget.md)， [propput](../windows/propput.md)，或[propputref](../windows/propputref.md)屬性，或者您可以手動定義可繫結的方法。  
+ **可繫結**c + + 屬性具有相同的功能[可繫結](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 屬性。 您可以利用定義的屬性上使用它[propget](../windows/propget.md)， [propput](../windows/propput.md)，或[propputref](../windows/propputref.md)屬性，或者您可以手動定義的可繫結的方法。  
   
  下列的 MFC 範例示範如何使用**可繫結**:  
   
--   [控制項範例： MFC 架構的 ActiveX 控制項](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [控制項的範例： MFC 為基礎的 ActiveX 控制項](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [CIRC 範例： ActiveX 控制項](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [CIRC 範例： ActiveX 控制項](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [工具提示與說明 TESTHELP 範例： ActiveX 控制項](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [工具提示與說明 TESTHELP 範例： ActiveX 控制項](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範如何使用**可繫結**屬性：  
+ 下列程式碼會示範如何使用**可繫結**屬性：  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  

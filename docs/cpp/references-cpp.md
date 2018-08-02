@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956589"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463144"
 ---
 # <a name="references-c"></a>參考 (C++)
 參考 (例如指標) 會儲存位在記憶體中其他位置之物件的位址。 與指標不同，參考在初始化之後不能參照不同的物件，或設為 null。 有兩種類型的參考： 左值參考參照具名變數，右值參考參照[暫存物件](../cpp/temporary-objects.md)。 & 運算子表示左值參考，而 && 運算子根據內容會表示右值參考或通用參考 (右值或左值)。  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>註解  
- 本節主題：  
-  
--   [參考型別函式引數](../cpp/reference-type-function-arguments.md)  
-  
--   [參考型別函式傳回](../cpp/reference-type-function-returns.md)  
-  
--   [指標的參考](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>另請參閱
+ [參考型別函式引數](../cpp/reference-type-function-arguments.md)  
+ [參考型別函式傳回](../cpp/reference-type-function-returns.md)  
+ [指標的參考](../cpp/references-to-pointers.md)  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3ae16363956afc7cca853307ef2888846a02864d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941336"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461766"
 ---
 # <a name="restrictions-on-termination-handlers"></a>終止處理常式的限制
 您無法使用**goto**陳述式跳入 **__try**陳述式區塊或 **__finally**陳述式區塊。 您必須改為透過一般控制流程進入陳述式區塊。 (您可以不過，跳出 **__try**陳述式區塊。)此外，您無法巢狀處理的例外狀況處理常式或終止處理常式內 **__finally**區塊。  

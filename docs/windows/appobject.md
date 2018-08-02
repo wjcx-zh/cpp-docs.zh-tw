@@ -1,5 +1,5 @@
 ---
-title: appobject |Microsoft 文件
+title: appobject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856969"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466367"
 ---
 # <a name="appobject"></a>appobject
-識別為的應用程式物件，這是完整的.exe 應用程式相關聯，並指出函數和屬性的 coclass 供全域使用在這個 coclass[類型程式庫](../mfc/automation-clients-using-type-libraries.md)。  
+識別做為應用程式物件，這是完整的.exe 應用程式相關聯，表示全域可用在此函式和屬性的 coclass coclass[型別程式庫](../mfc/automation-clients-using-type-libraries.md)。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Appobject** c + + 屬性具有相同的功能[appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼示範簡單的類別定義，其中包含屬性區塊前面有**appobject**:  
+ 下列程式碼示範簡單的類別定義，加上包含的屬性區塊**appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,9 +60,9 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
-|**必要屬性**|**coclass**|  
+|**必要屬性**|`coclass`|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

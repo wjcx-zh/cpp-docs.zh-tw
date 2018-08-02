@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51479d6571a58fccf57c9060254cd0c445f8483b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 96fd147214b80002eb2fba60ce046072e8c9e842
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943024"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461639"
 ---
 # <a name="relational-function-templates"></a>關係函式樣板
 **Microsoft 專屬**  
@@ -27,7 +27,6 @@ ms.locfileid: "37943024"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 template<typename _InterfaceType> bool operator==(  
    int NULL,  
    _com_ptr_t<_InterfaceType>& p   
@@ -84,7 +83,7 @@ template<typename _Interface,
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *i*  
  原始的介面指標。  
   

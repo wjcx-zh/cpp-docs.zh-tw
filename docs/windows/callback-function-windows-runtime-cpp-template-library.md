@@ -1,5 +1,5 @@
 ---
-title: 回呼函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft 文件
+title: 回呼函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860849"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461488"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback 函式 (Windows 執行階段 C++ 樣板程式庫)
 建立成員函式是回呼方法的物件。  
@@ -199,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>參數  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  樣板參數，指定當事件發生時要呼叫之委派的介面。  
   
- `TCallback`  
+ *TCallback*  
  樣板參數，指定代表物件及其回呼成員函式的物件型別。  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  樣板參數，指定事件發生時成員函式為呼叫之方法的物件。  
   
- `TArg1`  
+ *TArg1*  
  樣板參數，指定第一個回呼方法引數的型別。  
   
- `TArg2`  
+ *TArg2*  
  樣板參數，指定第二個回呼方法引數的型別。  
   
- `TArg3`  
+ *TArg3*  
  樣板參數，指定第三個回呼方法引數的型別。  
   
- `TArg4`  
+ *TArg4*  
  樣板參數，指定第四個回呼方法引數的型別。  
   
- `TArg5`  
+ *TArg5*  
  樣板參數，指定第五個回呼方法引數的型別。  
   
- `TArg6`  
+ *TArg6*  
  樣板參數，指定第六個回呼方法引數的型別。  
   
- `TArg7`  
+ *TArg7*  
  樣板參數，指定第七個回呼方法引數的型別。  
   
- `TArg8`  
+ *TArg8*  
  樣板參數，指定第八個回呼方法引數的型別。  
   
- `TArg9`  
+ *TArg9*  
  樣板參數，指定第九個回呼方法引數的型別。  
   
- `callback`  
+ *回呼*  
  表示回呼物件及其成員函式的物件。  
   
- `object`  
+ *object*  
  當事件發生時呼叫之成員函式的物件。  
   
- `method`  
+ *方法*  
  當事件發生時呼叫的成員函式。  
   
 ## <a name="return-value"></a>傳回值  
  成員函式是指定之回呼方法的物件。  
   
 ## <a name="remarks"></a>備註  
- 委派物件的基底必須是 IUnknown，而不是 IInspectable。  
+ 必須是委派物件的基底`IUnknown`，而非`IInspectable`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

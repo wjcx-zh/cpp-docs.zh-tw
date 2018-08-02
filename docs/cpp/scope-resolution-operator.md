@@ -1,5 +1,5 @@
 ---
-title: '範圍解析運算子::: |Microsoft 文件'
+title: '範圍解析運算子::: |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420934"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467075"
 ---
 # <a name="scope-resolution-operator-"></a>範圍解析運算子：::
-範圍解析運算子 `::` 可用來識別及區分不同範圍內使用的識別項。 如需範圍的詳細資訊，請參閱[範圍](../cpp/scope-visual-cpp.md)。  
+範圍解析運算子 **::** 用來識別及區分不同範圍內的識別項。 如需有關範圍的詳細資訊，請參閱 <<c0> [ 範圍](../cpp/scope-visual-cpp.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  不含範圍限定詞的範圍解析運算子是指全域命名空間。  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  您可以使用範圍解析運算子的鏈結。 在下列範例中，`NamespaceD::NamespaceD1` 會識別巢狀命名空間 `NamespaceD1`，而 `NamespaceE::ClassE::ClassE1` 會識別巢狀類別 `ClassE1`。  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>搭配靜態成員  
@@ -158,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>搭配限定範圍的列舉  
- 範圍的解析運算子也可以搭配限定範圍列舉值[列舉宣告](../cpp/enumerations-cpp.md)，如下列範例所示：  
+ 範圍的解析運算子也可搭配限定範圍列舉的值[列舉型別宣告](../cpp/enumerations-cpp.md)，如下列範例所示：  
   
 ```cpp  
 enum class EnumA{  
@@ -172,10 +165,8 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

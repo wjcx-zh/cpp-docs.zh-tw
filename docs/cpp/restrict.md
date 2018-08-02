@@ -1,5 +1,5 @@
 ---
-title: 限制 |Microsoft 文件
+title: 限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422884"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463677"
 ---
 # <a name="restrict"></a>restrict
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
-當套用至函式宣告或定義，傳回指標類型，`restrict`告知編譯器該函式會傳回物件，不是*別名*，也就是任何其他指標所參考。 這可讓編譯器執行的其他最佳化作業。
+當套用至函式宣告或定義傳回指標類型，**限制**會告知編譯器函式傳回的物件，不是*別名*，也就是由任何其他參考指標。 這可讓編譯器執行其他最佳化。
 
 ## <a name="syntax"></a>語法
 
@@ -36,21 +36,21 @@ ms.locfileid: "32422884"
   
 ## <a name="remarks"></a>備註
 
-編譯器會傳播`__declspec(restrict)`。 例如，CRT`malloc`函式具有`__declspec(restrict)`裝飾，因此，編譯器會假設指標初始化的記憶體位置由`malloc`也不是別名之前現有的指標。
+編譯器會傳播 **__declspec(restrict)**。 比方說，CRT`malloc`函式具有 **__declspec(restrict)** 裝飾，因此，編譯器會假設指標初始化的記憶體位置`malloc`也不是由別名先前現有的指標。
 
-編譯器不會檢查傳回的指標不是實際的別名。 開發人員必須負責確保程式不會對以 `restrict __declspec` 修飾詞標記的指標使用別名。  
+編譯器不會檢查傳回的指標不是實際的別名。 開發人員必須負責確保程式不別名會以標記的指標**限制 __declspec**修飾詞。  
   
-在變數上的語意很類似，請參閱[__restrict](../cpp/extension-restrict.md)。
+如需變數的類似語法，請參閱[__restrict](../cpp/extension-restrict.md)。
  
-適用於別名函式內的另一個註解，請參閱[__declspec(noalias)](../cpp/noalias.md)。
+另一個註釋套用至出現在函式的別名，請參閱[__declspec(noalias)](../cpp/noalias.md)。
   
-如需有關資訊**限制**關鍵字是 c + + AMP 的一部分，請參閱[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。  
+如需**限制**關鍵字是 c + + AMP 的一部分，請參閱[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。  
  
 ## <a name="example"></a>範例  
 
-下列範例示範如何使用`__declspec(restrict)`。
+下列範例示範如何使用 **__declspec(restrict)**。
 
-當`__declspec(restrict)`套用至函式，傳回的指標，這會告訴編譯器的傳回值所指向的記憶體沒有別名。 在此範例中，指標`mempool`和`memptr`是全域的因此編譯器無法確定它們參考的記憶體沒有別名。 不過，使用內`ma`和其呼叫端`init`方式傳回未否則參考的程式，因此記憶體`__decslpec(restrict)`用來協助最佳化工具。 這是類似於如何 CRT 標頭裝飾配置函式例如`malloc`使用`__declspec(restrict)`表示，一定會傳回不能有別名，以現有指標的記憶體。
+當 **__declspec(restrict)** 套用至函式，傳回的指標，這會告訴編譯器的傳回值所指向的記憶體沒有別名。 在此範例中，指標`mempool`和`memptr`是全域的因此編譯器無法確定它們參考的記憶體沒有別名。 不過，它們會使用內`ma`和其呼叫端`init`傳回，否則程式，因此參考記憶體的方式 **__decslpec(restrict)** 用來協助最佳化工具。 這是類似於如何將 CRT 標頭裝飾配置函式這類`malloc`利用 **__declspec(restrict)** 來表示，它們一律會傳回不能有別名現有指標的記憶體。
 
 ```C
 // declspec_restrict.c
@@ -119,10 +119,9 @@ int main()
 }
 ```
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
-
-[關鍵字](../cpp/keywords-cpp.md)  
-[__declspec](../cpp/declspec.md)  
-[__declspec(noalias)](../cpp/noalias.md)  
+ [關鍵字](../cpp/keywords-cpp.md)  
+ [__declspec](../cpp/declspec.md)  
+ [__declspec(noalias)](../cpp/noalias.md)  

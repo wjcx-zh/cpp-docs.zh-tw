@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Releaseandgetaddressof 方法 |Microsoft 文件'
+title: 'Comptrref:: Releaseandgetaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab97dad8f14d72a6e8e441c9889a0e18870a0b4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 631f27dc7124cfce655f6a254548335ca8f1039f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884003"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465405"
 ---
 # <a name="comptrrefreleaseandgetaddressof-method"></a>ComPtrRef::ReleaseAndGetAddressOf 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ InterfaceType** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 已刪除的 ComPtrRef 物件所代表的介面指標。  
+ 已呈現之介面指標的已刪除**ComPtrRef**物件。  
   
 ## <a name="remarks"></a>備註  
- 刪除目前的 ComPtrRef 物件，並傳回已 ComPtrRef 物件所代表的介面指標至 a 的指標。  
+ 刪除目前**ComPtrRef**物件，並傳回已所代表之介面的指標-到-a-指標**ComPtrRef**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

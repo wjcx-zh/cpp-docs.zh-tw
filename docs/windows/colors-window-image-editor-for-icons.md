@@ -1,5 +1,5 @@
 ---
-title: 色彩視窗 （圖示影像編輯器） |Microsoft 文件
+title: 色彩視窗 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,29 +26,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a327fd99028bf8e1a6d7724a515f264aa04a4e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860368"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460967"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>色彩視窗 (圖示影像編輯器)
-[色彩] 視窗中有兩個部分：  
+**色彩**視窗有兩個部分：  
   
-1.  色彩調色盤，即代表您可以使用之色彩的色彩範例陣列。 您可以在使用圖形工具時，按一下範例來選取前景和背景色彩。  
+1.  **色彩調色盤**，即表示您可以使用的色彩的色彩範例陣列。 您可以在使用圖形工具時，按一下範例來選取前景和背景色彩。  
   
-2.  色彩指示器，顯示螢幕及反向色彩選取器的前景和背景色彩。  
+2.  **色彩指示器**，其中顯示的前景和背景色彩和螢幕及反向色彩選取器。  
   
      ![色彩視窗](../windows/media/vccolorswindow.gif "vcColorsWindow")  
 色彩視窗  
   
 > [!NOTE]
->  **螢幕色彩**和**反向色彩**工具只適用於圖示和游標。  
+>  **螢幕色彩**並**反向色彩**工具僅適用於圖示和游標。  
   
- 您可以使用 [色彩] 視窗與[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)。  
-  
-
+ 您可以使用 [色彩] 視窗，與[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)。  
   
 ## <a name="requirements"></a>需求  
  無  

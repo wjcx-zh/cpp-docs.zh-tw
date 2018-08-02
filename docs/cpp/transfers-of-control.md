@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943004"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464265"
 ---
 # <a name="transfers-of-control"></a>控制權轉移
 您可以使用**goto**陳述式或**案例**標示**切換**陳述式來指定分支延伸超過初始設定式的程式。 除非包含初始設定式的宣告所在區塊是由跳躍陳述式發生的區塊所包圍，否則這類程式碼是不合法的。  
@@ -60,4 +60,3 @@ int main()
  在上述範例中， **goto**陳述式會嘗試將控制項的初始化超過`i`。 不過，如果 `i` 已宣告但尚未初始化，則這項傳送是合法的。  
   
  物件`total`及`ch`做為區塊中宣告*陳述式*的**雖然**陳述式，該區塊結束使用時，會終結**中斷**陳述式。  
-  

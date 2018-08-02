@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsection:: Trylock 方法 |Microsoft 文件'
+title: 'Criticalsection:: Trylock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883948"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465418"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 方法
-嘗試進入重要區段，而不會封鎖。 如果呼叫成功，則呼叫的執行緒會關鍵區段的擁有權。  
+嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,11 +38,11 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>參數  
- `cs`  
+ *cs*  
  使用者指定的重要區段物件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功進入重要區段為非零值或目前的執行緒已經擁有重要區段。 如果另一個執行緒已經擁有重要區段為零。  
+ 如果成功進入重要區段，為非零值或目前的執行緒已經擁有重要區段。 如果另一個執行緒已經擁有重要區段，則為零。  
   
 ## <a name="remarks"></a>備註  
  第一個**TryLock**函式會影響目前的重要區段物件。 第二個**TryLock**函式會影響使用者指定的重要區段。  

@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Getoncomplete 方法 |Microsoft 文件'
+title: 'Asyncbase:: Getoncomplete 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865106"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466568"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete 方法
-將目前的完成事件處理常式的位址複製到指定的變數。  
+將目前的 「 完成 」 事件處理常式的位址複製到指定的變數中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `completeHandler`  
- 目前的完成事件處理常式的位址儲存位置。  
+ *completeHandler*  
+ 目前的 「 完成 」 事件處理常式的位址儲存位置。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
+ 如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

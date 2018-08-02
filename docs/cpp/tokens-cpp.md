@@ -1,5 +1,5 @@
 ---
-title: 語彙基元 （c + +） |Microsoft 文件
+title: 語彙基元 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2e1a6cc36e4e5f2f785c1e5dff03c6fb5e392d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 217061557acb0c8b311a91651eea2f57a8198872
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467956"
 ---
 # <a name="tokens-c"></a>語彙基元 （c + +）
 語彙基元是 C++ 程式中對編譯器有意義的最小項目。 C++ 剖析器可辨識下列語彙基元類型：識別項、關鍵字、常值、運算子、標點符號和任何其他分隔符號。 這些語彙基元資料流組成轉譯單位。  
@@ -44,13 +45,13 @@ ms.lasthandoff: 05/03/2018
   
  剖析器使用從左至右掃描的輸入字元來建立可能的最長語彙基元，藉此區隔語彙基元與輸入資料流。 請參考下列程式碼片段：  
   
-```  
+```cpp 
 a = i+++j;  
 ```  
   
  撰寫程式碼的程式設計人員可能想要這兩個陳述式之一：  
   
-```  
+```cpp 
 a = i + (++j)  
   
 a = (i++) + j  

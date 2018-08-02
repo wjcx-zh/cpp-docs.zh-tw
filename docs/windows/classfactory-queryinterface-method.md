@@ -1,5 +1,5 @@
 ---
-title: 'Classfactory:: Queryinterface 方法 |Microsoft 文件'
+title: 'Classfactory:: Queryinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855984"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467088"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface 方法
 擷取指定參數的介面指標。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `riid`  
+ *riid*  
  介面識別碼。  
   
- `ppvObject`  
- 這項作業完成時，參數所指定介面的指標`riid`。  
+ *ppvObject*  
+ 這項作業完成時，參數所指定之介面指標*riid*。  
   
 ## <a name="return-value"></a>傳回值  
  若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  

@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025899"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465990"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
-傳回 ComPtr 物件，代表指定介面 ID 所識別的介面。  
+傳回**ComPtr**物件，表示指定的介面識別碼所識別的介面  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,11 +37,11 @@ WRL_NOTHROW HRESULT AsIID(
 ```  
   
 #### <a name="parameters"></a>參數  
- `riid`  
+ *riid*  
  介面識別碼。  
   
- `p`  
- 如果物件具有其識別碼等於的介面`riid`，所指定之介面的雙向間接指標`riid`參數，否則 IUnknown 指標。  
+ *p*  
+ 如果物件具有其識別碼等於的介面*riid*，所指定之介面的雙向間接指標*riid*參數，否則指標`IUnknown`。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  

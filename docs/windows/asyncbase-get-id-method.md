@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Get_id 方法 |Microsoft 文件'
+title: 'Asyncbase:: Get_id 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6720348692e92e05922bde1100e42c24a866933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859796"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464710"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id 方法
 擷取非同步作業的控制代碼。  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `id`  
- 儲存控制代碼的位置。  
+ *id*  
+ 控制代碼之儲存位置。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
+ 如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會實作 IAsyncInfo::get_Id。  
+ 這個方法會實作 `IAsyncInfo::get_Id`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

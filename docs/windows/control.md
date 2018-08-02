@@ -1,5 +1,5 @@
 ---
-title: 控制 |Microsoft 文件
+title: 控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870828"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466483"
 ---
 # <a name="control"></a>控制項
-指定使用者定義型別是控制項。  
+指定使用者定義型別為控制項。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- **控制項**屬性隱含[coclass](../windows/coclass.md)屬性。 **控制項**c + + 屬性具有相同的功能[控制項](http://msdn.microsoft.com/library/windows/desktop/aa366764)MIDL 屬性。  
+ **控制**屬性隱含[coclass](../windows/coclass.md)屬性。 **控制**c + + 屬性具有相同的功能[控制](http://msdn.microsoft.com/library/windows/desktop/aa366764)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,7 +59,7 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

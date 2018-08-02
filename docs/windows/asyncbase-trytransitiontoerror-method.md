@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Trytransitiontoerror 方法 |Microsoft 文件'
+title: 'Asyncbase:: Trytransitiontoerror 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863500"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463203"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError 方法
 指出指定的錯誤程式碼是否可以修改的內部錯誤狀態。  
@@ -36,14 +36,14 @@ bool TryTransitionToError(
 ```  
   
 #### <a name="parameters"></a>參數  
- `error`  
- 錯誤 HRESULT。  
+ *error*  
+ 錯誤的 HRESULT。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果您的內部錯誤狀態已變更。否則， `false`。  
+ **真**如果內部錯誤狀態已變更，否則**false**。  
   
 ## <a name="remarks"></a>備註  
- 這項作業會在錯誤狀態已設定為 S_OK 時，才修改錯誤狀態。 如果 「 錯誤 」 狀態已經是錯誤，已取消，完成，或已關閉，這項作業會有任何作用。  
+ 這項作業會在錯誤狀態已設為 S_OK 時，才修改錯誤狀態。 如果錯誤的狀態已取消、 已完成，或關閉的錯誤，這項作業會有任何作用。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

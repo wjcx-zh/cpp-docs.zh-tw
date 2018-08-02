@@ -1,5 +1,5 @@
 ---
-title: ActivateInstance 函式 |Microsoft 文件
+title: ActivateInstance 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855571"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461967"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函式
-註冊並擷取在指定的類別識別碼中所定義之指定類型的執行個體  
+註冊，並擷取在指定的類別識別碼所定義之指定類型的執行個體  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,17 +39,17 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 要啟動類型。  
+ *T*  
+ 若要啟用一種類型。  
   
- `activatableClassId`  
- 定義參數的類別識別碼的名稱`T`。  
+ *activatableClassId*  
+ 參數定義的類別識別碼的名稱*T*。  
   
- `instance`  
- 這項作業完成時，執行個體的參考`T`。  
+ *執行個體*  
+ 這項作業完成時，執行個體的參考*T*。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，錯誤 HRESULT，表示錯誤的原因。  
+ 如果成功則為 S_OK否則，發生錯誤的 HRESULT，表示錯誤的原因。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

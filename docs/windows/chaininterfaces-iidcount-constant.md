@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Iidcount 常數 |Microsoft 文件'
+title: 'Chaininterfaces:: Iidcount 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859998"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463937"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount 常數
-介面 Id 的範本參數所指定的介面中所包含的總數`I0`透過`I9`。  
+介面包含在範本參數所指定的介面識別碼的總數*I0*透過*I9*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 介面 Id 的總數。  
+ 介面識別碼的總數。  
   
 ## <a name="remarks"></a>備註  
- 範本參數`I0`和`I1`是必要的與參數`I2`透過`I9`是選擇性的。每個介面的 IID 計數通常是 1。  
+ 範本參數*I0*並*I1*是必要的以及參數*I2*透過*I9*是選擇性的。每個介面的 IID 計數通常是 1。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

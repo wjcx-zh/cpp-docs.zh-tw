@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Getaddressof 方法 |Microsoft 文件'
+title: 'Comptrref:: Getaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883303"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462933"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 目前的 ComPtrRef 物件所代表之介面的指標位址。  
+ 代表由目前之介面的指標位址**ComPtrRef**物件。  
   
 ## <a name="remarks"></a>備註  
- 擷取目前的 ComPtrRef 物件所代表之介面的指標位址。  
+ 擷取目前所代表之介面的指標位址**ComPtrRef**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

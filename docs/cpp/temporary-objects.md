@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942660"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466851"
 ---
 # <a name="temporary-objects"></a>暫存物件
 在某些情況下，編譯器必須建立暫存物件。 可能需要建立這些暫存物件的原因如下：  
@@ -54,4 +54,3 @@ ms.locfileid: "37942660"
 |------------------------------|-----------------------|  
 |運算式評估結果|因為運算式評估而建立的所有暫存會都終結運算式陳述式的結尾 (也就是於分號)，或的控制運算式的結尾**for**，**如果**，**雖然**，**請勿**，並**切換**陳述式。|  
 |初始化**const**參考|如果初始設定式不是與所要初始化的參考相同類型的左值，則會建立基礎物件類型的暫存，並且使用初始化運算式進行初始化。 這個暫存物件會在其所繫結的參考物件終結時立即終結。|  
-  

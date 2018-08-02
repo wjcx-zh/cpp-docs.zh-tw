@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Releaseandgetaddressof 方法 |Microsoft 文件'
+title: 'Comptr:: Releaseandgetaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32d846a1fc41596812ca6e8578f25f9ae8115182
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883795"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464989"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf 方法
-釋放與這個 ComPtr 相關聯的介面，然後擷取 [ptr_](../windows/comptr-ptr-data-member.md) 資料成員的位址，其中包含已釋放之介面的指標。  
+釋放與這個相關聯的介面**ComPtr** ，然後擷取的地址[ptr_](../windows/comptr-ptr-data-member.md)資料成員，其中包含已釋放之介面的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ T** ReleaseAndGetAddressOf();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 位址[ptr_](../windows/comptr-ptr-data-member.md)這個 ComPtr 資料成員。  
+ 地址[ptr_](../windows/comptr-ptr-data-member.md)資料成員**ComPtr**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942704"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462114"
 ---
 # <a name="writing-an-exception-filter"></a>撰寫例外狀況篩選條件
 您可以藉由跳至例外狀況處理常式的層級或繼續執行的方式處理例外狀況。 除了使用例外狀況處理常式程式碼來處理例外狀況並繼續之外，您可以使用*篩選*清除 此問題，然後傳回-1，而不清除堆疊中繼續正常流程。  

@@ -1,5 +1,5 @@
 ---
-title: Comptr::&amp;運算子 |Microsoft 文件
+title: 'Comptr:: Operator&amp;運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bfe8cf9091d888c33420f53f584ca5509d80527
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872402"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461558"
 ---
-# <a name="comptroperatoramp-operator"></a>Comptr::&amp;運算子
-釋放與此相關聯的介面`ComPtr`物件，並接著會擷取的位址`ComPtr`物件。  
+# <a name="comptroperatoramp-operator"></a>Comptr:: Operator&amp;運算子
+釋放與這個相關聯的介面**ComPtr**物件，並接著會擷取的地址**ComPtr**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,10 +36,10 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 目前的弱式參考`ComPtr`。  
+ 目前的弱式參考**ComPtr**。  
   
 ## <a name="remarks"></a>備註  
- 這個方法與[comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) ，這個方法會釋放的介面指標的參考。 使用`ComPtr::GetAddressOf`當您需要的介面指標的位址，但不是想要釋放該介面。  
+ 這個方法不同於[comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) ，這個方法會釋放介面指標的參考。 使用`ComPtr::GetAddressOf`當您需要的介面指標的位址，但不是想要釋放該介面。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

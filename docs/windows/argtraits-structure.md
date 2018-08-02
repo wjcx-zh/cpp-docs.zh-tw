@@ -1,5 +1,5 @@
 ---
-title: ArgTraits 結構 |Microsoft 文件
+title: ArgTraits 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858038"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462039"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -118,41 +118,41 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>參數  
- `TMemberFunction`  
- ArgTraits 結構不符合任何叫用方法簽章的 Typename 參數。  
+ *TMemberFunction*  
+ Typename 參數不符合任何 ArgTraits 結構`Invoke`方法簽章。  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  委派的介面。  
   
- `TArg1`  
- 叫用方法的第一個引數的型別。  
+ *TArg1*  
+ 第一個引數型別`Invoke`方法。  
   
- `TArg2`  
- 叫用方法的第二個引數的型別。  
+ *TArg2*  
+ 第二個引數型別`Invoke`方法。  
   
- `TArg3`  
- 叫用方法的第三個引數的型別。  
+ *TArg3*  
+ 第三個引數型別`Invoke`方法。  
   
- `TArg4`  
- 叫用方法的第四個引數的型別。  
+ *TArg4*  
+ 第四個引數型別`Invoke`方法。  
   
- `TArg5`  
- 叫用方法的第五個引數的型別。  
+ *TArg5*  
+ 第五個引數型別`Invoke`方法。  
   
- `TArg6`  
- 叫用方法的第六個引數的型別。  
+ *TArg6*  
+ 第六個引數型別`Invoke`方法。  
   
- `TArg7`  
- 叫用方法的第七個引數的型別。  
+ *TArg7*  
+ 第七個引數型別`Invoke`方法。  
   
- `TArg8`  
- 八個引數叫用方法的型別。  
+ *TArg8*  
+ 第八個引數型別`Invoke`方法。  
   
- `TArg9`  
- 叫用方法的第九個引數的型別。  
+ *TArg9*  
+ 第九個引數型別`Invoke`方法。  
   
 ## <a name="remarks"></a>備註  
- `ArgTraits`結構宣告指定的委派介面和匿名成員函式具有指定的參數數目。  
+ `ArgTraits`結構宣告指定的委派，介面和匿名的成員函式具有指定的參數數目。  
   
 ## <a name="members"></a>成員  
   
@@ -174,7 +174,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ArgTraits::args 常數](../windows/argtraits-args-constant.md)|保留的叫用方法的委派介面上的參數數目的計數。|  
+|[ArgTraits::args 常數](../windows/argtraits-args-constant.md)|將保存的參數數目的計數`Invoke`委派介面的方法。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `ArgTraits`  

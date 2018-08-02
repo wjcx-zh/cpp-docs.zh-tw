@@ -1,5 +1,5 @@
 ---
-title: ComPtrRefBase 類別 |Microsoft 文件
+title: ComPtrRefBase 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883576"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464239"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 類別
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,8 +37,8 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- A [ComPtr\<T >](../windows/comptr-class.md)型別或型別衍生自它不只是 ComPtr 所代表的介面。  
+ *T*  
+ A [ComPtr\<T >](../windows/comptr-class.md)型別或型別衍生它，不只是將所代表之介面**ComPtr**。  
   
 ## <a name="remarks"></a>備註  
  表示基底類別[ComPtrRef](../windows/comptrref-class.md)類別。  
@@ -49,14 +49,14 @@ class ComPtrRefBase;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`InterfaceType`|範本參數的型別同義`T`。|  
+|`InterfaceType`|範本參數類型的同義字*T*。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable** 運算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|會轉換目前[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標--a-指標-將 IInspectable 介面。|  
-|[ComPtrRefBase::operator IUnknown** 運算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|會轉換目前[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標--a-指標-將 IUnknown 介面。|  
+|[ComPtrRefBase::operator IInspectable** 運算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對 IInspectable 介面。|  
+|[ComPtrRefBase::operator IUnknown** 運算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)指標-至-a-指標-到的資料成員的 IUnknown 介面。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   

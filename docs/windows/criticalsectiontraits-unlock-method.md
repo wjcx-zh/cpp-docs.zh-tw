@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsectiontraits:: Unlock 方法 |Microsoft 文件'
+title: 'Criticalsectiontraits:: Unlock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883494"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466006"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock 方法
-特製化 CriticalSection 範本，好讓它支援釋放指定之關鍵區段物件擁有權。  
+支援指定的重要區段物件釋放擁有權的專長是 CriticalSection 範本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>參數  
- `cs`  
- 關鍵區段 」 物件的指標。  
+ *cs*  
+ 重要區段物件的指標。  
   
 ## <a name="remarks"></a>備註  
- *類型*修飾詞定義為`typedef CRITICAL_SECTION* Type;`。  
+ *型別*修飾詞指`typedef CRITICAL_SECTION* Type;`。  
   
- 如需詳細資訊，請參閱 Windows API 文件的 < 同步處理函數 > 一節中的 「 LeaveCriticalSection 函式 」。  
+ 如需詳細資訊，請參閱 「 同步處理函式 」 一節，以 Windows API 文件中的 「 LeaveCriticalSection 函式 」。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

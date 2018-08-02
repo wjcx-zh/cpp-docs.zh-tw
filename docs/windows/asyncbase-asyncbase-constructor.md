@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Asyncbase 建構函式 |Microsoft 文件'
+title: 'Asyncbase:: Asyncbase 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf794e3cbd9b566dafcdd1d5928ab9598bb1f08b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6b9b2b1abd9e42461f3bcfc57fcad1840382053
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854768"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466250"
 ---
 # <a name="asyncbaseasyncbase-constructor"></a>AsyncBase::AsyncBase 建構函式
-初始化 AsyncBase 類別的執行個體。  
+初始化的執行個體**AsyncBase**類別。  
   
 ## <a name="syntax"></a>語法  
   

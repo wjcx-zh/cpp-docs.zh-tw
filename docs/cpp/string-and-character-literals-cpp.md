@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208545"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466939"
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -146,7 +146,7 @@ int main() {
   
  **Microsoft 專屬**  
   
- 若要建立從一般字元常值 （其不含前置詞） 的值，編譯器會將轉換成 32 位元整數內的 8 位元值的單一引號之間的字元序列的字元。 常值中的多個字元，會視需要從高序位到低序位填入對應的位元組。 若要建立**char**值，編譯器會採用低序位位元組。 若要建立 `wchar_t` 或 `char16_t` 值，編譯器會採用低序位字組。 如果任何位元設定高出指定的位元組或字組，編譯器會警告結果遭截斷。  
+ 若要建立從一般字元常值 （其不含前置詞） 的值，編譯器會將轉換成 32 位元整數內的 8 位元值的單一引號之間的字元序列的字元。 常值中的多個字元，會視需要從高序位到低序位填入對應的位元組。 若要建立**char**值，編譯器會採用低序位位元組。 若要建立**wchar_t**或`char16_t`值，編譯器會採用低序位字組。 如果任何位元設定高出指定的位元組或字組，編譯器會警告結果遭截斷。  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>全形字串常值  
- 寬字串常值是 null 結束陣列常數`wchar_t`的前面加上 '`L`' 且包含任何圖形字元，但雙引號 （"）、 反斜線 (\\)，或新行字元。 全形字串常值可以包含上列逸出序列，以及任何通用字元名稱。  
+ 寬字串常值是 null 結束陣列常數**wchar_t**的前面加上 '`L`' 且包含任何圖形字元，但雙引號 （"）、 反斜線 (\\)，或新行字元。 全形字串常值可以包含上列逸出序列，以及任何通用字元名稱。  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Microsoft 專屬**  
   
- 在 Visual c + + 您可以使用字串常值來初始化非 const 的指標**char**或`wchar_t`。 C99 程式碼允許這項功能，不過在 C++98 中已被取代，在 C++11 中已移除。 嘗試修改字串造成存取違規，如此範例所示：  
+ 在 Visual c + + 您可以使用字串常值來初始化非 const 的指標**char**或是**wchar_t**。 C99 程式碼允許這項功能，不過在 C++98 中已被取代，在 C++11 中已移除。 嘗試修改字串造成存取違規，如此範例所示：  
   
 ```cpp  
 wchar_t* str = L"hello";  

@@ -1,5 +1,5 @@
 ---
-title: CriticalSection 類別 |Microsoft 文件
+title: CriticalSection 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b5eda8fb22f72bd1f50801f9993b9bd7a864d35
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b8aa37f6ac12cad91fa02a2387c95911227319d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871506"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466133"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 類別
-代表關鍵區段的物件。  
+表示重要區段物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,15 +39,15 @@ class CriticalSection;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CriticalSection::CriticalSection 建構函式](../windows/criticalsection-criticalsection-constructor.md)|初始化同步處理物件類似於 mutex 物件，但可用來在單一處理序執行緒。|  
-|[CriticalSection::~CriticalSection 解構函式](../windows/criticalsection-tilde-criticalsection-destructor.md)|取消初始化與目前 CriticalSection 物件已遭終結。|  
+|[CriticalSection::CriticalSection 建構函式](../windows/criticalsection-criticalsection-constructor.md)|初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。|  
+|[CriticalSection::~CriticalSection 解構函式](../windows/criticalsection-tilde-criticalsection-destructor.md)|取消初始化並終結目前**CriticalSection**物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CriticalSection::TryLock 方法](../windows/criticalsection-trylock-method.md)|嘗試進入重要區段，而不會封鎖。 如果呼叫成功，則呼叫的執行緒會關鍵區段的擁有權。|  
-|[CriticalSection::Lock 方法](../windows/criticalsection-lock-method.md)|等候指定的重要區段物件的擁有權。 函數會傳回擁有權授與呼叫執行緒時。|  
+|[CriticalSection::TryLock 方法](../windows/criticalsection-trylock-method.md)|嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。|  
+|[CriticalSection::Lock 方法](../windows/criticalsection-lock-method.md)|等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。|  
 |[CriticalSection::IsValid 方法](../windows/criticalsection-isvalid-method.md)|指出目前的重要區段是否有效。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  

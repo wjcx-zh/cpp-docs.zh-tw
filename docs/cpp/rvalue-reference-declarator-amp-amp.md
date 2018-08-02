@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942887"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462384"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子： &amp;&amp;
 保留右值運算式的參考。  
@@ -29,7 +29,6 @@ ms.locfileid: "37942887"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>移動語意  
  右值參考支援實作*移動語意*，這可大幅提升應用程式的效能。 移動語意可讓您撰寫將資源從一個物件轉移到另一個物件 (例如動態配置記憶體) 的程式碼。 移動語意可用於轉移暫存物件中無法供程式其他位置參考的資源，因此可以發揮功效。  
   
- 若要實作移動語意，您通常會提供*移動建構函式，* 並選擇性地移動指派運算子 (`operator=`)，您的類別。 然後，來源為右值的複製和指派作業會自動利用移動語意。 不同於預設複製建構函式，編譯器不提供預設移動建構函式。 如需有關如何撰寫移動建構函式以及如何在您的應用程式中使用它的詳細資訊，請參閱 <<c0> [ 移動建構函式和移動指派運算子 （c + +）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
+ 若要實作移動語意，您通常會提供*移動建構函式，* 並選擇性地移動指派運算子 (**運算子 =**)，您的類別。 然後，來源為右值的複製和指派作業會自動利用移動語意。 不同於預設複製建構函式，編譯器不提供預設移動建構函式。 如需有關如何撰寫移動建構函式以及如何在您的應用程式中使用它的詳細資訊，請參閱 <<c0> [ 移動建構函式和移動指派運算子 （c + +）](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。  
   
  您也可以多載一般函式和運算子，以使用移動語意。 Visual c + + 2010年會引進移動語意，在 c + + 標準程式庫。 例如，`string` 類別會實作執行移動語意的作業。 請考慮下列串連數個字串並列印結果的範例：  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- 之前的 Visual c + + 2010 中，每個呼叫`operator+`配置，並傳回新的暫存`string`物件 （右值）。 `operator+` 無法將字串附加至其他字串，因為它不知道原始字串是左值還是右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 使用右值參考可以修改 `operator+` 以採用右值，程式中的其他位置不能參考右值。 因此，`operator+` 現在可以將字串附加至另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需詳細資訊`string`類別，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。  
+ 之前的 Visual c + + 2010 中，每個呼叫**operator +** 配置，並傳回新的暫存`string`物件 （右值）。 **operator +** 無法與其他附加一個字串，因為它不知道原始字串是左值或右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 使用右值參考**operator +** 可以修改，以採用右值，不能在程式中其他位置參考。 因此， **operator +** 現在可以附加到另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需詳細資訊`string`類別，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。  
   
  當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[具名傳回值最佳化 Visual c + + 2005](http://go.microsoft.com/fwlink/p/?linkid=131571)。  
   

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da07786c3aac6bfce2f74a16088b3c09184a8106
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dc5480b461a06d84647b7f139b2bd0ccce550dcd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942679"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462140"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 陳述式 (C++)
 若要實作的 c + + 例外狀況處理，您使用**嘗試**，**擲回**，並**攔截**運算式。  
@@ -50,7 +50,6 @@ ms.locfileid: "37942679"
 ## <a name="example"></a>範例  
   
 ```cpp 
-  
 MyData md;  
 try {  
    // Code that could throw an exception  

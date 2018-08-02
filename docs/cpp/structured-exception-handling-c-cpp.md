@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940491"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461698"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 雖然 Windows 和 Visual C++ 支援結構化例外狀況處理 (SEH)，但是建議您使用 ISO 標準 C++ 例外狀況處理，因為它可提升程式碼的可攜性和彈性。 儘管如此，在現有程式碼中或針對特定類型的程式，您仍然必須使用 SEH。  
@@ -72,7 +72,7 @@ ms.locfileid: "37940491"
 -   [在 C++ 中使用結構化例外狀況處理](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>範例  
- 如前所述，解構函式會呼叫區域物件，如果您在 c + + 程式中使用 SEH，並使用編譯的 **/EH**與特定修飾詞的選項，例如 **/EHsc**和 **/EHa**. 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 下列範例示範這些行為差異。  
+ 如前所述，如果您在 C++ 程式中使用 SEH，並且搭配使用 `/EH` 選項與特定修飾詞 (例如，`/EHsc` 和 `/EHa`) 進行編譯，則會呼叫區域物件的解構函式。 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 下列範例示範這些行為差異。  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  如果您使用 **/EHsc**若要編譯此程式碼，但本機測試控制項`CPPEX`會未定義，沒有任何執行`TestClass`解構函式，則輸出看起來像這樣：  

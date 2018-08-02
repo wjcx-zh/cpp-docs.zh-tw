@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Putoncomplete 方法 |Microsoft 文件'
+title: 'Asyncbase:: Putoncomplete 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 490484a6988851565b478ef41ad16f0c722eb804
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856068"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465599"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete 方法
-設定完成事件處理常式的位址，為指定的值。  
+指定的值設定完成事件處理常式的位址。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `completeHandler`  
+ *completeHandler*  
  設定完成事件處理常式的位址。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
+ 如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

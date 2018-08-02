@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939880"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462247"
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 在現代 c + + 程式設計，包括標準程式庫*智慧型指標*、 用來確保程式是免費的記憶體和資源流失，和是安全的例外狀況。  

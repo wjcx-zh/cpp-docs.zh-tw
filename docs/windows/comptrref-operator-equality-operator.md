@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator = = 運算子 |Microsoft 文件'
+title: 'Comptrref:: Operator = = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880769"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463950"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 運算子
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,21 +55,21 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>參數  
- `a`  
+ *a*  
  ComPtrRef 物件的參考。  
   
- `b`  
- 另一個的 ComPtrRef 物件或為匿名型別指標的參考 (`void*`)。  
+ *b*  
+ 另一個的 ComPtrRef 物件或匿名型別指標的參考 (`void*`)。  
   
 ## <a name="return-value"></a>傳回值  
- 第一個運算子會產生`true`如果物件`a`是否等於物件`b`，否則`false`。  
+ 第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。  
   
- 第二個和第三個運算子會產生`true`如果物件`a`等於`nullptr`，否則`false`。  
+ 第二個和第三個運算子會產生 **，則為 true**如果物件等於**nullptr**，則為**false**。  
   
- 第四個和第五個運算子會產生`true`如果物件`a`是否等於物件`b`，否則`false`。  
+ 第四個和第五個運算子會產生 **，則為 true**如果物件是否等於物件*b*，則為**false**。  
   
 ## <a name="remarks"></a>備註  
- 指出兩個 ComPtrRef 物件是否相等。  
+ 指出兩個的 ComPtrRef 物件是否相等。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 148e42a79ef7c20b7b35c3ec570212574782c1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940146"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462088"
 ---
 # <a name="thread"></a>thread
 
 **Microsoft 專屬**
 
-**執行緒**擴充的儲存類別修飾詞用來宣告執行緒區域變數。 針對可攜式 C + + 11 中的對等及更新版本中，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)可攜式程式碼的儲存類別規範。 在 Windows 上`thread_local`透過實作`__declspec(thread)`。
+**執行緒**擴充的儲存類別修飾詞用來宣告執行緒區域變數。 針對可攜式 C + + 11 中的對等及更新版本中，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)可攜式程式碼的儲存類別規範。 在 Windows 上`thread_local`透過實作 **__declspec （thread)**。
 
 ## <a name="syntax"></a>語法
 
@@ -96,7 +96,6 @@ __declspec( thread ) int tls_i = 1;
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
-
-[__declspec](../cpp/declspec.md)  
-[關鍵字](../cpp/keywords-cpp.md)  
-[執行緒區域儲存區 (TLS)](../parallel/thread-local-storage-tls.md)  
+ [__declspec](../cpp/declspec.md)  
+ [關鍵字](../cpp/keywords-cpp.md)  
+ [執行緒區域儲存區 (TLS)](../parallel/thread-local-storage-tls.md)  

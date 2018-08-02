@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Copyto 方法 |Microsoft 文件'
+title: 'Comptr:: Copyto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870867"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464437"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
-複製與這個 ComPtr 的指定指標，相關聯的目前或指定的介面。  
+複製目前或指定相關聯的介面與這個**ComPtr**至指定的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,24 +46,24 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>參數  
- `U`  
+ *U*  
  類型名稱。  
   
- `ptr`  
+ *ptr*  
  這項作業完成時，所要求介面的指標。  
   
- `riid`  
+ *riid*  
  介面識別碼。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，表示隱含 QueryInterface 作業失敗的原因的 HRESULT。  
+ 如果成功則為 S_OK否則，HRESULT，指出為什麼隱含`QueryInterface`作業失敗。  
   
 ## <a name="remarks"></a>備註  
- 第一個函式會傳回要與這個 ComPtr 相關聯的介面指標的複本。 此函式一律傳回 S_OK。  
+ 第一次的函式會傳回與此相關聯的介面指標的複本**ComPtr**。 此函式一律會傳回 S_OK。  
   
- 第二個函式會執行與所指定的介面這個 ComPtr 相關聯的介面的 QueryInterface 運算`riid`參數。  
+ 第二個函式會執行`QueryInterface`與此相關聯的介面上的作業**ComPtr**所指定的介面*riid*參數。  
   
- 第三個函式在執行與的基礎介面這個 ComPtr 相關聯的介面的 QueryInterface 運算`U`參數。  
+ 第三個函式會執行`QueryInterface`與此相關聯的介面上的作業**ComPtr**為基礎的介面*U*參數。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

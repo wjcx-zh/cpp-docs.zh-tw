@@ -1,5 +1,5 @@
 ---
-title: tile_static 關鍵字 |Microsoft 文件
+title: tile_static 關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422159"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461871"
 ---
 # <a name="tilestatic-keyword"></a>tile_static 關鍵字
-`tile_static` 關鍵字用於宣告可供執行緒磚中所有執行緒存取的變數。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需有關如何使用圖格的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。  
+**Tile_static**關鍵字用來宣告的變數，可供執行緒磚中的所有執行緒。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需使用磚塊的詳細資訊，請參閱[使用的圖格](../parallel/amp/using-tiles.md)。  
   
- `tile_static` 關鍵字具有下列限制：  
+ **Tile_static**關鍵字有下列限制：  
   
 -   只能用於具有 `restrict(amp)` 修飾詞之函式中的變數。  
   
 -   不可用於屬於指標或參考類型的變數。  
   
--   `tile_static` 變數不能有初始設定式。 不會自動叫用預設建構函式和解構函式。  
+-   A **tile_static**變數不能有初始設定式。 不會自動叫用預設建構函式和解構函式。  
   
--   未初始化 `tile_static` 變數的值並未定義。  
+-   未初始化的值**tile_static**未定義變數。  
   
--   如果在呼叫圖形中宣告 `tile_static` 變數，且該呼叫圖形是以對 `parallel_for_each` 的非磚式呼叫為根本，則會產生警告，並且該變數的行為未定義。  
+-   如果**tile_static**變數宣告中已進行 root 破解的非磚狀呼叫的呼叫歷程圖`parallel_for_each`會產生警告且未定義變數的行為。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何使用 `tile_static` 變數跨磚狀顯示的數個執行緒累積資料。  
+ 下列範例示範如何**tile_static**變數可用來跨 tile 中的數個執行緒累積資料。  
   
 ```cpp  
 // Sample data:  
@@ -150,7 +150,6 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

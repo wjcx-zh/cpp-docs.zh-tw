@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Activationid 資料成員 |Microsoft 文件'
+title: 'Creatormap:: Activationid 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881792"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467127"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId 資料成員
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,14 +37,14 @@ union {
 ```  
   
 ## <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  介面識別碼。  
   
- `getRuntimeName`  
- 函式可擷取物件的 Windows 執行階段名稱。  
+ *getRuntimeName*  
+ 擷取函式的 Windows 執行階段物件的名稱。  
   
 ## <a name="remarks"></a>備註  
- 代表透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。  
+ 表示透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

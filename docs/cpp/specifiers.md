@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953743"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463485"
 ---
 # <a name="specifiers"></a>規範
 本主題描述*decl* （宣告規範） 元件[宣告](declarations-and-definitions-cpp.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "38953743"
  因為**簽署**，**不帶正負號**，**長**，以及**簡短**全都表示**int**的**typedef**命名為下列其中一個關鍵字會當作成員*declarator-list*不是*decl*。  
   
 > [!NOTE]
->  由於名稱可以重新宣告，因此其解譯會受到目前範圍中最新的宣告所限制。 重新宣告可能會影響編譯器解譯名稱的方式，尤其是 `typedef` 名稱。  
+>  由於名稱可以重新宣告，因此其解譯會受到目前範圍中最新的宣告所限制。 重新宣告可能會影響您如何解譯名稱的編譯器，尤其**typedef**名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [宣告和定義](declarations-and-definitions-cpp.md)

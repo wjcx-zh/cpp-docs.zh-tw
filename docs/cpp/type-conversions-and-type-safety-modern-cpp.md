@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940549"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462260"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>類型轉換和類型安全 (現代 C++)
 這份文件找出常見的類型轉換問題，並說明如何避免它們在您的 c + + 程式碼。  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  請注意，值會以兩個方向陣。 如果您的程式會產生奇怪的結果正負號的值看起來與您的預期反轉，尋找帶正負號和不帶正負號的整數類資料類型之間的隱含轉換。 在下列範例中，運算式的結果 (0-1) 會隱含地轉換從**int**要**不帶正負號的 int**它會儲存在`num`。 這會導致重新解譯位元模式。  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  編譯器不會警告有關帶正負號和不帶正負號的整數類資料類型之間的隱含轉換。 因此，我們建議您完全避免簽署-至-不帶正負號的轉換。 如果您無法避免，然後將您的程式碼執行階段檢查，以偵測要轉換的值是否大於或等於零且小於或等於帶正負號類型的最大值。 在此範圍中的值會從傳輸簽署不帶正負號或不帶正負號到帶正負號不在陣。  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>明確轉換 （轉換）  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  C 樣式轉型運算子等同於呼叫運算子 （），因此不起眼在程式碼和容易被忽略。 兩者都是不正確的因為難以辨識在瀏覽或搜尋，而且它們夠不同，無法叫用的任何組合**靜態**， **const**，和**reinterpret_cast**. 找出使用舊式的轉換，否則實際上沒有可能既困難又容易發生錯誤。 基於這些理由，需要，轉型時，我們會建議使用下列 c + + 轉型的運算子在某些情況下明顯更多類型安全，而且更明確地快速程式設計目的的其中一個：  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      如需詳細資訊，請參閱 < [static_cast](../cpp/static-cast-operator.md)。  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      如需詳細資訊，請參閱 < [dynamic_cast](../cpp/dynamic-cast-operator.md)。  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      如需詳細資訊，請參閱 < [const_cast](../cpp/const-cast-operator.md)。  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      如需詳細資訊，請參閱 < [reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。  

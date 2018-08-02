@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Verify 方法 |Microsoft 文件'
+title: 'Chaininterfaces:: Verify 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a845ea047682fda97ae581f4daad26775241ddf8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860690"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466835"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 方法
-確認每個介面定義的範本參數`I0`透過`I9`繼承自 IUnknown 和/或 IInspectable，而且`I0`繼承自`I1`透過`I9`。  
+確認每個介面定義的範本參數*I0*透過*I9*繼承自 IUnknown 和/或 IInspectable，且*I0*繼承自*I1*透過*I9*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ WRL_NOTHROW __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果驗證作業失敗，`static_assert`發出描述失敗的錯誤訊息。  
+ 如果驗證作業失敗， **static_assert**發出描述失敗的錯誤訊息。  
   
 ## <a name="remarks"></a>備註  
- 範本參數`I0`和`I1`是必要的與參數`I2`透過`I9`是選擇性的。  
+ 範本參數*I0*並*I1*是必要的以及參數*I2*透過*I9*是選擇性的。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

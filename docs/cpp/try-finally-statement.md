@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942727"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464856"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 **Microsoft 專屬**  
   
- 下列語法描述 `try-finally` 陳述式：  
+ 下列語法描述**try finally**陳述式：  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **__finally** *複合陳述式*  
   
- `try-finally` 陳述式是 C 和 C++ 語言的 Microsoft 擴充功能，可讓目標應用程式在執行程式碼的區塊中斷時，仍可保證會執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 `try-finally` 陳述式對於有多個地方要檢查可能會導致常式過早傳回的錯誤時會特別有用。  
+ **Try finally**陳述式是 C 和 c + + 語言的 Microsoft 擴充功能，可讓目標應用程式來執行的程式碼區塊將會中斷時，保證會執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 **Try finally**陳述式是特別有用，有幾個地方，其中會進行檢查錯誤的可能會導致過早傳回常式。  
   
  如需相關的資訊和程式碼範例，請參閱[嘗試-try-except 陳述式](../cpp/try-except-statement.md)。 如需有關結構化例外狀況處理的詳細資訊，請參閱[Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md)。 如需有關如何處理在受管理的應用程式中的例外狀況的詳細資訊，請參閱[例外狀況處理在 /clr 下](../windows/exception-handling-cpp-component-extensions.md)。  
   
@@ -83,16 +83,16 @@ __finally {
 >  Try-finally 的行為是不同於其他程式設計語言，支援使用**最後**，例如 C#。  單一 **__try**可能具有其中一個，但並非兩者的 **__finally**並 **__except**。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。  
   
 ## <a name="the-leave-keyword"></a>__leave 關鍵字  
- **__Leave**關鍵字只在中是有效的保護區段`try-finally`陳述式，而其作用是跳至保護區段的結尾。 然後從終止處理常式中的第一個陳述式繼續執行。  
+ **__Leave**關鍵字只在中是有效的保護區段**try finally**陳述式，而其作用是跳至保護區段的結尾。 然後從終止處理常式中的第一個陳述式繼續執行。  
   
  A **goto**陳述式也可以跳出保護的區段，但不是會降低效能，因為它會導致堆疊回溯。 **__Leave**陳述式會更有效率，因為它不會造成堆疊回溯的情形。  
   
 ## <a name="abnormal-termination"></a>異常終止  
- 結束`try-finally`陳述式使用[longjmp](../c-runtime-library/reference/longjmp.md)執行階段函式會視為是異常終止。 它是不合法一頭栽進 **__try**陳述式，但是可以跳出一個。 所有 **__finally**起點之間有作用的陳述式 (的正常終止 **__try**區塊) 和目的地 ( **__except**區塊處理例外狀況） 必須執行。 這稱為區域回溯。  
+ 結束**try finally**陳述式使用[longjmp](../c-runtime-library/reference/longjmp.md)執行階段函式會視為是異常終止。 它是不合法一頭栽進 **__try**陳述式，但是可以跳出一個。 所有 **__finally**起點之間有作用的陳述式 (的正常終止 **__try**區塊) 和目的地 ( **__except**區塊處理例外狀況） 必須執行。 這稱為區域回溯。  
   
  如果**嘗試**基於任何理由，包括跳出區塊已提前結束區塊，系統會執行相關聯**最後**回溯堆疊程序的一部分的區塊。 在此情況下， [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265)函式會傳回 **，則為 true**如果是從 內呼叫**最後**封鎖; 否則它會傳回**false**.  
   
- 如果處理序在執行 `try-finally` 陳述式的中途遭到刪除，則不會呼叫終止處理常式。  
+ 如果處理程序中間執行過程中終止，不會呼叫終止處理常式**try finally**陳述式。  
   
  **結束 Microsoft 專屬**  
   

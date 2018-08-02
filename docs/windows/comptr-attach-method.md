@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Attach 方法 |Microsoft 文件'
+title: 'Comptr:: Attach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870099"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461064"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 方法
-將這個 ComPtr 與目前範本類型參數所指定的介面類型產生關聯。  
+將這**ComPtr**與目前的範本類型參數所指定的介面類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>參數  
- `other`  
+ *other*  
  介面型別。  
   
 ## <a name="requirements"></a>需求  

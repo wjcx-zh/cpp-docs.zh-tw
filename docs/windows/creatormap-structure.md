@@ -1,5 +1,5 @@
 ---
-title: CreatorMap 結構 |Microsoft 文件
+title: CreatorMap 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fadba5993b7445af2386f6e0669f210e29560c6c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873280"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464252"
 ---
 # <a name="creatormap-structure"></a>CreatorMap 結構
-支援 Windows 執行階段 c + + 樣板程式庫的基礎結構，並不是直接從您的程式碼使用。  
+支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,11 +35,11 @@ struct CreatorMap;
 ```  
   
 ## <a name="remarks"></a>備註  
- 包含如何初始化、 註冊及取消註冊物件的相關資訊。  
+ 包含如何初始化、 註冊和取消註冊物件的相關資訊。  
   
- CreatorMap 包含下列資訊：  
+ **CreatorMap**包含下列資訊：  
   
--   如何初始化、 註冊及取消註冊物件。  
+-   如何初始化、 註冊和取消註冊的物件。  
   
 -   比較傳統的 COM 或 Windows 執行階段 factory 根據啟用資料的方式。  
   
@@ -51,10 +51,10 @@ struct CreatorMap;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CreatorMap::activationId 資料成員](../windows/creatormap-activationid-data-member.md)|代表透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。|  
-|[CreatorMap::factoryCache 資料成員](../windows/creatormap-factorycache-data-member.md)|CreatorMap 存放處理站快取的指標。|  
-|[CreatorMap::factoryCreator 資料成員](../windows/creatormap-factorycreator-data-member.md)|建立指定 CreatorMap factory。|  
-|[CreatorMap::serverName 資料成員](../windows/creatormap-servername-data-member.md)|儲存 CreatorMap 的伺服器名稱。|  
+|[CreatorMap::activationId 資料成員](../windows/creatormap-activationid-data-member.md)|表示透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。|  
+|[CreatorMap::factoryCache 資料成員](../windows/creatormap-factorycache-data-member.md)|儲存的處理站快取指標**CreatorMap**。|  
+|[CreatorMap::factoryCreator 資料成員](../windows/creatormap-factorycreator-data-member.md)|建立指定的 factory **CreatorMap**。|  
+|[CreatorMap::serverName 資料成員](../windows/creatormap-servername-data-member.md)|儲存的伺服器名稱**CreatorMap**。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CreatorMap`  

@@ -1,5 +1,5 @@
 ---
-title: call_as |Microsoft 文件
+title: call_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860862"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465866"
 ---
 # <a name="callas"></a>call_as
-可讓[本機](../windows/local-cpp.md)使遠端函式呼叫時，會叫用本機函式對應至遠端函式的函式。  
+可讓[本機](../windows/local-cpp.md)函式對應至遠端函式，以便遠端函式呼叫時，區域函式會叫用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *function*  
- 您想要在遠端函式會叫用時呼叫本機函式。  
+ 您想要遠端函式會叫用時呼叫區域函式。  
   
 ## <a name="remarks"></a>備註  
  **Call_as** c + + 屬性具有相同的功能[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範如何使用**call_as**對應分為函式 (**f1**) 的遠端執行函式 (**Remf1**):  
+ 下列程式碼會示範如何使用**call_as**對應不可遠端處理函式 (**f1**) 的可遠端處理函式 (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

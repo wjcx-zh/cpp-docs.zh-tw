@@ -1,5 +1,5 @@
 ---
-title: CompareStringOrdinal 方法 |Microsoft 文件
+title: CompareStringOrdinal 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3abf87340671d1ac4851b055a57896e340d0c20
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860807"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464047"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,22 +34,22 @@ inline INT32 CompareStringOrdinal(
 ```  
   
 #### <a name="parameters"></a>參數  
- `lhs`  
+ *lhs*  
  要比較的第一個 HSTRING。  
   
- `rhs`  
+ *rhs*  
  要比較的第二個 HSTRING。  
   
 ## <a name="return-value"></a>傳回值  
   
 |值|條件|  
 |-----------|---------------|  
-|-1|`lhs` 小於 `rhs`。|  
-|0|`lhs`等於 `rhs`。|  
-|1|`lhs` 大於 `rhs`。|  
+|-1|*lhs*是小於*rhs*。|  
+|0|*lhs* equals *rhs*。|  
+|1|*lhs*大於*rhs*。|  
   
 ## <a name="remarks"></a>備註  
- 比較兩個指定的 HSTRING 物件，並傳回一個整數，表示兩者在排序順序中的相對位置。  
+ 比較兩個指定的 HSTRING 物件，並傳回一個整數，表示兩者在排序次序中的相對位置。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Ptr_ 資料成員 |Microsoft 文件'
+title: 'Comptr:: Ptr_ 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d995c8e35ed35d4581d8eec8b74fda1ebbca6519
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d22112e3478e17e8ed9688749c83cf1c3997d7e3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880796"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465096"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ 資料成員
-包含與這個 ComPtr 相關聯並受其管理之介面的指標。  
+包含相關聯，並管理由這個介面的指標**ComPtr**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ InterfaceType *ptr_;
 ```  
   
 ## <a name="remarks"></a>備註  
- `ptr_` 是內部、 受保護的資料成員。  
+ **ptr_** 是內部、 受保護的資料成員。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

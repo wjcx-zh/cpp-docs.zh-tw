@@ -1,5 +1,5 @@
 ---
-title: 指標的參考 |Microsoft 文件
+title: 指標的參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de0974608f313a497dfb93d357995e7cc578e4d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467826"
 ---
 # <a name="references-to-pointers"></a>指標的參考
 指標的參考可以透過與物件的參考類似的方式來宣告。 宣告指標的參考會產生一個可修改的值，其使用方式就像一般的指標。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
  函式 `Add1` 和 `Add2` 的功能相同 (雖然不是以相同的方式呼叫)。 其差別在於 `Add1` 是使用兩次間接取值 (Indirection)，而 `Add2` 則是利用指標參考的便利性。  
   
-```  
+```cpp 
 // references_to_pointers.cpp  
 // compile with: /EHsc  
   

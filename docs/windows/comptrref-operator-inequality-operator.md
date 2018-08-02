@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator ！ = 運算子 |Microsoft 文件'
+title: 'Comptrref:: Operator ！ = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883550"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462920"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= 運算子
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>參數  
- `a`  
- ComPtrRef 物件的參考。  
+ *a*  
+ 參考**ComPtrRef**物件。  
   
- `b`  
- 另一個的 ComPtrRef 物件或匿名物件的指標的參考 (`void*`)。  
+ *b*  
+ 另一個的參考**ComPtrRef**物件或匿名物件的指標 (`void*`)。  
   
 ## <a name="return-value"></a>傳回值  
- 第一個運算子會產生`true`如果物件`a`不等於物件`b`，否則`false`。  
+ 第一個運算子會產生 **，則為 true**如果物件是否不等於物件*b*否則**false**。  
   
- 第二個和第三個運算子會產生`true`如果物件`a`不等於`nullptr`，否則`false`。  
+ 第二個和第三個運算子會產生 **，則為 true**如果物件是否不等於**nullptr**，則為**false**。  
   
- 第四個和第五個運算子會產生`true`如果物件`a`不等於物件`b`，否則`false`。  
+ 第四個和第五個運算子會產生 **，則為 true**如果物件是否不等於物件*b*，則為**false**。  
   
 ## <a name="remarks"></a>備註  
- 指出兩個 ComPtrRef 物件是否不相等。  
+ 指出兩個**ComPtrRef**物件是否不相等。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

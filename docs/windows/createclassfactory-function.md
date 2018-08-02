@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory 函式 |Microsoft 文件
+title: CreateClassFactory 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870469"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461321"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函式
 建立會產生指定類別之執行個體的處理站。  
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>參數  
- `flags`  
+ *flags*  
  一或多個組合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。  
   
- `entry`  
- 指標[CreatorMap](../windows/creatormap-structure.md) ，其中包含參數的初始化和註冊資訊`riid`。  
+ *entry*  
+ 指標[CreatorMap](../windows/creatormap-structure.md) ，其中包含參數的初始設定和註冊資訊*riid*。  
   
- `riid`  
+ *riid*  
  參考介面識別碼。  
   
- `ppFactory`  
- 如果這項作業已順利完成，class factory 的指標。  
+ *ppFactory*  
+ 如果這項作業成功完成，class factory 的指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
 ## <a name="remarks"></a>備註  
- 如果，就會發出 assert 錯誤樣板參數`Factory`不是衍生自 IClassFactory 介面。  
+ 如果，就會發出判斷提示錯誤範本參數*Factory*不是衍生自介面`IClassFactory`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939841"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461461"
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 專屬**  
   
- **__Stdcall**呼叫慣例用於呼叫 Win32 API 函式。 被呼叫端會清除堆疊，因此編譯器會建立**vararg**函式 **__cdecl**。 使用這個呼叫慣例的函式需要函式原型。  
+ **__Stdcall**呼叫慣例用於呼叫 Win32 API 函式。 被呼叫端會清除堆疊，因此編譯器會建立`vararg`函式 **__cdecl**。 使用這個呼叫慣例的函式需要函式原型。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>範例  
- 在下列範例中，使用 __**stdcall**造成所有`WINAPI`函式類型被當成標準呼叫處理：  
+ 在下列範例中，使用 **__stdcall**造成所有`WINAPI`函式類型被當成標準呼叫處理：  
   
 ```cpp  
 // Example of the __stdcall keyword  

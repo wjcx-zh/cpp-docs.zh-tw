@@ -1,5 +1,5 @@
 ---
-title: cpp_quote |Microsoft 文件
+title: cpp_quote |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871158"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463823"
 ---
 # <a name="cppquote"></a>cpp_quote
-指定的字串，不能包含引號字元，發出至產生的.idl 檔案。  
+指定的字串，不能包含單引號字元，發出到產生的.idl 檔案。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ cpp_quote(  
+[ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>參數  
  *statement*  
- C 指令。  
+ C 的指令。  
   
 ## <a name="remarks"></a>備註  
- **Cpp_quote** c + + 屬性才有用，如果您想要將前置處理器指示詞放在.idl 檔案。  
+ **Cpp_quote** c + + 屬性才有用，如果您想要將前置處理器指示詞放在.idl 檔中。  
   
- 您也可以使用**cpp_quote**和的 MIDL 編譯時產生的.h 檔案。 例如，如果您有使用 c + + IDL 屬性，但是某些工作不能使用此檔案的 c + + 標頭檔，然後您可以編譯它建立 MIDL 產生的.h 檔案，您應該能夠使用。  
+ 您也可以使用**cpp_quote**和的 MIDL 編譯時產生的.h 檔案。 比方說，如果您有使用 c + + IDL 屬性，但某些工作不能使用此檔案的 c + + 標頭檔，然後您可以編譯它來建立 MIDL 產生的.h 檔案，您應該能夠使用。  
   
- **Cpp_quote**屬性具有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 屬性。  
+ **Cpp_quote**屬性有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[雙重](../windows/dual.md)範例使用使用方式**cpp_quote**。  
+ 範例，請參閱[雙重](../windows/dual.md)如需範例使用 使用方式**cpp_quote**。  
   
 ## <a name="requirements"></a>需求  
   

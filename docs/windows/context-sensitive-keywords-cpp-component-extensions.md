@@ -1,5 +1,5 @@
 ---
-title: 即時線上關鍵字 （c + + 元件擴充功能） |Microsoft 文件
+title: 即時線上關鍵字 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871519"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466120"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>視內容而有所區別的關鍵字 (C++ 元件擴充功能)
-*即時線上關鍵字*是只在特定內容中才能辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。  
+*即時線上關鍵字*是只在特定內容中辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
  **備註**  
@@ -56,7 +56,7 @@ ms.locfileid: "33871519"
   
 -   `where` (屬於[泛型](../windows/generics-cpp-component-extensions.md))  
   
- 基於可讀性目的，您可能想要限制內容相關性關鍵字做為使用者定義符號的使用。  
+ 基於可讀性目的，您可能想要限制內容相關性關鍵字做為使用者定義的符號使用。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
  **備註**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871519"
 ### <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例會示範，在適當的內容中，`property` 內容相關性關鍵字可用來定義屬性和變數。  
+ 下列程式碼範例所示範的是，在適當的內容中，**屬性**內容相關性關鍵字可用來定義屬性和變數。  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

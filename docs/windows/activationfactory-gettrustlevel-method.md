@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Gettrustlevel 方法 |Microsoft 文件'
+title: 'Activationfactory:: Gettrustlevel 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1e4dfbfbc146663722eba1302b27e96812d684f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854385"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466718"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel 方法
-取得目前 ActivationFactory 具現化物件的信任層級。  
+取得物件的信任層級，目前**ActivationFactory**具現化。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `trustLvl`  
- 這項作業完成時，ActivationFactory 具現化的執行階段類別的信任層級。  
+ *trustLvl*  
+ 這項作業完成時，執行階段的信任層級類別**ActivationFactory**具現化。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，判斷提示錯誤，就會發出和`trustLvl`設定為完全信任。  
+ 如果成功則為 S_OK否則，會發出判斷提示錯誤以及*trustLvl*設為完全信任。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

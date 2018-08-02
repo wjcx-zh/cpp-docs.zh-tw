@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Operator-&gt;運算子 |Microsoft 文件'
+title: 'Comptr:: Operator-&gt;運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb3571207f328ad044ffd3f2f9b83bcebc7677e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870181"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464294"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator-&gt;運算子
 擷取目前範本參數所指定之類型的指標。  
@@ -37,7 +37,7 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
  目前的範本型別名稱所指定之類型的指標。  
   
 ## <a name="remarks"></a>備註  
- 這個 helper 函式中移除不必要使用 STDMETHOD 巨集所造成的負擔。 此函式會使得私人而非虛擬 IUnknown 型別。  
+ 此協助程式函式會移除不必要使用 STDMETHOD 巨集所造成的額外負荷。 這個功能可讓`IUnknown`型別**私人**而非**虛擬**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

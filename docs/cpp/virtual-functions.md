@@ -1,5 +1,5 @@
 ---
-title: 虛擬函式 |Microsoft 文件
+title: 虛擬函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467916"
 ---
 # <a name="virtual-functions"></a>虛擬函式
 虛擬函式是您必須在衍生類別中重新定義的成員函式。 當您使用基底類別的參考或指標參考衍生類別物件時，可以呼叫該物件的虛擬函式，並執行函式的衍生類別版本。  
   
  不論呼叫函式時使用的運算式為何，虛擬函式都可確保針對物件呼叫正確的函式。  
   
- 假設基底類別包含函式宣告為[虛擬](../cpp/virtual-cpp.md)和衍生的類別中定義相同的函式。 針對衍生類別的物件會叫用來自衍生類別的函式 (即使是使用基底類別的指標或參考呼叫)。 下列範例將示範基底類別，它會提供 `PrintBalance` 函式和兩個衍生類別的實作  
+ 假設基底類別包含宣告為函式[虛擬](../cpp/virtual-cpp.md)和衍生的類別中定義相同的函式。 針對衍生類別的物件會叫用來自衍生類別的函式 (即使是使用基底類別的指標或參考呼叫)。 下列範例將示範基底類別，它會提供 `PrintBalance` 函式和兩個衍生類別的實作  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  下列範例將示範透過指標呼叫時，虛擬和非虛擬函式的行為：  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -149,15 +150,15 @@ Invoked by Derived
   
  請注意，無論 `NameOf` 函式是經由 `Base` 的指標或 `Derived` 的指標叫用，都會呼叫 `Derived` 的函式。 它會呼叫 `Derived` 的函式是因為 `NameOf` 是虛擬函式，而且 `pBase` 和 `pDerived` 都指向 `Derived` 類型的物件。  
   
- 虛擬函式的呼叫僅適用於類別類型的物件，因為您無法宣告為全域或靜態函式**虛擬**。  
+ 因為虛擬函式會呼叫只會針對類別類型的物件，您不能宣告為全域或靜態函式**虛擬**。  
   
- **虛擬**衍生類別中宣告覆寫函式時，就可以使用關鍵字，但並非必要，因為覆寫虛擬函式永遠都是虛擬。  
+ **虛擬**宣告覆寫於衍生類別中，函式時，就可以使用關鍵字，但並非必要，因為覆寫虛擬函式一律是虛擬。  
   
- 必須定義基底類別中的虛擬函式，除非宣告使用*純規範*。 (如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)。)  
+ 必須定義基底類別中的虛擬函式，除非它們使用宣告*純規範*。 (如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)。)  
   
  使用範圍解析運算子 (`::`) 就可透過明確限定函式名稱的方式隱藏虛擬函式呼叫機制。 請參考先前包含 `Account` 類別的範例。 若要呼叫基底類別中的 `PrintBalance`，請使用下列範例程式碼：  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  上述範例中對 `PrintBalance` 的兩個呼叫都會隱藏虛擬函式呼叫機制。  
-  

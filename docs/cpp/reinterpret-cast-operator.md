@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 27522cb4d3bb15912b7988e0152a121616480330
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942864"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464830"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 運算子
 可將所有指標轉換成任何其他指標類型。 也可將任何整數類資料類型轉換成任何指標類型 (反之亦然)。  

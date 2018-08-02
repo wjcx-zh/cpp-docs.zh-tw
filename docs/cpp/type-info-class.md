@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941037"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462647"
 ---
 # <a name="typeinfo-class"></a>type_info 類別
-`type_info`類別描述在程式內，編譯器所產生的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 `type_info`類別也會儲存編碼的值適用於比較是否相等的兩種類型，或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
+**Type_info**類別描述在程式內，編譯器所產生的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 **Type_info**類別也會儲存編碼的值適用於比較是否相等的兩種類型，或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
   
- `<typeinfo>`標頭檔必須包含才能使用`type_info`類別。 介面`type_info`類別是：  
+ `<typeinfo>`標頭檔必須包含才能使用**type_info**類別。 介面**type_info**類別是：  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- 您無法具現化的物件`type_info`類別，因為類別只有 private 複製建構函式。 建構 （暫存） 的唯一辦法`type_info`物件是使用[typeid](../cpp/typeid-operator.md)運算子。 因為指派運算子也是私人的您無法複製或指派類別的物件`type_info`。  
+ 您無法具現化的物件**type_info**類別，因為類別只有 private 複製建構函式。 建構 （暫存） 的唯一辦法**type_info**是要把[typeid](../cpp/typeid-operator.md)運算子。 因為指派運算子也是私人的您無法複製或指派類別的物件**type_info**。  
   
- `type_info::hash_code` 定義適用於類型的值對應的雜湊函式`typeinfo`到索引值的分佈。  
+ `type_info::hash_code` 定義適用於類型的值對應的雜湊函式**typeinfo**到索引值的分佈。  
   
- 運算子`==`並`!=`可以用來與其他比較是否相等和不等比較`type_info`物件，分別。  
+ 運算子`==`並`!=`可以用來與其他比較是否相等和不等比較**type_info**物件，分別。  
   
  類型的排序順序和繼承關係之間並無連結。 使用`type_info::before`成員函式，來判斷型別的定序序列。 不保證，`type_info::before`會產生不同的程式或甚至執行相同程式的相同的結果。 如此一來，在`type_info::before`類似於位址的`(&)`運算子。  
   

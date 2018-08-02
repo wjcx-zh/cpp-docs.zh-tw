@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Put_id 方法 |Microsoft 文件'
+title: 'Asyncbase:: Put_id 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a439d94cd84ef2d94abcd9bb7a8e895db47290bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e9a0203bd0da2ea62d015264c1f4e8c58fcae66
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859835"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463190"
 ---
 # <a name="asyncbaseputid-method"></a>AsyncBase::put_Id 方法
 設定非同步作業的控制代碼。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `id`  
+ *id*  
  非零的控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_INVALIDARG 或 E_ILLEGAL_METHOD_CALL。  
+ 如果成功則為 S_OK否則 E_INVALIDARG 或 E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

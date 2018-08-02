@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Get_status 方法 |Microsoft 文件'
+title: 'Asyncbase:: Get_status 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46854ddfd6891efa2f205649d4b6410cc401e7fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1590d07a7b37e7dd3abf09377a03734299cb124c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863357"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460954"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status 方法
 擷取值，指出非同步作業的狀態。  
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `status`  
+ *status*  
  儲存狀態的位置。 如需詳細資訊，請參閱 Windows::Foundation::AsyncStatus 列舉型別。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
+ 如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會實作 IAsyncInfo::get_Status。  
+ 這個方法會實作 `IAsyncInfo::get_Status`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

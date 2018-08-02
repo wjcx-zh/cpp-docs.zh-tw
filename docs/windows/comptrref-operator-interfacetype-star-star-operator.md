@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator InterfaceType * * 運算子 |Microsoft 文件'
+title: 'Comptrref:: Operator InterfaceType * * 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 416b30c55027debddc153c44e55c7a4be512703d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6401d78f0c410057d41a80f2345255d4876adb23
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870508"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464411"
 ---
 # <a name="comptrrefoperator-interfacetype-operator"></a>ComPtrRef::operator InterfaceType** 運算子
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ operator InterfaceType**();
 ```  
   
 ## <a name="remarks"></a>備註  
- 刪除目前的 ComPtrRef 物件，並傳回已 ComPtrRef 物件所代表的介面指標至 a 的指標。  
+ 刪除目前**ComPtrRef**物件，並傳回已所代表之介面的指標-到-a-指標**ComPtrRef**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

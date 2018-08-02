@@ -1,5 +1,5 @@
 ---
-title: AsWeak 函式 |Microsoft 文件
+title: AsWeak 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854820"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462621"
 ---
 # <a name="asweak-function"></a>AsWeak 函式
 擷取指定執行個體的弱式參考。  
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 參數的型別指標`p`。  
+ *T*  
+ 參數的類型指標*p*。  
   
- `p`  
- 類型的執行個體。  
+ *p*  
+ 型別的執行個體。  
   
- `pWeak`  
- 這項作業完成時，參數的弱式參考的指標`p`。  
+ *pWeak*  
+ 這項作業完成時，參數的弱式參考的指標*p*。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK 時，如果此作業成功。否則，會指出失敗原因的 HRESULT 錯誤。  
+ S_ok 時，如果這項作業成功，否則，發生錯誤的 HRESULT，表示失敗的原因。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Getruntimeclassname 方法 |Microsoft 文件'
+title: 'Activationfactory:: Getruntimeclassname 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db270c88b4335be48016ff2b8bdcf2b5e3951cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854872"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463664"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName 方法
-取得目前 ActivationFactory 具現化物件的執行階段類別名稱。  
+取得物件的執行階段類別名稱，目前**ActivationFactory**具現化。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `runtimeName`  
- 這項作業完成時，包含目前 ActivationFactory 具現化物件的執行階段類別名稱的字串的控制代碼。  
+ *runtimeName*  
+ 這項作業完成時，包含物件的執行階段類別名稱的字串的控制代碼的目前**ActivationFactory**具現化。  
   
 ## <a name="return-value"></a>傳回值  
  若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  

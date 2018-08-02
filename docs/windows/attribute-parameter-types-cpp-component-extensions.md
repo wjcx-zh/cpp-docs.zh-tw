@@ -1,5 +1,5 @@
 ---
-title: 屬性參數類型 （c + + 元件擴充功能） |Microsoft 文件
+title: 屬性參數類型 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860303"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466965"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>屬性參數類型 (C++ 元件擴充功能)
 在編譯時期，編譯器必須能辨識傳遞至屬性的值。  屬性參數可以是下列其中一種類型：  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **char**， **unsigned char**  
   
--   `short`, `unsigned short`  
+-   **short**、**unsigned short**  
   
--   `int`, `unsigned int`  
+-   **int**，**不帶正負號的 int**  
   
--   `long`, `unsigned long`  
+-   **長**，**不帶正負號長時間**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**，**不帶正負號的 __int64**  
   
--   `float`, `double`  
+-   **浮點數**， **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*`、`wchar_t*` 或 `System::String*`  
   
@@ -47,13 +47,13 @@ ms.locfileid: "33860303"
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>範例  
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -81,7 +81,7 @@ ref struct MyStruct {
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -114,7 +114,7 @@ ref class ClassD {};   // Positional and named
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

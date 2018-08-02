@@ -1,5 +1,5 @@
 ---
-title: 類型特性 （c + + 元件擴充功能） 編譯器支援 |Microsoft 文件
+title: 類型特性 （c + + 元件擴充功能） 的編譯器支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -71,31 +71,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1173b122e64f9b75af2f8186bf52b50003e5ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862412"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463612"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>類型特性的編譯器支援 (C++ 元件擴充功能)
-編譯器支援*類型特性*，表示在編譯時間類型的各種特性。  
+編譯器支援*類型特性*，這表示在編譯時期的各種類型的特性。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
  **備註**  
   
  類型特性特別適用於撰寫程式庫的程式設計人員。  
   
- 下列清單包含編譯器所支援的類型特性。 如果不符合類型特性名稱所指定的條件，則所有類型特性都會傳回 `false`。  
+ 下列清單包含編譯器所支援的類型特性。 所有類型特性都會傳回**false**如果不符合類型特性的名稱所指定的條件。  
   
- (在下列清單中，程式碼範例會寫入只在 C + + /CLI。 但除非另有說明，否則在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中也會支援對應的類型特性。 詞彙 「 平台類型 」 是指 Windows 執行階段類型或 common language runtime 類型。）  
+ (在下列清單中，程式碼範例會寫入只在 C + + /cli CLI。 但除非另有說明，否則在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中也會支援對應的類型特性。 詞彙 「 平台類型 」 是指 Windows 執行階段類型或 common language runtime 類型。）  
   
 -   `__has_assign(` `type` `)`  
   
      如果平台或原生類型具有複製指派運算子，則傳回 true。  
   
     ```  
-  
     ref struct R {  
     void operator=(R% r) {}  
     };  
@@ -103,7 +102,6 @@ ms.locfileid: "33862412"
     int main() {  
     System::Console::WriteLine(__has_assign(R));  
     }  
-  
     ```  
   
 -   `__has_copy(` `type` `)`  
@@ -111,7 +109,6 @@ ms.locfileid: "33862412"
      如果平台或原生類型具有複製建構函式，則傳回 true。  
   
     ```  
-  
     ref struct R {  
     R(R% r) {}  
     };  
@@ -119,15 +116,13 @@ ms.locfileid: "33862412"
     int main() {  
     System::Console::WriteLine(__has_copy(R));  
     }  
-  
     ```  
   
 -   `__has_finalizer(` `type` `)`  
   
-     (在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不支援。)如果 CLR 類型具有完成項，則傳回 true。 請參閱[解構函式與完成項中如何： 定義和使用類別和結構 (C + + /CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)如需詳細資訊。  
+     (在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不支援。)如果 CLR 類型具有完成項，則傳回 true。 請參閱[解構函式和完成項中如何： 定義和使用類別和結構 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)如需詳細資訊。  
   
     ```  
-  
     using namespace System;  
     ref struct R {  
     ~R() {}  
@@ -138,7 +133,6 @@ ms.locfileid: "33862412"
     int main() {  
     Console::WriteLine(__has_finalizer(R));  
     }  
-  
     ```  
   
 -   `__has_nothrow_assign(` `type` `)`  
@@ -146,7 +140,6 @@ ms.locfileid: "33862412"
      如果複製指派運算子具有空的例外狀況規格，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     void operator=(S& r) throw() {}  
@@ -156,7 +149,6 @@ ms.locfileid: "33862412"
     __has_nothrow_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_constructor(` `type` `)`  
@@ -164,7 +156,6 @@ ms.locfileid: "33862412"
      如果預設建構函式具有空的例外狀況規格，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S() throw() {}  
@@ -174,7 +165,6 @@ ms.locfileid: "33862412"
     __has_nothrow_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_nothrow_copy(` `type` `)`  
@@ -182,7 +172,6 @@ ms.locfileid: "33862412"
      如果複製建構函式具有空的例外狀況規格，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     S(S& r) throw() {}  
@@ -192,7 +181,6 @@ ms.locfileid: "33862412"
     __has_nothrow_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_assign(` `type` `)`  
@@ -200,7 +188,6 @@ ms.locfileid: "33862412"
      如果類型具有編譯器產生的一般指派運算子，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -208,7 +195,6 @@ ms.locfileid: "33862412"
     __has_trivial_assign(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_constructor(` `type` `)`  
@@ -216,7 +202,6 @@ ms.locfileid: "33862412"
      如果類型具有編譯器產生的一般建構函式，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -224,7 +209,6 @@ ms.locfileid: "33862412"
     __has_trivial_constructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_copy(` `type` `)`  
@@ -232,7 +216,6 @@ ms.locfileid: "33862412"
      如果類型具有編譯器產生的複製建構函式，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -240,15 +223,13 @@ ms.locfileid: "33862412"
     __has_trivial_copy(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_trivial_destructor(` `type` `)`  
   
      如果類型具有編譯器產生的一般解構函式，則傳回 true。  
   
-    ```  
-  
+    ``` cpp 
     // has_trivial_destructor.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -257,15 +238,13 @@ ms.locfileid: "33862412"
     __has_trivial_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__has_user_destructor(` `type` `)`  
   
      如果平台或原生類型具有使用者宣告的解構函式，則傳回 true。  
   
-    ```  
-  
+    ```cpp
     // has_user_destructor.cpp  
   
     using namespace System;  
@@ -276,7 +255,6 @@ ms.locfileid: "33862412"
     int main() {  
     Console::WriteLine(__has_user_destructor(R));  
     }  
-  
     ```  
   
 -   `__has_virtual_destructor(` `type` `)`  
@@ -285,8 +263,7 @@ ms.locfileid: "33862412"
   
      `__has_virtual_destructor` 也適用於平台類型，且任何平台類型中的使用者定義解構函式都是虛擬解構函式。  
   
-    ```  
-  
+    ```cpp  
     // has_virtual_destructor.cpp  
     #include <stdio.h>  
     struct S {  
@@ -297,17 +274,15 @@ ms.locfileid: "33862412"
     __has_virtual_destructor(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_abstract(` `type` `)`  
   
-     如果類型是抽象類型，則傳回 true。 如需有關原生抽象類型的詳細資訊，請參閱[抽象](../windows/abstract-cpp-component-extensions.md)。  
+     如果類型是抽象類型，則傳回 true。 如需有關原生抽象類型的詳細資訊，請參閱 <<c0> [ 抽象](../windows/abstract-cpp-component-extensions.md)。  
   
      `__is_abstract` 也適用於平台類型。 至少有一個成員的介面是參考類型，至少有一個抽象成員的介面是參考類型。 如需抽象平台類型的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)  
   
-    ```  
-  
+    ```cpp  
     // is_abstract.cpp  
     #include <stdio.h>  
     struct S {  
@@ -318,17 +293,15 @@ ms.locfileid: "33862412"
     __is_abstract(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_base_of(` `base` `,` `derived` `)`  
   
      如果第一種類型是第二種類型的基底類別，或這兩種類型相同，則傳回 true。  
   
-     `__is_base_of` 也適用於平台類型。 比方說，它會傳回 true，如果第一個型別是[介面類別](../windows/interface-class-cpp-component-extensions.md)和第二個型別所實作的介面。  
+     `__is_base_of` 也適用於平台類型。 比方說，則會傳回 true，如果第一種[介面類別](../windows/interface-class-cpp-component-extensions.md)和第二個類型實作介面。  
   
-    ```  
-  
+    ```cpp
     // is_base_of.cpp  
     #include <stdio.h>  
     struct S {};  
@@ -341,15 +314,13 @@ ms.locfileid: "33862412"
     __is_base_of(S, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_class(` `type` `)`  
   
      如果類型是原生類別或結構，則傳回 true。  
   
-    ```  
-  
+    ```
     #include <stdio.h>  
     struct S {};  
   
@@ -357,7 +328,6 @@ ms.locfileid: "33862412"
     __is_class(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_convertible_to(` `from` `,`  `to` `)`  
@@ -365,7 +335,6 @@ ms.locfileid: "33862412"
      如果第一個類型可轉換成第二個類型，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
     struct T : public S {};  
@@ -377,20 +346,17 @@ ms.locfileid: "33862412"
     __is_convertible_to(T, S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_delegate(` `type` `)`  
   
-     如果 `type` 是委派，則傳回 true。 如需詳細資訊，請參閱[委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。  
+     如果 `type` 是委派，則傳回 true。 如需詳細資訊，請參閱 <<c0> [ 委派 （c + + 元件延伸模組）](../windows/delegate-cpp-component-extensions.md)。  
   
     ```  
-  
     delegate void MyDel();  
     int main() {  
     System::Console::WriteLine(__is_delegate(MyDel));  
     }  
-  
     ```  
   
 -   `__is_empty(` `type` `)`  
@@ -398,7 +364,6 @@ ms.locfileid: "33862412"
      如果類型沒有執行個體資料成員，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     int Test() {}  
@@ -408,15 +373,13 @@ ms.locfileid: "33862412"
     __is_empty(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_enum(` `type` `)`  
   
      如果類型是原生列舉，則傳回 true。  
   
-    ```  
-  
+    ```cpp
     // is_enum.cpp  
     #include <stdio.h>  
     enum E { a, b };  
@@ -432,15 +395,13 @@ ms.locfileid: "33862412"
     __is_enum(S::E2) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_interface_class(` `type` `)`  
   
-     如果傳遞平台介面，則傳回 true。 如需詳細資訊，請參閱[介面類別](../windows/interface-class-cpp-component-extensions.md)。  
+     如果傳遞平台介面，則傳回 true。 如需詳細資訊，請參閱 <<c0> [ 介面類別](../windows/interface-class-cpp-component-extensions.md)。  
   
-    ```  
-  
+    ```cpp
     // is_interface_class.cpp  
   
     using namespace System;  
@@ -448,7 +409,6 @@ ms.locfileid: "33862412"
     int main() {  
     Console::WriteLine(__is_interface_class(I));  
     }  
-  
     ```  
   
 -   `__is_pod(` `type` `)`  
@@ -458,7 +418,6 @@ ms.locfileid: "33862412"
      `__is_pod` 對於基本類型會傳回 false。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {};  
   
@@ -466,7 +425,6 @@ ms.locfileid: "33862412"
     __is_pod(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_polymorphic(` `type` `)`  
@@ -474,7 +432,6 @@ ms.locfileid: "33862412"
      如果原生類型具有虛擬函式，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     struct S {  
     virtual void Test(){}  
@@ -484,49 +441,42 @@ ms.locfileid: "33862412"
     __is_polymorphic(S) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_ref_array(` `type` `)`  
   
-     如果傳遞平台陣列，則傳回 true。 如需詳細資訊，請參閱[陣列](../windows/arrays-cpp-component-extensions.md)。  
+     如果傳遞平台陣列，則傳回 true。 如需詳細資訊，請參閱 <<c0> [ 陣列](../windows/arrays-cpp-component-extensions.md)。  
   
     ```  
-  
     using namespace System;  
     int main() {  
     array<int>^ x = gcnew array<int>(10);  
     Console::WriteLine(__is_ref_array(array<int>));  
     }  
-  
     ```  
   
 -   `__is_ref_class(` `type` `)`  
   
-     如果傳遞參考類別，則傳回 true。 如需有關使用者定義的參考類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果傳遞參考類別，則傳回 true。 如需有關使用者定義的參考類型的詳細資訊，請參閱 <<c0> [ 類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     int main() {  
     Console::WriteLine(__is_ref_class(Buffer));  
     Console::WriteLine(__is_ref_class(R));  
     }  
-  
     ```  
   
 -   `__is_sealed(` `type` `)`  
   
-     如果傳遞平台或標示為密封的原生類型，則傳回 true。 如需詳細資訊，請參閱[密封](../windows/sealed-cpp-component-extensions.md)。  
+     如果傳遞平台或標示為密封的原生類型，則傳回 true。 如需詳細資訊，請參閱 <<c0> [ 密封](../windows/sealed-cpp-component-extensions.md)。  
   
     ```  
-  
     ref class R sealed{};  
     int main() {  
     System::Console::WriteLine(__is_sealed(R));  
     }  
-  
     ```  
   
 -   `__is_simple_value_class(` `type` `)`  
@@ -534,7 +484,6 @@ ms.locfileid: "33862412"
      如果傳遞值類型，且其中不含對記憶體回收堆積的參考，則傳回 true。 如需有關使用者定義的實值類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
-  
     using namespace System;  
     ref class R {};  
     value struct V {};  
@@ -546,7 +495,6 @@ ms.locfileid: "33862412"
     Console::WriteLine(__is_simple_value_class(V));  
     Console::WriteLine(__is_simple_value_class(V2));  
     }  
-  
     ```  
   
 -   `__is_union(` `type` `)`  
@@ -554,7 +502,6 @@ ms.locfileid: "33862412"
      如果類型是等位，則傳回 true。  
   
     ```  
-  
     #include <stdio.h>  
     union A {  
     int i;  
@@ -565,7 +512,6 @@ ms.locfileid: "33862412"
     __is_union(A) == true ?  
     printf("true\n") : printf("false\n");  
     }  
-  
     ```  
   
 -   `__is_value_class(` `type` `)`  
@@ -573,19 +519,17 @@ ms.locfileid: "33862412"
      如果傳遞值類型，則傳回 true。 如需有關使用者定義的實值類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
-  
     value struct V {};  
   
     int main() {  
     System::Console::WriteLine(__is_value_class(V));  
     }  
-  
     ```  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
  **備註**  
   
- `__has_finalizer(`*類型*`)`不支援的類型特性，因為這個平台不支援完成項。  
+ `__has_finalizer(`*型別*`)`不支援類型特性，因為這個平台不支援完成項。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/ZW**  
@@ -601,9 +545,9 @@ ms.locfileid: "33862412"
 ### <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例示範如何使用類別範本來公開的編譯器類型特性 **/clr**編譯。 如需詳細資訊，請參閱[Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
+ 下列程式碼範例示範如何使用公開的編譯器類型特性的類別樣板 **/clr**編譯。 如需詳細資訊，請參閱 < [Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
-```  
+```cpp  
 // compiler_type_traits.cpp  
 // compile with: /clr  
 using namespace System;  

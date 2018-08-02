@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Continueasyncoperation 方法 |Microsoft 文件'
+title: 'Asyncbase:: Continueasyncoperation 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: caf7cd1cbee97761c6877ec6ab3a51ea956cbfd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7b5d2b10b571a3517beab98eaa839d5c7fd86c2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859588"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460829"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>AsyncBase::ContinueAsyncOperation 方法
-決定是否應該繼續處理非同步作業，或應該中止。  
+判斷是否應該繼續處理非同步作業，或應該停止。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ inline bool ContinueAsyncOperation();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果非同步作業的目前狀態是*啟動*，這表示作業應該繼續。 否則， `false`，這表示操作應該中止。  
+ **真**非同步作業的目前狀態是否*啟動*，這表示作業應該繼續。 否則，請**false**，這表示作業應該停止。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

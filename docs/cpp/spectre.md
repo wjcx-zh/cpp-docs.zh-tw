@@ -1,5 +1,5 @@
 ---
-title: spectre |Microsoft 文件
+title: spectre |Microsoft Docs
 ms.custom: ''
 ms.date: 1/23/2018
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153ff690b975ecb442c260fcebce73acd32d03fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a51d47764ea4515fcbc2cb3b7aa37fd341cd130e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422406"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463225"
 ---
 # <a name="spectre"></a>spectre
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
-會告知編譯器不要插入函式 Spectre variant 1 推測執行屏障指令。
+會告知編譯器不要插入 Spectre 變異 1 推測性執行的屏障指示函式。
 
 ## <a name="syntax"></a>語法
 
@@ -37,12 +37,12 @@ ms.locfileid: "32422406"
 
 ## <a name="remarks"></a>備註
 
-[/Qspectre](../build/reference/qspectre.md)編譯器選項會導致編譯器插入推測執行屏障指示分析指出 Spectre variant 1 安全性弱點存在。 發出的特定指示取決於處理器。 雖然這些指示應該有的程式碼大小和效能的影響非常小，可能是您的程式碼不會受到這項弱點，而且需要最大效能。
+[/Qspectre](../build/reference/qspectre.md)編譯器選項會導致編譯器插入推測性執行的屏障指示分析指出 Spectre 變異 1 安全性弱點的存在。 發出的特定指示取決於處理器。 雖然這些指示應該擁有對程式碼大小或效能的影響最小，可能是您的程式碼不會受到這項弱點，而且需要最大效能。
 
-專家分析可能會判斷函式不安全，防止 Spectre variant 1 界限檢查略過缺失。 在此情況下，您可以藉由套用隱藏的函式內的防護程式碼產生`__declspec(spectre(nomitigation))`函式宣告。
+專家 analysis 可能會判斷函式是安全從 Spectre 變異 1 界限檢查略過缺失。 在此情況下，您可以藉由套用隱藏的函式中的風險降低程式碼產生`__declspec(spectre(nomitigation))`函式宣告。
 
 > [!CAUTION]
-> **/Qspectre**推測執行屏障指令提供重要的安全性保護，不明顯影響效能。 因此，除了在少數函式的效能為重要考量，以及函式已知為安全的情況以外，建議您不要抑制這些檢查。
+> **/Qspectre**推測性執行的屏障指示提供重要的安全性保護，且對效能造成的影響微乎其微。 因此，除了在少數函式的效能為重要考量，以及函式已知為安全的情況以外，建議您不要抑制這些檢查。
 
 ## <a name="example"></a>範例
 
@@ -63,10 +63,9 @@ int main() {
 }
 ```
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
-
-[__declspec](../cpp/declspec.md)  
-[關鍵字](../cpp/keywords-cpp.md)  
-[/Qspectre](../build/reference/qspectre.md)  
+ [__declspec](../cpp/declspec.md)  
+ [關鍵字](../cpp/keywords-cpp.md)  
+ [/Qspectre](../build/reference/qspectre.md)  

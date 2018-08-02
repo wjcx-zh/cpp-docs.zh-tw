@@ -1,5 +1,5 @@
 ---
-title: 變更字串屬性 |Microsoft 文件
+title: 變更字串屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4de63d1275a5e90b6b20ea46d1774bae3c2861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc8f0ec7c904355e3b5b4989a89fd13a7d9ad767
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860599"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464567"
 ---
 # <a name="changing-the-properties-of-a-string"></a>變更字串屬性
-### <a name="to-change-a-string-or-its-identifier"></a>若要變更的字串或其識別項  
+### <a name="to-change-a-string-or-its-identifier"></a>若要變更字串或其識別碼  
   
 1.  開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。  
   
@@ -34,16 +34,16 @@ ms.locfileid: "33860599"
   
 2.  選取您想要編輯，然後按兩下的字串**識別碼**，**值**，或**標題**資料行。 現在您可以：  
   
-    -   選取**識別碼**從**識別碼下拉式**清單，或直接輸入位置的識別碼。  
+    -   選取 **識別碼**從**ID 下拉式**清單，或直接在位置中輸入的識別碼。  
   
-    -   輸入不同的數字中**值**資料行。  
+    -   輸入在不同的數字**值**資料行。  
   
     -   輸入中的編輯**標題**資料行。  
   
         > [!NOTE]
         >  您也可以編輯中的字串屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)。  
   
- 如需將資源加入至 managed 專案 （其會以 common language runtime 為目標） 的資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)在 *.NET Framework 開發人員指南。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)並[逐步解說： 使用資源以利用 ASP.NET 進行當地語系化](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
  **需求**  
   
@@ -51,4 +51,3 @@ ms.locfileid: "33860599"
   
 ## <a name="see-also"></a>另請參閱  
  [字串編輯器](../windows/string-editor.md)   
-

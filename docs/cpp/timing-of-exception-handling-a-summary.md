@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939412"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465005"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外狀況處理的時機：摘要
 不論如何執行終止處理常式 **__try**陳述式區塊。 原因包括跳出 **__try**區塊中，`longjmp`將控制權轉移以外的區塊，以及回溯堆疊因為例外狀況處理的陳述式。  

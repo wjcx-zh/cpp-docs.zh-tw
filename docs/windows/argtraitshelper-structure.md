@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper 結構 |Microsoft 文件
+title: ArgTraitsHelper 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857697"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466633"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>參數  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  委派的介面。  
   
 ## <a name="remarks"></a>備註  
- 有助於定義委派引數的一般的特性。  
+ 可協助定義委派引數的一般的特性。  
   
 ## <a name="members"></a>成員  
   
@@ -54,7 +54,7 @@ struct ArgTraitsHelper;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args 常數](../windows/argtraitshelper-args-constant.md)|可協助[argtraits:: Args](../windows/argtraits-args-constant.md)叫用方法的委派介面上保留的參數數目的計數。|  
+|[ArgTraitsHelper::args 常數](../windows/argtraitshelper-args-constant.md)|可協助[argtraits:: Args](../windows/argtraits-args-constant.md)上保留的參數數目的計數`Invoke`委派介面的方法。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `ArgTraitsHelper`  

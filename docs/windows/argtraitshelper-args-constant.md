@@ -1,5 +1,5 @@
 ---
-title: 'Argtraitshelper:: Args 常數 |Microsoft 文件'
+title: 'Argtraitshelper:: Args 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff6ef465206ce1fac50b63dad0bed60a9c57b700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09480168f842adbcbd9e1c50056a9d16278bccc4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855051"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465827"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args 常數
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ static const int args = Traits::args;
 ```  
   
 ## <a name="remarks"></a>備註  
- 可協助[argtraitshelper:: Args](../windows/argtraitshelper-args-constant.md)叫用方法的委派介面上保留的參數數目的計數。  
+ 可協助[argtraitshelper:: Args](../windows/argtraitshelper-args-constant.md)上保留的參數數目的計數`Invoke`委派介面的方法。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

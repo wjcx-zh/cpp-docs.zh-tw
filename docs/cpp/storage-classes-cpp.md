@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940920"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466581"
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)  
   
@@ -228,7 +228,7 @@ void DoSomething()
 
 -  不論是在相同的檔案還是不同的檔案進行宣告和定義，您都必須指定執行緒區域物件之宣告和定義的 `thread_local`。
 
-在 Windows 中，`thread_local`相當於[__declspec （thread)](../cpp/thread.md)不同之處在於`__declspec(thread)`可以套用至類型定義，並在 C 程式碼中有效。 只要可能，都請使用 `thread_local`，因為它是 C++ 標準的一部分，因此更具可攜性。
+在 Windows 中，`thread_local`相當於[__declspec （thread)](../cpp/thread.md)不同之處在於 **__declspec （thread)** 可以套用至類型定義，並在 C 程式碼中有效。 只要可能，都請使用 `thread_local`，因為它是 C++ 標準的一部分，因此更具可攜性。
 
 ##  <a name="register"></a>  註冊
 
@@ -322,5 +322,4 @@ Destroying: Static I3
 - 最後，靜態區域變數 (例如 `I3`) 會在程式執行期間保留其值，不過會在程式終止時終結。
 
 ## <a name="see-also"></a>另請參閱
-
  [宣告和定義](../cpp/declarations-and-definitions-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Comptrref 建構函式 |Microsoft 文件'
+title: 'Comptrref:: Comptrref 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870655"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463628"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef 建構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>參數  
- `ptr`  
- 另一個的 ComPtrRef 物件基礎的值。  
+ *ptr*  
+ 基礎值的另一個**ComPtrRef**物件。  
   
 ## <a name="remarks"></a>備註  
- 初始化指定的指標到另一個的 ComPtrRef 物件的 ComPtrRef 類別的新執行個體。  
+ 初始化的新執行個體**ComPtrRef**到另一個類別的指定指標**ComPtrRef**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 87e2e48a7d923811e2c696f0ec8bee72e8327a13
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025753"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464398"
 ---
 # <a name="statements-c"></a>陳述式 (C++)
 C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項目。 本節包括：  

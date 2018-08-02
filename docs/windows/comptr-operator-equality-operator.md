@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Operator = = 運算子 |Microsoft 文件'
+title: 'Comptr:: Operator = = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 703204541a05c260e77562729703677b98fb8e9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9750f0d49f4c7a580b2c99d0c833c5381ba20997
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883351"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467335"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator== 運算子
-表示兩個 ComPtr 物件是否相等。  
+指出兩個**ComPtr**物件是否相等。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,20 +42,19 @@ bool operator==(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>參數  
- `a`  
- ComPtr 物件的參考。  
+ *a*  
+ 參考**ComPtr**物件。  
   
- `b`  
- 另一個 ComPtr 物件的參考。  
+ *b*  
+ 另一個的參考**ComPtr**物件。  
   
 ## <a name="return-value"></a>傳回值  
- 第一個運算子會產生`true`如果物件`a`是否等於物件`b`，否則`false`。  
+ 第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。  
   
- 第二個和第三個運算子會產生`true`如果物件`a`等於`nullptr`，否則`false`。  
+ 第二個和第三個運算子會產生 **，則為 true**如果物件等於**nullptr**，則為**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

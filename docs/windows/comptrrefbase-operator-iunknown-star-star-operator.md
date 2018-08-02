@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Operator IUnknown * * 運算子 |Microsoft 文件'
+title: 'Comptrrefbase:: Operator IUnknown * * 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 816c71d2c14b373e63de2b2c8725eb87b40d91e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2ec20dca7bb0a37adae576a8b5a9adfad027b21
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870311"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465811"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** 運算子
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ operator IUnknown**() const;
 ```  
   
 ## <a name="remarks"></a>備註  
- 會轉換目前[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標--a-指標-將 IUnknown 介面。  
+ 將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對`IUnknown`介面。  
   
- 如果目前 ComPtrRefBase 不是衍生自 IUnknown，就會發出錯誤。  
+ 會發出錯誤，如果目前**ComPtrRefBase**不是衍生自`IUnknown`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

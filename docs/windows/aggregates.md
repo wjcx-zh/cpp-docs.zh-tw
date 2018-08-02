@@ -1,5 +1,5 @@
 ---
-title: 彙總 |Microsoft 文件
+title: 彙總 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19dea3b078f894931002d186b20c1ffb85bb763b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f931c6930a2c7e4a71e73b7998564432bcbd967
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857983"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466926"
 ---
 # <a name="aggregates"></a>彙總
 表示物件會彙總 CLSID 所指定的物件。  
@@ -33,24 +33,23 @@ ms.locfileid: "33857983"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ aggregates(  
+[ aggregates(  
    clsid,  
    variable_name  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  指定可彙總物件的 CLSID。  
   
- `variable_name`  
- 要插入的變數名稱。 此變數包含所彙總物件的 **IUnknown** 。  
+ *variable_name*  
+ 要插入的變數名稱。 此變數包含`IUnknown`正在彙總物件。  
   
 ## <a name="remarks"></a>備註  
  套用至物件時， **aggregates** C++ 屬性會實作所彙總物件的外部包裝函式 (透過 `clsid`所指定)。  
   
- 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用 **progid** ，則也會套用 **vi_progid** 和 **coclass** 。  
+ 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。  
   
  **ATL 專案**  
   
@@ -64,7 +63,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_aggregates.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -95,9 +94,9 @@ struct CObject : IObject
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|[是]|  
-|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
@@ -109,4 +108,3 @@ struct CObject : IObject
  [彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
  [彙總](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
  [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
- 

@@ -1,5 +1,5 @@
 ---
-title: ActivatableClass 巨集 |Microsoft 文件
+title: ActivatableClass 巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857460"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465853"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 巨集
 
-擴展內部快取，其中包含可以建立指定類別的執行個體的 factory。
+擴展內部快取，其中包含可以建立指定類別的執行個體的處理站。
 
 ## <a name="syntax"></a>語法
 
@@ -54,13 +54,13 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>參數
 
 *類別名稱*  
-若要建立類別的名稱。  
+要建立之類別的名稱。  
 
 *處理站*  
 將會建立指定類別的執行個體的 factory。
 
 *伺服器名稱*  
-指定模組中的處理站的子集名稱。
+指定模組中的處理站的子集的名稱。
 
 ## <a name="remarks"></a>備註
 
@@ -73,5 +73,4 @@ ActivatableClassWithFactoryEx(
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
-
 [Module 類別](../windows/module-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Classfactory:: Lockserver 方法 |Microsoft 文件'
+title: 'Classfactory:: Lockserver 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860316"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462702"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer 方法
-遞增或遞減數目基礎物件，會追蹤目前 ClassFactory 物件。  
+遞增或遞減目前所追蹤物件的基礎數目**ClassFactory**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `fLock`  
- `true` 要遞增的追蹤的物件數目。 `false` 要遞減的追蹤的物件數目。  
+ *fLock*  
+ **true**遞增追蹤的物件數目。 **false**來減少追蹤的物件數目。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_FAIL。  
+ 如果成功則為 S_OK否則，E_FAIL。  
   
 ## <a name="remarks"></a>備註  
- ClassFactory 會追蹤的物件中的基礎執行個體[模組](../windows/module-class.md)類別。  
+ ClassFactory 會持續追蹤的基礎執行個體中的物件[模組](../windows/module-class.md)類別。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

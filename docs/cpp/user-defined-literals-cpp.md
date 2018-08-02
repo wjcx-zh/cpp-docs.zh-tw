@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 38c3f60f7460a3d03f16141b5629bfc2d6183cae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942699"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462371"
 ---
 # <a name="user-defined-literals--c"></a>使用者定義常值 （c + +）
 常值有六種主要分類：整數、字元、浮點、字串、布林值和指標。  從 C++ 11 開始，您可以根據這些分類來定義專屬常值，以提供常見慣用語的語法捷徑，並提升類型安全。 例如，假設您有一個 Distance 類別。 您可以針對公里定義一個常值，以及針對英哩定義另一個常值，並鼓勵使用者只要撰寫下列項目來明確指定度量單位：auto d = 42.0_km 或 auto d = 42.0_mi。 使用者定義常值沒有任何效能優勢或缺點；它們主要是為了方便起見，或針對編譯時間類型推斷。 標準程式庫中的時間和持續時間作業中有使用者定義常值的 std: string、 std:: string，和單位\<chrono > 標頭：  
@@ -31,7 +31,7 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
 ```  
   
 ## <a name="user-defined-literal-operator-signatures"></a>使用者定義常值運算子簽章  
- 使用下列其中一種格式在命名空間範圍中定義 `operator""`，以實作使用者定義常值：  
+ 定義實作使用者定義常值**運算子""** 在命名空間範圍，以下列格式之一：  
   
 ```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
@@ -51,7 +51,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
  先前範例中的運算子名稱都是您所提供名稱的預留位置；不過，需要前置底線。 (只允許「標準程式庫」定義沒有底線的常值。)傳回類別可讓您自訂轉換或常值所執行的其他作業。 而且，所有這些運算子都可以定義為 `constexpr`。  
   
 ## <a name="cooked-literals"></a>處理後的常值  
- 在原始程式碼中，任何常值 (不論是否由使用者定義) 基本上是一連串的英數字元 (例如 `101` 或 `54.7`，或者 `"hello"` 或 `true`)。 編譯器會解譯為整數、 float、 const char 序列\*字串，並依此類推。 使用者定義的常值類型指派給常值，編譯器接受做為輸入，非正式地稱為*處理後的常值*。 所有上面的運算子 (`_r` 和 `_t` 除外) 都是處理後的常值。 例如，常值 `42.0_km` 會繫結至簽章與 _b 類似的 _km 運算子，常值 `42_km` 則繫結至簽章與 _a 類似的運算子。  
+ 在原始檔程式碼中任何常值使用者定義或不是基本上是一連串的英數字元，例如是否`101`，或`54.7`，或`"hello"`或是**true**。 編譯器會解譯為整數、 float、 const char 序列\*字串，並依此類推。 使用者定義的常值類型指派給常值，編譯器接受做為輸入，非正式地稱為*處理後的常值*。 所有上面的運算子 (`_r` 和 `_t` 除外) 都是處理後的常值。 例如，常值 `42.0_km` 會繫結至簽章與 _b 類似的 _km 運算子，常值 `42_km` 則繫結至簽章與 _a 類似的運算子。  
   
  下列範例示範使用者定義常值如何鼓勵呼叫端明確指定其輸入。 若要建構 `Distance`，使用者必須使用適當的使用者定義常值來明確指定公里或英哩。 當然，使用其他方式也可以達到相同的結果，但使用者定義常值與替代方式相較之下較為簡單。  
   
@@ -184,5 +184,4 @@ operator "" _dump_raw(const char*)        : ===>42<===
 operator "" _dump_raw(const char*)        : ===>3.1415926<===  
 operator "" _dump_raw(const char*)        : ===>3.14e+25<===   
 *****/  
-  
 ```

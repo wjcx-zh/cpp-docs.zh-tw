@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942872"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461516"
 ---
 # <a name="subscripting"></a>下標
 註標運算子 (**[]**)，例如函式呼叫運算子是二元運算子。 註標運算子必須是使用單一引數的非靜態成員函式。 這個引數可以是任何類型，並且指定所需的陣列註標。  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>註解  
- 當 `i` 在前一個程式達到 10 時，`operator[]` 會偵測到正在使用超出範圍的註標並發出錯誤訊息。  
+ 當`i`達到在上述程式中，10 **operator []** 偵測到超出範圍的註標正在使用，而且會發出錯誤訊息。  
   
- 請注意，`operator[]` 函式會傳回參考類型。 這會使它變成左值，讓您能夠在指派運算子的任一端使用註標運算式。  
+ 請注意，此函式**operator []** 傳回參考類型。 這會使它變成左值，讓您能夠在指派運算子的任一端使用註標運算式。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算子多載](../cpp/operator-overloading.md)

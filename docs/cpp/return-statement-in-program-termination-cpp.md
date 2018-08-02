@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942628"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461109"
 ---
 # <a name="return-statement-in-program-termination-c"></a>程式終止中的 return 陳述式 (C++)
-發出`return`陳述式，從**主要**功能上相當於呼叫**結束**函式。 參考下列範例：  
+發出**會傳回**陳述式，從`main`功能上相當於呼叫`exit`函式。 參考下列範例：  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- **結束**並**傳回**在上述範例中的陳述式會在功能上完全相同。 不過，c + + 需要具有函式傳回型別以外**void**傳回值。 **會傳回**陳述式可讓您傳回值，以從`main`。  
+ `exit`並**傳回**在上述範例中的陳述式會在功能上完全相同。 不過，c + + 需要具有函式傳回型別以外**void**傳回值。 **會傳回**陳述式可讓您傳回值，以從`main`。  
   
 ## <a name="see-also"></a>另請參閱  
  [程式終止](../cpp/program-termination.md)

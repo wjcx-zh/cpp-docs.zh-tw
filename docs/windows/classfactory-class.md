@@ -1,5 +1,5 @@
 ---
-title: ClassFactory 類別 |Microsoft 文件
+title: ClassFactory 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858389"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463862"
 ---
 # <a name="classfactory-class"></a>ClassFactory 類別
-實作 IClassFactory 介面的基本功能。  
+實作 `IClassFactory` 介面的基本功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,19 +46,19 @@ class ClassFactory : public Details::RuntimeClass<
 ```  
   
 #### <a name="parameters"></a>參數  
- `I0`  
- 第零個介面。  
+ *I0*  
+ 第零個介面中。  
   
- `I1`  
+ *I1*  
  第一個介面。  
   
- `I2`  
+ *I2*  
  第二個介面中。  
   
 ## <a name="remarks"></a>備註  
- 利用`ClassFactory`提供使用者定義的 factory 實作。  
+ 利用`ClassFactory`以提供使用者定義的 factory 實作。  
   
- 下列的程式設計模式，將示範如何使用[實作](../windows/implements-structure.md)結構，以指定三個以上的介面上的 class factory。  
+ 下列的程式設計模式將示範如何使用[實作](../windows/implements-structure.md)結構，以指定三個以上的介面上的 class factory。  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
@@ -75,9 +75,9 @@ class ClassFactory : public Details::RuntimeClass<
 |名稱|描述|  
 |----------|-----------------|  
 |[ClassFactory::AddRef 方法](../windows/classfactory-addref-method.md)|遞增目前 ClassFactory 物件的參考計數。|  
-|[ClassFactory::LockServer 方法](../windows/classfactory-lockserver-method.md)|遞增或遞減數目基礎物件，會追蹤目前 ClassFactory 物件。|  
+|[ClassFactory::LockServer 方法](../windows/classfactory-lockserver-method.md)|目前的 ClassFactory 物件所追蹤物件的基礎數目的遞增或遞減。|  
 |[ClassFactory::QueryInterface 方法](../windows/classfactory-queryinterface-method.md)|擷取指定參數的介面指標。|  
-|[ClassFactory::Release 方法](../windows/classfactory-release-method.md)|遞減目前 ClassFactory 物件的參考計數。|  
+|[ClassFactory::Release 方法](../windows/classfactory-release-method.md)|遞減參考計數目前 ClassFactory 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `I0`  

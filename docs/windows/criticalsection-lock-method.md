@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsection:: Lock 方法 |Microsoft 文件'
+title: 'Criticalsection:: Lock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871321"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464544"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
-等候指定的重要區段物件的擁有權。 函數會傳回擁有權授與呼叫執行緒時。  
+等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,11 +38,11 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>參數  
- `cs`  
+ *cs*  
  使用者指定的重要區段物件。  
   
 ## <a name="return-value"></a>傳回值  
- 鎖定物件可以用來解除鎖定目前的重要區段。  
+ 鎖定物件，可用來解除鎖定目前的重要區段。  
   
 ## <a name="remarks"></a>備註  
  第一個**鎖定**函式會影響目前的重要區段物件。 第二個**鎖定**函式會影響使用者指定的重要區段。  

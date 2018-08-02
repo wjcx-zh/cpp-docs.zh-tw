@@ -1,5 +1,5 @@
 ---
-title: C 樣式會與 clr 轉換 (C + + /CLI) |Microsoft 文件
+title: 使用-clr 的 C-style 轉換 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860394"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464580"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>使用 /clr 進行 C-Style 轉換 (C++/CLI)
 下列主題只適用於 Common Language Runtime。  
   
- CLR 型別搭配使用時，編譯器會嘗試對應 c-style 轉換成其中一個下面列出依下列順序中的轉換：  
+ CLR 型別搭配使用時，編譯器會嘗試對應 c-style 轉換 （cast），以下列順序的下面列出的其中一個轉換：  
   
 1.  const_cast  
   
 2.  safe_cast  
   
-3.  safe_cast 加上 const_cast  
+3.  safe_cast plus const_cast  
   
 4.  static_cast  
   
-5.  static_cast 加上 const_cast  
+5.  static_cast plus const_cast  
   
- 如果無上面所列的轉換是有效的而且運算式的類型和目標類型是 CLR 參考類型，c-style 轉換會對應至執行階段檢查 （castclass MSIL 指示）。 否則，c-style 轉換被認為無效，則編譯器會發出錯誤。  
+ 如果無上面所列的轉換是有效的而且運算式的類型和目標類型是 CLR 參考型別，c-style 轉換會對應至執行階段檢查 （castclass MSIL 指令）。 否則，c-style 轉換會被視為無效，則編譯器會發出錯誤。  
   
 ## <a name="remarks"></a>備註  
- 不建議在 c-style 轉換。 編譯時[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)，使用[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
+ 不建議在 c-style 轉換。 進行編譯時[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)，使用[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
   
- 下列範例會示範 c-style 轉換對應至`const_cast`。  
+ 下列範例會示範 c-style 轉換對應至**const_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- 下列範例會示範 c-style 轉換對應至`safe_cast`。  
+ 下列範例會示範 c-style 轉換對應至**safe_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- 下列範例會示範 c-style 轉換對應至`safe_cast`加上`const_cast`。  
+ 下列範例會示範 c-style 轉換對應至**safe_cast**加上**const_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- 下列範例會示範 c-style 轉換對應至`static_cast`。  
+ 下列範例會示範 c-style 轉換對應至**static_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- 下列範例會示範 c-style 轉換對應至`static_cast`加上`const_cast`。  
+ 下列範例會示範 c-style 轉換對應至**static_cast**加上**const_cast**。  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- 下列範例顯示 c-style 轉換對應至執行階段檢查。  
+ 下列範例會示範 c-style 轉換對應至執行階段檢查。  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- 下列範例顯示無效 c-style 轉換，因而導致編譯器發出錯誤。  
+ 下列範例顯示無效 C 樣式轉型，導致編譯器發出錯誤。  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

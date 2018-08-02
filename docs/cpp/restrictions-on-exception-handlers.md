@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8775f752a541d2a250e9c1c5a0c325b684335988
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938779"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464596"
 ---
 # <a name="restrictions-on-exception-handlers"></a>例外狀況處理常式的限制
 程式碼中使用例外狀況處理常式的主要限制是，您無法使用**goto**陳述式跳入 **__try**陳述式區塊。 您必須改為透過一般控制流程進入陳述式區塊。 您可以跳出 **__try**陳述式區塊和巢狀例外狀況處理常式，如您所選擇。  

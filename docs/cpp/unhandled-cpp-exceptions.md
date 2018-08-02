@@ -1,5 +1,5 @@
 ---
-title: 未處理的 c + + 例外狀況 |Microsoft 文件
+title: 未處理的 c + + 例外狀況 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e2162034b3e9ff93ebccca0f7eb53299b19c648
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467976"
 ---
 # <a name="unhandled-c-exceptions"></a>未處理的 C++ 例外狀況
-如果相符的處理常式 (或省略**攔截**處理常式) 找不到目前的例外狀況，預先定義的`terminate`呼叫執行階段函式。 (您可以在任何處理常式中明確呼叫 `terminate`)。`terminate` 的預設動作是呼叫 `abort`。 如果您希望 `terminate` 在結束應用程式之前呼叫程式中的其他函式，請使用做為單一引數呼叫的函式名稱來呼叫 `set_terminate` 函式。 您可以隨時在程式中呼叫 `set_terminate`。 `terminate`常式會一律呼叫指定做為引數的最後一個函式`set_terminate`。  
+如果相符的處理常式 (或省略符號**攔截**處理常式) 找不到目前的例外狀況，預先定義的`terminate`呼叫執行階段函式。 (您可以在任何處理常式中明確呼叫 `terminate`)。`terminate` 的預設動作是呼叫 `abort`。 如果您希望 `terminate` 在結束應用程式之前呼叫程式中的其他函式，請使用做為單一引數呼叫的函式名稱來呼叫 `set_terminate` 函式。 您可以隨時在程式中呼叫 `set_terminate`。 `terminate`常式會一律呼叫指定的引數為最後一個函式`set_terminate`。  
   
 ## <a name="example"></a>範例  
  下列範例會擲回 `char *` 例外狀況，不過，其中並不包含任何指定攔截 `char *` 類型例外狀況的處理常式。 對 `set_terminate` 的呼叫會指示 `terminate` 呼叫 `term_func`。  
   
-```  
+```cpp 
 // exceptions_Unhandled_Exceptions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -55,7 +56,7 @@ int main() {
   
 ## <a name="output"></a>輸出  
   
-```  
+```Output  
 term_func was called by terminate.  
 ```  
   

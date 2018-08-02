@@ -1,5 +1,5 @@
 ---
-title: ActivationFactoryCallback 函式 |Microsoft 文件
+title: ActivationFactoryCallback 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f1bae2c503f4e5f0c887a46956248184ece9a1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e2e7b2301ae4dd38a40bdf4583e963e55a8b12d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857320"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461389"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,19 +37,19 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ```  
   
 #### <a name="parameters"></a>參數  
- `activationId`  
+ *activationId*  
  控制代碼指定的執行階段類別名稱的字串。  
   
- `ppFactory`  
- 這項作業完成時，會對應至參數的啟用 factory `activationId`。  
+ *ppFactory*  
+ 這項作業完成時，都會對應至參數啟動處理站*activationId*。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 可能的失敗 Hresult 而 CLASS_E_CLASSNOTAVAILABLE E_INVALIDARG。  
+ 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 可能的失敗的 Hresult 為 CLASS_E_CLASSNOTAVAILABLE 和 E_INVALIDARG。  
   
 ## <a name="remarks"></a>備註  
- 啟動處理站取得所指定的啟用識別碼。  
+ 取得啟用 factory 做為指定的啟用識別碼。  
   
- Windows 執行階段呼叫這個要求由執行階段類別名稱指定物件的回呼函式。  
+ Windows 執行階段會呼叫此回呼函式，來要求執行階段類別名稱指定的物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

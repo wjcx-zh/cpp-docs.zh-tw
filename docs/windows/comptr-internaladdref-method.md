@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Internaladdref 方法 |Microsoft 文件'
+title: 'Comptr:: Internaladdref 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55f2ffc540ba6680636b85e73b7b4fbe96068ab3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1ae5d4216efc790fae0bc4d86bbe828fc28c473
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870282"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463089"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef 方法
-遞增與這個 ComPtr 相關聯之介面的參考計數。  
+與此相關聯的介面的參考計數遞增**ComPtr**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ void InternalAddRef() const;
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個方法會受到保護。  
+ 這個方法受到保護。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Asweak 方法 |Microsoft 文件'
+title: 'Comptr:: Asweak 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f262191304471a171e9c3370046dbdac71869cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870073"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465218"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak 方法
 擷取目前物件的弱式參考。  
@@ -36,7 +36,7 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>參數  
- `pWeakRef`  
+ *pWeakRef*  
  這項作業完成時，弱式參考物件的指標。  
   
 ## <a name="return-value"></a>傳回值  

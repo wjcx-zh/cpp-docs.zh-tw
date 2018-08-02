@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Currentstatus 方法 |Microsoft 文件'
+title: 'Asyncbase:: Currentstatus 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b9a07fd88caa9db7f2f145069b0d8857b79fe9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316dfea16aa129dcaff42424bef46305d2dd56b4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859686"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461425"
 ---
 # <a name="asyncbasecurrentstatus-method"></a>AsyncBase::CurrentStatus 方法
 擷取目前的非同步作業的狀態。  
@@ -36,8 +36,8 @@ inline void CurrentStatus(
 ```  
   
 #### <a name="parameters"></a>參數  
- `status`  
- 這項作業對目前狀態的儲存位置。  
+ *status*  
+ 這項作業儲存的目前狀態的位置。  
   
 ## <a name="remarks"></a>備註  
  這項作業是安全執行緒。  

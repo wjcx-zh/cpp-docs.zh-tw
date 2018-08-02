@@ -1,5 +1,5 @@
 ---
-title: async_uuid |Microsoft 文件
+title: async_uuid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857b10e206e5a4a3208086e5b7b1455f58bc40a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856901"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466744"
 ---
 # <a name="asyncuuid"></a>async_uuid
-指定指示 MIDL 編譯器定義 COM 介面的同步和非同步版本的 UUID。  
+指定會指示 MIDL 編譯器定義 COM 介面的同步和非同步版本的 UUID。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [async_uuid (  
+[async_uuid (  
    uuid  
 )]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *uuid*  
- UUID 可識別介面版本。  
+ UUID 可識別介面的版本。  
   
 ## <a name="remarks"></a>備註  
  **Async_uuid** c + + 屬性具有相同的功能[async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_async_uuid.cpp  
 // compile with: /LD  
 #include <Windows.h>  
@@ -66,7 +65,7 @@ __interface ICustom {
 |**適用於**|`interface`|  
 |**可重複**|否|  
 |**必要屬性**|無|  
-|**無效屬性**|**雙重**，**分配介面**|  
+|**無效屬性**|**雙重**， **dispinterface**|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   

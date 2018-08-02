@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f2d785e9f7ab7fa91f51d22299ebab0f39197e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a36aaddd5540fc9259178ba1686960c488b4d246
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942064"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462293"
 ---
 # <a name="transporting-exceptions-between-threads"></a>執行緒之間傳輸例外狀況
 
@@ -265,7 +265,6 @@ exception_ptr 1: Caught a  myException exception.
 **標頭：**\<exception>
 
 ## <a name="see-also"></a>另請參閱
-
-- [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)
-- [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)
-- [/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)
+ [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)  
+ [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)  
+ [/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)

@@ -1,5 +1,5 @@
 ---
-title: com_interface_entry （c + +） |Microsoft 文件
+title: com_interface_entry （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863448"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462780"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
-新增到 COM 對應之目標類別的介面項目。  
+新增到 COM 對應目標類別的介面項目。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-     [ com_interface_entry(   
+[ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *com_interface_entry*  
- 字串，包含項目的實際文字。 如需可能值的清單，請參閱[COM_INTERFACE_ENTRY 巨集](../atl/reference/com-interface-entry-macros.md)。  
+ 字串，包含項目的實際的文字。 如需可能值的清單，請參閱 < [COM_INTERFACE_ENTRY 巨集](../atl/reference/com-interface-entry-macros.md)。  
   
 ## <a name="remarks"></a>備註  
- `com_interface_entry` C + + 屬性會將字元字串的完整的內容插入至目標物件的 COM 介面對應。 如果屬性套用至目標物件的一次，項目會插入至現有的介面對應的開頭。 如果屬性重複套用至相同的目標物件，這些項目會插入其接收順序中的介面對應的開頭。  
+ **Com_interface_entry** c + + 屬性會插入目標物件的 COM 介面對應中的字元字串的完整的內容。 如果屬性套用至目標物件的一次，則會將項目插入到現有的介面對應的開頭。 屬性重複套用至相同的目標物件，如果他們收到的順序中的介面對應的開頭插入項目。  
   
- 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用 **progid** ，則也會套用 **vi_progid** 和 **coclass** 。  
+ 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。  
   
- 因為第一次使用`com_interface_entry`介面對應的開頭插入新的介面會使它必須是下列 COM_INTERFACE_ENTRY 類型之一：  
+ 因為第一個的使用方式**com_interface_entry**會將新的介面的介面對應中，開頭插入它必須是下列一種 COM_INTERFACE_ENTRY 類型：  
   
 -   COM_INTERFACE_ENTRY  
   
@@ -55,9 +54,9 @@ ms.locfileid: "33863448"
   
 -   COM_INTERFACE_ENTRY2_IID  
   
- 其他使用方式的`com_interface_entry`屬性可以使用所有支援的 COM_INTERFACE_ENTRY 型別。  
+ 其他使用方式**com_interface_entry**屬性可以使用所有支援的 COM_INTERFACE_ENTRY 類型。  
   
- 這項限制是必要的因為 ATL 介面對應中使用的第一個項目，做為識別**IUnknown**; 因此，項目必須是有效的介面。 例如，下列程式碼範例無效，因為介面對應中的第一個項目不會指定實際的 COM 介面。  
+ 這項限制是必要的因為 ATL 介面對應中使用的第一個項目，做為識別`IUnknown`; 因此，項目必須是有效的介面。 例如，下列程式碼範例無效，因為在介面對應中的第一個項目不會指定實際的 COM 介面。  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -69,9 +68,9 @@ ms.locfileid: "33863448"
 ```  
   
 ## <a name="example"></a>範例  
- 下列程式碼會將兩個項目加入至現有的 COM 介面對應的**CMyBaseClass**。 第一個是標準的介面，和第二個隱藏**IDebugTest**介面。  
+ 下列程式碼會將兩個項目加入至現有的 COM 介面對應的`CMyBaseClass`。 第一個是標準的介面，和第二個隱藏`IDebugTest`介面。  
   
-```  
+```cpp  
 // cpp_attr_ref_com_interface_entry.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -99,7 +98,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- 針對產生的 COM 物件 map **CMyBaseClass**如下所示：  
+ 產生的 COM 物件對應的`CMyBaseClass`如下所示：  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -118,7 +117,7 @@ END_COM_MAP()
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|[是]|  
 |**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
 |**無效屬性**|無|  

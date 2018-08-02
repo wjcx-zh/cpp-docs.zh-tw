@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673eadf3651d15f480ee2cff9ef3f7319dee4d84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c5a9aa15839169de846439c73af1df92d7342358
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942904"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463924"
 ---
 # <a name="templates-c"></a>樣板 (C++)
 範本是一般 c + + 程式設計的基礎。 作為強型別語言，c + + 會需要具有明確宣告的程式設計人員，或由編譯器推斷特定類型的所有變數。 不過，許多資料結構和演算法看起來相同無論何種類型操作。 應處理範本，您定義類別或函式的作業，並讓使用者指定何種實體類型的作業。  
@@ -38,7 +38,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 上述程式碼說明具有單一類型參數的泛型函式範本`T`，其傳回值，並呼叫參數 （lhs 與 rhs） 全都是這個型別。 您可以類似，但依慣例單一大寫的字母您最常使用的任何項目名稱的型別參數。 `T` 是範本參數;**typename**關鍵字指出此參數類型的預留位置。 呼叫此函式時，編譯器將會取代每個執行個體`T`與所指定使用者或編譯器推算出的具象型別引數。 處理程序，編譯器會產生的類別，或從範本函式指*樣板具現化*;  `minimum<int>`範本的具現化`minimum<T>`。  
+ 上述程式碼說明具有單一類型參數的泛型函式樣板*T*，其傳回值，並呼叫參數 （lhs 與 rhs） 全都是這個型別。 您可以類似，但依慣例單一大寫的字母您最常使用的任何項目名稱的型別參數。 *T*是範本參數，而**typename**關鍵字指出此參數類型的預留位置。 呼叫此函式時，編譯器將會取代每個執行個體`T`與所指定使用者或編譯器推算出的具象型別引數。 處理程序，編譯器會產生的類別，或從範本函式指*樣板具現化*;`minimum<int>`範本的具現化`minimum<T>`。  
   
  使用者可以在其他地方，宣告 int 特製化的範本執行的個體假設 get_a() 和 get_b() 會傳回整數的函式：  
   
@@ -48,7 +48,7 @@ int b = get_b();
 int i = minimum<int>(a, b);  
 ```  
   
- 不過，因為這是函式樣板和編譯器可以推斷的型別`T`從引數`a`和`b`，您可以如同一般函式呼叫它：  
+ 不過，因為這是函式樣板和編譯器可以推斷的型別`T`從引數並*b*，您可以如同一般函式呼叫它：  
   
 ```cpp  
 int i = minimum(a, b);  
@@ -56,9 +56,8 @@ int i = minimum(a, b);
   
  當編譯器遇到的最後一個陳述式時，它會產生新的函式中的每個出現位置*T*範本中取代**int**:  
   
-```cpp 
-  
-      int minimum(const int& lhs, const int& rhs)  
+```cpp   
+int minimum(const int& lhs, const int& rhs)  
 {  
     return lhs < rhs ? lhs : rhs;  
 }  
@@ -67,13 +66,12 @@ int i = minimum(a, b);
  編譯器在函式樣板中所執行的類型推斷規則根據一般的函式的規則。 如需詳細資訊，請參閱 <<c0> [ 多載解析的函式樣板呼叫](../cpp/overload-resolution-of-function-template-calls.md)。  
   
 ## <a id="type_parameters"></a> 型別參數  
- 在 `minimum`範本，請注意，型別參數`T`未限定以任何方式之前，它會在函式呼叫參數中，新增 const 和參考限定詞。  
+ 在 `minimum`範本，請注意，型別參數*T*未限定以任何方式之前，它會在函式呼叫參數中，新增 const 和參考限定詞。  
   
  類型參數的數目沒有實際限制。 以逗號分隔多個參數：  
   
 ```cpp  
 template <typename T, typename U, typename V> class Foo{};  
-  
 ```  
   
  關鍵字**類別**相當於**typename**在此內容中。 您可以表示為前一個範例︰  
@@ -108,7 +106,6 @@ int main()
     MyClass mc2 {2, L"goodbye"};  
     auto result = minimum(mc1, mc2); // Error! C2678  
 }  
-  
 ```  
   
  會產生編譯器錯誤，因為 MyClass 不提供的多載 < 運算子。  
@@ -138,7 +135,6 @@ class MyArray
 public:  
     MyArray() { ... }  
 };  
-  
 ```  
   
  請注意樣板宣告中的語法。 Size_t 值做為範本引數傳入在編譯時期，而且必須是常數或 constexpr 的運算式。 您可以使用它像這樣：  
@@ -150,7 +146,7 @@ MyArray<MyClass*, 10> arr;
  其他類型的值包括指標和參考可以當做非類型參數傳遞。 比方說，您可以傳入指標的函式或函式物件，若要自訂的範本程式碼內某項作業。  
   
 ## <a id="template_parameters"></a> 做為範本參數的範本  
- 範本可以是範本參數。 在此範例中，MyClass2 有兩個範本參數： typename 參數`T`與範本參數`Arr`:  
+ 範本可以是範本參數。 在此範例中，MyClass2 有兩個範本參數： typename 參數*T*和 範本參數*Arr*:  
   
 ```cpp  
 template<typename T, template<typename U, int I> class Arr>  
@@ -162,7 +158,7 @@ class MyClass2
 };  
 ```  
   
- 因為`Arr`參數本身有沒有主體時，不需要其參數的名稱。 事實上，它是錯誤，請參閱`Arr`的類型名稱或類別參數名稱從主體內`MyClass2`。 基於這個理由，`Arr`的型別參數名稱可以省略，在此範例中所示：  
+ 因為*Arr*參數本身有沒有主體時，不需要其參數的名稱。 事實上，它是錯誤，請參閱*Arr*的類型名稱或類別參數名稱從主體內`MyClass2`。 基於這個理由， *Arr*的型別參數名稱可以省略，在此範例中所示：  
   
 ```cpp  
 template<typename T, template<typename, int> class Arr>  
@@ -207,7 +203,6 @@ int main()
 {  
     Bar<> bar; // use all default type arguments  
 }  
-  
 ```  
   
 ## <a name="template-specialization"></a>樣板特製化  
@@ -223,9 +218,8 @@ class MyMap<string, V> {/*...*/};
 ...  
 MyMap<int, MyClass> classes; // uses original template  
 MyMap<string, MyClass> classes2; // uses the partial specialization  
-  
 ```  
   
- 範本可以有任意數目的特製化，只要每個特製化的型別參數是唯一的。   只有類別樣板可以部分特製化。 所有完整和部分的特製化的範本必須與原始範本相同的命名空間中宣告。  
+ 範本可以有任意數目的特製化，只要每個特製化的型別參數是唯一的。 只有類別樣板可以部分特製化。 所有完整和部分的特製化的範本必須與原始範本相同的命名空間中宣告。  
   
  如需詳細資訊，請參閱 <<c0> [ 樣板特製化](../cpp/template-specialization-cpp.md)。

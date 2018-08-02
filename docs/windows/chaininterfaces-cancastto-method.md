@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Cancastto 方法 |Microsoft 文件'
+title: 'Chaininterfaces:: Cancastto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860290"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461206"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo 方法
-指出指定的介面識別碼可轉換成每個定義的非預設的範本參數特製化。  
+指出指定的介面識別碼是否可轉換成每個非預設的範本參數所定義的特製化。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,14 +37,14 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>參數  
- `riid`  
+ *riid*  
  介面識別碼。  
   
- `ppv`  
- 已成功轉換的最後一個介面 ID 的指標。  
+ *ppv*  
+ 已成功轉換的最後一個介面識別碼指標。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果成功轉換的所有作業;否則， `false`。  
+ **true**如果所有的 cast 作業成功，否則**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

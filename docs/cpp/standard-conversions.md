@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028355"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462306"
 ---
 # <a name="standard-conversions"></a>標準轉換
 C++ 語言定義其基本類型之間的轉換。 同時定義指標、參考及成員指標衍生類型的轉換。 這些轉換稱為「標準轉換」  (如需類型、 標準類型和衍生的類型的詳細資訊，請參閱[型別](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  帶正負號整數類型的物件可以轉換成對應的不帶正負號的類型。 當這些轉換發生時，實際的位元模式不會改變，不過資料的解譯會改變。 請參考下列程式碼：  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  在上述範例中，**帶正負號短**， `i`、 定義和初始化為負數的數字。 運算式`(u = i)`會導致`i`轉換成**unsigned short**再指派給`u`。  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  下列程式碼說明表格中所述的這些轉換規則：  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  `pA` 指標是 `A *` 類型，可以解譯為表示「`A` 類型物件的指標」。 成員`bObject``(`這類`BComponent`並`BMemberFunc`) 類型是唯一的`B`，因此無法透過存取`pA`。 `pA` 指標只允許存取 `A` 類別中定義的那些物件特性 (成員函式和資料)。  
   
 ### <a name="pointer-to-function"></a>函式的指標  
- 函式的指標可以轉換成類型**void \*** ，如果型別**void \*** 夠大，足以容納該指標。  
+ 函式的指標可以轉換成類型`void *`，如果型別`void *`夠大，足以容納該指標。  
   
 ### <a name="pointer-to-void"></a>void 的指標  
  類型的指標**void**可轉換成任何其他類型，但只能使用明確的類型轉換的指標 (不同於在 C 中)。 (請參閱[具有明確類型轉換的運算式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)取得的類型轉換的詳細資訊。)任何類型的指標可以隱含地轉換成類型的指標**void**。不完整的型別物件的指標可以轉換成指標**void** （隱含） 和回 （明確）。 這類轉換的結果等於原始指標的值。 若物件宣告後，沒有足夠的資訊可用來判斷其大小和基底類別，則會將該物件視為不完整。  
   
- 不是任何物件的指標**const**或是**volatile**能夠隱含轉換成類型的指標**void \*** 。  
+ 不是任何物件的指標**const**或是**volatile**能夠隱含轉換成類型的指標`void *`。  
   
 ### <a name="const-and-volatile-pointers"></a>const 和 volatile 指標  
  C + + 不提供從標準轉換**const**或**volatile**不是類型的型別**const**或**volatile**。 不過，使用明確類型轉型 (包括不安全的轉換) 即可指定任何類型的轉換。  

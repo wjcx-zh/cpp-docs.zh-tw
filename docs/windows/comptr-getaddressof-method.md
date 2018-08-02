@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Getaddressof 方法 |Microsoft 文件'
+title: 'Comptr:: Getaddressof 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2da8e134c4ba1ec01a6694cd886d44b14c6cac8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e11cd204c2c89c7fca9a824450d6136eb65520db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870233"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461180"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf 方法
-擷取 [ptr_](../windows/comptr-ptr-data-member.md) 資料成員的位址，其中包含這個 ComPtr 所代表之介面的指標。  
+擷取位址[ptr_](../windows/comptr-ptr-data-member.md)資料成員，其中包含這所代表之介面的指標**ComPtr**。  
   
 ## <a name="syntax"></a>語法  
   

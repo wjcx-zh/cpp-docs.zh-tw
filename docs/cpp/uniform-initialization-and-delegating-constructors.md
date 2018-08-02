@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939828"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465964"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>統一初始設定和委派建構函式
 在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不需要在等號。 此外，您可以使用委派的建構函式來簡化您的程式碼，當您具有執行類似工作的多個建構函式。  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  如果類別具有非預設建構函式，在哪一個類別中成員則是在大括號初始設定式中出現的順序是對應的參數建構函式中出現的順序，不將成員宣告的順序 (如同`class_a`中先前的範例）。 否則，如果類型具有沒有宣告建構函式，成員的大括號初始設定式中出現的順序是它們會在其中宣告; 的順序相同在此情況下，您可以初始化多個公用成員想要的話，但您無法略過任何成員。 沒有宣告建構函式時，下列範例會顯示已用的順序，在括號初始設定：  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list 建構函式  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  標準程式庫容器類別，以及`string`， `wstring`，並`regex`，有`initializer_list`建構函式。 下列範例示範如何執行這些建構函式進行初始化大括弧括住：  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  當您逐步執行先前的範例，請注意，建構函式`class_c(int, int, int)`建構函式會先呼叫`class_c(int, int)`，接著呼叫`class_c(int)`。 每個建構函式會執行不由其他建構函式執行的工作。  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  下一個範例示範如何使用非靜態資料成員初始設定式。 請注意，是否建構函式也會初始化為指定的資料成員，成員初始設定式會覆寫：  

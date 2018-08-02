@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939205"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460868"
 ---
 # <a name="unions"></a>等位
 A**聯集**是使用者定義的類型，其所有成員都共用相同的記憶體位置。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。  
@@ -35,7 +35,7 @@ A**聯集**是使用者定義的類型，其所有成員都共用相同的記憶
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *name*  
  提供給等位的類型名稱。  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  在先前的範例中，請注意在 Input 結構中的等位沒有名稱。 這是匿名等位，而且可以存取其成員，就像它們是結構的直接成員一樣。 如需匿名等位的詳細資訊，請參閱下節。  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  等位無法儲存參考。 等位不支援繼承，因此等位本身不能當成基底類別使用，或不能繼承自另一個類別或具有虛擬函式。  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  `NumericType` 等位會依照下圖中所示的方式在記憶體內部排列 (概念上)。  
@@ -654,7 +651,7 @@ union  {  member-list  }
   
 -   它們也必須宣告為**靜態**如果檔案或命名空間範圍中宣告。  
   
--   它們只能擁有 Public 成員，Private 和 Protected 成員在匿名等位中會產生錯誤。  
+-   它們可以只有**公開**成員;**私人**並**保護**在匿名等位的成員會產生錯誤。  
   
 -   它們不能有成員函式。  
   

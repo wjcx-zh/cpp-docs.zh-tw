@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Getiids 方法 |Microsoft 文件'
+title: 'Activationfactory:: Getiids 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f411f3b2f9e777a4e458b64176ace77a8d13e86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855506"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463520"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids 方法
-擷取實作的介面 Id 的陣列。  
+擷取實作的介面識別碼的陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `iidCount`  
- 這項作業完成時，在 interace Id 數目`iids`陣列。  
+ *iidCount*  
+ 這項作業完成時中的介面識別碼的數目*iid*陣列。  
   
- `iids`  
- 這項作業完成時，陣列會實作介面識別碼。  
+ *iid*  
+ 這項作業完成時，陣列就會實作的介面識別碼。  
   
 ## <a name="return-value"></a>傳回值  
  若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 E_OUTOFMEMORY 是可能的失敗 HRESULT。  

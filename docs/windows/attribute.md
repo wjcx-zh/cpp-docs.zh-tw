@@ -1,5 +1,5 @@
 ---
-title: 屬性 |Microsoft 文件
+title: 屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862058"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461805"
 ---
 # <a name="attribute"></a>屬性
-可讓您建立的自訂屬性。  
+可讓您建立自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ attribute(  
+[ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
    Inherited=boolean  
@@ -43,34 +42,34 @@ ms.locfileid: "33862058"
   
 #### <a name="parameters"></a>參數  
  *AllowOn*  
- 指定自訂屬性可以套用的語言項目。 預設值是**System::AttributeTargets::All** (請參閱[System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx))。  
+ 指定可以套用自訂屬性的語言項目。 預設值是`System::AttributeTargets::All`(請參閱 < [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx))。  
   
- `AllowMultiple`  
- 指定是否套用自訂屬性可以重複到建構函式。 預設值是**FALSE**。  
+ *AllowMultiple*  
+ 指定是否將自訂屬性可以套用重複建構。 預設值為 FALSE。  
   
- `Inherited`  
- 指出屬性是否會繼承由子類別。 編譯器不提供特殊支援這項功能。屬性取用者 （例如反映） 的工作是遵守這項資訊。 如果`Inherited`是**TRUE**，繼承屬性。 如果`AllowMultiple`是**TRUE**，屬性將會累積在衍生的成員; 如果`AllowMultiple`是**FALSE**，屬性會覆寫 （或取代） 繼承中。 如果`Inherited`是**FALSE**，都不會繼承屬性。 預設值是**TRUE**。  
+ *繼承*  
+ 指出屬性是否會繼承由子類別。 編譯器不提供特殊支援這項功能;它是屬性取用者 （例如反映） 的工作採用這項資訊。 如果*繼承*為 TRUE，繼承屬性。 如果*AllowMultiple*為 TRUE 時，屬性將會累積在衍生的成員; 如果*AllowMultiple*為 FALSE 時，此屬性會覆寫 （或取代） 在繼承。 如果*繼承*為 FALSE 時，將不會繼承屬性。 預設值為 TRUE。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  `attribute`屬性現在已被取代。  使用 common language runtime 屬性 System.Attribute 直接建立使用者定義的屬性。  如需詳細資訊，請參閱[使用者定義的屬性](../windows/user-defined-attributes-cpp-component-extensions.md)。  
+>  `attribute`屬性現在已被取代。  使用 common language runtime 屬性 System.Attribute 直接建立使用者定義的屬性。  如需詳細資訊，請參閱 < [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)。  
   
- 您定義[自訂屬性](../windows/custom-attributes-cpp.md)放入`attribute`上受管理的類別或結構定義的屬性。 類別的名稱會是自訂的屬性。 例如:   
+ 您定義[自訂屬性](../windows/custom-attributes-cpp.md)放置`attribute`上受管理的類別或結構定義的屬性。 類別的名稱是自訂的屬性。 例如:   
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- 定義稱為 MyAttr 可以套用至函式參數的屬性。 類別必須是公用，如果屬性要使用的其他組件中。  
+ 定義稱為屬性`MyAttr`，可以套用至函式參數。 類別必須是公用，如果屬性要使用其他組件中。  
   
 > [!NOTE]
->  若要避免命名空間衝突，所有的屬性名稱隱含結尾 「 屬性 」。在此範例中，屬性和類別名稱實際上 MyAttrAttribute 但 MyAttr 和 MyAttrAttribute 可以交換使用。  
+>  若要避免命名空間衝突，所有的屬性名稱會隱含地結束以"Attribute";在此範例中，屬性和類別的名稱是實際上`MyAttrAttribute`，但`MyAttr`和`MyAttrAttribute`可以交換使用。  
   
- 類別的公用建構函式定義屬性的未命名的參數。 多載建構函式可讓多種方式來指定屬性，因此會為自訂屬性定義以下列方式：  
+ 類別的公用建構函式定義屬性的未命名的參數。 多載的建構函式允許多種方式來指定屬性，讓自訂屬性，是以下列方式定義：  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -90,7 +89,7 @@ ref class ClassB {};   // Attribute with one parameter
   
  類別的公用資料成員和屬性是屬性的選擇性具名的參數：  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -112,13 +111,13 @@ public:
 ref class ClassC {};  
 ```  
   
- 如需可能屬性參數類型的清單，請參閱[自訂屬性](../windows/custom-attributes-cpp.md)。  
+ 如需可能的屬性參數類型的清單，請參閱 <<c0> [ 自訂屬性](../windows/custom-attributes-cpp.md)。  
   
- 請參閱[使用者定義的屬性](../windows/user-defined-attributes-cpp-component-extensions.md)的屬性目標的討論。  
+ 請參閱[User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)如屬性目標的討論。  
   
- `attribute`屬性有`AllowMultiple`指定自訂屬性是否為單一用途的參數或 multiuse （可出現一次以上相同的實體）。  
+ `attribute`屬性具有*AllowMultiple*指定自訂屬性是否為單次使用的參數或 multiuse （可出現一次以上相同的實體）。  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -131,7 +130,7 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- 自訂屬性的類別會直接或間接衍生自<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>，讓識別屬性定義快速、 輕鬆地中繼資料中的。 `attribute`屬性隱含繼承自 system:: attribute，因此不需要明確衍生：  
+ 自訂屬性的類別是直接或間接衍生自<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>，它能識別屬性定義，快速又簡單的中繼資料中。 `attribute`屬性隱含繼承自 system:: attribute，因此不需要明確衍生：  
   
 ```  
 [ attribute(Class) ]  
@@ -153,7 +152,7 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 |||  
 |-|-|  
-|**適用於**|`ref` **類別**， **ref 結構**|  
+|**適用於**|**ref 類別**， **ref 結構**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
@@ -162,7 +161,7 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_4.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -176,9 +175,9 @@ ref class MyClass {};
 ```  
   
 ## <a name="example"></a>範例  
- `Inherited`具名引數會指定是否套用基底類別上的自訂屬性會顯示在衍生類別的反映。  
+ `Inherited`具名引數會指定是否在基底類別上套用的自訂屬性會顯示在衍生類別的反映。  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -218,4 +217,4 @@ int main() {
   
 ## <a name="see-also"></a>另請參閱  
  [依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)   
- [自訂屬性](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [自訂屬性](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

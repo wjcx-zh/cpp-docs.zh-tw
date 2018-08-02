@@ -1,5 +1,5 @@
 ---
-title: 大小寫 （c + +） |Microsoft 文件
+title: 大小寫 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860953"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464307"
 ---
 # <a name="case-c"></a>case (C++)
-搭配[switch_type](../windows/switch-type.md)屬性**union**。  
+搭配[switch_type](../windows/switch-type.md)屬性中**聯集**。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ case(  
+[ case(  
    value  
 ) ]  
 ```  
@@ -48,15 +47,15 @@ ms.locfileid: "33860953"
   
 -   `enum`  
   
- 或這類類型的識別項。  
+ 或此型別的識別項。  
   
 ## <a name="remarks"></a>備註  
  **案例**c + + 屬性具有相同的功能**案例**MIDL 屬性。 這個屬性只能搭配[switch_type](../windows/switch-type.md)屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範使用**案例**屬性：  
+ 下列程式碼範例將示範用法**案例**屬性：  
   
-```  
+```cpp  
 // cpp_attr_ref_case.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**適用於**|成員的**類別**或 `struct`|  
+|**適用於**|成員**類別**或**結構**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

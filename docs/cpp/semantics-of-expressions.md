@@ -1,5 +1,5 @@
 ---
-title: 運算式的語意 |Microsoft 文件
+title: 運算式的語意 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424120"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462738"
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
-運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示的關聯性的 c + + 運算子加諸於運算式。)  
+運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示關聯性的 c + + 運算子加諸於運算式。)  
   
 ## <a name="order-of-evaluation"></a>評估的順序  
  請考量以下範例：  
@@ -56,7 +56,7 @@ int main()
   
  上圖中顯示運算式評估的順序可用來判斷運算子的優先順序和關聯性：  
   
-1.  在此運算式中，乘法 (\*) 具有最高優先順序，因此會先評估子運算式 `b * c`。  
+1.  在此運算式中，乘法 (*) 具有最高優先順序，因此會先評估子運算式 `b * c`。  
   
 2.  下一個最高優先順序的項目是加法 (+)，因此會將 `a` 與 `b` 和 `c` 的乘積相加。  
   
@@ -64,13 +64,13 @@ int main()
   
  在子運算式的群組中使用括號時，會改變優先順序以及運算式的評估順序，如下圖所示。  
   
- ![具有括弧之運算式的評估順序](../cpp/media/vc38zv2.gif "vc38ZV2")  
+ ![使用括號運算式的評估順序](../cpp/media/vc38zv2.gif "vc38ZV2")  
 具備括號的運算式-評估順序  
   
  運算式 (如上圖) 會單純地評估其副作用，在此例中，會將資訊傳送到標準輸出裝置。  
   
 ## <a name="notation-in-expressions"></a>運算式中的標記法  
- 指定運算元時，C++ 語言會指定特定的相容性。 下表顯示運算元的類型可接受要求類型的運算元的運算子*類型*。  
+ 指定運算元時，C++ 語言會指定特定的相容性。 下表顯示運算元的類型可接受要求的型別運算元的運算子*型別*。  
   
 ### <a name="operand-types-acceptable-to-operators"></a>運算子可接受的運算元類型  
   
@@ -101,7 +101,7 @@ func( i, ++i );
   
 -   邏輯 AND 運算子 (&&) 的左運算元。 繼續之前會完整評估邏輯 AND 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 AND 運算子的右運算元。  
   
--   邏輯 OR 運算子的左運算元 (&#124;&#124;)。 繼續之前會完整評估邏輯 OR 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 OR 運算子的右運算元。  
+-   左運算元的邏輯 OR 運算子 (&#124;&#124;)。 繼續之前會完整評估邏輯 OR 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 OR 運算子的右運算元。  
   
 -   逗號運算子的左運算元。 繼續之前會完整評估逗號運算子的左運算元，並且完成所有副作用。 逗號運算子的兩個運算元會一律進行評估。  
   

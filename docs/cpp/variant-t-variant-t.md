@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942724"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464158"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 專屬**  
@@ -32,7 +32,6 @@ ms.locfileid: "37942724"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  **不帶正負號的 int**複製到新的值`_variant_t`物件。  
   
  *i8Src*  
- __**Int64**複製到新的值`_variant_t`物件。  
+ **__Int64**複製到新的值`_variant_t`物件。  
   
  *ui8Src*  
  **Unsigned 的 __int64**複製到新的值`_variant_t`物件。  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t (_variant_t &***var_t_Src***)** 建構`_variant_t`物件從另一個`_variant_t`物件。     variant 類型會保留。  
   
--   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)** 建構`_variant_t`從現有的物件`VARIANT`物件。       如果`fCopy`是**假**，則**VARIANT**物件時，會附加至新的物件上，而不製作複本。  
+-   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)** 建構`_variant_t`從現有的物件`VARIANT`物件。       如果*fCopy*是**false**，則**VARIANT**物件時，會附加至新的物件上，而不製作複本。  
   
 -   **_variant_t (short***sSrc* **，VARTYPE**`vtSrc`**= VT_I2)** 建構`_variant_t`型別的物件 VT_I2 或 VT_BOOL 從**簡短**整數值。       任何其他`VARTYPE`E_INVALIDARG 錯誤所導致。  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942999"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463710"
 ---
 # <a name="unhook"></a>__unhook
 解除處理常式方法與事件的關聯。  
@@ -31,8 +31,7 @@ ms.locfileid: "37942999"
 ## <a name="syntax"></a>語法  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  從解除連結的介面名稱*接收者*，只會針對在其中的 COM 事件接收器*layout_dependent*參數[event_receiver](../windows/event-receiver.md)屬性是 **，則為 true**。  
   
  *source*  
- 事件來源執行個體的指標。 根據程式碼`type`中指定**event_receiver**，*來源*可以是下列其中之一：  
+ 事件來源執行個體的指標。 根據程式碼`type`中指定`event_receiver`，*來源*可以是下列其中之一：  
   
 -   原生事件來源物件指標。  
   
--   **IUnknown**-基礎指標 （COM 來源）。  
+-   `IUnknown`-基礎指標 （COM 來源）。  
   
 -   Managed 物件指標 (用於 Managed 事件)。  
   

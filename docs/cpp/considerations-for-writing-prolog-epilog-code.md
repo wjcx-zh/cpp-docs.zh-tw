@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68eff54ff2465706f5a7459b7c6c21d87c7a1b7f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b581a57db7e66d1547ffd90509c62353d78d478b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402311"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464112"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>撰寫初構/終解程式碼的考量
-## <a name="microsoft-specific"></a>Microsoft 特定的  
+ **Microsoft 專屬**  
  在您撰寫自己的初構和終解程式碼序列之前，務必先了解堆疊框架的配置方式。您最好也了解如何使用`__LOCAL_SIZE`符號。  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> 堆疊框架配置  

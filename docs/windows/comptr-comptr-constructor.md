@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Comptr 建構函式 |Microsoft 文件'
+title: 'Comptr:: Comptr 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871171"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465366"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr 建構函式
-初始化 ComPtr 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。  
+初始化的新執行個體**ComPtr**類別。 多載提供預設、複製、移動和轉換建構函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,22 +59,22 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>參數  
- `U`  
- `other` 參數的類型。  
+ *U*  
+ 型別*其他*參數。  
   
- `other`  
- `U` 類型的物件。  
+ *other*  
+ 型別的物件*U*。  
   
 ## <a name="return-value"></a>傳回值  
   
 ## <a name="remarks"></a>備註  
- 第一個建構函式是預設建構函式，哪一個隱含建立空的物件。 第二個建構函式指定[__nullptr](../windows/nullptr-cpp-component-extensions.md)，明確地建立空的物件。  
+ 第一個建構函式是預設建構函式，哪一個隱含建立空的物件。 第二個建構函式指定[__nullptr](../windows/nullptr-cpp-component-extensions.md)，明確建立空的物件。  
   
- 第三個建構函式的指標所指定的物件從建立物件。  
+ 第三個建構函式會從指標所指定的物件建立的物件。  
   
- 第四個和第五個建構函式是複製建構函式。 如果它轉換成目前的類型，第五個建構函式將物件複製。  
+ 第四個和第五個建構函式是複製建構函式。 第五個建構函式將物件複製時轉換成目前的類型。  
   
- 第六個和第七個建構函式是移動建構函式。 第七個建構函式移動物件，如果它轉換成目前的類型。  
+ 第六個和第七個建構函式會移動建構函式。 第七個建構函式會移動物件，如果它是可以轉換成目前的類型。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

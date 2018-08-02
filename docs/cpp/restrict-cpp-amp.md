@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 758862d5296cf0a51cc0e04d849b044b3694e087
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942924"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461884"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 限制規範可以套用到函式和 Lambda 宣告。 它會在函式中的程式碼上強制執行限制，以及在使用 C++ Accelerated Massive Parallelism (C++ AMP) 的應用程式中函式的行為上強制執行限制。  
@@ -93,7 +93,6 @@ ms.locfileid: "37942924"
  下列範例示範如何使用`restrict(amp)`子句。  
   
 ```cpp 
-  
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   
   
@@ -109,7 +108,6 @@ void callFunctions() restrict(amp)
   
     // Calling a non-amp-restricted function is not allowed.  
     // functionNonAmp();   
-  
 }  
 ```  
   

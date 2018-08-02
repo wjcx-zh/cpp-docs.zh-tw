@@ -1,5 +1,5 @@
 ---
-title: CloakedIid 結構 |Microsoft 文件
+title: CloakedIid 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856156"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461219"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 結構
-指出 RuntimeClass、Implements 和 ChainInterfaces 範本指定介面無法在 IID 清單中存取。  
+若要指出`RuntimeClass`，`Implements`和`ChainInterfaces`範本指定的介面不是在 IID 清單中存取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,11 +35,11 @@ struct CloakedIid : T;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 介面隱藏的 （隱匿）。  
+ *T*  
+ 介面隱藏的 （「 隱匿 」）。  
   
 ## <a name="remarks"></a>備註  
- 下列是如何使用 CloakedIid 的範例： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
+ 以下是如何的範例`CloakedIid`會使用： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `T`  

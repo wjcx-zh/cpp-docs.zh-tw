@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942915"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462182"
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C++)
 根據整數運算式的值，允許在多個程式碼區段中選取範圍。  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  A**切換**陳述式可以巢狀。 在此情況下，**案例**或是**預設**標籤相關聯的最接近**切換**含括它們的陳述式。  
 
- 
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
  Microsoft C 不會限制中的 case 值的數目**切換**陳述式。 此數目會受到可用記憶體的限制。 ANSI C 要求在至少 257 個 case 標籤中允許**切換**陳述式。  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>另請參閱  
  [選取範圍陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
- 

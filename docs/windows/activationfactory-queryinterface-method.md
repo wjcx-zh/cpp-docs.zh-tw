@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Queryinterface 方法 |Microsoft 文件'
+title: 'Activationfactory:: Queryinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d93a2f61e92172c94fef2406fc6caa2de71ab8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c825e7e67844fc094e4cf9ce775152d334664d5a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854505"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465242"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface 方法
 擷取指定之介面的指標。  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>參數  
- `riid`  
+ *riid*  
  介面識別碼。  
   
- `ppvObject`  
- 當這項作業完成時，參數所指定介面的指標`riid`。  
+ *ppvObject*  
+ 這項作業完成後，參數所指定之介面指標*riid*。  
   
 ## <a name="return-value"></a>傳回值  
  若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  

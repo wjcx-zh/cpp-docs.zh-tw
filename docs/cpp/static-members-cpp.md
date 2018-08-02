@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d202e48bbcd09c3f4071af21e942cb1353f7a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941976"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466237"
 ---
 # <a name="static-members-c"></a>靜態成員 (C++)
 類別可以包含靜態資料成員和成員函式。 當資料成員宣告為**靜態**，只有一份資料會保留類別的所有物件。

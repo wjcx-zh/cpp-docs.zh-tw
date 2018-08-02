@@ -1,5 +1,5 @@
 ---
-title: 樣板和名稱解析 |Microsoft 文件
+title: 樣板和名稱解析 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be1a94215bb13d02970462ee2e8dcb19df1ff05f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422809"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464216"
 ---
 # <a name="templates-and-name-resolution"></a>樣板和名稱解析
 
@@ -84,5 +84,4 @@ ms.locfileid: "32422809"
  類型相依和值相依運算式是一種包含類型相依或值相依變數的運算式。 根據範本所使用的參數，這些運算式可能會有不同的語意。  
   
 ## <a name="see-also"></a>另請參閱
-
  [範本](../cpp/templates-cpp.md)

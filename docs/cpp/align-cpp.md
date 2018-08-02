@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1e591ad979d6c995fd5559b22a826766b02d50dd
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940724"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405866"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -46,11 +46,11 @@ ms.locfileid: "37940724"
 
 您可以使用`__declspec(align(#))`當您定義**struct**， **union**，或**類別**，或當您宣告變數。
 
-編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以複製與宣告結構`__declspec(align(#))`到的任何位置。 請注意，一般配置器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + + [new 運算子](new-operator-cpp.md)，和 Win32 配置器 — 通常未充分對齊的記憶體傳回`__declspec(align(#))`結構或陣列結構。 若要確保正確對齊 [複製] 或資料轉換作業的目的地，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
+編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以複製與宣告結構`__declspec(align(#))`到的任何位置。 請注意，一般配置器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + + [new 運算子](new-operator-cpp.md)，和 Win32 配置器 — 通常未充分對齊的記憶體傳回`__declspec(align(#))`結構或陣列結構。 若要確保正確對齊 [複製] 或 資料轉換作業的目的地，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
 
 您無法為函式參數指定對齊。 有對齊屬性的資料，以值傳遞到堆疊上時，其對齊會由呼叫慣例控制。 如果資料對齊在呼叫的函式中很重要，請將參數複製到正確對齊的記憶體中，才使用該參數。
 
-不含`__declspec(align(#))`，編譯器通常會對齊自然界限，根據目標處理器和資料，最多 4 個位元組的界限，32 位元處理器上的大小和 64 位元處理器上的 8 位元組界限上的資料。 類別或結構中的資料對齊在類別或結構，在其自然對齊和目前封裝設定的最小值 (從 #pragma **pack**或 **/Zp**編譯器選項)。
+不含`__declspec(align(#))`，編譯器通常會對齊自然界限，根據目標處理器和資料，最多 4 個位元組的界限，32 位元處理器上的大小和 64 位元處理器上的 8 位元組界限上的資料。 類別或結構中的資料，是以其最小自然對齊和目前封裝設定 (從 #pragma `pack` 或 `/Zp` 編譯器選項)，在類別或結構內對齊。
 
 這個範例會示範 `__declspec(align(#))` 的使用方式。
 
@@ -179,7 +179,7 @@ void fn() {
 }
 ```
 
-如果已在堆積上配置記憶體，則對齊會取決於所呼叫的配置函式。  例如，如果您使用**malloc**，則結果會取決於運算元大小。 如果*arg* > = 8，則傳回的記憶體對齊 8 位元組。 如果*arg* < 8，則傳回的記憶體其對齊會是第一個 2 的乘冪小於*arg*。 例如，如果您使用 malloc(7)，則對齊是 4 個位元組。
+如果已在堆積上配置記憶體，則對齊會取決於所呼叫的配置函式。  例如，如果您使用 `malloc`，則結果會取決於運算元大小。 如果*arg* > = 8，則傳回的記憶體對齊 8 位元組。 如果*arg* < 8，則傳回的記憶體其對齊會是第一個 2 的乘冪小於*arg*。 例如，如果您使用 malloc(7)，則對齊是 4 個位元組。
 
 ##  <a name="vclrf_declspecaligntypedef"></a> 定義新型別與 __declspec(align(#))
 
@@ -219,9 +219,9 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Align 如何搭配資料封裝
 
-**/Zp**編譯器選項和**組件**pragma 有封裝資料結構和等位成員的影響。此範例示範如何 **/Zp**和`__declspec(align(#))`一起運作：
+`/Zp`編譯器選項和`pack`pragma 有封裝資料結構和等位成員的影響。此範例示範如何`/Zp`和`__declspec(align(#))`一起運作：
 
-```c[[]]
+```cpp
 struct S {
    char a;
    short b;
@@ -232,7 +232,7 @@ struct S {
 };
 ```
 
-下表列出在各種不同的每個成員的位移 **/Zp** (或 #pragma**組件**) 顯示兩者之間的互動的值。
+下表列出每個成員在各種 `/Zp` (或 #pragma `pack`) 值之下的位移，顯示兩者之間的互動情況。
 
 |變數|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
@@ -251,7 +251,6 @@ struct S {
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
-
 [__declspec](../cpp/declspec.md)  
 [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)  
 [x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)  

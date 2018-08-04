@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376055"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496554"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 c + + 支援
 
@@ -43,7 +43,7 @@ ms.locfileid: "39376055"
    > [安裝 Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > Community Edition 是針對個別開發人員、課堂學習、學術研究和開放原始碼開發。 針對其他用途，請安裝 <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> 或 <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>。
+   > Community Edition 是針對個別開發人員、課堂學習、學術研究和開放原始碼開發。 針對其他用途，請安裝 [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或 [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
 1. 尋找您已下載並執行它的安裝程式檔案。 它可能會顯示在瀏覽器中，或您可能會發現您的 [下載] 資料夾中。 安裝程式需要系統管理員權限，才能執行。 您可能會看到**使用者帳戶控制**詢問是否要授與權限，讓安裝程式對您的系統進行變更; 選擇的對話方塊**是**。 如果您遇到問題，在檔案總管中尋找下載的檔案，以滑鼠右鍵按一下 [安裝程式] 圖示，然後選擇**系統管理員身分執行**從內容功能表。
 

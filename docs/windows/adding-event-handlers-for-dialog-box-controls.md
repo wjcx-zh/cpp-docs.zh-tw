@@ -1,5 +1,5 @@
 ---
-title: 加入對話方塊控制項的事件處理常式 |Microsoft 文件
+title: 加入對話方塊控制項的事件處理常式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,46 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb39e502ccc40531e72f761a414e4088de8b147d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121118"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463752"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>加入對話方塊控制項的事件處理常式
 
-針對已在類別和相關聯的專案對話方塊中，您可以利用一些捷徑時建立事件處理常式。 您可以快速建立預設控制項通知事件，或有任何適用的 Windows 訊息的處理常式。
+專案對話方塊已有相關的類別，您可以利用一些捷徑時建立事件處理常式。 您可以快速建立預設的控制項通知事件，或是任何適用的 Windows 訊息的處理常式。
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>若要建立預設控制項通知事件的處理常式
+## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>若要建立的預設控制項告知事件處理常式
 
-1. 按兩下控制項。 開啟文字編輯器。
+1. 按兩下控制項。 文字編輯器隨即開啟。
 
 2. 在文字編輯器中加入控制項告知處理常式程式碼。
 
 ## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>若要建立任何適用的 Windows 訊息的處理常式
 
-1. 按一下您要處理通知事件的控制項。
+1. 按一下您要處理的通知事件的控制項。
 
-2. 在[屬性 視窗](/visualstudio/ide/reference/properties-window)，按一下 [**控制項事件** 按鈕以顯示與控制項相關聯的一般 Windows 事件的清單。 比方說，標準**確定**按鈕**有關**對話方塊會列出下列通知事件：
+2. 在 [屬性 視窗](/visualstudio/ide/reference/properties-window)，按一下**控制項事件** 按鈕以顯示與控制項相關聯的一般 Windows 事件的清單。 例如，標準 **[確定]** 按鈕**有關**對話方塊會列出下列通知事件：
 
-   - **BN_CLICKED**
+   - BN_CLICKED
 
-   - **BN_DOUBLECLICKED**
+   - BN_DOUBLECLICKED
 
-   - **BN_KILLFOCUS**
+   - BN_KILLFOCUS
 
-   - **BN_SETFOCUS**
-
-    > [!NOTE]
-    > 或者，選取對話方塊中，按一下 [**控制項事件**] 按鈕以顯示在對話方塊中的所有控制項通用的 Windows 事件的清單。
-
-3. 在**屬性**視窗中，按一下右邊的資料行來處理，事件旁邊，然後選取 建議的通知事件名稱 (例如， **OnBnClickedOK**控點**BN_CLICKED**).
+   - BN_SETFOCUS
 
     > [!NOTE]
-    > 或者，您可以提供您的選擇，而不是選擇預設事件處理常式名稱的事件處理常式名稱。
+    > 或者，選取  對話方塊中，然後按一下**控制項事件** 按鈕以顯示在對話方塊中的所有控制項通用的 Windows 事件的清單。
 
-   一旦您選取的事件，Visual Studio 會開啟文字編輯器，並顯示事件處理常式的程式碼。 例如，下列程式碼會加入預設**OnBnClickedOK**:
+3. 在 **屬性** 視窗中，按一下 事件處理，右側資料行，然後選取 建議的通知事件名稱 (例如**OnBnClickedOK**控點**BN_CLICKED**).
+
+    > [!NOTE]
+    > 或者，您可以提供您的選擇，而不是選擇預設的事件處理常式名稱的事件處理常式名稱。
+
+   一旦您選取的事件，Visual Studio 會開啟文字編輯器，並顯示事件處理常式的程式碼。 例如，將下列程式碼加入預設**OnBnClickedOK**:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -66,9 +66,9 @@ ms.locfileid: "37121118"
     }
     ```
 
-如果您想要將事件處理常式加入類別以外實作對話方塊中，請使用[事件處理常式精靈](../ide/event-handler-wizard.md)。 如需詳細資訊，請參閱[加入事件處理常式](../ide/adding-an-event-handler-visual-cpp.md)。
+如果您想要將事件處理常式加入類別以外的其他實作的對話方塊，請使用[事件處理常式精靈](../ide/event-handler-wizard.md)。 如需詳細資訊，請參閱 <<c0> [ 加入事件處理常式](../ide/adding-an-event-handler-visual-cpp.md)。
 
-如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)在 *.NET Framework 開發人員指南。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 
 ### <a name="requirements"></a>需求
 

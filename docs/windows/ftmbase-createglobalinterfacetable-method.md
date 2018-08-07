@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Createglobalinterfacetable 方法 |Microsoft 文件'
+title: 'Ftmbase:: Createglobalinterfacetable 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b17749d5f20007e05f181de8f4e069d3fc736f0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de98932420cf5eb0d5b9b13011044e5bfc7b400d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872389"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569000"
 ---
 # <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable 方法
 建立全域介面表 (GIT)。  
@@ -35,15 +35,15 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `git`  
- 這項作業完成時，全域介面資料表的指標。  
+### <a name="parameters"></a>參數  
+ *Git*  
+ 這項作業完成時，全域介面表的指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 MSDN Library 中的 < COM 參考 > 主題的 「 COM 介面"副主題"IGlobalInterfaceTable 」 主題。  
+ 如需詳細資訊，請參閱 MSDN Library 中的 < COM 參考 > 主題的 < COM 介面 > 副主題中 「 IGlobalInterfaceTable"。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** ftm.h  

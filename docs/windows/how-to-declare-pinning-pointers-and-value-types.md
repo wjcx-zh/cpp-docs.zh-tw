@@ -1,5 +1,5 @@
 ---
-title: 如何： 宣告固定的指標和實值類型 |Microsoft 文件
+title: 如何： 宣告 Pin 指標和實值型別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880380"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569751"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>如何：宣告固定的指標和實值類型
-實值類型可以隱含成為 Boxed。 然後，您可以宣告實值類型物件的 pin 指標本身，並使用**pin_ptr**對 boxed 實值類型。  
+實值類型可以隱含成為 Boxed。 然後，您可以宣告 pin 指標值的型別物件本身以及使用**pin_ptr**為 boxed 實的值型別。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output  
 8  
 7  
 7  

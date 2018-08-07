@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Isvalid 方法 |Microsoft 文件'
+title: 'Handlet:: Isvalid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42aca81b3c2a0ad3db652bf9f77c648e503098e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0970fbdfd3b7c1885c6291b3a98f8f59775fa59
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873130"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569601"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid 方法
-指出目前的 HandleT 物件是否表示控制代碼。  
+指出是否目前**HandleT**物件表示的控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果 HandleT 表示控制代碼。否則， `false`。  
+ **真**如果**HandleT**表示的控制代碼，否則**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

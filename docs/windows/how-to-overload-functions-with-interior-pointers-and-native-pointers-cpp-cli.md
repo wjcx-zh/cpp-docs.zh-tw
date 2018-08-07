@@ -1,5 +1,5 @@
 ---
-title: 如何： 多載具有內部指標與原生指標的函式 (C + + /CLI) |Microsoft 文件
+title: 如何： 多載具有內部指標與原生指標的函式 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e3bc7e5fca6a34f9847c913e92e523b2898068f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2fb1025238dc5cf5b186830d0bea3b896b7391ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874859"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569956"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>如何：多載具有內部指標與原生指標的函式 (C++/CLI)
-函式可以多載根據參數型別是內部指標或原生指標。  
+可以多載函式，根據參數型別為內部指標或原生指標。  
   
 > [!IMPORTANT]
->  這項語言功能會受到 **/clr**編譯器選項，但不是由 **/ZW**編譯器選項。  
+>  `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // interior_ptr_overload.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -69,7 +69,7 @@ int main() {
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output 
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  

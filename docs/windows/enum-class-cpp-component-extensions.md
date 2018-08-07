@@ -1,5 +1,5 @@
 ---
-title: 列舉類別 （c + + 元件擴充功能） |Microsoft 文件
+title: 列舉類別 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880601"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570544"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ 元件擴充功能)
 在命名空間範圍內宣告列舉，這是使用者定義的類型，由一組稱為列舉值的具名常數所組成。  
@@ -26,13 +26,12 @@ ms.locfileid: "33880601"
 ## <a name="all-runtimes"></a>所有執行階段  
  **備註**  
   
- C++/CX 和 C++/CLI 支援類似於標準 C++ `public enum class` 的 `private enum class` 和 `enum class` ，但另外還加上存取範圍規範。 在 **/clr**下允許 C++11 `enum class` 類型，但是會產生警告 C4472，其目的在於確保您是真的想要 ISO 列舉類型，而不是 C++/CX 和 C++/CLI 類型。 如需有關 ISO 標準 c + +`enum`關鍵字，請參閱[列舉](../cpp/enumerations-cpp.md)。  
+ C + + /CX 和 C + + 支援**公用列舉類別**並**私用列舉類別**類似於標準 c + +**列舉類別**但加上可存取性規範。 底下 **/clr**，C + + 11**列舉類別**允許型別，但會產生警告 C4472，其要確保您真正想要 ISO 列舉類型，而不是 C + + /CX 和 C + + /cli 的 CLI 型別。 如需有關 ISO 標準 c + + **enum**關鍵字，請參閱[列舉](../cpp/enumerations-cpp.md)。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
  **語法**  
   
 ```  
-  
       access  
       enum class  
       enumeration-identifier  
@@ -43,7 +42,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **參數**  
   
  *access*  
- 列舉的存取範圍可以是 `public` 或 `private`。  
+ 列舉型別，可協助工具**公開金鑰**或是**私人**。  
   
  *列舉識別項*  
  列舉名稱。  
@@ -51,7 +50,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *基礎類型*  
  (選用) 列舉的基礎類型。  
   
- (選用。 Windows 執行階段只） 可以是列舉的基礎型別`bool`， `char`， `char16`， `int16`， `uint16`， `int`， `uint32`， `int64`，或`uint64`。  
+ (選用。 Windows 執行階段只） 之基礎類型的列舉型別，它可以是**bool**， **char**， `char16`， `int16`， `uint16`， **int**， `uint32`， `int64`，或`uint64`。  
   
  *列舉程式清單*  
  列舉程式名稱的逗號分隔清單。  
@@ -69,7 +68,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
 -   如果 *基礎類型* 是數值，而列舉程式指定了該類型的最大值，則無法表示下一個隱含定義之列舉的值。  
   
--   如果 *基礎類型* 是 `bool`，而且隱含定義了兩個以上的列舉程式，則無法表示前兩個列舉程式之後的列舉程式。  
+-   如果*基礎類型*是**bool**，和兩個以上的列舉值會以隱含方式定義之後無法表示前兩個, 列舉值。  
   
 -   如果 *基礎類型* 是 `char16`，而列舉值的範圍是從 0xD800 到 0xDFFF，則可以表示這個值。 不過，此值在邏輯上不正確，因為它代表 Unicode surrogate 字組的一半，不應該單獨出現。  
   
@@ -80,7 +79,6 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **語法**  
   
 ```  
-  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
@@ -89,19 +87,19 @@ accessenum structname [:type] { enumerator-list } var;
   
  **參數**  
   
- `access`  
- 列舉的存取範圍。  可以是 **公用** 或 `private`。  
+ *access*  
+ 列舉的存取範圍。 可以是**公開金鑰**或是**私人**。  
   
- `enumerator-list`  
+ *列舉程式清單*  
  列舉的識別項 (列舉程式) 逗號分隔清單。  
   
- `name`  
- 列舉名稱。  不允許匿名的 Managed 列舉。  
+ *name*  
+ 列舉名稱。 不允許匿名的 Managed 列舉。  
   
- `type` (選擇性)  
- *識別項*的基礎類型。  這可以是任何純量類型，例如 int、short 或 long 的帶正負號或不帶正負號版本。  也可以是`bool` 或 `char` 。  
+ *型別*（選擇性）  
+ *識別項*的基礎類型。 這可以是任何純量類型，例如帶正負號或不帶正負號的版本**int**，**簡短**，或**長**。  **bool**或是**char**也允許。  
   
- `var` (選擇性)  
+ *var* （選擇性）  
  列舉類型的變數名稱。  
   
  **備註**  
@@ -145,9 +143,9 @@ static const int mon = 1;
   
  在 Visual C++ 2002 和 Visual C++ 2003 中，列舉程式是以弱式方式插入 (會顯示在封閉範圍中，除非另有同名的識別項)。  
   
- 如果定義了標準 C++ 列舉 (沒有 **class** 或 `struct`)，則使用 **/clr** 編譯會將列舉編譯為 Managed 列舉。  列舉仍擁有 Unmanaged 列舉的語意。  請注意，編譯器會插入 Visual C++ 編譯器可辨識的屬性 `Microsoft::VisualC::NativeEnumAttribute`，以識別程式設計人員使用列舉的目的是要做為原生列舉。  其他編譯器只看得到為 Managed 列舉的標準列舉。  
+ 如果定義了標準 c + + 列舉 (不含**類別**或**結構**)、 編譯與`/clr`會導致將列舉編譯為 managed 列舉。  列舉仍擁有 Unmanaged 列舉的語意。  請注意，編譯器會插入 Visual C++ 編譯器可辨識的屬性 `Microsoft::VisualC::NativeEnumAttribute`，以識別程式設計人員使用列舉的目的是要做為原生列舉。  其他編譯器只看得到為 Managed 列舉的標準列舉。  
   
- 以 /clr 編譯的具名標準列舉，在組件中會顯示為 Managed 列舉，而且可被任何其他 Managed 編譯器使用。   不過，不具名的標準列舉就不會在組件中公開顯示。  
+ 使用名為 A，標準列舉編譯`/clr`會顯示為 managed 列舉，組件中，而且可供任何其他 managed 編譯器。   不過，不具名的標準列舉就不會在組件中公開顯示。  
   
  在 Visual C++ 2002 和 Visual C++ 2003 中，標準列舉在函式參數中用做類型：  
   
@@ -228,7 +226,6 @@ convert to int: 1
 1  
   
 1  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

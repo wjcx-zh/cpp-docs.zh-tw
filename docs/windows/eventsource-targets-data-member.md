@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Targets_ 資料成員 |Microsoft 文件'
+title: 'Eventsource:: Targets_ 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8782d66683d0a242e5321e8e3a0c8ab24b6f358
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871740"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568845"
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 資料成員
-陣列的一個或多個事件處理常式。  
+一或多個事件處理常式的陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ ComPtr<Details::EventTargetArray> targets_;
 ```  
   
 ## <a name="remarks"></a>備註  
- 目前的 EventSource 物件所代表的事件發生時，會呼叫事件處理常式。  
+ 當事件，表示由目前**EventSource**物件發生時，會呼叫事件處理常式。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

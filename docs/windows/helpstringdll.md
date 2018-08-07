@@ -1,5 +1,5 @@
 ---
-title: helpstringdll |Microsoft 文件
+title: helpstringdll |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877341"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570076"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-指定用來執行文件字串查閱 （當地語系化） 的 dll 名稱。  
+指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- `string`  
- 若要使用文件字串查閱 DLL。  
+### <a name="parameters"></a>參數  
+ *string*  
+ 用來執行文件字串查閱 DLL。  
   
 ## <a name="remarks"></a>備註  
  **Helpstringdll** c + + 屬性具有相同的功能[helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +63,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**適用於**|**類別**， `interface`，介面方法|  
+|**適用於**|**類別**，**介面**，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

@@ -1,5 +1,5 @@
 ---
-title: 'Handlenulltraits:: Close 方法 |Microsoft 文件'
+title: 'Handlenulltraits:: Close 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3bc6e7adfa99e2ce25c9913309b5c5bd486bee0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873166"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569397"
 ---
 # <a name="handlenulltraitsclose-method"></a>HANDLENullTraits::Close 方法
 關閉指定的控制代碼。  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
+### <a name="parameters"></a>參數  
+ *h*  
  若要關閉控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果處理`h`關閉成功，否則**false**。  
+ **真**如果處理*h*關閉順利完成，否則**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

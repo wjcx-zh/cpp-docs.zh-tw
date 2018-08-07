@@ -1,5 +1,5 @@
 ---
-title: GetActivationFactory 函式 |Microsoft 文件
+title: GetActivationFactory 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881334"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570307"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函式
-擷取的範本參數所指定之類型的啟動 factory。  
+擷取的範本參數所指定之類型的啟用 factory。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 樣板參數，指定啟動 factory 的類型。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 樣板參數，指定啟用 factory 的類型。  
   
- `activatableClassId`  
- 啟動處理站可以產生的類別名稱。  
+ *activatableClassId*  
+ 啟用處理站可以產生的類別名稱。  
   
- `factory`  
- 這項作業完成時，啟動處理站類型的參考`T`。  
+ *處理站*  
+ 這項作業完成時，參考型別的啟動處理站*T*。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，錯誤 HRESULT，表示此作業失敗的原因。  
+ 如果成功則為 S_OK否則，發生錯誤的 HRESULT，表示此作業失敗的原因。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

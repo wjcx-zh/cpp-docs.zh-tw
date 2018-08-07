@@ -1,5 +1,5 @@
 ---
-title: EventSource 類別 |Microsoft 文件
+title: EventSource 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2d466b317927cd8de259637450b68b6aaf13bd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a98d8997ebfb5b21b3e469b2aacca15cde4a5319
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876510"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570531"
 ---
 # <a name="eventsource-class"></a>EventSource 類別
-表示非 agile 的事件。 EventSource 成員函式加入、 移除及叫用事件處理常式。 敏捷式軟體開發的事件，請使用[AgileEventSource](agileeventsource-class.md)。 
+代表非 agile 的事件。 **EventSource**成員函式加入、 移除及叫用事件處理常式。 針對敏捷式軟體開發的事件，使用[AgileEventSource](agileeventsource-class.md)。 
   
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ template<typename TDelegateInterface>
 class EventSource;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `TDelegateInterface`  
- 要表示事件處理常式委派的介面。  
+### <a name="parameters"></a>參數  
+ *TDelegateInterface*  
+ 要委派，表示事件處理常式的介面。  
   
 ## <a name="members"></a>成員  
   
@@ -44,24 +44,24 @@ class EventSource;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[EventSource::EventSource 建構函式](../windows/eventsource-eventsource-constructor.md)|初始化 EventSource 類別的新執行個體。|  
+|[EventSource::EventSource 建構函式](../windows/eventsource-eventsource-constructor.md)|初始化的新執行個體**EventSource**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[EventSource::Add 方法](../windows/eventsource-add-method.md)|附加事件處理常式所指定的委派介面代表目前的 EventSource 物件的事件處理常式的集合。|  
-|[EventSource::GetSize 方法](../windows/eventsource-getsize-method.md)|擷取與目前的 EventSource 物件相關聯的事件處理常式的數目|  
-|[EventSource::InvokeAll 方法](../windows/eventsource-invokeall-method.md)|使用指定的引數類型和引數目前的 EventSource 物件相關聯的每個事件處理常式會呼叫。|  
-|[EventSource::Remove 方法](../windows/eventsource-remove-method.md)|刪除指定的事件註冊語彙基元所代表與目前的 EventSource 物件相關聯的事件處理常式集合的事件處理常式。|  
+|[EventSource::Add 方法](../windows/eventsource-add-method.md)|將附加事件處理常式，以指定的委派介面來表示目前的事件處理常式的集合**EventSource**物件。|  
+|[EventSource::GetSize 方法](../windows/eventsource-getsize-method.md)|擷取與目前相關聯的事件處理常式數目**EventSource**物件|  
+|[EventSource::InvokeAll 方法](../windows/eventsource-invokeall-method.md)|呼叫目前相關聯的每個事件處理常式**EventSource**物件使用指定的引數型別和引數。|  
+|[EventSource::Remove 方法](../windows/eventsource-remove-method.md)|刪除從目前與相關聯的事件處理常式的集合指定的事件註冊語彙基元所代表的事件處理常式**EventSource**物件。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[EventSource::addRemoveLock_ 資料成員](../windows/eventsource-addremovelock-data-member.md)|同步處理存取[targets_](../windows/eventsource-targets-data-member.md)陣列時加入、 移除或叫用事件處理常式。|  
-|[EventSource::targets_ 資料成員](../windows/eventsource-targets-data-member.md)|陣列的一個或多個事件處理常式。|  
-|[EventSource::targetsPointerLock_ 資料成員](../windows/eventsource-targetspointerlock-data-member.md)|加入事件處理常式，此 eventsource，同時也已移除，或叫用的內部資料成員的存取會同步處理。|  
+|[EventSource::addRemoveLock_ 資料成員](../windows/eventsource-addremovelock-data-member.md)|同步存取[targets_](../windows/eventsource-targets-data-member.md)陣列時加入、 移除或叫用事件處理常式。|  
+|[EventSource::targets_ 資料成員](../windows/eventsource-targets-data-member.md)|一或多個事件處理常式的陣列。|  
+|[EventSource::targetsPointerLock_ 資料成員](../windows/eventsource-targetspointerlock-data-member.md)|同步處理正在加入此 eventsource 的事件處理常式、 同時也已移除，或叫用的內部資料成員的存取權。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `EventSource`  
@@ -72,5 +72,5 @@ class EventSource;
  **命名空間：** Microsoft::WRL  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)
-[AgileEventSource 類別](agileeventsource-class.md)
+ [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)  
+ [AgileEventSource 類別](agileeventsource-class.md)

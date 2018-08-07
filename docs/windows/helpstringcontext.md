@@ -1,5 +1,5 @@
 ---
-title: helpstringcontext |Microsoft 文件
+title: helpstringcontext |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874573"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569995"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 指定.hlp 或.chm 檔案中的說明主題的識別碼。  
@@ -30,22 +30,21 @@ ms.locfileid: "33874573"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- `contextID`  
- 說明檔中的 32 位元說明內容識別碼。  
+### <a name="parameters"></a>參數  
+ *contextID*  
+ 說明檔中為 32 位元說明內容識別碼。  
   
 ## <a name="remarks"></a>備註  
  **Helpstringcontext** c + + 屬性具有相同的功能[helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 屬性。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,7 +67,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**適用於**|**類別**， `interface`，介面方法|  
+|**適用於**|**類別**，**介面**，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

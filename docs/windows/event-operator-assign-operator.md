@@ -1,5 +1,5 @@
 ---
-title: 'Event:: operator = 運算子 |Microsoft 文件'
+title: 'Event:: operator = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d3da41ff7fd145889ec799bb2f8ebe99aed36934
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a523d6ba8679bf7d0bdf98563b86946e16e7bfca
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871119"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571294"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 運算子
-將指定的 Event 參考指派給目前的 Event 執行個體。  
+指派指定的**事件**參考目前**事件**執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ WRL_NOTHROW Event& operator=(
 ```  
   
 #### <a name="parameters"></a>參數  
- `h`  
- 右值參考事件執行個體。  
+ *h*  
+ 若要為右值參考**事件**執行個體。  
   
 ## <a name="return-value"></a>傳回值  
- 到目前的事件執行個體的指標。  
+ 目前的指標**事件**執行個體。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

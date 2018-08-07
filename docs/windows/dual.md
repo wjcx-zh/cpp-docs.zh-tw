@@ -1,5 +1,5 @@
 ---
-title: 雙重 |Microsoft 文件
+title: 雙重 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872376"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571014"
 ---
 # <a name="dual"></a>dual
-雙重介面置於.idl 檔案介面。  
+將介面放在.idl 檔案中，為雙重介面。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 當**雙重**c + + 屬性位於介面，它會使要放在程式庫中的區塊所產生的.idl 檔案內的介面。  
+ 當**雙重**c + + 屬性在介面前面，它會將介面放置於所產生的.idl 檔案中的程式庫區塊內。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會使用屬性區塊**雙重**介面定義之前：  
+ 下列程式碼是使用屬性區塊**雙重**介面定義之前：  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**適用於**|`interface`|  
+|**適用於**|**interface**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|**dispinterface**|  

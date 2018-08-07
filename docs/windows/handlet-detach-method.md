@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Detach 方法 |Microsoft 文件'
+title: 'Handlet:: Detach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878459"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569475"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach 方法
-取消目前 HandleT 物件從其基礎控制代碼的關聯。  
+取消目前的關聯**HandleT**從其基礎控制代碼的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ typename HandleTraits::Type Detach();
  基礎控制代碼。  
   
 ## <a name="remarks"></a>備註  
- 這項作業完成時，會將目前 HandleT 設定為無效的狀態。  
+ 這項作業完成時，目前**HandleT**設為無效的狀態。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: HString 類別 |Microsoft 文件
+title: HString 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8544a78fdbdab19f44081853f5f5878f980cec01
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 868d0a4e2d84add447c95bfcd9690c8a17850718
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879367"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571447"
 ---
 # <a name="hstring-class"></a>HString 類別
-HSTRING 使用 RAII 模式的存留期的協助程式類別。
+來管理使用 RAII 模式的 HSTRING 的存留期的協助程式類別。
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +32,7 @@ class HString;
 ```  
   
 ## <a name="remarks"></a>備註  
- Windows 執行階段存取透過 HSTRING 控制代碼的字串。 HString 類別提供方便函式和運算子，以簡化使用 HSTRING 控制代碼。 這個類別可以處理其擁有 RAII 模式透過 HSTRING 的存留期。 
+ Windows 執行階段提供存取權透過 HSTRING 控制代碼的字串。 **HString**類別提供方便函式和運算子，以簡化 HSTRING 控制代碼的使用。 這個類別可以處理您透過使用 RAII 模式，它擁有的 HSTRING 的存留期。 
   
 ## <a name="members"></a>成員  
   
@@ -40,29 +40,29 @@ class HString;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HString::HString 建構函式](../windows/hstring-hstring-constructor.md)|初始化 HString 類別的新執行個體。|  
-|[HString::~HString 解構函式](../windows/hstring-tilde-hstring-destructor.md)|終結 HString 類別的目前執行個體。|  
+|[HString::HString 建構函式](../windows/hstring-hstring-constructor.md)|初始化的新執行個體**HString**類別。|  
+|[HString::~HString 解構函式](../windows/hstring-tilde-hstring-destructor.md)|終結的目前執行個體**HString**類別。|  
   
 ### <a name="members"></a>成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HString::Set 方法](../windows/hstring-set-method.md)|將目前 HString 物件的值設為指定的寬字元字串或 HString 參數。|  
-|[HString::Attach 方法](../windows/hstring-attach-method.md)|將指定的 HString 物件與目前 HString 物件產生關聯。|  
-|[HString::CopyTo 方法](../windows/hstring-copyto-method.md)|複製目前 HString HSTRING 物件的物件。|  
-|[HString::Detach 方法](../windows/hstring-detach-method.md)|解除指定的 HString 物件從其基礎值的關聯。|  
+|[HString::Set 方法](../windows/hstring-set-method.md)|設定目前的值**HString**設為指定的寬字元字串的物件或**HString**參數。|  
+|[HString::Attach 方法](../windows/hstring-attach-method.md)|將指定**HString**物件與目前**HString**物件。|  
+|[HString::CopyTo 方法](../windows/hstring-copyto-method.md)|複製目前**HString**到 HSTRING 物件的物件。|  
+|[HString::Detach 方法](../windows/hstring-detach-method.md)|取消指定的關聯**HString**與其基礎值的物件。|  
 |[HString::GetAddressOf 方法](../windows/hstring-getaddressof-method.md)|擷取基礎 HSTRING 控制代碼的指標。|  
 |[HString::Get 方法](../windows/hstring-get-method.md)|擷取基礎 HSTRING 控制代碼的值。|  
-|[HString::Release 方法](../windows/hstring-release-method.md)|刪除的基礎字串值，並初始化為空值的目前 HString 物件。|  
-|[HString::MakeReference 方法](../windows/hstring-makereference-method.md)|從指定的字串參數建立 HStringReference 物件。|  
+|[HString::Release 方法](../windows/hstring-release-method.md)|會刪除基礎字串值，並初始化目前**HString**為空值的物件。|  
+|[HString::MakeReference 方法](../windows/hstring-makereference-method.md)|建立`HStringReference`從指定的字串參數的物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HString::Operator= 運算子](../windows/hstring-operator-assign-operator.md)|將另一個 HString 物件的值移至目前 HString 物件。|  
+|[HString::Operator= 運算子](../windows/hstring-operator-assign-operator.md)|將另一個值移**HString**物件與目前**HString**物件。|  
 |[HString::Operator== 運算子](../windows/hstring-operator-equality-operator.md)|指出兩個參數是否相等。|  
-|[HString::Operator!= 運算子](../windows/hstring-operator-inequality-operator.md)|指出兩個參數是否不相等。|  
+|[HString::Operator!= 運算子](../windows/hstring-operator-inequality-operator.md)|表示兩個參數是否不相等。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `HString`  

@@ -1,5 +1,5 @@
 ---
-title: DontUseNewUseMake 類別 |Microsoft 文件
+title: DontUseNewUseMake 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f343d0b47d50cd375d186c29ff55b91898aa9c61
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872324"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569565"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake 類別
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ class DontUseNewUseMake;
 ```  
   
 ## <a name="remarks"></a>備註  
- 禁止使用運算子`new`RuntimeClass 中。 因此，您必須使用[Make 函式](../windows/make-function.md)改為。  
+ 防止使用運算子**新**RuntimeClass 中。 因此，您必須使用[讓函式](../windows/make-function.md)改。  
   
 ## <a name="members"></a>成員  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator new 運算子](../windows/dontusenewusemake-operator-new-operator.md)|多載運算子`new`並防止 RuntimeClass 中使用。|  
+|[DontUseNewUseMake::operator new 運算子](../windows/dontusenewusemake-operator-new-operator.md)|多載運算子**新**並且讓它無法使用於 RuntimeClass。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `DontUseNewUseMake`  

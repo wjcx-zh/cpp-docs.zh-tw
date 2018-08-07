@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Add 方法 |Microsoft 文件'
+title: 'Eventsource:: Add 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873234"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570378"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add 方法
-附加事件處理常式所指定的委派介面代表目前的 EventSource 物件的事件處理常式的集合。  
+將附加事件處理常式，以指定的委派介面來表示目前的事件處理常式的集合**EventSource**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,12 +36,12 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `delegateInterface`  
- 要委派的物件，代表事件處理常式的介面。  
+### <a name="parameters"></a>參數  
+ *delegateInterface*  
+ 要委派物件，代表事件處理常式的介面。  
   
- `token`  
- 這項作業完成時，代表事件的控制代碼。 當做參數，以使用此權杖[remove （)](../windows/eventsource-remove-method.md)捨棄事件處理常式方法。  
+ *語彙基元*  
+ 這項作業完成時，代表事件的控制代碼。 使用此權杖做為參數[remove （)](../windows/eventsource-remove-method.md)捨棄的事件處理常式的方法。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  

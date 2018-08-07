@@ -976,7 +976,7 @@ DWORD GetHotKey() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 虛擬按鍵碼和熱鍵與視窗相關聯的修飾詞。 如需可能的修飾詞的清單，請參閱 < [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) Windows SDK 中。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.。  
+ 虛擬按鍵碼和熱鍵與視窗相關聯的修飾詞。 如需可能的修飾詞的清單，請參閱 < [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) Windows SDK 中。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h。  
   
 ##  <a name="geticon"></a>  CWindow::GetIcon  
  擷取視窗的大型或小型圖示的控制代碼。  
@@ -2091,7 +2091,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
   
 ### <a name="parameters"></a>參數  
  *wVirtualKeyCode*  
- [in]熱鍵虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.。  
+ [in]熱鍵虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h。  
   
  *wModifiers*  
  [in]熱鍵修飾詞。 如需可能值的清單，請參閱 WM_SETHOTKEY Windows SDK 中。  

@@ -1,5 +1,5 @@
 ---
-title: defaultvalue |Microsoft 文件
+title: defaultvalue |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873413"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569982"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-允許指定具類型的選擇性參數的預設值。  
+允許指定的具類型的選擇性參數的預設值。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -44,7 +43,7 @@ ms.locfileid: "33873413"
 ## <a name="example"></a>範例  
  下列程式碼會顯示介面的方法使用**defaultvalue**屬性：  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  

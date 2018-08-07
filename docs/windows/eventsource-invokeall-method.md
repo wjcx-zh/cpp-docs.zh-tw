@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Invokeall 方法 |Microsoft 文件'
+title: 'Eventsource:: Invokeall 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882611"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570645"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
-呼叫目前相關聯的每個事件處理常式[EventSource](../windows/eventsource-class.md)物件使用指定的引數類型和引數。  
+呼叫目前相關聯的每個事件處理常式[EventSource](../windows/eventsource-class.md)物件使用指定的引數型別和引數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -183,65 +183,65 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T0`  
- 第零個事件處理常式的引數的型別。  
+### <a name="parameters"></a>參數  
+ *T0*  
+ 第零個事件處理常式的引數的類型。  
   
- `T1`  
+ *T1*  
  第一個事件處理常式引數型別。  
   
- `T2`  
+ *T2*  
  第二個事件處理常式引數的型別。  
   
- `T3`  
+ *T3*  
  第三個事件處理常式引數的型別。  
   
- `T4`  
+ *T4*  
  第四個事件處理常式引數的型別。  
   
- `T5`  
+ *T5*  
  第五個事件處理常式引數的型別。  
   
- `T6`  
+ *T6*  
  第六個事件處理常式引數的型別。  
   
- `T7`  
+ *T7*  
  第七個事件處理常式引數的型別。  
   
- `T8`  
- 兩個事件處理常式的引數的型別。  
+ *T8*  
+ 第八個事件處理常式的引數的類型。  
   
- `T9`  
+ *T9*  
  第九個事件處理常式引數的型別。  
   
- `arg0`  
+ *arg0*  
  第零個事件處理常式引數。  
   
- `arg1`  
+ *arg1*  
  第一個事件處理常式引數。  
   
- `arg2`  
+ *Arg2*  
  第二個事件處理常式引數。  
   
- `arg3`  
+ *arg3*  
  第三個事件處理常式引數。  
   
- `arg4`  
+ *arg4*  
  第四個事件處理常式引數。  
   
- `arg5`  
+ *arg5*  
  第五個事件處理常式引數。  
   
- `arg6`  
+ *arg6*  
  第六個事件處理常式引數。  
   
- `arg7`  
+ *arg7*  
  第七個事件處理常式引數。  
   
- `arg8`  
- 兩個事件處理常式引數。  
+ *arg8*  
+ 第八個事件處理常式引數。  
   
- `arg9`  
+ *arg9*  
  第九個事件處理常式引數。  
   
 ## <a name="requirements"></a>需求  

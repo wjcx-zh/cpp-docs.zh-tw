@@ -1,5 +1,5 @@
 ---
-title: 如何： 宣告和使用內部指標和 Managed 的陣列 (C + + /CLI) |Microsoft 文件
+title: 如何： 宣告及使用內部指標和 Managed 的陣列 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875301"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569839"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：宣告及使用內部指標和 Managed 陣列 (C++/CLI)
-下列 C + + /CLI 範例示範如何宣告和使用內部指標陣列。  
+下列 C + + /cli CLI 範例會示範如何宣告和使用內部指標陣列。  
   
 > [!IMPORTANT]
->  這項語言功能會受到 **/clr**編譯器選項，但不是由 **/ZW**編譯器選項。  
+>  `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>輸出  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

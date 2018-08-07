@@ -1,5 +1,5 @@
 ---
-title: 項目 |Microsoft 文件
+title: 項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872311"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569634"
 ---
 # <a name="entry"></a>entry
-識別 DLL 中的進入點在模組中指定的匯出函式或常數。  
+指定匯出的函式或常數 」 模組中，找出 DLL 的進入點。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
- `id`  
+ *id*  
  進入點的識別碼。  
   
 ## <a name="remarks"></a>備註  
  **項目**c + + 屬性具有相同的功能[項目](http://msdn.microsoft.com/library/windows/desktop/aa366815)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[idl_module](../windows/idl-module.md)使用的範例如**項目**。  
+ 範例，請參閱[idl_module](../windows/idl-module.md)範例使用**項目**。  
   
 ## <a name="requirements"></a>需求  
   

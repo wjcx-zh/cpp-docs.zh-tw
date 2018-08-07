@@ -1,5 +1,5 @@
 ---
-title: delegate （c + + 元件擴充功能） |Microsoft 文件
+title: 委派 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879655"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570359"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ 元件擴充功能)
-宣告表示函式指標的類型。  
+宣告表示的函式指標的類型。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- Windows 執行階段和通用語言執行平台支援委派。  
+ 在 Windows 執行階段和通用語言執行平台支援委派。  
   
 ### <a name="remarks"></a>備註  
- `delegate` 是即時線上關鍵字。 如需詳細資訊，請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ **委派**是內容相關性關鍵字。 如需詳細資訊，請參閱 <<c0> [ 即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
- 若要在編譯時期偵測類型是否為委派，使用`__is_delegate()`類型特性。 如需詳細資訊，請參閱[類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 若要在編譯時期偵測，如果類型是委派，使用`__is_delegate()`類型特性。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
  C + + /CX 支援使用下列語法的委派。  
@@ -49,24 +49,23 @@ delegate-type-identifier
 (  
 [ parameters ]  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>參數  
  *access*  
- （選擇性）委派，它可以是的協助工具`public`（預設值） 或`private`。 函式原型也可以以限定`const`或`volatile`關鍵字。  
+ （選擇性）委派，可協助工具**公開金鑰**（預設值） 或**私人**。 函式原型也可以與限定**const**或是**volatile**關鍵字。  
   
  *傳回型別*  
  函式原型的傳回型別。  
   
- *委派類型識別碼*  
+ *委派型別識別項*  
  宣告的委派類型的名稱。  
   
  *參數*  
- （選擇性）類型和函式原型的識別項。  
+ （選擇性）型別和函式原型的識別項。  
   
 ### <a name="remarks"></a>備註  
- 使用*委派類型識別碼*來宣告事件和委派的相同原型。 如需詳細資訊，請參閱[委派 (C + + /CX)](../cppcx/delegates-c-cx.md)。  
+ 使用*委派型別識別項*來宣告具有與委派相同原型的事件。 如需詳細資訊，請參閱 <<c0> [ 委派 (C + + /CX)](../cppcx/delegates-c-cx.md)。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/ZW**  
@@ -80,46 +79,45 @@ delegate-type-identifier
 access  
 delegate  
 function_declaration  
-  
 ```  
   
 ### <a name="parameters"></a>參數  
  *access*  
- （選擇性）委派外部組件的存取範圍可以是公用或私用。  預設為私用。  類別、 委派可以有任何存取範圍。  
+ （選擇性）外部組件的存取範圍可以是委派的公用或私用。  預設為私用。  在類別中，委派可以有任何存取範圍。  
   
  *function_declaration*  
- 可以繫結至委派的函式簽章。 委派的傳回型別可以是任何 managed 型別。 互通性考量，建議委派的傳回型別是 CLS 類型。  
+ 可以繫結至委派的函式簽章。 委派的傳回型別可以是任何 managed 型別。 基於互通性考量，建議您使用委派的傳回型別是 CLS 類型。  
   
- 若要定義繫結的委派的第一個參數*function_declaration*應該是類型`this`物件的指標。 
+ 若要定義繫結的委派中的第一個參數*function_declaration*的類型應要**這**物件的指標。 
   
 ### <a name="remarks"></a>備註  
- 委派是多點傳送: 「 函式指標 」 可以繫結 managed 類別內的一或多個方法。 **委派**關鍵字會定義特定的方法簽章的多點傳送的委派類型。  
+ 委派是多點傳送: 「 函式指標 」 可以繫結至受管理的類別內的一或多個方法。 **委派**關鍵字定義的特定方法簽章的多點傳送的委派類型。  
   
  委派也繫結至方法的實值類別，例如靜態方法。  
   
- 委派具有下列特性：  
+ 委派會具有下列特性：  
   
--   它繼承自**system:: multicastdelegate**。  
+-   它繼承自`System::MulticastDelegate`。  
   
--   它有兩個引數的建構函式： managed 類別的指標或**NULL** （如果是繫結至靜態方法） 以及所指定型別的完整限定的方法。  
+-   它有兩個引數的建構函式： 受管理的類別或 NULL （如果是靜態方法的繫結），且指定型別的完整限定的方法的指標。  
   
 -   它擁有稱為 `Invoke` 的方法，其簽章與宣告的委派簽章相符。  
   
  叫用委派時，其函式會呼叫它們所附加的順序。  
   
- 委派的傳回值是從其最後一個附加的成員函式傳回的值。  
+ 委派的傳回值是從其最後一個附加的成員函式的傳回值。  
   
- 委派不可多載。  
+ 委派無法多載。  
   
- 委派可以繫結或未繫結。  
+ 委派可以繫結或解除繫結。  
   
- 當您具現化的繫結的委派時，第一個引數應該是物件參考。  委派具現化的第二個引數必須是實值類型的方法是方法的 managed 的類別物件或指標的位址。   委派具現化的第二個引數必須以完整類別的範圍語法方法，並套用傳址運算子。  
+ 當您具現化繫結的委派時，第一個引數都應該是物件參考。 委派具現化的第二個引數必須是實值類型的方法是方法的 managed 的類別物件或指標的位址。 委派具現化的第二個引數必須具有完整的類別範圍語法方法命名，並套用傳址運算子。  
   
- 當您具現化未繫結的委派時，第一個引數應該是 managed 的類別物件或方法的實值類型的指標的方法的位址。   引數必須以完整類別的範圍語法方法，並套用傳址運算子。  
+ 當您具現化繫結的委派時，第一個引數必須是方法的 managed 的類別物件或方法的實值類型的指標的位址。 引數必須具有完整的類別範圍語法方法命名，並套用傳址運算子。  
   
- 建立靜態或全域函式委派，當只有一個參數是必要項： 函式 （或者，函式的位址）。  
+ 當建立靜態或全域函式的委派，只能有一個參數是必要： 函式 （選擇性，函式的位址）。  
   
- 如需委派的詳細資訊，請參閱  
+ 如需有關委派的詳細資訊，請參閱  
   
 -   [如何：定義和使用委派 (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
   
@@ -131,7 +129,7 @@ function_declaration
 ### <a name="examples"></a>範例  
  **範例**  
   
- 下列範例會示範如何宣告、 初始化及叫用委派。  
+ 下列範例示範如何宣告、 初始化及叫用委派。  
   
 ```cpp  
 // mcppv2_delegate.cpp  

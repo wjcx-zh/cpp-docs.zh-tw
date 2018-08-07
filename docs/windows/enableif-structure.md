@@ -1,5 +1,5 @@
 ---
-title: EnableIf 結構 |Microsoft 文件
+title: EnableIf 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873374"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569026"
 ---
 # <a name="enableif-structure"></a>EnableIf 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,14 +43,14 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  類型。  
   
- `b`  
+ *b*  
  Boolean 運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果第一個範本參數評估為第二個範本參數所指定型別的資料成員會定義`true`。  
+ 如果第一個範本參數評估為第二個範本參數所指定之型別的資料成員會定義 **，則為 true**。  
   
 ## <a name="members"></a>成員  
   
@@ -58,7 +58,7 @@ struct EnableIf<true, T>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`type`|如果樣板參數`b`評估為`true`，部分特製化定義資料成員`type`類型`T`。|  
+|`type`|如果範本參數*b*評估為 **，則為 true**，部分特製化定義資料成員`type`必須是類型`T`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `EnableIf`  

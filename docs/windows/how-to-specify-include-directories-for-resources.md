@@ -1,5 +1,5 @@
 ---
-title: 如何： 指定資源的 Include 目錄 |Microsoft 文件
+title: 如何： 指定資源的 Include 目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875275"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569536"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>如何：指定資源的 Include 目錄
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>指定特定 RC 檔的 Include 目錄  
   
 1.  以滑鼠右鍵按一下方案總管 中的.rc 檔，然後選取**屬性**從捷徑功能表。  
   
-2.  在**屬性頁**對話方塊中，按一下 **資源**左窗格中的節點，然後指定其他的 include 目錄中的**其他 include 目錄**屬性。  
+2.  在 [**屬性頁**] 對話方塊中，按一下**資源**節點，在左窗格中，然後指定其他的 include 目錄中的**其他 include 目錄**屬性。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index).NET Framework 開發人員指南中。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 使用資源以利用 ASP.NET進行當地語系化](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **需求**  
+## <a name="requirements"></a>需求  
   
  Win32  
   

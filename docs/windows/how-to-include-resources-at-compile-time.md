@@ -1,5 +1,5 @@
 ---
-title: 如何： 在編譯時期包含資源 |Microsoft 文件
+title: 如何： 在編譯時期包含資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880146"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571332"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>如何：在編譯時期包含資源
-通常可簡單且容易使用一個資源指令碼 (.rc) 檔中所有資源的預設排列方式。 不過，您可以將資源新增其他檔案中加入目前專案在編譯時期列出它們在**編譯時期指示詞**方塊中[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。  
+通常可簡單且容易使用一個資源指令碼 (.rc) 檔中所有資源的預設排列方式。 不過，您可以將資源其他檔案中加入目前的專案在編譯時期藉由列出在**編譯時間指示詞**方塊中[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。  
   
  有幾個原因會在主要.rc 檔以外的檔案中放置資源：  
   
@@ -45,21 +45,19 @@ ms.locfileid: "33880146"
   
 -   為了包含自訂格式的資源 (例如 RCDATA 資源)。 RCDATA 資源可能會有特殊需求。 例如，您無法將運算式做為 nameID 欄位的值。 如需詳細資訊，請參閱 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] 文件。  
   
- 如果您有區段中現有的.rc 檔符合上述任何情況，您應該將該區段置於一或多個個別.rc 檔，並將它們包含在專案中使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。 *Projectname*.rc2 檔建立新專案的 \res 子目錄中用於此目的。  
+ 如果您將區段在現有的.rc 檔符合下列任一條件時，您應該將該區段置於一或多個個別.rc 檔，並將它們包含在專案中使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。 *Projectname*.rc2 檔建立新專案的 \res 子目錄中用於此目的。  
   
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>在編譯時期，於專案中包含資源  
   
 1.  將資源放在包含唯一檔案名稱的資源指令碼檔案。 請勿使用*projectname*.rc，因為這是用於主要資源指令碼檔案的檔案名稱。  
   
-2.  以滑鼠右鍵按一下.rc 檔 (在[資源檢視](../windows/resource-view-window.md))，然後選擇  **Resource Includes**從捷徑功能表。  
+2.  以滑鼠右鍵按一下.rc 檔 (在[資源檢視](../windows/resource-view-window.md))，然後選擇**Resource Includes**從捷徑功能表。  
   
-3.  在**編譯時期指示詞**方塊中，加入[#include](../preprocessor/hash-include-directive-c-cpp.md)編譯器指示詞，在開發環境中的主要資源檔中包含新的資源檔。  
+3.  在 **編譯時間指示詞**方塊中，加入[#include](../preprocessor/hash-include-directive-c-cpp.md)編譯器指示詞，以在開發環境中的主要資源檔中納入新的資源檔。  
   
      以這種方式包含的檔案中資源，都會在編譯時期成為可執行檔的一部分。 當您在專案的主要 .rc 檔上工作時，無法直接編輯或修改它們。 您需要個別開啟包含的 .rc 檔。 資源編輯器無法編輯不含 .rc 副檔名的任何加入的檔案。  
   
-
-  
- 需求  
+## <a name="requirements"></a>需求  
   
  Win32  
   

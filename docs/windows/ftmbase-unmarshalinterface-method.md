@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Unmarshalinterface 方法 |Microsoft 文件'
+title: 'Ftmbase:: Unmarshalinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877715"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570024"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase::UnmarshalInterface 方法
-初始化新建立的 proxy，並傳回該 proxy 的介面指標。  
+初始化新建立的 proxy，並將該 proxy 傳回的介面指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,17 +38,17 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>參數  
- `pStm`  
- 指標是解封送處理介面指標的串流。  
+ *pStm*  
+ 從中的介面指標是解除封送處理的資料流的指標。  
   
- `riid`  
- 參考要解除封送處理介面的識別碼。  
+ *riid*  
+ 要解除封送處理介面識別項參考。  
   
- `ppv`  
- 這項作業完成時，接收中要求的介面指標的指標變數的位址`riid`。 如果這項作業成功，*`ppv`包含要解除封送處理介面的要求的介面指標。  
+ *ppv*  
+ 這項作業完成時，接收所要求的介面指標的指標變數的位址*riid*。 如果這項作業成功，**ppv*包含要解除封送處理介面的要求的介面指標。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，E_NOINTERFACE 或 E_FAIL。  
+ 如果成功則為 S_OK否則 E_NOINTERFACE 或 E_FAIL。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** ftm.h  

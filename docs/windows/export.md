@@ -1,5 +1,5 @@
 ---
-title: 匯出 |Microsoft 文件
+title: 匯出 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67b71639fc0b7d0039f5665d2cc187191ac14baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 48c4a645456e3b3c0556dfed268ce911e5799fc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874599"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569413"
 ---
 # <a name="export"></a>匯出
-會導致資料結構，以便放入.idl 檔案。  
+會導致資料結構，以放入.idl 檔案。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [export]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- **匯出**c + + 屬性會造成放入.idl 檔案，則是二進位檔相容的格式可搭配任何語言中的類型程式庫中的 可用的資料結構。  
+ **匯出**c + + 屬性會導致放入.idl 檔案，然後才能在類型程式庫中的二進位檔相容的格式，使它可以用於任何語言中的 使用的資料結構。  
   
- 您不能套用**匯出**屬性的類別，即使此類別只具有公用成員 (相當於`struct`)。  
+ 您不能套用**匯出**屬性的類別，即使類別只有公用成員 (相當於**結構**)。  
   
- 如果您匯出未命名`enum`s 或`struct`s，將其指定名稱開頭為 **__unnamed * * * x*，其中*x*是連續的數字。  
+ 如果您匯出未命名**enum**s 或**結構**s，將其指定名稱開頭為 **__unnamed * * * x*，其中*x*是循序數字。  
   
- 適用於匯出 typedef 為基底類型、 結構、 等位、 列舉，或輸入識別項。  請參閱[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)如需詳細資訊。  
+ 適用於匯出的 typedef 基底類型、 結構、 等位、 列舉、 或型別識別項。  請參閱[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)如需詳細資訊。  
   
 ## <a name="example"></a>範例  
  下列程式碼示範如何使用**匯出**屬性：  
   
-```  
+```cpp  
 // cpp_attr_ref_export.cpp  
 // compile with: /LD  
 [module(name="MyLibrary")];  
@@ -64,7 +62,7 @@ struct MyStruct {
   
 |||  
 |-|-|  
-|**適用於**|**等位**， `typedef`， `enum`， `struct`，或 `interface`|  
+|**適用於**|**union**， **typedef**，**列舉**，**結構**，或**介面**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

@@ -1,5 +1,5 @@
 ---
-title: 物件控制代碼運算子 (^) （c + + 元件擴充功能） |Microsoft 文件
+title: 物件控制代碼運算子 (^) （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881165"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569800"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>物件控制代碼運算子 (^) (C++ 元件擴充功能)
-*控制代碼宣告子*(`^`，唸成"hat")，修改型別[規範](../cpp/overview-of-declarators.md)來表示，在宣告的物件應該自動刪除當系統決定此物件是無法存取。  
+*控制代碼宣告子*(`^`，唸成"hat")，修改型別[規範](../cpp/overview-of-declarators.md)來表示，宣告的物件時，應會自動刪除系統判斷此物件是無法再存取。  
   
 ## <a name="accessing-the-declared-object"></a>存取宣告的物件  
  以控制代碼宣告子宣告的變數作用如同物件指標。 然而，此變數指向整個物件，無法指向物件的成員，也不支援指標算術。 使用間接取值運算子 (`*`) 存取物件，使用箭號成員存取運算子 (`->`) 存取物件的成員。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- 編譯器會使用 COM*參考計數*機制，以判斷物件不再使用且可以刪除。 究其原因是，從 Windows 執行階段介面衍生的物件實際上是 COM 物件。 當物件建立或複製時參考計數遞增，當物件設定為 null 或超出範圍時則遞減。 如果參考計數歸零，物件會自動並立即刪除。  
+ 編譯器會使用 COM*參考計數*機制來判斷是否物件已不再使用，且可以刪除。 究其原因是，從 Windows 執行階段介面衍生的物件實際上是 COM 物件。 當物件建立或複製時參考計數遞增，當物件設定為 null 或超出範圍時則遞減。 如果參考計數歸零，物件會自動並立即刪除。  
   
  控制代碼宣告子的優點是，在 COM 中，必須明確地管理物件的參考計數 (這個程序相當繁瑣且易錯)， 也就是，若要遞增和遞減參考計數，必須呼叫物件的 AddRef() 和 Release() 方法。 不過，如果以控制代碼宣告子宣告物件，Visual C++ 編譯器會產生自動調整參考計數的程式碼。  
   
@@ -39,20 +39,20 @@ ms.locfileid: "33881165"
  編譯器選項： **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- 系統會使用 CLR*記憶體回收行程*機制，以判斷物件不再使用且可以刪除。 Common Language Runtime 會維持用以配置物件的堆積，並使用您程式中的 Managed 參考 (變數)，指出物件在堆積上的位置。 當物件不再使用時，物件在堆積上佔用的記憶體會被釋放。 記憶體回收行程會定期壓縮堆積，以更有效地利用釋放的記憶體。 壓縮堆積可能會移動堆積上的物件，而使得 Managed 參考所參考的位置無效。 然而，記憶體回收行程知道所有 Managed 參考的位置，而且會自動更新以指出物件在堆積上目前的位置。  
+ 系統會使用 CLR*記憶體回收行程*機制來判斷是否物件已不再使用，且可以刪除。 Common Language Runtime 會維持用以配置物件的堆積，並使用您程式中的 Managed 參考 (變數)，指出物件在堆積上的位置。 當物件不再使用時，物件在堆積上佔用的記憶體會被釋放。 記憶體回收行程會定期壓縮堆積，以更有效地利用釋放的記憶體。 壓縮堆積可能會移動堆積上的物件，而使得 Managed 參考所參考的位置無效。 然而，記憶體回收行程知道所有 Managed 參考的位置，而且會自動更新以指出物件在堆積上目前的位置。  
   
  因為原生 C++ 指標 (`*`) 和參考 (`&`) 不是 Managed 參考，所以記憶體回收行程無法自動更新它們所指的位址。 若要解決這個問題，請使用控制代碼宣告子，指定記憶體回收行程知道且會自動更新的變數。  
   
  在 Visual C++ 2002 和 Visual C++ 2003 中，`__gc *` 是用來宣告在 Managed 堆積上的物件。  在新語法中，`^` 取代 `__gc *`。  
   
- 如需詳細資訊，請參閱[How to： 在原生類型中宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。  
   
 ### <a name="examples"></a>範例  
  **範例**  
   
- 這個範例示範如何在 Managed 堆積上建立參考型別的執行個體。  這個範例也示範如何以一個控制代碼初始化另一個控制代碼，導致在 Managed、記憶體回收堆積上同一個物件有兩個參考。 請注意，指定[nullptr](../windows/nullptr-cpp-component-extensions.md)至一個控制代碼不會將標示為記憶體回收的物件。  
+ 這個範例示範如何在 Managed 堆積上建立參考型別的執行個體。  這個範例也示範如何以一個控制代碼初始化另一個控制代碼，導致在 Managed、記憶體回收堆積上同一個物件有兩個參考。 請注意，指派[nullptr](../windows/nullptr-cpp-component-extensions.md)給一個控制代碼不會標記為記憶體回收的物件。  
   
-```  
+```cpp  
 // mcppv2_handle.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -88,7 +88,7 @@ int main() {
   
  下列範例示範如何在 Managed 堆積上宣告物件控制代碼，而物件的型別為 Boxed 實值型別。 這個範例也會示範如何從 Boxed 物件取得實值型別。  
   
-```  
+```cpp  
 // mcppv2_handle_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -122,7 +122,7 @@ Not a boxed int
   
  這個範例示範如何將使用 void* 指標指向任意物件的 C++ 常見慣用語，取代為可儲存任何參考類別控制代碼的 Object^。 這個範例也會示範所有型別 (例如陣列和委派) 都可以轉換為物件控制代碼。  
   
-```  
+```cpp  
 // mcppv2_handle_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -171,7 +171,7 @@ Type is MyDel
   
  這個範例示範控制代碼可以是取值的，而且可透過已取值的控制代碼存取成員。  
   
-```  
+```cpp  
 // mcppv2_handle_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -221,7 +221,7 @@ Cannot access array element 11, size is 10
   
  這個範例示範原生參考 (`&`) 無法繫結到 Managed 型別的 `int` 成員，因為 `int` 可能儲存在記憶體回收堆積中，而原生參考不會追蹤 Managed 堆積上的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。  
   
-```  
+```cpp  
 // mcppv2_handle_5.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -242,7 +242,7 @@ int main() {
 ```  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   

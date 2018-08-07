@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray:: ~ EventTargetArray 解構函式 |Microsoft 文件'
+title: 'EventTargetArray:: ~ EventTargetArray 解構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871789"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571095"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray 解構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33871789"
 ```  
   
 ## <a name="remarks"></a>備註  
- 取消初始化目前`EventTargetArray`類別。  
+ 取消初始化目前**EventTargetArray**類別。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

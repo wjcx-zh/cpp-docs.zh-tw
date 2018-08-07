@@ -1,5 +1,5 @@
 ---
-title: helpstring |Microsoft 文件
+title: helpstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879002"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570927"
 ---
 # <a name="helpstring"></a>helpstring
-指定的字元字串，用來描述它所套用的項目。  
+指定用來描述所套用之項目的字元字串。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- `string`  
- [說明] 字串的文字。  
+### <a name="parameters"></a>參數  
+ *string*  
+ [說明] 字串文字。  
   
 ## <a name="remarks"></a>備註  
  **Helpstring** c + + 屬性具有相同的功能[helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[defaultvalue](../windows/defaultvalue.md)如需如何使用的範例**helpstring**。  
+ 範例，請參閱[defaultvalue](../windows/defaultvalue.md)如需如何使用的範例**helpstring**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33879002"
   
 |||  
 |-|-|  
-|**適用於**|`interface``typedef`，**類別**、 方法、 屬性|  
+|**適用於**|**介面**， **typedef**，**類別**、 方法、 屬性|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
@@ -65,5 +64,5 @@ ms.locfileid: "33879002"
  [類別屬性](../windows/class-attributes.md)   
  [方法屬性](../windows/method-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [說明檔](../windows/helpfile.md)   
+ [Helpfile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

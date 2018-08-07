@@ -1,5 +1,5 @@
 ---
-title: 預設值 （c + +） |Microsoft 文件
+title: 預設值 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872961"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570853"
 ---
 # <a name="default-c"></a>default (C++)
 表示 coclass 內定義的自訂或 dispinterface，用以代表預設可程式性介面。  
@@ -32,8 +32,7 @@ ms.locfileid: "33872961"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ ms.locfileid: "33872961"
  **default** C++ 屬性具有與 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 屬性相同的功能。 **default** 屬性也可搭配 [case](../windows/case-cpp.md) 屬性使用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼示範如何在 coclass 的定義中使用 **default** ，以將 **ICustomDispatch** 指定為預設可程式性介面︰  
+ 下列程式碼示範如何**預設**coclass 的定義來指定`ICustomDispatch`為預設可程式性介面：  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`、資料成員|  
+|**適用於**|**類別**， **struct**，資料成員|  
 |**可重複**|否|  
-|**必要屬性**|**coclass** (套用至 **class** 或 `struct`時)|  
+|**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|  
 |**無效屬性**|無|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

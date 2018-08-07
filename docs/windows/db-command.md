@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954977"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571434"
 ---
 # <a name="dbcommand"></a>db_command
 建立 OLE DB 命令。  
@@ -133,7 +133,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="remarks"></a>備註  
 **db_command** 會建立 OLE DB 消費者用來執行命令的 [CCommand](../data/oledb/ccommand-class.md) 物件。  
   
-您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍用法牽涉到 OLE DB 消費者範本類別**CCommand\<>**，但函式和類別案例的樣板引數不同。 在函式案例中，將會繫結至包含區域變數的 **Accessor** ，類別用法則會將 `CAccessor`衍生類別推斷為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。  
+您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍用法牽涉到 OLE DB 消費者範本類別`CCommand<>`，但函式和類別案例的樣板引數不同。 在函式案例中，將會繫結至包含區域變數的 **Accessor** ，類別用法則會將 `CAccessor`衍生類別推斷為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。  
   
 **db_command** 可以用來執行不傳回結果集的命令。  
   

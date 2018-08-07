@@ -1,5 +1,5 @@
 ---
-title: 泛型介面 （Visual c + +） |Microsoft 文件
+title: 泛型介面 （Visual c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878693"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571171"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
-套用至類別型別參數的限制會套用至型別參數在介面上的相同 (請參閱[泛型類別 (C + + /CLI)](../windows/generic-classes-cpp-cli.md))。  
+套用至型別參數，在類別上的限制會套用至型別參數，在介面上的相同 (請參閱[泛型類別 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。  
   
- 控制函式多載的規則都相同的泛型類別或泛型介面中的函式。  
+ 控制函式多載的規則也適用於泛型類別或泛型介面中的函式。  
   
- 建構的介面類型 （請參閱下列範例） 的簡單介面類型做為以相同方式使用明確介面成員實作。  
+ 明確介面成員實作會使用相同的方式為使用簡單的介面型別 （請參閱下列範例） 中的建構的介面類型。  
   
- 如需有關介面的詳細資訊，請參閱[介面類別](../windows/interface-class-cpp-component-extensions.md)。  
+ 如需有關介面的詳細資訊，請參閱 <<c0> [ 介面類別](../windows/interface-class-cpp-component-extensions.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ ms.locfileid: "33878693"
  其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
   
  *類別索引鍵*  
- **類別**或**類型名稱**  
+ **類別**或**typename**  
   
- `type-parameter-identifier(s)`  
- 以逗號分隔的識別項清單。  
+ *type-parameter-identifier(s)*  
+ 以逗號分隔的識別碼清單。  
   
- `type-parameter-constraints-clauses`  
- 中指定的形式[泛型型別參數的條件約束 (C + + /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *類型參數條件約束-子句*  
+ 中指定的格式[泛型類型參數的條件約束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *存取範圍修飾詞*（選擇性）  
  存取範圍修飾詞 (例如**公用、 私用**)。  
@@ -59,7 +59,7 @@ ms.locfileid: "33878693"
  介面名稱。  
   
  *基底清單*（選擇性）  
- 包含一或多個明確的基底介面以逗號分隔的清單。  
+ 包含一或多個明確的基底介面並以逗號分隔的清單。  
   
  *介面主體內*  
  介面成員的宣告。  
@@ -68,9 +68,9 @@ ms.locfileid: "33878693"
  根據此類型的變數的宣告。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何宣告和具現化泛型介面。 在範例中，泛型介面`IList<ItemType>`宣告。 兩個泛型類別，然後實作`List1<ItemType>`和`List2<ItemType>`，與不同的實作。  
+ 下列範例示範如何宣告和具現化泛型介面。 在範例中，泛型介面`IList<ItemType>`宣告。 兩個泛型類別，然後實作`List1<ItemType>`和`List2<ItemType>`，使用不同的實作。  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>範例  
- 這個範例會宣告泛型介面， `IMyGenIface`，和兩個非泛型介面，`IMySpecializedInt`和`ImySpecializedString`的特製化`IMyGenIface`。 將兩個特製化的介面，則由兩個類別，實作`MyIntClass`和`MyStringClass`。 此範例示範如何特製化的泛型介面具現化泛型和非泛型介面，明確實作的成員呼叫的介面。  
+ 這個範例會宣告泛型介面， `IMyGenIface`，和兩個非泛型介面，`IMySpecializedInt`並`ImySpecializedString`，，特製化`IMyGenIface`。 兩個特製化的介面則由兩個類別，實作`MyIntClass`和`MyStringClass`。 此範例示範如何特製化的泛型介面具現化泛型和非泛型介面，介面上呼叫的明確實作的成員。  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

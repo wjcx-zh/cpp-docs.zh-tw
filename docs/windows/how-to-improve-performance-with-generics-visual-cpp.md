@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用泛型 （Visual c + +） 改善效能 |Microsoft 文件
+title: 如何： 使用泛型 （Visual c + +） 改善效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877562"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571512"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：使用泛型改善效能 (Visual C++)
-使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需有關泛型的詳細資訊，請參閱[泛型](../windows/generics-cpp-component-extensions.md)。  
+使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需有關泛型的詳細資訊，請參閱 <<c0> [ 泛型](../windows/generics-cpp-component-extensions.md)。  
   
  本文將討論泛型如何協助使用集合的應用程式提升效能。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33877562"
   
  在泛型之前，下列程式碼範例將先示範 .NET Framework 集合的這兩個主要缺點。  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -91,7 +91,7 @@ Popped an int: 7
   
  請與這個範例前段使用泛型 <xref:System.Collections.Generic.Stack%601> 集合撰寫的範例做比較。 對於經常存取的大型集合而言，這個範例的效能將明顯高於前一個範例。  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   

@@ -1,5 +1,5 @@
 ---
-title: first_is |Microsoft 文件
+title: first_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875002"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569259"
 ---
 # <a name="firstis"></a>first_is
 指定要傳送的第一個陣列元素的索引。  
@@ -30,13 +30,12 @@ ms.locfileid: "33875002"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *運算式*  
  一或多個 C 語言的運算式。 允許空白的引數位置。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "33875002"
 ## <a name="example"></a>範例  
  下列程式碼示範各種方法來指定陣列中的區段：  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,7 +71,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**適用於**|在欄位`struct`或**union**，參數的介面，介面方法|  
+|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

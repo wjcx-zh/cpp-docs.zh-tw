@@ -1,5 +1,5 @@
 ---
-title: 'Handletraits:: Close 方法 |Microsoft 文件'
+title: 'Handletraits:: Close 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f45f95fb1b060f3892def6dc2962bfffef70c77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581c7b8447b800d9a3401cd76f3adc5ada25994d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875610"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569826"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close 方法
 關閉指定的控制代碼。  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
+### <a name="parameters"></a>參數  
+ *h*  
  若要關閉控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果處理`h`關閉成功，否則**false**。  
+ **真**如果處理*h*關閉順利完成，否則**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: FactoryCacheFlags 列舉 |Microsoft 文件
+title: FactoryCacheFlags 列舉 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ba3d9b75ff72399e1b9a027c937c24bba4a6c37
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc4bd998368fb325878a81ee4954a2ceec9432fe
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874326"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570099"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 列舉
-決定是否要快取處理站物件。  
+決定是否要快取 factory 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,13 +32,13 @@ enum FactoryCacheFlags;
 ```  
   
 ## <a name="remarks"></a>備註  
- 根據預設，處理站快取原則指定為[ModuleType](../windows/moduletype-enumeration.md)樣板參數，當您建立[模組](../windows/module-class.md)物件。 若要覆寫這項原則，請指定`FactoryCacheFlags`時建立 factory 物件的值。  
+ 根據預設，處理站快取原則指[ModuleType](../windows/moduletype-enumeration.md)當您建立的範本參數[模組](../windows/module-class.md)物件。 若要覆寫此原則，請指定**FactoryCacheFlags**時建立的 factory 物件的值。  
   
 |||  
 |-|-|  
-|`FactoryCacheDefault`|快取原則`Module`物件使用。|  
-|`FactoryCacheEnabled`|可讓處理站快取不論`ModuleType`樣板參數，用來建立`Module`物件。|  
-|`FactoryCacheDisabled`|停用處理站快取不論`ModuleType`樣板參數，用來建立`Module`物件。|  
+|`FactoryCacheDefault`|快取原則的`Module`物件使用。|  
+|`FactoryCacheEnabled`|可讓處理站快取，不論`ModuleType`樣板參數，用來建立`Module`物件。|  
+|`FactoryCacheDisabled`|停用處理站快取，不論`ModuleType`樣板參數，用來建立`Module`物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

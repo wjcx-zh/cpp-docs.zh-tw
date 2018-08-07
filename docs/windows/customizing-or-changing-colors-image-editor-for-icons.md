@@ -1,5 +1,5 @@
 ---
-title: 自訂或變更色彩 （圖示影像編輯器） |Microsoft 文件
+title: 自訂或變更色彩 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,33 +26,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871233"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571281"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自訂或變更色彩 (圖示影像編輯器)
-影像編輯器[色彩調色盤](../windows/colors-window-image-editor-for-icons.md)一開始會顯示 16 個標準色彩。 除了顯示的色彩以外，您還可以自行建立自訂色彩。 您可以接著[儲存和載入自訂的調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
+影像編輯器[色彩調色盤](../windows/colors-window-image-editor-for-icons.md)一開始會顯示 16 個標準色彩。 除了顯示的色彩以外，您還可以自行建立自訂色彩。 您可以接著[儲存及載入自訂的調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>變更調色盤上的色彩  
   
 1.  從**映像**功能表上，選擇**調整色彩**。  
   
-2.  在[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)、 將色彩定義在適當的文字方塊中輸入 RGB 或 HSL 值，或選擇的色彩中**漸層色彩顯示**方塊。  
+2.  在[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)、 適當的文字方塊中輸入 RGB 或 HSL 值定義的色彩，或選擇在色彩**漸層色彩顯示** 方塊中。  
   
 3.  移動滑桿，以設定光度**亮度**列。  
   
-4.  許多自訂色彩會被遞色。 如果您想最接近遞色色彩的純色，連按兩下**色彩**方塊。  
+4.  許多自訂色彩會被遞色。 如果您想最接近遞色色彩的純色，按兩下**色彩** 方塊中。  
   
-     如果您稍後決定要遞色的色彩，移動滑桿**亮度**列，或移動的交叉線**漸層色彩顯示**方塊，再以還原遞色。  
+     如果您稍後決定要遞色的色彩，移動滑桿**亮度**列，或移動中的交叉線**漸層色彩顯示**方塊，再以還原遞色。  
   
-5.  按一下**確定**来加入新的色彩。  
+5.  按一下 **確定**若要新增新的色彩。  
   
-
-  
- 需求  
+## <a name="requirements"></a>需求  
   
  無  
   

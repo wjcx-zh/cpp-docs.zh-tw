@@ -1,5 +1,5 @@
 ---
-title: 'Event:: event 建構函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft 文件'
+title: 'Event:: event 建構函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a63e7ddbf2528b78eac7761bbcf4891f31cc886
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882624"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571408"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event 建構函式 (Windows 執行階段 C++ 樣板程式庫)
 初始化 Event 類別的新執行個體。  
@@ -37,8 +37,8 @@ WRL_NOTHROW Event(
 ```  
   
 #### <a name="parameters"></a>參數  
- `h`  
- 事件的控制代碼。 根據預設，`h` 初始化為 `nullptr`。  
+ *h*  
+ 事件的控制代碼。 根據預設， *h*初始化為**nullptr**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: helpfile |Microsoft 文件
+title: helpfile |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876185"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570443"
 ---
 # <a name="helpfile"></a>helpfile
 設定型別程式庫的說明檔的名稱。  
@@ -30,13 +30,12 @@ ms.locfileid: "33876185"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *filename*  
  包含 [說明] 主題的檔案名稱。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "33876185"
  **Helpfile** c + + 屬性具有相同的功能[helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[模組](../windows/module-cpp.md)如需如何使用的範例**helpfile**。  
+ 範例，請參閱[模組](../windows/module-cpp.md)如需如何使用的範例**helpfile**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33876185"
   
 |||  
 |-|-|  
-|**適用於**|`interface``typedef`，**類別**、 方法、 屬性|  
+|**適用於**|**介面**， **typedef**，**類別**，方法中，**屬性**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

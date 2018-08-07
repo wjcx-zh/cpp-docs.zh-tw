@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Addtail 方法 |Microsoft 文件'
+title: 'Eventtargetarray:: Addtail 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872279"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570170"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `element`  
+### <a name="parameters"></a>參數  
+ *項目*  
  要附加的事件處理常式的指標。  
   
 ## <a name="remarks"></a>備註  
  將指定的事件處理常式附加至事件處理常式內部陣列的結尾。  
   
- AddTail() 被要由 EventSource 類別在內部使用。  
+ **AddTail()** 旨在只可用於在內部`EventSource`類別。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

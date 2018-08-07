@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: Getunmarshalclass 方法 |Microsoft 文件'
+title: 'Ftmbase:: Getunmarshalclass 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873299"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571148"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
-取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 載入此 DLL 來建立未初始化的執行個體的 proxy。  
+取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 會載入此 DLL 來建立未初始化的執行個體的 proxy。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,30 +40,30 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `riid`  
- 要封送處理介面的識別項參考。  
+### <a name="parameters"></a>參數  
+ *riid*  
+ 要封送處理介面識別項參考。  
   
- `pv`  
- 要封送處理; 介面指標如果呼叫端所需的介面沒有指標，可以是 NULL。  
+ *pv*  
+ 要封送處理; 介面指標如果呼叫端所需的介面沒有指標，則可以是 NULL。  
   
- `dwDestContext`  
- 要解除封送處理指定的介面則為其中的目的端內容。  
+ *dwDestContext*  
+ 指定的介面所在解除封送處理的目的端內容。  
   
  指定一或多個 MSHCTX 列舉值。  
   
- 解封送處理，可能會發生另一個 apartment，目前的處理序 (MSHCTX_INPROC) 或目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序。  
+ 解封送處理，可能會發生在目前的處理序 (MSHCTX_INPROC) 的另一個 apartment，或在目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序。  
   
- `pvDestContext`  
- 保留供未來使用。必須是 NULL。  
+ *pvDestContext*  
+ 保留供未來使用;必須是 NULL。  
   
- `mshlflags`  
+ *mshlflags*  
  這項作業完成時，用來在用戶端處理序中建立 proxy 的 CLSID 指標。  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，S_FALSE。  
+ 如果成功則為 S_OK否則，S_FALSE。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** ftm.h  

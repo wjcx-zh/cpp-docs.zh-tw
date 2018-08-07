@@ -1,5 +1,5 @@
 ---
-title: defaultvtable |Microsoft 文件
+title: defaultvtable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882533"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569662"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-為 COM 物件的預設 vtable 介面定義的介面。  
+為 COM 物件的預設 vtable 介面中定義的介面。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
- `interface`  
- 您想要在 COM 物件的預設 vtable 指定的介面。  
+ *interface*  
+ 您想要有預設 vtable COM 物件的指定的介面。  
   
 ## <a name="remarks"></a>備註  
  **Defaultvtable** c + + 屬性具有相同的功能[defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼所使用的類別顯示屬性**defaultvtable**指定預設介面：  
+ 下列程式碼顯示使用的類別上的屬性**defaultvtable**指定預設介面：  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,7 +77,7 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
 |**必要屬性**|**coclass**|  
 |**無效屬性**|無|  

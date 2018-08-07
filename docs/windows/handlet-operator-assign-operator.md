@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Operator = 運算子 |Microsoft 文件'
+title: 'Handlet:: Operator = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873923"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570037"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 運算子
-將指定之 HandleT 物件的值移至目前 HandleT 物件。  
+將指定的值移**HandleT**物件與目前**HandleT**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
- 右值參考至控制代碼。  
+### <a name="parameters"></a>參數  
+ *h*  
+ 右值參考的控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- 目前的 HandleT 物件的參考。  
+ 目前的參考**HandleT**物件。  
   
 ## <a name="remarks"></a>備註  
- 這項作業會導致無效的參數所指定的 HandleT 物件`h`。  
+ 這項作業會導致無效**HandleT**參數所指定的物件*h*。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

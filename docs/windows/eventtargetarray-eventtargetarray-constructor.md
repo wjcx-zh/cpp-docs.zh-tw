@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Eventtargetarray 建構函式 |Microsoft 文件'
+title: 'Eventtargetarray:: Eventtargetarray 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872711"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569784"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 建構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,26 +36,26 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `hr`  
- 這個建構函式作業之後，參數`hr`指出配置陣列的成功或失敗。 下表列出可能的值為`hr`。  
+### <a name="parameters"></a>參數  
+ *hr*  
+ 這個建構函式作業之後，參數*hr*表示配置陣列的成功或失敗。 下表列出可能的值為*hr*。  
   
  S_OK  
  作業成功。  
   
  E_OUTOFMEMORY  
- 陣列，無法配置記憶體。  
+ 無法配置陣列的記憶體。  
   
  S_FALSE  
- 參數`items`小於或等於零。  
+ 參數*項目*小於或等於零。  
   
- `items`  
- 要配置的陣列元素數目。  
+ *項目*  
+ 若要配置的陣列元素數目。  
   
 ## <a name="remarks"></a>備註  
- 初始化 EventTargetArray 類別的新執行個體。  
+ 初始化的新執行個體**EventTargetArray**類別。  
   
- EventTargetArray 用來保留 EventSource 物件中的事件處理常式的陣列。  
+ **EventTargetArray**用來保留陣列中的事件處理常式`EventSource`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

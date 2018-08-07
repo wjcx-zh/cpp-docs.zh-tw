@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Attach 方法 |Microsoft 文件'
+title: 'Handlet:: Attach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f7e70ec50ca76f1a7a525416b33d5eac46c08a4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5db96e9b8fd2090d9c58d9458bd53c66f6162477
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872517"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569168"
 ---
 # <a name="handletattach-method"></a>HandleT::Attach 方法
-將指定的控制代碼與目前 HandleT 物件產生關聯。  
+將指定的控制代碼與目前**HandleT**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>參數  
- `h`  
+ *h*  
  控制代碼。  
   
 ## <a name="requirements"></a>需求  

@@ -1,5 +1,5 @@
 ---
-title: event_source |Microsoft 文件
+title: event_source |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7e7e287d68bac0fe69417fe21df27ed3231cce6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e44b5757ea7b9e469275688443ba7ed1e3810571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879379"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571385"
 ---
 # <a name="eventsource"></a>event_source
 建立事件來源。  
@@ -35,16 +35,15 @@ ms.locfileid: "33879379"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ event_source(  
+[ event_source(  
    type,  
    optimize=[speed | size],  
    decorate=[true | false]  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- `type`  
+### <a name="parameters"></a>參數  
+ *type*  
  下列其中一個值的列舉：  
   
 -   Unmanaged C/C++ 程式碼的`native` (Unmanaged 類別的預設值)。  
@@ -57,16 +56,16 @@ ms.locfileid: "33879379"
     #include <atlcom.h>  
     ```  
   
- **optimize**  
- `type` 為 **native**時，您可以指定 **optimize=size**表示類別中所有事件有 4 個位元組的儲存體 (最小)，或 **optimize=speed** (預設值) 表示有 4 * (事件數目) 個位元組的儲存體。  
+ *optimize*  
+ 當*型別*是`native`，您可以指定`optimize=size`，以表示有 4 個位元組的儲存體 （最小值） 的所有事件類別中或`optimize=speed`（預設值） 表示會有 4 * （事件的數目） 個位元組的儲存體。  
   
- **decorate**  
- `type` 為 **native**時，您可以指定 **decorate=false**，表示合併 (.mrg) 檔案中的展開名稱不應該包含封入類別名稱。 [/Fx](../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 **decorate=false**(預設值) 會產生合併檔案中的完整類型名稱。  
+ *裝飾*  
+ 當*型別*是`native`，您可以指定`decorate=false`，以表示合併 (.mrg) 檔案中的展開的名稱不應該包含封入類別名稱。 [/Fx](../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`其中是預設值、 產生合併檔案中的完整類型名稱。  
   
 ## <a name="remarks"></a>備註  
  **event_source** C++ 屬性指定要套用它的類別或結構將是事件來源。  
   
- **event_source** 是與 [event_receiver](../windows/event-receiver.md) 屬性和 [__event](../cpp/event.md) 關鍵字搭配使用。 使用 **event_receiver** 建立事件接收器。 在事件來源內的方法上使用 `__event` ，以將這些方法指定為事件。  
+ **event_source** 是與 [event_receiver](../windows/event-receiver.md) 屬性和 [__event](../cpp/event.md) 關鍵字搭配使用。 使用`event_receiver`建立事件接收器。 使用 **__event**為這些方法指定為事件的事件來源內的方法上。  
   
 > [!NOTE]
 >  樣板類別或結構不能包含事件。  
@@ -77,9 +76,9 @@ ms.locfileid: "33879379"
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
-|**必要屬性**|**type** = `type`=**com**|  
+|**必要屬性**|**coclass**時 `type`=`com`|  
 |**無效屬性**|無|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

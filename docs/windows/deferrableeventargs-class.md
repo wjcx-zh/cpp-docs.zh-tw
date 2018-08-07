@@ -1,5 +1,5 @@
 ---
-title: DeferrableEventArgs 類別 |Microsoft 文件
+title: DeferrableEventArgs 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15be5c26e5d4e976eaba7b6b24e1bf4f62c53aca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f5ee2beca3a3985258b12cea9091665eb74cfa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872093"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571258"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 類別
 範本類別，用於延期的事件引數類型。  
@@ -31,15 +31,14 @@ typename TEventArgsInterface,
 typename TEventArgsClass  
 >  
 class DeferrableEventArgs : public TEventArgsInterface  
-  
 ```  
   
 #### <a name="parameters"></a>參數  
- `TEventArgsInterface`  
+ *TEventArgsInterface*  
  宣告延期事件之引數的介面類別。  
   
- `TEventArgsClass`  
- 會實作 `TEventArgsInterface` 的類別。  
+ *TEventArgsClass*  
+ 此類別可實作*TEventArgsInterface*。  
   
 ## <a name="members"></a>成員  
   
@@ -47,13 +46,13 @@ class DeferrableEventArgs : public TEventArgsInterface
   
 |名稱|描述|  
 |----------|-----------------|  
-|[DeferrableEventArgs::GetDeferral 方法](../windows/deferrableeventargs-getdeferral-method.md)|取得參考[延期](http://go.microsoft.com/fwlink/p/?linkid=526520)物件代表延期的事件。|  
+|[DeferrableEventArgs::GetDeferral 方法](../windows/deferrableeventargs-getdeferral-method.md)|取得參考[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)代表延期的事件的物件。|  
 |[DeferrableEventArgs::InvokeAllFinished 方法](../windows/deferrableeventargs-invokeallfinished-method.md)|呼叫此方法，表示已完成延期事件的所有處理。|  
   
 ## <a name="remarks"></a>備註  
  這個類別的執行個體會傳遞至延期事件的事件處理常式。 範本參數代表定義延期事件特定類型之事件引數詳細資料的介面，以及實作該介面的類別。  
   
- 此類別會顯示為延期事件之事件處理常式的第一個引數。 您可以呼叫[GetDeferral](../windows/deferrableeventargs-getdeferral-method.md)方法來取得[延期](http://go.microsoft.com/fwlink/p/?linkid=526520)從中取得有關延期事件的所有資訊的物件。 完成事件處理之後，您應該在延期物件上呼叫 Complete。 您應該呼叫[InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md)事件處理常式方法的結尾，以確保所有延期事件的完成都正確通訊。  
+ 此類別會顯示為延期事件之事件處理常式的第一個引數。 您可以呼叫[GetDeferral](../windows/deferrableeventargs-getdeferral-method.md)方法來取得[延遲](http://go.microsoft.com/fwlink/p/?linkid=526520)從中中，您可以取得有關延期事件的所有資訊的物件。 完成事件處理之後，您應該在延期物件上呼叫 Complete。 您應該都會接著呼叫[InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md)結尾的事件處理常式方法，以確保所有延期事件的完成都正確通訊。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

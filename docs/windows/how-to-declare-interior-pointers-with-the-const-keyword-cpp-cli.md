@@ -1,5 +1,5 @@
 ---
-title: 如何： 宣告內部指標使用 const 關鍵字 (C + + /CLI) |Microsoft 文件
+title: 如何： 使用 const 關鍵字宣告內部指標 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a71de1ab8d0ae081274616d4c22a4d7f39c0bbbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fdab21e0e8b9ad0b6fb1d58ba7d1bcd7020ffd10
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875041"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568611"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：使用 const 關鍵字宣告內部指標 (C++/CLI)
-下列範例示範如何使用`const`內部指標的宣告中。  
+下列範例示範如何使用**const**內部指標的宣告中。  
   
 > [!IMPORTANT]
->  這項語言功能會受到 **/clr**編譯器選項，但不是由 **/ZW**編譯器選項。  
+>  `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // interior_ptr_const.cpp  
 // compile with: /clr  
 using namespace System;  

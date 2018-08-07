@@ -1,5 +1,5 @@
 ---
-title: HandleT 類別 |Microsoft 文件
+title: HandleT 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876146"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570593"
 ---
 # <a name="handlet-class"></a>HandleT 類別
-物件，表示控制代碼。  
+物件表示的控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,9 +36,9 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `HandleTraits`  
- 執行個體[HandleTraits](../windows/handletraits-structure.md) stucture 定義的控制代碼的一般特性。  
+### <a name="parameters"></a>參數  
+ *HandleTraits*  
+ 執行個體[HandleTraits](../windows/handletraits-structure.md)結構定義的控制代碼的一般特性。  
   
 ## <a name="members"></a>成員  
   
@@ -52,36 +52,36 @@ class HandleT;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HandleT::HandleT 建構函式](../windows/handlet-handlet-constructor.md)|初始化 HandleT 類別的新執行個體。|  
-|[HandleT::~HandleT 解構函式](../windows/handlet-tilde-handlet-destructor.md)|取消初始化 HandleT 類別的執行個體。|  
+|[HandleT::HandleT 建構函式](../windows/handlet-handlet-constructor.md)|初始化的新執行個體**HandleT**類別。|  
+|[HandleT::~HandleT 解構函式](../windows/handlet-tilde-handlet-destructor.md)|取消初始化的執行個體**HandleT**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HandleT::Attach 方法](../windows/handlet-attach-method.md)|將指定的控制代碼與目前 HandleT 物件產生關聯。|  
-|[HandleT::Close 方法](../windows/handlet-close-method.md)|關閉目前的 HandleT 物件。|  
-|[HandleT::Detach 方法](../windows/handlet-detach-method.md)|取消目前 HandleT 物件從其基礎控制代碼的關聯。|  
+|[HandleT::Attach 方法](../windows/handlet-attach-method.md)|將指定的控制代碼與目前**HandleT**物件。|  
+|[HandleT::Close 方法](../windows/handlet-close-method.md)|關閉目前**HandleT**物件。|  
+|[HandleT::Detach 方法](../windows/handlet-detach-method.md)|取消目前的關聯**HandleT**從其基礎控制代碼的物件。|  
 |[HandleT::Get 方法](../windows/handlet-get-method.md)|取得基礎控制代碼的值。|  
-|[HandleT::IsValid 方法](../windows/handlet-isvalid-method.md)|指出目前的 HandleT 物件是否表示控制代碼。|  
+|[HandleT::IsValid 方法](../windows/handlet-isvalid-method.md)|指出是否目前**HandleT**物件表示的控制代碼。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HandleT::InternalClose 方法](../windows/handlet-internalclose-method.md)|關閉目前的 HandleT 物件。|  
+|[HandleT::InternalClose 方法](../windows/handlet-internalclose-method.md)|關閉目前**HandleT**物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HandleT::operator= 運算子](../windows/handlet-operator-assign-operator.md)|將指定之 HandleT 物件的值移至目前 HandleT 物件。|  
+|[HandleT::operator= 運算子](../windows/handlet-operator-assign-operator.md)|將指定的值移**HandleT**物件與目前**HandleT**物件。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HandleT::handle_ 資料成員](../windows/handlet-handle-data-member.md)|包含 HandleT 物件所代表的控制代碼。|  
+|[HandleT::handle_ 資料成員](../windows/handlet-handle-data-member.md)|包含所表示的控制代碼**HandleT**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `HandleT`  

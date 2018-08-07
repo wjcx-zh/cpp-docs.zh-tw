@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Handlet 建構函式 |Microsoft 文件'
+title: 'Handlet:: Handlet 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881893"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569507"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT 建構函式
-初始化 HandleT 類別的新執行個體。  
+初始化的新執行個體**HandleT**類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
+### <a name="parameters"></a>參數  
+ *h*  
  控制代碼。  
   
 ## <a name="remarks"></a>備註  
- 第一個建構函式初始化 HandleT 物件不是有效的控制代碼的物件。 第二個建構函式建立一個新 HandleT 從物件參數`h`。  
+ 第一個建構函式初始化**HandleT**不是有效的控制代碼到物件的物件。 第二個建構函式會建立新**HandleT**從參數物件*h*。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

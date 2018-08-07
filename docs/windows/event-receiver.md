@@ -1,5 +1,5 @@
 ---
-title: event_receiver |Microsoft 文件
+title: event_receiver |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 01ab5aeee7d706da7016cb1ea1f01ff7367de888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875561"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569930"
 ---
 # <a name="eventreceiver"></a>event_receiver
 建立事件接收器 (接收)。  
@@ -36,18 +36,17 @@ ms.locfileid: "33875561"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ event_receiver(  
+[ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
- `type`  
+ *type*  
  下列其中一個值的列舉：  
   
--   `native` 用於 unmanaged C/c + + 程式碼 （如原生類別的預設值）。  
+-   `native` unmanaged C/c + + 程式碼 （原生類別的預設值）。  
   
 -   COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰  
   
@@ -58,18 +57,18 @@ ms.locfileid: "33875561"
     ```  
   
  **layout_dependent**  
- 指定*layout_dependent*才`type` = **com**。*layout_dependent*是布林值：  
+ 指定*event_receiver*只有當`type` = **com**。 *layout_dependent*是布林值：  
   
--   **true**表示的委派簽章在事件接收器必須完全符合目標所要攔截在事件來源。 接收器事件處理常式的名稱必須符合在相關的事件來源介面中指定的名稱。 您必須使用**coclass**時*layout_dependent*是**true**。 若要指定稍微更有效率**true**。  
+-   **true**表示委派的簽章的事件接收者必須完全符合的所要攔截在事件來源中。 接收器事件處理常式的名稱必須符合相關的事件來源介面中指定的名稱。 您必須使用`coclass`時*layout_dependent*是**true**。 會指定稍微更有效率 **，則為 true**。  
   
--   **false** （預設值） 表示，呼叫慣例和儲存類別 (虛擬、 靜態等等) 不需要符合事件方法和處理常式，或是否需要將事件來源介面方法名稱比對的處理常式的名稱。  
+-   **false** （預設值） 表示，呼叫慣例和儲存體類別 (虛擬、 靜態等等) 不需要符合事件方法和處理常式，也不執行處理常式的名稱必須符合事件來源介面的方法名稱。  
   
 ## <a name="remarks"></a>備註  
- **Event_receiver** c + + 屬性指定的類別或結構要套用的都是事件接收器，使用 Visual c + + 一致的事件模型。  
+ **Event_receiver** c + + 屬性指定的類別或結構會套用它將是事件接收器，使用 Visual c + + 一致的事件模型。  
   
- **event_receiver**搭配[event_source](../windows/event-source.md)屬性和[__hook](../cpp/hook.md)和[__unhook](../cpp/unhook.md)關鍵字。 使用**event_source**建立事件來源。 使用`__hook`事件接收器的方法產生關聯的事件來源的事件 （「 攔截 」） 事件接收器方法內。 使用`__unhook`中斷與它們的關聯。  
+ **event_receiver**搭配[event_source](../windows/event-source.md)屬性並[__hook](../cpp/hook.md)並[__unhook](../cpp/unhook.md)關鍵字。 使用`event_source`建立事件來源。 使用 **__hook**事件接收器的方法產生關聯的事件來源的事件 （「 攔截 」） 事件接收者方法內。 使用 **__unhook**中斷與它們的關聯。  
   
- *layout_dependent* ，才指定適用於 COM 事件接收器 (`type`=**com**)。 預設值為*layout_dependent*是**false**。  
+ *event_receiver*只會指定用於 COM 事件接收器 (`type`=**com**)。 預設值*event_receiver*是**false**。  
   
 > [!NOTE]
 >  樣板類別或結構不能包含事件。  
@@ -80,7 +79,7 @@ ms.locfileid: "33875561"
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
 |**必要屬性**|**coclass**時*layout_dependent*=**，則為 true**|  
 |**無效屬性**|無|  

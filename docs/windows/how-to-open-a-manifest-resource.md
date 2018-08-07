@@ -1,5 +1,5 @@
 ---
-title: 如何： 開啟資訊清單資源 |Microsoft 文件
+title: 如何： 開啟資訊清單資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881838"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569943"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>如何：開啟資訊清單資源
 如果您從 [ [資源檢視](../windows/resource-view-window.md)] 開啟資訊清單資源，資源會以二進位格式開啟。 若要以更利於檢視的格式檢視資訊清單資源的內容，您必須從 [方案總管] 開啟資源。  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>在文字編輯器中開啟資訊清單資源  
   
-1.  隨著您在 `Solution Explorer`中開啟專案，展開 [ **資源檔** ] 資料夾。  
+1.  與您的專案中開啟**方案總管**，展開**資源檔**資料夾。  
   
 2.  按兩下 .manifest 檔案。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "33881838"
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>在另一個編輯器中開啟資訊清單資源  
   
-1.  在 [方案總管] 中，以滑鼠右鍵按一下 .manifest 檔案，然後從捷徑功能表選擇 [ **開啟方式...** ]。  
+1.  在 **方案總管 中**，以滑鼠右鍵按一下.manifest 檔案，然後選擇 **開啟方式...** 從捷徑功能表。  
   
 2.  在 [ **開啟方式** ] 對話方塊中，指定您要使用編輯器，然後按一下 [ **開啟**]。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
- 需求  
+## <a name="requirements"></a>需求  
   
  Win32  
   

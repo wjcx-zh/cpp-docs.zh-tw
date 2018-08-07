@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Attach 方法 |Microsoft 文件'
+title: 'Hstring:: Attach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,28 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738c44c11c69f8d2479335ce3effc4135dfe0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20a05bf603b874d260c95c010e6f0e8312b35649
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876062"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570985"
 ---
 # <a name="hstringattach-method"></a>HString::Attach 方法
-將指定的 HString 物件與目前 HString 物件產生關聯。  
+將指定**HString**物件與目前**HString**物件。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 void Attach(  
        HSTRING hstr  
        ) throw()  
 ```  
   
 #### <a name="parameters"></a>參數  
- `hstr`  
- HString 現有的物件。  
+ *hstr*  
+ 將現有**HString**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

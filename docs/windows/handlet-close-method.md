@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Close 方法 |Microsoft 文件'
+title: 'Handlet:: Close 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f0c1e47420106651cfe0526d6d212e9819a72ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873247"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569914"
 ---
 # <a name="handletclose-method"></a>HandleT::Close 方法
-關閉目前的 HandleT 物件。  
+關閉目前**HandleT**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ void Close();
 ```  
   
 ## <a name="remarks"></a>備註  
- 做為目前 HandleT 的控制代碼會關閉，而 HandleT 設為無效的狀態。  
+ 控制代碼就是目前的基礎**HandleT**已關閉，而**HandleT**設為無效的狀態。  
   
- 如果控制代碼不正確地關閉，會呼叫的執行緒中引發例外狀況。  
+ 如果控制代碼不正確關閉，就會呼叫的執行緒中引發例外狀況。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

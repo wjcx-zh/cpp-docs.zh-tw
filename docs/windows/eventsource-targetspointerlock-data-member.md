@@ -1,5 +1,5 @@
 ---
-title: 'Eventsource:: Targetspointerlock_ 資料成員 |Microsoft 文件'
+title: 'Eventsource:: Targetspointerlock_ 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb3c2131331521dab1b8264b696206d953762851
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b58aa072af5ff96093f9999d212f8b19ff0571c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873104"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569813"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ 資料成員
-加入事件處理常式，此 eventsource，同時也已移除，或叫用的內部資料成員的存取會同步處理。  
+同步處理時存取內部資料成員，即使事件處理常式這**EventSource**正在加入、 移除或叫用。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,5 +1,5 @@
 ---
-title: dispinterface |Microsoft 文件
+title: dispinterface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10f398e83650dc63c002801ac999816e48f7bdd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874284"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569210"
 ---
 # <a name="dispinterface"></a>dispinterface
 將介面放入 .idl 檔案中作為分派介面。  
@@ -30,9 +30,7 @@ ms.locfileid: "33874284"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [dispinterface]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -58,7 +56,7 @@ dispinterface helloPro
   
 |||  
 |-|-|  
-|**適用於**|`interface`|  
+|**適用於**|**interface**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
@@ -68,7 +66,7 @@ dispinterface helloPro
 ## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [屬性的用法](../windows/attributes-by-usage.md)   
- [Uuid](../windows/uuid-cpp-attributes.md)   
+ [uuid](../windows/uuid-cpp-attributes.md)   
  [雙重](../windows/dual.md)   
  [自訂](../windows/custom-cpp.md)   
  [object](../windows/object-cpp.md)   

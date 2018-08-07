@@ -1,5 +1,5 @@
 ---
-title: 例外狀況處理 （c + + 元件擴充功能） |Microsoft 文件
+title: 例外狀況處理 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,21 +21,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b6dcf8e844fbb2e8e133dc5dc6f0b98a3166ac6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877731"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568650"
 ---
 # <a name="exception-handling--c-component-extensions"></a>例外狀況處理 (C++ 元件擴充功能)
-使用應用程式編譯 **/ZW**編譯器選項或 **/clr**編譯器選項都使用*例外狀況*處理程式執行期間發生意外的錯誤。 下列主題將討論 C++/CX 或 C++/CLI 應用程式中的例外狀況處理。  
+應用程式編譯`/ZW`編譯器選項或`/clr`兩者都使用的編譯器選項*例外狀況*程式執行期間處理未預期的錯誤。 下列主題將討論 C++/CX 或 C++/CLI 應用程式中的例外狀況處理。  
   
 ## <a name="in-this-section"></a>本節內容  
  [使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- 描述擲回例外狀況，並使用`try` / `catch`區塊。  
+ 描述擲回例外狀況，並使用**嘗試**/**攔截**區塊。  
   
- [例外狀況處理在 /CLR 下的行為差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+ [在例外狀況處理在 /CLR 下的行為差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
  討論與標準 C++ 例外狀況處理行為的差異。  
   
  [finally](../dotnet/finally.md)  

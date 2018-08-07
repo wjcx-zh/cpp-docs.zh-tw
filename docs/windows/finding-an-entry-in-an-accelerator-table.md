@@ -1,5 +1,5 @@
 ---
-title: 快速鍵對應表中尋找的項目 |Microsoft 文件
+title: 尋找快速鍵對應表中的項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53cafe8533eac024f07482563ba2c24183963978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873205"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571372"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>尋找快速鍵對應表中的項目
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在開啟的快速鍵對應表中尋找項目  
   
-1.  它在圖示上按兩下開啟快速鍵對應表[資源檢視](../windows/resource-view-window.md)。  
+1.  開啟快速鍵對應表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
@@ -35,9 +35,9 @@ ms.locfileid: "33873205"
   
  然後就可以掃描清單並找到項目。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
- **需求**  
+## <a name="requirements"></a>需求  
   
  Win32  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Makereference 方法 |Microsoft 文件'
+title: 'Hstring:: Makereference 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e30b3ea3c6b791eb654a6fbbe91b3c87353f31c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 673d5b10706580303f179ee453495b581d96eda3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882637"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608331"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 方法
-從指定的字串參數建立 HStringReference 物件。  
+建立`HStringReference`從指定的字串參數的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,18 +38,18 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### <a name="parameters"></a>參數  
- `sizeDest`  
- 樣板參數，指定目的地 HStringReference 緩衝區的大小。  
+### <a name="parameters"></a>參數  
+ *sizeDest*  
+ 樣板參數，指定大小的目的地`HStringReference`緩衝區。  
   
- `str`  
+ *str*  
  寬字元字串的參考。  
   
- `len`  
- 最大長度`str`来使用這項作業中的參數緩衝區。 如果`len`參數未指定，整個`str`使用參數。  
+ *Len*  
+ 最大長度*str*来使用這項作業中的參數緩衝區。 如果*len*參數未指定，整個*str*參數使用。  
   
 ## <a name="return-value"></a>傳回值  
- HStringReference 物件，其值為與指定的相同`str`參數。  
+ `HStringReference`物件，其值為與指定相同*str*參數。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

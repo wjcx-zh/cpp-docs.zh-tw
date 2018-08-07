@@ -1,5 +1,5 @@
 ---
-title: '運算子 = = 運算子 (microsoft:: wrl) |Microsoft 文件'
+title: '運算子 = = 運算子 (microsoft:: wrl) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d3ab799f9a71e6386d63106d72b72b7eec24ed
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 719522a37c989b388a811348759d1fff34c373a9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882585"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605355"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== 運算子 (Microsoft::WRL)
-等號比較運算子，如[ComPtr](../windows/comptr-class.md)和[ComPtrRef](../windows/comptrref-class.md)物件。  
+等號比較運算子[ComPtr](../windows/comptr-class.md)並[ComPtrRef](../windows/comptrref-class.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,15 +62,15 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `a`  
+### <a name="parameters"></a>參數  
+ *a*  
  左物件。  
   
- `b`  
+ *b*  
  右物件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果物件相等則為 `true`，否則為 `false`。  
+ **真**如果物件相等，否則**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

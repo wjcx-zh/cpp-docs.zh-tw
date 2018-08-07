@@ -1,5 +1,5 @@
 ---
-title: HStringReference 類別 |Microsoft 文件
+title: HStringReference 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90e94471fe114eafec91a19ddad5d47ce39a8de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879551"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605096"
 ---
 # <a name="hstringreference-class"></a>HStringReference 類別
-代表 HSTRING 建立從現有的字串。  
+表示從現有字串建立的 HSTRING。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +32,7 @@ class HStringReference;
 ```  
   
 ## <a name="remarks"></a>備註  
- 在新 HSTRING 備份緩衝區存留期不是由 Windows 執行階段管理。 呼叫端配置來源字串上的堆疊框架，以避免堆積配置，並排除記憶體流失的風險。 此外，呼叫端必須確保附加 HSTRING 存留期間，來源字串維持不變。 如需詳細資訊，請參閱[WindowsCreateStringReference 函式](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac)。  
+ 新的 HSTRING 中支援緩衝區的存留期不受 Windows 執行階段。 呼叫端配置來源字串上的堆疊框架，以避免堆積配置，並排除記憶體流失的風險。 此外，呼叫端必須確保來源字串附加的 HSTRING 的存留期間會保持不變。 如需詳細資訊，請參閱 < [WindowsCreateStringReference 函式](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)。  
   
 ## <a name="members"></a>成員  
   
@@ -40,22 +40,22 @@ class HStringReference;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HStringReference::HStringReference 建構函式](../windows/hstringreference-hstringreference-constructor.md)|初始化 HStringReference 類別的新執行個體。|  
+|[HStringReference::HStringReference 建構函式](../windows/hstringreference-hstringreference-constructor.md)|初始化的新執行個體**HStringReference**類別。|  
   
 ### <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
-|[HStringReference::CopyTo 方法](../windows/hstringreference-copyto-method.md)|複製目前 HStringReference HSTRING 物件的物件。|  
+|[HStringReference::CopyTo 方法](../windows/hstringreference-copyto-method.md)|複製目前**HStringReference**到 HSTRING 物件的物件。|  
 |[HStringReference::Get 方法](../windows/hstringreference-get-method.md)|擷取基礎 HSTRING 控制代碼的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[HStringReference::Operator= 運算子](../windows/hstringreference-operator-assign-operator.md)|將另一個 HStringReference 物件的值移至目前 HStringReference 物件。|  
+|[HStringReference::Operator= 運算子](../windows/hstringreference-operator-assign-operator.md)|將另一個值移**HStringReference**物件與目前**HStringReference**物件。|  
 |[HStringReference::Operator== 運算子](../windows/hstringreference-operator-equality-operator.md)|指出兩個參數是否相等。|  
-|[HStringReference::Operator!= 運算子](../windows/hstringreference-operator-inequality-operator.md)|指出兩個參數是否不相等。|  
+|[HStringReference::Operator!= 運算子](../windows/hstringreference-operator-inequality-operator.md)|表示兩個參數是否不相等。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `HStringReference`  

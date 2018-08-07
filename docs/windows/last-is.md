@@ -1,5 +1,5 @@
 ---
-title: last_is |Microsoft 文件
+title: last_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f27c0a12ddf5fe87f7065a16d042bd0afcfc0315
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0519409e71457ca025318a591772faf33592abe
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877517"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606064"
 ---
 # <a name="lastis"></a>last_is
 指定要傳送的最後一個陣列元素的索引。  
@@ -30,13 +30,12 @@ ms.locfileid: "33877517"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ last_is(  
+[ last_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *運算式*  
  一或多個 C 語言的運算式。 允許空白的引數位置。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "33877517"
  **Last_is** c + + 屬性具有相同的功能[last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱[first_is](../windows/first-is.md)如需如何指定陣列的區段的範例。  
+ 請參閱[first_is](../windows/first-is.md)如需如何指定的陣列區段的範例。  
   
 ## <a name="requirements"></a>需求  
   
@@ -52,7 +51,7 @@ ms.locfileid: "33877517"
   
 |||  
 |-|-|  
-|**適用於**|在欄位`struct`或**union**，參數的介面，介面方法|  
+|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

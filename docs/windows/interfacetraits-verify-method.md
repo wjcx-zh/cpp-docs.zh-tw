@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Verify 方法 |Microsoft 文件'
+title: 'Interfacetraits:: Verify 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875496"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603039"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>備註  
- 確認已正確衍生基底。  
+ 確認`Base`正確衍生。  
   
- 如需有關`Base`，請參閱公用 Typedefs 節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
+ 如需詳細資訊`Base`，請參閱公用 Typedefs 一節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

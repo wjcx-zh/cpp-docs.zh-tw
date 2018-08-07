@@ -1,5 +1,5 @@
 ---
-title: Mutex Class1 |Microsoft 文件
+title: Mutex 類別 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9c3dbbcbffff32f7c1611b6b49ee19ada7e52c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878407"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606770"
 ---
-# <a name="mutex-class1"></a>Mutex Class1
+# <a name="mutex-class1"></a>Mutex 類別 1
 表示以獨佔方式控制共用的資源的同步處理物件。  
   
 ## <a name="syntax"></a>語法  
@@ -39,25 +39,25 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |名稱|描述|  
 |----------|-----------------|  
-|**SyncLock**|支援同步鎖定的類型同義。|  
+|`SyncLock`|支援同步鎖定的類型同義。|  
   
 ### <a name="public-constructor"></a>公用建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Mutex::Mutex 建構函式](../windows/mutex-mutex-constructor.md)|初始化 Mutex 類別的新執行個體。|  
+|[Mutex::Mutex 建構函式](../windows/mutex-mutex-constructor.md)|初始化的新執行個體**Mutex**類別。|  
   
 ### <a name="public-members"></a>Public 成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Mutex::Lock 方法](../windows/mutex-lock-method.md)|等待目前的物件或指定的控制代碼相關聯的 Mutex 物件釋放 mutex，或超過指定的逾時間隔。|  
+|[Mutex::Lock 方法](../windows/mutex-lock-method.md)|等到目前的物件，或**Mutex**與指定的控制代碼、 mutex 或指定的逾時間隔經過的版本相關聯的物件。|  
   
 ### <a name="public-operator"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Mutex::operator= 運算子](../windows/mutex-operator-assign-operator.md)|指派 （移動） 指定的 Mutex 物件傳遞給目前的 Mutex 物件。|  
+|[Mutex::operator= 運算子](../windows/mutex-operator-assign-operator.md)|指派 （移動） 指定**Mutex**物件與目前**Mutex**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Mutex`  

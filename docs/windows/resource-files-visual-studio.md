@@ -1,5 +1,5 @@
 ---
-title: 資源檔 (Visual Studio) |Microsoft 文件
+title: 資源檔 (Visual Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,18 +27,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b4b56d1f329aee29c37b15590729074d305f04d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dc9a9f35793b010f4cea227ed629543c82b2ce87
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879870"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605278"
 ---
 # <a name="resource-files-visual-studio"></a>資源檔 (Visual Studio)
 > [!NOTE]
->  這份資料適用於 Windows 桌面應用程式。 如需通用 Windows 平台應用程式中的資源資訊，請參閱[定義應用程式資源](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4)。  
+>  這份資料適用於 Windows 桌面應用程式。 通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。  
 >   
-> 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+> 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
 >  
 > 。因為 .NET 程式設計語言中的專案不使用資源指令碼檔案，所以您必須從 **方案總管**。 您可以使用 [影像編輯器](../windows/image-editor-for-icons.md) 和 [二進位編輯器](binary-editor.md) 處理 Managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。  
   
@@ -94,5 +94,4 @@ ms.locfileid: "33879870"
 ## <a name="see-also"></a>另請參閱  
  [資源編輯器](../windows/resource-editors.md)   
  [使用資源檔](../windows/working-with-resource-files.md)   
- [功能表與其他資源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [功能表和其他資源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

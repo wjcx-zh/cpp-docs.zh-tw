@@ -1,5 +1,5 @@
 ---
-title: IsSame 結構 |Microsoft 文件
+title: IsSame 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877666"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603581"
 ---
 # <a name="issame-structure"></a>IsSame 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,15 +41,15 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T1`  
+### <a name="parameters"></a>參數  
+ *T1*  
  類型。  
   
- `T2`  
- 另一個類型。  
+ *T2*  
+ 另一個型別。  
   
 ## <a name="remarks"></a>備註  
- 測試某個指定類型相當於另一個指定的類型。  
+ 其中一個指定的型別是否相當於另一個測試指定的類型。  
   
 ## <a name="members"></a>成員  
   
@@ -57,7 +57,7 @@ struct IsSame<T1, T1>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IsSame::value 常數](../windows/issame-value-constant.md)|指出一個類型是否與另一個相同。|  
+|[IsSame::value 常數](../windows/issame-value-constant.md)|表示一種型別是否與另一個相同。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IsSame`  

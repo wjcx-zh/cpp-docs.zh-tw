@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registerobjects 方法 |Microsoft 文件'
+title: 'Module:: registerobjects 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 986dcfff49529eedd8d495f4c37e19fa2b6cb8bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875340"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605262"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects 方法
-註冊 COM 或 Windows 執行階段物件，讓其他應用程式可以連接到它們。  
+註冊 COM 或 Windows 執行階段物件，讓其他應用程式可以連線到它們。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ HRESULT RegisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>參數  
- `module`  
+### <a name="parameters"></a>參數  
+ *模組*  
  COM 或 Windows 執行階段物件的陣列。  
   
- `serverName`  
+ *伺服器名稱*  
  建立物件的伺服器名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，表示原因作業失敗的 HRESULT。  
+ 如果成功則為 S_OK否則，HRESULT，指出的原因，作業失敗。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

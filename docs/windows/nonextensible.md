@@ -1,5 +1,5 @@
 ---
-title: nonextensible |Microsoft 文件
+title: nonextensible |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881597"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608491"
 ---
 # <a name="nonextensible"></a>nonextensible
-指定`IDispatch`實作只會包含屬性和方法的介面描述中所列，並且無法在執行階段擴充與其他成員。  
+指定`IDispatch`實作只包括屬性和方法介面描述中所列，而且無法在執行階段延伸與其他成員。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Nonextensible** c + + 屬性具有相同的功能[nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL 屬性。  
   
- 使用**nonextensible**也需要[oleautomation](../windows/oleautomation.md)屬性。  
+ 利用**nonextensible**也需要[oleautomation](../windows/oleautomation.md)屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範使用一**nonextensible**屬性：  
+ 下列程式碼顯示的其中一種用法**nonextensible**屬性：  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**適用於**|`interface`|  
+|**適用於**|**interface**|  
 |**可重複**|否|  
-|**必要屬性**|**雙重**和**oleautomation**，或**分配介面**|  
+|**必要屬性**|`dual` 和`oleautomation`，或 `dispinterface`|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

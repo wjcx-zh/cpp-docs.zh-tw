@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getruntimeclassname 方法 |Microsoft 文件'
+title: 'Runtimeclass:: Getruntimeclassname 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892435"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608770"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName 方法
 
-取得目前 RuntimeClass 物件的執行階段類別名稱。
+取得目前的執行階段類別名稱**RuntimeClass**物件。
 
 ## <a name="syntax"></a>語法
 
@@ -47,7 +47,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>備註
 
-如果，就會發出 assert 錯誤&#95; &#95;WRL_STRICT&#95; &#95;或&#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95;未定義。
+如果，就會發出判斷提示 」 錯誤&#95; &#95;WRL_STRICT&#95; &#95;或&#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95;未定義。
 
 ## <a name="requirements"></a>需求
 
@@ -56,5 +56,4 @@ STDMETHOD( GetRuntimeClassName )(
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
-
-[RuntimeClass 類別](../windows/runtimeclass-class.md)
+ [RuntimeClass 類別](../windows/runtimeclass-class.md)

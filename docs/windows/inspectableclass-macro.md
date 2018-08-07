@@ -1,5 +1,5 @@
 ---
-title: InspectableClass 巨集 |Microsoft 文件
+title: InspectableClass 巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 922f7f74771125aed0122c408ef902da2569e5c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a02e20f2b87afc312c24683417f808d636c2757f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873767"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608952"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass 巨集
 設定執行階段類別名稱和信任層級。  
@@ -33,15 +33,15 @@ InspectableClass(
    trustLevel)  
 ```  
   
-#### <a name="parameters"></a>參數  
- `runtimeClassName`  
- 執行階段類別的完整文字的名稱。  
+### <a name="parameters"></a>參數  
+ *runtimeClassName*  
+ 執行階段類別的完整文字名稱。  
   
- `trustLevel`  
+ *trustLevel*  
  其中一個[TrustLevel](http://msdn.microsoft.com/library/br224625.aspx)列舉值。  
   
 ## <a name="remarks"></a>備註  
- `InspectableClass`巨集只能搭配 Windows 執行階段類型。  
+ **InspectableClass**巨集只能搭配 Windows 執行階段類型。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

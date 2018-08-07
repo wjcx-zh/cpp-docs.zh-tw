@@ -1,5 +1,5 @@
 ---
-title: 移動和複製功能表和功能表命令 |Microsoft 文件
+title: 移動和複製功能表和功能表命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0da935ebdce7de61d5ed6b1a816f87b7cef7ce98
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878433"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606585"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>移動和複製功能表和功能表命令
 您可以移動或複製功能表和功能表命令，方法是使用拖放方法或使用捷徑功能表的命令 (在功能表上按一下滑鼠右鍵)。  
@@ -53,9 +53,9 @@ ms.locfileid: "33878433"
     > [!NOTE]
     >  您也可以拖曳、複製和貼上到其他功能表視窗中的其他功能表。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)在 *.NET Framework 開發人員指南。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
- **需求**  
+## <a name="requirements"></a>需求  
   
  Win32  
   

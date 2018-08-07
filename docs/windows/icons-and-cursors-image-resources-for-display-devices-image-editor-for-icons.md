@@ -1,5 +1,5 @@
 ---
-title: 圖示和游標： 顯示裝置 （圖示影像編輯器） 的影像資源 |Microsoft 文件
+title: 圖示和游標： 顯示裝置 （圖示影像編輯器） 的影像資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881906"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604612"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>圖示和游標：顯示裝置的影像資源 (圖示影像編輯器)
 圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有「作用點」(hot spot)，Windows 會用它來追蹤游標的位置。 您可以使用影像編輯器來建立及編輯圖示和游標，就像是點陣圖和其他影像一樣。  
@@ -75,7 +75,7 @@ ms.locfileid: "33881906"
   
 -   [設定游標的作用點](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  無  
@@ -84,4 +84,3 @@ ms.locfileid: "33881906"
  [圖示影像編輯器](../windows/image-editor-for-icons.md)   
  [圖示](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [資料指標](http://msdn.microsoft.com/library/windows/desktop/ms646970)
-

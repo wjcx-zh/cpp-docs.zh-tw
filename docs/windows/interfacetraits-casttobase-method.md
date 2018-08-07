@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Casttobase 方法 |Microsoft 文件'
+title: 'Interfacetraits:: Casttobase 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878521"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606445"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 參數的型別`ptr`。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 參數的型別*ptr*。  
   
- `ptr`  
- 類型指標`T`。  
+ *ptr*  
+ 類型指標*T*。  
   
 ## <a name="return-value"></a>傳回值  
  指標`Base`。  
   
 ## <a name="remarks"></a>備註  
- 會轉換為指標的指定的指標`Base`。  
+ 轉換指標的指定的指標`Base`。  
   
- 如需有關`Base`，請參閱公用 Typedefs 節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
+ 如需詳細資訊`Base`，請參閱公用 Typedefs 一節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

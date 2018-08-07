@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Iidcount 常數 |Microsoft 文件'
+title: 'Implementshelper:: Iidcount 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873998"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604251"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount 常數
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>備註  
- 保存目前的實作物件中實作的介面 Id 的數目。  
+ 會保留在目前已實作的介面 Id 號碼`Implements`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

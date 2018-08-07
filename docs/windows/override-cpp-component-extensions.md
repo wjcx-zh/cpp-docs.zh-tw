@@ -1,5 +1,5 @@
 ---
-title: 覆寫 （c + + 元件擴充功能） |Microsoft 文件
+title: 覆寫 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6818256aafc64702e5423a5560c251e6d46750fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878875"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605557"
 ---
 # <a name="override--c-component-extensions"></a>override (C++ 元件擴充功能)
-`override` 即時線上關鍵字表示，類型成員會覆寫基底類別或基底介面成員。  
+**覆寫**即時線上關鍵字表示類型的成員，可以覆寫基底類別或基底介面成員。  
   
 ## <a name="remarks"></a>備註  
- `override`關鍵字對原生目標 （預設編譯器選項），在編譯時是有效 Windows 執行階段為目標 (**/ZW**編譯器選項)，或通用語言執行階段為目標 (**/clr**編譯器選項）。  
+ **覆寫**關鍵字對原生目標 （預設編譯器選項），在編譯時是有效 Windows 執行階段目標 (`/ZW`編譯器選項)，或通用語言執行階段目標 (`/clr`編譯器選項)。  
   
- 如需覆寫規範的詳細資訊，請參閱[覆寫規範](../cpp/override-specifier.md)和[覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
+ 如需有關覆寫指定名稱的詳細資訊，請參閱[覆寫規範](../cpp/override-specifier.md)並[覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
   
- 如需內容相關性關鍵字的詳細資訊，請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ 如需有關內容相關性關鍵字的詳細資訊，請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
 ## <a name="examples"></a>範例  
- **範例**  
   
- 下列程式碼範例顯示`override`也可用在原生編譯中。  
+ 下列程式碼範例顯示**覆寫**也可用在原生編譯中。  
   
-```cpp#  
+```cpp  
 // override_keyword_1.cpp  
 // compile with: /c  
 struct I1 {  
@@ -50,11 +49,11 @@ struct X : public I1 {
 };  
 ```  
   
- **範例**  
+### <a name="example"></a>範例
+
+ 下列程式碼範例顯示**覆寫**可用在 Windows 執行階段編譯。  
   
- 下列程式碼範例顯示`override`可用在 Windows 執行階段編譯中。  
-  
-```cpp#  
+```cpp 
 // override_keyword_2.cpp  
 // compile with: /ZW /c  
 ref struct I1 {  
@@ -66,15 +65,15 @@ ref struct X : public I1 {
 };  
 ```  
   
- **需求**  
+#### <a name="requirements"></a>需求  
   
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
+    
+### <a name="example"></a>範例
+
+ 下列程式碼範例顯示**覆寫**可用在通用語言執行階段編譯。  
   
- **範例**  
-  
- 下列程式碼範例顯示`override`可以在通用語言執行階段編譯中使用。  
-  
-```cpp#  
+```cpp  
 // override_keyword_3.cpp  
 // compile with: /clr /c  
 ref struct I1 {  
@@ -86,9 +85,9 @@ ref struct X : public I1 {
 };  
 ```  
   
- **需求**  
+#### <a name="requirements"></a>需求  
   
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ## <a name="see-also"></a>另請參閱  
  [覆寫規範](../cpp/override-specifier.md)   

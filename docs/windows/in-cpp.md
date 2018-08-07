@@ -1,5 +1,5 @@
 ---
-title: （c + +） |Microsoft 文件
+title: （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c09ae7e750a6372dd622f251a3b512e4ea67ef4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874014"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606432"
 ---
 # <a name="in-c"></a>in (C++)
-指出參數是要呼叫的程序從傳遞給呼叫的程序。  
+指出參數是要呼叫的程序從傳遞至呼叫的程序。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [in]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- **中**c + + 屬性具有相同的功能[中](http://msdn.microsoft.com/library/windows/desktop/aa367051)MIDL 屬性。  
+ **中**c + + 屬性具有相同的功能[在](http://msdn.microsoft.com/library/windows/desktop/aa367051)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**中**。  
+ 請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**在**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33874014"
   
 |||  
 |-|-|  
-|**適用於**|介面參數，在介面方法|  
+|**適用於**|介面參數，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|**retval**|  

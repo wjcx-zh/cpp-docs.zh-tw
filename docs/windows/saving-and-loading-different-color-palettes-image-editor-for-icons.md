@@ -1,5 +1,5 @@
 ---
-title: 儲存及載入不同的調色盤 （圖示影像編輯器） |Microsoft 文件
+title: 儲存及載入不同的調色盤 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b96411341baeb6abb75c44063072b94fae3ac6a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892315"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606968"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>儲存及載入不同的調色盤 (圖示影像編輯器)
 您可以儲存及載入色彩調色盤，其中包含[自訂色彩](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。 (根據預設，啟動 Visual Studio 時，會自動載入最近使用的色彩調色盤。)  
@@ -46,11 +46,9 @@ ms.locfileid: "33892315"
   
 1.  從**映像**功能表上，選擇**載入調色盤**。  
   
-2.  在[載入色彩調色盤對話方塊](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)，瀏覽至正確的目錄，然後選取您想要載入的調色盤。 即會以 .pal 副檔名儲存色彩調色盤。  
+2.  在 [載入色彩調色盤對話方塊](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、 瀏覽至正確的目錄，然後選取您想要載入的調色盤。 即會以 .pal 副檔名儲存色彩調色盤。  
   
-
-  
- 需求  
+## <a name="requirements"></a>需求  
   
  無  
   

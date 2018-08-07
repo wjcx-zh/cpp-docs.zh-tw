@@ -1,5 +1,5 @@
 ---
-title: library_block |Microsoft 文件
+title: library_block |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbd97897138edffba12baf47d64465b1f6ca0df4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877887"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605067"
 ---
 # <a name="libraryblock"></a>library_block
-將放在 IDL 程式庫區塊內的建構。  
+會建構的 IDL 程式庫區塊內。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [library_block]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 當您將程式庫區塊內的建構時，確定它將會傳遞至類型程式庫，不論是否參考。 根據預設，只有建構會修改由[coclass](../windows/coclass.md)， [dispinterface](../windows/dispinterface.md)，和[idl_module](../windows/idl-module.md)屬性會放在程式庫區塊。  
+ 當您將內部的程式庫區塊的建構時，您會確定，它會傳遞至類型程式庫，而不論是否為參考。 根據預設，唯一的建構會修改所[coclass](../windows/coclass.md)， [dispinterface](../windows/dispinterface.md)，並[idl_module](../windows/idl-module.md)屬性會放在程式庫區塊。  
   
 ## <a name="example"></a>範例  
- 下列程式碼，自訂介面位於程式庫區塊內。  
+ 下列程式碼，在自訂介面放置的程式庫區塊內。  
   
-```  
+```cpp  
 // cpp_attr_ref_library_block.cpp  
 // compile with: /LD  
 #include <windows.h>  

@@ -1,5 +1,5 @@
 ---
-title: 開啟資源進行二進位編輯 |Microsoft 文件
+title: 開啟資源進行二進位編輯 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c09cd825a5974422eaf757419f4ce890f5123100
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878482"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605951"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>開啟資源進行二進位編輯
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>開啟 Windows 桌面資源進行二進位編輯  
@@ -40,7 +40,7 @@ ms.locfileid: "33878482"
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>開啟 Managed 資源進行二進位編輯  
   
-1.  在方案總管中，選取您要編輯的特定資源檔。  
+1.  在 [**方案總管] 中**，選取您想要編輯的特定資源檔。  
   
 2.  以滑鼠右鍵按一下資源，然後從捷徑功能表選擇 [開啟方式]  。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33878482"
     >  您可以使用 [影像編輯器](../windows/image-editor-for-icons.md) 和 [二進位編輯器](binary-editor.md) 處理 Managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。  
   
     > [!NOTE]
-    >  如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。   
+    >  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。   
   
  ![二進位編輯器](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
 二進位編輯器中所顯示之對話方塊的二進位資料  
@@ -60,10 +60,9 @@ ms.locfileid: "33878482"
 > [!NOTE]
 >  如果您想要針對已在其他編輯器視窗中編輯的資源使用二進位編輯器，請先關閉其他編輯器視窗。  
   
- **需求**  
+## <a name="requirements"></a>需求  
   
  無  
   
 ## <a name="see-also"></a>另請參閱  
  [Binary Editor](binary-editor.md)
-

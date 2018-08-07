@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Getimplementediids 方法 |Microsoft 文件'
+title: 'Runtimeclassbaset:: Getimplementediids 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892230"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603247"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,24 +38,24 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- `implements` 參數的類型。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 型別*實作*參數。  
   
- `implements`  
- 參數所指定型別的指標`T`。  
+ *實作*  
+ 參數所指定的類型指標*T*。  
   
- `iidCount`  
+ *iidCount*  
  若要擷取的介面識別碼的數目上限。  
   
- `iids`  
- 如果這項作業已順利完成，介面類型所實作的識別碼陣列`T`。  
+ *iid*  
+ 如果這項作業已順利完成，介面型別實作的 Id 陣列*T*。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，描述錯誤的 HRESULT。  
+ 如果成功則為 S_OK否則，會描述錯誤的 HRESULT。  
   
 ## <a name="remarks"></a>備註  
- 擷取介面指定類型所實作的識別碼陣列。  
+ 擷取介面 Id 所指定的型別實作的陣列。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

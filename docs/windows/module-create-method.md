@@ -1,5 +1,5 @@
 ---
-title: 'Module:: create 方法 |Microsoft 文件'
+title: 'Module:: create 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ede64c239909956f1f767db34a2a6a14c02314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0d49a6f0b5172b0971f755fc61b7767f0f4427d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874885"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603299"
 ---
 # <a name="modulecreate-method"></a>Module::Create 方法
 建立模組的執行個體。  
@@ -42,21 +42,21 @@ WRL_NOTHROW static Module& Create(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  模組類型。  
   
- `callback`  
+ *回呼*  
  當您釋放最後一個執行個體物件的模組時呼叫。  
   
- `object`  
- `object`和`method`搭配使用的參數。 點的最後一個執行個體物件時釋放模組中的最後一個執行個體物件。  
+ *object*  
+ *物件*並*方法*參數搭配使用的。 點的最後一個執行個體物件，當使用者放開模組中的最後一個執行個體物件。  
   
- `method`  
- `object`和`method`搭配使用的參數。 指向方法時釋放最後一個執行個體物件模組中的最後一個執行個體物件。  
+ *方法*  
+ *物件*並*方法*參數搭配使用的。 方法的最後一個執行個體物件時釋放最後一個執行個體物件模組中的點。  
   
 ## <a name="return-value"></a>傳回值  
- 此模組參考。  
+ 模組參考。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  
@@ -65,5 +65,3 @@ WRL_NOTHROW static Module& Create(
   
 ## <a name="see-also"></a>另請參閱  
 [Module 類別](../windows/module-class.md)
-
- 

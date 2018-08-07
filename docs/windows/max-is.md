@@ -1,5 +1,5 @@
 ---
-title: max_is |Microsoft 文件
+title: max_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878966"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608426"
 ---
 # <a name="maxis"></a>max_is
 指定有效的陣列索引的最大值。  
@@ -30,8 +30,7 @@ ms.locfileid: "33878966"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
@@ -49,7 +48,7 @@ ms.locfileid: "33878966"
   
 |||  
 |-|-|  
-|**適用於**|在欄位`struct`或**union**，參數的介面，介面方法|  
+|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|**size_is**|  
@@ -57,7 +56,7 @@ ms.locfileid: "33878966"
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱[first_is](../windows/first-is.md)如需如何指定陣列的區段的範例。  
+ 請參閱[first_is](../windows/first-is.md)如需如何指定的陣列區段的範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   

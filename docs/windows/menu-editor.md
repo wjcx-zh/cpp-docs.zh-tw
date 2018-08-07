@@ -1,5 +1,5 @@
 ---
-title: 功能表編輯器 |Microsoft 文件
+title: 功能表編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879434"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606246"
 ---
 # <a name="menu-editor"></a>功能表編輯器
 功能表允許您以有邏輯和容易尋找的方式排列命令。 使用功能表編輯器，您可以直接使用非常接近已完成應用程式的功能表列來建立和編輯功能表。  
   
- 在 Visual C++ 專案中，您可以使用功能表編輯器：  
+在 Visual C++ 專案中，您可以使用功能表編輯器：  
   
 -   [建立功能表](../windows/creating-a-menu.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33879434"
     > [!NOTE]
     >  若為 MFC 程式庫程式和 ATL 程式，您可以使用程式碼精靈連結功能表命令和程式碼。 如需詳細資訊，請參閱 [加入事件](../ide/adding-an-event-visual-cpp.md)。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
@@ -75,4 +75,3 @@ ms.locfileid: "33879434"
  [使用者介面物件和命令 Id](../mfc/user-interface-objects-and-command-ids.md)   
  [功能表](../mfc/menus-mfc.md)   
  [功能表](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

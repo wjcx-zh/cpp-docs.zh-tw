@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Fillarraywithiid 方法 |Microsoft 文件'
+title: 'Interfacetraits:: Fillarraywithiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6e32b2e40ba9dc2b8085f8edc99beb899e90ace
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ef552e5025a18eb4c778f9d08389d2b7e3634d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877486"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605652"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,22 +34,21 @@ __forceinline static void FillArrayWithIid(
    _Inout_ unsigned long &index,  
    _In_ IID* iids  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>參數  
- `index`  
- 欄位包含以零為起始的索引值的指標。  
+### <a name="parameters"></a>參數  
+ *index*  
+ 指標，包含以零為起始的索引值的欄位。  
   
- `iids`  
- 介面 Id 的陣列。  
+ *iid*  
+ 介面識別碼的陣列。  
   
 ## <a name="remarks"></a>備註  
- 指派的介面 ID`Base`索引引數所指定之陣列項目的。  
+ 介面 ID 指派為`Base`索引引數所指定的陣列元素。  
   
- Fci 的此應用程式開發介面的名稱，只有一個陣列元素經過修改。不，整個陣列。  
+ 與此 API 的名稱，只有一個陣列項目遭到修改;不完整的陣列。  
   
- 如需有關`Base`，請參閱公用 Typedefs 節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
+ 如需詳細資訊`Base`，請參閱公用 Typedefs 一節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

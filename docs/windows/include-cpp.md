@@ -1,5 +1,5 @@
 ---
-title: 包含 （c + +） |Microsoft 文件
+title: 包含 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878420"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603484"
 ---
 # <a name="include-c"></a>include (C++)
-指定要包含在產生的.idl 檔中的一個或多個標頭檔。  
+指定要包含在產生的.idl 檔案中的一或多個標頭檔。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ include(  
+[ include(  
    header_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *header_file*  
  您想要包含在產生的.idl 檔案中的檔案名稱。  
   
 ## <a name="remarks"></a>備註  
- **包含**c + + 屬性會造成`#include`放下方的陳述式`import "docobj.idl"`產生的.idl 檔案中的陳述式。  
+ **包括**c + + 屬性會造成`#include`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。  
   
- **包含**c + + 屬性具有相同的功能[包含](http://msdn.microsoft.com/library/windows/desktop/aa367052)MIDL 屬性。  
+ **包括**c + + 屬性具有相同的功能[包含](http://msdn.microsoft.com/library/windows/desktop/aa367052)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼示範如何使用**包含**。 例如，檔案 include.h 僅包含 #include 陳述式。  
+ 下列程式碼示範如何使用**包含**。 例如，檔案 include.h 只包含 #include 陳述式。  
   
-```  
+```cpp  
 // cpp_attr_ref_include.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

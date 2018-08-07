@@ -1,5 +1,5 @@
 ---
-title: requires_category |Microsoft 文件
+title: requires_category |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882312"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606097"
 ---
 # <a name="requirescategory"></a>requires_category
 指定目標類別的必要的元件類別目錄。  
@@ -30,25 +30,24 @@ ms.locfileid: "33882312"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *requires_category*  
- 必要的類別目錄的識別碼。  
+ 所需的類別目錄的識別碼。  
   
 ## <a name="remarks"></a>備註  
- **Requires_category** c + + 屬性會指定目標類別所需的元件類別。 如需詳細資訊，請參閱[REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)。  
+ **Requires_category** c + + 屬性會指定目標類別所需的元件類別。 如需詳細資訊，請參閱 < [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)。  
   
  此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。  
   
 ## <a name="example"></a>範例  
- 下列程式碼需要這個物件實作控制項類別。  
+ 下列程式碼需要的物件實作的控制項類別。  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,9 +67,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
-|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

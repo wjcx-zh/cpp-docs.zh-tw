@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Decrementreference 方法 |Microsoft 文件'
+title: 'Runtimeclass:: Decrementreference 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 660c78ba8a6b3000facc43541249fb6f9856a813
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c56f3ca8abae71313ca24eec26eeacbf70862f9c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892679"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605964"
 ---
 # <a name="runtimeclassdecrementreference-method"></a>RuntimeClass::DecrementReference 方法
-遞減目前 RuntimeClass 物件的參考計數。  
+遞減參考計數目前**RuntimeClass**物件。  
   
 ## <a name="syntax"></a>語法  
   

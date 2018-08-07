@@ -1,5 +1,5 @@
 ---
-title: ModuleBase 類別 |Microsoft 文件
+title: ModuleBase 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878732"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605054"
 ---
 # <a name="modulebase-class"></a>ModuleBase 類別
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,8 +42,8 @@ class ModuleBase;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase 建構函式](../windows/modulebase-modulebase-constructor.md)|初始化模組類別的執行個體。|  
-|[ModuleBase::~ModuleBase 解構函式](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化模組類別的目前執行個體。|  
+|[ModuleBase::ModuleBase 建構函式](../windows/modulebase-modulebase-constructor.md)|初始化 `Module` 類別的執行個體。|  
+|[ModuleBase::~ModuleBase 解構函式](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化目前的執行個體`Module`類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   

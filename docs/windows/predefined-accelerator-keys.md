@@ -1,5 +1,5 @@
 ---
-title: 預先定義的快速鍵 |Microsoft 文件
+title: 預先定義的快速鍵 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880791"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608413"
 ---
 # <a name="predefined-accelerator-keys"></a>預先定義的快速鍵
 Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其中有部分是用於 Windows 環境的虛擬按鍵。 其他則支援瀏覽器或 Unicode 應用程式。 您可以在任何加速器中使用任何此類按鍵。  
@@ -65,7 +65,7 @@ Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其�
 |VK_OEM_2|Windows： 用於美國標準鍵盤 '/？' key|  
 |VK_OEM_3|Windows：'`~' 按鍵用於美國標準鍵盤|  
 |VK_OEM_4|Windows：'[{' 按鍵用於美國標準鍵盤|  
-|VK_OEM_5|Windows： 用於美國標準鍵盤 '\\&#124;' 金鑰|  
+|VK_OEM_5|Windows： 用於美國標準鍵盤 '\\&#124;' 索引鍵|  
 |VK_OEM_6|Windows：']}' 按鍵用於美國標準鍵盤|  
 |VK_OEM_7|Windows：「單引號/雙引號」按鍵用於美國標準鍵盤|  
 |VK_OEM_COMMA|Windows：',' 按鍵用於任何國家/地區|  
@@ -83,7 +83,7 @@ Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其�
 |VK_XBUTTON1|Windows：X1 滑鼠按鈕|  
 |VK_XBUTTON2|Windows：X2 滑鼠按鈕|  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
 ## <a name="requirements"></a>需求  
  Win32  

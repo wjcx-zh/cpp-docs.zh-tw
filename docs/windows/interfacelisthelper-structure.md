@@ -1,5 +1,5 @@
 ---
-title: InterfaceListHelper 結構 |Microsoft 文件
+title: InterfaceListHelper 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878043"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608127"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T0`  
+### <a name="parameters"></a>參數  
+ *T0*  
  樣板參數 0，這是必要。  
   
- `T1`  
+ *T1*  
  樣板參數 1，其預設值是 未指定。  
   
- `T2`  
- 樣板參數 2，其預設值是 未指定。第三個樣板參數。  
+ *T2*  
+ 樣板參數 2，其預設值是 未指定。第三個樣板參數中。  
   
- `T3`  
+ *T3*  
  樣板參數 3，其預設值是 未指定。  
   
- `T4`  
+ *T4*  
  樣板參數 4，其預設值是 未指定。  
   
- `T5`  
+ *T5*  
  樣板參數 5，其預設值是 未指定。  
   
- `T6`  
+ *T6*  
  樣板參數 6，其預設值是 未指定。  
   
- `T7`  
+ *T7*  
  樣板參數 7，其預設值是 未指定。  
   
- `T8`  
+ *T8*  
  樣板參數 8，其預設值是 未指定。  
   
- `T9`  
+ *T9*  
  樣板參數 9，其預設值是 未指定。  
   
 ## <a name="remarks"></a>備註  
- InterfaceList 型別是以遞迴方式套用指定的範本參數引數。  
+ 建置`InterfaceList`以遞迴方式套用指定的範本參數引數型別。  
   
- InterfaceListHelper 範本使用的樣板參數`T0`定義的第一個資料成員 InterfaceList 結構，然後遞迴地 InterfaceListHelper 範本套用至任何剩餘的範本參數。 沒有剩餘的範本參數，就會停止 InterfaceListHelper。  
+ **InterfaceListHelper**範本會使用範本參數*T0*定義中的第一個資料成員`InterfaceList`結構，然後按一下 以遞迴方式套用**InterfaceListHelper**任何剩餘的範本參數的範本。 **InterfaceListHelper**停止時沒有任何剩餘的範本參數。  
   
 ## <a name="members"></a>成員  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Hstringreference:: Hstringreference 建構函式 |Microsoft 文件'
+title: 'Hstringreference:: Hstringreference 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dce8c6fca14ad26665bf4868681234374c20f85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876003"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608140"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference 建構函式
-初始化 HStringReference 類別的新執行個體。  
+初始化的新執行個體**HStringReference**類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +38,25 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();  
 ```  
   
-#### <a name="parameters"></a>參數  
- `sizeDest`  
- 樣板參數，指定目的地 HStringReference 緩衝區的大小。  
+### <a name="parameters"></a>參數  
+ *sizeDest*  
+ 樣板參數，指定目的地的大小**HStringReference**緩衝區。  
   
- `str`  
+ *str*  
  寬字元字串的參考。  
   
- `len`  
- 最大長度`str`来使用這項作業中的參數緩衝區。 如果`len`參數未指定，整個`str`使用參數。 如果`len`大於`sizeDest`，`len`設`sizeDest`-1。  
+ *Len*  
+ 最大長度*str*来使用這項作業中的參數緩衝區。 如果*len*參數未指定，整個*str*參數使用。 如果*len*大於*sizeDest*， *len*設定為*sizeDest*-1。  
   
- `other`  
- 另一個 HStringReference 物件。  
+ *other*  
+ 另一個**HStringReference**物件。  
   
 ## <a name="remarks"></a>備註  
- 第一個建構函式會初始化參數大小相同的新 HStringReference 物件`str`。  
+ 第一個建構函式初始化新**HStringReference**大小參數相同的物件*str*。  
   
- 第二個建構函式初始化新 HStringReference 物件參數大小 specifeid `len`。  
+ 第二個建構函式初始化新**HStringReference**物件的參數大小 specifeid *len*。  
   
- 第三個建構函式會初始化新 HStringReference 物件的值`other`參數，再終結`other`參數。  
+ 第三個建構函式初始化新**HStringReference**的值的物件*其他*參數，然後終結*其他*參數。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

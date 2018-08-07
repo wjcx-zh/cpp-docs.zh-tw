@@ -1,5 +1,5 @@
 ---
-title: ref 新 gcnew （c + + 元件擴充功能） |Microsoft 文件
+title: ref new 和 gcnew （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879057"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606181"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
-`ref new`彙總關鍵字，其配置的記憶體回收該物件會變成無法存取，並傳回控制代碼時所收集的類型執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到配置的物件。  
+**新的 ref**彙總關鍵字，其配置當物件變成無法存取，並傳回控制代碼回收的類型的執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 所配置物件。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- `ref new` 配置之類型的執行個體記憶體會自動取消配置。  
+ 記憶體配置類型的執行個體**ref 新**會自動取消配置。  
   
- 如果無法配置記憶體，`ref new` 作業會擲回 `OutOfMemoryException`。  
+ A**新的 ref**作業會擲回`OutOfMemoryException`如果無法配置記憶體。  
   
- 如需有關如何配置和解除配置記憶體給原生 c + + 類型的詳細資訊，請參閱[新和 delete 運算子](../cpp/new-and-delete-operators.md)。  
+ 如需有關如何配置和解除配置記憶體給原生 c + + 類型的詳細資訊，請參閱 <<c0> [ 新和 delete 運算子](../cpp/new-and-delete-operators.md)。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- 使用 `ref new`，將記憶體配置給您想要自動管理其存留期的 Windows 執行階段物件。 當其參考計數歸零時 (參考的最後一個複本已離開範圍之後發生)，會自動取消配置物件。 如需詳細資訊，請參閱[Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
+ 使用**ref 新**為 Windows 執行階段物件您想要自動管理其存留期間配置記憶體。 當其參考計數歸零時 (參考的最後一個複本已離開範圍之後發生)，會自動取消配置物件。 如需詳細資訊，請參閱 < [Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Managed 類型 (參考或值類型) 的記憶體是由 `gcnew` 配置，並且是使用記憶體回收以取消配置。  
+ Managed 類型 （參考或實值類型） 的記憶體配置**gcnew**，並解除配置使用記憶體回收。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列範例會使用 `gcnew` 配置訊息物件。  
+ 下列範例會使用**gcnew**配置訊息物件。  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **範例**  
+ 下列範例會使用**gcnew**來建立使用類似參考類型的 boxed 實的值類型。  
   
- 下列範例會使用 `gcnew` 來建立 boxed 值類型，以便以類似參考類型的方法使用。  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

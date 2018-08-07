@@ -1,5 +1,5 @@
 ---
-title: InvokeHelper 結構 |Microsoft 文件
+title: InvokeHelper 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880403"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604264"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -88,16 +88,16 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>參數  
+ *TDelegateInterface*  
+ *TCallback*  
  事件處理常式函式的類型。  
   
- `argCount`  
- InvokeHelper 特製化中的引數數目。  
+ *argCount*  
+ 中的引數的數目**InvokeHelper**特製化。  
   
 ## <a name="remarks"></a>備註  
- 提供的引數類型與指定的數量為基礎的 invoke （） 方法的實作。  
+ 提供實作`Invoke()`方法根據指定的數目和類型的引數。  
   
 ## <a name="members"></a>成員  
   
@@ -105,19 +105,19 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |名稱|描述|  
 |----------|-----------------|  
-|`Traits`|類別定義的每個事件處理常式的引數類型的同義字。|  
+|`Traits`|類別定義的每個事件處理常式的引數類型同義。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[InvokeHelper::InvokeHelper 建構函式](../windows/invokehelper-invokehelper-constructor.md)|初始化 InvokeHelper 類別的新執行個體。|  
+|[InvokeHelper::InvokeHelper 建構函式](../windows/invokehelper-invokehelper-constructor.md)|初始化的新執行個體**InvokeHelper**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|會呼叫其簽章包含指定的引數數目的事件處理常式。|  
+|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|會呼叫其簽章包含指定的引數的事件處理常式。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   

@@ -1,5 +1,5 @@
 ---
-title: RemoveReference 結構 |Microsoft 文件
+title: RemoveReference 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881259"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602707"
 ---
 # <a name="removereference-structure"></a>RemoveReference 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 類別。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 類別中。  
   
 ## <a name="remarks"></a>備註  
- 去除之參考或右值參考的特性，從指定的類別樣板參數。  
+ 移除參考或右值參考特性，從指定的類別範本參數。  
   
 ## <a name="members"></a>成員  
   

@@ -1,5 +1,5 @@
 ---
-title: Nil 結構 |Microsoft 文件
+title: Nil 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb260114a8010d441f0556cf2a21734c0ac23cca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12346ffa30b3e309dcb845117f311cd4a63b9ad9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881422"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603613"
 ---
 # <a name="nil-structure"></a>Nil 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ struct Nil;
 ## <a name="remarks"></a>備註  
  用來指出未指定，選用的範本參數。  
   
- Nil 是空的結構。  
+ **Nil**是空的結構。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Nil`  

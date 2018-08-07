@@ -1,5 +1,5 @@
 ---
-title: 'Roinitializewrapper:: Roinitializewrapper 建構函式 |Microsoft 文件'
+title: 'Roinitializewrapper:: Roinitializewrapper 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889200"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604390"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper 建構函式
-初始化 RoInitializeWrapper 類別的新執行個體。  
+初始化的新執行個體**RoInitializeWrapper**類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33889200"
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### <a name="parameters"></a>參數  
- `flags`  
- 其中一個指定的 Windows 執行階段所提供的支援 RO_INIT_TYPE 列舉型別。  
+### <a name="parameters"></a>參數  
+ *flags*  
+ 其中一個的 RO_INIT_TYPE 列舉型別，指定 Windows 執行階段所提供的支援。  
   
 ## <a name="remarks"></a>備註  
- RoInitializeWrapper 類別叫用 Windows::Foundation::Initialize (*旗標*)。  
+ **RoInitializeWrapper**類別叫用`Windows::Foundation::Initialize(flags)`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

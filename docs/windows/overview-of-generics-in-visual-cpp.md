@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 中的泛型概觀 |Microsoft 文件
+title: Visual c + + 中的泛型概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,89 +22,83 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6503898f492fb3b16b0c6b4381075fabee530152
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880993"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608572"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概觀
 泛型是通用語言執行平台 (CLR) 所支援的參數化類型。 參數化類型是以使用泛型時指定的未知型別參數定義的類型。  
   
 ## <a name="why-generics"></a>為什麼選擇泛型？  
- C++ 支援範本，而且範本和泛型都支援使用參數化類型建立具類型的集合類別。 不過，範本會提供編譯時間參數化。 您無法參考包含範本定義的組件，並建立範本的新特製化。 一旦編譯之後，特製化的範本外觀就像任何其他類別或方法。 相反地，泛型會在 MSIL 中做為參數化類型發出，執行階段會將它視為參數化類型。參考包含泛型類型之組件的原始程式碼可以建立泛型類型的特製化。 Visual c + + 樣板和泛型比較的詳細資訊，請參閱[泛型和樣板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
+ C++ 支援範本，而且範本和泛型都支援使用參數化類型建立具類型的集合類別。 不過，範本會提供編譯時間參數化。 您無法參考包含範本定義的組件，並建立範本的新特製化。 一旦編譯之後，特製化的範本外觀就像任何其他類別或方法。 相反地，泛型會在 MSIL 中做為參數化類型發出，執行階段會將它視為參數化類型。參考包含泛型類型之組件的原始程式碼可以建立泛型類型的特製化。 如需有關比較 Visual c + + 範本和泛型的請參閱[泛型和樣板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
   
 ## <a name="generic-functions-and-types"></a>泛型函式和類型  
- 類別類型只要是 Managed 類型，就可以是泛型。 這類範例可能是 `List` 類別。 清單中物件的類型會是型別參數。 如果您需要`List`許多不同類型的物件之前您可能使用的泛型, 類別`List`採用**system:: object**與項目類型。 但是，這樣會允許在清單中使用所有物件 (包括錯誤類型的物件)。 這類清單會稱為不具類型的集合類別。 最佳的情況是，您可以在執行階段檢查這個類型，並且擲回例外狀況。 或者，您可能使用了範本，這樣一旦編譯成組件，就會失去其泛型本質。 組件的消費者無法建立自己的範本特製化。 泛型可讓您建立具類型的集合類別，例如`List<int>`（讀取為"List of int"） 和`List<double>`("List of double") 如果您嘗試將集合的型別會產生編譯時期錯誤不是接受成的型別集合。 此外，這些類型在編譯之後仍然是泛型。  
+ 類別類型只要是 Managed 類型，就可以是泛型。 這類範例可能是 `List` 類別。 清單中物件的類型會是型別參數。 如果您需要`List`類別的許多不同類型的物件，您可能已經使用的泛型之前`List`採用`System::Object`做為項目類型。 但是，這樣會允許在清單中使用所有物件 (包括錯誤類型的物件)。 這類清單會稱為不具類型的集合類別。 最佳的情況是，您可以在執行階段檢查這個類型，並且擲回例外狀況。 或者，您可能使用了範本，這樣一旦編譯成組件，就會失去其泛型本質。 組件的消費者無法建立自己的範本特製化。 泛型可讓您建立具類型的集合類別，例如`List<int>`（讀做"List of int"） 和`List<double>`("List of double") 這會產生編譯時期錯誤，如果您嘗試將類型不是集合類型不是設計來接受至具型別集合。 此外，這些類型在編譯之後仍然是泛型。  
   
- 泛型類別的語法的說明，請參閱[泛型類別 (C + + CLI)](../windows/generic-classes-cpp-cli.md) `.`新的命名空間， <xref:System.Collections.Generic>，引進一組的參數化的集合型別包括<xref:System.Collections.Generic.Dictionary%602>， <xref:System.Collections.Generic.List%601>和<xref:System.Collections.Generic.LinkedList%601>。  
+ 可能會在找到的泛型類別語法的說明[泛型類別 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)。 新的命名空間<xref:System.Collections.Generic>，引進一組的參數化的集合類型，包括<xref:System.Collections.Generic.Dictionary%602>，<xref:System.Collections.Generic.List%601>和<xref:System.Collections.Generic.LinkedList%601>。  
   
- 執行個體和靜態類別成員函式、委派及全域函式也可以是泛型。 若函式的參數是未知的類型，或者函式本身必須與泛型類型一起使用，則可能需要泛型函式。 在許多情況下其中**system:: object**都已使用過去做為未知的物件類型的參數，泛型型別使用的參數可能反而更為類型安全程式碼。 若嘗試傳入非函式所設計使用的類型，則該類型會在編譯時期標記為錯誤。 使用**system:: object**做為函式參數，而不小心傳遞物件的函式不要處理將不會偵測，而且您必須轉換中的特定類型的未知的物件類型函式主體和帳戶 InvalidCastException 的可能性。 使用泛型時，嘗試將物件傳遞至函式的程式碼會引起類型衝突，因此就能保證函式主體具有正確的類型。  
+ 執行個體和靜態類別成員函式、委派及全域函式也可以是泛型。 若函式的參數是未知的類型，或者函式本身必須與泛型類型一起使用，則可能需要泛型函式。 在許多情況下，`System::Object`可能已經使用在做為參數之未知的物件型別的過去，泛型類型參數可能使用相反地，允許更多的型別安全程式碼。 若嘗試傳入非函式所設計使用的類型，則該類型會在編譯時期標記為錯誤。 使用`System::Object`做為函式參數，而意外傳遞物件的函式不要處理將不會偵測，而且您必須在函式主體中，轉換為特定類型的未知的物件類型和帳戶InvalidCastException 的可能性。 使用泛型時，嘗試將物件傳遞至函式的程式碼會引起類型衝突，因此就能保證函式主體具有正確的類型。  
   
- 相同的優點適用於泛型上建立的集合類別。 在過去的集合類別會使用**system:: object**儲存在集合中的元素。 若插入非集合所設計使用之類型的物件，這種情形不會在編譯時期標記，而且甚至不會在插入物件時標記。 通常會在集合中存取物件時，將該物件轉型成其他類型。 只有在轉型失敗時，才會偵測到非預期的類型。 泛型會在編譯時期藉由偵測是否有插入類型不符合 (或隱含轉換成) 泛型集合之型別參數的任何程式碼，來解決這個問題。  
+ 相同的優點適用於泛型上建立的集合類別。 在過去的集合類別會使用`System::Object`來儲存集合中的項目。 若插入非集合所設計使用之類型的物件，這種情形不會在編譯時期標記，而且甚至不會在插入物件時標記。 通常會在集合中存取物件時，將該物件轉型成其他類型。 只有在轉型失敗時，才會偵測到非預期的類型。 泛型會在編譯時期藉由偵測是否有插入類型不符合 (或隱含轉換成) 泛型集合之型別參數的任何程式碼，來解決這個問題。  
   
- 如需語法的說明，請參閱[泛型函式 (C + + /CLI)](../windows/generic-functions-cpp-cli.md)。  
+ 如需語法的說明，請參閱 <<c0> [ 泛型函式 (C + + /cli CLI)](../windows/generic-functions-cpp-cli.md)。  
   
 ## <a name="terminology-used-with-generics"></a>泛型使用的詞彙  
   
-##### <a name="type-parameters"></a>型別參數  
- 泛型宣告包含一個或多個未知的類型，稱為*型別參數*。 型別參數的指定名稱代表泛型宣告主體內的類型的名稱。 型別參數會做為泛型宣告主體內的類型使用。 泛型宣告清單 < T\>包含型別參數 t。  
+### <a name="type-parameters"></a>型別參數  
+ 泛型宣告包含稱為的一或多個未知的類型*型別參數*。 型別參數的指定名稱代表泛型宣告主體內的類型的名稱。 型別參數會做為泛型宣告主體內的類型使用。 泛型宣告`List<T>`包含型別參數 t。  
   
-##### <a name="type-arguments"></a>型別引數  
- *型別引數*是泛型針對特定類型特製化時，用以取代型別參數的實際類型。 例如，`int` 是 `List<int>` 中的類型引數。 實值類型和控制代碼類型是泛型型別引數唯一允許的類型。  
+### <a name="type-arguments"></a>型別引數  
+ *型別引數*泛型專門用於特定類型或類型時，取代類型參數所用的實際類型。 例如， **int**是中的型別引數`List<int>`。 實值類型和控制代碼類型是泛型型別引數唯一允許的類型。  
   
-##### <a name="constructed-type"></a>建構類型  
- 建構自泛型型別類型指*建構的型別*。 指定的類型不完整，例如`List<T>`是*開放式建構的類型*; 完全指定類型，例如`List<double>,`是*關閉建構的類型*或*特製化類型*. 開放式建構類型可用於定義其他泛型類型或方法，而且在指定封入泛型本身之前，可以不必完整指定。 例如，下面是開放式建構類型做為泛型基底類別的用法：  
+### <a name="constructed-type"></a>建構類型  
+ 建構自泛型型別指*建構的型別*。 指定的型別不完整，例如`List<T>`已*開放式建構型別*; 完全指定類型，例如`List<double>,`是*封閉式建構的型別*或*特製化類型*. 開放式建構類型可用於定義其他泛型類型或方法，而且在指定封入泛型本身之前，可以不必完整指定。 例如，下面是開放式建構類型做為泛型基底類別的用法：  
   
- `// generics_overview.cpp`  
+```cpp
+// generics_overview.cpp
+// compile with: /clr /c
+generic <typename T>  
   
- `// compile with: /clr /c`  
+ref class List {}; 
   
- `generic <typename T>`  
+generic <typename T>
   
- `ref class List {};`  
+ref class Queue : public List<T> {};  
+```
   
- `generic <typename T>`  
-  
- `ref class Queue : public List<T> {};`  
-  
-##### <a name="constraint"></a>條件約束  
- 條件約束是對可做為類型參數之類型的限制。 例如，某一特定泛型類別只能接受繼承自指定類別的類別，或者實作指定的介面。 如需詳細資訊，請參閱[泛型型別參數的條件約束 (C + + /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
+### <a name="constraint"></a>條件約束  
+ 條件約束是對可做為類型參數之類型的限制。 例如，某一特定泛型類別只能接受繼承自指定類別的類別，或者實作指定的介面。 如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
   
 ## <a name="reference-types-and-value-types"></a>參考類型和值類型  
- 控制代碼類型和實值類型可做為類型引數使用。 在使用任一類型的泛型定義中，語法會是參考類型的語法。 例如， **->** 運算子用來存取成員的型別參數的型別，無論最終使用的類型是否為參考類型或實值類型。 當實值類型做為型別引數使用時，執行階段會產生直接使用實值類型的程式碼，而不會對實值類型進行 Boxing 處理。  
+ 控制代碼類型和實值類型可做為類型引數使用。 在使用任一類型的泛型定義中，語法會是參考類型的語法。 比方說，`->`運算子用來存取成員的型別參數的型別，無論最終使用的類型是否為參考型別或實值型別。 當實值類型做為型別引數使用時，執行階段會產生直接使用實值類型的程式碼，而不會對實值類型進行 Boxing 處理。  
   
  當使用參考類型做為泛型類型引數時，請使用控制代碼語法。 當使用實值類型做為泛型型別引數時，請直接使用類型的名稱。  
   
- `// generics_overview_2.cpp`  
+```cpp
+// generics_overview_2.cpp  
+// compile with: /clr  
+generic <typename T>  
   
- `// compile with: /clr`  
+ref class GenericType {};  
+ref class ReferenceType {};  
   
- `generic <typename T>`  
+value struct ValueType {};  
   
- `ref class GenericType {};`  
-  
- `ref class ReferenceType {};`  
-  
- `value struct ValueType {};`  
-  
- `int main() {`  
-  
- `GenericType<ReferenceType^> x;`  
-  
- `GenericType<ValueType> y;`  
-  
- `}`  
+int main() {  
+    GenericType<ReferenceType^> x;  
+    GenericType<ValueType> y;  
+}  
+```
   
 ## <a name="type-parameters"></a>型別參數  
  泛型類別中的型別參數會視為其他識別項。 不過，由於類型未知，因此其用途也會有所限制。 例如，您不能使用型別參數類別的成員和方法，除非已知這個型別參數支援這些成員。 也就是說，若要透過型別參數存取成員，您必須將包含成員的類型加入至型別參數的條件約束清單中。  
   
- `// generics_overview_3.cpp`  
-  
- `// compile with: /clr`  
-  
-```  
+```cpp  
+// generics_overview_3.cpp  
+// compile with: /clr
 interface class I {  
    void f1();  
    void f2();  
@@ -135,7 +129,7 @@ int main() {
   
  `T t = T();`  
   
- 其中 `T` 是泛型類別或方法定義中的類型參數，會將變數初始化為其預設值。 如果 `T` 是 ref 類別，它會是 null 指標；如果 `T` 是實值類別，則物件會初始化為零。 這稱為*預設初始設定式*。  
+ 其中 `T` 是泛型類別或方法定義中的類型參數，會將變數初始化為其預設值。 如果 `T` 是 ref 類別，它會是 null 指標；如果 `T` 是實值類別，則物件會初始化為零。 這就叫做*預設初始設定式*。  
   
 ## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

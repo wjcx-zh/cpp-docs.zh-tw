@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassBase 結構 |Microsoft 文件
+title: RuntimeClassBase 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d80f475cf8a50dcb084ca6e953842e91c55e4502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b272c733dab71e615a46cb4af25609c560bdbfef
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888385"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602675"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,9 +32,9 @@ struct RuntimeClassBase;
 ```  
   
 ## <a name="remarks"></a>備註  
- 用來偵測在 RuntimeClass[進行](../windows/make-function.md)函式。  
+ 用來偵測`RuntimeClass`中[讓](../windows/make-function.md)函式。  
   
- RuntimeClassBase 是空的結構。  
+ **RuntimeClassBase**是空的結構。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `RuntimeClassBase`  

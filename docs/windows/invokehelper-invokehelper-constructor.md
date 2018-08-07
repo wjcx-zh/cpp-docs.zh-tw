@@ -1,5 +1,5 @@
 ---
-title: 'Invokehelper:: Invokehelper 建構函式 |Microsoft 文件'
+title: 'Invokehelper:: Invokehelper 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7678f9e3092bdc6e9d5839085044708b0d400533
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6618d5fc219e5f4e6533eb4d31cf7cd14fc4b1d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874846"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602545"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper 建構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ explicit InvokeHelper(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `callback`  
+### <a name="parameters"></a>參數  
+ *回呼*  
  事件處理常式。  
   
 ## <a name="remarks"></a>備註  
- 初始化 InvokeHelper 類別的新執行個體。  
+ 初始化的新執行個體**InvokeHelper**類別。  
   
- `TCallback`樣板參數指定事件處理常式的類型。  
+ `TCallback`範本參數會指定事件處理常式的類型。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

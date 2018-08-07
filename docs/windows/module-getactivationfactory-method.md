@@ -1,5 +1,5 @@
 ---
-title: 'Module:: getactivationfactory 方法 |Microsoft 文件'
+title: 'Module:: getactivationfactory 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 837cb68173ca1994de6bc560882d617bb3aa03e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41b90ea56f65665ccdaff0fe4dceff292d1cdcf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887009"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608101"
 ---
 # <a name="modulegetactivationfactory-method"></a>Module::GetActivationFactory 方法
-取得模組中啟動處理站。  
+取得啟用 factory 模組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,18 +37,18 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `pActivatibleClassId`  
+### <a name="parameters"></a>參數  
+ *pActivatibleClassId*  
  執行階段類別的 IID。  
   
- `ppIFactory`  
+ *ppIFactory*  
  指定的執行階段類別 IActivationFactory。  
   
- `serverName`  
- 在目前的模組的 class factory 子集的名稱。 指定伺服器名稱中使用[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集，或指定`nullptr`取得預設的伺服器名稱。  
+ *伺服器名稱*  
+ 在目前模組的 class factory 子集的名稱。 指定用於的伺服器名稱[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集，或指定**nullptr**取得預設的伺服器名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，GetActivationFactory 所傳回的 HRESULT。  
+ 如果成功則為 S_OK否則，GetActivationFactory 所傳回的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  
@@ -56,4 +56,5 @@ WRL_NOTHROW HRESULT GetActivationFactory(
  **命名空間：** Microsoft::WRL  
   
 ## <a name="see-also"></a>另請參閱  
-[模組類別](../windows/module-class.md) [ActivatableClass 巨集](../windows/activatableclass-macros.md)
+ [Module 類別](../windows/module-class.md)  
+ [ActivatableClass 巨集](../windows/activatableclass-macros.md)

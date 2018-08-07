@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: casttounknown 方法 |Microsoft 文件'
+title: 'Implements:: casttounknown 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874482"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607244"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown 方法
-取得基礎 IUnknown 介面指標。  
+取得指標基礎`IUnknown`介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 這項作業一定成功，並將傳回的 IUnknown 指標。  
+ 這項作業一定成功，並傳回`IUnknown`指標。  
   
 ## <a name="remarks"></a>備註  
- 內部協助程式函式。  
+ 內部 helper 函式。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

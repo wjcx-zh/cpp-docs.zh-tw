@@ -1,5 +1,5 @@
 ---
-title: 識別碼 |Microsoft 文件
+title: 識別碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882443"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605704"
 ---
 # <a name="id"></a>id
-指定`dispid`（屬性或方法，在介面或 dispinterface） 的成員函式的參數。  
+指定*dispid* （屬性或方法，在介面或 dispinterface） 的成員函式的參數。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- `dispid`  
- 介面方法分派識別碼。  
+### <a name="parameters"></a>參數  
+ *dispid*  
+ 介面方法的分派識別碼。  
   
 ## <a name="remarks"></a>備註  
  **識別碼**c + + 屬性具有相同的功能[識別碼](http://msdn.microsoft.com/library/windows/desktop/aa367040)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[可繫結](../windows/bindable.md)如需如何使用的範例**識別碼**。  
+ 範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**識別碼**。  
   
 ## <a name="requirements"></a>需求  
   

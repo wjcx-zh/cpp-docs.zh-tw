@@ -1,5 +1,5 @@
 ---
-title: ms_union |Microsoft 文件
+title: ms_union |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b795231cad936f30ef329f015b6ff691aa0d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882033"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606695"
 ---
 # <a name="msunion"></a>ms_union
-控制 nonencapsulated 等位的網路資料表示對齊方式。  
+控制 nonencapsulated 等位的網路資料表示法對齊方式。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [ms_union]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -41,7 +39,7 @@ ms.locfileid: "33882033"
 ## <a name="example"></a>範例  
  下列程式碼顯示的位置**ms_union**:  
   
-```  
+```cpp  
 // cpp_attr_ref_ms_union.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -73,7 +71,7 @@ __interface IFireTabCtrl {
 |**適用於**|Nonencapsulated 等位|  
 |**可重複**|否|  
 |**必要屬性**|無|  
-|**無效屬性**|**dispinterface**|  
+|**無效屬性**|`dispinterface`|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   

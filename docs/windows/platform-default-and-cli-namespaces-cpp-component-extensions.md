@@ -1,5 +1,5 @@
 ---
-title: 平台、 default 和 cli 命名空間 （c + + 元件擴充功能） |Microsoft 文件
+title: Platform、 default 和 cli 命名空間 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880735"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603546"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空間 (C++ 元件擴充功能)
-命名空間會限定語言項目的名稱，因此名稱不會與原始程式碼中其他位置的相同名稱發生衝突。 例如，名稱衝突可能會阻止編譯器可辨識的[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 編譯器會使用命名空間，但是命名空間不會保留在編譯的組件中。  
+命名空間會限定語言項目的名稱，因此名稱不會與原始程式碼中其他位置的相同名稱發生衝突。 例如，名稱衝突可能會使編譯器無法辨識[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 編譯器會使用命名空間，但是命名空間不會保留在編譯的組件中。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- 當您建立專案時，Visual C++ 會為專案提供預設的命名空間。 雖然 Windows 執行階段中，.winmd 檔案名稱必須符合的根命名空間的名稱，您可以手動命名的命名空間。  
+ 當您建立專案時，Visual C++ 會為專案提供預設的命名空間。 雖然 Windows 執行階段中的.winmd 檔案名稱必須符合的根命名空間的名稱，您可以手動命名的命名空間。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- 如需詳細資訊，請參閱[命名空間和類型可視性 (C + + /CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。  
+ 如需詳細資訊，請參閱 <<c0> [ 命名空間和類型可視性 (C + + /CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **語法**  
+### <a name="syntax"></a>語法  
   
 ```  
 using namespace cli;  
 ```  
   
- **備註**  
+### <a name="remarks"></a>備註  
   
- C + + CLI 支援`cli`命名空間。 編譯時 **/clr**、`using`隱含語法區段中的陳述式。  
+ C + + /cli CLI 支援**cli**命名空間。 進行編譯時`/clr`，則**使用**隱含的語法區段中的陳述式。  
   
- `cli` 命名空間中具有下列語言功能：  
+ 中有下列語言功能**cli**命名空間：  
   
 -   [陣列](../windows/arrays-cpp-component-extensions.md)  
   
@@ -60,14 +60,13 @@ using namespace cli;
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列程式碼範例將示範可以在 `cli` 命名空間中使用符號做為您程式碼中的使用者定義符號。  不過，一旦這麼做，就必須明確或隱含地限定同名 `cli` 語言項目的參考。  
+ 下列程式碼範例示範的是可以使用中的符號**cli**為使用者定義的符號，在您的程式碼中的命名空間。  不過，一旦您這麼做，您必須明確或隱含地限定您參考**cli**相同名稱的語言項目。  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  

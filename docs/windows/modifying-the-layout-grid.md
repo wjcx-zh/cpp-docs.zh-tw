@@ -1,5 +1,5 @@
 ---
-title: 修改配置格線 |Microsoft 文件
+title: 修改配置格線 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880315"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606932"
 ---
 # <a name="modifying-the-layout-grid"></a>修改配置格線
-當您放置或排列控制項在對話方塊中的時，您可以使用版面配置方格的更精確的位置。 方格開啟時，控制項便會出現 「 對齊 」 格線的虛線如同 magnetized。 您可以開啟和關閉此 「 貼齊格線 」 功能，並變更版面配置方格資料格的大小。  
+當您要放置或在對話方塊中排列控制項時，您可以使用版面配置方格的更精確的位置。 方格開啟時，控制項便會出現 「 貼齊 」 方格的虛線如同 magnetized。 您可以開啟和關閉此 「 貼齊至格線 」 功能，並變更版面配置方格資料格的大小。  
   
-### <a name="to-turn-the-layout-grid-on-or-off"></a>若要開啟或關閉版面配置方格  
+### <a name="to-turn-the-layout-grid-on-or-off"></a>若要開啟或關閉的版面配置方格  
   
 1.  從**格式**功能表上，選擇**輔助線設定**。  
   
-2.  在[輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，選取或清除**方格** 按鈕。  
+2.  在 [[輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，選取或清除**格線**] 按鈕。  
   
-     您仍然可以控制在個別的對話方塊編輯器視窗，使用方格**切換格線**按鈕[對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
+     您仍然可以控制個別對話方塊編輯器視窗使用中的格線**切換格線**按鈕[對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>若要變更版面配置方格的大小  
   
 1.  從**格式**功能表上，選擇**輔助線設定**。  
   
-2.  在[輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，輸入的高度和寬度 Dlu 方格中的資料格。 最小高度或寬度是 4 Dlu。 如需有關 Dlu 的詳細資訊，請參閱[控制項的排列方式 對話方塊上的方式](../windows/arrangement-of-controls-on-dialog-boxes.md)。  
+2.  在 [輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，輸入的高度和寬度 Dlu 方格中的資料格。 最小高度或寬度是 4 Dlu。 如需有關 Dlu 的詳細資訊，請參閱[控制項的排列方式 對話方塊上的方式](../windows/arrangement-of-controls-on-dialog-boxes.md)。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- 需求  
+## <a name="requirements"></a>需求  
   
  Win32  
   
 ## <a name="see-also"></a>另請參閱  
  [對話方塊編輯器狀態 （輔助線和格線）](../windows/dialog-editor-states-guides-and-grids.md)   
  [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)
-

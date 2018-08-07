@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassFlags 結構 |Microsoft 文件
+title: RuntimeClassFlags 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05166be14680b14d704095f5f1c9375bd97da7d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6206a167c8b7292db21b9466975d057fc36cbe2f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892022"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604930"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 結構
 包含的執行個體的型別[RuntimeClass](../windows/runtimeclass-class.md)。  
@@ -36,8 +36,8 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `flags`  
+### <a name="parameters"></a>參數  
+ *flags*  
  A [RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。  
   
 ## <a name="members"></a>成員  

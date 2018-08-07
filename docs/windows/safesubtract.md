@@ -1,5 +1,5 @@
 ---
-title: SafeSubtract |Microsoft 文件
+title: SafeSubtract |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 190b93fc9b3cfb299784d0c352c2f7e5bff25db4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889214"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606139"
 ---
 # <a name="safesubtract"></a>SafeSubtract
 兩個數字的方式防止溢位。  
@@ -38,26 +38,26 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>參數  
- [輸入] `t`  
- 減法運算中的第一個數字。 這必須為類型 T。  
+### <a name="parameters"></a>參數  
+ [in]*t*  
+ 減法運算中的第一個數字。 這必須是型別`T`。  
   
- [輸入] `u`  
- 要減去的數字`t`。 這必須為類型 U。  
+ [in]*u*  
+ 要減去的數字*t*。 這必須是型別`U`。  
   
- [輸出] `result`  
- 參數所在`SafeSubtract`儲存結果。  
+ [out]*結果*  
+ 參數所在**SafeSubtract**儲存結果。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果沒有發生錯誤。`false`如果發生錯誤。  
+ **true**如果沒有發生錯誤;**false**發生錯誤。  
   
 ## <a name="remarks"></a>備註  
- 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一減法運算[SafeInt 類別](../windows/safeint-class.md)。  
+ 這個方法屬於[SafeInt 程式庫](../windows/safeint-library.md)而設計的單一的減法運算，而不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
 >  此方法應只有在必須保護單一數學作業時才使用。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本類型的詳細資訊`T`並`U`，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** safeint.h  

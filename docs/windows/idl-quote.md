@@ -1,5 +1,5 @@
 ---
-title: idl_quote |Microsoft 文件
+title: idl_quote |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878508"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606510"
 ---
 # <a name="idlquote"></a>idl_quote
-可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構函式，並將它們傳遞至產生的.idl 檔案。  
+可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構，並將它們傳遞至所產生的.idl 檔案。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *文字*  
- 您想要傳遞至產生的.idl 檔案而不需傳回編譯器錯誤的 Visual c + + 編譯器的屬性名稱。  
+ 您想要傳遞至所產生的.idl 檔案而不會傳回編譯器錯誤 Visual c + + 編譯器的屬性名稱。  
   
 ## <a name="remarks"></a>備註  
- 如果**idl_quote** c + + 屬性做為獨立屬性 （具有後面的分號右括號），然後*文字*放在因為合併的.idl 檔案。 如果**idl_quote**適用於一種符號，*文字*會放置在該符號的屬性區塊內。  
+ 如果**idl_quote** c + + 屬性當做獨立屬性 （具有後面的分號右括號），然後*文字*放在合併的.idl 檔案原狀。 如果**idl_quote**符號，適用於*文字*會放置在該符號的屬性區塊。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範如何您也可以指定不支援的屬性 (使用**中**，支援的)，以及如何定義及使用未定義的.idl 建構：  
+ 下列程式碼顯示如何您也可以指定不支援的屬性 (使用**在**，這支援)，以及如何定義及使用未定義的.idl 建構：  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- 此程式碼會造成 MYFLOT 和 MYDUB 和*文字*放置產生的.idl 檔案中的項目。 *名稱*參數強制*文字*之前的任何項目會參考要放置*名稱*產生的.idl 檔案中。 *相依性*參數會強制之前要放置的相依性清單定義*文字*產生的.idl 檔案中。  
+ 此程式碼會導致 MYFLOT 和 MYDUB 並*文字*放在產生的.idl 檔中的項目。 *名稱*參數強制*文字*要參考的任何動作之前放置*名稱*產生的.idl 檔案中。 *相依性*參數會強制之前放置的相依性清單定義*文字*產生的.idl 檔案中。  
   
 ## <a name="requirements"></a>需求  
   

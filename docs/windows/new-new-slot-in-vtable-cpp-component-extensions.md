@@ -1,5 +1,5 @@
 ---
-title: new （新 vtable 中的位置） （c + + 元件擴充功能） |Microsoft 文件
+title: 新 (新 vtable 中的位置） （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879779"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607007"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (vtable 中的新位置) (C++ 元件擴充功能)
-`new`關鍵字表示虛擬成員會收到在 vtable 中的新位置。  
+**新**關鍵字會指出虛擬成員會取得 vtable 中的新位置。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
  (這個語言功能沒有適用所有執行階段的備註。)  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- 不支援 Windows 執行階段中。  
+ 不支援 Windows 執行階段。  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **備註**  
+### <a name="remarks"></a>備註  
   
- 在 **/clr**編譯`new`表示虛擬成員會收到在 vtable 中的新位置; 此函式不覆寫基底類別方法。  
+ 在 `/clr`編譯時，**新**表示虛擬成員會取得 vtable 中的新位置; 此函式不覆寫基底類別方法。  
   
- `new` 會導致 newslot 修飾詞加入至函式的 IL。  如需 newslot 的詳細資訊，請參閱：  
+ **新**導致 newslot 修飾詞新增至函式的 IL。  如需 newslot 的詳細資訊，請參閱：  
   
--   [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [MethodAttributes 列舉](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [MethodAttributes 列舉](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列範例顯示的效果`new`。  
+ 下列範例顯示的效果**新**。  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

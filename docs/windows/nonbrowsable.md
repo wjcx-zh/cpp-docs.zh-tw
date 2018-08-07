@@ -1,5 +1,5 @@
 ---
-title: nonbrowsable |Microsoft 文件
+title: nonbrowsable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877364"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604586"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
-表示某個介面成員不會顯示在屬性瀏覽器。  
+指出介面成員不會顯示在屬性瀏覽器。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -40,7 +38,7 @@ ms.locfileid: "33877364"
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: methodreleasenotifier:: Invoke 方法 |Microsoft 文件'
+title: 'Module:: methodreleasenotifier:: Invoke 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcfb3be07ff9d57b6837b956f821260f12a0f4af
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3823b752cb45d50230f399f38edca446429cbbf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875704"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607867"
 ---
 # <a name="modulemethodreleasenotifierinvoke-method"></a>Module::MethodReleaseNotifier::Invoke 方法
-呼叫目前 module:: methodreleasenotifier 物件相關聯的事件處理常式。  
+呼叫目前相關聯的事件處理常式**module:: methodreleasenotifier**物件。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,5 +1,5 @@
 ---
-title: Make 函式 |Microsoft 文件
+title: Make 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878069"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604865"
 ---
 # <a name="make-function"></a>Make 函式
-初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同模組中定義的元件。  
+初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同的模組中定義的元件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -171,69 +171,69 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  使用者指定的類別繼承自`WRL::RuntimeClass`。  
   
- `TArg1`  
- 傳遞至指定的執行階段類別的引數 1 的類型。  
+ *TArg1*  
+ 傳遞至指定的執行階段類別的引數 1 的型別。  
   
- `TArg2`  
+ *TArg2*  
  傳遞至指定的執行階段類別的引數 2 的型別。  
   
- `TArg3`  
- 傳遞至指定的執行階段類別的引數 3 的類型。  
+ *TArg3*  
+ 傳遞至指定的執行階段類別的引數 3 的型別。  
   
- `TArg4`  
- 傳遞至指定的執行階段類別的引數 4 的類型。  
+ *TArg4*  
+ 傳遞至指定的執行階段類別的引數 4 類型。  
   
- `TArg5`  
- 傳遞至指定的執行階段類別的引數 5 的型別。  
+ *TArg5*  
+ 引數 5 傳遞至指定的執行階段類別的型別。  
   
- `TArg6`  
- 傳遞至指定的執行階段類別的引數 6 種。  
+ *TArg6*  
+ 傳遞至指定的執行階段類別的引數 6 的型別。  
   
- `TArg7`  
- 傳遞至指定的執行階段類別的引數 7 的類型。  
+ *TArg7*  
+ 引數 7 傳遞至指定的執行階段類別的型別。  
   
- `TArg8`  
- 傳遞至指定的執行階段類別的引數 8 的型別。  
+ *TArg8*  
+ 引數 8 傳遞至指定的執行階段類別的型別。  
   
- `TArg9`  
- 型別傳遞至指定的執行階段類別的引數 9。  
+ *TArg9*  
+ 引數 9 的傳遞至指定的執行階段類別的型別。  
   
- `arg1`  
+ *arg1*  
  傳遞至指定的執行階段類別的引數 1。  
   
- `arg2`  
+ *Arg2*  
  傳遞至指定的執行階段類別的引數 2。  
   
- `arg3`  
+ *arg3*  
  傳遞至指定的執行階段類別的引數 3。  
   
- `arg4`  
+ *arg4*  
  傳遞至指定的執行階段類別的引數 4。  
   
- `arg5`  
+ *arg5*  
  傳遞至指定的執行階段類別的引數 5。  
   
- `arg6`  
+ *arg6*  
  傳遞至指定的執行階段類別的引數 6。  
   
- `arg7`  
+ *arg7*  
  傳遞至指定的執行階段類別的引數 7。  
   
- `arg8`  
+ *arg8*  
  傳遞至指定的執行階段類別的引數 8。  
   
- `arg9`  
+ *arg9*  
  傳遞至指定的執行階段類別的引數 9。  
   
 ## <a name="return-value"></a>傳回值  
- A`ComPtr<T>`物件，如果成功，否則`nullptr`。  
+ A`ComPtr<T>`物件，如果成功，否則**nullptr**。  
   
 ## <a name="remarks"></a>備註  
- 請參閱[如何： 直接執行個體化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)若要了解此函式之間的差異和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)，及範例。  
+ 請參閱[如何： 直接具現化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)若要了解此函式之間的差異並[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)，及範例。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

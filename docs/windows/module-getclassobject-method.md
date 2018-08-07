@@ -1,5 +1,5 @@
 ---
-title: 'Module:: getclassobject 方法 |Microsoft 文件'
+title: 'Module:: getclassobject 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878534"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602649"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject 方法
 擷取快取的 class factory。  
@@ -38,23 +38,23 @@ ms.locfileid: "33878534"
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `clsid`  
+### <a name="parameters"></a>參數  
+ *clsid*  
  類別識別碼。  
   
- `riid`  
- 您要求的介面 ID。  
+ *riid*  
+ 您要求的介面識別碼。  
   
- `ppv`  
+ *ppv*  
  傳回的物件指標。  
   
- `serverName`  
- 在指定的伺服器名稱`ActivatableClassWithFactory`， `ActivatableClassWithFactoryEx`，或`ActivatableClass`巨集; 或`nullptr`取得預設的伺服器名稱。  
+ *伺服器名稱*  
+ 中指定的伺服器名稱`ActivatableClassWithFactory`， `ActivatableClassWithFactoryEx`，或`ActivatableClass`巨集; 或是**nullptr**取得預設的伺服器名稱。  
   
 ## <a name="return-value"></a>傳回值  
   
 ## <a name="remarks"></a>備註  
- 這個方法只能用於 COM，不使用 Windows 執行階段。 這個方法會公開只有 IClassFactory 方法。  
+ 這個方法僅適用於 COM，而不是 Windows 執行階段。 這個方法只會公開`IClassFactory`方法。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

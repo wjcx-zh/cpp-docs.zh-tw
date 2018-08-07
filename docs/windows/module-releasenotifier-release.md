@@ -1,5 +1,5 @@
 ---
-title: Module::ReleaseNotifier::Release |Microsoft 文件
+title: Module::ReleaseNotifier::Release |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfc64a64a0fc08d417117e46bc7537a4e2ebf4ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877043"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605427"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-如果物件以參數的建構，會刪除目前的 module:: releasenotifier 物件`true`。  
+刪除目前**releasenotifier**物件如果物件以參數的建構 **，則為 true**。  
   
 ## <a name="syntax"></a>語法  
   

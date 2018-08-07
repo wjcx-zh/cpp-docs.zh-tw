@@ -1,5 +1,5 @@
 ---
-title: RoInitializeWrapper 類別 |Microsoft 文件
+title: RoInitializeWrapper 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2018
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9fab2ecd259e75767728a46448c06df4c4729ef3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705588"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606718"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 類別
 初始化 Windows 執行階段。  
@@ -32,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>備註  
- RoInitializeWrapper 為方便起見，初始化 Windows 執行階段，並會傳回 HRESULT，指出作業是否成功。 因為類別的解構函式呼叫`::Windows::Foundation::Uninitialize`的執行個體`RoInitializeWrapper`必須在全域或最上層範圍中宣告。  
+ **RoInitializeWrapper**是為了方便起見，會初始化 Windows 執行階段，並會傳回 HRESULT，指出作業是否成功。 因為類別的解構函式會呼叫`::Windows::Foundation::Uninitialize`，執行個體**RoInitializeWrapper**必須在全域或最上層範圍中宣告。  
   
 ## <a name="members"></a>成員  
   
@@ -40,14 +40,14 @@ class RoInitializeWrapper
   
 |名稱|描述|  
 |----------|-----------------|  
-|[RoInitializeWrapper::RoInitializeWrapper 建構函式](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化 RoInitializeWrapper 類別的新執行個體。|  
-|[RoInitializeWrapper::~RoInitializeWrapper 解構函式](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|終結 RoInitializeWrapper 類別的目前執行個體。|  
+|[RoInitializeWrapper::RoInitializeWrapper 建構函式](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化的新執行個體**RoInitializeWrapper**類別。|  
+|[RoInitializeWrapper::~RoInitializeWrapper 解構函式](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|終結的目前執行個體**RoInitializeWrapper**類別。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[RoInitializeWrapper::HRESULT() 運算子](../windows/roinitializewrapper-hresult-parens-operator.md)|擷取 RoInitializeWrapper 建構函式所產生的 HRESULT。|  
+|[RoInitializeWrapper::HRESULT() 運算子](../windows/roinitializewrapper-hresult-parens-operator.md)|擷取所產生的 HRESULT **RoInitializeWrapper**建構函式。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `RoInitializeWrapper`  

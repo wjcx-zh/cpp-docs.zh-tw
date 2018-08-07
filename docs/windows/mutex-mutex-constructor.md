@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: mutex 建構函式 |Microsoft 文件'
+title: 'Mutex:: mutex 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb7782e44fc8598ca3b806ef922f8d0840765e28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876452"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605190"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex 建構函式
-初始化 Mutex 類別的新執行個體。  
+初始化的新執行個體**Mutex**類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,12 +39,12 @@ Mutex(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
- 控制代碼或以 Mutex 物件的控制代碼，右值參考。  
+### <a name="parameters"></a>參數  
+ *h*  
+ 控制代碼或右值參考控制代碼，來**Mutex**物件。  
   
 ## <a name="remarks"></a>備註  
- 第一個建構函式初始化的 Mutex 物件，從指定的控制代碼。 第二個建構函式初始化從指定的控制代碼、 Mutex 物件，然後將 mutex 的擁有權移至目前的 Mutex 物件。  
+ 第一個建構函式初始化**Mutex**從指定的控制代碼的物件。 第二個建構函式初始化**Mutex**從指定的控制代碼，然後 mutex 擁有權移至目前的物件**Mutex**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

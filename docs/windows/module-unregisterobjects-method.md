@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregisterobjects 方法 |Microsoft 文件'
+title: 'Module:: unregisterobjects 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874115"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607436"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects 方法
 取消註冊指定的模組中的物件，以便讓其他應用程式無法連線。  
@@ -35,15 +35,15 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>參數  
- `module`  
+### <a name="parameters"></a>參數  
+ *模組*  
  模組的指標。  
   
- `serverName`  
+ *伺服器名稱*  
  合格的名稱，指定此作業所影響的物件子集。  
   
 ## <a name="return-value"></a>傳回值  
- 如果此作業成功，為 S_OK否則，錯誤指出的原因的 HRESULT 這項作業失敗。  
+ 如果這項作業是成功則為 S_OK否則為錯誤的 HRESULT 指出的原因，這項作業失敗。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

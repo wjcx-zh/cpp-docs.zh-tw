@@ -1,5 +1,5 @@
 ---
-title: 開啟指定符號的資源編輯器 |Microsoft 文件
+title: 開啟指定符號的資源編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fc4b0940e1932d1ae55280ce59f8219fd6017a7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ca604ac88e4e8c0ecbb45c764f7d22836d367b2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875093"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602755"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>開啟指定符號的資源編輯器
-當您瀏覽中的符號[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可能會想在特定符號的使用方式的詳細資訊。 **檢視使用**按鈕讓您快速取得這項資訊。  
+當您瀏覽中的符號[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可能想要特定符號的使用方式的詳細資訊。 **檢視使用**按鈕提供快速的方式，來取得此資訊。  
   
 ### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>移至正在使用符號的資源編輯器  
   
-1.  選取中的符號**名稱**方塊**資源符號** 對話方塊。  
+1.  選取中的符號**名稱**的方塊**資源符號** 對話方塊。  
   
-2.  在**被使用**方塊中，選取您感興趣的資源類型。  
+2.  在 **被使用**方塊中，選取您感興趣的資源類型。  
   
-3.  按一下**檢視使用** 按鈕。  
+3.  按一下 [**檢視使用**] 按鈕。  
   
      資源會出現在適當的編輯器視窗中。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
- 需求  
+## <a name="requirements"></a>需求  
   
  Win32  
   

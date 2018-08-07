@@ -1,5 +1,5 @@
 ---
-title: safe_cast （c + + 元件擴充功能） |Microsoft 文件
+title: safe_cast （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57f59aa201a60fb2cf118b31eb4be377cd246ece
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891512"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606380"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ 元件擴充功能)
-如果成功，`safe_cast` 作業會傳回指定的運算式做為指定的類型，否則會擲回 `InvalidCastException`。  
+**Safe_cast**作業會傳回與指定的類型，指定的運算式，如果成功; 否則會擲回`InvalidCastException`。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
  (這個語言功能沒有適用所有執行階段的備註。)  
@@ -40,15 +40,10 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
-### <a name="parameters"></a>參數  
-  
-### <a name="remarks"></a>備註  
-  
 ## <a name="windows-runtime"></a>Windows 執行階段  
- `safe_cast` 可讓您變更指定運算式的類型。 在您完全預期變數或參數可轉換成特定類型的情況下，您可以使用 safe_cast 而不需使用 try-catch 區塊，即可在開發期間偵測程式設計錯誤。 如需詳細資訊，請參閱[轉型 (C + + /CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx)。  
+ **safe_cast**可讓您變更指定運算式的類型。 在您完全預期變數或參數可轉換成特定類型的情況下，您可以使用**safe_cast**不含**try / catch**區塊，以在開發期間偵測程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 轉型 (C + + /CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx)。  
   
 ### <a name="syntax"></a>語法  
   
@@ -58,28 +53,26 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>參數  
  *類型識別碼*  
- 要轉換的類型*運算式*至。 一個控制代碼，可用來參考或值類型、值類型，或參考或值類型的追蹤參考。  
+ 要轉換的型別*運算式*到。 一個控制代碼，可用來參考或值類型、值類型，或參考或值類型的追蹤參考。  
   
  *運算式*  
  一個運算式，可針對用來參考或值類型、值類型，或參考或值類型的追蹤參考之控制代碼進行評估。  
   
 ### <a name="remarks"></a>備註  
- `safe_cast` 擲回`InvalidCastException`如果它無法轉換*運算式*所指定的型別*類型識別碼*。若要攔截`InvalidCastException`，指定[/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)編譯器選項，並使用 try/catch 陳述式。  
+ **safe_cast**會擲回`InvalidCastException`如果它無法轉換*運算式*所指定的型別*型別 id*。若要攔截`InvalidCastException`，指定[/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)編譯器選項，並使用**try/catch**陳述式。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列程式碼範例示範如何使用`safe_cast`與 Windows 執行階段。  
+ 下列程式碼範例示範如何使用**safe_cast**與 Windows 執行階段。  
   
-```cpp#  
+```cpp  
 // safe_cast_ZW.cpp  
 // compile with: /ZW /EHsc  
   
@@ -112,7 +105,7 @@ Caught expected exception: InvalidCastException
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- `safe_cast` 可讓您變更運算式的類型，並產生可驗證的 MSIL 程式碼。  
+ **safe_cast**可讓您變更運算式的類型，並產生可驗證的 MSIL 程式碼。  
   
 ### <a name="syntax"></a>語法  
   
@@ -122,7 +115,6 @@ type-id
 >(  
 expression  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>參數  
@@ -133,31 +125,30 @@ expression
  一個運算式，可針對用來參考或值類型、值類型，或參考或值類型的追蹤參考之控制代碼進行評估。  
   
 ### <a name="remarks"></a>備註  
- 運算式`safe_cast<`*類型識別碼*`>(`*運算式*`)`將運算元運算式轉換成 type-id 類型的物件。  
+ 運算式`safe_cast<`*型別 id*`>(`*運算式*`)`將運算元運算式轉換成 type-id 類型的物件。  
   
- 編譯器會接受[static_cast](../cpp/static-cast-operator.md)在大多數的地方，就會接受`safe_cast`。  不過，`safe_cast` 保證能夠產生可驗證的 MSIL，其中的 `static_cast` 可能會產生無法驗證的 MSIL。  請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)和[Peverify.exe （PEVerify 工具）](/dotnet/framework/tools/peverify-exe-peverify-tool)如需有關驗證的程式碼。  
+ 編譯器會接受[static_cast](../cpp/static-cast-operator.md)在大多數的地方，它會接受**safe_cast**。  不過， **safe_cast**保證能夠產生可驗證的 MSIL，其中**static_cast**可能會產生無法驗證的 MSIL。  請參閱[純粹的和可驗證程式碼 (C + + /cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)並[Peverify.exe （PEVerify 工具）](/dotnet/framework/tools/peverify-exe-peverify-tool)如需有關驗證的程式碼。  
   
- 如同 `static_cast`，`safe_cast` 會叫用使用者定義的轉換。  
+ 像是**static_cast**， **safe_cast**叫用使用者定義的轉換。  
   
- 如需有關轉換的詳細資訊，請參閱[轉型運算子](../cpp/casting-operators.md)。  
+ 如需有關轉換的詳細資訊，請參閱 <<c0> [ 轉型運算子](../cpp/casting-operators.md)。  
   
- `safe_cast` 不會套用**const_cast** (沒有**const**)。  
+ **safe_cast**不會套用**const_cast** (拋棄**const**)。  
   
- `safe_cast` 位於 cli 命名空間。  請參閱[平台、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)如需詳細資訊。  
+ **safe_cast**位於 cli 命名空間。  請參閱[Platform、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)如需詳細資訊。  
   
- 如需有關**safe_cas**t，請參閱：  
+ 如需詳細資訊**safe_cast**，請參閱：  
   
--   [使用 /clr 進行 C-style 轉換 (C + + /CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+-   [使用 /clr 進行 C-style 轉換 (C + + /cli CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
 -   [如何：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 一個適用於不相關的介面類型之間轉型的範例，其中編譯器不會接受 `static_cast` 但接受 `safe_cast`。  使用 `safe_cast` 時，編譯器不會發出轉換錯誤，並會在執行階段上執行檢查以查看是否能轉型  
+ 一個範例中的編譯器會接受**static_cast**但接受**safe_cast**是不相關的介面型別之間的轉換。  具有**safe_cast**，編譯器不會發出轉換錯誤，並會執行檢查，以在執行階段，以查看是否可以轉型  
   
 ```cpp  
 // safe_cast.cpp  

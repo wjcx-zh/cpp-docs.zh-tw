@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: operator = 運算子 |Microsoft 文件'
+title: 'Mutex:: operator = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875483"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602742"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 運算子
-指派 （移動） 指定的 Mutex 物件傳遞給目前的 Mutex 物件。  
+指派 （移動） 指定**Mutex**物件與目前**Mutex**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,15 +35,15 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
- 右值參考到的 Mutex 物件。  
+### <a name="parameters"></a>參數  
+ *h*  
+ 若要為右值參考**Mutex**物件。  
   
 ## <a name="return-value"></a>傳回值  
- 目前的 Mutex 物件的參考。  
+ 目前的參考**Mutex**物件。  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱**移動語意**區段[右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

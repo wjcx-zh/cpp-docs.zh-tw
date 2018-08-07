@@ -1,5 +1,5 @@
 ---
-title: 範圍 （c + +） |Microsoft 文件
+title: 範圍 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877926"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603438"
 ---
 # <a name="range-c"></a>range (C++)
 指定引數或在執行階段設定其值的欄位的允許值的範圍。  
@@ -30,8 +30,7 @@ ms.locfileid: "33877926"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -42,14 +41,14 @@ ms.locfileid: "33877926"
  下限範圍值。  
   
  *high*  
- 上限範圍值。  
+ 高範圍的值。  
   
 ## <a name="remarks"></a>備註  
  **範圍**c + + 屬性具有相同的功能[範圍](http://msdn.microsoft.com/library/windows/desktop/aa367151)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -69,7 +68,7 @@ __interface ICustom {
   
 |||  
 |-|-|  
-|**適用於**|介面方法的介面參數|  
+|**適用於**|介面方法，介面參數|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

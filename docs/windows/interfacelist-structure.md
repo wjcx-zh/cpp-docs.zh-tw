@@ -1,5 +1,5 @@
 ---
-title: InterfaceList 結構 |Microsoft 文件
+title: InterfaceList 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876731"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604836"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,15 +37,15 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 介面名稱。遞迴清單中的第一個介面。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 介面名稱;[遞迴] 清單中的第一個介面。  
   
- `U`  
- 介面名稱。遞迴清單中其餘的介面。  
+ *U*  
+ 介面名稱;在 [遞迴] 清單中其餘的介面。  
   
 ## <a name="remarks"></a>備註  
- 用來建立介面的遞迴式清單。  
+ 用來建立介面的遞迴清單。  
   
 ## <a name="members"></a>成員  
   
@@ -53,8 +53,8 @@ struct InterfaceList;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`FirstT`|樣板參數的同義字`T`。|  
-|`RestT`|樣板參數的同義字`U`。|  
+|`FirstT`|範本參數同義*T*。|  
+|`RestT`|範本參數同義*U*。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `InterfaceList`  

@@ -1,5 +1,5 @@
 ---
-title: readonly （c + +） |Microsoft 文件
+title: readonly （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87933b214dfe91f1c9f7db88127ef83da5b7201c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876562"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604420"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 禁止指派給資料成員。  
@@ -30,9 +30,7 @@ ms.locfileid: "33876562"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [readonly]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -43,7 +41,7 @@ ms.locfileid: "33876562"
 ## <a name="example"></a>範例  
  下列程式碼示範 **readonly** 屬性的用法：  
   
-```  
+```cpp  
 // cpp_attr_ref_readonly.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  

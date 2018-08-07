@@ -1,5 +1,5 @@
 ---
-title: includelib （c + +） |Microsoft 文件
+title: includelib （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878888"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603377"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-會導致的.idl 或.h 檔案包含在產生的.idl 檔案。  
+會導致的.idl 或.h 檔案要包含在產生的.idl 檔案中。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ includelib(  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *name.idl*  
- 您想要包含在產生的.idl 檔的.idl 檔案名稱。  
+ 您想要產生的.idl 檔案的一部分的.idl 檔案的名稱。  
   
 ## <a name="remarks"></a>備註  
- `includelib` C + + 屬性會造成的.idl 或.h 檔案包含在產生的.idl 檔案之後,`importlib`陳述式。  
+ **Includelib** c + + 屬性會造成的.idl 或.h 檔案之後，在產生的.idl 檔案中，包含`importlib`陳述式。  
   
 ## <a name="example"></a>範例  
- 下列程式碼所示的.cpp 檔：  
+ 下列程式碼所示的.cpp 檔案：  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

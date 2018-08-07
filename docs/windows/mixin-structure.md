@@ -1,5 +1,5 @@
 ---
-title: MixIn 結構 |Microsoft 文件
+title: MixIn 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b20dac5f189a51a1610da45e43e03e51ff1c3610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0ebf8efb556aef4fbd5048fa1930f2d98a01410
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876159"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605720"
 ---
 # <a name="mixin-structure"></a>MixIn 結構
 確保執行階段類別衍生自 Windows 執行階段介面 (若有的話)，然後才是傳統 COM 介面。  
@@ -39,18 +39,18 @@ template<
 struct MixIn;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `Derived`  
+### <a name="parameters"></a>參數  
+ *衍生*  
  型別衍生自[實作](../windows/implements-structure.md)結構。  
   
- `MixInType`  
+ *MixInType*  
  基底類型。  
   
- `hasImplements`  
- `true` 如果`MixInType`是衍生自目前實作的基底類型。`false`否則。  
+ *hasImplements*  
+ **真**如果*MixInType*是衍生自目前實作的基底類型;**false**否則。  
   
 ## <a name="remarks"></a>備註  
- 如果類別衍生自 Windows 執行階段和 COM 的類別介面，在類別宣告清單必須先列出的任何 Windows 執行階段介面，然後任何傳統 COM 介面。 MixIn 可確保指定的介面時，會以正確的順序。  
+ 如果類別衍生自 Windows 執行階段和兩種類別的 COM 介面，類別宣告清單都必須先列出的任何 Windows 執行階段介面，則任何傳統的 COM 介面。 **MixIn**可確保以正確的順序，指定介面。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `MixIn`  

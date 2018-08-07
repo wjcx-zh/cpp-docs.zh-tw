@@ -1,5 +1,5 @@
 ---
-title: importidl |Microsoft 文件
+title: importidl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877471"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607179"
 ---
 # <a name="importidl"></a>importidl
-將指定的.idl 檔案插入至產生的.idl 檔案。  
+指定的.idl 檔插入所產生的.idl 檔案。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>參數  
- `idl_file`  
- 識別您想要與應用程式將會產生.idl 檔案合併的.idl 檔案名稱。  
+### <a name="parameters"></a>參數  
+ *idl_file*  
+ 識別您想要與您的應用程式將會產生.idl 檔案合併的.idl 檔案的名稱。  
   
 ## <a name="remarks"></a>備註  
- **Importidl** c + + 屬性會放在程式庫區塊外的區段 (在`idl_file`) 至您的程式產生的.idl 檔案和媒體櫃一節 (在`idl_file`) 到您的程式的程式庫區段產生的.idl 檔案。  
+ **Importidl** c + + 屬性會放之外的程式庫區塊的區段 (在*idl_file*) 到您的程式產生的.idl 檔案和程式庫 > 一節 (在*idl_file*) 到程式庫，您的程式區段產生.idl 檔案。  
   
- 您可能想要使用**importidl**，例如，如果您想要使用手動編碼的.idl 檔與產生的.idl 檔案。  
+ 您可能想要**importidl**，比方說，如果您想要使用產生的.idl 檔案中的手動編碼的.idl 檔案。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  

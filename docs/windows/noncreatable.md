@@ -1,5 +1,5 @@
 ---
-title: noncreatable |Microsoft 文件
+title: noncreatable |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4055d541fa60c714262a64466734bc2b2323775b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4881d0e2bc1379f5c4cafa17f485707bca315783
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877819"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607939"
 ---
 # <a name="noncreatable"></a>noncreatable
 定義本身無法具現化的物件。  
@@ -30,19 +30,17 @@ ms.locfileid: "33877819"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [noncreatable]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- **Noncreatable** c + + 屬性具有相同的功能[noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 屬性並自動傳遞至所產生。編譯器的 IDL 檔案。  
+ **Noncreatable** c + + 屬性具有相同的功能[noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 屬性會自動傳至所產生。編譯器的 IDL 檔案。  
   
- 使用 ATL 專案中使用這個屬性時，屬性的行為變更。 除了上述的行為，此屬性也會插入[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)巨集。 這個巨集指示 ATL 物件無法從外部建立。  
+ 使用 ATL 的專案中使用這個屬性時，屬性的行為變更。 除了上述的行為，該屬性也會插入[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)巨集。 這個巨集表示 ATL 物件無法從外部建立。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_noncreatable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ class CMyClass : public A
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
 |**必要屬性**|**coclass**|  
 |**無效屬性**|無|  

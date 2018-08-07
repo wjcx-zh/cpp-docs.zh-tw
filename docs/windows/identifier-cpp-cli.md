@@ -1,5 +1,5 @@
 ---
-title: __identifier (c + + /CLI) |Microsoft 文件
+title: __identifier (c + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877679"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603341"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可讓您使用 Visual c + + 關鍵字當做識別項。  
   
 ## <a name="all-platforms"></a>所有平台  
-**語法**  
+### <a name="syntax"></a>語法  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**備註**  
+### <a name="remarks"></a>備註  
   
-使用`__identifier`關鍵字不是關鍵字的識別項是允許的但強烈不建議使用的樣式。  
+利用 **__identifier**關鍵字的識別項不是關鍵字是允許的但強烈不建議的樣式。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ### <a name="examples"></a>範例  
  **範例**  
   
- 在下列範例中，類別命名為`template`C# 中建立並發佈成 DLL 的形式。 使用 Visual c + + 程式中`template`類別`__identifier`關鍵字隱藏事實，`template`是標準 c + + 關鍵字。  
+ 在下列範例中，類別命名為`template`是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中`template`類別， **__identifier**關鍵字會隱藏這個事實所**範本**是標準的 c + + 關鍵字。  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **備註**  
+### <a name="remarks"></a>備註  
   
- `__identifier`關鍵字是與有效 **/clr**編譯器選項。  
+ **__Identifier**關鍵字是適用於`/clr`編譯器選項。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 在下列範例中，類別命名為`template`C# 中建立並發佈成 DLL 的形式。 使用 Visual c + + 程式中`template`類別`__identifier`關鍵字隱藏事實，`template`是標準 c + + 關鍵字。  
+ 在下列範例中，類別命名為`template`是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中`template`類別， **__identifier**關鍵字會隱藏這個事實所**範本**是標準的 c + + 關鍵字。  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  

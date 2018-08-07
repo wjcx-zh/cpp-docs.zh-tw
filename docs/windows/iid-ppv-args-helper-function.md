@@ -1,5 +1,5 @@
 ---
-title: IID_PPV_ARGS_Helper 函式 |Microsoft 文件
+title: IID_PPV_ARGS_Helper 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882338"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608374"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 函式
 確認指定的引數的型別衍生自`IUnknown`介面。  
   
 > [!IMPORTANT]
->  這個樣板特製化支援 WRL 基礎結構，並不是直接從您的程式碼使用。 使用[IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)改為。  
+>  此樣板特製化支援 WRL 結構，而且不是直接從您的程式碼使用。 使用[IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)改。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 引數的型別`pp`。  
+ *T*  
+ 引數的型別*pp*。  
   
- `pp`  
+ *前置處理*  
  雙向間接指標。  
   
 ## <a name="return-value"></a>傳回值  
- 引數`pp`轉換成指標-到-a-指標`void`。  
+ 引數*pp*轉換成指標-至-a-指標**void**。  
   
 ## <a name="remarks"></a>備註  
- 會產生編譯時間錯誤的範本參數`T`不是衍生自`IUnknown`。  
+ 如果，就會產生編譯時期錯誤的範本參數*T*不是衍生自`IUnknown`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  
   
 ## <a name="see-also"></a>另請參閱  
- [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

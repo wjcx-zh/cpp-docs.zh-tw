@@ -1,5 +1,5 @@
 ---
-title: SafeLessThanEquals |Microsoft 文件
+title: SafeLessThanEquals |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd783f5d611b6055c542f56d04e2249b71b31218
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6e1dc50333839764ce37e9d6d09e106e1ae0c2d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892809"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604573"
 ---
 # <a name="safelessthanequals"></a>SafeLessThanEquals
 比較兩個數字。  
@@ -37,25 +37,25 @@ inline bool SafeLessThanEquals (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>參數  
- [輸入] `t`  
- 要比較的第一個數字。 這必須為類型 T。  
+### <a name="parameters"></a>參數  
+ [in]*t*  
+ 要比較的第一個數字。 這必須是型別`T`。  
   
- [輸入] `u`  
- 要比較的第二個數字。 這必須為類型 U。  
+ [in]*u*  
+ 要比較的第二個點數。 這必須是型別`U`。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果`t`小於或等於`u`，否則為`false`。  
+ **真**如果*t*小於或等於*u*; 否則為**false**。  
   
 ## <a name="remarks"></a>備註  
- `SafeLessThanEquals` 延伸一般比較運算子，讓您比較兩個不同類型的數字。  
+ **SafeLessThanEquals**擴充一般比較運算子，可讓您比較兩種不同的數字。  
   
- 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，適用於單一比對作業不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
+ 這個方法屬於[SafeInt 程式庫](../windows/safeint-library.md)而設計的單一比較作業，而不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
 >  此方法應只有在必須保護單一數學作業時才使用。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本類型的詳細資訊`T`並`U`，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** safeint.h  

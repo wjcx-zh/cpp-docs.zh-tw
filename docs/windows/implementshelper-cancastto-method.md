@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Cancastto 方法 |Microsoft 文件'
+title: 'Implementshelper:: Cancastto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876549"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605474"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,21 +41,21 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `riid`  
+### <a name="parameters"></a>參數  
+ *riid*  
  參考介面識別碼。  
   
- `ppv`  
- 如果這項作業成功時，所指定介面的指標`riid`或`iid`。  
+ *ppv*  
+ 如果這項作業成功時，所指定之介面指標*riid*或是*iid*。  
   
- `iid`  
+ *iid*  
  參考介面識別碼。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
 ## <a name="remarks"></a>備註  
- 取得指定的介面 ID 的指標  
+ 取得指標的指定的介面 id。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

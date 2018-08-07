@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase 結構 |Microsoft 文件
+title: ImplementsBase 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875769"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603960"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ struct ImplementsBase;
 ```  
   
 ## <a name="remarks"></a>備註  
- 用來驗證範本參數的型別中[Implements 結構](../windows/implements-structure.md)。  
+ 用來驗證範本中的參數型別[Implements 結構](../windows/implements-structure.md)。  
   
- ImplementsBase 結構是空的設計。  
+ **ImplementsBase**結構是空的設計。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `ImplementsBase`  

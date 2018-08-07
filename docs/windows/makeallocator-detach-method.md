@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Detach 方法 |Microsoft 文件'
+title: 'Makeallocator:: Detach 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50afca04492c29aa526f7a004c6e0f725022e9ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a269b7cbab3bba180dfc389075346db3c60e8bf0
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876965"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603364"
 ---
 # <a name="makeallocatordetach-method"></a>MakeAllocator::Detach 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ __forceinline void Detach();
 ```  
   
 ## <a name="remarks"></a>備註  
- 取消關聯所配置的記憶體[配置](../windows/makeallocator-allocate-method.md)從目前 MakeAllocator 物件的方法。  
+ 解除配置的記憶體[Allocate](../windows/makeallocator-allocate-method.md)方法，從目前**MakeAllocator**物件。  
   
- 如果您呼叫 Detach()，您必須負責刪除配置方法所提供的記憶體。  
+ 如果您呼叫**Detach()**，您必須負責刪除所提供的記憶體`Allocate`方法。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

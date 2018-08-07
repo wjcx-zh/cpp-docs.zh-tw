@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Addref 方法 |Microsoft 文件'
+title: 'Runtimeclass:: Addref 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c570209ff612fb4fcedd77dbae92f72b2744a52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7bd721d8f1edeedacc04515eef917899ed0c667
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892256"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608478"
 ---
 # <a name="runtimeclassaddref-method"></a>RuntimeClass::AddRef 方法
-遞增目前 RuntimeClass 物件的參考計數。  
+目前的參考計數會遞增**RuntimeClass**物件。  
   
 ## <a name="syntax"></a>語法  
   

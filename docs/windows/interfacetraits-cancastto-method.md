@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Cancastto 方法 |Microsoft 文件'
+title: 'Interfacetraits:: Cancastto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,46 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879577"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607825"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
-  
 ```  
   
-#### <a name="parameters"></a>參數  
- `ptr`  
+### <a name="parameters"></a>參數  
+ *ptr*  
  類型的指標的名稱。  
   
- `riid`  
+ *riid*  
  介面 ID `Base`。  
   
- `ppv`  
- 如果這項作業成功，`ppv`指向所指定介面`Base`。 否則，`ppv`設`nullptr`。  
+ *ppv*  
+ 如果這項作業成功， *ppv*指向所指定之介面`Base`。 否則，請*ppv*設為**nullptr**。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果此作業成功，`ptr`轉換成指標`Base`，否則`false`。  
+ **則為 true**這項作業成功時並*ptr*轉換成指標`Base`，否則**false** 。  
   
 ## <a name="remarks"></a>備註  
  指出指定的指標是否可以轉換成指標`Base`。  
   
- 如需有關`Base`，請參閱公用 Typedefs 節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
+ 如需詳細資訊`Base`，請參閱 <<c2>  **公用 Typedefs**一節中[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

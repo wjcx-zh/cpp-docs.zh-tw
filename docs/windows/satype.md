@@ -1,5 +1,5 @@
 ---
-title: satype |Microsoft 文件
+title: satype |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888678"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603390"
 ---
 # <a name="satype"></a>satype
-指定的資料型別**SAFEARRAY**結構。  
+指定的資料型別`SAFEARRAY`結構。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *data_type*  
- 資料型別**SAFEARRAY**做為參數傳遞至介面方法的資料結構。  
+ 資料型別`SAFEARRAY`做為參數傳遞至介面方法的資料結構。  
   
 ## <a name="requirements"></a>需求  
   
@@ -46,20 +45,20 @@ ms.locfileid: "33888678"
   
 |||  
 |-|-|  
-|**適用於**|介面參數，在介面方法|  
+|**適用於**|介面參數，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
   
 ## <a name="remarks"></a>備註  
- **Satype** c + + 屬性指定的資料型別**SAFEARRAY**。  
+ **Satype** c + + 屬性指定的資料型別`SAFEARRAY`。  
   
 > [!NOTE]
->  從卸除的間接取值層級**SAFEARRAY**如何宣告，在.cpp 檔案中產生的.idl 檔中的指標。  
+>  從卸除的間接取值層級`SAFEARRAY`從它在.cpp 檔案中的宣告方式產生的.idl 檔案中的指標。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

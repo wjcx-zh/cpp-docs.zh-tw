@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Iidcount 常數 |Microsoft 文件'
+title: 'Interfacetraits:: Iidcount 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2664292324ebb395f3a5f260dec57360027c60e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874063"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602723"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount 常數
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ static const unsigned long IidCount = 1;
 ```  
   
 ## <a name="remarks"></a>備註  
- 保存介面識別碼相關聯的目前 InterfaceTraits 物件的數目。  
+ 保存的介面識別碼相關聯的目前數目**InterfaceTraits**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: 實作 （c + +） |Microsoft 文件
+title: 實作 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880679"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606458"
 ---
 # <a name="implements-c"></a>implements (C++)
-指定強制為成員的 IDL coclass 的分派介面。  
+指定分派介面，強制讓 IDL coclass 的成員。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>參數  
- **interfaces**  
- 以逗號分隔的 IDL coclass 的成員的介面清單。 指定單一介面的簡略方法是**實作 (***interface_name***)**。  
+### <a name="parameters"></a>參數  
+ *interfaces*  
+ 以逗號分隔清單中會是成員的 IDL coclass 的介面。 指定單一介面的簡略方法是**實作 (***interface_name***)**。  
   
- **dispinterfaces**  
- 以逗號分隔清單的成員 IDL coclass 的分配介面。 指定單一的分配介面的簡略方法是**實作 (dispinterface** * = dispinterface_name ***)**。  
+ *dispinterfaces*  
+ 以逗號分隔會是成員的 IDL coclass dispinterface 的清單。 速記方法來指定單一 dispinterface**實作 (dispinterface** * = dispinterface_name ***)**。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，只有 COM 介面的 coclass 的基底類別會加入 IDL coclass。 **實作**可讓您強制執行其他 IDL coclass 成員的介面。  
+ 根據預設，只有 COM 介面的 coclass 的基底類別會加入在 IDL coclass。 **實作**可讓您強制執行其他 IDL coclass 成員的介面。  
   
 ## <a name="requirements"></a>需求  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33880679"
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|[是]|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
@@ -61,9 +60,9 @@ ms.locfileid: "33880679"
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例是三個部分：.idl 檔案和其相關聯的.h 檔案和 c + + 檔案。  
+ 下列範例會在三個部分：.idl 檔及其相關聯的.h 檔案和 c + + 檔案。  
   
- 假設下列的.idl 檔案，將提供給編譯器。  
+ 假設下列的.idl 檔案，將會提供給編譯器。  
   
 ```  
 // attr_implements.idl  
@@ -115,7 +114,7 @@ library odod
 ## <a name="example"></a>範例  
  和下列的.h 檔案也必須是提供給編譯器。  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>範例  
- 在下列程式中，而不實作 」，IBar1、 IBar2 和 ISna 將無法在所產生的 IDL coclass 中。  
+ 在下列程式中，而不需要實作`IBar1`， `IBar2`，並`ISna`都不會在`coclass`所產生的 IDL 中。  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

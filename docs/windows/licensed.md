@@ -1,5 +1,5 @@
 ---
-title: 授權 |Microsoft 文件
+title: 授權 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875743"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603798"
 ---
 # <a name="licensed"></a>licensed
-表示它所套用的 COM 物件係授權使用，而且必須使用具現化**IClassFactory2**。  
+表示已取得授權，它所套用的 COM 物件，而且必須具現化使用`IClassFactory2`。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -40,7 +38,7 @@ ms.locfileid: "33875743"
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
-|**必要屬性**|**coclass**|  
+|**必要屬性**|`coclass`|  
 |**無效屬性**|無|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

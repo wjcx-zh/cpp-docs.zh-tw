@@ -1,5 +1,5 @@
 ---
-title: IsBaseOfStrict 結構 |Microsoft 文件
+title: IsBaseOfStrict 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876887"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604499"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +42,17 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `Base`  
+### <a name="parameters"></a>參數  
+ *基底*  
  基底類型。  
   
- `Derived`  
- 衍生的型別。  
+ *衍生*  
+ 在衍生的型別。  
   
 ## <a name="remarks"></a>備註  
  測試某個類型是否為另一個類型的基底。  
   
- 第一個範本會測試是否為型別衍生自基底型別，可能會產生**true**或**false**。 第二個範本會測試是否為型別衍生自本身，一律會產生**false**。  
+ 第一個範本會測試是否為型別衍生自基底型別，可能會產生**真**或是**false**。 第二個範本會測試是否為型別衍生自本身，這一律會產生**false**。  
   
 ## <a name="members"></a>成員  
   

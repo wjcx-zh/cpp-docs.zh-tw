@@ -1,5 +1,5 @@
 ---
-title: ImplementsHelper 結構 |Microsoft 文件
+title: ImplementsHelper 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875935"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605613"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ template <
 friend struct Details::ImplementsHelper;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `RuntimeClassFlagsT`  
+### <a name="parameters"></a>參數  
+ *RuntimeClassFlagsT*  
  指定一或多個旗標欄位[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。  
   
- `ILst`  
- 介面 Id 的清單。  
+ *ILst*  
+ 介面識別碼的清單。  
   
- `IsDelegateToClass`  
- 指定`true`中的第一個介面 ID 的基底類別實作的目前執行個體是否`ILst`，否則`false`。  
+ *IsDelegateToClass*  
+ 指定 **，則為 true**如果目前的執行個體`Implements`的基底類別中的第一個介面識別碼*ILst*; 否則**false**。  
   
 ## <a name="remarks"></a>備註  
  可協助實作[實作](../windows/implements-structure.md)結構。  
   
- 此範本會周遊的介面清單，並將它們加入做為基底類別，以及啟用 QueryInterface 所需的資訊。  
+ 此範本會周遊之介面的清單，並將它們加入做為基底類別，以及啟用 QueryInterface 所需的資訊。  
   
 ## <a name="members"></a>成員  
   
@@ -64,5 +64,5 @@ friend struct Details::ImplementsHelper;
  **命名空間：** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>另請參閱  
- [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: registration_script |Microsoft 文件
+title: registration_script |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4385dd12fccafb154a637dd5260764667d3887a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878719"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607669"
 ---
 # <a name="registrationscript"></a>registration_script
 執行指定的自訂註冊指令碼。  
@@ -30,25 +30,24 @@ ms.locfileid: "33878719"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ registration_script(   
+[ registration_script(   
    script   
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *指令碼*  
- 自訂註冊指令碼 (.rgs) 檔案的完整路徑。 值為**無**，例如`script = "none"`，表示 coclass 擁有任何註冊需求。  
+ 自訂註冊指令碼 (.rgs) 檔案的完整路徑。 值為**無**，例如`script = "none"`，指出 coclass 有沒有註冊需求。  
   
 ## <a name="remarks"></a>備註  
- **Registration_script** c + + 屬性來執行所指定的自訂註冊指令碼**指令碼**。 如果未指定此屬性，則會使用標準的.rgs 檔案 （包含將元件註冊資訊）。 如需有關.rgs 檔案的詳細資訊，請參閱[ATL 登錄元件 （登錄器）](../atl/atl-registry-component-registrar.md)。  
+ **Registration_script** c + + 屬性執行所指定的自訂註冊指令碼*指令碼*。 如果未指定此屬性，則會使用標準的.rgs 檔案 （包含註冊元件的資訊）。 如需有關.rgs 檔案的詳細資訊，請參閱[ATL 登錄元件 （登錄器）](../atl/atl-registry-component-registrar.md)。  
   
  此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會指定此元件的呼叫 cpp_attr_ref_registration_script.rgs 登錄指令碼。  
+ 下列程式碼會指定此元件可稱為 cpp_attr_ref_registration_script.rgs 登錄指令碼。  
   
-```  
+```cpp  
 // cpp_attr_ref_registration_script.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -73,9 +72,9 @@ class CMyClass:public IFace {};
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
-|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

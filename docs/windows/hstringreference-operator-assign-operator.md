@@ -1,5 +1,5 @@
 ---
-title: 'Hstringreference:: Operator = 運算子 |Microsoft 文件'
+title: 'Hstringreference:: Operator = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73ec71526d340aafb16ddf2af274dce7ad0e9cbd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc8f919dcec994be5d4f0300e9c96dde95895e16
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875535"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608517"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator= 運算子
-將另一個 HStringReference 物件的值移至目前 HStringReference 物件。  
+將另一個值移**HStringReference**物件與目前**HStringReference**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,12 +31,12 @@ ms.locfileid: "33875535"
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### <a name="parameters"></a>參數  
- `other`  
- HStringReference 現有的物件。  
+### <a name="parameters"></a>參數  
+ *other*  
+ 將現有**HStringReference**物件。  
   
 ## <a name="remarks"></a>備註  
- 現有的值`other`物件會複製到目前的 HStringReference 物件，然後`other`物件被終結。  
+ 現有的值*其他*物件會複製到目前**HStringReference**物件，然後*其他*物件被終結。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

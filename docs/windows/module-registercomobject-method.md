@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registercomobject 方法 |Microsoft 文件'
+title: 'Module:: registercomobject 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873975"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606536"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
-註冊一個或多個 COM 物件，讓其他應用程式可以連接到它們。  
+讓其他應用程式可以連線到它們，請註冊一個或多個 COM 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,29 +39,29 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>參數  
- `serverName`  
- 伺服器的完整限定名稱。  
+### <a name="parameters"></a>參數  
+ *伺服器名稱*  
+ 完整伺服器名稱。  
   
- `clsids`  
+ *clsid*  
  若要註冊的 Clsid 的陣列。  
   
- `factories`  
+ *處理站*  
  正在發行其可用性的類別物件的 IUnknown 介面的陣列。  
   
- `cookies`  
- 當作業完成時，物件的陣列的類別識別的值的指標，已註冊。 這些值稍後用撤銷註冊。  
+ *Cookie*  
+ 作業完成後，物件的陣列的指標識別類別的值，已註冊。 稍後會使用這些值，撤銷。  
   
- `count`  
+ *count*  
  若要註冊的 Clsid 數目。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK 如果 successfu;否則，例如指出的原因的 CO_E_OBJISREG 作業失敗的 HRESULT。  
+ S_OK 如果成功;否則，例如指出原因的 CO_E_OBJISREG HRESULT 作業失敗。  
   
 ## <a name="remarks"></a>備註  
- COM 物件會註冊 CLSCTX 列舉型別的 CLSCTX_LOCAL_SERVER 列舉值。  
+ COM 物件會向 CLSCTX 列舉型別的 CLSCTX_LOCAL_SERVER 列舉值。  
   
- 目前的組合所指定的連接已註冊的物件類型`comflag`樣板參數和 REGCLS 列舉型別的 REGCLS_SUSPENDED 列舉值。  
+ 連線到已註冊的物件的型別由目前的組合*comflag*樣板參數和 REGCLS 列舉型別的 REGCLS_SUSPENDED 列舉值。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

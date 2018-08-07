@@ -1,5 +1,5 @@
 ---
-title: 參數屬性 |Microsoft 文件
+title: 參數屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2bd1f0d395375b09a192a68c8a60ea3a367115c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f96c5e3bcdd48f4fe3144b0e8885e82c2093a1d3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879392"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608841"
 ---
 # <a name="parameter-attributes"></a>參數屬性
 下列屬性套用至類別或介面中方法的參數。  
@@ -29,11 +29,11 @@ ms.locfileid: "33879392"
 |屬性|描述|  
 |---------------|-----------------|  
 |[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
-|[defaultvalue](../windows/defaultvalue.md)|允許指定具類型的選擇性參數的預設值。|  
+|[defaultvalue](../windows/defaultvalue.md)|允許指定的具類型的選擇性參數的預設值。|  
 |[first_is](../windows/first-is.md)|指定要傳送的第一個陣列元素的索引。|  
 |[iid_is](../windows/iid-is.md)|指定要傳送的第一個陣列元素的索引。|  
-|[immediatebind](../windows/immediatebind.md)|指示資料庫將會立即被告知資料繫結物件的屬性的所有變更。|  
-|[in](../windows/in-cpp.md)|指出參數是要呼叫的程序從傳遞給呼叫的程序。|  
+|[immediatebind](../windows/immediatebind.md)|表示資料庫將會立即被告知資料繫結物件的屬性的所有變更。|  
+|[in](../windows/in-cpp.md)|指出參數是要呼叫的程序從傳遞至呼叫的程序。|  
 |[last_is](../windows/last-is.md)|指定要傳送的最後一個陣列元素的索引。|  
 |[lcid](../windows/lcid.md)|可讓您將地區設定識別碼傳遞給函式。|  
 |[length_is](../windows/length-is.md)|指定要傳送的陣列元素數目。|  
@@ -43,8 +43,8 @@ ms.locfileid: "33879392"
 |[範圍](../windows/range-cpp.md)|指定引數或在執行階段設定其值的欄位的允許值的範圍。|  
 |[ref](../windows/ref-cpp.md)|識別參考指標。|  
 |[retval](../windows/retval.md)|指定接收成員的傳回值的參數。|  
-|[satype](../windows/satype.md)|指定的資料型別**SAFEARRAY**結構。|  
-|[size_is](../windows/size-is.md)|指定的記憶體大小配置大小的指標，調整大小的指標和單一或多維度陣列的指標。|  
+|[satype](../windows/satype.md)|指定的資料型別`SAFEARRAY`結構。|  
+|[size_is](../windows/size-is.md)|指定記憶體的大小配置大小的指標，且大小來調整大小的指標，以及單一或多維陣列的指標。|  
 |[unique](../windows/unique-cpp.md)|指定唯一的指標。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Queryinterface 方法 |Microsoft 文件'
+title: 'Runtimeclass:: Queryinterface 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892101"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603533"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface 方法
 擷取指定的介面 ID 的指標  
@@ -30,7 +30,6 @@ ms.locfileid: "33892101"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>參數  
- `riid`  
+### <a name="parameters"></a>參數  
+ *riid*  
  介面識別碼。  
   
- `ppvObject`  
- 此 opereation 完成時，所指定介面的指標`riid`參數。  
+ *ppvObject*  
+ 此 opereation 完成時，所指定之介面的指標*riid*參數。  
   
 ## <a name="return-value"></a>傳回值  
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  

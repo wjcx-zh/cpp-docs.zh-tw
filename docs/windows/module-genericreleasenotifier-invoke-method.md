@@ -1,5 +1,5 @@
 ---
-title: 'Module:: genericreleasenotifier:: Invoke 方法 |Microsoft 文件'
+title: 'Module:: genericreleasenotifier:: Invoke 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ce08cdb1cfcba5e63c94904af965f504f30a8e4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875327"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606406"
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke 方法
-呼叫目前 module:: genericreleasenotifier 物件相關聯的事件處理常式。  
+呼叫目前相關聯的事件處理常式**module:: genericreleasenotifier**物件。  
   
 ## <a name="syntax"></a>語法  
   

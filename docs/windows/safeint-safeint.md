@@ -1,5 +1,5 @@
 ---
-title: 'Safeint:: Safeint |Microsoft 文件'
+title: 'Safeint:: Safeint |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7154349105c1953ad314b7928e7be8385179c42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6bcac8dec2e85f0ea7d1d4530ed6ff1b7acc08
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888743"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604339"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
-建構 `SafeInt` 物件。  
+建構**SafeInt**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,32 +53,32 @@ SafeInt (
 )  
 ```  
   
-#### <a name="parameters"></a>參數  
- [輸入] `i`  
- 新的值`SafeInt`物件。 這必須是類型 T 或 U，根據建構函式的參數。  
+### <a name="parameters"></a>參數  
+ [in]*我*  
+ 新的值**SafeInt**物件。 這必須是類型 T 或 U，根據建構函式的參數。  
   
- [輸入] `b`  
- 新的布林值`SafeInt`物件。  
+ [in]*b*  
+ 新的布林值**SafeInt**物件。  
   
- [輸入] `u`  
- A`SafeInt`為類型 u。新`SafeInt`物件會具有相同的值做為`u`，但會為類型 t。  
+ [in]*u*  
+ A **SafeInt**為類型 u。新**SafeInt**物件會有相同的值*u*，但會是 t 型別  
   
  U  
- 中儲存的資料型別`SafeInt`。 這可以是布林值、 字元或整數類型。 如果是整數類型，它可以是帶正負號或不帶正負號和介於 8 到 64 位元。  
+ 中儲存的資料型別**SafeInt**。 這可以是布林值、 字元或整數類型。 如果是整數類型，它可以是帶正負號或不帶正負號和介於 8 到 64 位元。  
   
 ## <a name="remarks"></a>備註  
- 如需有關範本類型`T`和`E`，請參閱[SafeInt 類別](../windows/safeint-class.md)。  
+ 如需範本類型的詳細資訊`T`並`E`，請參閱[SafeInt 類別](../windows/safeint-class.md)。  
   
- 輸入的參數的建構函式，`i`或`u`，必須是布林值、 字元或整數類型。 如果它是另一個類型的參數，`SafeInt`類別會呼叫[static_assert](../cpp/static-assert.md)表示無效的輸入的參數。  
+ 建構函式的輸入的參數*我*或是*u*，必須是布林值、 字元或整數類型。 如果它是參數的另一種**SafeInt**類別會呼叫[static_assert](../cpp/static-assert.md)表示無效的輸入的參數。  
   
- 使用範本類型的建構函式`U`自動轉換為所指定之類型的 輸入的參數`T`。 `SafeInt`類別會轉換成沒有遺失任何資料的資料。 它會報告錯誤處理常式`E`如果它無法轉換輸入資料`T`不會遺失資料。  
+ 使用範本類型的建構函式`U`自動轉換為所指定之類型的 輸入的參數`T`。 **SafeInt**類別將不會遺失任何資料的資料轉換。 它會報告錯誤處理常式`E`如果無法轉換輸入資料`T`不會遺失資料。  
   
- 如果您建立`SafeInt`從布林值參數，您需要立即初始化值。 無法建構`SafeInt`使用程式碼`SafeInt<bool> sb;`。 這會產生編譯錯誤。  
+ 如果您建立**SafeInt**從布林值的參數，您必須立即初始化的值。 您無法建構**SafeInt**使用程式碼`SafeInt<bool> sb;`。 這會產生編譯錯誤。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** safeint.h  
   
- **命名空間：** msl::utilities  
+ **命名空間：** msl:: utilities  
   
 ## <a name="see-also"></a>另請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   

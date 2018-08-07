@@ -1,5 +1,5 @@
 ---
-title: retval |Microsoft 文件
+title: retval |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888717"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606347"
 ---
 # <a name="retval"></a>retval
 指定接收成員的傳回值的參數。  
@@ -30,9 +30,7 @@ ms.locfileid: "33888717"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -41,7 +39,7 @@ ms.locfileid: "33888717"
  **retval**必須出現在函式宣告中的最後一個引數。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[可繫結](../windows/bindable.md)的範例使用**retval**。  
+ 範例，請參閱[可繫結](../windows/bindable.md)範例使用**retval**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -49,7 +47,7 @@ ms.locfileid: "33888717"
   
 |||  
 |-|-|  
-|**適用於**|介面參數，在介面方法|  
+|**適用於**|介面參數，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|**out**|  
 |**無效屬性**|**in**|  

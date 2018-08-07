@@ -1,5 +1,5 @@
 ---
-title: Module::MethodReleaseNotifier::object_ 資料成員 |Microsoft 文件
+title: Module::MethodReleaseNotifier::object_ 資料成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2ed7505943f71e2fb1817d075d7afaf69323160
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bcc6efe59c71314837ff9c47d9c86c5b7f36c608
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881532"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607228"
 ---
 # <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ 資料成員
-成員函式是目前的 module:: methodreleasenotifier 物件的事件處理常式的物件會保留指標。  
+成員函式是目前的事件處理常式的物件會保留指標**module:: methodreleasenotifier**物件。  
   
 ## <a name="syntax"></a>語法  
   

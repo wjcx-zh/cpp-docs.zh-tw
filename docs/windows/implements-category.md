@@ -1,5 +1,5 @@
 ---
-title: implements_category |Microsoft 文件
+title: implements_category |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6770f8303af63c66f0d1a656c2b36e034cc2be83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879031"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603712"
 ---
 # <a name="implementscategory"></a>implements_category
 指定目標類別所實作的元件類別。  
@@ -30,25 +30,24 @@ ms.locfileid: "33879031"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ implements_category(  
+[ implements_category(  
    implements_category="uuid"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- **implements_category**  
+### <a name="parameters"></a>參數  
+ *implements_category*  
  實作的類別目錄的識別碼。  
   
 ## <a name="remarks"></a>備註  
- **Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別圖加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱[元件類別和執行它們的運作方式為何？](http://msdn.microsoft.com/library/windows/desktop/ms694322)。  
+ **Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](http://msdn.microsoft.com/library/windows/desktop/ms694322)。  
   
- 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用 **progid** ，則也會套用 **vi_progid** 和 **coclass** 。  
+ 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼指定下列物件會實作控制項類別。  
+ 下列程式碼指定下列物件會實作 [控制項] 類別。  
   
-```  
+```cpp  
 // cpp_attr_ref_implements_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -67,9 +66,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|[是]|  
-|**必要屬性**|下列其中之一： **coclass**， **progid**，或**vi_progid**|  
+|**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|  
 |**無效屬性**|無|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
@@ -78,4 +77,3 @@ class CMyClass {};
  [COM 屬性](../windows/com-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   
  [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
- 

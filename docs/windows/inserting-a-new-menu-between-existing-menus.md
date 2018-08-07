@@ -1,5 +1,5 @@
 ---
-title: 現有的功能表間插入新 |Microsoft 文件
+title: 現有的功能表間插入新 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876328"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607104"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在現有的功能表之間插入新的功能表
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>在現有的功能表間插入新的功能表  
   
-1.  選取現有的功能表名稱並按**插入**索引鍵。 **新項目**方塊就會插入選取的項目之前。  
+1.  選取現有的功能表名稱並按**插入**索引鍵。 **新的項目** 方塊中選取的項目之前插入。  
   
      \-或-  
   
 2.  在功能表列上按一下滑鼠右鍵，然後選擇 **插入新**從捷徑功能表。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
- 需求  
+## <a name="requirements"></a>需求  
   
  Win32  
   

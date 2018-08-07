@@ -1,5 +1,5 @@
 ---
-title: 密封 （c + + 元件擴充功能） |Microsoft 文件
+title: sealed （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47efadb89786b7be54f33678d2f71d2474e4deb4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890859"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604547"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ 元件擴充功能)
-`sealed` 是表示不能覆寫虛擬成員、或類型不能用做基底類型的 ref 類別內容相關性關鍵字。  
+**密封**是 ref 類別的即時線上關鍵字表示，就無法覆寫虛擬成員，或類型不能用做基底型別。  
   
 > [!NOTE]
->  ISO C + + 11 標準語言有[最終](../cpp/final-specifier.md)支援 Visual Studio 中的關鍵字。 在標準類別上使用 `final` 而在 ref 類別上使用`sealed`。  
+>  ISO C + + 11 標準語言有[最終](../cpp/final-specifier.md)支援 Visual Studio 中的關鍵字。 使用**最終**上標準的類別，並**密封**ref 類別上。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
   
@@ -52,26 +52,26 @@ virtual return-type identifier() sealed {...};
   
  在第一個語法範例中，已密封類別。 在第二個範例中，已密封虛擬函式。  
   
- `sealed`關鍵字是有效的原生目標，以及 Windows 執行階段和 common language runtime (CLR)。 如需詳細資訊，請參閱[覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
+ **密封**關鍵字是有效的原生的目標，以及 Windows 執行階段和 common language runtime (CLR)。 如需詳細資訊，請參閱 <<c0> [ 覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
   
- 您可以在編譯時期偵測是否已密封類型使用`__is_sealed(type)`類型特性。 如需詳細資訊，請參閱[類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 您可以在編譯時期偵測是否為型別密封格式，使用`__is_sealed(type)`類型特性。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
- `sealed` 是即時線上關鍵字。  如需詳細資訊，請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ **密封**是內容相關性關鍵字。  如需詳細資訊，請參閱 <<c0> [ 即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
  請參閱[Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  (這個語言功能沒有只適用於 Common Language Runtime 的備註。)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- 這個程式碼範例顯示 `sealed` 在虛擬成員上的效果。  
+ 這個程式碼範例顯示的效果**密封**上的虛擬成員。  
   
 ```cpp  
 // sealed_keyword.cpp  

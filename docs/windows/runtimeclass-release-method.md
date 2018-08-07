@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Release 方法 |Microsoft 文件'
+title: 'Runtimeclass:: Release 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d07e941f3f8ee0d7df2df14216fa60ef3a2a706
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c1f9500abc1c92ea5f9aca64e379adfdcf84a44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888792"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607520"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release 方法
-執行目前 RuntimeClass 物件上的 COM 釋放作業。  
+COM 釋放上執行作業的目前**RuntimeClass**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ STDMETHOD_(
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
 ## <a name="remarks"></a>備註  
- 如果參考計數變成零，則會刪除 RuntimeClass 物件。  
+ 如果參考計數變成零， **RuntimeClass**刪除物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

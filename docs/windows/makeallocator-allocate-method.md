@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Allocate 方法 |Microsoft 文件'
+title: 'Makeallocator:: Allocate 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0e8d387dea7687ad61d85f975d58aa47489266d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06f8db4c713feb69e0037d10879383411ea07007
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876211"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606259"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,14 +34,14 @@ __forceinline void* Allocate();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功的話，配置的記憶體的指標否則， `nullptr`。  
+ 如果成功，已配置的記憶體; 指標否則，請**nullptr**。  
   
 ## <a name="remarks"></a>備註  
- 配置記憶體，並將它與目前 MakeAllocator 物件產生關聯。  
+ 配置記憶體，並將它與目前相關聯**MakeAllocator**物件。  
   
- 配置大小是記憶體的目前 MakeAllocator 範本參數所指定之類型的大小。  
+ 配置的記憶體大小是目前所指定之類型的大小**MakeAllocator**樣板參數。  
   
- 開發人員必須覆寫只 Allocate() 方法以實作不同的記憶體配置模式。  
+ 開發人員必須覆寫只**Allocate()** 方法，以實作不同的記憶體配置模型。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

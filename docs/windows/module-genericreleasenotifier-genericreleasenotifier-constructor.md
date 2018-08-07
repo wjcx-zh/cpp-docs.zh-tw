@@ -1,5 +1,5 @@
 ---
-title: Module::GenericReleaseNotifier::GenericReleaseNotifier 建構函式 |Microsoft 文件
+title: Module::GenericReleaseNotifier::GenericReleaseNotifier 建構函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0683220710a62c8583fa95fbfe3221ae93307eb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875054"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603932"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier 建構函式
-初始化 module:: genericreleasenotifier 類別的新執行個體。  
+初始化的新執行個體**module:: genericreleasenotifier**類別。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      GenericReleaseNotifier(  
+GenericReleaseNotifier(  
    T callback,   
    bool release  
 ) throw() : ReleaseNotifier(release), callback_(callback);  
 ```  
   
-#### <a name="parameters"></a>參數  
- `callback`  
- Lambda、 函式或可以用來叫用括號函式運算子的函式指標事件處理常式 (`()`)。  
+### <a name="parameters"></a>參數  
+ *回呼*  
+ Lambda、 函式或可以使用括號函式運算子叫用的函式指標事件處理常式 (`()`)。  
   
- `release`  
- 指定`true`啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否則指定`false`。  
+ *release*  
+ 指定 **，則為 true**若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否則指定**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

@@ -1,5 +1,5 @@
 ---
-title: 包含共用 （唯讀） 或計算符號 |Microsoft 文件
+title: 包含共用 （唯讀） 或計算符號 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879223"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608608"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共用 (唯讀) 或計算符號
 當開發環境第一次讀取另一個應用程式所建立的資源檔時，會將所有包含的標頭檔標示為唯讀。 接著，您可以使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)新增額外的唯讀符號標頭檔。  
@@ -55,19 +55,19 @@ ms.locfileid: "33879223"
   
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>在資源檔中包含共用 (唯讀) 符號  
   
-1.  在[資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇  [Resource Includes](../windows/resource-includes-dialog-box.md)從捷徑功能表。  
+1.  在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)從捷徑功能表。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在**唯讀符號指示詞**方塊中，使用 **#include**編譯器指示詞來指定您想要保存唯讀符號的檔案。  
+2.  在 **唯讀符號指示詞**方塊中，使用 **#include**編譯器指示詞來指定您想要保存唯讀符號的檔案。  
   
      請勿呼叫 Resource.h 檔案，因為這是主要的符號標頭檔通常所使用的檔名。  
   
     > [!NOTE]
-    >  **重要**完全依照您輸入時唯讀符號指示詞方塊中輸入的項目包含在資源檔。 請確定您輸入的內容不包含任何拼字或語法錯誤。  
+    >  **重要**完全依照您輸入您在唯讀符號指示詞中所輸入的內容包含在資源檔。 請確定您輸入的內容不包含任何拼字或語法錯誤。  
   
-     使用**唯讀符號指示詞**方塊可包含僅具有符號定義的檔案。 不包含資源定義；否則在儲存檔案時會建立重複的資源定義。  
+     使用**唯讀符號指示詞**方塊以包含僅具有符號定義的檔案。 不包含資源定義；否則在儲存檔案時會建立重複的資源定義。  
   
 3.  將符號放在您指定的檔案。  
   
@@ -75,9 +75,7 @@ ms.locfileid: "33879223"
   
 4.  按一下 [確定 **Deploying Office Solutions**]。  
   
-
-  
- 需求  
+## <a name="requirements"></a>需求  
   
  Win32  
   

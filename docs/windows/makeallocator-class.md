@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator 類別 |Microsoft 文件
+title: MakeAllocator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878056"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605915"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 類別
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  類型名稱。  
   
- `hasWeakReferenceSupport`  
- `true` 為支援弱式參考; 的物件配置記憶體`false`不支援弱式參考的物件配置記憶體。  
+ *hasWeakReferenceSupport*  
+ **true**支援弱式參考的物件配置記憶體**false**不支援弱式參考的物件配置記憶體。  
   
 ## <a name="remarks"></a>備註  
- 可啟用類別，或不支援弱式參考，會配置記憶體。  
+ 配置記憶體可啟動類別，包含或不含弱式參考支援。  
   
- MakeAllocator 類別來實作使用者定義的記憶體配置模型來覆寫。  
+ 覆寫**MakeAllocator**類別來實作使用者定義的記憶體配置模型。  
   
- MakeAllocator 通常用來避免記憶體流失，如果在建構期間擲回的物件。  
+ **MakeAllocator**通常用來防止記憶體流失，如果在建構期間擲回的物件。  
   
 ## <a name="members"></a>成員  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator 建構函式](../windows/makeallocator-makeallocator-constructor.md)|初始化 MakeAllocator 類別的新執行個體。|  
-|[MakeAllocator::~MakeAllocator 解構函式](../windows/makeallocator-tilde-makeallocator-destructor.md)|取消初始化 MakeAllocator 類別的目前執行個體。|  
+|[MakeAllocator::MakeAllocator 建構函式](../windows/makeallocator-makeallocator-constructor.md)|初始化的新執行個體**MakeAllocator**類別。|  
+|[MakeAllocator::~MakeAllocator 解構函式](../windows/makeallocator-tilde-makeallocator-destructor.md)|取消初始化目前的執行個體**MakeAllocator**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate 方法](../windows/makeallocator-allocate-method.md)|配置記憶體，並將它與目前 MakeAllocator 物件產生關聯。|  
-|[MakeAllocator::Detach 方法](../windows/makeallocator-detach-method.md)|取消關聯所配置的記憶體[配置](../windows/makeallocator-allocate-method.md)從目前 MakeAllocator 物件的方法。|  
+|[MakeAllocator::Allocate 方法](../windows/makeallocator-allocate-method.md)|配置記憶體，並將它與目前相關聯**MakeAllocator**物件。|  
+|[MakeAllocator::Detach 方法](../windows/makeallocator-detach-method.md)|解除配置的記憶體[Allocate](../windows/makeallocator-allocate-method.md)方法，從目前**MakeAllocator**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `MakeAllocator`  

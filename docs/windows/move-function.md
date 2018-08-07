@@ -1,5 +1,5 @@
 ---
-title: Move 函式 |Microsoft 文件
+title: Move 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876767"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607299"
 ---
 # <a name="move-function"></a>Move 函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
+### <a name="parameters"></a>參數  
+ *T*  
  引數型別。  
   
- `arg`  
- 要移動的引數。  
+ *arg*  
+ 若要移動的引數。  
   
 ## <a name="return-value"></a>傳回值  
- 參數`arg`之後參考或右值參考的特性，如果有的話，已移除。  
+ 參數*arg*之後參考或右值參考的特性，如果有的話，已移除。  
   
 ## <a name="remarks"></a>備註  
  將指定的引數從一個位置移到另一個。  
   
- 如需詳細資訊，請參閱**移動語意**區段[右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** internal.h  

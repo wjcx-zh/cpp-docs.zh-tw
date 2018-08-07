@@ -1,5 +1,5 @@
 ---
-title: 'ModuleBase:: ~ ModuleBase 解構函式 |Microsoft 文件'
+title: 'ModuleBase:: ~ ModuleBase 解構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1dc6de0d4c3bc5bb723b1dbb39f146a49fe7ba8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d648577d03507154c8e3b226fa00e3f03dc25abc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876354"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608504"
 ---
 # <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase 解構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ virtual ~ModuleBase();
 ```  
   
 ## <a name="remarks"></a>備註  
- 取消初始化 ModuleBase 類別的目前執行個體。  
+ 取消初始化目前的執行個體**ModuleBase**類別。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

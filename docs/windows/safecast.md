@@ -1,5 +1,5 @@
 ---
-title: SafeCast |Microsoft 文件
+title: SafeCast |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5b1c5fed776e5e9312843160a740fd3d801b196
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892448"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608543"
 ---
 # <a name="safecast"></a>SafeCast
-會轉換成其他類型的數字的一種類型。  
+將一種類型的編號，另一種類型的轉換。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +37,23 @@ inline bool SafeCast (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- [輸入] `From`  
- 要轉換的來源點數。 這必須為類型 T。  
+### <a name="parameters"></a>參數  
+ [in]*從*  
+ 要轉換的來源點數。 這必須是型別`T`。  
   
- [輸出] `To`  
- 新的數字類型的參考。 這必須為類型 U。  
+ [out]*至*  
+ 新的數字類型的參考。 這必須是型別`U`。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果沒有發生錯誤。`false`如果發生錯誤。  
+ **true**如果沒有發生錯誤;**false**發生錯誤。  
   
 ## <a name="remarks"></a>備註  
- 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，適用於單一的轉型作業而不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
+ 這個方法屬於[SafeInt 程式庫](../windows/safeint-library.md)而設計的單一轉換作業，而不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  必須保護單一作業時，才應該使用這個方法。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
+>  這個方法應該只用於時必須保護單一作業。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本類型 T 和 U 的詳細資訊，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** safeint.h  

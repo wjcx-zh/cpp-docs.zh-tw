@@ -1,5 +1,5 @@
 ---
-title: 'Issame:: Value 常數 |Microsoft 文件'
+title: 'Issame:: Value 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaf248622b6306af1a3eeebb258b296be43448da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9d1ae2b4ea4ad4769a770d503ff8bd82c91a53a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875236"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608783"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value 常數
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
   template <typename T1, typename T2>  
 struct IsSame  
 {  
@@ -42,13 +41,12 @@ struct IsSame<T1, T1>
 {  
     static const bool value = true;  
 };  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 指出一個類型是否與另一個相同。  
+ 表示一種型別是否與另一個相同。  
   
- `value` 是**true**如果樣板參數相同，則和**false**如果範本參數不同。  
+ `value` 是 **，則為 true**如果範本參數相同，並**false**範本參數是否不同。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** internal.h  

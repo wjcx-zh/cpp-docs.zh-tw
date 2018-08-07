@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassType 列舉 |Microsoft 文件
+title: RuntimeClassType 列舉 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43ab0a738af4c6bc92d42c0884827b574946d2ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4464d236a85e06bf907f738657a4a0707e14a5e1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892399"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603497"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 列舉
 指定的型別[RuntimeClass](../windows/runtimeclass-class.md)支援的執行個體。  
@@ -40,8 +40,8 @@ enum RuntimeClassType;
 |名稱|描述|  
 |----------|-----------------|  
 |`ClassicCom`|傳統的 COM 執行階段類別。|  
-|`Delegate`|相當於**ClassicCom**。|  
-|`InhibitFtmBase`|停用`FtmBase`時支援`__WRL_CONFIGURATION_LEGACY__`未定義。|  
+|`Delegate`|相當於 `ClassicCom`。|  
+|`InhibitFtmBase`|停用`FtmBase`支援，同時`__WRL_CONFIGURATION_LEGACY__`未定義。|  
 |`InhibitWeakReference`|停用弱式參考支援。|  
 |`WinRt`|Windows 執行階段類別。|  
 |`WinRtClassicComMix`|結合 `WinRt` 和 `ClassicCom`。|  

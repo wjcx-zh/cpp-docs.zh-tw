@@ -1,5 +1,5 @@
 ---
-title: 'Module:: getobjectcount 方法 |Microsoft 文件'
+title: 'Module:: getobjectcount 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74fca4325891488aa1f4669ae1fd8b94a1298910
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49ffe6b952033ffc35edc1dc68648d9830fe54d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875077"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608822"
 ---
 # <a name="modulegetobjectcount-method"></a>Module::GetObjectCount 方法
-擷取這個模組所管理的物件數目。  
+擷取由這個模組的物件數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,12 +34,12 @@ virtual long GetObjectCount() const;
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 目前受此模組的物件的數目。  
+ 目前受此模組的物件數目。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>另請參閱
  [Module 類別](../windows/module-class.md)

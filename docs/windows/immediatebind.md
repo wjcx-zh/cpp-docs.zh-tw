@@ -1,5 +1,5 @@
 ---
-title: immediatebind |Microsoft 文件
+title: immediatebind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876260"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603044"
 ---
 # <a name="immediatebind"></a>immediatebind
-指示資料庫將會立即被告知資料繫結物件的屬性的所有變更。  
+表示資料庫將會立即被告知資料繫結物件的屬性的所有變更。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [immediatebind]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  

@@ -1,5 +1,5 @@
 ---
-title: no_injected_text |Microsoft 文件
+title: no_injected_text |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880344"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603416"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-防止編譯器插入程式碼，因為屬性使用。  
+防止編譯器將程式碼，因為屬性使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>參數  
- `boolean` (選擇性)  
- **true**如果您想不要插入的程式，任何程式碼**false**允許無法插入的程式碼。 **true**是預設值。  
+ *布林*（選擇性）  
+ **真**如果您想不要插入此項目，任何程式碼**false**讓插入的程式碼。 **true**是預設值。  
   
 ## <a name="remarks"></a>備註  
- 最常見的用法**no_injected_text** c + + 屬性是由[/Fx](../build/reference/fx-merge-injected-code.md)編譯器選項，它會插入**no_injected_text**到.mrg 檔中的屬性。  
+ 最常見的用法**no_injected_text** c + + 屬性是由[/Fx](../build/reference/fx-merge-injected-code.md)編譯器選項，插入**no_injected_text**到.mrg 檔的屬性。  
   
 ## <a name="requirements"></a>需求  
   

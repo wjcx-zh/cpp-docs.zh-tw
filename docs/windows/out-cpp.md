@@ -1,5 +1,5 @@
 ---
-title: out （c + +） |Microsoft 文件
+title: out （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9a3d102050da84f7dcbc8714a4c04b46cf3f5a1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876809"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606120"
 ---
 # <a name="out-c"></a>out (C++)
 識別從被呼叫程序傳回至呼叫程序的指標參數 (從伺服器至用戶端)。  
@@ -30,9 +30,7 @@ ms.locfileid: "33876809"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [out]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  

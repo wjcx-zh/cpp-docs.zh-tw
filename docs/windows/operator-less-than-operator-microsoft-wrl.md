@@ -1,5 +1,5 @@
 ---
-title: '運算子&lt;運算子 (microsoft:: wrl) |Microsoft 文件'
+title: '運算子&lt;運算子 (microsoft:: wrl) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3ea56386cadc638fd0234993ef6a8a0f5eb2be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2de0d40a4b506da2cec36719b8fa2fe9c22108d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881825"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604209"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>運算子&lt;運算子 (microsoft:: wrl)
-判斷某個物件的位址是否小於另一個。  
+判斷一個物件的位址是否小於另一個。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,15 +34,15 @@ template<class T, class U>
 bool operator<(const Details::ComPtrRef<ComPtr<T>>& a, const Details::ComPtrRef<ComPtr<U>>& b) throw();  
 ```  
   
-#### <a name="parameters"></a>參數  
- `a`  
+### <a name="parameters"></a>參數  
+ *a*  
  左物件。  
   
- `b`  
+ *b*  
  右物件。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果位址`a`小於的位址`b`，否則`false`。  
+ **true**如果的地址小於的位址*b*; 否則**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

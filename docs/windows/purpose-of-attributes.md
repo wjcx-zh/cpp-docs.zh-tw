@@ -1,5 +1,5 @@
 ---
-title: 屬性用途 |Microsoft 文件
+title: 屬性用途 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877832"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607020"
 ---
 # <a name="purpose-of-attributes"></a>屬性用途
-屬性會指示目前無法在 c + + 擴充而不需要傳統的語言結構。 屬性可讓提供者 (個別 Dll)，以動態方式擴充語言功能。 屬性的主要目標是簡化 COM 元件，除了增加元件開發人員的產能等級的撰寫。 屬性可以套用到幾乎可在任何 c + + 建構，例如類別、 資料成員或成員函式。 以下是提供這項新技術的優勢的反白顯示：  
+屬性指示目前無法在延伸 c + +，而不會中斷語言的傳統結構。 屬性可讓提供者 (另一個 Dll) 來動態擴充的語言功能。 屬性的主要目標是簡化 COM 元件，以及增加元件開發人員的產能層級的撰寫。 屬性可以套用至幾乎任何 c + + 建構，例如類別、 資料成員或成員函式。 以下是提供這項新技術的優勢的反白顯示：  
   
--   公開親切又簡單的呼叫慣例。  
+-   會公開熟悉且簡單的呼叫慣例。  
   
--   使用插入程式碼，其與不同的巨集，是可辨識偵錯工具。  
+-   使用插入程式碼，這不同於巨集，辨識偵錯工具。  
   
--   可讓您輕鬆沒有相當惱人實作詳細資料的基底類別衍生。  
+-   可讓您輕鬆衍生自基底類別，而不麻煩的實作詳細資料。  
   
--   取代了大量的所需的幾個簡單的屬性與 COM 元件的 IDL 程式碼。  
+-   取代了大量的所需的幾個簡要的屬性與 COM 元件的 IDL 程式碼。  
   
- 例如，若要實作泛型的 ATL 類別的簡單事件接收，您可以套用[event_receiver](../windows/event-receiver.md)屬性特定的類別例如`CMyReceiver`。 **Event_receiver**屬性然後編譯的 Visual c + + 編譯器中，將適當的程式碼插入至目的檔。  
+ 例如，若要實作一般的 ATL 類別的簡單事件接收器，您可以套用[event_receiver](../windows/event-receiver.md)屬性，是特定的類別例如`CMyReceiver`。 `event_receiver`屬性就會編譯 Visual c + + compiler 物件檔案中插入適當的程式碼。  
   
 ```  
 [event_receiver(com)]  
@@ -44,7 +44,7 @@ class CMyReceiver
 }  
 ```  
   
- 您可以再設定**CMyReceiver**方法`handler1`和`handler2`來處理事件 (使用內建函式[__hook](../cpp/hook.md)) 從事件來源，您可以建立使用[event_source](../windows/event-source.md)。  
+ 您接著可以設定`CMyReceiver`方法`handler1`並`handler2`來處理事件 (使用內建函式[__hook](../cpp/hook.md)) 從事件來源，您可以建立使用[event_source](../windows/event-source.md).  
   
 ## <a name="see-also"></a>另請參閱  
  [概念](../windows/attributed-programming-concepts.md)

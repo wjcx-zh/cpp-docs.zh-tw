@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Asiid 方法 |Microsoft 文件'
+title: 'Runtimeclassbaset:: Asiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892126"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607423"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +38,21 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `T`  
- 實作介面 ID 參數所指定的型別`riid`。  
+### <a name="parameters"></a>參數  
+ *T*  
+ 實作介面識別碼參數所指定的型別*riid*。  
   
- `implements`  
- 範本參數所指定型別的變數`T`。  
+ *實作*  
+ 範本參數所指定類型的變數*T*。  
   
- `riid`  
+ *riid*  
  要擷取的介面識別碼。  
   
- `ppvObject`  
- 如果這項作業成功，指標至 a-指標的介面參數所指定`riid`。  
+ *ppvObject*  
+ 如果這項作業成功時，參數所指定的指標-至-a-介面的指標*riid*。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK否則，描述錯誤的 HRESULT。  
+ 如果成功則為 S_OK否則，會描述錯誤的 HRESULT。  
   
 ## <a name="remarks"></a>備註  
  擷取指定的介面 ID 的指標  

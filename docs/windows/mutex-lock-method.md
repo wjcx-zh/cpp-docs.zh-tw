@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: lock 方法 |Microsoft 文件'
+title: 'Mutex:: lock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880868"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603520"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 方法
-等待目前的物件或指定的控制代碼相關聯的 Mutex 物件釋放 mutex，或超過指定的逾時間隔。  
+等到目前的物件，或**Mutex**與指定的控制代碼、 mutex 或指定的逾時間隔經過的版本相關聯的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `milliseconds`  
- 逾時間隔，以毫秒為單位。 預設值是無限值，其會無限期等候。  
+### <a name="parameters"></a>參數  
+ *（毫秒)*  
+ 逾時間隔，以毫秒為單位。 預設值為 INFINITE，這個會無限期等待。  
   
- `h`  
- Mutex 物件的控制代碼。  
+ *h*  
+ 控制代碼**Mutex**物件。  
   
 ## <a name="return-value"></a>傳回值  
   

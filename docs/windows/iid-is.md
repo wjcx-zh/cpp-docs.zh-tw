@@ -1,5 +1,5 @@
 ---
-title: iid_is |Microsoft 文件
+title: iid_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877998"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603286"
 ---
 # <a name="iidis"></a>iid_is
 指定的介面指標所指向的 COM 介面的 IID。  
@@ -30,23 +30,22 @@ ms.locfileid: "33877998"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>參數  
  *運算式*  
- 指定的 COM 介面的 IID 的 C 語言運算式所指向的介面指標。  
+ 介面指標所指向的 C 語言運算式，指定 COM 介面的 IID。  
   
 ## <a name="remarks"></a>備註  
  **Iid_is** c + + 屬性具有相同的功能[iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範如何使用**iid_is**:  
+ 下列程式碼示範如何使用**iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  

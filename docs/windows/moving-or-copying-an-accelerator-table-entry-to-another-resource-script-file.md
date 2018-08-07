@@ -1,5 +1,5 @@
 ---
-title: 移動或複製快速鍵對應表項目到另一個資源指令碼檔案 |Microsoft 文件
+title: 移動或複製快速鍵對應表項目到另一個資源指令碼檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e975ab71e4556c236ecd2e92f2d11a949a68ba5a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877900"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608048"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>移動或複製快速鍵對應表項目至另一個資源指令碼檔案
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>將快速鍵對應表項目移動或複製到另一個資源指令碼檔案  
@@ -35,7 +35,7 @@ ms.locfileid: "33877900"
   
 2.  選取您要移動的項目。  
   
-3.  從**編輯**功能表上，選擇**複製**或**剪下**。  
+3.  從**編輯**功能表上，選擇**複製**或是**剪下**。  
   
 4.  選取目標資源指令碼檔案中的項目。  
   
@@ -44,9 +44,7 @@ ms.locfileid: "33877900"
     > [!NOTE]
     >  您也可以使用快速鍵進行複製及貼上。  
   
-
-  
- **需求**  
+## <a name="requirements"></a>需求  
   
  Win32  
   

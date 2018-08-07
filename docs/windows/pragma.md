@@ -1,5 +1,5 @@
 ---
-title: pragma |Microsoft 文件
+title: pragma |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cab41277a7e5560fd842bf720fd776961d918d99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5abd483fb5a680ac3dba4ec01fc4bc6ebfa09ef2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878144"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602613"
 ---
 # <a name="pragma"></a>pragma
-指定的字串發出到產生的.idl 檔案，而不使用引號。 。  
+發出指定的字串到產生的.idl 檔案，而不使用引號。 
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ pragma(  
+[ pragma(  
    pragma_statement  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>參數  
  *pragma_statement*  
- 您想要移入產生的.idl 檔 pragma。  
+ Pragma，您想要移至所產生的.idl 檔案。  
   
 ## <a name="remarks"></a>備註  
  **Pragma** c + + 屬性具有相同的功能[pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_pragma.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

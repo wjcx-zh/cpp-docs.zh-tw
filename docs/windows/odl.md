@@ -1,5 +1,5 @@
 ---
-title: odl |Microsoft 文件
+title: odl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877692"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608182"
 ---
 # <a name="odl"></a>odl
-識別為物件描述語言 (ODL) 介面的介面。 MIDL 編譯器不需要**odl**屬性; 它會辨識僅為具有較舊的.odl 檔的相容性。  
+識別物件描述語言 (ODL) 介面的介面。 MIDL 編譯器不需要**odl**屬性; 它會辨識僅針對與較舊的.odl 檔的相容性。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -40,7 +38,7 @@ ms.locfileid: "33877692"
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ public:
   
 |||  
 |-|-|  
-|**適用於**|`interface`|  
+|**適用於**|**interface**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

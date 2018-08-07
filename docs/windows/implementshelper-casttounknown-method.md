@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown 方法 |Microsoft 文件'
+title: 'Implementshelper:: Casttounknown 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874495"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604235"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 基礎 IUnknown 介面指標。  
+ 基礎的 IUnknown 介面指標。  
   
 ## <a name="remarks"></a>備註  
- 取得目前的實作結構為基礎的 IUnknown 介面指標。  
+ 取得指標的基礎`IUnknown`目前的介面`Implements`結構。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

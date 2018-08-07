@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Fillarraywithiid 方法 |Microsoft 文件'
+title: 'Implementshelper:: Fillarraywithiid 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879919"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608318"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,14 +36,14 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>參數  
- `index`  
- 指出這項作業的起始陣列項目以零為起始的索引。 這項作業完成時，`index`都會遞增 1。  
+ *index*  
+ 以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。  
   
- `iids`  
+ *iid*  
  Iid 類型的陣列。  
   
 ## <a name="remarks"></a>備註  
- 將插入至指定的陣列項目目前的第零個範本參數所指定的介面 ID。  
+ 插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

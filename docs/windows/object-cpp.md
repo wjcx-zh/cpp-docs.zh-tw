@@ -1,5 +1,5 @@
 ---
-title: 物件 （c + +） |Microsoft 文件
+title: 物件 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879704"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607906"
 ---
 # <a name="object-c"></a>object (C++)
-識別的自訂介面。  
+識別自訂的介面。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 當之前的介面定義，**物件**c + + 屬性會造成要放入.idl 檔案，做為自訂介面的介面。  
+ 上述介面定義，當**物件**c + + 屬性會將介面放在.idl 檔中，做為自訂的介面。  
   
- 使用物件標記任何介面必須繼承自**IUnknown**。 如果任何基底介面繼承自符合此條件**IUnknown**。 如果沒有基底介面繼承自**IUnknown**，編譯器會以標記的介面**物件**衍生自**IUnknown**。  
+ 任何標示為物件的介面必須繼承自`IUnknown`。 此條件成立，如果任何基底介面繼承自`IUnknown`。 如果沒有基底介面繼承自`IUnknown`，編譯器會以標記的介面**物件**衍生自`IUnknown`。  
   
 ## <a name="example"></a>範例  
  請參閱[nonbrowsable](../windows/nonbrowsable.md)如需如何使用的範例**物件**。  
@@ -49,7 +47,7 @@ ms.locfileid: "33879704"
   
 |||  
 |-|-|  
-|**適用於**|`interface`|  
+|**適用於**|**interface**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

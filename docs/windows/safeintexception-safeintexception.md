@@ -1,5 +1,5 @@
 ---
-title: 'Safeintexception:: Safeintexception |Microsoft 文件'
+title: 'Safeintexception:: Safeintexception |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef3c1d11c0f814699ca1492f7ec1fb49c43c3d76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892172"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606653"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
-建立 `SafeIntException` 物件。  
+會建立**SafeIntException**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,12 +39,12 @@ SafeIntException(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- [輸入] `code`  
- 描述發生之錯誤的列舉的資料值。  
+### <a name="parameters"></a>參數  
+ [in]*程式碼*  
+ 描述發生的錯誤列舉的資料值。  
   
 ## <a name="remarks"></a>備註  
- 可能值`code`Safeint.h 檔案中所定義。 為了方便起見，可能的值也會列出以下。  
+ 可能值*程式碼*Safeint.h 檔案中所定義。 為了方便起見，可能的值也會列出以下。  
   
 -   `SafeIntNoError`  
   
@@ -55,7 +55,7 @@ SafeIntException(
 ## <a name="requirements"></a>需求  
  **標頭：** safeint.h  
   
- **命名空間：** msl::utilities  
+ **命名空間：** msl:: utilities  
   
 ## <a name="see-also"></a>另請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   

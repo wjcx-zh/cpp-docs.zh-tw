@@ -1,7 +1,7 @@
 ---
 title: 從 UNIX 移植到 Win32 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/02/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 08958de9f756ac005f966245e22a44afd7125bc0
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843284"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496671"
 ---
 # <a name="porting-from-unix-to-win32"></a>從 UNIX 移植到 Win32
 將應用程式從 UNIX 移轉至 Windows 時，有幾個選擇：  
@@ -42,13 +42,9 @@ ms.locfileid: "33843284"
  下列清單提供有關將 UNIX 移轉至 Visual C++ 之移植和支援的 Microsoft 和協力廠商資源：  
   
 ### <a name="unix-migration-guides"></a>UNIX 移轉指南  
- 《UNIX 自訂應用程式移轉指南》提供有關將程式碼從 UNIX 移轉至 Win32 環境的技術說明。  
+ [UNIX 自訂應用程式移轉指南](https://technet.microsoft.com/library/bb656290.aspx) \(英文\) 提供有關將程式碼從 UNIX 移轉至 Win32 環境的技術說明。  
   
- [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
-  
- 《Unix 移轉專案指南》藉由提供有關將大量專案從 UNIX 移轉至 Win32 的高階說明，來補充說明《UNIX 自訂應用程式移轉指南》。 該指南針對專案移轉的每個階段所要考量的問題，提出了建議。 您可以從下列網址進行下載：  
-  
- [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [Unix 移轉專案指南](https://technet.microsoft.com/library/bb656287.aspx) \(英文\) 透過提供有關將大量專案從 UNIX 移轉至 Win32 的高階說明，來補充說明《UNIX 自訂應用程式移轉指南》。 該指南針對專案移轉的每個階段所要考量的問題，提出了建議。
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)  
  Microsoft Windows Services for UNIX (SFU) 針對將 Windows 整合至現有的 UNIX 環境，提供了全方位的跨平台服務。 Services for UNIX 提供檔案共用、遠端存取和管理、密碼同步處理、通用目錄管理、通用公用程式集和 Shell。  

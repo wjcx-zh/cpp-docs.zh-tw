@@ -1,5 +1,5 @@
 ---
-title: 版本 （c + +） |Microsoft 文件
+title: 版本 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890605"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642275"
 ---
 # <a name="version-c"></a>version (C++)
 識別類別的多個版本之間的特定版本。  
@@ -31,21 +31,20 @@ ms.locfileid: "33890605"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *version*  
- Coclass 的版本號碼。 如果未指定，1.0 會放入.idl 檔案。  
+ 版本號碼`coclass`。 如果未指定，1.0 會置於.idl 檔案。  
   
 ## <a name="remarks"></a>備註  
- **版本**c + + 屬性具有相同的功能[版本](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 屬性，並透過傳遞給產生的.idl 檔案。  
+ **版本**c + + 屬性具有相同的功能[版本](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 屬性且會傳遞至產生的.idl 檔案。  
   
 ## <a name="example"></a>範例  
- 請參閱[可繫結](../windows/bindable.md)範例使用範例**版本**。  
+ 請參閱[可繫結](../windows/bindable.md)的範例使用的範例**版本**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -53,7 +52,7 @@ ms.locfileid: "33890605"
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
 |**必要屬性**|**coclass**|  
 |**無效屬性**|無|  

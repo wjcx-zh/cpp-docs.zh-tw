@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c76aee3ce1e56f60e966094bb2d634269cd5e3a9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0596b15daff5567e2572bf8c1f2b401cdf300a49
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466744"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642408"
 ---
 # <a name="asyncuuid"></a>async_uuid
 指定會指示 MIDL 編譯器定義 COM 介面的同步和非同步版本的 UUID。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [async_uuid (  
    uuid  
 )]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *uuid*  
  UUID 可識別介面的版本。  
   

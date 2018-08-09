@@ -1,5 +1,5 @@
 ---
-title: 工具列編輯器 |Microsoft 文件
+title: 工具列編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891307"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641643"
 ---
 # <a name="toolbar-editor"></a>工具列編輯器
 工具列編輯器可讓您建立工具列資源，並將點陣圖轉換成工具列資源。 工具列編輯器會以圖形方式真實地顯示應用程式完成後的工具列和按鈕。  
@@ -47,12 +47,11 @@ ms.locfileid: "33891307"
   
  工具列編輯器的功能類似影像編輯器。 其功能表項目、圖形工具和點陣圖格線都與影像編輯器相同。 [影像] 功能表提供一個功能表命令，可讓您在工具列編輯器與影像編輯器之間進行切換。 如需使用圖形工具列、色彩調色盤或 [影像] 功能表的詳細資訊，請參閱 [影像編輯器](../windows/image-editor-for-icons.md)。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  MFC 或 ATL  
   
 ## <a name="see-also"></a>另請參閱  
  [資源編輯器](../windows/resource-editors.md)   
- [功能表與其他資源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [功能表和其他資源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

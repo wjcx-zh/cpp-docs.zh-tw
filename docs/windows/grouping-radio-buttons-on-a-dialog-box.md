@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c3d0e20d8b2b88a7141672117d4c0b036682953e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571499"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641414"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>群組對話方塊上的選項按鈕
-當您在對話方塊中加入選項按鈕時，請在 [屬性] 視窗中為群組的第一個按鈕設定 [群組] 屬性，把它們當成群組處理。 然後，這個選項按鈕的控制項識別碼就會出現在 [[加入成員變數精靈]](../ide/add-member-variable-wizard.md)中，讓您為選項按鈕群組加入成員變數。  
+當您新增到對話方塊中的選項按鈕時，將它們視為一組藉由設定**群組**中的屬性**屬性**群組中的第一個按鈕的視窗。 然後，這個選項按鈕的控制項識別碼就會出現在 [[加入成員變數精靈]](../ide/add-member-variable-wizard.md)中，讓您為選項按鈕群組加入成員變數。  
   
  對話方塊中可以有多個選項按鈕群組，但加入每個群組時請一定要使用下列程序。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "39571499"
      將 [群組]  屬性變更成 **True** ，可在資源指令碼之對話方塊物件的按鈕項目中加入 WS_GROUP 樣式，確保使用者在按鈕群組中一次只能選取一個選項按鈕 (當使用者按一下某個選項按鈕時，就會清除群組中的其他按鈕)。  
   
     > [!NOTE]
-    >  群組中，應該只有第一個選項按鈕的 [群組]  屬性設為 **True**。 如果有不屬於按鈕群組的其他控制項，請將 **群組之外** 第一個控制項的 [群組]  屬性也設成 **True** 。 按下 CTRL+D 檢視定位順序，即可快速識別群組之外的第一個控制項。  
+    >  群組中，應該只有第一個選項按鈕的 [群組]  屬性設為 **True**。 如果有不屬於按鈕群組的其他控制項，請將 **群組之外** 第一個控制項的 [群組]  屬性也設成 **True** 。 按下，您可以快速識別群組之外的第一個控制項**Ctrl**+**D**檢視 索引標籤順序。  
   
 ### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>加入選項按鈕群組的成員變數  
   
@@ -56,14 +56,13 @@ ms.locfileid: "39571499"
   
 4.  在 [變數名稱]  方塊中，輸入新成員變數的名稱。  
   
-5.  在 [變數類型]  清單方塊中選取 [int]  或輸入 **int**。  
+5.  在 **變數的型別**清單方塊中，選取**int**或型別`int`。  
   
-6.  您現在可以修改程式碼，指定應該顯示為已選取的按鈕。 例如，m_radioBox1 = 0; 會選取群組中的第一個選項按鈕。  
+6.  您現在可以修改程式碼，指定應該顯示為已選取的按鈕。 比方說，`m_radioBox1 = 0;`會選取第一個選項按鈕群組中。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

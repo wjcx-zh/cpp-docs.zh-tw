@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c9a7caba7ccfb8f5764a1f460835ff540c838975
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463862"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641037"
 ---
 # <a name="classfactory-class"></a>ClassFactory 類別
 實作 `IClassFactory` 介面的基本功能。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -45,7 +45,7 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *I0*  
  第零個介面中。  
   
@@ -56,7 +56,7 @@ class ClassFactory : public Details::RuntimeClass<
  第二個介面中。  
   
 ## <a name="remarks"></a>備註  
- 利用`ClassFactory`以提供使用者定義的 factory 實作。  
+ 利用**ClassFactory**以提供使用者定義的 factory 實作。  
   
  下列的程式設計模式將示範如何使用[實作](../windows/implements-structure.md)結構，以指定三個以上的介面上的 class factory。  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ClassFactory::AddRef 方法](../windows/classfactory-addref-method.md)|遞增目前 ClassFactory 物件的參考計數。|  
-|[ClassFactory::LockServer 方法](../windows/classfactory-lockserver-method.md)|目前的 ClassFactory 物件所追蹤物件的基礎數目的遞增或遞減。|  
+|[ClassFactory::AddRef 方法](../windows/classfactory-addref-method.md)|目前的參考計數會遞增**ClassFactory**物件。|  
+|[ClassFactory::LockServer 方法](../windows/classfactory-lockserver-method.md)|遞增或遞減目前所追蹤物件的基礎數目**ClassFactory**物件。|  
 |[ClassFactory::QueryInterface 方法](../windows/classfactory-queryinterface-method.md)|擷取指定參數的介面指標。|  
-|[ClassFactory::Release 方法](../windows/classfactory-release-method.md)|遞減參考計數目前 ClassFactory 物件。|  
+|[ClassFactory::Release 方法](../windows/classfactory-release-method.md)|遞減參考計數目前**ClassFactory**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `I0`  

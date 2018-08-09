@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463238"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641804"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (C++ 元件擴充功能)
 **抽象**關鍵字會宣告其中一個：  
@@ -33,16 +33,16 @@ ms.locfileid: "39463238"
 -   類型成員函式只能在衍生的類型中定義。  
   
 ## <a name="all-platforms"></a>所有平台  
- **語法**  
+### <a name="syntax"></a>語法 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **備註**  
+### <a name="remarks"></a>備註
   
  第一個範例語法會將類別宣告為抽象。 *類別宣告*元件可以是原生 c + + 宣告 (**類別**或是**結構**)，或 c + + 擴充功能宣告 (**ref 類別**或是**ref struct**) 如果`/ZW`或`/clr`指定編譯器選項。  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  如需詳細資訊，請參閱 < [Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列程式碼範例會產生錯誤，因為類別 `X` 標示為 `abstract`。  
+ 下列程式碼範例會產生錯誤，因為類別`X`標示**抽象**。  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **範例**  
-  
- 下列程式碼範例會產生錯誤，因為它會具現化標示為原生類別的 `abstract`。 無論是否有 `/clr` 編譯器選項，都會發生此錯誤。  
+ 下列程式碼範例會產生錯誤，因為它標示為原生類別會具現化**抽象**。 無論是否有 `/clr` 編譯器選項，都會發生此錯誤。  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **範例**  
-  
- 下列程式碼範例會產生錯誤，因為函式 `f` 包括定義，但標示為 `abstract`。 在範例中的最後一個陳述式會顯示宣告抽象虛擬函式相當於宣告純虛擬函式。  
+ 下列程式碼範例會產生錯誤，因為函式`f`包括定義，但會標示**抽象**。 在範例中的最後一個陳述式會顯示宣告抽象虛擬函式相當於宣告純虛擬函式。  
   
 ```cpp  
 // abstract_keyword_3.cpp  

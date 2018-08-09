@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569800"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642766"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>物件控制代碼運算子 (^) (C++ 元件擴充功能)
 *控制代碼宣告子*(`^`，唸成"hat")，修改型別[規範](../cpp/overview-of-declarators.md)來表示，宣告的物件時，應會自動刪除系統判斷此物件是無法再存取。  
@@ -36,7 +36,7 @@ ms.locfileid: "39569800"
  如需如何具現化物件的資訊，請參閱[ref 新](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
 ## <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  系統會使用 CLR*記憶體回收行程*機制來判斷是否物件已不再使用，且可以刪除。 Common Language Runtime 會維持用以配置物件的堆積，並使用您程式中的 Managed 參考 (變數)，指出物件在堆積上的位置。 當物件不再使用時，物件在堆積上佔用的記憶體會被釋放。 記憶體回收行程會定期壓縮堆積，以更有效地利用釋放的記憶體。 壓縮堆積可能會移動堆積上的物件，而使得 Managed 參考所參考的位置無效。 然而，記憶體回收行程知道所有 Managed 參考的位置，而且會自動更新以指出物件在堆積上目前的位置。  
@@ -48,7 +48,6 @@ ms.locfileid: "39569800"
  如需詳細資訊，請參閱 <<c0> [ 如何： 以原生類型宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
  這個範例示範如何在 Managed 堆積上建立參考型別的執行個體。  這個範例也示範如何以一個控制代碼初始化另一個控制代碼，導致在 Managed、記憶體回收堆積上同一個物件有兩個參考。 請注意，指派[nullptr](../windows/nullptr-cpp-component-extensions.md)給一個控制代碼不會標記為記憶體回收的物件。  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **範例**  
   
  下列範例示範如何在 Managed 堆積上宣告物件控制代碼，而物件的型別為 Boxed 實值型別。 這個範例也會示範如何從 Boxed 物件取得實值型別。  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **輸出**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **範例**  
-  
- 這個範例示範如何將使用 void* 指標指向任意物件的 C++ 常見慣用語，取代為可儲存任何參考類別控制代碼的 Object^。 這個範例也會示範所有型別 (例如陣列和委派) 都可以轉換為物件控制代碼。  
+ 這個範例示範使用通用的 c + + 慣用語`void*`指標指向任意物件會取代`Object^`，其中可包含任何參考類別的控制代碼。 這個範例也會示範所有型別 (例如陣列和委派) 都可以轉換為物件控制代碼。  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **範例**  
   
  這個範例示範控制代碼可以是取值的，而且可透過已取值的控制代碼存取成員。  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **範例**  
-  
- 這個範例示範原生參考 (`&`) 無法繫結到 Managed 型別的 `int` 成員，因為 `int` 可能儲存在記憶體回收堆積中，而原生參考不會追蹤 Managed 堆積上的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。  
+ 這個範例示範原生參考 (`&`) 無法繫結至**int**的 managed 類型的成員作為**int**可能儲存在記憶體回收堆積，並不會追蹤原生參考managed 堆積中的物件移動。 解決方法是使用區域變數，或將 `&` 變更為 `%`，使其成為追蹤參考。  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

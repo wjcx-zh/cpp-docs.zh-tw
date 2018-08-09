@@ -1,5 +1,5 @@
 ---
-title: 'Boolstruct:: Member 資料成員 |Microsoft 文件'
+title: 'Boolstruct:: Member 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859809"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641111"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member 資料成員
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 int Member;  
 ```  
   

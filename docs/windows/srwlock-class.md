@@ -1,5 +1,5 @@
 ---
-title: SRWLock 類別 |Microsoft 文件
+title: SRWLock 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23881f2065276aa7ae7b6ee95b5449abb07dd2de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891749"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641949"
 ---
 # <a name="srwlock-class"></a>SRWLock 類別
-代表輕型的讀取器/寫入器鎖定。  
+表示輕型讀取器/寫入器鎖定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ class SRWLock;
 ```  
   
 ## <a name="remarks"></a>備註  
- 輕型的讀取器/寫入器鎖定用來同步存取之物件或資源的執行緒上。 如需詳細資訊，請參閱[同步函式](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b)。  
+ 輕型讀取器/寫入器鎖定用來同步存取物件或資源的執行緒上。 如需詳細資訊，請參閱 <<c0> [ 同步處理函式](http://msdn.microsoft.com/9b6359c2-0113-49b6-83d0-316ad95aba1b)。  
   
 ## <a name="members"></a>成員  
   
@@ -42,30 +42,30 @@ class SRWLock;
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|SRWLock 物件取得獨佔模式中的同義字。|  
-|**SyncLockShared**|取得以共用模式的 SRWLock 物件的同義字。|  
+|`SyncLockExclusive`|同義字**SRWLock**取得獨佔模式中的物件。|  
+|`SyncLockShared`|同義字**SRWLock**取得以共用模式的物件。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SRWLock::SRWLock 建構函式](../windows/srwlock-srwlock-constructor.md)|初始化 SRWLock 類別的新執行個體。|  
-|[SRWLock::~SRWLock 解構函式](../windows/srwlock-tilde-srwlock-destructor.md)|取消初始化 SRWLock 類別的執行個體。|  
+|[SRWLock::SRWLock 建構函式](../windows/srwlock-srwlock-constructor.md)|初始化的新執行個體**SRWLock**類別。|  
+|[SRWLock::~SRWLock 解構函式](../windows/srwlock-tilde-srwlock-destructor.md)|取消初始化的執行個體**SRWLock**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SRWLock::LockExclusive 方法](../windows/srwlock-lockexclusive-method.md)|取得 SRWLock 物件以獨佔模式。|  
-|[SRWLock::LockShared 方法](../windows/srwlock-lockshared-method.md)|取得 SRWLock 物件以共用模式。|  
-|[SRWLock::TryLockExclusive 方法](../windows/srwlock-trylockexclusive-method.md)|嘗試取得 SRWLock 中的物件目前或指定 SRWLock 物件的獨佔模式。|  
-|[SRWLock::TryLockShared 方法](../windows/srwlock-trylockshared-method.md)|嘗試取得 SRWLock 中的物件目前或指定 SRWLock 物件的共用模式。|  
+|[SRWLock::LockExclusive 方法](../windows/srwlock-lockexclusive-method.md)|取得**SRWLock**獨佔模式中的物件。|  
+|[SRWLock::LockShared 方法](../windows/srwlock-lockshared-method.md)|取得**SRWLock**以共用模式的物件。|  
+|[SRWLock::TryLockExclusive 方法](../windows/srwlock-trylockexclusive-method.md)|嘗試取得**SRWLock**物件獨佔模式使用目前或指定**SRWLock**物件。|  
+|[SRWLock::TryLockShared 方法](../windows/srwlock-trylockshared-method.md)|嘗試取得**SRWLock**物件中目前或指定的共用模式**SRWLock**物件。|  
   
 ### <a name="protected-data-member"></a>受保護的資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SRWLock::SRWLock_ 資料成員](../windows/srwlock-srwlock-data-member.md)|包含目前 SRWLock 物件基礎的鎖定變數。|  
+|[SRWLock::SRWLock_ 資料成員](../windows/srwlock-srwlock-data-member.md)|包含目前的基礎鎖定變數**SRWLock**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `SRWLock`  

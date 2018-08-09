@@ -1,5 +1,5 @@
 ---
-title: displaybind |Microsoft 文件
+title: displaybind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879883"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641736"
 ---
 # <a name="displaybind"></a>displaybind
 指出應該顯示給使用者，作為可繫結的屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Displaybind** c + + 屬性具有相同的功能[displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[可繫結](../windows/bindable.md)如需如何使用的範例**displaybind**。  
+ 範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**displaybind**。  
   
 ## <a name="requirements"></a>需求  
   

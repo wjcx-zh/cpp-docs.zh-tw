@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 36a057bbad39e61576828c5a02f6863248b235cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569491"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641401"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove 方法
 刪除從目前與相關聯的事件處理常式的集合指定的事件註冊語彙基元所代表的事件處理常式**EventSource**物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT Remove(  
    EventRegistrationToken token  
 );  
@@ -43,7 +43,7 @@ HRESULT Remove(
  如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
 ## <a name="remarks"></a>備註  
- 如需詳細的 EventRegistrationToken 結構的詳細資訊，請參閱`Windows::Foundation::EventRegistrationToken`結構 Windows 執行階段參考文件中的主題。  
+ 如需詳細資訊`EventRegistrationToken`結構，請參閱**Windows::Foundation::EventRegistrationToken 結構**中的主題**Windows 執行階段**參考文件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

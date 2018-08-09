@@ -1,5 +1,5 @@
 ---
-title: vi_progid |Microsoft 文件
+title: vi_progid |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687a8a70d7f0a5381160a6515c80f6940cc0a434
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891281"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642044"
 ---
 # <a name="viprogid"></a>vi_progid
-指定版本無關的 ProgID 的表單。  
+指定與版本無關的 ProgID 表單。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ vi_progid(  
+[ vi_progid(  
    name  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>參數  
  *name*  
- 代表物件的版本無關的 ProgID。  
+ 版本無關的 ProgID，表示的物件。  
   
- Progid 呈現人類看得懂的版本，用來識別 COM/ActiveX 物件的類別識別項 (CLSID)。  
+ Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的類別識別項 (CLSID)。  
   
 ## <a name="remarks"></a>備註  
- **Vi_progid** c + + 屬性可讓您指定 COM 物件與版本無關的 ProgID。 ProgID 已表單*name1.name2.version*。 沒有與版本無關的 ProgID*版本*。 它是能兩者都指定**progid**和**vi_progid**在 coclass 的屬性。 如果您未指定**vi_progid**、 版本無關的 ProgID 是所指定的值[progid](../windows/progid.md)屬性。  
+ **Vi_progid** c + + 屬性可讓您指定 COM 物件與版本無關的 ProgID。 ProgID 的形式*name1.name2.version*。 沒有與版本無關的 ProgID*版本*。 可同時指定兩者`progid`而**vi_progid**上的屬性`coclass`。 如果您未指定**vi_progid**，則版本無關的 ProgID 是所指定的值[progid](../windows/progid.md)屬性。  
   
- **vi_progid**意味著**coclass**屬性，也就是如果您指定**vi_progid**，這是與指定的相同動作**coclass**和**vi_progid**屬性。  
+ **vi_progid**意味著`coclass`屬性，也就是如果您指定**vi_progid**，它是與指定的相同項目`coclass`並**vi_progid**屬性。  
   
- **Vi_progid**屬性會造成自動註冊指定的名稱下的類別。 產生的.idl 檔案不會顯示 ProgID 的值。  
+ **Vi_progid**屬性會導致自動註冊指定的名稱下的類別。 產生的.idl 檔案不會顯示 ProgID 的值。  
   
- 在 ATL 專案中，如果[coclass](../windows/coclass.md)屬性也會出現，使用指定的 ProgID **GetVersionIndependentProgID**函式 (插入**coclass**屬性）。  
+ 在 ATL 專案中，如果[coclass](../windows/coclass.md)也有屬性時，會使用指定的 ProgID`GetVersionIndependentProgID`函式 (插入`coclass`屬性)。  
   
 ## <a name="example"></a>範例  
- 請參閱[coclass](../windows/coclass.md)範例使用範例**vi_progid**。  
+ 請參閱[coclass](../windows/coclass.md)的範例使用的範例**vi_progid**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -60,7 +59,7 @@ ms.locfileid: "33891281"
   
 |||  
 |-|-|  
-|**適用於**|**class**、 `struct`|  
+|**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

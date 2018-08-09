@@ -1,5 +1,5 @@
 ---
-title: SimpleClassFactory 類別 |Microsoft 文件
+title: SimpleClassFactory 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892757"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641818"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 類別
 提供基本機制以建立基底類別。  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `Base`  
+### <a name="parameters"></a>參數  
+ *基底*  
  基底類別。  
   
 ## <a name="remarks"></a>備註  
  基底類別必須提供預設建構函式。  
   
- 下列程式碼範例示範如何使用與 SimpleClassFactory [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集。  
+ 下列程式碼範例示範如何使用**SimpleClassFactory**具有[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集。  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   

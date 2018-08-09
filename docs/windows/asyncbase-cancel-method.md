@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee338d4e90f94ed7cb7f9158235c66b72e9f2e52
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 439a118bbea5adce4c306298e573bed85da26291
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464742"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641900"
 ---
 # <a name="asyncbasecancel-method"></a>AsyncBase::Cancel 方法
 取消非同步作業。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 STDMETHOD(  
    Cancel  
 )(void);  
@@ -39,7 +39,7 @@ STDMETHOD(
  根據預設，一律會傳回 S_OK。  
   
 ## <a name="remarks"></a>備註  
- `Cancel()` 預設實作`IAsyncInfo::Cancel`，並不執行任何實際工作。 若要實際取消非同步作業，請覆寫`OnCancel()`純虛擬方法。  
+ **Cancel**的預設實作`IAsyncInfo::Cancel`，並不執行任何實際工作。 若要實際取消非同步作業，請覆寫`OnCancel()`純虛擬方法。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

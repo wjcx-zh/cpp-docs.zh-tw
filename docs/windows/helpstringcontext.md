@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b71d8183921e0df66d6b9a82ff79faf24ccb41d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569995"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642330"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 指定.hlp 或.chm 檔案中的說明主題的識別碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ helpstringcontext(  
    contextID  
 ) ]  
@@ -37,7 +37,7 @@ ms.locfileid: "39569995"
   
 ### <a name="parameters"></a>參數  
  *contextID*  
- 說明檔中為 32 位元說明內容識別碼。  
+ 在 32 位元說明內容識別碼**協助**檔案。  
   
 ## <a name="remarks"></a>備註  
  **Helpstringcontext** c + + 屬性具有相同的功能[helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 屬性。  

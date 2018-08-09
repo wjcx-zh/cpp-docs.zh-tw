@@ -1,5 +1,5 @@
 ---
-title: 變更多個快速鍵屬性 |Microsoft 文件
+title: 變更多個快速鍵屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11705fcbcdb3dc73fe5c3a87844b2bc5d90cd135
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac3cde3d986869f16431642d5c10632e2dbeefde
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913014"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642498"
 ---
 # <a name="changing-the-properties-of-multiple-accelerator-keys"></a>變更多個快速鍵屬性
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>若要變更多個快速鍵屬性  
   
-1.  它在圖示上按兩下開啟快速鍵對應表[資源檢視](../windows/resource-view-window.md)。  
+1.  開啟快速鍵對應表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  選取您想要變更按住的快速鍵**CTRL**鍵，並按一下每個。  
+2.  選取您想要變更按住的快速鍵**Ctrl**當您按一下每個索引鍵。  
   
-3.  移至[屬性 視窗](/visualstudio/ide/reference/properties-window) 並輸入您想要將所有選取的加速器共用的值。  
+3.  移至[屬性 視窗](/visualstudio/ide/reference/properties-window)和您想要選取加速器，若要共用的所有值的型別。  
   
     > [!NOTE]
-    >  每個修飾詞值會顯示為 [屬性] 視窗中的布林值屬性。 如果您變更[修飾詞](../windows/accelerator-modifier-property.md)[屬性] 視窗快速鍵對應表中的值視為先前有任何修飾詞的額外功能的新修飾詞。 因為這個緣故，如果您設定任何修飾詞的值，您必須將它們，以確保每個快速鍵都共用相同的修飾詞設定所有設定。  
+    >  每個修飾詞值會顯示為布林值屬性中**屬性**視窗。 如果您變更[修飾詞](../windows/accelerator-modifier-property.md)中的值**屬性** 視窗中，快速鍵對應表視為新的修飾詞的補充先前有任何修飾詞。 因為這個緣故，如果您設定任何修飾詞的值，您必須設定它們，以確保每個加速器共用相同的所有**修飾詞**設定。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- **需求**  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

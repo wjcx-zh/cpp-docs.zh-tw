@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fd2f65bb86cdd77d4e285cee5603416fa629f940
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 780fd8b6866af05007d9c99e3165b149eab956bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466344"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642899"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函式
 建立會產生指定類別之執行個體 (由 Windows 執行階段啟動) 的處理站。  
@@ -37,7 +37,7 @@ template<typename Factory>
      _Outptr_ IUnknown **ppFactory) throw();  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *flags*  
  一或多個組合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。  
   

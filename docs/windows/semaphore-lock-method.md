@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: lock 方法 |Microsoft 文件'
+title: 'Semaphore:: lock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80b4db212236da6c9fb320ff5a5e04f4e9f4a4c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 39f2fe48b1e7a1a7c6b875b988d861d5fb48698a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892471"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642142"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 方法
-等待目前的物件或指定的控制代碼相關聯的號誌物件處於信號狀態，或超過指定逾時間隔。  
+等到目前的物件，或**號誌**與相關聯的物件指定的控制代碼，處於收到信號的狀態，或經過指定的逾時間隔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,15 +40,15 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `milliseconds`  
- 逾時間隔，以毫秒為單位。 預設值是無限值，其會無限期等候。  
+### <a name="parameters"></a>參數  
+ *（毫秒)*  
+ 逾時間隔，以毫秒為單位。 預設值為 INFINITE，這個會無限期等待。  
   
- `h`  
- 號誌物件的控制代碼。  
+ *h*  
+ 控制代碼**號誌**物件。  
   
 ## <a name="return-value"></a>傳回值  
- Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits >  
+ `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  
@@ -56,5 +56,4 @@ static SyncLock Lock(
  **命名空間：** Microsoft::WRL::Wrappers  
   
 ## <a name="see-also"></a>另請參閱  
-[Semaphore 類別](../windows/semaphore-class.md)
- 
+ [Semaphore 類別](../windows/semaphore-class.md)

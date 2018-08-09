@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 149cb7fba3d0754e47ac656c137af2d9bf759f1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466679"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642187"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 結構
-特製化 CriticalSection 物件，以支援無效的重要區段或函式來釋放重要區段。  
+特製化`CriticalSection`支援無效的重要區段或函式來釋放重要區段物件。  
   
 ## <a name="syntax"></a>語法  
   

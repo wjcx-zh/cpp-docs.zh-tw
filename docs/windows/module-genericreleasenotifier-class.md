@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e850c90ef873e64352ace64ff680cd93474a4a1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ba92e459ffb26ffc1bbb9239a843d628e7041d6d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606419"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013515"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 類別
 發行目前的模組中的最後一個物件時，會叫用事件處理常式。 Lambda、 函式或函式指標上所指定的事件處理常式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename T>  
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  

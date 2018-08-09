@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 260d7e2993bd92297167c23458d37ba80919306f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646558"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013381"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance 方法
 
@@ -37,7 +37,6 @@ STDMETHOD( ActivateInstance )(
 ```
 
 ### <a name="parameters"></a>參數
-
 *ppvObject*  
 這項作業完成時，所指定的物件執行個體的指標`Base`類別範本參數。
 
@@ -47,7 +46,7 @@ STDMETHOD( ActivateInstance )(
 
 ## <a name="remarks"></a>備註
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定義，判斷提示會發出錯誤如果類別範本參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定使用 WinRt 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+如果`__WRL_STRICT__`是定義，判斷提示會發出錯誤如果類別範本參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
 ## <a name="requirements"></a>需求
 

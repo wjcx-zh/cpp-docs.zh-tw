@@ -1,5 +1,5 @@
 ---
-title: 字元指派 |Microsoft 文件
+title: 字元指派 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403a619fc4c900aca51503862ff8f9dc315c2a3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 084cfd69a3742db10e09e9d97974a0666fa31a47
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856693"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010408"
 ---
 # <a name="character-assignment"></a>字元設定
-請考慮下列範例中的，在其中`while`迴圈會掃描字串，將 'X' 以外的所有字元都複製到另一個字串：  
+下列範例中的，在其中，請考慮**雖然**迴圈會掃描字串，將 'X' 以外的所有字元都複製到另一個字串：  
   
 ```  
 while( *sz2 )  
@@ -35,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- 程式碼會複製在位元組`sz2`所指向的位置`sz1`，然後遞增`sz1`接收的下一個位元組。 但是如果中的下一個字元`sz2`是雙位元組字元，指派給`sz1`複製第 1 個位元組。 下列程式碼會使用來安全地複製字元的可攜式函式，而另一個要遞增`sz1`和`sz2`正確：  
+ 程式碼會複製在位元組`sz2`所指向的位置`sz1`，然後遞增`sz1`接收下一個位元組。 但是如果中的下一個字元`sz2`是雙位元組字元，指派給`sz1`複製第 1 個位元組。 下列程式碼會使用可移植的函式，來安全地複製字元和另一個的增量`sz1`和`sz2`正確：  
   
 ```  
 while( *sz2 )  

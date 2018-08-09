@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf8808074e347f70290498adc83f55f488a75790
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1a6bf0635103ffee3dc3a6bf8604eda06c55049d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39602723"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014535"
 ---
 # <a name="interfacetraitsiidcount-constant"></a>InterfaceTraits::IidCount 常數
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 static const unsigned long IidCount = 1;  
 ```  
   

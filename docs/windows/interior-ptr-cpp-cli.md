@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a6478e8ee5474687928692763c5231091f7ad1ce
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605119"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017015"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *內部指標*宣告指標在參考類型，而非物件本身。 內部指標可以指向參考控制代碼、實值類型、Boxed 類型控制代碼、Managed 類型的成員，或是指向 Managed 陣列的元素。  
@@ -116,9 +116,7 @@ int main() {
    (*p2)->data = 3;  
    Console::WriteLine((*p2)->data);  
 }  
-```  
-  
- **輸出**  
+``` 
   
 ```Output  
 1  

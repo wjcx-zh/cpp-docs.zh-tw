@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88252e6bf4a5b7cad1ee6fcd0580d29f1bf5981a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f56b35ffb53da8947982359174784a0dbb3cef85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641821"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012582"
 ---
 # <a name="weakref-class"></a>WeakRef 類別
 代表 *弱式參考* 僅供 Windows 執行階段使用，而不供傳統 COM 使用。 弱式參考代表不一定可存取的物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class WeakRef : public ComPtr<IWeakReference>  
 ```  
   

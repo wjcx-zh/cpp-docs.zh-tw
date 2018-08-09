@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6543ada6840b292d6a7b981eefeab41642c42df
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649269"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017928"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 結構
 描述一般特性`SRWLock`獨佔的鎖定模式的類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 struct SRWLockExclusiveTraits;  
 ```  
   

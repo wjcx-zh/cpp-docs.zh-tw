@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 742b16dfc27e7e35a578bcc26283752c5c608012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605915"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014152"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 類別
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   

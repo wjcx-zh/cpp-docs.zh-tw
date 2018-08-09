@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604352"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018590"
 ---
 # <a name="module-c"></a>module (C++)
 在 .idl 檔案中定義程式庫區塊。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ ms.locfileid: "39604352"
 ```  
   
 ### <a name="parameters"></a>參數  
- *型別*（選擇性）  
- 可以是下列其中一項：  
+*型別*（選擇性）  
+可以是下列其中一項：  
   
 -   `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 這是預設值。  
   
@@ -61,51 +61,51 @@ ms.locfileid: "39604352"
   
 -   `unspecified` 停止插入與模組屬性相關的 ATL 程式碼： 插入 「 ATL 模組類別、 全域執行個體 _AtlModule 和輸入點函式。 因為專案中有其他屬性，所以請不要停止插入 ATL 程式碼。  
   
- *name* (選擇性)  
- 程式庫區塊的名稱。  
+*name* (選擇性)  
+程式庫區塊的名稱。  
   
- *版本*（選擇性）  
- 您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。  
+*版本*（選擇性）  
+您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。  
   
- *uuid*  
- 程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要擷取*uuid*程式庫區塊，您可以使用識別碼來這麼做 **__uuidof (***libraryname***)**。  
+*uuid*  
+程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要擷取*uuid*程式庫區塊，您可以使用識別碼來這麼做 **__uuidof (***libraryname***)**。  
   
- *lcid*  
- 當地語系化參數。 如需詳細資訊，請參閱 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。  
+*lcid*  
+當地語系化參數。 如需詳細資訊，請參閱 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。  
   
- *控制*（選擇性）  
- 指定程式庫中的所有 coclass 都是控制項。  
+*控制*（選擇性）  
+指定程式庫中的所有 coclass 都是控制項。  
   
- *helpstring*  
- 指定類型程式庫。  
+*helpstring*  
+指定類型程式庫。  
   
- *helpstringdll* （選擇性）  
- 設定用來執行文件字串查閱之 .dll 檔案的名稱。 如需詳細資訊，請參閱 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 。  
+*helpstringdll* （選擇性）  
+設定用來執行文件字串查閱之 .dll 檔案的名稱。 如需詳細資訊，請參閱 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 。  
   
- *helpfile* （選擇性）  
- 類型程式庫之說明檔的名稱。  
+*helpfile* （選擇性）  
+名稱**協助**型別程式庫的檔案。  
   
- *helpcontext* （選擇性）  
- 此類型程式庫的說明識別碼。  
+*helpcontext* （選擇性）  
+**說明 ID**這個類型程式庫。  
   
- *helpstringcontext* （選擇性）  
- 如需詳細資訊，請參閱 [helpstringcontext](../windows/helpstringcontext.md) 。  
+*helpstringcontext* （選擇性）  
+如需詳細資訊，請參閱 [helpstringcontext](../windows/helpstringcontext.md) 。  
   
- *隱藏*（選擇性）  
- 避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 如需詳細資訊，請參閱 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 屬性。  
+*隱藏*（選擇性）  
+避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 如需詳細資訊，請參閱 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 屬性。  
   
- *限制*（選擇性）  
- 不能任意呼叫程式庫成員。 如需詳細資訊，請參閱 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 屬性。  
+*限制*（選擇性）  
+不能任意呼叫程式庫成員。 如需詳細資訊，請參閱 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 屬性。  
   
- *自訂*（選擇性）  
- 一或多個屬性；這類似於 [custom](../windows/custom-cpp.md) 屬性。 第一個參數*自訂*是屬性的 GUID。 例如:   
+*自訂*（選擇性）  
+一或多個屬性；這類似於 [custom](../windows/custom-cpp.md) 屬性。 第一個參數*自訂*是屬性的 GUID。 例如:   
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- .rgs 檔案的字串資源識別碼，用來註冊 DLL、可執行檔或服務的應用程式識別碼。 模組是類型服務時，也可以使用這個引數來取得包含服務名稱之字串的識別碼。  
+*resource_name*  
+.rgs 檔案的字串資源識別碼，用來註冊 DLL、可執行檔或服務的應用程式識別碼。 模組是類型服務時，也可以使用這個引數來取得包含服務名稱之字串的識別碼。  
   
 > [!NOTE]
 >  .rgs 檔案以及包含服務名稱的字串應該包含相同的數值。  

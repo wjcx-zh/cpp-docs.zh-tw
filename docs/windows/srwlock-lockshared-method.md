@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fda64126709515fcf3e174a6f3cbdea22d5ee9e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652122"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011058"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared 方法
 取得**SRWLock**以共用模式的物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 SyncLockShared LockShared();  
   
 static SyncLockShared LockShared(  

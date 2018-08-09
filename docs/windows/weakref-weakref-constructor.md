@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6e7b7d35fd8cae44c3f374a81cae572e4c9ee4f8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641469"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011155"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef 建構函式
 初始化的新執行個體**WeakRef**類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 WeakRef();  
 WeakRef(  
    decltype(__nullptr)  

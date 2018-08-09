@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d8e5cbbcbbdf3cefe5211eb4f2274ce3b2b79db
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ac49319dca429dcc0351393f73d711266cf764a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608796"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010768"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>IsBaseOfStrict::value 常數
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 static const bool value = __is_base_of(Base, Derived);  
 ```  
   
 ## <a name="remarks"></a>備註  
  指出是否會有一個類型的另一個基底。  
   
- `value` 是 **，則為 true**如果型別`Base`的基底類別型別的`Derived`，否則就是**false**。  
+ **值**已 **，則為 true**如果型別`Base`型別的基底類別`Derived`，否則就是**false**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** internal.h  

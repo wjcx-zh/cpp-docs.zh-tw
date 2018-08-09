@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7ed375a30ddadf72b7eee8a2cc852dec6620a992
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652932"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011113"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 結構
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template <  
    typename I,  
    typename Base  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0076445f21bcbad5ca7028c088cddfdbdcacf8cd
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604865"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013697"
 ---
 # <a name="make-function"></a>Make 函式
 初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同的模組中定義的元件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template <  
    typename T,  
    typename TArg1,  

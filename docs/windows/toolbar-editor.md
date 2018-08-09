@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641643"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011724"
 ---
 # <a name="toolbar-editor"></a>工具列編輯器
-工具列編輯器可讓您建立工具列資源，並將點陣圖轉換成工具列資源。 工具列編輯器會以圖形方式真實地顯示應用程式完成後的工具列和按鈕。  
+**工具列**編輯器可讓您建立工具列資源，並將點陣圖轉換成工具列資源。 **工具列**編輯器来顯示的工具列和按鈕，非常類似於中完成的應用程式外觀將使用的圖形化顯示。  
   
- 使用工具列編輯器可以：  
+ 具有**工具列**編輯器，您可以：  
   
 -   [建立新的工具列和按鈕](../windows/creating-new-toolbars.md)  
   
@@ -40,12 +40,12 @@ ms.locfileid: "39641643"
   
 -   [建立工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- [工具列編輯器] 視窗與 [影像編輯器] 視窗一樣，都會顯示按鈕影像的兩個檢視。 這兩個窗格會以分隔列區隔。 您可隨意地拖曳分隔列，以變更窗格的相對大小。 現用窗格會顯示選取框線。 影像的兩個檢視上方是主旨工具列。  
+ **工具列**編輯器 視窗會顯示兩個按鈕的影像，影像編輯器 視窗相同檢視。 這兩個窗格會以分隔列區隔。 您可隨意地拖曳分隔列，以變更窗格的相對大小。 現用窗格會顯示選取框線。 影像的兩個檢視上方是主旨工具列。  
   
  ![工具列編輯器](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 工具列編輯器  
   
- 工具列編輯器的功能類似影像編輯器。 其功能表項目、圖形工具和點陣圖格線都與影像編輯器相同。 [影像] 功能表提供一個功能表命令，可讓您在工具列編輯器與影像編輯器之間進行切換。 如需使用圖形工具列、色彩調色盤或 [影像] 功能表的詳細資訊，請參閱 [影像編輯器](../windows/image-editor-for-icons.md)。  
+ ** 工具列**編輯器是類似**映像**編輯器的功能。 功能表項目、 圖形工具和點陣圖格線都與相同**映像**編輯器。 在沒有功能表命令**映像**功能表可讓您切換**工具列**編輯器與**映像**編輯器。 如需有關使用**圖形**工具列**色彩**調色盤，或**映像**功能表上，請參閱[影像編輯器](../windows/image-editor-for-icons.md)。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   

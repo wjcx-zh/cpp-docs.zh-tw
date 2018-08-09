@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a87087b4ef51c016a5165f0d997824f174ca06c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608153"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010687"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>將點陣圖儲存為 GIF 或 JPEG (圖示影像編輯器)
 當您建立點陣圖時，格式為點陣圖 (.bmp) 建立映像。 您不過，可以將影像儲存為 GIF 或 JPEG 或其他圖形的格式。  
@@ -51,9 +51,10 @@ ms.locfileid: "39608153"
   
 4.  與仍在中開啟點陣圖**映像**編輯器中，按一下**儲存*filename*為.bmp**上**檔案**功能表。  
   
-5.  在 [**另存新檔**對話方塊方塊中，輸入您想要提供檔案，代表您要的檔案格式的延伸模組的名稱**檔案名稱**] 方塊中。 比方說，myfile.gif。  
+5.  在 [**另存新檔**對話方塊方塊中，輸入您想要提供檔案，代表您要的檔案格式的延伸模組的名稱**檔案名稱**] 方塊中。 例如， *myfile.gif*。  
   
-     **請注意**您必須建立或開啟您專案外的點陣圖，以將它儲存為其他檔案格式。 如果您建立或開啟您的專案內**另存新檔**命令將會無法使用。 如需詳細資訊，請參閱 <<c0> [ 檢視資源在資源指令碼檔案外部的專案 （獨立式）](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
+     > [!NOTE]
+     > 您必須建立或開啟您專案外的點陣圖，以將它儲存為其他檔案格式。 如果您建立或開啟您的專案內**另存新檔**命令將會無法使用。 如需詳細資訊，請參閱 <<c0> [ 檢視資源在資源指令碼檔案外部的專案 （獨立式）](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
 6.  按一下 [儲存] 。  
   

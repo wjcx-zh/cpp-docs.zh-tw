@@ -1,5 +1,5 @@
 ---
-title: Win32 應用程式精靈 |Microsoft 文件
+title: Win32 應用程式精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9aebf4e130c30e488ec348b67add5b600108991
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891421"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014217"
 ---
 # <a name="win32-application-wizard"></a>Win32 應用程式精靈
 Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見下表標題列)。 在每個案例中，您都可以為開啟的專案類型指定適合的其他選項。 下表指出每種應用程式類型可使用的選項。  
@@ -56,8 +56,8 @@ Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見�
 > [!NOTE]
 >  您不能加入 ATL 類別，而 MFC 類別只能加入支援 MFC 的那些 Windows 桌面應用程式類型 (請見上表)。  
   
- 您可以在 **方案總管**中檢視精靈為專案建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)。  
+ 您可以在 **方案總管**中檢視精靈為專案建立的檔案。 更多精靈為您的專案所建立之檔案的相關資訊，請參閱專案所產生的檔案， `ReadMe.txt`。 如需檔案類型的詳細資訊，請參閱 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立空的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
+ [建立空白的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
  [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 14b68f573452d9ab8894027fd4d83c0b89f2ddf1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603341"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018357"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可讓您使用 Visual c + + 關鍵字當做識別項。  
@@ -31,7 +31,7 @@ ms.locfileid: "39603341"
 ## <a name="all-platforms"></a>所有平台  
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __identifier(  
 Visual_C++_keyword  
 )  
@@ -49,7 +49,7 @@ Visual_C++_keyword
 ### <a name="examples"></a>範例  
  **範例**  
   
- 在下列範例中，類別命名為`template`是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中`template`類別， **__identifier**關鍵字會隱藏這個事實所**範本**是標準的 c + + 關鍵字。  
+ 在下列範例中，具名的類別**範本**是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中**範本**類別 **_try**關鍵字會隱藏的事實，**範本**是標準的 c + + 關鍵字。  
   
 ```cs  
 // identifier_template.cs  
@@ -79,7 +79,7 @@ int main() {
   
 ### <a name="examples"></a>範例  
   
- 在下列範例中，類別命名為`template`是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中`template`類別， **__identifier**關鍵字會隱藏這個事實所**範本**是標準的 c + + 關鍵字。  
+ 在下列範例中，具名的類別**範本**是在 C# 中建立和散發的 DLL。 使用的 Visual c + + 程式中**範本**類別 **_try**關鍵字會隱藏的事實，**範本**是標準的 c + + 關鍵字。  
   
 ```cs  
 // identifier_template.cs  

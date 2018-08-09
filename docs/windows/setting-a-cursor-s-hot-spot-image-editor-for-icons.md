@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d4c00ef825274fc9db6c71522cdb789e07c3b05
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648661"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017135"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>設定資料指標&#39;s 作用點 （圖示影像編輯器）
-作用[游標](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)是點至 Windows 追蹤游標的位置參考。 根據預設，作用點設定為資料指標 （座標 0，0） 的左上角。 中的作用區屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)顯示作用點座標。  
+作用[游標](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)是點至 Windows 追蹤游標的位置參考。 根據預設，作用點設定為資料指標 （座標 0，0） 的左上角。 **熱點**中的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)顯示作用點座標。  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>若要設定游標的作用點  
   
@@ -42,7 +42,6 @@ ms.locfileid: "39648661"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

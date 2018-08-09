@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5ed8669a22be7e1a2b696ca9373c30e71f17c191
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606783"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012679"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>選取影像的範圍 (圖示影像編輯器)
 您可以使用 選取工具來定義您想要剪下、 複製、 清除、 調整大小、 反轉，或移動之影像的區域。 具有**矩形選取範圍**工具，您可以定義，並選取影像的矩形區域。 具有**不規則的選取項目**工具，您可以繪製徒手畫的外框範圍，您想要選取剪下、 複製或其他作業。  
@@ -52,7 +52,6 @@ ms.locfileid: "39606783"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

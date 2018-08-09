@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1842202ea0873889f79848230c91c3ccded7f25b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651362"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016661"
 ---
 # <a name="switchis"></a>switch_is
 指定的運算式或做為選取的等位成員的聯集判別的識別項。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [switch_is]  
 ```  
   

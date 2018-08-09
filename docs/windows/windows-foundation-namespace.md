@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60eb32017e824397af6e4535efa5ec55f314c4b8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d82e31e75cf0180670ebdbc875628fdefcef57bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646727"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014633"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 命名空間
 可讓基本 Windows 執行階段功能，例如物件和 factory 建立。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 namespace Windows::Foundation;  
 ```  
   

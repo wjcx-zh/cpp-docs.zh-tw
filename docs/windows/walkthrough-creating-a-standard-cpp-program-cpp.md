@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0915f6f506b942a7ee52eec637c9ea6631339e79
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4f3f01ab95237a0401394d429443804ce65a4385
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643279"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017324"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說： 建立標準的 c + + 程式 （c + +）
 您可以使用 Visual Studio 整合式的開發環境 (IDE) 中的 Visual c + + 來建立標準 c + + 程式。 依照本逐步解說中的步驟，建立專案、 將新檔案新增至專案、 修改檔案以加入 c + + 程式碼，然後編譯及執行程式使用[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。  
@@ -59,7 +59,7 @@ ms.locfileid: "39643279"
   
     2.  在 **程式碼**節點，按一下**c + + 檔 (.cpp)**，輸入檔案的名稱，然後按一下**新增**。  
   
-     .Cpp 檔案中會出現在原始程式檔資料夾中**方案總管 中**，和 Visual Studio 編輯器中開啟檔案。  
+     .Cpp 檔案中會出現在**原始程式檔**中的資料夾**方案總管 中**，和 Visual Studio 編輯器中開啟檔案。  
   
 6.  在檔案中在編輯器中，輸入有效的 c + + 程式，使用 c + + 標準程式庫，或複製其中一個範例程式，並將它貼在檔案中。  
   

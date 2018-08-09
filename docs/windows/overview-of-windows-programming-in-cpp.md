@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77a6049216137da56cc79cc6f28f1f7591015a33
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604514"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012189"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -39,7 +39,7 @@ UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行�
 
    此分類也包括使用 C++ 處理核心元件和伺服器與雲端程式設計內容中的計算程式碼。 有時候伺服器或雲端應用程式核心的效能密集程式碼會以 C++ 撰寫，以使效能最大化。 您可以將這類程式碼編譯成 DLL，並從 C# 或 Visual Basic 使用它。
 
-- **.NET Framework 應用程式**。 大部分的 .NET Framework 應用程式以 C# 或 Visual Basic 撰寫，但是您也可以 C++/CLI (Visual C++ 中的 /clr 編譯器選項)。 我們建議針對包含 managed 和原生程式碼之較大型應用程式的最小 interop 圖層使用 C++/CLI。
+- **.NET Framework 應用程式**。 大部分的.NET Framework 應用程式以 C# 或 Visual Basic 撰寫，但是您也可以 C + + /cli CLI ( `/clr` Visual c + + 編譯器選項)。 我們建議針對包含 managed 和原生程式碼之較大型應用程式的最小 interop 圖層使用 C++/CLI。
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 

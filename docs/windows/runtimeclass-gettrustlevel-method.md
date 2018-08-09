@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: adcec3f4a531a6c48e0995468994900124746e4b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606620"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015127"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel 方法
 
@@ -37,7 +37,6 @@ STDMETHOD(GetTrustLevel)(
 ```
 
 ### <a name="parameters"></a>參數
-
 *trustLvl*  
 這項作業完成時，目前的信任層級**RuntimeClass**物件。
 
@@ -47,7 +46,7 @@ STDMETHOD(GetTrustLevel)(
 
 ## <a name="remarks"></a>備註
 
-如果，就會發出判斷提示 」 錯誤&#95; &#95;WRL_STRICT&#95; &#95;或&#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95;未定義。
+如果，就會發出判斷提示時發生`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`未定義。
 
 ## <a name="requirements"></a>需求
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70cba5145f64fd88d1d6f1c4a68ac4c0730968cc
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a976e4b6c6b2fb89dfab362b13000d2e7d4327b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570374"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013410"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>如何：在專案外開啟資源指令碼檔 (獨立式)
 您可以檢視 .rc 檔中的資源，而不需要開啟一個專案。 .Rc 檔會在相對於在文件視窗中開啟[資源檢視](../windows/resource-view-window.md)視窗 （如同在專案內開啟檔案時）。  
@@ -46,13 +46,13 @@ ms.locfileid: "39570374"
   
 ### <a name="to-open-multiple-rc-files-outside-a-project"></a>開啟專案外的多個 .rc 檔  
   
-1.  開啟兩個獨立資源檔案。 例如，開啟 Source1.rc 和 Source2.rc。  
+1.  開啟兩個獨立資源檔案。 例如，開啟`Source1.rc`和`Source2.rc`。  
   
     1.  從**檔案**功能表上，選擇**開放**，然後按一下**檔案**。  
   
-    2.  在 **開啟的檔案**對話方塊方塊中，瀏覽至您想要開啟 (Source1.rc)，反白顯示檔案，然後按一下第一個資源指令碼檔**開啟**。  
+    2.  在 **開啟的檔案**對話方塊方塊中，巡覽至您想要開啟的第一個資源指令碼檔案 (`Source1.rc`)，反白顯示檔案，然後按一下**開啟**。  
   
-    3.  重複先前的步驟來開啟第二個 .rc 檔 (Source2.rc)。  
+    3.  重複上述步驟來開啟第二個.rc 檔餇 (`Source2.rc`)。  
   
          .rc 檔現在會在個別的文件視窗中開啟。  
   

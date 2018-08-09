@@ -19,19 +19,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 744bf034572745cd88a35f47a1ca2da03e900fd8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 393c424feb2a84fff85ba0efb5de7cbcaf54737c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606653"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016755"
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 會建立**SafeIntException**物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 SafeIntException();  
   
 SafeIntException(  

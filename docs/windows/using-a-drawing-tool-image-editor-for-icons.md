@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646120"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019460"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>使用繪圖工具 (圖示影像編輯器)
-影像編輯器的徒手繪製和清除的工具的運作方式相同： 您選取的工具，而如果有必要，請[選取前景和背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形狀的選項。 然後將指標移至映像並按一下或拖曳來繪製及清除。  
+**映像**編者徒手繪製和清除的工具的運作方式相同： 您選取的工具，並視需要[選取前景和背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形狀的選項。 然後將指標移至映像並按一下或拖曳來繪製及清除。  
   
  當您選取**橡皮擦**工具**筆刷**工具，或**噴槍**選項選取器 工具，會顯示該工具的選項。  
   

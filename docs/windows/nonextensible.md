@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 812f5e2462236faef1b2b13d5fb25320319e773e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608491"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015725"
 ---
 # <a name="nonextensible"></a>nonextensible
 指定`IDispatch`實作只包括屬性和方法介面描述中所列，而且無法在執行階段延伸與其他成員。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [nonextensible]  
 ```  
   

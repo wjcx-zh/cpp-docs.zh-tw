@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2acc2e24b1030dc09529fdcad444e29f83ae11e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2ae538b66e4e8de7611f7b2f276c354a87dad2ef
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651661"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017887"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef 解構函式
 取消初始化目前的執行個體**WeakRef**類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 ~WeakRef();  
 ```  
   

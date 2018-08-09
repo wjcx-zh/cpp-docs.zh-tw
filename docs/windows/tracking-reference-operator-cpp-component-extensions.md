@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651827"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011838"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>追蹤參考運算子 (C++ 元件擴充功能)
 A*追蹤參考*(`%`) 作用如同一般的 c + + 參考 (`&`) 不同之處在於當物件指派給追蹤參考時，物件的參考計數會漸增。  
@@ -46,7 +46,7 @@ A*追蹤參考*(`%`) 作用如同一般的 c + + 參考 (`&`) 不同之處在於
 ## <a name="windows-runtime"></a>Windows 執行階段  
  追蹤參考的行為類似標準的 C++ 參考，差異在於 % 是參考計數。 下列程式碼片段示範如何在 % 和 ^ 類型之間轉換：  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  下列範例顯示如何將 ^ 傳遞至採用 % 的函式。  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 21  

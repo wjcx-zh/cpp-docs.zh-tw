@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604235"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016232"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 方法
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 基礎的 IUnknown 介面指標。  
+ 指向基礎`IUnknown`介面。  
   
 ## <a name="remarks"></a>備註  
  取得指標的基礎`IUnknown`目前的介面`Implements`結構。  

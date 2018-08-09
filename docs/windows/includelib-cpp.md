@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3d6f6a4dc4f23460b3661da4ed3775708cac9b6d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603377"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016173"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 會導致的.idl 或.h 檔案要包含在產生的.idl 檔案中。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ includelib(  
    name.idl  
 ) ];  

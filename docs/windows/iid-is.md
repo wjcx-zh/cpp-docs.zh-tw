@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 508f83b1dde590a4a8a04980895ef247f2a16123
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603286"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014984"
 ---
 # <a name="iidis"></a>iid_is
 指定的介面指標所指向的 COM 介面的 IID。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ iid_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *運算式*  
  介面指標所指向的 C 語言運算式，指定 COM 介面的 IID。  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 674a7dced019926e6ea07b41641eb42db70c45a0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652766"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013476"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive 方法
 嘗試取得**SRWLock**物件獨佔模式使用目前或指定**SRWLock**物件。 如果呼叫成功，呼叫執行緒會取得鎖定的擁有的權。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 SyncLockExclusive TryLockExclusive();  
   
 static SyncLockExclusive TryLockExclusive(  

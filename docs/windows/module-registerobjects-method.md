@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaa1b23bbefb64071e5f1f330c8708f9f9516ad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 04281b87584d10d36f5f2eeea05dfae0923b2d9f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605262"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013310"
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects 方法
 註冊 COM 或 Windows 執行階段物件，讓其他應用程式可以連線到它們。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT RegisterObjects(  
    ModuleBase* module,   
    const wchar_t* serverName);  

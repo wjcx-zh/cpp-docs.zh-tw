@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604482"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012829"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ 元件擴充功能)
 宣告介面。  如需原生介面資訊，請參閱[__interface](../cpp/interface.md)。  
@@ -32,14 +32,13 @@ ms.locfileid: "39604482"
 
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>參數  
-  
  *interface_access*  
  組件外部介面的存取範圍。  可能的值為**公開金鑰**並**私人**。  **私用**是預設值。 巢狀的介面不能有*interface_access*規範。  
   
@@ -75,7 +74,7 @@ interface class
  在開發環境中，您可以取得 F1 說明這些關鍵字的反白顯示關鍵字，(`interface class`，例如)，然後按 F1。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- **備註**  
+### <a name="remarks"></a>備註 
   
  (這個語言功能沒有只適用於 Windows 執行階段的備註。)  
   
@@ -83,7 +82,7 @@ interface class
  編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **備註**  
+### <a name="remarks"></a>備註
   
  (這個語言功能沒有只適用於 Common Language Runtime 的備註。)  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 in Function_3  

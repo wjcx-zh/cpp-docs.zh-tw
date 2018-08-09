@@ -18,20 +18,20 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c355924ce1f264ce63e02f5fda948a62675e675
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: abf51432e5803de001610da07d97d5bad1796085
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38102461"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018841"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>理論式執行端通道的 c + + 開發人員指引
 
-本文包含可協助識別及緩和風險的理論式執行端通道硬體 c + + 軟體弱點的開發人員指導方針。 這些弱點可以將機密資訊洩漏跨越信任界限，而且可能影響支援推測性、 次序不對的指示執行的處理器上執行的軟體。 弱點的這個類別是 2018 年 1 月日中所述的第一個和其他背景資訊和指引可在[Microsoft 資訊安全摘要報告](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。
+本文包含可協助識別及緩和風險的理論式執行端通道硬體 c + + 軟體弱點的開發人員指導方針。 這些弱點可以將機密資訊洩漏跨越信任界限，而且可能影響支援推測性、 次序不對的指示執行的處理器上執行的軟體。 弱點的這個類別是 2018 年 1 月日中所述的第一個和其他背景資訊和指引可在[Microsoft 資訊安全摘要報告](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)。
 
 這篇文章所提供的指引與相關弱點所代表的類別：
 
-1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 （從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 文件[/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 
+1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 （從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 
 
 2. CVE-2018年-3639，也稱為[推測性存放區略過 (SSB)](https://aka.ms/sescsrdssb)。 可能發生因為相依的存放區，因為記憶體存取 misprediction 預先載入的推測性執行的側邊通道被與這個硬體的弱點可能會類別。
 
@@ -184,7 +184,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-請注意這兩個範例涉及推測性修改的堆疊配置間接分支指標。 可以推測性修改全域變數、 堆積配置的記憶體，和甚至是唯讀記憶體一些 Cpu 上也可能會發生。 堆疊配置的記憶體，針對 Visual c + + 編譯器已經採取步驟以讓它更難推測修改堆疊配置間接分支目標，例如透過重新排列本機變數，使得緩衝區會放在旁邊做為安全性 cookie屬於[/GS](https://docs.microsoft.com/en-us/cpp/build/reference/gs-buffer-security-check)編譯器的安全性功能。
+請注意這兩個範例涉及推測性修改的堆疊配置間接分支指標。 可以推測性修改全域變數、 堆積配置的記憶體，和甚至是唯讀記憶體一些 Cpu 上也可能會發生。 堆疊配置的記憶體，針對 Visual c + + 編譯器已經採取步驟以讓它更難推測修改堆疊配置間接分支目標，例如透過重新排列本機變數，使得緩衝區會放在旁邊做為安全性 cookie屬於[/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)編譯器的安全性功能。
 
 ## <a name="speculative-type-confusion"></a>理論式的型別混淆
 
@@ -368,6 +368,6 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="see-also"></a>另請參閱
 
-[減少推測性執行旁路攻擊漏洞的指導方針](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
+[減少推測性執行旁路攻擊漏洞的指導方針](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
 
 [減少推測性執行側邊通道攻擊硬體漏洞](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed35392180d0531133413a54ca2190ed65519546
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570570"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020261"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>如何：建立資源指令碼檔
 > [!NOTE]
->  資源編輯器在 Express 版中無法使用。  
+>  **資源編輯器**不適用於 Express 版本。  
 >   
 >  這份資料適用於 Windows 桌面應用程式。 以 .NET 語言撰寫的專案不會使用資源指令碼檔。 如需詳細資訊，請參閱 [資源檔](../windows/resource-files-visual-studio.md)。  
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>建立新的資源指令碼 (.rc) 檔  
   
-1.  將焦點放在您現有的專案資料夾中**方案總管 中**，例如"MyProject"。  
+1.  將焦點放在您現有的專案資料夾中**方案總管**，例如`MyProject`。  
   
     > [!NOTE]
-    >  請勿混淆方案總管中的專案資料夾與方案資料夾。 如果您將焦點放在**解決方案**資料夾中，您的選擇中**加入新項目**對話方塊 （在步驟 3) 將會不同。  
+    >  請勿混淆方案資料夾內專案資料夾**方案總管 中**。 如果您將焦點放在**解決方案**資料夾中，您的選擇中**加入新項目**對話方塊 （在步驟 3) 將會不同。  
   
 2.  在 [專案]  功能表中，按一下 [加入新項目] 。  
   
@@ -48,10 +48,8 @@ ms.locfileid: "39570570"
 > [!NOTE]
 >  您只能將資源指令碼 (.rc 檔) 加入已載入 Visual Studio IDE 的現有專案中， 而不能建立獨立的 .rc 檔 (即專案以外的檔案)。 [資源範本](../windows/how-to-use-resource-templates.md) (.rct 檔) 則可以隨時建立。
 
-
-## <a name="requirements"></a>需求  
-  
-Win32  
+## <a name="requirements"></a>需求    
+ Win32  
   
 ## <a name="see-also"></a>另請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)   

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 98e3b9e78f46b14dfeca18a8e69538111d3ba219
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604381"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010311"
 ---
 # <a name="pointerdefault"></a>pointer_default
 指定出現在參數清單的最上層指標除外的所有指標的預設指標屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ pointer_default(  
    value  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *值*  
  描述此指標類型的值： **ptr**， **ref**，或**唯一**。  
   

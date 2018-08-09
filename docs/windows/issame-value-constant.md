@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9d1ae2b4ea4ad4769a770d503ff8bd82c91a53a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c16d16fe1965e5e3c6fa69a78dabf9be615daee1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608783"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013222"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value 常數
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  template <typename T1, typename T2>  
+```cpp  
+template <typename T1, typename T2>  
 struct IsSame  
 {  
     static const bool value = false;  
@@ -46,7 +46,7 @@ struct IsSame<T1, T1>
 ## <a name="remarks"></a>備註  
  表示一種型別是否與另一個相同。  
   
- `value` 是 **，則為 true**如果範本參數相同，並**false**範本參數是否不同。  
+ **值**是 **，則為 true**如果範本參數相同，並**false**範本參數是否不同。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** internal.h  

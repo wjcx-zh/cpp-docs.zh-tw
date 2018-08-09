@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df603fe8d4c063c014118caf89a74a40e73cbe5b
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a2f8712e06838fb2d2269ba307a551997d7bd57c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607825"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018227"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename T>  
 static __forceinline bool CanCastTo(  
    _In_ T* ptr,  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606458"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010369"
 ---
 # <a name="implements-c"></a>implements (C++)
 指定分派介面，強制讓 IDL coclass 的成員。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ ms.locfileid: "39606458"
  以逗號分隔會是成員的 IDL coclass dispinterface 的清單。 速記方法來指定單一 dispinterface**實作 (dispinterface** * = dispinterface_name ***)**。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，只有 COM 介面的 coclass 的基底類別會加入在 IDL coclass。 **實作**可讓您強制執行其他 IDL coclass 成員的介面。  
+ 根據預設，唯一的 COM 介面的基底類別的`coclass`IDL coclass 中新增。 **會實作**可讓您強制執行其他介面為 IDL`coclass`成員。  
   
 ## <a name="requirements"></a>需求  
   

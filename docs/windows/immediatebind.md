@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9979ec16009de680facdc6e8fc22b3d3cdccc3
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4b75adf562afcd7e6ce6dd0b754bae28bccea401
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603044"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014321"
 ---
 # <a name="immediatebind"></a>immediatebind
 表示資料庫將會立即被告知資料繫結物件的屬性的所有變更。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [immediatebind]  
 ```  
   

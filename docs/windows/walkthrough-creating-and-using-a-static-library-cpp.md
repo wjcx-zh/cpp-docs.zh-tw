@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebcf09fd4fdda4269edec66f863b239e00e51e1d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9f17bbe624497b9481977785ca555261826295c4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652971"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015741"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 (C++)
 本逐步解說示範如何建立搭配 C++ 應用程式使用的靜態程式庫 (.lib 檔案)。 使用靜態程式庫是重複使用程式碼的好方法。 您只要在靜態程式庫中撰寫這些常式一次，然後從需要其功能的應用程式中加以參考，就不需在每個應用程式中都重新實作相同的常式。 從靜態程式庫連結的程式碼會變成應用程式的一部分，您不必安裝另一個檔案即可使用程式碼。  
@@ -65,7 +65,7 @@ ms.locfileid: "39652971"
   
 1.  若要建立新類別的標頭檔，請在方案總管  中開啟 **MathFuncsLib**專案的捷徑功能表，然後選擇 [加入] 、[新項目] 。 在 [加入新項目]  對話方塊的左窗格中，選取 [Visual C++] 底下的 [程式碼] 。 在中間窗格中，選取 [標頭檔 (.h)] 。 指定標頭檔的名稱 — 比方說， *MathFuncsLib.h*，然後選擇**新增**按鈕。 空白標頭檔隨即顯示。  
   
-2.  加入要執行一般算術運算 (例如加法、減法、乘法和除法) 的類別，名稱為 **MyMathFuncs** 。 程式碼應該會與以下相似：  
+2.  新增類別，名為`MyMathFuncs`來執行一般算術運算，例如加法、 減法、 乘法和除法。 程式碼應該會與以下相似：  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]  
   
@@ -78,7 +78,7 @@ ms.locfileid: "39652971"
 5.  選取編譯靜態程式庫**建置** > **建置方案**功能表列上。 這會建立可供其他程式使用的靜態程式庫。  
   
     > [!NOTE]
-    >  從 Visual Studio 命令列建置時，您必須以兩個步驟建置程式。 首先，執行`cl /c /EHsc MathFuncsLib.cpp`編譯的程式碼，並建立物件的檔案，稱為**MathFuncsLib.obj**。(`cl` 命令會叫用編譯器 Cl.exe，而 `/c` 選項則指定編譯但不連結。 如需詳細資訊，請參閱 < [/c （編譯而不連結）](../build/reference/c-compile-without-linking.md)。)其次，執行**lib MathFuncsLib.obj**連結程式碼，並建立靜態程式庫**MathFuncsLib.lib**。 (`lib` 命令會叫用程式庫管理員 Lib.exe。 (如需詳細資訊，請參閱 [LIB Reference](../build/reference/lib-reference.md))。  
+    >  從 Visual Studio 命令列建置時，您必須以兩個步驟建置程式。 首先，執行`cl /c /EHsc MathFuncsLib.cpp`編譯的程式碼，並建立物件的檔案，稱為`MathFuncsLib.obj`。 (`cl` 命令會叫用編譯器 Cl.exe，而 `/c` 選項則指定編譯但不連結。 如需詳細資訊，請參閱 < [/c （編譯而不連結）](../build/reference/c-compile-without-linking.md)。)其次，執行`lib MathFuncsLib.obj`以連結程式碼並建立靜態程式庫`MathFuncsLib.lib`。 (`lib` 命令會叫用程式庫管理員 Lib.exe。 (如需詳細資訊，請參閱 [LIB Reference](../build/reference/lib-reference.md))。  
   
 ##  <a name="CreateAppToRefTheLib"></a> 建立 c + + 主控台應用程式會參考靜態程式庫  
   
@@ -101,17 +101,17 @@ ms.locfileid: "39652971"
   
 ### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>在應用程式中使用靜態程式庫的功能  
   
-1.  建立主控台應用程式之後，系統會自動為您建立空白程式。 原始程式檔的名稱與您先前選擇的名稱相同。 在本範例中，其名稱為 **MyExecRefsLib.cpp**。  
+1.  建立主控台應用程式之後，系統會自動為您建立空白程式。 原始程式檔的名稱與您先前選擇的名稱相同。 在此範例中，它會命名為`MyExecRefsLib.cpp`。  
   
-2.  您必須先參考數學常式，才能在靜態程式庫中使用它。 若要這樣做，開啟 MyExecRefsLib 專案中的捷徑功能表**方案總管**，然後選擇**新增** > **參考**。  
+2.  您必須先參考數學常式，才能在靜態程式庫中使用它。 若要這樣做，開啟捷徑功能表**MyExecRefsLib**專案中**方案總管**，然後選擇**新增** > **參考**.  
   
 3.  [加入參考]  對話方塊會列出您可以參考的程式庫。 [專案]  索引標籤會列出目前方案中的專案，以及這些專案含有的任何程式庫。 在 [專案]  索引標籤上，選取 [MathFuncsLib]  核取方塊，然後選擇 [確定]  按鈕。  
   
-4.  若要參考 **MathFuncsLib.h** 標頭檔，您必須修改包含的目錄路徑。 在 **MyExecRefsLib** 的 [屬性頁] 對話方塊中，依序展開 [組態屬性]  節點、[C/C++]  節點，然後選取 [一般] 。 在 [其他 Include 目錄] 旁邊，指定 **MathFuncsLib** 目錄的路徑或瀏覽至其位置。  
+4.  參考`MathFuncsLib.h`標頭檔，您必須修改包含的目錄路徑。 在 **MyExecRefsLib** 的 [屬性頁] 對話方塊中，依序展開 [組態屬性]  節點、[C/C++]  節點，然後選取 [一般] 。 在 [其他 Include 目錄] 旁邊，指定 **MathFuncsLib** 目錄的路徑或瀏覽至其位置。  
   
      若要瀏覽至目錄路徑，請開啟屬性值下拉式清單，然後選擇 [編輯] 。 在 **其他 Include 目錄**對話方塊中，在文字方塊中，選取空白行，然後選擇 省略符號按鈕 (**...**) 結尾的行。 在 [選取目錄]  對話方塊中，選取 **MathFuncsLib** 目錄，然後選擇 [選取資料夾]  按鈕以儲存選取項目並關閉對話方塊。 在 [其他 Include 目錄]  對話方塊中，選擇 [確定]  按鈕，然後在 [屬性頁]  對話方塊中選擇 [確定]  按鈕，將您的變更儲存至專案。  
   
-5.  您現在可以在這個應用程式中使用 **MyMathFuncs** 類別。 若要這樣做，請以下列程式碼取代 **MyExecRefsLib.cpp** 的內容：  
+5.  您現在可以使用`MyMathFuncs`此應用程式中的類別。 若要這樣做，請將取代的內容`MyExecRefsLib.cpp`以下列程式碼：  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#120](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_3.cpp)]  
   

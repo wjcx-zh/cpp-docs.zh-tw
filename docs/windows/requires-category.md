@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2e2fd0863608f7e48d8ee2b296d1e1e76de6e541
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606097"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018477"
 ---
 # <a name="requirescategory"></a>requires_category
 指定目標類別的必要的元件類別目錄。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ requires_category(   
   requires_category  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *requires_category*  
  所需的類別目錄的識別碼。  
   

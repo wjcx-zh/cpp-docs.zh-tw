@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644404"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014704"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 方法
 
@@ -35,7 +35,6 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>參數
-
 *runtimeName*  
 這項作業完成時，執行階段類別名稱。
 
@@ -45,7 +44,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>備註
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定義，判斷提示會發出錯誤如果所指定的類別`Base`類別樣板參數不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未與設定WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+如果`__WRL_STRICT__`是定義，判斷提示會發出錯誤如果所指定的類別`Base`類別樣板參數不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
 ## <a name="requirements"></a>需求
 

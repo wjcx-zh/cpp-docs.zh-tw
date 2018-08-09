@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8ff7fb86b7b39e283c27ee78611444b78bc53c5b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605054"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020274"
 ---
 # <a name="modulebase-class"></a>ModuleBase 類別
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class ModuleBase;  
 ```  
   

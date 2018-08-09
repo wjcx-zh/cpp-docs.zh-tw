@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e0294c7cc118c4014e998ad570d7e1e453ea2c6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d30a467bd929c68c35e06861087ec7f47d1f2d51
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606497"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011903"
 ---
 # <a name="lengthis"></a>length_is
 指定要傳送的陣列元素數目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ length_is(  
    "expression"  
 ) ]  

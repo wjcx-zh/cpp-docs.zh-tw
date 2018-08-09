@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d6fda61fcaace9df1df69317149c719a716c6da6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607104"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012139"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在現有的功能表之間插入新的功能表
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>在現有的功能表間插入新的功能表  
@@ -35,7 +35,6 @@ ms.locfileid: "39607104"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

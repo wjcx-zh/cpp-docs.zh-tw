@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ed742d3762232846b2cac189978ea07c140b65f2
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606181"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012653"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
 **新的 ref**彙總關鍵字，其配置當物件變成無法存取，並傳回控制代碼回收的類型的執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 所配置物件。  
@@ -86,8 +86,6 @@ int main()
     return 0;  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 32  

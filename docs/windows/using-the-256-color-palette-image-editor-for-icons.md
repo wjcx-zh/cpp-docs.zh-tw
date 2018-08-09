@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645148"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011812"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>使用 256 色調色盤 (圖示影像編輯器)
-若要繪製選取 256 色調色盤中，您需要從色彩調色盤中選取的色彩[色彩視窗](../windows/colors-window-image-editor-for-icons.md)。  
+若要繪製選取 256 色調色盤中，您必須選取色彩**色彩**中的調色盤[色彩視窗](../windows/colors-window-image-editor-for-icons.md)。  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>若要從大圖示的 256 色調色盤選擇色彩  
   
@@ -36,7 +36,7 @@ ms.locfileid: "39645148"
   
 2.  從顯示中的 256 色彩選擇色彩**色彩**中的調色盤**色彩**視窗。  
   
-     選取的色彩會變成目前的色彩中的色彩調色盤**色彩**視窗。  
+     選取的色彩會變成目前的色彩**色彩**中的調色盤**色彩**視窗。  
   
     > [!NOTE]
     >  256 色的映像所使用的初始調色盤比對所傳回的調色盤`CreateHalftonePalette`Windows API。 適用於 Windows shell 的所有圖示應該都使用這個調色盤來防止重繪閃動期間調色盤實現。  

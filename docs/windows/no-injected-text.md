@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fc0dcba6597b6b8a3b37c240bf1c4a58f30b6b23
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603416"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020339"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 防止編譯器將程式碼，因為屬性使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *布林*（選擇性）  
  **真**如果您想不要插入此項目，任何程式碼**false**讓插入的程式碼。 **true**是預設值。  
   

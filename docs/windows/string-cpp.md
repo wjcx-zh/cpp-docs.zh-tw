@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 459f786863f7d10797008b87e276afb0c95e184a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645405"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020082"
 ---
 # <a name="string-c"></a>string (C++)
 表示一維**char**， **wchar_t**， `byte` （或同等權限） 做為字串，則必須處理陣列或這類陣列的指標。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [string]  
 ```  
   

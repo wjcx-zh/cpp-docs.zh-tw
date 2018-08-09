@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604612"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017830"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>圖示和游標：顯示裝置的影像資源 (圖示影像編輯器)
-圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有「作用點」(hot spot)，Windows 會用它來追蹤游標的位置。 您可以使用影像編輯器來建立及編輯圖示和游標，就像是點陣圖和其他影像一樣。  
+圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有「作用點」(hot spot)，Windows 會用它來追蹤游標的位置。 圖示和游標會建立和使用編輯**映像**編輯器中，當點陣圖和其他映像。  
   
- 當您建立新的圖示或游標時，影像編輯器會先建立一個標準類型的影像， 而且一開始會以螢幕 (透明) 色彩填滿影像。 如果影像是游標，其作用點一開始會在左上角 (座標 0,0)。  
+ 當您建立新的圖示或游標**映像**編輯器會先建立一個標準類型的映像。 而且一開始會以螢幕 (透明) 色彩填滿影像。 如果影像是游標，其作用點一開始會在左上角 (座標 0,0)。  
   
- 根據預設，影像編輯器可以為下表所示的裝置建立其他影像。 您可以在 [[自訂影像]](custom-image-dialog-box-image-editor-for-icons.md)對話方塊中輸入寬度、高度和色彩計數等參數，為其他裝置建立影像。  
+ 根據預設，**映像**編輯器支援下表所示的裝置建立額外的映像。 您可以在 [[自訂影像]](custom-image-dialog-box-image-editor-for-icons.md)對話方塊中輸入寬度、高度和色彩計數等參數，為其他裝置建立影像。  
   
 > [!NOTE]
->  您可以使用影像編輯器來檢視 32 位元影像，但是無法編輯這類影像。  
+>  使用**影像編輯器**，您可以檢視 32 位元映像，但無法加以編輯。  
   
 |色彩|寬度 (像素)|高度 (像素)|  
 |-----------|----------------------|-----------------------|  

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607020"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018278"
 ---
 # <a name="purpose-of-attributes"></a>屬性用途
 屬性指示目前無法在延伸 c + +，而不會中斷語言的傳統結構。 屬性可讓提供者 (另一個 Dll) 來動態擴充的語言功能。 屬性的主要目標是簡化 COM 元件，以及增加元件開發人員的產能層級的撰寫。 屬性可以套用至幾乎任何 c + + 建構，例如類別、 資料成員或成員函式。 以下是提供這項新技術的優勢的反白顯示：  
@@ -35,7 +35,7 @@ ms.locfileid: "39607020"
   
  例如，若要實作一般的 ATL 類別的簡單事件接收器，您可以套用[event_receiver](../windows/event-receiver.md)屬性，是特定的類別例如`CMyReceiver`。 `event_receiver`屬性就會編譯 Visual c + + compiler 物件檔案中插入適當的程式碼。  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  

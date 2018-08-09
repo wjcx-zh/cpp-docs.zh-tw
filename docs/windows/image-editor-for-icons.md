@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb5da618ce94711ce41e305c234ef5a5087c5f38
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a4a80faf8718b1db103e15cba6ee97a73553490d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603568"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017740"
 ---
 # <a name="image-editor-for-icons"></a>圖示影像編輯器
 影像編輯器具有用於建立及編輯影像的多功能工具組，以及可協助您建立工具列點陣圖的功能。 除了點陣圖、圖示和游標之外，您還可使用 [ **影像** ] 功能表上的命令和 [ **影像編輯器** ] 工具列上的工具編輯 GIF 或 JPEG 格式的影像。  
@@ -43,18 +43,18 @@ ms.locfileid: "39603568"
   
 -   [使用影像編輯器命令的快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
   
- [影像編輯器] 視窗會顯示兩個影像檢視，中間以分隔列分隔為兩個窗格。 您可隨意地拖曳分隔列，以變更窗格的相對大小。 現用窗格會顯示選取框線。  
+ **影像編輯器**視窗會顯示兩個映像，以分隔列分隔的兩個窗格檢視。 您可隨意地拖曳分隔列，以變更窗格的相對大小。 現用窗格會顯示選取框線。  
   
- 您可調整 [影像編輯器] 視窗來符合您的需要和偏好。 您可 [變更放大係數](../windows/changing-the-magnification-factor-image-editor-for-icons.md) 和 [顯示或隱藏像素格線](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md)。  
+ **影像編輯器**視窗可以調整以符合您的需求和喜好設定。 您可 [變更放大係數](../windows/changing-the-magnification-factor-image-editor-for-icons.md) 和 [顯示或隱藏像素格線](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md)。  
   
 > [!NOTE]
->  您可以使用影像編輯器來檢視 32 位元影像，但是無法編輯這類影像。  
+>  使用**影像編輯器**，您可以檢視 32 位元映像，但無法加以編輯。  
   
 ## <a name="visual-studio-image-library"></a>Visual Studio 影像庫  
- 您可以免費下載 Visual Studio 影像程式庫，此程式庫包含許多可在應用程式中使用的動畫、點陣圖和圖示。 如需如何下載程式庫的詳細資訊，請參閱 [Visual Studio 影像程式庫](/visualstudio/designers/the-visual-studio-image-library)。  
+ 您可以免費下載**Visual Studio 影像庫**其中包含許多動畫、 點陣圖和圖示，您可以使用您的應用程式中。 如需如何下載程式庫的詳細資訊，請參閱 [Visual Studio 影像程式庫](/visualstudio/designers/the-visual-studio-image-library)。  
   
 ## <a name="managed-resources"></a>Managed 資源  
- 您可以使用影像編輯器和 [二進位編輯器](binary-editor.md) 處理 Managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。  
+ 您可以使用**映像**編輯器並[二進位編輯器](binary-editor.md)來處理 managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   

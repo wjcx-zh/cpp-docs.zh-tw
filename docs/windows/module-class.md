@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4c437035713634736a02afbce1325d14ba18229
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d097c5c1193b74aa3e4d6ecea755390b0885a8d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604407"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013056"
 ---
 # <a name="module-class"></a>Module 類別
 表示相關物件的集合。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<ModuleType moduleType>  
 class Module;  
   
@@ -96,7 +96,7 @@ class Module<OutOfProc> : public Module<InProc>;
 |名稱|描述|  
 |----------|-----------------|  
 |[Module::objectCount_ 資料成員](../windows/module-objectcount-data-member.md)|追蹤已建立多少個類別的[讓](../windows/make-function.md)函式。|  
-|[Module::releaseNotifier_ 資料成員](../windows/module-releasenotifier-data-member.md)|存放 ReleaseNotifier 物件的指標。|  
+|[Module::releaseNotifier_ 資料成員](../windows/module-releasenotifier-data-member.md)|保留的指標`ReleaseNotifier`物件。|  
   
 ### <a name="macros"></a>巨集  
   

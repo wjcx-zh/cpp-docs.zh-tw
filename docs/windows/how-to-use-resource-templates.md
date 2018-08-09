@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569452"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015543"
 ---
 # <a name="how-to-use-resource-templates"></a>如何：使用資源範本
 資源範本是您已儲存為 .rct 檔案的自訂資源。 資源範本之後可以做為建立其他資源的起點。 資源範本可節省在開發共用功能的其他資源或資源群組的時間，例如標準控制項和其他重複的項目。 例如，您可能想要在數個對話方塊中包含 [說明] 按鈕和公司標誌的圖示。 若要快速地執行，請建立新對話方塊範本並使用標誌與 [說明] 按鈕加以自訂。  
@@ -46,7 +46,7 @@ ms.locfileid: "39569452"
   
 4.  提供的名稱和您的新.rct 檔案的位置，然後按**開啟**。  
   
-5.  新的.rct 檔案新增至您的專案，並會出現在 [方案總管] 底下**資源**資料夾。  
+5.  新的.rct 檔案新增至您的專案，並出現在**方案總管**下方**資源**資料夾。  
   
      您現在可以按兩下.rct 檔案以在文件視窗中，開啟它，然後將資源新增至它 (以滑鼠右鍵按一下 文件視窗中的檔案，然後選擇 **加入資源**從快顯功能表)。 然後，您可以自訂這些資源，並儲存 .rct 檔案。  
   
@@ -76,7 +76,6 @@ ms.locfileid: "39569452"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

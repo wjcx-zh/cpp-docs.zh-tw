@@ -1,5 +1,5 @@
 ---
-title: MFC 預先定義的符號 |Microsoft 文件
+title: MFC 預先定義的符號 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882056"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018490"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
-MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過 #include 陳述式在 StdAfx.h 檔案中：  
+MFC 專案一定會包含數個支援 windows 的標頭檔。 透過新增這些`#include`中的陳述式`StdAfx.h`檔案：  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- 標頭檔包含 MFC 一般值的符號 ID 值。 只有當您使用 MFC 專案中，這些符號會提供。 請注意，AFX_ 首碼後面是標準符號名稱前置詞。  
+ 標頭檔包含 MFC 通用值的符號 ID 值。 當您使用 MFC 專案中，將只適用這些符號。 請注意，AFX_ 首碼後面是標準的符號名稱前置詞。  
   
 |||  
 |-|-|  

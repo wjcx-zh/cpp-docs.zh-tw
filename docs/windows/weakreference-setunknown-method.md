@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a46db38bf17b1af5ae748cf90689509d6d21b0d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6adf747fd7612c2bcaa0964f91ecb585bbfbef0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647676"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018048"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown 方法
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void SetUnknown(  
    _In_ IUnknown* unk  
 );  

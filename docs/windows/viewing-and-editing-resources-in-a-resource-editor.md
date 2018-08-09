@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646926"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013999"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>在資源編輯器內檢視和編輯資源
-每個資源類型具有該資源類型的特定資源編輯器。 您可以重新排列、 調整大小、 新增控制項和功能，或修改其資源使用相關聯的編輯器的外觀。 您也可以編輯中的資源[文字格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)並[二進位格式](../windows/opening-a-resource-for-binary-editing.md)。  
+每個資源類型都有**資源**專屬於該資源類型的編輯器。 您可以重新排列、 調整大小、 新增控制項和功能，或修改其資源使用相關聯的編輯器的外觀。 您也可以編輯中的資源[文字格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)並[二進位格式](../windows/opening-a-resource-for-binary-editing.md)。  
   
  某些資源類型是個別的檔案，可以匯入和使用各種方式;這些包括點陣圖、 圖示、 游標、 工具列和 html 檔案。 這類資源的檔案名稱，以及[資源識別元](../windows/symbols-resource-identifiers.md)。 其他項目，例如對話方塊、 功能表和 Win32 專案中的字串資料表存在於只為一部分的資源指令碼 (.rc) 檔或資源範本 (.rct) 檔。  
   
@@ -46,16 +46,16 @@ ms.locfileid: "39646926"
   
 1.  選取 **資源檢視**從**檢視**功能表。  
   
-2.  如果資源檢視 視窗不是最上層視窗，按一下**資源檢視**將它顯示在頂端的索引標籤。  
+2.  如果**資源檢視** 視窗不是最上層視窗中，按一下**資源檢視**將它顯示在頂端的索引標籤。  
   
-3.  從 [資源] 檢視中，展開包含您想要檢視的資源的專案的資料夾。 例如，如果您想要檢視的對話方塊資源，依序展開 [對話方塊] 資料夾。  
+3.  從**資源檢視**，展開包含您想要檢視的資源的專案的資料夾。 例如，如果您想要檢視的對話方塊資源，依序展開** 對話方塊**資料夾。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-4.  按兩下 [資源，例如 IDD_ABOUTBOX]。  
+4.  比方說，按兩下資源**IDD_ABOUTBOX**。  
   
-     資源會在適當的編輯器中開啟。 比方說，對話方塊資源，資源會開啟對話方塊編輯器內。  
+     資源會在適當的編輯器中開啟。 比方說，對話方塊資源的資源內，開啟** 對話方塊**編輯器。  
   
      您也可以[檢視 （資源指令碼）.rc 檔中的資源，而不需要開啟任何專案](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "39646926"
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>若要在資源編輯器中檢視受管理的資源  
   
-1.  在 [**方案總管] 中**，連按兩下該資源，例如 Bitmap1.bmp。  
+1.  在 **方案總管**，按兩下資源，例如**Bitmap1.bmp**。  
   
      資源會在適當的編輯器中開啟。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39646926"
   
 1.  在 **方案總管**，以滑鼠右鍵按一下您想要刪除，然後選擇 的資源**刪除**快顯功能表中。  
   
-### <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求  
  無  
   
 ## <a name="see-also"></a>另請參閱  

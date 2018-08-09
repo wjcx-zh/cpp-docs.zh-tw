@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604222"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012124"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空間
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits 結構](../windows/argtraits-structure.md)|介面和匿名的成員函式具有指定的參數數目，請宣告指定的委派。|  
 |[ArgTraitsHelper 結構](../windows/argtraitshelper-structure.md)|可協助定義委派引數的一般的特性。|  
-|[BoolStruct 結構](../windows/boolstruct-structure.md)|定義 ComPtr 是否正在管理介面的物件存留期。 BoolStruct 會在內部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)運算子。|  
+|[BoolStruct 結構](../windows/boolstruct-structure.md)|定義是否`ComPtr`管理介面的物件存留期。 `BoolStruct` 會在內部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)運算子。|  
 |[CreatorMap 結構](../windows/creatormap-structure.md)|包含如何初始化、 註冊和取消註冊物件的相關資訊。|  
 |[DerefHelper 結構](../windows/derefhelper-structure.md)|代表已取值的指標，要`T*`樣板參數。|  
 |[EnableIf 結構](../windows/enableif-structure.md)|如果第一個範本參數評估為第二個範本參數所指定之型別的資料成員會定義 **，則為 true**。|  

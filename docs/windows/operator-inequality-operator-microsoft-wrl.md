@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 517184dffac0c35772e61284a18eca764fbb5cc8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 66009eb2e78268a4ee35a1c6023bfcb8dfda84b0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603976"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011649"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 運算子 (Microsoft::WRL)
 不等比較運算子[ComPtr](../windows/comptr-class.md)並[ComPtrRef](../windows/comptrref-class.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 WRL_NOTHROW bool operator!=(  
    const ComPtr<T>& a,  
    const ComPtr<U>& b  

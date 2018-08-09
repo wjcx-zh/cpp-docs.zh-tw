@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603484"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013557"
 ---
 # <a name="include-c"></a>include (C++)
 指定要包含在產生的.idl 檔案中的一或多個標頭檔。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ ms.locfileid: "39603484"
  **包括**c + + 屬性具有相同的功能[包含](http://msdn.microsoft.com/library/windows/desktop/aa367052)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼示範如何使用**包含**。 例如，檔案 include.h 只包含 #include 陳述式。  
+ 下列程式碼示範如何使用**包含**。 例如，檔案 include.h 只包含`#include`陳述式。  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2939d5d99c0657e6caa68e8cc6fbb9e6361fcaf7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643974"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017038"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>檢視 ActiveX 控制項以及將 ActiveX 控制項加入對話方塊
 Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。  
@@ -51,7 +51,7 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。
     > [!CAUTION]
     >  在您的系統上散發所有的 ActiveX 控制項可能不合法。 請參閱安裝這些控制項之軟體的授權合約，或連絡軟體公司。  
   
-     您可以將控制項置於 [工具箱] 視窗內，以便於存取。 如需詳細資訊，請參閱 <<c0> [ 自訂工具箱對話方塊](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。  
+     您可以放置在控制項**工具箱**視窗以方便存取。 如需詳細資訊，請參閱 <<c0> [ 自訂工具箱對話方塊](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   

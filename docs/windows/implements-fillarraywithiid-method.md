@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6797c274402578cfecb522c86745fb5b257e213d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f374c945312e41fd54b525dc0cb7cd84ce84985d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608854"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018890"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 方法
 插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __forceinline static void FillArrayWithIid(  
    unsigned long &index,  
    _In_ IID* iids  

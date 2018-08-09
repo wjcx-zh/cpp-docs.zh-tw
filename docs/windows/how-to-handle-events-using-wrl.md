@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 287fe57868f1550e2f778bd9122d0d350011084e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eada53c74c967c4df093e094a611a726ef79d99d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570629"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012530"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 處理事件
 本文件說明如何使用 Windows 執行階段 c + + 範本庫 (WRL) 訂閱，以及處理 Windows 執行階段物件的事件。  
@@ -35,7 +35,7 @@ ms.locfileid: "39570629"
   
      [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h 宣告以列舉裝置所需的類型。  
+     `Windows.Devices.Enumeration.h` 宣告列舉裝置所需的類型。  
   
      建議您利用`using namespace`在.cpp 檔案中，讓程式碼更容易閱讀的指示詞。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "39570629"
  [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要編譯程式碼，將它複製然後將它貼在 Visual Studio 專案中，或將它貼在檔案，稱為`wrl-consume-events.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。  
+ 若要編譯程式碼，將它複製然後將它貼在 Visual Studio 專案中，或將它貼在檔案，稱為`wrl-consume-events.cpp`，然後執行下列命令中**Visual Studio 命令提示字元**視窗。  
   
  `cl.exe wrl-consume-events.cpp runtimeobject.lib`  
   

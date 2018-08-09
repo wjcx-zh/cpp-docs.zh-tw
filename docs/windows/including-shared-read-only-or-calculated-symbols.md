@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9eeaacf95040f0f7e2ee435a7fbed2c173076315
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608608"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014909"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共用 (唯讀) 或計算符號
 當開發環境第一次讀取另一個應用程式所建立的資源檔時，會將所有包含的標頭檔標示為唯讀。 接著，您可以使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)新增額外的唯讀符號標頭檔。  
@@ -37,7 +37,7 @@ ms.locfileid: "39608608"
   
  當您搭配使用現有資源與符號定義，且這些定義使用運算式而非是簡單的整數來定義符號值，您也可以使用包含的符號檔。 例如:   
   
-```  
+```cpp  
 #define   IDC_CONTROL1 2100  
 #define   IDC_CONTROL2 (IDC_CONTROL1+1)  
 ```  
@@ -60,9 +60,9 @@ ms.locfileid: "39608608"
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在 **唯讀符號指示詞**方塊中，使用 **#include**編譯器指示詞來指定您想要保存唯讀符號的檔案。  
+2.  在 **唯讀符號指示詞**方塊中，使用`#include`編譯器指示詞來指定您想要保存唯讀符號的檔案。  
   
-     請勿呼叫 Resource.h 檔案，因為這是主要的符號標頭檔通常所使用的檔名。  
+     請勿呼叫檔案`Resource.h`，因為這是通常由主要的符號標頭檔的檔名。  
   
     > [!NOTE]
     >  **重要**完全依照您輸入您在唯讀符號指示詞中所輸入的內容包含在資源檔。 請確定您輸入的內容不包含任何拼字或語法錯誤。  
@@ -76,7 +76,6 @@ ms.locfileid: "39608608"
 4.  按一下 [確定 **Deploying Office Solutions**]。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

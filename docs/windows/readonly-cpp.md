@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b4f4e6d7c3941b1e90e0c49d113afe02dfcd491
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 05a46e099643602867aaa807e915e419054a8d60
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604420"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016001"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 禁止指派給資料成員。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [readonly]  
 ```  
   

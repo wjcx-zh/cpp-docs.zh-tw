@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652197"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015607"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>以快顯功能表方式檢視功能表
-一般來說，當您使用功能表編輯器時，功能表資源會顯示為功能表列。 不過，當程式執行時，您可能有加入至應用程式功能表列的功能表資源。  
+一般來說，當您正在處理** 功能表**編輯器中，功能表資源會顯示為功能表列。 不過，當程式執行時，您可能有加入至應用程式功能表列的功能表資源。  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>以快顯功能表方式檢視功能表資源  
   

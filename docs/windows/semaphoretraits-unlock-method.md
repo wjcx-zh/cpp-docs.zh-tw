@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650423"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015686"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock 方法
 版本控制共用資源。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 inline static void Unlock(  
    _In_ Type h  
 );  

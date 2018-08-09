@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608263"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015581"
 ---
 # <a name="selecting-multiple-controls"></a>選取多個控制項
 ### <a name="to-select-multiple-controls"></a>若要選取多個控制項  
@@ -47,7 +47,7 @@ ms.locfileid: "39608263"
 1.  使用選取的控制項群組，請按住**Shift**鍵，然後按一下您想要移除或加入到現有的選取範圍的控制項。  
   
     > [!NOTE]
-    >  按住 CTRL 鍵並按一下選取範圍內的控制項將此控制項主控該選取項目中。 如需詳細資訊，請參閱 <<c0> [ 指定主控項](../windows/specifying-the-dominant-control.md)。  
+    >  按住**Ctrl**鍵，並按一下選取範圍內的控制項將此控制項主控該選取項目中。 如需詳細資訊，請參閱 <<c0> [ 指定主控項](../windows/specifying-the-dominant-control.md)。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   

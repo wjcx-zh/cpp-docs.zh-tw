@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1ef27e86ae356ddc67555390b7e053daa8d32a09
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642275"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013349"
 ---
 # <a name="version-c"></a>version (C++)
 識別類別的多個版本之間的特定版本。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ version(  
    "version"  
 ) ]  

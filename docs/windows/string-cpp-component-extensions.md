@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 9d7717c8449dd1a9271878aa51571180b85584d1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645989"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017912"
 ---
 # <a name="string--c-component-extensions"></a>字串 (C++ 元件擴充功能)
 Visual c + + 編譯器支援*字串*，這些是代表一連串的字元為文字的物件。 Visual c + + 支援字串變數，其值是隱含的與常值，其值是明確加上引號的字串。  
@@ -135,8 +135,6 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 abcdef  
   
@@ -213,8 +211,6 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 overloaded +(String ^ a, String ^ b)   
   
@@ -265,8 +261,6 @@ int main() {
    func3("string" + "string");   // returns System::String  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 char *  

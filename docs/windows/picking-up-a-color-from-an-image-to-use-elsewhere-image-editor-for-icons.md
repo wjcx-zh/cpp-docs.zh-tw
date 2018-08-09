@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8d4573dfddd8287bb52f919f5fbceb0485b0911d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608809"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015114"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>從影像中揀選色彩以用於他處 (圖示影像編輯器)
 **選取色彩**，或色彩揀選工具建立映像上的任何色彩背景色彩，取決於您按左或右滑鼠按鍵的目前的前景色彩。 若要取消**選取色彩**工具，請選擇另一個工具。  
@@ -41,14 +41,13 @@ ms.locfileid: "39608809"
 2.  選取您想要從映像中挑選的色彩。  
   
     > [!NOTE]
-    >  您挑選色彩之後，「 影像編輯器重新啟動最近使用的工具。  
+    >  您挑選一種色彩之後,**映像**編輯器予以最近使用的工具。  
   
 3.  繪製前景色彩，或滑鼠右按鈕的背景色彩，使用滑鼠左鍵。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

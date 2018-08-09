@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c872b311e6fa7aa16d7118a13bc69ef2c7ef9cc4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 04f09f98148a54ac87add3d52bcba1cffa0c1c14
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652645"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016417"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>WeakReference::WeakReference 建構函式
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 WeakReference();  
 ```  
   

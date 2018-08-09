@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: aa8777689581a3ba014d2fa777f6695ca3220db1
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569943"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014347"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>如何：開啟資訊清單資源
-如果您從 [ [資源檢視](../windows/resource-view-window.md)] 開啟資訊清單資源，資源會以二進位格式開啟。 若要以更利於檢視的格式檢視資訊清單資源的內容，您必須從 [方案總管] 開啟資源。  
+如果您從 [ [資源檢視](../windows/resource-view-window.md)] 開啟資訊清單資源，資源會以二進位格式開啟。 若要檢視資訊清單資源的內容，以更利於檢視的格式，您必須開啟來自的資源**方案總管 中**。  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>在文字編輯器中開啟資訊清單資源  
   
@@ -32,7 +32,7 @@ ms.locfileid: "39569943"
   
 2.  按兩下 .manifest 檔案。  
   
-     您的程式資訊清單資源會在文字編輯器中開啟。  
+     在中開啟您的資訊清單資源**文字編輯器**。  
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>在另一個編輯器中開啟資訊清單資源  
   
@@ -43,7 +43,6 @@ ms.locfileid: "39569943"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

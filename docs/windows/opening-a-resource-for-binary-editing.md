@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605951"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014503"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>開啟資源進行二進位編輯
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>開啟 Windows 桌面資源進行二進位編輯  
@@ -36,7 +36,7 @@ ms.locfileid: "39605951"
 2.  以滑鼠右鍵按一下資源，然後從捷徑功能表按一下 [開啟二進位資料]  。  
   
     > [!NOTE]
-    >  如果您使用 [[資源檢視]](../windows/resource-view-window.md) 視窗開啟含 Visual Studio 無法辨識之格式的資源 (例如 RCDATA 或自訂資源)，此資源會自動以二進位編輯器開啟。  
+    >  如果您使用[資源檢視](../windows/resource-view-window.md)視窗開啟，Visual Studio 無法辨識格式 （例如 RCDATA 或自訂資源），該資源的資源會自動以開啟**二進位**編輯器。  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>開啟 Managed 資源進行二進位編輯  
   
@@ -58,10 +58,9 @@ ms.locfileid: "39605951"
  二進位編輯器中只會表示特定 ASCII 值 (0x20 到 0x7E)。 擴充字元會在二進位編輯器的 [ASCII 值] 區段 (右窗格) 中顯示為句號。 「可列印」字元是 ASCII 值 32 到 126。  
   
 > [!NOTE]
->  如果您想要針對已在其他編輯器視窗中編輯的資源使用二進位編輯器，請先關閉其他編輯器視窗。  
+>  如果您想要使用**二進位**編輯器已經在另一個編輯器視窗中，編輯的資源上先關閉其他編輯器視窗。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

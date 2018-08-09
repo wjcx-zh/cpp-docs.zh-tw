@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 108447dc3e18be84bf2875c49adb600ed9636dc4
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: e9dc6b75cfa408ececeb533fcd75dbad0f124fda
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605544"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018825"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>選取前景或背景色彩 (圖示影像編輯器)
 除了**橡皮擦**，在工具**影像編輯器**工具列繪製以目前前景或背景色彩時您分別按滑鼠左鍵或右鍵。  
@@ -39,7 +39,6 @@ ms.locfileid: "39605544"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

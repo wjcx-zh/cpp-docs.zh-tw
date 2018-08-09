@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9abba9937bfe425fa85cbce5b0795a3f9c784d22
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571184"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017223"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
 **Interior_ptr**可以搭配實值型別。  
@@ -63,9 +63,7 @@ int main() {
    System::Console::WriteLine(pv->data);  
 }  
 ```  
-  
-### <a name="output"></a>輸出  
-  
+
 ```Output  
 1  
 2  
@@ -128,8 +126,6 @@ int main() {
    Console::WriteLine(*p3);  
 }  
 ```  
-  
-### <a name="output"></a>輸出  
   
 ```Output 
 22  

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606510"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011574"
 ---
 # <a name="idlquote"></a>idl_quote
 可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構，並將它們傳遞至所產生的.idl 檔案。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *文字*  
  您想要傳遞至所產生的.idl 檔案而不會傳回編譯器錯誤 Visual c + + 編譯器的屬性名稱。  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- 此程式碼會導致 MYFLOT 和 MYDUB 並*文字*放在產生的.idl 檔中的項目。 *名稱*參數強制*文字*要參考的任何動作之前放置*名稱*產生的.idl 檔案中。 *相依性*參數會強制之前放置的相依性清單定義*文字*產生的.idl 檔案中。  
+ 此程式碼會造成`MYFLOT`並`MYDUB`而*文字*放在產生的.idl 檔中的項目。 *名稱*參數強制*文字*要參考的任何動作之前放置*名稱*產生的.idl 檔案中。 *相依性*參數會強制之前放置的相依性清單定義*文字*產生的.idl 檔案中。  
   
 ## <a name="requirements"></a>需求  
   

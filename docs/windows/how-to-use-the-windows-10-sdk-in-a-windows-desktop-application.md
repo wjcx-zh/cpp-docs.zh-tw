@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034776"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017993"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
 當您在 Visual Studio 2017 中建立傳統 Windows 桌面專案時，它會設定預設為使用已安裝 c + + 桌面工作負載，或上次更新時所安裝的 Windows 10 sdk 版本來建置。 這個版本的 Windows SDK 是相容的 Windows 7 和更新版本。 請參閱[使用 Windows 標頭](/windows/desktop/WinProg/using-the-windows-headers)的目標設為特定的 Windows 版本的詳細資訊。
@@ -31,7 +31,6 @@ ms.locfileid: "39034776"
   
 1.  確定已安裝 Windows 10 SDK。 Windows 10 SDK 已安裝的一部分**使用 c + + 的桌面開發**工作負載。 獨立版本[下載和工具適用於 Windows 10](https://developer.microsoft.com/windows/downloads)。
 
-  
 2.  開啟專案節點的捷徑功能表，然後選擇 [重定 SDK 版本目標] 。  
   
      ![重定 SDK 版本目標](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ ms.locfileid: "39034776"
   
      ![平台版本為目標](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，在 Visual c + + 目錄 區段的 專案屬性 對話方塊中，選擇其中一個屬性，例如 Include 目錄中，選擇開啟下拉式清單中，並選擇 \<編輯 >。 [Include 目錄]  對話方塊隨即出現。  
+     這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，在**Visual c + + 目錄**一節**專案屬性**對話方塊中，選擇其中一個屬性，例如**Include 目錄**，選擇開啟下拉式清單中，然後選擇 \<編輯 >。 [Include 目錄]  對話方塊隨即出現。  
   
      ![包含目錄對話方塊](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ ms.locfileid: "39034776"
   
 1.  開啟專案節點的捷徑功能表，然後選擇 [重定 SDK 版本目標] 。  
   
-2.  在 [目標平台版本] 下拉式清單中，選擇 8.1。  
+2.  在 **目標平台版本**下拉式清單中，選擇**8.1**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 桌面應用程式 （Visual c + +）](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

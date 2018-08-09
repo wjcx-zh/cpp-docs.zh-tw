@@ -22,15 +22,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03922c8ca9ba767991b3440e14e4928ab6c3b0ec
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2d1a59befd405e1412c2815694c40c8d24a99cec
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604456"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016992"
 ---
 # <a name="resource-editors"></a>資源編輯器
-資源編輯器是建立或修改 Visual Studio 專案所含資源的特殊環境。 Visual Studio 資源編輯器會共用技術和介面，協助您快速輕鬆地建立及修改應用程式資源。 資源編輯器可讓您 [在適當的編輯器中檢視和編輯資源](../windows/viewing-and-editing-resources-in-a-resource-editor.md) 以及 [預覽資源](../windows/previewing-resources.md)。  
+A**資源**編輯器是一個特製化的環境，用於建立或修改 Visual Studio 專案中包含的資源。 Visual Studio 資源編輯器會共用技術和介面，協助您快速輕鬆地建立及修改應用程式資源。 資源編輯器可讓您 [在適當的編輯器中檢視和編輯資源](../windows/viewing-and-editing-resources-in-a-resource-editor.md) 以及 [預覽資源](../windows/previewing-resources.md)。  
   
  當您建立或開啟資源時，適當的編輯器會自動開啟。  
   

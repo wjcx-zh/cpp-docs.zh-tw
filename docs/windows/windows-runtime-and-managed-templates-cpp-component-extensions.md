@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641456"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011558"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 執行階段和 Managed 樣板 (C++ 元件擴充功能)
 範本可讓您定義 Windows 執行階段或通用語言執行平台 (CLR) 類型的原型，然後使用不同的範本型別參數具現化該類型的變化。  
@@ -44,7 +44,7 @@ ms.locfileid: "39641456"
   
 ### <a name="examples"></a>範例  
   
- 雖然您可以用 Managed 類型範本參數具現化泛型類型，但是無法使用泛型類型範本參數具現化 Managed 範本。  這是因為泛型類型會在執行階段解析。  如需詳細資訊，請參閱 <<c0> [ 泛型和樣板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
+ 雖然您可以用 Managed 類型範本參數具現化泛型類型，但是無法使用泛型類型範本參數具現化 Managed 範本。 這是因為泛型類型會在執行階段解析。 如需詳細資訊，請參閱 <<c0> [ 泛型和樣板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- 雖然您無法存取使用 C++/CLI 語言語法的參考組件中定義的範本，但是可以使用反映。  如果範本未具現化，就不會在中繼資料中發出。  如果範本已具現化，則只有參考的成員函式會出現在中繼資料中。  
+ 雖然您無法存取使用 C++/CLI 語言語法的參考組件中定義的範本，但是可以使用反映。 如果範本未具現化，就不會在中繼資料中發出。 如果範本已具現化，則只有參考的成員函式會出現在中繼資料中。  
   
 ```cpp  
 // managed_templates_3.cpp  

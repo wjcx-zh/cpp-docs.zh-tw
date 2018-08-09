@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a7549371ba4648f8fcce03a98a021c8027c676e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d87c07f7fa4f1dfa6cbb34545d74d75e8a867583
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605190"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017080"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex 建構函式
 初始化的新執行個體**Mutex**類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 explicit Mutex(  
    HANDLE h  
 );  

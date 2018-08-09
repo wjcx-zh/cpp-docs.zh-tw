@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c8a7a57b263fc3db1fa7f021c1a6f4e09c0f8f7
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5517695da652dfd1eaa34b6ffd68fa90eac1a397
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605665"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012865"
 ---
 # <a name="selecting-controls"></a>選取控制項
 選取控制項來調整大小、 對齊、 移動、 複製或刪除它們，然後再執行您要的作業。 在大部分情況下，您必須選取要使用的調整大小和對齊工具上的多個控制項[對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
   
  當控制項被選取時，它具有實線 (active）) 其周圍的灰色的框線或中空 （非作用中） 「 調整大小控點，「 小方塊，會出現在選取範圍框線。 主控多個控制項選取時，有穩固的調整大小控點;所有其他選取的控制項有空心的調整大小控點。  
   
- 當您調整大小，或對齊多個控制項時，對話方塊編輯器使用的 「 主控制項 」 來判斷如何調整大小或對齊其他控制項。 根據預設，主控制項是第一個選取的控制項。  
+ 當您調整大小或對齊多個控制項， ** 對話方塊**編輯器會使用 「 主控制項 」 來判斷如何調整大小或對齊其他控制項。 根據預設，主控制項是第一個選取的控制項。  
   
 -   [選取多個控制項](../windows/selecting-multiple-controls.md)  
   

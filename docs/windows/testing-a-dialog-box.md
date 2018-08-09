@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652066"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019674"
 ---
 # <a name="testing-a-dialog-box"></a>測試對話方塊
 當您設計對話方塊時，您可以模擬和測試其執行階段行為，而不用重新編譯程式。 在這個模式下，您可以：  
@@ -42,7 +42,7 @@ ms.locfileid: "39652066"
   
 ### <a name="to-test-a-dialog-box"></a>測試對話方塊  
   
-1.  當對話方塊編輯器是使用中視窗，請在功能表列上，選擇 [ **格式**]、[ **測試對話方塊**]。  
+1.  當** 對話方塊**編輯器是使用中的視窗，在功能表列上，選擇**格式** > **測試對話方塊**。  
   
 2.  若要結束模擬，請按**Esc**，或只選擇**關閉**在對話方塊中，您要測試的按鈕。  
   

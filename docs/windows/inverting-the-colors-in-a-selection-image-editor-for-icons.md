@@ -20,22 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b86fe4b06298f75321e8cd5aeae551b9d6fa368b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608913"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016388"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>反轉選取範圍內的色彩 (圖示影像編輯器)
-影像編輯器可方便您反轉所選影像部分中的色彩，以便指出影像如何以反轉的色彩顯示。  
+**映像**編輯器提供便利的方式，可反轉選取的映像的組件中的色彩，讓您知道映像會如何顯示以反轉的色彩。  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>反轉目前選取範圍中的色彩  
   
 1.  在 **映像**功能表上，按一下**色彩對換**。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

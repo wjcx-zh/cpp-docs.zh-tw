@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96843c9d977b15d7fe2c645c8f655cd59a42e401
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a812317f66df3c0b1a330808a58753abb890765c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642044"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014048"
 ---
 # <a name="viprogid"></a>vi_progid
 指定與版本無關的 ProgID 表單。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ vi_progid(  
    name  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *name*  
  版本無關的 ProgID，表示的物件。  
   

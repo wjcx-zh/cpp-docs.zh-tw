@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15e51719e1daecc440dc5945a54443e4bc5079ec
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b057ef891a00829fd64d967ffa860a66d6d49d5d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644361"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012338"
 ---
 # <a name="v1enum"></a>v1_enum
 指示指定的列舉型別會傳輸為 32 位元的實體，而不是 16 位元的預設值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [v1_enum]  
 ```  
   

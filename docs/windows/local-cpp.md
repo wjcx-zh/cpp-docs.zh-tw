@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ad1fb4dd281918b0d9ab3494c9a9f060468fc389
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604196"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018093"
 ---
 # <a name="local-c"></a>local (C++)
 介面的標頭中使用時，可讓您使用 MIDL 編譯器為標頭的產生器。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [local]  
 ```  
   

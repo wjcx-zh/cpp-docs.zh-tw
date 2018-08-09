@@ -1,5 +1,5 @@
 ---
-title: C + + 的安全性最佳作法 |Microsoft 文件
+title: C + + 的安全性最佳做法 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2018
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015620"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/17/2018
  這些編譯器和連結器選項會啟用資料執行防止 (DEP) 相容性。 DEP 會保護 CPU 使其不執行非程式碼頁面。  
   
  [/analyze (程式碼分析)](../build/reference/analyze-code-analysis.md)  
- 此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱[程式碼分析 C/c + + 概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。  
+ 此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱 <<c0> [ 程式碼分析 C/c + + 概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。  
   
  [/DYNAMICBASE (使用位址空間配置隨機載入)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  此連結器選項會建置可執行檔映像，以在開始執行時於記憶體不同位置載入。 此選項也會讓記憶體中的堆疊位置更難預測。  
@@ -54,14 +55,14 @@ ms.lasthandoff: 05/17/2018
  C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函式的安全版本 (例如，未檢查的 `strcpy` 字串複製函式)。 因為已取代這些函式的較舊不安全版本，所以它們會造成編譯階段警告。 鼓勵您使用這些 CRT 函式的安全版本，而非隱藏編譯警告。 如需詳細資訊，請參閱 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。  
   
 ## <a name="safeint-library"></a>SafeInt 程式庫  
- [SafeInt 程式庫](../windows/safeint-library.md)有助於防止整數溢位和其他留下時應用程式執行數學運算可能會發生的錯誤。 `SafeInt`程式庫包含[SafeInt 類別](../windows/safeint-class.md)、 [SafeIntException 類別](../windows/safeintexception-class.md)，以及數個[SafeInt 函式](../windows/safeint-functions.md)。  
+ [SafeInt 程式庫](../windows/safeint-library.md)協助防止整數溢位和其他可利用來攻擊的錯誤，應用程式執行數學運算時，可能會發生。 `SafeInt`程式庫包含[SafeInt 類別](../windows/safeint-class.md)，則[SafeIntException 類別](../windows/safeintexception-class.md)，和數個[SafeInt 函式](../windows/safeint-functions.md)。  
   
- `SafeInt` 類別可防止整數溢位和除以零惡意探索。 您可以使用它來處理不同類型之值間的比較。 我提供兩個錯誤處理原則。 預設原則可供 `SafeInt` 類別擲回 `SafeIntException` 類別例外狀況，以報告無法完成數學運算的原因。 第二個原則可供 `SafeInt` 類別停止程式執行。 您也可以定義自訂原則。  
+ `SafeInt` 類別可防止整數溢位和除以零惡意探索。 您可以使用它來處理不同類型之值間的比較。 它提供兩種錯誤處理原則。 預設原則可供 `SafeInt` 類別擲回 `SafeIntException` 類別例外狀況，以報告無法完成數學運算的原因。 第二個原則可供 `SafeInt` 類別停止程式執行。 您也可以定義自訂原則。  
   
  每個 `SafeInt` 函式都會防止一個數學運算發生可利用的錯誤。 您可以使用兩種不同的參數，而且不需要將它們轉換成相同類型。 若要保護多個數學運算，請使用 `SafeInt` 類別。  
   
 ## <a name="checked-iterators"></a>已檢查的迭代器  
- 已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的迭代器會提供回應的值指派給前置處理器相依於其他層級定義，例如 **\_SECURE\_SCL\_會擲回**和 **\_迭代器\_偵錯\_層級**。 例如，在**\_迭代器\_偵錯\_LEVEL = 2**，已檢查的迭代器提供廣泛的正確性檢查在偵錯模式中，這會提供使用判斷提示。 如需詳細資訊，請參閱[Checked Iterators](../standard-library/checked-iterators.md)和[\_迭代器\_偵錯\_層級](../standard-library/iterator-debug-level.md)。  
+ 已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的迭代器會提供其他層級的回應取決於指派給前置處理器的值，定義這類 **\_SECURE\_SCL\_就會擲回**和 **\_迭代器\_偵錯\_層級**。 例如，在**\_迭代器\_偵錯\_LEVEL = 2**，已檢查的迭代器會提供完整正確性檢查偵錯模式，可使用判斷提示。 如需詳細資訊，請參閱 < [Checked Iterators](../standard-library/checked-iterators.md)並[\_迭代器\_偵錯\_層級](../standard-library/iterator-debug-level.md)。  
   
 ## <a name="code-analysis-for-managed-code"></a>Managed 程式碼的程式碼分析  
  「Managed 程式碼的程式碼分析」(也稱為 FxCop) 會檢查組件是否符合 .NET Framework 設計方針。 FxCop 會分析每個組件中的程式碼和中繼資料，以檢查下列區域是否有缺失：  
@@ -89,17 +90,17 @@ ms.lasthandoff: 05/17/2018
 
 -   找出應用程式中的潛在安全性問題。  
   
- AppVerifier 的應用程式相容性工具組，可從屬於[應用程式相容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 網站上。  
+ AppVerifier 是應用程式相容性工具組，可從[應用程式相容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 網站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 使用者帳戶  
- 使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱[Users 群組的成員身分執行](running-as-a-member-of-the-users-group.md)和[使用者帳戶控制的方式 (UAC) 會影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。
+ 使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱 < [Users 群組的成員身分執行](running-as-a-member-of-the-users-group.md)並[使用者帳戶控制的方式 (UAC) 會影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。
 
-## <a name="guidance-for-speculative-execution-side-channels"></a>理論式執行側邊通道指引
+## <a name="guidance-for-speculative-execution-side-channels"></a>理論式執行端通道指引
 
-如需如何識別及緩和推測執行側邊通道硬體的弱點可能會在 c + + 軟體資訊，請參閱[理論式執行側邊通道的 c + + 開發人員指引](developer-guidance-speculative-execution.md)。
+如需如何識別及減輕風險的理論式執行端通道硬體 c + + 軟體弱點資訊，請參閱[理論式執行端通道的 c + + 開發人員指引](developer-guidance-speculative-execution.md)。
 
 ## <a name="see-also"></a>另請參閱  
-- <xref:System.Security>   
-- [安全性](/dotnet/standard/security/index)   
-- [使用者帳戶控制 (UAC) 如何影響應用程式](how-user-account-control-uac-affects-your-application.md)
+<xref:System.Security>   
+[安全性](/dotnet/standard/security/index)   
+[使用者帳戶控制 (UAC) 如何影響應用程式](how-user-account-control-uac-affects-your-application.md)

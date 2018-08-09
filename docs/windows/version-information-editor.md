@@ -19,22 +19,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8ea040d5a549c61ba17f059260cb399d82bc430
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647377"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013963"
 ---
 # <a name="version-information-editor"></a>版本資訊編輯器
-版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 您可以使用版本資訊編輯器建立和維護這項資料，將之儲存在版本資訊資源中。 應用程式不需要版本資訊資源，但這卻是收集應用程式識別資訊的好地方。 安裝程式 API 也使用版本資訊。  
+版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 具有**版本資訊**編輯器，建立及維護這項資料會儲存在版本資訊資源。 應用程式不需要版本資訊資源，但這卻是收集應用程式識別資訊的好地方。 安裝程式 API 也使用版本資訊。  
   
  版本資訊資源有一個上層區塊以及一或多個下層區塊：頂端是單一固定的資訊區塊，底部是一或多個版本資訊區塊 (適用於其他語言和/或字元集)。 上層區塊有可編輯的數值方塊和可選取的下拉式清單。 下層區塊只有可編輯的文字方塊。  
   
 > [!NOTE]
 >  Windows 標準是只能有一個版本資源，名為 VS_VERSION_INFO。  
   
- 版本資訊編輯器可讓您：  
+ **版本資訊**編輯器可讓您：  
   
 -   [編輯版本資訊資源內的字串](../windows/editing-a-string-in-a-version-information-resource.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "39647377"
 -   [從您的程式內存取版本資訊](../windows/accessing-version-information-from-within-your-program.md)  
   
     > [!NOTE]
-    >  使用版本資訊編輯器時，在許多情況下您可以按一下滑鼠右鍵，顯示資源特定命令的快顯功能表。 例如，如果在指向區塊標頭項目時按一下，快顯功能表就會顯示 [新增版本區塊資訊] 和 [刪除版本區塊資訊] 命令。  
+    >  在使用時**版本資訊**編輯器，在許多情況下您可以按一下滑鼠右鍵以顯示資源特定命令的捷徑功能表。 例如，如果您按一下指向區塊標頭項目時，快顯功能表會顯示**新增版本區塊資訊**並**刪除版本區塊資訊**命令。  
   
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   

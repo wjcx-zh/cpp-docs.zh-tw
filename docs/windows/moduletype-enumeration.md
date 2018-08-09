@@ -1,5 +1,5 @@
 ---
-title: ModuleType 列舉 |Microsoft 文件
+title: ModuleType 列舉 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876832"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019926"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列舉
 指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   

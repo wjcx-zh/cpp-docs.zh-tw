@@ -20,27 +20,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41494e8b88f41c4c842e95e9f8a9f5da0247739f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c972f4038da4b4ed1d52fee0b8029b6f48ff3bb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605639"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013869"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>調整影像大小 (圖示影像編輯器)
-同時調整影像大小的影像編輯器的行為取決於您是否曾[選取](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)只是部分或整個影像。  
+行為**映像**編輯器時調整影像大小取決於您是否曾[選](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)只是部分或整個影像。  
   
- 當選取範圍包含只有部分映像時，影像編輯器刪除資料列縮小選取範圍，或藉由複製資料列或資料行的像素的像素為單位，並填入空出的區域，與目前的背景色彩，或它的資料行自動縮放的選取項目。  
+ 選取範圍包含只有部分映像，當**映像**編輯器會藉由刪除資料列或資料行的像素為單位，並以目前的背景色彩填滿空出的區域來縮小選取範圍，或它延伸選取範圍複製的資料列或資料行的像素為單位。  
   
- 當選取範圍包含整個影像時，影像編輯器是壓縮和映像，會自動縮放或裁剪，並將它擴充。  
+ 當選取範圍包含整個映像**映像**編輯器是壓縮和映像，會自動縮放或裁剪，並將它擴充。  
   
- 有兩種機制來調整影像大小： 調整大小控點並[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以拖曳調整大小控點，若要變更的所有大小或影像的一部分。 您可以拖曳調整大小控點是純色。 您無法將拖曳空心的控制代碼。 您可以使用 [屬性] 視窗，僅將整個影像調整不會選取的組件。  
+ 有兩種機制來調整影像大小： 調整大小控點並[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以拖曳調整大小控點，若要變更的所有大小或影像的一部分。 您可以拖曳調整大小控點是純色。 您無法將拖曳空心的控制代碼。 您可以使用**屬性**視窗重新調整整個影像，未選取的組件。  
   
  ![縮放控點上的點陣圖](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
 縮放控點  
   
 > [!NOTE]
->  如果您有在選取的磚狀格線選項[格線設定對話方塊](../windows/grid-settings-dialog-box-image-editor-for-icons.md)，然後調整大小貼齊至下一個並排顯示格線。 如果只選取 像素格線選項 （預設設定），調整大小貼齊至下一個可用的像素。  
+>  如果您有**圖格的格線**中選取選項[格線設定對話方塊](../windows/grid-settings-dialog-box-image-editor-for-icons.md)，然後調整大小貼齊至下一個並排顯示格線。 如果只有**像素格線**選項是選取 （預設值），調整大小貼齊至下一個可用的像素。  
   
 -   [調整整個影像大小](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   

@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571332"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018912"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>如何：在編譯時期包含資源
 通常可簡單且容易使用一個資源指令碼 (.rc) 檔中所有資源的預設排列方式。 不過，您可以將資源其他檔案中加入目前的專案在編譯時期藉由列出在**編譯時間指示詞**方塊中[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "39571332"
   
 -   為了將註解新增至儲存 .rc 檔時不會刪除的資源陳述式。  
   
-     資源編輯器不會直接讀取.rc 或 resource.h 檔。 資源編譯器會將它們編譯成 .aps 檔，以供資源編輯器使用。 此檔案是一個編譯步驟，只會儲存符號資料。 如同正常的編譯程序一般，編譯程序期間會捨棄非符號的資訊 (例如註解)。 每當 .aps 檔未與 .rc 檔同步時，就會重新產生 .rc 檔 (例如，當您儲存時，資源編輯器會覆寫 .rc 檔和 resource.h 檔)。 資源本身的任何變更都會繼續合併在 .rc 檔中，但當 .rc 檔被覆寫後，註解就會永遠遺失。  
+     資源編輯器不會直接讀取.rc 或`resource.h`檔案。 資源編譯器會將它們編譯成 .aps 檔，以供資源編輯器使用。 此檔案是一個編譯步驟，只會儲存符號資料。 如同正常的編譯程序一般，編譯程序期間會捨棄非符號的資訊 (例如註解)。 每當.aps 檔未與.rc 檔取得同步的都會重新產生.rc 檔案 (例如，當您儲存時，資源編輯器會覆寫.rc 檔和`resource.h`檔案)。 資源本身的任何變更都會繼續合併在 .rc 檔中，但當 .rc 檔被覆寫後，註解就會永遠遺失。  
   
 -   為了包含已開發及測試、而且不需要進一步修改的資源。 (資源編輯器無法編輯不含 .rc 副檔名的任何加入的檔案。)  
   
@@ -58,7 +58,6 @@ ms.locfileid: "39571332"
      以這種方式包含的檔案中資源，都會在編譯時期成為可執行檔的一部分。 當您在專案的主要 .rc 檔上工作時，無法直接編輯或修改它們。 您需要個別開啟包含的 .rc 檔。 資源編輯器無法編輯不含 .rc 副檔名的任何加入的檔案。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

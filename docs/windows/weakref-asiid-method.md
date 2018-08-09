@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e5ff6510463a6fed06534236612feb460919e37
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 60d2900876d7a9fbee7a193d0575bf3afdf4335b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643481"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012176"
 ---
 # <a name="weakrefasiid-method"></a>WeakRef::AsIID 方法
 設定指定`ComPtr`指標參數代表指定的介面識別碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT AsIID(  
    REFIID riid,  
    _Out_ ComPtr<IInspectable>* ptr  

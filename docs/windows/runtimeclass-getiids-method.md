@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87f51d39bf1ff8c7d4271797dcaa23278ac2e747
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 91d0a082a422657f6716e16c8b53ab33e0313d82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608439"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020131"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids 方法
 取得陣列，其中可包含的介面識別碼，藉由將目前**RuntimeClass**物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 STDMETHOD(  
    GetIids  
 )  

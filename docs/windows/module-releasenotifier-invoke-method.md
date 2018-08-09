@@ -1,5 +1,5 @@
 ---
-title: 'Module:: releasenotifier:: Invoke 方法 |Microsoft 文件'
+title: 'Module:: releasenotifier:: Invoke 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb51d59d2f7f1adc934332cbfa5fead56bbef0a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 48e488188ed040d29ef70f273991d1df9cf1d63e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876198"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014598"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke 方法
-實作時，會發行在模組中的最後一個物件時呼叫的事件處理常式。  
+實作時，請在發行模組中的最後一個物件時呼叫的事件處理常式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 virtual void Invoke() = 0;  
 ```  
   

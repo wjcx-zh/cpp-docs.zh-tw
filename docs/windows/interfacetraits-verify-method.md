@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603039"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017944"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify 方法
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __forceinline static void Verify();  
 ```  
   
 ## <a name="remarks"></a>備註  
  確認`Base`正確衍生。  
   
- 如需詳細資訊`Base`，請參閱公用 Typedefs 一節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
+ 如需詳細資訊`Base`，請參閱 <<c2>  **公用 Typedefs**一節中[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

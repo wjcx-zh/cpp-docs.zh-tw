@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571466"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016924"
 ---
 # <a name="how-to-create-a-resource"></a>如何：建立資源
 > [!NOTE]
->  資源檢視在 Express 版中不受支援。  
+>  **資源檢視**在 Express 版中不支援。  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>在資源檢視中建立新的資源  
   
-1.  在 [資源檢視](../windows/resource-view-window.md)中將焦點設在 .rc 檔，按一下 [ **編輯** ] 功能表並選擇 [ **加入資源** ] (或以滑鼠右鍵按一下資源檢視中的 .rc 檔，再從捷徑功能表中選擇 [ **加入資源** ])。  
+1.  使用焦點設在.rc 檔中[資源檢視](../windows/resource-view-window.md)，按一下**編輯**功能表，然後選擇 **加入資源**(或以滑鼠右鍵按一下.rc 檔中的**資源檢視** ，然後選擇 **加入資源**從快顯功能表)。  
   
-     **附註** 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
+     > [!NOTE] 
+     > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
 2.  在 [加入資源對話方塊](../windows/add-resource-dialog-box.md)中，選擇您想要加入至專案的資源類型。  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571466"
   
 1.  從 [ **專案** ] 功能表中，選擇 [ **加入資源**]。  
   
- 當您建立新的資源時，Visual C++ 會指派唯一名稱給它，例如 IDD_Dialog1。 您可以在相關聯的資源編輯器中或在 [ [屬性視窗](/visualstudio/ide/reference/properties-window)] 中編輯資源的屬性，以自訂此資源 ID。  
+ 當您建立新的資源時，Visual c + + 會指派一個唯一的名稱，比方說， `IDD_Dialog1`。 您可以在相關聯的資源編輯器中或在 [ [屬性視窗](/visualstudio/ide/reference/properties-window)] 中編輯資源的屬性，以自訂此資源 ID。  
   
  您可以將資源建立為新的預設資源 (不以範本為基礎的資源)，或建立為模仿 [範本](../windows/how-to-use-resource-templates.md)的資源。  
   
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)在 *.NET Framework 開發人員指南。*
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
 
-
-## <a name="requirements"></a>需求  
-  
-Win32  
+## <a name="requirements"></a>需求    
+ Win32  
   
 ## <a name="see-also"></a>另請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)   

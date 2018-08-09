@@ -1,5 +1,5 @@
 ---
-title: 'Verifyinheritancehelper:: Verify 方法 |Microsoft 文件'
+title: 'Verifyinheritancehelper:: Verify 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 879f5fa117f0f2bc444243f540925d64a2b824b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04bf01b5fad5a9fec579e347497a28b5e8abb861
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889871"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018812"
 ---
 # <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 static void Verify();  
 ```  
   
 ## <a name="remarks"></a>備註  
- 測試目前的範本參數所指定的兩個介面，並判斷是否有一個介面衍生自其他。  
+ 測試目前的範本參數所指定的兩個介面，並決定是否要將一個介面衍生自其他。  
   
  如果有一個介面不衍生自其他，就會發出錯誤。  
   

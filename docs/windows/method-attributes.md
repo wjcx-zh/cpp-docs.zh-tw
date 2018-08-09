@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604277"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016852"
 ---
 # <a name="method-attributes"></a>方法屬性
 下列屬性套用至類別、 coclass 或介面中的方法。  
@@ -39,8 +39,8 @@ ms.locfileid: "39604277"
 |[defaultbind](../windows/defaultbind.md)|表示最能代表物件的單一、 可繫結屬性。|  
 |[defaultcollelem](../windows/defaultcollelem.md)|使用 Visual Basic 程式碼最佳化。|  
 |[displaybind](../windows/displaybind.md)|指出應該顯示給使用者，作為可繫結的屬性。|  
-|[helpcontext](../windows/helpcontext.md)|指定的內容識別碼，可讓使用者檢視說明檔中這個項目相關的資訊。|  
-|[helpfile](../windows/helpfile.md)|設定型別程式庫的說明檔的名稱。|  
+|[helpcontext](../windows/helpcontext.md)|指定的內容識別碼，可讓使用者檢視中此項目相關的資訊**協助**檔案。|  
+|[helpfile](../windows/helpfile.md)|設定的名稱**協助**型別程式庫的檔案。|  
 |[helpstring](../windows/helpstring.md)|指定用來描述所套用之項目的字元字串。|  
 |[helpstringcontext](../windows/helpstringcontext.md)|指定.hlp 或.chm 檔案中的說明主題的識別碼。|  
 |[helpstringdll](../windows/helpstringdll.md)|指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。|  

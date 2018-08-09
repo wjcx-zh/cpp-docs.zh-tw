@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba13f3d561b4f7bbd57a7678fcfbea26e09a9984
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: d80a5189e25542b344d5506ac1f69dfbec5514af
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569371"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012543"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>如何：固定指標和陣列
 對 Managed 物件中定義的子物件執行 Pin 動作，與對整個物件執行 Pin 動作具有相同的效果。  例如，如果對陣列中的任何元素執行 Pin 動作，則整體陣列都會受到 Pin 動作影響。 語言並未提供任何擴充功能可用來宣告 Pin 陣列。 若要對陣列執行 Pin，請對其元素類型宣告 Pin 指標，然後對其中一個元素執行 Pin 動作。  
@@ -49,8 +49,6 @@ int main() {
                          // will not move during call  
 }  
 ```  
-  
-### <a name="output"></a>輸出  
   
 ```Output  
 ++  

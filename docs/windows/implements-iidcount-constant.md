@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: iidcount 常數 |Microsoft 文件'
+title: 'Implements:: iidcount 常數 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae89cbba1873d1e38f4a7536293a2ca4439e1a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7334427d6620e5158a418cee454b8cec98198028
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873663"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010993"
 ---
 # <a name="implementsiidcount-constant"></a>Implements::IidCount 常數
-保存實作的介面 Id 的數目。  
+保留實作的介面識別碼的數目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 static const unsigned long IidCount;  
 ```  
   

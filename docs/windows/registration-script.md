@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50029cea9e5bd7bf3a5032a2190fc71d4e893b5f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 95926c7e65210b7eaf366c0fe2a9df44fa9661d7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607669"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016674"
 ---
 # <a name="registrationscript"></a>registration_script
 執行指定的自訂註冊指令碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ registration_script(   
    script   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *指令碼*  
  自訂註冊指令碼 (.rgs) 檔案的完整路徑。 值為**無**，例如`script = "none"`，指出 coclass 有沒有註冊需求。  
   

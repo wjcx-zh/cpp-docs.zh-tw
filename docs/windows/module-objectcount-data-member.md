@@ -1,5 +1,5 @@
 ---
-title: 'Module:: objectcount_ 資料成員 |Microsoft 文件'
+title: 'Module:: objectcount_ 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a9360a7b0ce0596e9fb1bffb71864526cf92e5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875015"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016687"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_ 資料成員
-多少個類別以建立追蹤的[進行](../windows/make-function.md)函式。  
+追蹤已建立多少個類別的[讓](../windows/make-function.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 volatile long objectCount_;  
 ```  
   

@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651401"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019169"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>顯示或隱藏對話方塊編輯器工具列
-當您開啟對話方塊編輯器時，對話方塊編輯器工具列會自動出現頂端的 您的方案中。  
+當您開啟** 對話方塊**編輯器**對話方塊編輯器**工具列會自動出現在您的解決方案的頂端。  
   
 ### <a name="dialog-editor-toolbar"></a>對話方塊編輯器工具列  
   
@@ -40,9 +40,9 @@ ms.locfileid: "39651401"
 |![垂直置中 按鈕](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|垂直|![切換格線 按鈕](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切換格線|  
 |![水平置中 按鈕](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![切換輔助線 按鈕](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切換輔助線|  
   
- 對話方塊編輯器工具列包含用來排列控制項在對話方塊中，例如大小和對齊方式的版面配置的按鈕。 對話方塊編輯器工具列按鈕對應至 [格式] 功能表上的命令。 如需詳細資訊，請參閱 < [ 對話方塊編輯器的快速鍵](../windows/accelerator-keys-for-the-dialog-editor.md)。  
+ **對話方塊編輯器**工具列包含用來排列控制項上的對話方塊中，例如大小和對齊方式的版面配置的按鈕。 **對話方塊編輯器**工具列按鈕上對應至命令**格式**功能表。 如需詳細資訊，請參閱 < [ 對話方塊編輯器的快速鍵](../windows/accelerator-keys-for-the-dialog-editor.md)。  
   
- 當您在對話方塊編輯器中，您可以藉由從 可用工具列和視窗的清單中選取來切換對話方塊編輯器工具列的顯示。  
+ 如果您正在進行** 對話方塊**編輯器中，您可以切換顯示**對話方塊編輯器**選取從清單中的可用工具列和視窗的工具列。  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>若要顯示或隱藏對話方塊編輯器工具列  
   

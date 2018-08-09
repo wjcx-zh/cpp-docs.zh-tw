@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11fecff2336163fa4f2e773244bc1ab132a15329
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603712"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013710"
 ---
 # <a name="implementscategory"></a>implements_category
 指定目標類別所實作的元件類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ implements_category(  
    implements_category="uuid"  
 ) ]  
@@ -45,7 +45,7 @@ ms.locfileid: "39603712"
  此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。  
   
 ## <a name="example"></a>範例  
- 下列程式碼指定下列物件會實作 [控制項] 類別。  
+ 下列程式碼可讓您指定下列物件會實作`Control`類別目錄。  
   
 ```cpp  
 // cpp_attr_ref_implements_category.cpp  

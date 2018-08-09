@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8a722b7a4eb6104670d2d67d95f1c47755af5938
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603798"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012634"
 ---
 # <a name="licensed"></a>licensed
 表示已取得授權，它所套用的 COM 物件，而且必須具現化使用`IClassFactory2`。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [licensed]  
 ```  
   

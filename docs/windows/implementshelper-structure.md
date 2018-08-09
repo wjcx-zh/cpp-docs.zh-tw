@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5da95e6cfb276704b5cd6150e4abc2921a5701
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: eca429578fd9b58a2a3229199d53812a494af045
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605613"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018344"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 結構
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template <  
    typename RuntimeClassFlagsT,  
    typename ILst,  
@@ -51,7 +51,7 @@ friend struct Details::ImplementsHelper;
 ## <a name="remarks"></a>備註  
  可協助實作[實作](../windows/implements-structure.md)結構。  
   
- 此範本會周遊之介面的清單，並將它們加入做為基底類別，以及啟用 QueryInterface 所需的資訊。  
+ 此範本會周遊之介面的清單，並將它們加入做為基底類別，以及啟用所需的資訊`QueryInterface`。  
   
 ## <a name="members"></a>成員  
   

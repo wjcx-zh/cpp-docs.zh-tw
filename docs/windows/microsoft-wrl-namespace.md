@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft:: wrl 命名空間 |Microsoft 文件'
+title: 'Microsoft:: wrl 命名空間 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881646"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020248"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空間
 定義 Windows 執行階段 c + + 樣板程式庫所組成的基本類型。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,8 +70,8 @@ namespace Microsoft::WRL;
 |名稱|描述|  
 |----------|-----------------|  
 |[ChainInterfaces 結構](../windows/chaininterfaces-structure.md)|指定可以套用至一組介面 ID 的驗證和初始化函式。|  
-|[CloakedIid 結構](../windows/cloakediid-structure.md)|指出 RuntimeClass、Implements 和 ChainInterfaces 範本指定介面無法在 IID 清單中存取。|  
-|[Implements 結構](../windows/implements-structure.md)|實作指定介面的 QueryInterface 和 GetIid。|  
+|[CloakedIid 結構](../windows/cloakediid-structure.md)|若要指出`RuntimeClass`，`Implements`和`ChainInterfaces`範本指定的介面不是在 IID 清單中存取。|  
+|[Implements 結構](../windows/implements-structure.md)|Implements`QueryInterface`和`GetIid`指定介面。|  
 |[MixIn 結構](../windows/mixin-structure.md)|確保執行階段類別衍生自 Windows 執行階段介面 (若有的話)，然後才是傳統 COM 介面。|  
 |[RuntimeClassFlags 結構](../windows/runtimeclassflags-structure.md)|包含的執行個體的型別[RuntimeClass](../windows/runtimeclass-class.md)。|  
   
@@ -79,7 +79,7 @@ namespace Microsoft::WRL;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[AsyncResultType 列舉](../windows/asyncresulttype-enumeration.md)|指定 GetResults() 方法所傳回的結果類型。|  
+|[AsyncResultType 列舉](../windows/asyncresulttype-enumeration.md)|指定所傳回的結果的型別`GetResults()`方法。|  
 |[ModuleType 列舉](../windows/moduletype-enumeration.md)|指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。|  
 |[RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)|指定的型別[RuntimeClass](../windows/runtimeclass-class.md)支援的執行個體。|  
   

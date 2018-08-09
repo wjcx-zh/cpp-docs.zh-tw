@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 480baaf12c332f0a293374fe2317110eb186cbdf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6db5f5eb080f9d802090dda61afd296bc4e6dc3b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648980"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015039"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式
 了解如何建立通用 Windows 平台 (UWP) 應用程式會使用 Windows 執行階段 c + + 範本庫 (WRL) [Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -59,17 +59,17 @@ ms.locfileid: "39648980"
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>若要使用 WRL 建立媒體基礎灰階轉換元件  
   
-1.  在 Visual Studio 中建立**空白方案**專案。 將專案命名為，比方說， `MediaCapture`。  
+1.  在 Visual Studio 中建立**空白方案**專案。 為專案命名，例如*MediaCapture*。  
   
-2.  新增**DLL (通用 Windows)** 專案加入方案。 將專案命名為，比方說， `GrayscaleTransform`。  
+2.  新增**DLL (通用 Windows)** 專案加入方案。 為專案命名，例如*GrayscaleTransform*。  
   
-3.  新增**Midl 檔 (.idl)** 檔案加入專案。 將檔案命名為，比方說， `GrayscaleTransform.idl`。  
+3.  新增**Midl 檔 (.idl)** 檔案加入專案。 將檔案命名為，比方說， *GrayscaleTransform.idl*。  
   
 4.  將此程式碼新增至 GrayscaleTransform.idl。  
   
      [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]  
   
-5.  使用下列程式碼取代 pch.h 的內容。  
+5.  使用下列程式碼的內容取代`pch.h`。  
   
      [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]  
   
@@ -77,9 +77,9 @@ ms.locfileid: "39648980"
   
      [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]  
   
-7.  不會在此範例中使用 GrayscaleTransform.h。 您可以選擇將之從專案移除。  
+7.  `GrayscaleTransform.h` 不會在此範例中使用。 您可以選擇將之從專案移除。  
   
-8.  使用下列程式碼取代 GrayscaleTransform.cpp 的內容。  
+8.  使用下列程式碼的內容取代`GrayscaleTransform.cpp`。  
   
      [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "39648980"
        DllGetClassObject                   PRIVATE
    ```   
   
-10. 使用下列程式碼取代 dllmain.cpp 的內容。  
+10. 使用下列程式碼的內容取代`dllmain.cpp`。  
   
      [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]  
   
@@ -106,21 +106,21 @@ ms.locfileid: "39648980"
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 自訂媒體基礎元件從 C# 應用程式  
   
-1.  加入新**C# 空白應用程式 (XAML)** 專案加入`MediaCapture`解決方案。 將專案命名為，比方說， `MediaCapture`。  
+1.  加入新**C# 空白應用程式 (XAML)** 專案加入`MediaCapture`解決方案。 為專案命名，例如*MediaCapture*。  
   
 2.  在  **MediaCapture**專案中，將參考加入`GrayscaleTransform`專案。 若要深入了解，請參閱[如何： 加入或移除參考，可以使用 參考管理員](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。  
   
-3.  在 Package.appxmanifest 中上**能力**索引標籤上，選取**麥克風**並**網路攝影機**。 這兩種功能是從網路攝影機擷取相片的必要項。  
+3.  在  `Package.appxmanifest`，請在**功能**索引標籤上，選取**麥克風**並**網路攝影機**。 這兩種功能是從網路攝影機擷取相片的必要項。  
   
-4.  在 MainPage.xaml 中將此程式碼新增至根目錄[格線](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)項目：  
+4.  在  `MainPage.xaml`，將此程式碼新增至根[格線](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)項目：  
   
      [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]  
   
-5.  使用下列程式碼取代 MainPage.xaml.cs 的內容。  
+5.  使用下列程式碼的內容取代`MainPage.xaml.cs`。  
   
      [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]  
   
- 下圖顯示 MediaCapture 應用程式。  
+ 下圖顯示`MediaCapture app`。  
   
  ![擷取相片的 MediaCapture 應用程式](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   

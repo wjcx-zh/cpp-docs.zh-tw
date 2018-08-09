@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40904f8379d1a11d26c29af2340fa4adb24f12e0
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 133f0f4ee4efed71c530c7e9e8c367c7d2031433
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568812"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013271"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接執行個體化 WRL 元件
 了解如何使用 Windows 執行階段 c + + 範本庫 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)並[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函式來具現化元件，以從模組，其定義。  
@@ -34,13 +34,13 @@ ms.locfileid: "39568812"
   
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>若要建立並具現化基本記錄器元件  
   
-1.  在 Visual Studio 中建立**Win32 主控台應用程式**專案。 將專案命名為，比方說， `WRLLogger`。  
+1.  在 Visual Studio 中建立**Win32 主控台應用程式**專案。 為專案命名，例如*WRLLogger*。  
   
 2.  新增**Midl 檔 (.idl)** 檔案加入專案中，將檔案命名為`ILogger.idl`，然後新增此程式碼：  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  您可以使用下列程式碼來取代 WRLLogger.cpp 的內容。  
+3.  使用下列程式碼的內容取代`WRLLogger.cpp`。  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
@@ -50,7 +50,7 @@ ms.locfileid: "39568812"
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  使用下列的程式碼取代定義`wmain`。 此版本會使用`MakeAndInitialize`具現化`CConsoleWriter`物件並檢查`HRESULT`結果。  
+2.  使用下列的程式碼取代定義`wmain`。 此版本會使用`MakeAndInitialize`具現化`CConsoleWriter`物件，並檢查 HRESULT 結果。  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   

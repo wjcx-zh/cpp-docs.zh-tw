@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a87dadfd4787e4bd0100efb8fe7ffe2b1e7a8899
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 36541485282b8d0ce76a0d5c0cfc66a8fe744fcb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607848"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011032"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 宣告*pin 指標*，這只適用於 common language runtime。  
@@ -146,8 +146,6 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 45  
 ```  
@@ -182,8 +180,6 @@ int main() {
 };  
 ```  
   
- **輸出**  
-  
 ```Output  
 1  
 ```  
@@ -211,8 +207,6 @@ int main() {
    Console::WriteLine(mt->i);  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 8  

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: terminate 方法 |Microsoft 文件'
+title: 'Module:: terminate 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1822f8c1a854274ff30795096bb639520ea8cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874716"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016888"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate 方法
-會導致所有具現化要關閉之模組的 factory。  
+會導致所有關閉的模組來具現化的處理站。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void Terminate();  
 ```  
   
 ## <a name="remarks"></a>備註  
- 釋出快取中的處理站。  
+ 釋放快取中的處理站。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

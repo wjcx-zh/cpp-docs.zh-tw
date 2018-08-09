@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b7444ccf4f3a03036a5363024d0794f67b6a1ad6
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569536"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018854"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>如何：指定資源的 Include 目錄
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>指定特定 RC 檔的 Include 目錄  
@@ -34,7 +34,6 @@ ms.locfileid: "39569536"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

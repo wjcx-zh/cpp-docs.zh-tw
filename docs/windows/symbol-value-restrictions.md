@@ -1,5 +1,5 @@
 ---
-title: 符號值限制 |Microsoft 文件
+title: 符號值限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889536"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013397"
 ---
 # <a name="symbol-value-restrictions"></a>符號值限制
 符號值可以是針對 #define 前置處理器指示詞以正常方式表示的任何整數。 以下是符號值的一些範例：  
@@ -45,23 +45,21 @@ ms.locfileid: "33889536"
   
 -   您無法使用其他符號字串定義符號值。 例如，不支援下列符號定義：  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
 -   您無法使用具有引數的前置處理器巨集做為值定義。 例如:   
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
      不是有效的運算式，無論在編譯階段 `ID` 評估為何種項目。  
   
--   您的應用程式可能具有現有檔案，包含以運算式定義的符號。 如需有關如何納入符號做為唯讀符號的詳細資訊，請參閱[使用共用 （唯讀） 或計算符號](../windows/including-shared-read-only-or-calculated-symbols.md)。  
+-   您的應用程式可能具有現有檔案，包含以運算式定義的符號。 如需有關如何納入符號做為唯讀符號的詳細資訊，請參閱 <<c0> [ 使用共用 （唯讀） 或計算符號](../windows/including-shared-read-only-or-calculated-symbols.md)。  
   
  如需有關數字範圍的詳細資訊，請參閱[TN023： 標準 MFC 資源](../mfc/tn023-standard-mfc-resources.md)。  
-  
-
   
 ## <a name="requirements"></a>需求  
  Win32  

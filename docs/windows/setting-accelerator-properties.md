@@ -19,22 +19,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5337378b54c2109d05e28cb9d1bfed82f81913f3
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7d329d902014b3dff6f66fd6e3f1877a3bc70822
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652694"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016249"
 ---
 # <a name="setting-accelerator-properties"></a>設定快速鍵屬性
-您可以在設定快速鍵屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)在任何時間。 您也可以使用快速鍵編輯器來修改快速鍵對應表中的快速鍵屬性。 使用 [屬性] 視窗或快速鍵編輯器所做的變更會有相同的結果：編輯會立即反映在快速鍵對應表中。  
+您可以在設定快速鍵屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)在任何時間。 您也可以使用**加速器**編輯器來修改快速鍵對應表中的快速鍵屬性。 所做的變更**屬性** 視窗或**加速器**編輯器有相同的結果： 編輯會立即反映在快速鍵對應表。  
   
- 有三個屬性的每個加速器[識別碼](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160/locales/en-US):  
+ 有三個屬性的每個加速器[識別碼](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160):  
   
 -   [Modifier 屬性](../windows/accelerator-modifier-property.md)設定控制項的快速鍵組合。  
   
     > [!NOTE]
-    >  在 [屬性] 視窗中，這個屬性會顯示為三個不同的布林屬性，全部都可以獨立控制： **Alt**， **Ctrl**，並**Shift**。  
+    >  在 [**屬性**] 視窗中，這個屬性會顯示為三個不同的布林屬性，全部都可以獨立控制： **Alt**， **Ctrl**，和**Shift**。  
   
 -   [索引鍵屬性](../windows/accelerator-key-property.md)設定要做為快速鍵的實際金鑰。  
   

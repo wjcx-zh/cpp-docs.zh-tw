@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4488ca0e32bc9522e29028536efdcd5fea925301
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467361"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649981"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>加入、編輯或刪除控制項
-使用對話方塊編輯器，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。  
+使用 **對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。  
   
- 您也可以在對話方塊編輯器中使用的捷徑功能表，快速將已註冊的 ActiveX 控制項加入對話方塊中，並加入 [工具箱] 中進行快速存取的 ActiveX 控制項 (如需詳細資訊，請參閱 <<c0> [ 自訂工具箱對話方塊](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。  
+ 您可以使用中的捷徑功能表**對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取 （如需詳細資訊，請參閱[自訂工具箱對話方塊](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。  
   
 -   [將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "39467361"
   
 -   [顯示或隱藏 [工具箱] 視窗](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)在 *.NET Framework 開發人員指南。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
@@ -52,4 +52,3 @@ ms.locfileid: "39467361"
  [在對話方塊中的控制項](controls-in-dialog-boxes.md)   
  [加入對話方塊控制項的事件處理常式](adding-event-handlers-for-dialog-box-controls.md)   
  [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)
-

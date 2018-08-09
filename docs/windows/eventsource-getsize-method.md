@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e38bd233c302d0a2bd054a1cbf2efb301089a003
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 49497c8b33641521a66c3e84dc2dae3dbd993699
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569666"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645044"
 ---
 # <a name="eventsourcegetsize-method"></a>EventSource::GetSize 方法
 擷取與目前相關聯的事件處理常式數目**EventSource**物件  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 size_t GetSize() const;  
 ```  
   

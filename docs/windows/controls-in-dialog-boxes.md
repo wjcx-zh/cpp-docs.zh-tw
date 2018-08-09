@@ -1,5 +1,5 @@
 ---
-title: 在對話方塊中的控制項 |Microsoft 文件
+title: 在對話方塊中的控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acbbbe0ecf1151f6159799592a8211bcf11fe7a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873117"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646939"
 ---
 # <a name="controls-in-dialog-boxes"></a>對話方塊中的控制項
-您可以將控制項加入對話方塊方塊中，使用[對話方塊編輯器索引標籤](../windows/dialog-editor-tab-toolbox.md)中[工具箱視窗](/visualstudio/ide/reference/toolbox)，可讓您選擇您想要並將它拖曳至 對話方塊的控制項。 根據預設，[工具箱] 視窗設定為自動隱藏。 對話方塊編輯器開啟時，它會為方案的左邊界的索引標籤出現。 不過，您可以釘選 [工具箱] 視窗進入位置，即可**自動隱藏**視窗右上角的按鈕。 如需有關如何控制這個視窗行為的詳細資訊，請參閱[視窗管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
+您可以將控制項加入對話方塊方塊中，使用[對話方塊編輯器索引標籤](../windows/dialog-editor-tab-toolbox.md)中[工具箱視窗](/visualstudio/ide/reference/toolbox)，這可讓您選擇您想要並將它拖曳至對話方塊中的控制項。 根據預設，工具箱 視窗設為 自動隱藏。 對話方塊編輯器開啟時，它會為您的解決方案的左邊界上的索引標籤出現。 不過，您可以釘選**工具箱**視窗中的按一下位置**自動隱藏**視窗右上角的按鈕。 如需有關如何控制這個視窗的行為的詳細資訊，請參閱 <<c0> [ 視窗管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
   
- 將控制項加入對話方塊中，重新定位現有的控制項，或將控制項從一個對話方塊移到另一個，最快速的方式是使用拖放方法。 控制項的位置述虛線，直到卸除在對話方塊中。 時，您將控制項加入對話方塊中的拖放方法，此控制項提供標準高度適用於該類型的控制項。  
+ 將控制項加入對話方塊中，重新定位現有控制項，或將控制項從一個對話方塊中移至另一個，最快的方法是使用拖放方法。 控制項的位置述一條虛線，直到它放入對話方塊。 當您將控制項加入對話方塊中使用拖放方法時，控制項提供適用於該類型的控制項的標準高度。  
   
- 當您將控制項加入對話方塊中，或重新定位時，它的最後位置可能取決於輔助線或邊界，還是您擁有開啟版面配置方格。  
+ 當您將控制項加入對話方塊中，或重新調整位置時，其最終位置可能會取決於指南或邊界，或者您是否已開啟的版面配置方格。  
   
- 一旦您已將控制項加入至對話方塊中，您可以變更屬性，例如在其標題[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以選取多個控制項，並同時變更其屬性。  
+ 一旦您已將控制項加入對話方塊中，您可以變更屬性，例如其標題[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以選取多個控制項，並變更其屬性，全部一次。  
   
 -   [新增、編輯或刪除控制項](adding-editing-or-deleting-controls.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33873117"
   
 -   [設定水平捲軸的寬度](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)  
   
--   [控制項在對話方塊上的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)  
+-   [對話方塊上的控制項排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)  
   
 -   [在對話方塊編輯器中自訂控制項](custom-controls-in-the-dialog-editor.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33873117"
   
 -   [指定對話方塊的位置和大小](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
@@ -64,4 +64,3 @@ ms.locfileid: "33873117"
  [加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)   
  [對話方塊編輯器](../windows/dialog-editor.md)
-

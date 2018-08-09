@@ -1,5 +1,5 @@
 ---
-title: 選擇透明或不透明背景 （圖示影像編輯器） |Microsoft 文件
+title: 選擇透明或不透明背景 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,39 +24,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c8a809e7cd7ed7a461149707cc9e0b2a4a62158
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857908"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649516"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>選擇透明或不透明背景 (圖示影像編輯器)
-當您移動或複製選取範圍，從映像時，任何像素選取範圍中符合目前的背景色彩是，根據預設，透明的;它們不會遮住目標位置中的像素為單位。  
+當您移動或複製的選取項目，從映像時，任何像素選取範圍中符合目前的背景色彩的是，根據預設，透明的;它們不會遮住的目標位置中的像素為單位。  
   
- 您可以從透明背景 （預設值） 以透明的背景，來回切換。 當您使用選項工具 中，**透明背景**和**不透明背景**選項出現在 選項 選取器上**影像編輯器**工具列 （如下所示）。  
+ 您可以從透明背景 （預設值） 的不透明背景，來回切換。 當您使用選項工具 中，**透明背景**並**不透明的背景**選項會出現在**選項**上的選取器**影像編輯器**工具列 （如下所示）。  
   
  ![背景選項&#45;不透明或透明](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
-透明和不透明影像編輯器工具列上的選項  
+**透明及不透明的選項**上**影像編輯器工具列**  
   
-### <a name="to-switch-between-a-transparent-and-opaque-background"></a>若要切換透明和不透明背景  
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>若要切換透明及不透明背景  
   
-1.  在**影像編輯器**工具列上，按一下 **選項**選取器，然後按一下適當的背景：  
+1.  在 **影像編輯器**工具列上，按一下**選項**選取器，然後按一下適當的背景：  
   
-    -   **不透明背景 (O)**： 現有的映像會隱藏選取範圍的所有部分。  
+    -   `Opaque Background (O)`： 選取範圍的所有組件被遮蔽現有的映像。  
   
-    -   **透明背景 (T)**： 現有的影像顯示的選取項目符合目前的背景色彩的組件。  
+    -   `Transparent Background (T)`： 現有的映像會顯示符合目前的背景色彩選取範圍的組件。  
   
  \-或-  
   
--   在**映像**功能表上，選取或清除**繪製不透明**。  
+-   在 **映像**功能表上，選取或清除**繪製不透明**。  
   
- 選取範圍已變更影像的哪些部分皆為透明的作用中時，您可以變更背景色彩。  
+ 當選取範圍已變更影像的哪些部分而言是透明的作用中時，您可以變更背景色彩。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  無  
   
 ## <a name="see-also"></a>另請參閱  

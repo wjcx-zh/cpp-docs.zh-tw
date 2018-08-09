@@ -1,5 +1,5 @@
 ---
-title: 刪除快速鍵對應表中的項目 |Microsoft 文件
+title: 刪除快速鍵對應表中的項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68f6c7e9383527e3ba77d87d6d08ce5a3e1bcc8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8f3a72f8f9a71f54a997c4ba76d51aad6fb200a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648317"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>刪除快速鍵對應表中的項目
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>刪除快速鍵對應表中的項目  
   
-1.  它在圖示上按兩下開啟快速鍵對應表[資源檢視](../windows/resource-view-window.md)。  
+1.  開啟快速鍵對應表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  選取您要刪除的項目。 (按住**CTRL**或**SHIFT**鍵同時按一下來選取多個項目。)  
+2.  選取您要刪除的項目。 (按住**Ctrl**或是**Shift**鍵同時按一下來選取多個項目。)  
   
 3.  以滑鼠右鍵按一下，然後選擇 **刪除**從捷徑功能表 (或選取**刪除**從**編輯**功能表)。  
   
  \-或-  
   
--   按 Delete 鍵。  
+-   按下**刪除**索引鍵。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
- **需求**  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30e408d127e73b111e6ff464ea7530ba01beece3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 29b892f3e120db183082d6af97f9374f89e9e647
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570739"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643052"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成非同步作業
 本文件說明如何使用 Windows 執行階段 c + + 範本庫 (WRL) 來啟動非同步作業，並在作業完成時執行工作。  
@@ -40,7 +40,7 @@ ms.locfileid: "39570739"
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h 宣告的類型，才能使用非同步的計時器。  
+     `Windows.System.Threading.h` 宣告的類型，才能使用非同步的計時器。  
   
      建議您利用`using namespace`在.cpp 檔案中，讓程式碼更容易閱讀的指示詞。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "39570739"
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
 ### <a name="compiling-the-code"></a>編譯程式碼  
- 若要編譯程式碼，將它複製然後將它貼在 Visual Studio 專案中，或將它貼在檔案，稱為`wrl-consume-asyncOp.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。  
+ 若要編譯程式碼，將它複製然後將它貼在 Visual Studio 專案中，或將它貼在檔案，稱為`wrl-consume-asyncOp.cpp`，然後執行下列命令中**Visual Studio 命令提示字元**視窗。  
   
  `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`  
   

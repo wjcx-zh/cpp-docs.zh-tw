@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: c505d6ebf62e6c01ecd3c2f750cec1c95775f53d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571356"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642424"
 ---
 # <a name="helpcontext"></a>helpcontext
-指定的內容識別碼，可讓使用者檢視說明檔中這個項目相關的資訊。  
+指定的內容識別碼，可讓使用者檢視中此項目相關的資訊**協助**檔案。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ helpcontext(  
    id  
 ) ]  

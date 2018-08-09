@@ -1,5 +1,5 @@
 ---
-title: 版本資訊編輯器 |Microsoft 文件
+title: 版本資訊編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a76dbb3d8b41c2366f354f9c3c8d66ccc3743f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e57e550527bc906d3c1170e410719c57a877eec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890586"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647377"
 ---
 # <a name="version-information-editor"></a>版本資訊編輯器
 版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 您可以使用版本資訊編輯器建立和維護這項資料，將之儲存在版本資訊資源中。 應用程式不需要版本資訊資源，但這卻是收集應用程式識別資訊的好地方。 安裝程式 API 也使用版本資訊。  
@@ -47,12 +47,11 @@ ms.locfileid: "33890586"
     > [!NOTE]
     >  使用版本資訊編輯器時，在許多情況下您可以按一下滑鼠右鍵，顯示資源特定命令的快顯功能表。 例如，如果在指向區塊標頭項目時按一下，快顯功能表就會顯示 [新增版本區塊資訊] 和 [刪除版本區塊資訊] 命令。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  
  [資源編輯器](../windows/resource-editors.md)   
- [功能表與其他資源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-
+ [功能表和其他資源](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 866159a4b3cbacae8b7ad09154fb93707fe4baac
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f87f95a0683f6b4440d2be8b770902a7e4ecde59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467348"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644290"
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>CriticalSection::CriticalSection 建構函式
 初始化同步處理物件，類似於 mutex 物件，但可由單一的程序的執行緒。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 explicit CriticalSection(  
    ULONG spincount = 0  
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *spincount*  
  重要區段物件旋轉計數。 預設值為 0。  
   

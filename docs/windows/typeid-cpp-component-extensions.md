@@ -1,5 +1,5 @@
 ---
-title: typeid （c + + 元件擴充功能） |Microsoft 文件
+title: typeid （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888363"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644069"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (C++ 元件擴充功能)
 取得值，指出物件類型。  
   
 > [!WARNING]
->  本主題是指 typeid 的 C++ 元件擴充功能版本。 此關鍵字 ISO c + + 版本，請參閱[typeid 運算子](../cpp/typeid-operator.md)。  
+>  本主題是指 typeid 的 C++ 元件擴充功能版本。 如需這個關鍵字的 ISO c + + 版本，請參閱[typeid 運算子](../cpp/typeid-operator.md)。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
   
@@ -49,49 +49,46 @@ Platform::Type^ type = T::typeid;
 ```  
   
 ### <a name="parameters"></a>參數  
- `T`  
+ *T*  
  類型名稱。  
   
 ### <a name="remarks"></a>備註  
- 在 C + + /CX 中，typeid 會傳回[platform:: type](../cppcx/platform-type-class.md) ，從執行階段類型資訊所建構。  
+ 在 C + + /CX 中，typeid 會傳回[platform:: type](../cppcx/platform-type-class.md) ，建構自執行階段類型資訊。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **語法**  
+### <a name="syntax"></a>語法  
   
 ```  
-  
 type::typeid  
 ```  
   
- **參數**  
-  
+### <a name="parameters"></a>參數   
  *type*  
- 要 system:: type 物件的類型 （抽象宣告子） 的名稱。  
+ 在您要為其類型 （抽象宣告子） 的名稱`System::Type`物件。  
   
- **備註**  
+### <a name="remarks"></a>備註  
   
- `typeid` 用來取得<xref:System.Type>在編譯時期的類型。  
+ `typeid` 用來取得<xref:System.Type>在編譯時期類型。  
   
- `typeid` 類似於在執行的階段使用的型別取得 system:: type<xref:System.Type.GetType%2A>或<xref:System.Object.GetType%2A>。 不過，typeid 只會接受型別名稱做為參數。  如果您想要取得其 system:: type 名稱中使用類型的執行個體，使用 GetType。  
+ `typeid` 類似於在執行的階段使用的型別取得 system:: type<xref:System.Type.GetType%2A>或<xref:System.Object.GetType%2A>。 不過，typeid 只會接受型別名稱做為參數。  如果您想要取得其 system:: type 名稱中使用型別的執行個體，使用 GetType。  
   
- `typeid` 必須是能夠在編譯時期評估型別名稱 （類型），而 GetType 評估在執行階段傳回的型別。  
+ `typeid` 必須要能夠在編譯時期評估的類型名稱 （類型），而 GetType 評估要在執行階段傳回的型別。  
   
- `typeid` 可以採用原生型別名稱或通用語言執行階段別名的原生型別名稱。請參閱[c + + 原生類型的.NET Framework 對等用法 (C + + /CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)如需詳細資訊。  
+ `typeid` 可能需要原生型別名稱或通用語言執行階段原生型別名稱別名;請參閱[c + + 原生類型的.NET Framework 對應項 (C + + /cli CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)如需詳細資訊。  
   
- `typeid` 雖然它仍會傳回 system:: type，也可以搭配原生類型。  若要取得 type_info 結構，請使用[typeid 運算子](../cpp/typeid-operator.md)。  
+ `typeid` 也可以搭配原生類型，但它仍會傳回 system:: type。  若要取得 type_info 結構，請使用[typeid 運算子](../cpp/typeid-operator.md)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列範例會比較 typeid 關鍵字 gettype （） 成員。  
+ 下列範例會比較所要的 typeid 關鍵字`GetType()`成員。  
   
-```  
+```cpp  
 // keyword__typeid.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -121,14 +118,11 @@ typeid and GetType returned the same System::Type
 G  
   
 System.Single*  
-  
 ```  
   
- **範例**  
+ 下列範例會顯示 system:: type 可以用來取得型別上的屬性類型的變數。  它也會顯示，對於某些類型，您必須建立使用 typedef `typeid`。  
   
- 下列範例會顯示 system:: type 可以用來取得型別上的屬性類型的變數。  它也會顯示，針對某些類型，您必須建立使用 typedef `typeid`。  
-  
-```  
+```cpp  
 // keyword__typeid_2.cpp  
 // compile with: /clr  
 using namespace System;  

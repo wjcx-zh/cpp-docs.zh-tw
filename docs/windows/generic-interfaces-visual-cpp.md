@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571171"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650049"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
 套用至型別參數，在類別上的限制會套用至型別參數，在介面上的相同 (請參閱[泛型類別 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。  
@@ -34,14 +34,14 @@ ms.locfileid: "39571171"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>備註  
  *屬性*（選擇性）  
- 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
+ 其他宣告資訊。 如需有關屬性和屬性類別的詳細資訊，請參閱**屬性**。  
   
  *類別索引鍵*  
  **類別**或**typename**  

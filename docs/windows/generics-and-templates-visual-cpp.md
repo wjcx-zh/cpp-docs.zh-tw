@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570762"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649487"
 ---
 # <a name="generics-and-templates-visual-c"></a>泛型和樣板 (Visual C++)
 泛型和範本都是這兩種語言功能提供支援的參數化類型。 不過，他們會不同，而且有不同的用途。 本主題提供的許多差異的概觀。  
@@ -51,7 +51,7 @@ ms.locfileid: "39570762"
   
 ## <a name="combining-templates-and-generics"></a>合併範本和泛型  
   
--   泛型中的基本差異有建置合併範本和泛型的應用程式的影響。 例如，假設您擁有您想要建立的泛型包裝函式，以公開該範本，以其他語言當成是一般的範本類別。 您不能有泛型將型別參數，然後傳遞至範本，但因為範本必須有該型別參數，在編譯時期，但一般不會在執行階段之前，解決型別參數。 巢狀在泛型內的範本將無法運作是因為沒有任何方法可以展開 [範本]，請在編譯時期針對任意無法在執行階段具現化的泛型型別。  
+泛型中的基本差異有建置合併範本和泛型的應用程式的影響。 例如，假設您擁有您想要建立的泛型包裝函式，以公開該範本，以其他語言當成是一般的範本類別。 您不能有泛型將型別參數，然後傳遞至範本，但因為範本必須有該型別參數，在編譯時期，但一般不會在執行階段之前，解決型別參數。 巢狀在泛型內的範本將無法運作是因為沒有任何方法可以展開 [範本]，請在編譯時期針對任意無法在執行階段具現化的泛型型別。  
   
 ## <a name="example"></a>範例  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>輸出  
   
 ```Output  
 F  

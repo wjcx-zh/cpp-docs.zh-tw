@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Trylockexclusive 方法 |Microsoft 文件'
+title: 'Srwlock:: Trylockexclusive 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1cc9ee8a63d7403c3de408c924eeab07f1d0efa1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 993031604469aa09608f936f260869a3b53dbc9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892653"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652766"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive 方法
-嘗試取得 SRWLock 中的物件目前或指定 SRWLock 物件的獨佔模式。 如果呼叫成功時，呼叫的執行緒會採用鎖定擁有的權。  
+嘗試取得**SRWLock**物件獨佔模式使用目前或指定**SRWLock**物件。 如果呼叫成功，呼叫執行緒會取得鎖定的擁有的權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,12 +37,12 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `lock`  
- SRWLock 物件指標。  
+### <a name="parameters"></a>參數  
+ *lock*  
+ 指標**SRWLock**物件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功的話，SRWLock 物件在獨佔模式與呼叫執行緒會取得鎖定的擁有權。 否則，SRWLock 物件的狀態無效。  
+ 如果成功， **SRWLock**獨佔模式和呼叫的執行緒中的物件會採用的鎖定擁有權。 否則，請**SRWLock**其狀態不正確的物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: 事件類別 （Windows 執行階段 c + + 樣板程式庫） |Microsoft 文件
+title: 事件類別 （Windows 執行階段 c + + 樣板程式庫） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872922"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644160"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Event 類別 (Windows 執行階段 C++ 樣板程式庫)
 表示事件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -37,13 +37,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Event::Event 建構函式 (Windows 執行階段 C++ 範本庫)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|初始化 Event 類別的新執行個體。|  
+|[Event::Event 建構函式 (Windows 執行階段 C++ 範本庫)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|初始化的新執行個體**事件**類別。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Event::operator= 運算子](../windows/event-operator-assign-operator.md)|將指定的 Event 參考指派給目前的 Event 執行個體。|  
+|[Event::operator= 運算子](../windows/event-operator-assign-operator.md)|指派指定的**事件**參考目前**事件**執行個體。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `HandleT`  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463112"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647836"
 ---
 # <a name="coclass"></a>coclass
 建立 COM 物件，可實作 COM 介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ ms.locfileid: "39463112"
   
 -   [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto)巨集插入到 COM 對應。
   
- 產生類別的.idl 檔案中 coclass 的名稱必須與類別相同的名稱。  範例中，並參考下列範例中，若要存取頇蜞頇 coclass CMyClass，透過 MIDL 產生的標頭檔，用戶端中使用 CLSID_CMyClass。  
+ 產生類別的.idl 檔案中 coclass 的名稱必須與類別相同的名稱。  如範例中，並參考下列範例中，若要存取在 coclass 的類別識別碼`CMyClass`，在用戶端透過 MIDL 產生的標頭檔，使用`CLSID_CMyClass`。  
   
 ## <a name="example"></a>範例  
  下列程式碼示範如何使用**coclass**屬性：  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- 下列範例示範如何覆寫函式所插入的程式碼中所顯示的預設實作**coclass**屬性。 如需檢視插入程式碼的詳細資訊，請參閱 [/Fx](../build/reference/fx-merge-injected-code.md) 。 任何基底類別或您使用類別的介面會出現在 插入程式碼。   此外，如果類別包含預設會在插入程式碼並明確指定該類別作為基底您 coclass，屬性提供者會使用您的程式碼中指定的格式。  
+ 下列範例示範如何覆寫函式所插入的程式碼中所顯示的預設實作**coclass**屬性。 如需檢視插入程式碼的詳細資訊，請參閱 [/Fx](../build/reference/fx-merge-injected-code.md) 。 任何基底類別或您使用類別的介面會出現在 插入程式碼。 此外，如果類別包含預設會在插入程式碼並明確指定該類別作為基底您 coclass，屬性提供者會使用您的程式碼中指定的格式。  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

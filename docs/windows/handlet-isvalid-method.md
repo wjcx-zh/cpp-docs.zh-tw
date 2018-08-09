@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0970fbdfd3b7c1885c6291b3a98f8f59775fa59
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569601"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647871"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid 方法
 指出是否目前**HandleT**物件表示的控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 bool IsValid() const;  
 ```  
   

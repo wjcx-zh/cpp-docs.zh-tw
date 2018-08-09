@@ -1,5 +1,5 @@
 ---
-title: CancelTransitionPolicy 列舉 |Microsoft 文件
+title: CancelTransitionPolicy 列舉 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860342"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642954"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列舉
-表示非同步作業如何嘗試轉換為終止狀態的完成，或錯誤應該行為相對於用戶端要求已取消的狀態。  
+表示非同步作業方式嘗試轉換為終止狀態的完成或錯誤的用戶端要求已取消狀態行為。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,8 +41,8 @@ enum CancelTransitionPolicy;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`RemainCanceled`|如果非同步作業目前正在用戶端要求已取消狀態，這表示它會保留在已取消的狀態，而不是轉換為已完成的終端機或錯誤狀態。|  
-|`TransitionFromCanceled`|如果非同步作業目前正在用戶端要求已取消狀態，這表示應該轉換已終止狀態的已取消的狀態的完成狀態或錯誤的呼叫，它會利用這個旗標所決定。|  
+|`RemainCanceled`|如果非同步作業目前正在用戶端要求已取消狀態，這表示它會保留於已取消的狀態，而不是轉換為已完成的終端機或錯誤狀態。|  
+|`TransitionFromCanceled`|如果非同步作業目前正在用戶端要求已取消狀態，這表示應該轉換與已取消的狀態，以終止狀態的完成狀態或錯誤，會利用這個旗標的呼叫所決定。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

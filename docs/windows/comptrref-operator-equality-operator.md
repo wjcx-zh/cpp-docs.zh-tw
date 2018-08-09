@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463950"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650699"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 運算子
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
@@ -54,12 +54,12 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *a*  
- ComPtrRef 物件的參考。  
+ 參考**ComPtrRef**物件。  
   
  *b*  
- 另一個的 ComPtrRef 物件或匿名型別指標的參考 (`void*`)。  
+ 另一個的參考**ComPtrRef**物件或匿名類型的指標 (`void*`)。  
   
 ## <a name="return-value"></a>傳回值  
  第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。  
@@ -69,7 +69,7 @@ bool operator==(
  第四個和第五個運算子會產生 **，則為 true**如果物件是否等於物件*b*，則為**false**。  
   
 ## <a name="remarks"></a>備註  
- 指出兩個的 ComPtrRef 物件是否相等。  
+ 指出兩個**ComPtrRef**物件是否相等。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

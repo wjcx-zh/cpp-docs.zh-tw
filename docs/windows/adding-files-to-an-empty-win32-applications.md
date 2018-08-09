@@ -1,5 +1,5 @@
 ---
-title: 將檔案加入空的 Win32 應用程式 |Microsoft 文件
+title: 將檔案加入空的 Win32 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856888"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646838"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>將檔案加入空的 Win32 應用程式
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>將檔案加入空的 Windows 桌面應用程式  
@@ -36,11 +36,11 @@ ms.locfileid: "33856888"
   
 4.  按一下 [確定 **Deploying Office Solutions**]。  
   
- 若要在專案中加入不是來源、標頭或資源檔的檔案，請以滑鼠右鍵按一下方案總管中的 [解決方案] 節點，以相同的方式將檔案加入專案中。 專案中會建立 [其他] 資料夾保存您的其他檔案。  
+ 若要新增非來源、 標頭，也加入專案的資源檔的檔案，以滑鼠右鍵按一下**解決方案**中的節點**方案總管 中**相同的方式，將檔案加入至專案。 A**其他**資料夾將建立來保存您的專案中的其他檔案。  
   
 > [!NOTE]
 >  建置專案之前，您必須指定這些檔案的組建選項，讓您已完成的應用程式能夠正確地包含它們。 如需詳細資訊，請參閱 [使用屬性頁指定專案設定](../ide/property-pages-visual-cpp.md) 和 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立空的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
+ [建立空白的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
  [部署應用程式](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

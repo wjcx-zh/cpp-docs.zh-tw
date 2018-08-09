@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 199d84afe198c4fc41808144105ea704822aa00a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467237"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646603"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion 方法
 叫用完成事件處理常式，或重設內部進行委派。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void FireCompletion(  
    void  
 ) override;  

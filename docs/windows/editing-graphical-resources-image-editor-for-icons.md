@@ -1,5 +1,5 @@
 ---
-title: 編輯圖形資源 （圖示影像編輯器） |Microsoft 文件
+title: 編輯圖形資源 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,21 +22,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b4aea912398413d43810ad08a2b34e9cb78092
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642382"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>編輯圖形資源 (圖示影像編輯器)
-圖形化資源是您定義您的應用程式的影像。 您可以繪製徒手，或使用圖形繪製。 您可以選取組件映像的編輯、 翻轉或調整大小，或您可以從選取的組件的映像來建立自訂筆刷，並使用該筆刷繪製。 您可以定義映像內容，以不同的格式，儲存映像，然後將影像從一種格式轉換為另一個。  
+圖形化的資源是您定義應用程式的映像。 您可以繪製徒手，或使用形狀繪製。 您可以選取組件的編輯、 翻轉或調整其大小的影像，或您可以從選取的組件的映像建立自訂筆刷，並使用筆刷繪製。 您可以定義映像的屬性，將影像儲存在不同的格式，將映像轉換成另一種格式。  
   
- 除了建立新的圖形化資源，您可以[匯入現有的映像](../windows/how-to-import-and-export-resources.md)進行編輯，然後將它們加入至您的專案。 您也可以開啟和編輯不屬於專案的映像[獨立影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)。  
+ 除了建立新的圖形化資源，您可以[匯入現有的映像](../windows/how-to-import-and-export-resources.md)進行編輯，然後將它們新增至您的專案。 您也可以開啟和編輯映像，並不屬於專案，以供[獨立的影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)。  
   
 -   [建立新的點陣圖或其他影像](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)  
   
--   [選取，然後使用繪圖工具](using-a-drawing-tool-image-editor-for-icons.md)  
+-   [選取並使用繪圖工具](using-a-drawing-tool-image-editor-for-icons.md)  
   
 -   [繪製線條或封閉的圖形](../windows/drawing-lines-or-closed-figures-image-editor-for-icons.md)  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33882494"
   
 -   [變更影像屬性](changing-image-properties-image-editor-for-icons.md)  
   
--   [將點陣圖另存為.gifs 或.jpegs](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
+-   [將點陣圖儲存為.gifs 或.jpegs](../windows/saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons.md)  
   
--   [從一種格式轉換映像](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)  
+-   [將映像從一種格式轉換成另一個](../windows/converting-an-image-from-one-format-to-another-image-editor-for-icons.md)  
   
 -   [編輯專案外的影像](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)  
   
@@ -62,12 +62,12 @@ ms.locfileid: "33882494"
   
 -   [影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)  
   
--   [影像編輯器視窗窗格](../windows/window-panes-image-editor-for-icons.md)  
+-   [影像編輯器 視窗窗格](../windows/window-panes-image-editor-for-icons.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 > [!NOTE]
->  您可以使用影像編輯器來檢視 32 位元影像，但是無法編輯這類影像。  
+>  使用**影像編輯器**，您可以檢視 32 位元映像，但無法加以編輯。  
   
 ## <a name="requirements"></a>需求  
  無  
@@ -75,4 +75,3 @@ ms.locfileid: "33882494"
 ## <a name="see-also"></a>另請參閱  
  [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)   
-

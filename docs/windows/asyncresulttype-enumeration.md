@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7989f28ae9c9e3af4c73ec454487d34dd7cff570
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465281"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644751"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列舉
 指定所傳回的結果的型別`GetResults()`方法。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 enum AsyncResultType;  
 ```  
   
@@ -40,7 +40,7 @@ enum AsyncResultType;
 |名稱|描述|  
 |----------|-----------------|  
 |`MultipleResults`|多個結果，以漸進方式之間會顯示一組`Start`狀態，以及之前`Close()`呼叫。|  
-|`SingleResult`|單一結果，就會顯示完整的事件發生之後。|  
+|`SingleResult`|單一的結果之後, 會呈現`Complete`就會發生事件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

@@ -1,5 +1,5 @@
 ---
-title: 可編輯的檔案類型的資源 |Microsoft 文件
+title: 可編輯的檔案類型的資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870246"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648427"
 ---
 # <a name="editable-file-types-for-resources"></a>可編輯的資源檔類型
 您可以開啟下列類型的檔案，並編輯所包含的資源。  
@@ -38,8 +38,6 @@ ms.locfileid: "33870246"
 |.exe|可執行檔。|  
 |.dll|動態連結程式庫檔案。|  
 |.bmp、.ico、.dib 和 .cur|點陣圖、圖示、工具列和游標檔案。|  
-  
-
   
 ## <a name="requirements"></a>需求  
  Win32  

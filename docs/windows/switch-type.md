@@ -1,5 +1,5 @@
 ---
-title: switch_type |Microsoft 文件
+title: switch_type |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890175"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650592"
 ---
 # <a name="switchtype"></a>switch_type
-識別做為等位的判別變數的類型。  
+識別做為等位的判別變數的型別。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>參數  
- `type`  
+### <a name="parameters"></a>參數  
+ *type*  
  參數型別可以是整數、 字元、 布林值或列舉類型。  
   
 ## <a name="remarks"></a>備註  
  **Switch_type** c + + 屬性具有相同的功能[switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 屬性。  
   
- 不支援 c + + 屬性[封裝等位](http://msdn.microsoft.com/library/windows/desktop/aa366811)。 [Nonencapsulated 等位](http://msdn.microsoft.com/library/windows/desktop/aa367119)僅支援下列格式：  
+ 不支援 c + + 屬性[封裝等位](http://msdn.microsoft.com/library/windows/desktop/aa366811)。 [Nonencapsulated 等位](http://msdn.microsoft.com/library/windows/desktop/aa367119)只支援下列格式：  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,7 +62,7 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>範例  
- 請參閱[案例](../windows/case-cpp.md)範例使用範例**switch_type**。  
+ 請參閱[案例](../windows/case-cpp.md)的範例使用的範例**switch_type**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -72,7 +70,7 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**適用於**|`typedef`|  
+|**適用於**|**typedef**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

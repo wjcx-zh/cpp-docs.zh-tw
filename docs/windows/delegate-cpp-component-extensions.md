@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dd35674b61e61eead6118fdcc0aacccbafa6f3b4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570359"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649503"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ 元件擴充功能)
 宣告表示的函式指標的類型。  
@@ -68,7 +68,7 @@ delegate-type-identifier
  使用*委派型別識別項*來宣告具有與委派相同原型的事件。 如需詳細資訊，請參閱 <<c0> [ 委派 (C + + /CX)](../cppcx/delegates-c-cx.md)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  Common language runtime 支援使用下列語法的委派。  
@@ -124,10 +124,9 @@ function_declaration
 -   [泛型委派 (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
  下列範例示範如何宣告、 初始化及叫用委派。  
   
@@ -187,8 +186,6 @@ int main () {
    StaticDelInst(11);  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 in func1 8  

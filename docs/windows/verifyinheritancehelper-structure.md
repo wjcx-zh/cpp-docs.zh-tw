@@ -1,5 +1,5 @@
 ---
-title: VerifyInheritanceHelper 結構 |Microsoft 文件
+title: VerifyInheritanceHelper 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d758f4b44990d1f03ff698f0740c2aa8491367a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889699"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652932"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,15 +41,15 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `I`  
+### <a name="parameters"></a>參數  
+ *I*  
  類型。  
   
- `Base`  
- 另一個類型。  
+ *基底*  
+ 另一個型別。  
   
 ## <a name="remarks"></a>備註  
- 測試是否有一個介面衍生自其他介面。  
+ 測試是否有一個介面衍生自另一個介面。  
   
 ## <a name="members"></a>成員  
   
@@ -57,7 +57,7 @@ struct VerifyInheritanceHelper<I, Nil>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|測試目前的範本參數所指定的兩個介面，並判斷是否有一個介面衍生自其他。|  
+|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|測試目前的範本參數所指定的兩個介面，並決定是否要將一個介面衍生自其他。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `VerifyInheritanceHelper`  

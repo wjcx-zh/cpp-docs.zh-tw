@@ -1,5 +1,5 @@
 ---
-title: 變更資源的屬性 |Microsoft 文件
+title: 變更資源的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 237eea6a468e983072ed300ff2a13f1cbc6ba363
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a0b58e5adf95de44bbecb51cf56dbbfeaccacad
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861788"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648921"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>變更資源的屬性
 ### <a name="to-edit-the-properties-of-a-resource"></a>編輯資源的屬性  
   
-1.  在[資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下您想要編輯，然後選擇 的資源**屬性**從捷徑功能表。  
+1.  在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下您想要編輯，然後選擇的資源**屬性**從捷徑功能表。  
   
-     **附註** 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
+     > [!NOTE] 
+     > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在[屬性 視窗](/visualstudio/ide/reference/properties-window)，變更您的資源的屬性。  
+2.  在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，變更您的資源的屬性。  
   
 ### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>恢復您對資源的屬性所做的變更  
   
-1.  確定您的資源的焦點在資源檢視中。  
+1.  請確定您的資源的焦點**資源檢視**。  
   
-2.  選擇**復原**從**編輯**功能表。  
+2.  選擇**恢復**從**編輯**功能表。  
   
-
-  
- **需求**  
-  
+## <a name="requirements"></a>需求  
  無  
   
 ## <a name="see-also"></a>另請參閱  

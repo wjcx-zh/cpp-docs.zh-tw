@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a5f4ccbe1789914f5a7c378f5cb847aaa1c49bb8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464612"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644699"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode 方法
 擷取目前的非同步作業的錯誤碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 inline void ErrorCode(  
    HRESULT *error  
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *error*  
  這項作業儲存目前的錯誤程式碼的位置。  
   

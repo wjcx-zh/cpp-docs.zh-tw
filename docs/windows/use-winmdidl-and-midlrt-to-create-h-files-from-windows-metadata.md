@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 winmdidl.exe 和 midlrt.exe 從 windows 中繼資料建立.h 檔案 |Microsoft 文件
+title: 如何： 使用 winmdidl.exe 和 midlrt.exe windows 中繼資料建立.h 檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f93570d18373a2e5ab4c698a9a85d4412129dd17
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891717"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650605"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段元件之間的 COM 層級互動。 Winmdidl.exe 會輸入包含 Windows 執行階段元件之中繼資料的 .winmd 檔案，並輸出 IDL 檔案。 Midlrt.exe 會將該 IDL 檔案轉換成 C++ 程式碼可以取用的標頭檔。 這兩個工具都是在命令列上執行。  
@@ -27,7 +27,7 @@ Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段�
   
 -   建立自訂的 IDL 和標頭檔，讓使用 Windows 執行階段範本程式庫 (WRL) 所撰寫的 C++ 應用程式可以使用自訂的 Windows 執行階段元件。  
   
--   為 Windows 執行階段元件中的使用者定義的事件類型，產生 Proxy 和虛設常式檔案。 如需詳細資訊，請參閱[自訂事件和事件存取子，在 Windows 執行階段元件中的](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)。  
+-   為 Windows 執行階段元件中的使用者定義的事件類型，產生 Proxy 和虛設常式檔案。 如需詳細資訊，請參閱 <<c0> [ 自訂事件和事件存取子，在 Windows 執行階段元件](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)。  
   
  這些工具僅適用於剖析自訂的 .winmd 檔案。 已為您產生 Windows 作業系統元件的 .idl 和 .h 檔案。 根據預設，在[!INCLUDE[win81](../misc/includes/win81_md.md)]，它們位於 \Program 檔案 (x86) \Windows Kits\8.1\Include\winrt\\。  
   
@@ -50,7 +50,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  在主控台輸出中顯示總執行時間。  
   
  /outdir:\<dir >  
- 指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄*\<磁碟機 >*: \Users\\*\<使用者名稱 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\。  
+ 指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄*\<磁碟機 >*: \Users\\*\<使用者名稱 >* \AppData\Local\VirtualStore\Program 檔案 (x86) \Microsoft VisualStudio 12.0\\。  
   
  `/banner:<file>`  
  指定包含要在預設著作權訊息前面加上自訂文字，以及在產生的 .idl 檔案頂端加上 winmdidl 版本號碼的檔案。 如果路徑包含空格，請使用引號。  
@@ -67,15 +67,15 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
 ## <a name="examples"></a>範例  
  下列範例會在 Visual Studio x86 命令提示字元上顯示 winmdidl 命令。 它會指定輸出目錄，和包含新增至產生的 .idl 檔案之特殊橫幅文字的檔案。  
   
- **C:\Program Files (x86) \Microsoft Visual Studio 12.0 > winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt"C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"**  
+ `C:\Program Files (x86)\Microsoft Visual Studio 12.0>winmdidl /nologo /outdir:c:\users\giraffe\documents\ /banner:c:\users\giraffe\documents\banner.txt "C:\Users\giraffe\Documents\Visual Studio 2013\Projects\Test_for_winmdidl\Debug\Test_for_winmdidl\test_for_winmdidl.winmd"`  
   
  下一個範例顯示 winmdidl 的主控台畫面，指出作業已成功。  
   
  **產生 c:\users\giraffe\documents\\\Test_for_winmdidl.idl**  
   
- 接下來，midlrt 在產生的 IDL 檔案上執行。 請注意， **/metadata_dir**引數在.idl 的檔案名稱後面指定。 \WinMetadata\ 的路徑是必要的，它是 windows.winmd 的位置。  
+ 接下來，midlrt 在產生的 IDL 檔案上執行。 請注意， **/metadata_dir** .idl 檔的名稱之後指定引數。 \WinMetadata\ 的路徑是必要的，它是 windows.winmd 的位置。  
   
- **C:\Program Files (x86) \Microsoft Visual Studio 12.0 > midlrt"c:\users\mblome\documents\test_for_winmdidl.idl"/metadata_dir"C:\Windows\System32\WinMetadata"**  
+ `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`  
   
 ## <a name="remarks"></a>備註  
  winmdidl 作業的輸出檔案與輸入檔案具有相同的名稱，但具有 .idl 副檔名。  

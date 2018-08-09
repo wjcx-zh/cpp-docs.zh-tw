@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3b9fd147f0821e14e825b2a8c0e8d7ad35104fe9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467127"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653010"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId 資料成員
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 union {   
    const IID* clsid;  
    const wchar_t* (*getRuntimeName)();  
 } activationId;  
 ```  
   
-## <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *clsid*  
  介面識別碼。  
   

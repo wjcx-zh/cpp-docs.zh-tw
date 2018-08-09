@@ -1,5 +1,5 @@
 ---
-title: 建立使用者無法結束的對話方塊 |Microsoft 文件
+title: 建立使用者無法結束的對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b176fbc4e420c08a2262b532cf1310ada56c978a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884459"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644176"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>建立使用者無法結束的對話方塊
 您可以建立使用者無法結束的執行階段對話方塊。 這種對話方塊對登入以及鎖定應用程式或文件非常實用。  
@@ -37,12 +37,12 @@ ms.locfileid: "33884459"
   
      在執行階段，使用者無法結束具有下列特性的強制回應對話方塊。  
   
- 若要啟用這類對話方塊的測試，測試對話方塊函式在按下 ESC 鍵時就偵測到。 (Esc 鍵也稱為 VK_ESCAPE 虛擬按鍵)。不論對話方塊設計的執行階段行為如何，您都可以在測試模式中按下 ESC 鍵終止它。  
+ 若要啟用這種對話方塊中的測試，測試對話方塊函式偵測到的時機**Esc**按下。 (**Esc**亦稱為 VK_ESCAPE 虛擬按鍵。)不論如何對話方塊中，設計來在執行階段行為，您可以終止它在測試模式中按下**Esc**。  
   
 > [!NOTE]
->  針對 MFC 應用程式建立使用者無法結束的對話方塊，您必須覆寫 `OnOK` 和 [確定] `OnCancel` 的預設行為；因為，即使刪除相關聯的按鈕，還是可以按 ENTER 或 ESC 鍵關閉對話方塊。  
+>  針對 MFC 應用程式，若要建立對話方塊，使用者無法結束，您必須覆寫預設行為`OnOK`並`OnCancel`因為即使刪除相關聯的按鈕時，對話方塊仍關閉按**請輸入**或是**Esc**。  
   
- 如需如何將資源加入至 managed 專案的資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)。  
+ 如需有關如何將資源加入 managed 專案的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
@@ -51,4 +51,3 @@ ms.locfileid: "33884459"
  [如何： 建立資源](../windows/how-to-create-a-resource.md)   
  [資源檔](../windows/resource-files-visual-studio.md)   
  [對話方塊編輯器](../windows/dialog-editor.md)
-

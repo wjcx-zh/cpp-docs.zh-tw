@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Ptr_ 資料成員 |Microsoft 文件'
+title: 'Comptrrefbase:: Ptr_ 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883563"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644839"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ 資料成員
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
@@ -37,7 +37,7 @@ T* ptr_;
  目前的範本參數所指定之類型的指標。  
   
 ## <a name="remarks"></a>備註  
- `ptr_` 是受保護的資料成員。  
+ **ptr_** 是受保護的資料成員。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

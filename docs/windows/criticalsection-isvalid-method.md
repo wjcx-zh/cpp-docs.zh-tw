@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: add94320728ad21d07a1953f14ac911883580982
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9e89d7aa8bd35af3fa78d773b84276d560101942
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461232"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644813"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid 方法
 指出目前的重要區段是否有效。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 bool IsValid() const;  
 ```  
   

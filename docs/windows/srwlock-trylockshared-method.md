@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Trylockshared 方法 |Microsoft 文件'
+title: 'Srwlock:: Trylockshared 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19ff9324f946f48f201678f9c9e7403ba774b2c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 289fa1fbec61140e213bef7219e440c8177e19e5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892279"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645808"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 方法
-嘗試取得 SRWLock 中的物件目前或指定 SRWLock 物件的共用模式。  
+嘗試取得**SRWLock**物件中目前或指定的共用模式**SRWLock**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,12 +36,12 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `lock`  
- SRWLock 物件指標。  
+### <a name="parameters"></a>參數  
+ *lock*  
+ 指標**SRWLock**物件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功的話，SRWLock 物件在共用的模式與呼叫執行緒會取得鎖定的擁有權。 否則，SRWLock 物件的狀態無效。  
+ 如果成功， **SRWLock**共用的模式和呼叫的執行緒中的物件會採用的鎖定擁有權。 否則，請**SRWLock**其狀態不正確的物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

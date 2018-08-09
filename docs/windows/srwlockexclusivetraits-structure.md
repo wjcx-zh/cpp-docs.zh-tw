@@ -1,5 +1,5 @@
 ---
-title: SRWLockExclusiveTraits 結構 |Microsoft 文件
+title: SRWLockExclusiveTraits 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5d56c4e0c31b56e5bdc92a9d209b58cd15ffb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889273"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649269"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 結構
-描述一般特性 SRWLock 類別，以獨佔的鎖定模式。  
+描述一般特性`SRWLock`獨佔的鎖定模式的類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +39,14 @@ struct SRWLockExclusiveTraits;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`Type`|同義字的指標[SRWLOCK](../windows/srwlock-class.md)類別。|  
+|`Type`|指標的同義字[SRWLOCK](../windows/srwlock-class.md)類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SRWLockExclusiveTraits::GetInvalidValue 方法](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|擷取 SRWLockExclusiveTraits 物件永遠是無效的。|  
-|[SRWLockExclusiveTraits::Unlock 方法](../windows/srwlockexclusivetraits-unlock-method.md)|釋放指定之 SRWLock 物件的獨佔控制。|  
+|[SRWLockExclusiveTraits::GetInvalidValue 方法](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|擷取**SRWLockExclusiveTraits**一律是無效的物件。|  
+|[SRWLockExclusiveTraits::Unlock 方法](../windows/srwlockexclusivetraits-unlock-method.md)|釋放指定獨佔控制`SRWLock`物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `SRWLockExclusiveTraits`  

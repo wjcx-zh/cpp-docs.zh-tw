@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4e2f0c432189dce1af9a255570dd259a90693591
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462920"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651287"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= 運算子
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
@@ -54,7 +54,7 @@ bool operator!=(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *a*  
  參考**ComPtrRef**物件。  
   

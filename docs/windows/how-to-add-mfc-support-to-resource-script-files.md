@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7237366daeaa71ba423aa069bb634b1b9f6bc667
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 659c974fccec0e54dc42d6d1a5bdb019747f81ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569738"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647020"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>如何：將 MFC 支援加入至資源指令碼檔
 一般來說，當您建置 MFC 應用程式使用 Windows [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)，精靈會產生一組基本的檔案 （包括資源指令碼 (.rc) 檔），其中包含 Microsoft Foundation 的核心功能類別 (MFC)。 不過，如果您要為不以 MFC 為基礎的 Windows 應用程式編輯 .rc 檔，則無法使用 MFC 架構的下列特定功能：  
@@ -55,7 +55,6 @@ ms.locfileid: "39569738"
     >  除了設定這個旗標外，.rc 檔必須是 MFC 專案的一部分。 比方說，就是直接設定**MFC 模式**要 **，則為 True** .rc 檔案是在 Win32 專案將不會提供您任何 MFC 功能。  
   
 ## <a name="requirements"></a>需求  
-  
  MFC  
   
 ## <a name="see-also"></a>另請參閱  

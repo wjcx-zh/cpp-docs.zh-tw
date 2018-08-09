@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 45f02bff270c7049e6207d797ed2d2ca5ae339f2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 805d50a04f76e359bbf7553ab9c31d10f0871c57
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571372"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647849"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>尋找快速鍵對應表中的項目
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>在開啟的快速鍵對應表中尋找項目  
@@ -38,7 +38,6 @@ ms.locfileid: "39571372"
  如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
 ## <a name="requirements"></a>需求  
-  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

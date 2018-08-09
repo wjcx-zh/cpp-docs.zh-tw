@@ -1,5 +1,5 @@
 ---
-title: 變更符號&#39;s 數值 |Microsoft 文件
+title: 變更符號&#39;s 數值 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8beacf5195e108d98a0004fe79c2a66cb2b3b610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ada5ed80a1077dc2fc50494dcf6fcae609b0b0c9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860381"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652428"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>變更符號&#39;s 數值
-您可以使用單一資源相關聯的符號，[屬性 視窗](/visualstudio/ide/reference/properties-window)變更符號值。 您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)若要變更目前未指派給資源的符號值。 如需詳細資訊，請參閱[變更未指定的符號](../windows/changing-unassigned-symbols.md)。  
+針對單一資源相關聯的符號，您可以使用[屬性 視窗](/visualstudio/ide/reference/properties-window)變更符號值。 您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)來變更目前未指派給資源的符號值。 如需詳細資訊，請參閱 <<c0> [ 變更未指定的符號](../windows/changing-unassigned-symbols.md)。  
   
 ### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>變更指派給單一資源或物件的符號值  
   
-1.  在[資源檢視](../windows/resource-view-window.md)，選取的資源。  
+1.  在 [資源檢視](../windows/resource-view-window.md)，選取的資源。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在**屬性**視窗中，輸入符號名稱，後面接著等號和中的整數**識別碼**方塊中，例如：  
+2.  在 **屬性**視窗中，輸入符號名稱，後面接著等號和整數**識別碼**方塊中，例如：  
   
     ```  
     IDC_EDITNAME=5100  
@@ -44,10 +44,9 @@ ms.locfileid: "33860381"
   
  下一次儲存專案時，會在符號標頭檔中儲存新值。 在 [ID] 方塊中，只有符號名稱保持可見狀態；在驗證之後，將不會顯示等號和值。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

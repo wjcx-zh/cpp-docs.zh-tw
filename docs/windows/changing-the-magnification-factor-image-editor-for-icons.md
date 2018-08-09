@@ -1,5 +1,5 @@
 ---
-title: 變更縮放比例倍數 （圖示影像編輯器） |Microsoft 文件
+title: 變更縮放比例倍數 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 310e26d4814b621cf9c3338857dfc9f97cd42b96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856995"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650159"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>變更縮放比例倍數 (圖示影像編輯器)
-根據預設，影像編輯器會在實際大小和實際大小的 6 倍在右窗格中檢視的左窗格中顯示的檢視。 縮放比例倍數 （在工作區底部的 [狀態] 列中所見） 是映像的實際大小和顯示的大小間比例。 預設因數為 6，範圍是從 1 到 10。  
+根據預設，「 影像編輯器會顯示在 實際大小 與 實際大小的 6 倍在右窗格中檢視的左窗格中的檢視。 縮放比例倍數 （如在工作區底部的 [狀態] 列所示） 是映像的實際大小和顯示的大小之間的比例。 預設的因數為 6，範圍是從 1 到 10。  
   
 ### <a name="to-change-the-magnification-factor"></a>若要變更縮放比例  
   
-1.  選取**影像編輯器**窗格中您想要變更其縮放比例。  
+1.  選取 **影像編輯器**窗格中您想要變更其縮放比例。  
   
-2.  在[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)，按一下右邊的箭號[放大工具](../windows/toolbar-image-editor-for-icons.md)子功能表中選取縮放比例： **1 X**， **2 X**， **6 X**，或**8 X**。  
+2.  在上[影像編輯器 工具列](../windows/toolbar-image-editor-for-icons.md)，按一下右邊的箭號[放大工具](../windows/toolbar-image-editor-for-icons.md)子功能表中選取縮放比例： **1 X**， **2 X**， **6 X**，或**8 X**。  
   
     > [!NOTE]
-    >  若要選取縮放比例，不同於列出**放大**工具，請使用對應鍵。  
+    >  若要選取以外所列的縮放比例**Magnify**工具中，使用的快速鍵。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  無  
   
 ## <a name="see-also"></a>另請參閱  
  [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
  [視窗窗格](../windows/window-panes-image-editor-for-icons.md)
-

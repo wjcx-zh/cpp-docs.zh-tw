@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7412968069963679db769cc2ce68169e7a8799b9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 90a2c582c2740846f90270fe9f45b96871329252
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462065"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642834"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
 
@@ -30,7 +30,7 @@ ms.locfileid: "39462065"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
 class AgileEventSource
     : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
@@ -38,7 +38,6 @@ class AgileEventSource
 
 ## <a name="parameters"></a>參數  
  *TDelegateInterface*  
-
  要委派，表示事件處理常式的介面。
 
  *TEventSourceOptions*  
@@ -64,7 +63,7 @@ class AgileEventSource
 
 |名稱|描述|
 |----------|-----------------|
-|[AgileEventSource::Add 方法](#add)|將附加至所指定的委派介面代表目前 AgileEventSource 物件的事件處理常式集合的敏捷式軟體開發的事件處理常式。|
+|[AgileEventSource::Add 方法](#add)|將附加的敏捷式軟體開發的事件處理常式，以指定的委派介面來表示目前的事件處理常式的集合**AgileEventSource**物件。|
 
 ## <a name="add"></a> AgileEventSource::Add 方法
 
@@ -85,7 +84,7 @@ HRESULT Add(
 要委派物件，代表事件處理常式的介面。
 
 *語彙基元*  
-這項作業完成時，代表事件的控制代碼。 若要捨棄的事件處理常式，做為 remove （） 方法的參數使用此權杖。
+這項作業完成時，代表事件的控制代碼。 使用此權杖做為參數`Remove()`捨棄的事件處理常式的方法。
 
 ### <a name="return-value"></a>傳回值
 

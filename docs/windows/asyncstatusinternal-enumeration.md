@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464872"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652795"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 列舉
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
@@ -37,20 +37,20 @@ enum AsyncStatusInternal;
  指定狀態的非同步作業的內部列舉型別之間的對應和`Windows::Foundation::AsyncStatus`列舉型別。  
   
 ## <a name="members"></a>成員  
- *_Created*  
- 相當於:: Windows::Foundation::AsyncStatus:: 建立  
+ `_Created`  
+ 相當於 `::Windows::Foundation::AsyncStatus::Created`。  
   
- *_Started*  
- 相當於:: Windows::Foundation::AsyncStatus:: 已啟動  
+ `_Started`  
+ 相當於 `::Windows::Foundation::AsyncStatus::Started`。  
   
- *_Completed*  
- 相當於:: Windows::Foundation::AsyncStatus:: 完成  
+ `_Completed`  
+ 相當於 `::Windows::Foundation::AsyncStatus::Completed`。  
   
- *_Cancelled*  
- 相當於:: Windows::Foundation::AsyncStatus:: 已取消  
+ `_Cancelled`  
+ 相當於 `::Windows::Foundation::AsyncStatus::Cancelled`。  
   
- *錯誤 （_e)*  
- 相當於:: Windows::Foundation::AsyncStatus::Error  
+ `_Error`  
+ 相當於 `::Windows::Foundation::AsyncStatus::Error`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

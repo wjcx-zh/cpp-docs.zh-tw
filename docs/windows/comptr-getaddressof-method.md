@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e11cd204c2c89c7fca9a824450d6136eb65520db
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c1be1dd844b08be23312848f007e4a57dbd893b5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461180"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646981"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf 方法
 擷取位址[ptr_](../windows/comptr-ptr-data-member.md)資料成員，其中包含這所代表之介面的指標**ComPtr**。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 T* const* GetAddressOf() const;  
 T** GetAddressOf();  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 檢視資源符號 |Microsoft 文件
+title: 檢視資源符號 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891103"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649350"
 ---
 # <a name="viewing-resource-symbols"></a>檢視資源符號
 ### <a name="to-view-resource-symbols"></a>檢視資源符號  
   
-1.  在[資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔。  
+1.  在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔。  
   
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  選取**資源符號**從捷徑功能表，來檢視資源符號表[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)。  
+2.  選取 **資源符號**若要檢視資源符號表中的快顯功能表從[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)。  
   
     > [!NOTE]
     >  若要查看預先定義的符號，請檢查**顯示唯讀符號**核取方塊。  
   
-
-  
- **需求**  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

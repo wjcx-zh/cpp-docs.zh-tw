@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Srwlock_ 資料成員 |Microsoft 文件'
+title: 'Srwlock:: Srwlock_ 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889103"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647488"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ 資料成員
-包含目前 SRWLock 物件基礎的鎖定變數。  
+包含目前的基礎鎖定變數**SRWLock**物件。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,5 +1,5 @@
 ---
-title: 字串 （c + +） |Microsoft 文件
+title: 字串 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bdcdc6557253f8be9c6ecb20300f2338ab35d07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5a4453e0b7742a385815b5285b2aa04575eb75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889016"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645405"
 ---
 # <a name="string-c"></a>string (C++)
-表示一維`char`， `wchar_t`，**位元組**（或對等） 陣列或這類陣列的指標必須視為字串。  
+表示一維**char**， **wchar_t**， `byte` （或同等權限） 做為字串，則必須處理陣列或這類陣列的指標。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [string]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -41,7 +39,7 @@ ms.locfileid: "33889016"
 ## <a name="example"></a>範例  
  下列程式碼示範如何使用**字串**介面上，並在 typedef 上：  
   
-```  
+```cpp  
 // cpp_attr_ref_string.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -60,7 +58,7 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**適用於**|陣列或指標陣列的介面參數、 介面方法|  
+|**適用於**|陣列或指標的陣列、 介面參數、 介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

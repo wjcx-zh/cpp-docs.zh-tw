@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 45cc86c873e7c45a7352f0035b2fd16e312e7c6c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467166"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644442"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown 方法
-將轉換的型別所定義的介面指標*I0* IUnknown 指標的範本參數。  
+將轉換的型別所定義的介面指標*I0*樣板參數的指標`IUnknown`。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- IUnknown 指標。  
+ 指標`IUnknown`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

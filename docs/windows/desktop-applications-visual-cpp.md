@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571525"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643841"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
 A*桌面應用程式*c + + 中是可以存取 Windows Api 和系統主控台或視窗中的任一個執行一組完整的原生應用程式。 （雖然不會再正式支援的 Windows XP，而且有許多從那時起已引進的 Windows Api），可以在 Windows XP 到 Windows 10 上執行 c + + 的桌面應用程式。
@@ -26,11 +26,12 @@ A*桌面應用程式*c + + 中是可以存取 Windows Api 和系統主控台或�
 桌面應用程式有所區別的通用 Windows 平台 (UWP) 應用程式，可在執行 Windows 10 電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行。 如需桌面的 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
 
 
-**傳統型橋接器**中 Windows 10 您可以封裝您現有的桌面應用程式或為 UWP 應用程式的 COM 物件，並將 UWP 功能，例如觸控，或呼叫的 Api 從現代 Windows API 集。 您也可以新增至桌面的方案在 Visual Studio 中，並將它們在單一封裝，並使用 Windows Api 來彼此之間通訊的封裝中的 UWP 應用程式。  
+### <a name="desktop-bridge"></a>傳統型橋接器
+在 Windows 10 中，您可以封裝您現有的桌面應用程式或為 UWP 應用程式的 COM 物件和新增 UWP 的功能，例如觸控，或從最新的 Windows API 集呼叫 Api。 您也可以新增至桌面的方案在 Visual Studio 中，並將它們在單一封裝，並使用 Windows Api 來彼此之間通訊的封裝中的 UWP 應用程式。  
    
 在 Visual Studio 2017 15.4 版和更新版本，您可以建立 Windows 應用程式封裝專案，大幅簡化封裝現有傳統型應用程式的工作。 有一些限制相對於呼叫哪些登錄或桌面應用程式的 Api 使用，但在許多情況下，您可以建立替代的程式碼路徑，以達到類似的功能，在執行中應用程式套件時。 如需詳細資訊，請參閱[傳統型橋接器](/windows-uwp/porting/desktop-to-uwp-root)。  
   
- **術語**  
+### <a name="terminology"></a>用語  
   
 -   A *Win32*應用程式是 Windows 桌面應用程式，可讓 c + + 中的使用原生[Windows C Api 及/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和標準程式庫 Api，以及第 3 個廠商程式庫。 在視窗中執行的 Win32 應用程式會要求開發人員明確地使用 Windows 程序函式內的 Windows 訊息。 名稱，即使 Win32 應用程式可以編譯為 32 位元 (x86) 或 64 位元 (x64) 二進位。 在 Visual Studio IDE 中，Win32 與條款 x86 的意義相同。  
   

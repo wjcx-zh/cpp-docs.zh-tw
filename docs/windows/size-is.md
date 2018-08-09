@@ -1,5 +1,5 @@
 ---
-title: size_is |Microsoft 文件
+title: size_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f97bb82f3387e82be5bbf120db4fed9aaa092f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889669"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645447"
 ---
 # <a name="sizeis"></a>size_is
-指定的記憶體大小配置大小的指標，調整大小的指標和單一或多維度陣列的指標。  
+指定記憶體的大小配置大小的指標、 調整大小來調整大小的指標，以及單一或多維陣列的指標。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ size_is(  
+[ size_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *運算式*  
  所配置的記憶體大小調整大小的指標。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "33889669"
  **Size_is** c + + 屬性具有相同的功能[size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[first_is](../windows/first-is.md)如需如何指定陣列的區段的範例。  
+ 範例，請參閱[first_is](../windows/first-is.md)如需如何指定的陣列區段的範例。  
   
 ## <a name="requirements"></a>需求  
   
@@ -52,10 +51,10 @@ ms.locfileid: "33889669"
   
 |||  
 |-|-|  
-|**適用於**|在欄位`struct`或**union**，參數的介面，介面方法|  
+|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
-|**無效屬性**|**max_is**|  
+|**無效屬性**|`max_is`|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   

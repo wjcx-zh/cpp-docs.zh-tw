@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9e9f044a7aebdb96162edc0dcd4c33ed3c89e3b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461019"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644878"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>類別和結構 (C++ 元件擴充功能)
 宣告類別或結構之*物件存留期*會自動管理。 當物件不再可存取或超出範圍時，Visual C++ 會自動捨棄配置給物件的記憶體。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- **語法**  
+### <a name="syntax"></a>語法  
   
-```  
+```cpp  
       class_access  
       ref class  
       name  
@@ -42,7 +42,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
 ```  
   
- **參數**  
+### <a name="parameters"></a>參數  
   
  *class_access* （選擇性）  
  組件外部的類別或結構的存取範圍。 可能的值為**公開金鑰**並**私人**(**私用**是預設值)。 巢狀的類別或結構不能有*class_access*規範。  
@@ -54,14 +54,14 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  [抽象](../windows/abstract-cpp-component-extensions.md)並[密封](../windows/sealed-cpp-component-extensions.md)為有效的修飾詞。  
   
  *inherit_access* （選擇性）  
- `base_type` 的存取範圍。 唯一允許的存取範圍是**公開金鑰**(**公用**是預設值)。  
+ 存取範圍*base_type*。 唯一允許的存取範圍是**公開金鑰**(**公用**是預設值)。  
   
  *base_type* （選擇性）  
  基底類型。 不過，值類型無法做為基底類型。  
   
  如需詳細資訊，請參閱特定語言描述中的 Windows 執行階段和通用語言 Runtimesections 此參數。  
   
- **備註**  
+### <a name="remarks"></a>備註  
   
  使用宣告物件的預設成員存取範圍**ref 類別**或是**的實值類別**是**私用**。 和以宣告物件的預設成員存取範圍**ref struct**或是**實值結構**是**公用**。  
   
@@ -88,29 +88,27 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 -   [泛型類別 (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- **備註**  
+### <a name="remarks"></a>備註  
   
  請參閱[Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)並[實值類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx)。  
   
- **參數**  
-  
+### <a name="parameters"></a>參數  
  *base_type* （選擇性）  
- 基底類型。 A **ref 類別**或是**ref struct**可以繼承自零或多個介面以及零或一個`ref`型別。 A**實值類別**或是**實值結構**只可以繼承自零或多個介面。  
+ 基底類型。 A **ref 類別**或是**ref struct**可以繼承自零或多個介面以及零或一個**ref**型別。 A**實值類別**或是**實值結構**只可以繼承自零或多個介面。  
   
  當您使用宣告物件時**ref 類別**或是**ref 結構**關鍵字，物件由存取物件的控制代碼，也就是物件的參考計數器指標。 當宣告的變數超出範圍時，編譯器會自動刪除基礎物件。 當物件做為呼叫中的參數使用，或是儲存在變數中時，實際上是傳遞或儲存該物件的控制代碼。  
   
  當您使用宣告物件時**實值類別**或是**實值結構**關鍵字，不受管理的物件存留期宣告的物件。 此物件類似任何其他標準 C++ 類別或結構。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **備註**  
+### <a name="remarks"></a>備註  
   
  下表列出所示的語法差異**所有執行階段**區段特有的 C + + /cli CLI。  
   
- **參數**  
-  
+### <a name="parameters"></a>參數  
  *base_type* （選擇性）  
  基底類型。 A **ref 類別**或是**ref struct**可以繼承自零或多個 managed 介面及零或一個 ref 型別。 A**實值類別**或是**實值結構**只可以繼承自零或多個受管理的介面。  
   
@@ -119,7 +117,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  **實值類別**並**實值結構**關鍵字會告訴編譯器配置的類別或結構的值會傳遞至函式，或儲存在成員。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

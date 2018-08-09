@@ -17,48 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b5d94a1e66043a83e2ffb2aa8c1d44d9cbd16cc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2b18f4c38777076357170540e35fc5515025e126
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467192"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643003"
 ---
 # <a name="aggregatable"></a>aggregatable
 表示類別，支援彙總。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ aggregatable(   
    value  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *值*（選擇性）  
  表示 COM 物件可以彙總的參數：  
   
--   **永遠不會**無法彙總的 COM 物件。  
+-   `never` 無法彙總的 COM 物件。  
   
--   **允許**可以直接建立 COM 物件，或可以彙總。 這是預設值。  
+-   `allowed` 可以直接建立 COM 物件，或可以彙總。 這是預設值。  
   
--   **一律**COM 物件無法直接建立，且只會彙總。 當您呼叫`CoCreateInstance`這個物件中，您必須指定彙總的物件`IUnknown`介面 (控制`IUnknown`)。  
+-   `always` COM 物件無法直接建立，且只會彙總。 當您呼叫`CoCreateInstance`這個物件中，您必須指定彙總的物件`IUnknown`介面 (控制`IUnknown`)。  
   
 ## <a name="remarks"></a>備註  
  **彙總**c + + 屬性具有相同的功能[彙總](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 屬性。 這表示，編譯器會通過**彙總**透過屬性設定為產生的.idl 檔案。  
   
  此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。  
   
- **ATL 專案**  
+### <a name="atl-projects"></a>ATL 專案  
   
  如果在使用 ATL 的專案內使用此屬性，則屬性的行為會變更。 除了先前所述的行為，該屬性也會加入下列巨集的其中一個目標類別：  
   
 |參數值|已插入的巨集|  
 |---------------------|--------------------|  
-|*永遠不會*|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
-|*允許*|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
-|*永遠*|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
+|`Never`|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|`Allowed`|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
 ## <a name="example"></a>範例  
   

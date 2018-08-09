@@ -1,5 +1,5 @@
 ---
-title: 'Srwlockexclusivetraits:: Getinvalidvalue 方法 |Microsoft 文件'
+title: 'Srwlockexclusivetraits:: Getinvalidvalue 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599fb1d4b204e170a01f01c60e03959a30075c1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 963c3cbc09a9ed7f56d8ec25c35af0868eeae326
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888951"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649230"
 ---
 # <a name="srwlockexclusivetraitsgetinvalidvalue-method"></a>SRWLockExclusiveTraits::GetInvalidValue 方法
-擷取 SRWLockExclusiveTraits 物件永遠是無效的。  
+擷取**SRWLockExclusiveTraits**一律是無效的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- SRWLockExclusiveTraits 空的物件。  
+ 空**SRWLockExclusiveTraits**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

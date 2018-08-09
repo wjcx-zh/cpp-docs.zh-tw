@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6b3ee48394eede37873ce074c275290307215815
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570398"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649132"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ 元件擴充功能)
 **事件**關鍵字會宣告*事件*，這是已註冊訂閱者的通知 (*事件處理常式*) 感興趣的項目已發生。  
@@ -31,9 +31,9 @@ ms.locfileid: "39570398"
 ## <a name="all-runtimes"></a>所有執行階段  
  C + + /CX 支援宣告*事件成員*該*事件區塊*。 事件成員是用來宣告事件區塊的速記。 根據預設，事件成員會宣告事件區塊中明確宣告的 `add()`、`remove()` 和 `raise()` 函式。 若要自訂事件成員中的函式，請改為宣告事件區塊，然後覆寫您所需要的函數。  
   
- **語法**  
+### <a name="syntax"></a>語法
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -46,8 +46,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **參數**  
-  
+### <a name="parameters"></a>參數
  *修飾詞*  
  事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為**靜態**並**虛擬**。  
   
@@ -63,7 +62,7 @@ modifiereventdelegate^ event_name
  *參數*  
  （選擇性）參數`raise`方法，以比對的簽章*委派*參數。  
   
- **備註**  
+### <a name="remarks"></a>備註
   
  事件是委派與成員函式 (事件處理常式) 之間的關聯，會回應事件的觸發並且允許來自任何類別的用戶端註冊符合基礎委派的簽章和傳回型別的方法。  
   
@@ -87,14 +86,14 @@ modifiereventdelegate^ event_name
  如果您想要加入然後移除事件處理常式，您必須儲存加入作業所傳回的 EventRegistrationToken 結構。 然後在移除作業中，您必須使用儲存的 EventRegistrationToken 結構來識別要移除的事件處理常式。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **事件**關鍵字可讓您宣告事件。 事件是類別在發生感興趣的項目時提供通知的方法。  
   
- **語法**  
+### <a name="syntax"></a>語法
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -107,8 +106,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **參數**  
-  
+### <a name="parameters"></a>參數
  *修飾詞*  
  事件宣告或事件存取子方法上可使用的修飾詞。  可能的值為**靜態**並**虛擬**。  
   
@@ -124,8 +122,7 @@ modifiereventdelegate^ event_name
  *參數*  
  （選擇性）參數`raise`方法，以比對的簽章*委派*參數。  
   
- **備註**  
-  
+### <a name="remarks"></a>備註
  事件是委派與成員函式 (事件處理常式) 之間的關聯，會回應事件的觸發並且允許來自任何類別的用戶端註冊符合基礎委派的簽章和傳回型別的方法。  
   
  委派可以有一或多個關聯的方法，將在您的程式碼指出事件已發生時呼叫。 一個程式中的事件可供以 .NET Framework Common Language Runtime 為目標的其他程式使用。  
@@ -171,11 +168,10 @@ modifiereventdelegate^ event_name
 -   [介面中的事件](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
-  
+
  下列程式碼範例會示範宣告成對的委派、事件和事件處理常式；訂閱 (加入) 事件處理常式；叫用事件處理常式；然後取消訂閱 (移除) 事件處理常式。  
   
 ```cpp  
@@ -229,15 +225,11 @@ int main() {
 }  
 ```  
   
- **輸出**  
-  
 ```Output  
 OnClick: 7, 3.14159  
   
 OnDblClick: Hello  
 ```  
-  
- **範例**  
   
  下列程式碼範例示範用來產生 trivial 事件的 `raise` 方法的邏輯：如果事件都有一個或多個訂閱者，則呼叫 `raise` 方法會隱含或明確地呼叫委派。 如果委派的傳回型別不是**void**以及是否有零個事件訂閱者，`raise`方法會傳回委派類型的預設值。 如果沒有任何事件訂閱者，呼叫 `raise` 方法只會傳回，而且不會引發任何例外狀況。 如果委派傳回類型不是**void**，會傳回委派類型。  
   
@@ -272,8 +264,6 @@ int main() {
    Console::WriteLine(c.i);     
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 0  

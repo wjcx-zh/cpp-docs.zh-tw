@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466705"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652681"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>執行階段平台的元件擴充功能
 Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程式設計。 使用 C + + /CX 中，您可以設計程式通用 Windows 平台應用程式和元件，編譯成原生程式碼。 雖然您可以藉由直接針對 Windows 執行階段 COM 介面，建立通用 Windows 平台應用程式，使用 C + + /CX 中，您可以使用建構函式、 例外狀況和其他現代 c + + 程式設計慣用語。 若要啟用 c + + 程式設計，在.NET 平台上 managed 的執行環境中，您可以使用 C + + /cli CLI。  
   
- **兩個執行階段，一組擴充功能**  
+### <a name="two-runtimes-one-set-of-extensions"></a>兩種執行階段，一組擴充功能  
   
- C + + /CX 是子集的 C + + /cli CLI。 延伸模組通用的 C + + /CX 和 C + + /cli CLI，語意取決於您的目標 common language runtime (CLR) 或 Windows 執行階段。 若要編譯您的應用程式在 Windows 執行階段上執行，請指定 **/ZW**編譯器選項。 若要編譯它在 CLR 上執行，請指定 **/clr**編譯器選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。  
+ C + + /CX 是子集的 C + + /cli CLI。 延伸模組通用的 C + + /CX 和 C + + /cli CLI，語意取決於您的目標 common language runtime (CLR) 或 Windows 執行階段。 若要編譯您的應用程式在 Windows 執行階段上執行，請指定`/ZW`編譯器選項。 若要編譯您的應用程式以在 CLR 上執行，請指定 `/clr` 編譯器選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。  
   
  如需如何建立 c + + 中的通用 Windows 平台應用程式的詳細資訊，請參閱[藍圖適用於 Windows 執行階段應用程式使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。  
   
@@ -86,7 +86,7 @@ Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程
 |**nullptr**|否|指出控制代碼或指標未指向物件。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>範本建構  
- 下列語言建構會實作為範本，而不是關鍵字。 如果您指定 **/ZW**編譯器選項，以定義它們`lang`命名空間。 如果您指定 **/clr**編譯器選項，以定義它們`cli`命名空間。  
+ 下列語言建構會實作為範本，而不是關鍵字。 如果您指定 `/ZW` 編譯器選項，則它們會在 `lang` 命名空間中定義。 如果您指定 `/clr` 編譯器選項，則它們會在 `cli` 命名空間中定義。  
   
 |關鍵字|用途|參考資料|  
 |-------------|-------------|---------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Gettrustlevel 方法 |Microsoft 文件'
+title: 'Simpleactivationfactory:: Gettrustlevel 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892614"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645184"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel 方法
-取得所指定的類別的執行個體的信任層級`Base`類別樣板參數。  
+取得所指定類別的執行個體的信任層級`Base`類別範本參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,12 +33,12 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>參數  
- `trustLvl`  
+### <a name="parameters"></a>參數  
+ *trustLvl*  
  這項作業完成時，目前類別物件的信任層級。  
   
 ## <a name="return-value"></a>傳回值  
- 一律為 S_OK。  
+ 一律傳回 S_OK。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

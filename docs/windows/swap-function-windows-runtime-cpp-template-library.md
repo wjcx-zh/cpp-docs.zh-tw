@@ -1,5 +1,5 @@
 ---
-title: Swap 函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft 文件
+title: Swap 函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b37a5e33b4d6a9e62510e79c7f72145ed0f1e128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63c28a18723ad1dc39669ee5a367c870451c9943
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889380"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651755"
 ---
 # <a name="swap-function-windows-runtime-c-template-library"></a>Swap 函式 (Windows 執行階段 C++ 樣板程式庫)
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,11 +34,11 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `left`  
+### <a name="parameters"></a>參數  
+ *left*  
  第一個引數。  
   
- `right`  
+ *right*  
  第二個引數。  
   
 ## <a name="return-value"></a>傳回值  

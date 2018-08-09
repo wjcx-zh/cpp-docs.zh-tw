@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462780"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646185"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 新增到 COM 對應目標類別的介面項目。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *com_interface_entry*  
  字串，包含項目的實際的文字。 如需可能值的清單，請參閱 < [COM_INTERFACE_ENTRY 巨集](../atl/reference/com-interface-entry-macros.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "39462780"
   
  這項限制是必要的因為 ATL 介面對應中使用的第一個項目，做為識別`IUnknown`; 因此，項目必須是有效的介面。 例如，下列程式碼範例無效，因為在介面對應中的第一個項目不會指定實際的 COM 介面。  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  產生的 COM 物件對應的`CMyBaseClass`如下所示：  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**適用於**|**類別**，**結構**|  
 |**可重複**|[是]|  
-|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**必要屬性**|一或多個項目： `coclass`， `progid`，或`vi_progid`。|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

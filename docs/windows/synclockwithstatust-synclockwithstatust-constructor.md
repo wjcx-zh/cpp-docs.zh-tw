@@ -1,5 +1,5 @@
 ---
-title: 'Synclockwithstatust:: Synclockwithstatust 建構函式 |Microsoft 文件'
+title: 'Synclockwithstatust:: Synclockwithstatust 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891346"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647751"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT 建構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `other`  
- 右值參考到另一個 SyncLockWithStatusT 物件。  
+### <a name="parameters"></a>參數  
+ *other*  
+ 右值參考到另一個**SyncLockWithStatusT**物件。  
   
- `sync`  
- 另一個 SyncLockWithStatusT 物件的參考。  
+ *sync*  
+ 另一個的參考**SyncLockWithStatusT**物件。  
   
- `status`  
- 值[status_](../windows/synclockwithstatust-status-data-member.md)資料成員`other`參數或`sync`參數。  
+ *status*  
+ 值[status_](../windows/synclockwithstatust-status-data-member.md)資料成員*其他*參數或*同步*參數。  
   
 ## <a name="remarks"></a>備註  
- 初始化 SyncLockWithStatusT 類別的新執行個體。  
+ 初始化的新執行個體**SyncLockWithStatusT**類別。  
   
- 第一個建構函式初始化目前 SyncLockWithStatusT 物件從另一個參數所指定的 SyncLockWithStatusT `other`，然後則 SyncLockWithStatusT 物件。 第二個建構函式是`protected`，並將目前 SyncLockWithStatusT 物件初始化為無效的狀態。  
+ 第一個建構函式初始化目前**SyncLockWithStatusT**物件從另一個**SyncLockWithStatusT**參數所指定*其他*，然後失效另**SyncLockWithStatusT**物件。 第二個建構函式**保護**，並初始化目前**SyncLockWithStatusT**為無效狀態的物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

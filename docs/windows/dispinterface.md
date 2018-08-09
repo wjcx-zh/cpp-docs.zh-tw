@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569210"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644326"
 ---
 # <a name="dispinterface"></a>dispinterface
 將介面放入 .idl 檔案中作為分派介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "39569210"
   
  MIDL 文件中 [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) 的用法範例：  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**適用於**|**interface**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
-|**無效屬性**|**dual**、 **object**、 **oleautomation**、 `local`、 **ms_union**|  
+|**無效屬性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   

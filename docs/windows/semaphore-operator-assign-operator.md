@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: operator = 運算子 |Microsoft 文件'
+title: 'Semaphore:: operator = 運算子 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892523"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651274"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 運算子
-將指定的控制代碼從號誌物件移至目前的號誌物件。  
+將指定的控制代碼，從**號誌**物件與目前**號誌**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
- 號誌物件的右值參考。  
+### <a name="parameters"></a>參數  
+ *h*  
+ 以右值參考**號誌**物件。  
   
 ## <a name="return-value"></a>傳回值  
- 目前的號誌物件的參考。  
+ 目前的參考**號誌**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

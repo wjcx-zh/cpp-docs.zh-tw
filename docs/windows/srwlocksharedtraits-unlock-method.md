@@ -1,5 +1,5 @@
 ---
-title: 'Srwlocksharedtraits:: Unlock 方法 |Microsoft 文件'
+title: 'Srwlocksharedtraits:: Unlock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95be5ae4c9db7bff4ecbfb4705904f4e48c160e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0a42d1e1010f63436951beeadbd833e2a9d445d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889354"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650520"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock 方法
-釋放指定之 SRWLock 物件的獨佔控制。  
+釋放指定獨佔控制`SRWLock`物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `srwlock`  
- SRWLock 物件控制代碼。  
+### <a name="parameters"></a>參數  
+ *srwlock*  
+ 控制代碼`SRWLock`物件。  
   
 ## <a name="return-value"></a>傳回值  
   

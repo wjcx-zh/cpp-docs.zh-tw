@@ -1,7 +1,7 @@
 ---
-title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +） |Microsoft 文件
+title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +） |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 1/11/2018
+ms.date: 06/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,96 +16,97 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653206"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
-本逐步解說示範如何在 Visual Studio 中建立傳統 Windows 桌面應用程式。 您將建立範例應用程式使用 Windows API 來顯示"Hello，Windows 桌面"！ 視窗中顯示 "Hello, World!" 的基本 Windows 傳統型應用程式。 您可以使用在這個逐步解說中開發的程式碼作為模式，來建立其他 Windows 傳統型應用程式。
+本逐步解說示範如何在 Visual Studio 中建立傳統 Windows 桌面應用程式。 您將建立範例應用程式使用 Windows API 來顯示"Hello，Windows desktop"！ 視窗中顯示 "Hello, World!" 的基本 Windows 傳統型應用程式。 您可以使用在這個逐步解說中開發的程式碼作為模式，來建立其他 Windows 傳統型應用程式。
 
-Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用程式開發介面和 Windows 傳統應用程式開發介面） 是用來建立 Windows 應用程式的 C 語言的基礎架構。 它已自 1980年存在，而且已經用來建立 Windows 應用程式的數十年。 已在此應用程式開發介面，例如 MFC、 ATL 和.NET frameworks 之上建置更進階的和更容易程式的架構。 即使大多數最新型的程式碼適用 UWP 和市集應用程式撰寫的 C + + WinRT 會使用下面這個 API。 如需 Windows API 的詳細資訊，請參閱[Windows 應用程式開發介面索引](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx)。 有許多方法可以建立 Windows 應用程式，但這是第一個。
+Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是建立 Windows 應用程式的 C 語言的基礎架構。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 已在此 API，例如 MFC、 ATL 和.NET framework 之上建置更進階且更容易程式的架構。 即使是最新式的程式碼，UWP 和存放區撰寫之應用程式在 C + + /cli WinRT 使用下面這個 API。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx)。 有許多方式可建立 Windows 應用程式，但這是第一個。
 
 > [!IMPORTANT]
-> 為了簡短起見，在文字中省略某些程式碼陳述式。 [建置程式碼](#build-the-code)這份文件最後一節顯示完整的程式碼。
+> 為了保持簡潔，省略某些程式碼陳述式文字中。 [建置程式碼](#build-the-code)這份文件結尾的區段會顯示完整的程式碼。
 
 ## <a name="prerequisites"></a>必要條件
 
-- 執行 Microsoft Windows 7 或更新版本的電腦。 我們建議最佳的開發經驗 Windows 10。
+- 執行 Microsoft Windows 7 或更新版本的電腦。 我們建議的最佳開發體驗的 Windows 10。
 
-- Visual Studio 2017 的複本。 如需如何下載並安裝 Visual Studio，請參閱[安裝 Visual Studio 2017](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**的 c + + 桌面應用程式開發**會檢查工作負載。 如果您未安裝此工作負載，當您安裝 Visual Studio 不要擔心。 您可以再次執行安裝程式，並立即安裝。
+- Visual Studio 2017 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**使用 c + + 的桌面開發**會檢查工作負載。 別擔心，如果您在安裝 Visual Studio 時，未安裝此工作負載。 您可以再次執行安裝程式，並立即安裝。
 
-   ![使用 c + + 桌面開發](../build/media/desktop-development-with-cpp.png "的 c + + 桌面應用程式開發")
+   ![使用 c + + 的桌面開發](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面開發")
 
-- 了解使用 Visual Studio IDE 的基本概念。 如果您使用 Windows 桌面應用程式之前，您可能可以跟上。 如需簡介，請參閱[Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
+- 使用 Visual Studio IDE 的基本概念了解。 如果您已使用之前的 Windows 傳統型應用程式，您可能可以保留。 如需簡介，請參閱[Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
-- 足夠要遵循的 c + + 語言基本知識的了解。 別擔心，我們通常不太複雜的任何項目。
+- C + + 語言，若要跟著做的基本概念的了解。 別擔心，我們不會有太過複雜。
 
 ## <a name="create-a-windows-desktop-project"></a>建立 Windows 桌面專案
 
-請遵循下列步驟建立第一個 Windows 桌面專案，並可運作的 Windows 桌面應用程式輸入的代碼。 如果您使用 Visual Studio 的 Visual Studio 2017 版本 15.3 比舊的版本，跳到[建立 Windows 桌面專案在 Visual Studio 2017 RTM](#create-in-vs2017-rtm)。
+請遵循下列步驟來建立第一個 Windows 桌面專案，並輸入可運作的 Windows 桌面應用程式程式碼。 如果您使用的版本早於 Visual Studio 2017 15.3 版的 Visual Studio，請直接跳到[來建立 Windows 傳統型專案在 Visual Studio 2017 RTM](#create-in-vs2017-rtm)。
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>若要建立 Windows 桌面專案在 Visual Studio 2017 更新 15.3 和更新版本
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>若要建立 Windows 傳統型專案在 Visual Studio 2017 更新 15.3 和更新版本
 
 1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
 
-1. 在**新專案**對話方塊的左窗格中，展開 **已安裝**， **Visual c + +**，然後選取**Windows 桌面**。 在中間窗格中，選取**Windows 桌面精靈**。
+1. 在**新的專案**對話方塊中，在左窗格中，展開**已安裝** > **Visual c + +**，然後選取**Windows Desktop**. 在中間窗格中，選取**Windows Desktop 精靈**。
 
-   在**名稱**方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定] 。
+   在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定] 。
 
-   ![DesktopApp 專案的名稱，](../build/media/desktop-app-new-project-name-153.png "DesktopApp 專案的名稱")
+   ![將專案命名為 DesktopApp](../build/media/desktop-app-new-project-name-153.png "DesktopApp 專案的名稱")
 
-1. 在**Windows 桌面專案**對話方塊下方**應用程式類型**，選取**Windows 應用程式 (.exe)**。 在 [其他選項] 下，選取 [空專案] 。 選擇**確定**建立專案。
+1. 在 [ **Windows 桌面專案**] 對話方塊底下**應用程式類型**，選取**Windows 應用程式 (.exe)**。 在 [其他選項] 下，選取 [空專案] 。 選擇**確定**建立專案。
 
-   ![在 Windows 桌面專案精靈 建立 DesktopApp](../build/media/desktop-app-new-project-wizard-153.png "DesktopApp 建立在 Windows 桌面專案精靈")
+   ![在 Windows 桌面專案精靈 建立 DesktopApp](../build/media/desktop-app-new-project-wizard-153.png "Windows 桌面專案精靈 建立 DesktopApp")
 
-1. 在**方案總管] 中**，以滑鼠右鍵按一下**DesktopApp**專案，選擇**新增**，然後選擇 [**新項目**。
+1. 中**方案總管 中**，以滑鼠右鍵按一下**DesktopApp**專案，選擇**新增**，然後選擇**新項目**。
 
-   ![加入新項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 專案加入新項目")
+   ![新增項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 專案加入新的項目")
 
-1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在**名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
+1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
 
-   ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-153.png "將.cpp 檔案，加入 DesktopApp 專案")
+   ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp 專案新增.cpp 檔案")
 
-現在已建立專案，並在編輯器中開啟原始程式檔。 若要繼續，請直接前往[建立程式碼](#create-the-code)。
+現在已建立您的專案，並在編輯器中開啟原始程式檔。 若要繼續，請直接跳到[建立的程式碼](#create-the-code)。
 
 ### <a id="create-in-vs2017-rtm"></a> 若要在 Visual Studio 2017 RTM 中建立 Windows 桌面專案
 
 1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
 
-1. 在**新專案**對話方塊的左窗格中，展開 **已安裝**，**範本**， **Visual c + +**，然後選取  **Win32**。 在中間窗格選取 [Win32 專案] 。
+1. 在 **新的專案**對話方塊中，在左窗格中，展開**已安裝** > **範本** > **Visual c + +**，然後選取**Win32**。 在中間窗格選取 [Win32 專案] 。
 
-   在**名稱**方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定] 。
+   在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定] 。
 
-   ![DesktopApp 專案的名稱，](../build/media/desktop-app-new-project-name-150.png "DesktopApp 專案的名稱")
+   ![將專案命名為 DesktopApp](../build/media/desktop-app-new-project-name-150.png "DesktopApp 專案的名稱")
 
-1. 在**概觀**頁面**Win32 應用程式精靈**，選擇**下一步**。
+1. 在 [**概觀**頁**Win32 應用程式精靈**，選擇**下一步]**。
 
-   ![建立 Win32 應用程式精靈概觀 DesktopApp](../build/media/desktop-app-win32-wizard-overview-150.png "DesktopApp 建立 Win32 應用程式精靈概觀")
+   ![在 Win32 應用程式精靈概觀中建立 DesktopApp](../build/media/desktop-app-win32-wizard-overview-150.png "DesktopApp 在 Win32 應用程式精靈概觀")
 
-1. 在**應用程式設定**頁面的 **應用程式類型**，選取**Windows 應用程式**。 在 [其他選項] 下，選取 [空專案] 。 選擇**完成**建立專案。
+1. 在 **應用程式設定**頁面的 **應用程式類型**，選取**Windows 應用程式**。 在 [其他選項] 下，選取 [空專案] 。 選擇**完成**建立專案。
 
-   ![在 Win32 應用程式精靈 設定中建立 DesktopApp](../build/media/desktop-app-win32-wizard-settings-150.png "DesktopApp 建立 Win32 應用程式精靈設定中")
+   ![在 Win32 應用程式精靈設定中建立 DesktopApp](../build/media/desktop-app-win32-wizard-settings-150.png "DesktopApp 在 Win32 應用程式精靈設定")
 
-1. 在**方案總管] 中**，以滑鼠右鍵按一下 DesktopApp 專案，選擇**新增**，然後選擇 [**新項目**。
+1. 中**方案總管] 中**，以滑鼠右鍵按一下 [DesktopApp 專案，然後選擇**新增**，然後選擇**新項目**。
 
-   ![加入新項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-150.gif "DesktopApp 專案加入新項目")
+   ![新增項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-150.gif "DesktopApp 專案加入新的項目")
 
-1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在**名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
+1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
 
-   ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-150.png "將.cpp 檔案，加入 DesktopApp 專案")
+   ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-150.png "DesktopApp 專案新增.cpp 檔案")
 
-現在已建立專案，並在編輯器中開啟原始程式檔。
+現在已建立您的專案，並在編輯器中開啟原始程式檔。
 
 ## <a name="create-the-code"></a>建立程式碼
 
-接下來，您將學習如何在 Visual Studio 中建立 Windows 傳統型應用程式的程式碼。
+接下來，您將了解如何在 Visual Studio 中建立 Windows 桌面應用程式的程式碼。
 
 ### <a name="to-start-a-windows-desktop-application"></a>啟動 Windows 傳統型應用程式
 
-1. 就像每個 C 應用程式和 c + + 應用程式必須有`main`函式做為起點，每個 Windows 桌面應用程式必須具有`WinMain`函式。 `WinMain` 具有下列語法。
+1. 就如同每個 C 應用程式和 c + + 應用程式必須有`main`函式做為起點，每個 Windows 桌面應用程式必須具有`WinMain`函式。 `WinMain` 具有下列語法。
 
    ```cpp
    int CALLBACK WinMain(
@@ -119,16 +120,16 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    參數和傳回值，這個函式的相關資訊，請參閱[WinMain 進入點](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
    > [!NOTE]
-   > 什麼是所有這些額外字，例如**回呼**，或**HINSTANCE**，或**\_中\_**？ 傳統的 Windows API 所使用的 typedef 和廣泛地提取出前置處理器巨集的某些細節的型別和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 滑鼠停留的感興趣，word 或選取它，然後按下 ctrl-K、 ctrl-我的小型的快顯視窗，其中包含定義。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 什麼是所有這些額外字詞，例如`CALLBACK`，或`HINSTANCE`，或`_In_`？ 傳統的 Windows API 所使用的 typedef 和廣泛地抽離前置處理器巨集的一些詳細資料類型和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 將滑鼠停留的感興趣，word 或選取它，然後按 ctrl-K、 ctrl-我的小型的快顯視窗，其中包含定義。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱 <<c0> [ 使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
-1. Windows 桌面程式需要&lt;windows.h >。 &lt;tchar.h > 定義`TCHAR`巨集，它最終會解析至`wchar_t`如果您的專案中定義 UNICODE symbol，否則它會解析為`char`。  如果是一律以啟用 UNICODE，您不需要 TCHAR，並只可以直接使用 wchar_t。
+1. Windows 桌面程式需要&lt;windows.h >。 &lt;tchar.h > 定義`TCHAR`最終會解析巨集來**wchar_t**如果您的專案中定義的 UNICODE 符號，否則它會解析成**char**。  如果您一律使用來建置啟用 UNICODE，您不需要 TCHAR，並可以是直接使用**wchar_t**直接。
 
    ```cpp
    #include <windows.h>
    #include <tchar.h>
    ```
 
-1. 除了 `WinMain` 函式之外，每個 Windows 傳統型應用程式還必須有視窗程序函式。 此函式通常會命名為`WndProc`但您可以將檔案命名任何您喜歡。 `WndProc` 具有下列語法。
+1. 除了 `WinMain` 函式之外，每個 Windows 傳統型應用程式還必須有視窗程序函式。 此函式通常會命名為`WndProc`但您可以為它命名您喜歡。 `WndProc` 具有下列語法。
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -139,13 +140,13 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    );
    ```
 
-   在這個函式中，您撰寫程式碼來處理*訊息*應用程式接收來自 Windows 時*事件*發生。 比方說，如果使用者在應用程式中，選擇 [確定] 按鈕，Windows 會將訊息傳送給您，而且您可以撰寫程式碼內您`WndProc`沒有任何工作是適當的函式。 這稱為*處理*事件。 您只需要處理您的應用程式相關的事件。
+   在此函式中，您撰寫程式碼來處理*訊息*接收從 Windows 的應用程式時*事件*發生。 比方說，如果使用者選擇 [確定] 按鈕，在您的應用程式中，Windows 會將訊息傳送給您，而您可以撰寫程式碼內您`WndProc`會執行任何工作適當的函式。 這就叫做*處理*事件。 您只需要處理您的應用程式相關的事件。
 
-   如需詳細資訊，請參閱[視窗程序](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
+   如需詳細資訊，請參閱 < [Window 程序](https://msdn.microsoft.com/library/windows/desktop/ms632593)。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>將功能加入 WinMain 函式中
 
-1. 在`WinMain`函式，填入型別的結構[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 此結構包含視窗，例如，應用程式圖示，視窗中，要顯示在標題列，並非常重要的是，您的視窗程序的函式指標的名稱的背景色彩的相關資訊。 下列範例會顯示一個典型的 `WNDCLASSEX` 結構。
+1. 在 `WinMain`函式中，填入類型的結構[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。 此結構包含視窗中，例如，應用程式圖示、 背景色彩 視窗中，要顯示在標題列中，而非常重要的是，您的視窗程序的函式指標的名稱的相關資訊。 下列範例會顯示一個典型的 `WNDCLASSEX` 結構。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -166,7 +167,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
    此結構欄位的詳細資訊，請參閱[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)。
 
-1. 您必須註冊`WNDCLASSEX`與 Windows，讓它知道您的視窗，以及如何將訊息傳送給它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函式，並將視窗類別結構當做引數。 `_T`巨集使用，因為我們使用`TCHAR`型別。
+1. 您必須註冊`WNDCLASSEX`與 Windows，讓它知道有關您的視窗，以及如何將訊息傳送給它。 使用[RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)函式，並將視窗類別結構當做引數。 `_T`巨集，因為我們使用`TCHAR`型別。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -218,9 +219,9 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    }
    ```
 
-   此函數會傳回`HWND`，這是視窗的控制代碼。 控點是有些許類似，Windows 會用來追蹤開啟的視窗的指標。 如需詳細資訊，請參閱[Windows 資料類型](https://msdn.microsoft.com/library/windows/desktop/aa383751)。
+   此函數會傳回`HWND`，這是視窗的控制代碼。 控制代碼會有些許類似 Windows 會使用要追蹤開啟的視窗的指標。 如需詳細資訊，請參閱 < [Windows 資料類型](https://msdn.microsoft.com/library/windows/desktop/aa383751)。
 
-1. 此時已建立的視窗，但我們仍需要告訴 Windows 設為可見。 也就是此程式碼的:
+1. 此時已建立的視窗，但我們仍需要告知要顯示的 Windows。 這就是此程式碼的:
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -231,9 +232,9 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    UpdateWindow(hWnd);
    ```
 
-   顯示的視窗不具有太多內容，因為尚未實作`WndProc`函式。 換句話說，應用程式，並不會尚未處理 Windows 現在正在傳送給它的訊息。
+   顯示的視窗不具有太多內容，因為尚未實作`WndProc`函式。 換句話說，應用程式，並不會尚未處理的訊息，Windows 現在會將傳送給它。
 
-1. 若要處理的訊息，我們會先新增接聽 Windows 會傳送訊息的訊息迴圈。 當應用程式接收訊息時，此迴圈會分派到您`WndProc`函式以進行處理。 此訊息迴圈會類似下列程式碼。
+1. 若要處理訊息，我們會先新增訊息迴圈，以接聽訊息，Windows 會傳送。 當應用程式收到訊息時，這個迴圈會分派到您`WndProc`函式來處理。 此訊息迴圈會類似下列程式碼。
 
    ```cpp
    MSG msg;
@@ -246,7 +247,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    return (int) msg.wParam;
    ```
 
-   如需結構和訊息迴圈中的函式的詳細資訊，請參閱[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)， [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)， [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)，和[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).
+   如需有關的結構和訊息迴圈中的函式的詳細資訊，請參閱[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)， [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)， [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)，和[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).
 
    此時的 `WinMain` 函式應該類似下列程式碼。
 
@@ -339,9 +340,9 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 1. 若要讓 `WndProc` 函式處理應用程式所接收的訊息，請實作 switch 陳述式。
 
-   一個重要的訊息處理是[WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213)訊息。 當應用程式所顯示的視窗有某部分必須更新時，應用程式就會收到這個訊息 當使用者移動視窗中，前面的視窗，然後將它移開一次，可能會發生此事件。 您的應用程式並不知道這類事件發生時。只有 Windows 知道，所以它會通知您與`WM_PAINT`。 第一次顯示視窗，必須更新所有內容。
+   是一個重要的訊息，以處理[WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213)訊息。 當應用程式所顯示的視窗有某部分必須更新時，應用程式就會收到這個訊息 當使用者移動程式視窗中，前面的視窗，然後將它移開一次，就會發生此事件。 您的應用程式不知道何時會發生這類的事件;只有 Windows 知道，因此它會通知您`WM_PAINT`。 當第一次顯示視窗時，全都必須更新。
 
-   若要處理`WM_PAINT`訊息、 第一次呼叫[BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362)，然後處理配置時文字、 按鈕和其他控制項在視窗中，所有的邏輯，然後呼叫[EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598)。 此應用程式，開始與結束呼叫之間的邏輯是顯示字串"Hello，Windows 桌面"！ 在視窗中顯示 "Hello, World!" 字串。 下列程式碼，請注意， [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133)函數用來顯示字串。
+   若要處理`WM_PAINT`訊息，第一次呼叫[BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362)，然後處理用以配置文字、 按鈕和其他控制項在視窗中，所有邏輯，然後呼叫[EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598)。 此應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 在下列程式碼中，注意[TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133)函數用來顯示字串。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -366,9 +367,9 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    }
    ```
 
-   `HDC` 在這段程式碼是裝置內容，也就是 Windows 用來啟用與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式會確保您的應用程式行為都像是一個優良，而且不會使用超出它所需要的裝置內容。 這有助於確保圖形子系統是可供其他應用程式。
+   `HDC` 在這段程式碼是裝置內容，也就是 Windows 使用，讓您與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式可確保您的應用程式行為就像個模範生，並不會使用長比所需的裝置內容。 這有助於確保圖形子系統是可供其他應用程式。
 
-1. 應用程式通常會處理許多其他訊息，例如[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)時第一次建立一個視窗，和[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)視窗關閉時。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
+1. 應用程式通常會處理許多其他訊息，例如[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)時第一次建立視窗，並[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)視窗關閉時。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -406,11 +407,11 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 ## <a name="build-the-code"></a>建置程式碼
 
-我們承諾給，以下是可用的應用程式的完整程式碼。
+就如承諾一樣，以下是可用的應用程式的完整程式碼。
 
 ### <a name="to-build-this-example"></a>建立這個範例
 
-1. 刪除您已經在編輯器中輸入 HelloWindowsDesktop.cpp 中的任何程式碼。 此範例程式碼複製並貼到 HelloWindowsDesktop.cpp:
+1. 刪除任何您輸入的程式碼*HelloWindowsDesktop.cpp*在編輯器中。 複製此範例程式碼並貼到*HelloWindowsDesktop.cpp*:
 
    ```cpp
    // HelloWindowsDesktop.cpp
@@ -562,12 +563,11 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
    ![建置 DesktopApp 專案](../build/media/desktop-app-project-build-150.gif "建置 DesktopApp 專案")
 
-1. 若要執行應用程式，請按**F5**。 視窗，其中包含文字"Hello，Windows 桌面"！ 應該會出現在顯示畫面的左上角。
+1. 若要執行的應用程式，請按**F5**。 視窗，其中包含文字"Hello，Windows desktop"！ 應該會出現在顯示畫面的左上角。
 
-   ![執行 DesktopApp 專案](../build/media/desktop-app-project-run-150.gif "執行 DesktopApp 專案")
+   ![執行 DesktopApp 專案](../build/media/desktop-app-project-run-157.png "執行 DesktopApp 專案")
 
-恭喜您！ 當您完成此逐步解說中，並建置傳統 Windows 桌面應用程式。
+恭喜您！ 當您完成本逐步解說，並建置傳統 Windows 桌面應用程式。
 
 ## <a name="see-also"></a>另請參閱
-
-[Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)
+ [Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)

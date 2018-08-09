@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de0f68ee3e27f2ac3a7f87e64489a05a16dcdc91
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8c2683d2e1875e7d68d27f7bde515b7a4ca70da0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571408"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649724"
 ---
 # <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event 建構函式 (Windows 執行階段 C++ 樣板程式庫)
-初始化 Event 類別的新執行個體。  
+初始化的新執行個體**事件**類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 explicit Event(  
    HANDLE h = HandleT::Traits::GetInvalidValue()  
 );  
@@ -36,7 +36,7 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *h*  
  事件的控制代碼。 根據預設， *h*初始化為**nullptr**。  
   

@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ff24ac92e5e84cb85127ef6e33805928fabd6f60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461206"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647527"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo 方法
 指出指定的介面識別碼是否可轉換成每個非預設的範本參數所定義的特製化。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 __forceinline bool CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *riid*  
  介面識別碼。  
   

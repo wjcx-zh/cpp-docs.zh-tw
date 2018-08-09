@@ -1,5 +1,5 @@
 ---
-title: WeakRef::operator&amp;運算子 |Microsoft 文件
+title: Weakref::&amp;運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c8221b405618b1879f4e4c865115a227eb09857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890100"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649044"
 ---
-# <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp;運算子
-傳回表示目前 WeakRef 物件的 ComPtrRef 物件。  
+# <a name="weakrefoperatoramp-operator"></a>Weakref::&amp;運算子
+傳回`ComPtrRef`物件，表示目前**WeakRef**物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 表示目前的 WeakRef 物件的 ComPtrRef 物件。  
+ A`ComPtrRef`物件，表示目前**WeakRef**物件。  
   
 ## <a name="remarks"></a>備註  
- 這是不是以用於您的程式碼中的內部協助程式運算子。  
+ 這是不適合用於您的程式碼中的內部 helper 運算子。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

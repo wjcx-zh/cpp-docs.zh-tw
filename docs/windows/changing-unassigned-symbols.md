@@ -1,5 +1,5 @@
 ---
-title: 變更未指定的符號 |Microsoft 文件
+title: 變更未指定的符號 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7510d8bb9f356620e77d862edab71d852fdec65b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855379"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644982"
 ---
 # <a name="changing-unassigned-symbols"></a>變更未指定的符號
-在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除尚未指派給資源或物件的現有符號。  
+當您在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除尚未指派給資源或物件的現有符號。  
   
 ### <a name="to-change-an-unassigned-symbol"></a>變更未指派的符號  
   
-1.  在**名稱**方塊中，選取未指派的符號，然後按一下**變更**。  
+1.  在 **名稱**方塊中，選取未指派的符號，然後按一下**變更**。  
   
 2.  符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。  
   
     > [!NOTE]
-    >  若要變更符號的*是*指派給資源或物件時，您必須使用資源編輯器或 [屬性] 視窗。 如需詳細資訊，請參閱[變更符號或符號名稱](../windows/changing-a-symbol-or-symbol-name-id.md)。  
+    >  若要變更符號所*已*指派給資源或物件，您必須使用資源編輯器或**屬性**視窗。 如需詳細資訊，請參閱 <<c0> [ 變更符號或符號名稱](../windows/changing-a-symbol-or-symbol-name-id.md)。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

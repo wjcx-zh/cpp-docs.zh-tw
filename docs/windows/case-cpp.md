@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6567650d719b56bb320f1b40eae285322bcab364
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ddccbc1fcecafe5ac924098a344cfb7592ce2116
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464307"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647823"
 ---
 # <a name="case-c"></a>case (C++)
 搭配[switch_type](../windows/switch-type.md)屬性中**聯集**。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ case(  
    value  
 ) ]  

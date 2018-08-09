@@ -1,5 +1,5 @@
 ---
-title: WeakReference Class1 |Microsoft 文件
+title: WeakReference 類別 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a44b992138371ff33a9059990a5ec3e93689c679
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 71de341be0cb482a49cbf35ddd34e414be8afde4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891642"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645538"
 ---
-# <a name="weakreference-class1"></a>WeakReference Class1
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+# <a name="weakreference-class1"></a>WeakReference 類別 1
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,13 +34,13 @@ class WeakReference;
 ```  
   
 ## <a name="remarks"></a>備註  
- 代表*弱式參考*，可以搭配 Windows 執行階段或傳統 com 使用。 弱式參考代表不一定可存取的物件。  
+ 代表*弱式參考*可用於使用 Windows 執行階段或傳統 com 使用。 弱式參考代表不一定可存取的物件。  
   
- A`WeakReference`物件會維護*強式參考*，這是物件的指標和*強式參考計數*，這是已藉由散發的強式參考的複本數目Resolve() 方法。 為非零，強式參考計數時，強式參考無效，而且是可存取的物件。 當強式參考計數變成零時，強式參考無效且無法存取的物件。  
+ A **WeakReference**物件會維護*強式參考*，這是物件的指標和*強式參考計數*，這是強的複本數目已藉由散發的參考`Resolve()`方法。 強式參考計數為非零值，而強式參考有效，且該物件是可存取。 當強式參考計數變成零時，強式參考無效，而且該物件是無法存取。  
   
- WeakReference 物件通常用來代表其存在由外部執行緒或應用程式的物件。 例如，建構 WeakReference 物件從參考檔案物件。 在檔案開啟時，強式參考是有效的。 但若檔案關閉，強式參考就變成無效的。  
+ A **WeakReference**物件一般用來代表其存在由外部執行緒或應用程式所控制的物件。 例如，建構**WeakReference**檔案物件的參考物件。 在檔案開啟時，強式參考是有效的。 但若檔案關閉，強式參考就變成無效的。  
   
- WeakReference 方法都是安全執行緒。  
+ **WeakReference**方法都是安全執行緒。  
   
 ## <a name="members"></a>成員  
   
@@ -48,17 +48,17 @@ class WeakReference;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[WeakReference::WeakReference 建構函式](../windows/weakreference-weakreference-constructor.md)|初始化 WeakReference 類別的新執行個體。|  
-|[WeakReference::~WeakReference 解構函式](../windows/weakreference-tilde-weakreference-destructor.md)|取消初始化 （終結） WeakReference 類別的目前執行個體。|  
+|[WeakReference::WeakReference 建構函式](../windows/weakreference-weakreference-constructor.md)|初始化的新執行個體**WeakReference**類別。|  
+|[WeakReference::~WeakReference 解構函式](../windows/weakreference-tilde-weakreference-destructor.md)|取消初始化 （終結） 的目前執行個體**WeakReference**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[WeakReference::DecrementStrongReference 方法](../windows/weakreference-decrementstrongreference-method.md)|將強式參考數目目前 WeakReference 物件。|  
-|[WeakReference::IncrementStrongReference 方法](../windows/weakreference-incrementstrongreference-method.md)|目前的 WeakReference 物件的強式參考計數遞增。|  
-|[WeakReference::Resolve 方法](../windows/weakreference-resolve-method.md)|如果強式參考計數不是零，則您可以將目前強式參考值的指定的指標。|  
-|[WeakReference::SetUnknown 方法](../windows/weakreference-setunknown-method.md)|將目前的 WeakReference 物件的強式參考設定為指定的介面指標。|  
+|[WeakReference::DecrementStrongReference 方法](../windows/weakreference-decrementstrongreference-method.md)|目前的強式的參考計數的遞減**WeakReference**物件。|  
+|[WeakReference::IncrementStrongReference 方法](../windows/weakreference-incrementstrongreference-method.md)|目前的強式參考計數遞增**WeakReference**物件。|  
+|[WeakReference::Resolve 方法](../windows/weakreference-resolve-method.md)|如果強式參考計數為非零值，請為目前的強式參考值設定指定的指標。|  
+|[WeakReference::SetUnknown 方法](../windows/weakreference-setunknown-method.md)|設定目前的強式參考**WeakReference**物件與指定的介面指標。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `WeakReference`  

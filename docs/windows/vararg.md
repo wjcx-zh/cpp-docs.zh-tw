@@ -1,5 +1,5 @@
 ---
-title: vararg |Microsoft 文件
+title: vararg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f842d27f6b0dfc72a48f1bc7fbcb8fcccb0c26e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890963"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650400"
 ---
 # <a name="vararg"></a>vararg
 指定函式接受可變數目的引數。  
@@ -30,18 +30,16 @@ ms.locfileid: "33890963"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [vararg]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Vararg** c + + 屬性具有相同的功能[vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範使用**vararg**:  
+ 下列程式碼範例將示範用法**vararg**:  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

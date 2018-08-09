@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Length 方法 |Microsoft 文件'
+title: 'Eventtargetarray:: Length 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab14d842935e99f8e5f8a96b24b5675d61e418d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886086"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653101"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 size_t Length();  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 目前的事件處理常式內部陣列中的元素數目。  
+ 目前的內部陣列中的事件處理常式的元素數目。  
   
 ## <a name="remarks"></a>備註  
- 取得目前的元素數目的事件處理常式內部的陣列。  
+ 取得目前的元素數目內部陣列中的事件處理常式。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** event.h  

@@ -13,25 +13,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 54c4e97458e1a7322d84e012ea5609d3e29bfb0a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570544"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647309"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ 元件擴充功能)
 在命名空間範圍內宣告列舉，這是使用者定義的類型，由一組稱為列舉值的具名常數所組成。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- **備註**  
+### <a name="remarks"></a>備註
   
  C + + /CX 和 C + + 支援**公用列舉類別**並**私用列舉類別**類似於標準 c + +**列舉類別**但加上可存取性規範。 底下 **/clr**，C + + 11**列舉類別**允許型別，但會產生警告 C4472，其要確保您真正想要 ISO 列舉類型，而不是 C + + /CX 和 C + + /cli 的 CLI 型別。 如需有關 ISO 標準 c + + **enum**關鍵字，請參閱[列舉](../cpp/enumerations-cpp.md)。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- **語法**  
+### <a name="syntax"></a>語法  
   
-```  
+```cpp  
       access  
       enum class  
       enumeration-identifier  
@@ -39,8 +39,7 @@ ms.locfileid: "39570544"
 accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [var];  
 ```  
   
- **參數**  
-  
+### <a name="parameters"></a>參數  
  *access*  
  列舉型別，可協助工具**公開金鑰**或是**私人**。  
   
@@ -60,7 +59,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *var*  
  (選用) 列舉類型的變數名稱。  
   
- **備註**  
+### <a name="remarks"></a>備註 
   
  如需詳細資訊與範例，請參閱 [列舉](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。  
   
@@ -73,19 +72,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 -   如果 *基礎類型* 是 `char16`，而列舉值的範圍是從 0xD800 到 0xDFFF，則可以表示這個值。 不過，此值在邏輯上不正確，因為它代表 Unicode surrogate 字組的一半，不應該單獨出現。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **語法**  
+### <a name="syntax"></a>語法
   
-```  
+```cpp  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
 accessenum structname [:type] { enumerator-list } var;  
 ```  
   
- **參數**  
+ ### <a name="parameters"></a>參數  
   
  *access*  
  列舉的存取範圍。 可以是**公開金鑰**或是**私人**。  
@@ -102,7 +101,7 @@ accessenum structname [:type] { enumerator-list } var;
  *var* （選擇性）  
  列舉類型的變數名稱。  
   
- **備註**  
+### <a name="remarks"></a>備註 
   
  **列舉類別** 和 **列舉結構** 是相同的宣告。  
   
@@ -163,13 +162,13 @@ int main() {
   
  會以 MSIL 格式發出下列項目當做函式簽章：  
   
-```  
+```cpp  
 void f(int32);  
 ```  
   
  不過，在目前的編譯器版本中，標準列舉是當做附有 [NativeEnumAttribute] 的 Managed 列舉發出，且以 MSIL 格式發出下列項目當做函式簽章：  
   
-```  
+```cpp  
 void f(E)  
 ```  
   
@@ -180,12 +179,9 @@ void f(E)
 -   [列舉的基礎類型](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
-  
- 遞減  
   
 ```cpp  
 // mcppv2_enum_2.cpp  
@@ -215,8 +211,6 @@ int main()
    System::Console::WriteLine(o);  
 }   
 ```  
-  
- **輸出**  
   
 ```Output  
 no automatic conversion to int: b  

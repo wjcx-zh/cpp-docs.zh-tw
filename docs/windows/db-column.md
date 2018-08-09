@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e5aa4c7279fcee6ffd7ca17bcf788bbef7737a9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570697"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647514"
 ---
 # <a name="dbcolumn"></a>db_column
 將指定的資料行繫結至資料列中的變數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ db_column(   
    ordinal,   
    dbtype,   
@@ -44,7 +44,7 @@ ms.locfileid: "39570697"
  *序數*  
  序數資料行編號 (`DBCOLUMNINFO`序數) 或要將資料繫結至資料列集中的欄位相對應的資料行名稱 （ANSI 或 Unicode 字串）。 如果您使用數字時，您可以略過連續的序數 (例如： 1、 2、 3、 5)。 如果您使用的 OLE DB 提供者支援它的名稱包含空格。 例如，您可以使用下列格式之一：  
   
-```  
+```cpp  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  

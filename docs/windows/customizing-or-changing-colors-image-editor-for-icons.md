@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571281"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645392"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自訂或變更色彩 (圖示影像編輯器)
-影像編輯器[色彩調色盤](../windows/colors-window-image-editor-for-icons.md)一開始會顯示 16 個標準色彩。 除了顯示的色彩以外，您還可以自行建立自訂色彩。 您可以接著[儲存及載入自訂的調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
+**映像**編者[色彩調色盤](../windows/colors-window-image-editor-for-icons.md)一開始會顯示 16 個標準色彩。 除了顯示的色彩以外，您還可以自行建立自訂色彩。 您可以接著[儲存及載入自訂的調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>變更調色盤上的色彩  
   
@@ -51,7 +51,6 @@ ms.locfileid: "39571281"
 5.  按一下 **確定**若要新增新的色彩。  
   
 ## <a name="requirements"></a>需求  
-  
  無  
   
 ## <a name="see-also"></a>另請參閱  

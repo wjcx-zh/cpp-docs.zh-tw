@@ -1,5 +1,5 @@
 ---
-title: TerminateMap 函式 |Microsoft 文件
+title: TerminateMap 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890345"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645934"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,18 +36,18 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>參數  
- `module`  
+### <a name="parameters"></a>參數  
+ *模組*  
  A[模組](../windows/module-class.md)。  
   
- `serverName`  
- 參數所指定的模組中的 class factory 的子集名稱`module`。  
+ *伺服器名稱*  
+ 名稱參數所指定的模組中的 class factory 的子集*模組*。  
   
- `forceTerminate`  
- `true` 終止類別處理站，不論它們是作用中;`false`不終止 class factory，任何 factory 是否在作用中。  
+ *forceTerminate*  
+ **true**終止類別處理站，不論它們是作用中;**false**未終止的 class factory，如果任何 factory 已啟用。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果已經結束所有的 class factory。否則， `false`。  
+ **真**終止，否則所有的 class factory 一樣**false**。  
   
 ## <a name="remarks"></a>備註  
  關閉指定的模組中的 class factory。  

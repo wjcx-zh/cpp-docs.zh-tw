@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570668"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643185"
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 使用下列形式宣告的泛型類別：  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>備註  
  在上述語法中，使用下列詞彙：  
   
- `attributes` (選擇性)  
+ *屬性*（選擇性）  
  其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
   
  *類別索引鍵*  
@@ -57,7 +57,7 @@ class-body
  *條件約束子句*  
  （不以逗號分隔） 的清單**其中**子句指定的型別參數條件約束。 採用下列格式：  
   
- `where`  *型別參數識別項*`:`*條件約束清單*   `...`  
+ `where`  *型別參數識別項*`:`*條件約束清單*  `...`  
   
  *條件約束清單*  
  *類別或介面*[`,` *...*]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- 類型為 Outer\<int >:: 內部不是類型為 Outer 相同\<雙 >:: 內部。  
+ 型別`Outer<int>::Inner`不是型別相同`Outer<double>::Inner`。  
   
  如同在泛型類別中的泛型方法，可以定義其他的型別參數的巢狀類型。 如果您在內部和外部類別中使用相同的類型參數名稱，內部型別參數會隱藏外部型別參數。  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  因為沒有任何方法可以參考外部型別參數，則編譯器會產生警告，以在此情況下。  
   
- 巢狀建構的泛型類型命名，外部類型的型別參數不會納入型別參數清單，做為內部的類型，即使內部類型隱含地參數化，由外部型別的型別參數。 在上述案例中，建構類型的名稱會是外部\<int >:: 內部\<字串 >。  
+ 巢狀建構的泛型類型命名，外部類型的型別參數不會納入型別參數清單，做為內部的類型，即使內部類型隱含地參數化，由外部型別的型別參數。 在上述案例中，建構類型的名稱會是`Outer<int>::Inner<string>`。  
   
  下列範例示範如何建置，並讀取在泛型類別中使用巢狀的類型的連結的清單。  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   屬性、 事件、 索引子和運算子可以使用封入泛型類別的型別參數做為傳回值、 參數或區域變數，例如當`ItemType`是類別的型別參數：  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

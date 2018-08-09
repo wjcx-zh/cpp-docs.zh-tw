@@ -1,5 +1,5 @@
 ---
-title: 刪除未指派的符號 |Microsoft 文件
+title: 刪除未指派的符號 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882936"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648193"
 ---
 # <a name="deleting-unassigned-symbols"></a>刪除未指定的符號
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>刪除未指派 (未使用) 的符號  
   
-1.  在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，選取您想要刪除，然後按一下符號**刪除**。  
+1.  在 [資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，選取您想要刪除，然後按一下符號**刪除**。  
   
     > [!NOTE]
     >  在刪除資源檔中未使用的符號之前，請確定它未在程式的其他地方使用，或未由編譯時期包含的資源檔使用。  
   
-
-  
- **需求**  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

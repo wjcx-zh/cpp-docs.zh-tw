@@ -1,5 +1,5 @@
 ---
-title: 對話方塊編輯器中自訂控制項 |Microsoft 文件
+title: 在對話方塊編輯器中自訂控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,36 +21,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2bca249958e4d25ab5377540525da34802ac04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b197baa61d741452219529e44be0e9ba1a154ce
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880240"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651047"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>在對話方塊編輯器中自訂控制項
-對話方塊編輯器可讓您使用現有的 「 自訂 」 或 「 使用者 」 控制項在對話方塊範本中。  
+對話方塊編輯器可讓您使用現有 「 自訂 」 或對話方塊範本中的 「 使用者 」 控制項。  
   
 > [!NOTE]
->  自訂控制項，這一點而言為不 ActiveX 控制項與混淆。 ActiveX 控制項已有時也稱為 OLE 自訂控制項。 此外，請勿混淆這些控制項與主控描繪控制項視窗中。  
+>  在這種情況下的自訂控制項是不會混淆的 ActiveX 控制項。 ActiveX 控制項已有時也稱為 OLE 自訂控制項。 此外，請勿混淆主控描繪控制項在 Windows 中使用這些控制項。  
   
- 這項功能被為了讓您使用所提供的 Windows 之外的控制項。 在執行階段，其控制項是相關聯的視窗類別 （相同做為 c + + 類別）。 較常見的方式來完成相同的工作是安裝在對話方塊中的任何控制項，例如，靜態控制項。 然後會在執行階段，在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)函式，移除該控制項，並取代您自己的自訂控制項。  
+ 這項功能被為了讓您使用所提供的 Windows 以外的控制項。 在執行階段，則控制項為相關聯的視窗類別 （不同於 c + + 類別）。 安裝在您的對話方塊中的任何控制項，例如靜態控制項，是較常見的方式，來完成相同的工作。 然後會在執行階段，在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)函式，移除該控制項，並取代您自己的自訂控制項。  
   
- 這是舊的技巧。 目前建議您在大部分情況下撰寫 ActiveX 控制項或 Windows 通用控制項子類別。  
+ 這是舊的技巧。 目前建議您在大部分情況下撰寫 ActiveX 控制項或子類別化 Windows 通用控制項。  
   
- 對於這些自訂控制項，您僅限於：  
+ 這些自訂的控制項，您僅限於：  
   
 -   在對話方塊中設定的位置。  
   
 -   輸入標題。  
   
--   用來識別控制項的視窗類別 （應用程式程式碼必須登錄此控制項使用這個名稱） 的名稱。  
+-   用來識別控制項的 Windows 類別 （應用程式程式碼必須註冊該控制項使用這個名稱） 的名稱。  
   
 -   輸入 32 位元的十六進位值，設定控制項的樣式。  
   
 -   設定延伸的樣式。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
@@ -58,4 +58,3 @@ ms.locfileid: "33880240"
 ## <a name="see-also"></a>另請參閱  
  [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [控制項](../mfc/controls-mfc.md)
-

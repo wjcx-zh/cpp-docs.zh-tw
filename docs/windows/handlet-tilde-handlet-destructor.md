@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4778b5abb363f7d769fe8872b1d180c2a2cd701
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 9f0df83ff8848f27839254bd9b1645866d3904bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568919"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643458"
 ---
 # <a name="handlethandlet-destructor"></a>HandleT::~HandleT 解構函式
 取消初始化的執行個體**HandleT**類別。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 ~HandleT();  
 ```  
   

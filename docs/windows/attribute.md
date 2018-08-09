@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461805"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646315"
 ---
 # <a name="attribute"></a>屬性
 可讓您建立自訂屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ ms.locfileid: "39461805"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *AllowOn*  
  指定可以套用自訂屬性的語言項目。 預設值是`System::AttributeTargets::All`(請參閱 < [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx))。  
   
@@ -48,16 +48,16 @@ ms.locfileid: "39461805"
  指定是否將自訂屬性可以套用重複建構。 預設值為 FALSE。  
   
  *繼承*  
- 指出屬性是否會繼承由子類別。 編譯器不提供特殊支援這項功能;它是屬性取用者 （例如反映） 的工作採用這項資訊。 如果*繼承*為 TRUE，繼承屬性。 如果*AllowMultiple*為 TRUE 時，屬性將會累積在衍生的成員; 如果*AllowMultiple*為 FALSE 時，此屬性會覆寫 （或取代） 在繼承。 如果*繼承*為 FALSE 時，將不會繼承屬性。 預設值為 TRUE。  
+ 指出屬性是否會繼承由子類別。 編譯器不提供特殊支援這項功能;它是屬性取用者的工作 (`Reflection`，例如) 遵從這項資訊。 如果*繼承*為 TRUE，繼承屬性。 如果*AllowMultiple*為 TRUE 時，屬性將會累積在衍生的成員; 如果*AllowMultiple*為 FALSE 時，此屬性會覆寫 （或取代） 在繼承。 如果*繼承*為 FALSE 時，將不會繼承屬性。 預設值為 TRUE。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  `attribute`屬性現在已被取代。  使用 common language runtime 屬性 System.Attribute 直接建立使用者定義的屬性。  如需詳細資訊，請參閱 < [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)。  
+>  **屬性**屬性現在已被取代。  使用通用語言執行階段屬性`System.Attribute`來直接以建立使用者定義的屬性。 如需詳細資訊，請參閱 < [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)。  
   
- 您定義[自訂屬性](../windows/custom-attributes-cpp.md)放置`attribute`上受管理的類別或結構定義的屬性。 類別的名稱是自訂的屬性。 例如:   
+ 您定義[自訂屬性](../windows/custom-attributes-cpp.md)加上**屬性**上受管理的類別或結構定義的屬性。 類別的名稱是自訂的屬性。 例如:   
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  請參閱[User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)如屬性目標的討論。  
   
- `attribute`屬性具有*AllowMultiple*指定自訂屬性是否為單次使用的參數或 multiuse （可出現一次以上相同的實體）。  
+ **屬性**屬性具有*AllowMultiple*指定自訂屬性是否為單次使用的參數或 multiuse （可出現一次以上相同的實體）。  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- 自訂屬性的類別是直接或間接衍生自<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>，它能識別屬性定義，快速又簡單的中繼資料中。 `attribute`屬性隱含繼承自 system:: attribute，因此不需要明確衍生：  
+ 自訂屬性的類別是直接或間接衍生自<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>，它能識別屬性定義，快速又簡單的中繼資料中。 **屬性**屬性會隱含繼承自`System::Attribute`，因此不需要明確衍生：  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  相當於  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` 是的別名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 這是屬性的命名規則的例外狀況)。  
+ **屬性**是的別名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 這是屬性的命名規則的例外狀況)。  
   
 ## <a name="requirements"></a>需求  
   

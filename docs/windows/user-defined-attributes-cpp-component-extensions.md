@@ -1,5 +1,5 @@
 ---
-title: 使用者定義屬性 （c + + 元件擴充功能） |Microsoft 文件
+title: 使用者定義的屬性 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e09d3c285c64f049cc8e1bb8aea1c5debe88932
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891762"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644124"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>使用者定義屬性 (C++ 元件擴充功能)
 自訂屬性可讓您擴充的介面、 類別或結構、 方法、 參數或列舉型別中繼資料。  
@@ -35,17 +35,17 @@ ms.locfileid: "33891762"
 ### <a name="remarks"></a>備註  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- 自訂屬性可以讓您擴充的受管理的項目中繼資料。 如需詳細資訊，請參閱[屬性](/dotnet/standard/attributes/index)。  
+ 自訂屬性，可讓您擴充的受管理的項目中繼資料。 如需詳細資訊，請參閱[屬性](/dotnet/standard/attributes/index)。  
   
 ### <a name="remarks"></a>備註  
- 此主題中呈現的語法與資訊用來取代所顯示的資訊[屬性](../windows/attribute.md)。  
+ 本主題所述的語法與資訊要取代所顯示的資訊[屬性](../windows/attribute.md)。  
   
- 您可以定義自訂屬性定義型別，並進行<xref:System.Attribute>基底類別的類型和選擇性地套用<xref:System.AttributeUsageAttribute>屬性。  
+ 您可以定義自訂屬性型別定義，並讓<xref:System.Attribute>基底類別類型，並選擇性地套用<xref:System.AttributeUsageAttribute>屬性。  
   
- 比方說，在 Microsoft 交易伺服器 (MTS) 1.0，同步處理的交易而言，行為負載平衡，並透過自訂插入使用 ODL 自訂屬性的型別程式庫的 Guid 指定等等。 因此，MTS 伺服器的用戶端無法讀取類型程式庫來判斷其特性。 在.NET Framework 中，類型程式庫的類比是中繼資料，而 ODL 自訂屬性的類比是自訂屬性。 此外，讀取類型程式庫是類似於使用反映的類型。  
+ 比方說，在 Microsoft Transaction Server (MTS) 1.0 時，同步處理的交易而言，行為的負載平衡，並透過自訂插入使用 ODL 自訂屬性的型別程式庫的 Guid 指定等等。 因此，MTS 伺服器的用戶端無法讀取類型程式庫來判斷其特性。 在.NET Framework 中，型別程式庫的類比中繼資料，而類比 ODL 自訂屬性的自訂屬性。 此外，讀取類型程式庫是類似於使用反映的類型。  
   
  如需詳細資訊，請參閱：  
   
@@ -53,15 +53,14 @@ ms.locfileid: "33891762"
   
 -   [屬性參數類型](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Visual c + + 中的簽署組件上的資訊，請參閱[強式名稱組件 （組件簽署） (C + + /CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
+ 如需 Visual c + + 中簽署組件資訊，請參閱[強式名稱組件 （組件簽署） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
- 下列範例會示範如何定義自訂屬性。  
+ 下列範例示範如何定義自訂屬性。  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -78,9 +77,7 @@ ref struct Attr : public Attribute {
 ref class MyClass {};  
 ```  
   
- **範例**  
-  
- 下列範例將說明一些重要功能的自訂屬性。 例如，此範例示範常見的自訂屬性的用法： 具現化完整用戶端描述自己的伺服器。  
+ 下列範例會說明一些重要功能的自訂屬性。 比方說，此範例中顯示的自訂屬性的常見用法： 具現化的完整用戶端描述自己的伺服器。  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -171,11 +168,9 @@ Service Priority = 1
 Service Access = Read  
 ```  
   
- **範例**  
+ `Object^`類型會取代 variant 資料類型。 下列範例會定義自訂屬性，以接受陣列`Object^`做為參數。  
   
- 物件 ^ 類型會取代 variant 資料類型。 下列範例會定義的自訂屬性，會採用物件的陣列 ^ 做為參數。  
-  
- 屬性引數必須是編譯時間常數。在大部分情況下，它們應該是常數常值。  
+ 屬性引數必須是編譯時期常數;在大部分情況下，它們應該是常數常值。  
   
  請參閱[typeid](../windows/typeid-cpp-component-extensions.md)如需有關如何從自訂屬性區塊中傳回值為 system:: type 資訊。  
   
@@ -195,9 +190,7 @@ public:
 public ref class SomeClass {};  
 ```  
   
- **範例**  
-  
- 執行階段需要之公開部分的自訂屬性類別必須是可序列化。  撰寫自訂屬性時，您的自訂屬性的具名引數會受限於編譯時間常數。  （將其視為附加至您的類別配置的中繼資料中的位元的序列。）  
+ 執行階段需要自訂屬性類別的公開部分必須是可序列化。  撰寫自訂的屬性時，您的自訂屬性的具名引數會受限於使用編譯時間常數。  （將它視為一串附加至您的類別配置，中繼資料中的位元。）  
   
 ```cpp  
 // extending_metadata_f.cpp  

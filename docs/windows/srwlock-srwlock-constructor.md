@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Srwlock 建構函式 |Microsoft 文件'
+title: 'Srwlock:: Srwlock 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51bbd331c240079ccbb241aa970e99dd5c7d79ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 941a0b31224b67c9305c41e036d93744b98b915e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892487"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642607"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock 建構函式
-初始化 SRWLock 類別的新執行個體。  
+初始化的新執行個體**SRWLock**類別。  
   
 ## <a name="syntax"></a>語法  
   

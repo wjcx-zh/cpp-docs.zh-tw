@@ -1,5 +1,5 @@
 ---
-title: 'Handletraits:: Getinvalidvalue 方法 |Microsoft 文件'
+title: 'Handletraits:: Getinvalidvalue 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 190c327a404d19da86fdb86c32411a8ffeb06e7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4690daabd84b8127913af0a96d5b929ee986e77
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651229"
 ---
 # <a name="handletraitsgetinvalidvalue-method"></a>HANDLETraits::GetInvalidValue 方法
 表示無效的控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 inline static HANDLE GetInvalidValue();  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 一律傳回 INVALID_HANDLE_VALUE。 （INVALID_HANDLE_VALUE 由 Windows 所定義）。  
+ 一律會傳回 INVALID_HANDLE_VALUE。 （INVALID_HANDLE_VALUE 是由 Windows 定義）。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

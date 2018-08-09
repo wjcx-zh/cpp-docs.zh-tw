@@ -1,5 +1,5 @@
 ---
-title: 泛型 （c + + 元件擴充功能） |Microsoft 文件
+title: 泛型 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b22a12dca79bc3cc5c505120f64b318e454e526e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878108"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643445"
 ---
 # <a name="generics--c-component-extensions"></a>泛型 (C++ 元件擴充功能)
 泛型是參數化的類型和方法。 在這一節中，您將了解 Windows 執行階段和通用語言執行平台 (CLR) 都支援的泛型功能，以及只有通用語言執行平台 (CLR) 支援的泛型功能。 此外，您還會了解如何在 Visual C++ 中撰寫自己的泛型方法和類型，以及如何在 Visual C++ 中使用以 .NET Framework 語言撰寫的泛型類型。 最後，本節將提供泛型和 C++ 範本的比較。  
   
 ## <a name="in-this-section"></a>本節內容  
- **Windows 執行階段和通用語言執行平台支援**  
+### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Windows 執行階段和通用語言執行平台 (CLR) 所支援 
   
  [Visual C++ 中的泛型概觀](../windows/overview-of-generics-in-visual-cpp.md)  
  有關泛型的資訊包括：語言功能的動機、描述泛型的詞彙定義，以及使用參考類型和實值類型做為泛型之型別參數的相關資訊。  
@@ -49,7 +49,7 @@ ms.locfileid: "33878108"
  [泛型和樣板 (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
  泛型和範本的比較、何時使用兩者，以及如何將兩者結合提供實用的用途。  
   
- **Common Language Runtime 支援**  
+### <a name="supported-by-the-common-language-runtime"></a>通用語言執行平台 (CLR) 所支援
   
  [泛型函式 (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
  定義及使用泛型函式和方法的相關資訊。  
@@ -59,7 +59,7 @@ ms.locfileid: "33878108"
   
 ## <a name="related-sections"></a>相關章節  
  [如何：使用 for each 反覆查看泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
- 使用[針對每個，在](../dotnet/for-each-in.md)泛型集合上的關鍵字。  
+ 使用[針對每個，在](../dotnet/for-each-in.md)泛用集合上的關鍵字。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

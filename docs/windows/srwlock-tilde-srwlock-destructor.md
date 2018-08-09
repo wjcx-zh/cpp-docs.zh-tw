@@ -1,5 +1,5 @@
 ---
-title: 'SRWLock:: ~ SRWLock 解構函式 |Microsoft 文件'
+title: 'SRWLock:: ~ SRWLock 解構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ed3bd38024d279d8f478a6ff4525122e66c47f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1a1f8a2b9e7a8f63acdb9ec156282f09df75a01
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889075"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647608"
 ---
 # <a name="srwlocksrwlock-destructor"></a>SRWLock::~SRWLock 解構函式
-取消初始化 SRWLock 類別的執行個體。  
+取消初始化的執行個體**SRWLock**類別。  
   
 ## <a name="syntax"></a>語法  
   

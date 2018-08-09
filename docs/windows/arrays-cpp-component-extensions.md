@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461685"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645564"
 ---
 # <a name="arrays-c-component-extensions"></a>陣列 (C++ 元件擴充功能)
 `Platform::Array<T>`型別在 C + + /CX 中，或有**陣列**關鍵字在 C + + /cli CLI 中，宣告指定型別和初始值的陣列。  
@@ -52,7 +52,7 @@ ms.locfileid: "39461685"
   
  第一個語法的範例會使用**ref 新**彙總的關鍵字，可配置的陣列。 第二個範例會宣告本機陣列。  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "39461685"
  您可以在編譯時期偵測類型是否具有參考計數陣列`__is_ref_array(type)`。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ### <a name="examples"></a>範例  
  下列範例會建立一維陣列，具有 100 個元素。  
@@ -106,7 +106,7 @@ int main() {
   
  第一個語法的範例會使用**gcnew**關鍵字來配置陣列。 第二個範例會宣告本機陣列。  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>備註  
   
- `array` 處於[Platform、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空間。  
+ **陣列**處於[Platform、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空間。  
   
  如同標準的 c + + 陣列的索引是以零起始，而使用方括號 ([]) 註標的陣列是。 不同於標準 c + + 中，而不是一組方括弧 ([]) 運算子，針對每個維度的每個維度的索引的清單中指定多維陣列的索引。 例如，*識別碼*[*index1*， *index2*] 而不是*識別碼*[*index1*] [ *index2*]。  
   
@@ -152,7 +152,7 @@ int main() {
  在編譯時期，您可以偵測型別是否具有的 common language runtime (CLR) 陣列`__is_ref_array(type)`。 如需詳細資訊，請參閱 <<c0> [ 類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
  下列範例會建立一維陣列，具有 100 個元素和一個三維陣列第一個維度中的 3 個元素，5 個元素中，第二個和第三個中的 6 個項目。  

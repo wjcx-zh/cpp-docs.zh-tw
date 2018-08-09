@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Oncancel 方法 |Microsoft 文件'
+title: 'Asyncbase:: Oncancel 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7c5fabc84d6abb44a904c951c39eaf54a5c16b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b648718c715a43befbc5ead828c810dbfa92d120
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865819"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646870"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel 方法
 當在衍生類別中覆寫時，取消非同步作業。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 virtual void OnCancel(  
    void  
 ) = 0;  

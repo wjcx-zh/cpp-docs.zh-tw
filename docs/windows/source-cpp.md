@@ -1,5 +1,5 @@
 ---
-title: 來源 （c + +） |Microsoft 文件
+title: 來源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889858"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651518"
 ---
 # <a name="source-c"></a>source (C++)
-在類別上指定的連接點的 COM 物件的來源介面。 在屬性或方法中，會指出成員傳回的物件或為資料來源的事件的 VARIANT。  
+在類別上，指定連接點的 COM 物件的來源介面。 在屬性或方法中，表示成員傳回的物件或變數，是事件來源。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      [ source(  
+[ source(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
- `interfaces`  
- 您指定當您將套用之來源的一或多個介面的類別屬性。 未在來源套用至屬性或方法時，會使用此參數。  
+### <a name="parameters"></a>參數  
+ *interfaces*  
+ 一或多個介面，指定當您將套用的來源屬性的類別。 未在來源套用至屬性或方法時，會使用此參數。  
   
 ## <a name="remarks"></a>備註  
  **來源**c + + 屬性具有相同的功能[來源](http://msdn.microsoft.com/library/windows/desktop/aa367166)MIDL 屬性。  
   
- 您可以使用[預設](../windows/default-cpp.md)屬性來指定物件的預設來源介面。  
+ 您可以使用[預設](../windows/default-cpp.md)屬性來指定預設來源介面的物件。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cpp_attr_ref_source.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -85,9 +84,9 @@ class NN : public b
   
 |||  
 |-|-|  
-|**適用於**|**類別**， `struct`， `interface`|  
+|**適用於**|**類別**， **struct**，**介面**|  
 |**可重複**|否|  
-|**必要屬性**|**coclass** （當套用至類別或結構）|  
+|**必要屬性**|`coclass` （當套用至類別或結構）|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

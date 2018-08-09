@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90a470aa5bb1b24ab2fe549f098a83c29e5d0828
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 93cf3eba3301b0ae000b9f461851b46be592a119
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464145"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650279"
 ---
 # <a name="adding-or-deleting-a-string"></a>加入或刪除字串
-您可以快速地插入至字串資料表使用字串編輯器的新項目。 新的字串會放在資料表結尾處，並指定下一個可用的識別項。 接著，您就可以編輯中的識別碼、 值或標題的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)視。  
+您可以很快地插入至字串資料表使用的新項目**字串**編輯器。 新的字串會放在資料表結尾處，並指定下一個可用的識別項。 然後您可以編輯**識別碼**，**值**，或**標題**中的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)視。  
   
- 字串編輯器可確保您不使用已在使用的識別碼。 如果您已經在使用選取的識別碼，字串編輯器就會通知您，然後指派 泛用的唯一識別碼，例如 IDS_STRING58113。  
+ **字串**編輯器可確保您不使用已在使用的識別碼。 如果您選取的識別碼已經在使用中，**字串**編輯器將會通知您，並將指定的泛用的唯一識別碼，例如`IDS_STRING58113`。  
   
 ### <a name="to-add-a-string-table-entry"></a>若要加入的字串資料表項目  
   
@@ -64,10 +64,9 @@ ms.locfileid: "39464145"
   
 -   按下**刪除**索引鍵。  
   
- 如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)在 *.NET Framework 開發人員指南。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)並[逐步解說： 使用資源以利用 ASP.NET 進行當地語系化](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)並[逐步解說： 使用資源以利用 ASP.NET 進行當地語系化](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
- **需求**  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  

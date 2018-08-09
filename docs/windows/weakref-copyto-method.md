@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: Copyto 方法 |Microsoft 文件'
+title: 'Weakref:: Copyto 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890631"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652743"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo 方法
 指派介面指標 (如有提供) 給指定的指標變數。  
@@ -45,23 +45,23 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `U`  
- IInspectable 介面的指標。 若 `U` 不是衍生自 IInspectable，會發出錯誤。  
+### <a name="parameters"></a>參數  
+ *U*  
+ 指標`IInspectable`介面。 如果，就會發出錯誤*U*不衍生自`IInspectable`。  
   
- `riid`  
- 介面識別碼。 若 `riid` 不是衍生自 **IWeakReference**，會發出錯誤。  
+ *riid*  
+ 介面識別碼。 如果，就會發出錯誤*riid*不衍生自`IWeakReference`。  
   
- `ptr`  
- IInspectable 或 IWeakReference 雙向間接指標。  
+ *ptr*  
+ 雙向間接指標`IInspectable`或`IWeakReference`。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 如需詳細資訊，請參閱＜備註＞。  
+ 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 如需詳細資訊，請參閱**備註**。  
   
 ## <a name="remarks"></a>備註  
- 傳回值 S_OK 只表示此作業已成功，而不會指出是否已將弱式參考解析為強式參考。 若傳回 S_OK，請測試參數 `p` 為強式參考，亦即參數 `p` 不等於 `nullptr`。  
+ 傳回值 S_OK 只表示此作業已成功，而不會指出是否已將弱式參考解析為強式參考。 如果傳回 S_OK，測試參數*p*為強式參考，也就是參數*p*不等於**nullptr**。  
   
- 自 Windows 10 SDK 起，若無法取得弱式參考，此方法便不會將 WeakRef 執行個體設為 `nullptr` ，因此您應避免會檢查 WeakRef 是否為 `nullptr`的錯誤檢查程式碼。 相反地，請檢查`ptr`如`nullptr`。  
+ 從 Windows 10 SDK 開始，這個方法不會設定**WeakRef**執行個體**nullptr**如果無法取得弱式參考，因此您應該避免檢查程式碼，檢查 weakref 有無錯誤**nullptr**。 相反地，檢查*ptr* for **nullptr**。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 定義對話方塊控制項的成員變數 |Microsoft 文件
+title: 定義對話方塊控制項的成員變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ba8fc95290ecb90557203be2b6ab4cce18b91e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1f5cee3bf827effc7c99dd66d7dc2898c9ad55f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873832"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645460"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>定義對話方塊控制項的成員變數
 若要定義任何對話方塊控制項 (按鈕除外) 的成員變數，您可以使用下列方法。  
@@ -33,34 +33,30 @@ ms.locfileid: "33873832"
   
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>定義對話方塊控制項的成員變數 (非按鈕)  
   
-1.  在[對話方塊編輯器](../windows/dialog-editor.md)，選取控制項。  
+1.  在 [對話方塊編輯器](../windows/dialog-editor.md)，在選取的控制項。  
   
-2.  同時按**CTRL**機碼中，按兩下對話方塊控制項。  
+2.  同時按下**Ctrl**機碼，請按兩下對話方塊控制項。  
   
      [加入成員變數精靈](../ide/add-member-variable-wizard.md)隨即出現。  
   
-3.  輸入中的適當資訊**加入成員變數**精靈。 如需詳細資訊，請參閱[對話方塊資料交換](../mfc/dialog-data-exchange.md)。  
+3.  輸入中的相關資訊**加入成員變數**精靈。 如需詳細資訊，請參閱 <<c0> [ 對話資料交換](../mfc/dialog-data-exchange.md)。  
   
-4.  按一下**確定**返回對話方塊編輯器。  
+4.  按一下  **確定**以返回**對話方塊**編輯器。  
   
     > [!TIP]
     >  若要從任何對話方塊控制項跳至其現有的處理常式，請按兩下控制項。  
   
-
+ 您也可以使用**成員變數**索引標籤中**MFC 類別精靈**新增成員變數，指定的類別，並檢視這些已定義。  
   
- 您也可以使用**成員變數**索引標籤中**MFC 類別精靈**，新增新成員變數指定的類別，並檢視這些已定義。  
-  
- 需求  
-  
+## <a name="requirements"></a>需求  
  MFC  
   
 ## <a name="see-also"></a>另請參閱  
  [將訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)   
- [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)   
- [加入類別](../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
+ [新增類別](../ide/adding-a-class-visual-cpp.md)   
+ [成員函式](../ide/adding-a-member-function-visual-cpp.md)   
+ [成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
  [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)
-

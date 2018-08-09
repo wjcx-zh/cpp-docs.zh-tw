@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461529"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646701"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 結構
 指定可以套用至一組介面 ID 的驗證和初始化函式。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *I0*  
  （必要）介面識別碼 0。  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |名稱|描述|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指出指定的介面識別碼是否可轉換成每個 ChainInterface 範本參數所定義的特製化。|  
-|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|將轉換的型別所定義的介面指標*I0* IUnknown 指標的範本參數。|  
+|[ChainInterfaces::CanCastTo 方法](../windows/chaininterfaces-cancastto-method.md)|指出指定的介面識別碼是否可轉換成每個所定義的特製化**ChainInterface**範本參數。|  
+|[ChainInterfaces::CastToUnknown 方法](../windows/chaininterfaces-casttounknown-method.md)|將轉換的型別所定義的介面指標*I0*樣板參數的指標`IUnknown`。|  
 |[ChainInterfaces::FillArrayWithIid 方法](../windows/chaininterfaces-fillarraywithiid-method.md)|介面 ID 所定義的存放區*I0*範本參數，以指定陣列中的介面識別碼指定的位置插入。|  
 |[ChainInterfaces::Verify 方法](../windows/chaininterfaces-verify-method.md)|確認每個介面定義的範本參數*I0*透過*I9*繼承`IUnknown`及/或`IInspectable`，而且*I0*繼承自*I1*透過*I9*。|  
   

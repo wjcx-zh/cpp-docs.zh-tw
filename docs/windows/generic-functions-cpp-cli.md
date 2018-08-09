@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568874"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645122"
 ---
 # <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
 泛型函式會宣告具有型別參數的函式。 呼叫時，會使用實際的類型，而不是類型參數。  
   
 ## <a name="all-platforms"></a>所有平台  
- **備註**  
+### <a name="remarks"></a>備註
   
  這項功能不適用於所有平台。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- **備註**  
+### <a name="remarks"></a>備註
   
  在 Windows 執行階段不支援此功能。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "39568874"
   
 ### <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
  下列程式碼範例示範泛型函式。  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **範例**  
-  
  泛型函式可以根據簽章或套組 arity、 函式的型別參數數目來多載。 此外，泛型函式可以多載具有相同名稱的非泛型函式，只要函式中某些型別參數的差異。 例如，下列函式可以多載：  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **範例**  
   
  下列範例會使用泛型函式，若要尋找陣列中的第一個項目。 它會宣告`MyClass`，該項則繼承自基底類別`MyBaseClass`。 `MyClass` 包含泛型的函式中， `MyFunction`，它會呼叫另一個的泛型函式， `MyBaseClassFunction`，基底類別內。 在  `main`，泛型的函式， `MyFunction`，使用不同的型別引數來呼叫。  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 My function returned an int: 2003  

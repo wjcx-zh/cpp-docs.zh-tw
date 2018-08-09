@@ -17,30 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af3ec58afd69f3fde6e2eb67969f1dad8848c5de
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4bddc5a453e1c3aac43fe58d105ccef863c67808
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466718"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652265"
 ---
 # <a name="activationfactorygettrustlevel-method"></a>ActivationFactory::GetTrustLevel 方法
 取得物件的信任層級，目前**ActivationFactory**具現化。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 STDMETHOD(  
    GetTrustLevel  
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *trustLvl*  
  這項作業完成時，執行階段的信任層級類別**ActivationFactory**具現化。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功則為 S_OK否則，會發出判斷提示錯誤以及*trustLvl*設為完全信任。  
+ 如果成功則為 S_OK否則，會發出判斷提示錯誤以及*trustLvl*設定為`FullTrust`。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

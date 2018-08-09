@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 94e33eea3dc367634b3cae9a025b0189598bbdd1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570076"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648947"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ helpstringdll(  
    "string"  
 ) ]  

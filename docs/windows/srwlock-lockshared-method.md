@@ -1,5 +1,5 @@
 ---
-title: 'Srwlock:: Lockshared 方法 |Microsoft 文件'
+title: 'Srwlock:: Lockshared 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895745"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652122"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared 方法
-取得 SRWLock 物件以共用模式。  
+取得**SRWLock**以共用模式的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,12 +37,12 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `lock`  
- SRWLock 物件指標。  
+### <a name="parameters"></a>參數  
+ *lock*  
+ 指標**SRWLock**物件。  
   
 ## <a name="return-value"></a>傳回值  
- SRWLock 物件以共用模式。  
+ **SRWLock**以共用模式的物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Srwlocksharedtraits:: Getinvalidvalue 方法 |Microsoft 文件'
+title: 'Srwlocksharedtraits:: Getinvalidvalue 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8738d537aaa7cf4c257b95d1093e28441e828c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ab88d2853f62932177858adb6bea3c991059f6f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890772"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650227"
 ---
 # <a name="srwlocksharedtraitsgetinvalidvalue-method"></a>SRWLockSharedTraits::GetInvalidValue 方法
-擷取 SRWLockSharedTraits 物件永遠是無效的。  
+擷取**SRWLockSharedTraits**一律是無效的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ inline static Type GetInvalidValue();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- SRWLockSharedTraits 物件的控制代碼。  
+ 控制代碼**SRWLockSharedTraits**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

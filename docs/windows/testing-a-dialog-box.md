@@ -1,5 +1,5 @@
 ---
-title: 測試對話方塊 |Microsoft 文件
+title: 測試對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57bb9e827caae0e328971077d902673f2428c80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889535"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652066"
 ---
 # <a name="testing-a-dialog-box"></a>測試對話方塊
 當您設計對話方塊時，您可以模擬和測試其執行階段行為，而不用重新編譯程式。 在這個模式下，您可以：  
@@ -38,22 +38,20 @@ ms.locfileid: "33889535"
     > [!NOTE]
     >  使用精靈連接至對話方塊程式碼，不包含在此模擬中。  
   
- 當您測試對話方塊時，它通常會在相對於主程式視窗的位置顯示。 如果您已經將對話方塊的 Absolute Align 屬性設為 True，對話方塊會在相對於螢幕左上角的位置顯示。  
+ 當您測試對話方塊時，它通常會在相對於主程式視窗的位置顯示。 如果您已經設定的對話方塊**Absolute Align**屬性設 **，則為 True**，對話方塊會顯示在相對於螢幕左上角的位置。  
   
 ### <a name="to-test-a-dialog-box"></a>測試對話方塊  
   
 1.  當對話方塊編輯器是使用中視窗，請在功能表列上，選擇 [ **格式**]、[ **測試對話方塊**]。  
   
-2.  如果要結束模擬，按下 Esc 鍵或選取您要測試的對話方塊中的 [ **關閉** ] 按鈕。  
+2.  若要結束模擬，請按**Esc**，或只選擇**關閉**在對話方塊中，您要測試的按鈕。  
   
- 如需如何將資源加入至 managed 專案的資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)。  
+ 如需有關如何將資源加入 managed 專案的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  
  [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [對話方塊編輯器](../windows/dialog-editor.md)   
  [顯示或隱藏對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-

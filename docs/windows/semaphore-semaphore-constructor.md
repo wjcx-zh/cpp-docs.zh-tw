@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: semaphore 建構函式 |Microsoft 文件'
+title: 'Semaphore:: semaphore 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc7ddd6279dbdf177c8e478b7c1350647ac4a7c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3646e13818297b636a888e1ad00c998a120e8379
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888655"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643656"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore 建構函式
-初始化 Semaphore 類別的新執行個體。  
+初始化的新執行個體**號誌**類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,9 +39,9 @@ WRL_NOTHROW Semaphore(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
- 控制代碼或號誌的物件為右值參考。  
+### <a name="parameters"></a>參數  
+ *h*  
+ 控制代碼或以右值參考**號誌**物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

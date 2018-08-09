@@ -1,5 +1,5 @@
 ---
-title: 追蹤參考運算子 （c + + 元件擴充功能） |Microsoft 文件
+title: 追蹤參考運算子 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890855"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651827"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>追蹤參考運算子 (C++ 元件擴充功能)
-A*追蹤參考*(`%`) 的行為類似一般的 c + + 參考 (`&`) 之處在於當物件指派給追蹤參考，此物件的參考計數會遞增。  
+A*追蹤參考*(`%`) 作用如同一般的 c + + 參考 (`&`) 不同之處在於當物件指派給追蹤參考時，物件的參考計數會漸增。  
   
 ## <a name="all-platforms"></a>所有平台  
  追蹤參考有下列特性：  
   
 -   將物件指派給追蹤參考會導致物件的參考計數遞增。  
   
--   原生參考 (&) 是當您取值 * 時的結果， 追蹤參考 (%) 是當您取值 ^ 時的結果。 只要您有物件的 %，物件就會保持存留在記憶體中。  
+-   原生參考 (`&`) 是結果，當您取值 （dereference） `*`。 追蹤參考 (`%`) 是結果，當您取值 （dereference） `^`。 只要您有`%`物件，物件就會保持存留在記憶體中。  
   
 -   點 (`.`) 成員存取運算子是用來存取物件的成員。  
   
 -   追蹤參考對實值型別和控制代碼 (例如 `String^`) 是有效的。  
   
--   不可指派 null 或 `nullptr` 值給追蹤參考。 追蹤參考可視需求重新指派給另一個有效物件多次。  
+-   追蹤參考不能指定 null 或**nullptr**值。 追蹤參考可視需求重新指派給另一個有效物件多次。  
   
 -   追蹤參考不可做為一元取址運算子。  
   
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  下列範例顯示如何將 ^ 傳遞至採用 % 的函式。  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -85,11 +84,10 @@ ref class Foo sealed {};
 -   [如何：在 C++/CLI 中使用追蹤參考](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>範例  
- **範例**  
   
  下列 C++/CLI 範例示範如何搭配使用追蹤參考與原生和 Managed 類型。  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **範例**  
   
  下列 C++/CLI 範例示範如何將追蹤參考繫結至陣列。  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

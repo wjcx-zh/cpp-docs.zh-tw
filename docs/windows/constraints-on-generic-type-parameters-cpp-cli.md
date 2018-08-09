@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465294"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649779"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型型別參數的條件約束 (C++/CLI)
 在泛型類型或方法宣告中，您可以使用條件約束限定型別參數。 條件約束是做為型別引數使用的類型必須符合的需求。 例如，條件約束可能是指，類型引數必須實作特定介面或從特定類別繼承。  
@@ -32,11 +32,11 @@ ms.locfileid: "39465294"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *型別參數*  
  其中一個要限制的型別參數。  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  清單也可以包括類別。 為了讓型別引數符合基底類別條件約束，它必須與條件約束的類別相同，或是衍生自條件約束。  
   
- 您也可以指定`gcnew()`表示的類型引數必須具有公用的無參數建構函式; 或**ref 類別**來表示的類型引數必須是參考型別，包括任何類別、 介面、 委派或陣列輸入;或是**實值類別**來表示的類型引數必須是實值型別。 任何實值型別，可為 Null 以外\<T > 您可以指定。  
+ 您也可以指定**gcnew （)** 來表示型別引數必須具有公用的無參數建構函式，或**ref 類別**表示型別引數必須是參考型別，包括任何類別，介面、 委派或陣列類型，或是**實值類別**來表示的類型引數必須是實值型別。 任何實值型別，可為 Null 以外\<T > 您可以指定。  
   
  您也可以指定泛型參數做為條件約束。 針對您要限制的類型提供的型別引數必須是或衍生自條件約束的類型。 這稱為巢狀類型條件約束。  
   

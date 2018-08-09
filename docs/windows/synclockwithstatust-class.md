@@ -1,5 +1,5 @@
 ---
-title: SyncLockWithStatusT 類別 |Microsoft 文件
+title: SyncLockWithStatusT 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51e5a66358890fc20731fb5cb657616484e19db4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66fd02ff9af4f7a5c1cb85b58e966622bed0060a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890976"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648687"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 類別
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,14 +36,14 @@ template <
 class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
 ```  
   
-#### <a name="parameters"></a>參數  
- `SyncTraits`  
- 型別，可以採用獨佔或共用資源的擁有權。  
+### <a name="parameters"></a>參數  
+ *SyncTraits*  
+ 一種類型，可以採取獨佔或共用資源的擁有權。  
   
 ## <a name="remarks"></a>備註  
- 代表類型可取用獨佔或共用資源的擁有權。  
+ 代表一種類型，可以採取獨佔或共用資源的擁有權。  
   
- SyncLockWithStatusT 類別用來實作[Mutex](../windows/mutex-class1.md)和[號誌](../windows/semaphore-class.md)類別。  
+ **SyncLockWithStatusT**類別來實作[Mutex](../windows/mutex-class1.md)並[號誌](../windows/semaphore-class.md)類別。  
   
 ## <a name="members"></a>成員  
   
@@ -51,26 +51,26 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化 SyncLockWithStatusT 類別的新執行個體。|  
+|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新執行個體**SyncLockWithStatusT**類別。|  
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化 SyncLockWithStatusT 類別的新執行個體。|  
+|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新執行個體**SyncLockWithStatusT**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)|擷取目前 SyncLockWithStatusT 物件的等候狀態。|  
-|[SyncLockWithStatusT::IsLocked 方法](../windows/synclockwithstatust-islocked-method.md)|指出目前的 SyncLockWithStatusT 物件是否擁有資源;SyncLockWithStatusT 物件也就是具有*鎖定*。|  
+|[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)|擷取目前的等候狀態**SyncLockWithStatusT**物件。|  
+|[SyncLockWithStatusT::IsLocked 方法](../windows/synclockwithstatust-islocked-method.md)|指出是否目前**SyncLockWithStatusT**物件擁有資源，也就是，則**SyncLockWithStatusT**物件*鎖定*。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[SyncLockWithStatusT::status_ 資料成員](../windows/synclockwithstatust-status-data-member.md)|物件根據目前 SyncLockWithStatusT 物件保留的基礎結果等候鎖定作業之後的作業。|  
+|[SyncLockWithStatusT::status_ 資料成員](../windows/synclockwithstatust-status-data-member.md)|根據目前的物件上的鎖定作業之後，保留基礎的等候作業的結果**SyncLockWithStatusT**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `SyncLockT`  

@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 351b38a002c470dcd3f53e8336e393f845fdb3cf
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 32418b163cb31f5eaf20c9d2b3ff3a4b585850dd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569565"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644095"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake 類別
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class DontUseNewUseMake;  
 ```  
   
 ## <a name="remarks"></a>備註  
- 防止使用運算子**新**RuntimeClass 中。 因此，您必須使用[讓函式](../windows/make-function.md)改。  
+ 防止使用運算子**新**在`RuntimeClass`。 因此，您必須使用[讓函式](../windows/make-function.md)改。  
   
 ## <a name="members"></a>成員  
   
@@ -42,7 +42,7 @@ class DontUseNewUseMake;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[DontUseNewUseMake::operator new 運算子](../windows/dontusenewusemake-operator-new-operator.md)|多載運算子**新**並且讓它無法使用於 RuntimeClass。|  
+|[DontUseNewUseMake::operator new 運算子](../windows/dontusenewusemake-operator-new-operator.md)|多載運算子**新**並且讓它無法使用於`RuntimeClass`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `DontUseNewUseMake`  

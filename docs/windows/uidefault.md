@@ -1,5 +1,5 @@
 ---
-title: uidefault |Microsoft 文件
+title: uidefault |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890147"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651609"
 ---
 # <a name="uidefault"></a>uidefault
-表示型別資訊成員的使用者介面中顯示的預設成員。  
+表示型別資訊成員是在使用者介面中顯示的預設成員。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -41,7 +39,7 @@ ms.locfileid: "33890147"
 ## <a name="example"></a>範例  
  下列程式碼顯示的範例**uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

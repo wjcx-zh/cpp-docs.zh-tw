@@ -1,5 +1,5 @@
 ---
-title: BoolStruct 結構 |Microsoft 文件
+title: BoolStruct 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af2827d85a1df647dca2c02c5c6ee5a12a416d51
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860118"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650478"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct 結構
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 struct BoolStruct;  
 ```  
   
 ## <a name="remarks"></a>備註  
- BoolStruct 結構定義 ComPtr 是否正在管理介面的物件存留期。 BoolStruct 在內部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)運算子。  
+ **BoolStruct**結構會定義是否`ComPtr`管理介面的物件存留期。 **BoolStruct**會在內部使用[BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)運算子。  
   
 ## <a name="members"></a>成員  
   

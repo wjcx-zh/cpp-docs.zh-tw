@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f937bf3da7aab803164ca968ba9fa3de227ce03
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: aaaa8d5bb0a88b9078c60fa61608e52fafd5baac
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463520"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643507"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids 方法
 擷取實作的介面識別碼的陣列。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 STDMETHOD(  
    GetIids  
 )(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *iidCount*  
  這項作業完成時中的介面識別碼的數目*iid*陣列。  
   

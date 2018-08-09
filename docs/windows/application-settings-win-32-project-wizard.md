@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464680"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652984"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 應用程式精靈、應用程式設定
 使用精靈的這個頁面來設定 Win32 專案的選項。  
   
- **應用程式類型**  
+## <a name="application-type"></a>應用程式類型  
  建立指定的應用程式類型。  
   
 |選項|描述|  
@@ -38,7 +38,7 @@ ms.locfileid: "39464680"
 |**DLL**|建立 Win32 動態連結程式庫 (DLL)。 Win32 DLL 是二進位檔案，C 或 c + +，使用呼叫 Win32 API，而不是 MFC 類別和做為多個應用程式可以同時使用的函式的共用程式庫撰寫的。<br /><br /> 您無法新增 MFC 或 ATL 支援加入至 DLL 的應用程式。 您可以指定由 DLL 匯出的符號。|  
 |**靜態程式庫**|建立靜態程式庫。 靜態程式庫是包含物件和其功能與資料，用來建置可執行檔時，連結到您的程式檔案。 本主題說明如何建立初學者檔案和[專案屬性](../ide/property-pages-visual-cpp.md)靜態程式庫。 靜態程式庫檔案提供下列優點：<br /><br /> -如果您正在使用的應用程式呼叫 Win32 API，而不是 MFC 類別非常有用 Win32 靜態程式庫。<br />-無論您的 Windows 應用程式的其餘部分撰寫以 C 或 c + + 連結的程序都是一樣的。<br />-您可以在以 MFC 為基礎的程式或非 MFC 程式連結的靜態程式庫。|  
   
- **其他選項**  
+## <a name="additional-options"></a>其他選項  
  定義支援和應用程式，根據其類型的選項。  
   
 |選項|描述|  
@@ -48,7 +48,7 @@ ms.locfileid: "39464680"
 |**先行編譯標頭**|指定靜態程式庫專案會使用預先編譯的標頭。|  
 |安全性開發生命週期 (SDL) 檢查|如需有關 SDL 的詳細資訊，請參閱[Microsoft 安全性開發生命週期 (SDL) 流程指引](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **新增的支援**  
+## <a name="add-support-for"></a>新增的支援  
  新增對其中一個提供 Visual c + + 程式庫支援。  
   
 |選項|描述|  

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9750f0d49f4c7a580b2c99d0c833c5381ba20997
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e68566b5f8fa519a3cfcd5a406cc812edfaf8480
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467335"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648590"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator== 運算子
 指出兩個**ComPtr**物件是否相等。  
@@ -44,7 +44,7 @@ bool operator==(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *a*  
  參考**ComPtr**物件。  
   

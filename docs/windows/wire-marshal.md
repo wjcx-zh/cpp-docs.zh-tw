@@ -1,5 +1,5 @@
 ---
-title: wire_marshal |Microsoft 文件
+title: wire_marshal |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890209"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646679"
 ---
 # <a name="wiremarshal"></a>wire_marshal
-指定用於傳輸，而不是應用程式特定資料類型的資料類型。  
+指定將用於傳輸，而不是應用程式特定資料類型的資料類型。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [wire_marshal]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Wire_marshal** c + + 屬性具有相同的功能[wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 下列程式碼將示範使用**wire_marshal**:  
+ 下列程式碼範例將示範用法**wire_marshal**:  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -63,7 +61,7 @@ ms.locfileid: "33890209"
   
 |||  
 |-|-|  
-|**適用於**|`typedef`|  
+|**適用於**|**typedef**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

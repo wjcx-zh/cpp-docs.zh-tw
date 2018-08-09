@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: ~ WeakReference 解構函式 |Microsoft 文件'
+title: 'WeakReference:: ~ WeakReference 解構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c29316305983ac09714292bce20e992970cca4f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3bfd80e8c6f970fb55b681f193b4ce7c2c0df5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890729"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648603"
 ---
 # <a name="weakreferenceweakreference-destructor"></a>WeakReference::~WeakReference 解構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ virtual ~WeakReference();
 ## <a name="return-value"></a>傳回值  
   
 ## <a name="remarks"></a>備註  
- 取消初始化 WeakReference 類別的目前執行個體。  
+ 取消初始化目前的執行個體**WeakReference**類別。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  

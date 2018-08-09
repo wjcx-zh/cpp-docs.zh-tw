@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1de2bedf9a582d0adbb5b99c9e719327f3b8b90a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465990"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652558"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
 傳回**ComPtr**物件，表示指定的介面識別碼所識別的介面  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 WRL_NOTHROW HRESULT AsIID(  
    REFIID riid,  
    _Out_ ComPtr<IUnknown>* p  
 ) const;  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *riid*  
  介面識別碼。  
   

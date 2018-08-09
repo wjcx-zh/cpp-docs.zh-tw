@@ -1,5 +1,5 @@
 ---
-title: 工具箱、 對話方塊編輯器索引標籤 |Microsoft 文件
+title: 對話方塊編輯器索引標籤、 工具箱 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882572"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649418"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>工具箱、對話方塊編輯器索引標籤
-對話方塊編輯器索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您正在對話方塊編輯器中。 若要將控制項加入新的對話方塊中，將控制項從 [工具箱] 拖曳至您所建立的對話方塊 (如需詳細資訊，請參閱[將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md))。 然後移動控制項，或變更其大小和形狀。  
+**對話方塊編輯器**索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您處理**對話方塊**編輯器。 若要將控制項加入新的對話方塊中，將控制項從**工具箱**對話方塊中，您要建立 (如需詳細資訊，請參閱[將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md))。 然後移動控制項，或變更其大小和形狀。  
   
- [工具箱] 中提供的標準控制項為：  
+ 中可用的標準控制項**工具箱**是：  
   
 -   [按鈕控制項](../mfc/reference/cbutton-class.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33882572"
   
 -   [捲軸控制項](../mfc/reference/cscrollbar-class.md)  
   
- [Windows 通用控制項](../mfc/controls-mfc.md)可用 [工具箱] 中提供您的應用程式中的增強的功能。 包括：  
+ [Windows 通用控制項](../mfc/controls-mfc.md)中可用**工具箱**提供增強的功能，在您的應用程式。 包括：  
   
 -   [滑桿控制項](../mfc/slider-control-styles.md)  
   
@@ -83,15 +83,15 @@ ms.locfileid: "33882572"
   
 -   [自訂控制項](custom-controls-in-the-dialog-editor.md)  
   
- 您可以將自訂控制項加入對話方塊中選取**自訂控制項**工具箱，並將它拖曳到您的對話方塊中的圖示。 若要加入 Syslink 控制項，加入自訂控制項，然後變更控制項的**類別**屬性**Syslink**。 這會重新整理屬性，並顯示 Syslink 控制項屬性。 如需 MFC 包裝函式類別資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。  
+ 您可以將自訂控制項加入對話方塊中選取**自訂控制項**中的圖示**工具箱**將它拖曳至您的對話方塊。 若要新增**Syslink**控制項，加入自訂控制項，然後變更控制項的**類別**屬性設**Syslink**。 這會導致要重新整理和顯示的屬性**Syslink**控制屬性。 如需 MFC 包裝函式類別的資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。  
   
  您也可以[ActiveX 控制項加入您的對話方塊](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
   
- 您也可以自訂 [工具箱] 視窗，讓它更好用。 如需詳細資訊，請參閱[使用工具箱](/visualstudio/ide/using-the-toolbox)。  
+ 您也可以自訂**工具箱**，方便使用的視窗。 如需詳細資訊，請參閱[使用工具箱](/visualstudio/ide/using-the-toolbox)。  
 
- 如需有關使用 RichEdit 1.0 控制項與 MFC 的詳細資訊，請參閱[使用 RichEdit 1.0 控制項與 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ 如需有關使用**RichEdit 1.0**控制項與 MFC，請參閱[使用 RichEdit 1.0 控制項與 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
@@ -104,4 +104,3 @@ ms.locfileid: "33882572"
  [Rich Edit 控制項範例](../mfc/rich-edit-control-examples.md)   
  [加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)
-

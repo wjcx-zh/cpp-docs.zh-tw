@@ -1,5 +1,5 @@
 ---
-title: 'Weakreference:: Weakreference 建構函式 |Microsoft 文件'
+title: 'Weakreference:: Weakreference 建構函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e60b23a0c63ce1415765dd1f94863540849f975
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c872b311e6fa7aa16d7118a13bc69ef2c7ef9cc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891057"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652645"
 ---
 # <a name="weakreferenceweakreference-constructor"></a>WeakReference::WeakReference 建構函式
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ WeakReference();
 ## <a name="remarks"></a>備註  
  初始化的新執行個體[WeakReference 類別](../windows/weakreference-class1.md)。  
   
- WeakReference 物件的強式參考指標初始化為`nullptr`，和強式參考計數會初始化為 1。  
+ 強式參考指標**WeakReference**物件會初始化為**nullptr**，和強式參考計數會初始化為 1。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  
@@ -44,5 +44,4 @@ WeakReference();
  **命名空間：** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>另請參閱  
-    
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

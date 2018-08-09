@@ -1,5 +1,5 @@
 ---
-title: switch_is |Microsoft 文件
+title: switch_is |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892785"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651362"
 ---
 # <a name="switchis"></a>switch_is
-指定的運算式或做為選取的等位成員的聯集判別識別項。  
+指定的運算式或做為選取的等位成員的聯集判別的識別項。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [switch_is]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Switch_is** c + + 屬性具有相同的功能[switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱[案例](../windows/case-cpp.md)範例使用範例**switch_is**。  
+ 請參閱[案例](../windows/case-cpp.md)的範例使用的範例**switch_is**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33892785"
   
 |||  
 |-|-|  
-|**適用於**|`typedef`|  
+|**適用於**|**typedef**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

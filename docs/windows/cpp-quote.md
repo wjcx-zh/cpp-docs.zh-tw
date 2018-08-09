@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc81eacdbadb971ab86f4cfde1353e89bbe1342
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 21f986e227e9daca58731d03c40d6dae5b0c0a80
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463823"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653036"
 ---
 # <a name="cppquote"></a>cpp_quote
 指定的字串，不能包含單引號字元，發出到產生的.idl 檔案。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ cpp_quote(  
    "statement"  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *statement*  
  C 的指令。  
   

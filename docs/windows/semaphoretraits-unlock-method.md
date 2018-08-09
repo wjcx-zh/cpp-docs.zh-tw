@@ -1,5 +1,5 @@
 ---
-title: 'Semaphoretraits:: Unlock 方法 |Microsoft 文件'
+title: 'Semaphoretraits:: Unlock 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892243"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650423"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock 方法
 版本控制共用資源。  
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
- `h`  
- 號誌物件的控制代碼。  
+### <a name="parameters"></a>參數  
+ *h*  
+ 控制代碼**號誌**物件。  
   
 ## <a name="remarks"></a>備註  
- 如果解除鎖定操作不成功，Unlock() 會發出錯誤，指出失敗的原因。  
+ 如果在解除鎖定作業不成功， **Unlock()** 會發出錯誤，指出失敗的原因。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** corewrappers.h  

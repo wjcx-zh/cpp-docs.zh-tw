@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569930"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646782"
 ---
 # <a name="eventreceiver"></a>event_receiver
 建立事件接收器 (接收)。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *type*  
  下列其中一個值的列舉：  
   
@@ -50,13 +50,13 @@ ms.locfileid: "39569930"
   
 -   COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  指定*event_receiver*只有當`type` = **com**。 *layout_dependent*是布林值：  
   
 -   **true**表示委派的簽章的事件接收者必須完全符合的所要攔截在事件來源中。 接收器事件處理常式的名稱必須符合相關的事件來源介面中指定的名稱。 您必須使用`coclass`時*layout_dependent*是**true**。 會指定稍微更有效率 **，則為 true**。  
@@ -81,7 +81,7 @@ ms.locfileid: "39569930"
 |-|-|  
 |**適用於**|**類別**，**結構**|  
 |**可重複**|否|  
-|**必要屬性**|**coclass**時*layout_dependent*=**，則為 true**|  
+|**必要屬性**|`coclass` 當*event_receiver*=**，則為 true**|  
 |**無效屬性**|無|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  

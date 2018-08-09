@@ -19,26 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570853"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646253"
 ---
 # <a name="default-c"></a>default (C++)
 表示 coclass 內定義的自訂或 dispinterface，用以代表預設可程式性介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ default(  
    interface1,  
    interface2  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *interface1*  
  可讓指令碼環境使用的預設介面，會根據使用 **default** 屬性定義的類別來建立物件。  
   

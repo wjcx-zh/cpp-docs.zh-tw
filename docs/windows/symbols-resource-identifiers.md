@@ -1,5 +1,5 @@
 ---
-title: 符號： 資源識別項 |Microsoft 文件
+title: 符號： 資源識別項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ea83c97a5ee59e99b4ab743348ae2268d730e5c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891840"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650881"
 ---
 # <a name="symbols-resource-identifiers"></a>符號：資源識別項
 符號是由兩部分所組成的資源識別碼 (ID)：對應至整數值 (符號值) 的文字字串 (符號名稱)。 例如:   
@@ -66,13 +66,12 @@ IDC_EDITNAME = 5100
   
 - [檢視預先定義的符號 ID](../windows/predefined-symbol-ids.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 搜尋資源的符號](../windows/how-to-search-for-symbols-in-resources.md)   
+ [如何： 在資源中的搜尋符號](../windows/how-to-search-for-symbols-in-resources.md)   
  [資源編輯器](../windows/resource-editors.md)   
  [資源檔](../windows/resource-files-visual-studio.md)
-

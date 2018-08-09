@@ -1,5 +1,5 @@
 ---
-title: usesgetlasterror |Microsoft 文件
+title: usesgetlasterror |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 399b9fbbcf4b449f5f91beaea89c403d120d0a21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e5d7144f7e2a6fa3bf6937a377ccad0a711f746
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890271"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647056"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
-會告知呼叫端是否有錯誤時呼叫該函式，然後呼叫端就可以再呼叫`GetLastError`擷取錯誤碼。  
+會告知呼叫端，是否沒有發生錯誤時呼叫該函式，然後呼叫端可以再呼叫`GetLastError`擷取錯誤碼。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [usesgetlasterror]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  

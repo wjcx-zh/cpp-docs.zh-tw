@@ -1,5 +1,5 @@
 ---
-title: 字串 （c + + 元件擴充功能） |Microsoft 文件
+title: 字串 （c + + 元件延伸模組） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889234"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645989"
 ---
 # <a name="string--c-component-extensions"></a>字串 (C++ 元件擴充功能)
-Visual c + + 編譯器支援*字串*，這是物件，表示為一連串字元的文字。 Visual c + + 支援字串變數，其值是隱含的和常值，其值為明確加上引號的字串。  
+Visual c + + 編譯器支援*字串*，這些是代表一連串的字元為文字的物件。 Visual c + + 支援字串變數，其值是隱含的與常值，其值是明確加上引號的字串。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- Windows 執行階段和通用語言執行平台代表字串做為其配置的記憶體自動管理的物件。 也就是說，您不需要明確字串變數超出範圍或您的應用程式結束時，捨棄字串的記憶體。 若要表示自動管理字串物件的存留期，宣告 string 型別與[至物件控制代碼 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修飾詞。  
+ Windows 執行階段和通用語言執行平台代表字串做為其配置的記憶體自動管理的物件。 也就是說，您不需要明確的字串變數超出範圍或您的應用程式結束時，捨棄字串的記憶體。 若要表示的字串物件的存留期自動管理，宣告 string 型別與[控制代碼物件 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修飾詞。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- Windows 執行階段架構需要 Visual c + + 實作`String`中的資料類型`Platform`命名空間。 為了方便起見，Visual c + + 也提供`string`資料類型，這是的同義字`Platform::String`，請在`default`命名空間。  
+ Windows 執行階段架構需要實作的 Visual c + +`String`中的資料類型`Platform`命名空間。 為了方便起見，Visual c + + 也提供`string`資料類型，這是的同義字`Platform::String`，請在`default`命名空間。  
   
 ### <a name="syntax"></a>語法  
   
@@ -41,44 +41,42 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊和字串的範例，請參閱[platform:: string、 std:: wstring 和常值 （平台）](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ 如需詳細資訊以及有關字串的範例，請參閱[platform:: string、 std:: wstring 和常值 （平台）](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- 本主題將討論當您執行使用 Visual c + + 編譯器如何處理字串常值 **/clr**編譯器選項。 若要使用 **/clr**，您也必須使用 common language runtime (CLR)，C + + /CLI 語法和受管理物件。 如需有關 **/clr**，請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
+ 本主題將討論當您執行使用 Visual c + + 編譯器處理字串常值的方式`/clr`編譯器選項。 若要使用`/clr`，您也必須使用 common language runtime (CLR)、 C + + /cli 語法和受管理物件。 如需詳細資訊`/clr`，請參閱 < [/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 編譯時 **/clr**，編譯器會將字串常值轉換成字串類型的<xref:System.String>。 若要保留與現有程式碼的回溯相容性是兩個例外狀況：  
+ 進行編譯時`/clr`，編譯器會將字串常值轉換為字串型別的<xref:System.String>。 若要保留與現有程式碼的回溯相容性是兩個例外狀況：  
   
--   例外狀況處理。 擲回的字串常值時，編譯器會攔截它做為字串常值。  
+-   例外狀況處理。 擲回字串常值時，編譯器會攔截它的字串常值。  
   
--   樣板推算。 字串常值作為範本引數傳遞時，編譯器會不將它轉換成<xref:System.String>。 請注意，做為泛型引數傳遞的字串常值將會升級為<xref:System.String>。  
+-   樣板推斷。 字串常值傳遞做為範本引數時，編譯器會不將它轉換成<xref:System.String>。 請注意，傳遞做為泛型引數的字串常值將會升級為<xref:System.String>。  
   
- 編譯器還會包含內建支援三個運算子，您可以覆寫來自訂其行為：  
+ 編譯器也會有三個運算子，您可以覆寫以自訂其行為的內建支援：  
   
--   System:: string ^ 運算子 + （system:: string、 system:: string）。  
+-   System:: string ^ 運算子 + system:: string (system:: string）;  
   
--   System:: string ^ 運算子 + (object system:: string)。  
+-   System:: string ^ 運算子 + (system:: object，system:: string);  
   
--   System:: string ^ 運算子 + (system:: string，object);  
+-   System:: string ^ 運算子 + (system:: string，system:: object);  
   
- 當傳遞<xref:System.String>，編譯器將方塊中，如有必要，然後再進行串連字串 （使用 ToString) 的物件。  
+ 當傳遞<xref:System.String>，編譯器將方塊中，如有必要，然後再進行串連的字串 （使用 ToString) 物件。  
   
 > [!NOTE]
->  插入號 ("^") 表示宣告的變數是控制代碼的 C + + /CLI managed 物件。  
+>  插入號 ("^") 表示宣告的變數是控制代碼的 C + + /cli CLI managed 物件。  
   
- 如需詳細資訊，請參閱[字串和字元常值](../cpp/string-and-character-literals-cpp.md)。  
+ 如需詳細資訊，請參閱[String and Character Literals](../cpp/string-and-character-literals-cpp.md)。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
  下列程式碼範例示範如何串連和比較字串。  
   
@@ -169,9 +167,7 @@ abc
 n is empty  
 ```  
   
- **範例**  
-  
- 下列範例示範可以多載的編譯器提供的運算子，因此，編譯器會發現函式多載根據<xref:System.String>型別。  
+ 下列範例會示範您可以多載的編譯器提供的運算子，與編譯器，會看到根據函式多載<xref:System.String>型別。  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -231,9 +227,7 @@ String ^ a
 const char * a  
 ```  
   
- **範例**  
-  
- 下列範例將示範編譯器區別原生字串和<xref:System.String>字串。  
+ 下列範例會示範編譯器會區別原生字串和<xref:System.String>字串。  
   
 ```cpp  
 // string_operators_3.cpp  

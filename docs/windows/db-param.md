@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569439"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651378"
 ---
 # <a name="dbparam"></a>db_param
 關聯的輸入或輸出參數中指定的成員變數，並分隔的變數。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ ms.locfileid: "39569439"
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *序數*  
  中要將資料繫結至資料列集的欄位對應的資料行號碼 （DBCOLUMNINFO 序數）。  
   

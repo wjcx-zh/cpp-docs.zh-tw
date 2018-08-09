@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570606"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646107"
 ---
 # <a name="dbsource"></a>db_source
 建立資料來源的連接。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ ms.locfileid: "39570606"
  當您使用**db_source**類別中上,*名稱*是具有資料來源物件的執行個體**db_source**套用屬性 （請參閱範例 1）。 當您使用**db_source**在方法實作中，內嵌*名稱*是一個變數 （本機方法），可用來存取資料來源 （請參閱範例 2）。 您傳遞這*名稱*要*source_name*參數`db_command`命令相關聯的資料來源。  
   
  *hresult* （選擇性）  
- 識別將接收此資料庫命令之 `HRESULT` 的變數。 如果變數不存在，則屬性會自動予以插入。  
+ 識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。  
   
 ## <a name="remarks"></a>備註  
  **db_source**會建立[CDataSource](../data/oledb/cdatasource-class.md)並[CSession](../data/oledb/csession-class.md)物件都代表與 OLE DB 取用者資料來源的連線。  

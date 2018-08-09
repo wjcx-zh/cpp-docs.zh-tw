@@ -1,5 +1,5 @@
 ---
-title: 號誌類別 |Microsoft 文件
+title: 號誌類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5101aba24cd8a0ed4f44587ffc4ad9e973099b8a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889465"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652632"
 ---
 # <a name="semaphore-class"></a>Semaphore 類別
-表示控制項可支援有限的數目的使用者共用的資源的同步處理物件。  
+表示控制項可以支援有限的數目的使用者共用的資源的同步處理物件。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
@@ -46,25 +45,25 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Semaphore::Semaphore 建構函式](../windows/semaphore-semaphore-constructor.md)|初始化 Semaphore 類別的新執行個體。|  
+|[Semaphore::Semaphore 建構函式](../windows/semaphore-semaphore-constructor.md)|初始化的新執行個體**號誌**類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|會呼叫其簽章包含指定的引數數目的事件處理常式。|  
+|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|會呼叫其簽章包含指定的引數的事件處理常式。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|等待目前的物件或指定的控制代碼相關聯的物件處於信號狀態，或超過指定逾時間隔。|  
+|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|等待目前的物件或指定的控制代碼相關聯的物件處於收到信號的狀態，或經過指定的逾時間隔。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Semaphore::operator= 運算子](../windows/semaphore-operator-assign-operator.md)|將指定的控制代碼從號誌物件移至目前的號誌物件。|  
+|[Semaphore::operator= 運算子](../windows/semaphore-operator-assign-operator.md)|將指定的控制代碼，從**號誌**物件與目前**號誌**物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Semaphore`  

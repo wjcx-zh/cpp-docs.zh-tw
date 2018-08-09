@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Activateinstance 方法 |Microsoft 文件'
+title: 'Simpleactivationfactory:: Activateinstance 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889417"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646558"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance 方法
 
@@ -39,7 +39,7 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>參數
 
 *ppvObject*  
-這項作業完成時，所指定的物件執行個體的指標`Base`類別樣板參數。
+這項作業完成時，所指定的物件執行個體的指標`Base`類別範本參數。
 
 ## <a name="return-value"></a>傳回值
 
@@ -47,7 +47,7 @@ STDMETHOD( ActivateInstance )(
 
 ## <a name="remarks"></a>備註
 
-如果&#95; &#95;WRL_STRICT&#95; &#95;是定義，判斷提示會發出錯誤如果類別樣板參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或未設定與 WinRt 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+如果&#95; &#95;WRL_STRICT&#95; &#95;是定義，判斷提示會發出錯誤如果類別範本參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定使用 WinRt 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
 ## <a name="requirements"></a>需求
 
@@ -56,5 +56,4 @@ STDMETHOD( ActivateInstance )(
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
-
-[SimpleActivationFactory 類別](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory 類別](../windows/simpleactivationfactory-class.md)

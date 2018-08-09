@@ -1,5 +1,5 @@
 ---
-title: 建立新的自訂或資料資源 |Microsoft 文件
+title: 建立新的自訂或資料資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82d68ec7c9580cf1b95d4c678c491c4e33d12e10
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871828"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650842"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>建立新的自訂或資料資源
-您可以建立新的自訂或資料資源，方法是將資源放在使用一般資源指令碼 (.rc) 檔語法的個別檔案中，然後以滑鼠右鍵按一下方案總管中的專案，再按一下捷徑功能表中的 [資源包含]  來包含該檔案。  
+您可以藉由將資源放在包含該檔案使用一般資源指令碼 (.rc) 檔語法，個別檔案中，然後以滑鼠右鍵按一下您的專案中建立新的自訂或資料資源**方案總管 中**，然後按一下**資源包括**快顯功能表。  
   
 ### <a name="to-create-a-new-custom-or-data-resource"></a>建立新的自訂或資料資源  
   
@@ -37,9 +37,9 @@ ms.locfileid: "33871828"
   
 2.  在 **方案總管**中，以滑鼠右鍵按一下專案的 .rc 檔，然後按一下捷徑功能表中的 [資源包含]  。  
   
-3.  在 [編譯時期指示詞]  方塊中輸入 **#include** 陳述式，為包含您的自訂資源的檔案命名。 例如:   
+3.  在 **編譯時間指示詞**方塊中，輸入`#include`陳述式，為包含您的自訂資源檔案的名稱。 例如:   
   
- ```  
+ ```cpp  
     #include mydata.rc  
  ```  
   
@@ -49,12 +49,10 @@ ms.locfileid: "33871828"
   
  另一種建立自訂資源的方式是匯入外部檔案作為自訂資源。 如需詳細資訊，請參閱 [匯入及匯出資源](../windows/how-to-import-and-export-resources.md)。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  Win32  
   
 ## <a name="see-also"></a>另請參閱  
  [Binary Editor](binary-editor.md)
-

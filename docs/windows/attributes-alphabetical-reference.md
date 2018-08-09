@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464885"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648174"
 ---
 # <a name="attributes-alphabetical-reference"></a>依字母順序排列的屬性參考
 下列屬性可用於 Visual c + +。  
@@ -118,7 +118,7 @@ ms.locfileid: "39464885"
 |[satype](../windows/satype.md)|指定的資料型別`SAFEARRAY`。|  
 |[size_is](../windows/size-is.md)|指定記憶體的大小配置大小的指標，且大小來調整大小的指標，以及單一或多維陣列的指標。|  
 |[source](../windows/source-cpp.md)|表示的類別、 屬性或方法成員是一個事件的來源。|  
-|[string](../windows/string-cpp.md)|表示一維**char**， **wchar_t**，**位元組**，或對等陣列或這類陣列的指標必須被視為字串。|  
+|[string](../windows/string-cpp.md)|表示一維**char**， **wchar_t**， `byte`，或對等陣列或這類陣列的指標必須被視為字串。|  
 |[support_error_info](../windows/support-error-info.md)|支援目標物件的錯誤報告功能。|  
 |[switch_is](../windows/switch-is.md)|指定的運算式或做為選取的等位成員的聯集判別的識別項。|  
 |[switch_type](../windows/switch-type.md)|識別做為等位的判別變數的型別。|  

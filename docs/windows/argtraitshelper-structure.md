@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: fe97cc63de1f83d110e37451c1ceb91c7ad59f49
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466633"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652457"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 結構
 支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 template<typename TDelegateInterface>  
 struct ArgTraitsHelper;  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *TDelegateInterface*  
  委派的介面。  
   

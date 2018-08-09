@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: End 方法 |Microsoft 文件'
+title: 'Eventtargetarray:: End 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00827d42bb01263d6b4fd9b5aea3b0fc7f7c76e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874261"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648642"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End 方法
-支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
+支援 WRL 結構，而且不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 ComPtr<IUnknown>* End();  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 內部陣列中的事件處理常式的最後一個元素的位址。  
+ 內部陣列中的事件處理常式的最後一個項目位址。  
   
 ## <a name="remarks"></a>備註  
  取得內部陣列中的事件處理常式的最後一個元素的位址。  

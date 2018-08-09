@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571434"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650085"
 ---
 # <a name="dbcommand"></a>db_command
 建立 OLE DB 命令。  
@@ -41,7 +41,6 @@ ms.locfileid: "39571434"
 ```  
   
 ### <a name="parameters"></a>參數  
-
 *command*  
 包含 OLE DB 命令文字的命令字串。 簡單範例如下︰  
   
@@ -112,12 +111,12 @@ TCHAR m_state[3] = 'CA';
 **db_command** 會確認用於 *source_name* 的變數有效，因此指定的變數應該在函式或全域範圍中。  
   
 *hresult* （選擇性）  
-識別將接收此資料庫命令之 `HRESULT` 的變數。 如果變數不存在，則屬性會自動予以插入。  
+識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。  
   
 *bindings* (選擇性)  
 可讓您區隔繫結參數與 OLE DB 命令。  
   
-如果您指定的值*繫結*， **db_command**會剖析相關聯的值，而不會剖析\[ *bindtype*] 參數。 這種用法可讓您使用 OLE DB 提供者語法。 若要停用剖析，而不使用繫結參數，請指定 **Bindings=""**。  
+如果您指定的值*繫結*， **db_command**會剖析相關聯的值，而不會剖析\[ *bindtype*] 參數。 這種用法可讓您使用 OLE DB 提供者語法。 若要停用剖析，而不使用繫結參數，指定`Bindings=""`。  
   
 如果您未指定的值*繫結*， **db_command**會剖析繫結參數區塊，尋找 '**(**'，後面接著 **\[** _bindtype_**]** 在方括號，後面接著一或多個先前宣告 c + + 成員變數，後面接著 '**)**'。 產生的命令中會移除括弧之間的所有文字，並且會使用這些參數來建構此命令的資料行和參數繫結。  
   
@@ -133,7 +132,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="remarks"></a>備註  
 **db_command** 會建立 OLE DB 消費者用來執行命令的 [CCommand](../data/oledb/ccommand-class.md) 物件。  
   
-您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍用法牽涉到 OLE DB 消費者範本類別`CCommand<>`，但函式和類別案例的樣板引數不同。 在函式案例中，將會繫結至包含區域變數的 **Accessor** ，類別用法則會將 `CAccessor`衍生類別推斷為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。  
+您可以搭配使用 **db_command** 與類別或函式範圍；主要差異在於 `CCommand` 物件的範圍。 使用函式範圍時，繫結這類資料會終止於函式結尾。 類別和函式範圍用法牽涉到 OLE DB 消費者範本類別`CCommand<>`，但函式和類別案例的樣板引數不同。 在函式案例中，繫結將會對`Accessor`組成的區域變數，而類別用法則會推斷`CAccessor`-衍生的類別做為引數。 當成類別屬性使用時， **db_command** 是與 **db_column**搭配運作。  
   
 **db_command** 可以用來執行不傳回結果集的命令。  
   

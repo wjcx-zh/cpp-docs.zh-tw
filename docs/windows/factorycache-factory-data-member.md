@@ -1,5 +1,5 @@
 ---
-title: 'Factorycache:: Factory 資料成員 |Microsoft 文件'
+title: 'Factorycache:: Factory 資料成員 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85fed4ff169c43762f82dd0524cc88a6e24370e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c714c13cb206fbc6535997c2ad32d9f652e229ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881435"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643520"
 ---
 # <a name="factorycachefactory-data-member"></a>FactoryCache::factory 資料成員
-支援 Windows 執行階段 c + + 樣板程式庫的基礎結構，並不是直接從您的程式碼使用。  
+支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 IUnknown* factory;  
 ```  
   
 ## <a name="remarks"></a>備註  
- 指向以 Windows 執行階段或 COM class factory。  
+ 指向 Windows 執行階段或 COM class factory。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** module.h  

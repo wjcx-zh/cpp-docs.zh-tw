@@ -1,5 +1,5 @@
 ---
-title: 唯一 （c + +） |Microsoft 文件
+title: 唯一 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890131"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643961"
 ---
 # <a name="unique-c"></a>unique (C++)
 指定唯一的指標。  
@@ -30,16 +30,14 @@ ms.locfileid: "33890131"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **唯一**c + + 屬性具有相同的功能[唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294)MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱[ref](../windows/ref-cpp.md)範例使用範例**唯一**。  
+ 請參閱[ref](../windows/ref-cpp.md)的範例使用的範例**唯一**。  
   
 ## <a name="requirements"></a>需求  
   
@@ -47,7 +45,7 @@ ms.locfileid: "33890131"
   
 |||  
 |-|-|  
-|**適用於**|`typedef``struct`， **union**，參數的介面，介面方法|  
+|**適用於**|**typedef**， **struct**， **union**，參數的介面，介面方法|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  

@@ -1,5 +1,5 @@
 ---
-title: 建立工具列按鈕的工具提示 |Microsoft 文件
+title: 建立工具列按鈕的工具提示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c2fa538a7888a2f14ae34fde9133b2872d13ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27f4c5e3da313352358223de1499ef379db02bd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871763"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647774"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>建立工具列按鈕的工具提示
 ### <a name="to-create-a-tool-tip"></a>若要建立工具提示  
   
 1.  選取工具列按鈕。  
   
-2.  在[屬性 視窗](/visualstudio/ide/reference/properties-window)，請在**提示**屬性欄位中，新增 [狀態] 列; 訊息之後，將按鈕的描述，加入 \n 和工具提示的名稱。  
+2.  在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)，請在**提示**屬性欄位中，新增按鈕，[狀態] 列，在訊息之後的描述，並新增`\n`和工具提示名稱。  
   
- 工具提示的常見範例是在 WordPad 中的 [列印] 按鈕：  
+ 工具提示的常見範例是**列印**按鈕**WordPad**:  
   
- 1. 開啟 [WordPad]。  
+ 1. 開啟**WordPad**。  
   
  2. 將滑鼠指標停留**列印**工具列按鈕。  
   
- 3. 請注意，這個字 「 列印 」 現在浮動窗格下滑鼠指標。  
+ 3. 請注意，這個字`Print`現在浮動在滑鼠指標。  
   
- 4. 查看狀態列 （位於 [WordPad] 視窗的最底部）-請注意，它現在顯示文字"會列印使用中文件 」。  
+ 4. 查看 狀態 列 (在最底端**WordPad**  視窗)-請注意現在會顯示文字`Prints the active document`。  
   
- 在步驟 3 中的 「 列印 」 是 「 工具提示名稱 」，而 「 列印使用中文件' 步驟 4 的 」 描述的 [狀態] 列按鈕。 」  
+ `Print`中**步驟 3**是 「 工具提示名稱 」，而`Prints the active document`從**步驟 4** "的描述 [狀態] 列的按鈕。 」  
   
- 如果您要使用此效果**工具列**編輯器 中，設定**提示**屬性**會列印使用中文 prompt**。  
+ 如果您想使用此效果 **工具列**編輯器 」 中，您將**提示**屬性設`Prints the active document\nPrint`。  
   
 > [!NOTE]
 >  您可以編輯的提示文字使用[屬性 視窗](/visualstudio/ide/reference/properties-window)。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  MFC 或 ATL  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、 移動和編輯工具列按鈕](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [工具列編輯器](../windows/toolbar-editor.md)
-

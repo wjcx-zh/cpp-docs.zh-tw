@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78f6eb9f3d0acf6a28479593d64616fa6881be76
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465218"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648086"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak 方法
 擷取目前物件的弱式參考。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT AsWeak(  
    _Out_ WeakRef* pWeakRef  
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *pWeakRef*  
  這項作業完成時，弱式參考物件的指標。  
   

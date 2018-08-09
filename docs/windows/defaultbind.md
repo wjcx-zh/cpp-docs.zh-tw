@@ -1,5 +1,5 @@
 ---
-title: defaultbind |Microsoft 文件
+title: defaultbind |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871457"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644082"
 ---
 # <a name="defaultbind"></a>defaultbind
 表示最能代表物件的單一、 可繫結屬性。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  **Defaultbind** c + + 屬性具有相同的功能[defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL 屬性。  
   
 ## <a name="example"></a>範例  
- 請參閱範例的[可繫結](../windows/bindable.md)如需如何使用的範例**defaultbind**。  
+ 範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**defaultbind**。  
   
 ## <a name="requirements"></a>需求  
   

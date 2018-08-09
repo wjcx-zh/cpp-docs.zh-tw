@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568887"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647992"
 ---
 # <a name="guide-settings-dialog-box"></a>輔助線設定對話方塊
 ## <a name="layout-guides"></a>版面配置輔助線  
  顯示版面配置輔助線設定。  
   
- **無**  
+### <a name="none"></a>無  
   
  隱藏配置工具。  
   
- **尺規和輔助線**  
+### <a name="rulers-and-guides"></a>尺規和輔助線  
   
  啟用時，加入尺規版面配置工具;指南可置於尺規。 預設指南是邊界，也可以藉由拖曳移動。 按一下尺規置放指南中。 控制 「 貼齊 」 指南上方或旁邊移動控制項時。 控制項也會一起移動指南之後，它們會附加至它。 當控制項所附加至每一端的指南，並移動輔助線時，會調整控制項的大小。  
   
- **格線**  
+### <a name="grid"></a>Grid  
   
  建立版面配置方格。 新的控制項將自動貼齊格線。  
   
 ## <a name="grid-spacing"></a>格線間距  
  對話方塊單位 (Dlu) 中，會顯示格線間距的設定。  
   
- **寬度： Dlu**  
+### <a name="width-dlus"></a>寬度： Dlu  
   
  Dlu 中設定版面配置方格的寬度。 水平 DLU 是除以四對話方塊字型的平均寬度。  
   
- **高度： Dlu**  
+### <a name="height-dlus"></a>高度： Dlu 
   
  Dlu 中設定版面配置方格的高度。 垂直 DLU 是平均除以八個對話方塊字型的高度。  
   

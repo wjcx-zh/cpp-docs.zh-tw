@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits 結構 |Microsoft 文件
+title: SemaphoreTraits 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892601"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645720"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 結構
-定義號誌物件的一般特性。  
+定義通用特性**號誌**物件。  
   
 ## <a name="syntax"></a>語法  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69f3f2c756d158954676f6fc42941b1b80f4345e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7cbe76cdea5c8fadef818ede1d63d88e4437bdae
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569914"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651063"
 ---
 # <a name="handletclose-method"></a>HandleT::Close 方法
 關閉目前**HandleT**物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 void Close();  
 ```  
   

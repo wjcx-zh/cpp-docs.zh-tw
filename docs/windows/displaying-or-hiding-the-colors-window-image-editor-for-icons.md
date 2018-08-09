@@ -1,5 +1,5 @@
 ---
-title: 顯示或隱藏色彩視窗 （圖示影像編輯器） |Microsoft 文件
+title: 顯示或隱藏色彩視窗 （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872038"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645106"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>顯示或隱藏色彩視窗 (圖示影像編輯器)
 ### <a name="to-display-colors-window"></a>若要顯示色彩視窗  
   
-1.  以滑鼠右鍵按一下**影像編輯器**窗格，然後選擇 **顯示色彩視窗**從捷徑功能表。  
+1.  以滑鼠右鍵按一下**影像編輯器**窗格，然後選擇**顯示色彩視窗**從捷徑功能表。  
   
      \-或-  
   
-2.  按一下**顯示色彩視窗**上[影像功能表](../windows/image-menu-image-editor-for-icons.md)。  
+2.  按一下 **顯示色彩視窗**上[影像功能表](../windows/image-menu-image-editor-for-icons.md)。  
   
 ### <a name="to-hide-the-colors-window"></a>若要隱藏色彩視窗  
   
-1.  取消固定的視窗。 不在使用時，這可讓自動隱藏視窗。  
+1.  取消釘選 視窗。 不在使用時，這可讓 [自動隱藏] 視窗。  
   
  \-或-  
   
--   按一下**關閉** 按鈕。  
+-   按一下 [**關閉**] 按鈕。  
   
- 需求  
-  
+## <a name="requirements"></a>需求  
  無  
   
 ## <a name="see-also"></a>另請參閱  

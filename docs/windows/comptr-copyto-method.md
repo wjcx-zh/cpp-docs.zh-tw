@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5b387d52c9ab7b1d9033ce70d36e9f0aa5e5b33e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464437"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642925"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
 複製目前或指定相關聯的介面與這個**ComPtr**至指定的指標。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 HRESULT CopyTo(  
    _Deref_out_ InterfaceType** ptr  
 );  
@@ -45,7 +45,7 @@ HRESULT CopyTo(
 ) const;  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *U*  
  類型名稱。  
   

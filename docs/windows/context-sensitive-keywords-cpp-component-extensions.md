@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466120"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644225"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>視內容而有所區別的關鍵字 (C++ 元件擴充功能)
 *即時線上關鍵字*是只在特定內容中辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- **備註**  
+### <a name="remarks"></a>備註
   
  下列是內容相關性關鍵字清單：  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466120"
  基於可讀性目的，您可能想要限制內容相關性關鍵字做為使用者定義的符號使用。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
- **備註**  
+### <a name="remarks"></a>備註  
   
  (沒有這項功能的平台特定備註。)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/ZW**  
+ 編譯器選項：`/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **備註**  
+### <a name="remarks"></a>備註  
   
  (沒有這項功能的平台特定備註。)  
   
 ### <a name="requirements"></a>需求  
- 編譯器選項： **/clr**  
+ 編譯器選項：`/clr`  
   
 ### <a name="examples"></a>範例  
- **範例**  
   
  下列程式碼範例所示範的是，在適當的內容中，**屬性**內容相關性關鍵字可用來定義屬性和變數。  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **輸出**  
   
 ```Output  
 100  

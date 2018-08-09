@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Checkvalidstateforresultscall 方法 |Microsoft 文件'
+title: 'Asyncbase:: Checkvalidstateforresultscall 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7308651726abd03f9bd4c9a32550644bec156432
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dfa3b7222a25ed56d014cc90dbffa5f57a2c9436
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859897"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651904"
 ---
 # <a name="asyncbasecheckvalidstateforresultscall-method"></a>AsyncBase::CheckValidStateForResultsCall 方法
-測試是否可以收集在目前的非同步狀態的非同步作業的結果。  
+測試是否可以收集在目前的非同步狀態中的非同步作業的結果。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 inline HRESULT CheckValidStateForResultsCall();  
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果可以收集結果; 為 S_OK否則，E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。  
+ 如果可以收集結果;，為 S_OK否則，E_ILLEGAL_METHOD_CALLE_ILLEGAL_METHOD_CALL。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** async.h  

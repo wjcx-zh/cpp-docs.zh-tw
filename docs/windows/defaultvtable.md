@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 34850646e40ffa9cbd3185b13fdaa93d7c873787
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569662"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651436"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 為 COM 物件的預設 vtable 介面中定義的介面。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 [ defaultvtable(  
    interface  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  *interface*  
  您想要有預設 vtable COM 物件的指定的介面。  
   

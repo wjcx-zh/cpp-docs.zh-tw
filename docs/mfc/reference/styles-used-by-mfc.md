@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8c8868f83cb2e05a364b8977b014db5c02689c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886059"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540979"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式  
   
@@ -232,15 +232,15 @@ ms.locfileid: "37886059"
 |BS_AUTOCHECKBOX|建立具有兩個狀態的核取方塊按鈕： BST_CHECKED 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，並變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|  
 |BS_AUTORADIOBUTTON|建立具有兩種狀態的選項按鈕： BST_CHECKED 和 BST_UNCHECKED。 選項按鈕通常用在群組中，而其中一個選取的選項，一次最多每個群組。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗、 按下的選項按鈕的狀態設定為 BST_CHECKED，和設定 BST_UNCHECKED 按鈕群組中的所有其他選項按鈕的狀態。 根據預設，相關聯的文字會顯示選項按鈕的右邊。 左邊的選項按鈕的顯示文字，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|  
 |BS_CHECKBOX|建立具有兩個狀態的核取方塊按鈕： BST_CHECKED 和 BST_UNCHECKED。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會變更按鈕的狀態。 根據預設，相關聯的文字會顯示右邊的核取方塊。 若要顯示文字左邊的核取方塊，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|  
-|BS_COMMANDLINK|建立命令連結按鈕。 命令連結按鈕是特有的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]主要文字下方，記下主要文字左邊顯示一個綠色箭號。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|  
-|BS_DEFCOMMANDLINK|建立命令連結按鈕。 命令連結按鈕是特有的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]主要文字下方，記下主要文字左邊顯示一個綠色箭號。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送 BN_CLICKED 通知給對話方塊即使按鈕沒有輸入的焦點。|  
+|BS_COMMANDLINK|建立命令連結按鈕。 命令連結按鈕是專屬 Windows Vista 的主要文字下方，記下主要文字左邊顯示一個綠色箭號的命令按鈕。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|  
+|BS_DEFCOMMANDLINK|建立命令連結按鈕。 命令連結按鈕是專屬 Windows Vista 的主要文字下方，記下主要文字左邊顯示一個綠色箭號的命令按鈕。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送 BN_CLICKED 通知給對話方塊即使按鈕沒有輸入的焦點。|  
 |BS_DEFPUSHBUTTON|建立具有沉重黑色框線的命令按鈕。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送 BN_CLICKED 通知給對話方塊即使按鈕沒有輸入的焦點。|  
-|BS_DEFSPLITBUTTON|建立分割按鈕。 分割按鈕是特有的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]包含相鄰的下拉式箭號按鈕。 當您按一下按鈕時，會執行預設命令。 當您按一下下拉箭號時，則會顯示其他命令的功能表。 如果分割按鈕是在對話方塊中，按下 ENTER 鍵 BN_CLICKED 將通知傳送給對話方塊即使按鈕沒有輸入的焦點|  
+|BS_DEFSPLITBUTTON|建立分割按鈕。 分割按鈕是專屬 Windows Vista 包含相鄰的下拉式箭號按鈕的命令按鈕。 當您按一下按鈕時，會執行預設命令。 當您按一下下拉箭號時，則會顯示其他命令的功能表。 如果分割按鈕是在對話方塊中，按下 ENTER 鍵 BN_CLICKED 將通知傳送給對話方塊即使按鈕沒有輸入的焦點|  
 |BS_GROUPBOX|建立其他按鈕可以群組的矩形。 此樣式相關聯的文字會顯示在矩形的左上角。|  
 |BS_OWNERDRAW|建立主控描繪按鈕。 這個架構會呼叫`DrawItem`當按鈕的視覺外觀的方法已經變更。 當您使用時，就必須設定此樣式`CBitmapButton`類別。|  
 |BS_PUSHBUTTON|建立使用者按一下按鈕時，傳送 BN_CLICKED 通知給主控視窗的命令按鈕。|  
 |BS_RADIOBUTTON|建立具有兩種狀態的選項按鈕： BST_CHECKED 和 BST_UNCHECKED。 選項按鈕通常用在群組中，而其中一個選取的選項，一次最多每個群組。 按一下這個按鈕會 BN_CLICKED 通知傳送給主控視窗，但不會自動變更群組中的任何按鈕的狀態。 根據預設，相關聯的文字會顯示選項按鈕的右邊。 左邊的選項按鈕的顯示文字，請使用 BS_LEFTTEXT 或 BS_RIGHTBUTTON 樣式。|  
-|BS_SPLITBUTTON|建立分割按鈕。 分割按鈕是特有的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]包含相鄰的下拉式箭號按鈕。 當您按一下按鈕時，會執行預設命令。 當您按一下下拉箭號時，則會顯示其他命令的功能表。|  
+|BS_SPLITBUTTON|建立分割按鈕。 分割按鈕是專屬 Windows Vista 包含相鄰的下拉式箭號按鈕的命令按鈕。 當您按一下按鈕時，會執行預設命令。 當您按一下下拉箭號時，則會顯示其他命令的功能表。|  
 |BS_USERBUTTON|已淘汰，但會提供給與 16 位元版本的 Windows 相容性。 Win32 應用程式應該改用 BS_OWNERDRAW。|  
   
 ### <a name="radio-button-and-check-box-styles"></a>選項按鈕和核取方塊樣式  
@@ -498,7 +498,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 |WS_EX_CONTEXTHELP|在視窗的標題列包含問號。 當使用者按一下問號，游標會變為有指標的問號。 如果使用者再按一下子視窗，子視窗會收到 WM_HELP 訊息。|  
 |WS_EX_CONTROLPARENT|可讓使用者使用 TAB 鍵瀏覽不同的子視窗的視窗。|  
 |WS_EX_DLGMODALFRAME|指定的視窗標題列中的 WS_CAPTION 樣式旗標的指定時，（選擇性） 可能建立有雙框線*cheaderctrl:: Create*參數。|  
-|WS_EX_LAYERED|視窗[分層視窗](http://msdn.microsoft.com/library/ms632599.aspx#layered)。 如果視窗有，就無法使用這個樣式[類別樣式](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC 或 CS_CLASSDC。 不過， [!INCLUDE[win8_first](../../mfc/reference/includes/win8_first_md.md)] WS_EX_LAYERED 樣式支援的位置之前的 Windows 版本僅適用於最上層的 windows 支援它的子視窗。|  
+|WS_EX_LAYERED|視窗[分層視窗](http://msdn.microsoft.com/library/ms632599.aspx#layered)。 如果視窗有，就無法使用這個樣式[類別樣式](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC 或 CS_CLASSDC。 不過，Microsoft Windows 8 的子視窗，其中 Windows 上的舊版支援僅適用於最上層的 windows 支援 WS_EX_LAYERED 樣式。|  
 |WS_EX_LEFT|給予視窗泛型靠左對齊屬性。 這是預設值。|  
 |WS_EX_LEFTSCROLLBAR|工作區左邊放置垂直捲軸。|  
 |WS_EX_LTRREADING|顯示視窗文字使用左到右讀取順序屬性。 這是預設值。|  

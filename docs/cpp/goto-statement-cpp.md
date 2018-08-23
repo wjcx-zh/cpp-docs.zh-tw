@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402568"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572183"
 ---
 # <a name="goto-statement-c"></a>goto 陳述式 (C++)
 **Goto**陳述式無條件地將控制權傳輸至指定的識別項所標記的陳述式。  
@@ -36,6 +36,25 @@ goto identifier;
  `identifier` 所指定之標記的陳述式必須位於目前的函式。 所有 `identifier` 名稱是內部命名空間的成員，因此不會干擾其他識別項。  
   
  陳述式標籤是僅有意義**goto**陳述式; 否則會忽略陳述式標籤。 標籤不能重新宣告。  
+
+A **goto**陳述式不允許將控制權移轉給略過該位置中的範圍內的任何變數的初始化的位置。 下列範例會引發 C2362:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  它是理想的程式設計風格，使用**中斷**，**繼續**，和**傳回**陳述式，而不是**goto**陳述式時可能的。 不過，因為**中斷**陳述式會結束迴圈的只有一個層級，您可能必須使用**goto**陳述式來結束深度巢狀的迴圈。  
   

@@ -1,5 +1,5 @@
 ---
-title: Pragma 指示詞和 __Pragma 關鍵字 |Microsoft 文件
+title: Pragma 指示詞和 __Pragma 關鍵字 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,34 +23,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 76a29a7ae4734e5d1f1930d5309163d1e1519aa4
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846229"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540388"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 指示詞和 __Pragma 關鍵字
-Pragma 指示詞會指定電腦專屬或作業專屬的編譯器功能。 Microsoft 編譯器專有的 `__pragma` 關鍵字可讓您在巨集定義範圍內撰寫 pragma 指示詞的程式碼。  
+Pragma 指示詞會指定電腦專屬或作業專屬的編譯器功能。 **__Pragma**關鍵字，也就是特定 Microsoft 編譯器，可讓您在巨集定義中的程式碼 pragma 指示詞。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      #pragma token-string  
+#pragma token-string  
 __pragma(token-string)  
 ```  
   
 ## <a name="remarks"></a>備註  
- C 和 C++ 的每個實作都支援其主機電腦或作業系統獨有的一些功能。 例如，有些程式必須精確掌控放置資料的記憶體區域，或是控制某些函式接收參數的方式。 `#pragma` 指示詞提供了一種方式，讓每個編譯器能夠提供電腦和作業系統專屬功能，同時還能保留與 C 及 C++ 語言的整體相容性。  
+ 
+C 和 C++ 的每個實作都支援其主機電腦或作業系統獨有的一些功能。 例如，有些程式必須精確掌控放置資料的記憶體區域，或是控制某些函式接收參數的方式。 **#Pragma**指示詞提供的每個編譯器能夠提供電腦和作業系統專屬功能，同時保留與 C 及 c + + 語言的整體相容性的方法。  
   
- Pragma 依定義為電腦或作業系統所專用，對每個編譯器而言通常各不相同。 Pragma 可用於條件陳述式、提供新的前置處理器功能，或是提供實作定義資訊給編譯器。  
+Pragma 依定義為電腦或作業系統所專用，對每個編譯器而言通常各不相同。 Pragma 可用於條件陳述式、提供新的前置處理器功能，或是提供實作定義資訊給編譯器。  
   
- `token-string` 是一連串提供特定編譯器指令及引數 (如果有的話) 的字元。 數字符號 (**#**) 的第一個非空格字元必須是包含 pragma 該行; 空白字元可以分隔數字符號和"pragma"這個字。 在 `#pragma` 之後，撰寫轉譯工具可以剖析為前置處理語彙基元的任何文字。 `#pragma` 的引數會受巨集展開的限制。  
+`token-string` 是一連串提供特定編譯器指令及引數 (如果有的話) 的字元。 數字符號 (**#**) 的第一個非空格字元必須是該行中，其中包含 pragma; 空白字元可以分隔數字符號和"pragma"這個字。 遵循 **#pragma**，撰寫轉譯器可以剖析為前置處理語彙基元的任何文字。 引數 **#pragma**限於巨集展開。  
   
- 如果編譯器發現無法辨識的 pragma，它會發出警告並繼續編譯。  
+如果編譯器發現無法辨識的 pragma，它會發出警告並繼續編譯。  
   
- Microsoft C 和 C++ 編譯器可辨識下列 pragma：  
+Microsoft C 和 C++ 編譯器可辨識下列 pragma：  
   
 ||||  
 |-|-|-|  
@@ -73,7 +73,8 @@ __pragma(token-string)
  1. 只有 C++ 編譯器支援。  
   
 ## <a name="pragmas-and-compiler-options"></a>Pragma 和編譯器選項  
- 有些 pragma 提供與編譯器選項相同的功能。 當 pragma 在原始程式碼中出現時，它會覆寫編譯器選項指定的行為。 例如，如果您指定[/Zp8](../build/reference/zp-struct-member-alignment.md)，您可以覆寫的程式碼的特定區段的這個編譯器設定[套件](../preprocessor/pack.md):  
+ 
+有些 pragma 提供與編譯器選項相同的功能。 當 pragma 在原始程式碼中出現時，它會覆寫編譯器選項指定的行為。 例如，如果您指定[/zp8](../build/reference/zp-struct-member-alignment.md)，您可以覆寫特定區段的程式碼的這個編譯器設定[組件](../preprocessor/pack.md):  
   
 ```  
 cl /Zp8 ...  
@@ -87,11 +88,12 @@ cl /Zp8 ...
 ```  
   
 ## <a name="the-pragma-keyword"></a>__pragma() 關鍵字  
- **Microsoft 專有的**  
+ 
+**Microsoft 專有**  
   
- 編譯器也支援 `__pragma` 關鍵字，其功能與 `#pragma` 指示詞相同，但是可以在巨集定義中以內嵌方式使用。 `#pragma`無法在巨集定義中使用指示詞，因為編譯器會將數字符號字元 （' #'） 解譯為指示詞中[字串化運算子 （#）](../preprocessor/stringizing-operator-hash.md)。  
+編譯器也支援 **__pragma**關鍵字，具有相同的功能做 **#pragma**指示詞，但可以是巨集定義中的以內嵌方式使用。 **#Pragma**指示詞不能使用巨集定義中，因為編譯器會將數字符號字元 （' #'） 解譯為指示詞中[字串化運算子 （#）](../preprocessor/stringizing-operator-hash.md)。  
   
- 下列程式碼範例將示範如何在巨集中使用 `__pragma` 關鍵字。 這段程式碼摘錄自＜編譯器 COM 支援範例＞中 ACDUAL 範本的 mfcdual.h 標頭：  
+下列程式碼範例示範如何 **__pragma**關鍵字可以用在巨集中。 這段程式碼摘錄自＜編譯器 COM 支援範例＞中 ACDUAL 範本的 mfcdual.h 標頭：  
   
 ```  
 #define CATCH_ALL_DUAL \  
@@ -111,9 +113,10 @@ END_CATCH_ALL \
 return _hr; \  
 ```  
   
- **End Microsoft 特定的**  
+**結束 Microsoft 專有**  
   
 ## <a name="see-also"></a>另請參閱  
- [C/c + + 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)   
- [C Pragma](../c-language/c-pragmas.md)   
- [關鍵字](../cpp/keywords-cpp.md)
+ 
+[C/c + + 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)   
+[C Pragma](../c-language/c-pragmas.md)   
+[關鍵字](../cpp/keywords-cpp.md)

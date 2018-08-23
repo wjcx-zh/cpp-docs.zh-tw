@@ -30,17 +30,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027306"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545767"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 當使用者按住最上層工具列按鈕時出現的工具列。  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
 ## <a name="syntax"></a>語法  
   
 ```  

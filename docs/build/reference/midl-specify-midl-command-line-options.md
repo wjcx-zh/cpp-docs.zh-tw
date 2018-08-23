@@ -1,5 +1,5 @@
 ---
-title: -MIDL （指定 MIDL 命令列選項） |Microsoft 文件
+title: -MIDL （指定 MIDL 命令列選項） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d125042041af1e20b6dfc4a02197c2124adbeb9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375184"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571661"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (指定 MIDL 命令列引數的選項)
 ```  
@@ -37,20 +37,20 @@ ms.locfileid: "32375184"
  其中：  
   
  `file`  
- 其中包含的檔案名稱[MIDL 命令列選項](http://msdn.microsoft.com/library/windows/desktop/aa366839)。  
+ 包含的檔案名稱[MIDL 命令列選項](http://msdn.microsoft.com/library/windows/desktop/aa366839)。  
   
 ## <a name="remarks"></a>備註  
- 必須提供所有選項的 IDL 檔案轉換至 TLB 檔案`file`;連結器的命令列上，無法指定 MIDL 命令列選項。 如果未指定 /MIDL，則會叫用 MIDL 編譯器只 IDL 檔案名稱和任何其他選項。  
+ 必須提供所有選項在 IDL 檔案轉換至 TLB 檔案`file`;連結器的命令列上，就無法指定 MIDL 命令列選項。 如果未指定 /MIDL，MIDL 編譯器會叫用的 IDL 檔名和任何其他選項。  
   
- 此檔案應該包含每行一個 MIDL 命令列選項。  
+ 此檔案應包含每行一個 MIDL 命令列選項。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下**連結器**資料夾。  
+2.  按一下 **連結器**資料夾。  
   
-3.  按一下**內嵌 IDL**屬性頁。  
+3.  按一下 **內嵌 IDL**屬性頁。  
   
 4.  修改**MIDL 命令**屬性。  
   

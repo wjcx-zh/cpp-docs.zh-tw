@@ -1,5 +1,5 @@
 ---
-title: _bittestandreset，_bittestandreset64 |Microsoft 文件
+title: _bittestandreset、_bittestandreset64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d97ddf2d9267f647644fbcc9d10f6072dffc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f55be256ec7b400be6c46f928a2f2309d047ca2c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331632"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539770"
 ---
 # <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元重設為 0。  
   
@@ -60,8 +60,8 @@ unsigned char _bittestandreset64(
   
 |內建|架構|  
 |---------------|------------------|  
-|`_bittestandreset`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_bittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandreset`|x86、 x64、 ARM|  
+|`_bittestandreset64`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -105,7 +105,7 @@ int main()
 The number was negative.  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

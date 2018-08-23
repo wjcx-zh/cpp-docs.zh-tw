@@ -1,5 +1,5 @@
 ---
-title: _umul128 |Microsoft 文件
+title: _umul128 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6998b51be8fd11092c4266fa7eee7434be8e5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331528"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538814"
 ---
 # <a name="umul128"></a>_umul128
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  將兩個作為前兩個引數傳入的 64 位元不帶正負號整數相乘，並將乘積的 64 高位元置於 `HighProduct` 所指向的 64 位元不帶正負號整數中，然後傳回乘積的 64 低位元。  
   
@@ -55,7 +55,7 @@ unsigned __int64 _umul128(
   
 |內建|架構|頁首|  
 |---------------|------------------|------------|  
-|`_umul128`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_umul128`|ARM、 x64|\<intrin.h>|  
   
 ## <a name="example"></a>範例  
   
@@ -84,7 +84,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

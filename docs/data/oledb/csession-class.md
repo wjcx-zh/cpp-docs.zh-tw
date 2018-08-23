@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 72ac1a5be4f2e114e5b90b65542b09733c43d174
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1ca0d5a4dfd8139c0941dffd22397f296b7b4354
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338859"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572636"
 ---
 # <a name="csession-class"></a>CSession 類別
 表示單一的資料庫存取工作階段。  
@@ -98,7 +98,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[itransaction:: Abort](https://msdn.microsoft.com/library/ms709833.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[itransaction:: Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。 
@@ -127,13 +127,13 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[itransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[itransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [itransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx)。  
+ 如需詳細資訊，請參閱 < [itransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))。  
 
 ## <a name="gettransactioninfo"></a> Csession:: Gettransactioninfo
 傳回交易的相關資訊。  
@@ -145,13 +145,13 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx)中*OLE DB 程式設計人員參考*。 
+ 如需詳細資訊，請參閱 < [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="open"></a> Csession:: Open
 開啟資料來源物件的新工作階段。  
@@ -169,10 +169,10 @@ HRESULT Open(const CDataSource& ds,
  [in]若要開啟工作階段的資料來源。  
   
  *pPropSet*  
- [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。  
+ [in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK 中。  
   
  *ulPropSets*  
- [in]數目[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構傳入*Dbpropset*引數。  
+ [in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構傳入*Dbpropset*引數。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。  
@@ -193,13 +193,13 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[itransactionlocal:: Starttransaction](https://msdn.microsoft.com/library/ms709786.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [itransactionlocal:: Starttransaction](https://msdn.microsoft.com/library/ms709786.aspx)中*OLE DB 程式設計人員參考*。 
+ 如需詳細資訊，請參閱 < [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
   
 ## <a name="see-also"></a>另請參閱  
  [CatDB](../../visual-cpp-samples.md)   

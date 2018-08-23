@@ -1,5 +1,5 @@
 ---
-title: __svm_skinit |Microsoft 文件
+title: __svm_skinit |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e47608b7ec58e433d9be5e2f2178a825b6be2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338100"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538258"
 ---
 # <a name="svmskinit"></a>__svm_skinit
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 開始可驗證安全軟體，例如虛擬機器監視器載入。  
+ 啟始載入可驗證安全的軟體，例如虛擬機器監視器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,24 +41,24 @@ void __svm_skinit(
   
 |參數|描述|  
 |---------------|-----------------|  
-|`SLB`|64k 位元組的 32 位元實體位址安全載入器區塊 (SLB)。|  
+|`SLB`|32 位元的實體位址為 64k 位元組的安全載入器區塊 (SLB)。|  
   
 ## <a name="remarks"></a>備註  
- `__svm_skinit`函數即相當於`SKINIT`機器指令。 此函式是使用驗證，並載入受信任的軟體，稱為安全性核心 (SK) 的處理器和受信任的平台模組 (TPM) 的安全性系統的一部分。 虛擬機器監視器是安全性核心的範例。 安全性系統會驗證程式元件在初始化過程中，載入並防止竄改插斷、 裝置存取，或另一個程式中，如果電腦是多處理器元件。  
+ `__svm_skinit`函式相當於`SKINIT`機器指令。 此函式是使用處理器和受信任的平台模組 (TPM) 來確認，然後載入呼叫安全性核心 (SK) 的受信任的軟體安全性系統的一部分。 虛擬機器監視器是一個安全性核心的範例。 安全性系統會驗證程式元件在初始化過程中，載入並防止竄改插斷、 裝置的存取，或另一個程式，如果電腦是多處理器的元件。  
   
- `SLB`參數指定實體位址 64k 區塊的記憶體稱為*安全載入器區塊*(SLB)。 SLB 包含呼叫可建立為電腦作業環境及後續載入安全性核心安全載入器的程式。  
+ `SLB`參數指定實體位址的記憶體稱為 64k 區塊*安全載入器區塊*(SLB)。 SLB 會包含呼叫安全載入器，會建立作業環境的電腦，並且後續載入安全性核心的程式。  
   
- 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
+ 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__svm_skinit`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_skinit`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

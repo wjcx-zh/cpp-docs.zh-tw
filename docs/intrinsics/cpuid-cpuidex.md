@@ -1,5 +1,5 @@
 ---
-title: __cpuid，__cpuidex |Microsoft 文件
+title: __cpuid、 __cpuidex |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 218ade95dc3e1084e42ebceda8fbfcb83c16810b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336065"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540410"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
-產生可在 x86 和 `cpuid` 上使用的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 指令。 此指令會查詢處理器，以取得受支援功能及 CPU 類型的相關資訊。
+會產生`cpuid`適用於 x86 和 x64 的指示。 此指令會查詢處理器，以取得受支援功能及 CPU 類型的相關資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -62,26 +62,26 @@ void __cpuidex(
 
 |內建|架構|
 |---------------|------------------|
-|`__cpuid`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
-|`__cpuidex`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|
+|`__cpuid`|x86、x64|
+|`__cpuidex`|x86、x64|
 
 **標頭檔** \<intrin.h >
 
 ## <a name="remarks"></a>備註
 
-此內建物件會儲存支援的功能和所傳回的 CPU 資訊`cpuid`中的指示*cpuInfo*，四個 32 位元整數的填滿具有值的陣列的 EAX、 EBX、 ECX 及 EDX 暫存器 （在中，順序）。 傳回的資訊有不同的意義，做為傳遞的值而定*function_id*參數。 使用的各種值傳回的資訊*function_id*因處理器而異。
+此內建的儲存支援的功能和所傳回的 CPU 資訊`cpuid`中的指示*cpuInfo*，陣列的四個 32 位元整數，填滿了值為 EAX、 EBX、 ECX 和 EDX 暫存器 （在中，順序）。 傳回的資訊的意義會因為做為傳遞的值而定*function_id*參數。 使用的各種值，傳回的資訊*function_id*因處理器而異。
 
-`__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。 `__cpuidex`內建函式設定的 ECX 暫存器值*subfunction_id*之前它會產生`cpuid`指令。 這可讓您收集處理器的其他資訊。
+`__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。 `__cpuidex`內建函式設定至 ecx 暫存器的值*subfunction_id*它會產生之前`cpuid`指令。 這可讓您收集處理器的其他資訊。
 
-如需使用和傳回值的這些內建的 Intel 處理器上的特定參數的詳細資訊，請參閱文件`cpuid`中的指示[Intel 64 和 ia-32 架構軟體開發人員手冊磁碟區 2： 指令集參考](http://go.microsoft.com/fwlink/p/?LinkID=510021)和[Intel 架構指令集延伸程式設計參考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文件會使用詞彙 「 分葉 」 與 「 對 「 *function_id*和*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
+如需有關要使用和 Intel 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`中的指示[Intel 64 和 IA-32 架構軟體開發人員手冊磁碟區 2： 指令集參考](http://go.microsoft.com/fwlink/p/?LinkID=510021)並[Intel 架構指令集延伸程式設計參考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文件使用詞彙 「 分葉 」 和 「 對 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
 
-如需使用和 AMD 處理器這些內建函式傳回的值的特定參數的詳細資訊，請參閱文件`cpuid`AMD64 架構程式設計人員手動磁碟區 3 中的指示： 一般用途和系統指示，和特定處理器系列的修訂指南中。 如需這些文件和其他資訊的連結，請參閱 AMD[開發人員指南、 手冊與 ISA 文件](http://go.microsoft.com/fwlink/p/?LinkId=510023)頁面。 AMD 文件使用詞彙 「 函式號碼 」 和 「 子函式號碼 」 進行*function_id*和*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
+如需有關要使用和 AMD 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`AMD64 架構程式設計人員手動磁碟區 3 中的指示： 一般用途和系統指示，和特定處理器系列的修訂指南中。 如需這些文件和其他資訊的連結，請參閱 AMD[開發人員指南、 手冊與 ISA 文件](http://go.microsoft.com/fwlink/p/?LinkId=510023)頁面。 AMD 文件使用詞彙 「 函式號碼 」 和 「 子函式號碼 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
 
-當*function_id*引數為 0， *cpuInfo*[0] 傳回最高可用非擴充*function_id*處理器所支援的值。 處理器製造商編碼在*cpuInfo*[1]， *cpuInfo*[2]，和*cpuInfo*[3]。
+當*function_id*引數為 0， *cpuInfo*[0] 會傳回最高可用非擴充*function_id*處理器支援的值。 處理器製造商編碼在*cpuInfo*[1]， *cpuInfo*[2]，並*cpuInfo*[3]。
 
-支援對特定指令集擴充功能和 CPU 功能會編碼在*cpuInfo*更高版本傳回的結果*function_id*值。 如需詳細資訊，請參閱上述連結的手冊，和下列範例程式碼。
+支援在對特定指令集擴充功能和 CPU 功能以編碼*cpuInfo*更高版本傳回的結果*function_id*值。 如需詳細資訊，請參閱上述連結的手冊，和下列範例程式碼。
 
-部分處理器支援擴充功能 CPUID 資訊。 如果這支援， *function_id*從 0x80000000 開始的值可能會用來傳回資訊。 若要判斷所允許的最大有意義的值，設定*function_id*為 0x80000000。 最大值*function_id*支援擴充函式寫入*cpuInfo*[0]。
+部分處理器支援擴充功能 CPUID 資訊。 如果這支援， *function_id*從 0x80000000 開始的值可能會用來傳回資訊。 若要判斷允許的最大有意義的值，請設定*function_id*為 0x80000000。 最大值*function_id*支援的擴充的功能寫入*cpuInfo*[0]。
 
 ## <a name="example"></a>範例
 
@@ -407,7 +407,7 @@ XSAVE supported
 
 ```
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 

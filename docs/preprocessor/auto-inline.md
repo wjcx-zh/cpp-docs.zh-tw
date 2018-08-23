@@ -1,5 +1,5 @@
 ---
-title: auto_inline |Microsoft 文件
+title: auto_inline |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de012a31fe68c68d4e64df2d3fa10b44d9112735
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: dc1b8a3b8539fb4871e4a28f4635c8012b9f80a2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954017"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545751"
 ---
 # <a name="autoinline"></a>auto_inline
-排除範圍內定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。  
+排除的範圍中定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma auto_inline( [{on | off}] )  
 ```  
   
 ## <a name="remarks"></a>備註  
- 若要使用**auto_inline** pragma，將它放之前和之後 （不在） 函式定義。 pragma 會在顯示該 pragma 後的第一個函式定義生效。  
+
+若要使用**auto_inline** pragma，將它放之前和之後 （不在） 函式定義。 pragma 會在顯示該 pragma 後的第一個函式定義生效。  
   
-## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>另請參閱
+
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027634"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539406"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 類別
 類別，用來處理任意類型和維度的陣列。  
@@ -379,7 +379,7 @@ VARIANT Detach();
  基礎`VARIANT`中的值`COleSafeArray`物件。  
   
 ### <a name="remarks"></a>備註  
- 藉由設定函式中斷連結的安全陣列中的資料[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)設為 VT_EMPTY 的物件。 它是以釋放陣列呼叫 Windows 函式的呼叫者的責任[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835)。  
+ 藉由設定函式中斷連結的安全陣列中的資料[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)設為 VT_EMPTY 的物件。 它是以釋放陣列呼叫 Windows 函式的呼叫者的責任[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)。  
   
  發生錯誤時，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)。  
   
@@ -607,7 +607,7 @@ void PutElement(
  要指派給陣列的資料指標。 VT_DISPATCH、 VT_UNKNOWN 和 VT_BSTR variant 類型都是指標，而且不需要另一個間接取值層級。  
   
 ### <a name="remarks"></a>備註  
- 此函式會自動呼叫 Windows 函式[SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx)並[SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx)之前和之後指派項目。 如果資料項目是字串、物件或變數，函數會正確將它複製，而且如果現有的項目是字串、物件或變數，則會正確清除。  
+ 此函式會自動呼叫 Windows 函式[SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock)並[SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)之前和之後指派項目。 如果資料項目是字串、物件或變數，函數會正確將它複製，而且如果現有的項目是字串、物件或變數，則會正確清除。  
   
  請注意，您可以在陣列中擁有多個鎖定，因此您可以在陣列由其他作業鎖定時將項目放入陣列。  
   

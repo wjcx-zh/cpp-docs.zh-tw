@@ -1,5 +1,5 @@
 ---
-title: CPaneContainerManager 類別 |Microsoft 文件
+title: CPaneContainerManager 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079373"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539778"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 類別
-`CPaneContainerManager`類別會管理儲存體和目前的停駐配置的顯示。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+`CPaneContainerManager`類別管理的儲存體和顯示目前停駐的配置。  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -191,12 +191,12 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>備註  
- 架構會自動建立的執行個體`CPaneContainerManager`物件，並將它們是內嵌至[CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)物件或[CMultiPaneFrameWnd 類別](../../mfc/reference/cmultipaneframewnd-class.md)物件。  
+ 架構會自動建立的執行個體`CPaneContainerManager`物件，並將其可能是內嵌到[CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)物件或 into [CMultiPaneFrameWnd 類別](../../mfc/reference/cmultipaneframewnd-class.md)物件。  
   
- `CPaneContainerManager`類別會儲存的指標，從建置在二進位樹狀目錄的根目錄[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)物件。  
+ `CPaneContainerManager`類別會儲存在變數的指標，從建立二進位樹狀目錄的根目錄[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)物件。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何取得參考`CPaneContainerManager`物件。 此程式碼片段是部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何取得參考`CPaneContainerManager`物件。 此程式碼片段是一部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   

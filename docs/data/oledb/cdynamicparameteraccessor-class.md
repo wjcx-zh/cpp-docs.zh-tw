@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a39e4d600ab5bb209a74ce74dd37af2eb496de0d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338216"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572540"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 類別
 
@@ -304,7 +304,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
  [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。  
   
  *pStatus*  
- [out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+ [out]包含指定的參數 DBSTATUS 狀態變數的指標。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="remarks"></a>備註  
  第一個覆寫會傳回**真**成功或**false**失敗。 第二個覆寫會指向包含狀態的指定參數的記憶體。
@@ -407,7 +407,7 @@ bool SetParam(TCHAR* pParamName,
  [in]要包含的資料寫入緩衝區記憶體的指標。  
   
  *status*  
- [in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+ [in] DBSTATUS 資料行狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="return-value"></a>傳回值  
  傳回**真**成功或**false**失敗。  
@@ -449,7 +449,7 @@ bool SetParamStatus(DBORDINAL nParam,
  [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 請參閱[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)的範例。  
   
  *status*  
- [in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+ [in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="remarks"></a>備註  
  傳回**真**成功或**false**失敗。 
@@ -475,7 +475,7 @@ bool SetParamString(DBORDINAL nParam,
  [in]ANSI 的指標 (**CHAR**) 或 Unicode (**WCHAR**) 字串的指定參數的資料。 請參閱 oledb.h DBSTATUS。  
   
  *status*  
- [in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](https://msdn.microsoft.com/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
+ [in]指定的參數 DBSTATUS 狀態。 如需 DBSTATUS 值的資訊，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*，或在 oledb.h DBSTATUS 搜尋。  
   
 ### <a name="remarks"></a>備註  
  傳回**真**成功或**false**失敗。  

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337378"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540778"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 提供 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，以及管理視窗的成員。  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>備註  
  如果值*nStyle*參數不是有效的這個方法會判斷提示中偵錯模式而且引發[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在發行模式中。 發生其他執行階段錯誤，這個方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
   
- 這個方法影響狀態的功能表中撰寫的應用程式[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]和更新版本。  
+ 這個方法影響狀態的功能表中撰寫適用於 Windows Vista 和更新版本的應用程式。  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  呼叫此函式可將字串放在識別碼為 0 的狀態列窗格。  

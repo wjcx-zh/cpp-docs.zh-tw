@@ -90,17 +90,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 05f80ef1a7fd4e21bda2fd9705c4ed1be391e9a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852335"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539580"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 類別
 `CMultiPaneFrameWnd`類別會擴充[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。 這可以支援多個窗格。 而不是一種控制列的單一內嵌控制代碼`CMultiPaneFrameWnd`包含[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)物件，可讓使用者將一一停駐`CMultiPaneFrameWnd`到另一個，並以動態方式建立多個浮動、 索引標籤式windows。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   

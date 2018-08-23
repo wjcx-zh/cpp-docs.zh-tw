@@ -1,5 +1,5 @@
 ---
-title: named_guids |Microsoft 文件
+title: named_guids |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2022f979205fed461f02e5886698d9455021a855
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fe616785c63602b5de9702cd3e6c7d80f9872fc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912845"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539378"
 ---
 # <a name="namedguids"></a>named_guids
-**C + + 特定的**  
+**C + + 特定**  
   
- 告知編譯器来定義和初始化 GUID 變數中表單的舊樣式**LIBID_MyLib**， **CLSID_MyCoClass**， **IID_MyInterface**，和**DIID_MyDispInterface**。  
+告知編譯器来定義和初始化 GUID 變數中表單的舊樣式`LIBID_MyLib`， `CLSID_MyCoClass`， `IID_MyInterface`，和`DIID_MyDispInterface`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,8 +35,10 @@ named_guids
 ```  
   
 ## <a name="remarks"></a>備註  
- **END c + + 特定的**  
+
+**END c + + 特定的**  
   
 ## <a name="see-also"></a>另請參閱  
- [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

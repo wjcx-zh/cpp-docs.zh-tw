@@ -1,5 +1,5 @@
 ---
-title: __readmsr |Microsoft 文件
+title: __readmsr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e8196b25b1507c92542faa6dd8ca59b4632d8f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3be04079de11642b2641260fdfe997d3fcb48d6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335909"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539016"
 ---
 # <a name="readmsr"></a>__readmsr
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生`rdmsr`指令，讀取所指定的模型特定暫存`register`並傳回其值。  
+ 會產生`rdmsr`的指示，它會讀取所指定的模型特定暫存`register`並傳回其值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ __int64 __readmsr(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readmsr`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readmsr`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -58,7 +58,7 @@ __int64 __readmsr(
   
  如需詳細資訊，請參閱 AMD 文件。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

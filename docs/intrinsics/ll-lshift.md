@@ -1,5 +1,5 @@
 ---
-title: __ll_lshift |Microsoft 文件
+title: __ll_lshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327368"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543121"
 ---
 # <a name="lllshift"></a>__ll_lshift
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 向左移位指定位元數所提供的 64 位元值。  
+ 提供的 64 位元值向左移位指定的位元數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,14 +53,14 @@ unsigned __int64 __ll_lshift(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__ll_lshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 如果您編譯程式，使用 64 位元架構和`nBit`大於 63，要移位的位元數是`nBit`模數 64。 如果您編譯程式，使用 32 位元架構和`nBit`大於 31，要移位的位元數是`nBit`模數 32。  
+ 如果您編譯您使用 64 位元架構的程式和`nBit`大於 63，移位的位元數字是`nBit`模數 64。 如果您編譯您使用 32 位元架構的程式和`nBit`大於 31，移位的位元數字是`nBit`32 模數。  
   
- `ll`指出的名稱中的 這是作業，在`long long`(`__int64`)。  
+ `ll`名稱中指出這是作業，在`long long`(`__int64`)。  
   
 ## <a name="example"></a>範例  
   
@@ -89,9 +89,9 @@ int main()
 10000  
 ```  
   
- **請注意**沒有左的移位作業的不帶正負號的版本。 這是因為`__ll_lshift`已使用不帶正負號的輸入的參數。 與向右移位，不同的是沒有正負號無關的左移，因為結果中的最小顯著性位元一定會設定為零不論移位的值的正負號。  
+ **請注意**沒有左的移位作業的不帶正負號的版本。 這是因為`__ll_lshift`已使用不帶正負號的輸入的參數。 與向右移位，沒有任何登相依性，如左移，因為結果中的最小顯著性位元一定會設定為零無論正負號的移位的值為何。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__ll_rshift](../intrinsics/ll-rshift.md)   

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401478"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572725"
 ---
 # <a name="main-program-startup"></a>main：程式啟動
-名為的特殊函式**主要**是執行所有的 C 和 c + + 程式的起點。 如果您是撰寫程式碼遵守[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]程式設計模型，您可以使用`wmain`，這是寬字元版本**主要**。  
+名為的特殊函式**主要**是執行所有的 C 和 c + + 程式的起點。 如果您是撰寫的程式碼遵守 Unicode 程式設計模型，您可以使用`wmain`，這是寬字元版本**主要**。  
   
  **主要**函式不會預先定義的編譯器。 必須在程式文字中提供這個函式。  
   

@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72fa9523b850e5c7d76b587c37b181f21df25c0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c0903c4d6165ec511d35f7aac13deca06a704c31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013976"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42571272"
 ---
 # <a name="propputref"></a>propputref
-指定使用參考而非值的屬性設定函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[propputref]  
-```  
-  
-## <a name="remarks"></a>備註  
- **Propputref** c + + 屬性具有相同的功能[propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 範例，請參閱[可繫結](../windows/bindable.md)範例使用**propputref**。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|方法|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|`propget`, `propput`|  
-  
- 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [方法屬性](../windows/method-attributes.md)   
- [propget](../windows/propget.md)   
- [propput](../windows/propput.md)   
+
+指定使用參考而非值的屬性設定函式。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[propputref]
+```
+
+## <a name="remarks"></a>備註
+
+**Propputref** c + + 屬性具有相同的功能[propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) MIDL 屬性。
+
+## <a name="example"></a>範例
+
+範例，請參閱[可繫結](../windows/bindable.md)範例使用**propputref**。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|方法|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|`propget`, `propput`|
+
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[方法屬性](../windows/method-attributes.md)  
+[propget](../windows/propget.md)  
+[propput](../windows/propput.md)  

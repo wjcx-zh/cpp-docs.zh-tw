@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 686dbe540301508bd95563b7eafc466a5821a9f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209218"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572255"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 這個類別會使用以 COM 為基礎的記憶體常式的智慧型指標類別提供基礎。  
@@ -173,10 +173,10 @@ HRESULT CoCreateInstance(
  相關聯的資料和程式碼是用來建立物件的 CLSID。  
   
 ### <a name="return-value"></a>傳回值  
- 在成功時，或因為 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE 會傳回 S_OK，失敗。 請參閱[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)並[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)如需這些錯誤的描述。  
+ 在成功時，或因為 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE 會傳回 S_OK，失敗。 請參閱[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)並[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)如需這些錯誤的描述。  
   
 ### <a name="remarks"></a>備註  
- 如果呼叫方法的第一個表單，則[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)用來復原的 CLSID。 然後呼叫這兩種形式[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 如果呼叫方法的第一個表單，則[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)用來復原的 CLSID。 然後呼叫這兩種形式[CoCreateClassInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
  在偵錯組建中，判斷提示就會發生錯誤，如果[CComPtrBase::p](#p)不等於 NULL。  
   

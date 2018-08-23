@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
-ms.translationtype: HT
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884989"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571933"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
 這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總物件的介面。 根據定義，彙總的物件會包含在外部物件。 `CComAggObject`類別是類似[CComObject 類別](../../atl/reference/ccomobject-class.md)，只不過它會公開給外部用戶端直接存取的介面。  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |名稱|描述|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|遞增參考計數，彙總的物件。|  
-|[CComAggObject::CreateInstance](#createinstance)|此靜態函式可讓您建立新**CComAggObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComAggObject::CreateInstance](#createinstance)|此靜態函式可讓您建立新**CComAggObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|執行最後的初始化`m_contained`。|  
 |[CComAggObject::FinalRelease](#finalrelease)|執行最終解構`m_contained`。|  
 |[CComAggObject::QueryInterface](#queryinterface)|擷取所要求介面的指標。|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，並遞減模組鎖定計數。  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- 此靜態函式可讓您建立新**CComAggObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此靜態函式可讓您建立新**CComAggObject <** `contained` **>** 物件，而不需要的額外負荷[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。  
   
 ```
 static HRESULT WINAPI CreateInstance(

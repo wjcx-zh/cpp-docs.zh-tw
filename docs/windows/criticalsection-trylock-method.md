@@ -17,40 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12d823cdefa90cad1e454996be274135d9e68fa9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 382dbdd2d0816d6ab0846acd0f8c164cd542114f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647624"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575837"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 方法
-嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-SyncLock TryLock();  
-  
-static SyncLock TryLock(  
-   _In_ CRITICAL_SECTION* cs  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *cs*  
- 使用者指定的重要區段物件。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功進入重要區段，為非零值或目前的執行緒已經擁有重要區段。 如果另一個執行緒已經擁有重要區段，則為零。  
-  
-## <a name="remarks"></a>備註  
- 第一個**TryLock**函式會影響目前的重要區段物件。 第二個**TryLock**函式會影響使用者指定的重要區段。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [CriticalSection 類別](../windows/criticalsection-class.md)
+
+嘗試進入重要區段，而不會封鎖。 如果呼叫成功，呼叫執行緒會取得重要區段的擁有權。
+
+## <a name="syntax"></a>語法
+
+```cpp
+SyncLock TryLock();
+
+static SyncLock TryLock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>參數
+
+*cs*  
+使用者指定的重要區段物件。
+
+## <a name="return-value"></a>傳回值
+
+如果成功進入重要區段，為非零值或目前的執行緒已經擁有重要區段。 如果另一個執行緒已經擁有重要區段，則為零。
+
+## <a name="remarks"></a>備註
+
+第一個**TryLock**函式會影響目前的重要區段物件。 第二個**TryLock**函式會影響使用者指定的重要區段。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[CriticalSection 類別](../windows/criticalsection-class.md)

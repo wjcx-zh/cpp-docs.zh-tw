@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows 類別 |Microsoft 文件
+title: CMFCVisualManagerWindows 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -150,17 +150,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5582c634428290086393791ae23d551726bff7ab
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: fd7ebc32fa76165e35aa3ea23cf3acda61b80189
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040658"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538685"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 類別
-`CMFCVisualManagerWindows` 當使用者選取 Windows XP 或 Vista 佈景主題，模擬 Microsoft Windows XP 或 Microsoft Vista 的外觀。  
+`CMFCVisualManagerWindows` 當使用者選取 Windows XP 或 Vista 佈景主題時，會模擬 Microsoft Windows XP 或 Microsoft Vista 的外觀。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -180,11 +180,11 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|架構會呼叫這個方法來判斷是否 3D 索引標籤應該一律會反白顯示應用程式中。 (覆寫[CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs)。)|  
+|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|架構會呼叫這個方法，以判斷是否 3D 索引標籤應該一律會反白顯示的應用程式中。 (覆寫[CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs)。)|  
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(覆寫 `CMFCVisualManager::DrawComboBorderWinXP`。)|  
 |[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(覆寫[CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp)。)|  
 |[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(覆寫[CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp)。)|  
-|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|當它繪製工具列按鈕時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder)。)|  
+|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|當它繪製的工具列按鈕時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder)。)|  
 |[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(覆寫[CMFCVisualManager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder)。)|  
 |[CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|(覆寫 `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`。)|  
 |[CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)|(覆寫 `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`。)|  
@@ -193,7 +193,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(覆寫[CMFCVisualManager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton)。)|  
 |[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|(覆寫 `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`。)|  
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||  
-|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|指出是否視覺管理員實作 Office XP 樣式的功能表。 (覆寫[CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus)。)|  
+|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|指出是否視覺化管理員實作 Office XP 樣式的功能表。 (覆寫[CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus)。)|  
 |[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|(覆寫 `CMFCVisualManager::IsWindowsThemingSupported`。)|  
 |[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|指出是否可以使用 Windows 佈景主題。|  
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawBarGripper`。)|  
@@ -209,12 +209,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawEditBorder`。)|  
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(覆寫[CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox)。)|  
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`。)|  
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|當它繪製框線周圍的執行個體時，架構會呼叫這個方法[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)。 (覆寫[CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder)。)|  
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|架構會呼叫這個方法，當它繪製的執行個體周圍的框線[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)。 (覆寫[CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder)。)|  
 |[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|當它繪製標題控制項的排序箭號時，架構會呼叫此函式。 (覆寫[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow)。)|  
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`。)|  
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`。)|  
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`。)|  
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|CMFCVisualManager::OnDrawStatusBarSizeBox (覆寫[CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder)。)|  
+|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|當它繪製 Outlook 頁 按鈕的框線時由架構呼叫。 (覆寫[CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder)。)|  
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`。)|  
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`。)|  
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`。)|  
@@ -234,12 +234,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnErasePopupWindowButton](#onerasepopupwindowbutton)|(覆寫 `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`。)|  
 |[CMFCVisualManagerWindows::OnEraseTabsArea](#onerasetabsarea)|(覆寫 `CMFCVisualManagerOfficeXP::OnEraseTabsArea`。)|  
 |[CMFCVisualManagerWindows::OnEraseTabsButton](#onerasetabsbutton)|(覆寫 `CMFCVisualManagerOfficeXP::OnEraseTabsButton`。)|  
-|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|架構會呼叫這個方法時，它會清除框架上[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。 (覆寫[CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe)。)|  
+|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|架構會呼叫這個方法，當它在清除框架[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。 (覆寫[CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe)。)|  
 |[CMFCVisualManagerWindows::OnFillBarBackground](#onfillbarbackground)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillBarBackground`。)|  
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillButtonInterior`。)|  
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`。)|  
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`。)|  
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|填滿內部的 Outlook 下一頁按鈕時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton)。)|  
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|當它填滿內部的 Outlook 網頁按鈕時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton)。)|  
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(覆寫 `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`。)|  
 |[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|架構會呼叫這個方法時的背景填滿[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控制項。 (覆寫[CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground)。)|  
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(覆寫 `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`。)|  
@@ -251,15 +251,15 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|指定的 Windows XP 主題是否顯示 3D 索引標籤。|  
+|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|指定 Windows XP 佈景主題是否顯示 3D 索引標籤。|  
   
 ## <a name="remarks"></a>備註  
- 使用`CMFCVisualManagerWindows`類別，以變更您的應用程式，以模仿應用程式執行所在的電腦上的目前佈景主題的外觀。  
+ 使用`CMFCVisualManagerWindows`類別，以變更您的應用程式，來模擬目前的佈景主題，應用程式執行所在的電腦上的外觀。  
   
- 不過，如果您的應用程式的 Windows 版本早於 Windows XP 上執行，或是佈景主題會停用，因為使用者使用 Windows 佈景主題可能就無法使用**傳統**檢視。 如果使用無佈景主題，應用程式使用中定義的預設視覺化管理員[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
+ 不過，如果您的應用程式的 Windows 版本早於 Windows XP 上執行，或佈景主題已停用，因為使用者使用 Windows 佈景主題可能會無法使用**傳統**檢視。 如果沒有佈景主題，應用程式使用中定義的預設視覺管理員[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`CMFCVisualManagerWindows`。 此程式碼片段是部分[桌面警示示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`CMFCVisualManagerWindows`。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]  
   
@@ -508,17 +508,17 @@ static BOOL IsWinXPThemeAvailible();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，若使用佈景主題使用;否則便是 0。  
+ 佈景主題使用; 如果為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這個方法僅適用於所有 Windows XP 和更新版本的佈景主題。  
+ 這個方法是適用於所有 Windows XP 及更新版本的佈景主題。  
   
  `IsWinXPThemeAvailable` 等同於`CMFCVisualManagerWindows::IsWindowsThemingAvailable`不同之處在於`IsWinXPThemeAvailable`是靜態方法。 因此，它會建立暫存的視覺管理員，如果不存在。  
   
- `IsWinXPThemeAvailable` 一律傳回 0 早於 Windows XP 的 Windows 版本。  
+ `IsWinXPThemeAvailable` 一律傳回 0 的 Windows 版本早於 Windows XP。  
   
 ##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme  
- 布林值參數會決定視覺管理員是否顯示 3D 索引標籤。  
+ 布林值參數會決定 visual manager 是否顯示 3D 索引標籤。  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;  
@@ -1494,7 +1494,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*送行*  
+ [in]*bOn*  
   
 ### <a name="remarks"></a>備註  
   

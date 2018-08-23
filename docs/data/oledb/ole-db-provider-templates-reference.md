@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340413"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573316"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 可以分成下列類別分組的類別和介面的 OLE DB 提供者樣板。 參考資料也包含下列資訊[OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "39340413"
  隨即開啟，並傳回包含單一基底資料表或索引中的所有資料列的資料列集。 工作階段物件的強制介面。  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- 實作 OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)介面，讓更新的現有資料列，刪除資料列，並插入新資料列中的資料行的值。  
+ 實作 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))介面，讓更新的現有資料列，刪除資料列，並插入新資料列中的資料行的值。  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
  這個類別繼承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) ，並覆寫[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl` 執行相同的功能`IObjectWithSite`但也可讓 OLE DB 屬性`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。  
@@ -75,13 +75,13 @@ ms.locfileid: "39340413"
  實作資料列集屬性，方法是使用內容設定您的命令類別中定義的對應。 在 資料列集上的強制介面。  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- 實作 OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx)介面，它會從資料列集提取任意的資料列。 若要支援 OLE DB 的書籤中的資料列集，請繼承自這個類別的資料列集。  
+ 實作 OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\))介面，它會從資料列集提取任意的資料列。 若要支援 OLE DB 的書籤中的資料列集，請繼承自這個類別的資料列集。  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。 處理通知的取用者實作[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)並註冊該連接點上。  
+ 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。 處理通知的取用者實作[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))並註冊該連接點上。  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- 實作 OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)介面，讓消費者可以延遲的具有所做的變更傳輸[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)到資料來源，並復原變更，才能加以傳送。  
+ 實作 OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))介面，讓消費者可以延遲的具有所做的變更傳輸[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))到資料來源，並復原變更，才能加以傳送。  
   
 ## <a name="command-classes"></a>命令類別  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ ms.locfileid: "39340413"
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- 實作 OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx)介面、 加入記錄和記錄擷取的資料成員。  
+ 實作 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\))介面、 加入記錄和記錄擷取的資料成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   

@@ -1,5 +1,5 @@
 ---
-title: __movsb |Microsoft 文件
+title: __movsb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9c72910a6b8084d015f151d7e701f6b63ffd1d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328223"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540776"
 ---
 # <a name="movsb"></a>__movsb
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 產生的移動字串 (`rep movsb`) 指令。  
+ 產生的移動的字串 (`rep movsb`) 指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ void __movsb(
   
 #### <a name="parameters"></a>參數  
  [輸出] `Destination`  
- 要複製的目的地指標。  
+ 若要複製的目的地的指標。  
   
  [輸入] `Source`  
  要複製的來源指標。  
@@ -54,12 +54,12 @@ void __movsb(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__movsb`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsb`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結果是第一個`Count`位元組所指`Source`複製到`Destination`字串。  
+ 結果是第一個`Count`所指向的位元組`Source`複製到`Destination`字串。  
   
  此常式僅可作為內建常式使用。  
   
@@ -87,7 +87,7 @@ int main()
 A big black dog. A big black dog.  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

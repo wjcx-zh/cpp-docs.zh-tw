@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00aa5276c0d79be570cf17986865066a466a326c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 304e350c9f37e29bfda8414a1c33c1211929872f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880829"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572632"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 這個類別提供方法來建立和管理一個 map 物件。  
@@ -694,5 +694,5 @@ V  m_value;
   
 ## <a name="see-also"></a>另請參閱  
  [跑馬燈範例](../../visual-cpp-samples.md)   
- [UpdatePV 範例](../../visual-cpp-samples.md)   
+ [UpdatePV 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
  [類別概觀](../../atl/atl-class-overview.md)

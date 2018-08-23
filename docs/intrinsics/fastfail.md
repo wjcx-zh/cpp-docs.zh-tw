@@ -1,5 +1,5 @@
 ---
-title: __fastfail |Microsoft 文件
+title: __fastfail |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334362"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539769"
 ---
 # <a name="fastfail"></a>__fastfail
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  立即終止額外負荷最小的呼叫處理序。  
   
@@ -38,14 +38,14 @@ void __fastfail(unsigned int code);
  `__fastfail` 內建函式不會返回。  
   
 ## <a name="remarks"></a>備註  
- `__fastfail`內建函式提供的機制*快速失敗*要求，要求立即終止處理序可能已損毀處理序的方式。 一般例外狀況處理功能無法處理程式狀態可能已損毀和超越堆疊復原的嚴重失敗。 使用 `__fastfail` 終止使用最少額外負荷的處理序。  
+ `__fastfail`內建函式提供的機制*快速失敗*要求，要求立即終止處理序可能的損毀的程序的方法。 一般例外狀況處理功能無法處理程式狀態可能已損毀和超越堆疊復原的嚴重失敗。 使用 `__fastfail` 終止使用最少額外負荷的處理序。  
   
  在內部方面，會使用數種架構特定機制來實作 `__fastfail`：  
   
 |架構|指令|程式碼引數的位置|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|X64|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
  快速失敗要求是獨立的，通常僅需要執行兩個指令。 執行快速失敗要求後，核心就會採取適當的動作。 在使用者模式程式碼中，當引發快速失敗事件時，沒有超出指令指標本身的記憶體相依性。 即使有嚴重的記憶體損毀，這仍可會使其可靠性達到最大。  
@@ -62,11 +62,11 @@ void __fastfail(unsigned int code);
   
 |內建|架構|  
 |---------------|------------------|  
-|`__fastfail`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]、ARM|  
+|`__fastfail`|x86、 x64、 ARM|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

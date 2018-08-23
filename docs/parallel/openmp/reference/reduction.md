@@ -1,5 +1,5 @@
 ---
-title: 減少 |Microsoft 文件
+title: 減少 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692531"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42545756"
 ---
 # <a name="reduction"></a>reduction
-指定每個執行緒私用的一個或多個變數是減少作業在平行區域結尾處的主題。  
+指定一或多個變數為私用的每個執行緒減少作業在平行區域結尾處的主旨。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ reduction(operation:var)
  在變數上執行作業的運算子 (`var`) 在平行區域結尾處。  
   
  `var`  
- 在其上執行純量減少一個以上的變數。 如果指定了多個變數，請以逗號分隔變數名稱。  
+ 在其上執行純量減少一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
   
 ## <a name="remarks"></a>備註  
  `reduction` 適用於下列指示詞：  
@@ -50,7 +50,7 @@ reduction(operation:var)
   
 -   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 如需詳細資訊，請參閱[2.7.2.6 減少](../../../parallel/openmp/2-7-2-6-reduction.md)。  
+ 如需詳細資訊，請參閱 < [2.7.2.6 減少](../../../parallel/openmp/2-7-2-6-reduction.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -127,10 +127,10 @@ int main( )
              "%d to %d, is %d\n", 1, 10, nSum);  
   
     if (bSucceed)  
-        printf_s("All of the the functions, func1 through "  
+        printf_s("All of the functions, func1 through "  
                  "func5 succeeded!\n");  
     else  
-        printf_s("One or more of the the functions, func1 "  
+        printf_s("One or more of the functions, func1 "  
                  "through func5 failed!\n");  
   
     if (nCount != NUM_THREADS)   
@@ -162,7 +162,7 @@ int main( )
 ```Output  
 The parallel section was executed 4 times in parallel.  
 The sum of the consecutive integers from 1 to 10, is 55  
-All of the the functions, func1 through func5 succeeded!  
+All of the functions, func1 through func5 succeeded!  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

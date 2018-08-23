@@ -1,5 +1,5 @@
 ---
-title: 型別和儲存體 |Microsoft 文件
+title: 型別和儲存體 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d53749ace6b9021bd04e681fc74eb0e5ae4a5e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c76ea1bac491a7e9484ac88834c8e4b070c57ae5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380611"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572944"
 ---
 # <a name="types-and-storage"></a>類型和儲存區
-本章節描述的列舉型別和儲存體的資料型別[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]架構。  
+本章節描述的列舉型別和儲存體的資料類型，適用於 x64 架構。  
   
 -   [純量類型](../build/scalar-types.md)  
   

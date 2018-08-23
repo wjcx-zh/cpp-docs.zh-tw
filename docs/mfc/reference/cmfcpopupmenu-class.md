@@ -170,16 +170,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b80dbc4383b18f3e8183ae06d2259398b5e1223
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852545"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538612"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 實作 Windows 快顯功能表功能，並加入功能 (例如 Tear-Off 功能表和工具提示) 進行擴充。
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。    
   
 ## <a name="syntax"></a>語法  
   

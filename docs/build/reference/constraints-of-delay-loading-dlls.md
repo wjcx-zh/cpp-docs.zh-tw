@@ -1,5 +1,5 @@
 ---
-title: 延遲載入 Dll 的條件約束 |Microsoft 文件
+title: 延遲載入 Dll 的條件約束 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532d5ba64288fb70b19f10386186c0b520e67661
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375912"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571674"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延遲載入 DLL 的條件約束
 關於匯入的延遲載入有一些限制。  
@@ -30,9 +30,9 @@ ms.locfileid: "32375912"
   
 -   不支援延遲載入 Kernel32.dll。 延遲載入 Helper 需要這個 DLL 才能執行延遲載入。  
   
--   [繫結](../../build/reference/binding-imports.md)轉送點不支援項目。  
+-   [繫結](../../build/reference/binding-imports.md)轉送的點不支援項目。  
   
--   如果有發生在延遲載入 DLL 進入點的各處理序初始化，延遲載入 DLL 可能不會造成相同的處理序行為。 其他情況包括靜態 TLS （執行緒區域儲存區） 使用宣告[__declspec （thread)](../../cpp/thread.md)，但不會處理透過載入 DLL 時`LoadLibrary`。 動態 TLS (使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue`) 仍可用於靜態或延遲載入 DLL。  
+-   如果有發生在延遲載入 DLL 進入點的各處理序初始化，延遲載入 DLL 可能不會造成相同的處理序行為。 其他情況包括靜態 TLS （執行緒本機儲存體） 使用宣告[__declspec （thread)](../../cpp/thread.md)，這不會處理透過載入 DLL 時`LoadLibrary`。 動態 TLS (使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue`) 仍可用於靜態或延遲載入 DLL。  
   
 -   第一次呼叫函式之後，應該對匯入的函式重新初始化靜態 (全域) 函式指標。 這是因為第一次使用函式指標時將會指向 Thunk。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "32375912"
  [LoadLibrary 函式](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
  [GetModuleHandle 函式](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
  [GetProcAddress 函式](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [TlsAlloc 函式](http://msdn.microsoft.com/library/windows/desktop/ms686801.aspx)   
- [TlsFree 函式](http://msdn.microsoft.com/library/windows/desktop/ms686804.aspx)   
- [TlsGetValue 函式](http://msdn.microsoft.com/library/windows/desktop/ms686812.aspx)   
- [TlsSetValue 函式](http://msdn.microsoft.com/library/windows/desktop/ms686818.aspx)
+ [TlsAlloc 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
+ [TlsFree 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
+ [TlsGetValue 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
+ [TlsSetValue 函式](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

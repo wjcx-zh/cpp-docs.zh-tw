@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849945"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541192"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 類別
-`CMFCVisualManagerWindows7`讓應用程式的外觀[!INCLUDE[win7](../../build/includes/win7_md.md)]應用程式。  
+`CMFCVisualManagerWindows7`讓應用程式的 Windows 7 應用程式的外觀。  
   
 ## <a name="syntax"></a>語法  
   
@@ -103,7 +103,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetStyle`|設定的色彩配置`CMFCVisualManagerWindows7`GUI。|  
   
 ## <a name="remarks"></a>備註  
- 使用`CMFCVisualManagerWindows7`類別，以變更您的應用程式，來模擬的預設外觀[!INCLUDE[win7](../../build/includes/win7_md.md)]應用程式。 這個類別可能無效，如果您的應用程式正在執行的 Windows 版本早於[!INCLUDE[win7](../../build/includes/win7_md.md)]。 在該案例中，應用程式使用中定義的預設視覺管理員[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
+ 使用`CMFCVisualManagerWindows7`類別，以變更您的應用程式，來模擬預設的 Windows 7 應用程式的外觀。 這個類別可能不正確，如果您的應用程式的 Windows 版本早於 Windows 7 上執行。 在該案例中，應用程式使用中定義的預設視覺管理員[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
  CMFCVisualManagerWindows7 多個方法同時繼承自[CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)而`CMFCVisualManager`類別。 上一節中所列的方法是方法的新手`CMFCVisualManagerWindows7`類別。  
   

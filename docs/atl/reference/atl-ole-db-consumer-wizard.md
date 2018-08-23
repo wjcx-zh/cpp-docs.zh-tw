@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025980"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571560"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 這個精靈設定的 OLE DB 取用者類別與資料繫結到指定的 OLE DB 提供者存取指定的資料來源所需的。  
@@ -33,7 +33,7 @@ ms.locfileid: "39025980"
   
 ## <a name="uielement-list"></a>UIElement 清單  
 **資料來源**  
-**資料來源**按鈕可讓您設定使用指定的 OLE DB 提供者的指定的資料來源。 當您按一下此按鈕時，**資料連結屬性** 對話方塊隨即出現。 如需有關建置連接字串和**資料連結屬性** 對話方塊中，請參閱[資料連結 API 概觀](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK 文件。  
+**資料來源**按鈕可讓您設定使用指定的 OLE DB 提供者的指定的資料來源。 當您按一下此按鈕時，**資料連結屬性** 對話方塊隨即出現。 如需有關建置連接字串和**資料連結屬性** 對話方塊中，請參閱[資料連結 API 概觀](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK 文件。  
   
 > [!NOTE]
 >  在舊版中，Shift 鍵按一下**資料來源**按鈕開啟 開啟舊檔的對話方塊，讓您選取的資料連結 (.udl) 檔案。 不再支援這項功能。  
@@ -176,7 +176,7 @@ ms.locfileid: "39025980"
  如果您想要使用，請選取此選項`CCommand`或`db_command`建立命令和命令的存取子類別宣告。 這是預設選項。  
   
  **支援**  
- 選取核取方塊，以指定的取用者 （預設值為 none） 支援的更新類型。 下列各項將會設定[DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx)和適當的項目，如[DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx)屬性中設定對應。  
+ 選取核取方塊，以指定的取用者 （預設值為 none） 支援的更新類型。 下列各項將會設定[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))和適當的項目，如[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))屬性中設定對應。  
   
  **變更**  
  指定取用者，在資料列集支援的資料列資料的更新。  
@@ -190,4 +190,4 @@ ms.locfileid: "39025980"
 ## <a name="see-also"></a>另請參閱  
  [ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [連接字串和資料連結 (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [連接字串和資料連結 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

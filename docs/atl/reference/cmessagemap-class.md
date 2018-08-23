@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884850"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571389"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 類別
 這個類別可讓物件的訊息對應是由另一個物件的存取。  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>備註  
  `CMessageMap` 是抽象的基底類別，可讓物件的訊息對應至另一個物件來存取。 為了讓物件公開其訊息對應，其類別必須衍生自`CMessageMap`。  
   
- 使用 ATL`CMessageMap`支援包含 windows 和動態的訊息對應鏈結。 例如，任何類別包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)物件必須衍生自`CMessageMap`。 下列程式碼取自[SUBEDIT](../../visual-cpp-samples.md)範例。 透過[CComControl](../../atl/reference/ccomcontrol-class.md)，則`CAtlEdit`類別會自動衍生自`CMessageMap`。  
+ 使用 ATL`CMessageMap`支援包含 windows 和動態的訊息對應鏈結。 例如，任何類別包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)物件必須衍生自`CMessageMap`。 下列程式碼取自[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)範例。 透過[CComControl](../../atl/reference/ccomcontrol-class.md)，則`CAtlEdit`類別會自動衍生自`CMessageMap`。  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   

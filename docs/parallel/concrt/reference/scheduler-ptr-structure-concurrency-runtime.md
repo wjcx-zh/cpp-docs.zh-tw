@@ -1,5 +1,5 @@
 ---
-title: scheduler_ptr 結構 |Microsoft 文件
+title: scheduler_ptr 結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686980"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539966"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
-代表排程器的指標。 這個類別是為了允許使用 shared_ptr 共用存留期的規格，或只是使用原始指標的簡單參考。  
+代表排程器的指標。 這個類別存在，以允許使用 shared_ptr 或只是簡單參考使用原始指標的共用的存留期的規格。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,7 +75,7 @@ scheduler_interface* get() const;
 ##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  測試排程器指標是否為非 null  
   
-'' 運算子 bool() const;
+'' 運算子 bool （) const;
 ```  
   
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
@@ -91,7 +91,7 @@ scheduler_interface * operator-> const; （)
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-明確 scheduler_ptr （std:: shared_ptr < scheduler_interface > 排程器）。
+明確 scheduler_ptr （std:: < scheduler_interface > 排程器）;
 
 明確 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
 ```  

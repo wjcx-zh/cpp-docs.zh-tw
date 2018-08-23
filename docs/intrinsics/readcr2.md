@@ -1,5 +1,5 @@
 ---
-title: __readcr2 |Microsoft 文件
+title: __readcr2 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 252b9812f71eca2803b7266b4a45f357f0b11e93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3123a6f9a6cd0c579fe3074891ab4bfd864cbe
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324950"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539979"
 ---
 # <a name="readcr2"></a>__readcr2
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  讀取 CR2 暫存器，並傳回其值。  
   
@@ -41,14 +41,14 @@ unsigned __int64 __readcr2(void);
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readcr2`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr2`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此內建只適用於核心模式，且此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

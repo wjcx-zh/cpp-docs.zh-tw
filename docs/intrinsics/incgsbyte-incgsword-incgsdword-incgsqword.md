@@ -1,5 +1,5 @@
 ---
-title: __incgsbyte、 __incgsword、 __incgsdword、 __incgsqword |Microsoft 文件
+title: __incgsbyte、 __incgsword、 __incgsdword、 __incgsqword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,15 +26,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b2598b5a9eb999571c6f3b5809049f1c935a0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74e1b74c95f143aac7a915b3f148a85da9c5a3d3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329458"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543115"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte、__incgsword、__incgsdword、__incgsqword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  相對於開頭的位移所指定的記憶體位置中加入一個值`GS`區段。  
   
@@ -63,15 +63,15 @@ void __incgsqword(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__incgsbyte`|X64|  
+|`__incgsword`|X64|  
+|`__incgsdword`|X64|  
+|`__incgsqword`|X64|  
   
 ## <a name="remarks"></a>備註  
- 這些內建函式只適用於核心模式，常式僅可作為內建函式。  
+ 這些內建函式僅適用於核心模式，常式僅可作為內建函式。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__addgsbyte、 \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   

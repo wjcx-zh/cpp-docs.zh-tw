@@ -1,5 +1,5 @@
 ---
-title: _InterlockedXor 內建函式 |Microsoft 文件
+title: _InterlockedXor 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,15 +44,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dea8e222660825824c8dc02405832da4395b69f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522a2fc1f2092c90a9938efee8cf594e2813c5ad
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334119"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541201"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  在多個執行緒共用的變數上，執行不可部分完成的位元專有或 (XOR) 運算。  
   
@@ -171,10 +171,10 @@ __int64 _InterlockedXor64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedXor`、`_InterlockedXor8`、`_InterlockedXor16``_InterlockedXor64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedXor`、`_InterlockedXor8`、`_InterlockedXor16``_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedXor_np`、`_InterlockedXor8_np`、`_InterlockedXor16_np``_InterlockedXor64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedXor_HLEAcquire`、`_InterlockedXor_HLERelease`、`_InterlockedXor64_HLEAcquire``_InterlockedXor64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedXor_np`、`_InterlockedXor8_np`、`_InterlockedXor16_np``_InterlockedXor64_np`|X64|\<intrin.h>|  
+|`_InterlockedXor_HLEAcquire`、`_InterlockedXor_HLERelease`、`_InterlockedXor64_HLEAcquire``_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  每個函式名稱的數字會指定引數的位元大小。  
@@ -208,7 +208,7 @@ int main()
 0xffff0000 0xffff00 0xff00ff00  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

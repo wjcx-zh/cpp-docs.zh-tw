@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028287"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540414"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 實作可以停駐在固定位置或包含於索引標籤式窗格的窗格。  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>備註  
  架構會呼叫此方法以處理停駐浮動窗格。  
   
- 浮動工具列或固定使用 DT_IMMEDIATE 停駐模式的窗格，架構會延遲停駐命令，以讓使用者將視窗移出父框架工作區，停駐發生之前。 延遲的時間長度以毫秒為單位，並且受到[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)資料成員... 預設值[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)為 200。 此行為是模擬的停駐行為[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]2007年。  
+ 浮動工具列或固定使用 DT_IMMEDIATE 停駐模式的窗格，架構會延遲停駐命令，以讓使用者將視窗移出父框架工作區，停駐發生之前。 延遲的時間長度以毫秒為單位，並且受到[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)資料成員... 預設值[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)為 200。 此行為是模擬 Microsoft Word 2007 停駐的行為。  
   
  延遲停駐狀態 （CS_DELAY_DOCK 和 CS_DELAY_DOCK_TO_TAB），此架構不會執行停駐，直到使用者放開滑鼠按鈕。 如果窗格使用 DT_STANDARD 固定模式，架構會顯示在預計的停駐位置的矩形。 如果窗格使用 DT_SMART 固定模式，架構，則會顯示智慧停駐標記與半透明矩形在預計的停駐位置。 若要指定您窗格停駐模式，請呼叫[CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)方法。 如需智慧停駐的詳細資訊，請參閱[CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)。  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  如需更快的動畫效果，請降低此值。 如需較慢的動畫效果，增加此值。  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

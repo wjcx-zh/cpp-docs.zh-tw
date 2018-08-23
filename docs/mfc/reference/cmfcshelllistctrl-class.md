@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939adc0507eee61be432ba8e8f582cfc53005aa0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4a75d3f40ade42c25de51a3c65c98e8c448b03ed
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853991"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540177"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 類別
 `CMFCShellListCtrl`類別提供 Windows 清單控制項功能，並會將它展開加入顯示 shell 項目清單的能力。  
@@ -263,7 +263,7 @@ BOOL IsDesktop() const;
  如果顯示的資料夾是 [桌面] 資料夾中;，則為 TRUE。FALSE 否則。  
   
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 virtual int OnCompareItems(

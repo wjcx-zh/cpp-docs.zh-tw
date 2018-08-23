@@ -1,5 +1,5 @@
 ---
-title: __debugbreak |Microsoft 文件
+title: __debugbreak |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340173"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544412"
 ---
 # <a name="debugbreak"></a>__debugbreak
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  在您的程式碼中導致中斷點，在該位置，系統會提示使用者執行偵錯工具。  
   
@@ -40,13 +40,13 @@ void __debugbreak();
   
 |內建|架構|頁首|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|x86、 x64、 ARM|\<intrin.h>|  
   
 ## <a name="remarks"></a>備註  
- `__debugbreak`編譯器內建函式，類似於[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是可導致中斷點的可移植 Win32 方法。  
+ `__debugbreak`編譯器內建函式，類似於[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx)，是能造成中斷點的可移植 Win32 方式。  
   
 > [!NOTE]
->  編譯時 **/clr**，函式包含`__debugbreak`會編譯為 MSIL。 `asm int 3` 會導致函式編譯為原生。 如需詳細資訊，請參閱[__asm](../assembler/inline/asm.md)。  
+>  進行編譯時 **/clr**，函式，包含`__debugbreak`會編譯為 MSIL。 `asm int 3` 會導致函式編譯為原生。 如需詳細資訊，請參閱 < [__asm](../assembler/inline/asm.md)。  
   
  例如:   
   
@@ -70,7 +70,7 @@ main() {
   
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

@@ -1,5 +1,5 @@
 ---
-title: _BitScanReverse，_BitScanReverse64 |Microsoft 文件
+title: _Bitscanreverse、_bitscanreverse64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35d51f3e7eaf0daeca006ff669398c9a3727a098
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323647"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538616"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  從遮罩資料的最高有效位元 (MSB) 到最低有效位元 (LSB) 搜尋設定位元 (1)。  
   
@@ -60,8 +60,8 @@ unsigned char _BitScanReverse64(
   
 |內建|架構|頁首|  
 |---------------|------------------|------------|  
-|`_BitScanReverse`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_BitScanReverse64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
+|`_BitScanReverse`|x86、 x64、 ARM|\<intrin.h>|  
+|`_BitScanReverse64`|ARM、 x64||  
   
 ## <a name="example"></a>範例  
   
@@ -107,7 +107,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

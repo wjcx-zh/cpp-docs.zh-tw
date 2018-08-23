@@ -60,17 +60,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3135c95ddc32c198bb7abc6ddea4ef5aea5a1d8a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e4cfc3e0d129fdb10ee10275000df6d8c51604be
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338015"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538613"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 類別
 可顯示或隱藏 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) (設定為隱藏) 的按鈕。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。    
 ## <a name="syntax"></a>語法  
   
 ```  

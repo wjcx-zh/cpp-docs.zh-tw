@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3018 |Microsoft 文件
+title: 編譯器錯誤 C3018 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71695816672fa0f806accc32ac4f5a373557bdd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54436aab9ebb7821e33037bc7ec14a43aa20dda8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254329"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540768"
 ---
 # <a name="compiler-error-c3018"></a>編譯器錯誤 C3018
 'var1'：OpenMP 'for' 測試或增量必須使用索引變數 'var2'  
@@ -41,13 +41,13 @@ int main()
    {  
       #pragma omp for  
       for (i = 0; j < 10; ++i)   // C3018  
-      // try the the following line instead  
+      // try the following line instead  
       // for (i = 0; i < 10; ++i)  
          j *= 2;  
   
       #pragma omp for  
       for (i = 0; i < 10; j = j + i)   // C3018  
-      // try the the following line instead  
+      // try the following line instead  
       // for (i = 0; i < 10; i = j + i)  
          j *= 2;  
    }  

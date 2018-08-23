@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853546"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541765"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 封裝月曆控制項的功能。  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in]*cxyBorder*|框線寬度，單位為像素。|  
   
 ### <a name="remarks"></a>備註  
- 如果這個方法成功，若要設定框線寬度*cxyBorder*參數。 否則，框線寬度會重設為目前所指定的預設值[佈景主題](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，零，如果不會使用佈景主題。  
+ 如果這個方法成功，若要設定框線寬度*cxyBorder*參數。 否則，框線寬度會重設為目前所指定的預設值[佈景主題](/windows/desktop/Controls/visual-styles-overview)，零，如果不會使用佈景主題。  
   
  這個方法會傳送[MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)訊息，Windows SDK 中所述。  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>備註  
- 框線寬度設定為指定目前的預設值[佈景主題](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或如果不會使用佈景主題為零。  
+ 框線寬度設定為指定目前的預設值[佈景主題](/windows/desktop/Controls/visual-styles-overview)，或如果不會使用佈景主題為零。  
   
  這個方法會傳送[MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993)訊息，Windows SDK 中所述。  
   

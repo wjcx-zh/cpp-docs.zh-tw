@@ -1,5 +1,5 @@
 ---
-title: __wbinvd |Microsoft 文件
+title: __wbinvd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be74b466ed641474283e26217ae728c57f28edd8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326341"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539194"
 ---
 # <a name="wbinvd"></a>__wbinvd
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生回寫，以及使快取 (`wbinvd`) 指令。  
+ 產生的回寫和使其失效的快取 (`wbinvd`) 指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +39,14 @@ void __wbinvd(void);
   
 |內建|架構|  
 |---------------|------------------|  
-|`__wbinvd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__wbinvd`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 此函式只適用於核心模式具有特殊權限層級 (CPL) 為 0，且此常式僅可作為內建。  
+ 此函式只適用於核心模式特殊權限層級 (CPL) 為 0，且此常式僅可作為內建。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

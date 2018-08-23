@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb3337ffa82bf65ba0d4ff010d0b70afd7a99d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848206"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571567"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 簡介
 本節提供 COM 和 ATL 簡介  
@@ -35,7 +35,7 @@ ms.locfileid: "37848206"
   
 ## <a name="related-sections"></a>相關章節  
  [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]材料 com。  
+ Windows SDK 內容，com。  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  

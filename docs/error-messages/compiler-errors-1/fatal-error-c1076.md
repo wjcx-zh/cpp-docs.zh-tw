@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1076 |Microsoft 文件
+title: 嚴重錯誤 C1076 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02cc55280202b9ce576dc1e771b3428837209c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539786"
 ---
 # <a name="fatal-error-c1076"></a>嚴重錯誤 C1076
 編譯器限制：已達到內部堆積限制；請使用 /Zm 以指定更高的限制  
@@ -30,9 +30,9 @@ ms.locfileid: "33199481"
   
  若要解決這個錯誤：  
   
-1.  使用[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)編譯器記憶體限制設定中指定的值選項[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)錯誤訊息。 如需詳細資訊，包括如何設定這個值[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]，請參閱 < 備註 > 一節中的[/Zm （指定先行編譯標頭的記憶體配置上限）](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)。  
+1.  使用[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)選項將編譯器記憶體限制設定中指定的值為[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)錯誤訊息。 如需詳細資訊，包括如何在 Visual Studio 中設定此值，請參閱 < 備註 > 一節[/Zm （指定先行編譯標頭記憶體配置上限）](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)。  
   
-2.  如果您是在 64 位元作業系統上使用 32 位元裝載的編譯器，請改用 64 位元裝載的編譯器。 如需詳細資訊，請參閱[How to： 啟用在命令列上的 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
+2.  如果您是在 64 位元作業系統上使用 32 位元裝載的編譯器，請改用 64 位元裝載的編譯器。 如需詳細資訊，請參閱 <<c0> [ 如何： 啟用在命令列上的 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
   
 3.  排除不必要的包含檔案。  
   
@@ -46,4 +46,4 @@ ms.locfileid: "33199481"
   
 8.  將目前的檔案分割成較小的檔案。  
   
- 如果組建啟動之後，為指定的值馬上出現 c1076 **/Zm**可能是為您的程式太高。 減少 **/Zm**值。
+ 如果為指定的值在建置開始之後，馬上出現 c1076 **/Zm**可能是您的程式而言太高。 減少 **/Zm**值。

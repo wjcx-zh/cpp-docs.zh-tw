@@ -1,5 +1,5 @@
 ---
-title: 內建函式和內嵌組譯碼 |Microsoft 文件
+title: 內建函式和內嵌組譯 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b8651bea0b1ee9f54ec0af704d92feef0722368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2b99eedcdd81a96dc3091046a4f62ffe002509
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367975"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572813"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>內建和內嵌組譯
-其中一個條件約束的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]編譯器為沒有內嵌組譯工具支援。 函式，這表示無法寫入 C 或 c + + 中是必須寫入副程式，或由編譯器所支援的內建函式。 某些函式在有些則不是機密的效能。 效能區分函式應該實作為內建函式。  
+其中一個條件約束，適用於 x64 編譯器會為沒有內嵌組譯工具支援。 函式，這表示無法寫入 C 或 c + + 中是必須可寫入為副程式或編譯器所支援的內建函式。 某些函式是效能敏感，而有些則不。 重視效能的函式應該實作為內建函式。  
   
- 由編譯器所支援的內建述[編譯器內建](../intrinsics/compiler-intrinsics.md)。  
+ 編譯器所支援的內建函式中所述[編譯器內建](../intrinsics/compiler-intrinsics.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [x64 軟體慣例](../build/x64-software-conventions.md)

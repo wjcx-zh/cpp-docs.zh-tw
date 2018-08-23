@@ -1,5 +1,5 @@
 ---
-title: __invlpg |Microsoft 文件
+title: __invlpg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373e9c1f8cc24ca4de4f0a78dd75011681c78056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5a25e16439673f367cfe0bfe208dbc21a621b81
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327521"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541384"
 ---
 # <a name="invlpg"></a>__invlpg
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生 x86`invlpg`指令，這會使得轉譯對應緩衝區 (TLB) 失效所指向的記憶體與相關聯的頁面`Address`。  
+ 會產生 x86`invlpg`失效轉譯對應緩衝區 (TLB) 頁面所指向的記憶體與相關聯的指令`Address`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,16 +46,16 @@ void __invlpg(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__invlpg`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__invlpg`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 此內建`__invlpg`發出特殊權限的指令，而且僅適用於核心模式與 0 權限層級 (CPL)。  
+ 此內建`__invlpg`發出特殊權限的指令，僅適用於核心模式特殊權限層級 (CPL) 為 0。  
   
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

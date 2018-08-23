@@ -1,5 +1,5 @@
 ---
-title: fenv_access |Microsoft 文件
+title: fenv_access |Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,16 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963319"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540766"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-停用 (**上**) 或啟用 (**關閉**) 可以變更浮點環境的最佳化旗標測試和模式變更。
+停用 (**上**) 或啟用 (**關閉**) 無法變更的浮點環境最佳化旗標測試和模式變更。
 
 ## <a name="syntax"></a>語法
 
@@ -35,11 +34,11 @@ ms.locfileid: "36963319"
 
 ## <a name="remarks"></a>備註
 
-根據預設， **fenv_access**是**關閉**。 如果編譯器可能會假設您的程式碼不會存取或操作浮點數的環境中，則它可以執行許多的浮點程式碼最佳化。 設定**fenv_access**至**上**通知編譯器將程式碼會存取浮點數的環境來測試狀態旗標，例外狀況，或設定控制項模式的旗標。 編譯器會停用這些最佳化，使您的程式碼可以一直存取浮點數的環境。 
+根據預設， **fenv_access**是**關閉**。 如果編譯器可能會假設您的程式碼不會存取或操作的浮點環境，則它可以執行許多的浮點程式碼最佳化。 設定**fenv_access**要**上**以通知編譯器，您的程式碼存取的浮點環境測試狀態旗標，例外狀況，或設定控制項模式的旗標。 編譯器會停用這些最佳化，使您的程式碼能夠一致的方式存取的浮點環境。 
 
-如需有關浮點數行為的詳細資訊，請參閱[/fp （指定浮點行為）](../build/reference/fp-specify-floating-point-behavior.md)。
+如需浮點行為的詳細資訊，請參閱[/fp （指定浮點行為）](../build/reference/fp-specify-floating-point-behavior.md)。
 
-都受限於的最佳化類型**fenv_access**是：
+一種最佳化，都受限於**fenv_access**是：
 
 - 全域通用子運算式刪除
 
@@ -55,7 +54,7 @@ ms.locfileid: "36963319"
 
 ## <a name="examples"></a>範例
 
-此範例會設定**fenv_access**至**上**設為 24 位元精確度的浮點控制暫存器：
+此範例會設定**fenv_access**要**上**設為 24 位元精確度浮點控制暫存器：
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-如果您註解`#pragma fenv_access (on)`從先前的範例，請注意，輸出會不同，因為編譯器會產生編譯時期求值，而不使用控制模式。
+如果您註解`#pragma fenv_access (on)`從先前的範例，請注意輸出是不同的因為編譯器會產生編譯時期評估，不會使用控制項模式。
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

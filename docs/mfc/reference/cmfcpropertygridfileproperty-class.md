@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851596"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538430"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟檔案選取對話方塊的屬性清單控制項項目。  
@@ -105,7 +105,7 @@ CMFCPropertyGridFileProperty(
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- 可用的旗標完整清單，請參閱 < [OPENFILENAME 結構](https://msdn.microsoft.com/library/ms646839.aspx)。  
+ 可用的旗標完整清單，請參閱 < [OPENFILENAME 結構](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用 `CMFCPropertyGridFileProperty` 類別的建構函式來建立物件 。 此範例中是屬於[Visual Studio 示範範例](../../visual-cpp-samples.md)。  

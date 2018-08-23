@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339571"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572238"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
 OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 設計允許從任何資料來源的高效能的資料存取。 可透過 OLE DB 不論它是否來自資料庫檢視任何表格式資料。 彈性可讓您極大的電源。  
@@ -63,7 +63,7 @@ OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 
  提供者在複雜度和功能差異極大。 您最好將分類為唯讀狀態提供者和可更新的提供者的提供者：  
   
 -   Visual c + + 6.0 支援只有唯讀提供者。 [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)討論如何建立唯讀的提供者。  
--   Visual c + + 支援可更新的提供者，可以更新它 （寫入） 資料存放區。 可更新的提供者的相關資訊，請參閱[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f)範例是可更新的提供者。  
+-   Visual c + + 支援可更新的提供者，可以更新它 （寫入） 資料存放區。 可更新的提供者的相關資訊，請參閱[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例是可更新的提供者。  
   
  如需詳細資訊，請參閱:  
   
@@ -75,5 +75,5 @@ OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 
   
 ## <a name="see-also"></a>另請參閱  
  [資料存取](../data-access-in-cpp.md)   
- [OLE DB SDK 文件](https://msdn.microsoft.com/library/ms722784.aspx)   
- [OLE DB 程式設計人員參考](https://msdn.microsoft.com/library/ms713643.aspx)
+ [OLE DB SDK 文件](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

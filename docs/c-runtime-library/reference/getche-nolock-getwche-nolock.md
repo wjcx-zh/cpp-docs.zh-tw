@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getche_nolock
@@ -43,19 +44,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83d398330e2c7fbbf80ca5b14ef7b1099e56bc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 319c9e56cfbd4e52d9edac841ff6d4d8df73528c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400098"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572334"
 ---
 # <a name="getchenolock-getwchenolock"></a>_getche_nolock、_getwche_nolock
 
 在有回應但不鎖定執行緒的情形下，從主控台取得字元。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -70,7 +71,7 @@ wint_t _getwche_nolock( void );
 
 ## <a name="remarks"></a>備註
 
-**_getche_nolock**和 **_getwche_nolock**相同 **_getche**和 **_getwche**不同之處在於它們不受干擾其他執行緒。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+**_getche_nolock**並 **_getwche_nolock**等於 **_getche**並 **_getwche**不同之處在於它們不受干擾其他執行緒。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -80,7 +81,7 @@ wint_t _getwche_nolock( void );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_getche_nolock**|\<conio.h>|
 |**_getwche_nolock**|\<conio.h> 或 \<wchar.h>|

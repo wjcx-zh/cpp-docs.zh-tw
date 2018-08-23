@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 85f08ae7a996a762be915bcce820c33a0a8e549c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340725"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571664"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 封裝資料列集和其相關聯的存取子，單一類別中。  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|建構函式。|  
 |[關閉](#close)|關閉資料列集和任何存取子。|  
 |[FreeRecordMemory](#freerecordmemory)|釋出任何需要先釋放目前記錄中的資料行。|  
-|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)。|  
+|[GetColumnInfo](#getcolumninfo)|Implements [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。|  
   
 ## <a name="remarks"></a>備註  
  類別`TAccessor`管理存取子。 類別*TRowset*管理資料列集。  
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。  
@@ -149,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>備註  
  使用者必須釋放字串緩衝區與傳回的資料行資訊。 使用此方法的第二個版本，當您使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要覆寫繫結。  
   
- 如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
+ 如需詳細資訊，請參閱 < [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

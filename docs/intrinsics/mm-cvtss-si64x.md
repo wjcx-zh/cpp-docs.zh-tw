@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtss_si64x |Microsoft 文件
+title: _mm_cvtss_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332100"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538245"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]擴充的版本轉換純量單一精確度浮點數為 64 位元整數 (`cvtss2si`) 指令。  
+ 會產生擴充的 x64 版本的轉換純量單一精確度浮點數為 64 位元整數 (`cvtss2si`) 指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ __int64 _mm_cvtss_si64x(
   
 #### <a name="parameters"></a>參數  
  [輸入] `value`  
- `__m128`結構，其中包含的浮動點值。  
+ `__m128`包含浮動點值的結構。  
   
 ## <a name="return-value"></a>傳回值  
  64 位元整數，第一個浮點值轉換成整數的結果。  
@@ -48,12 +48,12 @@ __int64 _mm_cvtss_si64x(
   
 |內建|架構|  
 |---------------|------------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvtss_si64x`|X64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結構值的第一個項目會轉換成整數並傳回。 在 MXCSR 捨入的控制位元用來決定捨入的行為。 預設的捨入模式為四捨五入到最接近捨入為偶數，如果的小數部分為 0.5。 因為`__m128`結構代表 xmm 暫存器的 XMM 暫存器，此內建函式會接受的值，並將它寫入至系統記憶體。  
+ 結構值的第一個項目會轉換成整數，並傳回。 在 MXCSR 捨入的控制位元用來判斷捨入的行為。 捨入模式的預設值是四捨五入到最接近的小數部分是否為 0.5，捨入為偶數。 因為`__m128`結構表示 XMM 暫存器，此內建函式會採用 XMM 暫存器中的值，並將它寫入至系統記憶體。  
   
  此常式僅可作為內建常式使用。  
   
@@ -91,7 +91,7 @@ int main()
 101  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__m128d](../cpp/m128d.md)   

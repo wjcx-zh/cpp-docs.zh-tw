@@ -1,5 +1,5 @@
 ---
-title: 反映視窗訊息 Id |Microsoft 文件
+title: 反映視窗訊息 Id |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,17 +56,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8746666c4b1eb48e4c54822f76328579b7ce8584
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 968a8560447b0bf8f74e94f8b492e1de7192df76
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928194"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540585"
 ---
 # <a name="reflected-window-message-ids"></a>反映視窗訊息 ID
-一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊，請參閱[MFC ActiveX 控制項： 子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
+一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊，請參閱 < [MFC ActiveX 控制項： 子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
   
- 若要防止控制項的容器接收子類別化 Windows 控制項，所傳送的視窗訊息[COleControl](../mfc/reference/colecontrol-class.md)建立 「 反映程式 」 視窗攔截某些視窗訊息，並將其傳回至控制項。 控制項 (在其視窗程序中) 接著可以針對 ActiveX 控制項採取適當的動作，然後再處理這些反映訊息。  
+ 若要防止控制項的容器接收視窗訊息，由子類別化 Windows 控制項，傳送[COleControl](../mfc/reference/colecontrol-class.md)建立攔截某些視窗訊息，並將其傳回給控制項的"reflector"視窗。 控制項 (在其視窗程序中) 接著可以針對 ActiveX 控制項採取適當的動作，然後再處理這些反映訊息。  
   
  下表顯示攔截的訊息和反映程式視窗傳送的對應訊息。  
   
@@ -85,13 +85,13 @@ ms.locfileid: "36928194"
 |[WM_VKEYTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761364)|OCM_VKEYTOITEM|  
 |[WM_CHARTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761358)|OCM_CHARTOITEM|  
 |[WM_COMPAREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775921)|OCM_COMPAREITEM|  
-|[WM_HSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787575)|OCM_HSCROLL|  
+|[時傳遞 WM_HSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787575)|OCM_HSCROLL|  
 |[WM_VSCROLL](http://msdn.microsoft.com/library/windows/desktop/bb787577)|OCM_VSCROLL|  
-|[WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)|OCM_PARENTNOTIFY|  
+|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|  
 |[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY|  
   
 > [!NOTE]
->  如果控制項是在 Win32 系統上執行，有幾種類型的 WM_CTLCOLOR\*它可能會收到的訊息。 如需詳細資訊，請參閱 WM_CTLCOLORBTN、 WM_CTLCOLORDLG、 WM_CTLCOLOREDIT、 WM_CTLCOLORLISTBOX、 WM_CTLCOLORMSGBOX、 WM_CTLCOLORSCROLLBAR、 WM_CTLCOLORSTATIC。  
+>  如果控制項是在 Win32 系統上執行，有數種類型的 WM_CTLCOLOR\*它可能會收到的訊息。 如需詳細資訊，請參閱 WM_CTLCOLORBTN、 WM_CTLCOLORDLG、 WM_CTLCOLOREDIT、 WM_CTLCOLORLISTBOX、 WM_CTLCOLORMSGBOX、 WM_CTLCOLORSCROLLBAR、 WM_CTLCOLORSTATIC。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項： 子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   

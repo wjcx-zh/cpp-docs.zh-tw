@@ -1,5 +1,5 @@
 ---
-title: __stosw |Microsoft 文件
+title: __stosw |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329341"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543114"
 ---
 # <a name="stosw"></a>__stosw
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生存放區字串指令 (`rep stosw`)。  
+ 產生的存放區的字串指示 (`rep stosw`)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,12 +54,12 @@ void __stosw(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__stosw`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結果是，word`Data`撰寫成一個區塊`Count`文字`Dest`字串。  
+ 結果是，word`Data`寫入至區塊`Count`特定的文字`Dest`字串。  
   
  此常式僅可作為內建常式使用。  
   
@@ -87,7 +87,7 @@ int main()
 0 128 128 0  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

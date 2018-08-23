@@ -1,5 +1,5 @@
 ---
-title: CPaneContainer 類別 |Microsoft 文件
+title: CPaneContainer 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,17 +130,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de7cf11b6f328819a677d248647934619153fb7
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079471"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538251"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 類別
 `CPaneContainer`類別是由 MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐窗格的指標或 `CPaneContainer.` 的兩個執行個體的指標，也存放分隔窗格 (或容器) 的分割線的指標。 Framework 可以將容器巢狀於容器內部，建置表示複雜停駐配置的二進位樹狀目錄。 二進位樹狀目錄的根儲存在[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)物件。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
  
 ## <a name="syntax"></a>語法  
   
@@ -218,10 +218,10 @@ class CPaneContainer : public CObject
 |[CPaneContainer::StretchPaneContainer](#stretchpanecontainer)||  
   
 ### <a name="remarks"></a>備註  
- `CPaneContainer` 架構會自動建立物件。  
+ `CPaneContainer` 此架構會自動建立物件。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建構的執行個體`CPaneContainer`類別。 此程式碼片段是部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何建構的執行個體`CPaneContainer`類別。 此程式碼片段是一部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]  
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]  
@@ -389,7 +389,7 @@ CPaneContainer* FindSubPaneContainer(
   
 ### <a name="parameters"></a>參數  
  [in]*pObject*  
- [in]*n*  
+ [in]*尋找準則*  
   
 ### <a name="return-value"></a>傳回值  
   

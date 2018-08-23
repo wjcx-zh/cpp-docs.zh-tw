@@ -1,5 +1,5 @@
 ---
-title: -喜好 （為架構最佳化） |Microsoft 文件
+title: -偏好 （專為架構最佳化） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f91373eef29adcb9a632e80520ed6713d3e39b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75081c3a2e8918bfe8abf43373d755ca258f2595
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376217"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572639"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (專為架構最佳化)
-**/favor:** `option`產生針對特定的架構，或為 AMD 和 Intel 架構中微-架構最佳化的程式碼。  
+**/favor:** `option`產生已最佳化，針對特定的架構，或為 AMD 和 Intel 架構中微-架構的程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,31 +35,31 @@ ms.locfileid: "32376217"
   
 ## <a name="remarks"></a>備註  
  **/favor:blend**  
- (x86 和 x64) 產生已為 AMD 和 Intel 架構中微架構特性最佳化的程式碼。 雖然 **/favor:blend**可能不會提供最佳的效能可能具有特定處理器上，它設計來在廣泛的 x86 和 x64 處理器提供最佳效能。 根據預設， **/favor:blend**作用中。  
+ (x86 和 x64) 產生已為 AMD 和 Intel 架構中微架構特性最佳化的程式碼。 雖然 **/favor:blend**可能不會提供最佳的效能可能在特定處理器上，它設計來提供範圍廣泛的 x86 和 x64 處理器上的最佳效能。 根據預設， **/favor:blend**作用中。  
   
  **/favor:ATOM**  
- (x86 和 x64) 產生已為 Intel Atom 處理器和 Intel Centrino Atom 處理器技術特性最佳化的程式碼。 使用所產生的程式碼 **/favor:ATOM**也可能會產生 Intel 處理器的 Intel SSSE3、 SSE3、 SSE2 和 SSE 指令。  
+ (x86 和 x64) 產生已為 Intel Atom 處理器和 Intel Centrino Atom 處理器技術特性最佳化的程式碼。 使用所產生的程式碼 **/favor:ATOM**可能也會產生 Intel SSSE3 SSE3、 mmx、sse、sse2 和 SSE 適用於 Intel 處理器的指示。  
   
  **/favor:AMD64**  
  (僅限 x64) 為 AMD Opteron 及支援 64 位元擴充功能的 Athlon 處理器，最佳化所產生的程式碼。 最佳化的程式碼可以在所有 x64 相容平台上執行。 使用所產生的程式碼 **/favor:AMD64**支援 Intel64 的 Intel 處理器上可能會導致較差的效能。  
   
  **/favor:INTEL64**  
- (僅限 x64) 最佳化為支援 Intel64 的 Intel 處理器所產生的程式碼，一般來說，會為該平台產生較佳效能。 所產生的程式碼可以在任何 x64 平台上執行。 程式碼會產生含有 **/favor:INTEL64** AMD Opteron 及支援 64 位元擴充功能的 Athlon 處理器上可能會導致較差的效能。  
+ (僅限 x64) 最佳化為支援 Intel64 的 Intel 處理器所產生的程式碼，一般來說，會為該平台產生較佳效能。 所產生的程式碼可以在任何 x64 平台上執行。 程式碼，就會產生含有 **/favor:INTEL64** AMD Opteron 及支援 64 位元擴充功能的 Athlon 處理器上可能會導致較差的效能。  
   
 > [!NOTE]
->  Intel64 架構先前稱為延伸記憶體 64 技術和對應的編譯器選項已 **/favor:EM64T**。  
+>  Intel64 架構先前稱為 Extended Memory 64 Technology 和對應的編譯器選項已 **/favor:EM64T**。  
   
- 如需如何程式[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]架構，請參閱[x64 軟體慣例](../../build/x64-software-conventions.md)。  
+ 如需如何計劃適用於 x64 架構，請參閱[x64 軟體慣例](../../build/x64-software-conventions.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取**C/c + +** 資料夾。  
+2.  選取  **C/c + +** 資料夾。  
   
-3.  選取**命令列**屬性頁。  
+3.  選取 **命令列**屬性頁。  
   
-4.  輸入中的編譯器選項**其他選項**方塊。  
+4.  輸入中的編譯器選項**其他選項** 方塊中。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   

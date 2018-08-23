@@ -1,5 +1,5 @@
 ---
-title: __mulh |Microsoft 文件
+title: __mulh |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae312de1311bfe068ac48838f2720bd8a2a83e53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339536"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541205"
 ---
 # <a name="mulh"></a>__mulh
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 傳回兩個 64 位元帶正負號整數的產品的高 64 個位元。  
+ 傳回兩個 64 位元帶正負號整數的乘積的 64 高位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +51,7 @@ __int64 __mulh(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__mulh`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -85,7 +85,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

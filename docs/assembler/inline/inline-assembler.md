@@ -1,5 +1,5 @@
 ---
-title: 內嵌組譯工具 |Microsoft 文件
+title: 內嵌組譯工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5236bebdeef2db519556d3dace4c20d9529d0e23
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4b45c55fbba37d27aa005480789cb490b891b103
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055036"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573314"
 ---
 # <a name="inline-assembler"></a>內嵌組合語言
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  組合語言用於許多用途，例如改善程式速度、減少記憶體需求，以及控制硬體。 您可以使用內嵌組合語言，直接在 C 和 C++ 原始程式中內嵌組譯語言指令，而不需要額外的組譯和連結步驟。 內嵌組合語言已內建於編譯器，因此您不需要個別的組譯工具，例如 Microsoft Macro Assembler (MASM)。  
   
 > [!NOTE]
 >  包含內嵌組譯程式碼的程式無法完全移植到其他硬體平台。 如果您為可攜性設計，請避免使用內嵌組譯工具。  
   
- ARM 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 處理器不支援內嵌組譯碼。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：  
+ 內嵌組譯碼不支援 ARM 和 x64 處理器。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：  
   
 -   [內嵌組合語言概觀](../../assembler/inline/inline-assembler-overview.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "32055036"
   
 -   [最佳化內嵌組譯碼](../../assembler/inline/optimizing-inline-assembly.md)  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建和組件語言](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   

@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853773"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541032"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 類別
 實作停駐的功能表列。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  像素為單位的下拉式方塊按鈕的寬度。  
   
 ### <a name="remarks"></a>備註  
- **幫助**下拉式方塊類似**協助**中的功能表列的下拉式方塊[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]。  
+ **幫助**下拉式方塊類似**協助**Microsoft Word 的功能表列中的下拉式方塊。  
   
  當您呼叫這個方法時*uiID*設為 0，這個方法會隱藏下拉式方塊。 否則這個方法會顯示下拉式方塊會自動在右側的功能表列上。 呼叫這個方法之後，請呼叫[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)以取得要插入的指標[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件。  
   

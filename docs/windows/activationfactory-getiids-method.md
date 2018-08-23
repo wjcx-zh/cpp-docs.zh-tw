@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aaaa8d5bb0a88b9078c60fa61608e52fafd5baac
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 49ef07365675ddb9cdedee1f6a2cdfb676188dc6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643507"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42576705"
 ---
 # <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids 方法
-擷取實作的介面識別碼的陣列。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   GetIids  
-)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
-```  
-  
-### <a name="parameters"></a>參數  
- *iidCount*  
- 這項作業完成時中的介面識別碼的數目*iid*陣列。  
-  
- *iid*  
- 這項作業完成時，陣列就會實作的介面識別碼。  
-  
-## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 E_OUTOFMEMORY 是可能的失敗 HRESULT。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ActivationFactory 類別](../windows/activationfactory-class.md)
+
+擷取實作的介面識別碼的陣列。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   GetIids
+)(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>參數
+
+*iidCount*  
+這項作業完成時中的介面識別碼的數目*iid*陣列。
+
+*iid*  
+這項作業完成時，陣列就會實作的介面識別碼。
+
+## <a name="return-value"></a>傳回值
+
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 E_OUTOFMEMORY 是可能的失敗 HRESULT。
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ActivationFactory 類別](../windows/activationfactory-class.md)

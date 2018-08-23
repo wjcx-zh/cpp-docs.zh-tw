@@ -1,5 +1,5 @@
 ---
-title: 疑難排解 C/c + + 隔離應用程式和-並存組件 |Microsoft 文件
+title: 疑難排解 C/c + + 隔離應用程式和並排顯示組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f5645270cbc8fbb71dd841cb4f1affa6bef1295
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390687"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572450"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>疑難排解 C/C++ 隔離應用程式和並存組件
 如果找不到相依程式庫，則載入 C/C++ 應用程式可能會失敗。 本文將說明為什麼無法載入 C/++ 應用Ｃ程式的一些常見原因，並建議解決問題的步驟。  
@@ -36,27 +36,27 @@ ms.locfileid: "32390687"
   
  如果您的應用程式沒有任何資訊清單，而且相依於 Windows 在一般搜尋位置中找不到的 DLL，可能會顯示以下的類似錯誤訊息：  
   
--   此應用程式無法啟動，因為*所需的 DLL*找不到。 重新安重新安裝應用程式可能可以解決這個問題。  
+-   此應用程式無法啟動，因為*必要的 DLL*找不到。 重新安重新安裝應用程式可能可以解決這個問題。  
   
  如果將應用程式部署到沒有 Visual Studio 的電腦，且其損毀並顯示先前的類似錯誤訊息，請檢查這些情況：  
   
 1.  請依照下列所述的步驟[了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)。 相依性查核器可以顯示應用程式或 DLL 的大部分相依性。 如果您觀察到某些 Dll 會遺失，請在嘗試執行應用程式的電腦上安裝它們。  
   
-2.  作業系統載入器會使用應用程式資訊清單來載入應用程式所相依的組件。 資訊清單可以內嵌於二進位檔做為資源，或安裝為應用程式資料夾中的個別檔案。 若要檢查資訊清單是否內嵌於二進位檔，請在 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中開啟二進位檔，並在其資源清單中尋找 RT_MANIFEST。 如果找不到內嵌的資訊清單，尋找具有名為 < binary_name > 類似檔案的應用程式資料夾中。\<副檔名 >.manifest。  
+2.  作業系統載入器會使用應用程式資訊清單來載入應用程式所相依的組件。 資訊清單可以內嵌於二進位檔做為資源，或安裝為應用程式資料夾中的個別檔案。 若要檢查資訊清單是否內嵌於二進位檔，在 Visual Studio 中開啟二進位檔，並在其資源清單中尋找 RT_MANIFEST。 如果找不到內嵌的資訊清單，尋找名為 < binary_name > 類似檔案的應用程式資料夾中。\<擴充功能 >.manifest。  
   
 3.  如果您的應用程式相依於並存組件，並且未出現資訊清單，您必須確定連結器可產生專案的資訊清單。 請檢查連結器選項**產生資訊清單**中**專案屬性**專案 對話方塊。  
   
-4.  如果資訊清單內嵌於二進位檔，請確定 RT_MANIFEST 的識別碼對這種類型的二進位檔是正確的。 如需使用的資源識別碼的詳細資訊，請參閱[使用-並存組件做為資源 (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx)。 如果資訊清單位於不同的檔案，請在 XML 編輯器或文字編輯器中開啟它。 如需資訊清單和部署規則的詳細資訊，請參閱[資訊清單](http://msdn.microsoft.com/library/aa375365)。  
+4.  如果資訊清單內嵌於二進位檔，請確定 RT_MANIFEST 的識別碼對這種類型的二進位檔是正確的。 如需使用的資源識別碼的詳細資訊，請參閱[使用並排顯示的組件做為資源 (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx)。 如果資訊清單位於不同的檔案，請在 XML 編輯器或文字編輯器中開啟它。 如需資訊清單和部署的規則的詳細資訊，請參閱 <<c0> [ 資訊清單](http://msdn.microsoft.com/library/aa375365)。  
   
     > [!NOTE]
     >  如果出現內嵌資訊清單和個別的資訊清單檔案，作業系統載入器會使用內嵌資訊清單，並忽略個別的檔案。 不過，在 Windows XP 上的情況則相反，會使用不同的資訊清單檔案，而且會忽略內嵌資訊清單。  
   
-5.  我們建議您在每個 DLL 中內嵌資訊清單，因為在透過`LoadLibrary` 呼叫載入 DLL 時，會忽略外部資訊清單。 如需詳細資訊，請參閱[組件資訊清單](http://msdn.microsoft.com/library/aa374219)。  
+5.  我們建議您在每個 DLL 中內嵌資訊清單，因為在透過`LoadLibrary` 呼叫載入 DLL 時，會忽略外部資訊清單。 如需詳細資訊，請參閱 <<c0> [ 組件資訊清單](http://msdn.microsoft.com/library/aa374219)。  
   
-6.  請檢查資訊清單中列舉的所有組件都會正確安裝在電腦上。 每個組件是依其名稱、版本號碼和處理器架構，在資訊清單中指定。 如果您的應用程式相依於-並存組件，請檢查確認這些組件已正確安裝在電腦上，讓作業系統載入器可以找到它們中, 所述[組件搜尋序列](http://msdn.microsoft.com/library/aa374224)。 請記住，64 位元組件無法在 32 位元處理序中載入，而且無法在 32 位元作業系統上執行。  
+6.  請檢查資訊清單中列舉的所有組件都會正確安裝在電腦上。 每個組件是依其名稱、版本號碼和處理器架構，在資訊清單中指定。 如果您的應用程式相依於並排顯示組件，請檢查，這些組件已正確安裝在電腦上，讓作業系統載入器可以找到它們，如中所述[組件搜尋序列](http://msdn.microsoft.com/library/aa374224)。 請記住，64 位元組件無法在 32 位元處理序中載入，而且無法在 32 位元作業系統上執行。  
   
 ## <a name="example"></a>範例  
- 假設我們有應用程式中，使用 Visual c + + 建置的 appl.exe。 應用程式資訊清單可能會內嵌在 appl.exe 做為二進位資源 RT_MANIFEST (具有等於 1 的識別碼)，或儲存為個別檔案 appl.exe.manifest。 此資訊清單的內容看起來像這樣：  
+ 假設我們有 appl.exe 使用 Visual c + + 建置的應用程式。 應用程式資訊清單可能會內嵌在 appl.exe 做為二進位資源 RT_MANIFEST (具有等於 1 的識別碼)，或儲存為個別檔案 appl.exe.manifest。 此資訊清單的內容看起來像這樣：  
   
 ```  
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
@@ -82,7 +82,7 @@ ms.locfileid: "32390687"
 </assembly>  
 ```  
   
- 並存組件也可以使用[發行者組態檔](http://msdn.microsoft.com/library/aa375682)— 也就是原則檔案 — 全域重新導向的應用程式和組件使用-並存組件的版本，而不是相同的另一個版本組件。 您可以在 %WINDIR%\WinSxS\Policies\ 資料夾中檢查共用組件的原則。 以下是範例原則檔案：  
+ 並排顯示組件也可以使用[發行者組態檔](http://msdn.microsoft.com/library/aa375682)— 也就是原則檔-全域重新導向的應用程式和組件，而不是相同的另一個版本中使用單一並排顯示組件版本組件。 您可以在 %WINDIR%\WinSxS\Policies\ 資料夾中檢查共用組件的原則。 以下是範例原則檔案：  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -104,10 +104,10 @@ ms.locfileid: "32390687"
   
 1.  檢查具有名稱的資訊清單檔案的應用程式資料夾\<assemblyName >.manifest。 在此範例中，載入器會嘗試在 appl.exe 所在的資料夾中尋找 Fabrikam.SxS.Library.manifest。 如果找到資訊清單，則載入器會從應用程式資料夾載入組件。 如果找不到組件，載入就會失敗。  
   
-2.  嘗試開啟\\< assemblyName\>\ 資料夾中包含 appl.exe 的資料夾，而且當\\< assemblyName\>\ 存在，再試一次載入資訊清單的檔案名稱\<assemblyName >。資訊清單從這個資料夾。 如果找到資訊清單，則載入器載入的組件\\< assemblyName\>\ 資料夾。 如果找不到組件，載入就會失敗。  
+2.  嘗試開啟\\< assemblyName\>\ 資料夾中包含 appl.exe 的資料夾，才\\< assemblyName\>\ 存在，嘗試載入資訊清單的檔案名稱\<組件名稱 >。在這個資料夾中的資訊清單。 如果找到資訊清單，則載入器載入的組件\\< assemblyName\>\ 資料夾。 如果找不到組件，載入就會失敗。  
   
  如需載入器如何搜尋相依組件的詳細資訊，請參閱[組件搜尋序列](http://msdn.microsoft.com/library/aa374224)。 如果載入器找不到做為私用組件的相依組件，載入會失敗並出現「系統無法執行指定的程式」訊息。 若要解決這個錯誤，請確定相依組件和屬於這些組件的 Dll，都做為私用或共用組件安裝在電腦上。  
   
 ## <a name="see-also"></a>另請參閱  
- [隔離的應用程式和-並存組件的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
+ [隔離的應用程式和並排顯示組件的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
  [建置 C/C++ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

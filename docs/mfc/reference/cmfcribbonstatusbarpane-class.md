@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e42eceabcbe4e67e393b52b9dc3ab8e9ca7b280
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853845"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540984"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 類別
 `CMFCRibbonStatusBarPane`類別會實作可以加入功能區狀態列的功能區項目。  
@@ -210,7 +210,7 @@ BOOL IsExtended() const;
  如果窗格上狀態列擴充區域，則為 TRUE。 FALSE 否則。  
   
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 virtual void OnDrawBorder(CDC*);
@@ -222,7 +222,7 @@ virtual void OnDrawBorder(CDC*);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);

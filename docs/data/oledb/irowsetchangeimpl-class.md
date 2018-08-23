@@ -43,15 +43,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c64d6cc460d068a5d0acf90795cb405a920b867f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571760"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 類別
-OLE DB 樣板實作[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) OLE DB 規格中的介面。  
+OLE DB 樣板實作[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) OLE DB 規格中的介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -114,7 +114,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   第 6 章*OLE DB 程式設計人員參考*  
   
--   另請參閱如何`RUpdateRowset`UpdatePV 範例中使用類別  
+-   另請參閱如何`RUpdateRowset`類別用於[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例。  
   
 ## <a name="deleterows"></a> Irowsetchangeimpl:: Deleterows
 從資料列集刪除資料列。  
@@ -129,7 +129,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[irowsetchange:: Deleterows](https://msdn.microsoft.com/library/ms724362.aspx)中*OLE DB 程式設計人員參考*。 
+ 請參閱[irowsetchange:: Deleterows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="insertrow"></a> Irowsetchangeimpl:: Insertrow
 建立並初始化新的資料列中資料列集。  
@@ -144,7 +144,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[irowsetchange:: Insertrow](https://msdn.microsoft.com/library/ms716921.aspx)中*OLE DB 程式設計人員參考*。 
+ 請參閱[irowsetchange:: Insertrow](/previous-versions/windows/desktop/ms716921\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="setdata"></a> Irowsetchangeimpl:: Setdata
 設定一或多個資料行中的資料值。  
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[irowsetchange:: Setdata](https://msdn.microsoft.com/library/ms721232.aspx)中*OLE DB 程式設計人員參考*。 
+ 請參閱[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
 覆寫此屬性將資料認可到其存放區提供者。  

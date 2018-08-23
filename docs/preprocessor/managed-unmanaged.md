@@ -1,5 +1,5 @@
 ---
-title: managed、 unmanaged |Microsoft 文件
+title: managed、 unmanaged |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846372"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541547"
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 啟用函式層級控制項，用於編譯 Managed 或 Unmanaged 的函式。  
@@ -35,31 +35,31 @@ ms.locfileid: "33846372"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>備註  
- [/Clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項提供模組層級的控制項，用於編譯 managed 或 unmanaged 的函式。  
+
+[/Clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項提供模組層級的控制來編譯 managed 或 unmanaged 的函式。  
   
- 編譯 Unmanaged 函式用於原生平台，Common Language Runtime 會將該部分的程式執行傳遞至該原生平台。  
+編譯 Unmanaged 函式用於原生平台，Common Language Runtime 會將該部分的程式執行傳遞至該原生平台。  
   
- 函式會編譯為 managed 預設時 **/clr**用。  
+預設會在使用 `/clr` 時編譯 Unmanaged 函式。  
   
- 套用這些 pragma 時：  
+套用這些 pragma 時：  
   
--   將 pragma 新增到函式之前而不是函式主體之內。  
+- 將 pragma 新增到函式之前而不是函式主體之內。  
   
--   將 pragma 新增到 `#include` 陳述式之後。 請勿在 `#include` 陳述式之前使用這些 pragma。  
+- 將 pragma 新增到 `#include` 陳述式之後。 請勿在 `#include` 陳述式之前使用這些 pragma。  
   
- 編譯器會忽略`managed`和`unmanaged`pragma 如果 **/clr**不是在編譯中。  
+編譯器會忽略**受控**並**unmanaged** pragma 如果`/clr`不會在編譯中。  
   
- 具現化樣板函式時，定義樣板時的 pragma 狀態決定函式為 Managed 或 Unmanaged 函式。  
+具現化樣板函式時，定義樣板時的 pragma 狀態決定函式為 Managed 或 Unmanaged 函式。  
   
- 如需詳細資訊，請參閱[初始化的混合的組件](../dotnet/initialization-of-mixed-assemblies.md)。  
+如需詳細資訊，請參閱 <<c0> [ 初始化混合組件](../dotnet/initialization-of-mixed-assemblies.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

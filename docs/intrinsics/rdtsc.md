@@ -1,5 +1,5 @@
 ---
-title: __rdtsc |Microsoft 文件
+title: __rdtsc |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b47a76b3045465d8c3c5c21a87020ee1e74a69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337076"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540981"
 ---
 # <a name="rdtsc"></a>__rdtsc
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生`rdtsc`指令，它會傳回處理器時間戳記。 處理器時間戳記記錄自上次重設的時脈週期數目。  
+ 會產生`rdtsc`指令，這會傳回處理器時間戳記。 處理器時間戳記記錄自上次重設的時脈週期數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,14 +43,14 @@ unsigned __int64 __rdtsc();
   
 |內建|架構|  
 |---------------|------------------|  
-|`__rdtsc`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__rdtsc`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 這個常式可只做為內建函式。  
+ 此常式是只提供內建函式。  
   
- 在這個層代的硬體 TSC 值的解譯不同於在舊版的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。 請參閱硬體手冊，如需詳細資訊。  
+ 在這一代硬體的 TSC 值的解譯不同於在舊版的 x64。 請參閱硬體手冊，如需詳細資訊。  
   
 ## <a name="example"></a>範例  
   
@@ -74,7 +74,7 @@ int main()
 3363423610155519 ticks  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

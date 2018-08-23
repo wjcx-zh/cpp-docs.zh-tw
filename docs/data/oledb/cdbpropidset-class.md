@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336936"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572045"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 類別
 繼承自`DBPROPIDSET`結構，並新增初始化索引鍵欄位的建構函式，以及[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)存取方法。  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operator =](#op_equal)|指派的一個屬性 ID 集的內容到另一個。|  
   
 ## <a name="remarks"></a>備註  
- OLE DB 取用者使用`DBPROPIDSET`結構，以傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 識別在單一的屬性[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)結構屬於一個屬性集。  
+ OLE DB 取用者使用`DBPROPIDSET`結構，以傳遞的取用者想要取得屬性資訊的屬性識別碼的陣列。 識別在單一的屬性[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))結構屬於一個屬性集。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 將屬性 ID 加入至屬性 ID 集。  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] 要加入至屬性 ID 集的屬性 ID。  
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
-建構函式。 初始化`rgProperties`， `cProperties`，以及 （選擇性）`guidPropertySet`的欄位[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)結構。  
+建構函式。 初始化`rgProperties`， `cProperties`，以及 （選擇性）`guidPropertySet`的欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))結構。  
   
 ### <a name="syntax"></a>語法  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>參數  
  *guid*  
- [in]GUID; 用來設定`guidPropertySet`欄位[DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx)結構。  
+ [in]GUID; 用來設定`guidPropertySet`欄位[DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\))結構。  
   
 ### <a name="remarks"></a>備註  
  可以設定此欄位[建構函式](../../data/oledb/cdbpropidset-cdbpropidset.md)以及。 如果您為這個類別使用預設建構函式，則呼叫此函式。  

@@ -1,5 +1,5 @@
 ---
-title: 配置和釋放記憶體的 BSTR |Microsoft 文件
+title: 配置及釋放記憶體的 BSTR |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 355d89a3cb5817cc64512ae885a075bf44ee2a86
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358321"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572735"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>針對 BSTR 配置及釋放記憶體
-當您建立`BSTR`s 和 COM 物件之間傳遞它們，您必須要特別小心視為它們使用，以避免記憶體流失的記憶體。 當`BSTR`會保持在介面內，您必須釋放其記憶體，當您在使用它。 不過，當`BSTR`介面不成功，接收物件負責其記憶體管理。  
+當您建立`BSTR`s 和 COM 物件之間傳遞這些，您必須特別小心並將它們使用，以避免記憶體流失的記憶體。 當`BSTR`保持在介面內，使用它完成時，必須釋放其記憶體。 不過，當`BSTR`從介面的傳遞，接收的物件會負責其記憶體管理。  
   
- 配置和釋放記憶體的規則一般情況下，配置給`BSTR`s 如下：  
+ 配置及釋放記憶體的規則一般來說，配置給`BSTR`s 如下所示：  
   
 -   當您呼叫的函式必須要有`BSTR`引數，您必須配置的記憶體`BSTR`呼叫之前和之後釋放它。 例如:   
   
@@ -39,19 +39,19 @@ ms.locfileid: "32358321"
   
      [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
   
--   當您呼叫傳回的函式`BSTR`，您必須自行釋放字串。 例如:   
+-   當您呼叫的函式會傳回`BSTR`，您必須自行釋放字串。 例如:   
   
      [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
   
      [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
   
--   當您實作函式傳回`BSTR`、 配置字串，但不是會將它釋放。 接收函式會釋放記憶體。 例如:   
+-   當您實作傳回的函式`BSTR`、 配置字串，但請勿釋放它。 接收函式會釋放記憶體。 例如:   
   
      [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
   
 ## <a name="see-also"></a>另請參閱  
  [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
- [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
- [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
+ [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+ [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

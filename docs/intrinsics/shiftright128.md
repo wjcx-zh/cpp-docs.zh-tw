@@ -1,5 +1,5 @@
 ---
-title: __shiftright128 |Microsoft 文件
+title: __shiftright128 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339718"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543103"
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  移位 128 位元數量，表示兩個距離右邊達 `LowPart` 指定之位元數的 64 位元數量 `HighPart` 和 `Shift`，並傳回結果的較低 64 個位元。  
   
@@ -55,7 +55,7 @@ unsigned __int64 __shiftright128(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__shiftright128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftright128`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -65,7 +65,7 @@ unsigned __int64 __shiftright128(
 ## <a name="example"></a>範例  
  如需範例，請參閱[__shiftleft128](../intrinsics/shiftleft128.md)。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__shiftleft128](../intrinsics/shiftleft128.md)   

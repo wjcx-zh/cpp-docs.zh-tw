@@ -1,5 +1,5 @@
 ---
-title: _mm_cvttss_si64x |Microsoft 文件
+title: _mm_cvttss_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fd8aebb3f9a4f0078c8174aa25b9abb9378f1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f70588ca17a2bde34de6a16b62b18fa6125b08c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333625"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538259"
 ---
 # <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 發出延伸 x64 版本的 64 位元整數的截斷單精確度浮點號碼轉換 (`cvttss2si`) 指令。  
+ 發出擴充的 x64 版本的 64 位元整數的截斷單精確度浮點數數目與 Convert (`cvttss2si`) 指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,18 +42,18 @@ __int64 _mm_cvttss_si64x(
  `__m128`結構，其中包含單精確度浮點值。  
   
 ## <a name="return-value"></a>傳回值  
- 第一個浮點值轉換為 64 位元整數的結果。  
+ 第一個的浮點值轉換為 64 位元整數的結果。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_cvttss_si64x`|X64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 內建函式的不同`_mm_cvtss_si64x`只有一個不正確的轉換會截斷趨近於零。 因為`__m128`結構表示的 XMM 暫存器，產生的指示將資料從 xmm 暫存器移至系統記憶體。  
+ 此內建的不同`_mm_cvtss_si64x`僅在於精確的轉換會截斷趨近於零。 因為`__m128`結構代表 XMM 暫存器，產生的指示將資料從 XMM 暫存器移至系統記憶體。  
   
  此常式僅可作為內建常式使用。  
   
@@ -91,7 +91,7 @@ int main()
 101  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__m128](../cpp/m128.md)   

@@ -1,5 +1,5 @@
 ---
-title: include_alias |Microsoft 文件
+title: include_alias |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33838926"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538405"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -36,7 +36,7 @@ ms.locfileid: "33838926"
 
 ## <a name="remarks"></a>備註
 
-有些檔案系統可使用比 8.3 FAT 檔案系統所限制更長的標頭檔名稱。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*long_filename*字串，以取代*short_filename*，並尋找標頭檔*short_filename*改為。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如: 
+有些檔案系統可使用比 8.3 FAT 檔案系統所限制更長的標頭檔名稱。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*long_filename*字串，它會替代*short_filename*，並尋找標頭檔*short_filename*改。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如: 
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -50,7 +50,7 @@ ms.locfileid: "33838926"
 #include "GraphicsMenu.h"
 ```
 
-要搜尋的別名無論大小寫、拼字和雙引號或角括號的用法，都必須完全符合規格。 **Include_alias** pragma 會在檔案名稱進行比對的簡單字串，則會執行任何其他檔案名稱驗證。 例如，假設有下列指示詞：
+要搜尋的別名無論大小寫、拼字和雙引號或角括號的用法，都必須完全符合規格。 **Include_alias** pragma 會執行簡單比對的檔案名稱的字串，會執行任何其他的檔案名稱驗證。 例如，假設有下列指示詞：
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -58,7 +58,7 @@ ms.locfileid: "33838926"
 #include "sys/mymath.h"
 ```
 
-不會設定別名 (替代)，因為標頭檔字串並非完全相符。 此外，做為 /Yu 和 /Yc 編譯器選項的引數使用的標頭檔名稱或**hdrstop** pragma，不會被取代。 例如，如果原始程式檔包含下列指示詞：
+不會設定別名 (替代)，因為標頭檔字串並非完全相符。 此外，作為引數使用的標頭檔名`/Yu`並`/Yc`編譯器選項或`hdrstop`pragma，不會被取代。 例如，如果原始程式檔包含下列指示詞：
   
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -68,7 +68,7 @@ ms.locfileid: "33838926"
 
 > /YcAppleSystemHeaderStop.h
 
-您可以使用**include_alias** pragma，來對應至另一個的任何標頭檔名稱。 例如: 
+您可以使用**include_alias** pragma，來將任何標頭檔名稱對應至另一個。 例如: 
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -77,7 +77,7 @@ ms.locfileid: "33838926"
 #include <stdio.h>
 ```
 
-請勿將使用雙引號含括的檔案名稱與使用角括號含括的檔案名稱混用。 例如，假設上述兩個 **#pragma include_alias**指示詞，編譯器會在下列執行替代`#include`指示詞：
+請勿將使用雙引號含括的檔案名稱與使用角括號含括的檔案名稱混用。 例如，假設上述的兩個`#pragma include_alias`指示詞，編譯器會對下列中的替代項目`#include`指示詞：
 
 ```cpp
 #include <api.h>
@@ -90,7 +90,7 @@ ms.locfileid: "33838926"
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-請注意，filename 報告中的錯誤訊息，或做為預先定義的值 **&#95;&#95;檔案&#95;&#95;** 巨集，在執行替代之後是檔案的名稱。 例如，下列指示詞之後看到輸出：
+請注意，檔案名稱會報告錯誤訊息，或做為預先定義的值`__FILE__`巨集，在執行替代之後是檔案的名稱。 例如，下列指示詞之後看到輸出：
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

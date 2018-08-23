@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c77c8cc20588df8329951167db502a65a67b3756
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 980edf3b7e7f699b1fc870fda2e58f6422e3a1cb
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849336"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42545776"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 用於 OLE 視覺化編輯伺服程式、Automation 伺服程式和連結容器 (支援內嵌連結的應用程式)。  
@@ -162,7 +162,7 @@ void UpdateRegistry(
   
  引數中的資訊*rglpszRegister*並*rglpszOverwrite*透過呼叫登錄寫入[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 預設資訊，註冊之後，當兩個引數都是 NULL 時，適合大部分的應用程式。 如需這些引數中的資訊結構的資訊，請參閱`AfxOleRegisterServerClass`。  
   
- 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   

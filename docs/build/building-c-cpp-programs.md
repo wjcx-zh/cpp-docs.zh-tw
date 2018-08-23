@@ -1,5 +1,5 @@
 ---
-title: 建置 C/c + + 應用程式 |Microsoft 文件
+title: 建置 C/c + + 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360971"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572252"
 ---
 # <a name="building-cc-programs"></a>建置 C/C++ 程式
 
-您可以在 Visual Studio 中或命令列上，建置 Visual C++ 專案。 Visual Studio IDE 使用[MSBuild](../build/msbuild-visual-cpp.md)建置專案和方案。 在命令列上，您可以使用 C/C++ 編譯器 (cl.exe) 及連結器 (link.exe)，來建置簡單的專案。 若要在命令列上建置更複雜的專案，您可以使用 MSBuild 或[NMAKE](../build/nmake-reference.md)。 如需有關如何使用[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]若要建置專案和方案，請參閱[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
+您可以在 Visual Studio 中或命令列上，建置 Visual C++ 專案。 使用 Visual Studio IDE [MSBuild](../build/msbuild-visual-cpp.md)建置專案和方案。 在命令列上，您可以使用 C/C++ 編譯器 (cl.exe) 及連結器 (link.exe)，來建置簡單的專案。 若要在命令列上建置更複雜的專案，您可以使用 MSBuild 或[NMAKE](../build/nmake-reference.md)。 如需有關如何使用 Visual Studio 來建置專案和方案的概觀，請參閱[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
 ## <a name="in-this-section"></a>本節內容  
 

@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a2457ed01214750091bd9ec5a59c9aeac819357
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336989"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572039"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 類別
-提供實作[IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx)介面。  
+提供實作[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -74,7 +74,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[idbcreatecommand:: Createcommand](https://msdn.microsoft.com/library/ms709772.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
  某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBCreateCommand::CreateCommand`:  
   

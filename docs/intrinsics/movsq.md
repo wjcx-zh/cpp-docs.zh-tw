@@ -1,5 +1,5 @@
 ---
-title: __movsq |Microsoft 文件
+title: __movsq |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336969"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543107"
 ---
 # <a name="movsq"></a>__movsq
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  會產生重複的移動字串 (`rep movsq`) 指令。  
   
@@ -54,12 +54,12 @@ void __movsq(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|X64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結果是第一個`Count`quadwords 指向`Source`複製到`Dest`字串。  
+ 結果是第一個`Count`所指向 quadwords`Source`複製到`Dest`字串。  
   
  此常式僅可作為內建常式使用。  
   
@@ -90,7 +90,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50   
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

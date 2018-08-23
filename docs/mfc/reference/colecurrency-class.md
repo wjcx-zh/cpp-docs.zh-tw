@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208792"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541401"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 封裝 OLE Automation 的 `CURRENCY` 資料類型。  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) 建構`COleCurrency`從現有的物件`COleCurrency`物件。 新的物件具有相同的狀態與來源物件。  
   
-- COleCurrency (`varSrc`) 建構`COleCurrency`物件。 嘗試轉換[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)結構或`COleVariant`為貨幣 (VT_CY) 值的物件。 如果這項轉換成功，已轉換的值會複製到新`COleCurrency`物件。 如果不是，windows 7`COleCurrency`物件設定為零 (0) 和其狀態變更為無效。  
+- COleCurrency (`varSrc`) 建構`COleCurrency`物件。 嘗試轉換[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)結構或`COleVariant`為貨幣 (VT_CY) 值的物件。 如果這項轉換成功，已轉換的值會複製到新`COleCurrency`物件。 如果不是，windows 7`COleCurrency`物件設定為零 (0) 和其狀態變更為無效。  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 物件從指定的數值元件。 如果值的小數部分的絕對值大於 10000，單位會適當調整。 請注意，會將單位與小數部分指定帶正負號的 long 值。  
   
- 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
   
 ### <a name="example"></a>範例  
  下列範例會顯示零參數和兩個參數的建構函式的效果：  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **運算子 = (** *varSrc* **)** 如果轉換`VARIANT`值 (或是[COleVariant](../../mfc/reference/colevariant-class.md)物件) 貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個`COleCurrency`物件和其狀態設為有效。 如果轉換不成功，值`COleCurrency`物件設定為 0 和其狀態變更為無效。  
   
- 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>備註  
  它會使用當地語言規格 （也就是地區設定識別碼） 的來源字串中的非數字字元的意義。  
   
- 如需地區設定識別碼值的討論，請參閱 <<c0> [ 支援多種語言](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede)。  
+ 如需地區設定識別碼值的討論，請參閱 <<c0> [ 支援多種語言](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)。  
   
  如果成功轉換為貨幣值的字串值，這個值`COleCurrency`物件設定為該值與其狀態變更為有效。  
   

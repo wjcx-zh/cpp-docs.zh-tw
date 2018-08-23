@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16a43c0f7ca5f54d1c920d488a236012d8b974e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404921"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571466"
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
 **Microsoft 專屬**  
   
- A`_bstr_t`物件會封裝[BSTR 資料型別](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)。 此類別管理資源配置和解除配置函式呼叫，以透過`SysAllocString`並`SysFreeString`和其他`BSTR`時適當的 Api。 **_Bstr_t**類別會使用參考計數避免過多的額外負荷。  
+ A`_bstr_t`物件會封裝[BSTR 資料型別](/previous-versions/windows/desktop/automat/bstr)。 此類別管理資源配置和解除配置函式呼叫，以透過`SysAllocString`並`SysFreeString`和其他`BSTR`時適當的 Api。 **_Bstr_t**類別會使用參考計數避免過多的額外負荷。  
   
 ### <a name="construction"></a>建構  
   

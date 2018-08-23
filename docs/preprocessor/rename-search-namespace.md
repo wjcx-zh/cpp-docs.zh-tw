@@ -1,5 +1,5 @@
 ---
-title: rename_search_namespace |Microsoft 文件
+title: rename_search_namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367294991b9cbb07ee7c852d757842a20c51cc30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20072a5196ce476cf178f7c6e1071bd495202062
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850251"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538804"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
-**C + + 特定的**  
+**C + + 特定**  
   
- 具有相同的功能為[rename_namespace](../preprocessor/rename-namespace.md)屬性，但適用於使用 #import 指示詞中的型別程式庫[auto_search](../preprocessor/auto-search.md)屬性。  
+具有相同的功能[rename_namespace](../preprocessor/rename-namespace.md)屬性，但會使用您所使用的型別程式庫`#import`指示詞搭配[auto_search](../preprocessor/auto-search.md)屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,13 +34,15 @@ ms.locfileid: "33850251"
 rename_search_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>參數  
- `NewName`  
- 命名空間的新名稱。  
+### <a name="parameters"></a>參數  
+*NewName*  
+命名空間的新名稱。  
   
 ## <a name="remarks"></a>備註  
- **END c + + 特定的**  
+ 
+**END c + + 特定的**  
   
 ## <a name="see-also"></a>另請參閱  
- [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
- [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
+[#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

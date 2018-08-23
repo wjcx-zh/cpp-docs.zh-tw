@@ -1,5 +1,5 @@
 ---
-title: 訊息 |Microsoft 文件
+title: 訊息 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846359"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539760"
 ---
 # <a name="message"></a>訊息
 傳送字串常值至標準輸出，而不終止編譯。  
@@ -31,20 +31,20 @@ ms.locfileid: "33846359"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma message( messagestring )  
 ```  
   
 ## <a name="remarks"></a>備註  
- 典型用法**訊息**pragma 會在編譯時期顯示告知性訊息。  
+
+典型用法**訊息**pragma 是在編譯時期顯示告知性訊息。  
   
- *Messagestring*參數可以是巨集展開為字串常值，而您可以串連此類巨集與任意組合的字串常值。  
+*Messagestring*參數可以是字串常值，會展開巨集，而您可以串連此類巨集與任意組合的字串常值。  
   
- 如果您使用中的預先定義巨集**訊息**pragma 巨集應該傳回一個字串，否則您就必須將巨集的輸出轉換為字串。  
+如果您使用中的預先定義巨集**訊息**pragma，巨集應該會傳回字串，否則您就必須將巨集的輸出轉換為字串。  
   
- 下列程式碼片段使用**訊息**pragma 在編譯期間顯示訊息：  
+下列程式碼片段會使用**訊息**pragma 在編譯期間顯示訊息：  
   
-```  
+```cpp  
 // pragma_directives_message1.cpp  
 // compile with: /LD  
 #if _M_IX86 >= 500  
@@ -68,4 +68,5 @@ ms.locfileid: "33846359"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

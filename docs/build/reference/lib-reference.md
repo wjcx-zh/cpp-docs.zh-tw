@@ -1,5 +1,5 @@
 ---
-title: LIB 參考 |Microsoft 文件
+title: LIB 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371937"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571565"
 ---
 # <a name="lib-reference"></a>LIB 參考
-Microsoft 程式庫管理員 (LIB.exe) 建立，並管理通用物件檔案格式 (COFF) 物件檔案的程式庫。 LIB 也可用來建立匯出檔案和匯入程式庫，以參考匯出的定義。  
+Microsoft 程式庫管理員 (LIB.exe) 會建立並管理通用物件檔案格式 (COFF) 物件檔的程式庫。 LIB 也可用來建立匯出檔案和程式庫匯入參考匯出的定義。  
   
 > [!NOTE]
->  您只能從 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 命令提示字元啟動此工具。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。  
+>  您可以啟動此工具只能從 Visual Studio 命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。  
   
 -   [LIB 概觀](../../build/reference/overview-of-lib.md)  
   

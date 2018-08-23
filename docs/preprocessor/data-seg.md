@@ -1,5 +1,5 @@
 ---
-title: data_seg |Microsoft 文件
+title: data_seg |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841228"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539567"
 ---
 # <a name="dataseg"></a>data_seg
 指定儲存在 .obj 檔案中已初始化之變數的資料區段。  
@@ -31,37 +31,37 @@ ms.locfileid: "33841228"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>備註  
- 意義*區段*和*區段*是本主題中的可互換的。  
+## <a name="remarks"></a>備註 
+
+意義*區段*並*一節*是本主題中的可互換的。  
   
- OBJ 檔案可以使用檢視[dumpbin](../build/reference/dumpbin-command-line.md)應用程式。 .obj 檔案中已初始化之變數的預設區段是 .data。 未初始化的變數會被視為要初始化為零，並儲存在 .bss 中。  
+OBJ 檔案可以使用檢視[dumpbin](../build/reference/dumpbin-command-line.md)應用程式。 .obj 檔案中已初始化之變數的預設區段是 .data。 未初始化的變數會被視為要初始化為零，並儲存在 .bss 中。  
   
- **data_seg**不含任何參數區段重設為.data。  
+**data_seg**不含任何參數區段重設為.data。  
   
- **推入**（選擇性）  
- 將記錄放置到內部編譯器堆疊上。 A**發送**可以有*識別碼*和*區段名稱*。  
+*推播*（選擇性）  
+將記錄放置到內部編譯器堆疊上。 A*推播*可以有*識別項*並*區段名稱*。  
   
- **pop** （選擇性）  
- 會從內部編譯器堆疊頂端移除記錄。  
+*pop* （選擇性）  
+會從內部編譯器堆疊頂端移除記錄。  
   
- *識別項*（選擇性）  
- 當搭配**發送**，會指派名稱給內部編譯器堆疊的記錄。 搭配使用時**pop**，會將記錄在內部堆疊，直到*識別碼*已移除; 如果*識別碼*找不到在內部堆疊，不會推出。  
+*識別項*（選擇性）  
+當搭配*推播*，將名稱指派給內部編譯器堆疊上的記錄。 當搭配*pop*，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
   
- *識別項*可讓多筆記錄即可推出以單一**pop**命令。  
+*識別項*可讓一推出多筆資料錄*pop*命令。  
   
- *「 區段名稱 」*（選擇性）  
- 區段的名稱。 當搭配**pop**，時會推出堆疊和*區段名稱*會成為作用中區段名稱。  
+*「 區段名稱 」*（選擇性）  
+區段的名稱。 當搭配*pop*，時會推出堆疊並*區段名稱*會變成作用中區段名稱。  
   
- *「 區段類別 」* （選擇性）  
- 包含這個項目可提供與 C++ 2.0 以前版本的相容性。 會忽略此項。  
+*「 區段類別 」* （選擇性）  
+包含這個項目可提供與 C++ 2.0 以前版本的相容性。 會忽略此項。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // pragma_directive_data_seg.cpp  
 int h = 1;                     // stored in .data  
 int i = 0;                     // stored in .bss  
@@ -78,11 +78,12 @@ int main() {
 }  
 ```  
   
- 使用配置的資料**data_seg**不會保留與其位置相關的任何資訊。  
+使用配置的資料**data_seg**不會保留與其位置相關的任何資訊。  
   
- 請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，不應該使用的名稱。  
+請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，應該不會使用您的名稱。  
   
- 您也可以指定為 const 變數的區段 ([const_seg](../preprocessor/const-seg.md))，未初始化的資料 ([bss_seg](../preprocessor/bss-seg.md))，和函式 ([code_seg](../preprocessor/code-seg.md))。  
+您也可以指定為 const 變數的區段 ([const_seg](../preprocessor/const-seg.md))，未初始化的資料 ([bss_seg](../preprocessor/bss-seg.md))，和函式 ([code_seg](../preprocessor/code-seg.md))。  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

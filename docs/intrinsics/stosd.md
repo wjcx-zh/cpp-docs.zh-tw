@@ -1,5 +1,5 @@
 ---
-title: __stosd |Microsoft 文件
+title: __stosd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327128"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543111"
 ---
 # <a name="stosd"></a>__stosd
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生存放區字串指令 (`rep stosd`)。  
+ 產生的存放區的字串指示 (`rep stosd`)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,18 +48,18 @@ void __stosd(
  要儲存的資料。  
   
  [輸入] `Count`  
- 要寫入的雙字組區塊的長度。  
+ 要寫入的雙字組的區塊的長度。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__stosd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結果是 doubleword`Data`撰寫成一個區塊`Count`所指向的記憶體位置的雙字組`Dest`。  
+ 結果是 doubleword`Data`寫入至區塊`Count`所指向的記憶體位置的雙字組`Dest`。  
   
  此常式僅可作為內建常式使用。  
   
@@ -92,7 +92,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

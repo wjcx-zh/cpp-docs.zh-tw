@@ -1,5 +1,5 @@
 ---
-title: CDockingPanesRow 類別 |Microsoft 文件
+title: CDockingPanesRow 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955263"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541208"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 類別
 管理與停駐位置位於相同水平或垂直列 (欄) 之窗格的清單。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -234,10 +234,10 @@ virtual void ArrangePanes(
   
 ### <a name="parameters"></a>參數  
  [in]*nMargin*  
- 以指定的位移，從資料列的左上角的第一個窗格的像素為單位。  
+ 指定的位移，單位為像素的第一個資料列的左上角的窗格。  
   
  [in]*nSpacing*  
- 指定單位為像素的窗格間的間距。  
+ 指定間距，單位為像素的窗格間。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法來排列窗格中，它們將會停駐的資料列。 之後呼叫這個方法，您必須呼叫`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`。  

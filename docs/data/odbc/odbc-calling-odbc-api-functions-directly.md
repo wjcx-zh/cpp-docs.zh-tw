@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336591"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573025"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 資料庫類別提供更簡單的介面，以[資料來源](../../data/odbc/data-source-odbc.md)比 ODBC。 如此一來，類別不會封裝所有的 ODBC API。 任何超出之類別的執行能力的功能，您必須直接呼叫 ODBC API 函式。 例如，您必須呼叫 ODBC 目錄函數 (`::SQLColumns`， `::SQLProcedures`， `::SQLTables`，和其他人) 直接。  
@@ -48,7 +48,7 @@ ms.locfileid: "39336591"
   
 -   當您完成時，取消配置儲存區。  
   
- 如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) MSDN 文件中的 SDK。  
+ 如需有關這些步驟的詳細資訊，請參閱 <<c0> [ 開放式資料庫連接 (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN 文件中的 SDK。  
   
  除了這些步驟中，您需要採取額外步驟以檢查函式傳回值，請確定您的程式不等候非同步呼叫完成，然後依此類推。 您可以使用 AFX_SQL_ASYNC 和 AFX_SQL_SYNC 巨集，以簡化最後一個步驟執行。 如需詳細資訊，請參閱 <<c0> [ 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考 》*。  
 

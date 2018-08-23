@@ -1,5 +1,5 @@
 ---
-title: 地區、 endregion |Microsoft 文件
+title: 區域、 endregion |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5590d2b251d86a9d20b62bfdb3d5bf929e3d92d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e6ec22be873dcec06f224913eb905a2779e4efd
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839443"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539181"
 ---
 # <a name="region-endregion"></a>region、endregion
-**#pragma 區域**可讓您指定一段程式碼，您可以展開或摺疊時使用[大綱功能](/visualstudio/ide/outlining)Visual Studio 程式碼編輯器。  
+`#pragma region` 可讓您指定的程式碼，您可以展開或摺疊時使用的區塊[大綱功能](/visualstudio/ide/outlining)的 Visual Studio 程式碼編輯器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,21 +39,22 @@ ms.locfileid: "33839443"
 #pragma endregion comment  
 ```  
   
-#### <a name="parameters"></a>參數  
- `comment` (選擇性)  
- 會顯示在程式碼編輯器中的註解。  
+### <a name="parameters"></a>參數  
+*註解*（選擇性）  
+會顯示在程式碼編輯器中的註解。  
   
- *名稱*（選擇性）  
- 區域的名稱。  此名稱會顯示在程式碼編輯器中。  
+*name* (選擇性)  
+區域的名稱。  此名稱會顯示在程式碼編輯器中。  
   
 ## <a name="remarks"></a>備註  
- **#pragma endregion**的結束標記 **#pragma 區域**區塊。  
+ 
+`#pragma endregion` 標記的結尾`#pragma region`區塊。  
   
- A`#region`區塊必須以結束 **#pragma endregion**。  
+A`#region`區塊必須以結束`#pragma endregion`。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // pragma_directives_region.cpp  
 #pragma region Region_1  
 void Test() {}  
@@ -65,4 +66,5 @@ int main() {}
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

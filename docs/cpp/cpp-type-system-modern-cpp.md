@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407857"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571767"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 概念*型別*c + + 中非常重要。 每個變數、函式引數和函式傳回值都必須有類型才能編譯。 此外，在評估之前，編譯器會以隱含的方式指定每一個運算式 (包括常值) 的類型。 類型的一些範例包括**int**可儲存整數值， **double**可儲存浮點數值 (也稱為*純量*資料類型)，或標準程式庫類別[std:: basic_string](../standard-library/basic-string-class.md)來儲存文字。 您可以建立您自己的類型定義**類別**或是**結構**。 此類型會指定配置給變數 (或運算式結果) 的記憶體數量、可在該變數中存放的值種類、這些值 (位元模式) 的解譯方式，以及可對其執行的作業。 本文包含 C++ 類型系統主要功能的簡略概觀。  
@@ -157,7 +157,7 @@ void someFunction() {
  如需指標的詳細資訊在一般情況下，請參閱[指標](../cpp/pointers-cpp.md)。  
   
 ## <a name="windows-data-types"></a>Windows 資料類型  
- 在 C 和 C++ 的傳統 Win32 程式設計中，大部分函式會使用 Windows 專有的 typedef 和 #define 巨集 (定義於 `windef.h`) 來指定參數和傳回值的類型。 這些 Windows 資料類型大多只是特殊名稱 （別名） 給 C/c + + 內建型別。 如需這些 typedef 和前置處理器定義的完整清單，請參閱 < [Windows 資料類型](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46)。 這些 Typedef (例如 HRESULT 和 LCID) 很有用而且是描述性的。 其他如 INT，並無特殊意義，只是基本 C++ 類型的別名而已。 其他 Windows 資料類型有從 C 程式設計和 16 位元處理器時代保留下來的名稱，在現代硬體或作業系統上並無用處或意義。 另外還有 Windows 執行階段程式庫，以列出相關聯的特殊資料類型[Windows 執行階段基底資料型別](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6)。 在現代 C++ 中，一般的方針就是，除非 Windows 類型傳達有關如何解譯值的額外涵義，否則優先使用 C++ 基本類型。  
+ 在 C 和 C++ 的傳統 Win32 程式設計中，大部分函式會使用 Windows 專有的 typedef 和 #define 巨集 (定義於 `windef.h`) 來指定參數和傳回值的類型。 這些 Windows 資料類型大多只是特殊名稱 （別名） 給 C/c + + 內建型別。 如需這些 typedef 和前置處理器定義的完整清單，請參閱 < [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。 這些 Typedef (例如 HRESULT 和 LCID) 很有用而且是描述性的。 其他如 INT，並無特殊意義，只是基本 C++ 類型的別名而已。 其他 Windows 資料類型有從 C 程式設計和 16 位元處理器時代保留下來的名稱，在現代硬體或作業系統上並無用處或意義。 另外還有 Windows 執行階段程式庫，以列出相關聯的特殊資料類型[Windows 執行階段基底資料型別](/windows/desktop/WinRT/base-data-types)。 在現代 C++ 中，一般的方針就是，除非 Windows 類型傳達有關如何解譯值的額外涵義，否則優先使用 C++ 基本類型。  
   
 ## <a name="more-information"></a>更多資訊  
  如需 C++ 類型系統的詳細資訊，請參閱下列主題：  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4885cf6e5ddbff939e3f8e6401bd23661f13e275
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337404"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540189"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 `AFX_GLOBAL_DATA` 結構包含的欄位和方法，用於管理架構，或自訂應用程式外觀和行為。  
@@ -69,7 +69,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|偵測到桌面功能表動畫和工作列自動隱藏功能的目前狀態。|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|註冊指定的 MFC 視窗類別。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|釋出透過 GetITaskbarList 和 GetITaskbarList3 方法取得的介面。|  
-|[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化內部函式指標，存取支援 Windows [Themes and Visual Styles](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)(佈景主題和視覺化樣式) 的方法。|  
+|[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化內部函式指標，存取支援 Windows 的方法[佈景主題和視覺化樣式](/windows/desktop/Controls/visual-styles-overview)。|  
 |[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供呼叫 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法的簡單方法。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|建立指定的邏輯字型。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|從剖析名稱建立並初始化殼層項目物件。|  

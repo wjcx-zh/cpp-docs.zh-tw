@@ -1,5 +1,5 @@
 ---
-title: _InterlockedIncrement 內建函式 |Microsoft 文件
+title: _InterlockedIncrement 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,17 +54,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598365e4a5439bc17baaed5e603f30c10c49bc1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 900200eb1894a4f7065a008aeada9b90e71c6fcd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337976"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575784"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 提供 Win32 的編譯器內建支援[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedIncrement](http://msdn.microsoft.com/library/ms683614.aspx)函式。  
+ 提供 Win32 Windows SDK 的編譯器內建支援[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -118,7 +118,7 @@ __int64 _InterlockedIncrement64_nf(
   
 |內建|架構|頁首|  
 |---------------|------------------|------------|  
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|  
   
 ## <a name="remarks"></a>備註  
@@ -128,16 +128,16 @@ __int64 _InterlockedIncrement64_nf(
   
  在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 `_nf` (「沒有圍牆」) 後置字元的內建函式不做為記憶體屏障。  
   
- `lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱[對齊](../cpp/align-cpp.md)。  
+ `lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。  
   
  Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。  
   
  這些常式僅以內建函式的形式供您使用。  
   
 ## <a name="example"></a>範例  
- 如需使用方式的範例`_InterlockedIncrement`，請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  
+ 如需如何使用的範例`_InterlockedIncrement`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963922"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538810"
 ---
 # <a name="tuple-class"></a>元組類別
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述可儲存 n 名的物件型別的`T1`， `T2`，...，`TN`分別、 where `0 <= N <= Nmax`。 元組執行個體的範圍`tuple<T1, T2, ..., TN>`是數字`N`樣板引數。 樣板引數的索引`Ti`，而且該類型之對應預存值`i - 1`。 因此，我們數字中的類型從 1 到 N 這份文件，而對應的索引值的範圍是從 0 to N – 1。
+此範本類別描述可儲存 n 名的物件型別的`T1`， `T2`，...，`TN`分別，其中`0 <= N <= Nmax`。 元組執行個體的範圍`tuple<T1, T2, ..., TN>`是數字`N`樣板引數。 樣板引數的索引`Ti`，而且該類型之對應預存值`i - 1`。 因此，我們數字中的類型從 1 到 N 這份文件，而對應的索引值的範圍是從 0 to N – 1。
 
 ## <a name="example"></a>範例
 

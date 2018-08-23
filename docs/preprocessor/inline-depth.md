@@ -1,5 +1,5 @@
 ---
-title: inline_depth |Microsoft 文件
+title: inline_depth |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40b9382abc8ee0fa0c003964eebe75bc075e473
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849869"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539187"
 ---
 # <a name="inlinedepth"></a>inline_depth
-指定內嵌啟發式搜尋深度，這樣一來，如果函式的深度 (在呼叫圖形中) 大於 `n`，就不會將該函式內嵌。  
+指定內嵌啟發式搜尋深度，使得它是否在深度 （在呼叫歷程圖中） 大於任何函式將予以內嵌*n*。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma inline_depth( [n] )  
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個 pragma 會控制內嵌函式標示為[內嵌](../cpp/inline-functions-cpp.md)和[__inline](../cpp/inline-functions-cpp.md)或內嵌自動在 /Ob2 選項底下。  
+ 
+這個 pragma 會控制內嵌函式標示[內嵌](../cpp/inline-functions-cpp.md)並[__inline](../cpp/inline-functions-cpp.md)或在自動內嵌`/Ob2`選項。  
   
- `n` 可以是介於 0 和 255 之間的值，其中 255 表示在呼叫圖形中不限深度，而零則表示禁止內嵌展開。  若未指定 `n`，則會使用預設值 (254)。  
+*n*可以是介於 0 和 255 之間，其中 255 表示在呼叫歷程圖中，不限的深度，而零禁止內嵌展開的值。  當*n*未指定，會使用預設值 (254)。  
   
- **Inline_depth** pragma 控制一系列的函式呼叫項目可展開的次數。 例如，如果內嵌深度為四，而且 A 呼叫 B，然後 B 呼叫 C，則這三個呼叫將會以內嵌方式展開。 不過，如果最接近的內嵌展開為二，則只會展開 A 和 B，C 則保持為函式呼叫。  
+**Inline_depth** pragma 控制可以展開一系列的函式呼叫的次數。 例如，如果內嵌深度為四，而且 A 呼叫 B，然後 B 呼叫 C，則這三個呼叫將會以內嵌方式展開。 不過，如果最接近的內嵌展開為二，則只會展開 A 和 B，C 則保持為函式呼叫。  
   
- 若要使用這個 pragma，您必須將 /Ob 編譯器選項設定為 1 或 2。 使用這個 pragma 設定的深度會在 pragma 之後的第一次函式呼叫生效。  
+若要使用這個 pragma，您必須設定`/Ob`為 1 或 2 的編譯器選項。 使用這個 pragma 設定的深度會在 pragma 之後的第一次函式呼叫生效。  
   
- 內嵌深度可以在展開期間減少，但是不能增加。 如果內嵌深度為六，而在展開期間前置處理器遇到**inline_depth** 8 深度的值會保持為六。  
+內嵌深度可以在展開期間減少，但是不能增加。 如果內嵌深度為六，而在展開期間前置處理器遇到**inline_depth** pragma 搭配值為八深度會保持為六。  
   
- **Inline_depth** pragma 已標記為函式不會影響`__forceinline`。  
+**Inline_depth** pragma 對於標記為函式不會影響`__forceinline`。  
   
 > [!NOTE]
->  遞迴函式可透過內嵌於最大 16 個呼叫深度的方式替代。  
+> 遞迴函式可透過內嵌於最大 16 個呼叫深度的方式替代。  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline_recursion](../preprocessor/inline-recursion.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[inline_recursion](../preprocessor/inline-recursion.md)

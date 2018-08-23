@@ -1,5 +1,5 @@
 ---
-title: _BitScanForward，_BitScanForward64 |Microsoft 文件
+title: _Bitscanforward、_bitscanforward64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad785bb7789156a2f5105e89a493877fb30c2f3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331893"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543101"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  從遮罩資料的最低有效位元 (MSB) 到最高有效位元 (LSB) 搜尋設定位元 (1)。  
   
@@ -63,8 +63,8 @@ unsigned char _BitScanForward64(
   
 |內建|架構|  
 |---------------|------------------|  
-|`_BitScanForward`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86、 x64、 ARM|  
+|`_BitScanForward64`|ARM、 x64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -112,7 +112,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 2  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,5 @@
 ---
-title: __readgsbyte、 __readgsdword、 __readgsqword、 __readgsword |Microsoft 文件
+title: __readgsbyte、 __readgsdword、 __readgsqword、 __readgsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a0732f5a93c152588f0a7fdc99c7a10787bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325275"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541566"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 從相對於 GS 區段開頭的位移所指定的位置讀取記憶體。  
+ 讀取記憶體從相對於 GS 區段開頭的位移所指定的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,23 +56,23 @@ unsigned __int64 __readgsqword(
  從開頭的位移`GS`來讀取。  
   
 ## <a name="return-value"></a>傳回值  
- 記憶體的位元組、 單字、 雙字組或 quadword （如呼叫的函式名稱所指示） 的內容在位置`GS:[Offset]`。  
+ 記憶體中的位元組、 單字、 雙字組或 （如下所呼叫的函式的名稱） 的 quadword 內容位於位置`GS:[Offset]`。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsbyte`|X64|  
+|`__readgsdword`|X64|  
+|`__readgsqword`|X64|  
+|`__readgsword`|X64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 這些內建函式只適用於核心模式，常式僅可作為內建函式。  
+ 這些內建函式僅適用於核心模式，常式僅可作為內建函式。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   

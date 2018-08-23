@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027809"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538428"
 ---
 # <a name="mfc-classes"></a>MFC 類別
 下列清單中的類別包含在 Microsoft Foundation Class (MFC) 程式庫中。  
@@ -852,7 +852,7 @@ ms.locfileid: "39027809"
  在使用者選取 Windows XP 或 Vista 佈景主題時，模擬 Microsoft Windows XP 或 Microsoft Vista 的外觀。  
   
  [CMFCVisualManagerWindows7 類別](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- 為應用程式提供 [!INCLUDE[win7](../../build/includes/win7_md.md)] 應用程式的外觀。  
+ 讓應用程式的 Windows 7 應用程式的外觀。  
   
  [CMFCWindowsManagerDialog 類別](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  可讓使用者管理 MDI 應用程式中的 MDI 子視窗。  
@@ -1020,7 +1020,7 @@ ms.locfileid: "39027809"
  用於 OLE [編輯連結] 對話方塊的特殊狀況，當您只需要更新文件中現有的連結或內嵌物件時，應該使用此項。  
   
  [COleVariant 類別](../../mfc/reference/colevariant-class.md)  
- 封裝[VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)資料型別。  
+ 封裝[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)資料型別。  
   
  [CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。  

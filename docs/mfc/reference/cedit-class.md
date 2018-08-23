@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339588"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541194"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 編輯控制項的功能。  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>傳回值  
  單行編輯控制項，傳回的值會是編輯控制項中文字的長度，在 TCHARs。  
   
- 對於多行編輯控制項，傳回的值是由指定的行的長度，以 TCHARs， *n 行*參數。 針對[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]文字的長度是行中的位元組數目; Unicode 文字的長度是在一行的字元數。 長度不包含行尾的歸位字元。  
+ 對於多行編輯控制項，傳回的值是由指定的行的長度，以 TCHARs， *n 行*參數。 ANSI 文字的長度是在行中的位元組數目Unicode 文字的長度為行中的字元數。 長度不包含行尾的歸位字元。  
   
  如果*n 行*參數大於控制項中的字元數、 傳回值為零。  
   

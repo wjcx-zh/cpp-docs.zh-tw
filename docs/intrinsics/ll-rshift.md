@@ -1,5 +1,5 @@
 ---
-title: __ll_rshift |Microsoft 文件
+title: __ll_rshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd8189f15f38d5d3008c1f20959573ca9d2337c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324924"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541394"
 ---
 # <a name="llrshift"></a>__ll_rshift
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  將第二個參數所指定的位元數右邊的第一個參數所指定的 64 位元值。  
   
@@ -44,7 +44,7 @@ __int64 __ll_rshift(
  要向右移位的 64 位元整數值。  
   
  [輸入] `nBit`  
- 要移位模數 64，在 x64 上及模數 x86 上的 32 位元數目。  
+ 模數 64，在 x64 上，並在 x86 上的 32 模數移位的位元數。  
   
 ## <a name="return-value"></a>傳回值  
  遮罩移位`nBit`位元。  
@@ -53,12 +53,12 @@ __int64 __ll_rshift(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__ll_rshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_rshift`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 如果第二個參數大於 64 x64 (在 x86 上的 32) 上，該數字會採取模數 64 (在 x86 上的 32)，來判斷要移位的位元數目。 `ll`前置詞會指示這是作業，在`long long`、 另一個名稱為`__int64`，64 位元帶正負號的整數類資料類型。  
+ 如果第二個參數是否大於 64 (在 x86 上的 32) 在 x64 上，該數字會採取模數 64 (在 x86 上的 32)，以判斷要移位的位元數。 `ll`前置詞會指示這是作業，在`long long`、 另一個名稱`__int64`，64 位元帶正負號的整數類資料類型。  
   
 ## <a name="example"></a>範例  
   
@@ -93,9 +93,9 @@ fffffffffffffff0
  - 10  
 ```  
   
- **請注意**如果`_ull_rshift`已被使用，向右移位值的 MSB 已經是零，因此想要的結果會尚未取得在負數值的情況下。  
+ **附註**如果`_ull_rshift`已被使用，向右移位值的 MSB 原本零，因此想要的結果不所取得在負值的情況下。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

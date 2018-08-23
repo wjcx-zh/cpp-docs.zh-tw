@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402492"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573130"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft 專屬**  
   
- 針對以宣告的函式**naked**屬性，編譯器會產生不具初構和終解程式碼。 利用此功能就可以使用內嵌組合語言程式碼撰寫您自己的初構/終解程式碼序列。 naked 函式在撰寫虛擬裝置驅動程式方面特別實用。  請注意， **naked**屬性只適用於 x86 和 ARM，並不適用於[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  
+ 針對以宣告的函式**naked**屬性，編譯器會產生不具初構和終解程式碼。 利用此功能就可以使用內嵌組合語言程式碼撰寫您自己的初構/終解程式碼序列。 naked 函式在撰寫虛擬裝置驅動程式方面特別實用。  請注意， **naked**屬性只適用於 x86 和 ARM，而且不提供 x64。  
   
 ## <a name="syntax"></a>語法  
   

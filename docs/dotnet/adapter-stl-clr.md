@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f87ea6791144b7ce40f4e2d71a2ca7f031adbedf
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 7023ef21258a5b93d889d02c1b586b524c8b98be
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376104"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571460"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR 標頭`<cliext/adapter>`指定兩個範本類別 (`collection_adapter`並`range_adapter`)，並使用範本函式`make_collection`。  
@@ -307,7 +307,7 @@ collection_adapter(Coll^ collection);
   
  `collection_adapter(Coll^ collection);`  
   
- 初始化具有與預存的代碼`collection`。  
+ 初始化具有預存的控制代碼`collection`。  
   
 ### <a name="example"></a>範例  
   

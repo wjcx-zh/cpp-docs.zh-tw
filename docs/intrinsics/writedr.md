@@ -1,5 +1,5 @@
 ---
-title: __writedr |Microsoft 文件
+title: __writedr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fab96a22dec9b4cf2914fa2c02dd973bcd7ace8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329179"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541572"
 ---
 # <a name="writedr"></a>__writedr
-將指定的值寫入至指定的偵錯暫存器。  
+將指定的值寫入至指定的偵錯器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,20 +38,20 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
  從 0 到 7 可識別偵錯的數字註冊。  
   
  [輸入] `DebugValue`  
- 要寫入偵錯值暫存器。  
+ 要寫入至偵錯值暫存器。  
   
 ## <a name="remarks"></a>備註  
- 這些內建函式只適用於核心模式，而常式只提供內建函式。  
+ 這些內建函式是只適用於核心模式，而只提供內建函式常式。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__writedr`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writedr`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

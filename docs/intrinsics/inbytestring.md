@@ -1,5 +1,5 @@
 ---
-title: __inbytestring |Microsoft 文件
+title: __inbytestring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fb619a3fbc38925f2d91ae344b00bf1be34db5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327856"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541196"
 ---
 # <a name="inbytestring"></a>__inbytestring
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 讀取資料，從指定的連接埠使用`rep insb`指令。  
+ 使用指定的連接埠時，讀取資料`rep insb`指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ void __inbytestring(
  要讀取的連接埠。  
   
  [輸出] `Buffer`  
- 從連接埠讀取的資料會寫入這裡。  
+ 從連接埠讀取的資料會寫入此處。  
   
  [輸入] `Count`  
  要讀取之資料的位元組數目。  
@@ -54,14 +54,14 @@ void __inbytestring(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__inbytestring`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbytestring`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

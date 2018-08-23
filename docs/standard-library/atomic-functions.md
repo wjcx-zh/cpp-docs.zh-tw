@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028313"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540769"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函式
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>備註
 
-*不可部分完成比較和交換作業*所指向之物件中儲存的值會比較*Atom*所指向的值*Exp*。如果值相等，儲存所指向之物件中的值*atom*會取代`Val`使用`read-modify-write`作業，並套用記憶體順序條件約束所指定的*Diffgr:id="order1*。 如果值不相等，作業將會取代所指向的值*Exp*的值，會儲存在所指的物件*Atom*和適用於記憶體順序條件約束所指定*Order2*。
+*不可部分完成比較和交換作業*所指向之物件中儲存的值會比較*Atom*所指向的值*Exp*。如果值等於，值所指向之物件中儲存*atom*會取代*值*使用`read-modify-write`作業，並套用所的記憶體順序條件約束所指定*diffgr:id="order1*。 如果值不相等，作業將會取代所指向的值*Exp*的值，會儲存在所指的物件*Atom*和適用於記憶體順序條件約束所指定*Order2*。
 
 ## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
 

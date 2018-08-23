@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336722"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572145"
 ---
 # <a name="ctable-class"></a>CTable 類別
 提供方法來直接存取簡單的資料列集 （不含任何參數的其中一個）。  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in]`DBID`来開啟的資料表。  
   
  *pPropSet*  
- [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](https://msdn.microsoft.com/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。  
+ [in]陣列的指標[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構，其中包含要設定屬性和值。 請參閱[的屬性集和屬性群組](/previous-versions/windows/desktop/ms713696\(v=vs.85\))中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL 指定任何屬性。  
   
  *ulPropSets*  
- [in]數目[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構傳入*Dbpropset*引數。  
+ [in]數目[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構傳入*Dbpropset*引數。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](https://msdn.microsoft.com/library/ms716724.aspx)中*OLE DB 程式設計人員參考*。  
+ 如需詳細資訊，請參閱 < [iopenrowset:: Openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

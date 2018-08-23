@@ -1,5 +1,5 @@
 ---
-title: NMAKE 參考 |Microsoft 文件
+title: NMAKE 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372675"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572958"
 ---
 # <a name="nmake-reference"></a>NMAKE 參考
-Microsoft Program Maintenance Utility (NMAKE.EXE) 是隨附於 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 的命令列工具，會根據描述檔案包含的命令來建置專案。  
+Microsoft Program Maintenance Utility (NMAKE。EXE) 是隨附於 Visual Studio 會建置專案，根據描述檔案中包含的命令的命令列工具。  
   
- 若要使用 NMAKE，您必須在 [開發人員命令提示字元] 視窗中執行。 [開發人員命令提示字元] 視窗中有針對工具、程式庫設定的環境變數，並且在命令列包含建置所需的檔案路徑。 如需如何開啟 [開發人員命令提示字元] 視窗的詳細資訊，請參閱[命令列上的建置 C/c + + 程式碼](../build/building-on-the-command-line.md)。  
+ 若要使用 NMAKE，您必須在 [開發人員命令提示字元] 視窗中執行。 [開發人員命令提示字元] 視窗中有針對工具、程式庫設定的環境變數，並且在命令列包含建置所需的檔案路徑。 如需如何開啟 [開發人員命令提示字元] 視窗的詳細資訊，請參閱 <<c0> [ 命令列上的建置 C/c + + 程式碼](../build/building-on-the-command-line.md)。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
  [執行 NMAKE](../build/running-nmake.md)  

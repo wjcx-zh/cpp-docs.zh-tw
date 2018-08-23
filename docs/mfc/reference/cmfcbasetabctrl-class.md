@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337475"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539206"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 實作索引標籤式視窗的基本功能。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>備註  
  `CMFCBaseTabCtrl` 類別是抽象類別。 因此，無法具現化。 若要建立索引標籤式視窗，您必須從 `CMFCBaseTabCtrl`衍生類別。 MFC 程式庫包含一些衍生類別的範例，其中兩個是 [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) 和 [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)。  
   
- 從 [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)]開始，這個類別支援 Microsoft Active Accessibility。  
+ 從 Visual Studio 2015 開始，此類別支援 Microsoft Active Accessibility。  
   
 ## <a name="customization-tips"></a>自訂秘訣  
  下列秘訣屬於 `CMFCBaseTabCtrl Class` 以及任何繼承自它的類別：  

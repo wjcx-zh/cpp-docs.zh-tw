@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895df401ab10ae85641fd2eed9f7a9654916f33f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465222"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572546"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ VARIANT Detach( );
  封裝`VARIANT`。  
   
 ## <a name="remarks"></a>備註  
- 擷取並傳回封裝`VARIANT`，然後清除這個`_variant_t`而不會終結它的物件。 此成員函式移除`VARIANT`來自封裝和集合`VARTYPE`這個`_variant_t`物件設為 VT_EMPTY。 它可以決定是否要釋放傳回`VARIANT`藉由呼叫[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835)函式。  
+ 擷取並傳回封裝`VARIANT`，然後清除這個`_variant_t`而不會終結它的物件。 此成員函式移除`VARIANT`來自封裝和集合`VARTYPE`這個`_variant_t`物件設為 VT_EMPTY。 它可以決定是否要釋放傳回`VARIANT`藉由呼叫[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)函式。  
   
  **結束 Microsoft 專屬**  
   

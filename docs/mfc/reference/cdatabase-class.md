@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b28dc721b3131fc413248f6ba4a0b0612176cb67
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6cb88decfd69fd7fb81667164f651e934ee08775
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337576"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539785"
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 表示資料來源的連接，您可以透過這個連接來操作資料來源。  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請注意，MFC ODBC 類別不會再使用非同步處理;若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx)。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](https://msdn.microsoft.com/library/ms713563.aspx)Windows SDK 中。  
+ 請注意，MFC ODBC 類別不會再使用非同步處理;若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\))。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](/previous-versions/windows/desktop/ms713563\(v=vs.85\))Windows SDK 中。  
   
 ##  <a name="cantransact"></a>  CDatabase::CanTransact  
  呼叫此成員函式，以判斷資料庫是否允許交易。  

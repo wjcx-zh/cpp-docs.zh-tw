@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 類別 |Microsoft 文件
+title: CMFCVisualManagerVS2005 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038057"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540399"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 類別
-`CMFCVisualManagerVS2005` 讓應用程式的 Microsoft Visual Studio 2005 的外觀。  
+`CMFCVisualManagerVS2005` 為應用程式提供 Microsoft Visual Studio 2005 的外觀。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,10 +71,10 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |名稱|描述|  
 |----------|-----------------|  
 |[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|當它繪製為停駐和索引標籤式窗格時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize)。)|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|架構會呼叫這個方法，它繪製視窗前，判斷 /mditabs 視窗的框線大小。 (覆寫[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。)|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|架構會呼叫這個方法，以判斷 /mditabs 視窗的框線大小之前它繪製視窗。 (覆寫[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。)|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(覆寫[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor)。)|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(覆寫[CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors)。)|  
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|傳回在目前的視覺管理員是否重疊的自動隱藏按鈕。 (覆寫[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons)。)|  
+|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|傳回在目前的視覺化管理員是否重疊的自動隱藏按鈕。 (覆寫[CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons)。)|  
 |[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(覆寫[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder)。)|  
 |[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(覆寫 `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`。)|  
 |[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(覆寫[CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption)。)|  
@@ -88,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(覆寫[CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors)。)|  
   
 ## <a name="remarks"></a>備註  
- 變更您的應用程式，類似於的視覺外觀的情況下，您在使用 CMFCVisualManagerVS2005 類別[!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)]。  
+ 您可以使用 CMFCVisualManagerVS2005 類別來變更您的應用程式，類似於 Microsoft Visual Studio 2005 的視覺外觀。  
   
  這個類別的成員都衍生自這個類別的祖系的虛擬函式[CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何使用視覺管理員 VS 2005。 此程式碼片段是部分[桌面警示示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用 VS 2005 的視覺管理員。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   

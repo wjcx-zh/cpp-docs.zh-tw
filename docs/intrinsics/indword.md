@@ -1,5 +1,5 @@
 ---
-title: __indword |Microsoft 文件
+title: __indword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcfb321d526bb449335f87e7a83ba2a0aba7e60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325535"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538819"
 ---
 # <a name="indword"></a>__indword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 從指定的連接埠使用讀取的資料的一個雙字組`in`指令。  
+ 從指定的連接埠使用讀取資料的一個雙精度浮點數字`in`指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,20 +43,20 @@ unsigned long __indword(
  要讀取的連接埠。  
   
 ## <a name="return-value"></a>傳回值  
- 從連接埠讀取這個字。  
+ 從連接埠，讀取這個字。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__indword`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indword`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

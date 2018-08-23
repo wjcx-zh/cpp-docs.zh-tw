@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337718"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571558"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 擷取和操作處理大量資料擷取的單一呼叫的多個資料列控制代碼的資料列。  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
-呼叫[irowset:: Addrefrows](https://msdn.microsoft.com/library/ms719619.aspx)遞增目前從大量資料列集擷取的所有資料列的參考計數。  
+呼叫[irowset:: Addrefrows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))遞增目前從大量資料列集擷取的所有資料列的參考計數。  
   
 ### <a name="syntax"></a>語法  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] 從書籤到目標資料列的資料列計數。 如果*lSkip*為零，將擷取的第一個資料列是已標記書籤的資料列。 如果*lSkip*為 1，將擷取的第一個資料列是資料列已標記書籤的資料列之後。 如果*lSkip*為-1，將擷取的第一個資料列是已標記書籤的資料列之前的資料列。  
   
 ### <a name="return-value"></a>傳回值  
- 請參閱[irowset:: Getdata](https://msdn.microsoft.com/library/ms716988.aspx)中*OLE DB 程式設計人員參考*。 
+ 請參閱[irowset:: Getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 擷取資料列從資料列集中的小數位置開始。  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- 其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](https://msdn.microsoft.com/library/ms709602.aspx)中*OLE DB 程式設計人員參考*。   
+ 其中`RowsetSize`是以資料列的資料列集的大小。 此公式的精確度取決於特定的提供者。 如需詳細資訊，請參閱 < [irowsetscroll::](/previous-versions/windows/desktop/ms709602\(v=vs.85\))中*OLE DB 程式設計人員參考*。   
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
-呼叫[irowset:: Releaserows](https://msdn.microsoft.com/library/ms719771.aspx)遞減目前從大量資料列集擷取的所有資料列的參考計數。  
+呼叫[irowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))遞減目前從大量資料列集擷取的所有資料列的參考計數。  
   
 ### <a name="syntax"></a>語法  
   

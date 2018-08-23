@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9fea13ef4a89ee2a1105702db4fe692c12643d2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 39d310b882047955201f74695f68906cabcb9d7c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337936"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571937"
 ---
 # <a name="supporting-notifications"></a>支援告知
 
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>實作連接點介面上的提供者和取用者  
  若要實作通知，提供者類別必須繼承自[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)並[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)。  
   
- `IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)。 `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
+ `IRowsetNotifyCP` 實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))。 `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
   
  請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為接收） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 在取用者實作連接點介面的詳細資訊，請參閱[接收通知](../../data/oledb/receiving-notifications.md)。  
   
@@ -47,7 +47,7 @@ END_CONNECTION_POINT_MAP
 ## <a name="adding-irowsetnotify"></a>新增 IRowsetNotify  
  若要新增`IRowsetNotify`，您需要新增`IConnectionPointContainerImpl<rowset-name>`和`IRowsetNotifyCP<rowset-name>`繼承鏈結。  
   
- 例如，以下是的繼承鏈結`RUpdateRowset`中[UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f):  
+ 例如，以下是的繼承鏈結`RUpdateRowset`中[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
 >  範例程式碼可能會與不同功能為此處所列;您應該將範例程式碼做為較新版本。  

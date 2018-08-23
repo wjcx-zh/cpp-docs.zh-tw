@@ -1,5 +1,5 @@
 ---
-title: C 執行階段程式庫函式的執行緒控制 |Microsoft 文件
+title: C 執行階段程式庫函式的執行緒控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a505bae156edba6798812b807d7ab5c6ea9e396
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685758"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540974"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>執行緒控制的 C 執行階段程式庫函式
-所有 Win32 程式都必須至少一個執行緒。 任何執行緒可以建立額外的執行緒。 執行緒可以快速完成其工作，然後結束，或它可以保持使用中程式的存留期間。  
+所有 Win32 程式都必須至少一個執行緒。 任何執行緒可以建立額外的執行緒。 執行緒可以快速地完成其工作，然後終止，或可以保持使用中程式的存留期間。  
   
- 嵌入 LIBCMT 和 MSVCRT C 執行階段程式庫提供下列函式的執行緒建立和終止： [_beginthread、 _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)和[_endthread、 _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)。  
+嵌入 LIBCMT 和 MSVCRT C 執行階段程式庫提供下列函式的執行緒建立和終止： [_beginthread、 _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)並[_endthread、 _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)。  
   
- `_beginthread`和`_beginthreadex`函式會建立新的執行緒，並傳回執行緒識別項，如果作業成功。 如果它已完成執行，或它可能會終止本身呼叫自動終止執行緒`_endthread`或`_endthreadex`。  
+`_beginthread`和`_beginthreadex`函式會建立新的執行緒，並傳回執行緒識別項，如果作業成功。 如果它在完成執行時，或它可以將自動終止呼叫的執行緒終止自動`_endthread`或`_endthreadex`。  
   
 > [!NOTE]
->  如果您要從使用 Libcmt.lib 建立程式呼叫 C 執行階段常式，您必須啟動您的執行緒與`_beginthread`或`_beginthreadex`函式。 請勿使用 Win32 函式`ExitThread`和`CreateThread`。 使用`SuspendThread`時可能會導致死結多個執行緒遭到封鎖而等待 暫止的執行緒完成其存取權的 C 執行階段資料結構。  
+> 如果您要從使用 Libcmt.lib 建置的程式中呼叫 C 執行階段常式，您必須先啟動您使用的執行緒`_beginthread`或`_beginthreadex`函式。 請勿使用 Win32 函式`ExitThread`和`CreateThread`。 使用`SuspendThread`時可能會導致死結多個執行緒遭到封鎖而等待 暫止的執行緒完成其存取權的 C 執行階段資料結構。  
   
 ##  <a name="_core_the__beginthread_function"></a> _Beginthread 和 _beginthreadex 函式  
- `_beginthread`和`_beginthreadex`函式會建立新的執行緒。 執行緒共用的程式碼和資料區段的處理程序與其他處理序中的執行緒，但有自己的唯一暫存器值、 堆疊空間和目前的指令位址。 系統會將 CPU 時間的每個執行緒，以便處理程序中的所有執行緒可以同時都執行。  
+ 
+`_beginthread`和`_beginthreadex`函式會建立新的執行緒。 執行緒與處理程序中的其他執行緒共用的程式碼和資料區段的處理程序，但是有它自己的唯一暫存器值、 堆疊空間和目前的指令位址。 系統會提供 CPU 時間的每個執行緒，好讓處理程序中的所有執行緒可以同時都執行。  
   
- `_beginthread` 和`_beginthreadex`類似於[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API 中的函式，但有這些差異：  
+`_beginthread` 並`_beginthreadex`類似於[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API 中的函式但有下列差異：  
   
--   它們會初始化某些 C 執行階段程式庫的變數。 這很重要，只有當您使用 C 執行階段程式庫中您的執行緒。  
+- 它們會初始化特定 C 執行階段程式庫變數。 這很重要，只有當您使用 C 執行階段程式庫中您的執行緒。  
   
--   `CreateThread` 有助於提供控制的安全性屬性。 若要啟動的執行緒處於暫停狀態，您可以使用此函式。  
+- `CreateThread` 有助於讓您控制安全性屬性。 您可以使用此函式，以啟動在暫停狀態的執行緒。  
   
- `_beginthread` 和`_beginthreadex`至新的執行緒，如果成功或錯誤程式碼傳回的控制代碼，如果發生錯誤。  
+ `_beginthread` 和`_beginthreadex`傳回至新的執行緒如果成功則為錯誤碼的控制代碼，如果發生錯誤。  
   
 ##  <a name="_core_the__endthread_function"></a> _Endthread 和 _endthreadex 函式  
- [_Endthread](../c-runtime-library/reference/endthread-endthreadex.md)函式會結束執行緒，所建立`_beginthread`(同樣地，`_endthreadex`中止建立的執行緒`_beginthreadex`)。 當完成執行緒終止自動。 `_endthread` 和`_endthreadex`可用於從執行緒內的條件式終止。 比方說，如果無法取得控制項的通訊埠，可以結束專門用於通訊處理的執行緒。  
+ 
+[_Endthread](../c-runtime-library/reference/endthread-endthreadex.md)函式會終止所建立的執行緒`_beginthread`(同樣地，`_endthreadex`終止所建立的執行緒`_beginthreadex`)。 執行緒會自動終止何時完成。 `_endthread` 和`_endthreadex`可用於從執行緒內的條件式終止。 比方說，如果無法取得控制項的通訊埠的可以結束執行緒專門用來處理的通訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)
+ 
+[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

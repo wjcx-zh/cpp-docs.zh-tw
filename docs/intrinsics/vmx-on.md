@@ -1,5 +1,5 @@
 ---
-title: __vmx_on |Microsoft 文件
+title: __vmx_on |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa4325dc55bee53f2a19b192bb0c699dd89eb0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e01be3d3f7db075116782b64e8b92ba12fb02f1d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333088"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541191"
 ---
 # <a name="vmxon"></a>__vmx_on
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 啟動虛擬機器擴充功能 (VMX) 操作處理器中。  
+ 啟動處理器中的虛擬機器擴充功能 (VMX) 作業。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ unsigned char __vmx_on(
   
 #### <a name="parameters"></a>參數  
  [輸入] `VmsSupportPhysicalAddress`  
- 虛擬機器控制結構 (VMCS) 所指向的 64 位元實體位址指標。  
+ 指標，指向 虛擬機器控制結構 (VMCS) 的 64 位元實體位址。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -50,17 +50,17 @@ unsigned char __vmx_on(
 |2|作業失敗，無可用的狀態。|  
   
 ## <a name="remarks"></a>備註  
- `__vmx_on`函式對應至`VMXON`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台。  
+ `__vmx_on`函式對應至`VMXON`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_on`|X64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

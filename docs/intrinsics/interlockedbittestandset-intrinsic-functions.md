@@ -1,5 +1,5 @@
 ---
-title: _interlockedbittestandset 內建函式 |Microsoft 文件
+title: _interlockedbittestandset 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6789a8e602fded02d4d521be74e602557ebdaefe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340329"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541753"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  會產生檢查位址 `b` 的位元 `a` 的指令，並傳回其目前的值，再將它設定為 1。  
   
@@ -95,14 +95,14 @@ unsigned char _interlockedbittestandset64_HLERelease(
   
 |內建|架構|頁首|  
 |---------------|------------------|------------|  
-|`_interlockedbittestandset`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_interlockedbittestandset`|x86、 x64、 ARM|\<intrin.h>|  
 |`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|  
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
-|`_interlockedbittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_interlockedbittestandset64`|X64|\<intrin.h>|  
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
- 在 x86 和 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 處理器上，這些內建函式會使用 `lock bts` 指令讀取，並將指定的位元設為 1。 此作業是不可部分完成的。  
+ 在 x86 和 x64 處理器上使用這些內建函式`lock bts`讀取，並將指定的位元設為 1 的指示。 此作業是不可部分完成的。  
   
  在 ARM 處理器上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。 搭配 `_nf` (「無範圍」) 字尾的 ARM 內建函式不會當做記憶體屏障。  
   
@@ -110,7 +110,7 @@ unsigned char _interlockedbittestandset64_HLERelease(
   
  這些常式僅以內建函式的形式供您使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

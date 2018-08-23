@@ -1,5 +1,5 @@
 ---
-title: __outdwordstring |Microsoft 文件
+title: __outdwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942a98b9a9d43d349f6273b77c8d56967b927eae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adc104e3325a2a9fda922f8ef32aa84982f35366
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331756"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539777"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生`rep outsd`指示傳送`Count`雙字組開頭`Buffer`輸出所指定的 I/O 連接埠`Port`。  
+ 會產生`rep outsd`指示，會傳送`Count`雙字組開頭`Buffer`出所指定的 I/O 連接埠`Port`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,26 +42,26 @@ void __outdwordstring(
   
 #### <a name="parameters"></a>參數  
  [輸入] `Port`  
- 將資料傳送至連接埠。  
+ 若要將資料傳送至連接埠。  
   
  [輸入] `Buffer`  
- 指定的連接埠外的資料指標。  
+ 指定的連接埠傳送資料的指標。  
   
  [輸入] `Count`  
- 要傳送的雙字組數目。  
+ 若要傳送的雙字組數目。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__outdwordstring`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outdwordstring`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

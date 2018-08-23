@@ -17,42 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c16d16fe1965e5e3c6fa69a78dabf9be615daee1
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 299ee0f1c2a892a3219c2337e01d629eadec8a82
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013222"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580990"
 ---
 # <a name="issamevalue-constant"></a>IsSame::value 常數
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template <typename T1, typename T2>  
-struct IsSame  
-{  
-    static const bool value = false;  
-};  
-  
-template <typename T1>  
-struct IsSame<T1, T1>  
-{  
-    static const bool value = true;  
-};  
-```  
-  
-## <a name="remarks"></a>備註  
- 表示一種型別是否與另一個相同。  
-  
- **值**是 **，則為 true**如果範本參數相同，並**false**範本參數是否不同。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** internal.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [IsSame 結構](../windows/issame-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+## <a name="remarks"></a>備註
+
+表示一種型別是否與另一個相同。
+
+**值**是 **，則為 true**如果範本參數相同，並**false**範本參數是否不同。
+
+## <a name="requirements"></a>需求
+
+**標頭：** internal.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[IsSame 結構](../windows/issame-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

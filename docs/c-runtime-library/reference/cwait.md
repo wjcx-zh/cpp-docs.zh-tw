@@ -32,19 +32,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 64d312c75dcbebd968760c5f7d09d8458e68e4b0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572451"
 ---
 # <a name="cwait"></a>_cwait
 
 等到其他處理序終止為止。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -59,38 +59,38 @@ intptr_t _cwait(
 ### <a name="parameters"></a>參數
 
 *termstat*<br/>
-其中會儲存指定處理序的結果碼，緩衝區的指標或**NULL**。
+指定的處理序的結果碼的儲存位置，緩衝區的指標或**NULL**。
 
 *procHandle*<br/>
-等候處理序控制代碼 (也就是說，必須先終止處理序 **_cwait**可以傳回)。
+等候處理程序的控制代碼 (也就是說，必須先終止程序 **_cwait**可以傳回)。
 
 *action*<br/>
-NULL： 會忽略由 Windows 作業系統應用程式。對於其他應用程式： 上執行的動作碼*procHandle*。
+NULL： 忽略 Windows 作業系統應用程式;對於其他應用程式： 在上執行的動作程式碼*procHandle*。
 
 ## <a name="return-value"></a>傳回值
 
-指定的處理序已順利完成，傳回指定之處理序控制代碼，並設定*termstat*指定的處理序所傳回的結果碼。 否則，傳回-1，並設定**errno** ，如下所示。
+當指定的處理序順利完成之後時，傳回指定的處理序控制代碼，並設定*termstat*指定的處理序所傳回的結果碼。 否則，會傳回-1，並將**errno** ，如下所示。
 
 |值|描述|
 |-----------|-----------------|
-|**ECHILD**|指定處理序不存在， *procHandle*無效，或是呼叫[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)或[WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) API 失敗。|
+|**ECHILD**|指定處理序不存在， *procHandle*無效，或是呼叫[GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)或是[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) API 失敗。|
 |**EINVAL**|*動作*無效。|
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Cwait**函式會等候所提供的程序識別碼指定之處理序終止*procHandle*。 值*procHandle*傳遞至 **_cwait**應該呼叫所傳回的值[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)函式，建立指定的處理序。 如果處理序識別碼終止之前 **_cwait**呼叫時， **_cwait**會立即傳回。 **_cwait**可供所有處理序等待其他所有已知處理序，其有效的控制代碼 (*procHandle*) 存在。
+**_Cwait**函式會等待指定的處理序的處理序識別碼所提供的終止*procHandle*。 值*procHandle*傳遞至 **_cwait**應該會呼叫所傳回的值[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)建立指定的處理序的函式。 如果處理序識別碼終止之前 **_cwait**呼叫時， **_cwait**會立即傳回。 **_cwait**可以用任何處理序，來等候任何其他已知的處理序，為其有效的控制代碼 (*procHandle*) 存在。
 
-*termstat*指向要儲存指定處理序的傳回碼的緩衝區。 值*termstat*指出指定的處理序正常終止經由呼叫 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx)應用程式開發介面。 **ExitProcess**如果指定的處理序呼叫在內部呼叫**結束**或 **_exit**，從傳回**主要**，或達到結尾**主要**. 如需有關的值，就會傳遞回*termstat*，請參閱[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。 如果 **_cwait**呼叫使用**NULL**值*termstat*，不會儲存指定處理序的傳回碼。
+*termstat*指向儲存指定的處理序的傳回碼的緩衝區。 值*termstat*指出指定的處理序正常終止藉由呼叫 Windows [ExitProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) API。 **ExitProcess**如果指定的處理序的呼叫會在內部呼叫**結束**或是 **_exit**，從傳回**主要**，或達到結尾**主要**. 如需有關透過值*termstat*，請參閱[GetExitCodeProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)。 如果 **_cwait**透過呼叫**NULL**值*termstat*，不會儲存指定的處理序的傳回碼。
 
-*動作*參數已忽略由 Windows 作業系統，因為這些環境中不會實作父子式關聯性。
+*動作*因為父子式關聯性不會實作在這些環境中，將會忽略由 Windows 作業系統的參數。
 
-除非*procHandle*為-1 或-2 （控制代碼對應到目前的處理序或執行緒），將會關閉這個控制代碼。 因此，在此情況中，請勿使用傳回的處理常式。
+除非*procHandle*為-1 或-2 （控制代碼對應到目前的處理序或執行緒），將會關閉控制代碼。 因此，在此情況中，請勿使用傳回的處理常式。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|---------------------|
 |**_cwait**|\<process.h>|\<errno.h>|
 

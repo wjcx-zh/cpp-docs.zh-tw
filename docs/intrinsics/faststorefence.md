@@ -1,5 +1,5 @@
 ---
-title: __faststorefence |Microsoft 文件
+title: __faststorefence |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f8c4a343126a14e1aea931b1e154714af280904
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc3086a59fe3995fcb5b4fff34891faa6a630f63
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327794"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541561"
 ---
 # <a name="faststorefence"></a>__faststorefence
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  保證每個前一項記憶體參考 (包括載入和儲存記憶體參考) 在任何後續記憶體參考之前都為全域可見。  
   
@@ -40,7 +40,7 @@ void __faststorefence();
   
 |內建|架構|  
 |---------------|------------------|  
-|`__faststorefence`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__faststorefence`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -51,7 +51,7 @@ void __faststorefence();
   
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

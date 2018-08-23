@@ -1,7 +1,7 @@
 ---
 title: range_error 類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63d6497dda220723587623cb42551366ddcbef80
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6c2f46d3dedc80cb89e6776a82eee6ebe57026
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853082"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538240"
 ---
 # <a name="rangeerror-class"></a>range_error 類別
 
@@ -33,15 +33,13 @@ ms.locfileid: "33853082"
 class range_error : public runtime_error {
 public:
     explicit range_error(const string& message);
-
     explicit range_error(const char *message);
-
 };
 ```
 
 ## <a name="remarks"></a>備註
 
-[what](../standard-library/exception-class.md) 所傳回的值為 **message**`.`[data](../standard-library/basic-string-class.md#data) 的複本。
+所傳回的值[什麼](../standard-library/exception-class.md)是一份`message.data`。 如需詳細資訊，請參閱 < [basic_string:: data](../standard-library/basic-string-class.md#data)。
 
 ## <a name="example"></a>範例
 
@@ -56,7 +54,7 @@ int main()
    {
       throw range_error( "The range is in error!" );
    }
-   catch (exception &e)
+   catch (range_error &e)
    {
       cerr << "Caught: " << e.what( ) << endl;
       cerr << "Type: " << typeid( e ).name( ) << endl;

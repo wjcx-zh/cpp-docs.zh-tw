@@ -17,70 +17,76 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd514b1684571fb12a19265b57e6d5b92b8c7edd
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a0c53832acdd7a785ccc36941cd317a9d0705173
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011545"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583622"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 類別
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template <  
-   typename SyncTraits  
->  
-class SyncLockWithStatusT : public SyncLockT<SyncTraits>;  
-```  
-  
-### <a name="parameters"></a>參數  
- *SyncTraits*  
- 一種類型，可以採取獨佔或共用資源的擁有權。  
-  
-## <a name="remarks"></a>備註  
- 代表一種類型，可以採取獨佔或共用資源的擁有權。  
-  
- **SyncLockWithStatusT**類別來實作[Mutex](../windows/mutex-class1.md)並[號誌](../windows/semaphore-class.md)類別。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新執行個體**SyncLockWithStatusT**類別。|  
-  
-### <a name="protected-constructors"></a>受保護的建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新執行個體**SyncLockWithStatusT**類別。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)|擷取目前的等候狀態**SyncLockWithStatusT**物件。|  
-|[SyncLockWithStatusT::IsLocked 方法](../windows/synclockwithstatust-islocked-method.md)|指出是否目前**SyncLockWithStatusT**物件擁有資源，也就是，則**SyncLockWithStatusT**物件*鎖定*。|  
-  
-### <a name="protected-data-members"></a>受保護的資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[SyncLockWithStatusT::status_ 資料成員](../windows/synclockwithstatust-status-data-member.md)|根據目前的物件上的鎖定作業之後，保留基礎的等候作業的結果**SyncLockWithStatusT**物件。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `SyncLockT`  
-  
- `SyncLockWithStatusT`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Wrappers::Details 命名空間](../windows/microsoft-wrl-wrappers-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template <
+   typename SyncTraits
+>
+class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
+```
+
+### <a name="parameters"></a>參數
+
+*SyncTraits*  
+一種類型，可以採取獨佔或共用資源的擁有權。
+
+## <a name="remarks"></a>備註
+
+代表一種類型，可以採取獨佔或共用資源的擁有權。
+
+**SyncLockWithStatusT**類別來實作[Mutex](../windows/mutex-class1.md)並[號誌](../windows/semaphore-class.md)類別。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新執行個體**SyncLockWithStatusT**類別。|
+
+### <a name="protected-constructors"></a>受保護的建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::SyncLockWithStatusT 建構函式](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|初始化的新執行個體**SyncLockWithStatusT**類別。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)|擷取目前的等候狀態**SyncLockWithStatusT**物件。|
+|[SyncLockWithStatusT::IsLocked 方法](../windows/synclockwithstatust-islocked-method.md)|指出是否目前**SyncLockWithStatusT**物件擁有資源，也就是，則**SyncLockWithStatusT**物件*鎖定*。|
+
+### <a name="protected-data-members"></a>受保護的資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[SyncLockWithStatusT::status_ 資料成員](../windows/synclockwithstatust-status-data-member.md)|根據目前的物件上的鎖定作業之後，保留基礎的等候作業的結果**SyncLockWithStatusT**物件。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`SyncLockT`
+
+`SyncLockWithStatusT`
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Wrappers::Details 命名空間](../windows/microsoft-wrl-wrappers-details-namespace.md)

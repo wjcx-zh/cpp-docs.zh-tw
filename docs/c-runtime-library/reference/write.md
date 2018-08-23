@@ -18,6 +18,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _write
@@ -32,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f800c42480b6518c7482c15bfa18646b1988dc8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 917309717d72048650d2b3975fefd74a1db50949
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414792"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571461"
 ---
 # <a name="write"></a>_write
 
@@ -66,23 +67,23 @@ int _write(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話， **_write**傳回實際寫入的位元組數目。 如果磁碟上剩餘的實際空間小於函式嘗試寫入磁碟的緩衝區大小 **_write**失敗且不會清除任何緩衝區的內容至磁碟。 傳回值-1 表示錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 和**errno**設為三個值之一： **EBADF**、 表示的檔案描述項無效或未開啟檔案進行寫入。**ENOSPC**，的表示沒有任何作業; 在裝置上保留足夠的空間或**EINVAL**，這表示*緩衝區*是 null 指標或奇數*計數*的位元組傳送給寫入至以 Unicode 模式的檔案。
+如果成功， **_write**傳回實際寫入的位元組數目。 如果磁碟上剩餘的實際空間小於函式嘗試寫入至磁碟，緩衝區的大小 **_write**失敗，而且不會清除任何緩衝區的內容到磁碟。 傳回值為-1 表示錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 及**errno**設為三個值之一： **EBADF**，這表示檔案描述項無效，或檔案未開啟供寫入;**ENOSPC**，的表示沒有足夠的空間保留作業; 在裝置上或**EINVAL**，這表示*緩衝區*是 null 指標或奇數*計數*的位元組已傳遞給寫入 Unicode 模式中的檔案。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果在文字模式中開啟檔案時，每個換行字元會取代歸位字元-換行字元組在輸出中。 這種取代不會影響傳回值。
+如果在文字模式中開啟檔案時，每個換行字元會取代歸位/換行字元組在輸出中。 這種取代不會影響傳回值。
 
-在 Unicode 轉譯模式中開啟檔案時，比方說，如果*fd*開啟使用 **_open**或 **_sopen**和模式參數，其包含 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**，或如果已開啟使用**fopen**和模式參數，其包含**ccs =UNICODE**， **ccs = UTF 16LE**，或**ccs = utf-8**，或如果模式變更為 Unicode 轉譯模式使用 **_setmode**—*緩衝區*解譯為陣列的指標**wchar_t**包含**utf-16**資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+在 Unicode 轉譯模式中開啟檔案時 — 比方說，如果*fd*使用開啟 **_open**或 **_sopen**和 [模式] 參數，其中包含 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**，或如果它使用開啟**fopen**和 [模式] 參數，其中包含**ccs =UNICODE**， **ccs =-16LE**，或**ccs = utf-8**，或如果模式變更為 Unicode 轉譯模式使用 **_setmode**—*緩衝區*解譯為陣列的指標**wchar_t** ，其中包含**utf-16**資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Write**函式寫入*計數*位元組從*緩衝區*與相關聯的檔案到*fd*。 寫入作業會從與指定檔案相關之檔案指標 (若有的話) 的目前位置開始。 若檔案是開啟為以供附加，則作業會在檔案的目前結尾開始。 經過寫入作業之後，檔案指標會隨著實際寫入的位元組數而增加。
+**_Write**函式寫入*計數*位元組*緩衝區*到相關聯的檔案*fd*。 寫入作業會從與指定檔案相關之檔案指標 (若有的話) 的目前位置開始。 若檔案是開啟為以供附加，則作業會在檔案的目前結尾開始。 經過寫入作業之後，檔案指標會隨著實際寫入的位元組數而增加。
 
-在文字模式中開啟的檔案寫入時 **_write** CTRL + Z 字元視為邏輯的檔案結尾。 當寫入至裝置， **_write**會將 CTRL + Z 字元視為輸出結束字元緩衝區中。
+寫入以文字模式開啟的檔案時 **_write** CTRL + Z 字元視為邏輯的檔案結尾。 寫入至裝置，當 **_write**會將 CTRL + Z 字元視為輸出結束字元緩衝區中。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 

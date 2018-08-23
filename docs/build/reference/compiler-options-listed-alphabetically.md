@@ -1,7 +1,7 @@
 ---
-title: 依字母順序列出編譯器選項 |Microsoft 文件
+title: 依字母順序列出編譯器選項 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/22/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -13,31 +13,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 985232af68daebe924cd51300974d614bf6d6756
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379623"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572260"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
-以下是編譯器選項的完整字母順序清單。 如需分類清單，請參閱[依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
+以下是編譯器選項的完整字母順序清單。 如需分類清單，請參閱 <<c0> [ 依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
 |選項|用途|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定回應檔。|
 |[/?](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/AI](ai-specify-metadata-directories.md)|指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。|
-|[分析 /](analyze-code-analysis.md)|啟用程式碼分析|
+|[/ 分析](analyze-code-analysis.md)|啟用程式碼分析|
 |[/arch](arch-minimum-cpu-architecture.md)|為程式碼產生指定架構。|
-|[/await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
+|[/ await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在前置處理過程中保留註解。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。|
 |[/clr](clr-common-language-runtime-compilation.md)|產生輸出檔案，以便在 Common Language Runtime 上執行。|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|控制在編譯時期的 constexpr 評估。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期的控制 constexpr 評估。|
 |[/D](d-preprocessor-definitions.md)|定義常數和巨集。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制診斷訊息的格式。|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|將文件註解處理成 XML 檔案。|
@@ -47,7 +47,7 @@ ms.locfileid: "32379623"
 |[/errorReport](errorreport-report-internal-compiler-errors.md)|讓您直接提供內部編譯器錯誤 (ICE) 資訊給 Visual C++ 團隊。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
 |[/F](f-set-stack-size.md)|設定堆疊大小。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|產生已為特定 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 架構最佳化的程式碼，或為 AMD64 和延伸記憶體 64 技術 (Extended Memory 64 Technology，EM64T) 架構中微架構特性最佳化的程式碼。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|產生程式碼，適用於特定的 x64 架構或為 AMD64 和延伸記憶體 64 技術 (EM64T) 架構中微-架構。|
 |[/FA](fa-fa-listing-file.md)|建立清單檔。|
 |[/Fa](fa-fa-listing-file.md)|設定清單檔名稱。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|顯示在診斷測試中傳遞給 cl.exe 的原始程式檔完整路徑。|
@@ -79,16 +79,17 @@ ms.locfileid: "32379623"
 |[/guard:cf](guard-enable-control-flow-guard.md)|加入控制流程防護安全性檢查。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|使用 `__vectorcall` 呼叫慣例。 (僅限 x86 和 x64)|
 |[/Gw](gw-optimize-global-data.md)|啟用整個程式全域資料最佳化。|
-|[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 使用[/EH](eh-exception-handling-model.md)改為。|
+|[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 使用[/EH](eh-exception-handling-model.md)改。|
 |[/Gy](gy-enable-function-level-linking.md)|啟用函式階層連結。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 與相同[/RTC1](rtc-run-time-error-checks.md)。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 與相同[/rtc1](rtc-run-time-error-checks.md)。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例 (僅適用於 x86)。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用於 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 編譯器 (原生和跨平台編譯)。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項是僅適用於 x64 編譯器 （原生和跨編譯）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立可線上修補的影像。|
 |[/I](i-additional-include-directories.md)|搜尋包含檔的目錄。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
+|[/ JMC](jmc.md)|支援原生 c + + Just My Code 偵錯。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|編譯器和連結器將會建立可以在 Windows 核心中執行的二進位檔。|
 |[/LD](md-mt-ld-use-run-time-library.md)|建立動態連結程式庫。|
 |[/LDd](md-mt-ld-use-run-time-library.md)|建立偵錯動態連結程式庫。|
@@ -123,16 +124,16 @@ ms.locfileid: "32379623"
 |[/sdl](sdl-enable-additional-security-checks.md)|啟用其他安全性功能及警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在編譯時顯示包含檔清單。|
 |[/source-charset](source-charset-set-source-character-set.md)|設定來源字元集。|
-|[/std](std-specify-language-standard-version.md)|C + + 標準版本相容性的選取器。|
+|[/std](std-specify-language-standard-version.md)|C + + 標準的版本相容性的選取器。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 原始程式檔。|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有的來源檔案的 c。|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 原始程式檔。|
 |[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔的 c + +。|
 |[/U](u-u-undefine-symbols.md)|移除某個預先定義巨集。|
 |[/u](u-u-undefine-symbols.md)|移除所有預先定義巨集。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|設定來源和執行字元集為 utf-8。|
 |[/V](v-version-number.md)|已取代。 設定 obj 檔案版本字串。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|確認只有相容的字元的 utf-8 檔案。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|驗證只有相容字元的 utf-8 檔案。|
 |[/vd](vd-disable-construction-displacements.md)|抑制或啟用隱藏的 vtordisp 類別成員。|
 |[/vmb](vmb-vmg-representation-method.md)|對指向成員的指標使用最佳基底。|
 |[/vmg](vmb-vmg-representation-method.md)|對指向成員的指標使用完整一般性。|
@@ -142,7 +143,7 @@ ms.locfileid: "32379623"
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
 |[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定要輸出的警告層級。|
-|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
+|[/w1、 /w2、 / w3/w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
 |[/Wall](compiler-option-warning-level.md)|啟用所有警告，包括預設停用的警告。|
 |[/wd](compiler-option-warning-level.md)|停用指定的警告。|
 |[/we](compiler-option-warning-level.md)|將指定的警告視為錯誤。|
@@ -154,14 +155,14 @@ ms.locfileid: "32379623"
 |[/X](x-ignore-standard-include-paths.md)|忽略標準 Include 目錄。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略目前組建中所有其他先行編譯標頭編譯器選項。|
 |[/Yc](yc-create-precompiled-header-file.md)|建立先行編譯標頭檔。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 使用[/Zi](z7-zi-zi-debug-information-format.md)改為。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 使用[/Zi](z7-zi-zi-debug-information-format.md)改。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|在建立偵錯程式庫時插入一個 PCH 參考。|
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|產生 C 7.0 相容的偵錯資訊。|
 |[/Za](za-ze-disable-language-extensions.md)|停用語言擴充功能。|
 |[/Zc](zc-conformance.md)|指定下的標準行為[/Ze](za-ze-disable-language-extensions.md)。[/Za、 /Ze （停用語言擴充功能）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
-|[/Zf](zf.md)|改善 PDB 平行組建中產生時間。|
+|[/Zf](zf.md)|在平行建置中產生時間改善 PDB。|
 |[/Zg](zg-generate-function-prototypes.md)|已從 Visual C++ 2015 移除。 產生函式原型。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
@@ -169,7 +170,7 @@ ms.locfileid: "32379623"
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定先行編譯標頭的記憶體配置上限。|
 |[/Zp](zp-struct-member-alignment.md)|封裝結構成員。|
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
-|[/ZW](zw-windows-runtime-compilation.md)|產生輸出檔案，以便在 Windows 執行階段上執行。|
+|[/ZW](zw-windows-runtime-compilation.md)|產生輸出檔案，在 Windows 執行階段上執行。|
 
 ## <a name="see-also"></a>另請參閱
  [C/c + + 建置參考](c-cpp-building-reference.md)[編譯器選項](compiler-options.md)[設定編譯器選項](setting-compiler-options.md)

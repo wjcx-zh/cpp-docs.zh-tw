@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc17925e36e0e224a657177d0aa18912c564efed
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 64a2f9d5d296e28b4b773e072edc90e1b339feae
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850796"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572141"
 ---
 # <a name="using-contained-windows"></a>使用包含的 Windows
 ATL 實作使用自主的視窗[CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)。 包含的視窗表示委派 (delegate) 給容器物件，而不是在它自己的類別中處理這些訊息的視窗。  
@@ -40,7 +40,7 @@ ATL 實作使用自主的視窗[CContainedWindowT](../atl/reference/ccontainedwi
   
  [!code-cpp[NVC_ATL_Windowing#67](../atl/codesnippet/cpp/using-contained-windows_1.h)]  
   
- 如需有關自主視窗的詳細資訊，請參閱[SUBEDIT](../visual-cpp-samples.md)範例。  
+ 如需有關自主視窗的詳細資訊，請參閱[SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [視窗類別](../atl/atl-window-classes.md)

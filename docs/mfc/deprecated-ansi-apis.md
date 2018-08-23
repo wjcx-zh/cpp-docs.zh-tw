@@ -1,5 +1,5 @@
 ---
-title: 已被取代的 ANSI 應用程式開發介面 |Microsoft 文件
+title: 已被取代的 ANSI Api |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540183"
 ---
 # <a name="deprecated-ansi-apis"></a>已被取代的 ANSI 應用程式開發介面
-Microsoft Foundation Class (MFC) 程式庫移轉朝類別和方法，根據 Unicode 字元集。 因此，ANSI 版本的幾個 MFC 方法已被取代。 在未來的應用程式中使用這些方法的 Unicode 版本。  
+Microsoft Foundation Class (MFC) 程式庫會在移轉到類別和方法，根據 Unicode 字元集。 因此，ANSI 版本的幾個 MFC 方法已被取代。 在未來的應用程式中使用這些方法的 Unicode 版本。  
   
- 開頭為 Windows 通用控制項 6.1 版，隨附於[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]，下列的 ANSI 方法已被取代。  
+ 開頭為 Windows 通用控制項 6.1 版，隨附在 Windows Vista 中，下列的 ANSI 方法已被取代。  
   
 ## <a name="cbutton-class"></a>CButton 類別  
   

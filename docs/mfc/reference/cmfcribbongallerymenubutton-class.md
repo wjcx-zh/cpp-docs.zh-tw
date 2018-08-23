@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGalleryMenuButton 類別 |Microsoft 文件
+title: CMFCRibbonGalleryMenuButton 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a63d72d9744928ca0871ed251cfaea254d0acb14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041256"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541564"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 類別
 實作包含功能區組件庫的功能區功能表按鈕。  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
    
 ## <a name="syntax"></a>語法  
   
@@ -133,28 +133,28 @@ CMFCRibbonGalleryMenuButton(
   
 ### <a name="parameters"></a>參數  
  *uiID*  
- 按鈕的命令識別碼。 這是當使用者按一下此按鈕 WM_COMMAND 訊息中傳送的值。  
+ 按鈕的命令識別碼。 這是當使用者按一下此按鈕傳送 WM_COMMAND 訊息中的值。  
   
  *iImage*  
- 要與組件庫功能表按鈕顯示的影像索引。 影像會儲存在*imagesPalette*參數。  
+ 要與組件庫功能表按鈕一起顯示之影像的索引。 影像會儲存在*imagesPalette*參數。  
   
  *lpszText*  
  要顯示的功能表按鈕上的文字。  
   
  *imagesPalette*  
- 包含組件庫上顯示影像的清單。  
+ 包含要顯示在資源庫上的映像清單。  
   
  *uiImagesPaletteResID*  
- 顯示組件庫的映像的映像清單資源識別碼。  
+ 要顯示在資源庫映像的映像清單的資源識別碼。  
   
  *cxPaletteImage*  
- 指定的寬度，以顯示組件庫映像素為單位。  
+ 指定像素為單位的資源庫上顯示影像的寬度。  
   
 ### <a name="remarks"></a>備註  
- 組件庫功能表按鈕會顯示為有箭頭的快顯功能表。 當使用者按一下此按鈕時，會顯示影像庫。  
+ 組件庫功能表按鈕會顯示為快顯功能表有個箭號。 當使用者按一下此按鈕時，會顯示影像庫。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用的建構函式`CMFCRibbonGalleryMenuButton`類別。 此程式碼片段是部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用的建構函式`CMFCRibbonGalleryMenuButton`類別。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  
   

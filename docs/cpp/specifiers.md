@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463485"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573071"
 ---
 # <a name="specifiers"></a>規範
 本主題描述*decl* （宣告規範） 元件[宣告](declarations-and-definitions-cpp.md)。  
@@ -34,9 +34,11 @@ ms.locfileid: "39463485"
   
  *函式規範*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [typedef]( [typedef](http://msdn.microsod) `(` *擴充-decl-modifier-修飾詞-seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [typedef](aliases-and-typedefs-cpp.md) `(` *擴充-decl-modifier-修飾詞-seq* `)`  
+
+ [__declspec](declspec.md) `(` *擴充-decl-modifier-修飾詞-seq* `)`  
   
 ## <a name="remarks"></a>備註  
  *Decl*宣告的一部分是最長串*decl* ，可以用來表示類型名稱，不包括指標或參考修飾詞。 宣告的其餘部分*宣告子*，包括引入的名稱。  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850153"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42539405"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 提供 Windows 通用進度列控制項的功能。  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，指定新的進度指示器列的色彩。 指定 CLR_DEFAULT 造成進度列，使用其預設色彩。|  
   
 ### <a name="return-value"></a>傳回值  
- 前一個色彩的進度指示器列中，以表示[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 進度指示器列的色彩是否預設色彩。  
+
+前一個色彩的進度指示器列中，以表示[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 進度指示器列的色彩是否預設色彩。  
   
 ### <a name="remarks"></a>備註  
- `SetBarColor`方法會設定進度列色彩才[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)][佈景主題](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)為非作用中。  
+
+`SetBarColor`方法會設定進度列色彩只有當 Windows Vista[佈景主題](/windows/desktop/Controls/visual-styles-overview)為非作用中。  
   
  這個方法會傳送[PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)訊息，Windows SDK 中所述。  
   

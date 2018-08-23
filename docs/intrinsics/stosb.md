@@ -1,5 +1,5 @@
 ---
-title: __stosb |Microsoft 文件
+title: __stosb |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d16c9ede6d815c2c697c1ed03dc10476f6dd3bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8e5cefd7ba2b4816bf7e204cd4b3f97ee86974a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324570"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541757"
 ---
 # <a name="stosb"></a>__stosb
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生存放區字串指令 (`rep stosb`)。  
+ 產生的存放區的字串指示 (`rep stosb`)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,12 +54,12 @@ void __stosb(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__stosb`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosb`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結果是字元`Data`撰寫成一個區塊`Count`位元組`Dest`字串。  
+ 結果是，字元`Data`寫入至區塊`Count`中的位元組`Dest`字串。  
   
  此常式僅可作為內建常式使用。  
   
@@ -90,7 +90,7 @@ int main()
 *@@@@@@**************************  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -1,7 +1,7 @@
 ---
 title: setjmp | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/14/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc4673485577f5a12024d31e94063c82a8c7b8c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06073527aae8112d231dbd971b3daae35276efef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407248"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572344"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -53,28 +53,35 @@ int setjmp(
 
 ### <a name="parameters"></a>參數
 
-*env*<br/>
+*env*  
 儲存環境的變數。
 
 ## <a name="return-value"></a>傳回值
 
-儲存堆疊環境之後，會傳回 0。 如果**setjmp**傳回的**longjmp**呼叫時，它會傳回**值**引數的**longjmp**，或如果**值**引數的**longjmp**為 0， **setjmp**傳回 1。 不會傳回錯誤。
+儲存堆疊環境之後，會傳回 0。 如果**setjmp**傳回的`longjmp`呼叫，它會傳回*值*引數`longjmp`，或如果*值*引數`longjmp`為 0，**setjmp**會傳回 1。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Setjmp**函式會將儲存在堆疊環境中，您可以接著還原時，使用**longjmp**。 一起使用時， **setjmp**和**longjmp**提供一個方式來執行非區域**goto**。 它們通常用於將執行控制項傳遞至之前所呼叫常式中的錯誤處理或復原程式碼，而不使用一般呼叫或傳回慣例。
+**Setjmp**函式會儲存堆疊環境中，您可以接著還原時，使用`longjmp`。 一起使用時， **setjmp**並`longjmp`提供方法來執行非區域**goto**。 它們通常用於將執行控制項傳遞至之前所呼叫常式中的錯誤處理或復原程式碼，而不使用一般呼叫或傳回慣例。
 
-呼叫**setjmp**將儲存在目前的堆疊環境*env*。 後續呼叫**longjmp**還原先前儲存的環境，並對應之後，立即將控制權傳回給點**setjmp**呼叫。 所有的變數 （除了暫存器變數） 常式，接收控制項存取包含這些應用程式啟動時的值**longjmp**呼叫。
+呼叫**setjmp**儲存在目前的堆疊環境*env*。 後續呼叫`longjmp`還原已儲存的環境，並對應之後，立即將控制權還給點**setjmp**呼叫。 接收控制權之常式可存取的所有變數 (暫存器變數除外) 都會包含呼叫 `longjmp` 時所擁有的值。
 
-不可能使用**setjmp**從 managed 程式碼的原生跳。
+不可以使用**setjmp**來從機器碼跳到 managed 程式碼。
 
-**請注意** **setjmp**和**longjmp**不支援 c + + 物件語意。 在 C++ 程式中，使用 C++ 例外狀況處理機制。
+**Microsoft 專屬**
+
+Windows，Microsoft c + + 程式碼中**longjmp**例外狀況處理程式碼會使用相同的堆疊回溯語意。 它會安全地使用 c + + 例外狀況可能會引發的相同位置中。 不過，這種用法可攜性，並不需要注意的一些重要的事項。 如需詳細資訊，請參閱 < [longjmp](longjmp.md)。
+
+**結束 Microsoft 專屬**
+
+> [!NOTE]  
+> 在可攜式 c + + 程式碼，您不能假設`setjmp`和`longjmp`支援 c + + 物件語意。 具體而言， `setjmp` / `longjmp`組有未定義行為，如果取代的呼叫`setjmp`並`longjmp`由**攔截**和**擲回**會叫用任何自動物件的任何非 trivial 解構函式。 在 c + + 程式中，我們建議您在使用 c + + 例外狀況處理機制。
 
 如需詳細資訊，請參閱[使用 setjmp 和 longjmp](../../cpp/using-setjmp-longjmp.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**setjmp**|\<setjmp.h>|
 
@@ -86,6 +93,5 @@ int setjmp(
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[longjmp](longjmp.md)<br/>
-[_setjmp3](../../c-runtime-library/setjmp3.md)<br/>
+[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)  
+[longjmp](longjmp.md)  

@@ -1,5 +1,5 @@
 ---
-title: __writecr0 |Microsoft 文件
+title: __writecr0 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1437aa6f13a6f19afad36a59985c4d14e8e6a1d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68bb7ec3d89ac7fffbc2896023fbd2f1dd0584ba
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325834"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540416"
 ---
 # <a name="writecr0"></a>__writecr0
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  將值寫入`Data`至 CR0 暫存器。  
   
@@ -38,20 +38,20 @@ void writecr0(
   
 #### <a name="parameters"></a>參數  
  [輸入] `Data`  
- 要寫入 cr0 暫存器的值。  
+ 要寫入的 CR0 暫存器的值。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__writecr0`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writecr0`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此內建只適用於核心模式，且此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

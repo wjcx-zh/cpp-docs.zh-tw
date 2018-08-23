@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmwrite |Microsoft 文件
+title: __vmx_vmwrite |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87aeafd1b9c0c1a35e3f5d99ab5b9d76410b4d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337713"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538611"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 將指定的值寫入目前的虛擬機器控制結構 (VMCS) 中的指定欄位。  
+ 將指定的值寫入目前的虛擬機器控制結構 (VMCS) 中指定的欄位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,17 +56,17 @@ unsigned char __vmx_vmwrite(
  作業失敗，無可用的狀態。  
   
 ## <a name="remarks"></a>備註  
- `__vmx_vmwrite`函數即相當於`VMWRITE`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)的站台、，然後再參閱旓紵 C 的文件。  
+ `__vmx_vmwrite`函式相當於`VMWRITE`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)網站的 url，並請參考 旓紵 C 的文件。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmwrite`|X64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

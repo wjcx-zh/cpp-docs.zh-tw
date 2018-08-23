@@ -142,15 +142,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e25fda2f6d30ea13882ae3b40875fb3d4ec61c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4dcd45226c85238ddd9e3d6d5a35460f0bb58916
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854118"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541758"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 類別
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
  實作包含一個窗格的迷你框架視窗。 窗格會填滿視窗的工作區。  
   

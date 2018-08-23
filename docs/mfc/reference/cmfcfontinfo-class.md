@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852415"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539784"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 `CMFCFontInfo`類別所描述的名稱和字型的其他屬性。  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- 這份文件使用詞彙*字元集*並*指令碼*交替。 A*指令碼*，這就是所謂的書寫系統，是字元和規則的一或多個語言中撰寫這些字元的集合。 字元的集合可包含字母與使用該指令碼中的標點符號。 比方說，拉丁文字用於英文，唸在美國，以及其字母包括從 A 到 Z 的字元。`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構指定的字元集。 例如，值新細明指定[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]字元集，其中包括拉丁指令碼的字母。  
+ 這份文件使用詞彙*字元集*並*指令碼*交替。 A*指令碼*，這就是所謂的書寫系統，是字元和規則的一或多個語言中撰寫這些字元的集合。 字元的集合可包含字母與使用該指令碼中的標點符號。 比方說，拉丁文字用於英文，唸在美國，以及其字母包括從 A 到 Z 的字元。`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構指定的字元集。 比方說，新細明的值指定 ANSI 字元集，其中包括拉丁指令碼的字母。  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  擷取的字型和它的字元串連的名稱集 （指令碼）。  

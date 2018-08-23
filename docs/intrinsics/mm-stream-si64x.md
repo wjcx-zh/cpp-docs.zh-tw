@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_si64x |Microsoft 文件
+title: _mm_stream_si64x |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0385f2812c58b65102780780a1b7a548b2b08429
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328785"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539193"
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生 MOVNTI 指令。 將資料寫入`Source`所指定的記憶體位置`Dest`，而不侵害快取。  
+ 會產生 MOVNTI 指令。 將資料寫入`Source`所指定的記憶體位置`Dest`，而不到處快取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +51,7 @@ void _mm_stream_si64x(
   
 |內建|架構|  
 |---------------|------------------|  
-|`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_mm_stream_si64x`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -85,7 +85,7 @@ int main()
 0 ffffffffffff 0 0  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

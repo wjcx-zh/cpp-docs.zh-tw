@@ -1,5 +1,5 @@
 ---
-title: 例外狀況處理 (x64) |Microsoft 文件
+title: 例外狀況處理 (x64) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ae44d84ed8a0e04f93513db3a5431ebfd80abf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfcf5f37e0b679faf0e35549cc705ccee216c02
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367182"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571464"
 ---
 # <a name="exception-handling-x64"></a>例外狀況處理 (x64)
-本章節將討論結構化例外狀況處理和 c + + 例外狀況處理行為上[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  
+本章節將討論結構化例外狀況處理和 c + + 例外狀況處理在 x64 上的行為。  
   
 -   [回溯資料以進行例外狀況處理與偵錯工具支援](../build/unwind-data-for-exception-handling-debugger-support.md)  
   

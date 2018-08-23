@@ -1,5 +1,5 @@
 ---
-title: __readcr8 |Microsoft 文件
+title: __readcr8 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688b4ad19f7b71c27933c1ad8663b37a3b3b6708
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8da8ca089a34f6e763ab6dfdb9bea8467d6316f1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327050"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540786"
 ---
 # <a name="readcr8"></a>__readcr8
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  讀取 CR8 暫存器，並傳回其值。  
   
@@ -41,14 +41,14 @@ unsigned __int64 __readcr8(void);
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readcr8`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr8`|X64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此內建只適用於核心模式，且此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

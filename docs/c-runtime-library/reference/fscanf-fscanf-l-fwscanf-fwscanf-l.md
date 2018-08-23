@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404070"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572139"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
@@ -104,17 +104,17 @@ int _fwscanf_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或如果第一個轉換前達到檔案資料流末端，則傳回值是**EOF**如**fscanf**和**fwscanf**。
+所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或第一次轉換之前，就到達檔案資料流末端，則傳回值是**EOF** for **fscanf**並**fwscanf**。
 
-這些函式會驗證它們的參數。 如果*資料流*或*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EOF**並設定**errno**至**EINVAL**。
+這些函式會驗證它們的參數。 如果*資料流*或是*格式*為 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Fscanf**函式會從目前的位置讀取資料*資料流*到所指定的位置*引數*（如果有的話）。 每個*引數*必須對應於型別規範中的型別變數指標*格式*。 *格式*控制項的輸入解譯欄位，並具有相同的形式和功能*格式*引數**scanf**; 請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md)的描述*格式*。
+**Fscanf**函式會從目前位置讀取資料*串流*所指定的位置*引數*（如果有的話）。 每個*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*欄位輸入的解譯，而且具有相同的控制項形式和運作方式*格式*引數**scanf**; 請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md)的popis*格式*。
 
 **fwscanf**是寬字元版本的**fscanf**; 的格式引數**fwscanf**是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf**目前不支援來自 UNICODE 資料流輸入。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -123,7 +123,7 @@ int _fwscanf_l(
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-如需詳細資訊，請參閱[格式規格欄位-scanf 函式和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
+如需詳細資訊，請參閱 <<c0> [ 格式規格欄位-scanf 函式和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208854"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571570"
 ---
 # <a name="csid-class"></a>CSid 類別
 這個類別是包裝函式`SID`（安全性識別碼） 結構。  
@@ -332,13 +332,13 @@ bool LoadAccount(
  系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串為 NULL，會改用本機系統。  
   
  *pSid*  
- 指標[SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx)結構。  
+ 指標[SID](/windows/desktop/api/winnt/ns-winnt-_sid)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
   
 ### <a name="remarks"></a>備註  
- `LoadAccount` 嘗試尋找指定之名稱的安全性識別碼。 請參閱[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)如需詳細資訊。  
+ `LoadAccount` 嘗試尋找指定之名稱的安全性識別碼。 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)如需詳細資訊。  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  指派運算子。  

@@ -198,17 +198,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b27a3fd2fdce9836512e19c566b02c40afb78a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 73f4f14f01cd9d881c0e9da0db8aa23d7946e719
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853502"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540785"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 類別
 `CMFCRibbonBar` 類別會實作類似於 Office 2007 中使用的功能區列。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
    
 ## <a name="syntax"></a>語法  
   

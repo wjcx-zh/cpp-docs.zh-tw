@@ -1,5 +1,5 @@
 ---
-title: __indwordstring |Microsoft 文件
+title: __indwordstring |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe9f7616a20dc09265028cf414aa15340b68c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c0f8e67a535d126eab3a19bf17b0bf8bfd7440
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333410"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540396"
 ---
 # <a name="indwordstring"></a>__indwordstring
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 讀取資料，從指定的連接埠使用`rep insd`指令。  
+ 使用指定的連接埠時，讀取資料`rep insd`指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ void __indwordstring(
  要讀取的連接埠。  
   
  [輸出] `Buffer`  
- 從連接埠讀取的資料會寫入這裡。  
+ 從連接埠讀取的資料會寫入此處。  
   
  [輸入] `Count`  
  要讀取之資料的位元組數目。  
@@ -54,14 +54,14 @@ void __indwordstring(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__indwordstring`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indwordstring`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

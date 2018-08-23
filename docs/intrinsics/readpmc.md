@@ -1,5 +1,5 @@
 ---
-title: __readpmc |Microsoft 文件
+title: __readpmc |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333787"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539978"
 ---
 # <a name="readpmc"></a>__readpmc
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  會產生`rdpmc`指令，讀取效能監視所指定的計數器`counter`。  
   
@@ -49,14 +49,14 @@ unsigned __int64 __readpmc(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readpmc`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 這個內建只適用於核心模式，且此常式僅可作為內建。  
+ 此內建只適用於核心模式，且此常式僅可作為內建。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

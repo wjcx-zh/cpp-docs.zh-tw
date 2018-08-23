@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885293"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572052"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 這個類別提供方法，以操作系統登錄中的項目。  
@@ -876,7 +876,7 @@ LONG SetStringValue(
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx)寫入登錄值。  
+ 這個方法會使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)寫入登錄值。  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
  呼叫這個方法來將資料儲存在指定的值欄位[m_hKey](#m_hkey)。 舊版的這個方法不受支援，並會標示為 ATL_DEPRECATED。  

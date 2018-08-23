@@ -1,5 +1,5 @@
 ---
-title: __rdtscp |Microsoft 文件
+title: __rdtscp |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539582"
 ---
 # <a name="rdtscp"></a>__rdtscp
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生`rdtscp`指令，將寫入`TSC_AUX[31:0`] 記憶體，並傳回 64 位元時間戳記計數器 (`TSC)`結果。  
+ 會產生`rdtscp`的指示，將寫入`TSC_AUX[31:0`] 的記憶體，並傳回 64 位元時間戳記計數器 (`TSC)`結果。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,14 +54,14 @@ unsigned __int64 __rdtscp(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 此內建函式會產生`rdtscp`指令。 若要判斷硬體支援此指示，請呼叫`__cpuid`與內建`InfoType=0x80000001`並檢查的 27 位元`CPUInfo[3] (EDX)`。 此位元否則就會支援該指令，則為 1 和 0。  如果您執行程式碼會使用此內建物件不支援的硬體上`rdtscp`指令，結果會產生無法預測。  
+ 此內建函式會產生`rdtscp`指令。 若要判斷此指令的硬體支援，請呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查一些 27 `CPUInfo[3] (EDX)`。 此位元可說是支援的指示，則為 1 和 0。  如果您執行程式碼使用此內建在不支援的硬體上`rdtscp`指令，結果會無法預測。  
   
 > [!CAUTION]
 >  不同於`rdtsc`，`rdtscp`是序列化的指示; 不過，編譯器可以移動解決這個問題的程式碼內建函式。  
   
- 在這個層代的硬體 TSC 值的解譯不同於在舊版的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  請參閱硬體手冊，如需詳細資訊。  
+ 在這一代硬體的 TSC 值的解譯不同於在舊版的 x64。  請參閱硬體手冊，如需詳細資訊。  
   
- 中值的意義`TSC_AUX[31:0]`作業系統而定。  
+ 中值的意義`TSC_AUX[31:0]`取決於作業系統。  
   
 ## <a name="example"></a>範例  
   
@@ -83,8 +83,8 @@ int main()
 TSC_AUX was 0  
 ```  
   
-**結束 Microsoft 特定的**  
- 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+**結束 Microsoft 專屬**  
+ 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
   
 ## <a name="see-also"></a>另請參閱  
  [__rdtsc](../intrinsics/rdtsc.md)   

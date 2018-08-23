@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5248d7c692e3443ea0e0798cf723f38099c3f863
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409133"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571377"
 ---
 # <a name="alignment-c-declarations"></a>對齊方式 (C++ 宣告)
-C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會根據大小值來對齊類別和結構成員：bool 和 char 對齊一個位元組的界限、short 對齊兩個位元組、int 對齊四個位元組，long long、double 和 long double 對齊八個位元組。 在大多數情況下，您永遠不必擔心對齊方式，因為預設已經為最佳對齊方式。 不過在某些情況下，您可以藉由指定資料結構的自訂對齊方式，達到顯著的效能改善或節省記憶體空間。 在 Visual Studio 2015 之前，可以使用 Microsoft 專有關鍵字 __alignof 和 declspec(alignas) 來指定大於預設值的對齊方式。 啟動 Visual Studio 2015 中，則應該使用的 C + + 11 標準關鍵字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)最大化程式碼可攜性。 實際上，新關鍵字的行為與 Microsoft 專有擴充功能相同，且針對這些擴充功能的文件也適用於新的關鍵字。 請參閱[__alignof 運算子](../cpp/alignof-operator.md)並[對齊](../cpp/align-cpp.md)如需詳細資訊。 C + + 標準未指定封裝行為對齊界限小於目標平台的編譯器預設值，因此您仍然需要使用 Microsoft #pragma[組件](../preprocessor/pack.md)在此情況下。  
+C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會根據大小值的類別和結構成員對齊： bool 和 char 對齊一個位元組界限、 short 對齊兩個位元組，int 對齊四個位元組，long long、 double 和 long double 對齊八個位元組。 在大多數情況下，您永遠不必擔心對齊方式，因為預設已經為最佳對齊方式。 不過在某些情況下，您可以藉由指定資料結構的自訂對齊方式，達到顯著的效能改善或節省記憶體空間。 在 Visual Studio 2015 之前，可以使用 Microsoft 專有關鍵字 __alignof 和 declspec(alignas) 來指定大於預設值的對齊方式。 啟動 Visual Studio 2015 中，則應該使用的 C + + 11 標準關鍵字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)最大化程式碼可攜性。 實際上，新關鍵字的行為與 Microsoft 專有擴充功能相同，且針對這些擴充功能的文件也適用於新的關鍵字。 請參閱[__alignof 運算子](../cpp/alignof-operator.md)並[對齊](../cpp/align-cpp.md)如需詳細資訊。 C + + 標準未指定封裝行為對齊界限小於目標平台的編譯器預設值，因此您仍然需要使用 Microsoft #pragma[組件](../preprocessor/pack.md)在此情況下。  
   
  C + + 標準程式庫提供[aligned_storage 類別](../standard-library/aligned-storage-class.md)配置記憶體的資料結構，具有自訂對齊，而[aligned_union 類別](../standard-library/aligned-union-class.md)來指定具有的等位的對齊方式非一般建構函式或解構函式。  
   

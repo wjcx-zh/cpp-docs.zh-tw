@@ -1,5 +1,5 @@
 ---
-title: CMenuTearOffManager 類別 |Microsoft 文件
+title: CMenuTearOffManager 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041009"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541200"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 類別
 管理 Tear-Off 功能表。 Tear-Off 功能表是在功能表列上的功能表。 使用者可以取下功能表列中的 Tear-Off 功能表，讓 Tear-Off 功能表浮動。  
   
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
    
 ## <a name="syntax"></a>語法  
   
@@ -74,10 +74,10 @@ class CMenuTearOffManager : public CObject
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
 ## <a name="remarks"></a>備註  
- 若要使用應用程式中的 tear-off 功能表，您必須擁有`CMenuTearOffManager`物件。 在大部分情況下，您將不會建立或初始化`CMenuTearOffManager`直接物件。 這會為您處理呼叫時[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函式。  
+ 若要使用您的應用程式中的 tear-off 功能表，您必須擁有`CMenuTearOffManager`物件。 在大部分情況下，您將不會建立或初始化`CMenuTearOffManager`直接物件。 這會為您處理當您呼叫[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函式。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建構並初始化`CMenuTearOffManager`藉由呼叫物件`CWinAppEX::EnableTearOffMenus`方法。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。  
+ 下列範例示範如何建構和初始化`CMenuTearOffManager`藉由呼叫物件`CWinAppEX::EnableTearOffMenus`方法。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
@@ -100,7 +100,7 @@ void Build(
   
 ### <a name="parameters"></a>參數  
  [in]*uiTearOffBarID*  
- [in]*strText*  
+ [in]*先把 strText*  
   
 ### <a name="remarks"></a>備註  
   
@@ -112,7 +112,7 @@ CMenuTearOffManager();
 ```  
   
 ### <a name="remarks"></a>備註  
- 在大部分情況下，您不應建立`CMenuTearOffManager`手動。 您的應用程式的架構建立`CMenuTearOffManager`物件時呼叫[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
+ 在大部分情況下，您不應建立`CMenuTearOffManager`以手動方式。 您的應用程式的架構會建立`CMenuTearOffManager`當您呼叫物件[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
   
 ##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
@@ -137,7 +137,7 @@ BOOL Initialize(
   
 ### <a name="parameters"></a>參數  
  [in]*lpszRegEntry*  
- 字串，包含路徑的登錄項目。 您的應用程式儲存分割列設定此登錄項目中。  
+ 字串，包含路徑的登錄項目。 您的應用程式會將分割列的設定儲存在此登錄項目。  
   
  [in]*uiTearOffMenuFirst*  
  Tear-off 功能表第一個功能表識別碼。  
@@ -149,7 +149,7 @@ BOOL Initialize(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 從功能表識別碼的範圍*uiTearOffMenuFirst*至*uiTearOffMenuLast*必須是連續的間隔。 此間隔會定義 tear-off 功能表可在應用程式中同時出現的數目。  
+ 從功能表識別碼的範圍*uiTearOffMenuFirst*要*uiTearOffMenuLast*必須是連續的時間間隔。 此間隔定義 tear-off 功能表可在應用程式中同時出現的數目。  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 

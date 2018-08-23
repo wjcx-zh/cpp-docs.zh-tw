@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883628"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572038"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 此類別代表`CSimpleStringT`物件。  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  緩衝區記憶體會自動釋放時`CSimpleStringT`物件被終結。  
   
- 如果您追蹤的字串長度自行，沒有不將附加終止 null 字元。 當您釋放緩衝區使用時，您必須指定最終字串長度`ReleaseBuffer`。 如果您不要附加結束的 null 字元，當您呼叫`ReleaseBuffer`，將-1 （預設值） 傳遞至長度`ReleaseBuffer`，和`ReleaseBuffer`將會執行`strlen`来判斷其長度的緩衝區上。  
+ 如果您追蹤的字串長度自行，不會附加結束的 null 字元。 當您釋放緩衝區使用時，您必須指定最終字串長度`ReleaseBuffer`。 如果您不要附加結束的 null 字元，當您呼叫`ReleaseBuffer`，將-1 （預設值） 傳遞至長度`ReleaseBuffer`，和`ReleaseBuffer`將會執行`strlen`来判斷其長度的緩衝區上。  
   
  如需有關參考計數的詳細資訊，請參閱下列文章：  
   

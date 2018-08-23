@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017944"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583440"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify 方法
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-__forceinline static void Verify();  
-```  
-  
-## <a name="remarks"></a>備註  
- 確認`Base`正確衍生。  
-  
- 如需詳細資訊`Base`，請參閱 <<c2>  **公用 Typedefs**一節中[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [InterfaceTraits 結構](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+__forceinline static void Verify();
+```
+
+## <a name="remarks"></a>備註
+
+確認`Base`正確衍生。
+
+如需詳細資訊`Base`，請參閱 <<c2>  **公用 Typedefs**一節中[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

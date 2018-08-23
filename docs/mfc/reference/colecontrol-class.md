@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 483584c7b38db05c920134cfc675538be36a3816
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0adcca7c8080d6603e4e4de8c2002b2ace6f9ad9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028017"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541745"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 開發 OLE 控制項的強大基底類別。  
@@ -1129,7 +1129,7 @@ void FireKeyDown(
   
 ### <a name="parameters"></a>參數  
  *pnChar*  
- 按下的按鍵的虛擬按鍵碼值的指標。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 按下的按鍵的虛擬按鍵碼值的指標。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *nShiftState*  
  包含下列旗標的組合：  
@@ -1174,7 +1174,7 @@ void FireKeyUp(
   
 ### <a name="parameters"></a>參數  
  *pnChar*  
- 發行的機碼的虛擬按鍵碼值的指標。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 發行的機碼的虛擬按鍵碼值的指標。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *nShiftState*  
  包含下列旗標的組合：  
@@ -1410,7 +1410,7 @@ BOOL GetAmbientProperty(
 |VT_I2|**short\***|  
 |VT_I4|**長\***|  
 |VT_R4|**浮點數\***|  
-|VT_R8|**double\***|  
+|VT_R8|**雙精度浮點數\***|  
 |VT_CY|**CY\***|  
 |VT_COLOR|OLE_COLOR *|  
 |VT_DISPATCH|LPDISPATCH *|  

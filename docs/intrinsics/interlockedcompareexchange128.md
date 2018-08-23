@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange128 |Microsoft 文件
+title: _InterlockedCompareExchange128 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337931"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539575"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 執行 128 位元連鎖的比較和交換。  
+ 執行 128 位元的連鎖的比較和交換。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,44 +43,44 @@ unsigned char _InterlockedCompareExchange128(
   
 #### <a name="parameters"></a>參數  
  [in、out] `Destination`  
- 目的地，也就是兩個 64 位元整數的陣列指標會視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免一般性保護錯誤。  
+ 目的地，也就是兩個 64 位元整數的陣列的指標視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免了一般性保護錯誤。  
   
  [輸入] `ExchangeHigh`  
- 可能會與目的地的較高部份交換 64 位元整數。  
+ 64 位元整數，可能會與目的地的較高部份交換。  
   
  [輸入] `ExchangeLow`  
- 可能會與目的地的較低部份交換 64 位元整數。  
+ 64 位元整數，可能會與目的地的低位部份交換。  
   
  [in、out] `ComparandResult`  
- （被視為與 128 位元欄位） 的兩個 64 位元整數的陣列指標要與目的地比較。  在輸出時，這會覆寫目的地的原始值。  
+ （視為 128 位元欄位） 的兩個 64 位元整數的陣列指標要與目的地比較。  在輸出時，這會覆寫目的地的原始值。  
   
 ## <a name="return-value"></a>傳回值  
- 1，表示 128 位元比較元等於目的端的原始值。 `ExchangeHigh` 和`ExchangeLow`覆寫 128 位元的目的地。  
+ 1，表示 128 位元比較元等於原始值的目的地。 `ExchangeHigh` 和`ExchangeLow`覆寫的 128 位元的目的地。  
   
- 如果目的地的原始值不等於比較元是 0。 目的地的值不變，並比較元的值會覆寫目的地的值。  
+ 如果比較元不等於目的地的原始值，0。 目的地的值不變，目的地值覆寫的比較元值。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`_InterlockedCompareExchange128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_InterlockedCompareExchange128`|X64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 此內建函式會產生`cmpxchg16b`指示 (使用`lock`前置詞) 來執行的 128 位元鎖定的比較和交換。 AMD 64 位元硬體的早期版本不支援此指示。 若要檢查是否有硬體支援`cmpxchg16b`指示，請呼叫`__cpuid`與內建`InfoType=0x00000001 (standard function 1)`。 位元 13 的`CPUInfo[2]`(ECX) 為 1，指示是否支援。  
+ 此內建函式會產生`cmpxchg16b`指示 (使用`lock`前置詞) 來執行的 128 位元已鎖定的比較和交換。 AMD 64 位元硬體的早期版本不支援這項指示。 若要檢查的硬體支援`cmpxchg16b`指示，請呼叫`__cpuid`內建函式與`InfoType=0x00000001 (standard function 1)`。 位元 13 的`CPUInfo[2]`(ECX) 為 1，指示是否支援。  
   
 > [!NOTE]
->  值`ComparandResult`一定會覆寫。 之後`lock`指令時，此內建物件會立即將複製的初始值`Destination`至`ComparandResult`。 基於這個理由，`ComparandResult`和`Destination`應該指向不同的記憶體位置，以避免非預期的行為。  
+>  值`ComparandResult`一定會覆寫。 在後`lock`指令，此內建函式會立即將複製的初始值`Destination`至`ComparandResult`。 基於這個理由，`ComparandResult`和`Destination`應該指向不同的記憶體位置，以避免非預期的行為。  
   
- 雖然您可以使用`_InterlockedCompareExchange128`針對低層級執行緒同步處理，您不需要同步處理超過 128 位元，如果您可以使用較小的同步處理函式 (例如另`_InterlockedCompareExchange`內建函式) 而。 使用`_InterlockedCompareExchange128`如果您想要在記憶體中的 128 位元值不可部分完成的存取。  
+ 雖然您可以使用`_InterlockedCompareExchange128`針對低層級執行緒同步處理，您不需要同步處理超過 128 位元，如果您可以使用較小的同步處理函式 (例如其他`_InterlockedCompareExchange`內建函式) 改為。 使用`_InterlockedCompareExchange128`如果您想要在記憶體中的 128 位元值的不可部分完成存取。  
   
- 如果您執行程式碼會使用此內建物件不支援的硬體上`cmpxchg16b`指令，結果會產生無法預測。  
+ 如果您執行程式碼使用此內建在不支援的硬體上`cmpxchg16b`指令，結果會無法預測。  
   
- 這個常式可只做為內建函式。  
+ 此常式是只提供內建函式。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用`_InterlockedCompareExchange128`高的兩個 64 位元整數陣列的文字取代其高低字的總和，並遞增低的字。 存取 BigInt.Int 陣列是不可部分完成，但此範例會使用單一執行緒，並忽略為了簡單起見鎖定。  
+ 這個範例會使用`_InterlockedCompareExchange128`將兩個 64 位元整數的陣列的高位文字取代其高低字的總和，以及遞增的低位文字。 存取 BigInt.Int 陣列是不可部分完成，但此範例會使用單一執行緒，並忽略鎖定為求簡化。  
   
 ```  
 // cmpxchg16b.c  
@@ -128,8 +128,8 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**結束 Microsoft 特定的**  
- 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+**結束 Microsoft 專屬**  
+ 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

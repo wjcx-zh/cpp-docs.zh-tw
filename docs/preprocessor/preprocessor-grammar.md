@@ -1,5 +1,5 @@
 ---
-title: 前置處理器文法 |Microsoft 文件
+title: 前置處理器文法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843362"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540567"
 ---
 # <a name="preprocessor-grammar"></a>前置處理器文法
-**#define***識別碼**語彙基元字串*選擇加入    
+**#define***識別項**語彙基元字串*選擇    
   
- *#* **定義***識別碼*[**(** *識別碼*選擇 **，** *...* **，** *識別碼*選擇 **)**]*語彙基元字串*選擇加入    
+*#* **定義***識別項*[**(** *識別碼*選擇 **，** *...* **，** *識別碼*選擇 **)**]*語彙基元字串*選擇    
   
- **defined(**  *identifier* **)**  
+**defined(**  *identifier* **)**  
   
- **定義***識別碼*   
+**定義***識別碼*   
   
- `#include` **「***路徑規格***"**  
+`#include` **「***路徑規格***"**  
   
- `#include` **\<***路徑規格***>**  
+`#include` **\<***路徑規格***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"** opt  
+**#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef***識別碼*   
+*#* **undef***識別碼*   
   
- **#error***語彙基元字串*   
+**#error***語彙基元字串*   
   
- **#pragma***語彙基元字串*   
+**#pragma***語彙基元字串*   
   
- *條件式*:  
- *如果部分 elif 部分*選擇*else 部分*選擇*endif 列*  
+*條件式*:  
+*if 部分 elif 部分*opt*else 部分*opt*endif 列*  
   
- *如果部分*:  
- *if-linetext*  
+*if 部分*:  
+*if-linetext*  
   
- *如果行*:  
- **#if**  *constant-expression*  
+*if 程式行*:  
+**#if**  *constant-expression*  
   
- **#ifdef***識別碼*   
+**#ifdef***識別碼*   
   
- **#ifndef***識別碼*   
+**#ifndef***識別碼*   
   
- *elif 部分*:  
- *elif 行文字*  
+*elif 部分*:  
+*elif 行文字*  
   
- *elif 部分 elif 行文字*  
+*elif 部分 elif 單行文字*  
   
- *elif 列*:  
- **#elif**  *constant-expression*  
+*elif 列*:  
+**#elif**  *constant-expression*  
   
- *else 部分*:  
- *else-linetext*  
+*else 部分*:  
+*else-linetext*  
   
- *其他列*:  
- `#else`  
+*其他列*:  
+`#else`  
   
- *endif 列*:  
- `#endif`  
+*endif 列*:  
+`#endif`  
   
- *數字順序*:  
- *digit*  
+*數字序列*:  
+*digit*  
   
- *digit-sequence digit*  
+*digit-sequence digit*  
   
- *數字*： 其中一個  
- **0 1 2 3 4 5 6 7 8 9**  
+*數字*： 其中一個  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *語彙基元字串*:  
- 語彙基元字串  
+*語彙基元字串*:  
+語彙基元字串  
   
- *語彙基元*:  
- *keyword*  
+*語彙基元*:  
+*keyword*  
   
- *identifier*  
+*identifier*  
   
- *constant*  
+*constant*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *檔名*:  
- 合法的作業系統檔名  
+*檔名*:  
+合法的作業系統檔名  
   
- *路徑規格*:  
- 合法的檔案路徑  
+*路徑規格*:  
+合法的檔案路徑  
   
- *文字*:  
- 文字的任意序列  
+*文字*:  
+文字的任意序列  
   
 > [!NOTE]
->  下列非終端項中擴充[語彙慣例](../cpp/lexical-conventions.md)區段*c + + 語言參考*: `constant`， `constant` -*運算式*，*識別碼*，*關鍵字*， `operator`，和`punctuator`。  
+> 要展開中的下列非終端[語彙慣例](../cpp/lexical-conventions.md)一節*c + + 語言參考*: `constant`， `constant` -*運算式*，*識別項*，*關鍵字*， `operator`，和`punctuator`。  
   
 ## <a name="see-also"></a>另請參閱  
- [文法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[文法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

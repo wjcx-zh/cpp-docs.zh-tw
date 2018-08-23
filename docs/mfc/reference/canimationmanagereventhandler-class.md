@@ -1,5 +1,5 @@
 ---
-title: CAnimationManagerEventHandler 類別 |Microsoft 文件
+title: CAnimationManagerEventHandler 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bfc64617002db0536dc3d62e70082c27b260802f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955644"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539787"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 類別
 實作回呼，當動畫管理員的狀態變更時由動畫 API 呼叫。  
@@ -57,7 +57,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|儲存路由事件的動畫控制器的指標。|  
   
 ## <a name="remarks"></a>備註  
- 建立並傳遞至 IUIAnimationManager::SetManagerEventHandler 方法，當您呼叫 CAnimationController::EnableAnimationManagerEvent 這個事件處理常式。  
+ 這個事件處理常式會建立並傳遞給 IUIAnimationManager::SetManagerEventHandler 方法，當您呼叫 CAnimationController::EnableAnimationManagerEvent。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CUIAnimationCallbackBase`  
@@ -70,7 +70,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
  **標頭：** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ 必須有 Visual Studio 2010 SP1。  
   
  建構 CAnimationManagerEventHandler 物件。  
   
@@ -79,7 +79,7 @@ CAnimationManagerEventHandler();
 ```  
   
 ##  <a name="createinstance"></a>  CAnimationManagerEventHandler::CreateInstance  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ 必須有 Visual Studio 2010 SP1。  
   
  建立 CAnimationManagerEventHandler 物件的執行個體。  
   
@@ -91,16 +91,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="parameters"></a>參數  
  *pAnimationController*  
- 動畫控制器，將會收到事件指標。  
+ 動畫控制器，會收到的事件指標。  
   
  *ppManagerEventHandler*  
- 輸出。 如果方法成功，它包含處理狀態更新為動畫管理員的 COM 物件的指標。  
+ 輸出。 如果方法成功，它會包含處理狀態更新為動畫管理員的 COM 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+ 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
 ##  <a name="onmanagerstatuschanged"></a>  CAnimationManagerEventHandler::OnManagerStatusChanged  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ 必須有 Visual Studio 2010 SP1。  
   
  當動畫管理員的狀態已變更時呼叫。  
   
@@ -118,10 +118,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
  先前的狀態。  
   
 ### <a name="return-value"></a>傳回值  
- 目前的實作一律會傳回 S_OK;  
+ 目前的實作一定會傳回 S_OK;  
   
 ##  <a name="setanimationcontroller"></a>  CAnimationManagerEventHandler::SetAnimationController  
- [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
+ 必須有 Visual Studio 2010 SP1。  
   
  儲存路由事件的動畫控制器的指標。  
   
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ### <a name="parameters"></a>參數  
  *pAnimationController*  
- 動畫控制器，將會收到事件指標。  
+ 動畫控制器，會收到的事件指標。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

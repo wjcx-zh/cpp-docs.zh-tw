@@ -1,7 +1,7 @@
 ---
 title: 匯出 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322185"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572644"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-如果您將匯出的名稱，從其他模組匯出的名稱在 DLL 中使用指定*other_module.exported_name*。 例如，如果您的 DLL 匯出函式 `other_module.func1`，且您想要呼叫端使用它作為 `func2`，則您可以指定：
+如果您將匯出的名稱，從某些其他模組匯出的名稱在 DLL 中使用指定*other_module.exported_name*。 例如，如果您的 DLL 匯出函式 `other_module.func1`，且您想要呼叫端使用它作為 `func2`，則您可以指定：
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+如果您將匯出的名稱是從另一個模組中，依序數匯出，請指定 使用匯出的 DLL 中的序數*other_module。 #ordinal_number*。 例如，如果您的 DLL 匯出函式，從另一個模組是序數 42，而您想要使用它作為呼叫者`func2`，您就要指定：
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 因為 Visual c + + 編譯器會使用 c + + 函式的名稱裝飾，所以您必須使用裝飾的名稱 internal_name，或使用 extern"C"中的原始程式碼定義匯出的函式。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例與底線 (_) 前置詞和後置詞組成 at 符號 (@) 後面接著位元組數 （十進位） 引數清單中。  

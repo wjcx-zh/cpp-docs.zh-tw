@@ -1,5 +1,5 @@
 ---
-title: -homeparams （暫存器參數複製到堆疊） |Microsoft 文件
+title: -homeparams （暫存器參數複製到堆疊） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfd6b8c77d972eb4606e7095bc5f733e7db16ea6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374394"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572253"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (將暫存器參數複製到堆疊)
 在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。  
@@ -34,17 +34,17 @@ ms.locfileid: "32374394"
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個編譯器選項只適用於 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 編譯器 (原生和跨平台編譯)。  
+ 這個編譯器選項是僅適用於 x64 編譯器 （原生和跨編譯）。  
   
- 當參數傳遞中[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]編譯時，呼叫慣例需要參數需要，即使在暫存器中傳遞的參數。 如需詳細資訊，請參閱[參數傳遞](../../build/parameter-passing.md)。 不過，預設會在發行組建，暫存器參數將不會寫入至堆疊，參數所提供的空間。 這使得難進行偵錯程式最佳化 （發行） 的建置您的程式。  
+ 當參數傳入 x64 編譯時，呼叫慣例需要參數需要，即使在暫存器中傳遞的參數。 如需詳細資訊，請參閱 <<c0> [ 參數傳遞](../../build/parameter-passing.md)。 不過，在發行組建的預設值，將暫存器參數將不會寫堆疊中，已針對參數提供的空間。 這可讓您難以偵錯最佳化 （發行） 組建您的程式。  
   
- 發行組建，而使用 **/homeparams**以確保您可以偵錯您的應用程式。 **/homeparams**意味著效能缺點，因為它需要載入至堆疊暫存器參數循環。  
+ 用於發行組建，而 **/homeparams**以確保您可以偵錯您的應用程式。 **/homeparams**的確效能缺點，因為它需要載入到堆疊上的暫存器參數循環。  
   
- 在偵錯組建中，永遠會填入堆疊暫存器中傳遞的參數。  
+ 在偵錯組建中，一律會填入堆疊暫存器中傳遞的參數。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
 2.  按一下 [C/C++]  資料夾。  
   

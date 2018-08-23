@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413267"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42575453"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -65,18 +65,18 @@ int vfwscanf(
 *格式*<br/>
 格式控制字串。
 
-*引數清單*<br/>
+*arglist*<br/>
 變數引數清單。
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或如果第一個轉換前達到檔案資料流末端，則傳回值是**EOF**如**vfscanf**和**vfwscanf**。
+所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或第一次轉換之前，就到達檔案資料流末端，則傳回值是**EOF** for **vfscanf**並**vfwscanf**。
 
-這些函式會驗證它們的參數。 如果*資料流*或*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EOF**並設定**errno**至**EINVAL**。
+這些函式會驗證它們的參數。 如果*資料流*或是*格式*為 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Vfscanf**函式會從目前的位置讀取資料*資料流*到所指定的位置*引數清單*引數清單。 在清單中的每個引數必須是對應於型別規範中的型別變數指標*格式*。 *格式*控制項的輸入解譯欄位，並具有相同的形式和功能*格式*引數**scanf**; 請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md)的描述*格式*。
+**Vfscanf**函式會從目前位置讀取資料*串流*所指定的位置*arglist*引數清單。 在清單中的每個引數必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*欄位輸入的解譯，而且具有相同的控制項形式和運作方式*格式*引數**scanf**; 請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md)的popis*格式*。
 
 **vfwscanf**是寬字元版本的**vfscanf**; 的格式引數**vfwscanf**是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **vfscanf**不支援來自 UNICODE 資料流輸入。
 

@@ -1,5 +1,5 @@
 ---
-title: __writeeflags |Microsoft 文件
+title: __writeeflags |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2885f2ea103ad43535b11c526b96ed42de45fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340524"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539393"
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定的值寫入程式狀態和控制 (EFLAGS) 註冊。  
@@ -37,20 +37,20 @@ void __writeeflags(unsigned __int64 Value);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `Value`|要寫入至 EFLAGS 暫存器值。 `Value`參數為 32 位元長度為 32 位元平台和 64 位元長度為 64 位元平台。|  
+|[輸入] `Value`|要寫入的 EFLAGS 暫存器的值。 `Value`參數是 32 位元長，不適用於 32 位元平台和 64 位元長，不適用於 64 位元平台。|  
   
 ## <a name="remarks"></a>備註  
- 這些常式會只提供內建函式。  
+ 這些常式都僅有內建函式。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__writeeflags`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writeeflags`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

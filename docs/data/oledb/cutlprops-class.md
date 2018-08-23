@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 661ac13acd1d8eac0ecde9af9fa08875b99153e3
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 0179bbc68bb6ed60f6fadf26f98be492c2eeb4c1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336976"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572946"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 會實作各種不同的 OLE DB 屬性的介面屬性 (例如`IDBProperties`， `IDBProperties`，和`IRowsetInfo`)。  
@@ -123,7 +123,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
  陣列中的索引屬性集;如果只有一個屬性組，則為零。  
   
  *pDBProp*  
- 中的新值與屬性 ID [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)結構。  
+ 中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))結構。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。 預設的傳回值為 S_OK。  
@@ -178,7 +178,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
  陣列中的索引屬性集;如果只有一個屬性組，則為零。  
   
  *pDBProp*  
- 中的新值與屬性 ID [DBPROP](https://msdn.microsoft.com/library/ms717970.aspx)結構。  
+ 中的新值與屬性 ID [DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))結構。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT。 預設的傳回值為 S_OK。  

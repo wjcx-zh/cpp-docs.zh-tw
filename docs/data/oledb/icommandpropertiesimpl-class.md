@@ -27,15 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b360b56066ecbb5cc605012b234c0ac11afb2a11
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339408"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573213"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 類別
-提供實作[ICommandProperties](https://msdn.microsoft.com/library/ms723044.aspx)介面。  
+提供實作[ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -80,7 +80,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[icommandproperties:: Getproperties](https://msdn.microsoft.com/library/ms723119.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[icommandproperties:: Getproperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
  請參閱 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
@@ -96,7 +96,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[icommandproperties:: Setproperties](https://msdn.microsoft.com/library/ms711497.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[icommandproperties:: Setproperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

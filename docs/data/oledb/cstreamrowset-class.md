@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338008"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571566"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 類別
 用於`CCommand`或`CTable`宣告。  
@@ -69,7 +69,7 @@ class CStreamRowset
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|建構函式。 具現化並初始化`CStreamRowset`物件。|  
-|[關閉](#close)|版本[ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx)類別中的介面指標。|  
+|[關閉](#close)|版本[ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))類別中的介面指標。|  
   
 ## <a name="remarks"></a>備註  
  使用`CStreamRowset`在您`CCommand`或`CTable`宣告，例如：  
@@ -99,7 +99,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> Cstreamrowset:: Close
-版本[ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx)類別中的介面指標。  
+版本[ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))類別中的介面指標。  
   
 ### <a name="syntax"></a>語法  
   

@@ -1,5 +1,5 @@
 ---
-title: omp |Microsoft 文件
+title: omp |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87dd737b1bbe9263af5ef6416e7d6b8d287feb53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15491517ad95973d7eabf2998741dbcc89ca602b
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849466"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540963"
 ---
 # <a name="omp"></a>omp
 接受一個或多個 OpenMP 指示詞，以及選擇性的指示詞子句。  
@@ -31,12 +31,13 @@ ms.locfileid: "33849466"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma omp directive  
 ```  
   
 ## <a name="remarks"></a>備註  
- 請參閱[OpenMP 指示詞](../parallel/openmp/reference/openmp-directives.md)如需詳細資訊。  
+ 
+請參閱[OpenMP 指示詞](../parallel/openmp/reference/openmp-directives.md)如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

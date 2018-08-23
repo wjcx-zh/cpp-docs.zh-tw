@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift |Microsoft 文件
+title: __ull_rshift |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333114"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538248"
 ---
 # <a name="ullrshift"></a>__ull_rshift
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 在 x64 上將第二個參數所指定的位元數右邊的第一個參數所指定的 64 位元值。  
+ 在 x64 上，將第二個參數所指定的位元數右邊的第一個參數所指定的 64 位元值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ unsigned __int64 __ull_rshift(
  要向右移位的 64 位元整數值。  
   
  [輸入] `nBit`  
- 要移位 32 在 x86、 模數和模數 x64 上的 64 位元數目。  
+ 若移動，請在 x86 上的 32 模數和模數 x64 的 64 位元數。  
   
 ## <a name="return-value"></a>傳回值  
  遮罩移位`nBit`位元。  
@@ -52,12 +52,12 @@ unsigned __int64 __ull_rshift(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__ull_rshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 如果第二個參數大於 31 on x86 (在 x64 上為 63)，該數字會採取模數 32 (在 x64 上為 64)，來判斷要移位的位元數目。 `ull`名稱中指出`unsigned long long (unsigned __int64)`。  
+ 如果第二個參數大於 31 x86 (在 x64 上為 63) 上，該數字會採取模數 32 (在 x64 上為 64)，以判斷要移位的位元數。 `ull`名稱中指出`unsigned long long (unsigned __int64)`。  
   
 ## <a name="example"></a>範例  
   
@@ -86,7 +86,7 @@ int main()
 1  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__ll_lshift](../intrinsics/ll-lshift.md)   

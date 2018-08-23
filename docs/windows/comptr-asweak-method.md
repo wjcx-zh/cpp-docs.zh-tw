@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78f6eb9f3d0acf6a28479593d64616fa6881be76
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d8de0ee1bf4d879490002d3483f0340714b989ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648086"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42581220"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak 方法
-擷取目前物件的弱式參考。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-HRESULT AsWeak(  
-   _Out_ WeakRef* pWeakRef  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *pWeakRef*  
- 這項作業完成時，弱式參考物件的指標。  
-  
-## <a name="return-value"></a>傳回值  
- 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ComPtr 類別](../windows/comptr-class.md)
+
+擷取目前物件的弱式參考。
+
+## <a name="syntax"></a>語法
+
+```cpp
+HRESULT AsWeak(
+   _Out_ WeakRef* pWeakRef
+);
+```
+
+### <a name="parameters"></a>參數
+
+*pWeakRef*  
+這項作業完成時，弱式參考物件的指標。
+
+## <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ComPtr 類別](../windows/comptr-class.md)

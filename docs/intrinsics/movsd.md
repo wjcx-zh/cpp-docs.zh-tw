@@ -1,5 +1,5 @@
 ---
-title: __movsd |Microsoft 文件
+title: __movsd |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326920"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541385"
 ---
 # <a name="movsd"></a>__movsd
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 產生的移動字串 (`rep movsd`) 指令。  
+ 產生的移動的字串 (`rep movsd`) 指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +54,7 @@ void __movsd(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__movsd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -90,7 +90,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50   
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

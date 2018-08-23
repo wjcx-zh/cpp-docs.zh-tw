@@ -1,5 +1,5 @@
 ---
-title: CMFCAcceleratorKeyAssignCtrl 類別 |Microsoft 文件
+title: CMFCAcceleratorKeyAssignCtrl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f3dfe9f728b01b175e897f1182c95e954969aaec
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037242"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539388"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 類別
 `CMFCAcceleratorKeyAssignCtrl`類別會擴充[CEdit 類別](../../mfc/reference/cedit-class.md)以支援額外的系統按鈕，例如 ALT、 CONTROL 和 SHIFT。  
@@ -63,7 +63,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|重設快速鍵。|  
   
 ## <a name="remarks"></a>備註  
- 此類別可藉由支援快速鍵來擴充 `CEdit` 類別的功能。 `CMFCAcceleratorKeyAssignCtrl`類別函式做為[CEdit 類別](../../mfc/reference/cedit-class.md)，也可以辨認系統按鈕。  
+ 此類別可藉由支援快速鍵來擴充 `CEdit` 類別的功能。 `CMFCAcceleratorKeyAssignCtrl`類別可當作[CEdit 類別](../../mfc/reference/cedit-class.md)和也可以辨認系統按鈕。  
   
  這個類別會將實體快速鍵組合對應至字串值。 例如，假設按鍵組合 ALT + B 會對應至字串 "Alt + B"。 當使用者在 `CMFCAcceleratorKeyAssignCtrl` 物件中按下此按鍵組合時，會對使用者顯示 "Alt + B"。 如需快捷鍵和字串格式之間的對應的詳細資訊，請參閱[CMFCAcceleratorKey 類別](../../mfc/reference/cmfcacceleratorkey-class.md)。  
   
@@ -101,13 +101,13 @@ ACCEL const* GetAccel() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `ACCEL`結構描述的快速鍵。  
+ `ACCEL`該結構描述的快速鍵。  
   
 ### <a name="remarks"></a>備註  
- 使用這個函數來擷取`ACCEL`結構使用者輸入攠摝坫您`CMFCAcceleratorKeyAssignCtrl`物件。  
+ 使用此函式來擷取`ACCEL`結構，使用者輸入攠摝坫您`CMFCAcceleratorKeyAssignCtrl`物件。  
   
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 BOOL IsFocused() const;  
@@ -125,13 +125,13 @@ BOOL IsKeyDefined() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果使用者已按下定義的快速鍵; 的索引鍵的有效組合否則便是 0。  
+ 如果使用者已按下定義的快速鍵; 的索引鍵的有效組合，非零值。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 使用此函數來判斷使用者是否輸入有效的快速鍵在您`CMFCAcceleratorKeyAssignCtrl`物件。 如果攠摝坫存在，您可以使用[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)方法，以取得`ACCEL`這個快顯索引鍵相關聯的結構。  
+ 使用此函式來判斷使用者是否輸入有效快速鍵，在您`CMFCAcceleratorKeyAssignCtrl`物件。 如果攠摝坫存在，您可以使用[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)方法，以取得`ACCEL`這個快顯索引鍵相關聯的結構。  
   
 ##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -152,7 +152,7 @@ void ResetKey();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會清除編輯控制項的文字。 這包括使用者按下任何快速鍵。  
+ 此函式會清除編輯控制項文字。 這包括任何使用者按下的快速鍵。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

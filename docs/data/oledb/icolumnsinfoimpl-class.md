@@ -38,15 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337238"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572142"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 類別
-提供實作[IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx)介面。  
+提供實作[IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -88,7 +88,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
 在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。  
@@ -102,7 +102,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

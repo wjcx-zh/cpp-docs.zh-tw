@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881723"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572547"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 堆積配置函式。  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  HEAP_NO_SERIALIZE 參數會指定當堆積函式配置和釋放記憶體，相應增加的效能時，不會使用互斥。  
   
- 第三個參數預設為 0，如此可讓堆積隨需求擴大。 請參閱[HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx)的記憶體大小和旗標的說明。  
+ 第三個參數預設為 0，如此可讓堆積隨需求擴大。 請參閱[HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate)的記憶體大小和旗標的說明。  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  解構函式。  

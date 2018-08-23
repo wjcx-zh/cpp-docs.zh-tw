@@ -19,32 +19,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ee2b3a437f2b36d34fe9232356b171757643509
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d6f41967298169fcdf9637cafa1d9cfc8a3cf128
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644982"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575771"
 ---
 # <a name="changing-unassigned-symbols"></a>變更未指定的符號
-當您在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除尚未指派給資源或物件的現有符號。  
-  
-### <a name="to-change-an-unassigned-symbol"></a>變更未指派的符號  
-  
-1.  在 **名稱**方塊中，選取未指派的符號，然後按一下**變更**。  
-  
-2.  符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。  
-  
-    > [!NOTE]
-    >  若要變更符號所*已*指派給資源或物件，您必須使用資源編輯器或**屬性**視窗。 如需詳細資訊，請參閱 <<c0> [ 變更符號或符號名稱](../windows/changing-a-symbol-or-symbol-name-id.md)。  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [檢視資源符號](../windows/viewing-resource-symbols.md)   
- [符號名稱限制](../windows/symbol-name-restrictions.md)   
- [符號值限制](../windows/symbol-value-restrictions.md)   
- [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)
+
+當您在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除尚未指派給資源或物件的現有符號。
+
+### <a name="to-change-an-unassigned-symbol"></a>變更未指派的符號
+
+1. 在 **名稱**方塊中，選取未指派的符號，然後按一下**變更**。
+
+2. 符號的名稱或值中提供的方塊中編輯**變更符號** 對話方塊。
+
+   > [!NOTE]
+   > 若要變更符號所*已*指派給資源或物件，您必須使用資源編輯器或**屬性**視窗。 如需詳細資訊，請參閱 <<c0> [ 變更符號或符號名稱](../windows/changing-a-symbol-or-symbol-name-id.md)。
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[檢視資源符號](../windows/viewing-resource-symbols.md)  
+[符號名稱限制](../windows/symbol-name-restrictions.md)  
+[符號值限制](../windows/symbol-value-restrictions.md)  
+[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

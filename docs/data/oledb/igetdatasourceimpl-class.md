@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c6e304547af06d5de6d81bae2ceace119e4681d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572041"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 類別
-提供實作[IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx)物件。  
+提供實作[IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))物件。  
   
 ## <a name="syntax"></a>語法
 
@@ -71,7 +71,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IGetDataSource::GetDataSource](https://msdn.microsoft.com/library/ms725443.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
  如果您需要存取資料來源物件中的屬性很有用。  

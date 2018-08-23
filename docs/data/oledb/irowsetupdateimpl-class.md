@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: afbf8b42b4d518412c1004d78c5c718e54078c1c
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5dcaa42242410c2823388c7004a0c0a7d1991f59
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340777"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572542"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 類別
-OLE DB 樣板實作[IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)介面。  
+OLE DB 樣板實作[IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -142,7 +142,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[m_mapCachedData](#mapcacheddata)|包含原始資料延遲的作業。|  
   
 ## <a name="remarks"></a>備註  
- 您應該先閱讀，並了解的文件[IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx)，因為這裡所述的所有項目也適用於此處。 您也應該閱讀的第 6 章*OLE DB 程式設計人員參考*上設定資料。  
+ 您應該先閱讀，並了解的文件[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))，因為這裡所述的所有項目也適用於此處。 您也應該閱讀的第 6 章*OLE DB 程式設計人員參考*上設定資料。  
   
  `IRowsetUpdateImpl` 實作 OLE DB`IRowsetUpdate`介面，讓消費者可以延遲的具有所做的變更傳輸`IRowsetChange`到資料來源，並復原變更，才能加以傳送。  
   
@@ -153,7 +153,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 -   第 6 章*OLE DB 程式設計人員參考*  
   
--   另請參閱如何`RUpdateRowset`UpdatePV 範例中使用類別  
+-   另請參閱如何`RUpdateRowset`類別用於[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例  
 
 ## <a name="setdata"></a> Irowsetupdateimpl:: Setdata
 設定一或多個資料行中的資料值。  
@@ -167,7 +167,7 @@ STDMETHOD (SetData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[irowsetchange:: Setdata](https://msdn.microsoft.com/library/ms721232.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[irowsetchange:: Setdata](/previous-versions/windows/desktop/ms721232\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
  這個方法會覆寫[irowsetchangeimpl:: Setdata](../../data/oledb/irowsetchangeimpl-setdata.md)方法，但包含原始資料，以允許立即或延後在處理作業的快取。
@@ -184,7 +184,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IRowsetUpdate::GetOriginalData](https://msdn.microsoft.com/library/ms709947.aspx)中*OLE DB 程式設計人員參考*。   
+ 請參閱[IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\))中*OLE DB 程式設計人員參考*。   
 
 ## <a name="getpendingrows"></a> Irowsetupdateimpl:: Getpendingrows
 傳回一份具有暫止的變更的資料列。  
@@ -201,12 +201,12 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>參數  
  *hReserved*  
- [in]對應至*hChapter*中的參數[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/library/ms719626.aspx)。  
+ [in]對應至*hChapter*中的參數[IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\))。  
   
- 其他參數，請參閱[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/library/ms719626.aspx)中*OLE DB 程式設計人員參考*。  
+ 其他參數，請參閱[IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/library/ms719626.aspx)中*OLE DB 程式設計人員參考*。  
+ 如需詳細資訊，請參閱 < [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="getrowstatus"></a> Irowsetupdateimpl:: Getrowstatus
 傳回指定的資料列的狀態。  
@@ -222,9 +222,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>參數  
  *hReserved*  
- [in]對應至*hChapter*中的參數[IRowsetUpdate::GetRowStatus](https://msdn.microsoft.com/library/ms724377.aspx)。  
+ [in]對應至*hChapter*中的參數[IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\))。  
   
- 其他參數，請參閱[IRowsetUpdate::GetRowStatus](https://msdn.microsoft.com/library/ms724377.aspx)中*OLE DB 程式設計人員參考*。  
+ 其他參數，請參閱[IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="undo"></a> Irowsetupdateimpl:: Undo
 復原自上次擷取或更新的資料列的任何變更。  
@@ -242,15 +242,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>參數  
  *hReserved*  
- [in]對應至*hChapter*中的參數[IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)。  
+ [in]對應至*hChapter*中的參數[IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))。  
   
  *pcRowsUndone*  
- [out]對應至*pcRows*中的參數[IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)。  
+ [out]對應至*pcRows*中的參數[IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))。  
   
  *prgRowsUndone*  
- [in]對應至*prgRows*中的參數[IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)。  
+ [in]對應至*prgRows*中的參數[IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))。  
   
- 其他參數，請參閱[IRowsetUpdate::Undo](https://msdn.microsoft.com/library/ms719655.aspx)中*OLE DB 程式設計人員參考*。 
+ 其他參數，請參閱[IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="update"></a> Irowsetupdateimpl:: Update
 會傳輸自上次擷取或更新資料列所做的變更。  
@@ -268,12 +268,12 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>參數  
  *hReserved*  
- [in]對應至*hChapter*中的參數[irowsetupdate:: Update](https://msdn.microsoft.com/library/ms719709.aspx)。  
+ [in]對應至*hChapter*中的參數[irowsetupdate:: Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\))。  
   
- 其他參數，請參閱[irowsetupdate:: Update](https://msdn.microsoft.com/library/ms719709.aspx)中*OLE DB 程式設計人員參考*。  
+ 其他參數，請參閱[irowsetupdate:: Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 變更傳輸藉由呼叫[irowsetchangeimpl:: Flushdata](../../data/oledb/irowsetchangeimpl-flushdata.md)。 取用者必須呼叫[Crowset](../../data/oledb/crowset-update.md) ，變更才會生效。 設定*Prgrowstatus&lt*設為適當的值中所述[資料列狀態](https://msdn.microsoft.com/library/ms722752.aspx)中*OLE DB 程式設計人員參考*。 
+ 變更傳輸藉由呼叫[irowsetchangeimpl:: Flushdata](../../data/oledb/irowsetchangeimpl-flushdata.md)。 取用者必須呼叫[Crowset](../../data/oledb/crowset-update.md) ，變更才會生效。 設定*Prgrowstatus&lt*設為適當的值中所述[資料列狀態](/previous-versions/windows/desktop/ms722752\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
   
 ## <a name="isupdateallowed"></a> Irowsetupdateimpl:: Isupdateallowed
 覆寫此方法來檢查安全性，完整性，在更新之前，依此類推。  
@@ -297,7 +297,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
  [out]傳回給使用者的狀態。  
   
 ### <a name="remarks"></a>備註  
- 如果您判斷，應該允許更新，會傳回 S_OK;否則會傳回 E_FAIL。 如果您允許更新，您也需要設定`DBROWSTATUS`中[irowsetupdateimpl:: Update](../../data/oledb/irowsetupdateimpl-update.md)適當[資料列狀態](https://msdn.microsoft.com/library/ms722752.aspx)。  
+ 如果您判斷，應該允許更新，會傳回 S_OK;否則會傳回 E_FAIL。 如果您允許更新，您也需要設定`DBROWSTATUS`中[irowsetupdateimpl:: Update](../../data/oledb/irowsetupdateimpl-update.md)適當[資料列狀態](/previous-versions/windows/desktop/ms722752\(v=vs.85\))。  
 
 ## <a name="mapcacheddata"></a> Irowsetupdateimpl:: M_mapcacheddata
 對應，其包含延遲作業的原始資料。  

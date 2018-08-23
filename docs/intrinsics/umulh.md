@@ -1,5 +1,5 @@
 ---
-title: __umulh |Microsoft 文件
+title: __umulh |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 820f18e0f7db1b70982558c75f879902dca14d2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afddee0ec2afc43bef22250d37daef201a0fe8dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327251"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538617"
 ---
 # <a name="umulh"></a>__umulh
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  傳回兩個 64 位元不帶正負號整數之乘積的 64 高位元。  
   
@@ -51,7 +51,7 @@ unsigned __int64 __umulh(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__umulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__umulh`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -84,7 +84,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100   
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

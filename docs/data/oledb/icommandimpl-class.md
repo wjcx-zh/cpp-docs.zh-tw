@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337790"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573216"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 類別
-提供實作[ICommand](https://msdn.microsoft.com/library/ms709737.aspx)介面。  
+提供實作[ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ICommand::Cancel](https://msdn.microsoft.com/library/ms714402.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="cancelexecution"></a> Icommandimpl:: Cancelexecution
 取消目前執行的命令。  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>備註  
  若要建立多個資料列集，或提供您自己的建立不同的資料列集的條件，將不同的呼叫置於`CreateRowset`內在`Execute`。  
   
- 請參閱[icommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx)在*OLE DB 程式設計人員參考。*  
+ 請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))在*OLE DB 程式設計人員參考。*  
 
 ## <a name="execute"></a> Icommandimpl:: Execute
 執行命令。  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[icommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[icommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
  要求的連出介面將會取得從這個函式建立的資料列集物件介面。  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
  適用於從工作階段中擷取屬性。  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852263"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539974"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 `CNetAddressCtrl` 類別表示網路位址控制項，您可以用來輸入和驗證 IPv4、IPv6 和具名 DNS 位址的格式。  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  下圖將說明包含網路位址控制項的對話方塊。 文字 方塊中 （1） 的網路位址控制項包含無效的網路位址。 網路位址是否無效，會顯示資訊提示訊息 (2)。  
   
- ![使用網路位址控制項和資訊提示的對話方塊。] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![使用網路位址控制項和資訊提示的對話方塊。](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
 ## <a name="example"></a>範例  
  下列程式碼範例是一個對話方塊，驗證網路位址的一部分。 三個選項按鈕的事件處理常式指定的網路位址可以是其中一種位址類型。 使用者在網路控制中，文字方塊中輸入的地址，然後按下按鈕，以驗證地址。 如果位址是有效的則會顯示成功訊息;否則，會顯示預先定義的資訊提示錯誤訊息。  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
- 這個類別支援[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]和更新版本。  
+ 這個類別支援在 Windows Vista 和更新版本。  
   
  這個類別的其他需求所述[建置需求的 Windows Vista 通用控制項](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   

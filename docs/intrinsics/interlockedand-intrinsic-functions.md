@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAnd 內建函式 |Microsoft 文件
+title: _InterlockedAnd 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -66,15 +66,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 009c3dd2fd7e7ce123f760ae832c2c4e25fedd92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b991d4d0546ea20e26f2896bc78032e2fb1c6136
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334921"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540781"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  用來執行多個執行緒所共用的變數上，不可部分完成的位元 AND 運算。  
   
@@ -193,10 +193,10 @@ __int64 _InterlockedAnd64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedAnd`、`_InterlockedAnd8`、`_InterlockedAnd16``_InterlockedAnd64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedAnd`、`_InterlockedAnd8`、`_InterlockedAnd16``_InterlockedAnd64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|  
-|`_InterlockedAnd_np`、`_InterlockedAnd8_np`、`_InterlockedAnd16_np``_InterlockedAnd64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedAnd_HLEAcquire`、`_InterlockedAnd_HLERelease`、`_InterlockedAnd64_HLEAcquire``_InterlockedAnd64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedAnd_np`、`_InterlockedAnd8_np`、`_InterlockedAnd16_np``_InterlockedAnd64_np`|X64|\<intrin.h>|  
+|`_InterlockedAnd_HLEAcquire`、`_InterlockedAnd_HLERelease`、`_InterlockedAnd64_HLEAcquire``_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  每個函式名稱的數字會指定引數的位元大小。  
@@ -231,7 +231,7 @@ int main()
 0xff00 0xffff00 0xff00ff00  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

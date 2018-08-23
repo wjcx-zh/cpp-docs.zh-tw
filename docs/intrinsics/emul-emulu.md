@@ -1,5 +1,5 @@
 ---
-title: __emul、 __emulu |Microsoft 文件
+title: __emul、 __emulu |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc98119f6174f299b8de72383610aac72032d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331031"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538820"
 ---
 # <a name="emul-emulu"></a>__emul、__emulu
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會執行乘法可以保存的 32 位元整數的溢位。  
+ 執行乘法運算可以保存的 32 位元整數的溢位。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,27 +47,27 @@ unsigned __int64 __emulu(
   
 #### <a name="parameters"></a>參數  
  [輸入] `a`  
- 相乘的第一個整數運算元。  
+ 第一個整數運算元的乘法運算。  
   
  [輸入] `b`  
- 相乘的第二個整數運算元。  
+ 第二個整數運算元的乘法運算。  
   
 ## <a name="return-value"></a>傳回值  
- 相乘的結果。  
+ 乘法運算的結果。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__emul`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emul`|x86、x64|  
+|`__emulu`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- `__emul` 會採用兩個 32 位元帶正負號的值，並傳回做為 64 位元帶正負號的整數值相乘的結果。  
+ `__emul` 採用兩個 32 位元帶正負號的值，並傳回做為 64 位元帶正負號的整數值相乘的結果。  
   
- `__emulu` 會採用兩個 32 位元不帶正負號的整數值，並傳回做為 64 位元不帶正負號的整數值相乘的結果。  
+ `__emulu` 採用兩個 32 位元不帶正負號的整數值，並傳回做為 64 位元不帶正負號的整數值相乘的結果。  
   
 ## <a name="example"></a>範例  
   
@@ -108,7 +108,7 @@ int main()
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

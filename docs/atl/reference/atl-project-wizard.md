@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025814"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572814"
 ---
 # <a name="atl-project-wizard"></a>ATL 專案精靈
 Active Template Library (ATL) 是一份樣板架構 c + + 類別，可簡化撰寫小型且快速的 COM 物件。 [ATL 專案精靈] 建立專案結構，以包含 COM 物件。  
@@ -52,7 +52,7 @@ Active Template Library (ATL) 是一份樣板架構 c + + 類別，可簡化撰�
   
 -   [最佳化編譯器為 ATL 專案](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- 您可以指定專案屬性 (例如[是否以靜態方式連結到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[專案屬性](../../ide/general-property-page-project.md)頁面上，而且您可以設定[組建組態](/visualstudio/ide/understanding-build-configurations)的ATL 專案。 請參閱[使用來建置應用程式的專案](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe)如需詳細資訊。  
+ 您可以指定專案屬性 (例如[是否以靜態方式連結到 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[專案屬性](../../ide/general-property-page-project.md)頁面上，而且您可以設定[組建組態](/visualstudio/ide/understanding-build-configurations)的ATL 專案。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立和管理 Visual C++ 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   

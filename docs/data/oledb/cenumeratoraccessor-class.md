@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339213"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573212"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 類別
 供[CEnumerator](../../data/oledb/cenumerator-class.md)從列舉值的資料列集存取資料。  
@@ -92,7 +92,7 @@ VARIANT_BOOL m_bIsParent;
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程式設計人員參考*如需詳細資訊。 
+ 請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。 
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 變數，表示資料列描述資料來源] 或 [列舉值。  
@@ -104,7 +104,7 @@ USHORT m_nType;
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程式設計人員參考*如需詳細資訊。
+ 請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
 列舉值之資料來源的描述。  
@@ -116,7 +116,7 @@ WCHAR m_szDescription[129];
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程式設計人員參考*如需詳細資訊。
+ 請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
 列舉值之資料來源的名稱。  
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程式設計人員參考*如需詳細資訊。  
+ 請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
 要傳遞至字串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)來取得 moniker，針對資料來源或列舉值。  
@@ -140,7 +140,7 @@ WCHAR m_szParseName[129];
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/library/ms711200.aspx)中*OLE DB 程式設計人員參考*如需詳細資訊。  
+ 請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

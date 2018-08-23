@@ -1,5 +1,5 @@
 ---
-title: __inbyte |Microsoft 文件
+title: __inbyte |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2e02d4e1bc1ee5d1694769b2ec217cd7acbaba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7a659c9ac452d9ff42bb37d049e5cf44ff2c261
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329825"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538420"
 ---
 # <a name="inbyte"></a>__inbyte
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生`in`指令時，傳回一個位元組讀取所指定的連接埠`Port`。  
+ 會產生`in`的指示，傳回一個位元組讀取所指定的連接埠`Port`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,11 +49,11 @@ unsigned char __inbyte(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__inbyte`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbyte`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  

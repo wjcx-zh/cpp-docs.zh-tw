@@ -15,67 +15,73 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a36e3068bd5211f37e6fe1f0f2a82c923b4511a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: abf78644f7cad90d25d365f6237407aeaeb6917b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650699"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575699"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 運算子
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-bool operator==(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   const Details::ComPtrRef<ComPtr<U>>& b  
-);  
-  
-bool operator==(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+bool operator==(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   const Details::ComPtrRef<ComPtr<U>>& b
+);
+
+bool operator==(
+   const Details::ComPtrRef<ComPtr<T>>& a,
    decltype(__nullptr)  
-);  
-  
-bool operator==(  
-   decltype(__nullptr),  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-  
-bool operator==(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   void* b  
-);  
-  
-bool operator==(  
-   void* b,  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *a*  
- 參考**ComPtrRef**物件。  
-  
- *b*  
- 另一個的參考**ComPtrRef**物件或匿名類型的指標 (`void*`)。  
-  
-## <a name="return-value"></a>傳回值  
- 第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。  
-  
- 第二個和第三個運算子會產生 **，則為 true**如果物件等於**nullptr**，則為**false**。  
-  
- 第四個和第五個運算子會產生 **，則為 true**如果物件是否等於物件*b*，則為**false**。  
-  
-## <a name="remarks"></a>備註  
- 指出兩個**ComPtrRef**物件是否相等。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)   
- [ComPtrRef 類別](../windows/comptrref-class.md)
+);
+
+bool operator==(
+   decltype(__nullptr),
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+
+bool operator==(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   void* b
+);
+
+bool operator==(
+   void* b,
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+```
+
+### <a name="parameters"></a>參數
+
+*a*  
+參考**ComPtrRef**物件。
+
+*b*  
+另一個的參考**ComPtrRef**物件或匿名類型的指標 (`void*`)。
+
+## <a name="return-value"></a>傳回值
+
+第一個運算子會產生 **，則為 true**如果物件是否等於物件*b*否則**false**。
+
+第二個和第三個運算子會產生 **，則為 true**如果物件等於**nullptr**，則為**false**。
+
+第四個和第五個運算子會產生 **，則為 true**如果物件是否等於物件*b*，則為**false**。
+
+## <a name="remarks"></a>備註
+
+指出兩個**ComPtrRef**物件是否相等。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)  
+[ComPtrRef 類別](../windows/comptrref-class.md)

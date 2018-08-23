@@ -1,5 +1,5 @@
 ---
-title: 如何： 在 C/c + + 應用程式資訊清單內嵌 |Microsoft 文件
+title: 如何： 在 C/c + + 應用程式資訊清單內嵌 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dec5377bca1cc56e2444d7466fc5107d594205a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369048"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572442"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：在 C/C++ 應用程式中嵌入資訊清單
-建議您使用 C/c + + 應用程式 （或程式庫） 有其資訊清單嵌入最終的二進位檔，因為這樣可保證在大部分情況下正確的執行階段行為。 根據預設，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]嘗試建置專案，從原始程式檔時，內嵌資訊清單，請參閱[Visual Studio 中的資訊清單產生](../build/manifest-generation-in-visual-studio.md)如需詳細資訊。 但是如果使用 nmake 建置應用程式，會需要現有 makefile 的某些變更。 本節示範如何變更現有的 makefile，將會自動內嵌於最終二進位檔的資訊清單。  
+建議您使用 C/c + + 應用程式 （或程式庫） 已內嵌於最終二進位檔，因為這可確保正確的執行階段行為，在大部分情況下其資訊清單。 根據預設，Visual Studio 會嘗試建立從原始程式檔; 專案時嵌入資訊清單請參閱[Visual Studio 中的資訊清單產生](../build/manifest-generation-in-visual-studio.md)如需詳細資訊。 不過如果使用 nmake 來建置應用程式時，不需要現有 makefile 的某些變更。 本節示範如何變更現有的 makefiles 自動內嵌於最終二進位檔的資訊清單。  
   
 ## <a name="two-approaches"></a>兩種方法  
  有兩種方式可以內嵌在應用程式或程式庫內的資訊清單。  
   
--   如果您不會進行累加建置您可以直接內嵌資訊清單做為建置後步驟，使用命令列與下列類似：  
+-   如果您不想要執行累加建置您可以將直接內嵌資訊清單做為建置後步驟中使用命令列如下所示：  
   
      **mt.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
@@ -37,20 +37,20 @@ ms.locfileid: "32369048"
   
      **mt.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     (1 exe、 DLL 的 2)。  
+     (1 exe，dll 2)。  
   
--   如果您進行累加建置，如下所示，直接編輯的資源將會停用累加建置並造成完整重建;因此，應採取不同的方法：  
+-   如果您要執行累加建置，如下所示，直接編輯資源會停用累加建置並會造成完整重建，因此您應該採取不同的方法：  
   
-    -   連結產生 MyApp.exe.manifest 檔案的二進位檔。  
+    -   連結要產生 MyApp.exe.manifest 檔案的二進位檔。  
   
-    -   將資訊清單轉換成資源檔案。  
+    -   轉換的資源檔中的資訊清單。  
   
-    -   重新連結 （累加），將資訊清單資源內嵌至二進位檔。  
+    -   重新 （以累加方式連結） 將資訊清單資源內嵌於二進位檔。  
   
- 下列範例顯示如何變更的 makefile，以便納入這兩種技術。  
+ 下列範例顯示如何變更將這兩種技術的 makefile。  
   
 ## <a name="makefiles-before"></a>Makefile （之前）  
- MyApp.exe，從一個檔案所建立的簡單應用程式，請考慮 nmake 指令碼：  
+ MyApp.exe，建置從一個檔案的簡單應用程式，請考慮 nmake 指令碼：  
   
 ```  
 # build MyApp.exe  
@@ -72,7 +72,7 @@ clean :
   
  變更 Visual c + + 來執行此指令碼時，如果它已成功建立 MyApp.exe。 它也會建立由作業系統載入相依組件，在執行階段使用的外部資訊清單檔 MyApp.exe.manifest。  
   
- Nmake 的指令碼 MyLibrary.dll 看起來非常類似：  
+ MyLibrary.dll 的 nmake 指令碼看起來非常類似：  
   
 ```  
 # build MyLibrary.dll  
@@ -96,7 +96,7 @@ clean :
 ```  
   
 ## <a name="makefiles-after"></a>Makefile （之後）  
- 若要使用建置內嵌資訊清單，您必須對原始 makefile 的四個的小型變更。 針對在 MyApp.exe makefile:  
+ 若要建置使用內嵌資訊清單，您必須對原始的 makefile 中的四個的小型變更。 針對 MyApp.exe makefile 中：  
   
 ```  
 # build MyApp.exe  
@@ -126,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- 如 MyLibrary.dll makefile:  
+ 針對 MyLibrary.dll makefile 中：  
   
 ```  
 # build MyLibrary.dll  
@@ -159,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Makefile 現在包含兩個執行的實際工作、 makefile.inc 和 makefile.targ.inc 的檔案。  
+ Makefile 現在包含兩個檔案執行實際工作、 makefile.inc 和 makefile.targ.inc。  
   
- 建立 makefile.inc，並將下列複製到其中：  
+ 建立 makefile.inc，並將下列內容複製到其中：  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -232,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- 現在建立 makefile.targ.inc 並複製下列：  
+ 現在建立 makefile.targ.inc，並將下列內容複製到其中：  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  

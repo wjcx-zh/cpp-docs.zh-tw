@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ac49319dca429dcc0351393f73d711266cf764a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e7159e75b03c6440dfc5742de9f98d93da47d904
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010768"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583850"
 ---
 # <a name="isbaseofstrictvalue-constant"></a>IsBaseOfStrict::value 常數
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-static const bool value = __is_base_of(Base, Derived);  
-```  
-  
-## <a name="remarks"></a>備註  
- 指出是否會有一個類型的另一個基底。  
-  
- **值**已 **，則為 true**如果型別`Base`型別的基底類別`Derived`，否則就是**false**。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** internal.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [IsBaseOfStrict 結構](../windows/isbaseofstrict-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+static const bool value = __is_base_of(Base, Derived);
+```
+
+## <a name="remarks"></a>備註
+
+指出是否會有一個類型的另一個基底。
+
+**值**已 **，則為 true**如果型別`Base`型別的基底類別`Derived`，否則就是**false**。
+
+## <a name="requirements"></a>需求
+
+**標頭：** internal.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[IsBaseOfStrict 結構](../windows/isbaseofstrict-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

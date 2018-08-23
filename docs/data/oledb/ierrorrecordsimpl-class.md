@@ -76,15 +76,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 149508ee799ab2802dd2a106b503376851ac31cd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338115"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572150"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 類別
-實作 OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx)介面，加入至記錄，以及從資料成員擷取的記錄 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的型別**CAtlArray <** `RecordClass`**>**.  
+實作 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\))介面，加入至記錄，以及從資料成員擷取的記錄 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 的型別**CAtlArray <** `RecordClass`**>**.  
   
 ## <a name="syntax"></a>語法
 
@@ -122,7 +122,7 @@ class IErrorRecordsImpl : public IErrorRecords
 |[AddErrorRecord](#adderrorrecord)|您可以將記錄加入 OLE DB 錯誤物件。|  
 |[GetBasicErrorInfo](#getbasicerrorinfo)|傳回錯誤，例如傳回碼和提供者特定錯誤號碼的相關基本資訊。|  
 |[GetCustomErrorObject](#getcustomerrorobject)|傳回自訂錯誤物件介面的指標。|  
-|[GetErrorInfo](#geterrorinfo)|傳回[IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx)介面指標上指定的記錄。|  
+|[GetErrorInfo](#geterrorinfo)|傳回[IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\))介面指標上指定的記錄。|  
 |[GetErrorParameters](#geterrorparameters)|傳回的錯誤參數。|  
 |[GetRecordCount](#getrecordcount)|OLE DB 記錄物件中傳回記錄的數目。|  
   
@@ -226,7 +226,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::AddErrorRecord](https://msdn.microsoft.com/library/ms725362.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="getbasicerrorinfo"></a> Ierrorrecordsimpl:: Getbasicerrorinfo
 傳回錯誤，例如傳回碼和提供者特定錯誤號碼的相關基本資訊。  
@@ -239,7 +239,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/library/ms723907.aspx)中*OLE DB 程式設計人員參考*。 
+ 請參閱[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="getcustomerrorobject"></a> Ierrorrecordsimpl:: Getcustomerrorobject
 傳回自訂錯誤物件介面的指標。  
@@ -253,10 +253,10 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/library/ms725417.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="geterrorinfo"></a> Ierrorrecordsimpl:: Geterrorinfo
-傳回[IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx)介面指標上指定的記錄。  
+傳回[IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\))介面指標上指定的記錄。  
   
 ### <a name="syntax"></a>語法  
   
@@ -267,7 +267,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ierrorrecords:: Geterrorinfo](https://msdn.microsoft.com/library/ms711230.aspx)中*OLE DB 程式設計人員參考*。
+ 請參閱[ierrorrecords:: Geterrorinfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
 ## <a name="geterrorparameters"></a> Ierrorrecordsimpl:: Geterrorparameters
 傳回的錯誤參數。  
@@ -280,7 +280,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/library/ms715793.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="getrecordcount"></a> Ierrorrecordsimpl:: Getrecordcount
 OLE DB 記錄物件中傳回記錄的數目。  
@@ -292,7 +292,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IErrorRecords::GetRecordCount](https://msdn.microsoft.com/library/ms722724.aspx)中*OLE DB 程式設計人員參考*。  
+ 請參閱[IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="rgerrors"></a> Ierrorrecordsimpl:: M_rgerrors
 錯誤記錄的陣列。  

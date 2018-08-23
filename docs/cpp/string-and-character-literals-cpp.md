@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0a3a3fa5d6e9836f7de949d4c13ec19f90dbcb02
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466939"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572548"
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -206,7 +206,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  通用字元名稱無法編碼在 surrogate 字碼指標範圍 D800-DFFF 內的值。 至於 Unicode surrogate 字組，請使用 `\UNNNNNNNN`指定通用字元名稱，這裡的 NNNNNNNN 為字元的八位數字碼指標。 如有需要，編譯器會產生 surrogate 字組。  
   
- 過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 這已在 C++11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱[字元集](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)。  
+ 過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 這已在 C++11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱[字元集](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 如需 surrogate 字組的詳細資訊，請參閱[surrogate 字組和補充字元](/windows/desktop/Intl/surrogates-and-supplementary-characters)。  
   
 ## <a name="string-literals"></a>字串常值  
  字串常值代表構成 null 結束字串的一連串字元。 這些字元必須使用雙引號括起來。 有下列字串常值類型：  

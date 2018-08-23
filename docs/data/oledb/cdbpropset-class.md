@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1b94898cbe4a041ac1bb9a5d01c55380ee496106
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575460"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 繼承自`DBPROPSET`結構，並新增初始化索引鍵欄位的建構函式以及`AddProperty`存取方法。  
@@ -131,7 +131,7 @@ bool AddProperty(DWORD dwPropertyID,
  **true**如果已成功加入屬性。 否則，請**false**。 
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
-建構函式。 初始化`rgProperties`， `cProperties`，並`guidPropertySet`的欄位[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構。  
+建構函式。 初始化`rgProperties`， `cProperties`，並`guidPropertySet`的欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
   
 ### <a name="syntax"></a>語法  
   
@@ -161,7 +161,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>參數  
  *guid*  
- [in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx)結構。  
+ [in]GUID; 用來設定`guidPropertySet`欄位[DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))結構。  
   
 ### <a name="remarks"></a>備註  
  可以設定此欄位[建構函式](../../data/oledb/cdbpropset-cdbpropset.md)以及。  
@@ -179,5 +179,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)   
- [DBPROPSET 結構](https://msdn.microsoft.com/library/ms714367.aspx)   
- [DBPROP 結構](https://msdn.microsoft.com/library/ms717970.aspx)
+ [DBPROPSET 結構](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
+ [DBPROP 結構](/previous-versions/windows/desktop/ms717970\(v=vs.85\))

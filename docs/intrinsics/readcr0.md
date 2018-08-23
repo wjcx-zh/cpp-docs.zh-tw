@@ -1,5 +1,5 @@
 ---
-title: __readcr0 |Microsoft 文件
+title: __readcr0 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb1abfadbe793f49eae53e2ee35f820c947685c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adece31c6123a21931436809d4405f258f4341b1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334648"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539768"
 ---
 # <a name="readcr0"></a>__readcr0
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  讀取 CR0 暫存器，並傳回其值。  
   
@@ -43,14 +43,14 @@ unsigned __int64 __readcr0(void);  /* X64 */
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readcr0`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr0`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此內建只適用於核心模式，且此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

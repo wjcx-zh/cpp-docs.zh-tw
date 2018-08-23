@@ -1,5 +1,5 @@
 ---
-title: __outword |Microsoft 文件
+title: __outword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f0e827b16b9743cb6bc7fe6906b4c74c3006864
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d118c26e79a462723f87e76672b2d9b9c1a76cb2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331132"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538605"
 ---
 # <a name="outword"></a>__outword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生`out`指令，傳送文字`Data`輸出所指定的 I/O 連接埠`Port`。  
+ 會產生`out`的指示，將 word`Data`出所指定的 I/O 連接埠`Port`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ void __outword(
   
 #### <a name="parameters"></a>參數  
  [輸入] `Port`  
- 將資料傳送至連接埠。  
+ 若要將資料傳送至連接埠。  
   
  [輸入] `Data`  
  要傳送的資料。  
@@ -49,14 +49,14 @@ void __outword(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__outword`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outword`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

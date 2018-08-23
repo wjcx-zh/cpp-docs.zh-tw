@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wmktemp_s
@@ -41,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed525f44150943496cddde57699035d8b62b6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb4fcd681cc5286d02f0a7b8cb4ff95b8f3dd911
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405220"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573311"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s、_wmktemp_s
 
@@ -79,7 +80,7 @@ errno_t _wmktemp_s(
 檔案名稱模式。
 
 *sizeInChars*<br/>
-中的單一位元組字元的緩衝區大小 **_mktemp_s**; 寬字串中字元 **_wmktemp_s**，包括 null 結束字元。
+在中的單一位元組字元的緩衝區大小 **_mktemp_s**寬字元 **_wmktemp_s**，包括 null 結束字元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -89,15 +90,15 @@ errno_t _wmktemp_s(
 
 |*nameTemplate*|*sizeInChars*|傳回值|中的新值*nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|任何|**EINVAL**|**NULL**|
-|格式不正確 (請參閱 < 備註 > 一節以取得正確的格式)|任何|**EINVAL**|空字串|
-|任何|<= X 的數目|**EINVAL**|空字串|
+|**NULL**|any|**EINVAL**|**NULL**|
+|格式不正確 (請參閱 < 備註 > 一節以取得正確的格式)|any|**EINVAL**|空字串|
+|any|<= X 的數目|**EINVAL**|空字串|
 
-如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，允許執行**errno**設**EINVAL**而且函數會傳回**EINVAL**。
+如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Mktemp_s**函式會建立唯一的檔案名稱，藉由修改*nameTemplate*引數，以便呼叫之後， *nameTemplate*指標會指向字串包含新的檔案名稱。 **_mktemp_s**自動多位元組字元字串引數處理為適當且可辨識由執行階段系統的多位元組字元序列，會根據目前使用中的多位元組字碼頁。 **_wmktemp_s**是寬字元版本的 **_mktemp_s**; 的引數 **_wmktemp_s**是寬字元字串。 **_wmktemp_s**和 **_mktemp_s**除此之外的行為相同，不同處在於 **_wmktemp_s**不會處理多位元組字元字串。
+**_Mktemp_s**函式會建立唯一的檔案名稱，藉由修改*nameTemplate*引數，以便呼叫之後， *nameTemplate*指標會指向字串包含新的檔案名稱。 **_mktemp_s**自動多位元組字元字串引數處理為適當且由執行階段系統辨識多位元組字元序列，根據目前使用中的多位元組字碼頁。 **_wmktemp_s**是寬字元版本的 **_mktemp_s**; 的引數 **_wmktemp_s**是寬字元字串。 **_wmktemp_s**並 **_mktemp_s**行為相同，不同之處在於 **_wmktemp_s**不會處理多位元組字元字串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -105,17 +106,17 @@ errno_t _wmktemp_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-*NameTemplate*引數的形式**baseXXXXXX**，其中*基底*屬於您提供的新檔案名稱，而且每個 X 是預留位置，代表所提供的字元 **_mktemp_s**。 中的每個預留位置字元*nameTemplate*必須是大寫的 x **_mktemp_s**保留*基底*取代第一個尾端 X，以字母字元。 **_mktemp_s**取代下列尾端 x 的五位數的值; 這個值是唯一的數字，識別呼叫處理序中，或在多執行緒程式中，呼叫的執行緒。
+*NameTemplate*引數的形式**baseXXXXXX**，其中*基底*是您所提供的新檔案名稱的一部分，而每個 X 是所提供的字元預留位置 **_mktemp_s**。 每個預留位置字元*nameTemplate*必須是大寫 x。 **_mktemp_s**保留*基底*，並以字母字元取代的第一個後置 X。 **_mktemp_s**取代的後置 x 的五位數的值，這個值是唯一的數字，識別呼叫處理序中，或在多執行緒程式中，呼叫的執行緒。
 
-每次成功呼叫 **_mktemp_s**修改*nameTemplate*。 在每一個後續的呼叫，從相同的程序或具有相同的執行緒*nameTemplate*引數， **_mktemp_s**檢查所傳回的名稱比對的檔案名稱 **_mktemp_s**在先前的呼叫。 如果檔案不存在指定名稱時，請 **_mktemp_s**傳回該名稱。 如果檔案存在，所有先前傳回名稱、 **_mktemp_s**建立的新名稱來取代它的下一個可用小寫字母 'a' 到 'z' 從順序先前傳回名稱中使用的字母字元。 例如，如果*基底*是：
+每次成功呼叫 **_mktemp_s**修改*nameTemplate*。 在每個後續的呼叫，從相同的程序或執行緒具有相同*nameTemplate*引數 **_mktemp_s**檢查所傳回的名稱相符的檔案名稱 **_mktemp_s**在先前的呼叫。 如果檔案不存在指定名稱時，請 **_mktemp_s**傳回該名稱。 如果檔案存在，所有先前傳回的名稱， **_mktemp_s**建立的新名稱來取代它使用於下一個可用的小寫字母，順序，從 'a' 到 'z' 先前傳回的名稱的字母字元。 例如，如果*基底*是：
 
 > **fn**
 
-與所提供的 5 位數值 **_mktemp_s**為 12345，傳回的第一個名稱為：
+與所提供的五位數值 **_mktemp_s**為 12345，傳回的第一個名稱為：
 
 > **fna12345**
 
-如果這個名稱用來建立檔案 FNA12345，而且此檔案是否仍然存在，從相同的程序或具有相同的執行緒呼叫傳回的下一個名稱*基底*如*nameTemplate*是：
+如果此名稱會用來建立檔案 FNA12345，而且此檔案仍然存在，在呼叫傳回相同的程序或執行緒具有相同的下一步 的名稱*基底*for *nameTemplate*是：
 
 > **fnb12345**
 
@@ -123,13 +124,13 @@ errno_t _wmktemp_s(
 
 > **fna12345**
 
-**_mktemp_s**的任何特定組合的 26 唯一的檔案名稱最多可以建立*基底*和*nameTemplate*值。 因此，FNZ12345 是最後一個唯一的檔案名稱 **_mktemp_s**可以建立*基底*和*nameTemplate*用在此範例中的值。
+**_mktemp_s**可以建立最多 26 的唯一檔案名稱，任何給定的組合*基底*並*nameTemplate*值。 因此，FNZ12345 是最後一個唯一的檔案名稱 **_mktemp_s**可以為建立*基底*並*nameTemplate*此範例中使用的值。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> 或 \<wchar.h>|

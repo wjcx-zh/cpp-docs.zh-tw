@@ -1,5 +1,5 @@
 ---
-title: CMFCDesktopAlertDialog 類別 |Microsoft 文件
+title: CMFCDesktopAlertDialog 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 1ea72c42f1c10e8d5cd27537db13c7b7baafef5d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040791"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540780"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 類別
-`CMFCDesktopAlertDialog`類別會搭配[CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)快顯視窗中顯示自訂對話方塊。  
+`CMFCDesktopAlertDialog`類別可搭配使用[CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)快顯視窗中顯示自訂對話方塊。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
 2.  在專案的資源中建立子對話方塊範本。  
   
-3.  呼叫[cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)識別碼的資料庫資源的對話方塊範本和衍生類別的執行階段類別資訊，做為參數的指標。  
+3.  呼叫[cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)的對話方塊範本和衍生類別的執行階段類別資訊，做為參數指向的資源識別碼。  
   
 4.  設計自訂對話方塊以處理來自裝載控制項的所有通知，或設計裝載控制項來直接處理這些通知。  
   

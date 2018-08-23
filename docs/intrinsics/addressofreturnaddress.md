@@ -1,5 +1,5 @@
 ---
-title: _AddressOfReturnAddress |Microsoft 文件
+title: _AddressOfReturnAddress |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326907"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540578"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 提供的保存目前的函式的傳回位址的記憶體位置的位址。 此位址都沒有可用來存取其他記憶體位置 （例如，函式的引數）。  
+ 提供保存目前的函式的傳回位址的記憶體位置的位址。 此位址不可能用來存取其他記憶體位置 （例如，函式的引數）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,12 +40,12 @@ void * _AddressOfReturnAddress();
   
 |內建|架構|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 當`_AddressOfReturnAddress`用於編譯的程式[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函式包含`_AddressOfReturnAddress`呼叫就會編譯為原生函式。 函式編譯為 managed 呼叫函式包含`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能無法如預期般運作。  
+ 當`_AddressOfReturnAddress`會在編譯的程式[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函式包含`_AddressOfReturnAddress`呼叫會編譯為原生函式。 當函式編譯為 managed 呼叫函式包含`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能無法如預期般運作。  
   
  此常式僅可作為內建常式使用。  
   
@@ -81,7 +81,7 @@ int main() {
 00401058  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

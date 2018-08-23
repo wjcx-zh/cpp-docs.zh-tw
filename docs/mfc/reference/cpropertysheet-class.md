@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853200"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539400"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 表示屬性工作表，也稱為索引標籤對話方塊。  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>備註  
  屬性工作表組成`CPropertySheet`物件和一或多個[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件。 架構會顯示屬性工作表，為具有一組索引標籤索引和區域，其中包含目前所選的頁面的視窗。 使用者瀏覽至特定頁面中，使用適當的索引標籤。  
   
- `CPropertySheet` 提供支援展開[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)結構中導入[!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)]和 Windows NT 2000。 此結構包含其他旗標並支援使用 「 浮水印 」 背景點陣圖的成員。  
+ `CPropertySheet` 提供支援展開[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Windows 98 和 Windows NT 2000 中導入的結構。 此結構包含其他旗標並支援使用 「 浮水印 」 背景點陣圖的成員。  
   
  若要在您的屬性工作表物件會自動顯示這些新的映像，請傳入有效值的點陣圖和調色盤映像呼叫[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet).  
   

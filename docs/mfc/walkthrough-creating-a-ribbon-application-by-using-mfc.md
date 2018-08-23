@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21478cdfd96fc32efaa674d7ec4f838e2f6b989b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 7d13503ff19c4c7c132bd100921ff716ca3abca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026889"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538816"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 本逐步解說示範如何使用**MFC 應用程式精靈**建立預設具有功能區的應用程式。 您接著可以藉由新增擴充功能區**自訂**功能區分類**我的最愛**功能區面板]，然後再新增 [一些常用命令的面板。  
   
 ## <a name="prerequisites"></a>必要條件  
- 本逐步解說假設您已設定[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]若要使用**一般開發設定**。 如果您使用不同的設定，在下列指示中所參考的某些使用者介面 (UI) 項目可能不會顯示出來。 如需有關如何變更設定的資訊，請參閱[如何： 重設您的設定](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76)。  
+ 本逐步解說假設您已設定要使用的 Visual Studio**一般開發設定**。 如果您使用不同的設定，在下列指示中所參考的某些使用者介面 (UI) 項目可能不會顯示出來。 如需有關如何變更設定的資訊，請參閱[如何： 重設您的設定](http://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76)。  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>若要建立具有功能區的 MFC 應用程式  
   

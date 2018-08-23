@@ -1,5 +1,5 @@
 ---
-title: 一旦 |Microsoft 文件
+title: 一旦 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3ce387b4b9748c7fb46a419cbc8738e2598c5ab
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912923"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42541740"
 ---
 # <a name="once"></a>once
 指定編譯原始程式碼檔案時，編譯器只能包含 (開啟) 檔案一次。  
@@ -31,26 +31,24 @@ ms.locfileid: "33912923"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma once  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
- 因為編譯器不會在轉譯單元中檔案的第一個 #include 之後開啟及讀取檔案，所以使用 `#pragma once` 可以縮短建置時間。 這指*多個 include 最佳化*。 它有的效果類似於 *#include 防護*慣用語，使用前置處理器巨集定義來防止多次包含檔案的內容。 這也有助於避免違反*一個定義規則*-要求的所有範本、 類型、 函式和物件只能有一個定義您的程式碼中。  
+ 
+善用`#pragma once`可以縮短建置時間，因為編譯器不會開啟和讀取檔案，在第一個之後`#include`的轉譯單位中的檔案。 這指*多個 include 最佳化*。 它有的效果類似於`#include guard`慣用語，使用前置處理器巨集定義來防止多次包含檔案的內容。 這也有助於避免違反*一個定義規則*—，所有的範本、 類型、 函數和物件有不超過一個定義程式碼中的需求。  
   
- 例如:   
+例如:   
   
 ```  
 // header.h  
 #pragma once  
-// Code placed here is included only once per translation unit  
-  
+// Code placed here is included only once per translation unit    
 ```  
   
- 對新程式碼我們建議 `#pragma once` 指示詞，因為它不會干擾全域命名空間與前置處理器符號。 它需要的輸入較少，較不令人分心，而且不會造成符號衝突，不同標頭檔使用相同的前置處理器符號做為防護值時造成的錯誤。 它不是 C++ Standard 的一部分，但它可能由數個常見編譯器實作。  
+對新程式碼我們建議 `#pragma once` 指示詞，因為它不會干擾全域命名空間與前置處理器符號。 它需要的輸入較少，較不令人分心，而且不會造成符號衝突，不同標頭檔使用相同的前置處理器符號做為防護值時造成的錯誤。 它不是 C++ Standard 的一部分，但它可能由數個常見編譯器實作。  
   
- 在同一個檔案中同時使用 #include 防護慣用語和 `#pragma once` 並沒有任何益處。 如果在此慣用語的標準形式之前或之後沒有非註解程式碼或前置處理器指示詞，編譯器會辨識 #include 防護慣用語並以與 `#pragma once` 指示詞的相同方式實作多個 include 最佳化：  
+在同一個檔案中同時使用 #include 防護慣用語和 `#pragma once` 並沒有任何益處。 如果在此慣用語的標準形式之前或之後沒有非註解程式碼或前置處理器指示詞，編譯器會辨識 #include 防護慣用語並以與 `#pragma once` 指示詞的相同方式實作多個 include 最佳化：  
   
 ```  
 // header.h  
@@ -59,13 +57,13 @@ ms.locfileid: "33912923"
 #ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_  
 #define HEADER_H_  
 // Code placed here is included only once per translation unit  
-#endif // HEADER_H_  
-  
+#endif // HEADER_H_    
 ```  
   
- 必須將程式碼移植到不會實作 `#pragma once` 指示詞的編譯器或是當多個 include 最佳化不可能時，我們建議採用 #include 防護慣用語，以維護與現有程式碼的一致性。 在檔案系統別名 include 路徑防止編譯器依正式路徑識別相同 include 檔案的複雜專案中，便可能發生此情況。  
+我們建議`#include guard`慣用語，當程式碼必須是以編譯器不會實作可攜式`#pragma once`指示詞，以維護一致性與現有的程式碼，或當多個 include 最佳化不可能。 在檔案系統別名 include 路徑防止編譯器依正式路徑識別相同 include 檔案的複雜專案中，便可能發生此情況。  
   
- 請注意，不要在設計目的是要併入多次的標頭檔中使用 `#pragma once` 或 #include 防護慣用語，使用前置處理器符號來控制其效果。 如需這項設計的範例，請參閱\<assert.h > 標頭檔。 也請小心管理 include 路徑，以避免建立多個 include 檔案的路徑，如此可以同時戰勝 #include 防護和 `#pragma once` 的多個 include 最佳化。  
+請小心不要使用`#pragma once`或`#include guard`慣用語都是設計成包含許多次，來控制其效果使用前置處理器符號的標頭檔中。 如需這項設計的範例，請參閱\<assert.h> > 標頭檔。 也請小心管理 include 路徑，以避免建立多重路徑包含的檔案，可以打敗多個 include 最佳化，同時`#include guard`s 和`#pragma once`。  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

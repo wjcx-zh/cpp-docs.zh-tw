@@ -1,5 +1,5 @@
 ---
-title: （_e) |Microsoft 文件
+title: （_e) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e6c8ba9fc1b4dff9b1ad947a770ae901937611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ca265bc8a6adc3da747e94ca67cd57749687f21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330941"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539192"
 ---
 # <a name="enable"></a>_enable
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  啟用中斷。  
   
@@ -41,7 +41,7 @@ void _enable(void);
   
 |內建|架構|  
 |---------------|------------------|  
-|`_enable`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_enable`|x86、 x64、 ARM|  
   
  **標頭檔** \<intrin.h >  
   
@@ -50,7 +50,7 @@ void _enable(void);
   
  這個函式只適用於核心模式。 如果在使用者模式中使用，會擲回有權限指令例外狀況。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

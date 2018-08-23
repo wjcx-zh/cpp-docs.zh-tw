@@ -17,44 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9851731635d940b878cf2012c8553773f485559b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9fc4679d9e6d3a4fdfc112d8a8b471ceb2646ecc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017375"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583724"
 ---
 # <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid 方法
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-__forceinline static void FillArrayWithIid(  
-   _Inout_ unsigned long &index,  
-   _In_ IID* iids  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *index*  
- 指標，包含以零為起始的索引值的欄位。  
-  
- *iid*  
- 介面識別碼的陣列。  
-  
-## <a name="remarks"></a>備註  
- 介面 ID 指派為`Base`索引引數所指定的陣列元素。  
-  
- 與此 API 的名稱，只有一個陣列項目遭到修改;不完整的陣列。  
-  
- 如需詳細資訊`Base`，請參閱公用 Typedefs 一節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [InterfaceTraits 結構](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>參數
+
+*index*  
+指標，包含以零為起始的索引值的欄位。
+
+*iid*  
+介面識別碼的陣列。
+
+## <a name="remarks"></a>備註
+
+介面 ID 指派為`Base`索引引數所指定的陣列元素。
+
+與此 API 的名稱，只有一個陣列項目遭到修改;不完整的陣列。
+
+如需詳細資訊`Base`，請參閱公用 Typedefs 一節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[InterfaceTraits 結構](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

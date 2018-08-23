@@ -1,5 +1,5 @@
 ---
-title: CMFCDragFrameImpl 類別 |Microsoft 文件
+title: CMFCDragFrameImpl 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458288ecff0b457205ba1735494ad8106c3feae7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: aee2c58d8763581987fec40b0cb486c67363697b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040944"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540977"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 類別
-`CMFCDragFrameImpl`類別繪製使用者以標準停駐模式拖曳窗格時出現的拖曳矩形。  
-   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+`CMFCDragFrameImpl`類別繪製使用者以標準停駐模式拖曳窗格時，會出現的拖曳矩形。  
+   如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
    
 ## <a name="syntax"></a>語法  
   
@@ -34,9 +34,9 @@ class CMFCDragFrameImpl
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個類別的物件會在每個內嵌[CPane 類別](../../mfc/reference/cpane-class.md)物件。 因此，會使用每個窗格`CanFloat`方法會在使用者拖曳時，會顯示拖曳矩形。  
+ 這個類別的物件在每個內嵌[CPane 類別](../../mfc/reference/cpane-class.md)物件。 因此，會使用每個窗格`CanFloat`方法會在使用者拖曳時，會顯示拖曳矩形。  
   
- 您可以使用來控制拖放到矩形的寬度[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)和[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。  
+ 您可以使用來控制拖放矩形的粗細[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat)並[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  

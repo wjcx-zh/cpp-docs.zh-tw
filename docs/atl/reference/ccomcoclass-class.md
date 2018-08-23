@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026954"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572040"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 這個類別提供方法來建立類別的執行個體，並取得其屬性。  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out]如果建立成功接收的要求的介面指標的指標變數的位址。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT 值。 請參閱[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)在 Windows SDK 中，如需可能的傳回值的描述。  
+ 標準的 HRESULT 值。 請參閱[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)在 Windows SDK 中，如需可能的傳回值的描述。  
   
 ### <a name="remarks"></a>備註  
  用於建立典型的物件; 此函式的第一個多載當您需要彙總所建立的物件時，請使用第二個多載。  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  請注意，介面*Q*必須有與其相關聯，您可以使用擷取的 IID [__uuidof](../../cpp/uuidof-operator.md)運算子。  
   
 ### <a name="example"></a>範例  
- 在下列範例中，`CDocument`精靈產生的 ATL 類別衍生自`CComCoClass`可實`IDocument`介面。 讓用戶端無法建立文件使用的執行個體，將會註冊 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 巨集的物件對應中的類別[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。 `CApplication` 是提供一種方法其中一個自己的 COM 介面，可建立的文件類別的執行個體的 CoClass。 以下程式碼顯示如何輕鬆它建立的文件類別使用的執行個體`CreateInstance`成員繼承自`CComCoClass`基底類別。  
+ 在下列範例中，`CDocument`精靈產生的 ATL 類別衍生自`CComCoClass`可實`IDocument`介面。 讓用戶端無法建立文件使用的執行個體，將會註冊 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 巨集的物件對應中的類別[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。 `CApplication` 是提供一種方法其中一個自己的 COM 介面，可建立的文件類別的執行個體的 CoClass。 以下程式碼顯示如何輕鬆它建立的文件類別使用的執行個體`CreateInstance`成員繼承自`CComCoClass`基底類別。  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

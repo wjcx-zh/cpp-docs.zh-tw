@@ -1,5 +1,5 @@
 ---
-title: _mm_cvtsi64x_ss |Microsoft 文件
+title: _mm_cvtsi64x_ss |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340602"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545763"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]的純量單精確度浮點值轉換的 64 位元整數的擴充的版本 (`cvtsi2ss`) 指令。  
+ 會產生擴充的 x64 版本的純量單精確度浮點值的轉換的 64 位元整數 (`cvtsi2ss`) 指令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +46,7 @@ __m128 _mm_cvtsi64x_ss(
  要轉換成浮點值的 64 位元整數。  
   
 ## <a name="return-value"></a>傳回值  
- `__m128`結構其第一個浮點值轉換的結果。 其他三個值都會複製的相同`a`。  
+ `__m128`結構，其第一個的浮點值是轉換的結果。 其他三個值會複製與`a`。  
   
 ## <a name="requirements"></a>需求  
   
@@ -57,7 +57,7 @@ __m128 _mm_cvtsi64x_ss(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- `__m128`結構代表 xmm 暫存器，因此這個內建的允許值`b`從系統記憶體移入的 XMM 暫存器。  
+ `__m128`結構代表 XMM 暫存器，因此此內建的允許值`b`從系統記憶體，是要移至 XMM 暫存器。  
   
  此常式僅可作為內建常式使用。  
   
@@ -93,7 +93,7 @@ int main()
 54.000000 0.000000 0.000000 0.000000  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__m128](../cpp/m128.md)   

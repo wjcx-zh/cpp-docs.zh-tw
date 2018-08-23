@@ -1,5 +1,5 @@
 ---
-title: 預先定義的規則 |Microsoft 文件
+title: 預先定義的規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a21847bb9363099fa64825b45a90003de053da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52c9440a0320bbc59e5d2552a53e13fae5e29f05
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369756"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572957"
 ---
 # <a name="predefined-rules"></a>預先定義的規則
-預先定義的推斷規則使用 NMAKE 所提供的命令和選項巨集。  
+預先定義的推斷規則會使用 NMAKE 所提供的命令和選項巨集。  
   
-|規則|命令|預設<br /><br /> action|Batch<br /><br /> 規則|Nmake 平台上執行|  
+|規則|命令|預設<br /><br /> action|Batch<br /><br /> 規則|在上執行的平台 nmake|  
 |----------|-------------|------------------------|--------------------|----------------------------|  
 |。 asm.exe|$(AS) $(AFLAGS) $<|ml $<|否|x86|  
 |。 asm.obj|$(AS) $(AFLAGS) /c $<|ml /c $<|是|x86|  
-|。 asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|否|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|。 asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|是|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|。 asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|否|X64|  
+|。 asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|是|X64|  
 |。 c.exe|$(CC) $(CFLAGS) $<|cl $<|no|全部|  
 |。 c.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|是|全部|  
 |。 cc.exe|$(CC) $(CFLAGS) $<|cl $<|no|全部|  

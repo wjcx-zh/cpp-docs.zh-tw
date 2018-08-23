@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce42a1e14e3de77b8ac10c67a8f15b6ee3f080f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1b7cc38d595c6f6ad1aa92e584068ccb852dbbd4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019952"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578684"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 運算子
-指派 （移動） 指定**Mutex**物件與目前**Mutex**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-Mutex& operator=(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *h*  
- 若要為右值參考**Mutex**物件。  
-  
-## <a name="return-value"></a>傳回值  
- 目前的參考**Mutex**物件。  
-  
-## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>另請參閱
- [Mutex 類別](../windows/mutex-class1.md)
+
+指派 （移動） 指定**Mutex**物件與目前**Mutex**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+Mutex& operator=(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*  
+若要為右值參考**Mutex**物件。
+
+## <a name="return-value"></a>傳回值
+
+目前的參考**Mutex**物件。
+
+## <a name="remarks"></a>備註
+
+如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+[Mutex 類別](../windows/mutex-class1.md)

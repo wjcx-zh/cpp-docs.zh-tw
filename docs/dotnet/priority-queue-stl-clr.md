@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 573b365e0ca0d1c5b607144b1d143796e1ce927c
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376033"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571756"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此範本類別描述控制不同長度排序的項目序列的有限存取的物件。 您使用的容器配接器`priority_queue`管理作為優先順序佇列基礎容器。  
@@ -855,7 +855,7 @@ void push(value_type val);
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式插入值的項目`val`到受控制的序列，並重新排序受控制的序列，以維護堆積專業領域。 您可以使用它來將另一個項目新增至佇列。  
+ 此成員函式插入值的項目`val`成受控制的序列，並重新排序受控制的序列，以維護堆積專業領域。 您可以使用它來將另一個項目新增至佇列。  
   
 ### <a name="example"></a>範例  
   

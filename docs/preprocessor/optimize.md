@@ -1,5 +1,5 @@
 ---
-title: 最佳化 |Microsoft 文件
+title: 最佳化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff0e4cc40bfa0e355f348c02f01cb0c7445b596
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8222d909ad23157b4e3ed32a6920abadd77709b6
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849245"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538404"
 ---
 # <a name="optimize"></a>optimize
 指定要依照函式逐一執行的最佳化。  
@@ -31,34 +31,34 @@ ms.locfileid: "33849245"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma optimize( "[optimization-list]", {on | off} )  
 ```  
   
 ## <a name="remarks"></a>備註  
- **最佳化**pragma 必須出現在函式之外，並在第一個顯示該 pragma 後定義的函式生效。 **上**和**關閉**引數開啟選項中指定*最佳化清單*開啟或關閉。  
+
+**最佳化**pragma 必須出現在函式之外，並顯示該 pragma 後定義的第一個函式才會生效。 *上*並*off*引數開啟選項中指定*最佳化清單*開啟或關閉。  
   
- *最佳化清單*可以是零或多個參數下, 表所示。  
+*最佳化清單*可以是零個或多個參數下, 表所示。  
   
 ### <a name="parameters-of-the-optimize-pragma"></a>最佳化 Pragma 的參數  
   
 |參數|最佳化類型|  
 |--------------------|--------------------------|  
-|**g**|啟用全域最佳化。|  
-|**s**或**t**|指定機器碼的短 (short) 序列或快速 (fast) 序列。|  
-|**y**|在程式堆疊上產生框架指標。|  
+|*g*|啟用全域最佳化。|  
+|*s*或*t*|指定機器碼的短 (short) 序列或快速 (fast) 序列。|  
+|*y*|在程式堆疊上產生框架指標。|  
   
- 這些是與所用的相同字母[/O](../build/reference/o-options-optimize-code.md)編譯器選項。 例如，下列 pragma 相當於 **/Os**編譯器選項：  
+這些是與所用的相同字母[/O](../build/reference/o-options-optimize-code.md)編譯器選項。 例如，下列 pragma 相當於 `/Os` 編譯器選項：  
   
 ```  
 #pragma optimize( "ts", on )  
 ```  
   
- 使用**最佳化**pragma 搭配空字串 (**""**) 是一種特殊形式的指示詞：  
+使用**最佳化**pragma 搭配空字串 (**"」**) 是一種特殊形式的指示詞：  
   
- 當您使用**關閉**參數時，會將最佳化，關閉稍早在本主題中，資料表中列出。  
+當您使用*關閉*參數時，會關閉稍早在本主題中，資料表中所列的最佳化。  
   
- 當您使用**上**參數，會重設為最佳化，您指定了與[/O](../build/reference/o-options-optimize-code.md)編譯器選項。  
+當您使用*上*參數，會最佳化重設為指定的[/O](../build/reference/o-options-optimize-code.md)編譯器選項。  
   
 ```  
 #pragma optimize( "", off )  
@@ -69,4 +69,5 @@ ms.locfileid: "33849245"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

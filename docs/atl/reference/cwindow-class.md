@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a725ee9eb8d35ec947d21799c577243223f59ed4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a4f29cefa626928cb87ce7d72904a4b189113f05
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881262"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572809"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 這個類別提供方法，以操作視窗。  
@@ -976,7 +976,7 @@ DWORD GetHotKey() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 虛擬按鍵碼和熱鍵與視窗相關聯的修飾詞。 如需可能的修飾詞的清單，請參閱 < [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) Windows SDK 中。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h。  
+ 虛擬按鍵碼和熱鍵與視窗相關聯的修飾詞。 如需可能的修飾詞的清單，請參閱 < [WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278) Windows SDK 中。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
   
 ##  <a name="geticon"></a>  CWindow::GetIcon  
  擷取視窗的大型或小型圖示的控制代碼。  
@@ -2091,7 +2091,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
   
 ### <a name="parameters"></a>參數  
  *wVirtualKeyCode*  
- [in]熱鍵虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h。  
+ [in]熱鍵虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
   
  *wModifiers*  
  [in]熱鍵修飾詞。 如需可能值的清單，請參閱 WM_SETHOTKEY Windows SDK 中。  

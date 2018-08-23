@@ -1,5 +1,5 @@
 ---
-title: 避免具有多執行緒程式的問題區域 |Microsoft 文件
+title: 避免具有多執行緒程式的問題區域 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4c1ca6a86b2cff457aee12e8337103ce7f42d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686610"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538234"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免具有多執行緒程式的問題區域
-有幾個建立、 連結或執行多執行緒 C 程式中可能會遇到的問題。 下表將說明一些較常見的問題。 (如從 MFC 的觀點的類似討論，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。)  
+有幾個建立、 連結，或執行多執行緒 C 程式中可能會遇到的問題。 下表將說明一些更常見的問題。 (從 MFC 的觀點來看類似的討論，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。)  
   
 |問題|可能的原因|  
 |-------------|--------------------|  
-|您會取得在訊息方塊顯示您的程式造成保護違規。|許多 Win32 程式設計錯誤會造成保護違規。 保護違規的常見原因是間接指派到 null 指標的資料。 因為這會導致您的程式嘗試存取未隸屬於它的記憶體，就會發出保護違規。<br /><br /> 輕鬆地偵測保護違規的原因是編譯您的偵錯資訊的程式，然後將它執行透過 Visual c + + 環境中偵錯工具。 保護錯誤發生時，Windows 會將控制權傳輸至偵錯工具並造成問題的行，資料指標定位。|  
-|您的程式會產生很多的編譯和連結錯誤。|您可以設定其最高值的其中一個編譯器的警告層級和留心警告訊息，以避免許多潛在的問題。 使用層級 3 或層級 4 警告層級的選項，您可以偵測不小心的資料轉換、 遺漏函式原型，並使用非 ANSI 功能。|  
+|您取得在訊息方塊顯示您的程式造成保護違規。|許多 Win32 程式設計錯誤會導致保護違規。 保護違規的常見原因是間接的資料指派給 null 指標。 因為這會導致程式嘗試存取不屬於它的記憶體，就會發出保護違規。<br /><br /> 輕鬆地偵測保護違規的原因是編譯您的程式與偵錯資訊，然後透過在 Visual c + + 環境中偵錯工具中執行它。 保護錯誤發生時，Windows 會將控制權傳輸至偵錯工具和資料指標定位造成該問題的那一行。|  
+|您的程式會產生許多編譯和連結的錯誤。|您可以設定其最高值的其中一個編譯器的警告層級和留心警告訊息，以避免許多潛在的問題。 使用層級 3 或層級 4 警告層級選項，您可以偵測非預期的資料轉換、 遺漏的函式原型，並使用非 ANSI 功能。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)
+
+[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

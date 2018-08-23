@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b2cff8470ad11270d2f40abf3d03c708a9d6e87
+ms.sourcegitcommit: 9035b4df448583c195f54318e941284b632dc308
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407383"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572920"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 存取控制項可讓您區隔[公用](../cpp/public-cpp.md)介面的類別[私人](../cpp/private-cpp.md)實作詳細資料和[保護](../cpp/protected-cpp.md)僅適用於的成員使用在衍生的類別。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。  
@@ -80,28 +80,44 @@ protected:      // Declare protected function for derived classes only.
   
 ```cpp 
 // access_specifiers_for_base_classes.cpp  
-class BaseClass  
-{  
-public:  
-    int PublicFunc();    // Declare a public member.  
-protected:  
+class BaseClass
+{
+public:
+    int PublicFunc(); // Declare a public member.  
+protected:
     int ProtectedFunc(); // Declare a protected member.  
-private:  
-    int PrivateFunc();   // Declare a private member.  
-};  
-  
+private:
+    int PrivateFunc(); // Declare a private member.  
+};
+
 // Declare two classes derived from BaseClass.  
-class DerivedClass1 : public BaseClass  
-{  
-};  
-  
-class DerivedClass2 : private BaseClass  
-{  
-};  
-  
-int main()  
-{  
-}  
+class DerivedClass1 : public BaseClass
+{
+    void foo()
+    {
+        PublicFunc();
+        ProtectedFunc();
+        PrivateFunc(); // function is inaccessible
+    }
+};
+
+class DerivedClass2 : private BaseClass
+{
+    void foo()
+    {
+        PublicFunc();
+        ProtectedFunc();
+        PrivateFunc(); // function is inaccessible
+    }
+};
+
+int main()
+{
+    DerivedClass1 derived_class1;
+    DerivedClass2 derived_class2;
+    derived_class1.PublicFunc();
+    derived_class2.PublicFunc(); // function is inaccessible
+}
 ```  
   
  在 `DerivedClass1` 中，成員函式 `PublicFunc` 是 public 成員，而 `ProtectedFunc` 是 protected 成員，因為 `BaseClass` 是 public 基底類別。 `PrivateFunc` 對 `BaseClass` 而言是 private，且無法存取任何衍生類別。  
@@ -228,5 +244,6 @@ int main()
   
  在圖中，類別 `VBase` 中宣告的名稱一定會透過類別 `RightPath` 進行存取。 正確的路徑會更容易存取，因為 `RightPath` 會將 `VBase` 宣告為公用基底類別，`LeftPath` 則是將 `VBase` 宣告為私用。  
   
+
 ## <a name="see-also"></a>另請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

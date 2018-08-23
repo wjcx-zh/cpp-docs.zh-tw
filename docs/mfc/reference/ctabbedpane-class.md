@@ -1,5 +1,5 @@
 ---
-title: CTabbedPane 類別 |Microsoft 文件
+title: CTabbedPane 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b4bb740f445d65c37d1bee8c1e777dbd8984e1c2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121834"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545760"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 類別
 實作具有可拆式索引標籤之窗格的功能。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ## <a name="syntax"></a>語法  
   
@@ -88,12 +88,12 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>備註  
  當使用者指向第二個窗格的標題，將一個窗格附加到另一個窗格時，架構會自動建立此類別的執行個體。 架構所建立的所有索引標籤式窗格，ID 皆為 -1。  
   
- 若要指定一般索引標籤，而不是 Outlook 樣式索引標籤，將傳遞 AFX_CBRS_REGULAR_TABS 樣式[cdockablepane:: Createex](../../mfc/reference/cdockablepane-class.md#createex)方法。  
+ 若要指定一般索引標籤，而不是 Outlook 樣式索引標籤，將傳遞的 AFX_CBRS_REGULAR_TABS 樣式[cdockablepane:: Createex](../../mfc/reference/cdockablepane-class.md#createex)方法。  
   
  如果您建立具有可卸離索引標籤的索引標籤式窗格，架構可能會自動終結該窗格，因此您不應儲存指標。 若要取得索引標籤式窗格的指標，請呼叫 `CBasePane::GetParentTabbedPane` 方法。  
   
 ## <a name="example"></a>範例  
- 在此範例中，我們會建立 `CTabbedPane` 物件。 接下來，我們使用[cbasetabbedpane:: Addtab](../../mfc/reference/cbasetabbedpane-class.md#addtab)附加額外的索引標籤。  
+ 在此範例中，我們會建立 `CTabbedPane` 物件。 接下來，我們使用[cbasetabbedpane:: Addtab](../../mfc/reference/cbasetabbedpane-class.md#addtab)附加其他索引標籤。  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -193,10 +193,10 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in]*bEnable*  
- True 表示要啟用的索引標籤; 的自動著色否則為 FALSE。  
+ 若要啟用的索引標籤; 的自動著色，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 您可以使用這個靜態方法來啟用或停用應用程式中的所有索引標籤式窗格中的索引標籤的自動著色。 啟用這項功能時，每個索引標籤會依自己的色彩填滿。 您可以找到的用來呼叫色彩索引標籤的色彩清單[CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)方法。  
+ 您可以使用這個靜態方法來啟用或停用在應用程式中的所有索引標籤式窗格中的索引標籤的自動著色。 啟用這項功能時，每個索引標籤會依自己的色彩填滿。 您可以找到用來藉由呼叫色彩索引標籤的色彩清單[CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)方法。  
   
  您可以指定將用於藉由呼叫索引標籤的色彩清單[CTabbedPane::SetTabAutoColors](#settabautocolors)。  
   
@@ -224,7 +224,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
- 傳回索引標籤式視窗的大小和位置的索引標籤區域。  
+ 傳回的大小和位置的索引標籤區域中的索引標籤式視窗。  
   
 ```  
 virtual void GetTabArea(
@@ -234,13 +234,13 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>參數  
  [out]*rectTabAreaTop*  
- 包含的大小和位置，在螢幕座標中的最上層索引標籤區域。  
+ 包含的大小和位置，包括螢幕座標中的最上層索引標籤區域。  
   
  [out]*rectTabAreaBottom*  
- 包含的大小和位置，在螢幕座標中下方的索引標籤區域。  
+ 包含的大小和位置，包括螢幕座標中的底部索引標籤區域。  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，以判斷停駐窗格的使用者正在拖曳的方式。 當使用者拖曳索引標籤區域的 [目標] 窗格的窗格時，架構會嘗試將它新增為新的索引標籤的 [目標] 窗格。 否則，它會嘗試目標窗格中，包括建立新的窗格容器與分隔的兩個窗格的窗格分割線的一端停駐窗格。  
+ 架構會呼叫這個方法，以判斷停駐窗格中的使用者正在拖曳的方式。 當使用者拖曳窗格的 [目標] 窗格的索引標籤區域時，架構會嘗試將它新增為新的索引標籤的 [目標] 窗格。 否則，它會嘗試停駐牽涉到建立新的窗格容器與窗格分割線分隔的兩個窗格的 [目標] 窗格的側邊的窗格。  
   
  覆寫這個方法在`CTabbedPane`-衍生的類別，來變更此行為。  
   
@@ -286,9 +286,9 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>備註  
- 設定要顯示在索引標籤式窗格頂端的應用程式中的這個靜態成員為 true 會強制所有索引標籤。  
+ 若要顯示在索引標籤式窗格的頂端應用程式中設定這個靜態成員，以 true 會強制所有索引標籤。  
   
- 在建立索引標籤式的窗格之前，您必須將此值。  
+ 在建立索引標籤式的窗格之前，您必須設定此值。  
   
  預設值為 FALSE。  
   
@@ -300,7 +300,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```  
   
 ### <a name="remarks"></a>備註  
- 設定此靜態成員變數的執行階段類別資訊指標`CMFCTabCtrl`-衍生物件，如果您使用自訂的索引標籤式的視窗，在索引標籤式窗格內。  
+ 設定此靜態成員變數的執行階段類別資訊指標`CMFCTabCtrl`-衍生物件，如果您使用自訂的索引標籤式的視窗內的索引標籤式窗格。  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  將所有的索引標籤式窗格重設為預設狀態。  
@@ -310,10 +310,10 @@ static void ResetTabs();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以還原成預設狀態的所有索引標籤式的窗格。 呼叫時，這個方法會重設的框線大小和自動色彩狀態的所有索引標籤式窗格。  
+ 呼叫這個方法，以還原為其預設狀態的所有索引標籤式的窗格。 呼叫時，這個方法會重設的框線大小和自動色彩狀態的所有索引標籤式窗格。  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
- 設定在自動套色功能啟用時所使用的自訂色彩的清單。  
+ 設定自動套色功能啟用時，會使用的自訂色彩的清單。  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -324,9 +324,9 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
  包含要設定色彩的陣列。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法來自訂在自動套色功能啟用時，會使用的色彩清單。 這是靜態的函式，而且會影響您的應用程式中的所有索引標籤式的窗格。  
+ 使用這個方法來自訂在自動套色功能啟用時，便會使用的色彩清單。 這是靜態的函式，而且會影響您的應用程式中的所有索引標籤式的窗格。  
   
- 使用[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)啟用或停用在自動套色功能。  
+ 使用[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)啟用或停用自動套色功能。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

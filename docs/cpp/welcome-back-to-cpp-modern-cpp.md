@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462358"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572733"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。 20 多年來，C++ 已經用來解決這類和許多其他的問題。 您可能不知道的是，有越來越多的 C++ 程式設計人員已經捲藏過時的 C-Style 程式設計舊衣，換上了現代 C++ 的新裝。  
@@ -107,7 +107,7 @@ void f()
   
  C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員產能很重要時，像 Java 和 C# 這樣的語言很適用，但是當功能與效能變得至關重要時，這些語言就顯得有所局限。 就高效率和功能而論，尤其是在硬體資源有限的裝置上，所有語言都比不上現代 C++。  
   
- 不僅語言現代，連開發工具也是。 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 穩固且有效率地打造開發週期的所有環節。 這包含 Application Lifecycle Management (ALM) 工具、IDE 增強功能 (例如 IntelliSense)、工具易用的機制 (例如 XAML) 以及建置、偵錯等許多其他工具。  
+ 不僅語言現代，連開發工具也是。 Visual Studio 會在開發週期的所有組件，強固且有效率。 這包含應用程式生命週期管理 (ALM) 工具、IDE 增強功能 (例如 IntelliSense)、工具易用的機制 (例如 XAML) 以及建置、偵錯等許多其他工具。  
   
  本文件中的這篇文章針對撰寫現代 C++ 程式所需的最重要功能及技術，提供了高階方針和最佳作法。  
   

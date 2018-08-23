@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c8bc1962e946a48b6ebebaf072e4cb32559a6de
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e66c6791a55debeb411fd6058d4bbe44cb6637e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014704"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575868"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 方法
 
@@ -35,6 +35,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>參數
+
 *runtimeName*  
 這項作業完成時，執行階段類別名稱。
 
@@ -53,4 +54,5 @@ STDMETHOD( GetRuntimeClassName )(
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
- [SimpleActivationFactory 類別](../windows/simpleactivationfactory-class.md)
+
+[SimpleActivationFactory 類別](../windows/simpleactivationfactory-class.md)

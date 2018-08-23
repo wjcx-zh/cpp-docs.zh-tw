@@ -1,5 +1,5 @@
 ---
-title: 如何： 修改目標 Framework 和平台工具組 |Microsoft 文件
+title: 如何： 修改目標 Framework 和平台工具組 |Microsoft Docs
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371898"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572732"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目標 Framework 和平台工具組
-您可以變更 Visual c + + 專案設定為以不同版本的.NET framework 為目標且使用不同的平台工具組。 根據預設，專案系統會使用對應於建立專案所用 Visual Studio 版本的 .NET Framework 版本及工具組版本。 您可以修改專案屬性來變更目標平台工具組。 您可以修改專案 (.vcxproj) 檔案來變更目標 Framework。 您不必針對每個編譯目標維護一個不同的程式碼基底。  
+您可以變更 Visual c + + 專案設定以不同版本的.NET framework 為目標，以及使用不同的平台工具組。 根據預設，專案系統會使用對應於建立專案所用 Visual Studio 版本的 .NET Framework 版本及工具組版本。 您可以修改專案屬性來變更目標平台工具組。 您可以修改專案 (.vcxproj) 檔案來變更目標 Framework。 您不必針對每個編譯目標維護一個不同的程式碼基底。  
   
 > [!IMPORTANT]
->  部分版本可能不支援修改的目標 Framework 或平台工具組。 相容性資訊，請參閱[連接埠、 移轉和升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)。  
+>  部分版本可能不支援修改的目標 Framework 或平台工具組。 相容性資訊，請參閱[移植、 移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)。  
   
  當您變更目標 Framework 時，也會將平台工具組變更為支援該 Framework 的版本。 例如，若要使用 .NET Framework 4.5，必須使用 Visual Studio 2015 (v140)、Visual Studio 2013 (v120) 或 Visual Studio 2012 (v110) 這些相容的平台工具組。 您可以使用 [ **Windows7.1SDK** ] 平台工具組，將目標設定為 .NET Framework 2.0、3.0、3.5 和 4 以及 x86、Itanium 和 x64 平台。  
   
 > [!NOTE]
 >  若要變更目標平台工具組，您必須已經安裝相關聯的 Visual Studio 版本或 Windows Platform SDK。 例如，若要使用 **Windows7.1SDK** 平台工具組的 Itanium 平台，必須安裝 [適用於 Windows 7 的 Windows SDK及 .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) ；但您可以使用其他相容的 Visual Studio 版本執行開發工作，但前提是要使用正確的 Framework 版本及平台工具組。  
   
- 您可以建立自訂平台工具組進一步擴充目標平台。 如需詳細資訊，請參閱[c + + 原生多目標](http://go.microsoft.com/fwlink/p/?linkid=196619)Visual c + + 部落格上。  
+ 您可以建立自訂平台工具組進一步擴充目標平台。 如需詳細資訊，請參閱 < [c + + 原生多目標](http://go.microsoft.com/fwlink/p/?linkid=196619)Visual c + + 部落格上。  
   
 ### <a name="to-change-the-target-framework"></a>若要變更目標 Framework  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32371898"
   
 3.  在對話方塊的左窗格中，展開 [ **組態屬性** ]，然後選取 [ **一般**]。  
   
-4.  在右窗格中，選取 [ **平台工具組** ]，然後從下拉式清單中選取您想要的工具組。 例如，如果您已安裝 [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] 工具組，請選取 [Visual Studio 2010 (v100)]  以用於您的專案。  
+4.  在右窗格中，選取 [ **平台工具組** ]，然後從下拉式清單中選取您想要的工具組。 比方說，如果您已安裝 Visual Studio 2010 工具組，請選取**Visual Studio 2010 (v100)** 將它用於您的專案。  
   
 5.  選擇 [確定]  按鈕。  
   

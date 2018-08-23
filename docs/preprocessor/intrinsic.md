@@ -1,5 +1,5 @@
 ---
-title: 內建 |Microsoft 文件
+title: 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e908a07253e924fa3cfc0a11cdef57a9253eee00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844786"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545749"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -39,9 +39,9 @@ ms.locfileid: "33844786"
 
 **內建**pragma 會告知編譯器函式具有已知行為。  如果會產生較佳的效能，則編譯器可能會呼叫函式，而不會以內嵌指令取代函式呼叫。
 
-內建形式的程式庫函式如下所列。 一次**內建**pragma，它會在包含指定的內建函式的第一個函式定義的生效。 其作用會持續到原始程式檔的結尾，或是的外觀**函式**pragma 指定相同的內建函式。 **內建**pragma 可以用只在函式定義之外，在全域層級。
+內建形式的程式庫函式如下所列。 一次**內建**pragma，它會在包含指定的內建函式的第一個函式定義的生效。 其作用會持續到原始程式檔的結尾，或是的外觀`function`pragma 指定相同的內建函式。 **內建**pragma 可以用只在函式定義之外，在全域層級。
 
-下列函式具有內建函式的形式，且您指定時使用內建形式[/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+下列函式具有內建函式的形式和您指定時，會使用內建形式[/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -56,11 +56,11 @@ ms.locfileid: "33844786"
 
 **x86 特定**
 
-**_Disable**和 **（_e)** 內建函式產生核心模式指示停用/啟用插斷，而且可能會在核心模式驅動程式中很有用。
+`_disable`和`_enable`內建函式會產生核心模式指示停用/啟用中斷，而且可能會用於核心模式驅動程式。
 
 ### <a name="example"></a>範例
 
-在命令列中使用 "cl -c -FAs sample.c" 編譯下列程式碼並查看 sample.asm，這些指令會變成 x86 指令 CLI 和 STI：
+從命令列使用下列程式碼編譯`cl -c -FAs sample.c`並查看 sample.asm，這些指令變成 x86 指令 CLI 和 STI:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -86,7 +86,7 @@ int main() {
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- 當您指定時，下列浮點函式具有真正的內建形式[/Oi](../build/reference/oi-generate-intrinsic-functions.md)， [/Og](../build/reference/og-global-optimizations.md)，和[/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (或任何選項，其中包含 /Og: [/Ox](../build/reference/ox-full-optimization.md)， [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)，和 /O2):
+ 下列浮點函式具有 true 的內建形式，當您指定[/Oi](../build/reference/oi-generate-intrinsic-functions.md)， [/Og](../build/reference/og-global-optimizations.md)，並[/fp: fast](../build/reference/fp-specify-floating-point-behavior.md) (或任何選項，其中包含 /Og: [/Ox](../build/reference/ox-full-optimization.md)， [/o1](../build/reference/o1-o2-minimize-size-maximize-speed.md)，和/o2):
 
 |||||
 |-|-|-|-|
@@ -94,11 +94,11 @@ int main() {
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-您可以使用[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)或[/Za](../build/reference/za-ze-disable-language-extensions.md)覆寫產生真正的內建浮點選項。 在這種情況下，函式會產生為程式庫常式，將引數直接傳遞至浮點晶片，而不是將引數推送至程式堆疊。
+您可以使用[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)或是[/Za](../build/reference/za-ze-disable-language-extensions.md)覆寫產生真正的內建浮點選項。 在這種情況下，函式會產生為程式庫常式，將引數直接傳遞至浮點晶片，而不是將引數推送至程式堆疊。
 
-請參閱[#pragma 函式](../preprocessor/function-c-cpp.md)資訊以及有關如何啟用/停用內建函式的原始程式文字區塊的範例。
+請參閱[#pragma 函式](../preprocessor/function-c-cpp.md)資訊及如何啟用/停用內建函式的原始程式文字區塊的範例。
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
+[編譯器內建](../intrinsics/compiler-intrinsics.md)  

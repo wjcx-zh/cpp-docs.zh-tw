@@ -1,5 +1,5 @@
 ---
-title: strict_gs_check |Microsoft 文件
+title: strict_gs_check |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842972"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545747"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 這個 pragma 提供增強的安全性檢查。  
@@ -36,16 +36,18 @@ ms.locfileid: "33842972"
 ```  
   
 ## <a name="remarks"></a>備註  
- 指示編譯器在函式堆疊中隨機插入 Cookie，協助偵測部分堆疊型緩衝區滿溢分類。 根據預設，/GS (緩衝區安全性檢查) 編譯器選項不會插入所有函式皆適用的 Cookie。 如需詳細資訊，請參閱 [/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)。  
+ 
+指示編譯器在函式堆疊中隨機插入 Cookie，協助偵測部分堆疊型緩衝區滿溢分類。 根據預設， `/GS` （緩衝區安全性檢查） 編譯器選項不會插入所有函式的 cookie。 如需詳細資訊，請參閱 [/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)。  
   
- 您必須以 /GS (緩衝區安全性檢查) 編譯，才能啟用 strict_gs_check。  
+您必須以編譯`/GS`（緩衝區安全性檢查） 若要啟用**strict_gs_check**。  
   
- 請在可能接觸到有害資料的程式碼模組中使用這個 pragma。 這個 pragma 非常主動，且可套用至可能不需要這個防禦機制的函式，不過這個 pragma 經過最佳化後，可將對所產生應用程式的效能的影響降至最低。  
+請在可能接觸到有害資料的程式碼模組中使用這個 pragma。 這個 pragma 非常主動，且可套用至可能不需要這個防禦機制的函式，不過這個 pragma 經過最佳化後，可將對所產生應用程式的效能的影響降至最低。  
   
- 即使您使用這個 pragma，仍應盡可能撰寫安全的程式碼。 也就是說，請確定您的程式碼已無緩衝區滿溢。 strict_gs_check 可能從不要保留在您的程式碼的緩衝區滿溢保護您的應用程式。  
+即使您使用這個 pragma，仍應盡可能撰寫安全的程式碼。 也就是確定您的程式碼有無緩衝區溢位。 **strict_gs_check**可能會從您的程式碼中的緩衝區滿溢保護您的應用程式。  
   
 ## <a name="example"></a>範例  
- 在下列程式碼中，當我們將陣列複製到本機陣列時，即發生緩衝區滿溢。 當您使用 /GS 編譯此程式碼時，不會在堆疊中插入任何 Cookie，因為陣列資料類型是指標。 新增 strict_gs_check pragma 會強制堆疊 Cookie 插入函式堆疊。  
+ 
+在下列程式碼中，當我們將陣列複製到本機陣列時，即發生緩衝區滿溢。 當您編譯此程式碼與`/GS`，因為陣列資料型別是指標，在堆疊中，會插入任何 cookie。 新增**strict_gs_check** pragma 會強制堆疊 cookie 移動到函式堆疊。  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -70,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)
+ 
+[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)

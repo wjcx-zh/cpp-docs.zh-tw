@@ -1,5 +1,5 @@
 ---
-title: x64 軟體慣例 |Microsoft 文件
+title: x64 軟體慣例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2115b353f269ff59c107737eeb4fdb590ffd71b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 971f1fae3fe2d6733b0819f3a6e88db07612bce7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380884"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572443"
 ---
 # <a name="x64-software-conventions"></a>x64 軟體慣例
-本節將說明呼叫慣例的方法，Visual c + + [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]，x86 的 64 位元延伸架構。  
+本章節描述 Visual c + + 呼叫慣例方法適用於 x64、 x86 的 64 位元延伸模組架構。  
   
 -   [x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32380884"
   
 -   [映像格式](../build/image-format.md)  
   
- 下列編譯器選項可協助您最佳化您的應用程式[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ 下列編譯器選項可協助您最佳化您的應用程式 （x64):  
   
 -   [/favor (專為架構最佳化)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   

@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397349"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571844"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock、_fseeki64_nolock
 
@@ -78,11 +79,11 @@ int _fseeki64_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-與相同[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)分別。
+與相同[fseek](fseek-fseeki64.md)並[_fseeki64](fseek-fseeki64.md)分別。
 
 ## <a name="remarks"></a>備註
 
-這些函式是非鎖定版本[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)分別。 這些是與相同[fseek](fseek-fseeki64.md)和[_fseeki64](fseek-fseeki64.md)不同之處在於它們未受保護的干擾由其他執行緒。 這些函式因為不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+這些函式是非鎖定版本的[fseek](fseek-fseeki64.md)並[_fseeki64](fseek-fseeki64.md)分別。 這些是與相同[fseek](fseek-fseeki64.md)並[_fseeki64](fseek-fseeki64.md)不同之處在於它們不會受到干擾其他執行緒。 這些函式因為不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ## <a name="requirements"></a>需求
 

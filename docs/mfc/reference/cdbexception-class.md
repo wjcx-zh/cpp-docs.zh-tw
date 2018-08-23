@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e45a5c97f0f25ed0bcb704b584de645bce18cb9
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e67dec2474d89e3daccf0bc0e59332c79080cc99
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538416"
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
 表示資料庫類別引發的例外狀況。  
@@ -132,7 +132,7 @@ class CDBException : public CException
 ### <a name="remarks"></a>備註  
  字串為形式 」 狀態: %s，原生: %ld，來源: %s"，其中的格式化程式碼，依序會取代的值，描述：  
   
--   在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](https://msdn.microsoft.com/library/ms714687.aspx)，請在*ODBC 程式設計人員參考*。 範例:"S0022 」。  
+-   在傳回的 SQLSTATE、 null 結束的字串，包含五個字元的錯誤碼*szSqlState*參數的 ODBC 函數`SQLError`。 SQLSTATE 值會列在附錄 A [ODBC 錯誤碼](/previous-versions/windows/desktop/ms714687\(v=vs.85\))，請在*ODBC 程式設計人員參考*。 範例:"S0022 」。  
   
 -   中的原生錯誤特有的程式碼，資料來源，傳回*pfNativeError*參數`SQLError`函式。 範例： 207。  
   
@@ -140,7 +140,7 @@ class CDBException : public CException
   
  架構會將錯誤字串解譯，並將其元件`m_strStateNativeOrigin`; 如果`m_strStateNativeOrigin`包含資訊的多個錯誤，錯誤會以換行符號分隔。 架構對英數字元的錯誤文字`m_strError`。  
   
- 如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](https://msdn.microsoft.com/library/ms716312.aspx)函式中*ODBC 程式設計人員參考*。  
+ 如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\))函式中*ODBC 程式設計人員參考*。  
   
 ### <a name="example"></a>範例  
   從 ODBC: 「 狀態： S0022，原生： 207，來源: [Microsoft] [SQL Server Driver] [SQL Server] 資料行名稱無效 'ColName' 」  

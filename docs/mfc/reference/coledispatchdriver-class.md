@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927ac1c73bee38257396a98a7f7ce1487d0c134d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026941"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541767"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
 實作 OLE Automation 的用戶端。  
@@ -106,7 +106,7 @@ class COleDispatchDriver
  **標頭：** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
- 呼叫 `AttachDispatch` 成員函式可將 `IDispatch` 指標附加至 `COleDispatchDriver` 物件。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 呼叫 `AttachDispatch` 成員函式可將 `IDispatch` 指標附加至 `COleDispatchDriver` 物件。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
   
 ```  
 void AttachDispatch(
@@ -147,17 +147,17 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
  參考到現有`COleDispatchDriver`物件。  
   
 ### <a name="remarks"></a>備註  
- 表單`COleDispatchDriver`( `LPDISPATCH lpDispatch`， **BOOL**`bAutoRelease` = **TRUE**) 連線[IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)介面。  
+ 表單`COleDispatchDriver`( `LPDISPATCH lpDispatch`， **BOOL**`bAutoRelease` = **TRUE**) 連線[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)介面。  
   
  表單`COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) 會複製現有`COleDispatchDriver`物件，並遞增參考計數。  
   
- 表單`COleDispatchDriver`（） 會建立`COleDispatchDriver`物件，但不會連線`IDispatch`介面。 使用之前`COleDispatchDriver`（不含引數），您應該連接`IDispatch`使用其中一個[coledispatchdriver:: Createdispatch](#createdispatch)或是[COleDispatchDriver::AttachDispatch](#attachdispatch)。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 表單`COleDispatchDriver`（） 會建立`COleDispatchDriver`物件，但不會連線`IDispatch`介面。 使用之前`COleDispatchDriver`（不含引數），您應該連接`IDispatch`使用其中一個[coledispatchdriver:: Createdispatch](#createdispatch)或是[COleDispatchDriver::AttachDispatch](#attachdispatch)。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[coledispatchdriver:: Createdispatch](#createdispatch)。  
   
 ##  <a name="createdispatch"></a>  Coledispatchdriver:: Createdispatch  
- 會建立[IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)介面物件並將它附加至`COleDispatchDriver`物件。  
+ 會建立[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)介面物件並將它附加至`COleDispatchDriver`物件。  
   
 ```  
 BOOL CreateDispatch(
@@ -199,7 +199,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="remarks"></a>備註  
  `IDispatch`不釋放。  
   
- 如需 LPDISPATCH 類型的詳細資訊，請參閱[實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)Windows SDK 中。  
+ 如需 LPDISPATCH 類型的詳細資訊，請參閱[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
@@ -244,7 +244,7 @@ void AFX_CDECL InvokeHelper(
  指定所要叫用的屬性或方法。  
   
  *wFlags*  
- 描述要呼叫的內容旗標`IDispatch::Invoke`。 。 如需可能值的清單，請參閱 < *wFlags*中的參數[idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) Windows SDK 中。  
+ 描述要呼叫的內容旗標`IDispatch::Invoke`。 。 如需可能值的清單，請參閱 < *wFlags*中的參數[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中。  
   
  *vtRet*  
  指定傳回值的類型。 如需了解可能的值，請參閱＜備註＞一節。  
@@ -281,9 +281,9 @@ void AFX_CDECL InvokeHelper(
   
  *PbParamInfo*引數是以空格分隔的清單**VTS_** 常數。 其中的一或多個值 (以空格分隔，而非逗號) 會指定函式的參數清單。 可能的值會列[EVENT_CUSTOM](event-maps.md#event_custom)巨集。  
   
- 此函式會將參數轉換為 VARIANTARG 值，然後再叫用[idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx)方法。 若呼叫 `Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回的 SCODE （狀態碼）`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件; 否則會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
+ 此函式會將參數轉換為 VARIANTARG 值，然後再叫用[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 若呼叫 `Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回的 SCODE （狀態碼）`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件; 否則會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
- 如需詳細資訊，請參閱 < [VARIANTARG](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)，[實作 IDispatch 介面](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx)， [idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx)，和[結構 COM 錯誤碼的](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[結構 COM 錯誤碼的](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[coledispatchdriver:: Createdispatch](#createdispatch)。  
@@ -313,7 +313,7 @@ LPDISPATCH m_lpDispatch;
 ### <a name="remarks"></a>備註  
  `m_lpDispatch`資料成員是型別 LPDISPATCH 的公用變數。  
   
- 如需詳細資訊，請參閱 < [IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[COleDispatchDriver::AttachDispatch](#attachdispatch)。  
@@ -340,7 +340,7 @@ operator LPDISPATCH();
  [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
 ##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch  
- 版本`IDispatch`連接。 如需詳細資訊，請參閱[實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)  
+ 版本`IDispatch`連接。 如需詳細資訊，請參閱[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)  
   
 ```  
 void ReleaseDispatch();

@@ -1,5 +1,5 @@
 ---
-title: __assume |Microsoft 文件
+title: __assume |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec83775a007e3a07582f218c5588ae4fe7909b20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340563"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538817"
 ---
 # <a name="assume"></a>__assume
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  傳遞提示給最佳化程式。  
   
@@ -59,7 +59,7 @@ __assume(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__assume`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__assume`|x86、 x64、 ARM|  
   
 ## <a name="example"></a>範例  
   
@@ -118,7 +118,7 @@ int main(int p)
       NODEFAULT;  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

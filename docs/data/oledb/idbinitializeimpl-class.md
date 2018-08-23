@@ -50,15 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 756ced3e2e1eef48023831329751477d07d7cfec
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336484"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572258"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
-提供實作[IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx)介面。  
+提供實作[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
 
@@ -121,7 +121,7 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[idbinitialize:: Initialize](https://msdn.microsoft.com/library/ms718026.aspx)中*OLE DB 程式設計人員參考*。 
+ 請參閱[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
 位置的資料來源物件處於未初始化狀態，釋出內部的資源，例如屬性支援。  
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[Uninitialize](https://msdn.microsoft.com/library/ms719648.aspx)中*OLE DB 程式設計人員參考*。
+ 請參閱[Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
 資料來源的旗標。  

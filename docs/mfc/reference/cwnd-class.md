@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028417"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541048"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 提供 MFC 程式庫中所有視窗類別的基本功能。  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  `DestroyWindow`成員函式也會終結所建立的非強制回應對話方塊[CDialog::Create](../../mfc/reference/cdialog-class.md#create)。  
   
- 如果`CWnd`終結子視窗，而且沒有[WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)樣式集，則[WM_PARENTNOTIFY](https://msdn.microsoft.com/library/ms632638.aspx)訊息傳送至父代。  
+ 如果`CWnd`終結子視窗，而且沒有[WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)樣式集，則[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)訊息傳送至父代。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -6613,7 +6613,7 @@ afx_msg void OnKeyDown(
   
 ### <a name="parameters"></a>參數  
  *NChar*  
- 指定指定的索引鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 指定指定的索引鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *nRepCnt*  
  重複計數 （次按鍵輸入會重複使用者按住按鍵的結果數目）。  
@@ -6655,7 +6655,7 @@ afx_msg void OnKeyUp(
   
 ### <a name="parameters"></a>參數  
  *NChar*  
- 指定指定的索引鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 指定指定的索引鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *nRepCnt*  
  重複計數 （次按鍵輸入會重複使用者按住按鍵的結果數目）。  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- 架構會呼叫此成員函式時的右側或左側的箭號索引鍵使用時切換功能表列和系統功能表。  
+ 使用右或向左鍵切換功能表列和系統功能表時，架構會呼叫此成員函式。  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8561,7 +8561,7 @@ afx_msg void OnSysChar(
 |31|指定轉換狀態。 如果發行的索引鍵時，或如果按下索引鍵為 0，則值為 1。|  
   
 ### <a name="remarks"></a>備註  
- 它會指定控制項功能表鍵的虛擬按鍵碼。 （如標準虛擬按鍵碼的清單，請參閱 winuser.h）  
+ 它會指定控制項功能表鍵的虛擬按鍵碼。 （如需標準虛擬按鍵碼的清單，請參閱 winuser.h）  
   
  內容程式碼為 0 時，可以傳遞 WM_SYSCHAR [WM_SYSCHAR](http://msdn.microsoft.com/library/windows/desktop/ms646357)訊息給[TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 函式，會如同它已正常的按鍵訊息，而不是系統處理它字元索引鍵。 這可讓使用用於作用中視窗，即使使用中視窗並沒有輸入的焦點的快速鍵。  
   
@@ -8694,7 +8694,7 @@ afx_msg void OnSysKeyDown(
   
 ### <a name="parameters"></a>參數  
  *NChar*  
- 指定的索引鍵，按下的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 指定的索引鍵，按下的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *nRepCnt*  
  指定的重複計數。  
@@ -8738,7 +8738,7 @@ afx_msg void OnSysKeyUp(
   
 ### <a name="parameters"></a>參數  
  *NChar*  
- 指定的索引鍵，按下的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 指定的索引鍵，按下的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *nRepCnt*  
  指定的重複計數。  
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- 您可以呼叫以變更指定的視窗及其所有子視窗的使用者介面 (UI) 狀態。  
+ 呼叫以變更指定的視窗及其所有子視窗的使用者介面 (UI) 狀態。  
   
 ```  
 afx_msg void OnUpdateUIState(
@@ -9038,7 +9038,7 @@ afx_msg int OnVKeyToItem(
   
 ### <a name="parameters"></a>參數  
  *nKey*  
- 指定使用者按下的按鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 指定使用者按下的按鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
  *pListBox*  
  指定清單方塊的指標。 該指標可能是暫時性的，因此不應該儲存供日後使用。  

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c681cc5f79d0c9d876da522666565e5a43c8e145
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d758bcc700180781c899f2263fe04c29ee0e6409
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028001"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538622"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 封裝的一般的對話方塊中，開啟檔案或檔案儲存作業所用的。  
@@ -561,7 +561,7 @@ explicit CFileDialog(
   
  *LpszFilter*參數用來判斷檔案必須具有要在檔案清單中顯示的檔案名稱的型別。 字串組中的第一個字串描述的篩選器。第二個字串會指出要使用的副檔名。 可以指定多個延伸模組做為分隔符號使用分號 （';' 字元）。 字串結尾兩個 '&#124;' 個字元，後面接著 NULL 字元。 您也可以使用[CString](../../atl-mfc-shared/using-cstring.md)此參數的物件。  
   
- 比方說，[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]其他項目，可讓使用者開啟檔案延伸模組.xlc （圖表） 或.xls （工作表）。 適用於 Excel 的篩選條件可以寫成：  
+ 例如，Microsoft Excel 可讓使用者開啟延伸模組.xlc （圖表） 或.xls （工作表），以及其他檔案。 適用於 Excel 的篩選條件可以寫成：  
   
  [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]  
   
@@ -1353,7 +1353,7 @@ void SetControlText(
  包含要設定控制項的文字字串的指標。  
   
 ### <a name="remarks"></a>備註  
- 此函式的兩個版本的應用程式，使用 Unicode 的有效值。 不過，只有使用 LPCSTR 類型版本是適用於使用應用程式[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]。  
+ 此函式的兩個版本的應用程式，使用 Unicode 的有效值。 不過，只有使用 LPCSTR 類型版本是適用於使用 ANSI 應用程式。  
   
  若要使用這個方法，您必須建立對話方塊 OFN_EXPLORER 樣式。 否則，函式將會失敗的判斷提示。  
   
@@ -1439,16 +1439,16 @@ void SetTemplate(
  包含非 Explorer 的範本資源的 ID 編號`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
   
  [in]*nWin4ID*  
- [總管] 中包含的範本資源的 ID 編號`CFileDialog`物件。 此範本僅用於[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更新版本、 Windows 95 和更新版本中，或出現 OFN_EXPLORER 樣式時。  
+ [總管] 中包含的範本資源的 ID 編號`CFileDialog`物件。 只有 Windows NT 4.0 和更新版本、 Windows 95 和更新版本中，或有 OFN_EXPLORER 樣式時，會使用此範本。  
   
  [in]*lpWin3ID*  
  包含非 Explorer 的範本資源名稱`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
   
  [in]*lpWin4ID*  
- 包含名稱的 [總管] 中的範本資源`CFileDialog`物件。 此範本僅用於[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更新版本、 Windows 95 和更新版本中，或出現 OFN_EXPLORER 樣式時。  
+ 包含名稱的 [總管] 中的範本資源`CFileDialog`物件。 只有 Windows NT 4.0 和更新版本、 Windows 95 和更新版本中，或有 OFN_EXPLORER 樣式時，會使用此範本。  
   
 ### <a name="remarks"></a>備註  
- 系統會使用其中一個指定的範本。 系統會決定要使用哪個範本根據 OFN_EXPLORER 樣式和作業系統上執行應用程式存在。 藉由指定的非檔案總管 」 和 「 檔案總管樣式範本，就可以輕鬆地支援 Windows NT 3.51[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更新版本中，Windows 95 和更新版本。  
+ 系統會使用其中一個指定的範本。 系統會決定要使用哪個範本根據 OFN_EXPLORER 樣式和作業系統上執行應用程式存在。 藉由指定的非檔案總管 」 和 「 檔案總管樣式範本，很容易就能支援 Windows NT 3.51、 Windows NT 4.0 和更新版本中，和 Windows 95 和更新版本。  
   
 > [!NOTE]
 > Windows Vista 或更新版本的樣式檔案對話方塊不支援此函式。 嘗試在 Windows Vista 或更新版本的樣式檔案 對話方塊中使用此函式會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 替代方法是使用自訂的對話方塊。 如需有關使用自訂`CFileDialog`，請參閱 < [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)。  

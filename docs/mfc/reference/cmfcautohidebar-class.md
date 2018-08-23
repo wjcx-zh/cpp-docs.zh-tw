@@ -48,17 +48,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337009"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541383"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。    
 ## <a name="syntax"></a>語法  
   
 ```  

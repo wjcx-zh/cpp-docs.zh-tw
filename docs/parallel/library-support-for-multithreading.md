@@ -1,5 +1,5 @@
 ---
-title: 程式庫支援多執行緒 |Microsoft 文件
+title: 程式庫支援來進行多執行緒處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b25d506b5364dcbc26d3e32f5b0eb34188b30bd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4f775cbb78ff81ba6f1c2761d7969feabd932bd7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685668"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538408"
 ---
 # <a name="library-support-for-multithreading"></a>多執行緒的程式庫支援
-所有的 CRT 版本現在支援多執行緒處理，但某些函式的非鎖定版本除外。 請參閱[多執行緒程式庫效能](../c-runtime-library/multithreaded-libraries-performance.md)如需詳細資訊。  
+所有版本的 CRT 現在都支援多執行緒處理，但某些函式的非鎖定版本除外。 請參閱[多執行緒程式庫效能](../c-runtime-library/multithreaded-libraries-performance.md)如需詳細資訊。  
   
- 請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)如需有關 CRT 版本。  
+請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)如需 CRT 版本的詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)
+
+[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

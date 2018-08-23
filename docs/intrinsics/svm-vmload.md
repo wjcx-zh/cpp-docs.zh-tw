@@ -1,5 +1,5 @@
 ---
-title: __svm_vmload |Microsoft 文件
+title: __svm_vmload |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cd8164da7be750310f133bb25c17f8cdb21f38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ff94cddb6c286fa651b1ba728238e0d38ab3b17
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335149"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540985"
 ---
 # <a name="svmvmload"></a>__svm_vmload
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  從指定的虛擬機器控制區塊 (VMCB) 中載入處理器狀態的子集。  
   
@@ -44,17 +44,17 @@ void __svm_vmload(
 |[輸入] `VmcbPhysicalAddress`|VMCB 實體位址。|  
   
 ## <a name="remarks"></a>備註  
- `__svm_vmload`函數即相當於`VMLOAD`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
+ `__svm_vmload`函式相當於`VMLOAD`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
   
 ## <a name="requirements"></a>需求  
   
 |內建|架構|  
 |---------------|------------------|  
-|`__svm_vmload`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmload`|x86、x64|  
   
  **標頭檔** \<intrin.h >  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

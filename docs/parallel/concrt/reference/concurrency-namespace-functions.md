@@ -1,5 +1,5 @@
 ---
-title: concurrency 命名空間函式 |Microsoft 文件
+title: concurrency 命名空間函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -41,18 +41,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695219"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42539572"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 ||||  
 |-|-|-|  
 |[配置](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
-|[EnableTracing](#enabletracing)|[可用](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
+|[EnableTracing](#enabletracing)|[免費](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
 |[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|  
@@ -82,7 +82,7 @@ void* __cdecl Alloc(size_t _NumBytes);
  新配置的記憶體指標。  
   
 ### <a name="remarks"></a>備註  
- 哪些應用程式中的案例可能受益於使用快取子配置器的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
+ 了解哪種應用程式中的案例可能受益於使用快取子配置器的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
 ##  <a name="asend"></a>  asend  
  非同步傳送作業，會排程工作將資料傳播到目標區塊。  
@@ -104,16 +104,16 @@ bool asend(
  要傳送的資料類型。  
   
  `_Trg`  
- 指標或參考的資料會傳送的目標。  
+ 指標或參考資料會傳送目標。  
   
  `_Data`  
  傳送資料的參考。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果訊息已接受，則方法會傳回，`false`否則。  
+ `true` 如果方法傳回時之前，已接受訊息`false`否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
 ##  <a name="cancel_current_task"></a>  cancel_current_task  
  取消目前執行的工作。 這個函式可以從工作主體內呼叫，以中止工作執行並導致它進入 `canceled` 狀態。  
@@ -125,7 +125,7 @@ inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
 ##  <a name="clear"></a>  清除  
- 清除並行佇列，破壞任何目前項目加入佇列。 這個方法不是並行安全。  
+ 清除並行佇列，並終結任何目前已加入佇列的項目。 這個方法不是並行安全。  
   
 ```
 template<typename T, class _Ax>
@@ -151,22 +151,22 @@ __declspec(noinline) auto create_async(const _Function& _Func)
  從中建立 Windows 執行階段非同步建構的 Lambda 或函式物件。  
   
 ### <a name="return-value"></a>傳回值  
- 由 IAsyncAction 表示的非同步建構 ^，IAsyncActionWithProgress\<TProgress > ^、 Iasyncoperation<tresult>\<TResult > ^，或 Iasyncoperationwithprogress<tresult\<Iasyncoperationwithprogress<tresult，TProgress > ^。 傳回的介面依賴傳遞至函式的 Lambda 簽章。  
+ 由 IAsyncAction 表示的非同步建構 ^、 IAsyncActionWithProgress\<Tprogress> > ^、 IAsyncOperation\<TResult > ^，或 IAsyncOperationWithProgress\<Iasyncoperationwithprogress<tresult，Tprogress> > ^。 傳回的介面依賴傳遞至函式的 Lambda 簽章。  
   
 ### <a name="remarks"></a>備註  
  Lambda 的傳回型別決定建構是動作或作業。  
   
  傳回 void 的 Lambda 造成動作的建立。 傳回屬於 `TResult` 類型之結果的 Lambda 會造成 TResult 作業的建立。  
   
- Lambda 可能也會傳回 `task<TResult>`，將非同步工作封裝在本身內或是表示非同步工作的工作鏈結的接續作業。 在這種情況下，Lambda 本身是內嵌執行，因為工作是非同步執行的工作，而且 Lambda 的傳回類型會解除包裝以產生 `create_async` 所傳回的非同步建構。 這表示，lambda 會傳回工作\<void > 會造成的動作，並傳回工作的 lambda 建立\<TResult > 會導致 TResult 作業的建立。  
+ Lambda 可能也會傳回 `task<TResult>`，將非同步工作封裝在本身內或是表示非同步工作的工作鏈結的接續作業。 在這種情況下，Lambda 本身是內嵌執行，因為工作是非同步執行的工作，而且 Lambda 的傳回類型會解除包裝以產生 `create_async` 所傳回的非同步建構。 這表示，lambda，傳回的工作\<void > 會造成的動作，並傳回工作的 lambda 建立\<TResult > 會導致 TResult 作業的建立。  
   
- Lambda 可以接受零個、一個或兩個引數。 有效的引數為 `progress_reporter<TProgress>` 和 `cancellation_token`，兩者都使用時依此順序。 沒有引數的 Lambda 會導致建立沒有進度報告功能的非同步建構。 Lambda 採用 progress_reporter\<TProgress > 會導致`create_async`要傳回的非同步建構，它會報告 TProgress 類型的進度，每次`report`呼叫 progress_reporter 物件的方法。 接受 cancellation_token 的 Lambda 可能使用該語彙基元來檢查取消的狀態，或是將語彙基元傳遞給所建立的工作，讓非同步建構的取消導致取消這些工作。  
+ Lambda 可以接受零個、一個或兩個引數。 有效的引數為 `progress_reporter<TProgress>` 和 `cancellation_token`，兩者都使用時依此順序。 沒有引數的 Lambda 會導致建立沒有進度報告功能的非同步建構。 接受 progress_reporter lambda\<Tprogress> > 將會導致`create_async`傳回的非同步建構，它會報告 TProgress 類型的進度，每次`report`呼叫 progress_reporter 物件的方法。 接受 cancellation_token 的 Lambda 可能使用該語彙基元來檢查取消的狀態，或是將語彙基元傳遞給所建立的工作，讓非同步建構的取消導致取消這些工作。  
   
- 如果 lambda 或函式物件的主體傳回結果 (而非\<TResult >)，將會以非同步方式執行 task<tresult>，MTA 的執行階段的工作內容中隱含為其建立處理序內。 `IAsyncInfo::Cancel` 方法會導致取消隱含工作。  
+ 如果 lambda 或函式物件的主體傳回結果 (而非 task\<TResult >)，則會以非同步方式執行的工作執行階段內容中的 MTA 隱含為其建立處理序內。 `IAsyncInfo::Cancel` 方法會導致取消隱含工作。  
   
  如果 Lambda 的主體傳回工作，則 Lambda 會內嵌執行，而且藉由宣告 Lambda 接受屬於類型 `cancellation_token` 的引數，您可以觸發任何工作的取消作業，這些工作是您建立工作時，透過傳入該語彙基元，在 Lambda 建立的。 您也可以在語彙基元使用 `register_callback` 方法，使執行階段在您在非同步作業或產生的動作呼叫 `IAsyncInfo::Cancel` 時叫用回呼。  
   
- 此函式只適用於 Windows 執行階段應用程式。  
+ 此函式只適用於 Windows 執行階段應用程式的選項。  
   
 ##  <a name="createresourcemanager"></a>  CreateResourceManager  
  傳回代表並行執行階段資源管理員單一執行個體的介面。 資源管理員會負責將資源指派給想要與彼此相互合作的排程器。  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  `IResourceManager` 介面。  
   
 ### <a name="remarks"></a>備註  
- 這個方法的多個後續呼叫會傳回相同的資源管理員的執行個體。 每次呼叫該方法會遞增參考計數在資源管理員，且必須符合呼叫[iresourcemanager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成您的排程器與資源管理員進行通訊。  
+ 這個方法的多個後續呼叫會傳回相同的執行個體的 「 資源管理員。 每次呼叫該方法會遞增參考計數在 Resource Manager 中，以及藉由呼叫必須符合[iresourcemanager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成您的排程器通訊使用 Resource Manager。  
   
- [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
+ [unsupported_os](unsupported-os-class.md)如果作業系統不支援並行執行階段會擲回。  
   
 ##  <a name="create_task"></a>  create_task  
- 建立 PPL[工作](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。  
+ 建立 PPL[任務](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。  
   
 ```
 template<typename T>
@@ -201,22 +201,22 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  `_ReturnType`  
  `_Param`  
- 從中要建構工作的參數。 這可能是 lambda 或函式的物件，`task_completion_event`物件、 不同`task`的物件或如果您在 UWP 應用程式中使用工作 Windows::Foundation::IAsyncInfo 介面。  
+ 從中要建構工作的參數。 這可能是 lambda 或函式的物件，`task_completion_event`物件、 不同`task`物件或如果您在 UWP 應用程式中使用工作的 Windows::Foundation::IAsyncInfo 介面。  
   
  `_TaskOptions`  
  `_Task`  
   
 ### <a name="return-value"></a>傳回值  
- 新的工作類型的`T`，也就是從推斷`_Param`。  
+ 新的工作型別的`T`，也就是從推斷`_Param`。  
   
 ### <a name="remarks"></a>備註  
- 第一個多載的行為類似工作建構函式採用單一參數。  
+ 第一個多載的行為類似的工作建構函式的單一參數。  
   
- 第二個多載會將提供與新建立之工作的取消語彙基元。 如果您使用這個多載您不允許將不同`task`物件做為第一個參數。  
+ 第二個多載建立關聯的取消語彙基元提供新建立的工作。 如果您使用這個多載您不允許將不同`task`的第一個參數的物件。  
   
- 傳回工作的類型是從第一個參數推斷函式。 如果`_Param`是`task_completion_event<T>`、 `task<T>`，或函式會傳回其中一個型別`T`或`task<T>`，建立之工作的類型是`task<T>`。  
+ 傳回工作的型別會從第一個參數推斷，函式。 如果`_Param`是`task_completion_event<T>`，則`task<T>`，或傳回其中一種類型的仿函數`T`或`task<T>`，建立之工作的型別是`task<T>`。  
   
- 在 UWP 應用程式中，如果`_Param`的型別 Windows::Foundation::IAsyncOperation\<T > ^ 或 Windows::Foundation::IAsyncOperationWithProgress\<T、 P > ^，或傳回這些型別的函式，建立的工作，都屬於型別`task<T>`。 如果`_Param`的型別 Windows::Foundation::IAsyncAction ^ 或 Windows::Foundation::IAsyncActionWithProgress\<P > ^，或傳回這些型別的函式，建立的工作將會有輸入`task<void>`。  
+ 在 UWP app 中，如果`_Param`別的 Windows::Foundation::IAsyncOperation\<T > ^ 或 windows\<T、 P > ^，或者傳回這些類型的仿函數，會是所建立的工作型別`task<T>`。 如果`_Param`別的 iasyncaction ^ 或 windows\<P > ^，或仿函數會傳回這些類型時，所建立的工作將會有輸入`task<void>`。  
   
 ##  <a name="disabletracing"></a>  DisableTracing  
  停用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已移除註冊而被取代。  
@@ -226,7 +226,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果正確地停用追蹤，`S_OK`傳回。 如果先前未啟始追蹤，則會傳回 `E_NOT_STARTED`  
+ 如果已正確停用追蹤，`S_OK`會傳回。 如果先前未啟始追蹤，則會傳回 `E_NOT_STARTED`  
   
 ##  <a name="enabletracing"></a>  EnableTracing  
  啟用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已開啟而被取代。  
@@ -236,9 +236,9 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果追蹤已正確初始化，請`S_OK`會傳回，否則`E_NOT_STARTED`傳回。  
+ 如果追蹤已正確初始化，請`S_OK`傳回; 否則即為`E_NOT_STARTED`會傳回。  
   
-##  <a name="free"></a>  可用  
+##  <a name="free"></a>  免費  
  釋放先前由 `Alloc` 方法配置的記憶體區塊至並行執行階段的快取子配置器。  
   
 ```
@@ -247,10 +247,10 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
   
 ### <a name="parameters"></a>參數  
  `_PAllocation`  
- 先前所配置的記憶體指標`Alloc`方法，也就是被釋放。 如果參數`_PAllocation`設定為值`NULL`，這個方法會忽略它並立即傳回。  
+ 先前所配置的記憶體指標`Alloc`也就是要釋放的方法。 如果參數`_PAllocation`設定為值`NULL`，這個方法會忽略它，並立即傳回。  
   
 ### <a name="remarks"></a>備註  
- 哪些應用程式中的案例可能受益於使用快取子配置器的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
+ 了解哪種應用程式中的案例可能受益於使用快取子配置器的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
 ##  <a name="get_ambient_scheduler"></a>  get_ambient_scheduler  
   
@@ -271,7 +271,7 @@ unsigned int __cdecl GetExecutionContextId();
  執行內容的唯一識別碼。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法來取得執行內容的識別項，才能傳遞`IExecutionContext`做為任何提供資源管理員的方法參數的介面。  
+ 使用這個方法來取得執行內容的識別碼，才能傳遞`IExecutionContext`介面做為任何一種方法提供透過 Resource Manager 中的參數。  
   
 ##  <a name="getosversion"></a>  GetOSVersion  
  傳回作業系統版本。  
@@ -284,7 +284,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
  列舉的值，表示作業系統。  
   
 ### <a name="remarks"></a>備註  
- [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
+ [unsupported_os](unsupported-os-class.md)如果作業系統不支援並行執行階段會擲回。  
   
 ##  <a name="getprocessorcount"></a>  GetProcessorCount  
  傳回基礎系統上的硬體執行緒數目。  
@@ -297,7 +297,7 @@ unsigned int __cdecl GetProcessorCount();
  硬體執行緒數目。  
   
 ### <a name="remarks"></a>備註  
- [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
+ [unsupported_os](unsupported-os-class.md)如果作業系統不支援並行執行階段會擲回。  
   
 ##  <a name="getprocessornodecount"></a>  GetProcessorNodeCount  
  傳回基礎系統上的 NUMA 節點或處理器套件數目。  
@@ -310,9 +310,9 @@ unsigned int __cdecl GetProcessorNodeCount();
  NUMA 節點或處理器套件數目。  
   
 ### <a name="remarks"></a>備註  
- 如果系統包含多個 NUMA 節點與處理器封裝，傳回 NUMA 節點數目，否則會傳回處理器套件數目。  
+ 如果系統包含多個 NUMA 節點多於處理器封裝，會傳回 NUMA 節點數目，否則會傳回處理器封裝數目。  
   
- [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
+ [unsupported_os](unsupported-os-class.md)如果作業系統不支援並行執行階段會擲回。  
   
 ##  <a name="getschedulerid"></a>  GetSchedulerId  
  傳回可指派給實作 `IScheduler` 介面之排程器的唯一識別碼。  
@@ -325,7 +325,7 @@ unsigned int __cdecl GetSchedulerId();
  排程器的唯一識別碼。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法來取得您的排程器識別項之前先`IScheduler`做為任何提供資源管理員的方法參數的介面。  
+ 使用這個方法來取得您的排程器識別項之前您傳遞`IScheduler`介面做為任何一種方法提供透過 Resource Manager 中的參數。  
   
 ##  <a name="internal_assign_iterators"></a>  internal_assign_iterators  
   
@@ -365,7 +365,7 @@ bool __cdecl is_current_task_group_canceling();
  `true` 正在取消目前正在執行的工作群組，如果`false`否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
+ 如需詳細資訊，請參閱 <<c0> [ 取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
   
 ##  <a name="make_choice"></a>  make_choice  
  從選擇性的 `choice` 或 `Scheduler` 和兩個或多個輸入來源建立 `ScheduleGroup` 傳訊區塊。  
@@ -394,10 +394,10 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
   
 ### <a name="parameters"></a>參數  
  `T1`  
- 第一個來源訊息區塊類型。  
+ 第一個來源的訊息區塊類型。  
   
  `T2`  
- 第二個來源訊息區塊類型。  
+ 第二個來源的訊息區塊類型。  
   
  `_PScheduler`  
  `Scheduler` 物件，在其內會排定 `choice` 傳訊區塊的傳播工作。  
@@ -406,7 +406,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
  第一個來源。  
   
  `_Item2`  
- 第二個來源。  
+ 第二個來源中。  
   
  `_Items`  
  其他來源。  
@@ -444,10 +444,10 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
   
 ### <a name="parameters"></a>參數  
  `T1`  
- 第一個來源訊息區塊類型。  
+ 第一個來源的訊息區塊類型。  
   
  `T2`  
- 第二個來源訊息區塊類型。  
+ 第二個來源的訊息區塊類型。  
   
  `_PScheduler`  
  `Scheduler` 物件，在其內會排定 `multitype_join` 傳訊區塊的傳播工作。  
@@ -456,7 +456,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
  第一個來源。  
   
  `_Item2`  
- 第二個來源。  
+ 第二個來源中。  
   
  `_Items`  
  其他來源。  
@@ -495,10 +495,10 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
   
 ### <a name="parameters"></a>參數  
  `T1`  
- 第一個來源訊息區塊類型。  
+ 第一個來源的訊息區塊類型。  
   
  `T2`  
- 第二個來源訊息區塊類型。  
+ 第二個來源的訊息區塊類型。  
   
  `_PScheduler`  
  `Scheduler` 物件，在其內會排定 `multitype_join` 傳訊區塊的傳播工作。  
@@ -507,7 +507,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
  第一個來源。  
   
  `_Item2`  
- 第二個來源。  
+ 第二個來源中。  
   
  `_Items`  
  其他來源。  
@@ -528,16 +528,16 @@ task_handle<_Function> make_task(const _Function& _Func);
   
 ### <a name="parameters"></a>參數  
  `_Function`  
- 將要叫用以執行該工作所表示的函式物件類型`task_handle`物件。  
+ 將會叫用來執行工作所代表的函式物件的型別`task_handle`物件。  
   
  `_Func`  
- 將要叫用以執行該工作所表示的函式`task_handle`物件。 這可能是 lambda 函式，函式指標，或任何物件的支援版本的函式呼叫運算子與簽章`void operator()()`。  
+ 將會叫用來執行工作所代表的函式`task_handle`物件。 這可能是 lambda 函式，函式的指標，或是任何物件，可支援版本與簽章的函式呼叫運算子`void operator()()`。  
   
 ### <a name="return-value"></a>傳回值  
  `task_handle` 物件。  
   
 ### <a name="remarks"></a>備註  
- 此函式時，您必須建立`task_handle`物件與 lambda 運算式，因為它可讓您建立的物件，而不需要知道的 lambda 函式，則為 true 的類型。  
+ 當您需要建立此功能很有用`task_handle`物件與 lambda 運算式，因為它可讓您建立物件，而不需要知道的 lambda 函式，則為 true 的型別。  
   
 ##  <a name="parallel_buffered_sort"></a>  parallel_buffered_sort  
  將在指定範圍中的項目排列成非遞減順序，或是依據二元述詞指定的順序準則以平行方式排列。 這個函式語意與 `std::sort` 類似：皆是以比較為基礎、不穩定、就地排序的；差別為它需要 `O(n)` 額外的空間，且必須預設初始化需排序的項目。  
@@ -597,7 +597,7 @@ inline void parallel_buffered_sort(
  C + + 標準程式庫相容的記憶體配置器類型。  
   
  `_Function`  
- 二元比較子類型。  
+ 二元比較子的型別。  
   
  `_Begin`  
  隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。  
@@ -606,7 +606,7 @@ inline void parallel_buffered_sort(
  隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。  
   
  `_Alloc`  
- C + + 標準程式庫相容的記憶體配置器的執行個體。  
+ C + + 標準程式庫相容的記憶體配置器執行個體。  
   
  `_Func`  
  使用者定義的述詞函式物件，用來定義順序中後續項目應符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 `true`，不符合時則傳回 `false`。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。  
@@ -615,11 +615,11 @@ inline void parallel_buffered_sort(
  要分割成兩個進行並行執行的最小區塊大小。  
   
 ### <a name="remarks"></a>備註  
- 所有多載必須`n * sizeof(T)`額外的空間，其中`n`是要排序的項目數和`T`的元素類型。 在大部分情況下 parallel_buffered_sort 會透過顯示的效能已提升[parallel_sort](concurrency-namespace-functions.md)，而且您應該使用它透過 parallel_sort 如果您有可用的記憶體。  
+ 所有的多載必須有`n * sizeof(T)`額外的空間，其中`n`是要排序的項目數和`T`是項目類型。 在大部分情況下 parallel_buffered_sort 會透過顯示的效能已提升[parallel_sort](concurrency-namespace-functions.md)，而且您應該使用它透過 parallel_sort 如果您有可用的記憶體。  
   
- 如果您未提供二元比較子`std::less`做為預設，這需要的項目類型，可提供操作員`operator<()`。  
+ 如果您未提供二元比較子`std::less`做為預設值，而這需要的項目類型，可提供運算子`operator<()`。  
   
- 如果您未提供使用配置器類型或執行個體，c + + 標準程式庫的記憶體配置器`std::allocator<T>`用來配置的緩衝區。  
+ 如果您未提供的配置器類型或執行個體，c + + 標準程式庫記憶體配置器`std::allocator<T>`用來配置緩衝區。  
   
  演算法會將輸入範圍分成兩個區塊，接著在將每個區塊分成兩個子區塊以進行平行執行。 選擇性的引數 `_Chunk_size` 可用來對演算法指出，它應該依序處理大小 < `_Chunk_size` 的區塊。  
   
@@ -676,28 +676,28 @@ void parallel_for(
  反覆項目所使用的索引類型。  
   
  `_Function`  
- 每個反覆項目會執行函式的類型。  
+ 將於每個反覆項目上執行的函式的類型。  
   
  `_Partitioner`  
- 用來分割提供的範圍的 partitioner 型別。  
+ 用來分割所提供的範圍 partitioner 的型別。  
   
  `first`  
- 要包含在反覆項目中第一個索引。  
+ 要包含在反覆項目中的第一個索引。  
   
  `last`  
  索引一個過去的反覆項目中包含的最後一個索引。  
   
  `_Step`  
- 值，用來從時，逐步`first`至`last`。 在步驟必須是正數。 [invalid_argument](../../../standard-library/invalid-argument-class.md)的步驟是小於 1，則會擲回。  
+ 值，用來從時跳`first`至`last`。 此步驟必須是正數。 [invalid_argument](../../../standard-library/invalid-argument-class.md)若步驟為小於 1，就會擲回。  
   
  `_Func`  
- 要在每個反覆項目執行的函式。 這可能是 lambda 運算式、 函式指標，或任何物件的支援版本的函式呼叫運算子與簽章`void operator()(_Index_type)`。  
+ 若要在每個反覆項目執行函式。 這可能是 lambda 運算式，函式指標，或是任何物件，可支援版本與簽章的函式呼叫運算子`void operator()(_Index_type)`。  
   
  `_Part`  
- Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_partitioner](simple-partitioner-class.md) `&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)物件，則必須為非 const 左值參考。參考，使演算法可以儲存為未來的迴圈，以重複使用的狀態。  
+ Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_partitioner](simple-partitioner-class.md) `&`或是[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)物件，必須為非 const 左值參考。參考，這樣演算法才能儲存狀態供未來重複使用的迴圈。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
 ##  <a name="parallel_for_each"></a>  parallel_for_each  
  `parallel_for_each` 會平行套用指定的函式到範圍內的每個項目。 在語意上，它相當於 `std` 命名空間中的 `for_each` 函式，但項目的反覆項目會平行執行，而且不會指定反覆項目的順序。 `_Func` 引數必須支援 `operator()(T)` 形式的函式呼叫運算子，其中 `T` 參數是要逐一查看之容器的項目類型。  
@@ -719,30 +719,30 @@ void parallel_for_each(
   
 ### <a name="parameters"></a>參數  
  `_Iterator`  
- 用來反覆查看容器的迭代器類型。  
+ 用來逐一查看之容器的迭代器類型。  
   
  `_Function`  
- 將會套用到每個項目範圍內的函式類型。  
+ 將會套用到每個項目範圍內的函式的類型。  
   
  `_Partitioner`  
  `first`  
- 迭代器定址的第一個項目要包含在平行反覆項目中。  
+ 迭代器，定址的第一個元素的位置包含平行反覆項目中。  
   
  `last`  
- 迭代器定址最後一個項目的後面一個位置包含平行反覆項目中。  
+ 迭代器，定址的後面一個位置，最後一個元素包含平行反覆項目中。  
   
  `_Func`  
- 使用者定義函式物件套用到範圍中每個項目。  
+ 使用者定義函式物件套用至範圍中的每個項目。  
   
  `_Part`  
- Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_partitioner](simple-partitioner-class.md) `&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)物件，則必須為非 const 左值參考。參考，使演算法可以儲存為未來的迴圈，以重複使用的狀態。  
+ Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_partitioner](simple-partitioner-class.md) `&`或是[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)物件，必須為非 const 左值參考。參考，這樣演算法才能儲存狀態供未來重複使用的迴圈。  
   
 ### <a name="remarks"></a>備註  
  [auto_partitioner](auto-partitioner-class.md)將用於不含明確 partitioner 的多載。  
   
- 對於不支援隨機迭代器存取，只[auto_partitioner](auto-partitioner-class.md)支援。  
+ 不支援隨機迭代器存取，只有[auto_partitioner](auto-partitioner-class.md)支援。  
   
- 如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
 ##  <a name="parallel_invoke"></a>  parallel_invoke  
  平行執行提供作為參數的函式物件，並加以封鎖直到完成執行為止。 函式物件可能是 Lambda 運算式、函式指標，或是支援函式呼叫運算子與簽章 `void operator()()` 版本的任何物件。  
@@ -877,31 +877,31 @@ void parallel_invoke(
  若要以平行方式執行的第一個函式物件類型。  
   
  `_Function2`  
- 若要以平行方式執行的第二個函式物件類型。  
+ 若要平行執行的第二個函式物件類型。  
   
  `_Function3`  
- 若要以平行方式執行的第三個函式物件類型。  
+ 若要平行執行的第三個函式物件類型。  
   
  `_Function4`  
- 若要以平行方式執行的第四個函式物件類型。  
+ 若要平行執行的第四個函式物件類型。  
   
  `_Function5`  
- 若要以平行方式執行的第五個函式物件類型。  
+ 若要平行執行的第五個函式物件類型。  
   
  `_Function6`  
- 若要以平行方式執行的第六個函式物件類型。  
+ 若要平行執行的第六個函式物件類型。  
   
  `_Function7`  
- 若要以平行方式執行的第七個函式物件類型。  
+ 若要平行執行的第七個函式物件類型。  
   
  `_Function8`  
- 若要以平行方式執行的第八個函式物件類型。  
+ 若要平行執行的第八個函式物件類型。  
   
  `_Function9`  
- 若要以平行方式執行的第九個函式物件類型。  
+ 若要平行執行的第九個函式物件類型。  
   
  `_Function10`  
- 若要以平行方式執行的第十個函式物件類型。  
+ 若要平行執行的第十個函式物件類型。  
   
  `_Func1`  
  要平行執行的第一個函式物件。  
@@ -934,11 +934,11 @@ void parallel_invoke(
  要平行執行的第十個函式物件。  
   
 ### <a name="remarks"></a>備註  
- 請注意一或多個函式物件提供的參數可能會執行內嵌呼叫端內容上。  
+ 請注意一或多個函式物件提供的參數可能會在呼叫的內容中執行內嵌。  
   
- 如果一或多個函式物件當做參數傳遞給此函式擲回例外狀況，執行階段會選取其選擇的一個這類例外狀況，傳播超出呼叫`parallel_invoke`。  
+ 如果一或多個函式物件當做參數傳遞給此函式擲回例外狀況，執行階段會選取其選擇的一個這類例外狀況，並傳播到呼叫`parallel_invoke`。  
   
- 如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
 ##  <a name="parallel_radixsort"></a>  parallel_radixsort  
  使用基數排序演算法，將指定範圍內的項目排列成非遞減順序。 這是一個穩定的排序函式，其需要可將項目排序成不帶正負號的整數機碼的投影函式。 要排序的項目都必須進行預設初始化。  
@@ -1003,20 +1003,20 @@ inline void parallel_radixsort(
  隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。  
   
  `_Alloc`  
- C + + 標準程式庫相容的記憶體配置器的執行個體。  
+ C + + 標準程式庫相容的記憶體配置器執行個體。  
   
  `_Proj_func`  
- 使用者定義的投影函式物件，將元素轉換成整數的值。  
+ 將項目轉換成整數值的使用者定義的投影函式物件。  
   
  `_Chunk_size`  
  要分割成兩個進行並行執行的最小區塊大小。  
   
 ### <a name="remarks"></a>備註  
- 所有多載必須`n * sizeof(T)`額外的空間，其中`n`是要排序的項目數和`T`的元素類型。 一元投影仿函式的簽章`I _Proj_func(T)`才能傳回索引鍵時指定新項目，其中`T`是項目類型和`I`是不帶正負號的整數式型別。  
+ 所有的多載必須有`n * sizeof(T)`額外的空間，其中`n`是要排序的項目數和`T`是項目類型。 一元投影仿函式簽章`I _Proj_func(T)`才能傳回索引鍵時指定的項目，其中`T`是項目類型和`I`是不帶正負號的整數型別。  
   
- 如果您未提供投影函式，只會傳回元素的預設投影函式用於整數類資料類型。 此函式，將無法編譯如果項目不是整數類型的投影函式不存在。  
+ 如果您未提供投影函式，會將預設投射的函式只會傳回項目用於整數類資料類型。 函式將無法編譯，如果項目不是投影函式沒有整數類資料類型。  
   
- 如果您未提供使用配置器類型或執行個體，c + + 標準程式庫的記憶體配置器`std::allocator<T>`用來配置的緩衝區。  
+ 如果您未提供的配置器類型或執行個體，c + + 標準程式庫記憶體配置器`std::allocator<T>`用來配置緩衝區。  
   
  演算法會將輸入範圍分成兩個區塊，接著在將每個區塊分成兩個子區塊以進行平行執行。 選擇性的引數 `_Chunk_size` 可用來對演算法指出，它應該依序處理大小 < `_Chunk_size` 的區塊。  
   
@@ -1054,40 +1054,40 @@ inline _Reduce_type parallel_reduce(
  輸入範圍的迭代器類型。  
   
  `_Sym_reduce_fun`  
- 對稱的減少函式的類型。 這必須是函式具有類型簽章`_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`_Reduce_type 所在相同的識別類型以及減少的結果型別。 第三個多載，這應該是一致的輸出型別與`_Range_reduce_fun`。  
+ 對稱的減少函式型別。 這必須是函式類型簽章`_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`_Reduce_type 所在相同的識別型別以及縮減的結果型別。 第三個多載而言，這應該是一致的輸出型別與`_Range_reduce_fun`。  
   
  `_Reduce_type`  
- 型別，輸入將會減少，這可能會從輸入項目的型別不同。 識別值與傳回值將會有這種類型。  
+ 類型，輸入將會減少，這可能會從輸入的項目型別不同。 識別值與傳回值將會有這種類型。  
   
  `_Range_reduce_fun`  
- 範圍減少函式的類型。 這必須是函式具有類型簽章`_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`，_Reduce_type 是相同的識別類型以及減少的結果型別。  
+ 範圍縮減函式的類型。 這必須是函式類型簽章`_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`，_Reduce_type 是相同的識別型別以及縮減的結果型別。  
   
  `_Begin`  
- 輸入迭代器定址範圍中的第一個元素會減少。  
+ 輸入迭代器，定址範圍中的第一個元素會減少。  
   
  `_End`  
- 輸入迭代器是降低範圍中的最後一個項目之外的一個位置的項目定址。  
+ 輸入迭代器，定址對象是要縮減的範圍內的最後一個項目之後的一個位置的元素。  
   
  `_Identity`  
- 識別值`_Identity`減少的結果型別相同型別的以及`value_type`的第一個和第二個多載的迭代器。 第三個多載，身分識別值必須具有減少的結果型別相同的型別，但可以不同於`value_type`迭代器。 它必須有適當的值，範圍削減運算子`_Range_fun`，當套用至類型的單一項目範圍`value_type`識別值的行為類似的類型值的型別轉換和`value_type`身分識別類型。  
+ 識別值`_Identity`是減少的結果類型相同的型別以及`value_type`迭代器的第一個和第二個多載。 第三個多載而言，身分識別值必須有縮減的結果類型相同的型別，但可能會不同於`value_type`迭代器。 它必須具有適當的值，範圍削減運算子`_Range_fun`，當套用至各種類型的單一項目`value_type`的識別值的行為類似的類型值的類型轉換和`value_type`的識別型別。  
   
  `_Sym_fun`  
- 將使用中的第二個降低對稱函式。 如需詳細資訊，請參閱 < 備註 >。  
+ 將用於減少的第二個對稱函式。 如需詳細資訊，請參閱 < 備註 >。  
   
  `_Range_fun`  
- 降低的第一個階段，將使用的函式。 如需詳細資訊，請參閱 < 備註 >。  
+ 將用於減少的第一個階段中的函式。 如需詳細資訊，請參閱 < 備註 >。  
   
 ### <a name="return-value"></a>傳回值  
  減少的結果。  
   
 ### <a name="remarks"></a>備註  
- 若要執行的平行降低，函式會將範圍分割成區塊根據基礎排程器的可用工作者數目。 降低發生在兩個階段、 第一個階段中執行每個區塊中, 減少和第二個階段執行每個區塊的部分結果之間減少。  
+ 若要執行平行約化，函式會將範圍分割成區塊 （chunk） 根據基礎排程器可用的背景工作數目。 減少發生在兩個階段中的第一個階段會執行內每個區塊，減少，第二個階段會執行每個區塊的部分結果之間減少。  
   
- 第一個多載的所需的迭代器`value_type`， `T`，是相同的識別值型別，以及減少的結果型別。 項目型別 T 必須提供運算子`T T::operator + (T)`以減少每個區塊中的項目。 在第二個階段使用相同的運算子。  
+ 第一個多載需要的迭代器`value_type`， `T`、 是相同的識別值型別，以及縮減的結果型別。 項目型別 T 必須提供運算子`T T::operator + (T)`以減少每個區塊中的項目。 相同的運算子用在第二個階段。  
   
- 第二個多載也需要的迭代器的`value_type`做為身分識別的實值型別，以及減少的結果型別必須相同。 提供的二進位運算子`_Sym_fun`用於這兩個減少階段中，身分識別值與第一個階段的起始值。  
+ 第二個多載也需要迭代器的`value_type`是相同的識別值型別，以及縮減的結果型別。 提供的二元運算子`_Sym_fun`用於這兩個縮減階段，以做為第一個階段的起始值的識別值。  
   
- 第三個多載中，身分識別值類型必須相同減少的結果型別，但迭代器的`value_type`可能都不同。 範圍減少函式`_Range_fun`做為起始的值，並將二元函式第一個階段中使用的識別值用於`_Sym_reduce_fun`套用至子中的第二個階段的結果。  
+ 第三個多載而言，身分識別的實值型別必須相同，減少的結果型別，但迭代器的`value_type`可能不同於兩者。 範圍減少函式`_Range_fun`會在第一階段中使用的識別值的初始值和二元函式為`_Sym_reduce_fun`套用至子中的第二個階段的結果。  
   
 ##  <a name="parallel_sort"></a>  parallel_sort  
  將在指定範圍中的項目排列成非遞減順序，或是依據二元述詞指定的順序準則以平行方式排列。 這個函式語意與 `std::sort` 類似，皆是以比較為基礎、不穩定、就地排序的。  
@@ -1126,7 +1126,7 @@ inline void parallel_sort(
  要分割成兩個進行並行執行的最小區塊大小。  
   
 ### <a name="remarks"></a>備註  
- 第一個多載會使用二元比較子 `std::less`。  
+ 第一個多載會使用二元比較子`std::less`。  
   
  第二個多載會使用提供的二元比較子，該比較子應具有 `bool _Func(T, T)` 簽章，其中 `T` 是輸入範圍中項目的類型。  
   
@@ -1233,7 +1233,7 @@ _Output_iterator parallel_transform(
  套用至來源範圍中每個項目的使用者定義一元函式物件。  
   
  `_Part`  
- Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_partitioner](simple-partitioner-class.md) `&`或[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)物件，則必須為非 const 左值參考。參考，使演算法可以儲存為未來的迴圈，以重複使用的狀態。  
+ Partitioner 物件的參考。 引數可以是其中一個`const` [auto_partitioner](auto-partitioner-class.md)`&`， `const` [static_partitioner](static-partitioner-class.md)`&`， `const` [simple_partitioner](simple-partitioner-class.md) `&`或是[affinity_partitioner](affinity-partitioner-class.md) `&`如果[affinity_partitioner](affinity-partitioner-class.md)物件，必須為非 const 左值參考。參考，這樣演算法才能儲存狀態供未來重複使用的迴圈。  
   
  `first2`  
  輸入迭代器，用於定址第二個來源範圍中要執行之第一個項目的位置。  
@@ -1247,13 +1247,13 @@ _Output_iterator parallel_transform(
 ### <a name="remarks"></a>備註  
  [auto_partitioner](auto-partitioner-class.md)將用於不含明確 partitioner 引數的多載。  
   
- 對於不支援隨機迭代器存取，只[auto_partitioner](auto-partitioner-class.md)支援。  
+ 不支援隨機迭代器存取，只有[auto_partitioner](auto-partitioner-class.md)支援。  
   
  採用 `_Unary_op` 引數的多載會透過將一元仿函數套用至輸出範圍中的每個項目，將輸入範圍轉換成輸出範圍。 `_Unary_op` 必須支援具有 `operator()(T)` 簽章的函式呼叫運算子，其中 `T` 是反覆查看之範圍的實值類型。  
   
  採用 `_Binary_op` 引數的多載會透過將二元仿函數套用至第一個輸入範圍的某一個項目和第二個輸入範圍的某一個項目，將兩個輸入範圍轉換成輸出範圍。 `_Binary_op` 必須支援具有 `operator()(T, U)` 簽章的函式呼叫運算子，其中 `T`、`U` 為兩個輸入迭代器的實值類型。  
   
- 如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
 ##  <a name="receive"></a>  接收  
  一般接收實作，可讓內容等候來自一個來源的資料，並且篩選所接受的值。  
@@ -1290,18 +1290,18 @@ T receive(
  指標或參考的預期資料的來源。  
   
  `_Timeout`  
- 最大時間，此方法應的資料，以毫秒為單位。  
+ 時間上限，此方法應該是資料，以毫秒為單位。  
   
  `_Filter_proc`  
- 篩選函數用來決定是否應該接受訊息。  
+ 判斷是否應該接受訊息篩選器函式。  
   
 ### <a name="return-value"></a>傳回值  
  來源的裝載類型的值。  
   
 ### <a name="remarks"></a>備註  
- 如果參數`_Timeout`常數以外的值`COOPERATIVE_TIMEOUT_INFINITE`，例外狀況[operation_timed_out](operation-timed-out-class.md)如果指定的時間量到期之前收到訊息時，會擲回。 如果您想為零長度逾時，您應該使用[try_receive](concurrency-namespace-functions.md)函式，而不是呼叫`receive`逾時值為`0`（零），因為它會更有效率，而且不會擲回例外狀況上逾時。  
+ 如果參數`_Timeout`常數以外的值`COOPERATIVE_TIMEOUT_INFINITE`，例外狀況[operation_timed_out](operation-timed-out-class.md)如果指定的時間量到期之前接收到訊息時，會擲回。 如果您想為零長度逾時，您應該使用[try_receive](concurrency-namespace-functions.md)函式，而不是呼叫`receive`逾時值為`0`（零），因為它會更有效率，而且不會擲回例外狀況在逾時。  
   
- 如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
 ##  <a name="run_with_cancellation_token"></a>  run_with_cancellation_token  
  在指定的取消語彙基元內容中立即和同步地執行函式物件。  
@@ -1342,16 +1342,16 @@ bool send(ITarget<T>& _Trg, const T& _Data);
  裝載類型。  
   
  `_Trg`  
- 指標或參考的資料會傳送的目標。  
+ 指標或參考資料會傳送目標。  
   
  `_Data`  
  傳送資料的參考。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果訊息已接受，`false`否則。  
+ `true` 如果已接受訊息，`false`否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
 ##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler  
   
@@ -1389,9 +1389,9 @@ void __cdecl set_task_execution_resources(
  `GROUP_AFFINITY` 元素的陣列。  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況是否存在時，它會叫用，資源管理員和[invalid_argument](../../../standard-library/invalid-argument-class.md)如果親和性在空的集合中指定結果的例外狀況資源。  
+ 方法會擲回[invalid_operation](invalid-operation-class.md) Resource Manager 會出現在叫用時，如果例外狀況並[invalid_argument](../../../standard-library/invalid-argument-class.md)親和性在空的集合指定產生例外狀況資源。  
   
- 採用群組同質性陣列做為參數的方法版本只可在執行 Windows 7 (含) 以上版本的作業系統上使用。 否則， [invalid_operation](invalid-operation-class.md)擲回例外狀況。  
+ 採用群組同質性陣列做為參數的方法版本只可在執行 Windows 7 (含) 以上版本的作業系統上使用。 否則，請[invalid_operation](invalid-operation-class.md)擲回例外狀況。  
   
  在叫用這個方法之後以程式設計的方式修改處理序同質性，並不會造成資源管理員重新評估做為限制的同質性。 因此，對處理序同質性的所有變更都應該在呼叫這個方法之前進行。  
   
@@ -1407,21 +1407,21 @@ inline void swap(
   
 ### <a name="parameters"></a>參數  
  `T`  
- 並行向量中儲存的項目資料類型。  
+ 並行向量中儲存的項目資料型別。  
   
  `_Ax`  
  並行向量的配置器類型。  
   
  `_A`  
- 並行向量，其元素要與並行向量交換`_B`。  
+ 並行向量，其項目利用並行向量來交換`_B`。  
   
  `_B`  
- 並行向量提供待交換，項目或其項目要與並行向量交換的向量`_A`。  
+ 提供要交換之元素的並行向量或其項目是利用並行向量來交換的向量`_A`。  
   
 ### <a name="remarks"></a>備註  
- 樣板函式是演算法特製化的容器類別`concurrent_vector`執行成員函式`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 這是編譯器所執行函式樣板部分排序的執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 樣板函式的一般版本`template <class T> void swap(T&, T&)`，演算法中類別的運作方式是指派和很慢的作業。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+ 範本函式是容器類別特製化的演算法`concurrent_vector`來執行成員函式`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 這是編譯器所執行函式樣板部分排序的執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 範本函式的一般版本`template <class T> void swap(T&, T&)`，演算法中，類別依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
   
- 這個方法不是並行安全。 您必須確定沒有其他執行緒正在執行的並行向量的任何作業，當您呼叫這個方法。  
+ 這個方法不是並行安全。 您必須確定沒有其他執行緒會執行上的並行向量的作業，當您呼叫此方法。  
   
 ##  <a name="task_from_exception"></a>  task_from_exception  
   
@@ -1512,16 +1512,16 @@ bool try_receive(
  指標或參考的預期資料的來源。  
   
  `_value`  
- 結果放置的位置參考。  
+ 存放結果的位置參考。  
   
  `_Filter_proc`  
- 篩選函數用來決定是否應該接受訊息。  
+ 判斷是否應該接受訊息篩選器函式。  
   
 ### <a name="return-value"></a>傳回值  
- A`bool`值，指出是否裝載被放在`_value`。  
+ A`bool`值，指出是否裝載已置於`_value`。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
 ##  <a name="wait"></a>  等候  
  暫停目前的內容達指定的時間長度。  
@@ -1535,7 +1535,7 @@ void __cdecl wait(unsigned int _Milliseconds);
  目前內容應該暫停的毫秒數。 如果 `_Milliseconds` 參數設定為數值 `0`，則目前內容應該會先執行其他可執行的內容，然後再繼續進行。  
   
 ### <a name="remarks"></a>備註  
- 並行執行階段排程器內容上呼叫此方法時，如果排程器會尋找基礎資源上執行不同的內容。 由於排程器是合作性質，因此在指定的毫秒數之後，這個內容不會確實繼續進行。 如果排程器忙於執行其他不能配合排程器的工作，則等候期間可能會是無限期。  
+ 如果並行執行階段排程器內容上呼叫這個方法，排程器就會發現不同的內容，在基礎的資源上執行。 由於排程器是合作性質，因此在指定的毫秒數之後，這個內容不會確實繼續進行。 如果排程器忙於執行其他不能配合排程器的工作，則等候期間可能會是無限期。  
   
 ##  <a name="when_all"></a>  when_all  
  建立工作，這個工作將會在當做引數提供的所有工作都已順利完成時成功完成。  
@@ -1566,11 +1566,11 @@ auto when_all(
  在所有輸入工作都順利完成時會成功完成的工作。 如果輸入工作屬於類型 `T`，此函式的輸出將會是 `task<std::vector<T>>`。 如果輸入工作屬於類型 `void`，則輸出工作也會是 `task<void>`。  
   
 ### <a name="remarks"></a>備註  
- `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，您可以放心在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式呼叫此函式。  
+ `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，安全地在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式中呼叫此函式。  
   
- 如果其中一項工作取消或擲回例外狀況，則傳回的工作會提早完成，已取消的狀態，而且例外狀況，如果其中有發生，會擲回您呼叫[task:: get](task-class.md#get)或`task::wait`於該工作。  
+ 如果其中一項工作已取消或擲回例外狀況，則傳回的工作會提早完成，在已取消狀態中，而且例外狀況，如果有發生，則會擲回您呼叫[task:: get](task-class.md#get)或`task::wait`該工作上。  
   
- 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ##  <a name="when_any"></a>  when_any  
  建立工作，當成引數來提供的任何工作順利完成時，此工作就會順利成功。  
@@ -1615,9 +1615,9 @@ auto when_any(
  一項工作會在所有輸入工作都順利完成時，順利完成。 如果輸入工作的類型為 `T`，則這個函式的輸出會是 `task<std::pair<T, size_t>>>`，其中配對的第一個項目是完成工作的結果，而第二個項目是已完成工作的索引。 如果輸入工作的類型為 `void`，則輸出是 `task<size_t>`，其中結果是完成工作的索引。  
   
 ### <a name="remarks"></a>備註  
- `when_any` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，您可以放心在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式呼叫此函式。  
+ `when_any` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，安全地在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式中呼叫此函式。  
   
- 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

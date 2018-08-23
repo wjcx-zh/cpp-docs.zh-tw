@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496554"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571387"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 c + + 支援
 
@@ -61,7 +61,7 @@ ms.locfileid: "39496554"
 
    第一次執行 Visual Studio 中，您必須使用 Microsoft 帳戶登入。 如果您沒有帳戶，您可以免費建立一個。 您也必須選擇一個佈景主題。 別擔心，您可以將它變更稍後如果您想要。 
 
-   可能需要 Visual Studio 幾分鐘，若要準備使用第一次您執行它。 以下是看起來像是快速縮時攝影外：
+   可能需要 Visual Studio 幾分鐘，您就準備好使用您在執行第一次。 以下是看起來像是快速縮時攝影外：
 
    ![登入的 visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "登入的 Visual Studio 2017")
 

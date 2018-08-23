@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 5b9183f3ae58a7ba6b7746ae27f64ca17eede991
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852519"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541755"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 類別
 實作包含字型清單的下拉式方塊。 您可以在功能區面板上放置下拉式方塊。  
@@ -149,7 +149,7 @@ CMFCRibbonFontComboBox(
  如需有效的字元集，可以指派給*nCharSet*，以及有效的值指派給*nPitchAndFamily*，請參閱[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)中Windows SDK 文件。  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;  

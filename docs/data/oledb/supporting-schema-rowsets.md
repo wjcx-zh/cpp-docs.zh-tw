@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7f5c24623e10de23e42041592eb1b2f417f1ed5b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339701"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573217"
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
-結構描述資料列集可讓取用者，而不需要知道其基礎結構描述取得的資料存放區的相關資訊。 例如，資料存放區可能不有組織成使用者定義階層，所以會有任何方式可以確保在閱讀本文的知道除了結構描述的資料表。 （另一個範例，請注意，Visual c + + 精靈會使用結構描述資料列，在產生取用者的存取子）。若要讓取用者若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作`IDBSchemaRowset`。  
+結構描述資料列集可讓取用者，而不需要知道其基礎結構描述取得的資料存放區的相關資訊。 例如，資料存放區可能不有組織成使用者定義階層，所以會有任何方式可以確保在閱讀本文的知道除了結構描述的資料表。 （另一個範例，請注意，Visual c + + 精靈會使用結構描述資料列，在產生取用者的存取子）。若要讓取用者若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作`IDBSchemaRowset`。  
   
  `IDBSchemaRowsetImpl` 支援下列方法：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "39339701"
 -   在  **C***ShortName***SessionColSchemaRowset**，做為資料表名稱傳遞給`DBID`。  
   
 ## <a name="setting-restrictions"></a>設定限制  
- 結構描述資料列集支援中的重要概念設定限制，您使用執行`SetRestrictions`。 限制允許消費者只擷取相符的資料列 (例如在資料表 "MyTable" 中尋找所有資料行)。 限制是選擇性的，在不支援任何限制的情況下 (預設)，一律會傳回所有資料。 如需支援限制的提供者的範例，請參閱 < [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f)範例。  
+ 結構描述資料列集支援中的重要概念設定限制，您使用執行`SetRestrictions`。 限制允許消費者只擷取相符的資料列 (例如在資料表 "MyTable" 中尋找所有資料行)。 限制是選擇性的，在不支援任何限制的情況下 (預設)，一律會傳回所有資料。 如需支援限制的提供者的範例，請參閱 < [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)範例。  
   
 ## <a name="setting-up-the-schema-map"></a>設定結構描述對應  
  設定在 UpdatePV Session.h 這類結構描述對應：  
@@ -93,7 +93,7 @@ class CUpdateSessionTRSchemaRowset :
   
  請注意，`CUpdateSession`繼承自`IDBSchemaRowsetImpl`，所以它沒有處理常式方法的所有限制。 使用`CSchemaRowsetImpl`，宣告三個 （列於上述的結構描述對應） 的子類別： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 這些子類別的每個都有`Execute`處理個別組的限制 （搜尋條件） 的方法。 每個`Execute`方法會比較的值`cRestrictions`和`rgRestrictions`參數。 請參閱中的這些參數的說明[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。  
   
- 了解哪種限制對應至特定的結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)中*OLE DB 程式設計人員參考*中Windows SDK。  
+ 了解哪種限制對應至特定的結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))中*OLE DB 程式設計人員參考*中Windows SDK。  
   
  例如，如果您支援**TABLE_NAME**限制`DBSCHEMA_TABLES`，您會執行下列動作：  
   

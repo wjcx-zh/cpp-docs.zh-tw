@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339705"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538692"
 ---
 # <a name="cdc-class"></a>CDC 類別
 定義裝置內容物件的類別。  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  要處理的字元字串指標。  
   
  *nCount*  
- 指定字串的長度。 ANSI 版本，它是 BYTE 計數，而且 Unicode 函式的字數統計。 如需詳細資訊，請參閱 < [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)。  
+ 指定字串的長度。 ANSI 版本，它是 BYTE 計數，而且 Unicode 函式的字數統計。 如需詳細資訊，請參閱 < [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)。  
   
  *nMaxExtent*  
  指定最大範圍 （以邏輯單位表示） 來處理字串。 如果處理，則會超出此範圍的字元會被忽略。 任何必要的定序或圖像陣列的計算只適用於包含的字元。 這個參數用在中指定 GCP_MAXEXTENT 值時才*dwFlags*參數。 函式會處理輸入的字串，每個字元和其範圍被加入至輸出、 擴充和其他陣列才在總範圍不超過最大值。 一旦達到限制時，就會停止處理。  
   
  lpResults  
- 指標[GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx)接收結果的函式的結構。  
+ 指標[GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa)接收結果的函式的結構。  
   
  *dwFlags*  
- 指定如何將字串處理成所需的陣列。 這個參數可以是其中一個或多個值中所列*dwFlags*一節[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)主題。  
+ 指定如何將字串處理成所需的陣列。 這個參數可以是其中一個或多個值中所列*dwFlags*一節[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)主題。  
   
  *str*  
  指標[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件可以處理。  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  如果此函式失敗，則傳回值為零。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)、 Windows SDK 中所述。  
+ 此成員函式模擬函式的功能[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)、 Windows SDK 中所述。  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  擷取指定範圍內的連續字元的寬度，從目前的 TrueType 字型。  

@@ -1,7 +1,7 @@
 ---
-title: 連結器選項 |Microsoft 文件
+title: 連結器選項 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
-ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
+ms.openlocfilehash: d514e992b165f7deb5f9354f58fe5a409f52546a
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753626"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571400"
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -40,7 +40,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 
 - [保留字](../../build/reference/reserved-words.md)
 
-在命令列中，連結器選項不區分大小寫。例如 /base 與 /BASE 意義相同。 如需有關如何命令列或在 Visual Studio 中指定每個選項的詳細資訊，請參閱該選項的文件。
+在命令列中，連結器選項不區分大小寫;例如 /base 與 /BASE 意義相同。 如需有關如何命令列或在 Visual Studio 中指定每個選項的詳細資訊，請參閱該選項的文件。
 
 您可以使用 [comment](../../preprocessor/comment-c-cpp.md) pragma，來指定部分連結器選項。
 
@@ -75,7 +75,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|設定開始位址。|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|將內部連結器錯誤報告給 Microsoft。|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|匯出函式。|
-|[/ FILEALIGN](../../build/reference/filealign.md)|將指定值的倍數的輸出檔案內區段的對齊。|
+|[/FILEALIGN](../../build/reference/filealign.md)|將在指定的值的倍數與輸出檔案內區段的對齊。|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|建立僅可在其慣用基底位址載入的程式。|
 |[/FORCE](../../build/reference/force-force-file-output.md)|強制連結完成，即使存在未解析的符號或符號定義多次也一樣。|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|建立可熱修補的映像檔。|
@@ -97,7 +97,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)|指定連結時產生程式碼。|
 |[/MACHINE](../../build/reference/machine-specify-target-platform.md)|指定目標平台。|
 |[/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)|建立並存資訊清單檔，並選擇性地將其內嵌於二進位檔中。|
-|[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)|指定\<y > 區段中的資訊清單檔。|
+|[/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md)|指定\<dependentAssembly > 一節中的資訊清單檔案。|
 |[/MANIFESTFILE](../../build/reference/manifestfile-name-manifest-file.md)|變更資訊清單檔的預設名稱。|
 |[/MANIFESTINPUT](../../build/reference/manifestinput-specify-manifest-input.md)|指定連結器的資訊清單輸入檔，以在二進位檔中處理並內嵌於二進位檔中。 您可以多次使用此選項，以指定多個資訊清單輸入檔。|
 |[/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)|指定使用者帳戶控制 (UAC) 資訊是否內嵌於程式資訊清單中。|
@@ -105,7 +105,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|在對應檔中包括指定的資訊。|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|結合區段。|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|指定 MIDL 命令列選項。|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Natvis 檔案中將 PDB 偵錯工具視覺化檢視。|
+|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|從.natvis 檔案加入 PDB 偵錯工具視覺化檢視。|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|不建立 .NET Framework 組件。|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|當解析外部參考時，忽略所有 (或指定的) 預設程式庫。|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|建立僅含資源的 DLL。|
@@ -118,11 +118,12 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|使用替代位置儲存 PDB 檔。|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|建立沒有專用符號的程式資料庫 (PDB) 檔。|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|指定 .pgd 檔用於特性指引最佳化。|
-|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**過時**建立具備執行緒安全 PGO 檢測建置。|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**過時**建立安全執行緒 PGO 檢測建置。|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|產生可與效能工具分析工具搭配使用的輸出檔。|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|在 .exe 標頭中設定總和檢查。|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|指定映像檔將包含安全例外狀況處理常式的表格。|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|覆寫區段的屬性。|
+|[/ SOURCELINK](../../build/reference/sourcelink.md)|指定要加入 PDB SourceLink 檔案。|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|設定堆疊的大小 (以位元組為單位)。|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|將 MS-DOS Stub 程式附加至 Win32 程式。|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|告知作業系統如何執行 .exe 檔。|
@@ -130,10 +131,10 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|指定連結器產生類型程式庫的資源 ID。|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|指定 .tlb 檔案和其他 MIDL 輸出檔的名稱。|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|建立專門設計用來在終端伺服器下執行的應用程式。|
-|[/USEPROFILE](../../build/reference/useprofile.md)|使用特性指引最佳化定型資料來建立最佳化的映像。|
+|[/USEPROFILE](../../build/reference/useprofile.md)|若要建立最佳化的映像的使用特性指引最佳化定型資料。|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|列印連結器進度訊息。|
 |[/VERSION](../../build/reference/version-version-information.md)|指派版本號碼。|
-|[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含從指定的靜態程式庫的每個物件檔案。|
+|[/WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含從指定的靜態程式庫的每個物件檔案。|
 |[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)|啟用 Windows 執行階段中繼資料檔的產生。|
 |[/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md)|指定由 [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) 連結器選項所產生之 Windows 執行階段中繼資料 (winmd) 輸出檔的名稱。|
 |[/WINMDKEYFILE](../../build/reference/winmdkeyfile-specify-winmd-key-file.md)|指定用於簽署 Windows 執行階段中繼資料的金鑰或金鑰組。|

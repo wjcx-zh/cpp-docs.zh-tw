@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4114 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4114 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283919"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541764"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>編譯器警告 （層級 1） C4114
 相同類型的限定詞已經使用多次  
   
- 型別宣告或定義使用類型限定詞 (**const**， `volatile`，**簽署**，或`unsigned`) 一次以上。 這會導致警告，以搭配 Microsoft 擴充功能 (/Ze) 而在 ANSI 相容性 (/Za) 錯誤。  
+ 類型宣告或定義使用類型限定詞 (**const**， **volatile**，**簽署**，或**不帶正負號**) 一次以上。 這會導致警告，以搭配 Microsoft 擴充功能 (/Ze) 與 ANSI 相容性 (/Za) 時發生。  
   
  下列範例會產生 C4114:  
   

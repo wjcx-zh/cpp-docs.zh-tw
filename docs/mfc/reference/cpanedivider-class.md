@@ -1,5 +1,5 @@
 ---
-title: CPaneDivider 類別 |Microsoft 文件
+title: CPaneDivider 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079360"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540773"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider 類別
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
   
- `CPaneDivider`類別分隔兩個窗格，會將兩個窗格的群組或分隔窗格從主框架視窗工作區的群組。  
+ `CPaneDivider`類別分隔兩個窗格、 將兩個群組的窗格，或分隔窗格的主框架視窗工作區的群組。  
   
 ## <a name="syntax"></a>語法  
   
@@ -163,27 +163,27 @@ class CPaneDivider : public CBasePane
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|傳回清單的窗格位於[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 這個方法應該呼叫只會針對預設窗格分割線。|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|傳回清單中的窗格分割線[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 這個方法應該呼叫只會針對預設窗格分割線。|  
+|[CPaneDivider::GetPanes](#getpanes)|傳回位於的窗格的清單[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 只會針對預設窗格分割線，就應該呼叫這個方法。|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|傳回清單中的窗格分割線[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 只會針對預設窗格分割線，就應該呼叫這個方法。|  
   
 ### <a name="data-members"></a>資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|指定的預設寬度，單位為像素的應用程式中的所有窗格分割線。|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|指定像素為單位的應用程式中的所有窗格分割線的預設寬度。|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|執行階段類別資訊指標會保留有關`CPaneDivider`-衍生物件。|  
   
 ## <a name="remarks"></a>備註  
- 架構會建立`CPaneDivider`停駐窗格時自動物件。  
+ 此架構會建立`CPaneDivider`停駐窗格時自動物件。  
   
  有兩種類型的窗格分割線：  
   
--   當一群窗格停駐於主框架視窗的一邊，會建立預設窗格分割線。 預設的窗格分割線保存指向[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)並將重新導向的群組窗格上的大部分作業 (例如調整大小 窗格中，或另一個停駐窗格或容器) 容器管理員。 每個停駐窗格會維持其預設窗格分割線的指標。  
+-   群組窗格停駐於主框架視窗的側邊時，會建立預設的窗格分割線。 預設的窗格分割線保存的指標[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)並將重新導向的群組 窗格上的大部分作業 (例如調整大小的窗格中，或另一個停駐窗格或容器) 容器管理員。 每個停駐窗格會保留其預設的窗格分割線指標。  
   
--   規則的窗格分割線，只會將容器中的兩個窗格。 如需詳細資訊，請參閱[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。  
+-   一般的窗格分割線，只會在容器中的兩個窗格。 如需詳細資訊，請參閱 < [CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從 `CWorkspaceBar` 物件取得 `CPaneDivider` 物件。 此程式碼片段是部分[MDI 索引標籤示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何從 `CWorkspaceBar` 物件取得 `CPaneDivider` 物件。 此程式碼片段是一部分[MDI 索引標籤示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]  
   
@@ -354,7 +354,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  [in]*dwStyleEx*  
- [in]*dwStyle*  
+ [in]*cheaderctrl:: Create*  
  [in]*rect*  
  [in]*pParentWnd*  
  [in]*nID*  
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- 傳回清單中的窗格分割線[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 這個方法應該呼叫只會針對預設窗格分割線。  
+ 傳回清單中的窗格分割線[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 只會針對預設窗格分割線，就應該呼叫這個方法。  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -448,10 +448,10 @@ void GetPaneDividers(CObList& lstSliders);
   
 ### <a name="parameters"></a>參數  
  [out]*lstSliders*  
- 包含容器 窗格中的窗格分割線的清單。  
+ 包含清單的窗格中的容器中的窗格分割線。  
   
 ### <a name="remarks"></a>備註  
- 針對 預設窗格分割線，就應該呼叫這個方法。 預設的窗格分割線是整個窗格容器調整大小的分割線。  
+ 針對 預設窗格分割線，就應該呼叫這個方法。 預設的窗格分割線是調整大小的窗格中整個容器的分割線。  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- 傳回清單的窗格位於[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 這個方法應該呼叫只是用來擷取預設窗格分割線。  
+ 傳回位於的窗格的清單[CPaneContainer 類別](../../mfc/reference/cpanecontainer-class.md)。 應該呼叫這個方法，只是用來擷取預設窗格分割線。  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -473,10 +473,10 @@ void GetPanes(CObList& lstBars);
   
 ### <a name="parameters"></a>參數  
  [out]*lstBars*  
- 包含容器 窗格中的窗格的清單。  
+ 包含清單的窗格中的容器中的窗格。  
   
 ### <a name="remarks"></a>備註  
- 針對 預設窗格分割線，就應該呼叫這個方法。 預設的窗格分割線是整個窗格容器調整大小的分割線。  
+ 針對 預設窗格分割線，就應該呼叫這個方法。 預設的窗格分割線是調整大小的窗格中整個容器的分割線。  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -570,7 +570,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth  
- 指定的預設寬度，以像素的應用程式中的所有窗格分割線。  
+ 指定的預設寬度，單位為像素的應用程式中的所有窗格分割線。  
   
 ```  
 AFX_IMPORT_DATA static int m_nDefaultWidth;  
@@ -599,7 +599,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果您建立自訂的窗格分割線，請設定此成員變數。 這可讓架構繪製窗格時，建立您的窗格分割線。  
+ 如果您建立自訂的窗格分割線，請設定這個成員變數。 這可讓架構，來建立您的窗格分割線，繪製窗格時。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何設定`m_pSliderRTC`成員變數：  

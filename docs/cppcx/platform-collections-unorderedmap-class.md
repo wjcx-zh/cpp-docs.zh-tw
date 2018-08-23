@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::UnorderedMap 類別 |Microsoft 文件
+title: Platform::Collections::UnorderedMap 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092327"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612714"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -58,9 +58,9 @@ ref class Map sealed;
 
 - 公用列舉類別
 
-**UnorderedMap**基本上是包裝函式[std:: unordered_map](../standard-library/unordered-map-class.md)支援的 Windows 執行階段類型的儲存體。 它是具象實作[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)和[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)類型跨公用傳遞 Windows 執行階段介面。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::UnorderedMap` 類型，則會引發編譯器錯誤 C3986。 您可以修正這個錯誤的參數或傳回值的型別變更[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
+**UnorderedMap**基本上是包裝函式[std:: unordered_map](../standard-library/unordered-map-class.md)可支援 Windows 執行階段類型的儲存體。 它是具象實作[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)並[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)類型跨公用傳遞 Windows 執行階段介面。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::UnorderedMap` 類型，則會引發編譯器錯誤 C3986。 您可以修正這個錯誤，藉由變更參數或傳回值的型別[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
 
-如需詳細資訊，請參閱[集合](../cppcx/collections-c-cx.md)。
+如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap:: First 方法
 
-傳回指定第一個迭代器[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)未排序對應中的項目。
+傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) unorderedmap 中的項目。
 
 ### <a name="syntax"></a>語法
 
@@ -128,11 +128,11 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myUnorderedMap->First();`。
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myUnorderedMap->First();`。
 
 ## <a name="getview"></a>  Unorderedmap:: Getview 方法
 
-傳回目前 UnorderedMap 的唯讀檢視也就是說， [Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)實作[Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)介面。
+傳回目前 UnorderedMap 的唯讀檢視亦即[Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)會實作 [Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) 介面。
 
 ### <a name="syntax"></a>語法
 
@@ -188,7 +188,7 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>傳回值
 
-`true` 如果目前 Map 中現有項目的機碼符合*金鑰*，而且該項目的值部分設定為*值*。 `false` 如果目前 Map 中的沒有任何現有項目符合*金鑰*和*金鑰*和*值*參數會成為索引鍵-值組，而且接著加入目前 UnorderedMap。
+`true` 如果目前 Map 中現有項目的索引鍵符合*金鑰*，而且該元素的值部分設定為*值*。 `false` 如果目前 Map 中的任何現有項目不符合*金鑰*並*金鑰*並*值*參數會使其成為的索引鍵 / 值組，而且接著加入目前 UnorderedMap。
 
 ## <a name="lookup"></a>  Unorderedmap:: Lookup 方法
 
@@ -209,7 +209,7 @@ V Lookup(
 
 ### <a name="return-value"></a>傳回值
 
-配對的值*金鑰*。 傳回值的類型為 typename *V*。
+值，會搭配*金鑰*。 傳回值的類型為 typename *V*。
 
 ## <a name="mapchanged"></a>  UnorderedMap::MapChanged
 
@@ -223,11 +223,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-A [Mapchangedeventhandler<k\<K，V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx)包含引發事件，以及類型的發生變更之物件的相關資訊。 另請參閱[IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)和[CollectionChange 列舉](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)並[CollectionChange 列舉](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
-Windows 執行階段應用程式使用 C# 或 Visual Basic 專案 Imap<k\<K，V > 做為 Idictionary<k\<K，V >。
+Windows 執行階段應用程式使用 C# 或 Visual Basic 專案 Imap<k\<K，V > 做為 idictionary<k，V>\<K，V >。
 
 ## <a name="remove"></a>  Unorderedmap:: Remove 方法
 
@@ -350,13 +350,13 @@ UnorderedMap(
 目前 UnorderedMap 的 typename。
 
 *P*  
-可比較兩個機碼以判斷它們是否相等的函式物件。 這個參數預設值為[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
+可比較兩個機碼以判斷它們是否相等的函式物件。 此參數的預設值[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
 
 *H*  
-可為機碼產生雜湊值的函式物件。 這個參數預設值為[雜湊類別 1](../standard-library/hash-class.md)的機碼類型的類別支援。
+可為機碼產生雜湊值的函式物件。 此參數的預設值[雜湊類別 1](../standard-library/hash-class.md)類別的索引鍵類型，支援。
 
 *m*  
-參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)至[std:: unordered_map](../standard-library/unordered-map-class.md)用來初始化目前 UnorderedMap。
+參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: unordered_map](../standard-library/unordered-map-class.md)用來初始化目前 UnorderedMap。
 
 *il* A [std:: initializer_list](../standard-library/initializer-list-class.md)的[std:: pair](../standard-library/pair-structure.md)用來初始化對應的物件。
 

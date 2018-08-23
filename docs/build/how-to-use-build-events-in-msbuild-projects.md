@@ -1,5 +1,5 @@
 ---
-title: 如何： 在 MSBuild 專案中使用建置事件 |Microsoft 文件
+title: 如何： 在 MSBuild 專案中使用建置事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369769"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613052"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
-建置事件是一個命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]執行建置流程中的特定階段。 *建置前*建置開始前，就會發生事件;*連結前*連結步驟開始; 之前發生的事件和*建置後*組建之後發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。  
+建置事件是在建置流程中的特定階段中執行 MSBuild 的命令。 *建置前*在建置開始前，就會發生事件，而*連結前*連結步驟開始; 之前發生的事件和*建置後*建置之後所發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。  
   
- 每個組建的三個事件由在項目定義群組 command 元素 (`<Command>`) 執行和訊息項目 (`<Message>`) 也就是顯示時**MSBuild**執行建置事件。 每個項目是選擇性，而且如果您多次指定相同的項目，最後一個出現項目會優先使用。  
+ 每三個建置事件命令項目所表示的項目定義群組中 (`<Command>`) 時要執行的和訊息項目 (`<Message>`) 也就是顯示何時**MSBuild**執行建置事件。 是選擇性的每個項目，如果您多次指定相同的項目，最後一個相符項目會優先使用。  
   
- 選擇性*在組建中使用*元素 (`<`* 建置-事件 ***UseInBuild**`>`) 可以指定屬性群組，以指出是否要執行建置事件。 內容的值*在組建中使用*項目是`true`或`false`。 根據預設，建置事件執行，除非其對應*在組建中使用*元素設定為`false`。  
+ 選擇性*使用內建*項目 (`<`* 建置-事件 ***UseInBuild**`>`) 可以指定表示是否要執行建置事件屬性群組中。 內容的值*使用內建*項目是`true`或`false`。 根據預設，建置事件時執行，除非其相對應*使用內建*元素設定為`false`。  
   
  下表列出每個組建事件 XML 項目：  
   
@@ -36,18 +36,18 @@ ms.locfileid: "32369769"
 |-----------------|-----------------|  
 |`PreBuildEvent`|在建置開始之前，就會執行此事件。|  
 |`PreLinkEvent`|連結步驟開始之前，就會執行此事件。|  
-|`PostBuildEvent`|組建完成後，就會執行此事件。|  
+|`PostBuildEvent`|建置完成之後，就會執行此事件。|  
   
- 下表列出每個*在組建中使用*項目：  
+ 下表列出每個*使用內建*項目：  
   
 |XML 項目|描述|  
 |-----------------|-----------------|  
 |`PreBuildEventUseInBuild`|指定是否要執行*建置前*事件。|  
 |`PreLinkEventUseInBuild`|指定是否要執行*連結前*事件。|  
-|`PostBuildEventUseInBuild`|指定是否要執行*建置後*事件。|  
+|`PostBuildEventUseInBuild`|指定是否要執行*post-build*事件。|  
   
 ## <a name="example"></a>範例  
- 下列範例可以 myproject.vcxproj 檔案中建立的專案項目內加入[逐步解說： 使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件進行的 main.cpp;*連結前*事件可讓一 main.obj; 的複本及*建置後*事件會建立一份 myproject.exe。 如果使用發行組態建置專案時，會執行建置事件。 如果使用的偵錯組態建置專案時，不會執行建置事件。  
+ 下列範例可以 myproject.vcxproj 檔案中建立的專案項目內新增[逐步解說： 使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件會的 main.cpp;*連結前*main.obj; 的複本和 「 事件 」 可讓*建置後*事件會建立一份 myproject.exe。 如果使用發行組態來建置專案時，會執行建置事件。 如果使用的偵錯組態來建置專案時，不會執行建置事件。  
   
 ```  
 <ItemDefinitionGroup>  

@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a2ed2393f25dac416cf3b6dfd1b178190d368a6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647098"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613228"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface 方法
-擷取指定之介面的指標。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   QueryInterface  
-)(REFIID riid, _Deref_out_ void **ppvObject);  
-```  
-  
-### <a name="parameters"></a>參數  
- *riid*  
- 介面識別碼。  
-  
- *ppvObject*  
- 這項作業完成後，參數所指定之介面指標*riid*。  
-  
-## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ActivationFactory 類別](../windows/activationfactory-class.md)
+
+擷取指定之介面的指標。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>參數
+
+*riid*  
+介面識別碼。
+
+*ppvObject*  
+這項作業完成後，參數所指定之介面指標*riid*。
+
+## <a name="return-value"></a>傳回值
+
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ActivationFactory 類別](../windows/activationfactory-class.md)

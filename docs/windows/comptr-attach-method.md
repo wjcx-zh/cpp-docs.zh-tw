@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f02d8585778dcb10013a5673c7443b0355535555
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641326"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600192"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 方法
-將這**ComPtr**與目前的範本類型參數所指定的介面類型。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-void Attach(  
-   _In_opt_ InterfaceType* other  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *other*  
- 介面型別。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ComPtr 類別](../windows/comptr-class.md)
+
+將這**ComPtr**與目前的範本類型參數所指定的介面類型。
+
+## <a name="syntax"></a>語法
+
+```cpp
+void Attach(
+   _In_opt_ InterfaceType* other
+);
+```
+
+### <a name="parameters"></a>參數
+
+*other*  
+介面型別。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ComPtr 類別](../windows/comptr-class.md)

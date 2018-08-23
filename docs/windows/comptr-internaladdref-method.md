@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30cba8b29ad6100826f580dd625bc18e2b8f9e16
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7d9217a91b6b6ceda3a0743f94186dc52cbb7f80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641287"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613346"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef 方法
-與此相關聯的介面的參考計數遞增**ComPtr**。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-void InternalAddRef() const;  
-```  
-  
-## <a name="remarks"></a>備註  
- 這個方法受到保護。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ComPtr 類別](../windows/comptr-class.md)
+
+與此相關聯的介面的參考計數遞增**ComPtr**。
+
+## <a name="syntax"></a>語法
+
+```cpp
+void InternalAddRef() const;
+```
+
+## <a name="remarks"></a>備註
+
+這個方法受到保護。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ComPtr 類別](../windows/comptr-class.md)

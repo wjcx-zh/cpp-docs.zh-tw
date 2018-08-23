@@ -17,42 +17,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1dcb5b187944e58ff24f312fa376ff71e2cf63f3
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018633"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600869"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 方法
-等到目前的物件，或**Mutex**與指定的控制代碼、 mutex 或指定的逾時間隔經過的版本相關聯的物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-SyncLock Lock(  
-   DWORD milliseconds = INFINITE  
-);  
-  
-static SyncLock Lock(  
-   HANDLE h,  
-   DWORD milliseconds = INFINITE  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *（毫秒)*  
- 逾時間隔，以毫秒為單位。 預設值為 INFINITE，這個會無限期等待。  
-  
- *h*  
- 控制代碼**Mutex**物件。  
-  
-## <a name="return-value"></a>傳回值  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>另請參閱
- [Mutex 類別](../windows/mutex-class1.md)
+
+等到目前的物件，或**Mutex**與指定的控制代碼、 mutex 或指定的逾時間隔經過的版本相關聯的物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>參數
+
+*（毫秒)*  
+逾時間隔，以毫秒為單位。 預設值為 INFINITE，這個會無限期等待。
+
+*h*  
+控制代碼**Mutex**物件。
+
+## <a name="return-value"></a>傳回值
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+[Mutex 類別](../windows/mutex-class1.md)

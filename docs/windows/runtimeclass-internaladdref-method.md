@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 925ebb50c571c37d5137a24539429d75469a5f9b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e0d2b6d41598195b2615e4d6b4a8585d1ca1cf2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010743"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599721"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef 方法
-目前的參考計數遞增**RuntimeClass**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-ULONG InternalAddRef();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 產生的參考計數。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [RuntimeClass 類別](../windows/runtimeclass-class.md)
+
+目前的參考計數遞增**RuntimeClass**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+ULONG InternalAddRef();
+```
+
+## <a name="return-value"></a>傳回值
+
+產生的參考計數。
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[RuntimeClass 類別](../windows/runtimeclass-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::BackInsertIterator 類別 |Microsoft 文件
+title: Platform::Collections::BackInsertIterator 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0be32b550cd0e19facb127ca6a052b03ef1eaf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c0678dbb78aaa115c0c4f3120a8bc0d74bf1c65
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090014"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612620"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 類別
 代表將元素插入 (而不是覆寫) 序列集合後端的迭代器。  

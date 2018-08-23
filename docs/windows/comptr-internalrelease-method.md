@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30be6015fec0f210f0b1f70502881f2ce2c3b54b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0ba3e4b916556ebe83303228cfa9a056780962e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644313"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612923"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease 方法
-執行與此相關聯的介面上的 COM 釋放作業**ComPtr**。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-void InternalRelease();  
-```  
-  
-## <a name="remarks"></a>備註  
- 這個方法受到保護。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ComPtr 類別](../windows/comptr-class.md)
+
+執行與此相關聯的介面上的 COM 釋放作業**ComPtr**。
+
+## <a name="syntax"></a>語法
+
+```cpp
+void InternalRelease();
+```
+
+## <a name="remarks"></a>備註
+
+這個方法受到保護。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ComPtr 類別](../windows/comptr-class.md)

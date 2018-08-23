@@ -17,237 +17,240 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea378f75f100bce02cd486139fb0aac5ea5a5ff
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 57450abdef0a6b25731405e092520ec5589972a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648629"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613731"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
-呼叫目前相關聯的每個事件處理常式[EventSource](../windows/eventsource-class.md)物件使用指定的引數型別和引數。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-void InvokeAll();  
-template <  
-   typename T0  
->  
-void InvokeAll(  
-   T0arg0  
-);  
-template <  
-   typename T0,  
-   typename T1  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7,  
-   typename T8  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7,  
-   T8arg8  
-);  
-template <  
-   typename T0,  
-   typename T1,  
-   typename T2,  
-   typename T3,  
-   typename T4,  
-   typename T5,  
-   typename T6,  
-   typename T7,  
-   typename T8,  
-   typename T9  
->  
-void InvokeAll(  
-   T0arg0,  
-   T1arg1,  
-   T2arg2,  
-   T3arg3,  
-   T4arg4,  
-   T5arg5,  
-   T6arg6,  
-   T7arg7,  
-   T8arg8,  
-   T9arg9  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *T0*  
- 第零個事件處理常式的引數的類型。  
-  
- *T1*  
- 第一個事件處理常式引數型別。  
-  
- *T2*  
- 第二個事件處理常式引數的型別。  
-  
- *T3*  
- 第三個事件處理常式引數的型別。  
-  
- *T4*  
- 第四個事件處理常式引數的型別。  
-  
- *T5*  
- 第五個事件處理常式引數的型別。  
-  
- *T6*  
- 第六個事件處理常式引數的型別。  
-  
- *T7*  
- 第七個事件處理常式引數的型別。  
-  
- *T8*  
- 第八個事件處理常式的引數的類型。  
-  
- *T9*  
- 第九個事件處理常式引數的型別。  
-  
- *arg0*  
- 第零個事件處理常式引數。  
-  
- *arg1*  
- 第一個事件處理常式引數。  
-  
- *Arg2*  
- 第二個事件處理常式引數。  
-  
- *arg3*  
- 第三個事件處理常式引數。  
-  
- *arg4*  
- 第四個事件處理常式引數。  
-  
- *arg5*  
- 第五個事件處理常式引數。  
-  
- *arg6*  
- 第六個事件處理常式引數。  
-  
- *arg7*  
- 第七個事件處理常式引數。  
-  
- *arg8*  
- 第八個事件處理常式引數。  
-  
- *arg9*  
- 第九個事件處理常式引數。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** event.h  
-  
- **命名空間：** Microsoft::WRL
- 
- ## <a name="see-also"></a>另請參閱
- [EventSource 類別](../windows/eventsource-class.md)
+
+呼叫目前相關聯的每個事件處理常式[EventSource](../windows/eventsource-class.md)物件使用指定的引數型別和引數。
+
+## <a name="syntax"></a>語法
+
+```cpp
+void InvokeAll();
+template <
+   typename T0
+>
+void InvokeAll(
+   T0arg0
+);
+template <
+   typename T0,
+   typename T1
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8,
+   typename T9
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8,
+   T9arg9
+);
+```
+
+### <a name="parameters"></a>參數
+
+*T0*  
+第零個事件處理常式的引數的類型。
+
+*T1*  
+第一個事件處理常式引數型別。
+
+*T2*  
+第二個事件處理常式引數的型別。
+
+*T3*  
+第三個事件處理常式引數的型別。
+
+*T4*  
+第四個事件處理常式引數的型別。
+
+*T5*  
+第五個事件處理常式引數的型別。
+
+*T6*  
+第六個事件處理常式引數的型別。
+
+*T7*  
+第七個事件處理常式引數的型別。
+
+*T8*  
+第八個事件處理常式的引數的類型。
+
+*T9*  
+第九個事件處理常式引數的型別。
+
+*arg0*  
+第零個事件處理常式引數。
+
+*arg1*  
+第一個事件處理常式引數。
+
+*Arg2*  
+第二個事件處理常式引數。
+
+*arg3*  
+第三個事件處理常式引數。
+
+*arg4*  
+第四個事件處理常式引數。
+
+*arg5*  
+第五個事件處理常式引數。
+
+*arg6*  
+第六個事件處理常式引數。
+
+*arg7*  
+第七個事件處理常式引數。
+
+*arg8*  
+第八個事件處理常式引數。
+
+*arg9*  
+第九個事件處理常式引數。
+
+## <a name="requirements"></a>需求
+
+**標頭：** event.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+[EventSource 類別](../windows/eventsource-class.md)

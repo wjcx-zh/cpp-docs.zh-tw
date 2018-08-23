@@ -17,53 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b057ef891a00829fd64d967ffa860a66d6d49d5d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ff446c22706fbcac8b14c8cb69df9a4163663c02
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012338"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599929"
 ---
 # <a name="v1enum"></a>v1_enum
-指示指定的列舉型別會傳輸為 32 位元的實體，而不是 16 位元的預設值。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[v1_enum]  
-```  
-  
-## <a name="remarks"></a>備註  
- **V1_enum** c + + 屬性具有相同的功能[v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 下列程式碼範例將示範用法**v1_enum**:  
-  
-```cpp  
-// cpp_attr_ref_v1_enum.cpp  
-// compile with: /LD  
-[module(name="MyLibrary")];  
-  
-[export, v1_enum]   
-enum eList {   
-   e1 = 1,   
-   e2 = 2  
-};  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|列舉型別|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+指示指定的列舉型別會傳輸為 32 位元的實體，而不是 16 位元的預設值。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[v1_enum]
+```
+
+## <a name="remarks"></a>備註
+
+**V1_enum** c + + 屬性具有相同的功能[v1_enum](http://msdn.microsoft.com/library/windows/desktop/aa367303) MIDL 屬性。
+
+## <a name="example"></a>範例
+
+下列程式碼範例將示範用法**v1_enum**:
+
+```cpp
+// cpp_attr_ref_v1_enum.cpp
+// compile with: /LD
+[module(name="MyLibrary")];
+
+[export, v1_enum]
+enum eList {
+   e1 = 1,
+   e2 = 2
+};
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|列舉型別|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  

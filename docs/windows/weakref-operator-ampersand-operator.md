@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 125ffe998e7c3f225f72e3fb47df4ef3525c37f9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: f8bb81ca1591fc398b1d0814fca918309169e82c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649044"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600980"
 ---
 # <a name="weakrefoperatoramp-operator"></a>Weakref::&amp;運算子
-傳回`ComPtrRef`物件，表示目前**WeakRef**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
+
+傳回`ComPtrRef`物件，表示目前**WeakRef**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()  
-```  
-  
-## <a name="return-value"></a>傳回值  
- A`ComPtrRef`物件，表示目前**WeakRef**物件。  
-  
-## <a name="remarks"></a>備註  
- 這是不適合用於您的程式碼中的內部 helper 運算子。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [WeakRef 類別](../windows/weakref-class.md)
+```
+
+## <a name="return-value"></a>傳回值
+
+A`ComPtrRef`物件，表示目前**WeakRef**物件。
+
+## <a name="remarks"></a>備註
+
+這是不適合用於您的程式碼中的內部 helper 運算子。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[WeakRef 類別](../windows/weakref-class.md)

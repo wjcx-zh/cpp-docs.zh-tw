@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 58f8ac0383e2aeed2f042da7d4968e6b19a36d68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605427"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600169"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-刪除目前**releasenotifier**物件如果物件以參數的建構 **，則為 true**。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-void Release() throw();  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)
+
+刪除目前**releasenotifier**物件如果物件以參數的建構 **，則為 true**。
+
+## <a name="syntax"></a>語法
+
+```cpp
+void Release() throw();
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)

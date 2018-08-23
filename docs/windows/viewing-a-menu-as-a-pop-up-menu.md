@@ -16,28 +16,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 79b7dd87ce79cf05a43e1a41fdbd076bac2c9a07
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015607"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613543"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>以快顯功能表方式檢視功能表
-一般來說，當您正在處理** 功能表**編輯器中，功能表資源會顯示為功能表列。 不過，當程式執行時，您可能有加入至應用程式功能表列的功能表資源。  
-  
-### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>以快顯功能表方式檢視功能表資源  
-  
-1.  以滑鼠右鍵按一下  功能表，然後選擇 **快顯視窗以檢視**從捷徑功能表。  
-  
-     這只是檢視的喜好設定，而不會修改您的功能表。  
-  
-    > [!NOTE]
-    >  若要變更回功能表列檢視，請按一下**快顯視窗以檢視**一次 （這會移除核取記號並傳回您的功能表列檢視）。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [建立快顯功能表](../windows/creating-pop-up-menus.md)   
- [功能表編輯器](../windows/menu-editor.md)   
+
+一般來說，當您正在處理** 功能表**編輯器中，功能表資源會顯示為功能表列。 不過，當程式執行時，您可能有加入至應用程式功能表列的功能表資源。
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>以快顯功能表方式檢視功能表資源
+
+1. 以滑鼠右鍵按一下  功能表，然後選擇 **快顯視窗以檢視**從捷徑功能表。
+
+   這只是檢視的喜好設定，而不會修改您的功能表。
+
+   > [!NOTE]
+   > 若要變更回功能表列檢視，請按一下**快顯視窗以檢視**一次 （這會移除核取記號並傳回您的功能表列檢視）。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[建立快顯功能表](../windows/creating-pop-up-menus.md)  
+[功能表編輯器](../windows/menu-editor.md)  

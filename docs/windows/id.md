@@ -17,51 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a89758933aef4646aaf11d08d7193d48a44f468
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7b7ac87241e9089cc8c0152a6d0c3966dc32fa08
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013541"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600238"
 ---
 # <a name="id"></a>id
-指定*dispid* （屬性或方法，在介面或 dispinterface） 的成員函式的參數。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ id(  
-   dispid  
-) ]  
-```  
-  
-### <a name="parameters"></a>參數  
- *dispid*  
- 介面方法的分派識別碼。  
-  
-## <a name="remarks"></a>備註  
- **識別碼**c + + 屬性具有相同的功能[識別碼](http://msdn.microsoft.com/library/windows/desktop/aa367040)MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**識別碼**。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|介面方法|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [方法屬性](../windows/method-attributes.md)   
- [資料成員屬性](../windows/data-member-attributes.md)   
- [預設值](../windows/defaultvalue.md)   
- [in](../windows/in-cpp.md)   
- [out](../windows/out-cpp.md)   
+
+指定*dispid* （屬性或方法，在介面或 dispinterface） 的成員函式的參數。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ id(
+   dispid
+) ]
+```
+
+### <a name="parameters"></a>參數
+
+*dispid*  
+介面方法的分派識別碼。
+
+## <a name="remarks"></a>備註
+
+**識別碼**c + + 屬性具有相同的功能[識別碼](http://msdn.microsoft.com/library/windows/desktop/aa367040)MIDL 屬性。
+
+## <a name="example"></a>範例
+
+範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**識別碼**。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|介面方法|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[方法屬性](../windows/method-attributes.md)  
+[資料成員屬性](../windows/data-member-attributes.md)  
+[defaultvalue](../windows/defaultvalue.md)  
+[in](../windows/in-cpp.md)  
+[out](../windows/out-cpp.md)  

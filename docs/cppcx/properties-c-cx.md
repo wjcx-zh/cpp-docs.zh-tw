@@ -1,23 +1,23 @@
 ---
-title: 屬性 (C + + /CX) |Microsoft 文件
+title: 屬性 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089555"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600851"
 ---
 # <a name="properties-ccx"></a>屬性 (C++/CX)
-Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼可將此屬性視為公用 Datamember 加以存取。 此屬性在內部可實作為包含 get 存取子方法和 (或) set 存取子方法的區塊。 使用存取子方法，可讓您在擷取值之前或之後執行其他動作，例如，您可以引發事件或執行驗證檢查。  
+Windows 執行階段類型會將公用資料公開為屬性。 用戶端程式碼可將此屬性視為公用 Datamember 加以存取。 此屬性在內部可實作為包含 get 存取子方法和 (或) set 存取子方法的區塊。 使用存取子方法，可讓您在擷取值之前或之後執行其他動作，例如，您可以引發事件或執行驗證檢查。  
   
 ### <a name="remarks"></a>備註  
  屬性的值包含於私用變數中，稱為「 *備份存放區*」(Backing Store)，其型别與屬性相同。 一個屬性可同時包含 set 存取子與 get 存取子，前者可指派值給備份存放區，後者則可擷取備份存放區的值。 若僅提供 get 存取子，則是唯讀屬性，若僅提供 set 存取子，則是唯寫屬性，若兩種存取子皆提供，則是讀/寫 (可修改) 屬性。  
@@ -40,6 +40,6 @@ Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼�
  [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統](../cppcx/type-system-c-cx.md)   
+ [型別系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d87c07f7fa4f1dfa6cbb34545d74d75e8a867583
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 62a1fc796188c38dfbd3aff004eba15b7e30ea89
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017080"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600501"
 ---
 # <a name="mutexmutex-constructor"></a>Mutex::Mutex 建構函式
-初始化的新執行個體**Mutex**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-explicit Mutex(  
-   HANDLE h  
-);  
-  
-Mutex(  
-   _Inout_ Mutex&& h  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *h*  
- 控制代碼或右值參考控制代碼，來**Mutex**物件。  
-  
-## <a name="remarks"></a>備註  
- 第一個建構函式初始化**Mutex**從指定的控制代碼的物件。 第二個建構函式初始化**Mutex**從指定的控制代碼，然後 mutex 擁有權移至目前的物件**Mutex**物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>另請參閱
- [Mutex 類別](../windows/mutex-class1.md)
+
+初始化的新執行個體**Mutex**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+explicit Mutex(
+   HANDLE h
+);
+
+Mutex(
+   _Inout_ Mutex&& h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*  
+控制代碼或右值參考控制代碼，來**Mutex**物件。
+
+## <a name="remarks"></a>備註
+
+第一個建構函式初始化**Mutex**從指定的控制代碼的物件。 第二個建構函式初始化**Mutex**從指定的控制代碼，然後 mutex 擁有權移至目前的物件**Mutex**物件。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+[Mutex 類別](../windows/mutex-class1.md)

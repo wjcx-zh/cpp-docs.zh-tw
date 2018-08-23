@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::UnorderedMapView 類別 |Microsoft 文件
+title: Platform::Collections::UnorderedMapView 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613570"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 類別
 表示 *對應 (Map)*(機碼值組的集合) 的唯讀檢視。  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  可提供函式物件用來比較兩個機碼值是否相等的類型。 根據預設， [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>備註  
- UnorderedMapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)應用程式二進位介面 (ABI) 之間傳遞的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ UnorderedMapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)傳遞應用程式二進位介面 (ABI) 之間的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成員  
   
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **命名空間：** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First 方法
-傳回指定第一個迭代器[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)未排序對應中的項目。  
+傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) unorderedmap 中的項目。  
   
 ### <a name="syntax"></a>語法  
   
@@ -85,7 +85,7 @@ virtual Windows::Foundation::Collections::IIterator<
  迭代器，指定對應檢視中的第一個元素。  
   
 ### <a name="remarks"></a>備註  
- 若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myMapView->First();`。  
+ 若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myMapView->First();`。  
   
 
 
@@ -221,13 +221,13 @@ UnorderedMapView(
  UnorderedMapView 的 typename。  
   
  `H`  
- 可為機碼產生雜湊值的函式物件。 預設為[std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)類型，`std::hash`支援。  
+ 可為機碼產生雜湊值的函式物件。 預設值為[std::hash\<K >](http://msdn.microsoft.com/en-us/54f67435-af9d-4217-a29d-fa4d2491a104)類型的`std::hash`支援。  
   
  `P`  
- 可提供函式物件用來比較兩個機碼是否相等的類型。 預設為[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  
+ 可提供函式物件用來比較兩個機碼是否相等的類型。 預設值為[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  
   
  `m`  
- 參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)至[std:: unordered_map](../standard-library/unordered-map-class.md)用來初始化 UnorderedMapView。  
+ 參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: unordered_map](../standard-library/unordered-map-class.md)用來初始化 UnorderedMapView。  
   
  `first`  
  用來初始化 UnorderedMapView 的項目範圍中，第一個元素的輸入迭代器。  

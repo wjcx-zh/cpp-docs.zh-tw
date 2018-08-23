@@ -1,5 +1,5 @@
 ---
-title: _InterlockedExchangeAdd 內建函式 |Microsoft 文件
+title: _InterlockedExchangeAdd 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -65,17 +65,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141caf090eb34482fe53a03138ff71d2740e2fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340550"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600888"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 提供 Win32 的編譯器內建支援[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedExchangeAdd 內建函式](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函式。  
+ 提供 Win32 Windows SDK 的編譯器內建支援[_InterlockedExchangeAdd 內建函式](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -177,9 +177,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`、`_InterlockedExchangeAdd8`、`_InterlockedExchangeAdd16``_InterlockedExchangeAdd64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangeAdd`、`_InterlockedExchangeAdd8`、`_InterlockedExchangeAdd16``_InterlockedExchangeAdd64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`、`_InterlockedExchangeAdd_HLERelease`、`_InterlockedExchangeAdd64_HLEAcquire``_InterlockedExchangeAdd64_HLErelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`、`_InterlockedExchangeAdd_HLERelease`、`_InterlockedExchangeAdd64_HLEAcquire``_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  在 `_InterlockedExchangeAdd` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。  
@@ -190,12 +190,12 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
  在支援 Hardware Lock Elision (HLE) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果在不支援 HLE 的平台上呼叫這些內建函式，會忽略該提示。  
   
- 這些常式僅以內建函式的形式供您使用。 因此，它們是內建函式是否不論[/Oi](../build/reference/oi-generate-intrinsic-functions.md)或[#pragma 內建](../preprocessor/intrinsic.md)用。 不可能使用[#pragma 函式](../preprocessor/function-c-cpp.md)上這些內建函式。  
+ 這些常式僅以內建函式的形式供您使用。 因此，它們內建函式是否不是是[/Oi](../build/reference/oi-generate-intrinsic-functions.md)或是[#pragma 內建](../preprocessor/intrinsic.md)用。 不可以使用[#pragma 函式](../preprocessor/function-c-cpp.md)上這些內建函式。  
   
 ## <a name="example"></a>範例  
- 如需使用方式的範例`_InterlockedExchangeAdd`，請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  
+ 如需如何使用的範例`_InterlockedExchangeAdd`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

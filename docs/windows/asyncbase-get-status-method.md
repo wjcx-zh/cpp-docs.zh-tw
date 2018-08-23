@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 31b333c14af6d57fb098d6aff0d0938092477de0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652249"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613120"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status 方法
-擷取值，指出非同步作業的狀態。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   get_Status  
-)(AsyncStatus *status) override;  
-```  
-  
-### <a name="parameters"></a>參數  
- *status*  
- 儲存狀態的位置。 如需詳細資訊，請參閱`Windows::Foundation::AsyncStatus`列舉型別。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
-  
-## <a name="remarks"></a>備註  
- 這個方法會實作 `IAsyncInfo::get_Status`。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** async.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [AsyncBase 類別](../windows/asyncbase-class.md)
+
+擷取值，指出非同步作業的狀態。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   get_Status
+)(AsyncStatus *status) override;
+```
+
+### <a name="parameters"></a>參數
+
+*status*  
+儲存狀態的位置。 如需詳細資訊，請參閱`Windows::Foundation::AsyncStatus`列舉型別。
+
+## <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+
+## <a name="remarks"></a>備註
+
+這個方法會實作 `IAsyncInfo::get_Status`。
+
+## <a name="requirements"></a>需求
+
+**標頭：** async.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[AsyncBase 類別](../windows/asyncbase-class.md)

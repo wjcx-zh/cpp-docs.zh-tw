@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027855"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541768"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 在 MFC 的文件/檢視架構內容中提供 WebBrowser 控制項的功能。  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|擷取 WebBrowser 目前顯示的資源 URL。|  
 |[CHtmlView::GetMenuBar](#getmenubar)|擷取決定是否顯示功能表列的值。|  
 |[CHtmlView::GetOffline](#getoffline)|擷取決定控制項是否離線的值。|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|擷取 `IDispatch` 介面的指標。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|擷取 `IDispatch` 介面的指標。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。|  
 |[CHtmlView::GetProperty](#getproperty)|擷取與指定物件相關聯屬性目前的值。|  
 |[CHtmlView::GetReadyState](#getreadystate)|擷取網頁瀏覽器物件的就緒狀態。|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|指出 WebBrowser 控制項是否註冊為目標名稱解析的最上層瀏覽器進行。|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標`IDispatch`主動式文件物件的介面。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
+ 指標`IDispatch`主動式文件物件的介面。 如需詳細資訊，請參閱 <<c0> [ 實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。  
   
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
@@ -1080,7 +1080,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ### <a name="remarks"></a>備註  
  並非每個畫面格會引發此事件，但每個畫面格，就會引發[OnDownloadBegin](#ondownloadbegin)事件就會引發對應`OnDocumentComplete`事件。  
   
- 所指定的 URL *lpszURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 http://www.microsoft.com/ "。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。  
+ 所指定的 URL *lpszURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 「http://www.microsoft.com/"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  從 Internet Explorer 或 MSHTML 實作的呼叫`IOleInPlaceActiveObject::OnDocWindowActivate`，這會在容器文件視窗啟用或停用時通知作用中的就地物件。  
@@ -1299,7 +1299,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 ### <a name="remarks"></a>備註  
  URL 參數可以是在沒有 URL 表示法是殼層名稱空間實體的情況下 PIDL。  
   
- 請注意，URL 中包含*strURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 http://www.microsoft.com/ "。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。  
+ 請注意，URL 中包含*strURL*可能會不同於瀏覽器已告知瀏覽至，因為此 URL 是正式化和完整 URL 的 URL。 比方說，如果應用程式指定 URL 的"www.microsoft.com"的呼叫中要[Navigate](#navigate)或[Navigate2](#navigate2)，傳遞的 URL`OnNavigateComplete2`將會 「http://www.microsoft.com/"。 此外，如果伺服器已被瀏覽器重新導向至不同的 URL，重新導向的 URL 將會反映這裡。  
   
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError  
  巡覽至超連結失敗時，由架構呼叫。  

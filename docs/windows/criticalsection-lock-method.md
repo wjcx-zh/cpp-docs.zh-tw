@@ -17,40 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee66017edabf80349bf2960f7cb2ca2654c8c4cc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 4fedde29441c9c14b68dec5cff998be57d216e29
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643575"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607656"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
-等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-SyncLock Lock();  
-  
-   static SyncLock Lock(  
-   _In_ CRITICAL_SECTION* cs  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *cs*  
- 使用者指定的重要區段物件。  
-  
-## <a name="return-value"></a>傳回值  
- 鎖定物件，可用來解除鎖定目前的重要區段。  
-  
-## <a name="remarks"></a>備註  
- 第一個**鎖定**函式會影響目前的重要區段物件。 第二個**鎖定**函式會影響使用者指定的重要區段。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [CriticalSection 類別](../windows/criticalsection-class.md)
+
+等候指定的重要區段物件的擁有權。 此函數會傳回呼叫的執行緒授與擁有權時。
+
+## <a name="syntax"></a>語法
+
+```cpp
+SyncLock Lock();
+
+   static SyncLock Lock(
+   _In_ CRITICAL_SECTION* cs
+);
+```
+
+### <a name="parameters"></a>參數
+
+*cs*  
+使用者指定的重要區段物件。
+
+## <a name="return-value"></a>傳回值
+
+鎖定物件，可用來解除鎖定目前的重要區段。
+
+## <a name="remarks"></a>備註
+
+第一個**鎖定**函式會影響目前的重要區段物件。 第二個**鎖定**函式會影響使用者指定的重要區段。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[CriticalSection 類別](../windows/criticalsection-class.md)

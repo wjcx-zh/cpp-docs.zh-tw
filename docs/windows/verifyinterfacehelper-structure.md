@@ -17,55 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1dd40487a9d843fb81be1e0be65d76a86e1f9c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c8ac728c70b160b64b66ddc697c54e4c488320db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013294"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607871"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 結構
-支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template <  
-   bool isWinRTInterface,  
-   typename I  
->  
-struct VerifyInterfaceHelper;  
-  
-template <  
-   typename I  
->  
-struct VerifyInterfaceHelper<false, I>;  
-```  
-  
-### <a name="parameters"></a>參數  
- *I*  
- 若要確認介面。  
-  
- *isWinRTInterface*  
-  
-## <a name="remarks"></a>備註  
- 確認範本參數所指定的介面符合特定需求。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[VerifyInterfaceHelper::Verify 方法](../windows/verifyinterfacehelper-verify-method.md)||  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `VerifyInterfaceHelper`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援的 Windows 執行階段 c + + 樣板程式庫基礎結構，並不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template <
+   bool isWinRTInterface,
+   typename I
+>
+struct VerifyInterfaceHelper;
+
+template <
+   typename I
+>
+struct VerifyInterfaceHelper<false, I>;
+```
+
+### <a name="parameters"></a>參數
+
+*I*  
+若要確認介面。
+
+*isWinRTInterface*
+
+## <a name="remarks"></a>備註
+
+確認範本參數所指定的介面符合特定需求。
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[VerifyInterfaceHelper::Verify 方法](../windows/verifyinterfacehelper-verify-method.md)||
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`VerifyInterfaceHelper`
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

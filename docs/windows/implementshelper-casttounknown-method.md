@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b786bb41e9f0667ebbb81329b2f0977525d4ba96
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016232"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598058"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown 方法
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-IUnknown* CastToUnknown();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 指向基礎`IUnknown`介面。  
-  
-## <a name="remarks"></a>備註  
- 取得指標的基礎`IUnknown`目前的介面`Implements`結構。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [ImplementsHelper 結構](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+IUnknown* CastToUnknown();
+```
+
+## <a name="return-value"></a>傳回值
+
+指向基礎`IUnknown`介面。
+
+## <a name="remarks"></a>備註
+
+取得指標的基礎`IUnknown`目前的介面`Implements`結構。
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[ImplementsHelper 結構](../windows/implementshelper-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

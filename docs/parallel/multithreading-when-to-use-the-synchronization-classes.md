@@ -1,5 +1,5 @@
 ---
-title: 多執行緒： 何時使用同步類別 |Microsoft 文件
+title: 多執行緒： 何時使用同步類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,45 +21,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05922b826de81b5192b183e1c0afdfcda189f03
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688254"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606060"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>多執行緒：何時使用同步類別
-MFC 提供的多執行緒的類別分為兩類： 同步處理物件 ([CSyncObject](../mfc/reference/csyncobject-class.md)， [CSemaphore](../mfc/reference/csemaphore-class.md)， [CMutex](../mfc/reference/cmutex-class.md)， [CCriticalSection](../mfc/reference/ccriticalsection-class.md)，和[CEvent](../mfc/reference/cevent-class.md)) 和同步處理存取物件 ([CMultiLock](../mfc/reference/cmultilock-class.md)和[CSingleLock](../mfc/reference/csinglelock-class.md))。  
+MFC 提供的多執行緒的類別分為兩類： 同步處理物件 ([CSyncObject](../mfc/reference/csyncobject-class.md)， [CSemaphore](../mfc/reference/csemaphore-class.md)， [CMutex](../mfc/reference/cmutex-class.md)， [CCriticalSection](../mfc/reference/ccriticalsection-class.md)，並[CEvent](../mfc/reference/cevent-class.md)) 和同步處理存取物件 ([CMultiLock](../mfc/reference/cmultilock-class.md)並[CSingleLock](../mfc/reference/csinglelock-class.md))。  
   
- 必須控制資源的存取權，以確保資源的完整性時，會使用同步類別。 同步存取類別可用來存取這些受控制的資源。 本主題說明何時使用每個類別。  
+必須控制資源的存取權，以確保資源的完整性時，會使用同步類別。 同步存取類別用來存取這些受控制的資源。 本主題說明何時使用每個類別。  
   
- 若要判斷您應該使用哪一個同步處理類別，請詢問下列一系列的問題：  
+若要判斷您應該使用哪一個同步處理類別，詢問一系列如下的問題：  
   
-1.  應用程式必須等到發生才可存取資源 （例如，資料必須從接收通訊連接埠之前寫入的檔案）？  
+1. 應用程式必須等到事情發生才可存取資源 （例如，資料必須從接收通訊連接埠之前寫入的檔案）？  
   
-     如果是，請使用`CEvent`。  
+     如果是，使用`CEvent`。  
   
-2.  可以多個執行緒中相同的應用程式存取此資源一次 （例如，您的應用程式允許最多五個使用相同的文件的檢視表的 windows）？  
+2. 可以多個執行緒中相同的應用程式存取此資源一次 （例如，您的應用程式允許最多五個具有相同的文件檢視的 windows）？  
   
-     如果是，請使用`CSemaphore`。  
+     如果是，使用`CSemaphore`。  
   
-3.  多個應用程式可以使用此資源 （例如，資源是在 DLL 中）？  
+3. 多個應用程式可以使用此資源 （例如，資源是在 DLL 中）？  
   
-     如果是，請使用`CMutex`。  
+     如果是，使用`CMutex`。  
   
      若為否，使用`CCriticalSection`。  
   
- **CSyncObject**永遠不會直接使用。 它是其他四個同步處理類別的基底類別。  
+`CSyncObject` 是永遠不會直接使用。 它是其他四個同步處理類別的基底類別。  
   
 ## <a name="example-1-using-three-synchronization-classes"></a>範例 1： 使用三個同步處理類別  
- 例如，讓應用程式維護帳戶的連結的清單。 此應用程式可讓多達三個帳戶，以檢查在個別視窗中，但只有一個可以更新任何特定時間。 更新帳戶時，更新的資料會透過網路傳送到資料封存。  
+ 
+例如，擷取應用程式維護帳戶的連結的清單。 此應用程式可讓最多三個帳戶，以在個別的視窗中加以檢查，但只有一個可以更新任何特定的時間。 更新帳戶時，更新的資料是透過網路傳送至資料封存。  
   
- 此範例應用程式會使用所有的三種類型的同步處理的類別。 因為它可讓多達三個帳戶，以檢查一次，它會使用`CSemaphore`限制存取三個檢視表物件。 當嘗試檢視的第四個帳戶發生時，應用程式會等候直到前三個視窗關閉，否則便會失敗。 應用程式的帳戶更新時，使用`CCriticalSection`以確保只有一個帳戶會更新一次。 更新成功之後，它會通知`CEvent`，其中釋放執行緒等待事件發出信號。 此執行緒會將新的資料傳送至資料封存。  
+此範例應用程式會使用三種同步處理的類別。 因為它可讓要檢查一次最多三個帳戶，它會使用`CSemaphore`限制三個檢視物件的存取權。 當嘗試檢視的第四個帳戶時，就會等候直到其中一個第三個視窗關閉或失敗的應用程式。 更新帳戶時，應用程式使用`CCriticalSection`來確保只有一個帳戶會更新一次。 更新成功之後，它會通知`CEvent`，這會釋放執行緒等待事件收到訊號。 此執行緒會將新的資料傳送至資料封存。  
   
 ## <a name="example-2-using-synchronization-access-classes"></a>範例 2： 使用同步存取類別  
- 選擇要使用哪一個同步存取類別會更加簡單。 如果存取單一受控制的資源，只有關您的應用程式，使用`CSingleLock`。 如果它必須存取其中一個受控制的資源數目，請使用`CMultiLock`。 在範例 1，`CSingleLock`可能已用，因為每個案例中只有一個資源需要在任何特定時間。  
+ 
+選擇要使用哪一個同步存取類別則更加簡單。 如果存取單一受控制的資源，只有關您的應用程式，使用`CSingleLock`。 如果它需要存取多個受控制的任何的資源一個時，使用`CMultiLock`。 在範例 1，`CSingleLock`但已使用，因為每個案例中只有一個資源需要在任何特定時間。  
   
- 如需如何使用同步類別的資訊，請參閱[多執行緒： 如何使用同步類別](../parallel/multithreading-how-to-use-the-synchronization-classes.md)。 同步處理的相關資訊，請參閱[同步](http://msdn.microsoft.com/library/windows/desktop/ms686353)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。 多執行緒 MFC 支援的詳細資訊，請參閱[多執行緒 c + + 和 MFC](../parallel/multithreading-with-cpp-and-mfc.md)。  
+如需如何使用同步類別的資訊，請參閱[多執行緒： 如何使用同步類別](../parallel/multithreading-how-to-use-the-synchronization-classes.md)。 同步處理的相關資訊，請參閱[同步處理](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK 中。 多執行緒 MFC 支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](../parallel/multithreading-with-cpp-and-mfc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)
+ 
+[使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)

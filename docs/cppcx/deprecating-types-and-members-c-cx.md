@@ -1,26 +1,26 @@
 ---
-title: 淘汰型別和成員 (C + + /CX) |Microsoft 文件
+title: 即將過時的型別和成員 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82f22f996b0f52889bd76227647ab367118898
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086791"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605697"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
-在 C + + /CX 中，Windows 執行階段類型和成員的生產者和取用者使用[Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。  
+在 C + + /CX 中，Windows 執行階段型別和成員的生產者和取用者使用[Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。  
   
 > [!CAUTION]
->  [Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)屬性是使用只在 Windows 執行階段類型。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx)。  
+>  [Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)是只能與 Windows 執行階段類型的屬性。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx)。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何 (例如在 Windows 執行階段元件中) 將您的公用 API 設為已被取代。 第二個參數，其類型為 [Windows:Foundation::Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) ，指定 API 正要被取代或移除。 目前只支援 DeprecationType::Deprecated 值。 屬性中的第三個參數指定要套用屬性的 [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) 。  
@@ -59,6 +59,6 @@ public:
 |參數化建構函式|  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統](../cppcx/type-system-c-cx.md)   
+ [型別系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

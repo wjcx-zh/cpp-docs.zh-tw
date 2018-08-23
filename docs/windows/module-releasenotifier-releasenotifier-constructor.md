@@ -17,32 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: f4ab2d5d03516147acda38ea2133d7445695de80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608465"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598784"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier 建構函式
-初始化的新執行個體**releasenotifier**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-ReleaseNotifier(bool release) throw();  
-```  
-  
-### <a name="parameters"></a>參數  
- *release*  
- **真**若要刪除這個執行個體時`Release`方法稱為;**false**未刪除此執行個體。  
-  
-## <a name="exceptions"></a>例外狀況  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)
+
+初始化的新執行個體**releasenotifier**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+ReleaseNotifier(bool release) throw();
+```
+
+### <a name="parameters"></a>參數
+
+*release*  
+**真**若要刪除這個執行個體時`Release`方法稱為;**false**未刪除此執行個體。
+
+## <a name="exceptions"></a>例外狀況
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)

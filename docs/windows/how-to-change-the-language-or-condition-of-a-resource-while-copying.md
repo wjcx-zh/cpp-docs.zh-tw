@@ -18,42 +18,45 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 508655dbfeb2d06d936d2b73d5435cf04c860f4b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650211"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598930"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在複製資源時變更其語言或條件
-在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。  
-  
--   資源的語言就是識別資源的語言。 這由[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)來協助識別您要尋找的資源。 (不過，各語言的資源可能有與文字無關的差異，例如，只能在日文鍵盤上作用的快速鍵，或只適用於中文當地語系化組建的點陣圖等等)。  
-  
--   資源的條件是已定義的符號，用來識別使用此特定資源副本時的條件。  
-  
- 資源的語言和條件會顯示在 [工作區] 視窗中資源名稱後的括號中。 在此範例中，名為 IDD_AboutBox 的資源使用芬蘭文為其語言，而其條件是 XX33。  
-  
-```cpp  
+
+在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。
+
+- 資源的語言就是識別資源的語言。 這由[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)來協助識別您要尋找的資源。 (不過，各語言的資源可能有與文字無關的差異，例如，只能在日文鍵盤上作用的快速鍵，或只適用於中文當地語系化組建的點陣圖等等)。
+
+- 資源的條件是已定義的符號，用來識別使用此特定資源副本時的條件。
+
+資源的語言和條件會顯示在 [工作區] 視窗中資源名稱後的括號中。 在此範例中，名為 IDD_AboutBox 的資源使用芬蘭文為其語言，而其條件是 XX33。
+
+```cpp
 IDD_AboutBox (Finnish - XX33)  
-```  
-  
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>複製現有的資源並變更其語言或條件  
-  
-1.  在.rc 檔中或在[資源檢視](../windows/resource-view-window.md) 視窗中，以滑鼠右鍵按一下您想要複製的資源。  
-  
-2.  選擇**插入複本**從捷徑功能表。  
-  
-3.  在 [**插入資源複本**] 對話方塊中：  
-  
-    -   針對**語言**清單方塊中，選取的語言。  
-  
-    -   在 **條件**方塊中，輸入條件。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [如何： 複製資源](../windows/how-to-copy-resources.md)   
- [資源檔](../windows/resource-files-visual-studio.md)   
- [資源編輯器](../windows/resource-editors.md)
+```
+
+### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>複製現有的資源並變更其語言或條件
+
+1. 在.rc 檔中或在[資源檢視](../windows/resource-view-window.md) 視窗中，以滑鼠右鍵按一下您想要複製的資源。
+
+2. 選擇**插入複本**從捷徑功能表。
+
+3. 在 [**插入資源複本**] 對話方塊中：
+
+   - 針對**語言**清單方塊中，選取的語言。
+
+   - 在 **條件**方塊中，輸入條件。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[如何：複製資源](../windows/how-to-copy-resources.md)  
+[資源檔](../windows/resource-files-visual-studio.md)  
+[資源編輯器](../windows/resource-editors.md)

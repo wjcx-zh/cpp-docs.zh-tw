@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 author: mikeblome
-ms.author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015620"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610049"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 
@@ -34,7 +34,7 @@ ms.locfileid: "40015620"
  這些安全性功能內建於 Visual C++ 編譯器和連結器：  
   
  [/guard (啟用控制流程防護)](../build/reference/guard-enable-control-flow-guard.md)  
- 讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。  
+ 可讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。  
   
  [/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)  
  指示編譯器將滿溢偵測程式碼插入可能有遭利用風險的函式。 偵測到滿溢時，就會停止執行。 預設會開啟這個選項。  

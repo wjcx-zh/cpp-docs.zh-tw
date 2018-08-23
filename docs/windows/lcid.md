@@ -17,53 +17,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 803b4652d4a6482e9e7615121d3a85f0bee309f7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013661"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605417"
 ---
 # <a name="lcid"></a>lcid
-可讓您將地區設定識別碼傳遞給函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[lcid]  
-```  
-  
-## <a name="remarks"></a>備註  
- **Lcid** c + + 屬性實作的功能[lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 屬性。 如果您想要實作的程式庫區塊的地區設定，使用**lcid =** `lcid`參數來[模組](../windows/module-cpp.md)屬性。  
-  
-## <a name="example"></a>範例  
-  
-```cpp  
-// cpp_attr_ref_lcid.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[module(name="MyLibrary")];  
-typedef long HRESULT;  
-  
-[dual, uuid("2F5F63F1-16DA-11d2-9E7B-00C04FB926DA")]  
-__interface IStatic {  
-   HRESULT MyFunc([in, lcid] long LocaleID, [out, retval] BSTR * ReturnVal);  
-};  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|介面參數|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [參數屬性](../windows/parameter-attributes.md)   
+
+可讓您將地區設定識別碼傳遞給函式。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[lcid]
+```
+
+## <a name="remarks"></a>備註
+
+**Lcid** c + + 屬性實作的功能[lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 屬性。 如果您想要實作的程式庫區塊的地區設定，使用**lcid =** `lcid`參數來[模組](../windows/module-cpp.md)屬性。
+
+## <a name="example"></a>範例
+
+```cpp
+// cpp_attr_ref_lcid.cpp
+// compile with: /LD
+#include <unknwn.h>
+[module(name="MyLibrary")];
+typedef long HRESULT;
+
+[dual, uuid("2F5F63F1-16DA-11d2-9E7B-00C04FB926DA")]
+__interface IStatic {
+   HRESULT MyFunc([in, lcid] long LocaleID, [out, retval] BSTR * ReturnVal);
+};
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|介面參數|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[參數屬性](../windows/parameter-attributes.md)  

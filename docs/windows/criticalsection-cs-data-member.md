@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d00370014767d7b29de5f1efa592fd999af3d0bb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2bf40202f225c015522a31c4e9b0482e37c7d0da
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641388"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599484"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ 資料成員
-宣告重要區段的資料成員。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-CRITICAL_SECTION cs_;  
-```  
-  
-## <a name="remarks"></a>備註  
- 此資料成員會受到保護。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [CriticalSection 類別](../windows/criticalsection-class.md)
+
+宣告重要區段的資料成員。
+
+## <a name="syntax"></a>語法
+
+```cpp
+CRITICAL_SECTION cs_;
+```
+
+## <a name="remarks"></a>備註
+
+此資料成員會受到保護。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[CriticalSection 類別](../windows/criticalsection-class.md)

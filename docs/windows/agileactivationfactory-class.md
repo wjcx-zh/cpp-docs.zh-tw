@@ -1,5 +1,5 @@
 ---
-title: AgileActivationFactory 類別 |Microsoft 文件
+title: AgileActivationFactory 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bcba7eeba0f63d67410526ee1920a79cab2eafa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3245c761ab998ff55ebe1c616542df79f937e9d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854859"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604540"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory 類別
-表示 apartment 易記啟用 factory 實作[FtmBase](../windows/ftmbase-class.md)。  
+表示 apartment 友善啟用 factory 可實作[FtmBase](../windows/ftmbase-class.md)。
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>語法
   
-```cpp  
-template <  
-   typename I0 = Details::Nil,   
-   typename I1 = Details::Nil,   
-   typename I2 = Details::Nil,   
-FactoryCacheFlags cacheFlagValue = FactoryCacheDefault>  
-class AgileActivationFactory :   
-   public ActivationFactory<Implements<FtmBase, I0>, I1, I2, cacheFlagValue>{};  
-```  
+```cpp
+template <
+   typename I0 = Details::Nil,
+   typename I1 = Details::Nil,
+   typename I2 = Details::Nil,
+FactoryCacheFlags cacheFlagValue = FactoryCacheDefault>
+class AgileActivationFactory :
+   public ActivationFactory<Implements<FtmBase, I0>, I1, I2, cacheFlagValue>{};
+```
   
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
+## <a name="requirements"></a>需求
+ **標頭：** module.h
   
- **命名空間：** Microsoft::WRL  
+ **命名空間：** Microsoft::WRL
   
-## <a name="see-also"></a>另請參閱  
- [Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)   
+## <a name="see-also"></a>另請參閱
+ [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)  
  [ActivationFactory 類別](../windows/activationfactory-class.md)

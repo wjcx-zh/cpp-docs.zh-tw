@@ -14,16 +14,16 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 390f2a11b98a851b5f33b4e0a941a515421d5836
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011613"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604059"
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 Visual c + + 支援定義**wmain**函式，並將寬字元引數傳遞至您的 Unicode 應用程式。 宣告型式參數**wmain**，使用格式類似於`main`。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如:   

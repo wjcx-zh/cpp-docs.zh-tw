@@ -15,67 +15,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66009eb2e78268a4ee35a1c6023bfcb8dfda84b0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f1bab8c35a749240c839eaef5b652c1e3ec90b7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011649"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609407"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 運算子 (Microsoft::WRL)
-不等比較運算子[ComPtr](../windows/comptr-class.md)並[ComPtrRef](../windows/comptrref-class.md)物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-WRL_NOTHROW bool operator!=(  
-   const ComPtr<T>& a,  
-   const ComPtr<U>& b  
-);  
-WRL_NOTHROW bool operator!=(  
-   const ComPtr<T>& a,  
+
+不等比較運算子[ComPtr](../windows/comptr-class.md)並[ComPtrRef](../windows/comptrref-class.md)物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+WRL_NOTHROW bool operator!=(
+   const ComPtr<T>& a,
+   const ComPtr<U>& b
+);
+WRL_NOTHROW bool operator!=(
+   const ComPtr<T>& a,
    decltype(__nullptr)  
-);  
-WRL_NOTHROW bool operator!=(  
-   decltype(__nullptr),  
-   const ComPtr<T>& a  
-);  
-WRL_NOTHROW bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   const Details::ComPtrRef<ComPtr<U>>& b  
-);  
-WRL_NOTHROW bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
+);
+WRL_NOTHROW bool operator!=(
+   decltype(__nullptr),
+   const ComPtr<T>& a
+);
+WRL_NOTHROW bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   const Details::ComPtrRef<ComPtr<U>>& b
+);
+WRL_NOTHROW bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
    decltype(__nullptr)  
-);  
-WRL_NOTHROW bool operator!=(  
-   decltype(__nullptr),  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-WRL_NOTHROW bool operator!=(  
-   const Details::ComPtrRef<ComPtr<T>>& a,  
-   void* b  
-);  
-WRL_NOTHROW bool operator!=(  
-   void* b,  
-   const Details::ComPtrRef<ComPtr<T>>& a  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *a*  
- 左物件。  
-  
- *b*  
- 右物件。  
-  
-## <a name="return-value"></a>傳回值  
- **真**如果物件不相等，否則**false**。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+);
+WRL_NOTHROW bool operator!=(
+   decltype(__nullptr),
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+WRL_NOTHROW bool operator!=(
+   const Details::ComPtrRef<ComPtr<T>>& a,
+   void* b
+);
+WRL_NOTHROW bool operator!=(
+   void* b,
+   const Details::ComPtrRef<ComPtr<T>>& a
+);
+```
+
+### <a name="parameters"></a>參數
+
+*a*  
+左物件。
+
+*b*  
+右物件。
+
+## <a name="return-value"></a>傳回值
+
+**真**如果物件不相等，否則**false**。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: '預設:: (type_name):: Equals 方法 |Microsoft 文件'
+title: '預設:: (type_name):: Equals 方法 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2a8246597715ee2be2f55ba396a57f0ed014819
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087662"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612381"
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals 方法
 判斷指定的物件是否等於目前的物件。  

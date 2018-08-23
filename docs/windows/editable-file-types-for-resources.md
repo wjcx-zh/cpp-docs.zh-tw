@@ -19,28 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8319786603470ca7ef8ab58897261b1be0a3503a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648427"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603522"
 ---
 # <a name="editable-file-types-for-resources"></a>可編輯的資源檔類型
-您可以開啟下列類型的檔案，並編輯所包含的資源。  
-  
-|檔案名稱|描述|  
-|---------------|-----------------|  
-|.rc|資源指令碼檔。|  
-|.rct|資源範本檔。|  
-|.res|資源檔。|  
-|.resx|Managed 資源檔。|  
-|.exe|可執行檔。|  
-|.dll|動態連結程式庫檔案。|  
-|.bmp、.ico、.dib 和 .cur|點陣圖、圖示、工具列和游標檔案。|  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [資源檔](../windows/resource-files-visual-studio.md)
+
+您可以開啟下列類型的檔案，並編輯所包含的資源。
+
+|檔案名稱|描述|
+|---------------|-----------------|
+|.rc|資源指令碼檔。|
+|.rct|資源範本檔。|
+|.res|資源檔。|
+|.resx|Managed 資源檔。|
+|.exe|可執行檔。|
+|.dll|動態連結程式庫檔案。|
+|.bmp、.ico、.dib 和 .cur|點陣圖、圖示、工具列和游標檔案。|
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[資源檔](../windows/resource-files-visual-studio.md)

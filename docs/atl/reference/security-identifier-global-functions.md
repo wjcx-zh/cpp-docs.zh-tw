@@ -1,5 +1,5 @@
 ---
-title: 安全性識別碼的全域函式 |Microsoft 文件
+title: 安全性識別碼全域函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,15 +47,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365151"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610229"
 ---
-# <a name="security-identifier-global-functions"></a>安全性識別碼的全域函式
-這些函式會傳回物件通用的已知 SID。  
+# <a name="security-identifier-global-functions"></a>安全性識別碼全域函式
+這些函式會傳回一般的已知 SID 的物件。  
   
 > [!IMPORTANT]
 >  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 使用 NetworkService 啟用 NT AUTHORITY\NetworkService 使用者讀取 CPerfMon 安全性物件。 NetworkService ATLServer 程式碼，讓 NetworkService 帳戶之下登入 DLL 加入 SecurityAttribute[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]和更高的作業系統。  
+ 您可以使用 NetworkService 啟用 NT AUTHORITY\NetworkService 使用者讀取 CPerfMon 安全性物件。 NetworkService 新增 SecurityAttribute ATLServer 程式碼才可登入，在只有 Windows XP Home Edition、 Windows XP Professional、 Windows Server 2003 和更新版本作業系統的 NetworkService 帳戶下的 DLL。  
   
- 自訂記錄檔的計數器會以建立時 ATLServer CPerfMon 類別 Perfmon MMC 中，雖然會正確出現在即時檢視，檢視記錄檔時，可能不會出現的計數器。 CPerfMon 自訂效能計數器沒有必要權限來執行 「 效能記錄檔及警示 」 服務 (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] （或以上） 作業系統。 此服務帳戶之下執行"NT AUTHORITY\NetworkService"。  
+ 自訂記錄檔的計數器會建立與 Perfmon MMC 中的 ATLServer CPerfMon 類別，檢視記錄檔，雖然會正確出現在 [即時] 檢視時，可能不會出現的計數器。 CPerfMon 自訂效能計數器沒有 「 效能記錄及警示 」 服務 (smlogsvc.exe) 上執行 Windows XP Home Edition、 Windows XP Professional、 Windows Server 2003 （或更新版本） 作業系統的必要權限。 此服務帳戶之下執行"NT AUTHORITY\NetworkService"。  
   
 ##  <a name="null"></a>  Sids::Null  
  傳回 SECURITY_NULL_RID SID。  

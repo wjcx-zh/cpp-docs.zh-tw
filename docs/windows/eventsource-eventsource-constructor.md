@@ -17,26 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1e3d250fe4365b9701485457393b85f1c55464e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e00580397dade2bb5c44e44f18a51808826d7ef2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649571"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597673"
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource 建構函式
-初始化的新執行個體**EventSource**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-EventSource();  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** event.h  
-  
- **命名空間：** Microsoft::WRL
- 
- ## <a name="see-also"></a>另請參閱
- [EventSource 類別](../windows/eventsource-class.md)
+
+初始化的新執行個體**EventSource**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+EventSource();
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** event.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+[EventSource 類別](../windows/eventsource-class.md)

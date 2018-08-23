@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1be1dd844b08be23312848f007e4a57dbd893b5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 98609ce9cc15940586d626c52d24b5ca506164e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646981"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598990"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf 方法
-擷取位址[ptr_](../windows/comptr-ptr-data-member.md)資料成員，其中包含這所代表之介面的指標**ComPtr**。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-T* const* GetAddressOf() const;  
-T** GetAddressOf();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 變數的位址。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ComPtr 類別](../windows/comptr-class.md)
+
+擷取位址[ptr_](../windows/comptr-ptr-data-member.md)資料成員，其中包含這所代表之介面的指標**ComPtr**。
+
+## <a name="syntax"></a>語法
+
+```cpp
+T* const* GetAddressOf() const;
+T** GetAddressOf();
+```
+
+## <a name="return-value"></a>傳回值
+
+變數的位址。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ComPtr 類別](../windows/comptr-class.md)

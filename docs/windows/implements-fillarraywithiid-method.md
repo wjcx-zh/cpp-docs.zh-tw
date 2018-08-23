@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f374c945312e41fd54b525dc0cb7cd84ce84985d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c65e2d47d466b223acf19589e5966a05762605e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018890"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611560"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 方法
-插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-__forceinline static void FillArrayWithIid(  
-   unsigned long &index,  
-   _In_ IID* iids  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *index*  
- 以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。  
-  
- *iid*  
- IID 類型的陣列。  
-  
-## <a name="remarks"></a>備註  
- 內部 helper 函式。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Implements 結構](../windows/implements-structure.md)
+
+插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。
+
+## <a name="syntax"></a>語法
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>參數
+
+*index*  
+以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。
+
+*iid*  
+IID 類型的陣列。
+
+## <a name="remarks"></a>備註
+
+內部 helper 函式。
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Implements 結構](../windows/implements-structure.md)

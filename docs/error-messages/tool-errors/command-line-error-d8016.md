@@ -1,5 +1,5 @@
 ---
-title: 命令列錯誤 D8016 |Microsoft 文件
+title: 命令列錯誤 D8016 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f9709da189403f2594d76751430d30554bffe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c6ba57b7036aae652b9eb6d885f9105d8bf0826
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300614"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607599"
 ---
 # <a name="command-line-error-d8016"></a>命令列錯誤 D8016
-'選項 1' 和 '選項 2' 的命令列選項不相容  
+'1' 和 'option2' 命令列選項不相容  
   
  命令列選項不能同時指定。  
   
- 檢查環境變數，例如 CL，選項規格。  
+ 請檢查環境變數，例如 CL，選項規格。  
   
- **/clr**意味著 **/EHa**，而且您無法指定任何其他 **/EH**編譯器選項搭配 **/clr**。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ **/clr**意味著 **/EHa**，而且您無法指定任何其他 **/EH**編譯器選項加 **/clr**。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 您可能會在更新之後，收到 D8016 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 6.0 專案： 專案更新精靈程序可能會讓 **/RTC**專案中每個原始程式碼檔，它會覆寫 **/RTC**設定專案。  若要解決，請變更 **/RTC**設定專案中每個原始程式碼檔的預設設定，這表示的專案設定 **/RTC**每個檔案將會生效。  
+ 更新 Visual c + + 6.0 專案之後，您可能會取得 D8016： 專案更新精靈程序可讓 **/RTC**專案中每個來源的程式碼檔案，其會覆寫 **/RTC**專案設定。  若要解決，請變更 **/RTC**設定的專案中每個原始程式碼檔案的預設設定，這表示的專案設定 **/RTC**每個檔案將會生效。  
   
  請參閱[/RTC （執行階段錯誤檢查）](../../build/reference/rtc-run-time-error-checks.md)有關變更的資訊 **/RTC**屬性設定。

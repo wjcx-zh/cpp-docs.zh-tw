@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: iboxarray 介面 |Microsoft 文件'
+title: 'Platform:: iboxarray 介面 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088338"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597316"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 介面
 `IBoxArray` 是實值類型陣列的包裝函式，這些實值類型會在不同的應用程式二進位介面 (ABI) 之間傳遞或是儲存在 `Platform::Object^` 元素的集合中，例如在 XAML 控制項中。  

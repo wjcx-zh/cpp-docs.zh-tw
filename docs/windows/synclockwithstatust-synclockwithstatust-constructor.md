@@ -17,49 +17,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f068c618cf7f8a8658cd8409a7ec79a561c307a6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018383"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607626"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT 建構函式
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-SyncLockWithStatusT(  
-   _Inout_ SyncLockWithStatusT&& other  
-);  
-  
-explicit SyncLockWithStatusT(  
-   typename SyncTraits::Type sync,  
-   DWORD status  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *other*  
- 右值參考到另一個**SyncLockWithStatusT**物件。  
-  
- *sync*  
- 另一個的參考**SyncLockWithStatusT**物件。  
-  
- *status*  
- 值[status_](../windows/synclockwithstatust-status-data-member.md)資料成員*其他*參數或*同步*參數。  
-  
-## <a name="remarks"></a>備註  
- 初始化的新執行個體**SyncLockWithStatusT**類別。  
-  
- 第一個建構函式初始化目前**SyncLockWithStatusT**物件從另一個**SyncLockWithStatusT**參數所指定*其他*，然後失效另**SyncLockWithStatusT**物件。 第二個建構函式**保護**，並初始化目前**SyncLockWithStatusT**為無效狀態的物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [SyncLockWithStatusT 類別](../windows/synclockwithstatust-class.md)   
- [SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+SyncLockWithStatusT(
+   _Inout_ SyncLockWithStatusT&& other
+);
+
+explicit SyncLockWithStatusT(
+   typename SyncTraits::Type sync,
+   DWORD status
+);
+```
+
+### <a name="parameters"></a>參數
+
+*other*  
+右值參考到另一個**SyncLockWithStatusT**物件。
+
+*sync*  
+另一個的參考**SyncLockWithStatusT**物件。
+
+*status*  
+值[status_](../windows/synclockwithstatust-status-data-member.md)資料成員*其他*參數或*同步*參數。
+
+## <a name="remarks"></a>備註
+
+初始化的新執行個體**SyncLockWithStatusT**類別。
+
+第一個建構函式初始化目前**SyncLockWithStatusT**物件從另一個**SyncLockWithStatusT**參數所指定*其他*，然後失效另**SyncLockWithStatusT**物件。 第二個建構函式**保護**，並初始化目前**SyncLockWithStatusT**為無效狀態的物件。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>另請參閱
+
+[SyncLockWithStatusT 類別](../windows/synclockwithstatust-class.md)  
+[SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: comexception 類別 |Microsoft 文件'
+title: 'Platform:: comexception 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f67088d7e40f60922fa2fe03993a280284cbf76e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090520"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596996"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 代表應用程式執行期間所發生的 COM 錯誤。 COMException 是一組預先定義的標準例外狀況所適用的基底類別。  
@@ -113,7 +113,7 @@ public:property int HResult {    int get();}
  指定錯誤的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如需如何解譯 HRESULT 值的詳細資訊，請參閱[結構 COM 錯誤碼的](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
+ 如需如何解譯 HRESULT 值的詳細資訊，請參閱[錯誤碼的結構 COM](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
 
 ## <a name="message"></a> Comexception:: Message 屬性
 說明例外狀況的訊息。  

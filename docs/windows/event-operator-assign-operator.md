@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2aaea1c1c0a036b7c6ba26a9f5df94a72e9ea582
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7c95ac2e16ef4f4b279f0da287a4ca2a3d0f18a7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641791"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610459"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 運算子
-指派指定的**事件**參考目前**事件**執行個體。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-WRL_NOTHROW Event& operator=(  
-   _Inout_ Event&& h  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *h*  
- 若要為右值參考**事件**執行個體。  
-  
-## <a name="return-value"></a>傳回值  
- 目前的指標**事件**執行個體。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [Event 類別 (Windows 執行階段 C++ 範本庫)](../windows/event-class-windows-runtime-cpp-template-library.md)
+
+指派指定的**事件**參考目前**事件**執行個體。
+
+## <a name="syntax"></a>語法
+
+```cpp
+WRL_NOTHROW Event& operator=(
+   _Inout_ Event&& h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*  
+若要為右值參考**事件**執行個體。
+
+## <a name="return-value"></a>傳回值
+
+目前的指標**事件**執行個體。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[Event 類別 (Windows 執行階段 C++ 範本庫)](../windows/event-class-windows-runtime-cpp-template-library.md)

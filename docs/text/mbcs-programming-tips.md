@@ -1,5 +1,5 @@
 ---
-title: MBCS 程式設計提示 |Microsoft 文件
+title: MBCS 程式設計提示 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb6e298961580c959235a97f37793df41d1124f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5beaab3fe1642b3988e9d0dcbf258eab02e26b7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855275"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610305"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS 程式設計提示
-在新的開發，您應該為終端使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是由 Unicode 取代的舊版技術。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 此建議適用於 MFC 應用程式和撰寫而非 MFC 應用程式。 主題包括：  
+在新的開發，您應該為終端使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是由 Unicode 取代的舊版技術。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 建議也適用於 MFC 應用程式和撰寫不以 MFC 應用程式。 主題包括：  
   
 -   [一般 MBCS 程式設計的建議](../text/general-mbcs-programming-advice.md)  
   

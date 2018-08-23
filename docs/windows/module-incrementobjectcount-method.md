@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d4d1f36d99beb0d11f9f266250aa861503bb969
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4c5b1b50b096bf7fcda2aa26bf3e2b7820499267
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019211"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599421"
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount 方法
-遞增模組所追蹤的物件數目。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-virtual long IncrementObjectCount();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 之前的遞增作業計數。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL
- 
+
+遞增模組所追蹤的物件數目。
+
+## <a name="syntax"></a>語法
+
+```cpp
+virtual long IncrementObjectCount();
+```
+
+## <a name="return-value"></a>傳回值
+
+之前的遞增作業計數。
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
 ## <a name="see-also"></a>另請參閱
- [Module 類別](../windows/module-class.md)
+
+[Module 類別](../windows/module-class.md)

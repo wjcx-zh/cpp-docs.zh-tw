@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa178126b3a749e3af67b9dae3711c0a5cf9f408
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645782"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606983"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 巨集
 
@@ -54,7 +54,7 @@ ActivatableClassWithFactoryEx(
 ### <a name="parameters"></a>參數
 
 *類別名稱*  
-要建立之類別的名稱。  
+要建立之類別的名稱。
 
 *處理站*  
 將會建立指定類別的執行個體的 factory。
@@ -73,4 +73,5 @@ ActivatableClassWithFactoryEx(
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
+
 [Module 類別](../windows/module-class.md)

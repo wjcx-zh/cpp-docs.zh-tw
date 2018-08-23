@@ -17,39 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a197be0032c4ad42574418a153bba079366e396
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 78c65c5830bf75f1dd2bf4165d3d5271cb8a2e48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015907"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603242"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>文字工具字型對話方塊 (圖示影像編輯器)
-指定字型設定，當您使用[文字工具對話方塊](../windows/text-tool-dialog-box-image-editor-for-icons.md)的[影像編輯器](../windows/image-editor-for-icons.md)。  
-  
- 使用此對話方塊：  
-  
--   [將映像上的文字字型變更](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
-  
- 若要存取此對話方塊中，按一下**字型**按鈕**文字工具** 對話方塊。  
-  
- **字型**  
- 列出可用的字型。  
-  
- **字型樣式**  
- 列出指定的字型的可用樣式。  
-  
- **Size**  
- 列出指定的字型的可用點數大小。  
-  
- **範例**  
- 顯示文字會如何出現具有指定的字型設定的範例。  
-  
- **指令碼**  
- 列出可用的語言指令碼，針對指定的字型。 當您選取不同的語言指令碼時，字元集的語言可用來建立多國語言的文件。  
-  
-## <a name="requirements"></a>需求  
- 無  
-  
-## <a name="see-also"></a>另請參閱  
- [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)
+
+指定字型設定，當您使用[文字工具對話方塊](../windows/text-tool-dialog-box-image-editor-for-icons.md)的[影像編輯器](../windows/image-editor-for-icons.md)。
+
+使用此對話方塊：
+
+- [將映像上的文字字型變更](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)
+
+若要存取此對話方塊中，按一下**字型**按鈕**文字工具** 對話方塊。
+
+**字型**  
+列出可用的字型。
+
+**字型樣式**  
+列出指定的字型的可用樣式。
+
+**Size**  
+列出指定的字型的可用點數大小。
+
+**範例**  
+顯示文字會如何出現具有指定的字型設定的範例。
+
+**指令碼**  
+列出可用的語言指令碼，針對指定的字型。 當您選取不同的語言指令碼時，字元集的語言可用來建立多國語言的文件。
+
+## <a name="requirements"></a>需求
+
+無
+
+## <a name="see-also"></a>另請參閱
+
+[編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)

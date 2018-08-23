@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0986e60fffcc8abef7e662a6839a8f25825936d5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5aa96203d7c7be8ae236fbc17435c7788aae126b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014230"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602669"
 ---
 # <a name="runtimeclassruntimeclass-destructor"></a>RuntimeClass::~RuntimeClass 解構函式
-取消初始化目前的執行個體**RuntimeClass**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-virtual ~RuntimeClass();  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [RuntimeClass 類別](../windows/runtimeclass-class.md)
+
+取消初始化目前的執行個體**RuntimeClass**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+virtual ~RuntimeClass();
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[RuntimeClass 類別](../windows/runtimeclass-class.md)

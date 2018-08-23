@@ -14,16 +14,16 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb7bd027fca215e1c10c111132ee881ad49548
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b63801ac98027f490463f36df23541993528d33b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018061"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596194"
 ---
 # <a name="international-enabling"></a>啟用國際化
 大部分傳統的 C 和 c + + 程式碼做出假設字元和字串操作的國際應用程式無法運作。 MFC 和執行階段程式庫支援 Unicode 或 MBCS，但仍要執行的工作。 若要引導您，本節會說明 Visual c + + 中的 「 國際啟用 」 的意義：  

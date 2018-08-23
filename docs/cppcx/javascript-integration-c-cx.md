@@ -1,25 +1,25 @@
 ---
-title: JavaScript 整合 (C + + /CX) |Microsoft 文件
+title: JavaScript 整合 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5b3b4406-e20e-4c40-9d1d-5dcd860beeac
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f95b5c31f4057a806b64940ed8120216c6904eb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e792233e9ce9b1fbbf2e63142caaeba37f8b4976
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086482"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609884"
 ---
 # <a name="javascript-integration-ccx"></a>JavaScript 整合 (C++/CX)
 
-如需詳細資訊，請參閱[c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+如需詳細資訊，請參閱 < [Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 ## <a name="see-also"></a>另請參閱
 
-[與其他語言間的互通性](../cppcx/interoperating-with-other-languages-c-cx.md)  
+[與其他語言交互操作](../cppcx/interoperating-with-other-languages-c-cx.md)  

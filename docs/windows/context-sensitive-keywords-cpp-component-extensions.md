@@ -17,91 +17,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644225"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605235"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>視內容而有所區別的關鍵字 (C++ 元件擴充功能)
-*即時線上關鍵字*是只在特定內容中辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。  
-  
-## <a name="all-runtimes"></a>所有執行階段  
+
+*即時線上關鍵字*是只在特定內容中辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。
+
+## <a name="all-runtimes"></a>所有執行階段
+
 ### <a name="remarks"></a>備註
-  
- 下列是內容相關性關鍵字清單：  
-  
--   [abstract](../windows/abstract-cpp-component-extensions.md)  
-  
--   [delegate](../windows/delegate-cpp-component-extensions.md)  
-  
--   [event](../windows/event-cpp-component-extensions.md)  
-  
--   [finally](../dotnet/finally.md)  
-  
--   [for each, in](../dotnet/for-each-in.md)  
-  
--   [initonly](../dotnet/initonly-cpp-cli.md)  
-  
--   `internal`   
-  
--   [常值](../windows/literal-cpp-component-extensions.md)  
-  
--   [override](../windows/override-cpp-component-extensions.md)  
-  
--   [屬性](../windows/property-cpp-component-extensions.md)  
-  
--   [sealed](../windows/sealed-cpp-component-extensions.md)  
-  
--   `where` (屬於[泛型](../windows/generics-cpp-component-extensions.md))  
-  
- 基於可讀性目的，您可能想要限制內容相關性關鍵字做為使用者定義的符號使用。  
-  
-## <a name="windows-runtime"></a>Windows 執行階段  
-### <a name="remarks"></a>備註  
-  
- (沒有這項功能的平台特定備註。)  
-  
-### <a name="requirements"></a>需求  
- 編譯器選項：`/ZW`  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
-### <a name="remarks"></a>備註  
-  
- (沒有這項功能的平台特定備註。)  
-  
-### <a name="requirements"></a>需求  
- 編譯器選項：`/clr`  
-  
-### <a name="examples"></a>範例  
-  
- 下列程式碼範例所示範的是，在適當的內容中，**屬性**內容相關性關鍵字可用來定義屬性和變數。  
-  
-```cpp  
-// context_sensitive_keywords.cpp  
-// compile with: /clr  
-public ref class C {  
-   int MyInt;  
-public:  
-   C() : MyInt(99) {}  
-  
-   property int Property_Block {   // context-sensitive keyword  
-      int get() { return MyInt; }  
-   }  
-};  
-  
-int main() {  
-   int property = 0;               // variable name  
-   C ^ MyC = gcnew C();  
-   property = MyC->Property_Block;  
-   System::Console::WriteLine(++property);  
-}  
-```  
-  
-```Output  
-100  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+
+下列是內容相關性關鍵字清單：
+
+- [abstract](../windows/abstract-cpp-component-extensions.md)
+
+- [delegate](../windows/delegate-cpp-component-extensions.md)
+
+- [event](../windows/event-cpp-component-extensions.md)
+
+- [finally](../dotnet/finally.md)
+
+- [for each, in](../dotnet/for-each-in.md)
+
+- [initonly](../dotnet/initonly-cpp-cli.md)
+
+- `internal`
+
+- [常值](../windows/literal-cpp-component-extensions.md)
+
+- [override](../windows/override-cpp-component-extensions.md)
+
+- [屬性](../windows/property-cpp-component-extensions.md)
+
+- [sealed](../windows/sealed-cpp-component-extensions.md)
+
+- `where` (屬於[泛型](../windows/generics-cpp-component-extensions.md))
+
+基於可讀性目的，您可能想要限制內容相關性關鍵字做為使用者定義的符號使用。
+
+## <a name="windows-runtime"></a>Windows 執行階段
+
+### <a name="remarks"></a>備註
+
+(沒有這項功能的平台特定備註。)
+
+### <a name="requirements"></a>需求
+
+編譯器選項：`/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+### <a name="remarks"></a>備註
+
+(沒有這項功能的平台特定備註。)
+
+### <a name="requirements"></a>需求
+
+編譯器選項：`/clr`
+
+### <a name="examples"></a>範例
+
+下列程式碼範例所示範的是，在適當的內容中，**屬性**內容相關性關鍵字可用來定義屬性和變數。
+
+```cpp
+// context_sensitive_keywords.cpp
+// compile with: /clr
+public ref class C {
+   int MyInt;
+public:
+   C() : MyInt(99) {}
+
+   property int Property_Block {   // context-sensitive keyword
+      int get() { return MyInt; }
+   }
+};
+
+int main() {
+   int property = 0;               // variable name
+   C ^ MyC = gcnew C();
+   property = MyC->Property_Block;
+   System::Console::WriteLine(++property);
+}
+```
+
+```Output
+100
+```
+
+## <a name="see-also"></a>另請參閱
+
+[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

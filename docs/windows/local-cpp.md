@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad1fb4dd281918b0d9ab3494c9a9f060468fc389
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a19e58e68b7f03269c002072859c2410a38c397b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018093"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597614"
 ---
 # <a name="local-c"></a>local (C++)
-介面的標頭中使用時，可讓您使用 MIDL 編譯器為標頭的產生器。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[local]  
-```  
-  
-## <a name="remarks"></a>備註  
- **本機**c + + 屬性具有相同的功能[本機](http://msdn.microsoft.com/library/windows/desktop/aa367071)MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 請參閱[call_as](../windows/call-as.md)如需如何使用的範例**本機**。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**介面**，介面方法|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|`dispinterface`|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [介面屬性](../windows/interface-attributes.md)   
- [方法屬性](../windows/method-attributes.md)   
- [call_as](../windows/call-as.md)   
+
+介面的標頭中使用時，可讓您使用 MIDL 編譯器為標頭的產生器。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[local]
+```
+
+## <a name="remarks"></a>備註
+
+**本機**c + + 屬性具有相同的功能[本機](http://msdn.microsoft.com/library/windows/desktop/aa367071)MIDL 屬性。
+
+## <a name="example"></a>範例
+
+請參閱[call_as](../windows/call-as.md)如需如何使用的範例**本機**。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**介面**，介面方法|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|`dispinterface`|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[介面屬性](../windows/interface-attributes.md)  
+[方法屬性](../windows/method-attributes.md)  
+[call_as](../windows/call-as.md)  

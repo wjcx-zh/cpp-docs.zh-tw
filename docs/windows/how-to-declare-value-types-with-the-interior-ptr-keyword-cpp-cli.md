@@ -16,122 +16,127 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9abba9937bfe425fa85cbce5b0795a3f9c784d22
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4da55ff3621d0b8c89d92bf804aba8ad0bdab591
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017223"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605777"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
-**Interior_ptr**可以搭配實值型別。  
-  
-> [!IMPORTANT]
->  `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。  
-  
-## <a name="example"></a>範例  
-  
-### <a name="description"></a>描述  
- 下列 C + + /cli CLI 範例示範如何使用**interior_ptr**搭配實值類型。  
-  
-### <a name="code"></a>程式碼  
-  
-```cpp  
-// interior_ptr_value_types.cpp  
-// compile with: /clr  
-value struct V {  
-   V(int i) : data(i){}  
-   int data;  
-};  
-  
-int main() {  
-   V v(1);  
-   System::Console::WriteLine(v.data);  
-  
-   // pointing to a value type  
-   interior_ptr<V> pv = &v;  
-   pv->data = 2;  
-  
-   System::Console::WriteLine(v.data);  
-   System::Console::WriteLine(pv->data);  
-  
-   // pointing into a value type  
-   interior_ptr<int> pi = &v.data;  
-   *pi = 3;  
-   System::Console::WriteLine(*pi);  
-   System::Console::WriteLine(v.data);  
-   System::Console::WriteLine(pv->data);  
-}  
-```  
 
-```Output  
-1  
-2  
-2  
-3  
-3  
-3  
-```  
-  
-## <a name="example"></a>範例  
-  
-### <a name="description"></a>描述  
- 在實值型別**這**指標會判斷值為 interior_ptr。  
-  
- 實值型別的非靜態成員函式主體中`V`，**這**是類型的運算式`interior_ptr<V>`其值為，呼叫此函式物件的位址。  
-  
-### <a name="code"></a>程式碼  
-  
-```cpp  
-// interior_ptr_value_types_this.cpp  
-// compile with: /clr /LD  
-value struct V {  
-   int data;  
-   void f() {  
-      interior_ptr<V> pv1 = this;  
-      // V* pv2 = this;   error  
-   }  
-};  
-```  
-  
-## <a name="example"></a>範例  
-  
-### <a name="description"></a>描述  
- 下列範例將示範如何使用具有靜態成員的傳址運算子。  
-  
- 靜態 Visual C++ 類型成員的位址會產生原生指標。  因為實值類型成員會配置在執行階段堆積上，而且可以由記憶體回收行程移動，所以靜態實值類型成員的位址是 Managed 指標。  
-  
-### <a name="code"></a>程式碼  
-  
-```cpp  
-// interior_ptr_value_static.cpp  
-// compile with: /clr  
-using namespace System;  
-value struct V { int i; };  
-  
-ref struct G {  
-   static V v = {22};   
-   static int i = 23;   
-   static String^ pS = "hello";   
-};  
-  
-int main() {  
-   interior_ptr<int> p1 = &G::v.i;  
-   Console::WriteLine(*p1);  
-  
-   interior_ptr<int> p2 = &G::i;  
-   Console::WriteLine(*p2);  
-  
-   interior_ptr<String^> p3 = &G::pS;  
-   Console::WriteLine(*p3);  
-}  
-```  
-  
+**Interior_ptr**可以搭配實值型別。
+
+> [!IMPORTANT]
+> `/clr` 編譯器選項支援這項語言功能，`/ZW` 編譯器選項則不支援。
+
+## <a name="example"></a>範例
+
+### <a name="description"></a>描述
+
+下列 C + + /cli CLI 範例示範如何使用**interior_ptr**搭配實值類型。
+
+### <a name="code"></a>程式碼
+
+```cpp
+// interior_ptr_value_types.cpp
+// compile with: /clr
+value struct V {
+   V(int i) : data(i){}
+   int data;
+};
+
+int main() {
+   V v(1);
+   System::Console::WriteLine(v.data);
+
+   // pointing to a value type
+   interior_ptr<V> pv = &v;
+   pv->data = 2;
+
+   System::Console::WriteLine(v.data);
+   System::Console::WriteLine(pv->data);
+
+   // pointing into a value type
+   interior_ptr<int> pi = &v.data;
+   *pi = 3;
+   System::Console::WriteLine(*pi);
+   System::Console::WriteLine(v.data);
+   System::Console::WriteLine(pv->data);
+}
+```
+
+```Output
+1
+2
+2
+3
+3
+3
+```
+
+## <a name="example"></a>範例
+
+### <a name="description"></a>描述
+
+在實值型別**這**指標會判斷值為 interior_ptr。
+
+實值型別的非靜態成員函式主體中`V`，**這**是類型的運算式`interior_ptr<V>`其值為，呼叫此函式物件的位址。
+
+### <a name="code"></a>程式碼
+
+```cpp
+// interior_ptr_value_types_this.cpp
+// compile with: /clr /LD
+value struct V {
+   int data;
+   void f() {
+      interior_ptr<V> pv1 = this;
+      // V* pv2 = this;   error
+   }
+};
+```
+
+## <a name="example"></a>範例
+
+### <a name="description"></a>描述
+
+下列範例將示範如何使用具有靜態成員的傳址運算子。
+
+靜態 Visual C++ 類型成員的位址會產生原生指標。  因為實值類型成員會配置在執行階段堆積上，而且可以由記憶體回收行程移動，所以靜態實值類型成員的位址是 Managed 指標。
+
+### <a name="code"></a>程式碼
+
+```cpp
+// interior_ptr_value_static.cpp
+// compile with: /clr
+using namespace System;
+value struct V { int i; };
+
+ref struct G {
+   static V v = {22};
+   static int i = 23;
+   static String^ pS = "hello";
+};
+
+int main() {
+   interior_ptr<int> p1 = &G::v.i;
+   Console::WriteLine(*p1);
+
+   interior_ptr<int> p2 = &G::i;
+   Console::WriteLine(*p2);
+
+   interior_ptr<String^> p3 = &G::pS;
+   Console::WriteLine(*p3);
+}
+```
+
 ```Output 
-22  
-23  
-hello  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+22
+23
+hello
+```
+
+## <a name="see-also"></a>另請參閱
+
+[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

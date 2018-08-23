@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c9a77a8a943dcefdf9db9d43121f2b00bde1568
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 061b3be0e642bb8e7406f54a469723c70559d85a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011006"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610157"
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 方法
-建立`HStringReference`從指定的字串參數的物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[ sizeDest]);  
-  
-    template<unsigned int sizeDest>  
-    static HStringReference MakeReference(  
-              wchar_t const (&str)[sizeDest],   
-              unsigned int len);  
-```  
-  
-### <a name="parameters"></a>參數  
- *sizeDest*  
- 樣板參數，指定大小的目的地`HStringReference`緩衝區。  
-  
- *str*  
- 寬字元字串的參考。  
-  
- *Len*  
- 最大長度*str*来使用這項作業中的參數緩衝區。 如果*len*參數未指定，整個*str*參數使用。  
-  
-## <a name="return-value"></a>傳回值  
- `HStringReference`物件，其值為與指定相同*str*參數。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [HString 類別](../windows/hstring-class.md)
+
+建立`HStringReference`從指定的字串參數的物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>參數
+
+*sizeDest*  
+樣板參數，指定大小的目的地`HStringReference`緩衝區。
+
+*str*  
+寬字元字串的參考。
+
+*Len*  
+最大長度*str*来使用這項作業中的參數緩衝區。 如果*len*參數未指定，整個*str*參數使用。
+
+## <a name="return-value"></a>傳回值
+
+`HStringReference`物件，其值為與指定相同*str*參數。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[HString 類別](../windows/hstring-class.md)

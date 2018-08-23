@@ -1,5 +1,5 @@
 ---
-title: 模組屬性 |Microsoft 文件
+title: 模組屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 650a2190e59b995962672deccdf202902f8a5b07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01ac7cfb1c53f0616431a33638bd04fdb586f557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875262"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609633"
 ---
 # <a name="module-attributes"></a>模組屬性
-下列屬性只能套用至[模組](../windows/module-cpp.md)屬性。  
+下列屬性只能套用至[模組](../windows/module-cpp.md)屬性。
   
-|屬性|描述|  
-|---------------|-----------------|  
-|[helpstringdll](../windows/helpstringdll.md)|指定用來執行文件字串查閱 （當地語系化） 的 dll 名稱。|  
+|屬性|描述|
+|---------------|-----------------|
+|[helpstringdll](../windows/helpstringdll.md)|指定要用來執行文件字串查閱 （當地語系化） DLL 的名稱。|
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

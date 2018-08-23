@@ -21,38 +21,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 566ed55df84accef0c3e5308e750a2684c36b91c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568650"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606790"
 ---
 # <a name="exception-handling--c-component-extensions"></a>例外狀況處理 (C++ 元件擴充功能)
-應用程式編譯`/ZW`編譯器選項或`/clr`兩者都使用的編譯器選項*例外狀況*程式執行期間處理未預期的錯誤。 下列主題將討論 C++/CX 或 C++/CLI 應用程式中的例外狀況處理。  
-  
-## <a name="in-this-section"></a>本節內容  
- [使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- 描述擲回例外狀況，並使用**嘗試**/**攔截**區塊。  
-  
- [在例外狀況處理在 /CLR 下的行為差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- 討論與標準 C++ 例外狀況處理行為的差異。  
-  
- [finally](../dotnet/finally.md)  
- 討論如何使用 finally 關鍵字。  
-  
- [如何：定義與安裝全域例外狀況處理常式](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- 示範如何擷取未處理的例外狀況。  
-  
- [如何：攔截 MSIL 擲回之機器碼的例外狀況](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- 討論如何攔截機器碼中的 CLR 和 C++ 例外狀況。  
-  
- [如何：定義與安裝全域例外狀況處理常式](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- 示範如何攔截所有未處理的例外狀況。  
-  
-## <a name="related-sections"></a>相關章節  
- [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)  
- 描述 C++ 中的例外狀況處理。  
-  
-## <a name="see-also"></a>另請參閱  
- [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+
+應用程式編譯`/ZW`編譯器選項或`/clr`兩者都使用的編譯器選項*例外狀況*程式執行期間處理未預期的錯誤。 下列主題將討論 C++/CX 或 C++/CLI 應用程式中的例外狀況處理。
+
+## <a name="in-this-section"></a>本節內容
+
+[使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+描述擲回例外狀況，並使用**嘗試**/**攔截**區塊。
+
+[在例外狀況處理在 /CLR 下的行為差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+討論與標準 C++ 例外狀況處理行為的差異。
+
+[finally](../dotnet/finally.md)  
+討論如何使用 finally 關鍵字。
+
+[如何：定義與安裝全域例外狀況處理常式](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+示範如何擷取未處理的例外狀況。
+
+[如何：攔截 MSIL 擲回之機器碼的例外狀況](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+討論如何攔截機器碼中的 CLR 和 C++ 例外狀況。
+
+[如何：定義與安裝全域例外狀況處理常式](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+示範如何攔截所有未處理的例外狀況。
+
+## <a name="related-sections"></a>相關章節
+
+[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)  
+描述 C++ 中的例外狀況處理。
+
+## <a name="see-also"></a>另請參閱
+
+[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

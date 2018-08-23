@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: enum 類別 |Microsoft 文件'
+title: 'Platform:: enum 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcb6dddb02f13a2138689672535f01c935383740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3d4f893099c129f82cfa08650c6f1f3fbbb2c46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088286"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608543"
 ---
 # <a name="platformenum-class"></a>Platform::Enum 類別
 表示一組具名常數的實值類別。  

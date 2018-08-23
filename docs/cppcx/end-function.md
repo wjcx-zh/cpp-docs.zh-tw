@@ -1,5 +1,5 @@
 ---
-title: end 函式 |Microsoft 文件
+title: end 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 771d7e83024f9c258df1437ff902d638bffc8478
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086417"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596646"
 ---
 # <a name="end-function"></a>end 函式
 傳回迭代器，指向指定的介面參數所存取之集合的結尾之外。  
@@ -52,10 +52,10 @@ template <typename T>
  樣板類型參數。  
   
  `v`  
- 向量的集合\<T > 或 VectorView\<T > 物件存取透過 Ivector<platform\<T >，或 IVectorView\<T > 介面。  
+ 向量的集合\<T > 或 VectorView\<T > 物件存取的 IVector\<T >，或 IVectorView\<T > 介面。  
   
  `i`  
- 物件的任意 Windows 執行階段集合所存取 IIterable\<T > 介面。  
+ Iiterable<t> Windows 執行階段的集合物件所存取 IIterable\<T > 介面。  
   
 ### <a name="return-value"></a>傳回值  
  指向集合結尾之外的迭代器。  

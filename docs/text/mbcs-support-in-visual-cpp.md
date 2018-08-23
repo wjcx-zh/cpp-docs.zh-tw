@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010382"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608676"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支援
 是 MBCS 啟用舊版 Windows 上執行時，Visual c + + 開發系統 （包括整合式原始檔程式碼編輯器、 偵錯工具和命令列工具） 已 MBCS 啟用，除了 [記憶體] 視窗。  
@@ -53,7 +53,7 @@ ms.locfileid: "40010382"
   
  輸入法，由 ALT + 啟動\`按鍵組合，會顯示為一組按鈕 （指標） 和轉換 視窗。 應用程式將放置在文字插入點的視窗。 應用程式必須處理`WM_MOVE`和`WM_SIZE`透過重新定位 [轉換] 視窗的訊息以符合新的位置或目標視窗的大小。  
   
- 如果您想要能夠輸入日文漢字字元的應用程式的使用者，應用程式必須處理 Windows IME 訊息。 如需輸入法程式設計的詳細資訊，請參閱[輸入法編輯器](https://msdn.microsoft.com/library/ms776145.aspx)。  
+ 如果您想要能夠輸入日文漢字字元的應用程式的使用者，應用程式必須處理 Windows IME 訊息。 如需輸入法程式設計的詳細資訊，請參閱[輸入法編輯器](/previous-versions/windows/desktop/ms776145\(v=vs.85\))。  
   
 ## <a name="visual-c-debugger"></a>Visual c + + 偵錯工具  
  Visual c + + 偵錯工具讓您能夠輸入法的訊息上設定中斷點。 此外，[記憶體] 視窗可以顯示雙位元組字元。  

@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d81a3f29e99f49b03eb76f44af60c42d433e0bdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641300"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611228"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start 方法
-啟動非同步作業。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   Start  
-)(void);  
-```  
-  
-## <a name="return-value"></a>傳回值  
- S_OK 如果作業啟動或已啟動;否則，E_ILLEGAL_STATE_CHANGE。  
-  
-## <a name="remarks"></a>備註  
- **Start （)** 的預設實作`IAsyncInfo::Start`，並不執行任何實際工作。 若要實際啟動非同步作業，覆寫`OnStart()`純虛擬方法。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** async.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [AsyncBase 類別](../windows/asyncbase-class.md)
+
+啟動非同步作業。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   Start
+)(void);
+```
+
+## <a name="return-value"></a>傳回值
+
+S_OK 如果作業啟動或已啟動;否則，E_ILLEGAL_STATE_CHANGE。
+
+## <a name="remarks"></a>備註
+
+**Start （)** 的預設實作`IAsyncInfo::Start`，並不執行任何實際工作。 若要實際啟動非同步作業，覆寫`OnStart()`純虛擬方法。
+
+## <a name="requirements"></a>需求
+
+**標頭：** async.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[AsyncBase 類別](../windows/asyncbase-class.md)

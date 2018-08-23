@@ -22,71 +22,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd38dcf02de661a063df356b7d915eed9814f192
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652402"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611860"
 ---
 # <a name="eventsource"></a>event_source
-建立事件來源。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ event_source(  
-   type,  
-   optimize=[speed | size],  
-   decorate=[true | false]  
-) ]  
-```  
-  
-### <a name="parameters"></a>參數  
- *type*  
- 下列其中一個值的列舉：  
-  
--   Unmanaged C/C++ 程式碼的`native` (Unmanaged 類別的預設值)。  
-  
--   COM 程式碼的`com` 。 您必須使用`coclass`時`type` = `com`。 此值需要您包含下列標頭檔︰  
-  
-    ```cpp  
-    #define _ATL_ATTRIBUTES  
-    #include <atlbase.h>  
-    #include <atlcom.h>  
-    ```  
-  
- *optimize*  
- 當*型別*是`native`，您可以指定`optimize=size`，以表示有 4 個位元組的儲存體 （最小值） 的所有事件類別中或`optimize=speed`（預設值） 表示會有 4 * （事件的數目） 個位元組的儲存體。  
-  
- *裝飾*  
- 當*型別*是`native`，您可以指定`decorate=false`，以表示合併 (.mrg) 檔案中的展開的名稱不應該包含封入類別名稱。 [/Fx](../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`其中是預設值、 產生合併檔案中的完整類型名稱。  
-  
-## <a name="remarks"></a>備註  
- **event_source** C++ 屬性指定要套用它的類別或結構將是事件來源。  
-  
- **event_source** 是與 [event_receiver](../windows/event-receiver.md) 屬性和 [__event](../cpp/event.md) 關鍵字搭配使用。 使用`event_receiver`建立事件接收器。 使用 **__event**為這些方法指定為事件的事件來源內的方法上。  
-  
+
+建立事件來源。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ event_source(
+   type,
+   optimize=[speed | size],
+   decorate=[true | false]
+) ]
+```
+
+### <a name="parameters"></a>參數
+
+*type*  
+下列其中一個值的列舉：
+
+- Unmanaged C/C++ 程式碼的`native` (Unmanaged 類別的預設值)。
+
+- COM 程式碼的`com` 。 您必須使用`coclass`時`type` = `com`。 此值需要您包含下列標頭檔︰
+
+    ```cpp
+    #define _ATL_ATTRIBUTES
+    #include <atlbase.h>
+    #include <atlcom.h>
+    ```
+
+*optimize*  
+當*型別*是`native`，您可以指定`optimize=size`，以表示有 4 個位元組的儲存體 （最小值） 的所有事件類別中或`optimize=speed`（預設值） 表示會有 4 * （事件的數目） 個位元組的儲存體。
+
+*裝飾*  
+當*型別*是`native`，您可以指定`decorate=false`，以表示合併 (.mrg) 檔案中的展開的名稱不應該包含封入類別名稱。 [/Fx](../build/reference/fx-merge-injected-code.md) 可讓您產生 .mrg 檔案。 `decorate=false`其中是預設值、 產生合併檔案中的完整類型名稱。
+
+## <a name="remarks"></a>備註
+
+**event_source** C++ 屬性指定要套用它的類別或結構將是事件來源。
+
+**event_source** 是與 [event_receiver](../windows/event-receiver.md) 屬性和 [__event](../cpp/event.md) 關鍵字搭配使用。 使用`event_receiver`建立事件接收器。 使用 **__event**為這些方法指定為事件的事件來源內的方法上。
+
 > [!NOTE]
->  樣板類別或結構不能包含事件。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**類別**，**結構**|  
-|**可重複**|否|  
-|**必要屬性**|**coclass**時 `type`=`com`|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器屬性](../windows/compiler-attributes.md)   
- [event_receiver](../windows/event-receiver.md)   
- [__event](../cpp/event.md)   
- [__hook](../cpp/hook.md)   
- [__unhook](../cpp/unhook.md)   
- [類別屬性](../windows/class-attributes.md)   
+> 樣板類別或結構不能包含事件。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**類別**，**結構**|
+|**可重複**|否|
+|**必要屬性**|**coclass**時 `type`=`com`|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器屬性](../windows/compiler-attributes.md)  
+[event_receiver](../windows/event-receiver.md)  
+[__event](../cpp/event.md)  
+[__hook](../cpp/hook.md)  
+[__unhook](../cpp/unhook.md)  
+[類別屬性](../windows/class-attributes.md)  

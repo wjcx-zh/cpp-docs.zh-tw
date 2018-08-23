@@ -20,76 +20,83 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed742d3762232846b2cac189978ea07c140b65f2
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012653"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596154"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
-**新的 ref**彙總關鍵字，其配置當物件變成無法存取，並傳回控制代碼回收的類型的執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 所配置物件。  
-  
-## <a name="all-runtimes"></a>所有執行階段  
- 記憶體配置類型的執行個體**ref 新**會自動取消配置。  
-  
- A**新的 ref**作業會擲回`OutOfMemoryException`如果無法配置記憶體。  
-  
- 如需有關如何配置和解除配置記憶體給原生 c + + 類型的詳細資訊，請參閱 <<c0> [ 新和 delete 運算子](../cpp/new-and-delete-operators.md)。  
-  
-## <a name="windows-runtime"></a>Windows 執行階段  
- 使用**ref 新**為 Windows 執行階段物件您想要自動管理其存留期間配置記憶體。 當其參考計數歸零時 (參考的最後一個複本已離開範圍之後發生)，會自動取消配置物件。 如需詳細資訊，請參閱 < [Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
-  
-### <a name="requirements"></a>需求  
- 編譯器選項：`/ZW`  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
- Managed 類型 （參考或實值類型） 的記憶體配置**gcnew**，並解除配置使用記憶體回收。  
-  
-### <a name="requirements"></a>需求  
- 編譯器選項：`/clr`  
-  
-### <a name="examples"></a>範例  
-  
- 下列範例會使用**gcnew**配置訊息物件。  
-  
-```cpp  
-// mcppv2_gcnew_1.cpp  
-// compile with: /clr  
-ref struct Message {  
-   System::String^ sender;  
-   System::String^ receiver;  
-   System::String^ data;  
-};  
-  
-int main() {  
-   Message^ h_Message  = gcnew Message;  
-  //...  
-}  
-```  
-  
- 下列範例會使用**gcnew**來建立使用類似參考類型的 boxed 實的值類型。  
-  
-```cpp  
-// example2.cpp : main project file.  
-// compile with /clr  
-using namespace System;  
-value class Boxed {  
-    public:  
-        int i;  
-};  
+
+**新的 ref**彙總關鍵字，其配置當物件變成無法存取，並傳回控制代碼回收的類型的執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 所配置物件。
+
+## <a name="all-runtimes"></a>所有執行階段
+
+記憶體配置類型的執行個體**ref 新**會自動取消配置。
+
+A**新的 ref**作業會擲回`OutOfMemoryException`如果無法配置記憶體。
+
+如需有關如何配置和解除配置記憶體給原生 c + + 類型的詳細資訊，請參閱 <<c0> [ 新和 delete 運算子](../cpp/new-and-delete-operators.md)。
+
+## <a name="windows-runtime"></a>Windows 執行階段
+
+使用**ref 新**為 Windows 執行階段物件您想要自動管理其存留期間配置記憶體。 當其參考計數歸零時 (參考的最後一個複本已離開範圍之後發生)，會自動取消配置物件。 如需詳細資訊，請參閱 < [Ref 類別與結構](../cppcx/ref-classes-and-structs-c-cx.md)。
+
+### <a name="requirements"></a>需求
+
+編譯器選項：`/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+Managed 類型 （參考或實值類型） 的記憶體配置**gcnew**，並解除配置使用記憶體回收。
+
+### <a name="requirements"></a>需求
+
+編譯器選項：`/clr`
+
+### <a name="examples"></a>範例
+
+下列範例會使用**gcnew**配置訊息物件。
+
+```cpp
+// mcppv2_gcnew_1.cpp
+// compile with: /clr
+ref struct Message {
+   System::String^ sender;
+   System::String^ receiver;
+   System::String^ data;
+};
+
+int main() {
+   Message^ h_Message  = gcnew Message;
+  //...
+}
+```
+
+下列範例會使用**gcnew**來建立使用類似參考類型的 boxed 實的值類型。
+
+```cpp
+// example2.cpp : main project file.
+// compile with /clr
+using namespace System;
+value class Boxed {
+    public:
+        int i;
+};
 int main()  
-{  
-    Boxed^ y = gcnew Boxed;  
-    y->i = 32;  
-    Console::WriteLine(y->i);  
-    return 0;  
-}  
-```  
-  
-```Output  
-32  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+{
+    Boxed^ y = gcnew Boxed;
+    y->i = 32;
+    Console::WriteLine(y->i);
+    return 0;
+}
+```
+
+```Output
+32
+```
+
+## <a name="see-also"></a>另請參閱
+
+[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

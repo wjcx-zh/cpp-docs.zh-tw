@@ -24,30 +24,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d1c3436190ff36724eba1601a51608371b8d0a4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2df697df91374b61b72b9093c8cf16e1ac613863
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649942"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605222"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>變更符號標頭檔的名稱
-通常所有符號定義會儲存在`Resource.h`。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。  
-  
-### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>變更資源符號標頭檔名稱  
-  
-1.  在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)從捷徑功能表。  
-  
-    > [!NOTE]
-    >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
-  
-2.  在 **符號標頭檔**方塊中，輸入 include 檔案的新名稱。  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [檢視資源符號](../windows/viewing-resource-symbols.md)   
- [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)
+
+通常所有符號定義會儲存在`Resource.h`。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。
+
+### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>變更資源符號標頭檔名稱
+
+1. 在 [資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇[Resource Includes](../windows/resource-includes-dialog-box.md)從捷徑功能表。
+
+   > [!NOTE]
+   > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+
+2. 在 **符號標頭檔**方塊中，輸入 include 檔案的新名稱。
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[檢視資源符號](../windows/viewing-resource-symbols.md)  
+[預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

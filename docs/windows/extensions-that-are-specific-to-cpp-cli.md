@@ -1,5 +1,5 @@
 ---
-title: 延伸模組特有的 C + + CLI |Microsoft 文件
+title: 延伸模組特有的 C + + /cli CLI |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52878c4b76f4aa6e11745bdaa4b994d93c842166
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52d562408d88e13b2f13fdb1efec88088e4d8551
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872610"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608215"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI 專用的擴充功能
-本節的文件中說明的下列語言功能僅適用於 C + + /CLI。  
+在本節中的文件說明的下列語言功能僅適用於 C + + /cli CLI。
   
  [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
- [使用 /clr 進行 C-style 轉換 (C + + /CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+ [使用 /clr 進行 C-style 轉換 (C + + /cli CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
  [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
@@ -35,5 +35,5 @@ ms.locfileid: "33872610"
   
  [變數引數清單 (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

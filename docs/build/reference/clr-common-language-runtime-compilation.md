@@ -1,5 +1,5 @@
 ---
-title: clr （Common Language Runtime 編譯） |Microsoft 文件
+title: -clr （Common Language Runtime 編譯） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379610"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606859"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 可讓應用程式和元件使用 Common Language Runtime (CLR) 中的功能。  
@@ -50,13 +50,13 @@ ms.locfileid: "32379610"
   
  [混合 （原生和 Managed） 組件](../../dotnet/mixed-native-and-managed-assemblies.md)和  
   
- [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md)。  
+ [如何： 移轉至 /clr](../../dotnet/how-to-migrate-to-clr.md)。  
   
  **/clr:pure**  
  /clr:pure 已被取代。 編譯器的未來版本可能不支援此選項。 建議您將必須是純 MSIL 的程式碼移植到 C#。  
   
  **/clr:safe**  
- /clr:safe 已被取代。 編譯器的未來版本可能不支援此選項。 我們建議連接埠必須是安全的 MSIL 至 C# 程式碼。 
+ /clr:safe 已被取代。 編譯器的未來版本可能不支援此選項。 我們建議您必須是安全的 MSIL，C# 的程式碼移植。 
   
  **/clr:noAssembly**  
  指定不應將組件資訊清單插入輸出檔中。 **noAssembly** 選項預設為非作用中。  
@@ -68,7 +68,7 @@ ms.locfileid: "32379610"
  在 Visual C++ 2005 以前， **/clr:noAssembly** 需要 **/LD**。 **/LD** 現在是您指定 **/clr:noAssembly**時意指要使用的項目。  
   
  **/clr:initialAppDomain**  
- 可讓 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 應用程式在 CLR 的第 1 版上執行。 如果您使用**initialAppDomain**，您可能會看到的一些問題所討論的[BUG： 當您使用時的 AppDomainUnloaded 例外狀況 managed extensions for Visual c + + 元件](http://go.microsoft.com/fwlink/p/?linkid=169465)microsoft支援的網站。  
+ 可讓 Visual c + + 應用程式第 1 版的 clr 上執行。 如果您使用**initialAppDomain**，則您可能會看到的一些問題所討論[BUG： 當您使用時的 AppDomainUnloaded 例外狀況 managed extensions for Visual c + + 元件](http://go.microsoft.com/fwlink/p/?linkid=169465)microsoft支援的網站。  
   
  使用 **initialAppDomain** 編譯的應用程式不應由使用 ASP.NET 的應用程式使用，因為它在 CLR 的第 1 版中不受支援。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "32379610"
   
  若要啟用偵錯 managed 應用程式上，請參閱[/ASSEMBLYDEBUG (加入 DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md)。  
   
- 只有 CLR 類型會在記憶體回收堆積上具現化。 如需詳細資訊，請參閱[類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要將函式編譯為原生程式碼，請使用 `unmanaged` pragma。 如需詳細資訊，請參閱[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。  
+ 只有 CLR 類型會在記憶體回收堆積上具現化。 如需詳細資訊，請參閱 <<c0> [ 類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md)。 若要將函式編譯為原生程式碼，請使用 `unmanaged` pragma。 如需詳細資訊，請參閱 < [managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。  
   
  **/clr** 預設為非作用中。 當 **/clr** 處於作用中， **/MD** 也會處於作用中。 如需詳細資訊，請參閱 [/MD、/MT、/LD (使用執行階段程式庫)](../../build/reference/md-mt-ld-use-run-time-library.md)。 **/MD** 可確保會從標準標頭檔 (.h) 中選取動態連結、多執行緒版本的執行階段常式。 Managed 程式設計需要進行多執行緒處理，因為 CLR 記憶體回收行程會在輔助執行緒中執行完成項。  
   
- 如果您使用編譯 **/c**，您可以指定具有產生之輸出檔的 CLR 型別[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
+ 如果您使用編譯 **/c**，您可以指定與產生之輸出檔的 CLR 型別[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)。  
   
  **/clr** 意指要使用 **/EHa**，且沒有其他 **/EH** 選項受 **/clr**支援。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../../build/reference/eh-exception-handling-model.md)。  
   
@@ -129,7 +129,7 @@ class {} x;
     > [!NOTE]
     >  如果在 [ **屬性頁面** ] 對話方塊中啟用 **/clr** ，將也會視需要調整與 **/clr** 不相容的編譯器選項屬性。 例如，如果設定了 **/RTC** ，然後啟用 **/clr** ， **/RTC** 將會關閉。  
     >   
-    >  此外，當您偵錯 **/clr** 應用程式時，請將 [ **偵錯工具類型** ] 屬性設為 [ **混合** ] 或 [ **僅限 Managed**]。 如需詳細資訊，請參閱[c + + 偵錯組態的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。  
+    >  此外，當您偵錯 **/clr** 應用程式時，請將 [ **偵錯工具類型** ] 屬性設為 [ **混合** ] 或 [ **僅限 Managed**]。 如需詳細資訊，請參閱 < [c + + 偵錯組態的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)。  
   
      如需如何建立模組，請參閱[/NOASSEMBLY （建立 MSIL 模組）](../../build/reference/noassembly-create-a-msil-module.md)。  
   

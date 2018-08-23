@@ -17,39 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32f75c838ea178b1313ab0bf9f005ff2a4c5d75b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652558"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607294"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
-傳回**ComPtr**物件，表示指定的介面識別碼所識別的介面  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-WRL_NOTHROW HRESULT AsIID(  
-   REFIID riid,  
-   _Out_ ComPtr<IUnknown>* p  
-) const;  
-```  
-  
-### <a name="parameters"></a>參數  
- *riid*  
- 介面識別碼。  
-  
- *p*  
- 如果物件具有其識別碼等於的介面*riid*，所指定之介面的雙向間接指標*riid*參數，否則指標`IUnknown`。  
-  
-## <a name="return-value"></a>傳回值  
- 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ComPtr 類別](../windows/comptr-class.md)
+
+傳回**ComPtr**物件，表示指定的介面識別碼所識別的介面
+
+## <a name="syntax"></a>語法
+
+```cpp
+WRL_NOTHROW HRESULT AsIID(
+   REFIID riid,
+   _Out_ ComPtr<IUnknown>* p
+) const;
+```
+
+### <a name="parameters"></a>參數
+
+*riid*  
+介面識別碼。
+
+*p*  
+如果物件具有其識別碼等於的介面*riid*，所指定之介面的雙向間接指標*riid*參數，否則指標`IUnknown`。
+
+## <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ComPtr 類別](../windows/comptr-class.md)

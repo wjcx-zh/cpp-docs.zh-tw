@@ -1,5 +1,5 @@
 ---
-title: _InterlockedCompareExchange 內建函式 |Microsoft 文件
+title: _InterlockedCompareExchange 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,15 +58,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b0fc52585171df740f70e12d81d849e3726dcd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339179"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611379"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  執行連鎖比較和交換。  
   
@@ -202,15 +202,15 @@ __int64 _InterlockedCompareExchange64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchange`、`_InterlockedCompareExchange8`、`_InterlockedCompareExchange16``_InterlockedCompareExchange64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchange`、`_InterlockedCompareExchange8`、`_InterlockedCompareExchange16``_InterlockedCompareExchange64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedCompareExchange_HLEAcquire`、`_InterlockedCompareExchange_HLERelease`、`_InterlockedCompareExchange64_HLEAcquire``_InterlockedCompareExchange64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|  
+|`_InterlockedCompareExchange_HLEAcquire`、`_InterlockedCompareExchange_HLERelease`、`_InterlockedCompareExchange64_HLEAcquire``_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  `_InterlockedCompareExchange` 會執行不可部分完成的 `Destination` 值與 `Comparand` 值的比較。 如果 `Destination` 值等於 `Comparand` 值，則 `Exchange` 值會儲存在 `Destination` 所指定的位址。 否則，不會執行任何作業。  
   
- `_InterlockedCompareExchange` 提供 Win32 的編譯器內建支援[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx)函式。  
+ `_InterlockedCompareExchange` 提供 Win32 Windows SDK 的編譯器內建支援[3&gt;interlockedcompareexchange&lt;3}](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange)函式。  
   
  在 `_InterlockedCompareExchange` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。  
   
@@ -436,7 +436,7 @@ int main(
 <29  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   

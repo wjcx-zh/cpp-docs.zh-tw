@@ -17,42 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cad715d086cf4cca1c8ff384d8a452708231804
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 81469e87d08ce17334d5e30fdf37db5ecf8bdab1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019437"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608064"
 ---
 # <a name="unique-c"></a>unique (C++)
-指定唯一的指標。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[unique]  
-```  
-  
-## <a name="remarks"></a>備註  
- **唯一**c + + 屬性具有相同的功能[唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294)MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 請參閱[ref](../windows/ref-cpp.md)的範例使用的範例**唯一**。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**typedef**， **struct**， **union**，參數的介面，介面方法|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [參數屬性](../windows/parameter-attributes.md)   
+
+指定唯一的指標。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[unique]
+```
+
+## <a name="remarks"></a>備註
+
+**唯一**c + + 屬性具有相同的功能[唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294)MIDL 屬性。
+
+## <a name="example"></a>範例
+
+請參閱[ref](../windows/ref-cpp.md)的範例使用的範例**唯一**。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**typedef**， **struct**， **union**，參數的介面，介面方法|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[參數屬性](../windows/parameter-attributes.md)  

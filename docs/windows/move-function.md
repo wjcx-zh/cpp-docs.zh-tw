@@ -17,44 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 018b5832b187223484013702a1b7d4871d0b1d44
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 9fc1d0c7ed8655037eebfc12097789253b3027e9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015712"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603891"
 ---
 # <a name="move-function"></a>Move 函式
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template<class T>  
-inline typename RemoveReference<T>::Type&& Move(  
-   _Inout_ T&& arg  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *T*  
- 引數型別。  
-  
- *arg*  
- 若要移動的引數。  
-  
-## <a name="return-value"></a>傳回值  
- 參數*arg*之後參考或右值參考的特性，如果有的話，已移除。  
-  
-## <a name="remarks"></a>備註  
- 將指定的引數從一個位置移到另一個。  
-  
- 如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** internal.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template<class T>
+inline typename RemoveReference<T>::Type&& Move(
+   _Inout_ T&& arg
+);
+```
+
+### <a name="parameters"></a>參數
+
+*T*  
+引數型別。
+
+*arg*  
+若要移動的引數。
+
+## <a name="return-value"></a>傳回值
+
+參數*arg*之後參考或右值參考的特性，如果有的話，已移除。
+
+## <a name="remarks"></a>備註
+
+將指定的引數從一個位置移到另一個。
+
+如需詳細資訊，請參閱 <<c0>  **移動語意**一節[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** internal.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

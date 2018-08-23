@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd80f649b27bcb3af720871d6d1378f5fe220c8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 303b93f986777c249062236efd977f7ac387e6e3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208480"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598425"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 類別
 衍生自 Windows 執行階段的集合提供標準樣板程式庫 InputIterator。  

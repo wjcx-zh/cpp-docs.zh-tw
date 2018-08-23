@@ -1,5 +1,5 @@
 ---
-title: -ZW （Windows 執行階段編譯） |Microsoft 文件
+title: -ZW （Windows 執行階段編譯） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce6c6825ed4ae715a2f4cde6b0e1ffa8b3b6733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97a97158dda886a09fb6ccb00898a8c518d8e250
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380062"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602258"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows 執行階段編譯)
-編譯原始程式碼，以支援[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立通用 Windows 平台 (UWP) 應用程式。  
+編譯原始程式碼，以支援 Visual c + + 元件擴充功能中 C + + /CX for 建立通用 Windows 平台 (UWP) 應用程式。  
   
- 當您使用 **/ZW**進行編譯時，一定要指定 **/EHsc**以及。  
+ 當您使用 **/ZW**編譯時，一律指定 **/EHsc**以及。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,18 +42,18 @@ ms.locfileid: "32380062"
   
 ## <a name="arguments"></a>引數  
  nostdlib  
- 表示 Platform.winmd、Windows.Foundation.winmd 和其他預設 Windows 中繼資料 (.winmd) 檔案未自動包含在編譯中。 相反地，您必須使用[/FU (命名強制 #using 檔案)](../../build/reference/fu-name-forced-hash-using-file.md)編譯器選項來明確指定 Windows 中繼資料檔案。  
+ 表示 Platform.winmd、Windows.Foundation.winmd 和其他預設 Windows 中繼資料 (.winmd) 檔案未自動包含在編譯中。 相反地，您必須使用[/FU (命名強制 #using 檔案)](../../build/reference/fu-name-forced-hash-using-file.md)編譯器選項，來明確指定 Windows 中繼資料檔案。  
   
 ## <a name="remarks"></a>備註  
- 當您指定 **/ZW**選項時，編譯器支援下列功能：  
+ 當您指定 **/ZW**選項，則編譯器支援下列功能：  
   
--   必要的中繼資料檔案、 命名空間、 資料類型和應用程式需要 Windows 執行階段中執行的函式。  
+-   必要的中繼資料檔案、 命名空間、 資料類型，以及應用程式需要 Windows 執行階段中執行的函式。  
   
 -   Windows 執行階段物件的參考計數 」 和 「 自動捨棄物件參考計數歸零時自動。  
   
- 因為 incremental 連結器不支援使用.obj 檔案中包含的 Windows 中繼資料 **/ZW**選項， [/Gm （啟用最少重建）](../../build/reference/gm-enable-minimal-rebuild.md)選項與不相容 **/ZW**.  
+ 由於 incremental linker 不支援使用包含在.obj 檔案中的 Windows 中繼資料 **/ZW**選項時， [/Gm （啟用最少重建）](../../build/reference/gm-enable-minimal-rebuild.md)選項與不相容 **/ZW**.  
   
- 如需詳細資訊，請參閱[Visual c + + 語言參考](../../cppcx/visual-c-language-reference-c-cx.md)。  
+ 如需詳細資訊，請參閱 < [Visual c + + 語言參考](../../cppcx/visual-c-language-reference-c-cx.md)。  
   
 ## <a name="requirements"></a>需求  
   

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886046"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609495"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 此類別代表`CStringT`物件。  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  在 MFC 程式中， [CMemoryException 類別](../../mfc/reference/cmemoryexception-class.md)如果存在記憶體不足，就會擲回。 在 ATL 程式中， [CAtlException](../../atl/reference/catlexception-class.md)就會擲回。 此函式通常用於自動化傳回的字串。  
   
 
- 通常，如果這個字串會傳遞給 COM 函式做為 [in] 參數，則這需要呼叫者釋放字串。 做法是使用[SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)、 Windows SDK 中所述。 如需詳細資訊，請參閱 < [Allocating 和釋放記憶體的 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。  
+ 通常，如果這個字串會傳遞給 COM 函式做為 [in] 參數，則這需要呼叫者釋放字串。 做法是使用[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)、 Windows SDK 中所述。 如需詳細資訊，請參閱 < [Allocating 和釋放記憶體的 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。  
   
- 如需有關在 Windows 中的 OLE 配置函式的詳細資訊，請參閱[SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) Windows SDK 中。  
+ 如需有關在 Windows 中的 OLE 配置函式的詳細資訊，請參閱[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。  
 
   
 ### <a name="example"></a>範例  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): 可讓您建構`CStringT`從指標到**unsigned char**。  
   
 > [!NOTE]
->  定義 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 巨集之間的隱含的字串轉換為關閉[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]和[!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字串。 巨集排除編譯建構函式支援轉換。  
+>  定義 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 巨集，若要關閉 ANSI 和 Unicode 字串之間的隱含的字串轉換。 巨集排除編譯建構函式支援轉換。  
   
  請注意， *strSrc*參數可以是`CStringT`或`CThisSimpleString`物件。 針對`CStringT`，使用其預設值具現化的其中一個 (`CString`， `CStringA`，或`CStringW`)，如`CThisSimpleString`，使用**這**指標。 `CThisSimpleString` 宣告的執行個體[CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)，這是較小的字串類別具有較低的內建的功能比`CStringT`類別。  
   

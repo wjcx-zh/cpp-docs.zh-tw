@@ -30,16 +30,16 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016622"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610710"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文字和字串
 針對國際市場開發應用程式的重要層面是本機的字元集適當表示法。 ASCII 字元集定義 0x00 到 0x7F 範圍內的字元。 有其他的字元集，主要是歐洲，ASCII 字元集定義 0x00 到 0x7F 範圍內的字元完全相同，也會定義設定從 0x80 到 0xFF 的擴充的字元。 因此，8 位元、 單一位元組字元的集合 (SBCS) 就足以代表 ASCII 字元集，以及許多歐洲語言的字元集。 不過，有些非歐洲字元集，例如日文漢字，包含許多字元數超過單一位元組編碼配置可以代表，並因此需要多位元組字元集 (MBCS) 編碼。  

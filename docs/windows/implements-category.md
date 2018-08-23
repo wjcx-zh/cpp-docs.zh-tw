@@ -17,63 +17,68 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28df44096f3b61eb4ada17ec824292281edee602
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e566e50cc0fed4b17b085451410a1d0c3f81fb38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013710"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597543"
 ---
 # <a name="implementscategory"></a>implements_category
-指定目標類別所實作的元件類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ implements_category(  
-   implements_category="uuid"  
-) ]  
-```  
-  
-### <a name="parameters"></a>參數  
- *implements_category*  
- 實作的類別目錄的識別碼。  
-  
-## <a name="remarks"></a>備註  
- **Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](http://msdn.microsoft.com/library/windows/desktop/ms694322)。  
-  
- 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。  
-  
-## <a name="example"></a>範例  
- 下列程式碼可讓您指定下列物件會實作`Control`類別目錄。  
-  
-```cpp  
-// cpp_attr_ref_implements_category.cpp  
-// compile with: /LD  
-#define _ATL_ATTRIBUTES  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[module (name="MyLib")];  
-[ coclass, implements_category("CATID_Control"),  
-  uuid("20a0d0cc-5172-40f5-99ae-5e032f3205ae")]  
-class CMyClass {};  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**類別**，**結構**|  
-|**可重複**|[是]|  
-|**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [COM 屬性](../windows/com-attributes.md)   
- [類別屬性](../windows/class-attributes.md)   
- [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
+
+指定目標類別所實作的元件類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ implements_category(
+   implements_category="uuid"
+) ]
+```
+
+### <a name="parameters"></a>參數
+
+*implements_category*  
+實作的類別目錄的識別碼。
+
+## <a name="remarks"></a>備註
+
+**Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](http://msdn.microsoft.com/library/windows/desktop/ms694322)。
+
+此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+
+## <a name="example"></a>範例
+
+下列程式碼可讓您指定下列物件會實作`Control`類別目錄。
+
+```cpp
+// cpp_attr_ref_implements_category.cpp
+// compile with: /LD
+#define _ATL_ATTRIBUTES
+#include "atlbase.h"
+#include "atlcom.h"
+
+[module (name="MyLib")];
+[ coclass, implements_category("CATID_Control"),
+  uuid("20a0d0cc-5172-40f5-99ae-5e032f3205ae")]
+class CMyClass {};
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**類別**，**結構**|
+|**可重複**|[是]|
+|**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[COM 屬性](../windows/com-attributes.md)  
+[類別屬性](../windows/class-attributes.md)  
+[IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)  

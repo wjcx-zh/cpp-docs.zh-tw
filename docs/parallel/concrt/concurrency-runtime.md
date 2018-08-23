@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208385"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608263"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的平行應用程式。 它會引發抽象的層級，讓您不需要管理並行存取相關的基礎結構詳細資料。 您也可以使用它來指定符合您應用程式服務需求品質的排程原則。 使用這些資源以協助您開始使用並行執行階段。  
@@ -111,7 +111,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |[並行執行階段和 Visual Studio 2010 中的平行模式程式庫程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|  
 |[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|  
 |[在 c + + 和機器碼論壇中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|  
-|[平行程式設計](/dotnet/standard/parallel-programming/index)|教導您有關可用於 [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]的平行程式設計模型。|  
+|[平行程式設計](/dotnet/standard/parallel-programming/index)|將教導您有關使用.NET Framework 中平行程式設計模型。|  
   
 ## <a name="see-also"></a>另請參閱  
  [參考資料](../../parallel/concrt/reference/reference-concurrency-runtime.md)

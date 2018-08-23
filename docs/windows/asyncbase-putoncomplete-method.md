@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c62119b87183fe6a60c0ed4d987cbd12788d8a0d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646968"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602682"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete 方法
-指定的值設定完成事件處理常式的位址。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   PutOnComplete  
-)(TComplete* completeHandler);  
-```  
-  
-### <a name="parameters"></a>參數  
- *completeHandler*  
- 設定完成事件處理常式的位址。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** async.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [AsyncBase 類別](../windows/asyncbase-class.md)
+
+指定的值設定完成事件處理常式的位址。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   PutOnComplete
+)(TComplete* completeHandler);
+```
+
+### <a name="parameters"></a>參數
+
+*completeHandler*  
+設定完成事件處理常式的位址。
+
+## <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+
+## <a name="requirements"></a>需求
+
+**標頭：** async.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[AsyncBase 類別](../windows/asyncbase-class.md)

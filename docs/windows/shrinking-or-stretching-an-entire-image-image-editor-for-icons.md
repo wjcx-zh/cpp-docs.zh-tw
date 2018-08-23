@@ -17,27 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22d504966fbc162dfe695156a98c0dec86155a9f
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 76966d5d39f9b4407268e5932dc3f633e0b36cd1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646994"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603079"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>縮小或延伸整個影像 (圖示影像編輯器)
-### <a name="to-shrink-or-stretch-an-entire-image"></a>若要縮小或延伸整個影像  
-  
-1.  選取整個影像。  
-  
-     如果目前選取的映像的一部分，而且您想要選取整個影像，按一下目前的選取範圍框線外映像上的任何位置。  
-  
-2.  按住**Shift**鍵並拖曳調整大小控點，直到映像所需的大小。  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>需求  
- 無  
-  
-## <a name="see-also"></a>另請參閱  
- [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
- [調整影像大小](../windows/resizing-an-image-image-editor-for-icons.md)
+
+### <a name="to-shrink-or-stretch-an-entire-image"></a>若要縮小或延伸整個影像
+
+1. 選取整個影像。
+
+   如果目前選取的映像的一部分，而且您想要選取整個影像，按一下目前的選取範圍框線外映像上的任何位置。
+
+2. 按住**Shift**鍵並拖曳調整大小控點，直到映像所需的大小。
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>需求
+
+無
+
+## <a name="see-also"></a>另請參閱
+
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[調整影像大小](../windows/resizing-an-image-image-editor-for-icons.md)

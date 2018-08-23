@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a03f0dcb8f6d35c1d5fc8aec5bf1cc899d575861
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cd3629fcaf8507abd2baf6cded3c6a63bc6fd64f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653068"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611496"
 ---
 # <a name="asyncbasecheckvalidstatefordelegatecall-method"></a>AsyncBase::CheckValidStateForDelegateCall 方法
-測試是否可以修改委派屬性，在目前的非同步狀態。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-inline HRESULT CheckValidStateForDelegateCall();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 如果可以修改委派屬性，為 S_OK否則，E_ILLEGAL_METHOD_CALL。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** async.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [AsyncBase 類別](../windows/asyncbase-class.md)
+
+測試是否可以修改委派屬性，在目前的非同步狀態。
+
+## <a name="syntax"></a>語法
+
+```cpp
+inline HRESULT CheckValidStateForDelegateCall();
+```
+
+## <a name="return-value"></a>傳回值
+
+如果可以修改委派屬性，為 S_OK否則，E_ILLEGAL_METHOD_CALL。
+
+## <a name="requirements"></a>需求
+
+**標頭：** async.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[AsyncBase 類別](../windows/asyncbase-class.md)

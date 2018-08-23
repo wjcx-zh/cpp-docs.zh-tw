@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cffbcde4196f37bd97dac0f67ecefa6615d6b2ba
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: eec019d9eb120f1918cb81c9d7ba88f13d81ee38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014922"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608556"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ 資料成員
-包含目前的基礎鎖定變數**SRWLock**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-SRWLOCK SRWLock_;  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [SRWLock 類別](../windows/srwlock-class.md)
+
+包含目前的基礎鎖定變數**SRWLock**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+SRWLOCK SRWLock_;
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[SRWLock 類別](../windows/srwlock-class.md)

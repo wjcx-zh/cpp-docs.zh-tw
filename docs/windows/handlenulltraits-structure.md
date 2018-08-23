@@ -17,44 +17,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 3a49a1a1ac4495c7697fc041f8fcf217850f09d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645434"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609420"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits 結構
-定義未初始化的控制代碼的一般特性。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-struct HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-typedefs"></a>公用 Typedefs  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|`Type`|控制代碼的同義字。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[HANDLENullTraits::Close 方法](../windows/handlenulltraits-close-method.md)|關閉指定的控制代碼。|  
-|[HANDLENullTraits::GetInvalidValue 方法](../windows/handlenulltraits-getinvalidvalue-method.md)|表示無效的控制代碼。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `HANDLENullTraits`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+定義未初始化的控制代碼的一般特性。
+
+## <a name="syntax"></a>語法
+
+```cpp
+struct HANDLENullTraits;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-typedefs"></a>公用 Typedefs
+
+|名稱|描述|
+|----------|-----------------|
+|`Type`|控制代碼的同義字。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[HANDLENullTraits::Close 方法](../windows/handlenulltraits-close-method.md)|關閉指定的控制代碼。|
+|[HANDLENullTraits::GetInvalidValue 方法](../windows/handlenulltraits-getinvalidvalue-method.md)|表示無效的控制代碼。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`HANDLENullTraits`
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

@@ -17,61 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9c9d347b319afc3ee84818e74029a98b1aa5484
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4f8ff470af7b7c825fb1c1dc7bf118e969a4b992
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014295"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603049"
 ---
 # <a name="pragma"></a>pragma
-發出指定的字串到產生的.idl 檔案，而不使用引號。 
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ pragma(  
-   pragma_statement  
-) ];  
-```  
-  
-### <a name="parameters"></a>參數  
- *pragma_statement*  
- Pragma，您想要移至所產生的.idl 檔案。  
-  
-## <a name="remarks"></a>備註  
- **Pragma** c + + 屬性具有相同的功能[pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL 屬性。  
-  
-## <a name="example"></a>範例  
-  
-```cpp  
-// cpp_attr_ref_pragma.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[module(name="MyLib")];  
-[pragma(pack(4))];  
-  
-[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface A  
-{  
-   [id(1)] HRESULT MyMethod ([in, satype("BSTR")] SAFEARRAY **p);  
-};  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|任何位置|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [獨立屬性](../windows/stand-alone-attributes.md)   
- [pack](../preprocessor/pack.md)   
+
+發出指定的字串到產生的.idl 檔案，而不使用引號。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ pragma(
+   pragma_statement
+) ];
+```
+
+### <a name="parameters"></a>參數
+
+*pragma_statement*  
+Pragma，您想要移至所產生的.idl 檔案。
+
+## <a name="remarks"></a>備註
+
+**Pragma** c + + 屬性具有相同的功能[pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL 屬性。
+
+## <a name="example"></a>範例
+
+```cpp
+// cpp_attr_ref_pragma.cpp
+// compile with: /LD
+#include "unknwn.h"
+[module(name="MyLib")];
+[pragma(pack(4))];
+
+[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]
+__interface A
+{
+   [id(1)] HRESULT MyMethod ([in, satype("BSTR")] SAFEARRAY **p);
+};
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|任何位置|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[獨立屬性](../windows/stand-alone-attributes.md)  
+[pack](../preprocessor/pack.md)  

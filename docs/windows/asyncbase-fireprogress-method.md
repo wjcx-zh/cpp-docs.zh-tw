@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35faad82357b0f449d407787840c865b798427f1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 91cf005e3dc1d088a5c7d0e664f67610fac28843
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642005"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606245"
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress 方法
-叫用目前的進度事件處理常式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-void FireProgress(  
-   const typename ProgressTraits::Arg2Type arg  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *arg*  
- 要叫用的事件處理常式方法。  
-  
-## <a name="remarks"></a>備註  
- `ProgressTraits` 衍生自[ArgTraitsHelper 結構](../windows/argtraitshelper-structure.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** async.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [AsyncBase 類別](../windows/asyncbase-class.md)
+
+叫用目前的進度事件處理常式。
+
+## <a name="syntax"></a>語法
+
+```cpp
+void FireProgress(
+   const typename ProgressTraits::Arg2Type arg
+);
+```
+
+### <a name="parameters"></a>參數
+
+*arg*  
+要叫用的事件處理常式方法。
+
+## <a name="remarks"></a>備註
+
+`ProgressTraits` 衍生自[ArgTraitsHelper 結構](../windows/argtraitshelper-structure.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** async.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[AsyncBase 類別](../windows/asyncbase-class.md)

@@ -18,29 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019234"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594399"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>將檔案加入空的 Win32 應用程式
-### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>將檔案加入空的 Windows 桌面應用程式  
-  
-1.  在 **方案總管**中選取目錄。  
-  
-2.  以滑鼠右鍵按一下目錄名稱，按一下快顯功能表的 [加入]  ，然後按一下 [現有項目] 。  
-  
-3.  在 [加入現有項目] 對話方塊中，巡覽至想要加入專案中的檔案。  
-  
-4.  按一下 [確定 **Deploying Office Solutions**]。  
-  
- 若要新增非來源、 標頭，也加入專案的資源檔的檔案，以滑鼠右鍵按一下**解決方案**中的節點**方案總管 中**相同的方式，將檔案加入至專案。 A**其他**資料夾將建立來保存您的專案中的其他檔案。  
-  
+
+### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>將檔案加入空的 Windows 桌面應用程式
+
+1. 在 **方案總管**中選取目錄。
+
+2. 以滑鼠右鍵按一下目錄名稱，按一下快顯功能表的 [加入]  ，然後按一下 [現有項目] 。
+
+3. 在 [加入現有項目] 對話方塊中，巡覽至想要加入專案中的檔案。
+
+4. 按一下 [確定 **Deploying Office Solutions**]。
+
+若要新增非來源、 標頭，也加入專案的資源檔的檔案，以滑鼠右鍵按一下**解決方案**中的節點**方案總管 中**相同的方式，將檔案加入至專案。 A**其他**資料夾將建立來保存您的專案中的其他檔案。
+
 > [!NOTE]
->  建置專案之前，您必須指定這些檔案的組建選項，讓您已完成的應用程式能夠正確地包含它們。 如需詳細資訊，請參閱 [使用屬性頁指定專案設定](../ide/property-pages-visual-cpp.md) 和 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [建立空白的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
- [部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+> 建置專案之前，您必須指定這些檔案的組建選項，讓您已完成的應用程式能夠正確地包含它們。 如需詳細資訊，請參閱 [使用屬性頁指定專案設定](../ide/property-pages-visual-cpp.md) 和 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[建立空的 Windows 傳統型應用程式](../windows/creating-an-empty-windows-desktop-application.md)  
+[部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

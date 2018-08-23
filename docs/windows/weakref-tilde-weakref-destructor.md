@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ae538b66e4e8de7611f7b2f276c354a87dad2ef
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 250286e12d2062bd33c2d2b517e901e7b6c27d55
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017887"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603000"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef 解構函式
-取消初始化目前的執行個體**WeakRef**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-~WeakRef();  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [WeakRef 類別](../windows/weakref-class.md)
+
+取消初始化目前的執行個體**WeakRef**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+~WeakRef();
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[WeakRef 類別](../windows/weakref-class.md)

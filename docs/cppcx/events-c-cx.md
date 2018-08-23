@@ -1,26 +1,26 @@
 ---
-title: 事件 (C + + /CX) |Microsoft 文件
+title: 事件 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089634"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606372"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
-Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用戶端程式碼中的相同元件或其他元件可以訂閱這些事件產生關聯的方法呼叫*事件處理常式*與事件。 多個事件處理常式可以與單一事件相關聯。 當發行物件引發事件時，會導致所有事件處理常式被叫用。 如此一來，訂閱類別可以在發行者引發事件時，執行任何適當的自訂動作。 事件有委派類型，可指定所有事件處理常式必須具有的簽章，才能訂閱事件。  
+Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用戶端程式碼中的相同元件或其他元件可以訂閱這些事件建立關聯之後呼叫的方法*事件處理常式*與事件。 多個事件處理常式可以與單一事件相關聯。 當發行物件引發事件時，會導致所有事件處理常式被叫用。 如此一來，訂閱類別可以在發行者引發事件時，執行任何適當的自訂動作。 事件有委派類型，可指定所有事件處理常式必須具有的簽章，才能訂閱事件。  
   
 ## <a name="consuming-events-in-windows-components"></a>在 Windows 元件中使用事件  
- Windows 執行階段中的許多元件中公開事件。 例如，當感應器報告有新的光源值，LightSensor 物件就會引發 ReadingChanged 事件。 當您在程式中使用 LightSensor 物件時，可以定義要在 ReadingChanged 事件引發時呼叫的方法。 方法可以執行您所要的任何動作;唯一的需求是其簽章必須符合如需有關如何建立委派事件處理常式及訂閱事件，請參閱作為委派的簽章[委派](../cppcx/delegates-c-cx.md)。  
+ Windows 執行階段中的許多元件會公開事件。 例如，當感應器報告有新的光源值，LightSensor 物件就會引發 ReadingChanged 事件。 當您在程式中使用 LightSensor 物件時，可以定義要在 ReadingChanged 事件引發時呼叫的方法。 方法可以執行您要它唯一的需求是其簽章必須符合如需有關如何建立委派事件處理常式及訂閱事件，請參閱作為委派的簽章[委派](../cppcx/delegates-c-cx.md)。  
   
 ## <a name="creating-custom-events"></a>建立自訂事件  
   
@@ -59,7 +59,7 @@ Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用�
  事件來源叫用事件接收器上之事件處理常式的順序並不一定，每個呼叫可能都不一樣。  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統](../cppcx/type-system-c-cx.md)   
+ [型別系統](../cppcx/type-system-c-cx.md)   
  [委派](../cppcx/delegates-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

@@ -17,37 +17,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3252096216757c34e93933bcdd91f9da2c5bb14f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4422dea0b0bfb07904d0c4defad8f33281a51bec
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015965"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609858"
 ---
 # <a name="makeallocatorallocate-method"></a>MakeAllocator::Allocate 方法
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-__forceinline void* Allocate();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功，已配置的記憶體; 指標否則，請**nullptr**。  
-  
-## <a name="remarks"></a>備註  
- 配置記憶體，並將它與目前相關聯**MakeAllocator**物件。  
-  
- 配置的記憶體大小是目前所指定之類型的大小**MakeAllocator**樣板參數。  
-  
- 開發人員必須覆寫只**Allocate()** 方法，以實作不同的記憶體配置模型。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [MakeAllocator 類別](../windows/makeallocator-class.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+__forceinline void* Allocate();
+```
+
+## <a name="return-value"></a>傳回值
+
+如果成功，已配置的記憶體; 指標否則，請**nullptr**。
+
+## <a name="remarks"></a>備註
+
+配置記憶體，並將它與目前相關聯**MakeAllocator**物件。
+
+配置的記憶體大小是目前所指定之類型的大小**MakeAllocator**樣板參數。
+
+開發人員必須覆寫只**Allocate()** 方法，以實作不同的記憶體配置模型。
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[MakeAllocator 類別](../windows/makeallocator-class.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

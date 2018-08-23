@@ -26,34 +26,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e6cb463f95bc68d6880fb593ba394ec94d585696
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648206"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597332"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>色彩視窗 (圖示影像編輯器)
-**色彩**視窗有兩個部分：  
-  
-1.  **色彩調色盤**，即表示您可以使用的色彩的色彩範例陣列。 您可以在使用圖形工具時，按一下範例來選取前景和背景色彩。  
-  
-2.  **色彩指示器**，其中顯示的前景和背景色彩和螢幕及反向色彩選取器。  
-  
-     ![色彩視窗](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-色彩視窗  
-  
+
+**色彩**視窗有兩個部分：
+
+1. **色彩調色盤**，即表示您可以使用的色彩的色彩範例陣列。 您可以在使用圖形工具時，按一下範例來選取前景和背景色彩。
+
+2. **色彩指示器**，其中顯示的前景和背景色彩和螢幕及反向色彩選取器。
+
+   ![色彩視窗](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+色彩視窗
+
 > [!NOTE]
->  **螢幕色彩**並**反向色彩**工具僅適用於圖示和游標。  
-  
- 您可以使用**色彩**視窗，其中[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)。  
-  
-## <a name="requirements"></a>需求  
- 無  
-  
-## <a name="see-also"></a>另請參閱  
- [顯示或隱藏色彩視窗](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
- [裝置影像中建立透明或反向區域](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
- [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
- [自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
- [圖示影像編輯器](../windows/image-editor-for-icons.md)
+> **螢幕色彩**並**反向色彩**工具僅適用於圖示和游標。
+
+您可以使用**色彩**視窗，其中[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)。
+
+## <a name="requirements"></a>需求
+
+無
+
+## <a name="see-also"></a>另請參閱
+
+[顯示或隱藏色彩視窗](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)  
+[在裝置影像中建立透明或反向區域](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
+[快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)  
+[自訂色彩選取器對話方塊](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)  
+[圖示影像編輯器](../windows/image-editor-for-icons.md)

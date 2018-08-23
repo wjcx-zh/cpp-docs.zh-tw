@@ -17,60 +17,66 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18f7f08362c14ab0d09019a5b9348750c96ddbd7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d51bbad058766af6e5e2e75f17866403ba588cd3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643406"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602696"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase 類別
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template <  
-   typename T  
->  
-class ComPtrRefBase;  
-```  
-  
-### <a name="parameters"></a>參數  
- *T*  
- A [ComPtr\<T >](../windows/comptr-class.md)型別或型別衍生它，不只是將所代表之介面**ComPtr**。  
-  
-## <a name="remarks"></a>備註  
- 表示基底類別[ComPtrRef](../windows/comptrref-class.md)類別。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-typedefs"></a>公用 Typedefs  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|`InterfaceType`|範本參數類型的同義字*T*。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable** 運算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對`IInspectable`介面。|  
-|[ComPtrRefBase::operator IUnknown** 運算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對`IUnknown`介面。|  
-  
-### <a name="protected-data-members"></a>受保護的資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[ComPtrRefBase::ptr_ 資料成員](../windows/comptrrefbase-ptr-data-member.md)|目前的範本參數所指定之類型的指標。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `ComPtrRefBase`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template <
+   typename T
+>
+class ComPtrRefBase;
+```
+
+### <a name="parameters"></a>參數
+
+*T*  
+A [ComPtr\<T >](../windows/comptr-class.md)型別或型別衍生它，不只是將所代表之介面**ComPtr**。
+
+## <a name="remarks"></a>備註
+
+表示基底類別[ComPtrRef](../windows/comptrref-class.md)類別。
+
+## <a name="members"></a>成員
+
+### <a name="public-typedefs"></a>公用 Typedefs
+
+|名稱|描述|
+|----------|-----------------|
+|`InterfaceType`|範本參數類型的同義字*T*。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[ComPtrRefBase::operator IInspectable** 運算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對`IInspectable`介面。|
+|[ComPtrRefBase::operator IUnknown** 運算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|將目前的轉換[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標至-a-指標-對`IUnknown`介面。|
+
+### <a name="protected-data-members"></a>受保護的資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[ComPtrRefBase::ptr_ 資料成員](../windows/comptrrefbase-ptr-data-member.md)|目前的範本參數所指定之類型的指標。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`ComPtrRefBase`
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

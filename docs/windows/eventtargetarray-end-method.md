@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 341333b0c4f51c42004ad638a5a8f4fcb7d7e466
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596487"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End 方法
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-ComPtr<IUnknown>* End();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 內部陣列中的事件處理常式的最後一個項目位址。  
-  
-## <a name="remarks"></a>備註  
- 取得內部陣列中的事件處理常式的最後一個元素的位址。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** event.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [EventTargetArray 類別](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+ComPtr<IUnknown>* End();
+```
+
+## <a name="return-value"></a>傳回值
+
+內部陣列中的事件處理常式的最後一個項目位址。
+
+## <a name="remarks"></a>備註
+
+取得內部陣列中的事件處理常式的最後一個元素的位址。
+
+## <a name="requirements"></a>需求
+
+**標頭：** event.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[EventTargetArray 類別](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

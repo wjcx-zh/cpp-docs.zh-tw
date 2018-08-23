@@ -15,55 +15,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: de3c7fe60432acfc3096ea19fc00cf371a7c4e92
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605096"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610502"
 ---
 # <a name="hstringreference-class"></a>HStringReference 類別
-表示從現有字串建立的 HSTRING。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-class HStringReference;  
-```  
-  
-## <a name="remarks"></a>備註  
- 新的 HSTRING 中支援緩衝區的存留期不受 Windows 執行階段。 呼叫端配置來源字串上的堆疊框架，以避免堆積配置，並排除記憶體流失的風險。 此外，呼叫端必須確保來源字串附加的 HSTRING 的存留期間會保持不變。 如需詳細資訊，請參閱 < [WindowsCreateStringReference 函式](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[HStringReference::HStringReference 建構函式](../windows/hstringreference-hstringreference-constructor.md)|初始化的新執行個體**HStringReference**類別。|  
-  
-### <a name="members"></a>成員  
-  
-|成員|描述|  
-|------------|-----------------|  
-|[HStringReference::CopyTo 方法](../windows/hstringreference-copyto-method.md)|複製目前**HStringReference**到 HSTRING 物件的物件。|  
-|[HStringReference::Get 方法](../windows/hstringreference-get-method.md)|擷取基礎 HSTRING 控制代碼的值。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[HStringReference::Operator= 運算子](../windows/hstringreference-operator-assign-operator.md)|將另一個值移**HStringReference**物件與目前**HStringReference**物件。|  
-|[HStringReference::Operator== 運算子](../windows/hstringreference-operator-equality-operator.md)|指出兩個參數是否相等。|  
-|[HStringReference::Operator!= 運算子](../windows/hstringreference-operator-inequality-operator.md)|表示兩個參數是否不相等。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `HStringReference`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)
+
+表示從現有字串建立的 HSTRING。
+
+## <a name="syntax"></a>語法
+
+```cpp
+class HStringReference;
+```
+
+## <a name="remarks"></a>備註
+
+新的 HSTRING 中支援緩衝區的存留期不受 Windows 執行階段。 呼叫端配置來源字串上的堆疊框架，以避免堆積配置，並排除記憶體流失的風險。 此外，呼叫端必須確保來源字串附加的 HSTRING 的存留期間會保持不變。 如需詳細資訊，請參閱 < [WindowsCreateStringReference 函式](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[HStringReference::HStringReference 建構函式](../windows/hstringreference-hstringreference-constructor.md)|初始化的新執行個體**HStringReference**類別。|
+
+### <a name="members"></a>成員
+
+|成員|描述|
+|------------|-----------------|
+|[HStringReference::CopyTo 方法](../windows/hstringreference-copyto-method.md)|複製目前**HStringReference**到 HSTRING 物件的物件。|
+|[HStringReference::Get 方法](../windows/hstringreference-get-method.md)|擷取基礎 HSTRING 控制代碼的值。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[HStringReference::Operator= 運算子](../windows/hstringreference-operator-assign-operator.md)|將另一個值移**HStringReference**物件與目前**HStringReference**物件。|
+|[HStringReference::Operator== 運算子](../windows/hstringreference-operator-equality-operator.md)|指出兩個參數是否相等。|
+|[HStringReference::Operator!= 運算子](../windows/hstringreference-operator-inequality-operator.md)|表示兩個參數是否不相等。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`HStringReference`
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: valuetype 類別 |Microsoft 文件'
+title: 'Platform:: valuetype 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1994aa6445c67bae138a51f1d3eebb2a54f9b17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12766e81ddd90b257830b6bf5adefd2562781d9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088202"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611043"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType 類別
 實值類型執行個體的基底類別。  
@@ -49,7 +49,7 @@ public ref class ValueType : Object
   
  **中繼資料：** platform.winmd  
 
-## <a name="tostring"></a> ValueType::ToString 方法
+## <a name="tostring"></a> Valuetype:: Tostring 方法
 傳回物件的字串表示。  
   
 ### <a name="syntax"></a>語法  

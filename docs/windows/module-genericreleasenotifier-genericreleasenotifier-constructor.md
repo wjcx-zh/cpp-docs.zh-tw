@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5aa78562c934c41b2ff2ab7b381f6b2612426651
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014584"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612308"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier 建構函式
-初始化的新執行個體**module:: genericreleasenotifier**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-GenericReleaseNotifier(  
-   T callback,   
-   bool release  
-) throw() : ReleaseNotifier(release), callback_(callback);  
-```  
-  
-### <a name="parameters"></a>參數  
- *回呼*  
- Lambda、 函式或可以使用括號函式運算子叫用的函式指標事件處理常式 (`()`)。  
-  
- *release*  
- 指定 **，則為 true**若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否則指定**false**。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Module::GenericReleaseNotifier 類別](../windows/module-genericreleasenotifier-class.md)
+
+初始化的新執行個體**module:: genericreleasenotifier**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>參數
+
+*回呼*  
+Lambda、 函式或可以使用括號函式運算子叫用的函式指標事件處理常式 (`()`)。
+
+*release*  
+指定 **，則為 true**若要啟用呼叫基礎[模組:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)方法; 否則指定**false**。
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Module::GenericReleaseNotifier 類別](../windows/module-genericreleasenotifier-class.md)

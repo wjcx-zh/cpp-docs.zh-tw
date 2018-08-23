@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019926"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595468"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列舉
-指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="values"></a>值  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|`InProc`|同處理序伺服器。|  
-|`OutOfProc`|跨處理序伺服器。|  
-|`DisableCaching`|停用在模組上的快取機制。|  
-|`InProcDisableCaching`|組合`InProc`和`DisableCaching`。|  
-|`OutOfProcDisableCaching`|組合`OutOfProc`和`DisableCaching`。|  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+
+指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。
+
+## <a name="syntax"></a>語法
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>成員
+
+### <a name="values"></a>值
+
+|名稱|描述|
+|----------|-----------------|
+|`InProc`|同處理序伺服器。|
+|`OutOfProc`|跨處理序伺服器。|
+|`DisableCaching`|停用在模組上的快取機制。|
+|`InProcDisableCaching`|組合`InProc`和`DisableCaching`。|
+|`OutOfProcDisableCaching`|組合`OutOfProc`和`DisableCaching`。|
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b432229f9ada4c1a3dbccfc9b71557827773b41c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 343f638c67acf4af627f9f65899d49c78c02fb13
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645902"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608752"
 ---
 # <a name="criticalsectioncriticalsection-destructor"></a>CriticalSection::~CriticalSection 解構函式
-取消初始化並終結目前**CriticalSection**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-WRL_NOTHROW ~CriticalSection();  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [CriticalSection 類別](../windows/criticalsection-class.md)
+
+取消初始化並終結目前**CriticalSection**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+WRL_NOTHROW ~CriticalSection();
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[CriticalSection 類別](../windows/criticalsection-class.md)

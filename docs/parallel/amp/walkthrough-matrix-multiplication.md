@@ -1,5 +1,5 @@
 ---
-title: 逐步解說： 矩陣乘法 |Microsoft 文件
+title: 逐步解說： 矩陣乘法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,59 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3aaf94bbe94dda019cc585b82744dbdf2332ffab
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693191"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604486"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
-此逐步解說示範如何使用 c + + AMP 加速矩陣乘法的執行。 會呈現兩種演算法，另一個則沒有可並排顯示，另一個並排顯示。  
+此逐步解說示範如何使用 c + + AMP 來加速執行矩陣乘法。 會顯示兩種演算法，另一個則沒有並排顯示，一個用於並排顯示。  
   
 ## <a name="prerequisites"></a>必要條件  
- 在開始之前：  
+ 
+在開始之前：  
   
--   讀取[c + + AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。  
+- 讀取[c + + AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。  
   
--   讀取[使用磚](../../parallel/amp/using-tiles.md)。  
+- 讀取[使用磚](../../parallel/amp/using-tiles.md)。  
   
--   請確定[!INCLUDE[win7](../../build/includes/win7_md.md)]， [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]， [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)]，或[!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]安裝在電腦上。  
+- 請確定您的電腦上安裝的 Windows 7、 Windows 8、 Windows Server 2008 R2 或 Windows Server 2012。  
   
 ### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  在 Visual Studio 中的功能表列上選擇 **檔案**，**新增**，**專案**。  
+1. 在 Visual Studio 中的功能表列上選擇 **檔案** > **新增** > **專案**。  
   
-2.  在下**已安裝**在範本窗格中，選取**Visual c + +**。  
+2. 底下**已安裝**在 [範本] 窗格中，選取**Visual c + +**。  
   
-3.  選取**空專案**，輸入`MatrixMultiply`中**名稱**方塊，然後再選擇**確定** 按鈕。  
+3. 選取**空專案**，輸入`MatrixMultiply`中**名稱** 方塊中，然後選擇**確定** 按鈕。  
   
-4.  選擇 [下一步] 按鈕。  
+4. 選擇 [下一步] 按鈕。  
   
-5.  在**方案總管] 中**，開啟捷徑功能表**原始程式檔**，然後選擇 [**新增**，**新項目**。  
+5. 中**方案總管**，開啟捷徑功能表**原始程式檔**，然後選擇**新增** > **新項目**。  
   
-6.  在**加入新項目**對話方塊中，選取**c + + 檔 (.cpp)**，輸入`MatrixMultiply.cpp`中**名稱**方塊，然後再選擇**新增**按鈕。  
+6. 在 **加入新項目**對話方塊中，選取**c + + 檔 (.cpp)**，輸入`MatrixMultiply.cpp`中**名稱** 方塊中，然後選擇 **新增**按鈕。  
   
-## <a name="multiplication-without-tiling"></a>乘法，而不並排顯示  
- 在本節中，請考慮乘法運算的兩個矩陣 A 和 B 的定義方式如下：  
+## <a name="multiplication-without-tiling"></a>乘法，而不需要並排顯示  
+ 
+在本節中，請考慮 A 和 B，且會定義，如下所示的兩個矩陣相乘︰  
   
- ![3&#45;由&#45;2 矩陣](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+![3&#45;的&#45;2 的矩陣](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2&#45;由&#45;3 的矩陣](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+![2&#45;的&#45;3 的矩陣](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
- A 是 3-2 矩陣，而 B 是 2-3 的矩陣。 由 B 相乘的乘積是下列 3-3 的矩陣。 產品的計算方式乘以 A 是 B 項的資料行的資料列。  
+A 是 3-2 矩陣，而 B 是 2-3 的矩陣。 由 B 相乘的乘積是下列 3-3 矩陣。 產品是計算方式是乘的 B 項的資料行的資料列。  
   
- ![3&#45;由&#45;3 的矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+![3&#45;的&#45;3 的矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>要相乘，而不使用 c + + AMP  
   
-1.  開啟 MatrixMultiply.cpp 並取代現有的程式碼中使用下列程式碼。  
+1. 開啟 MatrixMultiply.cpp，並使用下列的程式碼取代現有的程式碼。  
   
 ```cpp  
 #include <iostream>  
   
 void MultiplyWithOutAMP() {  
-  
     int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};  
     int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};  
     int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};  
@@ -89,15 +90,15 @@ void main() {
   
     The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.  
   
-2.  在功能表列上，依序選擇 [檔案] 和 [全部儲存]。  
+2. 在功能表列上，依序選擇 [檔案] > [全部儲存]。  
   
-3.  選擇 F5 鍵盤快速鍵，開始偵錯，並檢查輸出正確。  
+3. 選擇**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。  
   
-4.  選擇 Enter 以結束應用程式。  
+4. 選擇**Enter**結束應用程式。  
   
-### <a name="to-multiply-by-using-c-amp"></a>要使用 c + + AMP 相乘  
+### <a name="to-multiply-by-using-c-amp"></a>若要將乘以使用 c + + AMP  
   
-1.  在 MatrixMultiply.cpp，加入下列程式碼之前`main`方法。  
+1. 在 MatrixMultiply.cpp，新增下列程式碼，再`main`方法。  
   
 ```cpp  
 void MultiplyWithAMP() {  
@@ -111,7 +112,6 @@ void MultiplyWithAMP() {
 
     array_view<int, 2> product(3, 3, productMatrix);
 
- 
     parallel_for_each(product.extent,  
         [=] (index<2> idx) restrict(amp) {  
             int row = idx[0];  
@@ -135,14 +135,14 @@ void MultiplyWithAMP() {
   
     The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.  
   
-2.  加入下列`include`和`using`MatrixMultiply.cpp 頂端的陳述式。  
+2. 新增下列`include`和`using`MatrixMultiply.cpp 頂端的陳述式。  
   
 ```cpp  
 #include <amp.h>  
 using namespace concurrency;  
 ```  
   
-3.  修改`main`方法呼叫`MultiplyWithAMP`方法。  
+3. 修改`main`方法來呼叫`MultiplyWithAMP`方法。  
   
 ```cpp  
 void main() {  
@@ -152,53 +152,53 @@ void main() {
 }  
 ```  
   
-4.  選擇 Ctrl + F5 鍵盤快速鍵，啟動偵錯，並檢查輸出正確。  
+4. 選擇**Ctrl**+**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。  
   
-5.  選擇空格鍵結束應用程式。  
+5. 選擇**空格鍵**結束應用程式。  
   
 ## <a name="multiplication-with-tiling"></a>乘法與並排顯示  
- 並排顯示是您資料的資料分割為大小相等的子集，稱為磚的技術。 三個項目變更時使用並排顯示。  
+ 
+並排顯示是您資料的資料分割為大小相等的子集，稱為磚的技術。 三個項目變更時使用並排顯示。  
   
--   您可以建立`tile_static`變數。 中的資料存取`tile_static`空間可以多次比更快的存取權的全域空間中的資料。 執行個體`tile_static`變數會建立每個圖格，並在磚中的所有執行緒都有變數的存取權。 並排顯示的主要優點是提升的效能，因為`tile_static`存取。  
+- 您可以建立`tile_static`變數。 中的資料存取`tile_static`空間可以是許多倍比在全域空間資料的存取權。 執行個體`tile_static`變數是每個 tile 建立，且 tile 中的所有執行緒存取的變數。 並排顯示的主要優點是提升的效能，因為`tile_static`存取。  
   
--   您可以呼叫[tile_barrier:: wait](reference/tile-barrier-class.md#wait)方法，以停止所有一個圖格指定一行程式碼中的執行緒。 您無法保證順序執行緒將只執行中，所有執行緒在一個圖格會在呼叫停止`tile_barrier::wait`它們繼續執行之前。  
+- 您可以呼叫[tile_barrier:: wait](reference/tile-barrier-class.md#wait)停止所有指定一行程式碼的一個 tile 中執行緒的方法。 您無法保證的順序，執行緒將只能在執行中，所有一個 tile 中的執行緒將會停止在對`tile_barrier::wait`它們繼續執行之前。  
 
+- 您具有存取權的執行緒，相對於整個索引`array_view`物件和相對於 tile 的索引。 藉由使用本機的索引，您可以讓您的程式碼容易閱讀及偵錯。  
   
--   您可以存取的執行緒，相對於整個索引`array_view`物件和相對於磚索引。 藉由使用本機的索引，您可以讓您的程式碼容易閱讀及偵錯。  
+若要利用並排顯示中的矩陣相乘，演算法必須分割成磚的 矩陣，然後複製 tile 資料到`tile_static`以利快速存取的變數。 在此範例中，矩陣會分割成相同大小的 submatrices。 找不到乘以 submatrices 的產品。 兩個矩陣和他們的產品，在此範例如下：  
   
- 若要在矩陣乘法利用並排顯示，演算法必須分割成磚的 矩陣，並再複製到圖格資料`tile_static`更快速存取的變數。 在此範例中，矩陣會分割成相同大小的 submatrices。 乘以 submatrices 找到的產品。 兩個矩陣和他們的產品，在此範例如下：  
+![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4&#45;由&#45;4 矩陣](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4&#45;由&#45;4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+![4&#45;的&#45;4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
- ![4&#45;由&#45;4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+矩陣會分割成四個 2 x 2 矩陣，定義如下：  
   
- 矩陣會分割成四個 2 x 2 矩陣的定義方式如下：  
+![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4&#45;由&#45;分割成 2 的 4 矩陣&#45;由&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
- ![4&#45;由&#45;分割成 2 的 4 矩陣&#45;由&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+產品的 A 和 B 可以寫入和計算，如下所示：  
   
- 產品的 A 和 B 可以立即寫入和計算，如下所示：  
+![4&#45;的&#45;分割成 2 的 4 矩陣&#45;的&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
- ![4&#45;由&#45;分割成 2 的 4 矩陣&#45;由&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+因為矩陣`a`透過`h`為 2x2 矩陣的所有產品，而且它們的總和也 2x2 矩陣。 它也會遵循 A * B 是 4 x 4 矩陣，如預期般運作。 若要快速檢查演算法，計算的第一個資料列中的項目，產品中的第一個資料行的值。 在範例中，這會是元素的值中的第一個資料列和第一個資料行`ae + bg`。 您只需要計算的第一個資料行、 第一個資料列`ae`和`bg`每個詞彙。 該值`ae`是`1*1 + 2*5 = 11`。 值`bg`是`3*1 + 4*5 = 23`。 最終的值會是`11 + 23 = 34`，這是正確。  
   
- 因為矩陣`a`透過`h`2x2 矩陣的所有產品，而這些總和也 2x2 矩陣。 它也會遵循 A * B 是 4x4 矩陣中，如預期般。 若要快速檢查演算法，計算值的第一個資料列中的項目，產品中的第一個資料行。 在範例中，這可能會項目的值的第一個資料列和第一個資料行在`ae + bg`。 您只需要第一個資料行，第一個資料列計算`ae`和`bg`每個詞彙。 值`ae`是`1*1 + 2*5 = 11`。 值`bg`是`3*1 + 4*5 = 23`。 最終的值會是`11 + 23 = 34`，這是正確。  
+若要實作這個演算法，將程式碼：  
   
- 若要實作此演算法，程式碼：  
+- 會使用`tiled_extent`物件而非`extent`物件中`parallel_for_each`呼叫。  
   
--   使用`tiled_extent`物件而非`extent`物件存放至`parallel_for_each`呼叫。  
+- 會使用`tiled_index`物件而非`index`物件中`parallel_for_each`呼叫。  
   
--   使用`tiled_index`物件而非`index`物件存放至`parallel_for_each`呼叫。  
+- 建立`tile_static`變數來保存 submatrices。  
   
--   建立`tile_static`變數來保存 submatrices。  
+- 使用`tile_barrier::wait`停止 submatrices 之產品為計算執行緒的方法。  
   
--   使用`tile_barrier::wait`方法來停止執行緒 submatrices 之產品的計算。  
+### <a name="to-multiply-by-using-amp-and-tiling"></a>若要將乘以使用 AMP 和並排顯示  
   
-### <a name="to-multiply-by-using-amp-and-tiling"></a>若要乘以使用 AMP 和並排顯示  
-  
-1.  在 MatrixMultiply.cpp，加入下列程式碼之前`main`方法。  
+1. 在 MatrixMultiply.cpp，新增下列程式碼，再`main`方法。  
   
 ```cpp  
 void MultiplyWithTiling() {  
@@ -271,23 +271,23 @@ void MultiplyWithTiling() {
   
     This example is significantly different than the example without tiling. The code uses these conceptual steps:  
   
-    1.  複製的圖格 [0，0] 的項目`a`到`locA`。 複製的圖格 [0，0] 的項目`b`到`locB`。 請注意，`product`會並排顯示，不`a`和`b`。 因此，您使用全域索引來存取`a, b`，和`product`。 若要呼叫`tile_barrier::wait`非常重要。 它會先停止所有磚中的執行緒，直到同時`locA`和`locB`填滿。  
+    1. 複製的圖格 [0，0] 的項目`a`成`locA`。 複製的圖格 [0，0] 的項目`b`成`locB`。 請注意，`product`並排顯示，不`a`和`b`。 因此，您使用全域索引來存取`a, b`，和`product`。 若要呼叫`tile_barrier::wait`是不可或缺的。 它會先停止所有的磚中的執行緒，等到`locA`和`locB`填滿。  
   
-    2.  Multiply`locA`和`locB`並將結果放在`product`。  
+    2. 乘`locA`並`locB`並將結果放在`product`。  
   
-    3.  複製的圖格 [0，1] 的項目`a`到`locA`。 複製的圖格 [1，0] 的項目`b`到`locB`。  
+    3. 複製的圖格 [0，1] 的項目`a`成`locA`。 複製的圖格 [1，0] 的項目`b`成`locB`。  
   
-    4.  Multiply`locA`和`locB`並將其新增到已在結果`product`。  
+    4. 乘`locA`並`locB`並將其新增至結果對於已處於`product`。  
   
-    5.  完成 [0，0] 磚的乘法。  
+    5. 完成 [0，0] 磚的乘法運算。  
   
-    6.  其他四個磚的重複。 沒有任何索引特別為圖格，執行緒可以依照任何順序執行。 每個執行緒執行，`tile_static`變數會適當地建立每個圖格和呼叫`tile_barrier::wait`控制程式流程。  
+    6. 針對其他四個圖格重複。 沒有任何編製索引專為圖格，執行緒可以執行以任何順序。 當每個執行緒執行時，`tile_static`變數會適當地建立每個圖格和呼叫`tile_barrier::wait`控制程式流程。  
   
-    7.  當您仔細檢查演算法，請注意，載入每個 submatrix`tile_static`兩次的記憶體。 資料傳輸沒有花費的時間。 不過，一旦資料處於`tile_static`記憶體中，資料的存取權會更快。 因為計算產品需要重複的存取 submatrices 中的值，所以是整體效能改善範圍內。 每個演算法，試驗，才能尋找最佳的演算法和並排顯示大小而定。  
+    7. 當您仔細檢查的演算法，請注意，載入每個 submatrix`tile_static`記憶體兩次。 資料傳輸會花費的時間。 不過，一旦資料位於`tile_static`記憶體資料的存取權會更快。 計算產品需要重複的存取 submatrices 中的值，因為沒有整體的效能改善。 每個演算法，測試，才能尋找最佳的演算法和並排顯示大小而定。  
   
-         在非 AMP 和非磚範例中，每個項目 A 和 B 的全域記憶體來計算產品從存取四次。 在圖格範例中，每個項目來存取兩次從全域記憶體和四次`tile_static`記憶體。 這不是效能大幅提高。 不過，如果 A 和 B 1024 x 1024 矩陣和並排顯示大小是 16，會有顯著的效能改善。 在此情況下，每個項目會複製到`tile_static`記憶體只有 16 次並從`tile_static`記憶體 1024年時間。  
+         在非 AMP 和非並排顯示範例中，A 的每個項目，且 B 從來計算產品的全域記憶體存取四次。 在圖格範例中，每個項目來存取兩次從全域記憶體以及四次`tile_static`記憶體。 這不是效能大幅提高。 不過，如果 A 和 B 是 1024 x 1024 矩陣和圖格大小是 16，會有顯著的效能提升。 在此情況下，每個項目會複製到`tile_static`記憶體只有 16 倍，並從存取`tile_static`1024年倍的記憶體。  
   
-2.  修改要呼叫的主要方法`MultiplyWithTiling`方法，如下所示。  
+2. 修改主要的方法，以呼叫`MultiplyWithTiling`方法，如所示。  
   
 ```cpp  
 void main() {  
@@ -298,11 +298,11 @@ void main() {
 }  
 ```  
   
-3.  選擇 Ctrl + F5 鍵盤快速鍵，啟動偵錯，並檢查輸出正確。  
+3. 選擇**Ctrl**+**F5**開始偵錯，並確認輸出正確無誤的鍵盤快速鍵。  
   
-4.  選擇空格鍵以結束應用程式。  
+4. 選擇**空間**列結束應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
-
+ 
+[C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+[逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

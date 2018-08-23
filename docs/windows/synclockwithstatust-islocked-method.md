@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d70a2c316f9e7994292f3dc29cef5bce993778ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015794"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595059"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked 方法
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="remarks"></a>備註  
- 指出是否目前**SyncLockWithStatusT**物件擁有資源，也就是，則**SyncLockWithStatusT**物件*鎖定*。  
-  
-## <a name="return-value"></a>傳回值  
- **真**如果**SyncLockWithStatusT**物件是否已鎖定，否則**false**。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [SyncLockWithStatusT 類別](../windows/synclockwithstatust-class.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="remarks"></a>備註
+
+指出是否目前**SyncLockWithStatusT**物件擁有資源，也就是，則**SyncLockWithStatusT**物件*鎖定*。
+
+## <a name="return-value"></a>傳回值
+
+**真**如果**SyncLockWithStatusT**物件是否已鎖定，否則**false**。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>另請參閱
+
+[SyncLockWithStatusT 類別](../windows/synclockwithstatust-class.md)

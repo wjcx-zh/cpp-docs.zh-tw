@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75ad1b82d6d4a28db94ef00a234547091969722b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1ad09a5a4794a9db8882a088f90da5046b6f7b9d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020023"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609236"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>InvokeHelper::InvokeHelper 建構函式
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-explicit InvokeHelper(  
-   TCallback callback  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *回呼*  
- 事件處理常式。  
-  
-## <a name="remarks"></a>備註  
- 初始化的新執行個體**InvokeHelper**類別。  
-  
- `TCallback`範本參數會指定事件處理常式的類型。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** event.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [InvokeHelper 結構](../windows/invokehelper-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>參數
+
+*回呼*  
+事件處理常式。
+
+## <a name="remarks"></a>備註
+
+初始化的新執行個體**InvokeHelper**類別。
+
+`TCallback`範本參數會指定事件處理常式的類型。
+
+## <a name="requirements"></a>需求
+
+**標頭：** event.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[InvokeHelper 結構](../windows/invokehelper-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

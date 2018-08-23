@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e67ecd6d5b4968af94ff1a82ad8be24e5b816298
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: bcad153145432997841753828b3b01b728ff365d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014243"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608169"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 方法
-嘗試取得**SRWLock**物件中目前或指定的共用模式**SRWLock**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-WRL_NOTHROW SyncLockShared TryLockShared();  
-WRL_NOTHROW static SyncLockShared TryLockShared(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *lock*  
- 指標**SRWLock**物件。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功， **SRWLock**共用的模式和呼叫的執行緒中的物件會採用的鎖定擁有權。 否則，請**SRWLock**其狀態不正確的物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [SRWLock 類別](../windows/srwlock-class.md)
+
+嘗試取得**SRWLock**物件中目前或指定的共用模式**SRWLock**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+WRL_NOTHROW SyncLockShared TryLockShared();
+WRL_NOTHROW static SyncLockShared TryLockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>參數
+
+*lock*  
+指標**SRWLock**物件。
+
+## <a name="return-value"></a>傳回值
+
+如果成功， **SRWLock**共用的模式和呼叫的執行緒中的物件會採用的鎖定擁有權。 否則，請**SRWLock**其狀態不正確的物件。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[SRWLock 類別](../windows/srwlock-class.md)

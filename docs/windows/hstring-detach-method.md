@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21bfc0516fdcdf3287c5ce2a0203038e88cd290f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4b794dea5c8b3b0fcde82c414e0cf24710cafb86
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015549"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602493"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach 方法
-取消指定的關聯**HString**與其基礎值的物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
+
+取消指定的關聯**HString**與其基礎值的物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
 HSTRING Detach() throw()  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 基礎**HString**卸離作業啟動之前的值。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [HString 類別](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>傳回值
+
+基礎**HString**卸離作業啟動之前的值。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[HString 類別](../windows/hstring-class.md)

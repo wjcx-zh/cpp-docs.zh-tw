@@ -16,36 +16,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0635751fa052c6e6a54d958e9005fee80812f7d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3aada3dac208fcf08a9b0e61ef822c3ab13b7b44
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012098"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605762"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>如何：在資源中搜尋符號
-### <a name="to-find-symbols-in-resources"></a>若要尋找資源中的符號  
-  
-1.  從**編輯**功能表上，選擇**尋找符號**。  
-  
-2.  在 [[尋找符號] 對話方塊中](http://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)，請在**尋找目標**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找 （例如，ID_ACCEL1） 的快速鍵。  
-  
-    > [!TIP]
-    >  若要使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)進行搜尋，您必須使用[檔案中尋找命令](/visualstudio/ide/reference/find-command)從**編輯**功能表，而不是**尋找符號**命令。 若要啟用的規則運算式，您必須擁有**使用： 規則運算式**中所選取的核取方塊[尋找對話方塊](http://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600)。 然後您可以按一下右邊的向右箭號按鈕**Find What**方塊，以顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。  
-  
-3.  選取任一**尋找**選項。  
-  
-4.  按一下 **尋找下一個**。  
-  
-    > [!NOTE]
-    >  您無法在字串、快速鍵或二進位資源中搜尋符號。  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [符號： 資源識別項](../windows/symbols-resource-identifiers.md)   
- [資源檔](../windows/resource-files-visual-studio.md)   
- [資源編輯器](../windows/resource-editors.md)
+
+### <a name="to-find-symbols-in-resources"></a>若要尋找資源中的符號
+
+1. 從**編輯**功能表上，選擇**尋找符號**。
+
+2. 在 [[尋找符號] 對話方塊中](http://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)，請在**尋找目標**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找 （例如，ID_ACCEL1） 的快速鍵。
+
+   > [!TIP]
+   > 若要使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)進行搜尋，您必須使用[檔案中尋找命令](/visualstudio/ide/reference/find-command)從**編輯**功能表，而不是**尋找符號**命令。 若要啟用的規則運算式，您必須擁有**使用： 規則運算式**中所選取的核取方塊[尋找對話方塊](http://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600)。 然後您可以按一下右邊的向右箭號按鈕**Find What**方塊，以顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。
+
+3. 選取任一**尋找**選項。
+
+4. 按一下 **尋找下一個**。
+
+   > [!NOTE]
+   > 您無法在字串、快速鍵或二進位資源中搜尋符號。
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[符號：資源識別項](../windows/symbols-resource-identifiers.md)  
+[資源檔](../windows/resource-files-visual-studio.md)  
+[資源編輯器](../windows/resource-editors.md)

@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fd8f3bd94f163e72c908568a167b870ccf0d8051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649955"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596743"
 ---
 # <a name="deleting-a-version-information-block"></a>刪除版本資訊區塊
-### <a name="to-delete-a-version-information-block"></a>刪除版本資訊區塊  
-  
-1.  按兩下版本資訊資源圖示，在 [資源檢視](../windows/resource-view-window.md)中開啟它。  
-  
-    > [!NOTE]
-    >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
-  
-2.  以滑鼠右鍵按一下您想要刪除的區塊標頭，然後從快顯功能表選擇 [刪除版本資訊區塊]  。  
-  
-     這個命令會刪除選取的標頭，而剩餘的版本資訊則保留不動。 請注意您無法復原此動作。  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
-  
+
+### <a name="to-delete-a-version-information-block"></a>刪除版本資訊區塊
+
+1. 按兩下版本資訊資源圖示，在 [資源檢視](../windows/resource-view-window.md)中開啟它。
+
+   > [!NOTE]
+   > 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+
+2. 以滑鼠右鍵按一下您想要刪除的區塊標頭，然後從快顯功能表選擇 [刪除版本資訊區塊]  。
+
+   這個命令會刪除選取的標頭，而剩餘的版本資訊則保留不動。 請注意您無法復原此動作。
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+
 ## <a name="requirements"></a>需求
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [版本資訊編輯器](../windows/version-information-editor.md)   
- [版本資訊 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[版本資訊編輯器](../windows/version-information-editor.md)  
+[版本資訊 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

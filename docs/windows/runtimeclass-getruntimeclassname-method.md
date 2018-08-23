@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5e367f956fbaeb36837733d619b19cdc8363ca3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020391"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606823"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName 方法
 
@@ -37,6 +37,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>參數
+
 *runtimeName*  
 這項作業完成時，執行階段類別名稱。
 
@@ -55,4 +56,5 @@ STDMETHOD( GetRuntimeClassName )(
 **命名空間：** Microsoft::WRL
 
 ## <a name="see-also"></a>另請參閱
- [RuntimeClass 類別](../windows/runtimeclass-class.md)
+
+[RuntimeClass 類別](../windows/runtimeclass-class.md)

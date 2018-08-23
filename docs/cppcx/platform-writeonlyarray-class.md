@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: writeonlyarray 類別 |Microsoft 文件'
+title: 'Platform:: writeonlyarray 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091483"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603342"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 類別
 表示一維陣列。當呼叫端傳遞陣列讓方法填滿其中元素時，就會將這個陣列當做輸入參數來傳遞。  
   
- 這個 ref 類別在 vccorlib.h 中是宣告為私用，因此不會在中繼資料內發出，而且只能從 C++ 使用。 這個類別只做為用來接收呼叫端所配置之陣列的輸入參數。 您無法從使用者程式碼建構這個類別。 它可以讓 C++ 方法直接在陣列中寫入資料，這就稱為「 *FillArray* 」模式。 如需詳細資訊，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。  
+ 這個 ref 類別在 vccorlib.h 中是宣告為私用，因此不會在中繼資料內發出，而且只能從 C++ 使用。 這個類別只做為用來接收呼叫端所配置之陣列的輸入參數。 您無法從使用者程式碼建構這個類別。 它可以讓 C++ 方法直接在陣列中寫入資料，這就稱為「 *FillArray* 」模式。 如需詳細資訊，請參閱 < [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,10 +48,10 @@ private ref class WriteOnlyArray<T, 1>
 
 |[Writeonlyarray:: Begin](#begin)|指向陣列的第一個元素的迭代器。 |  
 |[Writeonlyarray:: Data](#data)|資料緩衝區的指標。 |  
-|[Writeonlyarray:: End](#end)|指向陣列中最後一個元素後加一的迭代器。 |  
-|[Writeonlyarray:: Fastpass](#fastpass)|表示陣列是否可以使用 FastPass 機制，這是由系統悄悄執行的最佳化。 請勿使用此程式碼中 |  
-|[Writeonlyarray:: Length](#length)|傳回陣列中的項目數。 |  
-|[Writeonlyarray:: Set](#set)|指定的元素設定為指定的值。 |  
+|[Writeonlyarray:: End](#end)|迭代器，指向一個陣列中最後一個元素。 |  
+|[Writeonlyarray:: Fastpass](#fastpass)|表示陣列是否可以使用 FastPass 機制，也就是由系統所執行的最佳化。 請勿在您的程式碼中使用這 |  
+|[Writeonlyarray:: Length](#length)|傳回陣列中的項目數目。 |  
+|[Writeonlyarray:: Set](#set)|將指定的項目設定為指定的值。 |  
 
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>備註  
- 如需如何解譯 HRESULT 值的詳細資訊，請參閱[結構 COM 錯誤碼的](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
+ 如需如何解譯 HRESULT 值的詳細資訊，請參閱[錯誤碼的結構 COM](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
   
   
 ## <a name="see-also"></a>另請參閱  

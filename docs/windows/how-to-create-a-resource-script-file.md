@@ -17,40 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 8b07efbd4f1434992c76de2b7e959f4578d60096
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020261"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608733"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>如何：建立資源指令碼檔
-> [!NOTE]
->  **資源編輯器**不適用於 Express 版本。  
->   
->  這份資料適用於 Windows 桌面應用程式。 以 .NET 語言撰寫的專案不會使用資源指令碼檔。 如需詳細資訊，請參閱 [資源檔](../windows/resource-files-visual-studio.md)。  
-  
-### <a name="to-create-a-new-resource-script-rc-file"></a>建立新的資源指令碼 (.rc) 檔  
-  
-1.  將焦點放在您現有的專案資料夾中**方案總管**，例如`MyProject`。  
-  
-    > [!NOTE]
-    >  請勿混淆方案資料夾內專案資料夾**方案總管 中**。 如果您將焦點放在**解決方案**資料夾中，您的選擇中**加入新項目**對話方塊 （在步驟 3) 將會不同。  
-  
-2.  在 [專案]  功能表中，按一下 [加入新項目] 。  
-  
-3.  在 [加入新項目]  對話方塊中，按一下 [Visual C++]  資料夾，然後選擇右窗格中的 [資源檔 (.rc)]  。  
-  
-4.  在 [名稱]  文字方塊中提供資源指令碼檔的名稱，然後按一下 [開啟] 。  
-  
- 您現在可以 [建立](../windows/how-to-create-a-resource.md) 新的資源並加入 .rc 檔中。  
-  
-> [!NOTE]
->  您只能將資源指令碼 (.rc 檔) 加入已載入 Visual Studio IDE 的現有專案中， 而不能建立獨立的 .rc 檔 (即專案以外的檔案)。 [資源範本](../windows/how-to-use-resource-templates.md) (.rct 檔) 則可以隨時建立。
 
-## <a name="requirements"></a>需求    
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [資源檔](../windows/resource-files-visual-studio.md)   
- [資源編輯器](../windows/resource-editors.md)
+> [!NOTE]
+> **資源編輯器**不適用於 Express 版本。
+>
+> 這份資料適用於 Windows 桌面應用程式。 以 .NET 語言撰寫的專案不會使用資源指令碼檔。 如需詳細資訊，請參閱 [資源檔](../windows/resource-files-visual-studio.md)。
+
+### <a name="to-create-a-new-resource-script-rc-file"></a>建立新的資源指令碼 (.rc) 檔
+
+1. 將焦點放在您現有的專案資料夾中**方案總管**，例如`MyProject`。
+
+   > [!NOTE]
+   > 請勿混淆方案資料夾內專案資料夾**方案總管 中**。 如果您將焦點放在**解決方案**資料夾中，您的選擇中**加入新項目**對話方塊 （在步驟 3) 將會不同。
+
+2. 在 [專案]  功能表中，按一下 [加入新項目] 。
+
+3. 在 [加入新項目]  對話方塊中，按一下 [Visual C++]  資料夾，然後選擇右窗格中的 [資源檔 (.rc)]  。
+
+4. 在 [名稱]  文字方塊中提供資源指令碼檔的名稱，然後按一下 [開啟] 。
+
+您現在可以 [建立](../windows/how-to-create-a-resource.md) 新的資源並加入 .rc 檔中。
+
+> [!NOTE]
+> 您只能將資源指令碼 (.rc 檔) 加入已載入 Visual Studio IDE 的現有專案中， 而不能建立獨立的 .rc 檔 (即專案以外的檔案)。 [資源範本](../windows/how-to-use-resource-templates.md) (.rct 檔) 則可以隨時建立。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[資源檔](../windows/resource-files-visual-studio.md)  
+[資源編輯器](../windows/resource-editors.md)

@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::MapView 類別 |Microsoft 文件
+title: Mapview 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091527"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605467"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 表示 *對應 (Map)*(機碼值組的集合) 的唯讀檢視。  
@@ -51,7 +51,7 @@ ref class MapView sealed;
  一個類型，提供函式物件，可以根據排序鍵比較兩個項目值，以判斷它們在 MapView 中的相對順序。 根據預設， [std:: less<>\<K >](../standard-library/less-struct.md)。  
   
 ### <a name="remarks"></a>備註  
- MapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)應用程式二進位介面 (ABI) 之間傳遞的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ MapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)傳遞應用程式二進位介面 (ABI) 之間的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成員  
   
@@ -94,7 +94,7 @@ virtual Windows::Foundation::Collections::IIterator<
  迭代器，指定對應檢視中的第一個元素。  
   
 ### <a name="remarks"></a>備註  
- 若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myMapView->First();`。  
+ 若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myMapView->First();`。  
   
 
 
@@ -165,7 +165,7 @@ MapView(
  函式物件。這個函式物件可以根據排序機碼比較兩個元素值，判斷它們在 MapView 中的相對順序。  
   
  `m`  
- 參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)至`map Class`用來初始化目前 MapView。  
+ 參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用來初始化目前 MapView。  
   
  `first`  
  用來初始化目前 MapView 的項目範圍中，第一個項目的輸入迭代器。  

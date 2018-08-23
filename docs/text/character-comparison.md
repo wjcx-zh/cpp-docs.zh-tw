@@ -1,5 +1,5 @@
 ---
-title: 字元比較 |Microsoft 文件
+title: 字元比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - MBCS [C++], character comparison
 - characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b969783a19c0836a8ab81d75820fc688df3ef31e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 246801abcb04cc8d9c2fd1a005183501bde240d1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854947"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612322"
 ---
 # <a name="character-comparison"></a>字元比較
 使用下列秘訣：  
   
--   比較以 ASCII 字元的已知的前導位元組正常運作：  
+-   比較以 ASCII 字元一個已知的前導位元組正常運作：  
   
     ```  
     if( *sz1 == 'A' )  
     ```  
   
--   比較兩個未知的字元需要使用其中一種 Mbstring.h 中定義的巨集：  
+-   比較兩個未知的字元需要使用其中一種 Mbstring.h> 中定義的巨集：  
   
     ```  
     if( !_mbccmp( sz1, sz2) )  

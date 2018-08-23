@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: agile 類別 |Microsoft 文件'
+title: 'Platform:: agile 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092427"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596598"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
-以 Agile 物件來表示具有 MashalingBehavior=Standard 的物件，可大幅降低發生執行階段執行緒例外狀況的機會。 `Agile<T>` 可讓非 Agile 物件呼叫相同或不同的執行緒，或者從中被呼叫。 如需詳細資訊，請參閱[執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)。  
+以 Agile 物件來表示具有 MashalingBehavior=Standard 的物件，可大幅降低發生執行階段執行緒例外狀況的機會。 `Agile<T>` 可讓非 Agile 物件呼叫相同或不同的執行緒，或者從中被呼叫。 如需詳細資訊，請參閱 <<c0> [ 執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -139,7 +139,7 @@ Agile(Agile<T>&& object);
 ### <a name="return-value"></a>傳回值  
  目前 Agile 物件所代表的物件控制代碼。  
   
- 傳回值的類型實際上是不公開的內部類型。 便利的方式來保留傳回值，將它指派給所宣告變數**自動**型别推斷關鍵字。 例如，`auto x = myAgileTvariable->Get();`。  
+ 傳回值的類型實際上是不公開的內部類型。 保留傳回值的便利方式是將它指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myAgileTvariable->Get();`。  
   
 ## <a name="getaddressof"></a>  Agile:: getaddressof 方法
 重新初始化目前 Agile 物件，然後傳回 `T`類型物件的控制代碼位址。  
@@ -157,10 +157,10 @@ throw();
  樣板 typename 參數指定的類型。  
   
 ### <a name="return-value"></a>傳回值  
- 類型的物件控制代碼位址`T`。  
+ 型別的物件的控制代碼位址`T`。  
   
 ### <a name="remarks"></a>備註  
- 這個作業釋放目前的類型的物件表示`T`，如果有則重新初始化 Agile 物件的資料成員，則取得目前執行緒的內容;，然後傳回可以代表物件的控制代碼變數的位址非 agile 物件。 若要讓 Agile 類別執行個體來代表的物件，使用指派運算子 ([agile:: operator =](#operator-assign)) 將物件指派給 Agile 類別執行個體。  
+ 這個作業釋放目前的類型的物件表示`T`、 如果有的話，重新初始化 Agile 物件的資料成員，取得目前的執行緒內容中，則會傳回可以代表物件的控制代碼變數位址非 agile 物件。 若要讓 Agile 類別執行個體來代表的物件，使用指派運算子 ([agile:: operator =](#operator-assign)) 將物件指派給 Agile 類別執行個體。  
 
 ## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout 方法
 傳回目前 Agile 物件所代表的物件的控制代碼位址。  
@@ -211,7 +211,7 @@ const throw();
 ### <a name="return-value"></a>傳回值  
  目前 Agile 物件所代表的物件控制代碼。  
   
- 這個運算子實際傳回保密的內部類型。 便利的方式來保留傳回值，將它指派給所宣告變數**自動**型别推斷關鍵字。  
+ 這個運算子實際傳回保密的內部類型。 保留傳回值的便利方式是將它指派給宣告的變數**自動**類型推斷關鍵字。  
 
 ## <a name="operator-assign"></a>  Agile:: operator = 運算子
 將指定的物件指派給目前 Agile 物件。  

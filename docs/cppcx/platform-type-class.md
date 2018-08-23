@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: type 類別 |Microsoft 文件'
+title: 'Platform:: type 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255534"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596697"
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
-包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)任何物件或使用[typeid](../windows/typeid-cpp-component-extensions.md)操作員的類別或結構的名稱。  
+包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)上的任何物件或使用[typeid](../windows/typeid-cpp-component-extensions.md)運算子，在類別或結構的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,14 +35,14 @@ public ref class Platform::Type :
 ```  
   
 ### <a name="remarks"></a>備註  
- 在必須使用 `Type` 或 `if` 陳述式 (可根據物件的執行階段類型加以分支處理) 進行直接處理的應用程式中， `switch` 類別非常有用。 描述類型分類的類型程式碼會擷取使用[type:: gettypecode](#gettypecode)成員函式。  
+ 在必須使用 `Type` 或 `if` 陳述式 (可根據物件的執行階段類型加以分支處理) 進行直接處理的應用程式中， `switch` 類別非常有用。 描述類型的類別型別程式碼會擷取藉由使用[type:: gettypecode](#gettypecode)成員函式。  
   
 ## <a name="public-methods"></a>公用方法  
   
 |||  
 |-|-|  
 |[Type::GetTypeCode 方法](#gettypecode)|傳回物件的 [Platform::TypeCode 列舉](../cppcx/platform-typecode-enumeration.md) 值。| 
-|[Type::ToString 方法](#tostring)|傳回它的中繼資料中所指定類型的名稱。| 
+|[Type::ToString 方法](#tostring)|傳回其中繼資料中所指定型別的名稱。| 
 
  
 ## <a name="public-properties"></a>公用屬性  
@@ -69,7 +69,7 @@ public ref class Platform::Type :
 
  
 ## <a name="fullname"></a> Type::FullName 屬性
-擷取目前類型在表單中的完整限定名稱`Namespace.Type`。  
+擷取目前的類型，在表單中的完整名稱`Namespace.Type`。  
   
 ### <a name="syntax"></a>語法  
   
@@ -108,10 +108,10 @@ Platform::TypeCode GetTypeCode();
  其中一個 Platform::TypeCode 列舉值。  
   
 ### <a name="remarks"></a>備註  
- Gettypecode （） 成員方法相當`typeid`屬性。
+ Gettypecode （） 成員方法的對應是`typeid`屬性。
 
 ## <a name="tostring"></a> Type::ToString 方法
-擷取類型的名稱。  
+擷取型別的名稱。  
   
 ### <a name="syntax"></a>語法  
   

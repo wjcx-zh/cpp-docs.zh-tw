@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110017"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609345"
 ---
 # <a name="windows-operations-ccli"></a>Windows 作業 (C++/CLI)
-示範各種 Windows 特定的工作，使用[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]。  
+示範各種 Windows 特定的工作，使用 Windows SDK。  
   
- 下列主題示範如何執行的各種 Windows 作業[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]使用 Visual c + +。  
+ 下列主題會示範各種 Windows 作業執行使用 Visual c + + 的 Windows SDK。  
 
 ## <a name="determine_shutdown"></a> 判斷是否已開始關機
 下列程式碼範例示範如何判斷是否在應用程式或.NET Framework 目前正在終止。 這可用於存取.NET Framework 中的靜態項目，因為在關機時這些建構，系統會完成，且無法可靠地用。 藉由檢查<xref:System.Environment.HasShutdownStarted%2A>屬性第一次，您可以避免潛在的失敗不會存取這些項目。  

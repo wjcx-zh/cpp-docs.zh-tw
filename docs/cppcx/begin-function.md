@@ -1,5 +1,5 @@
 ---
-title: begin 函式 |Microsoft 文件
+title: begin 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1a8c09e43613014b43ef4e3c075a54cdd90e08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086508"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606528"
 ---
 # <a name="begin-function"></a>begin 函式
 傳回迭代器，指向指定的介面參數所存取之集合的開頭。  
@@ -52,10 +52,10 @@ template <typename T>
  樣板類型參數。  
   
  `v`  
- 向量的集合\<T > 或 VectorView\<T > 物件存取透過 Ivector<platform\<T > 或 IVectorView\<T > 介面。  
+ 向量的集合\<T > 或 VectorView\<T > 物件存取的 IVector\<T > 或 IVectorView\<T > 介面。  
   
  `i`  
- IIterable 所存取的任意 Windows 執行階段物件的集合\<T > 介面。  
+ 任意物件集合的 Windows 執行階段存取的 IIterable\<T > 介面。  
   
 ### <a name="return-value"></a>傳回值  
  指向集合開頭的迭代器。  
@@ -63,7 +63,7 @@ template <typename T>
 ### <a name="remarks"></a>備註  
  前兩個樣板函式會傳回迭代器，第三個樣板函式會傳回輸入迭代器。  
   
- 所傳回的物件開始的 VectorIterator 是 proxy 迭代器可以儲存的型別 VectorProxy 元素\<T >。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ VectorIterator 開始所傳回的物件會儲存類型 VectorProxy 項目的 proxy 迭代器\<T >。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="requirements"></a>需求  
  **標頭：** collection.h  

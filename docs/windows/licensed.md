@@ -17,59 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a722b7a4eb6104670d2d67d95f1c47755af5938
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b30a9a0e2d959725b5f5d94118493ef833a57579
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012634"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604825"
 ---
 # <a name="licensed"></a>licensed
-表示已取得授權，它所套用的 COM 物件，而且必須具現化使用`IClassFactory2`。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[licensed]  
-```  
-  
-## <a name="remarks"></a>備註  
- **授權**c + + 屬性具有相同的功能[授權](http://msdn.microsoft.com/library/windows/desktop/aa367070)MIDL 屬性。  
-  
-## <a name="example"></a>範例  
-  
-```cpp  
-// cpp_attr_ref_licensed.cpp  
-// compile with: /LD  
-#include "unknwn.h"  
-[object, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IMyI : IUnknown {  
-   HRESULT f();  
-};  
-  
-[coclass, version("2.1"), uuid(12345678-1111-2222-3333-123456789012),   
-licensed, threading(free), progid(some.name)]  
-class CSample : public IMyI {  
-public:  
-   int nSize;  
-};  
-  
-[module(name="MyLibrary", version="1.0", helpstring="My Library Block")];  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**類別**，**結構**|  
-|**可重複**|否|  
-|**必要屬性**|`coclass`|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [類別屬性](../windows/class-attributes.md)   
+
+表示已取得授權，它所套用的 COM 物件，而且必須具現化使用`IClassFactory2`。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[licensed]
+```
+
+## <a name="remarks"></a>備註
+
+**授權**c + + 屬性具有相同的功能[授權](http://msdn.microsoft.com/library/windows/desktop/aa367070)MIDL 屬性。
+
+## <a name="example"></a>範例
+
+```cpp
+// cpp_attr_ref_licensed.cpp
+// compile with: /LD
+#include "unknwn.h"
+[object, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IMyI : IUnknown {
+   HRESULT f();
+};
+
+[coclass, version("2.1"), uuid(12345678-1111-2222-3333-123456789012),
+licensed, threading(free), progid(some.name)]
+class CSample : public IMyI {
+public:
+   int nSize;
+};
+
+[module(name="MyLibrary", version="1.0", helpstring="My Library Block")];
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**類別**，**結構**|
+|**可重複**|否|
+|**必要屬性**|`coclass`|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[類別屬性](../windows/class-attributes.md)  

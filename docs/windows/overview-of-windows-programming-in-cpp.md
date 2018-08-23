@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012189"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604275"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -26,14 +26,14 @@ ms.locfileid: "40012189"
 - 有效率的記憶體需求
 - 經濟實惠的功率耗用量 
 - 能夠充分利用多核心和多核心裝置
-- 能夠進行一般運算圖形處理單元 (GPGPU)   
+- 能夠進行一般運算圖形處理單元 (GPGPU)  
 - 能夠利用硬體中的其他方面近來的進步。
 
 您可以使用 Visual C++ 開發數種廣泛的 Windows 應用程式分類。 這些分類有不同的程式設計模型或應用程式模型，採用了多年。 每一個模型使用不同的程式庫和 Api，來提供存取平台，並建立使用者介面，例如視窗和對話方塊。 C + + 標準程式庫，以及協力廠商程式庫可用在任何兩個類別，使用適用於 UWP 的一些限制。
 
 - [Windows 通用應用程式](#BK_WindowsUniversal)。 Windows 應用程式的第三個分類在 Windows 8 中引入，並在 Windows 10 中繼續支援這類應用程式。 這些應用程式經常只稱為「Windows 應用程式」，而且其中包含以各種裝置為目標的桌上型電腦和行動應用程式。 您可以用 C++/CX 撰寫這些應用程式，這是包含 Windows 執行階段開發支援的 C++ 方言，或是使用標準 C++ 搭配使用 Windows 執行階段程式庫 (WRL) 的 COM 來撰寫。 這些應用程式原本專為全螢幕執行而設計，但是在 Windows 10 使用者可以選擇在桌面視窗中執行它們。 這些應用程式是觸控式導向，但如果使用者偏好的話，或是無法使用觸控式螢幕的情況，也很容易可用滑鼠來操作。 這些應用程式會從 Microsoft Store，因此它們被稱為 「 市集 」 應用程式散發。
 
-UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行動電話上也能在桌面上執行。 在桌上型電腦，它們能夠以桌面視窗執行，而不是永遠以全螢幕方式執行。 在 Xbox 和未來的裝置上，也可以執行這些應用程式。  在 Windows 執行階段，可提供使用者介面項目、 服務和介面，以在 Windows 受支援之各種硬體裝置上，執行 UWP 應用程式。  
+UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行動電話上也能在桌面上執行。 在桌上型電腦，它們能夠以桌面視窗執行，而不是永遠以全螢幕方式執行。 在 Xbox 和未來的裝置上，也可以執行這些應用程式。  在 Windows 執行階段，可提供使用者介面項目、 服務和介面，以在 Windows 受支援之各種硬體裝置上，執行 UWP 應用程式。
 
 您可以撰寫 UWP 應用程式，在 C + + /CX 中，與方言的 c + +，您可以使用[C + + /cli WinRT 程式庫](https://moderncpp.com/)在某些情況下。 UWP 應用程式編譯為原生程式碼並具有 XAML 使用者介面，或使用 DirectX。 以原生程式碼可以使用 以其他語言撰寫的 UWP 應用程式撰寫的 Windows 執行階段元件。 如需詳細資訊，請參閱 < [c + + 中建立通用 Windows 平台應用程式](http://go.microsoft.com/fwlink/?LinkID=534976)，[您第一個 UWP 使用 DirectX 建立遊戲](http://go.microsoft.com/fwlink/p/?LinkId=244656)，並[c + + 中的建立 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/?LinkId=244658)。
 
@@ -84,7 +84,7 @@ DirectX 遊戲可以在 PC 或 Xbox 上執行。 如需詳細資訊，請參閱 
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、 程式庫和標頭檔
 
-Visual c + + 包含 C 執行階段程式庫 (CRT)、 c + + 標準程式庫和其他 Microsoft 特定程式庫。 包含這些程式庫標頭檔的 include 資料夾位於在 Visual Studio 安裝目錄下的 \VC\ 資料夾中，或在 CRT，在 Windows SDK 安裝資料夾的情況下。   
+Visual c + + 包含 C 執行階段程式庫 (CRT)、 c + + 標準程式庫和其他 Microsoft 特定程式庫。 包含這些程式庫標頭檔的 include 資料夾位於在 Visual Studio 安裝目錄下的 \VC\ 資料夾中，或在 CRT，在 Windows SDK 安裝資料夾的情況下。
 
 您可以使用[Vcpkg 套件管理員](../vcpkg.md)方便的 Windows 中安裝數百個第三方開放原始碼程式庫。
 

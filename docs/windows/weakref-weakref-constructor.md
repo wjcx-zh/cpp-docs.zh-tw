@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e7b7d35fd8cae44c3f374a81cae572e4c9ee4f8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d7c8bc81040ce8d4c1cea7497f9d1371fbb9d41f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011155"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611606"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef 建構函式
-初始化的新執行個體**WeakRef**類別。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-WeakRef();  
-WeakRef(  
+
+初始化的新執行個體**WeakRef**類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
+WeakRef();
+WeakRef(
    decltype(__nullptr)  
-);  
-  
-WeakRef(  
-   _In_opt_ IWeakReference* ptr  
-);  
-  
-WeakRef(  
-   const ComPtr<IWeakReference>& ptr  
-);  
-  
-WeakRef(  
-   const WeakRef& ptr  
-);  
-  
-WeakRef(  
-   _Inout_ WeakRef&& ptr  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *ptr*  
- 指標、 參考或右值參考至現有的物件，初始化目前**WeakRef**物件。  
-  
-## <a name="remarks"></a>備註  
- 第一個建構函式會初始化空**WeakRef**物件。 第二個建構函式初始化**WeakRef**物件的指標`IWeakReference`介面。 第三個建構函式初始化**WeakRef**物件的參考從`ComPtr<IWeakReference>`物件。 第四個和第五個建構函式初始化**WeakRef**物件從另一個**WeakRef**物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [WeakRef 類別](../windows/weakref-class.md)
+);
+
+WeakRef(
+   _In_opt_ IWeakReference* ptr
+);
+
+WeakRef(
+   const ComPtr<IWeakReference>& ptr
+);
+
+WeakRef(
+   const WeakRef& ptr
+);
+
+WeakRef(
+   _Inout_ WeakRef&& ptr
+);
+```
+
+### <a name="parameters"></a>參數
+
+*ptr*  
+指標、 參考或右值參考至現有的物件，初始化目前**WeakRef**物件。
+
+## <a name="remarks"></a>備註
+
+第一個建構函式會初始化空**WeakRef**物件。 第二個建構函式初始化**WeakRef**物件的指標`IWeakReference`介面。 第三個建構函式初始化**WeakRef**物件的參考從`ComPtr<IWeakReference>`物件。 第四個和第五個建構函式初始化**WeakRef**物件從另一個**WeakRef**物件。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[WeakRef 類別](../windows/weakref-class.md)

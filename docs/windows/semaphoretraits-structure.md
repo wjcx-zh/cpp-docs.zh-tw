@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c953efc6e9f4b3904404ae362b6beca7f88192d2
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5919b84a8b7b0b24588958198da89271d2a20119
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018265"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601816"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 結構
-定義通用特性**號誌**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-struct SemaphoreTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[SemaphoreTraits::Unlock 方法](../windows/semaphoretraits-unlock-method.md)|版本控制共用資源。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `HANDLENullTraits`  
-  
- `SemaphoreTraits`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+定義通用特性**號誌**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+struct SemaphoreTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[SemaphoreTraits::Unlock 方法](../windows/semaphoretraits-unlock-method.md)|版本控制共用資源。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`HANDLENullTraits`
+
+`SemaphoreTraits`
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

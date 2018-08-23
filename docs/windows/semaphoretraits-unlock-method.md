@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015686"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583967"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock 方法
-版本控制共用資源。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *h*  
- 控制代碼**號誌**物件。  
-  
-## <a name="remarks"></a>備註  
- 如果在解除鎖定作業不成功， **Unlock()** 會發出錯誤，指出失敗的原因。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>另請參閱  
- [SemaphoreTraits 結構](../windows/semaphoretraits-structure.md)
+
+版本控制共用資源。
+
+## <a name="syntax"></a>語法
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*  
+控制代碼**號誌**物件。
+
+## <a name="remarks"></a>備註
+
+如果在解除鎖定作業不成功， **Unlock()** 會發出錯誤，指出失敗的原因。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>另請參閱
+
+[SemaphoreTraits 結構](../windows/semaphoretraits-structure.md)

@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5ea76974359da2002178a342ab7d9b5523c52889
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652366"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584134"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer 方法
-遞增或遞減目前所追蹤物件的基礎數目**ClassFactory**物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   LockServer  
-)(BOOL fLock);  
-```  
-  
-### <a name="parameters"></a>參數  
- *fLock*  
- **true**遞增追蹤的物件數目。 **false**來減少追蹤的物件數目。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功則為 S_OK否則，E_FAIL。  
-  
-## <a name="remarks"></a>備註  
- **ClassFactory**追蹤的基礎執行個體中的物件[模組](../windows/module-class.md)類別。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ClassFactory 類別](../windows/classfactory-class.md)
+
+遞增或遞減目前所追蹤物件的基礎數目**ClassFactory**物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>參數
+
+*fLock*  
+**true**遞增追蹤的物件數目。 **false**來減少追蹤的物件數目。
+
+## <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，E_FAIL。
+
+## <a name="remarks"></a>備註
+
+**ClassFactory**追蹤的基礎執行個體中的物件[模組](../windows/module-class.md)類別。
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ClassFactory 類別](../windows/classfactory-class.md)

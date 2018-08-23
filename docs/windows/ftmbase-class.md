@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 662e40dd7e111b976be105129861b8ea26e5d0d9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cb3b9ecae955ac78c6139156c3379fcd97511671
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646172"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584369"
 ---
 # <a name="ftmbase-class"></a>FtmBase 類別
-代表無限制執行緒封送處理器物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-class FtmBase : public Microsoft::WRL::Implements<  
-   Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
-   Microsoft::WRL::CloakedIid<IMarshal> >;  
-```  
-  
-## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [RuntimeClass 類別](runtimeclass-class.md)。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[FtmBase::FtmBase 建構函式](../windows/ftmbase-ftmbase-constructor.md)|初始化的新執行個體**FtmBase**類別。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[FtmBase::CreateGlobalInterfaceTable 方法](../windows/ftmbase-createglobalinterfacetable-method.md)|建立全域介面表 (GIT)。|  
-|[FtmBase::DisconnectObject 方法](../windows/ftmbase-disconnectobject-method.md)|強制釋放物件的所有外部連線。 物件的伺服器會呼叫這個方法之前關閉物件的實作。|  
-|[FtmBase::GetMarshalSizeMax 方法](../windows/ftmbase-getmarshalsizemax-method.md)|取得指定的物件上指定的介面指標封送處理所需的位元組數目上限。|  
-|[FtmBase::GetUnmarshalClass 方法](../windows/ftmbase-getunmarshalclass-method.md)|取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 會載入此 DLL 來建立未初始化的執行個體的 proxy。|  
-|[FtmBase::MarshalInterface 方法](../windows/ftmbase-marshalinterface-method.md)|寫入資料流來初始化 proxy 物件中某些用戶端處理序所需的資料。|  
-|[FtmBase::ReleaseMarshalData 方法](../windows/ftmbase-releasemarshaldata-method.md)|終結封送處理的資料封包。|  
-|[FtmBase::UnmarshalInterface 方法](../windows/ftmbase-unmarshalinterface-method.md)|初始化新建立的 proxy，並將該 proxy 傳回的介面指標。|  
-  
-### <a name="public-data-members"></a>公用資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[FtmBase::marshaller_ 資料成員](../windows/ftmbase-marshaller-data-member.md)|保留無限制執行緒封送處理器的參考。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `FtmBase`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** ftm.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+
+代表無限制執行緒封送處理器物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
+class FtmBase : public Microsoft::WRL::Implements<
+   Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,
+   Microsoft::WRL::CloakedIid<IMarshal> >;
+```
+
+## <a name="remarks"></a>備註
+
+如需詳細資訊，請參閱 < [RuntimeClass 類別](runtimeclass-class.md)。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[FtmBase::FtmBase 建構函式](../windows/ftmbase-ftmbase-constructor.md)|初始化的新執行個體**FtmBase**類別。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[FtmBase::CreateGlobalInterfaceTable 方法](../windows/ftmbase-createglobalinterfacetable-method.md)|建立全域介面表 (GIT)。|
+|[FtmBase::DisconnectObject 方法](../windows/ftmbase-disconnectobject-method.md)|強制釋放物件的所有外部連線。 物件的伺服器會呼叫這個方法之前關閉物件的實作。|
+|[FtmBase::GetMarshalSizeMax 方法](../windows/ftmbase-getmarshalsizemax-method.md)|取得指定的物件上指定的介面指標封送處理所需的位元組數目上限。|
+|[FtmBase::GetUnmarshalClass 方法](../windows/ftmbase-getunmarshalclass-method.md)|取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 會載入此 DLL 來建立未初始化的執行個體的 proxy。|
+|[FtmBase::MarshalInterface 方法](../windows/ftmbase-marshalinterface-method.md)|寫入資料流來初始化 proxy 物件中某些用戶端處理序所需的資料。|
+|[FtmBase::ReleaseMarshalData 方法](../windows/ftmbase-releasemarshaldata-method.md)|終結封送處理的資料封包。|
+|[FtmBase::UnmarshalInterface 方法](../windows/ftmbase-unmarshalinterface-method.md)|初始化新建立的 proxy，並將該 proxy 傳回的介面指標。|
+
+### <a name="public-data-members"></a>公用資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[FtmBase::marshaller_ 資料成員](../windows/ftmbase-marshaller-data-member.md)|保留無限制執行緒封送處理器的參考。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`FtmBase`
+
+## <a name="requirements"></a>需求
+
+**標頭：** ftm.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

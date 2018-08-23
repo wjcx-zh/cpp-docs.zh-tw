@@ -19,35 +19,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010285"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601844"
 ---
 # <a name="modifying-the-layout-grid"></a>修改配置格線
-當您要放置或在對話方塊中排列控制項時，您可以使用版面配置方格的更精確的位置。 方格開啟時，控制項便會出現 「 貼齊 」 方格的虛線如同 magnetized。 您可以開啟和關閉此 「 貼齊至格線 」 功能，並變更版面配置方格資料格的大小。  
-  
-### <a name="to-turn-the-layout-grid-on-or-off"></a>若要開啟或關閉的版面配置方格  
-  
-1.  從**格式**功能表上，選擇**輔助線設定**。  
-  
-2.  在 [[輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，選取或清除**格線**] 按鈕。  
-  
-     您仍可控制中個別的方格** 對話方塊**使用的編輯器視窗**切換格線**按鈕[對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。  
-  
-### <a name="to-change-the-size-of-the-layout-grid"></a>若要變更版面配置方格的大小  
-  
-1.  從**格式**功能表上，選擇**輔助線設定**。  
-  
-2.  在 [輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，輸入的高度和寬度 Dlu 方格中的資料格。 最小高度或寬度是 4 Dlu。 如需有關 Dlu 的詳細資訊，請參閱[控制項的排列方式 對話方塊上的方式](../windows/arrangement-of-controls-on-dialog-boxes.md)。  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [對話方塊編輯器狀態 （輔助線和格線）](../windows/dialog-editor-states-guides-and-grids.md)   
- [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)
+
+當您要放置或在對話方塊中排列控制項時，您可以使用版面配置方格的更精確的位置。 方格開啟時，控制項便會出現 「 貼齊 」 方格的虛線如同 magnetized。 您可以開啟和關閉此 「 貼齊至格線 」 功能，並變更版面配置方格資料格的大小。
+
+### <a name="to-turn-the-layout-grid-on-or-off"></a>若要開啟或關閉的版面配置方格
+
+1. 從**格式**功能表上，選擇**輔助線設定**。
+
+2. 在 [[輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，選取或清除**格線**] 按鈕。
+
+   您仍可控制中個別的方格** 對話方塊**使用的編輯器視窗**切換格線**按鈕[對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。
+
+### <a name="to-change-the-size-of-the-layout-grid"></a>若要變更版面配置方格的大小
+
+1. 從**格式**功能表上，選擇**輔助線設定**。
+
+2. 在 [輔助線設定對話方塊](../windows/guide-settings-dialog-box.md)，輸入的高度和寬度 Dlu 方格中的資料格。 最小高度或寬度是 4 Dlu。 如需有關 Dlu 的詳細資訊，請參閱[控制項的排列方式 對話方塊上的方式](../windows/arrangement-of-controls-on-dialog-boxes.md)。
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[對話方塊編輯器狀態 (輔助線和格線)](../windows/dialog-editor-states-guides-and-grids.md)  
+[對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)

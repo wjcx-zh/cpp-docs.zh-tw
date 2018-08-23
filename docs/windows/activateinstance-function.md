@@ -18,43 +18,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93b1c8fa12e06984a2bffdd90419c481d8897b94
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: c2ac6d8722bcdfed06ae97508b0ca7e5bb8ea00a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646237"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601448"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函式
-註冊，並擷取在指定的類別識別碼所定義之指定類型的執行個體  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template<typename T>  
-inline HRESULT ActivateInstance(  
-   _In_ HSTRING activatableClassId,  
-   _Out_ Microsoft::WRL::Details::ComPtrRef<T> instance  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *T*  
- 若要啟用一種類型。  
-  
- *activatableClassId*  
- 參數定義的類別識別碼的名稱*T*。  
-  
- *執行個體*  
- 這項作業完成時，執行個體的參考*T*。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功則為 S_OK否則，發生錯誤的 HRESULT，表示錯誤的原因。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** client.h  
-  
- **命名空間：** windows:: foundation  
-  
-## <a name="see-also"></a>另請參閱  
- [Windows::Foundation 命名空間](../windows/windows-foundation-namespace.md)
+
+註冊，並擷取在指定的類別識別碼所定義之指定類型的執行個體
+
+## <a name="syntax"></a>語法
+
+```cpp
+template<typename T>
+inline HRESULT ActivateInstance(
+   _In_ HSTRING activatableClassId,
+   _Out_ Microsoft::WRL::Details::ComPtrRef<T> instance
+);
+```
+
+### <a name="parameters"></a>參數
+
+*T*  
+若要啟用一種類型。
+
+*activatableClassId*  
+參數定義的類別識別碼的名稱*T*。
+
+*執行個體*  
+這項作業完成時，執行個體的參考*T*。
+
+## <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，發生錯誤的 HRESULT，表示錯誤的原因。
+
+## <a name="requirements"></a>需求
+
+**標頭：** client.h
+
+**命名空間：** windows:: foundation
+
+## <a name="see-also"></a>另請參閱
+
+[Windows::Foundation 命名空間](../windows/windows-foundation-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: exception 類別 |Microsoft 文件'
+title: 'Platform:: exception 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091556"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586631"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 類別
 代表應用程式執行期間所發生的錯誤。 自訂例外狀況類別不能衍生自 `Platform::Exception`類別。 如果您需要自訂例外狀況，您可以使用 `Platform::COMException` 並指定應用程式特定的 HRESULT。  
@@ -46,7 +46,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception::Exception](#ctor)|初始化 `Exception` 類別的新執行個體。|  
   
 ### <a name="methods"></a>方法  
- `Exception`類別會繼承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，和`ToString()`方法[platform:: object 類別](../cppcx/platform-object-class.md)。 `Exception` 類別也有下列方法。  
+ `Exception`類別會繼承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，以及`ToString()`方法[platform:: object 類別](../cppcx/platform-object-class.md)。 `Exception` 類別也有下列方法。  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>參數  
  hr  
- HRESULT 值，通常從 COM 方法的呼叫中取得。 如果值為 0，這等於 S_OK 時，這個方法會擲回[platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md)因為成功的 COM 方法不可擲回例外狀況。  
+ HRESULT 值，通常從 COM 方法的呼叫中取得。 如果值為 0，這等於 s_ok 時，這個方法會擲回[platform:: invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md)因為成功的 COM 方法不應該擲回例外狀況。  
   
  訊息  
  描述錯誤的字串。  
@@ -92,7 +92,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
 ### <a name="remarks"></a>備註  
  使用這個方法，從傳回的 HRESULT (例如從 COM 介面方法的呼叫中取得) 建立例外狀況。 您可以使用可接受 String^ 參數的多載，提供自訂訊息。  
   
- 它是強烈建議使用 CreateException 建立強類型例外狀況，而非建立[platform:: comexception](../cppcx/platform-comexception-class.md)只包含 HRESULT。  
+ 它是強烈建議使用 CreateException 建立強類型例外狀況，而不建立[platform:: comexception](../cppcx/platform-comexception-class.md)只包含 HRESULT。  
   
 
 
@@ -146,7 +146,7 @@ public:property String^ Message;
  針對肇因於 Windows 執行階段的例外狀況，這是系統提供的錯誤說明。  
   
 ### <a name="remarks"></a>備註  
- 在 Windows 8 中，這個屬性是唯讀因為該版本的 Windows 執行階段中的例外狀況為跨只能以 HRESULT ABI 傳輸。 在 Windows 8.1 (含) 以後版本，跨 ABI 傳輸更豐富的例外狀況資訊，而且您可以提供其他元件可透過程式設計方式存取的自訂訊息。 如需詳細資訊，請參閱[例外狀況 (C + + /CX)](../cppcx/exceptions-c-cx.md)。  
+ 在 Windows 8 中，這個屬性是唯讀因為該版本的 Windows 執行階段中的例外狀況會跨只能以 HRESULT ABI 傳輸。 在 Windows 8.1 (含) 以後版本，跨 ABI 傳輸更豐富的例外狀況資訊，而且您可以提供其他元件可透過程式設計方式存取的自訂訊息。 如需詳細資訊，請參閱 <<c0> [ 例外狀況 (C + + /CX)](../cppcx/exceptions-c-cx.md)。  
   
 
   

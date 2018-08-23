@@ -17,48 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ff7fb86b7b39e283c27ee78611444b78bc53c5b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e6d60e5114d189ddede87899bb55fba25a296c57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020274"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601467"
 ---
 # <a name="modulebase-class"></a>ModuleBase 類別
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-class ModuleBase;  
-```  
-  
-## <a name="remarks"></a>備註  
- 表示基底類別[模組](../windows/module-class.md)類別。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[ModuleBase::ModuleBase 建構函式](../windows/modulebase-modulebase-constructor.md)|初始化 `Module` 類別的執行個體。|  
-|[ModuleBase::~ModuleBase 解構函式](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化目前的執行個體`Module`類別。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[ModuleBase::DecrementObjectCount 方法](../windows/modulebase-decrementobjectcount-method.md)|實作時，遞減模組所追蹤的物件數目。|  
-|[ModuleBase::IncrementObjectCount 方法](../windows/modulebase-incrementobjectcount-method.md)|實作時，遞增模組所追蹤的物件數目。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `ModuleBase`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** implements.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+class ModuleBase;
+```
+
+## <a name="remarks"></a>備註
+
+表示基底類別[模組](../windows/module-class.md)類別。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[ModuleBase::ModuleBase 建構函式](../windows/modulebase-modulebase-constructor.md)|初始化 `Module` 類別的執行個體。|
+|[ModuleBase::~ModuleBase 解構函式](../windows/modulebase-tilde-modulebase-destructor.md)|取消初始化目前的執行個體`Module`類別。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[ModuleBase::DecrementObjectCount 方法](../windows/modulebase-decrementobjectcount-method.md)|實作時，遞減模組所追蹤的物件數目。|
+|[ModuleBase::IncrementObjectCount 方法](../windows/modulebase-incrementobjectcount-method.md)|實作時，遞增模組所追蹤的物件數目。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`ModuleBase`
+
+## <a name="requirements"></a>需求
+
+**標頭：** implements.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

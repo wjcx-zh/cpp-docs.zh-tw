@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: sizet 實值類別 |Microsoft 文件'
+title: 'Platform:: sizet 實值類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c69bf34a7965c098f6a656907071e0899b785b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f60349203ce55a927ffac3d095988e5198bedd87
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087730"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601917"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 實值類別
 表示物件的大小。 SizeT 是不帶正負號的資料類型。  

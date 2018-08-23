@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: guid 實值類別 |Microsoft 文件'
+title: 'Platform:: guid 實值類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089447"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601250"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 代表 Windows 執行階段類型系統中的 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) 類型。  
@@ -42,7 +42,7 @@ public value struct Guid
 |[operator()](#operator-call)|將 Guid 轉換成 GUID。|  
   
 ### <a name="remarks"></a>備註  
- 如需如何使用 Windows 函式 [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)產生新 Platform::Guid 的範例，請參閱 [WinRT 元件：如何產生 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)(英文)  
+ 如需如何產生新 platform:: guid 使用 Windows 函式的範例[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)，請參閱[WinRT 元件： 如何產生 GUID？](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>需求  
  **最低支援用戶端：** Windows 8  
@@ -150,8 +150,8 @@ Platform::Guid::operator!=
 
 
 
-## <a name="operator-call"></a> Guid 運算子
-會隱含地轉換[GUID 結構](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: GUID。  
+## <a name="operator-call"></a> Guid::operator() 運算子
+將隱含轉換[GUID 結構](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: GUID。  
   
 ### <a name="syntax"></a>語法  
   

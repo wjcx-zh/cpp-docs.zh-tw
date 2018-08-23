@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorView 類別 |Microsoft 文件
+title: 2&gt;platform::collections::vectorview 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092906"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584102"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 代表物件之循序集合的唯讀檢視，這些物件可透過索引加以個別存取。 集合中每個物件的類型，由樣板參數指定。  
@@ -45,7 +45,7 @@ template <typename T, typename E>
  指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。  
   
 ### <a name="remarks"></a>備註  
- `VectorView`類別會實作[Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411)介面，也支援標準樣板程式庫迭代器。  
+ `VectorView`類別會實作[2&gt;{3&gt;windows::foundation::collections::ivectorview&lt;t&lt;3}&lt;2}\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411)介面，也支援標準樣板程式庫迭代器。  
   
 ### <a name="members"></a>成員  
   
@@ -88,7 +88,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
  指定 VectorView 中第一個項目的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myVectorView->First();`。  
+ 若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myVectorView->First();`。  
   
 
 
@@ -131,7 +131,7 @@ virtual unsigned int GetMany(
  要擷取之開始項目以零為起始的索引。  
   
  `dest`  
- 這項作業完成時，會開始於指定的項目之項目的陣列`startIndex`並在 VectorView 中的最後一個元素結束。  
+ 這項作業完成時，所指定的項目開始的項目陣列`startIndex`和 VectorView 中的最後一個項目處結束。  
   
 ### <a name="return-value"></a>傳回值  
  擷取的項目數目。  
@@ -242,7 +242,7 @@ VectorView(
  用來初始化目前 VectorView 的物件集合類型。  
   
  il  
- A [std:: initializer_list](../standard-library/initializer-list-class.md)其元素將用來初始化 VectorView。  
+ A [std:: initializer_list](../standard-library/initializer-list-class.md)其項目會用來初始化 VectorView。  
   
  `N`  
  用來初始化目前 VectorView 之物件集合中的項目數。  
@@ -254,7 +254,7 @@ VectorView(
  用來初始化目前 VectorView 中各個項目的值。  
   
  `v`  
- [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)至[std:: vector](../standard-library/vector-class.md)用來初始化目前 VectorView。  
+ [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: vector](../standard-library/vector-class.md)用來初始化目前 VectorView。  
   
  `ptr`  
  用來初始化目前 VectorView 之 `std::vector` 的指標。  
@@ -266,10 +266,10 @@ VectorView(
  A [std:: array](../standard-library/array-class-stl.md)用來初始化目前 VectorView 的物件。  
   
  `first`  
- 用來初始化目前 VectorView 之物件序列中的第一個項目。 型別`first`會藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 用來初始化目前 VectorView 之物件序列中的第一個項目。 型別`first`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  `last`  
- 用來初始化目前 VectorView 之物件序列中的最後一個項目。 型別`last`會藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 用來初始化目前 VectorView 之物件序列中的最後一個項目。 型別`last`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
 
 

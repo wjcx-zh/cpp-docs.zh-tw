@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: weakreference 類別 |Microsoft 文件'
+title: 'Platform:: weakreference 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088374"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601557"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 類別
 表示 ref 類別之執行個體的弱式參考。  
@@ -66,7 +66,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```  
   
 ### <a name="remarks"></a>備註  
- 上述清單中的最後一個多載可讓您指派 ref 類別給 WeakReference 變數。 在此情況下，ref 類別會向下轉型至[platform:: object](../cppcx/platform-object-class.md)^。 稍後您還原原始類型指定為中的型別參數的引數[weakreference::\<T >](#resolve)成員函式。  
+ 上述清單中的最後一個多載可讓您指派 ref 類別給 WeakReference 變數。 在此情況下，ref 類別會以向下轉型[platform:: object](../cppcx/platform-object-class.md)^。 稍後您還原原始的型別指定為中的型別參數的引數[weakreference:: Resolve\<T >](#resolve)成員函式。  
   
 ## <a name="booltype"></a> WeakReference::operator BoolType
 為 WeakReference 類別實作安全 bool 樣式。 無法從程式碼中明確呼叫。  

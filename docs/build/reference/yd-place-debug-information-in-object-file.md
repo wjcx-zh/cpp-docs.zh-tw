@@ -1,5 +1,5 @@
 ---
-title: -Yd （將在目的檔中的偵錯資訊） |Microsoft 文件
+title: -Yd （將在目的檔中的偵錯資訊） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86cb8a42b77cd0a932530455f1125125a9f546d9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378229"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42585963"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (將偵錯資訊置入目的檔)
-從先行編譯標頭 (.pch) 檔案搭配使用時建立完整的偵錯資訊置於所有目的檔置[/Yc](../../build/reference/yc-create-precompiled-header-file.md)和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)選項。 已取代。  
+從先行編譯標頭 (.pch) 檔案搭配使用時建立完整的偵錯資訊置於所有目的檔的步調[/Yc](../../build/reference/yc-create-precompiled-header-file.md)並[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)選項。 已取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,15 +36,15 @@ ms.locfileid: "32378229"
 ```  
   
 ## <a name="remarks"></a>備註  
- **/Yd**已被取代。[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]現在支援多個物件寫入至單一的.pdb 檔案，使用 **/Zi**改為。 如需已被取代的編譯器選項的清單，請參閱**已取代及移除的編譯器選項**中[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。  
+ **/Yd**已被取代;Visual c + + 現在支援多個物件寫入至單一的.pdb 檔案，請使用 **/Zi**改。 如需已被取代的編譯器選項的清單，請參閱 <<c0>  **已取代及移除的編譯器選項**中[依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)。  
   
- 除非您要散發程式庫包含偵錯資訊，請使用[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)選項而非 **/Z7**和 **/Yd**。  
+ 除非您要散發程式庫包含偵錯資訊，請使用[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)選項而非 **/z7**並 **/Yd**。  
   
- 只將包含偵錯資訊的程式庫，必須在每個.obj 檔案中儲存完整偵錯資訊。 它會減緩編譯，且需要大量磁碟空間。 當 **/Yc**和 **/Z7**不會使用 **/Yd**，編譯器會建立從.pch 檔案之第一個.obj 檔案中儲存通用偵錯資訊。 編譯器不會將這項資訊插入.pch 檔案，從後續建立的.obj 檔案它會插入交互參照到的資訊。 無論多少的.obj 檔案使用的.pch 檔案，只有一個.obj 檔案會包含常見的偵錯資訊。  
+ 將完整的偵錯資訊儲存在每個.obj 檔案，則只需要將包含偵錯資訊的程式庫分散。 它會減緩編譯，而且需要大量磁碟空間。 當 **/Yc**並 **/z7**不會使用 **/Yd**，編譯器將常見的偵錯資訊儲存在從.pch 檔案建立的第一個.obj 檔案。 編譯器不會將這項資訊插入.pch 檔案，從後續建立的.obj 檔案它會插入交互參照的資訊。 無論多少的.obj 檔案使用.pch 檔案，只能有一個.obj 檔案會包含常見的偵錯資訊。  
   
- 雖然此預設行為會產生更快建置時間，而且會減少磁碟空間的需求，但是它並不想如果小幅變更需要重新建立含有常見的偵錯資訊的.obj 檔案。 在此情況下，編譯器必須重建包含對原始的.obj 檔案的交互參照的所有.obj 檔案。 此外，如果不同的專案會使用通用的.pch 檔案，就難以依賴單一.obj 檔案的交互參照。  
+ 雖然此預設行為會產生更快建置時間，並減少磁碟空間需求，但也不想要如果小幅變更需要重建包含常見的偵錯資訊的.obj 檔案。 在此情況下，編譯器必須重建所有.obj 檔案包含在原始的.obj 檔案的交互參考。 此外，如果一般的.pch 檔案由不同的專案，依賴單一.obj 檔的交互參考是困難。  
   
- 如需先行編譯標頭的詳細資訊，請參閱：  
+ 如需有關先行編譯標頭的詳細資訊，請參閱：  
   
 -   [/Y (先行編譯標頭檔)](../../build/reference/y-precompiled-headers.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "32378229"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
 2.  按一下 [C/C++]  資料夾。  
   
@@ -72,13 +72,13 @@ ms.locfileid: "32378229"
 #include "etc.h"  
 ```  
   
- El comando siguiente crea 先行編譯標頭檔案 ETC.pch 和物件檔案 F.obj:  
+ 下列命令會建立先行編譯標頭檔案 ETC.pch 和物件檔案 F.obj:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- 目的檔 F.obj 包含類型和 WINDOWS.h 和 ETC.h 的符號資訊 （和它們所包含的任何其他標頭檔）。 現在您可以使用先行編譯標頭 ETC.pch 來編譯原始程式檔 G.cpp:  
+ 物件檔案 F.obj 包含類型和 WINDOWS.h 和 ETC.h 的符號資訊 （以及它們所包含的任何其他標頭檔）。 現在您可以使用先行編譯標頭 ETC.pch 來編譯原始程式檔 G.cpp:  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
@@ -86,7 +86,7 @@ CL /YuETC.H /Z7 G.CPP
   
  目的檔 G.obj 不包含先行編譯標頭的偵錯資訊，但只是參考 F.obj 檔案中的該資訊。 請注意，您必須使用 F.obj 檔案連結。  
   
- 如果您先行編譯標頭不以編譯 **/Z7**，您仍然可以使用它在稍後使用的編譯中 **/Z7**。 不過，偵錯資訊置於目前的物件檔案，而且無法使用偵錯工具的函式和先行編譯標頭中定義類型的本機符號。  
+ 如果不使用先行編譯標頭 **/z7**，您仍然可以使用它在使用的更新版本編譯 **/z7**。 不過，偵錯資訊會放在目前的物件檔案中，而且函式和先行編譯標頭中所定義類型的本機符號不適用於偵錯工具。  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   

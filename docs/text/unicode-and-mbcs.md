@@ -19,16 +19,16 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd3e3369e2da18d707de20afc900a0bc4c9f249
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: af5f782a337c7dc4b85c25006d7a1470034b92b4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020378"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584267"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode 和 MBCS
 Microsoft Foundation Classes (MFC) 程式庫、 C 執行階段程式庫，Visual c + +，Visual c + + 開發環境會啟用和協助程式的國際化程式設計。 它們提供：  

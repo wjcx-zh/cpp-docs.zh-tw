@@ -15,38 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 489d97252dcb4d20b7ef2f8557991a4e6016743d
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: ee7edbee285df6da752e875ac4d86a74e8f7893d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605528"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594137"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Hstringreference:: Operator&lt;運算子
-指出第一個參數是否小於第二個參數。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-inline bool operator<(  
-    const HStringReference& lhs,   
+
+指出第一個參數是否小於第二個參數。
+
+## <a name="syntax"></a>語法
+
+```cpp
+inline bool operator<(
+    const HStringReference& lhs,
     const HStringReference& rhs) throw()  
-```  
-  
-### <a name="parameters"></a>參數  
- *lhs*  
- 要比較的第一個參數。 *lhs*可以是參考**HStringReference**。  
-  
- *rhs*  
- 要比較的第二個參數。  *rhs*可以是參考**HStringReference**。  
-  
-## <a name="return-value"></a>傳回值  
- **真**如果*lhs*參數是小於*rhs*參數，否則**false**。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [HStringReference 類別](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>參數
+
+*lhs*  
+要比較的第一個參數。 *lhs*可以是參考**HStringReference**。
+
+*rhs*  
+要比較的第二個參數。  *rhs*可以是參考**HStringReference**。
+
+## <a name="return-value"></a>傳回值
+
+**真**如果*lhs*參數是小於*rhs*參數，否則**false**。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[HStringReference 類別](../windows/hstringreference-class.md)

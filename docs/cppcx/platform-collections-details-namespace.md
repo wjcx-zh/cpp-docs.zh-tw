@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::Details 命名空間 |Microsoft 文件
+title: Platform::Collections::Details 命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afb046b7e609b053d6dcd0b7d10d864b6194fe5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d3a6b839b51f9398a2c2ab6b4942e0f728fed6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088124"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594781"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details 命名空間
 此命名空間支援 `Platform` 基礎結構，而且不可直接從程式碼使用。  

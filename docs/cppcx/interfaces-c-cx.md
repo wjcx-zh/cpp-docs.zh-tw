@@ -1,20 +1,20 @@
 ---
-title: 介面 (C + + /CX) |Microsoft 文件
+title: 介面 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090640"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592548"
 ---
 # <a name="interfaces-ccx"></a>介面 (C++/CX)
 雖然 ref 類別最多可以繼承自一個具象基底類別，但它可以實作任意數目的介面類別。 介面類別 (或介面結構) 本身可以繼承 (或要求) 多個介面類別、可以多載其成員函式，也可以具有類型參數。  
@@ -30,7 +30,7 @@ ms.locfileid: "33090640"
   
 -   不允許使用欄位和靜態成員。  
   
--   型別，做為屬性、 方法參數或傳回值只能是 Windows 執行階段類型。這包括基礎類型和列舉類別類型。  
+-   類型會做為屬性、 方法參數或傳回值只能是 Windows 執行階段型別，這包括基本類型和列舉類別類型。  
   
 ## <a name="declaration-and-usage"></a>宣告和用法  
  下列範例顯示如何宣告介面。 請注意，介面可以宣告為類別或結構類型。  
@@ -63,7 +63,7 @@ ms.locfileid: "33090640"
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>泛型介面  
- 在 C + + /CX 中，`generic`關鍵字用來代表參數化的 Windows 執行階段類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 執行階段定義一些泛型介面 — 例如， [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)— 但它不支援建立公用使用者定義的泛型介面，在 C + + /CX。 不過，您可以建立私用泛型介面。  
+ 在 C + + /CX 中，`generic`關鍵字用以代表參數化的 Windows 執行階段類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 執行階段定義一些泛型介面 — 例如， [ivector&lt\<T >](Windows::Foundation::Collections::IVector)— 但它並不支援建立公用使用者定義的泛型介面，在 C + + /CX。 不過，您可以建立私用泛型介面。  
   
  以下是如何使用 Windows 執行階段類型，來撰寫泛型介面：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33090640"
   
 -   泛型介面可以接受一或多個前面有 `typename` 或 `class`的泛型類型參數。 不支援非類型參數。  
   
--   型別參數可以是任何的 Windows 執行階段類型。 也就是說，類型參數可以是參考類型、實值類型、介面類別、委派、基礎類型或公用列舉類別。  
+-   類型參數可以是任何的 Windows 執行階段類型。 也就是說，類型參數可以是參考類型、實值類型、介面類別、委派、基礎類型或公用列舉類別。  
   
 -   「 *封閉式泛型介面* 」(Closed Generic Interface) 是繼承自泛型介面，並指定所有類型參數之具象類型引數的介面。 只要可以使用非泛型私用介面的地方，都能使用此介面。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "33090640"
   
 -   當方法參數的類型是類型參數時，該參數或變數的宣告會使用類型參數的名稱而不使用任何指標、原生參考或控制代碼宣告子。 換句話說，您不需撰寫 "T^"。  
   
--   樣板化 ref 類別必須是私用類別。 這些類別可以實作泛型介面，也可以傳遞樣板參數*T*至泛型引數*T*。樣板化 ref 類別的每個具現化本身都是 ref 類別。  
+-   樣板化 ref 類別必須是私用類別。 它們可以實作泛型介面，也可以傳遞樣板參數*T*至泛型引數*T*。樣板化 ref 類別的每個具現化本身都是 ref 類別。  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統](../cppcx/type-system-c-cx.md)   
+ [型別系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

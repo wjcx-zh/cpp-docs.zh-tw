@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: arrayreference 類別 |Microsoft 文件'
+title: 'Platform:: arrayreference 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7b2a0fd8c4903852e88fa80f12bc05894625888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089110"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588307"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 類別
 `ArrayReference` 是最佳化類型，當您想要使用輸入資料填入 C-style 陣列時，可以使用它來替代輸入參數中的 [Platform::Array^](../cppcx/platform-array-class.md) 。  
@@ -49,7 +49,7 @@ class ArrayReference
 ## <a name="exceptions"></a>例外狀況  
   
 ### <a name="remarks"></a>備註  
- 使用 `ArrayReference` 填滿 C-style 陣列時，可避免先複製到 `Platform::Array` 變數然後複製到 C-style 陣列時所牽涉到的額外複製作業。 當您使用 `ArrayReference`時，只會有一項複製作業。 如需程式碼範例，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。  
+ 使用 `ArrayReference` 填滿 C-style 陣列時，可避免先複製到 `Platform::Array` 變數然後複製到 C-style 陣列時所牽涉到的額外複製作業。 當您使用 `ArrayReference`時，只會有一項複製作業。 如需程式碼範例，請參閱 < [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。  
   
 ### <a name="requirements"></a>需求  
  **最低支援用戶端：** Windows 8  
@@ -109,7 +109,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 
 ## <a name="operator-call"></a>  Arrayreference 運算子
-將目前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)回物件[platform:: array](../cppcx/platform-array-class.md)類別。  
+將目前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)物件傳回給[platform:: array](../cppcx/platform-array-class.md)類別。  
   
 ### <a name="syntax"></a>語法  
   
@@ -123,7 +123,7 @@ Array<TArg>^ operator ();
  `Array<TArg>^` 類型之物件的控制代碼  
   
 ### <a name="remarks"></a>備註  
- [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)和[platform:: array](../cppcx/platform-array-class.md)是標準 c + + 類別樣板，而不是 ref 類別。  
+ [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)並[platform:: array](../cppcx/platform-array-class.md)是標準 c + + 類別樣板，而不是 ref 類別。  
   
 
 

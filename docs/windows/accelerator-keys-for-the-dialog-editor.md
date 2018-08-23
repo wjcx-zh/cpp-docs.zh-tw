@@ -17,43 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32f8a643b8a960c4d5055a94abfaea5e0a911ed7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 18a2ae91de9b777f692b206c240cdd9b3c357fdb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646094"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592871"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>對話方塊編輯器的快速鍵
-以下是預設的對話方塊編輯器命令的快速鍵。 若要變更快速鍵，請按一下**選項**上**工具**功能表，然後選擇**鍵盤**下**環境**資料夾。 如需詳細資訊，請參閱[識別及自訂鍵盤快速鍵](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。  
-  
+
+以下是預設的對話方塊編輯器命令的快速鍵。 若要變更快速鍵，請按一下**選項**上**工具**功能表，然後選擇**鍵盤**下**環境**資料夾。 如需詳細資訊，請參閱[識別及自訂鍵盤快速鍵](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
+
 > [!NOTE]
->  根據您目前使用的設定或版本，您所看到的對話方塊可用選項，以及功能表命令的名稱和位置，可能會與 [說明] 中描述的有所不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
-  
-|命令|按鍵|描述|  
-|-------------|----------|-----------------|  
-|Format.AlignBottoms|**Ctrl** + **Shift** + **向下箭號**|對齊主控項的所選控制項的底部邊緣|  
-|Format.AlignCenters|**Shift** + **F9**|對齊主控項的所選控制項的垂直置中|  
-|Format.AlignLefts|**Ctrl** + **Shift** + **向左鍵**|對齊主控項的所選控制項的左的緣|  
-|Format.AlignMiddles|**F9**|對齊主控項的所選控制項的水平置中|  
-|Format.AlignRights|**Ctrl** + **Shift** + **向右箭頭**|對齊主控項的所選控制項的右邊緣|  
-|Format.AlignTops|**Ctrl** + **Shift** + **向上鍵**|對齊主控項的所選控制項的頂端邊緣|  
-|Format.ButtonBottom|**Ctrl** + **B**|將沿著正下方的對話方塊中選取的按鈕|  
-|Format.ButtonRight|**Ctrl** + **R**|位置對話方塊右上角選取的按鈕|  
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|將控制項 對話方塊中，水平置中|  
-|Format.CenterVertical|**Ctrl** + **F9**|將垂直內對話方塊控制項置中|  
-|Format.CheckMnemonics|**Ctrl** + **M**|檢查不重複的助憶鍵|  
-|Format.SizeToContent|**Shift** + **F7**|調整大小以符合的標題文字已選取的控制項|  
-|Format.SpaceAcross|**Alt** + **向左鍵**|均等所選的控制項的水平|  
-|Format.SpaceDown|**Alt** + **向下箭號**|均等所選的控制項的垂直|  
-|Format.TabOrder|**Ctrl** + **D**|設定控制項在對話方塊中的順序|  
-|Format.TestDialog|**Ctrl** + **T**|執行測試外觀和行為對話方塊|  
-|Format.ToggleGuides|**Ctrl** + **G**|沒有格線、 準則與方格之間的循環，編輯對話方塊|  
-  
- 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
-  
-## <a name="requirements"></a>需求  
- Win32  
-  
-## <a name="see-also"></a>另請參閱  
- [對話方塊編輯器](../windows/dialog-editor.md)
+> 根據您目前使用的設定或版本，您所看到的對話方塊可用選項，以及功能表命令的名稱和位置，可能會與 [說明] 中描述的有所不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)
+
+|命令|按鍵|描述|
+|-------------|----------|-----------------|
+|Format.AlignBottoms|**Ctrl** + **Shift** + **向下箭號**|對齊主控項的所選控制項的底部邊緣|
+|Format.AlignCenters|**Shift** + **F9**|對齊主控項的所選控制項的垂直置中|
+|Format.AlignLefts|**Ctrl** + **Shift** + **向左鍵**|對齊主控項的所選控制項的左的緣|
+|Format.AlignMiddles|**F9**|對齊主控項的所選控制項的水平置中|
+|Format.AlignRights|**Ctrl** + **Shift** + **向右箭頭**|對齊主控項的所選控制項的右邊緣|
+|Format.AlignTops|**Ctrl** + **Shift** + **向上鍵**|對齊主控項的所選控制項的頂端邊緣|
+|Format.ButtonBottom|**Ctrl** + **B**|將沿著正下方的對話方塊中選取的按鈕|
+|Format.ButtonRight|**Ctrl** + **R**|位置對話方塊右上角選取的按鈕|
+|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|將控制項 對話方塊中，水平置中|
+|Format.CenterVertical|**Ctrl** + **F9**|將垂直內對話方塊控制項置中|
+|Format.CheckMnemonics|**Ctrl** + **M**|檢查不重複的助憶鍵|
+|Format.SizeToContent|**Shift** + **F7**|調整大小以符合的標題文字已選取的控制項|
+|Format.SpaceAcross|**Alt** + **向左鍵**|均等所選的控制項的水平|
+|Format.SpaceDown|**Alt** + **向下箭號**|均等所選的控制項的垂直|
+|Format.TabOrder|**Ctrl** + **D**|設定控制項在對話方塊中的順序|
+|Format.TestDialog|**Ctrl** + **T**|執行測試外觀和行為對話方塊|
+|Format.ToggleGuides|**Ctrl** + **G**|沒有格線、 準則與方格之間的循環，編輯對話方塊|
+
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
+
+## <a name="requirements"></a>需求
+
+Win32
+
+## <a name="see-also"></a>另請參閱
+
+[對話方塊編輯器](../windows/dialog-editor.md)

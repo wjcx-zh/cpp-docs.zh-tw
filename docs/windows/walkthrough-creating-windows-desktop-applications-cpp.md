@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 397b5274c22acd3a136925495fa350c3aa40dece
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653206"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590290"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
 本逐步解說示範如何在 Visual Studio 中建立傳統 Windows 桌面應用程式。 您將建立範例應用程式使用 Windows API 來顯示"Hello，Windows desktop"！ 視窗中顯示 "Hello, World!" 的基本 Windows 傳統型應用程式。 您可以使用在這個逐步解說中開發的程式碼作為模式，來建立其他 Windows 傳統型應用程式。
 
-Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是建立 Windows 應用程式的 C 語言的基礎架構。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 已在此 API，例如 MFC、 ATL 和.NET framework 之上建置更進階且更容易程式的架構。 即使是最新式的程式碼，UWP 和存放區撰寫之應用程式在 C + + /cli WinRT 使用下面這個 API。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](https://msdn.microsoft.com/library/windows/desktop/ff818516.aspx)。 有許多方式可建立 Windows 應用程式，但這是第一個。
+Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 API） 是建立 Windows 應用程式的 C 語言的基礎架構。 它已從 1980 年代，並已用來建立 Windows 應用程式數十年。 已在此 API，例如 MFC、 ATL 和.NET framework 之上建置更進階且更容易程式的架構。 即使是最新式的程式碼，UWP 和存放區撰寫之應用程式在 C + + /cli WinRT 使用下面這個 API。 如需有關 Windows API 的詳細資訊，請參閱 < [Windows API 索引](/windows/desktop/apiindex/windows-api-list)。 有許多方式可建立 Windows 應用程式，但這是第一個。
 
 > [!IMPORTANT]
 > 為了保持簡潔，省略某些程式碼陳述式文字中。 [建置程式碼](#build-the-code)這份文件結尾的區段會顯示完整的程式碼。
@@ -570,4 +570,5 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 恭喜您！ 當您完成本逐步解說，並建置傳統 Windows 桌面應用程式。
 
 ## <a name="see-also"></a>另請參閱
- [Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)
+
+[Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)

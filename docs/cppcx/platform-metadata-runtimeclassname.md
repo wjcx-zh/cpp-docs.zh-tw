@@ -1,5 +1,5 @@
 ---
-title: Platform::Metadata::RuntimeClassName |Microsoft 文件
+title: Platform::Metadata::RuntimeClassName |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - RuntimeClassName
 - Platform::Metadata::RuntimeClassName
 ms.assetid: fdef8f85-ab94-4edd-ba50-ee0da9358ff6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 297a5089af7db43d837934e864e0925cd7b34a3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024d9d7dce234b07620a108b1f11c240bd842ac6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088228"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592574"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
 套用至類別定義時，確保私用類別從 GetRuntimeClassName 函數傳回有效的名稱。  
@@ -31,7 +31,7 @@ ms.locfileid: "33088228"
 ```  
   
 #### <a name="parameters"></a>參數  
- name  
+ 名稱  
   
  Windows 執行階段中可見的現有公用類型名稱。  
   

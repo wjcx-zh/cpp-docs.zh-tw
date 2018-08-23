@@ -1,20 +1,20 @@
 ---
-title: 部分類別 (C + + /CX) |Microsoft 文件
+title: 部分類別 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9457f3401ed03b13bf29f489b88472d11a4dd7a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1d5f7559b88505929153ae1852fc42171e5208
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091851"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593022"
 ---
 # <a name="partial-classes-ccx"></a>部分類別 (C++/CX)
 部分類別是支援下列案例的建構：您要修改一部分的類別定義，而自動產生程式碼軟體 (例如 XAML 設計工具) 也在相同的類別中修改程式碼。 使用部分類別可防止設計工具覆寫您的程式碼。 在 Visual Studio 專案中，會對產生的檔案自動套用 `partial` 修飾詞。  
@@ -94,6 +94,6 @@ ms.locfileid: "33091851"
  [!code-cpp[cx_partial#09](../cppcx/codesnippet/CPP/partialclassexample/address.h#09)]  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統](../cppcx/type-system-c-cx.md)   
+ [型別系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

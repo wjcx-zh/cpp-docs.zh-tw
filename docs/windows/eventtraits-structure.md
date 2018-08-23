@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f46f1bc6d03f7bf222edcd3d23def72edfcb11fa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02f7670daea943669844081a8d956ef0539d656b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647569"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594332"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 結構
-定義特性`Event`類別控制代碼。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-struct EventTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>成員  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `HANDLENullTraits`  
-  
- `EventTraits`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>另請參閱  
- [Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+定義特性`Event`類別控制代碼。
+
+## <a name="syntax"></a>語法
+
+```cpp
+struct EventTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>成員
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`HANDLENullTraits`
+
+`EventTraits`
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

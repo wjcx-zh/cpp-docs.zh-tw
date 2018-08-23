@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402682"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588213"
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
 使用**typename**在告訴編譯器將指定的限定的名稱識別類型的樣板定義中的限定名稱。 如需詳細資訊，請參閱 < [typename](../cpp/typename.md)。  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>樣板去除混淆  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 會強制執行 C++98/03/11 標準規則，以便釐清 "template" 關鍵字。 在下列範例中，Visual c + + 2010年會接受不合格的行和相符的程式碼行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 接受只有相符的程式碼行。  
+ Visual Studio 2012 會強制執行 C + + 98/03/11 標準規則，以便使用 「 範本 」 關鍵字的去除混淆。 在下列範例中，Visual c + + 2010年會接受不合格的行和相符的程式碼行。  Visual Studio 2012 接受只有相符的程式碼行。  
   
 ```cpp  
 #include <iostream>  

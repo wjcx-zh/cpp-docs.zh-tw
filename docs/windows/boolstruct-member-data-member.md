@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 46e2a87515e2b129c31f68e31b3231eb1699e844
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641111"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591104"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member 資料成員
-支援 WRL 結構，而且不是直接從您的程式碼使用。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-int Member;  
-```  
-  
-## <a name="remarks"></a>備註  
- 指定[ComPtr](../windows/comptr-class.md) ，或不是，管理介面的物件存留期。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** internal.h  
-  
- **命名空間：** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [BoolStruct 結構](../windows/boolstruct-structure.md)   
- [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)
+
+支援 WRL 結構，而且不是直接從您的程式碼使用。
+
+## <a name="syntax"></a>語法
+
+```cpp
+int Member;
+```
+
+## <a name="remarks"></a>備註
+
+指定[ComPtr](../windows/comptr-class.md) ，或不是，管理介面的物件存留期。
+
+## <a name="requirements"></a>需求
+
+**標頭：** internal.h
+
+**命名空間：** Microsoft::WRL::Details
+
+## <a name="see-also"></a>另請參閱
+
+[BoolStruct 結構](../windows/boolstruct-structure.md)  
+[Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

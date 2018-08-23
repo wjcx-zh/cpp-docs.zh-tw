@@ -1,5 +1,5 @@
 ---
-title: Collections 類別 |Microsoft 文件
+title: Collections 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -25,16 +25,16 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 550a1e40d3fee80b4c9666457a60772ed49b580a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092492"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590231"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -53,7 +53,7 @@ template <typename T, typename E>
 Vector 物件中包含的元素型別。
 
 *E*  
-指定二元述詞的測試類型的值相等比較*T*。預設值是 `std::equal_to<T>`。
+指定二元述詞，來測試是否與類型的值相等*T*。預設值是 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>備註
 
@@ -69,9 +69,9 @@ Vector 物件中包含的元素型別。
 
 1. 公用列舉類別
 
-**向量**類別是 c + + 具象實作， [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)介面。
+**向量**類別是 c + + 具象實作[ivector&lt](/uwp/api/Windows.Foundation.Collections.IVector_T_)介面。
 
-如果您嘗試使用**向量**類型在公用傳回值或參數時，編譯器會引發的錯誤 C3986。 您可以修正錯誤，變更參數或傳回值類型到[Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+如果您嘗試使用**向量**類型在公用傳回值或參數，編譯器會引發的錯誤 C3986。 您可以修正錯誤，變更參數或傳回實值型別[ivector&lt](/uwp/api/Windows.Foundation.Collections.IVector_T_)。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 
@@ -129,7 +129,7 @@ virtual void Append(T item);
 ### <a name="parameters"></a>參數
 
 *index*  
-要插入 Vector 中的項目。 型別*項目*由定義*T*類型名稱。
+要插入 Vector 中的項目。 型別*項目*由此*T*類型名稱。
 
 ## <a name="clear"></a>  Vector:: clear 方法
 
@@ -157,9 +157,9 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 ### <a name="remarks"></a>備註
 
-若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myVector->First();`。 此迭代器知道集合的長度。
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myVector->First();`。 此迭代器知道集合的長度。
 
-當您需要對 STL 函式傳遞的迭代器的一組時，使用受限的函式[collections:: begin](../cppcx/begin-function.md)和[不](../cppcx/end-function.md)
+當您需要一對迭代器，要傳遞至 STL 函式時，使用免費的函式[collections:: begin](../cppcx/begin-function.md)和[不](../cppcx/end-function.md)
 
 ## <a name="getat"></a>  Vector:: getat 方法
 
@@ -178,7 +178,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="return-value"></a>傳回值
 
-指定的項目*索引*參數。 項目類型由所定義*T*類型名稱。
+指定的項目*index*參數。 項目類型定義所*T*類型名稱。
 
 ## <a name="getmany"></a>  Vector:: getmany 方法
 
@@ -198,7 +198,7 @@ virtual unsigned int GetMany(
 要擷取之開始項目以零為起始的索引。
 
 *dest*  
-呼叫端配置的項目陣列所指定的項目開始*startIndex*並在 Vector 中的最後一個元素結束。
+呼叫端配置的陣列所指定的項目開始的項目*startIndex*並在向量中最後一個項目結束。
 
 ### <a name="return-value"></a>傳回值
 
@@ -206,7 +206,7 @@ virtual unsigned int GetMany(
 
 ### <a name="remarks"></a>備註
 
-此函式並非直接供用戶端程式碼使用。 其用於內部[to_vector 函式](../cppcx/to-vector-function.md)以便有效率地轉換成 std:: vector 執行個體地 platform。
+此函式並非直接供用戶端程式碼使用。 它用於在內部[to_vector 函式](../cppcx/to-vector-function.md)以便有效率地轉換成 std:: vector 執行個體地將 platform。
 
 ## <a name="getview"></a>  Vector:: getview 方法
 
@@ -238,9 +238,9 @@ virtual bool IndexOf(T value, unsigned int* index);
 要尋找的項目。
 
 *index*  
-項目的以零為起始的索引如果參數*值*找到，則為 0。
+項目的以零為起始的索引若參數*值*找到; 否則即為 0。
 
-*索引*參數是 0，如果項目是 Vector 的第一個元素或找不到項目。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。
+*Index*參數為 0，如果項目是第一個向量的元素，或找不到項目。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -266,7 +266,7 @@ virtual void InsertAt(unsigned int index, T item)
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
 *項目*  
-要插入 Vector 所指定的項目之後的項目*索引*。 型別*項目*由定義*T*類型名稱。
+要在指定的項目之後插入向量的項目*index*。 型別*項目*由此*T*類型名稱。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
 
@@ -306,7 +306,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ### <a name="parameters"></a>參數
 
 *arr*  
-物件所定義的型別陣列*T*類型名稱。
+型別定義的物件陣列*T*類型名稱。
 
 ## <a name="setat"></a>  Vector:: setat 方法
 
@@ -324,7 +324,7 @@ virtual void SetAt(unsigned int index, T item);
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
 *項目*  
-要指派給指定項目的值。 型別*項目*由定義*T*類型名稱。
+要指派給指定項目的值。 型別*項目*由此*T*類型名稱。
 
 ## <a name="size"></a>  Vector:: size 方法
 
@@ -366,16 +366,16 @@ Vector(std::initializer_list<T> il);
 ### <a name="parameters"></a>參數
 
 *a*  
-A [std:: array](../standard-library/array-class-stl.md) ，將會用來初始化向量。
+A [std:: array](../standard-library/array-class-stl.md) ，將會用來初始化 Vector。
 
 *arr*  
-A [platform:: array](../cppcx/platform-array-class.md) ，將會用來初始化向量。
+A [platform:: array](../cppcx/platform-array-class.md) ，將會用來初始化 Vector。
 
 *InIt*  
 用來初始化目前 Vector 的物件集合類型。
 
 *il*  
-A [std:: initializer_list](../standard-library/initializer-list-class.md)類型之物件的*T* ，將會用來初始化向量。
+A [std:: initializer_list](../standard-library/initializer-list-class.md)之物件的型別*T* ，將會用來初始化 Vector。
 
 *N*  
 用來初始化目前 Vector 之物件集合中的項目數。
@@ -387,16 +387,16 @@ Vector 中的項目數。
 用來初始化目前 Vector 中各個項目的值。
 
 *v*  
-[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)至[std:: vector](../standard-library/vector-class.md)用來初始化目前 Vector。
+[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: vector](../standard-library/vector-class.md)用來初始化目前 Vector。
 
 *ptr*  
 用來初始化目前 Vector 之 `std::vector` 的指標。
 
 *first*  
-用來初始化目前 Vector 之物件序列中的第一個項目。 型別*第一個*會藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+用來初始化目前 Vector 之物件序列中的第一個項目。 型別*第一*藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 *最後一個*  
-用來初始化目前 Vector 之物件序列中的最後一個項目。 型別*最後*會藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+用來初始化目前 Vector 之物件序列中的最後一個項目。 型別*上次*藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

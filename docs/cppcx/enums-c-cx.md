@@ -1,20 +1,20 @@
 ---
-title: 列舉 (C + + /CX) |Microsoft 文件
+title: 列舉 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 725e2b9edb7ba2a84418e900ffb1aafe4c5064af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087377"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593960"
 ---
 # <a name="enums-ccx"></a>列舉 (C++/CX)
 C + + /CX 支援`public enum class`關鍵字，類似於標準 c + + `scoped  enum`。 當您使用以 `public enum class` 關鍵字所宣告的列舉程式時，您必須使用列舉識別項來限定每一個列舉值的範圍。  
@@ -22,7 +22,7 @@ C + + /CX 支援`public enum class`關鍵字，類似於標準 c + + `scoped  en
 ### <a name="remarks"></a>備註  
  不具有存取規範 (例如 `public enum class` ) 的 `public`視為標準 C++ [限定範圍列舉](../cpp/enumerations-cpp.md)。  
   
- A`public enum class`或`public enum struct`雖然 Windows 執行階段本身需要型別是 int32 或旗標列舉的 uint32 宣告可以具有任何整數類資料類型的基礎類型。 下列語法描述 `public enum class` 或 `public enum struct`的部分。  
+ A`public enum class`或`public enum struct`宣告可以具有任何整數類資料類型的基礎類型，雖然 Windows 執行階段本身所需的型別是 int32 或旗標列舉的 uint32。 下列語法描述 `public enum class` 或 `public enum struct`的部分。  
   
  本範例示範如何定義公用列舉類別：  
   
@@ -42,6 +42,6 @@ C + + /CX 支援`public enum class`關鍵字，類似於標準 c + + `scoped  en
  [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統](../cppcx/type-system-c-cx.md)   
+ [型別系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

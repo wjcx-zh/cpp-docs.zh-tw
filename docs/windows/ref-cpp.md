@@ -17,54 +17,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04eb49d0b0f5cb78f0dcd893ca97586e9a16e9cb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1a8fe658776bb41d1de4e1592df7ad83299aea46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010750"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587472"
 ---
 # <a name="ref-c"></a>ref (C++)
-識別參考指標。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ref]  
-```  
-  
-## <a name="remarks"></a>備註  
- **Ref** c + + 屬性具有相同的功能[ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 下列程式碼示範如何使用**ref**屬性：  
-  
-```cpp  
-// cpp_attr_ref_ref.cpp  
-// compile with: /LD  
-#include <windows.h>   
-[module(name="ATLFIRELib")];  
-[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl  
-{  
-   [id(1), unique] char * GetFirstName([in, ref] char * pszFullName );   
-};  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**typedef**，參數的介面，介面方法|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [參數屬性](../windows/parameter-attributes.md)   
+
+識別參考指標。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ref]
+```
+
+## <a name="remarks"></a>備註
+
+**Ref** c + + 屬性具有相同的功能[ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL 屬性。
+
+## <a name="example"></a>範例
+
+下列程式碼示範如何使用**ref**屬性：
+
+```cpp
+// cpp_attr_ref_ref.cpp
+// compile with: /LD
+#include <windows.h>
+[module(name="ATLFIRELib")];
+[dispinterface, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl
+{
+   [id(1), unique] char * GetFirstName([in, ref] char * pszFullName );
+};
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**typedef**，參數的介面，介面方法|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[參數屬性](../windows/parameter-attributes.md)  

@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94c27262e63ba1c428596dbac836e165c24d8538
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b518fc059e77420788be941ccc98035fb68aa0db
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605681"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592750"
 ---
 # <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() 運算子
-擷取的 HRESULT 值所產生的最後一個**RoInitializeWrapper**建構函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
+
+擷取的 HRESULT 值所產生的最後一個**RoInitializeWrapper**建構函式。
+
+## <a name="syntax"></a>語法
+
+```cpp
 operator HRESULT()  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [HandleT 類別](../windows/handlet-class.md)
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[HandleT 類別](../windows/handlet-class.md)

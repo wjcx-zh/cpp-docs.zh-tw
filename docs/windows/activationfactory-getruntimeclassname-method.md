@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc4658ebf0519ef9d1792d62b303f423e658835
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643065"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590178"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName 方法
-取得物件的執行階段類別名稱，目前**ActivationFactory**具現化。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-STDMETHOD(  
-   GetRuntimeClassName  
-)(_Out_ HSTRING* runtimeName);  
-```  
-  
-### <a name="parameters"></a>參數  
- *runtimeName*  
- 這項作業完成時，包含物件的執行階段類別名稱的字串的控制代碼的目前**ActivationFactory**具現化。  
-  
-## <a name="return-value"></a>傳回值  
- 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** module.h  
-  
- **命名空間：** Microsoft::WRL  
-  
-## <a name="see-also"></a>另請參閱  
- [ActivationFactory 類別](../windows/activationfactory-class.md)
+
+取得物件的執行階段類別名稱，目前**ActivationFactory**具現化。
+
+## <a name="syntax"></a>語法
+
+```cpp
+STDMETHOD(
+   GetRuntimeClassName
+)(_Out_ HSTRING* runtimeName);
+```
+
+### <a name="parameters"></a>參數
+
+*runtimeName*  
+這項作業完成時，包含物件的執行階段類別名稱的字串的控制代碼的目前**ActivationFactory**具現化。
+
+## <a name="return-value"></a>傳回值
+
+若成功，則為 S_OK，否則會是 HRESULT 指出失敗。
+
+## <a name="requirements"></a>需求
+
+**標頭：** module.h
+
+**命名空間：** Microsoft::WRL
+
+## <a name="see-also"></a>另請參閱
+
+[ActivationFactory 類別](../windows/activationfactory-class.md)

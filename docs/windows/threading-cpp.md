@@ -17,66 +17,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6da3bd5f0dd318b781d967d7974ef603b60b9ad
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 700e8915535a38233b1cd1e55669c1e3c5f372dd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019198"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591549"
 ---
 # <a name="threading-c"></a>threading (C++)
-指定 COM 物件的執行緒模型。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ threading(  
-   model=enumeration  
-) ]  
-```  
-  
-### <a name="parameters"></a>參數  
- *模型*（選擇性）  
- 其中一個下列的執行緒模型：  
-  
--   `apartment` （apartment 執行緒）  
-  
--   `neutral` （沒有使用者介面的.NET framework 元件）  
-  
--   `single` （簡單執行緒）  
-  
--   `free` （無限制執行緒）  
-  
--   `both` （apartment 和無限制執行緒）  
-  
- 預設值是 `apartment`。  
-  
-## <a name="remarks"></a>備註  
- **執行緒**c + + 屬性未出現在所產生的.idl 檔案，但將您的 COM 物件的實作中使用。  
-  
- 在 ATL 專案中，如果[coclass](../windows/coclass.md)屬性也會出現，所指定的執行緒模型*模型*傳遞做為範本參數[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md)類別插入`coclass`屬性。  
-  
- **執行緒**屬性也能存取[event_source](../windows/event-source.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱[授權](../windows/licensed.md)的範例使用的範例**執行緒**。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**類別**，**結構**|  
-|**可重複**|否|  
-|**必要屬性**|**coclass**|  
-|**無效屬性**|無|  
-  
- 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [COM 屬性](../windows/com-attributes.md)   
- [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
- [類別屬性](../windows/class-attributes.md)   
- [多執行緒支援較舊的程式碼 （Visual c + +）](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [中性 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
+
+指定 COM 物件的執行緒模型。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ threading(
+   model=enumeration
+) ]
+```
+
+### <a name="parameters"></a>參數
+
+*模型*（選擇性）  
+其中一個下列的執行緒模型：
+
+- `apartment` （apartment 執行緒）
+
+- `neutral` （沒有使用者介面的.NET framework 元件）
+
+- `single` （簡單執行緒）
+
+- `free` （無限制執行緒）
+
+- `both` （apartment 和無限制執行緒）
+
+預設值是 `apartment`。
+
+## <a name="remarks"></a>備註
+
+**執行緒**c + + 屬性未出現在所產生的.idl 檔案，但將您的 COM 物件的實作中使用。
+
+在 ATL 專案中，如果[coclass](../windows/coclass.md)屬性也會出現，所指定的執行緒模型*模型*傳遞做為範本參數[CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md)類別插入`coclass`屬性。
+
+**執行緒**屬性也能存取[event_source](../windows/event-source.md)。
+
+## <a name="example"></a>範例
+
+請參閱[授權](../windows/licensed.md)的範例使用的範例**執行緒**。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**類別**，**結構**|
+|**可重複**|否|
+|**必要屬性**|**coclass**|
+|**無效屬性**|無|
+
+如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[COM 屬性](../windows/com-attributes.md)  
+[Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
+[類別屬性](../windows/class-attributes.md)  
+[舊版程式碼的多執行緒支援 (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)  
+[中性 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms681813)  

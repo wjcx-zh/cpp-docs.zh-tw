@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 561862427238a86dbb23ee05044c1d01558abab5
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: b1b36d4feea61e9a79978cc86dca29a7ad14846a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647595"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594032"
 ---
 # <a name="handletraitsclose-method"></a>HANDLETraits::Close 方法
-關閉指定的控制代碼。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-inline static bool Close(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- *h*  
- 若要關閉控制代碼。  
-  
-## <a name="return-value"></a>傳回值  
- **真**如果處理*h*關閉順利完成，否則**false**。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>另請參閱  
- [HANDLETraits 結構](../windows/handletraits-structure.md)
+
+關閉指定的控制代碼。
+
+## <a name="syntax"></a>語法
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>參數
+
+*h*  
+若要關閉控制代碼。
+
+## <a name="return-value"></a>傳回值
+
+**真**如果處理*h*關閉順利完成，否則**false**。
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>另請參閱
+
+[HANDLETraits 結構](../windows/handletraits-structure.md)

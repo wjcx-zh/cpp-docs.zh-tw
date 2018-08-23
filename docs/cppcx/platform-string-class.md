@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: string 類別 |Microsoft 文件'
+title: 'Platform:: string 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -23,19 +23,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094822"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587407"
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
-用來代表文字之 Unicode 字元的循序集合。 如需詳細資訊和範例，請參閱[字串](../cppcx/strings-c-cx.md)。  
+用來代表文字之 Unicode 字元的循序集合。 如需詳細資訊和範例，請參閱 <<c0> [ 字串](../cppcx/strings-c-cx.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -81,7 +81,7 @@ public ref class String sealed : Object,
 |[String:: equals](#equals)|指出指定的物件是否等同於目前的物件。|  
 |[String::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
 |[String::IsEmpty](#isempty)|指出目前 String 物件是否為空。|  
-|[String::IsFastPass](#isfastpass)|指出目前 String 物件是否參與「 *快速傳遞* 」(Fast Pass) 作業。 在快速傳遞作業時，參考計數會暫停。|  
+|[String::IsFastPass](#isfastpass)|指出目前 String 物件會參與*快速傳遞*作業。 在快速傳遞作業時，參考計數會暫停。|  
 |[String::Length](#length)|擷取目前 String 物件的長度。|  
 |[String::ToString](#tostring)|傳回值與目前字串相同的 String 物件。|  
   
@@ -93,8 +93,8 @@ public ref class String sealed : Object,
 |------------|-----------------|  
 |[String:: operator = = 運算子](#operator-equality)|指出兩個指定的 String 物件是否具有相同的值。|  
 |[operator+ 運算子](#operator-plus)|將兩個 String 物件串連成新的 String 物件。|  
-|[String:: > 運算子](#operator-greater-than)|指出其中一個 String 物件的值是否大於另一個 String 物件的值。|  
-|[String:: > = 運算子](#operator-greater-than-or-equals)|指出其中一個 String 物件的值是否大於或等於另一個 String 物件的值。|  
+|[String:: operator > 運算子](#operator-greater-than)|指出其中一個 String 物件的值是否大於另一個 String 物件的值。|  
+|[String:: operator > = 運算子](#operator-greater-than-or-equals)|指出其中一個 String 物件的值是否大於或等於另一個 String 物件的值。|  
 |[String:: operator ！ = 運算子](#operator-inequality)|指出兩個指定的 String 物件是否具有不同的值。|  
 |[String:: operator < 運算子](#operator-less-than)|指出其中一個 String 物件的值是否小於另一個 String 物件的值。|  
   
@@ -171,7 +171,7 @@ String^ Concat( String^ str1, String^ str2)
 ### <a name="return-value"></a>傳回值  
  由 `str1` 與 `str2` 兩者的值串連後得出其值的新 String^ 物件。  
   
- 如果`str1`是`null`和`str2`不是，`str1`傳回。 如果`str2`是`null`和`str1`不是，`str2`傳回。 如果 `str1` 與 `str2` 都是 `null`，則會傳回空字串 (L"")。  
+ 如果`str1`已`null`並`str2`不是，`str1`會傳回。 如果`str2`已`null`並`str1`不是，`str2`會傳回。 如果 `str1` 與 `str2` 都是 `null`，則會傳回空字串 (L"")。  
   
 
 
@@ -185,10 +185,10 @@ const char16* Data()
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 開頭的指標`const char16`的 Unicode 字元陣列 (`char16`是 typedef `wchar_t`)。  
+ 開頭的指標`const char16`Unicode 字元陣列 (`char16`是 typedef `wchar_t`)。  
   
 ### <a name="remarks"></a>備註  
- 使用這個方法可從 `Platform::String^` 轉換為 `wchar_t*`。 當 `String` 物件超出範圍時，資料指標不再保證有效。 若要儲存原始存留期資料`String`物件，請使用[wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)將陣列複製到您自行配置的記憶體。  
+ 使用這個方法可從 `Platform::String^` 轉換為 `wchar_t*`。 當 `String` 物件超出範圍時，資料指標不再保證有效。 若要儲存對資料執行非原始的存留期`String`物件，請使用[wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)將陣列複製到您自行配置的記憶體。  
   
 
 
@@ -275,7 +275,7 @@ bool IsEmpty()
 
 
 ## <a name="isfastpass"></a>  String:: isfastpass 方法
-指出目前 String 物件是否參與「 *快速傳遞* 」(Fast Pass) 作業。 在快速傳遞作業時，參考計數會暫停。  
+指出目前 String 物件會參與*快速傳遞*作業。 在快速傳遞作業時，參考計數會暫停。  
   
 ### <a name="syntax"></a>語法  
   
@@ -311,12 +311,12 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5  
 ```  
   
- 所傳回的字元陣列[string:: data](#data)有一個額外的字元，也就是結尾 NULL 或 '\0'。 這個字元的長度也是兩個位元組。  
+ 所傳回的字元陣列[string:: data](#data)有一個額外的字元，也就是終止的 NULL 或 '\0'。 這個字元的長度也是兩個位元組。  
   
 
 
 ## <a name="operator-plus"></a>  String:: operator + 運算子
-串連兩個[字串](../cppcx/platform-string-class.md)物件至新[字串](../cppcx/platform-string-class.md)物件。
+串連兩個[字串](../cppcx/platform-string-class.md)至新的物件[字串](../cppcx/platform-string-class.md)物件。
   
 ### <a name="syntax"></a>語法  
   
@@ -358,7 +358,7 @@ bool String::operator==( String^ str1, String^ str2)
  如果 `true` 和 `str1` 的內容相等，則為 `str2`，否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 這個運算子等於[string:: compareordinal](#compareordinal)。  
+ 此運算子相當於[string:: compareordinal](#compareordinal)。  
   
 
 
@@ -382,7 +382,7 @@ bool String::operator>( String^ str1, String^ str2)
  如果 `str1` 的值大於 `str2` 的值，則為 `true`，否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 這個運算子等於明確呼叫[string:: compareordinal](#compareordinal)及取得大於零的結果。  
+ 這個運算子等於明確呼叫[string:: compareordinal](#compareordinal)並取得結果小於或等於零。  
   
 
 
@@ -427,7 +427,7 @@ bool String::operator!=( String^ str1, String^ str2)
  如果 `true` 不等於 `str1`，則為 `str2`，否則為 `false`。   
 
 
-## <a name="operator-less-than"></a> String::&lt; 
+## <a name="operator-less-than"></a> String:: operator&lt; 
 指出其中一個 String 物件的值是否小於另一個 String 物件的值。  
   
 ### <a name="syntax"></a>語法  
@@ -465,7 +465,7 @@ String(char16* s, unsigned int n)
  用以指定字串長度的數值。  
   
 ### <a name="remarks"></a>備註  
- 如果效能至關重要，而您控制來源字串的存留期，您可以使用[platform:: stringreference](../cppcx/platform-stringreference-class.md)取代字串。  
+ 如果效能至關重要，而您控制在來源字串的存留期，您可以使用[platform:: stringreference](../cppcx/platform-stringreference-class.md)取代字串。  
 ### <a name="example"></a>範例  
   
 ```cpp  

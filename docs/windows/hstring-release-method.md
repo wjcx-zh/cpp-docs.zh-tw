@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11b7045444433865d034318bab235c133c786842
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 776b6683d0adbfbb6b8ac64c08fd7f89eaad7046
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018425"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590109"
 ---
 # <a name="hstringrelease-method"></a>HString::Release 方法
-會刪除基礎字串值，並初始化目前**HString**為空值的物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
+
+會刪除基礎字串值，並初始化目前**HString**為空值的物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
 void Release() throw()  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：** corewrappers.h  
-  
- **命名空間：** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>另請參閱  
- [HString 類別](../windows/hstring-class.md)
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：** corewrappers.h
+
+**命名空間：** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>另請參閱
+
+[HString 類別](../windows/hstring-class.md)

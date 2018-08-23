@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: invalidargumentexception 類別 |Microsoft 文件'
+title: 'Platform:: invalidargumentexception 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26f0efb907520ea7e54b0b8bec8d2f4323a51cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086671"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593995"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException 類別
 當其中一個提供給方法的引數無效時擲回。  

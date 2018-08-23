@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: objectdisposedexception 類別 |Microsoft 文件'
+title: 'Platform:: objectdisposedexception 類別 |Microsoft Docs'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ObjectDisposedException
 ms.assetid: 68506fe4-d09c-4407-999f-1e3edb261d41
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a861b696b6186f8ce70d726be7705cfd0a5cc7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53946335175b0919c800a5ddb57d4be2fdcc20b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086619"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592274"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException 類別
 在已處置的物件上執行作業時擲回。  

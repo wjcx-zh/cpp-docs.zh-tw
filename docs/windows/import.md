@@ -17,73 +17,78 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 529e6f3a8e2b30be38d80ec253d394077c9f7f0f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2ba62d3dfc1f71ab61b5041ebbd884be8b5e39f6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017093"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592660"
 ---
 # <a name="import"></a>import
-指定另一個.idl、.odl 或標頭檔包含您想要從您主要的 IDL 中參考的定義。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ import(  
-   idl_file  
-) ];  
-```  
-  
-### <a name="parameters"></a>參數  
- *idl_file*  
- 您要匯入類型程式庫目前專案的.idl 檔案的名稱。  
-  
-## <a name="remarks"></a>備註  
- **匯入**c + + 屬性會造成`#import`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。 **匯入**屬性有相同的功能[匯入](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 屬性。  
-  
- **匯入**屬性只會將指定的檔案放入您的專案; 將產生的.idl 檔案**匯入**屬性不會讓您指定的檔案中的建構呼叫從來源程式碼在您的專案。  若要從原始碼專案中，在指定的檔案呼叫建構，請使用[#import](../preprocessor/hash-import-directive-cpp.md)並`embedded_idl`屬性，或者您可以包含的.h 檔案*idl_file*.h 檔案存在，則。  
-  
-## <a name="example"></a>範例  
- 下列程式碼範例：  
-  
-```cpp  
-// cpp_attr_ref_import.cpp  
-// compile with: /LD  
-[module(name="MyLib")];  
-[import(import.idl)];  
-```  
-  
- 會產生下列程式碼產生的.idl 檔案中：  
-  
-```  
-import "docobj.idl";  
-import "import.idl";  
-  
-[ uuid(EED3644C-8488-3ECD-BA97-147DB3CDB499), version(1.0) ]  
-library MyLib {  
-   importlib("stdole2.tlb");  
-   importlib("olepro32.dll");  
-...  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|任何位置|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [獨立屬性](../windows/stand-alone-attributes.md)   
- [importidl](../windows/importidl.md)   
- [importlib](../windows/importlib.md)   
- [包含](../windows/include-cpp.md)   
- [includelib](../windows/includelib-cpp.md)   
+
+指定另一個.idl、.odl 或標頭檔包含您想要從您主要的 IDL 中參考的定義。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ import(
+   idl_file
+) ];
+```
+
+### <a name="parameters"></a>參數
+
+*idl_file*  
+您要匯入類型程式庫目前專案的.idl 檔案的名稱。
+
+## <a name="remarks"></a>備註
+
+**匯入**c + + 屬性會造成`#import`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。 **匯入**屬性有相同的功能[匯入](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 屬性。
+
+**匯入**屬性只會將指定的檔案放入您的專案; 將產生的.idl 檔案**匯入**屬性不會讓您指定的檔案中的建構呼叫從來源程式碼在您的專案。  若要從原始碼專案中，在指定的檔案呼叫建構，請使用[#import](../preprocessor/hash-import-directive-cpp.md)並`embedded_idl`屬性，或者您可以包含的.h 檔案*idl_file*.h 檔案存在，則。
+
+## <a name="example"></a>範例
+
+下列程式碼範例：
+
+```cpp
+// cpp_attr_ref_import.cpp
+// compile with: /LD
+[module(name="MyLib")];
+[import(import.idl)];
+```
+
+會產生下列程式碼產生的.idl 檔案中：
+
+```
+import "docobj.idl";
+import "import.idl";
+
+[ uuid(EED3644C-8488-3ECD-BA97-147DB3CDB499), version(1.0) ]
+library MyLib {
+   importlib("stdole2.tlb");
+   importlib("olepro32.dll");
+...
+```
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|任何位置|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[獨立屬性](../windows/stand-alone-attributes.md)  
+[importidl](../windows/importidl.md)  
+[importlib](../windows/importlib.md)  
+[include](../windows/include-cpp.md)  
+[includelib](../windows/includelib-cpp.md)  

@@ -1,5 +1,5 @@
 ---
-title: 實值類別與結構 (C + + /CX) |Microsoft 文件
+title: 實值類別與結構 (C + + /CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b623e706fae0dfd8fca6b9aaf217e76b27dbbda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 226198c35dc0b7e7e1c7fab4ce81fc4782b5ca38
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090708"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589052"
 ---
 # <a name="value-classes-and-structs-ccx"></a>實值類別與結構 (C++/CX)
-A*實值結構*或*實值類別*是一個 Windows 執行階段相容的 POD （「 一般舊資料結構 」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。  
+A*實值結構*或是*的實值類別*是 Windows 執行階段相容的 POD （「 一般舊資料結構 」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。  
   
  下列範例示範如何宣告和初始化實值結構。  
   
@@ -59,7 +59,7 @@ A*實值結構*或*實值類別*是一個 Windows 執行階段相容的 POD （�
   
  「 *實值類別* 」(Value Class) 與 `value struct` 類似，差別在於其欄位必須明確指定為公用存取範圍。 其宣告可透過 `value class` 關鍵字來執行。  
   
- 實值結構或實值類別可以包含基本數值型别、 列舉類別 欄位`Platform::String^`，或[platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md)其中 T 是數值型別或列舉類別或實值類別或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。  
+ 實值結構或實值類別可以包含基本數值型别、 列舉類別的欄位`Platform::String^`，或[platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md)其中 T 是數值類型或列舉類別或實值類別或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。  
   
  包含 `Platform::String^` 或 `IBox<T>^` 類型做為成員的實值類別或實值結構，不具備 `memcpy`功能。  
   

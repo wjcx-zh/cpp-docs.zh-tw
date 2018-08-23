@@ -23,73 +23,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 23607eb9d59a5c860d89444205c675c95e2b907e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646782"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594065"
 ---
 # <a name="eventreceiver"></a>event_receiver
-建立事件接收器 (接收)。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[ event_receiver(  
-   type   
-   [, layout_dependent=false]   
-) ]  
-```  
-  
-### <a name="parameters"></a>參數  
- *type*  
- 下列其中一個值的列舉：  
-  
--   `native` unmanaged C/c + + 程式碼 （原生類別的預設值）。  
-  
--   COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰  
-  
-    ```cpp  
-    #define _ATL_ATTRIBUTES  
-    #include <atlbase.h>  
-    #include <atlcom.h>  
-    ```  
-  
- *layout_dependent*  
- 指定*event_receiver*只有當`type` = **com**。 *layout_dependent*是布林值：  
-  
--   **true**表示委派的簽章的事件接收者必須完全符合的所要攔截在事件來源中。 接收器事件處理常式的名稱必須符合相關的事件來源介面中指定的名稱。 您必須使用`coclass`時*layout_dependent*是**true**。 會指定稍微更有效率 **，則為 true**。  
-  
--   **false** （預設值） 表示，呼叫慣例和儲存體類別 (虛擬、 靜態等等) 不需要符合事件方法和處理常式，也不執行處理常式的名稱必須符合事件來源介面的方法名稱。  
-  
-## <a name="remarks"></a>備註  
- **Event_receiver** c + + 屬性指定的類別或結構會套用它將是事件接收器，使用 Visual c + + 一致的事件模型。  
-  
- **event_receiver**搭配[event_source](../windows/event-source.md)屬性並[__hook](../cpp/hook.md)並[__unhook](../cpp/unhook.md)關鍵字。 使用`event_source`建立事件來源。 使用 **__hook**事件接收器的方法產生關聯的事件來源的事件 （「 攔截 」） 事件接收者方法內。 使用 **__unhook**中斷與它們的關聯。  
-  
- *event_receiver*只會指定用於 COM 事件接收器 (`type`=**com**)。 預設值*event_receiver*是**false**。  
-  
+
+建立事件接收器 (接收)。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[ event_receiver(
+   type
+   [, layout_dependent=false]
+) ]
+```
+
+### <a name="parameters"></a>參數
+
+*type*  
+下列其中一個值的列舉：
+
+- `native` unmanaged C/c + + 程式碼 （原生類別的預設值）。
+
+- COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰
+
+    ```cpp
+    #define _ATL_ATTRIBUTES
+    #include <atlbase.h>
+    #include <atlcom.h>
+    ```
+
+*layout_dependent*  
+指定*event_receiver*只有當`type` = **com**。 *layout_dependent*是布林值：
+
+- **true**表示委派的簽章的事件接收者必須完全符合的所要攔截在事件來源中。 接收器事件處理常式的名稱必須符合相關的事件來源介面中指定的名稱。 您必須使用`coclass`時*layout_dependent*是**true**。 會指定稍微更有效率 **，則為 true**。
+
+- **false** （預設值） 表示，呼叫慣例和儲存體類別 (虛擬、 靜態等等) 不需要符合事件方法和處理常式，也不執行處理常式的名稱必須符合事件來源介面的方法名稱。
+
+## <a name="remarks"></a>備註
+
+**Event_receiver** c + + 屬性指定的類別或結構會套用它將是事件接收器，使用 Visual c + + 一致的事件模型。
+
+**event_receiver**搭配[event_source](../windows/event-source.md)屬性並[__hook](../cpp/hook.md)並[__unhook](../cpp/unhook.md)關鍵字。 使用`event_source`建立事件來源。 使用 **__hook**事件接收器的方法產生關聯的事件來源的事件 （「 攔截 」） 事件接收者方法內。 使用 **__unhook**中斷與它們的關聯。
+
+*event_receiver*只會指定用於 COM 事件接收器 (`type`=**com**)。 預設值*event_receiver*是**false**。
+
 > [!NOTE]
->  樣板類別或結構不能包含事件。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|**類別**，**結構**|  
-|**可重複**|否|  
-|**必要屬性**|`coclass` 當*event_receiver*=**，則為 true**|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器屬性](../windows/compiler-attributes.md)   
- [event_source](../windows/event-source.md)   
- [__event](../cpp/event.md)   
- [__hook](../cpp/hook.md)   
- [__unhook](../cpp/unhook.md)   
- [類別屬性](../windows/class-attributes.md)   
+> 樣板類別或結構不能包含事件。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|**類別**，**結構**|
+|**可重複**|否|
+|**必要屬性**|`coclass` 當*event_receiver*=**，則為 true**|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器屬性](../windows/compiler-attributes.md)  
+[event_source](../windows/event-source.md)  
+[__event](../cpp/event.md)  
+[__hook](../cpp/hook.md)  
+[__unhook](../cpp/unhook.md)  
+[類別屬性](../windows/class-attributes.md)  

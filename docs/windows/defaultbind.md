@@ -17,45 +17,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1ec2924fa62370bdc0267cd860a9e2d37c140580
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644082"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588919"
 ---
 # <a name="defaultbind"></a>defaultbind
-表示最能代表物件的單一、 可繫結屬性。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-[defaultbind]  
-```  
-  
-## <a name="remarks"></a>備註  
- **Defaultbind** c + + 屬性具有相同的功能[defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL 屬性。  
-  
-## <a name="example"></a>範例  
- 範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**defaultbind**。  
-  
-## <a name="requirements"></a>需求  
-  
-### <a name="attribute-context"></a>屬性內容  
-  
-|||  
-|-|-|  
-|**適用於**|介面方法|  
-|**可重複**|否|  
-|**必要屬性**|無|  
-|**無效屬性**|無|  
-  
- 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [IDL 屬性](../windows/idl-attributes.md)   
- [方法屬性](../windows/method-attributes.md)   
- [資料成員屬性](../windows/data-member-attributes.md)   
- [displaybind](../windows/displaybind.md)   
- [immediatebind](../windows/immediatebind.md)   
- [requestedit](../windows/requestedit.md)   
+
+表示最能代表物件的單一、 可繫結屬性。
+
+## <a name="syntax"></a>語法
+
+```cpp
+[defaultbind]
+```
+
+## <a name="remarks"></a>備註
+
+**Defaultbind** c + + 屬性具有相同的功能[defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL 屬性。
+
+## <a name="example"></a>範例
+
+範例，請參閱[可繫結](../windows/bindable.md)如需如何使用的範例**defaultbind**。
+
+## <a name="requirements"></a>需求
+
+### <a name="attribute-context"></a>屬性內容
+
+|||
+|-|-|
+|**適用於**|介面方法|
+|**可重複**|否|
+|**必要屬性**|無|
+|**無效屬性**|無|
+
+如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[IDL 屬性](../windows/idl-attributes.md)  
+[方法屬性](../windows/method-attributes.md)  
+[資料成員屬性](../windows/data-member-attributes.md)  
+[displaybind](../windows/displaybind.md)  
+[immediatebind](../windows/immediatebind.md)  
+[requestedit](../windows/requestedit.md)  

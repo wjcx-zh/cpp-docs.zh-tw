@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56b6642bb24107da4c09856dbd8daaf70fb7dfd5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7ba556ee3803bb00f07032e0589209af2d32addf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015003"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591749"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 應用程式 (C++)
 
 通用 Windows 平台 (UWP) 應用程式具體表現一套強調以針對不同裝置上的不同螢幕大小自動調整的內容為主軸的簡單使用者介面的設計原則。 您會在 XAML 標記中建立 UI，並在原生 C++ 中建立程式碼後置。 您也可以建立元件 (DLL)，供其他語言所撰寫的 UWP 應用程式使用。 UWP 應用程式的 API 介面是 Windows 執行階段，這是構造良好的程式庫，提供各種不同的作業系統服務。
 
-> [!TIP]  
+> [!TIP]
 > 適用於 Windows 10 中，您可以使用傳統型橋接器應用程式轉換器封裝您現有的桌面應用程式透過 Microsoft Store 部署。 如需詳細資訊，請參閱 < [Centennial 專案中使用 Visual c + + Runtime](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)並[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
 ## <a name="uwp-apps-that-use-cwinrt"></a>UWP 應用程式使用 C + + /cli WinRT
@@ -46,4 +46,5 @@ C + + /cli WinRT 是新的、 僅限標頭的程式庫為基礎 c + + 語言推�
 Windows 執行階段 c + + 樣板程式庫提供的 ISO c + + 程式碼可以存取 Windows 執行階段例外狀況的環境中的低階 COM 介面。 在大部分情況下，我們建議您使用 C + + /cli WinRT 或 C + + /CX 而不是 Windows 執行階段 c + + 樣板程式庫，適用於 UWP 應用程式開發。 Windows 執行階段 c + + 樣板程式庫的相關資訊，請參閱[Windows 執行階段 c + + 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
 
 ## <a name="see-also"></a>另請參閱
- [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>

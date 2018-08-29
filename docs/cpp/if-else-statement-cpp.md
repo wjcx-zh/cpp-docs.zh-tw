@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405106"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131887"
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
 控制條件分支。 中的陳述式*if 區塊*才會執行*if 運算式*評估為非零值 （或 TRUE）。 如果值*運算式*為非零值， *statement1*和區塊中的任何其他陳述式會執行 else 區塊，如果有的話，會略過。 如果值*運算式*為零，則會略過 if 區塊和 else 區塊，如果存在，則會執行。 評估為非零的運算式
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>如果初始設定式的陳述式
+## <a name="if_with_init"></a> 如果初始設定式的陳述式
+
 **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**陳述式也可能包含宣告和初始化具名的變數的運算式。 變數只需要在 if 區塊的範圍內時，請使用這種形式的 if 陳述式。 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  **Else**子句`if...else`陳述式是相關聯的最接近上一個**如果**陳述式中相同範圍中沒有任何對應**其他**陳述式。   
 
-## <a name="constexpr-if-statements"></a>constexpr 如果陳述式
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用`constexpr if`陳述式，而不必訴諸於多個進行編譯時間分支決策函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）： 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 陳述式
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**如果 constexpr**編譯時間分支的決策，而不需要的陳述式不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）： 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

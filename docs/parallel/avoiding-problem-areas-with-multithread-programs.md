@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 97a69c52adb5094c7c7841a93b73b1a83cd786d9
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538234"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131058"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免具有多執行緒程式的問題區域
-有幾個建立、 連結，或執行多執行緒 C 程式中可能會遇到的問題。 下表將說明一些更常見的問題。 (從 MFC 的觀點來看類似的討論，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。)  
+有幾個建立、 連結，或執行多執行緒 C 程式中可能會遇到的問題。 下表將說明一些更常見的問題。 (從 MFC 的觀點來看類似的討論，請參閱[多執行緒： 程式設計提示](multithreading-programming-tips.md)。)  
   
 |問題|可能的原因|  
 |-------------|--------------------|  
@@ -34,4 +34,4 @@ ms.locfileid: "42538234"
   
 ## <a name="see-also"></a>另請參閱  
 
-[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 進行多執行緒處理](multithreading-with-c-and-win32.md)

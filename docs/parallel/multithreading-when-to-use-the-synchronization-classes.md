@@ -1,7 +1,7 @@
 ---
-title: 多執行緒： 何時使用同步類別 |Microsoft Docs
+title: 多執行緒： 何時使用 MFC 的同步處理類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -21,14 +21,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3556bace6c578edec8eaedffb528d21cb1644f5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d88bb98388aaedac9499ab91ad94bef085c0b702
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606060"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132262"
 ---
-# <a name="multithreading-when-to-use-the-synchronization-classes"></a>多執行緒：何時使用同步類別
+# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>多執行緒： 何時使用 MFC 的同步處理類別
 MFC 提供的多執行緒的類別分為兩類： 同步處理物件 ([CSyncObject](../mfc/reference/csyncobject-class.md)， [CSemaphore](../mfc/reference/csemaphore-class.md)， [CMutex](../mfc/reference/cmutex-class.md)， [CCriticalSection](../mfc/reference/ccriticalsection-class.md)，並[CEvent](../mfc/reference/cevent-class.md)) 和同步處理存取物件 ([CMultiLock](../mfc/reference/cmultilock-class.md)並[CSingleLock](../mfc/reference/csinglelock-class.md))。  
   
 必須控制資源的存取權，以確保資源的完整性時，會使用同步類別。 同步存取類別用來存取這些受控制的資源。 本主題說明何時使用每個類別。  
@@ -61,8 +61,8 @@ MFC 提供的多執行緒的類別分為兩類： 同步處理物件 ([CSyncObje
  
 選擇要使用哪一個同步存取類別則更加簡單。 如果存取單一受控制的資源，只有關您的應用程式，使用`CSingleLock`。 如果它需要存取多個受控制的任何的資源一個時，使用`CMultiLock`。 在範例 1，`CSingleLock`但已使用，因為每個案例中只有一個資源需要在任何特定時間。  
   
-如需如何使用同步類別的資訊，請參閱[多執行緒： 如何使用同步類別](../parallel/multithreading-how-to-use-the-synchronization-classes.md)。 同步處理的相關資訊，請參閱[同步處理](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK 中。 多執行緒 MFC 支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](../parallel/multithreading-with-cpp-and-mfc.md)。  
+如需如何使用同步類別的資訊，請參閱[多執行緒： 如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)。 同步處理的相關資訊，請參閱[同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。 多執行緒 MFC 支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](multithreading-with-cpp-and-mfc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  
-[使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)
+[使用 C++ 和 MFC 進行多執行緒處理](multithreading-with-cpp-and-mfc.md)

@@ -1,7 +1,7 @@
 ---
-title: 多執行緒： 如何使用同步類別 |Microsoft Docs
+title: 多執行緒： 如何使用 MFC 的同步處理類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597885"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131258"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>多執行緒：如何使用同步類別
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>多執行緒： 如何使用 MFC 的同步處理類別
 撰寫多執行緒應用程式時，同步處理執行緒之間的資源存取權是常見的問題。 有兩個或多個執行緒同時存取相同的資料可能會導致非預期且無法預測的結果。 例如，一個執行緒可能在更新結構的內容而另一個執行緒正在讀取相同結構的內容。 它是未知資料讀取執行緒將會收到： 舊的資料、 新寫入的資料，或可能是兩者的混合。 MFC 提供許多同步處理和同步存取類別，以協助解決此問題。 本主題會說明可用的類別，以及如何使用它們來建立安全執行緒類別在典型的多執行緒應用程式中。  
   
 典型的多執行緒應用程式具有的類別，代表在執行緒之間共用的資源。 設計得當，完整的安全執行緒類別不需要呼叫任何同步處理函式。 至類別，可讓您專注於如何充分利用的類別，不需可能會損毀它如何在內部處理所有項目。 建立完整的安全執行緒類別的有效技術是合併的資源類別中的同步處理類別。 同步類別合併至共用的類別是簡單的程序。  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 這種方法的缺點是，類別會稍微慢一點比相同的類別而不需要加入同步處理物件。 此外，如果有多個執行緒可能會刪除物件的機會，合併的方法可能無法永遠運作。 在此情況下，最好是維護個別的同步處理物件。  
   
-如需判斷要在不同的情況下使用的同步處理類別的詳細資訊，請參閱 <<c0> [ 多執行緒： 何時使用同步類別](../parallel/multithreading-when-to-use-the-synchronization-classes.md)。 如需有關同步處理的詳細資訊，請參閱 <<c0> [ 同步處理](http://msdn.microsoft.com/library/windows/desktop/ms686353)Windows SDK 中。 如需在 MFC 中的多執行緒支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](../parallel/multithreading-with-cpp-and-mfc.md)。  
+如需判斷要在不同的情況下使用的同步處理類別的詳細資訊，請參閱 <<c0> [ 多執行緒： 何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。 如需有關同步處理的詳細資訊，請參閱 <<c0> [ 同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。 如需在 MFC 中的多執行緒支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](multithreading-with-cpp-and-mfc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  
-[使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)
+[使用 C++ 和 MFC 進行多執行緒處理](multithreading-with-cpp-and-mfc.md)

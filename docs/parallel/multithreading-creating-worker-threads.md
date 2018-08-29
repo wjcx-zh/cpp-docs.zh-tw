@@ -1,5 +1,5 @@
 ---
-title: 多執行緒： 建立背景工作執行緒 |Microsoft Docs
+title: 多執行緒： 建立背景工作執行緒在 MFC |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590596"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131185"
 ---
-# <a name="multithreading-creating-worker-threads"></a>多執行緒：建立背景工作執行緒
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>多執行緒： 建立背景工作執行緒在 MFC 中
 背景工作執行緒通常會用來處理背景工作，使用者應該不需要等候以繼續使用您的應用程式中。 重新計算和背景列印等工作是背景工作執行緒的良好範例。 本主題詳細說明建立背景工作執行緒所需的步驟。 主題包括：  
   
 - [啟動執行緒](#_core_starting_the_thread)  
@@ -64,11 +64,11 @@ ms.locfileid: "42590596"
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
-參數是單一值。 函式會接收此參數中的值會是執行緒物件建立時傳遞至建構函式的值。 控制函式可以解譯以任何方式，它會選擇此值。 它可以視為純量值的指標或結構，包含多個參數，或可以忽略它。 如果參數參考結構，結構可用來將資料從呼叫端傳遞至執行緒，不僅要將資料從執行緒傳遞給呼叫者。 如果您使用這種結構將資料傳遞至呼叫端時，執行緒會需要告知呼叫端，當結果準備好。 如需從背景工作執行緒通訊給呼叫端資訊，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。  
+參數是單一值。 函式會接收此參數中的值會是執行緒物件建立時傳遞至建構函式的值。 控制函式可以解譯以任何方式，它會選擇此值。 它可以視為純量值的指標或結構，包含多個參數，或可以忽略它。 如果參數參考結構，結構可用來將資料從呼叫端傳遞至執行緒，不僅要將資料從執行緒傳遞給呼叫者。 如果您使用這種結構將資料傳遞至呼叫端時，執行緒會需要告知呼叫端，當結果準備好。 如需從背景工作執行緒通訊給呼叫端資訊，請參閱[多執行緒： 程式設計提示](multithreading-programming-tips.md)。  
   
-當函式結束時，它應該傳回 UINT 值，指出終止的原因。 一般而言，這個結束代碼是 0 代表成功，其他值則代表不同類型的錯誤。 這是完全與實作相關。 有些執行緒可能會維護物件的使用計數，並傳回該物件會使用目前的數目。 若要查看應用程式可以擷取此值的方式，請參閱[多執行緒： 結束執行緒](../parallel/multithreading-terminating-threads.md)。  
+當函式結束時，它應該傳回 UINT 值，指出終止的原因。 一般而言，這個結束代碼是 0 代表成功，其他值則代表不同類型的錯誤。 這是完全與實作相關。 有些執行緒可能會維護物件的使用計數，並傳回該物件會使用目前的數目。 若要查看應用程式可以擷取此值的方式，請參閱[多執行緒： 結束執行緒](multithreading-terminating-threads.md)。  
   
-有可進行撰寫與 MFC 程式庫的多執行緒程式中的一些限制。 如需描述這些限制和其他使用執行緒的秘訣，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。  
+有可進行撰寫與 MFC 程式庫的多執行緒程式中的一些限制。 如需描述這些限制和其他使用執行緒的秘訣，請參閱[多執行緒： 程式設計提示](multithreading-programming-tips.md)。  
   
 ##  <a name="_core_controlling_function_example"></a> 控制函式範例  
  
@@ -101,8 +101,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
-- [多執行緒：建立使用者介面執行緒](../parallel/multithreading-creating-user-interface-threads.md)  
+- [多執行緒：建立使用者介面執行緒](multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>另請參閱  
  
-[使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)
+[使用 C++ 和 MFC 進行多執行緒處理](multithreading-with-cpp-and-mfc.md)

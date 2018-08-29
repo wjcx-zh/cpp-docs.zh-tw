@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375873"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130985"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ ms.locfileid: "39375873"
 
 ## <a name="remarks"></a>備註
 
-**/Qspectre**選項可讓編譯器插入減輕特定的指示[Spectre 安全性弱點](https://spectreattack.com/spectre.pdf)。 這些弱點，稱為*推測性執行旁路攻擊*、 會影響許多作業系統和現代處理器，包括 intel、 AMD 處理器和 ARM。
+**/Qspectre**選項是可在 Visual Studio 2017 15.7 版及更新版本。 它可讓編譯器插入減輕特定的指示[Spectre 安全性弱點](https://spectreattack.com/spectre.pdf)。 這些弱點，稱為*推測性執行旁路攻擊*、 會影響許多作業系統和現代處理器，包括 intel、 AMD 處理器和 ARM。
 
 **/Qspectre**選項預設為關閉。
 

@@ -1,5 +1,5 @@
 ---
-title: -防護 （啟用控制流程防護） |Microsoft 文件
+title: -guard （啟用控制流程防護） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c65bafc14f5ef29db89ddc0a4647193231f7e19
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377400"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131666"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (啟用控制流程防護)
 啟用控制流程防護安全性檢查的編譯器產生。  
@@ -32,7 +32,9 @@ ms.locfileid: "32377400"
 ```  
   
 ## <a name="remarks"></a>備註  
- **/guard:cf** 選項讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。 根據預設， **/guard:cf** 關閉且必須明確啟用。 若要明確停用此選項，請使用 **/guard:cf-**。  
+ **/guard:cf** 選項讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。 根據預設， **/guard:cf** 關閉且必須明確啟用。 若要明確停用此選項，請使用 **/guard:cf-**。 
+
+**Visual Studio 2017 和更新版本**： 此選項會增加的守衛**切換**產生的陳述式跳資料表。
   
  當已指定 **/guard:cf** 控制流程防護 (CFG) 選項時，編譯器和連結器會插入額外的執行階段安全性檢查，以偵測入侵您程式碼的嘗試。 在編譯和連結期間，程式碼中的所有間接呼叫都會經過分析，以尋找程式碼正確執行時所能到達的每個位置。 這項資訊會儲存在二進位編碼檔案標頭中的額外結構。 編譯器也會在程式碼的每個間接呼叫之前注入檢查，以確保目標是其中一個已驗證的位置。 如果在 CFG 感知作業系統上執行階段的檢查失敗，作業系統會關閉該程式。  
   
@@ -46,7 +48,7 @@ ms.locfileid: "32377400"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
 2.  選取 [組態屬性] 、[C/C++] 、[程式碼產生] 。  
   

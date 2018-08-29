@@ -1,7 +1,7 @@
 ---
 title: 列舉型別 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406249"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130946"
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
 列舉是使用者定義類型，其中包含一組具名的整數常數，稱為列舉值。  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  請注意，程式行 `hand = account_num;` 仍然會導致因為不限範圍的列舉而發生的錯誤，如上所示。 使用明確轉換時，允許這個行為。 不過，使用限定範圍列舉時，不再允許在沒有明確轉型的情況下，於下一個陳述式 `account_num = Suit::Hearts;` 中嘗試轉換。 
 
-## <a name="enums-with-no-enumerators"></a>使用沒有列舉值的列舉
+## <a name="no_enumerators"></a> 使用沒有列舉值的列舉
+
 **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):，您可以藉由定義明確的基礎類型與任何列舉值的列舉 （一般或限域），實際上引進新的整數類資料類型有沒有隱含轉換成任何其他類型。 使用這個型別，而不是它內建的基礎類型，您可以避免因意外的隱含轉換的細微錯誤的可能性。  
 
 

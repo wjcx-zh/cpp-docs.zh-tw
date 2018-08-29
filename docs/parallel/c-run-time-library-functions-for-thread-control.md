@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a08ba6c5343fda19bab823b9a415db18b745e2a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540974"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131850"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>執行緒控制的 C 執行階段程式庫函式
 所有 Win32 程式都必須至少一個執行緒。 任何執行緒可以建立額外的執行緒。 執行緒可以快速地完成其工作，然後終止，或可以保持使用中程式的存留期間。  
@@ -54,4 +54,4 @@ ms.locfileid: "42540974"
   
 ## <a name="see-also"></a>另請參閱  
  
-[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)
+[使用 C 和 Win32 進行多執行緒處理](multithreading-with-c-and-win32.md)

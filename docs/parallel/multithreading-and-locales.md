@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1e6bef9e707636d18ed5ecb78098661a753111ba
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541743"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132177"
 ---
 # <a name="multithreading-and-locales"></a>多執行緒和地區設定
 C 執行階段程式庫和 c + + 標準程式庫提供支援變更程式的地區設定。 本主題討論使用多執行緒應用程式中的兩個程式庫的地區設定功能時所發生的問題。  
@@ -446,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
   
 ## <a name="see-also"></a>另請參閱  
 
-[多執行緒支援較舊的程式碼 （Visual c + +）](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[多執行緒支援較舊的程式碼 （Visual c + +）](multithreading-support-for-older-code-visual-cpp.md)   
 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
 [setlocale](../preprocessor/setlocale.md)   

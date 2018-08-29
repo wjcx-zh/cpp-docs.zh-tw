@@ -1,7 +1,7 @@
 ---
 title: 多執行緒支援較舊的程式碼 （Visual c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -20,25 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c911ff2f0dcd43a6f07144f893b91f3a97c6708b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7b1b301186036460acc07a526267503da8b97678
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42543098"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132098"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>舊版程式碼的多執行緒支援 (Visual C++)
 Visual c + + 可讓您有同時執行的多個並行執行緒。 使用多執行緒處理，您可以分割背景工作、 管理同時的輸入資料流、 管理使用者介面，以及其他等等。  
   
 ## <a name="in-this-section"></a>本節內容  
  
-[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)  
+[使用 C 和 Win32 進行多執行緒處理](multithreading-with-c-and-win32.md)  
 提供支援使用 Microsoft Windows 建立多執行緒應用程式  
   
-[使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)  
+[使用 C++ 和 MFC 進行多執行緒處理](multithreading-with-cpp-and-mfc.md)  
 描述什麼是處理序和執行緒，以及 MFC 的方法進行多執行緒處理時。  
   
-[多執行緒和地區設定](../parallel/multithreading-and-locales.md)  
+[多執行緒和地區設定](multithreading-and-locales.md)  
 討論使用 C 執行階段程式庫和 c + + 標準程式庫中的多執行緒應用程式的地區設定功能時所發生的問題。  
   
 ## <a name="related-sections"></a>相關章節  

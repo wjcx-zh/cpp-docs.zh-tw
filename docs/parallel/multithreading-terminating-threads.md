@@ -1,7 +1,7 @@
 ---
-title: 多執行緒： 結束執行緒 |Microsoft Docs
+title: 多執行緒： 終止執行緒，在 MFC |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608840"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131941"
 ---
-# <a name="multithreading-terminating-threads"></a>多執行緒：結束執行緒
+# <a name="multithreading-terminating-threads-in-mfc"></a>多執行緒： 結束在 MFC 中的執行緒
 兩種正常情況會造成執行緒結束： 結束控制函式，或不允許執行緒執行到完成為止。 如果文書處理器使用執行緒來進行背景列印，控制函式就會在列印成功完成正常結束。 如果使用者想要取消列印，不過，有必須不當結束背景列印執行緒。 本主題說明如何實作每種情況，以及如何終止之後取得執行緒的結束代碼。  
   
 - [正常的執行緒終止](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ ms.locfileid: "42608840"
   
 ## <a name="see-also"></a>另請參閱  
  
-[使用 c + + 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)   
+[使用 c + + 和 MFC 進行多執行緒處理](multithreading-with-cpp-and-mfc.md)   
 [_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

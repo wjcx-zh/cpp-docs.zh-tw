@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541400"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132072"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 執行緒區域儲存區 (Thread Local Storage，TLS) 是一種方法，讓指定之多執行緒處理序中的每個執行緒用來配置位置，以儲存執行緒特定資料。 動態繫結 (runtime) 執行緒專屬的資料透過 TLS API 支援 ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)。  除了現有的 API 實作以外，Win32 和 Visual C++ 編譯器現在支援靜態繫結 (載入時間) 的個別執行緒資料。  
@@ -117,4 +117,4 @@ __declspec( thread ) int tls_i = 1;
   
 ## <a name="see-also"></a>另請參閱  
  
-[使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)   
+[使用 C 和 Win32 進行多執行緒處理](multithreading-with-c-and-win32.md)   

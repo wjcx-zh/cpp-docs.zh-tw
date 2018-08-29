@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572630"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131838"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -598,7 +598,7 @@ public:
 
 ## <a name="inheriting_constructors"></a> 繼承建構函式 (C + + 11)
 
-衍生類別可以使用 using 宣告以從直接基底類別繼承建構函式 (如下列範例所示)：
+在衍生的類別可以繼承從直接基底類別建構函式利用**使用**宣告，如下列範例所示：
 
 ```cpp
 #include <iostream>
@@ -647,9 +647,9 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-using 陳述式會將基底類別的所有建構函式帶入範圍中，但衍生類別中具有建構函式之相同的簽章的建構函式除外。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。
+**Visual Studio 2017 15.7 版及更新版本**:**使用**中的陳述式 **/std: c + + 17**模式帶入範圍中所有的建構函式，除了具有相同的簽章的基底類別在衍生類別中的建構函式。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[改良 Visual Studio 2017 15.7 版中的](../cpp-conformance-improvements-2017.md#improvements_157)。
 
-如果類型引數指定基底類別，則類別樣板可以繼承該類型的所有建構函式：
+如果型別引數指定基底類別，則類別樣板可以繼承該類型的所有建構函式：
 
 ```cpp
 template< typename T >

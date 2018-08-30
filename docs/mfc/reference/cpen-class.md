@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204137"
 ---
 # <a name="cpen-class"></a>CPen 類別
 封裝 Windows 繪圖裝置介面 (GDI) 畫筆。  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |名稱|描述|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|使用指定的樣式、 寬度和筆刷屬性中建立邏輯的外觀或幾何畫筆，並將它附加至`CPen`物件。|  
-|[CPen::CreatePenIndirect](#createpenindirect)|使用樣式、 寬度和色彩提供建立畫筆[LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)結構，並將它附加至`CPen`物件。|  
+|[CPen::CreatePenIndirect](#createpenindirect)|使用樣式、 寬度和色彩提供建立畫筆[LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)結構，並將它附加至`CPen`物件。|  
 |[CPen::FromHandle](#fromhandle)|將指標傳回至`CPen`物件時指定 Windows HPEN。|  
-|[CPen::GetExtLogPen](#getextlogpen)|取得[EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)基礎結構。|  
-|[CPen::GetLogPen](#getlogpen)|取得[LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)基礎結構。|  
+|[CPen::GetExtLogPen](#getextlogpen)|取得[EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)基礎結構。|  
+|[CPen::GetLogPen](#getlogpen)|取得[LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)基礎結構。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -144,7 +144,7 @@ CPen(
   
 - 被斜角 PS_JOIN_BEVEL 聯結。  
   
-- PS_JOIN_MITER 聯結是斜接內所設定的目前限制時，它們[SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076)函式。 如果聯結超出此限制，它被斜角。  
+- PS_JOIN_MITER 聯結是斜接內所設定的目前限制時，它們[SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit)函式。 如果聯結超出此限制，它被斜角。  
   
 - PS_JOIN_ROUND 聯結會捨入。  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  包含畫筆的 RGB 色彩。  
   
  *pLogBrush*  
- 指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)結構。 如果*nPenStyle*是 PS_COSMETIC，`lbColor`隸屬`LOGBRUSH`結構指定的畫筆色彩和*lbStyle*隸屬`LOGBRUSH`結構必須設為 BS_純色。 如果 nPenStyle PS_GEOMETRIC，所有成員必須都用於指定畫筆的筆刷屬性。  
+ 指向[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)結構。 如果*nPenStyle*是 PS_COSMETIC，`lbColor`隸屬`LOGBRUSH`結構指定的畫筆色彩和*lbStyle*隸屬`LOGBRUSH`結構必須設為 BS_純色。 如果 nPenStyle PS_GEOMETRIC，所有成員必須都用於指定畫筆的筆刷屬性。  
   
  *nStyleCount*  
  指定的長度，單位 doubleword *lpStyle*陣列。 此值必須是零，如果*nPenStyle*不 PS_USERSTYLE。  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>參數  
  *pLogPen*  
- 指向[EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)包含畫筆的相關資訊的結構。  
+ 指向[EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)包含畫筆的相關資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  請參閱 Windows sdk for pen 屬性的相關資訊的下列主題：  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>範例  
  下列程式碼範例示範如何呼叫`GetExtLogPen`擷取手寫筆的屬性，並接著使用相同的色彩建立新的表面的畫筆。  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>參數  
  *pLogPen*  
- 指向[LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)結構以包含畫筆的相關資訊。  
+ 指向[LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)結構以包含畫筆的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  請參閱 Windows sdk for pen 屬性的相關資訊的下列主題：  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>範例  
  下列程式碼範例示範如何呼叫`GetLogPen`擷取畫筆字元，並再建立新的實心筆相同的色彩。  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>備註  
  這位操作員便轉型運算子，可支援直接使用 HPEN 物件。  
   
- 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

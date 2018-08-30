@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 11f61e89ab888b678bf54f65b999c0fd4394dbea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879831"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201658"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 這個類別提供方法來註冊視窗類別資訊。  
@@ -75,11 +75,11 @@ class CWndClassInfo
   
  根據預設， [CWindowImpl](../../atl/reference/cwindowimpl-class.md)包含`DECLARE_WND_CLASS`巨集來建立視窗會根據新的視窗類別。 {2&gt;declare_wnd_class&lt;2 提供控制項的預設樣式和背景色彩。 如果您想要指定樣式和您自己的背景色彩，衍生您的類別，從`CWindowImpl`並將您的類別定義中納入 DECLARE_WND_CLASS_EX 巨集。  
   
- 如果您想要建立視窗，根據現有的視窗類別，衍生您的類別，從`CWindowImpl`並將您的類別定義中納入 DECLARE_WND_SUPERCLASS 巨集。 例如:   
+ 如果您想要建立視窗，根據現有的視窗類別，衍生您的類別，從`CWindowImpl`並將您的類別定義中納入 DECLARE_WND_SUPERCLASS 巨集。 例如:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- 如需視窗類別的詳細資訊，請參閱[視窗類別](http://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。  
+ 如需視窗類別的詳細資訊，請參閱[視窗類別](https://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。  
   
  如需有關如何使用 ATL 中的 windows 的詳細資訊，請參閱[ATL 視窗類別](../../atl/atl-window-classes.md)。  
   
@@ -138,7 +138,7 @@ TCHAR m_szAutoName[13];
  `CWndClassInfo` 會使用`m_szAutoName`只有 NULL 會傳遞給`WndClassName`參數來[{2&gt;declare_wnd_class&lt;2](window-class-macros.md#declare_wnd_class)，則[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)或是[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL 視窗類別註冊時，會建構名稱。  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
- 維護中的視窗類別資訊[WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577)結構。  
+ 維護中的視窗類別資訊[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)結構。  
   
 ```
 WNDCLASSEX m_wc;

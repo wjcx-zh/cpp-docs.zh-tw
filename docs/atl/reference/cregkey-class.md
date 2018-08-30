@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1fe661f48c583cfb82e52b6c125f6cf7fce2e714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203554"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 這個類別提供方法，以操作系統登錄中的項目。  
@@ -132,10 +132,10 @@ class CRegKey
   
  `CRegKey` 提供指定的電腦系統登錄的程式設計介面。 例如，若要開啟特定的登錄機碼，呼叫`CRegKey::Open`。 若要擷取或修改的資料值，呼叫`CRegKey::QueryValue`或`CRegKey::SetValue`分別。 若要關閉的機碼，請呼叫`CRegKey::Close`。  
   
- 當您關閉的機碼時，其登錄資料會寫入 （清除） 的硬碟。 此程序可能需要幾秒鐘的時間。 如果您的應用程式必須明確登錄資料寫入硬碟，您可以呼叫[RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32 函式。 不過，`RegFlushKey`使用多系統資源，並只在絕對必要時，應該呼叫。  
+ 當您關閉的機碼時，其登錄資料會寫入 （清除） 的硬碟。 此程序可能需要幾秒鐘的時間。 如果您的應用程式必須明確登錄資料寫入硬碟，您可以呼叫[RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32 函式。 不過，`RegFlushKey`使用多系統資源，並只在絕對必要時，應該呼叫。  
   
 > [!IMPORTANT]
->  任何方法，可讓呼叫端指定的登錄位置可能會讀取不可為受信任的資料。 使用方法，讓[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)應該列入考量，此函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
+>  任何方法，可讓呼叫端指定的登錄位置可能會讀取不可為受信任的資料。 使用方法，讓[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)應該列入考量，此函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
@@ -189,13 +189,13 @@ LONG Create(
  指定要建立或開啟的索引鍵類別。 REG_NONE 為預設值。  
   
  *dwOptions*  
- 索引鍵的選項。 預設值是 REG_OPTION_NON_VOLATILE。 如需可能的值和描述的清單，請參閱 < [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK 中。  
+ 索引鍵的選項。 預設值是 REG_OPTION_NON_VOLATILE。 如需可能的值和描述的清單，請參閱 < [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。  
   
  *samDesired*  
  金鑰安全性存取權。 預設值是 KEY_READ &#124; KEY_WRITE。 如需可能的值和描述的清單，請參閱`RegCreateKeyEx`。  
   
  *lpSecAttr*  
- 指標[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)結構，表示金鑰的控制代碼是否可以由子處理序繼承。 根據預設，此參數為 NULL （亦即無法繼承控制代碼）。  
+ 指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，表示金鑰的控制代碼是否可以由子處理序繼承。 根據預設，此參數為 NULL （亦即無法繼承控制代碼）。  
   
  *lpdwDisposition*  
  [out]如果不是 NULL，擷取 REG_CREATED_NEW_KEY （如果金鑰不存在，且已建立） 或 REG_OPENED_EXISTING_KEY （如果金鑰存在，且已開啟）。  
@@ -308,7 +308,7 @@ LONG EnumKey(
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 若要列舉子機碼，請呼叫`CRegKey::EnumKey`索引為零。 遞增的索引值，並重複，直到此方法會傳回 ERROR_NO_MORE_ITEMS 為止。 如需詳細資訊，請參閱 < [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) Windows SDK 中。  
+ 若要列舉子機碼，請呼叫`CRegKey::EnumKey`索引為零。 遞增的索引值，並重複，直到此方法會傳回 ERROR_NO_MORE_ITEMS 為止。 如需詳細資訊，請參閱 < [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) Windows SDK 中。  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  呼叫這個方法將所有開啟的登錄機碼的屬性寫入至登錄。  
@@ -321,7 +321,7 @@ LONG Flush() throw();
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) Windows SDK 中。  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  呼叫這個方法來擷取一份保護開啟登錄機碼的安全性描述元。  
@@ -335,7 +335,7 @@ LONG GetKeySecurity(
   
 ### <a name="parameters"></a>參數  
  *si*  
- [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)值，指出要求的安全性資訊。  
+ [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)值，指出要求的安全性資訊。  
   
  *psd*  
  接收一份要求的安全性描述元的緩衝區指標。  
@@ -347,7 +347,7 @@ LONG GetKeySecurity(
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，傳回的值會是 WINERROR 中定義的非零錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313)。  
+ 如需詳細資訊，請參閱 < [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)。  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  包含與相關聯的登錄機碼的控制代碼`CRegKey`物件。  
@@ -404,7 +404,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  這個方法不會通知呼叫端，如果刪除指定的索引鍵。  
   
- 如需詳細資訊和範例程式，請參閱 < [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892)。  
+ 如需詳細資訊和範例程式，請參閱 < [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)。  
   
 ##  <a name="open"></a>  CRegKey::Open  
  呼叫這個方法來開啟指定的索引鍵，並設定[m_hKey](#m_hkey)這個機碼的控制代碼。  
@@ -424,7 +424,7 @@ LONG Open(
  指定要建立或開啟金鑰的名稱。 此名稱必須是子機碼*hKeyParent*。  
   
  *samDesired*  
- 金鑰安全性存取權。 預設值是 KEY_ALL_ACCESS。 如需可能的值和描述的清單，請參閱 < [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK 中。  
+ 金鑰安全性存取權。 預設值是 KEY_ALL_ACCESS。 如需可能的值和描述的清單，請參閱 < [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 ERROR_SUCCESS;否則，WINERROR 中定義的非零的錯誤值。H.  
@@ -482,10 +482,10 @@ LONG QueryBinaryValue(
  如果方法成功，則會傳回 ERROR_SUCCESS。 如果方法無法讀取值，它會傳回 WINERROR 中定義的非零的錯誤碼。H. 如果參考資料不是 REG_BINARY 類型，則會傳回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)如需詳細資訊。  
+ 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)如需詳細資訊。  
   
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
+>  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  呼叫這個方法來擷取指定的值名稱的 DWORD 資料。  
@@ -507,10 +507,10 @@ LONG QueryDWORDValue(
  如果方法成功，則會傳回 ERROR_SUCCESS。 如果方法無法讀取值，它會傳回 WINERROR 中定義的非零的錯誤碼。H. 如果參考資料不是類型 REG_DWORD，則會傳回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)如需詳細資訊。  
+ 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)如需詳細資訊。  
   
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
+>  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  呼叫這個方法來擷取指定的值名稱的 GUID 資料。  
@@ -532,7 +532,7 @@ LONG QueryGUIDValue(
  如果方法成功，則會傳回 ERROR_SUCCESS。 如果方法無法讀取值，它會傳回 WINERROR 中定義的非零的錯誤碼。H. 如果參考資料不是有效的 GUID，則會傳回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`CRegKey::QueryStringValue`並將字串轉換成 GUID，使用[CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589)。  
+ 這個方法會利用`CRegKey::QueryStringValue`並將字串轉換成 GUID，使用[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)。  
   
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。  
@@ -561,10 +561,10 @@ LONG QueryMultiStringValue(
  如果方法成功，則會傳回 ERROR_SUCCESS。 如果方法無法讀取值，它會傳回 WINERROR 中定義的非零的錯誤碼。H. 如果參考資料不是類型 REG_MULTI_SZ，則會傳回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)如需詳細資訊。  
+ 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)如需詳細資訊。  
   
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
+>  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  呼叫這個方法來擷取指定的值名稱的 QWORD 資料。  
@@ -586,10 +586,10 @@ LONG QueryQWORDValue(
  如果方法成功，則會傳回 ERROR_SUCCESS。 如果方法無法讀取值，它會傳回 WINERROR 中定義的非零的錯誤碼。H. 如果參考資料不是類型 REG_QWORD，則會傳回 ERROR_INVALID_DATA。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)如需詳細資訊。  
+ 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)如需詳細資訊。  
   
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
+>  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  呼叫這個方法來擷取指定的值名稱的字串資料。  
@@ -615,10 +615,10 @@ LONG QueryStringValue(
  如果方法成功，則會傳回 ERROR_SUCCESS。 如果方法無法讀取值，它會傳回 WINERROR 中定義的非零的錯誤碼。H. 如果參考資料不是類型 REG_SZ，則會傳回 ERROR_INVALID_DATA。 如果此方法會傳回 ERROR_MORE_DATA， *pnChars*等於零，不是以位元組為單位的所需的緩衝區大小。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)如需詳細資訊。  
+ 這個方法會利用`RegQueryValueEx`，並確認會傳回正確的資料類型。 請參閱[RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)如需詳細資訊。  
   
 > [!IMPORTANT]
->  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
+>  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)這個方法所使用的函式不會明確處理都是 NULL 終止的字串。 這兩個條件應檢查呼叫程式碼。  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  呼叫這個方法來擷取指定的值欄位的資料[m_hKey](#m_hkey)。 舊版的這個方法不受支援，並會標示為 ATL_DEPRECATED。  
@@ -717,7 +717,7 @@ LONG SetBinaryValue(
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
+ 這個方法會使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)寫入登錄值。  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  呼叫此方法以設定登錄機碼 DWORD 值。  
@@ -737,7 +737,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
+ 這個方法會使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)寫入登錄值。  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  呼叫此方法以設定登錄機碼的 GUID 值。  
@@ -757,7 +757,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 這個方法會利用`CRegKey::SetStringValue`並將 GUID 轉換為字串，使用[StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893)。  
+ 這個方法會利用`CRegKey::SetStringValue`並將 GUID 轉換為字串，使用[StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2)。  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  呼叫這個方法，以將資料儲存在指定的值欄位的指定索引鍵。  
@@ -801,16 +801,16 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|設定索引鍵的判別存取控制清單 (DACL)。 此金鑰必須具備 WRITE_DAC 存取權，或呼叫的處理序必須是物件的擁有者。|  
 |GROUP_SECURITY_INFORMATION|設定索引鍵的主要群組安全性識別碼 (SID)。 此金鑰必須具備 WRITE_OWNER 存取，或呼叫的處理序必須是物件的擁有者。|  
 |OWNER_SECURITY_INFORMATION|設定金鑰的擁有者 SID。 此金鑰必須具備 WRITE_OWNER 存取，或呼叫的處理序必須是物件的擁有者或具有已啟用的 SE_TAKE_OWNERSHIP_NAME 權限。|  
-|SACL_SECURITY_INFORMATION|設定索引鍵的系統存取控制清單 (SACL)。 此金鑰必須具備 ACCESS_SYSTEM_SECURITY 存取。 若要取得此存取權的正確方式是啟用 SE_SECURITY_NAME[權限](http://msdn.microsoft.com/library/windows/desktop/aa379306)中呼叫端的目前的存取權杖，請在開啟 ACCESS_SYSTEM_SECURITY 存取的控制代碼，然後再停用的權限。|  
+|SACL_SECURITY_INFORMATION|設定索引鍵的系統存取控制清單 (SACL)。 此金鑰必須具備 ACCESS_SYSTEM_SECURITY 存取。 若要取得此存取權的正確方式是啟用 SE_SECURITY_NAME[權限](https://msdn.microsoft.com/library/windows/desktop/aa379306)中呼叫端的目前的存取權杖，請在開啟 ACCESS_SYSTEM_SECURITY 存取的控制代碼，然後再停用的權限。|  
   
  *psd*  
- 指標[SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)結構，指定安全性屬性，設定指定之索引鍵。  
+ 指標[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)結構，指定安全性屬性，設定指定之索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 設定金鑰的安全性屬性。 請參閱[RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314)如需詳細資訊。  
+ 設定金鑰的安全性屬性。 請參閱[RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity)如需詳細資訊。  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  呼叫此方法以設定登錄機碼的 multistring 的值。  
@@ -830,7 +830,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
+ 這個方法會使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)寫入登錄值。  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  呼叫此方法以設定登錄機碼的 QWORD 值。  
@@ -850,7 +850,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
  如果方法成功，則傳回的值會是 ERROR_SUCCESS。 如果方法失敗，則傳回的值會是 WINERROR 中定義的非零的錯誤碼。H.  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
+ 這個方法會使用[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)寫入登錄值。  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  呼叫此方法以設定登錄機碼的字串值。  
@@ -945,7 +945,7 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="remarks"></a>備註  
  兩個原始版本`SetValue`會標示為 ATL_DEPRECATED 且無法再使用。 如果這些表單的使用，編譯器會發出警告。  
   
- 第三個方法呼叫[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)。  
+ 第三個方法呼叫[RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)。  
   
 ## <a name="see-also"></a>另請參閱  
  [DCOM 範例](../../visual-cpp-samples.md)   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57dc254bab0acd875378dfd26ba3fe6e8d5650f4
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: afecaafc5a9d3c1eb9a9466cce303a493d355ce0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196203"
 ---
 # <a name="based-pointers-c"></a>Based 指標 (C++)
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ type __based( base ) declarator
 ## <a name="remarks"></a>備註  
  指標位址為基礎的指標都是唯一的形式 **__based**關鍵字在 32 位元或 64 位元編譯中有效。 對於 Microsoft 32 位元 C/C++ 編譯器，基底指標是來自 32 位元指標基底的 32 位元位移。 在 64 位元環境中保留了一個類似的限制，其中基底指標是來自 64 位元基底的 64 位元位移。  
   
- 以指標為基礎之指標的其中一項用途，就是包含指標的持續性識別項。 以指標為基礎的指標所組成的連結清單可以儲存至磁碟，然後以仍然有效的指標重新載入至記憶體中的另一個位置。 例如:   
+ 以指標為基礎之指標的其中一項用途，就是包含指標的持續性識別項。 以指標為基礎的指標所組成的連結清單可以儲存至磁碟，然後以仍然有效的指標重新載入至記憶體中的另一個位置。 例如:  
   
 ```cpp 
 // based_pointers1.cpp  
@@ -56,7 +56,7 @@ struct llist_t {
  為指標 `vpBuffer` 所指派的記憶體位址，會在程式稍後的位置中進行配置。 連結清單會重新配置相對於 `vpBuffer` 的值。  
   
 > [!NOTE]
->  包含指標的持續性識別項也可藉由使用[記憶體對應檔案](http://msdn.microsoft.com/library/windows/desktop/aa366556)。  
+>  包含指標的持續性識別項也可藉由使用[記憶體對應檔案](/windows/desktop/Memory/file-mapping)。  
   
  對基底指標取值時，該基底必須透過宣告明確指定或以隱含方式得知。  
   

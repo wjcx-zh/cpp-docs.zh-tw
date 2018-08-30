@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196056"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 `CDrawingManager`類別會實作複雜繪圖演算法。  
@@ -169,7 +169,7 @@ static HBITMAP __stdcall CreateBitmap_32(
  如果這個方法成功，新建立 DIB 點陣圖控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 如需如何建立 DIB 點陣圖的詳細資訊，請參閱[CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491)。  
+ 如需如何建立 DIB 點陣圖的詳細資訊，請參閱[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)。  
   
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha  
  顯示具有透明或半透明的像素的點陣圖。  
@@ -196,7 +196,7 @@ void DrawAlpha(
  來源矩形。  
   
 ### <a name="remarks"></a>備註  
- 這個方法執行兩個點陣圖 alpha 透明混色。 如需 alpha 透明混色的詳細資訊，請參閱[alphablend，還有旁邊](http://msdn.microsoft.com/library/windows/desktop/dd183351)Windows SDK 中。  
+ 這個方法執行兩個點陣圖 alpha 透明混色。 如需 alpha 透明混色的詳細資訊，請參閱[alphablend，還有旁邊](/windows/desktop/api/wingdi/nf-wingdi-alphablend)Windows SDK 中。  
   
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse  
  繪製橢圓形使用提供的填滿和框線色彩。  

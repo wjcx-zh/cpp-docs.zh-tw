@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e63a464b68267c8202cdf47717fd1cd81db639c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: cb0b50170de0ba5a5c38c1850369092d8453445a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203196"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 這個類別會提供將主控件名稱轉換為主機位址，支援 IPv4 和 IPV6 格式的方法。  
@@ -60,7 +60,7 @@ class CSocketAddr
 ## <a name="remarks"></a>備註  
  這個類別會提供 IP 版本無關的方法，來查閱與 Windows 搭配使用的網路位址的通訊端 API 函式和程式庫中的通訊端包裝函式。  
   
- 這個類別的成員，顯示用來查詢網路位址使用的 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)。  
+ 這個類別的成員，顯示用來查詢網路位址使用的 Win32 API 函式[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)。  
   
  此類別支援這兩個 IPv4 andIPv6 網路位址。  
   
@@ -124,7 +124,7 @@ int FindAddr(
  如果成功計算出位址，則傳回零。 在失敗時傳回非零的 Windows 通訊端錯誤碼。 如果成功，導出的地址會儲存在可能使用參考連結串列`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
   
 ### <a name="remarks"></a>備註  
- 主機名稱參數可能是 IPv4 或 IPv6 格式。 這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)來執行轉換。  
+ 主機名稱參數可能是 IPv4 或 IPv6 格式。 這個方法會呼叫 Win32 API 函式[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。  
   
 ##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  呼叫此方法，將 IPv4 主機名稱轉換為主機位址。  
@@ -154,7 +154,7 @@ int FindINET4Addr(
  如果成功計算出位址，則傳回零。 在失敗時傳回非零的 Windows 通訊端錯誤碼。 如果成功，導出的地址會儲存在可能使用參考連結串列`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)來執行轉換。  
+ 這個方法會呼叫 Win32 API 函式[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。  
   
 ##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  呼叫此方法，將 IPv6 主機名稱轉換為主機位址。  
@@ -184,7 +184,7 @@ int FindINET6Addr(
  如果成功計算出位址，則傳回零。 在失敗時傳回非零的 Windows 通訊端錯誤碼。 如果成功，導出的地址會儲存在可能使用參考連結串列`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)來執行轉換。  
+ 這個方法會呼叫 Win32 API 函式[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)來執行轉換。  
   
 ##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  呼叫這個方法來傳回特定的項目中的指標`addrinfo`清單。  
@@ -195,7 +195,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 中的特定項目的參考[addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530)清單。  
+ 中的特定項目的參考[addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530)清單。  
   
 ### <a name="return-value"></a>傳回值  
  將指標傳回至`addrinfo`所參考的結構*nIndex*包含主應用程式的回應資訊的連結清單中。  

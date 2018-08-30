@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 4） C4559 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4559 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c853fa55482604d97c29653fadb06b0afdd44977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d5743b33f62aa954c3765b729ab5c0297b20e32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295346"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195572"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>編譯器警告 (層級 4) C4559
-'function': 重複定義;此函式取得 __declspec(modifier)  
-  
- 函式已重新定義或宣告，但第二個定義或宣告加入 __**declspec**修飾詞 (***修飾詞***)。 這個警告僅供參考。 若要修正這個警告，請刪除其中一個定義。  
-  
- 下列範例會產生 C4559:  
-  
-```  
-// C4559.cpp  
-// compile with: /W4 /LD  
-void f();  
-__declspec(noalias) void f();   // C4559  
+
+> '*函式*': 重複定義; 函式取得 __declspec (*修飾詞*)
+
+## <a name="remarks"></a>備註
+
+函式已重新定義或宣告並新增第二個定義或宣告 **__declspec**修飾詞 (*修飾詞*)。 這個警告僅供參考。 若要修正這個警告，請刪除其中一個定義。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4559:
+
+```cpp
+// C4559.cpp
+// compile with: /W4 /LD
+void f();
+__declspec(noalias) void f();   // C4559
 ```

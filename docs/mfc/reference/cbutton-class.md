@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e4c1755a4d7e5da451305260d4f88ac2c938bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027884"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196707"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 提供 Windows 按鈕控制項的功能。  
@@ -360,7 +360,7 @@ BOOL GetIdealSize(SIZE* psize);
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬 BCM_GETIDEALSIZE 訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成員函式會模擬 BCM_GETIDEALSIZE 訊息中所述[按鈕](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
  呼叫這個方法來取得映像清單，從 [按鈕] 控制項。  
@@ -377,7 +377,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬 BCM_GETIMAGELIST 訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成員函式會模擬 BCM_GETIMAGELIST 訊息中所述[按鈕](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
  擷取目前的命令連結控制項相關聯的附註文字。  
@@ -407,7 +407,7 @@ BOOL GetNote(
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 的控制項。  
   
- 這個方法會傳送[BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_GETNOTE](/windows/desktop/Controls/bcm-getnote)訊息，Windows SDK 中所述。  
   
 ##  <a name="getnotelength"></a>  CButton::GetNoteLength  
  擷取目前的命令連結控制項的註解文字的長度。  
@@ -422,7 +422,7 @@ UINT GetNoteLength() const;
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 的控制項。  
   
- 這個方法會傳送[BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_GETNOTELENGTH](/windows/desktop/Controls/bcm-getnotelength)訊息，Windows SDK 中所述。  
   
 ##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
  擷取目前的分割按鈕控制項相關聯的圖像。  
@@ -439,7 +439,7 @@ TCHAR GetSplitGlyph() const;
   
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_GLYPH 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取從字符`himlGlyph`結構成員。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_GLYPH 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取從字符`himlGlyph`結構成員。  
   
 ##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
  擷取[映像清單](../../mfc/reference/cimagelist-class.md)目前分割按鈕控制項。  
@@ -454,7 +454,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_IMAGE 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取的映像清單`himlGlyph`結構成員。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_IMAGE 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取的映像清單`himlGlyph`結構成員。  
   
 ##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
  擷取參數以決定 Windows 將目前的分割按鈕控制項的繪製。  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pInfo*|指標[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)接收目前的分割按鈕控制項的相關資訊的結構。 呼叫端會負責配置結構。|  
+|[out]*pInfo*|指標[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)接收目前的分割按鈕控制項的相關資訊的結構。 呼叫端會負責配置結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -475,7 +475,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
- 這個方法會傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)訊息，Windows SDK 中所述。  
   
 ##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
  擷取目前的分割按鈕控制項的下拉式清單元件的週框矩形。  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pSize*|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)接收之矩形的描述的結構。|  
+|[out]*pSize*|指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)接收之矩形的描述的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -498,7 +498,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
  在展開分割按鈕控制項時，它可以顯示的下拉式清單元件，例如清單控制項或頁面巡覽區控制項。 這個方法會擷取包含下拉式清單元件的週框矩形。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_SIZE 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取從的周框`size`結構成員。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_SIZE 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取從的周框`size`結構成員。  
   
 ##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
  擷取定義目前的分割按鈕控制項的分割按鈕樣式。  
@@ -508,14 +508,14 @@ UINT GetSplitStyle() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。  
+ 分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構。  
   
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
  分割按鈕樣式指定對齊方式、 外觀比例，以及與 Windows 繪製分割按鈕圖示的圖形化格式。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_STYLE 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取從分割按鈕樣式`uSplitStyle`結構成員。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_STYLE 旗標，然後傳送該結構的結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo)訊息中所述Windows SDK。 當訊息函式傳回時，這個方法會擷取從分割按鈕樣式`uSplitStyle`結構成員。  
   
 ##  <a name="getstate"></a>  CButton::GetState  
  擷取按鈕控制項的狀態。  
@@ -559,7 +559,7 @@ BOOL GetTextMargin(RECT* pmargin);
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬 BCM_GETTEXTMARGIN 訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成員函式會模擬 BCM_GETTEXTMARGIN 訊息中所述[按鈕](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
  呼叫此成員函式，將新的點陣圖按鈕。  
@@ -693,9 +693,9 @@ BOOL SetDropDownState(BOOL fDropDown);
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 分割按鈕控制項具有 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 樣式，且包含按鈕和其右邊的下拉式箭號。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。 通常，使用者按一下下拉箭號時，會設定下拉式清單的狀態。 使用此方法以程式設計方式設定下拉式清單控制項的狀態。 向下箭頭繪製陰影來表示的狀態。  
+ 分割按鈕控制項具有 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 樣式，且包含按鈕和其右邊的下拉式箭號。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](/windows/desktop/Controls/button-styles)。 通常，使用者按一下下拉箭號時，會設定下拉式清單的狀態。 使用此方法以程式設計方式設定下拉式清單控制項的狀態。 向下箭頭繪製陰影來表示的狀態。  
   
- 這個方法會傳送[BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數*m_splitButton*，也就是用來以程式設計方式存取分割按鈕控制項。 在下列範例會使用這個變數。  
@@ -726,7 +726,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="remarks"></a>備註  
  如果按鈕或命令連結控制項需要提高權限的安全性權限來執行動作，將控制項設為`elevation required`狀態。 接下來，Windows 會在控制項上顯示使用者帳戶控制 (UAC) 保護盾圖示。 詳細資訊，請參閱 「 使用者帳戶控制 」，網址[MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)。  
   
- 這個方法會傳送[BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield)訊息，Windows SDK 中所述。  
   
 ##  <a name="seticon"></a>  CButton::SetIcon  
  呼叫此成員函式，將新的圖示與按鈕。  
@@ -777,7 +777,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬 BCM_SETIMAGELIST 訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成員函式會模擬 BCM_SETIMAGELIST 訊息中所述[按鈕](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
  設定目前的命令連結控制項的附註文字。  
@@ -798,7 +798,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 的控制項。  
   
- 這個方法會傳送[BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_SETNOTE](/windows/desktop/Controls/bcm-setnote)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數*m_cmdLink*，也就是用來以程式設計方式存取 命令連結控制項。 在下列範例會使用這個變數。  
@@ -831,7 +831,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
  圖像為特定字型字元的實體表示法。 *ChGlyph*參數不作為圖像 （glyph），但改為用來從系統定莪圖像 （glyph） 的一組選取圖像 （glyph）。 預設下拉箭號圖像 （glyph） 的字元 '6'，所指定，和類似的 Unicode 字元黑色向下三角形 (U + 25BC)。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_GLYPH 旗標的結構和`himlGlyph`成員*chGlyph*參數，然後傳送，結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中所述的訊息。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_GLYPH 旗標的結構和`himlGlyph`成員*chGlyph*參數，然後傳送，結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中所述的訊息。  
   
 ##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
  將產生關聯[映像清單](../../mfc/reference/cimagelist-class.md)與目前的分割按鈕控制項。  
@@ -852,7 +852,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_IMAGE 旗標的結構和`himlGlyph`成員*pSplitImageList*參數，然後按一下 傳送在該結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中所述的訊息。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_IMAGE 旗標的結構和`himlGlyph`成員*pSplitImageList*參數，然後按一下 傳送在該結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中所述的訊息。  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  指定參數以決定 Windows 將目前的分割按鈕控制項的繪製。  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pInfo*|指標[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構，定義目前的分割按鈕控制項。|  
+|[in]*pInfo*|指標[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構，定義目前的分割按鈕控制項。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -873,7 +873,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
- 這個方法會傳送[BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[BCM_SETSPLITINFO](/windows/desktop/Controls/bcm-setsplitinfo)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pSize*|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)該結構描述的周框。|  
+|[in]*pSize*|指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)該結構描述的周框。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -906,7 +906,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
  在展開分割按鈕控制項時，它可以顯示的下拉式清單元件，例如清單控制項或頁面巡覽區控制項。 這個方法會指定週框矩形包含下拉式清單元件的大小。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_SIZE 旗標的結構和`size`成員*pSize*參數，然後按一下 傳送的結構在  [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中所述的訊息。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_SIZE 旗標的結構和`size`成員*pSize*參數，然後按一下 傳送的結構在  [BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。 在下列範例會使用這個變數。  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*uSplitStyle*|分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。|  
+|[in]*uSplitStyle*|分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -937,9 +937,9 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 ### <a name="remarks"></a>備註  
  這個方法只適用於其按鈕樣式是 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控制項。  
   
- 分割按鈕樣式指定對齊方式、 外觀比例，以及與 Windows 繪製分割按鈕圖示的圖形化格式。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。  
+ 分割按鈕樣式指定對齊方式、 外觀比例，以及與 Windows 繪製分割按鈕圖示的圖形化格式。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構。  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) BCSIF_STYLE 旗標的結構和`uSplitStyle`成員*uSplitStyle*參數，然後傳送，結構[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK 中所述的訊息。  
+ 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) BCSIF_STYLE 旗標的結構和`uSplitStyle`成員*uSplitStyle*參數，然後傳送，結構[BCM_GETSPLITINFO](/windows/desktop/Controls/bcm-getsplitinfo) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。  
@@ -985,7 +985,7 @@ BOOL SetTextMargin(RECT* pmargin);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬 BCM_SETTEXTMARGIN 訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
+ 此成員函式會模擬 BCM_SETTEXTMARGIN 訊息中所述[按鈕](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK 的一部分。  
   
 ## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

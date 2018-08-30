@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d85f50889f75f387fc6455872a38396e7b9728dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026403"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203274"
 ---
 # <a name="complex-class"></a>complex 類別
 
@@ -75,7 +75,7 @@ class complex
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|Operator|描述|
 |-|-|
 |[operator*=](#op_star_eq)|將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|
 |[operator+=](#op_add_eq)|將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。|
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>另請參閱
 
-[complex 成員](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[complex 成員](https://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 83ff74a460c7cb34a50d0fbdf338eccc3da27f98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197435"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -237,7 +237,7 @@ DWORD_PTR GetContext() const;
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-此成員函式實作的 Win32 函式行為[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)、 Windows SDK 中所述。
+此成員函式實作的 Win32 函式行為[InternetGetCookie](/windows/desktop/api/wininet/nf-wininet-internetgetcookiea)、 Windows SDK 中所述。
 
 ```cpp
 static BOOL GetCookie(
@@ -269,7 +269,7 @@ static BOOL GetCookie(
 
 ### <a name="return-value"></a>傳回值
 
-否則傳回如果成功，則為 TRUE 或 FALSE。 如果呼叫失敗，會呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)來判斷錯誤的原因。 適用於下列的錯誤值：
+否則傳回如果成功，則為 TRUE 或 FALSE。 如果呼叫失敗，會呼叫 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)來判斷錯誤的原因。 適用於下列的錯誤值：
 
 - ERROR_NO_MORE_ITEMS 是指定之 url 的任何 cookie 和所有其父代。
 
@@ -476,7 +476,7 @@ virtual void OnStatusCallback(
 |INTERNET_STATUS_RESPONSE_RECEIVED|已成功從伺服器收到的回應。 *LpvStatusInformation*參數為 NULL。|
 |INTERNET_STATUS_CLOSING_CONNECTION|正在關閉伺服器的連線。 *LpvStatusInformation*參數為 NULL。|
 |INTERNET_STATUS_CONNECTION_CLOSED|已成功關閉連線到伺服器。 *LpvStatusInformation*參數為 NULL。|
-|INTERNET_STATUS_HANDLE_CREATED|使用 Win32 API 函式[InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363)來指出它已建立新的控制代碼。 這可讓應用程式呼叫 Win32 函式[InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350)從另一個執行緒，如果連接的時間太長。 查看 Windows SDKfor 這些函式的詳細資訊。|
+|INTERNET_STATUS_HANDLE_CREATED|使用 Win32 API 函式[InternetConnect](/windows/desktop/api/wininet/nf-wininet-internetconnecta)來指出它已建立新的控制代碼。 這可讓應用程式呼叫 Win32 函式[InternetCloseHandle](/windows/desktop/api/wininet/nf-wininet-internetclosehandle)從另一個執行緒，如果連接的時間太長。 查看 Windows SDKfor 這些函式的詳細資訊。|
 |INTERNET_STATUS_HANDLE_CLOSING|已成功終止此控制代碼值。|
 
 覆寫這個成員函式會在執行狀態回呼常式之前，需要某些動作。
@@ -538,7 +538,7 @@ CStdioFile* OpenURL(
 
 指標，`OpenURL`傳回而定*pstrURL*的服務類型。 下表說明可能的指標`OpenURL`可以傳回。
 
-|URL 類型|Returns|
+|URL 類型|傳回|
 |--------------|-------------|
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
@@ -589,7 +589,7 @@ static BOOL SetCookie(
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)、 Windows SDK 中所述。
+此成員函式實作的 Win32 訊息的行為[InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea)、 Windows SDK 中所述。
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>參數
 
 *dwOption*  
-若要設定的 [網際網路] 選項。 請參閱[選項旗標](http://msdn.microsoft.com/library/windows/desktop/aa385328)Windows SDKfor 可能選項的清單中。
+若要設定的 [網際網路] 選項。 請參閱[選項旗標](/windows/desktop/WinInet/option-flags)Windows SDKfor 可能選項的清單中。
 
 *lpBuffer*  
 這種緩衝區包含選項的設定。
@@ -632,7 +632,7 @@ DWORD，其中包含的選項設定。
 
 ### <a name="return-value"></a>傳回值
 
-如果作業成功，則會傳回 TRUE 值。 如果發生錯誤，則會傳回 FALSE 值。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。
+如果作業成功，則會傳回 TRUE 值。 如果發生錯誤，則會傳回 FALSE 值。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。
 
 ## <a name="see-also"></a>另請參閱
 

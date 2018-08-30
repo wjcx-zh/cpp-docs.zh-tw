@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55abed046ddf1c770271a9cc5346b70a752d81a6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b63afd3c63fbcb05c7172a30a5a23b0418269eca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201455"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 當使用者按住最上層工具列按鈕時出現的工具列。  
@@ -59,7 +59,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(覆寫 `CMFCToolBar::OnSendCommand`。)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80)。)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CMFCToolBar::OnUpdateCmdUI](https://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80)。)|  
   
 ### <a name="remarks"></a>備註  
  A`CMFCDropDownToolBar`物件會結合行為的快顯功能表中的視覺外觀的工具列。 當使用者按住下拉式工具列按鈕 (請參閱[CMFCDropDownToolbarButton 類別](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)) 下拉式工具列隨即出現，且使用者可以向下捲動到它，然後放開滑鼠從下拉式清單 工具列中選取一個按鈕按鈕。 使用者選取下拉式清單 工具列中的按鈕之後，該按鈕會顯示為最上層工具列上的 目前 按鈕。  

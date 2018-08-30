@@ -1,5 +1,5 @@
 ---
-title: CLinearTransitionFromSpeed 類別 |Microsoft 文件
+title: CLinearTransitionFromSpeed 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039478"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203304"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 類別
 封裝線性速度轉換。  
@@ -46,7 +46,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|建構線性速度轉換物件並初始化速度與最終值。|  
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|建構線性速度轉換物件，並使用速度和最終值將它初始化。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -62,7 +62,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|變數的速度的絕對值。|  
   
 ## <a name="remarks"></a>備註  
- 線性速度轉換，期間動畫變數的值變更在指定的速率。 轉換的持續時間取決於的起始值與指定的最終值之間的差異。 由於所有轉換會自動都清除，建議來配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup，直到然後它便是 NULL。 變更成員變數之後這個 COM 物件建立沒有任何作用。  
+ 在線性速度轉換動畫變數的值變更的指定速率。 轉換的持續時間取決於初始的值與指定的最終值之間的差異。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
  **標頭：** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
- 建構線性速度轉換物件並初始化速度與最終值。  
+ 建構線性速度轉換物件，並使用速度和最終值將它初始化。  
   
 ```  
 CLinearTransitionFromSpeed(
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
 *pLibrary*  
- 指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
+ 指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。  
   
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  

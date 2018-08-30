@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200214"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -55,7 +55,7 @@ ms.locfileid: "42593353"
 *型別*（選擇性）  
 可以是下列其中一項：
 
-- `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 這是預設值。
+- `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 此為預設值。
 
 - `exe` 將函式和類別可讓產生可執行檔當成跨處理序 COM 伺服器。
 
@@ -73,7 +73,7 @@ ms.locfileid: "42593353"
 程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要擷取*uuid*程式庫區塊，您可以使用識別碼來這麼做 **__uuidof (** *libraryname* **)**。
 
 *lcid*  
-當地語系化參數。 如需詳細資訊，請參閱 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 。
+當地語系化參數。 請參閱[lcid](/windows/desktop/Midl/lcid)如需詳細資訊。
 
 *控制*（選擇性）  
 指定程式庫中的所有 coclass 都是控制項。
@@ -82,7 +82,7 @@ ms.locfileid: "42593353"
 指定類型程式庫。
 
 *helpstringdll* （選擇性）  
-設定用來執行文件字串查閱之 .dll 檔案的名稱。 如需詳細資訊，請參閱 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) 。
+設定用來執行文件字串查閱之 .dll 檔案的名稱。 請參閱[helpstringdll](/windows/desktop/Midl/helpstringdll)如需詳細資訊。
 
 *helpfile* （選擇性）  
 名稱**協助**型別程式庫的檔案。
@@ -94,13 +94,13 @@ ms.locfileid: "42593353"
 如需詳細資訊，請參閱 [helpstringcontext](../windows/helpstringcontext.md) 。
 
 *隱藏*（選擇性）  
-避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 如需詳細資訊，請參閱 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 屬性。
+避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
 
 *限制*（選擇性）  
-不能任意呼叫程式庫成員。 如需詳細資訊，請參閱 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 屬性。
+不能任意呼叫程式庫成員。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
 
 *自訂*（選擇性）  
-一或多個屬性；這類似於 [custom](../windows/custom-cpp.md) 屬性。 第一個參數*自訂*是屬性的 GUID。 例如: 
+一或多個屬性；這類似於 [custom](../windows/custom-cpp.md) 屬性。 第一個參數*自訂*是屬性的 GUID。 例如:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -124,15 +124,15 @@ ms.locfileid: "42593353"
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) 是當成基底類別和 COM 伺服器所需的標準 DLL 進入點使用。 這些進入點是 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)、 [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162)、 [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457)、 [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)和 [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891)。
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) 是當成基底類別和 COM 伺服器所需的標準 DLL 進入點使用。 這些進入點是[DllMain](/windows/desktop/Dlls/dllmain)， [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162)， [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)。
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) 是當成基底類別和標準可執行檔進入點 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)使用。
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md)當成基底類別和標準可執行檔進入點[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) 是當成基底類別和標準可執行檔進入點 [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)使用。
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md)當成基底類別和標準可執行檔進入點[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [獨立屬性](../windows/stand-alone-attributes.md)  
 [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[程式庫](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[程式庫](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

@@ -1,5 +1,5 @@
 ---
-title: MFC 中的 OLE |Microsoft 文件
+title: MFC 中的 OLE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef23f0b7e031c6866b7792bca61c5e4d5bd470da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c6c39c47762f4ac61e3192d5d3ecef997c3078bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204110"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 這些文件說明使用 MFC 的 OLE 程式設計基本概念。 MFC 提供最簡易的方法撰寫使用 OLE 的程式：  
@@ -80,7 +80,7 @@ ms.locfileid: "33353624"
  [容器/伺服器 COM 元件](../mfc/containers-advanced-features.md)  
  說明將選擇性的進階功能併入現有的容器應用程式中的必要步驟。  
   
- [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [元件物件模型](/windows/desktop/com/the-component-object-model)  
  說明使用 OLE 而不使用 MFC。  
   
 ## <a name="see-also"></a>另請參閱  

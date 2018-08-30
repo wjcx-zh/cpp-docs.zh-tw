@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595238"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200564"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ ms.locfileid: "42595238"
 
 ## <a name="remarks"></a>備註
 
-**彙總**c + + 屬性具有相同的功能[彙總](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 屬性。 這表示，編譯器會通過**彙總**透過屬性設定為產生的.idl 檔案。
+**彙總**c + + 屬性具有相同的功能[彙總](/windows/desktop/Midl/aggregatable)MIDL 屬性。 這表示，編譯器會通過**彙總**透過屬性設定為產生的.idl 檔案。
 
 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 
@@ -97,4 +97,4 @@ class CMyClass {};
 [IDL 屬性](../windows/idl-attributes.md)  
 [類別屬性](../windows/class-attributes.md)  
 [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[彙總](/windows/desktop/com/aggregation)  

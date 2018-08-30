@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 627fb8e1ad1341257e3064ee195952c37dd4a481
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852363"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195534"
 ---
 # <a name="coccmanager-class"></a>COccManager 類別
 管理各種自訂控制項網站；由 `COleControlContainer` 和 `COleControlSite` 物件實作。  
@@ -334,7 +334,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
->  控制項必須有 OLEMISC_ACTSLIKEBUTTON 狀態位元組。 如需有關 OLEMISC 旗標的詳細資訊，請參閱[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中的主題。  
+>  控制項必須有 OLEMISC_ACTSLIKEBUTTON 狀態位元組。 如需有關 OLEMISC 旗標的詳細資訊，請參閱[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中的主題。  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
  由架構呼叫以將分割從通用對話方塊控制項的 ActiveX 控制項。  

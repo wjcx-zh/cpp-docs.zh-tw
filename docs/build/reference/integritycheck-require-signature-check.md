@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a10594391b0f3be490608f7dfa006b0c32aa2e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609276"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197052"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (需要簽章檢查)
 指定必須檢查在載入時間的二進位檔映像的數位簽章。  
@@ -47,5 +47,5 @@ ms.locfileid: "42609276"
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)   
  [強制的完整性簽署的可攜式執行檔 (PE) 檔案](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [核心模式程式碼簽署逐步解說](http://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [Windows 7 和 Windows Server 2008 中的 AppInit Dll](http://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+ [核心模式程式碼簽署逐步解說](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
+ [Windows 7 和 Windows Server 2008 中的 AppInit Dll](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

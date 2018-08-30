@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964947"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202788"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 類別
 
@@ -228,7 +228,7 @@ class basic_streambuf;
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|Operator|描述|
 |-|-|
 |[operator=](#op_eq)|從另一個 `basic_streambuf` 物件指派這個物件的值。|
 
@@ -664,7 +664,7 @@ int_type sbumpc();
 
 ### <a name="remarks"></a>備註
 
-如果有讀取位置可供使用，此成員函式會傳回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr))，並遞增輸入緩衝區的下一個指標。 否則會傳回 [uflow](#uflow)。
+如果有讀取位置可供使用，此成員函式會傳回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr))，並遞增輸入緩衝區的下一個指標。 否則會傳回 [uflow](#uflow)。
 
 ### <a name="example"></a>範例
 

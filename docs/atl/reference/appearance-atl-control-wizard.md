@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7b3db7fbcf190aa2dda05cabd2d1553824fb076e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573211"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194723"
 ---
 # <a name="appearance-atl-control-wizard"></a>外觀, ATL 控制項精靈
 在這裡插入 [搜尋結果] 摘要。  
@@ -32,7 +32,7 @@ ms.locfileid: "42573211"
 **檢視狀態**  
 設定容器內控制項的外觀。  
   
- -   **不透明**： 設定位元 VIEWSTATUS_OPAQUE [forced VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)列舉型別和繪製整個控制項矩形傳遞給[CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)方法。 完全不透明的會出現這個控制項，並沒有任何容器顯示控制項界限後方。      
+ -   **不透明**： 設定位元 VIEWSTATUS_OPAQUE [forced VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)列舉型別和繪製整個控制項矩形傳遞給[CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw)方法。 完全不透明的會出現這個控制項，並沒有任何容器顯示控制項界限後方。      
       
         此設定可協助更快速地繪製控制項的容器。 如果未選取此選項，控制項可以包含透明的組件。  
       
@@ -82,7 +82,7 @@ ms.locfileid: "42573211"
   
  -   **在執行階段不可見**： 設定要在執行階段是不可見的控制項。 您可以使用不可見的控制項來執行作業在背景中，例如定期引發事件。  
       
- -   **作用就像按鈕**： 設定位元 OLEMISC_ACTSLIKEBUTTON [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)列舉型別，以控制来處理像是按鈕。 如果容器已標示為預設按鈕的控制項的用戶端站台，則選取此選項可讓您藉由繪製本身有較粗框架將本身顯示為預設按鈕的按鈕控制項。 請參閱[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)如需詳細資訊。  
+ -   **作用就像按鈕**： 設定位元 OLEMISC_ACTSLIKEBUTTON [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)列舉型別，以控制来處理像是按鈕。 如果容器已標示為預設按鈕的控制項的用戶端站台，則選取此選項可讓您藉由繪製本身有較粗框架將本身顯示為預設按鈕的按鈕控制項。 請參閱[CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault)如需詳細資訊。  
       
   -   **作用就像標籤**： 設定位元 OLEMISC 列舉 OLEMISC_ACTSLIKELABEL，若要啟用的控制項取代容器的原生的標籤。 容器會判斷該如何處理這個旗標，如果任何項目。  
   

@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70b908bddbf7034e1d60f16cb0e492c0a707586
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598876"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203588"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
-將實值類型變數 (例如 *) 傳遞給使用* ) 或基本純量類型變數 (例如 [) 傳遞給使用](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)Boxing `int`作為其輸入類型的方法時， [Boxing](../cppcx/platform-object-class.md) 會將此變數包裝在 ref 類別中。  
+*Boxing*這類包裝實值類型變數[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— 或基本純量類型，例如`int`— 在 ref 類別變數傳遞至採用的方法時[Platform:: object ^](../cppcx/platform-object-class.md)作為其輸入類型。  
   
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>傳遞實值類型給 Object^ 參數  
  雖然您不需要明確將 Box 變數，以傳遞給 [Platform::Object^](../cppcx/platform-object-class.md)類型的方法參數，但是當您擷取先前已 Box 的值時，您必須明確轉換回原始類型。  

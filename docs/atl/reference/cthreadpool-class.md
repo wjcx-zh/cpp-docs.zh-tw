@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55f7d676988e43216adbf6e8a0b6c21afd958a3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d8371ec583bd8b9ee4962445e4c2b6f2fbfa6280
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884083"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196958"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 這個類別會提供處理的工作項目佇列的背景工作執行緒集區。  
@@ -83,9 +83,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>備註  
  建立及終結時初始化、 調整大小，或關閉在集區執行緒集區中。 類別的執行個體*背景工作角色*將建立的集區中每個背景工作執行緒堆疊上。 每個執行個體存在之執行緒的存留期。  
   
- 在往來文章，建立後立即*背景工作角色*::`Initialize`將與該執行緒相關聯的物件上呼叫。 之前的執行緒，解構*背景工作角色*::`Terminate`將呼叫。 這兩種方法必須接受**void\*** 引數。 此引數的值會傳遞至執行緒集區，以透過*pvWorkerParam*的參數[CThreadPool::Initialize](#initialize)。  
+ 在往來文章，建立後立即*背景工作角色*::`Initialize`將與該執行緒相關聯的物件上呼叫。 之前的執行緒，解構*背景工作角色*::`Terminate`將呼叫。 這兩種方法必須接受**void** <strong>\*</strong>引數。 此引數的值會傳遞至執行緒集區，以透過*pvWorkerParam*的參數[CThreadPool::Initialize](#initialize)。  
   
- 當有可用的工作項目中的佇列和背景工作執行緒的工作時，背景工作執行緒會提取關閉的佇列和呼叫的項目`Execute`方法*背景工作角色*該執行緒的物件。 三個項目接著會傳遞至方法： 從相同佇列的項目`pvWorkerParam`傳遞給*背景工作角色*::`Initialize`並*背景工作角色*:: `Terminate`，以及的指標[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) IO 完成連接埠佇列所用的結構。  
+ 當有可用的工作項目中的佇列和背景工作執行緒的工作時，背景工作執行緒會提取關閉的佇列和呼叫的項目`Execute`方法*背景工作角色*該執行緒的物件。 三個項目接著會傳遞至方法： 從相同佇列的項目`pvWorkerParam`傳遞給*背景工作角色*::`Initialize`並*背景工作角色*:: `Terminate`，以及的指標[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) IO 完成連接埠佇列所用的結構。  
   
  *背景工作角色*類別會宣告都會排入執行緒集區所提供的 typedef，項目的類型*工作者*:: `RequestType`。 此類型必須能夠從 ULONG_PTR 來回轉換。  
   
@@ -308,7 +308,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。 如果提供 0 或沒有值，這個方法會使用設定的逾時[CThreadPool::SetTimeout](#settimeout)。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會張貼關機要求的所有執行緒集區中。 如果在逾時到期時，這個方法會呼叫[TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717)在任何未結束的執行緒。 從類別的解構函式會自動呼叫這個方法。  
+ 這個方法會張貼關機要求的所有執行緒集區中。 如果在逾時到期時，這個方法會呼叫[TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread)在任何未結束的執行緒。 從類別的解構函式會自動呼叫這個方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)   

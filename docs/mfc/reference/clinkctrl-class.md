@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201000"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 提供 Windows 通用 SysLink 控制項的功能。  
@@ -91,7 +91,7 @@ class CLinkCtrl : public CWnd
   
  這個控制項 (並因此`CLinkCtrl`類別) 僅適用於在 Windows XP 及更新版本執行的程式。  
   
- 如需詳細資訊，請參閱 < [SysLink 控制項](http://msdn.microsoft.com/library/windows/desktop/bb760706)Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [SysLink 控制項](/windows/desktop/Controls/syslink-overview)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,10 +132,10 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>參數  
  *lpszLinkMarkup*  
- 要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
+ 要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](/windows/desktop/Controls/syslink-overview)。  
   
  *cheaderctrl:: Create*  
- 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)在`Windows SDK`如需詳細資訊。  
+ 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)在`Windows SDK`如需詳細資訊。  
   
  *rect*  
  指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
@@ -186,13 +186,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>參數  
  *lpszLinkMarkup*  
- 要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
+ 要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](/windows/desktop/Controls/syslink-overview)。  
   
  *dwExStyle*  
- 指定連結控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定連結控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
+ 指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。  
   
  *rect*  
  指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
@@ -222,7 +222,7 @@ int GetIdealHeight() const;
  控制項，像素為單位的理想高度。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight)、 Windows SDK 中所述。  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
  計算目前的連結控制，根據指定的寬度，連結的連結文字的慣用的高度。  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |參數|描述|  
 |---------------|-----------------|  
 |[in]*cxMaxWidth*|連結，像素為單位的最大寬度。|  
-|[out]\* *pSize*|Windows 的指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|  
+|[out]\* *pSize*|Windows 的指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|  
   
 ### <a name="return-value"></a>傳回值  
  連結文字、 像素為單位的慣用的高度。 傳回值是相同的值*cy*隸屬`SIZE`結構。  
@@ -246,7 +246,7 @@ int GetIdealSize(
 ### <a name="remarks"></a>備註  
  如需`GetIdealSize`方法，請參閱中的範例[CLinkCtrl::Create](#create)。  
   
- 這個方法會傳送[LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize)訊息，Windows SDK 中所述。  
   
 ##  <a name="getitem"></a>  CLinkCtrl::GetItem  
  擷取狀態和連結控制項項目的屬性。  
@@ -257,13 +257,13 @@ BOOL GetItem(PLITEM pItem) const;
   
 ### <a name="parameters"></a>參數  
  *pItem*  
- 指標[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)接收項目資訊的結構。  
+ 指標[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)接收項目資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[LM_GETITEM](/windows/desktop/Controls/lm-getitem)、 Windows SDK 中所述。  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
  擷取連結控制項項目的識別碼。  
@@ -299,7 +299,7 @@ BOOL GetItemID(
 >  此函式也會傳回 FALSE，如果緩衝區*szID 或 strID*小於 MAX_LINKID_TEXT。  
   
 ### <a name="remarks"></a>備註  
- 擷取特定連結控制項項目的識別碼。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK 中。  
+ 擷取特定連結控制項項目的識別碼。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
  擷取連結控制項項目的狀態。  
@@ -319,13 +319,13 @@ BOOL GetItemState(
  指定的狀態項目的值。  
   
  *stateMask*  
- 描述要取得的狀態項目旗標的組合。 如需值的清單，請參閱說明`state`中的成員[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)結構。 允許的項目是相同中允許`state`。  
+ 描述要取得的狀態項目旗標的組合。 如需值的清單，請參閱說明`state`中的成員[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)結構。 允許的項目是相同中允許`state`。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 擷取的特定連結控制項項目指定的狀態項目的值。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK 中。  
+ 擷取的特定連結控制項項目指定的狀態項目的值。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
  擷取連結控制項項目所代表的 URL。  
@@ -361,7 +361,7 @@ BOOL GetItemUrl(
 >  此函式也會傳回 FALSE，如果緩衝區*szUrl 或 strUrl*小於 MAX_LINKID_TEXT。  
   
 ### <a name="remarks"></a>備註  
- 擷取指定的連結控制項項目所代表的 URL。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK 中。  
+ 擷取指定的連結控制項項目所代表的 URL。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
  判斷使用者是否按指定的連結。  
@@ -378,7 +378,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[LM_HITTEST](/windows/desktop/Controls/lm-hittest)、 Windows SDK 中所述。  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
  設定的狀態和屬性的連結控制項項目。  
@@ -389,13 +389,13 @@ BOOL SetItem(PLITEM pItem);
   
 ### <a name="parameters"></a>參數  
  *pItem*  
- 指標[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)結構，其中包含要設定的資訊。  
+ 指標[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)結構，其中包含要設定的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[LM_SETITEM](/windows/desktop/Controls/lm-setitem)、 Windows SDK 中所述。  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
  擷取連結控制項項目的識別碼。  
@@ -417,7 +417,7 @@ BOOL SetItemID(
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 設定特定連結控制項項目的識別碼。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
+ 設定特定連結控制項項目的識別碼。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
  擷取連結控制項項目的狀態。  
@@ -437,13 +437,13 @@ BOOL SetItemState(
  設定指定的狀態項目的值。  
   
  *stateMask*  
- 描述狀態項目的所設定的旗標的組合。 如需值的清單，請參閱說明`state`中的成員[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)結構。 允許的項目是相同中允許`state`。  
+ 描述狀態項目的所設定的旗標的組合。 如需值的清單，請參閱說明`state`中的成員[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)結構。 允許的項目是相同中允許`state`。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 設定的特定連結控制項項目指定的狀態項目的值。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
+ 設定的特定連結控制項項目指定的狀態項目的值。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
  設定連結控制項目所代表的 URL。  
@@ -465,7 +465,7 @@ BOOL SetItemUrl(
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 設定指定的連結控制項項目所代表的 URL。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
+ 設定指定的連結控制項項目所代表的 URL。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

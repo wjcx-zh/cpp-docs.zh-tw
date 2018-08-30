@@ -1,5 +1,5 @@
 ---
-title: 自訂標頭項目&#39;s 外觀 |Microsoft 文件
+title: 自訂標頭項目&#39;外觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09f8bc0b61e22435ee348968f117940b57132e3
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3523feb14d49a0e275fd3024925287aa05521f4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195514"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>自訂標頭項目&#39;s 外觀
-藉由設定*dwStyle*參數，當您初次建立標題控制項 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create))、 您可以定義的外觀和行為的標頭項目，或標頭控制本身。  
+# <a name="customizing-the-header-item39s-appearance"></a>自訂標頭項目&#39;外觀
+藉由設定*cheaderctrl:: Create*參數，當您第一次建立標題控制項 ([Dwstyle](../mfc/reference/cheaderctrl-class.md#create))，您可以定義外觀和行為的標頭項目，或標頭的控制項本身。  
   
  以下是可設定之樣式的示範及其用途：  
   
@@ -32,15 +32,15 @@ ms.locfileid: "36930871"
   
      如果您要執行動作來回應標題項目上的滑鼠點選作業，例如 Microsoft Outlook 中以特定欄排序資料，請使用這個樣式。  
   
--   當滑鼠游標至其上時提供的標頭項目 「 熱追蹤 」 外觀，使用**HDS_HOTTRACK**樣式。  
+-   當滑鼠游標經過時提供的標頭項目有 「 熱追蹤 」 外觀，使用**HDS_HOTTRACK**樣式。  
   
      熱追蹤會在平面的標題列上，於指標通過項目時顯示 3D 外框。  
   
 -   若要指出標題控制項應被隱藏，請使用**HDS_HIDDEN**樣式。  
   
-     **HDS_HIDDEN**樣式表示標題控制項要做為資料容器而非視覺控制項。 這個樣式不會自動隱藏控制項，而是會影響 `CHeaderCtrl::Layout` 的行為。 中傳回的值*cy*隸屬`WINDOWPOS`結構將會是零，表示控制項不應該顯示給使用者。  
+     **HDS_HIDDEN**樣式表示標題控制項要做為資料容器而非視覺控制項。 這個樣式不會自動隱藏控制項，而是會影響 `CHeaderCtrl::Layout` 的行為。 中傳回的值*cy*隸屬`WINDOWPOS`結構將會是零，指出不應該對使用者顯示控制項。  
   
- 如需有關這些屬性的詳細資訊，請參閱[項目](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。 將項目加入至標題控制項的相關資訊，請參閱[將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)。  
+ 如需有關這些屬性的詳細資訊，請參閱 <<c0> [ 項目](/windows/desktop/Controls/header-controls)Windows SDK 中。 將項目新增至標題控制項的相關資訊，請參閱[將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   

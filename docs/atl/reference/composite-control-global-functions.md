@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882428"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203712"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 這些函式會提供建立對話方塊，以及建立、 裝載和授權的 ActiveX 控制項的支援。  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in]識別的模組，其可執行檔包含對話方塊範本的執行個體。  
   
  *lpTemplateName*  
- [in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。  
+ [in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。  
   
  *hWndParent*  
  [in]識別擁有對話方塊的視窗。  
   
  *lpDialogProc*  
- [in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469)。  
+ [in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。  
   
  *dwInitParam*  
  [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- 如需有關如何編輯資源指令碼的詳細資訊，請參閱 <<c0> [ 如何： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](http://msdn.microsoft.com/library/windows/desktop/aa380902)下方 Windows SDK *: SDK Tools*。  
+ 如需有關如何編輯資源指令碼的詳細資訊，請參閱 <<c0> [ 如何： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[常見的控制參數](/windows/desktop/menurc/common-control-parameters)下方 Windows SDK *: SDK Tools*。  
   
- 如需有關一般對話方塊的詳細資訊，請參閱[對話方塊中](http://msdn.microsoft.com/library/windows/desktop/ms645452)並[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
+ 如需有關一般對話方塊的詳細資訊，請參閱[對話方塊中](/windows/desktop/api/winuser/nf-winuser-dialogboxa)並[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  從使用者提供的對話方塊範本中建立非強制回應對話方塊。  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in]識別的模組，其可執行檔包含對話方塊範本的執行個體。  
   
  *lpTemplateName*  
- [in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。  
+ [in]識別對話方塊範本。 此參數會指定名稱的對話方塊範本的 null 結束的字元字串的指標，或是指定的對話方塊範本的資源識別碼的整數值。 如果參數指定資源識別項，其高序位文字必須是零，其低序位字組必須包含識別項。 您可以使用[MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029)巨集來建立此值。  
   
  *hWndParent*  
  [in]識別擁有對話方塊的視窗。  
   
  *lpDialogProc*  
- [in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](http://msdn.microsoft.com/library/windows/desktop/ms645469)。  
+ [in]指向對話方塊程序。 如需對話方塊程序的詳細資訊，請參閱[DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469)。  
   
  *dwInitParam*  
  [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>備註  
  產生的對話方塊中可包含 ActiveX 控制項。  
   
- 請參閱[CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434)並[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
+ 請參閱[CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga)並[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK 中。  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  如果控制項裝載程式碼的初始化是否成功; 非零值否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 這個函式，呼叫 **"AtlAxWin 」** 視窗類別可用於呼叫[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)、 Windows SDK 中所述。  
+ 使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 這個函式，呼叫 **"AtlAxWin 」** 視窗類別可用於呼叫[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)、 Windows SDK 中所述。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  此函式取消初始化 ATL 的控制項裝載程式碼取消註冊 **"AtlAxWin80"** 並 **"AtlAxWinLic80"** 視窗類別。  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  一律會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 此函式只會呼叫[UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK 中所述。  
+ 此函式只會呼叫[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK 中所述。  
   
  呼叫此函式來清除所有現有的主控件 windows 皆已終結，如果您呼叫[AtlAxWinInit](#atlaxwininit)而且您不再需要建立主應用程式視窗。 如果您未呼叫此函式，該視窗類別將會取消註冊自動處理序終止時。  
   

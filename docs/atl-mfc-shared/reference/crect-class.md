@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3d49b7a96f98c701c2748379ed880267bff3fa5a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881083"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196644"
 ---
 # <a name="crect-class"></a>CRect 類別
 類似於 Windows [RECT](../../mfc/reference/rect-structure1.md)結構。  
@@ -375,7 +375,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
  指定要 deflate 頂端和底部的單位數`CRect`。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](csize-class.md) ，指定要 deflate 的單位數`CRect`。 `cx`值會指定要 deflate 左邊和右邊的單位數和`cy`值會指定要 deflate 上方和下方的單位數。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](csize-class.md) ，指定要 deflate 的單位數`CRect`。 `cx`值會指定要 deflate 左邊和右邊的單位數和`cy`值會指定要 deflate 上方和下方的單位數。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或`CRect`，指定要 deflate 每一端的單位數。  
@@ -494,7 +494,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  指定要擴充的頂端和底部的單位數`CRect`。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](csize-class.md) ，指定要擴充的單位數`CRect`。 `cx`值會指定要擴充的左邊和右邊的單位數和`cy`值會指定要擴充的頂端和底端的單位數。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](csize-class.md) ，指定要擴充的單位數`CRect`。 `cx`值會指定要擴充的左邊和右邊的單位數和`cy`值會指定要擴充的頂端和底端的單位數。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或`CRect`，指定要擴充每一端的單位數。  
@@ -753,7 +753,7 @@ void OffsetRect(SIZE size) throw();
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](cpoint-class.md)物件，指定用來移動兩個維度。  
   
  *size*  
- 包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定用來移動兩個維度。  
+ 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定用來移動兩個維度。  
   
 ### <a name="remarks"></a>備註  
  移動`CRect` *x*沿著 x 軸單位並*y*沿著 y 軸的單位。 *x*並*y*參數是帶正負號的值，因此`CRect`可以向左移動或向右和增加或減少。  
@@ -919,7 +919,7 @@ void operator+=(LPCRECT lpRect) throw();
  A[點](../../mfc/reference/point-structure1.md)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或`CRect`物件，其中包含要擴充的每一端的單位數`CRect`。  
@@ -958,7 +958,7 @@ void operator-=(LPCRECT lpRect) throw();
  A[點](../../mfc/reference/point-structure1.md)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或`CRect`物件，其中包含要 deflate 的每一端的單位數`CRect`。  
@@ -1050,7 +1050,7 @@ CRect operator+(SIZE size) const throw();
  A[點](../../mfc/reference/point-structure1.md)結構或[CPoint](cpoint-class.md)物件，指定要移動的傳回值的單位數。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動的傳回值的單位數。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](csize-class.md)物件，指定要移動的傳回值的單位數。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或`CRect`物件，其中包含要擴充的傳回值的每一端的單位數。  
@@ -1089,7 +1089,7 @@ CRect operator-(LPCRECT lpRect) const throw();
  A[點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件，指定要移動的傳回值的單位數。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，指定要移動的傳回值的單位數。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，指定要移動的傳回值的單位數。  
   
  *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或`CRect`物件，其中包含要 deflate 每一端的傳回值的單位數。  

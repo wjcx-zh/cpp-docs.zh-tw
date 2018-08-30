@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8df8ef2a0846f5ac90a2adfc53fa64da92930f3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8879c1d304e6d46b7ae3c8c2f1ed535526a5390e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881236"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202458"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 類別
 這個類別會實作 `IBindStatusCallback` 介面。  
@@ -101,10 +101,10 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|讀取的位元組總數。|  
 |[CBindStatusCallback::m_pFunc](#m_pfunc)|當資料可供使用時，就會呼叫之函式指標。|  
 |[CBindStatusCallback::m_pT](#m_pt)|要求非同步資料傳輸物件的指標。|  
-|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)目前繫結作業的介面。|  
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|指標[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)目前繫結作業的介面。|  
 |[CBindStatusCallback::m_spBinding](#m_spbinding)|指標`IBinding`目前繫結作業的介面。|  
-|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|指標[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)介面要使用的 URL。|  
-|[CBindStatusCallback::m_spStream](#m_spstream)|指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)資料傳輸的介面。|  
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|指標[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)介面要使用的 URL。|  
+|[CBindStatusCallback::m_spStream](#m_spstream)|指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)資料傳輸的介面。|  
   
 ## <a name="remarks"></a>備註  
  `CBindStatusCallback` 類別會實作 `IBindStatusCallback` 介面。 `IBindStatusCallback` 必須實作您的應用程式讓它可以從非同步資料傳輸接收的通知。 使用系統提供的非同步 moniker`IBindStatusCallback`方法來傳送和接收非同步資料的相關資訊傳送至並從您的物件。  
@@ -169,7 +169,7 @@ static HRESULT Download(
  [in]接收資料讀取函式的指標。 函式是物件的類別型別的成員`T`。 請參閱[StartAsyncDownload](#startasyncdownload)如語法和範例。  
   
  *Ibttransportconfig*  
- [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如:   
+ [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如:  
   
  `CComBSTR mybstr =_T("http://somesite/data.htm")`  
   
@@ -278,7 +278,7 @@ T* m_pT;
  `CBindStatusCallback`物件這個物件的類別樣板化。  
   
 ##  <a name="m_spbindctx"></a>  CBindStatusCallback::m_spBindCtx  
- 指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)介面，可提供的繫結內容 （儲存特定的 moniker 繫結作業的相關資訊的物件） 的存取。  
+ 指標[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)介面，可提供的繫結內容 （儲存特定的 moniker 繫結作業的相關資訊的物件） 的存取。  
   
 ```
 CComPtr<IBindCtx> m_spBindCtx;
@@ -298,7 +298,7 @@ CComPtr<IBinding> m_spBinding;
  在初始化`OnStartBinding`及發行的`OnStopBinding`。  
   
 ##  <a name="m_spmoniker"></a>  CBindStatusCallback::m_spMoniker  
- 指標[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)介面要使用的 URL。  
+ 指標[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)介面要使用的 URL。  
   
 ```
 CComPtr<IMoniker> m_spMoniker;
@@ -308,7 +308,7 @@ CComPtr<IMoniker> m_spMoniker;
  在初始化`StartAsyncDownload`。  
   
 ##  <a name="m_spstream"></a>  CBindStatusCallback::m_spStream  
- 指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)目前繫結作業的介面。  
+ 指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)目前繫結作業的介面。  
   
 ```
 CComPtr<IStream> m_spStream;
@@ -336,10 +336,10 @@ STDMETHOD(
  [in]（以位元組為單位） 的繫結開始之後，您可以使用資料的累積數量。 可以是零，表示的資料量無關，或特定數量變成可用。  
   
  *pformatetc*  
- [in]指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682242)結構，其中包含可用的資料格式。 如果沒有任何格式，可以是 CF_NULL。  
+ [in]指標[FORMATETC](/windows/desktop/com/the-formatetc-structure)結構，其中包含可用的資料格式。 如果沒有任何格式，可以是 CF_NULL。  
   
  *pstgmed*  
- [in]指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms695269)結構，其中保存目前可用的實際資料。  
+ [in]指標[STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)結構，其中保存目前可用的實際資料。  
   
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
@@ -456,7 +456,7 @@ HRESULT StartAsyncDownload(
  [in]函式來接收所讀取的資料指標。 函式是物件的類別型別的成員`T`。 請參閱**備註**如語法和範例。  
   
  *Ibttransportconfig*  
- [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如:   
+ [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如:  
   
  `CComBSTR mybstr =_T("http://somesite/data.htm")`  
   

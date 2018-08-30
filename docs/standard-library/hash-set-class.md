@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c7572ffd5a53456cd4555b82a8d3e235286339
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200342"
 ---
 # <a name="hashset-class"></a>hash_set 類別
 
@@ -121,11 +121,14 @@ class hash_set
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存在 hash_set 中的項目資料類型。
+*Key*<br/>
+ 要存放在 hash_set 中的項目資料類型。
 
-*Traits*包含兩個函式物件，其中一個類別的型別也就是比較能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞對應索引鍵值的雜湊函式的二元述詞不帶正負號的整數類型的項目`size_t`。 這個引數是選擇性的而`hash_compare` *< 索引鍵，* **無 * * *\<金鑰 >>* 做為預設值。
+*特性*<br/>
+ 包含兩個函式物件的型別，其中一個類別也就是比較能夠比較兩個項目值做為排序鍵來判斷其相對順序一元述詞的對應項目的索引鍵值不帶正負號的雜湊函式的二元述詞整數型別的`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key> >`。
 
-*配置器*表示預存配置器物件，封裝有關 hash_set 的配置和解除配置之記憶體的詳細資訊的型別。 這個引數為選擇性，而且預設值是 **allocator *\<機碼 >。*
+*配置器*<br/>
+ 代表預存配置器物件的類型，其會封裝有關 hash_set 之記憶體配置與解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
 
@@ -213,7 +216,7 @@ hash_set 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|Operator|描述|
 |-|-|
 |[hash_set::operator=](#op_eq)|用另一個 `hash_set` 的複本取代 `hash_set` 的項目。|
 
@@ -559,7 +562,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*從 hash_set 中比對項目的索引鍵。
+*key*<br/>
+ 要從 hash_set 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1025,7 +1029,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_set 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_set 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1111,13 +1116,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-*_Where*若要從 hash_set 中移除之項目的位置。
+*_Where*<br/>
+ 要從 hash_set 中移除之項目的位置。
 
-*第一個*從 hash_set 中移除第一個元素的位置。
+*first*<br/>
+ 從 hash_set 中移除之第一個項目的位置。
 
-*最後一個*從 hash_set 中移除最後一個元素之後的位置。
+*最後一個*<br/>
+ 從 hash_set 中移除的最後一個項目之後的位置。
 
-*索引鍵*要從 hash_set 中移除之項目的索引鍵。
+*key*<br/>
+ 要從 hash_set 中移除之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1225,7 +1234,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之 hash_set 中元素的排序鍵比對的引數索引鍵。
+*key*<br/>
+ 要以所搜尋之 hash_set 中元素的排序鍵比對的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1650,7 +1660,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_set 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_set 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2139,7 +2150,8 @@ void swap(hash_set& right);
 
 ### <a name="parameters"></a>參數
 
-*右*提供要與目標 hash_set 交換之元素的引數 hash_set。
+*right*<br/>
+ 提供要與目標 hash_set 交換之元素的引數 hash_set。
 
 ### <a name="remarks"></a>備註
 
@@ -2214,7 +2226,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_set 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_set 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613197"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202153"
 ---
 # <a name="build-system-changes"></a>建置系統變更
 MSBuild 系統用於建置 Visual C++ 專案。 不過，在 Visual Studio 2008 和較早版本使用 VCBuild 系統。 某些檔案類型和依賴 VCBuild 的概念不存在，或在目前的系統中以不同方式表示。 本文件討論了目前的建置系統中的差異。  
@@ -55,7 +55,7 @@ MSBuild 系統用於建置 Visual C++ 專案。 不過，在 Visual Studio 2008 
   
  在目前的版本中，藉由指定屬性的值串連一或多個常值和屬性巨集以支援繼承。 **Inherit**並 **$ （noinherit)** 巨集不支援。  
   
- 在下列範例中，以分號分隔的清單被指派給屬性頁上的屬性。 清單所組成的串連*\<值 >* 常值，而值`MyProperty`屬性，會使用巨集標記法來存取，其中 **$(***MyProperty***)**.  
+ 在下列範例中，以分號分隔的清單被指派給屬性頁上的屬性。 清單所組成的串連*\<值 >* 常值，而值`MyProperty`屬性，會使用巨集標記法來存取，其中 **$(** <em>MyProperty</em>**)**。  
   
 ```  
 Property=<value>;$(MyProperty)  

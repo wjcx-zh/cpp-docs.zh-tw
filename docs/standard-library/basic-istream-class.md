@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964458"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200024"
 ---
 # <a name="basicistream-class"></a>basic_istream 類別
 
@@ -168,7 +168,7 @@ setstate(state);
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|Operator|描述|
 |-|-|
 |[operator>>](#op_gt_gt)|呼叫輸入資料流上的函式，或從輸入資料流讀取經格式化的資料。|
 |[operator=](#op_eq)|將位於運算子右側的 `basic_istream` 指派給此物件。 這是一個移動指派，涉及不會留下複本的 `rvalue` 參考。|
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 在這裡， **InIt**定義為`istreambuf_iterator` \< **Elem**， **Tr**>，以及`val`類型**長**，**unsigned long**，或**void \*** 視。
+會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 在這裡， **InIt**定義為`istreambuf_iterator` \< **Elem**， **Tr**>，以及`val`類型**長**， **unsigned long**，或**void** <strong>\*</strong>視。
 
 如果已轉換的值無法表示為型別`val`，函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 在任何情況下，此函式都會傳回 **\*this**。
 

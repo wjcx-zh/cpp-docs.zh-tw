@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae4218d6c6446554d5fb45d680588127ec3e0ee
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e1ee6ee76840774fd750df95f73c105c059cae59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196517"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 ATL 7.0 截至`CComModule`已被取代： 請參閱 < [ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
@@ -346,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>參數  
  *dwClsContext*  
- [in]指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 如需這些值的說明，請參閱 < [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。  
+ [in]指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 如需這些值的說明，請參閱 < [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。  
   
  *dwFlags*  
- [in]決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 如需這些值的說明，請參閱 < [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) Windows SDK 中。  
+ [in]決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 如需這些值的說明，請參閱 < [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  

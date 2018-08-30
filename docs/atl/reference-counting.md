@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0ce8b2cc412c576b0eded9662d8e70b34cf2ec
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1469bef0ef41c72e2ff5e59017088cd63f0f9c79
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850809"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194594"
 ---
 # <a name="reference-counting"></a>參考計數
 COM 本身不會自動嘗試將物件從記憶體移除它認為不再使用物件時。 相反地，物件程式設計人員必須移除未使用的物件。 程式設計人員決定是否可以移除物件根據參考計數。  
   
- COM 使用`IUnknown`方法， [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)並[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)來管理物件上的介面的參考計數。 呼叫這些方法的一般規則是：  
+ COM 使用`IUnknown`方法， [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)來管理物件上的介面的參考計數。 呼叫這些方法的一般規則是：  
   
 -   每當用戶端接收的介面指標，`AddRef`必須呼叫的介面上。  
   
@@ -43,5 +43,5 @@ COM 本身不會自動嘗試將物件從記憶體移除它認為不再使用物�
   
 ## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
- [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [管理透過參考計數的物件存留期](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
 

@@ -1,5 +1,5 @@
 ---
-title: ATL 連接點 |Microsoft 文件
+title: ATL 連接點 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179f4329d55261d71d3d122e6a2601ce7e805c0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec0e902f2b01e33ac460c6210d51c5e0637c3282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202916"
 ---
 # <a name="atl-connection-points"></a>ATL 連接點
 可連接物件是指支援輸出介面的物件。 輸出介面可讓物件與用戶端通訊。 針對每個輸出介面，可連接物件都會公開一個連接點。 每個輸出介面都是由稱為接收 (sink) 的物件上的用戶端所實作。  
   
  ![連接點](../atl/media/vc2zw31.gif "vc2zw31")  
   
- 每個連接點支援[IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)介面。 可連接物件會公開其連接點，以用戶端透過[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)介面。  
+ 每個連接點支援[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)介面。 可連接物件會公開至用戶端透過其連接點[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)介面。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ATL 連接點類別](../atl/atl-connection-point-classes.md)  

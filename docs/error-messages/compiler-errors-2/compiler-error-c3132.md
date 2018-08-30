@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3132 |Microsoft 文件
+title: 編譯器錯誤 C3132 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252383"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204754"
 ---
 # <a name="compiler-error-c3132"></a>編譯器錯誤 C3132
-' 函式參數 ': 參數陣列只能套用至型別 '受管理的一維陣列' 的型式引數  
+' 函式參數 ': 參數陣列只可以套用至類型 '維 managed 陣列' 的型式引數  
   
- [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)屬性已套用至不是單一維度陣列的參數。  
+ [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx)屬性已套用至不是一維陣列的參數。  
   
  下列範例會產生 C3132:  
   

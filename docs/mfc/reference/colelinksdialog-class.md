@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 3db235771156380c5f1b22af225d7aacbc4989b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853874"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203501"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 類別
 用於 OLE 的 [編輯連結] 對話方塊。  
@@ -64,7 +64,7 @@ class COleLinksDialog : public COleDialog
 > [!NOTE]
 >  應用程式精靈所產生的容器程式碼會使用這個類別。  
   
- 如需詳細資訊，請參閱 < [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Windows SDK 中的結構。  
   
  如需有關特定 OLE 對話方塊的詳細資訊，請參閱文章[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -100,7 +100,7 @@ virtual INT_PTR DoModal();
   
 - 如果使用者已取消對話方塊，IDCANCEL。  
   
-- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫`COleDialog::GetLastError`成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) Windows SDK 中的函式。  
+- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫`COleDialog::GetLastError`成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) Windows SDK 中的函式。  
   
 ### <a name="remarks"></a>備註  
  如果您想要設定的成員初始化各種不同的對話方塊控制項[m_el](#m_el)結構，這樣才能呼叫`DoModal`，但在建構對話方塊物件之後。  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>備註  
  直接或透過成員函式，則可以修改此結構的成員。  
   
- 如需詳細資訊，請參閱 < [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Windows SDK 中的結構。  
   
 ## <a name="see-also"></a>另請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   

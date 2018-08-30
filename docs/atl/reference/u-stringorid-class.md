@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 68283d8dc0e8b2152b28a2fe2990ddc22fafa6d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886163"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196393"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 類別
 資源名稱 (LPCTSTRs)] 或 [資源識別碼 （所） 傳遞至函式，而不需要呼叫者識別碼轉換為使用 MAKEINTRESOURCE 巨集的字串，可讓這個引數的配接器類別。  
@@ -53,7 +53,7 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|資源識別項。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別專為這類實作的 Windows 資源管理 API 的包裝函式[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)， [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，並[LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990)函式，可接受可能是資源的名稱或識別碼為 LPCTSTR 引數  
+ 這個類別專為這類實作的 Windows 資源管理 API 的包裝函式[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)， [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)，並[LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua)函式，可接受可能是資源的名稱或識別碼為 LPCTSTR 引數  
   
  此類別會定義兩個建構函式多載︰ 一個接受 LPCTSTR 引數和一個接受 UINT 引數。 UINT 引數會轉換成相容於使用 MAKEINTRESOURCE 巨集和結果儲存在該類別的單一資料成員的 Windows 資源管理函式的資源類型[m_lpstr](#_u_stringorid__m_lpstr)。 轉換不直接儲存 LPCTSTR 建構函式的引數。  
   

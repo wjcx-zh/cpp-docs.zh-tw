@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407141"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202512"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
@@ -54,15 +54,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>參數
 
 *newhandlermode*<br/>
-針對新的處理常式模式**malloc**; 有效的值是 0 或 1。
+新處理常式模式**malloc**; 有效的值是 0 或 1。
 
 ## <a name="return-value"></a>傳回值
 
-傳回前一個處理常式的模式組**malloc**。 傳回值為 1，表示無法配置記憶體， **malloc**之前呼叫新的處理常式; 傳回值 0 表示不一樣。 如果*newhandlermode*引數不等於 0 或 1，傳回-1。
+傳回上一個處理常式的模式組**malloc**。 傳回值 1 表示，無法配置記憶體**malloc**之前稱為 「 新的處理常式模式; 傳回值 0 表示不。 如果*newhandlermode*引數不等於 0 或 1，則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-C++ **_set_new_mode** 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式指出是否在失敗時， **malloc**是新的處理常式呼叫所設定的[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會呼叫新的處理常式在無法配置記憶體。 您可以覆寫此預設行為，讓，當**malloc**無法配置記憶體， **malloc**呼叫新的處理常式在相同的方式來**新**運算子會當它失敗基於相同原因。 如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 運算子。 若要覆寫預設值，請及早在程式中呼叫：
+C++ **_set_new_mode** 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式會指出是否在失敗時， **malloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會呼叫新的處理常式無法配置記憶體。 您可以覆寫此預設行為，讓，當**malloc**無法配置記憶體， **malloc**呼叫新的處理常式在相同方式來**新**運算子因當它失敗，相同的原因。 如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 運算子。 若要覆寫預設值，請及早在程式中呼叫：
 
 ```cpp
 _set_new_mode(1);
@@ -70,7 +70,7 @@ _set_new_mode(1);
 
 ，或使用 Newmode.obj 連結 (請參閱[連結選項](../../c-runtime-library/link-options.md))。
 
-這個函式會驗證其參數。 如果*newhandlermode*而不是 0 或 1，此函式做為叫用無效參數處理常式的任何項目述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_ * * * set_new_mode**傳回-1，並設定**errno**至**EINVAL**。
+這個函式會驗證其參數。 如果*newhandlermode*不是 0 或 1，此函式會在將無效的參數處理常式中，做為叫用的任何項目中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行<strong>_set_new_mode</strong>會傳回-1 並將**errno**到`EINVAL`。
 
 ## <a name="requirements"></a>需求
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6a6c25367e2b978ac4a8c82f36c07907614bbc3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584746"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195786"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -74,7 +74,7 @@ OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))�
 
 當取用者的屬性提供者會將此屬性套用至類別時，編譯器會重新命名的類別\_ *YourClassName*存取子，其中*YourClassName*是您所指定的名稱類別，而編譯器也會建立一個叫做類別*YourClassName*，其衍生自\_ *YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。
 
-關於應用程式中，使用這個屬性的範例，請參閱 「 範例[AtlAgent](http://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409)，並[MultiRead](http://msdn.microsoft.com/5a2a915a-77dc-492f-94b2-1b809995dd5e)。
+關於應用程式中，使用這個屬性的範例，請參閱 「 範例[AtlAgent](https://github.com/Microsoft/VCSamples)，並[MultiRead](https://github.com/Microsoft/VCSamples)。
 
 ## <a name="example"></a>範例
 

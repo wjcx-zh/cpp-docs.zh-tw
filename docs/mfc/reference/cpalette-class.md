@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff3a68e585cecb8affb0a5f4ffb7ff81929c955a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201099"
 ---
 # <a name="cpalette-class"></a>CPalette 類別
 封裝 Windows 調色盤。  
@@ -115,12 +115,12 @@ void AnimatePalette(
  要建立動畫的調色盤中指定的項目數。  
   
  *lpPaletteColors*  
- 指向陣列的第一個成員[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目*nStartIndex*並*nNumEntries*。  
+ 指向陣列的第一個成員[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目*nStartIndex*並*nNumEntries*。  
   
 ### <a name="remarks"></a>備註  
  當應用程式呼叫`AnimatePalette`，它並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。  
   
- `AnimatePalette`函式只會變更 PC_RESERVED 旗標設定在對應的項目`palPaletteEntry`隸屬[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構附加至`CPalette`物件。 LOGPALETTE Windows SDK 中針對此結構的詳細資訊，請參閱。  
+ `AnimatePalette`函式只會變更 PC_RESERVED 旗標設定在對應的項目`palPaletteEntry`隸屬[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)結構附加至`CPalette`物件。 LOGPALETTE Windows SDK 中針對此結構的詳細資訊，請參閱。  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  建構 `CPalette` 物件。  
@@ -147,7 +147,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
  如果函式成功則為非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 當裝置內容的縮放模式設為 半色調，應用程式應該建立半色調調色盤。 傳回邏輯半色調調色盤[CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503)成員函式應該再選取和裝置內容，然後才到實現[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[Stretchdibits 做](http://msdn.microsoft.com/library/windows/desktop/dd145121)呼叫函式。  
+ 當裝置內容的縮放模式設為 半色調，應用程式應該建立半色調調色盤。 傳回邏輯半色調調色盤[CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette)成員函式應該再選取和裝置內容，然後才到實現[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[Stretchdibits 做](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits)呼叫函式。  
   
  請參閱 Windows SDK，如需詳細資訊，關於`CreateHalftonePalette`和`StretchDIBits`。  
   
@@ -160,7 +160,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>參數  
  *lpLogPalette*  
- 指向[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，其中包含邏輯調色盤色彩的相關資訊。  
+ 指向[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)結構，其中包含邏輯調色盤色彩的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -227,7 +227,7 @@ UINT GetPaletteEntries(
  要擷取邏輯調色盤中指定的項目數。  
   
  *lpPaletteColors*  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。  
+ 指向陣列[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。  
   
 ### <a name="return-value"></a>傳回值  
  擷取邏輯色板; 中的項目數目0，表示失敗的函式。  
@@ -245,7 +245,7 @@ operator HPALETTE() const;
 ### <a name="remarks"></a>備註  
  這位操作員便轉型運算子，可支援直接使用 HPALETTE 物件。  
   
- 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  變更附加至邏輯色板的大小`CPalette`物件所指定項目數*nNumEntries*。  
@@ -264,7 +264,7 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="remarks"></a>備註  
  如果應用程式呼叫`ResizePalette`以減少大小的調色盤，剩餘的已調整大小的調色盤中的項目不會變更。 如果應用程式呼叫`ResizePalette`放大調色盤，其他的調色盤項目設為黑色 （紅色、 綠色和藍色值均為 0），以及所有其他項目的旗標會設為 0。  
   
- 如需有關 Windows API `ResizePalette`，請參閱 < [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) Windows SDK 中。  
+ 如需有關 Windows API `ResizePalette`，請參閱 < [ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) Windows SDK 中。  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。  
@@ -284,7 +284,7 @@ UINT SetPaletteEntries(
  若要設定邏輯調色盤中指定的項目數。  
   
  *lpPaletteColors*  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。  
+ 指向陣列[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。  
   
 ### <a name="return-value"></a>傳回值  
  設定邏輯調色盤; 中的項目數目0，表示失敗的函式。  
@@ -292,7 +292,7 @@ UINT SetPaletteEntries(
 ### <a name="remarks"></a>備註  
  當應用程式呼叫時，如果要邏輯的調色盤選取放入裝置內容`SetPaletteEntries`，變更將不會生效，直到應用程式會呼叫[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。  
   
- 如需有關 Windows 結構`PALETTEENTRY`，請參閱 < [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) Windows SDK 中。  
+ 如需有關 Windows 結構`PALETTEENTRY`，請參閱 < [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 DIBLOOK](../../visual-cpp-samples.md)   

@@ -1,5 +1,5 @@
 ---
-title: 比較同步處理資料結構與 windows API |Microsoft 文件
+title: 比較 Windows API 的同步處理資料結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,47 +15,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1470911b13243a7c8b3befc627801368e89f04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cb6dc90a272c8e288a4370ae18ad3d1fda150eed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687370"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197544"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>比較同步處理資料結構與 Windows API
-本主題會比較所提供的 Windows API 並行執行階段提供同步處理資料結構的行為。  
+本主題會比較同步處理資料結構所提供的 Windows API 所提供之並行執行階段的行為。  
   
- 並行執行階段所提供的同步處理資料結構遵循*合作式執行緒模型*。 在合作式執行緒模型中，同步處理原始物件來明確地產生其他執行緒的處理資源。 這不同於*先佔式執行緒模型*，其中處理資源可轉移到其他的執行緒所控制的排程器或作業系統。  
+ 並行執行階段所提供的同步處理資料結構遵循*合作式執行緒模型*。 在合作式執行緒模型中，同步處理原始物件來明確地產生它們的處理資源的其他執行緒。 這不同於*先佔式執行緒模型*，其中處理資源會轉移到其他執行緒所控制的排程器或作業系統。  
   
 ## <a name="criticalsection"></a>critical_section  
- [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)類別類似於 Windows`CRITICAL_SECTION`結構，因為它可供只能有一個處理序執行緒。 如需 Windows API 中的關鍵區段的詳細資訊，請參閱[關鍵區段物件](http://msdn.microsoft.com/library/windows/desktop/ms682530)。  
+ [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)類別類似於 Windows`CRITICAL_SECTION`結構，因為它可供只能有一個處理序執行緒。 如需 Windows API 中的重要區段的詳細資訊，請參閱[重要區段物件](/windows/desktop/Sync/critical-section-objects)。  
   
 ## <a name="readerwriterlock"></a>reader_writer_lock  
- [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)類別類似於 Windows 輕薄讀取器/寫入器 (SRW) 鎖定。 下表說明的相似性與差異。  
+ [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)類別類似於 Windows 輕型讀取器/寫入器 (SRW) 鎖定。 下表說明的相似性與差異。  
   
 |功能|`reader_writer_lock`|SRW 鎖定|  
 |-------------|--------------------------|--------------|  
-|不可重新進入|[是]|[是]|  
-|可以升級至寫入器 （支援升級） 的讀取器|否|否|  
-|可以降級的寫入器，讀取器 （不支援降級）|否|否|  
-|寫入喜好設定的鎖定|[是]|否|  
-|寫入器的 FIFO 存取|[是]|否|  
+|非可重新進入|是|是|  
+|可以升級至寫入器 （升級支援） 的讀取器|否|否|  
+|可以降級的讀取器 （不支援降級） 的寫入器|否|否|  
+|寫入喜好設定鎖定|是|否|  
+|寫入器的 FIFO 存取|是|否|  
   
- 如需 SRW 鎖定的詳細資訊，請參閱[輕薄讀取器/寫入器 (SRW) 鎖定](http://msdn.microsoft.com/library/windows/desktop/aa904937)Platform SDK 中。  
+ 如需 SRW 鎖定的詳細資訊，請參閱[輕型讀取器/寫入器 (SRW) 鎖定](https://msdn.microsoft.com/library/windows/desktop/aa904937)平台 SDK 中。  
   
-## <a name="event"></a>Event - 事件  
- [Concurrency:: event](../../parallel/concrt/reference/event-class.md)類別類似於未命名，Windows 手動重設事件。 不過，`event`物件行為合作的方式，而 Windows 事件事先行為。 如需有關 Windows 事件的詳細資訊，請參閱[事件物件](http://msdn.microsoft.com/library/windows/desktop/ms682655)。  
+## <a name="event"></a>事件  
+ [Concurrency:: event](../../parallel/concrt/reference/event-class.md)類別類似於未命名的 Windows 手動重設事件。 不過，`event`物件行為以合作方式，而 Windows 事件事先行為。 如需有關 Windows 事件的詳細資訊，請參閱 <<c0> [ 事件物件](/windows/desktop/Sync/event-objects)。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 若要深入了解之間的差異`event`類別和 Windows 事件，請考慮下列的範例。 這個範例會啟用要建立最多兩個同時進行的工作，然後呼叫類似的兩個函式使用的排程器`event`類別以及 Windows 手動重設事件。 每個函式會先建立幾項工作，等待共用發出訊號的事件。 每個函式接著就會產生要執行的工作，並接著發出事件。 每個函式然後等候信號的事件。  
+ 若要深入了解之間的差異`event`類別和 Windows 事件，請考慮下列的範例。 這個範例會啟用排程器，建立最多兩項同時工作，然後呼叫類似的兩個函式使用`event`類別和 Windows 的手動重設事件。 每個函式會先建立等候共用的事件變成收到訊號的幾項工作。 每個函式接著會產生要執行的工作，然後發出訊號的事件。 每個函式然後等候信號的事件。  
   
 ### <a name="code"></a>程式碼  
  [!code-cpp[concrt-event-comparison#1](../../parallel/concrt/codesnippet/cpp/comparing-synchronization-data-structures-to-the-windows-api_1.cpp)]  
   
 ### <a name="comments"></a>註解  
- 這個範例會產生下列輸出範例：  
+ 此範例會產生下列的範例輸出：  
   
 ```Output  
 Cooperative event:  
@@ -84,9 +84,9 @@ Windows event:
     Context 13: received the event.  
 ```  
   
- 因為`event`類別行為以合作方式、 排程器可以重新配置到另一個內容的處理資源，當事件在等候輸入信號的狀態。 因此，所使用的版本來完成更多工作`event`類別。 中會使用 Windows 事件的版本，之後才啟動下一個工作中每個等待中工作時，必須輸入信號的狀態。  
+ 因為`event`類別的行為以合作方式，排程器可以重新配置到另一個內容的處理資源，當事件在等候輸入收到信號的狀態。 因此，所使用的版本來完成更多工作`event`類別。 在使用 Windows 事件的版本，之後才啟動下一個工作每個等待中工作時，必須輸入收到信號的狀態。  
   
- 如需工作的詳細資訊，請參閱[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需有關工作的詳細資訊，請參閱[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)

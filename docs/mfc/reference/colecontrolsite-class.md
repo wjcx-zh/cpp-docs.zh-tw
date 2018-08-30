@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6f84f575edbcaf8ecc64f424f3225d969d6a7f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850351"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202851"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 類別
 提供自訂用戶端控制項介面的支援。  
@@ -205,7 +205,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|控制項站台的維度。|  
   
 ## <a name="remarks"></a>備註  
- 這項支援是供內嵌的 ActiveX 控制項取得資訊的位置和範圍，其顯示站台、 其 moniker，其使用者介面、 其環境的屬性和其容器所提供的其他資源的主要方法。 `COleControlSite` 完整實作[IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)， [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)， [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)， `IBoundObjectSite`，`INotifyDBEvents`， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)介面。 此外，也被實作 IDispatch 介面 （環境的屬性和事件接收提供支援）。  
+ 這項支援是供內嵌的 ActiveX 控制項取得資訊的位置和範圍，其顯示站台、 其 moniker，其使用者介面、 其環境的屬性和其容器所提供的其他資源的主要方法。 `COleControlSite` 完整實作[IOleControlSite](/windows/desktop/api/ocidl/nn-ocidl-iolecontrolsite)， [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)， [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)， `IBoundObjectSite`，`INotifyDBEvents`， [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)介面。 此外，也被實作 IDispatch 介面 （環境的屬性和事件接收提供支援）。  
   
  若要建立 ActiveX 控制項站台使用`COleControlSite`，自`COleControlSite`。 在您`CWnd`-容器 （例如，您的對話方塊） 的衍生的類別覆寫`CWnd::CreateControlSite`函式。  
   
@@ -406,7 +406,7 @@ virtual HRESULT DoVerb(
 ### <a name="remarks"></a>備註  
  透過控制項的直接呼叫此函式`IOleObject`介面，以執行指定的動詞命令。 如果此函式呼叫而擲回例外狀況，則會傳回 HRESULT 錯誤碼。  
   
- 如需詳細資訊，請參閱 < [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  可讓資料來源控制項站台。  
@@ -676,7 +676,7 @@ CONTROLINFO m_ctlInfo;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這項資訊會儲存在[檓 CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734)結構。  
+ 這項資訊會儲存在[檓 CONTROLINFO](/windows/desktop/api/ocidl/ns-ocidl-tagcontrolinfo)結構。  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  包含控制項的事件接收器中的連接點的 cookie。  
@@ -693,10 +693,10 @@ DWORD m_dwMiscStatus;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK 中。  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
- 包含[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) cookie。  
+ 包含[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) cookie。  
   
 ```  
 DWORD m_dwPropNotifySink;  
@@ -731,7 +731,7 @@ UINT m_nID;
 ```  
   
 ##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
- 包含[和](http://msdn.microsoft.com/library/windows/desktop/ms691299)控制項的介面。  
+ 包含[和](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)控制項的介面。  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
@@ -745,7 +745,7 @@ COleControlContainer* m_pCtrlCont;
 ```  
   
 ##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
- 包含`IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)控制項的介面。  
+ 包含`IOleInPlaceObject` [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject)控制項的介面。  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
@@ -759,7 +759,7 @@ LPOLEOBJECT m_pObject;
 ```  
   
 ##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
- 包含`IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304)控制項的介面。  
+ 包含`IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless)控制項的介面。  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  若要從目前的視窗樣式加入樣式。  
   
  *nFlags*  
- 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
+ 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果樣式已變更，否則為零，非零值。  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>備註  
  將修改控制項的內建 Enabled 屬性，以符合 WS_DISABLED 的設定。 將修改控制項的內建的框線樣式屬性，以符合 WS_BORDER 的要求的設定。 所有其他樣式會直接套用到控制項的視窗控制代碼，如果有的話。  
   
- 修改控制項的視窗樣式。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
+ 修改控制項的視窗樣式。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
   
  如果*nFlags*為非零值，`ModifyStyle`呼叫 Win32 函式`SetWindowPos`，並重新繪製視窗，結合*nFlags*具有下列四個旗標：  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  若要從目前的視窗樣式新增延伸的樣式。  
   
  *nFlags*  
- 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
+ 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果樣式已變更，否則為零，非零值。  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>備註  
  控制項的內建的 Appearance 屬性將會修改以符合 WS_EX_CLIENTEDGE 的設定。 所有其他延伸的視窗樣式會直接套用到控制項的視窗控制代碼，如果有的話。  
   
- 修改擴充控制項的站台物件的樣式的視窗。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
+ 修改擴充控制項的站台物件的樣式的視窗。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
   
  如果*nFlags*為非零值，`ModifyStyleEx`呼叫 Win32 函式`SetWindowPos`，並重新繪製視窗，結合*nFlags*具有下列四個旗標：  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  新視窗的高度。  
   
  *nFlags*  
- 指定視窗大小及定位旗標。 如需可能的值，請參閱 < 備註 > 一節[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
+ 指定視窗大小及定位旗標。 如需可能的值，請參閱 < 備註 > 一節[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  非零值如果成功，否則為零。  

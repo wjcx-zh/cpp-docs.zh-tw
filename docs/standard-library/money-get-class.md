@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966546"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201747"
 ---
 # <a name="moneyget-class"></a>money_get 類別
 
@@ -46,9 +46,11 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內使用地區設定中的字元編碼的類型。
+*CharType*<br/>
+ 程式內用於編碼地區設定字元的類型。
 
-*InputIterator* get 函式讀取其輸入的迭代器的類型。
+*InputIterator*<br/>
+ get 函式從中讀取其輸入的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -113,17 +115,23 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址要轉換之序列的開頭。
+*first*<br/>
+ 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*輸入迭代器，定址要轉換之序列的結尾。
+*最後一個*<br/>
+ 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
+*Intl*<br/>
+ 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要。
+*iosbase*<br/>
+ 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*狀態*設定資料流的狀態來根據作業是否成功或不適當的位元遮罩元素。
+*狀態*<br/>
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*val*儲存已轉換的序列的字串。
+*val*<br/>
+ 儲存已轉換之序列的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -189,17 +197,23 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址要轉換之序列的開頭。
+*first*<br/>
+ 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*輸入迭代器，定址要轉換之序列的結尾。
+*最後一個*<br/>
+ 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
+*Intl*<br/>
+ 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要
+*iosbase*<br/>
+ 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*狀態*設定適當位元遮罩元素為資料流狀態，根據作業是否成功。
+*狀態*<br/>
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*val*儲存已轉換的序列的字串。
+*val*<br/>
+ 儲存已轉換之序列的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -280,7 +294,8 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+ 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
@@ -294,7 +309,7 @@ explicit money_get(size_t _Refs = 0);
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(**_ * * * Refs*)。
+建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 
 ## <a name="string_type"></a>  money_get::string_type
 

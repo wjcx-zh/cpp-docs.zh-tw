@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31d16279b4de6c0cca0d37161a37ce5e39b85b7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b0e961ecf45458dc039b932bdcc96c3bcc6f7521
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339354"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196328"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 類別
 提供可在 ActiveX 控制項 (先前稱為 OLE 控制項) 中使用非同步 Moniker 的功能。  
@@ -89,7 +89,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|當非同步傳輸已停止時呼叫。|  
   
 ## <a name="remarks"></a>備註  
- 衍生自[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)，而後者又衍生自[COleStreamFile](../../mfc/reference/colestreamfile-class.md)，`CAsyncMonikerFile`會使用[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)介面，以存取任何資料流以非同步的方式，包括從 URL 非同步載入檔案。 這些檔案可以 ActiveX 控制項的資料路徑屬性。  
+ 衍生自[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)，而後者又衍生自[COleStreamFile](../../mfc/reference/colestreamfile-class.md)，`CAsyncMonikerFile`會使用[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)介面，以存取任何資料流以非同步的方式，包括從 URL 非同步載入檔案。 這些檔案可以 ActiveX 控制項的資料路徑屬性。  
   
  非同步 moniker 可啟用網際網路的應用程式和 ActiveX 控制項中的主要檔案傳輸期間提供回應的使用者介面。 主要範例是使用[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)為 ActiveX 控制項提供非同步屬性。 `CDataPathProperty`物件會重複收到的回呼，長時間的屬性交換過程中表示的新資料的可用性。  
   
@@ -156,7 +156,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  [CAsyncMonikerFile::Open](#open)呼叫`CreateBindStatusCallback`。  
   
- 如需有關非同步 moniker 和非同步繫結的詳細資訊，請參閱 < [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060)介面並[如何在非同步繫結和儲存體工作](http://msdn.microsoft.com/library/windows/desktop/aa379152)。 如需彙總的討論，請參閱 <<c0> [ 彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 所有的三個主題都在 Windows SDK 中。  
+ 如需有關非同步 moniker 和非同步繫結的詳細資訊，請參閱 < [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060)介面並[如何在非同步繫結和儲存體工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 如需彙總的討論，請參閱 <<c0> [ 彙總](/windows/desktop/com/aggregation)。 所有的三個主題都在 Windows SDK 中。  
   
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  從用戶端的非同步 moniker，告訴它要繫結的方式的非同步 moniker 呼叫。  
@@ -196,7 +196,7 @@ FORMATETC* GetFormatEtc() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- Windows 結構的指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)目前開啟的資料流。 如果 moniker 未繫結，如果不是非同步的或尚未開始執行非同步作業，則傳回 NULL。  
+ Windows 結構的指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)目前開啟的資料流。 如果 moniker 未繫結，如果不是非同步的或尚未開始執行非同步作業，則傳回 NULL。  
   
 ##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  呼叫從用戶端的非同步 moniker 繫結程序開始時接收到執行緒給繫結作業的優先順序。  
@@ -206,7 +206,7 @@ virtual LONG GetPriority() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 優先權處非同步傳輸，就會進行。 其中一個標準的執行緒優先順序旗標： THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 請參閱 Windows 函式[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)如需這些值的描述。  
+ 優先權處非同步傳輸，就會進行。 其中一個標準的執行緒優先順序旗標： THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 請參閱 Windows 函式[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)如需這些值的描述。  
   
 ### <a name="remarks"></a>備註  
  `GetPriority` 應該不會直接呼叫。 預設實作會傳回 THREAD_PRIORITY_NORMAL。  
@@ -398,7 +398,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>備註  
  這個呼叫初始化繫結程序。  
   
- 您可以使用 URL 或檔名*lpszURL*參數。 例如:   
+ 您可以使用 URL 或檔名*lpszURL*參數。 例如:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

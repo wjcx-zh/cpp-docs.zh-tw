@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257573bad0650f7e721c2d584ed8f22ba7b2d31b
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 29e176742295b0e2f40e19c063aae38079ac3537
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026220"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196216"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 類別
 用於 OLE 的 [插入物件] 對話方塊。  
@@ -82,7 +82,7 @@ class COleInsertDialog : public COleDialog
 > [!NOTE]
 >  應用程式精靈所產生的容器程式碼會使用這個類別。  
   
- 如需詳細資訊，請參閱 < [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) Windows SDK 中的結構。  
   
  如需有關特定 OLE 對話方塊的詳細資訊，請參閱文章[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -184,7 +184,7 @@ INT_PTR
   
 -   如果使用者已取消對話方塊，IDCANCEL。  
   
--   IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) Windows SDK 中的函式。  
+-   IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIInsertObject](/windows/desktop/api/oledlg/nf-oledlg-oleuiinsertobjecta) Windows SDK 中的函式。  
   
 ### <a name="remarks"></a>備註  
  如果您想要設定的成員初始化各種不同的對話方塊控制項[m_io](#m_io)結構，您應該執行這項操作之前先呼叫`DoModal`，但在建構對話方塊物件之後。  
@@ -202,7 +202,7 @@ REFCLSID GetClassID() const;
  傳回選取的項目相關聯的 CLSID。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  呼叫此函式可判斷使用者是否選擇選取的項目顯示為圖示。  
@@ -221,7 +221,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>備註  
  呼叫此函式才[DoModal](#domodal)傳回 IDOK。  
   
- 如需有關繪圖外觀的詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的資料結構。  
+ 如需有關繪圖外觀的詳細資訊，請參閱[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的資料結構。  
   
 ##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  呼叫此函式可取得包含選取的項目圖示的層面之中繼檔的控制代碼。  
@@ -282,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
 ### <a name="remarks"></a>備註  
  直接或透過成員函式，則可以修改此結構的成員。  
   
- 如需詳細資訊，請參閱 < [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUIINSERTOBJECT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiinsertobjecta) Windows SDK 中的結構。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   

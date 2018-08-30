@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882792"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203622"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 類別
 這個類別會提供要列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>參數  
  *基底*  
- COM 列舉值 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 介面。  
+ COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。 
   
  *piid*  
  指標的列舉值介面的介面 ID。  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)。|  
+|[CComEnumImpl::Clone](#clone)|實作**複製品**列舉型別介面方法。|  
 |[CComEnumImpl::Init](#init)|初始化列舉值。|  
-|[CComEnumImpl::Next](#next)|實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)。|  
-|[CComEnumImpl::Reset](#reset)|實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)。|  
-|[CComEnumImpl::Skip](#skip)|實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)。|  
+|[CComEnumImpl::Next](#next)|實作**下一步**。|  
+|[CComEnumImpl::Reset](#reset)|實作**重設**。|  
+|[CComEnumImpl::Skip](#skip)|實作**略過**。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown`提供要列舉集合之物件的指標。|  
   
 ## <a name="remarks"></a>備註  
- `CComEnumImpl` 提供要列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。 這個類別是類似於`IEnumOnSTLImpl`類別，可提供列舉值介面的實作，根據 c + + 標準程式庫容器。  
+請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法實作的範例。 `CComEnumImpl` 提供要列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。 這個類別是類似於`IEnumOnSTLImpl`類別，可提供列舉值介面的實作，根據 c + + 標準程式庫容器。  
   
 > [!NOTE]
 >  如需有關進一步之間的差異`CComEnumImpl`並`IEnumOnSTLImpl`，請參閱[CComEnumImpl::Init](#init)。  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  這個方法的原型指定陣列元素為型別`T`，其中`T`定義為類別樣板參數。 這是透過 COM 介面方法會公開相同型別[CComEnumImpl::Next](#next)。 這是，不同於[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)，這個類別不支援不同的儲存體，並公開資料型別。 陣列中元素的資料類型必須是透過 COM 介面公開的資料類型相同。  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- 這個方法可實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法，藉由建立型別的物件`CComEnum`，初始化具有相同的陣列與目前物件所使用的迭代器，並傳回介面新建立的物件。  
+ 這個方法提供實作**複製品**方法，藉由建立型別的物件`CComEnum`，初始化具有相同的陣列與目前物件所使用的迭代器，並傳回新建立的介面物件。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- 這個方法可實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
+ 這個方法可實作**下一步**方法。  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  標準的 HRESULT 值。  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- 這個方法可實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
+ 這個方法可實作**重設**方法。  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  標準的 HRESULT 值。  
   
 ##  <a name="skip"></a>  CComEnumImpl::Skip  
- 這個方法可實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
+ 這個方法可實作**略過**方法。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

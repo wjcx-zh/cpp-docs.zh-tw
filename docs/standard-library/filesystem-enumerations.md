@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 22e4cf19ec3b85d14d346bd56697f4bcc4ff687b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025935"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194464"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -38,7 +38,7 @@ ms.locfileid: "39025935"
 
 ## <a name="copy_options"></a>  copy_options
 
-此位元遮罩值的列舉可搭配 [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函式來指定行為。
+此位元遮罩值的列舉可搭配 [copy](filesystem-functions.md#copy) 和 [copy_file](filesystem-functions.md#copy_file) 函式來指定行為。
 
 ### <a name="syntax"></a>語法
 

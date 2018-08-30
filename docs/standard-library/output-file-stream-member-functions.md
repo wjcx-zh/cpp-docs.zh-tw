@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b79700277486c43035bd7d448fc942f785f4cc8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab1d229f2c1933025993aa1bc3a3a8b91b41a2cc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959929"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195811"
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
 
@@ -96,7 +96,7 @@ int main( )
 }
 ```
 
-`write`函式不會停止，當它遇到 null 字元，因此在撰寫完整的類別結構。 此函數會採用兩個引數： **char**指標和要寫入的字元計數。 請注意，在結構物件的位址之前必須轉型成 **char\***。
+`write`函式不會停止，當它遇到 null 字元，因此在撰寫完整的類別結構。 此函數會採用兩個引數： **char**指標和要寫入的字元計數。 請注意必須轉型成**char** <strong>\*</strong>之前在結構物件的位址。
 
 ## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函式
 
@@ -112,14 +112,14 @@ int main( )
 
 寫入資料流時，請使用下列成員函式來測試是否發生錯誤：
 
-|功能|傳回值|
+|函式|傳回值|
 |--------------|------------------|
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果有無法復原的錯誤，則傳回 **true**。|
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 通常可以在呼叫之後繼續處理`clear`使用零引數。|
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果沒有任何錯誤狀況 (無論是否可復原) 且未設定檔案結尾旗標，則會傳回 **true**。|
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|針對檔案結尾條件傳回 **true**。|
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|設定內部錯誤狀態。 如果使用預設引數呼叫，它會清除所有錯誤位元。|
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|傳回目前的錯誤狀態。|
+|[bad](basic-ios-class.md#bad)|如果有無法復原的錯誤，則傳回 **true**。|
+|[fail](basic-ios-class.md#fail)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 通常可以在呼叫之後繼續處理`clear`使用零引數。|
+|[good](basic-ios-class.md#good)|如果沒有任何錯誤狀況 (無論是否可復原) 且未設定檔案結尾旗標，則會傳回 **true**。|
+|[eof](basic-ios-class.md#eof)|針對檔案結尾條件傳回 **true**。|
+|[clear](basic-ios-class.md#clear)|設定內部錯誤狀態。 如果使用預設引數呼叫，它會清除所有錯誤位元。|
+|[rdstate](basic-ios-class.md #rdstate|傳回目前的錯誤狀態。|
 
 **!** 運算子會多載以執行相同的功能`fail`函式。 因此運算式︰
 

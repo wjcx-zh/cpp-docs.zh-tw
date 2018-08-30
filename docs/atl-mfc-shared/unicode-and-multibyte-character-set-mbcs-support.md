@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882945"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202930"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 及多位元組字元集 (MBCS) 支援
 
@@ -35,7 +35,7 @@ ms.locfileid: "37882945"
 
 - [多位元組字元組 (MBCS)](#mfc-support-for-mbcs-strings)， **char**基礎的單一或雙位元組字元和字串中的地區設定特定字元編碼。
 
-Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studio 2013 和 Visual Studio 2015 中已被取代的 MBCS 程式庫。 不過，此情況以已不再適用。 Visual Studio 2017 中已移除 MBCS 已被取代警告。
+Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studio 2013 和 Visual Studio 2015 中已被取代的 MBCS 程式庫。 然而現在的情況已經有所改變。 Visual Studio 2017 中已移除 MBCS 已被取代警告。
 
 ## <a name="mfc-support-for-unicode-strings"></a>MFC 支援的 Unicode 字串
 
@@ -67,9 +67,9 @@ Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studi
 
    - 使用您會使用的 TCHAR **char**。
 
-   - 使用您想使用位置的 LPTSTR **char\***。
+   - 使用您想使用位置的 LPTSTR **char**<strong>\*</strong>。
 
-   - 使用您會使用的 LPCTSTR **const char\***。 `CString` 提供的運算子之間進行轉換的 LPCTSTR`CString`和 LPCTSTR。
+   - 使用您會使用的 LPCTSTR **const char**<strong>\*</strong>。 `CString` 提供的運算子之間進行轉換的 LPCTSTR`CString`和 LPCTSTR。
 
 `CString` 也提供 Unicode 感知的建構函式、 指派運算子和比較運算子。
 
@@ -101,7 +101,7 @@ Microsoft 建議所有新的開發，MFC Unicode 程式庫，並在 Visual Studi
 
 所有的執行階段字串處理常式的泛型文字函式對應中會討論[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)。 如需清單，請參閱[國際化](../c-runtime-library/internationalization.md)。
 
-同樣地，`CString`方法實作使用一般的資料類型對應。 若要啟用 MBCS 和 Unicode，MFC 會使用為 TCHAR **char**或`wchar_t`，如 LPTSTR **char\*** 或`wchar_t*`，和為 LPCTSTR **const char\*** 或`const wchar_t*`。 這些可確保正確的對應為 MBCS 或 Unicode。
+同樣地，`CString`方法實作使用一般的資料類型對應。 若要啟用 MBCS 和 Unicode，MFC 會使用為 TCHAR **char**或`wchar_t`，如 LPTSTR **char** <strong>\*</strong>或`wchar_t*`，及針對LPCTSTR**const char** <strong>\*</strong>或`const wchar_t*`。 這些可確保正確的對應為 MBCS 或 Unicode。
 
 ## <a name="see-also"></a>另請參閱
 

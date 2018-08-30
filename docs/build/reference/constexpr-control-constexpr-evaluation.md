@@ -1,5 +1,5 @@
 ---
-title: constexpr （控制項 constexpr 評估版） |Microsoft 文件
+title: constexpr （控制 constexpr 評估） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.technology:
@@ -19,51 +19,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 475702792686a3de8d1ae52bd9e40ef113c49da1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373955"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202570"
 ---
-# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr （控制項 constexpr 評估版）  
+# <a name="constexpr-control-constexpr-evaluation"></a>/constexpr （控制 constexpr 評估）  
   
-使用 **/constexpr**編譯器選項，以控制參數`constexpr`在編譯時期評估。  
+使用 **/constexpr**編譯器選項來控制參數**constexpr**在編譯時期評估。  
   
 ## <a name="syntax"></a>語法  
   
-> /constexpr:depth*N*  
-> /constexpr:backtrace*N*  
-> /constexpr:*N*  
+> **/constexpr:depth**<em>N</em>  
+> **/constexpr:**<em>N</em>  
+> **/constexpr:**<em>N</em>  
   
 ## <a name="arguments"></a>引數  
   
-**深度 * * * N*  
-限制的遞迴深度`constexpr`函式引動過程*N*層級。 預設值為 512。  
+**深度**<em>N</em>  
+限制的遞迴深度**constexpr**函式引動過程*N*層級。 預設值為 512。  
   
-**反向追蹤 * * * N*  
-最多顯示*N* `constexpr`診斷中的評估作業。 預設值為 10。  
+**backtrace**<em>N</em>  
+顯示最多*N* **constexpr**診斷中的評估。 預設值為 10。  
   
-**步驟 * * * N*  
-終止`constexpr`之後評估*N*步驟。 預設值為 100,000。  
+**步驟**<em>N</em>  
+終止**constexpr**評估版在之後*N*步驟。 預設值是 100,000。  
   
 ## <a name="remarks"></a>備註  
   
-**/Constexpr**編譯器選項可控制的編譯時期評估`constexpr`運算式。 若要防止編譯器花費太多時間在控制評估步驟、 遞迴層級，以及反向追蹤深度`constexpr`評估。 如需有關`constexpr`語言項目，請參閱[constexpr （c + +）](../../cpp/constexpr-cpp.md)。  
+**/Constexpr**編譯器選項可控制的編譯時期評估**constexpr**運算式。 評估步驟、 遞迴層級和 backtrace 深度控制上花費太多時間時，防止編譯器**constexpr**評估。 如需詳細資訊**constexpr**語言項目，請參閱[constexpr （c + +）](../../cpp/constexpr-cpp.md)。  
 
-**/Constexpr**選項會從開始使用 Visual Studio 2015。  
+**/Constexpr**選項會在 Visual Studio 2015 開始提供。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
 1. 開啟您的專案**屬性頁** 對話方塊。   
   
-2. 在下**組態屬性**，依序展開**C/c + +** 資料夾，然後選擇 **命令列**屬性頁。  
+2. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **命令列**屬性頁。  
   
-3. 輸入任何 **/constexpr**編譯器選項，在**其他選項**方塊。 選擇**確定**或**套用**以儲存變更。  
+3. 輸入任何 **/constexpr**編譯器選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以儲存變更。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
 ## <a name="see-also"></a>另請參閱  
   

@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d87a3b0e4ed9c5c558c90a2935c538b4fb826be
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883475"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201676"
 ---
 # <a name="message-map-macros-atl"></a>訊息對應巨集 (ATL)
 這些巨集會定義訊息對應 」 和 「 項目。  
@@ -346,7 +346,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  **標頭：** atlwin.h   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- 類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息只根據通知程式碼。  
+ 類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)訊息只根據通知程式碼。  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -380,7 +380,7 @@ COMMAND_HANDLER(id, code, func)
  [in]訊息處理常式函式的名稱。  
   
 ### <a name="remarks"></a>備註  
- 對應 COMMAND_HANDLER [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)至指定的處理常式函式，根據通知程式碼和控制項識別項的訊息。 例如:   
+ 對應 COMMAND_HANDLER [WM_COMMAND](/windows/desktop/menurc/wm-command)至指定的處理常式函式，根據通知程式碼和控制項識別項的訊息。 例如:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -401,7 +401,7 @@ COMMAND_HANDLER(id, code, func)
  **標頭：** atlwin.h   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- 類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息只會依據的功能表項目、 控制項或加速器的識別項。  
+ 類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)訊息只會依據的功能表項目、 控制項或加速器的識別項。  
   
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -418,7 +418,7 @@ COMMAND_ID_HANDLER(id, func)
  **標頭：** atlwin.h   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- 類似於[COMMAND_RANGE_HANDLER](#command_range_handler)，但會將對應[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)特定通知的程式碼從一組控制項台中單一處理常式函式的訊息。  
+ 類似於[COMMAND_RANGE_HANDLER](#command_range_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)特定通知的程式碼從一組控制項台中單一處理常式函式的訊息。  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -444,7 +444,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
  **標頭：** atlwin.h   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- 類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)單一處理常式函式從一組控制項台中的訊息。  
+ 類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)單一處理常式函式從一組控制項台中的訊息。  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -553,7 +553,7 @@ MESSAGE_HANDLER( msg, func )
 > [!NOTE]
 >  一定會開始使用的訊息對應[BEGIN_MSG_MAP](#begin_msg_map)。 然後，您可以宣告使用後續的替代訊息對應[ALT_MSG_MAP](#alt_msg_map)。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。  
   
- 除了 MESSAGE_HANDLER，您可以使用[COMMAND_HANDLER](#command_handler)並[NOTIFY_HANDLER](#notify_handler)對應[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)並[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息分別。  
+ 除了 MESSAGE_HANDLER，您可以使用[COMMAND_HANDLER](#command_handler)並[NOTIFY_HANDLER](#notify_handler)對應[WM_COMMAND](/windows/desktop/menurc/wm-command)並[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)訊息分別。  
   
  如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。  
   
@@ -584,7 +584,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  **標頭：** atlwin.h   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- 類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息只根據通知程式碼。  
+ 類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)訊息只根據通知程式碼。  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -618,7 +618,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in]訊息處理常式函式的名稱。  
   
 ### <a name="remarks"></a>備註  
- 對應 NOTIFY_HANDLER [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)至指定的處理常式函式，根據通知程式碼和控制項識別項的訊息。  
+ 對應 NOTIFY_HANDLER [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)至指定的處理常式函式，根據通知程式碼和控制項識別項的訊息。  
   
  必須定義在 NOTIFY_HANDLER 巨集中指定的任何函式如下所示：  
   
@@ -640,7 +640,7 @@ NOTIFY_HANDLER( id, cd, func )
  **標頭：** atlwin.h   
   
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
- 類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息只會依據的控制項識別項。  
+ 類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)訊息只會依據的控制項識別項。  
   
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -657,7 +657,7 @@ NOTIFY_ID_HANDLER( id, func )
  **標頭：** atlwin.h   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- 類似於[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但會將對應[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)特定通知的程式碼從一組控制項台中單一處理常式函式的訊息。  
+ 類似於[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但會將對應[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)特定通知的程式碼從一組控制項台中單一處理常式函式的訊息。  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -683,7 +683,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
  **標頭：** atlwin.h   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- 類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)單一處理常式函式從一組控制項台中的訊息。  
+ 類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)單一處理常式函式從一組控制項台中的訊息。  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

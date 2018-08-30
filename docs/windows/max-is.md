@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc4d8486fe48841ae37ad0ceb41f0da7cfd62c5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e2aa0b6e3928affbd30e08030f41a0b0183e46d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200677"
 ---
 # <a name="maxis"></a>max_is
 
@@ -43,7 +43,7 @@ ms.locfileid: "42596250"
 
 ## <a name="remarks"></a>備註
 
-**Max_is** c + + 屬性具有相同的功能[max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL 屬性。
+**Max_is** c + + 屬性具有相同的功能[max_is](/windows/desktop/Midl/max-is) MIDL 屬性。
 
 ## <a name="requirements"></a>需求
 

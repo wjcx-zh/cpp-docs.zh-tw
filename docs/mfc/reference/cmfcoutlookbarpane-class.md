@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541759"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201472"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  目前的文字色彩為 RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
- 使用[CMFCOutlookBarPane::SetTextColor](#settextcolor)設定 Outlook 功能區的目前 （一般和已選取） 的文字色彩。 您可以藉由呼叫取得的預設文字色彩[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) COLOR_WINDOW 索引的函式。  
+ 使用[CMFCOutlookBarPane::SetTextColor](#settextcolor)設定 Outlook 功能區的目前 （一般和已選取） 的文字色彩。 您可以藉由呼叫取得的預設文字色彩[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) COLOR_WINDOW 索引的函式。  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  判斷是否載入 Outlook 功能區窗格的背景影像。  

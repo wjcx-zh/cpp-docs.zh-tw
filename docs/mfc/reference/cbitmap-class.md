@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337008"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195848"
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 封裝 Windows 繪圖裝置介面 (GDI) 點陣圖，並提供操作點陣圖的成員函式。  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>備註  
  雖然您無法直接選取點陣圖，顯示裝置，也可以選取作為記憶體裝置內容的目前點陣圖使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)並複製到任何相容裝置內容中，使用[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或是[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)函式。 ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt)函式可以將目前的筆刷的點陣圖複製直接到顯示裝置內容。)  
   
- 如果`BITMAP`結構所指*lpBitmap*參數填入使用`GetObject`函式未指定點陣圖的位元和點陣圖未初始化。 若要初始化的點陣圖，應用程式可以使用函式這類[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)複製點陣圖的第一個參數所識別的 bits`CGdiObject::GetObject`為所建立的點陣圖`CreateBitmapIndirect`.  
+ 如果`BITMAP`結構所指*lpBitmap*參數填入使用`GetObject`函式未指定點陣圖的位元和點陣圖未初始化。 若要初始化的點陣圖，應用程式可以使用函式這類[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits)複製點陣圖的第一個參數所識別的 bits`CGdiObject::GetObject`為所建立的點陣圖`CreateBitmapIndirect`.  
   
  當您完成使用`CBitmap`物件以建立`CreateBitmapIndirect`函式，請先選取點陣圖並移出裝置內容，然後刪除`CBitmap`物件。  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>備註  
  根據預設，`LoadMappedBitmap`將對應常用於按鈕圖像 （glyph） 的色彩。  
   
- 如需建立對應的點陣圖的資訊，請參閱 Windows 函式[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)並[COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK 中的結構。  
+ 如需建立對應的點陣圖的資訊，請參閱 Windows 函式[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)並[COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) Windows SDK 中的結構。  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  載入 Windows 所使用的預先定義的點陣圖。  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>備註  
  這位操作員便轉型運算子，可支援直接使用`HBITMAP`物件。  
   
- 如需使用 圖形物件的詳細資訊，請參閱 <<c0> [ 圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 如需使用 圖形物件的詳細資訊，請參閱 <<c0> [ 圖形物件](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  設定所指定的位元值的位元點陣圖*lpBits*。  

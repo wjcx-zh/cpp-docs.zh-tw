@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efebe74f0f2735b9f32b0114a3db68d0839b90f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965005"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196301"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 類別
 
@@ -122,13 +122,17 @@ class hash_multimap
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存在 hash_multimap 中索引鍵的資料類型。
+*Key*<br/>
+ 要存放在 hash_multimap 中的索引鍵資料類型。
 
-*型別*来儲存在 hash_multimap 中的項目資料類型。
+*類型*<br/>
+ 要存放在 hash_multimap 中的項目資料類型。
 
-*Traits*包含兩個函式物件，其中一個類別的型別*Traits*能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞對應索引鍵的雜湊函式不帶正負號的整數型別之項目的值`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key>>`。
+*特性*<br/>
+ 包含兩個函式物件，其中一個類別的型別*Traits*能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞的對應之項目的索引鍵值的雜湊函式不帶正負號整數型別的`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key>>`。
 
-*配置器*表示預存配置器物件，封裝有關 hash_multimap 的配置和解除配置之記憶體的詳細資訊的型別。 這個引數是選用引數，且預設值是 `allocator<pair <const Key, Type>>`。
+*配置器*<br/>
+ 代表預存配置器物件的類型，其可封裝有關 hash_multimap 之記憶體配置與解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<pair <const Key, Type>>`。
 
 ## <a name="remarks"></a>備註
 
@@ -218,7 +222,7 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|Operator|描述|
 |-|-|
 |[hash_multimap::operator=](#op_eq)|用另一個 `hash_multimap` 的複本取代 `hash_multimap` 的項目。|
 
@@ -474,11 +478,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_iterator` 無法用來修改元素的值。
 
-`const_iterator` Hash_multimap 指向的物件所定義[value_type](#value_type)，這是型別的`pair` *\< ***constKey，Type*** >*. 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+`const_iterator` Hash_multimap 指向的物件所定義[value_type](#value_type)，類型`pair<const Key, Type>`。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
 取值 （dereference) `const_iterator` `cIter`指向 hash_multimap 中的項目，使用`->`運算子。
 
-若要存取該元素的索引鍵值，請使用 `cIter` -> **first**，這等同於 (\* `cIter`). **first**。 若要存取該元素的已對應資料值，請使用 `cIter` -> **second**，這等同於 (\* `cIter`). **first**。
+若要存取元素的索引鍵的值，請使用`cIter->first`，這相當於`(*cIter).first`。 若要存取的項目對應的資料，請使用`cIter->second`，這相當於`(*cIter).second`。
 
 ### <a name="example"></a>範例
 
@@ -572,11 +576,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 hash_multimap。
 
-hash_multimap 所定義的 `const_reverse_iterator` 會指向 [value_type](#value_type) 的物件，value_type 的類型為 `pair`*\<***const Key, Type>**，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。
+`const_reverse_iterator` Hash_multimap 指向的物件所定義[value_type](#value_type)，類型`pair<const Key, Type>`其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
 取值 （dereference) `const_reverse_iterator` `crIter`指向 hash_multimap 中的項目，使用`->`運算子。
 
-若要存取該元素的索引鍵值，請使用 `crIter` -> **first**，這等同於 (\* `crIter`). **first**。 若要存取該元素的已對應資料值，請使用 `crIter` -> **second**，這等同於 (\* `crIter`). **first**。
+若要存取元素的索引鍵的值，請使用`crIter->first`，這相當於`(*crIter).first`。 若要存取的項目對應的資料，請使用`crIter->second`，這相當於`(*crIter).second`。
 
 ### <a name="example"></a>範例
 
@@ -595,7 +599,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*從 hash_multimap 中比對項目的索引鍵。
+*key*<br/>
+ 要從 hash_multimap 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1090,7 +1095,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1180,13 +1186,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-*_Where*要從 hash_multimap 移除之項目的位置。
+*_Where*<br/>
+ 要從 hash_multimap 移除之元素的位置。
 
-*第一個*從 hash_multimap 移除之第一個項目的位置。
+*first*<br/>
+ 從 hash_multimap 移除之第一個元素的位置。
 
-*最後一個*從 hash_multimap 移除的最後一個元素之後的位置。
+*最後一個*<br/>
+ 從 hash_multimap 移除之最後一個元素以外的最近位置。
 
-*索引鍵*要從 hash_multimap 移除之項目的索引鍵。
+*key*<br/>
+ 要從 hash_multimap 中移除之元素的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1300,7 +1310,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之 hash_multimap 中元素的排序鍵比對的索引鍵。
+*key*<br/>
+ 要以所搜尋之 hash_multimap 中元素的排序鍵比對的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1750,7 +1761,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2303,7 +2315,8 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>參數
 
-*右*提供要交換之元素的 hash_multimap 或其項目是與 hash_multimap 交換的 hash_multimap。
+*right*<br/>
+ 提供要交換之元素的 hash_multimap，或要與該 hash_multimap 交換元素的 hash_multimap。
 
 ### <a name="remarks"></a>備註
 
@@ -2376,7 +2389,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 

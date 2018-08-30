@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c570bd05edd81fc08f49785a1bc50668953553b0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195884"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 類別
 `concurrent_unordered_map` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  要搜尋的索引鍵的值。  
   
 ### <a name="return-value"></a>傳回值  
- A[配對](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
+ A[配對](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
   
 ### <a name="remarks"></a>備註  
  就可能會造成額外的金鑰之後開始迭代器，以及結尾迭代器之前，要插入的並行插入。  
@@ -544,7 +544,7 @@ void rehash(size_type _Buckets);
  所需的貯體數目。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會將值區數目改變為至少 `_Buckets` ，並視需要重建雜湊資料表。 貯體數目必須是 2 的乘冪。 如果不 2 的乘冪，它會無條件進位到下一個最大 2 的乘冪。  
+ 成員函式會將 Bucket 的數目改變為至少 `_Buckets`，並視需要重建雜湊資料表。 貯體數目必須是 2 的乘冪。 如果不 2 的乘冪，它會無條件進位到下一個最大 2 的乘冪。  
   
  它會擲回[out_of_range](../../../standard-library/out-of-range-class.md)如果貯體數目不正確的例外狀況 （0 或大於最大貯體數目）。  
   

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539405"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196186"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 提供 Windows 通用進度列控制項的功能。  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定進度列控制項的樣式。 套用上列任何組合中的視窗 stylesdescribed [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了下列進度列控制項的樣式，來控制：  
+ 指定進度列控制項的樣式。 套用上列任何組合中的視窗 stylesdescribed [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了下列進度列控制項的樣式，來控制：  
   
 - PBS_VERTICAL 顯示垂直進度資訊，從上至底部。 沒有這個旗標，進度列控制項會顯示水平、 左到右。  
   
 - PBS_SMOOTH 顯示逐步，smooth 填寫進度列控制項。 沒有這個旗標，控制項將會使用區塊填滿。  
   
  *rect*  
- 指定進度列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 由於控制項必須是子視窗，指定的座標是相對於工作區*pParentWnd*。  
+ 指定進度列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 由於控制項必須是子視窗，指定的座標是相對於工作區*pParentWnd*。  
   
  *pParentWnd*  
  指定進度列控制項的父視窗，通常`CDialog`。 它必須不是 NULL。  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定進度列控制項的樣式。 套用上列任何組合中所述的視窗樣式[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 指定進度列控制項的樣式。 套用上列任何組合中所述的視窗樣式[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的進度列的色彩以表示[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 如果進度指示器的狀態列色彩的預設色彩。  
+ 目前的進度列的色彩以表示[COLORREF](/windows/desktop/gdi/colorref)值或 CLR_DEFAULT 如果進度指示器的狀態列色彩的預設色彩。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor)訊息，Windows SDK 中所述。  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  取得目前的進度列的背景色彩。  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的進度列的背景色彩以表示[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。  
+ 目前的進度列的背景色彩以表示[COLORREF](/windows/desktop/gdi/colorref)值。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor)訊息，Windows SDK 中所述。  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  擷取目前的進度列位置。  
@@ -275,14 +275,14 @@ int GetState() const;
 ### <a name="return-value"></a>傳回值  
  目前的進度列控制項，也就是下列值之一的狀態：  
   
-|值|狀況|  
+|值|State|  
 |-----------|-----------|  
 |PBST_NORMAL|進行中|  
 |PBST_ERROR|錯誤|  
 |PBST_PAUSED|已暫停|  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數 `m_progressCtrl`，用來以程式設計方式存取進度列控制項。 下一個範例中會使用此變數。  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>備註  
  步驟增量是所用的數量來呼叫[CProgressCtrl::StepIt](#stepit)增加的進度列目前位置。  
   
- 這個方法會傳送[PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數 `m_progressCtrl`，用來以程式設計方式存取進度列控制項。 下一個範例中會使用此變數。  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，指定新的進度指示器列的色彩。 指定 CLR_DEFAULT 造成進度列，使用其預設色彩。|  
+|[in]*clrBar*|A [COLORREF](/windows/desktop/gdi/colorref)值，指定新的進度指示器列的色彩。 指定 CLR_DEFAULT 造成進度列，使用其預設色彩。|  
   
 ### <a name="return-value"></a>傳回值  
 
-前一個色彩的進度指示器列中，以表示[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值或 CLR_DEFAULT 進度指示器列的色彩是否預設色彩。  
+前一個色彩的進度指示器列中，以表示[COLORREF](/windows/desktop/gdi/colorref)值或 CLR_DEFAULT 進度指示器列的色彩是否預設色彩。  
   
 ### <a name="remarks"></a>備註  
 
 `SetBarColor`方法會設定進度列色彩只有當 Windows Vista[佈景主題](/windows/desktop/Controls/visual-styles-overview)為非作用中。  
   
- 這個方法會傳送[PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數 `m_progressCtrl`，用來以程式設計方式存取進度列控制項。 下一個範例中會使用此變數。  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  COLORREF 值，指定新的背景色彩。 指定要用於進度列的預設背景色彩的 CLR_DEFAULT 值。  
   
 ### <a name="return-value"></a>傳回值  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，指出上一個背景色彩或 CLR_DEFAULT 如果的背景色彩的預設色彩。  
+ [COLORREF](/windows/desktop/gdi/colorref)值，指出上一個背景色彩或 CLR_DEFAULT 如果的背景色彩的預設色彩。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>備註  
  點線框模式已開啟，進度列以動畫顯示和捲動例如當一個登入劇場點線框。  
   
- 這個方法會傳送[PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數 `m_progressCtrl`，用來以程式設計方式存取進度列控制項。 下一個範例中會使用此變數。  
@@ -484,7 +484,7 @@ int SetState(int iState);
  目前進度列控制項先前的狀態。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數 `m_progressCtrl`，用來以程式設計方式存取進度列控制項。 下一個範例中會使用此變數。  

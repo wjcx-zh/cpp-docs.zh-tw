@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 83d19e53b50791255b87cfa73a51761e2cdf5e1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196141"
 ---
 # <a name="aggregation"></a>彙總
 有些的時候，當物件的實作項想要充分利用預先建置的另一個物件所提供的服務。 此外，它想要這個第二個物件顯示的第一個自然的一部分。 COM 可完成這兩個透過內含項目和彙總目標。  
@@ -31,5 +31,5 @@ ms.locfileid: "37847865"
   
 ## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
- [重複使用的物件](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [重複使用的物件](/windows/desktop/com/reusing-objects)
 

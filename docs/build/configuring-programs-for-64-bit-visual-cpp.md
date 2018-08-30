@@ -1,5 +1,5 @@
 ---
-title: 設定適用於 64 位元、 x64 Visual c + + 目標 |Microsoft 文件
+title: 設定 Visual c + + 64 位元 x64 目標 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366805"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196985"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>設定適用於 64 位元、 x64 Visual c + + 為目標
+# <a name="configure-visual-c-for-64-bit-x64-targets"></a>設定 Visual c + + 64 位元 x64 目標
 
-此章節包含有關針對 64 位元 x64 硬體 Visual c + + 建置工具。  
+此章節包含有關鎖定為目標的 64 位元 x64 硬體使用 Visual c + + 建置工具。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32366805"
   
 [/favor (專為架構最佳化)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-[適用於 64 位元 Windows 程式設計指南](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
+[64 位元 Windows 程式設計指南](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
   
 [適用於 x64 的 MASM (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
   

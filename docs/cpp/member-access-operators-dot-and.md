@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a4af9fa780aca1bc1c1304b45d226984fbb5eb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201441"
 ---
 # <a name="member-access-operators--and--gt"></a>成員存取運算子:。 和-&gt;
 ## <a name="syntax"></a>語法  
@@ -46,7 +46,7 @@ postfix-expression -> name
   
 1.  在第一個表單中，*後置運算式*代表值的結構、 類別或等位型別，並*名稱*指定的結構、 等位或類別的成員命名。 作業的值是*名稱*和是左值，如果*後置運算式*是左值。  
   
-2.  在第二個表單中，*後置運算式*代表結構、 等位或類別的指標並*名稱*指定的結構、 等位或類別的成員命名。 值是*名稱*，而且是左值。 **->** 運算子會取值指標。 因此，運算式 *e***->**`member`和 **(\****e***)**。`member` (其中*e*代表的指標) 產生相同的結果 (除非運算子**->** 或**\*** 經過多載)。  
+2.  在第二個表單中，*後置運算式*代表結構、 等位或類別的指標並*名稱*指定的結構、 等位或類別的成員命名。 值是*名稱*，而且是左值。 **->** 運算子會取值指標。 因此，運算式`e->member`並`(*e).member`(其中*e*表示的指標) 產生相同的結果 (除非運算子**->** 或 <strong>\*</strong>多載)。  
   
 ## <a name="example"></a>範例  
  下列範例示範成員存取運算子的兩種形式。  

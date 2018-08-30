@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9ac21e909c8286ef6a7d1973837b0caf69b711c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0eb6e8da3caa9286e14072726488ad1c16f47b1e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203638"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager 類別
 提供在全域層級上變更應用程式外觀的支援。 `CMFCVisualManager` 類別會使用一致的樣式，與提供繪製應用程式 GUI 控制項指令的類別搭配使用。 這些其他類別稱為視覺管理員，並且繼承自 `CMFCBaseVisualManager`。  
@@ -790,7 +790,7 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  自動隱藏按鈕指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指定的文字色彩*pButton*。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，指定的文字色彩*pButton*。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法以自訂您的應用程式中的 [自動隱藏] 按鈕的文字色彩在衍生類別中。 若要這樣做，會傳回您想要您的應用程式做為文字色彩的色彩。  
@@ -820,7 +820,7 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  標題列的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，表示文字的色彩*pBar*。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，表示文字的色彩*pBar*。  
   
 ### <a name="remarks"></a>備註  
  覆寫您自訂的標題列的文字色彩的衍生類別中，這個方法。 在您覆寫的方法，傳回所需的色彩。  
@@ -998,7 +998,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  此架構繪製屬性清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，表示背景色彩*pPropList*。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，表示背景色彩*pPropList*。  
   
 ### <a name="remarks"></a>備註  
  覆寫此函式以自訂您的應用程式中的屬性清單的背景色彩。  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  屬性清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出屬性清單的文字色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，指出屬性清單的文字色彩。  
   
 ### <a name="remarks"></a>備註  
  覆寫此函式以自訂您的應用程式中的屬性清單的文字色彩。  
@@ -1214,7 +1214,7 @@ virtual void GetTabFrameColors(
  在畫面格繪製索引標籤索引標籤式視窗的指標。  
   
  [out]*clrDark*  
- 參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
+ 參考[COLORREF](/windows/desktop/gdi/colorref)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
   
  [out]*clrBlack*  
  這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。  
@@ -1778,7 +1778,7 @@ virtual BOOL OnDrawBrowseButton(
  列舉的值，指定按鈕的狀態。  
   
  [out]*clrText*  
- 參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數。 這是保留的值，而且目前未使用。  
+ 參考[COLORREF](/windows/desktop/gdi/colorref)參數。 這是保留的值，而且目前未使用。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUE，否則為 FALSE。  
@@ -2578,7 +2578,7 @@ virtual COLORREF OnDrawPaneCaption(
  指定標題按鈕的界限的矩形。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，表示標題的文字色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，表示標題的文字色彩。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生的視覺管理員，以自訂窗格標題的外觀。  
@@ -2805,7 +2805,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  標題列的指標。 Visual manager 繪製這[CMFCRibbonContextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出在標題列文字的色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，指出在標題列文字的色彩。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生類別來自訂功能區分類的標題列的外觀。 如需詳細的標題列的詳細資訊，請參閱[CMFCRibbonContextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
@@ -3590,7 +3590,7 @@ virtual void OnDrawStatusBarProgress(
  進度列目前的進度。  
   
  [in]*clrBar*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，指出進度列的初始色彩。 值是色彩漸層的開始或完成的進度列的色彩。  
   
  [in]*clrProgressBarDest*  
  表示進度列的色彩漸層的結束 COLORREF 參數。 如果*clrProgressBarDest*為-1，此架構不能繪製進度列的色彩漸層作為。 相反地，它以填滿整個進度列所指定的色彩*clrBar*。  
@@ -4250,7 +4250,7 @@ virtual void OnFillOutlookBarCaption(
  指定的標題列的界限的矩形。  
   
  [out]*clrText*  
- 參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數。 方法會寫入至這個參數在標題列的文字的色彩。  
+ 參考[COLORREF](/windows/desktop/gdi/colorref)參數。 方法會寫入至這個參數在標題列的文字的色彩。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會填滿的標題列，以根據目前的面板的陰影的色彩。 覆寫此方法在衍生的視覺管理員，以自訂 Outlook 標題列的色彩。  
@@ -4281,7 +4281,7 @@ virtual void OnFillOutlookPageButton(
  布林值參數，指定是否要按下按鈕。  
   
  [out]*clrText*  
- 參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數。 這個方法會儲存在這個參數中 outlook 的 [頁面] 按鈕的文字色彩。  
+ 參考[COLORREF](/windows/desktop/gdi/colorref)參數。 這個方法會儲存在這個參數中 outlook 的 [頁面] 按鈕的文字色彩。  
   
 ### <a name="remarks"></a>備註  
  覆寫衍生的視覺管理員，以自訂 Outlook 的頁面按鈕的外觀中此函式。  

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95dbd8003f95ee0c0e809d9017ec5093b782ae99
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 91a010c9ffe1f05780c25fc6d6ec96d2619a8019
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604657"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202759"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>檢視 ActiveX 控制項以及將 ActiveX 控制項加入對話方塊
 
@@ -47,12 +47,12 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。
    該控制項會出現在對話方塊中。您可以像處理其他控制項般地加以編輯，或為其建立處理常式。
 
    > [!NOTE]
-   > 您可以將 ActiveX 控制項加入 [[工具箱] 視窗](/visualstudio/ide/reference/toolbox)。 如需詳細資訊，請參閱 <<c0> [ 管理的項目和 [工具箱] 中的索引標籤](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)。
+   > 您可以將 ActiveX 控制項加入 [[工具箱] 視窗](/visualstudio/ide/reference/toolbox)。 如需詳細資訊，請參閱 <<c0> [ 管理的項目和 [工具箱] 中的索引標籤](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db)。
 
    > [!CAUTION]
    > 在您的系統上散發所有的 ActiveX 控制項可能不合法。 請參閱安裝這些控制項之軟體的授權合約，或連絡軟體公司。
 
-   您可以放置在控制項**工具箱**視窗以方便存取。 如需詳細資訊，請參閱 <<c0> [ 自訂工具箱對話方塊](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。
+   您可以放置在控制項**工具箱**視窗以方便存取。 如需詳細資訊，請參閱 <<c0> [ 自訂工具箱對話方塊](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)。
 
 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 

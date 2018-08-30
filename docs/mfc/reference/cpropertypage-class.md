@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 632e8c0039dc0cac35fe46cff1fc539e534f8e20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851557"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203399"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 類別
 表示屬性工作表的個別頁面，也稱為索引標籤對話方塊。  
@@ -80,7 +80,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|變更為 [關閉]，[確定] 按鈕，並停用 [取消] 按鈕，強制回應屬性工作表的頁面中有無法復原的變更之後。|  
 |[CPropertyPage::Construct](#construct)|建構 `CPropertyPage` 物件。 使用`Construct`如果您想要在執行階段，指定您的參數，或如果您使用的陣列。|  
-|[CPropertyPage::GetPSP](#getpsp)|擷取 Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)相關聯的結構`CPropertyPage`物件。|  
+|[CPropertyPage::GetPSP](#getpsp)|擷取 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)相關聯的結構`CPropertyPage`物件。|  
 |[CPropertyPage::OnApply](#onapply)|按一下 [立即套用] 按鈕時由架構呼叫。|  
 |[CPropertyPage::OnCancel](#oncancel)|按一下 [取消] 按鈕時由架構呼叫。|  
 |[Cpropertypage:: Onkillactive](#onkillactive)|當目前的頁面已不再使用中的頁面時，由架構呼叫。 執行資料驗證。|  
@@ -98,7 +98,7 @@ class CPropertyPage : public CDialog
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)結構。 提供基本的屬性頁參數的存取權。|  
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)結構。 提供基本的屬性頁參數的存取權。|  
   
 ## <a name="remarks"></a>備註  
  與標準的對話方塊，您衍生的類別如`CPropertyPage`為您的屬性工作表中的每個頁面。 若要使用`CPropertyPage`-衍生的物件，第一次建立[CPropertySheet](../../mfc/reference/cpropertysheet-class.md)物件，然後再建立屬性工作表中的每個頁面的物件。 呼叫[cpropertysheet:: Addpage](../../mfc/reference/cpropertysheet-class.md#addpage)每個工作表，在頁面上，並呼叫，以顯示屬性工作表[cpropertysheet:: Setwizardmode](../../mfc/reference/cpropertysheet-class.md#domodal)強制回應屬性工作表，或[CPropertySheet::建立](../../mfc/reference/cpropertysheet-class.md#create)非強制回應屬性工作表。  
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- 擷取 Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)相關聯的結構`CPropertyPage`物件。  
+ 擷取 Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)相關聯的結構`CPropertyPage`物件。  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
  參考`PROPSHEETPAGE`結構。  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` 是的結構，其成員儲存的特性[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)。  
+ `m_psp` 是的結構，其成員儲存的特性[PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2)。  
   
 ```  
 PROPSHEETPAGE m_psp;  
@@ -306,7 +306,7 @@ virtual BOOL OnApply();
   
  預設實作`OnApply`呼叫`OnOK`。  
   
- 如需有關使用者屬性工作表中按 [立即套用] 或 [確定] 按鈕時傳送通知訊息的詳細資訊，請參閱[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) Windows SDK 中。  
+ 如需有關使用者屬性工作表中按 [立即套用] 或 [確定] 按鈕時傳送通知訊息的詳細資訊，請參閱[PSN_APPLY](/windows/desktop/Controls/psn-apply) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CPropertyPage::OnOK](#onok)。  
@@ -352,7 +352,7 @@ virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>備註  
- 當使用者選擇 [確定] 或 [立即套用] 按鈕時，架構就會收到[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)通知從 [屬性] 頁面。 若要在呼叫`OnOK`如果您呼叫不會進行[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)因為 [屬性] 頁面不會在此情況下傳送通知。  
+ 當使用者選擇 [確定] 或 [立即套用] 按鈕時，架構就會收到[PSN_APPLY](/windows/desktop/Controls/psn-apply)通知從 [屬性] 頁面。 若要在呼叫`OnOK`如果您呼叫不會進行[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)因為 [屬性] 頁面不會在此情況下傳送通知。  
   
  覆寫此成員函式，以實作特有的目前使用中頁面的其他行為，當使用者關閉整個屬性工作表。  
   
@@ -447,7 +447,7 @@ virtual BOOL OnWizardFinish();
   
  您可以覆寫此成員函式，來指定當使用者按下 [完成] 按鈕時，必須採取某些動作。 當覆寫這個函式，會傳回 FALSE，以防止屬性工作表被終結。  
   
- 如需有關當使用者按下精靈屬性工作表中的 [完成] 按鈕時傳送通知訊息的詳細資訊，請參閱[PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) Windows SDK 中。  
+ 如需有關當使用者按下精靈屬性工作表中的 [完成] 按鈕時傳送通知訊息的詳細資訊，請參閱[PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) Windows SDK 中。  
   
  如需有關如何讓精靈類型的屬性工作表的詳細資訊，請參閱 < [cpropertysheet:: Domodal](../../mfc/reference/cpropertysheet-class.md#setwizardmode)。  
   

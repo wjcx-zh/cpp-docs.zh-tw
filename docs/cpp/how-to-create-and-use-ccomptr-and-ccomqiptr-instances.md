@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b22bbcfd2055a362a3ee9b3fcfd4498cdb089586
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3cfdbff4d63197ca37976d5dcc242ac7b8ab8410
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194128"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
-在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 COM 的基本概念的相關資訊，請參閱[元件物件模型 (COM)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
+在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 COM 的基本概念的相關資訊，請參閱[元件物件模型 (COM)](https://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
   
  當您具現化元件物件模型 (COM) 物件時，請將介面指標存放於 COM 智慧型指標，它在解構函式中使用 `AddRef` 和 `Release` 呼叫來執行參考計數。 如果您使用 Active Template Library (ATL) 或 MFC 程式庫，則使用 `CComPtr` 智慧型指標。 如果您不使用 ATL 或 MFC，則使用 `_com_ptr_t`。 由於沒有 `std::unique_ptr`的 COM 對等用法，為單一擁有者和多擁有者案例中使用這些智慧型指標。 `CComPtr` 和 `ComQIPtr` 都支援有右值參考的移動作業。  
   

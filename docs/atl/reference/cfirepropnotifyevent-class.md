@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881525"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194420"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 類別
 這個類別提供方法來通知控制項屬性變更有關容器的接收器。  
@@ -60,7 +60,7 @@ class CFirePropNotifyEvent
  **標頭：** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- 告知所有已連接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 指定的物件屬性已變更的介面。  
+ 告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性已變更的介面。  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -80,7 +80,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  此函式是安全地呼叫，即使您的控制項不支援連接點。  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- 告知所有已連接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 指定的物件屬性即將變更的介面。  
+ 告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性即將變更的介面。  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);

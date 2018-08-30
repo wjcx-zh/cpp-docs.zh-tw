@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad70bfa069a43382c06f60dea53bc2e53ff187
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8b90e1f40a4de3331dfb712d8dd0f113df5e9f9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606108"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203748"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 您可以自由地使用一般的 C 樣式陣列或[std:: array](../standard-library/array-class-stl.md)在 C + + /CX 程式 (雖然[std:: vector](../standard-library/vector-class.md)通常是較好的選擇)，但在發行中繼資料中任何 API 中，您必須將 C 樣式陣列轉換或以向量[platform:: array](../cppcx/platform-array-class.md)或是[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)取決於正在使用方式的型別。 [Platform::Array](../cppcx/platform-array-class.md) 類型的效率及功能都不如 [std::vector](../standard-library/vector-class.md)，因此一般來說，您應該避免在對陣列元素執行許多作業的內部程式碼中使用此類型。  
@@ -82,12 +82,12 @@ ms.locfileid: "42606108"
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>使用 ArrayReference 可避免複製資料  
  在透過 ABI 傳遞資料給 [Platform::Array](../cppcx/platform-array-class.md)，且您最終需要在 C-Style 陣列中處理資料以提升效率的某些情況下，您可以使用 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 避免額外的複製作業。 當您將 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) 當做引數傳遞給採用 `Platform::Array`的參數時， `ArrayReference` 會將資料直接儲存到您指定的 C-Style 陣列中。 請注意， `ArrayReference` 不會鎖定來源資料，因此如果在呼叫完成之前修改或刪除另一個執行緒上的資料，結果會是未定義的。  
   
- 下列程式碼片段示範如何將 [DataReader](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) 作業的結果複製到 `Platform::Array` 中 (一般模式)，以及如何接著替代 `ArrayReference` ，將資料直接複製到 C-Style 陣列中：  
+ 下列程式碼片段示範如何將複製的結果[DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx)作業分成`Platform::Array`（一般模式），以及如何接著替代`ArrayReference`將資料複製到 c-style 陣列直接：  
   
  [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]  
   
 ## <a name="avoid-exposing-an-array-as-a-property"></a>避免將陣列公開為屬性  
- 一般而言，您應該避免將 `Platform::Array` 類型公開為 ref 類別中的屬性，因為即使用戶端程式碼只嘗試存取單一元素，也會傳回整個陣列。 當您必須將序列容器公開為公用 ref 類別中的屬性時， [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 會是較佳選擇。 在私用或內部應用程式開發介面中 (不會發行到中繼資料)，請考慮使用 Standard C++ 容器，例如 [std::vector](../standard-library/vector-class.md)。  
+ 一般而言，您應該避免將 `Platform::Array` 類型公開為 ref 類別中的屬性，因為即使用戶端程式碼只嘗試存取單一元素，也會傳回整個陣列。 當您需要將 「 時序 」 容器公開為公用 ref 類別中的屬性[Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)是較好的選擇。 在私用或內部應用程式開發介面中 (不會發行到中繼資料)，請考慮使用 Standard C++ 容器，例如 [std::vector](../standard-library/vector-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [型別系統](../cppcx/type-system-c-cx.md)   

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a81caaf62154d8bdcf1c357da2cc156e2da21f3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a01c319f8a93931539b8ba79cc9c9f554317bab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594399"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200165"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>將檔案加入空的 Win32 應用程式
 
@@ -35,7 +35,7 @@ ms.locfileid: "42594399"
 
 3. 在 [加入現有項目] 對話方塊中，巡覽至想要加入專案中的檔案。
 
-4. 按一下 [確定 **Deploying Office Solutions**]。
+4. 按一下 [確定]。
 
 若要新增非來源、 標頭，也加入專案的資源檔的檔案，以滑鼠右鍵按一下**解決方案**中的節點**方案總管 中**相同的方式，將檔案加入至專案。 A**其他**資料夾將建立來保存您的專案中的其他檔案。
 
@@ -45,4 +45,4 @@ ms.locfileid: "42594399"
 ## <a name="see-also"></a>另請參閱
 
 [建立空的 Windows 傳統型應用程式](../windows/creating-an-empty-windows-desktop-application.md)  
-[部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

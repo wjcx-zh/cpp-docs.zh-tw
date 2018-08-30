@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540979"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199917"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式  
   
@@ -308,7 +308,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
   
 ## <a name="edit-styles"></a>  編輯樣式  
   
-編輯樣式套用至[CEdit 類別](../../mfc/reference/cedit-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 如需有關在 Windows 中的編輯控制項樣式的詳細資訊，請參閱[編輯控制項樣式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+編輯樣式套用至[CEdit 類別](../../mfc/reference/cedit-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[CEdit::Create](../../mfc/reference/cedit-class.md#create)。 如需有關在 Windows 中的編輯控制項樣式的詳細資訊，請參閱[編輯控制項樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)。  
   
 |樣式|描述|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
   
 ## <a name="scroll-bar-styles"></a> 捲軸樣式  
   
-捲軸樣式套用至[CScrollBar 類別](../../mfc/reference/cscrollbar-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 如需捲軸控制項的樣式，在 Windows 中的詳細資訊，請參閱[捲軸控制項樣式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)。  
+捲軸樣式套用至[CScrollBar 類別](../../mfc/reference/cscrollbar-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)。 如需捲軸控制項的樣式，在 Windows 中的詳細資訊，請參閱[捲軸控制項樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)。  
   
 |樣式|描述|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
   
 ## <a name="static-styles"></a> 靜態樣式  
   
-靜態樣式套用至[CStatic 類別](../../mfc/reference/cstatic-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 如需有關在 Windows 中的靜態控制項樣式的詳細資訊，請參閱[靜態控制項樣式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)。  
+靜態樣式套用至[CStatic 類別](../../mfc/reference/cstatic-class.md)物件。 指定的組合中的樣式*cheaderctrl:: Create*的參數[CStatic::Create](../../mfc/reference/cstatic-class.md#create)。 如需有關在 Windows 中的靜態控制項樣式的詳細資訊，請參閱[靜態控制項樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)。  
   
 |樣式|描述|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 |WS_EX_CONTEXTHELP|在視窗的標題列包含問號。 當使用者按一下問號，游標會變為有指標的問號。 如果使用者再按一下子視窗，子視窗會收到 WM_HELP 訊息。|  
 |WS_EX_CONTROLPARENT|可讓使用者使用 TAB 鍵瀏覽不同的子視窗的視窗。|  
 |WS_EX_DLGMODALFRAME|指定的視窗標題列中的 WS_CAPTION 樣式旗標的指定時，（選擇性） 可能建立有雙框線*cheaderctrl:: Create*參數。|  
-|WS_EX_LAYERED|視窗[分層視窗](http://msdn.microsoft.com/library/ms632599.aspx#layered)。 如果視窗有，就無法使用這個樣式[類別樣式](http://msdn.microsoft.com/library/ms633574.aspx#class_styles)CS_OWNDC 或 CS_CLASSDC。 不過，Microsoft Windows 8 的子視窗，其中 Windows 上的舊版支援僅適用於最上層的 windows 支援 WS_EX_LAYERED 樣式。|  
+|WS_EX_LAYERED|視窗[分層視窗](/windows/desktop/winmsg/window-features)。 如果視窗有，就無法使用這個樣式[類別樣式](/windows/desktop/winmsg/about-window-classes)CS_OWNDC 或 CS_CLASSDC。 不過，Microsoft Windows 8 的子視窗，其中 Windows 上的舊版支援僅適用於最上層的 windows 支援 WS_EX_LAYERED 樣式。|  
 |WS_EX_LEFT|給予視窗泛型靠左對齊屬性。 這是預設值。|  
 |WS_EX_LEFTSCROLLBAR|工作區左邊放置垂直捲軸。|  
 |WS_EX_LTRREADING|顯示視窗文字使用左到右讀取順序屬性。 這是預設值。|  
@@ -524,14 +524,14 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [按鈕樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [下拉式方塊樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[編輯控制項的樣式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[編輯控制項的樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [清單方塊樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [MessageBox 函式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[捲軸控制項的樣式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[靜態控制項樣式 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[捲軸控制項的樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[靜態控制項樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [視窗樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [延伸的視窗樣式 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

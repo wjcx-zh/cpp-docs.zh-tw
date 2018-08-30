@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: fe100cbd38581b733c07b5d129d215f368e27aa7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203514"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 將格式化資料寫入字串。 這些函式已有更安全的版本可供使用，請參閱 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
@@ -143,7 +143,7 @@ int _snwprintf_l(
 *count*<br/>
 要儲存的最大字元數。
 
-*格式*<br/>
+*<格式>*<br/>
 格式控制字串。
 
 *引數*<br/>
@@ -156,32 +156,32 @@ int _snwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-可讓**len**成為格式化的資料字串，不包括結束的 null 的長度。 同時**len**和*計數*以位元組為單位的**snprintf**和 **_snprintf**，寬字元的 **_snwprintf**.
+可讓**len**是格式化的資料字串，不含終止 null 的長度。 兩者**len**並*計數*會以位元組為單位**snprintf**並 **_snprintf**，寬字元 **_snwprintf**.
 
-所有函式，如果**len** < *計數*， **len**字元會儲存於*緩衝區*，會附加 null 結束字元，和**len**傳回。
+針對所有函式，如果**len** < *count*， **len**字元會儲存於*緩衝區*，會附加 null 結束字元，並**len**會傳回。
 
-**Snprintf**函式會截斷輸出時**len**大於或等於*計數*，藉由放置在 null 結束字元`buffer[count-1]`。 傳回的值為**len**，就會將這個輸出如果的字元數*計數*夠大。 **Snprintf**如果發生編碼錯誤，函數會傳回負值。
+**Snprintf**函式會截斷輸出時**len**大於或等於*計數*，加上 null 結束字元`buffer[count-1]`。 傳回的值是**len**，就會將這個輸出如果的字元數*計數*夠大。 **Snprintf**函式會傳回負數值，如果發生編碼錯誤。
 
-所有函式以外**snprintf**，如果**len** = *計數*， **len**字元會儲存於*緩衝區*，會附加 null 結束字元，和**len**傳回。 如果**len** > *計數*，*計數*字元會儲存於*緩衝區*，null 結束字元不附加，負數傳回值。
+針對所有函式以外**snprintf**，如果**len** = *計數*， **len**字元會儲存於*緩衝區*，會附加 null 結束字元，並**len**會傳回。 如果**len** > *count*，*計數*字元會儲存於*緩衝區*，沒有 null 結束字元會附加，負數會傳回值。
 
-如果*緩衝區*為 null 指標和*計數*為零， **len**傳回為需要用來格式化輸出中，不包括結束的 null 字元的計數。 若要成功呼叫具有相同*引數*和*地區設定*參數，配置至少保留一個緩衝區**len** + 1 個字元。
+如果*緩衝區*為 null 指標並*計數*為零， **len**傳回為格式化輸出中，不含終止 null 所需的字元數。 若要能夠成功呼叫具有相同*引數*並*地區設定*參數，配置至少保留緩衝區**len** + 1 個字元。
 
-如果*緩衝區*為 null 指標和*計數*非零，或如果*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*緩衝區*為 null 指標並*計數*為非零值，或如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Snprintf**函式和 **_snprintf**系列的函式的格式化並儲存*計數*或較少的字元*緩衝區*。 **Snprintf**函數永遠會儲存結束的 null 字元，必要時截斷輸出。 **_Snprintf**系列的函式只會附加結束的 null 字元，如果格式化的字串長度小於*計數*字元。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式包含一般字元，與具有相同的形式和功能*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Snprintf**函式並 **_snprintf**系列函式格式化並儲存*計數*或較少的字元*緩衝區*。 **Snprintf**函式一律會儲存結束的 null 字元，必要時截斷輸出。 **_Snprintf**系列的函式只會附加結束的 null 字元，如果格式化的字串的長度小於*計數*字元。 每個*引數*（如果有的話） 會轉換並根據對應格式規格中的輸出*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 因為 **_snprintf**函式並不保證 null 結束，尤其是，當傳回值是*計數*— 確定它們後方附上加入 null 結束字元的程式碼。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 確認 *format* 不是使用者定義的字串。 因為 **_snprintf**函式並不保證 null 結束，特別是，當傳回值是*計數*-請確定它們後面加入 null 結束字元的程式碼。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-從 Visual Studio 2015 及 Windows 10 的 UCRT 起**snprintf**不再等同於 **_snprintf**。 **Snprintf**函式行為現在是符合 C99 標準。
+從 Visual Studio 2015 及 Windows 10 的 UCRT **snprintf**不再等同於 **_snprintf**。 **Snprintf**函式行為現在是符合 C99 標準。
 
-**_snwprintf**是寬字元版本的 **_snprintf**; 指標引數 **_snwprintf**是寬字元字串。 編碼錯誤偵測 **_snwprintf**可能不同於 **_snprintf**。 **_snwprintf**、 一樣**swprintf**，將輸出寫入到字串，而不是類型的目的地**檔案**。
+**_snwprintf**是寬字元版本的 **_snprintf**; 指標引數 **_snwprintf**是寬字元字串。 編碼錯誤偵測 **_snwprintf**可能會不同於 **_snprintf**。 **_snwprintf**，如同**swprintf**，將輸出寫入字串而非類型的目的地**檔案**。
 
-有這些函式的版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+有這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 在 C++ 中，這些函式具有多載樣板，可以叫用更新、更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

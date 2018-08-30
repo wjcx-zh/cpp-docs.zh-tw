@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 51470a572ec9540f203bb4cff80981fe6ad15dd1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 903c477117162dde1d0becc6e2196e683ea189f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196806"
 ---
 # <a name="string-editor"></a>字串編輯器
 
@@ -55,7 +55,7 @@ ms.locfileid: "42578567"
    > [!NOTE]
    > Windows 不允許建立空的字串資料表。 若建立的字串資料表中不含任何項目，將會在您儲存資源檔案時自動予以刪除。
 
-如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5)並[逐步解說： 使用資源以利用 ASP.NET 進行當地語系化](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。
+如需將資源加入 managed 專案 （其為目標的通用語言執行平台） 的資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： 當地語系化 Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\))。
 
 ## <a name="requirements"></a>需求
 
@@ -64,6 +64,6 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)  
-[字串](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[字串](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
 [關於字串](/windows/desktop/menurc/about-strings)
 

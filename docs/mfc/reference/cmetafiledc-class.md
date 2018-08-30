@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196999"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 類別
 實作 Windows 中繼檔，這個檔案包含一連串可重新執行來建立所需影像或文字的繪圖裝置介面 (GDI) 命令。  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  您所需的命令傳送至中繼檔之後，請呼叫`Close`成員函式，因此關閉中繼檔裝置內容，並傳回之中繼檔控制代碼。 然後處置`CMetaFileDC`物件。  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)然後可以使用中繼檔控制代碼來重複播放之中繼檔。 中繼檔也可操作的 Windows 函式這類[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)，這將在中繼檔複製到磁碟。  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)然後可以使用中繼檔控制代碼來重複播放之中繼檔。 中繼檔也可操作的 Windows 函式這類[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)，這將在中繼檔複製到磁碟。  
   
- 當不再需要中繼檔時，它從記憶體中刪除具有[DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Windows 函式。  
+ 當不再需要中繼檔時，它從記憶體中刪除具有[DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Windows 函式。  
   
  您也可以實作`CMetaFileDC`物件，使其可以處理，同時輸出呼叫，這類屬性 GDI 呼叫`GetTextExtent`。 這類中繼檔更有彈性，可以更輕鬆地重複使用一般的 GDI 程式碼，其中通常包含混合的輸出和屬性呼叫。 `CMetaFileDC`類別會繼承兩種裝置內容，`m_hDC`和`m_hAttribDC`，從 CDC。 `m_hDC`裝置內容會處理所有[CDC](../../mfc/reference/cdc-class.md) GDI 輸出呼叫和`m_hAttribDC`裝置內容會處理 CDC GDI 屬性的所有呼叫。 一般來說，這兩個裝置的內容是指在同一部裝置。 如果是`CMetaFileDC`，DC 的屬性預設設定為 NULL。  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  如果函式成功則有效 HMETAFILE否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- Windows 中繼檔控制代碼也可用來操作 Windows 函式的中繼檔這類[CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480)。  
+ Windows 中繼檔控制代碼也可用來操作 Windows 函式的中繼檔這類[CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea)。  
   
- 在使用後刪除中繼檔，藉由呼叫 Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)函式。  
+ 在使用後刪除中繼檔，藉由呼叫 Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile)函式。  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  關閉增強型中繼檔裝置內容，並傳回識別格式增強型中繼檔的控制代碼。  

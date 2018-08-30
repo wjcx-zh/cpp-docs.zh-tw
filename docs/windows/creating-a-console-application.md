@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e4ab4e209b53e33586346495715548cffd4df2e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0a7c3ee4f621e58e0ab7c01b409fdd80ed464051
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587554"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197374"
 ---
 # <a name="creating-a-console-application"></a>建立主控台應用程式
 
@@ -46,4 +46,4 @@ ms.locfileid: "42587554"
 [主控台專案](/visualstudio/debugger/debugging-preparation-console-projects)  
 [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)  
 [屬性頁](../ide/property-pages-visual-cpp.md)  
-[部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

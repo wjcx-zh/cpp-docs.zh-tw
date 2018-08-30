@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5848581b26812f322782a73d8964deee1feefb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7c8924f7b22ed86adf7721018c4df3094a2069c1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606970"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200691"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -75,4 +75,4 @@ Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的
 [IDL 屬性](../windows/idl-attributes.md)  
 [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)  
 [類別屬性](../windows/class-attributes.md)  
-[ProgID 的索引鍵](http://msdn.microsoft.com/library/windows/desktop/dd542719)  
+[ProgID 的索引鍵](/windows/desktop/com/-progid--key)  

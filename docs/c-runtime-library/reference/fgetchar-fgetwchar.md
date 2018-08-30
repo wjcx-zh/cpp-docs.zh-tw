@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b5b42c72f4ea2756358208f85d9c01f7863dba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3d83c1e86c574f56b08eecdf2c29e7ab20a28b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194314"
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
 
-讀取的字元從**stdin**。
+讀取字元，以從**stdin**。
 
 ## <a name="syntax"></a>語法
 
@@ -62,13 +62,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>傳回值
 
-**_fgetchar**傳回的字元讀取為**int**或傳回**EOF**表示錯誤或檔案結尾。 **_ * * * fgetwchar**傳回，作為[wint_t](../../c-runtime-library/standard-types.md)，寬字元會對應到讀取的字元，或傳回**WEOF**表示錯誤或檔案結尾。 對於這兩個函式，使用**feof**或**ferror**來區別錯誤，檔案結尾條件。
+**\_fgetchar**會傳回做為讀取的字元**int**退貨`EOF`表示錯誤或檔案結尾。 **\_fgetwchar**傳回，作為[wint_t](../../c-runtime-library/standard-types.md)，字元的寬字元對應至讀取的字元，或傳回`WEOF`表示錯誤或檔案結尾。 這兩個函式中，使用**feof**或是**ferror**來區分錯誤與檔案結尾條件。
 
 ## <a name="remarks"></a>備註
 
-這些函式會讀取來自單一字元**stdin**。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
+這些函式會讀取單一字元**stdin**。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
 
-**_fgetchar**相當於`fgetc( stdin )`。 它也相當於**getchar**，但實作僅為函式，而不是函式和巨集。 **_fgetwchar**是寬字元版本的 **_fgetchar**。
+**_fgetchar**相當於`fgetc( stdin )`。 它也相當於**getchar**，但只為函式，而不是函式和巨集來實作。 **_fgetwchar**是寬字元版本 **_fgetchar**。
 
 這些函式與 ANSI 標準不相容。
 
@@ -80,12 +80,12 @@ wint_t _fgetwchar( void );
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函式|必要的標頭|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，和**stderr**-C 執行階段函式才能使用它們在 UWP 應用程式必須重新導向. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，並**stderr**— 必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

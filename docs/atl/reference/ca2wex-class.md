@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19046cc825fabd2a3a41020a9f4c141dc98489e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 095d0d74fe5ff6eb30866b619e201a029b754d38
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882815"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202172"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 類別
 這個類別會使用字串轉換巨集 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W。  
@@ -110,7 +110,7 @@ CA2WEX(LPCSTR psz) throw(...);
  要轉換的文字字串。  
   
  *nCodePage*  
- 使用的字碼頁來執行轉換。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
+ 使用的字碼頁來執行轉換。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)如需詳細資訊。  
   
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  

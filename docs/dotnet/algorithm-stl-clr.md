@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 93bbc86e32d75e81c342a0a0a71b823b87df62b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376146"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196761"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 定義 STL/CLR 容器樣板函式可執行演算法。  
@@ -174,7 +174,7 @@ ms.locfileid: "39376146"
     
 ## <a name="declarations"></a>宣告  
   
-|功能|描述|  
+|函式|描述|  
 |--------------|-----------------|  
 |[adjacent_find (STL/CLR)](#adjacent_find)|搜尋兩個相鄰的項目相等。|  
 |[binary_search (STL/CLR)](#binary_search)|測試是否已排序的序列包含指定的值。|  
@@ -217,7 +217,7 @@ ms.locfileid: "39376146"
 |[remove (STL/CLR)](#remove)|從指定範圍中刪除指定的值，而不會干擾其餘項目的順序，並傳回沒有指定值的新範圍的結尾。|  
 |[remove_copy (STL/CLR)](#remove_copy)|從來源範圍會複製項目到目的範圍中，不同之處在於指定的值的項目不會複製，而不會干擾其餘項目的順序。|  
 |[remove_copy_if (STL/CLR)](#remove_copy_if)|複製項目從來源範圍到目的範圍，除了滿足述詞，而不會干擾其餘項目的順序。|  
-|[remove_if (STL/CLR)](#remove_if)|刪除不會干擾其餘項目的順序滿足述詞，從指定範圍的項目。 。|  
+|[remove_if (STL/CLR)](#remove_if)|刪除不會干擾其餘項目的順序滿足述詞，從指定範圍的項目。 .|  
 |[replace (STL/CLR)](#replace)|取代範圍中符合指定的值，以新值的項目。|  
 |[replace_copy (STL/CLR)](#replace_copy)|複製項目從來源範圍到目的範圍，取代項目符合指定的值，以新值。|  
 |[replace_copy_if (STL/CLR)](#replace_copy_if)|檢查來源範圍內的每個項目，如果滿足指定的述詞則予以取代，同時將結果複製到新目的範圍。|  
@@ -287,7 +287,7 @@ template<class _InIt, class _OutIt> inline
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式的行為與 c + + 標準程式庫函式相同`copy`。 如需詳細資訊，請參閱 <<c0> [ 複製](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1)。 
+ 此函式的行為與 c + + 標準程式庫函式相同`copy`。 如需詳細資訊，請參閱 <<c0> [ 複製](../standard-library/algorithm-functions.md#copy)。 
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以反向方向指派它們新位置。  
@@ -826,7 +826,7 @@ template<class _FwdIt, class _Ty> inline
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式的行為與 c + + 標準程式庫函式相同`remove`。 如需詳細資訊，請參閱 <<c0> [ 移除](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8)。  
+ 此函式的行為與 c + + 標準程式庫函式相同`remove`。 如需詳細資訊，請參閱 <<c0> [ 移除](../standard-library/algorithm-functions.md#remove)。  
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 從來源範圍將項目複製到目的範圍，不過不會複製一個指定值的項目，也不會干擾其餘項目的順序，並傳回新目的範圍結尾。  
@@ -1149,7 +1149,7 @@ template<class _BidIt, class _Pr> inline
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式的行為與 c + + 標準程式庫函式相同`swap`。 如需詳細資訊，請參閱 <<c0> [ 交換](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972)。  
+ 此函式的行為與 c + + 標準程式庫函式相同`swap`。 如需詳細資訊，請參閱 <<c0> [ 交換](../standard-library/algorithm-functions.md#swap)。  
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 將某個範圍的項目與另一個相等大小之範圍的項目交換。  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed0603482ffccf1bcb827d67b174768cfd3e3168
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338433"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196793"
 ---
 # <a name="clongbinary-class"></a>CLongBinary 類別
 簡化在資料庫中對極大型二進位資料物件 (通常稱為 BLOB 或「二進位大型物件」) 的處理。  
@@ -86,7 +86,7 @@ SQLULEN m_dwDataLength;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個大小可能小於資料配置的記憶體區塊大小。 呼叫 Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)函式可取得配置的大小。  
+ 這個大小可能小於資料配置的記憶體區塊大小。 呼叫 Win32 [GLobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)函式可取得配置的大小。  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  會儲存實際的二進位大型物件資料的 Windows HGLOBAL 控制代碼。  

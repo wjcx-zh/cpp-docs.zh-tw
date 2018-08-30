@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a23951697a5f736305734c6d49044a2e33ac4783
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409123"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200489"
 ---
 # <a name="indirection-operator-"></a>間接取值運算子：*
 ## <a name="syntax"></a>語法  
@@ -32,11 +32,11 @@ ms.locfileid: "39409123"
 ```  
   
 ## <a name="remarks"></a>備註  
- 一元間接運算子 (**\***) 會取值指標; 也就是說，它將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 使用**\*** 運算子，在此內容中的是不同運算子為二元運算子，後者是乘法。  
+ 一元間接運算子 (<strong>\*</strong>) 會取值指標; 也就是說，它將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 使用<strong>\*</strong>運算子，在此內容中的是不同運算子為二元運算子，後者是乘法。  
   
  如果運算元指向某個函式，則結果為函式指示項。 如果運算元指向某個儲存位置，則結果為指定儲存位置的左值。  
   
- 間接運算子可以累計用於將指標取值成為指標。 例如:   
+ 間接運算子可以累計用於將指標取值成為指標。 例如:  
   
 ```cpp 
 // expre_Indirection_Operator.cpp  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677d3dcab98b9bff8df7a49ba584900bd0b72925
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: bde476af66ae0a5a560019db29d25385c718e517
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407214"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201798"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Microsoft 專屬**  
@@ -69,9 +69,9 @@ HRESULT CreateInstance(
   
 -   **CreateInstance (***rclsid* **，***dwClsContext***)** 會建立新的執行個體，指定的物件`CLSID`.  
   
--   **CreateInstance (***clsidString* **，***dwClsContext***)** 建立指定之物件的新執行個體Unicode 字串，其中保存`CLSID`(開頭為"**{**") 或`ProgID`。        
+-   **CreateInstance (***clsidString* **，***dwClsContext***)** 建立指定之物件的新執行個體Unicode 字串，其中保存`CLSID`(開頭為"**{**") 或`ProgID`。  
   
--   **CreateInstance (***clsidStringA* **，***dwClsContext***)** 建立指定之物件的新執行個體保留的多位元組字元字串`CLSID`(開頭為"**{**") 或`ProgID`。       呼叫[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)，它會假設字串位於 ANSI 字碼頁，而不是 OEM 字碼頁。  
+-   **CreateInstance (***clsidStringA* **，***dwClsContext***)** 建立指定之物件的新執行個體保留的多位元組字元字串`CLSID`(開頭為"**{**") 或`ProgID`。 呼叫[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，它會假設字串位於 ANSI 字碼頁，而不是 OEM 字碼頁。  
   
  **結束 Microsoft 專屬**  
   

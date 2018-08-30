@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ebfbd7e8cedd522c324743abc5c28c6ac3e9f2b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573030"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200384"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (指定子系統)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42573030"
 ```  
   
  BOOT_APPLICATION  
- 在 Windows 開機環境中執行的應用程式。 如需有關開機應用程式的詳細資訊，請參閱 <<c0> [ 關於 BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)。  
+ 在 Windows 開機環境中執行的應用程式。 如需有關開機應用程式的詳細資訊，請參閱 <<c0> [ 關於 BCD](/previous-versions/windows/desktop/bcd/about-bcd)。  
   
  主控台  
  Win32 字元模式應用程式。 作業系統會提供主控台的主控台應用程式。 如果`main`或`wmain`原生程式碼，定義`int main(array<String ^> ^)`定義為 managed 程式碼，或您使用建置應用程式完全`/clr:safe`，主控台是預設值。  
@@ -86,7 +86,7 @@ ms.locfileid: "42573030"
   
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>。  
+-   請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   

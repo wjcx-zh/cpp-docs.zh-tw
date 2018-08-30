@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 03588a0c41633f632c99c8c178d6b69b39b00e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850039"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199197"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 類別
 提供 Windows 捲軸控制項的功能。  
@@ -195,13 +195,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
   
 ### <a name="parameters"></a>參數  
  *pScrollInfo*  
- 指標[SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535)結構。  
+ 指標[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  擷取 `SCROLLINFO` 結構維護的捲軸相關資訊。  
@@ -214,7 +214,7 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>參數  
  *lpScrollInfo*  
- 指標[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)結構。 請參閱 Windows SDK，如需有關這個結構。  
+ 指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構。 請參閱 Windows SDK，如需有關這個結構。  
   
  *nMask*  
  指定要擷取的捲軸列參數。 典型的用法，SIF_ALL，指定 SIF_PAGE、 SIF_POS、 SIF_TRACKPOS 和 SIF_RANGE 的組合。 請參閱`SCROLLINFO`如需有關 nMask 值。  
@@ -225,7 +225,7 @@ BOOL GetScrollInfo(
 ### <a name="remarks"></a>備註  
  `GetScrollInfo` 可讓應用程式使用 32 位元捲動位置。  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)結構包含捲軸，包括最小值和最大捲動位置、 頁面大小和捲軸方塊 （捲動方塊） 的位置的相關資訊。 請參閱`SCROLLINFO`結構變更結構的預設值的詳細資訊的 Windows SDK 中的主題。  
+ [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構包含捲軸，包括最小值和最大捲動位置、 頁面大小和捲軸方塊 （捲動方塊） 的位置的相關資訊。 請參閱`SCROLLINFO`結構變更結構的預設值的詳細資訊的 Windows SDK 中的主題。  
   
  MFC Windows 訊息，表示捲軸列位置，處理常式[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)並[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)，提供僅 16 位元的位置資料。 `GetScrollInfo` 和`SetScrollInfo`提供 32 位元的捲軸位置資料。 因此，應用程式可以呼叫`GetScrollInfo`同時處理`CWnd::OnHScroll`或`CWnd::OnVScroll`取得 32 位元捲軸列位置資料。  
   
@@ -294,7 +294,7 @@ BOOL SetScrollInfo(
   
 ### <a name="parameters"></a>參數  
  *lpScrollInfo*  
- 指標[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)結構。  
+ 指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構。  
   
  *bRedraw*  
  指定捲軸是否應該重新繪製以反映新的資訊。 如果*bRedraw*為 TRUE 時，會重新繪製捲軸。 如果是 FALSE，會不重新繪製。 根據預設，會重新繪製捲軸。  
@@ -305,7 +305,7 @@ BOOL SetScrollInfo(
 ### <a name="remarks"></a>備註  
  您必須提供所需的值`SCROLLINFO`結構參數，包括旗標值。  
   
- `SCROLLINFO`結構包含捲軸，包括最小值和最大捲動位置、 頁面大小和捲軸方塊 （捲動方塊） 的位置的相關資訊。 請參閱[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)結構變更結構的預設值的詳細資訊的 Windows SDK 中的主題。  
+ `SCROLLINFO`結構包含捲軸，包括最小值和最大捲動位置、 頁面大小和捲軸方塊 （捲動方塊） 的位置的相關資訊。 請參閱[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構變更結構的預設值的詳細資訊的 Windows SDK 中的主題。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  

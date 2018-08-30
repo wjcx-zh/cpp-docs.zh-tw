@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 1） C4951 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4951 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ebf012338bdf6b90cc943e754056335c6751a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e26c4bc176a54f063a3f9bce2faf451a9c0406f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290461"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204231"
 ---
 # <a name="compiler-warning-level-1-c4951"></a>編譯器警告 (層級 1) C4951
-由於已收集設定檔資料，因此 'function' 已編輯，但未使用函式設定檔資料  
-  
- 已將輸入模組中的函式編輯為 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)，因此現在您的設定檔資料無效。 輸入模組在 **/LTCG:PGINSTRUMENT** 之後已重新編譯，且相較於 ***/LTCG:PGINSTRUMENT***作業當時模組中的控制流程，輸入模組的函式 ( **function** ) 的控制流程不同。  
-  
- 這個警告僅供參考。 若要解決這個警告，請執行 **/LTCG:PGINSTRUMENT**，再取消復原所有測試回合，並執行 **/LTCG:PGOPTIMIZE**。  
-  
- 如果已使用 **/LTCG:PGOPTIMIZE** ，則這個警告會變成錯誤。
+
+> '*函式*' 已經編輯，因為已收集的分析資料，未使用的函式設定檔資料
+
+已將輸入模組中的函式編輯為 [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)，因此現在您的設定檔資料無效。 輸入的模組已重新編譯後 **/ltcg: pginstrument**的函式 (*函式*) 的當時模組中的控制流程不同 **/ltcg: pginstrument**作業。
+
+這個警告僅供參考。 若要解決這個警告，請執行 **/LTCG:PGINSTRUMENT**，再取消復原所有測試回合，並執行 **/LTCG:PGOPTIMIZE**。
+
+如果已使用 **/LTCG:PGOPTIMIZE** ，則這個警告會變成錯誤。

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2704e39ffced414e84236302c9ad31586226dd8d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027682"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197468"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 類別[CObject](../../mfc/reference/cobject-class.md)並[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封裝數個物件服務，包括執行階段類別資訊、 序列化和動態物件建立的存取。 從 `CObject` 衍生的所有類別都會繼承此功能。  
@@ -87,7 +87,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
  包含函式名稱以 Null 結束之字串的指標或指定函式的序數值。 如果這個參數是序數值，它必須是低序位文字；高序位文字必須為零。 這個參數必須是 Unicode 值。  
    
 ### <a name="remarks"></a>備註  
- 使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。  
+ 使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。  
    
 ### <a name="requirements"></a>需求  
  afxcomctl32.h、afxcomctl32.inl  
@@ -107,7 +107,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
  包含函式名稱以 Null 結束之字串的指標或指定函式的序數值。 如果這個參數是序數值，它必須是低序位文字；高序位文字必須為零。 這個參數必須是 Unicode 值。  
    
 ### <a name="remarks"></a>備註  
- 使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。 這個巨集就 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。  
+ 使用這個巨集來判斷是否通用控制項程式庫函式所指定*proc* (而不是呼叫[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)。 這個巨集就 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。  
    
 ### <a name="requirements"></a>需求  
  afxcomctl32.h、afxcomctl32.inl  
@@ -330,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     -   `afxRegApartmentThreading` ThreadingModel 登錄中設定執行緒模型 = Apartment。    
     -   `afxRegFreeThreading` ThreadingModel 登錄中設定執行緒模型 = 免費。  
       
-         您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)的執行緒模型註冊的更多有關 Windows SDK 中。 
+         您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。 
    
  *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*  
  元件類別的 CLSID。  
@@ -350,7 +350,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="see-also"></a>另請參閱  
  [巨集和全域](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)
 
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
@@ -368,12 +368,12 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  字串，包含控制項的外部名稱的資源識別碼。  
   
  *dwOleMisc*  
- 包含一或多個旗標列舉型別。 如需有關這個列舉的詳細資訊，請參閱[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ 包含一或多個旗標列舉型別。 如需有關這個列舉的詳細資訊，請參閱[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中。  
    
 ### <a name="remarks"></a>備註  
  IMPLEMENT_OLECTLTYPE，除了您就必須在您的控制項類別宣告中加入 DECLARE_OLECTLTYPE 巨集。  
   
- `GetUserTypeNameID`成員函式傳回的資源字串，識別您的控制項類別。 `GetMiscStatus` 傳回 OLEMISC 位元，為您的控制項。 此列舉會指定設定描述控制項的其他特性的集合。 OLEMISC 設定的完整說明，請參閱[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ `GetUserTypeNameID`成員函式傳回的資源字串，識別您的控制項類別。 `GetMiscStatus` 傳回 OLEMISC 位元，為您的控制項。 此列舉會指定設定描述控制項的其他特性的集合。 OLEMISC 設定的完整說明，請參閱[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Windows SDK 中。  
   
 > [!NOTE]
 >  ActiveX ControlWizard 所使用的預設值為： OLEMISC_ACTIVATEWHENVISIBLE、 OLEMISC_SETCLIENTSITEFIRST、 OLEMISC_INSIDEOUT、 OLEMISC_CANTLINKINSIDE 和 OLEMISC_RECOMPOSEONRESIZE。  

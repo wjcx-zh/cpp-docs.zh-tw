@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeba73be12fdf8e068800d192cef7df9462aa4fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200303"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -78,11 +78,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**mbchar**不**NULL**如果物件的*mbchar*指向有效的多位元組字元時，表單**mbtowc**傳回的長度多位元組字元的位元組。 如果*mbchar*是**NULL**或它所指向的物件是寬字元 null 字元 (L '\0')，則函數會傳回 0。 如果物件的*mbchar*指向不會構成有效的多位元組字元內第一個*計數*字元，則傳回-1。
+如果**mbchar**不是**NULL**如果物件的*mbchar*指向有效的多位元組字元時，表單**mbtowc**傳回的長度多位元組字元的位元組。 如果*mbchar*是**NULL**或它所指向的物件是寬字元的 null 字元 (L '\0')，則函數會傳回 0。 如果物件的*mbchar*點不會構成有效的多位元組字元，在第一個*計數*字元，則傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**Mbtowc**函式會將轉換*計數*或所指向的位元組更少*mbchar*，如果*mbchar*不**NULL**，對應的寬字元。 **mbtowc**會儲存在產生的寬字元*wchar，* 如果*wchar*不**NULL**。 **mbtowc**不會檢查多個**MB_CUR_MAX**位元組。 **mbtowc**使用目前的地區設定進行地區設定相關行為。**_mbtowc_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Mbtowc**函式會將*計數*或更少個位元組，指向*mbchar*的話*mbchar*不**NULL**，以對應的寬字元。 **mbtowc**會儲存在產生的寬字元*wchar*如果*wchar*不是**NULL**。 **mbtowc**不會檢查多個**MB_CUR_MAX**位元組。 **mbtowc**地區設定相關行為; 針對使用目前的地區設定 **_mbtowc_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)<br/>
+[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

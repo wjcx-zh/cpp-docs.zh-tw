@@ -1,5 +1,5 @@
 ---
-title: 處理工具提示的 TTN_NEEDTEXT 告知 |Microsoft 文件
+title: 處理工具提示的 TTN_NEEDTEXT 告知 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931960"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200514"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>處理工具提示的 TTN_NEEDTEXT 告知
-做為一部分[啟用工具提示](../mfc/enabling-tool-tips.md)，您處理**TTN_NEEDTEXT**將下列項目加入至主控視窗的訊息對應的訊息：  
+做為一部分[啟用工具提示](../mfc/enabling-tool-tips.md)，您處理**TTN_NEEDTEXT**藉由將下列項目加入至主控視窗的訊息對應的訊息：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
  `memberFxn`  
- 需要此按鈕的文字時所要呼叫此成員函式。  
+ 此按鈕需要文字時要呼叫此成員函式。  
   
  請注意，工具提示的識別碼一律為 0。  
   
- 您的處理常式函式類別定義中進行宣告，如下所示：  
+ 宣告您的處理常式函式，在類別定義如下所示：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
   
- 其中是設為斜體的參數：  
+ 其中的斜體的參數如下：  
   
  `id`  
  傳送通知之控制項的識別項。 未使用。 控制項 id 取自**NMHDR**結構。  
   
  `pNMHDR`  
- 指標[NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258)結構。 此外也會討論這個結構中進一步[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)。  
+ 指標[NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa)結構。 也會討論這個結構中進一步[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)。  
   
  `pResult`  
- 結果的程式碼之指標您可以設定才能傳回。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。  
+ 您設定的指標，結果程式碼前您傳回。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。  
   
- 例如表單檢視通知處理常式中：  
+ 表單檢視的通知處理常式的範例：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]  
   

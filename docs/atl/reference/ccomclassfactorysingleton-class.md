@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c70347c7226df804acd894b6271c4673ec81f72d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884186"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201151"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 類別
 這個類別衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。  
@@ -109,7 +109,7 @@ CComPtr<IUnknown> m_spObj;
  請注意，目前的表單`m_spObj`提供一項重大變更的方式，`CComClassFactorySingleton`之前在舊版的 ATL 在舊版`CComClassFactorySingleton`與 class factory，同時在伺服器初始化期間建立物件。 Visual c + +.NET 2003年，被建立物件時，延遲的第一個要求。 這項變更可能導致錯誤，在早期初始化所依賴的程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2 類別](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   

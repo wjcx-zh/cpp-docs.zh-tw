@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882107"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203867"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 類別
-這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)撕下介面。  
+這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)撕下介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A`CComContainedObject`物件衍生自您分割的類別 (類別`contained`)。|  
   
 ## <a name="remarks"></a>備註  
- `CComCachedTearOffObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)撕下介面。 此類別與不同`CComTearOffObject`在於`CComCachedTearOffObject`都有它自己`IUnknown`個別擁有者物件的`IUnknown`（擁有者是為其分割所建立的物件）。 `CComCachedTearOffObject` 都會維護它自己在參考計數其`IUnknown`和參考計數為零時之後, 可對本身進行刪除。 不過，如果您針對任何其分割的查詢介面，擁有者物件的參考計數`IUnknown`會遞增。  
+ `CComCachedTearOffObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)撕下介面。 此類別與不同`CComTearOffObject`在於`CComCachedTearOffObject`都有它自己`IUnknown`個別擁有者物件的`IUnknown`（擁有者是為其分割所建立的物件）。 `CComCachedTearOffObject` 都會維護它自己在參考計數其`IUnknown`和參考計數為零時之後, 可對本身進行刪除。 不過，如果您針對任何其分割的查詢介面，擁有者物件的參考計數`IUnknown`會遞增。  
   
  如果`CComCachedTearOffObject`物件實作分割已經具現化，和針對同樣地，相同查詢的分割介面`CComCachedTearOffObject`會重複使用物件。 相反地，如果分割介面來實作`CComTearOffObject`擁有者物件，透過再次查詢的另一個`CComTearOffObject`會具現化。  
   

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b88f2c295ae4fa31a0afd2093251c94e1c6b79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853858"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204876"
 ---
 # <a name="crgn-class"></a>CRgn 類別
 封裝 Windows 繪圖裝置介面 (GDI) 區域。  
@@ -678,7 +678,7 @@ operator HRGN() const;
 ### <a name="remarks"></a>備註  
  這位操作員便轉型運算子，可支援直接使用 HRGN 物件。  
   
- 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  檢查是否所指定的點*x*並*y*儲存在位於區域`CRgn`物件。  

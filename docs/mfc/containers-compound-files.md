@@ -1,5 +1,5 @@
 ---
-title: 容器： 複合檔案 |Microsoft 文件
+title: 容器： 複合檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 33a50c36bf41b8685c711cf6fb2e3797787a5b3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206947"
 ---
 # <a name="containers-compound-files"></a>容器：複合檔案
 本文說明複合檔案的元件和實作，以及於 OLE 應用程式使用複合檔案的優點和缺點。  
@@ -46,9 +46,9 @@ ms.locfileid: "36930221"
   
 -   如目錄等儲存物件，可包含其他儲存區和資料流物件。  
   
--   `LockBytes` 物件代表儲存物件和實體硬體之間的介面。 它們決定實際位元組寫入至任何存放裝置的方式`LockBytes`正在存取的物件，例如硬碟或全域記憶體區域。 如需有關`LockBytes`物件和`ILockBytes`介面，請參閱*OLE 程式設計人員參考*。  
+-   `LockBytes` 物件代表儲存體物件與實體硬體之間的介面。 它們決定實際位元組寫入到任何存放裝置的方式`LockBytes`存取物件，例如硬碟或全域記憶體區域。 如需詳細資訊`LockBytes`物件和`ILockBytes`介面，請參閱*OLE 程式設計人員參考*。  
   
-##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 複合檔案的優缺點  
+##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 複合檔案的優點和缺點  
  複合檔案提供了早期儲存檔案方法所沒有的優點。 包括：  
   
 -   累加檔案存取。  
@@ -69,7 +69,7 @@ ms.locfileid: "36930221"
   
 -   直接存取模式會直接將產生的變更合併到文件中，無需在稍後將變更復原。  
   
- 如需有關存取模式的詳細資訊，請參閱*OLE 程式設計人員參考*。  
+ 如需有關存取模式的詳細資訊，請參閱 < *OLE 程式設計人員參考*。  
   
 ###  <a name="_core_standardization"></a> 標準化  
  複合檔案標準化結構可讓不同的 OLE 應用程式瀏覽您的 OLE 應用程式所建立的複合檔案，不需了解實際建立檔案的應用程式。  
@@ -79,10 +79,10 @@ ms.locfileid: "36930221"
   
  影響效能的另一個問題是複合檔案分散。 複合檔案的大小取決於檔案使用的第一個和最後一個磁碟磁區之間的差異。 分散的檔案可能包含許多不包含資料的可用空間區域，不過在計算大小時會被計算進去。 在複合檔案的存留期內，這些區域由儲存物件的插入或刪除建立。  
   
-##  <a name="_core_using_compound_files_format_for_your_data"></a> 為您的資料使用複合檔案格式。  
+##  <a name="_core_using_compound_files_format_for_your_data"></a> 針對資料使用複合檔案格式。  
  在成功建立具有衍生自 `COleDocument` 之文件類別的應用程式後，請確定您的主要文件建構函式呼叫 `EnableCompoundFile`。 當應用程式精靈建立 OLE 容器應用程式時，會為您插入這個呼叫。  
   
- 在*OLE 程式設計人員參考*，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)， [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015)，和[ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238)。  
+ 在  *OLE 程式設計人員參考*，請參閱[IStream](/windows/desktop/api/objidl/nn-objidl-istream)， [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage)，以及[ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes)。  
   
 ## <a name="see-also"></a>另請參閱  
  [容器](../mfc/containers.md)   

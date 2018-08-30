@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab7b12c26854903379da0b67f9f64e2158195587
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852754"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211124"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 類別
 表示在複合檔案中做為 OLE 結構化儲存體之一部分的資料流 (`IStream`)。  
@@ -72,7 +72,7 @@ class COleStreamFile : public CFile
   
  如需有關如何管理資料流和儲存體的詳細資訊，請參閱[容器： 複合檔案](../../mfc/containers-compound-files.md)...  
   
- 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)並[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](/windows/desktop/api/objidl/nn-objidl-istream)並[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -98,7 +98,7 @@ void Attach(LPSTREAM lpStream);
 ### <a name="remarks"></a>備註  
  物件已經不可與 OLE 資料流相關聯。  
   
- 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK 中。  
   
 ##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  建立 `COleStreamFile` 物件。  
@@ -114,7 +114,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="remarks"></a>備註  
  如果*lpStream*是 NULL，物件不是與 OLE 資料流相關聯，否則物件與提供的 OLE 資料流相關聯。  
   
- 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK 中。  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  安全地建立新的資料流通用的共用記憶體不足，失敗情形是一般的預期。  
@@ -133,7 +133,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="remarks"></a>備註  
  OLE 子系統所配置記憶體。  
   
- 如需詳細資訊，請參閱 < [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) Windows SDK 中。  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  安全地建立新的資料流，其中失敗情形是一般的預期提供的儲存體物件中。  
@@ -165,7 +165,7 @@ BOOL CreateStream(
 ### <a name="remarks"></a>備註  
  如果開啟失敗檔案例外狀況將會擲回並*pError*不是 NULL。  
   
- 如需詳細資訊，請參閱 < [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) Windows SDK 中。  
   
 ##  <a name="detach"></a>  COleStreamFile::Detach  
  解除關聯物件的資料流，而不需要關閉資料流。  
@@ -180,7 +180,7 @@ LPSTREAM Detach();
 ### <a name="remarks"></a>備註  
  程式終止之前，必須透過其他方式關閉資料流。  
   
- 如需詳細資訊，請參閱 < [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStream](/windows/desktop/api/objidl/nn-objidl-istream) Windows SDK 中。  
   
 ##  <a name="getstream"></a>  COleStreamFile::GetStream  
  呼叫此函式可傳回目前資料流的指標。  
@@ -190,7 +190,7 @@ IStream* GetStream() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的資料流介面的指標 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
+ 目前的資料流介面的指標 ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream))。  
   
 ##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  開啟現有的資料流。  
@@ -222,7 +222,7 @@ BOOL OpenStream(
 ### <a name="remarks"></a>備註  
  如果開啟失敗檔案例外狀況將會擲回並*pError*不是 NULL。  
   
- 如需詳細資訊，請參閱 < [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [CFile 類別](../../mfc/reference/cfile-class.md)   

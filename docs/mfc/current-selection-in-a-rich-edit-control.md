@@ -1,5 +1,5 @@
 ---
-title: Rich Edit 控制項中的目前選取範圍 |Microsoft 文件
+title: Rich Edit 控制項中的目前選取範圍 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 782984bc53bc16f8dc89e4e705811fef24b8931e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b115f576100ec89b2de4d3b2e63fe74b96337c7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345006"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209827"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 控制項中目前的選取範圍
-使用者可以選取 rich edit 控制項中的文字 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用滑鼠或鍵盤。 目前的選取範圍是選取的字元的範圍或選取的任何字元的插入點的位置。 應用程式可以取得目前的選取範圍的相關資訊，設定目前的選取項目，判斷當目前的選取範圍變更和顯示或隱藏選取項目反白顯示。  
+使用者可以選取 rich edit 控制項中的文字 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用滑鼠或鍵盤。 目前的選取範圍的所選的字元範圍或插入點，如果沒有任何字元的位置選取。 應用程式可以取得目前的選取範圍的相關資訊，設定目前的選取項目，判斷當目前的選取項目變更和顯示或隱藏選取反白顯示。  
   
- 若要判斷 rich edit 控制項中的目前選取範圍，請使用[GetSel](../mfc/reference/cricheditctrl-class.md#getsel)成員函式。 若要設定目前選取範圍，請使用[SetSel](../mfc/reference/cricheditctrl-class.md#setsel)成員函式。 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)結構具有這些函式用來指定字元範圍。 若要擷取目前的選取範圍的內容的相關資訊，您可以使用[GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype)成員函式。  
+ 若要判斷 rich edit 控制項中目前的選取範圍，請使用[GetSel](../mfc/reference/cricheditctrl-class.md#getsel)成員函式。 若要設定目前的選取範圍，請使用[SetSel](../mfc/reference/cricheditctrl-class.md#setsel)成員函式。 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange)結構來使用這些函式指定的字元範圍。 若要擷取目前的選取範圍的內容的相關資訊，您可以使用[GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype)成員函式。  
   
- 根據預設，rich edit 控制項顯示，並獲得和失去焦點時，會隱藏反白顯示的選取項目。 您可以顯示或隱藏反白顯示的選取項目在任何時候，使用[HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection)成員函式。 例如，應用程式可能會提供 rich edit 控制項中尋找文字 [搜尋] 對話方塊。 應用程式可能會選取相符的文字，但不關閉對話方塊，在此情況下它必須使用`HideSelection`來反白顯示選取項目。  
+ 根據預設，rich edit 控制項顯示，並獲得和失去焦點時，會隱藏反白顯示的選取項目。 您可以顯示或隱藏在任何時間的反白顯示的選取項目，使用[HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection)成員函式。 例如，應用程式可能會提供在 rich edit 控制項中尋找文字的 [搜尋] 對話方塊。 應用程式可能會選取相符的文字，而不需要關閉對話方塊時，它必須在此情況下使用`HideSelection`反白顯示選取項目。  
   
- 若要選取的文字在 rich edit 控制項中，使用[GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext)成員函式。 將文字複製到指定的字元陣列。 您必須確定陣列足以容納選取的文字加上結束的 null 字元。  
+ 若要選取的文字在 rich edit 控制項中，使用[GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext)成員函式。 將文字複製到指定的字元陣列。 您必須確定陣列足以容納選取的文字，再加上結束的 null 字元。  
   
- 您可以使用搜尋字串 rich edit 控制項中[FindText](../mfc/reference/cricheditctrl-class.md#findtext)成員函式[FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909)結構搭配此函式指定要搜尋和要搜尋的字串的文字範圍。 您也可以指定這些選項做為搜尋是否區分大小寫。  
+ 您可以使用 rich edit 控制項中的字串搜尋[FindText](../mfc/reference/cricheditctrl-class.md#findtext)成員函式[FINDTEXTEX](/windows/desktop/api/richedit/ns-richedit-_findtextexa)搭配此函式的結構指定的文字範圍搜尋及要搜尋的字串。 您也可以指定這些選項做為搜尋是否區分大小寫。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   

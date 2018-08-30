@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337474"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207820"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx 類別
 實作 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，並提供管理視窗的成員。 它會擴充[CFrameWnd](../../mfc/reference/cframewnd-class.md)類別。  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|建立框架後，由架構呼叫。|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|終結框架時，由架構呼叫。|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|當應用程式繪製功能表項目相關聯的映像時，由架構呼叫。|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|由架構呼叫時`CMFCPopupMenu`物件處理程序[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)訊息。|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|由架構呼叫時`CMFCPopupMenu`物件處理程序[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息。|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|桌面視窗管理員 (DWM) 組合已啟用或停用時由架構呼叫。|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|移動或調整大小，就會停止在畫面格時由架構呼叫。|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|框架會調整大小以設定視窗維度限制時，由架構呼叫。|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  結構，其中包含多個視窗的位置控制代碼。 。  
   
 ### <a name="remarks"></a>備註  
- 初始化 hdwp 結構[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)方法。  
+ 初始化 hdwp 結構[BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)方法。  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  設定 [框架] 功能表和命令處理閒置時再更新。  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>參數  
  [in]*lpMMI*  
- 指標[MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605)結構。  
+ 指標[MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605)結構。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>參數  
  [in]*nFlags*  
- 指出使用者是否按下輔助按鍵。 如需可能的值，請參閱 「 參數*wParam*中[WM_LBUTTONDOWN 通知](http://msdn.microsoft.com/library/windows/desktop/ms645607)。  
+ 指出使用者是否按下輔助按鍵。 如需可能的值，請參閱 「 參數*wParam*中[WM_LBUTTONDOWN 通知](/windows/desktop/inputdev/wm-lbuttondown)。  
   
  [in]*點*  
  指定之 x 和指標的 y 座標，相對於視窗左上角。  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>參數  
  [in]*nFlags*  
- 指出使用者是否按下輔助按鍵。 如需可能的值，請參閱 「 參數*wParam*中[WM_LBUTTONUP 通知](http://msdn.microsoft.com/library/windows/desktop/ms645608)。  
+ 指出使用者是否按下輔助按鍵。 如需可能的值，請參閱 「 參數*wParam*中[WM_LBUTTONUP 通知](/windows/desktop/inputdev/wm-lbuttonup)。  
   
  [in]*點*  
  指定之 x 和指標的 y 座標，相對於視窗左上角。  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>參數  
  [in]*nFlags*  
- 指出使用者是否按下輔助按鍵。 如需可能的值，請參閱 「 參數*wParam*中[WM_MOUSEMOVE 通知](http://msdn.microsoft.com/library/windows/desktop/ms645616)。  
+ 指出使用者是否按下輔助按鍵。 如需可能的值，請參閱 「 參數*wParam*中[WM_MOUSEMOVE 通知](/windows/desktop/inputdev/wm-mousemove)。  
   
  [in]*點*  
  指定的 x 和 y 座標相對於視窗左上角的指標。  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  螢幕座標中指標的位置。  
   
 ### <a name="return-value"></a>傳回值  
- 指標叫用列舉的值。 如需可能值的清單，請參閱[WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
+ 指標叫用列舉的值。 如需可能值的清單，請參閱[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>參數  
  [in]*nHitTest*  
- 指標叫用列舉的值。 如需可能值的清單，請參閱[WM_NCHITTEST 通知](http://msdn.microsoft.com/library/windows/desktop/ms645618)。  
+ 指標叫用列舉的值。 如需可能值的清單，請參閱[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)。  
   
  [in]*點*  
  螢幕座標中指標的位置。  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>參數  
  [in]*wp*  
- 電源管理事件。 如需可能值的清單，請參閱[WM_POWERBROADCAST 訊息](http://msdn.microsoft.com/library/windows/desktop/aa373247)。  
+ 電源管理事件。 如需可能值的清單，請參閱[WM_POWERBROADCAST 訊息](/windows/desktop/Power/wm-powerbroadcast)。  
   
  [in]*lp*  
  不使用這個參數。  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  視窗文字指標。  
   
 ### <a name="return-value"></a>傳回值  
- 從呼叫傳回值[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572)。  
+ 從呼叫傳回值[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>參數  
  [in]*n*  
- 調整大小的類型。 如需可能的值，請參閱 「 參數*wParam*中[WM_SIZE 通知](http://msdn.microsoft.com/library/windows/desktop/ms632646)。  
+ 調整大小的類型。 如需可能的值，請參閱 「 參數*wParam*中[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)。  
   
  [in]*cx*  
  新框架寬度的像素為單位。  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>參數  
  [in]*fwSide*  
- 移動的框架邊緣。 請參閱參數*wParam*中[WM_SIZING 通知](http://msdn.microsoft.com/library/windows/desktop/ms632647)。  
+ 移動的框架邊緣。 請參閱參數*wParam*中[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)。  
   
  [in、 out]*pRect*  
  指標[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT](../../mfc/reference/rect-structure1.md)結構，其中包含 畫面格的座標。  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>參數  
  *dwData*  
- 資料相依於*nCmd*參數。 如需可能值的清單，請參閱[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ 資料相依於*nCmd*參數。 如需可能值的清單，請參閱[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)。  
   
  *nCmd*  
- [說明] 命令。 如需可能值的清單，請參閱[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267)。  
+ [說明] 命令。 如需可能值的清單，請參閱[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)。  
   
 ### <a name="remarks"></a>備註  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f4735b56d6d15dfe3740c0dad727765e0eb84b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 973501339d05f75414d076cbd22f5dabeb0bec7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208719"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping 類別
 此類別代表記憶體對應檔案，加入的方法中的轉換運算子[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。  
@@ -47,10 +47,10 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CAtlFileMapping::operator T *](#operator_t_star)|允許隱含轉換`CAtlFileMapping`物件至`T` **\***。|  
+|[CAtlFileMapping::operator T *](#operator_t_star)|允許隱含轉換`CAtlFileMapping`物件至`T*`。|  
   
 ## <a name="remarks"></a>備註  
- 此類別會加入單一的轉換運算子，以允許隱含轉換`CAtlFileMapping`物件至`T` **\***。 基底類別，提供其他成員[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。  
+ 此類別會加入單一的轉換運算子，以允許隱含轉換`CAtlFileMapping`物件至`T*`。 基底類別，提供其他成員[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)  
@@ -61,17 +61,17 @@ class CAtlFileMapping : public CAtlFileMappingBase
  **標頭：** atlfile.h  
   
 ##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *  
- 允許隱含轉換`CAtlFileMapping`物件至`T` **\***。  
+ 允許隱含轉換`CAtlFileMapping`物件至`T*`。  
   
 ```  
 operator T*() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`T` **\*** 記憶體對應檔案開頭的指標。  
+ 傳回`T*`記憶體對應檔案開頭的指標。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)轉換為傳回的指標並`T` **\*** 其中*T*是做為範本類型這個類別的參數。  
+ 呼叫[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)並轉換為傳回的指標`T*`何處*T*是做為範本參數，這個類別的型別。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlFileMappingBase 類別](../../atl/reference/catlfilemappingbase-class.md)   

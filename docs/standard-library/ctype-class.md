@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208633"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204863"
 ---
 # <a name="ctype-class"></a>ctype 類別
 
@@ -66,7 +66,8 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內用來編碼字元的類型。
+*CharType*<br/>
+ 用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -74,17 +75,17 @@ class ctype : public ctype_base;
 
 C++ 標準程式庫定義了這個範本類別的兩個明確特製化：
 
-- [ctype](../standard-library/ctype-char-class.md)< `char`> 是一種將差異個別描述的明確特製化。
+- `ctype<char>`分別描述其差異的明確特製化。 如需詳細資訊，請參閱 < [ctype&lt;char&gt;類別](../standard-library/ctype-char-class.md)。
 
-- **ctype**<`wchar_t`>，會將元素視為寬字元。
+- `ctype<wchar_t>`會將元素視為寬字元。
 
-範本類別 **ctype**\< **CharType**> 的其他特製化：
+其他特製化樣板類別的`ctype<CharType>`:
 
-- 將值轉換***ch***型別的`CharType`類型的值**char**運算式 (`char`) **ch**。
+- 將值轉換*ch*型別的*CharType*類型的值來**char**運算式`(char)ch`。
 
-- 將值轉換***位元組***型別的**char**類型的值來`CharType`運算式**CharType** (**位元組**)。
+- 將值轉換*位元組*型別的**char**類型的值來*CharType*運算式`CharType(byte)`。
 
-所有其他作業**char**值相同的方式，明確特製化**ctype**<`char`>。
+所有其他作業**char**值相同的方式，明確特製化`ctype<char>`。
 
 ### <a name="constructors"></a>建構函式
 
@@ -149,7 +150,8 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+ 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
@@ -183,15 +185,20 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal*要測試之字元的遮罩值。
+*maskVal*<br/>
+ 要為其測試字元的遮罩值。
 
-*ch*其屬性是要測試的字元。
+*ch*<br/>
+ 要測試其屬性的字元。
 
-*第一個*要分類其屬性的範圍中的第一個字元的指標。
+*first*<br/>
+ 要分類其屬性的範圍中，第一個字元的指標。
 
-*最後一個*緊接在要分類其屬性的範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要分類其屬性的範圍中，緊接著最後一個字元的指標。
 
-*dest*中的每個字元之屬性的特性的遮罩值會儲存的陣列開頭的指標。
+*dest*<br/>
+ 陣列的開頭指標，其中遮罩值會說明每個字元所要儲存之屬性的特性。
 
 ### <a name="return-value"></a>傳回值
 
@@ -226,15 +233,20 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>參數
 
-*ch*類型的字元`Chartype`地區設定使用的轉換。
+*ch*<br/>
+ 地區設定所用並要進行轉換的 `Chartype` 類型字元。
 
-*預設值*預設值，指派為字元類型的成員函式`CharType`並不具備類型的對應字元**char**。
+*default*<br/>
+ 預設值，指派為字元類型的成員函式`CharType`並不具備類型的對應字元**char**。
 
-*第一個*要轉換的字元範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
-*dest*類型的第一個字元的 const 指標**char**儲存轉換的字元範圍之目的範圍中。
+*dest*<br/>
+ 類型的第一個字元的 const 指標**char**儲存轉換的字元範圍之目的範圍中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -263,11 +275,14 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal*字元要比對的遮罩值。
+*maskVal*<br/>
+ 字元要比對的遮罩值。
 
-*第一個*掃描範圍中的第一個字元的指標。
+*first*<br/>
+ 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*緊接在要掃描的範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -294,11 +309,14 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>參數
 
-*maskVal*不到要比對字元的遮罩值。
+*maskVal*<br/>
+ 字元不會比對的遮罩值。
 
-*第一個*掃描範圍中的第一個字元的指標。
+*first*<br/>
+ 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*緊接在要掃描的範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -327,11 +345,14 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>參數
 
-*ch*来轉換成小寫的字元。
+*ch*<br/>
+ 要轉換為小寫的字元。
 
-*第一個*来轉換的字元大小寫的範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元大小寫的範圍內的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -360,11 +381,14 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>參數
 
-*ch*轉換為大寫的字元。
+*ch*<br/>
+ 要轉換為大寫的字元。
 
-*第一個*来轉換的字元大小寫的範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元大小寫的範圍內的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -394,13 +418,17 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>參數
 
-*位元組*類型的字元**char**原生字元集中要轉換。
+*byte*<br/>
+ 類型字元**char**原生字元集中要轉換。
 
-*第一個*要轉換的字元範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
-*dest*類型的第一個字元的指標`CharType`儲存轉換的字元範圍之目的範圍中。
+*dest*<br/>
+ 在目的範圍 (其會儲存轉換的字元範圍) 中，第一個 `CharType` 類型字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -432,15 +460,20 @@ const CharType *is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal*要測試之字元的遮罩值。
+*maskVal*<br/>
+ 要為其測試字元的遮罩值。
 
-*ch*其屬性是要測試的字元。
+*ch*<br/>
+ 要測試其屬性的字元。
 
-*第一個*要分類其屬性的範圍中的第一個字元的指標。
+*first*<br/>
+ 要分類其屬性的範圍中，第一個字元的指標。
 
-*最後一個*緊接在要分類其屬性的範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要分類其屬性的範圍中，緊接著最後一個字元的指標。
 
-*dest*中的每個字元之屬性的特性的遮罩值會儲存的陣列開頭的指標。
+*dest*<br/>
+ 陣列的開頭指標，其中遮罩值會說明每個字元所要儲存之屬性的特性。
 
 ### <a name="return-value"></a>傳回值
 
@@ -508,15 +541,20 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>參數
 
-*ch*類型的字元`Chartype`地區設定使用的轉換。
+*ch*<br/>
+ 地區設定所用並要進行轉換的 `Chartype` 類型字元。
 
-*預設值*預設值，指派為字元類型的成員函式`CharType`並不具備類型的對應字元**char**。
+*default*<br/>
+ 預設值，指派為字元類型的成員函式`CharType`並不具備類型的對應字元**char**。
 
-*第一個*要轉換的字元範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
-*dest*類型的第一個字元的 const 指標**char**儲存轉換的字元範圍之目的範圍中。
+*dest*<br/>
+ 類型的第一個字元的 const 指標**char**儲存轉換的字元範圍之目的範圍中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -567,11 +605,14 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>參數
 
-*maskVal*字元要比對的遮罩值。
+*maskVal*<br/>
+ 字元要比對的遮罩值。
 
-*第一個*掃描範圍中的第一個字元的指標。
+*first*<br/>
+ 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*緊接在要掃描的範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -620,11 +661,14 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>參數
 
-*maskVal*不到要比對字元的遮罩值。
+*maskVal*<br/>
+ 字元不會比對的遮罩值。
 
-*第一個*掃描範圍中的第一個字元的指標。
+*first*<br/>
+ 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*緊接在要掃描的範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -673,11 +717,14 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*来轉換成小寫的字元。
+*ch*<br/>
+ 要轉換為小寫的字元。
 
-*第一個*来轉換的字元大小寫的範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元大小寫的範圍內的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -725,11 +772,14 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*来轉換成大寫的字元。
+*ch*<br/>
+ 要轉換為大寫的字元。
 
-*第一個*来轉換的字元大小寫的範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元大小寫的範圍內的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -777,13 +827,17 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>參數
 
-*位元組*設定為要轉換的原生字元集中 char 類型字元。
+*byte*<br/>
+ 原生字元集中要轉換的 char 類型字元。
 
-*第一個*要轉換的字元範圍中的第一個字元的指標。
+*first*<br/>
+ 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*緊接在要轉換的字元範圍中的最後一個字元的字元的指標。
+*最後一個*<br/>
+ 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
-*dest*類型的第一個字元的指標`CharType`儲存轉換的字元範圍之目的範圍中。
+*dest*<br/>
+ 在目的範圍 (其會儲存轉換的字元範圍) 中，第一個 `CharType` 類型字元的指標。
 
 ### <a name="return-value"></a>傳回值
 

@@ -41,15 +41,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7377a6b47df76190c4dc97b916590e53c7df8f9c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884746"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210107"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 類別
-這個類別會實作`IUnknown`，並提供的預設實作[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)介面。  
+這個類別會實作`IUnknown`，並提供的預設實作[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)介面。  
   
 > [!IMPORTANT]
 >  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -105,7 +105,7 @@ class IPropertyPageImpl
 |[IPropertyPageImpl::m_size](#m_size)|像素為單位儲存的屬性頁的對話方塊中，寬度與高度。|  
   
 ## <a name="remarks"></a>備註  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)介面可讓要管理特定的屬性頁的屬性工作表內的物件。 類別`IPropertyPageImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)介面可讓要管理特定的屬性頁的屬性工作表內的物件。 類別`IPropertyPageImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -130,7 +130,7 @@ HRESULT Activate(
 ### <a name="remarks"></a>備註  
  根據預設，對話方塊信箱將永遠為非強制回應的值為何*bModal*參數。  
   
- 請參閱[IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) Windows SDK 中。  
+ 請參閱[IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) Windows SDK 中。  
   
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply  
  目前的屬性頁值會套用至基礎物件透過指定`SetObjects`。  
@@ -143,7 +143,7 @@ HRESULT Apply();
  傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) Windows SDK 中。  
+ 請參閱[IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) Windows SDK 中。  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
  終結對話方塊視窗以建立[Activate](#activate)。  
@@ -153,7 +153,7 @@ HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) Windows SDK 中。  
+ 請參閱[IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) Windows SDK 中。  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
  填滿*pPageInfo*結構的資料成員中包含的資訊。  
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>備註  
  `GetPageInfo` 會載入字串資源相關聯[m_dwDocString](#m_dwdocstring)， [m_dwHelpFile](#m_dwhelpfile)，並[m_dwTitle](#m_dwtitle)。  
   
- 請參閱[IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) Windows SDK 中。  
+ 請參閱[IPropertyPage::GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) Windows SDK 中。  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  叫用屬性頁的 Windows 的說明。  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) Windows SDK 中。  
+ 請參閱[IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) Windows SDK 中。  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  建構函式。  
@@ -240,7 +240,7 @@ UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- 指向[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)透過屬性頁會與屬性框架通訊的介面。  
+ 指向[IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite)透過屬性頁會與屬性框架通訊的介面。  
   
 ```
 IPropertyPageSite* m_pPageSite;
@@ -268,7 +268,7 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) Windows SDK 中。  
+ 請參閱[IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) Windows SDK 中。  
   
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty  
  屬性頁的狀態為已變更或不變，根據的值加上旗標*bDirty*。  
@@ -292,17 +292,17 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) Windows SDK 中。  
+ 請參閱[IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) Windows SDK 中。  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- 提供使用屬性頁[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)指標，讓 [屬性] 頁面與屬性框架的通訊。  
+ 提供使用屬性頁[IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite)指標，讓 [屬性] 頁面與屬性框架的通訊。  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) Windows SDK 中。  
+ 請參閱[IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) Windows SDK 中。  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  讓 [屬性頁] 對話方塊中，可見或不可見。  
@@ -312,7 +312,7 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) Windows SDK 中。  
+ 請參閱[IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) Windows SDK 中。  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
  處理中指定的按鍵動作`pMsg`。  
@@ -322,7 +322,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) Windows SDK 中。  
+ 請參閱[IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [IPropertyPage2Impl 類別](../../atl/reference/ipropertypage2impl-class.md)   

@@ -1,5 +1,5 @@
 ---
-title: 控制項 (MFC) |Microsoft 文件
+title: 控制項 (MFC) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353673"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206871"
 ---
 # <a name="controls-mfc"></a>控制項 (MFC)
 控制項是使用者可以與之互動，以輸入或操作資料的物件。 它們通常會出現在對話方塊或工具列中。 本主題系列涵蓋三種主要的控制項︰  
@@ -81,7 +81,7 @@ ms.locfileid: "33353673"
 |[工具提示](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|小型快顯視窗，描述工具列按鈕或其他工具的用途|[是]|  
 |[樹狀](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|顯示階層式項目清單的視窗|[是]|  
   
-### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   個別控制項︰請參閱本主題的 [Windows 通用控制項和 MFC 類別](#_core_windows_common_controls_and_mfc_classes) 表格，以取得所有控制項的連結  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33353673"
   
 -   [範例](../mfc/common-control-sample-list.md)  
   
- Windows SDK 中的 Windows 通用控制項的相關資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)。  
+ Windows SDK 中的 Windows 通用控制項的相關資訊，請參閱[通用控制項](/windows/desktop/Controls/common-controls-intro)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   

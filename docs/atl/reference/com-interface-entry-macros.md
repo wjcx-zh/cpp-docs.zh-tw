@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43d6d1ace739c50d471c7e57b8670d010319ae1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883371"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196043"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集  
  這些巨集會輸入到其 COM 對應物件的介面，讓他們可以存取`QueryInterface`。 COM 對應中的項目順序是訂單介面將會檢查比對期間 iid `QueryInterface`。  
@@ -48,7 +48,7 @@ ms.locfileid: "37883371"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非*punk*是 NULL，它會自動建立所描述的彙總*clsid*。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*，而如果*punk*為 NULL，就會自動建立所描述的彙總*clsid*。|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|儲存每個執行個體的指定介面的資料。|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|會公開您 tear-off 介面。|  
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|處理到達這個 COM 對應中的項目時，請處理 COM 對應的基底類別。|  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- 會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。  
+ 會導致您的程式來呼叫[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9131a1cc1f8d0c66f2eb3616f4903db74ea4bdf0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6de7ee0ede844ce05b59b13e2f8acd7e6068220b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881369"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204504"
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 類別
 這個類別會結合成單一呼叫容器的控制項初始化。  
@@ -58,7 +58,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |[IQuickActivateImpl::SetContentExtent](#setcontentextent)|通知控制項的容器已指派給它的顯示空間。|  
   
 ## <a name="remarks"></a>備註  
- [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146)介面可幫助避免延遲載入的控制項，藉由結合在單一呼叫中的初始化時的容器。 `QuickActivate`方法可讓容器傳遞至指標[QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630)會保留指標的所有介面控制項的結構需要。 在傳回時，控制權會傳遞回指向[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)它自己的介面，可供容器會保留指標的結構。 類別`IQuickActivateImpl`提供的預設實作`IQuickActivate`並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ [IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate)介面可幫助避免延遲載入的控制項，藉由結合在單一呼叫中的初始化時的容器。 `QuickActivate`方法可讓容器傳遞至指標[QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer)會保留指標的所有介面控制項的結構需要。 在傳回時，控制權會傳遞回指向[QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)它自己的介面，可供容器會保留指標的結構。 類別`IQuickActivateImpl`提供的預設實作`IQuickActivate`並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -80,7 +80,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>備註  
  大小為 完整呈現控制項，並指定以 himetric 為單位。  
   
- 請參閱[IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) Windows SDK 中。  
+ 請參閱[IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) Windows SDK 中。  
   
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  執行快速的載入的控制項的初始化。  
@@ -92,9 +92,9 @@ STDMETHOD(QuickActivate)(
 ```  
   
 ### <a name="remarks"></a>備註  
- 此結構包含所需的控制項和某些環境的屬性值的介面指標。 傳回時，控制權會傳遞指標[QACONTROL](http://msdn.microsoft.com/library/windows/desktop/ms693721)結構，其中包含容器需要，自己介面和其他狀態資訊的指標。  
+ 此結構包含所需的控制項和某些環境的屬性值的介面指標。 傳回時，控制權會傳遞指標[QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol)結構，其中包含容器需要，自己介面和其他狀態資訊的指標。  
   
- 請參閱[IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) Windows SDK 中。  
+ 請參閱[IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) Windows SDK 中。  
   
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  通知控制項的容器已指派給它的顯示空間。  
@@ -106,7 +106,7 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ### <a name="remarks"></a>備註  
  大小是以 himetric 為單位來指定。  
   
- 請參閱[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) Windows SDK 中。  
+ 請參閱[IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   

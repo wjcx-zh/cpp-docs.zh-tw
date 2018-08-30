@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852977"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208862"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟字型選取對話方塊的屬性清單控制項項目。  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  一種邏輯字型結構指定的字型屬性。  
   
  [in]*dwFontDialogFlags*  
- 會套用至字型 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](http://msdn.microsoft.com/library/windows/desktop/ms646832)。  
+ 會套用至字型 對話方塊會顯示當您按一下屬性值的下拉式按鈕的樣式。 預設值是 CF_EFFECTS 和 CF_SCREENFONTS 合 (OR)。 如需詳細資訊，請參閱 <<c0>  *旗標*的參數[CHOOSEFONT 結構](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)。  
   
  [in]*lpszDescr*  
  [字型] 屬性的描述。 預設值是 NULL。  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)該結構描述選取的字型。  
+ 指標[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)該結構描述選取的字型。  
   
 ### <a name="remarks"></a>備註  
   

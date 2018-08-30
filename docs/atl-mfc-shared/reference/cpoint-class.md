@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 03a47ea35740a7e5d019e4c932ec879f18e0714e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204022"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 類似於 Windows `POINT` 結構。  
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 ## <a name="remarks"></a>備註  
  它也包含成員函式來操作`CPoint`並[點](../../mfc/reference/point-structure1.md)結構。  
   
- A`CPoint`物件可以是任一處使用`POINT`使用結構。 這個類別的 「 大小 」 進行互動的運算子都接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，因為這兩個是可互換。  
+ A`CPoint`物件可以是任一處使用`POINT`使用結構。 這個類別的 「 大小 」 進行互動的運算子都接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構，因為這兩個是可互換。  
   
 > [!NOTE]
 >  此類別衍生自`tagPOINT`結構。 (名稱`tagPOINT`是較不常使用的名稱`POINT`結構。)這表示的資料成員`POINT`結構`x`並`y`，可存取的資料成員的`CPoint`。  
@@ -103,7 +103,7 @@ CPoint(LPARAM dwPoint) throw();
  [點](../../mfc/reference/point-structure1.md)結構或`CPoint`，指定用來初始化值`CPoint`。  
   
  *initSize*  
- [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用來初始化值`CPoint`。  
+ [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用來初始化值`CPoint`。  
   
  *dwPoint*  
  設定組`x`的低序位字組的成員*dwPoint*並`y`高序位字組的成員*dwPoint*。  
@@ -158,7 +158,7 @@ void Offset(SIZE size) throw();
  指定的數量 ([點](../../mfc/reference/point-structure1.md)或是`CPoint`) 位移`CPoint`。  
   
  *size*  
- 指定的數量 ([大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](../../atl-mfc-shared/reference/csize-class.md)) 位移`CPoint`。  
+ 指定的數量 ([大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)或是[CSize](../../atl-mfc-shared/reference/csize-class.md)) 位移`CPoint`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
@@ -207,7 +207,7 @@ void operator+=(POINT point) throw();
   
 ### <a name="parameters"></a>參數  
  *size*  
- 包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
  *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
@@ -232,7 +232,7 @@ void operator-=(POINT point) throw();
   
 ### <a name="parameters"></a>參數  
  *size*  
- 包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
  *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
@@ -258,7 +258,7 @@ CRect operator+(const RECT* lpRect) const throw();
   
 ### <a name="parameters"></a>參數  
  *size*  
- 包含[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ 包含[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
  *點*  
  包含[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
@@ -292,7 +292,7 @@ CPoint operator-() const throw();
  A[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
   
  *size*  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ A[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
   
  *lpRect*  
  指標[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。  

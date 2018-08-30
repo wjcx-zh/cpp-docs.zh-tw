@@ -1,5 +1,5 @@
 ---
-title: 圖形物件 |Microsoft 文件
+title: 圖形物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -51,18 +51,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dd8fc67f7cdc11328c4da9643f57b65a1cc6bfd0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930842"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197181"
 ---
 # <a name="graphic-objects"></a>圖形物件
 Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供可繪製線條的畫筆、可填滿內部的筆刷和可繪製文字的字型。 MFC 提供相當於 Windows 中繪圖工具的圖形物件類別。 下表顯示可用的類別和對等的 Windows 繪圖裝置介面 (GDI) 控制代碼類型。  
   
 > [!NOTE]
->  如需詳細資訊，請參閱 GDI + SDK 文件，網址： [ http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。  
+>  如需詳細資訊，請參閱 GDI + SDK 文件，網址： [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。  
   
  這篇文章說明如何使用這些圖形物件類別：  
   
@@ -78,11 +78,11 @@ Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供�
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|  
   
 > [!NOTE]
->  類別[CImage](../atl-mfc-shared/reference/cimage-class.md)提供增強的點陣圖支援。  
+>  此類別[上的 CImage](../atl-mfc-shared/reference/cimage-class.md)提供增強的點陣圖支援。  
   
  類別庫中的每個圖形物件類別都有一個建構函式，可讓您建立該類別的圖形物件，接著您必須使用適當的建立函式來初始化，例如 `CreatePen`。  
   
- 類別庫中的每個圖形物件類別都具有一個轉型運算子，可將MFC 物件轉型成相關聯的 Windows 控制代碼。 除非相關聯的物件與產生的控制代碼中斷連結，否則產生的控制代碼無效。 使用物件的`Detach`成員函式來卸離的控制代碼。  
+ 類別庫中的每個圖形物件類別都具有一個轉型運算子，可將MFC 物件轉型成相關聯的 Windows 控制代碼。 除非相關聯的物件與產生的控制代碼中斷連結，否則產生的控制代碼無效。 使用物件的`Detach`成員函式來中斷連結的控制代碼。  
   
  下列程式碼會將 `CPen` 物件轉型成 Windows 控制代碼：  
   
@@ -90,9 +90,9 @@ Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供�
   
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>在裝置內容中建立圖形物件  
   
-1.  在堆疊框架上定義圖形物件。 使用類型特有的建立函式來初始化物件，例如 `CreatePen`。 此外，初始化建構函式中的物件。 請參閱的討論[一階段和兩階段建立](../mfc/one-stage-and-two-stage-construction-of-objects.md)，這樣會提供範例程式碼。  
+1.  在堆疊框架上定義圖形物件。 使用類型特有的建立函式來初始化物件，例如 `CreatePen`。 此外，初始化建構函式中的物件。 請參閱討論[一階段和兩階段建立](../mfc/one-stage-and-two-stage-construction-of-objects.md)，以提供範例程式碼。  
   
-2.  [選取的物件放入目前的裝置內容](../mfc/selecting-a-graphic-object-into-a-device-context.md)，舊的圖形物件儲存之前選取。  
+2.  [選取的物件放入目前的裝置內容](../mfc/selecting-a-graphic-object-into-a-device-context.md)，儲存舊圖形物件之前選取。  
   
 3.  完成目前的圖形物件時，選取將舊圖形物件放回裝置內容中，以便還原其狀態。  
   
@@ -101,7 +101,7 @@ Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供�
 > [!NOTE]
 >  如果您將重複使用某個圖形物件，您可以配置它一次，並在每次需要時，選擇將該物件放入裝置內容中。 當您不再需要時，請務必刪除這類物件。  
   
-### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [一階段和兩階段的圖形物件建構](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   

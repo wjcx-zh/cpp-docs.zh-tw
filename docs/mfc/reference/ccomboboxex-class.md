@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca12ba74df7099aa137e5e7dc9c1b8b75131ab66
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201522"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 類別
 藉由提供影像清單的支援，擴充下拉式方塊控制項。  
@@ -109,7 +109,7 @@ class CComboBoxEx : public CComboBox
  這些樣式旗標會進一步說明，在[使用 CComboBoxEx](../../mfc/using-ccomboboxex.md)。  
   
 ## <a name="item-retention-and-callback-item-attributes"></a>保留項目和回呼項目屬性  
- 項目資訊，例如項目和影像、 縮排的值及文字字串的索引會儲存在 Win32 結構[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)、 Windows SDK 中所述。 此結構也包含對應至回呼旗標的成員。  
+ 項目資訊，例如項目和影像、 縮排的值及文字字串的索引會儲存在 Win32 結構[COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)、 Windows SDK 中所述。 此結構也包含對應至回呼旗標的成員。  
   
  如需詳細的概念性的討論，請參閱[使用 CComboBoxEx](../../mfc/using-ccomboboxex.md)。  
   
@@ -150,7 +150,7 @@ virtual BOOL Create(
  指定套用至下拉式方塊的下拉式方塊樣式的組合。 請參閱**備註**如下如需樣式的詳細資訊。  
   
  *rect*  
- 參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是位置和下拉式方塊的大小。  
+ 參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是位置和下拉式方塊的大小。  
   
  *pParentWnd*  
  指標[CWnd](../../mfc/reference/cwnd-class.md)物件，為下拉式方塊的父視窗 (通常`CDialog`)。 它必須不是 NULL。  
@@ -182,7 +182,7 @@ virtual BOOL Create(
   
 - WS_CHILD  
   
- 建立視窗時傳遞的所有其他樣式會被忽略。 `ComboBoxEx`控制項也支援提供的額外功能的延伸的樣式。 這些樣式所述[ComboBoxEx 控制項延伸的樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)，Windows SDK 中。 藉由呼叫設定這些樣式[SetExtendedStyle](#setextendedstyle)。  
+ 建立視窗時傳遞的所有其他樣式會被忽略。 `ComboBoxEx`控制項也支援提供的額外功能的延伸的樣式。 這些樣式所述[ComboBoxEx 控制項延伸的樣式](/windows/desktop/Controls/comboboxex-control-extended-styles)，Windows SDK 中。 藉由呼叫設定這些樣式[SetExtendedStyle](#setextendedstyle)。  
   
  如果您想要使用擴充的 windows 樣式和控制項，呼叫[CreateEx](#createex)而不是`Create`。  
   
@@ -200,13 +200,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
  下拉式方塊控制項的樣式。 請參閱[建立](#create)如需樣式的清單。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -220,7 +220,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而非`Create`套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。  
   
- `CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 您必須將延伸的樣式特定擴充的下拉式方塊控制項中，使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 CBES_EX_CASESENSITIVE。 如需詳細資訊，請參閱本主題中所述的樣式[ComboBoxEx 控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)Windows SDK 中。  
+ `CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 您必須將延伸的樣式特定擴充的下拉式方塊控制項中，使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 CBES_EX_CASESENSITIVE。 如需詳細資訊，請參閱本主題中所述的樣式[ComboBoxEx 控制項擴充樣式](/windows/desktop/Controls/comboboxex-control-extended-styles)Windows SDK 中。  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  移除項目從`ComboBoxEx`控制項。  
@@ -237,7 +237,7 @@ int DeleteItem(int iIndex);
  控制項中所剩餘的項目數目。 如果*iIndex*是無效的則函數會傳回 CB_ERR。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的訊息功能[CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)、 Windows SDK 中所述。 當您呼叫 DeleteItem [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) CBEN_DELETEITEM 通知訊息會傳送至父視窗。  
+ 此成員函式實作的訊息功能[CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem)、 Windows SDK 中所述。 當您呼叫 DeleteItem [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) CBEN_DELETEITEM 通知訊息會傳送至父視窗。  
   
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  呼叫此成員函式中的下拉式方塊控制項中取得的指標`CComboBoxEx`物件。  
@@ -280,7 +280,7 @@ DWORD GetExtendedStyle() const;
  包含用於下拉式方塊控制項的擴充的樣式 DWORD 值。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ComboBoxEx 控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)這些樣式的詳細資訊的 Windows SDK 中。  
+ 請參閱[ComboBoxEx 控制項擴充樣式](/windows/desktop/Controls/comboboxex-control-extended-styles)這些樣式的詳細資訊的 Windows SDK 中。  
   
 ##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  呼叫此成員函式，以取得所使用的影像清單的指標`CComboBoxEx`控制項。  
@@ -304,13 +304,13 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>參數  
  *pCBItem*  
- 指標[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)結構，將會收到項目資訊。  
+ 指標[COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)結構，將會收到項目資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業成功，為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的訊息功能[CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779)、 Windows SDK 中所述。  
+ 此成員函式實作的訊息功能[CBEM_GETITEM](/windows/desktop/Controls/cbem-getitem)、 Windows SDK 中所述。  
   
 ##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  判斷使用者是否已變更的內容`ComboBoxEx`鍵入來編輯控制項。  
@@ -323,7 +323,7 @@ BOOL HasEditChanged();
  如果使用者在控制項的編輯方塊中，輸入了非零值否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的訊息功能[CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782)、 Windows SDK 中所述。  
+ 此成員函式實作的訊息功能[CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged)、 Windows SDK 中所述。  
   
 ##  <a name="insertitem"></a>  CComboBoxEx::InsertItem  
  插入新的項目中`ComboBoxEx`控制項。  
@@ -334,13 +334,13 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>參數  
  *pCBItem*  
- 指標[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)結構，將會收到項目資訊。 此結構包含之項目的回呼旗標值。  
+ 指標[COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)結構，將會收到項目資訊。 此結構包含之項目的回呼旗標值。  
   
 ### <a name="return-value"></a>傳回值  
  新的項目插入成功; 如果索引否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 當您呼叫`InsertItem`，則[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息，其[CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764)通知會傳送至父視窗。  
+ 當您呼叫`InsertItem`，則[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)訊息，其[CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem)通知會傳送至父視窗。  
   
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  呼叫此成員函式來設定延伸用於擴充控制項的下拉式方塊的樣式。  
@@ -362,7 +362,7 @@ DWORD SetExtendedStyle(
  包含先前用於控制項的擴充的樣式 DWORD 值。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[ComboBoxEx 控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)這些樣式的詳細資訊的 Windows SDK 中。  
+ 請參閱[ComboBoxEx 控制項擴充樣式](/windows/desktop/Controls/comboboxex-control-extended-styles)這些樣式的詳細資訊的 Windows SDK 中。  
   
  若要建立擴充控制項具有延伸的 windows 樣式的下拉式方塊，請使用[CreateEx](#createex)。  
   
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  指標[CImageList](../../mfc/reference/cimagelist-class.md)物件，其中包含先前所使用的影像`CComboBoxEx`控制項。 如果先前已經不設定任何映像清單，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的訊息功能[CBEM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775787)、 Windows SDK 中所述。 如果您變更預設編輯控制項的高度，呼叫 Win32 函式[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)調整您的控制項的大小之後您呼叫, `SetImageList`，或無法正常顯示。  
+ 此成員函式實作的訊息功能[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)、 Windows SDK 中所述。 如果您變更預設編輯控制項的高度，呼叫 Win32 函式[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)調整您的控制項的大小之後您呼叫, `SetImageList`，或無法正常顯示。  
   
  `CImageList`傳回的值所指向的物件是暫存物件，並在下一步 的閒置處理期間終結。  
   
@@ -394,13 +394,13 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
   
 ### <a name="parameters"></a>參數  
  *pCBItem*  
- 指標[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)結構，將會收到項目資訊。  
+ 指標[COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)結構，將會收到項目資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業成功，為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的訊息功能[CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788)、 Windows SDK 中所述。  
+ 此成員函式實作的訊息功能[CBEM_SETITEM](/windows/desktop/Controls/cbem-setitem)、 Windows SDK 中所述。  
   
 ##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  設定之視覺樣式的擴充的下拉式方塊控制項。  
@@ -417,7 +417,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  不會使用傳回的值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[CBEM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb775790)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme)訊息、 Windows SDK 中所述。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 MFCIE](../../visual-cpp-samples.md)   

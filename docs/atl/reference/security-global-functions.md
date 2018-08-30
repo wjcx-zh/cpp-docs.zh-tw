@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e6dcaeed793a81580b9ca5ed93ad7e267b534fe
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 053e7adb5a0f5d6c65f599ae694525853bd221a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211787"
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 這些函式提供支援修改 SID 和 ACL 的物件。  
@@ -72,7 +72,7 @@ inline bool AtlGetDacl(
  要擷取的安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *pDacl*  
  將包含擷取的安全性資訊的 DACL 物件的指標。  
@@ -102,7 +102,7 @@ inline bool AtlSetDacl(
  要設定安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *rDacl*  
  DACL 包含新的安全性資訊。  
@@ -136,7 +136,7 @@ inline bool AtlGetGroupSid(
  要從中擷取安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *pSid*  
  指標`CSid`其中將包含新的安全性資訊的物件。  
@@ -165,7 +165,7 @@ inline bool AtlSetGroupSid(
  要設定安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *rSid*  
  `CSid`物件，其中包含新的安全性資訊。  
@@ -194,7 +194,7 @@ inline bool AtlGetOwnerSid(
  要從中擷取安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *pSid*  
  指標`CSid`其中將包含新的安全性資訊的物件。  
@@ -223,7 +223,7 @@ inline bool AtlSetOwnerSid(
  要設定安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *rSid*  
  `CSid`物件，其中包含新的安全性資訊。  
@@ -253,7 +253,7 @@ inline bool AtlGetSacl(
  要從中擷取安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *pSacl*  
  將包含擷取的安全性資訊的 SACL 物件的指標。  
@@ -290,7 +290,7 @@ inline bool AtlSetSacl(
  要設定安全性資訊的物件控制代碼。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*hObject*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。  
   
  *rSacl*  
  SACL 包含新的安全性資訊。  
@@ -334,13 +334,13 @@ inline bool AtlGetSecurityDescriptor(
  以 null 終止的字串，指定要從中擷取安全性資訊的物件名稱的指標。  
   
  *ObjectType*  
- 指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出所識別的物件型別*pszObjectName*參數。  
+ 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*pszObjectName*參數。  
   
  *pSecurityDescriptor*  
  它會接收要求的安全性描述元物件。  
   
  *requestedInfo*  
- 一組[SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)位元旗標，表示要擷取的安全性資訊的類型。 這個參數可以是下列值的組合。  
+ 一組[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位元旗標，表示要擷取的安全性資訊的類型。 這個參數可以是下列值的組合。  
   
  *bRequestNeededPrivileges*  
  如果為 true，此函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成時。  

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c39a91fb01f8a67c9e6eb2e5189cf1b81ba4bd51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882828"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195208"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 全域堆積函式。  
@@ -55,7 +55,7 @@ class CGlobalHeap : public IAtlMemMgr
  `CGlobalHeap` 實作使用 Win32 全域堆積函式的記憶體配置函式。  
   
 > [!NOTE]
->  全域堆積函式會低於其他記憶體管理函式，並不會提供許多功能。 因此，應該使用新的應用程式[堆積函式](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 中會有這些[CWin32Heap](../../atl/reference/cwin32heap-class.md)類別。 全域函式仍會使用 DDE 和剪貼簿函式。  
+>  全域堆積函式會低於其他記憶體管理函式，並不會提供許多功能。 因此，應該使用新的應用程式[堆積函式](/windows/desktop/Memory/heap-functions)。 中會有這些[CWin32Heap](../../atl/reference/cwin32heap-class.md)類別。 全域函式仍會使用 DDE 和剪貼簿函式。  
   
 ## <a name="example"></a>範例  
  範例，請參閱[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  呼叫[cglobalheap:: Free](#free)或是[cglobalheap:: Reallocate](#reallocate)釋放這個方法所配置的記憶體。  
   
- 使用實作[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)搭配 GMEM_FIXED 旗標參數。  
+ 使用實作[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)搭配 GMEM_FIXED 旗標參數。  
   
 ##  <a name="free"></a>  Cglobalheap:: Free  
  呼叫這個方法來釋放此記憶體管理員所配置的記憶體區塊。  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  此記憶體管理員先前所配置之記憶體的指標。 NULL 是有效的值，且沒有任何作用。  
   
 ### <a name="remarks"></a>備註  
- 使用實作[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)。  
+ 使用實作[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)。  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  傳回配置的記憶體區塊大小，以位元組為單位。  
   
 ### <a name="remarks"></a>備註  
- 使用實作[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)。  
+ 使用實作[GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize)。  
   
 ##  <a name="reallocate"></a>  Cglobalheap:: Reallocate  
  呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  呼叫[cglobalheap:: Free](#free)釋放這個方法所配置的記憶體。  
   
- 使用實作[GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590)。  
+ 使用實作[GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208171"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 類別
 這個類別會實作`IUnknown`的非彙總的物件，但是不會遞增模組鎖定計數的建構函式。  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|遞減參考計數物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComObjectNoLock` 類似於[CComObject](../../atl/reference/ccomobject-class.md) ，因為它會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非彙總的物件; 不過，`CComObjectNoLock`中建構函式會遞增模組的鎖定計數。  
+ `CComObjectNoLock` 類似於[CComObject](../../atl/reference/ccomobject-class.md) ，因為它會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非彙總的物件; 不過，`CComObjectNoLock`中建構函式會遞增模組的鎖定計數。  
   
  使用 ATL`CComObjectNoLock`內部的 class factory。 一般情況下，您不會直接使用這個類別。  
   
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- **void\***  
- [in]不使用這個未命名的參數。 其存在與其他對稱 **CCom***XXX*`Object`*XXX* 建構函式。  
+ <em>void\*</em>  
+ [in]不使用這個未命名的參數。 存在與其他對稱`CComXXXObjectXXX`建構函式。  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  解構函式。  

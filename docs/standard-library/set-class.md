@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d549d3440de902bf9888fa399e5636b93001ca29
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964882"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204606"
 ---
 # <a name="set-class"></a>set 類別
 
@@ -118,13 +118,16 @@ class set
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存於集中的項目資料類型。
+*Key*<br/>
+ 要存放在集合中的項目資料類型。
 
-*Traits*類型，提供函式物件可比較兩個項目值做為排序鍵來判斷集合中的相對順序。 這是選擇性引數，而二元述詞 **less** *\<Key>* 為預設值。
+*特性*<br/>
+ 類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在集合中的相對順序。 這是選擇性引數，而二元述詞 **less** *\<Key>* 為預設值。
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-*配置器*表示預存配置器物件，封裝有關集合的配置和解除配置之記憶體的詳細資訊的型別。 這個引數為選擇性，而且預設值是 **allocator *\<機碼 >。*
+*配置器*<br/>
+ 代表預存配置器物件的類型，封裝有關集合之記憶體配置和解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
 
@@ -484,7 +487,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要從集合比對項目的索引鍵。
+*key*<br/>
+ 要從集合中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -929,7 +933,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 set 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 set 中項目的排序鍵進行比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1013,13 +1018,17 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*其中*要移除之項目的位置。
+*Where*<br/>
+ 要移除之項目的位置。
 
-*第一個*要移除之第一個項目的位置。
+*第一個*<br/>
+ 要移除之第一個項目的位置。
 
-*最後一個*要移除的最後一個元素之後的位置。
+*最後一個*<br/>
+ 緊接在要移除之最後一個項目後面的位置。
 
-*索引鍵*要移除之項目的索引鍵的值。
+*Key*<br/>
+ 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1121,7 +1130,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之 set 中元素的排序鍵比對的索引鍵值。
+*key*<br/>
+ 要以所搜尋之 set 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1584,7 +1594,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 set 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 set 中項目的排序鍵進行比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2203,7 +2214,8 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*右*的引數可讓您設定提供要與目標 set 交換之元素。
+*right*<br/>
+ 提供要與目標 set 交換之項目的引數 set。
 
 ### <a name="remarks"></a>備註
 
@@ -2271,7 +2283,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 set 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 set 中項目的排序鍵進行比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 

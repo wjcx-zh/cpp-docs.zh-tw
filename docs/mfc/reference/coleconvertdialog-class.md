@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4c63eda0bbe734bd7c9f0a972e6756a444369123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849679"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212426"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 類別
-如需詳細資訊，請參閱 < [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的結構。  
+如需詳細資訊，請參閱 < [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK 中的結構。  
   
 ## <a name="syntax"></a>語法  
   
@@ -135,7 +135,7 @@ explicit COleConvertDialog (
 ### <a name="remarks"></a>備註  
  若要顯示的對話方塊，請呼叫[DoModal](#domodal)函式。  
   
- 如需詳細資訊，請參閱 < [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)並[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)結構。  
+ 如需詳細資訊，請參閱 < [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)並[OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta)結構。  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  呼叫此函式，傳回已成功從之後[DoModal](#domodal)可以轉換，或是在啟動型別的物件[COleClientItem](../../mfc/reference/coleclientitem-class.md)。  
@@ -168,7 +168,7 @@ virtual INT_PTR DoModal();
   
 - 如果使用者已取消對話方塊，IDCANCEL。  
   
-- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) Windows SDK 中的函式。  
+- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIConvert](/windows/desktop/api/oledlg/nf-oledlg-oleuiconverta) Windows SDK 中的函式。  
   
 ### <a name="remarks"></a>備註  
  如果您想要設定的成員初始化各種不同的對話方塊控制項[m_cv](#m_cv)結構，您應該執行這項操作之前先呼叫`DoModal`，但在建構對話方塊物件之後。  
@@ -188,7 +188,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>備註  
  呼叫此函式之後，才[DoModal](#domodal)傳回 IDOK。  
   
- 如需詳細資訊，請參閱 < [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  呼叫此函式可判斷使用者是否選擇要選取的項目顯示為圖示。  
@@ -207,7 +207,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>備註  
  呼叫此函式之後，才[DoModal](#domodal)傳回 IDOK。  
   
- 如需有關繪圖外觀的詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的資料結構。  
+ 如需有關繪圖外觀的詳細資訊，請參閱[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的資料結構。  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  呼叫此函式可取得包含選取的項目圖示的層面之中繼檔的控制代碼。  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>備註  
  直接或透過成員函式，則可以修改此結構的成員。  
   
- 如需詳細資訊，請參閱 < [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK 中的結構。  
   
 ## <a name="see-also"></a>另請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   

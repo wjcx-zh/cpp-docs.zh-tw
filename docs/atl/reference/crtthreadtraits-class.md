@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c182840ed3592a229b8d6c7b98930ade57a18b25
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 676d14b1027cbc9df68e4be26a9a1451a29d8c37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883017"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204308"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 類別
 這個類別會提供建立函式的 CRT 往來文章。 如果執行緒會使用 CRT 函式，請使用這個類別。  
@@ -48,7 +48,7 @@ class CRTThreadTraits
 |[CRTThreadTraits::CreateThread](#createthread)|（靜態）呼叫此函式來建立可以使用 CRT 函式的執行緒。|  
   
 ## <a name="remarks"></a>備註  
- 執行緒的特性是執行緒的提供特定類型建立函式的類別。 為 Windows 建立函式具有相同的簽章和語意[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函式。  
+ 執行緒的特性是執行緒的提供特定類型建立函式的類別。 為 Windows 建立函式具有相同的簽章和語意[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)函式。  
   
  下列類別會使用執行緒的特性：  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out]變數的位址 DWORD，成功時，接收新建立的執行緒的執行緒識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回新建立的執行緒或 NULL 的控制代碼，在失敗。 呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)若要取得延伸錯誤資訊。  
+ 傳回新建立的執行緒或 NULL 的控制代碼，在失敗。 呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)若要取得延伸錯誤資訊。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)更多有關此函數的參數。  
+ 請參閱[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)更多有關此函數的參數。  
   
  此函式會呼叫[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)建立執行緒。  
   

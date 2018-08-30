@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882841"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207192"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 這個類別會實作包含在另一個物件的視窗。  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|  
 |在 ATL 中使用視窗|[ATL 視窗類別](../../atl/atl-window-classes.md)|  
 |ATL 專案精靈|[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)和後續 Windows SDK 中的主題|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)和後續 Windows SDK 中的主題|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in]父系或擁有者的視窗控制代碼。  
   
  *rect*  
- [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。  
+ [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。  
   
  *szWindowName*  
  [in]指定視窗的名稱。 預設值是 NULL。  
   
  *cheaderctrl:: Create*  
- [in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  *dwExStyle*  
- [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱 < [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱 < [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *MenuOrID*  
  [in]子視窗的視窗識別項。 最上層視窗中，視窗的功能表控制代碼。 預設值是**0U**。  
   
  *lpCreateParam*  
- [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，新建立的視窗; 的控制代碼否則為 NULL。  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  訊息處理的結果。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，`DefWindowProc`呼叫[CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571)要傳送的訊息資訊中指定的視窗程序的 Win32 函式[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
+ 根據預設，`DefWindowProc`呼叫[CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571)要傳送的訊息資訊中指定的視窗程序的 Win32 函式[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  傳回目前的訊息 (`m_pCurrentMsg`)。  

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606836"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206457"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ 元件擴充功能)
 
@@ -85,7 +85,7 @@ modifiereventdelegate^ event_name
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> [ 事件 (C + + /CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx)。
+如需詳細資訊，請參閱 <<c0> [ 事件 (C + + /CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx)。
 
 如果您想要加入然後移除事件處理常式，您必須儲存加入作業所傳回的 EventRegistrationToken 結構。 然後在移除作業中，您必須使用儲存的 EventRegistrationToken 結構來識別要移除的事件處理常式。
 

@@ -1,5 +1,5 @@
 ---
-title: 使用 CListCtrl |Microsoft 文件
+title: 使用 CListCtrl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210486"
 ---
 # <a name="using-clistctrl"></a>使用 CListCtrl
-使用清單控制項顯示圖示與標籤的所有排列，就像檔案總管或文字的單欄式清單 (含有或不含圖示) 中的顯示一樣。 四個可能的 「 檢視 」 （不要與 MFC 檢視混淆） 說明您可以在清單控制項中 — 圖示檢視、 小圖示檢視、 清單檢視和報表檢視，請參閱中的檢視[CListCtrl](../mfc/reference/clistctrl-class.md)類別概觀。  
+使用清單控制項顯示圖示與標籤的所有排列，就像檔案總管或文字的單欄式清單 (含有或不含圖示) 中的顯示一樣。 如需四個可能 「 檢視 」 （不要與 MFC 檢視混淆） 的描述您可以在清單控制項 — 圖示檢視、 小圖示檢視、 清單檢視和報表檢視，請參閱中的檢視[CListCtrl](../mfc/reference/clistctrl-class.md)類別概觀。  
   
  在部分檢視，使用者可將圖示拖曳到不同位置或編輯圖示標籤。 例如，請查看檔案總管的右窗格，其在非對話視窗中使用清單控制項。 您可以在檔案總管的檢視功能表中，測試可用的檢視。  
   
- 如需相關資訊，請參閱[關於清單檢視控制項](http://msdn.microsoft.com/library/windows/desktop/bb774735)Windows SDK 中。  
+ 如需相關資訊，請參閱[有關的清單檢視控制項](/windows/desktop/Controls/list-view-controls-overview)Windows SDK 中。  
   
 > [!NOTE]
->  Windows SDK 參考清單控制項視為 「 清單檢視控制項 」。 「檢視」的這個使用方式不是指 MFC 檢視類別，特別是 `CListView`。 如需詳細資訊，請參閱[清單控制項和清單檢視](../mfc/list-control-and-list-view.md)。  
+>  Windows SDK 將清單控制項稱為 「 清單檢視控制項 」。 「檢視」的這個使用方式不是指 MFC 檢視類別，特別是 `CListView`。 如需詳細資訊，請參閱 < [ 清單控制項和清單檢視](../mfc/list-control-and-list-view.md)。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [清單控制項和清單檢視](../mfc/list-control-and-list-view.md)  
   

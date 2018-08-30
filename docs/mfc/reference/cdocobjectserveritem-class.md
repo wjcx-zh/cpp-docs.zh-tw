@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027134"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211801"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 類別
 實作 DocObject 伺服器專屬的 OLE 伺服器動詞命令。  
@@ -62,7 +62,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|由架構呼叫以讓 DocObject 項目就地使用中。 如果項目不是 DocObject，呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
   
 ## <a name="remarks"></a>備註  
- `CDocObjectServerItem` 定義可覆寫成員函式： [OnHide](#onhide)， [OnOpen](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd)，並[OnShow](#onshow)。  
+ `CDocObjectServerItem` 定義可覆寫成員函式： [OnHide](#onhide)， [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd)，並[OnShow](#onshow)。  
   
  若要使用`CDocObjectServerItem`，確保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)覆寫中您`COleServerDoc`-衍生的類別會傳回新`CDocObjectServerItem`物件。 如果您需要變更您的項目中的任何功能，您可以建立您自己的新執行個體`CDocObjectServerItem`-衍生的類別。  
   

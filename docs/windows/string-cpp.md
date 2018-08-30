@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb3a57cec78c0ea02e16edd890d2a66362bfc011
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 86a6437e7a30fb92d2af66c3d657150549273cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208445"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "42594865"
 
 ## <a name="remarks"></a>備註
 
-**字串**c + + 屬性具有相同的功能[字串](http://msdn.microsoft.com/library/windows/desktop/aa367270)MIDL 屬性。
+**字串**c + + 屬性具有相同的功能[字串](/windows/desktop/Midl/string)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

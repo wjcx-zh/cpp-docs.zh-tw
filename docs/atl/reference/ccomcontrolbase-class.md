@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882991"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208578"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 這個類別提供方法來建立及管理 ATL 的控制項。  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|控制項，以表示容器的座標單位為像素位置。|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|以 himetric 為單位 （每個單位為 0.01 公釐為單位） 的特定顯示控制項的範圍。|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|控制項以 himetric 為單位 （每個單位為 0.01 公釐為單位） 的實體大小。|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|在容器上的諮詢連接的直接指標 (容器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|在容器上的諮詢連接的直接指標 (容器[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|A`CComDispatchDriver`物件，可讓您擷取及設定容器的屬性，透過`IDispatch`指標。|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|在容器內控制項的用戶端站台指標。|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|提供一種標準方式來保存資料物件之間的諮詢連接，並告知接收。|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|容器的指標[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)介面指標。|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|容器的指標[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)介面指標。|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|提供一個方式來保存諮詢連接的標準實作。|  
   
 ## <a name="remarks"></a>備註  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>備註  
- 視窗型，控制是否`~CComControlBase`終結藉由呼叫[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)。  
+ 視窗型，控制是否`~CComControlBase`終結藉由呼叫[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)。  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  擷取所要求介面的指標。  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>參數  
  *ppFont*  
- 指標，容器的環境[IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673)介面。  
+ 指標，容器的環境[IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont)介面。  
   
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>參數  
  *ppFont*  
- 指標，容器的環境[IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695)分派介面。  
+ 指標，容器的環境[IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695)分派介面。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  若要使用此資料成員，您的控制項類別中，您必須將它宣告為資料成員控制項類別中。 因為它等位中的基底類別內宣告您的控制項類別不會從基底類別繼承這個資料成員。  
   
- 如果您加入**自動調整大小**選項[內建屬性](../../atl/reference/stock-properties-atl-control-wizard.md) 索引標籤的 ATL 控制項精靈，精靈會自動建立這個資料成員控制項類別中，建立 put 並取得屬性的方法並支援[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)屬性變更時自動通知容器。  
+ 如果您加入**自動調整大小**選項[內建屬性](../../atl/reference/stock-properties-atl-control-wizard.md) 索引標籤的 ATL 控制項精靈，精靈會自動建立這個資料成員控制項類別中，建立 put 並取得屬性的方法並支援[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)屬性變更時自動通知容器。  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  旗標，表示`IDataObjectImpl::GetData`並`CComControlBase::GetZoomInfo`應該設定的控制項大小`m_sizeNatural`而不是從`m_sizeExtent`。  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  若要使用此資料成員，您的控制項類別中，您必須將它宣告為資料成員控制項類別中。 因為它等位中的基底類別內宣告您的控制項類別不會從基底類別繼承這個資料成員。  
   
- 資料成員`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)介面，根據的值`m_bWndLess`和`m_bInPlaceSiteEx`旗標。 (資料成員`m_bNegotiatedWnd`必須是 TRUE 為`m_spInPlaceSite`為有效的指標。)  
+ 資料成員`m_spInPlaceSite`指向[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)介面，根據的值`m_bWndLess`和`m_bInPlaceSiteEx`旗標。 (資料成員`m_bNegotiatedWnd`必須是 TRUE 為`m_spInPlaceSite`為有效的指標。)  
   
  如果`m_bWndLess`為 FALSE 時，`m_bInPlaceSiteEx`為 TRUE 時，`m_spInPlaceSite`是`IOleInPlaceSiteEx`介面指標。 請參閱[m_spInPlaceSite](#m_spinplacesite)顯示這些三個資料成員之間的關聯性的資料表。  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  若要使用此資料成員，您的控制項類別中，您必須將它宣告為資料成員控制項類別中。 因為它等位中的基底類別內宣告您的控制項類別不會從基底類別繼承這個資料成員。  
   
- 這個旗標會檢查[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)而且，如果為 TRUE，`SetExtent`通知檢視變更的容器。 如果設定此旗標，OLEMISC_RECOMPOSEONRESIZE 位元[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)也應該設定列舉型別。  
+ 這個旗標會檢查[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)而且，如果為 TRUE，`SetExtent`通知檢視變更的容器。 如果設定此旗標，OLEMISC_RECOMPOSEONRESIZE 位元[OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)也應該設定列舉型別。  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  表示控制項在自上次儲存後已變更的旗標。  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  若要使用此資料成員，您的控制項類別中，您必須將它宣告為資料成員控制項類別中。 因為它等位中的基底類別內宣告您的控制項類別不會從基底類別繼承這個資料成員。  
   
- 資料成員`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)介面，根據的值`m_bWndLess`並[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)旗標。 (資料成員[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)必須是 TRUE for [CComControlBase::m_spInPlaceSite](#m_spinplacesite)為有效的指標。)  
+ 資料成員`m_spInPlaceSite`指向[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)介面，根據的值`m_bWndLess`並[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)旗標。 (資料成員[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)必須是 TRUE for [CComControlBase::m_spInPlaceSite](#m_spinplacesite)為有效的指標。)  
   
  如果`m_bWndLess`為 TRUE 時，`m_spInPlaceSite`是`IOleInPlaceSiteWindowless`介面指標。 請參閱[CComControlBase::m_spInPlaceSite](#m_spinplacesite)顯示這些資料成員之間完成的關聯性的資料表。  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  您可以將大小轉換為全域函式與像素[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)。  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- 在容器上的諮詢連接的直接指標 (容器[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。  
+ 在容器上的諮詢連接的直接指標 (容器[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink))。  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  若要使用此資料成員，您的控制項類別中，您必須將它宣告為資料成員控制項類別中。 因為它等位中的基底類別內宣告您的控制項類別不會從基底類別繼承這個資料成員。  
   
- 資料物件是的控制項，可以傳送資料，並實作[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)，其方法指定的資料格式和傳輸媒介。  
+ 資料物件是的控制項，可以傳送資料，並實作[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)，其方法指定的資料格式和傳輸媒介。  
   
- 介面`m_spDataAdviseHolder`會實作[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579)並[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448)方法來建立和刪除容器的諮詢連接。 控制項的容器必須實作所支援的通知接收[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)介面。  
+ 介面`m_spDataAdviseHolder`會實作[IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise)並[IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise)方法來建立和刪除容器的諮詢連接。 控制項的容器必須實作所支援的通知接收[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)介面。  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- 容器的指標[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)介面指標。  
+ 容器的指標[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite)， [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex)，或[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless)介面指標。  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  若要使用此資料成員，您的控制項類別中，您必須將它宣告為資料成員控制項類別中。 因為它等位中的基底類別內宣告您的控制項類別不會從基底類別繼承這個資料成員。  
   
- 介面`m_spOleAdviseHolder`會實作[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573)並[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749)方法來建立和刪除容器的諮詢連接。 控制項的容器必須實作所支援的通知接收[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)介面。  
+ 介面`m_spOleAdviseHolder`會實作[IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise)並[IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise)方法來建立和刪除容器的諮詢連接。 控制項的容器必須實作所支援的通知接收[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)介面。  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  覆寫這個方法，以繪製您的控制項。  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>參數  
  *advf*  
- 通知旗標，指定如何在呼叫[IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283)為止。 值是從[ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742)列舉型別。  
+ 通知旗標，指定如何在呼叫[IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange)為止。 值是從[ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf)列舉型別。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `SendOnViewChange` 呼叫[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)。 唯一的值*lindex*目前支援為-1，這表示感興趣的是整個檢視。  
+ `SendOnViewChange` 呼叫[IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange)。 唯一的值*lindex*目前支援為-1，這表示感興趣的是整個檢視。  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  設定或移除或從控制項的鍵盤焦點。  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  如果控制項成功接收焦點，為 true，則傳回否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 針對視窗型控制項，而 Windows API 函式[SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312)呼叫。 無視窗控制項，如[IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745)呼叫。 透過這個呼叫，無視窗控制項取得鍵盤焦點，並可回應視窗訊息。  
+ 針對視窗型控制項，而 Windows API 函式[SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312)呼叫。 無視窗控制項，如[IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus)呼叫。 透過這個呼叫，無視窗控制項取得鍵盤焦點，並可回應視窗訊息。  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  設定資料成員`m_bRequiresSave`中的值*bDirty*。  

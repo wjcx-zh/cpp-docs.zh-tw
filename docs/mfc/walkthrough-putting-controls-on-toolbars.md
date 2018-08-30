@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 236c7df60fc023710139c8975486428fd7cd7cfd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199260"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>逐步解說：將控制項放在工具列上
 本主題說明如何將包含 Windows 控制項的工具列按鈕加入至工具列。 在 MFC 中，必須是工具列按鈕[CMFCToolBarButton 類別](../mfc/reference/cmfctoolbarbutton-class.md)-衍生類別，例如[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 類別](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 類別](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 類別](../mfc/reference/cmfctoolbarmenubutton-class.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "39027121"
   
 2.  建立新的類別，`CFindComboBox`衍生自[CComboBox 類別](../mfc/reference/ccombobox-class.md)。  
   
-3.  在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。 這個方法會啟用下拉式方塊處理[WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280)訊息。 如果使用者點閱 Esc 鍵 (`VK_ESCAPE`)，便會將焦點移回主框架視窗。 如果使用者點閱 Enter 鍵 (`VK_ENTER`)，張貼到主框架視窗包含的 WM_COMMAND 訊息`ID_EDIT_FIND_COMBO`命令 id。  
+3.  在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。 這個方法會啟用下拉式方塊處理[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息。 如果使用者點閱 Esc 鍵 (`VK_ESCAPE`)，便會將焦點移回主框架視窗。 如果使用者點閱 Enter 鍵 (`VK_ENTER`)，張貼到主框架視窗包含的 WM_COMMAND 訊息`ID_EDIT_FIND_COMBO`命令 id。  
   
 4.  建立的類別**尋找**下拉式方塊按鈕，衍生自[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此範例中，它的名稱是 `CFindComboButton`。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "39027121"
   
     1.  傳遞 `ID_EDIT_FIND_COMBO` 做為命令 ID。  
   
-    2.  使用[CCommandManager::GetCmdImage](http://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca)使用`ID_EDIT_FIND`取得的映像索引。  
+    2.  使用[CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca)使用`ID_EDIT_FIND`取得的映像索引。  
   
     3.  如需可用下拉式方塊樣式的清單，請參閱 <<c0> [ 下拉式方塊樣式](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)。  
   

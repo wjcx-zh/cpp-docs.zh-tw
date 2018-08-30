@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885636"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195330"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
 這個類別會建立背景工作執行緒或使用現有工作區、 等候一或多個核心物件控制代碼，而且其中一個控點而收到信號時，執行指定的用戶端函式。  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 移除控制代碼時[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)將傳遞至相關聯物件上呼叫[AddHandle](#addhandle)。 如果這個呼叫失敗，`CWorkerThread`會呼叫 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)控制代碼上的函式。  
+ 移除控制代碼時[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)將傳遞至相關聯物件上呼叫[AddHandle](#addhandle)。 如果這個呼叫失敗，`CWorkerThread`會呼叫 Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211)控制代碼上的函式。  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  呼叫此方法以關閉 背景工作執行緒。  

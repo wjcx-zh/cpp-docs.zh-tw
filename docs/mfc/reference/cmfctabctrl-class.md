@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540173"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199842"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`類別會提供索引標籤控制項的功能。 索引標籤控制項會顯示頂端或底部有一般或 3D 索引標籤的可停駐視窗。 索引標籤可以顯示文字和影像，當在使用中狀態時，也可變更色彩。  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|資料指標第一次到索引標籤的 [控制] 視窗拖曳時由架構呼叫。|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|當滑鼠移動經過置放目標視窗呼叫由架構在拖曳作業期間。 (覆寫[CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)。)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|會顯示快顯功能表的索引標籤式視窗，會等到使用者選取一個索引標籤，並讓選取的索引標籤作用中的索引標籤。|  
-|`CMFCTabCtrl::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|  
+|`CMFCTabCtrl::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|  
 |`CMFCTabCtrl::RecalcLayout`|重新計算索引標籤控制項的內部配置。 (覆寫[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|將索引標籤控制項中的 目前 索引標籤設為在多個文件介面 索引標籤群組中的 作用中 索引標籤。|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|啟動索引標籤。(覆寫[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  資料物件，其中包含使用者拖曳的資料點。  
   
  [in]*dwKeyState*  
- 包含的輔助按鍵的狀態。 這個參數是的位元組合 (OR) 的下列值： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊，請參閱 <<c0>  **訊息參數**一節[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
+ 包含的輔助按鍵的狀態。 這個參數是的位元組合 (OR) 的下列值： MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊，請參閱 <<c0>  **訊息參數**一節[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。  
   
  [in]*點*  
  包含工作區座標中的資料指標的目前的位置。  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到置放目標的物件。  
   
  [in]*dwKeyState*  
- 這是的位元組合 (OR) MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON 輔助按鍵，狀態。 如需詳細資訊，請參閱 < 訊息參數 」 中[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
+ 這是的位元組合 (OR) MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON 輔助按鍵，狀態。 如需詳細資訊，請參閱 < 訊息參數 」 中[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。  
   
  [in]*點*  
  目前的滑鼠位置。  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>參數  
  [out]*pScrollInfo*  
- 指標[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)結構或 NULL。 當這個方法傳回時，且此參數不是 NULL，此結構包含捲軸上的所有參數。 預設值是 NULL。  
+ 指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構或 NULL。 當這個方法傳回時，且此參數不是 NULL，此結構包含捲軸上的所有參數。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。  

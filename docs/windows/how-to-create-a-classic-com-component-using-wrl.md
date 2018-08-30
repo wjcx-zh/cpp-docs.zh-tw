@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75111fc172b232c7e488e6a6f81bc696d09be939
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3844c0ad304c1ebd18a707ca1821b72b60e92707
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198015"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：使用 WRL 建立傳統 COM 元件
 
@@ -38,7 +38,7 @@ ms.locfileid: "42584248"
 
    [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. 在 CalculatorComponent.cpp 中定義 `CalculatorComponent` 類別。 `CalculatorComponent`類別繼承自[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md)指定的類別衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)而非[IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)。 (`IInspectable`僅適用於 Windows 執行階段應用程式元件。)`CoCreatableClass`建立適用於函式這類類別的 factory [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。
+5. 在 CalculatorComponent.cpp 中定義 `CalculatorComponent` 類別。 `CalculatorComponent`類別繼承自[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md)指定的類別衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)而非[IInspectable](https://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)。 (`IInspectable`僅適用於 Windows 執行階段應用程式元件。)`CoCreatableClass`建立適用於函式這類類別的 factory [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。
 
    [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 

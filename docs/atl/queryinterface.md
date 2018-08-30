@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208185"
 ---
 # <a name="queryinterface"></a>QueryInterface
-不過有些的機制的物件可以用來表示靜態 （它具現化之前），它所提供的功能，是使用基本的 COM 機制`IUnknown`方法呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。  
+不過有些的機制的物件可以用來表示靜態 （它具現化之前），它所提供的功能，是使用基本的 COM 機制`IUnknown`方法呼叫[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。  
   
  每個介面衍生自`IUnknown`，因此每個介面的實作`QueryInterface`。 不論實作，這個方法會查詢物件使用呼叫端想要的指標之介面的 IID。 如果物件支援該介面，`QueryInterface`擷取介面的指標，同時呼叫`AddRef`。 否則，它會傳回 E_NOINTERFACE 錯誤程式碼。  
   
@@ -34,5 +34,5 @@ ms.locfileid: "38953417"
   
 ## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
- [瀏覽物件中的 QueryInterface:](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [瀏覽物件中的 QueryInterface:](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6abf906d9fa0e5866b28a0c617e68edead8378
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2772ec96558c4aa1d1f5fcb573166a37a31c0592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201201"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 表示通常在浮動工具列周圍出現的半高度框架視窗。  
@@ -165,7 +165,7 @@ virtual BOOL CreateEx(
  指定的擴充的樣式`CMiniFrameWnd`所建立。 套用的任何[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)至視窗。  
   
  *lpClassName*  
- 指向以 null 結尾的字元字串，可命名 Windows 類別 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱向全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式或任何預先定義的控制項類別名稱。 它必須不是 NULL。  
+ 指向以 null 結尾的字元字串，可命名 Windows 類別 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱向全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式或任何預先定義的控制項類別名稱。 它必須不是 NULL。  
   
  *lpWindowName*  
  指向以 null 結束的字元字串，包含視窗的名稱。  

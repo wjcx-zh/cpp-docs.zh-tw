@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cef503bf9862f1259e25aff76a013d60776077
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 36aab0177eaa62e5ec9601d9258c7de1a6ce7b59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883722"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205686"
 ---
 # <a name="options-atl-simple-object-wizard"></a>選項, ATL 簡單物件精靈
 使用 [ATL 簡單物件精靈] 的這個頁面來設計以提升的效率及物件的錯誤支援。  
@@ -35,14 +35,14 @@ ms.locfileid: "37883722"
   
 |選項|描述|  
 |------------|-----------------|  
-|**Single**|指定的物件一律在主要 COM 執行緒執行。 請參閱[單一執行緒 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112)並[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)如需詳細資訊。|  
-|**Apartment**|指定物件使用 apartment 執行緒。 相當於單一執行緒 apartment。 Apartment 執行緒的元件的每個物件會指派其物件的存留期間的執行緒 apartment不過，多個執行緒可以用於多個物件。 每個 apartment 會繫結至特定的執行緒，並有 Windows 訊息幫浦 （預設值）。<br /><br /> 請參閱[單一執行緒 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112)如需詳細資訊。|  
+|**Single**|指定的物件一律在主要 COM 執行緒執行。 請參閱[單一執行緒 Apartment](/windows/desktop/com/single-threaded-apartments)並[InprocServer32](/windows/desktop/com/inprocserver32)如需詳細資訊。|  
+|**Apartment**|指定物件使用 apartment 執行緒。 相當於單一執行緒 apartment。 Apartment 執行緒的元件的每個物件會指派其物件的存留期間的執行緒 apartment不過，多個執行緒可以用於多個物件。 每個 apartment 會繫結至特定的執行緒，並有 Windows 訊息幫浦 （預設值）。<br /><br /> 請參閱[單一執行緒 Apartment](/windows/desktop/com/single-threaded-apartments)如需詳細資訊。|  
 |**兩者**|指定的物件可以使用 apartment 或無限制執行緒，從建立的執行緒種類而定。|  
-|**免費**|指定的物件，使用無限制執行緒。 無限制執行緒相當於多執行緒 apartment 模型。 請參閱[多執行緒的 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms693421)如需詳細資訊。|  
+|**免費**|指定的物件，使用無限制執行緒。 無限制執行緒相當於多執行緒 apartment 模型。 請參閱[多執行緒的 Apartment](/windows/desktop/com/multithreaded-apartments)如需詳細資訊。|  
 |**Neutral**|指定物件採用多執行緒的 apartment 的方針，但它可以在任何種類的執行緒上執行。|  
   
  **彙總**  
- 指出物件是否使用[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 彙總的物件可讓您選擇的介面來公開 （expose） 給用戶端，並如同彙總的物件實作它們所公開的介面。 彙總物件的用戶端通訊只能搭配彙總的物件。  
+ 指出物件是否使用[彙總](/windows/desktop/com/aggregation)。 彙總的物件可讓您選擇的介面來公開 （expose） 給用戶端，並如同彙總的物件實作它們所公開的介面。 彙總物件的用戶端通訊只能搭配彙總的物件。  
   
 |選項|描述|  
 |------------|-----------------|  
@@ -71,5 +71,5 @@ ms.locfileid: "37883722"
 ## <a name="see-also"></a>另請參閱  
  [ATL 簡單物件精靈](../../atl/reference/atl-simple-object-wizard.md)   
  [ATL 簡單物件](../../atl/reference/adding-an-atl-simple-object.md)   
- [處理序中的執行緒問題的伺服器](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [處理序中的執行緒問題的伺服器](/windows/desktop/com/in-process-server-threading-issues)
 

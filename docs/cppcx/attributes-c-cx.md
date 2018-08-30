@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 491b3cabd8003664a34543d8bb7a640759bd50ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601134"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207401"
 ---
 # <a name="attributes-ccx"></a>屬性 (C++/CX)
-屬性是一種特殊的 ref 類別，可附加至 Windows 執行階段型別和方法，以指定建立中繼資料時的特定行為的方括號中。 數個預先定義的屬性 — 例如， [1&gt;{2&gt;windows::foundation::metadata::webhosthidden&lt;2](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— 常用在 C + + /CX 程式碼。 此範例顯示如何將屬性套用至類別：  
+屬性是一種特殊的 ref 類別，可附加至 Windows 執行階段型別和方法，以指定建立中繼資料時的特定行為的方括號中。 數個預先定義的屬性 — 例如， [1&gt;{2&gt;windows::foundation::metadata::webhosthidden&lt;2](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— 常用在 C + + /CX 程式碼。 此範例顯示如何將屬性套用至類別：  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   

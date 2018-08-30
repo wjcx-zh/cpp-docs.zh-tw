@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4188c099e676ba58b0194953110fc2e62e8aced8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959634"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204915"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 結構
 
@@ -57,7 +57,7 @@ struct iterator_traits {
 
 - `reference`： 同義`Iterator::reference`。
 
-部分特製化會決定與 **Type \*** 或 const **Type \*** 類型之物件指標關聯的重要類型。
+部分特製化會決定類型之物件指標相關聯的重要類型**型別** <strong>\*</strong>或是**const 類型** <strong>\*</strong>.
 
 在這項實作中，您也可以使用數個不利用部分特製化的範本函式：
 

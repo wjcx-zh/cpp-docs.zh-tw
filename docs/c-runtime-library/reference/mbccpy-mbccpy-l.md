@@ -44,19 +44,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79ab8362eaa911b7a4aa936d6351aa29f610fa8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201383"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
 
 將多位元組字元從某個字串複製到另一個字串。 這些函式已有更安全的版本可用，請參閱 [_mbccpy_s、_mbccpy_s_l](mbccpy-s-mbccpy-s-l.md)。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -74,21 +74,21 @@ void _mbccpy_l(
 
 ### <a name="parameters"></a>參數
 
-*目的地*複製目的地。
+*dest*複製目的地。
 
-*src*複製多位元組字元。
+*src*来複製的多位元組字元。
 
-*地區設定*来使用的地區設定。
+*地區設定*若要使用的地區設定。
 
 ## <a name="remarks"></a>備註
 
-**_Mbccpy**函式會複製一個多位元組字元從*src*至*目的地*。
+**_Mbccpy**函式會複製一個多位元組字元從*src*來*dest*。
 
-這個函式會驗證它的參數。 如果 **_mbccpy**傳遞的 null 指標*目的地*或*src*、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 若要繼續，允許執行**errno**設**EINVAL**。
+這個函式會驗證它的參數。 如果 **_mbccpy**為 null 指標傳遞*dest*或是*src*，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行**errno**設為**EINVAL**。
 
 **_mbccpy**針對任何地區設定相關行為使用目前的地區設定。 **_mbccpy_l**等同於 **_mbccpy**不同之處在於 **_mbccpy_l**會針對任何地區設定相關行為傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。
+**安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -99,7 +99,7 @@ void _mbccpy_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f00bfbcb02e05ac2c0eeac5aed9485607e0309a4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 246ca30c63596dd463889947a4dba9c350d449e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954931"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202205"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 類別
 這個類別是 Bstr 的包裝函式。  
@@ -411,7 +411,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- 請參閱[LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) Windows SDK 中。  
+ 請參閱[LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功載入字串; 為 true，則傳回否則，會傳回 FALSE。  
@@ -604,7 +604,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>參數  
  *pStream*  
- [in]指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)上包含資料的資料流介面。  
+ [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含資料的資料流介面。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
@@ -650,7 +650,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
   
 ### <a name="parameters"></a>參數  
  *pStream*  
- [in]指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)資料流上的介面。  
+ [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)資料流上的介面。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883446"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198451"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
 這個類別提供方法來建立及管理 ATL 的控制項。  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如果您的控制項類別衍生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，這個方法會呼叫[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有連線`IPropertyNotifySink`介面指定的控制項屬性已變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。 
+ 如果您的控制項類別衍生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，這個方法會呼叫[CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged)通知所有連線`IPropertyNotifySink`介面指定的控制項屬性已變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。 
   
  這個方法可以安全地呼叫，即使您的控制項不支援連接點。  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 如果您的控制項類別衍生自[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)，這個方法會呼叫[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有連線`IPropertyNotifySink`介面指定控制項屬性即將變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。  
+ 如果您的控制項類別衍生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，這個方法會呼叫[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有連線`IPropertyNotifySink`介面指定控制項屬性即將變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。  
 
   
  這個方法可以安全地呼叫，即使您的控制項不支援連接點。  
@@ -205,10 +205,10 @@ int MessageBox(
  對話方塊的標題。 如果 NULL （預設值），在使用 「 錯誤 」 的標題。  
   
  *n*  
- 指定的內容和對話方塊的行為。 請參閱[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505)清單的 Windows SDK 文件可用的不同的訊息方塊中的項目。 預設提供的簡單**確定** 按鈕。  
+ 指定的內容和對話方塊的行為。 請參閱[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)清單的 Windows SDK 文件可用的不同的訊息方塊中的項目。 預設提供的簡單**確定** 按鈕。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回整數值，指定之下所列的功能表項目值的其中一個[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 文件。  
+ 傳回整數值，指定之下所列的功能表項目值的其中一個[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Windows SDK 文件。  
   
 ### <a name="remarks"></a>備註  
  `MessageBox` 同時在開發期間，以及輕鬆地向使用者顯示錯誤或警告訊息，則會很有用。  

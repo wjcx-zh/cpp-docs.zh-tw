@@ -34,19 +34,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08779311cc6a2ff0df622d69cf94ced07e67e9e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31d3f647d2d72cf96c9b935c33376aae698464c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412409"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207572"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
 從堆疊溢位復原。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -60,9 +60,9 @@ int _resetstkoflw( void );
 
 ## <a name="remarks"></a>備註
 
-**_Resetstkoflw**函式從堆疊溢位條件，允許程式繼續執行而不是嚴重的例外狀況錯誤而失敗中復原。 如果 **_resetstkoflw**函式不會呼叫，就會在前一個例外狀況之後的 沒有保護頁面。 下次發生堆疊溢位時，完全沒有任何例外狀況，且處理序會終止而不發出警告。
+**_Resetstkoflw**函式從堆疊溢位條件，讓程式繼續執行而不是嚴重的例外狀況錯誤而失敗中復原。 如果 **_resetstkoflw**未呼叫函式，在先前的例外狀況之後有沒有防護頁面。 下次發生堆疊溢位時，完全沒有任何例外狀況，且處理序會終止而不發出警告。
 
-如果應用程式中的執行緒造成 **EXCEPTION_STACK_OVERFLOW** 例外狀況，執行緒的堆疊便已處於損毀狀態。 這與其他例外狀況，例如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO** 相反，它們的堆疊並未損毀。 程式第一次載入時，堆疊會設定為很小的值。 然後堆疊會視需要成長，以符合執行緒的需要。 這樣的實作方法是在目前堆疊結尾處放置具有 PAGE_GUARD 存取的頁面。 如需詳細資訊，請參閱 [Creating Guard Pages](http://msdn.microsoft.com/library/windows/desktop/aa366549) (建立防護頁面)。
+如果應用程式中的執行緒造成 **EXCEPTION_STACK_OVERFLOW** 例外狀況，執行緒的堆疊便已處於損毀狀態。 這與其他例外狀況，例如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO** 相反，它們的堆疊並未損毀。 程式第一次載入時，堆疊會設定為很小的值。 然後堆疊會視需要成長，以符合執行緒的需要。 這樣的實作方法是在目前堆疊結尾處放置具有 PAGE_GUARD 存取的頁面。 如需詳細資訊，請參閱 [Creating Guard Pages](/windows/desktop/Memory/creating-guard-pages) (建立防護頁面)。
 
 當程式碼造成堆疊指標指向這個頁面上的位址時，會發生例外狀況，且系統會執行下列三件事︰
 
@@ -84,7 +84,7 @@ int _resetstkoflw( void );
 
 請注意，此時，堆疊不再有防護頁面。 下次程式堆疊一直成長到最後時，在該處應該有防護頁面，程式會寫入超過堆疊的結尾，並造成存取違規。
 
-呼叫 **_resetstkoflw**還原防護頁面，只要復原完成之後堆疊溢位例外狀況。 此函式可以從主體內呼叫 **__except**區塊或外部 **__except**區塊。 不過，它的使用時機有一些限制。 **_resetstkoflw**應該永遠不會從呼叫：
+呼叫 **_resetstkoflw**每當堆疊溢位例外狀況之後完成復原時，還原防護頁面。 此函式可以從呼叫的主體內 **__except**區塊或外部 **__except**區塊。 不過，它的使用時機有一些限制。 **_resetstkoflw**絕對不應該從呼叫：
 
 - 篩選條件運算式。
 
@@ -98,17 +98,17 @@ int _resetstkoflw( void );
 
 在這些點，堆疊尚無法充分回溯。
 
-堆疊溢位例外狀況則會產生為結構化例外狀況，不 c + + 例外狀況，因此 **_resetstkoflw**不適用於一般**攔截**封鎖，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
+因此產生為結構化例外狀況，不 c + + 例外狀況，堆疊溢位例外狀況 **_resetstkoflw**並不適用於一般**攔截**封鎖，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
 
 在從結構化例外狀況翻譯器函式所擲回例外狀況達到的 C++ catch 區塊中呼叫 **_resetstkoflw** 並不安全。 在此情況下，不會釋放堆疊空間，而且一直達到 catch 區塊之外以前都不會重設堆疊指標，即使已經在 catch 區塊之前呼叫任何可破壞物件的解構函式。 在堆疊空間釋放且堆疊指標重設之前，不應該呼叫此函式。 因此，它只應該在結束 catch 區塊之後呼叫。 在 catch 區塊中應該盡可能減少使用堆疊空間，因為如果堆疊溢位發生在 catch 區塊中，而 catch 區塊本身正在嘗試從先前堆疊溢位復原時，這樣的堆疊溢位是無法復原的，並且可能造成程式停止回應，因為 catch 區塊中的溢位會觸發例外狀況，該例外狀況又是由相同的 catch 區塊處理。
 
 在有些情況下 **_resetstkoflw** 可能會失敗，即使是使用於正確的位置，例如在 **__except** 區塊內。 如果即使是在回溯堆疊之後，仍沒有足夠的堆疊空間可執行 **_resetstkoflw** 而不寫入至堆疊的最後一頁，那麼 **_resetstkoflw** 便無法將堆疊的最後一頁重設為防護頁面，並且會傳回 0，表示失敗。 因此，安全地使用此函式應該要包含檢查傳回值，而不是假設堆疊的使用是安全的。
 
-結構化例外狀況處理不會抓取**STATUS_STACK_OVERFLOW**應用程式編譯時的例外狀況 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)).
+結構化例外狀況處理不會攔截**STATUS_STACK_OVERFLOW**應用程式編譯時的例外狀況 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)).
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_resetstkoflw**|\<malloc.h>|
 
@@ -118,7 +118,7 @@ int _resetstkoflw( void );
 
 ## <a name="example"></a>範例
 
-下列範例會顯示建議的使用方式的 **_resetstkoflw**函式。
+下列範例顯示的建議的用法 **_resetstkoflw**函式。
 
 ```C
 // crt_resetstkoflw.c
@@ -187,7 +187,7 @@ int main(int ac)
 }
 ```
 
-範例輸出含程式引數：
+不含程式引數輸出的範例：
 
 ```Output
 loop #1
@@ -222,7 +222,7 @@ resetting stack overflow
 
 ### <a name="description"></a>描述
 
-下列範例將示範建議的使用 **_resetstkoflw**程式結構化例外狀況會轉換成 c + + 例外狀況的位置中。
+下列範例顯示的建議的用法 **_resetstkoflw**在程式中，結構化例外狀況會轉換成 c + + 例外狀況。
 
 ### <a name="code"></a>程式碼
 

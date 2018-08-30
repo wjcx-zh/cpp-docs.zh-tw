@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c339ce6ad67186dc7a4f43d7006c5beb047c8f90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204900"
 ---
 # <a name="makepath-wmakepath"></a>_makepath、_wmakepath
 
@@ -77,19 +77,19 @@ void _wmakepath(
 
 *路徑*完整路徑緩衝區。
 
-*磁碟機*包含字母 （A、 B 和等等） 對應至所需的磁碟機和選擇性結尾的冒號。 **_makepath**冒號自動插入複合路徑中遺漏時。 如果*磁碟機*是**NULL**或指向空字串時，沒有磁碟機代號會出現在複合*路徑*字串。
+*磁碟機*包含字母 （A、 B，等等） 對應至所需的磁碟機和選擇性的後置冒號。 **_makepath**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
 
-*dir*包含路徑的目錄，不包括磁碟機指示項或實際的檔案名稱。 句尾斜線是選用的並正斜線 （/） 或反斜線 (\\) 或兩者都可能會使用單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**指向空字串，沒有目錄路徑在複合插入或*路徑*字串。
+*dir*包含路徑的目錄，不包括磁碟機指示項或實際檔案名稱。 結尾的斜線是選擇性的並正斜線 （/） 或反斜線 (\\)，或是兩者都可能會用於在單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**或指向空字串，沒有目錄路徑會插入複合*路徑*字串。
 
-*fname*包含的基底檔案名稱沒有任何檔案名稱的副檔名。 如果*fname*是**NULL**或空字串，任何檔名指向插入複合*路徑*字串。
+*fname*包含基底檔案名稱不含任何檔案名稱副檔名。 如果*fname*是**NULL**或指向空字串，任何檔名會插入複合*路徑*字串。
 
-*ext*包含實際的檔案名稱副檔名，或不含前置句號 （.）。 **_makepath**自動插入期間，如果它不會顯示在*ext*。如果*ext*是**NULL**或空字串，沒有副檔名的點插入複合*路徑*字串。
+*ext*包含實際的檔案名稱副檔名，或不含前置句號 （.）。 **_makepath**自動插入句號，如果它不會出現在*ext*。如果*ext*是**NULL**或指向空字串，不含副檔名會插入複合*路徑*字串。
 
 ## <a name="remarks"></a>備註
 
-**_Makepath**函式會建立複合路徑字串儲存在該結果的個別元件來自*路徑*。 *路徑*可能包括磁碟機代號、 目錄路徑、 檔名和副檔名。 **_wmakepath**是寬字元版本的 **_makepath**; 的引數 **_wmakepath**是寬字元字串。 **_wmakepath**和 **_makepath**除此之外的行為相同。
+**_Makepath**函式會從 個別元件，儲存在結果中建立複合路徑字串*路徑*。 *路徑*可能包含磁碟機代號、 目錄路徑、 檔名和副檔名。 **_wmakepath**是寬字元版本的 **_makepath**; 的引數 **_wmakepath**是寬字元字串。 **_wmakepath**並 **_makepath**行為相同。
 
-**安全性提示**：使用以 Null 結束的字串。 若要避免緩衝區滿溢，null 結束的字串不能超過大小*路徑*緩衝區。 **_makepath**不會保證複合路徑字串的長度不超過 **_MAX_PATH**。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性提示**：使用以 Null 結束的字串。 若要避免緩衝區溢位，以 null 結束的字串不得超過的大小*路徑*緩衝區。 **_makepath**無法確保複合路徑字串的長度不超過 **_MAX_PATH**。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -97,13 +97,13 @@ void _wmakepath(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-*路徑*引數必須指向空的緩衝區不夠大，無法保存完整路徑。 複合*路徑*必須不能大於 **_MAX_PATH** Stdlib.h 中定義的常數。
+*路徑*引數必須指向空的緩衝區不夠大，無法容納完整路徑。 複合*路徑*必須是不能大於 **_MAX_PATH**在 Stdlib.h 中定義的常數。
 
-如果路徑是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 此外， **errno**設**EINVAL**。 **NULL**允許所有其他參數值。
+如果路徑**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 颾魤 ㄛ **errno**設為**EINVAL**。 **NULL**允許所有其他參數的值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
 |**_wmakepath**|\<stdlib.h> 或 \<wchar.h>|

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2933ed9fbb9a464b4458ce357ce196f2ae9df8f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541032"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196378"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 類別
 實作停駐的功能表列。  
@@ -387,7 +387,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  您應該使用此函式，而不是[CMFCMenuBar::Create](#create)想要指定除了工具列樣式的樣式時。 一些常用的其他樣式為 TBSTYLE_TRANSPARENT 和 CBRS_TOP。  
   
- 如需其他樣式清單，請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)，[通用控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)，並[通用的視窗樣式](http://msdn.microsoft.com/library/windows/desktop/ms632600)。  
+ 如需其他樣式清單，請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)，[通用控制項的樣式](/windows/desktop/Controls/common-control-styles)，並[通用的視窗樣式](https://msdn.microsoft.com/library/windows/desktop/ms632600)。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`CreateEx`方法的`CMFCMenuBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  
@@ -964,7 +964,7 @@ static BOOL SetMenuFont(
   
 ### <a name="parameters"></a>參數  
  [in]*lpLogFont*  
- 指標[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327)結構，定義要設定的字型。  
+ 指標[LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003)結構，定義要設定的字型。  
   
  [in]*bHorz*  
  如果您想要則為 TRUE *lpLogFont*參數，如果您想要用於水平字型，要用於垂直字型，也就是 FALSE。  

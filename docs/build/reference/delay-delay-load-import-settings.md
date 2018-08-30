@@ -1,5 +1,5 @@
 ---
-title: 延遲 （延遲載入匯入設定） |Microsoft 文件
+title: -DELAY （延遲載入匯入設定） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c898727504a8ae530bcdffb3e01bde68c31c8e87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7920c8a3fe002c0d3ef9c9a64872a07ec75ebd8b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373331"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213474"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (延遲載入匯入設定)
 ```  
@@ -40,21 +40,21 @@ ms.locfileid: "32373331"
   
 -   UNLOAD 限定詞會告知延遲載入 Helper 函式，支援明確卸載 DLL。 匯入位址表 (IAT) 會重設為其原始形式，這會使 IAT 指標失效，並導致它們被覆寫。  
   
-     如果您未選取 UNLOAD，呼叫[FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)將會失敗。  
+     如果您未選取 UNLOAD，先呼叫[FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)將會失敗。  
   
--   NOBIND 限定詞會告知連結器不在最終映像檔中包含可繫結 IAT。 預設會是針對延遲載入 DLL 建立可繫結 IAT。 所產生的映像檔無法靜態繫結  (具有可繫結 IAT 的映像檔在執行之前，可能是靜態繫結的)。請參閱[/繫結](../../build/reference/bind.md)。  
+-   NOBIND 限定詞會告知連結器不在最終映像檔中包含可繫結 IAT。 預設會是針對延遲載入 DLL 建立可繫結 IAT。 所產生的映像檔無法靜態繫結  (具有可繫結 IAT 的映像檔在執行之前，可能是靜態繫結的)。請參閱[繫結/](../../build/reference/bind.md)。  
   
-     如果 DLL 已繫結，則 helper 函式會嘗試使用的繫結的資訊，而不是呼叫[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上每一個參考匯入。 如果時間戳記或慣用位址與那些已載入 DLL 的時間戳記或慣用位址不相符，則 Helper 函式會假設已繫結 IAT 已過期，且會像已繫結 IAT 不存在那樣來進行處理。  
+     如果已繫結 DLL，helper 函式會嘗試使用的繫結的資訊，而不是呼叫[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)上每個參考匯入。 如果時間戳記或慣用位址與那些已載入 DLL 的時間戳記或慣用位址不相符，則 Helper 函式會假設已繫結 IAT 已過期，且會像已繫結 IAT 不存在那樣來進行處理。  
   
      NOBIND 會導致您的程式映像檔變大，但可加速 DLL 的載入。 如果您從未繫結 DLL，則 NOBIND 會防止產生已繫結 IAT。  
   
- 若要指定要延遲載入 Dll，請使用[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)選項。  
+ 若要指定要延遲載入的 Dll，請使用[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)選項。  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
 1.  開啟專案的 [屬性頁]  對話方塊。 如需資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  展開**組態屬性**，**連結器**，然後選取**進階**。  
+2.  依序展開**組態屬性**，**連結器**，然後選取**進階**。  
   
 3.  修改**延遲載入 DLL**屬性。  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408355"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209724"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
 ## <a name="syntax"></a>語法  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>備註  
  乘法類運算子包括：  
   
--   乘法 (**\****)  
+-   乘法 (<strong>\**</strong>)  
   
 -   除法 (**/**)  
   
--   模數 (除法的餘數) (`%`)  
+-   模數 （除法的餘數） (**%**)  
   
  這些二進位運算子具有由左至右的順序關聯性。  
   
- 乘法類運算子接受算術類型的運算元。 模數運算子 (`%`) 具有較嚴格的要求，其運算元必須為整數類資料類型  (若要取得浮點除法的餘數，請使用執行階段函式[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵蓋的轉換[標準轉換](standard-conversions.md)適用於運算元，結果是已轉換的型別。  
+ 乘法類運算子接受算術類型的運算元。 模數運算子 (**%**) 具有較嚴格的要求，因為其運算元必須是整數類資料類型。 (若要取得浮點除法的餘數，請使用執行階段函式[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵蓋的轉換[標準轉換](standard-conversions.md)適用於運算元，結果是已轉換的型別。  
   
  乘法運算子會產生第一個運算元與第二個運算元相乘的結果。  
   

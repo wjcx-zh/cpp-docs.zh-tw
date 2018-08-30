@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852311"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209983"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 物件的基本概念
 下圖說明的類別和介面，可用來定義 ATL COM 物件之間的關聯性。  
@@ -40,7 +40,7 @@ ms.locfileid: "37852311"
   
  因為用戶端沒有瀏覽要互動的內部物件的外部物件，則彙總的物件會是通常更有效率。 此外，則外部物件不必知道物件之功能的彙總，彙總物件的介面是可以直接提供給用戶端。 不過，並非所有物件都可以加以彙都總。 要彙總物件，它必須記住的彙總設計。  
   
- 實作 ATL [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分成兩個階段：  
+ 實作 ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)分成兩個階段：  
   
 -   [CComObject](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，或[CComPolyObject](../atl/reference/ccompolyobject-class.md)實作`IUnknown`方法。  
   

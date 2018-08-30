@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8414fb0e3478b5aae906db3e511757d5d7df71d3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d63a09dec74fc1b7b41f8029dcff285b62b017f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404092"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203223"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 擷取器
 **Microsoft 專屬**  
@@ -55,11 +55,11 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>備註  
   
--   **運算子 Interface&\*** 傳回封裝的介面指標，可能是 NULL。  
+-   **運算子 Interface&** <strong>\*</strong>傳回封裝的介面指標，可能是 NULL。  
   
 -   **運算子 Interface& &** 傳回封裝的介面指標的參考，並發出錯誤，如果指標為 NULL。  
   
--   **運算子\*** 可讓智慧型指標物件作用就如同實際封裝的介面取值時一樣。  
+-   **運算子**<strong>\*</strong>可讓智慧型指標物件，如同它已實際封裝的介面取值時採取行動。  
   
 -   **operator->** 可讓智慧型指標物件，如同它已實際封裝的介面取值時採取行動。  
   

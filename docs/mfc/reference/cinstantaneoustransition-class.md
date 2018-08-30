@@ -1,5 +1,5 @@
 ---
-title: CInstantaneousTransition 類別 |Microsoft 文件
+title: CInstantaneousTransition 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f83775e04c7b5c4c104f9790870ea067392b0bce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209210"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition 類別
 封裝瞬間的轉換。  
@@ -59,7 +59,7 @@ class CInstantaneousTransition : public CBaseTransition;
 |[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
   
 ## <a name="remarks"></a>備註  
- 期間瞬間的轉換，動畫變數的值變更立即從目前的值為指定的最後一個值。 這項轉換的持續時間永遠是零。 由於所有轉換會自動都清除，建議來配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup，直到然後它便是 NULL。 變更成員變數之後這個 COM 物件建立沒有任何作用。  
+ 瞬間的轉換，在動畫變數的值變更立即從其目前的值為指定的最後一個值。 這項轉換的持續時間永遠是零。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -93,7 +93,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
 *pLibrary*  
- 指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
+ 指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。  
 
   
 ### <a name="return-value"></a>傳回值  

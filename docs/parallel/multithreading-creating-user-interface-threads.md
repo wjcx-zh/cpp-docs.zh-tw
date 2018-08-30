@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ad16b4955cf8128d4f54edceeadd4b6551bc6f14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131556"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206510"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>多執行緒： 建立 MFC 使用者介面執行緒
 使用者介面執行緒通常會用來處理使用者輸入，並回應使用者事件，獨立執行的應用程式其他部分的執行緒中。 主應用程式執行緒 (中提供您`CWinApp`-衍生的類別) 已建立並啟動。 本主題說明建立其他的使用者介面執行緒的必要步驟。  
@@ -49,13 +49,13 @@ MFC 提供兩種 `AfxBeginThread` 參數多載版本：只能建立背景工作�
   
 - [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)類別衍生自的`CWinThread`。  
   
-- （選擇性）所需的優先權層級。 預設值是一般優先權。 如需可用的優先權層級的詳細資訊，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
+- （選擇性）所需的優先權層級。 預設值是一般優先權。 如需可用的優先權層級的詳細資訊，請參閱[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。  
   
 - （選擇性）執行緒所需的堆疊大小。 預設值是相同的大小堆疊，與建立的執行緒。  
   
 - （選擇性）如果您想要在暫停狀態中建立的執行緒，CREATE_SUSPENDED。 預設值為 0，或以正常方式啟動執行緒。  
   
-- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 `AfxBeginThread` 為您做了大部分的工作。 它會建立您的類別的新物件，使用您提供的資訊，並呼叫它初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)開始執行執行緒。 整個程序進行檢查以確定所有物件都是已解除配置正確建立的任何部分萬一失敗。  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336601"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212039"
 ---
 # <a name="event-sink-maps"></a>事件接收對應
 當內嵌的 OLE Automation 控制項引發某個事件時，控制項的容器會使用由 MFC 提供的機制 (稱為「事件接收對應」) 來接收事件。 這個事件接收對應會指定每個特定事件的處理常式，以及那些事件函式的參數。 如需有關事件接收對應的詳細資訊，請參閱文章[ActiveX 控制項容器](../../mfc/activex-control-containers.md)。  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  在通知中所涉及之屬性的分派識別碼。  
   
  *pfnRequest*  
- 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該有傳回型別 BOOL 和**BOOL\*** 參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
+ 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該有傳回型別 BOOL 和**BOOL** <strong>\*</strong>參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
   
  *pfnChanged*  
  處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該有傳回型別和 UINT 參數 BOOL。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  在通知中所涉及之屬性的分派識別碼。  
   
  *pfnRequest*  
- 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該要有傳回型別 BOOL 和 UINT 並**BOOL\*** 參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
+ 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該具有`BOOL`傳回型別和`UINT`和`BOOL*`參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
   
  *pfnChanged*  
- 處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該有傳回型別和 UINT 參數 BOOL。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
+ 處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該有`BOOL`傳回型別和`UINT`參數。 函式應傳回 TRUE，表示已處理通知;否則為 FALSE。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  在通知中所涉及之屬性的分派識別碼。  
   
  *pfnRequest*  
- 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該有傳回型別 BOOL 和**BOOL\*** 參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
+ 處理的成員函式指標`OnRequestEdit`這個屬性的通知。 此函式應該有傳回型別 BOOL 和**BOOL** <strong>\*</strong>參數。 此函式應該將參數設定為 TRUE，允許變更屬性，而 FALSE 表示不允許。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  
   
  *pfnChanged*  
  處理的成員函式指標`OnChanged`這個屬性的通知。 函式應該具有 BOOL 傳回類型和任何參數。 函式應傳回 TRUE 表示已處理通知;否則為 FALSE。  

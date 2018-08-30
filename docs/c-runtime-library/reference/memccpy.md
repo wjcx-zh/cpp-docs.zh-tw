@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddb085fee2459abd4cdef8a400f291bea4f6313b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6addc369de344b40a616b2ee1efbe840e98cc6d4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401840"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199536"
 ---
 # <a name="memccpy"></a>_memccpy
 
@@ -70,17 +70,17 @@ void *_memccpy(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元*c*複製時， **_memccpy**讓指標回到中 char*目的地*，緊接在後面的字元。 如果*c*不複製，它會傳回**NULL**。
+如果字元*c*會複製 **_memccpy**讓指標回到中 char *dest*緊接著的字元。 如果*c*不會複製，則會傳回**NULL**。
 
 ## <a name="remarks"></a>備註
 
-**_Memccpy**函式會將複製的 0 或更多字元*src*至*目的地*，暫止時字元*c*已複製或當*計數*已複製的字元、 何者較早。
+**_Memccpy**函式會將複製的 0 或多個字元*src*來*dest*，並字元*c*已複製或當*計數*已複製的字元，視何者先。
 
-**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> 或 \<string.h>|
 

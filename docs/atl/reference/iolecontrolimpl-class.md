@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879279"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201333"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 類別
 這個類別提供的預設實作`IOleControl`介面和實作`IUnknown`。  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|通知使用者已按下指定的按鍵輸入的控制項。 ATL 實作會傳回 E_NOTIMPL。|  
   
 ## <a name="remarks"></a>備註  
- 類別`IOleControlImpl`提供的預設實作[IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320)介面和實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ 類別`IOleControlImpl`提供的預設實作[IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol)介面和實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>備註  
  `FreezeEvents` 接著會傳回 S_OK。  
   
- 請參閱[IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) Windows SDK 中。  
+ 請參閱[IOleControl::FreezeEvents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) Windows SDK 中。  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  會填滿控制項的鍵盤行為的相關資訊。  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) Windows SDK 中。  
+ 請參閱[IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 E_NOTIMPL。  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) Windows SDK 中。  
+ 請參閱[IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) Windows SDK 中。  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  通知使用者已按下指定的按鍵輸入的控制項。  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) Windows SDK 中。  
+ 請參閱[IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [IOleObjectImpl 類別](../../atl/reference/ioleobjectimpl-class.md)   
- [ActiveX 控制項介面](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX 控制項介面](/windows/desktop/com/activex-controls-interfaces)   
  [類別概觀](../../atl/atl-class-overview.md)

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c2f3897f7fb1876ac684e2e6c77cc47f6f67ee
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541554"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199491"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -120,7 +120,7 @@ class vector
  要儲存在向量中的項目資料類型
 
 *配置器*  
- 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的預設值是 **allocator *\<類型 >。*
+ 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<Type>`。
 
 ## <a name="remarks"></a>備註
 
@@ -1561,7 +1561,8 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>參數
 
-*Val*来加入至向量結尾的項目指派的值。
+*val*<br/>
+ 要指派給加入到向量結尾之元素的值。
 
 ### <a name="example"></a>範例
 

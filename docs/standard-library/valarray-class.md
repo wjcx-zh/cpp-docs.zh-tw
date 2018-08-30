@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3294730f8f1cc835af49ee003d8f81830d64c9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965522"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198298"
 ---
 # <a name="valarray-class"></a>valarray 類別
 
@@ -131,9 +131,11 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>參數
 
-*_Func(Type)* 函式物件，要套用至運算元 valarray 每個項目。
+*_Func(Type)*<br/>
+ 要套用至運算元 valarray 每個項目的函式物件。
 
-*_Func(const Type&)* 要套用至運算元 valarray 的每個元素的 const 函式物件。
+*_Func(const Type&)*<br/>
+ 要套用至運算元 valarray 每個項目的 const 函式物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -141,7 +143,7 @@ Valarray，其項目為已將 `_Func` 套用至運算元 valarray 的項目。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回類別 [valarray](../standard-library/valarray-class.md)**\<Type>** 的物件，長度為 [size](#size)，其每個項目 `I` 是 **func**(( **\*this**)[ `I`])。
+此成員函式會傳回類別的物件[valarray](../standard-library/valarray-class.md)**\<類型 >**，長度為[大小](#size)，每個項目*我*是`_Func((*this)[I])`。
 
 ### <a name="example"></a>範例
 
@@ -1247,7 +1249,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="remarks"></a>備註
 
-此成員運算子會多載，以提供數種方式選取的項目從控制的序列 *\****這**。 由五個成員運算子構成的第一個群組搭配 [operator=](#op_eq) (和其他指派運算子) 的各種多載，以允許選擇性取代 (切割) 控制序列。 選取的項目必須存在。
+此成員運算子會多載，以提供數種方式選取的項目從控制的序列<strong>\*這</strong>。 由五個成員運算子構成的第一個群組搭配 [operator=](#op_eq) (和其他指派運算子) 的各種多載，以允許選擇性取代 (切割) 控制序列。 選取的項目必須存在。
 
 當使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 編譯之後，如果您嘗試存取的項目超出 valarray 界限，則會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 

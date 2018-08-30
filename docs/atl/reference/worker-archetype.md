@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204850"
 ---
 # <a name="worker-archetype"></a>背景工作原型
 符合類別*背景工作角色*原型提供程式碼以處理程序的工作項目排入佇列，執行緒集區。  
@@ -31,8 +31,8 @@ ms.locfileid: "37881301"
 |方法|描述|  
 |------------|-----------------|  
 |[Initialize](#initialize)|呼叫以初始化背景工作角色的物件之前的任何要求會傳遞至, [Execute](#execute)。|  
-|[執行](#execute)|呼叫以處理工作項目。|  
-|[終止](#terminate)|呼叫以取消初始化背景工作物件之後的所有要求都傳遞至, [Execute](#execute)。|  
+|[Execute](#execute)|呼叫以處理工作項目。|  
+|[Terminate](#terminate)|呼叫以取消初始化背景工作物件之後的所有要求都傳遞至, [Execute](#execute)。|  
   
 |Typedef|描述|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  了解的背景工作角色類別的自訂參數。 也會傳遞給`WorkerArchetype::Initialize`和`Terminate`。  
   
  *pOverlapped*  
- 指標[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)結構，用來建立在哪一個工作項目已排入佇列的佇列。  
+ 指標[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)結構，用來建立在哪一個工作項目已排入佇列的佇列。  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 呼叫以初始化背景工作角色的物件之前的任何要求會傳遞至, `WorkerArchetype::Execute`。  

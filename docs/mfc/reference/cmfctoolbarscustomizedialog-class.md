@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852870"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211048"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
 非強制回應對話方塊 ( [CPropertySheet 類別](../../mfc/reference/cpropertysheet-class.md))，可讓使用者自訂工具列、 功能表、 鍵盤快速鍵、 使用者定義的工具和應用程式中的視覺化樣式。 使用者通常會選取 [ **工具** ] 功能表中的 [ **自訂** ]，以存取這個對話方塊。  
@@ -507,7 +507,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>參數  
  [in、 out]*pAccel*  
- 指標會以建議的鍵盤指派[加速度](http://msdn.microsoft.com/library/windows/desktop/ms646340)結構。  
+ 指標會以建議的鍵盤指派[加速度](/windows/desktop/api/winuser/ns-winuser-tagaccel)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果索引鍵可以是已指派或 FALSE，如果您無法指定索引鍵，則為 TRUE。 預設實作永遠傳回 TRUE。  

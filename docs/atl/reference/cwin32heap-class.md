@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: b1a15397ee74c94c0d3af088a7b6eb80bd21c66d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572547"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195328"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 堆積配置函式。  
@@ -73,7 +73,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|堆積物件控制代碼。|  
   
 ## <a name="remarks"></a>備註  
- `CWin32Heap` 實作使用 Win32 堆積配置函式，包括記憶體配置方法[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)並[HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701)。 不同於其他堆積類別，`CWin32Heap`需要配置記憶體之前，必須提供有效堆積控制代碼： 其他類別預設為使用處理序堆積。 建構函式或可提供控制代碼[CWin32Heap::Attach](#attach)方法。 請參閱[CWin32Heap::CWin32Heap](#cwin32heap)方法，如需詳細資訊。  
+ `CWin32Heap` 實作使用 Win32 堆積配置函式，包括記憶體配置方法[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)並[HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree)。 不同於其他堆積類別，`CWin32Heap`需要配置記憶體之前，必須提供有效堆積控制代碼： 其他類別預設為使用處理序堆積。 建構函式或可提供控制代碼[CWin32Heap::Attach](#attach)方法。 請參閱[CWin32Heap::CWin32Heap](#cwin32heap)方法，如需詳細資訊。  
   
 ## <a name="example"></a>範例  
  範例，請參閱[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -103,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  呼叫[CWin32Heap::Free](#free)或是[CWin32Heap::Reallocate](#reallocate)釋放這個方法所配置的記憶體。  
   
- 使用實作[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)。  
+ 使用實作[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)。  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
  將堆積物件附加至現有的堆積。  

@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8217ee5bdcad15a2c0b89f95000360b979e094ea
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3443c85ce7f3f12e334e074e1ce37c9cab2ce9d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213610"
 ---
 # <a name="cimage-class"></a>CImage 類別
 `CImage` 提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 和可攜式網路圖形 (PNG) 格式的映像的能力。  
@@ -263,7 +263,7 @@ BOOL AlphaBlend(
  Alpha 透明混色函式的來源和目的地點陣圖、 全域的 alpha 值，要套用至整個來源點陣圖和來源點陣圖的格式資訊。 來源和目的地 blend 函式是目前僅限於 AC_SRC_OVER。  
   
  *pointDest*  
- 參考[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。  
+ 參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。  
   
  *nDestWidth*  
  以邏輯單位，目的地矩形的寬度。  
@@ -284,7 +284,7 @@ BOOL AlphaBlend(
  以邏輯單位，來源矩形的高度。  
   
  *rectDest*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
   
  *rectSrc*  
  參考`RECT`結構，來識別來源。  
@@ -363,10 +363,10 @@ BOOL BitBlt(
  邏輯 y 座標的目的矩形左上角。  
   
  *dwROP*  
- 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。  
+ 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。  
   
  *pointDest*  
- A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)指出目的地矩形左上的角的結構。  
+ A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)指出目的地矩形左上的角的結構。  
   
  *nDestWidth*  
  以邏輯單位，目的地矩形的寬度。  
@@ -381,7 +381,7 @@ BOOL BitBlt(
  邏輯 y 座標的來源矩形左上角。  
   
  *rectDest*  
- A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)指出目的地矩形的結構。  
+ A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)指出目的地矩形的結構。  
   
  *pointSrc*  
  A`POINT`指出來源矩形左上的角的結構。  
@@ -390,7 +390,7 @@ BOOL BitBlt(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中。  
   
 ##  <a name="cimage"></a>  CImage::CImage  
  建構 `CImage` 物件。  
@@ -469,7 +469,7 @@ BOOL CreateEx(
 - BI_BITFIELDS 格式未壓縮和 color 資料表包含三個的 DWORD 色彩遮罩，分別指定每個像素的紅色、 綠色和藍色元件。 這是在 16 及 32 bpp 點陣圖搭配使用時才有效。  
   
  *pdwBitfields*  
- 只有在使用*eCompression*設定至 BI_BITFIELDS，否則它必須是 NULL。 三個 DWORD 位元遮罩，指定每個像素的位元會分別使用紅色、 綠色和藍色色彩元件的陣列指標。 如需位元欄位的限制資訊，請參閱[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。  
+ 只有在使用*eCompression*設定至 BI_BITFIELDS，否則它必須是 NULL。 三個 DWORD 位元遮罩，指定每個像素的位元會分別使用紅色、 綠色和藍色色彩元件的陣列指標。 如需位元欄位的限制資訊，請參閱[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。  
   
  *dwFlags*  
  指定點陣圖物件是否具有 alpha 色頻。 可以是零或多個下列值的組合：  
@@ -578,13 +578,13 @@ BOOL Draw(
  以邏輯單位，來源矩形的高度。  
   
  *rectDest*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
   
  *rectSrc*  
  參考`RECT`結構，來識別來源。  
   
  *pointDest*  
- 參考[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。  
+ 參考[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)識別目的地矩形，以邏輯單位表示的左上的角的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -623,7 +623,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>備註  
  這個值會決定定義每個像素的位元的數目和最大的點陣圖中的色彩數目。  
   
- 每個像素的位元通常是 1、 4、 8、 16、 24、 或 32。 請參閱`biBitCount`隸屬[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中針對此值的詳細資訊。  
+ 每個像素的位元通常是 1、 4、 8、 16、 24、 或 32。 請參閱`biBitCount`隸屬[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中針對此值的詳細資訊。  
   
 ##  <a name="getcolortable"></a>  CImage::GetColorTable  
  擷取 DIB 區段的調色盤中的項目範圍中的紅、 綠、 藍 (RGB) 色彩值。  
@@ -642,7 +642,7 @@ void GetColorTable(UINT iFirstColor,
  若要擷取的色彩表項目數目。  
   
  *prgbColors*  
- 陣列的指標[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)結構，以擷取色彩表項目。  
+ 陣列的指標[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)結構，以擷取色彩表項目。  
   
 ##  <a name="getdc"></a>  CImage::GetDC  
  擷取目前已選取成它的映像的裝置內容。  
@@ -1179,10 +1179,10 @@ BOOL PlgBlt(
  單色點陣圖左上角的 y 座標。  
   
  *rectSrc*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定來源矩形的座標。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定來源矩形的座標。  
   
  *pointMask*  
- A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)表示遮罩點陣圖左上的角的結構。  
+ A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)表示遮罩點陣圖左上的角的結構。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果成功，否則為 0。  
@@ -1190,7 +1190,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>備註  
  如果*hbmMask*識別有效的單色點陣圖，`PlgBit`遮罩從來源矩形的色彩資料位元會使用此點陣圖。  
   
- 這個方法適用於 Windows NT 4.0 和更新版本的版本。 請參閱[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)在 Windows SDK 中，如需詳細資訊。  
+ 這個方法適用於 Windows NT 4.0 和更新版本的版本。 請參閱[PlgBlt](/windows/desktop/api/wingdi/nf-wingdi-plgblt)在 Windows SDK 中，如需詳細資訊。  
   
 ##  <a name="releasedc"></a>  CImage::ReleaseDC  
  釋放裝置內容。  
@@ -1268,7 +1268,7 @@ void SetColorTable(
  若要設定的色彩表項目數目。  
   
  *prgbColors*  
- 陣列的指標[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)結構，以設定色彩表項目。  
+ 陣列的指標[RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)結構，以設定色彩表項目。  
   
 ### <a name="remarks"></a>備註  
  這個方法支援 DIB 區段點陣圖。  
@@ -1408,10 +1408,10 @@ BOOL StretchBlt(
  以邏輯單位，目的地矩形的高度。  
   
  *dwROP*  
- 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。  
+ 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式的位元 （如目前選取的筆刷所定義）。 請參閱[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) Windows SDK 中針對其他的點陣作業程式碼及其描述的清單。  
   
  *rectDest*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
   
  *xSrc*  
  X 軸座標，以邏輯單位，來源矩形左上角。  
@@ -1432,7 +1432,7 @@ BOOL StretchBlt(
  非零值，如果成功，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) Windows SDK 中。  
   
 ##  <a name="transparentblt"></a>  Transparentblt  
  來源裝置內容的點陣圖複製到這個目前的裝置內容。  
@@ -1490,7 +1490,7 @@ BOOL TransparentBlt(
  中要視為透明的來源點陣圖的色彩。 依預設，CLR_INVALID，表示應該使用目前設定為影像的透明色彩的色彩。  
   
  *rectDest*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
   
  *xSrc*  
  X 軸座標，以邏輯單位，來源矩形左上角。  
@@ -1548,10 +1548,10 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>另請參閱  
  [MMXSwarm 範例](../../visual-cpp-samples.md)   
  [SimpleImage 範例](../../visual-cpp-samples.md)   
- [裝置獨立點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)[與裝置無關的點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
- [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
+ [裝置獨立點陣圖](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+ [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)[與裝置無關的點陣圖](/windows/desktop/gdi/device-independent-bitmaps)   
+ [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE （連結到.NET Framework 資源） |Microsoft 文件
+title: -ASSEMBLYLINKRESOURCE （連結到.NET Framework 資源） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374046"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206484"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (連結到 .NET Framework 資源)
 ```  
@@ -38,17 +38,17 @@ ms.locfileid: "32374046"
  您要從組件連結的目標 .NET Framework 資源檔。  
   
 ## <a name="remarks"></a>備註  
- /ASSEMBLYLINKRESOURCE 選項會建立輸出檔案中的.NET Framework 資源的連結資源檔不被放在輸出檔。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)資源檔嵌入輸出檔。  
+ /ASSEMBLYLINKRESOURCE 選項會建立輸出檔案中的.NET Framework 資源的連結將資源檔不會放在輸出檔中。 [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)資源檔嵌入輸出檔。  
   
- 連結的資源為公用時，連結器在建立組件中。  
+ 連結的資源是公用的組件時使用連結器建立的。  
   
- /ASSEMBLYLINKRESOURCE 時必須編譯包含[/clr](../../build/reference/clr-common-language-runtime-compilation.md);[/LN](../../build/reference/ln-create-msil-module.md)或[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE 不允許。  
+ /ASSEMBLYLINKRESOURCE 需要編譯，包括[/clr](../../build/reference/clr-common-language-runtime-compilation.md);[/LN](../../build/reference/ln-create-msil-module.md)或是[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE 不允許。  
   
- 如果*filename*是.NET Framework 建立的資源檔，例如，藉由[Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) ，或是在開發環境中，它可以存取與其中成員保持**System.Resources**命名空間。 如需詳細資訊，請參閱[System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx)。 如需其他資源，使用**GetManifestResource** \*方法**System.Reflection.Assembly**類別，以在執行階段存取資源。  
+ 如果*檔名*是.NET Framework 建立的資源檔，例如，藉由[Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在開發環境中，它可以存取使用中的成員**System.Resources**命名空間。 如需詳細資訊，請參閱 < [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx)。 如需其他資源，請使用**GetManifestResource** \*中的方法**System.Reflection.Assembly**類別，以在執行階段存取資源。  
   
- *檔名*可以是任何檔案格式。 例如，您可以產生組件，原生 DLL 部分，以便將它安裝到全域組件快取，並從組件中的 managed 程式碼存取。  
+ *檔名*可以是任何檔案格式。 例如，您可能要產生組件，原生 DLL 部分，以便將它安裝在全域組件快取，並從組件中的 managed 程式碼存取。  
   
- 其他會影響產生的組件的連結器選項包括：  
+ 其他會影響產生組件連結器選項如下：  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "32374046"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下**連結器**資料夾。  
+2.  按一下 **連結器**資料夾。  
   
 3.  按一下 [命令列]  屬性頁。  
   
-4.  輸入到選項**其他選項**方塊。  
+4.  輸入到選項**其他選項** 方塊中。  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   

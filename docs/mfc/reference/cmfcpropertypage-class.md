@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b552417af72b24cddae9055d436a56f771c48743
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848732"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203443"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 類別
 `CMFCPropertyPage`類別支援的快顯功能表顯示在 [屬性] 頁面上。  
@@ -50,7 +50,7 @@ class CMFCPropertyPage : public CPropertyPage
 |`CMFCPropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |`CMFCPropertyPage::GetThisClass`|Framework 用來取得的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
 |`CMFCPropertyPage::OnSetActive`|此成員函式是由架構呼叫，當頁面由使用者選擇而變成使用中的頁面。 (覆寫[cpropertypage:: Onsetactive](../../mfc/reference/cpropertypage-class.md#onsetactive)。)|  
-|`CMFCPropertyPage::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需詳細資訊及方法語法，請參閱 < [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CPropertyPage::PreTranslateMessage`。)|  
+|`CMFCPropertyPage::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需詳細資訊及方法語法，請參閱 < [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CPropertyPage::PreTranslateMessage`。)|  
   
 ## <a name="remarks"></a>備註  
  `CMFCPropertyPage`類別表示屬性工作表，亦稱為索引標籤對話方塊中的個別頁面。  

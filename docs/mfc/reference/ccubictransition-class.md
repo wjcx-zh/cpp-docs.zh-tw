@@ -1,5 +1,5 @@
 ---
-title: CCubicTransition 類別 |Microsoft 文件
+title: CCubicTransition 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d82d61476e4af024eff53c0943a8a9e293c8d285
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953212"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210740"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 類別
 封裝立方轉換。  
@@ -65,7 +65,7 @@ class CCubicTransition : public CBaseTransition;
 |[CCubicTransition::m_duration](#m_duration)|轉換的持續時間。|  
   
 ## <a name="remarks"></a>備註  
- 三次方的轉換，期間動畫變數的值變更於其初始值為指定的最後一個值的轉換，結束時間指定速度持續期間內。 由於所有轉換會自動都清除，建議來配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup，直到然後它便是 NULL。 變更成員變數之後這個 COM 物件建立沒有任何作用。  
+ 三次方的轉換，期間動畫變數的值從變更其初始值為指定的最終值的轉換，結束於指定的速度持續期間。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -108,7 +108,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
 *pLibrary*  
- 指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
+ 指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。  
 
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  

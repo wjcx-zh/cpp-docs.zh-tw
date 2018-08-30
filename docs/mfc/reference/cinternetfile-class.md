@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336562"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202726"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 類別
 允許在使用網際網路通訊協定的遠端系統上的檔案的存取權。  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收讀取的行的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 包含從擷取的純文字資料緩衝區的指標[CInternetFile](../../mfc/reference/cinternetfile-class.md)物件。 不論傳遞給這個方法之緩衝區的資料類型，它不會執行任何操作資料 （例如，轉換成 Unicode） 中，因此您必須將傳回的資料對應至結構，您預期，如同**void\*** 傳回型別。  
+ 包含從擷取的純文字資料緩衝區的指標[CInternetFile](../../mfc/reference/cinternetfile-class.md)物件。 不論傳遞給這個方法之緩衝區的資料類型，它不會執行任何操作資料 （例如，轉換成 Unicode） 中，因此您必須將傳回的資料對應至結構，您預期，如同**void** <strong>\*</strong> 傳回型別。  
   
  如果沒有讀取任何資料; 達到檔案結尾，則為 NULL或者，如果布林值，如果檔案結尾，則為 FALSE。 已達到未讀取任何資料。  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  需要的緩衝區大小 (以位元組為單位)。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  基礎的 WinInet Api 請勿執行緩衝處理，因此請選擇可讓您的應用程式，不論要讀取的資料量，有效地讀取資料的緩衝區大小。 如果每個呼叫[讀取](#read)通常牽涉到大型 aount 的資料 （例如，四個或多個 kb 為單位），您應該不需要緩衝區。 不過，如果您呼叫`Read`以取得小塊資料，或如果您使用[ReadString](#readstring)一次讀取個別的線條，然後讀取的緩衝區可改善應用程式的效能。  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  以位元組為單位的緩衝區大小。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  基礎的 WinInet Api 不會執行緩衝處理，因此選擇可讓您的應用程式有效率地不論要寫入的資料量的資料寫入的緩衝區大小。 如果每個呼叫[寫入](#write)通常牽涉到大量的資料 (例如，四個 kb 或更多一次），您應該不需要緩衝區。 不過，如果您呼叫[寫入](#write)撰寫小塊資料，寫入緩衝區可以改善您的應用程式效能。  

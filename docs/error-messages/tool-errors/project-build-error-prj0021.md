@@ -1,7 +1,7 @@
 ---
-title: 專案建置錯誤 PRJ0021 |Microsoft 文件
+title: 專案建置錯誤 PRJ0021 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1695a9bf75fe5b3f0fa05b42245067f98c5e1655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6697fbfd23dbf07a66292ca7d15ca8ef3b064cd9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324453"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203335"
 ---
 # <a name="project-build-error-prj0021"></a>專案建置錯誤 PRJ0021
-工具 '工具' 屬性 'property' 包含無效的檔案名稱。  
-  
- 在屬性中指定的檔案名稱***屬性***，工具***工具***，不正確。  
-  
- 您可能使用了未知或無效的巨集。  
-  
- 請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)如何存取您的專案屬性的資訊。
+
+> 工具 '*工具*'，屬性'*屬性*' 包含無效的檔案名稱。
+
+在屬性中指定的檔名*屬性*tool*工具*無效。
+
+您可能已經使用了未知或無效的巨集。
+
+請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)如需如何存取您的專案屬性的詳細資訊。

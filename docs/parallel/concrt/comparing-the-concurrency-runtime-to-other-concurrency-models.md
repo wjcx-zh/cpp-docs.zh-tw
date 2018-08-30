@@ -1,5 +1,5 @@
 ---
-title: 比較並行執行階段與其他並行模型 |Microsoft 文件
+title: 比較並行執行階段，與其他並行模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fb4a588f1b9c7f5bc1d9d4f82ca9f7de767ba7e3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694065"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207207"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 本文件說明並行執行階段和其他技術在功能和程式設計模型方面的差異。 藉由了解並行執行階段優點與其他程式設計模型優點的比較結果，您可以選取最符合應用程式需求的技術。  
@@ -64,7 +64,7 @@ ms.locfileid: "33694065"
  Windows API 可使用 C 程式設計語言公開程式設計模型。 並行執行階段提供可利用 C++ 語言之最新功能的 C++ 程式設計介面。 例如，Lambda 函式可提供型別安全的簡潔機制，用以定義平行工作函式。 如需並行執行階段所使用之最新 C++ 功能的詳細資訊，請參閱[概觀](../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ### <a name="threads-and-thread-pools"></a>執行緒與執行緒集區  
- Windows API 的中央並行機制是執行緒。 您通常會使用 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 函式來建立執行緒。 雖然執行緒相對而言較易建立及使用，但是作業系統必須配置大量的時間與其他資源來管理執行緒。 此外，雖然能確保每個執行緒的執行時間與相同優先順序層級上的任何其他執行緒相同，但您必須建立夠大型工作，才能因應相關聯的額外負荷。 針對較小或較精細的工作，與並行相關聯的額外負荷，可能會高於以平行方式執行工作的優點。  
+ Windows API 的中央並行機制是執行緒。 您通常會使用 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) 函式來建立執行緒。 雖然執行緒相對而言較易建立及使用，但是作業系統必須配置大量的時間與其他資源來管理執行緒。 此外，雖然能確保每個執行緒的執行時間與相同優先順序層級上的任何其他執行緒相同，但您必須建立夠大型工作，才能因應相關聯的額外負荷。 針對較小或較精細的工作，與並行相關聯的額外負荷，可能會高於以平行方式執行工作的優點。  
   
  執行緒集區是能夠減少執行緒管理成本的方式之一。 自訂執行緒集區以及 Windows API 所提供的執行緒集區實作，都能夠讓小型工作項目有效地以平行方式執行。 Windows 執行緒集區將工作項目保存在先進先出 (FIFO) 佇列中。 每個工作項目都會以其加入集區的順序啟動。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33694065"
   
  在 Windows 7 和 Windows Server 2008 R2 中，作業系統可進一步支援並行和延展性。 例如，這些作業系統可支援硬體執行緒超過 64 個的電腦。 使用 Windows API 的現有應用程式必須經過修改，才能利用這些新功能。 不過，使用並行執行階段的應用程式則會自動使用這些功能，而不需要修改。  
   
- [base.user-mode_scheduling](http://msdn.microsoft.com/library/windows/desktop/dd627187)  
+ [base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)  
   
  [[靠上](#top)]  
   

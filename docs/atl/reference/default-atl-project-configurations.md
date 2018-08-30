@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f74ec15c6bc6d58f9f092a24faf66d0cef3740
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0c6a7b077c66940f98ce37c0d4b07bbab3dfd9ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026468"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201937"
 ---
 # <a name="default-atl-project-configurations"></a>預設 ATL 專案組態
 [ATL 專案精靈] 預設會建立兩個專案組態：  
@@ -35,6 +35,6 @@ ms.locfileid: "39026468"
 ## <a name="see-also"></a>另請參閱  
  [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)   
- [組態管理員 對話方塊](http://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [組態管理員 對話方塊](https://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
  [編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

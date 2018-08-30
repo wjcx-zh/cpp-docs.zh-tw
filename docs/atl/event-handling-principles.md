@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 065c7296982bc715d35431a441be5b0e8506e1fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852532"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197299"
 ---
 # <a name="event-handling-principles"></a>事件處理原則
 有三個步驟通用於所有的事件處理。 您將需要：  
@@ -41,13 +41,13 @@ ms.locfileid: "37852532"
   
  通知事件來源可以分成三個步驟：  
   
--   查詢的來源物件[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)。  
+-   查詢的來源物件[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)。  
   
--   呼叫[IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)傳遞事件介面的 IID，將您感興趣。 如果成功，這會傳回[IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)連接點物件上的介面。  
+-   呼叫[IConnectionPointContainer::FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)傳遞事件介面的 IID，將您感興趣。 如果成功，這會傳回[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)連接點物件上的介面。  
   
--   呼叫[IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815)傳遞`IUnknown`事件接收。 如果成功，這會傳回`DWORD`代表的連接 cookie。  
+-   呼叫[IConnectionPoint::Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise)傳遞`IUnknown`事件接收。 如果成功，這會傳回`DWORD`代表的連接 cookie。  
   
- 一旦您已經順利註冊您要接收事件，就會呼叫物件的事件介面上的方法，根據來源物件所引發的事件。 當您不再需要接收事件時，您可以將 cookie 傳遞至透過的連接點[iconnectionpoint::](http://msdn.microsoft.com/library/windows/desktop/ms686608)。 這會中斷來源和接收器之間的連線。  
+ 一旦您已經順利註冊您要接收事件，就會呼叫物件的事件介面上的方法，根據來源物件所引發的事件。 當您不再需要接收事件時，您可以將 cookie 傳遞至透過的連接點[iconnectionpoint::](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)。 這會中斷來源和接收器之間的連線。  
   
  請小心避免參考循環處理事件時。  
   

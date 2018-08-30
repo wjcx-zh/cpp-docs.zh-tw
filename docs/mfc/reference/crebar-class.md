@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201850"
 ---
 # <a name="crebar-class"></a>CReBar 類別
 提供 Rebar 控制項配置、持續性和狀態資訊的控制列。  
@@ -105,7 +105,7 @@ BOOL AddBar(
  指標`CBitmap`rebar 背景上顯示的物件。 預設為 NULL。  
   
  *cheaderctrl:: Create*  
- DWORD 包含樣式来套用至 rebar。 請參閱`fStyle`函數在 Win32 結構描述[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)的寬線樣式的完整清單。  
+ DWORD 包含樣式来套用至 rebar。 請參閱`fStyle`函數在 Win32 結構描述[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)的寬線樣式的完整清單。  
   
  *clrFore*  
  COLORREF 值，表示 rebar 的前景色彩。  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  指標`CWnd`其 Windows 視窗是 [狀態] 列的父代的物件。 通常框架視窗。  
   
  *dwCtrlStyle*  
- Rebar 控制項樣式。 根據預設，RBS_BANDBORDERS，它會顯示有限的幾行，以分隔相鄰的群組列的 rebar 控制項中。 請參閱[Rebar 控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK，如需樣式的清單中。  
+ Rebar 控制項樣式。 根據預設，RBS_BANDBORDERS，它會顯示有限的幾行，以分隔相鄰的群組列的 rebar 控制項中。 請參閱[Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK，如需樣式的清單中。  
   
  *cheaderctrl:: Create*  
  Rebar 的視窗樣式。  

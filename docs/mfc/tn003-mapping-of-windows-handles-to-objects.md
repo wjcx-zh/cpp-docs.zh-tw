@@ -1,5 +1,5 @@
 ---
-title: TN003： 將 Windows 控制代碼到物件 |Microsoft 文件
+title: TN003： 將 Windows 控制代碼到物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951504"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211758"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：將 Windows 控制代碼對應到物件
-此提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。  
+本提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。  
   
 ## <a name="the-problem"></a>問題  
- Windows 物件通常會以各種[處理](http://msdn.microsoft.com/library/windows/desktop/aa383751)MFC 類別物件包裝 Windows 物件控制代碼與 c + + 物件。 控制代碼的包裝函式的 MFC 類別程式庫可讓您尋找具有特定的控制代碼的 Windows 物件包裝的 c + + 物件。 不過，有時候物件沒有 c + + 包裝函式物件，並在這些時間系統會建立暫存物件做為 c + + 包裝函式。  
+ Windows 物件都通常由各種[處理](/windows/desktop/WinProg/windows-data-types)物件的 MFC 類別包裝 Windows 與 c + + 物件的物件控制代碼。 包裝函式的 MFC 類別程式庫的控制代碼可讓您尋找具有特定的控制代碼的 Windows 物件包裝的 c + + 物件。 不過，有時候物件沒有 c + + 包裝函式物件，並在這些時間，系統會建立暫存的物件，以做為 c + + 包裝函式。  
   
- 使用處理常式對應的 Windows 物件如下所示：  
+ Windows 物件的處理常式對應如下所示：  
   
 -   HWND ([CWnd](../mfc/reference/cwnd-class.md)和`CWnd`-衍生的類別)  
   
@@ -56,39 +56,39 @@ ms.locfileid: "36951504"
   
 -   通訊端 ([CSocket](../mfc/reference/csocket-class.md))  
   
- 這些物件的任何一個提供的控制代碼，您可以找到 MFC 包裝之物件的控制代碼藉由呼叫靜態方法`FromHandle`。 例如，假設呼叫 HWND *hWnd*下, 面將傳回的指標`CWnd`包裝*hWnd*:  
+ 假設這些物件的任何一個控制代碼，您可以找到 MFC 包裝之物件的控制代碼藉由呼叫靜態方法`FromHandle`。 例如，假設呼叫 HWND *hWnd*下, 面這一行會傳回的指標`CWnd`包裝*hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 如果*hWnd*沒有特定的包裝函式物件，暫時`CWnd`是用來包裝*hWnd*。 這可讓您能夠從任何控制代碼取得有效的 c + + 物件。  
+ 如果*hWnd*沒有特定的包裝函式物件，暫時`CWnd`用來包裝*hWnd*。 這讓您能夠從任何控制代碼取得有效的 c + + 物件。  
   
- 包裝函式物件之後，您可以從包裝函式類別的公用成員變數來擷取其控制代碼。 如果是`CWnd`， *m_hWnd*包含該物件的 HWND。  
+ 包裝函式物件之後，您可以從包裝函式類別的公用成員變數來擷取其控制代碼。 若是`CWnd`， *m_hWnd*包含該物件的 HWND。  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>附加至 MFC 物件的控制代碼  
- 提供 Windows 物件的新建立的控制代碼的包裝函式物件和控制代碼，您可以建立關聯的兩個藉由呼叫`Attach`函式，如此範例所示：  
+ Windows 物件，指定新建立的控制代碼的包裝函式物件和控制代碼，您可以將這兩個藉由呼叫`Attach`函式，如此範例所示：  
   
 ```  
 CWnd myWnd;  
 myWnd.Attach(hWnd);
 ```  
   
- 這會永久對應建立關聯的項目*myWnd*和*hWnd*。 呼叫`CWnd::FromHandle(hWnd)`現在會傳回指標*myWnd*。 當*myWnd*已刪除，解構函式會自動終結*hWnd*經由呼叫 Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)函式。 如果這不預期， *hWnd*必須中斷連線*myWnd*之前*myWnd*終結 (離開的範圍時，通常*myWnd*已定義)。 `Detach`方法的做法。  
+ 如此一來項目中永久對應建立關聯*myWnd*並*hWnd*。 呼叫`CWnd::FromHandle(hWnd)`現在會傳回的指標*myWnd*。 當*myWnd*已刪除，解構函式會自動終結*hWnd*藉由呼叫 Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)函式。 如果不需要這項目，則*hWnd*必須從中斷連結*myWnd*之前*myWnd*終結 (通常在離開範圍時，才*myWnd*所定義)。 `Detach`方法的做法。  
   
 ```  
 myWnd.Detach();
 ```  
   
-## <a name="more-about-temporary-objects"></a>暫存物件有關的詳細資訊  
- 建立暫存物件的每當`FromHandle`有還沒有包裝函式物件的控制代碼。 這些暫存物件會從其控制代碼中斷連結和刪除`DeleteTempMap`函式。 根據預設[CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle)自動呼叫`DeleteTempMap`支援暫存的控制代碼對應之每個類別。 這表示您不能假設暫存物件的指標才有效遠從函式的結束點已取得指標的位置。  
+## <a name="more-about-temporary-objects"></a>深入了解暫存物件  
+ 建立暫存物件的每次`FromHandle`有尚未有包裝函式物件的控制代碼。 從其控制代碼中斷連結並刪除這些暫存物件`DeleteTempMap`函式。 依預設[CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle)會自動呼叫`DeleteTempMap`支援暫存的控制代碼對應每個類別。 這表示您不能假設暫存物件的指標就會是有效遠從函式的結束點已取得指標的位置。  
   
 ## <a name="wrapper-objects-and-multiple-threads"></a>包裝函式物件和多個執行緒  
- 暫時性和永久性物件會維護每個執行緒為基礎。 也就是說，一個執行緒無法存取另一個執行緒的 c + + 包裝函式物件，無論它是暫時性或永久性。  
+ 暫時性和永久性的物件會維護每個執行緒為基礎。 也就是說，一個執行緒無法存取另一個執行緒的 c + + 包裝函式物件，無論是暫時性或永久性。  
   
- 若要將這些物件從一個執行緒，一律傳送它們做為其原生`HANDLE`型別。 從一個執行緒的 c + + 包裝函式物件傳遞至另一個通常會導致非預期的結果。  
+ 若要從一個執行緒的這些物件傳遞到另一個中，永遠將它們傳送為其原生`HANDLE`型別。 從一個執行緒的 c + + 包裝函式物件傳遞到另一個通常會導致非預期的結果。  
   
 ## <a name="see-also"></a>另請參閱  
- [依數字的技術提示](../mfc/technical-notes-by-number.md)   
+ [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

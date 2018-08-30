@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b8cf828ab0373c3bd09d22af5f2ced702cc68aa
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 795261da81fbe8082e279bc3830f004d845e1ea7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336015"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196932"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 類別
 協助 FTP 伺服器的網際網路檔案搜尋。  
@@ -120,14 +120,14 @@ virtual BOOL FindFile(
   
 -   在本機或在任何閘道，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。  
   
--   INTERNET_FLAG_RAW_DATA 覆寫預設值，傳回的未經處理資料 ( [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) ftp 結構)。  
+-   INTERNET_FLAG_RAW_DATA 覆寫預設值，傳回的未經處理資料 ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) ftp 結構)。  
   
 -   INTERNET_FLAG_SECURE 保護與安全通訊端層或 PCT 在網路上的交易 這個旗標適用於僅限 HTTP 要求。  
   
 -   INTERNET_FLAG_EXISTING_CONNECT 如果可能的話，請重複使用現有的連線到伺服器新`FindFile`要求，而非建立新的工作階段，針對每個要求。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
  之後呼叫`FindFile`若要擷取的第一個 FTP 檔案，您可以呼叫[FindNextFile](#findnextfile)來擷取後續的 FTP 檔案。  
@@ -143,12 +143,12 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 非零值，如果有多個檔案;如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案是在目錄中，最後一個檔案，或如果沒有相符，就可以找到檔案，`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
+ 非零值，如果有多個檔案;如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案是在目錄中，最後一個檔案，或如果沒有相符，就可以找到檔案，`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
   
 ### <a name="remarks"></a>備註  
  您必須呼叫此函式呼叫的任何屬性函式之前，至少一次 (請參閱[CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。  
   
- `FindNextFile` 包裝 Win32 函式[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)。  
+ `FindNextFile` 包裝 Win32 函式[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。  
   
 ### <a name="example"></a>範例  
   請參閱本主題前面的範例。  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 196264f417874904e0aba4df815d42e4e50d690d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026302"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205037"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 類別
 提供 `CWnd`衍生窗格的停駐支援。  
@@ -47,8 +47,8 @@ class CDockablePaneAdapter : public CDockablePane
 |名稱|描述|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|傳回已包裝的視窗。|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>備註  

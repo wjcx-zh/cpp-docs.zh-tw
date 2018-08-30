@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ef37b3bae0fa6bff9353b4415a614d252ddf661e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962825"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205336"
 ---
 # <a name="bitset-class"></a>bitset 類別
 
@@ -64,7 +64,8 @@ class bitset
 
 ### <a name="parameters"></a>參數
 
-*N*搭配非零的整數的類型 bitset 物件中指定的位元數`size_t`，必須在編譯時期為已知。
+*N*<br/>
+ 搭配非零的整數的類型 bitset 物件中指定的位元數`size_t`，必須在編譯時期為已知。
 
 ## <a name="remarks"></a>備註
 
@@ -237,19 +238,26 @@ explicit bitset(
 
 ### <a name="parameters"></a>參數
 
-*val*其 2 為底數的表示法用來初始化所建構之 bitset 中的位元不帶正負號的整數。
+*val*<br/>
+ 不帶正負號的整數，其以 2 為底數的表示可用來初始化所建構之 bitset 中的位元。
 
-*str*零與壹用來初始化 bitset 的位元值的字串。
+*str*<br/>
+ 以零和一組成的字串，用來初始化 bitset 的位元值。
 
-*_CStr*零與壹用來初始化 bitset 的位元值的 C 樣式字串。
+*_CStr*<br/>
+ 以零和一組成的 C 樣式字串，用來初始化 bitset 的位元值。
 
-*_Pos*字元的位置，在字串中，從左邊算到右邊和開頭為零，用來初始化 bitset 中的第一個位元。
+*_Pos*<br/>
+ 字串中的字元位置，由左到右算起並以零起始，用來初始化 bitset 中的第一個位元。
 
-*計數*用來提供初始值給 bitset 中的位元字串中的字元數。
+*count*<br/>
+ 字串中的字元數，用來提供初始值給 bitset 中的位元。
 
-*_Zero*用來表示零的字元。 預設值為 '0'。
+*_Zero*<br/>
+ 用來表示零的字元。 預設值為 '0'。
 
-*（_o)* 用來代表一個字元。 預設值為 '1'。
+*（_o)*<br/>
+ 用來表示一的字元。 預設值為 '1'。
 
 ### <a name="remarks"></a>備註
 
@@ -465,7 +473,8 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>參數
 
-*_Pos*其值是要反轉的位元的位置。
+*_Pos*<br/>
+ 要反轉其值之位元的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -473,7 +482,7 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="remarks"></a>備註
 
-第二個成員函式會擲回[out_of_range](../standard-library/out-of-range-class.md)例外狀況做為參數指定的位置是否大於大小*N*的**bitset\<***N*** >** 已反轉其位元。
+第二個成員函式會擲回[out_of_range](../standard-library/out-of-range-class.md)例外狀況做為參數指定的位置是否大於大小*N*的**bitset\<** *N* **>** 已反轉其位元。
 
 ### <a name="example"></a>範例
 
@@ -593,7 +602,8 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*會與目標 bitset 比較是否不相等的 bitset。
+*right*<br/>
+ 要與目標 bitset 比較是否不相等的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
@@ -654,7 +664,8 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*會與目標 bitset 進行位元結合的 bitset。
+*right*<br/>
+ 要與目標 bitset 進行位元結合的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
@@ -720,7 +731,8 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>參數
 
-*_Pos*向左移位的 bitset 中的位元的位置數目。
+*_Pos*<br/>
+ bitset 中的位元向左移位的位置數值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -771,7 +783,8 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>參數
 
-*_Pos*左邊位置的位元在 bitset 中要移位的數目。
+*_Pos*<br/>
+ bitset 中的位元向左移位的位置數值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -817,7 +830,8 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*比較與目標 bitset 是否相等的 bitset。
+*right*<br/>
+ 要與目標 bitset 比較是否相等的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
@@ -877,7 +891,8 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>參數
 
-*_Pos*的位元在 bitset 中要移位的位置向右的數目。
+*_Pos*<br/>
+ bitset 中的位元向右移位的位置數值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -929,7 +944,8 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>參數
 
-*_Pos*的位元在 bitset 中要移位的位置向右的數目。
+*_Pos*<br/>
+ bitset 中的位元向右移位的位置數值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -977,7 +993,8 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>參數
 
-*_Pos*找出的位元在 bitset 中的位置。
+*_Pos*<br/>
+ 此位元在 bitset 中的位置。
 
 ### <a name="remarks"></a>備註
 
@@ -1019,7 +1036,8 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*會與目標 bitset 進行位元結合的 bitset。
+*right*<br/>
+ 要與目標 bitset 進行位元結合的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1084,7 +1102,8 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*會與目標 bitset 進行位元結合的 bitset。
+*right*<br/>
+ 要與目標 bitset 進行位元結合的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1203,9 +1222,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*val*型別的物件的值**bool**要指派給位元在 bitset 中。
+*val*<br/>
+ 型別的物件的值**bool**要指派給位元在 bitset 中。
 
-*_Bitref*參考，其格式*x [i]* 位置的位元*我*bitset 中*x*。
+*_Bitref*<br/>
+ 位於 bitset *x* 中 *i* 位置的位元參考，其格式為 *x [ i ]*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1213,7 +1234,7 @@ public:
 
 ### <a name="remarks"></a>備註
 
-類別 `reference` 只有作為 bitset `operator[]` 的協助程式類別時才會出現。 此成員類別描述可存取 bitset 中個別位元的物件。 可讓*b*是類型的物件**bool**， *x*並*y*物件的型別**bitset\<***N*** >** ，以及*我*並*j*這類物件中的有效位置。 標記法 *x [i]* 參考位於 bitset *x* 中位置 *i* 的位元。 `reference` 類別的成員函式會依序提供下列作業：
+類別 `reference` 只有作為 bitset `operator[]` 的協助程式類別時才會出現。 此成員類別描述可存取 bitset 中個別位元的物件。 可讓*b*是類型的物件**bool**， *x*並*y*物件的型別**bitset\<** *N* **>**，和*我*並*j*這類物件中的有效位置。 標記法 *x [i]* 參考位於 bitset *x* 中位置 *i* 的位元。 `reference` 類別的成員函式會依序提供下列作業：
 
 |運算|定義|
 |---------------|----------------|
@@ -1316,7 +1337,8 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>參數
 
-*_Pos* bitset 中要重設為 0 的位元位置。
+*_Pos*<br/>
+ bitset 中要重設為 0 的位元位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1378,9 +1400,11 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>參數
 
-*_Pos*設為 bitset 中的位元位置指派一個值。
+*_Pos*<br/>
+ bitset 中要設定以指派值的位元位置。
 
-*val*来指派給指定的位置的位元的值。
+*val*<br/>
+ 要指派給位於指定位置之位元的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1482,7 +1506,8 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>參數
 
-*_Pos* bitset 中要測試其值的位元位置。
+*_Pos*<br/>
+ bitset 中要測試其值的位元位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1491,4 +1516,3 @@ bool test(size_t _Pos) const;
 ### <a name="remarks"></a>備註
 
 此成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md)
-

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4caf2518de21a938822e443c0383c22cf170d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395363"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209862"
 ---
 # <a name="clock"></a>時鐘
 
@@ -54,17 +54,17 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>傳回值
 
-CRT 初始化在開始程序，因為已耗用時間測量單位是**CLOCKS_PER_SEC**每秒單位數。 如果所經過的時間無法使用或已超過最大正數的時間可以記錄為**clock_t 要求**類型，此函數會傳回值`(clock_t)(-1)`。
+CRT 初始化在開始處理序之後, 經過的時間測量單位**CLOCKS_PER_SEC**每秒的單位。 如果已耗用時間無法使用或已超過可記錄為最大正時間**clock_t 要求**類型，此函式會傳回值`(clock_t)(-1)`。
 
 ## <a name="remarks"></a>備註
 
-**時鐘**函式會告知 CRT 初始化程序啟動時，已經過多少時鐘時間。 請注意，此函式未完全符合將淨 CPU 時間指定為傳回值的 ISO C。 若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223) 函式。 若要判斷經過的時間，以秒為單位，將分割所傳回的值**時鐘**函式巨集**CLOCKS_PER_SEC**。
+**時鐘**函式會告訴 CRT 初始化程序啟動期間過多少時鐘時間。 請注意，此函式未完全符合將淨 CPU 時間指定為傳回值的 ISO C。 若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函式。 若要判斷經過的時間，以秒為單位，將分割所傳回的值**時鐘**函式巨集所**CLOCKS_PER_SEC**。
 
-有足夠時間，所傳回的值**時鐘**可能會導致超過最大正值**clock_t 要求**。 當執行程序更久，所傳回的值**時鐘**一律`(clock_t)(-1)`、 ISO C99 標準 (7.23.2.1) 和 ISO C11 標準 (7.27.2.1) 所指定。 Microsoft 實作**clock_t 要求**為**長**，32 位元帶正負號的整數，而**CLOCKS_PER_SEC**巨集定義為 1000年。 這可提供最多**時鐘**函式傳回值為 2147483.647 秒，或大約 24.8 天。 不依賴所傳回的值**時鐘**已執行超過這段時間的處理序中。 您可以使用 64 位元[時間](time-time32-time64.md)函式或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)多年的記錄處理序已耗用時間的函式。
+有足夠的時間，所傳回的值**時鐘**可能會超過最大正值**clock_t 要求**。 當執行程序更久，所傳回的值**時鐘**總是`(clock_t)(-1)`、 ISO C99 標準 (7.23.2.1) 和 ISO C11 標準 (7.27.2.1) 所指定。 Microsoft 實作**clock_t 要求**作為**長**，32 位元帶正負號的整數，而**CLOCKS_PER_SEC**巨集定義為 1000年。 這可提供最多**時鐘**函式傳回值 2147483.647 秒，或大約 24.8 天。 所傳回的值並不依賴**時鐘**已執行超過這段時間的處理序中。 您可以使用 64 位元[時間](time-time32-time64.md)函式或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)多年來的記錄處理序已耗用時間的函式。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**時鐘**|\<time.h>|
 

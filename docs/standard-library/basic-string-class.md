@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209080"
 ---
 # <a name="basicstring-class"></a>basic_string 類別
 
@@ -881,7 +881,7 @@ const value_type *c_str() const;
 
 ### <a name="remarks"></a>備註
 
-屬於 C++ 範本類別 basic_string\<char> 的字串類型物件不一定是以 Null 結束。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串的一部分。 const **char\*** 可自動轉換為字串，但此字串類別不提供從 C 樣式字串到 **basic_string\<char>** 類型物件的自動轉換。
+屬於 C++ 範本類別 basic_string\<char> 的字串類型物件不一定是以 Null 結束。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串的一部分。 從自動轉換**const char** <strong>\*</strong>為字串，但此字串類別不會提供從 C 樣式字串的自動轉換至物件的型別**basic_string\<char >**。
 
 由於傳回的 C 樣式字串具有有限的存留期，而且屬字串類別所擁有，因此不應該加以修改，這樣做可能會使字串指標失效或遭到刪除。
 
@@ -1652,7 +1652,7 @@ const value_type *data() const;
 
 屬於 C++ 範本類別 basic_string \<char> 的字串類型物件不一定是以 Null 結束。 傳回型別`data`不是有效的 C 字串，因為不附加任何 null 字元。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串物件的一部分。
 
-const **char\*** 可自動轉換為字串，但此字串類別不提供從 C 樣式字串到 **basic_string \<char>** 類型物件的自動轉換。
+從自動轉換**const char** <strong>\*</strong>為字串，但此字串類別不會提供從 C 樣式字串的自動轉換至物件的型別**basic_string \<char >**。
 
 由於傳回的字串具有有限的存留期，而且屬類別字串所擁有，因此不應該加以修改，這樣做可能會使字串指標失效或遭到刪除。
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 此類型是 `allocator_type::pointer` 的同義字。
 
-型別的`string`，它就相當於**char\***。
+型別的`string`，它就相當於**char**<strong>\*</strong>。
 
 ### <a name="example"></a>範例
 

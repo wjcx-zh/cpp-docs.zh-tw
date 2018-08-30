@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af604ac6afce91dc865cfbb465e8c27acea8f775
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885317"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196315"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 類別
 這個類別會還原[CAccessToken](../../atl/reference/caccesstoken-class.md) nonimpersonating 狀態時離開範圍的物件。  
@@ -55,11 +55,11 @@ class CAutoRevertImpersonation
 |[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|擷取存取權杖目前與這個物件相關聯。|  
   
 ## <a name="remarks"></a>備註  
- [存取權杖](http://msdn.microsoft.com/library/windows/desktop/aa374909)是一個物件，描述處理序或執行緒的安全性內容，並配置給每位使用者登入 Windows NT 或 Windows 2000 的系統。 這些存取語彙基元所能表示`CAccessToken`類別。  
+ [存取權杖](/windows/desktop/SecAuthZ/access-tokens)是一個物件，描述處理序或執行緒的安全性內容，並配置給每位使用者登入 Windows NT 或 Windows 2000 的系統。 這些存取語彙基元所能表示`CAccessToken`類別。  
   
  有時，它是為了模擬存取權杖。 為了方便起見，提供這個類別，但它不會執行模擬的存取權杖;它只會執行自動還原為 nonimpersonated 的狀態。 這是因為數種方式可以執行語彙基元存取模擬。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
@@ -130,5 +130,5 @@ const CAccessToken* GetAccessToken() throw();
   
 ## <a name="see-also"></a>另請參閱  
  [ATLSecurity 範例](../../visual-cpp-samples.md)   
- [存取權杖](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
+ [存取權杖](/windows/desktop/SecAuthZ/access-tokens)   
  [類別概觀](../../atl/atl-class-overview.md)

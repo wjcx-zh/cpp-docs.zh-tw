@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338645"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204001"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 類別
 可讓您在 您的應用程式中實作標準字串 尋找/取代 對話方塊。  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  一次`CFindReplaceDialog`在建構物件，您必須呼叫[建立](#create)成員函式來建立和顯示對話方塊。  
   
- 使用[m_fr](#m_fr)結構，以初始化對話方塊中，然後再呼叫`Create`。 `m_fr`結構的類型是[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
+ 使用[m_fr](#m_fr)結構，以初始化對話方塊中，然後再呼叫`Create`。 `m_fr`結構的類型是[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
   
- 為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函式，並使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)訊息對應巨集，在您的畫面格處理這個已註冊的訊息的視窗。  
+ 為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函式，並使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)訊息對應巨集，在您的畫面格處理這個已註冊的訊息的視窗。  
   
  您可以判斷使用者是否已決定要終止的對話方塊`IsTerminating`成員函式。  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  當對話方塊出現時，才會進行預設值取代字串的指標。 如果是 NULL，對話方塊不包含預設的取代字串。  
   
  *dwFlags*  
- 您可以使用自訂設定的對話方塊中，使用位元的 OR 運算子結合的一或多個標幟。 預設值是 FR_DOWN，指定是要繼續向下的方向搜尋。 請參閱[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)如需有關這些旗標的 Windows SDK 中的結構。  
+ 您可以使用自訂設定的對話方塊中，使用位元的 OR 運算子結合的一或多個標幟。 預設值是 FR_DOWN，指定是要繼續向下的方向搜尋。 請參閱[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)如需有關這些旗標的 Windows SDK 中的結構。  
   
  *pParentWnd*  
  對話方塊的父代或擁有者視窗的指標。 這是將會收到指出要求 尋找/取代動作訊息的視窗。 如果是 NULL，則會使用應用程式的主視窗。  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  已成功建立對話方塊物件; 如果為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函式的傳回值是應用程式的執行個體唯一的訊息數目。 框架視窗應該會有訊息對應項目宣告回呼函式 (`OnFindReplace`接下來的範例中) 可處理這個已註冊的訊息。 下列程式碼片段是如何執行這項操作，名為框架視窗類別的範例`CMyRichEditView`:  
+ 為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)函式的傳回值是應用程式的執行個體唯一的訊息數目。 框架視窗應該會有訊息對應項目宣告回呼函式 (`OnFindReplace`接下來的範例中) 可處理這個已註冊的訊息。 下列程式碼片段是如何執行這項操作，名為框架視窗類別的範例`CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_fr` 是一種結構的型別[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 其成員儲存對話方塊物件的特性。 在建構之後`CFindReplaceDialog`物件，您可以使用`m_fr`修改在對話方塊中的各種值。  
+ `m_fr` 是一種結構的型別[FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea)。 其成員儲存對話方塊物件的特性。 在建構之後`CFindReplaceDialog`物件，您可以使用`m_fr`修改在對話方塊中的各種值。  
   
  如需有關此結構的詳細資訊，請參閱`FINDREPLACE`Windows SDK 中的結構。  
   

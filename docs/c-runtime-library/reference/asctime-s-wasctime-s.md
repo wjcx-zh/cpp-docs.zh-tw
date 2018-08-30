@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208675"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s、_wasctime_s
 
-轉換**tm**時間字元字串的結構。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [asctime、_wasctime](asctime-wasctime.md) 版本。
+轉換**tm**時間為字元字串的結構。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [asctime、_wasctime](asctime-wasctime.md) 版本。
 
 ## <a name="syntax"></a>語法
 
@@ -79,13 +79,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>參數
 
 *buffer*<br/>
-若要將字元字串的結果儲存緩衝區的指標。 此函式所指定的大小假設有效的記憶體位置的指標*numberOfElements*。
+將字元字串結果的緩衝區指標。 此函式假設有效的記憶體位置的指標所指定的大小*numberOfElements*。
 
 *numberOfElements*<br/>
 用來儲存結果的緩衝區大小。
 
 *tmSource*<br/>
-時間/日期結構。 此函式會假設是有效的指標**結構** **tm**物件。
+時間/日期結構。 此函式假設有效的指標**struct** **tm**物件。
 
 ## <a name="return-value"></a>傳回值
 
@@ -102,29 +102,29 @@ errno_t _wasctime_s(
 |不**NULL**|>= 26|無效的時間結構或超出時間元件值的範圍|**EINVAL**|空字串|
 
 > [!NOTE]
-> 錯誤條件**wasctime_s**類似於**asctime_s**與例外狀況的大小限制為測量單位的文字。
+> 錯誤條件**wasctime_s**類似**asctime_s**使用以文字為量測大小限制的例外狀況。
 
 ## <a name="remarks"></a>備註
 
-**Asctime**函式會將時間儲存為字元字串的結構的轉換。 *TmSource*值通常取自呼叫**gmtime**或**localtime**。 這兩個函數可以用來填入**tm**結構所定義的時間。H.
+**Asctime**函式會轉換為字元字串結構儲存一次。 *TmSource*的值通常取自對**gmtime**或是**localtime**。 這兩個函數可用來填入**tm**結構所定義的時間。H.
 
 |timeptr 成員|值|
 |--------------------|-----------|
-|**tm_hour**|午夜 (0-23) 的小時|
+|**tm_hour**|午夜 (0-23) 後的小時|
 |**tm_isdst**|若日光節約時間已生效則為正值；如果日光節約時間沒有作用則為 0。如果日光節約時間的狀態是未知，則為負值。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，使用美國的規則。|
-|**tm_mday**|月份 (1-31) 天數|
-|**tm_min**|小時 (0-59) 之後的分鐘|
-|**tm_mon**|月 (0-11。年 1 月 = 0）|
+|**tm_mday**|月份的日期 (1-31)|
+|**tm_min**|小時 (0 – 59) 之後的分鐘|
+|**tm_mon**|月份 (0-11;年 1 月 = 0）|
 |**tm_sec**|分鐘 (0-59) 之後的秒數|
-|**tm_wday**|(0-6; 週間日星期日 = 0）|
-|**tm_yday**|年 (0 365; 中的日年 1 月 1 = 0)|
+|**tm_wday**|週 (0-6; 中的日星期日 = 0）|
+|**tm_yday**|年 (0 365; 中的日1 年 1 月 = 0)|
 |**tm_year**|年份 (目前年份減去 1900 年)|
 
 已轉換的字元字串也會根據本機時區設定調整。 如需設定本機時間的資訊，請參閱 [time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函式；如需定義時區環境及全域變數的資訊，請參閱 [_tzset](tzset.md) 函式。
 
-所產生的字串結果**asctime_s**包含完全 26 個字元，其格式`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 當作第二個參數傳入的值至少應有這麼大。 如果是小於錯誤碼， **EINVAL**，將會傳回。
+所產生的字串結果**asctime_s**包含完全 26 個字元，且具有下列形式`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 當作第二個參數傳入的值至少應有這麼大。 如果更小，錯誤碼**EINVAL**，將會傳回。
 
-**_wasctime_s**是寬字元版本的**asctime_s**。 **_wasctime_s**和**asctime_s**除此之外的行為相同。
+**_wasctime_s**是寬字元版本的**asctime_s**。 **_wasctime_s**並**asctime_s**行為相同。
 
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應
 
@@ -136,20 +136,20 @@ errno_t _wasctime_s(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> 或 \<wchar.h>|
 
 ## <a name="security"></a>安全性
 
-如果緩衝區指標不是**NULL**和指標不指向有效的緩衝區、 函式將會覆寫，不論是位置。 這也會導致存取違規。
+如果緩衝區指標不是**NULL**指標不指向有效的緩衝區，函式將會覆寫，不論是位置。 這也會導致存取違規。
 
-如果傳入的大小引數大於緩衝區的實際大小，就會發生[緩衝區滿溢](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+如果傳入的大小引數大於緩衝區的實際大小，就會發生[緩衝區滿溢](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="example"></a>範例
 
-此程式會放在長整數的系統時間**aclock**，將它轉譯成結構**newtime** ，然後將它轉換成字串形式的輸出，使用**asctime_s**函式。
+此程式會將系統時間放在長整數**aclock**，將它轉譯成結構**newtime** ，然後將它轉換成字串形式的輸出，使用**asctime_s**函式。
 
 ```C
 // crt_asctime_s.c

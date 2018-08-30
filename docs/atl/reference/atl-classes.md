@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb96db2ff3a927885bdb914665147dc0e7ce8da
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71025785fbc9eab2b962e0f9e48ba9170edf1de1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881288"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204186"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 類別和結構
 Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋找特定的類別，請參閱[ATL 類別概觀](../../atl/atl-class-overview.md)。  
@@ -71,20 +71,20 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[CAxWindow](../../atl/reference/caxwindow-class.md)|這個類別提供方法，以操作裝載 ActiveX 控制項的視窗。|atlwin.h|  
 |[CAxWindow2T](../../atl/reference/caxwindow2t-class.md)|這個類別提供方法，以操作視窗裝載 ActiveX 控制項，也有提供裝載授權的 ActiveX 控制項的支援。|atlwin.h|  
 |[CBindStatusCallback](../../atl/reference/cbindstatuscallback-class.md)|這個類別會實作 `IBindStatusCallback` 介面。|atlctl.h|  
-|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總的物件。|atlcom.h|  
+|[CComAggObject](../../atl/reference/ccomaggobject-class.md)|這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)彙總的物件。|atlcom.h|  
 |[CComAllocator](../../atl/reference/ccomallocator-class.md)|這個類別提供方法來管理使用 COM 記憶體常式的記憶體。|atlbase.h|  
 |[CComApartment](../../atl/reference/ccomapartment-class.md)|這個類別會提供支援，來管理執行緒集區的 EXE 模組中的 apartment。|atlbase.h|  
 |[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)|這個類別提供方法來取得和釋放重要區段物件的擁有權。|atlcore.h|  
 |[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)|ATL 7.0 截至`CComAutoThreadModule`已淘汰： 請參閱 < [ATL 模組](../../atl/atl-module-classes.md)如需詳細資訊。|atlbase.h|  
 |[CComBSTR](../../atl/reference/ccombstr-class.md)|這個類別是 Bstr 的包裝函式。|atlbase.h|  
-|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)撕下介面。|atlcom.h|  
-|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。|atlcom.h|  
-|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|這個類別會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面。|atlcom.h|  
-|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，並允許在多個 apartment 中建立的物件。|atlcom.h|  
+|[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)|這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)撕下介面。|atlcom.h|  
+|[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)|這個類別會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面。|atlcom.h|  
+|[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)|這個類別會實作[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)介面。|atlcom.h|  
+|[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)|這個類別會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面，並允許在多個 apartment 中建立的物件。|atlcom.h|  
 |[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)|這個類別衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。|atlcom.h|  
 |[CComCoClass](../../atl/reference/ccomcoclass-class.md)|這個類別提供方法來建立類別的執行個體，並取得其屬性。|atlcom.h|  
 |[CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)|這個類別會提供實作複合控制項所需的方法。|atlctl.h|  
-|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以`IUnknown`。|atlcom.h|  
+|[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)委派給擁有者物件，以`IUnknown`。|atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|這個類別提供方法來建立及管理 ATL 的控制項。|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|這個類別提供方法來建立及管理 ATL 的控制項。|atlctl.h|  
 |[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|這個類別提供方法來取得和釋放重要區段物件的擁有權。|atlcore.h|  
@@ -208,20 +208,20 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)|這個類別會實作`IUnknown`和是透過此容器進行通訊與控制項的主要介面。|atlctl.h|  
 |[IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)|這個類別會實作`IUnknown`，並可讓用戶端來存取物件的屬性頁中的資訊。|atlctl.h|  
 |[IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)|這個類別會實作`IUnknown`，可讓用戶端提供的屬性包以儲存其屬性的物件。|atlcom.h|  
-|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|這個類別會實作[IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)介面。|atlcom.h|  
-|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。|atlcom.h|  
-|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|這個類別會實作`IUnknown`而[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面方法。|atlctl.h|  
-|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|這個類別會公開[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)作為可連接物件上的連出介面的介面。|atlctl.h|  
+|[IPersistStorageImpl](../../atl/reference/ipersiststorageimpl-class.md)|這個類別會實作[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)介面。|atlcom.h|  
+|[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)介面。|atlcom.h|  
+|[IPointerInactiveImpl](../../atl/reference/ipointerinactiveimpl-class.md)|這個類別會實作`IUnknown`而[IPointerInactive](/windows/desktop/api/ocidl/nn-ocidl-ipointerinactive)介面方法。|atlctl.h|  
+|[IPropertyNotifySinkCP](../../atl/reference/ipropertynotifysinkcp-class.md)|這個類別會公開[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作為可連接物件上的連出介面的介面。|atlctl.h|  
 |[IPropertyPage2Impl](../../atl/reference/ipropertypage2impl-class.md)|這個類別會實作`IUnknown`和繼承的預設實作[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)。|atlctl.h|  
-|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)介面。|atlctl.h|  
-|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|這個類別提供的預設實作[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)並[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)方法。|atlcom.h|  
+|[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)介面。|atlctl.h|  
+|[IProvideClassInfo2Impl](../../atl/reference/iprovideclassinfo2impl-class.md)|這個類別提供的預設實作[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)並[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。|atlcom.h|  
 |[IQuickActivateImpl](../../atl/reference/iquickactivateimpl-class.md)|這個類別會結合成單一呼叫容器的控制項初始化。|atlctl.h|  
-|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面。|atlctl.h|  
+|[IRunnableObjectImpl](../../atl/reference/irunnableobjectimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)介面。|atlctl.h|  
 |[IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)|這個類別提供的預設實作`IServiceProvider`介面。|atlcom.h|  
-|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面。|atlcom.h|  
+|[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)|這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)介面。|atlcom.h|  
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|這個類別提供的預設實作`ISupportErrorInfo Interface`介面，並可以在只有單一介面產生物件錯誤時使用。|atlcom.h|  
 |[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)|這個介面會提供方法，以設定執行緒集區。|以及 atlutil.h|  
-|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|這個類別會實作`IUnknown`並提供的預設實作[IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763)， [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)，和[IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)介面。|atlctl.h|  
+|[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|這個類別會實作`IUnknown`並提供的預設實作[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject)， [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)，和[IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex)介面。|atlctl.h|  
 |[IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 是用戶端所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。|以及 atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|這個類別會提供包裝函式`CreateWindow`和`CreateWindowEx`。|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|這個引數的配接器類別可讓`RECT`指標或參考傳遞至函式實作方面的指標。|atlwin.h|  

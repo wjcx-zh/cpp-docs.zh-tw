@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756de90967b4c9178d5e6a584990cc53ad7786c
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206888"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|覆寫以執行應用程式專屬的閒置時間處理。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|由架構呼叫以從檔案開啟的文件。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|剖析出個別的參數和命令列中的旗標。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再將它們分派至 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再將它們分派至 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|到達應用程式之前，會攔截特定訊息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|處理命令列引數和旗標。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|攔截所有的應用程式的訊息和命令處理常式所擲回未處理例外狀況。|
@@ -860,7 +860,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>參數
 
 *pPrintDlg*  
-指標[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)結構。
+指標[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -912,7 +912,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary` 會配置緩衝區，並傳回在其地址\* *ppData*。 呼叫端負責釋放緩衝區使用**delete []**。
 
 > [!IMPORTANT]
-> 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>範例
 
@@ -953,7 +953,7 @@ UINT GetProfileInt(
 此成員函式不區分大小寫，因此中的字串*lpszSection*並*lpszEntry*參數可能大小寫不同。
 
 > [!IMPORTANT]
-> 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>範例
 
@@ -990,7 +990,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>備註
 
 > [!IMPORTANT]
-> 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="example"></a>範例
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 覆寫`InitInstance`來初始化每個 Windows 底下執行的應用程式的新執行個體。 通常，您會覆寫`InitInstance`來建構您的主視窗物件和設定`CWinThread::m_pMainWnd`指向該視窗的資料成員。 如需有關如何覆寫此成員函式的詳細資訊，請參閱 < [CWinApp： 應用程式類別](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。
+> MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)中您`InitInstance`覆寫，請指定 COINIT_APARTMENTTHREADED （而不是 COINIT_MULTITHREADED）。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。
 
 ### <a name="example"></a>範例
 
@@ -1109,7 +1109,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 指向以 null 終止的字串，包含資料指標資源的名稱。 您可以使用`CString`這個引數。
 
 *nIDResource*  
-游標資源的識別碼。 如需資源的清單，請參閱 < [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) Windows SDK 中。
+游標資源的識別碼。 如需資源的清單，請參閱 < [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1152,7 +1152,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 您可以使用[LoadStandardIcon](#loadstandardicon)或是[LoadOEMIcon](#loadoemicon)成員函式來存取預先定義的 Windows 圖示。
 
 > [!NOTE]
-> 此成員函式會呼叫 Win32 API 函式[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，這只能載入 SM_CXICON 和 SM_CYICON 系統計量值符合其大小的圖示。
+> 此成員函式會呼叫 Win32 API 函式[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)，這只能載入 SM_CXICON 和 SM_CYICON 系統計量值符合其大小的圖示。
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1262,7 +1262,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>參數
 
 *lpszIconName*  
-指定預先定義的 Windows 圖示資訊清單常數識別碼。 在 WINDOWS 中定義這些識別項。H. 可能的預先定義的值及其描述的清單，請參閱*lpIconName*中的參數[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) Windows SDK 中。
+指定預先定義的 Windows 圖示資訊清單常數識別碼。 在 WINDOWS 中定義這些識別項。H. 可能的預先定義的值及其描述的清單，請參閱*lpIconName*中的參數[LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1444,7 +1444,7 @@ LPCTSTR m_pszAppName;
 
 應用程式名稱可以來自傳遞給參數[CWinApp](#cwinapp)建構函式，或者，如果未指定識別碼的 AFX_IDS_APP_TITLE 資源字串。 如果資源中找不到應用程式名稱，其來自該程式。EXE 檔案名稱。
 
-全域函式所傳回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 這類型的公用變數**const char\***。
+全域函式所傳回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果您將值指派給`m_pszAppName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
@@ -1465,7 +1465,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>備註
 
-不同於[m_pszAppName](#m_pszappname)，此名稱不能包含空格。 `m_pszExeName` 這類型的公用變數**const char\***。
+不同於[m_pszAppName](#m_pszappname)，此名稱不能包含空格。 `m_pszExeName` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果您將值指派給`m_pszExeName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
@@ -1482,7 +1482,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>備註
 
-根據預設，架構會初始化`m_pszHelpFilePath`的應用程式名稱 」。HLP"附加。 若要變更說明檔的名稱，請設定`m_pszHelpFilePath`指向包含所需的說明檔的完整名稱的字串。 若要這樣做的方便位置是在應用程式的[InitInstance](#initinstance)函式。 `m_pszHelpFilePath` 這類型的公用變數**const char\***。
+根據預設，架構會初始化`m_pszHelpFilePath`的應用程式名稱 」。HLP"附加。 若要變更說明檔的名稱，請設定`m_pszHelpFilePath`指向包含所需的說明檔的完整名稱的字串。 若要這樣做的方便位置是在應用程式的[InitInstance](#initinstance)函式。 `m_pszHelpFilePath` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果您將值指派給`m_pszHelpFilePath`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
@@ -1499,7 +1499,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>備註
 
-`m_pszProfileName` 這類型的公用變數**const char\***。
+`m_pszProfileName` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
 > 如果您將值指派給`m_pszProfileName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-覆寫這個函式來篩選視窗訊息，再將它們分派至 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)的預設實作會執行對應鍵轉譯，因此您必須呼叫`CWinApp::PreTranslateMessage`您覆寫的版本中的成員函式。
+覆寫這個函式來篩選視窗訊息，再將它們分派至 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)的預設實作會執行對應鍵轉譯，因此您必須呼叫`CWinApp::PreTranslateMessage`您覆寫的版本中的成員函式。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -2131,7 +2131,7 @@ void SelectPrinter(
 控制代碼[DEVNAMES](../../mfc/reference/devnames-structure.md)識別驅動程式、 裝置及特定印表機的輸出連接埠名稱的結構。
 
 *hDevMode*  
-控制代碼[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)結構，指定裝置初始化和印表機的環境的相關資訊。
+控制代碼[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)結構，指定裝置初始化和印表機的環境的相關資訊。
 
 *bFreeOld*  
 釋放先前選取的印表機。
@@ -2270,7 +2270,7 @@ virtual void WinHelp(
 指定其他資料。 所使用的值而定的值*nCmd*參數。
 
 *nCmd*  
-指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱[WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows 函式。
+指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 函式。
 
 ### <a name="remarks"></a>備註
 

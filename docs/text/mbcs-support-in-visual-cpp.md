@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205192"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支援
 是 MBCS 啟用舊版 Windows 上執行時，Visual c + + 開發系統 （包括整合式原始檔程式碼編輯器、 偵錯工具和命令列工具） 已 MBCS 啟用，除了 [記憶體] 視窗。  
@@ -47,7 +47,7 @@ ms.locfileid: "42608676"
  若要這樣做適當的位置，visual c + + 會接受雙位元組字元。 此對話方塊和 Visual c + + 資源編輯器 （例如，在對話方塊編輯器中靜態文字） 和圖示編輯器中的靜態文字項目中的文字項目中包含路徑名稱和檔案名稱。 此外，前置處理器會辨識某些雙位元組指示詞 — 例如，檔案中的名稱`#include`陳述式，並做為引數`code_seg`和`data_seg`pragma。 在 原始程式碼編輯器，在註解和字串常值的雙位元組字元已被接受，雖然不是在 C/c + + 語言項目 （例如變數的名稱）。  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 支援的輸入法編輯器 (IME)  
- 通常使用 MBCS （比方說，日本） 的東亞市場支援 Windows IME 輸入這兩個單一位元組和雙位元組字元所撰寫的應用程式。 Visual c + + 開發環境包含之 IME 的完整支援。 如需詳細資訊，請參閱 <<c0> [ 輸入法範例： 示範如何控制輸入法模式和實作 IME 層級 3](http://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
+ 通常使用 MBCS （比方說，日本） 的東亞市場支援 Windows IME 輸入這兩個單一位元組和雙位元組字元所撰寫的應用程式。 Visual c + + 開發環境包含之 IME 的完整支援。 如需詳細資訊，請參閱 <<c0> [ 輸入法範例： 示範如何控制輸入法模式和實作 IME 層級 3](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
   
  日文鍵盤不直接支援漢字字元。 IME 轉換注音標示的字串，其中一種其他日文字母 （羅馬字母、 片假名或平假名） 進入其可能的漢字表示。 如果有模稜兩可，您可以選取從多個替代方案。 當您選取想要的漢字字元時，輸入法會傳遞兩個`WM_CHAR`控制的應用程式的訊息。  
   

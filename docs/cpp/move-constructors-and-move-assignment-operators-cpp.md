@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f414871477e8d263546833cb71496f5795dd4671
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204983"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動建構函式和移動指派運算子 (C++)
 本主題說明如何撰寫*移動建構函式*和 c + + 類別的移動指派運算子。 移動建構函式可讓要移至左值，而不複製右值物件所擁有的資源。 如需有關移動語意的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
@@ -317,4 +317,4 @@ MemoryBlock(MemoryBlock&& other)
   
 ## <a name="see-also"></a>另請參閱  
  [右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<公用程式 > 移動](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<公用程式 > 移動](https://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

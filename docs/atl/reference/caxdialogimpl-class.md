@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd019112e846875bfa8e27faac5088fbcf1cdaef
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 88cb742464507fe7040b38d88355ab473b366bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881983"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196006"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 類別
 這個類別會實作裝載 ActiveX 控制項對話方塊 （強制回應或非強制回應）。  
@@ -170,7 +170,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>參數  
  *hWndParent*  
- [in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。  
+ [in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。  
   
  *dwInitParam*  
  [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。  
@@ -235,7 +235,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
   
 ### <a name="parameters"></a>參數  
  *pMsg*  
- 指標[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)結構，其中包含要檢查的訊息。  
+ 指標[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)結構，其中包含要檢查的訊息。  
   
 ### <a name="return-value"></a>傳回值  
  如果訊息已處理，否則為 FALSE 否則為 true，則傳回。  

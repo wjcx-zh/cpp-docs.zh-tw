@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954756"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199234"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 類別
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>參數
 
-*型別*来存放在 priority_queue 中的項目資料類型。
+*類型*<br/>
+ 要存放在 priority_queue 中的項目資料類型。
 
-*容器*用來實作 priority_queue 的基礎容器類型。
+*容器*<br/>
+ 用來實作 priority_queue 的基礎容器類型。
 
-*比較*提供可以比較兩個項目值做為排序鍵來判斷其相對順序，在 priority_queue 中的函式物件的型別。 此引數是選擇性而且二元述詞**少***\<*** typename** *容器 ***:: value_type*** >* 做為預設值。
+*Compare*<br/>
+ 此類型提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在 priority_queue 中的相對順序。 這個引數是選用引數，且預設值是二元述詞 `less<typename Container::value_type>`。
 
 ## <a name="remarks"></a>備註
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>參數
 
-*_ comp*類型的比較函式**constTraits**用來排序 priority_queue，預設為比較函式的基底容器中的項目。
+*_ comp*<br/>
+ 類型為 **constTraits** 並用來排序 priority_queue 中項目的比較函式，預設為基底容器的比較函式。
 
-*_Cont*其中建構的 priority_queue 不是要從中複製的基底容器。
+*_Cont*<br/>
+ 建構的 priority_queue 將成為複本的基底容器。
 
-*右*建構的集是將成為複本的 priority_queue。
+*right*<br/>
+ 建構的集合將成為複本的 priority_queue。
 
-*第一個*要複製的項目範圍中第一個元素的位置。
+*first*<br/>
+ 要複製的元素範圍中第一個元素的位置。
 
-*最後一個*超出要複製的項目範圍的第一個元素的位置。
+*最後一個*<br/>
+ 超出要複製之元素範圍的第一個元素的位置。
 
 ### <a name="remarks"></a>備註
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*加入到 priority_queue 頂端的項目。
+*val*<br/>
+ 加入到 priority_queue 頂端的項目。
 
 ### <a name="remarks"></a>備註
 

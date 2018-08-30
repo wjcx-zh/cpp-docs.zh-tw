@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3b8b266d44f9109a346160a1b2493f8644be839
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207594"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195684"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 Common language runtime 提供平台叫用服務或 PInvoke，可讓 managed 程式碼呼叫原生動態連結程式庫 (Dll) 中的 C 樣式函式。 相同封送處理的資料會用於 COM 互通性與執行階段以及"It Just Works"（IJW) 機制。  
@@ -36,7 +36,7 @@ Common language runtime 提供平台叫用服務或 PInvoke，可讓 managed 程
   
 -   [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [詳述平台叫用](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [詳述平台叫用](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  此章節中的範例僅說明如何`PInvoke`可用。 `PInvoke` 可以簡化自訂的資料封送處理，因為您提供封送處理資訊而非撰寫程序的封送處理程式碼的屬性中以宣告方式。  
   

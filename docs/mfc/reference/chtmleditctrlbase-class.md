@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee202defce08d30f36fb0002bd1477957dd76bc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d28eaff98d2af12d24fab91797182c99d33d317d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337563"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207958"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
 表示 HTML 編輯元件。  
@@ -575,7 +575,7 @@ HRESULT ExecCommand(
  要執行的命令識別碼。 如需清單，請參閱[MSHTML 命令識別碼](https://msdn.microsoft.com/library/aa741315.aspx)。  
   
  *cmdExecOpt*  
- 值取自[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)列舉型別，其會描述物件如何執行此命令。  
+ 值取自[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)列舉型別，其會描述物件如何執行此命令。  
   
  *pInVar*  
  輸入的引數。  
@@ -590,7 +590,7 @@ HRESULT ExecCommand(
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法提供的功能[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)。  
+ 這個方法提供的功能[IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec)。  
   
 ##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
  開啟 [字型] 對話方塊中，若要讓使用者變更文字色彩、 字型和目前的選取範圍的字型大小。  
@@ -838,7 +838,7 @@ HRESULT GetIsDirty() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 指出是否已變更的文件。 `GetIsDirty` 會傳回 HRESULT，從[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)。  
+ 指出是否已變更的文件。 `GetIsDirty` 會傳回 HRESULT，從[IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty)。  
   
 ##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
  傳回所有項目是否會顯示圖像 （glyph）`styleFloat`屬性。  
@@ -1469,7 +1469,7 @@ long QueryStatus(long cmdID) const;
  命令 ID。 命令識別碼都取自 CGID_MSHTML 命令群組。 這些命令定義於 Mshtmcid.h。 您也可以尋找在線上的清單[MSHTML 命令識別碼](http://go.microsoft.com/fwlink/p/?linkid=149220)。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)的狀態，指出*cmdID*，或在失敗的 0。  
+ 傳回[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)的狀態，指出*cmdID*，或在失敗的 0。  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  會覆寫目前的選取範圍上的選項按鈕控制項。  

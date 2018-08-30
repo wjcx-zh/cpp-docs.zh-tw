@@ -53,19 +53,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415763"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208984"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
 使用引數清單的指標，將格式化輸出寫入主控台。 這些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -107,16 +107,16 @@ int _vcwprintf_s_l(
 
 寫入的字元數，或是當發生輸出錯誤時為負值。
 
-如果要較不安全的版本，這些函式，*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 此外，與不同的是較不安全的版本，這些函式，如果*格式*未指定有效的格式，會產生無效參數例外狀況。 若要繼續，這些函數會傳回錯誤程式碼和設定允許執行**errno**該錯誤碼。 預設的錯誤代碼是**EINVAL**如果未套用更精確的值。
+與這些函式中，較不安全的版本，如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 此外，與不同的是較不安全的版本，這些函式，如果*格式*未指定有效的格式，會產生無效參數例外狀況。 如果允許繼續執行，這些函式會傳回錯誤程式碼和設定執行**errno**該錯誤的程式碼。 預設的錯誤程式碼**EINVAL**如果更精確的值不會套用。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf_s**是寬字元版本的 **_vcprintf_s**。 它接受寬字元字串作為引數。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf_s**是寬字元版本 **_vcprintf_s**。 它接受寬字元字串作為引數。
 
-有這些函式的版本 **_l**尾碼是一樣的不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。
+有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -127,7 +127,7 @@ int _vcwprintf_s_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_vcprintf_s**， **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vcwprintf_s**， **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|

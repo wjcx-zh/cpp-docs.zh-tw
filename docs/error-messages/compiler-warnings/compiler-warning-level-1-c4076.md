@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4076 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4076 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cfa28469e099dbf2b6bd43213073c304d0b2894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928b0a78c09773e334c1a291877b74304dab66ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198474"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>編譯器警告 (層級 1) C4076
-'typemod': 無法與類型 'typename' 搭配使用  
-  
- 類型修飾詞 (不論是 **signed** 還是 `unsigned`) 不能與非整數類型搭配使用。 會忽略***typemod*** 。  
+
+> '*型別修飾詞*': 不可以搭配類型'*typename*'
+
+## <a name="remarks"></a>備註
+
+型別修飾詞，它是否**簽署**或是**不帶正負號**，不能與非整數類型。 *類型修飾詞*會被忽略。
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C4076：  
-  
-```  
+
+下列範例會產生 C4076;若要修正此問題，請移除**不帶正負號**型別修飾詞：
+
+```cpp
 // C4076.cpp  
 // compile with: /W1 /LD  
 unsigned double x;   // C4076  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131850"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195231"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>執行緒控制的 C 執行階段程式庫函式
 所有 Win32 程式都必須至少一個執行緒。 任何執行緒可以建立額外的執行緒。 執行緒可以快速地完成其工作，然後終止，或可以保持使用中程式的存留期間。  
@@ -40,7 +40,7 @@ ms.locfileid: "43131850"
  
 `_beginthread`和`_beginthreadex`函式會建立新的執行緒。 執行緒與處理程序中的其他執行緒共用的程式碼和資料區段的處理程序，但是有它自己的唯一暫存器值、 堆疊空間和目前的指令位址。 系統會提供 CPU 時間的每個執行緒，好讓處理程序中的所有執行緒可以同時都執行。  
   
-`_beginthread` 並`_beginthreadex`類似於[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API 中的函式但有下列差異：  
+`_beginthread` 並`_beginthreadex`類似於[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 API 中的函式但有下列差異：  
   
 - 它們會初始化特定 C 執行階段程式庫變數。 這很重要，只有當您使用 C 執行階段程式庫中您的執行緒。  
   

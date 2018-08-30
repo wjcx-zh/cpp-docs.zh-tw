@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17da583b770fcab1d682868c38c04e0aa97155dd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 348f25718fe22e056da5097bca0d67013a56c4c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026429"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203145"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 提供便利的方式來偵測記憶體流失的問題在您的程式。  
@@ -172,7 +172,7 @@ void DumpStatistics() const;
   
 -   目前 （以位元組為單位） 程式所使用的記憶體總計  
   
- 自由區塊是如果延遲其解除配置的區塊數目`afxMemDF`已設為`delayFreeMemDF`。 如需詳細資訊，請參閱 < [afxMemDF](diagnostic-services.md#afxmemdf)，「 MFC 巨集和全域變數 」 一節。 請參閱[偵錯堆積上的區塊類型](http://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5)如需詳細資訊，這些區塊類型。  
+ 自由區塊是如果延遲其解除配置的區塊數目`afxMemDF`已設為`delayFreeMemDF`。 如需詳細資訊，請參閱 < [afxMemDF](diagnostic-services.md#afxmemdf)，「 MFC 巨集和全域變數 」 一節。 請參閱[偵錯堆積上的區塊類型](https://msdn.microsoft.com/db2e7f62-0679-4b39-a23f-26f2c2f407c5)如需詳細資訊，這些區塊類型。  
   
 ### <a name="example"></a>範例  
   下列程式碼應該置於*projname*app.cpp。 定義下列全域變數：  

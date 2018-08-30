@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e4a36db71809dab5603211dce91fad3eedd082
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e25684e0adcace0510f74bdc98968ef52ad6d797
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209564"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
 實作 OLE Automation 的用戶端。  
@@ -283,7 +283,7 @@ void AFX_CDECL InvokeHelper(
   
  此函式會將參數轉換為 VARIANTARG 值，然後再叫用[idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 若呼叫 `Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回的 SCODE （狀態碼）`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件; 否則會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
- 如需詳細資訊，請參閱 < [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[結構 COM 錯誤碼的](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[結構 COM 錯誤碼的](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[coledispatchdriver:: Createdispatch](#createdispatch)。  
@@ -298,7 +298,7 @@ BOOL m_bAutoRelease;
 ### <a name="remarks"></a>備註  
  根據預設，`m_bAutoRelease`建構函式中設定為 TRUE。  
   
- 如需有關釋放 COM 物件的詳細資訊，請參閱[實作參考計數](http://msdn.microsoft.com/library/windows/desktop/ms693431)並[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK 中。  
+ 如需有關釋放 COM 物件的詳細資訊，請參閱[實作參考計數](/windows/desktop/com/implementing-reference-counting)並[iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  

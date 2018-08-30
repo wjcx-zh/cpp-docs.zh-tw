@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9837b42148062bdd2c44855c129f085ca47cdec0
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 00265d3ce0f8ea867021500777d93991d245be47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848790"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204809"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和列舉程式
 A`collection`是 COM 物件，提供的介面，可讓您存取一組資料的項目 （未經處理資料或其他物件）。 遵循標準，提供一組物件的存取權就所謂的介面*集合介面*。  
@@ -31,7 +31,7 @@ A`collection`是 COM 物件，提供的介面，可讓您存取一組資料的�
   
  `enumerator`是 COM 物件，逐一查看集合中的項目提供的介面。 列舉程式介面提供序列存取透過四個必要的方法集合的項目： `Next`， `Skip`， `Reset`，和`Clone`。  
   
- 您可以深入了解列舉程式介面 （但完全虛數） 典型閱讀[IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)介面。  
+ 您可以了解詳細資訊，請閱讀的列舉程式介面參考內容，例如[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)介面。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ATL 集合和列舉程式類別](../atl/atl-collection-and-enumerator-classes.md)  

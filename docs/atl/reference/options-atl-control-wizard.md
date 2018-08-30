@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1fa026ecb0b25c17a793c31c3f64dcd0186f0e1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 92c3ece3ddef00161a769c0c45a4d31712d6f691
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880088"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208757"
 ---
 # <a name="options-atl-control-wizard"></a>選項, ATL 控制項精靈
 在這裡插入 [搜尋結果] 摘要。  
@@ -78,7 +78,7 @@ ms.locfileid: "37880088"
   
 -   **自訂**： 建立公開 VTBL 透過直接方法的介面。  
   
-     如果您選取**自訂**，則您可以指定控制項是**自動化相容**。 如果您選取**自動化相容**，然後精靈會新增[oleautomation](../../windows/oleautomation.md)屬性在介面中的 IDL 和介面可以封送處理由 oleaut32.dll 中通用封送處理器。 請參閱[封送處理的詳細資料](http://msdn.microsoft.com/library/windows/desktop/ms692621)Windows sdk for 的詳細資訊。  
+     如果您選取**自訂**，則您可以指定控制項是**自動化相容**。 如果您選取**自動化相容**，然後精靈會新增[oleautomation](../../windows/oleautomation.md)屬性在介面中的 IDL 和介面可以封送處理由 oleaut32.dll 中通用封送處理器。 請參閱[封送處理的詳細資料](/windows/desktop/com/marshaling-details)Windows sdk for 的詳細資訊。  
   
      此外，如果您選取**自動化相容**，則控制項中的所有方法的所有參數必須都是 VARIANT 相容。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "37880088"
   
 -   **連接點**： 藉由衍生自物件的類別讓您為物件的連接點[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)並讓它公開 （expose） 的來源介面。  
   
--   **授權**： 將支援新增至的控制項[授權](http://msdn.microsoft.com/library/windows/desktop/ms690543)。 如果用戶端電腦具有正確的授權，就只能裝載授權的控制項。  
+-   **授權**： 將支援新增至的控制項[授權](/windows/desktop/com/licensing)。 如果用戶端電腦具有正確的授權，就只能裝載授權的控制項。  
   
 ## <a name="see-also"></a>另請參閱  
  [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)

@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd54c27f4208dce317d9c09720cb63b65af4a54b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e4e7776688fa95a81cd76e6db48f38f82bc076d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415737"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195290"
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 
@@ -109,20 +109,20 @@ int _vfwprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vfprintf_p**和 **_vfwprintf_p**傳回寫入的字元數，不包括結束的 null 字元或負數值，如果發生輸出錯誤。
+**_vfprintf_p**並 **_vfwprintf_p**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受的指標引數清單，然後格式化並寫入至指定的資料*資料流*。 這些函式的不同 **_vfprint_s**和 **_vfwprint_s**版本僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+所有這些函式都會接受引數清單的指標，然後格式化並寫入至指定的資料*資料流*。 這些函式與差異 **_vfprint_s**並 **_vfwprint_s**版本僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_vfwprintf_p**是寬字元版本的 **_vprintf_p**; 兩個函式的資料流在 ANSI 模式中開啟時即會相同行為。 **_vprintf_p**目前不支援 UNICODE 資料流輸出。
+**_vfwprintf_p**是寬字元版本 **_vprintf_p**; 如果資料流以 ANSI 模式開啟兩個函式行為相同。 **_vprintf_p**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-如果有任一個*資料流*或*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+如果有任一*資料流*或是*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -133,7 +133,7 @@ int _vfwprintf_p_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**_vfprintf_p**， **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vfwprintf_p**， **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|

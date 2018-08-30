@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960248"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199184"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 
@@ -62,7 +62,7 @@ Type accumulate(
 
 ### <a name="remarks"></a>備註
 
-初始值可確保會有妥善定義的結果時的範圍是空的在此情況下*val*會傳回。 此二進位運算不一定要是關聯或交替運算。 結果會初始化為初始值*val* ，然後*結果* =  `binary_op` (*結果*， **\***`Iter`) 透過範圍經過反覆計算其中`Iter`是迭代器，指向範圍內的連續項目。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
+初始值可確保會有妥善定義的結果時的範圍是空的在此情況下*val*會傳回。 此二進位運算不一定要是關聯或交替運算。 結果會初始化為初始值*val* ，然後*結果* =  `binary_op` (*結果*， <strong>\*</strong>`Iter`) 透過範圍經過反覆計算其中`Iter`是迭代器，指向範圍內的連續項目。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
 
 ### <a name="example"></a>範例
 

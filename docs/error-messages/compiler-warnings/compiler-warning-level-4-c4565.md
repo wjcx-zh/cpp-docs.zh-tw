@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 4） C4565 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4565 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4249783686c1fabb44395d3c092eca0d9230a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25f2f1fc16c6d45a7d1eddec8d3efe62db142f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293355"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211258"
 ---
 # <a name="compiler-warning-level-4-c4565"></a>編譯器警告 (層級 4) C4565
-'function': 重複定義;__declspec(modifier) 與先前宣告的符號  
-  
- 已重新定義的符號，或重新宣告和第二個定義或宣告，不同於第一個定義或宣告中，沒有`__declspec`修飾詞 (***修飾詞***)。 這個警告僅供參考。 若要修正這個警告，請刪除其中一個定義。  
-  
- 下列範例會產生 C4565:  
-  
-```  
-// C4565.cpp  
-// compile with: /W4 /LD  
-__declspec(noalias) void f();  
-void f();   // C4565  
+
+> '*函式*': 重複定義; 符號先前已宣告為 __declspec (*修飾詞*)
+
+## <a name="remarks"></a>備註
+
+符號已重新定義或宣告和第二個定義或宣告中的，不同於第一個定義或宣告中，沒有`__declspec`修飾詞 (*修飾詞*)。 這個警告僅供參考。 若要修正這個警告，請刪除其中一個定義。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4565:
+
+```cpp
+// C4565.cpp
+// compile with: /W4 /LD
+__declspec(noalias) void f();
+void f();   // C4565
 ```

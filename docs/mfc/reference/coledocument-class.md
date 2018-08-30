@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb66d7435331124b4455c476c10986931b4c6e1d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 95eea7434fdaa12a6178ebd9648e8088b24b4dc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850049"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205944"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 支援視覺化編輯之 OLE 文件的基底類別。  
@@ -176,11 +176,11 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="remarks"></a>備註  
  此函式會更新列印目標裝置的所有項目，但不會重新整理簡報快取中的這些項目。 若要更新的簡報快取中的項目，請呼叫[COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)。  
   
- 此函式的引數包含 OLE 用來識別目標裝置的資訊。 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843)結構包含 Windows 用來初始化一般的 [列印] 對話方塊資訊。 使用者關閉對話方塊之後，Windows 會傳回在這個結構中的相關使用者的選取項目資訊。 `m_pd`隸屬[CPrintDialog](../../mfc/reference/cprintdialog-class.md)物件是`PRINTDLG`結構。  
+ 此函式的引數包含 OLE 用來識別目標裝置的資訊。 [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)結構包含 Windows 用來初始化一般的 [列印] 對話方塊資訊。 使用者關閉對話方塊之後，Windows 會傳回在這個結構中的相關使用者的選取項目資訊。 `m_pd`隸屬[CPrintDialog](../../mfc/reference/cprintdialog-class.md)物件是`PRINTDLG`結構。  
   
- 如需詳細資訊，請參閱 < [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK 中的結構。  
   
- 如需詳細資訊，請參閱 < [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Windows SDK 中的結構。  
   
 ##  <a name="coledocument"></a>  COleDocument::COleDocument  
  建構 `COleDocument` 物件。  

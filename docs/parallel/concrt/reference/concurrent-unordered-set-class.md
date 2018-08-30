@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878d8a1f7f6ee313c58f92ea3f14b86265006581
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d543ca2d908f59487572f5abc68dc5b04223b88f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541189"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207611"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set 類別
 `concurrent_unordered_set`類別是並行安全容器，可控制不同長度序列的項目型別 k。序列的表示方式啟用並行安全附加、 項目存取、 迭代器存取及迭代器周遊作業。  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  要搜尋的索引鍵的值。  
   
 ### <a name="return-value"></a>傳回值  
- A[配對](http://msdn.microsoft.com/en-us/32e72d66-3020-4cb9-92c3-f7a5fa7998ff)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
+ A[配對](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
   
 ### <a name="remarks"></a>備註  
  就可能會造成額外的金鑰之後開始迭代器，以及結尾迭代器之前，要插入的並行插入。  

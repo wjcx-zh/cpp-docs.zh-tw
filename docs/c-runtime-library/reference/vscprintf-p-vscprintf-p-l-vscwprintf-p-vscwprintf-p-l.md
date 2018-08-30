@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412901"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200290"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
@@ -100,18 +100,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vscprintf_p**傳回會產生如果指向的字串引數清單的字元數已列印或傳送至檔案或使用指定的格式設定的緩衝區代碼。 傳回的值不包含終止 Null 字元。 **_vscwprintf_p**寬字元中執行相同的功能。
+**_vscprintf_p**傳回如果指向的字串所產生的引數清單的字元數被列印或傳送到檔案或緩衝區使用指定的格式化程式碼。 傳回的值不包含終止 Null 字元。 **_vscwprintf_p**執行相同的函式的寬字元。
 
 ## <a name="remarks"></a>備註
 
-這些函式的不同 **_vscprintf**和 **_vscwprintf**只在於支援能夠指定可用的引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+這些函式與差異 **_vscprintf**並 **_vscwprintf**僅在於它們支援讓您指定在其中使用的引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
-如果*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 > [!IMPORTANT]
-> 確保當*格式*是使用者定義的字串，它是 null 終止，而且有正確的數目和參數的類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 請確定如果*格式*是使用者定義的字串，它是以 null 終止，且具有正確的數目和參數的類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -122,7 +122,7 @@ int _vscwprintf_p _l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_vscprintf_p**， **_vscprintf_p_l**|\<stdio.h>|
 |**_vscwprintf_p**， **_vscwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|

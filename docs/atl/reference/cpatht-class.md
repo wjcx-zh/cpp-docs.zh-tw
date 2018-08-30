@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7b19cff6e4f90485946521824bb0fd2f6358372
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a953f94e48f3093b1c61a1567252e04d98c1beb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208539"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 此類別代表的路徑。  
@@ -176,7 +176,7 @@ void AddBackslash();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561)。  
+ 如需詳細資訊，請參閱 < [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)。  
   
 ##  <a name="addextension"></a>  CPathT::AddExtension  
  呼叫這個方法，將副檔名新增至路徑。  
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)。  
+ 如需詳細資訊，請參閱 < [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)。  
   
 ##  <a name="append"></a>  CPathT::Append  
  呼叫這個方法將字串附加至目前的路徑。  
@@ -210,7 +210,7 @@ BOOL Append(PCXSTR pszMore);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)。  
+ 如需詳細資訊，請參閱 < [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)。  
   
 ##  <a name="buildroot"></a>  CPathT::BuildRoot  
  呼叫這個方法來建立根路徑指定磁碟機數目。  
@@ -224,7 +224,7 @@ void BuildRoot(int iDrive);
  磁碟機編號 0 是 a: (1 為 b，依此類推）。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)。  
+ 如需詳細資訊，請參閱 < [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)。  
   
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  呼叫這個方法將路徑轉換成標準格式。  
@@ -234,7 +234,7 @@ void Canonicalize();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)。  
+ 如需詳細資訊，請參閱 < [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)。  
   
 ##  <a name="combine"></a>  CPathT::Combine  
  呼叫這個方法來串連字串，表示目錄名稱和字串，表示為一個路徑的檔案路徑名稱。  
@@ -251,7 +251,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
  檔案路徑。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)。  
+ 如需詳細資訊，請參閱 < [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)。  
   
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  呼叫這個方法來判斷指定的路徑是否共用通用的前置詞，以目前的路徑。  
@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  傳回的一般前置詞。  
   
 ### <a name="remarks"></a>備註  
- 前置詞是其中一種類型:"c:\\\\"，"。"，"..."，"...\\\\". 如需詳細資訊，請參閱 < [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)。  
+ 前置詞是其中一種類型:"c:\\\\"，"。"，"..."，"...\\\\". 如需詳細資訊，請參閱 < [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  呼叫這個方法來截斷以符合給定的像素寬度，以省略符號取代路徑元件的檔案路徑。  
@@ -288,7 +288,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)。  
+ 如需詳細資訊，請參閱 < [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)。  
   
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  呼叫這個方法來截斷以符合指定的字元數，以省略符號取代路徑元件的檔案路徑。  
@@ -308,7 +308,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)。  
+ 如需詳細資訊，請參閱 < [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)。  
   
 ##  <a name="cpatht"></a>  CPathT::CPathT  
  建構函式。  
@@ -337,7 +337,7 @@ BOOL FileExists() const;
  為 true，則會傳回檔案是否存在，FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)。  
+ 如需詳細資訊，請參閱 < [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)。  
   
 ##  <a name="findextension"></a>  CPathT::FindExtension  
  呼叫這個方法來尋找檔案的副檔名的路徑內的位置。  
@@ -350,7 +350,7 @@ int FindExtension() const;
  傳回的位置 」。 「 上述擴充功能。 如果不找到任何延伸模組，則傳回-1。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)。  
+ 如需詳細資訊，請參閱 < [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)。  
   
 ##  <a name="findfilename"></a>  CPathT::FindFileName  
  呼叫這個方法來尋找檔案名稱，在該路徑內的位置。  
@@ -363,7 +363,7 @@ int FindFileName() const;
  傳回檔案名稱的位置。 如果不找到任何檔案名稱，則傳回-1。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)。  
+ 如需詳細資訊，請參閱 < [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)。  
   
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  呼叫這個方法，以搜尋磁碟機代號的 'A' 到 'Z' 範圍內的路徑，並傳回對應的磁碟機數目。  
@@ -376,7 +376,7 @@ int GetDriveNumber() const;
  以整數會傳回磁碟機編號從 0 到 25 （對應至 'A' 到 'Z'） 如果路徑中有磁碟機代號，則為-1 否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)。  
+ 如需詳細資訊，請參閱 < [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)。  
   
 ##  <a name="getextension"></a>  CPathT::GetExtension  
  呼叫這個方法，以從路徑取得檔案的副檔名。  
@@ -399,7 +399,7 @@ BOOL IsDirectory() const;
  如果路徑是目錄，而 FALSE 否則會傳回非零值 (16)。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)。  
+ 如需詳細資訊，請參閱 < [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)。  
   
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  呼叫這個方法來搜尋任何路徑分隔字元的路徑 (例如，':' 或 '\\')。 如果不有存在任何路徑分隔字元，路徑會被視為檔案規格的路徑。  
@@ -412,7 +412,7 @@ BOOL IsFileSpec() const;
  如果沒有在該路徑中，路徑分隔字元，則為 TRUE 或 FALSE 路徑分隔字元時傳回。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)。  
+ 如需詳細資訊，請參閱 < [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)。  
   
 ##  <a name="isprefix"></a>  CPathT::IsPrefix  
  呼叫這個方法來判斷路徑是否包含有效的首碼，所傳遞之型別的*pszPrefix*。  
@@ -429,7 +429,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
  如果路徑可包含 FALSE 的前置詞，否則，傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)。  
+ 如需詳細資訊，請參閱 < [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)。  
   
 ##  <a name="isrelative"></a>  CPathT::IsRelative  
  呼叫這個方法來判斷這是否為相對路徑。  
@@ -442,7 +442,7 @@ BOOL IsRelative() const;
  如果路徑是相對或 FALSE 是否絕對會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)。  
+ 如需詳細資訊，請參閱 < [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)。  
   
 ##  <a name="isroot"></a>  CPathT::IsRoot  
  呼叫這個方法來判斷路徑是否為根目錄。  
@@ -455,7 +455,7 @@ BOOL IsRoot() const;
  如果路徑不根或 FALSE，則傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)。  
+ 如需詳細資訊，請參閱 < [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)。  
   
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  呼叫這個方法來判斷另一個路徑是否有常見的根元件，以目前的路徑。  
@@ -472,7 +472,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
  如果這兩個字串可有相同的根元件或 FALSE 否則會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)。  
+ 如需詳細資訊，請參閱 < [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)。  
   
 ##  <a name="isunc"></a>  CPathT::IsUNC  
  呼叫這個方法來判斷路徑是否有效的 UNC （通用命名慣例） 路徑的伺服器和共用。  
@@ -485,7 +485,7 @@ BOOL IsUNC() const;
  如果路徑不是有效的 UNC 路徑或 FALSE，傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)。  
+ 如需詳細資訊，請參閱 < [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)。  
   
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  呼叫這個方法來判斷路徑是否有效的 UNC （通用命名慣例） 路徑，僅適用於伺服器。  
@@ -498,7 +498,7 @@ BOOL IsUNCServer() const;
  為 true，則會傳回字串是否為有效的 UNC 路徑僅適用於伺服器 （沒有共用名稱） 或 FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)。  
+ 如需詳細資訊，請參閱 < [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)。  
   
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  呼叫這個方法來判斷路徑是否有效的 UNC （通用命名慣例） 共用路徑， \\ \ *伺服器*\ *共用*。  
@@ -511,7 +511,7 @@ BOOL IsUNCServerShare() const;
  會傳回 TRUE，如果路徑是在表單\\ \ *伺服器*\ *共用*，或 FALSE 否則。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)。  
+ 如需詳細資訊，請參閱 < [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)。  
   
 ##  <a name="m_strpath"></a>  CPathT::m_strPath  
  路徑。  
@@ -534,7 +534,7 @@ BOOL MakePretty();
  否則傳回已轉換路徑，如果為 TRUE 或 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)。  
+ 如需詳細資訊，請參閱 < [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)。  
   
 ##  <a name="matchspec"></a>  CPathT::MatchSpec  
  呼叫這個方法來搜尋的路徑包含萬用字元的相符項目類型的字串。  
@@ -551,7 +551,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
  否則傳回的字串符合時，如果為 TRUE 或 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)。  
+ 如需詳細資訊，請參閱 < [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)。  
   
 ##  <a name="operator_add_eq"></a>  CPathT::operator + =  
  這個運算子會將字串附加至路徑。  
@@ -625,7 +625,7 @@ void QuoteSpaces();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)。  
+ 如需詳細資訊，請參閱 < [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)。  
   
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  呼叫這個方法來建立從一個檔案或資料夾的相對路徑到另一個。  
@@ -655,7 +655,7 @@ BOOL RelativePathTo(
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)。  
+ 如需詳細資訊，請參閱 < [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)。  
   
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  呼叫這個方法，以從路徑移除任何命令列引數。  
@@ -665,7 +665,7 @@ void RemoveArgs();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)。  
+ 如需詳細資訊，請參閱 < [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)。  
   
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  呼叫這個方法，以從路徑移除尾端有反斜線。  
@@ -675,7 +675,7 @@ void RemoveBackslash();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)。  
+ 如需詳細資訊，請參閱 < [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)。  
   
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  呼叫這個方法來移除所有開頭和尾端空格的路徑。  
@@ -685,7 +685,7 @@ void RemoveBlanks();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)。  
+ 如需詳細資訊，請參閱 < [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)。  
   
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  如果有的話，請呼叫這個方法，以移除路徑的副檔名。  
@@ -695,7 +695,7 @@ void RemoveExtension();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)。  
+ 如需詳細資訊，請參閱 < [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)。  
   
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  如果它們，請呼叫這個方法，以從路徑移除尾端的檔案名稱及反斜線。  
@@ -708,7 +708,7 @@ BOOL RemoveFileSpec();
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)。  
+ 如需詳細資訊，請參閱 < [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)。  
   
 ##  <a name="renameextension"></a>  CPathT::RenameExtension  
  呼叫這個方法來取代新的延伸模組的路徑中的檔案名稱副檔名。 如果檔案名稱不包含延伸模組，擴充功能就會附加至路徑的結尾。  
@@ -725,7 +725,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)。  
+ 如需詳細資訊，請參閱 < [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)。  
   
 ##  <a name="skiproot"></a>  CPathT::SkipRoot  
  呼叫這個方法來剖析路徑，將忽略磁碟機代號或 UNC （通用命名慣例） 伺服器/共用路徑的任何部分。  
@@ -738,7 +738,7 @@ int SkipRoot() const;
  傳回會遵循 （磁碟機代號或 UNC 伺服器/共用） 的根的子路徑的開頭位置。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)。  
+ 如需詳細資訊，請參閱 < [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)。  
   
 ##  <a name="strippath"></a>  CPathT::StripPath  
  呼叫這個方法來移除完整的路徑和檔案名稱的路徑部分。  
@@ -748,7 +748,7 @@ void StripPath();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)。  
+ 如需詳細資訊，請參閱 < [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)。  
   
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  呼叫這個方法來移除所有的部分，除了根資訊的路徑。  
@@ -761,7 +761,7 @@ BOOL StripToRoot();
  如果有效的磁碟機代號，則為 TRUE 的傳回找不到或 FALSE 在路徑中，否則為。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)。  
+ 如需詳細資訊，請參閱 < [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)。  
   
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  呼叫這個方法來移除開頭和結尾的路徑中的引號。  
@@ -771,7 +771,7 @@ void UnquoteSpaces();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。  
+ 如需詳細資訊，請參閱 < [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)。  
   
 ##  <a name="xchar"></a>  CPathT::XCHAR  
  字元類型。  

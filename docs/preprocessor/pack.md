@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541186"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207488"
 ---
 # <a name="pack"></a>pack
 指定結構、等位及類別成員的封裝對齊。  
@@ -38,7 +38,7 @@ ms.locfileid: "42541186"
 
 封裝類別是指將類別的成員交錯放入記憶體中，這可能表示部分或所有的成員能夠在比目標架構的預設對齊還小的界限上對齊。 **組件**資料宣告層級的控制權。 這不同於編譯器選項[/Zp](../build/reference/zp-struct-member-alignment.md)，後者只會提供模組層級的控制。 **組件**會在第一個生效**struct**，**聯集**，或**類別**顯示該 pragma 後的宣告。 **組件**具有對定義無作用。 呼叫**pack**沒有引數集*n*編譯器選項中設定的值來`/Zp`。 如果未設定編譯器選項，則預設值為 8。  
   
-如果您變更結構的對齊，結構在記憶體中可能不會佔用太多空間，但效能可能會降低，甚至可能會出現硬體所產生的未對齊存取例外狀況。  您可以使用，以修改此例外狀況行為[SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621)。  
+如果您變更結構的對齊，結構在記憶體中可能不會佔用太多空間，但效能可能會降低，甚至可能會出現硬體所產生的未對齊存取例外狀況。  您可以使用，以修改此例外狀況行為[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)。  
   
 *顯示*（選擇性）  
 會顯示封裝對齊目前的位元組值。 此值是透過警告訊息顯示。  

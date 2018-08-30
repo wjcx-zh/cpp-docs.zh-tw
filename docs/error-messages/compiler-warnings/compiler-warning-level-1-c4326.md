@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 1） C4326 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4326 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 838c79d6ba897905dad18788adc5ee682ff2fa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cee18a9ccc807370cf2fb40748939f211a4ba52f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211000"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>編譯器警告 (層級 1) C4326
-'function' 傳回型別應該是 'type1'，而不是 'type2'  
-  
- 函式傳回型別以外***type1***。 例如，使用[/Za](../../build/reference/za-ze-disable-language-extensions.md)，main 未傳回`int`。  
-  
- 下列範例會產生 C4326:  
-  
-```  
-// C4326.cpp  
-// compile with: /Za /W1  
-char main()  
-{   // C4326 try int main  
-}  
+
+> 傳回的類型 '*函式*'應該是'*type1*' 而不是 '*type2*'
+
+## <a name="remarks"></a>備註
+
+函式傳回的型別以外*type1*。 例如，使用[/Za](../../build/reference/za-ze-disable-language-extensions.md)，**主要**未傳回**int**。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4326，並示範如何修正此問題：
+
+```cpp
+// C4326.cpp
+// compile with: /Za /W1
+char main()
+{
+    // C4326, instead use int main()
+}
 ```

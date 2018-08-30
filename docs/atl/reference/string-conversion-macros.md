@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8d9c4c43098d7f0ca8a5e9588a69a47d6e98a066
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885151"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210051"
 ---
 # <a name="string-conversion-macros"></a>字串轉換巨集
 
@@ -38,7 +38,7 @@ ms.locfileid: "37885151"
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE 和 TEXTMETRIC 字串轉換巨集
 
-這些巨集建立一份[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)或是[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)結構，並將新的結構內的字串轉換成新的字串類型。 巨集為新的結構配置堆疊上的記憶體，並將指標傳回至新的結構。  
+這些巨集建立一份[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)或是[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)結構，並將新的結構內的字串轉換成新的字串類型。 巨集為新的結構配置堆疊上的記憶體，並將指標傳回至新的結構。  
   
 ```cpp
 MACRONAME( address_of_structure )

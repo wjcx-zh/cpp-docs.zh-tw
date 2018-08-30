@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604275"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206713"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -58,7 +58,7 @@ UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行�
 
 ##  <a name="BK_Native"></a> 桌面和伺服器應用程式
 
-若要了解為桌上型電腦撰寫 Windows 用戶端應用程式的基本概念，請參閱 [Developing Windows Applications in C++](http://msdn.microsoft.com/vstudio//hh304489) (使用 C++ 開發 Windows 應用程式) 和 [Introduction to Windows Programming in C++](http://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)(使用 C++ 進行 Windows 程式設計的簡介)。
+若要了解撰寫適用於桌上型電腦的 Windows 用戶端應用程式的基本概念，請參閱[c + + 開發 Windows 應用程式](https://msdn.microsoft.com/vstudio//hh304489)並[簡介 c + + Windows 程式設計](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)。
 
 在 Windows 10 中，您可以使用 Visual c + + 建立各式各樣的桌面程式：
 

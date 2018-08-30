@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3fddd187dd6df58c4013b9c1fc7a08d5f644a0db
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879185"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203159"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 類別
-這個類別會公開[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)作為可連接物件上的連出介面的介面。  
+這個類別會公開[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作為可連接物件上的連出介面的介面。  
   
 > [!IMPORTANT]
 >  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -50,7 +50,7 @@ class IPropertyNotifySinkCP
 ## <a name="remarks"></a>備註  
  `IPropertyNotifySinkCP` 繼承其基底類別，透過的所有方法[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)。  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)介面可讓接收物件，以接收有關屬性變更通知。 類別`IPropertyNotifySinkCP`會將此介面公開為可連接物件上的連出介面。 用戶端必須實作`IPropertyNotifySink`接收上的方法。  
+ [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)介面可讓接收物件，以接收有關屬性變更通知。 類別`IPropertyNotifySinkCP`會將此介面公開為可連接物件上的連出介面。 用戶端必須實作`IPropertyNotifySink`接收上的方法。  
   
  衍生您的類別，從`IPropertyNotifySinkCP`當您要建立連接點，表示`IPropertyNotifySink`介面。  
   

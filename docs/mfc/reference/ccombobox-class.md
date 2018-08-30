@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339562"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205283"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 提供 Windows 下拉式方塊的功能。  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  如果清單方塊不以建立[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式，字串會新增至清單的結尾。 否則，字串插入至清單中，而且排序清單。  
   
 > [!NOTE]
->  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+>  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
  若要插入清單中的特定位置中的字串，請使用[InsertString](#insertstring)成員函式。  
   
@@ -493,7 +493,7 @@ int Dir(
  如果傳回的值大於或等於 0，它會是最後一個新增至清單的檔名的以零起始的索引。 如果發生錯誤，傳回的值會為 CB_ERR如果空間不足無法存放新的字串，傳回的值會是 CB_ERRSPACE。  
   
 ### <a name="remarks"></a>備註  
- Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+ Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  如果傳回的值大於或等於 0，它會是相符項目的以零起始的索引。 如果搜尋成功，它就會是 CB_ERR。  
   
 ### <a name="remarks"></a>備註  
- Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+ Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>參數  
  *pcbi*  
- 指標[COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798)結構。  
+ 指標[COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  呼叫此成員函式可擷取下拉式方塊的清單方塊部分中的項目數。  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>備註  
  提示字元中輸入區域的下拉式方塊控制項中顯示提示文字。 提示文字會顯示，直到使用者提供輸入。  
   
- 這個方法會傳送[CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner)訊息，Windows SDK 中所述。  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  呼叫此成員函式，來決定要選取哪一個下拉式方塊中的項目。  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  如果發生錯誤相關聯的項目或 CB_ERR 32 位元值。  
   
 ### <a name="remarks"></a>備註  
- 32 位元值可以設定具有*dwItemData*的參數[SetItemData](#setitemdata)成員函式呼叫。 使用`GetItemDataPtr`成員函式，如果要擷取的 32 位元值是指標 ( **void\***)。  
+ 32 位元值可以設定具有*dwItemData*的參數[SetItemData](#setitemdata)成員函式呼叫。 使用`GetItemDataPtr`成員函式，如果要擷取的 32 位元值是指標 (**void** <strong>\*</strong>)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- 擷取應用程式所提供的 32 位元值，而此一做為指標指定的下拉式方塊項目相關聯 ( **void\***)。  
+ 擷取應用程式所提供的 32 位元值，而此一做為指標指定的下拉式方塊項目相關聯 (**void** <strong>\*</strong>)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  目前的下拉式清單中可見的項目最小數目。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible)訊息，Windows SDK 中所述。  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  擷取在下拉式方塊的清單方塊部分中的第一個可見項目以零為起始索引。  
@@ -939,7 +939,7 @@ int InsertString(
  不同於[AddString](#addstring)成員函式`InsertString`成員函式不會造成與清單[CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)排序樣式。  
   
 > [!NOTE]
->  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+>  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>備註  
  提示字元中輸入區域的下拉式方塊控制項中顯示提示文字。 提示文字會顯示，直到使用者提供輸入。  
   
- 這個方法會傳送[CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數*m_combobox*，也就是用來以程式設計方式存取下拉式方塊控制項。 下一個範例中會使用此變數。  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  位置是以零為起始的。 若要選取編輯控制項的第一個字元，您可以指定 0 的開始位置。 結束的位置會為只在選取的最後一個字元之後的字元。 例如，若要選取編輯控制項的前四個字元，您會使用 0 的開始位置和結束位置的 4。  
   
 > [!NOTE]
->  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](http://msdn.microsoft.com/library/windows/desktop/bb775738)Windows SDK 中。  
+>  Windows 不支援這個函式`ComboBoxEx`控制項。 如需有關此控制項的詳細資訊，請參閱 < [ComboBoxEx 控制項](/windows/desktop/Controls/comboboxex-controls)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CComboBox::GetEditSel](#geteditsel)。  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- 設定為指定的指標下拉式方塊中指定的項目相關聯的 32 位元值 ( **void\***)。  
+ 設定為指定的指標下拉式方塊中指定的項目相關聯的 32 位元值 (**void** <strong>\*</strong>)。  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數*m_combobox*，也就是用來以程式設計方式存取下拉式方塊控制項。 下一個範例中會使用此變數。  

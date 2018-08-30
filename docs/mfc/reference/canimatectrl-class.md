@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e786dc176558900223b2b482a7161abe5e0d84d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 98b8f9f99b38d2878025546379a185aef53bb663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336269"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213765"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 類別
 提供 Windows 通用動畫控制項的功能。  
@@ -147,7 +147,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定動畫控制項的樣式。 適用於的 windows 中的 < 備註 > 一節和動畫控制項的樣式中所述的樣式所述的任何組合[動畫控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
+ 指定動畫控制項的樣式。 適用於的 windows 中的 < 備註 > 一節和動畫控制項的樣式中所述的樣式所述的任何組合[動畫控制項的樣式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。  
   
  *rect*  
  指定動畫控制項的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
@@ -174,7 +174,7 @@ virtual BOOL Create(
   
  如果您想要使用擴充的 windows 樣式和動畫控制項，呼叫[CreateEx](#createex)而不是`Create`。  
   
- 除了上面所列的視窗樣式，您可能想要套用至動畫控制項的一或多個動畫控制項的樣式。 請參閱 Windows SDK，如需詳細資訊[動畫控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)。  
+ 除了上面所列的視窗樣式，您可能想要套用至動畫控制項的一或多個動畫控制項的樣式。 請參閱 Windows SDK，如需詳細資訊[動畫控制項的樣式](/windows/desktop/Controls/animation-control-styles)。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
@@ -193,13 +193,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定動畫控制項的樣式。 套用視窗的任意組合和動畫控制項的樣式中所述[動畫控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
+ 指定動畫控制項的樣式。 套用視窗的任意組合和動畫控制項的樣式中所述[動畫控制項的樣式](/windows/desktop/Controls/animation-control-styles)Windows SDK 中。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -224,7 +224,7 @@ BOOL IsPlaying() const;
  如果正在播放 AVI 短片就;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying)訊息，Windows SDK 中所述。  
   
 ##  <a name="open"></a>  CAnimateCtrl::Open  
  呼叫此函式可開啟 AVI 短片，並顯示其第一個畫面格。  

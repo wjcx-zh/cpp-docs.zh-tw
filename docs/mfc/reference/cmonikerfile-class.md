@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b3aab8fe3dac8cb58884861a83e41d09b493a375
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212113"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 類別
-表示資料的資料流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 所命名[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
+表示資料的資料流 ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) 所命名[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,7 +74,7 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile` 不用來繫結至資料流以外的任何項目。 如果您想要繫結至儲存體或物件，您必須使用`IMoniker`直接介面。  
   
- 如需有關資料流和 moniker 的詳細資訊，請參閱[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 參考 》* 並[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)並[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)中Windows SDK。  
+ 如需有關資料流和 moniker 的詳細資訊，請參閱[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 參考 》* 並[IStream](/windows/desktop/api/objidl/nn-objidl-istream)並[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)中Windows SDK。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
  檔案例外狀況的指標。 發生錯誤時，它會設定為原因。  
   
 ### <a name="return-value"></a>傳回值  
- 繫結內容的指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)要與繫結，如果成功，否則為 NULL。 如果執行個體以開啟`IBindHost`介面，從擷取的繫結內容`IBindHost`。 如果沒有任何`IBindHost`介面無法傳回繫結內容、 繫結內容建立。 如需描述[IBindHost](http://msdn.microsoft.com/library/ie/ms775076)介面中，請參閱 Windows SDK。  
+ 繫結內容的指標[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)要與繫結，如果成功，否則為 NULL。 如果執行個體以開啟`IBindHost`介面，從擷取的繫結內容`IBindHost`。 如果沒有任何`IBindHost`介面無法傳回繫結內容、 繫結內容建立。 如需描述[IBindHost](https://msdn.microsoft.com/library/ie/ms775076)介面中，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
  繫結內容是儲存特定的 moniker 繫結作業的相關資訊的物件。 您可以覆寫這個函式，以提供自訂的繫結內容。  
@@ -144,10 +144,10 @@ IMoniker* GetMoniker() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前的 moniker 介面的指標 ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
+ 目前的 moniker 介面的指標 ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker))。  
   
 ### <a name="remarks"></a>備註  
- 由於`CMonikerFile`不是介面，傳回的指標，不會遞增參考次數 (透過[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，且放開 moniker 時`CMonikerFile`釋放物件。 如果您想要保留的 moniker，或自行發行，您必須`AddRef`它。  
+ 由於`CMonikerFile`不是介面，傳回的指標，不會遞增參考次數 (透過[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref))，且放開 moniker 時`CMonikerFile`釋放物件。 如果您想要保留的 moniker，或自行發行，您必須`AddRef`它。  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
  呼叫此成員函式，若要開啟的檔案或 moniker 物件。  

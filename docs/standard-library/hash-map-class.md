@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713bf95a53a22b098803d08b4a2a4fd9c8a6cf2d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954927"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211588"
 ---
 # <a name="hashmap-class"></a>hash_map 類別
 
@@ -124,13 +124,17 @@ class hash_map
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存在 hash_map 中索引鍵的資料類型。
+*Key*<br/>
+ 要存放在 hash_map 中的索引鍵資料類型。
 
-*型別*来儲存在 hash_map 中的項目資料類型。
+*類型*<br/>
+ 要存放在 hash_map 中的項目資料類型。
 
-*Traits*包含兩個函式物件，其中一個 compare 類別能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞的元素的索引鍵值對應到不帶正負號的雜湊函式的型別整數型別的`size_t`。 這個引數是選擇性的，而且 hash_compare<`Key`, less<`Key`> > 是預設值。
+*特性*<br/>
+ 包含兩個函式物件的類型：一個 compare 類別可以將兩個項目值做為排序索引鍵加以比較，以決定其相對順序；一個雜湊函式，為項目的一元述詞對應索引鍵值，對應到 `size_t` 類型之不帶正負號的整數。 這個引數是選擇性的，而且 hash_compare<`Key`, less<`Key`> > 是預設值。
 
-*配置器*表示預存配置器物件，封裝有關 hash_map 的配置和解除配置之記憶體的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 allocator<pair <const `Key`, `Type`>>。
+*配置器*<br/>
+ 代表預存配置器物件的類型，封裝有關 hash_map 之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>備註
 
@@ -523,11 +527,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_iterator` 無法用來修改元素的值。
 
-`const_iterator` Hash_map 指向之物件的項目所定義[value_type](#value_type)，也就是型別的`pair`  *\< ***const Key，Type*** >* 其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
+`const_iterator` Hash_map 指向之物件的項目所定義[value_type](#value_type)，也就是型別的`pair< const Key, Type >`其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
 取值 （dereference) `const_iterator` `cIter`指向 hash_map 中的項目，使用`->`運算子。
 
-若要存取該元素的索引鍵值，請使用 `cIter` **-> first**，這等同於 (\* `cIter`) **.first**。 若要存取該元素的已對應資料值，請使用 `cIter` **-> second**，這等同於 (\* `cIter`) **.second**。
+若要存取元素的索引鍵的值，請使用`cIter->first`，這相當於`(*cIter).first`。 若要存取的項目對應的資料，請使用`cIter->second`，這相當於`(*cIter).second`。
 
 ### <a name="example"></a>範例
 
@@ -644,7 +648,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要從 hash_map 中比對之項目的索引鍵值。
+*key*<br/>
+ 要從 hash_map 中比對之元素的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1135,7 +1140,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*引數索引鍵值所搜尋之 hash_map 中元素的排序鍵進行比較。
+*key*<br/>
+ 要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1223,13 +1229,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-*_Where*若要從 hash_map 中移除之項目的位置。
+*_Where*<br/>
+ 要從 hash_map 中移除之項目的位置。
 
-*第一個*從 hash_map 中移除第一個元素的位置。
+*first*<br/>
+ 從 hash_map 中移除之第一個項目的位置。
 
-*最後一個*從 hash_map 中移除最後一個元素之後的位置。
+*最後一個*<br/>
+ 從 hash_map 中移除的最後一個項目之後的位置。
 
-*索引鍵*要從 hash_map 中移除之項目的索引鍵的值。
+*key*<br/>
+ 要從 hash_map 中移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1341,7 +1351,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之 hash_map 中元素的排序鍵比對的索引鍵值。
+*key*<br/>
+ 要以所搜尋之 hash_map 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1881,7 +1892,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*引數索引鍵值所搜尋之 hash_map 中元素的排序鍵進行比較。
+*key*<br/>
+ 要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2519,7 +2531,8 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>參數
 
-*右*提供要與目標 hash_map 交換之元素的引數 hash_map。
+*right*<br/>
+ 提供要與目標 hash_map 交換之元素的引數 hash_map。
 
 ### <a name="remarks"></a>備註
 
@@ -2594,7 +2607,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*引數索引鍵值與所搜尋之 hash_map 中元素的排序鍵值比較。
+*key*<br/>
+ 要與所搜尋之 hash_map 中元素的排序鍵值比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2737,7 +2751,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 宣告為`pair`  *\< * **const**[key_type](#key_type)， [mapped_type](#mapped_type)*> * 而非`pair`  **\<key_type，mapped_type> >** 因為關聯容器的索引鍵可能不會變更使用非常數迭代器或參考。
+`value_type` 宣告為`pair<const key_type, mapped_type>`而非`pair<key_type, mapped_type>`因為關聯容器的索引鍵可能不會變更使用非常數迭代器或參考。
 
 ### <a name="example"></a>範例
 

@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf0d53cca00424c2c933e2578fb5c70b7d07e1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3ec1fb89817da663dd088dadc9b667a3ff0aef46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42575456"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200974"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 COM 屬性頁來設定屬性中提供的使用者介面 （或呼叫的方法） 的一或多個 COM 物件。 屬性頁會使用廣泛的 ActiveX 控制項來提供豐富的使用者介面，讓控制項的屬性，以在設計階段進行設定。  
   
- 屬性頁是 COM 物件實作[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)或是[IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)介面。 這些介面提供方法，可讓頁面與相關聯`site`（COM 物件，表示頁面的容器） 和一些*物件*就會呼叫其方法，以回應變更 （COM 物件使用者所做的屬性頁）。 屬性頁容器會負責向頁面時顯示或隱藏其使用者介面，以及何時將變更套用到使用者所做的基礎物件的屬性頁面介面上呼叫方法。  
+ 屬性頁是 COM 物件實作[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)或是[IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2)介面。 這些介面提供方法，可讓頁面與相關聯`site`（COM 物件，表示頁面的容器） 和一些*物件*就會呼叫其方法，以回應變更 （COM 物件使用者所做的屬性頁）。 屬性頁容器會負責向頁面時顯示或隱藏其使用者介面，以及何時將變更套用到使用者所做的基礎物件的屬性頁面介面上呼叫方法。  
   
  每個屬性頁可以建置完全獨立的可設定其屬性的物件。 所有這些屬性頁需要的只是了解特定的 「 介面 」 （或稱 「 的介面集 」），並提供使用者介面的介面上呼叫方法。  
   
- 如需詳細資訊，請參閱 <<c0> [ 屬性工作表和屬性頁](http://msdn.microsoft.com/library/windows/desktop/ms686577)Windows SDK 中。  
+ 如需詳細資訊，請參閱 <<c0> [ 屬性工作表和屬性頁](/windows/desktop/com/property-sheets-and-property-pages)Windows SDK 中。  
   
 ## <a name="in-this-section"></a>本節內容  
  [指定屬性頁](../atl/specifying-property-pages.md)  

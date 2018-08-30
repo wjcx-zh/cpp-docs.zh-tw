@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 77876aad65a06cd541949937898496f811375e58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404638"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209599"
 ---
 # <a name="access-waccess"></a>_access、_waccess
 
@@ -96,7 +96,7 @@ int _waccess(
 |04|唯讀|
 |06|讀取和寫入|
 
-此函式只檢查檔案和目錄是否為唯讀，不檢查檔案系統安全性設定。 該項作業需要存取權杖。 如需檔案系統安全性的詳細資訊，請參閱 [Access Tokens](http://msdn.microsoft.com/library/windows/desktop/aa374909) (存取權杖)。 ATL 類別的存在就是提供這項功能，請參閱 [CAccessToken 類別](../../atl/reference/caccesstoken-class.md)。
+此函式只檢查檔案和目錄是否為唯讀，不檢查檔案系統安全性設定。 該項作業需要存取權杖。 如需檔案系統安全性的詳細資訊，請參閱 [Access Tokens](/windows/desktop/SecAuthZ/access-tokens) (存取權杖)。 ATL 類別的存在就是提供這項功能，請參閱 [CAccessToken 類別](../../atl/reference/caccesstoken-class.md)。
 
 **_waccess**是寬字元版本的 **_access**;*路徑*引數 **_waccess**是寬字元字串。 **_waccess**並 **_access**行為相同。
 

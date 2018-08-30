@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa96bdb0471a4ff6a93006225a9492429d18bd2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211550"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 提供 Windows 通用標頭控制項的功能。  
@@ -132,7 +132,7 @@ class CHeaderCtrl : public CWnd
 |[Cheaderctrl:: Setorderarray](#setorderarray)|設定控制項中的項目的左到右的順序。|  
   
 ## <a name="remarks"></a>備註  
- 標頭控制項是通常是位於一組文字或數字的資料行上方的視窗。 它包含每個資料行的標題，它可以分割成組件。 使用者可以拖曳分隔線分隔的組件來設定每個資料行的寬度。 如需標題控制項的說明，請參閱 <<c0> [ 標頭控制項](http://msdn.microsoft.com/library/windows/desktop/bb775238)。  
+ 標頭控制項是通常是位於一組文字或數字的資料行上方的視窗。 它包含每個資料行的標題，它可以分割成組件。 使用者可以拖曳分隔線分隔的組件來設定每個資料行的寬度。 如需標題控制項的說明，請參閱 <<c0> [ 標頭控制項](/windows/desktop/Controls/header-controls)。  
   
  這個控制項 (並因此`CHeaderCtrl`類別) 僅適用於 Windows 95/98 和 Windows NT 版本 3.51 下執行的程式和更新版本。  
   
@@ -183,7 +183,7 @@ BOOL ClearAllFilters();
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會實作 Win32 訊息的行為[HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306)資料行值為-1，在 Windows SDK 中所述。  
+ 這個方法會實作 Win32 訊息的行為[HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter)資料行值為-1，在 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
@@ -203,7 +203,7 @@ BOOL ClearFilter(int nColumn);
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會實作 Win32 訊息的行為[HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306)、 Windows SDK 中所述。  
+ 這個方法會實作 Win32 訊息的行為[HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
@@ -221,10 +221,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。  
+ 指定標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。  
   
  *rect*  
- 指定標題控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ 指定標題控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
  *pParentWnd*  
  指定標題控制項的父視窗，通常`CDialog`。 它必須不是 NULL。  
@@ -238,7 +238,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  您建構`CHeaderCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，這會建立標題控制項，並將它附加至`CHeaderCtrl`物件。  
   
- 除了標頭控制項樣式中，您可以使用下列常見的控制項樣式，以決定此標題控制項的位置與調整其大小 (請參閱[常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)如需詳細資訊):  
+ 除了標頭控制項樣式中，您可以使用下列常見的控制項樣式，以決定此標題控制項的位置與調整其大小 (請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)如需詳細資訊):  
   
 - CCS_BOTTOM 使控制項本身放置在父視窗工作區底部，並設定要與父系相同寬度視窗的寬度。  
   
@@ -283,13 +283,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775241)Windows SDK 中。 請參閱[建立](#create)如需其他樣式的清單。  
+ 標題控制項的樣式。 如需標頭控制項樣式的描述，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)Windows SDK 中。 請參閱[建立](#create)如需其他樣式的清單。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -318,7 +318,7 @@ CImageList* CreateDragImage(int nIndex);
  指標[CImageList](../../mfc/reference/cimagelist-class.md)如果成功，否則為 NULL 的物件。 傳回的清單會包含只有一個映像。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308)、 Windows SDK 中所述。 它可支援標頭項目拖曳和卸除。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage)、 Windows SDK 中所述。 它可支援標頭項目拖曳和卸除。  
   
  `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。  
   
@@ -348,7 +348,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>參數  
  *lpDrawItemStruct*  
- 指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，描述要繪製的項目。  
+ 指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，描述要繪製的項目。  
   
 ### <a name="remarks"></a>備註  
  `itemAction`隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
@@ -374,7 +374,7 @@ BOOL EditFilter(
  若要編輯資料行。  
   
  *bDiscardChanges*  
- 值，指定如何處理使用者的編輯變更，如果使用者正在編輯篩選時[HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)傳送訊息。  
+ 值，指定如何處理使用者的編輯變更，如果使用者正在編輯篩選時[HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter)傳送訊息。  
   
  指定 TRUE，即可捨棄對使用者] 或 [假接受使用者所做的變更的變更。  
   
@@ -382,7 +382,7 @@ BOOL EditFilter(
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會實作 Win32 訊息的行為[HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312)、 Windows SDK 中所述。  
+ 這個方法會實作 Win32 訊息的行為[HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
@@ -398,7 +398,7 @@ int GetBitmapMargin() const;
  邊界的寬度點陣圖像素為單位。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
@@ -414,7 +414,7 @@ int GetFocusedItem() const;
  具有焦點的標題項目以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_headerCtrl`，也就是用來存取目前的標頭控制項。 下一個範例中會使用此變數。  
@@ -437,7 +437,7 @@ CImageList* GetImageList() const;
  指標[CImageList](../../mfc/reference/cimagelist-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
@@ -456,7 +456,7 @@ BOOL GetItem(
  指定要擷取之項目的以零為起始的索引。  
   
  *pHeaderItem*  
- 指標[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構會接收新的項目。 此結構會搭配`InsertItem`和`SetItem`成員函式。 在設定任何旗標`mask`項目可讓您確保傳回時正確地填入對應的項目中的值。 如果`mask`元素設定為零，其他的結構項目中的值為沒有意義。  
+ 指標[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構會接收新的項目。 此結構會搭配`InsertItem`和`SetItem`成員函式。 在設定任何旗標`mask`項目可讓您確保傳回時正確地填入對應的項目中的值。 如果`mask`元素設定為零，其他的結構項目中的值為沒有意義。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -490,14 +490,14 @@ BOOL GetItemDropDownRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|其樣式為 HDF_SPLITBUTTON 標頭項目的以零為起始的索引。 如需詳細資訊，請參閱 <<c0> `fmt` 隸屬[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構。|  
-|[out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框矩形資訊的結構。|  
+|[in]*iItem*|其樣式為 HDF_SPLITBUTTON 標頭項目的以零為起始的索引。 如需詳細資訊，請參閱 <<c0> `fmt` 隸屬[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構。|  
+|[out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，此函式，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_headerCtrl`，也就是用來存取目前的標頭控制項。 下一個範例中會使用此變數。  
@@ -523,13 +523,13 @@ BOOL GetItemRect(
  標題控制項項目以零為起始的索引。  
   
  *lpRect*  
- 位址指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。  
+ 位址指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會實作 Win32 訊息的行為[HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341)、 Windows SDK 中所述。  
+ 這個方法會實作 Win32 訊息的行為[HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect)、 Windows SDK 中所述。  
   
 ##  <a name="getorderarray"></a>  Cheaderctrl:: Getorderarray  
  擷取由左到右的順序標頭控制項中的項目。  
@@ -551,7 +551,7 @@ BOOL GetOrderArray(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
@@ -567,15 +567,15 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。|  
+|[out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，此函式，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 標題控制項包含可同時顯示更多的項目，如果控制項可以顯示溢位按鈕捲動至不可見的項目。 標題控制項必須有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 樣式來顯示溢位按鈕。 週框矩形包圍的溢位按鈕，而且有顯示溢位 按鈕時，才。 如需詳細資訊，請參閱 <<c0> [ 標頭控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775241)。  
+ 標題控制項包含可同時顯示更多的項目，如果控制項可以顯示溢位按鈕捲動至不可見的項目。 標題控制項必須有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 樣式來顯示溢位按鈕。 週框矩形包圍的溢位按鈕，而且有顯示溢位 按鈕時，才。 如需詳細資訊，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)。  
   
- 這個方法會傳送[HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_headerCtrl`，也就是用來存取目前的標頭控制項。 下一個範例中會使用此變數。  
@@ -598,13 +598,13 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、 out]*phdhti*|指標[HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245)結構，指定要測試的點，並且會收到測試的結果。|  
+|[in、 out]*phdhti*|指標[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)結構，指定要測試的點，並且會收到測試的結果。|  
   
 ### <a name="return-value"></a>傳回值  
  標頭項目，如果有的話，在指定的位置; 為起始的索引否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[HDM_HITTEST](/windows/desktop/Controls/hdm-hittest)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_headerCtrl`，也就是用來存取目前的標頭控制項。 下一個範例中會使用此變數。  
@@ -630,7 +630,7 @@ int InsertItem(
  要插入之項目之以零起始的索引。 如果值為零，此標題控制項的開頭插入項目。 如果值大於最大值，此標題控制項的結尾插入項目。  
   
  *phdi*  
- 指標[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構，其中包含要插入項目的相關資訊。  
+ 指標[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構，其中包含要插入項目的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，新項目的索引否則為-1。  
@@ -647,7 +647,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
   
 ### <a name="parameters"></a>參數  
  *pHeaderLayout*  
- 指標[HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249)結構，其中包含用來設定的大小和位置標頭控制項的資訊。  
+ 指標[HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout)結構，其中包含用來設定的大小和位置標頭控制項的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -673,7 +673,7 @@ int OrderToIndex(int nOrder) const;
  項目，其標題控制項中的順序為基礎的索引。 索引計數從左到右，從 0 開始。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。  
+ 此成員函式實作 Win32 巨集的行為[HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。  
   
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  設定控制項中的點陣圖的邊界的寬度。  
@@ -690,13 +690,13 @@ int SetBitmapMargin(int nWidth);
  邊界的寬度點陣圖像素為單位。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
- 設定逾時之間的間隔中篩選條件屬性的變更生效的時間和張貼[HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277)通知。  
+ 設定逾時之間的間隔中篩選條件屬性的變更生效的時間和張貼[HDN_FILTERCHANGE](/windows/desktop/Controls/hdn-filterchange)通知。  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -710,7 +710,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
  要修改的篩選器控制項的索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
@@ -732,7 +732,7 @@ BOOL SetFocusedItem(int iItem);
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_headerCtrl`，也就是用來存取目前的標頭控制項。 下一個範例中會使用此變數。  
@@ -763,7 +763,7 @@ int SetHotDivider(int nIndex);
  反白顯示分割線的索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363)、 Windows SDK 中所述。 它可支援標頭項目拖曳和卸除。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider)、 Windows SDK 中所述。 它可支援標頭項目拖曳和卸除。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
@@ -783,7 +783,7 @@ CImageList* SetImageList(CImageList* pImageList);
  指標[CImageList](../../mfc/reference/cimagelist-class.md)先前指派給此標題控制項的物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。  
+ 此成員函式實作的 Win32 訊息的行為[HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CHeaderCtrl::GetImageList](#getimagelist)。  
@@ -802,7 +802,7 @@ BOOL SetItem(
  可操作的項目以零為起始的索引。  
   
  *pHeaderItem*  
- 指標[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構，包含新的項目相關的資訊。  
+ 指標[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構，包含新的項目相關的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -830,7 +830,7 @@ BOOL SetOrderArray(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。  
+ 此成員函式實作 Win32 巨集的行為[HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[cheaderctrl:: Getorderarray](#getorderarray)。  

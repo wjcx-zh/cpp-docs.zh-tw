@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe649a3ca8ef0fb5e0091136fc9160ac89c248a1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4d31392a59707e5a7d072615ed7c930eaf1e14b9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338658"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207624"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 類別
 提供 Windows 多重文件介面 (MDI) 子視窗的功能，以及管理視窗的成員。  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *lpszClassName*  
- 指向以 null 結尾的字元字串，可命名 Windows 類別 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱向[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式。 應該是 NULL，來為標準`CMDIChildWnd`。  
+ 指向以 null 結尾的字元字串，可命名 Windows 類別 ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱向[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全域函式。 應該是 NULL，來為標準`CMDIChildWnd`。  
   
  *lpszWindowName*  
  指向以 null 結束的字元字串，表示視窗名稱。 用來作為文字的標題列。  

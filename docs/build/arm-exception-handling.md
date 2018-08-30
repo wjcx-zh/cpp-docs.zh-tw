@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209114"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205699"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
@@ -25,7 +25,7 @@ Windows on ARM 對非同步硬體產生的例外狀況和同步軟體產生的�
 
 ## <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
-在 ARM 上的 Windows 會使用*回溯程式碼*來控制堆疊回溯期間[結構化例外狀況處理](http://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 回溯程式碼是儲存在可執行映像檔 .xdata 區段的位元組序列。 它們以抽象方法描述函式序言和結尾程式碼的作業，因此函式序言的影響可以在準備回溯至呼叫者堆疊框架時復原。
+在 ARM 上的 Windows 會使用*回溯程式碼*來控制堆疊回溯期間[結構化例外狀況處理](https://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 回溯程式碼是儲存在可執行映像檔 .xdata 區段的位元組序列。 它們以抽象方法描述函式序言和結尾程式碼的作業，因此函式序言的影響可以在準備回溯至呼叫者堆疊框架時復原。
 
 ARM EABI (內嵌應用程式二進位介面) 會指定使用回溯程式碼的例外狀況回溯模型，但這對於 Windows 中的 SEH 回溯而言是不夠的，SEH 回溯必須處理處理器在函式序言或結尾中間的非同步情況。 Windows 亦會將回溯控制分為函式級別回溯和語言專屬範圍回溯，其在 ARM EABI 中統一。 基於上述原因，Windows on ARM 會指定回溯資料和程序的更多詳細資料。
 

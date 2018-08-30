@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612099"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211416"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>逐步解說：從使用者介面執行緒中移除工作
 本文件將示範如何使用並行執行階段移動由使用者介面 (UI) 執行緒，在 Microsoft Foundation Classes (MFC) 應用程式中的背景工作執行緒所執行的工作。 這份文件也會示範如何改善耗時繪製作業的效能。  
@@ -40,7 +40,7 @@ ms.locfileid: "42612099"
   
 -   [PPL 中的取消](cancellation-in-the-ppl.md)  
   
- 我們也建議您在開始本逐步解說之前，了解 MFC 應用程式開發和 GDI + 的基本概念。 如需有關 MFC 的詳細資訊，請參閱 < [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)。 如需 GDI + 的詳細資訊，請參閱[GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798)。  
+ 我們也建議您在開始本逐步解說之前，了解 MFC 應用程式開發和 GDI + 的基本概念。 如需有關 MFC 的詳細資訊，請參閱 < [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)。 如需 GDI + 的詳細資訊，請參閱[GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)。  
   
 ##  <a name="top"></a> 章節  
  本逐步解說包含下列各節：  

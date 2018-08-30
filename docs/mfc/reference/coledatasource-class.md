@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839068647a6f4d118e1536f5fb4e0852657d963f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d67165d3869ffdd60eff86fa8c33abf275e070b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027777"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209773"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 類別
 做為快取，應用程式在此放置資料，以便在資料傳輸作業 (例如剪貼簿或拖放作業) 期間提供。  
@@ -92,7 +92,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="remarks"></a>備註  
  您可以直接建立 OLE 資料來源。 或者， [COleClientItem](../../mfc/reference/coleclientitem-class.md)並[COleServerItem](../../mfc/reference/coleserveritem-class.md)類別建立 OLE 資料來源，以回應其`CopyToClipboard`和`DoDragDrop`成員函式。 請參閱[COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard)的簡短描述。 覆寫`OnGetClipboardData`針對建立其他的剪貼簿格式加入 OLE 資料來源中您用戶端項目或伺服器項目類別成員函式`CopyToClipboard`或`DoDragDrop`成員函式。  
   
- 每當您想要準備傳輸的資料，您應該建立這個類別的物件，並填入資料，可使用最適當的方法，為您的資料。 它會插入至資料來源的方式直接受到是否會提供的資料立即 （立即轉譯） 或隨選 （延遲轉譯）。 每個剪貼簿格式，您會在此提供藉由傳遞要使用的剪貼簿格式的資料 (和選擇性[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構)，呼叫[DelayRenderData](#delayrenderdata)。  
+ 每當您想要準備傳輸的資料，您應該建立這個類別的物件，並填入資料，可使用最適當的方法，為您的資料。 它會插入至資料來源的方式直接受到是否會提供的資料立即 （立即轉譯） 或隨選 （延遲轉譯）。 每個剪貼簿格式，您會在此提供藉由傳遞要使用的剪貼簿格式的資料 (和選擇性[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構)，呼叫[DelayRenderData](#delayrenderdata)。  
   
  如需有關資料來源和資料傳輸的詳細資訊，請參閱文章[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。 此外，發行項[剪貼簿主題](../../mfc/clipboard.md)描述 OLE 剪貼簿機制。  
   
@@ -118,26 +118,26 @@ void CacheData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，其中包含指定之格式的資料。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)結構，其中包含指定之格式的資料。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="remarks"></a>備註  
  您必須先提供資料，因為此函式所提供的是它使用直接轉譯。 資料會快取，直到需要為止。  
   
- 提供使用資料[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構。 您也可以使用`CacheGlobalData`成員函式，如果您提供的資料量是夠小，無法有效率地使用 HGLOBAL 傳送。  
+ 提供使用資料[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)結構。 您也可以使用`CacheGlobalData`成員函式，如果您提供的資料量是夠小，無法有效率地使用 HGLOBAL 傳送。  
   
  在呼叫之後`CacheData``ptd`隸屬`lpFormatEtc`的內容*lpStgMedium*資料物件，不是由呼叫者所擁有。  
   
  若要使用延遲的轉譯，呼叫[DelayRenderData](#delayrenderdata)或是[DelayRenderFileData](#delayrenderfiledata)成員函式。 如需有關延遲轉譯為已處理的 MFC，請參閱文章[資料物件和資料來源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的結構。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  呼叫此函式來指定的格式，在其中的資料期間提供的資料傳輸作業。  
@@ -151,22 +151,22 @@ void CacheGlobalData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *hGlobal*  
  包含指定的格式資料的全域記憶體區塊的控制代碼。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="remarks"></a>備註  
  此函式會提供使用立即呈現，因此呼叫函式; 時，您必須提供資料的資料資料會快取，直到需要為止。 使用`CacheData`成員函式，如果您提供的大量資料，或如果您需要的結構化儲存體。  
   
  若要使用延遲的轉譯，呼叫[DelayRenderData](#delayrenderdata)或是[DelayRenderFileData](#delayrenderfiledata)成員函式。 如需有關延遲轉譯為已處理的 MFC，請參閱文章[資料物件和資料來源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的結構。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  建構 `COleDataSource` 物件。  
@@ -186,10 +186,10 @@ void DelayRenderData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="remarks"></a>備註  
  此函式會提供使用延遲的轉譯，因此不會立即提供的資料的資料。 [OnRenderData](#onrenderdata)或是[OnRenderGlobalData](#onrenderglobaldata)成員函式呼叫來要求資料。  
@@ -198,9 +198,9 @@ void DelayRenderData(
   
  若要使用立即呈現，呼叫[CacheData](#cachedata)或是[CacheGlobalData](#cacheglobaldata)成員函式。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的結構。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  呼叫此函式來指定的格式，在其中的資料期間提供的資料傳輸作業。  
@@ -213,10 +213,10 @@ void DelayRenderFileData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要提供資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構描述以提供資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="remarks"></a>備註  
  此函式會提供使用延遲的轉譯，因此不會立即提供的資料的資料。 [OnRenderFileData](#onrenderfiledata)成員函式呼叫來要求資料。  
@@ -225,9 +225,9 @@ void DelayRenderFileData(
   
  若要使用立即呈現，呼叫[CacheData](#cachedata)或是[CacheGlobalData](#cacheglobaldata)成員函式。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的結構。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  呼叫此函式來支援變更資料來源的內容。  
@@ -240,17 +240,17 @@ void DelaySetData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要放置資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要放置資料的剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料是要被取代的格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構描述資料是要被取代的格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果它是 NULL 時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="remarks"></a>備註  
  [OnSetData](#onsetdata)會在發生此情況時由架構呼叫。 架構傳回的資料來源時，只會使用這[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`未呼叫您`OnSetData`絕不會呼叫函式。 `DelaySetData` 應該針對每個剪貼簿呼叫或`FORMATETC`您支援的格式。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中的結構。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="dodragdrop"></a>  Coledatasource:: Dodragdrop  
  呼叫`DoDragDrop`成員函式來執行拖放作業的此資料來源，通常[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)處理常式。  
@@ -294,7 +294,7 @@ DROPEFFECT DoDragDrop(
   
 -   Windows 95/98 拖曳延遲時間會儲存在成交的快取版本。INI。  
   
- 如需有關如何將拖曳的延遲資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK 中。  
+ 如需有關如何將拖曳的延遲資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK 中。  
   
  如需詳細資訊，請參閱文章[拖放： 實作置放來源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。  
   
@@ -308,7 +308,7 @@ void Empty();
 ### <a name="remarks"></a>備註  
  同時快取，延遲轉譯格式會清空，以便之後可以重複使用。  
   
- 如需詳細資訊，請參閱 < [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) Windows SDK 中。  
   
 ##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  將剪貼簿，並接著可讓您貼上剪貼簿的資料之後您的應用程式關閉, 的資料呈現。  
@@ -341,10 +341,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定用來要求資訊的格式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)資料所要傳回的結構。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)資料所要傳回的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -356,7 +356,7 @@ virtual BOOL OnRenderData(
   
  這是一種進階可覆寫。 覆寫此函式可提供您要求的格式和媒體中的資料。 根據您的資料，您可能想要改為覆寫這個函式的其他版本的其中一個。 如果您的資料是小型且固定的大小，會覆寫`OnRenderGlobalData`。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列舉型別和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)在 Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構[TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列舉型別和[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)在 Windows SDK 中。  
   
 ##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  由架構呼叫以擷取指定之格式的資料，當指定的存放媒體檔案。  
@@ -369,7 +369,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定用來要求資訊的格式。  
   
  *pFile*  
  指向[CFile](../../mfc/reference/cfile-class.md)所在的資料是要轉譯的物件。  
@@ -382,7 +382,7 @@ virtual BOOL OnRenderFileData(
   
  這是一種進階可覆寫。 覆寫此函式可提供您要求的格式和媒體中的資料。 根據您的資料，您可能想要改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存體媒體時，會覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。 如需有關延遲轉譯為已處理的 MFC，請參閱文章[資料物件和資料來源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構並[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構並[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。  
   
 ##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  由架構呼叫以指定的存放媒體是全域記憶體時，擷取指定之格式的資料。  
@@ -395,7 +395,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定用來要求資訊的格式。  
   
  *phGlobal*  
  指向要傳回之資料的全域記憶體控制代碼。 如果其中有尚未配置，這個參數可以是 NULL。  
@@ -410,7 +410,7 @@ virtual BOOL OnRenderGlobalData(
   
  這是一種進階可覆寫。 覆寫此函式可提供您要求的格式和媒體中的資料。 根據您的資料，您可能想要改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存體媒體時，會覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫[OnRenderFileData](#onrenderfiledata)。 如需有關延遲轉譯為已處理的 MFC，請參閱文章[資料物件和資料來源： 操作](../../mfc/data-objects-and-data-sources-manipulation.md)。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構並[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構並[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。  
   
 ##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  由架構呼叫以設定或取代中的資料`COleDataSource`中指定的格式物件。  
@@ -424,10 +424,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定取代資料的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定取代資料的格式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，其中包含的資料，將會取代目前的內容`COleDataSource`物件。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)結構，其中包含的資料，將會取代目前的內容`COleDataSource`物件。  
   
  *bRelease*  
  表示誰完成函式呼叫之後儲存媒體的擁有權。 呼叫端將決定誰負責釋放配置的存放媒體代表的資源。 呼叫端會藉由設定*bRelease*。 如果*bRelease*為非零值，資料來源取得擁有權，使用它完成時釋放媒體。 當*bRelease*為 0，呼叫端保留擁有權，且資料來源可以使用儲存媒體，只能針對呼叫的持續時間。  
@@ -436,11 +436,11 @@ virtual BOOL OnSetData(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 資料來源不會計資料的擁有權，直到它成功取得它。 也就是說，它不會擁有權如果`OnSetData`會傳回 0。 如果資料來源會取得擁有權，它會藉由呼叫釋放儲存媒體[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)函式。  
+ 資料來源不會計資料的擁有權，直到它成功取得它。 也就是說，它不會擁有權如果`OnSetData`會傳回 0。 如果資料來源會取得擁有權，它會藉由呼叫釋放儲存媒體[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)函式。  
   
  預設實作不做任何動作。 覆寫這個函式來取代指定之格式的資料。 這是一種進階可覆寫。  
   
- 如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構並[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)並[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)Windows SDK 中的函式。  
+ 如需詳細資訊，請參閱[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構並[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)並[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)Windows SDK 中的函式。  
   
 ##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  將所包含的資料`COleDataSource`之後呼叫下列函式的其中一個剪貼簿上的物件： [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。  

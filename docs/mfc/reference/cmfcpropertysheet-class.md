@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 97e08ca5e8fcf78215edd80ae053c5576b6bc95f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854066"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207474"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 類別
 `CMFCPropertySheet` 類別支援屬性工作表，其中每個屬性頁是由頁面索引標籤、工具列按鈕、樹狀目錄控制項節點或清單項目所表示。  
@@ -91,9 +91,9 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|初始化目前屬性工作表控制項的外觀。|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|啟用屬性頁時由架構呼叫。|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|由架構呼叫以繪製自訂屬性頁標頭。|  
-|`CMFCPropertySheet::OnInitDialog`|會處理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)訊息。 (覆寫[cpropertysheet:: Oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)。)|  
+|`CMFCPropertySheet::OnInitDialog`|會處理[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)訊息。 (覆寫[cpropertysheet:: Oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)。)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|由架構呼叫以從樹狀目錄控制項移除屬性頁。|  
-|`CMFCPropertySheet::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫 `CPropertySheet::PreTranslateMessage`。)|  
+|`CMFCPropertySheet::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫 `CPropertySheet::PreTranslateMessage`。)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|從樹狀目錄控制項移除節點。|  
 |[CMFCPropertySheet::RemovePage](#removepage)|從屬性工作表中移除屬性頁。|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|指定在 Outlook 窗格之導覽控制項中使用的映像清單。|  

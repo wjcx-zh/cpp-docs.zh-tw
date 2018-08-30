@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538428"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213188"
 ---
 # <a name="mfc-classes"></a>MFC 類別
 下列清單中的類別包含在 Microsoft Foundation Class (MFC) 程式庫中。  
@@ -135,7 +135,7 @@ ms.locfileid: "42538428"
  提供 Windows 檢查清單方塊的功能。  
   
  [CClientDC 類別](../../mfc/reference/cclientdc-class.md)  
- 在建構階段處理 Windows 函式 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 的呼叫，而在解構階段處理 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 的呼叫。  
+ 處理 Windows 函式呼叫[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在建構階段並[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在解構階段。  
   
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)  
  MFC 程式庫訊息對應架構的基底類別。  
@@ -861,7 +861,7 @@ ms.locfileid: "42538428"
  表示通常在浮動工具列周圍出現的半高度框架視窗。  
   
  [CMonikerFile 類別](../../mfc/reference/cmonikerfile-class.md)  
- 表示由[IMoniker](http://msdn.microsoft.com/library/windows/desktop/aa380034)命名的資料流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
+ 表示資料的資料流 ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) 所命名[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)。  
   
  [CMonthCalCtrl 類別](../../mfc/reference/cmonthcalctrl-class.md)  
  封裝月曆控制項的功能。  
@@ -930,7 +930,7 @@ ms.locfileid: "42538428"
  提供自訂用戶端控制項介面的支援。  
   
  [COleConvertDialog 類別](../../mfc/reference/coleconvertdialog-class.md)  
- 如需詳細資訊，請參閱 < [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Windows SDK 中的結構。  
   
  [COleCurrency 類別](../../mfc/reference/colecurrency-class.md)  
  封裝 OLE Automation 的 `CURRENCY` 資料類型。  
@@ -1173,7 +1173,7 @@ ms.locfileid: "42538428"
  封裝由動畫變數的初始速度決定其幅度的正弦曲線速度轉換。  
   
  [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)  
- 類似於實作相對座標或位置的 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 結構。  
+ 類似於 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構中，於實作相對座標或位置。  
   
  [CSliderCtrl 類別](../../mfc/reference/csliderctrl-class.md)  
  提供 Windows 通用滑桿控制項的功能。  

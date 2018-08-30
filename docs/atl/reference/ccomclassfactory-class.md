@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d58fc816bea6672309e60a09528b0727c64c6fd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 866d556c06cc7f627c2f5108384704b737eb0330
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880020"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205208"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 類別
-這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。  
+這個類別會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|鎖定記憶體中的 class factory。|  
   
 ## <a name="remarks"></a>備註  
- `CComClassFactory` 會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定的 class factory，以允許更快速地建立新物件的記憶體中的方法。 `IClassFactory` 必須針對您要註冊在系統登錄，並將您指派為 CLSID 的每個類別實作。  
+ `CComClassFactory` 會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定的 class factory，以允許更快速地建立新物件的記憶體中的方法。 `IClassFactory` 必須針對您要註冊在系統登錄，並將您指派為 CLSID 的每個類別實作。  
   
  ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要覆寫此預設值，指定的其中一個`DECLARE_CLASSFACTORY` *XXX*類別定義中的巨集。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)巨集的 class factory 會使用指定的類別：  
   

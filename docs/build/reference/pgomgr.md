@@ -1,5 +1,5 @@
 ---
-title: pgomgr |Microsoft 文件
+title: pgomgr |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377202"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198311"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-將分析資料從一個或多個.pgc 檔案加入至.pgd 檔。
+將設定檔資料從一或多個的.pgc 檔案加入至.pgd 檔。
 
 ## <a name="syntax"></a>語法
 
@@ -37,25 +37,25 @@ ms.locfileid: "32377202"
 
 - **/help**或 **/？** 顯示可用**pgomgr**選項。
 
-- **清除/** 會使要清除所有的設定檔資訊的.pgd 檔。 您無法指定.pgc 檔 **/清除**指定。
+- **清除/** 會導致要清除的所有設定檔資訊的.pgd 檔案。 您無法指定.pgc 檔案時 **/清除**指定。
 
-- **/detail**顯示詳細的統計資料，包括資料流程圖形涵蓋範圍資訊。
+- **/detail**顯示詳細的統計資料，包括流程圖形的涵蓋範圍資訊。
 
 - **摘要/** 顯示每個函式的統計資料。
 
-- **唯一 /** 搭配使用時 **/摘要**，原因裝飾函式名稱來顯示。 預設值，當**唯一 /** 不是，是要顯示的未裝飾的函式名稱。
+- **/ 唯一**搭配使用時 **/summary>**，原因裝飾函式名稱來顯示。 預設值，當 **/ 唯一**未使用，是要顯示的未裝飾的函式名稱。
 
-- **/merge**[**: * * * n*] 會導致資料中要加入至.pgd 檔的.pgc 檔案。 選擇性參數， *n*，可讓您指定的資料應該加入*n*時間。 例如，如果狀況通常是完成六次以反映頻率完成客戶，可以一次測試回合中執行並將它加入至.pgd 檔六次**pgomgr /merge:6**。
+- **/ merge**\[**:**<em>n</em>] 會導致資料中要加入至.pgd 檔的.pgc 檔案。 將選擇性參數*n*，可讓您指定的資料應該加入*n*時間。 比方說，如果案例通常是以反映方式通常它由客戶完成的六倍，可以一次在測試回合中執行並將它加入至.pgd 檔案六倍**pgomgr /merge:6**。
 
 *pgcfiles*<br/>
-一或多個.pgc 檔案您想要合併至.pgd 檔的設定檔資料。 您可以指定單一的.pgc 檔案或多個的.pgc 檔案。 如果您未指定任何的.pgc 檔案**pgomgr**合併所有的.pgc 檔案的檔名是相同的.pgd 檔案。
+一或多個的.pgc 檔案您想要合併的.pgd 檔的設定檔資料。 您可以指定單一的.pgc 檔案或多個的.pgc 檔案。 如果您未指定任何的.pgc 檔案**pgomgr**合併所有的檔案名稱是.pgd 檔相同的.pgc 檔案。
 
-*pgdfile* .pgd 檔案到您要合併的.pgc 檔案或檔案的資料。
+*pgdfile* .pgd 檔，其中您要合併的.pgc 檔案或檔案中的資料。
 
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
-> 您可以啟動這個工具只會從 Visual Studio 開發人員命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。
+> 您可以啟動此工具只能從 Visual Studio 開發人員命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。
 
 ## <a name="example"></a>範例
 
@@ -63,11 +63,11 @@ ms.locfileid: "32377202"
 
 `pgomgr /clear myapp.pgd`
 
-此範例命令將分析資料中 myapp1.pgc.pgd 檔三次：
+此範例命令將設定檔資料中 myapp1.pgc 至.pgd 檔三次：
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-在此範例中，所有的 myapp #.pgc 檔案中的設定檔資料會加入至 myapp.pgd 檔案。
+在此範例中，所有的 myapp #.pgc 檔案中的設定檔資料會加入 myapp.pgd 檔案。
 
 `pgomgr -merge myapp1.pgd`
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b39fb35b21721cb9b93741a74f62d749b6fb1051
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b0a7a2bcabc045be7493174c8eea2362d074b221
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608263"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203939"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的平行應用程式。 它會引發抽象的層級，讓您不需要管理並行存取相關的基礎結構詳細資料。 您也可以使用它來指定符合您應用程式服務需求品質的排程原則。 使用這些資源以協助您開始使用並行執行階段。  
@@ -107,7 +107,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
   
 |||  
 |-|-|  
-|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|  
+|[非同步程式設計模式和秘訣在 Hilo （使用 c + + 和 XAML Windows 市集應用程式）](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|  
 |[並行執行階段和 Visual Studio 2010 中的平行模式程式庫程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|  
 |[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|  
 |[在 c + + 和機器碼論壇中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|  

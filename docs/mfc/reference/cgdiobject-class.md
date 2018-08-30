@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e72c7ea788085f25dc2a4ec1b2f8682df9e20b25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338414"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209123"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 類別
 為各種 Windows 繪圖裝置介面 (GDI) 物件 (例如點陣圖、區域、筆刷、畫筆、調色盤和字型) 提供基底類別。  
@@ -139,7 +139,7 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>參數  
  *nIndex*  
- 常數，指定所需的內建物件的型別。 請參閱參數*fnObject* for [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows sdk for 適當值的描述。  
+ 常數，指定所需的內建物件的型別。 請參閱參數*fnObject* for [GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) Windows sdk for 適當值的描述。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
@@ -230,14 +230,14 @@ int GetObject(
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
-|`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
+|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|  
 |`CBitmap`|[點陣圖](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|WORD|  
 |`CRgn`|不支援|  
   
  如果物件是`CBitmap`物件，`GetObject`傳回只寬度、 高度和色彩的點陣圖的格式資訊。 可以使用來擷取實際的位元[CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits)。  
   
- 如果物件是`CPalette`物件，`GetObject`擷取文字，調色盤中指定的項目數。 此函式不會擷取[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，其定義的調色盤。 應用程式可以取得調色盤項目中的詳細資訊，藉由呼叫[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
+ 如果物件是`CPalette`物件，`GetObject`擷取文字，調色盤中指定的項目數。 此函式不會擷取[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)結構，其定義的調色盤。 應用程式可以取得調色盤項目中的詳細資訊，藉由呼叫[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  擷取的 GDI 物件的型別。  

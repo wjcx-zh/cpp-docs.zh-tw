@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540590"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208554"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 `CMFCToolBar`類別類似於[CToolBar 類別](../../mfc/reference/ctoolbar-class.md)，但是提供額外的使用者介面功能的支援。 這包括一般工具列、含作用中影像的工具列、大圖示、頁面巡覽區按鈕、鎖定工具列、Rebar 控制項、影像下方文字、背景影像和索引標籤式工具列。 `CMFCToolBar` 類別的內建支援也包括工具列和功能表的使用者自訂、工具列和功能表之間的拖放、下拉式方塊按鈕、編輯方塊按鈕、色彩選擇器和縮合按鈕。
@@ -916,7 +916,7 @@ virtual BOOL Create(
  工具列的父視窗指標。  
   
  [in]*cheaderctrl:: Create*  
- 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)樣式清單的 Windows SDK 中。  
+ 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)樣式清單的 Windows SDK 中。  
   
  [in]*nID*  
  子視窗的工具列的識別碼。  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  建立內嵌的控制列物件的其他樣式。  
   
  [in]*cheaderctrl:: Create*  
- 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)取得一份適當的樣式。  
+ 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)取得一份適當的樣式。  
   
  [in]*rcBorders*  
  A`CRect`物件，指定工具列視窗框線的寬度。  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)代表目前反白顯示的文字色彩的值。  
+ A [COLORREF](/windows/desktop/gdi/colorref)代表目前反白顯示的文字色彩的值。  
   
 ### <a name="remarks"></a>備註  
  呼叫[CMFCToolBar::SetHotTextColor](#sethottextcolor)設定新的文字色彩反白顯示的工具列按鈕。  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  如果工具列和其同層級位於相同的資料列，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- [Cmfccustomizebutton:: Createpopupmenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果這個方法會傳回 TRUE，架構會顯示**在一個資料列上顯示按鈕** 按鈕。 否則，架構會顯示**在兩個資料列上顯示按鈕** 按鈕。  
+ [Cmfccustomizebutton:: Createpopupmenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果這個方法會傳回 TRUE，架構會顯示**在一個資料列上顯示按鈕** 按鈕。 否則，架構會顯示**在兩個資料列上顯示按鈕** 按鈕。  
   
  您通常不需要使用這個方法。 若要啟用**在一個資料列上顯示按鈕**或是**在兩個資料列上顯示按鈕**按鈕，請呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205931"
 ---
 # <a name="cclientdc-class"></a>CClientDC 類別
-呼叫 Windows 函式會負責[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在建構階段並[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在解構階段。  
+呼叫 Windows 函式會負責[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)在建構階段並[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)在解構階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  視窗的裝置內容物件將會存取其工作區中。  
   
 ### <a name="remarks"></a>備註  
- 建構函式會呼叫 Windows 函式[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)。  
+ 建構函式會呼叫 Windows 函式[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)。  
   
  例外狀況 (型別的`CResourceException`) 便會擲回 Windows`GetDC`呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有配置所有其可用的裝置內容。 您的應用程式競爭五個一般顯示的可用內容，在 Windows 下一次。  
   

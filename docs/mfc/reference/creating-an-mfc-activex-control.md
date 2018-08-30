@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c29aef2fcee829924021f9352145714a83698d38
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c610e8dcd8cf5b06dfb22540c304e84446c75438
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026773"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198684"
 ---
 # <a name="creating-an-mfc-activex-control"></a>建立 MFC ActiveX 控制項
 ActiveX 控制項程式是功能的設計用來讓父應用程式的特定類型的模組化程式。 例如，您可以建立使用按鈕等控制項在對話方塊中或用於在網頁上的工具列中。  
@@ -49,5 +49,5 @@ ActiveX 控制項程式是功能的設計用來讓父應用程式的特定類型
 ## <a name="see-also"></a>另請參閱  
  [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [屬性頁](../../ide/property-pages-visual-cpp.md)   
- [部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

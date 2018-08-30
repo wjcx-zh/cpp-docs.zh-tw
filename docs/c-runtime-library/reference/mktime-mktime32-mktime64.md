@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d02ae8e38a0d3e3b56b5ae69ddd937ef99d76b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206064"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 
@@ -73,19 +73,19 @@ __time64_t _mktime64(
 
 ## <a name="return-value"></a>傳回值
 
-**_mktime32**傳回編碼類型的值為指定的月曆時間[time_t](../../c-runtime-library/standard-types.md)。 如果*timeptr*參考 1970 年 1 月 1 日的午夜之前的日期或如果無法表示月曆時間， **_mktime32**傳回-1 轉換為類型**time_t**。 當使用 **_mktime32**如果*timeptr*參考的日期之後 23:59:59 2038 年 1 月 18 日，Coordinated Universal Time (UTC)，它會傳回-1 轉換為類型**time_t**。
+**_mktime32**傳回編碼類型的值為指定行事曆時間[time_t](../../c-runtime-library/standard-types.md)。 如果*timeptr*參考的日期是在 1970 年 1 月 1 日的午夜之前或是無法表示月曆時間，則 **_mktime32**會傳回-1 轉換為類型**time_t**。 使用時 **_mktime32**如果*timeptr*參考的日期是在 23:59:59 2038 年 1 月 18 日，Coordinated Universal Time (UTC) 之後，它會傳回-1 轉換為類型**time_t**。
 
 **_mktime64**會傳回-1 轉換為類型 **__time64_t**如果*timeptr*參考 23:59:59，3000 年 12 月 31 日 UTC 之後的日期。
 
 ## <a name="remarks"></a>備註
 
-**Mktime**， **_mktime32**和 **_mktime64**函式提供的時間結構轉換 （可能不完整） 所指向*timeptr*成完整定義與結構標準化值，然後再轉換成**time_t**月曆時間值。 轉換後的時間和 [time](time-time32-time64.md) 函式傳回的值具有相同的編碼。 原始值**tm_wday**和**tm_yday**元件*timeptr*結構都會被忽略，且其他元件的原始值不受限制其正確的範圍。
+**Mktime**， **_mktime32**並 **_mktime64**函式提供的時間結構轉換 （可能不完整） 所指的*timeptr*到使用的完整定義結構標準化值，然後將它轉換成**time_t**月曆時間值。 轉換後的時間和 [time](time-time32-time64.md) 函式傳回的值具有相同的編碼。 原始值**tm_wday**並**tm_yday**元件*timeptr*結構會被忽略，並不會限制其他元件的原始值其正確範圍。
 
-**mktime**是內嵌函式相當於 **_mktime64**，除非 **_USE_32BIT_TIME_T**定義，在此情況下它相當於 **_mktime32**.
+**mktime**是內嵌函式相當於 **_mktime64**，除非 **_USE_32BIT_TIME_T**定義，在此情況下它就相當於 **_mktime32**.
 
-調整為 UTC 之後, **_mktime32**控點的日期從 1970 年 1 月 1 日午夜到 23:59:59 2038 年 1 月 18 日，UTC。 **_mktime64**日期午夜，自 1970 年 1 月 1 日 23:59:59 3000 年 12 月 31 日的控制代碼。 這項調整可能會造成這些函式傳回-1 (轉型為**time_t**， **__time32_t**或 **__time64_t**) 即使您指定的日期範圍內。 例如，您在開羅 (埃及)，此地區比 UTC 快兩小時，因此會先將 *timeptr* 中您指定的日期減去兩小時；而這麼做可能會使您的日期落在範圍之外。
+調整為 UTC 之後, **_mktime32**控點日期從 1970 年 1 月 1 日午夜到 23:59:59 2038 年 1 月 18 日 UTC。 **_mktime64**日期從午夜，自 1970 年 1 月 1 日到 23:59:59 到 3000 年 12 月 31 日的控制代碼。 這項調整可能會造成這些函式傳回-1 (轉換成**time_t**， **__time32_t**或是 **__time64_t**) 即使您指定的日期範圍內。 例如，您在開羅 (埃及)，此地區比 UTC 快兩小時，因此會先將 *timeptr* 中您指定的日期減去兩小時；而這麼做可能會使您的日期落在範圍之外。
 
-可能會使用這些函式進行驗證及填寫 tm 結構。 如果成功，這些函式設定的值**tm_wday**和**tm_yday**適當，並設定其他元件，以表示指定的月曆時間，但為 normal 強迫這些值範圍。 最終值**tm_mday**之前未設定**tm_mon**和**tm_year**所決定。 當指定**tm**結構時間時，請設定**tm_isdst**欄位設為：
+可能會使用這些函式進行驗證及填寫 tm 結構。 如果成功，這些函式設定的值**tm_wday**並**tm_yday**適當地設定其他元件，以表示指定的月曆時間，但正常強迫這些值範圍。 最終值**tm_mday**未設定直到**tm_mon**並**tm_year**所決定。 指定時**tm**結構的時間，設定**tm_isdst**欄位設為：
 
 - 零 (0)，以指出標準時間已生效。
 
@@ -93,15 +93,15 @@ __time64_t _mktime64(
 
 - 小於 0 的值，使 C 執行階段程式庫程式碼計算標準時間或日光節約時間是否生效。
 
-C 執行階段程式庫會從 [TZ](tzset.md) 環境變數判斷日光節約時間行為。 如果**TZ**未設定，Win32 API 呼叫[GetTimeZoneInformation](http://msdn.microsoft.com/library/windows/desktop/ms724421.aspx)用來從作業系統取得日光節約時間資訊。 若此作業失敗，程式庫會在實作日光節約時間的計算時，假定使用美國的規則。 **tm_isdst**是必要的欄位。 若無設定，該值會是未定義，而且這些函式的傳回值會無法預期。 如果*timeptr*指向**tm**先前呼叫所傳回的結構[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或變異數，這些函式）， **tm_isdst**欄位包含正確的值。
+C 執行階段程式庫會從 [TZ](tzset.md) 環境變數判斷日光節約時間行為。 如果**TZ**未設定，Win32 API 呼叫[GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx)用來從作業系統取得日光節約時間資訊。 若此作業失敗，程式庫會在實作日光節約時間的計算時，假定使用美國的規則。 **tm_isdst**  是必要的欄位。 若無設定，該值會是未定義，而且這些函式的傳回值會無法預期。 如果*timeptr*指向**tm**先前呼叫所傳回的結構[asctime](asctime-wasctime.md)， [gmtime](gmtime-gmtime32-gmtime64.md)，或[localtime](localtime-localtime32-localtime64.md)（或這些函式的變體）， **tm_isdst**欄位包含正確的值。
 
-請注意， **gmtime**和**localtime** (和 **_gmtime32**， **_gmtime64**， **_localtime32**，和 **_localtime64**) 使用單一緩衝區每個執行緒來進行轉換。 如果您提供此緩衝區**mktime**， **_mktime32**或 **_mktime64**，先前的內容將被終結。
+請注意， **gmtime**並**localtime** (並 **_gmtime32**， **_gmtime64**， **_localtime32**，及 **_localtime64**) 使用單一的緩衝區，每個執行緒來進行轉換。 如果您提供此緩衝區**mktime**， **_mktime32**或是 **_mktime64**，先前的內容會遭到銷毀。
 
-這些函式會驗證它們的參數。 如果 *timeptr* 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+這些函式會驗證它們的參數。 如果 *timeptr* 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**mktime**|\<time.h>|
 |**_mktime32**|\<time.h>|

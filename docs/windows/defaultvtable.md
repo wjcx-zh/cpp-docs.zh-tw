@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bbbc225e4fee1aba380694fc3b39a7f59e1a294
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4cec0e02a6a61638f8aed1b4015fea065cbfd343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611482"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207684"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -43,7 +43,7 @@ ms.locfileid: "42611482"
 
 ## <a name="remarks"></a>備註
 
-**Defaultvtable** c + + 屬性具有相同的功能[defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 屬性。
+**Defaultvtable** c + + 屬性具有相同的功能[defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 176dfc9027951f06f55dd04757b9acb7c7d8a2ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199621"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 類別
 管理您與 Gopher 網際網路伺服器的連接。  
@@ -158,7 +158,7 @@ static CGopherLocator CreateLocator(
  若要傳送至 gopher 伺服器，以擷取項目選取器字串的指標。 *pstrSelectorString*可以是 NULL。  
   
  *dwGopherType*  
- 這會指定是否*pstrSelectorString*指的是目錄或文件，以及要求是否為 gopher +。 請參閱結構的屬性[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK 中。  
+ 這會指定是否*pstrSelectorString*指的是目錄或文件，以及要求是否為 gopher +。 請參閱結構的屬性[GOPHER_FIND_DATA](/windows/desktop/api/wininet/ns-wininet-gopher_find_dataa) Windows SDK 中。  
   
  *pstrLocator*  
  字串，識別要開啟的檔案指標。 一般而言，這個字串會傳回呼叫[CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator)。  
@@ -197,7 +197,7 @@ BOOL GetAttribute(
  參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收定位器類型。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  呼叫此成員函式，以開啟 gopher 伺服器上的檔案。  

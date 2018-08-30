@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65bed61f864bc5515c2639be6afe5984702ae29
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200142"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 
@@ -117,13 +117,13 @@ class CPropertySheet : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)結構。 提供基本的屬性工作表參數的存取權。|
+|[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)結構。 提供基本的屬性工作表參數的存取權。|
 
 ## <a name="remarks"></a>備註
 
 屬性工作表組成`CPropertySheet`物件和一或多個[CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件。 架構會顯示屬性工作表，為具有一組索引標籤索引和區域，其中包含目前所選的頁面的視窗。 使用者瀏覽至特定頁面中，使用適當的索引標籤。
 
-`CPropertySheet` 提供支援展開[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Windows 98 和 Windows NT 2000 中導入的結構。 此結構包含其他旗標並支援使用 「 浮水印 」 背景點陣圖的成員。
+`CPropertySheet` 提供支援展開[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) Windows 98 和 Windows NT 2000 中導入的結構。 此結構包含其他旗標並支援使用 「 浮水印 」 背景點陣圖的成員。
 
 若要在您的屬性工作表物件會自動顯示這些新的映像，請傳入有效值的點陣圖和調色盤映像呼叫[CPropertySheet::Construct](#construct)或[CPropertySheet::CPropertySheet](#cpropertysheet).
 
@@ -601,7 +601,7 @@ CTabCtrl* GetTabControl() const;
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-結構，其成員儲存的特性[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。
+結構，其成員儲存的特性[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)。
 
 ### <a name="remarks"></a>備註
 
@@ -624,13 +624,13 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*  
-指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
+指向[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)協調要轉換的物件，其中包含對話方塊。
 
 ### <a name="remarks"></a>備註
 
 對話方塊單位是根據衍生自的平均的寬度和高度，用於對話方塊中文字的字型中的字元目前對話方塊基底單位所述。 水平的單位是對話方塊基底寬度單位的四分之一，一個垂直單位對話方塊基底的高度的單位的八分之一。
 
-[GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 函式會傳回系統字型的大小資訊，但如果您使用 DS_SETFONT 樣式在資源定義檔案中，您可以指定不同的字型，每一個屬性工作表。 [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows 函式，描述在 Windows SDK 中，會使用適當的字型，此對話方塊。
+[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows 函式會傳回系統字型的大小資訊，但如果您使用 DS_SETFONT 樣式在資源定義檔案中，您可以指定不同的字型，每一個屬性工作表。 [MapDialogRect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) Windows 函式，描述在 Windows SDK 中，會使用適當的字型，此對話方塊。
 
 `MapDialogRect`成員函式會取代中的對話方塊單位*lpRect*與畫面單位 （像素），讓矩形可用來建立對話方塊或調整控制項在方塊內的位置。
 
@@ -683,9 +683,9 @@ n 按鈕： 識別被按下按鈕。 這個參數可以是下列值之一：
 
 ### <a name="remarks"></a>備註
 
-請參閱[PSM_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb774597)如需有關 Windows SDK Pressbutton 訊息。
+請參閱[PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton)如需有關 Windows SDK Pressbutton 訊息。
 
-呼叫`PressButton`不會傳送[PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)屬性頁面架構的通知。 若要傳送此通知，請呼叫[CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)。
+呼叫`PressButton`不會傳送[PSN_APPLY](/windows/desktop/Controls/psn-apply)屬性頁面架構的通知。 若要傳送此通知，請呼叫[CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)。
 
 ### <a name="example"></a>範例
 

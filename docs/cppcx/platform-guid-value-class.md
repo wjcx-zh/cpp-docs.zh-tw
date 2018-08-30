@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d971d4cce8dc3a9d01a666bc8e0e6333f85260c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601250"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201370"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
-代表 Windows 執行階段類型系統中的 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) 類型。  
+代表[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Windows 執行階段型別系統中的型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -151,7 +151,7 @@ Platform::Guid::operator!=
 
 
 ## <a name="operator-call"></a> Guid::operator() 運算子
-將隱含轉換[GUID 結構](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: GUID。  
+將隱含轉換[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: GUID。  
   
 ### <a name="syntax"></a>語法  
   

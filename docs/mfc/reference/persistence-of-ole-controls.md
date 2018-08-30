@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204565"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性
 OLE 控制項的其中一個功能是屬性持續性 (或序列化)，其允許 OLE 控制項對檔案或資料流來回讀取或寫入屬性值。 即使在應用程式已終結控制項之後，容器應用程式仍可以使用序列化來儲存控制項的屬性值。 當控制項的新執行個體在稍後建立時，便可以從檔案或資料流讀取 OLE 控制項的屬性值。  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   包含實際的二進位資料的記憶體區塊。  
   
- 請注意，`PX_Blob`會配置記憶體時，使用 Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API，當載入 BLOB 類型屬性。 您必須負責釋放這個記憶體。 因此，您的控制項的解構函式應該呼叫[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) BLOB 類型的任何屬性來釋放控制代碼會增加至您的控制項配置任何記憶體。  
+ 請注意，`PX_Blob`會配置記憶體時，使用 Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API，當載入 BLOB 類型屬性。 您必須負責釋放這個記憶體。 因此，您的控制項的解構函式應該呼叫[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) BLOB 類型的任何屬性來釋放控制代碼會增加至您的控制項配置任何記憶體。  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  呼叫此函式內控制項的`DoPropExchange`来序列化或 BOOL 類型的屬性初始化的成員函式。  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17f50f5e4fb8b9330a09d4964aa99fbf01f4b34d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849323"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206967"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 類別
 具有[CRichEditView](../../mfc/reference/cricheditview-class.md)並[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供 rich edit 控制項的 MFC 的文件檢視架構內容中的功能。  
@@ -84,7 +84,7 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>參數  
  *preo*  
- 指標[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構這個 OLE 項目。 如果*preo*是 NULL 時，用戶端項目是空的。  
+ 指標[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構這個 OLE 項目。 如果*preo*是 NULL 時，用戶端項目是空的。  
   
  *pContainer*  
  容器文件會包含此項目的指標。 如果*pContainer*是 NULL 時，您必須明確呼叫[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)將此用戶端項目新增至文件。  
@@ -92,10 +92,10 @@ CRichEditCntrItem(
 ### <a name="remarks"></a>備註  
  此函式不會執行任何 OLE 初始化。  
   
- 如需詳細資訊，請參閱 < [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK 中的結構。  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- 呼叫此函式，以同步處理裝置外觀[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個`CRichEditCntrltem`來指定*reo*。  
+ 呼叫此函式，以同步處理裝置外觀[DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)，這個`CRichEditCntrltem`來指定*reo*。  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -103,10 +103,10 @@ void SyncToRichEditObject(REOBJECT& reo);
   
 ### <a name="parameters"></a>參數  
  *reo*  
- 若要參考[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。  
+ 若要參考[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)結構描述 OLE 項目。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 WORDPAD](../../visual-cpp-samples.md)   

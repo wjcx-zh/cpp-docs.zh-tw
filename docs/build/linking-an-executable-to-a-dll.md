@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9641545721776530ccf09a5a1ea99485f510265
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571469"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196683"
 ---
 # <a name="link-an-executable-to-a-dll"></a>連結至 DLL 的可執行檔  
   
@@ -76,7 +76,7 @@ ms.locfileid: "42571469"
   
 -   如果 DLL 有`DllMain`進入點函式，作業系統會呼叫此函式呼叫的執行緒內容中`LoadLibrary`。 如果 DLL 已經連結至處理程序因為前一個呼叫，不會呼叫進入點函式`LoadLibrary`，已沒有對應呼叫`FreeLibrary`函式。 明確連結可能會造成問題如果 DLL 使用`DllMain`函式來執行的處理程序的每個執行緒的初始設定，因為執行緒已存在時`LoadLibrary`(或`AfxLoadLibrary`) 稱為未初始化。  
   
--   如果 DLL 宣告靜態範圍的資料，做為`__declspec(thread)`，如果明確連結，它可能會造成保護錯誤。 藉由呼叫載入 DLL 之後`LoadLibrary`，它會造成保護錯誤，每當程式碼會參考此資料。 （靜態範圍的資料包括全域和區域靜態的項目）。因此，當您建立 DLL 時，您應該避免使用執行緒區域儲存區或告知 DLL 使用者有潛在的問題，以動態方式載入您的 DLL。 如需詳細資訊，請參閱 <<c0> [ 動態連結程式庫 (Windows SDK) 中使用執行緒區域儲存區](http://msdn.microsoft.com/library/windows/desktop/ms686997)。  
+-   如果 DLL 宣告靜態範圍的資料，做為`__declspec(thread)`，如果明確連結，它可能會造成保護錯誤。 藉由呼叫載入 DLL 之後`LoadLibrary`，它會造成保護錯誤，每當程式碼會參考此資料。 （靜態範圍的資料包括全域和區域靜態的項目）。因此，當您建立 DLL 時，您應該避免使用執行緒區域儲存區或告知 DLL 使用者有潛在的問題，以動態方式載入您的 DLL。 如需詳細資訊，請參閱 <<c0> [ 動態連結程式庫 (Windows SDK) 中使用執行緒區域儲存區](https://msdn.microsoft.com/library/windows/desktop/ms686997)。  
   
 <a name="linking-implicitly"></a>  
   

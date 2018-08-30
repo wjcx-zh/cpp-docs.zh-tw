@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1da24273decbee296bfa19a5c8306cb0512e3fc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b4c5dad276db338b5efa0d15786b090779fcf41a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207501"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 類別
 提供 OLE 項目的伺服器介面。  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
   
 -   Windows 95/98 拖曳延遲時間會儲存在成交的快取版本。INI。  
   
- 如需有關如何將拖曳的延遲資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK 中。  
+ 如需有關如何將拖曳的延遲資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK 中。  
   
 ##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
  呼叫此函式，以指定的填滿[COleDataSource](../../mfc/reference/coledatasource-class.md)物件會複製到剪貼簿中，如果您呼叫的所有資料[CopyToClipboard](#copytoclipboard) (會也會傳送相同的資料，如果您呼叫[DoDragDrop](#dodragdrop))。  
@@ -329,14 +329,14 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>參數  
  *lpStgMedium*  
- 指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)會收到 OLE 項目的 CF_EMBEDSOURCE 資料的結構。  
+ 指標[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)會收到 OLE 項目的 CF_EMBEDSOURCE 資料的結構。  
   
 ### <a name="remarks"></a>備註  
  此格式包含的項目原生資料。 您必須實作`Serialize`成員函式，此函式才能正常運作。  
   
  結果可以再加入資料來源使用[COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata)。 會自動呼叫此函數[COleServerItem::OnGetClipboardData](#ongetclipboarddata)。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK 中。  
   
 ##  <a name="getitemname"></a>  COleServerItem::GetItemName  
  呼叫此函式可取得項目的名稱。  
@@ -360,7 +360,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
 ### <a name="parameters"></a>參數  
  *lpStgMedium*  
- 指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)會收到 OLE 項目的 CF_LINKSOURCE 資料的結構。  
+ 指標[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)會收到 OLE 項目的 CF_LINKSOURCE 資料的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -370,7 +370,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  結果可以新增至資料來源[COleDataSource::CacheData](../../mfc/reference/coledatasource-class.md#cachedata)。 會自動呼叫此函數[ongetclipboarddata 而自動發生](#ongetclipboarddata)。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK 中。  
   
 ##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
  呼叫此函式可取得的 CF_OBJECTDESCRIPTOR 資料 OLE 項目。  
@@ -390,12 +390,12 @@ void GetObjectDescriptorData(
  OLE 項目的大小。 可以是 NULL。  
   
  *lpStgMedium*  
- 指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)會收到 OLE 項目的 CF_OBJECTDESCRIPTOR 資料的結構。  
+ 指標[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)會收到 OLE 項目的 CF_OBJECTDESCRIPTOR 資料的結構。  
   
 ### <a name="remarks"></a>備註  
  資訊都會複製到`STGMEDIUM`結構所指*lpStgMedium*。 此格式包含貼上 對話方塊所需的資訊。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK 中。  
   
 ##  <a name="isconnected"></a>  COleServerItem::IsConnected  
  呼叫此函式，以查看是否已連接的 OLE 項目。  
@@ -476,14 +476,14 @@ virtual void OnDoVerb(LONG iVerb);
 |- 2|編輯在個別視窗中的項目|OLEIVERB_OPEN|  
 |- 3|隱藏項目|OLEIVERB_HIDE|  
   
- -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果，為-1。 其他值，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果，為-1。 其他值，請參閱[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
  如果容器應用程式使用 Microsoft Foundation 類別庫所撰寫，此函式時，會呼叫[COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate)成員函式對應`COleClientItem`呼叫物件。 預設實作會呼叫[OnShow](#onshow)成員函式，如果指定 OLEIVERB_SHOW 或主要的動詞命令，則[OnOpen](#onopen)如果指定了次要動作或 OLEIVERB_OPEN，和[OnHide](#onhide)如果 OLEIVERB_HIDE 指定。 預設實作會呼叫`OnShow`如果*iVerb*不是其中一個上面所列的動詞命令。  
   
  如果您主要的動詞命令不會顯示此項目，請覆寫這個函式。 比方說，如果項目是錄音，其主要動作是播放，您就沒有顯示伺服器應用程式播放該項目。  
   
- 如需詳細資訊，請參閱 < [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ##  <a name="ondraw"></a>  Coleserveritem:: Ondraw  
  由架構呼叫以轉譯 OLE 項目為中繼檔。  
@@ -631,7 +631,7 @@ virtual BOOL OnInitFromData(
 ### <a name="remarks"></a>備註  
  如果*bCreation*為 TRUE，如果容器實作插入新物件根據目前的選取項目，會呼叫此函數。 建立新的 OLE 項目時，會使用選取的資料。 比方說，當在試算表程式中選取資料格範圍，然後使用 建立圖表的 插入新物件基礎的選取範圍中的值。 預設實作不做任何動作。 覆寫此函式可從所提供的選擇可接受的格式*pDataObject*和初始化 OLE 項目，根據提供的資料。 這是一種進階可覆寫。  
   
- 如需詳細資訊，請參閱 < [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) Windows SDK 中。  
   
 ##  <a name="onopen"></a>  COleServerItem::OnOpen  
  由架構呼叫以個別的執行個體的伺服器應用程式，而不是就地顯示 OLE 項目。  
@@ -645,7 +645,7 @@ virtual void OnOpen();
   
  如果您想要開啟 OLE 項目時執行特殊處理，請覆寫這個函式。 這是您想要用來開啟時，設定選取項目連結的連結項目上特別常發生。  
   
- 如需詳細資訊，請參閱 < [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleClientSite::OnShowWindow](/windows/desktop/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) Windows SDK 中。  
   
 ##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
  由架構呼叫以判斷目前的伺服器文件中任何連結的項目是否已過期。  
@@ -671,10 +671,10 @@ virtual BOOL OnRenderData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定用來要求資訊的格式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)資料所要傳回的結構。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)資料所要傳回的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -686,7 +686,7 @@ virtual BOOL OnRenderData(
   
  這是一種進階可覆寫。 覆寫此函式可提供您要求的格式和媒體中的資料。 根據您的資料，您可能想要改為覆寫這個函式的其他版本的其中一個。 如果您的資料是小型且固定的大小，會覆寫`OnRenderGlobalData`。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。  
   
- 如需詳細資訊，請參閱 < [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)， [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)， [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)，以及[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)， [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)， [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)，以及[TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) Windows SDK 中。  
   
 ##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
  由架構呼叫以擷取指定之格式的資料儲存體中的檔案時。  
@@ -699,7 +699,7 @@ virtual BOOL OnRenderFileData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定用來要求資訊的格式。  
   
  *pFile*  
  指向`CFile`所在的資料是要轉譯的物件。  
@@ -712,7 +712,7 @@ virtual BOOL OnRenderFileData(
   
  這是一種進階可覆寫。 覆寫此函式可提供您要求的格式和媒體中的資料。 根據您的資料，您可能想要改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存體媒介中轉移，覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫[OnRenderFileData](#onrenderfiledata)。  
   
- 如需詳細資訊，請參閱 < [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
  由架構呼叫以指定的存放媒體是全域記憶體時，擷取指定之格式的資料。  
@@ -725,7 +725,7 @@ virtual BOOL OnRenderGlobalData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定用來要求資訊的格式。  
   
  *phGlobal*  
  指向要傳回之資料的全域記憶體控制代碼。 如果已不配置任何記憶體，則這個參數可以是 NULL。  
@@ -740,7 +740,7 @@ virtual BOOL OnRenderGlobalData(
   
  這是一種進階可覆寫。 覆寫此函式可提供您要求的格式和媒體中的資料。 根據您的資料，您可能想要改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存體媒介中轉移，覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫[OnRenderFileData](#onrenderfiledata)。  
   
- 如需詳細資訊，請參閱 < [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
  由架構呼叫以指定編輯 OLE 項目時要使用的調色盤。  
@@ -751,15 +751,15 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
 ### <a name="parameters"></a>參數  
  *lpLogPalette*  
- Windows 指標[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構。  
+ Windows 指標[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果色彩調色盤則為非零值否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果容器應用程式使用 Microsoft Foundation 類別庫所撰寫，此函式時，會呼叫[IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971)函式對應`COleClientItem`呼叫物件。 預設實作會傳回 FALSE。 如果您想要使用建議的調色盤，請覆寫這個函式。 伺服器應用程式不需要使用建議的調色盤。  
+ 如果容器應用程式使用 Microsoft Foundation 類別庫所撰寫，此函式時，會呼叫[IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme)函式對應`COleClientItem`呼叫物件。 預設實作會傳回 FALSE。 如果您想要使用建議的調色盤，請覆寫這個函式。 伺服器應用程式不需要使用建議的調色盤。  
   
- 如需詳細資訊，請參閱 < [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) Windows SDK 中。  
   
 ##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
  由架構呼叫以指定的資料取代 OLE 項目的資料。  
@@ -773,10 +773,10 @@ virtual BOOL OnSetData(
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定資料的格式。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，指定資料的格式。  
   
  *lpStgMedium*  
- 指標[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，位在其中的資料。  
+ 指標[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)結構，位在其中的資料。  
   
  *bRelease*  
  表示誰完成函式呼叫之後儲存媒體的擁有權。 呼叫端將決定誰負責釋放配置的存放媒體代表的資源。 呼叫端會藉由設定*bRelease*。 如果*bRelease*為非零值，伺服器項目取得擁有權，使用它完成時釋放媒體。 當*bRelease*為 0，呼叫端保留擁有權，且伺服器項目只能針對在呼叫期間使用的存放媒體。  
@@ -785,11 +785,11 @@ virtual BOOL OnSetData(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 它已成功取得它的伺服器項目才會將資料的擁有權。 也就是說，它不會擁有權如果它傳回 0。 如果資料來源會取得擁有權，它會藉由呼叫釋放儲存媒體[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)函式。  
+ 它已成功取得它的伺服器項目才會將資料的擁有權。 也就是說，它不會擁有權如果它傳回 0。 如果資料來源會取得擁有權，它會藉由呼叫釋放儲存媒體[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium)函式。  
   
  預設實作不做任何動作。 覆寫這個函式來取代指定的資料中的 OLE 項目的資料。 這是一種進階可覆寫。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)， [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)，並[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)， [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)，並[ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) Windows SDK 中。  
   
 ##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
  由架構呼叫以告知 OLE 項目多少空間可用，在容器文件中。  

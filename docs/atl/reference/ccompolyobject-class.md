@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b5cff88aab5a4b069d96808755ce92d61f32fff
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9b739a2c4388877bc463a6345dcfe347d8638b27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572638"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206368"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 類別
 這個類別會實作`IUnknown`彙總或非彙總物件。  
@@ -76,7 +76,7 @@ class CComPolyObject : public IUnknown,
 |[CComPolyObject::m_contained](#m_contained)|委派`IUnknown`呼叫的外部未知，如果物件已彙總或`IUnknown`如果物件不會彙總的物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComPolyObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總或非彙總物件。  
+ `CComPolyObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)彙總或非彙總物件。  
   
  執行個體時`CComPolyObject`會建立值的外部未知已核取。 如果它是 NULL，`IUnknown`實作非彙總的物件。 如果不是 NULL，外部未知`IUnknown`會彙總物件的實作。  
   

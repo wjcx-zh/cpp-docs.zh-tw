@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205712"
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 Visual c + + 支援定義**wmain**函式，並將寬字元引數傳遞至您的 Unicode 應用程式。 宣告型式參數**wmain**，使用格式類似於`main`。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如:   
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>另請參閱  
  [Unicode 支援](../text/support-for-unicode.md)   
  [Unicode 程式設計摘要](../text/unicode-programming-summary.md)   
- [WinMain 函式](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [WinMain 函式](https://msdn.microsoft.com/library/windows/desktop/ms633559)

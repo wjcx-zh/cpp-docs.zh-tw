@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6f30208cbe3ebb72014f027533c7b3c659e4ac23
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880111"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213269"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本機堆積函式。  
@@ -55,7 +55,7 @@ class CLocalHeap : public IAtlMemMgr
  `CLocalHeap` 實作使用 Win32 本機堆積函式的記憶體配置函式。  
   
 > [!NOTE]
->  本機堆積函式會低於其他記憶體管理函式，並不會提供許多功能。 因此，應該使用新的應用程式[堆積函式](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 中會有這些[CWin32Heap](../../atl/reference/cwin32heap-class.md)類別。  
+>  本機堆積函式會低於其他記憶體管理函式，並不會提供許多功能。 因此，應該使用新的應用程式[堆積函式](/windows/desktop/Memory/heap-functions)。 中會有這些[CWin32Heap](../../atl/reference/cwin32heap-class.md)類別。  
   
 ## <a name="example"></a>範例  
  範例，請參閱[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  呼叫[clocalheap:: Free](#free)或是[clocalheap:: Reallocate](#reallocate)釋放這個方法所配置的記憶體。  
   
- 使用實作[LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723)搭配 LMEM_FIXED 旗標參數。  
+ 使用實作[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)搭配 LMEM_FIXED 旗標參數。  
   
 ##  <a name="free"></a>  Clocalheap:: Free  
  呼叫這個方法來釋放此記憶體管理員所配置的記憶體區塊。  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  此記憶體管理員先前所配置之記憶體的指標。 NULL 是有效的值，且沒有任何作用。  
   
 ### <a name="remarks"></a>備註  
- 使用實作[LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730)。  
+ 使用實作[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)。  
   
 ##  <a name="getsize"></a>  CLocalHeap::GetSize  
  呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  傳回配置的記憶體區塊大小，以位元組為單位。  
   
 ### <a name="remarks"></a>備註  
- 使用實作[LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745)。  
+ 使用實作[LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize)。  
   
 ##  <a name="reallocate"></a>  Clocalheap:: Reallocate  
  呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  呼叫[clocalheap:: Free](#free)釋放這個方法所配置的記憶體。  
   
- 使用實作[LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)。  
+ 使用實作[LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   

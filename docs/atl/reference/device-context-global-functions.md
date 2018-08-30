@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8944ecdb4f9996800264986a7a687df6020b0591
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881392"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209929"
 ---
 # <a name="device-context-global-functions"></a>裝置內容全域函式
 此函式會建立指定的裝置的裝置內容。  
@@ -29,7 +29,7 @@ ms.locfileid: "37881392"
 |[AtlCreateTargetDC](#atlcreatetargetdc)|建立裝置內容。|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- 建立裝置內容中指定的裝置[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)結構。  
+ 建立裝置內容中指定的裝置[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)結構。  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);

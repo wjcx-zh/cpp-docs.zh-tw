@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 468eb677a0073e25c9ef33182aea0d321cded352
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4855ca5c461b7437345150f5d199521c48f0b253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335614"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196549"
 ---
 # <a name="registering-ole-controls"></a>註冊 OLE 控制項
 OLE 控制項就像其他 OLE 伺服器物件，可以由其他 OLE 感知應用程式存取。 只要註冊控制項的類型程式庫和類別即可。  
@@ -83,7 +83,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
   
 - `afxRegFreeThreading` ThreadingModel 登錄中設定執行緒模型 = 免費。  
   
-     您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)的執行緒模型註冊的更多有關 Windows SDK 中。  
+     您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。  
   
 > [!NOTE]
 >  在 MFC 4.2 之前的 MFC 版本**int** *nRegFlags*參數，則 BOOL 參數*bInsertable*，可允許或不允許從 Insert 插入控制項[物件] 對話方塊。  
@@ -142,7 +142,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  非零值，如果已註冊的控制項類別;否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這可讓 OLE 控制項感知的容器所使用的控制項。 `AfxOleRegisterControlClass` 控制項的名稱和系統上的位置更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術的附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 並[相關處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
+ 這可讓 OLE 控制項感知的容器所使用的控制項。 `AfxOleRegisterControlClass` 控制項的名稱和系統上的位置更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術的附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 並[相關處理序和執行緒](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -189,7 +189,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  非零值，如果已註冊的控制項類別;否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這可讓 OLE 控制項感知的容器所使用的 [屬性] 頁面。 `AfxOleRegisterPropertyPageClass` 屬性頁名稱與它在系統上的位置更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術的附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 並[相關處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
+ 這可讓 OLE 控制項感知的容器所使用的 [屬性] 頁面。 `AfxOleRegisterPropertyPageClass` 屬性頁名稱與它在系統上的位置更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術的附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 並[相關處理序和執行緒](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK 中。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  

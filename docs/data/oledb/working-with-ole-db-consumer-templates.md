@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: bace26273ea05874efc18ecfa5087d17a6e07055
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195381"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 消費者樣板
 下列主題提供如何在常見的案例中使用 OLE DB 消費者樣板的一些範例：  
@@ -62,11 +62,11 @@ ms.locfileid: "39340052"
   
  您也可以找到有關如何在下列範例中使用 OLE DB 消費者樣板的範例：  
   
--   [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](https://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](https://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

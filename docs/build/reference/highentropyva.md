@@ -1,7 +1,7 @@
 ---
-title: -HIGHENTROPYVA |Microsoft 文件
+title: -HIGHENTROPYVA |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,26 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122f524db9af10449ce809e5a8de78148d04d431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fec9314be9d69e2cb0af2a98884bd78de1ff679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202062"
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
-指定可執行映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。  
-  
-```  
-  
-/HIGHENTROPYVA[:NO]  
-```  
-  
-## <a name="remarks"></a>備註  
- 此選項會修改 .dll 檔或 .exe 檔的標頭，以指示是否支援 64 位元位址的 ASLR。 在可執行檔和它所依據的所有模組上設定此選項時，支援 64 位元 ASLR 的作業系統可以使用 64 位元虛擬位址空間中的隨機位址，在載入時間為可執行映像的區段重訂基底。 這個大型位址空間會使攻擊者較難猜到特定記憶體區域的位置。  
-  
- 根據預設，連結器會為 64 位元可執行映像設定此選項。 若要設定這個選項， [/DYNAMICBASE](../../build/reference/dynamicbase.md)也必須設定選項。  
-  
-## <a name="see-also"></a>另請參閱  
- [EDITBIN 選項](../../build/reference/editbin-options.md)   
- [/DYNAMICBASE](../../build/reference/dynamicbase.md)   
- [Windows ISV 軟體安全性防禦措施](http://msdn.microsoft.com/library/bb430720.aspx)
+
+指定可執行映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。
+
+## <a name="syntax"></a>語法
+
+> **/ HIGHENTROPYVA**[**: NO**]
+
+## <a name="remarks"></a>備註
+
+這個選項修改的標頭*可執行映像*，.dll 檔或.exe 檔案，以指示是否支援 64 位元位址的 ASLR。 在可執行檔和它所依據的所有模組上設定此選項時，支援 64 位元 ASLR 的作業系統可以使用 64 位元虛擬位址空間中的隨機位址，在載入時間為可執行映像的區段重訂基底。 這個大型位址空間會使攻擊者較難猜到特定記憶體區域的位置。
+
+根據預設，連結器可讓 **/HIGHENTROPYVA** 64 位元可執行檔映像。 這個選項需要[/LARGEADDRESSAWARE](largeaddressaware.md)，這也會啟用預設值為 64 位元映像。 **/HIGHENTROPYVA**不適用於 32 位元可執行映像，已忽略選項。 若要明確停用此選項，請使用 **/highentropyva: no**。 此選項才有效果，請[/DYNAMICBASE](dynamicbase.md)也必須設定選項。
+
+## <a name="see-also"></a>另請參閱
+
+- [EDITBIN 選項](editbin-options.md)
+- [/DYNAMICBASE](dynamicbase.md)
+- [Windows ISV 軟體安全性防禦措施](https://msdn.microsoft.com/library/bb430720.aspx)

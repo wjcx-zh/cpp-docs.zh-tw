@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c52518bc2588188ea2990ddb3be1f7d79dd461d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211893"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 類別
 在 MFC 的文件/檢視架構內容中提供 WebBrowser 編輯平台的功能。  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  指定視窗的樣式屬性。 根據預設，會設定 WS_VISIBLE 和 WS_CHILD Windows 樣式。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定的大小和視窗的位置。 *RectDefault*值允許指定的大小和位置的新視窗中的 Windows。  
   
  *pParentWnd*  
  控制項的父視窗指標。  

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c865fdce61af5b5bbce6e8b8b8658946ffbf5e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028118"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204295"
 ---
 # <a name="adding-an-mfc-class"></a>加入 MFC 類別
-若要新增至您的專案從 Microsoft Foundation Class (MFC) 程式庫類別衍生的類別，請使用**加入類別**命令可從[類別檢視](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。 指定新的類別名稱、 選取基底類別，然後選取 [與它相關聯 （如果有的話）] 對話方塊中的識別碼。 程式碼精靈建立標頭檔與實作檔，並將它們新增至您的專案。  
+若要新增至您的專案從 Microsoft Foundation Class (MFC) 程式庫類別衍生的類別，請使用**加入類別**命令可從[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。 指定新的類別名稱、 選取基底類別，然後選取 [與它相關聯 （如果有的話）] 對話方塊中的識別碼。 程式碼精靈建立標頭檔與實作檔，並將它們新增至您的專案。  
   
 > [!NOTE]
 >  您可以將 MFC 類別加入 ATL COM 應用程式，如果您最初[建立應用程式與 MFC 支援](../../atl/reference/mfc-support-in-atl-projects.md)。 您也可以將 MFC 類別加入 MFC 支援的 Win32 專案中。  

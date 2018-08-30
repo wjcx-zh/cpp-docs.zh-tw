@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67fae4e4fd130e8cb61554f7e2d41595070ee819
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0c0f72fd7a359654ffdb32ae0030a82216384207
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197609"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 類別
 `CMFCFontComboBox`類別會建立包含字型清單的下拉式方塊控制項。  
@@ -59,7 +59,7 @@ class CMFCFontComboBox : public CComboBox
 |`CMFCFontComboBox::DrawItem`|由架構呼叫以在目前的字型下拉式方塊控制項中繪製指定的項目。 (覆寫[CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem)。)|  
 |[CMFCFontComboBox::GetSelFont](#getselfont)|擷取目前選取的字型相關資訊。|  
 |`CMFCFontComboBox::MeasureItem`|由架構呼叫以通知 Windows 的清單方塊，目前的字型下拉式方塊控制項中的維度。 (覆寫[CComboBox::MeasureItem](../../mfc/reference/ccombobox-class.md#measureitem)。)|  
-|`CMFCFontComboBox::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
+|`CMFCFontComboBox::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
 |[CMFCFontComboBox::SelectFont](#selectfont)|選取符合指定的準則從字型下拉式方塊的字型。|  
 |[CMFCFontComboBox::Setup](#setup)|初始化字型下拉式方塊中的項目清單。|  
   
@@ -139,7 +139,7 @@ BOOL SelectFont(
  指定的字型名稱。  
   
  [in]*nCharSet*  
- 指定的字元集。 預設值是 DEFAULT_CHARSET。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
+ 指定的字元集。 預設值是 DEFAULT_CHARSET。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果字型下拉式方塊中的項目符合指定的字型描述物件或字型名稱和字元集，則為 TRUE否則為 FALSE。  

@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0b5a352d10c1fd1f825cecbe3d6a1083f6efd425
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110004"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212165"
 ---
 # <a name="reflection-ccli"></a>反映 (C++/CLI)
 
@@ -42,12 +42,12 @@ ms.locfileid: "39110004"
 
 請注意，所提供的組件名稱的強式名稱 (請參閱[建立和使用強式名稱組件](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))，包括組件版本、 文化特性，以及簽章的資訊。 也請注意，在其中定義資料類型的命名空間的名稱可以擷取，以及基底類別的名稱。
 
-若要存取反映功能的最常見方式是透過<xref:System.Object.GetType%2A>方法。 這個方法由[system:: object](https://msdn.microsoft.com/en-us/library/system.object.aspx)，從衍生所有記憶體回收的類別。
+若要存取反映功能的最常見方式是透過<xref:System.Object.GetType%2A>方法。 這個方法由[system:: object](https://msdn.microsoft.com/library/system.object.aspx)，從衍生所有記憶體回收的類別。
 
 > [!NOTE]
 > 如果.exe 已內建只允許上使用 Visual c + + 編譯器建置的.exe 的反映 **/clr: pure**或 **/clr: safe**編譯器選項。 **/Clr: pure**並 **/clr: safe**編譯器選項為已被取代，在 Visual Studio 2015 和 Visual Studio 2017 中無法使用。 請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。
 
-如需詳細資訊，請參閱[System.Reflection 命名空間](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+如需詳細資訊，請參閱[System.Reflection 命名空間](https://msdn.microsoft.com/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>範例： GetType
 
@@ -188,9 +188,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>組件的範例： 檢查
 
-如果上述程式碼編譯成 DLL，稱為 vcpp_reflection_6.dll 時，您接著可以使用反映來檢查此組件的內容。 這牽涉到使用靜態的反映 API 函式[Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx)載入組件。 此函式傳回的位址**組件**接著可以查詢有關模組和類型內的物件。
+如果上述程式碼編譯成 DLL，稱為 vcpp_reflection_6.dll 時，您接著可以使用反映來檢查此組件的內容。 這牽涉到使用靜態的反映 API 函式[Assembly::Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx)載入組件。 此函式傳回的位址**組件**接著可以查詢有關模組和類型內的物件。
 
-一旦反映系統成功載入的組件的陣列**型別**物件擷取[Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx)函式。 雖然只有一個類別定義在此情況下，每個陣列元素會包含不同類型的相關資訊。 使用迴圈，每個**型別**此陣列中查詢使用的型別成員相關**Type::GetMembers**函式。 此函式傳回的陣列**MethodInfo**物件、 每個物件，包含成員函式、 資料成員或類型中的屬性的相關資訊。
+一旦反映系統成功載入的組件的陣列**型別**物件擷取[Assembly::GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx)函式。 雖然只有一個類別定義在此情況下，每個陣列元素會包含不同類型的相關資訊。 使用迴圈，每個**型別**此陣列中查詢使用的型別成員相關**Type::GetMembers**函式。 此函式傳回的陣列**MethodInfo**物件、 每個物件，包含成員函式、 資料成員或類型中的屬性的相關資訊。
 
 中的附註的方法清單包括函式明確地定義**TestClass**及函式會隱含地繼承自**system:: object**類別。 在.NET 中，而不是在 Visual c + + 語法中所描述的一部分，屬性會顯示為基礎的資料成員存取的 get/set 函式。 Get/set 函式出現在此清單做為一般方法。 透過 common language runtime 中，不是由 Visual c + + 編譯器支援反映。
 

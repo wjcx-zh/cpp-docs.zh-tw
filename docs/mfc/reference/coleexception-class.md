@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7a472de31695ab6038cab9ba0158580f3d305194
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851388"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212484"
 ---
 # <a name="coleexception-class"></a>COleException 類別
 表示與 OLE 作業相關的例外狀況。  
@@ -77,7 +77,7 @@ SCODE m_sc;
 ### <a name="remarks"></a>備註  
  這個變數的值由設定[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
   
- 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
+ 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
@@ -101,7 +101,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 > [!NOTE]
 >  此函式是**靜態**。  
   
- 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
+ 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  

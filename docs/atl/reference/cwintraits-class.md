@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1e400352a6eca09fd26ea1a1e2ba5cff60888bc
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ae151d25af5ad1c77f2dcfc7af1902e562ffde51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026097"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208304"
 ---
 # <a name="cwintraits-class"></a>CWinTraits 類別
 這個類別提供的方法標準化建立視窗物件時所使用的樣式。  
@@ -108,6 +108,6 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
  物件的延伸的視窗樣式。  
   
 ## <a name="see-also"></a>另請參閱  
- [類別成員](http://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
+ [類別成員](https://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [了解視窗特性](../../atl/understanding-window-traits.md)

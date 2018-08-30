@@ -1,5 +1,5 @@
 ---
-title: 變更清單控制項樣式 |Microsoft 文件
+title: 變更清單控制項樣式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d54d22106742cab8d1cdfe9c32adc0a98fb41b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929539"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197990"
 ---
 # <a name="changing-list-control-styles"></a>變更清單控制項樣式
-您可以變更清單控制項的視窗樣式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何時間之後建立它。 藉由變更視窗樣式，您可以變更的檢視控制項使用的類型。 比方說，若要模擬 [總管] 中，您可能會提供功能表項目或工具列按鈕控制項不同的檢視之間的切換： 圖示檢視、 清單檢視中，等等。  
+您可以變更清單控制項的視窗樣式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在建立後的任何時間。 藉由變更視窗樣式，您可以變更控制項使用的檢視類型。 比方說，若要模擬 [總管] 中，您可能會提供功能表項目或工具列按鈕來切換不同檢視之間的控制項： 圖示檢視、 清單檢視中，等等。  
   
- 例如，當使用者選取您的功能表項目，您可以進行的呼叫[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) ，擷取目前控制項的樣式，然後再呼叫[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591)重設樣式。 如需詳細資訊，請參閱[使用清單檢視控制項](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中。  
+ 例如，當使用者選取您的功能表項目，您可以進行呼叫[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584)來擷取目前控制項的樣式，然後呼叫[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)重設的樣式。 如需詳細資訊，請參閱 <<c0> [ 使用清單檢視控制項](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
   
- 中所列的可用樣式[建立](../mfc/reference/clistctrl-class.md#create)。 樣式**LVS_ICON**， **LVS_SMALLICON**， **LVS_LIST**，和**LVS_REPORT**指定四個清單控制項檢視。  
+ 列出可用的樣式[建立](../mfc/reference/clistctrl-class.md#create)。 樣式**LVS_ICON**， **LVS_SMALLICON**， **LVS_LIST**，以及**LVS_REPORT**指定四個清單控制項檢視。  
   
 ## <a name="extended-styles"></a>延伸的樣式  
- 除了清單控制項的標準的樣式，都有另一個集合，稱為 「 延伸樣式。 這些樣式，討論[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)在 Windows SDK 中，提供各種不同的自訂清單控制項的行為的實用功能。 若要實作的特定樣式 （例如，動態顯示選取項目） 的行為，請呼叫[CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle)，傳遞所需的樣式。 下列範例會示範函式呼叫：  
+ 除了清單控制項的標準樣式，還有另一個集合，稱為 「 延伸樣式。 這些樣式，討論[擴充清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)在 Windows SDK 中，提供各種實用的功能，自訂您的清單控制項的行為。 若要實作特定樣式 （例如暫留時的選取範圍） 的行為，請呼叫[CListCtrl::SetExtendedStyle](../mfc/reference/clistctrl-class.md#setextendedstyle)，傳遞所需的樣式。 下列範例會示範函式呼叫：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#22](../mfc/codesnippet/cpp/changing-list-control-styles_1.cpp)]  
   
 > [!NOTE]
->  工作的動態顯示選取項目，您必須擁有  **LVS_EX_ONECLICKACTIVATE**或**LVS_EX_TWOCLICKACTIVATE**開啟。  
+>  暫留時選擇功能運作，您必須也已經**LVS_EX_ONECLICKACTIVATE**或是**LVS_EX_TWOCLICKACTIVATE**開啟。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   

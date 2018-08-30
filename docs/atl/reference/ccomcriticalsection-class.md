@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5926f92ae636a13c1e5241792790151ee48ceddc
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b5957d55ae75723331e35984b9ab3c8e34c4fa78
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884866"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204954"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 類別
 這個類別提供方法來取得和釋放重要區段物件的擁有權。  
@@ -84,7 +84,7 @@ CComCriticalSection() throw();
  設定組[m_sec](#m_sec)為 NULL 的資料成員。  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
- 呼叫 Win32 函式[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，這會初始化中包含的重要區段物件[m_sec](#m_sec)資料成員。  
+ 呼叫 Win32 函式[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)，這會初始化中包含的重要區段物件[m_sec](#m_sec)資料成員。  
   
 ```
 HRESULT Init() throw();
@@ -94,7 +94,7 @@ HRESULT Init() throw();
  成功時，E_OUTOFMEMORY 或 E_FAIL，在失敗時傳回 S_OK。  
   
 ##  <a name="lock"></a>  CComCriticalSection::Lock  
- 呼叫 Win32 函式[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，哪一個等候，直到執行緒可以取得所含的重要區段物件的擁有權[m_sec](#m_sec)資料成員。  
+ 呼叫 Win32 函式[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)，哪一個等候，直到執行緒可以取得所含的重要區段物件的擁有權[m_sec](#m_sec)資料成員。  
   
 ```
 HRESULT Lock() throw();
@@ -114,7 +114,7 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>  CComCriticalSection::Term  
- 呼叫 Win32 函式[DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)，其中包含在重要區段物件所使用的資源全部釋出[m_sec](#m_sec)資料成員。  
+ 呼叫 Win32 函式[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)，其中包含在重要區段物件所使用的資源全部釋出[m_sec](#m_sec)資料成員。  
   
 ```
 HRESULT Term() throw();
@@ -127,7 +127,7 @@ HRESULT Term() throw();
  一次`Term`已呼叫的重要區段不可以用於同步處理。  
   
 ##  <a name="unlock"></a>  CComCriticalSection::Unlock  
- 呼叫 Win32 函式[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，這會釋放所含的重要區段物件的擁有權[m_sec](#m_sec)資料成員。  
+ 呼叫 Win32 函式[LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)，這會釋放所含的重要區段物件的擁有權[m_sec](#m_sec)資料成員。  
   
 ```
 HRESULT Unlock() throw();

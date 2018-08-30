@@ -69,19 +69,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db6c1711931e7ac017e9d55a64e317e4e4520335
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53096465b346403d62638e6e24a1609759a78d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414333"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206579"
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
 將字串字元設定為字元。 這些函式已有更安全的版本可供使用，請參閱 [_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsset**和 **_mbsset_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsset**並 **_mbsset_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -132,14 +132,14 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strset**函式會將所有字元 （除了結束的 null 字元） 的*str*至*c*，轉換成**char**。 **_wcsset**和 **_mbsset_l**是寬字元和多位元組字元版本的 **_strset**，和資料類型的引數和傳回值會隨之改變。 除此之外，這些函式的行為相同。
+**_Strset**函式會設定 （除了結束的 null 字元） 的所有字元*str*來*c*，轉換成**char**。 **_wcsset**並 **_mbsset_l**是寬字元和多位元組字元版本的 **_strset**，和引數和傳回值的資料類型會隨之改變。 除此之外，這些函式的行為相同。
 
-**_mbsset**會驗證其參數。 如果*str*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_mbsset**傳回**NULL**並設定**errno**至**EINVAL**。 **_strset**和 **_wcsset**不會驗證它們的參數。
+**_mbsset**會驗證其參數。 如果*str*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行 **_mbsset**會傳回**NULL**並設定**errno**至**EINVAL**。 **_strset**並 **_wcsset**不會驗證其參數。
 
-輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式版本是相同的不同之處在於，不是有 **_l**後置詞使用目前的地區設定而沒有 **_l**尾碼改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式的版本完全相同，只不過沒有具有 **_l**後置詞使用目前的地區設定，而沒有 **_l**後置詞改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -150,7 +150,7 @@ unsigned char *_mbsset_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strset**|\<string.h>|
 |**_strset_l**|\<tchar.h>|

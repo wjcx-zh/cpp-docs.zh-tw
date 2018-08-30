@@ -1,5 +1,5 @@
 ---
-title: 常見的 Visual c + + 64 位元移轉問題 |Microsoft 文件
+title: 常見的 Visual c + + 64 位元移轉問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b8a8e693a9e1a87ddb3a06fe609416808d3dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fadc3d48eb6ba812415cbedc9c077e7ffc1b4016
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367725"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208154"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位元移轉時常見的問題
 
@@ -37,7 +37,7 @@ ms.locfileid: "32367725"
   
 -   `size_t``time_t`，和`ptrdiff_t`是在 64 位元 Windows 作業系統上的 64 位元值。  
   
--   在 32 位元 Windows 作業系統上，`time_t` 在 Visual C++ 2005 之前的 Visual C++ 版本中是 32 位元值。 `time_t` 現在預設為 64 位元整數。 如需詳細資訊，請參閱[時間管理](../c-runtime-library/time-management.md)。  
+-   在 32 位元 Windows 作業系統上，`time_t` 在 Visual C++ 2005 之前的 Visual C++ 版本中是 32 位元值。 `time_t` 現在預設為 64 位元整數。 如需詳細資訊，請參閱 <<c0> [ 時間管理](../c-runtime-library/time-management.md)。  
   
      您應注意程式碼在何處取用 `int` 值，並將其視為 `size_t` 或 `time_t` 值來處理。 此數值可能會成長而大於 32 位元數值，且資料在傳回至 `int` 儲存體時將會截斷。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "32367725"
   
 -   [編譯器選項](../build/reference/compiler-options.md)  
   
--   [移轉提示](http://msdn.microsoft.com/library/windows/desktop/aa384214)  
+-   [移轉提示](/windows/desktop/WinProg64/migration-tips)  
   
 ## <a name="see-also"></a>另請參閱  
 
-[設定適用於 64 位元、 x64 Visual c + + 為目標](../build/configuring-programs-for-64-bit-visual-cpp.md)   
+[設定 Visual c + + 64 位元 x64 目標](../build/configuring-programs-for-64-bit-visual-cpp.md)   
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

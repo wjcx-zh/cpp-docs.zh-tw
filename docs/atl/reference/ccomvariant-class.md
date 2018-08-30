@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc0e098e1f3e80a80dabeda8c0a5f7a58e5e697
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0be9c390b312cdd056c51474f202637dab16b3ff
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961138"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203892"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 類別
 這個類別會包裝 VARIANT 型別，提供成員，表示儲存的資料類型。  
@@ -401,7 +401,7 @@ HRESULT ReadFromStream(IStream* pStream);
   
 ### <a name="parameters"></a>參數  
  *pStream*  
- [in]指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)上包含資料的資料流介面。  
+ [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含資料的資料流介面。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
@@ -438,7 +438,7 @@ HRESULT WriteToStream(IStream* pStream);
   
 ### <a name="parameters"></a>參數  
  *pStream*  
- [in]指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)資料流上的介面。  
+ [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)資料流上的介面。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  

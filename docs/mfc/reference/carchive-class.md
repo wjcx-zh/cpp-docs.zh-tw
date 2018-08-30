@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210960"
 ---
 # <a name="carchive-class"></a>CArchive 類別
 可讓您將複雜的網路的物件儲存在永久二進位格式 （通常是磁碟儲存體），之後會刪除這些物件仍然存在。  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  必須使用執行階段類別[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)並[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)，否則`ReadClass`將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 如果*pSchema*為 NULL，就可以擷取結構描述的預存的類別，藉由呼叫[CArchive::GetObjectSchema](#getobjectschema); 否則 **\** * * pSchema*將包含執行階段類別之前儲存的結構描述。  
+ 如果*pSchema*為 NULL，就可以擷取結構描述的預存的類別，藉由呼叫[CArchive::GetObjectSchema](#getobjectschema)，否則<strong>\*</strong> *pSchema*會包含先前儲存的執行階段類別的結構描述。  
   
  您可以使用[SerializeClass](#serializeclass)而不是`ReadClass`，處理讀取和寫入的類別參考。  
   

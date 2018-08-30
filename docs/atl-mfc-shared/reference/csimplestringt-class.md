@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 0d548a5cf0384a59c3fa12d88268997f1e801704
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572038"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196657"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 此類別代表`CSimpleStringT`物件。  
@@ -471,11 +471,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  如需有關參考計數的詳細資訊，請參閱下列文章：  
   
-- [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中。 
+- [管理透過參考計數的物件存留期](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)Windows SDK 中。 
   
-- [實作參考計數](http://msdn.microsoft.com/library/windows/desktop/ms693431)Windows SDK 中。
+- [實作參考計數](/windows/desktop/com/implementing-reference-counting)Windows SDK 中。
   
-- [規則管理參考計數](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK 中。  
+- [規則管理參考計數](/windows/desktop/com/rules-for-managing-reference-counts)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  下列範例示範 `CSimpleStringT::GetBufferSetLength` 的用法。  
@@ -599,11 +599,11 @@ PXSTR LockBuffer();
   
  如需有關參考計數的詳細資訊，請參閱下列文章：  
   
-- [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中  
+- [管理透過參考計數的物件存留期](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)Windows SDK 中  
   
-- [實作參考計數](http://msdn.microsoft.com/library/windows/desktop/ms693431)Windows SDK 中  
+- [實作參考計數](/windows/desktop/com/implementing-reference-counting)Windows SDK 中  
   
-- [規則管理參考計數](http://msdn.microsoft.com/library/windows/desktop/ms692481)Windows SDK 中  
+- [規則管理參考計數](/windows/desktop/com/rules-for-managing-reference-counts)Windows SDK 中  
   
 ### <a name="example"></a>範例  
  下列範例示範 `CSimpleStringT::LockBuffer` 的用法。  

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf101fdb0e93ef206ae61c29b636c973fa58a825
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593973"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211700"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -63,7 +63,7 @@ Windows 執行階段 c + + 樣板程式庫和 C + + /CX 提供不同的優點。
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來訂閱，以及處理 Windows 執行階段物件的事件。
 
 [逐步解說： 使用 WRL 與媒體基礎建立 UWP 應用程式](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
-了解如何建立使用 UWP 應用程式[Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。
+了解如何建立使用 UWP 應用程式[Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
 [如何： 建立傳統 COM 元件](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
 示範如何使用 Windows 執行階段 c + + 樣板程式庫來建立基本的 COM 元件和註冊和使用桌面應用程式的 COM 元件的基本方法。

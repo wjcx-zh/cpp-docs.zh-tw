@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ba67a990b027ff4cd770a0583f6d857a0ee7c725
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881054"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201037"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 類別
-這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以`IUnknown`。  
+這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)委派給擁有者物件，以`IUnknown`。  
   
 > [!IMPORTANT]
 >  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -67,7 +67,7 @@ class CComContainedObject : public Base
 |[CComContainedObject::Release](#release)|擁有者物件的參考計數遞減。|  
   
 ## <a name="remarks"></a>備註  
- 使用 ATL`CComContainedObject`類別中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以`IUnknown`。 （擁有者是彙總，則外部物件或為其建立的分割介面的物件）。`CComContainedObject`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，並`OuterRelease`，所有透過繼承`Base`。  
+ 使用 ATL`CComContainedObject`類別中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)委派給擁有者物件，以`IUnknown`。 （擁有者是彙總，則外部物件或為其建立的分割介面的物件）。`CComContainedObject`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，並`OuterRelease`，所有透過繼承`Base`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Base`  

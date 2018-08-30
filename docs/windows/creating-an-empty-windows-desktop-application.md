@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1d8b81174bcb6f70e168e8da09f5e35fe646ace
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603727"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197772"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>建立空的 Windows 桌面應用程式
 
@@ -45,4 +45,4 @@ ms.locfileid: "42603727"
 
 ## <a name="see-also"></a>另請參閱
 
-[部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

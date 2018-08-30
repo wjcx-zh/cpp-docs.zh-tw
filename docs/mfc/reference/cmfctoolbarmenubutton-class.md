@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83cf5f7cbe9b903f9cdc7a96b2fa046ff3f9eab5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538688"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205141"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 包含快顯功能表的工具列按鈕。  
@@ -154,7 +154,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||  
 |[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|指定是否可以拖曳的按鈕。 (覆寫[CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag)。)|  
 |[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|由架構呼叫以計算的銜接狀態與指定的裝置內容的按鈕大小。 (覆寫[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|由架構呼叫以處理[WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)訊息。 (覆寫[CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode)。)|  
+|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|由架構呼叫以處理[WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)訊息。 (覆寫[CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode)。)|  
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|插入新的工具列按鈕時由架構呼叫。 (覆寫[CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|使用者按下滑鼠按鈕時由架構呼叫。 (覆寫[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)。)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|當使用者選取項目在快顯功能表中，由架構呼叫。|  

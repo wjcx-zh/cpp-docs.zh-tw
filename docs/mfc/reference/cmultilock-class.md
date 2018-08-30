@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849869"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198108"
 ---
 # <a name="cmultilock-class"></a>CMultiLock 類別
 代表多執行緒程式用來控制多個資源存取的存取控制機制。  
@@ -128,7 +128,7 @@ DWORD Lock(
  指定是否在等候的所有物件必須變成已收到都訊號在傳回之前相同的時間。 如果為 FALSE，`Lock`等候任何的物件一個而收到信號時，會傳回。  
   
  *dwWakeMask*  
- 指定允許中止等候其他條件。 此參數的可用選項完整清單，請參閱 < [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) Windows SDK 中。  
+ 指定允許中止等候其他條件。 此參數的可用選項完整清單，請參閱 < [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果`Lock`失敗，則傳回-1。 如果成功，它會傳回下列值之一：  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198122"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 應用程式精靈、進階功能
 本主題列出應用程式的其他功能選項，例如說明、列印支援等。 請在各章節中，指明這些進階功能的額外支援。  
@@ -47,17 +47,17 @@ ms.locfileid: "42541052"
  支援 Windows Sockets，您可以用來撰寫在 TCP/IP 網路上通訊的應用程式。  
   
  **Active Accessibility**  
- 新增對[IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466)要[CWnd](../../mfc/reference/cwnd-class.md)-衍生的類別，您可以使用自訂使用者介面，更好的協助工具用戶端互動。  
+ 新增對[IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)要[CWnd](../../mfc/reference/cwnd-class.md)-衍生的類別，您可以使用自訂使用者介面，更好的協助工具用戶端互動。  
   
  **通用控制項資訊清單**  
  預設為啟用。 產生應用程式資訊清單，以啟用 Microsoft Windows XP 和新作業系統中的通用控制項 DLL。  
   
  6.0 版的通用控制項 DLL 不會自動更新目前應用程式所使用的舊版通用控制項。 若要使用 6.0 版的通用控制項 DLL，您必須建立應用程式資訊清單，以引導應用程式載入此 DLL。 這個通用控制項 DLL 也支援 Windows XP 主題。  
   
- 應用程式資訊清單也可以指定您的應用程式所需的其他 DLL 和版本。 如需有關應用程式資訊清單的詳細資訊，請參閱[隔離的應用程式和並排顯示組件](http://msdn.microsoft.com/library/dd408052)Windows SDK 中。  
+ 應用程式資訊清單也可以指定您的應用程式所需的其他 DLL 和版本。 如需有關應用程式資訊清單的詳細資訊，請參閱[隔離的應用程式和並排顯示組件](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)Windows SDK 中。  
   
  **支援重新啟動管理員**  
- 新增對[Windows 重新啟動管理員](/windows/desktop/RstMgr/using-restart-manager)。 這段影片示範如何使用 MFC 的重新啟動管理員：[如何： 使用新的重新啟動管理員](http://msdn.microsoft.com/vstudio/ee886407)。  
+ 新增對[Windows 重新啟動管理員](/windows/desktop/RstMgr/using-restart-manager)。 這段影片示範如何使用 MFC 的重新啟動管理員：[如何： 使用新的重新啟動管理員](https://msdn.microsoft.com/vstudio/ee886407)。  
   
  **進階的框架窗格**  
  |選項|描述|  

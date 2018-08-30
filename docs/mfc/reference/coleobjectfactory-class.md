@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2ac698466709931259f1df28d6c75aa38b30f2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 656500e69f97481c90cdbea41b8c640f470e7b1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850702"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210013"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 類別
 實作建立 OLE 物件 (例如伺服器、Automation 物件和文件) 的 OLE Class Factory。  
@@ -157,7 +157,7 @@ COleObjectFactory(
   
 - `afxRegFreeThreading` ThreadingModel 登錄中設定執行緒模型 = 免費。  
   
-     您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)的執行緒模型註冊的更多有關 Windows SDK 中。  
+     您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設 ThreadingModel = Both。 請參閱[InprocServer32](/windows/desktop/com/inprocserver32)的執行緒模型註冊的更多有關 Windows SDK 中。  
   
  *lpszProgID*  
  指向字串，包含動詞化程式識別碼，例如 「 Microsoft Excel。 」  
@@ -165,7 +165,7 @@ COleObjectFactory(
 ### <a name="remarks"></a>備註  
  若要使用的物件，不過，您必須註冊它。  
   
- 如需詳細資訊，請參閱 < [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  傳回表示此 factory OLE 類別 ID 的參考。  
@@ -178,7 +178,7 @@ REFCLSID GetClassID() const;
  OLE 類別識別碼此處理站的參考表示。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  要求的唯一授權金鑰，從控制項的 DLL，並將它儲存在所指的 BSTR *pbstrKey*。  

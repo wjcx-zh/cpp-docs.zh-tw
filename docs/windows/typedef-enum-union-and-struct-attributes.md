@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17b594cbad486688997bba4c6dbebd66f6bf2c00
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a285cc8c0d24e36d6c00f336d0b3724a31c7af82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608878"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211296"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 屬性
 
-下列屬性套用至[typedef](http://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)，[結構](../cpp/struct-cpp.md)，並[enum](../cpp/enumerations-cpp.md) c + + 關鍵字。
+下列屬性套用至[typedef](https://msdn.microsoft.com/cc96cf26-ba93-4179-951e-695d1f5fdcf1)，[結構](../cpp/struct-cpp.md)，並[enum](../cpp/enumerations-cpp.md) c + + 關鍵字。
 
 ### <a name="typedef"></a>typedef
 

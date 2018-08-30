@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8151b69b92566f45766c4ffa25d40bb5f077c606
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a7f5cee986ad82790870bfa7684a99c60dc462e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337254"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206262"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 提供 Windows 通用快速鍵控制項的功能。  
@@ -75,7 +75,7 @@ class CHotKeyCtrl : public CWnd
   
  當使用者選擇的按鍵組合時，應用程式就可以從控制項擷取指定的按鍵組合，並使用 WM_SETHOTKEY 訊息在系統中設定熱鍵。 每當使用者按下便捷鍵之後，從任何系統的一部分，WM_SETHOTKEY 訊息中所指定視窗就會收到指定 SC_HOTKEY WM_SYSCOMMAND 訊息。 此訊息會啟動所收到的視窗。 熱鍵的應用程式，稱為 WM_SETHOTKEY 結束之前會保持有效。  
   
- 這項機制是從經常性存取金鑰的支援取決於 WM_HOTKEY 訊息和 Windows 的不同[RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)並[UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327)函式。  
+ 這項機制是從經常性存取金鑰的支援取決於 WM_HOTKEY 訊息和 Windows 的不同[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)並[UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327)函式。  
   
  如需有關使用`CHotKeyCtrl`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)並[使用 CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)。  
   
@@ -111,7 +111,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows sdk for 的詳細資訊。  
+ 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows sdk for 的詳細資訊。  
   
  *rect*  
  指定熱鍵控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)。  
@@ -144,13 +144,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。  
+ 指定熱鍵控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  

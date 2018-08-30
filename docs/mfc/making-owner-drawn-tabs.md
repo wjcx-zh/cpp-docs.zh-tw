@@ -1,5 +1,5 @@
 ---
-title: 建立主控描繪索引標籤 |Microsoft 文件
+title: 建立主控描繪索引標籤 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72192bdfb47fecb1588c3a36e402795468d527be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb8e7566c16abdd4540426d0c56e24c648fd0bcd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208689"
 ---
 # <a name="making-owner-drawn-tabs"></a>建立主控描繪索引標籤
-您可以定義索引標籤控制項的個別項目 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 為主控描繪項目。 如需詳細資訊，請參閱[主控描繪索引標籤](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK 中。  
+您可以定義索引標籤控制項的個別項目 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 為主控描繪項目。 如需詳細資訊，請參閱 <<c0> [ 主控描繪索引標籤](/windows/desktop/Controls/tab-controls)Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CTabCtrl](../mfc/using-ctabctrl.md)   

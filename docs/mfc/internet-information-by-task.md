@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f22f0ab233f50a356c3a59eaf62ef8c25572233
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5063081c219090486db64ce308411d12ec23cb7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209970"
 ---
 # <a name="internet-information-by-task"></a>依工作分類的網際網路資訊
 本主題中所列的工作會根據您想要完成的工作來排序的。  
@@ -44,7 +44,7 @@ ms.locfileid: "39026847"
   
 -   [最佳化的 ActiveX 控制項](../mfc/mfc-activex-controls-optimization.md)  
   
--   [建立 MFC 和 ATL 控制項的帶正負號的封包檔](http://msdn.microsoft.com/14e50724-2505-4258-ae6b-326b706de409)  
+-   [建立 MFC 和 ATL 控制項的帶正負號的封包檔](https://msdn.microsoft.com/14e50724-2505-4258-ae6b-326b706de409)  
   
 ###  <a name="_core_wininet_tasks"></a> WinInet 工作  
   

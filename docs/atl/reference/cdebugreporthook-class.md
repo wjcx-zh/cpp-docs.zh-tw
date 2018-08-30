@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac3c020bbb5ff46f4684c9ed089a2fe327de252e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8de1f44b079b269d76054b1a221a8ec3e36daf5e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209321"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 類別
 您可以使用這個類別，將偵錯報表傳送給具名管道。  
@@ -61,7 +61,7 @@ class CDebugReportHook
 ## <a name="remarks"></a>備註  
  在您的服務或應用程式，以將偵錯報表傳送給具名管道的偵錯組建中建立此類別的執行個體。 偵錯報告產生藉由呼叫[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)或此函式使用包裝函式，例如[ATLTRACE](debugging-and-error-reporting-macros.md#atltrace)並[ATLASSERT](debugging-and-error-reporting-macros.md#atlassert)巨集。  
   
- 使用這個類別可讓您以互動方式偵錯元件在執行非互動式[視窗中的站台](http://msdn.microsoft.com/library/windows/desktop/ms687096)。  
+ 使用這個類別可讓您以互動方式偵錯元件在執行非互動式[視窗中的站台](/windows/desktop/winstation/window-stations)。  
   
  請注意，偵錯報表會傳送使用執行緒的基礎的安全性內容。 暫時停用模擬，以便可以在其中的低權限的使用者進行模擬，例如在 web 應用程式的情況下，檢視偵錯報表。  
   

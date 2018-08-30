@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c0bca9d1f60820b7ceeba633eead0aa9e572be5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8530a3c896d5c1dfa6568e166b9a0a43c0f0b0fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612906"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208083"
 ---
 # <a name="operator-type"></a>運算子 Type^
-可以從 [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) 轉換為 `Platform::Type`。  
+可讓從轉換[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)至`Platform::Type`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,10 +26,10 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName)
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指定 `Platform::Type` Windows::UI::Xaml::Interop::TypeName [時，則傳回](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)。  
+ 傳回`Platform::Type`指定時[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)。  
   
 ### <a name="remarks"></a>備註  
- `TypeName` 是用來表示類型資訊的非語言相關 Windows 執行階段結構。 [Platform::Type](../cppcx/platform-type-class.md) 則是 C++ 專屬，並且無法跨應用程式二進位介面 (ABI) 傳遞。 以下是 `TypeName`其中一種在 [Navigate](http://msdn.microsoft.com/library/windows/apps/hh702394.aspx) 函式內的用法：  
+ `TypeName` 是用來表示類型資訊的非語言相關 Windows 執行階段結構。 [Platform::Type](../cppcx/platform-type-class.md) 則是 C++ 專屬，並且無法跨應用程式二進位介面 (ABI) 傳遞。 以下是使用一`TypeName`，請在[Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx)函式：  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

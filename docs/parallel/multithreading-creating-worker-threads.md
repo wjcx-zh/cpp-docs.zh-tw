@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1057d8992f6554d4d5fbbfd93b383e2ddd9dab53
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131185"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211633"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>多執行緒： 建立背景工作執行緒在 MFC 中
 背景工作執行緒通常會用來處理背景工作，使用者應該不需要等候以繼續使用您的應用程式中。 重新計算和背景列印等工作是背景工作執行緒的良好範例。 本主題詳細說明建立背景工作執行緒所需的步驟。 主題包括：  
@@ -46,13 +46,13 @@ ms.locfileid: "43131185"
   
 - 要傳遞至控制函式的參數。  
   
-- （選擇性）想要的執行緒優先權。 預設值是一般優先權。 如需可用的優先權層級的詳細資訊，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
+- （選擇性）想要的執行緒優先權。 預設值是一般優先權。 如需可用的優先權層級的詳細資訊，請參閱[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。  
   
 - （選擇性）執行緒所需的堆疊大小。 預設值是相同的大小堆疊，與建立的執行緒。  
   
 - （選擇性）如果您想要在暫停狀態中建立的執行緒，CREATE_SUSPENDED。 預設值為 0，或以正常方式啟動執行緒。  
   
-- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 `AfxBeginThread` 建立並初始化`CWinThread`物件，它啟動，並傳回它的位址，因此您可以稍後參考它。 整個程序進行檢查以確定所有物件都是已解除配置正確建立的任何部分萬一失敗。  
   

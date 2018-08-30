@@ -9,21 +9,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605697"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205476"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
-在 C + + /CX 中，Windows 執行階段型別和成員的生產者和取用者使用[Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。  
+在 C + + /CX 中，Windows 執行階段型別和成員的生產者和取用者使用[Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。  
   
 > [!CAUTION]
->  [Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)是只能與 Windows 執行階段類型的屬性。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx)。  
+>  [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)是只能與 Windows 執行階段類型的屬性。 標準 c + + 類別和成員，請使用[__declspec （deprecated)](../cpp/deprecated-cpp.md)。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何 (例如在 Windows 執行階段元件中) 將您的公用 API 設為已被取代。 第二個參數，其類型為 [Windows:Foundation::Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) ，指定 API 正要被取代或移除。 目前只支援 DeprecationType::Deprecated 值。 屬性中的第三個參數指定要套用屬性的 [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) 。  
+ 下列範例示範如何 (例如在 Windows 執行階段元件中) 將您的公用 API 設為已被取代。 第二個參數，型別[Windows: Foundation:: metadata:: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype)指定 API 正要被取代或移除。 目前只支援 DeprecationType::Deprecated 值。 在屬性中的第三個參數會指定[Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute)來套用屬性。  
   
 ```  
   

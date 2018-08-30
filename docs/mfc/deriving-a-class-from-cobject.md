@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e9e098890a90b76da8452fb2a2ca86222b49c296
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026113"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198251"
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
 這篇文章描述衍生的類別所需的最小步驟[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`類別的文章將說明利用特定所需的步驟`CObject`功能，例如序列化和診斷的偵錯支援。  
@@ -68,7 +68,7 @@ ms.locfileid: "39026113"
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- 一般來說，不過，您可能想要覆寫某些`CObject`的成員函式來處理您的新類別的詳細資訊。 例如，您通常可以覆寫`Dump`函式的`CObject`以供您類別的內容中的偵錯輸出。 如需有關如何覆寫`Dump`，請參閱文章[診斷： 傾印物件內容](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)。 您也可以覆寫`AssertValid`函式的`CObject`提供自訂的測試，以驗證資料成員的類別物件的一致性。 如需如何覆寫的說明`AssertValid`，請參閱 < [MFC ASSERT_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6)。  
+ 一般來說，不過，您可能想要覆寫某些`CObject`的成員函式來處理您的新類別的詳細資訊。 例如，您通常可以覆寫`Dump`函式的`CObject`以供您類別的內容中的偵錯輸出。 如需有關如何覆寫`Dump`，請參閱文章[診斷： 傾印物件內容](/previous-versions/visualstudio/visual-studio-2010/sc15kz85\(v=vs.100\))。 您也可以覆寫`AssertValid`函式的`CObject`提供自訂的測試，以驗證資料成員的類別物件的一致性。 如需如何覆寫的說明`AssertValid`，請參閱 < [MFC ASSERT_VALID 和 CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa\(v=vs.100\))。  
   
  發行項[指定功能層級](../mfc/specifying-levels-of-functionality.md)描述如何指定其他層級的功能，包括執行階段類別資訊、 動態物件建立和序列化。  
   

@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e980a33e88920afef9c6f19dcd8b2ecfca5071
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: cbcc47bf7b8eff276135bb5eb2f6206471fee524
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131434"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206471"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 類別
 
@@ -100,11 +100,12 @@ class numeric_limits
 
 ### <a name="parameters"></a>參數
 
-*型別*正在其屬性的基本項目資料型別測試、 查詢或設定。
+*類型*<br/>
+ 正在測試、查詢或設定其屬性的基本項目資料類型。
 
 ## <a name="remarks"></a>備註
 
-標頭會定義類型的明確特製化**wchar_t**， **bool**， **char**， **char&lt;3**，**不帶正負號char**，**簡短**， **unsigned short**， **int**，**不帶正負號的整數**，**長時間**，**不帶正負號長**， **float**， **double**，**長雙精度浮點數 *** **長的長時間**， **unsigned long long**， `char16_t`，和`char32_t`。 針對這些明確特製化，成員[numeric_limits:: is_specialized](#is_specialized)是 **，則為 true**，而且所有相關成員都包含有意義的值。 這個程式可提供額外的明確特製化。 大部分的成員函式類別的描述，或測試的可能實作**浮點數**。
+標頭會定義類型的明確特製化**wchar_t**， **bool**， **char**， **char&lt;3**，**不帶正負號char**，**簡短**， **unsigned short**， **int**，**不帶正負號的整數**，**長時間**，**不帶正負號長**， **float**， **double**，**長雙精度**，**長的長時間**， **unsigned long long**， **char16_t**，和**char32_t**。 針對這些明確特製化，成員[numeric_limits:: is_specialized](#is_specialized)是 **，則為 true**，而且所有相關成員都包含有意義的值。 這個程式可提供額外的明確特製化。 大部分的成員函式類別的描述，或測試的可能實作**浮點數**。
 
 針對任意特製化，沒有任何成員包含有意義的值。 並沒有有意義的值成員物件會儲存零 (或**假**)，並不會傳回有意義的值的成員函式傳回`Type(0)`。
 

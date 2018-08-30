@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404934"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209357"
 ---
 # <a name="overview-of-declarators"></a>宣告子概觀
 宣告子是用來指定物件或函式名稱的宣告元件。 宣告子也可將具名物件指定為物件、指標、參考或陣列。  當宣告子未指定基底類型時，會將基底類型中的類型資訊修改為指定的衍生類型，如指標、參考和陣列。  套用至函式時，宣告子會搭配類型規範，將函式的傳回類型完整指定為物件、指標或參考。 (規範，所述[宣告和定義](declarations-and-definitions-cpp.md)，傳達等型別和儲存類別屬性。 在本節中，然後在討論的修飾詞[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)，宣告子修改。)下圖顯示 `MyFunction` 的完整宣告，以及呼叫宣告的元件。  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **指標、 參考和陣列宣告子**  
   
- 在名稱前面插入指標運算子會使物件變成指標或參考。  **\*** 運算子宣告為指標的名稱**&** 運算子會將它宣告為參考。  
+ 在名稱前面插入指標運算子會使物件變成指標或參考。  <strong>\*</strong>運算子宣告為指標的名稱**&** 運算子會將它宣告為參考。  
   
 ```cpp 
 int *i; // declarator is *i  

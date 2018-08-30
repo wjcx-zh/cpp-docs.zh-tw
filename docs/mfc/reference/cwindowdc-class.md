@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b692d974b5397d73f7e328330f71d8f9688be3e2
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 40566ab94c9708d7b31f88de0f96b4fc33675534
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539208"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212517"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 類別
 衍生自 `CDC`。  
@@ -77,7 +77,7 @@ explicit CWindowDC(CWnd* pWnd);
  視窗的裝置內容物件將會存取其工作區中。  
   
 ### <a name="remarks"></a>備註  
- 建構函式會呼叫 Windows 函式[GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947)。  
+ 建構函式會呼叫 Windows 函式[GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)。  
   
  例外狀況 (型別的`CResourceException`) 便會擲回 Windows`GetWindowDC`呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有配置所有其可用的裝置內容。 您的應用程式競爭五個一般顯示的可用內容，在 Windows 下一次。  
   

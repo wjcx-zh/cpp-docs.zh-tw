@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a472a100a03f8a03947eedb3aa8dc04edadb588
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 238fab4ec2d900c8183c018f3cb03fe6dc1fb2f5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396052"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202230"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
@@ -58,11 +58,11 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="remarks"></a>備註
 
-如果您想要呼叫 [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) 並在 CRT 堆積上啟用低分散堆積，請使用這個函式。
+如果您想要呼叫 [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) 並在 CRT 堆積上啟用低分散堆積，請使用這個函式。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h>|
 

@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a254e6d5a6e3e04dfd013c1f7ae3e8e2c9100e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1d3422923075f1c9546da1f8d2430e2e2f2c4bbc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337267"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203052"
 ---
 # <a name="cfile-class"></a>CFile 類別
 MFC 檔案類別的基底類別。  
@@ -363,7 +363,7 @@ virtual CString GetFileTitle() const;
  基礎檔案的標題。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫[GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924)擷取檔案的標題。 如果成功，則方法會傳回字串，系統會用來向使用者顯示的檔案名稱。 否則，此方法會呼叫[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)來擷取基礎檔案的檔案名稱 （包括副檔名）。 因此，檔案的副檔名將不一定會包含在傳回的檔案標題字串。 如需詳細資訊，請參閱 < [GetFileTitle](http://msdn.microsoft.com/library/windows/desktop/ms646924)並[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) Windows SDK 中。  
+ 這個方法會呼叫[GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)擷取檔案的標題。 如果成功，則方法會傳回字串，系統會用來向使用者顯示的檔案名稱。 否則，此方法會呼叫[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)來擷取基礎檔案的檔案名稱 （包括副檔名）。 因此，檔案的副檔名將不一定會包含在傳回的檔案標題字串。 如需詳細資訊，請參閱 < [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)並[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) Windows SDK 中。  
   
  若要傳回整個檔案的路徑，包括名稱、 呼叫[GetFilePath](#getfilepath)。 若要傳回檔案的名稱，請呼叫[GetFileName](#getfilename)。  
   
@@ -568,7 +568,7 @@ virtual BOOL Open(
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
 ##  <a name="operator_handle"></a>  CFile::operator 控制代碼  
- 使用此運算子將控制代碼`CFile`這類物件函式[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)並[GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) ，預期`HANDLE`。  
+ 使用此運算子將控制代碼`CFile`這類物件函式[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex)並[GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) ，預期`HANDLE`。  
   
 ```  
 operator HANDLE() const;  

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612714"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205809"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Unorderedmap:: First 方法
 
-傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) unorderedmap 中的項目。
+傳回迭代器，指定第一個[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) unorderedmap 中的項目。
 
 ### <a name="syntax"></a>語法
 
@@ -223,7 +223,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx)並[CollectionChange 列舉](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
+A [Mapchangedeventhandler<k\<K，V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) ，包含引發事件，以及發生的變更類型的物件相關資訊。 另請參閱[Imapchangedeventargs<k\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)並[CollectionChange 列舉](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)。
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
@@ -247,7 +247,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Unorderedmap:: Size 方法
 
-傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的項目。
+傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的項目。
 
 ### <a name="syntax"></a>語法
 

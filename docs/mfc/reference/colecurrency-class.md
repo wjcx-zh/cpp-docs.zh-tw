@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 46c12c29fcee310e8bd1d484743b754a830541d7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196108"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 封裝 OLE Automation 的 `CURRENCY` 資料類型。  
@@ -133,7 +133,7 @@ COleCurrency(
   
 - COleCurrency() 建構`COleCurrency`物件初始化為 0 （零）。  
   
-- COleCurrency (`cySrc`) 建構`COleCurrency`物件[貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)值。  
+- COleCurrency (`cySrc`) 建構`COleCurrency`物件[貨幣](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)值。  
   
 - COleCurrency (`curSrc`) 建構`COleCurrency`從現有的物件`COleCurrency`物件。 新的物件具有相同的狀態與來源物件。  
   
@@ -141,7 +141,7 @@ COleCurrency(
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 物件從指定的數值元件。 如果值的小數部分的絕對值大於 10000，單位會適當調整。 請注意，會將單位與小數部分指定帶正負號的 long 值。  
   
- 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱 <<c0> [ 貨幣](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
   
 ### <a name="example"></a>範例  
  下列範例會顯示零參數和兩個參數的建構函式的效果：  
@@ -230,14 +230,14 @@ enum CurrencyStatus {
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
 ##  <a name="m_cur"></a>  COleCurrency::m_cur  
- 基礎[貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)這個結構`COleCurrency`物件。  
+ 基礎[貨幣](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)這個結構`COleCurrency`物件。  
   
 ### <a name="remarks"></a>備註  
   
 > [!CAUTION]
 >  變更中的值`CURRENCY`存取此函式所傳回的指標，結構會變更這個值`COleCurrency`物件。 它不會變更這個狀態`COleCurrency`物件。  
   
- 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱 <<c0> [ 貨幣](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)Windows SDK 中的項目。  
   
 ##  <a name="m_status"></a>  COleCurrency::m_status  
  此資料成員的類型是列舉型別`CurrencyStatus`，其定義內`COleCurrency`類別。  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **運算子 = (** *varSrc* **)** 如果轉換`VARIANT`值 (或是[COleVariant](../../mfc/reference/colevariant-class.md)物件) 貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個`COleCurrency`物件和其狀態設為有效。 如果轉換不成功，值`COleCurrency`物件設定為 0 和其狀態變更為無效。  
   
- 如需詳細資訊，請參閱 <<c0> [ 貨幣](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
+ 如需詳細資訊，請參閱 <<c0> [ 貨幣](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)並[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  

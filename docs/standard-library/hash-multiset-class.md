@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965467"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210428"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset 類別
 
@@ -119,11 +119,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存在 hash_multiset 中的項目資料類型。
+*Key*<br/>
+ 要存放在 hash_multiset 中的項目資料類型。
 
-*Traits*包含兩個函式物件，其中一個類別的型別也就是比較能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞對應索引鍵值的雜湊函式的二元述詞不帶正負號的整數類型的項目`size_t`。 這個引數是選擇性的而`hash_compare` *< 索引鍵，* **無 * * *\<金鑰 >>* 做為預設值。
+*特性*<br/>
+ 包含兩個函式物件的型別，其中一個類別也就是比較能夠比較兩個項目值做為排序鍵來判斷其相對順序一元述詞的對應項目的索引鍵值不帶正負號的雜湊函式的二元述詞整數型別的`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key> >`。
 
-*配置器*表示預存配置器物件，封裝有關 hash_multiset 的配置和解除配置之記憶體的詳細資訊的型別。 這個引數為選擇性，而且預設值是 **allocator *\<機碼 >。*
+*配置器*<br/>
+ 代表預存配置器物件的類型，封裝有關 hash_multiset 之記憶體配置和解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
 
@@ -145,7 +148,7 @@ hash_multiset 是：
 
 當關聯值與其索引鍵的條件由應用程式滿足時，hash_multiset 應該是首選的關聯容器。 hash_multiset 的項目可以是多重，並當做自己的排序鍵，因此索引鍵不是唯一的。 例如，這種結構的模型是文字的已排序清單，其中文字可以出現多次。 如果不允許文字的多個項目，則 hash_set 是適當的容器結構。 如果唯一定義做為值附加至唯一關鍵字清單，則 hash_map 是包含這個資料的適當結構。 如果定義不是唯一的，則 hash_multimap 是首選容器。
 
-hash_multiset 會藉由呼叫 [value_compare](#value_compare) 類型的預存雜湊特性物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與類別的物件相同`hash_compare` *< 索引鍵* **無 *\<金鑰 >>。* 尤其是針對所有數值*金鑰*型別的`Key`，呼叫**特性**(*金鑰*) 會產生類型的值分佈`size_t`。
+hash_multiset 會藉由呼叫 [value_compare](#value_compare) 類型的預存雜湊特性物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與類別的物件相同`hash_compare<Key, less<Key> >`。 尤其是針對所有數值*金鑰*型別的`Key`，呼叫`Trait(Key)`會產生類型的值分佈`size_t`。
 
 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 x 和 y 以及傳回值 true 或 false 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x*, *y*) 和 *f*( *y*, *x*) 皆為 false 時即相等，則施加於 hash_multiset 的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 
@@ -551,7 +554,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*從 hash_multiset 中比對項目的索引鍵。
+*key*<br/>
+ 要從 hash_multiset 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1017,7 +1021,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1105,13 +1110,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-*_Where*要從 hash_multiset 移除項目的位置。
+*_Where*<br/>
+ 要從 hash_multiset 移除項目的位置。
 
-*第一個*從 hash_multiset 移除第一個元素的位置。
+*first*<br/>
+ 從 hash_multiset 移除第一個項目的位置。
 
-*最後一個*從 hash_multiset 移除最後一個元素之後的位置。
+*最後一個*<br/>
+ 從 hash_multiset 移除最後一個項目之外的位置。
 
-*索引鍵*要從 hash_multiset 移除項目的索引鍵。
+*key*<br/>
+ 要從 hash_multiset 中移除之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1222,7 +1231,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之 hash_multiset 中元素的排序鍵比對的引數索引鍵。
+*key*<br/>
+ 要以所搜尋之 hash_multiset 中元素的排序鍵比對的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1656,7 +1666,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2138,7 +2149,8 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>參數
 
-*右*提供要與目標 hash_multiset 交換之元素的引數 hash_multiset。
+*right*<br/>
+ 提供要與目標 hash_multiset 交換之元素的引數 hash_multiset。
 
 ### <a name="remarks"></a>備註
 
@@ -2213,7 +2225,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 hash_multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4412e30316bd2d5f43eac4dddb062adb11dc6f6e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209997"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 類別
 這個類別提供數個 ATL 模組類別所使用的方法。  
@@ -167,7 +167,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  在偵錯組建中，判斷提示就會發生錯誤，如果*ppGIT*等於 NULL，或如果無法取得全域介面資料表指標。  
   
- 請參閱[IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517)全域介面資料表上的資訊。  
+ 請參閱[IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable)全域介面資料表上的資訊。  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  傳回的鎖定計數。  

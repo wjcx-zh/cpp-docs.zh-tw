@@ -1,5 +1,5 @@
 ---
-title: 處理 Rebar 控制項中的通知訊息 |Microsoft 文件
+title: 處理 Rebar 控制項中的通知訊息 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: dce09e84e9a2b5262d05847746f819a122ec36c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931823"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208971"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>處理 Rebar 控制項中的通知訊息
 在 Rebar 控制項的父類別中，請為任何一個您要處理的 Rebar 控制項 (`OnChildNotify`) 通知訊息建立一個 switch 陳述式的 `CReBarCtrl` 處理常式函式。 當使用者拖曳物件到 Rebar 控制項上方、變更 Rebar 群組列的配置、從 Rebar 控制項刪除群組列等等時，就會傳送通知給父視窗。  
@@ -33,7 +33,7 @@ ms.locfileid: "36931823"
   
 -   當使用者開始拖曳群組列的 rebar 控制項傳送 RBN_BEGINDRAG。  
   
--   RBN_CHILDSIZE 傳送，由 rebar 控制項寬線的子視窗調整大小時。  
+-   RBN_CHILDSIZE 傳送，由 rebar 控制項寬線子視窗調整大小時。  
   
 -   RBN_DELETEDBAND 傳送，由 rebar 控制項之後被刪除。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "36931823"
   
 -   RBN_GETOBJECT，由 rebar 控制項 （使用 RBS_REGISTERDROP 樣式建立） 傳送當物件已拖曳至控制項中。  
   
--   RBN_HEIGHTCHANGE，由 rebar 控制項高度變更時傳送。  
+-   RBN_HEIGHTCHANGE 傳送 rebar 控制項時，它的高度變更。  
   
--   RBN_LAYOUTCHANGED，由 rebar 控制項使用者變更控制項的寬線的版面配置時傳送。  
+-   RBN_LAYOUTCHANGED 傳送，由 rebar 控制項，當使用者變更控制項的群組列的配置。  
   
- 如需有關這些通知的詳細資訊，請參閱[Rebar 控制項參考](http://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK 中。  
+ 如需有關這些通知的詳細資訊，請參閱 < [Rebar 控制項參考](https://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   

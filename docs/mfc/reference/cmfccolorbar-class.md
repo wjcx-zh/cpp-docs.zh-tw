@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3da308e92554bd573e9efccdd47aa6e6fd71e26a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850231"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212100"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 類別
 `CMFCColorBar`類別表示可以在文件或應用程式中選取色彩的停駐控制列。  
@@ -161,11 +161,11 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_BoxSize`|A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定在色軸格線中的資料格的大小。|  
 |`m_bShowDocColorsWhenDocked`|布林值，指出是否要顯示的文件色彩停駐在色軸時。 如需詳細資訊，請參閱 < [CMFCColorBar::SetDocumentColors](#setdocumentcolors)。|  
 |`m_bStdColorDlg`|布林值，指出是否要顯示標準系統的 [色彩] 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  對話方塊。 如需詳細資訊，請參閱 < [CMFCColorBar::EnableOtherButton](#enableotherbutton)。|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)儲存目前的自動色彩。 如需詳細資訊，請參閱 < [CMFCColorBar::EnableOtherButton](#enableotherbutton)。|  
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref)儲存目前的自動色彩。 如需詳細資訊，請參閱 < [CMFCColorBar::EnableOtherButton](#enableotherbutton)。|  
 |`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md)物件產生關聯的一組的 RGB 色彩以其名稱。|  
-|`m_colors`|A [CArray](../../mfc/reference/carray-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含色彩的色軸控制項中所顯示的值。|  
-|`m_ColorSelected`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，這是使用者已從色軸控制項中目前選取的色彩。|  
-|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含文件中目前使用的色彩的值。|  
+|`m_colors`|A [CArray](../../mfc/reference/carray-class.md)的[COLORREF](/windows/desktop/gdi/colorref)包含色彩的色軸控制項中所顯示的值。|  
+|`m_ColorSelected`|A [COLORREF](/windows/desktop/gdi/colorref)值，這是使用者已從色軸控制項中目前選取的色彩。|  
+|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)的[COLORREF](/windows/desktop/gdi/colorref)包含文件中目前使用的色彩的值。|  
 |`m_nCommandID`|不帶正負號的整數的色彩按鈕的命令識別碼。|  
 |`m_nHorzMargin`|水平的邊界色彩按鈕，在方格中的色彩之間的整數。|  
 |`m_nHorzOffset`|中央的 [色彩] 按鈕的水平位移的整數。 若文字或影像色彩以外，按鈕會顯示此值。|  

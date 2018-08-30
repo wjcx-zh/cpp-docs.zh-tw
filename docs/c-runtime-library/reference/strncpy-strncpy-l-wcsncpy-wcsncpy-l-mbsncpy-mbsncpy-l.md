@@ -71,19 +71,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b4ec53451b750e92d952a57257709e9a0cde09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f01e69129b0884b3385b7a17289a067f36f65e3a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418233"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213233"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
 將一個字串的字元複製到另一個。 這些函式已有更安全的版本可供使用，請參閱 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncpy**和 **_mbsncpy_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncpy**並 **_mbsncpy_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -182,16 +182,16 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>備註
 
-**Strncpy**函式會將初始複製*計數*字元*strSource*至*strDest*並傳回*strDest*. 如果*計數*小於或等於長度*strSource*，null 字元不會自動附加至複製的字串。 如果*計數*大於的長度*strSource*，以 null 字元，長度字元填補目的字串*計數*。 行為**strncpy**是未定義的如果來源和目的字串重疊。
+**Strncpy**函式會複製初始*計數*字元*strSource*至*strDest* ，並傳回*strDest*. 如果*計數*小於或等於長度*strSource*，null 字元不會自動附加至複製的字串。 如果*計數*大於的長度*strSource*，直到長度的 null 字元填補目的字串*計數*。 行為**strncpy**是未定義的如果來源和目的字串重疊。
 
 > [!IMPORTANT]
-> **strncpy**不會檢查有足夠的空間中*strDest*; 這使得緩衝區滿溢的潛在原因。 *計數*引數會限制複製的字元數目; 它不是，限制的大小*strDest*。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> **strncpy**不會檢查在有足夠的空間*strDest*; 這使得緩衝區滿溢的潛在原因。 *計數*引數會限制複製的字元數目，而非大小的限制*strDest*。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-如果*strDest*或*strSource*是**NULL**指標，或如果*計數*小於或等於零，會叫用無效參數處理常式，中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*strDest*或*strSource*會**NULL**指標，或如果*計數*小於或等於零，會叫用無效參數處理常式，中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
-**wcsncpy**和 **_mbsncpy**是寬字元和多位元組字元版本的**strncpy**。 引數和傳回值**wcsncpy**和 **_mbsncpy**會隨之改變。 除此之外，這六個函式的行為相同。
+**wcsncpy**並 **_mbsncpy**是寬字元和多位元組字元版本的**strncpy**。 引數和傳回值**wcsncpy**並 **_mbsncpy**會隨之改變。 除此之外，這六個函式的行為相同。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -203,11 +203,11 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**和 **_wcsncpy_l**有沒有地區設定相依性; 他們可以只針對 **_tcsncpy_l** ，請勿直接呼叫。
+> **_strncpy_l**並 **_wcsncpy_l**沒有任何地區設定相依性; 它們可供只 **_tcsncpy_l** ，不能直接呼叫。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strncpy**|\<string.h>|
 |**wcsncpy**|\<string.h> 或 \<wchar.h>|
@@ -217,7 +217,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**strncpy**和如何遭誤用導致程式 bug 和安全性問題。 編譯器會產生警告，以每次呼叫**strncpy**類似**crt_strncpy_x86.c(15)： 警告 C4996: 'strncpy': 這個函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
+下列範例示範如何使用**strncpy**和如何遭誤用，導致程式 bug 和安全性問題。 編譯器會產生警告每次呼叫**strncpy**類似**crt_strncpy_x86.c （15)︰ 警告 C4996: 'strncpy': 這個函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
 
 ```C
 // crt_strncpy_x86.c

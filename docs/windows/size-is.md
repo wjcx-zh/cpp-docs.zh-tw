@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d282731320ba52299cb0b6f2813f5f42a229b46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 677f28b1ca4a45a3033e1dc6a34bd024bec6e329
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211498"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -43,7 +43,7 @@ ms.locfileid: "42583744"
 
 ## <a name="remarks"></a>備註
 
-**Size_is** c + + 屬性具有相同的功能[size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL 屬性。
+**Size_is** c + + 屬性具有相同的功能[size_is](/windows/desktop/Midl/size-is) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

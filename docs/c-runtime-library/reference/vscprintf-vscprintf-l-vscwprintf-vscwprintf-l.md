@@ -52,12 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414164"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213642"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 
@@ -101,18 +101,18 @@ int _vscwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vscprintf**傳回會產生如果指向的字串引數清單的字元數已列印或傳送至檔案或使用指定的格式設定的緩衝區代碼。 傳回的值不包含終止 Null 字元。 **_vscwprintf**寬字元中執行相同的功能。
+**_vscprintf**傳回如果指向的字串所產生的引數清單的字元數被列印或傳送到檔案或緩衝區使用指定的格式化程式碼。 傳回的值不包含終止 Null 字元。 **_vscwprintf**執行相同的函式的寬字元。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
-如果*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-每個*引數*（如果有的話） 會轉換中的對應格式規格根據*格式*。 此格式包含一般字元，與具有相同的形式和功能*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每個*引數*（如果有的話） 會根據對應格式規格中轉換*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 > [!IMPORTANT]
-> 確保當*格式*是使用者定義的字串，它是 null 終止，而且有正確的數目和參數的類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 請確定如果*格式*是使用者定義的字串，它是以 null 終止，且具有正確的數目和參數的類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -123,7 +123,7 @@ int _vscwprintf_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_vscprintf**， **_vscprintf_l**|\<stdio.h>|
 |**_vscwprintf**， **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|

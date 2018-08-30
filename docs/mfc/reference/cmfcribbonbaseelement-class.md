@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028391"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213658"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 `CMFCRibbonBaseElement`類別是基底類別，您可以加入的所有項目的[功能區列](../../mfc/reference/cmfcribbonbar-class.md)。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  如果方法成功; 的功能區元素的父視窗的指標否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 功能區項目的父視窗[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)或是[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
+ 功能區項目的父視窗[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)或是[CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  如果使用者目前按下它會擷取功能區項目的指標。  
@@ -1686,7 +1686,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 藉由呼叫這個方法重新繪製的功能區元素的顯示矩形[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 旗標設定。  
+ 藉由呼叫這個方法重新繪製的功能區元素的顯示矩形[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 旗標設定。  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata  
  設定功能區項目的協助工具資料。  

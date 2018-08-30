@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fcaf93823e504f3631d50de4f981ae30e882e9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e61b6a9b967cc62bf8ba028783a019b8ecda7878
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200266"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 類別
 實作控制配置停駐於主框架視窗中的核心功能。  
@@ -379,7 +379,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>參數  
  [in]*hdwp*  
- 指定延遲的視窗位置結構。 如需詳細資訊，請參閱 [Windows 資料類型](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
+ 指定延遲的視窗位置結構。 如需詳細資訊，請參閱 < [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。  
   
 ### <a name="remarks"></a>備註  
   
@@ -924,7 +924,7 @@ CSmartDockingManager* GetSmartDockingManager();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標[智慧停駐的管理員](http://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)。  
+ 指標[智慧停駐的管理員](https://msdn.microsoft.com/f537a1a6-fb9e-41d7-952f-0f25d5ee7534)。  
   
 ##  <a name="getsmartdockingmanagerpermanent"></a>  CDockingManager::GetSmartDockingManagerPermanent  
  擷取智慧停駐的管理員的指標。  

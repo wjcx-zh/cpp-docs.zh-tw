@@ -51,19 +51,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415630"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210357"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
 
 使用引數清單的指標將格式化輸出寫入到主控台，並支援在格式字串中的位置參數。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -103,22 +103,22 @@ int _vcwprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-寫入的字元數，或是當發生輸出錯誤時為負值。 如果*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL** ，則傳回-1。
+寫入的字元數，或是當發生輸出錯誤時為負值。 如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL** ，則傳回-1。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受引數清單的指標，然後使用 **_putch**函式格式化和寫入主控台中指定的資料。 (**_vcwprintf_p**使用 **_putwch**而不是 **_putch**。 **_vcwprintf_p**是寬字元版本的 **_vcprintf_p**。 它需要寬字元字串做為引數。)
+所有這些函式都會接受引數清單的指標，然後使用 **_putch**函式來格式化並寫入主控台中指定的資料。 (**_vcwprintf_p**會使用 **_putwch**而非 **_putch**。 **_vcwprintf_p**是寬字元版本 **_vcprintf_p**。 它需要寬字元字串做為引數。)
 
-有這些函式的版本 **_l**尾碼是一樣的不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。
+有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。
 
-每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 格式規格支援位置參數，以便讓您可以指定格式字串中使用引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+每個*引數*（如果有的話） 會轉換並根據對應格式規格中的輸出*格式*。 格式規格支援位置參數，以便讓您可以指定格式字串中使用引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
 在輸出換行字元時，這些函式不會將其轉譯為歸位字元-換行字元 (CR-LF) 組合。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-這些函式會驗證輸入的指標和格式字串。 如果*格式*或*引數*是**NULL**，或如果格式字串包含無效格式化字元，這些函式會叫用無效參數處理常式，如所述在[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+這些函式會驗證輸入的指標和格式字串。 如果*格式*或是*引數*會**NULL**，或如果格式字串包含無效格式化字元，這些函式會叫用無效參數處理常式，如在  [Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -129,7 +129,7 @@ int _vcwprintf_p_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_vcprintf_p**， **_vcprintf_p_l**|\<conio.h> 和 \<stdarg.h>|
 |**_vcwprintf_p**， **_vcwprintf_p_l**|\<conio.h> 和 \<stdarg.h>|

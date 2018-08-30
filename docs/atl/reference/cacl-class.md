@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3408e098b7d7b29ff9ee82775954734e3e768dcb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 066f9ac076d4371692331231b5f6f212947b2001
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879978"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196480"
 ---
 # <a name="cacl-class"></a>CAcl 類別
 這個類別是包裝函式`ACL`（存取控制清單） 結構。  
@@ -92,7 +92,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|指派運算子。|  
   
 ## <a name="remarks"></a>備註  
- `ACL`結構是 ACL （存取控制清單） 的標頭。 ACL 包含零或多個循序清單[Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868) （存取控制項目）。 ACL 中的個別 Ace 會編號從 0 到*n-1*，其中*n*是在 ACL 中的 Ace 數目。 當您編輯 ACL，應用程式是指在 ACL 中存取控制項目 (ACE) 依其索引。  
+ `ACL`結構是 ACL （存取控制清單） 的標頭。 ACL 包含零或多個循序清單[Ace](/windows/desktop/SecAuthZ/access-control-entries) （存取控制項目）。 ACL 中的個別 Ace 會編號從 0 到*n-1*，其中*n*是在 ACL 中的 Ace 數目。 當您編輯 ACL，應用程式是指在 ACL 中存取控制項目 (ACE) 依其索引。  
   
  有兩種 ACL 類型：  
   
@@ -104,9 +104,9 @@ class CAcl
   
  物件也可以有與其相關聯，系統由系統管理員所控制的 ACL 的表單中的系統層級的安全性資訊。 系統 ACL 可以允許系統管理員稽核任何嘗試取得物件的存取權。  
   
- 如需詳細資訊，請參閱 < [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872) Windows SDK 中的討論。  
+ 如需詳細資訊，請參閱 < [ACL](/windows/desktop/SecAuthZ/access-control-lists) Windows SDK 中的討論。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
@@ -129,7 +129,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此 typedef 指定用來定義存取控制項目 (ACE) 特定型別的控制旗標的陣列類型。 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)定義可能的旗標的完整清單。  
+ 此 typedef 指定用來定義存取控制項目 (ACE) 特定型別的控制旗標的陣列類型。 請參閱[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)定義可能的旗標的完整清單。  
   
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  位元組陣列。  
@@ -139,7 +139,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此 typedef 指定用來定義存取控制項目 (ACE) 物件，例如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE 性質的陣列類型。 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可能的型別定義的完整清單。  
+ 此 typedef 指定用來定義存取控制項目 (ACE) 物件，例如 ACCESS_ALLOWED_ACE_TYPE 或 ACCESS_DENIED_ACE_TYPE 性質的陣列類型。 請參閱[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)可能的型別定義的完整清單。  
   
 ##  <a name="cacl"></a>  CAcl::CAcl  
  建構函式。  
@@ -205,7 +205,7 @@ void GetAclEntries(
   
  每個陣列的內容對應到彼此，也就是第一個項目`CAccessMaskArray`陣列中的第一個項目對應`CSidArray`陣列，並依此類推。  
   
- 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)如需詳細資訊 ACE 型別和旗標。  
+ 請參閱[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)如需詳細資訊 ACE 型別和旗標。  
   
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  擷取所有的存取控制清單 (ACL) 中的項目有關的資訊。  
@@ -246,7 +246,7 @@ void GetAclEntry(
 ### <a name="remarks"></a>備註  
  這個方法會擷取所有的個別 ACE，提供比的詳細資訊的相關資訊[CAcl::GetAclEntries](#getaclentries)單獨提供。  
   
- 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)如需詳細資訊 ACE 型別和旗標。  
+ 請參閱[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)如需詳細資訊 ACE 型別和旗標。  
   
 ##  <a name="getlength"></a>  CAcl::GetLength  
  傳回的存取控制清單 (ACL) 的長度。  

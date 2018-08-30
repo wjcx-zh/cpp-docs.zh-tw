@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1b9ba00c8728c86935b7c64105d03bb4f19b10
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610596"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205662"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -47,7 +47,7 @@ C 的指令。
 
 您也可以使用**cpp_quote**和的 MIDL 編譯時產生的.h 檔案。 比方說，如果您有使用 c + + IDL 屬性，但某些工作不能使用此檔案的 c + + 標頭檔，然後您可以編譯它來建立 MIDL 產生的.h 檔案，您應該能夠使用。
 
-**Cpp_quote**屬性有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 屬性。
+**Cpp_quote**屬性有相同的功能[cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

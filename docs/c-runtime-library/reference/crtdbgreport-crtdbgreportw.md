@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572642"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204419"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
 
@@ -108,8 +108,8 @@ int _CrtDbgReportW(
 
 |報表模式|報表檔案|**_CrtDbgReport**， **_CrtDbgReportW**行為|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|不適用|使用 Windows [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API 寫入訊息。|
-|**_CRTDBG_MODE_WNDW**|不適用|呼叫 Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) API 建立訊息方塊，以顯示訊息和 [中止]、[重試] 與 [忽略] 按鈕。 如果使用者按下**中止**， **_CrtDbgReport**或是 **_CrtDbgReport**立即中止。 若使用者按一下 [重試]，則會傳回 1。 如果使用者按一下**略過**，會繼續執行並 **_CrtDbgReport**並 **_CrtDbgReportW**傳回 0。 請注意，如果在發生錯誤狀況時按一下 [略過]，通常會導致「未定義的行為」。|
+|**_CRTDBG_MODE_DEBUG**|不適用|使用 Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API 寫入訊息。|
+|**_CRTDBG_MODE_WNDW**|不適用|呼叫 Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) API 建立訊息方塊，以顯示訊息和 [中止]、[重試] 與 [忽略] 按鈕。 如果使用者按下**中止**， **_CrtDbgReport**或是 **_CrtDbgReport**立即中止。 若使用者按一下 [重試]，則會傳回 1。 如果使用者按一下**略過**，會繼續執行並 **_CrtDbgReport**並 **_CrtDbgReportW**傳回 0。 請注意，如果在發生錯誤狀況時按一下 [略過]，通常會導致「未定義的行為」。|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|將訊息寫入至使用者提供**處理**，使用 Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API，而且不會驗證檔案控制代碼的有效性; 應用程式會負責開啟報表檔案，並傳遞有效的檔案控制代碼。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|將訊息寫入至**stderr**。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|將訊息寫入至**stdout**。|

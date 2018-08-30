@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572040"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204339"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 這個類別提供方法來建立類別的執行個體，並取得其屬性。  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|（靜態）覆寫以傳回物件的描述。|  
   
 ## <a name="remarks"></a>備註  
- `CComCoClass` 提供方法來擷取物件的 CLSID、 設定錯誤的資訊，以及建立類別的執行個體。 在中註冊的任何類別[物件對應](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)應該衍生自`CComCoClass`。  
+ `CComCoClass` 提供方法來擷取物件的 CLSID、 設定錯誤的資訊，以及建立類別的執行個體。 在中註冊的任何類別[物件對應](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)應該衍生自`CComCoClass`。  
   
  `CComCoClass` 也會定義物件的預設類別處理站和彙總模型。 `CComCoClass` 使用下列兩個巨集：  
   

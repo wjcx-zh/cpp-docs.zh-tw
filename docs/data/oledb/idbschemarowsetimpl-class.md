@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 21910a85dfecf6bd1e66b4ce0df366e3841f3c36
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572251"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204124"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 提供結構描述資料列集的實作。  
@@ -145,7 +145,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
   
 #### <a name="parameters"></a>參數  
  *pUnkOuter*  
- [in]為外部[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總時，否則為 NULL。  
+ [in]為外部[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)彙總時，否則為 NULL。  
   
  *cRestrictions*  
  [in] 套用至結構描述資料列集的限制計數。  
@@ -279,7 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  此函式的實作需要使用者具有工作階段類別中的結構描述對應。 藉由使用此結構描述對應資訊，它就能接著以對應中結構描述的 GUID 陣列來回應。 這會是提供者支援的結構描述。  
 
 ## <a name="see-also"></a>另請參閱  
- [IDBSchemaRowsetImpl 類別成員](http://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [IDBSchemaRowsetImpl 類別成員](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    

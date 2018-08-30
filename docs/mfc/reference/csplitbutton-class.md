@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207637"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 類別
 `CSplitButton`類別代表分割按鈕控制項。 當使用者按一下按鈕的主要部分時，分割按鈕控制項會執行預設行為，而當使用者按一下按鈕的下拉箭號時，則顯示下拉式功能表。  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|處理當使用者按一下目前的分割按鈕控制項的下拉箭號時，系統會傳送 BCN_DROPDOWN 通知。|  
   
 ## <a name="remarks"></a>備註  
- `CSplitButton`類別衍生自[CButton](../../mfc/reference/cbutton-class.md)類別。 分割按鈕控制項是其樣式為 BS_SPLITBUTTON 按鈕控制項。 當使用者按一下下拉箭號，它就會顯示一個自訂功能表。 如需詳細資訊，請參閱 BS_SPLITBUTTON BS_DEFSPLITBUTTON 中的和樣式[按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。  
+ `CSplitButton`類別衍生自[CButton](../../mfc/reference/cbutton-class.md)類別。 分割按鈕控制項是其樣式為 BS_SPLITBUTTON 按鈕控制項。 當使用者按一下下拉箭號，它就會顯示一個自訂功能表。 如需詳細資訊，請參閱 BS_SPLITBUTTON BS_DEFSPLITBUTTON 中的和樣式[按鈕樣式](/windows/desktop/Controls/button-styles)。  
   
  下圖說明對話方塊中，其中包含頁面巡覽區控制項和 (1) 的分割按鈕控制項。 已按下的 (2) 的下拉式箭號，並顯示 (3) 的子功能表。  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |參數|描述|  
 |---------------|-----------------|  
 |[in]*cheaderctrl:: Create*|位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
-|[in]*rect*|參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
+|[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
 |[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
 |[in]*nID*|控制項的 ID。|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|指標[NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514)結構，其中包含有關的資訊[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
-|[out]*pResult*|（未使用，會傳回任何值）。傳回值[BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983)通知。|  
+|[in]*pNMHDR*|指標[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)結構，其中包含有關的資訊[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
+|[out]*pResult*|（未使用，會傳回任何值）。傳回值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
   
 ### <a name="remarks"></a>備註  
  當使用者按一下下拉箭號，分割按鈕控制項上的時，系統會傳送 BCN_DROPDOWN 通知訊息，其中`OnDropDown`方法控制代碼。 不過，`CSplitButton`物件不會轉送 BCN_DROPDOWN 通知，以包含分割按鈕控制項的控制項。 因此，包含控制項無法支援的自訂動作以回應通知。  

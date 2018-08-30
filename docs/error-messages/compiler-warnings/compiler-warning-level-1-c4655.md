@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 1） C4655 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4655 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6011bf3a2a3bf1718fc15823f2541f49306857c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9600c0fb9b4f03112ebd9cf430e3f833899c5f3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283259"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209097"
 ---
 # <a name="compiler-warning-level-1-c4655"></a>編譯器警告 (層級 1) C4655
-**'**   
- ***符號*': 自上次組建之後才新增變數型別，或其他處有不同的定義**  
-  
- 自從上次成功組建後，您已變更或加入新的資料類型。 [編輯後繼續] 不支援對現有資料類型的變更。  
-  
- 這個警告後面接著 [嚴重錯誤 C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)。 如需詳細資訊，請參閱 [支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。  
-  
-### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>移除這個警告，而不結束目前的偵錯工作階段  
-  
-1.  請將資料類型改回錯誤之前的狀態。  
-  
-2.  從 [偵錯]  功能表選擇 [套用程式碼變更] 。  
-  
-### <a name="to-remove-this-warning-without-changing-your-source-code"></a>移除這個警告，而不變更您的程式碼  
-  
-1.  從 [偵錯]  功能表選擇 [停止偵錯] 。  
-  
-2.  從 [建置]  功能表選擇 [建置] 。
+
+> '*符號*': 變數的類型自上次建置之後, 才新增或其他處有不同的定義
+
+## <a name="remarks"></a>備註
+
+自從上次成功組建後，您已變更或加入新的資料類型。 [編輯後繼續] 不支援對現有資料類型的變更。
+
+這個警告後面接著 [嚴重錯誤 C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)。 如需詳細資訊，請參閱 [支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。
+
+### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>移除這個警告，而不結束目前的偵錯工作階段
+
+1. 請將資料類型改回錯誤之前的狀態。
+
+2. 從 [偵錯]  功能表選擇 [套用程式碼變更] 。
+
+### <a name="to-remove-this-warning-without-changing-your-source-code"></a>移除這個警告，而不變更您的程式碼
+
+1. 從 [偵錯]  功能表選擇 [停止偵錯] 。
+
+2. 從 [建置]  功能表選擇 [建置] 。

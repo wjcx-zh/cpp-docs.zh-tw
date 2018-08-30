@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2b120ab308e8d46ac4c874681d62bbeaaa86588
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884925"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205540"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 類別
 這個類別提供方法實作的嵌入式管理單元節點物件。  
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  **標頭：** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- 這個方法會實作 Win32 函式[IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)。  
+ 這個方法會實作 Win32 函式[IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)。  
   
 ```
 AddMenuItems(  
@@ -146,7 +146,7 @@ AddMenuItems(
 - CCT_UNINITIALIZED 資料物件都有無效的類型。  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- 這個方法會實作 Win32 函式[IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)。  
+ 這個方法會實作 Win32 函式[IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842)。  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 - CCT_UNINITIALIZED 資料物件都有無效的類型。  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- 這個方法會實作 Win32 函式[IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)。  
+ 這個方法會實作 Win32 函式[IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)。  
   
 ```
 CreatePropertyPages(  
@@ -280,7 +280,7 @@ SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
- [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)嵌入式管理單元中的資料物件的結構。  
+ [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165)嵌入式管理單元中的資料物件的結構。  
   
 ```
 RESULTDATAITEM m_resultDataItem;

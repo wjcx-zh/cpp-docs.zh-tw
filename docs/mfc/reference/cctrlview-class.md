@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210199"
 ---
 # <a name="cctrlview-class"></a>CCtrlView 類別
 調整文件檢視架構來配合 Windows 98 和 Windows NT 3.51 版 (含) 以後版本支援的通用控制項。  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>參數  
  *cs*  
- A [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603)結構。  
+ A [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)結構。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果應該繼續視窗建立;0 表示建立失敗。  

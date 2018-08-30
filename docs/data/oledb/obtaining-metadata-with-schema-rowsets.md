@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337186"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207838"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>使用結構描述資料列集取得中繼資料
 有時候您需要在未開啟資料列集的情況下取得提供者、資料列集、資料表、資料行或其他資料庫資訊的相關資訊。 有關資料庫結構的資料稱為中繼資料，並且可以由許多不同的方法擷取。 其中一個方法是使用結構描述資料列集。  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  [CRestrictions](../../data/oledb/crestrictions-class.md)類別提供限制支援。 您建立結構描述資料列集的執行個體之後，請呼叫[crestrictions:: Open](../../data/oledb/crestrictions-open.md)。 這個方法會根據您指定的限制傳回結果集。  
   
- 若要指定限制，請參閱[附錄 b： 結構描述資料列集](http://go.microsoft.com/fwlink/p/?linkid=64681)並尋找您所使用的資料列集。 例如，`CColumns`對應至[COLUMNS 資料列集](http://go.microsoft.com/fwlink/p/?linkid=64682); 該主題列出 COLUMNS 資料列集的限制資料行： table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 您必須依照該順序指定您的限制。  
+ 若要指定限制，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921\(v=vs.85\))並尋找您所使用的資料列集。 例如，`CColumns`對應至[COLUMNS 資料列集](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); 該主題列出 COLUMNS 資料列集的限制資料行： table_catalog 排列、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 您必須依照該順序指定您的限制。  
   
  因此，比方說，如果您想要依資料表名稱限制，請注意 TABLE_NAME 是第三個的限制資料行，並接著呼叫`Open`，做為第三個限制參數，指定所需的資料表名稱，如下列範例所示。  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  如需結構描述資料列集的參考，typedef 類別提供於 OLE DB 樣板 (請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   
- 如需有關 OLE DB 結構描述資料列集，包括限制資料行，請參閱[附錄 b： 結構描述資料列集](http://go.microsoft.com/fwlink/p/?linkid=64681)OLE DB 程式設計人員參考中。  
+ 如需有關 OLE DB 結構描述資料列集，包括限制資料行，請參閱[附錄 b： 結構描述資料列集](/previous-versions/windows/desktop/ms712921\(v=vs.85\))OLE DB 程式設計人員參考中。  
   
- 如需如何使用結構描述資料列集類別的更複雜範例，請參閱[CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)並[DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)範例。  
+ 如需如何使用結構描述資料列集類別的更複雜範例，請參閱[CatDB](https://github.com/Microsoft/VCSamples)並[DBViewer](https://github.com/Microsoft/VCSamples)範例。  
   
  結構描述資料列集提供者支援的相關資訊，請參閱[支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)。  
   

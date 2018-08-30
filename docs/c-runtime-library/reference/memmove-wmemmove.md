@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204624"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -69,19 +69,19 @@ wchar_t *wmemmove(
 來源物件。
 
 *count*<br/>
-位元組數目 (**memmove**) 或字元 (**wmemmove**) 複製。
+位元組數 (**memmove**) 或字元 (**wmemmove**) 複製。
 
 ## <a name="return-value"></a>傳回值
 
-值*目的地*。
+值*dest*。
 
 ## <a name="remarks"></a>備註
 
-複製*計數*位元組 (**memmove**) 或字元 (**wmemmove**) 從*src*至*目的地*。 如果來源區域與目的地的某些區域重疊，這兩個函式可確保先複製重疊區域中的原始來源位元組，再進行覆寫。
+複本*計數*位元組 (**memmove**) 或字元 (**wmemmove**) 從*src*到*dest*。 如果來源區域與目的地的某些區域重疊，這兩個函式可確保先複製重疊區域中的原始來源位元組，再進行覆寫。
 
-**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-**Memmove**和**wmemmove**函式就只能被取代，如果常數 **_CRT_SECURE_DEPRECATE_MEMORY**定義之前在順序中包含的陳述式函式已被取代，如下列範例所示：
+**Memmove**並**wmemmove**函式就只能被取代，如果常數 **_CRT_SECURE_DEPRECATE_MEMORY**定義之前在順序中包含的陳述式函式已被取代，如下列範例所示：
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -97,7 +97,7 @@ wchar_t *wmemmove(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**memmove**|\<string.h>|
 |**wmemmove**|\<wchar.h>|

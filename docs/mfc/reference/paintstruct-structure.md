@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338206"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199569"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 結構
 `PAINTSTRUCT`結構包含可用來繪製視窗工作區的資訊。  
@@ -44,7 +44,7 @@ typedef struct tagPAINTSTRUCT {
  識別要用來繪製的顯示內容。  
   
  *fErase*  
- 指定是否需要重新繪製背景。 它不是 0，如果應用程式應該重新繪製背景。 應用程式會負責繪製背景，如果 Windows 視窗類別建立時沒有背景筆刷 (請參閱的說明`hbrBackground`隸屬[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的結構)。  
+ 指定是否需要重新繪製背景。 它不是 0，如果應用程式應該重新繪製背景。 應用程式會負責繪製背景，如果 Windows 視窗類別建立時沒有背景筆刷 (請參閱的說明`hbrBackground`隸屬[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的結構)。  
   
  *rcPaint*  
  指定的右上方，並降低要求在其中繪製的矩形的右角。  

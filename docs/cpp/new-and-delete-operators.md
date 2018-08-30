@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208062"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
@@ -55,7 +55,7 @@ char *pch = new char[BUFFER_SIZE];
 |**:: new 運算子**|Global|  
 |*類別名稱* **:: new 運算子**|類別|  
   
- 第一個引數**new 運算子**必須是型別`size_t`(中定義的類型\<stddef.h >)，而且傳回型別一律**void \*** 。  
+ 第一個引數**new 運算子**必須是型別`size_t`(中定義的類型\<stddef.h >)，而且傳回型別一律**void** <strong>\*</strong>.  
   
  全域**new 運算子**函式時，會呼叫**新**運算子用於配置內建類型的物件、 類別類型的物件不包含使用者定義**new 運算子**函式，以及任何類型的陣列。 當**新**運算子用來配置的類別類型物件其中**new 運算子**定義，該類別的**運算子 new**稱為。  
   

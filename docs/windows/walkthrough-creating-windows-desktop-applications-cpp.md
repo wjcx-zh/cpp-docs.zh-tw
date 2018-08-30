@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590290"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204734"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
@@ -219,7 +219,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
    }
    ```
 
-   此函數會傳回`HWND`，這是視窗的控制代碼。 控制代碼會有些許類似 Windows 會使用要追蹤開啟的視窗的指標。 如需詳細資訊，請參閱 < [Windows 資料類型](https://msdn.microsoft.com/library/windows/desktop/aa383751)。
+   此函數會傳回`HWND`，這是視窗的控制代碼。 控制代碼會有些許類似 Windows 會使用要追蹤開啟的視窗的指標。 如需詳細資訊，請參閱 < [Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
 
 1. 此時已建立的視窗，但我們仍需要告知要顯示的 Windows。 這就是此程式碼的:
 
@@ -340,9 +340,9 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 1. 若要讓 `WndProc` 函式處理應用程式所接收的訊息，請實作 switch 陳述式。
 
-   是一個重要的訊息，以處理[WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213)訊息。 當應用程式所顯示的視窗有某部分必須更新時，應用程式就會收到這個訊息 當使用者移動程式視窗中，前面的視窗，然後將它移開一次，就會發生此事件。 您的應用程式不知道何時會發生這類的事件;只有 Windows 知道，因此它會通知您`WM_PAINT`。 當第一次顯示視窗時，全都必須更新。
+   是一個重要的訊息，以處理[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息。 當應用程式所顯示的視窗有某部分必須更新時，應用程式就會收到這個訊息 當使用者移動程式視窗中，前面的視窗，然後將它移開一次，就會發生此事件。 您的應用程式不知道何時會發生這類的事件;只有 Windows 知道，因此它會通知您`WM_PAINT`。 當第一次顯示視窗時，全都必須更新。
 
-   若要處理`WM_PAINT`訊息，第一次呼叫[BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362)，然後處理用以配置文字、 按鈕和其他控制項在視窗中，所有邏輯，然後呼叫[EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598)。 此應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 在下列程式碼中，注意[TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133)函數用來顯示字串。
+   若要處理`WM_PAINT`訊息，第一次呼叫[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)，然後處理用以配置文字、 按鈕和其他控制項在視窗中，所有邏輯，然後呼叫[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)。 此應用程式，在開頭呼叫與結尾呼叫之間的邏輯是顯示字串"Hello，Windows desktop"！ 在視窗中顯示 "Hello, World!" 字串。 在下列程式碼中，注意[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)函數用來顯示字串。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    `HDC` 在這段程式碼是裝置內容，也就是 Windows 使用，讓您與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式可確保您的應用程式行為就像個模範生，並不會使用長比所需的裝置內容。 這有助於確保圖形子系統是可供其他應用程式。
 
-1. 應用程式通常會處理許多其他訊息，例如[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)時第一次建立視窗，並[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)視窗關閉時。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
+1. 應用程式通常會處理許多其他訊息，例如[WM_CREATE](/windows/desktop/winmsg/wm-create)時第一次建立視窗，並[WM_DESTROY](/windows/desktop/winmsg/wm-destroy)視窗關閉時。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 817875dd32457fa47eafca9d634bc2e7cc8e079d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879947"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206566"
 ---
 # <a name="csacl-class"></a>CSacl 類別
 這個類別是 SACL （系統存取控制清單） 結構的包裝函式。  
@@ -72,7 +72,7 @@ class CSacl : public CAcl
   
  使用提供給加入、 移除、 建立和刪除從 Ace 類別方法`SACL`物件。 另請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)並[AtlSetSacl](security-global-functions.md#atlsetsacl)。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -131,7 +131,7 @@ bool AddAuditAce(
 ### <a name="remarks"></a>備註  
  A`CSacl`物件包含指定的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 此方法會將這類 ACE 以`CSacl`物件。  
   
- 請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)如需可以在中設定各種旗標的說明*AceFlags*參數。  
+ 請參閱[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header)如需可以在中設定各種旗標的說明*AceFlags*參數。  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  建構函式。  
@@ -208,7 +208,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>另請參閱  
  [CAcl 類別](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Acl](/windows/desktop/SecAuthZ/access-control-lists)   
+ [Ace](/windows/desktop/SecAuthZ/access-control-entries)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197453"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 封裝 Windows 通用 OLE 版面設定對話方塊所提供的服務，以及設定和修改列印邊界的額外支援。  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION 停用頁面方向對話方塊控制項。  
   
-- PSD_RETURNDEFAULT 會導致`CPageSetupDialog`返回[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)並[DEVNAMES](../../mfc/reference/devnames-structure.md)會初始化為系統預設的印表機，而不會顯示一個對話方塊中的結構。 它假設這兩個`hDevNames`和`hDevMode`都為 NULL; 否則函數會傳回錯誤。 如果系統預設的印表機支援舊的印表機驅動程式 （早於 Windows 3.0 版） 只能`hDevNames`傳回;`hDevMode`為 NULL。  
+- PSD_RETURNDEFAULT 會導致`CPageSetupDialog`返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)會初始化為系統預設的印表機，而不會顯示一個對話方塊中的結構。 它假設這兩個`hDevNames`和`hDevMode`都為 NULL; 否則函數會傳回錯誤。 如果系統預設的印表機支援舊的印表機驅動程式 （早於 Windows 3.0 版） 只能`hDevNames`傳回;`hDevMode`為 NULL。  
   
 - PSD_DISABLEPAPER 停用文件選取範圍控制項。  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- 建立從印表機裝置內容[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)並[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。  
+ 建立從印表機裝置內容[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- IDOK 或 IDCANCEL。 如果傳回 IDCANCEL，呼叫 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函式來判斷是否發生錯誤。  
+ IDOK 或 IDCANCEL。 如果傳回 IDCANCEL，呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷是否發生錯誤。  
   
  IDOK 及 IDCANCEL 是常數，指出使用者是否已選取 [確定] 或 [取消] 按鈕。  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)資料結構，其中包含裝置的初始設定和環境的列印驅動程式的相關資訊。 您必須解除鎖定這個結構與 Windows 所取用的記憶體[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595)函式，Windows SDK 中所述。  
+ [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)資料結構，其中包含裝置的初始設定和環境的列印驅動程式的相關資訊。 您必須解除鎖定這個結構與 Windows 所取用的記憶體[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函式，Windows SDK 中所述。  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  呼叫此函式之後呼叫[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)來擷取系統定莪印表機裝置驅動程式的名稱。  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  如果您修改`m_psd`資料成員直接，您將會覆寫任何預設行為。  
   
- 如需詳細資訊[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)結構，請參閱 Windows SDK。  
+ 如需詳細資訊[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)結構，請參閱 Windows SDK。  
   
  範例，請參閱[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>參數  
  *wPaper*  
- 指定值，指出的紙張大小。 這個值可以是其中一個**DMPAPER_** 值的描述中所列出[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)結構。  
+ 指定值，指出的紙張大小。 這個值可以是其中一個**DMPAPER_** 值的描述中所列出[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)結構。  
   
  *wFlags*  
  表示紙張或信封的方向和印表機是點陣印表機或 HPPCL （Hewlett Packard 印表機控制語言） 裝置。 這個參數的值可以是下列其中一個：  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f 信封以直向模式 （點陣式）  
   
  *pPSD*  
- `PAGESETUPDLG` 結構的指標。 如需詳細資訊[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)，請參閱 Windows SDK。  
+ `PAGESETUPDLG` 結構的指標。 如需詳細資訊[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)，請參閱 Windows SDK。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果處理;否則為 0。  

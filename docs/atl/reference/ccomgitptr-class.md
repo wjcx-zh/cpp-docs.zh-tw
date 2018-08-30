@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a45866226f06b20d0805b7c4e294ff6d2d65506e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197916"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 類別
 這個類別提供方法來處理介面指標和全域介面表 (GIT)。  
@@ -254,6 +254,6 @@ HRESULT Revoke() throw();
   
 ## <a name="see-also"></a>另請參閱  
  [無限制執行緒封送處理器](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [存取在 Apartment 之間的介面](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
- [使用全域介面資料表的時機](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [存取在 Apartment 之間的介面](/windows/desktop/com/accessing-interfaces-across-apartments)   
+ [使用全域介面資料表的時機](/windows/desktop/com/when-to-use-the-global-interface-table)   
  [類別概觀](../../atl/atl-class-overview.md)

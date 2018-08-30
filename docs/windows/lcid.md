@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209527"
 ---
 # <a name="lcid"></a>lcid
 
@@ -36,7 +36,7 @@ ms.locfileid: "42605417"
 
 ## <a name="remarks"></a>備註
 
-**Lcid** c + + 屬性實作的功能[lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) MIDL 屬性。 如果您想要實作的程式庫區塊的地區設定，使用**lcid =** `lcid`參數來[模組](../windows/module-cpp.md)屬性。
+**Lcid** c + + 屬性實作的功能[lcid](/windows/desktop/Midl/lcid) MIDL 屬性。 如果您想要實作的程式庫區塊的地區設定，使用**lcid =** `lcid`參數來[模組](../windows/module-cpp.md)屬性。
 
 ## <a name="example"></a>範例
 

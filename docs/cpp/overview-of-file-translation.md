@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406841"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199388"
 ---
 # <a name="overview-of-file-translation"></a>檔案轉譯概觀
 C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按下列概念順序轉譯 (實際的順序會依循 "as if" 規則：如果已依照這些步驟進行，則必須進行轉譯)：  
@@ -54,7 +54,7 @@ C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按�
   
 - 一個預先定義的巨集， `__cplusplus`，定義只會針對 c + +。 請參閱[Predefined Macros](../preprocessor/predefined-macros.md)中*前置處理器參考 》* 如需詳細資訊。  
   
-- C 前置處理器無法辨識 c + + 運算子： **。\***， **-> \***，和`::`。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)並[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。  
+- C 前置處理器無法辨識 c + + 運算子： **。**<strong>\*</strong>， **->** <strong>\*</strong>，以及 **::**。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)並[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

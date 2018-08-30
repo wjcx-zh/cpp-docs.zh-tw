@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 15f0b26c5c86d023d98d6a13e6b92518756a3179
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883004"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206202"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
 這個類別會定義根據 c + + 標準程式庫集合的列舉值介面。  
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 #### <a name="parameters"></a>參數  
  *基底*  
- COM 列舉值 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 介面。  
+ COM 列舉值。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。
   
  *piid*  
  指標的列舉值介面的介面 ID。  
@@ -65,11 +65,11 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::Clone](#clone)|實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)。|  
+|[IEnumOnSTLImpl::Clone](#clone)|實作**複製品**。|  
 |[IEnumOnSTLImpl::Init](#init)|初始化列舉值。|  
-|[IEnumOnSTLImpl::Next](#next)|實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)。|  
-|[IEnumOnSTLImpl::Reset](#reset)|實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)。|  
-|[IEnumOnSTLImpl::Skip](#skip)|實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)。|  
+|[IEnumOnSTLImpl::Next](#next)|實作**下一步**。|  
+|[IEnumOnSTLImpl::Reset](#reset)|實作**重設**。|  
+|[IEnumOnSTLImpl::Skip](#skip)|實作**略過**。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -122,7 +122,7 @@ HRESULT Init(
  您必須先呼叫這個方法，才能將指標傳遞給任何用戶端的列舉值介面。  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- 這個方法可實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法，藉由建立型別的物件`CComEnumOnSTL`，初始化具有相同的集合與目前物件所使用的迭代器，並傳回介面新建立的物件。  
+ 這個方法提供實作**複製品**方法，藉由建立型別的物件`CComEnumOnSTL`，初始化具有相同的集合與目前物件所使用的迭代器，並傳回介面新建立的物件。  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -163,7 +163,7 @@ CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- 這個方法可實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
+ 這個方法可實作**下一步**方法。  
   
 ```
 STDMETHOD(Next)(
@@ -186,7 +186,7 @@ STDMETHOD(Next)(
  標準的 HRESULT 值。  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- 這個方法可實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
+ 這個方法可實作**重設**方法。  
   
 ```
 STDMETHOD(Reset)(void);
@@ -196,7 +196,7 @@ STDMETHOD(Reset)(void);
  標準的 HRESULT 值。  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- 這個方法可實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
+ 這個方法可實作**略過**方法。  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

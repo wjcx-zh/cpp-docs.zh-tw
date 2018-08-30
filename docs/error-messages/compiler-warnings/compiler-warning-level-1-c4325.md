@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 1） C4325 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4325 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277640"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197481"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>編譯器警告 (層級 1) C4325
-**忽略標準區段 '**   
- ***區段*' 忽略**  
-  
- 您可能不會變更標準區段的屬性。 例如:   
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- 這會覆寫`.sdata`使用標準區段**簡短**資料型別有**長**資料型別。  
-  
- 包含標準區段不能變更其屬性，  
-  
--   .data  
-  
--   .sdata  
-  
--   .bss  
-  
--   .sbss  
-  
--   .text  
-  
--   .const  
-  
--   .sconst  
-  
--   .rdata  
-  
--   .srdata  
-  
- 稍後可能會加入額外的區段。  
-  
-## <a name="see-also"></a>另請參閱  
- [section](../../preprocessor/section.md)
+
+> 忽略標準區段 '*一節*' 略過
+
+## <a name="remarks"></a>備註
+
+您可能不會變更標準區段的屬性。 例如: 
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+這會覆寫`.sdata`它會使用標準區段**簡短**資料型別有**長**資料型別。
+
+您無法變更其屬性包含，標準的區段
+
+- .data
+
+- .sdata
+
+- .bss
+
+- .sbss
+
+- .text
+
+- .const
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+稍後可能會加入其他區段。
+
+## <a name="see-also"></a>另請參閱
+
+[section](../../preprocessor/section.md)

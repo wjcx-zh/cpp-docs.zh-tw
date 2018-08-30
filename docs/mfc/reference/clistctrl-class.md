@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d668d99c8fa2b9001b0693a5e38e8e6941d087b6
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5d798f78addcc457303b42d80f79f77aef67305a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337625"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199776"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 封裝「清單檢視控制項」的功能，顯示項目集合，其中每個項目是由圖示 (來自影像清單) 和標籤所組成的。  
@@ -545,7 +545,7 @@ CSize ApproximateViewRect(
  A`CSize`物件，包含大約寬度和高度所需的項目，顯示像素為單位。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_ApproximateViewRect](/windows/desktop/api/commctrl/nf-commctrl-listview_approximateviewrect)、 Windows SDK 中所述。  
   
 ##  <a name="arrange"></a>  CListCtrl::Arrange  
  重新置放在圖示檢視中的項目，使它們對齊方格。  
@@ -589,7 +589,7 @@ void CancelEditLabel();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_CANCELEDITLABEL](/windows/desktop/Controls/lvm-canceleditlabel)訊息、 Windows SDK 中所述。  
   
 ##  <a name="clistctrl"></a>  CListCtrl::CListCtrl  
  建構 `CListCtrl` 物件。  
@@ -611,10 +611,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 請參閱[清單檢視的視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb774739)如需完整清單，這些樣式的 Windows SDK 中。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。  
+ 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 請參閱[清單檢視的視窗樣式](/windows/desktop/Controls/list-view-window-styles)如需完整清單，這些樣式的 Windows SDK 中。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。  
   
  *rect*  
- 指定清單控制項的大小和位置。 它可以是`CRect`物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ 指定清單控制項的大小和位置。 它可以是`CRect`物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
  *pParentWnd*  
  指定清單控制項的父視窗，通常`CDialog`。 它必須不是 NULL。  
@@ -653,13 +653,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 這些樣式的完整清單，請參閱[清單檢視的視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb774739)Windows SDK 中。  
+ 指定清單控制項的樣式。 套用至控制項的清單控制項樣式的任何組合。 這些樣式的完整清單，請參閱[清單檢視的視窗樣式](/windows/desktop/Controls/list-view-window-styles)Windows SDK 中。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -673,7 +673,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。  
   
- `CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 LVS_EX_FULLROWSELECT。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
+ `CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 LVS_EX_FULLROWSELECT。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
  建立指定的項目拖曳影像清單*nItem*。  
@@ -689,7 +689,7 @@ CImageList* CreateDragImage(
  若要建立其拖曳影像清單的項目索引。  
   
  *lpPoint*  
- 位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)接收的映像，左上角的初始位置的結構檢視中協調。  
+ 位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收的映像，左上角的初始位置的結構檢視中協調。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則拖曳影像清單的指標否則為 NULL。  
@@ -791,7 +791,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  長指標`DRAWITEMSTRUCT`結構，其中包含的所需的繪圖類型的相關資訊。  
   
 ### <a name="remarks"></a>備註  
- `itemAction`隸屬[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構會定義要執行的繪圖動作。  
+ `itemAction`隸屬[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構會定義要執行的繪圖動作。  
   
  根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作活動，抽獎獲得主控描繪`CListCtrl`物件。  
   
@@ -849,7 +849,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 - **-1**作業失敗。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_ENABLEGROUPVIEW](/windows/desktop/Controls/lvm-enablegroupview)訊息、 Windows SDK 中所述。  
   
 ##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible  
  確保至少部分可見的清單檢視項目。  
@@ -893,7 +893,7 @@ int FindItem(
   
 ### <a name="parameters"></a>參數  
  *pFindInfo*  
- 指標[LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745)結構，其中包含要搜尋項目的相關資訊。  
+ 指標[LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa)結構，其中包含要搜尋項目的相關資訊。  
   
  *n*  
  若要開始，搜尋的項目或是-1，從頭開始的索引。 在項目*n*如果從搜尋結果中排除*n*不等於-1。  
@@ -949,7 +949,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
  傳回非零值，如果成功或零，否則為。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會實作行為的 Win32 巨集[ListView_GetBkImage](http://msdn.microsoft.com/library/windows/desktop/bb761246)、 Windows SDK 中所述。  
+ 這個方法會實作行為的 Win32 巨集[ListView_GetBkImage](/windows/desktop/api/commctrl/nf-commctrl-listview_getbkimage)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -998,7 +998,7 @@ BOOL GetCheck(int nItem) const;
  非零值，如果選取的項目，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetCheckState](http://msdn.microsoft.com/library/windows/desktop/bb761250)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetCheckState](/windows/desktop/api/commctrl/nf-commctrl-listview_getcheckstate)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::SetCheck](#setcheck)。  
@@ -1017,7 +1017,7 @@ BOOL GetColumn(
  要擷取其屬性的資料行的索引。  
   
  *pColumn*  
- 位址[LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)結構，指定要擷取之資訊，並且接收到的資料行的相關資訊。 `mask`成員可讓您指定哪個資料行屬性來擷取。 如果`mask`成員指定 LVCF_TEXT 值`pszText`成員必須包含接收項目文字的緩衝區的位址和`cchTextMax`成員必須指定緩衝區的大小。  
+ 位址[LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)結構，指定要擷取之資訊，並且接收到的資料行的相關資訊。 `mask`成員可讓您指定哪個資料行屬性來擷取。 如果`mask`成員指定 LVCF_TEXT 值`pszText`成員必須包含接收項目文字的緩衝區的位址和`cchTextMax`成員必須指定緩衝區的大小。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -1061,7 +1061,7 @@ BOOL GetColumnOrderArray(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb761254)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetColumnOrderArray](/windows/desktop/api/commctrl/nf-commctrl-listview_getcolumnorderarray)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -1165,7 +1165,7 @@ CString GetEmptyText() const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，其中包含要顯示如果控制項是空的文字。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_GETEMPTYTEXT](/windows/desktop/Controls/lvm-getemptytext)訊息，Windows SDK 中所述。  
   
 ##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle  
  擷取目前的延伸的樣式的清單檢視控制項。  
@@ -1175,10 +1175,10 @@ DWORD GetExtendedStyle();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前使用的清單中的延伸樣式的組合檢視控制項。 如需這些延伸樣式的描述性清單，請參閱[延伸的清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中的主題。  
+ 目前使用的清單中的延伸樣式的組合檢視控制項。 如需這些延伸樣式的描述性清單，請參閱[延伸的清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中的主題。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb761264)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetExtendedListViewStyle](/windows/desktop/api/commctrl/nf-commctrl-listview_getextendedlistviewstyle)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::SetExtendedStyle](#setextendedstyle)。  
@@ -1226,7 +1226,7 @@ int GetFocusedGroup() const;
  如果沒有這類群組;，其狀態會是 LVGS_FOCUSED，群組的索引否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 LVGS_FOCUSED 值`state`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。  
+ 這個方法會傳送[LVM_GETFOCUSEDGROUP](/windows/desktop/Controls/lvm-getfocusedgroup)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 LVGS_FOCUSED 值`state`隸屬[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。  
   
 ##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount  
  擷取目前的清單檢視控制項中的群組數目。  
@@ -1239,7 +1239,7 @@ int GetGroupCount()const;
  在清單檢視控制項中的群組數目。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) --> Windows SDK 中所述的訊息。  
+ 這個方法會傳送[LVM_GETGROUPCOUNT](/windows/desktop/Controls/lvm-getgroupcount) --> Windows SDK 中所述的訊息。  
   
 ##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo  
  取得一組指定的清單檢視控制項中的資訊。  
@@ -1255,13 +1255,13 @@ int GetGroupInfo(
  要擷取其資訊的群組識別碼。  
   
  *pgrp*  
- 指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)包含指定群組的相關資訊。  
+ 指標[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)包含指定群組的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
  否則會傳回群組中，如果成功，則為-1 的識別碼。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETGROUPINFO](/windows/desktop/Controls/lvm-getgroupinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex  
  擷取目前的清單檢視控制項中的指定群組的相關資訊。  
@@ -1277,13 +1277,13 @@ BOOL GetGroupInfoByIndex(
 |參數|描述|  
 |---------------|-----------------|  
 |[in]*iIndex*|群組的以零為起始的索引。|  
-|[out]*pGroup*|指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收所指定之群組的相關資訊的結構*iIndex*參數。<br /><br /> 呼叫端負責初始化的成員[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。 設定`cbSize`成員的結構，大小和旗標`mask`來指定要擷取之資訊的成員。|  
+|[out]*pGroup*|指標[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)接收所指定之群組的相關資訊的結構*iIndex*參數。<br /><br /> 呼叫端負責初始化的成員[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。 設定`cbSize`成員的結構，大小和旗標`mask`來指定要擷取之資訊的成員。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_GETGROUPINFOBYINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774933) --> Windows SDK 中所述的訊息。  
+ 這個方法會傳送[LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_listCtrl`，也就是用來存取目前的清單檢視控制項。 下一個範例中會使用此變數。  
@@ -1334,10 +1334,10 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
   
 ### <a name="parameters"></a>參數  
  *pGroupMetrics*  
- 指標[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)包含群組度量資訊。  
+ 指標[LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglvgroupmetrics)包含群組度量資訊。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETGROUPMETRICS](/windows/desktop/Controls/lvm-getgroupmetrics)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect  
  擷取目前的清單檢視控制項中的指定群組的周框矩形。  
@@ -1354,16 +1354,16 @@ BOOL GetGroupRect(
 |參數|描述|  
 |---------------|-----------------|  
 |[in]*iGroupId*|指定群組。|  
-|[in、 out]*lpRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構會接收群組所指定的矩形座標*iGroupId*。|  
+|[in、 out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構會接收群組所指定的矩形座標*iGroupId*。|  
 |[in]*iCoords*|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整個已展開群組 （預設值） 座標。<br />-LVGGR_HEADER-僅標頭 （摺疊的群組） 的座標。<br />-LVGGR_SUBSETLINK-座標只子集連結 （標記子集）。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)所指向結構*pRect*參數。  
+ 呼叫端會負責配置[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)所指向結構*pRect*參數。  
   
- 這個方法會傳送[LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_listCtrl`，也就是用來存取目前的清單檢視控制項。 下一個範例中會使用此變數。    
@@ -1407,15 +1407,15 @@ UINT GetGroupState(
 |參數|描述|  
 |---------------|-----------------|  
 |[in]*iGroupId*|群組的以零為起始的索引。|  
-|[in]*dwMask*|指定狀態来擷取之值所指定群組的遮罩。 如需詳細資訊，請參閱 <<c0> `mask` 隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。|  
+|[in]*dwMask*|指定狀態来擷取之值所指定群組的遮罩。 如需詳細資訊，請參閱 <<c0> `mask` 隸屬[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的群組，或 0，如果找不到群組要求的狀態。  
   
 ### <a name="remarks"></a>備註  
- 傳回值是位元的 AND 運算的結果上*dwMask*參數和值`state`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，表示目前的清單檢視控制項。  
+ 傳回值是位元的 AND 運算的結果上*dwMask*參數和值`state`隸屬[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構，表示目前的清單檢視控制項。  
   
- 這個方法會傳送[LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288)巨集。  
+ 這個方法會傳送[LVM_GETGROUPSTATE](/windows/desktop/Controls/lvm-getgroupstate)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [ListView_GetGroupState](/windows/desktop/api/commctrl/nf-commctrl-listview_getgroupstate)巨集。  
   
 ##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl  
  擷取的標頭控制項的清單檢視控制項。  
@@ -1428,7 +1428,7 @@ CHeaderCtrl* GetHeaderCtrl();
  使用清單檢視控制項之標頭控制項指標。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetHeader](http://msdn.microsoft.com/library/windows/desktop/bb761290)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetHeader](/windows/desktop/api/commctrl/nf-commctrl-listview_getheader)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。  
@@ -1444,7 +1444,7 @@ HCURSOR GetHotCursor();
  目前正由清單檢視控制項的最忙碌的游標資源控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb761292)、 Windows SDK 中所述。 當游標經過任何清單檢視項目，則會出現熱資料指標，啟用暫留時的選取項目時，只顯示。 藉由設定延伸樣式 LVS_EX_TRACKSELECT 啟用暫留時選取。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetHotCursor](/windows/desktop/api/commctrl/nf-commctrl-listview_gethotcursor)、 Windows SDK 中所述。 當游標經過任何清單檢視項目，則會出現熱資料指標，啟用暫留時的選取項目時，只顯示。 藉由設定延伸樣式 LVS_EX_TRACKSELECT 啟用暫留時選取。  
   
 ### <a name="example"></a>範例    
   
@@ -1467,7 +1467,7 @@ int GetHotItem();
  清單檢視控制項的目前作用的項目索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb761294)、 Windows SDK 中所述。 經常性存取的項目定義為已啟用目前選取的項目，在經常性存取追蹤 （與將滑鼠移至 選取項目）。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetHotItem](/windows/desktop/api/commctrl/nf-commctrl-listview_gethotitem)、 Windows SDK 中所述。 經常性存取的項目定義為已啟用目前選取的項目，在經常性存取追蹤 （與將滑鼠移至 選取項目）。  
   
  如果已啟用熱追蹤，當使用者停留在清單檢視項目，項目標籤會自動反白顯示而不使用滑鼠按鈕。  
   
@@ -1492,7 +1492,7 @@ DWORD GetHoverTime() const;
  傳回的延遲，以毫秒為單位，滑鼠資料指標必須留在項目之前加以選取。 如果傳回的值為-1，暫留時的時間就會是預設的停留時間。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb761296)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetHoverTime](/windows/desktop/api/commctrl/nf-commctrl-listview_gethovertime)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例    
   
@@ -1542,13 +1542,13 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
   
 ### <a name="parameters"></a>參數  
  *lvim*  
- 指標[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)結構，包含插入標記的資訊。  
+ 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，包含插入標記的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  否則傳回如果成功，則為 TRUE 或 FALSE。 如果傳回 FALSE 的大小`cbSize`隸屬`LVINSERTMARK`結構不等於結構的實際大小。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETINSERTMARK](/windows/desktop/Controls/lvm-getinsertmark)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor  
  擷取目前的插入標記的色彩。  
@@ -1558,10 +1558,10 @@ COLORREF GetInsertMarkColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，包含插入點的色彩。  
+ 傳回[COLORREF](/windows/desktop/gdi/colorref)結構，包含插入點的色彩。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-getinsertmarkcolor)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect  
  擷取矩形界限的插入點。  
@@ -1582,7 +1582,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 - **1**找到插入點。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getitem"></a>  Clistctrl:: Getitem  
  擷取部分或全部的清單檢視項目的屬性。  
@@ -1593,7 +1593,7 @@ BOOL GetItem(LVITEM* pItem) const;
   
 ### <a name="parameters"></a>參數  
  *pItem*  
- 指標[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)收到的項目屬性的結構。  
+ 指標[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)收到的項目屬性的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -1629,7 +1629,7 @@ DWORD_PTR GetItemData(int nItem) const;
  使用指定的項目相關聯的 32 位元應用程式特定值。  
   
 ### <a name="remarks"></a>備註  
- 這個值是`lParam`隸屬[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，在 Windows SDK 中所述  
+ 這個值是`lParam`隸屬[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構，在 Windows SDK 中所述  
   
 ### <a name="example"></a>範例  
 
@@ -1660,16 +1660,16 @@ BOOL GetItemIndexRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 這個參數不能是 NULL。|  
+|[in]*pItemIndex*|指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 這個參數不能是 NULL。|  
 |[in]*iColumn*|控制項中的資料行的以零為起始索引。|  
 |[in]*rectType*|要為其擷取周框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS-傳回整個子項目，包括圖示和標籤的週框矩形。<br /><br /> LVIR_ICON-傳回圖示或小圖示子項目的週框。<br /><br /> LVIR_LABEL-傳回子項目文字的週框矩形。|  
-|[out]*pRect*|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 這個參數不能是 NULL。|  
+|[out]*pRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 這個參數不能是 NULL。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_GETITEMINDEXRECT](http://msdn.microsoft.com/library/windows/desktop/bb761046)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [ListView_GetItemIndexRect 巨集](http://msdn.microsoft.com/library/windows/desktop/bb774959)。  
+ 這個方法會傳送[LVM_GETITEMINDEXRECT](/windows/desktop/Controls/lvm-getitemindexrect)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [ListView_GetItemIndexRect 巨集](/windows/desktop/api/commctrl/nf-commctrl-listview_getitemindexrect)。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_listCtrl`，也就是用來存取目前的清單檢視控制項。 下一個範例中會使用此變數。    
@@ -1713,7 +1713,7 @@ BOOL GetItemPosition(
  要擷取其位置的項目索引。  
   
  *lpPoint*  
- 位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)檢視中協調收到的項目左上角的位置的結構。  
+ 位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)檢視中協調收到的項目左上角的位置的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -1750,7 +1750,7 @@ BOOL GetItemRect(
  要擷取其位置的項目索引。  
   
  *lpRect*  
- 位址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。  
+ 位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。  
   
  *則 nCode*  
  清單檢視項目，要擷取周框的部分。 它可以是下列值之一：  
@@ -1829,7 +1829,7 @@ BOOL GetItemSpacing(
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_GETITEMSPACING](/windows/desktop/Controls/lvm-getitemspacing)訊息，Windows SDK 中所述。  
   
 ##  <a name="getitemstate"></a>  CListCtrl::GetItemState  
  擷取清單檢視項目的狀態。  
@@ -1851,7 +1851,7 @@ UINT GetItemState(
  狀態旗標，指定清單檢視項目。  
   
 ### <a name="remarks"></a>備註  
- 所指定項目的狀態`state`隸屬[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，在 Windows SDK 中所述。 當您指定或變更項目的狀態`stateMask`成員指定您想要變更的哪些狀態位元。  
+ 所指定項目的狀態`state`隸屬[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構，在 Windows SDK 中所述。 當您指定或變更項目的狀態`stateMask`成員指定您想要變更的哪些狀態位元。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。  
@@ -1890,7 +1890,7 @@ CString GetItemText(
  傳回的版本`CString`傳回項目文字。  
   
 ### <a name="remarks"></a>備註  
- 如果*nSubItem*為零，此函式會擷取項目標籤; 如果*nSubItem*為非零值，它會擷取子項目的文字。 如需有關子項目的引數的詳細資訊，請參閱討論[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK 中的結構。  
+ 如果*nSubItem*為零，此函式會擷取項目標籤; 如果*nSubItem*為非零值，它會擷取子項目的文字。 如需有關子項目的引數的詳細資訊，請參閱討論[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK 中的結構。  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  如需清單的搜尋檢視項目具有指定的屬性，而且，與給定項目指定的關聯性。  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、 out]*pItemIndex*|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋或-1 表示找到第一個符合項目，中的旗標*nFlags*參數。<br /><br /> 如果這個方法成功，`LVITEMINDEX`結構描述的搜尋作業找到的項目。|  
-|[in]*nFlags*|位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能取決於索引、 狀態或外觀的目標項目，或以指定目標項目的實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱 <<c0>  *旗標*中的參數[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
+|[in、 out]*pItemIndex*|指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋或-1 表示找到第一個符合項目，中的旗標*nFlags*參數。<br /><br /> 如果這個方法成功，`LVITEMINDEX`結構描述的搜尋作業找到的項目。|  
+|[in]*nFlags*|位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能取決於索引、 狀態或外觀的目標項目，或以指定目標項目的實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱 <<c0>  *旗標*中的參數[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1953,7 +1953,7 @@ BOOL GetNextItemIndex(
 ### <a name="remarks"></a>備註  
  呼叫端會負責配置和設定的成員`LVITEMINDEX`結構所指*pItemIndex*參數。  
   
- 這個方法會傳送[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)訊息，Windows SDK 中所述。  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
  取得索引所識別之清單項目的*pos*，然後設定*pos*位置值。  
@@ -2006,7 +2006,7 @@ UINT GetNumberOfWorkAreas() const;
  不使用這一次。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetNumberOfWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb774988)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetNumberOfWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_getnumberofworkareas)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例    
   
@@ -2045,10 +2045,10 @@ COLORREF GetOutlineColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，其中包含外框色彩。  
+ 傳回[COLORREF](/windows/desktop/gdi/colorref)結構，其中包含外框色彩。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETOUTLINECOLOR](/windows/desktop/Controls/lvm-getoutlinecolor)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getorigin"></a>  CListCtrl::GetOrigin  
  擷取目前的檢視原始的清單檢視控制項。  
@@ -2059,7 +2059,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
   
 ### <a name="parameters"></a>參數  
  *lpPoint*  
- 位址[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)接收檢視原始的結構。  
+ 位址[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)接收檢視原始的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。 不過，如果控制項是在報表檢視中，傳回值永遠為零。  
@@ -2075,7 +2075,7 @@ UINT GetSelectedColumn() const;
  所選資料行索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-getselectedcolumn)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount  
  擷取清單檢視控制項中選取的項目數目。  
@@ -2117,7 +2117,7 @@ int GetSelectionMark();
  以零為起始的選取標記或如果沒有選取範圍標記為-1。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb774998)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetSelectionMark](/windows/desktop/api/commctrl/nf-commctrl-listview_getselectionmark)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -2197,7 +2197,7 @@ BOOL GetSubItemRect(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetSubItemRect](/windows/desktop/api/commctrl/nf-commctrl-listview_getsubitemrect)、 Windows SDK 中所述。  
   
 ##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor  
  擷取清單檢視控制項的文字背景色彩。  
@@ -2234,13 +2234,13 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
   
 ### <a name="parameters"></a>參數  
  *pti*  
- 指標[LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766)接收 圖格資訊的結構。  
+ 指標[LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)接收 圖格資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
  不會使用傳回的值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETTILEINFO](/windows/desktop/Controls/lvm-gettileinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo  
  擷取清單檢視控制項中並排顯示檢視的相關資訊。  
@@ -2251,13 +2251,13 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
   
 ### <a name="parameters"></a>參數  
  *ptvi*  
- 指標[LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768)結構會接收所擷取的資訊。  
+ 指標[LVTILEVIEWINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileviewinfo)結構會接收所擷取的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  不會使用傳回的值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETTILEVIEWINFO](/windows/desktop/Controls/lvm-gettileviewinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="gettooltips"></a>  CListCtrl::GetToolTips  
  擷取要顯示工具提示的清單檢視控制項使用的工具提示控制項。  
@@ -2270,7 +2270,7 @@ CToolTipCtrl* GetToolTips() const;
  指標[CToolTipCtrl](ctooltipctrl-class.md)清單控制項所使用的物件。 如果[建立](#create)成員函式會使用樣式 LVS_NOTOOLTIPS、 使用任何工具提示，並會傳回 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[LVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761085)、 Windows SDK 中所述。 MFC 實作`GetToolTips`傳回`CToolTipCtrl`物件，它會使用清單控制項，而不是工具提示控制項的控制代碼。  
+ 此成員函式實作的 Win32 訊息的行為[LVM_GETTOOLTIPS](/windows/desktop/Controls/lvm-gettooltips)、 Windows SDK 中所述。 MFC 實作`GetToolTips`傳回`CToolTipCtrl`物件，它會使用清單控制項，而不是工具提示控制項的控制代碼。  
   
 ### <a name="example"></a>範例  
 
@@ -2324,7 +2324,7 @@ DWORD GetView() const;
  清單檢視控制項目前的檢視。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_GETVIEW](/windows/desktop/Controls/lvm-getview)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getviewrect"></a>  CListCtrl::GetViewRect  
  擷取清單檢視控制項中的所有項目的週框。  
@@ -2335,7 +2335,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>參數  
  *lpRect*  
- 位址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ 位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -2360,7 +2360,7 @@ void GetWorkAreas(
  陣列的指標`RECT`結構 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件)，接收工作區域的清單檢視控制項。 在這些架構中的值為在工作區座標。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_GetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775024)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_GetWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_getworkareas)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。  
@@ -2380,7 +2380,7 @@ BOOL HasGroup(int iGroupId) const;
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_HASGROUP](/windows/desktop/Controls/lvm-hasgroup)訊息、 Windows SDK 中所述。  
   
 ##  <a name="hittest"></a>  CListCtrl::HitTest  
  如果有任何項目，是在指定的位置，請判斷哪個清單檢視項目。  
@@ -2401,7 +2401,7 @@ int HitTest(
  要測試的點。  
   
  *pFlags*  
- 接收的測試結果的相關資訊的整數指標。 請參閱說明`flags`隸屬[LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) Windows SDK 中的結構。  
+ 接收的測試結果的相關資訊的整數指標。 請參閱說明`flags`隸屬[LVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo) Windows SDK 中的結構。  
   
 ### <a name="return-value"></a>傳回值  
  所指定的位置處的項目索引*pHitTestInfo*，若有的話，否則為-1。  
@@ -2476,7 +2476,7 @@ int InsertColumn(
 ### <a name="remarks"></a>備註  
  清單檢視控制項中的最左邊資料行必須是靠左對齊。  
   
- [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)結構包含在報表檢視中的資料行的屬性。 它也用來接收資料行的相關資訊。 此結構是 Windows SDK 中所述。  
+ [LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)結構包含在報表檢視中的資料行的屬性。 它也用來接收資料行的相關資訊。 此結構是 Windows SDK 中所述。  
   
 ##  <a name="insertgroup"></a>  CListCtrl::InsertGroup  
  插入清單檢視控制項中的群組。  
@@ -2492,13 +2492,13 @@ LRESULT InsertGroup(
  群組是要插入之項目的索引。  
   
  *pgrp*  
- 指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，其中包含要加入的群組。  
+ 指標[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構，其中包含要加入的群組。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業失敗，則傳回群組已加入的項目則為-1 的索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_INSERTGROUP](/windows/desktop/Controls/lvm-insertgroup)訊息、 Windows SDK 中所述。  
   
 ##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted  
  插入群組的排序清單中指定的群組。  
@@ -2509,13 +2509,13 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
   
 ### <a name="parameters"></a>參數  
  *pStructInsert*  
- 指標[LVINSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb774756)結構，其中包含要插入的群組。  
+ 指標[LVINSERTGROUPSORTED](/windows/desktop/api/commctrl/ns-commctrl-taglvinsertgroupsorted)結構，其中包含要插入的群組。  
   
 ### <a name="return-value"></a>傳回值  
  不會使用傳回的值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_INSERTGROUPSORTED](/windows/desktop/Controls/lvm-insertgroupsorted)訊息、 Windows SDK 中所述。  
   
 ##  <a name="insertitem"></a>  CListCtrl::InsertItem  
  將項目插入清單檢視控制項。  
@@ -2547,7 +2547,7 @@ int InsertItem(
   
 ### <a name="parameters"></a>參數  
  *pItem*  
- 指標[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，指定項目的屬性，在 Windows SDK 中所述。  
+ 指標[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構，指定項目的屬性，在 Windows SDK 中所述。  
   
  *nItem*  
  要插入之項目的索引。  
@@ -2559,13 +2559,13 @@ int InsertItem(
  項目的映像，或 I_IMAGECALLBACK 如果項目回呼項目的索引。 回呼項目上的資訊，請參閱[clistctrl:: Getcallbackmask](#getcallbackmask)。  
   
  *nMask*  
- *NMask*參數會指定哪一個項目做為參數傳遞的屬性都有效。 它可以是其中一或多個遮罩值中所述[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows SDK 中。 有效的值可以與位元的 OR 運算子結合。  
+ *NMask*參數會指定哪一個項目做為參數傳遞的屬性都有效。 它可以是其中一或多個遮罩值中所述[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK 中。 有效的值可以與位元的 OR 運算子結合。  
   
  *nState*  
- 表示項目的狀態、 狀態影像和覆疊影像。 請參閱 Windows SDK 主題[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)如需詳細資訊並[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)如需有效的旗標的清單。  
+ 表示項目的狀態、 狀態影像和覆疊影像。 請參閱 Windows SDK 主題[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)如需詳細資訊並[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)如需有效的旗標的清單。  
   
  *nStateMask*  
- 指示的狀態成員會擷取或修改。 請參閱[LVITEM 結構](http://msdn.microsoft.com/library/windows/desktop/bb774760)Windows sdk for 的詳細資訊。  
+ 指示的狀態成員會擷取或修改。 請參閱[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows sdk for 的詳細資訊。  
   
  *lParam*  
  項目相關聯的 32 位元應用程式特定值。 如果指定此參數，您必須設定*nMask*屬性 LVIF_PARAM。  
@@ -2574,7 +2574,7 @@ int InsertItem(
  新的項目，如果成功則為-1 則索引。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法可能會導致 LVM_INSERTITEM 訊息傳送至您的控制項視窗。 設定項目文字 （例如使用例如 LVS_OWNERDRAW 的視窗樣式） 的特定情況下，控制項的相關聯的訊息處理常式可能會失敗。 如需有關這些條件的詳細資訊，請參閱[LVM_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb761107) Windows SDK 中。  
+ 呼叫這個方法可能會導致 LVM_INSERTITEM 訊息傳送至您的控制項視窗。 設定項目文字 （例如使用例如 LVS_OWNERDRAW 的視窗樣式） 的特定情況下，控制項的相關聯的訊息處理常式可能會失敗。 如需有關這些條件的詳細資訊，請參閱[LVM_INSERTITEM](/windows/desktop/Controls/lvm-insertitem) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
 
@@ -2612,16 +2612,16 @@ int InsertMarkHitTest(
   
 ### <a name="parameters"></a>參數  
  *pPoint*  
- 指標[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含點擊的測試的座標，相對於清單控制項的用戶端區域。  
+ 指標[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，包含點擊的測試的座標，相對於清單控制項的用戶端區域。  
   
  *lvim*  
- 指標[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)結構，指定最接近座標點參數所定義的插入點。  
+ 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，指定最接近座標點參數所定義的插入點。  
   
 ### <a name="return-value"></a>傳回值  
  最近的插入點至指定點。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_INSERTMARKHITTEST](/windows/desktop/Controls/lvm-insertmarkhittest)訊息、 Windows SDK 中所述。  
   
 ##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled  
  判斷是否啟用清單檢視控制項的檢視。  
@@ -2634,7 +2634,7 @@ BOOL IsGroupViewEnabled() const;
  否則傳回 TRUE，如果已啟用的群組檢視或 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_ISGROUPVIEWENABLED](/windows/desktop/Controls/lvm-isgroupviewenabled)訊息、 Windows SDK 中所述。  
   
 ##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible  
  指出目前的清單檢視控制項中指定的項目是否可見。  
@@ -2653,7 +2653,7 @@ BOOL IsItemVisible(int index) const;
  如果指定的項目可為可見; 否則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_ISITEMVISIBLE](/windows/desktop/Controls/lvm-isitemvisible)訊息，Windows SDK 中所述。  
   
 ##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex  
  將目前的清單檢視控制項中項目的唯一識別碼對應至索引。  
@@ -2676,7 +2676,7 @@ UINT MapIDToIndex(UINT id) const;
   
  請注意，在多執行緒環境中的索引保證只有在裝載清單檢視控制項，不是在背景執行緒上的執行緒。  
   
- 這個方法會傳送[LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137)訊息，Windows SDK 中所述。  
   
 ##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID  
  將目前的清單檢視控制項中項目的索引對應至唯一的識別碼。  
@@ -2699,7 +2699,7 @@ UINT MapIndexToID(UINT index) const;
   
  請注意，在多執行緒環境中的索引保證只有在裝載清單檢視控制項，不是在背景執行緒上的執行緒。  
   
- 這個方法會傳送[LVM_MAPINDEXTOID](http://msdn.microsoft.com/library/windows/desktop/bb761139)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_MAPINDEXTOID](/windows/desktop/Controls/lvm-mapindextoid)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_listCtrl`，也就是用來存取目前的清單檢視控制項。 下一個範例中會使用此變數。    
@@ -2761,7 +2761,7 @@ LRESULT MoveGroup(
  不會使用傳回的值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_MOVEGROUP](/windows/desktop/Controls/lvm-movegroup)訊息、 Windows SDK 中所述。  
   
 ##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup  
  將指定的項目移到指定的群組。  
@@ -2784,7 +2784,7 @@ void MoveItemToGroup(
 > [!NOTE]
 >  這個方法目前未實作。  
   
- 這個方法會模擬[LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143)訊息、 Windows SDK 中所述。  
+ 這個方法會模擬[LVM_MOVEITEMTOGROUP](/windows/desktop/Controls/lvm-moveitemtogroup)訊息、 Windows SDK 中所述。  
   
 ##  <a name="redrawitems"></a>  CListCtrl::RedrawItems  
  強制重新繪製的項目範圍的清單檢視控制項。  
@@ -2806,7 +2806,7 @@ BOOL RedrawItems(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- [清單] 檢視視窗接收 WM_PAINT 訊息前，不會實際繪製指定的項目。 若要立即重繪，呼叫 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)之後使用此函式的函式。  
+ [清單] 檢視視窗接收 WM_PAINT 訊息前，不會實際繪製指定的項目。 若要立即重繪，呼叫 Windows [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow)之後使用此函式的函式。  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  從清單檢視控制項中移除所有群組。  
@@ -2816,7 +2816,7 @@ void RemoveAllGroups();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_REMOVEALLGROUPS](/windows/desktop/Controls/lvm-removeallgroups)訊息、 Windows SDK 中所述。  
   
 ##  <a name="removegroup"></a>  CListCtrl::RemoveGroup  
  從清單檢視控制項中移除指定的群組。  
@@ -2833,7 +2833,7 @@ LRESULT RemoveGroup(int iGroupId);
  否則會傳回群組中，如果成功，則為-1 的索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_REMOVEGROUP](/windows/desktop/Controls/lvm-removegroup)訊息、 Windows SDK 中所述。  
   
 ##  <a name="scroll"></a>  CListCtrl::Scroll  
  捲動清單檢視控制項的內容。  
@@ -2858,7 +2858,7 @@ BOOL SetBkColor(COLORREF cr);
   
 ### <a name="parameters"></a>參數  
  *cr*  
- 若要設定，背景色彩或 CLR_NONE 值沒有背景色彩。 使用背景色彩的清單檢視控制項重繪本身大幅速度快於沒有背景色彩。 如需資訊，請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
+ 若要設定，背景色彩或 CLR_NONE 值沒有背景色彩。 使用背景色彩的清單檢視控制項重繪本身大幅速度快於沒有背景色彩。 如需資訊，請參閱[COLORREF](/windows/desktop/gdi/colorref) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3001,7 +3001,7 @@ BOOL SetColumn(
  若要設定其屬性的資料行的索引。  
   
  *pColumn*  
- 位址[LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)結構，其中包含新的資料行屬性，如 Windows SDK 中所述。 結構的`mask`成員可讓您指定哪個資料行屬性來設定。 如果`mask`成員指定 LVCF_TEXT 值，此結構的`pszText`成員是以 null 結束的字串和結構的位址`cchTextMax`成員會被忽略。  
+ 位址[LVCOLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna)結構，其中包含新的資料行屬性，如 Windows SDK 中所述。 結構的`mask`成員可讓您指定哪個資料行屬性來設定。 如果`mask`成員指定 LVCF_TEXT 值，此結構的`pszText`成員是以 null 結束的字串和結構的位址`cchTextMax`成員會被忽略。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3029,7 +3029,7 @@ BOOL SetColumnOrderArray(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb775072)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetColumnOrderArray](/windows/desktop/api/commctrl/nf-commctrl-listview_setcolumnorderarray)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。  
@@ -3048,7 +3048,7 @@ BOOL SetColumnWidth(
  寬度為其設定的資料行索引。 在清單檢視中，這個參數必須是 0。  
   
  *cx*  
- 新資料行的寬度。 不一定需要 LVSCW_AUTOSIZE LVSCW_AUTOSIZE_USEHEADER，如中所述[LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) Windows SDK 中。  
+ 新資料行的寬度。 不一定需要 LVSCW_AUTOSIZE LVSCW_AUTOSIZE_USEHEADER，如中所述[LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3062,13 +3062,13 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
   
 ### <a name="parameters"></a>參數  
  *dwNewStyle*  
- 清單檢視控制項所使用的延伸樣式的組合。 如需描述性這些樣式清單，請參閱[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中的主題。  
+ 清單檢視控制項所使用的延伸樣式的組合。 如需描述性這些樣式清單，請參閱[擴充清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中的主題。  
   
 ### <a name="return-value"></a>傳回值  
  先前的延伸樣式，清單檢視控制項所使用的組合。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb775076)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetExtendedListViewStyle](/windows/desktop/api/commctrl/nf-commctrl-listview_setextendedlistviewstyle)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -3094,13 +3094,13 @@ int SetGroupInfo(
  設定其資訊群組的識別碼。  
   
  *pgrp*  
- 指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構，其中包含要設定的資訊。 呼叫端負責配置這個結構，並設定其成員。  
+ 指標[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構，其中包含要設定的資訊。 呼叫端負責配置這個結構，並設定其成員。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，群組的識別碼否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_SETGROUPINFO](/windows/desktop/Controls/lvm-setgroupinfo)訊息，Windows SDK 中所述。  
   
 ##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics  
  設定群組的計量清單檢視控制項。  
@@ -3111,10 +3111,10 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
   
 ### <a name="parameters"></a>參數  
  *pGroupMetrics*  
- 指標[LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752)結構，其中包含設群組度量資訊。  
+ 指標[LVGROUPMETRICS](/windows/desktop/api/commctrl/ns-commctrl-taglvgroupmetrics)結構，其中包含設群組度量資訊。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETGROUPMETRICS](/windows/desktop/Controls/lvm-setgroupmetrics)訊息、 Windows SDK 中所述。  
   
 ##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor  
  設定已啟用熱追蹤，清單檢視控制項時所使用的游標。  
@@ -3131,7 +3131,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
  清單檢視控制項正在使用與上一個最忙碌的游標資源控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb775082)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetHotCursor](/windows/desktop/api/commctrl/nf-commctrl-listview_sethotcursor)、 Windows SDK 中所述。  
   
  熱資料指標，只顯示啟用暫留時的選取項目時，會顯示為指標通過任何清單檢視項目。 藉由設定延伸樣式 LVS_EX_TRACKSELECT 啟用暫留時選取。  
   
@@ -3153,7 +3153,7 @@ int SetHotItem(int iIndex);
  先前的作用的項目以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb775083)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetHotItem](/windows/desktop/api/commctrl/nf-commctrl-listview_sethotitem)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetHotItem](#gethotitem)。  
@@ -3173,7 +3173,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
  上一個滑鼠停留時間 （毫秒）。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb775084)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetHoverTime](/windows/desktop/api/commctrl/nf-commctrl-listview_sethovertime)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetHoverTime](#gethovertime)。  
@@ -3203,7 +3203,7 @@ CSize SetIconSpacing(CSize size);
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，包含圖示間距的上一個值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetIconSpacing](http://msdn.microsoft.com/library/windows/desktop/bb775085)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetIconSpacing](/windows/desktop/api/commctrl/nf-commctrl-listview_seticonspacing)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -3251,13 +3251,13 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
   
 ### <a name="parameters"></a>參數  
  *plvInfoTip*  
- 指標[LVFSETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb774764)結構，其中包含要設定的資訊。  
+ 指標[LVFSETINFOTIP](/windows/desktop/api/commctrl/ns-commctrl-taglvsetinfotip)結構，其中包含要設定的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETINFOTIP](/windows/desktop/Controls/lvm-setinfotip)訊息、 Windows SDK 中所述。  
   
 ##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark  
  將插入點設定為定義的位置。  
@@ -3268,13 +3268,13 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
   
 ### <a name="parameters"></a>參數  
  *lvim*  
- 指標[LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758)結構，指定要設定插入點的位置。  
+ 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，指定要設定插入點的位置。  
   
 ### <a name="return-value"></a>傳回值  
  否則傳回如果成功，則為 TRUE 或 FALSE。 如果傳回 FALSE 的大小`cbSize`的成員`LVINSERTMARK`結構不等於實際大小結構的一部分，或插入點的時不會套用在目前的檢視。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETINSERTMARK](/windows/desktop/Controls/lvm-setinsertmark)訊息、 Windows SDK 中所述。  
   
 ##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor  
  將插入點的色彩設定。  
@@ -3285,13 +3285,13 @@ COLORREF SetInsertMarkColor(COLORREF color);
   
 ### <a name="parameters"></a>參數  
  *色彩*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，指定要設定插入點的色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)結構，指定要設定插入點的色彩。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`COLORREF`結構，包含前一個色彩。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor)訊息、 Windows SDK 中所述。  
   
 ##  <a name="setitem"></a>  Clistctrl:: Setitem  
  設定部分或全部的清單檢視項目的屬性。  
@@ -3325,7 +3325,7 @@ BOOL SetItem(
   
 ### <a name="parameters"></a>參數  
  *pItem*  
- 位址[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，其中包含新的項目屬性，如 Windows SDK 中所述。 結構的`iItem`並`iSubItem`成員識別項目或子項目，且結構的`mask`成員指定要設定的屬性。 如需詳細資訊`mask`成員，請參閱 <<c2>  **備註**。  
+ 位址[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構，其中包含新的項目屬性，如 Windows SDK 中所述。 結構的`iItem`並`iSubItem`成員識別項目或子項目，且結構的`mask`成員指定要設定的屬性。 如需詳細資訊`mask`成員，請參閱 <<c2>  **備註**。  
   
  *nItem*  
  重新設定其屬性的項目索引。  
@@ -3384,7 +3384,7 @@ void SetItemCount(int nItems);
  若要設定的虛擬清單檢視控制項的項目計數，請參閱[CListCtrl::SetItemCountEx](#setitemcountex)。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetItemCount](http://msdn.microsoft.com/library/windows/desktop/bb775093)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetItemCount](/windows/desktop/api/commctrl/nf-commctrl-listview_setitemcount)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -3427,7 +3427,7 @@ BOOL SetItemCountEx(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetItemCountEx](http://msdn.microsoft.com/library/windows/desktop/bb775095)，如中所述 Windows SDKand 應該只呼叫虛擬清單檢視。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetItemCountEx](/windows/desktop/api/commctrl/nf-commctrl-listview_setitemcountex)，如中所述 Windows SDKand 應該只呼叫虛擬清單檢視。  
   
 ### <a name="example"></a>範例  
 
@@ -3468,7 +3468,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這個值是`lParam`隸屬[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，在 Windows SDK 中所述。  
+ 這個值是`lParam`隸屬[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構，在 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -3496,19 +3496,19 @@ BOOL SetItemIndexState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)該結構描述項目。 呼叫端負責配置這個結構，並設定其成員。|  
-|[in]*dwState*|若要設定項目，狀態即的位元組合[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 時可重設，或其中一個狀態設定。|  
-|[in]*dwMask*|所指定的狀態的有效位元遮罩*dwState*參數。 指定的位元組合 (OR)[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
+|[in]*pItemIndex*|指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)該結構描述項目。 呼叫端負責配置這個結構，並設定其成員。|  
+|[in]*dwState*|若要設定項目，狀態即的位元組合[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。 指定 0 時可重設，或其中一個狀態設定。|  
+|[in]*dwMask*|所指定的狀態的有效位元遮罩*dwState*參數。 指定的位元組合 (OR)[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊*dwState*參數，請參閱[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。  
+ 如需詳細資訊*dwState*參數，請參閱[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。  
   
- 如需詳細資訊*dwMask*參數，請參閱*stateMask*的成員[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構。  
+ 如需詳細資訊*dwMask*參數，請參閱*stateMask*的成員[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構。  
   
- 這個方法會傳送[LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_SETITEMINDEXSTATE](/windows/desktop/Controls/lvm-setitemindexstate)訊息，Windows SDK 中所述。  
   
 ##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition  
  將項目移至 清單檢視控制項中的指定位置。  
@@ -3524,7 +3524,7 @@ BOOL SetItemPosition(
  若要設定其位置的項目索引。  
   
  *太平洋時間*  
- A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)結構，指定檢視中的新位置座標，此項目的左上角。  
+ A[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)結構，指定檢視中的新位置座標，此項目的左上角。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3557,13 +3557,13 @@ BOOL SetItemState(
  若要設定其狀態的項目索引。  
   
  *pItem*  
- 位址[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構，在 Windows SDK 中所述。 結構的`stateMask`成員可讓您指定哪些狀態位元變更，並將結構的`state`成員包含那些位元的新值。 其他成員會被忽略。  
+ 位址[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構，在 Windows SDK 中所述。 結構的`stateMask`成員可讓您指定哪些狀態位元變更，並將結構的`state`成員包含那些位元的新值。 其他成員會被忽略。  
   
  *nState*  
- 新的狀態位元的值。 如需可能值的清單，請參閱 < [CListCtrl::GetNextItem](#getnextitem)並[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)狀態成員。  
+ 新的狀態位元的值。 如需可能值的清單，請參閱 < [CListCtrl::GetNextItem](#getnextitem)並[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)狀態成員。  
   
  *nMask*  
- 指定要變更的哪些狀態位元遮罩。 這個值會對應至的 stateMask 成員[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構。  
+ 指定要變更的哪些狀態位元遮罩。 這個值會對應至的 stateMask 成員[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3598,13 +3598,13 @@ BOOL SetItemText(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 這個方法不適合使用與包含 LVS_OWNERDATA 視窗樣式的控制項 （事實上，這會導致判斷提示在偵錯組建）。 如需有關此清單控制項樣式的詳細資訊，請參閱[清單檢視控制項概觀](http://msdn.microsoft.com/library/windows/desktop/bb774735)。  
+ 這個方法不適合使用與包含 LVS_OWNERDATA 視窗樣式的控制項 （事實上，這會導致判斷提示在偵錯組建）。 如需有關此清單控制項樣式的詳細資訊，請參閱[清單檢視控制項概觀](/windows/desktop/Controls/list-view-controls-overview)。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::InsertItem](#insertitem)。  
   
 ##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor  
- 如果設定的清單檢視控制項的框線色彩[LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739)延伸的視窗樣式設定。  
+ 如果設定的清單檢視控制項的框線色彩[LVS_EX_BORDERSELECT](/windows/desktop/Controls/list-view-window-styles)延伸的視窗樣式設定。  
   
 ```  
 COLORREF SetOutlineColor(COLORREF color);
@@ -3612,13 +3612,13 @@ COLORREF SetOutlineColor(COLORREF color);
   
 ### <a name="parameters"></a>參數  
  *色彩*  
- 新[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，其中包含外框色彩。  
+ 新[COLORREF](/windows/desktop/gdi/colorref)結構，其中包含外框色彩。  
   
 ### <a name="return-value"></a>傳回值  
  上一個`COLORREF`結構，其中包含外框色彩  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETOUTLINECOLOR](/windows/desktop/Controls/lvm-setoutlinecolor)訊息、 Windows SDK 中所述。  
   
 ##  <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn  
  設定選取的資料行的清單檢視控制項。  
@@ -3635,7 +3635,7 @@ LRESULT SetSelectedColumn(int iCol);
  不會使用傳回的值。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETSELECTEDCOLUMN](/windows/desktop/Controls/lvm-setselectedcolumn)訊息、 Windows SDK 中所述。  
   
 ##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark  
  設定的選取範圍標記的清單檢視控制項。  
@@ -3652,7 +3652,7 @@ int SetSelectionMark(int iIndex);
  先前選取的標記或如果沒有選取範圍標記為-1。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb775112)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetSelectionMark](/windows/desktop/api/commctrl/nf-commctrl-listview_setselectionmark)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CListCtrl::GetSelectionMark](#getselectionmark)。  
@@ -3666,7 +3666,7 @@ BOOL SetTextBkColor(COLORREF cr);
   
 ### <a name="parameters"></a>參數  
  *cr*  
- COLORREF，指定新的文字背景色彩。 如需資訊，請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
+ COLORREF，指定新的文字背景色彩。 如需資訊，請參閱[COLORREF](/windows/desktop/gdi/colorref) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3691,7 +3691,7 @@ BOOL SetTextColor(COLORREF cr);
   
 ### <a name="parameters"></a>參數  
  *cr*  
- COLORREF，指定新的文字色彩。 如需資訊，請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows SDK 中。  
+ COLORREF，指定新的文字色彩。 如需資訊，請參閱[COLORREF](/windows/desktop/gdi/colorref) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -3717,13 +3717,13 @@ BOOL SetTileInfo(PLVTILEINFO pti);
   
 ### <a name="parameters"></a>參數  
  *pti*  
- 指標[LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766)結構，其中包含要設定的資訊。  
+ 指標[LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)結構，其中包含要設定的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETTILEINFO](/windows/desktop/Controls/lvm-settileinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo  
  設定中並排顯示檢視清單檢視控制項使用的資訊。  
@@ -3734,13 +3734,13 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
   
 ### <a name="parameters"></a>參數  
  *ptvi*  
- 指標[LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768)結構，其中包含要設定的資訊。  
+ 指標[LVTILEVIEWINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileviewinfo)結構，其中包含要設定的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETTILEVIEWINFO](/windows/desktop/Controls/lvm-settileviewinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="settooltips"></a>  CListCtrl::SetToolTips  
  設定工具提示控制項的清單檢視控制項將用來顯示工具提示。  
@@ -3757,7 +3757,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
  指標[CToolTipCtrl](ctooltipctrl-class.md)物件，其中包含工具提示，就如同先前不使用任何工具提示一樣，先前使用控制項，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[LVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761216)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[LVM_SETTOOLTIPS](/windows/desktop/Controls/lvm-settooltips)、 Windows SDK 中所述。  
   
  若要不使用工具提示，指出當您建立的 LVS_NOTOOLTIPS 樣式`CListCtrl`物件。  
   
@@ -3776,7 +3776,7 @@ DWORD SetView(int iView);
  否則傳回 1，如果成功，則為-1。 例如，如果檢視是無效，則傳回-1。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SETVIEW](/windows/desktop/Controls/lvm-setview)訊息、 Windows SDK 中所述。  
   
 ##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas  
  設定位置顯示圖示，在清單檢視控制項中的區域。  
@@ -3795,7 +3795,7 @@ void SetWorkAreas(
  陣列的地址`RECT`結構 (或`CRect`物件)，以指定新的工作區域的清單檢視控制項。 必須在工作區座標中指定這些區域。 如果此參數為 NULL，[工作] 區域將控制項的工作區。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775128)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SetWorkAreas](/windows/desktop/api/commctrl/nf-commctrl-listview_setworkareas)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 
@@ -3826,7 +3826,7 @@ BOOL SortGroups(
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LVM_SORTGROUPS](/windows/desktop/Controls/lvm-sortgroups)訊息、 Windows SDK 中所述。  
   
 ##  <a name="sortitems"></a>  CListCtrl::SortItems  
  使用應用程式定義的比較函式，以排序清單檢視項目。  
@@ -3861,9 +3861,9 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 比較函式必須傳回的負數的值，如果第一個項目之前，應該還有第二個，正數的值，如果第一個項目應該遵循第二個或零，如果兩個項目相等。  
   
- *LParam1*參數是 32 位元相關聯的值與第一個項目相比較，而*lParam2*參數是第二個項目相關聯的值。 以下是中所指定的值*lParam*成員的項目[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構時它們插入至清單。 *LParamSort*參數是與相同*dwData*值。  
+ *LParam1*參數是 32 位元相關聯的值與第一個項目相比較，而*lParam2*參數是第二個項目相關聯的值。 以下是中所指定的值*lParam*成員的項目[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)結構時它們插入至清單。 *LParamSort*參數是與相同*dwData*值。  
   
- 這個方法會傳送[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  以下是簡單的比較函式會導致正在排序的項目及其*lParam*值。  
@@ -3915,14 +3915,14 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-此訊息就像是[LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)，除了的資訊類型傳遞至的比較函式。 在  [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227)， *lParam1*並*lParam2*是項目，即可比較的值。 在  [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)， *lParam1*是目前的索引，要比較的第一個項目並*lParam2*是目前的索引，第二個項目。 您可以傳送[LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055)訊息，以擷取項目的詳細資訊。  
+此訊息就像是[LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems)，除了的資訊類型傳遞至的比較函式。 在  [LVM_SORTITEMS](/windows/desktop/Controls/lvm-sortitems)， *lParam1*並*lParam2*是項目，即可比較的值。 在  [LVM_SORTITEMSEX](/windows/desktop/Controls/lvm-sortitemsex)， *lParam1*是目前的索引，要比較的第一個項目並*lParam2*是目前的索引，第二個項目。 您可以傳送[LVM_GETITEMTEXT](/windows/desktop/Controls/lvm-getitemtext)訊息，以擷取項目的詳細資訊。  
   
  比較函式必須傳回的負數的值，如果第一個項目之前，應該還有第二個，正數的值，如果第一個項目應該遵循第二個或零，如果兩個項目相等。  
   
 > [!NOTE]
->  在排序過程中，清單檢視內容是不穩定的。 如果回呼函式會傳送任何訊息至清單檢視控制項以外[LVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb774953)，是無法預期的結果。  
+>  在排序過程中，清單檢視內容是不穩定的。 如果回呼函式會傳送任何訊息至清單檢視控制項以外[LVM_GETITEM](/windows/desktop/Controls/lvm-getitem)，是無法預期的結果。  
   
- 這個方法會傳送[LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[LVM_SORTITEMSEX](/windows/desktop/Controls/lvm-sortitemsex)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_listCtrl`，也就是用來存取目前的清單檢視控制項。 下一個範例中會使用此變數。  
@@ -3978,13 +3978,13 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
   
 ### <a name="parameters"></a>參數  
  *pInfo*  
- 指標[LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754)結構。  
+ 指標[LVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvhittestinfo)結構。  
   
 ### <a name="return-value"></a>傳回值  
  以一為索引的項目，或子項目、 要進行測試 （如果有的話），否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作 Win32 巨集的行為[ListView_SubItemHitTest](http://msdn.microsoft.com/library/windows/desktop/bb775135)、 Windows SDK 中所述。  
+ 此成員函式實作 Win32 巨集的行為[ListView_SubItemHitTest](/windows/desktop/api/commctrl/nf-commctrl-listview_subitemhittest)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
 

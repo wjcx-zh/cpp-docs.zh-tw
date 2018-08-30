@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85c19e4f23f7c6e9454793ac86a574614ec2fae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847243"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207919"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -39,7 +39,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017，發行\<filesystem > 標頭還不是 c + + 標準。 Visual C++ 2017 實作的是 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的草稿最終版標準。
+> Visual Studio 2017 版本\<filesystem > 標頭還不是 c + + 標準。 Visual C++ 2017 實作的是 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的草稿最終版標準。
 
 這個標頭支援兩個廣泛的主機作業系統類別之一的檔案系統：Microsoft Windows 和 Posix。
 
@@ -128,7 +128,7 @@ using namespace std::experimental::filesystem::v1;
 
 |名稱|描述|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)，並在已存在目的地檔案時決定行為。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)，並在已存在目的地檔案時決定行為。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|
 |[權限](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|

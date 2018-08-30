@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210938"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>彙總與 Class Factory 巨集
 這些巨集提供的方式控制彙總，並宣告 class factory。  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  CComClassFactory 類別  
- 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。  
+ 這個類別會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面。  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>備註  
- `CComClassFactory` 會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定的 class factory，以允許更快速地建立新物件的記憶體中的方法。 `IClassFactory` 必須針對您要註冊在系統登錄，並將您指派為 CLSID 的每個類別實作。  
+ `CComClassFactory` 會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定的 class factory，以允許更快速地建立新物件的記憶體中的方法。 `IClassFactory` 必須針對您要註冊在系統登錄，並將您指派為 CLSID 的每個類別實作。  
   
  ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要覆寫此預設值，請指定其中一個 DECLARE_CLASSFACTORY*XXX*類別定義中的巨集。 例如， [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)巨集的 class factory 會使用指定的類別：  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 類別  
- 這個類別會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面。  
+ 這個類別會實作[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)介面。  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *授權*  
  類別若實作下列靜態函式：  
   
-- **靜態 BOOL VerifyLicenseKey (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **靜態 BOOL GetLicenseKey (DWORD** `dwReserved` **，BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **靜態的 BOOL IsLicenseValid （);**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>備註  
- `CComClassFactory2` 會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面，這是延伸模組的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 `IClassFactory2` 透過授權的控制項物件建立。 類別處理站執行已授權的電腦上，可以提供執行階段授權金鑰。 這種授權金鑰可讓應用程式的完整機器授權不存在時，具現化物件。  
+ `CComClassFactory2` 會實作[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)介面，這是延伸模組的[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)。 `IClassFactory2` 透過授權的控制項物件建立。 類別處理站執行已授權的電腦上，可以提供執行階段授權金鑰。 這種授權金鑰可讓應用程式的完整機器授權不存在時，具現化物件。  
   
  ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](#declare_classfactory2)物件的類別定義中的巨集。 例如:   
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread 類別  
- 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，並允許在多個 apartment 中建立的物件。  
+ 這個類別會實作[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)介面，並允許在多個 apartment 中建立的物件。  
   
 > [!IMPORTANT]
 >  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>參數  
  *statusFlags*  
- [in]Forced VIEWSTATUS 旗標。 請參閱[forced VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201)旗標的清單。  
+ [in]Forced VIEWSTATUS 旗標。 請參閱[forced VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus)旗標的清單。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

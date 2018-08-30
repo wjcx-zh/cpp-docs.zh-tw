@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613215"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199460"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概觀
 非 MFC 的 DLL 是在內部，不會使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以呼叫由 MFC 或非 MFC 可執行檔。 從非 MFC DLL 使用標準的 C 介面通常被匯出函式。  
   
- 如需非 MFC Dll 的詳細資訊，請參閱 <<c0> [ 動態連結程式庫](http://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK 中。  
+ 如需非 MFC Dll 的詳細資訊，請參閱 <<c0> [ 動態連結程式庫](https://msdn.microsoft.com/library/windows/desktop/ms682589)Windows SDK 中。  
   
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   

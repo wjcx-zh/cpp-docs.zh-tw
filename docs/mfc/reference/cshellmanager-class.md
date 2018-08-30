@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852378"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207388"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 類別
 實作數個可讓您使用識別項清單指標 (PIDL) 的方法。  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  對話方塊標題。  
   
  [in]*ulFlags*  
- 指定對話方塊中的選項旗標。 請參閱[BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205)詳細描述。  
+ 指定對話方塊中的選項旗標。 請參閱[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)詳細描述。  
   
  [out]*piFolderImage*  
  其中方法會將寫入選取的資料夾的影像索引的整數值的指標。  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  新的項目清單如果函式成功，否則為 NULL 指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會建立新[ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)夠大，無法同時包含*pidl1*並*pidl2*。 然後它會複製*pidl1*並*pidl2*至新的清單。  
+ 這個方法會建立新[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist)夠大，無法同時包含*pidl1*並*pidl2*。 然後它會複製*pidl1*並*pidl2*至新的清單。  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  將複製的項目清單。  

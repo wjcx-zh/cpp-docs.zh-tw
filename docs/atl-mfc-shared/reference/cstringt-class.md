@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609495"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197929"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 此類別代表`CStringT`物件。  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` 嘗試配置系統記憶體的新格式的字串。 如果此嘗試失敗時，會自動擲回記憶體例外狀況。  
   
- 每次插入必須有對應的參數下列*pszFormat*或是*nFormatID*參數。 訊息文字，在數個逸出序列支援動態格式化的訊息。 如需詳細資訊，請參閱 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) Windows SDK 中的函式。  
+ 每次插入必須有對應的參數下列*pszFormat*或是*nFormatID*參數。 訊息文字，在數個逸出序列支援動態格式化的訊息。 如需詳細資訊，請參閱 Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 中的函式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` 呼叫[CStringT::FormatMessage](#formatmessage)，它會嘗試為新格式的字串配置系統記憶體。 如果此嘗試失敗時，會自動擲回記憶體例外狀況。  
   
- 如需詳細資訊，請參閱 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) Windows SDK 中的函式。  
+ 如需詳細資訊，請參閱 Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 中的函式。  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  格式化的訊息字串，使用變數引數清單。  

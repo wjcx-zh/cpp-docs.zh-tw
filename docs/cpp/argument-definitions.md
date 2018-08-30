@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407584"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200636"
 ---
 # <a name="argument-definitions"></a>引數定義
 原型中的引數  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  第一個命令列引數一定是`argv` **[1]** 最後一個，而且`argv` **[** `argc` -1 **]**。  
   
 > [!NOTE]
->  依照慣例，`argv`**[0]** 是對程式叫用的命令。  不過，就可以繁衍 （spawn） 處理程序，使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)如果您使用第一個和第二個引數 (*lpApplicationName*並*lpCommandLine*)， `argv`**[0]** 可能不是可執行檔名稱，請使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)擷取可執行檔的名稱和其完整路徑。  
+>  依照慣例，`argv`**[0]** 是對程式叫用的命令。  不過，就可以繁衍 （spawn） 處理程序，使用[CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197)如果您使用第一個和第二個引數 (*lpApplicationName*並*lpCommandLine*)， `argv`**[0]** 可能不是可執行檔名稱，請使用[GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197)擷取可執行檔的名稱和其完整路徑。  
   
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
  *envp*  

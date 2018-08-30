@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f31d5d04638685b6d7636f40108b7e95bbd5d37
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 301549e26212448ae0392a356aa556358dcf6f47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338821"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205459"
 ---
 # <a name="cevent-class"></a>CEvent 類別
 代表事件，也就是讓一個執行緒通知發生事件的另一個執行緒的同步處理物件。  
@@ -113,7 +113,7 @@ CEvent(
  `CEvent` 物件的名稱。 如果該物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件，不是事件，建構將會失敗。 如果是 NULL，則會有名稱為 null。  
   
  *lpsaAttribute*  
- 事件物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
+ 事件物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
  存取或釋放`CEvent`物件，建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件並呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)並[解除鎖定](../../mfc/reference/csinglelock-class.md#unlock)成員函式。  
@@ -121,7 +121,7 @@ CEvent(
  若要變更的狀態`CEvent`物件已收到訊號 （執行緒就不必等候），呼叫[SetEvent](#setevent)或是[PulseEvent](#pulseevent)。 若要設定的狀態`CEvent`為未收到信號的物件 （執行緒就必須等候），呼叫[ResetEvent](#resetevent)。  
   
 > [!IMPORTANT]
->  在建立後`CEvent`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。  
+>  在建立後`CEvent`物件，請使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以確保 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。  
   
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  將狀態設定為收到信號的事件 （提供）、 釋放所有等候中執行緒，並且將它重設為未收到信號 （無法使用） 會自動。  
@@ -138,7 +138,7 @@ BOOL PulseEvent();
   
  如果沒有執行緒在等候，或沒有任何執行緒可以立即釋放`PulseEvent`設定至事件的狀態為未收到訊號，並傳回。  
   
- `PulseEvent` 使用基本 Win32`PulseEvent`函式，可以暫時移除從等候狀態的核心模式的非同步程序呼叫。 因此，`PulseEvent`不可靠，而且不應由新的應用程式。 如需詳細資訊，請參閱 < [PulseEvent 函式](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
+ `PulseEvent` 使用基本 Win32`PulseEvent`函式，可以暫時移除從等候狀態的核心模式的非同步程序呼叫。 因此，`PulseEvent`不可靠，而且不應由新的應用程式。 如需詳細資訊，請參閱 < [PulseEvent 函式](/windows/desktop/api/winbase/nf-winbase-pulseevent)。  
   
 ##  <a name="resetevent"></a>  CEvent::ResetEvent  
  設定事件的狀態未收到信號，直到明確設定 藉由為已收到訊號[SetEvent](#setevent)成員函式。  

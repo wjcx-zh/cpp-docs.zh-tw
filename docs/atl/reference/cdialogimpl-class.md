@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206637"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 類別
 這個類別提供方法來建立非強制回應或非強制回應對話方塊。  
@@ -102,7 +102,7 @@ template <class T,
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的對話方塊|[ATL 視窗類別](../../atl/atl-window-classes.md)|  
 |ATL 專案精靈|[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|  
-|對話方塊|[對話方塊](http://msdn.microsoft.com/library/windows/desktop/ms632588)和後續 Windows SDK 中的主題|  
+|對話方塊|[對話方塊](https://msdn.microsoft.com/library/windows/desktop/ms632588)和後續 Windows SDK 中的主題|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
@@ -126,7 +126,7 @@ HWND Create(
  [in]主控視窗控制代碼。  
   
  **RECT &** *rect*  
- [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定對話方塊的大小和位置。  
+ [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定對話方塊的大小和位置。  
   
  *dwInitParam*  
  [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>參數  
  *hWndParent*  
- [in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。  
+ [in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。  
   
  *dwInitParam*  
  [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。  

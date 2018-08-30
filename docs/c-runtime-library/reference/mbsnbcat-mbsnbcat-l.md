@@ -42,19 +42,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f6d75df13263c0eb6a239f2fe6f4f5a400e03d3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405050"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210078"
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 
-最多會附加第一個**n**到另一個多位元組字元字串位元組。 這些函式已有更安全的版本可用，請參閱 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
+最多會附加第一個**n**到另一個多位元組字元字串的位元組。 這些函式已有更安全的版本可用，請參閱 [_mbsnbcat_s、_mbsnbcat_s_l](mbsnbcat-s-mbsnbcat-s-l.md)。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -94,24 +94,24 @@ unsigned char *_mbsnbcat_l(
 以 null 終止的多位元組字元來源字串。
 
 *count*<br/>
-從位元組數目*src*要附加至*目的地*。
+從位元組數目*src*要附加至*dest*。
 
 *locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsnbcat**傳回目的地字串的指標。 未保留表示錯誤的傳回值。
+**_mbsnbcat**傳回目的字元字串的指標。 未保留表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbcat**函式會將附加，最多第一個*計數*位元組*src*至*目的地*。 如果前置節點中的 null 字元的位元組*目的地*前導位元組的初始位元組*src*會覆寫此前導位元組。 否則的初始位元組*src*結束的 null 字元會覆寫*目的地*。 如果中出現 null 位元組*src*之前*計數*會附加位元組， **_mbsnbcat**附加所有位元組*src*，直到 null 字元。 如果*計數*大於的長度*src*，長度*src*用來取代*計數*。 此產生的字串會以 Null 字元結束。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**_Mbsnbcat**函式附加最多會第一個*計數*位元組*src*至*dest*。 如果前中的 null 字元的位元組*dest*前導位元組的初始位元組*src*會覆寫此前導位元組。 否則的初始位元組*src*會結束的 null 字元的覆寫*dest*。 如果在出現 null 位元組*src*之前*計數*會附加位元組， **_mbsnbcat**附加所有位元組*src*，直到 null 字元。 如果*計數*大於的長度*src*，長度*src*用來取代*計數*。 此產生的字串會以 Null 字元結束。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcat**函式版本會使用目前的地區設定針對此與地區設定相關行為; **_mbsnbcat_l**版本也一樣，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcat**函式版本會針對地區設定相關行為; 使用目前的地區設定 **_mbsnbcat_l**版本也一樣，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-如果*目的地*或*src*是**NULL**，函式中所述，將會產生無效的參數錯誤，[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果處理此錯誤，則此函數會傳回**EINVAL**並設定**errno**至**EINVAL**。
+如果*dest*或是*src*是**NULL**，函式會產生無效的參數錯誤，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果已處理的錯誤，則此函數會傳回**EINVAL**並設定**errno**來**EINVAL**。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -124,7 +124,7 @@ unsigned char *_mbsnbcat_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbsnbcat**|\<mbstring.h>|
 |**_mbsnbcat_l**|\<mbstring.h>|

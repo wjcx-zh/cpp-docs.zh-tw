@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfc0b62fd3008ae18ae82703bfb896d56dba1de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337365"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208881"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 當您撰寫應用程式時，您會建立單一[CWinApp](../../mfc/reference/cwinapp-class.md)-衍生物件。 有時候，您可能想要取得此物件來自外部的相關資訊`CWinApp`-衍生物件。 或者，您可能需要其他全域"mananger 」 物件的存取權。
@@ -96,7 +96,7 @@ CWinThread* AfxBeginThread(
  要傳遞至控制函式中的函式宣告的參數中所示的參數*pfnThreadProc*。  
   
  *nPriority*  
- 想要的執行緒優先權。 如需完整清單和描述可用的優先順序，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
+ 想要的執行緒優先權。 如需完整清單和描述可用的優先順序，請參閱[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。  
   
  *nStackSize*  
  指定的大小，以位元組為單位的新執行緒的堆疊。 如果為 0，則堆疊大小就會預設堆疊大小相同與建立的執行緒。  
@@ -109,7 +109,7 @@ CWinThread* AfxBeginThread(
 - **0**在建立後立即啟動執行緒。  
   
  *lpSecurityAttrs*  
- 指向[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定執行緒的安全性屬性。 如果是 NULL，就會使用相同的安全性屬性建立的執行緒。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
+ 指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定執行緒的安全性屬性。 如果是 NULL，就會使用相同的安全性屬性建立的執行緒。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
   
 ### <a name="return-value"></a>傳回值  
  新建立的執行緒物件或如果發生失敗則為 NULL 指標。  
@@ -178,7 +178,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  *lpszName*  
  包含資源 ID 之字串的指標。    
  *lpszType*  
- 資源類型的指標。 如需資源類型的清單，請參閱 < [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) Windows SDK 中。  
+ 資源類型的指標。 如需資源類型的清單，請參閱 < [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) Windows SDK 中。  
    
 ### <a name="return-value"></a>傳回值  
  包含資源之模組的控制代碼。  
@@ -506,7 +506,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  如果此函數成功，則傳回的值會是模組的控制代碼。 如果函式失敗，傳回的值會是 NULL。  
   
 ### <a name="remarks"></a>備註  
- 它會傳回可用於控制代碼[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 函式的位址。 `AfxLoadLibrary` 也可以用來對應其他可執行檔的模組。  
+ 它會傳回可用於控制代碼[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 函式的位址。 `AfxLoadLibrary` 也可以用來對應其他可執行檔的模組。  
   
  每個處理序會維護每個載入的程式庫模組的參考計數。 此參考計數會遞增每次`AfxLoadLibrary`呼叫，以及每次都會遞減`AfxFreeLibrary`呼叫。 在參考計數達到零時，模組就從呼叫處理序的位址空間取消對應，且控制代碼不再有效。  
   
@@ -559,7 +559,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
   
 ### <a name="parameters"></a>參數  
  *lpWndClass*  
- 指標[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構，其中包含要註冊視窗類別的相關資訊。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
+ 指標[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)結構，其中包含要註冊視窗類別的相關資訊。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功註冊的類別;，則為 TRUE。否則為 FALSE。  
@@ -588,7 +588,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 ### <a name="parameters"></a>參數  
  *nClassStyle*  
- 指定的 Windows 類別樣式或樣式，建立使用位元 OR 組合 ( **&#124;**) 運算子，視窗類別。 如需類別樣式的清單，請參閱 < [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的結構。 如果是 NULL，預設值將，如下所示：  
+ 指定的 Windows 類別樣式或樣式，建立使用位元 OR 組合 ( **&#124;**) 運算子，視窗類別。 如需類別樣式的清單，請參閱 < [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK 中的結構。 如果是 NULL，預設值將，如下所示：  
   
 -   將滑鼠樣式設定為 CS_DBLCLKS，會將按兩下訊息至視窗程序當使用者按兩下滑鼠。  
   
@@ -602,7 +602,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  指定將在從視窗類別建立之各個視窗中安裝的游標資源控制代碼。 如果您使用預設值是**0**，您會收到標準 IDC_ARROW 游標。  
   
  *hbrBackground*  
- 指定將在從視窗類別建立之各個視窗中安裝的筆刷資源控制代碼。 如果您使用預設值是**0**，您會有 NULL 背景筆刷，和您的視窗，根據預設，不會清除其背景工作，而處理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)。  
+ 指定將在從視窗類別建立之各個視窗中安裝的筆刷資源控制代碼。 如果您使用預設值是**0**，您會有 NULL 背景筆刷，和您的視窗，根據預設，不會清除其背景工作，而處理[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)。  
   
  *hIcon*  
  指定將在從視窗類別建立之各個視窗中安裝的圖示資源控制代碼。 如果您使用預設值是**0**，您會收到標準的旗標 Windows 標誌圖示。  

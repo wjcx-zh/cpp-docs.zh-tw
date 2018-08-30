@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e566e50cc0fed4b17b085451410a1d0c3f81fb38
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5b11100ff054b9edd18fc0ba335b26fa4c1076d7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204280"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -43,7 +43,7 @@ ms.locfileid: "42597543"
 
 ## <a name="remarks"></a>備註
 
-**Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](http://msdn.microsoft.com/library/windows/desktop/ms694322)。
+**Implements_category** c + + 屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別和執行它們的運作方式為何？](https://msdn.microsoft.com/library/windows/desktop/ms694322)。
 
 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
 

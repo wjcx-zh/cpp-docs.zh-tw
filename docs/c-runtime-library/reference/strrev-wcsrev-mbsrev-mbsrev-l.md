@@ -56,19 +56,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b99b08fc7761f5fb2d15761bf7726ac0faf64d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2c9c2f461df538f405af8295c65f67dbefe46bb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415422"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198090"
 ---
 # <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 反轉字串字元。
 
 > [!IMPORTANT]
-> **_mbsrev**和 **_mbsrev_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsrev**並 **_mbsrev_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -102,14 +102,14 @@ unsigned char *_mbsrev_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strrev**函式會反轉順序中的字元*str*。 原地保留終止的 Null 字元。 **_wcsrev**和 **_mbsrev**是寬字元和多位元組字元版本的 **_strrev**。 引數和傳回值 **_wcsrev**是寬字元字串; **_mbsrev**是多位元組字元字串。 如 **_mbsrev**中的每一個多位元組字元的位元組順序*str*則不會變更。 除此之外，這三個函式的行為相同。
+**_Strrev**函式會反轉中的字元順序*str*。 原地保留終止的 Null 字元。 **_wcsrev**並 **_mbsrev**是寬字元和多位元組字元版本的 **_strrev**。 引數和傳回值 **_wcsrev**是寬字元字串; **_mbsrev**是多位元組字元字串。 針對 **_mbsrev**中的每個多位元組字元的位元組順序*str*則不會變更。 除此之外，這三個函式的行為相同。
 
-**_mbsrev**會驗證其參數。 如果有任一個*string1*或*string2*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_mbsrev**傳回**NULL**並設定**errno**至**EINVAL**。 **_strrev**和 **_wcsrev**不會驗證它們的參數。
+**_mbsrev**會驗證其參數。 如果有任一*string1*或是*string2*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行 **_mbsrev**會傳回**NULL**並設定**errno**至**EINVAL**。 **_strrev**並 **_wcsrev**不會驗證其參數。
 
-輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式版本是相同的不同之處在於，不是有 **_l**後置詞使用目前的地區設定而沒有 **_l**尾碼改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式的版本完全相同，只不過沒有具有 **_l**後置詞使用目前的地區設定，而沒有 **_l**後置詞改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -120,7 +120,7 @@ unsigned char *_mbsrev_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> 或 \<wchar.h>|

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 47b0058cba19ac804c2d996052e9a5ec2df68bc5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879335"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208944"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 類別
 這個類別是安全性屬性結構的精簡型包裝函式。  
@@ -53,9 +53,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[Csecurityattributes:: Set](#set)|呼叫這個方法來設定的屬性`CSecurityAttributes`物件。|  
   
 ## <a name="remarks"></a>備註  
- `SECURITY_ATTRIBUTES`結構包含[安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa379561)用於建立物件，並指定是否可繼承控制代碼藉由指定此結構擷取。  
+ `SECURITY_ATTRIBUTES`結構包含[安全性描述元](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)用於建立物件，並指定是否可繼承控制代碼藉由指定此結構擷取。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `SECURITY_ATTRIBUTES`  
@@ -99,7 +99,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
   
 ## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
- [ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
- [安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)   
+ [安全性描述元](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)

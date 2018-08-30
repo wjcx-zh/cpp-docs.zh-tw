@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208512"
 ---
 # <a name="pointers-to-members"></a>成員的指標
 成員指標宣告是特殊的指標宣告。  函式是使用下列序列宣告：  
@@ -45,7 +45,7 @@ ms.locfileid: "39407776"
   - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
 1. 包含指向成員之類別的限定名稱。  
   - :: 運算子。  
-  - **\*** 運算子。  
+  - <strong>\*</strong>運算子。  
   - 選擇性**const**及/或**volatile**規範。  
   - 為成員指標命名的識別項。  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 之間的差異 **。\*** 並**-> \*** 運算子 （成員指標運算子） 在於 **。\*** 運算子會選取指定物件或物件參考，而**-> \*** 運算子會選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
+ 之間的差異 **。**<strong>\*</strong>並**->** <strong>\*</strong>運算子 （成員指標運算子） 在於 **。**<strong>\*</strong>運算子會選取指定物件或物件參考，而**->** <strong>\*</strong>運算子選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
  成員指標運算子的結果是成員的型別 — 在此情況下， `char *`。  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>成員指標的限制  
- 靜態成員的位址不是成員的指標。 它是某一個靜態成員執行個體的一般指標。 因為只有一個執行個體的靜態成員存在指定的類別，一般的地址的所有物件 **(&)** 取值 （dereference） 和 **(\*)** 運算子可用。  
+ 靜態成員的位址不是成員的指標。 它是某一個靜態成員執行個體的一般指標。 因為只有一個執行個體的靜態成員存在指定的類別，一般的地址的所有物件 (**&**) 和取值 （dereference） (<strong>\*</strong>) 運算子可用。  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>成員指標和虛擬函式  
  透過成員指標函式叫用虛擬函式的運作方式就像直接呼叫函式，正確的函式會在 v-table 中查閱及叫用。  

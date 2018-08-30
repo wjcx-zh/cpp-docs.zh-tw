@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 95b0931438afe8ff151d3c9f6c4727013df79478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464158"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209338"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 專屬**  
@@ -210,7 +210,7 @@ _variant_t(
   
 -   **_variant_t (VARIANT &***varSrc***)** 建構`_variant_t`物件從一份`VARIANT`物件。     variant 類型會保留。  
   
--   **_variant_t (VARIANT\****pVarSrc***)** 建構`_variant_t`物件從一份`VARIANT`物件。     variant 類型會保留。  
+-   **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** 建構`_variant_t`物件從一份`VARIANT`物件。     variant 類型會保留。  
   
 -   **_variant_t (_variant_t &***var_t_Src***)** 建構`_variant_t`物件從另一個`_variant_t`物件。     variant 類型會保留。  
   
@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** 建構`_variant_t`物件的類型從 VT_BSTR`_bstr_t`物件。     會配置新的 `BSTR`。  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** 建構`_variant_t`從 Unicode 字串 VT_BSTR 類型的物件。   會配置新的 `BSTR`。  
+-   **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** 建構`_variant_t`從 Unicode 字串 VT_BSTR 類型的物件。   會配置新的 `BSTR`。  
   
--   **_variant_t (char\***`strSrc`**)** 建構`_variant_t`VT_BSTR 類型從字串的物件。     會配置新的 `BSTR`。  
+-   **_variant_t (char**<strong>\*</strong>`strSrc`**)** 建構`_variant_t`VT_BSTR 類型從字串的物件。     會配置新的 `BSTR`。  
   
 -   **_variant_t (bool**`bSrc`**)** 建構`_variant_t`物件的類型從 VT_BOOL **bool**值。      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **，bool**`fAddRef`**= true)** 建構`_variant_t`從 COM 介面指標的型別 VT_UNKNOWN 的物件.       如果`fAddRef`已 **，則為 true**，然後`AddRef`來比對呼叫提供的介面指標上呼叫`Release`，會發生時`_variant_t`物件被終結。 它可以決定是否要呼叫`Release`上提供的介面指標。 如果`fAddRef`是**假**，這個建構函式接受提供的介面指標的擁有權; 請勿呼叫`Release`上提供的介面指標。  
+-   **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **，bool**`fAddRef`**= true)** 建構`_variant_t`類型的物件VT_UNKNOWN 從 COM 介面指標。       如果`fAddRef`已 **，則為 true**，然後`AddRef`來比對呼叫提供的介面指標上呼叫`Release`，會發生時`_variant_t`物件被終結。 它可以決定是否要呼叫`Release`上提供的介面指標。 如果`fAddRef`是**假**，這個建構函式接受提供的介面指標的擁有權; 請勿呼叫`Release`上提供的介面指標。  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **，bool**`fAddRef`**= true)** 建構`_variant_t`型別從 COM 介面的 VT_DISPATCH 的物件指標。       如果`fAddRef`已 **，則為 true**，然後`AddRef`來比對呼叫提供的介面指標上呼叫`Release`，會發生時`_variant_t`物件被終結。 它可以決定是否要呼叫`Release`上提供的介面指標。 如果`fAddRef`是**假**，這個建構函式接受提供的介面指標的擁有權; 請勿呼叫`Release`上提供的介面指標。  
+-   **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **，bool**`fAddRef`**= true)** 建構`_variant_t`物件輸入 VT_DISPATCH 從 COM 介面指標。       如果`fAddRef`已 **，則為 true**，然後`AddRef`來比對呼叫提供的介面指標上呼叫`Release`，會發生時`_variant_t`物件被終結。 它可以決定是否要呼叫`Release`上提供的介面指標。 如果`fAddRef`是**假**，這個建構函式接受提供的介面指標的擁有權; 請勿呼叫`Release`上提供的介面指標。  
   
 -   **_variant_t (十進位 &**`decSrc`**)** 建構`_variant_t`物件的類型從 VT_DECIMAL`DECIMAL`值。      
   

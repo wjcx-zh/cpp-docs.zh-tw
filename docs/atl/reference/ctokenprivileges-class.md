@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa48af82fb5b6119e1efc14081c6851eafb85fa5
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 23c8776e462c2b275b0c7620e01b4bc82e7ad7ed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208698"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195740"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 類別
 這個類別是包裝函式`TOKEN_PRIVILEGES`結構。  
@@ -79,13 +79,13 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|指派運算子。|  
   
 ## <a name="remarks"></a>備註  
- [存取權杖](http://msdn.microsoft.com/library/windows/desktop/aa374909)是說明處理序或執行緒的安全性內容，並配置給每位使用者登入 Windows 系統的物件。  
+ [存取權杖](/windows/desktop/SecAuthZ/access-tokens)是說明處理序或執行緒的安全性內容，並配置給每位使用者登入 Windows 系統的物件。  
   
- 存取權杖用來描述各種不同的安全性權限授與給每位使用者。 權限包含 64 位元數字稱為本機唯一識別碼 ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) 和描述項字串。  
+ 存取權杖用來描述各種不同的安全性權限授與給每位使用者。 權限包含 64 位元數字稱為本機唯一識別碼 ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) 和描述項字串。  
   
- `CTokenPrivileges`類別是包裝函式[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構，並包含 0 或更多權限。 可以新增權限，已刪除或查詢使用提供的類別方法。  
+ `CTokenPrivileges`類別是包裝函式[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構，並包含 0 或更多權限。 可以新增權限，已刪除或查詢使用提供的類別方法。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
@@ -106,7 +106,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  如果為 true，則會啟用特殊權限。 如果為 false，則會停用的權限。  
   
  *rPrivileges*  
- 若要參考[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構。 權限和屬性都會複製此結構，並新增至`CTokenPrivileges`物件。  
+ 若要參考[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。 權限和屬性都會複製此結構，並新增至`CTokenPrivileges`物件。  
   
 ### <a name="return-value"></a>傳回值  
  這個方法的第一種形式傳回的權限順利新增，false 否則如果為 true。  
@@ -125,7 +125,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
  `CTokenPrivileges`物件指派給新的物件。  
   
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)若要指派給新的結構`CTokenPrivileges`物件。  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)若要指派給新的結構`CTokenPrivileges`物件。  
   
 ### <a name="remarks"></a>備註  
  `CTokenPrivileges`物件可以選擇性地使用來建立`TOKEN_PRIVILEGES`結構或先前定義`CTokenPrivileges`物件。  
@@ -214,7 +214,7 @@ void GetLuidsAndAttributes(
   
 ### <a name="parameters"></a>參數  
  *pPrivileges*  
- 陣列的指標[LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)物件。 `CLUIDArray` typedef 定義為`CAtlArray<LUID> CLUIDArray`。  
+ 陣列的指標[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)物件。 `CLUIDArray` typedef 定義為`CAtlArray<LUID> CLUIDArray`。  
   
  *pAttributes*  
  DWORD 物件的陣列指標。 如果這個參數是省略，則為 NULL，不會擷取屬性。 `CAttributes` typedef 定義為`CAtlArray <DWORD> CAttributes`。  
@@ -251,7 +251,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 將指標傳回至[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構。  
+ 將指標傳回至[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  擷取與指定權限名稱相關聯的屬性。  
@@ -282,7 +282,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
   
 ### <a name="parameters"></a>參數  
  *rPrivileges*  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構，以指派給`CTokenPrivileges`物件。  
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構，以指派給`CTokenPrivileges`物件。  
   
  *rhs*  
  `CTokenPrivileges`指派給物件的物件。  
@@ -298,12 +298,12 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 將指標值轉換[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構。  
+ 將指標值轉換[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
- [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
+ [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
+ [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
+ [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)

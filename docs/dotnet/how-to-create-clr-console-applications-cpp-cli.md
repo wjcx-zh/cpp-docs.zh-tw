@@ -1,5 +1,5 @@
 ---
-title: 如何： 建立 CLR 主控台應用程式 (C + + /CLI) |Microsoft 文件
+title: 如何： 建立 CLR 主控台應用程式 (C + + /cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211153"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：建立 CLR 主控台應用程式 (C++/CLI)
 您可以使用主控台應用程式範本，建立已經有基本專案參考及檔案的主控台應用程式專案。  
@@ -32,7 +32,7 @@ ms.locfileid: "33132566"
   
 -   這些 .NET Framework 命名空間的參考：  
   
-    -   [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)—這個命名空間包含了基本類別和基底類別，而這些類別會定義最常使用的值和參考資料類型、事件和事件處理常式、介面、屬性以及處理例外狀況。  
+    -   [系統](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)-包含基本使用類別和基底類別，定義常用值和參考資料型別、 事件和事件處理常式、 介面、 屬性和處理例外狀況。  
   
     -   mscorlib—支援 .NET Framework 開發的組件 DLL。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33132566"
   
     -   主控台 (.cpp 檔) —您新建應用程式的主要原始程式檔和進入點。 它識別專案 .dll 檔案及專案命名空間。 在這個檔案中提供您自己的程式碼。  
   
-    -   AssemblyInfo.cpp—包含您可用來修改專案組件中繼資料的資訊，其中包括屬性、檔案、資源、類型、版本資訊、簽章資訊等。 如需詳細資訊，請參閱[組件內容](/dotnet/framework/app-domains/assembly-contents)。  
+    -   AssemblyInfo.cpp—包含您可用來修改專案組件中繼資料的資訊，其中包括屬性、檔案、資源、類型、版本資訊、簽章資訊等。 如需詳細資訊，請參閱 <<c0> [ 組件內容](/dotnet/framework/app-domains/assembly-contents)。  
   
     -   Stdafx.cpp—用於建置名稱為 Win32.pch 的先行編譯標頭檔及名稱為 StdAfx.obj 的先行編譯類型檔。  
   

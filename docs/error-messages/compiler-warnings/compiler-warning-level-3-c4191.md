@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4191 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4191 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291488"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197494"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>編譯器警告 (層級 3) C4191
 'operator/operation': 從 'type of expression' 到 'type required' 不安全的轉換  
@@ -36,7 +36,7 @@ ms.locfileid: "33291488"
   
 -   區隔引數清單的長度 (在 `__cdecl`，只有從較長的清單轉換成較短的清單，即使較短的是 varargs)。  
   
--   資料指標 (以外**void\***) 別名違反函式的指標。  
+-   資料指標 (而非**void**<strong>\*</strong>) 別名違反函式的指標。  
   
 -   會在 `reinterpret_cast`產生錯誤或警告的任何其他類型差異。  
   

@@ -67,19 +67,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d80ca39f4bb12fa28190c499d93ad4152831b4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417583"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202864"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
 附加字串字元。 這些函式已有更安全的版本可供使用，請參閱 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncat**和 **_mbsncat_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat**並 **_mbsncat_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -152,12 +152,12 @@ unsigned char *_mbsncat_l(
 
 ## <a name="remarks"></a>備註
 
-**Strncat**函式會將附加，最多第一個*計數*字元*strSource*至*strDest*。 起始字元*strSource*結束的 null 字元會覆寫*strDest*。 如果 null 字元出現在*strSource*之前*計數*字元會附加， **strncat**將從所有字元都附加*strSource*，直到 null 字元。 如果*計數*大於的長度*strSource*，長度*strSource*用來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**Strncat**函式附加最多會第一個*計數*字元*strSource*至*strDest*。 起始字元*strSource*會結束的 null 字元的覆寫*strDest*。 如果 null 字元會出現在*strSource*之前*計數*字元會附加， **strncat**附加所有字元從*strSource*，直到 null 字元。 如果*計數*大於的長度*strSource*，長度*strSource*用來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> **strncat**不會檢查有足夠的空間中*strDest*; 所以緩衝區滿溢的潛在原因。 請注意，*計數*限制數目的字元附加; 它不是，限制的大小*strDest*。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> **strncat**不會檢查在有足夠的空間*strDest*; 因此，它是緩衝區滿溢的潛在原因。 請記住*計數*限制數目的字元附加，而非大小的限制*strDest*。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-**wcsncat**和 **_mbsncat**是寬字元和多位元組字元版本的**strncat**。 字串引數和傳回值**wcsncat**是寬字元字串; **_mbsncat**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcsncat**並 **_mbsncat**是寬字元和多位元組字元版本的**strncat**。 字串引數和傳回值**wcsncat**是寬字元字串; **_mbsncat**是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -171,11 +171,11 @@ unsigned char *_mbsncat_l(
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**和 **_wcsncat_l**有沒有地區設定相依性，而且不是直接呼叫。 可供內部使用 **_tcsncat_l**。
+> **_strncat_l**並 **_wcsncat_l**沒有任何地區設定相依性，不是直接呼叫。 它們專供內部使用 **_tcsncat_l**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strncat**|\<string.h>|
 |**wcsncat**|\<string.h> 或 \<wchar.h>|

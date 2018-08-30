@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ec2924fa62370bdc0267cd860a9e2d37c140580
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 58b275b74f9bf7f252fc2d26e9ce32fa7dc143dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588919"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208351"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -36,7 +36,7 @@ ms.locfileid: "42588919"
 
 ## <a name="remarks"></a>備註
 
-**Defaultbind** c + + 屬性具有相同的功能[defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL 屬性。
+**Defaultbind** c + + 屬性具有相同的功能[defaultbind](/windows/desktop/Midl/defaultbind) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

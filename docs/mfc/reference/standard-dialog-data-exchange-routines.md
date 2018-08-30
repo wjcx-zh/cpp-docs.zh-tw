@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885971"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198493"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準對話方塊資料交換常式
 本主題列出常見的 MFC 對話方塊控制項所使用的標準對話方塊資料交換 (DDX) 常式。  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數的參考。  
   
 ### <a name="remarks"></a>備註  
- 當`DDX_Check`呼叫時，*值*設為核取方塊控制項的目前狀態。 如需可能的狀態值的清單，請參閱 < [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) Windows SDK 中。  
+ 當`DDX_Check`呼叫時，*值*設為核取方塊控制項的目前狀態。 如需可能的狀態值的清單，請參閱 < [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) Windows SDK 中。  
   
  如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 到 23|  
 |0|24 到 31|  
   
- 使用 Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)讀取值，或使用[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)來填滿值。 這些訊息會說明 Windows SDK。  
+ 使用 Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress)讀取值，或使用[IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress)來填滿值。 這些訊息會說明 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
  當`DDX_IPAddress`呼叫時，*值*其中一個讀取從 IP 位址的控制項，或*值*寫入至控制項，根據交換的方向。  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
   
 ### <a name="remarks"></a>備註  
- 當`DDX_Scroll`呼叫時，*值*設為控制項的捲動方塊的目前位置。 如需有關控制項的捲動方塊的目前位置相關聯的值的詳細資訊，請參閱[GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) Windows SDK 中。  
+ 當`DDX_Scroll`呼叫時，*值*設為控制項的捲動方塊的目前位置。 如需有關控制項的捲動方塊的目前位置相關聯的值的詳細資訊，請參閱[GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) Windows SDK 中。  
   
  如需有關 DDX 的詳細資訊，請參閱 < [ 對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
   

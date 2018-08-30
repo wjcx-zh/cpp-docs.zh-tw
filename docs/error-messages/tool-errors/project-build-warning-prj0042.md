@@ -1,7 +1,7 @@
 ---
-title: 專案建置警告 PRJ0042 |Microsoft 文件
+title: 專案建置警告 PRJ0042 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c0465b160615af96da8f489bbde63684598cffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 260da8ac336c640ea875610b2c62e6c42c7d335e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316825"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211346"
 ---
 # <a name="project-build-warning-prj0042"></a>專案建置警告 PRJ0042
-**檔案的自訂建置步驟 ' 輸出 property '**   
- ***檔案*' 未設定。將略過自訂建置步驟。**  
-  
- 未執行自訂建置步驟，因為未指定輸出。  
-  
- 若要解決這個錯誤，執行下列動作：  
-  
--   從組建排除自訂建置步驟。  
-  
--   加入輸出。  
-  
--   刪除自訂建置步驟之命令的內容。
+
+> 檔案的自訂建置步驟的 '輸出屬性'*檔案*' 未設定。 將略過自訂建置步驟。
+
+未執行自訂建置步驟，因為未指定輸出。
+
+若要解決這個錯誤，請執行下列：
+
+- 從組建中排除之自訂建置步驟。
+
+- 加入輸出。
+
+- 刪除自訂建置步驟之命令的內容。

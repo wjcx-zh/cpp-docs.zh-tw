@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1bd8abd7971c112f0d9e872df73b431c78259981
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131941"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205418"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>多執行緒： 結束在 MFC 中的執行緒
 兩種正常情況會造成執行緒結束： 結束控制函式，或不允許執行緒執行到完成為止。 如果文書處理器使用執行緒來進行背景列印，控制函式就會在列印成功完成正常結束。 如果使用者想要取消列印，不過，有必須不當結束背景列印執行緒。 本主題說明如何實作每種情況，以及如何終止之後取得執行緒的結束代碼。  
@@ -43,7 +43,7 @@ ms.locfileid: "43131941"
  
 對於背景工作執行緒，正常的執行緒終止很簡單： 結束控制函式，並傳回值，表示終止的原因。 您可以使用[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)函式或**傳回**陳述式。 一般而言，0 表示順利完成，但這由您決定。  
   
-使用者介面執行緒，程序也一樣簡單： 從使用者介面執行緒內呼叫[PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK 中。 唯一的參數，`PostQuitMessage`會是執行緒的結束代碼。 至於背景工作執行緒，0 通常表示順利完成。  
+使用者介面執行緒，程序也一樣簡單： 從使用者介面執行緒內呼叫[PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK 中。 唯一的參數，`PostQuitMessage`會是執行緒的結束代碼。 至於背景工作執行緒，0 通常表示順利完成。  
   
 ##  <a name="_core_premature_thread_termination"></a> 過早的執行緒終止  
  
@@ -53,7 +53,7 @@ ms.locfileid: "43131941"
   
 ##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> 擷取執行緒的結束代碼  
  
-若要取得背景工作角色或使用者介面執行緒的結束代碼，請呼叫[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)函式。 如需此函式的資訊，請參閱 Windows SDK。 此函式控制代碼的執行緒 (儲存在`m_hThread`資料成員`CWinThread`物件) 以及 DWORD 的位址。  
+若要取得背景工作角色或使用者介面執行緒的結束代碼，請呼叫[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)函式。 如需此函式的資訊，請參閱 Windows SDK。 此函式控制代碼的執行緒 (儲存在`m_hThread`資料成員`CWinThread`物件) 以及 DWORD 的位址。  
   
 如果執行緒仍在作用中， `GetExitCodeThread` STILL_ACTIVE 置於所提供的 DWORD 位址; 否則放置在這個位址的結束代碼。  
   
@@ -70,4 +70,4 @@ ms.locfileid: "43131941"
 [使用 c + + 和 MFC 進行多執行緒處理](multithreading-with-cpp-and-mfc.md)   
 [_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
-[ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)
+[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)

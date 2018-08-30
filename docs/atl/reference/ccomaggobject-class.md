@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571933"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202471"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
-這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總物件的介面。 根據定義，彙總的物件會包含在外部物件。 `CComAggObject`類別是類似[CComObject 類別](../../atl/reference/ccomobject-class.md)，只不過它會公開給外部用戶端直接存取的介面。  
+這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)彙總物件的介面。 根據定義，彙總的物件會包含在外部物件。 `CComAggObject`類別是類似[CComObject 類別](../../atl/reference/ccomobject-class.md)，只不過它會公開給外部用戶端直接存取的介面。  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|委派`IUnknown`呼叫的外部未知。|  
   
 ## <a name="remarks"></a>備註  
- `CComAggObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總的物件。 `CComAggObject` 都有它自己`IUnknown`介面，則外部物件的不同`IUnknown`介面，並會維護其本身的參考計數。  
+ `CComAggObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)彙總的物件。 `CComAggObject` 都有它自己`IUnknown`介面，則外部物件的不同`IUnknown`介面，並會維護其本身的參考計數。  
   
  如需有關彙總的詳細資訊，請參閱[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)。  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>參數  
  *前置處理*  
- [out]指標 **CComAggObject\<* * * 包含* **>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。  
+ [out]指標**CComAggObject\<**<em>包含</em>**>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  

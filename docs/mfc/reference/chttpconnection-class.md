@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03e773e57b4cdaee09331dab651f41f1fa8db211
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bbc42f1af6dab8c34c6092e604682669ab18b9bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336058"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211573"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 類別
 管理您與 HTTP 伺服器的連接。  
@@ -129,7 +129,7 @@ CHttpConnection(
 |非 NULL 字串|非 NULL 字串|*pstrUserName*|*pstrPassword*|  
   
  *dwFlags*  
- 任何組合**INTERNET_ FLAG_\*** 旗標。 請參閱表格**備註**一節[chttpconnection::](#openrequest)的說明*dwFlags*值。  
+ 任何組合`INTERNET_FLAG_*`旗標。 請參閱表格**備註**一節[chttpconnection::](#openrequest)的說明*dwFlags*值。  
   
 ### <a name="remarks"></a>備註  
  您永遠不會建立`CHttpConnection`直接。 相反地，您藉由呼叫，會在建立物件時[cinternetsession:: Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。  

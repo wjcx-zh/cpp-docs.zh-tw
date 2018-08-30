@@ -62,12 +62,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e5166ef52f88e714d1168fe25a1ec29dd5360205
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451598"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210501"
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -168,29 +168,29 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**Vsnprintf**函式會傳回寫入的字元數，不計結束的 null 字元。 如果所指定的緩衝區大小*計數*夠大，無法包含所指定的輸出*格式*和*argptr*，傳回值**vsnprintf**是會被寫入，如果不計算的 null 字元的字元數目*計數*足夠大。 如果傳回的值大於*計數*-1，已截斷輸出。 傳回值 -1 表示發生編碼錯誤。
+**Vsnprintf**函式會傳回寫入的字元數，不計入結束的 null 字元。 如果指定的緩衝區大小*計數*夠大，無法包含所指定的輸出*格式*並*argptr*，傳回值**vsnprintf**是可寫入，不計入 null 字元，如果字元的數目*計數*足夠大。 如果傳回的值大於*計數*-1，則輸出已被截斷。 傳回值 -1 表示發生編碼錯誤。
 
-同時 **_vsnprintf**和 **_vsnwprintf**函式會傳回要寫入的字元數字是否小於或等於所寫入的字元數目*計數*; 如果數字要寫入的字元是否大於*計數*，這些函式傳回-1，表示輸出已被截斷。
+兩者 **_vsnprintf**並 **_vsnwprintf**函式會傳回寫入要寫入的字元數字是否小於或等於的字元數*計數*; 如果數字要寫入的字元是大於*計數*，這些函式傳回-1，表示輸出已被截斷。
 
-所有這些函式傳回的值都不包含終止的 Null，無論是否寫入。 當*計數*為零，則傳回值的函式會寫入不的字元數包括結束的 null。 您可以使用此結果為字串及其終止的 Null 配置足夠的緩衝區空間，然後再次呼叫函式，以填滿緩衝區。
+所有這些函式傳回的值都不包含終止的 Null，無論是否寫入。 當*計數*為零，則傳回值的函式會寫入，不的字元數會包括任何終止的 null。 您可以使用此結果為字串及其終止的 Null 配置足夠的緩衝區空間，然後再次呼叫函式，以填滿緩衝區。
 
-如果*格式*是**NULL**，或如果*緩衝區*是**NULL**和*計數*不等於零，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*格式*是**NULL**，或如果*緩衝區*是**NULL**並*計數*不等於零，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受引數清單的指標，然後格式化資料，並將最多*計數*所指向的記憶體字元*緩衝區*。 **Vsnprintf**函式一律會寫入 null 結束字元，即使它截斷輸出亦同。 使用時 **_vsnprintf**和 **_vsnwprintf**，緩衝區將會以 null 終止才有足夠的空間結尾 (亦即，如果要寫入的字元數目小於*計數*).
+所有這些函式都會接受引數清單的指標，然後格式化資料，並將寫入最多*計數*所指向的記憶體字元*緩衝區*。 **Vsnprintf**函式一律會寫入 null 結束字元，即使它截斷輸出亦同。 使用時 **_vsnprintf**和 **_vsnwprintf**，緩衝區會以 null 結尾才有足夠的空間結尾 (亦即，如果要寫入的字元數目小於*計數*).
 
 > [!IMPORTANT]
-> 若要防止特定種類的安全性風險，請確認*格式*不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 若要防止特定種類的安全性風險，請確認*格式*不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要確保出空間給結束的 null 時呼叫 **_vsnprintf**， **_vsnprintf_l**， **_vsnwprintf**和 **_vsnwprintf_l**、 確定*計數*絕對小於緩衝區長度，並將緩衝區初始化為 null，在呼叫函式之前。
+> 若要確保終止 null 的空間時呼叫 **_vsnprintf**， **_vsnprintf_l**， **_vsnwprintf**並 **_vsnwprintf_l**，請確認*計數*絕對小於緩衝區長度，並將緩衝區初始化為 null，在呼叫函式之前。
 >
-> 因為**vsnprintf**一律會寫入結束的 null*計數*參數可以是等於緩衝區的大小。
+> 因為**vsnprintf**一律會寫入終止的 null*計數*參數可以等於緩衝區的大小。
 
-從 Visual Studio 2015 及 Windows 10 的 UCRT 起**vsnprintf**不再等同於 **_vsnprintf**。 **Vsnprintf**函式符合 C99 標準;**_vnsprintf**會保留舊版的 Visual Studio 程式碼的回溯相容性。
+從 Visual Studio 2015 及 Windows 10 的 UCRT **vsnprintf**不再等同於 **_vsnprintf**。 **Vsnprintf**函式符合 C99 標準;**_vnsprintf**會保留與舊版的 Visual Studio 程式碼的回溯相容性。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -203,12 +203,12 @@ int _vsnwprintf_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭 (C)|必要的標頭 (C++)|
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**， **_vsnprintf**， **_vsnprintf_l**|\<stdio.h>|\<stdio.h> 或 \<cstdio>|
 |**_vsnwprintf**， **_vsnwprintf_l**|\<stdio.h> 或 \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio> 或 \<cwchar>|
 
-**_Vsnprintf**， **_vsnprintf_l**， **_vsnwprintf**和 **_vsnwprintf_l**函式是 Microsoft 專有的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Vsnprintf**， **_vsnprintf_l**， **_vsnwprintf**並 **_vsnwprintf_l**函式是 Microsoft 專有的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -250,7 +250,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-如果您改用 vsnprintf 加上窄字串參數，行為就會變更。 *計數*參數可以是整個緩衝區的大小，以及傳回值會寫入如果的字元數*計數*夠大，足以：
+如果您改用 vsnprintf 加上窄字串參數，行為就會變更。 *計數*參數可以是整個緩衝區的大小，而傳回的值是本該寫入如果的字元數*計數*夠大，足以：
 
 ## <a name="example"></a>範例
 

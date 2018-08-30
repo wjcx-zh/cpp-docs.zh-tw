@@ -1,5 +1,5 @@
 ---
-title: 全域熱鍵 |Microsoft 文件
+title: 全域熱鍵 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd597271d949770ec1a5871cad3ea7be0004e288
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2ef1e2135ebd780938fb0ed194a93058fd010f6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344226"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209150"
 ---
 # <a name="global-hot-keys"></a>全域熱鍵
-全域熱鍵是與特定藉視窗相關聯。 它可讓使用者啟動視窗中，從系統的任何部分。 應用程式設定特定視窗的全域快速鍵傳送[WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284)至該視窗的訊息。 比方說，如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)物件和`pMainWnd`是指標，要在按下便捷鍵時要啟動視窗中，您可以使用下列程式碼產生關聯的熱鍵控制項中指定所指向視窗`pMainWnd`。  
+全域熱鍵是與特定藉視窗相關聯。 它可讓使用者啟動的視窗，從系統的任何部分。 應用程式設定所傳送的特定視窗的全域快速鍵[WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey)至該視窗的訊息。 比方說，如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)物件和`pMainWnd`是指標，要在按下便捷鍵時啟動視窗，您可以使用下列程式碼來建立快速鍵與控制項中所指定的關聯視窗所指的`pMainWnd`。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]  
   
- 每當使用者按下的全域快速鍵，指定視窗收到[WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360)指定訊息**SC_HOTKEY**做為命令的類型。 此訊息也會啟動所收到的視窗。 因為這則訊息不包含已按下的確切索引鍵上的所有資訊，使用此方法不允許區別不同的快速鍵可能附加到相同的視窗。 熱鍵會一直傳送的應用程式有效**WM_SETHOTKEY**結束。  
+ 每當使用者按下的全域快速鍵，指定視窗會收到[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)指定的訊息**SC_HOTKEY**做為命令的類型。 此訊息也會啟用接收視窗。 此訊息不包含任何有關已按下的確切索引鍵，因為使用此方法不允許區別不同的快速鍵可能會附加到相同的視窗。 熱鍵之前會保持有效傳送的應用程式**WM_SETHOTKEY**結束。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

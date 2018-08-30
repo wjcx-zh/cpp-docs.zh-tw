@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be126af9228312fa5fd4430e4f477f037d31df8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 37c8140d3579fc5d629b10c8e3ae5459e6492920
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573317"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198656"
 ---
 # <a name="ccomobject-class"></a>CComObject 類別
 這個類別會實作`IUnknown`非彙總的物件。  
@@ -62,7 +62,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|遞減參考計數物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComObject` 會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非彙總的物件。 不過，呼叫`QueryInterface`， `AddRef`，並`Release`委派給`CComObjectRootEx`。  
+ `CComObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非彙總的物件。 不過，呼叫`QueryInterface`， `AddRef`，並`Release`委派給`CComObjectRootEx`。  
   
  如需使用詳細資訊`CComObject`，請參閱文章[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)。  
   
@@ -92,8 +92,8 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- **void\***  
- [in]不使用這個未命名的參數。 其存在與其他對稱 **CCom***XXX*`Object`*XXX* 建構函式。  
+ <em>void\*</em>  
+ [in]不使用這個未命名的參數。 存在與其他對稱`CComXXXObjectXXX`建構函式。  
   
 ### <a name="remarks"></a>備註  
  解構函式會遞減它。  

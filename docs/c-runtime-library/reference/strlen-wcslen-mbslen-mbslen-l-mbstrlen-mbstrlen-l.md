@@ -58,19 +58,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c92c43a820bc1c8694689c9d99a47b0c46b484e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209445"
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
 使用目前的地區設定或指定的地區設定取得字串的長度。 這些函式已有更安全的版本可供使用，請參閱 [strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l](strnlen-strnlen-s.md)。
 
 > [!IMPORTANT]
-> **_mbslen**， **_mbslen_l**， **_mbstrlen**，和 **_mbstrlen_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbslen**， **_mbslen_l**， **_mbstrlen**，和 **_mbstrlen_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -107,13 +107,13 @@ size_t _mbstrlen_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式傳回的字元數*str*，排除終端機的 null。 沒有傳回值，保留表示錯誤，除了 **_mbstrlen**和 **_mbstrlen_l**，哪些傳回`((size_t)(-1))`如果字串包含無效的多位元組字元。
+所有這些函式傳回的字元數*str*，但不包括終端機的 null。 沒有傳回值已保留表示錯誤，除了 **_mbstrlen**並 **_mbstrlen_l**，都會傳回`((size_t)(-1))`如果字串包含無效的多位元組字元。
 
 ## <a name="remarks"></a>備註
 
-**strlen**會將字串解譯為單一位元組字元字串，因此它的傳回值會一律等於位元組數，即使字串包含多位元組字元。 **wcslen**是寬字元版本的**strlen**; 的引數**wcslen**是寬字元字串，而且是使用寬 （二位元） 字元的字元計數。 **wcslen**和**strlen**除此之外的行為相同。
+**strlen**會將字串解譯為單一位元組字元字串，因此它的傳回值會一律等於位元組數，即使字串包含多位元組字元。 **wcslen**是寬字元版本的**strlen**; 的引數**wcslen**是寬字元字串和字元計數處於寬 （雙位元組） 字元。 **wcslen**並**strlen**行為相同。
 
-**安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -123,13 +123,13 @@ size_t _mbstrlen_l(
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**和 **_mbslen_l**傳回多位元組字元字串中的多位元組字元數，但不是會測試多位元組字元的有效性。 **_mbstrlen**和 **_mbstrlen_l**測試多位元組字元的有效性，並辨識多位元組字元序列。 如果字串傳遞至 **_mbstrlen**或 **_mbstrlen_l**包含無效的多位元組字元的字碼頁、 函式會傳回-1 和組**errno**至**EILSEQ**。
+**_mbslen**並 **_mbslen_l**傳回多位元組字元字串中的多位元組字元數，但不是會測試多位元組字元的有效性。 **_mbstrlen**並 **_mbstrlen_l**測試多位元組字元的有效性，並辨識多位元組字元序列。 如果字串傳遞至 **_mbstrlen**或是 **_mbstrlen_l**包含無效的多位元組字元的字碼頁，函式會傳回-1 和集**errno**至**EILSEQ**。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strlen**|\<string.h>|
 |**wcslen**|\<string.h> 或 \<wchar.h>|

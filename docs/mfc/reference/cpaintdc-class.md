@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 49681f240d6cee257e48c2cf1c5d2479b3678135
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208366"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 類別
 裝置內容類別衍生自[CDC](../../mfc/reference/cdc-class.md)。  
@@ -61,7 +61,7 @@ class CPaintDC : public CDC
 ## <a name="remarks"></a>備註  
  它會執行[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)在建構階段並[CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)在解構階段。  
   
- A`CPaintDC`回應時，才會使用物件[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)訊息，通常會在您`OnPaint`訊息處理常式成員函式。  
+ A`CPaintDC`回應時，才會使用物件[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息，通常會在您`OnPaint`訊息處理常式成員函式。  
   
  如需有關使用`CPaintDC`，請參閱 <<c2> [ 裝置內容](../../mfc/device-contexts.md)。  
   
@@ -87,7 +87,7 @@ explicit CPaintDC(CWnd* pWnd);
  指向`CWnd`物件，`CPaintDC`所屬的物件。  
   
 ### <a name="remarks"></a>備註  
- 例外狀況 (型別的`CResourceException`) 便會擲回 Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有配置所有其可用的裝置內容。 您的應用程式競爭五個一般顯示的可用內容，在 Windows 下一次。  
+ 例外狀況 (型別的`CResourceException`) 便會擲回 Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有配置所有其可用的裝置內容。 您的應用程式競爭五個一般顯示的可用內容，在 Windows 下一次。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  

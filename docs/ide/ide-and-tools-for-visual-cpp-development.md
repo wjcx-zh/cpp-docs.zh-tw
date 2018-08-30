@@ -1,7 +1,7 @@
 ---
 title: 開發 Visual C++ 的 IDE 和工具 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705396"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132016"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>開發 Visual C++ 的 IDE 和工具
 
@@ -29,7 +29,11 @@ Microsoft Visual C++ (MSVC) 是 Visual Studio 整合式開發環境 (IDE) 的一
 
 ## <a name="creating-a-solution-and-projects"></a>建立方案和專案
 
-「專案」基本上是一組原始程式碼檔和資源，例如內建於可執行檔的影像或資料檔案。 Visual Studio 2017 可支援任何建置系統或您想要使用的自訂建置工具，並完整支援 IntelliSense、瀏覽和偵錯功能：
+「專案」基本上是一組原始程式碼檔和資源，例如內建於可執行檔的影像或資料檔案。 
+
+Visual Studio 2015 提供 MSBuild 專案的支援。 您可以下載其他組建系統 (例如 Qt 或 CMake) 的 Visual Studio 延伸模組。
+
+Visual Studio 2017 支援任何組建系統或是您想要使用的自訂建置工具，同時完整支援 IntelliSense、瀏覽與偵錯功能：
 
 - MSBuild 是 Visual Studio 的原生建置系統，通常是通用 Windows 平台 (UWP) App 或是使用 MFC 或 ATL 之舊版 Windows 傳統型應用程式的最佳選擇。 如需 MSBuild 型 C++ 專案的詳細資訊，請參閱[建立和管理 MSBuild 型專案](creating-and-managing-visual-cpp-projects.md)。
 - CMake 是跨平台建置系統，會在安裝使用 C++ 的桌面開發工作負載時整合到 Visual Studio IDE 中。 如需詳細資訊，請參閱 [Visual C++ 中的 CMake 專案](cmake-tools-for-visual-cpp.md)。
@@ -105,13 +109,17 @@ Visual Studio 隨附數個適用於 MSBuild 型專案的範本，這些範本包
 
 Visual Studio 包含同時適用於原生 C++ 和 C++/CLI 的單元測試架構。 如需詳細資訊，請參閱[使用單元測試驗證程式碼](/visualstudio/test/unit-test-your-code)和[使用適用於 C++ 的 Microsoft 單元測試架構撰寫適用於 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)
 
+## <a name="analyze"></a>分析
+
+Visual Studio 包含 C++ 的靜態程式碼分析工具，包括實作 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 規則檢查工具。 如需詳細資訊，請參閱 [C/C++ 程式碼分析概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+
 ## <a name="debug"></a>偵錯
 
 您可以在專案組態設定為 [偵錯] 時，按 **F5** 鍵來偵錯程式。 在偵錯期間，您可以按 **F9** 鍵設定中斷點、按 **F10** 鍵逐步執行程式碼、檢視指定變數或暫存器的值，甚至在某些情況下，您還可以在程式碼中進行變更並繼續偵錯，而不需要重新編譯。 如需詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。
 
 ## <a name="deploy-completed-applications"></a>部署完成的應用程式
 
-您可以使用 [專案] > [市集] 功能表選項，透過 Windows 市集將 UWP App 部署給客戶。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱 [銷售應用程式](http://go.microsoft.com/fwlink/p/?LinkId=262280)。
+您可以使用 [專案] > [市集] 功能表選項，透過 Windows 市集將 UWP App 部署給客戶。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱[發行 Windows 應用程式與遊戲](/windows/uwp/publish/)。 
 
 當您將原生 C++ 桌面應用程式部署至另一部電腦時，您必須安裝該應用程式本身及其相依的所有程式庫檔案。 隨應用程式一起部署通用 C++ 執行階段 (UCRT) 的方式有三種：集中部署、本機部署或靜態連結。 如需詳細資訊，請參閱[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)。
 

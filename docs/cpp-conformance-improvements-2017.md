@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3708bce00b01ee796067bf91d99645cb61f19a53
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900696"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132239"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) 版本中的 C++ 一致性改善
 
@@ -55,19 +55,19 @@ static_assert 的訊息參數是選擇性的。 如需詳細資訊，請參閱 [
 
 ### <a name="constexpr-lambdas"></a>constexpr lambdas
 
-Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱 [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf) \(英文\)。
+Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱 [C++ 中的 constexpr Lambda 運算式](cpp/lambda-expressions-constexpr.md)。
 
 ### <a name="if-constexpr-in-function-templates"></a>if constexpr 函式範本
 
-函式範本可包含 `if constexpr` 陳述式，以進行編譯時間分支。 如需詳細資訊，請參閱 [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html) \(英文\)。
+函式範本可包含 `if constexpr` 陳述式，以進行編譯時間分支。 如需詳細資訊，請參閱 [if constexpr 陳述式](cpp/if-else-statement-cpp.md#if_constexpr)。
 
 ### <a name="selection-statements-with-initializers"></a>使用初始設定式的選取範圍陳述式
 
-`if` 陳述式可包含會在陳述式之內於區塊範圍導入變數的初始設定式。 如需詳細資訊，請參閱[搭配初始設定式的選取範圍陳述式](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html) \(英文\)。
+`if` 陳述式可包含會在陳述式之內於區塊範圍導入變數的初始設定式。 如需詳細資訊，請參閱[搭配初始設定式的 if 陳述式](cpp/if-else-statement-cpp.md#if_with_init)。
 
 ### <a name="maybeunused-and-nodiscard-attributes"></a>[[maybe_unused]] 與 [[nodiscard]] 屬性
 
-這兩種新屬性可分別用來在實體未使用時，將警告設為無聲，以及在函式呼叫的傳回值遭捨棄時建立警告。 如需詳細資訊，請參閱 [maybe_unused 屬性的用字方式](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) \(英文\) 及[unused、nodiscard 及 fallthrough 屬性的提案](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) \(英文\)。
+這兩種新屬性可分別用來在實體未使用時，將警告設為無聲，以及在函式呼叫的傳回值遭捨棄時建立警告。 如需詳細資訊，請參閱 [C++ 中的屬性](cpp/attributes.md)。
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>不重複使用屬性命名空間
 
@@ -75,11 +75,11 @@ Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱
 
 ### <a name="structured-bindings"></a>結構化繫結
 
-現在可以在單一宣告中以值元件的個別名稱儲存值，前提是該值必須為陣列、std::tuple 或 std::pair，或具有公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) \(英文\)。
+現在可以在單一宣告中以值元件的個別名稱儲存值，前提是該值必須為陣列、std::tuple 或 std::pair，或具有公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)與[從函式傳回多重值](cpp/functions-cpp.md#multi_val)。
 
 ### <a name="construction-rules-for-enum-class-values"></a>enum class 值的建構規則
 
-當列舉的定義未導入列舉程式，且來源使用 list-initialization 語法時，從範圍列舉的基礎類型到列舉本身之間現在已有隱含/非縮小的轉換。 如需詳細資訊，請參閱[列舉類別值的建構規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)。
+當列舉的定義未導入列舉程式，且來源使用 list-initialization 語法時，從範圍列舉的基礎類型到列舉本身之間現在已有隱含/非縮小的轉換。 如需詳細資訊，請參閱[列舉類別值的建構規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)與 [Enumerations](cpp/enumerations-cpp.md#no_enumerators)。
 
 ### <a name="capturing-this-by-value"></a>以值擷取 \*this
 
@@ -212,6 +212,8 @@ struct B : A {
 
 B b(42L); // now calls B(int)
 ```
+
+如需詳細資訊，請參閱[建構函式](cpp/constructors-cpp.md#inheriting_constructors)。
 
 ### <a name="c17-extended-aggregate-initialization"></a>C++17 擴充的彙總初始化
 

@@ -1,7 +1,7 @@
 ---
 title: Visual C++ 中的開啟資料夾專案 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337281"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131319"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的開啟資料夾專案
-Visual Studio 2017 引進了「開啟資料夾」功能，可讓您開啟原始程式檔的資料夾，並立即開始撰寫程式碼，同時還支援 IntelliSense、瀏覽、重構、偵錯等。 不會載入 .sln 或 .vcxproj 檔案；如有需要，您可以指定自訂工作，以及透過簡單的.JSON 檔案建置並啟動參數。 有了「開啟資料夾」，Visual C++ 現在不僅可以支援鬆散的檔案集合，也幾乎支援任何建置系統，包括 CMake、Ninja、QMake (適用於 Qt 專案)、gyp、SCons、Gradle、Buck、make 等。 
+
+在 Visual Studio 2017 及之後的版本中，能利用「開啟資料夾」功能，開啟原始程式檔的資料夾，並立即開始撰寫程式碼，同時還支援 IntelliSense、瀏覽、重構、偵錯等等。 不會載入 .sln 或 .vcxproj 檔案；如有需要，您可以指定自訂工作，以及透過簡單的.JSON 檔案建置並啟動參數。 有了「開啟資料夾」，Visual C++ 現在不僅可以支援鬆散的檔案集合，也幾乎支援任何建置系統，包括 CMake、Ninja、QMake (適用於 Qt 專案)、gyp、SCons、Gradle、Buck、make 等。 
 
 若要使用「開啟資料夾」，請從主功能表選取 [檔案] | [開啟] | [資料夾]，或按 *Ctrl + Shift + Alt + O*。[方案總管] 會立即顯示資料夾中的所有檔案。 您可以按一下任何檔案以開始編輯它。 Visual Studio 會在背景開始編制檔案的索引，以啟用 IntelliSense、瀏覽及重構功能。 當您編輯、建立、移動或刪除檔案時，Visual Studio 會自動追蹤變更並持續更新其 IntelliSense 索引。 
   
@@ -30,7 +31,7 @@ Visual Studio 2017 引進了「開啟資料夾」功能，可讓您開啟原始�
 CMake 已整合到 Visual Studio IDE 作為 Visual C++ CMake 工具，這是 C++ 桌面工作負載的一個元件。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>以 Qt 架構為目標的 QMake 專案
-您可以使用 Visual C++ CMake 工具針對 Qt 建置 Qt 專案，也可以使用 Qt Visual Studio 延伸模組。 注意：自 2017 年 8 月起，[適用於 Visual Studio 2017 的 Qt Visual Studio 延伸模組支援](https://download.qt.io/development_releases/vsaddin/)會以搶鮮版 (Beta) 提供使用。
+您可以使用 Visual C++ 的 CMake 工具，設定要建置 Qt 專案的目標 Qt，也可以為 Visual Studio 2015 或 Visual Studio 2017 使用 [Qt Visual Studio 延伸模組](https://download.qt.io/development_releases/vsaddin/)。
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck 等
 您可以在 Visual C++ 中使用任何建置系統，並仍享有 Visual C++ IDE 和偵錯工具的優點。 當您開啟專案的根資料夾時，Visual C++ 會使用啟發學習法來編製原始程式檔的索引供 IntelliSense 和瀏覽之用。 您可以藉由編輯 CppProperties.json 檔案，提供您程式碼結構的相關提示。 同樣地，您也可以藉由編輯 launch.vs.json 檔案，設定您的建置程式。 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253811"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131302"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>使用 Visual Studio IDE 進行 C++ 桌面程式開發
 
@@ -30,6 +30,18 @@ Visual Studio 整合式開發環境 (IDE) 提供一組功能，可協助您管�
 如果您尚未安裝 Visual Studio，請立即安裝。 如需下載連結和簡略的逐步解說，請參閱[在 Visual Studio 中安裝 C++ 支援](../build/vscpp-step-0-installation.md)。 如需有關安裝 Visual Studio 的詳細資訊，以及發生問題時的疑難排解提示，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 安裝 Visual Studio 時，請務必選擇**含有 C++ 的桌面開發**工作負載，以包含 C++ 編譯器、工具和程式庫，因為在預設情況下並未安裝。
 
 這些逐步解說假設您已安裝 Visual Studio、Visual C++ 語言和 Windows 桌面開發所需的元件。 我們也假設您了解 C++ 語言的基本概念。 如果您需要了解 C++，有許多書籍和網路資源。 一個很好的起點是 Standard C++ Foundation 網站的 [Get Started](https://isocpp.org/get-started) (開始) 頁面。
+
+如果您尚未安裝 Visual Studio，請立即安裝。 
+
+**Visual Studio 2017 安裝**
+
+若要取得 Visual Studio 2017，您可以從 [Visual Studio 下載](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)，進行下載。 當您安裝 Visual Studio 時請務必包含 Visual C++ 開發工具，因為預設不會安裝。 如需如何安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
+
+**Visual Studio 2015 安裝**
+
+ 若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]，然後選擇 C++ 元件。 
+
+ 一般來說，即使需要使用 Visual Studio 2015 編譯器，編譯您的程式碼，也都非常建議您使用 Visual Studio 2017。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](../porting/use-native-multi-targeting.md)。
 
 一旦您的 Visual Studio 安裝完成，便可以繼續進行。
 

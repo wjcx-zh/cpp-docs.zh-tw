@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390020"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131735"
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 執行緒區域儲存區 (Thread Local Storage，TLS) 是一種機制，讓指定之多執行緒處理序中的每個執行緒用來配置儲存區，以儲存執行緒特定資料。 在標準多執行緒程式中，資料是在特定處理序的所有執行緒之間共用，而執行緒區域儲存區則是用於配置每個執行緒資料的機制。 如需執行緒的完整討論，請參閱 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] 中的[處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms684841) \(英文\)。  
+ 執行緒區域儲存區 (Thread Local Storage，TLS) 是一種機制，讓指定之多執行緒處理序中的每個執行緒用來配置儲存區，以儲存執行緒特定資料。 在標準多執行緒程式中，資料是在特定處理序的所有執行緒之間共用，而執行緒區域儲存區則是用於配置每個執行緒資料的機制。 如需執行緒的完整討論，請參閱 Windows SDK 中的[處理序與執行緒](/windows/desktop/ProcThread/processes-and-threads)。  
   
  Microsoft C 語言包括擴充儲存類別屬性 thread，可搭配 __declspec 關鍵字宣告執行緒區域變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：  
   
@@ -99,7 +99,7 @@ __declspec( thread ) int tls_i = 1;
   
  如需使用 thread 屬性的詳細資訊，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>請參閱  
  [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

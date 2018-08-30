@@ -9,31 +9,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569692"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131716"
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新功能
+# <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新功能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多個更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
+Visual Studio 2017 有多項 Visual C++ 環境的更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 2017 新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
 
-<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
+<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>C++ 編譯器
 
 ### <a name="c-conformance-improvements"></a>C++ 一致性改善
 
 我們在本版中更新了 C++ 編譯器和標準程式庫，加強對 C++11 和 C++14 功能的支援，以及對 C++17 標準某些預期功能的基本支援。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)。
-**Visual Studio 2017 15.5 版**：  
 
-   編譯器支援 C++17 中約 75% 的新功能，包括結構化繫結、`constexpr` Lambda、`if constexpr`、內嵌變數、摺疊運算式，以及將 `noexcept` 新增至型別系統。 您可從 **/std:c++17** 選項使用這些功能。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)
+**Visual Studio 2017 15.5 版**：編譯器支援 C++17 中約 75% 的功能，包括結構化繫結、`constexpr` Lambda、`if constexpr`、內嵌變數、摺疊運算式，以及將 `noexcept` 新增至型別系統。 您可從 **/std:c++17** 選項使用這些功能。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)
 
-**Visual Studio 2017 15.7 版**：  
-
-Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 如需詳細資訊，請參閱 [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (宣告：MSVC 符合 C++ 標準) 和 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)。
+**Visual Studio 2017 15.7 版**：Visual Studio 15.7 版中的 MSVC 編譯器工具組，現在符合 C++ 標準。 如需詳細資訊，請參閱 [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (宣告：MSVC 符合 C++ 標準) 和 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)。
 
 ### <a name="new-compiler-options"></a>新的編譯器選項
 
@@ -43,7 +40,7 @@ Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 �
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md)：最多可讓累加連結時間快 30% (相對於Visual Studio 2015)，方法是不要將所有偵錯資訊複製到 PDB 檔案。 PDB 檔案改為指向用來建立可執行檔之物件和程式庫檔案的偵錯資訊。 請參閱 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (在 VS "15" 中使用 /Debug:fastlink 加快 C++ 組建循環) 和 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/) (在 Visual Studio 中加速 C++ 建置的建議)。
 
-- [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 允許搭配 [/await](build/reference/await-enable-coroutine-support.md) 使用 [/sdl](build/reference/sdl-enable-additional-security-checks.md)。 我們移除了協同程式的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
+- Visual Studio 2017 允許在使用 [/await](build/reference/await-enable-coroutine-support.md) 時，搭配 [/sdl](build/reference/sdl-enable-additional-security-checks.md)。 我們移除了協同程式的 [/RTC](build/reference/rtc-run-time-error-checks.md) 限制。
 
    **Visual Studio 2017 15.3 版**：  
 - [/std:c++14 和 /std:c++latest](build/reference/std-specify-language-standard-version.md)︰這些編譯器選項可讓您在專案中加入特定的 ISO C++ 程式設計語言版本。 大多數新草稿標準功能都在 **/std:c++latest** 選項的防護範圍內。
@@ -406,7 +403,7 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。  升級 C++
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具組
 
-隨附於 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的 Clang/C2 工具組現已支援 **/bigobj** 參數，這對建置大型專案而言很重要。 它也包含數個重要的 Bug 修正，包括編譯器前端和後端。
+Visual Studio 2017 隨附的 Clang/C2 工具組，現已支援 **/bigobj** 參數，這對於建置大型專案很重要。 它也包含數個重要的 Bug 修正，包括編譯器前端和後端。
 
 ## <a name="c-code-analysis"></a>C++ 程式碼分析
 

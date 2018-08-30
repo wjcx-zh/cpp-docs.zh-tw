@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340860"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213824"
 ---
 # <a name="using-manual-accessors"></a>使用手動存取子
 有四個項目時處理未知的命令：  
@@ -53,7 +53,7 @@ ms.locfileid: "39340860"
   
 6.  呼叫`GetNextResult`，判斷是否可以使用多個資料列集。 重複步驟 2 至 5。  
   
- 如需手動存取子的範例，請參閱 <<c0> `CDBListView::CallProcedure` 中[DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)範例。  
+ 如需手動存取子的範例，請參閱 <<c0> `CDBListView::CallProcedure` 中[DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

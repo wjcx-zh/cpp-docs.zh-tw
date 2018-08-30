@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17a6d1e618dc9345266cb3c0d618fda1c4f78c44
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b3a80cf072a4f95885ef0bc9a0b28a385fde085f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339458"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206079"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 類別
 用來建立使用 HTML 的對話方塊而非對話方塊資源，來實作其使用者介面。  
@@ -171,7 +171,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::GetControlProperty](#getcontrolproperty)|擷取指定的 ActiveX 控制項要求的屬性。|  
 |[CDHtmlDialog::GetCurrentUrl](#getcurrenturl)|擷取與目前的文件，相關聯統一資源定位器 (URL)。|  
 |[CDHtmlDialog::GetDHtmlDocument](#getdhtmldocument)|擷取目前載入的 HTML 文件上的 IHTMLDocument2 介面。|  
-|[CDHtmlDialog::GetDropTarget](#getdroptarget)|當它用做為置放目標，讓提供另一個對話方塊，內含的 WebBrowser 控制項由呼叫[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。|  
+|[CDHtmlDialog::GetDropTarget](#getdroptarget)|當它用做為置放目標，讓提供另一個對話方塊，內含的 WebBrowser 控制項由呼叫[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。|  
 |[CDHtmlDialog::GetElement](#getelement)|取得 HTML 項目上的介面。|  
 |[CDHtmlDialog::GetElementHtml](#getelementhtml)|擷取`innerHTML`HTML 項目的屬性。|  
 |[CDHtmlDialog::GetElementInterface](#getelementinterface)|擷取的 HTML 項目要求的介面指標。|  
@@ -678,7 +678,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
  標準的 HRESULT。 如果成功，則會傳回 S_OK。  
   
 ##  <a name="getdroptarget"></a>  CDHtmlDialog::GetDropTarget  
- 當它用做為置放目標，讓提供另一個對話方塊，內含的 WebBrowser 控制項由呼叫[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。  
+ 當它用做為置放目標，讓提供另一個對話方塊，內含的 WebBrowser 控制項由呼叫[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)。  
   
 ```  
 STDMETHOD(GetDropTarget)(

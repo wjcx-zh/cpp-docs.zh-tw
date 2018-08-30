@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4312 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4312 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18039e44a5616330c66603e448bcafd6d18ff7aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b30d020532935c925b1ecab25d17cd43a7e8663
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279671"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205898"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>編譯器警告 (層級 1) C4312
 'operation' : 將 'type1' 轉換為較大的 'type2'  
@@ -30,7 +30,7 @@ ms.locfileid: "33279671"
   
  這可能是不安全的轉換，即使在發生正負號擴充時納入 32 位元指標值也是如此。 負的 32 位元整數指派給 64 位元指標類型，正負號擴充會使指標值參考不同於整數值的記憶體位址。  
   
- 只會針對 64 位元編譯目標發出這個警告。 如需詳細資訊，請參閱[使用指標的規則](http://msdn.microsoft.com/library/windows/desktop/aa384242)。  
+ 只會針對 64 位元編譯目標發出這個警告。 如需詳細資訊，請參閱 <<c0> [ 規則使用指標](/windows/desktop/WinProg64/rules-for-using-pointers)。  
   
  為 64 位元目標編譯時，下列程式碼範例會產生 C4312：  
   

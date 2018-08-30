@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880501"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206116"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 類別
 `CComMultiThreadModel` 提供安全執行緒方法遞增和遞減變數的值。  
@@ -62,8 +62,8 @@ class CComMultiThreadModel
   
 |typedef|單一執行緒處理|Apartment 執行緒|無限制執行緒|  
 |-------------|----------------------|-------------------------|--------------------|  
-|`CComObjectThreadModel`|S|S|M|  
-|`CComGlobalsThreadModel`|S|M|M|  
+|`CComObjectThreadModel`|S|S|電|  
+|`CComGlobalsThreadModel`|S|電|電|  
   
  S = `CComSingleThreadModel`;M = `CComMultiThreadModel`  
   
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  請參閱[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)。  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- 此靜態函式會呼叫 Win32 函式[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，變數的值所指向的遞減*p*。  
+ 此靜態函式會呼叫 Win32 函式[InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)，變數的值所指向的遞減*p*。  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` 防止多個執行緒同時使用此變數。  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- 此靜態函式會呼叫 Win32 函式[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，這會遞增變數所指向的值*p*。  
+ 此靜態函式會呼叫 Win32 函式[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)，這會遞增變數所指向的值*p*。  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

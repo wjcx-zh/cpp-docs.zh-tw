@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1da7c4102f15bf4a9c8ec583cf39e621d6872cb0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451520"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578495"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 函式
 每個此系列中的函式都會載入並執行新處理序：  
@@ -90,7 +90,7 @@ ms.locfileid: "34451520"
 |`v`|`argv`，命令列引數的指標陣列，會傳遞至 `_exec`。 一般而言用於新處理序的參數數目為變數時。|  
   
 ## <a name="remarks"></a>備註  
- 每個 `_exec` 函式都會載入並執行新處理序。 所有 `_exec` 函式會使用相同的作業系統函式 ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx))。 `_exec` 函式會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wexec` 函式是寬字元版本的 `_exec` 函式。 `_wexec` 函式的行為和其 `_exec` 系列對應項目一樣，只不過他們不處理多位元組字元字串。  
+ 每個 `_exec` 函式都會載入並執行新處理序。 所有 `_exec` 函式會使用相同的作業系統函式 ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa))。 `_exec` 函式會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wexec` 函式是寬字元版本的 `_exec` 函式。 `_wexec` 函式的行為和其 `_exec` 系列對應項目一樣，只不過他們不處理多位元組字元字串。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34451520"
 >  字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_exec` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。  
   
 > [!IMPORTANT]
->  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_exec`。 `_exec` 會導致呼叫 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。  
+>  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_exec`。 `_exec` 會導致呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。  
   
  `_exec` 函式會驗證它們的參數。 若預期的參數是 Null 指標、空字串，或是已省略，則 `_exec` 函式會叫用無效參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 -1。 沒有執行任何新處理序。  
   

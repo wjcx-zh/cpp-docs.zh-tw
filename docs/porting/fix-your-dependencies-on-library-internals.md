@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148db60c7a3b1ae3f71269feec8024f6ff22a118
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c80bad11a13c454d8b4025e5cc0745514696a0f7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839056"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578272"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>修正程式庫內部項目上的相依性
 
@@ -34,9 +34,9 @@ Microsoft 已在許多 Visual Studio 版本中，發佈標準程式庫、大部�
   
 您有幾個方法可以移除此相依性。  
 
--   如果您打算使用和 `basic_string` 相同的雜湊程式碼機制，將 `const char *` 序列放入未排序的容器，您可以使用採用 `std::string_view` 的 `std::hash` 範本多載執行此動作，它會以可攜帶的方式傳回雜湊程式碼。 字串程式庫程式碼未來可能會、也可能不會依賴使用 FNV-1a 雜湊，因此這是避免對特定雜湊演算法產生相依性的最佳方式。 
+- 如果您打算使用和 `basic_string` 相同的雜湊程式碼機制，將 `const char *` 序列放入未排序的容器，您可以使用採用 `std::string_view` 的 `std::hash` 範本多載執行此動作，它會以可攜帶的方式傳回雜湊程式碼。 字串程式庫程式碼未來可能會、也可能不會依賴使用 FNV-1a 雜湊，因此這是避免對特定雜湊演算法產生相依性的最佳方式。 
   
--   如果您打算在任意記憶體上產生 FNV-1a 雜湊，我們已在 GitHub 上提供該程式碼：位在 [MIT 授權](https://github.com/Microsoft/VCSamples/blob/master/license.txt)下，獨立標頭檔 [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) 的 [VCSamples]( https://github.com/Microsoft/vcsamples) 儲存機制中。 這裡也收錄複本，方便您參考。 您可以將此程式碼複製到標頭檔，將標頭新增至任何受影響的程式碼，然後用 `fnv1a_hash_bytes` 尋找和取代 `_Hash_seq`。 您會得到和 `_Hash_seq` 的內部實作相同的行為。 
+- 如果您打算在任意記憶體上產生 FNV-1a 雜湊，我們已在 GitHub 上提供該程式碼：位在 [MIT 授權](https://github.com/Microsoft/VCSamples/blob/master/license.txt)下，獨立標頭檔 [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) 的 [VCSamples]( https://github.com/Microsoft/vcsamples) 儲存機制中。 這裡也收錄複本，方便您參考。 您可以將此程式碼複製到標頭檔，將標頭新增至任何受影響的程式碼，然後用 `fnv1a_hash_bytes` 尋找和取代 `_Hash_seq`。 您會得到和 `_Hash_seq` 的內部實作相同的行為。 
 
 ```cpp  
 /*

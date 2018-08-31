@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3600e5541c095b3879fe60404c9a5994c2a91088
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330293"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578147"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>準備測試電腦以執行偵錯可執行檔
 若要準備電腦以測試 Visual C++ 所建置之應用程式的偵錯版本，您必須部署該應用程式所依賴之 Visual C++ 程式庫 DLL 的偵錯版本。 若要識別必須部署的 DLL，請遵循[了解 Visual C++ 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)中的步驟。 Visual C++ 程式庫 DLL 的偵錯版本通常在名稱最後為「d」字母，例如，msvcr100.dll 的偵錯版本名稱是 msvcr100d.dll。  
@@ -43,5 +43,5 @@ ms.locfileid: "33330293"
 ## <a name="see-also"></a>請參閱  
  
  [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)   
- [Windows Installer 命令列選項](http://msdn.microsoft.com/library/windows/desktop/aa367988.aspx)   
+ [Windows Installer 命令列選項](/windows/desktop/Msi/command-line-options)   
  [部署範例](../ide/deployment-examples.md)[遠端偵錯](/visualstudio/debugger/remote-debugging.md)

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bce71c444426d5d1a2d5340c603118a09e8275f
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132239"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220212"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) 版本中的 C++ 一致性改善
 
@@ -93,7 +93,7 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 這可用在平行
 
 `register` 關鍵字先前已淘汰 (且編譯器已略過)，且現已從語言移除。 如需詳細資訊，請參閱[移除 register 關鍵字的已取代用途](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) \(英文\)。
 
-如需到 Visual Studio 2015 Update 3 為止的所有完整一致性改善清單，請參閱 [Visual C++ 2003 至 2015 的新功能](https://msdn.microsoft.com/en-us/library/mt723604.aspx)。
+如需到 Visual Studio 2015 Update 3 為止的所有完整一致性改善清單，請參閱 [Visual C++ 2003 至 2015 的新功能](https://msdn.microsoft.com/library/mt723604.aspx)。
 
 ## <a name="improvements_155"></a>  Visual Studio 2017 15.5 版中的改善
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0445939c7437e4978ee698005cc2f7541e6684b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c528e2a80894db1da82d7b07ba34a7c62b6237da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339302"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219015"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 類別
 可讓您併入您的應用程式中色彩選取範圍 對話方塊。  
@@ -80,13 +80,13 @@ class CColorDialog : public CCommonDialog
   
  若要建構`CColorDialog`物件，使用提供的建構函式或衍生新類別，並使用您自己的自訂建構函式。  
   
- 一旦建構的對話方塊中，您可以設定或修改中的任何值[m_cc](#m_cc)結構，以初始化對話方塊的控制項的值。 *M_cc*結構的類型是[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)。  
+ 一旦建構的對話方塊中，您可以設定或修改中的任何值[m_cc](#m_cc)結構，以初始化對話方塊的控制項的值。 *M_cc*結構的類型是[CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora)。  
   
  在初始化對話方塊的控制項之後, 呼叫`DoModal`成員函式來顯示對話方塊，並允許使用者選取一種色彩。 `DoModal` 傳回使用者的選取範圍的其中一個對話方塊的 [確定] (IDOK)] 或 [取消 (IDCANCEL) 按鈕。  
   
  如果`DoModal`傳回 IDOK，您可以使用其中一個`CColorDialog`的成員函式來擷取使用者所輸入的資訊。  
   
- 您可以使用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函式來判斷是否在對話方塊的初始化期間發生錯誤，以及了解錯誤的詳細資訊。  
+ 您可以使用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷是否在對話方塊的初始化期間發生錯誤，以及了解錯誤的詳細資訊。  
   
  `CColorDialog` 依賴 COMMDLG。隨附於 Windows 版本 3.1 和更新版本的 DLL 檔案。  
   
@@ -130,7 +130,7 @@ CColorDialog(
  預設色彩選取範圍。 如果未不指定任何值，預設會為 RGB(0,0,0) （黑色）。  
   
  *dwFlags*  
- 一組自訂的功能與外觀上的對話方塊中的旗標。 如需詳細資訊，請參閱 < [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Windows SDK 中的結構。  
+ 一組自訂的功能與外觀上的對話方塊中的旗標。 如需詳細資訊，請參閱 < [CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora) Windows SDK 中的結構。  
   
  *pParentWnd*  
  對話方塊的父代或擁有者視窗的指標。  
@@ -146,7 +146,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- IDOK 或 IDCANCEL。 如果傳回 IDCANCEL，呼叫 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函式來判斷是否發生錯誤。  
+ IDOK 或 IDCANCEL。 如果傳回 IDCANCEL，呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷是否發生錯誤。  
   
  IDOK 及 IDCANCEL 是常數，指出使用者是否已選取 [確定] 或 [取消] 按鈕。  
   
@@ -166,7 +166,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊的值。  
+ A [COLORREF](/windows/desktop/gdi/colorref)包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊的值。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
@@ -190,7 +190,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
- 類型的結構[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)，其成員儲存的特性和對話方塊中的值。  
+ 類型的結構[CHOOSECOLOR](/windows/desktop/api/commdlg/ns-commdlg-tagchoosecolora)，其成員儲存的特性和對話方塊中的值。  
   
 ```  
 CHOOSECOLOR m_cc;  

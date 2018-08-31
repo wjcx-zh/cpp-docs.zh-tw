@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850218"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216455"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 類別
 實作編輯控制項位於功能區列。  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  父視窗的指標`CMFCRibbonEdit`物件。  
   
  [in]*dwEditStyle*  
- 指定文字方塊的樣式。 您可以結合會在 < 備註 > 一節中所列的視窗樣式[編輯控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb775464)，其說明 Windows SDK 中。  
+ 指定文字方塊的樣式。 您可以結合會在 < 備註 > 一節中所列的視窗樣式[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)，其說明 Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  新的文字方塊中的方法已成功; 如果指標否則為 NULL。  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT**為靠右對齊  
   
- 如需有關這些樣式的詳細資訊，請參閱 <<c0> [ 編輯控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+ 如需有關這些樣式的詳細資訊，請參閱 <<c0> [ 編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)。  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  擷取的寬度，單位為像素[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
@@ -482,7 +482,7 @@ virtual void OnDrawOnList(
  裝置內容指標`CMFCRibbonEdit`控制項。  
   
  [in]*先把 strText*  
- 顯示文字[](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 類別")。  
+ 顯示文字[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 類別")。  
   
  [in]*nTextOffset*  
  像素為單位，從顯示的文字與清單方塊左側的距離。  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個方法會重新繪製的顯示矩形`CMFCRibbonEdit`間接呼叫的物件[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 旗標設定。  
+ 這個方法會重新繪製的顯示矩形`CMFCRibbonEdit`間接呼叫的物件[CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) RDW_INVALIDATE、 RDW_ERASE 和 RDW_UPDATENOW 旗標設定。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  設定協助工具資料[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - 靠右對齊的 ES_RIGHT  
   
- 如需有關這些樣式的詳細資訊，請參閱 <<c0> [ 編輯控制項的樣式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
+ 如需有關這些樣式的詳細資訊，請參閱 <<c0> [ 編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)。  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  設定文字方塊的寬度[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  

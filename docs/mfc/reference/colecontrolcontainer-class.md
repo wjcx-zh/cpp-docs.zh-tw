@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f278ffd3d3210f899e86787d0872180df2d91d98
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852298"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222855"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 做為 ActiveX 控制項的控制項容器。  
@@ -149,7 +149,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|站台對應。|  
   
 ## <a name="remarks"></a>備註  
- 這是藉由提供對一或多個 ActiveX 控制項站台的支援 (藉由將`COleControlSite`)。 `COleControlContainer` 完整實作[IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)並[IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103)介面，讓包含的 ActiveX 控制項，以滿足其資格做為就地項目。  
+ 這是藉由提供對一或多個 ActiveX 控制項站台的支援 (藉由將`COleControlSite`)。 `COleControlContainer` 完整實作[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)並[IOleContainer](/windows/desktop/api/oleidl/nn-oleidl-iolecontainer)介面，讓包含的 ActiveX 控制項，以滿足其資格做為就地項目。  
   
  通常，這個類別用於搭配`COccManager`和`COleControlSite`來實作自訂的 ActiveX 控制項容器，使用一或多個 ActiveX 控制項的自訂網站。  
   
@@ -449,7 +449,7 @@ virtual UINT GetDlgItemInt(
  接收函式成功/失敗值的布林值變數的指標 （TRUE 表示成功，FALSE 表示失敗）。  
   
  *bSigned*  
- 指定函式是否應該檢查負號開頭的文字，並傳回帶正負號的整數值，如果找到。 如果*bSigned*參數為 TRUE，則指定要擷取的值帶正負號的整數值，傳回值轉換成**int**型別。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 指定函式是否應該檢查負號開頭的文字，並傳回帶正負號的整數值，如果找到。 如果*bSigned*參數為 TRUE，則指定要擷取的值帶正負號的整數值，傳回值轉換成**int**型別。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，變數所指向*lpTrans*設為 TRUE，且傳回的值為控制項文字的已翻譯的值。  
@@ -486,7 +486,7 @@ virtual int GetDlgItemText(
 ### <a name="return-value"></a>傳回值  
  如果此函數成功，傳回的值會指定複製到緩衝區，不包括結束的 null 字元的字元數。  
   
- 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  決定是否容器在處理 WM_SETFOCUS 訊息。  

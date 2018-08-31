@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464856"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215527"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 **Microsoft 專屬**  
@@ -90,7 +90,7 @@ __finally {
 ## <a name="abnormal-termination"></a>異常終止  
  結束**try finally**陳述式使用[longjmp](../c-runtime-library/reference/longjmp.md)執行階段函式會視為是異常終止。 它是不合法一頭栽進 **__try**陳述式，但是可以跳出一個。 所有 **__finally**起點之間有作用的陳述式 (的正常終止 **__try**區塊) 和目的地 ( **__except**區塊處理例外狀況） 必須執行。 這稱為區域回溯。  
   
- 如果**嘗試**基於任何理由，包括跳出區塊已提前結束區塊，系統會執行相關聯**最後**回溯堆疊程序的一部分的區塊。 在此情況下， [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265)函式會傳回 **，則為 true**如果是從 內呼叫**最後**封鎖; 否則它會傳回**false**.  
+ 如果**嘗試**基於任何理由，包括跳出區塊已提前結束區塊，系統會執行相關聯**最後**回溯堆疊程序的一部分的區塊。 在此情況下， [AbnormalTermination](/windows/desktop/Debug/abnormaltermination)函式會傳回 **，則為 true**如果是從 內呼叫**最後**封鎖; 否則它會傳回**false**.  
   
  如果處理程序中間執行過程中終止，不會呼叫終止處理常式**try finally**陳述式。  
   
@@ -100,4 +100,4 @@ __finally {
  [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)   
  [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
- [終止處理常式語法](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [終止處理常式語法](/windows/desktop/Debug/termination-handler-syntax)

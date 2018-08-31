@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ecf0dc1907d2f78a844756d0efc8add04de6046
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: afbb4600098591900491e7c1ec6f256bc58c26a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885269"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220645"
 ---
 # <a name="catlfile-class"></a>CAtlFile 類別
 這個類別會提供 Windows 精簡型包裝函式的檔案處理 API。  
@@ -132,7 +132,7 @@ HRESULT Create(
  檔案名稱。  
   
  *dwDesiredAccess*  
- 所需的存取。 請參閱*dwDesiredAccess*中[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) Windows SDK 中。  
+ 所需的存取。 請參閱*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。  
   
  *dwShareMode*  
  共用模式中。 請參閱*dwShareMode*在`CreateFile`。  
@@ -153,7 +153,7 @@ HRESULT Create(
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)建立或開啟檔案。  
+ 呼叫[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)建立或開啟檔案。  
   
 ##  <a name="flush"></a>  CAtlFile::Flush  
  呼叫這個方法來清除檔案緩衝區，並造成所有緩衝的資料寫入檔案。  
@@ -166,7 +166,7 @@ HRESULT Flush() throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439)排清緩衝處理的資料到檔案。  
+ 呼叫[FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers)排清緩衝處理的資料到檔案。  
   
 ##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  呼叫這個方法來取得檔案的重疊作業的結果。  
@@ -180,7 +180,7 @@ HRESULT GetOverlappedResult(
   
 ### <a name="parameters"></a>參數  
  *pOverlapped*  
- 重疊的結構。 請參閱*lpOverlapped*中[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) Windows SDK 中。  
+ 重疊的結構。 請參閱*lpOverlapped*中[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) Windows SDK 中。  
   
  *dwBytesTransferred*  
  傳輸的位元組。 請參閱*lpNumberOfBytesTransferred*在`GetOverlappedResult`。  
@@ -192,7 +192,7 @@ HRESULT GetOverlappedResult(
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)來取得檔案的重疊作業結果。  
+ 呼叫[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult)來取得檔案的重疊作業結果。  
   
 ##  <a name="getposition"></a>  CAtlFile::GetPosition  
  呼叫這個方法來取得目前的檔案指標位置。  
@@ -209,7 +209,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)來取得目前的檔案指標位置。  
+ 呼叫[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)來取得目前的檔案指標位置。  
   
 ##  <a name="getsize"></a>  CAtlFile::GetSize  
  呼叫這個方法來取得以位元組為單位之檔案的大小。  
@@ -226,7 +226,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955)來取得以位元組為單位之檔案的大小。  
+ 呼叫[GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize)來取得以位元組為單位之檔案的大小。  
   
 ##  <a name="lockrange"></a>  CAtlFile::LockRange  
  呼叫這個方法，以鎖定可防止其他處理序存取該檔案中的區域。  
@@ -246,7 +246,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[鎖定](http://msdn.microsoft.com/library/windows/desktop/aa365202)鎖定檔案中的區域。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 您可以鎖定之檔案的多個區域，但允許任何重疊的區域。 當您解除鎖定的區域時，使用[CAtlFile::UnlockRange](#unlockrange)，位元組範圍必須確實對應到先前鎖定的區域。 `LockRange` 不會合併相鄰區域;如果兩個鎖定的區域相鄰，您必須個別取消每個鎖定。  
+ 呼叫[鎖定](/windows/desktop/api/fileapi/nf-fileapi-lockfile)鎖定檔案中的區域。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 您可以鎖定之檔案的多個區域，但允許任何重疊的區域。 當您解除鎖定的區域時，使用[CAtlFile::UnlockRange](#unlockrange)，位元組範圍必須確實對應到先前鎖定的區域。 `LockRange` 不會合併相鄰區域;如果兩個鎖定的區域相鄰，您必須個別取消每個鎖定。  
   
 ##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  指向 `CAtlTransactionManager` 物件的指標。  
@@ -293,16 +293,16 @@ HRESULT Read(
  讀取的位元組數。  
   
  *pOverlapped*  
- 重疊的結構。 請參閱*lpOverlapped*中[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467) Windows SDK 中。  
+ 重疊的結構。 請參閱*lpOverlapped*中[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) Windows SDK 中。  
   
  *pfnCompletionRoutine*  
- 完成常式。 請參閱*lpCompletionRoutine*中[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) Windows SDK 中。  
+ 完成常式。 請參閱*lpCompletionRoutine*中[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 前三個表單呼叫[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)，最後[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)從檔案讀取資料。 使用[CAtlFile::Seek](#seek)移動檔案指標。  
+ 前三個表單呼叫[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile)，最後[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex)從檔案讀取資料。 使用[CAtlFile::Seek](#seek)移動檔案指標。  
   
 ##  <a name="seek"></a>  CAtlFile::Seek  
  呼叫這個方法來移動檔案指標的檔案。  
@@ -324,7 +324,7 @@ HRESULT Seek(
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)移動檔案指標。  
+ 呼叫[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)移動檔案指標。  
   
 ##  <a name="setsize"></a>  CAtlFile::SetSize  
  呼叫此方法以設定檔的大小。  
@@ -341,7 +341,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)並[SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531)設定檔的大小。 在傳回時，檔案指標被位於檔案結尾。  
+ 呼叫[SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer)並[SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile)設定檔的大小。 在傳回時，檔案指標被位於檔案結尾。  
   
 ##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  呼叫這個方法來解除鎖定檔案的區域。  
@@ -361,7 +361,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715)來解除鎖定檔案的區域。  
+ 呼叫[UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile)來解除鎖定檔案的區域。  
   
 ##  <a name="write"></a>  CAtlFile::Write  
  呼叫這個方法，以將資料寫入至檔案指標所指示的位置開始的檔案。  
@@ -392,10 +392,10 @@ HRESULT Write(
  若要從緩衝區傳送的位元組數目。  
   
  *pOverlapped*  
- 重疊的結構。 請參閱*lpOverlapped*中[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747) Windows SDK 中。  
+ 重疊的結構。 請參閱*lpOverlapped*中[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) Windows SDK 中。  
   
  *pfnCompletionRoutine*  
- 完成常式。 請參閱*lpCompletionRoutine*中[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748) Windows SDK 中。  
+ 完成常式。 請參閱*lpCompletionRoutine*中[WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) Windows SDK 中。  
   
  *pnBytesWritten*  
  寫入的位元組。  
@@ -404,7 +404,7 @@ HRESULT Write(
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 前三個表單呼叫[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)，最後一個呼叫[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748)將資料寫入檔案。 使用[CAtlFile::Seek](#seek)移動檔案指標。  
+ 前三個表單呼叫[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile)，最後一個呼叫[WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex)將資料寫入檔案。 使用[CAtlFile::Seek](#seek)移動檔案指標。  
   
 ## <a name="see-also"></a>另請參閱  
  [跑馬燈範例](../../visual-cpp-samples.md)   

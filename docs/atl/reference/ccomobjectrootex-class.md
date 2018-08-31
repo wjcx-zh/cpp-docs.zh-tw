@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55da0705027d6625d4140691b1b91912fb94c555
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027523"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219169"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 這個類別提供方法來處理非彙總與彙總物件的物件參考計數管理。  
@@ -99,7 +99,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  使用的優點`CComPolyObject`避免擁有`CComAggObject`和`CComObject`處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 因此，只有一個複本的 vtable 和一份函式存在於您的模組。 如果您的 vtable 很大，這可以大幅降低您的模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`可能會導致稍微大一點的模組大小因為它不會最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
   
- 如果您的物件已彙總， [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)藉由`CComAggObject`或`CComPolyObject`。 這些類別委派`QueryInterface`， `AddRef`，並`Release`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`轉寄至的外部未知。 通常，您會覆寫`CComObjectRootEx::FinalConstruct`在您的類別，建立任何彙總的物件，並覆寫`CComObjectRootEx::FinalRelease`來釋放任何彙總物件。  
+ 如果您的物件已彙總， [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)藉由`CComAggObject`或`CComPolyObject`。 這些類別委派`QueryInterface`， `AddRef`，並`Release`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`轉寄至的外部未知。 通常，您會覆寫`CComObjectRootEx::FinalConstruct`在您的類別，建立任何彙總的物件，並覆寫`CComObjectRootEx::FinalRelease`來釋放任何彙總物件。  
   
  如果您的物件不會彙總，`IUnknown`藉由`CComObject`或`CComPolyObject`。 在此情況下，呼叫`QueryInterface`， `AddRef`，並`Release`委派給`CComObjectRootEx`的`InternalQueryInterface`， `InternalAddRef`，和`InternalRelease`執行實際的作業。  
   
@@ -222,7 +222,7 @@ ULONG InternalRelease();
  如果執行緒模型為多執行緒、`InterlockedDecrement`用來防止多個執行緒同時變更的參考計數。  
   
 ##  <a name="lock"></a>  CComObjectRootEx::Lock  
- 如果多執行緒的執行緒模型，這個方法會呼叫 Win32 API 函式[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，哪一個等候，直到執行緒可以取得重要區段物件的擁有權取得透過私用資料成員。  
+ 如果多執行緒的執行緒模型，這個方法會呼叫 Win32 API 函式[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)，哪一個等候，直到執行緒可以取得重要區段物件的擁有權取得透過私用資料成員。  
   
 ```
 void Lock();
@@ -279,7 +279,7 @@ IUnknown*
  如果彙總物件的外部未知的指標會儲存在`m_pOuterUnknown`。 如果物件不會彙總，來存取的參考計數`AddRef`並`Release`會儲存在[m_dwRef](#m_dwref)。  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- 每個類別中所列[物件對應](http://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)，一旦初始化模組時，會呼叫此函數並再次時它就會終止。  
+ 每個類別中所列[物件對應](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)，一旦初始化模組時，會呼叫此函數並再次時它就會終止。  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);
@@ -292,7 +292,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>備註  
  值*bStarting*參數會指出是否將模組正在初始化或終止。 預設實作`ObjectMain`不執行任何動作，但您可以在初始化或清除您想要的類別配置的資源類別中覆寫這個函式。 請注意，`ObjectMain`類別的任何執行個體要求之前呼叫。  
   
- `ObjectMain` 被呼叫從 DLL 的進入點，所以的進入點函式可以執行的作業類型會限制。 如需有關這些限制的詳細資訊，請參閱 < [Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)並[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)。  
+ `ObjectMain` 被呼叫從 DLL 的進入點，所以的進入點函式可以執行的作業類型會限制。 如需有關這些限制的詳細資訊，請參閱 < [Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)並[DllMain](/windows/desktop/Dlls/dllmain)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
@@ -335,7 +335,7 @@ ULONG OuterRelease();
  在非偵錯組建中，一律會傳回 0。 在偵錯組建中，傳回值，可能有助於診斷或測試。  
   
 ##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
- 如果多執行緒的執行緒模型，這個方法會呼叫 Win32 API 函式[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，透過私用資料成員取得的哪些版本的擁有權的重要區段物件。  
+ 如果多執行緒的執行緒模型，這個方法會呼叫 Win32 API 函式[LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)，透過私用資料成員取得的哪些版本的擁有權的重要區段物件。  
   
 ```
 void Unlock();

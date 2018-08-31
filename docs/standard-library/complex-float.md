@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bf266e11f975e3ce01e5359c1dac65b46a42435a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954001"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221339"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述可儲存型別之物件的有序的對 **浮點數 ** 第一個代表第二個複數的實數部分代表虛數部分。
+描述可儲存型別之物件的排序的配對**浮點數**，第一個代表第二個複數的實數部分代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -51,11 +51,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal*類型的值**float**建構中複數的實數部分。
+*_RealVal*<br/>
+要建構之複數實數部分的 **float** 類型值。
 
-*_ImagVal*類型的值**float**的建構中複數之虛數部分。
+*_ImagVal*<br/>
+要建構之複數虛數部分的 **float** 類型值。
 
-*complexNum*類型的複數**double**或型別的**長雙精度**其實部及虛部用於初始化類型的複數**float**所建構。
+*complexNum*<br/>
+類型的複數**雙**或型別的**長雙精度**其實部及虛部用於初始化類型的複數**float**所建構。
 
 ## <a name="return-value"></a>傳回值
 

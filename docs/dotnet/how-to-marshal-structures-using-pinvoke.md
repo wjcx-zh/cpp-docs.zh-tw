@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 PInvoke 封送處理結構 |Microsoft 文件
+title: 如何： 使用 PInvoke 封送處理結構 |Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4ff1801c9bb2de06ae2717e8f69bcd39fdf3bc98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136609"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219880"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送處理結構
-本文件說明如何在原生函式接受 C 樣式結構可以從呼叫 managed 函式中使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時間錯誤報告，因為不是類型安全，就必須等待冗長當 unmanaged 應用程式開發介面會封裝為 DLL，而且不是原始碼實作可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：  
+本文件說明如何在原生函式會接受 C 樣式結構可以從呼叫 managed 函式，藉由使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時期錯誤，報告，因為不是類型安全，並可能會非常繁瑣，若要實作，如果未受管理的 API 會封裝成 DLL，而且沒有原始程式碼可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：  
   
 -   [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
 -   [如何：使用 PInvoke 封送處理字串](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
- 根據預設，原生和 managed 結構配置以不同的方式在記憶體中，因此已成功傳遞結構的 managed/unmanaged 的界限之間需要額外的步驟，以保留資料完整性。  
+ 根據預設，原生和 managed 結構是配置以不同的方式在記憶體中，因此已成功跨 managed/unmanaged 界限傳遞結構需要額外的步驟，以保持資料完整性。  
   
- 本文件說明來定義原生結構，和如何產生結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 那些不包含字串或指標，會使用。 如需非 blittable 互通性資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型當做傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同的表示法。 如需詳細資訊，請參閱[Blittable 和非 Blittable 類型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
+ 本文件說明定義原生結構，和如何產生的結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 不會包含字串或指標，會使用。 非 blittable 互通性的相關資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型做為傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同表示法。 如需詳細資訊，請參閱 < [Blittable 和非 Blittable 類型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
   
- 封送處理簡單，blittable 結構的 managed/unmanaged 的界限之間需要先定義受管理的每個原生結構的版本。 這些結構可以具有任何合法的名稱。兩個結構以外的資料版面配置的原生和 managed 版本之間沒有任何關聯性。 因此，很重要的受管理的版本包含欄位都會使用相同的大小和原生版本的順序相同。 （沒有任何機制可確保該結構的 managed 和原生版本完全相等，因此不相容的情況會明顯直到執行階段。 它是程式設計人員的責任在於確保兩個結構有相同的資料配置。）  
+ 簡單封送處理，跨 managed/unmanaged 界限的 blittable 結構第一次需要受管理的版本，每個原生結構的定義。 這些結構可以具有任何合法的名稱;兩個的結構，其配置的資料以外的原生和 managed 版本之間沒有任何關聯性。 因此，它是不可或缺的受管理的版本包含相同的大小和順序與原生的版本相同的欄位。 （沒有任何機制可確保結構的 managed 和原生版本同等權限，因此不相容問題會變得明顯到執行階段。 它是程式設計人員必須負責確保兩個結構有相同的資料版面配置）。  
   
- 因為 managed 結構的成員就會有時重新排列，基於效能的目的，是為了使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性來指出此結構依序配置。 它也是個不錯的主意明確設定 封裝設定成原生結構使用相同的結構。 （雖然根據預設，Visual c + + 使用 managed 程式碼封裝的 8 位元組結構）。  
+ 因為基於效能目的有時重新排列的受管理的結構成員，就必須使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性來指出此結構依序配置。 它也是個不錯的主意，明確地設定 封裝設定所使用的原生結構相同的結構。 （根據預設，雖然 Visual c + + 使用這兩個受管理的程式碼封裝的 8 位元組結構）。  
   
-1.  接下來，使用<xref:System.Runtime.InteropServices.DllImportAttribute>宣告對應至接受結構的任何 unmanaged 函式的進入點，但使用的函式簽章中的結構為想法，如果您使用相同的名稱，這兩個版本的受管理的版本結構。  
+1.  接下來，使用<xref:System.Runtime.InteropServices.DllImportAttribute>宣告對應至任何接受結構的 unmanaged 函式的進入點，但使用中的函式簽章中，這是就無傷大雅了點，如果您使用相同的名稱，這兩個版本的結構的 managed 的版本結構。  
   
-2.  現在 managed 程式碼可以傳遞結構的 managed 的版本給 unmanaged 函式就好像它們是實際 managed 函式。 這些結構可以傳遞值或參考，如下列範例所示。  
+2.  現在的 managed 程式碼可以 unmanaged 函式上傳遞結構的 managed 的版本就好像它們是實際的受管理的函式。 這些結構可以傳遞值或參考，如下列範例所示。  
   
 ## <a name="example"></a>範例  
- 下列程式碼是由 unmanaged 和 managed 的模組所組成。 Unmanaged 的模組會定義結構位置和呼叫可接受兩個執行個體的位置結構 GetDistance 函式呼叫的 DLL。 第二個模組是受管理的命令列應用程式匯入 GetDistance 函式，但定義根據對等位置結構 （MLocation） 的受管理項目。 在實務上相同的名稱可能用於兩個版本的結構。不過，不同的名稱是此處用來示範 DllImport 原型的定義是根據受管理的版本。  
+ 下列程式碼是由 unmanaged 和 managed 的模組所組成。 未受管理的模組是定義結構，其位置和呼叫可接受兩個位置結構執行個體 GetDistance 函式呼叫的 DLL。 第二個模組是受管理的命令列應用程式匯入 GetDistance 函式，但定義位置的 MLocation 結構的 managed 對等方面。 在實務上相同的名稱可能要用於兩個版本的結構;不過，不同的名稱也是此處用來示範 DllImport 原型以受管理的版本定義。  
   
- 請注意，DLL 的任何部分公開給 managed 程式碼使用的傳統 #include 指示詞。 事實上，DLL 會在執行階段存取，因此將不會在編譯時期偵測函式使用 DllImport 匯入的問題。  
+ 請注意沒有部分的 dll 會使用傳統的 managed 程式碼以 #include 指示詞。 事實上，DLL 會在執行階段存取，因此將不會在編譯時期偵測使用 DllImport 匯入的函式的問題。  
   
 ```  
 // TraditionalDll3.cpp  

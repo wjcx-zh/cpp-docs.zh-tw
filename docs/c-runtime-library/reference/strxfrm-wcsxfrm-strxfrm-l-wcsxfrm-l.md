@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 96f459c8360969146f8cf76a48c9141000066745
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451715"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214289"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
@@ -99,17 +99,17 @@ size_t wcsxfrm_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回已轉換字串的長度，不計入結束的 Null 字元。 傳回的值是否大於或等於*計數*、 內容的*strDest*無法預測。 發生錯誤時，每個函式會將**errno**並傳回**INT_MAX**。 無效的字元，如**errno**設**EILSEQ**。
+傳回已轉換字串的長度，不計入結束的 Null 字元。 傳回的值是否大於或等於*計數*，則內容*strDest*無法預期。 發生錯誤時，設定每個函式**errno** ，然後傳回**INT_MAX**。 無效的字元，如**errno**設為**EILSEQ**。
 
 ## <a name="remarks"></a>備註
 
-**Strxfrm**函式轉換所指向的字串*strSource*至新定序中所儲存的表單*strDest*。 不能超過*計數*轉換字元，包括 null 字元，並放入產生的字串。 使用的地區設定進行轉換**LC_COLLATE**分類設定。 如需有關**LC_COLLATE**，請參閱[setlocale](setlocale-wsetlocale.md)。 **strxfrm**使用目前的地區設定，地區設定相關的行為。**_strxfrm_l**是完全相同，不同之處在於它會使用傳入，而不是目前的地區設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Strxfrm**所指向的字串的函式轉換*strSource*到新的定序中所儲存的格式*strDest*。 不能超過*計數*字元，包括 null 字元，轉換並放入結果字串。 使用的地區設定來進行轉換**LC_COLLATE**分類設定。 如需詳細資訊**LC_COLLATE**，請參閱[setlocale](setlocale-wsetlocale.md)。 **strxfrm**針對與其地區設定相關行為; 會使用目前的地區設定 **_strxfrm_l**完全相同，不同之處在於它會使用傳入，而不是目前的地區設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在轉換之後，呼叫**strcmp**與兩個已轉換的字串會產生相同的呼叫結果**strcoll**套用到原始的兩個字串。 如同**strcoll**和**stricoll**， **strxfrm**會自動處理為適當的多位元組字元字串。
+在轉換之後，呼叫**strcmp**具有兩個已轉換的字串會產生完全相同的呼叫結果**strcoll**套用至原始兩個字串。 如同**strcoll**並**stricoll**， **strxfrm**會自動處理為適當的多位元組字元字串。
 
-**wcsxfrm**是寬字元版本的**strxfrm**; 的字串引數**wcsxfrm**是寬字元的指標。 如**wcsxfrm**，之後字串轉換的呼叫**wcscmp**與兩個已轉換的字串會產生相同的呼叫結果**wcscoll**套用至原始的兩個字串。 **wcsxfrm**和**strxfrm**除此之外的行為相同。 **wcsxfrm**使用目前的地區設定，地區設定相關的行為。**_wcsxfrm_l**使用而不是目前的地區設定傳入的地區設定。
+**wcsxfrm**是寬字元版本的**strxfrm**; 的字串引數**wcsxfrm**是寬字元指標。 針對**wcsxfrm**之後，字串轉換，呼叫**wcscmp**使用兩個已轉換的字串會產生完全相同的呼叫結果**wcscoll**套用至原始的兩個字串。 **wcsxfrm**並**strxfrm**行為相同。 **wcsxfrm**針對與其地區設定相關行為; 會使用目前的地區設定 **_wcsxfrm_l**使用而不是目前的地區設定傳入的地區設定。
 
-這些函式會驗證它們的參數。 如果*strSource*為 null 指標，或*strDest*是**NULL**指標 （除非計數為零），或如果*計數*大於**INT_MAX**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**INT_MAX**。
+這些函式會驗證它們的參數。 如果*strSource*為 null 指標，或*strDest*會**NULL**指標 （除非計數為零），或如果*計數*大於**INT_MAX**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**INT_MAX**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -118,17 +118,17 @@ size_t wcsxfrm_l(
 |**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
-在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與字元的詞典編纂順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂字元順序不同。 比方說，在某些歐洲地區設定中，字元 'a' （值 0x61） 前面的字元 ' （& s)\#x00E4;'（值 0xE4） 中的字元集，但字元 'ä' 前面的字元 'a' 辭典編纂順序。
+在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與字元的詞典編纂順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂字元順序不同。 比方說，某些歐洲的地區設定中的字元 'a' （值 0x61） 前面的字元 ' &\#x00E4;'（值 0xE4） 中的字元集，但字元 'ä' 前面的字元 'a' 依辭典編纂順序。
 
-在不同的地區設定的字元集和詞典編纂字元順序，使用**strxfrm**上的原始字串，然後**strcmp**上產生的字串，以產生字典編撰字串根據目前的地區設定的比較**LC_COLLATE**分類設定。 因此，若要比較兩個字串以辭典編纂順序中使用上述的地區設定，請使用**strxfrm**上的原始字串，然後**strcmp**上產生的字串。 或者，您可以使用**strcoll**而**strcmp**上的原始字串。
+中的字元集和詞典編纂字元順序不同的地區設定，使用**strxfrm**對原始字串，然後**strcmp**上產生的字串，以產生詞典編纂字串根據目前的地區設定的比較**LC_COLLATE**分類設定。 因此，若要比較上述地區設定中，依辭典編纂順序的兩個字串，請使用**strxfrm**對原始字串，然後**strcmp**產生的字串。 或者，您可以使用**strcoll**而非**strcmp**對原始字串。
 
-**strxfrm**周圍的包裝函式基本上是[LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700)與**LCMAP_SORTKEY**。
+**strxfrm**基本上是一個包裝函式[LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)具有**LCMAP_SORTKEY**。
 
-下列運算式的值是陣列來保存所需的大小**strxfrm**來源字串的轉換：
+下列運算式的值是陣列保留所需的大小**strxfrm**轉換來源字串：
 
 `1 + strxfrm( NULL, string, 0 )`
 
-在"C"地區設定， **strxfrm**相當於下列：
+在"C"地區設定中， **strxfrm**就相當於下列：
 
 ```C
 strncpy( _string1, _string2, _count );
@@ -137,7 +137,7 @@ return( strlen( _string1 ) );
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**strxfrm**|\<string.h>|
 |**wcsxfrm**|\<string.h> 或 \<wchar.h>|

@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0494b22d3166ebfd75a6aeaceba839f80b84bc1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9a74b7d759cd0ed7f576276f4c7948a07e161892
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884401"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220737"
 ---
 # <a name="csize-class"></a>CSize 類別
-類似於實作相對座標或位置的 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 結構。  
+類似於 Windows[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構中，於實作相對座標或位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -91,7 +91,7 @@ CSize( DWORD dwSize) throw();
  設定組`cy`成員`CSize`。  
   
  *initSize*  
- [大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，用來初始化`CSize`。  
+ [大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構或`CSize`物件，用來初始化`CSize`。  
   
  *initPt*  
  [點](../../mfc/reference/point-structure1.md)結構或`CPoint`物件，用來初始化`CSize`。  
@@ -165,9 +165,9 @@ CRect operator+(const RECT* lpRect) const throw();
   
 - **運算子 + (** `size` **)** 這項作業會加入兩個`CSize`值。  
   
-- **運算子 + (** `point` **)** 這項作業的位移 （移動）[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值，這個`CSize`值。 **Cx**並**cy**這個成員`CSize`值會新增至**x**並**y**資料成員的**點**值。 它相當於新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子 + (** `point` **)** 這項作業的位移 （移動）[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)(或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值，這個`CSize`值。 **Cx**並**cy**這個成員`CSize`值會新增至**x**並**y**資料成員的**點**值。 它相當於新版[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)採用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
-- **運算子 + (** `lpRect` **)** 這項作業的位移 （移動） [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值，這個`CSize`值。 **Cx**並**cy**這個成員`CSize`值會新增至**左**，**頂端**，**右邊**，並**底部**的資料成員`RECT`值。 它相當於新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子 + (** `lpRect` **)** 這項作業的位移 （移動） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (或[CRect](../../atl-mfc-shared/reference/crect-class.md)) 值，這個`CSize`值。 **Cx**並**cy**這個成員`CSize`值會新增至**左**，**頂端**，**右邊**，並**底部**的資料成員`RECT`值。 它相當於新版[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)採用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
@@ -187,9 +187,9 @@ CSize operator-() const throw();
   
 - **運算子-(** `size` **)** 這項作業，減去兩個`CSize`值。  
   
-- **運算子-(** `point` **)** 這項作業的位移 （移動）[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)或是[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)加法反元素，這個值`CSize`值。 **Cx**並**cy**這個`CSize`值減去**x**並**y**的資料成員**點**值。 它相當於新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子-(** `point` **)** 這項作業的位移 （移動）[點](https://msdn.microsoft.com/library/windows/desktop/dd162805)或是[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)加法反元素，這個值`CSize`值。 **Cx**並**cy**這個`CSize`值減去**x**並**y**的資料成員**點**值。 它相當於新版[CPoint::operator-](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)採用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
-- **運算子-(** `lpRect` **)** 這項作業的位移 （移動） [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)加法反元素，這個值`CSize`值。 **Cx**並**cy**這個成員`CSize`值減去**左**，**頂端**，**右邊**，並**下方**的資料成員`RECT`值。 它相當於新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)採用[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
+- **運算子-(** `lpRect` **)** 這項作業的位移 （移動） [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)或是[CRect](../../atl-mfc-shared/reference/crect-class.md)加法反元素，這個值`CSize`值。 **Cx**並**cy**這個成員`CSize`值減去**左**，**頂端**，**右邊**，並**下方**的資料成員`RECT`值。 它相當於新版[CRect::operator-](../../atl-mfc-shared/reference/crect-class.md#operator_-)採用[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)參數。  
   
 - **運算子-（)** 這項作業會傳回這個加法反元素`CSize`值。  
   

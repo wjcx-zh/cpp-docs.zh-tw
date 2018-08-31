@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222090"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 `CMFCFontInfo`類別所描述的名稱和字型的其他屬性。  
@@ -95,16 +95,16 @@ CMFCFontInfo(const CMFCFontInfo& src);
   
 ### <a name="parameters"></a>參數  
  [in]*lpszName*  
- 字型的名稱。 如需詳細資訊，請參閱 <<c0> `lfFaceName` 隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
+ 字型的名稱。 如需詳細資訊，請參閱 <<c0> `lfFaceName` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
  [in]*lpszScript*  
  指令碼 （字元集） 的字型名稱。  
   
  [in]*nCharSet*  
- 值，指定字型的字元集 （指令碼）。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
+ 值，指定字型的字元集 （指令碼）。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
  [in]*nPitchAndFamily*  
- 值，指定的字幅和家族的字型。 如需詳細資訊，請參閱 <<c0> `lfPitchAndFamily` 隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
+ 值，指定的字幅和家族的字型。 如需詳細資訊，請參閱 <<c0> `lfPitchAndFamily` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
  [in]*n*  
  指定的字型類型的值。 這個參數可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
- 這份文件使用詞彙*字元集*並*指令碼*交替。 A*指令碼*，這就是所謂的書寫系統，是字元和規則的一或多個語言中撰寫這些字元的集合。 字元的集合可包含字母與使用該指令碼中的標點符號。 比方說，拉丁文字用於英文，唸在美國，以及其字母包括從 A 到 Z 的字元。`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構指定的字元集。 比方說，新細明的值指定 ANSI 字元集，其中包括拉丁指令碼的字母。  
+ 這份文件使用詞彙*字元集*並*指令碼*交替。 A*指令碼*，這就是所謂的書寫系統，是字元和規則的一或多個語言中撰寫這些字元的集合。 字元的集合可包含字母與使用該指令碼中的標點符號。 比方說，拉丁文字用於英文，唸在美國，以及其字母包括從 A 到 Z 的字元。`lfCharSet`隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構指定的字元集。 比方說，新細明的值指定 ANSI 字元集，其中包括拉丁指令碼的字母。  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  擷取的字型和它的字元串連的名稱集 （指令碼）。  

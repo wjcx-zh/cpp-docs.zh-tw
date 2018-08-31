@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 089fe435c86b524acc41ba528452d93032d1b1a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850562"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214489"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 類別
 用於 OLE 的 [變更圖示] 對話方塊。  
@@ -67,7 +67,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="remarks"></a>備註  
  建立類別的物件`COleChangeIconDialog`當您想要呼叫此對話方塊。 在後`COleChangeIconDialog`在建構物件，您可以使用[m_ci](#m_ci)結構初始化的值或在對話方塊中控制項的狀態。 `m_ci`結構屬於 OLEUICHANGEICON 的型別。 如需使用這個對話方塊類別的詳細資訊，請參閱 < [DoModal](#domodal)成員函式。  
   
- 如需詳細資訊，請參閱 < [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK 中的結構。  
   
  如需有關特定 OLE 對話方塊的詳細資訊，請參閱[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。  
   
@@ -122,7 +122,7 @@ explicit COleChangeIconDialog(
 ### <a name="remarks"></a>備註  
  若要顯示的對話方塊，請呼叫[DoModal](#domodal)函式。  
   
- 如需詳細資訊，請參閱 < [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK 中的結構。  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  呼叫此函式來變更表示在之後的對話方塊中選取一個項目圖示[DoModal](#domodal)傳回 IDOK。  
@@ -152,7 +152,7 @@ virtual INT_PTR DoModal();
   
 - 如果使用者已取消對話方塊，IDCANCEL。  
   
-- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫`COleDialog::GetLastError`成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) Windows SDK 中的函式。  
+- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫`COleDialog::GetLastError`成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) Windows SDK 中的函式。  
   
 ### <a name="remarks"></a>備註  
  如果您想要設定的成員初始化各種不同的對話方塊控制項[m_ci](#m_ci)結構，您應該執行這項操作之前先呼叫`DoModal`，但在建構對話方塊物件之後。  
@@ -179,7 +179,7 @@ OLEUICHANGEICON m_ci;
 ### <a name="remarks"></a>備註  
  直接或透過成員函式，則可以修改此結構的成員。  
   
- 如需詳細資訊，請參閱 < [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK 中的結構。  
   
 ## <a name="see-also"></a>另請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   

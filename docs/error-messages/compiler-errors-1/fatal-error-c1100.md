@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1100 |Microsoft 文件
+title: 嚴重錯誤 C1100 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da442ea76d6c559213b319d3e91d447ec47bc848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198400"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220042"
 ---
 # <a name="fatal-error-c1100"></a>嚴重錯誤 C1100
 無法初始化 OLE： 系統錯誤訊息  
   
- 編譯器無法初始化元件物件模型 (COM) 程式庫。 請參閱[CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543)。
+ 編譯器無法初始化元件物件模型 (COM) 程式庫。 請參閱[CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize)。

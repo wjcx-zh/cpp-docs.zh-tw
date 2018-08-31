@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606411"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219657"
 ---
 # <a name="raising-software-exceptions"></a>引發軟體例外狀況
 某些常見的程式錯誤來源是系統未標示為例外狀況。 例如，如果您嘗試配置記憶體區塊，但是沒有足夠的記憶體，執行階段或 API 函式不會引發例外狀況，而是傳回錯誤碼。  
   
- 不過，您可以將任何條件視為例外狀況偵測該情況，進而在您的程式碼中，然後再呼叫報告[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函式。 以這種方式標幟錯誤，您就可以將結構化例外狀況處理的優點運用到任何類型的執行階段錯誤。  
+ 不過，您可以將任何條件視為例外狀況偵測該情況，進而在您的程式碼中，然後再呼叫報告[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)函式。 以這種方式標幟錯誤，您就可以將結構化例外狀況處理的優點運用到任何類型的執行階段錯誤。  
   
  若要使用結構化例外狀況處理錯誤：  
   
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- 如果您只想要引發例外狀況，可以將最後三個參數設為 0。 在傳遞額外資訊以及設定旗標防止處理常式繼續執行時，最後三個參數會很有用。 請參閱[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函式，如需詳細資訊的 Windows SDK 中。  
+ 如果您只想要引發例外狀況，可以將最後三個參數設為 0。 在傳遞額外資訊以及設定旗標防止處理常式繼續執行時，最後三個參數會很有用。 請參閱[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)函式，如需詳細資訊的 Windows SDK 中。  
   
  然後就可以在您的例外狀況處理篩選條件中，測試您所定義的代碼。 例如:   
   

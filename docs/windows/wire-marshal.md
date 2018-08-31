@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 390ab7723cb760793ab96a31bc3ac948f5a40dcd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 94504cea86059f835d9cbda7cbf2bcdeafab589b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590387"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214106"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 
@@ -36,7 +36,7 @@ ms.locfileid: "42590387"
 
 ## <a name="remarks"></a>備註
 
-**Wire_marshal** c + + 屬性具有相同的功能[wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 屬性。
+**Wire_marshal** c + + 屬性具有相同的功能[wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

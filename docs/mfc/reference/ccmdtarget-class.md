@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539848"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221706"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 Microsoft Foundation 類別庫訊息對應架構的基底類別。  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  動詞命令的數值識別項。  
   
  *lpMsg*  
- 指標[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)結構描述 （例如按兩下） 叫用動詞命令的事件。  
+ 指標[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)結構描述 （例如按兩下） 叫用動詞命令的事件。  
   
  *hWndParent*  
  文件視窗的控制代碼，包含物件。  
   
  *lpRect*  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的座標，像素為單位，可定義物件的週框矩形*hwndParent*。  
+ 指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的座標，像素為單位，可定義物件的週框矩形*hwndParent*。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，否則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式基本上會實作[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)。 藉由可列舉的可能動作[CCmdTarget::EnumOleVerbs](#enumoleverbs)。  
+ 此成員函式基本上會實作[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb)。 藉由可列舉的可能動作[CCmdTarget::EnumOleVerbs](#enumoleverbs)。  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  呼叫此函式可啟用 OLE automation 物件。  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>參數  
  *ppenumOleVerb*  
- 指標的指標[IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084)介面。  
+ 指標的指標[IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb)介面。  
   
 ### <a name="return-value"></a>傳回值  
  如果物件支援至少一個 OLE 指令動詞則為 TRUE (在此情況下\* *ppenumOleVerb*指向`IEnumOLEVERB`列舉值介面)，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式基本上會實作[Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)。  
+ 此成員函式基本上會實作[Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs)。  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  呼叫此函式來對應`IDispatch`指標，從 automation 類別中，成員函式會接收到`CCmdTarget`可實作介面的物件`IDispatch`物件。  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>參數  
  *pIID*  
- 介面識別碼的指標 ( [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931))。  
+ 介面識別碼的指標 ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931))。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，否則為 FALSE，則為 TRUE。 如果成功， \* *pIID*設為主要分派介面 id。  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  `IDispatch`與物件相關聯的指標。  
   
 ### <a name="remarks"></a>備註  
- 針對物件呼叫`EnableAutomation`其建構函式，即可啟用自動化，此函式傳回的指標的基礎類別實作`IDispatch`所用的用戶端通訊透過`IDispatch`介面。 會自動呼叫此函式將參考加入至指標，因此不需要呼叫[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。  
+ 針對物件呼叫`EnableAutomation`其建構函式，即可啟用自動化，此函式傳回的指標的基礎類別實作`IDispatch`所用的用戶端通訊透過`IDispatch`介面。 會自動呼叫此函式將參考加入至指標，因此不需要呼叫[iunknown:: Addref](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)。  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  擷取物件提供的型別資訊介面數目。  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  地區設定識別碼 ( `LCID`)。  
   
  *guid*  
- [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)的型別描述。  
+ [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)的型別描述。  
   
  *ppTypeInfo*  
  指標的指標`ITypeInfo`介面。  

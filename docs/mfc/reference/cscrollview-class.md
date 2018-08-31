@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849912"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214973"
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 A [CView](../../mfc/reference/cview-class.md)具有捲動功能。  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   它會自動捲動以回應訊息從鍵盤、 非捲動滑鼠或將 intellimouse 滑鼠滾輪。  
   
- 若要自動捲動，以回應訊息從鍵盤，加入 WM_KEYDOWN 訊息，並測試 VK_DOWN、 VK_PREV 和呼叫[SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597)。  
+ 若要自動捲動，以回應訊息從鍵盤，加入 WM_KEYDOWN 訊息，並測試 VK_DOWN、 VK_PREV 和呼叫[SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos)。  
   
- 您可以處理您自己藉由覆寫訊息對應中捲動滑鼠滾輪[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)並[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成員函式。 因為它們是針對`CScrollView`，這些成員函式支援建議的行為[WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617)，滾輪旋轉訊息。  
+ 您可以處理您自己藉由覆寫訊息對應中捲動滑鼠滾輪[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)並[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成員函式。 因為它們是針對`CScrollView`，這些成員函式支援建議的行為[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)，滾輪旋轉訊息。  
   
  若要利用自動捲動，衍生您的檢視類別，從`CScrollView`而不是從`CView`。 檢視第一次建立時，如果您想要計算的文件中，呼叫大小為基礎的可捲動檢視的大小`SetScrollSizes`成員函式的覆寫[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必須撰寫自己的程式碼來查詢文件大小。 如需範例，請參閱[Scribble 範例](../../visual-cpp-samples.md)。)  
   

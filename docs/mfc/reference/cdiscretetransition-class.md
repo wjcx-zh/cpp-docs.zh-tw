@@ -1,5 +1,5 @@
 ---
-title: CDiscreteTransition 類別 |Microsoft 文件
+title: CDiscreteTransition 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4c8cc3c6ad476f0a1d69c81dad4eabfed3cc34bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957028"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219902"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 類別
 封裝離散的轉換。  
@@ -48,7 +48,7 @@ class CDiscreteTransition : public CBaseTransition;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|建構離散的轉換物件並初始化其參數。|  
+|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|建構一個離散轉換物件並初始化其參數。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -61,11 +61,11 @@ class CDiscreteTransition : public CBaseTransition;
 |名稱|描述|  
 |----------|-----------------|  
 |[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
-|[CDiscreteTransition::m_delay](#m_delay)|所要依據的延遲時間的瞬間交換器的最終值的時間量。|  
-|[CDiscreteTransition::m_hold](#m_hold)|用來保存變數，在最後一個值的時間量。|  
+|[CDiscreteTransition::m_delay](#m_delay)|用來延遲的最終值即時切換的時間量。|  
+|[CDiscreteTransition::m_hold](#m_hold)|用來保存的變數，在最後一個值的時間量。|  
   
 ## <a name="remarks"></a>備註  
- 離散的轉換期間動畫變數會保持為初始值為指定的延遲時間，然後立即交換器指定的最終值以及該值維持給定的保留時間。 由於所有轉換會自動都清除，建議來配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup，直到然後它便是 NULL。 變更成員變數之後這個 COM 物件建立沒有任何作用。  
+ 離散的轉換，期間動畫變數會保持在初始的值指定的延遲時間，然後立即交換器指定的最後一個值，以及維持該值指定的保留時間。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,7 +78,7 @@ class CDiscreteTransition : public CBaseTransition;
  **標頭：** afxanimationcontroller.h  
   
 ##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
- 建構離散的轉換物件並初始化其參數。  
+ 建構一個離散轉換物件並初始化其參數。  
   
 ```  
 CDiscreteTransition(
@@ -89,13 +89,13 @@ CDiscreteTransition(
   
 ### <a name="parameters"></a>參數  
  *延遲*  
- 所要依據的延遲時間的瞬間交換器的最終值的時間量。  
+ 用來延遲的最終值即時切換的時間量。  
   
  *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
- *保存*  
- 用來保存變數，在最後一個值的時間量。  
+ *保留*  
+ 用來保存的變數，在最後一個值的時間量。  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 *pLibrary*  
- 指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
+ 指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。  
 
   
 ### <a name="return-value"></a>傳回值  
@@ -121,14 +121,14 @@ DOUBLE m_dblFinalValue;
 ```  
   
 ##  <a name="m_delay"></a>  CDiscreteTransition::m_delay  
- 所要依據的延遲時間的瞬間交換器的最終值的時間量。  
+ 用來延遲的最終值即時切換的時間量。  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
 ##  <a name="m_hold"></a>  CDiscreteTransition::m_hold  
- 用來保存變數，在最後一個值的時間量。  
+ 用來保存的變數，在最後一個值的時間量。  
   
 ```  
 UI_ANIMATION_SECONDS m_hold;  

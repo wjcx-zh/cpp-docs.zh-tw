@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091c201b3b0b67879178d32f495410a1bbe22a53
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4779b832eaff7a322184adf1734f69d266c05331
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538427"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219105"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 `CMDIChildWndEx`類別會提供功能的 Windows 多重文件介面 (MDI) 子視窗。 它會擴充功能[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。  
@@ -192,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|需要自動縮放的 MDI 子系的 Windows 7 工作列 索引標籤縮圖預覽的點陣圖時由架構呼叫。|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|由架構呼叫以更新框架標題。 (覆寫 `CMDIChildWnd::OnUpdateFrameTitle`。)|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|  
-|`CMDIChildWndEx::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
+|`CMDIChildWndEx::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|重新計算視窗版面的配置。|  
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|向 Windows 7 工作列 索引標籤中的 MDI 子系。|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|移除窗格從停駐的管理員。|  

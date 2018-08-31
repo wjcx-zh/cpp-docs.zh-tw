@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 06bb7101524a51872ca4d329fbe9db6b13b6b8bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214942"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 類別
 協助網際網路檔案搜尋 Gopher 伺服器。  
@@ -162,7 +162,7 @@ virtual BOOL FindFile(
 -   INTERNET_FLAG_USE_EXISTING 如果可能的話，請重複使用現有的連線到伺服器新`FindFile`要求，而不是建立新的工作階段，針對每個要求。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
  之後呼叫`FindFile`若要擷取的第一個 gopher 物件，您可以呼叫[FindNextFile](#findnextfile)擷取後續 gopher 檔案。  
@@ -175,7 +175,7 @@ virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 非零值，如果有多個檔案;如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案是在目錄中，最後一個檔案，或如果沒有相符，就可以找到檔案，`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
+ 非零值，如果有多個檔案;如果找到該檔案的目錄中的最後一個，或發生錯誤，則為零。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如果找到該檔案是在目錄中，最後一個檔案，或如果沒有相符，就可以找到檔案，`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  取得目前檔案的建立時間。  
@@ -187,7 +187,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>參數  
  *pTimeStamp*  
- 指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。  
+ 指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。  
   
  *refTime*  
  參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
@@ -199,7 +199,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
  您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`GetCreationTime`。  
   
 > [!NOTE]
->  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API，如需詳細資訊。  
+>  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API，如需詳細資訊。  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  取得指定的檔案上次被存取的時間。  
@@ -214,7 +214,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
  *pTimeStamp*  
- 指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。  
+ 指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零0，如果不成功。 `GetLastAccessTime` 會傳回 0，只有當[FindNextFile](#findnextfile)從未在此呼叫`CGopherFileFind`物件。  
@@ -223,7 +223,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`GetLastAccessTime`。  
   
 > [!NOTE]
->  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API，如需詳細資訊。  
+>  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API，如需詳細資訊。  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
  取得已變更檔案的最後一次。  
@@ -235,7 +235,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>參數  
  *pTimeStamp*  
- 指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。  
+ 指標[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。  
   
  *refTime*  
  參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
  您必須呼叫[FindNextFile](#findnextfile)至少一次然後再呼叫`GetLastWriteTime`。  
   
 > [!NOTE]
->  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API，如需詳細資訊。  
+>  並非所有的檔案系統會使用相同的語意，來實作此函數所傳回的時間戳記。 此函式可能會傳回相同的值，如果基礎檔案系統或伺服器不支援保留時間屬性，其他的時間戳記函式所傳回。 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)時間格式的相關資訊的結構。 在某些作業系統上傳回的時間為區域本機機器已為檔案所在的時間。 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API，如需詳細資訊。  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  呼叫此成員函式，若要取得長度，以位元組為單位，找到的檔案。  
@@ -260,7 +260,7 @@ virtual ULONGLONG GetLength() const;
  找到檔案的長度，以位元組為單位。  
   
 ### <a name="remarks"></a>備註  
- `GetLength` 會使用 Win32 結構[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)取得以位元組為單位的檔案大小的值。  
+ `GetLength` 會使用 Win32 結構[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa)取得以位元組為單位的檔案大小的值。  
   
 > [!NOTE]
 >  從 MFC 7.0`GetLength`支援 64 位元整數類型。 先前存在這個較新版本的程式庫所建置的程式碼可能會導致截斷警告。  

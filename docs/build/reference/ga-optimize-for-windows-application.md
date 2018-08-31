@@ -1,5 +1,5 @@
 ---
-title: -GA （針對 Windows 應用程式最佳化） |Microsoft 文件
+title: -GA （針對 Windows 應用程式最佳化） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61bf8844a5471a97214ca6f3d3b5b473c9cd6217
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374254"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194659"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (針對 Windows 應用程式最佳化)
-在.exe 檔案的執行緒區域儲存區 (TLS) 變數存取更有效率的程式碼的結果。  
+在執行緒區域儲存區 (TLS) 的變數存取的.exe 檔案更有效率的程式碼的結果。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,13 +37,13 @@ ms.locfileid: "32374254"
 ```  
   
 ## <a name="remarks"></a>備註  
- **/GA**速度資料的存取權以宣告[__declspec （thread)](../../cpp/declspec.md) Windows 為基礎的程式中。 當設定這個選項時， [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749)巨集假設為 0。  
+ **/GA**速度存取資料宣告[__declspec （thread)](../../cpp/declspec.md)在以 Windows 為基礎的程式。 當設定這個選項時， [__tls_index](/windows/desktop/ProcThread/thread-local-storage)巨集假設為 0。  
   
  使用 **/GA** DLL 可能會導致錯誤的程式碼產生的。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
 2.  按一下 [C/C++]  資料夾。  
   

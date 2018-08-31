@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a598a05c31c36c7defd5fe2441031d3bccdf20f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2781a41ddadc6932e1c5797f098407b7dd5e4f29
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336786"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221224"
 ---
 # <a name="cfont-class"></a>CFont 類別
 封裝 Windows 繪圖裝置介面 (GDI) 字型並提供操作字型的成員函式。  
@@ -124,7 +124,7 @@ BOOL CreateFont(
   
 ### <a name="parameters"></a>參數  
  *nHeight*  
- 指定字型的所需的高度 （以邏輯單位表示）。 請參閱`lfHeight`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構描述的 Windows SDK 中。 數值的絕對值*nHeight*不得超過 16,384 裝置單位之後則會轉換。 對於所有高度比較，字型對應工具會尋找最大的字型不會超過要求的大小或最小字型如果所有字型都超過要求的大小。  
+ 指定字型的所需的高度 （以邏輯單位表示）。 請參閱`lfHeight`隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構描述的 Windows SDK 中。 數值的絕對值*nHeight*不得超過 16,384 裝置單位之後則會轉換。 對於所有高度比較，字型對應工具會尋找最大的字型不會超過要求的大小或最小字型如果所有字型都超過要求的大小。  
   
  *nWidth*  
  指定字型中的字元平均寬度 （以邏輯單位表示）。 如果*nWidth*為 0 時，裝置的長寬比會比對可用的字型，尋找最接近的相符項目是由差異的絕對值決定數位化外觀比例。  
@@ -173,7 +173,7 @@ BOOL CreateFont(
  指定的字幅和家族的字型。 請參閱`lfPitchAndFamily`中的成員`LOGFONT`的值和更多的資訊清單的 Windows SDK 中的結構。  
   
  *lpszFacename*  
- A`CString`或以 null 終止的字串，指定字型的字樣名稱的指標。 這個字串的長度不能超過 30 個字元。 Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619)函式可用來列舉所有目前可用的字型。 如果*lpszFacename*是 NULL，GDI 會使用與裝置無關的字樣。  
+ A`CString`或以 null 終止的字串，指定字型的字樣名稱的指標。 這個字串的長度不能超過 30 個字元。 Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa)函式可用來列舉所有目前可用的字型。 如果*lpszFacename*是 NULL，GDI 會使用與裝置無關的字樣。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -191,7 +191,7 @@ BOOL CreateFont(
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
 ##  <a name="createfontindirect"></a>  Cfont:: Createfontindirect  
- 初始化`CFont`物件中指定的特性[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
+ 初始化`CFont`物件中指定的特性[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
@@ -207,7 +207,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="remarks"></a>備註  
  後續可以為任何裝置的目前字型選取字型。  
   
- 此字型已在指定的特性[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。 使用選取的字型時[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)成員函式，GDI 字型對應工具會嘗試比對使用現有的實體字型的邏輯字型。 如果字型對應程式無法找到完全相符的邏輯字型，它會提供替代的字型，其特性符合多個要求的特性越好。  
+ 此字型已在指定的特性[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。 使用選取的字型時[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)成員函式，GDI 字型對應工具會嘗試比對使用現有的實體字型的邏輯字型。 如果字型對應程式無法找到完全相符的邏輯字型，它會提供替代的字型，其特性符合多個要求的特性越好。  
   
  當您不再需要`CFont`所建立的物件`CreateFontIndirect`函式中，使用`CDC::SelectObject`若要選取不同的字型，放入裝置內容，然後刪除`CFont`不再需要的物件。  
   
@@ -256,7 +256,7 @@ BOOL CreatePointFontIndirect(
   
 ### <a name="parameters"></a>參數  
  *lpLogFont*  
- 指向[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構，定義邏輯字型的特性。 `lfHeight`隸屬`LOGFONT`結構以一個點，而不是邏輯單元的十分之一秒。 (例如，設定`lfHeight`為要求 12 點字型 120。)  
+ 指向[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構，定義邏輯字型的特性。 `lfHeight`隸屬`LOGFONT`結構以一個點，而不是邏輯單元的十分之一秒。 (例如，設定`lfHeight`為要求 12 點字型 120。)  
   
  *pDC*  
  指標[CDC](../../mfc/reference/cdc-class.md)物件，以用來轉換在高度`lfHeight`邏輯的單位。 如果是 NULL，螢幕裝置內容是用來進行轉換。  
@@ -301,7 +301,7 @@ int GetLogFont(LOGFONT* pLogFont);
   
 ### <a name="parameters"></a>參數  
  *pLogFont*  
- 指標[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)接收的字型資訊的結構。  
+ 指標[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)接收的字型資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為 0，非零值。  
@@ -320,9 +320,9 @@ operator HFONT() const;
  Windows GDI 字型物件的控制代碼附加至`CFont`如果成功，否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 因為這個運算子會自動用於從不`CFont`要[字型和文字](http://msdn.microsoft.com/library/windows/desktop/dd144819)，您可以傳遞`CFont`HFONTs 函式的物件。  
+ 因為這個運算子會自動用於從不`CFont`要[字型和文字](/windows/desktop/gdi/fonts-and-text)，您可以傳遞`CFont`HFONTs 函式的物件。  
   
- 如需使用 圖形物件的詳細資訊，請參閱 <<c0> [ 圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
+ 如需使用 圖形物件的詳細資訊，請參閱 <<c0> [ 圖形物件](/windows/desktop/gdi/graphic-objects)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  

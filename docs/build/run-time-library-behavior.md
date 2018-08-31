@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217288"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 執行階段程式庫行為  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 某些程式庫包裝`DllMain`為您的函式。 例如，在 MFC DLL，可實作`CWinApp`物件的`InitInstance`和`ExitInstance`執行初始化及終止您的 DLL 所需的成員函式。 如需詳細資訊，請參閱 < [regular 初始化 MFC Dll](#initializing-regular-dlls)一節。  
   
 > [!WARNING]
-> 進行的動作可以安全地在 DLL 進入點有重大的限制。 請參閱[的一般最佳作法](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices)呼叫中不安全的特定 Windows Api 的`DllMain`。 如果您需要的任何內容，不過最簡單的初始設定然後這麼做在初始化函式的 dll。 您可以要求應用程式呼叫之後的初始化函式`DllMain`已執行，並在它們之前呼叫任何其他函式在 DLL 中。  
+> 進行的動作可以安全地在 DLL 進入點有重大的限制。 請參閱[的一般最佳作法](/windows/desktop/Dlls/dynamic-link-library-best-practices)呼叫中不安全的特定 Windows Api 的`DllMain`。 如果您需要的任何內容，不過最簡單的初始設定然後這麼做在初始化函式的 dll。 您可以要求應用程式呼叫之後的初始化函式`DllMain`已執行，並在它們之前呼叫任何其他函式在 DLL 中。  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 因為 MFC 的標準 Dll`CWinApp`物件時，他們應該在 MFC 應用程式的相同位置中執行初始化及終止工作： 在`InitInstance`並`ExitInstance`成員函式的 dll `CWinApp`-衍生類別。 因為 MFC 會提供`DllMain`由所呼叫的函式`_DllMainCRTStartup`的`DLL_PROCESS_ATTACH`並`DLL_PROCESS_DETACH`，您不應該撰寫您自己`DllMain`函式。 MFC 提供`DllMain`函式會呼叫`InitInstance`當您的 DLL 載入，而且它會呼叫`ExitInstance`卸載 DLL 之前。  
   
-MFC DLL 可以追蹤的多個執行緒藉由呼叫[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)並[TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812)在其`InitInstance`函式。 這些函式可讓 DLL 儲存執行緒特定資料。  
+MFC DLL 可以追蹤的多個執行緒藉由呼叫[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)並[TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)在其`InitInstance`函式。 這些函式可讓 DLL 儲存執行緒特定資料。  
   
 在您的標準 MFC DLL 動態連結至 MFC，如果您使用任何 MFC OLE，MFC 資料庫 （或 DAO） 或 MFC 通訊端支援，分別偵錯 MFC 擴充 Dll MFCO*版本*d.d、 MFCD*版本*D.d 和 MFCN*版本*d.d (其中*版本*是版本號碼) 會自動連結中。 您必須呼叫其中一個下列預先定義函式初始化每個您標準的 MFC DLL 中使用這些 Dll `CWinApp::InitInstance`。  
   
@@ -179,14 +179,14 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
   
 因為時間完全初始化 MFCx0.dll`DllMain`是呼叫，您可以配置記憶體並呼叫 MFC 的函式內`DllMain`（不同於 MFC 的 16 位元版本）。  
   
-擴充 Dll 可以處理多執行緒處理`DLL_THREAD_ATTACH`並`DLL_THREAD_DETACH`情況下，在`DllMain`函式。 這些情況下會傳遞至`DllMain`時附加執行緒，並從 DLL 卸離。 呼叫[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) DLL 連接時，可讓 DLL 維護的執行緒區域儲存區 (TLS) 編製索引，每個執行緒附加到 DLL。  
+擴充 Dll 可以處理多執行緒處理`DLL_THREAD_ATTACH`並`DLL_THREAD_DETACH`情況下，在`DllMain`函式。 這些情況下會傳遞至`DllMain`時附加執行緒，並從 DLL 卸離。 呼叫[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) DLL 連接時，可讓 DLL 維護的執行緒區域儲存區 (TLS) 編製索引，每個執行緒附加到 DLL。  
   
 請注意，標頭檔 Afxdllx.h 包含特殊的定義，在 MFC 擴充 Dll，例如的定義中使用的結構`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`。 您應該在您的 MFC 擴充 DLL 中包含此標頭檔。  
   
 > [!NOTE]
 >  很重要，您不定義或取消定義的任何`_AFX_NO_XXX`Stdafx.h 中的巨集。 這些巨集存在目的只檢查特定的目標平台是否支援該功能，或不。 您可以撰寫程式來檢查這些巨集 (比方說， `#ifndef _AFX_NO_OLE_SUPPORT`)，但您的程式應該永遠不會定義或取消這些巨集。  
   
-範例初始化函式中所包含的多執行緒的控制代碼[使用執行緒本機儲存體中的動態連結程式庫](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK 中。 請注意，此範例包含呼叫的進入點函式`LibMain`，但您應該為此函式命名`DllMain`，讓它運作的 MFC 和 C 執行階段程式庫。  
+範例初始化函式中所包含的多執行緒的控制代碼[使用執行緒本機儲存體中的動態連結程式庫](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library)Windows SDK 中。 請注意，此範例包含呼叫的進入點函式`LibMain`，但您應該為此函式命名`DllMain`，讓它運作的 MFC 和 C 執行階段程式庫。  
   
 ## <a name="see-also"></a>另請參閱  
   

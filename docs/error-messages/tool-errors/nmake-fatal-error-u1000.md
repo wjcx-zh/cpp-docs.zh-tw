@@ -1,7 +1,7 @@
 ---
-title: NMAKE 嚴重錯誤 U1000 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1000 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a8d4e0f150d82482dd8391efa1f2251ac37bc8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69909c542a02baf8aa261c8ef78413a877a223a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325262"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194884"
 ---
 # <a name="nmake-fatal-error-u1000"></a>NMAKE 嚴重錯誤 U1000
-語法錯誤: ')' 巨集引動過程中遺失  
-  
- 左括號， **(**、 出現但沒有相符的右括號， **)**，巨集引動過程中。 正確的格式是 **$(***名稱***)**;`$` *n*所允許之字元的名稱。
+
+> 語法錯誤: ')' 巨集引動過程中遺失
+
+左括號 **(**，沒有相符的右括號中，已出現 **)**，巨集引動過程中。 正確的格式是 **$(**<em>名稱</em>**)**;**$** <em>n</em>允許一個字元的名稱。

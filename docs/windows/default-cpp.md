@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe924627b0b0f4f5d02fab0040a4037085d94738
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d1055c0865988edf9b54539c0d214cebcda13735
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595579"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220416"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -53,7 +53,7 @@ ms.locfileid: "42595579"
 
 ## <a name="remarks"></a>備註
 
-**default** C++ 屬性具有與 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 屬性相同的功能。 **default** 屬性也可搭配 [case](../windows/case-cpp.md) 屬性使用。
+**預設**c + + 屬性具有相同的功能[預設](/windows/desktop/Midl/default)MIDL 屬性。 **default** 屬性也可搭配 [case](../windows/case-cpp.md) 屬性使用。
 
 ## <a name="example"></a>範例
 

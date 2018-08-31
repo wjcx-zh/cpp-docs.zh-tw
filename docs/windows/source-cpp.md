@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 921510a548f638f06953f95abe79f825e57e179b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586854"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214589"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -43,7 +43,7 @@ ms.locfileid: "42586854"
 
 ## <a name="remarks"></a>備註
 
-**來源**c + + 屬性具有相同的功能[來源](http://msdn.microsoft.com/library/windows/desktop/aa367166)MIDL 屬性。
+**來源**c + + 屬性具有相同的功能[來源](/windows/desktop/Midl/source)MIDL 屬性。
 
 您可以使用[預設](../windows/default-cpp.md)屬性來指定預設來源介面的物件。
 

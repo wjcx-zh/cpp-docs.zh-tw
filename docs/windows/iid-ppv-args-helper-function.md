@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d22d6a7fce670f7da7740b5f0678eafaa49f519
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a6131cea7a7684036fd7183a79214c7c6936540b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604019"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218744"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 函式
 
 確認指定的引數的型別衍生自`IUnknown`介面。
 
 > [!IMPORTANT]
-> 此樣板特製化支援 WRL 結構，而且不是直接從您的程式碼使用。 使用[IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)改。
+> 此樣板特製化支援 WRL 結構，而且不是直接從您的程式碼使用。 使用[IID_PPV_ARGS](https://msdn.microsoft.com/library/windows/desktop/ee330727.aspx)改。
 
 ## <a name="syntax"></a>語法
 
@@ -62,4 +62,4 @@ void** IID_PPV_ARGS_Helper(
 
 ## <a name="see-also"></a>另請參閱
 
-[參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)
+[參考 （Windows 執行階段程式庫）](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

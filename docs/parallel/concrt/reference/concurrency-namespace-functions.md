@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98e385f965ab3036d6ccf2383fd4ae6f420eb548
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4e5ddaf0f3368f9542fbbd04a8a16c56223aefd5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539572"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219575"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 ||||  
@@ -179,12 +179,12 @@ IResourceManager* __cdecl CreateResourceManager();
  `IResourceManager` 介面。  
   
 ### <a name="remarks"></a>備註  
- 這個方法的多個後續呼叫會傳回相同的執行個體的 「 資源管理員。 每次呼叫該方法會遞增參考計數在 Resource Manager 中，以及藉由呼叫必須符合[iresourcemanager:: Release](http://msdn.microsoft.com/en-us/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成您的排程器通訊使用 Resource Manager。  
+ 這個方法的多個後續呼叫會傳回相同的執行個體的 「 資源管理員。 每次呼叫該方法會遞增參考計數在 Resource Manager 中，以及藉由呼叫必須符合[iresourcemanager:: Release](https://msdn.microsoft.com/5d1356ec-fbd3-4284-a361-1e9e20bbb522)方法完成您的排程器通訊使用 Resource Manager。  
   
  [unsupported_os](unsupported-os-class.md)如果作業系統不支援並行執行階段會擲回。  
   
 ##  <a name="create_task"></a>  create_task  
- 建立 PPL[任務](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。  
+ 建立 PPL[任務](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。  
   
 ```
 template<typename T>

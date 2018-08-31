@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b77254c78dbb84d546e080ca5bc275919aac64a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 1f67107b17f304c5a9c4d6f68d68797370502065
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541557"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221723"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 提供 Windows 清單方塊的功能。  
@@ -644,7 +644,7 @@ DWORD_PTR GetItemData(int nIndex) const;
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
- 擷取應用程式所提供的 32 位元值，而此一做為指標指定的清單方塊項目相關聯 ( **void\***)。  
+ 擷取應用程式所提供的 32 位元值，而此一做為指標指定的清單方塊項目相關聯 (**void** <strong>\*</strong>)。  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -710,7 +710,7 @@ DWORD GetListBoxInfo() const;
  每個資料行的項目數`CListBox`物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)訊息、 Windows SDK 中所述。  
+ 此成員函式會模擬[LB_GETLISTBOXINFO](/windows/desktop/Controls/lb-getlistboxinfo)訊息、 Windows SDK 中所述。  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
  擷取清單方塊所使用的地區設定。  
@@ -1144,7 +1144,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
- 設定為指定的指標清單方塊中指定的項目相關聯的 32 位元值 ( **void\***)。  
+ 設定為指定的指標清單方塊中指定的項目相關聯的 32 位元值 ( **void** <strong>\*</strong>)。  
   
 ```  
 int SetItemDataPtr(

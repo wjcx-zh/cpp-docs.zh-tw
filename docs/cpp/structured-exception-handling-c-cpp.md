@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7dd23a1b68e4ea97eb837e009c380514230de8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 122c9cc8f1500132f507eb3477e108c3a5c67768
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572153"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217115"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -72,7 +72,7 @@ ms.locfileid: "42572153"
 
 - [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)
 
-- [處理 c + + 中的結構化例外狀況](../cpp/exception-handling-differences.md)
+- [使用 C++ 處理結構化例外狀況](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>範例
 
@@ -158,4 +158,4 @@ Executing SEH __except block
 [關鍵字](../cpp/keywords-cpp.md)  
 [\<exception>](../standard-library/exception.md)  
 [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)  
-[結構化的例外處理 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  
+[結構化的例外處理 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)  

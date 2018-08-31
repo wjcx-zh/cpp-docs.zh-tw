@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 56a6211ac26a31b1ec01fdd2ad0579e4d9b52038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885385"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223383"
 ---
 # <a name="ccomenum-class"></a>CComEnum 類別
 這個類別會定義 COM 列舉值物件的陣列為基礎。  
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
 #### <a name="parameters"></a>參數  
  *基底*  
- COM 列舉值 ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) 介面。  
+ COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。 
   
  *piid*  
  指標的列舉值介面的介面 ID。  

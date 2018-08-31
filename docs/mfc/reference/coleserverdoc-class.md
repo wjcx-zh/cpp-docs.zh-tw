@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851654"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217585"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 類別
 OLE 伺服器文件的基底類別。  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 擷取基礎的指標[IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)介面。  
+ 擷取基礎的指標[IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite)介面。  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  覆寫這個函式來建立新`CDocObjectServer`項目，並將指標傳回給它。  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>備註  
  預設實作會呼叫`CDocument::OnCloseDocument`。  
   
- 如需詳細資訊和其他值，請參閱 < [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) Windows SDK 中。  
+ 如需詳細資訊和其他值，請參閱 < [OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) Windows SDK 中。  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  當使用者停用內嵌或連結項目是目前就地啟用作用中時，由架構呼叫。  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>備註  
  此函式調整大小，並調整工具列和其他的使用者介面項目，根據新的視窗大小。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) Windows SDK 中。  
   
  這是一種進階可覆寫。  
   

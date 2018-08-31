@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6008d97b0fab437a9ba2e6b8e0af8d3bc111532a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955425"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218953"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-描述可儲存型別之物件的有序的對 **雙精度浮點數 ** 第一個代表第二個複數的實數部分代表虛數部分。
+描述可儲存型別之物件的排序的配對**double**，第一個代表第二個複數的實數部分代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -46,11 +46,14 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*RealVal*類型的值**double**建構中複數的實數部分。
+*RealVal*<br/>
+要建構之複數實數部分的 **double** 類型值。
 
-*ImagVal*類型的值**double**的建構中複數之虛數部分。
+*ImagVal*<br/>
+要建構之複數虛數部分的 **double** 類型值。
 
-*complexNum*類型的複數**浮點數**或型別的**長雙精度**其實部及虛部用於初始化類型的複數**雙**所建構。
+*complexNum*<br/>
+類型的複數**浮點數**或型別的**長雙精度**其實部及虛部用於初始化類型的複數**double**所建構。
 
 ## <a name="return-value"></a>傳回值
 
@@ -104,7 +107,7 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi
         << " degrees." << endl;
 }
-\* Output:
+/* Output:
 Specifying initial real & imaginary parts,
  as type double gives c1 = (4,5)
 Implicit conversion from type float to type double,
@@ -114,7 +117,7 @@ Explicit conversion from type float to type double,
 The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312
 Argument of c3 is recovered from c3 using:
  arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
-*\
+*/
 ```
 
 ## <a name="requirements"></a>需求

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48bc0f76ce5b8b3c1bafe3fcd0d6d793a217ae63
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849685"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221128"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包裝 Windows 應用程式開發介面函式，提供用來存取登錄的物件導向介面。  
@@ -130,7 +130,7 @@ CSettingsStore(
 ### <a name="remarks"></a>備註  
  如果*bAdmin*設定為 TRUE，`m_hKey`成員變數會設為**HKEY_LOCAL_MACHINE**。 如果您設定*bAdmin*設為 FALSE，`m_hKey`設定為**HKEY_CURRENT_USER**。  
   
- 安全性存取權取決於*bReadOnly*參數。 如果*bReadonly*為 FALSE 時，安全性存取將會設定為**KEY_ALL_ACCESS**。 如果*bReadyOnly*為 TRUE 時，安全性存取將會設定為一連串**KEY_QUERY_VALUE、 KEY_NOTIFY**並**KEY_ENUMERATE_SUB_KEYS**。 如需詳細的安全性存取權，以及登錄的詳細資訊，請參閱[登錄機碼的安全性和存取權限](http://msdn.microsoft.com/library/windows/desktop/ms724878)。  
+ 安全性存取權取決於*bReadOnly*參數。 如果*bReadonly*為 FALSE 時，安全性存取將會設定為**KEY_ALL_ACCESS**。 如果*bReadyOnly*為 TRUE 時，安全性存取將會設定為一連串**KEY_QUERY_VALUE、 KEY_NOTIFY**並**KEY_ENUMERATE_SUB_KEYS**。 如需詳細的安全性存取權，以及登錄的詳細資訊，請參閱[登錄機碼的安全性和存取權限](/windows/desktop/SysInfo/registry-key-security-and-access-rights)。  
   
  解構函式`CSettingsStore`釋放`m_hKey`自動。  
   

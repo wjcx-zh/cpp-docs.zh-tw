@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359a7ff75b2036960d8d8ffd40200f9175ccc21c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c0fbc3914f10bacdd286fe89c3e82de78b726cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960696"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216857"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 封裝`DATE`OLE automation 中使用的資料類型。  
@@ -74,7 +74,7 @@ class COleDateTime
 |----------|-----------------|  
 |[COleDateTime::Format](#format)|產生的格式化的字串表示`COleDateTime`物件。|  
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|呼叫這個方法來取得時間`COleDateTime`物件做為`DBTIMESTAMP`資料結構。|  
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|呼叫這個方法來取得時間`COleDateTime`物件做[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)資料結構。|  
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|呼叫這個方法來取得時間`COleDateTime`物件做[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)資料結構。|  
 |[COleDateTime::GetAsUDATE](#getasudate)|呼叫這個方法來取得時間`COleDateTime`做為`UDATE`資料結構。|  
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|建立`COleDateTime`物件，表示目前的時間 （靜態成員函式）。|  
 |[COleDateTime::GetDay](#getday)|這會傳回一天`COleDateTime`物件都代表 (1 – 31)。|  
@@ -217,7 +217,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
  A`SYSTEMTIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。  
   
  *filetimeSrc*  
- A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)Windows sdk for 的詳細資訊。  
+ A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。  
   
  *nYear*， *nMonth*， *n*，*當天的時數*， *nMin*， *nSec*  
  表示要複製到新的日期和時間值`COleDateTime`物件。  
@@ -256,7 +256,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
 - `COleDateTime(` *systimeSrc* **)** 建構`COleDateTime`物件`SYSTEMTIME`值。  
   
-- `COleDateTime(` `filetimeSrc` **)** 建構`COleDateTime`物件從`FILETIME`值。 。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)Windows sdk for 的詳細資訊。  
+- `COleDateTime(` `filetimeSrc` **)** 建構`COleDateTime`物件從`FILETIME`值。 。 請注意，`FILETIME`使用 Universal Coordinated Time (UTC)，因此如果您傳遞結構中的當地時間，結果將會不正確。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。  
   
 - `COleDateTime(` `nYear``nMonth`， `nDay`， `nHour`， `nMin`， `nSec` **)** 建構`COleDateTime`物件從指定的數值。  
   
@@ -264,7 +264,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
   
  如需詳細資訊`time_t`資料類型，請參閱[時間](../../c-runtime-library/reference/time-time32-time64.md)函式中*執行階段程式庫參考*。  
   
- 如需詳細資訊，請參閱 < [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)並[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)並[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的結構。  
   
  如需有關的界限`COleDateTime`值，請參閱文章[日期和時間： Automation 支援](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
@@ -294,7 +294,7 @@ CString Format(UINT nFormatID) const;
 - VAR_DATEVALUEONLY 在剖析期間忽略之時間部分。  
   
  *lcid*  
- 表示要用於轉換的地區設定識別碼。 如需有關語言識別碼的詳細資訊，請參閱 <<c0> [ 語言識別碼](http://msdn.microsoft.com/library/windows/desktop/dd318691)。  
+ 表示要用於轉換的地區設定識別碼。 如需有關語言識別碼的詳細資訊，請參閱 <<c0> [ 語言識別碼](/windows/desktop/Intl/language-identifiers)。  
   
  *lpszFormat*  
  格式化字串類似於`printf`格式化字串。 每個格式化程式碼，加上百分比 ( `%`) 登入，會取代對應`COleDateTime`元件。 格式化字串中的其他字元會複製到傳回的字串不變。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)如需詳細資訊。 值和格式化的程式碼的意義`Format`是：  
@@ -359,7 +359,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
   
 ### <a name="parameters"></a>參數  
  *sysTime*  
- 參考[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)接收從已轉換的日期/時間值的結構`COleDateTime`物件。  
+ 參考[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)接收從已轉換的日期/時間值的結構`COleDateTime`物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 TRUEFALSE 則轉換會失敗，則`COleDateTime`物件為 NULL 或無效。  
@@ -772,17 +772,17 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
 - **運算子 = (** `timeSrc` **)** `time_t`或是`__time64_t`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。  
   
-- **運算子 = (** *systimeSrc* **)** [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。  
+- **運算子 = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。  
   
 - **運算子 = (** `udate` **)** `UDATE`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。 A`UDATE`結構代表 「 解壓縮 」 日期。 請參閱函數[VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)如需詳細資訊。  
   
-- **運算子 = (** `filetimeSrc` **)** [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是與 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 相同。 請參閱[檔案的時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)Windows sdk for 的詳細資訊。  
+- **運算子 = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是與 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 相同。 請參閱[檔案的時間](/windows/desktop/SysInfo/file-times)Windows sdk for 的詳細資訊。  
   
  如需詳細資訊，請參閱 < [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。  
   
  如需詳細資訊`time_t`資料類型，請參閱[時間](../../c-runtime-library/reference/time-time32-time64.md)函式中*執行階段程式庫參考*。  
   
- 如需詳細資訊，請參閱 < [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)並[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)並[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的結構。  
   
  如需有關的界限`COleDateTime`值，請參閱文章[日期和時間： Automation 支援](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   

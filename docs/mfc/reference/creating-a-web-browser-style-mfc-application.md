@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 71312a1dfa70ca3fd83242f6f706654c08a4973c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217663"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 在本機檔案系統和網路上的 Web 瀏覽器型應用程式可以從網際網路 （例如 HTML 或主動式文件） 或內部網路，以及資料夾存取資訊。 藉由從應用程式的檢視類別的衍生[CHtmlView](../../mfc/reference/chtmlview-class.md)，以有效地您所提供的檢視，和 WebBrowser 控制項讓應用程式的網頁瀏覽器。  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MFC 範例 MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [MFC 範例 MFCIE](https://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)   
  [屬性頁](../../ide/property-pages-visual-cpp.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)   
- [部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

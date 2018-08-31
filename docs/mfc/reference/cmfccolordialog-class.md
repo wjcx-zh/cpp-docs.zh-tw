@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214148"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 `CMFCColorDialog`類別代表色彩選取對話方塊。  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|傳回目前選取的色彩。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|傳回的色彩調色盤。|  
-|`CMFCColorDialog::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需語法和詳細資訊，請參閱[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|  
+|`CMFCColorDialog::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需語法和詳細資訊，請參閱[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|自系統調色盤中的調色盤。|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|設定目前選取的色彩。|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|設定最相當於指定的 RGB 值的色彩。|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊的值。  
+ A [COLORREF](/windows/desktop/gdi/colorref)包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊的值。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式之後您呼叫,`DoModal`方法。  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>參數  
  [in]*rgb*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)表示的 RGB 色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)表示的 RGB 色彩。  
   
 ### <a name="remarks"></a>備註  
   

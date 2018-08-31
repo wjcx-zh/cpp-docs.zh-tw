@@ -1,7 +1,7 @@
 ---
-title: 專案建置錯誤 PRJ0004 |Microsoft 文件
+title: 專案建置錯誤 PRJ0004 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10246f1d01441a84947a2fa426e962d49414782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76847c0df06ec61c29f84efb46eca87683c86cb4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316289"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216062"
 ---
 # <a name="project-build-error-prj0004"></a>專案建置錯誤 PRJ0004
-無法產生 '工具 5d; 工具的命令列。  
-  
- 在這種方式進行的呼叫語法指定了一個或多個內容***工具***不合法：  
-  
--   您可能指定了格式錯誤或未知的巨集。  
-  
--   您的電腦上的可用磁碟空間可能低。  
-  
- 您可能想要檢閱工具的設定，藉由查看[命令列屬性頁](../../ide/command-line-property-pages.md)。
+
+> 無法產生命令列 '*工具*' 工具。
+
+在這種方式進行的呼叫語法指定了一個或多個內容*工具*不合法：
+
+- 您可能已指定格式錯誤或未知的巨集。
+
+- 您的電腦可能位於可用磁碟空間不足。
+
+您可能想要檢閱此工具的設定來看看[命令列屬性頁](../../ide/command-line-property-pages.md)。

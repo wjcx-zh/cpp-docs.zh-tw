@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c01326056a5fd3a106e09db94d2a84435f32e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6c9fd7cedc1e16c6f784edebf35faf055b09ed82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217184"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 此類別代表私用物件安全性描述元物件。  
@@ -65,7 +65,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="remarks"></a>備註  
  這個類別衍生自[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)，提供方法來建立和管理私用物件的安全性描述元。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)  
@@ -97,13 +97,13 @@ bool ConvertToAutoInherit(
  指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。  
   
  *GenericMapping*  
- 指標[GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633)結構，指定每個物件的特定權限的一般權限的對應。  
+ 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會嘗試判斷是否 Ace 中 discretionary 存取控制清單 (DACL) 和目前的安全性描述元的系統存取控制清單 (SACL) 繼承自父代的安全性描述元。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403)函式。  
+ 這個方法會嘗試判斷是否 Ace 中 discretionary 存取控制清單 (DACL) 和目前的安全性描述元的系統存取控制清單 (SACL) 繼承自父代的安全性描述元。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403)函式。  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  建構函式。  
@@ -160,7 +160,7 @@ bool Create(
  若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。  
   
  *GenericMapping*  
- 指標[GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633)結構，指定每個物件的特定權限的一般權限的對應。  
+ 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。  
   
  *ObjectType*  
  指標`GUID`結構，辨識與目前物件相關聯的物件型別。 設定*ObjectType*為 NULL，如果物件沒有的 GUID。  
@@ -169,13 +169,13 @@ bool Create(
  指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。  
   
  *AutoInheritFlags*  
- 一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。  
+ 一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫[CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405)或是[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)。  
+ 這個方法會呼叫[CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405)或是[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)。  
   
  指定新的物件的物件類型的 GUID 或控制 Ace 繼承的方式，可允許第二個方法。  
   
@@ -193,7 +193,7 @@ bool Get(
   
 ### <a name="parameters"></a>參數  
  *si*  
- 一組的位元旗標，指出要擷取的安全性描述元組件。 這個值可以是組成[SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)位元旗標。  
+ 一組的位元旗標，指出要擷取的安全性描述元組件。 這個值可以是組成[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位元旗標。  
   
  *pResult*  
  指標[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)收到一份要求的資訊從指定的安全性描述元的物件。  
@@ -238,19 +238,19 @@ bool Set(
   
 ### <a name="parameters"></a>參數  
  *si*  
- 一組的位元旗標，指出若要設定的安全性描述元組件。 這個值可以是組成[SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)位元旗標。  
+ 一組的位元旗標，指出若要設定的安全性描述元組件。 這個值可以是組成[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位元旗標。  
   
  *修改*  
  指標[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件。 所指定的組件的這個安全性描述元*si*參數會套用至物件的安全性描述元。  
   
  *GenericMapping*  
- 指標[GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633)結構，指定每個物件的特定權限的一般權限的對應。  
+ 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。  
   
  *語彙基元*  
  若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。  
   
  *AutoInheritFlags*  
- 一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。  
+ 一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
@@ -259,7 +259,7 @@ bool Set(
  第二個方法允許指定之物件的物件類型的 GUID 或控制 Ace 繼承的方式。  
   
 ## <a name="see-also"></a>另請參閱  
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)   
  [CSecurityDesc 類別](../../atl/reference/csecuritydesc-class.md)

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848346"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218044"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL 和無限制執行緒封送處理器
 [ATL 簡單物件精靈] 的 [屬性] 頁面上提供選項，可讓您彙總無限制執行緒封送處理器 (FTM) 的類別。  
   
- 精靈會產生程式碼，以建立可用的執行緒封送處理器中的執行個體`FinalConstruct`並在該執行個體釋放`FinalRelease`。 COM_INTERFACE_ENTRY_AGGREGATE 巨集自動加入到 COM 對應，以確保`QueryInterface`要求[IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)無限制執行緒封送處理器所處理。  
+ 精靈會產生程式碼，以建立可用的執行緒封送處理器中的執行個體`FinalConstruct`並在該執行個體釋放`FinalRelease`。 COM_INTERFACE_ENTRY_AGGREGATE 巨集自動加入到 COM 對應，以確保`QueryInterface`要求[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)無限制執行緒封送處理器所處理。  
   
  無限制執行緒封送處理器可以直接存取物件的介面從任何執行緒在相同的程序，加速跨 apartment 呼叫。 此選項適用於使用這兩個執行緒模型的類別。  
   
@@ -36,8 +36,8 @@ ms.locfileid: "37848346"
   
 ## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [使用全域介面資料表的時機](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [處理序中的執行緒問題的伺服器](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [使用全域介面資料表的時機](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [處理序中的執行緒問題的伺服器](/windows/desktop/com/in-process-server-threading-issues)
 

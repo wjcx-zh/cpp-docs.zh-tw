@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539020"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217342"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>平行診斷工具 (並行執行階段)
 Visual Studio 可廣泛支援多執行緒應用程式的偵錯與分析。  
@@ -31,7 +31,7 @@ Visual Studio 可廣泛支援多執行緒應用程式的偵錯與分析。
  程式碼剖析工具提供三個資料檢視，它會顯示圖形、 表格與數值資訊與其本身和其他程式，多執行緒應用程式的互動方式。 檢視可讓您快速識別需要關注的並以圖形方式顯示呼叫堆疊上的點從瀏覽呼叫站台和原始程式碼。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)。  
   
 ## <a name="event-tracing"></a>事件追蹤  
- 並行執行階段會使用[的 Windows 事件追蹤](http://msdn.microsoft.com/library/windows/desktop/bb968803)(ETW) 的各種事件發生時通知檢測工具，分析工具，例如。 這些事件包括啟用或停用排程器時、 當內容開始、 結束、 封鎖、 解除封鎖，或產生，以及當平行演算法的開頭或結尾。  
+ 並行執行階段會使用[的 Windows 事件追蹤](/windows/desktop/ETW/event-tracing-portal)(ETW) 的各種事件發生時通知檢測工具，分析工具，例如。 這些事件包括啟用或停用排程器時、 當內容開始、 結束、 封鎖、 解除封鎖，或產生，以及當平行演算法的開頭或結尾。  
   
  之類的工具[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)利用這項功能; 因此，您通常不必直接使用這些事件。 不過，這些事件可讓開發自訂的分析工具時，或當您使用事件追蹤工具這類[Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628)。  
   

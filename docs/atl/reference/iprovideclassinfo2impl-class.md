@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d67f00b88be88e1cb2691414b0666bd298977dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220176"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 類別
-這個類別提供的預設實作[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)並[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)方法。  
+這個類別提供的預設實作[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)並[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|管理 coclass 的型別資訊。|  
   
 ## <a name="remarks"></a>備註  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)介面會擴充[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)加`GetGUID`方法。 這個方法可讓用戶端擷取物件的輸出介面 IID，其預設事件集。 類別`IProvideClassInfo2Impl`提供的預設實作`IProvideClassInfo`和`IProvideClassInfo2`方法。  
+ [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)介面會擴充[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)加`GetGUID`方法。 這個方法可讓用戶端擷取物件的輸出介面 IID，其預設事件集。 類別`IProvideClassInfo2Impl`提供的預設實作`IProvideClassInfo`和`IProvideClassInfo2`方法。  
   
  `IProvideClassInfo2Impl` 包含類型的靜態成員`CComTypeInfoHolder`管理 coclass 的型別資訊。  
   
@@ -105,7 +105,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) Windows SDK 中。  
+ 請參閱[IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) Windows SDK 中。  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  擷取物件的外寄的分配介面的 GUID。  
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) Windows SDK 中。  
+ 請參閱[IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) Windows SDK 中。  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  建構函式。  

@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572921"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217225"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 對應至 OLE DB 資料來源物件，其表示透過提供者與資料來源的連線。  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 使用的方法多載*hWnd*參數使用 oledb32.dll 中的服務元件開啟資料來源物件; 此 DLL 包含服務元件的功能，例如資源集區的自動實作交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
+ 使用的方法多載*hWnd*參數使用 oledb32.dll 中的服務元件開啟資料來源物件; 此 DLL 包含服務元件的功能，例如資源集區的自動實作交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
   
  請勿使用的方法多載*hWnd*參數開啟資料來源物件，而不使用 oledb32.dll 中的服務元件。 A [CDataSource](../../data/oledb/cdatasource-class.md)使用這些函式多載開啟的物件將無法使用任何服務元件的功能。  
   
@@ -299,7 +299,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
+ 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
 
 ## <a name="openfrominitializationstring"></a> Cdatasource:: Openfrominitializationstring
 開啟資料來源的使用者提供的初始化字串所指定。  
@@ -351,7 +351,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。
+ 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。
 
 ## <a name="openwithservicecomponents"></a> Cdatasource:: Openwithservicecomponents
 使用 oledb32.dll 中的服務元件來開啟資料來源物件。  
@@ -385,7 +385,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。    
+ 這個方法會使用 oledb32.dll 中的服務元件開啟資料來源物件；此 DLL 包含服務元件功能的實作，例如資源集中化、自動交易登記等。 如需詳細資訊，請參閱中的 < OLE DB 服務 」 上的 OLE DB 程式設計人員參考[ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。    
 
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   

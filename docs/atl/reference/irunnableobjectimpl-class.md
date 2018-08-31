@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a98456d3d7d0d2e4600267a81151c44e38993c5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 035d59d71dc7166b12b6e894803645aacda83887
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885577"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218694"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl 類別
-這個類別會實作`IUnknown`，並提供的預設實作[IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面。  
+這個類別會實作`IUnknown`，並提供的預設實作[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)介面。  
   
 > [!IMPORTANT]
 >  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -63,7 +63,7 @@ class IRunnableObjectImpl
 |[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|表示控制項內嵌。 ATL 實作會傳回 S_OK。|  
   
 ## <a name="remarks"></a>備註  
- [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783)介面可讓容器，以判斷控制項是否正在執行，強制執行，或鎖定進入執行狀態。 類別`IRunnableObjectImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject)介面可讓容器，以判斷控制項是否正在執行，強制執行，或鎖定進入執行狀態。 類別`IRunnableObjectImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -86,7 +86,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
  ATL 實作集合\* *lpClsid* GUID_NULL，然後傳回 E_UNEXPECTED。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) Windows SDK 中。  
+ 請參閱[IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) Windows SDK 中。  
   
 ##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
  判斷控制項是否正在執行。  
@@ -99,7 +99,7 @@ virtual BOOL IsRunning();
  ATL 實作會傳回 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) Windows SDK 中。  
+ 請參閱[IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) Windows SDK 中。  
   
 ##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
  鎖定控制項進入執行狀態。  
@@ -112,7 +112,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
  ATL 實作會傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) Windows SDK 中。  
+ 請參閱[IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) Windows SDK 中。  
   
 ##  <a name="run"></a>  IRunnableObjectImpl::Run  
  強制執行控制項。  
@@ -125,7 +125,7 @@ HRESULT Run(LPBINDCTX lpbc);
  ATL 實作會傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) Windows SDK 中。  
+ 請參閱[IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) Windows SDK 中。  
   
 ##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
  表示控制項內嵌。  
@@ -138,7 +138,7 @@ HRESULT SetContainedObject(BOOL fContained);
  ATL 實作會傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IRunnableObject::SetContainedObject](http://msdn.microsoft.com/library/windows/desktop/ms693710) Windows SDK 中。  
+ 請參閱[IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   

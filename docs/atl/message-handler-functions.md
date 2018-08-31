@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c247874f96fa3b91af8f5b03840f716b6eb6516
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6440ad59218f4c69eb3421176ebdfdc7a36e9531
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963968"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218829"
 ---
 # <a name="message-handler-functions"></a>訊息處理常式函式
 ATL 提供三種類型的訊息處理常式函式：  
@@ -42,5 +42,5 @@ ATL 提供三種類型的訊息處理常式函式：
 ## <a name="see-also"></a>另請參閱  
  [實作視窗](../atl/implementing-a-window.md)   
  [訊息對應](../atl/message-maps-atl.md)   
- [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+ [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

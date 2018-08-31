@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424ee48e683bc22870900805aacd32f31fb12949
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853689"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218224"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 類別
 在控制項中顯示資料庫記錄的檢視。  
@@ -56,7 +56,7 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>備註  
  檢視是表單檢視，直接連線到`CRowset`物件。 檢視從對話方塊範本資源建立，並顯示的欄位`CRowset`對話方塊範本的控制項中的物件。 `COleDBRecordView`物件會使用對話方塊資料交換 (DDX)，並瀏覽功能內建`CRowset`、 自動化的表單上的控制項和資料列集的欄位之間的資料移動。 `COleDBRecordView` 也提供移動的預設實作第一筆、 下一步 上, 一個或最後一筆和更新目前的檢視記錄的介面。  
   
- 您可以使用 DDX 函式與`COleDbRecordView`直接從資料庫資料錄集取得資料，並顯示在對話方塊控制項。 您應該使用**DDX_\*** 方法 (例如`DDX_Text`)，而非**DDX_Field\*** 函式 (例如`DDX_FieldText`) 具有`COleDbRecordView`。 `DDX_FieldText` 不適用於`COleDbRecordView`因為`DDX_FieldText`採用其他引數的型別**CRecordset\***  (針對`CRecordView`) 或**CDaoRecordset\***  （適用於`CDaoRecordView`).  
+ 您可以使用 DDX 函式與`COleDbRecordView`直接從資料庫資料錄集取得資料，並顯示在對話方塊控制項。 您應該使用`DDX_*`方法 (例如`DDX_Text`)，而非`DDX_Field*`函式 (例如`DDX_FieldText`) 與`COleDbRecordView`。 `DDX_FieldText` 不適用於`COleDbRecordView`因為`DDX_FieldText`採用其他引數的型別`CRecordset*`(如`CRecordView`) 或`CDaoRecordset*`(針對`CDaoRecordView`)。  
   
 > [!NOTE]
 >  如果您正在使用的資料存取物件 (DAO) 類別，而不是 OLE DB 消費者範本類別，使用類別[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)改。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  

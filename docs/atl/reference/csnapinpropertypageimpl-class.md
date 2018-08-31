@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56a57d3fe0eb1a016af9eee8539cd7f57a12ddf5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd7f2c708dd3cfe63e40b62912a775fcc120c4ba
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880556"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223047"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 類別
 這個類別提供方法實作嵌入式管理單元 屬性頁面物件。  
@@ -146,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>備註  
  使用此結構來建構後即初始化屬性頁面的外觀。  
   
- 如需這個結構，包括其成員，清單的詳細資訊，請參閱[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
+ 如需這個結構，包括其成員，清單的詳細資訊，請參閱[PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
   
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  此成員函式在使用者按一下時呼叫**確定**或**立即套用** 按鈕。  

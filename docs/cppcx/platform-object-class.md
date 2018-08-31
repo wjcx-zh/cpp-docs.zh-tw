@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601734"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216435"
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 提供一般行為的 ref 類別或 ref 結構在 Windows 執行階段應用程式。 所有 ref 類別和 ref 結構執行個體都會隱含轉換為 Platform::Object^，而且也都能覆寫其虛擬 ToString 方法。  
@@ -119,7 +119,7 @@ Object::GetType()
 ### <a name="remarks"></a>備註  
  靜態[type:: gettypecode](../cppcx/platform-type-class.md#gettypecode)可用來取得[platform:: typecode 列舉](../cppcx/platform-typecode-enumeration.md)值，表示目前的類型。 這對於內建類型而言非常有用。 除了任何 ref 類別的類型代碼[platform:: string](../cppcx/platform-string-class.md)是 Object (1)。  
   
- [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)類別用來與語言無關的方式的 Windows 元件和應用程式之間傳遞類型資訊的 Windows Api。 T[platform:: type 類別](../cppcx/platform-type-class.md)有之間進行轉換的運算子`Type`和`TypeName`。  
+ [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)類別用來與語言無關的方式的 Windows 元件和應用程式之間傳遞類型資訊的 Windows Api。 T[platform:: type 類別](../cppcx/platform-type-class.md)有之間進行轉換的運算子`Type`和`TypeName`。  
   
  使用[typeid](../windows/typeid-cpp-component-extensions.md)運算子傳回`Platform::Type`類別名稱，例如 XAML 頁面之間巡覽時的物件：  
   

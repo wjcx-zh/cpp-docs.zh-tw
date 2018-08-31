@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216483"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 精靈
 當您使用 MFC DLL 精靈建立 MFC DLL 專案時，得到工作起始應用程式的內建功能，當編譯時，會實作的基本功能[DLL](../../build/dlls-in-visual-cpp.md)。 MFC 入門版計畫包含 c + + 原始檔 (.cpp) 檔案、 資源 (.rc) 檔，以及專案 (.vcxproj) 檔案。 這些入門檔案中產生的程式碼是以 MFC 為基礎。 如需詳細資訊，請參閱檔案中的詳細資料為您的專案在 Visual Studio 中產生的 Readme.txt 和[類別和 MFC DLL 精靈所產生的函式](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "39025766"
  [建立和管理 Visual C++ 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [屬性頁](../../ide/property-pages-visual-cpp.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)   
- [部署應用程式](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
+ [部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)   
  [成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
  [實作介面](../../ide/implementing-an-interface-visual-cpp.md)   

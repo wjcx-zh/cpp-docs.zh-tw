@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 710dc1929662c5f5358912433be2df605bf87964
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879805"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218177"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 類別
 此類別會儲存在陣列`IUnknown`指標。  
@@ -160,7 +160,7 @@ IUnknown* GetAt(int nIndex);
  要擷取之項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指標[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)介面。  
+ 指標[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面。  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  呼叫此方法，以取得相關聯的 cookie 指定`IUnknown`指標。  

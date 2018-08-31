@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bd0aba0637101f7895be89b9d5531f77ee45b76
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222772"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 類別
 `CMFCShellTreeCtrl`類別會擴充[CTreeCtrl 類別](../../mfc/reference/ctreectrl-class.md)透過顯示 Shell 項目階層。  
@@ -62,7 +62,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |名稱|描述|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|啟用或停用快顯功能表。|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|傳回傳遞至的旗標的組合[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|傳回傳遞至的旗標的組合[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|擷取項目的路徑。|  
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|將指標傳回至[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件，其可搭配這`CMFCShellTreeCtrl`物件來建立類似檔案總管的視窗。|  
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|此視窗的父視窗收到通知訊息，此視窗時，會呼叫此成員函式。 (覆寫[On_xxx_reflect](../../mfc/reference/cwnd-class.md#onchildnotify)。)|  
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
  設定的 DWORD 值，指定目前的旗標的組合。  
   
 ### <a name="remarks"></a>備註  
- 在設定的旗標`CMFCShellTreeCtrl`傳送至方法[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)每次重新整理物件。 您可以變更的旗標[CMFCShellTreeCtrl::SetFlags](#setflags)方法。  
+ 在設定的旗標`CMFCShellTreeCtrl`傳送至方法[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)每次重新整理物件。 您可以變更的旗標[CMFCShellTreeCtrl::SetFlags](#setflags)方法。  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  擷取的路徑中的項目[CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
@@ -254,7 +254,7 @@ void SetFlags(
  布林值，指定是否`CMFCShellTreeCtrl`應該立即重新整理。  
   
 ### <a name="remarks"></a>備註  
- `CMFCShellTreeCtrl`所有設定旗標為傳遞[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。 不同的旗標之值的相關資訊，請參閱[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。  
+ `CMFCShellTreeCtrl`所有設定旗標為傳遞[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。 不同的旗標之值的相關資訊，請參閱[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  將產生關聯[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  

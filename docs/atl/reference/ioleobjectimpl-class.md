@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec4de071df8dcca960a0f1cb802375e5553ceb3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 3646a640cb3873ec32f6284f8d2be99469ef7633
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220899"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 類別
 這個類別會實作`IUnknown`和是透過此容器進行通訊與控制項的主要介面。  
@@ -131,7 +131,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[IOleObjectImpl::Update](#update)|更新控制項。 ATL 實作會傳回 S_OK。|  
   
 ## <a name="remarks"></a>備註  
- [IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709)介面是透過此容器進行通訊與控制項的主要介面。 類別`IOleObjectImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ [IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject)介面是透過此容器進行通訊與控制項的主要介面。 類別`IOleObjectImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -153,7 +153,7 @@ STDMETHOD(Advise)(
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) Windows SDK 中。  
+ 請參閱[IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) Windows SDK 中。  
   
 ##  <a name="close"></a>  IOleObjectImpl::Close  
  從執行載入的控制項狀態變更。  
@@ -167,7 +167,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  保留在控制項類別資料成員的指標[CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite)並[CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)發行時，與資料成員[CComControlBase::m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd)， [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)，以及[CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex)設為 FALSE。  
   
- 請參閱[IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) Windows SDK 中。  
+ 請參閱[IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) Windows SDK 中。  
   
 ##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  告知控制項執行其中一個列舉的動作。  
@@ -196,7 +196,7 @@ STDMETHOD(DoVerb)(
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|  
 |OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|  
   
- 請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ 請參閱[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  告知控制項以捨棄任何正在維護的復原狀態。  
@@ -250,7 +250,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- 藉由呼叫啟動就地控制項[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)。 除非控制項類別的資料成員`m_bWindowOnly`為 TRUE 時，`DoVerbInPlaceActivate`第一次嘗試啟動該控制項做為無視窗控制項 (只有當容器支援的可能[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300))。 如果失敗，函式會嘗試啟動該控制項擴充功能 (可能只有當容器支援[IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461))。 如果失敗，函式會嘗試啟動該控制項沒有擴充功能 (可能只有當容器支援[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586))。 如果啟用成功時，函式會告知容器已啟動控制項。  
+ 藉由呼叫啟動就地控制項[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)。 除非控制項類別的資料成員`m_bWindowOnly`為 TRUE 時，`DoVerbInPlaceActivate`第一次嘗試啟動該控制項做為無視窗控制項 (只有當容器支援的可能[IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless))。 如果失敗，函式會嘗試啟動該控制項擴充功能 (可能只有當容器支援[IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex))。 如果失敗，函式會嘗試啟動該控制項沒有擴充功能 (可能只有當容器支援[IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite))。 如果啟用成功時，函式會告知容器已啟動控制項。  
   
 ##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  使是在個別視窗中的 開啟編輯控制項。  
@@ -331,7 +331,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) Windows SDK 中。  
+ 請參閱[IOleObject::EnumAdvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumadvise) Windows SDK 中。  
   
 ##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  提供已註冊的動作 （動詞命令），此控制項的列舉型別，藉由呼叫`OleRegEnumVerbs`。  
@@ -343,7 +343,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ### <a name="remarks"></a>備註  
  您可以加入您的專案.rgs 檔案的動詞命令。 例如，請參閱 CIRCCTL。在 RG [CIRC](../../visual-cpp-samples.md)範例。  
   
- 請參閱[Enumverbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) Windows SDK 中。  
+ 請參閱[Enumverbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) Windows SDK 中。  
   
 ##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  將指標放在控制項類別資料成員[CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite)成*ppClientSite*和指標的參考計數遞增。  
@@ -353,7 +353,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) Windows SDK 中。  
+ 請參閱[IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclientsite) Windows SDK 中。  
   
 ##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  從剪貼簿擷取資料。  
@@ -368,7 +368,7 @@ STDMETHOD(GetClipboardData)(
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) Windows SDK 中。  
+ 請參閱[IOleObject::GetClipboardData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) Windows SDK 中。  
   
 ##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  擷取執行控制項的顯示大小以 himetric 為單位 （每個單位 0.01 公釐）。  
@@ -382,7 +382,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>備註  
  大小會儲存在控制項類別資料成員[CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。  
   
- 請參閱[IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) Windows SDK 中。  
+ 請參閱[IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) Windows SDK 中。  
   
 ##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  讓指標回到控制項的已註冊的狀態資訊，藉由呼叫`OleRegGetMiscStatus`。  
@@ -396,7 +396,7 @@ STDMETHOD(GetMiscStatus)(
 ### <a name="remarks"></a>備註  
  狀態資訊包括支援的控制項和呈現資料的行為。 您可以將狀態資訊新增至您的專案.rgs 檔案。  
   
- 請參閱[IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) Windows SDK 中。  
+ 請參閱[IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Windows SDK 中。  
   
 ##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  擷取控制項的 moniker。  
@@ -412,7 +412,7 @@ STDMETHOD(GetMoniker)(
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) Windows SDK 中。  
+ 請參閱[IOleObject::GetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmoniker) Windows SDK 中。  
   
 ##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  傳回控制項的類別識別項。  
@@ -422,7 +422,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) Windows SDK 中。  
+ 請參閱[IOleObject::GetUserClassID](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getuserclassid) Windows SDK 中。  
   
 ##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  藉由呼叫傳回控制項的使用者類型名稱`OleRegGetUserType`。  
@@ -436,7 +436,7 @@ STDMETHOD(GetUserType)(
 ### <a name="remarks"></a>備註  
  使用者類型名稱用於在使用者介面項目，例如功能表和對話方塊中顯示。 您可以變更您的專案.rgs 檔案中的使用者型別名稱。  
   
- 請參閱[IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) Windows SDK 中。  
+ 請參閱[IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) Windows SDK 中。  
   
 ##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  初始化從選取的資料控制項。  
@@ -452,7 +452,7 @@ STDMETHOD(InitFromData)(
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows SDK 中。  
+ 請參閱[IOleObject::InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) Windows SDK 中。  
   
 ##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  檢查控制項是否為最新狀態。  
@@ -465,7 +465,7 @@ STDMETHOD(IsUpToDate)(void);
  傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) Windows SDK 中。  
+ 請參閱[IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) Windows SDK 中。  
   
 ##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  由呼叫[DoVerbDiscardUndo](#doverbdiscardundo)之後會捨棄復原狀態。  
@@ -633,7 +633,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ### <a name="remarks"></a>備註  
  接著方法會傳回 S_OK。  
   
- 請參閱[IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) Windows SDK 中。  
+ 請參閱[IOleObject::SetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setclientsite) Windows SDK 中。  
   
 ##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  如果有的話，請至控制項的應用程式，建議的色彩配置。  
@@ -646,7 +646,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) Windows SDK 中。  
+ 請參閱[IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) Windows SDK 中。  
   
 ##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  設定控制項的顯示區域的範圍。  
@@ -664,7 +664,7 @@ STDMETHOD(SetExtent)(
   
  如果控制項類別資料成員[CComControlBase::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize)為 TRUE 時，`SetExtent`呼叫`SendOnDataChange`和`SendOnViewChange`通知註冊控制項大小的 advise 持有者的所有通知接收變更。  
   
- 請參閱[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) Windows SDK 中。  
+ 請參閱[IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) Windows SDK 中。  
   
 ##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  指示控制項容器應用程式和容器文件的名稱。  
@@ -677,7 +677,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
  傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) Windows SDK 中。  
+ 請參閱[IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) Windows SDK 中。  
   
 ##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  指示控制項其 moniker 的功能。  
@@ -692,7 +692,7 @@ STDMETHOD(SetMoniker)(
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) Windows SDK 中。  
+ 請參閱[IOleObject::SetMoniker](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setmoniker) Windows SDK 中。  
   
 ##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  刪除儲存在控制項類別的諮詢連接`m_spOleAdviseHolder`資料成員。  
@@ -702,7 +702,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) Windows SDK 中。  
+ 請參閱[IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) Windows SDK 中。  
   
 ##  <a name="update"></a>  IOleObjectImpl::Update  
  更新控制項。  
@@ -715,9 +715,9 @@ STDMETHOD(Update)(void);
  傳回 S_OK。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IOleObject::Update](http://msdn.microsoft.com/library/windows/desktop/ms679699) Windows SDK 中。  
+ 請參閱[IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
- [ActiveX 控制項介面](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [ActiveX 控制項介面](/windows/desktop/com/activex-controls-interfaces)   
  [類別概觀](../../atl/atl-class-overview.md)

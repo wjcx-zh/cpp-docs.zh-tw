@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 327e37d1f13691eca049c98e8b1ab314b393a608
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42545772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216184"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt; 運算子
 
@@ -45,7 +45,7 @@ void operator delete(void* ptr,
 
 第一個函式呼叫的是 delete 運算式轉譯的值*ptr*無效。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受的值*ptr*也就是 null 或是已由先前呼叫[new 運算子](../standard-library/new-operators.md#op_new)(**size_t**)。
 
-Null 值的預設行為*ptr*是不執行任何動作。 任何其他值*ptr*必須如先前所述的呼叫所傳回的值。 這類非 null 值的預設行為*ptr*是回收先前呼叫所配置的儲存體。 它沒有指定在哪些情況下這類回收的儲存體的部分或全部由後續呼叫所配置`operator new`(**size_t**)，或任何`calloc`( **size_t**)， `malloc`( **size_t**)，或`realloc`( **void\***， **size_t**)。
+Null 值的預設行為*ptr*是不執行任何動作。 任何其他值*ptr*必須如先前所述的呼叫所傳回的值。 這類非 null 值的預設行為*ptr*是回收先前呼叫所配置的儲存體。 它沒有指定在哪些情況下這類回收的儲存體的部分或全部由後續呼叫所配置`operator new`(**size_t**)，或任何`calloc`( **size_t**)， `malloc`( **size_t**)，或`realloc`( **void**<strong>\*</strong>， **size_t**)。
 
 呼叫第二個函式的是與 **new**( **std::size_t**) 格式之 new 運算式對應的位置 delete 運算式。 它不會執行任何動作。
 
@@ -75,7 +75,7 @@ void operator delete[](void* ptr,
 
 ### <a name="remarks"></a>備註
 
-第一個函式會呼叫`delete[]`運算式的值變成*ptr*無效。 此函式可被取代，因為程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受的值*ptr*也就是 null 或是已由先前呼叫[new 運算子&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 值的預設行為*ptr*是不執行任何動作。 任何其他值*ptr*必須如先前所述的呼叫所傳回的值。 這類非 null 值的預設行為*ptr*是回收先前呼叫所配置的儲存體。 它沒有指定在哪些情況下這類回收的儲存體的部分或全部由後續呼叫所配置[new 運算子](../standard-library/new-operators.md#op_new)(**size_t**)，或任何`calloc`(**size_t**)， `malloc`(**size_t**)，或`realloc`( **void\***， **size_t**)。
+第一個函式會呼叫`delete[]`運算式的值變成*ptr*無效。 此函式可被取代，因為程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受的值*ptr*也就是 null 或是已由先前呼叫[new 運算子&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 值的預設行為*ptr*是不執行任何動作。 任何其他值*ptr*必須如先前所述的呼叫所傳回的值。 這類非 null 值的預設行為*ptr*是回收先前呼叫所配置的儲存體。 它沒有指定在哪些情況下這類回收的儲存體的部分或全部由後續呼叫所配置[new 運算子](../standard-library/new-operators.md#op_new)(**size_t**)，或任何`calloc`(**size_t**)， `malloc`(**size_t**)，或`realloc`( **void**<strong>\*</strong>， **size_t**).
 
 第二個函式呼叫的位置`delete[]`運算式對應`new[]`格式的運算式`new[]`(**std:: size_t**)。 它不會執行任何動作。
 

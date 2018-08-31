@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c939a2a96d0f8a34dbe9424ab7e07c5a60c2224
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7a8bb269f1d572fed2d7fc85ee33f07d22a98aae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610201"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220578"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>執行階段平台的元件擴充功能
 
@@ -34,7 +34,7 @@ Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程
 
 C + + /CX 是子集的 C + + /cli CLI。 延伸模組通用的 C + + /CX 和 C + + /cli CLI，語意取決於您的目標 common language runtime (CLR) 或 Windows 執行階段。 若要編譯您的應用程式在 Windows 執行階段上執行，請指定`/ZW`編譯器選項。 若要編譯您的應用程式以在 CLR 上執行，請指定 `/clr` 編譯器選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。
 
-如需如何建立 c + + 中的通用 Windows 平台應用程式的詳細資訊，請參閱[藍圖適用於 Windows 執行階段應用程式使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。
+如需如何建立 c + + 中的通用 Windows 平台應用程式的詳細資訊，請參閱[藍圖適用於 Windows 執行階段應用程式使用 c + +](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。
 
 C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI 標準。 如需詳細資訊，請參閱 < [.NET 程式設計使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
@@ -52,9 +52,9 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 |**實值類別**<br /><br /> **實值結構**|否|宣告值類型。|[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)|
 |**介面類別**<br /><br /> **介面結構**|否|宣告介面。|[介面類別](../windows/interface-class-cpp-component-extensions.md)|
 |**列舉類別**<br /><br /> **列舉結構**|否|宣告列舉。|[列舉類別](../windows/enum-class-cpp-component-extensions.md)|
-|**屬性**|[是]|宣告屬性。|[屬性](../windows/property-cpp-component-extensions.md)|
-|**delegate**|[是]|宣告委派。|[delegate (C++ 元件延伸模組)](../windows/delegate-cpp-component-extensions.md)|
-|**event**|[是]|宣告事件。|[event](../windows/event-cpp-component-extensions.md)|
+|**屬性**|是|宣告屬性。|[屬性](../windows/property-cpp-component-extensions.md)|
+|**delegate**|是|宣告委派。|[delegate (C++ 元件延伸模組)](../windows/delegate-cpp-component-extensions.md)|
+|**event**|是|宣告事件。|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>覆寫規範
 
@@ -62,10 +62,10 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 
 |關鍵字|視內容而有所區別|用途|參考資料|
 |-------------|-----------------------|-------------|---------------|
-|**abstract**|[是]|表示函式或類別為抽象。|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|**abstract**|是|表示函式或類別為抽象。|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |**new**|否|表示函式不是基底類別版本的覆寫。|[new （新位置 vtable 中）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
-|**override**|[是]|表示方法必須是基底類別版本的覆寫。|[override](../windows/override-cpp-component-extensions.md)|
-|**sealed**|[是]|避免將類別做為基底類別。|[sealed](../windows/sealed-cpp-component-extensions.md)|
+|**override**|是|表示方法必須是基底類別版本的覆寫。|[override](../windows/override-cpp-component-extensions.md)|
+|**sealed**|是|避免將類別做為基底類別。|[sealed](../windows/sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>泛型的關鍵字
 
@@ -74,7 +74,7 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 |關鍵字|視內容而有所區別|用途|
 |-------------|-----------------------|-------------|
 |**泛型**|否|宣告泛型類型。|
-|**where**|[是]|指定套用至泛型類型參數的條件約束。|
+|**where**|是|指定套用至泛型類型參數的條件約束。|
 
 ## <a name="miscellaneous-keywords"></a>其他關鍵字
 
@@ -82,12 +82,12 @@ C + + /cli CLI 延伸 ISO/ANSI c + + 標準，並定義在 Ecma C + + /cli CLI �
 
 |關鍵字|視內容而有所區別|用途|參考資料|
 |-------------|-----------------------|-------------|---------------|
-|**finally**|[是]|表示預設例外狀況處理行為。|[例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)|
+|**finally**|是|表示預設例外狀況處理行為。|[例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)|
 |**for each, in**|否|列舉集合的項目。|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|否|在記憶體回收堆積上配置類型。 而不是使用**新**並**刪除**。|[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**新的 ref**|[是]|配置是 Windows 執行階段類型。 而不是使用**新**並**刪除**。|[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**initonly**|[是]|表示成員只能在宣告或靜態建構函式中初始化。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**常值**|[是]|建立常值變數。|[常值](../windows/literal-cpp-component-extensions.md)|
+|**新的 ref**|是|配置是 Windows 執行階段類型。 而不是使用**新**並**刪除**。|[ref new 和 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**initonly**|是|表示成員只能在宣告或靜態建構函式中初始化。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
+|**常值**|是|建立常值變數。|[常值](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|否|指出控制代碼或指標未指向物件。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>範本建構

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a55daa9f8c742d847944ddb0459db208c7edf9cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b31ede898e2b1976bc16be7cf89c0223c3709193
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608120"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221539"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -36,7 +36,7 @@ ms.locfileid: "42608120"
 
 ## <a name="remarks"></a>備註
 
-**Noncreatable** c + + 屬性具有相同的功能[noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 屬性會自動傳至所產生。編譯器的 IDL 檔案。
+**Noncreatable** c + + 屬性具有相同的功能[noncreatable](/windows/desktop/Midl/noncreatable) MIDL 屬性會自動傳至所產生。編譯器的 IDL 檔案。
 
 使用 ATL 的專案中使用這個屬性時，屬性的行為變更。 除了上述的行為，該屬性也會插入[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)巨集。 這個巨集表示 ATL 物件無法從外部建立。
 

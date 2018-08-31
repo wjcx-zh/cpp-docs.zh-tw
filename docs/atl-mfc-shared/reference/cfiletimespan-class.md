@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85415ee73b65619a2da0a3e7720250a3618a0fec
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f6d17ec38820e82a97435e04f2126f87ef9208aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883514"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218432"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 類別
 這個類別會提供管理相對的日期和時間值與檔案相關聯的方法。  
@@ -272,7 +272,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
  時間範圍內，以毫秒為單位的新值。  
   
 ## <a name="see-also"></a>另請參閱  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTime 類別](../../atl-mfc-shared/reference/cfiletime-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)

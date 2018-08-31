@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d784d7f3c03b18d2f81d6eec8bc9e4b76c7ee8da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879568"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216765"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 類別
-這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面。  
+這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)介面。  
   
 > [!IMPORTANT]
 >  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填滿計算 UUID 的陣列值。 每個 UUID 會對應至其中一個可顯示物件的屬性工作表中的屬性頁的 CLSID。|  
   
 ## <a name="remarks"></a>備註  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面可讓用戶端取得物件所支援的屬性頁 Clsid 的清單。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)介面可讓用戶端取得物件所支援的屬性頁 Clsid 的清單。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
 > [!NOTE]
 >  不會公開`ISpecifyPropertyPages`介面，如果您的物件不支援屬性頁。  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **標頭：** atlcom.h  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- 填入陣列[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)結構可以顯示物件的屬性工作表中之屬性頁面的 Clsid。  
+ 填入陣列[CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid)結構可以顯示物件的屬性工作表中之屬性頁面的 Clsid。  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -79,7 +79,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 ### <a name="remarks"></a>備註  
  ATL 會使用物件的屬性對應，來擷取每個 CLSID。  
   
- 請參閱[ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) Windows SDK 中。  
+ 請參閱[ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)   

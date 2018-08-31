@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849746"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216257"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 類別
 包含可讓使用者從一份系統字型選取字型下拉式方塊控制項的工具列按鈕。  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  若要同步處理文件的字型，使用下拉式方塊中選取的字型，請使用[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)方法來擷取選取的字型屬性，並使用這些屬性來建立[CFont 類別](../../mfc/reference/cfont-class.md)物件。  
   
- 字型下拉式方塊按鈕呼叫 Win32 函式[EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620)來判斷螢幕及印表機供系統使用的字型。  
+ 字型下拉式方塊按鈕呼叫 Win32 函式[EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa)來判斷螢幕及印表機供系統使用的字型。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in]*nCharSet*  
- 如果設為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有具有相同名稱的兩種字型，下拉式方塊包含其中一個）。如果設為有效的字元組值，而下拉式方塊包含只在指定的字元集的字型。 請參閱[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)的可能字元清單的設定。  
+ 如果設為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有具有相同名稱的兩種字型，下拉式方塊包含其中一個）。如果設為有效的字元組值，而下拉式方塊包含只在指定的字元集的字型。 請參閱[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)的可能字元清單的設定。  
   
  [in]*cheaderctrl:: Create*  
  下拉式方塊的樣式。 (請參閱[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

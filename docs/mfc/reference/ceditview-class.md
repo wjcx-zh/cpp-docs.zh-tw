@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bcc4af6f4aeb6c7a0df005d164729cf87065f613
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338489"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220826"
 ---
 # <a name="ceditview-class"></a>CEditView 類別
 檢視類別的類型，這個類型提供 Windows 編輯控制項功能，而且可用於實作簡單的文字編輯器功能。  
@@ -120,7 +120,7 @@ class CEditView : public CCtrlView
   
  類別的預設實作`CEditView`處理下列命令： ID_EDIT_SELECT_ALL、 ID_EDIT_FIND、 ID_EDIT_REPLACE、 ID_EDIT_REPEAT 和 ID_FILE_PRINT。  
   
- 預設字元限制`CEditView`是 (1024年\*1024年-1 = 1048575)。 這可以藉由呼叫基礎編輯控制項的 EM_LIMITTEXT 函式變更。 不過，限制會根據作業系統而不同，而且類型的編輯控制項 （單一或多行）。 如需有關這些限制的詳細資訊，請參閱 < [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607)。  
+ 預設字元限制`CEditView`是 (1024年\*1024年-1 = 1048575)。 這可以藉由呼叫基礎編輯控制項的 EM_LIMITTEXT 函式變更。 不過，限制會根據作業系統而不同，而且類型的編輯控制項 （單一或多行）。 如需有關這些限制的詳細資訊，請參閱 < [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext)。  
   
  若要變更這項限制在控制項中的，覆寫`OnCreate()`函式的程式`CEditView`類別，並插入下列程式碼行：  
   

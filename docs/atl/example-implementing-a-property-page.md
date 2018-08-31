@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852270"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214778"
 ---
 # <a name="example-implementing-a-property-page"></a>範例： 實作屬性頁
 此範例示範如何建置會顯示 （並可讓您變更） 的屬性的屬性頁[文件類別](../mfc/document-classes.md)介面。  
@@ -70,7 +70,7 @@ ms.locfileid: "37852270"
  這些控制項將用來顯示文件和其唯讀狀態的檔案名稱中。  
   
 > [!NOTE]
->  對話方塊資源不包含框架或命令的按鈕，也沒有您可能預期的索引標籤的外觀。 這些功能可提供透過呼叫來建立類似的屬性頁面外框[OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437)。  
+>  對話方塊資源不包含框架或命令的按鈕，也沒有您可能預期的索引標籤的外觀。 這些功能可提供透過呼叫來建立類似的屬性頁面外框[OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe)。  
   
 ##  <a name="vcconadding_message_handlers"></a> 加入訊息處理常式  
  的地方使用控制項，您可以新增至任一控制項的值變更時更新頁面的已變更的狀態訊息處理常式：  

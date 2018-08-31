@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451728"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217130"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -95,25 +95,25 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**wcstombs**成功轉換的多位元組字串，它會傳回多位元組輸出字串中，不包括結束的 null （如果有的話） 所寫入的位元組數目。 如果*mbstr*引數是**NULL**， **wcstombs**傳回目的地字串位元組中的所需的大小。 如果**wcstombs**遇到寬字元不能轉換的多位元組字元，則傳回-1 轉換為類型**size_t**並設定**errno**至**EILSEQ**.
+如果**wcstombs**成功轉換多位元組字串，它會傳回 （如果有的話），但不包括結束的 null 多位元組輸出字串寫入的位元組數目。 如果*mbstr*引數是**NULL**， **wcstombs**傳回所需的大小，以位元組為單位的目的字串。 如果**wcstombs**遇到寬字元，它無法轉換成多位元組字元，則傳回-1 轉換為類型**size_t**並設定**errno**至**EILSEQ**.
 
 ## <a name="remarks"></a>備註
 
-**Wcstombs**函式轉換所指向的寬字元字串*wcstr*到對應的多位元組字元，並儲存結果*mbstr*陣列。 *計數*參數表示的多位元組輸出字串中可儲存的位元組數目上限 (亦即，大小*mbstr*)。 轉換寬字元字串時通常不知道需要多少個位元組。 某些寬字元只需要輸出字串的一個位元組，有些則需要兩個。 如果每一個寬字元 （包括 null 寬字元） 的輸入字串中的多位元組輸出字串中有兩個位元組，以符合保證結果。
+**Wcstombs**函式會轉換所指向的寬字元字串*wcstr*若要對應的多位元組字元，並儲存在結果*mbstr*陣列。 *計數*參數會指出最大可以儲存在多位元組輸出字串的位元組數 (也就是大小*mbstr*)。 轉換寬字元字串時通常不知道需要多少個位元組。 某些寬字元只需要輸出字串的一個位元組，有些則需要兩個。 如果輸入字串 （包括寬字元 null） 中的每個寬字元的多位元組輸出字串中有兩個位元組，結果保證符合。
 
-如果**wcstombs**之前或期間遇到寬字元的 null 字元 (L '\0')*計數*發生時，會將它轉換成 8 位元 0 而停止。 因此，在多位元組字元字串*mbstr*是以 null 終止才**wcstombs**在轉換期間所遇到的寬字元 null 字元。 如果指向的序列*wcstr*和*mbstr*重疊，行為**wcstombs**是未定義。
+如果**wcstombs**之前或期間遇到寬字元的 null 字元 (L '\0')*計數*發生時，會將其轉換成 8 位元 0 並停止。 因此，在多位元組字元字串*mbstr*是以 null 終止才**wcstombs**轉換期間遇到寬字元 null 字元。 如果指向的序列所*wcstr*並*mbstr*重疊，就會有的行為**wcstombs**是未定義。
 
-如果*mbstr*引數是**NULL**， **wcstombs**傳回目的地字串位元組中的所需的大小。
+如果*mbstr*引數是**NULL**， **wcstombs**傳回所需的大小，以位元組為單位的目的字串。
 
-**wcstombs**會驗證其參數。 如果*wcstr*是**NULL**，或如果*計數*大於**INT_MAX**，此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**至**EINVAL**並傳回-1。
+**wcstombs**會驗證其參數。 如果*wcstr*是**NULL**，或如果*計數*大於**INT_MAX**，此函式會叫用無效參數處理常式中，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續執行，則函式會設定**errno**要**EINVAL**並傳回-1。
 
-**wcstombs**針對任何地區設定相關行為; 使用目前的地區設定 **_wcstombs_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs**針對任何地區設定相關行為; 會使用目前的地區設定 **_wcstombs_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

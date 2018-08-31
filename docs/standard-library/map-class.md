@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218629"
 ---
 # <a name="map-class"></a>map 類別
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存在對應中的索引鍵的資料類型。
+*Key*<br/>
+ 要存放在對應中的索引鍵資料類型。
 
-*型別*来儲存在對應中的項目資料類型。
+*類型*<br/>
+ 要存放在對應中的項目資料類型。
 
-*Traits*提供可以比較兩個項目值做為排序鍵來判斷其相對順序，在對應中的函式物件的型別。 這個引數是選用引數，且預設值是二元述詞 `less<Key>`。
+*特性*<br/>
+ 類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在對應中的相對順序。 這個引數是選用引數，且預設值是二元述詞 `less<Key>`。
 
 在 C++14 中，指定沒有型別參數的 std::less<> 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-*配置器*表示預存配置器物件，封裝有關對應的配置和解除配置之記憶體的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 `allocator<pair<const Key, Type> >`。
+*配置器*<br/>
+ 代表預存配置器物件的類型，封裝有關對應之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>備註
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要比對對應中元素的索引鍵值。
+*key*<br/>
+ 要從對應中比對之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1035,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*引數索引鍵值所搜尋之對應中元素的排序鍵進行比較。
+*key*<br/>
+ 要與所搜尋之對應中元素的排序鍵比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1121,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*其中*要移除之項目的位置。
+*Where*<br/>
+ 要移除之項目的位置。
 
-*第一個*要移除之第一個項目的位置。
+*第一個*<br/>
+ 要移除之第一個項目的位置。
 
-*最後一個*要移除的最後一個元素之後的位置。
+*最後一個*<br/>
+ 緊接在要移除之最後一個項目後面的位置。
 
-*索引鍵*要移除之項目的索引鍵的值。
+*Key*<br/>
+ 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1229,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之對應中元素的排序鍵比對的索引鍵值。
+*key*<br/>
+ 要以所搜尋之 map 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1561,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>備註
 
-`iterator`所對應之物件的項目指向定義[value_type](#value_type)，也就是型別的`pair` * \< * **constKey**，**類型 * * * >* 其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
+地圖點之物件的項目所定義的迭代器[value_type](#value_type)，也就是型別的`pair<const Key, Type>`其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
-取值 （dereference)**迭代器**`Iter`指向對應中的項目，使用`->`運算子。
+迭代器取值 （dereference) *Iter*指向對應中的項目，使用`->`運算子。
 
-若要存取該元素的索引鍵值，請使用 `Iter` -> **first**，這等同於 (\* `Iter`). **first**。 若要存取該元素的已對應資料值，請使用 `Iter` -> **second**，這等同於 (\* `Iter`). **second**。
+若要存取元素的索引鍵的值，請使用`Iter->first`，這相當於`(*Iter).first`。 若要存取的項目對應的資料，請使用`Iter->second`，這相當於`(*Iter).second`。
 
 ### <a name="example"></a>範例
 
@@ -1587,7 +1598,7 @@ key_compare key_comp() const;
 
 預存物件會定義成員函式
 
-**bool operator**( **constKey&**`left`, **const Key&**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 如果 `left` 在前面且在排序次序中不等於 `right`，此函式就會傳回 **true**。
 
@@ -1690,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*引數索引鍵值所搜尋之對應中元素的排序鍵進行比較。
+*key*<br/>
+ 要與所搜尋之對應中元素的排序鍵比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2402,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 類型 `reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 map。
 
-`reverse_iterator`所對應之物件的項目指向定義[value_type](#value_type)，也就是型別的`pair` * \< * **constKey**，**類型 * * * >* 其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
+`reverse_iterator`所對應之物件的項目指向定義[value_type](#value_type)，也就是型別的`pair<const Key, Type>`其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
 
-取值 （dereference) `reverse_iterator` `rIter`指向對應中的項目，使用`->`運算子。
+取值 （dereference) `reverse_iterator` *rIter*指向對應中的項目，使用`->`運算子。
 
 若要存取該元素的索引鍵值，請使用 `rIter` -> **first**，這等同於 (\* `rIter`). **first**。 若要存取該元素的已對應資料值，請使用 `rIter` -> **second**，這等同於 (\* `rIter`). **first**。
 
@@ -2479,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*右*提供要與目標 map 交換之元素的引數 map。
+*right*<br/>
+ 提供要與目標 map 交換之元素的引數 map。
 
 ### <a name="remarks"></a>備註
 
@@ -2549,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*引數索引鍵值與所搜尋之對應中元素的排序鍵值比較。
+*key*<br/>
+ 要與所搜尋之對應中元素的排序鍵值比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2738,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>另請參閱
 
-[\<對應 > 成員](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<對應 > 成員](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a46a2f9b18a45e7ea627488881b0289e733ddd7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608963"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222528"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -44,7 +44,7 @@ ms.locfileid: "42608963"
 
 ## <a name="remarks"></a>備註
 
-**版本**c + + 屬性具有相同的功能[版本](http://msdn.microsoft.com/library/windows/desktop/aa367306)MIDL 屬性且會傳遞至產生的.idl 檔案。
+**版本**c + + 屬性具有相同的功能[版本](/windows/desktop/Midl/version)MIDL 屬性且會傳遞至產生的.idl 檔案。
 
 ## <a name="example"></a>範例
 

@@ -1,5 +1,5 @@
 ---
-title: C 執行階段錯誤 R6025 |Microsoft 文件
+title: C 執行階段錯誤 R6025 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abdbdbf918462dfb83eff07190c32af1f1b3d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302022"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220628"
 ---
 # <a name="c-runtime-error-r6025"></a>C 執行階段錯誤 R6025
 純虛擬函式呼叫  
   
 > [!NOTE]
->  如果您遇到這個錯誤訊息時執行的應用程式時，應用程式已關閉因為它有發生內部問題。 此錯誤最常見的原因是在應用程式或安裝損毀的錯誤。  
+>  如果您遇到這個錯誤訊息時執行應用程式時，應用程式已關閉發生內部問題。 此錯誤最常見的原因是應用程式或已損毀的安裝中的 bug。  
 >   
 >  您可以嘗試進行下列步驟來修正這個錯誤：  
 >   
->  -   使用**應用程式和功能**或**程式和功能**頁面**控制台**來修復或重新安裝程式。  
+>  -   使用**應用程式和功能**或是**程式和功能**頁面**控制台**修復或重新安裝程式。  
 > -   請檢查**Windows Update**中**控制台**軟體更新。  
-> -   檢查應用程式的更新版本。 如果此問題持續發生，請連絡應用程式廠商。  
+> -   檢查應用程式的更新版本。 如果問題持續發生，請連絡應用程式廠商。  
   
- **程式設計人員的資訊**  
+ **適用於程式設計人員的資訊**  
   
- 沒有具有已具現化物件來處理純虛擬函式呼叫。  
+ 任何具有已具現化物件來處理純虛擬函式呼叫。  
   
- 此錯誤的起因是抽象的基底類別，透過指標由衍生類別中的型別轉型，但實際上是基底類別的指標呼叫虛擬函式。 這可能是從轉型時**void\*** 類別的指標時**void\*** 基底類別的建構期間所建立。  
+ 此錯誤被因為是抽象的基底類別，透過指標由衍生類別中的型別轉換，但實際上是基底類別的指標呼叫虛擬函式。 發生於從轉型**void** <strong>\*</strong>類別的指標時**void** <strong>\*</strong>已在基底類別的建構期間建立。  
   
- 如需詳細資訊，請參閱[Microsoft 支援服務](http://go.microsoft.com/fwlink/p/?linkid=75220)網站。
+ 如需詳細資訊，請參閱 < [Microsoft 支援服務](http://go.microsoft.com/fwlink/p/?linkid=75220)網站。

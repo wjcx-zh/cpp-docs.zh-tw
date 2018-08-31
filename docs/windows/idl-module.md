@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7424581c277e7b20132fd5e667acb77a4a95789e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598646"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220461"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -65,10 +65,10 @@ function declaration
 此類型程式庫的說明識別碼。
 
 *隱藏*（選擇性）  
-避免程式庫顯示為參數。 如需詳細資訊，請參閱 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 屬性。
+避免程式庫顯示為參數。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
 
 *限制*（選擇性）  
-程式庫成員不能任意呼叫。 如需詳細資訊，請參閱 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 屬性。
+程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
 
 *函式宣告*  
 您將定義的函式。
@@ -77,7 +77,7 @@ function declaration
 
 **Idl_module** c + + 屬性可讓您指定的.dll 檔案，可讓您從.dll 檔案匯入項目點。
 
-**Idl_module**屬性有類似的功能[模組](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 屬性。
+**Idl_module**屬性有類似的功能[模組](/windows/desktop/Midl/module)MIDL 屬性。
 
 您可以匯出任何項目從 COM 物件，您可以從匯出的.dll 檔案置於的程式庫區塊的.idl 檔中的 DLL 進入點。
 

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 534d2755dfb38e739234dd15eb7f04263874c59e
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: dcd141134dfef7b7044d0a4f9635ff5bcc252c93
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209016"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223360"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 類別
 
@@ -805,7 +805,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="remarks"></a>備註
 
-運算子會傳回 **\***( **\*this** + `Off`)。
+運算子會傳回 <strong>\*</strong>( **\*this** + `Off`)。
 
 ### <a name="example"></a>範例
 

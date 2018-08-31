@@ -1,5 +1,5 @@
 ---
-title: 記憶體管理 |Microsoft 文件
+title: 記憶體管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28191191572e508828a23f0e719a57d63163b08d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345074"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222347"
 ---
 # <a name="memory-management"></a>記憶體管理
 本文件群說明如何使用 MFC 程式庫中與記憶體管理相關的通用服務。 記憶體配置可以分成兩個主要類型：框架配置和堆積配置。  
   
  兩個配置技術之間的主要差異是框架配置通常搭配實際的記憶體區塊，而使用時堆積配置則一定會給您指向記憶體區塊的指標。 兩種配置之間的另一個主要差異是框架物件會自動刪除，而堆積物件則必須由程式設計人員明確刪除。  
   
- 如需適用於 Windows 程式中的記憶體管理的非 MFC 資訊，請參閱[記憶體管理](http://msdn.microsoft.com/library/windows/desktop/aa366779)Windows SDK 中。  
+ 如需 Windows 程式中記憶體管理的非 MFC 資訊，請參閱[記憶體管理](https://msdn.microsoft.com/library/windows/desktop/aa366779)Windows SDK 中。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [框架配置](../mfc/memory-management-frame-allocation.md)  
   
@@ -40,9 +40,9 @@ ms.locfileid: "33345074"
   
 -   [陣列配置記憶體](../mfc/memory-management-examples.md)  
   
--   [從堆積解除配置陣列記憶體](../mfc/memory-management-examples.md)  
+-   [從堆積解除配置陣列的記憶體](../mfc/memory-management-examples.md)  
   
--   [配置記憶體的資料結構](../mfc/memory-management-examples.md)  
+-   [資料結構配置記憶體](../mfc/memory-management-examples.md)  
   
 -   [物件配置記憶體](../mfc/memory-management-examples.md)  
   

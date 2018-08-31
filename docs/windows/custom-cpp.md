@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220357"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "42600417"
 
 **自訂**c + + 屬性會放入類型程式庫的資訊。 您必須讀取類型程式庫中的自訂值的工具。
 
-**自訂**屬性有相同的功能[自訂](http://msdn.microsoft.com/library/windows/desktop/aa366766)MIDL 屬性。
+**自訂**屬性有相同的功能[自訂](/windows/desktop/Midl/custom)MIDL 屬性。
 
 ## <a name="requirements"></a>需求
 
@@ -58,7 +58,7 @@ ms.locfileid: "42600417"
 |||
 |-|-|
 |**適用於**|非 COM**介面**，**類別**， **enum**s`idl_module`方法、 介面成員、 介面參數**typedef**s，**union**s**結構**s|
-|**可重複**|[是]|
+|**可重複**|是|
 |**必要屬性**|**coclass** （當使用類別上）|
 |**無效屬性**|無|
 

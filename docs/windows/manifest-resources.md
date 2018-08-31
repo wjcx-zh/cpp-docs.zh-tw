@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c9a1786e5b3a6fb150e3e27fb459ac4341486ca
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1520cd301fa46fb4d9521fd6d4180ebd3710f67
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218246"
 ---
 # <a name="manifest-resources"></a>資訊清單資源
 
@@ -43,11 +43,11 @@ ms.locfileid: "42604784"
 </dependency>
 ```
 
-對於 Windows XP 或 Windows Vista 應用程式，資訊清單資源不只會指定應用程式使用最新版的 Windows 通用控制項 (v6.0，如上所示)，也會支援 [Syslink 控制項](http://msdn.microsoft.com/library/windows/desktop/bb760706)。
+Windows XP 或 Windows Vista 應用程式資訊清單資源不只會指定應用程式使用最新版本的 Windows 通用控制項 (v6.0，如上所示)，但它也支援[Syslink 控制項](/windows/desktop/Controls/syslink-overview)。
 
-若要檢視版本和類型資訊清單資源內含的資訊，您可以開啟檔案的 XML 檢視器中，或在 Visual Studio[文字編輯器](http://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)。 如需詳細資訊，請參閱 [在 Visual Studio 文字編輯器中開啟資訊清單資源](../windows/how-to-open-a-manifest-resource.md)。
+若要檢視版本和類型資訊清單資源內含的資訊，您可以開啟檔案的 XML 檢視器中，或在 Visual Studio[文字編輯器](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1)。 如需詳細資訊，請參閱 [在 Visual Studio 文字編輯器中開啟資訊清單資源](../windows/how-to-open-a-manifest-resource.md)。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱  [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
 
 ## <a name="limitations"></a>限制
 

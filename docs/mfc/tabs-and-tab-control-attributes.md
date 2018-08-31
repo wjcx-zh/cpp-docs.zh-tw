@@ -1,5 +1,5 @@
 ---
-title: 索引標籤和索引標籤控制項屬性 |Microsoft 文件
+title: 索引標籤和索引標籤控制項屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c02f939c9f9314f3e24921879836c2743ae7d5ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952855"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223278"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>索引標籤和索引標籤控制項屬性
-您有相當大的控制權的外觀和行為的索引標籤控制項所組成的索引標籤 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每個索引標籤可以有標籤、 圖示、 項目狀態和與其相關聯的應用程式定義的 32 位元值。 對於每個索引標籤上，您可以顯示圖示、 標籤，或兩者。  
+您有相當大的控制權的外觀和行為的索引標籤組成的索引標籤控制項 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每個索引標籤可以有標籤、 圖示、 項目狀態和與其相關聯的應用程式定義的 32 位元值。 針對每個索引標籤中，您可以顯示圖示、 標籤，或兩者。  
   
- 此外，每個索引標籤項目可以有三種可能狀態： 已按下，未按下或反白顯示。 此狀態只可以設定來修改現有的索引標籤項目。 若要修改現有的索引標籤項目，擷取它呼叫[GetItem](../mfc/reference/ctabctrl-class.md#getitem)，修改`TCITEM`結構 (特別是*dwState*和*dwStateMask*資料成員)，然後傳回已修改`TCITEM`結構呼叫[SetItem](../mfc/reference/ctabctrl-class.md#setitem)。 如果您要清除所有索引標籤項目中的項目狀態`CTabCtrl`物件，呼叫以[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)。 此函式會重設 索引標籤的所有項目或所有項目，除了目前選取的狀態。  
+ 此外，每個索引標籤項目可以有三種可能狀態： 已按下，未按下或反白顯示。 此狀態只可以設定藉由修改現有的索引標籤項目。 若要修改現有的索引標籤項目，擷取它藉由呼叫[GetItem](../mfc/reference/ctabctrl-class.md#getitem)，修改`TCITEM`結構 (特別*dwState*並*dwStateMask*資料成員)，然後傳回已修改`TCITEM`結構，藉由呼叫[SetItem](../mfc/reference/ctabctrl-class.md#setitem)。 如果您要清除項目狀態中的所有索引標籤項目的`CTabCtrl`物件，呼叫[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)。 此函式會重設 索引標籤上的所有項目或所有的項目，除了目前所選取的狀態。  
   
- 下列程式碼清除所有的索引標籤項目狀態，然後修改第三個項目的狀態：  
+ 下列程式碼會清除所有的索引標籤項目的狀態，然後再修改 第三個項目的狀態：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]  
   
- 如需索引標籤上屬性的詳細資訊，請參閱[索引標籤和索引標籤屬性](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK 中。 如需將索引標籤加入索引標籤控制項的詳細資訊，請參閱[加入索引標籤，以索引標籤控制項](../mfc/adding-tabs-to-a-tab-control.md)本主題稍後。  
+ 如需 索引標籤上屬性的詳細資訊，請參閱[索引標籤和索引標籤屬性](/windows/desktop/Controls/tab-controls)Windows SDK 中。 如需將索引標籤加入至索引標籤控制項的詳細資訊，請參閱[新增至索引標籤控制項的索引標籤](../mfc/adding-tabs-to-a-tab-control.md)本主題稍後的。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CTabCtrl](../mfc/using-ctabctrl.md)   

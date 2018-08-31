@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451535"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215157"
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -73,17 +73,17 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**wctomb**將轉換的寬字元的多位元組字元，它會傳回的位元組數 (不大於**MB_CUR_MAX**) 中的寬字元。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb**傳回 1。 如果目標指標*mbchar*是**NULL**， **wctomb**傳回 0。 如果轉換不可能在目前的地區設定， **wctomb**傳回-1 和**errno**設**EILSEQ**。
+如果**wctomb**寬字元轉換成多位元組字元，它會傳回的位元組數目 (絕不會大於**MB_CUR_MAX**) 中的寬字元。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb**會傳回 1。 如果目標指標*mbchar*是**NULL**， **wctomb**會傳回 0。 如果目前的地區設定，不可能轉換**wctomb**會傳回-1 並**errno**設定為**EILSEQ**。
 
 ## <a name="remarks"></a>備註
 
-**Wctomb**函式將其*wchar*對應的多位元組字元的引數，並將儲存在結果*mbchar*。 您可以在任何程式的任何點呼叫函式。 **wctomb**針對任何地區設定相關行為; 使用目前的地區設定 **_wctomb_l**等同於**wctomb**不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Wctomb**函式會將其*wchar*的對應的多位元組字元的引數，並將儲存在結果*mbchar*。 您可以在任何程式的任何點呼叫函式。 **wctomb**針對任何地區設定相關行為; 會使用目前的地區設定 **_wctomb_l**等同於**wctomb**不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**wctomb**會驗證其參數。 如果*mbchar*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**而且函數會傳回-1。
+**wctomb**會驗證其參數。 如果*mbchar*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回-1。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
@@ -127,4 +127,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

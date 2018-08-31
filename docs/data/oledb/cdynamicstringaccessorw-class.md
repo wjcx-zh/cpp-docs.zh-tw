@@ -17,35 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb3e12853d384f433674331342541b7e69241d4a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 16f4725013d11eb27e4c6669403942cf171032ac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340484"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220070"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW 類別
-可讓您存取資料來源，當您有不了解資料庫結構描述 （基礎結構）。  
-  
+
+可讓您存取資料來源，當您有不了解資料庫結構描述 （基礎結構）。
+
 ## <a name="syntax"></a>語法
 
 ```cpp
-typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;  
-```  
-  
-## <a name="remarks"></a>備註  
- 兩者都要求提供者擷取所有的資料存取資料存放區做為字串資料，但`CDynamicStringAccessor`要求 Unicode 字串資料。  
-  
- `CDynamicStringAccessorW` 繼承`GetString`並`SetString`從`CDynamicStringAccessor`。 當您使用中的這些方法時`CDynamicStringAccessorW`物件， ***BaseType***是**WCHAR**。  
-  
-## <a name="requirements"></a>需求  
- **標頭檔**：atldbcli.h  
-  
-## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor 類別](../../data/oledb/caccessor-class.md)   
- [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)   
- [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicStringAccessor 類別](../../data/oledb/cdynamicstringaccessor-class.md)
+typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;
+```
+
+## <a name="remarks"></a>備註
+
+兩者都要求提供者擷取所有的資料存取資料存放區做為字串資料，但`CDynamicStringAccessor`要求 Unicode 字串資料。
+
+`CDynamicStringAccessorW` 繼承`GetString`並`SetString`從`CDynamicStringAccessor`。 當您使用中的這些方法時`CDynamicStringAccessorW`物件，`BaseType`是**WCHAR**。
+
+## <a name="requirements"></a>需求
+
+**標頭檔**：atldbcli.h
+
+## <a name="see-also"></a>另請參閱
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CAccessor 類別](../../data/oledb/caccessor-class.md)<br/>
+[CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)<br/>
+[CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessor 類別](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

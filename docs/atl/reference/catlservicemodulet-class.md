@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 993bef01eb5468b837cc0b8a51ae4b08f76ee398
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 04c2717aa5ec59241d470737f99ce2ed5f9df714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881067"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219406"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 類別
 這個類別會實作一項服務。  
@@ -233,7 +233,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
  要寫入事件記錄檔的選擇性額外字串。  
   
 ### <a name="remarks"></a>備註  
- 這個方法將詳細資料寫出至事件記錄檔，使用函式[ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679)。 如果沒有服務正在執行，則會將字串傳送至主控台。  
+ 這個方法將詳細資料寫出至事件記錄檔，使用函式[ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa)。 如果沒有服務正在執行，則會將字串傳送至主控台。  
   
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  表示在程式執行為服務旗標。  
@@ -263,7 +263,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ```  
   
 ### <a name="remarks"></a>備註  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996)結構包含服務的相關資訊。  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status)結構包含服務的相關資訊。  
   
 ##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  儲存目前的服務的狀態資訊結構的成員變數。  
@@ -273,7 +273,7 @@ SERVICE_STATUS m_status;
 ```  
   
 ### <a name="remarks"></a>備註  
- [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996)結構包含服務的相關資訊。  
+ [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status)結構包含服務的相關資訊。  
   
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  正在註冊服務的名稱。  
@@ -391,7 +391,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>參數  
  *nShowCmd*  
- 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設值是 SW_HIDE。  
+ 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設值是 SW_HIDE。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -427,7 +427,7 @@ void SetServiceStatus(DWORD dwState) throw();
   
 ### <a name="parameters"></a>參數  
  *dwState*  
- 新的狀態。 請參閱[SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)可能的值。  
+ 新的狀態。 請參閱[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)可能的值。  
   
 ### <a name="remarks"></a>備註  
  更新服務的服務控制管理員的狀態資訊。 它由呼叫[catlservicemodulet:: Run](#run)， [catlservicemodulet:: Servicemain](#servicemain)和其他處理常式方法。 狀態也會儲存在成員變數[CAtlServiceModuleT::m_status](#m_status)。  
@@ -441,7 +441,7 @@ HRESULT Start(int nShowCmd) throw();
   
 ### <a name="parameters"></a>參數  
  *nShowCmd*  
- 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)一節。  
+ 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -491,7 +491,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>參數  
  *nShowCmd*  
- 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)一節。  
+ 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。  
   
 ### <a name="return-value"></a>傳回值  
  傳回服務的傳回值。  

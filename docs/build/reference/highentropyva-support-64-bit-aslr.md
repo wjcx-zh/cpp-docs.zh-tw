@@ -1,7 +1,7 @@
 ---
-title: -HIGHENTROPYVA (支援 64 位元 ASLR) |Microsoft 文件
+title: /HIGHENTROPYVA (支援 64 位元 ASLR) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -12,38 +12,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2487cbeff97ded6e95a36393fbbcfbd510e6d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fe8f20631d576264eab836f822a414c1244d5b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223460"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (支援 64 位元 ASLR)
-指定可執行映像支援高熵 64 位元位址空間配置隨機載入 (ASLR)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-/HIGHENTROPYVA[:NO]  
-```  
-  
-## <a name="remarks"></a>備註  
- 根據預設，會針對 64 位元可執行映像開啟 /HIGHENTROPYVA。 它不適用於 32 位元可執行檔映像。 若要啟用此選項，也必須開啟 /DYNAMICBASE。  
-  
- /HIGHENTROPYVA 修改 .dll 檔或 .exe 檔的標頭，以指示是否支援 64 位元位址的 ASLR。 在可執行檔和它所依據的所有模組上設定此選項時，支援 64 位元 ASLR 的作業系統可以使用 64 位元虛擬位址空間中的隨機位址，在載入時間為可執行檔映像的區段重定基底。 這個大型位址空間會使攻擊者較難猜到特定記憶體區域的位置。  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項  
-  
-1.  開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  展開**組態屬性**節點。  
-  
-3.  展開**連結器**節點。  
-  
-4.  選取**命令列**屬性頁。  
-  
-5.  在**其他選項**，輸入`/HIGHENTROPYVA`或`/HIGHENTROPYVA:NO`。  
-  
-## <a name="see-also"></a>另請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+指定可執行映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。
+
+## <a name="syntax"></a>語法
+
+> **/ HIGHENTROPYVA**[**: NO**]
+
+## <a name="remarks"></a>備註
+
+**/ HIGHENTROPYVA**修改的標頭*可執行映像*，.dll 檔或.exe 檔案，以指出 ASLR 是否可以使用整個 64 位元位址空間。 在可執行檔和它所依據的所有模組上設定此選項時，支援 64 位元 ASLR 的作業系統可以使用 64 位元虛擬位址空間中的隨機位址，在載入時間為可執行映像的區段重訂基底。 這個大型位址空間會使攻擊者較難猜到特定記憶體區域的位置。
+
+根據預設， **/HIGHENTROPYVA**都可使用 64 位元可執行映像。 這個選項需要[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)，這也會啟用預設值為 64 位元映像。 **/HIGHENTROPYVA**不適用於 32 位元可執行映像，連結器會忽略選項。 若要明確停用此選項，請使用 **/highentropyva: no**。
+
+針對 **/HIGHENTROPYVA**若要在載入期間，會影響[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)也必須啟用。 **/DYNAMICBASE**依預設，會啟用與，才能啟用 Windows Vista 和更新版本的作業系統中的 ASLR。 舊版的 Windows 會忽略這個旗標。
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
+
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
+
+1. 在 **其他選項**，輸入`/HIGHENTROPYVA`或`/HIGHENTROPYVA:NO`。
+
+## <a name="see-also"></a>另請參閱
+
+- [設定連結器選項](../../build/reference/setting-linker-options.md)
+- [連結器選項](../../build/reference/linker-options.md)
+- [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
+- [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
+- [Windows ISV 軟體安全性防禦措施](https://msdn.microsoft.com/library/bb430720.aspx)

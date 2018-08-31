@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028170"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220502"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控制項：最佳化
 這篇文章說明您可用來最佳化您的 ActiveX 控制項，以提升效能的技巧。  
@@ -53,7 +53,7 @@ ms.locfileid: "39028170"
 |**將滑鼠指標通知非使用中時**核取方塊|選用版|[非現用時提供滑鼠互動](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**最佳化的繪圖程式碼**核取方塊|選用版|[最佳化控制項繪圖](../mfc/optimizing-control-drawing.md)|  
   
- 如需實作這些最佳化的成員函式的詳細資訊，請參閱[COleControl](../mfc/reference/colecontrol-class.md)。 成員函式會依列出使用，例如[無視窗 Operations](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)並[非作用中的處理函式指標](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)。  
+ 如需實作這些最佳化的成員函式的詳細資訊，請參閱[COleControl](../mfc/reference/colecontrol-class.md)。  
   
  如需詳細資訊，請參閱:  
   

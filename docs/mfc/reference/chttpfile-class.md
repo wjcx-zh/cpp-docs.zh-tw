@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c3e1b42c228ea971bdedff952c01078735948e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 422952ae459d6a6e4d9f768eb111c9c01cfbb5d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337456"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219738"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 類別
 提供在 HTTP 伺服器上要求和讀取檔案的功能。  
@@ -130,7 +130,7 @@ BOOL AddRequestHeaders(
  參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要加入的標頭的要求標頭。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  `AddRequestHeaders` 將其他的自由格式的標頭附加至 HTTP 要求控制代碼。 它被適用於複雜的用戶端需要細微地控制傳送至 HTTP 伺服器的實際要求。  
@@ -197,10 +197,10 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>參數  
  *dwFlags*  
- 描述作業的旗標。 如需適當的旗標的清單，請參閱 < [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) Windows SDK 中。  
+ 描述作業的旗標。 如需適當的旗標的清單，請參閱 < [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) Windows SDK 中。  
   
  *lpBuffIn*  
- 初始化的指標[INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132)描述用於作業的輸入的緩衝區。  
+ 初始化的指標[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)描述用於作業的輸入的緩衝區。  
   
  *dwContext*  
  內容識別碼`CHttpFile`作業。 如需這個參數的詳細資訊，請參閱 < 備註 >。  
@@ -279,7 +279,7 @@ BOOL QueryInfo(
   
 - 應用程式通常 HTTP_QUERY_FLAG_REQUEST_HEADERS，查詢的回應標頭，但應用程式也可以使用這個旗標來查詢要求標頭。  
   
-- 這些標頭，其值是日期/時間字串，例如 「 上次修改時間，「 HTTP_QUERY_FLAG_SYSTEMTIME 這個旗標傳回標頭值做為標準的 Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)不需要應用程式的結構剖析資料。 如果您使用這個旗標時，您可能想要使用`SYSTEMTIME`函式的覆寫。  
+- 這些標頭，其值是日期/時間字串，例如 「 上次修改時間，「 HTTP_QUERY_FLAG_SYSTEMTIME 這個旗標傳回標頭值做為標準的 Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)不需要應用程式的結構剖析資料。 如果您使用這個旗標時，您可能想要使用`SYSTEMTIME`函式的覆寫。  
   
 - 其值是數字，例如狀態的程式碼，這些標頭的 HTTP_QUERY_FLAG_NUMBER 這個旗標的 32 位元數字傳回的資料。  
   
@@ -301,10 +301,10 @@ BOOL QueryInfo(
  索引值。 請參閱*lpdwIndex*。  
   
  *pSysTime*  
- 指標，Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構。  
+ 指標，Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)結構。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  使用此成員函式只有在成功呼叫之後[SendRequest](#sendrequest)或在`CHttpFile`已成功建立的物件[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
@@ -379,7 +379,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
  狀態碼的參考。 狀態代碼表示成功或失敗的要求的事件。 請參閱**備註**的狀態碼描述選取範圍。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  使用此成員函式只有在成功呼叫之後[SendRequest](#sendrequest)或在`CHttpFile`已成功建立的物件[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
@@ -462,13 +462,13 @@ BOOL SendRequestEx(
  若要在要求中傳送的位元組數目。  
   
  *dwFlags*  
- 描述作業的旗標。 如需適當的旗標的清單，請參閱 < [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) Windows SDK 中。  
+ 描述作業的旗標。 如需適當的旗標的清單，請參閱 < [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) Windows SDK 中。  
   
  *dwContext*  
  內容識別碼`CHttpFile`作業。 如需這個參數的詳細資訊，請參閱 < 備註 >。  
   
  *lpBuffIn*  
- 初始化的指標[INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132)描述用於作業的輸入的緩衝區。  
+ 初始化的指標[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)描述用於作業的輸入的緩衝區。  
   
  *lpBuffOut*  
  初始化 INTERNET_BUFFERS 描述用於作業的輸出緩衝區的指標。  

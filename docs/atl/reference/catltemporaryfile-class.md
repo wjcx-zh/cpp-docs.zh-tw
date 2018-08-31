@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6eee23ebbfc25d76ca255505322f609973f79f57
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883140"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222868"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 類別
 這個類別提供建立和使用的暫存檔案的方法。  
@@ -143,10 +143,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
   
 ### <a name="parameters"></a>參數  
  *pszDir*  
- 暫存檔案的路徑。 如果這是 NULL， [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992)會被指派的路徑。  
+ 暫存檔案的路徑。 如果這是 NULL， [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)會被指派的路徑。  
   
  *dwDesiredAccess*  
- 所需的存取。 請參閱*dwDesiredAccess*中[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) Windows SDK 中。  
+ 所需的存取。 請參閱*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -334,7 +334,7 @@ LPCTSTR TempFileName() throw();
  傳回指向的檔案名稱 LPCTSTR。  
   
 ### <a name="remarks"></a>備註  
- 檔案名稱會以產生[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)藉由呼叫[GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)Windows SDK 函式。 檔案的副檔名一律會 「 TFR"暫存檔案。  
+ 檔案名稱會以產生[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)藉由呼叫[GetTempFile](/windows/desktop/api/fileapi/nf-fileapi-gettempfilenamea)Windows SDK 函式。 檔案的副檔名一律會 「 TFR"暫存檔案。  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
  呼叫這個方法來解除鎖定的區域，暫存檔案。  

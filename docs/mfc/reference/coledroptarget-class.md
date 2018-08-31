@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 218b03ed1e1c69dd7b365e9c2526aef5b1145aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027438"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218485"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 類別
 提供視窗與 OLE 程式庫之間的溝通機制。  
@@ -138,7 +138,7 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="remarks"></a>備註  
  覆寫這個函式，允許發生在視窗中的拖放作業。 預設實作會呼叫[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)，它只會傳回 DROPEFFECT_NONE 預設。  
   
- 如需詳細資訊，請參閱 < [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK 中。  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  當游標離開視窗拖曳作業生效時，由架構呼叫。  
@@ -154,7 +154,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
  如果您想要特殊的行為，拖放作業離開指定的視窗時，請覆寫這個函式。 此函式的預設實作會呼叫[CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)。  
   
- 如需詳細資訊，請參閱 < [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) Windows SDK 中。  
   
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  當資料指標拖曳到視窗時，由架構呼叫。  
@@ -196,7 +196,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>備註  
  應該覆寫這個函式，以允許發生在視窗中的拖放作業。 此函式的預設實作會呼叫[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)，它會傳回 DROPEFFECT_NONE 預設。 拖放作業期間經常會呼叫此函數，因為它應該最佳化盡量。  
   
- 如需詳細資訊，請參閱 < [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
@@ -275,7 +275,7 @@ virtual BOOL OnDrop(
   
  預設實作`COleDropTarget::OnDrop`呼叫[CView::OnDrop](../../mfc/reference/cview-class.md#ondrop)，這只是預設會傳回 FALSE。  
   
- 如需詳細資訊，請參閱 < [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK 中。  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  卸除作業發生時，由架構呼叫。  
@@ -325,7 +325,7 @@ virtual DROPEFFECT OnDropEx(
   
  - DROPEFFECT_SCROLL 表示拖曳捲軸作業會發生，或在目標中進行。  
   
- 如需詳細資訊，請參閱 < [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) Windows SDK 中。  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
  呼叫此函式可註冊您的視窗與 OLE Dll 做為有效的置放目標。  
@@ -344,7 +344,7 @@ BOOL Register(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
  此函式必須呼叫接受拖放作業。  
   
- 如需詳細資訊，請參閱 < [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) Windows SDK 中。  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
  呼叫此函式之前終結鴢做為置放目標，透過呼叫任何視窗[註冊](#register)移除置放目標的清單。  
@@ -356,7 +356,7 @@ virtual void Revoke();
 ### <a name="remarks"></a>備註  
  從自動呼叫此函式[OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)已註冊，因此通常不需要明確呼叫此函式之視窗的處理常式。  
   
- 如需詳細資訊，請參閱 < [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   

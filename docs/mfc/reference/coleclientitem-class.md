@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d19e808ed5e03f4ef117b91070a8885e7c68438
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43f9e1b342d6de1a93906d2469d0fd1eb211e886
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850464"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215657"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 類別
 定義 OLE 項目的容器介面。  
@@ -334,7 +334,7 @@ void Activate(
 |- 2|編輯在個別視窗中的項目|OLEIVERB_OPEN|  
 |- 3|隱藏項目|OLEIVERB_HIDE|  
   
- -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果，為-1。 其他值，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果，為-1。 其他值，請參閱[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
  *pView*  
  容器檢視視窗，其中包含 OLE 項目; 指標這用於伺服器應用程式就地啟用。 如果容器不支援就地啟用，此參數應該是 NULL。  
@@ -347,7 +347,7 @@ void Activate(
   
  如果主要動作是編輯，而且在指定為零*nVerb*允許編輯 OLE 項目啟動參數，伺服器應用程式。 如果容器應用程式支援就地啟用，請編輯可就地。 如果容器不支援就地啟用 （或如果已指定 Open 動詞），伺服器會啟動另一個視窗中，然後編輯可那里。 一般而言，當容器應用程式的使用者按兩下 OLE 項目中的主要動詞命令的值時，才*nVerb*參數會決定使用者可以採取哪些動作。 不過，如果伺服器只支援一個動作，它會該動作，不論使用哪些中指定值*nVerb*參數。  
   
- 如需詳細資訊，請參閱 < [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
  啟動項目，就如同所指定之類型的項目會使用 OLE 的物件轉換設備*clsidNew*。  
@@ -399,7 +399,7 @@ virtual BOOL CanActivate();
 ### <a name="remarks"></a>備註  
  如果容器有有效的視窗的預設實作會允許就地啟用。 覆寫這個函式，以實作特殊邏輯，以接受或拒絕的啟用要求。 比方說，太小或目前可見 OLE 項目時，可以拒絕啟動要求。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceSite::CanInPlaceActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-caninplaceactivate) Windows SDK 中。  
   
 ##  <a name="cancreatefromdata"></a>  COleClientItem::CanCreateFromData  
  檢查容器應用程式是否可以建立內嵌的物件從指定`COleDataObject`物件。  
@@ -454,7 +454,7 @@ static BOOL PASCAL CanPaste();
  如果內嵌的 OLE 項目可以貼上剪貼簿; 中，非零值。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)並[OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard)並[OleQueryCreateFromData](/windows/desktop/api/ole2/nf-ole2-olequerycreatefromdata) Windows SDK 中。  
   
 ##  <a name="canpastelink"></a>  COleClientItem::CanPasteLink  
  呼叫此函式，若要查看連結的 OLE 項目是否可以從剪貼簿貼上。  
@@ -467,7 +467,7 @@ static BOOL PASCAL CanPasteLink();
  非零值，如果可以貼上連結的 OLE 項目，從剪貼簿。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)並[OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard)並[OleQueryLinkFromData](/windows/desktop/api/ole2/nf-ole2-olequerylinkfromdata) Windows SDK 中。  
   
 ##  <a name="close"></a>  COleClientItem::Close  
  呼叫此函式以從載入它在記憶體中的處理常式，但不執行伺服器執行狀態的載入狀態，也就是變更 OLE 項目的狀態。  
@@ -489,7 +489,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ### <a name="remarks"></a>備註  
  當 OLE 項目不在執行時，此函式會有任何作用。  
   
- 如需詳細資訊，請參閱 < [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::Close](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-close) Windows SDK 中。  
   
 ##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem  
  建構`COleClientItem`物件，並將它新增至容器文件的文件項目集合，其中建構 c + + 物件，並不會執行任何 OLE 初始化。  
@@ -558,7 +558,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>備註  
  一般而言，撰寫從 [編輯] 功能表的 [複製或剪下] 命令的訊息處理常式時呼叫此函式。 如果您想要實作複製或剪下命令，您必須在您的容器應用程式中實作的項目選取。  
   
- 如需詳細資訊，請參閱 < [OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleSetClipboard](/windows/desktop/api/ole2/nf-ole2-olesetclipboard) Windows SDK 中。  
   
 ##  <a name="createclonefrom"></a>  COleClientItem::CreateCloneFrom  
  呼叫此函式可建立一份指定的 OLE 項目。  
@@ -589,13 +589,13 @@ BOOL CreateFromClipboard(
   
 ### <a name="parameters"></a>參數  
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -603,7 +603,7 @@ BOOL CreateFromClipboard(
 ### <a name="remarks"></a>備註  
  一般都會呼叫此函式的訊息處理常式從的 [編輯] 功能表中的 [貼上] 命令。 (如果 framework 便會啟用 [貼上] 命令[CanPaste](#canpaste)成員函式傳回非零值。)  
   
- 如需詳細資訊，請參閱 < [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createfromdata"></a>  COleClientItem::CreateFromData  
  呼叫此函式以建立內嵌項目從`COleDataObject`物件。  
@@ -621,13 +621,13 @@ BOOL CreateFromData(
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -635,7 +635,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>備註  
  資料傳輸作業，例如從剪貼簿或拖放作業中，貼上提供`COleDataObject`物件包含的資訊提供的伺服器應用程式。 它通常用在覆寫[CView::OnDrop](../../mfc/reference/cview-class.md#ondrop)。  
   
- 如需詳細資訊，請參閱 < [OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreateFromData](/windows/desktop/api/ole2/nf-ole2-olecreatefromdata)， [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile  
  呼叫此函式可從檔案建立內嵌的 OLE 項目。  
@@ -657,13 +657,13 @@ BOOL CreateFromFile(
  保留供未來使用。  
   
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -671,7 +671,7 @@ BOOL CreateFromFile(
 ### <a name="remarks"></a>備註  
  架構會呼叫這個函式從[COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem)如果使用者會選擇從 [插入物件] 對話方塊中 [確定] 時已選取 [檔案] 按鈕建立。  
   
- 如需詳細資訊，請參閱 < [OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreateFromFile](/windows/desktop/api/ole/nf-ole-olecreatefromfile)， [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createlinkfromclipboard"></a>  COleClientItem::CreateLinkFromClipboard  
  呼叫此函式以建立連結的項目從剪貼簿的內容。  
@@ -685,13 +685,13 @@ BOOL CreateLinkFromClipboard(
   
 ### <a name="parameters"></a>參數  
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -699,7 +699,7 @@ BOOL CreateLinkFromClipboard(
 ### <a name="remarks"></a>備註  
  一般都會呼叫此函式的訊息處理常式從的 編輯 功能表上的貼上連結 命令。 (貼上連結命令中的預設實作，已啟用[COleDocument](../../mfc/reference/coledocument-class.md)如果剪貼簿包含可連結到 OLE 項目。)  
   
- 如需詳細資訊，請參閱 < [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createlinkfromdata"></a>  COleClientItem::CreateLinkFromData  
  呼叫此函式以建立連結的項目，從`COleDataObject`物件。  
@@ -717,13 +717,13 @@ BOOL CreateLinkFromData(
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -731,7 +731,7 @@ BOOL CreateLinkFromData(
 ### <a name="remarks"></a>備註  
  呼叫這個拖放作業期間當使用者指出應建立的連結。 它也可以用來處理編輯貼上 命令。 它會呼叫中的架構`COleClientItem::CreateLinkFromClipboard`然後在[COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem)時已選取 [連結] 選項。  
   
- 如需詳細資訊，請參閱 < [OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreateLinkFromData](/windows/desktop/api/ole2/nf-ole2-olecreatelinkfromdata)， [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createlinkfromfile"></a>  COleClientItem::CreateLinkFromFile  
  呼叫此函式可從檔案建立連結的 OLE 項目。  
@@ -749,13 +749,13 @@ BOOL CreateLinkFromFile(
  建立 OLE 項目檔案名稱的指標。  
   
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -763,7 +763,7 @@ BOOL CreateLinkFromFile(
 ### <a name="remarks"></a>備註  
  如果使用者會選擇 [確定] 從 [插入物件] 對話方塊中已選取 [檔案] 按鈕建立並連結核取方塊已核取時，架構會呼叫此函式。 從呼叫[COleInsertDialog::CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem)。  
   
- 如需詳細資訊，請參閱 < [OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreateLinkToFile](/windows/desktop/api/ole2/nf-ole2-olecreatelinktofile)， [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createnewitem"></a>  COleClientItem::CreateNewItem  
  呼叫此函式以建立內嵌項目;此函式會啟動伺服器應用程式，可讓使用者建立 OLE 項目。  
@@ -781,13 +781,13 @@ BOOL CreateNewItem(
  可唯一識別建立的 OLE 項目類型的識別碼。  
   
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -795,7 +795,7 @@ BOOL CreateNewItem(
 ### <a name="remarks"></a>備註  
  如果使用者會選擇 確定 從 插入物件 對話方塊中選取 建立新的按鈕時，架構會呼叫此函式。  
   
- 如需詳細資訊，請參閱 < [OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreate](/windows/desktop/api/ole/nf-ole-olecreate)， [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createstaticfromclipboard"></a>  COleClientItem::CreateStaticFromClipboard  
  呼叫此函式來建立靜態項目從剪貼簿的內容。  
@@ -809,13 +809,13 @@ BOOL CreateStaticFromClipboard(
   
 ### <a name="parameters"></a>參數  
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -823,7 +823,7 @@ BOOL CreateStaticFromClipboard(
 ### <a name="remarks"></a>備註  
  靜態項目包含呈現資料，但不是原生的資料;因此就無法進行編輯。 您通常是呼叫此函式，如果[CreateFromClipboard](#createfromclipboard)成員函式會失敗。  
   
- 如需詳細資訊，請參閱 < [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="createstaticfromdata"></a>  COleClientItem::CreateStaticFromData  
  呼叫此函式來建立靜態的項目，從`COleDataObject`物件。  
@@ -841,13 +841,13 @@ BOOL CreateStaticFromData(
  指標[COleDataObject](../../mfc/reference/coledataobject-class.md)從中 OLE 項目是要建立的物件。  
   
  *轉譯*  
- 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows SDK 中。  
+ 旗標，指定伺服器將如何轉譯 OLE 項目。 如需可能的值，請參閱[OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK 中。  
   
  *cfFormat*  
  指定要建立 OLE 項目時，快取的剪貼簿資料格式。  
   
  *lpFormatEtc*  
- 指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
+ 指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)如果使用的結構*轉譯*OLERENDER_FORMAT 或 OLERENDER_DRAW。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果您省略這個參數時，會使用中的其他欄位的預設值`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -857,7 +857,7 @@ BOOL CreateStaticFromData(
   
  用於[COlePasteSpecialDialog::CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem)選取靜態時。  
   
- 如需詳細資訊，請參閱 < [OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreateStaticFromData](/windows/desktop/api/ole2/nf-ole2-olecreatestaticfromdata)， [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
 ##  <a name="deactivate"></a>  COleClientItem::Deactivate  
  呼叫此函式以停用 OLE 項目，並釋放任何相關聯的資源。  
@@ -871,7 +871,7 @@ void Deactivate();
   
  如果您的應用程式支援復原，請勿呼叫`Deactivate`; 相反地，呼叫[DeactivateUI](#deactivateui)。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) Windows SDK 中。  
   
 ##  <a name="deactivateui"></a>  COleClientItem::DeactivateUI  
  當使用者停用就地啟動項目時，請呼叫此函式。  
@@ -885,7 +885,7 @@ void DeactivateUI();
   
  此函式不會清除復原的狀態資訊項目。 資訊會保留以便[ReactivateAndUndo](#reactivateandundo)稍後可用來執行伺服器應用程式中的 [復原] 命令容器的 [復原] 命令會停用項目之後，立即選擇。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) Windows SDK 中。  
   
 ##  <a name="delete"></a>  COleClientItem::Delete  
  呼叫此函式來刪除容器文件中的 OLE 項目。  
@@ -943,7 +943,7 @@ DROPEFFECT DoDragDrop(
   
 -   Windows 95/98 拖曳延遲時間會儲存在成交的快取版本。INI。  
   
- 如需有關如何將拖曳的延遲資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK 中。  
+ 如需有關如何將拖曳的延遲資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) Windows SDK 中。  
   
 ##  <a name="doverb"></a>  COleClientItem::DoVerb  
  呼叫`DoVerb`執行指定的動詞命令。  
@@ -967,7 +967,7 @@ virtual BOOL DoVerb(
 |- 2|編輯在個別視窗中的項目|OLEIVERB_OPEN|  
 |- 3|隱藏項目|OLEIVERB_HIDE|  
   
- -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果，為-1。 其他值，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
+ -1 值通常是另一個動詞命令的別名。 如果不支援開啟編輯，-2 會有相同的效果，為-1。 其他值，請參閱[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。  
   
  *pView*  
  指向 [檢視] 視窗中;這用於伺服器就地啟用。 如果容器應用程式不允許就地啟用，此參數應該是 NULL。  
@@ -1013,7 +1013,7 @@ BOOL Draw(
   
  *LpBounds*參數會識別在目標裝置內容 （相對於其目前的對應模式） 的矩形。 轉譯可能牽涉到將圖片的比例，而且可以由容器應用程式來加諸的檢視，顯示的檢視和最後一個列印的影像之間進行調整。  
   
- 如需詳細資訊，請參閱 < [iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [iviewobject:: Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) Windows SDK 中。  
   
 ##  <a name="getactiveview"></a>  COleClientItem::GetActiveView  
  傳回在其的項目是就地啟用的檢視。  
@@ -1047,9 +1047,9 @@ BOOL GetCachedExtent(
 ### <a name="remarks"></a>備註  
  此函式會提供相同的資訊[GetExtent](#getextent)。 不過，您可以呼叫`GetCachedExtent`取得在處理期間的範圍資訊的其他 OLE 處理常式，例如[OnChange](#onchange)。 維度是以 MM_HIMETRIC 單位。  
   
- 這可能是因為`GetCachedExtent`會使用[IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)介面，而不是使用[IOleObject](http://msdn.microsoft.com/library/windows/desktop/dd542709)介面，以取得此項目的範圍。 `IViewObject2` COM 物件會快取中的先前呼叫所使用的範圍資訊[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)。  
+ 這可能是因為`GetCachedExtent`會使用[IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2)介面，而不是使用[IOleObject](/windows/desktop/api/oleidl/nn-oleidl-ioleobject)介面，以取得此項目的範圍。 `IViewObject2` COM 物件會快取中的先前呼叫所使用的範圍資訊[iviewobject:: Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)。  
   
- 如需詳細資訊，請參閱 < [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) Windows SDK 中。  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
  傳回的類別識別碼的項目至所指向的記憶體*pClassID*。  
@@ -1060,12 +1060,12 @@ void GetClassID(CLSID* pClassID) const;
   
 ### <a name="parameters"></a>參數  
  *pClassID*  
- 型別識別項的指標[CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)擷取類別識別碼。 如需 CLSID 的資訊，請參閱 Windows SDK。  
+ 型別識別項的指標[CLSID](/windows/desktop/com/clsid-key-hklm)擷取類別識別碼。 如需 CLSID 的資訊，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
  類別識別碼是 128 位元數字可唯一識別的應用程式的編輯項目。  
   
- 如需詳細資訊，請參閱 < [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK 中。  
   
 ##  <a name="getclipboarddata"></a>  COleClientItem::GetClipboardData  
  呼叫此函式可取得`COleDataSource`物件，包含會呼叫放到剪貼簿的所有資料[CopyToClipboard](#copytoclipboard)成員函式。  
@@ -1145,7 +1145,7 @@ BOOL GetExtent(
 > [!NOTE]
 >  請勿呼叫`GetExtent`OLE 處理常式中，在處理這類[OnChange](#onchange)。 呼叫[GetCachedExtent](#getcachedextent)改。  
   
- 如需詳細資訊，請參閱 < [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getextent) Windows SDK 中。  
   
 ##  <a name="geticonfromregistry"></a>  COleClientItem::GetIconFromRegistry  
  呼叫此成員函式可擷取特定的 CLSID 的伺服器相關聯的圖示資源控制代碼。  
@@ -1222,7 +1222,7 @@ SCODE GetLastStatus() const;
 ### <a name="remarks"></a>備註  
  成員函式會傳回 BOOL 值為 FALSE 或其他成員函式會傳回 NULL，`GetLastStatus`傳回更詳細的失敗資訊。 請注意，大部分的 OLE 成員函式會擲回例外狀況的更嚴重的錯誤。 在 SCODE 解譯的特定資訊取決於基礎 OLE 呼叫最後傳回 SCODE 值。  
   
- 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 文件。  
+ 如需有關 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 文件。  
   
 ##  <a name="getlinkupdateoptions"></a>  COleClientItem::GetLinkUpdateOptions  
  呼叫此函式可取得 OLE 項目連結更新選項的目前值。  
@@ -1243,7 +1243,7 @@ OLEUPDATE GetLinkUpdateOptions();
   
  會自動呼叫此函數[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)類別。  
   
- 如需詳細資訊，請參閱 < [IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleLink::GetUpdateOptions](/windows/desktop/api/oleidl/nf-oleidl-iolelink-getupdateoptions) Windows SDK 中。  
   
 ##  <a name="gettype"></a>  COleClientItem::GetType  
  呼叫此函式可判斷是否 OLE 項目是內嵌或連結，或靜態。  
@@ -1288,7 +1288,7 @@ void GetUserType(
   
  如果要求，但無法使用的完整類型名稱，會改用的簡短名稱。 如果沒有 OLE 項目類型的項目是在系統註冊資料庫，或是如果沒有任何註冊的 OLE 項目類型的使用者型別，則使用者類型目前儲存在會使用 OLE 項目。 如果該使用者的類型名稱是空字串，則會使用 「 未知的物件 」。  
   
- 如需詳細資訊，請參閱 < [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::GetUserType](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getusertype) Windows SDK 中。  
   
 ##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive  
  呼叫此函式來查看 OLE 項目是否就地啟用作用中。  
@@ -1318,7 +1318,7 @@ BOOL IsLinkUpToDate() const;
   
  這稱為自動[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)實作。  
   
- 如需詳細資訊，請參閱 < [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::IsUpToDate](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-isuptodate) Windows SDK 中。  
   
 ##  <a name="ismodified"></a>  COleClientItem::IsModified  
  呼叫此函式，以查看是否 OLE 項目已經變更 （修改自上次儲存後）。  
@@ -1331,7 +1331,7 @@ BOOL IsModified() const;
  OLE 項目已變更; 如果為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IPersistStorage::IsDirty](/windows/desktop/api/objidl/nf-objidl-ipersiststorage-isdirty) Windows SDK 中。  
   
 ##  <a name="isopen"></a>  COleClientItem::IsOpen  
  呼叫此函式，請參閱 OLE 項目是否處於開啟狀態;也就是在個別視窗中執行的伺服器應用程式的執行個體中開啟。  
@@ -1357,7 +1357,7 @@ BOOL IsRunning() const;
  執行 OLE 項目; 如果為非零否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleIsRunning](/windows/desktop/api/ole2/nf-ole2-oleisrunning) Windows SDK 中。  
   
 ##  <a name="onactivate"></a>  COleClientItem::OnActivate  
  由架構呼叫以通知項目，它只是已啟動就緒。  
@@ -1455,7 +1455,7 @@ virtual void OnDeactivateAndUndo();
 ### <a name="remarks"></a>備註  
  預設實作會呼叫[DeactivateUI](#deactivateui)停用伺服器的使用者介面。 如果您要實作應用程式容器中的 [復原] 命令，請覆寫這個函式。 在您的覆寫呼叫函式的基底類別版本，然後復原您的應用程式中執行的最後一個命令。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceSite::DeactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-deactivateandundo) Windows SDK 中。  
   
 ##  <a name="ondeactivateui"></a>  COleClientItem::OnDeactivateUI  
  當使用者停用就地啟動項目時呼叫。  
@@ -1485,7 +1485,7 @@ virtual void OnDiscardUndoState();
   
  如果伺服器使用 Microsoft Foundation 類別庫所撰寫，伺服器可能會導致呼叫藉由呼叫這個函式[COleServerDoc::DiscardUndoState](../../mfc/reference/coleserverdoc-class.md#discardundostate)。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceSite::DiscardUndoState](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-discardundostate) Windows SDK 中。  
   
 ##  <a name="ongetclipboarddata"></a>  COleClientItem::OnGetClipboardData  
  由架構呼叫以取得`COleDataSource`物件，其中包含的所有資料，會放入剪貼簿上呼叫[CopyToClipboard](#copytoclipboard)或[DoDragDrop](#dodragdrop)成員函式。  
@@ -1563,7 +1563,7 @@ virtual BOOL OnGetWindowContext(
  文件框架視窗的指標的指標。  
   
  *lpFrameInfo*  
- 指標[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737)結構，將會收到框架視窗的資訊。  
+ 指標[OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)結構，將會收到框架視窗的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -1575,7 +1575,7 @@ virtual BOOL OnGetWindowContext(
   
  預設實作不會不符合您的應用程式; 時，才會覆寫這個函式例如，如果您的應用程式有不同於 SDI 或 MDI 使用者介面典範。 這是一種進階可覆寫。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366)並[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceSite::GetWindowContext](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-getwindowcontext)並[OLEINPLACEFRAMEINFO](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) Windows SDK 中的結構。  
   
 ##  <a name="oninsertmenus"></a>  COleClientItem::OnInsertMenus  
  在就地啟用容器應用程式的功能表插入空的功能表時由架構呼叫。  
@@ -1598,7 +1598,7 @@ virtual void OnInsertMenus(
   
  預設實作中插入*pMenuShared*就地容器功能表; 也就是檔案、 容器和視窗的功能表群組。 [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo)用來設定這個功能表資源。 預設實作也會將適當的值指派給 0、 2 和 4 中的項目*lpMenuWidths*，取決於功能表資源。 覆寫的預設實作不適合您的應用程式; 此函式比方說，如果您的應用程式不會使用文件範本關聯的文件類型的資源。 如果您覆寫這個函式，您也會覆寫[OnSetMenu](#onsetmenu)並[OnRemoveMenus](#onremovemenus)。 這是一種進階可覆寫。  
   
- 如需詳細資訊，請參閱 < [ioleinplaceframe:: Insertmenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [ioleinplaceframe:: Insertmenus](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-insertmenus) Windows SDK 中。  
   
 ##  <a name="onremovemenus"></a>  COleClientItem::OnRemoveMenus  
  由架構呼叫以就地啟用結束時，從指定的組合功能表移除容器的功能表。  
@@ -1616,7 +1616,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
   
  在子功能表*pMenuShared*可能會共用由一個以上的複合 功能表中，如果伺服器已重複呼叫`OnInsertMenus`。 因此您應該刪除任何子功能表中的覆寫`OnRemoveMenus`; 您應該僅卸離。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceFrame::RemoveMenus](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-removemenus) Windows SDK 中。  
   
 ##  <a name="onscrollby"></a>  COleClientItem::OnScrollBy  
  由架構呼叫以捲動 OLE 項目，以從伺服器回應要求。  
@@ -1635,7 +1635,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
 ### <a name="remarks"></a>備註  
  比方說，如果 OLE 項目是部分可見，而且使用者將移至外部可見的區域執行就地編輯時，呼叫此函式會將資料指標保持可見。 預設實作不做任何動作。 覆寫此函式以指定的數量來捲動項目。 請注意結果向下捲動，可以變更可見部分 OLE 項目。 呼叫[SetItemRects](#setitemrects)更新的項目可見的矩形。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceSite::Scroll](/windows/desktop/api/oleidl/nf-oleidl-ioleinplacesite-scroll) Windows SDK 中。  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
  由架構呼叫兩次時就地啟用開始和結束;若要安裝 [複合] 功能表和第二次第一次 (使用*holemenu*等於 NULL) 將它移除。  
@@ -1658,9 +1658,9 @@ virtual void OnSetMenu(
  OLE 項目的 [編輯] 視窗的控制代碼。 這是會接收來自 OLE 的編輯的命令視窗。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會安裝或移除組合功能表，然後呼叫[OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831)函式來安裝或移除的分派的程式碼。 如果預設實作不適合您的應用程式，請覆寫這個函式。 如果您覆寫這個函式，您應該可能覆寫[OnInsertMenus](#oninsertmenus)並[OnRemoveMenus](#onremovemenus)以及。 這是一種進階可覆寫。  
+ 預設實作會安裝或移除組合功能表，然後呼叫[OleSetMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olesetmenudescriptor)函式來安裝或移除的分派的程式碼。 如果預設實作不適合您的應用程式，請覆寫這個函式。 如果您覆寫這個函式，您應該可能覆寫[OnInsertMenus](#oninsertmenus)並[OnRemoveMenus](#onremovemenus)以及。 這是一種進階可覆寫。  
   
- 如需詳細資訊，請參閱 < [OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415)， [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831)，並[ioleinplaceframe:: Setmenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [OleCreateMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olecreatemenudescriptor)， [OleSetMenuDescriptor](/windows/desktop/api/ole2/nf-ole2-olesetmenudescriptor)，並[ioleinplaceframe:: Setmenu](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceframe-setmenu) Windows SDK 中。  
   
 ##  <a name="onshowcontrolbars"></a>  COleClientItem::OnShowControlBars  
  由架構呼叫以顯示和隱藏容器應用程式的控制列。  
@@ -1724,7 +1724,7 @@ BOOL ReactivateAndUndo();
   
  如果使用 Microsoft Foundation 類別程式庫撰寫伺服器應用程式，此函式會導致伺服器呼叫[COleServerDoc::OnReactivateAndUndo](../../mfc/reference/coleserverdoc-class.md#onreactivateandundo)。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) Windows SDK 中。  
   
 ##  <a name="release"></a>  COleClientItem::Release  
  呼叫此函式來清除 OLE 項目所使用的資源。  
@@ -1740,7 +1740,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="remarks"></a>備註  
  `Release` 會呼叫`COleClientItem`解構函式。  
   
- 如需詳細資訊，請參閱 < [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Windows SDK 中。  
   
 ##  <a name="reload"></a>  COleClientItem::Reload  
  關閉並重新載入的項目。  
@@ -1808,7 +1808,7 @@ void SetExtent(
 ### <a name="remarks"></a>備註  
  如果伺服器應用程式使用 Microsoft Foundation 類別庫所撰寫，這會導致[OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent)成員函式對應`COleServerItem`要呼叫的物件。 OLE 項目則可據以調整它的顯示畫面。 MM_HIMETRIC 單位必須是維度。 當使用者調整 OLE 項目，或如果您支援某種形式的配置交涉，請呼叫此函式。  
   
- 如需詳細資訊，請參閱 < [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::SetExtent](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setextent) Windows SDK 中。  
   
 ##  <a name="sethostnames"></a>  COleClientItem::SetHostNames  
  呼叫此函式可指定容器應用程式的名稱，以及內嵌 OLE 項目容器的名稱。  
@@ -1831,7 +1831,7 @@ void SetHostNames(
   
  這也稱為自動應用程式名稱與文件名稱載入物件時，或在不同的名稱下儲存檔案時。 因此，不會直接呼叫此函式通常會需要。  
   
- 如需詳細資訊，請參閱 < [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleObject::SetHostNames](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-sethostnames) Windows SDK 中。  
   
 ##  <a name="seticonicmetafile"></a>  COleClientItem::SetIconicMetafile  
  會快取之中繼檔，用於繪製項目的圖示。  
@@ -1874,7 +1874,7 @@ BOOL SetItemRects(
 ### <a name="remarks"></a>備註  
  預設實作會呼叫此函式[OnChangeItemPosition](#onchangeitemposition)成員函式。 位置的可見部分 OLE 項目變更時，您應該呼叫此函式。 這通常表示它呼叫從您的檢視[OnSize](../../mfc/reference/cwnd-class.md#onsize)並[OnScrollBy](../../mfc/reference/cview-class.md#onscrollby)成員函式。  
   
- 如需詳細資訊，請參閱 < [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) Windows SDK 中。  
   
 ##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions  
  呼叫此函式來設定所指定的連結項目的簡報的連結更新選項。  
@@ -1894,7 +1894,7 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ### <a name="remarks"></a>備註  
  一般而言，您不應該變更連結 對話方塊中的使用者所選擇的更新選項。  
   
- 如需詳細資訊，請參閱 < [IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleLink::SetUpdateOptions](/windows/desktop/api/oleidl/nf-oleidl-iolelink-setupdateoptions) Windows SDK 中。  
   
 ##  <a name="setprintdevice"></a>  COleClientItem::SetPrintDevice  
  呼叫此函式來變更此項目之列印目標裝置。  
@@ -1906,10 +1906,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
 ### <a name="parameters"></a>參數  
  *ptd*  
- 指標[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613)資料結構，其中包含新的列印目標裝置的相關資訊。 可以是 NULL。  
+ 指標[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)資料結構，其中包含新的列印目標裝置的相關資訊。 可以是 NULL。  
   
  *ppd*  
- 指標[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940)資料結構，其中包含新的列印目標裝置的相關資訊。 可以是 NULL。  
+ 指標[PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940)資料結構，其中包含新的列印目標裝置的相關資訊。 可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式時成功則為非零否則為 0。  
@@ -1919,9 +1919,9 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
  此函式的引數包含 OLE 系統用來識別目標裝置的資訊。 `PRINTDLG`結構包含 Windows 用來初始化一般的 [列印] 對話方塊資訊。 使用者關閉對話方塊之後，Windows 會傳回在這個結構中的相關使用者的選取項目資訊。 `m_pd`隸屬[CPrintDialog](../../mfc/reference/cprintdialog-class.md)物件是`PRINTDLG`結構。  
   
- 如需有關此結構的詳細資訊，請參閱[PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Windows SDK 中。  
+ 如需有關此結構的詳細資訊，請參閱[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Windows SDK 中。  
   
- 如需詳細資訊，請參閱 < [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Windows SDK 中。  
   
 ##  <a name="updatelink"></a>  COleClientItem::UpdateLink  
  呼叫此函式可立即更新的 OLE 項目呈現資料。  
@@ -1936,7 +1936,7 @@ BOOL UpdateLink();
 ### <a name="remarks"></a>備註  
  針對連結的項目，此函式會尋找連結來源，以取得新的簡報，如 OLE 項目。 此程序可能需要執行一或多個伺服器應用程式，這樣可能會很費時。 用於內嵌的項目，此函數操作，遞迴地檢查內嵌的項目是否包含可能已經過期的連結和更新它們。 使用者也可以手動更新個別使用 [連結] 對話方塊中的連結。  
   
- 如需詳細資訊，請參閱 < [IOleLink::Update](http://msdn.microsoft.com/library/windows/desktop/ms692660) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IOleLink::Update](/windows/desktop/api/oleidl/nf-oleidl-iolelink-update) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 MFCBIND](../../visual-cpp-samples.md)   

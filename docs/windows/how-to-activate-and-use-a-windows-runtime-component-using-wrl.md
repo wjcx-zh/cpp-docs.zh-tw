@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3dc1743b0c0b795d7aaa10a7a47689de2336094
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ac5e03b7a9453b4b33c4a495842465b16a186543
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600391"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219188"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：利用 WRL 啟動與使用 Windows 執行階段元件
 
@@ -46,7 +46,7 @@ ms.locfileid: "42600391"
 
    建議您利用`using namespace`在.cpp 檔案中，讓程式碼更容易閱讀的指示詞。
 
-2. 初始化應用程式執行所在的執行緒。 每個應用程式必須初始化其執行緒和執行緒模型。 這個範例會使用[Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md)類別，以初始化 Windows 執行階段，並指定[RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx)為執行緒模型。 `RoInitializeWrapper`類別會呼叫`Windows::Foundation::Initialize`在建構，和`Windows::Foundation::Uninitialize`何時會終結。
+2. 初始化應用程式執行所在的執行緒。 每個應用程式必須初始化其執行緒和執行緒模型。 這個範例會使用[Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md)類別，以初始化 Windows 執行階段，並指定[RO_INIT_MULTITHREADED](https://msdn.microsoft.com/library/windows/apps/br224661.aspx)為執行緒模型。 `RoInitializeWrapper`類別會呼叫`Windows::Foundation::Initialize`在建構，和`Windows::Foundation::Uninitialize`何時會終結。
 
    [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
@@ -76,7 +76,7 @@ ms.locfileid: "42600391"
 
    [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]
 
-   [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx)函式會擷取基礎 Unicode 格式的 URI 字串。
+   [WindowsGetStringRawBuffer](https://msdn.microsoft.com/library/windows/apps/br224636.aspx)函式會擷取基礎 Unicode 格式的 URI 字串。
 
 以下是完整的範例：
 

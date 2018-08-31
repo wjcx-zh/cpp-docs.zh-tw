@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bda1dce264597bfe7372b1cb0293dffccad4cdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f1c9d6bde39fcd763416e4c8dd50f0b756cb6b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415750"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220290"
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
 
@@ -100,22 +100,22 @@ int _vfwprintf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-**vfprintf_s**和**vfwprintf_s**傳回寫入的字元數，不包括結束的 null 字元或負數值，如果發生輸出錯誤。 如果有任一個*資料流*或*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**至**EINVAL**。
+**vfprintf_s**並**vfwprintf_s**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果有任一*資料流*或是*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受的指標引數清單，然後格式化並寫入至指定的資料*資料流*。
+所有這些函式都會接受引數清單的指標，然後格式化並寫入至指定的資料*資料流*。
 
-這些函式不同的不安全的版本僅於安全的版本檢查，*格式*字串包含無效格式化字元。
+這些函式差異的不安全的版本，僅在於安全版本會檢查*格式*字串包含無效格式化字元。
 
-**vfwprintf_s**是寬字元版本的**vfprintf_s**; 兩個函式的資料流在 ANSI 模式中開啟時即會相同行為。 **vfprintf_s**目前不支援 UNICODE 資料流輸出。
+**vfwprintf_s**是寬字元版本**vfprintf_s**; 如果資料流以 ANSI 模式開啟兩個函式行為相同。 **vfprintf_s**目前不支援輸出至 UNICODE 資料流。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -126,7 +126,7 @@ int _vfwprintf_s_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**vfprintf_s**， **_vfprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**vfwprintf_s**， **_vfwprintf_s_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|

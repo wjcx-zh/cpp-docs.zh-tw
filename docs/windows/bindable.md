@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601585"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214848"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ ms.locfileid: "42601585"
 
 ## <a name="remarks"></a>備註
 
-**可繫結**c + + 屬性具有相同的功能[可繫結](http://msdn.microsoft.com/library/windows/desktop/aa366738)MIDL 屬性。 您可以利用定義的屬性上使用它[propget](../windows/propget.md)， [propput](../windows/propput.md)，或[propputref](../windows/propputref.md)屬性，或者您可以手動定義的可繫結的方法。
+**可繫結**c + + 屬性具有相同的功能[可繫結](/windows/desktop/Midl/bindable)MIDL 屬性。 您可以利用定義的屬性上使用它[propget](../windows/propget.md)， [propput](../windows/propput.md)，或[propputref](../windows/propputref.md)屬性，或者您可以手動定義的可繫結的方法。
 
 下列的 MFC 範例示範如何使用**可繫結**:
 
-- [控制項的範例： MFC 為基礎的 ActiveX 控制項](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [控制項的範例： MFC 為基礎的 ActiveX 控制項](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [CIRC 範例： ActiveX 控制項](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [CIRC 範例： ActiveX 控制項](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [工具提示與說明 TESTHELP 範例： ActiveX 控制項](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [工具提示與說明 TESTHELP 範例： ActiveX 控制項](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>範例
 

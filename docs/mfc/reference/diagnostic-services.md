@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539589"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214675"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵錯。 這些診斷服務包含巨集和全域函式，可讓您追蹤程式的記憶體配置、在執行階段傾印物件的內容，以及在執行階段列印偵錯訊息。 診斷服務的巨集和全域函式可分為下列分類：  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  若要成功使用此函式：  
   
--   IMAGEHLP 檔案。DLL 必須位於您的路徑。 如果您沒有此 DLL，此函式會顯示錯誤訊息。 請參閱[映像 Help Library](http://msdn.microsoft.com/library/windows/desktop/ms680321) IMAGEHLP 所提供的函式集上的資訊。  
+-   IMAGEHLP 檔案。DLL 必須位於您的路徑。 如果您沒有此 DLL，此函式會顯示錯誤訊息。 請參閱[映像 Help Library](/windows/desktop/Debug/image-help-library) IMAGEHLP 所提供的函式集上的資訊。  
   
 -   具有堆疊框架的模組必須包含偵錯資訊。 如果它們不包含偵錯資訊，此函式仍會產生堆疊追蹤，但會較不詳細追蹤。  
 ### <a name="requirements"></a>需求  

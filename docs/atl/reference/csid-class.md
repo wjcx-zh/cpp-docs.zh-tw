@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 265da6a072c1b33a0ebbe8f485af7588521bcdea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218024"
 ---
 # <a name="csid-class"></a>CSid 類別
 這個類別是包裝函式`SID`（安全性識別碼） 結構。  
@@ -105,7 +105,7 @@ class CSid
   
  應用程式不應該修改`SID`結構是直接，但改為使用此包裝函式類別所提供的方法。 另請參閱[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)， [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)， [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)，以及[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
+ 在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
@@ -121,7 +121,7 @@ LPCTSTR AccountName() const throw(...);
  傳回指向的帳戶名稱 LPCTSTR。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166)。  
+ 這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。  
   
  如果沒有帳戶名稱`SID`可以找到`AccountName`傳回空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 這也會發生與任何對應的帳戶名稱，例如登入的安全性識別碼`SID`可識別登入工作階段。  
   
@@ -202,7 +202,7 @@ LPCTSTR Domain() const throw(...);
  傳回`LPCTSTR`指向網域。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166)。  
+ 這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。  
   
  如果沒有帳戶名稱`SID`可以找到`Domain`傳回的網域為空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 這也會發生與任何對應的帳戶名稱，例如登入的安全性識別碼`SID`可識別登入工作階段。  
   
@@ -222,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  如果成功，則傳回 TRUE 失敗則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)在 Windows SDK 中，如需詳細資訊。  
+ 請參閱[EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621)在 Windows SDK 中，如需詳細資訊。  
   
 ##  <a name="getlength"></a>  CSid::GetLength  
  傳回的長度`CSid`物件。  
@@ -487,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`SID`為適用於顯示、 儲存或傳輸的格式字串的結構。 相當於[ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399)。  
+ 傳回`SID`為適用於顯示、 儲存或傳輸的格式字串的結構。 相當於[ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)。  
   
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  傳回的狀態描述`CSid`物件。  

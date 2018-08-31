@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848261"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217879"
 ---
 # <a name="interfaces-atl"></a>介面 (ATL)
 介面是物件會公開其功能與外界聯繫的方式。 在 COM 中，介面是由物件所實作的函式的指標 （例如 c + + vtable) 的資料表。 資料表代表介面，以及它所指向的函式是該介面的方法。 物件可以公開它所選擇的介面。  
@@ -34,5 +34,5 @@ ms.locfileid: "37848261"
   
 ## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
- [COM 物件與介面](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM 物件與介面](/windows/desktop/com/com-objects-and-interfaces)
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9367e92110ba7fb232e89b9d950e491e5e8da5c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b8dda27c3f1c535f60856bd9d4a3abb9a51a1a32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407165"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219916"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Microsoft 專屬**  
@@ -38,7 +38,7 @@ const TCHAR * ErrorMessage( ) const throw( );
  傳回字串訊息的 HRESULT 記錄`_com_error`物件。 如果 HRESULT 是對應的 16 位元[wCode](../cpp/com-error-wcode.md)，然後一般訊息 「`IDispatch error #<wCode>`"會傳回。 如果找不到訊息，則會傳回一般訊息「`Unknown error #<hresult>`」。 傳回的字串是 Unicode 或多位元組字串，根據 _UNICODE 巨集的狀態。  
   
 ## <a name="remarks"></a>備註  
- HRESULT 記錄內擷取適當的系統訊息文字`_com_error`物件。 系統訊息文字由呼叫 Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函式。 傳回的字串會由 `FormatMessage` API 配置，並且在終結 `_com_error` 物件時釋放。  
+ HRESULT 記錄內擷取適當的系統訊息文字`_com_error`物件。 系統訊息文字由呼叫 Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)函式。 傳回的字串會由 `FormatMessage` API 配置，並且在終結 `_com_error` 物件時釋放。  
   
  **結束 Microsoft 專屬**  
   

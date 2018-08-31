@@ -1,5 +1,5 @@
 ---
-title: CAccelerateDecelerateTransition Class1 |Microsoft 文件
+title: Cacceleratedeceleratetransition 類別 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: a9dad6f6e5353c1adef19d5040984520df7f6239
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954704"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220130"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 類別
+# <a name="cacceleratedeceleratetransition-class"></a>Cacceleratedeceleratetransition 類別類別
 實作加速減速轉換。  
   
 ## <a name="syntax"></a>語法  
@@ -51,13 +51,13 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|所花費的時間，加快持續時間的比率。|  
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|時間的比率在減速至持續時間。|  
+|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|加速的持續期間所花費的時間比例。|  
+|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|要減速的持續期間所花費的時間比例。|  
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|轉換的持續時間。|  
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|結尾的轉換動畫變數的值。|  
   
 ## <a name="remarks"></a>備註  
- 加速期間-減速轉換、 動畫變數可加速和轉換，並且在指定的值在持續期間會降低。 您可以控制變數加速和減速獨立作業，藉由指定不同的加速和減速比例的速度。 初始速度為零，加速比例時，變數會花加速; 持續時間的比例同樣地具有減速比例。 如果初始速度為非零，則速度達到零和轉換結束之間的時間部分。 加速比例以及減速比率加總應該為最大值為 1.0。 由於所有轉換會自動都清除，建議來配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup，直到然後它便是 NULL。 變更成員變數之後這個 COM 物件建立沒有任何作用。  
+ 「 增進洞悉期間的減速轉換，並接著速度會變慢的轉換，結束指定的值時間的持續期間內加速動畫變數。 您可以控制變數可加速和減速獨立，藉由指定不同的加速與減速比例的速度。 初始速度為零，加速比率時，變數會花加速; 持續時間的比例同樣地與減速比率。 如果是非零值的初始速度，就到達零且轉換結束的速度之間的時間部份。 加速比例以及減速比率應該為 1.0 的最大值的總和。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -88,10 +88,10 @@ CAccelerateDecelerateTransition(
  結尾的轉換動畫變數的值。  
   
  *accelerationRatio*  
- 所花費的時間，加快持續時間的比率。  
+ 加速的持續期間所花費的時間比例。  
   
  *decelerationRatio*  
- 時間的比率在減速至持續時間。  
+ 要減速的持續期間所花費的時間比例。  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
@@ -104,20 +104,20 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
 *pLibrary*  
- 指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
+ 指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。  
   
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
 ##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio  
- 所花費的時間，加快持續時間的比率。  
+ 加速的持續期間所花費的時間比例。  
   
 ```  
 DOUBLE m_accelerationRatio;  
 ```  
   
 ##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio  
- 時間的比率在減速至持續時間。  
+ 要減速的持續期間所花費的時間比例。  
   
 ```  
 DOUBLE m_decelerationRatio;  

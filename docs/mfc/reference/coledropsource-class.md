@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e79ac918c1a549c7972d5feccf4f470473f98c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f0994eb1b0293bb31fdb1cd4659256b978ebd69d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852911"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219361"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 類別
 允許將資料拖曳到置放目標。  
@@ -63,7 +63,7 @@ class COleDropSource : public CCmdTarget
   
  如需有關拖放作業使用 OLE，請參閱文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
   
- 如需詳細資訊，請參閱 < [IDropSource](http://msdn.microsoft.com/library/windows/desktop/ms690071) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource) Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,7 +109,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="remarks"></a>備註  
  覆寫此函式以提供若是置放在此時，會發生什麼情況的相關使用者的意見反應。 預設實作會使用 OLE 的預設資料指標。 如需有關拖放作業使用 OLE，請參閱文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
   
- 如需詳細資訊，請參閱 < [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)， [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)，並[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDropSource::GiveFeedback](/windows/desktop/api/oleidl/nf-oleidl-idropsource-givefeedback)， [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover)，並[IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) Windows SDK 中。  
   
 ##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  呼叫 framework 發生事件時，無法開始拖曳作業，例如按下滑鼠左的按鈕。  

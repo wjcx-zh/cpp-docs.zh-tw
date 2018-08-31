@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527ce8beaf5fb08d0642026336be193e3b39d73b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581120"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212984"
 ---
 # <a name="clr-integration-ccx"></a>CLR 整合 (C++/CX)
 某些 Windows 執行階段類型接收特殊處理，在 C + + /CX 和 common language runtime (CLR) 為基礎的語言。 這篇文章討論一種語言的數個類型如何對應到另一種語言。 例如，CLR 將 Windows.Foundation.IVector 對應到 System.Collections.IList、將 Windows.Foundation.IMap 對應到 System.Collections.IDictionary 等等。 同樣地，C + + /CX 特別對應的 platform:: delegate 和 platform:: string 等型別。  
@@ -22,7 +22,7 @@ ms.locfileid: "42581120"
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>將 Windows 執行階段對應至 C + + /CX  
  當 C + + /CX 會讀取 Windows 中繼資料 (.winmd) 檔案，編譯器會自動對應，常見的 Windows 執行階段命名空間和類型 C + /CX 命名空間和類型。 例如，數字的 Windows 執行階段型別`UInt32`會自動對應到`default::uint32`。  
   
- C + + /CX 對應至數個其他 Windows 執行階段類型**平台**命名空間。 例如， **windows:: foundation** HSTRING 控制代碼，表示唯讀的 Unicode 文字字串，會對應至 C + + /CX`Platform::String`類別。 當 Windows 執行階段的作業會傳回錯誤 HRESULT 時，它會對應至 C + + /CX `Platform::Exception`。 如需詳細資訊，請參閱 [Built-in Types](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)。  
+ C + + /CX 對應至數個其他 Windows 執行階段類型**平台**命名空間。 例如， **windows:: foundation** HSTRING 控制代碼，表示唯讀的 Unicode 文字字串，會對應至 C + + /CX`Platform::String`類別。 當 Windows 執行階段的作業會傳回錯誤 HRESULT 時，它會對應至 C + + /CX `Platform::Exception`。 如需詳細資訊，請參閱 <<c0> [ 內建類型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)。  
   
  C + + /CX 也會將對應 Windows 執行階段命名空間中特定類型，以增強類型的功能。 針對這些類型，C + + /CX 提供協助程式建構函式和 c + + 特有和類型的標準.winmd 檔案中沒有可用的方法。  
   

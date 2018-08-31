@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffd2a8969b4cd0edb5845310300e3b42148f816
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c74bc6a134ea31f3184912192ccbcb3908e64cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337612"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221521"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 代表 Windows 通訊端 — 網路通訊的端點。  
@@ -173,7 +173,7 @@ class CAsyncSocket : public CObject
 > [!NOTE]
 >  當使用靜態連結的 MFC 應用程式中的次要執行緒中的 MFC 通訊端，您必須呼叫`AfxSocketInit`中每個執行緒都使用通訊端進行初始化通訊端程式庫。 根據預設，`AfxSocketInit`只在主執行緒中呼叫。  
   
- 如需詳細資訊，請參閱 < [Windows Sockets： 使用類別 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)相關文章。 所[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
+ 如需詳細資訊，請參閱 < [Windows Sockets： 使用類別 CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)相關文章。 所[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -515,7 +515,7 @@ BOOL Create(
 > [!IMPORTANT]
 > `Create` 已**不**安全執行緒。  如果您呼叫它在多執行緒環境中，就可以叫用同時由不同的執行緒，請務必保護每個呼叫與 mutex 或其他同步處理鎖定。  
   
- 如需有關資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)並[Windows Sockets： 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
+ 如需有關資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)並[Windows Sockets： 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
  呼叫此成員函式，以中斷連結中的通訊端控制代碼*m_hSocket*中的資料成員`CAsyncSocket`物件，並設定*m_hSocket*為 NULL。  
@@ -554,7 +554,7 @@ static int PASCAL GetLastError();
 ### <a name="remarks"></a>備註  
  當特定成員函式可讓您表示已發生錯誤，`GetLastError`應該呼叫來擷取適當的錯誤碼。 請參閱適用錯誤碼的清單中的個別成員函式描述。  
   
- 如需有關錯誤碼的詳細資訊，請參閱[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
+ 如需有關錯誤碼的詳細資訊，請參閱[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)。  
   
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  呼叫此成員函式，若要取得此通訊端所連接的對等通訊端位址。  

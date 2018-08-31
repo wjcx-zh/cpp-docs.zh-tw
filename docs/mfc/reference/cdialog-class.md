@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339406"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217329"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 用於在螢幕上顯示對話方塊的基底類別。  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  若要建立強制回應對話方塊中，建構使用您的衍生的對話方塊類別的建構函式在堆疊上的物件，然後呼叫`DoModal`建立對話方塊視窗和它的控制項。 如果您想要建立非強制回應對話方塊時，呼叫`Create`對話方塊類別的建構函式中。  
   
- 您也可以建立在記憶體中的範本，使用[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)資料結構在 Windows SDK 中所述。 建構之後`CDialog`物件，請呼叫[CreateIndirect](#createindirect)來建立非強制回應對話方塊中或呼叫[InitModalIndirect](#initmodalindirect)並[DoModal](#domodal)建立強制回應 對話方塊。  
+ 您也可以建立在記憶體中的範本，使用[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)資料結構在 Windows SDK 中所述。 建構之後`CDialog`物件，請呼叫[CreateIndirect](#createindirect)來建立非強制回應對話方塊中或呼叫[InitModalIndirect](#initmodalindirect)並[DoModal](#domodal)建立強制回應 對話方塊。  
   
  在交換和驗證資料的地圖以覆寫`CWnd::DoDataExchange`加入至您新的對話方塊類別。 請參閱[DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)成員函式中的`CWnd`如交換和驗證功能的詳細資訊。  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  `Create`成員函式會傳回，它會建立對話方塊之後，立即。  
   
- 如果父視窗建立時，應該會出現對話方塊，請使用對話方塊範本中的 WS_VISIBLE 樣式。 否則，您必須呼叫`ShowWindow`。 如需進一步對話方塊樣式和其應用程式，請參閱[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 中的結構和[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 參考 》*。  
+ 如果父視窗建立時，應該會出現對話方塊，請使用對話方塊範本中的 WS_VISIBLE 樣式。 否則，您必須呼叫`ShowWindow`。 如需進一步對話方塊樣式和其應用程式，請參閱[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK 中的結構和[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 參考 》*。  
   
  使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`Create`函式。  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>參數  
  *lpDialogTemplate*  
- 指向包含用來建立對話方塊中的對話方塊範本的記憶體。 此範本會的形式[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)結構和控制資訊，在 Windows SDK 中所述。  
+ 指向包含用來建立對話方塊中的對話方塊範本的記憶體。 此範本會的形式[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)結構和控制資訊，在 Windows SDK 中所述。  
   
  *pParentWnd*  
  指向對話方塊物件的父視窗物件 (型別的[CWnd](../../mfc/reference/cwnd-class.md))。 如果它是 NULL 時，對話方塊物件的父視窗設為主要的應用程式視窗。  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>備註  
  `CreateIndirect`成員函式會傳回，它會建立對話方塊之後，立即。  
   
- 如果父視窗建立時，應該會出現對話方塊，請使用對話方塊範本中的 WS_VISIBLE 樣式。 否則，您必須呼叫`ShowWindow`，讓它出現。 如需有關如何指定其他對話方塊樣式，以及在範本中的詳細資訊，請參閱 < [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 中的結構。  
+ 如果父視窗建立時，應該會出現對話方塊，請使用對話方塊範本中的 WS_VISIBLE 樣式。 否則，您必須呼叫`ShowWindow`，讓它出現。 如需有關如何指定其他對話方塊樣式，以及在範本中的詳細資訊，請參閱 < [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK 中的結構。  
   
  使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`CreateIndirect`函式。  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- **Int**值，指定的值*n 結果*參數傳遞給[CDialog::EndDialog](#enddialog)成員函式，用來關閉對話方塊。 傳回值為-1，如果函式無法建立 IDABORT 的對話方塊中，如果發生其他錯誤，在此情況下 [輸出] 視窗將包含錯誤資訊[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ **Int**值，指定的值*n 結果*參數傳遞給[CDialog::EndDialog](#enddialog)成員函式，用來關閉對話方塊。 傳回值為-1，如果函式無法建立 IDABORT 的對話方塊中，如果發生其他錯誤，在此情況下 [輸出] 視窗將包含錯誤資訊[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
  對話方塊為作用中時，此成員函式會處理使用者的所有互動。 這是讓對話方塊強制回應;也就是使用者無法互動與其他視窗中，直到在關閉對話方塊。  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>參數  
  *lpDialogTemplate*  
- 指向包含用來建立對話方塊中的對話方塊範本的記憶體。 此範本會的形式[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)結構和控制資訊，在 Windows SDK 中所述。  
+ 指向包含用來建立對話方塊中的對話方塊範本的記憶體。 此範本會的形式[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate)結構和控制資訊，在 Windows SDK 中所述。  
   
  *hDialogTemplate*  
  包含包含對話方塊範本的全域記憶體控制代碼。 此範本的格式為`DLGTEMPLATE`結構和每個控制項在對話方塊中的資料。  

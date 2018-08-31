@@ -1,5 +1,5 @@
 ---
-title: 終結清單控制項 |Microsoft 文件
+title: 終結清單控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb26671ba775cfa7daf98d39c7eccc9fd4111bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01cdbc0f404c34a8c5ebc3ae09adf30e0cea0851
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215038"
 ---
 # <a name="destroying-the-list-control"></a>終結清單控制項
-如果您將內嵌程式[CListCtrl](../mfc/reference/clistctrl-class.md)物件的檢視或對話方塊類別資料成員當做其擁有者被終結時終結。 如果您使用[CListView](../mfc/reference/clistview-class.md)，架構會在終結檢視時終結控制項。  
+如果您在內嵌您[CListCtrl](../mfc/reference/clistctrl-class.md)做為資料成員，檢視或對話方塊類別的物件終結時終結其擁有者。 如果您使用[CListView](../mfc/reference/clistview-class.md)，架構會在終結檢視時終結控制項。  
   
- 如果您對於要儲存在應用程式中的某些清單資料而非清單控制項進行配置，則必須為其解除配置進行安排。 如需詳細資訊，請參閱[回呼項目和回呼遮罩](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中。  
+ 如果您對於要儲存在應用程式中的某些清單資料而非清單控制項進行配置，則必須為其解除配置進行安排。 如需詳細資訊，請參閱 <<c0> [ 回呼項目和回呼遮罩](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
   
  此外，您必須負責解除配置您所建立並與清單控制項關聯的所有影像清單。  
   

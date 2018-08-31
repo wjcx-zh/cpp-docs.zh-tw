@@ -49,12 +49,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66fd7c468e516c25e2c2b408b8c1112061eeb5e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17bc6d95aae70c6297836d7353deafb6a4480407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417938"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212965"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -122,7 +122,7 @@ int _vsnwprintf_s(
 輸出的儲存位置。
 
 *sizeOfBuffer*<br/>
-大小*緩衝區*輸出，以字元計數。
+大小*緩衝區*輸出，如字元計數。
 
 *count*<br/>
 要寫入的字元數目上限 (不包括終止的 Null) 或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
@@ -140,11 +140,11 @@ int _vsnwprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-**vsnprintf_s**， **_vsnprintf_s**和 **_vsnwprintf_s**傳回寫入的字元數，不包括結束的 null 或負數值，如果發生輸出錯誤。 **vsnprintf_s**等同於 **_vsnprintf_s**。 **vsnprintf_s**是否包含 ANSI 標準的相容性。 **_vnsprintf**保留回溯相容性。
+**vsnprintf_s**， **_vsnprintf_s**並 **_vsnwprintf_s**傳回寫入的字元數，如果發生輸出錯誤，不包括終止的 null，或是為負值。 **vsnprintf_s**等同於 **_vsnprintf_s**。 **vsnprintf_s**是否包含 ANSI 標準的合規性。 **_vnsprintf**保留回溯相容性。
 
-如果儲存的資料和結束的 null 所需的儲存體超過*sizeOfBuffer*、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，除非*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)，在此情況下盡量字串做為符合*緩衝區*寫入並傳回-1。 如果無效參數處理常式之後，繼續執行，這些函式會將*緩衝區*為空字串，設定**errno**至**為 ERANGE**，並傳回-1。
+如果儲存資料和終止 null 所需的儲存體超過*sizeOfBuffer*，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)，除非*計數*已[_TRUNCATE](../../c-runtime-library/truncate.md)，在此情況下盡量將字串做為可納入*緩衝區*寫入並傳回-1。 如果在無效的參數處理常式之後繼續執行，這些函式會將*緩衝區*為空字串，設定**errno**來**ERANGE**，並傳回-1。
 
-如果*緩衝區*或*格式*是**NULL**指標，或如果*計數*小於或等於零，會叫用無效參數處理常式。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回-1。
+如果*緩衝區*或*格式*會**NULL**指標，或如果*計數*小於或等於零，會叫用無效參數處理常式。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
@@ -153,21 +153,21 @@ int _vsnwprintf_s(
 |*緩衝區*是**NULL**|-1|**EINVAL**|
 |*格式*是**NULL**|-1|**EINVAL**|
 |*計數*< = 0|-1|**EINVAL**|
-|*sizeOfBuffer*太小 (和*計數*！ = **_TRUNCATE**)|-1 (和*緩衝區*設為空字串)|**ERANGE**|
+|*sizeOfBuffer*太小 (並*計數*！ = **_TRUNCATE**)|-1 (並*緩衝區*設為空字串)|**ERANGE**|
 
 ## <a name="remarks"></a>備註
 
-所有這些函式接受引數清單的指標，然後格式化並將最多*計數*所指字元的指定資料的記憶體*緩衝區*並在後面附加結束的 null。
+所有這些函式都會接受引數清單的指標，然後格式化並寫入最多*計數*所指向的記憶體中指定的資料字元*緩衝區*並附加終止 null。
 
-如果*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)，則這些函式撰寫來做為填滿的字串量*緩衝區*時留出空間給結束的 null。 如果整個字串 （包括結束 null) 適合於*緩衝區*，則這些函式會傳回寫入 （不包括結束的 null） 的字元數; 否則這些函數會傳回 – 1，表示該截斷發生。
+如果*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)，則這些函式可放入字串*緩衝區*同時保留終止 null 的空間。 如果整個字串 （含終止 null) 可完全置於*緩衝區*，則這些函式會傳回寫入 （不包括結束的 null） 的字元數; 否則這些函數會傳回-1 表示截斷發生。
 
-這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要確定出空間給結束的 null，務必*計數*絕對小於緩衝區長度或使用 **_TRUNCATE**。
+> 若要確定終止 null 的空間，務必*計數*絕對小於緩衝區長度或使用 **_TRUNCATE**。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -180,7 +180,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|選擇性標頭|
+|常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
 |**vsnprintf_s**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**_vsnprintf_s**， **_vsnprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|

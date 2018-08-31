@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcabd0659e98d25cbe28ce233b89dccc3585d61
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 15719f93fbcfde8e6684373f99c924132af9d288
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336182"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215436"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 類別
 表示以資料存取物件 (DAO) 為基礎之 MFC 資料庫類別所引發的例外狀況。  
@@ -201,7 +201,7 @@ void GetErrorInfo(int nIndex);
 ### <a name="remarks"></a>備註  
  這是 OLE 程式碼。 您很少需要使用此值，因為在幾乎所有情況下，更具體的 MFC 或 DAO 錯誤資訊可在其他`CDaoException`資料成員。  
   
- SCODE 的相關資訊，請參閱主題[結構的 OLE 錯誤碼](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK 中。 SCODE 資料類型會對應到 HRESULT 資料型別。  
+ SCODE 的相關資訊，請參閱主題[結構的 OLE 錯誤碼](/windows/desktop/com/structure-of-com-error-codes)Windows SDK 中。 SCODE 資料類型會對應到 HRESULT 資料型別。  
   
 ## <a name="see-also"></a>另請參閱  
  [CException 類別](../../mfc/reference/cexception-class.md)   

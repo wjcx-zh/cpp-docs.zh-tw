@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883241"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218158"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 類別
 此類別代表的記憶體對應檔。  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>備註  
  檔案對應是與之間的關聯檔案的內容的處理程序虛擬位址空間的一部分。 這個類別提供方法來建立允許程式輕鬆地存取及共用資料的檔案對應物件。  
   
- 如需詳細資訊，請參閱 <<c0> [ 檔案對應](http://msdn.microsoft.com/library/windows/desktop/aa366556)Windows SDK 中。  
+ 如需詳細資訊，請參閱 <<c0> [ 檔案對應](/windows/desktop/Memory/file-mapping)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
   
  *dwMappingProtection*  
- 在對應檔案時，檔案檢視所需的保護。 請參閱*flProtect*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
+ 在對應檔案時，檔案檢視所需的保護。 請參閱*flProtect*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。  
   
  *dwViewDesiredAccess*  
- 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 已建立的檔案對應物件之後，檔案大小不得超過檔案對應物件的大小若是如此，不是所有檔案的內容可供共用。 如需詳細資訊，請參閱 < [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)並[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 已建立的檔案對應物件之後，檔案大小不得超過檔案對應物件的大小若是如此，不是所有檔案的內容可供共用。 如需詳細資訊，請參閱 < [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)並[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  範例，請參閱[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  指向 BOOL 值，設為 TRUE 的對應物件已經存在。  
   
  *lpsa*  
- 將指標`SECURITY_ATTRIBUTES`判斷子處理序是否可以繼承傳回的控制代碼的結構。 請參閱*lpAttributes*中[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) Windows SDK 中。  
+ 將指標`SECURITY_ATTRIBUTES`判斷子處理序是否可以繼承傳回的控制代碼的結構。 請參閱*lpAttributes*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。  
   
  *dwMappingProtection*  
  在對應檔案時，針對 [檔案] 檢視中，所需的保護。 請參閱*flProtect*在`CreateFileMapping`Windows SDK 中。  
   
  *dwViewDesiredAccess*  
- 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `MapShareMem` 可讓現有的檔案對應物件，由[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)、 處理序之間共用。  
+ `MapShareMem` 可讓現有的檔案對應物件，由[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga)、 處理序之間共用。  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  呼叫這個方法，以開啟已命名的檔案對應物件，指定的檔案。  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
   
  *dwViewDesiredAccess*  
- 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
+ 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882)在 Windows SDK 中，如需詳細資訊。  
+ 請參閱[UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882)在 Windows SDK 中，如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlFileMapping 類別](../../atl/reference/catlfilemapping-class.md)   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4232c73122e797a3b0e7aa17c43cde5ab47cf5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cf9133965a9009421c28f64c1f4157b4a6a6d6b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610710"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223291"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文字和字串
 針對國際市場開發應用程式的重要層面是本機的字元集適當表示法。 ASCII 字元集定義 0x00 到 0x7F 範圍內的字元。 有其他的字元集，主要是歐洲，ASCII 字元集定義 0x00 到 0x7F 範圍內的字元完全相同，也會定義設定從 0x80 到 0xFF 的擴充的字元。 因此，8 位元、 單一位元組字元的集合 (SBCS) 就足以代表 ASCII 字元集，以及許多歐洲語言的字元集。 不過，有些非歐洲字元集，例如日文漢字，包含許多字元數超過單一位元組編碼配置可以代表，並因此需要多位元組字元集 (MBCS) 編碼。  
@@ -64,7 +64,7 @@ ms.locfileid: "42610710"
  [國際化](../c-runtime-library/internationalization.md)  
  討論 C 執行階段程式庫中的多語系支援。  
   
- [國際化範例](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [國際化範例](https://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  提供示範 Visual c + + 中的國際化範例的連結。  
   
  [語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

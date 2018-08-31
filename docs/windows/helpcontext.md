@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d782246f44148805f9acc8d912b0fbf554227f7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221280"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -43,7 +43,7 @@ ms.locfileid: "42595724"
 
 ## <a name="remarks"></a>備註
 
-**Helpcontext** c + + 屬性具有相同的功能[helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL 屬性。
+**Helpcontext** c + + 屬性具有相同的功能[helpcontext](/windows/desktop/Midl/helpcontext) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

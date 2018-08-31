@@ -1,5 +1,5 @@
 ---
-title: 選項 (MASM) |Microsoft 文件
+title: 選項 (MASM) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4a2dcbc55d6a2d033cde3b6189618afd67bdc3fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057717"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221505"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 啟用和停用 「 組合器 」 的功能。  
@@ -45,10 +45,10 @@ optionlist
 |**語言**|**LJMP**|**NOLJMP**|**M510**|  
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
-|**PROC**|**序言**|**READONLY**|**NOREADONLY**|  
+|**PROC**|**序言**|**唯讀**|**NOREADONLY**|  
 |**範圍**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|  
   
- 語言的語法是 **選項語言: * * * x*，其中*x*是其中一個 C、 SYSCALL、 STDCALL、 PASCAL、 FORTRAN 或 BASIC。  系統呼叫、 PASCAL、 FORTRAN 和 BASIC 不支援搭配[。模型](../../assembler/masm/dot-model.md)一般。  
+ 語言的語法是**選項的語言：**<em>x</em>，其中*x*是 C，SYSCALL、 STDCALL、 PASCAL、 FORTRAN、 或 BASIC 的其中一個。  SYSCALL、 PASCAL、 FORTRAN、 BASIC 不支援與搭配[。模型](../../assembler/masm/dot-model.md)一般。  
   
 ## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

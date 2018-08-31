@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e4d51687f1f005ad6c6e655e243275508d1529
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: bebc146994e440d4dbfbd0bd3a5e29f597140d8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849766"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216326"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 類別
 實作主動式文件內含項目。  
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
  要執行的命令識別碼。 所識別的群組必須位於*pguidCmdGroup*。  
   
  *nCmdExecOpt*  
- 指定命令執行的選項。 根據預設，設定，才能執行此命令不會提示使用者。 請參閱[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)如值的清單。  
+ 指定命令執行的選項。 根據預設，設定，才能執行此命令不會提示使用者。 請參閱[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)如值的清單。  
   
  *pguidCmdGroup*  
  命令群組的唯一識別碼。 根據預設，null 值，指定標準的群組。 此命令中傳遞*nCmdID*必須屬於群組。  
@@ -172,7 +172,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標[IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455)目前作用中檢視的介面。 如果沒有目前的檢視，則會傳回 NULL。  
+ 指標[IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview)目前作用中檢視的介面。 如果沒有目前的檢視，則會傳回 NULL。  
   
 ### <a name="remarks"></a>備註  
  上傳回的參考計數`IOleDocumentView`之前便會傳回此函式指標不會遞增。  
@@ -255,19 +255,19 @@ HRESULT QueryCommand(
  要查詢的命令識別碼。  
   
  *pdwStatus*  
- 指標，傳回查詢結果的旗標。 如需可能值的清單，請參閱 < [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)。  
+ 指標，傳回查詢結果的旗標。 如需可能值的清單，請參閱 < [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)。  
   
  *pCmdText*  
- 指標[OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314)結構中要傳回單一命令的名稱和狀態資訊。 可以是 NULL，表示呼叫端不需要這項資訊。  
+ 指標[OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext)結構中要傳回單一命令的名稱和狀態資訊。 可以是 NULL，表示呼叫端不需要這項資訊。  
   
  *pguidCmdGroup*  
  命令群組的唯一識別碼可以是 NULL，指定標準的群組。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回值的完整清單，請參閱 < [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK 中。  
+ 傳回值的完整清單，請參閱 < [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法，在 Windows SDK 中所述。  
+ 此成員函式會模擬[IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法，在 Windows SDK 中所述。  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
  釋放連接至 OLE 連結的項目並將它關閉，如果它已開啟。 不會終結用戶端項目。  

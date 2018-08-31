@@ -13,16 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4967be81e45e52ce7c321ceb552b13a1dc59bd0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214827"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式
 
-了解如何建立通用 Windows 平台 (UWP) 應用程式會使用 Windows 執行階段 c + + 範本庫 (WRL) [Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。
+了解如何建立通用 Windows 平台 (UWP) 應用程式會使用 Windows 執行階段 c + + 範本庫 (WRL) [Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
 這個範例會建立自訂的媒體基礎轉換，可將灰階效果套用到從網路攝影機擷取的映像。 應用程式會使用 C++ 定義自訂的轉換，並使用 C# 以使用元件來轉換擷取的映像。
 
@@ -36,7 +36,7 @@ ms.locfileid: "42604886"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 體驗[Windows 執行階段](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)。
+- 體驗[Windows 執行階段](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)。
 
 - COM 的體驗。
 
@@ -52,7 +52,7 @@ ms.locfileid: "42604886"
 
 - [InspectableClass](../windows/inspectableclass-macro.md)巨集會實作基本的 COM 功能，例如參考計數和`QueryInterface`方法，並設定執行階段類別名稱和信任層級。
 
-- 使用 microsoft:: wrl::[模組類別](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)實作的 DLL 進入點函式，例如[DllGetActivationFactory](http://msdn.microsoft.com/library/br205771.aspx)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)。
+- 使用 microsoft:: wrl::[模組類別](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)實作的 DLL 進入點函式，例如[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)， [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)，和[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)。
 
 - 將您的元件 DLL 連結至 runtimeobject.lib。 也指定[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md)連結器列來產生 Windows 中繼資料。
 
@@ -113,7 +113,7 @@ ms.locfileid: "42604886"
 
 3. 在  `Package.appxmanifest`，請在**功能**索引標籤上，選取**麥克風**並**網路攝影機**。 這兩種功能是從網路攝影機擷取相片的必要項。
 
-4. 在  `MainPage.xaml`，將此程式碼新增至根[格線](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)項目：
+4. 在  `MainPage.xaml`，將此程式碼新增至根[格線](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)項目：
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
@@ -132,5 +132,5 @@ ms.locfileid: "42604886"
 ## <a name="see-also"></a>另請參閱
 
 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)  
+[Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
 [媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

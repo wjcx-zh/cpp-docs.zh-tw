@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598073"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222804"
 ---
 # <a name="attributed-programming-concepts"></a>屬性化程式設計概念
 
 Visual c + + 包含各種不同的內容，以協助您在程式中使用屬性。 屬性，Visual c + + 中的新功能被設計來簡化 COM 程式設計和.NET Framework 通用語言執行階段開發。 當您將屬性納入原始程式檔時，編譯器會搭配提供者動態連結程式庫 (DLL)，來插入程式碼，或修改產生的物件檔案的程式碼。 有協助的.idl 檔案、 介面、 類型程式庫及 COM 中的其他項目建立的屬性。 在整合式的開發環境 (IDE) 中，由精靈和 [屬性] 視窗所支援屬性。
 
-雖然屬性排除某些撰寫 COM 物件所需的詳細編碼，您需要在背景[COM fundamentals](http://msdn.microsoft.com/library/windows/desktop/ms694363)最適合使用它們。
+雖然屬性排除某些撰寫 COM 物件所需的詳細編碼，您需要在背景[COM fundamentals](/windows/desktop/com/the-component-object-model)最適合使用它們。
 
 ## <a name="in-this-section"></a>本節內容
 

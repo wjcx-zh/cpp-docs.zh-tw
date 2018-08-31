@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d32b6e61ab0dbac6010c6ed233f2cd822e73c2d5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028329"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220971"
 ---
 # <a name="multiset-class"></a>multiset 類別
 
@@ -116,13 +116,16 @@ class multiset
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*来儲存在 multiset 中的項目資料類型。
+*Key*<br/>
+ 要存放在多重集中的項目資料類型。
 
-*比較*類型，提供函式物件可比較兩個項目值做為排序鍵來判斷 multiset 中的相對順序。 二元述詞 **less**\<Key> 是預設值。
+*Compare*<br/>
+ 類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在多重集中的相對順序。 二元述詞 **less**\<Key> 是預設值。
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-*配置器*表示預存配置器物件，封裝有關多重集的配置和解除配置之記憶體的詳細資訊的型別。 預設值是 **allocator *\<機碼 >。*
+*配置器*<br/>
+ 代表預存配置器物件的類型，封裝有關多重集之記憶體配置和解除配置的詳細資訊。 預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
 
@@ -478,7 +481,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*從 multiset 中比對項目的索引鍵。
+*key*<br/>
+ 要從 multiset 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -873,7 +877,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -957,13 +962,17 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*其中*要移除之項目的位置。
+*Where*<br/>
+ 要移除之項目的位置。
 
-*第一個*要移除之第一個項目的位置。
+*第一個*<br/>
+ 要移除之第一個項目的位置。
 
-*最後一個*要移除的最後一個元素之後的位置。
+*最後一個*<br/>
+ 緊接在要移除之最後一個項目後面的位置。
 
-*索引鍵*要移除之項目的索引鍵的值。
+*Key*<br/>
+ 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -988,7 +997,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*所搜尋之 multiset 中元素的排序鍵比對的索引鍵值。
+*key*<br/>
+ 要以所搜尋之 multiset 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1430,7 +1440,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2036,7 +2047,8 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*右*提供要與目標 multiset 交換之元素的引數 multiset。
+*right*<br/>
+ 提供要與目標 multiset 交換之元素的引數 multiset。
 
 ### <a name="remarks"></a>備註
 
@@ -2104,7 +2116,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*索引鍵*要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
+*key*<br/>
+ 要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2307,7 +2320,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<設定 > 成員](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<設定 > 成員](https://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [容器](../cpp/containers-modern-cpp.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6194addc8ae950cf5cdcb8b7946ab4f5f6c042
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460706"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220086"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "39460706"
 
 - **區域範圍**lambda，包括參數名稱或函式內宣告的名稱具有區域範圍。 它們通常稱為 「 區域變數 」。 它們才看得見從宣告點函式或 lambda 主體的結尾。 區域範圍是一種區塊範圍內，將在本文稍後討論。
 
-- **類別範圍**類別成員的名稱具有類別範圍內，將整個類別定義，無論宣告點延伸。 類別成員存取範圍是由控制的進一步**公開**，**私人**，並**保護**關鍵字。 公用或受保護的成員可以存取只能藉由使用成員選取運算子 (**。** 或是**->**) 或成員指標運算子 (**。\*** 或是**-> \***)。
+- **類別範圍**類別成員的名稱具有類別範圍內，將整個類別定義，無論宣告點延伸。 類別成員存取範圍是由控制的進一步**公開**，**私人**，並**保護**關鍵字。 公用或受保護的成員可以存取只能藉由使用成員選取運算子 (**。** 或是**->**) 或成員指標運算子 (**。**<strong>\*</strong>或是**->** <strong>\*</strong>)。
 
 - **陳述式範圍**中所宣告的名稱**for**，**如果**，**雖然**，或**切換**陳述式會顯示，直到結束為止陳述式區塊。
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > 重複使用識別項名稱 (如這個範例中所示) 會視為不良的程式設計風格。
 
- 如需指標的詳細資訊，請參閱[衍生的型別](http://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 如需宣告和初始化類別物件的資訊，請參閱[類別、 結構和等位](../cpp/classes-and-structs-cpp.md)。 如需有關使用資訊**新**並**刪除**可用存放區運算子，請參閱[新和 delete 運算子](new-and-delete-operators.md)。
+ 如需指標的詳細資訊，請參閱[衍生的型別](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 如需宣告和初始化類別物件的資訊，請參閱[類別、 結構和等位](../cpp/classes-and-structs-cpp.md)。 如需有關使用資訊**新**並**刪除**可用存放區運算子，請參閱[新和 delete 運算子](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隱藏具有全域領域的名稱
 

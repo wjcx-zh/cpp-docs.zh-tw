@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: faed3af6595b37146bfd565e09e9ceeea3ca5d73
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960657"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217650"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 類別
 
@@ -154,6 +154,6 @@ protected:
 
 ## <a name="see-also"></a>另請參閱
 
-[facet 類別](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)<br/>
+[facet 類別](locale-class.md#facet_class)<br/>
 [ctype_base 類別](../standard-library/ctype-base-class.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

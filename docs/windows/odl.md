@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fdc9e12a72758129f19ccd515c705df76bfe47ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f376c2294dde0cc2fe538d3896aa28a9d136627
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594597"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221039"
 ---
 # <a name="odl"></a>odl
 
@@ -36,7 +36,7 @@ ms.locfileid: "42594597"
 
 ## <a name="remarks"></a>備註
 
-**Odl** c + + 屬性具有相同的功能[odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 屬性。
+**Odl** c + + 屬性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

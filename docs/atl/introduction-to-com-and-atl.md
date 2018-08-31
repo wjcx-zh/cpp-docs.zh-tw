@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00204e283feb14e6b8e831a12e8bd9ad3e352adc
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f0863e00d95c4056d988198b4978eb16597111f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571567"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222546"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 簡介
 本節提供 COM 和 ATL 簡介  
@@ -34,7 +34,7 @@ ms.locfileid: "42571567"
  會簡短討論什麼 Active Template Library (ATL) 所設計的範本程式庫和 ATL 版本號碼。 包括 ATL 和 MFC 之間選擇的建議。  
   
 ## <a name="related-sections"></a>相關章節  
- [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [元件物件模型](/windows/desktop/com/the-component-object-model)  
  Windows SDK 內容，com。  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  

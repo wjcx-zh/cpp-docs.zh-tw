@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465682"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219724"
 ---
 # <a name="single-inheritance"></a>單一繼承
 在「單一繼承」(一種常見的繼承形式) 中，任何類別都只能有一個基底類別。 請考慮下圖中說明的關係。  
@@ -63,7 +63,7 @@ class PaperbackBook : public Book {};
  上圖中 (稱為「導向非循環圖」或 "DAG") 的某些類別是多個衍生類別的基底類別。 不過，反向並不成立：其中只有一個指定衍生類別的直接基底類別。 此圖中描述了一個「單一繼承」結構。  
   
 > [!NOTE]
->  導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。 本主題涵蓋[多重繼承](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)。  
+>  導向非循環圖不是唯一的單一繼承。 它們也可用來描述多重繼承圖形。 本主題涵蓋[多重繼承](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)。  
   
  在繼承中，衍生類別包含基底類別的成員以及您加入的新成員。 因此，除非在衍生類別中重新定義這些成員，否則衍生類別可能會參考基底類別的成員。 當這些成員在衍生類別中重新定義時，可以使用範圍解析運算子 (`::`) 來參考直接或間接基底類別的成員。 請考量以下範例：  
   

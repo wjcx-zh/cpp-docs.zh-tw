@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569845"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215694"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -61,11 +61,11 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>傳回值
 
-如果傳回的作業系統檔案控制代碼*fd*有效。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則此函數會傳回**INVALID_HANDLE_VALUE** (-1)，並設定**errno**至**EBADF**，表示檔案控制代碼無效。 若要避免編譯器警告，預期的 Win32 檔案控制代碼的常式中使用結果時，其轉型為**處理**型別。
+如果傳回的作業系統檔案控制代碼*fd*有效。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則此函數會傳回**INVALID_HANDLE_VALUE** (-1)，並設定**errno**來**EBADF**，表示無效的檔案控制代碼。 若要避免編譯器警告，預期的 Win32 檔案控制代碼的常式中使用結果時，將它轉換成**處理**型別。
 
 ## <a name="remarks"></a>備註
 
-若要關閉的檔案，其作業系統 (OS) 檔案控制代碼藉由取得 **_get_osfhandle**，呼叫[_close](close.md)上的檔案描述項*fd*。 請勿呼叫**CloseHandle**對這個函式的傳回值。 基礎作業系統檔案控制代碼擁有者是*fd*檔案描述項，且已關閉時[_close](close.md)上呼叫*fd*。 如果所擁有的檔案描述項**檔案\*** 資料流，然後呼叫[fclose](fclose-fcloseall.md)上**檔案\*** 資料流關閉的檔案描述項和基礎作業系統檔案控制代碼。 在此情況下，請勿呼叫[_close](close.md)上的檔案描述項。
+若要關閉的檔案，來取得其作業系統 (OS) 的檔案控制代碼 **_get_osfhandle**，呼叫[_close](close.md)上的檔案描述元*fd*。 請勿呼叫**CloseHandle**對此函式的傳回值。 所擁有的基礎 OS 檔案控制代碼*fd*的檔案描述元，且已關閉時[_close](close.md)上呼叫*fd*。 如果檔案描述元擁有者`FILE *`資料流，然後呼叫[fclose](fclose-fcloseall.md)該`FILE *`資料流關閉檔案描述元和基礎 OS 檔案控制代碼。 在此情況下，請勿呼叫[_close](close.md)上的檔案描述項。
 
 ## <a name="requirements"></a>需求
 

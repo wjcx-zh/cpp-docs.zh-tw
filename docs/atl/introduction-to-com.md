@@ -1,5 +1,5 @@
 ---
-title: COM 簡介 |Microsoft 文件
+title: COM 簡介 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,31 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 938d0c45cae5ec9a2988f77f539af1a3d5513b83
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a408ecb1a96aab284a4ac8c7cdd59909ed7c0ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356171"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216519"
 ---
 # <a name="introduction-to-com"></a>COM 簡介
-COM 是基本 「 物件模型 」 上的 ActiveX 控制項和 OLE 已內建。 COM，允許物件來公開其功能給其他元件和主控件應用程式。 它會定義如何物件會公開本身和跨處理序和跨網路，此公開資訊的運作方式。 COM 也會定義物件的生命週期。  
+COM 是基本 「 物件模型 」 上的 ActiveX 控制項和 OLE 會建置。 COM 可讓物件公開給其他元件和主控件應用程式，其功能。 它會定義物件如何公開本身和跨處理序和跨網路，此公開資訊的運作方式。 COM 也會定義物件的生命週期。  
   
  COM 的基礎是這些概念：  
   
 -   [介面](../atl/interfaces-atl.md)— 透過此物件會公開其功能的機制。  
   
--   [IUnknown](../atl/iunknown.md) -其他所有項目所根據的基本介面。 它會實作的參考計數和查詢機制執行透過 COM 介面  
+-   [IUnknown](../atl/iunknown.md) — 所有其他人所依據的基本介面。 它會實作參考計數和查詢機制執行透過 COM 介面  
   
--   [參考計數](../atl/reference-counting.md)— 之物件 （或嚴格來說，介面） 會決定當它不再使用，因此可用來移除本身的技巧。  
+-   [參考計數](../atl/reference-counting.md)— 由此物件 （或嚴格來說，介面） 會決定當它已不再使用，因此可以移除本身的技術。  
   
 -   [QueryInterface](../atl/queryinterface.md) — 用來查詢物件的指定介面的方法。  
   
--   [封送處理](../atl/marshaling.md)— 可讓物件來跨執行緒、 處理程序和網路界限時，允許使用位置的獨立性的機制。  
+-   [封送處理](../atl/marshaling.md)— 可讓物件以在各種不同的執行緒、 流程和網路界限，讓位置獨立性的機制。  
   
--   [彙總](../atl/aggregation.md)— 可以在一個物件的方式使用另一個。  
+-   [彙總](../atl/aggregation.md)— 的方法在其中一個物件可以使用另一個。  
   
 ## <a name="see-also"></a>另請參閱  
  [COM 和 ATL 簡介](../atl/introduction-to-com-and-atl.md)   
- [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)
+ [元件物件模型](/windows/desktop/com/the-component-object-model)
 

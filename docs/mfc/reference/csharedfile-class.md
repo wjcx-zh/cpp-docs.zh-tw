@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d570204a997def3b295e7ba0fb3b08b9a15677b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38267ed5755b99bd97e4c923611d297673fcc41e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215579"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 類別
 [CMemFile](../../mfc/reference/cmemfile-class.md)-衍生的類別支援共用記憶體檔案。  
@@ -56,7 +56,7 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>備註  
  記憶體檔案的行為如同磁碟檔案之處在於此檔案會儲存在 RAM 中，而不是在磁碟上。 記憶體檔案適合用於快速暫時儲存或傳輸未經處理位元組或序列化的獨立處理序之間的物件。  
   
- 與其他記憶體檔案，因為它們的記憶體配置使用不同的共用的記憶體檔案[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函式。 `CSharedFile`類別會將資料儲存在全域配置的記憶體區塊 (使用建立`GlobalAlloc`)，而此記憶體區塊可以共用使用 DDE、 剪貼簿或其他 OLE/COM 制式資料傳輸作業，例如，使用`IDataObject`。  
+ 與其他記憶體檔案，因為它們的記憶體配置使用不同的共用的記憶體檔案[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 函式。 `CSharedFile`類別會將資料儲存在全域配置的記憶體區塊 (使用建立`GlobalAlloc`)，而此記憶體區塊可以共用使用 DDE、 剪貼簿或其他 OLE/COM 制式資料傳輸作業，例如，使用`IDataObject`。  
   
  `GlobalAlloc` 傳回 HGLOBAL 處理而不是記憶體中，例如傳回指標的指標[malloc](../../c-runtime-library/reference/malloc.md)。 某些應用程式中需要 HGLOBAL 控制代碼。 比方說，若要將資料放在剪貼簿上您會需要 HGLOBAL 控制代碼。  
   
@@ -89,7 +89,7 @@ CSharedFile(
   
 ### <a name="parameters"></a>參數  
  *nAllocFlags*  
- 指出記憶體的配置方式的旗標。 請參閱[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)取得一份有效的旗標值。  
+ 指出記憶體的配置方式的旗標。 請參閱[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)取得一份有效的旗標值。  
   
  *nGrowBytes*  
  以位元組為單位的記憶體配置遞增值。  

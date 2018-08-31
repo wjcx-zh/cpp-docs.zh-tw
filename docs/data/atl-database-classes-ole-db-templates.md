@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 083ac7485ce2056ab97ca32142be3e88094573f9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218984"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 資料庫類別 (OLE DB 樣板)
 Microsoft 提供數個 OLE DB 的實作，一組 COM 介面，可讓您統一存取各種資訊來源和格式的資料。  OLE DB 正式被取代;這份文件適用於開發人員會維護舊版的程式碼。 新的應用程式應該使用 ODBC 來連接到 SQL 資料來源。
@@ -46,4 +46,4 @@ Microsoft 提供數個 OLE DB 的實作，一組 COM 介面，可讓您統一存
  [建立 OLE DB 提供者](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB 消費者範本參考](../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB 提供者樣板參考](../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB 範本範例](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB 範本範例](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)

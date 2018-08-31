@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: e6607016e2661817de04fce505bc921a3a25320a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572644"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219489"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -69,7 +69,7 @@ EXPORTS
   
 您可以使用*序數*指定數字，而不是函式名稱，將會進入 DLL 的匯出表。 許多 Windows DLL 會匯出序數，以支援舊版程式碼。 通常在 16 位元 Windows 程式碼中使用序數，因為它有助於最大程度減小 DLL 的大小。 建議除非您的 DLL 用戶端因舊版支援而需要序數，否則不要依序數匯出函式。 由於 .LIB 檔會包含序數與函式之間的對應，因此您可以像在使用 DLL 的專案中那樣，使用函式名稱。  
   
-透過使用選用的 `NONAME` 關鍵字，您可以僅依序數匯出，並減少所產生 DLL 中匯出表格的大小。 不過，如果您想要使用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL 時，在您必須了解序數，因為名稱不是有效。  
+透過使用選用的 `NONAME` 關鍵字，您可以僅依序數匯出，並減少所產生 DLL 中匯出表格的大小。 不過，如果您想要使用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL 時，在您必須了解序數，因為名稱不是有效。  
   
 選擇性的關鍵字`PRIVATE`可防止*entryname*以免包含在 LINK 所產生的匯入程式庫。 她不會影響也由 LINK 產生之映像檔中的匯出。  
   

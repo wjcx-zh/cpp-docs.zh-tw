@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 87c8cb1bbd007022a5c01b2aaacdb0233a59068f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462306"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220784"
 ---
 # <a name="standard-conversions"></a>標準轉換
-C++ 語言定義其基本類型之間的轉換。 同時定義指標、參考及成員指標衍生類型的轉換。 這些轉換稱為「標準轉換」  (如需類型、 標準類型和衍生的類型的詳細資訊，請參閱[型別](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
+C++ 語言定義其基本類型之間的轉換。 同時定義指標、參考及成員指標衍生類型的轉換。 這些轉換稱為「標準轉換」  (如需類型、 標準類型和衍生的類型的詳細資訊，請參閱[型別](https://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
   
  本節將討論下列標準轉換：  
   
@@ -202,15 +202,15 @@ int main() {
 |----------------------|----------------|-------------------------------------------|  
 |外部 (非類別範圍) 函式|Private|否|  
 ||Protected|否|  
-||Public|[是]|  
-|B 成員函式 (B 範圍中)|Private|[是]|  
-||Protected|[是]|  
-||Public|[是]|  
+||Public|是|  
+|B 成員函式 (B 範圍中)|Private|是|  
+||Protected|是|  
+||Public|是|  
 |C 成員函式 (C 範圍中)|Private|否|  
-||Protected|[是]|  
-||Public|[是]|  
+||Protected|是|  
+||Public|是|  
   
- 類別指標可以轉換成基底類別指標的第二種情況，是使用明確類型轉換  (請參閱[具有明確類型轉換的運算式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)的明確類型轉換的詳細資訊。)  
+ 類別指標可以轉換成基底類別指標的第二種情況，是使用明確類型轉換  (請參閱[具有明確類型轉換的運算式](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)的明確類型轉換的詳細資訊。)  
   
  這類轉換的結果會是「子物件」指標，也就是物件中以基底類別完整描述的部分。  
   
@@ -249,7 +249,7 @@ int main()
  函式的指標可以轉換成類型`void *`，如果型別`void *`夠大，足以容納該指標。  
   
 ### <a name="pointer-to-void"></a>void 的指標  
- 類型的指標**void**可轉換成任何其他類型，但只能使用明確的類型轉換的指標 (不同於在 C 中)。 (請參閱[具有明確類型轉換的運算式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)取得的類型轉換的詳細資訊。)任何類型的指標可以隱含地轉換成類型的指標**void**。不完整的型別物件的指標可以轉換成指標**void** （隱含） 和回 （明確）。 這類轉換的結果等於原始指標的值。 若物件宣告後，沒有足夠的資訊可用來判斷其大小和基底類別，則會將該物件視為不完整。  
+ 類型的指標**void**可轉換成任何其他類型，但只能使用明確的類型轉換的指標 (不同於在 C 中)。 (請參閱[具有明確類型轉換的運算式](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)取得的類型轉換的詳細資訊。)任何類型的指標可以隱含地轉換成類型的指標**void**。不完整的型別物件的指標可以轉換成指標**void** （隱含） 和回 （明確）。 這類轉換的結果等於原始指標的值。 若物件宣告後，沒有足夠的資訊可用來判斷其大小和基底類別，則會將該物件視為不完整。  
   
  不是任何物件的指標**const**或是**volatile**能夠隱含轉換成類型的指標`void *`。  
   

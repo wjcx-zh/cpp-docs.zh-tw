@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc6d39b3f636407e3ae72289b5afe12ed1084a4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 23aacdfca1dbc958c16223d7d57cec39ef65267b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852506"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221797"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 類別
 具有[CRichEditView](../../mfc/reference/cricheditview-class.md)並[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)，提供 rich edit 控制項的 MFC 的文件檢視架構內容中的功能。  
@@ -92,7 +92,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
 ### <a name="parameters"></a>參數  
  *preo*  
- 指標[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構這個 OLE 項目。 如果*preo*是 NULL，新的用戶端項目是空的。  
+ 指標[REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject)結構描述 OLE 項目。 新`CRichEditCntrItem`物件會建構這個 OLE 項目。 如果*preo*是 NULL，新的用戶端項目是空的。  
   
 ### <a name="return-value"></a>傳回值  
  新指標[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)已新增至這份文件物件。  
@@ -100,7 +100,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="remarks"></a>備註  
  此函式不會執行任何 OLE 初始化。  
   
- 如需詳細資訊，請參閱 < [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) Windows SDK 中的結構。  
   
 ##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  呼叫此函式來判斷文字格式進行串流處理的豐富的編輯內容。  

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222739"
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 `delegate`關鍵字用來宣告 Windows 執行階段相當於在 standard c + + 中的函式物件的參考型別。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：  
@@ -29,7 +29,7 @@ ms.locfileid: "42592769"
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- 當宣告透過 Windows 執行階段應用程式二進位介面會公開的委派對用戶端，使用[Windows::Foundation::TypedEventHandler\<，TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx)。 此委派具有預先定義的 Proxy 與 Stub 二進位檔，使其能夠供 Javascript 用戶端使用。  
+ 當宣告透過 Windows 執行階段應用程式二進位介面會公開的委派對用戶端，使用[Windows::Foundation::TypedEventHandler\<，TResult >](https://msdn.microsoft.com/library/windows/apps/br225997.aspx)。 此委派具有預先定義的 Proxy 與 Stub 二進位檔，使其能夠供 Javascript 用戶端使用。  
   
 ## <a name="consuming-delegates"></a>使用委派  
  當您建立通用 Windows 平台應用程式時，您通常使用做為 Windows 執行階段類別所公開的事件類型的委派。 若要訂閱事件，請指定符合委派簽章的函式 (Lambda)，建立事件的委派類型執行個體。 然後使用 `+=` 運算子，將委派物件傳遞給類別的事件成員。 這就是所謂的訂閱事件。 當類別執行個體「引發」事件時，就會呼叫您的函式，以及任何其他已由您的物件或其他物件加入的處理常式。  

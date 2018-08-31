@@ -1,5 +1,5 @@
 ---
-title: -Fp （名稱。Pch 檔案） |Microsoft 文件
+title: -Fp （名稱。Pch 檔案） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,34 +25,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217987"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (命名 .Pch 檔案)
-提供的先行編譯標頭，而不是使用預設路徑名稱的路徑名稱。  
+提供 先行編譯的標頭，而不是使用預設的路徑名稱的路徑名稱。  
   
 ## <a name="syntax"></a>語法  
   
-> **/Fp**_路徑名稱_  
+> **/Fp**<em>路徑名稱</em>  
   
 ## <a name="remarks"></a>備註  
- 這個選項搭配[/Yc （建立先行編譯標頭檔）](../../build/reference/yc-create-precompiled-header-file.md)或[/Yu （使用先行編譯標頭檔）](../../build/reference/yu-use-precompiled-header-file.md)提供路徑名稱，而不是使用預設路徑名稱的先行編譯標頭。 您也可以使用 **/Fp**與 **/Yc**指定不同的先行編譯標頭檔使用 **/Yc * * * filename*引數和原始程式檔的名稱。  
+ 使用這個選項搭配[/Yc （建立先行編譯標頭檔）](../../build/reference/yc-create-precompiled-header-file.md)或是[/Yu （使用先行編譯標頭檔）](../../build/reference/yu-use-precompiled-header-file.md)提供先行編譯的標頭，而不是使用預設的路徑名稱的路徑名稱。 您也可以使用 **/Fp**具有 **/Yc**若要指定不同的先行編譯標頭檔使用 **/Yc**<em>filename</em>引數和從原始程式檔的基底名稱。  
   
- 如果您未指定副檔名的路徑名稱的一部分，則會假設副檔名為.pch。 如果您指定不含檔案名稱的目錄的預設檔案名稱是 VC*x*0.pch，其中*x*是 Visual c + + 中使用的主要版本。  
+ 如果您未指定延伸模組的路徑名稱的一部分，則會假設副檔名為.pch。 如果您指定不含檔案名稱的目錄，預設檔名為 VC*x*0.pch，其中*x*是使用 Visual c + + 的主要版本。  
   
- 您也可以使用 **/Fp**選項與 **/Yu**。  
+ 您也可以使用 **/Fp**選項搭配 **/Yu**。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
 2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下**先行編譯標頭**屬性頁。  
+3.  按一下 **先行編譯標頭**屬性頁。  
   
 4.  修改**先行編譯標頭檔**屬性。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "32376328"
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>。  
   
 ## <a name="example"></a>範例  
- 如果您想要建立程式的偵錯版本的先行編譯標頭檔，而且您編譯的標頭檔和原始碼，您可以指定命令例如：  
+ 如果您想要建立您的程式的偵錯版本的先行編譯標頭檔和標頭檔和原始程式碼所編譯，您可以指定命令例如：  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
 ## <a name="example"></a>範例  
- 下列命令會指定名為 MYPCH.pch 先行編譯標頭檔。 編譯器會假設來源中的程式碼 PROG.cpp 透過 MYAPP.h 已先行編譯和先行編譯的程式碼位於 MYPCH.pch。 它使用 MYPCH.pch 的內容，並編譯 PROG.cpp 建立的.obj 檔案的其餘部分。 此範例的輸出是名為 PROG.exe。  
+ 下列命令會指定名為 MYPCH.pch 先行編譯標頭檔。 編譯器會假設來源中的程式碼 PROG.cpp 已透過 MYAPP.h 已經先行編譯和先行編譯的程式碼位於 MYPCH.pch。 它使用 MYPCH.pch 的內容，並會編譯 PROG.cpp，若要建立的.obj 檔案的其餘部分。 此範例的輸出是名為 PROG.exe 的檔案。  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

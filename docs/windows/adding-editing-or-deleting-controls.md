@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8b1b1452eceefbe6e04200d8aded544fdc4d1da
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590972"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219432"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>加入、編輯或刪除控制項
 
 使用 **對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
 
-您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取 （如需詳細資訊，請參閱[自訂工具箱對話方塊](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。
+您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取 （如需詳細資訊，請參閱[自訂工具箱對話方塊](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。
 
 - [將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md)
 

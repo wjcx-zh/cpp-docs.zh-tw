@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954964"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222717"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 類別
 
@@ -70,9 +70,11 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Elem*檔案緩衝區的基本項目。
+*Elem*<br/>
+ 檔案緩衝區的基本項目。
 
-*Tr*的基本項目，將檔案緩衝區的特性 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+ 檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>備註
 
@@ -410,11 +412,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>參數
 
-*_Filename*来開啟之檔案的名稱。
+*_Filename*<br/>
+ 要開啟之檔案的名稱。
 
-*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+ [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+ 預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -456,7 +461,8 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*的右值參考[basic_filebuf](../standard-library/basic-filebuf-class.md)物件。
+*right*<br/>
+ [basic_filebuf](../standard-library/basic-filebuf-class.md) 物件的右值參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -476,7 +482,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>參數
 
-*_Meta*要插入緩衝區的字元或`traits_type::eof`。
+*_Meta*<br/>
+ 要插入緩衝區的字元或`traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -484,7 +491,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="remarks"></a>備註
 
-如果 _ * 中繼 ***！ = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保護虛擬成員函式會致力於將元素**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：
+如果 *_Meta* **！ = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保護虛擬成員函式會致力於將元素**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：
 
 - 如果有寫入位置可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。
 
@@ -502,7 +509,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>參數
 
-*_Meta*要插入緩衝區的字元或`traits_type::eof`。
+*_Meta*<br/>
+ 要插入緩衝區的字元，或 `traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -538,11 +546,14 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>參數
 
-*_Off*要搜尋的相對位置 *_Way*。
+*_Off*<br/>
+ 要搜尋的相對位置 *_Way*。
 
-*_Way*位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
+*_Way*<br/>
+ 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*_Which*指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
+*_Which*<br/>
+ 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -566,9 +577,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>參數
 
-*_Sp*来搜尋的位置。
+*_Sp*<br/>
+ 要搜尋的位置。
 
-*_Which*指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
+*_Which*<br/>
+ 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -594,9 +607,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>參數
 
-*_Buffer*緩衝區的指標。
+*_Buffer*<br/>
+ 緩衝區的指標。
 
-*計數*緩衝區的大小。
+*count*<br/>
+ 緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
 
@@ -604,8 +619,7 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="remarks"></a>備註
 
-
-  `setbuf` 會呼叫 `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) ) 以提供開始於 _*Buffer* 之 `count` 元素的陣列，作為資料流的緩衝區。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this** 以發出成功訊號。
+`setbuf` 會呼叫 `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) ) 以提供開始於 _*Buffer* 之 `count` 元素的陣列，作為資料流的緩衝區。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this** 以發出成功訊號。
 
 ## <a name="swap"></a> basic_filebuf::swap
 
@@ -617,7 +631,8 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`lvalue`到另一個參考`basic_filebuf`。
+*right*<br/>
+ 對其他 `basic_filebuf` 的 `lvalue` 參考。
 
 ## <a name="sync"></a> basic_filebuf::sync
 

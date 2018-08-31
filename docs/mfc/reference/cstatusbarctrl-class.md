@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b0f46724dd552639c215093f74d8eb14d8afdd
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 17ca93348ab5535908ea8b2d035669f7e61cef55
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538429"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221352"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 類別
 提供 Windows 通用狀態列控制項的功能。  
@@ -133,10 +133,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。  
+ 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。  
   
  *rect*  
- 指定狀態列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ 指定狀態列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
  *pParentWnd*  
  指定狀態列控制項的父視窗，通常`CDialog`。 它必須不是 NULL。  
@@ -171,13 +171,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。  
+ 指定狀態列控制項的樣式。 套用狀態列控制項的樣式中所列的任何組合[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。 這個參數必須包含 WS_CHILD 樣式。 它也應該包括 WS_VISIBLE 樣式。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -207,7 +207,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>參數  
  *lpDrawItemStruct*  
- 長指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，其中包含的所需的繪圖類型的相關資訊。  
+ 長指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，其中包含的所需的繪圖類型的相關資訊。  
   
 ### <a name="remarks"></a>備註  
  `itemAction`隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
@@ -267,7 +267,7 @@ HICON GetIcon(int iPart) const;
  圖示的控制代碼如果方法成功，否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[SB_GETICON](/windows/desktop/Controls/sb-geticon)訊息，Windows SDK 中所述。  
   
  狀態列控制項所組成的文字輸出窗格，也就是所謂的組件的資料列。 如需有關 [狀態] 列的詳細資訊，請參閱[MFC 中的狀態列實作](../../mfc/status-bar-implementation-in-mfc.md)並[設定 CStatusBarCtrl 物件的模式](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。  
   
@@ -320,7 +320,7 @@ BOOL GetRect(
  以零為起始索引是要擷取的周框的部分。  
   
  *lpRect*  
- 位址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。  
+ 位址[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框的結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -411,7 +411,7 @@ CString GetTipText(int nPane) const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要用於工具提示文字。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[SB_GETTIPTEXT](/windows/desktop/Controls/sb-gettiptext)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
@@ -427,7 +427,7 @@ BOOL IsSimple() const;
  如果狀態視窗控制項為簡單模式，為非零否則為零。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[SB_ISSIMPLE](/windows/desktop/Controls/sb-issimple)、 Windows SDK 中所述。  
   
 ##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  在狀態列中設定的背景色彩。  
@@ -441,10 +441,10 @@ COLORREF SetBkColor(COLORREF cr);
  COLORREF 值，指定新的背景色彩。 指定 CLR_DEFAULT 值會造成狀態列，以使用其預設背景色彩。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，表示先前的預設背景色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)值，表示先前的預設背景色彩。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[SB_SETBKCOLOR](/windows/desktop/Controls/sb-setbkcolor)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
@@ -469,7 +469,7 @@ BOOL SetIcon(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[SB_SETICON](/windows/desktop/Controls/sb-seticon)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CStatusBarCtrl::SetBkColor](#setbkcolor)。  
@@ -576,7 +576,7 @@ void SetTipText(
  包含的工具提示文字的字串指標。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 訊息的行為[SB_SETTIPTEXT](/windows/desktop/Controls/sb-settiptext)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  

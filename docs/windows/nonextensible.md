@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc2419cad0744ae3487f368b2238f80b96bd8fb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f24aa8b1aa6b4e2e996ec22062263f785d730d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612853"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222576"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -36,7 +36,7 @@ ms.locfileid: "42612853"
 
 ## <a name="remarks"></a>備註
 
-**Nonextensible** c + + 屬性具有相同的功能[nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL 屬性。
+**Nonextensible** c + + 屬性具有相同的功能[nonextensible](/windows/desktop/Midl/nonextensible) MIDL 屬性。
 
 利用**nonextensible**也需要[oleautomation](../windows/oleautomation.md)屬性。
 

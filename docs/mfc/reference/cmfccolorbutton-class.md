@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540166"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215324"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 類別
 `CMFCColorButton`並[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)類別會一起用來實作色彩選擇器控制項。  
@@ -112,10 +112,10 @@ class CMFCColorButton : public CMFCButton
 |`m_bAltColorDlg`|布林值。 如果為 TRUE，架構會顯示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)色彩對話方塊的 [當*其他*按一下按鈕時，或如果為 FALSE，系統色彩] 對話方塊。 預設值為 TRUE。 如需詳細資訊，請參閱 < [CMFCColorButton::EnableOtherButton](#enableotherbutton)。|  
 |`m_bAutoSetFocus`|布林值。 如果為 TRUE，framework 將焦點設定 [色彩] 功能表上的功能表顯示時，或如果為 FALSE，不會變更焦點時。 預設值為 TRUE。|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|指出是否啟用 [色彩] 按鈕的自訂模式。|  
-|`m_Color`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含目前選取的色彩。|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含目前選取的預設色彩。|  
-|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含目前可用的色彩。|  
-|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值。 包含目前的文件色彩。|  
+|`m_Color`|A [COLORREF](/windows/desktop/gdi/colorref)值。 包含目前選取的色彩。|  
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref)值。 包含目前選取的預設色彩。|  
+|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md)的[COLORREF](/windows/desktop/gdi/colorref)值。 包含目前可用的色彩。|  
+|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)的[COLORREF](/windows/desktop/gdi/colorref)值。 包含目前的文件色彩。|  
 |`m_nColumns`|整數。 包含資料行，顯示在方格中色彩選取範圍 功能表中的色彩數目。|  
 |`m_pPalette`|指標[CPalette](../../mfc/reference/cpalette-class.md)。 包含目前的色彩選取範圍 功能表中可用的色彩。|  
 |`m_pPopup`|指標[CMFCColorPopupMenu 類別](../../mfc/reference/cmfccolorpopupmenu-class.md)物件。 當您按一下色彩按鈕會顯示 [色彩選取範圍] 功能表。|  
@@ -439,7 +439,7 @@ virtual void UpdateColor(COLORREF color);
  [CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)   
  [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
  [CPalette 類別](../../mfc/reference/cpalette-class.md)   
  [CArray 類別](../../mfc/reference/carray-class.md)   
  [CList 類別](../../mfc/reference/clist-class.md)   

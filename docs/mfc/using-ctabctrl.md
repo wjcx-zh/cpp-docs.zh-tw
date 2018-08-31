@@ -1,5 +1,5 @@
 ---
-title: 使用 CTabCtrl |Microsoft 文件
+title: 使用 CTabCtrl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383678"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217918"
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
-「索引標籤控制項」類似於筆記本裡的分隔頁或檔案櫃中的標籤資料夾。 使用此索引標籤控制項，類別所代表[CTabCtrl](../mfc/reference/ctabctrl-class.md)，若要顯示多頁的資訊或控制項給使用者，一次，建議的對等或邏輯關聯性，每個頁面之間的格式。  
+「索引標籤控制項」類似於筆記本裡的分隔頁或檔案櫃中的標籤資料夾。 使用 tab 控制項，由類別[CTabCtrl](../mfc/reference/ctabctrl-class.md)、 資訊或控制項的多個頁面顯示給使用者，一次一個，建議的對等或每個頁面之間的邏輯關聯性的格式。  
   
- 如需有關索引標籤控制項的詳細資訊，請參閱[索引標籤控制項](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK 中。  
+ 如需有關索引標籤控制項的詳細資訊，請參閱[索引標籤控制項](/windows/desktop/Controls/tab-controls)Windows SDK 中。  
   
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [索引標籤控制項和屬性工作表](../mfc/tab-controls-and-property-sheets.md)  
   

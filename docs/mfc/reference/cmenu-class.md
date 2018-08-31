@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c2e6f457af9dfa34b63536a79b7764d91bdbec
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 0c94542fdac3734644771f2659d894d1c8c6f907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339471"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220798"
 ---
 # <a name="cmenu-class"></a>CMenu 類別
 Windows `HMENU`的封裝。  
@@ -608,7 +608,7 @@ UINT GetDefaultItem(
  如果此函數成功，則傳回的值會是識別碼或功能表項目的位置。 如果函式失敗，傳回的值為-1。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 函式行為[GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 函式行為[GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CMenu::InsertMenu](#insertmenu)。  
@@ -635,7 +635,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
   
 ### <a name="parameters"></a>參數  
  *lpcmi*  
- 指標[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)結構包含功能表的資訊。  
+ 指標[MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)結構包含功能表的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  值，如果函式成功，傳回的值為非零值;否則，傳回的值為零。  
@@ -688,16 +688,16 @@ BOOL GetMenuItemInfo(
  識別項或功能表項目，以取得相關資訊的位置。 此參數的意義取決於值`ByPos`。  
   
  *lpMenuItemInfo*  
- 指標[MENUITEMINFO](http://msdn.microsoft.com/library/windows/desktop/ms647578)，如下所述，在 Windows SDK 中，包含功能表的相關資訊。  
+ 指標[MENUITEMINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa)，如下所述，在 Windows SDK 中，包含功能表的相關資訊。  
   
  *fByPos*  
  值，指定的意義`nIDItem`。 根據預設，`ByPos`為 FALSE，表示該 uItem 是功能表項目識別項。 如果`ByPos`未設定為 FALSE，指出功能表項目位置。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)、 Windows SDK 中所述。  
+ 如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)、 Windows SDK 中所述。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的行為的 Win32 函式[GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980)、 Windows SDK 中所述。 請注意，在 MFC 實作`GetMenuItemInfo`，請勿使用功能表的控制代碼。  
+ 此成員函式實作的行為的 Win32 函式[GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa)、 Windows SDK 中所述。 請注意，在 MFC 實作`GetMenuItemInfo`，請勿使用功能表的控制代碼。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
@@ -855,7 +855,7 @@ BOOL InsertMenu(
   
 |nFlags|LpszNewItem 的解譯|  
 |------------|-----------------------------------|  
-|MF_OWNERDRAW|包含應用程式所提供的 32 位元值，應用程式可用來維護功能表項目相關聯的其他資料。 這個 32 位元值是在應用程式可用`itemData`所提供的結構成員[WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925)並[WM_DRAWITEM](http://msdn.microsoft.com/library/windows/desktop/bb775923)訊息。 功能表項目最初顯示或變更時，會傳送這些訊息。|  
+|MF_OWNERDRAW|包含應用程式所提供的 32 位元值，應用程式可用來維護功能表項目相關聯的其他資料。 這個 32 位元值是在應用程式可用`itemData`所提供的結構成員[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)並[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)訊息。 功能表項目最初顯示或變更時，會傳送這些訊息。|  
 |MF_STRING|包含以 null 終止的字串的長指標。 這是預設解譯。|  
 |MF_SEPARATOR|*LpszNewItem*參數會被忽略 （不需要）。|  
   
@@ -889,7 +889,7 @@ BOOL InsertMenuItem(
   
 ### <a name="parameters"></a>參數  
  *uItem*  
- 請參閱說明*uItem*中[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988) Windows SDK 中。  
+ 請參閱說明*uItem*中[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) Windows SDK 中。  
   
  *lpMenuItemInfo*  
  請參閱說明*lpmii*在`InsertMenuItem`Windows SDK 中。  
@@ -898,7 +898,7 @@ BOOL InsertMenuItem(
  請參閱說明*fByPosition*在`InsertMenuItem`Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
- 此函式會包裝[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)、 Windows SDK 中所述。  
+ 此函式會包裝[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema)、 Windows SDK 中所述。  
   
 ##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  從應用程式的可執行檔載入功能表資源，並將它附加至`CMenu`物件。  
@@ -933,13 +933,13 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
 ### <a name="parameters"></a>參數  
  *lpMenuTemplate*  
- 指向功能表範本 (也就是單一[MENUITEMTEMPLATEHEADER](http://msdn.microsoft.com/library/windows/desktop/ms647583)結構以及一或多個集合[MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581)結構)。 如需有關這些兩個結構的詳細資訊，請參閱 Windows SDK。  
+ 指向功能表範本 (也就是單一[MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader)結構以及一或多個集合[MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)結構)。 如需有關這些兩個結構的詳細資訊，請參閱 Windows SDK。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 載入功能表資源，非零值。否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 功能表範本是後面接著一或多個集合的標頭[MENUITEMTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms647581)結構，每個都可能包含一或多個功能表項目和快顯功能表。  
+ 功能表範本是後面接著一或多個集合的標頭[MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)結構，每個都可能包含一或多個功能表項目和快顯功能表。  
   
  版本號碼應為 0。  
   
@@ -1131,10 +1131,10 @@ BOOL SetDefaultItem(
  值，指定的意義*uItem*。 如果此參數為 FALSE 時， *uItem*是功能表項目識別碼。 否則，它是功能表項目位置。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)、 Windows SDK 中所述。  
+ 如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)、 Windows SDK 中所述。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 函式行為[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)、 Windows SDK 中所述。  
+ 此成員函式實作的 Win32 函式行為[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem)、 Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CMenu::InsertMenu](#insertmenu)。  
@@ -1168,7 +1168,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
   
 ### <a name="parameters"></a>參數  
  *lpcmi*  
- 指標[MENUINFO](http://msdn.microsoft.com/library/windows/desktop/ms647575)結構包含功能表的資訊。  
+ 指標[MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)結構包含功能表的資訊。  
   
 ### <a name="return-value"></a>傳回值  
  值，如果函式成功，傳回的值為非零值;否則，傳回的值為零。  
@@ -1234,7 +1234,7 @@ BOOL SetMenuItemInfo(
   
 ### <a name="parameters"></a>參數  
  *uItem*  
- 請參閱說明*uItem*中[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001) Windows SDK 中。  
+ 請參閱說明*uItem*中[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) Windows SDK 中。  
   
  *lpMenuItemInfo*  
  請參閱說明*lpmii*在`SetMenuItemInfo`Windows SDK 中。  
@@ -1243,7 +1243,7 @@ BOOL SetMenuItemInfo(
  請參閱說明*fByPosition*在`SetMenuItemInfo`Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
- 此函式會包裝[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)、 Windows SDK 中所述。  
+ 此函式會包裝[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa)、 Windows SDK 中所述。  
   
 ##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  會浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。  
@@ -1259,7 +1259,7 @@ BOOL TrackPopupMenu(
   
 ### <a name="parameters"></a>參數  
  *nFlags*  
- 指定螢幕位置和滑鼠位置的旗標。 請參閱[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002)取得一份可用的旗標。  
+ 指定螢幕位置和滑鼠位置的旗標。 請參閱[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)取得一份可用的旗標。  
   
  *x*  
  指定螢幕座標中的快顯功能表的水平位置。 值而定*nFlags*參數，功能表可以是靠左對齊、 靠右對齊或置中相對於此位置。  
@@ -1274,7 +1274,7 @@ BOOL TrackPopupMenu(
  忽略。  
   
 ### <a name="return-value"></a>傳回值  
- 這個方法會傳回呼叫的結果[TrackPopupMenu](http://msdn.microsoft.com/library/windows/desktop/ms648002) Windows SDK 中。  
+ 這個方法會傳回呼叫的結果[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
  浮動的快顯功能表可以出現在螢幕上的任何位置。  
@@ -1296,7 +1296,7 @@ BOOL TrackPopupMenuEx(
   
 ### <a name="parameters"></a>參數  
  *fuFlags*  
- 指定不同的函式，如擴充的功能表。 如需所有值的清單和它們的意義，請參閱[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
+ 指定不同的函式，如擴充的功能表。 如需所有值的清單和它們的意義，請參閱[TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)。  
   
  *x*  
  指定螢幕座標中的快顯功能表的水平位置。  
@@ -1308,15 +1308,15 @@ BOOL TrackPopupMenuEx(
  視窗擁有快顯功能表，並從 [建立] 功能表中接收訊息的指標。 這個視窗可以是任何視窗，從目前的應用程式，但不能是 NULL。 如果您指定在 TPM_NONOTIFY *fuFlags*參數，此函式不會傳送任何訊息給*pWnd*。 函式必須傳回所指的視窗*pWnd*收到 WM_COMMAND 訊息。  
   
  *lptpm*  
- 指標[產生 TPMPARAMS](http://msdn.microsoft.com/library/windows/desktop/ms647586)不應該重疊結構，指定功能表的螢幕區域。 這個參數可以是 NULL。  
+ 指標[產生 TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams)不應該重疊結構，指定功能表的螢幕區域。 這個參數可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果您指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值是使用者選取項目的功能表項目識別碼。 如果使用者取消 [] 功能表中，而不需要進行選擇，或發生錯誤時，傳回的值為 0。  
   
- 如果您未指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值會是零，如果函式成功，0 失敗。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ 如果您未指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值會是零，如果函式成功，0 失敗。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
- 浮動的快顯功能表可以出現在螢幕上的任何位置。 如需有關如何建立快顯功能表時，處理錯誤的詳細資訊，請參閱 < [TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
+ 浮動的快顯功能表可以出現在螢幕上的任何位置。 如需有關如何建立快顯功能表時，處理錯誤的詳細資訊，請參閱 < [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 CTRLTEST](../../visual-cpp-samples.md)   

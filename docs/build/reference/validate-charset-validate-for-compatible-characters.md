@@ -1,5 +1,5 @@
 ---
-title: -驗證-字元集 （驗證相容的字元） |Microsoft 文件
+title: -驗證-字元集 （驗證字元是否相容） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0804d9d2714cc8c4f065b6908788c067c34ca44b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adfda3d287bbea6c85ae6d4bcebe009b610d719e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219288"
 ---
-# <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （驗證相容的字元）
+# <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （驗證字元相容)
 驗證的原始程式檔文字只包含字元可表示為 utf-8。  
   
 ## <a name="syntax"></a>語法  
@@ -35,25 +35,25 @@ ms.locfileid: "32377384"
 ```  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 **/validate-charset**選項，以驗證您的原始程式碼包含只可以用來表示這兩個來源字元集的字元設定和執行字元集。 當您指定這項檢查會自動啟用 **/source-charset**， **/execution-charset**，或 **/utf-8**編譯器選項。 您可以藉由指定明確停用這項檢查 **/ 驗證-charset-** 選項。  
+ 您可以使用 **/validate-charset**選項，以驗證您的原始程式碼包含只可以用來表示這兩個來源字元集的字元設定和執行字元集。 這項檢查會自動啟用，當您指定 **/source-charset**， **/execution-charset**，或 **/utf-8**編譯器選項。 您可以藉由指定明確停用這項檢查 **/ 驗證-字元集-** 選項。  
   
- 根據預設，Visual Studio 會偵測來判斷來源檔案是否已編碼的 Unicode 格式，例如，utf-8 或 utf-16 位元組順序標記。 如果找到沒有位元組順序標記，它會假設來源檔案編碼使用目前使用者的字碼頁，除非您指定的字碼頁使用 **/utf-8**或 **/source-charset**選項。 Visual Studio 可讓您使用數種字元編碼的任何儲存您的 c + + 程式碼。 來源和執行字元集的相關資訊，請參閱[字元集](../../cpp/character-sets.md)語言文件中。 一份支援程式碼頁面識別碼和字元集的名稱，請參閱[程式碼頁面識別碼](http://msdn.microsoft.com/library/windows/desktop/dd317756)。  
+ 根據預設，Visual Studio 會偵測以判斷原始程式檔是否編碼的 Unicode 格式，例如 utf-16 或 utf-8 位元組順序標記。 如果找到沒有位元組順序標記，它就會假設來源檔案編碼使用目前使用者的字碼頁，除非您已使用指定的字碼頁 **/utf-8**或 **/source-charset**選項。 Visual Studio 可讓您使用數種字元編碼的任何儲存您的 c + + 程式碼。 來源和執行字元集的相關資訊，請參閱[字元集](../../cpp/character-sets.md)語言文件中。 一份支援的字碼頁識別項與設定名稱的字元，請參閱[字碼頁識別項](/windows/desktop/Intl/code-page-identifiers)。  
   
- Visual Studio 會使用 utf-8，做為來源字元集和執行字元集之間轉換期間的內部字元編碼。 如果原始程式檔中的字元不能以執行字元集來表示，utf-8 轉換取代問號 '？ ' 字元。 **/Validate-charset**選項會使編譯如果發生這種情況會報告警告。  
+ Visual Studio 會使用 utf-8，做為原始程式碼字元集和執行字元集之間轉換時的內部字元編碼。 如果原始程式檔中的字元不能以執行字元集來表示，utf-8 轉換會以替代問號 '？ ' 字元。 **/Validate-charset**選項會使編譯發生這種情況時，回報警告。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
 1.  開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  展開**組態屬性**， **C/c + +**，**命令列**資料夾。  
+2.  依序展開**組態屬性**， **C/c + +**，**命令列**資料夾。  
   
-3.  在**進階選項**，新增 **/validate-charset**選項，並指定您的慣用編碼方式。  
+3.  在 **進階選項**，新增 **/validate-charset**選項，並指定您慣用的編碼方式。  
   
 4.  選擇**確定**以儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
- [/execution-charset (設定執行 Character Set)](../../build/reference/execution-charset-set-execution-character-set.md)   
- [/source-charset (設定來源 Character Set)](../../build/reference/source-charset-set-source-character-set.md)   
+ [/execution-charset （設定執行字元集）](../../build/reference/execution-charset-set-execution-character-set.md)   
+ [/source-charset （設定來源字元集）](../../build/reference/source-charset-set-source-character-set.md)   
  [/utf-8 (將來源和可執行檔字元集設定為 UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

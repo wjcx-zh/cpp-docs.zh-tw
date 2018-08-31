@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 186a6705649cee7095d3d2e4c4bb237498fdcea0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336857"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221267"
 ---
 # <a name="exception-processing"></a>例外狀況處理
 當程式執行時，可能會發生異常狀況和稱為 「 例外狀況 」 的錯誤數目。 這些可能包括用盡記憶體、 資源配置錯誤，以及找不到檔案。  
@@ -350,7 +350,7 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式，如果呼叫基礎的系統記憶體配置器 (例如**malloc**並[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 函式) 失敗。 您不需要呼叫它**新**因為**新**會擲回記憶體例外狀況會自動在記憶體配置失敗。  
+ 呼叫此函式，如果呼叫基礎的系統記憶體配置器 (例如**malloc**並[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 函式) 失敗。 您不需要呼叫它**新**因為**新**會擲回記憶體例外狀況會自動在記憶體配置失敗。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
@@ -444,7 +444,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
  處理結果的程式碼，指出例外狀況的原因。  
   
 ### <a name="remarks"></a>備註  
- 以 hresult 做為引數的版本會將該結果程式碼轉換成對應的 SCODE。 如需有關 HRESULT 和 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。  
+ 以 hresult 做為引數的版本會將該結果程式碼轉換成對應的 SCODE。 如需有關 HRESULT 和 SCODE 的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  

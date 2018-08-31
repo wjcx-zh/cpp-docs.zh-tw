@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 508655dbfeb2d06d936d2b73d5435cf04c860f4b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a4acb718d44a5abcf4413cbb7f026e4a8ea0f57b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598930"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218085"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在複製資源時變更其語言或條件
 
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。
 
-- 資源的語言就是識別資源的語言。 這由[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)來協助識別您要尋找的資源。 (不過，各語言的資源可能有與文字無關的差異，例如，只能在日文鍵盤上作用的快速鍵，或只適用於中文當地語系化組建的點陣圖等等)。
+- 資源的語言就是識別資源的語言。 這由[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)來協助識別您要尋找的資源。 (不過，各語言的資源可能有與文字無關的差異，例如，只能在日文鍵盤上作用的快速鍵，或只適用於中文當地語系化組建的點陣圖等等)。
 
 - 資源的條件是已定義的符號，用來識別使用此特定資源副本時的條件。
 

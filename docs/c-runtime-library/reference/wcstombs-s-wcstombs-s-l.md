@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416497"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216973"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
 
@@ -114,42 +114,42 @@ errno_t _wcstombs_s_l(
 
 |錯誤狀況|傳回值和**errno**|
 |---------------------|------------------------------|
-|*mbstr*是**NULL**和*sizeInBytes* > 0|**EINVAL**|
+|*mbstr*已**NULL**並*sizeInBytes* > 0|**EINVAL**|
 |*wcstr*是**NULL**|**EINVAL**|
-|目的地緩衝區為太小，無法包含已轉換的字串 (除非*計數*是 **_TRUNCATE**; 請參閱下面的備註)|**ERANGE**|
+|目的緩衝區太小而無法包含已轉換的字串 (除非*計數*是 **_TRUNCATE**; 請參閱下面的 < 備註 >)|**ERANGE**|
 
-如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函數會傳回錯誤碼，並設定**errno**如下表所示。
+如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回錯誤碼，並設定**errno**資料表中所示。
 
 ## <a name="remarks"></a>備註
 
-**Wcstombs_s**函式所指向的寬字元字串，轉換為*wcstr*到儲存在緩衝區所指向的多位元組字元*mbstr*。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：
+**Wcstombs_s**函式會將所指向的寬字元字串轉換*wcstr*到儲存在緩衝區所指向的多位元組字元*mbstr*。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：
 
 - 遇到 Null 寬字元
 
 - 遇到無法轉換的寬字元
 
-- 儲存在位元組數目*mbstr*緩衝等於*計數*。
+- 儲存在位元組的數目*mbstr*緩衝 equals*計數*。
 
 目的字串一律會以 Null 結束 (即使發生錯誤亦然)。
 
-如果*計數*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然後**wcstombs_s**轉換的字串會盡量符合目的地緩衝區，同時仍留出空間給 null結束字元。 如果字串遭到截斷，則傳回值是**STRUNCATE**，和轉換會被視為成功。
+如果*計數*是特殊值[_TRUNCATE](../../c-runtime-library/truncate.md)，然後**wcstombs_s**的字串會轉換符合目的緩衝區，同時仍留出空間給 null 值結束字元。 如果字串被截斷時，傳回的值是**STRUNCATE**，而且轉換會視為成功。
 
-如果**wcstombs_s**成功轉換來源的字串，它會將大小以位元組為單位的已轉換的字串，包含 null 結束字元，放 *&#42;pReturnValue* (提供*pReturnValue*不**NULL**)。 發生這種情況即使*mbstr*引數是**NULL** ，並提供一個方式來判斷所需的緩衝區大小。 請注意，如果*mbstr*是**NULL**，*計數*會被忽略。
+如果**wcstombs_s**成功轉換來源字串中，它會在將大小以位元組為單位的已轉換的字串，包括 null 結束字元，將放置 *&#42;pReturnValue* (提供*pReturnValue*不是**NULL**)。 發生這種情況即使*mbstr*引數是**NULL** ，並提供一個方式來判斷所需的緩衝區大小。 請注意，如果*mbstr*是**NULL**，*計數*會被忽略。
 
-如果**wcstombs_s**遇到多位元組字元，不能轉換的寬字元放在 0  *&#42;pReturnValue*，設定目的地緩衝區為空字串，設定**errno**至**EILSEQ**，並傳回**EILSEQ**。
+如果**wcstombs_s**遇到寬字元，它無法轉換成多位元組字元，它會將 0 放 *&#42;pReturnValue*，將目的緩衝區設為空字串，設定**errno**要**EILSEQ**，並傳回**EILSEQ**。
 
-如果指向的序列*wcstr*和*mbstr*重疊，行為**wcstombs_s**是未定義。
+如果指向的序列所*wcstr*並*mbstr*重疊，就會有的行為**wcstombs_s**是未定義。
 
 > [!IMPORTANT]
-> 請確認*wcstr*和*mbstr*沒有重疊，而且*計數*會正確反映要轉換的寬字元數目。
+> 請確認*wcstr*並*mbstr*未重疊時，且*計數*正確反映要轉換的寬字元數目。
 
-**wcstombs_s**針對任何地區設定相關行為; 使用目前的地區設定 **_wcstombs_s_l**等同於**wcstombs**不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**wcstombs_s**針對任何地區設定相關行為; 會使用目前的地區設定 **_wcstombs_s_l**等同於**wcstombs**不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**wcstombs_s**|\<stdlib.h>|
 
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

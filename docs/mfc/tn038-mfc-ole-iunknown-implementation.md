@@ -28,23 +28,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf33139250e6876dde6d86f7e8ed144dbe23180
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42545774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215172"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 實作
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-OLE 2 的核心是「OLE 元件物件模型」或 COM。 COM 會定義合作物件如何彼此通訊的標準。 這包括「物件」外觀的詳細資料，包括如何在物件上分派方法。 COM 也會定義所有 COM 相容類別從其中衍生的基底類別。 此基底類別[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 雖然[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)介面指 c + + 類別、 COM 並非專屬於任何一種語言，它可以在 C、 PASCAL 或任何其他可支援的 COM 物件的二進位檔配置的語言實作。
+OLE 2 的核心是「OLE 元件物件模型」或 COM。 COM 會定義合作物件如何彼此通訊的標準。 這包括「物件」外觀的詳細資料，包括如何在物件上分派方法。 COM 也會定義所有 COM 相容類別從其中衍生的基底類別。 此基底類別[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 雖然[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面指 c + + 類別、 COM 並非專屬於任何一種語言，它可以在 C、 PASCAL 或任何其他可支援的 COM 物件的二進位檔配置的語言實作。
 
-OLE 會將所有衍生自類別[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)為 「 介面 」。 這是重要的區別，因為 「 介面 」 這類[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)不夾帶任何實作。 它只會定義物件通訊所用的通訊協定，而不定義實作所執行的具體內容。 這對允許最大彈性的系統而言是合理的。 MFC 的工作是實作 MFC/C++ 程式的預設行為。
+OLE 會將所有衍生自類別[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)為 「 介面 」。 這是重要的區別，因為 「 介面 」 這類[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)不夾帶任何實作。 它只會定義物件通訊所用的通訊協定，而不定義實作所執行的具體內容。 這對允許最大彈性的系統而言是合理的。 MFC 的工作是實作 MFC/C++ 程式的預設行為。
 
-若要了解的 MFC 實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)您必須先了解此介面的功能。 簡化的版本[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)定義如下：
+若要了解的 MFC 實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)您必須先了解此介面的功能。 簡化的版本[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)定義如下：
 
 ```cpp
 class IUnknown
@@ -59,9 +59,9 @@ public:
 > [!NOTE]
 > 某些必要的呼叫慣例詳細資料，例如此圖中省略了 `__stdcall`。
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)並[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)成員函式會控制物件的記憶體管理。 COM 使用參考計數配置來追蹤物件。 您永遠不會如同在 C++ 中一般地參考物件。 相反地，一定會透過指標來參考 COM 物件。 若要釋放物件擁有者完成時使用它，該物件的[釋放](http://msdn.microsoft.com/library/windows/desktop/ms682317)成員稱為 （而不是使用運算子 delete，如同傳統的 c + + 物件）。 參考計數機制可讓單一物件的多個參考接受管理。 實作[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)並[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)維護參考計數物件上的，直到其參考計數到達零時，不會刪除物件。
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成員函式會控制物件的記憶體管理。 COM 使用參考計數配置來追蹤物件。 您永遠不會如同在 C++ 中一般地參考物件。 相反地，一定會透過指標來參考 COM 物件。 若要釋放物件擁有者完成時使用它，該物件的[釋放](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成員稱為 （而不是使用運算子 delete，如同傳統的 c + + 物件）。 參考計數機制可讓單一物件的多個參考接受管理。 實作[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[版本](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)維護參考計數物件上的，直到其參考計數到達零時，不會刪除物件。
 
-[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)並[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)從實作觀點來看相當直接明瞭。 以下是一般實作：
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)從實作觀點來看相當直接明瞭。 以下是一般實作：
 
 ```cpp
 ULONG CMyObj::AddRef()
@@ -80,7 +80,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員函式會更有趣。 它並不擁有物件的成員函式僅會吸引[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)並[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)— 下來還要告訴物件執行更多的項目，比[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)提供。 這正是[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)很有用。 它可以讓您在相同的物件上取得不同的「介面」。 這些介面通常衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)並加入其他功能，藉由新增新的成員函式。 COM 介面永遠不會有在介面中宣告的成員變數，且所有成員函式都宣告為純虛擬。 例如，套用至物件的
+[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))成員函式會更有趣。 它並不擁有物件的成員函式僅會吸引[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)— 下來還要告訴物件執行更多的項目，比[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)提供。 這正是[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))很有用。 它可以讓您在相同的物件上取得不同的「介面」。 這些介面通常衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)並加入其他功能，藉由新增新的成員函式。 COM 介面永遠不會有在介面中宣告的成員變數，且所有成員函式都宣告為純虛擬。 例如，套用至物件的
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -90,7 +90,7 @@ public:
 };
 ```
 
-若要取得 IPrintInterface，如果您只有[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)使用`IID`的`IPrintInterface`。 `IID` 是唯一可識別介面的 128 位元數字。 您或 OLE 定義的每個介面都有 `IID`。 如果*pUnk*是一個指向[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)物件，從其擷取 IPrintInterface 的程式碼可能是：
+若要取得 IPrintInterface，如果您只有[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，呼叫[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))使用`IID`的`IPrintInterface`。 `IID` 是唯一可識別介面的 128 位元數字。 您或 OLE 定義的每個介面都有 `IID`。 如果*pUnk*是一個指向[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)物件，從其擷取 IPrintInterface 的程式碼可能是：
 
 ```cpp
 IPrintInterface* pPrint = NULL;
@@ -102,7 +102,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-這好像相當簡單，但您要如何實作支援 IPrintInterface 的物件和[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)介面在此情況下它很簡單，因為 IPrintInterface 直接衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) -藉由實作 iprintinterface，即可[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)則會自動支援。 例如: 
+這好像相當簡單，但您要如何實作支援 IPrintInterface 的物件和[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面在此情況下它很簡單，因為 IPrintInterface 直接衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -藉由實作 iprintinterface，即可[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)則會自動支援。 例如: 
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -114,7 +114,7 @@ class CPrintObj : public CPrintInterface
 };
 ```
 
-實作[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)並[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)會完全相同實作上述。 `CPrintObj::QueryInterface` 會看起來像這樣：
+實作[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)會完全相同實作上述。 `CPrintObj::QueryInterface` 會看起來像這樣：
 
 ```cpp
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
@@ -129,7 +129,7 @@ HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)
 }
 ```
 
-如您所見，如果已辨識介面識別碼 (IID)，則會傳回指標給您的物件，否則就會發生錯誤。 也請注意，成功[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)導致隱含[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)。 當然，您也必須實作 CEditObj::Print。 這是簡單的因為 IPrintInterface 直接衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)介面。 不過，如果您想要支援兩個不同的介面，兩者都衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，請考慮下列：
+如您所見，如果已辨識介面識別碼 (IID)，則會傳回指標給您的物件，否則就會發生錯誤。 也請注意，成功[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))導致隱含[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)。 當然，您也必須實作 CEditObj::Print。 這是簡單的因為 IPrintInterface 直接衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面。 不過，如果您想要支援兩個不同的介面，兩者都衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，請考慮下列：
 
 ```cpp
 class IEditInterface : public IUnkown
@@ -244,7 +244,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 }
 ```
 
-請注意，大部分的[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)實作都會放入 CEditPrintObj 類別而不是複製 ceditprintobj:: Ceditobj 和 ceditprintobj:: Cprintobj 中的程式碼。 這樣可以減少程式碼數量，並且避免錯誤。 此處的重點是，自 IUnknown 介面就可以呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)擷取任何介面的物件可能支援，並從每個介面就可以執行相同的動作。 這表示所有[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)從每個介面函式的行為必須完全相同的方式。 為了讓這些內嵌物件呼叫「外部物件」中的實作，需使用返回指標 (m_pParent)。 M_pParent 指標會在 CEditPrintObj 建構函式期間初始化。 然後您也會實作 CEditPrintObj::CPrintObj::PrintObject 和 CEditPrintObj::CEditObj::EditObject。 新增許多程式碼以新增一項功能 - 編輯物件的功能。 幸運的是，介面很少只具有單一個成員函式 (雖然還是會發生)，在此情況下，EditObject 和 PrintObject 通常會結合成單一介面。
+請注意，大部分的[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)實作都會放入 CEditPrintObj 類別而不是複製 ceditprintobj:: Ceditobj 和 ceditprintobj:: Cprintobj 中的程式碼。 這樣可以減少程式碼數量，並且避免錯誤。 此處的重點是，自 IUnknown 介面就可以呼叫[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))擷取任何介面的物件可能支援，並從每個介面就可以執行相同的動作。 這表示所有[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))從每個介面函式的行為必須完全相同的方式。 為了讓這些內嵌物件呼叫「外部物件」中的實作，需使用返回指標 (m_pParent)。 M_pParent 指標會在 CEditPrintObj 建構函式期間初始化。 然後您也會實作 CEditPrintObj::CPrintObj::PrintObject 和 CEditPrintObj::CEditObj::EditObject。 新增許多程式碼以新增一項功能 - 編輯物件的功能。 幸運的是，介面很少只具有單一個成員函式 (雖然還是會發生)，在此情況下，EditObject 和 PrintObject 通常會結合成單一介面。
 
 這是此簡單案例的許多種解釋及許多程式碼。 MFC/OLE 類別提供更簡單的替代方案。 MFC 實作所使用的技術和利用訊息對應包裝 Windows 訊息的方法類似。 這項功能稱為*介面對應*會在下一節中討論。
 
@@ -252,11 +252,11 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(REFIID iid, void** ppvObj)
 
 MFC/OLE 所包含的「介面對應」實作在概念和執行上與 MFC 的「訊息對應」和「分派對應」相似。 MFC 介面對應的核心功能如下所示：
 
-- 標準實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，內建`CCmdTarget`類別。
+- 標準實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，內建`CCmdTarget`類別。
 
-- 維護參考計數，來修改[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[版本](http://msdn.microsoft.com/library/windows/desktop/ms682317)
+- 維護參考計數，來修改[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)和[版本](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)
 
-- 資料驅動的實作[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)
+- 資料驅動的實作[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))
 
 此外，介面對應支援下列進階功能：
 
@@ -268,7 +268,7 @@ MFC/OLE 所包含的「介面對應」實作在概念和執行上與 MFC 的「�
 
 如需有關彙總的詳細資訊，請參閱 <<c0> [ 彙總](/windows/desktop/com/aggregation)主題。
 
-MFC 的介面對應支援以 `CCmdTarget` 類別為基礎。 `CCmdTarget` "*有一個*"參考計數，以及所有成員函式相關聯[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)實作 (例如是都參考計數`CCmdTarget`)。 若要建立支援 OLE COM 的類別，您要從 `CCmdTarget` 衍生類別，並使用不同的巨集和 `CCmdTarget` 的成員函式實作所需的介面。 MFC 的實作使用巢狀類別定義如同上述範例中的每個介面實作。 利用 IUnknown 的標準實作以及許多會排除部分重複程式碼的巨集，可以更方便進行。
+MFC 的介面對應支援以 `CCmdTarget` 類別為基礎。 `CCmdTarget` "*有一個*"參考計數，以及所有成員函式相關聯[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)實作 (例如是都參考計數`CCmdTarget`)。 若要建立支援 OLE COM 的類別，您要從 `CCmdTarget` 衍生類別，並使用不同的巨集和 `CCmdTarget` 的成員函式實作所需的介面。 MFC 的實作使用巢狀類別定義如同上述範例中的每個介面實作。 利用 IUnknown 的標準實作以及許多會排除部分重複程式碼的巨集，可以更方便進行。
 
 ## <a name="interface-map-basics"></a>介面對應基本知識
 
@@ -288,7 +288,7 @@ MFC 的介面對應支援以 `CCmdTarget` 類別為基礎。 `CCmdTarget` "*有�
 
 7. 使用 METHOD_PROLOGUE 巨集來存取父項、 `CCmdTarget`-衍生物件。
 
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，以及[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可以委派給`CCmdTarget`這些函式的實作 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。
+8. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)，[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，以及[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))可以委派給`CCmdTarget`這些函式的實作 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。
 
 上述的 CPrintEditObj 範例可以下列方式實作：
 
@@ -312,7 +312,7 @@ protected:
 };
 ```
 
-上述宣告會建立一個衍生自 `CCmdTarget` 的類別。 DECLARE_INTERFACE_MAP 巨集會告知架構這個類別會有自訂介面對應。 颾魤 ㄛ BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集會定義巢狀的類別，在此情況下使用 CEditObj 和 cprintobj 等名稱 （X 只能用來區分巢狀的類別的全域類別的開頭為"C"和介面類別的以"I"開頭）。 這些類別的兩個巢狀成員隨即建立：分別是 m_CEditObj 和 m_CPrintObj。 巨集會自動宣告[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)， [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)，並[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函式，因此您只會宣告函式特有此介面：EditObject 和 PrintObject (使用 STDMETHOD 使用 OLE 巨集，讓 **_stdcall**虛擬關鍵字並提供為適用於目標平台)。
+上述宣告會建立一個衍生自 `CCmdTarget` 的類別。 DECLARE_INTERFACE_MAP 巨集會告知架構這個類別會有自訂介面對應。 颾魤 ㄛ BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集會定義巢狀的類別，在此情況下使用 CEditObj 和 cprintobj 等名稱 （X 只能用來區分巢狀的類別的全域類別的開頭為"C"和介面類別的以"I"開頭）。 這些類別的兩個巢狀成員隨即建立：分別是 m_CEditObj 和 m_CPrintObj。 巨集會自動宣告[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)， [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，並[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))函式，因此您只會宣告函式特有此介面：EditObject 和 PrintObject (使用 STDMETHOD 使用 OLE 巨集，讓 **_stdcall**虛擬關鍵字並提供為適用於目標平台)。
 
 實作這個類別的介面對應：
 
@@ -323,9 +323,9 @@ BEGIN_INTERFACE_MAP(CPrintEditObj, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-這能分別讓 IID_IPrintInterface IID 和 m_CPrintObj 連結，讓 IID_IEditInterface 和 m_CEditObj 連結。 `CCmdTarget`實作[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) 會將指標傳回 m_CPrintObj 和 m_CEditObj 要求時使用此對應。 不需要包含 `IID_IUnknown` 的項目；架構將在要求 `IID_IUnknown` 時使用對應中的第一個介面 (在此情況下為 m_CPrintObj)。
+這能分別讓 IID_IPrintInterface IID 和 m_CPrintObj 連結，讓 IID_IEditInterface 和 m_CEditObj 連結。 `CCmdTarget`實作[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) (`CCmdTarget::ExternalQueryInterface`) 會將指標傳回 m_CPrintObj 和 m_CEditObj 要求時使用此對應。 不需要包含 `IID_IUnknown` 的項目；架構將在要求 `IID_IUnknown` 時使用對應中的第一個介面 (在此情況下為 m_CPrintObj)。
 
-即使 BEGIN_INTERFACE_PART 巨集會自動宣告[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)， [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)並[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)為您的函式，您仍然需要實作它們：
+即使 BEGIN_INTERFACE_PART 巨集會自動宣告[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)， [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)並[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))為您的函式，您仍然需要實作它們：
 
 ```cpp
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()
@@ -381,7 +381,7 @@ CEditPrintObj::CPrintObj 的實作會類似上述 CEditPrintObj::CEditObj 的定
 
 ### <a name="using-an-aggregate-object"></a>使用彙總物件
 
-若要使用彙總物件，則必須有某種方式將彙總繫結到 QueryInterface 機制。 換句話說，彙總物件的行為必須如同物件的原生組件一般。 那麼要如何未繫結到 MFC 的介面對應機制，除了 INTERFACE_PART 巨集，其中巢狀的物件對應至 IID，您也可以宣告彙總物件的一部分您`CCmdTarget`衍生的類別。 若要這樣做，會使用 INTERFACE_AGGREGATE 巨集。 這可讓您指定的成員變數 (必須是指標[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)或衍生類別)，也就是整合到介面對應機制。 如果指標不是 NULL 時`CCmdTarget::ExternalQueryInterface`是呼叫，架構會自動呼叫彙總的物件[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員函式，如果`IID`要求不是其中一個原生`IID`s支援`CCmdTarget`物件本身。
+若要使用彙總物件，則必須有某種方式將彙總繫結到 QueryInterface 機制。 換句話說，彙總物件的行為必須如同物件的原生組件一般。 那麼要如何未繫結到 MFC 的介面對應機制，除了 INTERFACE_PART 巨集，其中巢狀的物件對應至 IID，您也可以宣告彙總物件的一部分您`CCmdTarget`衍生的類別。 若要這樣做，會使用 INTERFACE_AGGREGATE 巨集。 這可讓您指定的成員變數 (必須是指標[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)或衍生類別)，也就是整合到介面對應機制。 如果指標不是 NULL 時`CCmdTarget::ExternalQueryInterface`是呼叫，架構會自動呼叫彙總的物件[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))成員函式，如果`IID`要求不是其中一個原生`IID`s支援`CCmdTarget`物件本身。
 
 #### <a name="to-use-the-interfaceaggregate-macro"></a>使用 INTERFACE_AGGREGATE 巨集
 
@@ -432,15 +432,15 @@ BEGIN_INTERFACE_MAP(CAggrExample, CCmdTarget)
 END_INTERFACE_MAP()
 ```
 
-m_lpAggrInner 變數會在建構函式中初始化為 NULL。 此架構會忽略 NULL 成員變數中的預設實作[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。 `OnCreateAggregates` 是實際建立彙總物件的好地方。 如果您正在建立 `COleObjectFactory` MFC 實作外部的物件，您必須明確地呼叫它。 討論到建立彙總物件時，在 `CCmdTarget::OnCreateAggregates` 中建立彙總和使用 `CCmdTarget::GetControllingUnknown` 的原因將會變得很明確。
+m_lpAggrInner 變數會在建構函式中初始化為 NULL。 此架構會忽略 NULL 成員變數中的預設實作[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。 `OnCreateAggregates` 是實際建立彙總物件的好地方。 如果您正在建立 `COleObjectFactory` MFC 實作外部的物件，您必須明確地呼叫它。 討論到建立彙總物件時，在 `CCmdTarget::OnCreateAggregates` 中建立彙總和使用 `CCmdTarget::GetControllingUnknown` 的原因將會變得很明確。
 
-這項技術可提供您的物件彙總物件支援的所有介面及其原生介面。 如果您只想要彙總支援介面的子集，您可以覆寫 `CCmdTarget::GetInterfaceHook`。 這可讓您極低階的 hookability，類似於[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)。 您通常會想要彙總支援的所有介面。
+這項技術可提供您的物件彙總物件支援的所有介面及其原生介面。 如果您只想要彙總支援介面的子集，您可以覆寫 `CCmdTarget::GetInterfaceHook`。 這可讓您極低階的 hookability，類似於[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))。 您通常會想要彙總支援的所有介面。
 
 ### <a name="making-an-object-implementation-aggregatable"></a>讓物件實作可以彙總
 
-物件可以彙總，實作[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)， [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)，並[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)必須委派給"controlling unknown"。 換句話說，讓它成為物件的一部分，它必須委派[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)， [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)，並[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)給不同的物件，也衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 這個 "controlling unknown" 可在建立物建時提供給物件，亦即提供給 `COleObjectFactory` 的實作。 實作此項目會帶來少量的額外負荷，在某些情況下不需要這樣做，因此 MFC 使其為選擇性項目。 若要讓物件彙總，您可以從物件的建構函式呼叫 `CCmdTarget::EnableAggregation`。
+物件可以彙總，實作[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)， [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，並[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))必須委派給"controlling unknown"。 換句話說，讓它成為物件的一部分，它必須委派[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)， [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，並[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))給不同的物件，也衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 這個 "controlling unknown" 可在建立物建時提供給物件，亦即提供給 `COleObjectFactory` 的實作。 實作此項目會帶來少量的額外負荷，在某些情況下不需要這樣做，因此 MFC 使其為選擇性項目。 若要讓物件彙總，您可以從物件的建構函式呼叫 `CCmdTarget::EnableAggregation`。
 
-如果物件也使用彙總，您也必須確定傳遞正確的 "controlling unknown" 給彙總物件。 通常這[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)建立彙總時，將會傳遞到物件的指標。 例如，pUnkOuter 參數是利用 `CoCreateInstance` 建立之物建的 "controlling unknown"。 正確的 "controlling unknown" 指標可以藉由呼叫 `CCmdTarget::GetControllingUnknown` 擷取。 然而，從函式傳回的值在建構函式期間無效。 基於這個理由，即使是從 `COleObjectFactory` 實作建立彙總，建議您只在 `CCmdTarget::OnCreateAggregates` 的覆寫中建立彙總，其中從 `GetControllingUnknown` 的傳回值是可靠的。
+如果物件也使用彙總，您也必須確定傳遞正確的 "controlling unknown" 給彙總物件。 通常這[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)建立彙總時，將會傳遞到物件的指標。 例如，pUnkOuter 參數是利用 `CoCreateInstance` 建立之物建的 "controlling unknown"。 正確的 "controlling unknown" 指標可以藉由呼叫 `CCmdTarget::GetControllingUnknown` 擷取。 然而，從函式傳回的值在建構函式期間無效。 基於這個理由，即使是從 `COleObjectFactory` 實作建立彙總，建議您只在 `CCmdTarget::OnCreateAggregates` 的覆寫中建立彙總，其中從 `GetControllingUnknown` 的傳回值是可靠的。
 
 另一個重點是物件在新增或釋放假造的參考計數時會管理正確的參考計數。 若要確保此情況，請務必呼叫 `ExternalAddRef` 和 `ExternalRelease` 而不是 `InternalRelease` 和 `InternalAddRef`。 我們很少在支援彙總的類別上呼叫 `InternalRelease` 或 `InternalAddRef`。
 
@@ -528,7 +528,7 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="remarks"></a>備註
 
-針對每個類別將實作的介面，您需要有一組 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART。 這些巨集會定義衍生自您定義之 OLE 介面的本機類別，並且定義該類別的內嵌成員變數。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)， [Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)，並[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員會自動宣告。 您必須包含屬於所實作之介面的其他成員函式的宣告 （這些宣告位於 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集之間）。
+針對每個類別將實作的介面，您需要有一組 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART。 這些巨集會定義衍生自您定義之 OLE 介面的本機類別，並且定義該類別的內嵌成員變數。 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)， [Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)，並[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))成員會自動宣告。 您必須包含屬於所實作之介面的其他成員函式的宣告 （這些宣告位於 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集之間）。
 
 *Iface*引數是您想要這類實作的 OLE 介面`IAdviseSink`，或`IPersistStorage`（或您自己的自訂介面）。
 
@@ -598,7 +598,7 @@ IUnknown
             IOleInPlaceFrameWindow
 ```
 
-如果物件實作`IOleInPlaceFrameWindow`，用戶端可能`QueryInterface`任何這些介面： `IOleUIWindow`， `IOleWindow`，或[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，除了 「 最具衍生性 」 介面`IOleInPlaceFrameWindow`（即您實際是實作）。 若要處理這您可以使用一個以上的 INTERFACE_PART 巨集對應至每個基底介面`IOleInPlaceFrameWindow`介面：
+如果物件實作`IOleInPlaceFrameWindow`，用戶端可能`QueryInterface`任何這些介面： `IOleUIWindow`， `IOleWindow`，或[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)，除了 「 最具衍生性 」 介面`IOleInPlaceFrameWindow`（即您實際是實作）。 若要處理這您可以使用一個以上的 INTERFACE_PART 巨集對應至每個基底介面`IOleInPlaceFrameWindow`介面：
 
 在類別定義檔中：
 
@@ -634,7 +634,7 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="remarks"></a>備註
 
-這個巨集可用來告知架構類別正在使用彙總物件。 它必須出現 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集之間。 彙總物件是個別物件，衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 藉由使用彙總及 INTERFACE_AGGREGATE 巨集，您可以讓彙總支援似乎直接物件所支援的所有介面。 *TheAggr*引數就是衍生自您類別的成員變數名稱[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或間接）。 INTERFACE_PART 巨集放在介面對應中時都必須遵循所有 INTERFACE_AGGREGATE 巨集。
+這個巨集可用來告知架構類別正在使用彙總物件。 它必須出現 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集之間。 彙總物件是個別物件，衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 藉由使用彙總及 INTERFACE_AGGREGATE 巨集，您可以讓彙總支援似乎直接物件所支援的所有介面。 *TheAggr*引數就是衍生自您類別的成員變數名稱[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) （直接或間接）。 INTERFACE_PART 巨集放在介面對應中時都必須遵循所有 INTERFACE_AGGREGATE 巨集。
 
 ## <a name="see-also"></a>另請參閱
 

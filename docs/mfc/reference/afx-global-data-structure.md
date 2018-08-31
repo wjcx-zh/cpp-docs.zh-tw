@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df970022ccc4f358864c3e3462ffea2b373cd00
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: fd4aadf875e16586286c97aa5bffe82d6faed31e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540189"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222299"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 `AFX_GLOBAL_DATA` 結構包含的欄位和方法，用於管理架構，或自訂應用程式外觀和行為。  
@@ -64,13 +64,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|初始化 `D2D`、 `DirectWrite`和 `WIC` Factory。 初始化主視窗之前先呼叫這個方法。|  
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|指出是否支援預先定義的 32 位元圖示。|  
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|判斷是否已初始化 `D2D` 。|  
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供呼叫 Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 方法的簡單方式。|  
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|提供簡單的方式呼叫 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)方法。|  
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|指出目前是否以高對比顯示圖像。|  
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|偵測到桌面功能表動畫和工作列自動隱藏功能的目前狀態。|  
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|註冊指定的 MFC 視窗類別。|  
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|釋出透過 GetITaskbarList 和 GetITaskbarList3 方法取得的介面。|  
 |[AFX_GLOBAL_DATA::Resume](#resume)|重新初始化內部函式指標，存取支援 Windows 的方法[佈景主題和視覺化樣式](/windows/desktop/Controls/visual-styles-overview)。|  
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供呼叫 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法的簡單方法。|  
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|提供簡單的方式呼叫 Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)方法。|  
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|建立指定的邏輯字型。|  
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|從剖析名稱建立並初始化殼層項目物件。|  
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|重新初始化架構使用的邏輯字型。|  
@@ -205,16 +205,16 @@ BOOL DrawTextOnGlass(
  [in]*hTheme*  
  處理佈景主題資料的視窗中，或為 NULL。 架構會使用指定的佈景主題來繪製文字，如果這個參數不是 NULL，且支援佈景主題。 否則，此架構不會使用佈景主題來繪製文字。  
   
- 使用[OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821)方法用來建立 HTHEME。  
+ 使用[OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata)方法用來建立 HTHEME。  
   
  [in]*pDC*  
  裝置內容的指標。  
   
  [in]*iPartId*  
- 具有想要的文字外觀之控制項組件。 如需詳細資訊，請參閱 [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 Parts 資料行。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。  
+ 具有想要的文字外觀之控制項組件。 如需詳細資訊，請參閱表格中的 Parts 資料行[組件與狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。  
   
  [in]*iStateId*  
- 具有想要的文字外觀的控制項狀態。 如需詳細資訊，請參閱 [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 States 資料行。  
+ 具有想要的文字外觀的控制項狀態。 如需詳細資訊，請參閱表格中的 States 資料行[組件與狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)。  
   
  [in]*先把 strText*  
  要繪製的文字。  
@@ -225,7 +225,7 @@ BOOL DrawTextOnGlass(
  [in]*dwFlags*  
  旗標的位元組合 (OR)，指定如何繪製指定文字。  
   
- 如果*hTheme*參數是`NULL`或佈景主題不會支援，且不會啟用，如果*nFormat*參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述有效旗標。 如果支援佈景主題， *dwFlags*的參數[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)方法描述有效的旗標。  
+ 如果*hTheme*參數是`NULL`或佈景主題不會支援，且不會啟用，如果*nFormat*參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述有效旗標。 如果支援佈景主題， *dwFlags*的參數[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)方法描述有效的旗標。  
   
  [in]*nGlowSize*  
  繪製指定文字前已繪製在背景上的光暈效果大小。 預設值為 0。  
@@ -237,16 +237,16 @@ BOOL DrawTextOnGlass(
  如果使用佈景主題來繪製指定的文字;，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 佈景主題會定義應用程式的視覺化樣式。 佈景主題不會用來繪製文字，如果*hTheme*參數為 NULL，或如果[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)不支援方法，或如果[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 組合已停用。  
+ 佈景主題會定義應用程式的視覺化樣式。 佈景主題不會用來繪製文字，如果*hTheme*參數為 NULL，或如果[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)不支援方法，或如果[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)(DWM) 組合已停用。  
   
 ### <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [組件和狀態](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [組件和狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)   
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
- [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
- [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [啟用並控制 DWM 組合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)   
+ [桌面視窗管理員](/windows/desktop/dwm/dwm-overview)   
+ [啟用並控制 DWM 組合](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 啟用或停用 Microsoft Active Accessibility 支援。  
@@ -323,19 +323,19 @@ COLORREF GetColor(int nColor);
   
 ### <a name="parameters"></a>參數   
  [in]*nColor*  
- 指定將擷取其色彩之使用者介面項目的值。 如需有效值的清單，請參閱 < *nIndex*的參數[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ 指定將擷取其色彩之使用者介面項目的值。 如需有效值的清單，請參閱 < *nIndex*的參數[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ### <a name="return-value"></a>傳回值  
  指定之使用者介面項目的 RGB 色彩值。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="remarks"></a>備註  
- 如果*nColor*參數超出範圍，傳回的值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，如果不支援的色彩，則傳回 NULL。  
+ 如果*nColor*參數超出範圍，傳回的值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)方法，如果不支援的色彩，則傳回 NULL。  
   
 ### <a name="see-also"></a>另請參閱  
 
- [GetSysColor 函式](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
+ [GetSysColor 函式](https://msdn.microsoft.com/library/windows/desktop/ms724371)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
  傳回儲存在全域資料中的 ID2D1Factory 介面的指標。 介面若未初始化，就會建立介面並設定預設參數。  
@@ -369,14 +369,14 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
   
 ### <a name="parameters"></a>參數   
  [in、 out]*資訊*  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可調整的度量資訊。  
+ A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可調整的度量資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。  
  
   
 ### <a name="see-also"></a>另請參閱   
- [NONCLIENTMETRICS 結構](http://msdn.microsoft.com/library/windows/desktop/ff729175)
+ [NONCLIENTMETRICS 結構](https://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
  擷取目前字型的文字字元高度。  
@@ -483,7 +483,7 @@ BOOL IsD2DInitialized() const;
  如果已初始化 D2D;，則為 TRUE。否則為 FALSE。  
   
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
-提供呼叫 Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 方法的簡單方式。  
+提供簡單的方式呼叫 Windows [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)方法。  
   
   
 ```  
@@ -491,11 +491,11 @@ BOOL IsDwmCompositionEnabled();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 則為 TRUE[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 組合已啟用，否則為 FALSE。  
+ 則為 TRUE[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)(DWM) 組合已啟用，否則為 FALSE。  
   
 ### <a name="see-also"></a>另請參閱    
- [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [啟用並控制 DWM 組合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [桌面視窗管理員](/windows/desktop/dwm/dwm-overview)   
+ [啟用並控制 DWM 組合](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
  指出目前是否以高對比顯示圖像。    
@@ -649,7 +649,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  要註冊之視窗類別的名稱。  
   
 ### <a name="return-value"></a>傳回值  
- 如果這個方法成功，則已註冊類別的限定的名稱否則，請[資源例外狀況](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
+ 如果這個方法成功，則已註冊類別的限定的名稱否則，請[資源例外狀況](https://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
   
 ### <a name="remarks"></a>備註  
  傳回值是以冒號分隔的清單*lpszClassNamePrefix*參數字串和目前的應用程式執行個體; 的控制代碼的十六進位文字表示應用程式的資料指標，也就是箭號識別項為 IDC_ARROW; 的資料指標和背景筆刷。 如需註冊 MFC 視窗類別的詳細資訊，請參閱[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
@@ -670,10 +670,10 @@ BOOL Resume();
  如果這個方法成功，則為 TRUE。否則為 FALSE。 在偵錯模式中，此方法會判斷提示這個方法是否成功。  
   
 ### <a name="remarks"></a>備註  
- 會呼叫這個方法，當架構收到[WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)訊息。  
+ 會呼叫這個方法，當架構收到[WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)訊息。  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
-提供呼叫 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法的簡單方法。  
+提供簡單的方式呼叫 Windows [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)方法。  
   
   
 ```  
@@ -689,7 +689,7 @@ BOOL SetLayeredAttrib(
  層疊視窗的控制代碼。  
   
  [in]*crKey*  
- 透明度的色彩索引鍵[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)使用來構成層疊的視窗。  
+ 透明度的色彩索引鍵[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)使用來構成層疊的視窗。  
   
  [in]*bAlpha*  
  Alpha 值，用來描述層疊視窗的不透明度。  
@@ -701,8 +701,8 @@ BOOL SetLayeredAttrib(
  如果這個方法成功，則為 TRUE。否則為 FALSE。   
  
 ### <a name="see-also"></a>另請參閱   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
- [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
+ [COLORREF](/windows/desktop/gdi/colorref)   
+ [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 建立指定的邏輯字型。  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a868d3a5b798b7ca237642d7f7d5e3acf6668926
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea14cd3e8c1eebbdbcad3a21d64652acee635407
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609841"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219935"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -36,7 +36,7 @@ ms.locfileid: "42609841"
 
 ## <a name="remarks"></a>備註
 
-**Oleautomation** c + + 屬性具有相同的功能[oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) MIDL 屬性。
+**Oleautomation** c + + 屬性具有相同的功能[oleautomation](/windows/desktop/Midl/oleautomation) MIDL 屬性。
 
 ## <a name="example"></a>範例
 

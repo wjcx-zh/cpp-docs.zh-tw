@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b9e008b586b1a312770d7cdfc43dc500932158
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: da198a6a807413846fdc5b45552bb74252f8acc2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221365"
 ---
 # <a name="threading-and-marshaling-ccx"></a>執行緒和封送處理 (C++/CX)
 在大部分情況下，可以從任何執行緒存取的 Windows 執行階段類別，如同標準的 c + + 物件，執行個體。 這類類別都稱為 "Agile"。 不過，少數隨附於 Windows 的 Windows 執行階段類別是非 agile，而且必須供更類似於標準 c + + 物件的 COM 物件。 您不必非常了解 COM 才能使用非 agile 的類別，但是必須將類別的執行緒模型及其封送處理行為納入考量。 針對這些必須使用非 Agile 類別之執行個體的少見情況，本文將提供背景知識和指引供您參考。  
@@ -100,7 +100,7 @@ ref class MyOptions
  Visual c + + 中，當您建立具有 「 無 」，封送處理行為的跨處理序 Windows 執行階段類別的參考，編譯器會發出警告 C4451，但不建議您考慮使用`Platform::Agile<T>`。  除了此警告外，編譯器無法提供進一歩的協助，因此您必須正確使用類別，並確保您的程式碼只會從使用者介面執行緒呼叫 STA 元件，從背景執行緒呼叫 MTA 元件。  
   
 ## <a name="authoring-agile-windows-runtime-components"></a>撰寫 agile 的 Windows 執行階段元件  
- 當您定義的 ref 類別在 C + + /CX 中，它會是 agile 預設 — 也就是它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 執行階段 c + + 樣板程式庫，您可以將您的類別敏捷式軟體開發藉由衍生自`FtmBase`，它會使用`FreeThreadedMarshaller`。  如果您撰寫具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的類別，請確定該類別具備執行緒安全。 如需詳細資訊，請參閱 [建立及使用物件 (WRL)](http://msdn.microsoft.com/en-us/d5e42216-e888-4f1f-865a-b5ccd0def73e)。  
+ 當您定義的 ref 類別在 C + + /CX 中，它會是 agile 預設 — 也就是它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 執行階段 c + + 樣板程式庫，您可以將您的類別敏捷式軟體開發藉由衍生自`FtmBase`，它會使用`FreeThreadedMarshaller`。  如果您撰寫具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的類別，請確定該類別具備執行緒安全。 如需詳細資訊，請參閱 <<c0> [ 建立及使用物件 (WRL)](https://msdn.microsoft.com/d5e42216-e888-4f1f-865a-b5ccd0def73e)。  
   
  您可以修改 ref 類別的執行緒模型和封送處理行為。 但是，如果您進行變更而使其成為非 Agile 類別，您必須了解這些變更的相關影響。  
   
@@ -127,5 +127,5 @@ public ref class MySTAClass
  元件的應用程式資訊清單註冊資訊中指定的執行緒與封送處理由協力廠商 Windows 執行階段元件所需的資訊。 我們建議您所有的 Windows 執行階段元件敏捷式軟體開發。 這可確保用戶端程式碼能夠從應用程式中的任何執行緒呼叫您的元件，並且可改善這些呼叫的效能，因為這些都是沒有封送處理的直接呼叫。 如果您以這種方式撰寫類別，則用戶端程式碼無需 `Platform::Agile<T>` 即可使用您的類別。  
   
 ## <a name="see-also"></a>另請參閱  
- [ThreadingModel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
- [MarshallingBehavior](http://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+ [ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)   
+ [MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)

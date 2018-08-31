@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 691a2adf5269be0047ee6eee474406b036cad200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572815"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222591"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程式的資訊清單產生過程
-A[資訊清單](http://msdn.microsoft.com/library/aa375365)內嵌在應用程式或組件的 XML 文件可以是外部的 XML 檔案或資源。 資訊清單[隔離的應用程式](http://msdn.microsoft.com/library/aa375190)用來管理的名稱和共用的應用程式應繫結在執行階段的並排顯示組件的版本。 並排顯示組件資訊清單指定名稱、 版本、 資源和其他組件及其相依性。  
+A[資訊清單](https://msdn.microsoft.com/library/aa375365)內嵌在應用程式或組件的 XML 文件可以是外部的 XML 檔案或資源。 資訊清單[隔離的應用程式](/windows/desktop/SbsCs/isolated-applications)用來管理的名稱和共用的應用程式應繫結在執行階段的並排顯示組件的版本。 並排顯示組件資訊清單指定名稱、 版本、 資源和其他組件及其相依性。  
   
  有兩種方式可建立隔離的應用程式或並排顯示組件的資訊清單。 首先，組件的作者，可以手動建立遵循規則，並命名需求的資訊清單檔。 或者，如果程式只相依於 Visual c + + 組件，例如 CRT、 MFC、 ATL 或其他項目，然後將資訊清單可以自動產生連結器。  
   

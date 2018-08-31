@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881918"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221097"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 類別
 這個類別提供方法來管理使用 COM 記憶體常式的記憶體。  
@@ -67,7 +67,7 @@ static void* Allocate(size_t nBytes) throw();
  傳回 void 指標至配置的空間，或如果沒有足夠的可用記憶體，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 配置記憶體。 請參閱[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)如需詳細資訊。  
+ 配置記憶體。 請參閱[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)如需詳細資訊。  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  呼叫此靜態函式來釋放已配置的記憶體。  
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
  配置的記憶體之指標。  
   
 ### <a name="remarks"></a>備註  
- 釋放配置的記憶體。 請參閱[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)如需詳細資訊。  
+ 釋放配置的記憶體。 請參閱[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)如需詳細資訊。  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  呼叫此靜態函式以重新配置記憶體。  
@@ -101,7 +101,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
  傳回 void 指標至配置的空間或 NULL，如果沒有足夠的記憶體  
   
 ### <a name="remarks"></a>備註  
- 調整配置的記憶體數量。 請參閱[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)如需詳細資訊。  
+ 調整配置的記憶體數量。 請參閱[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)如需詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)   

@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad477dc09ce6c8bee2d69e479f8e1615639cb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 820172e1e6ab4ad007c89b2b40f03512134f0f0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399799"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215949"
 ---
 # <a name="dup-dup2"></a>_dup、_dup2
 
-建立開啟檔案的第二個檔案描述項 (**_dup**)，或重新指派檔案描述項 (**_dup2**)。
+建立已開啟之檔案的第二個檔案描述項 (**_dup**)，或重新指派檔案描述項 (**_dup2**)。
 
 ## <a name="syntax"></a>語法
 
@@ -66,15 +66,15 @@ int _dup2( int fd1, int fd2 );
 
 ## <a name="return-value"></a>傳回值
 
-**_dup**傳回新的檔案描述項。 **_dup2**傳回 0 代表成功。 如果發生錯誤時，每個函式會傳回-1 和集合**errno**至**EBADF**如果的檔案描述項無效，或以**EMFILE**如果沒有更多檔案描述項可用。 如果檔案描述項無效，函式也會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
+**_dup**傳回新的檔案描述項。 **_dup2**會傳回 0，表示作業成功。 如果發生錯誤時，每個函式會傳回-1 和集**errno**要**EBADF**如果檔案描述項無效，或以**EMFILE**如果沒有更多檔案描述項可用。 如果檔案描述項無效，函式也會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Dup**和 **_dup2**函式會將第二個檔案描述元與目前開啟的檔案。 這些函式可以用來建立關聯的預先定義的檔案描述項，例如，針對**stdout**，使用不同的檔案。 可使用任一檔案描述項來執行檔案作業。 建立新的描述項不會影響檔案所允許的存取類型。 **_dup**傳回為指定的檔案的下一個可用的檔案描述項。 **_dup2**強制*fd2*來參考相同的檔案*fd1*。 如果*fd2*都發生在呼叫時已開啟的檔案，會關閉該檔案。
+**_Dup**並 **_dup2**函式會將第二個檔案描述項關聯的目前開啟的檔案。 這些函數可以用來建立關聯的預先定義的檔案描述元，例如針對**stdout**，使用不同的檔案。 可使用任一檔案描述項來執行檔案作業。 建立新的描述項不會影響檔案所允許的存取類型。 **_dup**傳回下一個可用的檔案描述項，指定檔案。 **_dup2**強制*fd2*來參考相同的檔案*fd1*。 如果*fd2*關聯與開啟的檔案在呼叫時，會關閉該檔案。
 
-同時 **_dup**和 **_dup2**接受做為參數的檔案描述元。 若要將資料流 (**檔案\*** ) 其中一個函數，若要使用[_fileno](fileno.md)。 **Fileno**常式會傳回目前與指定的資料流相關聯的檔案描述項。 下列範例示範如何建立關聯**stderr** (定義為**檔案\***  Stdio.h 中) 與檔案描述項：
+兩者 **_dup**並 **_dup2**接受做為參數的檔案描述項。 若要將資料流 (`FILE *`) 至其中一個這些函式中，使用[_fileno](fileno.md)。 **Fileno**常式會傳回目前與指定的資料流相關聯的檔案描述項。 下列範例示範如何建立關聯**stderr** (定義為`FILE *`在 Stdio.h 中) 的檔案描述項：
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -82,12 +82,12 @@ int cstderr = _dup( _fileno( stderr ));
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

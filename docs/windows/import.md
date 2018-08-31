@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ba62d3dfc1f71ab61b5041ebbd884be8b5e39f6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78bfc20bd88aa9691c80483c8c315cd5305d7b96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592660"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216587"
 ---
 # <a name="import"></a>import
 
@@ -43,7 +43,7 @@ ms.locfileid: "42592660"
 
 ## <a name="remarks"></a>備註
 
-**匯入**c + + 屬性會造成`#import`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。 **匯入**屬性有相同的功能[匯入](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 屬性。
+**匯入**c + + 屬性會造成`#import`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。 **匯入**屬性有相同的功能[匯入](/windows/desktop/Midl/import)MIDL 屬性。
 
 **匯入**屬性只會將指定的檔案放入您的專案; 將產生的.idl 檔案**匯入**屬性不會讓您指定的檔案中的建構呼叫從來源程式碼在您的專案。  若要從原始碼專案中，在指定的檔案呼叫建構，請使用[#import](../preprocessor/hash-import-directive-cpp.md)並`embedded_idl`屬性，或者您可以包含的.h 檔案*idl_file*.h 檔案存在，則。
 

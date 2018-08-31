@@ -1,5 +1,5 @@
 ---
-title: 清單項目和影像清單 |Microsoft 文件
+title: 清單項目和映像清單 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e12c212939a708a4411a28bff0ebe5026a21b1e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 7fd5166161fea29ab2c46d0969c6174cb247be15
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932126"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212739"
 ---
 # <a name="list-items-and-image-lists"></a>清單項目和影像清單
-清單控制項中的"item"([CListCtrl](../mfc/reference/clistctrl-class.md)) 圖示、 標籤和可能是其他資訊 （「 子項） 所組成。  
+清單控制項中的"item"([CListCtrl](../mfc/reference/clistctrl-class.md)) 包含圖示、 標籤，以及可能是其他資訊 （「 子項目 」）。  
   
  清單控制項項目的圖示會出現在影像清單中。 影像清單包含圖示檢視中使用的完整大小圖示。 第二個 (選擇性) 影像清單包含與在控制項的其他檢視中使用相同圖示的較小版本。 第三個選擇性清單包含「狀態」影像 (例如核取方塊)，用於在某些檢視中顯示於小圖示的前方。 第四個選擇性清單包含一些在清單控制項的個別標頭項目中顯示的影像。  
   
 > [!NOTE]
->  如果清單檢視控制項以 LVS_SHAREIMAGELISTS 樣式建立，您必須負責終結影像清單，當它們已經不再使用中。 如果您指派相同的影像清單給多個清單檢視控制項，請指定此樣式，否則可能出現多個控制項嘗試終結相同影像清單的情形。  
+>  如果 LVS_SHAREIMAGELISTS 樣式會建立清單檢視控制項，您必須負責終結影像清單，它們不會再使用時。 如果您指派相同的影像清單給多個清單檢視控制項，請指定此樣式，否則可能出現多個控制項嘗試終結相同影像清單的情形。  
   
- 如需清單項目，請參閱[清單檢視影像清單](http://msdn.microsoft.com/library/windows/desktop/bb774736)和[項目和子項目的](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中。 另請參閱類別[CImageList](../mfc/reference/cimagelist-class.md)中*MFC 參考*和[使用 CImageList](../mfc/using-cimagelist.md)此系列文章中。  
+ 如需清單項目的詳細資訊，請參閱[清單檢視影像清單](/windows/desktop/Controls/using-list-view-controls)並[項目和子項目](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。 另請參閱類別[CImageList](../mfc/reference/cimagelist-class.md)中*MFC 參考 》* 並[使用 CImageList](../mfc/using-cimagelist.md)此系列文章中。  
   
- 若要建立清單控制項，您必須在插入新的項目至清單時，提供要使用的影像清單。 下列範例將示範此程序，其中*m_pImagelist*是類型的指標`CImageList`和*m_listctrl*是`CListCtrl`資料成員。  
+ 若要建立清單控制項，您必須在插入新的項目至清單時，提供要使用的影像清單。 下列範例示範此程序，其中*m_pImagelist*是類型的指標`CImageList`並*m_listctrl*是`CListCtrl`資料成員。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   

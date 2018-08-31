@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de3c7fe60432acfc3096ea19fc00cf371a7c4e92
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4e3f7d59dd86aa15833134223854eb9ed01f6679
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610502"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216571"
 ---
 # <a name="hstringreference-class"></a>HStringReference 類別
 
@@ -34,7 +34,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>備註
 
-新的 HSTRING 中支援緩衝區的存留期不受 Windows 執行階段。 呼叫端配置來源字串上的堆疊框架，以避免堆積配置，並排除記憶體流失的風險。 此外，呼叫端必須確保來源字串附加的 HSTRING 的存留期間會保持不變。 如需詳細資訊，請參閱 < [WindowsCreateStringReference 函式](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)。
+新的 HSTRING 中支援緩衝區的存留期不受 Windows 執行階段。 呼叫端配置來源字串上的堆疊框架，以避免堆積配置，並排除記憶體流失的風險。 此外，呼叫端必須確保來源字串附加的 HSTRING 的存留期間會保持不變。 如需詳細資訊，請參閱 < [WindowsCreateStringReference 函式](https://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac)。
 
 ## <a name="members"></a>成員
 

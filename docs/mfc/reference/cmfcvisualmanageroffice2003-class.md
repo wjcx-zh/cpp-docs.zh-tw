@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8acf472d3727534bacd70664dc559b9d8f23d16
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539019"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217085"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
 `CMFCVisualManagerOffice2003` 為應用程式提供 Microsoft Office 2003 的外觀。  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|這個架構會呼叫這個方法，當它繪製反白顯示時快速自訂功能表按鈕。 (覆寫 `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`。)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|當它繪製反白顯示的功能表命令時，架構會呼叫這個方法。 (覆寫 `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`。)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|當系統色彩變更時，架構會呼叫此函式。 (覆寫 `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`。)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|指定應該使用 Windows XP 全域佈景主題。|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|指定的視覺管理員是否使用全域的佈景主題。|  
   
@@ -451,10 +451,10 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>參數  
  [in]*clrBaseGroupBackground*  
- 若要參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)來設定背景色彩。  
+ 若要參考[COLORREF](/windows/desktop/gdi/colorref)來設定背景色彩。  
   
  [in]*clrBaseGroupBorder*  
- 若要參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)設的框線色彩。  
+ 若要參考[COLORREF](/windows/desktop/gdi/colorref)設的框線色彩。  
   
 ### <a name="remarks"></a>備註  
   
@@ -466,7 +466,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含醒目提示音色彩。  
+ 傳回[COLORREF](/windows/desktop/gdi/colorref)包含醒目提示音色彩。  
   
 ### <a name="remarks"></a>備註  
   
@@ -491,7 +491,7 @@ virtual void GetTabFrameColors(
  在畫面格繪製索引標籤索引標籤式視窗的指標。  
   
  [out]*clrDark*  
- 參考[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
+ 參考[COLORREF](/windows/desktop/gdi/colorref)參數，這個方法儲存的色彩之深色框線的索引標籤的位置。  
   
  [out]*clrBlack*  
  這個方法儲存的索引標籤視窗框線的色彩 COLORREF 參數的參考。 框線的預設色彩為黑色。  
@@ -536,7 +536,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，其中包含已停用的色彩。  
+ 傳回[COLORREF](/windows/desktop/gdi/colorref) ，其中包含已停用的色彩。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1095,7 +1095,7 @@ virtual COLORREF OnDrawPaneCaption(
  指定標題按鈕的界限的矩形。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，表示標題的文字色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，表示標題的文字色彩。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1208,7 +1208,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  標題列的指標。 Visual manager 繪製這[CMFCRibbonContextCaption 類別](../../mfc/reference/cmfcribboncontextcaption-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出在標題列文字的色彩。  
+ A [COLORREF](/windows/desktop/gdi/colorref)參數，指出在標題列文字的色彩。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法在衍生類別來自訂功能區分類的標題列的外觀。  
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  架構會呼叫這個方法處理 WM_SYSCOLORCHANGE 訊息的一部分。 如果您想要執行自訂程式碼，在您的應用程式中的色彩變更時，請覆寫這個方法在衍生的視覺管理員。  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- 指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。  
+ 指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

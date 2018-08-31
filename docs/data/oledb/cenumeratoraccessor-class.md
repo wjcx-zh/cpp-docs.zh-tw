@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573212"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215607"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 類別
 供[CEnumerator](../../data/oledb/cenumerator-class.md)從列舉值的資料列集存取資料。  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|變數，表示資料列描述資料來源] 或 [列舉值。|  
 |[m_szDescription](#szdescription)|列舉值之資料來源的描述。|  
 |[m_szName](#szname)|列舉值之資料來源的名稱。|  
-|[m_szParseName](#szparsename)|要傳遞至字串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)來取得 moniker，針對資料來源或列舉值。|  
+|[m_szParseName](#szparsename)|要傳遞至字串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)來取得 moniker，針對資料來源或列舉值。|  
   
 ## <a name="remarks"></a>備註  
  此資料列集是由資料來源並顯示從目前的列舉值的列舉值所組成。  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))中*OLE DB 程式設計人員參考*如需詳細資訊。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
-要傳遞至字串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)來取得 moniker，針對資料來源或列舉值。  
+要傳遞至字串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)來取得 moniker，針對資料來源或列舉值。  
   
 ### <a name="syntax"></a>語法  
   

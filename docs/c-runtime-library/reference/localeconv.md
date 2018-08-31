@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f4e8a20ef31f4379e7ddf6b7425fd7ecc70294a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7c5f66975d8d9904d1a4a8f2d26d4fe98ecfdd40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572441"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223021"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -79,7 +79,7 @@ n_sep_by_space|如果貨幣符號與負值格式化貨幣數量之間以空格�
 p_sign_posn|非負值格式化貨幣數量的正號位置。
 n_sign_posn|負值的格式化貨幣數量的正號位置。
 
-為指定的成員除外**lconv**結構具有`char *`和`wchar_t *`版本都是字串指標。 任何一項若等於 **""** (或**L""** for **wchar_t \*** ) 是長度為零，或不支援目前的地區設定中。 請注意， **decimal_point**並 **_W_decimal_point**會一律受支援和長度不為零。
+為指定的成員除外**lconv**結構具有`char *`和`wchar_t *`版本都是字串指標。 任何一項若等於 **""** (或**L""** for **wchar_t** <strong>\*</strong>) 是長度為零，或在目前不支援地區設定。 請注意， **decimal_point**並 **_W_decimal_point**會一律受支援和長度不為零。
 
 **Char**結構的成員是小型非負值數字，不是字元。 任何一項若等於 **CHAR_MAX**，則其於目前地區設定中不受支援。
 

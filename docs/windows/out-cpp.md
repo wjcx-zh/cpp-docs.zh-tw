@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 220adeb44e676937756cf8007647f7e381f7607f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88e5960b4f809b9c0a43e10fa8fbb69544c9d9bc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597556"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194913"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "42597556"
 
 ## <a name="remarks"></a>備註
 
-**out** C++ 屬性的功能與 [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) MIDL 屬性相同。
+**放大**c + + 屬性具有相同的功能[出](/windows/desktop/Midl/out-idl)MIDL 屬性。
 
 ## <a name="example"></a>範例
 

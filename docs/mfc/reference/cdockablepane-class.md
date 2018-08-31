@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540414"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223061"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 實作可以停駐在固定位置或包含於索引標籤式窗格的窗格。  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|指定是否位在頂端或底部窗格的索引標籤。|  
 |[CDockablePane::IsTracked](#istracked)|指定一個窗格由使用者拖曳。|  
 |[CDockablePane::IsVisible](#isvisible)|判斷目前的窗格是否可見。|  
-|[Cdockablepane:: Loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|在內部使用。|  
+|[Cdockablepane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|在內部使用。|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|當一個窗格的父代變更時由架構呼叫。 (覆寫[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent)。)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|在框架視窗停駐浮動的停駐列時，由架構呼叫。|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|若要變更窗格的父代時，由架構呼叫。 (覆寫[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent)。)|  

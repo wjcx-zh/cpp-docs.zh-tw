@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 025c6bc072f85a1075abdbd03f3567622c3fa40d
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 3d87d41b97f587f2546df246044eaf8df3bba373
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110282"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221974"
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 進行資料存取 (C++/CLI)
 ADO.NET 是.NET Framework API 進行資料存取，並提供能力和易用性使用先前的資料存取解決方案不相符。 本章節描述一些問題牽涉到 ADO.NET 所特有 Visual c + + 的使用者，例如封送處理原生類型。  
@@ -731,4 +731,4 @@ int main()
 
  <xref:System.Runtime.InteropServices>   
 
- [互通性](http://msdn.microsoft.com/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [互通性](https://msdn.microsoft.com/afcc2e7d-3f32-48d2-8141-1c42acf29084)   

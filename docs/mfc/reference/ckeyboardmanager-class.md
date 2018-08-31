@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338982"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212887"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 管理主框架視窗及子框架視窗的快速鍵資料表。  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |參數|描述|  
 |[in]*nKey*|要進行檢查的按鍵。|  
-|[in]*fVirt*|指定攠摝坫行為。 如需可能值的清單，請參閱 <<c0> [ 加速度結構](http://msdn.microsoft.com/library/windows/desktop/ms646340)。|  
+|[in]*fVirt*|指定攠摝坫行為。 如需可能值的清單，請參閱 <<c0> [ 加速度結構](/windows/desktop/api/winuser/ns-winuser-tagaccel)。|  
 |[in]*pWndFrame*|框架視窗。 這個方法會判斷是否要將攠摝坫處理這個框架中。|  
 |[in]*bIsDefaultFrame*|布林值，指出參數是否*pWndFrame*是預設框架視窗。|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  非零值可列印字元時，如果零不是。  
   
 ### <a name="remarks"></a>備註  
- 如果呼叫，這個方法就會失敗[GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299)失敗。  
+ 如果呼叫，這個方法就會失敗[GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299)失敗。  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  指出功能表是否顯示所有關聯的快速鍵與功能表命令或只有預設的快速鍵。  

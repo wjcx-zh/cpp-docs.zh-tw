@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6b5f46e20338bdb06c5c04599402dbbefa935e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880046"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214271"
 ---
 # <a name="catlexemodulet-class"></a>Catldllmodulet 類別
 此類別代表應用程式的模組。  
@@ -259,7 +259,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>參數  
  *nShowCmd*  
- 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設為 SW_HIDE。  
+ 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設為 SW_HIDE。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
@@ -285,7 +285,7 @@ static void UninitializeCom() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 依預設這個方法只會呼叫[CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) ，而從解構函式呼叫。 覆寫這個方法，如果您覆寫[CAtlExeModuleT::InitializeCom](#initializecom)。  
+ 依預設這個方法只會呼叫[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) ，而從解構函式呼叫。 覆寫這個方法，如果您覆寫[CAtlExeModuleT::InitializeCom](#initializecom)。  
   
 ##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  模組的鎖定計數遞減。  
@@ -306,7 +306,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>參數  
  *nShowCmd*  
- 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559)一節。  
+ 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。  
   
 ### <a name="return-value"></a>傳回值  
  傳回可執行檔的傳回值。  

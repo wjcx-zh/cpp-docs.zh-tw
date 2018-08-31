@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 04ee2d36d269d3bc9324b10dffd8840f9f68a8ab
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573316"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220883"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 可以分成下列類別分組的類別和介面的 OLE DB 提供者樣板。 參考資料也包含下列資訊[OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "42573316"
  實作 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))介面，讓更新的現有資料列，刪除資料列，並插入新資料列中的資料行的值。  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- 這個類別繼承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) ，並覆寫[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl` 執行相同的功能`IObjectWithSite`但也可讓 OLE DB 屬性`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。  
+ 這個類別繼承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 `IRowsetCreatorImpl` 執行相同的功能`IObjectWithSite`但也可讓 OLE DB 屬性`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  實作`IRowsetIdentity`介面，可讓您比較是否兩個資料列的資料或不完全相同。  

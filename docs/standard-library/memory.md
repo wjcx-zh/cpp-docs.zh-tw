@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858925"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217945"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ ms.locfileid: "33858925"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|此範本類別描述一個物件，該物件會管理 **Type** 類型之物件陣列的儲存體配置和釋出。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述物件，用來判斷啟用配置器之容器所需的所有資訊。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|此範本類別描述一個物件，該物件會儲存 **Type \*** 類型之配置物件的指標，以確保它所指向的物件會在其上層 auto_ptr 終結時被刪除。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|此範本類別描述可儲存類型的配置物件的指標**型別** <strong>\*</strong>這可確保它點被刪除時取得其上層 auto_ptr 物件損毀。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|報告錯誤 weak_ptr 例外狀況。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|幫助產生 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供樣板類別 `allocator_traits` 的物件所需的資訊，以描述具有指標類型 `Ptr` 的配置器。|

@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801a88573133a68beec4855dc499fcba27bb64e8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bad7a0a5263d001d9dc77dd8d9e8cf0cf70100b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593865"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219635"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 語言參考 (C++/CX)
 
@@ -45,5 +45,5 @@ C + + /CX 是一組可讓 Windows 應用程式和 Windows 執行階段元件，�
 |[執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)|討論如何為您建立的元件指定執行緒與封送處理行為。|
 |[命名空間參考](../cppcx/namespaces-reference-c-cx.md)|預設命名空間、Platform 命名空間、Platform::Collections 及相關命名空間的參考文件。|
 |[通用 Windows 平台應用程式不支援 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|列出 Windows 執行階段應用程式中不可用的 CRT 函式。|
-|[Windows 10 應用程式的操作指南](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|提供 Windows 10 應用程式的高階指引以及詳細資訊連結。|
+|[說明 Windows 10 應用程式的指南](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|提供 Windows 10 應用程式的高階指引以及詳細資訊連結。|
 |[C + + /CX 第 0 部分\[n\]： 簡介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + /CX 第 1 部分\[n\]： 簡單的類別](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + /CX 第 2 部分\[n\]： 戴帽子的](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + /CX 第 3 部分\[n\]： 建構中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + /CX 第 4 部分\[n\]： 靜態成員函式](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|簡介 Visual c + + 部落格系列上 C + + /CX。|

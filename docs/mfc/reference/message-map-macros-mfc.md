@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338360"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216699"
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 若要支援訊息對應，MFC 提供下列巨集：  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  函式的類型必須是`afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`。  
   
 ### <a name="remarks"></a>備註  
- 使用者定義的訊息會顯示標準 Windows WM_MESSAGE 郵件沒有任何訊息。 選取時的訊息識別碼，您必須使用 0x7FFF 或 WM_APP (0x8000) 範圍 」 的 (0x0400) WM_USER 內的值來 0xBFFF。 如需訊息識別碼的詳細資訊，請參閱[WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930)。  
+ 使用者定義的訊息會顯示標準 Windows WM_MESSAGE 郵件沒有任何訊息。 選取時的訊息識別碼，您必須使用 0x7FFF 或 WM_APP (0x8000) 範圍 」 的 (0x0400) WM_USER 內的值來 0xBFFF。 如需訊息識別碼的詳細資訊，請參閱[WM_APP](/windows/desktop/winmsg/wm-app)。  
   
  應該只有一個 ON_MESSAGE 巨集陳述式，在您的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中。  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **標頭：** afxmsg_.h  
   
 ### <a name="see-also"></a>另請參閱  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [使用者定義的處理常式](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

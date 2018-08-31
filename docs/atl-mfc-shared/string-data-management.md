@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880212"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214343"
 ---
 # <a name="string-data-management"></a>字串資料管理
 Visual c + + 提供數種方式可管理字串資料：  
@@ -67,7 +67,7 @@ Visual c + + 提供數種方式可管理字串資料：
  A`CString`物件可以會儲存為 INT_MAX (2,147,483,647) 個字元。 TCHAR 資料類型用來取得或設定內的個別字元`CString`物件。 與不同的字元陣列，是`CString`類別具有內建的記憶體配置功能。 這可讓`CString`視需要自動成長的物件 (也就是您不必擔心成長`CString`物件大小以容納較長的字串)。  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> CStrings 和 const char 指標  
- A`CString`物件也可以做為常值的 C 樣式字串 ( `PCXSTR`，這是與相同**const char\*** 如果不在 Unicode 下的)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)轉換運算子可讓`CString`來自由取代函式呼叫中的字元指標的物件。 **CString (LPCWSTR** `pszSrc` **)** 建構函式可讓用來取代的字元指標`CString`物件。  
+ A`CString`物件也可以做為常值的 C 樣式字串 ( `PCXSTR`，這是與相同**const char** <strong>\*</strong>如果不在 Unicode 下的)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)轉換運算子可讓`CString`來自由取代函式呼叫中的字元指標的物件。 **CString (LPCWSTR** `pszSrc` **)** 建構函式可讓用來取代的字元指標`CString`物件。  
   
  不會嘗試以摺疊`CString`物件。 如果您讓這兩個`CString`物件包含`Chicago`，例如，在字元`Chicago`會儲存在兩個地方。 （這可能不是真正的未來版本的 MFC，因此您不應該相依於它。）  
   

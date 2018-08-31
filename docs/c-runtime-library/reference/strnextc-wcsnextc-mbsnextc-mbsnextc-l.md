@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f759ce9a4617ab0ca8e97ef308508d836b53b742
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ede89a5290bca14c39aa16c68071edefd0ebd08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222425"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 
 在字串中尋找下一個字元。
 
 > [!IMPORTANT]
-> **_mbsnextc**和 **_mbsnextc_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnextc**並 **_mbsnextc_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -97,15 +97,15 @@ unsigned int _mbsnextc_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式傳回的整數值中的下一個字元*str*。
+所有這些函式都會傳回整數值中的下一個字元*str*。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnextc**函式傳回的整數值中的下一個多位元組字元*str*，而不使字串指標前進。 **_mbsnextc**根據來辨識多位元組字元序列[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。
+**_Mbsnextc**函式會傳回整數值中的下一個多位元組字元*str*，而不需要將字串指標提前。 **_mbsnextc**辨識多位元組字元序列，根據[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。
 
-如果*str*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**而且函數會傳回 0。
+如果*str*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回 0。
 
-**安全性提示**：此 API 可能會帶來因緩衝區溢位問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+**安全性提示**：此 API 可能會帶來因緩衝區溢位問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -113,13 +113,13 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc**和 **_wcsnextc**是單一位元組字元字串和寬字元字串版本 **_mbsnextc**。 **_wcsnextc**傳回整數值中的下一個寬字元*str*;**_strnextc**傳回整數值中的下一個單一位元組字元*str*。 **_strnextc**和 **_wcsnextc**只有針對此對應所提供，不應該否則使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+**_strnextc**並 **_wcsnextc**是單一位元組字元字串和寬字元字串版本 **_mbsnextc**。 **_wcsnextc**傳回整數值中的下一個寬字元*str*;**_strnextc**傳回的整數值中的下一個單一位元組字元*str*。 **_strnextc**並 **_wcsnextc**只供此對應，否則應該不會使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsnextc_l**是完全相同，不同之處在於它會改用傳入的地區設定參數的使用。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbsnextc_l**完全相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_mbsnextc**|\<mbstring.h>|
 |**_mbsnextc_l**|\<mbstring.h>|

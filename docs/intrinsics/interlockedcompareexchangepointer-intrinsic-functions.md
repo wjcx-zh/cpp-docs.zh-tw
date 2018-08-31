@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8ab76252c355bb56a1e2157e0e025a4eddb0d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596532"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214617"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 內建函式
 **Microsoft 專屬**  
@@ -110,7 +110,7 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="remarks"></a>備註  
  `_InterlockedCompareExchangePointer` 執行 `Destination` 位址與`Comparand` 位址的不可部分完成比較。 如果 `Destination` 位址等於 `Comparand` 位址，`Exchange` 位址會儲存在 `Destination` 所指定的位址中。 否則，不會執行任何作業。  
   
- `_InterlockedCompareExchangePointer` 提供 Win32 Windows SDK 的編譯器內建支援[_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx)函式。  
+ `_InterlockedCompareExchangePointer` 提供 Win32 Windows SDK 的編譯器內建支援[_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)函式。  
   
  如需如何使用的範例`_InterlockedCompareExchangePointer`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。  
   

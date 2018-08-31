@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c539504e7bb6e2b02b86d99c890ed5d6ecf1fc27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337329"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217854"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 類別
 管理您的 FTP 連線到網際網路伺服器，並允許直接操作該伺服器上目錄和檔案。  
@@ -179,7 +179,7 @@ CInternetFile* Command(
 - `CmdRespRead` 需要回應。  
   
  *dwFlags*  
- 一個值，包含控制此函式的旗標。 如需完整清單，請參閱 < [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)。  
+ 一個值，包含控制此函式的旗標。 如需完整清單，請參閱 < [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)。  
   
  *dwContext*  
  值的指標，包含應用程式定義的值，用以識別回呼中的應用程式內容。  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會模擬[FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133)函式，在 Windows SDK 中所述。  
+ 此成員函式會模擬[FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)函式，在 Windows SDK 中所述。  
   
  如果發生錯誤，MFC 會擲回例外狀況型別的[CInternetException](../../mfc/reference/cinternetexception-class.md)。  
   
@@ -204,7 +204,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  包含要建立的目錄名稱的字串指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Windows 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Windows 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  使用`GetCurrentDirectory`來判斷此連線到伺服器的目前工作目錄。 請勿假設遠端系統已連線您的根目錄。  
@@ -238,7 +238,7 @@ BOOL GetCurrentDirectory(
 |在傳回|若要儲存的字元數*pstrDirName*。 如果此成員函式會失敗，且會傳回 ERROR_INSUFFICIENT_BUFFER，然後*lpdwLen*包含應用程式必須以接收字串配置的位元組數目。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  若要改為取得做為 URL 的目錄名稱，請呼叫[GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)。  
@@ -272,7 +272,7 @@ BOOL GetCurrentDirectoryAsURL(
 |在傳回|若要儲存的字元數*pstrDirName*。 如果此成員函式會失敗，且會傳回 ERROR_INSUFFICIENT_BUFFER，然後*lpdwLen*包含應用程式必須以接收字串配置的位元組數目。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  `GetCurrentDirectoryAsURL` 行為與相同[GetCurrentDirectory](#getcurrentdirectory)  
@@ -322,13 +322,13 @@ BOOL GetFile(
 -   FILE_ATTRIBUTE_TEMPORARY 檔案用於暫時儲存體。 只有在絕對必要時，應用程式應該寫入檔案。 大部分的檔案的資料會保存在記憶體中，但不排清到媒體中，因為很快就會刪除檔案。  
   
  *dwFlags*  
- 指定在傳輸發生所在的條件。 這個參數可以是任一*dwFlags*值中所述[FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) Windows SDK 中。  
+ 指定在傳輸發生所在的條件。 這個參數可以是任一*dwFlags*值中所述[FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) Windows SDK 中。  
   
  *dwContext*  
  擷取檔案內容識別碼。 請參閱**備註**如需詳細資訊*dwContext*。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  `GetFile` 是一個高層級的常式來處理所有從 FTP 伺服器讀取檔案，並將其儲存到本機與相關聯的額外負荷。 應用程式，只擷取檔案資料，或需要嚴密控制透過 檔案傳輸應使用`OpenFile`並[cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read)改。  
@@ -410,7 +410,7 @@ BOOL PutFile(
  放置檔案的內容識別碼。 請參閱**備註**如需詳細資訊*dwContext*。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  `PutFile` 是一個高層級的常式來處理所有儲存在 FTP 伺服器上的檔案相關聯的作業。 應用程式，只傳送資料，或需要更進一步控制透過 檔案傳輸應使用[OpenFile](#openfile)並[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)。  
@@ -429,7 +429,7 @@ BOOL Remove(LPCTSTR pstrFileName);
  包含要移除的檔案名稱的字串指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  *PstrFileName*參數可以是任一個不完整的檔名為目前的目錄的相對或完整。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `Remove`函式會轉譯成適當的字元的目錄名稱分隔符號，再使用它們。  
@@ -446,7 +446,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
  指向的字串，包含要移除的目錄。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  使用[GetCurrentDirectory](#getcurrentdirectory)來判斷伺服器的目前工作目錄。 請勿假設遠端系統已連線您的根目錄。  
@@ -470,7 +470,7 @@ BOOL Rename(
  包含檔案的新名稱的字串指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  *PstrExisting*並*pstrNew*參數可以是任一個不完整的檔名為目前的目錄的相對或完整。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `Rename` 在使用前，請將轉譯成適當的字元的目錄名稱分隔符號。  
@@ -487,7 +487,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  包含的目錄名稱的字串指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
+ 如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
  *PstrDirName*參數可以是相對於目前目錄的任一部分或完整檔案名稱。 反斜線 (\\) 或斜線 （/） 可用來當做任一名稱的目錄分隔符號。 `SetCurrentDirectory` 在使用前，請將轉譯成適當的字元的目錄名稱分隔符號。  

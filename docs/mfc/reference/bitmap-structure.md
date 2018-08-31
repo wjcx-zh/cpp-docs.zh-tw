@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339343"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220757"
 ---
 # <a name="bitmap-structure"></a>BITMAP 結構
 **點陣圖**結構會定義高度、 寬度、 色彩格式和位元邏輯點陣圖值 **。**  
@@ -85,7 +85,7 @@ typedef struct tagBITMAP {  /* bm */
   
  所有裝置都支援具有 RC_BITBLT 位元組中 GETDEVICECAPS 索引的點陣圖[rastercaps](../../mfc/reference/cdc-class.md#getdevicecaps)成員函式。  
   
- 每個裝置有其獨特的色彩格式。 若要從一部裝置的點陣圖傳輸到另一個中，使用[GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)並[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 函式。  
+ 每個裝置有其獨特的色彩格式。 若要從一部裝置的點陣圖傳輸到另一個中，使用[GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits)並[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) Windows 函式。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** wingdi.h  

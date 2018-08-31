@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3824113c1cbf1edc15f4a060dfdcc50df8759c4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403822"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215919"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 專屬**  
@@ -168,7 +168,7 @@ explicit _com_ptr_t(
  保留的多位元組字串`CLSID`(開頭為"**{**") 或`ProgID`。  
   
  *pOuter*  
- 外部未知[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)。  
+ 外部未知[彙總](/windows/desktop/com/aggregation)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef7db05e8e8eb0a723354bcd6f53fb283aebe0c8
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4a2684a3aab8480738d4d64a79681f1930113c71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218923"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 類別
 這個類別提供方法來支援制式資料傳輸及管理連線。  
@@ -72,9 +72,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|將資料從用戶端傳輸至資料物件。 ATL 實作會傳回 E_NOTIMPL。|  
   
 ## <a name="remarks"></a>備註  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)介面提供方法來支援制式資料傳輸。 `IDataObject` 使用標準的格式結構[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)並[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)來擷取與儲存資料。  
+ [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)介面提供方法來支援制式資料傳輸。 `IDataObject` 使用標準的格式結構[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)並[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)來擷取與儲存資料。  
   
- `IDataObject` 也會管理通知來處理資料變更通知接收的連接。 為了讓用戶端收到的資料物件中的資料變更通知，用戶端必須實作[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)物件呼叫通知接收上的介面。 當用戶端接著呼叫`IDataObject::DAdvise`，資料物件和通知接收之間建立連線。  
+ `IDataObject` 也會管理通知來處理資料變更通知接收的連接。 為了讓用戶端收到的資料物件中的資料變更通知，用戶端必須實作[IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)物件呼叫通知接收上的介面。 當用戶端接著呼叫`IDataObject::DAdvise`，資料物件和通知接收之間建立連線。  
   
  類別`IDataObjectImpl`提供的預設實作`IDataObject`並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
@@ -104,7 +104,7 @@ HRESULT DAdvise(
   
  若要終止的連接，呼叫[DUnadvise](#dunadvise)。  
   
- 請參閱[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) Windows SDK 中。  
+ 請參閱[IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) Windows SDK 中。  
   
 ##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  會透過先前建立的連線終止[DAdvise](#dadvise)。  
@@ -114,7 +114,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) Windows SDK 中。  
+ 請參閱[IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) Windows SDK 中。  
   
 ##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  建立列舉值以逐一查看目前的諮詢連接。  
@@ -128,7 +128,7 @@ HRESULT DAdvise(
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) Windows SDK 中。  
+ 請參閱[IDataObject::EnumDAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-enumdadvise) Windows SDK 中。  
   
 ##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  建立列舉值以逐一查看`FORMATETC`資料物件所支援的結構。  
@@ -140,7 +140,7 @@ HRESULT EnumFormatEtc(
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) Windows SDK 中。  
+ 請參閱[IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 E_NOTIMPL。  
@@ -166,7 +166,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) Windows SDK 中。  
+ 請參閱[IDataObject::GetCanonicalFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-getcanonicalformatetc) Windows SDK 中。  
   
 ##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  將資料從資料物件傳輸至用戶端。  
@@ -180,7 +180,7 @@ HRESULT GetData(
 ### <a name="remarks"></a>備註  
  *PformatetcIn*參數必須指定 TYMED_MFPICT 的儲存媒體類型。  
   
- 請參閱[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
+ 請參閱[idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) Windows SDK 中。  
   
 ##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  類似於`GetData`，但用戶端必須配置`STGMEDIUM`結構。  
@@ -195,7 +195,7 @@ HRESULT GetDataHere(
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) Windows SDK 中。  
+ 請參閱[IDataObject::GetDataHere](/windows/desktop/api/objidl/nf-objidl-idataobject-getdatahere) Windows SDK 中。  
   
 ##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  判斷資料物件是否支援特定`FORMATETC`傳輸資料的結構。  
@@ -208,7 +208,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) Windows SDK 中。  
+ 請參閱[IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata) Windows SDK 中。  
   
 ##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  將資料從用戶端傳輸至資料物件。  
@@ -224,7 +224,7 @@ HRESULT SetData(
  傳回 E_NOTIMPL。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) Windows SDK 中。  
+ 請參閱[IDataObject::SetData](/windows/desktop/api/objidl/nf-objidl-idataobject-setdata) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

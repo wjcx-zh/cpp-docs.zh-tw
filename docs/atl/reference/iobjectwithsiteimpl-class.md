@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d4e2b1fe58ab7ea408438b703b9fe803996fa791
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883784"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219034"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 類別
 這個類別提供方法讓其站台與通訊的物件。  
@@ -60,7 +60,7 @@ template <class T>
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|管理站台的`IUnknown`指標。|  
   
 ## <a name="remarks"></a>備註  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)介面允許其站台與通訊的物件。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
+ [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)介面允許其站台與通訊的物件。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。  
   
  `IObjectWithSiteImpl` 指定兩個方法。 用戶端會先呼叫`SetSite`，將站台的`IUnknown`指標。 此指標會儲存在物件中，並稍後可以透過呼叫來擷取`GetSite`。  
   
@@ -86,7 +86,7 @@ STDMETHOD(GetSite)(
 ### <a name="remarks"></a>備註  
  如果站台支援這個介面，透過傳回的指標`ppvSite`。 否則，`ppvSite`設為 NULL。  
   
- 請參閱[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK 中。  
+ 請參閱[IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) Windows SDK 中。  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  管理站台的`IUnknown`指標。  
@@ -120,7 +120,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) Windows SDK 中。  
+ 請參閱[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

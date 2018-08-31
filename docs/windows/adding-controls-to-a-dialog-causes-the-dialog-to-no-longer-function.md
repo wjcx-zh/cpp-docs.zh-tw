@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c1cb1a1894f3288e2825c5eb7d521a468ccdfa7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215366"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>將控制項加入至對話方塊會造成對話方塊無法使用
 
@@ -61,11 +61,11 @@ ms.locfileid: "42592810"
 
 ## <a name="the-fix-for-common-controls"></a>通用控制項的修正
 
-若要使用通用控制項 對話方塊上的，您必須呼叫[InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697)或`AFXInitCommonControls`建立對話方塊之前。
+若要使用通用控制項 對話方塊上的，您必須呼叫[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)或`AFXInitCommonControls`建立對話方塊之前。
 
 ## <a name="the-fix-for-richedit-controls"></a>修正、 RichEdit 控制項
 
-您必須呼叫`LoadLibrary`rich edit 控制項的。 如需詳細資訊，請參閱 <<c0> [ 使用 RichEdit 1.0 控制項與 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)，[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)在 Windows SDK 中，並[Rich Edit 控制項的概觀](../mfc/overview-of-the-rich-edit-control.md)。
+您必須呼叫`LoadLibrary`rich edit 控制項的。 如需詳細資訊，請參閱 <<c0> [ 使用 RichEdit 1.0 控制項與 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)，[有關 Rich Edit 控制項](/windows/desktop/Controls/about-rich-edit-controls)在 Windows SDK 中，並[Rich Edit 控制項的概觀](../mfc/overview-of-the-rich-edit-control.md)。
 
 ## <a name="requirements"></a>需求
 

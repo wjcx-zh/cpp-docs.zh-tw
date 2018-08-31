@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e6991d7ca545eef671720a38907088dc6a534d1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338609"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216804"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 類別
 實作內建字型屬性，並封裝 Windows 字型物件和 `IFont` 介面的功能。  
@@ -171,7 +171,7 @@ void InitializeFont(
   
 ### <a name="parameters"></a>參數  
  *pFontDesc*  
- 字型描述結構的指標 ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782))，指定字型的特性。  
+ 字型描述結構的指標 ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc))，指定字型的特性。  
   
  *pFontDispAmbient*  
  容器的環境字型屬性的指標。  
@@ -199,7 +199,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
   
 ### <a name="parameters"></a>參數  
  *lptm*  
- 指標[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)接收資訊的結構。  
+ 指標[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)接收資訊的結構。  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  此函式中斷`CFontHolder`物件從其`IFont`介面。  

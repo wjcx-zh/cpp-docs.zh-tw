@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f64902f4636d7933a368e28cac42a27abb440c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 67a4f03db6a7c4cf37e59e05464865016d836097
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215004"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 類別
 用於資料傳輸以透過剪貼簿、拖放作業或內嵌 OLE 項目擷取各種格式的資料。  
@@ -84,7 +84,7 @@ class COleDataObject
   
  這個類別可讓您判斷資料是否存在於指定的格式。 您可以也列舉 可用的資料格式或檢查指定的格式是否可用，並接著擷取的資料以偏好的格式。 可以透過幾種不同的方式，包括使用完成物件擷取[CFile](../../mfc/reference/cfile-class.md)、 HGLOBAL，或在`STGMEDIUM`結構。  
   
- 如需詳細資訊，請參閱 < [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 < [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) Windows SDK 中的結構。  
   
  如需有關如何在您的應用程式中使用資料物件的詳細資訊，請參閱[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。  
   
@@ -111,7 +111,7 @@ void Attach(
  如果應該 OLE 資料物件，則為 TRUE 時釋放`COleDataObject`物件已終結，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) Windows SDK 中。  
   
 ##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  呼叫此函式以目前在剪貼簿的資料物件連接`COleDataObject`物件。  
@@ -126,7 +126,7 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
->  呼叫此函式鎖定剪貼簿，直到釋放這個資料物件。 釋放資料物件的解構函式中`COleDataObject`。 如需詳細資訊，請參閱 < [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048)並[CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Win32 文件中。  
+>  呼叫此函式鎖定剪貼簿，直到釋放這個資料物件。 釋放資料物件的解構函式中`COleDataObject`。 如需詳細資訊，請參閱 < [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard)並[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Win32 文件中。  
   
 ##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  呼叫此函式，以準備進行後續呼叫`GetNextFormat`從項目擷取的資料格式的清單。  
@@ -140,7 +140,7 @@ void BeginEnumFormats();
   
  若要檢查的指定格式的資料可用性，請使用[COleDataObject::IsDataAvailable](#isdataavailable)。  
   
- 如需詳細資訊，請參閱 < [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDataObject::EnumFormatEtc](/windows/desktop/api/objidl/nf-objidl-idataobject-enumformatetc) Windows SDK 中。  
   
 ##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  建構 `COleDataObject` 物件。  
@@ -179,21 +179,21 @@ BOOL GetData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要傳回資料的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要傳回資料的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpStgMedium*  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)會接收資料的結構。  
+ 指向[STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)會接收資料的結構。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，描述要傳回的資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，描述要傳回的資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)， [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)，並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [idataobject:: Getdata](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata)， [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium)，並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  呼叫此函式來建立`CFile`或是`CFile`-衍生物件，並擷取資料到指定的格式`CFile`指標。  
@@ -206,10 +206,10 @@ CFile* GetFileData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要傳回資料的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要傳回資料的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，描述要傳回的資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，描述要傳回的資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  新指標`CFile`或`CFile`-衍生物件，包含資料，如果成功，否則為 NULL。  
@@ -220,9 +220,9 @@ CFile* GetFileData(
 > [!NOTE]
 >  `CFile`由呼叫端擁有存取此函式的傳回值的物件。 呼叫端負責**刪除**`CFile`物件，藉此關閉檔案。  
   
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  呼叫此函式來配置全域記憶體區塊，並在指定的格式中的資料擷取至 HGLOBAL。  
@@ -235,18 +235,18 @@ HGLOBAL GetGlobalData(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 要傳回資料的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 要傳回資料的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，描述要傳回的資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構，描述要傳回的資料格式。 如果您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  包含成功; 如果資料的全域記憶體區塊的控制代碼否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  呼叫此函式重複，以取得所有可用項目從擷取資料的格式。  
@@ -257,7 +257,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
 ### <a name="parameters"></a>參數  
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)函式呼叫傳回時，會接收之格式資訊的結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)函式呼叫傳回時，會接收之格式資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
  另一種格式可使用; 如果為非零否則為 0。  
@@ -280,10 +280,10 @@ BOOL IsDataAvailable(
   
 ### <a name="parameters"></a>參數  
  *cfFormat*  
- 使用結構中的剪貼簿資料格式所指向*lpFormatEtc*。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ 使用結構中的剪貼簿資料格式所指向*lpFormatEtc*。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)函式。  
   
  *lpFormatEtc*  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述所需的格式。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
+ 指向[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)結構描述所需的格式。 只有當您想要指定超過所指定的剪貼簿格式的其他格式資訊，請為此參數提供值*cfFormat*。 如果為 NULL，預設值會用於中的其他欄位`FORMATETC`結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的格式，在可用資料，非零值。否則為 0。  
@@ -291,22 +291,22 @@ BOOL IsDataAvailable(
 ### <a name="remarks"></a>備註  
  這個功能很有用，再呼叫`GetData`， `GetFileData`，或`GetGlobalData`。  
   
- 如需詳細資訊，請參閱 < [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637)並[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [IDataObject::QueryGetData](/windows/desktop/api/objidl/nf-objidl-idataobject-querygetdata)並[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK 中。  
   
- 如需詳細資訊，請參閱 < [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
+ 如需詳細資訊，請參閱 < [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   範例，請參閱[CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)。  
   
 ##  <a name="release"></a>  COleDataObject::Release  
- 呼叫此函式來釋放擁有權[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)物件，先前關聯`COleDataObject`物件。  
+ 呼叫此函式來釋放擁有權[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)物件，先前關聯`COleDataObject`物件。  
   
 ```  
 void Release();
 ```  
   
 ### <a name="remarks"></a>備註  
- `IDataObject`與相關聯`COleDataObject`藉由呼叫`Attach`或`AttachClipboard`明確或由架構。 如果*bAutoRelease*的參數`Attach`為 FALSE，`IDataObject`將不會釋放物件。 在此情況下，呼叫端負責釋放`IDataObject`藉由呼叫[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)。  
+ `IDataObject`與相關聯`COleDataObject`藉由呼叫`Attach`或`AttachClipboard`明確或由架構。 如果*bAutoRelease*的參數`Attach`為 FALSE，`IDataObject`將不會釋放物件。 在此情況下，呼叫端負責釋放`IDataObject`藉由呼叫[iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   

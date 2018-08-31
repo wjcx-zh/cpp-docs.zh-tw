@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571661"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222677"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (指定 MIDL 命令列引數的選項)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571661"
  其中：  
   
  `file`  
- 包含的檔案名稱[MIDL 命令列選項](http://msdn.microsoft.com/library/windows/desktop/aa366839)。  
+ 包含的檔案名稱[MIDL 命令列選項](/windows/desktop/Midl/general-midl-command-line-syntax)。  
   
 ## <a name="remarks"></a>備註  
  必須提供所有選項在 IDL 檔案轉換至 TLB 檔案`file`;連結器的命令列上，就無法指定 MIDL 命令列選項。 如果未指定 /MIDL，MIDL 編譯器會叫用的 IDL 檔名和任何其他選項。  

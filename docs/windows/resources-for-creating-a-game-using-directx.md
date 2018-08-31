@@ -17,12 +17,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19e36c51e255996e17ccd5ad4b1fc62057a064d7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99c2671874823ee13164b2cfd226b6ef3c35bbb7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590615"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221764"
 ---
 # <a name="resources-for-creating-a-game-using-directx"></a>用於使用 DirectX 建立遊戲的資源
 
@@ -32,12 +32,12 @@ ms.locfileid: "42590615"
 
 Visual c + + 包含在所有版本的 Visual Studio 中，但預設不會安裝它。 如需有關如何安裝 Visual Studio 和 c + + 開發工具的資訊，請參閱 < [Visual Studio 中的安裝 c + + 支援](../build/vscpp-step-0-installation.md)。
 
-Windows 8.1 和更新版本，DirectX SDK 包含 Windows SDK 中。 您不需要另外下載任何項目。 如需詳細資訊，請參閱 < [DirectX SDK 位於何處？](http://msdn.microsoft.com/library/windows/desktop/ee663275.aspx)。
+Windows 8.1 和更新版本，DirectX SDK 包含 Windows SDK 中。 您不需要另外下載任何項目。 如需詳細資訊，請參閱 < [DirectX SDK 位於何處？](https://msdn.microsoft.com/library/windows/desktop/ee663275.aspx)。
 
 若要建立 Windows 7、 Windows Vista 或 Windows XP 的 DirectX 應用程式，您可以下載獨立[DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)。
 
-[DirectX 圖形和遊戲](http://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)有資訊和範例，可協助您開始使用 DirectX 程式設計。
+[DirectX 圖形和遊戲](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx)有資訊和範例，可協助您開始使用 DirectX 程式設計。
 
 [Win32 Windows 應用程式](../windows/windows-desktop-applications-cpp.md)包含的文章會說明如何建立基本的 Windows 桌面應用程式。
 
-[開發遊戲](http://msdn.microsoft.com/library/windows/apps/hh452744.aspx)討論通用 Windows 平台遊戲開發，但許多概念也適用於桌面遊戲。
+[開發遊戲](https://msdn.microsoft.com/library/windows/apps/hh452744.aspx)討論通用 Windows 平台遊戲開發，但許多概念也適用於桌面遊戲。

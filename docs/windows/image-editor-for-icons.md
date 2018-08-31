@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63ab877506c0b38563868374312c8f63bc28333e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b4f038dea14aedc4016746297ac99aedd57445eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583528"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215837"
 ---
 # <a name="image-editor-for-icons"></a>圖示影像編輯器
 
@@ -68,4 +68,4 @@ ms.locfileid: "42583528"
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)  
-[圖示](http://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)
+[圖示](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

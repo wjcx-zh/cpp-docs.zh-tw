@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 004da50bf8d688f1d7b0432e5196094b878870cf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955003"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223231"
 ---
 # <a name="sample-container-class"></a>範例容器類別
 
@@ -34,7 +34,7 @@ ms.locfileid: "38955003"
 
 - 如果運算式`~Ty`擲回例外狀況，產生的容器物件狀態是未定義。
 
-- 如果容器儲存配置器物件*al*，並*al*就會擲回以外的例外狀況，由於呼叫 * al ***.allocate**，產生的容器狀態物件是未定義。
+- 如果容器儲存配置器物件*al*，並*al*就會擲回以外的例外狀況，由於呼叫`al.allocate`，產生的容器物件狀態會是未定義。
 
 - 如果容器會儲存函式物件 *comp* 來決定如何排序受控制的序列，而且 *comp* 擲回任何種類的例外狀況，則會產生未定義的容器物件狀態。
 

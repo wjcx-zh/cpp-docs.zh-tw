@@ -1,7 +1,7 @@
 ---
 title: CMFCButton 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217505"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352712"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 `CMFCButton`類別將功能加入[CButton](../../mfc/reference/cbutton-class.md)類別，例如對齊按鈕文字、 結合按鈕文字和影像、 選取游標和指定工具提示。  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指出是否要繪製焦點矩形的按鈕周圍。|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指出是否要將游標停留在其上方時，將 BS_CHECKBOX 樣式按鈕反白顯示。|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|指出是否要顯示按鈕右邊的 映像。|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|指出按鈕是否為透明。|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|指定按鈕文字的對齊方式。|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|指定是否要使用 Windows XP 佈景主題。|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|指出是否要繪製焦點矩形的按鈕周圍。| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|指定按鈕，例如無框線、 一般，半平面或 3D 的樣式。|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|若為 TRUE，可讓要繪製為灰色的已停用的按鈕。|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|指出是否要將游標停留在其上方時，將 BS_CHECKBOX 樣式按鈕反白顯示。|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|指出是否要回應按下事件。|
+|[CMFCButton::m_bRightImage](#m_brightimage)|指出是否要顯示按鈕右邊的 映像。|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| 指出影像是否在按鈕上。|
+|[CMFCButton::m_bTransparent](#m_btransparent)|指出按鈕是否為透明。|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| 指出過去按一下事件是否按兩下。|
   
 ## <a name="remarks"></a>備註  
  其他類型的按鈕衍生自`CMFCButton`類別，例如[CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md)類別，可支援超連結，而`CMFCColorButton`類別，可支援色彩選擇器對話方塊。  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>傳回值  
  如果目前的 Windows 佈景主題; 的對應按鈕框線的樣式，則為 TRUE。否則為 FALSE。  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+指定是否要繪製按鈕時，使用 Windows XP 佈景主題。
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  指出是否要繪製焦點矩形的按鈕周圍。  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  設定`m_bDrawFocus`指定架構將焦點周圍繪製矩形按鈕的文字和影像按鈕焦點。 如果為 TRUE 的成員。  
   
  `CMFCButton`建構函式初始化這個成員為 TRUE。  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+若為 TRUE，可讓要繪製為灰色的已停用的按鈕。
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  指出是否要將游標停留在其上方時，將 BS_CHECKBOX 樣式按鈕反白顯示。  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>備註  
  設定`m_bHighlightChecked`設為 TRUE，架構會反白顯示 BS_CHECKBOX 樣式按鈕的滑鼠停留在其上方時所指定的成員。  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+指出是否要回應按下事件。
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  指出是否要顯示按鈕右邊的 映像。  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+指出影像是否在按鈕上。
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>備註  
  設定`m_bRightImage`成員設為 TRUE，指定架構，會顯示為按鈕的影像右邊的按鈕的文字標籤。  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|對齊按鈕右邊的按鈕文字。|  
   
  `CMFCButton`建構函式初始化這個成員為 ALIGN_CENTER。  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+指出事件是否按一下最後一個按兩下。 |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  指定按鈕，例如無框線、 一般，半平面或 3D 的樣式。  
   

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 3ab0e457f90f3130295d287ae9a32d18ab212d50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202599"
 ---
 # <a name="cfiletime-class"></a>CFileTime 類別
 這個類別提供方法來管理與檔案相關聯的日期和時間值。  
@@ -107,7 +107,7 @@ class CFileTime :  public FILETIME
 |Day|小時\*24|  
 |一週|天\*7|  
   
- **請注意**並非所有的檔案系統可以記錄建立和上次存取時間和不是所有的檔案系統會將其記錄在相同的方式。 範例中的，在 Windows NT FAT 檔案系統中，建立時間的解析度為 10 毫秒，寫入時間有解析度為 2 秒，而且存取時間有 1 天 （存取的日期） 的解決方案。 在 NTFS，存取時間會有 1 小時的解決方案。 此外，FAT 當地時間，記錄在磁碟上的時間，但 NTFS 會記錄在磁碟上的時間-utc 時區。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](http://msdn.microsoft.com/library/windows/desktop/ms724290)。  
+ **請注意**並非所有的檔案系統可以記錄建立和上次存取時間和不是所有的檔案系統會將其記錄在相同的方式。 範例中的，在 Windows NT FAT 檔案系統中，建立時間的解析度為 10 毫秒，寫入時間有解析度為 2 秒，而且存取時間有 1 天 （存取的日期） 的解決方案。 在 NTFS，存取時間會有 1 小時的解決方案。 此外，FAT 當地時間，記錄在磁碟上的時間，但 NTFS 會記錄在磁碟上的時間-utc 時區。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](/windows/desktop/SysInfo/file-times)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `FILETIME`  
@@ -128,7 +128,7 @@ CFileTime(ULONGLONG nTime) throw();
   
 ### <a name="parameters"></a>參數  
  *全文檢索*  
- A [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構。  
+ A [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)結構。  
   
  *n*  
  表示日期和時間做為 64 位元值。  
@@ -418,7 +418,7 @@ static const ULONGLONG Week = Day* 7;
  範例，請參閱[CFileTime::Millisecond](#millisecond)。  
   
 ## <a name="see-also"></a>另請參閱  
- [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
+ [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTimeSpan 類別](../../atl-mfc-shared/reference/cfiletimespan-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)

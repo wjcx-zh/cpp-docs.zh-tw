@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853016"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216198"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
 封裝 Windows 通用 OLE 物件屬性對話方塊。  
@@ -153,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>傳回值  
  IDOK 或 IDCANCEL 如果登錄成功。否則為 0。 IDOK 及 IDCANCEL 是常數，指出使用者是否已選取 [確定] 或 [取消] 按鈕。  
   
- 如果傳回 IDCANCEL，您可以呼叫 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函式來判斷是否發生錯誤。  
+ 如果傳回 IDCANCEL，您可以呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷是否發生錯誤。  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- 類型的結構[OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297)，用來初始化 OLE 物件屬性對話方塊的 [一般] 頁面。  
+ 類型的結構[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [一般] 頁面。  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -168,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  如需有關`OLEUIGNRLPROPS`結構，請參閱 Windows SDK。  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- 類型的結構[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)，用來初始化 OLE 物件屬性對話方塊的 [連結] 頁面。  
+ 類型的結構[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [連結] 頁面。  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -180,7 +180,7 @@ OLEUILINKPROPS m_lp;
  如需有關`OLEUILINKPROPS`結構，請參閱 Windows SDK。  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- 類型的結構[OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)，用來初始化通用 OLE 物件屬性對話方塊。  
+ 類型的結構[OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)，用來初始化通用 OLE 物件屬性對話方塊。  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -189,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>備註  
  此結構包含用來初始化的一般、 連結和檢視頁面的成員。  
   
- 如需詳細資訊，請參閱 OLEUIOBJECTPROPS 並[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) Windows SDK 中的結構。  
+ 如需詳細資訊，請參閱 OLEUIOBJECTPROPS 並[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) Windows SDK 中的結構。  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- 類型的結構[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)，其成員儲存對話方塊物件的特性。  
+ 類型的結構[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2)，其成員儲存對話方塊物件的特性。  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -206,7 +206,7 @@ PROPSHEETHEADER m_psh;
  如需有關`PROPSHEETHEADER`結構，請參閱 Windows SDK。  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- 類型的結構[OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)，用來初始化 OLE 物件屬性對話方塊的 [檢視] 頁面。  
+ 類型的結構[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)，用來初始化 OLE 物件屬性] 對話方塊的 [檢視] 頁面。  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

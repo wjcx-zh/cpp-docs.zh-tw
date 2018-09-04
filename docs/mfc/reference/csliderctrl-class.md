@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850205"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215353"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 提供 Windows 通用滑桿控制項的功能。  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)，Windows SDK，控制項中所述。  
+ 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](/windows/desktop/Controls/trackbar-control-styles)，Windows SDK，控制項中所述。  
   
  *rect*  
- 指定滑桿控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ 指定滑桿控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
  *pParentWnd*  
  指定滑桿控制項的父視窗，通常`CDialog`。 它必須不是 NULL。  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)，Windows SDK，控制項中所述。  
+ 指定滑桿控制項的樣式。 套用的任何組合[滑桿控制項樣式](/windows/desktop/Controls/trackbar-control-styles)，Windows SDK，控制項中所述。  
   
  *rect*  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
+ 參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
   
  *pParentWnd*  
  是控制項的父視窗的指標。  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  指標[CWnd](../../mfc/reference/cwnd-class.md)協同視窗，在所指定的位置的物件*fLocation*，或如果沒有協同視窗存在於該位置，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178)、 Windows SDK 中所述。 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 此成員函式實作的 Win32 訊息的行為[TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy)、 Windows SDK 中所述。 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  擷取的大小和位置的滑桿控制項的通道的周框矩形。  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  滑桿，像素為單位的長度。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength)訊息，Windows SDK 中所述。  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  擷取的大小和滑桿控制項中的滑桿 （捲動方塊） 的周框矩形位置。  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件，或如果工具提示不在使用中則為 NULL。 如果滑桿控制項不會使用 TBS_TOOLTIPS 樣式，傳回的值會是 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209)、 Windows SDK 中所述。 請注意，此成員函式傳回`CToolTipCtrl`而不是控制項的控制代碼的物件。  
+ 此成員函式實作的 Win32 訊息的行為[TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips)、 Windows SDK 中所述。 請注意，此成員函式傳回`CToolTipCtrl`而不是控制項的控制代碼的物件。  
   
- 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  將視窗指派為協同視窗的滑桿控制項。  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  指標[CWnd](../../mfc/reference/cwnd-class.md)先前已被指派至該位置的滑桿控制項的物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213)、 Windows SDK 中所述。 請注意，此成員函式會使用指標`CWnd`物件，而不是其傳回值和參數的視窗控制代碼。  
+ 此成員函式實作的 Win32 訊息的行為[TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy)、 Windows SDK 中所述。 請注意，此成員函式會使用指標`CWnd`物件，而不是其傳回值和參數的視窗控制代碼。  
   
- 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  設定滑桿控制項的列的大小。  
@@ -552,7 +552,7 @@ void SetPos(int nPos);
   
 ### <a name="parameters"></a>參數  
  *nPos*  
- 指定滑桿。  
+ 指定蜪鎏 彸。  
   
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange  
  設定滑桿控制項中的滑桿範圍 （最小和最大位置）。  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in]*nLength*|滑桿，像素為單位的長度。|  
   
 ### <a name="remarks"></a>備註  
- 此方法需要 trackbar 控制項設定為[TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147)樣式。  
+ 此方法需要 trackbar 控制項設定為[TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles)樣式。  
   
- 這個方法會傳送[TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength)訊息，Windows SDK 中所述。  
   
 ### <a name="example"></a>範例  
  下列程式碼範例會定義變數`m_sliderCtrl`，也就是用來存取目前 trackbar 控制項。 此範例也會定義一個變數， `thumbLength`，也就是用來儲存 trackbar 控制項的捲動方塊元件的預設長度。 下一個範例中使用這些變數。  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>參數  
  *n 位置*  
- 值，表示要顯示工具提示控制項的位置。 如需可能值的清單，請參閱 Win32 訊息[TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240)、 Windows SDK 中所述。  
+ 值，表示要顯示工具提示控制項的位置。 如需可能值的清單，請參閱 Win32 訊息[TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside)、 Windows SDK 中所述。  
   
 ### <a name="return-value"></a>傳回值  
  值，表示工具提示控制項的前一個位置。 傳回的值等於其中一個可能的值為*n 位置*。  
   
 ### <a name="remarks"></a>備註  
- Windows SDK 中所述，此成員函式會實作 Win32 訊息 TBM_SETTIPSIDE 的行為。 使用 TBS_TOOLTIPS 樣式的滑桿控制項顯示工具提示。 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ Windows SDK 中所述，此成員函式會實作 Win32 訊息 TBM_SETTIPSIDE 的行為。 使用 TBS_TOOLTIPS 樣式的滑桿控制項顯示工具提示。 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  指派至滑桿控制項的工具提示控制項。  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  指標[CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)物件，其中包含要使用滑動軸控制項工具提示。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242)、 Windows SDK 中所述。 TBS_TOOLTIPS 樣式建立的滑桿控制項時，它會建立預設工具提示控制項出現旁的滑桿，顯示滑桿的目前位置。 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
+ 此成員函式實作的 Win32 訊息的行為[TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips)、 Windows SDK 中所述。 TBS_TOOLTIPS 樣式建立的滑桿控制項時，它會建立預設工具提示控制項出現旁的滑桿，顯示滑桿的目前位置。 如需滑桿控制項樣式的描述，請參閱 < [Trackbar 控制項樣式](/windows/desktop/Controls/trackbar-control-styles)Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)   

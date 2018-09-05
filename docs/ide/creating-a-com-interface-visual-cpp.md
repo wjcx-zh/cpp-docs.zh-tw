@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c31dfc72e6d552cacd46f3e0b49aedc18bf4c7f2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683309"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>建立 COM 介面 (Visual C++)
 Visual C++ 提供精靈與範本來為您的 COM 物件與自動化類別，建立使用 COM 定義介面和分配介面的專案。  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  如需詳細資訊，請參閱[實作介面](../ide/implementing-an-interface-visual-cpp.md)和[將物件和控制項新增至 ATL 專案](../atl/reference/adding-objects-and-controls-to-an-atl-project.md)。  
   
- Visual C++ 提供數種方式來檢視和[編輯為您的專案定義的 COM 介面](../ide/editing-a-com-interface.md)。 [類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)會顯示 C++ 專案的 .idl 檔中定義之任何介面或分配介面的圖示。  
+ Visual C++ 提供數種方式來檢視和[編輯為您的專案定義的 COM 介面](../ide/editing-a-com-interface.md)。 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code)會顯示 C++ 專案的 .idl 檔中定義之任何介面或分配介面的圖示。  
   
  對於以 ATL 為基礎的 COM 物件類別，[類別檢視] 會讀取 ATL 類別中的 COM 對應，以顯示 ATL 類別與其實作之任何介面之間的關聯性。  
   

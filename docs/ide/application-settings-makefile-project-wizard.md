@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53d87c6f0109708023f57e2d30ae38fa4f4f574b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222656"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677324"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Makefile 專案精靈、應用程式設定
 提供專案的資訊。 您指定的選項會反映在專案的[屬性頁](../ide/working-with-project-properties.md)。 建立專案之後，即可在專案屬性頁的 [Nmake] 頁面檢視和編輯下列每個選項。  
@@ -44,4 +44,4 @@ ms.locfileid: "43222656"
  [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [屬性頁](../ide/property-pages-visual-cpp.md)   
- [部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ 

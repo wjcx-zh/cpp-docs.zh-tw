@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217249"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686417"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 \<param> 標記應該在方法宣告的註解中用來描述參數的其中一個方法。  
@@ -42,7 +42,7 @@ ms.locfileid: "43217249"
  參數的描述。  
   
 ## <a name="remarks"></a>備註  
- \<param> 標記的文字將會顯示於 IntelliSense、[物件瀏覽器](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)以及程式碼結構 Web 報告中。  
+ \<param> 標記的文字將會顯示於 IntelliSense、[物件瀏覽器](/visualstudio/ide/viewing-the-structure-of-code)以及程式碼結構 Web 報告中。  
   
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   

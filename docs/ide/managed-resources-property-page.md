@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2fe0896a8fbd8b8c0a8f68847ee138017eaa36b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688607"
 ---
 # <a name="managed-resources-property-page"></a>Managed 資源屬性頁
 啟用資源編譯器的設定。  
@@ -42,6 +42,6 @@ ms.locfileid: "43215497"
  如需如何存取 [受控資源] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
 ## <a name="see-also"></a>請參閱  
- [使用 RC (RC 命令列)](https://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [使用 RC (RC 命令列)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (內嵌 Managed 資源)](../build/reference/assemblyresource-embed-a-managed-resource.md)

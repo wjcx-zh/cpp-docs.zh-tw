@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6510f7f3bd9a88f4b938d2646bad6750fe310def
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216558"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688743"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在舊版執行階段版本上執行 C++ /clr 應用程式
 除非另行指定，否則 C++ .NET Framework 應用程式已建置為在編譯器用來建置應用程式的 Common Language Runtime (CLR) 版本上執行。 不過，針對一個版本的執行階段所建置的 .exe 應用程式，可以在提供必要功能的任何其他版本上執行。  
@@ -36,10 +36,6 @@ ms.locfileid: "43216558"
  在執行階段，app.config 檔案的名稱必須具有格式 *filename.ext*.config，其中 *filename.ext* 是啟動應用程式的可執行檔名稱，而且必須在與可執行檔相同的目錄中。 例如，如果您的應用程式名為 TestApp.exe，app.config 檔案會命名為 TestApp.exe.config。  
   
  如果您指定多個執行階段版本，而且應用程式在具有多個已安裝執行階段版本的電腦上執行，則應用程式會使用 config 檔中所指定且已安裝的第一個版本。  
-  
- 如需詳細資訊，請參閱[如何：將應用程式設定成以 .NET Framework 版本為目標](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717)。  
-  
- 若要在 1.0 版或 1.1 版的 CLR 上執行，由 Visual C++ 編譯器所建置的應用程式，必須使用 [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) 編譯。  
   
 ## <a name="see-also"></a>請參閱  
  [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

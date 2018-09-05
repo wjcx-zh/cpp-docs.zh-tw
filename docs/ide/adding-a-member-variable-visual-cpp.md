@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20611d2cc5e4b391e2dafdef614dd5173d32ef7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dade9987358c1c160dffd0221b0421b4fab92c24
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207294"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687638"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>加入成員變數 (Visual C++)
-您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計來取得相關資訊並用來在原始程式檔的適當位置插入項目。 您可以從[資源檢視](../windows/resource-view-window.md)中的[對話方塊編輯器](../windows/dialog-editor.md)，或從[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)新增成員變數。  
+您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計來取得相關資訊並用來在原始程式檔的適當位置插入項目。 您可以從[資源檢視](../windows/resource-view-window.md)中的[對話方塊編輯器](../windows/dialog-editor.md)，或從[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)新增成員變數。  
   
 > [!NOTE]
 >  當您設計和實作對話方塊時，可能會發現使用對話方塊編輯器新增對話方塊控制項，然後實作控制項的成員變數這樣的做法更有效率。  
@@ -49,7 +49,7 @@ ms.locfileid: "43207294"
   
 ### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>使用 [新增成員變數精靈] 從 [類別檢視] 新增成員變數  
   
-1.  在[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，展開專案節點，顯示專案中的類別。  
+1.  在[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，展開專案節點，顯示專案中的類別。  
   
 2.  以滑鼠右鍵按一下您要新增變數的類別。  
   

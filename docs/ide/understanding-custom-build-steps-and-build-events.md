@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 410737380f6cc7c5ad52f29953926b3b1c2e71b5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678081"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自訂建置步驟和建置事件
 在 Visual C++ 開發環境中，有三種基本方式可自訂建置流程：  
@@ -73,4 +73,3 @@ ms.locfileid: "43206291"
 ## <a name="see-also"></a>請參閱  
  [在 Visual Studio 中建置 C++ 專案](../ide/building-cpp-projects-in-visual-studio.md)   
  [建置命令和屬性的一般巨集](../ide/common-macros-for-build-commands-and-properties.md)   
- [工具建置順序對話方塊](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

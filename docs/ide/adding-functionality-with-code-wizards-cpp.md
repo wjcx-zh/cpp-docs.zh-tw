@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebda52eaa4deab6ddf8535da9b4c5a94a2cbc77b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213132"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679401"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
 當您建立專案之後，您會想要變更或新增該專案的功能。 這類工作包括建立新的類別、新增成員函式和變數，以及新增 Automation 方法和屬性。 程式碼精靈的設計目的是為了讓您執行上述所有工作。  
@@ -56,7 +56,7 @@ ms.locfileid: "43213132"
   
 -   在 [方案總管] 中，以滑鼠右鍵按一下任何資料夾，然後從捷徑功能表按一下 [新增]，即可讓您將新的或現有的檔案、多個資料夾、項目、類別、資源和 Web 參考新增至專案。  
   
--   從 [[類別檢視] 視窗](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，以滑鼠右鍵按一下適當的節點，然後從捷徑功能表按一下 [新增]，即可讓您將函式、變數、類別、屬性、方法、事件、介面、連接點或其他程式碼新增至專案。  
+-   從 [[類別檢視] 視窗](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下適當的節點，然後從捷徑功能表按一下 [新增]，即可讓您將函式、變數、類別、屬性、方法、事件、介面、連接點或其他程式碼新增至專案。  
   
     > [!NOTE]
     >  Visual Studio 不提供將介面新增至專案的精靈。 您可以藉由使用 [ATL 簡單物件精靈](../atl/reference/atl-simple-object-wizard.md)來新增簡單物件，將介面新增至 ATL 專案或[將 ATL 支援新增至 MFC 專案](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。 或者，開啟專案的 .idl 檔案，然後鍵入下列程式碼建立介面：  

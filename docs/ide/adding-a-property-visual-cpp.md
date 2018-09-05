@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212791"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685322"
 ---
 # <a name="adding-a-property-visual-c"></a>加入屬性 (Visual C++)
 您可以使用[新增屬性精靈](../ide/names-add-property-wizard.md)將方法新增至專案中的介面。  
   
 ### <a name="to-add-a-property-to-your-object"></a>將屬性新增至您的物件  
   
-1.  在[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，以滑鼠右鍵按一下您要新增屬性的介面名稱。  
+1.  在[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)中，以滑鼠右鍵按一下您要新增屬性的介面名稱。  
   
     > [!NOTE]
     >  您也可以將屬性新增至分配介面，除非專案有屬性，否則它會巢狀位於程式庫節點內。  

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7e82a384e3b2e8ca446843c91984e78754d6cc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 468ce7d65e31a70192e1a48bf21126dd96a1936e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204056"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678908"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -58,7 +58,7 @@ ms.locfileid: "43204056"
 
 ## <a name="troubleshooting-deployment-issues"></a>針對部署問題進行移難排解
 
-Visual C++ 程式庫的載入順序與系統相關。 若要診斷載入器問題，請使用 depends.exe 或 where.exe。 如需詳細資訊，請參閱[動態連結程式庫搜尋順序 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)。
+Visual C++ 程式庫的載入順序與系統相關。 若要診斷載入器問題，請使用 depends.exe 或 where.exe。 如需詳細資訊，請參閱[動態連結程式庫搜尋順序 (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order)。
 
 ## <a name="see-also"></a>另請參閱
 

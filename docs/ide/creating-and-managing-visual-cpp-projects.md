@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f56ee748738cd67199348c93272a9cd2ed564e2c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222239"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685695"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>建立和管理以 MSBuild 為基礎的 Visual C++ 專案
 MSBuild 是 Visual C++ 的原生建置系統，通常也是最適合用於 UWP 應用程式和使用 MFC 或 ATL 程式庫之桌面應用程式的建置系統。 MSBuild 會與 Visual Studio IDE 和專案系統緊密整合，但您也可以從命令列使用它。 從 Visual Studio 2017 開始，Visual C++ [透過開啟資料夾功能支援 CMake 和其他非 MSBuild 系統](non-msbuild-projects.md)。
@@ -67,9 +67,6 @@ MSBuild 是 Visual C++ 的原生建置系統，通常也是最適合用於 UWP �
 ## <a name="related-sections"></a>相關章節  
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)  
  提供描述如何從命令列或 Visual Studio 整合式開發環境建置程式等主題的連結。  
-  
- [Visual C++ 參考](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
- 提供描述 C 和 C++ 語言參考、Visual C++ 提供的程式庫、Visual C++ 擴充性物件模型以及 Microsoft 巨集組合程式 (MASM) 等主題的連結。  
   
 ## <a name="see-also"></a>請參閱  
  [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

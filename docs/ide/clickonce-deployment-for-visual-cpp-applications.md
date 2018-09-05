@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59649aeee3b0f63b496b967722205001a3de1619
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a290eb7695bbcd7c03cda0351445519352e80a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213529"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677720"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 應用程式的 ClickOnce 部署
 Visual Studio 提供部署 Windows 應用程式的兩種不同技術：ClickOnce 部署或 [Windows Installer](/windows/desktop/Msi/windows-installer-portal) 部署。  
@@ -53,7 +53,6 @@ Visual Studio 提供部署 Windows 應用程式的兩種不同技術：ClickOnce
  [Makecert.exe (憑證建立工具)](https://msdn.microsoft.com/library/windows/desktop/aa386968)   
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)   
- [Windows Installer 部署](https://msdn.microsoft.com/121be21b-b916-43e2-8f10-8b080516d2a0)   
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
  [建立啟動載入器套件](/visualstudio/deployment/creating-bootstrapper-packages)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   

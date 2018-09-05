@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfee61f1632fad2d762c41149c1bc302a1c4b9da
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211208"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691982"
 ---
 # <a name="implementing-an-interface-visual-c"></a>實作介面 (Visual C++)
 若要實作介面，您必須已將專案建立作為 ATL COM 應用程式，或作為包含 ATL 支援的 MFC 應用程式。 您可以使用 [ATL 專案精靈](../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[將 ALT 物件新增至 MFC 應用程式](../mfc/reference/adding-atl-support-to-your-mfc-project.md)，以實作 MFC 應用程式的 ATL 支援。  
@@ -46,7 +46,7 @@ ms.locfileid: "43211208"
 4.  在 [類別檢視] 中，展開物件的 [基底] 和 [介面] 節點以查看您已實作的介面，然後展開介面的節點以查看其可用的屬性、方法和事件。  
   
     > [!NOTE]
-    >  您也可以使用[物件瀏覽器](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)來檢查介面的成員。  
+    >  您也可以使用[物件瀏覽器](/visualstudio/ide/viewing-the-structure-of-code)來檢查介面的成員。  
   
 ## <a name="see-also"></a>請參閱  
  [建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)   

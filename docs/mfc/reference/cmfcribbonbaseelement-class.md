@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213658"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678094"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 `CMFCRibbonBaseElement`類別是基底類別，您可以加入的所有項目的[功能區列](../../mfc/reference/cmfcribbonbar-class.md)。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  如果方法成功; 的功能區元素的父視窗的指標否則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 功能區項目的父視窗[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)或是[CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
+ 功能區項目的父視窗[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)或是[CMFCRibbonPanelMenuBar](internal-classes.md)。  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  如果使用者目前按下它會擷取功能區項目的指標。  

@@ -1,7 +1,7 @@
 ---
-title: 運算子 IMAGEREL |Microsoft 文件
+title: 運算子 IMAGEREL |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,26 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4c22c1e12ff2850c61cb1b0aea7fe89eca5ca4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3293f78151ae9bc5a8de47c4083d3e896027815c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055108"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691404"
 ---
 # <a name="operator-imagerel"></a>運算子 IMAGEREL
-傳回的映像相對位移`expression`。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-IMAGEREL expression  
-```  
-  
-## <a name="remarks"></a>備註  
- 產生的值通常稱為 RVA 或相對虛擬位址。  
-  
- IMAGEREL 是只能搭配 COFF 物件發出。  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回映像的相對位移`expression`。
+
+## <a name="syntax"></a>語法
+
+> IMAGEREL 運算式
+
+## <a name="remarks"></a>備註
+
+產生的值通常稱為 RVA 或相對虛擬位址。
+
+可以只使用 COFF 物件發出 IMAGEREL。
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

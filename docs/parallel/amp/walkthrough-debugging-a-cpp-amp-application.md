@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bec76b407221fb9029662ba982a10edc4ca9c77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3a8c5affeaee73be7dd464ea44ea62db35257f7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604916"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689752"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 C++ AMP 應用程式
 本主題示範如何使用 c + + Accelerated Massive Parallelism (c + + AMP)，以善用圖形處理單元 (GPU) 的應用程式進行偵錯。 它會使用加總大型整數陣列的平行方式來降低程式。 這個逐步解說將說明下列工作：  
@@ -398,4 +398,4 @@ GPU 執行緒資料提示方塊
 [偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)   
 [如何： 使用 GPU 執行緒視窗](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
 [如何： 使用平行監看式視窗](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
-[使用並行視覺化檢視分析 c + + AMP 程式碼](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[使用並行視覺化檢視分析 c + + AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

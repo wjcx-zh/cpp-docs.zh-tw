@@ -1,7 +1,7 @@
 ---
-title: 運算子 LROFFSET |Microsoft 文件
+title: 運算子 LROFFSET |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245dc24b56557c26134712ca28c75945bdd97f5a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dd04a306e85fbb3627729355dc05d55197d91134
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678528"
 ---
 # <a name="operator-lroffset"></a>運算子 LROFFSET
-傳回的位移*運算式*。 與相同**位移**，不過會產生載入器解決的位移，可讓 Windows 將程式碼區段的重新放置。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-LROFFSET expression  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回的位移*運算式*。 與相同**位移**，但它會產生載入器解析的位移，可讓 Windows 即可重新定位程式碼區段。
+
+## <a name="syntax"></a>語法
+
+> LROFFSET 運算式
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

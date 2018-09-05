@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196186"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690148"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 提供 Windows 通用進度列控制項的功能。  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定進度列控制項的樣式。 套用上列任何組合中的視窗 stylesdescribed [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)在 Windows SDK 中，除了下列進度列控制項的樣式，來控制：  
+ 指定進度列控制項的樣式。 套用上列任何組合中的視窗 stylesdescribed [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)在 Windows SDK 中，除了下列進度列控制項的樣式，來控制：  
   
 - PBS_VERTICAL 顯示垂直進度資訊，從上至底部。 沒有這個旗標，進度列控制項會顯示水平、 左到右。  
   
@@ -181,10 +181,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定進度列控制項的樣式。 套用上列任何組合中所述的視窗樣式[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 指定進度列控制項的樣式。 套用上列任何組合中所述的視窗樣式[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *rect*  
  參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  
@@ -275,7 +275,7 @@ int GetState() const;
 ### <a name="return-value"></a>傳回值  
  目前的進度列控制項，也就是下列值之一的狀態：  
   
-|值|State|  
+|值|狀況|  
 |-----------|-----------|  
 |PBST_NORMAL|進行中|  
 |PBST_ERROR|錯誤|  

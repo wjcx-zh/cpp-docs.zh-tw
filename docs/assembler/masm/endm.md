@@ -1,7 +1,7 @@
 ---
-title: ENDM |Microsoft 文件
+title: ENDM |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d9060d409663bf6f65845de984654583de0ad6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a584d95e37b26ebed13a9380628b08af4e922f72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685381"
 ---
 # <a name="endm"></a>ENDM
-終止巨集或重複的區塊。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-ENDM  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 請參閱[巨集](../../assembler/masm/macro.md)，[如](../../assembler/masm/for-masm.md)， [FORC](../../assembler/masm/forc.md)，[重複](../../assembler/masm/repeat.md)，或**時**。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+結束巨集或重複的區塊。
+
+## <a name="syntax"></a>語法
+
+> ENDM
+
+## <a name="remarks"></a>備註
+
+請參閱[巨集](../../assembler/masm/macro.md)，[如](../../assembler/masm/for-masm.md)， [FORC](../../assembler/masm/forc.md)，[重複](../../assembler/masm/repeat.md)，或**雖然**。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

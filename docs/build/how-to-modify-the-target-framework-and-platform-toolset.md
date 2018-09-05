@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eef4c0e7e32b85e26fbdc6adb7a2ebd26850b2ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572732"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691731"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目標 Framework 和平台工具組
 您可以變更 Visual c + + 專案設定以不同版本的.NET framework 為目標，以及使用不同的平台工具組。 根據預設，專案系統會使用對應於建立專案所用 Visual Studio 版本的 .NET Framework 版本及工具組版本。 您可以修改專案屬性來變更目標平台工具組。 您可以修改專案 (.vcxproj) 檔案來變更目標 Framework。 您不必針對每個編譯目標維護一個不同的程式碼基底。  
@@ -34,7 +34,7 @@ ms.locfileid: "42572732"
 > [!NOTE]
 >  若要變更目標平台工具組，您必須已經安裝相關聯的 Visual Studio 版本或 Windows Platform SDK。 例如，若要使用 **Windows7.1SDK** 平台工具組的 Itanium 平台，必須安裝 [適用於 Windows 7 的 Windows SDK及 .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) ；但您可以使用其他相容的 Visual Studio 版本執行開發工作，但前提是要使用正確的 Framework 版本及平台工具組。  
   
- 您可以建立自訂平台工具組進一步擴充目標平台。 如需詳細資訊，請參閱 < [c + + 原生多目標](http://go.microsoft.com/fwlink/p/?linkid=196619)Visual c + + 部落格上。  
+ 您可以建立自訂平台工具組進一步擴充目標平台。 如需詳細資訊，請參閱 < [c + + 原生多目標](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)Visual c + + 部落格上。  
   
 ### <a name="to-change-the-target-framework"></a>若要變更目標 Framework  
   

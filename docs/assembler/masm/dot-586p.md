@@ -1,7 +1,7 @@
 ---
-title: .586P |Microsoft 文件
+title: .586P |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53014bedb3a7af77d48aaf9aea5d022b06678947
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12fc62d712fdcc17a36e08befbbceece28b6fd08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049235"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682310"
 ---
 # <a name="586p"></a>.586P
-可讓組件的所有指示 （包括特殊權限） Pentium 處理器。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-.586P  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+可讓組件的 Pentium 處理器的所有指示 （包括特殊權限）。
+
+## <a name="syntax"></a>語法
+
+> .586P
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

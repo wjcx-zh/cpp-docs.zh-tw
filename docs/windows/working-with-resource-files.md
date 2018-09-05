@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211093"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691188"
 ---
 # <a name="working-with-resource-files"></a>使用資源檔
 
 > [!WARNING]
-> 本節適用於以 C++ 撰寫的 Windows 桌面應用程式。 在 c + + 撰寫的通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。
+> 本節適用於以 C++ 撰寫的 Windows 桌面應用程式。 在 c + + 撰寫的通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](/windows/uwp/app-resources/)。
 >
 > 如需將資源新增至 C + + /cli 專案，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。
 
@@ -52,9 +52,6 @@ ms.locfileid: "43211093"
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 提供 Visual C++ 文件的連結。
-
-[Visual Studio 簡介](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-描述使用相同整合式開發環境 (IDE) 之所有開發工具的完整集合，容許它們在建立混合語言方案時共用工具和設施。
 
 [告訴我們](/visualstudio/ide/talk-to-us)  
 提供如何使用文件集、連絡產品支援，以及採用協助工具功能之資訊的連結。

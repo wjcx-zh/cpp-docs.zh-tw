@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d1e9a04a660da44f1c447dcd6ec388ba791958c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214917"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680755"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 `CNetAddressCtrl` 類別表示網路位址控制項，您可以用來輸入和驗證 IPv4、IPv6 和具名 DNS 位址的格式。  
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|位元組合 (OR) 套用至控制項的延伸樣式。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函式。|  
+|[in]*dwExStyle*|位元組合 (OR) 套用至控制項的延伸樣式。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|  
 |[in]*cheaderctrl:: Create*|位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
 |[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
 |[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  

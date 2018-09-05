@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7e218002171b7ad2d141be227ab277851487f0f5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212217"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678796"
 ---
 # <a name="preprocessor-directives"></a>前置處理器指示詞
 
 前置處理器指示詞，例如`#define`和`#ifdef`，通常用來使原始程式易於變更和易於編譯在不同的執行環境中。 原始程式檔中的指示詞會指示前置處理器執行特定動作。 例如，前置處理器可以取代文字中的語彙基元、將其他檔案的內容插入原始程式檔，或是透過移除文字區段來隱藏編譯檔案的一部分。 在巨集展開之前，會辨識並執行前置處理器程式行。 因此，如果巨集展開成類似前置處理器命令的程式碼，前置處理器就無法辨識該命令。
 
-除了不支援逸出序列以外，前置處理器陳述式使用的字元集與原始程式檔陳述式使用的相同。 設定 前置處理器陳述式中使用的字元是相同[執行字元集](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed)。 前置處理器也會辨識負數字元值。
+除了不支援逸出序列以外，前置處理器陳述式使用的字元集與原始程式檔陳述式使用的相同。 前置處理器陳述式中使用的字元集與執行字元集相同。 前置處理器也會辨識負數字元值。
 
 前置處理器會辨識下列指示詞：
 

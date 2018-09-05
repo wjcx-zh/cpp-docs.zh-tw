@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfe64e627fd3ca37ab1e1d2d820cafaf3a6a4258
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 65a3c4da1664e34e40e0961655c130f320efb17b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199961"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690699"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
-擴充預存程序，封裝成動態連結程式庫 (Dll)，可用來擴充 SQL Server 功能，透過使用 Visual c + + 開發的函式。 擴充預存程序會實作為 Dll 內的函式。 除了函數以外，擴充預存程序也可以定義[使用者定義型別](../cpp/classes-and-structs-cpp.md)並[彙總函式](https://msdn.microsoft.com/de255454-f45e-4281-81f9-bc61893ac5da)（如 SUM 或 AVG）。  
+擴充預存程序，封裝成動態連結程式庫 (Dll)，可用來擴充 SQL Server 功能，透過使用 Visual c + + 開發的函式。 擴充預存程序會實作為 Dll 內的函式。 除了函數以外，擴充預存程序也可以定義[使用者定義型別](../cpp/classes-and-structs-cpp.md)和彙總函式 （例如，SUM 或 AVG）。  
   
  當用戶端執行擴充預存程序時，SQL Server dll 的搜尋與擴充預存程序相關聯，並載入 DLL。 SQL Server 會呼叫要求的擴充預存程序，並在指定的安全性內容下執行它。 擴充預存程序，然後將結果集，並傳回至伺服器的參數。  
   

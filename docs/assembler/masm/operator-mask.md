@@ -1,7 +1,7 @@
 ---
-title: 運算子 MASK |Microsoft 文件
+title: 運算子 MASK |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6e7fe7b71fbb28be7cd99dc6fc7a6d437a4253c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 22d1133257db825ac36beb8b83d5f170664472c2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057922"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689688"
 ---
 # <a name="operator-mask"></a>運算子 MASK
-傳回一個位元遮罩中的位元*recordfieldname*或*記錄*設定，並已清除其他所有的位元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-MASK {recordfieldname | record}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回位元遮罩中的位元*recordfieldname*或是*記錄*設定且已清除其他所有的位元。
+
+## <a name="syntax"></a>語法
+
+> 遮罩 {recordfieldname | 記錄}
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

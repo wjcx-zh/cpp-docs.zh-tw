@@ -1,7 +1,7 @@
 ---
-title: ARM 組合程式指示詞 |Microsoft 文件
+title: ARM 組合程式指示詞 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,103 +12,104 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 282d8bbd55bec8053961c709eb3733a65972b187
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693109"
 ---
 # <a name="arm-assembler-directives"></a>ARM 組合程式指示詞
-大部分的情況下，Microsoft ARM 組件會使用 ARM 組譯語言，而其記錄在第 7 章[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 不過，有些組件指示詞的 Microsoft 實作，ARM 組件指示詞而有所不同。 本文說明的差異。  
-  
-## <a name="microsoft-implementations-of-arm-assembly-directives"></a>ARM 組件指示詞的 Microsoft 實作  
- 區域  
- Microsoft ARM 組件支援這些區域屬性： 對齊程式碼、 CODEALIGN、 資料、 NOINIT、 READONLY、 READWRITE、 縮圖、 ARM。  
-  
- 捲動方塊和 ARM 以外的所有工作中所述[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。  
-  
- 在 Microsoft ARM 組件中，捲動方塊表示程式碼區段包含捲動方塊程式碼，以及為程式碼區段的預設值。  ARM 表示的區段包含 ARM 程式碼。  
-  
- ATTR  
- 不支援。  
-  
- 代碼 16  
- 由於這表示前置 UAL Thumb 語法 Microsoft ARM 組件不允許不支援。  請改用 THUMB 指示詞，以及 UAL 語法。  
-  
- 一般  
- 不支援的一般區域對齊的規格。  
-  
- DCDO  
- 不支援。  
-  
- DN，QN，SN  
- 不支援的類型或通道上的暫存器別名的規格。  
-  
- 項目  
- 不支援。  
-  
- EQU  
- 不支援的類型定義的符號的規格。  
-  
- 匯出和全域  
- ```  
-EXPORTsym {[type]}  
-```  
-  
- `sym` 是要匯出的符號。  `[type]`如果指定，可以是`[DATA]`表示符號是否指向資料或`[FUNC]`表示符號是否指向程式碼。  
-  
- 全域是匯出的同義字。  
-  
- EXPORTAS  
- 不支援。  
-  
- 畫面格  
- 不支援。  
-  
- 函式和處理序  
- 雖然 assembly 語法支援的自訂規格程序呼叫慣例，藉由列出暫存器儲存呼叫端和被呼叫端儲存 Microsoft ARM 組譯工具可接受的語法，但忽略暫存器清單。  組譯工具所產生的偵錯資訊支援只有預設呼叫慣例。  
-  
- 匯入和 EXTERN  
- ```  
-IMPORT sym{, WEAK alias{, TYPE t}}  
-```  
-  
- `sym` 是要匯入的符號名稱。  
-  
- 如果是弱式`alias`指定時，它會指出`sym`是弱式外部。 如果沒有定義位於連結時，則所有參照，改為繫都結至`alias`。  
-  
- 如果型別`t`不指定，則`t`指出如何連結器應該嘗試解析`sym`。  這些值`t`可能會有：   
-1 — 不會執行文件庫中的搜尋 `sym`  
-2-執行的程式庫搜尋 `sym`  
-3-`sym`別名`alias`（預設值）  
-  
- EXTERN 同義匯入，不同處在於`sym`只有在它的參考目前的組件匯入。  
-  
- MACRO  
- 不支援使用條件碼巨集的變數。 巨集不支援參數的預設值。  
-  
- NOFP  
- 不支援。  
-  
- 選擇加入，TTL、 SUBT  
- 不支援，因為 Microsoft ARM 組件不會產生清單。  
-  
- PRESERVE8  
- 不支援。  
-  
- 重新配置  
- `RELOC n` 只可以遵循指示或資料定義指示詞。 可以重新定位沒有 「 匿名符號 」。  
-  
- 需要  
- 不支援。  
-  
- REQUIRE8  
- 不支援。  
-  
- THUMBX  
- 不支援，因為 Microsoft ARM 組件不支援捲動方塊 2EE 指令集。  
-  
-## <a name="see-also"></a>另請參閱  
- [ARM 組合程式命令列參考](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM 組譯工具診斷訊息](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+
+大部分的情況下，Microsoft ARM 組譯工具會使用 ARM 組譯語言，所述[ARM 編譯器 armasm 參考指南](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)。 不過，Microsoft 實作的某些組件指示詞的 ARM 組件指示詞而有所不同。 這篇文章說明的差異。
+
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft 實作的 ARM 組件指示詞
+
+`AREA`<br/>
+Microsoft ARM 組譯工具支援下列`AREA`屬性： `ALIGN`， `CODE`， `CODEALIGN`， `DATA`， `NOINIT`， `READONLY`， `READWRITE`， `THUMB`， `ARM`。
+
+以外的所有`THUMB`並`ARM`工作中所述[ARM 編譯器 armasm 參考指南](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)。
+
+在 Microsoft ARM 組譯工具中，`THUMB`指出`CODE`一節包含捲動方塊的程式碼，而且是預設值`CODE`區段。  `ARM` 表示區段包含 ARM 程式碼。
+
+`ATTR`<br/>
+不支援。
+
+`CODE16`<br/>
+不支援，因為這表示前 UAL Thumb 語法中，不允許 Microsoft ARM 組譯工具。  使用`THUMB`相反地，以及 UAL 語法指示詞。
+
+`COMMON`<br/>
+不支援的常見區域對齊的規格。
+
+`DCDO`<br/>
+不支援。
+
+`DN`, `QN`, `SN`<br/>
+不支援的型別或通道上的暫存器別名規格。
+
+`ENTRY`<br/>
+不支援。
+
+`EQU`<br/>
+不支援的類型定義的符號的規格。
+
+`EXPORT` 和 `GLOBAL`
+
+> **匯出** <em>sym</em>{**[**<em>型別</em>**]**}
+
+*sym*是要匯出的符號。  [*型別*]，如果指定，可以是`[DATA]`表示符號是否指向資料或`[FUNC]`表示符號是否指向程式碼。
+
+`GLOBAL` 是的同義字`EXPORT`。
+
+`EXPORTAS`<br/>
+不支援。
+
+`FRAME`<br/>
+不支援。
+
+`FUNCTION` 和 `PROC`<br/>
+雖然 assembly 語法支援的自訂規格程序的呼叫慣例，藉由列出暫存器儲存呼叫端和被呼叫端儲存的 Microsoft ARM 組譯工具會接受語法，但會略過註冊清單。  由 「 組合器 」 所產生的偵錯資訊支援只的預設呼叫慣例。
+
+`IMPORT` 和 `EXTERN`
+
+> **匯入** *sym*{**、 弱式***別名*{**，型別** *t*}}
+
+*sym*是要匯入的符號名稱。
+
+如果`WEAK`*別名*指定時，它會指出*sym*是弱式外部。 如果沒有為它的定義位於連結時，則所有參考都改為繫都結至*別名*。
+
+如果`TYPE` *t*指定*t*指出如何連結器應該嘗試解決*sym*。  這些值*t*可能會有：<br/>
+1 — 不會執行的程式庫搜尋*符號*<br/>
+2-執行的程式庫搜尋*符號*<br/>
+3 —*sym*為其別名*別名*（預設值）
+
+`EXTERN` 是的同義字`IMPORT`，只不過*sym*有參考它目前的組件時，才會匯入。
+
+`MACRO`<br/>
+不支援的巨集的條件程式碼的變數使用。 巨集不支援參數的預設值。
+
+`NOFP`<br/>
+不支援。
+
+`OPT`, `TTL`, `SUBT`<br/>
+不支援，因為 Microsoft ARM 組譯工具不會產生清單。
+
+`PRESERVE8`<br/>
+不支援。
+
+`RELOC`<br/>
+`RELOC n` 只能遵循指示或資料定義指示詞。 沒有可以重新放置任何 「 匿名符號 」。
+
+`REQUIRE`<br/>
+不支援。
+
+`REQUIRE8`<br/>
+不支援。
+
+`THUMBX`<br/>
+不支援，因為 Microsoft ARM 組譯工具不支援捲動方塊 2EE 指令集。
+
+## <a name="see-also"></a>另請參閱
+
+[ARM 組譯工具命令列參考](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
+[ARM 組譯工具診斷訊息](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>

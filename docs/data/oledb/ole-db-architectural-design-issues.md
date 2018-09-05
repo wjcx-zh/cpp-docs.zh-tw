@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676832"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 架構設計問題
 啟動 OLE DB 應用程式之前，您應該考慮下列問題：  
@@ -39,15 +39,9 @@ ms.locfileid: "39340559"
  **您有舊版的程式碼使用另一個資料存取技術 （ADO、 ODBC 或 DAO） 嗎？**  
  指定技術 （例如 ADO 元件使用 OLE DB 元件，並將 ODBC 程式碼移轉到 OLE DB） 的可能組合，涵蓋所有情況下是超出範圍的 Visual c + + 文件。 然而，許多文章，內容涵蓋各種案例的下列 Microsoft 網站：  
   
--   [Microsoft 說明和支援](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Microsoft 說明和支援](https://support.microsoft.com/)  
   
--   [Microsoft 資料存取技術文件概觀](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Visual Studio 解決方案中心](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [搜尋 Microsoft.com](http://search.microsoft.com/)  
-  
- 當您執行搜尋時，輸入最適合您案例的關鍵字組合例如： 如果您使用 ADO 物件的 OLE DB 提供者，請嘗試布林值搜尋與**ADO 和 「 OLE DB 」**。 如果您想要將較舊的 DAO 程式碼移轉到 ODBC，選取 「 所有單字 」，並指定字串，例如**移轉的 DAO**。  
+-   [Microsoft 資料存取技術文件概觀](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   

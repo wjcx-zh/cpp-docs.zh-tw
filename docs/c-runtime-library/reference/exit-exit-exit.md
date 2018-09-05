@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb62c18f7508a21e24fb5628e8ac01162db1405e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a06fa858ac7d2d8458bd3adf3fb44ca7bdee929
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402708"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678150"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
-終止呼叫處理序。 **結束**函式會將它結束之後清除。**_exit**和 **_Exit**會立即予以終止。
+終止呼叫處理序。 **結束**函式會將其終止後清除;**_exit**並 **_Exit**立即予以終止。
 
 > [!NOTE]
-> 請勿使用這個方法關閉通用 Windows 平台 (UWP) 應用程式中，除了測試或偵錯案例。 透過程式設計或 UI 兩種方式關閉市集應用程式不允許根據[Microsoft 市集原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱[UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。 如需 Windows 10 應用程式的詳細資訊，請參閱 [Windows 10 app 使用方法指南](http://go.microsoft.com/fwlink/p/?linkid=619133)。
+> 請勿使用這個方法關閉通用 Windows 平台 (UWP) 應用程式中，除了測試或偵錯案例。 以程式設計或 UI 方式關閉對市集應用程式不允許根據[Microsoft Store 原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱 < [UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。 如需 Windows 10 應用程式的詳細資訊，請參閱 [Windows 10 app 使用方法指南](https://developer.microsoft.com/en-us/windows/apps)。
 
 ## <a name="syntax"></a>語法
 
@@ -74,11 +74,11 @@ void _exit(
 
 ## <a name="remarks"></a>備註
 
-**結束**， **_Exit**和 **_exit**函式會終止呼叫處理序。 **結束**函式呼叫解構函式的執行緒區域物件，然後呼叫 — 後進先出 (LIFO) 順序 — 函式所登錄的**atexit**和 **_onexit**，和它所終止處理程序之前，然後清除所有檔案緩衝區。 **_Exit**和 **_exit**函式會終止處理程序不會終結執行緒區域物件或處理**atexit**或 **_onexit**函式，並不會排清資料流緩衝區。
+**結束**， **_Exit**並 **_exit**函式會終止呼叫處理序。 **結束**函式會呼叫解構函式的執行緒區域物件，然後呼叫 — 後進先出 (LIFO) 順序，會註冊的函式**atexit**和 **_onexit**，並終止處理程序前，然後排清所有檔案緩衝區。 **_Exit**並 **_exit**函式會終止處理程序，而不會終結執行緒區域物件或處理**atexit**或 **_onexit**函式，並不會排清資料流緩衝區。
 
-雖然**結束**， **_Exit**和 **_exit**呼叫不會傳回一個值，在值*狀態*開放給主機環境或者，如果有的話，處理序結束之後等待呼叫處理序。 一般而言，呼叫端組*狀態*值設為 0 表示正常結束，或設為其他值表示錯誤。 *狀態*值可供作業系統批次命令**ERRORLEVEL**而由兩個常數之一： **EXIT_SUCCESS**，代表值0，或**EXIT_FAILURE**，用來表示的值為 1。
+雖然**結束**， **_Exit**並 **_exit**呼叫不會傳回一個值，在值*狀態*開放給主機環境或者，如果有的話，程序結束之後等待呼叫處理序。 一般而言，呼叫端組*狀態*值 0，表示正常結束，或一些其他值，以表示發生錯誤。 *狀態*值可供作業系統批次命令**ERRORLEVEL**和兩個常數之一代表： **EXIT_SUCCESS**，代表值為 0，或**EXIT_FAILURE**，用來表示的值為 1。
 
-**結束**， **_Exit**， **_exit**， **quick_exit**， **_cexit**，和 **_c_exit**函式的行為，如下所示。
+**結束**， **_Exit**， **_exit**， **quick_exit**， **_cexit**，以及 **_c_exit**函式的行為，如下所示。
 
 |功能|描述|
 |--------------|-----------------|
@@ -89,7 +89,7 @@ void _exit(
 |**_cexit**|執行完整的 C 程式庫終止程序，然後傳回給呼叫端。 不會終止處理序。|
 |**_c_exit**|執行基本的 C 程序庫終止程序，然後傳回給呼叫端。 不會終止處理序。|
 
-當您呼叫**結束**， **_Exit**或 **_exit**函式，在呼叫時存在的任何暫存或自動物件的解構函式不會呼叫。 自動物件是在函式中定義的非靜態本機的物件。 暫存物件是編譯器，例如函式呼叫所傳回的值所建立的物件。 若要呼叫之前先終結自動物件**結束**， **_Exit**，或 **_exit**，請明確呼叫解構函式物件，如下所示：
+當您呼叫**結束**， **_Exit**或是 **_exit**函式，在呼叫時存在的任何暫存或自動物件的解構函式不會呼叫。 自動物件是定義在函式的非靜態本機物件。 暫存物件是由編譯器，例如函式呼叫所傳回的值建立的物件。 要終結自動物件，然後再呼叫**結束**， **_Exit**，或 **_exit**、 明確呼叫解構函式物件，如下所示：
 
 ```cpp
 void last_fn() {}
@@ -100,7 +100,7 @@ void last_fn() {}
 }
 ```
 
-請勿使用**DLL_PROCESS_ATTACH**呼叫**結束**從**DllMain**。 若要結束**DLLMain**函式中，傳回**FALSE**從**DLL_PROCESS_ATTACH**。
+請勿使用**DLL_PROCESS_ATTACH**來呼叫**結束**從**DllMain**。 若要結束**DLLMain**函式中，傳回**FALSE**從**DLL_PROCESS_ATTACH**。
 
 ## <a name="requirements"></a>需求
 

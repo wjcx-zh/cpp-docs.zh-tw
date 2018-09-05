@@ -1,7 +1,7 @@
 ---
-title: '@@: |Microsoft 文件'
+title: '@@: |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2c3494f82e7a0fc99853494e5020b51b905292
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1f9f1bd26862147bb365349e25709a7086085c0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056457"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691322"
 ---
 # <a name=""></a>@@:
-定義之間才可辨識的程式碼標籤*label1*和*label2*，其中*label1*為程式碼的開頭或先前`@@:`標籤和*label2*為程式碼結尾或下一個`@@:`標籤。 請參閱[ @B ](../../assembler/masm/at-b.md)和[ @F ](../../assembler/masm/at-f.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-@@:  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [符號參考](../../assembler/masm/symbols-reference.md)
+
+定義程式碼的標籤之間才可辨識*label1*並*label2*，其中*label1*程式碼的開頭或先前`@@:`標籤以及*label2*可能是程式碼結尾或下一個`@@:`標籤。 請參閱[ @B ](../../assembler/masm/at-b.md)並[ @F ](../../assembler/masm/at-f.md)。
+
+## <a name="syntax"></a>語法
+
+> @@:
+
+## <a name="see-also"></a>另請參閱
+
+[符號參考](../../assembler/masm/symbols-reference.md)<br/>

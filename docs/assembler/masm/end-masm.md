@@ -1,7 +1,7 @@
 ---
-title: 結束 (MASM) |Microsoft 文件
+title: 結束 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a38d8e116f5a3bf018f4edecccb887dd9533407d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 3d82b875e44a363ed6d70edaa81457f75531cc44
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050905"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693434"
 ---
 # <a name="end-masm"></a>END (MASM)
-模組結束標記，並選擇性地將程式進入點設定為*位址*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-END [[address]]  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+模組結束標記，以及 （選擇性） 若要設定的程式進入點*地址*。
+
+## <a name="syntax"></a>語法
+
+> 結束 [[address]]
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

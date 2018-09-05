@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d872df7294e33ef47247609af4606da842bb6184
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612527"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686543"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空間
 
-Platform:: collections 命名空間包含`Map`， `MapView`， `Vector`，和`VectorView`類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)並[Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+Platform:: collections 命名空間包含`Map`， `MapView`， `Vector`，和`VectorView`類別。 這些類別是中所定義的相對應介面的具象實作[collections](/uwp/api/Windows.Foundation.Collections)命名空間。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 比方說，如果您實作公用方法來填入和傳回集合，然後使用  [collections](../cppcx/platform-collections-vector-class.md)在內部實作集合，並使用[collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)的傳回型別。 如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)並[Creating Windows Runtime Components in c + +](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 您可以從 [std::vector](../standard-library/vector-class.md) 建構 Platform::Collections::Vector，也可以從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md)。
 

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
-ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
+ms.openlocfilehash: 23b830ca8a7fb7f2e799cae17209a9fa089d1881
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43352712"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690871"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 類別
 `CMFCButton`類別將功能加入[CButton](../../mfc/reference/cbutton-class.md)類別，例如對齊按鈕文字、 結合按鈕文字和影像、 選取游標和指定工具提示。  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|指出按鈕是否為選項按鈕。|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|指出按鈕框線的樣式是否對應至目前的 Windows 佈景主題。|  
 |`CMFCButton::OnDrawParentBackground`|在指定的區域中繪製按鈕的父代背景。 (覆寫[AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
+|`CMFCButton::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|將按鈕設定為自動重複模式。|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|設定核取按鈕的影像。|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|設定按鈕文字的背景色彩。|  

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c463dbcb68b5a4b875dbb109eedc07a3b4b27c86
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251703307c5f6ed5787227a4def42dfbcd3fc18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684005"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 類別
 表示 *對應 (Map)*(機碼值組的集合) 的唯讀檢視。  
@@ -42,7 +42,7 @@ ref class UnorderedMapView sealed;
  可提供函式物件用來比較兩個機碼值是否相等的類型。 根據預設， [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>備註  
- UnorderedMapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)傳遞應用程式二進位介面 (ABI) 之間的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
+ UnorderedMapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView\<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)傳遞應用程式二進位介面 (ABI) 之間的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
 ### <a name="members"></a>成員  
   
@@ -221,7 +221,7 @@ UnorderedMapView(
  UnorderedMapView 的 typename。  
   
  `H`  
- 可為機碼產生雜湊值的函式物件。 預設值為[std::hash\<K >](https://msdn.microsoft.com/54f67435-af9d-4217-a29d-fa4d2491a104)類型的`std::hash`支援。  
+ 可為機碼產生雜湊值的函式物件。 預設值為[std::hash\<K >](../standard-library/hash-class.md)類型的`std::hash`支援。  
   
  `P`  
  可提供函式物件用來比較兩個機碼是否相等的類型。 預設值為[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。  
@@ -237,4 +237,4 @@ UnorderedMapView(
    
 ## <a name="see-also"></a>另請參閱  
  [Platform:: collections 命名空間](../cppcx/platform-collections-namespace.md)   
- [Windows::Foundation::IMapView](http://go.microsoft.com/fwlink/p/?LinkId=262409)
+ [Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49362fa02005ce44100b0248d25ffc364a68da16
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0177d350d37b7fb1afe27d8aa4aad98dd985ec13
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222334"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679174"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 類別
 提供 Windows 通用 IP 位址控制項的功能。  
@@ -120,7 +120,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必須是子視窗，您必須包含 WS_CHILD 樣式。 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows sdk for windows 樣式的清單。  
+ IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必須是子視窗，您必須包含 WS_CHILD 樣式。 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows sdk for windows 樣式的清單。  
   
  *rect*  
  IP 位址控制項的大小和位置參考。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
@@ -157,10 +157,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必須是子視窗，您必須包含 WS_CHILD 樣式。 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows sdk for windows 樣式的清單。  
+ IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必須是子視窗，您必須包含 WS_CHILD 樣式。 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows sdk for windows 樣式的清單。  
   
  *rect*  
  參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  

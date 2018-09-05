@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211758"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692444"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：將 Windows 控制代碼對應到物件
 本提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- 如此一來項目中永久對應建立關聯*myWnd*並*hWnd*。 呼叫`CWnd::FromHandle(hWnd)`現在會傳回的指標*myWnd*。 當*myWnd*已刪除，解構函式會自動終結*hWnd*藉由呼叫 Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682)函式。 如果不需要這項目，則*hWnd*必須從中斷連結*myWnd*之前*myWnd*終結 (通常在離開範圍時，才*myWnd*所定義)。 `Detach`方法的做法。  
+ 如此一來項目中永久對應建立關聯*myWnd*並*hWnd*。 呼叫`CWnd::FromHandle(hWnd)`現在會傳回的指標*myWnd*。 當*myWnd*已刪除，解構函式會自動終結*hWnd*藉由呼叫 Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow)函式。 如果不需要這項目，則*hWnd*必須從中斷連結*myWnd*之前*myWnd*終結 (通常在離開範圍時，才*myWnd*所定義)。 `Detach`方法的做法。  
   
 ```  
 myWnd.Detach();

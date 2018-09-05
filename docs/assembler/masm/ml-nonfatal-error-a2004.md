@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2004 |Microsoft 文件
+title: ML 非嚴重錯誤 A2004 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44270884c052da24c4f295323aa232a3a2e050e3
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e85ae836dbe52e9f5a698fd682ed82cba713f259
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051601"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681477"
 ---
 # <a name="ml-nonfatal-error-a2004"></a>ML 非嚴重錯誤 A2004
-**符號類型衝突： 識別項**  
-  
- [EXTERNDEF](../../assembler/masm/externdef.md)或[標籤](../../assembler/masm/label-masm.md)指示詞的變數、 符號、 資料結構或在相同模組中，而以不同的類型定義的標籤上使用。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**符號類型衝突： 識別項**
+
+[EXTERNDEF](../../assembler/masm/externdef.md)或是[標籤](../../assembler/masm/label-masm.md)指示詞的變數、 符號、 資料結構或在相同的模組，但具有不同的類型定義的標籤上使用。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

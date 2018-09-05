@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 771b7d91c4c5cfdb66908870675ab5cf53f2fdd4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7c82a55d2cbfba20b80a02dbcf000c85ed10e83
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221016"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679789"
 ---
 # <a name="how-to-create-a-resource"></a>如何：建立資源
 
@@ -48,7 +48,7 @@ ms.locfileid: "43221016"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>在類別檢視中建立新的資源
 
-1. 在 [類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，以滑鼠右鍵按一下您的類別，然後選擇 **新增**，然後按一下 **加入資源**從捷徑功能表。
+1. 在 [類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下您的類別，然後選擇 **新增**，然後按一下 **加入資源**從捷徑功能表。
 
 2. 在 [加入資源對話方塊](../windows/add-resource-dialog-box.md)中，選擇您想要加入至專案的資源類型。
 

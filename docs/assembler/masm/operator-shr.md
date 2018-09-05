@@ -1,7 +1,7 @@
 ---
-title: 運算子 SHR |Microsoft 文件
+title: 運算子 SHR |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d152f05dd2558235799ef3cf172e54143b6491ae
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9d6d9523059b441aa219ac6586c8c1980c0786a9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055335"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679614"
 ---
 # <a name="operator-shr"></a>運算子 SHR
-傳回的結果移位的位元*運算式*右*計數*的位元數字。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-expression SHR count  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+移位的位元的結果會傳回*運算式*右*計數*的位元數字。
+
+## <a name="syntax"></a>語法
+
+> 運算式 SHR 計數
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

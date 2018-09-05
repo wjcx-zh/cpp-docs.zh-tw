@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691831"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>逐步解說：在啟用 COM 的應用程式中使用並行執行階段
 本文件將示範如何使用並行執行階段中使用元件物件模型 (COM) 的應用程式。  
@@ -36,7 +36,7 @@ ms.locfileid: "43220225"
   
 - [例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- 如需有關 COM 的詳細資訊，請參閱[元件物件模型 (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573)。  
+ 如需有關 COM 的詳細資訊，請參閱[元件物件模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>管理 COM 程式庫的存留期  
  雖然使用 COM 與並行執行階段會遵循相同的原則，做為任何其他並行機制，下列指導方針可協助您有效地一起使用這些程式庫。  

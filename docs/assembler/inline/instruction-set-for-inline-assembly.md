@@ -1,7 +1,7 @@
 ---
-title: 內嵌組譯碼的指令集 |Microsoft 文件
+title: 內嵌組譯碼的指令集 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,18 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f5aea757506dd3bf48056a139f381e9d8a883
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02fe69fad2e1ef9fb8aa0c5aa23913ccf403e15a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051113"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693991"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>內嵌組譯碼的指令集
-## <a name="microsoft-specific"></a>Microsoft 特定的  
- Visual C++ 編譯器可藉由 Pentium 4 和 AMD Athlon 支援所有作業碼。 可以建立目標的處理器所支援的其他指示[_emit 虛擬指令](../../assembler/inline/emit-pseudoinstruction.md)。  
-  
- **結束 Microsoft 特定的**  
-  
-## <a name="see-also"></a>另請參閱  
- [在 __asm 區塊中使用組合語言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Microsoft 專屬**
+
+Visual C++ 編譯器可藉由 Pentium 4 和 AMD Athlon 支援所有作業碼。 您可以使用建立目標處理器支援的其他指示[_emit 虛擬指令](../../assembler/inline/emit-pseudoinstruction.md)。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[在 __asm 區塊中使用組合語言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

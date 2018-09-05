@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0786ada9a9548fa4e3517cb74fe37e5b7f244be2
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4810113158673002f20e36b7b17e93df6e68c3e6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218644"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679035"
 ---
 # <a name="object-map-macros"></a>物件對應巨集
 這些巨集會定義物件的對應和項目。  
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [in]類別物件的描述。  
   
 ### <a name="remarks"></a>備註  
- ATL 物件對應到輸入這項描述[OBJECT_ENTRY](https://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd)巨集。  
+ ATL 物件對應到輸入這項描述[OBJECT_ENTRY_AUTO](#object_entry_auto)巨集。  
   
  實作 DECLARE_OBJECT_DESCRIPTION`GetObjectDescription`函式，可用來覆寫[CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)方法。  
 

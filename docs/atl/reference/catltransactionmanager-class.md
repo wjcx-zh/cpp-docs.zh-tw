@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a7f6ad0620591e51d1382cd1199c52dde222ac
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b3776f95db1a1e6fad8f885e23bb0dc8836a31ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882763"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681654"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
 CAtlTransactionManager 類別會提供核心交易管理員 (KTM) 的函式的包裝函式。  
@@ -467,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  檔案或目錄的名稱。  
   
  *dwAttributes*  
- 若要設定之檔案的檔案屬性。 如需詳細資訊，請參閱 < [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699)。  
+ 若要設定之檔案的檔案屬性。 如需詳細資訊，請參閱 < [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`SetFileAttributesTransacted`函式。  

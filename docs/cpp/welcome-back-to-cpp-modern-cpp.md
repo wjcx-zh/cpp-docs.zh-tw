@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d626385523cb957b44589784c2e69539b5ed8fca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4c659262d11d929e94958cee687103648270db23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572733"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679277"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。 20 多年來，C++ 已經用來解決這類和許多其他的問題。 您可能不知道的是，有越來越多的 C++ 程式設計人員已經捲藏過時的 C-Style 程式設計舊衣，換上了現代 C++ 的新裝。  
@@ -133,7 +133,7 @@ void f()
   
 -   [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 如需詳細資訊，請參閱 StackOverflow 文章[哪些 c + + 慣用語中 C + + 11 中已被取代](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ 如需詳細資訊，請參閱 StackOverflow 文章[在 c++11 中已被取代哪些 c + + 慣用語](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。  
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)   

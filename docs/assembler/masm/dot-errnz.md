@@ -1,7 +1,7 @@
 ---
 title: .ERRNZ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb186570697a95d7afde213ea9b7467735636ea7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5096a1366bfd7e8bfaa330dc5f9d48b5f184fe80
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049923"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693755"
 ---
 # <a name="errnz"></a>.ERRNZ
-如果產生錯誤*運算式*為 true （非零）。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-.ERRNZ expression [[, message]]  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+會產生錯誤，如果*運算式*為 true （非零）。
+
+## <a name="syntax"></a>語法
+
+> .ERRNZ 運算式 [[，訊息]]
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

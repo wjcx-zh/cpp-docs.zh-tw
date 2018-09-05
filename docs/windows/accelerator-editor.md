@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202270"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681719"
 ---
 # <a name="accelerator-editor"></a>快速鍵編輯器
 
@@ -35,7 +35,7 @@ ms.locfileid: "43202270"
 
 一般而言，快速鍵是用作程式命令的鍵盤快速鍵，功能表或工具列也使用這些命令。 不過，您可以使用快速鍵對應表定義和使用者介面物件沒有關聯性的命令鍵組合。
 
-您可以使用[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)連結快速鍵命令和程式碼。
+您可以使用[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)連結快速鍵命令和程式碼。
 
 具有**加速器**編輯器，您可以：
 

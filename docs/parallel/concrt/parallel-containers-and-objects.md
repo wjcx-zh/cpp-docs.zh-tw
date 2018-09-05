@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8256a6d49166b5a002a400892f0808706c66eba9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0e0bade8cc233b438f98c3b73b04bf644bb37cbf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212458"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692285"
 ---
 # <a name="parallel-containers-and-objects"></a>平行容器和物件
 平行模式程式庫 (PPL) 包含數個容器和物件，提供安全執行緒存取其項目。  
@@ -186,14 +186,14 @@ ms.locfileid: "43212458"
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[operator++](https://msdn.microsoft.com/4cfdd07e-927a-42f8-aaa0-d6881687f413)|前移到下一個項目在佇列中。 這個運算子會多載，以提供前置遞增和後置遞增的語意。|  
-|[operator*](https://msdn.microsoft.com/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|擷取目前項目的參考。|  
-|[operator->](https://msdn.microsoft.com/41fa393d-ae1e-4a38-bb4b-19e8df709ca9)|擷取目前項目的指標。|  
+|`operator++`|前移到下一個項目在佇列中。 這個運算子會多載，以提供前置遞增和後置遞增的語意。|  
+|`operator*`|擷取目前項目的參考。|  
+|`operator->`|擷取目前項目的指標。|  
   
  [[靠上](#top)]  
   
 ##  <a name="unordered_map"></a> concurrent_unordered_map 類別  
- [HYPERLINK"file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622"concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)類別關聯容器類別，如同[std:: unordered_map](../../standard-library/unordered-map-class.md)類別中，控制不同長度序列的項目型別的[std:: pair\<const Key，Ty >](../../standard-library/pair-structure.md)。 想像成未排序對應的字典，您可以新增的索引鍵和值組，或依索引鍵查閱值。 當您有多個執行緒或工作，需要同時存取共用的容器，將插入它，或更新時，這個類別就很有用的。  
+ [Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)類別是首選容器類別，如同[std:: unordered_map](../../standard-library/unordered-map-class.md)類別中，控制不同長度序列的類型的項目[std:: pair\<const Key，Ty >](../../standard-library/pair-structure.md)。 想像成未排序對應的字典，您可以新增的索引鍵和值組，或依索引鍵查閱值。 當您有多個執行緒或工作，需要同時存取共用的容器，將插入它，或更新時，這個類別就很有用的。  
   
  下列範例示範使用的基本結構`concurrent_unordered_map`。 這個範例會將範圍 ['a'、 ' i'] 中的字元按鍵。 因為作業的順序未定，每個索引鍵的最終值也是未定。 不過，它是安全地以平行方式執行插入作業。  
   

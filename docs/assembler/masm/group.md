@@ -1,7 +1,7 @@
 ---
-title: 群組 |Microsoft 文件
+title: 群組 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9fff8cb22db7ae47219e9a49f6fc7ff544f835b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8acb6fd17866117937c702c7a4d14f8f1075960e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050307"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692131"
 ---
 # <a name="group"></a>GROUP
-加入指定*區段*群組稱為*名稱*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-name GROUP segment [[, segment]]...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+加入指定*線段*稱為群組*名稱*。
+
+## <a name="syntax"></a>語法
+
+> 名稱群組區段 [[，區段]]...
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

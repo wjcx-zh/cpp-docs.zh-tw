@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c46aacc776c60b7deb03495187d08a3227f43aa4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212705"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677363"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>如何：建立 CLR 空專案
 若要建立 CLR 空專案時，使用**CLR 空專案**範本，可從**新的專案** 對話方塊。  
   
 > [!NOTE]
->  IDE 功能的外觀可能取決於您目前使用中的設定或版本，且可能與不同說明中所述。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  IDE 功能的外觀可能取決於您目前使用中的設定或版本，且可能與不同說明中所述。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-create-a-clr-empty-project"></a>若要建立 CLR 空專案  
   

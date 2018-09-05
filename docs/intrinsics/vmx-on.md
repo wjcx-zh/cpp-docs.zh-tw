@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01be3d3f7db075116782b64e8b92ba12fb02f1d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4321a082efa71ecc81963099317ad3600ce8b36f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676194"
 ---
 # <a name="vmxon"></a>__vmx_on
 **Microsoft 專屬**  
@@ -50,7 +50,7 @@ unsigned char __vmx_on(
 |2|作業失敗，無可用的狀態。|  
   
 ## <a name="remarks"></a>備註  
- `__vmx_on`函式對應至`VMXON`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台。  
+ `__vmx_on`函式對應至`VMXON`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。  
   
 ## <a name="requirements"></a>需求  
   

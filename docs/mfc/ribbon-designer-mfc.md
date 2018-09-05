@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540171"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683011"
 ---
 # <a name="ribbon-designer-mfc"></a>功能區設計工具 (MFC)
-功能區設計工具可讓您建立和自訂 MFC 應用程式中的功能區。 功能區是可將命令組織成邏輯群組的使用者介面 (UI) 項目。 這些群組可出現在跨視窗頂端區域中的個別索引標籤上。 功能區取代了功能表列和工具列。 功能區可大幅改善應用程式可用性。 如需詳細資訊，請參閱 <<c0> [ 功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)。 下圖顯示功能區。  
+功能區設計工具可讓您建立和自訂 MFC 應用程式中的功能區。 功能區是可將命令組織成邏輯群組的使用者介面 (UI) 項目。 這些群組可出現在跨視窗頂端區域中的個別索引標籤上。 功能區取代了功能表列和工具列。 功能區可大幅改善應用程式可用性。 如需詳細資訊，請參閱 <<c0> [ 功能區](/windows/desktop/uxguide/cmd-ribbons)。 下圖顯示功能區。  
   
  ![MFC 功能區資源控制](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   

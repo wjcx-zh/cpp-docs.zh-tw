@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48a337ab82045543035c2612c707d8c47186ed2d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c7fe0665db01d1a2cd7a1da10b495ba86bc17469
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195448"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690858"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Form/MFC 程式設計的差異
 中的主題[在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)描述 Windows Form 的 MFC 支援。 如果您不熟悉.NET Framework 或 MFC 程式設計，本主題會提供程式設計的差異，兩者之間的背景資訊。  
@@ -65,5 +65,4 @@ ms.locfileid: "43195448"
      MFC 會具有更新機制的命令。 因此，在現用檢視表或文件是負責 UI 項目 （例如，啟用或停用功能表項目、 工具列按鈕和核取狀態） 的狀態。 Windows Form 有沒有對等的命令更新機制。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
- [Windows Forms 逐步解說](https://msdn.microsoft.com/fd44d13d-4733-416f-aefc-32592e59e5d9)
+ [在 MFC 中使用 Windows Forms 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

@@ -1,7 +1,7 @@
 ---
-title: 在 __asm 區塊中使用 C 或 c + + |Microsoft 文件
+title: 在 __asm 區塊中使用 C 或 c + + |Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ed46cdf44ccacee806dd03bf7eacca26eec32d
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 14b91a7925089f6a6ab747a9fd6a5813f9a14693
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37120937"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687095"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>在 __asm 區塊中使用 C 或 C++
 
-* * Microsoft 特定的 * *
+* * Microsoft 專有 * *
 
 由於內嵌組譯碼指令可以與 C 或 C++ 陳述式混用，因此它們可以依名稱參考 C 或 C++ 變數，以及使用這些語言的許多其他項目。
 
@@ -45,11 +45,11 @@ ms.locfileid: "37120937"
 
 - 巨集和前置處理器指示詞
 
-- 註解 (兩者__/ \* \* /__ 和__//__ )
+- 註解 (兩者__/ \* \* /__ 並__//__ )
 
 - 類型名稱 (MASM 類型為合法的任何位置)
 
-- `typedef` 名稱，通常搭配運算子例如**PTR**和**類型**或指定結構或等位成員
+- `typedef` 名稱，通常這類搭配運算子**PTR**並**型別**或指定結構或等位成員
 
 在 `__asm` 區塊內，您可以使用 C 標記法或組合語言基數標記法 (例如 0x100 和 100h 相等) 指定整數常數。 這樣您就可以在 C 中定義常數 (使用 `#define`)，然後在 C 或 C++ 中與程式的組合語言部分使用該常數。 您也可以在常數前面加上 0，指定八進位的常數。 例如，0777 會指定八進位常數。
 
@@ -57,7 +57,7 @@ ms.locfileid: "37120937"
 
 - [在 __asm 區塊中使用運算子](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [使用 C 或 c + + 中 __asm 區塊](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [使用 C 或 c + + 中將 __asm 區塊](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [在 __asm 區塊中存取 C 或 C++ 資料](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
@@ -67,4 +67,4 @@ ms.locfileid: "37120937"
 
 ## <a name="see-also"></a>另請參閱
 
-[內嵌組合語言](../../assembler/inline/inline-assembler.md)
+[內嵌組合語言](../../assembler/inline/inline-assembler.md)<br/>

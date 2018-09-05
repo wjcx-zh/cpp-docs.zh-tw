@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2542be130c75166f8716c76df547c72fad7c2250
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690042"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 結構
 執行緒的抽象概念。 視您所建立之排程器的 `SchedulerType` 原則機碼而定，資源管理員會授與您支援一般 Win32 執行緒或可使用者模式排程 (UMS) 執行緒的執行緒 Proxy。 安裝 Windows 7 (含以上) 版本的 64 位元作業系統支援 UMS 執行緒。  
@@ -83,7 +83,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ### <a name="remarks"></a>備註  
  如果因故需要將內容與其執行所在的虛擬處理器根解除關聯，請使用 `SwitchOut`。 根據您傳遞給 `switchState` 參數的值，以及它是否在虛擬處理器根上執行而定，呼叫會立即傳回或是封鎖與內容相關聯的執行緒 Proxy。 在將參數設定為 `SwitchOut` 的情況下呼叫 `Idle` 是錯誤的做法。 這樣會導致[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況。  
   
- 無論是因為資源管理員的指示，或是您要求暫時過度訂閱虛擬處理器根，但已經不再需要這樣做，只要您想要減少排程器擁有的虛擬處理器根數目，`SwitchOut` 都會很有用。 在此情況下應該叫用方法[IVirtualProcessorRoot::Remove](https://msdn.microsoft.com/ad699b4a-1972-4390-97ee-9c083ba7d9e4)上的虛擬處理器根，再呼叫`SwitchOut`搭配參數`switchState`設定為`Blocking`。 這樣將會封鎖執行緒 Proxy，而且它會在排程器中有不同的虛擬處理器根可用於執行時繼續執行。 封鎖執行緒 proxy 可以藉由呼叫此函式繼續`SwitchTo`切換到此執行緒 proxy 的執行內容。 您也可以繼續執行緒 proxy，使用其相關聯的內容，若要啟用虛擬處理器根。 如需有關如何執行這項操作的詳細資訊，請參閱 < [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)。  
+ 無論是因為資源管理員的指示，或是您要求暫時過度訂閱虛擬處理器根，但已經不再需要這樣做，只要您想要減少排程器擁有的虛擬處理器根數目，`SwitchOut` 都會很有用。 在此情況下應該叫用方法[IVirtualProcessorRoot::Remove](iexecutionresource-structure.md#remove)上的虛擬處理器根，再呼叫`SwitchOut`搭配參數`switchState`設定為`Blocking`。 這樣將會封鎖執行緒 Proxy，而且它會在排程器中有不同的虛擬處理器根可用於執行時繼續執行。 封鎖執行緒 proxy 可以藉由呼叫此函式繼續`SwitchTo`切換到此執行緒 proxy 的執行內容。 您也可以繼續執行緒 proxy，使用其相關聯的內容，若要啟用虛擬處理器根。 如需有關如何執行這項操作的詳細資訊，請參閱 < [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)。  
   
  當您想要重新初始化虛擬處理器，讓它能夠在未來發生封鎖執行緒 Proxy，或是暫時將它卸離執行所在的虛擬處理器根以及對其分派工作的排程器時可以啟動，您也可以使用 `SwitchOut`。 如果您想要封鎖執行緒 Proxy，請使用 `SwitchOut`，並將 `switchState` 參數設定為 `Blocking`。 之後可以使用 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 讓它繼續執行，如上面所述。 當您想要暫時將這個執行緒 Proxy 卸離執行所在的虛擬處理器根，以及與虛擬處理器相關聯的排程器，請使用 `SwitchOut` 並將參數設定為 `Nesting`。 若呼叫 `SwitchOut` 並將 `switchState` 參數設定為 `Nesting` 時，它正在虛擬處理器根上執行，則會造成根重新初始化，而且目前執行緒 Proxy 會繼續執行，不需要根。 執行緒 proxy 會被視為已離開排程器，直到它會呼叫[ithreadproxy:: Switchout](#switchout)方法`Blocking`在稍後的時間。 第二次呼叫 `SwitchOut` 並將參數設定為 `Blocking` 時，該呼叫會將內容返回已封鎖狀態，以便在卸離的排程器中透過 `SwitchTo` 或 `IVirtualProcessorRoot::Activate` 繼續執行。 由於它並未在虛擬處理器根上執行，因此不會發生重新初始化。  
   

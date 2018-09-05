@@ -5,6 +5,6 @@ Visual Studio 編譯器和建置工具可以報告許多類型的錯誤和警告
 > [!NOTE]
 > 並非每個 Visual Studio 錯誤或警告會詳細說明。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您使用時進入此頁面上**F1**和您認為錯誤或警告訊息需要補充說明，告訴我們。 您可以使用此頁面上的意見反應表單、 註解的區段中新增註解，或是[提出 github 問題](https://github.com/MicrosoftDocs/cpp-docs/issues)。 您也可以傳送意見反應，並輸入在 IDE 中的 bug。 在 Visual Studio 中，移至功能表列，然後選擇**協助 > 傳送意見反應 > 回報問題**，或使用提交建議**協助 > 傳送意見反應 > 傳送建議**。
 
-您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://go.microsoft.com/fwlink/p/?linkid=820594)站台。 [Visual c + + 語言](http://go.microsoft.com/fwlink/p/?linkid=158195)論壇是針對問題和 c + + 語言的語法和 MSVC 編譯器的相關討論。 [Visual c + + 一般](http://go.microsoft.com/fwlink/p/?linkid=158194)論壇適合有關 Visual c + + 不會討論其他論壇中的問題。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
+您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)站台。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
 
 如需其他說明和社群資源的連結，請參閱[Visual c + + 說明和社群](../../visual-cpp-help-and-community.md)。

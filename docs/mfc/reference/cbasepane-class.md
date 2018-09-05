@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3650482cca0e974a229e303ae20ebdb455aae02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1485e997afda54a80cf4c44787881d8ffdb15ac4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683748"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 MFC 中的所有窗格的基底類別。  
@@ -291,7 +291,7 @@ class CBasePane : public CWnd
 |[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` 不使用這個方法。|  
 |`CBasePane::OnUpdateCmdUI`|在內部使用。|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|  
-|`CBasePane::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
+|`CBasePane::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` 不使用這個方法。|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並從停駐的管理員在清單中移除。|  
 |[CBasePane::SaveState](#savestate)|將窗格的狀態儲存至登錄。|  

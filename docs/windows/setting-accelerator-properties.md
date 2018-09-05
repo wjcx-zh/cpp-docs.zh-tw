@@ -19,18 +19,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d47dffb782da1094c157a7bbd21c40ab6ba9fef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b89f409fcf5a856a2207dd8efa655728f57b3fe8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606700"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680131"
 ---
 # <a name="setting-accelerator-properties"></a>設定快速鍵屬性
 
 您可以在設定快速鍵屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)在任何時間。 您也可以使用**加速器**編輯器來修改快速鍵對應表中的快速鍵屬性。 所做的變更**屬性** 視窗或**加速器**編輯器有相同的結果： 編輯會立即反映在快速鍵對應表。
 
-有三個屬性的每個加速器[識別碼](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/3487f185-de96-4b1d-87db-034a52223160):
+有三個屬性的每個快速鍵 ID:
 
 - [Modifier 屬性](../windows/accelerator-modifier-property.md)設定控制項的快速鍵組合。
 

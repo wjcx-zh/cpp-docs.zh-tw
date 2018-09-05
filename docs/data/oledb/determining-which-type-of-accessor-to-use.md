@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199747"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679720"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 在編譯時期或執行階段，您可以判斷資料列集的資料類型。  
@@ -38,7 +38,7 @@ ms.locfileid: "43199747"
 |`CDynamicAccessor`|自動的。|否。|如果您不知道的資料列集中的資料型別很有用。|  
 |`CDynamicParameterAccessor`|自動的但可以是[覆寫](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，如果提供者支援`ICommandWithParameters`。 會自動繫結的參數。|低於`CDynamicAccessor`但適用於呼叫一般的預存程序。|  
 |`CDynamicStringAccessor[A,W]`|自動的。|否。|擷取從資料存放區，做為字串資料存取的資料。|  
-|`CManualAccessor`|手動使用`AddBindEntry`。|使用手動`AddParameterEntry`。|速度非常快。參數和資料行繫結一次。 您決定要使用資料的類型。 (請參閱[DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)範例的範例。)需要更多的程式碼比`CDynamicAccessor`或`CAccessor`。 它會比較像直接呼叫 OLE DB。|  
+|`CManualAccessor`|手動使用`AddBindEntry`。|使用手動`AddParameterEntry`。|速度非常快。參數和資料行繫結一次。 您決定要使用資料的類型。 (請參閱[DBVIEWER](https://github.com/Microsoft/VCSamples)範例的範例。)需要更多的程式碼比`CDynamicAccessor`或`CAccessor`。 它會比較像直接呼叫 OLE DB。|  
 |`CXMLAccessor`|自動的。|否。|擷取從資料存放區，做為字串資料存取的資料，並將其格式化為 XML 標記的資料。|  
   
 ## <a name="see-also"></a>另請參閱  

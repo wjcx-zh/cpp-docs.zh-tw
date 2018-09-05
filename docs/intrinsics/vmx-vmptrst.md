@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e879726f9ef3ad65dabd00056ddb859c72dd039e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538418"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679563"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Microsoft 專屬**  
@@ -44,7 +44,7 @@ void __vmx_vmptrst(
 ## <a name="remarks"></a>備註  
  VMCS 指標是 64 位元的實體位址。  
   
- `__vmx_vmptrst`函式相當於`VMPTRST`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台。  
+ `__vmx_vmptrst`函式相當於`VMPTRST`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)站台。  
   
 ## <a name="requirements"></a>需求  
   

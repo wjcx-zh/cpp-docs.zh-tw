@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2538e2b14277b24c583ae2392dd9249c93d4854b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336436"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690261"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 當您使用 [ATL OLE DB 消費者精靈] 建立消費者時，精靈會在您指定資料行對應中的每個欄位的使用者記錄類別中產生資料成員。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。  
@@ -85,7 +85,7 @@ END_COLUMN_MAP()
   
  您也可以使用 [狀態] 值來設定特定欄位的 NULL 值。 這樣可協助您的情況下您想用來區別欄位值為 NULL，而不是零。 它是您必須決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義為 DBSTATUS_S_ISNULL 指定泛用的 NULL 值的正確方法。 如果取用者讀取資料，此值為 null，會將 [狀態] 欄位設為 DBSTATUS_S_ISNULL。 如果取用者想要設定為 NULL 值，取用者狀態值設定為 DBSTATUS_S_ISNULL 之前呼叫提供者。  
   
- 接下來，開啟 Oledb.h 並搜尋`DBSTATUSENUM`。 您可以接著比對的非零值的狀態，針對數值`DBSTATUSENUM`列舉值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱 「 長度 」 主題中的相同區段。  
+ 接下來，開啟 Oledb.h 並搜尋`DBSTATUSENUM`。 您可以接著比對的非零值的狀態，針對數值`DBSTATUSENUM`列舉值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱 「 長度 」 主題中的相同區段。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取的長度或資料行的狀態  
  您可以擷取可變長度資料行的長度或資料行 （例如檢查 DBSTATUS_S_ISNULL，） 的狀態：  

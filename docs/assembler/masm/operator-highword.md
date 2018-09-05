@@ -1,7 +1,7 @@
 ---
-title: 運算子 HIGHWORD |Microsoft 文件
+title: 運算子 HIGHWORD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4c0904d3c7ad8156ae8e978bcfc73a236b949e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5810ee5751d4f4ea4101bef3e294921f1f0078e3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677530"
 ---
 # <a name="operator-highword"></a>運算子 HIGHWORD
-傳回的低 32 位元的高 16 個位元*運算式*。 MASM 運算式是 64 位元值。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-HIGHWORD expression  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回的低 32 位元高 16 位元*運算式*。 MASM 運算式是 64 位元值。
+
+## <a name="syntax"></a>語法
+
+> HIGHWORD 運算式
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1d82f3a6b39fb4b550b8d7f9f9bfbc689088648
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688255"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
 
@@ -37,7 +37,7 @@ A*桌面應用程式*c + + 中是可以存取 Windows Api 和系統主控台或�
 
 - A *Win32*應用程式是 Windows 桌面應用程式，可讓 c + + 中的使用原生[Windows C Api 及/或 COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和標準程式庫 Api，以及第 3 個廠商程式庫。 在視窗中執行的 Win32 應用程式會要求開發人員明確地使用 Windows 程序函式內的 Windows 訊息。 名稱，即使 Win32 應用程式可以編譯為 32 位元 (x86) 或 64 位元 (x64) 二進位。 在 Visual Studio IDE 中，Win32 與條款 x86 的意義相同。
 
-- [元件物件模型 (COM)](https://msdn.microsoft.com/library/windows/desktop/ms694363\(v=vs.85\).aspx)是一種規格，可讓以與彼此進行通訊的不同語言撰寫的程式。 許多 Windows 元件會實作為 COM 物件，並遵循標準的 COM 規則，以便建立物件，探索和物件解構的介面。  使用來自 c + + 的桌面應用程式的 COM 物件方法很簡單，但更進階撰寫您自己的 COM 物件。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)提供巨集和簡化 COM 開發的協助程式函式。
+- [元件物件模型 (COM)](/windows/desktop/com/the-component-object-model)是一種規格，可讓以與彼此進行通訊的不同語言撰寫的程式。 許多 Windows 元件會實作為 COM 物件，並遵循標準的 COM 規則，以便建立物件，探索和物件解構的介面。  使用來自 c + + 的桌面應用程式的 COM 物件方法很簡單，但更進階撰寫您自己的 COM 物件。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)提供巨集和簡化 COM 開發的協助程式函式。
 
 - MFC 應用程式是使用 Windows 桌面應用程式[Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md)來建立使用者介面。 COM 元件，以及 CRT 和標準程式庫 Api，也可以使用 MFC 應用程式。 MFC 提供的視窗訊息迴圈和 Windows Api 的精簡型 c + + 物件導向包裝函式。 MFC 是應用程式的預設選擇，特別是企業型應用程式 — 具有大量使用者介面控制項或自訂使用者控制項。 MFC 視窗管理、 序列化、 文字操作、 列印及現代化使用者介面項目，例如提供便利的協助程式類別。 若要有效使用 MFC 您應該熟悉 Win32。
 

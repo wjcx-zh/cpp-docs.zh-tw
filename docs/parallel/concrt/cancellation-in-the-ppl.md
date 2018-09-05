@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd12bff6638ef86205b1037a8a7c7e348767ae9a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 287e540f73b202229c0355aec55aa0d8f5e0421f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221751"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690445"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消
 本文件說明取消在平行模式程式庫 (PPL) 中的角色、如何取消平行工作，以及如何判斷平行工作取消的時間。  
@@ -150,7 +150,7 @@ ms.locfileid: "43221751"
   
 #### <a name="cancellation-tokens-and-task-composition"></a>取消語彙基元和工作組合  
 
- [並行:: HYPERLINK"https://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)並[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函式可協助您撰寫多個工作來實作一般模式。 本章節描述這些函式如何使用取消語彙基元。  
+ [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all)並[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函式可協助您撰寫多個工作來實作常見的模式。 本章節描述這些函式如何使用取消語彙基元。  
   
  當您提供取消語彙基元給 `when_all` 和 `when_any` 函式時，只有在該取消語彙基元被取消，或是其中一個參與者工作在已取消的狀態下結束或擲回例外狀況時，該函式才會取消。  
   

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59c0a9701c1714e1d96829a28144c921e5c00e11
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206713"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677823"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -76,7 +76,7 @@ UWP 應用程式就能夠執行所有的 Windows 10 裝置如平板電腦和行�
 
 - Windows 服務 如需詳細資訊，請參閱 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)。
 
-您可以使用 Visual C++ 將幾乎任何類型的自訂高效能功能包裝成 Win32 DLL，或可由 C++ 應用程式或以其他語言 (例如 C# 或 Visual Basic) 所撰寫的應用程式使用的 COM DLL。 如需 WIn32 DLL 的詳細資訊，請參閱 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 如需開發 COM 的詳細資訊，請參閱[元件物件模型 (COM)](https://msdn.microsoft.com/library/windows/desktop/ms680573)。
+您可以使用 Visual C++ 將幾乎任何類型的自訂高效能功能包裝成 Win32 DLL，或可由 C++ 應用程式或以其他語言 (例如 C# 或 Visual Basic) 所撰寫的應用程式使用的 COM DLL。 如需 WIn32 DLL 的詳細資訊，請參閱 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)。 如需開發 COM 的詳細資訊，請參閱[元件物件模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
 
 ## <a name="games"></a>遊戲
 

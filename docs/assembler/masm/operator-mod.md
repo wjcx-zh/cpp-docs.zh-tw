@@ -1,7 +1,7 @@
 ---
-title: 運算子 MOD |Microsoft 文件
+title: 運算子 MOD |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cd35fa3f1d136cf19a82d840b02e53f4f40abb
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f03739ab1b2b4bb931e045222b869b7aa5d7676d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054454"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680434"
 ---
 # <a name="operator-mod"></a>運算子 MOD
-傳回 （模數） 的其餘部分的整數值，當除以*expression1*由*expression2*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-expression1 MOD expression2  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回整數值的餘數 （模數） 相除*expression1*依*expression2*。
+
+## <a name="syntax"></a>語法
+
+> expression1 MOD expression2
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

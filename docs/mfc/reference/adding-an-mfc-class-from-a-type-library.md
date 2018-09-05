@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656d5c357874a7b470eb2fd630c91ad0aefa5a0d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c79409ae6e4c7447050c26246768c0074c4e4e92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677191"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>從類型程式庫加入 MFC 類別
 使用此精靈，從可用的型別程式庫中的介面建立的 MFC 類別。 您可以將 MFC 類別新增至 [MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控制項](../../mfc/reference/creating-an-mfc-activex-control.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "43205369"
   
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>若要從型別程式庫新增 MFC 類別  
   
-1.  在**方案總管**或是[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，以滑鼠右鍵按一下您要將類別加入專案的名稱。  
+1.  在**方案總管**或是[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下您要將類別加入專案的名稱。  
   
 2.  從捷徑功能表按一下 [新增]，然後按一下 [新增類別]。  
   

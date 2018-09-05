@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 985333deaeceeed594e11223c417f3217e8b0322
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682039"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 類別
 實作 DocObject 伺服器專屬的 OLE 伺服器動詞命令。  
@@ -58,11 +58,12 @@ class CDocObjectServerItem : public COleServerItem
   
 |名稱|描述|  
 |----------|-----------------|  
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|如果架構嘗試隱藏 DocObject 項目，則會擲回例外狀況。|
 |[CDocObjectServerItem::OnHide](#onhide)|如果架構嘗試隱藏 DocObject 項目，則會擲回例外狀況。|  
 |[CDocObjectServerItem::OnShow](#onshow)|由架構呼叫以讓 DocObject 項目就地使用中。 如果項目不是 DocObject，呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
   
 ## <a name="remarks"></a>備註  
- `CDocObjectServerItem` 定義可覆寫成員函式： [OnHide](#onhide)， [OnOpen](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd)，並[OnShow](#onshow)。  
+ `CDocObjectServerItem` 定義可覆寫成員函式： [OnHide](#onhide)， [OnDoVerb](#ondoverb)，並[OnShow](#onshow)。  
   
  若要使用`CDocObjectServerItem`，確保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)覆寫中您`COleServerDoc`-衍生的類別會傳回新`CDocObjectServerItem`物件。 如果您需要變更您的項目中的任何功能，您可以建立您自己的新執行個體`CDocObjectServerItem`-衍生的類別。  
   

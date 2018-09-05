@@ -1,7 +1,7 @@
 ---
-title: 運算子 AND |Microsoft 文件
+title: 運算子 AND |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f972002a57bdb2dd3ff2003fa922d1aa0f7e1536
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0c7246f03be6f6939351f9d8a33e33bfd733a92d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682928"
 ---
 # <a name="operator-and"></a>運算子 AND
-傳回的位元 AND 運算的結果*expression1*和*expression2*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-expression1 AND expression2  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回的位元的 AND 運算的結果*expression1*並*expression2*。
+
+## <a name="syntax"></a>語法
+
+> expression1 和 expression2
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

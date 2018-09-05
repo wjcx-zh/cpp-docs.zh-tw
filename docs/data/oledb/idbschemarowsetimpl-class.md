@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6780927732d0f555cc5778fe9564c9225a50aa80
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691803"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 提供結構描述資料列集的實作。  
@@ -279,8 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  此函式的實作需要使用者具有工作階段類別中的結構描述對應。 藉由使用此結構描述對應資訊，它就能接著以對應中結構描述的 GUID 陣列來回應。 這會是提供者支援的結構描述。  
 
 ## <a name="see-also"></a>另請參閱  
- [IDBSchemaRowsetImpl 類別成員](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    
- [UpdatePV](../../visual-cpp-samples.md)
+ [UpdatePV](https://github.com/Microsoft/VCSamples)

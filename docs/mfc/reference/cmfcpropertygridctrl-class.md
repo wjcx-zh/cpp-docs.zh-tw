@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16bebe3beeecf48fb2601f0feee56e5168de83ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 25e1c3fdad045b17b83f7562256592114a5c6e72
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205091"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680649"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -246,7 +246,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|指出是否此架構會重新繪製目前的屬性方格控制項的名稱和值資料行在使用者調整資料行。|  
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|指出屬性方格控制項的外觀是否會使用與.NET 的樣式。|  
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|指定如何顯示已修改的屬性。|  
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|從屬性方格控制項移除所有的屬性物件。|  
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|還原原始值的所有屬性。|  
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|設定或重設字母的模式。|  

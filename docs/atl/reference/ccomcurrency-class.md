@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d3d845f51f59e6072bd0425f34c63e0049dd31
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b556e724e75bb6eabc832893350126a27ad511a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202533"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678430"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 類別
 `CComCurrency` 有方法和運算子可建立及管理 CURRENCY 物件。  
@@ -559,5 +559,5 @@ HRESULT SetInteger(LONGLONG nInteger);
   
 ## <a name="see-also"></a>另請參閱  
  [COleCurrency 類別](../../mfc/reference/colecurrency-class.md)   
- [貨幣](https://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e)   
+ [貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
  [類別概觀](../../atl/atl-class-overview.md)

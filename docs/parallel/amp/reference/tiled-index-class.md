@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209429"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680191"
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 提供的索引[tiled_extent](tiled-extent-class.md)物件。 這個類別具有存取相對於本機磚原點和相對於全域原點的項目屬性。 如需劃分 tile 空間的詳細資訊，請參閱[使用的圖格](../../../parallel/amp/using-tiles.md)。  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[barrier 常數](#tiled_index__barrier)|存放區[tile_barrier](tile-barrier-class.md)物件，表示執行緒之目前磚中的屏障。|  
 |||  
-|[全域常數](#tiled_index__global)|存放區[index](index-class.md)物件中的陣序規範 1、 2 或 3，表示全域索引[格線](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)物件。|  
+|[全域常數](#tiled_index__global)|存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示格線物件中的全域索引。|  
 |[區域常數](#tiled_index__local)|存放區`index`物件的陣序規範 1、 2 或 3，表示相對於索引中之目前磚[tiled_extent](tiled-extent-class.md)物件。|  
 |[rank 常數](#tiled_index__rank)|儲存的陣序`tiled_index`物件。|  
 |[tile 常數](#tiled_index__tile)|存放區`index`物件的陣序規範 1、 2 或 3，表示目前的圖格的座標`tiled_extent`物件。|  

@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608329"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692584"
 ---
 # <a name="quick-reference-ccx"></a>快速參考 (C++/CX)
-Windows 執行階段支援只能在值得信任的作業系統環境中執行，使用授權的函式、 資料類型及裝置，透過 Microsoft Store 散發的通用 Windows 平台 (UWP) 應用程式。 C + + /CX 簡化 Windows 執行階段撰寫的應用程式。 這篇文章是快速參考;如需更完整的文件，請參閱[型別系統](../cppcx/type-system-c-cx.md)並[執行階段平台的元件擴充功能](http://go.microsoft.com/fwlink/p/?linkid=228720)。  
+Windows 執行階段支援只能在值得信任的作業系統環境中執行，使用授權的函式、 資料類型及裝置，透過 Microsoft Store 散發的通用 Windows 平台 (UWP) 應用程式。 C + + /CX 簡化 Windows 執行階段撰寫的應用程式。 這篇文章是快速參考;如需更完整的文件，請參閱[型別系統](../cppcx/type-system-c-cx.md)。  
   
  當您建置命令列上時，使用 **/ZW**編譯器選項建置的 UWP 應用程式或 Windows 執行階段元件。 若要存取 Windows 執行階段宣告 Windows 執行階段中繼資料 (.winmd) 檔案中定義，指定`#using`指示詞或 **/FU**編譯器選項。 當您建立 UWP 應用程式的專案時，Visual Studio 預設會設定這些選項，並將所有的 Windows 執行階段程式庫的參考。  
   

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47914999a48b4d5924a25ad1688ee83c533398f3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfdf224ed96484af52a84c270c93df87821a444f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218894"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684595"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：移轉至 /clr
 本主題討論編譯原生程式碼時所發生的問題 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**可讓 Visual c + + 模組，來叫用，並叫用.NET 組件的同時保留與未受管理模組的相容性。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)的優點與編譯的詳細資訊 **/clr**。  
@@ -90,7 +90,7 @@ COMObj2->Method(args);  // C++ equivalent
  您的專案會編譯並執行 Visual Studio 2010 中之後，您就應該建立新專案組態 **/clr**而不修改預設組態。 **/clr**與某些編譯器選項不相容並建立個別的設定可讓您建置原生或 managed 專案。 當 **/clr**屬性頁 對話方塊中，與不相容的專案設定中選取 **/clr**已停用 (並停用的選項不會自動還原如果 **/clr**後續取消選取)。  
   
 ### <a name="create-new-project-configurations"></a>建立新的專案組態  
- 您可以使用**複製設定來源**選項[新的專案組態對話方塊](https://msdn.microsoft.com/cca616dc-05a6-4fe3-bdc1-40c72a66f2be)建立專案組態，根據您現有的專案設定。 執行這項操作一次的偵錯組態，另一次發行組態。 後續的變更則會套用至 **/clr** -特定組態，並保持原始專案組態維持不變。  
+ 您可以使用**複製設定來源**選項**新的專案組態對話方塊**(**建置** > **Configuration Manager** > **作用中的方案組態** > **新增**) 來建立專案組態，根據您現有的專案設定。 執行這項操作一次的偵錯組態，另一次發行組態。 後續的變更則會套用至 **/clr** -特定組態，並保持原始專案組態維持不變。  
   
  使用自訂建置規則的專案可能需要額外注意。  
   

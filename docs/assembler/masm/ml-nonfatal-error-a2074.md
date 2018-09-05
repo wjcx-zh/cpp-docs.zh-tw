@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2074 |Microsoft 文件
+title: ML 非嚴重錯誤 A2074 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8715323f181472e1234143dcf04023463bdf0bc4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5ae6c5338544d29ed4288459d5c09cce998971c2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677219"
 ---
 # <a name="ml-nonfatal-error-a2074"></a>ML 非嚴重錯誤 A2074
-**無法透過區段暫存器來存取標籤**  
-  
- 嘗試透過來存取標籤的區段暫存器已不會被視為其區段或群組。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**無法透過區段暫存器來存取標籤**
+
+您嘗試存取透過區段暫存器，不假設其區段或群組的標籤。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

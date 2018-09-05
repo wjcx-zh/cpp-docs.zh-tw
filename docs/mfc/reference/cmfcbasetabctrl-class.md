@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198564"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693922"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 實作索引標籤式視窗的基本功能。  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|重新計算索引標籤式視窗的內部配置。|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|從索引標籤式視窗中移除所有索引標籤。|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|從索引標籤式視窗中移除一個索引標籤。|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  指定新的背景色彩。  
   
 ### <a name="remarks"></a>備註  
- 此架構會取得從作用中的索引標籤的預設背景色彩[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ 此架構會取得從作用中的索引標籤的預設背景色彩[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  設定使用中索引標籤的文字色彩。  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  A [COLORREF](/windows/desktop/gdi/colorref)參數，指定新的文字色彩。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，架構會取得從文字色彩[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。 使用覆寫這個預設色彩`SetActiveTabTextColor`方法。  
+ 根據預設，架構會取得從文字色彩[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)。 使用覆寫這個預設色彩`SetActiveTabTextColor`方法。  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  自動色彩模式中設定架構會使用索引標籤控制項的色彩。  

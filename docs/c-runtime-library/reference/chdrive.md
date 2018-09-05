@@ -34,19 +34,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f95169f62fa2eaf9c562bff463ad84c0827db9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b6d8d53ea3b7331de08ea2aa2a00e5fdfb106c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394418"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684319"
 ---
 # <a name="chdrive"></a>_chdrive
 
 變更目前工作磁碟機。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -67,15 +67,15 @@ int _chdrive(
 
 ## <a name="remarks"></a>備註
 
-如果*磁碟機*是不在範圍從 1 到 26 無效參數處理常式叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_chdrive**函式會傳回-1， **errno**設**EACCES**，和 **_doserrno**設**ERROR_INVALID_DRIVE**。
+如果*磁碟機*是不在 1 到 26 的範圍內，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行 **_chdrive**函式會傳回-1， **errno**設定為**EACCES**，以及 **_doserrno**設為**ERROR_INVALID_DRIVE**。
 
-**_chdrive** 函式不是安全執行緒，原因是其取決於本身不是安全執行緒的 **SetCurrentDirectory** 函式。 若要在多執行緒應用程式中安全地使用 **_chdrive**，您必須提供自己的執行緒同步處理。 如需詳細資訊，請前往 [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542)，然後搜尋 **SetCurrentDirectory**。
+**_chdrive** 函式不是安全執行緒，原因是其取決於本身不是安全執行緒的 **SetCurrentDirectory** 函式。 若要在多執行緒應用程式中安全地使用 **_chdrive**，您必須提供自己的執行緒同步處理。 如需詳細資訊，請參閱 < [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory)。
 
 **_chdrive** 函式只會變更目前工作磁碟機；**_chdir** 則會變更目前工作目錄。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_chdrive**|\<direct.h>|
 

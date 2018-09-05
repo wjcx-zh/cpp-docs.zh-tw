@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 84ea10c87e463e797b4c35b1f94843228c4cb063
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403035"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681498"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：建立和使用 shared_ptr 執行個體
 `shared_ptr` 類型是 C++ 標準程式庫中的一種智慧型指標，是為有一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節而設計。 在您初始化 `shared_ptr` 之後，您可以函式引數中的值予以複製、傳送以及指派至其他 `shared_ptr` 執行個體。 所有執行個體都會指向相同的物件，並共用對一個每當新的 `shared_ptr` 加入、超出範圍或重設時會遞增和遞減參考計數的「控制區塊」的存取。 當參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。  
   
  下圖顯示幾個指向一個記憶體位置的 `shared_ptr` 執行個體。  
   
- [![共用的指標](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![共用指標](../cpp/media/shared_ptr.png "shared_ptr")]  
   
 ## <a name="example"></a>範例  
  可能的話，使用[make_shared](../standard-library/memory-functions.md#make_shared)函式來建立`shared_ptr`記憶體資源第一次建立時。 `make_shared` 是無例外狀況之虞。 它會使用相同的呼叫來為控制區塊和資源配置記憶體，從而降低建構的額外負荷。 如果您不使用 `make_shared`，則在將其傳遞至 `shared_ptr` 建構函式前，必須先使用明確的新運算式建立物件。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。  

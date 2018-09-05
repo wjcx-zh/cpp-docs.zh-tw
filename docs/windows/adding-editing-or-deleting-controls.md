@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61caccd2a4511faf937f73e3ee17efe8f1b0bb2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b28736e4e9c4b4f327f80a97b5b7ed3b6d1c7c40
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219432"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686268"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>加入、編輯或刪除控制項
 
 使用 **對話方塊**編輯器中，您可以新增、 調整大小、 編輯和刪除在對話方塊中的控制項。 您也可以編輯的控制項，例如其識別碼、 屬性或它是否一開始出現在執行階段。
 
-您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取 （如需詳細資訊，請參閱[自訂工具箱對話方塊](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb))。
+您可以使用中的捷徑功能表** 對話方塊**編輯器快速加入登錄 ActiveX 控制項加入對話方塊中，而且您可以將 ActiveX 控制項加入**工具箱**快速存取 （如需詳細資訊，請參閱[工具箱](/visualstudio/ide/reference/toolbox))。
 
 - [將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md)
 

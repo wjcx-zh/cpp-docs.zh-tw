@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422326f03674c541c4fdc45529bee45bf0ff5df6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a167b228b054a24a812ce5099f396521adda0d08
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201000"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690417"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 提供 Windows 通用 SysLink 控制項的功能。  
@@ -189,7 +189,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
  要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](/windows/desktop/Controls/syslink-overview)。  
   
  *dwExStyle*  
- 指定連結控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定連結控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
  指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。  

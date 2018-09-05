@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223061"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679460"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 實作可以停駐在固定位置或包含於索引標籤式窗格的窗格。  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|指定是否位在頂端或底部窗格的索引標籤。|  
 |[CDockablePane::IsTracked](#istracked)|指定一個窗格由使用者拖曳。|  
 |[CDockablePane::IsVisible](#isvisible)|判斷目前的窗格是否可見。|  
-|[Cdockablepane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|在內部使用。|  
+|[Cdockablepane:: Loadstate](#loadstate)|在內部使用。|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|當一個窗格的父代變更時由架構呼叫。 (覆寫[CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent)。)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|在框架視窗停駐浮動的停駐列時，由架構呼叫。|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|若要變更窗格的父代時，由架構呼叫。 (覆寫[CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent)。)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  如果可停駐窗格處於自動隱藏模式和`IsHideInAutoHideMode`傳回 TRUE 的可見性狀態取決於最相關的自動隱藏工具列的可見性狀態。  
   
  如果可停駐窗格不是處於自動隱藏模式中，有的可見性狀態會由[CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible)方法。  
-  
+
+## ##  <a name="loadstate"></a>  Cdockablepane:: Loadstate  
+僅供內部使用。 如需詳細資訊，請參閱 Visual Studio 安裝位置下之 VC\atlmfc\src\mfc 資料夾中的原始程式碼。
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  指定是否要停用自動隱藏可停駐窗格的動畫。  
   

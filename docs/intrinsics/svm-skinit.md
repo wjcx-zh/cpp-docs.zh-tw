@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d8c59ad4af53a38ee28450e51adf9cdf81ec7bad
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687281"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft 專屬**  
@@ -48,7 +48,7 @@ void __svm_skinit(
   
  `SLB`參數指定實體位址的記憶體稱為 64k 區塊*安全載入器區塊*(SLB)。 SLB 會包含呼叫安全載入器，會建立作業環境的電腦，並且後續載入安全性核心的程式。  
   
- 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
+ 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。  
   
 ## <a name="requirements"></a>需求  
   

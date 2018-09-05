@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223209"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693712"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 類別
 這個類別會實作[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)介面。  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>備註  
  `IPersistStorageImpl` 會實作[IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage)介面，可讓用戶端要求的物件載入並儲存持續性資料使用儲存體。  
   
- 這個類別的實作需要類別`T`進行的實作`IPersistStreamInit`可透過介面`QueryInterface`。 通常這表示該類別`T`應該衍生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的項目`IPersistStreamInit`中[COM 對應](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)，並使用[屬性對應](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)來描述類別的永續性資料。  
+ 這個類別的實作需要類別`T`進行的實作`IPersistStreamInit`可透過介面`QueryInterface`。 通常這表示該類別`T`應該衍生自[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)，提供的項目`IPersistStreamInit`中[COM 對應](com-map-macros.md)，並使用[屬性對應](property-map-macros.md)來描述類別的永續性資料。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   

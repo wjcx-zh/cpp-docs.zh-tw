@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bc18599129ce5a17b3be4242eab11861213233fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684286"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供者樣板架構
 ## <a name="data-sources-and-sessions"></a>資料來源和工作階段  
@@ -54,7 +54,7 @@ ms.locfileid: "43210594"
 |[資料來源](../../data/oledb/data-source-object-interfaces.md)([CDataSource](../../data/oledb/cdatasource-class.md))|[必要] `IDBCreateSession`<br /><br /> [必要] `IDBInitialize`<br /><br /> [必要] `IDBProperties`<br /><br /> [必要] `IPersist`<br /><br /> [選用] `IConnectionPointContainer`<br /><br /> [選用] `IDBAsynchStatus`<br /><br /> [選用] `IDBDataSourceAdmin`<br /><br /> [選用] `IDBInfo`<br /><br /> [選用] `IPersistFile`<br /><br /> [選用] `ISupportErrorInfo`|提供者從取用者連線。 物件用來連接，例如使用者識別碼、 密碼和資料來源的名稱上指定屬性。 物件也可用來管理資料來源 （建立、 更新、 刪除、 表格等等）。|  
 |[工作階段](../../data/oledb/session-object-interfaces.md)([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[必要] `IGetDataSource`<br /><br /> [必要] `IOpenRowset`<br /><br /> [必要] `ISessionProperties`<br /><br /> [選用] `IAlterIndex`<br /><br /> [選用] `IAlterTable`<br /><br /> [選用] `IBindResource`<br /><br /> [選用] `ICreateRow`<br /><br /> [選用] `IDBCreateCommand`<br /><br /> [選用] `IDBSchemaRowset`<br /><br /> [選用] `IIndexDefinition`<br /><br /> [選用] `ISupportErrorInfo`<br /><br /> [選用] `ITableCreation`<br /><br /> [選用] `ITableDefinition`<br /><br /> [選用] `ITableDefinitionWithConstraints`<br /><br /> [選用] `ITransaction`<br /><br /> [選用] `ITransactionJoin`<br /><br /> [選用] `ITransactionLocal`<br /><br /> [選用] `ITransactionObject`|工作階段物件會代表取用者和提供者之間的單一交談。 有點類似於 ODBC `HSTMT` ，可以有許多的同時工作階段作用中。<br /><br /> 工作階段物件是主要的連結以前往 OLE DB 功能。 若要取得命令、 交易或資料列集物件，您會瀏覽工作階段物件。|  
 |[資料列集](../../data/oledb/rowset-object-interfaces.md)([CRowset](../../data/oledb/crowset-class.md))|[必要] `IAccessor`<br /><br /> [必要] `IColumnsInfo`<br /><br /> [必要] `IConvertType`<br /><br /> [必要] `IRowset`<br /><br /> [必要] `IRowsetInfo`<br /><br /> [選用] `IChapteredRowset`<br /><br /> [選用] `IColumnsInfo2`<br /><br /> [選用] `IColumnsRowset`<br /><br /> [選用] `IConnectionPointContainer`<br /><br /> [選用] `IDBAsynchStatus`<br /><br /> [選用] `IGetRow`<br /><br /> [選用] `IRowsetChange`<br /><br /> [選用] `IRowsetChapterMember`<br /><br /> [選用] `IRowsetCurrentIndex`<br /><br /> [選用] `IRowsetFind`<br /><br /> [選用] `IRowsetIdentity`<br /><br /> [選用] `IRowsetIndex`<br /><br /> [選用] `IRowsetLocate`<br /><br /> [選用] `IRowsetRefresh`<br /><br /> [選用] `IRowsetScroll`<br /><br /> [選用] `IRowsetUpdate`<br /><br /> [選用] `IRowsetView`<br /><br /> [選用] `ISupportErrorInfo`<br /><br /> [選用] `IRowsetBookmark`|資料列集物件會代表資料來源的資料。 此物件負責資料和任何的基本作業 （更新、 fetch、 移動及其他項目） 的資料繫結。 您一定要包含和操作資料的資料列集物件。|  
-|[命令](../../data/oledb/command-object-interfaces.md)([CCommand](https://msdn.microsoft.com/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[必要] `IAccessor`<br /><br /> [必要] `IColumnsInfo`<br /><br /> [必要] `ICommand`<br /><br /> [必要] `ICommandProperties`<br /><br /> [必要] `ICommandText`<br /><br /> [必要] `IConvertType`<br /><br /> [選用] `IColumnsRowset`<br /><br /> [選用] `ICommandPersist`<br /><br /> [選用] `ICommandPrepare`<br /><br /> [選用] `ICommandWithParameters`<br /><br /> [選用] `ISupportErrorInfo`<br /><br /> [選用] `ICommandStream`|命令物件會處理資料，例如查詢作業。 它可以處理參數化或非參數化陳述式。<br /><br /> 命令物件也會負責處理參數和輸出資料行的繫結的。 繫結是結構，其中包含擷取的資料行，在資料列集的方式的相關資訊。 它包含例如序數、 資料類型、 長度和狀態資訊。|  
+|[命令](../../data/oledb/command-object-interfaces.md)([CCommand](ccommand-class.md))|[必要] `IAccessor`<br /><br /> [必要] `IColumnsInfo`<br /><br /> [必要] `ICommand`<br /><br /> [必要] `ICommandProperties`<br /><br /> [必要] `ICommandText`<br /><br /> [必要] `IConvertType`<br /><br /> [選用] `IColumnsRowset`<br /><br /> [選用] `ICommandPersist`<br /><br /> [選用] `ICommandPrepare`<br /><br /> [選用] `ICommandWithParameters`<br /><br /> [選用] `ISupportErrorInfo`<br /><br /> [選用] `ICommandStream`|命令物件會處理資料，例如查詢作業。 它可以處理參數化或非參數化陳述式。<br /><br /> 命令物件也會負責處理參數和輸出資料行的繫結的。 繫結是結構，其中包含擷取的資料行，在資料列集的方式的相關資訊。 它包含例如序數、 資料類型、 長度和狀態資訊。|  
 |[交易](../../data/oledb/transaction-object-interfaces.md)（選擇性）|[必要] `IConnectionPointContainer`<br /><br /> [必要] `ITransaction`<br /><br /> [選用] `ISupportErrorInfo`|交易物件的資料來源上定義不可部分完成的工作單位，並判斷這些工作單位如何互相關聯性。 此物件不直接支援 OLE DB 提供者範本 （也就是您建立自己的物件）。|  
   
  如需詳細資訊，請參閱下列主題：  

@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a41f88bc6883af1db4bbde8729a3638ded64a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1bc3f52b97159a9caba6f80b4798d9588ec341d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405792"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685904"
 ---
 # <a name="raise"></a>raise
 
 將訊號傳送到執行中的程式。
 
 > [!NOTE]
-> 請勿使用這個方法關閉 Microsoft 市集應用程式中，除了測試或偵錯案例。 透過程式設計或 UI 兩種方式關閉市集應用程式不允許根據[Microsoft 市集原則](http://go.microsoft.com/fwlink/?LinkId=865936)。 如需詳細資訊，請參閱[UWP 應用程式生命週期](http://go.microsoft.com/fwlink/p/?LinkId=865934)。
+> 請勿使用這個方法關閉 Microsoft Store 應用程式中，除了測試或偵錯案例。 以程式設計或 UI 方式關閉對市集應用程式不允許根據[Microsoft Store 原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱 < [UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>語法
 
@@ -77,11 +77,11 @@ int raise(
 |**SIGSEGV**|不合法的儲存體存取|結束呼叫程式|
 |**SIGTERM**|終止傳送給程式的要求|忽略訊號|
 
-如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，函式會將**errno**至**EINVAL**並傳回非零值。
+如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，則函式會設定**errno**要**EINVAL** ，並傳回非零值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 

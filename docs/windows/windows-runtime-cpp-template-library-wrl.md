@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b40576e1b5613bfda19987167e7e43353e6b5802
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211700"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684820"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -157,5 +157,5 @@ Windows 執行階段 c + + 樣板程式庫提供代表某些基本概念的型�
 |-|-|
 |[依類別目錄的索引鍵 Api](../windows/key-wrl-apis-by-category.md)|反白顯示主要的 Windows 執行階段 c + + 樣板程式庫類型、 函數和巨集。|
 |[參考資料](../windows/wrl-reference.md)|包含 Windows 執行階段 c + + 樣板程式庫的參考資訊。|
-|[快速參考 （Windows 執行階段和 Visual c + +）](http://go.microsoft.com/fwlink/p/?linkid=229180)|簡短描述 C + + /CX 支援 Windows 執行階段的功能。|
-|[在 Visual c + + 中使用 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/?linkid=229155)|示範如何使用 C + + /CX，以建立基本 Windows 執行階段元件。|
+|[快速參考 （Windows 執行階段和 Visual c + +）](../cppcx/quick-reference-c-cx.md)|簡短描述 C + + /CX 支援 Windows 執行階段的功能。|
+|[在 Visual c + + 中使用 Windows 執行階段元件](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|示範如何使用 C + + /CX，以建立基本 Windows 執行階段元件。|

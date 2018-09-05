@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cdd0c5d8e89d41e24bf980093f5994c1c9fc495
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed65ff0e608740ae5747ec9cd708c119d79a3829
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209270"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685708"
 ---
 # <a name="x86-intrinsics-list"></a>x86 內建清單
 
@@ -31,13 +31,13 @@ ms.locfileid: "39209270"
 
 - [Intel 內建功能指南](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)。 使用搜尋方塊來尋找特定的內建函式。
 
-- [Intel 64 和 IA-32 架構軟體開發人員手冊](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+- [Intel 64 和 IA-32 架構軟體開發人員手冊](https://software.intel.com/articles/intel-sdm)
 
-- [Intel 架構指令集延伸程式設計參考](https://go.microsoft.com/fwlink/p/?linkid=874960)
+- [Intel 架構指令集延伸程式設計參考](https://software.intel.com/isa-extensions)
 
-- [Intel 進階向量擴充功能的簡介](https://go.microsoft.com/fwlink/p/?linkid=874961)
+- [Intel 進階向量擴充功能的簡介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-- [AMD 開發人員指南、 手冊和 ISA 的文件](https://go.microsoft.com/fwlink/p/?linkid=874958)
+- [AMD 開發人員指南、 手冊和 ISA 的文件](https://developer.amd.com/resources/developer-guides-manuals/)
 
 下表列出 x86 處理器上可用的內建。 技術資料行列出必要的指令集支援。 請使用 [__cpuid](../intrinsics/cpuid-cpuidex.md) 內建函式在執行階段判斷指令集支援。 如果一個資料列中有兩個項目，則代表同一個內建函式的不同進入點。 [1] 表示內建函式僅可用於 AMD 處理器。 [2] 表示內建函式僅可用於 Intel 處理器。 [3] 表示原型是巨集。 函式原型所需的標頭會列在標頭資料行中。 為了簡化起見，Intrin.h 標頭包含 immintrin.h 和 ammintrin.h。
 

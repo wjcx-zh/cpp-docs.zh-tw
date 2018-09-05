@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9ee25403464a13418081abc8e8e150c7e03500
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b82299db31a7452a05cdfe709221facda09c3615
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217455"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676071"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 類別
 這個類別提供的預設實作[ISupportErrorInfo 介面](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)方法，可以用於只有單一介面產生物件錯誤時。  
@@ -125,7 +125,7 @@ STDMETHOD(SetSize)int nNumThreads);
   
  如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。  
   
- 如果*nNumThreads*為零， [ATLS_DEFAULT_THREADSPERPROC](https://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)將乘以中取得的執行緒總數機器的處理器數目。  
+ 如果*nNumThreads*為零，若要取得的執行緒總數機器中的處理器數目將會乘以 ATLS_DEFAULT_THREADSPERPROC。  
   
 ### <a name="return-value"></a>傳回值  
  會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  

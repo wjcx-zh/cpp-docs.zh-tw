@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 20abc194f1286e47477c4510f9ceef6250b9b3f7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687215"
 ---
 # <a name="how-to-copy-resources"></a>如何：複製資源
 
@@ -37,7 +37,7 @@ ms.locfileid: "43214387"
 您可以輕鬆地將複製資源從現有的資源或可執行檔目前的資源檔。 若要這樣做，您開啟包含資源，同時這兩個檔案並將項目從一個檔案拖曳到另一個或複製並貼兩個檔案之間。 這個方法適用於資源指令碼 (.rc) 檔和資源範本 (.rct) 檔，以及可執行檔 (.exe) 檔案。
 
 > [!NOTE]
-> Visual c + + 包含您可以使用自己的應用程式中的範例資源檔案。 如需詳細資訊，請參閱 <<c0> [ 美工圖案： 通用資源](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0)。
+> Visual c + + 包含您可以使用自己的應用程式中的範例資源檔案。 如需詳細資訊，請參閱 <<c0> [ 美工圖案： 通用資源](https://github.com/Microsoft/VCSamples)。
 
 您可以使用拖放方法開啟.rc 檔之間[在專案外部](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
 

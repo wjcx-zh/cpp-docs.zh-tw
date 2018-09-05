@@ -1,7 +1,7 @@
 ---
-title: 運算子 LENGTHOF |Microsoft 文件
+title: 運算子 LENGTHOF |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be32d102d41cccf4c4bc2ac239b4c140151e7c95
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 553a64730f63db54944cfa01662cd455ac3a081e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676181"
 ---
 # <a name="operator-lengthof"></a>運算子 LENGTHOF
-傳回資料中的物件數目*變數*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-LENGTHOF variable  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回資料物件中的數字*變數*。
+
+## <a name="syntax"></a>語法
+
+> LENGTHOF 變數
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

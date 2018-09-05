@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec022fe2d317ec38bc1d9b06f459b9efc7818c92
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 132841c8c24e2b625dad218aaaef2a19cba0a264
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680494"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft 專屬**  
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
  作業失敗，無可用的狀態。  
   
 ## <a name="remarks"></a>備註  
- `__vmx_vmwrite`函式相當於`VMWRITE`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)網站的 url，並請參考 旓紵 C 的文件。  
+ `__vmx_vmwrite`函式相當於`VMWRITE`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)網站的 url，並請參考 旓紵 C 的文件。  
   
 ## <a name="requirements"></a>需求  
   

@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686081"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 提供 Windows 工具列通用控制項的功能。  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED 很少  
   
- 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows sdk for 視窗樣式的描述。  
+ 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows sdk for 視窗樣式的描述。  
   
  （選擇性） 適用於多種[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)、 Windows SDK 中所述。  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
  指定工具列控制項的樣式。 工具列一定要有 WS_CHILD 樣式。 此外，您可以指定 toolbar 樣式和視窗樣式的任何組合中所述**備註**一節[建立](#create)。  

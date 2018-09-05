@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324acb33998246933b0c426357368247c6689c47
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4d5e7499bb1734b2093a60039e28b6f9f85920df
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211313"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681181"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 `Concurrency` 命名空間提供可讓您存取並行執行階段 (C++ 的並行程式設計架構) 的類別和函式。 如需詳細資訊，請參閱[並行執行階段](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -48,13 +48,7 @@ namespace concurrency;
   
 ## <a name="members"></a>成員  
   
-### <a name="namespaces"></a>命名空間  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[concurrency:: extensibility 命名空間](https://msdn.microsoft.com/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
-  
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Typedef  
   
 |名稱|描述|  
 |----------|-----------------|  
@@ -135,7 +129,7 @@ namespace concurrency;
 |[structured_task_group 類別](structured-task-group-class.md)|`structured_task_group` 類別代表平行工作的高度結構化集合。 您可以使用 `task_handle` 物件，將個別平行工作佇列到 `structured_task_group` 中並等候這些工作完成，也可以在工作完成執行前取消工作群組，這樣會中止所有尚未開始執行的工作。|  
 |[target_block 類別](target-block-class.md)|`target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。|  
 |[task 類別 (並行執行階段)](task-class.md)|平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 您也可以使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 等模式，將工作與其他工作組合在一起。|  
-|[task_canceled 類別](task-canceled-class.md)|這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會藉由擲回`get()`方法[工作](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)，已取消的工作。|  
+|[task_canceled 類別](task-canceled-class.md)|這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會藉由擲回`get()`方法[工作](task-class.md)，已取消的工作。|  
 |[task_completion_event 類別](task-completion-event-class.md)|`task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。|  
 |[task_continuation_context 類別](task-continuation-context-class.md)|`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 最好只從 UWP 應用程式使用此類別。 對於非 Windows 執行階段應用程式，工作接續的執行內容是由執行階段，而且不進行設定。|  
 |[task_group 類別](task-group-class.md)|`task_group` 類別表示可以等候或取消的平行工作集合。|  
@@ -194,7 +188,7 @@ namespace concurrency;
 |[asend 函式](concurrency-namespace-functions.md#asend)|多載。 非同步傳送作業，會排程工作將資料傳播到目標區塊。|  
 |[cancel_current_task 函式](concurrency-namespace-functions.md#cancel_current_task)|取消目前執行的工作。 這個函式可以從工作主體內呼叫，以中止工作執行並導致它進入 `canceled` 狀態。<br /><br /> 如果不是在 `task` 的主體中，這就不是支援呼叫這個函式的情況。 這樣做會在應用程式中導致未定義的行為，例如當機或停止回應。|  
 |[create_async 函式](concurrency-namespace-functions.md#create_async)|以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回類型是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。|  
-|[create_task 函式](concurrency-namespace-functions.md#create_task)|多載。 建立 PPL[任務](https://msdn.microsoft.com/5389e8a5-5038-40b6-844a-55e9b58ad35f)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。|  
+|[create_task 函式](concurrency-namespace-functions.md#create_task)|多載。 建立 PPL[任務](task-class.md)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。|  
 |[CreateResourceManager 函式](concurrency-namespace-functions.md#createresourcemanager)|傳回代表並行執行階段資源管理員單一執行個體的介面。 資源管理員會負責將資源指派給想要與彼此相互合作的排程器。|  
 |[DisableTracing 函式](concurrency-namespace-functions.md#disabletracing)|停用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已移除註冊而被取代。|  
 |[EnableTracing 函式](concurrency-namespace-functions.md#enabletracing)|啟用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已開啟而被取代。|  

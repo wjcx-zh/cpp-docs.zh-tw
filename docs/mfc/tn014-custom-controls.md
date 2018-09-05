@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f3838fc2888567fa700eebd127bc7990175bdbc8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215804"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693584"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自訂控制項
 
@@ -122,7 +122,7 @@ MFC 一般範例[CTRLTEST](../visual-cpp-samples.md)提供了自繪功能表和�
 
 有時候您會想要變更已存在物件的功能。 先前的範例會要求您在建立控制項之前進行自訂。 而動態子類別化可讓您自訂已建立的控制項。
 
-子類別化是 Windows 詞彙，來取代[WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26)的視窗中，以自訂`WndProc`並呼叫舊`WndProc`提供預設功能。
+子類別化是 Windows 詞彙，來取代<xref:System.Windows.Forms.Control.WndProc%2A>自訂視窗的`WndProc`並呼叫舊`WndProc`提供預設功能。
 
 子類別化不應與 C++ 類別衍生混淆。 進一步釐清，c + + 詞彙*基底類別*並*衍生類別*類似*超級類別*和*子類別*在 Windows 中物件模型。 使用 MFC 的 C++ 衍生和 Windows 子類別化在功能上很類似，但 C++ 不支援動態子類別化。
 

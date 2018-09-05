@@ -33,19 +33,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb308e527cc955d91af0b12547d52aa5e6316af5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407271"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692930"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 指定要在程式異常終止時採取的動作。
 
 > [!NOTE]
-> 請勿使用[中止](abort.md)關閉 Microsoft 市集應用程式中，除了測試或偵錯案例中的函式。 透過程式設計或 UI 兩種方式關閉市集應用程式不允許根據[Microsoft 市集原則](http://go.microsoft.com/fwlink/?LinkId=865936)。 如需詳細資訊，請參閱[UWP 應用程式生命週期](http://go.microsoft.com/fwlink/p/?LinkId=865934)。
+> 請勿使用[中止](abort.md)函式來關閉 Microsoft Store 應用程式中，除了測試或偵錯案例。 以程式設計或 UI 方式關閉對市集應用程式不允許根據[Microsoft Store 原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱 < [UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>語法
 
@@ -62,7 +62,7 @@ unsigned int _set_abort_behavior(
 新值[中止](abort.md)旗標。
 
 *遮罩*<br/>
-遮罩[中止](abort.md)加上旗標設定的位元。
+遮罩[中止](abort.md)旗標設定的位元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -70,11 +70,11 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>備註
 
-有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**和 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定是否要在程式異常終止時，列印很有幫助的文字訊息。 此訊息會說明應用程式已呼叫[中止](abort.md)函式。 預設行為是列印訊息。 **_CALL_REPORTFAULT**，如果設定，指定會產生 Watson 損毀傾印，並報告時[中止](abort.md)呼叫。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
+有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**並 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定是否要在程式異常終止時，列印有用的文字訊息。 此訊息說明應用程式已呼叫[中止](abort.md)函式。 預設行為是列印訊息。 **_CALL_REPORTFAULT**，如果設定，可指定 Watson 損毀傾印產生，並回報的時機[中止](abort.md)呼叫。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 

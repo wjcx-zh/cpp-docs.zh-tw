@@ -1,7 +1,7 @@
 ---
 title: '@CodeSize | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fc47441079e05acc7a053cd5af78b5b5a096e1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2fd953b996a7b8edf8362ba633cad280930d8a6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049134"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677517"
 ---
 # <a name="codesize"></a>@CodeSize
-0 代表**微小**，**小**， **COMPACT**，和**一般**模型，以及 1**媒體**， **大型**，和**超大型**（等同的數值） 的模型。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-@CodeSize  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [符號參考](../../assembler/masm/symbols-reference.md)
+
+0 代表**微小**，**小型**， **COMPACT**，以及**一般**模型，以及 1**媒體**， **大型**，並**超大型**（等同於數字） 的模型。
+
+## <a name="syntax"></a>語法
+
+> @CodeSize
+
+## <a name="see-also"></a>另請參閱
+
+[符號參考](../../assembler/masm/symbols-reference.md)<br/>

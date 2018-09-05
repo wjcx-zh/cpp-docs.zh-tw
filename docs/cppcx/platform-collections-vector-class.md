@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 550a1e40d3fee80b4c9666457a60772ed49b580a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590231"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686650"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -104,7 +104,7 @@ Vector 物件中包含的元素型別。
 |||
 |-|-|
 |名稱|描述|
-|事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector 變更時發生。|
+|事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector 變更時發生。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

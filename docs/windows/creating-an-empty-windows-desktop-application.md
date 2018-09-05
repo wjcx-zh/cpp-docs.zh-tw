@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c8bbd345e2d3fe0c5571407d41f590c6cc8d7ba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676819"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>建立空的 Windows 桌面應用程式
 
@@ -42,7 +42,3 @@ ms.locfileid: "43197772"
 此專案會出現在 **方案總管** 中，並會顯示三個目錄，分別包含原始程式檔案、標頭檔案與資源檔案。
 
 接下來您可以 [將檔案加入空白的 Visual C++ 專案中](../windows/adding-files-to-an-empty-win32-applications.md)。
-
-## <a name="see-also"></a>另請參閱
-
-[部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

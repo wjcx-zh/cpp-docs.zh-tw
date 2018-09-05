@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336503"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688382"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 類別
 支援資料庫類別使用的資料錄欄位交換 (RFX) 和大量資料錄欄位交換 (Bulk RFX) 常式。  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |SetFieldType 參數值|參數的資料成員的型別|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|輸入的參數。 值，這個值會傳遞至資料錄集的查詢或預存程序。|  
-|' ieldExchange::param * *`ame as **CFieldExchange::inputParam`。|  
+|`CFieldExchange::param` | 與相同`CFieldExchange::inputParam`。|  
 |`CFieldExchange::outputParam`|輸出參數。 資料錄集的預存程序的傳回值。|  
 |`CFieldExchange::inoutParam`|輸入/輸出參數。 值，這個值會傳遞給方法以及從資料錄集的預存程序傳回。|  
   

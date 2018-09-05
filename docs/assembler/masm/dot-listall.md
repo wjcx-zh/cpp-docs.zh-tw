@@ -1,7 +1,7 @@
 ---
-title: .LISTALL |Microsoft 文件
+title: .LISTALL |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 525f7af2b4b0fe7dce2e4adacfa8b01f862c46bc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e5fa0f90abeaae6b0b24ec780de7108bec58dd66
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057286"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691171"
 ---
 # <a name="listall"></a>.LISTALL
-啟動所有的陳述式的清單。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-.LISTALL  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 對等的組合[。清單](../../assembler/masm/dot-list.md)， [。LISTIF](../../assembler/masm/dot-listif.md)，和[。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+啟動所有的陳述式的清單。
+
+## <a name="syntax"></a>語法
+
+> .LISTALL
+
+## <a name="remarks"></a>備註
+
+對等的組合[。清單](../../assembler/masm/dot-list.md)， [。LISTIF](../../assembler/masm/dot-listif.md)，和[。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

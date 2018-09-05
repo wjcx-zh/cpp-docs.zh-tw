@@ -1,7 +1,7 @@
 ---
-title: 執行階段運算子 |Microsoft 文件
+title: 執行階段運算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd671af5b72f9edcf78e5a674e6604f5687197f7
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f8bacc7f86500d96e64db392dc26486c497a425b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056044"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675974"
 ---
 # <a name="run-time-operators"></a>執行階段運算子
-如需 Microsoft 巨集組合程式語言中的執行階段運算子的詳細資訊，請參閱[運算子參考](../../assembler/masm/operators-reference.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+如需 Microsoft 巨集組合器語言中的執行階段運算子的詳細資訊，請參閱[運算子參考](../../assembler/masm/operators-reference.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

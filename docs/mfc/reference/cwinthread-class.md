@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689554"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 代表應用程式內執行的執行緒。  
@@ -96,7 +96,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|檢查特殊訊息。|  
 |[CWinThread::OnIdle](#onidle)|覆寫以執行特定執行緒的閒置時間處理。|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|將訊息張貼至另一個`CWinThread`物件。|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再將它們分派至 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再將它們分派至 Windows 函式[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|到達應用程式之前，會攔截特定訊息。|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|攔截所有執行緒的訊息和命令處理常式所擲回的未處理例外狀況。|  
 |[CWinThread::PumpMessage](#pumpmessage)|包含執行緒的訊息迴圈。|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  當呼叫 Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946)內 MFC 應用程式時，MFC 訊息處理常式不會呼叫的函式。 如需詳細資訊，請參閱 「 知識庫 」 文件 」 PRB:: MFC 訊息處理常式不呼叫與 PostThreadMessage() 」 (Q142415)。  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- 覆寫這個函式來篩選視窗訊息，再將它們分派至 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。  
+ 覆寫這個函式來篩選視窗訊息，再將它們分派至 Windows 函式[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -520,7 +520,7 @@ virtual int Run();
  **Int**執行緒所傳回的值。 此值可以藉由呼叫擷取[GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)。  
   
 ### <a name="remarks"></a>備註  
- `Run` 取得，然後將 Windows 訊息的分派，直到應用程式接收[WM_QUIT](/windows/desktop/winmsg/wm-quit)訊息。 如果目前執行緒之訊息佇列不包含的任何訊息，`Run`呼叫`OnIdle`執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)標準鍵盤轉譯。 最後， [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)呼叫 Windows 函式。  
+ `Run` 取得，然後將 Windows 訊息的分派，直到應用程式接收[WM_QUIT](/windows/desktop/winmsg/wm-quit)訊息。 如果目前執行緒之訊息佇列不包含的任何訊息，`Run`呼叫`OnIdle`執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)標準鍵盤轉譯。 最後， [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)呼叫 Windows 函式。  
   
  `Run` 很少會覆寫，但您可以覆寫該實作特殊的行為。  
   

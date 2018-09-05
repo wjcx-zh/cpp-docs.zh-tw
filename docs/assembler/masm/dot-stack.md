@@ -1,7 +1,7 @@
 ---
-title: .堆疊 |Microsoft 文件
+title: .堆疊 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dab47677da8db2afca73a078b110300a017e7c8d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95e8d69903fabf60fdb5bc04d90452bdad163a19
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052296"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676232"
 ---
 # <a name="stack"></a>.STACK
-當搭配[。模型](../../assembler/masm/dot-model.md)，定義堆疊區段 （使用堆疊的區段名稱）。 選擇性`size`指定堆疊 （預設值是 1,024） 的位元組數目。 `.STACK`指示詞就會自動關閉堆疊陳述式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-.STACK [[size]]  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+當搭配[。模型](../../assembler/masm/dot-model.md)，定義堆疊區段 （以區段名稱堆疊）。 選擇性`size`指定的堆疊 （預設值為 1,024） 的位元組數目。 `.STACK`指示詞會自動關閉堆疊陳述式。
+
+## <a name="syntax"></a>語法
+
+> .堆疊 [[大小]]
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

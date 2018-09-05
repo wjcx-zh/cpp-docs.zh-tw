@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2000 A2049 |Microsoft 文件
+title: ML 非嚴重錯誤 A2000-A2049 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b4ad0d86d49508dd7ff3fb97bb7585871c2b71
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b5b8ac96975b7e3c0733fd9733245576a3dfa999
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680689"
 ---
 # <a name="ml-nonfatal-errors-a2000-a2049"></a>ML 非嚴重錯誤 A2000-A2049
-ML 非嚴重錯誤的詳細資訊，請參閱[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 非嚴重錯誤](../../assembler/masm/ml-nonfatal-errors.md)
+
+ML 非嚴重錯誤的詳細資訊，請參閱 < [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 非嚴重錯誤](../../assembler/masm/ml-nonfatal-errors.md)<br/>

@@ -1,7 +1,7 @@
 ---
-title: 運算子-2 |Microsoft 文件
+title: 運算子-|Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -19,22 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d1969484a4a27652f00b45adce33ce8edb7b3af
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 2c388770032d8caff3aaf261e534beb19aa8ccf2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677177"
 ---
 # <a name="operator--"></a>運算子-
-傳回*expression1*減去*expression2*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-expression1 - expression2  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+傳回*expression1*減去*expression2*。 第二個運算子會反轉的正負號*運算式*。
+
+## <a name="syntax"></a>語法
+
+> expression1-expression2
+
+> -*運算式*
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

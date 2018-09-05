@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8743619b1c47f085aacd569a7b90d716f175842
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685739"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 封裝的一般的對話方塊中，開啟檔案或檔案儲存作業所用的。  
@@ -1398,7 +1398,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
   
 ### <a name="parameters"></a>參數  
  *lpszPropList*  
- 預先定義的屬性清單，以 ";" 分隔。 如需旗標的清單，請參閱 <<c0>  **旗標**一節[OPENFILENAME](https://msdn.microsoft.com/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)。  
+ 預先定義的屬性清單，以 ";" 分隔。 如需旗標的清單，請參閱 <<c0>  **旗標**一節[OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna)。  
   
 ### <a name="remarks"></a>備註  
   

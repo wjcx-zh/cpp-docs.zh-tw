@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a63caaa23fa59356a5904740cf03b8c36a909930
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218368"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688568"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文字編碼函式
 這些函式支援編碼和解碼的文字。
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  指標變數，其中包含以位元組為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。  
   
  [in]*dwFlags*  
- 描述如何執行轉換的旗標。 請參閱[ATLSMTP_QPENCODE 旗標](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4)。  
+ 描述如何執行轉換所 ATLSMTP_QPENCODE 旗標。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則傳回 TRUE 失敗則為 FALSE。  

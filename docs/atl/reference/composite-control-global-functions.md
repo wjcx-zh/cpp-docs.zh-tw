@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203712"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677844"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 這些函式會提供建立對話方塊，以及建立、 裝載和授權的 ActiveX 控制項的支援。  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  如果控制項裝載程式碼的初始化是否成功; 非零值否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 這個函式，呼叫 **"AtlAxWin 」** 視窗類別可用於呼叫[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)、 Windows SDK 中所述。  
+ 使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 這個函式，呼叫 **"AtlAxWin 」** 視窗類別可用於呼叫[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)或[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)、 Windows SDK 中所述。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  此函式取消初始化 ATL 的控制項裝載程式碼取消註冊 **"AtlAxWin80"** 並 **"AtlAxWinLic80"** 視窗類別。  

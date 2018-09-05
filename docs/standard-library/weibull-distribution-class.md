@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4f6a71770afdb541efa76f85464d9aeef7b2fb91
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957668"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681004"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 類別
 
@@ -103,7 +103,7 @@ class weibull_distribution
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需 Weibull 分配的詳細資訊，請參閱 Wolfram MathWorld 文章 [Weibull 分配 (英文)](http://go.microsoft.com/fwlink/p/?linkid=401115)。
+如需 Weibull 分配的詳細資訊，請參閱 Wolfram MathWorld 文章 [Weibull 分配 (英文)](http://mathworld.wolfram.com/WeibullDistribution.html)。
 
 ## <a name="example"></a>範例
 

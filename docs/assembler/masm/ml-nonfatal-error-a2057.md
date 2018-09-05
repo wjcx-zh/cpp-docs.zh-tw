@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2057 |Microsoft 文件
+title: ML 非嚴重錯誤 A2057 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b397b47e3761613e1a412af2d5a82ff56f10aac0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8f90298295e7ee68cbdaed9cd12a0865c413333d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054506"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685262"
 ---
 # <a name="ml-nonfatal-error-a2057"></a>ML 非嚴重錯誤 A2057
-**強制錯誤： 空白字串**  
-  
- 條件式錯誤指示詞[。ERRB](../../assembler/masm/dot-errb.md)用來產生這個錯誤。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**強制錯誤： 空白的字串**
+
+條件式錯誤指示詞[。ERRB](../../assembler/masm/dot-errb.md)用來產生這個錯誤。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

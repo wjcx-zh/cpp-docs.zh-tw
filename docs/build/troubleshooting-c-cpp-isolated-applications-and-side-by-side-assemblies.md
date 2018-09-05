@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3768056a240bb8ad647287b4ca2b60f8e7ede484
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681381"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>疑難排解 C/C++ 隔離應用程式和並存組件
 如果找不到相依程式庫，則載入 C/C++ 應用程式可能會失敗。 本文將說明為什麼無法載入 C/++ 應用Ｃ程式的一些常見原因，並建議解決問題的步驟。  
@@ -46,7 +46,7 @@ ms.locfileid: "43218665"
   
 3.  如果您的應用程式相依於並存組件，並且未出現資訊清單，您必須確定連結器可產生專案的資訊清單。 請檢查連結器選項**產生資訊清單**中**專案屬性**專案 對話方塊。  
   
-4.  如果資訊清單內嵌於二進位檔，請確定 RT_MANIFEST 的識別碼對這種類型的二進位檔是正確的。 如需使用的資源識別碼的詳細資訊，請參閱[使用並排顯示的組件做為資源 (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx)。 如果資訊清單位於不同的檔案，請在 XML 編輯器或文字編輯器中開啟它。 如需資訊清單和部署的規則的詳細資訊，請參閱 <<c0> [ 資訊清單](https://msdn.microsoft.com/library/aa375365)。  
+4.  如果資訊清單內嵌於二進位檔，請確定 RT_MANIFEST 的識別碼對這種類型的二進位檔是正確的。 如需使用的資源識別碼的詳細資訊，請參閱[使用並排顯示的組件做為資源 (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource)。 如果資訊清單位於不同的檔案，請在 XML 編輯器或文字編輯器中開啟它。 如需資訊清單和部署的規則的詳細資訊，請參閱 <<c0> [ 資訊清單](https://msdn.microsoft.com/library/aa375365)。  
   
     > [!NOTE]
     >  如果出現內嵌資訊清單和個別的資訊清單檔案，作業系統載入器會使用內嵌資訊清單，並忽略個別的檔案。 不過，在 Windows XP 上的情況則相反，會使用不同的資訊清單檔案，而且會忽略內嵌資訊清單。  

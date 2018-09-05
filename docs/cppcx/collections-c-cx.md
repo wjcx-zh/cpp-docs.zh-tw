@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c174c904dfb43ff3fa3c032bae30da8c1e139c3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0be29ed74b2c5abf8bc3c781900caa61ada3713f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693074"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 在 C + + /CX 程式，您可自由使用 Standard Template Library (STL) 容器或任何其他使用者定義的集合型別。 不過，當您集合來回傳遞 Windows 執行階段應用程式二進位介面 (ABI) 之間，比方說，至 XAML 控制項或 JavaScript 用戶端，您必須使用 Windows 執行階段集合型別。  
@@ -145,6 +145,5 @@ void FindButton(UIElementCollection^ col)
   
 ## <a name="see-also"></a>另請參閱  
  [型別系統](../cppcx/type-system-c-cx.md)   
- [內建類型](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

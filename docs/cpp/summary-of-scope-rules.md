@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195027"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676920"
 ---
 # <a name="summary-of-scope-rules"></a>範圍規則摘要
 使用的名稱在其範圍內不可以模稜兩可 (其位置由多載決定)。 如果名稱表示一個函式，該函式必須明確指定參數的數目和類型。 如果名稱仍然模稜兩可，[成員存取](../cpp/member-access-control-cpp.md)套用規則。  
   
 ## <a name="constructor-initializers"></a>建構函式初始設定式  
- 建構函式初始設定式 (中所述[初始化基底和成員](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) 會評估指定的建構函式最外層區塊的範圍內。 因此，它們可以使用建構函式的參數名稱。  
+ [建構函式初始設定式](constructors-cpp.md#member_init_list)會評估指定的建構函式最外層區塊的範圍內。 因此，它們可以使用建構函式的參數名稱。  
   
 ## <a name="global-names"></a>全域名稱  
  物件、函式或列舉程式若是在任何函式或類別之外引入，或是加上全域一元範圍運算子 (`::`) 前置詞，且未與下列任何二元運算子搭配使用，其名稱即為全域名稱：  

@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0477bb2dfa60b8a3803c6aff2502de7fd0ad15c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215249"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686453"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|指出工作窗格的標籤中是否自動換行。|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|指出工作窗格的工作中是否自動換行。|  
-|[CMFCTasksPane::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](cdockablepane-class.md#loadstate)。)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|使用者按一下工作窗格中的項目時由架構呼叫。|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,17 +293,17 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|使用者按一下首頁瀏覽按鈕時由架構呼叫|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(覆寫[cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata)。)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[cdockablepane:: Onupdatecmdui](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(覆寫[cdockablepane:: Pretranslatemessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd)。)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[cdockablepane:: Onupdatecmdui](cdockablepane-class.md)。)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(覆寫[cdockablepane:: Pretranslatemessage](cdockablepane-class.md)。)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(覆寫[cpane:: Recalclayout](../../mfc/reference/cpane-class.md#recalclayout)。)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|移除指定之頁面上的所有群組。|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|從工作窗格中移除所有頁面，預設 (第一頁) 頁面除外。|  
 |[CMFCTasksPane::RemoveAllTasks](#removealltasks)|從群組中移除所有工作。|  
 |[CMFCTasksPane::RemoveGroup](#removegroup)|移除群組。|  
-|[CMFCTasksPane::RemovePage](#removepage)|從工作窗格移除指定的頁面。|  
+|[CMFCTasksPane::RemovePage](#removepage)|從工作窗格移除指定的頁面。|
 |[CMFCTasksPane::RemoveTask](#removetask)|從工作群組中移除工作。|  
-|[CMFCTasksPane::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
-|[CMFCTasksPane::Serialize](#serialize)|(覆寫[cdockablepane:: Serialize](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6)。)|  
+|[CMFCTasksPane::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](cdockablepane-class.md)。)|  
+|[CMFCTasksPane::Serialize](#serialize)|(覆寫[cdockablepane:: Serialize]()。)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|啟動工作窗格中指定的頁面。|  
 |[CMFCTasksPane::SetCaption](#setcaption)|設定工作窗格的標題名稱。|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|設定群組標題的高度。|  
@@ -318,7 +318,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::SetTaskName](#settaskname)|設定工作的名稱。|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|設定工作的文字色彩。|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|設定工作的文字色彩。| 
 |[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|設定工作距離其父群組的左邊緣和右邊緣的水平位移。|  
 |[CMFCTasksPane::SetVertMargin](#setvertmargin)|設定工作窗格與用戶端區域邊緣之間的垂直間距。|  
 |[CMFCTasksPane::SetWindowHeight](#setwindowheight)|設定視窗的高度。|  

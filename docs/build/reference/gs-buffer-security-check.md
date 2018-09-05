@@ -1,5 +1,5 @@
 ---
-title: -GS （緩衝區安全性檢查） |Microsoft 文件
+title: -GS （緩衝區安全性檢查） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,16 +24,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fdb08515d20a4de00ea35373670887e48b835e28
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379480"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678388"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (緩衝區安全性檢查)  
   
-偵測到覆寫函式的傳回位址、 例外狀況處理常式的位址或特定類型的參數部分緩衝區滿溢。 造成緩衝區溢位是由駭客利用不會強制緩衝區大小限制的程式碼的技術。  
+偵測到某些緩衝區溢位，覆寫函式的傳回位址、 例外狀況處理常式的位址或特定類型的參數。 造成緩衝區溢位是駭客用來惡意探索不會強制使用的緩衝區大小限制的程式碼的技術。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,19 +43,19 @@ ms.locfileid: "32379480"
   
 ## <a name="remarks"></a>備註  
   
-**/GS**預設為開啟。 如果您預期您的應用程式沒有安全性漏洞時，使用 **/GS-**。 如需有關 **/GS**，請參閱[編譯器安全性檢查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)。 如需隱藏緩衝區滿溢偵測的詳細資訊，請參閱[safebuffers](../../cpp/safebuffers.md)。  
+**/GS**預設為開啟。 如果您預期您的應用程式沒有安全性漏洞時，使用 **/GS-**。 如需隱藏緩衝區滿溢偵測的詳細資訊，請參閱[safebuffers](../../cpp/safebuffers.md)。  
   
 ## <a name="security-checks"></a>安全性檢查  
   
-編譯器會辨識受限於緩衝區滿溢問題的函式，編譯器會配置之前傳回位址堆疊上的空間。 函式進入時，載入已配置的空間*安全性 cookie* ，在模組載入一次計算。 函式結束時，並在 64 位元作業系統上的框架回溯期間，以確定該 cookie 的值仍然是相同呼叫 helper 函式。 不同的值會指出堆疊的覆寫可能會發生。 如果偵測到不同的值時，會終止處理程序。  
+編譯器會辨識受限於緩衝區滿溢問題的函式，則編譯器會配置之前的傳回位址在堆疊上的空間。 函式項目，配置的空間會載入*安全性 cookie* ，會計算一次在模組載入。 函式結束時，並在 64 位元作業系統上的框架回溯期間，會呼叫 helper 函式可確定 cookie 的值仍然相同。 不同的值會指出堆疊的覆寫可能會發生。 如果偵測到不同的值時，會終止處理程序。  
   
 ## <a name="gs-buffers"></a>GS 緩衝區  
   
 緩衝區滿溢安全性檢查對*GS 緩衝區*。 GS 緩衝區可以是下列其中一種：  
   
--   大於 4 個位元組，有兩個以上的項目和項目類型不是指標類型的陣列。  
+-   陣列大於 4 個位元組，有兩個以上的項目，且不是指標類型的項目類型。  
   
--   資料結構的大小超過 8 個位元組，且不包含任何指標。  
+-   一種資料結構的大小為超過 8 個位元組，並不包含任何指標。  
   
 -   使用所配置的緩衝區[_alloca](../../c-runtime-library/reference/alloca.md)函式。  
   
@@ -70,7 +70,7 @@ struct { int a; int b; int c; int d; } myStruct;
 struct { int a; char buf[20]; };  
 ```  
   
-不過，下列陳述式沒有宣告 GS 緩衝區。 前兩個宣告包含指標類型的項目。 第三個和第四個陳述式會宣告的陣列的大小為太小。 第五個陳述式會宣告結構的大小 x86 平台不超過 8 個位元組。  
+不過，下列陳述式未宣告 GS 緩衝區。 前兩個宣告包含指標類型的項目。 第三個和第四個陳述式會宣告的陣列大小是太小。 第五個陳述式宣告的結構大小 x86 平台不超過 8 個位元組。  
   
 ```cpp  
 char *pBuf[20];  
@@ -82,7 +82,7 @@ struct { int a; int b; };
   
 ## <a name="initialize-the-security-cookie"></a>初始化安全性 Cookie  
   
-**/GS**編譯器選項需要使用 cookie 的任何函式執行之前初始化安全性 cookie。 安全性 cookie 必須立即初始化項目可以在 EXE 或 DLL。 這在如果您使用預設 VCRuntime 進入點會自動完成： mainCRTStartup，wmainCRTStartup，WinMainCRTStartup，wWinMainCRTStartup，或 _DllMainCRTStartup。 如果您使用的替代項目點，您必須藉由呼叫，以手動方式初始化安全性 cookie [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)。  
+**/GS**編譯器選項可讓您需要執行任何會使用 cookie 的函式之前，先初始化安全性 cookie。 安全性 cookie 必須立即初始化，項目，以在 EXE 或 DLL。 這在如果您使用預設 VCRuntime 進入點會自動完成： mainCRTStartup，wmainCRTStartup，WinMainCRTStartup，wWinMainCRTStartup，或 _DllMainCRTStartup。 如果您使用替代的進入點時，您必須藉由呼叫，以手動方式初始化安全性 cookie [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)。  
   
 ## <a name="what-is-protected"></a>受保護的內容  
   
@@ -94,43 +94,43 @@ struct { int a; int b; };
   
 -   易受攻擊的函式參數。  
   
-在所有平台， **/GS**嘗試偵測到傳回位址的緩衝區滿溢。 緩衝區滿溢是更輕鬆地利用例如 x86 和 x64，使用儲存在堆疊函式呼叫的傳回位址的呼叫慣例的平台上。  
+所有的平台上 **/GS**嘗試偵測到的傳回位址的緩衝區溢位。 緩衝區溢位會更輕鬆地利用 x86 和 x64，使用儲存在堆疊的函式呼叫的傳回位址的呼叫慣例等平台上。  
   
-在 x86，如果函式使用例外狀況處理常式，編譯器會插入安全性 cookie 保護例外狀況處理常式的位址。 在框架回溯會檢查 cookie。  
+在 x86 上如果函式使用的例外狀況處理常式中，編譯器會插入安全性 cookie 來保護例外狀況處理常式的位址。 在框架回溯會檢查 cookie。  
   
-**/GS**保護*容易遭受參數*傳遞至函式。 易受攻擊的參數是指標，c + + 參考，C-包含的結構 （c + + POD 類型） 的指標或 GS 緩衝區。  
+**/GS**保護*易受攻擊參數*，會傳遞至函式。 有弱點的參數是指標，c + + 參考，C-包含的結構 （c + + POD 類型） 的指標或 GS 的緩衝區。  
   
-之前的 cookie 和區域變數配置有弱點的參數。 緩衝區滿溢可以覆寫這些參數。 會使用這些參數的函式中的程式碼可能會導致攻擊，此函數會傳回再執行安全性檢查。 為了降低這個危險，編譯器期間函式初構中會有弱點的參數複製，並將它們放在任何緩衝區儲存體區域下方。  
+之前的 cookie 和區域變數配置有弱點的參數。 緩衝區溢位可能會覆寫這些參數。 會使用這些參數的函式中的程式碼可能會導致攻擊，此函數會傳回並執行安全性檢查。 若要降低此風險，編譯器會建立一份有弱點的參數，在函式初構期間，並將它們放在下列任何緩衝區的儲存體區域。  
   
-編譯器不會有弱點的參數的複本在下列情況：  
+編譯器不會在下列情況下進行複製的有弱點的參數：  
   
--   不會包含 GS 緩衝區的函式。  
+-   沒有 GS 緩衝區的函式。  
   
--   最佳化 ([/O 選項](../../build/reference/o-options-optimize-code.md)) 未啟用。  
+-   最佳化 ([/O 選項](../../build/reference/o-options-optimize-code.md)) 不會啟用。  
   
 -   具有變數引數清單 （...） 的函式。  
   
--   函式，以標記[naked](../../cpp/naked-cpp.md)。  
+-   函式標記著[naked](../../cpp/naked-cpp.md)。  
   
 -   包含內嵌組譯碼中的第一個陳述式的函式。  
   
--   參數只能用於不太可能會處於易遭利用發生緩衝區滿溢的方式。  
+-   參數只能用於不太可能會發生緩衝區滿溢的情況時可利用來攻擊的方式。  
   
 ## <a name="what-is-not-protected"></a>未受保護的內容  
   
-**/GS**編譯器選項不會保護所有的緩衝區滿溢安全性攻擊。 例如，如果您有緩衝區和 vtable 中的物件，緩衝區溢位可能會損毀 vtable。  
+**/GS**編譯器選項不會保護所有的緩衝區滿溢安全性攻擊。 例如，如果您有緩衝區和 vtable 中的物件時，緩衝區滿溢的情況可能會損毀 vtable。  
   
-即使您使用 **/GS**，一定要撰寫安全程式碼有任何緩衝區滿溢嘗試。  
+即使您使用 **/GS**，不斷地嘗試撰寫安全程式碼有無緩衝區溢位。  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項  
   
-1.  在**方案總管 中**，以滑鼠右鍵按一下專案，然後按一下**屬性**。  
+1.  在 **方案總管**，以滑鼠右鍵按一下專案，然後按一下**屬性**。  
   
      如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  在**屬性頁**對話方塊中，按一下  **C/c + +** 資料夾。  
+2.  在 [**屬性頁**] 對話方塊中，按一下**C/c + +** 資料夾。  
   
-3.  按一下**程式碼產生**屬性頁。  
+3.  按一下 **程式碼產生**屬性頁。  
   
 4.  修改**緩衝區安全性檢查**屬性。  
   
@@ -140,7 +140,7 @@ struct { int a; int b; };
   
 ## <a name="example"></a>範例  
   
-這個範例會發生緩衝區滿溢。 這會導致應用程式在執行階段失敗。  
+此範例中會發生緩衝區滿溢。 這會導致應用程式在執行階段失敗。  
   
 ```C  
 // compile with: /c /W1  

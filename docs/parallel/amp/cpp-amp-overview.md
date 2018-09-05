@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: df69423e635a76d82ad8a2539c6fd92054f24964
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677665"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 C + + Accelerated Massive Parallelism (c + + AMP) 會利用在獨立圖形顯示卡上的圖形處理單元 (GPU) 等資料平行硬體來加速 c + + 程式碼的執行。 藉由使用 c + + AMP，您可以撰寫多維資料演算法，以便利用異質硬體上的平行處理加速執行。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何從 CPU 移至 GPU 和上一步，以便您可以改善效能。  
@@ -464,7 +464,7 @@ C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此
   
 - [writeonly_texture_view 類別](../../parallel/amp/reference/writeonly-texture-view-class.md)： 提供所有材質的唯寫存取。  
   
-- [短向量庫](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f)： 定義一組長度為 2、 3 和 4 為基礎的短向量類型**int**， `uint`， **float**， **double**， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。  
+- 短向量庫： 定義一組長度為 2、 3 和 4 為基礎的短向量類型**int**， `uint`， **float**， **double**，[範數](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md)。  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 應用程式  
  
@@ -496,7 +496,7 @@ C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此
   
 - [通道 (執行緒檢視)](/visualstudio/profiling/channels-threads-view)  
   
-- [使用並行視覺化檢視分析 c + + AMP 程式碼](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
+- [使用並行視覺化檢視分析 c + + AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)  
   
 ## <a name="performance-recommendations"></a>效能建議  
  

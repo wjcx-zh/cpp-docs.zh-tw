@@ -1,7 +1,7 @@
 ---
 title: 運算子 OVERFLOW? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,23 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aee81eb229fa54b20b6ea9b50685cabf688ac68
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7fe21109db3c03b50c2dec824572628a6f86a733
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054955"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679001"
 ---
 # <a name="operator-overflow"></a>運算子 OVERFLOW?
-溢位旗標的狀態。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，且在執行階段，不是在組件時進行評估。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-OVERFLOW?  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+溢位旗標的狀態。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，並在執行階段，不是在組件階段評估。
+
+## <a name="syntax"></a>語法
+
+> OVERFLOW？
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

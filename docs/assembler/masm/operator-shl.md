@@ -1,7 +1,7 @@
 ---
-title: 運算子 SHL |Microsoft 文件
+title: 運算子 SHL |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b09d3a8704dcd1772dc6f0f48c2908101f8b43f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 31f7c8dadd9f619ebdb53cd6279c4da68bc8af18
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055923"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693376"
 ---
 # <a name="operator-shl"></a>運算子 SHL
-傳回的結果移位的位元*運算式*左*計數*的位元數字。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-expression SHL count  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+移位的位元的結果會傳回*運算式*左*計數*的位元數字。
+
+## <a name="syntax"></a>語法
+
+> 運算式 SHL 計數
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

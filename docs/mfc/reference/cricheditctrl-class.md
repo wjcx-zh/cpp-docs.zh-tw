@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2847bf32a51a63e39d80839fed1b46fac18f29dc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3ad17396a9c82532d46ea04f88b637828fe6f460
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215787"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678493"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 提供 Windows Rich Edit 控制項的功能。  
@@ -443,7 +443,7 @@ virtual BOOL Create(
   
 - WS_TABSTOP 若要包含 tab 鍵順序編輯控制項。  
   
- 如需有關視窗樣式的詳細資訊，請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ 如需有關視窗樣式的詳細資訊，請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
@@ -462,7 +462,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
  指定編輯控制項的樣式。 適用於所列出的視窗樣式的組合 **< 備註 > 一**一節[建立](#create)並[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中所述。  

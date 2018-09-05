@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2054 |Microsoft 文件
+title: ML 非嚴重錯誤 A2054 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a9c754cdd1ea33c004f5dea431829bea5532cd0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 026699a1ce41681fc10a7fbc37a76b86c7caef4c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688240"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>ML 非嚴重錯誤 A2054
-**強制錯誤： 不等於 0 的值**  
-  
- 條件式錯誤指示詞[。ERRNZ](../../assembler/masm/dot-errnz.md)用來產生這個錯誤。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**強制錯誤： 值不等於 0**
+
+條件式錯誤指示詞[。ERRNZ](../../assembler/masm/dot-errnz.md)用來產生這個錯誤。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

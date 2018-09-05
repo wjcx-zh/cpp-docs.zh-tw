@@ -19,16 +19,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37cec86d276732bd7273d0f5585de5093f0cd01f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539205"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685541"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
 
-本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。 Visual Studio 支援 Office 2007 功能區和 Windows 7 Scenic Ribbon。 如需有關功能區使用者介面的詳細資訊，請參閱 <<c0> [ 功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 網站上。
+本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。 Visual Studio 支援 Office 2007 功能區和 Windows 7 Scenic Ribbon。 如需有關功能區使用者介面的詳細資訊，請參閱 <<c0> [ 功能區](/windows/desktop/uxguide/cmd-ribbons)。
 
 本逐步解說中修改傳統 Scribble 1.0 MFC 範例，可讓您使用滑鼠來建立線條繪圖。 這部分的逐步解說示範如何修改 Scribble 範例，使其顯示功能區列。 [第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)將更多的按鈕加入至功能區列。
 

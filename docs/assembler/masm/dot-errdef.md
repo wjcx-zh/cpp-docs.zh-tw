@@ -1,7 +1,7 @@
 ---
 title: .ERRDEF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaf606183260ec35b3a27b9d0209ad608d0821e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7ebce65e18106fd35c8fdd936293976bf7611182
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053099"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688791"
 ---
 # <a name="errdef"></a>.ERRDEF
-如果產生錯誤*名稱*是先前定義的標籤、 變數或符號。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-.ERRDEF name [[, message]]  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+會產生錯誤，如果*名稱*是先前定義的標籤、 變數或符號。
+
+## <a name="syntax"></a>語法
+
+> .ERRDEF 名稱 [[，訊息]]
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

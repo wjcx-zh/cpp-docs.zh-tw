@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a990acd8f27be476ce35d682a19912dcc85bbeed
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 340a21a3bbcb1853d66de01bddf9425fed0c8183
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540972"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689840"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 C + + AMP (c + + Accelerated Massive Parallelism) 利用通常是獨立圖形顯示卡上的圖形處理單元 (GPU) 的資料平行硬體來加速您的 c + + 程式碼的執行。 C + + AMP 程式撰寫模型包含多維陣列時，編製索引、 記憶體傳輸和並排顯示的支援。 它也包含數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何從 CPU 移至 GPU 和。  
@@ -48,4 +48,4 @@ C + + AMP (c + + Accelerated Massive Parallelism) 利用通常是獨立圖形顯
  
 [機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=238472)  
 [C + + AMP 範例專案下載](http://go.microsoft.com/fwlink/p/?linkid=248508)  
-[使用並行視覺化檢視分析 c + + AMP 程式碼](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[使用並行視覺化檢視分析 c + + AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

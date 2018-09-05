@@ -1,5 +1,5 @@
 ---
-title: FreeLibrary 和 AfxFreeLibrary |Microsoft 文件
+title: FreeLibrary 和 AfxFreeLibrary |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,23 +23,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e1bf5f1a05438ddf89af86c9b0d12e7885b901
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 063c858253c12cfedbf252a124029b8cbc16a691
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367507"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680959"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
-明確連結的 DLL 呼叫的處理序[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)函式時不再需要 DLL 模組。 這個函式會遞減模組的參考計數，並參考計數為零，如果取消對應從處理序的位址空間。  
+明確連結至 DLL 呼叫的程序[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)函式時不再需要 DLL 模組。 這個函式模組的參考計數會遞減，並參考計數為零，如果取消從處理序位址空間。  
   
- MFC 應用程式中，使用[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)而不是`FreeLibrary`卸載 MFC 擴充 DLL。 介面 （函式原型）`AfxFreeLibrary`相同`FreeLibrary`。  
+ 在 MFC 應用程式中，使用[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)而不是`FreeLibrary`卸載 MFC 擴充 DLL。 介面 （函式原型），如`AfxFreeLibrary`等同於`FreeLibrary`。  
   
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [如何以隱含方式連結到 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
+-   [如何以隱含方式連結至 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [決定要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
+-   [判斷要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
@@ -48,6 +48,6 @@ ms.locfileid: "32367507"
 -   [GetProcAddress](../build/getprocaddress.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
- [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
+ [Visual c + + Dll](../build/dlls-in-visual-cpp.md)   
+ [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

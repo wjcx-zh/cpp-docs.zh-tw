@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221568"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690543"
 ---
 # <a name="errorcode-class"></a>error_code 類別
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 第一個建構函式會儲存零的錯誤碼值以及 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
-第二個建構函式儲存*val*作為錯誤碼值和指標[error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
+第二個建構函式儲存*val*作為錯誤碼值和指標[error_category](../standard-library/error-category-class.md)。
 
 第三個建構函式會儲存 `(value_type)_Errcode` 作為錯誤碼值，並儲存 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-測試 [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件是否小於傳入以進行比較的 `error_code` 物件。
+測試 `error_code` 物件是否小於傳入以進行比較的 `error_code` 物件。
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-將新的列舉值指派給 [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件。
+將新的列舉值指派給 `error_code` 物件。
 
 ```cpp
 template <class _Enum>

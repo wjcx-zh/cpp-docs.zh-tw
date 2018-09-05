@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62eabc9eb9b2043fe3d66389d56b1995afcd57e7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fa6c9dfa36ae753e87f0dd4b8c0fc13d3db6aeba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212243"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679904"
 ---
 # <a name="attribute"></a>屬性
 
@@ -221,4 +221,3 @@ int main() {
 ## <a name="see-also"></a>另請參閱
 
 [依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)  
-[自訂屬性](https://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

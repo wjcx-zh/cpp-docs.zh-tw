@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2069 |Microsoft 文件
+title: ML 非嚴重錯誤 A2069 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d63d942c148b2255275ddcba21b2a3e3f616d6a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: dbf2f4f4723d9a83d89a343ebc501db07dd23db9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054714"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692253"
 ---
 # <a name="ml-nonfatal-error-a2069"></a>ML 非嚴重錯誤 A2069
-**不允許此指令的運算元**  
-  
- 一或多個運算元所指定的指令，它會使用任何運算元使用。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**不允許此指令的運算元**
+
+一或多個運算元所指定的指令，不會使用任何運算元使用。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

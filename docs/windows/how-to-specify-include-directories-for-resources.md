@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c52f2a17e347e7b37152a3d7a78423f0523b5679
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0b655713a378c859bb017f661022f86aa687ab6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676428"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>如何：指定資源的 Include 目錄
 
@@ -32,7 +32,7 @@ ms.locfileid: "43220594"
 
 2. 在 [**屬性頁**] 對話方塊中，按一下**資源**節點，在左窗格中，然後指定其他的 include 目錄中的**其他 include 目錄**屬性。
 
-如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[逐步解說： Using Resources for Localization with ASP.NET](https://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index) .NET Framework 開發人員指南中。 
 
 ## <a name="requirements"></a>需求
 

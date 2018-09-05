@@ -1,7 +1,7 @@
 ---
-title: SWORD |Microsoft 文件
+title: 劍 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f3e50db7c9ac7358190885d9e5b453126c8487
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a004148476f6eb0d63e91dfac5ebcc4ca2c8ad92
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057386"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676154"
 ---
 # <a name="sword"></a>SWORD
-配置並選擇性地初始化儲存體的帶正負號的單字 （2 個位元組） 為每個`initializer`。 也可用以做為類型指定型別是合法的任何位置。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-name SWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)   
- [WORD](../../assembler/masm/word.md)
+
+配置並選擇性地針對每個初始化帶正負號的一個字詞，（2 個位元組） 儲存體`initializer`。 也可用來當做型別規範的類型是合法的任何位置。
+
+## <a name="syntax"></a>語法
+
+> 名稱劍初始設定式 [[，初始設定式]]...
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[WORD](../../assembler/masm/word.md)<br/>

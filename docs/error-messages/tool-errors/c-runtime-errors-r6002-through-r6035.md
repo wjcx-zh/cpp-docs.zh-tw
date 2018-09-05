@@ -1,5 +1,5 @@
 ---
-title: C 執行階段錯誤 R6002 到 R6035 |Microsoft 文件
+title: C 執行階段錯誤 R6002 到 R6035 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e7a8c7c544ef89f1b54459a7f02b90424e6c7c5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300016"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693557"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C 執行階段錯誤 R6002 到 R6035
 
-此章節是錯誤的參考，該錯誤是於您的應用程式載入或執行時產生自 C 執行階段程式庫 (CRT)。 即使訊息是指 Microsoft Visual c + + 執行階段，這些錯誤會指出您的應用程式的程式碼中的錯誤，或是無法處理的執行階段程式庫，例如記憶體不足的狀況。 如果您要防止條件而導致它們，您的應用程式的程式碼或撰寫程式碼以擷取這些錯誤，並向使用者呈現易記的訊息，您的應用程式的一般使用者可能會看到這些錯誤。
+此章節是錯誤的參考，該錯誤是於您的應用程式載入或執行時產生自 C 執行階段程式庫 (CRT)。 即使訊息指的是 Microsoft Visual c + + 執行階段，這些錯誤會指出您的應用程式的程式碼中的 bug，或是無法處理的執行階段程式庫，例如記憶體不足的情況。 如果不需要您的應用程式，以避免造成，條件的程式碼或撰寫程式碼來擷取這些錯誤，並呈現給使用者的好記的訊息，您的應用程式的終端使用者可能會看到這些錯誤。
 
-您可能會發現錯誤和警告的其他協助 Microsoft 公共論壇中。 您可以搜尋錯誤或警告編號上[開發人員社群](https://go.microsoft.com/fwlink/p/?linkid=820594)站台。 [Visual c + + 語言](http://go.microsoft.com/fwlink/p/?linkid=158195)論壇是如需問題和 c + + 語言的語法和 MSVC 編譯器的相關討論。 [Visual c + + 一般](http://go.microsoft.com/fwlink/p/?linkid=158194)論壇是關於 Visual c + + 不會討論其他論壇中的問題。 您可以搜尋錯誤和警告，並詢問問題上[堆疊溢位](http://stackoverflow.com/)尋找解決方案。
+您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://developercommunity.visualstudio.com)站台。 [Visual c + + 一般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral)論壇適合有關 Visual c + + 不會討論其他論壇中的問題。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
 
 如需其他說明和社群資源的連結，請參閱[Visual c + + 說明和社群](../../visual-cpp-help-and-community.md)。
 

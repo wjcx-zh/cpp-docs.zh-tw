@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a716119acc857419dcf128c39ab2c20921cd2d4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 59fcd3f00fb8998cf90c88d574b9d22051cb4305
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687780"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp 和 MFC 應用程式精靈
 當它建立基本架構的應用程式時，MFC 應用程式精靈會宣告應用程式類別衍生自[CWinApp](../mfc/reference/cwinapp-class.md)。 MFC 應用程式精靈也會產生實作檔包含下列項目：  
@@ -36,7 +36,7 @@ ms.locfileid: "43211387"
   
 -   標準實作您`InitInstance`成員函式。  
   
- 應用程式類別會放在專案的標頭和主要的原始程式檔。 類別和建立檔案的名稱會根據您在 MFC 應用程式精靈中提供的專案名稱。 若要檢視這些類別的程式碼的最簡單方式是透過[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+ 應用程式類別會放在專案的標頭和主要的原始程式檔。 類別和建立檔案的名稱會根據您在 MFC 應用程式精靈中提供的專案名稱。 若要檢視這些類別的程式碼的最簡單方式是透過[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  訊息對應提供與標準實作適合許多用途，但您可以視需要修改它們。 這些實作最有趣的是`InitInstance`成員函式。 一般而言，您將加入程式碼的架構實作`InitInstance`。  
   

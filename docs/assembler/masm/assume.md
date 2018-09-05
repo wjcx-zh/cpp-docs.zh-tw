@@ -1,7 +1,7 @@
 ---
-title: 假設 |Microsoft 文件
+title: 假設 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8898895d2e107e522fe88dc954146d64e6f62b9
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8a0e43548292d2ffecbebdaead6aa12d6dacc352
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050632"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693804"
 ---
 # <a name="assume"></a>ASSUME
-啟用錯誤檢查暫存器值。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-ASSUME segregister:name [[, segregister:name]]...  
-ASSUME dataregister:type [[, dataregister:type]]...  
-ASSUME register:ERROR [[, register:ERROR]]...  
-ASSUME [[register:]] NOTHING [[, register:NOTHING]]...  
-```  
-  
-## <a name="remarks"></a>備註  
- 之後`ASSUME`放入效果，組合器監看的變更指定的暫存器的值。 **錯誤**崞紵呇樾如果產生錯誤。 **執行任何動作**移除註冊錯誤檢查。 您可以結合不同種類的假設在一個陳述式。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+啟用檢查暫存器值時發生錯誤。
+
+## <a name="syntax"></a>語法
+
+> ASSUME *segregister*:*名稱*[[， *segregister*:*名稱*]]...<br/>
+> ASSUME *dataregister*:*型別*[[， *dataregister*:*類型*]]...<br/>
+> ASSUME*註冊*： 錯誤 [[，*註冊*： 錯誤]]...<br/>
+> 假設 [[*註冊*:]] 執行任何動作 [[，*註冊*： 執行任何動作]]...
+
+
+## <a name="remarks"></a>備註
+
+之後`ASSUME`會放入效果，組合器會監看的指定暫存器的值變更。 **錯誤**如果崞紵呇樾會產生錯誤。 **NOTHING**移除註冊錯誤檢查。 您可以結合不同類型的一個陳述式中的假設。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

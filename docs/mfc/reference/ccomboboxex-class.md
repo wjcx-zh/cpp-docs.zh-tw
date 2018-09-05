@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201522"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687712"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 類別
 藉由提供影像清單的支援，擴充下拉式方塊控制項。  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
  下拉式方塊控制項的樣式。 請參閱[建立](#create)如需樣式的清單。  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  指標[CImageList](../../mfc/reference/cimagelist-class.md)物件，其中包含先前所使用的影像`CComboBoxEx`控制項。 如果先前已經不設定任何映像清單，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的訊息功能[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)、 Windows SDK 中所述。 如果您變更預設編輯控制項的高度，呼叫 Win32 函式[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)調整您的控制項的大小之後您呼叫, `SetImageList`，或無法正常顯示。  
+ 此成員函式實作的訊息功能[CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist)、 Windows SDK 中所述。 如果您變更預設編輯控制項的高度，呼叫 Win32 函式[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)調整您的控制項的大小之後您呼叫, `SetImageList`，或無法正常顯示。  
   
  `CImageList`傳回的值所指向的物件是暫存物件，並在下一步 的閒置處理期間終結。  
   

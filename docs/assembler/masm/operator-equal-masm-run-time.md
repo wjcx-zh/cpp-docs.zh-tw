@@ -1,7 +1,7 @@
 ---
-title: 運算子 = = （MASM 執行階段） |Microsoft 文件
+title: 運算子 = = （MASM 執行階段） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae63aa45a83488f574eace4e35e44d4434eb1ba
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 6874e38d8cda3ef8989f1350dc7106d428c62f99
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676329"
 ---
 # <a name="operator--masm-run-time"></a>運算子 == (MASM 執行階段)
-等於。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，且在執行階段，不是在組件時進行評估。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-expression1 == expression2  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+等於。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，並在執行階段，不是在組件階段評估。
+
+## <a name="syntax"></a>語法
+
+> expression1 = = expression2
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e9826dd9249d01b78466a18df866afd818df78c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a74d2c06f5de9956056c9d8e82d35b64c65cb16f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679577"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 類別
 實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))。  
@@ -143,7 +143,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
- [通知 (COM)](https://msdn.microsoft.com/library/windows/desktop/ms678433)   
+ [通知 (COM)](/windows/desktop/com/notifications)   
  [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)   
  [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)   
  [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)   

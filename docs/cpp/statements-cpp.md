@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 845ca21dc4de4263c9063712b372c70cfb022059
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216361"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685801"
 ---
 # <a name="statements-c"></a>陳述式 (C++)
 C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項目。 本節包括：  
@@ -42,7 +42,7 @@ C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項�
   
     -   [跳躍陳述式](../cpp/jump-statements-cpp.md)。 這些陳述式會立刻將控制權轉移到函式中另一個位置或將控制權從函式傳回。  
   
-    -   [宣告陳述式](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9)。 宣告會將名稱引入程式中  ([宣告和定義](declarations-and-definitions-cpp.md)提供更詳細的宣告的相關資訊。)  
+    -   [宣告陳述式](declarations-and-definitions-cpp.md)。 宣告會將名稱引入程式中   
   
  如需例外狀況處理陳述式的詳細資訊，請參閱[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。  
   

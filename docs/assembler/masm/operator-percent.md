@@ -1,7 +1,7 @@
 ---
-title: operator %|Microsoft 文件
+title: operator %|Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 762cc5412bb2a7b1cc4c2f800410ab19d2e2c56a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a1f169db569b216757acae3ca55ac3c1c0373e6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055696"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692535"
 ---
 # <a name="operator-"></a>運算子 %
-會將該值的*運算式*巨集引數為文字中。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-%  
-expression  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子參考](../../assembler/masm/operators-reference.md)
+
+會將值*運算式*巨集引數為文字。
+
+## <a name="syntax"></a>語法
+
+> % *運算式*
+
+## <a name="see-also"></a>另請參閱
+
+[運算子參考](../../assembler/masm/operators-reference.md)<br/>

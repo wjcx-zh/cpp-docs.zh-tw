@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603342"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680921"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 類別
 表示一維陣列。當呼叫端傳遞陣列讓方法填滿其中元素時，就會將這個陣列當做輸入參數來傳遞。  
@@ -187,7 +187,7 @@ T& set(
 
   
 ### <a name="remarks"></a>備註  
- 如需如何解譯 HRESULT 值的詳細資訊，請參閱[錯誤碼的結構 COM](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
+ 如需如何解譯 HRESULT 值的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes)。  
   
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,7 +1,7 @@
 ---
-title: IFDEF |Microsoft 文件
+title: IFDEF |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57cb3180b881e1e72fecd5e0baa8ea076b0c192e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fb5ca4854805de010b4e7d032bfa861b2e01f81d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685190"
 ---
 # <a name="ifdef"></a>IFDEF
-如果組件會授與*名稱*是先前定義的標籤、 變數或符號。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-IFDEF name  
-```  
-  
-## <a name="remarks"></a>備註  
- 請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+授與組件，如果*名稱*是先前定義的標籤、 變數或符號。
+
+## <a name="syntax"></a>語法
+
+> IFDEF 名稱
+
+## <a name="remarks"></a>備註
+
+請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

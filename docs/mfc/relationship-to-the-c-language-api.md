@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d0bb7aa4f647ceeb61c20cccd626d9da999b241
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f291a05b1347254989e4876af66c5d8137864020
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200108"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684157"
 ---
 # <a name="relationship-to-the-c-language-api"></a>與 C 語言應用程式開發介面的關聯性
-區隔 MFC 程式庫與其他 Windows 類別程式庫的單一特點是，其與以 C 語言撰寫的 Windows API 的對應非常接近。 此外，您通常可以自由地混合對類別庫的呼叫與直接對 Windows API 的呼叫。 然而，這種直接存取並不表示類別可以完整取代該 API。 開發人員必須偶爾還是會進行直接呼叫某些 Windows 函式，這類[SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor)並[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)，例如。 只有在這麼做有明顯的好處時，才會由類別成員函式包裝 Windows 函式。  
+區隔 MFC 程式庫與其他 Windows 類別程式庫的單一特點是，其與以 C 語言撰寫的 Windows API 的對應非常接近。 此外，您通常可以自由地混合對類別庫的呼叫與直接對 Windows API 的呼叫。 然而，這種直接存取並不表示類別可以完整取代該 API。 開發人員必須偶爾還是會進行直接呼叫某些 Windows 函式，這類[SetCursor](/windows/desktop/api/winuser/nf-winuser-setcursor)並[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)，例如。 只有在這麼做有明顯的好處時，才會由類別成員函式包裝 Windows 函式。  
   
  由於您有時必須呼叫原生 Windows 函式，因此您應該存取 C 語言 Windows API 文件。 這份文件隨附於 Microsoft Visual C++。  
   

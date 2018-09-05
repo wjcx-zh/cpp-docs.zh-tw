@@ -1,7 +1,7 @@
 ---
 title: DQ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9ba5f5fe944964c365a071cda37f5e7bdc35e1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bd13549977edb2b0c80673cc8cb7b6279985b67f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051139"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687482"
 ---
 # <a name="dq"></a>DQ
-配置並選擇性地為每個初始化 8 個位元組的儲存體`initializer`。 也可以用為類型規範的類型是合法的任何位置。 `DQ` 是的同義字[QWORD](../../assembler/masm/qword.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-[[name]] DQ initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)   
- [QWORD](../../assembler/masm/qword.md)
+
+配置並選擇性地針對每個初始化 8 個位元組的儲存體`initializer`。 也可用來當做型別規範的類型是合法的任何位置。 `DQ` 是的同義字[QWORD](../../assembler/masm/qword.md)。
+
+## <a name="syntax"></a>語法
+
+> [[name]]DQ 初始設定式 [[，初始設定式]]...
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[QWORD](../../assembler/masm/qword.md)<br/>

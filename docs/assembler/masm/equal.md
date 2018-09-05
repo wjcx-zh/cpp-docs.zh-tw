@@ -1,7 +1,7 @@
 ---
 title: = | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37a10cdc4253636ea073fd237b03524bcb55d690
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: cfa60cf90d5a28acee467887ede2810cdef0bef5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055435"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681395"
 ---
 # <a name=""></a>=
-指定的數值*運算式*至*名稱*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-name  
- =   
-expression  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 稍後可以重新定義符號。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+指派的數值*運算式*要*名稱*。
+
+## <a name="syntax"></a>語法
+
+> *名稱* = *運算式*
+
+## <a name="remarks"></a>備註
+
+稍後可以重新定義符號。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

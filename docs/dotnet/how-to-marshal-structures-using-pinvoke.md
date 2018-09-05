@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219880"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689506"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送處理結構
 本文件說明如何在原生函式會接受 C 樣式結構可以從呼叫 managed 函式，藉由使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時期錯誤，報告，因為不是類型安全，並可能會非常繁瑣，若要實作，如果未受管理的 API 會封裝成 DLL，而且沒有原始程式碼可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：  
@@ -34,7 +34,7 @@ ms.locfileid: "43219880"
   
  根據預設，原生和 managed 結構是配置以不同的方式在記憶體中，因此已成功跨 managed/unmanaged 界限傳遞結構需要額外的步驟，以保持資料完整性。  
   
- 本文件說明定義原生結構，和如何產生的結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 不會包含字串或指標，會使用。 非 blittable 互通性的相關資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型做為傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同表示法。 如需詳細資訊，請參閱 < [Blittable 和非 Blittable 類型](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
+ 本文件說明定義原生結構，和如何產生的結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 不會包含字串或指標，會使用。 非 blittable 互通性的相關資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型做為傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同表示法。 如需詳細資訊，請參閱 < [Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types)。  
   
  簡單封送處理，跨 managed/unmanaged 界限的 blittable 結構第一次需要受管理的版本，每個原生結構的定義。 這些結構可以具有任何合法的名稱;兩個的結構，其配置的資料以外的原生和 managed 版本之間沒有任何關聯性。 因此，它是不可或缺的受管理的版本包含相同的大小和順序與原生的版本相同的欄位。 （沒有任何機制可確保結構的 managed 和原生版本同等權限，因此不相容問題會變得明顯到執行階段。 它是程式設計人員必須負責確保兩個結構有相同的資料版面配置）。  
   

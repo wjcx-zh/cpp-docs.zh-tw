@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81046c8472a2a741d5e59622986326ab4b399871
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88e44100e20ce40b343a82c7caed66387ca1bcd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207919"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681036"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -128,7 +128,8 @@ using namespace std::experimental::filesystem::v1;
 
 |名稱|描述|
 |----------|-----------------|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](https://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)，並在已存在目的地檔案時決定行為。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file)，並在已存在目的地檔案時決定行為。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file)，並在已存在目的地檔案時決定行為。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|
 |[權限](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|

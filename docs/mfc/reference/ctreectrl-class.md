@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60eed80d9f26ad33ce7f2af48cfca0a90c7d26b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210247"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679243"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 提供 Windows 通用樹狀檢閱控制項的功能。  
@@ -318,7 +318,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  *cheaderctrl:: Create*  
- 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
+ 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
   
  *rect*  
  指定樹狀檢視控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
@@ -356,10 +356,10 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  *dwExStyle*  
- 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ 指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *cheaderctrl:: Create*  
- 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
+ 指定樹狀檢視控制項的樣式。 套用樣式視窗中所述[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)，及任何組合[樹狀檢視控制項的樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中所述。  
   
  *rect*  
  參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。  

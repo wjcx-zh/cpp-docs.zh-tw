@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f105f41c465d2750d372a8794a9ab66fa13db466
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cefedc4b1517b242eef62192e8d03a60097700c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215978"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683168"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>如何：在資源中搜尋符號
 
@@ -29,10 +29,10 @@ ms.locfileid: "43215978"
 
 1. 從**編輯**功能表上，選擇**尋找符號**。
 
-2. 在 [[尋找符號] 對話方塊中](https://msdn.microsoft.com/63e93d9c-784f-418d-a76a-723da5ff5d96)，請在**尋找目標**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找 （例如，ID_ACCEL1） 的快速鍵。
+2. 在 [[尋找符號] 對話方塊中](/visualstudio/ide/go-to)，請在**尋找目標**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找 （例如，ID_ACCEL1） 的快速鍵。
 
    > [!TIP]
-   > 若要使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)進行搜尋，您必須使用[檔案中尋找命令](/visualstudio/ide/reference/find-command)從**編輯**功能表，而不是**尋找符號**命令。 若要啟用的規則運算式，您必須擁有**使用： 規則運算式**中所選取的核取方塊[尋找對話方塊](https://msdn.microsoft.com/dad03582-4931-4893-83ba-84b37f5b1600)。 然後您可以按一下右邊的向右箭號按鈕**Find What**方塊，以顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。
+   > 若要使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)進行搜尋，您必須使用[檔案中尋找命令](/visualstudio/ide/reference/find-command)從**編輯**功能表，而不是**尋找符號**命令。 若要啟用的規則運算式，您必須擁有**使用： 規則運算式**中所選取的核取方塊[尋找對話方塊](/visualstudio/ide/finding-and-replacing-text)。 然後您可以按一下右邊的向右箭號按鈕**Find What**方塊，以顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替換成索引中的搜尋文字**Find What**  方塊中。
 
 3. 選取任一**尋找**選項。
 

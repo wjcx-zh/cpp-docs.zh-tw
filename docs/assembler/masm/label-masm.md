@@ -1,7 +1,7 @@
 ---
-title: 標籤 (MASM) |Microsoft 文件
+title: 標籤 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4189d1ae5cf79d0ecf8cc07fa940e754fe314a6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d7fe6e6b2297cac689ed5f179b3e299488dd99cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690586"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
-藉由指定目前位置計數器值建立新的標籤和指定`type`至*名稱*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      name LABEL type  
-name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+藉由指定目前位置計數器值建立新的標籤和給定*型別*要*名稱*。
+
+## <a name="syntax"></a>語法
+
+> *名稱*標籤*類型*
+
+> *名稱*標籤 [[NEAR |到目前為止 |PTR PROC]] [[*型別*]]
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

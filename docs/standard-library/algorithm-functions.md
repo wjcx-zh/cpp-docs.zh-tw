@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f51bac0f5865a6f985436f3713d3a81abd44cddb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203960"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691713"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -798,7 +798,7 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="remarks"></a>備註
 
-`operator==` 用來決定元素及指定值間的比對，是否必須強制使用其運算元之間的等價關聯。
+`operator==` 用來決定元素及指定值間的比對，是否必須施加其運算元之間的等價關聯。
 
 此演算法會進行一般化，以使用範本函式 [count_if](../standard-library/algorithm-functions.md#count_if) 來計算滿足任何述詞的元素。
 
@@ -1337,7 +1337,7 @@ InputIterator find(
 
 ### <a name="remarks"></a>備註
 
-`operator==` 用來決定元素及指定值間的比對，是否必須強制使用其運算元之間的等價關聯。
+`operator==` 用來決定元素及指定值間的比對，是否必須施加其運算元之間的等價關聯。
 
 如需使用 `find()` 的程式碼範例，請參閱 [find_if](../standard-library/algorithm-functions.md#find_if)。
 
@@ -2101,7 +2101,7 @@ bool includes(
 
 此演算法不會修改來源範圍`merge`。
 
-輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。
 
 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-(* last2-first2 *))-1 次比較非空白來源範圍。
 
@@ -2645,7 +2645,7 @@ bool is_sorted(
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回[is_sorted_until](https://msdn.microsoft.com/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`。 `operator<`函式會執行順序比較。
+第一個範本函式會傳回[is_sorted_until](#is_sorted_until)`( first, last ) == last`。 `operator<`函式會執行順序比較。
 
 第二個範本函式會傳回`is_sorted_until( first, last , comp ) == last`。 *Comp*述詞的函式會執行順序比較。
 
@@ -3592,7 +3592,7 @@ OutputIterator merge(
 
 這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 此演算法不會修改來源範圍`merge`。
 
-輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。
 
 演算法的複雜度為線性，最多 (* last1-first1 *)-(* last2-first2*)-1 的比較。
 
@@ -4087,7 +4087,7 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 
 ### <a name="return-value"></a>傳回值
 
-傳回
+Returns
 
 `pair<ForwardIterator, ForwardIterator>`
 
@@ -6455,7 +6455,7 @@ ForwardIterator1 search(
 
 ### <a name="remarks"></a>備註
 
-`operator==` 用來決定元素及指定值間的比對，是否必須強制使用其運算元之間的等價關聯。
+`operator==` 用來決定元素及指定值間的比對，是否必須施加其運算元之間的等價關聯。
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。
 
@@ -6599,7 +6599,7 @@ ForwardIterator1 search_n(
 
 ### <a name="remarks"></a>備註
 
-`operator==` 用來決定元素及指定值間的比對，是否必須強制使用其運算元之間的等價關聯。
+`operator==` 用來決定元素及指定值間的比對，是否必須施加其運算元之間的等價關聯。
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
@@ -7256,7 +7256,7 @@ OutputIterator set_union(
 
 這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 此演算法不會修改來源範圍`merge`。
 
-輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 的比較。
 

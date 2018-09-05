@@ -1,7 +1,7 @@
 ---
-title: 公用 (MASM) |Microsoft 文件
+title: 公用 (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e5fda1ec5da794749f3c462aa5c5b660a4515c
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5bc9bbc865cb2a4f074cf37aded0bcbd8002150b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056005"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682515"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
-可讓每個變數、 標籤或指定為絕對符號*名稱*可在程式中的其他所有模組。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-PUBLIC [[langtype]] name [[, [[langtype]] name]]...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+可讓每個變數、 標籤或指定為絕對符號*名稱*可用來在程式中的所有其他模組。
+
+## <a name="syntax"></a>語法
+
+> 公用 [[langtype]] 名稱 [[，[[langtype]] name]]...
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

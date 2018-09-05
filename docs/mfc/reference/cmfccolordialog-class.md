@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214148"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680606"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 `CMFCColorDialog`類別代表色彩選取對話方塊。  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|傳回目前選取的色彩。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|傳回的色彩調色盤。|  
-|`CMFCColorDialog::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需語法和詳細資訊，請參閱[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|  
+|`CMFCColorDialog::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需語法和詳細資訊，請參閱[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|自系統調色盤中的調色盤。|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|設定目前選取的色彩。|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|設定最相當於指定的 RGB 值的色彩。|  

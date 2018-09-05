@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2019 |Microsoft 文件
+title: ML 非嚴重錯誤 A2019 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829ec55616dad97d9cbaabadbb16559aa73fd56e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1991e32a3ae0e4bb67f698b25aece643dc53d39c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681787"
 ---
 # <a name="ml-nonfatal-error-a2019"></a>ML 非嚴重錯誤 A2019
-**運算元必須是記錄類型或欄位**  
-  
- 運算元下列[寬度](../../assembler/masm/operator-width.md)或[遮罩](../../assembler/masm/operator-mask.md)運算子無效。  
-  
- [寬度](../../assembler/masm/operator-width.md)運算子可接受的運算元是欄位或記錄的名稱。 [遮罩](../../assembler/masm/operator-mask.md)運算子可接受的運算元是欄位或記錄類型的名稱。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**運算元必須是記錄型別或欄位**
+
+運算元下列[寬度](../../assembler/masm/operator-width.md)或是[遮罩](../../assembler/masm/operator-mask.md)運算子無效。
+
+[寬度](../../assembler/masm/operator-width.md)運算子會採用運算元來是欄位或記錄的名稱。 [遮罩](../../assembler/masm/operator-mask.md)運算子會採用運算元來是欄位或記錄類型的名稱。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

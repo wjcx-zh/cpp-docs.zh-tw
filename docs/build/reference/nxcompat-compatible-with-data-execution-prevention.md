@@ -1,5 +1,5 @@
 ---
-title: /NXCOMPAT （與資料執行防止相容） |Microsoft 文件
+title: /NXCOMPAT （與資料執行防止相容） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690315"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (與資料執行防止相容)
 
@@ -36,23 +36,23 @@ ms.locfileid: "32374800"
 
 根據預設， **/NXCOMPAT**上。
 
-**/Nxcompat: no**可用來明確指定可執行檔做為與資料執行防止功能相容。
+**/Nxcompat: no**可用來明確指定為與資料執行防止不相容的可執行檔。
 
-如需詳細資料執行防止 」 的詳細資訊，請參閱下列文章：
+如需詳細資料執行防止的詳細資訊，請參閱下列文章：
 
-- [資料執行防止 (DEP) 功能的詳細的說明](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [資料執行防止 (DEP) 功能的詳細的說明](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [資料執行防止](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [資料執行防止](/windows/desktop/Memory/data-execution-prevention)
 
-- [資料執行防止 (內嵌 Windows)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [資料執行防止 (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
 1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
 
-1. 輸入中的選項**其他選項**方塊。 選擇**確定**或**套用**以套用變更。
+1. 輸入中的選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以套用變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

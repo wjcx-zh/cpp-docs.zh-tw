@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cecde0bfd829cd55fb15e53fb07aa8b6645fce0e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218335"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678403"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -1234,8 +1234,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|當剪貼簿檢視器視窗中的工作區大小變更後呼叫。|
 |[CWnd::OnSizing](#onsizing)|表示使用者正在重新調整矩形的大小。|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|每當加入工作或從列印管理員佇列中移除工作時，從列印管理員呼叫。|
-|[CWnd::OnStyleChanged](#onstylechanged)|指出[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函式已變更一或多個視窗的樣式。|
-|[CWnd::OnStyleChanging](#onstylechanging)|指出[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函式即將變更一或多個視窗的樣式。|
+|[CWnd::OnStyleChanged](#onstylechanged)|指出[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函式已變更一或多個視窗的樣式。|
+|[CWnd::OnStyleChanging](#onstylechanging)|指出[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函式即將變更一或多個視窗的樣式。|
 |[CWnd::OnSysChar](#onsyschar)|按鍵轉譯為系統字元時呼叫。|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|當系統色彩設定中進行變更時，為所有最上層視窗呼叫。|
 |[CWnd::OnSysCommand](#onsyscommand)|當使用者從 [控制] 功能表中選取命令時，或在使用者選取 [最大化] 或 [最小化] 按鈕時呼叫。|
@@ -1247,7 +1247,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|指定在每個間隔之後呼叫[SetTimer](#settimer)。|
 |[CWnd::OnTouchInput](#ontouchinput)|處理來自 Windows 觸控的單一輸入。|
 |[CWnd::OnTouchInputs](#ontouchinputs)|處理來自 Windows 觸控的輸入。|
-|[CWnd::OnUniChar](#onunichar)|按下按鍵時呼叫。 也就是目前的視窗擁有鍵盤焦點和[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息轉譯[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)函式。|
+|[CWnd::OnUniChar](#onunichar)|按下按鍵時呼叫。 也就是目前的視窗擁有鍵盤焦點和[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息轉譯[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)函式。|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|於下拉式功能表或子功能表被終結時呼叫。|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|呼叫以變更指定的視窗及其所有子視窗的使用者介面 (UI) 狀態。|
 |[CWnd::OnUserChanged](#onuserchanged)|在使用者登入或登出後呼叫。|
@@ -2244,7 +2244,7 @@ void CreateGrayCaret(
 
 參數*nWidth*並*nHeight*指定插入號的寬度和高度 （以邏輯單位表示），確切的寬度和高度 （以像素為單位） 相依於此對應模式。
 
-可以藉由擷取系統的視窗框線的寬度或高度[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)具有 SM_CXBORDER 和 SM_CYBORDER 索引的 Windows 函式。 使用視窗框線的寬度或高度，以確保插入號，將會顯示高解析度的顯示器上。
+可以藉由擷取系統的視窗框線的寬度或高度[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)具有 SM_CXBORDER 和 SM_CYBORDER 索引的 Windows 函式。 使用視窗框線的寬度或高度，以確保插入號，將會顯示高解析度的顯示器上。
 
 `CreateGrayCaret`成員函式會自動終結先前的插入號圖形中，如果任何，不論哪一個視窗擁有插入號。 建立之後，插入號一開始會隱藏起來。 若要顯示插入號[ShowCaret](#showcaret)必須呼叫成員函式。
 
@@ -2278,7 +2278,7 @@ void CreateSolidCaret(
 
 參數*nWidth*並*nHeight*指定插入號的寬度和高度 （以邏輯單位表示），確切的寬度和高度 （以像素為單位） 相依於此對應模式。
 
-可以藉由擷取系統的視窗框線的寬度或高度[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385)具有 SM_CXBORDER 和 SM_CYBORDER 索引的 Windows 函式。 使用視窗框線的寬度或高度，以確保插入號，將會顯示高解析度的顯示器上。
+可以藉由擷取系統的視窗框線的寬度或高度[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)具有 SM_CXBORDER 和 SM_CYBORDER 索引的 Windows 函式。 使用視窗框線的寬度或高度，以確保插入號，將會顯示高解析度的顯示器上。
 
 `CreateSolidCaret`成員函式會自動終結先前的插入號圖形中，如果任何，不論哪一個視窗擁有插入號。 建立之後，插入號一開始會隱藏起來。 若要顯示插入號[ShowCaret](#showcaret)必須呼叫成員函式。
 
@@ -2767,7 +2767,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>備註
 
-MFC 的預設 Active Accessibility 支援不足的標準 windows 和控制項，包括 ActiveX 控制項;不過，如果您`CWnd`-衍生的類別包含 nonwindowed 使用者介面項目，MFC 具有無從得知其相關。 在此情況下，您必須覆寫的適當[Active Accessibility 成員函式](https://msdn.microsoft.com/68af04ac-4eb9-4b7d-b33f-c45512097a74)在類別中，您必須呼叫`EnableActiveAccessibility`類別的建構函式中。
+MFC 的預設 Active Accessibility 支援不足的標準 windows 和控制項，包括 ActiveX 控制項;不過，如果您`CWnd`-衍生的類別包含 nonwindowed 使用者介面項目，MFC 具有無從得知其相關。 在此情況下，您必須覆寫的適當[Active Accessibility 成員函式](/windows/desktop/winauto/sdk-components)在類別中，您必須呼叫`EnableActiveAccessibility`類別的建構函式中。
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -5011,7 +5011,7 @@ CDC* GetWindowDC();
 
 `GetWindowDC` 適用於在特殊的繪製效果`CWnd`非工作區。 不建議在任何視窗非工作區域的繪製。
 
-[GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 函式可以用來擷取非工作區，例如標題列、 功能表和捲軸的各個部分的維度。
+[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 函式可以用來擷取非工作區，例如標題列、 功能表和捲軸的各個部分的維度。
 
 繪製完成後[ReleaseDC](#releasedc)成員函式必須呼叫以釋出顯示內容。 釋放的顯示內容失敗會嚴重影響繪製由應用程式，因為可以同時開啟的裝置內容的數目限制。
 
@@ -5441,7 +5441,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 當`IsDialogMessage`函式會處理一則訊息，它會檢查鍵盤訊息，並將它們轉換成對應的對話方塊中選擇命令。 比方說，TAB 鍵選取 [下一步] 的控制項或控制項群組，並向下鍵選取群組中的下一個控制項。
 
-您必須傳遞所處理的訊息`IsDialogMessage`要[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)或是[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式，因為它已處理。
+您必須傳遞所處理的訊息`IsDialogMessage`要[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)或是[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式，因為它已處理。
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5738,9 +5738,9 @@ BOOL ModifyStyle(
 
 ### <a name="remarks"></a>備註
 
-要加入或移除的樣式可以結合使用的位元 OR (&#124;) 運算子。 請參閱主題[的視窗樣式](https://msdn.microsoft.com/library/windows/desktop/ms632600)並[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)可用的視窗樣式的相關資訊的 Windows SDK 中。
+要加入或移除的樣式可以結合使用的位元 OR (&#124;) 運算子。 請參閱主題[的視窗樣式](https://msdn.microsoft.com/library/windows/desktop/ms632600)並[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)可用的視窗樣式的相關資訊的 Windows SDK 中。
 
-如果*nFlags*為非零值，`ModifyStyle`呼叫 Windows API 函式[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)並重新繪製視窗，結合*nFlags*具有下列四個預設值旗標：
+如果*nFlags*為非零值，`ModifyStyle`呼叫 Windows API 函式[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)並重新繪製視窗，結合*nFlags*具有下列四個預設值旗標：
 
 - SWP_NOSIZE 會保留目前的大小。
 
@@ -5787,9 +5787,9 @@ BOOL ModifyStyleEx(
 
 ### <a name="remarks"></a>備註
 
-要加入或移除的樣式可以結合使用的位元 OR (&#124;) 運算子。 請參閱主題[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)在本書中並[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)擴充可用的相關資訊的 Windows SDK 中的 樣式
+要加入或移除的樣式可以結合使用的位元 OR (&#124;) 運算子。 請參閱主題[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)在本書中並[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)擴充可用的相關資訊的 Windows SDK 中的 樣式
 
-如果*nFlags*為非零值，`ModifyStyleEx`呼叫 Windows API 函式[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)並重新繪製視窗，結合*nFlags*具有下列四個預設值旗標：
+如果*nFlags*為非零值，`ModifyStyleEx`呼叫 Windows API 函式[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)並重新繪製視窗，結合*nFlags*具有下列四個預設值旗標：
 
 - SWP_NOSIZE 會保留目前的大小。
 
@@ -8113,7 +8113,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="remarks"></a>備註
 
-覆寫時，除非`OnMouseWheel`呼叫的預設值[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)。 Windows 會自動將訊息路由至具有焦點的控制項或子視窗。 Win32 函式[DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572)傳播父鏈結，處理視窗訊息。
+覆寫時，除非`OnMouseWheel`呼叫的預設值[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)。 Windows 會自動將訊息路由至具有焦點的控制項或子視窗。 Win32 函式[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)傳播父鏈結，處理視窗訊息。
 
 *ZDelta*參數是 WHEEL_DELTA，設定在 120 的倍數。 這個值是要採取的動作的臨界值和一個這類動作 （例如，捲動正一波陷） 應該針對每個差異。
 
@@ -9464,7 +9464,7 @@ afx_msg void OnSpoolerStatus(
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-架構會呼叫此成員函式，在後的[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)函式已變更一或多個視窗的樣式。
+架構會呼叫此成員函式，在後的[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)函式已變更一或多個視窗的樣式。
 
 ```
 afx_msg void OnStyleChanged(
@@ -9491,7 +9491,7 @@ afx_msg void OnStyleChanged(
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-架構會呼叫此成員函式時[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)函式即將變更一或多個視窗的樣式。
+架構會呼叫此成員函式時[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)函式即將變更一或多個視窗的樣式。
 
 ```
 afx_msg void OnStyleChanging(
@@ -9853,7 +9853,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="remarks"></a>備註
 
-[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式傳送[WM_TIMER](/windows/desktop/winmsg/wm-timer)訊息應用程式的訊息佇列中沒有其他訊息時。
+[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式傳送[WM_TIMER](/windows/desktop/winmsg/wm-timer)訊息應用程式的訊息佇列中沒有其他訊息時。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9960,7 +9960,7 @@ TOUCHINPUT 的陣列。
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-當按下按鍵時，架構會呼叫此成員函式。 也就是目前的視窗擁有鍵盤焦點和[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息轉譯[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)函式。
+當按下按鍵時，架構會呼叫此成員函式。 也就是目前的視窗擁有鍵盤焦點和[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息轉譯[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)函式。
 
 ```
 afx_msg void OnUniChar(
@@ -10207,7 +10207,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-架構會呼叫此成員函式時呼叫的結果改變大小、 位置或疊置順序[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)成員函式或另一個視窗管理函式。
+架構會呼叫此成員函式時呼叫的結果改變大小、 位置或疊置順序[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)成員函式或另一個視窗管理函式。
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10227,7 +10227,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-當大小、 位置或疊置順序即將因呼叫而變更時，架構會呼叫此成員函式[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545)成員函式或另一個視窗管理函式。
+當大小、 位置或疊置順序即將因呼叫而變更時，架構會呼叫此成員函式[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)成員函式或另一個視窗管理函式。
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10602,7 +10602,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。
+[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11056,7 +11056,7 @@ int ScrollWindowEx(
 
 如果[SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)並[SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)未指定，`ScrollWindowEx`成員函式也不會使之區域的捲動以外的位置。 如果其中一個這些旗標設定，`ScrollWindowEx`失效這個區域。 應用程式會呼叫才會更新區域[UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow)成員函式時，會呼叫[RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)成員函式 (指定[RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)或[RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow))，或擷取[WM_PAINT](/windows/desktop/gdi/wm-paint)從應用程式佇列的訊息。
 
-如果視窗有[WS_CLIPCHILDREN](https://msdn.microsoft.com/library/windows/desktop/ms632679)樣式，傳回所指定的區域*prgnUpdate*並*lpRectUpdate*代表總計必須捲動視窗的區域更新，包括需要更新的子視窗中的任何區域。
+如果視窗有[WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)樣式，傳回所指定的區域*prgnUpdate*並*lpRectUpdate*代表總計必須捲動視窗的區域更新，包括需要更新的子視窗中的任何區域。
 
 如果[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)指定旗標，Windows 不會正確更新畫面捲動之子視窗的一部分。 來源矩形外捲動的子視窗的部分並不會清除，且將不會重新繪製正確地在新的目的地。 使用[DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681)並非位於完全內的移動子視窗的 Windows 函式*lpRectScroll*矩形。 如果設定 SW_SCROLLCHILDREN 旗標，且插入號矩形交集捲動矩形，已重新定位到資料指標。
 
@@ -11497,7 +11497,7 @@ BOOL SetLayeredWindowAttributes(
 用來描述層疊視窗的不透明度的 alpha 值。 如需詳細資訊，請參閱 <<c0> `SourceConstantAlpha` 隸屬[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)結構。 當*bAlpha*是 0，則是完全透明的視窗。 當*bAlpha*為 255，視窗是不透明。
 
 *dwFlags*  
-指定要採取的動作。 這個參數可以是下列一或多個下列的值。 如需可能值的清單，請參閱 < [SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)。
+指定要採取的動作。 這個參數可以是下列一或多個下列的值。 如需可能值的清單，請參閱 < [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -11505,7 +11505,7 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="remarks"></a>備註
 
-此成員函式模擬函式的功能[SetLayeredWindowAttributes](https://msdn.microsoft.com/library/windows/desktop/ms633540)、 Windows SDK 中所述。
+此成員函式模擬函式的功能[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)、 Windows SDK 中所述。
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 

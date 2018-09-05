@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05486e4b75e631dcdc77855e850fe48c08d77326
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 798c65764ce49e795d3a6220803d51c72411ca79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686404"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference 類別
 
@@ -29,7 +29,7 @@ ms.locfileid: "43203847"
 
 ## <a name="remarks"></a>備註
 
-需要模擬參考，因為 C++ 原生不允許對位元的直接參考。 `vector<bool>` 對每個項目只使用一個位元，您可以使用這個 Proxy 類別來參考位元。 不過，因為某些指派無效，參考模擬不完整。 例如，因為 `vector<bool>::reference` 物件位址無法採用，使用 [vector\<bool>::operator&#91;&#93;](https://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) 的下列程式碼不正確：
+需要模擬參考，因為 C++ 原生不允許對位元的直接參考。 `vector<bool>` 對每個項目只使用一個位元，您可以使用這個 Proxy 類別來參考位元。 不過，因為某些指派無效，參考模擬不完整。 例如，因為位址`vector<bool>::reference`無法取得物件，便會嘗試使用下列程式碼`vector<bool>::operator&`不正確：
 
 ```cpp
 vector<bool> vb;

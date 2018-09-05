@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0baf6eb87cd73293bc02b670e915bfd4a10cbfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a05eddd4f0ed75db4e122b1544b0347ad922eba3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219148"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688756"
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -248,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>原始字串常值 (C++11)  
- 原始字串常值是 null 結束陣列 — 的任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 c++11 常見問題集](http://go.microsoft.com/fwlink/p/?linkid=401172)。  
+ 原始字串常值是 null 結束陣列 — 的任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 c++11 常見問題集](http://www.stroustrup.com/C++11FAQ.html)。  
   
 ```cpp  
 // represents the string: An unescaped \ character  

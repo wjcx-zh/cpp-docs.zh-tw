@@ -1,7 +1,7 @@
 ---
-title: GOTO (MASM) |Microsoft 文件
+title: GOTO (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eecdab2fe91de0aae656b37c6fddafe658e60c0
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b0be678e2d39389cbc551c386c1890f799124b5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694013"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
-將組件傳送至標記的一行 **: * * * macrolabel*。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-GOTO   
-macrolabel  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- **GOTO**只允許在[巨集](../../assembler/masm/macro.md)，[如](../../assembler/masm/for-masm.md)， [FORC](../../assembler/masm/forc.md)，[重複](../../assembler/masm/repeat.md)，和**時**區塊。 標籤必須是該行的唯一指示詞，而且前面必須有開頭的冒號。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+將組件傳送至標記的一行 **:**_macrolabel_。
+
+## <a name="syntax"></a>語法
+
+> **GOTO** *macrolabel*
+
+## <a name="remarks"></a>備註
+
+**GOTO**允許只在[巨集](macro.md)， [FOR](for-masm.md)， [FORC](forc.md)，[重複](repeat.md)，和[時](while-masm.md)區塊。 *Macrolabel*目標必須是該行的唯一指示詞，而且必須加上前置的冒號。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

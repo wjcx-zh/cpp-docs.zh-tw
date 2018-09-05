@@ -1,7 +1,7 @@
 ---
-title: TYPEDEF (MASM) |Microsoft 文件
+title: TYPEDEF (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80694726fd08cffe55bebf587aac05bbe69ea30
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2a548e52e0e8b3518fb9c952d399bea5e5752b9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052631"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690364"
 ---
 # <a name="typedef-masm"></a>TYPEDEF (MASM)
-定義新類型，稱為*名稱*，這相當於`type`。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-name TYPEDEF type  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+定義新類型，稱為*名稱*，這相當於*型別*。
+
+## <a name="syntax"></a>語法
+
+> *名稱*TYPEDEF*類型*
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

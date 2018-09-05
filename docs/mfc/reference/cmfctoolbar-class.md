@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208554"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689228"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
 `CMFCToolBar`類別類似於[CToolBar 類別](../../mfc/reference/ctoolbar-class.md)，但是提供額外的使用者介面功能的支援。 這包括一般工具列、含作用中影像的工具列、大圖示、頁面巡覽區按鈕、鎖定工具列、Rebar 控制項、影像下方文字、背景影像和索引標籤式工具列。 `CMFCToolBar` 類別的內建支援也包括工具列和功能表的使用者自訂、工具列和功能表之間的拖放、下拉式方塊按鈕、編輯方塊按鈕、色彩選擇器和縮合按鈕。
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  如果工具列和其同層級位於相同的資料列，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- [Cmfccustomizebutton:: Createpopupmenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果這個方法會傳回 TRUE，架構會顯示**在一個資料列上顯示按鈕** 按鈕。 否則，架構會顯示**在兩個資料列上顯示按鈕** 按鈕。  
+ [Cmfccustomizebutton:: Createpopupmenu](internal-classes.md)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果這個方法會傳回 TRUE，架構會顯示**在一個資料列上顯示按鈕** 按鈕。 否則，架構會顯示**在兩個資料列上顯示按鈕** 按鈕。  
   
  您通常不需要使用這個方法。 若要啟用**在一個資料列上顯示按鈕**或是**在兩個資料列上顯示按鈕**按鈕，請呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
   

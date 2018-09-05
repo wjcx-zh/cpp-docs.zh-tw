@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2133 |Microsoft 文件
+title: ML 非嚴重錯誤 A2133 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f240ed6f2e8330017e56334dfcc41be478537c7b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 0df094f5e7135ffb3b9a5f09383e03e411755de3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056203"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678062"
 ---
 # <a name="ml-nonfatal-error-a2133"></a>ML 非嚴重錯誤 A2133
-**登錄值叫用由覆寫**  
-  
- 暫存器做為引數傳遞至程序，但產生的程式碼[INVOKE](../../assembler/masm/invoke.md)傳遞其他引數終結的暫存器的內容。  
-  
- 若要執行資料轉換組合器會使用 AX、 AL、 AH、 EAX、 DX、 DL、 DH 和 EDX 暫存器。  
-  
- 使用不同的暫存器。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**註冊叫用覆寫的值**
+
+暫存器做為引數傳遞至程序，但產生的程式碼[INVOKE](../../assembler/masm/invoke.md)傳遞其他引數被終結的暫存器的內容。
+
+AX、 AL、 AH、 EAX、 DX、 DL、 DH 及 EDX 暫存器可能使用組合器，來執行資料轉換。
+
+使用不同的註冊。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

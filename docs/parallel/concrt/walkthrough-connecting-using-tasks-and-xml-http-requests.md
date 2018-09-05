@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 90a9cdaf5d0b99e2ad746655f67e3ab9a68aad1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201164"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688395"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求連線
 此範例示範如何使用[IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)並[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面，以及將 HTTP GET 和 POST 要求傳送至 web 服務在通用 Windows 平台 (UWP 工作) 應用程式。 將 `IXMLHTTPRequest2` 與工作結合之後，您就可以撰寫程式碼來撰寫其他工作。 例如，您可以使用下載工作做為工作鏈結的一部分。 當工作取消時，下載工作也可以回應。  
@@ -33,7 +33,7 @@ ms.locfileid: "43201164"
   
  本文件會先說明如何建立 `HttpRequest` 及其支援的類別。 然後，它會示範如何使用這個類別會使用 c + + 和 XAML 的 UWP 應用程式。  
   
- 如需更完整的範例，會使用`HttpReader`類別描述在本文件中，請參閱[開發 Bing Maps Trip Optimizer、 JavaScript 和 c + + Windows 市集應用程式](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)。 如需使用的其他範例`IXMLHTTPRequest2`但未使用工作，請參閱 <<c2> [ 快速入門： 使用 XML HTTP 要求 (IXMLHTTPRequest2) 連線](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)。  
+如需使用的範例`IXMLHTTPRequest2`但未使用工作，請參閱 <<c2> [ 快速入門： 使用 XML HTTP 要求 (IXMLHTTPRequest2) 連線](/previous-versions/windows/apps/hh770550\(v=win.10\))。  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` 和`IXMLHTTPRequest2Callback`是我們建議您針對 UWP 應用程式中使用的介面。 您也可以調整這個範例，讓它能夠用於傳統型應用程式。  
@@ -121,6 +121,6 @@ ms.locfileid: "43201164"
  [PPL 中的取消](cancellation-in-the-ppl.md)   
  [在 c + + 的非同步程式設計](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [為 UWP 應用程式，建立 c + + 中的非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [使用 XML HTTP 要求 (IXMLHTTPRequest2) 連線的快速入門：](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [使用 XML HTTP 要求 (IXMLHTTPRequest2) 連線的快速入門：](/previous-versions/windows/apps/hh770550\(v=win.10\))   
  [task 類別 （並行執行階段）](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event 類別](../../parallel/concrt/reference/task-completion-event-class.md)

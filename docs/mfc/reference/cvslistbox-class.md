@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 453eb66fd062aa3e4df510925d2c9b0e6732b98b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212395"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680576"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 類別
 `CVSListBox`類別支援的可編輯的清單控制項。  
@@ -73,7 +73,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|擷取可編輯的清單控制項項目相關聯的特定應用程式的 32 位元值。 (覆寫 `CVSListBoxBase::GetItemData`。)|  
 |[CVSListBox::GetItemText](#getitemtext)|擷取可編輯的清單控制項項目的文字。 (覆寫 `CVSListBoxBase::GetItemText`。)|  
 |[CVSListBox::GetSelItem](#getselitem)|擷取可編輯的清單控制項中目前選取的項目以零為起始索引。 (覆寫 `CVSListBoxBase::GetSelItem`。)|  
-|`CVSListBox::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需詳細資訊及方法語法，請參閱 < [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CVSListBoxBase::PreTranslateMessage`。)|  
+|`CVSListBox::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需詳細資訊及方法語法，請參閱 < [cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CVSListBoxBase::PreTranslateMessage`。)|  
 |[CVSListBox::RemoveItem](#removeitem)|可編輯的清單控制項中移除的項目。 (覆寫 `CVSListBoxBase::RemoveItem`。)|  
 |[CVSListBox::SelectItem](#selectitem)|選取的可編輯的清單控制項的字串。 (覆寫 `CVSListBoxBase::SelectItem`。)|  
 |[CVSListBox::SetItemData](#setitemdata)|關聯的可編輯的清單控制項項目中的特定應用程式的 32 位元值。 (覆寫 `CVSListBoxBase::SetItemData`。)|  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a775370228691e47b1b9becca8e0769ea0f7367
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7338f513754722bc00a96f5ee71cce06591f031d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221874"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685986"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 樣板、屬性和其他實作
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB 樣板  
@@ -44,7 +44,7 @@ ms.locfileid: "43221874"
   
 -   請參閱清單[OLE DB 取用者類別](../../data/oledb/ole-db-consumer-templates-reference.md)或是[OLE DB 提供者類別](../../data/oledb/ole-db-provider-templates-reference.md)。  
   
--   請參閱清單[OLE DB 範本範例](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)。  
+-   請參閱清單[OLE DB 範本範例](https://github.com/Microsoft/VCSamples)。  
   
 -   請參閱[OLE DB 程式設計人員參考](/previous-versions/windows/desktop/ms713643\(v=vs.85\))（在 Windows SDK 中)。  
   

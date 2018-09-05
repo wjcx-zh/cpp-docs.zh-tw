@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eee9c82487159b9233999d17ff36c4aad3ef6445
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541197"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677376"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft 專屬**  
@@ -54,7 +54,7 @@ unsigned char __vmx_vmread(
 |2|作業失敗，無可用的狀態。|  
   
 ## <a name="remarks"></a>備註  
- `__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)網站的 url，然後參閱該文件的附錄 C.  
+ `__vmx_vmread`函式相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.  
   
 ## <a name="requirements"></a>需求  
   

@@ -1,7 +1,7 @@
 ---
-title: 別名 (MASM) |Microsoft 文件
+title: ALIAS (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049163"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691058"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-**別名**指示詞建立函式的替代名稱。  這可讓您建立多個名稱，為函式，或建立文件庫可讓連結器 (LINK.exe) 將舊的函式對應至新的函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `actual-name`  
- 函式或程序的實際名稱。  角括號是必要的。  
-  
- `alias`  
- 其他名稱或別名名稱。  角括號是必要的。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+**別名**指示詞會建立函式的替代名稱。  這可讓您建立函式的多個名稱，或建立可讓連結器 (LINK.exe) 將舊的函式對應至新的函式的程式庫。
+
+## <a name="syntax"></a>語法
+
+> 別名\<*別名*> = \<*實際名稱*>
+
+#### <a name="parameters"></a>參數
+
+*實際名稱*<br/>
+函式或程序的實際名稱。  角括號是必要的。
+
+*alias*<br/>
+其他名稱或別名名稱。  角括號是必要的。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

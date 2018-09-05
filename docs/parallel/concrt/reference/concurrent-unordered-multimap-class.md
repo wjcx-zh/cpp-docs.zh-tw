@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9fe1bcce5290d7e977dc423f146bb3a5b66d484
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 532320e275d233181868e3ab83ab307c176de765
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216080"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690170"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap 類別
 `concurrent_unordered_multimap` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。  
@@ -305,7 +305,7 @@ std::pair<const_iterator,
  要搜尋的索引鍵的值。  
   
 ### <a name="return-value"></a>傳回值  
- A[配對](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
+ A[配對](../../../standard-library/pair-structure.md)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。  
   
 ### <a name="remarks"></a>備註  
  就可能會造成額外的金鑰之後開始迭代器，以及結尾迭代器之前，要插入的並行插入。  

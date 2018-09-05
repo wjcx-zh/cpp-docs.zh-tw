@@ -1,7 +1,7 @@
 ---
-title: ELSEIF (MASM) |Microsoft 文件
+title: ELSEIF (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba36c9f3ddd50df4cd5a4e5cb366ee806c78307
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bff1d8f22471de7dda89be66bdcacf52a2bf8206
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688882"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
-結合[ELSE](../../assembler/masm/else-masm.md)和[如果](../../assembler/masm/if-masm.md)成一個陳述式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-ELSEIF  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 請參閱[如果](../../assembler/masm/if-masm.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+結合[ELSE](../../assembler/masm/else-masm.md)並[IF](../../assembler/masm/if-masm.md)成一個陳述式。
+
+## <a name="syntax"></a>語法
+
+> ELSEIF
+
+## <a name="remarks"></a>備註
+
+請參閱[如果](../../assembler/masm/if-masm.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

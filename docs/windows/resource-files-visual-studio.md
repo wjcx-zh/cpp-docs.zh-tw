@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220682"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678367"
 ---
 # <a name="resource-files-visual-studio"></a>資源檔 (Visual Studio)
 
 > [!NOTE]
-> 這份資料適用於 Windows 桌面應用程式。 通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4)。
+> 這份資料適用於 Windows 桌面應用程式。 通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](/windows/uwp/app-resources/)。
 >
 > 如需將資源加入 managed 專案的詳細資訊，請參閱[Resources in Desktop Apps](/dotnet/framework/resources/index)中 *.NET Framework 開發人員指南*。 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理的應用程式中的資源上的資訊，請參閱[全球化和當地語系化.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。
 >

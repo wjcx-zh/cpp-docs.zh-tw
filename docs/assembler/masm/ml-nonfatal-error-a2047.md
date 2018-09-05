@@ -1,7 +1,7 @@
 ---
-title: ML 非嚴重錯誤 A2047 |Microsoft 文件
+title: ML 非嚴重錯誤 A2047 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d01abf57eb58dadc4f46369b3613abfd5c49b1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2dae687e4ac60157e8c929bedc5e1941160848c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054892"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688100"
 ---
 # <a name="ml-nonfatal-error-a2047"></a>ML 非嚴重錯誤 A2047
-**空 (null) 的字串**  
-  
- 字串的引號內的任何字元分隔組所組成。  
-  
- 針對有效的字串，它必須包含 1-255 個字元。  
-  
-## <a name="see-also"></a>另請參閱  
- [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)
+
+**空 (null) 的字串**
+
+字串的引號內的任何字元分隔組所組成。
+
+針對有效的字串，它必須包含 1 到 255 個字元。
+
+## <a name="see-also"></a>另請參閱
+
+[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

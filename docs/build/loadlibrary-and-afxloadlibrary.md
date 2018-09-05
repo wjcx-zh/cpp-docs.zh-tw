@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03815ac535033d9b0fdf0146c0200be16e5ae91a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687931"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
-處理呼叫[LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 明確地連結至 DLL。 如果函式成功，它會指定的 DLL 對應到呼叫處理序的位址空間，並可與其他函式中明確連結的 DLL 中傳回的控制代碼，例如`GetProcAddress`和`FreeLibrary`。
+處理呼叫[LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或是[LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 明確地連結至 DLL。 如果函式成功，它會指定的 DLL 對應到呼叫處理序的位址空間，並可與其他函式中明確連結的 DLL 中傳回的控制代碼，例如`GetProcAddress`和`FreeLibrary`。
 
 `LoadLibrary` 嘗試使用隱含連結使用的相同搜尋順序找出 DLL。 如果系統找不到 DLL 或進入點函式會傳回 FALSE，`LoadLibrary`會傳回 NULL。 如果呼叫`LoadLibrary`指定已經對應到呼叫的處理序的位址空間的 DLL 模組函式會傳回 DLL 並遞增的控制代碼之參考計數的模組。
 
@@ -59,5 +59,3 @@ ms.locfileid: "42572343"
 ## <a name="see-also"></a>另請參閱
 
 - [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)
-- [LoadLibrary](https://go.microsoft.com/fwlink/p/?LinkID=259187)
-- [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

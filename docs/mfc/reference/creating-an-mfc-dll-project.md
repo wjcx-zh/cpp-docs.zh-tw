@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa06417b93012c7d564a45c4e58f03edf1e2a39
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43b1f15715f83adb75f51151d86d781378e6fa86
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691463"
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 MFC DLL 是二進位檔案，做為共用程式庫的多個應用程式可以同時使用的函式。 若要建立 MFC DLL 專案的最簡單方式是使用 MFC DLL 精靈。  
   
 > [!NOTE]
->  IDE 功能的外觀可能取決於您目前使用中的設定或版本，且可能與不同說明中所述。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  IDE 功能的外觀可能取決於您目前使用中的設定或版本，且可能與不同說明中所述。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要建立 MFC DLL 專案使用 MFC DLL 精靈  
   
@@ -51,5 +51,5 @@ MFC DLL 是二進位檔案，做為共用程式庫的多個應用程式可以同
  [Visual C++ 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [屬性頁](../../ide/property-pages-visual-cpp.md)   
- [部署應用程式](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
 

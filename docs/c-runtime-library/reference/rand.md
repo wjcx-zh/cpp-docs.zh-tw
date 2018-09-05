@@ -35,16 +35,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5289b27ae0749d85b3e4ee60717212acc95536d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 081e380dc639ed6a814913dd42c6fc1b55041b01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405701"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681131"
 ---
 # <a name="rand"></a>rand
 
-使用已知的而且完全可重現的演算法來產生亂數。 此函式多以程式設計方式安全版本可用;請參閱[rand_s](rand-s.md)。 所產生的數字**rand**是不安全的密碼編譯。 多個密碼編譯安全隨機產生的請使用[rand_s](rand-s.md)函式中的 c + + 標準程式庫中所宣告或[\<隨機 >](../../standard-library/random.md)。
+使用已知且完全可重現的演算法，以產生亂數。 此函式程式設計更安全版本可用;請參閱[rand_s](rand-s.md)。 所產生的數字**rand**是不安全的密碼編譯。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)函式中的 c + + 標準程式庫中所宣告或[\<隨機 >](../../standard-library/random.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -54,17 +54,17 @@ int rand( void );
 
 ## <a name="return-value"></a>傳回值
 
-**rand**傳回虛擬隨機數字，如上面所述。 不會傳回錯誤。
+**rand**傳回虛擬亂數，如上所述。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Rand**函式會傳回虛擬隨機整數範圍 0 到**RAND_MAX** (32767)。 使用[srand](srand.md)函式來植入虛擬隨機數字產生器，然後再呼叫**rand**。
+**Rand**函式會傳回虛擬隨機整數的範圍介於 0 到**RAND_MAX** (32767)。 使用[srand](srand.md)函式，來植入亂數產生器，然後再呼叫**rand**。
 
-**Rand**函式會產生熟知的順序並不適合做為密碼編譯功能。 多個密碼編譯安全隨機產生的請使用[rand_s](rand-s.md)函式中的 c + + 標準程式庫中所宣告或[\<隨機 >](../../standard-library/random.md)。 如需相關問題資訊**rand**以及\<隨機 > 解決這些缺點，請參閱[這段影片](http://go.microsoft.com/fwlink/?LinkId=397615)。
+**Rand**函式會產生熟知的順序，並不適合做為密碼編譯的函式。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)函式中的 c + + 標準程式庫中所宣告或[\<隨機 >](../../standard-library/random.md)。 如需何不妥**rand**以及如何\<隨機 > 解決這些缺點，請參閱這段影片中標題為[rand 視為有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 

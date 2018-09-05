@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe0d8b5b0679e8770bda715d3d0da0eaa3b5cce3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214987"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682852"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|在隱藏或顯示迷你框架視窗中的窗格時，由架構呼叫。|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果在迷你框架視窗內包含使用者提供的點，則會傳回一個窗格。|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。|  
+|`CPaneFrameWnd::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|重新繪製所有的迷你框架視窗。|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|由架構呼叫以移除無效窗格。|  
 |[CPaneFrameWnd::RemovePane](#removepane)|從迷你框架視窗中移除窗格。|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  高度，單位為像素的迷你框架視窗。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法來決定迷你框架視窗的高度。 根據預設，高度設為 SM_CYSMCAPTION。 如需詳細資訊，請參閱 < [GetSystemMetrics 函式](https://msdn.microsoft.com/library/windows/desktop/ms724385)。  
+ 呼叫這個方法來決定迷你框架視窗的高度。 根據預設，高度設為 SM_CYSMCAPTION。 如需詳細資訊，請參閱 < [GetSystemMetrics 函式](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)。  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  傳回迷你框架視窗標題的週框。  

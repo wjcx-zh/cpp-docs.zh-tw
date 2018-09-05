@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218419"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687582"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -72,7 +72,7 @@ ref class Map sealed;
 
 - 公用列舉類別
 
-Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 它是 c + + 具象實作[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408)並[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 執行階段介面的公用之間傳遞的類型。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::Map` 類型，則會引發編譯器錯誤 C3986。 您可以修正這個錯誤，藉由變更參數或傳回值的型別[Windows::Foundation::Collections::IMap\<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262408)。
+Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 它是 c + + 具象實作[Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K，V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)並[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows 執行階段介面的公用之間傳遞的類型。 如果您嘗試在公用傳回值或參數中使用 `Platform::Collections::Map` 類型，則會引發編譯器錯誤 C3986。 您可以修正這個錯誤，藉由變更參數或傳回值的型別[Windows::Foundation::Collections::IMap\<K，V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。
 
 如需詳細資訊，請參閱 <<c0> [ 集合](../cppcx/collections-c-cx.md)。
 

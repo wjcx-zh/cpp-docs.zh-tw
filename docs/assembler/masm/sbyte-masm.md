@@ -1,7 +1,7 @@
 ---
-title: SBYTE (MASM) |Microsoft 文件
+title: SBYTE (MASM) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8d9def44f027255df77d1e2f160450501857147
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24703e88c63c04b7f0e3681744e5409622a83078
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057964"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691995"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
-配置並選擇性地為每個初始化儲存體的帶正負號的位元組`initializer`。 也可用以做為類型指定型別是合法的任何位置。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-name SBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)   
- [位元組](../../assembler/masm/byte-masm.md)   
- [DB](../../assembler/masm/db.md)
+
+配置並選擇性地針對每個初始化的儲存體的帶正負號的位元組`initializer`。 也可用來當做型別規範的類型是合法的任何位置。
+
+## <a name="syntax"></a>語法
+
+> 名稱 SBYTEinitializer [[，初始設定式]]...
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[BYTE](../../assembler/masm/byte-masm.md)<br/>
+[DB](../../assembler/masm/db.md)<br/>

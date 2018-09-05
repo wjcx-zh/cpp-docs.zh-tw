@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef28bc57981868eaa1cadcbead3c11c8fade57e8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33054190e94ca7d136e319b2afc9e28c9080de05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677972"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
 `CMFCVisualManagerOffice2003` 為應用程式提供 Microsoft Office 2003 的外觀。  
@@ -206,7 +206,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|這個架構會呼叫這個方法，當它繪製反白顯示時快速自訂功能表按鈕。 (覆寫 `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`。)|  
 |[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|當它繪製反白顯示的功能表命令時，架構會呼叫這個方法。 (覆寫 `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`。)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|當系統色彩變更時，架構會呼叫此函式。 (覆寫 `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`。)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)。|  
 |[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|指定應該使用 Windows XP 全域佈景主題。|  
 |[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|指定的視覺管理員是否使用全域的佈景主題。|  
   
@@ -2231,7 +2231,7 @@ virtual void OnUpdateSystemColors();
  架構會呼叫這個方法處理 WM_SYSCOLORCHANGE 訊息的一部分。 如果您想要執行自訂程式碼，在您的應用程式中的色彩變更時，請覆寫這個方法在衍生的視覺管理員。  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- 指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)。  
+ 指定的視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)。  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);

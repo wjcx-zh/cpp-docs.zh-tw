@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197990"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676763"
 ---
 # <a name="changing-list-control-styles"></a>變更清單控制項樣式
 您可以變更清單控制項的視窗樣式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在建立後的任何時間。 藉由變更視窗樣式，您可以變更控制項使用的檢視類型。 比方說，若要模擬 [總管] 中，您可能會提供功能表項目或工具列按鈕來切換不同檢視之間的控制項： 圖示檢視、 清單檢視中，等等。  
   
- 例如，當使用者選取您的功能表項目，您可以進行呼叫[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584)來擷取目前控制項的樣式，然後呼叫[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591)重設的樣式。 如需詳細資訊，請參閱 <<c0> [ 使用清單檢視控制項](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
+ 例如，當使用者選取您的功能表項目，您可以進行呼叫[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)來擷取目前控制項的樣式，然後呼叫[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)重設的樣式。 如需詳細資訊，請參閱 <<c0> [ 使用清單檢視控制項](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中。  
   
  列出可用的樣式[建立](../mfc/reference/clistctrl-class.md#create)。 樣式**LVS_ICON**， **LVS_SMALLICON**， **LVS_LIST**，以及**LVS_REPORT**指定四個清單控制項檢視。  
   

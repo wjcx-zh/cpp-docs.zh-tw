@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f99f79e0e5f4f53356ed96528e310465b3ed2f0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220086"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679693"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
@@ -114,7 +114,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > 重複使用識別項名稱 (如這個範例中所示) 會視為不良的程式設計風格。
 
- 如需指標的詳細資訊，請參閱[衍生的型別](https://msdn.microsoft.com/aa14183c-02fe-4d81-95fe-beddb0c01c7c)。 如需宣告和初始化類別物件的資訊，請參閱[類別、 結構和等位](../cpp/classes-and-structs-cpp.md)。 如需有關使用資訊**新**並**刪除**可用存放區運算子，請參閱[新和 delete 運算子](new-and-delete-operators.md)。
+如需宣告和初始化類別物件的資訊，請參閱[類別、 結構和等位](../cpp/classes-and-structs-cpp.md)。 如需有關使用資訊**新**並**刪除**可用存放區運算子，請參閱[新和 delete 運算子](new-and-delete-operators.md)。
 
 ## <a name="hiding-names-with-global-scope"></a>隱藏具有全域領域的名稱
 

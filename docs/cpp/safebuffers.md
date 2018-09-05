@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467836"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685072"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 專屬**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>備註  
- **/GS**編譯器選項可讓編譯器在堆疊上插入安全性檢查來測試緩衝區滿溢。 進行安全性檢查的資料結構的類型所述[/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)。 如需緩衝區滿溢偵測的詳細資訊，請參閱[編譯器會檢查深入了解安全性](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN 網站上。  
+ **/GS**編譯器選項可讓編譯器在堆疊上插入安全性檢查來測試緩衝區滿溢。 進行安全性檢查的資料結構的類型所述[/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)。 如需緩衝區滿溢偵測的詳細資訊，請參閱[MSVC 中的安全性功能](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)。  
   
  某位專業人員手動檢閱程式碼或進行外部分析後，可能會判斷函式不會發生緩衝區滿溢。 在此情況下，您可以隱藏函式的安全性檢查，藉由套用 **__declspec （safebuffers)** 函式宣告的關鍵字。  
   

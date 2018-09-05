@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afa5d7e3297cd77d1c5d8362d005bd2a48aee4d5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201924"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690193"
 ---
 # <a name="c-attributes-reference"></a>C++ 屬性參考
 
@@ -47,9 +47,3 @@ Microsoft 會定義一組簡化 COM 程式設計和.NET Framework 通用語言�
 
 [屬性化的程式設計](../windows/attributed-programming-concepts.md)  
 提供屬性的概念性概觀。
-
-[參考資料](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
-提供描述 C 和 C++ 語言參考、Visual C++ 提供的程式庫、Visual C++ 擴充性物件模型以及 Microsoft 巨集組合程式 (MASM) 等主題的連結。
-
-[Visual C++ 範例](../visual-cpp-samples.md)  
-提供展示 Visual C++ 及它所支援各種程式庫和技術之能力的範例程式碼連結。

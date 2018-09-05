@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f946a0e24790fd894e4eb908e77163306130e46a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214632"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683361"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
@@ -62,7 +62,7 @@ ms.locfileid: "43214632"
 
    提供您可以使用 Windows 執行階段應用程式或 Windows 桌面應用程式中，透過 HTTP 連線到網際網路，並發出 GET、 PUT 和其他 HTTP 命令的原生 COM 介面。 如需詳細資訊，請參閱 <<c0> [ 逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
-- [Windows Internet (WinInet)](https://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)
+- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 
    您可以在 Windows 桌面應用程式中使用，以便連接到網際網路的 Windows 應用程式開發介面。
 

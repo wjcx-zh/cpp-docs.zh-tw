@@ -1,7 +1,7 @@
 ---
-title: PUSHCONTEXT |Microsoft 文件
+title: PUSHCONTEXT |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c16d0de0848a9ceb61330498b12a9a4322e6604
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 16a76f80f72ab2d7f1ec0cfc86c102249330bf16
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056375"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677424"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
-儲存目前的部分或全部`context`： 區段登錄假設基數值、 清單和 cref 旗標或處理器/處理器值。 `context`可以**採用**， `RADIX`，**列出**， **CPU**，或**所有**。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-PUSHCONTEXT context  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+儲存目前的部分或全部`context`： 區段註冊假設基數值、 清單和 cref 旗標或處理器/副處理器的值。 `context`可以是**ASSUMES**， `RADIX`，**列出**， **CPU**，或**所有**。
+
+## <a name="syntax"></a>語法
+
+> PUSHCONTEXT 內容
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

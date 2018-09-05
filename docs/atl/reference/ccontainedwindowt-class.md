@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78867405627a870f68e5411b7e577b563a605c75
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207192"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690942"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 這個類別會實作包含在另一個物件的視窗。  
@@ -220,16 +220,16 @@ HWND Create(
  [in]指定視窗的名稱。 預設值是 NULL。  
   
  *cheaderctrl:: Create*  
- [in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *dwExStyle*  
- [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱 < [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱 < [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *MenuOrID*  
  [in]子視窗的視窗識別項。 最上層視窗中，視窗的功能表控制代碼。 預設值是**0U**。  
   
  *lpCreateParam*  
- [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，新建立的視窗; 的控制代碼否則為 NULL。  

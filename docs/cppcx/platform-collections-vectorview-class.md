@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0020937bae5f6392c7d9e5e8daf22f3cc4e6a31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584102"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690603"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 代表物件之循序集合的唯讀檢視，這些物件可透過索引加以個別存取。 集合中每個物件的類型，由樣板參數指定。  
@@ -45,7 +45,7 @@ template <typename T, typename E>
  指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。  
   
 ### <a name="remarks"></a>備註  
- `VectorView`類別會實作[2&gt;{3&gt;windows::foundation::collections::ivectorview&lt;t&lt;3}&lt;2}\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411)介面，也支援標準樣板程式庫迭代器。  
+ `VectorView`類別會實作[2&gt;{3&gt;windows::foundation::collections::ivectorview&lt;t&lt;3}&lt;2}\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)介面，也支援標準樣板程式庫迭代器。  
   
 ### <a name="members"></a>成員  
   

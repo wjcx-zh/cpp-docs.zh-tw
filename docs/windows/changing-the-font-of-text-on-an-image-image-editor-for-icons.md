@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8f06ae0021a95e9b4ae40506cfc91d6a8ae99b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678460"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>變更影像上的文字字型 (圖示影像編輯器)
 
@@ -32,7 +32,7 @@ ms.locfileid: "43200810"
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>若要變更的映像上的文字的字型
 
-1. 建立 c + + Windows Forms 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立 Windows 應用程式專案](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\))。 [Windows Forms 應用程式範本](https://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea)會將檔案命名為`app.ico`到您的預設專案。
+1. 建立 c + + Windows Forms 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立 Windows 應用程式專案](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\))。 `app.ico`檔案預設會新增至您的專案。
 
 2. 在 [**方案總管] 中**，連按兩下檔案 app.ico。 [影像編輯器](../windows/image-editor-for-icons.md)隨即開啟。
 

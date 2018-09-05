@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 869eba484a5ffa4e9c57c9c65a9b74e0962114e3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 66096fcfee62e869577527b632f3409fea231b35
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204036"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690827"
 ---
 # <a name="errorcondition-class"></a>error_condition 類別
 
@@ -71,7 +71,7 @@ class error_condition;
 
 ### <a name="operators"></a>運算子
 
-|Operator|描述|
+|運算子|描述|
 |-|-|
 |[operator==](#op_eq_eq)|測試 `error_condition` 物件是否相等。|
 |[operator!=](#op_neq)|測試 `error_condition` 物件是否不相等。|
@@ -157,7 +157,7 @@ error_condition(_Enum _Errcode,
 
 第一個建構函式會儲存零的錯誤碼值以及 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 
-第二個建構函式儲存*val*作為錯誤碼值和指標[error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)。
+第二個建構函式儲存*val*作為錯誤碼值和指標[error_category](../standard-library/error-category-class.md)。
 
 第三個建構函式會儲存 `(value_type)_Errcode` 作為錯誤碼值，並儲存 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。
 

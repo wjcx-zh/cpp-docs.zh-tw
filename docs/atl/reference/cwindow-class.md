@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a0ef98a17cdbc262ac8db90eba089601d8f8841
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b989cc55a76c1a982e0739a15d91544e5aeb4ddf
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678658"
 ---
 # <a name="cwindow-class"></a>CWindow 類別
 這個類別提供方法，以操作視窗。  
@@ -547,10 +547,10 @@ HWND Create(
  [in]指定視窗的名稱。 預設值是 NULL。  
   
  *cheaderctrl:: Create*  
- [in]視窗的樣式。 預設值為 0，這表示沒有樣式會指定。 如需可能值的清單，請參閱 < [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
+ [in]視窗的樣式。 預設值為 0，這表示沒有樣式會指定。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。  
   
  *dwExStyle*  
- [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式會指定。 如需可能值的清單，請參閱 < [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式會指定。 如需可能值的清單，請參閱 < [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。  
   
  *MenuOrID*  
  [in]類型的變數[_U_MENUorID](../../atl/reference/u-menuorid-class.md)指定功能表或視窗識別項的控制代碼。 預設值是 0U。  
@@ -564,7 +564,7 @@ HWND Create(
 ### <a name="remarks"></a>備註  
  `CWindow::rcDefault` 定義為`__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`。  
   
- 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Windows sdk for 的詳細資訊。  
+ 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows sdk for 的詳細資訊。  
   
  **附註**如果使用 0 做為值*MenuOrID*參數，它必須指定為 0U （預設值） 以避免編譯器錯誤。  
   
@@ -617,7 +617,7 @@ CWindow(HWND hWnd = NULL) throw();
  初始化[m_hWnd](#m_hwnd)成員，才能*hWnd*，其預設值是 NULL。  
   
 > [!NOTE]
-> `CWindow::CWindow` 不會建立視窗。 類別[CWindowImpl](../../atl/reference/cwindowimpl-class.md)， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)，並[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (其中都是衍生自`CWindow`) 提供一個方法來建立視窗或對話方塊方塊中，也就是接著會指派給`CWindow::m_hWnd`。 您也可以使用[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) Win32 函式。  
+> `CWindow::CWindow` 不會建立視窗。 類別[CWindowImpl](../../atl/reference/cwindowimpl-class.md)， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)，並[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (其中都是衍生自`CWindow`) 提供一個方法來建立視窗或對話方塊方塊中，也就是接著會指派給`CWindow::m_hWnd`。 您也可以使用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Win32 函式。  
   
 ##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos  
  更新指定的多個視窗位置結構，在指定的視窗。  
@@ -644,7 +644,7 @@ BOOL DestroyWindow() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) Windows SDK 中。  
+ 請參閱[DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) Windows SDK 中。  
   
  它不會終結`CWindow`物件本身。  
   
@@ -1201,7 +1201,7 @@ LONG GetWindowLong(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) Windows SDK 中。  
+ 請參閱[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK 中。  
   
 > [!NOTE]
 >  若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用[CWindow::GetWindowLongPtr](#getwindowlongptr)。  
@@ -1328,7 +1328,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) Windows SDK 中。  
+ 請參閱[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) Windows SDK 中。  
   
 ##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl  
  設定鍵盤焦點的控制項，在對話方塊中。  
@@ -1606,13 +1606,13 @@ BOOL ModifyStyle(
  [in]指定要加入樣式修改期間的視窗樣式。  
   
  *nFlags*  
- [in]視窗定位旗標。 如需可能值的清單，請參閱 < [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
+ [in]視窗定位旗標。 如需可能值的清單，請參閱 < [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果視窗樣式會被修改，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)中可用的視窗樣式的 Windows SDKfor 資訊函式。  
+ 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)中可用的視窗樣式的 Windows SDKfor 資訊函式。  
   
  如果*nFlags*為非零值，`ModifyStyle`呼叫 Win32 函式`SetWindowPos`，並重新繪製視窗，結合*nFlags*具有下列四個旗標：  
   
@@ -1647,13 +1647,13 @@ BOOL ModifyStyleEx(
  [in]指定要加入樣式修改期間的延伸的樣式。  
   
  *nFlags*  
- [in]視窗定位旗標。 如需可能值的清單，請參閱 < [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
+ [in]視窗定位旗標。 如需可能值的清單，請參閱 < [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果延伸的視窗樣式會被修改，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDKfor 的相關資訊中可用的擴充樣式的函式。  
+ 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDKfor 的相關資訊中可用的擴充樣式的函式。  
   
  如果*nFlags*為非零值，`ModifyStyleEx`呼叫 Win32 函式`SetWindowPos`，並重新繪製視窗，結合*nFlags*具有下列四個旗標：  
   
@@ -2230,7 +2230,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows SDK 中。  
+ 請參閱[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK 中。  
   
 > [!NOTE]
 >  若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用[CWindow::SetWindowLongPtr](#setwindowlongptr)。  
@@ -2276,7 +2276,7 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
+ 請參閱[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中。  
   
  這個方法的第二個版本會使用[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構來設定視窗的新位置、 寬度和高度。  
   
@@ -2311,7 +2311,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) Windows SDK 中。  
+ 請參閱[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows SDK 中。  
   
 ##  <a name="showcaret"></a>  CWindow::ShowCaret  
  顯示系統游標。  

@@ -1,5 +1,5 @@
 ---
-title: -/Qpar （自動平行化工具） |Microsoft 文件
+title: -Qpar （自動平行化工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430bf1ebc79008d97435ecbcb3b15cf19dda5f8d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24c3501422a0bfbaba8aea0e45c102f63948b7db
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375684"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684501"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動平行化工具)
 可讓[Auto-parallelizer](../../parallel/auto-parallelization-and-auto-vectorization.md)編譯器自動平行化迴圈程式碼中的功能。  
@@ -33,17 +33,17 @@ ms.locfileid: "32375684"
 ## <a name="remarks"></a>備註  
  當編譯器自動平行化程式碼中的迴圈時，它會將計算分散到多個處理器核心。 只有在編譯器判斷這是合法的做法，且平行處理會改善效能時，才會進行迴圈平行化。  
   
- `#pragma loop()` 指示詞可以協助最佳化平行處理特定的迴圈。 如需詳細資訊，請參閱[迴圈](../../preprocessor/loop.md)。  
+ `#pragma loop()` 指示詞可以協助最佳化平行處理特定的迴圈。 如需詳細資訊，請參閱 <<c0> [ 迴圈](../../preprocessor/loop.md)。  
   
- 如需如何啟用自動平行化工具的輸出訊息的資訊，請參閱[/qpar （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)。  
+ 如需如何啟用 auto-parallelizer 輸出訊息的詳細資訊，請參閱[/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)。  
   
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /Qpar 編譯器選項  
   
 1.  在 [ **方案總管**] 中，開啟專案的捷徑功能表，然後選擇 [ **屬性**]。  
   
-2.  在**屬性頁**對話方塊的  **C/c + +**，選取**命令列**。  
+2.  在 **屬性頁**對話方塊的  **C/c + +**，選取**命令列**。  
   
-3.  在**其他選項**方塊中，輸入`/Qpar`。  
+3.  在 **其他選項**方塊中，輸入`/Qpar`。  
   
 ### <a name="to-set-the-qpar-compiler-option-programmatically"></a>若要以程式設計方式設定 /Qpar 編譯器選項  
   
@@ -55,4 +55,4 @@ ms.locfileid: "32375684"
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [#pragma loop （)](../../preprocessor/loop.md)   
- [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [以原生程式碼進行平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 91cd06ea1d8ff697da6c4959fff34fdc3798dcfd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6df13353b61347455cc5d707f099086429d46f6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218984"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677865"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 資料庫類別 (OLE DB 樣板)
 Microsoft 提供數個 OLE DB 的實作，一組 COM 介面，可讓您統一存取各種資訊來源和格式的資料。  OLE DB 正式被取代;這份文件適用於開發人員會維護舊版的程式碼。 新的應用程式應該使用 ODBC 來連接到 SQL 資料來源。
@@ -39,11 +39,11 @@ Microsoft 提供數個 OLE DB 的實作，一組 COM 介面，可讓您統一存
   
  請注意，MFC 程式庫包含一個類別， [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)，會顯示在控制項中的資料庫記錄。 檢視是表單檢視，直接連接到`CRowset`物件，並會顯示的欄位`CRowset`對話方塊範本的控制項中的物件。  
   
- 如需詳細資訊，請參閱 < [OLE DB 程式設計](../data/oledb/ole-db-programming.md)並[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。  
+ 如需詳細資訊，請參閱 < [OLE DB 程式設計](../data/oledb/ole-db-programming.md)並[OLE DB 程式設計人員指南](/previous-versions/windows/desktop/ms713643\(v=vs.85\))。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 OLE DB 消費者](../data/oledb/creating-an-ole-db-consumer.md)   
  [建立 OLE DB 提供者](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB 消費者範本參考](../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB 提供者樣板參考](../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB 範本範例](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)
+ [OLE DB 範本範例](https://github.com/Microsoft/VCSamples)

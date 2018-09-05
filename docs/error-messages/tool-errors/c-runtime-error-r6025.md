@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220628"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680551"
 ---
 # <a name="c-runtime-error-r6025"></a>C 執行階段錯誤 R6025
 純虛擬函式呼叫  
@@ -41,4 +41,3 @@ ms.locfileid: "43220628"
   
  此錯誤被因為是抽象的基底類別，透過指標由衍生類別中的型別轉換，但實際上是基底類別的指標呼叫虛擬函式。 發生於從轉型**void** <strong>\*</strong>類別的指標時**void** <strong>\*</strong>已在基底類別的建構期間建立。  
   
- 如需詳細資訊，請參閱 < [Microsoft 支援服務](http://go.microsoft.com/fwlink/p/?linkid=75220)網站。

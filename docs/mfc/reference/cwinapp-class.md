@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688541"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|覆寫以執行應用程式專屬的閒置時間處理。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|由架構呼叫以從檔案開啟的文件。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|剖析出個別的參數和命令列中的旗標。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再將它們分派至 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再將它們分派至 Windows 函式[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|到達應用程式之前，會攔截特定訊息。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|處理命令列引數和旗標。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|攔截所有的應用程式的訊息和命令處理常式所擲回未處理例外狀況。|
@@ -1794,7 +1794,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-覆寫這個函式來篩選視窗訊息，再將它們分派至 Windows 函式[TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955)並[DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934)的預設實作會執行對應鍵轉譯，因此您必須呼叫`CWinApp::PreTranslateMessage`您覆寫的版本中的成員函式。
+覆寫這個函式來篩選視窗訊息，再將它們分派至 Windows 函式[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)的預設實作會執行對應鍵轉譯，因此您必須呼叫`CWinApp::PreTranslateMessage`您覆寫的版本中的成員函式。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

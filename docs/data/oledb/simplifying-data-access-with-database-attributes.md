@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8221b44d668a3ca2446913958645bb5e160dc87
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680448"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>以資料庫屬性簡化資料存取
 本主題示範如何使用資料庫的屬性，以簡化資料庫作業。  
@@ -208,4 +208,3 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)   
- [屬性逐步解說](https://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

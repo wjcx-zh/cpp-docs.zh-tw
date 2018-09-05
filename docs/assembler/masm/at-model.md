@@ -1,7 +1,7 @@
 ---
 title: '@Model | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88132e1c83ebea33282390fa2de35d40bdf4ff03
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f49d2a4a6dd04931ad1d9bf09ffe8bfeafad8150
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050658"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684060"
 ---
 # <a name="model"></a>@Model
-1 代表**微小**模型，2**小**模型、 3 **COMPACT**模型、 4 代表**媒體**模型，為 5**大**模型、 6**超大型**模型和 7**一般**模型 （等同的數字）。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-@Model  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [符號參考](../../assembler/masm/symbols-reference.md)
+
+1 代表**微小**模型、 2**小型**模型、 3 **COMPACT**模型，就會有 4 個**媒體**模型，為 5**大型**模型，6**超大型**模型，以及 7**一般**模型 （等同於數字）。
+
+## <a name="syntax"></a>語法
+
+> @Model
+
+## <a name="see-also"></a>另請參閱
+
+[符號參考](../../assembler/masm/symbols-reference.md)<br/>

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202851"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678005"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 類別
 提供自訂用戶端控制項介面的支援。  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  若要從目前的視窗樣式加入樣式。  
   
  *nFlags*  
- 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
+ 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果樣式已變更，否則為零，非零值。  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>備註  
  將修改控制項的內建 Enabled 屬性，以符合 WS_DISABLED 的設定。 將修改控制項的內建的框線樣式屬性，以符合 WS_BORDER 的要求的設定。 所有其他樣式會直接套用到控制項的視窗控制代碼，如果有的話。  
   
- 修改控制項的視窗樣式。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
+ 修改控制項的視窗樣式。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
   
  如果*nFlags*為非零值，`ModifyStyle`呼叫 Win32 函式`SetWindowPos`，並重新繪製視窗，結合*nFlags*具有下列四個旗標：  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  若要從目前的視窗樣式新增延伸的樣式。  
   
  *nFlags*  
- 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中的函式。  
+ 定位旗標的視窗。 如需可能值的清單，請參閱 < [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中的函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果樣式已變更，否則為零，非零值。  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>備註  
  控制項的內建的 Appearance 屬性將會修改以符合 WS_EX_CLIENTEDGE 的設定。 所有其他延伸的視窗樣式會直接套用到控制項的視窗控制代碼，如果有的話。  
   
- 修改擴充控制項的站台物件的樣式的視窗。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
+ 修改擴充控制項的站台物件的樣式的視窗。 要加入或移除的樣式可以結合使用的位元 OR ( &#124; ) 運算子。 請參閱[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)可用的視窗樣式的相關資訊的 Windows SDK 中的函式。  
   
  如果*nFlags*為非零值，`ModifyStyleEx`呼叫 Win32 函式`SetWindowPos`，並重新繪製視窗，結合*nFlags*具有下列四個旗標：  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  新視窗的高度。  
   
  *nFlags*  
- 指定視窗大小及定位旗標。 如需可能的值，請參閱 < 備註 > 一節[SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 中。  
+ 指定視窗大小及定位旗標。 如需可能的值，請參閱 < 備註 > 一節[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  非零值如果成功，否則為零。  

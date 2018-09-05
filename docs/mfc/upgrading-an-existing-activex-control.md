@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203126"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686182"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 現有的 ActiveX 控制項 （先前稱為 OLE 控制項） 可以不需修改網際網路上使用。 不過，您可能想要修改控制項，以提升其效能。 當使用您在網頁上的控制項，還有其他考量。 .Ocx 檔案和所有支援的檔案必須是目標電腦上，或透過網際網路下載。 這可讓程式碼大小和下載時間很重要的考量。 下載項目可以封裝在簽署的.cab 檔案中。 您可以標示為安全的指令碼，以及用於初始化安全控制項。  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  封包檔所指的`CODEBASE`應包含您的 ActiveX 控制項的.ocx 檔案及控制其安裝.inf 檔案。 您建立封包檔，藉由指定控制檔案的名稱和.inf 檔案。 不包含此封包檔中的系統可能已存在的相依 Dll。 例如，MFC Dll 是封裝在個別的封包檔，而所控制的.inf 檔案參考。  
   
- 如需有關如何建立封包檔的詳細資訊，請參閱 <<c0> [ 建立封包檔](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3)。  
+ 如需有關如何建立封包檔的詳細資訊，請參閱 <<c0> [ 建立封包檔](/windows/desktop/devnotes/cabinet-api-functions)。  
   
 ### <a name="the-inf-file"></a>INF 檔案  
  下列範例、 spindial.inf、 清單支援的檔案和版本資訊所需的 MFC Spindial 控制。 請注意 MFC Dll 的位置是 Microsoft 網站。 Mfc42.cab 是提供，並由 Microsoft 簽署。  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> 簽署程式碼  
  程式碼簽署設計來識別來源的程式碼，並保證以來尚未變更的程式碼簽署。 根據瀏覽器安全性設定，使用者可能會收到警告之前下載的程式碼。 使用者可以選擇信任特定憑證擁有者或公司，在其中案例的程式碼簽署的那些信任會被下載，而不發出警告。 程式碼是數位簽章以避免遭到竄改。  
   
- 請確定您最後的程式碼簽署，讓您的控制項可以自動下載但不顯示信任的警告訊息。 如需有關如何簽署程式碼的詳細資訊，請檢查 Authenticode ActiveX SDK 中的文件，並請參閱[簽署的 CAB 檔案](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747)。  
+ 請確定您最後的程式碼簽署，讓您的控制項可以自動下載但不顯示信任的警告訊息。 如需有關如何簽署程式碼的詳細資訊，請檢查 Authenticode ActiveX SDK 中的文件，並請參閱[簽署的 CAB 檔案](/windows/desktop/devnotes/cabinet-api-functions)。  
   
  根據信任和瀏覽器安全性層級設定，可能會顯示認證來識別簽章的個人或公司。 如果安全性層級是 [無]，或帶正負號的控制憑證擁有者是受信任，不會顯示憑證。 請參閱[Internet Explorer 瀏覽器安全性層級和控制項行為](#_core_internet_explorer_browser_safety_levels_and_control_behavior)如需有關如何瀏覽器安全性設定會決定您的控制項是否會下載和顯示的憑證。  
   

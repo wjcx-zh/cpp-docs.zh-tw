@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca7cfb6a3d83e69c4b447a9e953581285ffaaf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c9ada8396f9d5473213f726acd27691a97a59847
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219169"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684789"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 這個類別提供方法來處理非彙總與彙總物件的物件參考計數管理。  
@@ -279,7 +279,7 @@ IUnknown*
  如果彙總物件的外部未知的指標會儲存在`m_pOuterUnknown`。 如果物件不會彙總，來存取的參考計數`AddRef`並`Release`會儲存在[m_dwRef](#m_dwref)。  
   
 ##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
- 每個類別中所列[物件對應](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f)，一旦初始化模組時，會呼叫此函數並再次時它就會終止。  
+ 物件對應中所列每個類別，一旦初始化模組時，會呼叫此函數並再次時它就會終止。  
   
 ```
 static void WINAPI ObjectMain(bool bStarting);

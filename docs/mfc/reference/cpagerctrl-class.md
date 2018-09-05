@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688139"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 類別
 `CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。  
@@ -183,7 +183,7 @@ virtual BOOL CreateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|要套用至控制項的延伸樣式的位元組合。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)函式。|  
+|[in]*dwExStyle*|要套用至控制項的延伸樣式的位元組合。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|  
 |[in]*cheaderctrl:: Create*|位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|  
 |[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|  
 |[in]*pParentWnd*|指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|  

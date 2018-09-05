@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1015d35bea25ceaf23a822c9edea4da121583c61
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678810"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 擴充的功能[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)，Windows 多重文件介面 (MDI) 框架視窗。  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|架構在啟動有分割列的功能表時所呼叫。|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|由架構呼叫以更新框架功能表。 (覆寫 `CMDIFrameWnd::OnUpdateFrameMenu`。)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|傳回包含指定的點的停駐窗格。|  
-|`CMDIFrameWndEx::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。  (覆寫 `CMDIFrameWnd::PreTranslateMessage`。)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。  (覆寫 `CMDIFrameWnd::PreTranslateMessage`。)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|由架構呼叫以重新計算框架視窗的配置。 (覆寫[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並移除停駐的管理員。|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|儲存 MDI 索引標籤式群組的目前的配置和先前開啟的文件清單。|  

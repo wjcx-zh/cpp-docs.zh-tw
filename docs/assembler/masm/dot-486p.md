@@ -1,7 +1,7 @@
 ---
-title: .486P |Microsoft 文件
+title: .486P |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cea4aff2c3ab444598860f823973f99c37e096b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1089331725a18a96fd56ec8564ac3403d4e11fd9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049053"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690725"
 ---
 # <a name="486p"></a>.486P
-80486 處理器，可讓組件 （包括特殊權限） 的所有指示。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-.486P  
-  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+80486 處理器，可讓組件的所有指示 （包括特殊權限）。
+
+## <a name="syntax"></a>語法
+
+> .486P
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

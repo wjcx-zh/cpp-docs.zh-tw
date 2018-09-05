@@ -1,7 +1,7 @@
 ---
-title: EXITM |Microsoft 文件
+title: EXITM |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046e4a6eea3e34f028fc00dceefbaf9668d2dd2b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 33d6d4eccab3ecc4d02e821606fd721b6e1ba6ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051962"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686520"
 ---
 # <a name="exitm"></a>EXITM
-結束目前的重複或巨集區塊的擴充，並開始的下一個陳述式，在區塊內的組件。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-EXITM [[textitem]]   
-```  
-  
-## <a name="remarks"></a>備註  
- 巨集函式中*textitem*傳回的值。  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)
+
+終止目前的重複或巨集區塊的擴充，並開始下一個陳述式，在區塊外部組件。
+
+## <a name="syntax"></a>語法
+
+> EXITM [[textitem]]
+
+## <a name="remarks"></a>備註
+
+在巨集函式*textitem*傳回的值。
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>

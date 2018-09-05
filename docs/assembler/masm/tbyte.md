@@ -1,7 +1,7 @@
 ---
 title: TBYTE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b7c8b3f4cbe26eda9709f27a18ccb4a9cf2bbb1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1a75c07885c0460af6035c8d6fb1b42c6aa733e4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692882"
 ---
 # <a name="tbyte"></a>TBYTE
-配置並選擇性地為每個初始化儲存體的 10 個位元組`initializer`。 也可用以做為類型指定型別是合法的任何位置。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-[[name]] TBYTEinitializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [指示詞參考](../../assembler/masm/directives-reference.md)   
- [DT](../../assembler/masm/dt.md)
+
+配置並選擇性地針對每個初始化 10 個位元組的儲存體`initializer`。 也可用來當做型別規範的類型是合法的任何位置。
+
+## <a name="syntax"></a>語法
+
+> [[name]]TBYTEinitializer [[，初始設定式]]...
+
+## <a name="see-also"></a>另請參閱
+
+[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[DT](../../assembler/masm/dt.md)<br/>

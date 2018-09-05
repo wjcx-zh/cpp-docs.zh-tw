@@ -9,16 +9,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3a3ec1fec213cc6fa1bb5dc0ebfdadbe7d22b2
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680535"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 中 Visual C++ 的新功能
 
-Visual Studio 2017 有多項 Visual C++ 環境的更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 2017 新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
+Visual Studio 2017 有多項 Visual C++ 環境的更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 2017 新功能](/visualstudio/ide/whats-new-in-visual-studio)。
 
 <!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 

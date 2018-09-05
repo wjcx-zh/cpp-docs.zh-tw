@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207953"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683348"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>轉散發 Visual C++ ActiveX 控制項
 Visual C++ 6.0 提供您可以在後來要轉散發的應用程式中使用的 ActiveX 控制項。 Visual C++ 已不再包含這些控制項。 根據 Visual C++ 6.0 的授權合約，您可以與使用 Visual C++ 開發的應用程式一起轉散發這些控制項。  
@@ -43,8 +43,6 @@ Visual C++ 6.0 提供您可以在後來要轉散發的應用程式中使用的 A
 -   Stdole2.tlb  
   
  無法在目標系統上使用這些 DLL 時，您需要使用更新對應作業系統指定的機制來更新它們。 您可以從 [http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com) 下載 Windows 作業系統的最新 Service Pack。  
-  
- 如果您的應用程式使用其中一個會連接到資料庫的 ActiveX 控制項，您必須在目標系統上安裝 Microsoft Data Access Components (MDAC)。 如需詳細資訊，請參閱[轉散發資料庫支援檔案](../ide/redistributing-database-support-files.md)。  
   
  使用會連接至資料庫的 ActiveX 控制項時，您也需要在目標電腦上複寫資料來源名稱。 您可以透過 `ConfigDSN`　等函式，利用程式設計方式來執行這項作業。  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a2e0309c420754c0da8f09bb38e088e473362de0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33326380"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676745"
 ---
 # <a name="redistributing-an-atl-application"></a>轉散發 ATL 應用程式
 從 Visual Studio 2012 開始，Active Template Library (ATL) 是僅限標頭的程式庫。 ATL 專案不會動態連結至 ATL 選項。 可轉散發 ATL 程式庫不是必要的。  
@@ -50,8 +50,6 @@ filename /regserver
 ```  
   
  其中 `filename` 是可執行檔案的名稱。  
-  
- 至於 OLE DB 範本應用程式，請確定目標電腦有最新版的 Microsoft Data Access Components (MDAC) 檔案。 如需詳細資訊，請參閱[轉散發資料庫支援檔案](../ide/redistributing-database-support-files.md)。  
   
 ## <a name="see-also"></a>請參閱  
  [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

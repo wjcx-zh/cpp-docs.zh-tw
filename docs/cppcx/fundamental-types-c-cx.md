@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e30e7ced4f4e761f7342811c533c1f361d0b1df
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597869"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754191"
 ---
 # <a name="fundamental-types-ccx"></a>基本類型 (C++/CX)
 除了標準 c + + 內建類型，C + + /CX 支援型別系統所提供的 Windows 執行階段基本類型對應至標準 c + + 類型的 typedef 定義 Windows 執行階段架構... C + + /CX 實作布林值、 字元和數值基本類型。 這些 Typedef 在 `default` 命名空間中已定義，永遠不需要明確指定。 此外，C + + /CX 提供特定的 Windows 執行階段型別和介面的包裝函式和具象實作。  

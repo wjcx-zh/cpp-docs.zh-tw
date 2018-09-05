@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fa689035a6e95db7f9471d4972063ec35486e0cb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605881"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753213"
 ---
 # <a name="platformarray-class"></a>Platform::Array 類別
 表示可修改的一維陣列，可在不同的應用程式二進位介面 (ABI) 之間接收和傳遞。  

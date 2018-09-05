@@ -1,5 +1,5 @@
 ---
-title: 執行緒模型和關鍵區段類別 (ATL) |Microsoft 文件
+title: 執行緒模型和關鍵區段類別 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,40 +19,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37172c0080664f496bdf5d5c7c0ebecbd8f77898
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b87fdac5220ede47f1acf19088e952fde408a413
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359914"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755953"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>執行緒模型和關鍵區段類別
-下列類別定義的執行緒模型和關鍵區段：  
-  
--   [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md)實作在集區執行緒的 apartment model COM 伺服器。  
-  
--   [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md)提供方法來實作在集區執行緒的 apartment model COM 伺服器。  
-  
--   [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md)遞增和遞減的變數提供安全執行緒的方法。 提供的重要區段。  
-  
--   [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md)遞增和遞減的變數提供安全執行緒的方法。 不提供重要區段。  
-  
--   [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md)遞增和遞減的變數提供的方法。 不提供重要區段。  
-  
--   [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel)決定適當的執行緒模型類別，為單一物件類別。  
-  
--   [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel)決定適當的執行緒模型類別的全域可用的物件。  
-  
--   [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md)包含方法取得和釋放重要區段。 自動初始化重要區段。  
-  
--   [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md)包含方法取得和釋放重要區段。 關鍵區段必須先明確初始化。  
-  
--   [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md)鏡像處理中的方法`CComCriticalSection`而不需提供重要區段。 中的方法`CComFakeCriticalSection`不執行任何動作。  
-  
--   [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md)提供 CRT 執行緒建立函式。 如果執行緒會使用 CRT 函式，請使用這個類別。  
-  
--   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md)提供 Windows 執行緒建立函式。 如果執行緒不會使用 CRT 函式，請使用這個類別。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../atl/atl-class-overview.md)
+
+下列類別定義的執行緒模型和關鍵區段：
+
+- [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md)實作在執行緒集區的 apartment model COM 伺服器。
+
+- [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md)提供方法來實作在執行緒集區的 apartment model COM 伺服器。
+
+- [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md)遞增和遞減變數提供具備執行緒安全的方法。 提供重要的區段。
+
+- [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md)遞增和遞減變數提供具備執行緒安全的方法。 不會提供重要的區段。
+
+- [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md)提供方法，來遞增及遞減變數。 不會提供重要的區段。
+
+- [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel)決定單一物件類別的適當執行緒模型類別。
+
+- [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel)決定適當的執行緒模型類別，為全球可用的物件。
+
+- [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md)包含取得和釋放重要區段的方法。 自動初始化重要區段。
+
+- [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md)包含取得和釋放重要區段的方法。 重要區段必須先明確初始化。
+
+- [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md)鏡像中的方法`CComCriticalSection`而不需提供重要的區段。 中的方法`CComFakeCriticalSection`不執行任何動作。
+
+- [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md)提供 CRT 執行緒建立函式。 如果執行緒會使用 CRT 函式，請使用這個類別。
+
+- [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md)提供 Windows 執行緒建立函式。 如果執行緒不會使用 CRT 函式，請使用這個類別。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../atl/atl-class-overview.md)
 

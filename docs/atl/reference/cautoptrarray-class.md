@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrArray 類別 |Microsoft 文件
+title: CAutoPtrArray 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,65 +18,73 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b99fe8fde475453c9e6dc0b524a6b1b94821bf75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85cd1a9a50d57ececb2d12dca8faa6dc914972f5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358947"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763028"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 類別
-建構智慧型指標的陣列時，這個類別會提供有用的方法。  
-  
+
+建構的智慧型指標陣列時，這個類別會提供有用的方法。
+
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
-```  
-  
-#### <a name="parameters"></a>參數  
- `E`  
- 指標類型。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|建構函式。|  
-  
-## <a name="remarks"></a>備註  
- 這個類別提供建構函式，並衍生方法[CAtlArray](../../atl/reference/catlarray-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)協助儲存智慧型指標集合類別物件的建立。  
-  
- 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `CAtlArray`  
-  
- `CAutoPtrArray`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlcoll.h  
-  
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray  
- 建構函式。  
-  
+```
+
+#### <a name="parameters"></a>參數
+
+`E`  
+指標類型。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|建構函式。|
+
+## <a name="remarks"></a>備註
+
+這個類別提供建構函式，並衍生方法從[CAtlArray](../../atl/reference/catlarray-class.md)並[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)協助儲存智慧型指標的集合類別物件的建立。
+
+如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`CAtlArray`
+
+`CAutoPtrArray`
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlcoll.h
+
+##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+
+建構函式。
+
 ```
 CAutoPtrArray() throw();
-```  
-  
-### <a name="remarks"></a>備註  
- 初始化智慧型指標陣列。  
-  
-## <a name="see-also"></a>另請參閱  
- [CAtlArray 類別](../../atl/reference/catlarray-class.md)   
- [CAutoPtrElementTraits 類別](../../atl/reference/cautoptrelementtraits-class.md)   
- [CAutoPtrList 類別](../../atl/reference/cautoptrlist-class.md)   
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>備註
+
+初始化智慧型指標陣列。
+
+## <a name="see-also"></a>另請參閱
+
+[CAtlArray 類別](../../atl/reference/catlarray-class.md)   
+[CAutoPtrElementTraits 類別](../../atl/reference/cautoptrelementtraits-class.md)   
+[CAutoPtrList 類別](../../atl/reference/cautoptrlist-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)

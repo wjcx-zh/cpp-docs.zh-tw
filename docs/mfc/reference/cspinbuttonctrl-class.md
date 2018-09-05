@@ -43,11 +43,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687996"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757097"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 提供 Windows 通用微調按鈕控制項的功能。  

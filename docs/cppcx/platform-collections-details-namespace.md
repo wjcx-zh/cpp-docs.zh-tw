@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86d3a6b839b51f9398a2c2ab6b4942e0f728fed6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594781"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753850"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details 命名空間
 此命名空間支援 `Platform` 基礎結構，而且不可直接從程式碼使用。  

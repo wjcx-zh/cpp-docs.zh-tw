@@ -17,31 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132203"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752248"
 ---
 # <a name="date-and-time"></a>日期和時間
-MFC 支援使用日期和時間的數個不同的方式。 它們包括：  
-  
--   一般用途的時間類別。 [CTime](../atl-mfc-shared/reference/ctime-class.md)並[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)類別會封裝大部分的時間中宣告的 ANSI 標準階段程式庫相關聯的功能。H.  
-  
--   系統時鐘的支援。 Mfc 3.0 版，支援已新增至`CTime`win32`SYSTEMTIME`和`FILETIME`資料型別。  
-  
--   支援自動化[日期資料型別](../atl-mfc-shared/date-type.md)。 日期支援日期、 時間和日期/時間值。 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)並[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)類別會封裝這項功能。 能配合[COleVariant](../mfc/reference/colevariant-class.md)類別使用自動化的支援。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
-  
--   [日期和時間：SYSTEMTIME 支援](../atl-mfc-shared/date-and-time-systemtime-support.md)  
-  
--   [日期和時間：Automation 支援](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
--   [日期和時間：資料庫支援](../atl-mfc-shared/date-and-time-database-support.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [概念](../mfc/mfc-concepts.md)   
- [一般 MFC 主題](../mfc/general-mfc-topics.md)
+
+MFC 支援使用日期和時間的數個不同的方式。 它們包括：
+
+- 一般用途的時間類別。 [CTime](../atl-mfc-shared/reference/ctime-class.md)並[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)類別會封裝大部分的時間中宣告的 ANSI 標準階段程式庫相關聯的功能。H.
+
+- 系統時鐘的支援。 Mfc 3.0 版，支援已新增至`CTime`win32`SYSTEMTIME`和`FILETIME`資料型別。
+
+- 支援自動化[日期資料型別](../atl-mfc-shared/date-type.md)。 日期支援日期、 時間和日期/時間值。 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)並[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)類別會封裝這項功能。 能配合[COleVariant](../mfc/reference/colevariant-class.md)類別使用自動化的支援。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+
+- [日期和時間：SYSTEMTIME 支援](../atl-mfc-shared/date-and-time-systemtime-support.md)
+
+- [日期和時間：Automation 支援](../atl-mfc-shared/date-and-time-automation-support.md)
+
+- [日期和時間：資料庫支援](../atl-mfc-shared/date-and-time-database-support.md)
+
+## <a name="see-also"></a>另請參閱
+
+[概念](../mfc/mfc-concepts.md)   
+[一般 MFC 主題](../mfc/general-mfc-topics.md)
 

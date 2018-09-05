@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571cee9a309f1e980e62521215a717e6af432b08
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 995693a73fde41a3f5e31d81224b96d12edb2c46
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964104"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763275"
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 嵌入式管理單元類別
-下列類別會提供開發 Microsoft Management Console (MMC) 嵌入式管理單元元件的支援：  
-  
--   [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md)實作嵌入式管理單元節點物件，例如新增功能表項目和工具列，以及轉送至適當的處理常式函式的嵌入式管理單元 節點的命令。  
-  
--   [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md)實作嵌入式管理單元 屬性頁面物件。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../atl/atl-class-overview.md)   
- [嵌入式管理單元物件巨集](../atl/reference/snap-in-object-macros.md)
+
+下列類別會提供開發 Microsoft Management Console (MMC) 嵌入式管理單元元件的支援：
+
+- [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md)實作嵌入式管理單元節點物件，例如新增功能表項目和工具列，以及轉送至適當的處理常式函式的嵌入式管理單元 節點的命令。
+
+- [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md)實作嵌入式管理單元 屬性頁面物件。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../atl/atl-class-overview.md)   
+[嵌入式管理單元物件巨集](../atl/reference/snap-in-object-macros.md)
 

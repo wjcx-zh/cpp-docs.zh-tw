@@ -1,5 +1,5 @@
 ---
-title: 優點及用來連結到該 CRT 之方法的缺點 |Microsoft 文件
+title: 優點和權衡取捨的方法，用來連結到 CRT |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2835e88da11b8d8332226080eb860afd41c0702
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b90259a942ea785cfbfee4bfda803d9d7b568d4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355383"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753873"
 ---
-# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>優點及用來連結到該 CRT 之方法的缺點
-您的專案可以使用 CRT 連結，以動態方式或以靜態方式。 下表概述的優點和權衡取捨中選擇要使用的方法。  
-  
-|方法|優勢|權衡取捨|  
-|------------|-------------|--------------|  
-|以靜態方式連結到該 CRT<br /><br /> (**執行階段程式庫**設**單一執行緒**)|在執行映像所在系統上不需要 CRT DLL。|大約 25 K 的啟始程式碼加入至您的映像，大幅增加其大小。|  
-|動態連結到該 CRT<br /><br /> (**執行階段程式庫**設**多執行緒**)|您的映像不需要 CRT 啟始程式碼，因此您很遠。|CRT DLL 必須在執行映像的系統上。|  
-  
- 本主題[連結至您的 ATL 專案中 CRT](../atl/linking-to-the-crt-in-your-atl-project.md)討論如何選取要進行連結到該 CRT 之方式。  
-  
-## <a name="see-also"></a>另請參閱  
- [ATL 和 C 執行階段程式碼的程式設計](../atl/programming-with-atl-and-c-run-time-code.md)   
- [Dll 和 Visual c + + 執行階段程式庫行為](../build/run-time-library-behavior.md)   
- [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
+# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>優點和權衡取捨，用來連結到 CRT 之方法
+
+動態或靜態方式，您的專案可以連結到 crt。 下表概述的優點和權衡取捨中選擇要使用的方法。
+
+|方法|優勢|權衡取捨|
+|------------|-------------|--------------|
+|以靜態方式連結到 CRT<br /><br /> (**執行階段程式庫**設為**單一執行緒**)|映像會執行的系統上不需要此 CRT DLL。|大約 25 K 的啟始程式碼會新增至您的映像，大幅增加其大小。|
+|動態連結到 CRT<br /><br /> (**執行階段程式庫**設為**多執行緒**)|您的映像不需要的 CRT 啟始程式碼中，因此很遠。|CRT DLL 必須在執行映像的系統上。|
+
+本主題[連結至您的 ATL 專案中的 CRT](../atl/linking-to-the-crt-in-your-atl-project.md)討論如何選取要連結到 CRT 的方式。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../atl/programming-with-atl-and-c-run-time-code.md)   
+[Dll 和 Visual c + + 執行階段程式庫行為](../build/run-time-library-behavior.md)   
+[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
 

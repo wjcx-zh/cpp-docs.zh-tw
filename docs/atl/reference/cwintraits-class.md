@@ -23,90 +23,101 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40c8404ad2f2ab56849bed22a15bd10805888d3c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 72c5ddc9d49488aa4609249cbbdc7842e188cc34
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690686"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760873"
 ---
 # <a name="cwintraits-class"></a>CWinTraits 類別
-這個類別提供的方法標準化建立視窗物件時所使用的樣式。  
-  
+
+這個類別提供的方法標準化建立視窗物件時所使用的樣式。
+
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
-```  
-  
-#### <a name="parameters"></a>參數  
- *t_dwStyle*  
- 預設的標準的視窗樣式。  
-  
- *t_dwExStyle*  
- 預設延伸的視窗樣式。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CWinTraits::GetWndExStyle](#getwndexstyle)|（靜態）擷取的擴充的樣式`CWinTraits`物件。|  
-|[CWinTraits::GetWndStyle](#getwndstyle)|（靜態）擷取標準樣式`CWinTraits`物件。|  
-  
-## <a name="remarks"></a>備註  
- 這[視窗特性](../../atl/understanding-window-traits.md)類別提供簡單的方法標準化用於建立 ATL 視窗物件的樣式。 使用此類別的特製化，做為範本參數[CWindowImpl](../../atl/reference/cwindowimpl-class.md)或另一個 ATL 的視窗類別，來指定所使用的預設標準與擴充樣式的視窗類別的執行個體。  
-  
- 使用此範本，當您想要提供預設會在呼叫中不指定任何其他樣式時使用的視窗樣式[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)。  
-  
- ATL 提供三個預先定義的樣板的特製化此常用的視窗樣式的組合：  
-  
- `CControlWinTraits`  
- 專為標準控制項的視窗。 使用下列標準樣式： WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 沒有延伸的樣式。  
-  
- `CFrameWinTraits`  
- 專為標準的框架視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。  
-  
- `CMDIChildWinTraits`  
- 專為標準的 MDI 子視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_MDICHILD。  
-  
- 如果您想要確保特定樣式所設定的所有執行個體同時允許要在每個執行個體為基礎，設定其他樣式的視窗類別使用[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)改。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlwin.h  
-  
-##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle  
- 呼叫此函式可擷取的標準樣式`CWinTraits`物件。  
-  
+```
+
+#### <a name="parameters"></a>參數
+
+*t_dwStyle*  
+預設的標準的視窗樣式。
+
+*t_dwExStyle*  
+預設延伸的視窗樣式。
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CWinTraits::GetWndExStyle](#getwndexstyle)|（靜態）擷取的擴充的樣式`CWinTraits`物件。|
+|[CWinTraits::GetWndStyle](#getwndstyle)|（靜態）擷取標準樣式`CWinTraits`物件。|
+
+## <a name="remarks"></a>備註
+
+這[視窗特性](../../atl/understanding-window-traits.md)類別提供簡單的方法標準化用於建立 ATL 視窗物件的樣式。 使用此類別的特製化，做為範本參數[CWindowImpl](../../atl/reference/cwindowimpl-class.md)或另一個 ATL 的視窗類別，來指定所使用的預設標準與擴充樣式的視窗類別的執行個體。
+
+使用此範本，當您想要提供預設會在呼叫中不指定任何其他樣式時使用的視窗樣式[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)。
+
+ATL 提供三個預先定義的樣板的特製化此常用的視窗樣式的組合：
+
+`CControlWinTraits`  
+專為標準控制項的視窗。 使用下列標準樣式： WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 沒有延伸的樣式。
+
+`CFrameWinTraits`  
+專為標準的框架視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_APPWINDOW 和 WS_EX_WINDOWEDGE。
+
+`CMDIChildWinTraits`  
+專為標準的 MDI 子視窗。 包含所使用的標準樣式： WS_OVERLAPPEDWINDOW、 WS_CHILD、 WS_VISIBLE、 WS_CLIPCHILDREN 和 WS_CLIPSIBLINGS。 包含用於延伸的樣式： WS_EX_MDICHILD。
+
+如果您想要確保特定樣式所設定的所有執行個體同時允許要在每個執行個體為基礎，設定其他樣式的視窗類別使用[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)改。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlwin.h
+
+##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle
+
+呼叫此函式可擷取的標準樣式`CWinTraits`物件。
+
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
-```  
-  
-### <a name="parameters"></a>參數  
- *cheaderctrl:: Create*  
- 用來建立視窗的標準的樣式。 如果*cheaderctrl:: Create*為 0，範本的樣式值 (`t_dwStyle`) 會傳回。 如果*cheaderctrl:: Create*為非零值， *cheaderctrl:: Create*會傳回。  
-  
-### <a name="return-value"></a>傳回值  
- 物件的標準的視窗樣式。  
-  
-##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle  
- 呼叫此函式可擷取的擴充的樣式`CWinTraits`物件。  
-  
+```
+
+### <a name="parameters"></a>參數
+
+*cheaderctrl:: Create*  
+用來建立視窗的標準的樣式。 如果*cheaderctrl:: Create*為 0，範本的樣式值 (`t_dwStyle`) 會傳回。 如果*cheaderctrl:: Create*為非零值， *cheaderctrl:: Create*會傳回。
+
+### <a name="return-value"></a>傳回值
+
+物件的標準的視窗樣式。
+
+##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle
+
+呼叫此函式可擷取的擴充的樣式`CWinTraits`物件。
+
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
-```  
-  
-### <a name="parameters"></a>參數  
- *dwExStyle*  
- 用來建立視窗的延伸的樣式。 如果*dwExStyle*為 0，範本的樣式值 (`t_dwExStyle`) 會傳回。 如果*dwExStyle*為非零值， *dwExStyle*會傳回。  
-  
-### <a name="return-value"></a>傳回值  
- 物件的延伸的視窗樣式。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../../atl/atl-class-overview.md)   
- [了解視窗特性](../../atl/understanding-window-traits.md)
+```
+
+### <a name="parameters"></a>參數
+
+*dwExStyle*  
+用來建立視窗的延伸的樣式。 如果*dwExStyle*為 0，範本的樣式值 (`t_dwExStyle`) 會傳回。 如果*dwExStyle*為非零值， *dwExStyle*會傳回。
+
+### <a name="return-value"></a>傳回值
+
+物件的延伸的視窗樣式。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../../atl/atl-class-overview.md)   
+[了解視窗特性](../../atl/understanding-window-traits.md)

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593788"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762579"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>編譯器和連結器選項 (C++/CX)
 環境變數，C + + /CX 編譯器選項，以及連結器選項支援的應用程式建置為 Windows 執行階段。  

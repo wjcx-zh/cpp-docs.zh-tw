@@ -1,5 +1,5 @@
 ---
-title: 經過時間： Automation 類別 |Microsoft 文件
+title: 經過時間： Automation 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,30 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1abf6274137ae67b159ad43612d24020a0d14e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcde08e8ffdb30f9ebf0ae7577bf836e84513a07
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354964"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751673"
 ---
 # <a name="elapsed-time-automation-classes"></a>經過時間： Automation 類別
-此程序顯示如何計算兩個之間的差異`CTime`物件和 get`CTimeSpan`結果。  
-  
-#### <a name="to-calculate-elapsed-time"></a>若要計算經過的時間  
-  
-1.  建立兩個`COleDateTime`物件。  
-  
-2.  其中一個設定`COleDateTime`物件為目前的時間。  
-  
-3.  執行一些相當耗時的工作。  
-  
-4.  設定其他`COleDateTime`物件為目前的時間。  
-  
-5.  需要兩個時間之間的差異。  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]  
-  
-## <a name="see-also"></a>另請參閱  
- [日期和時間：Automation 支援](../atl-mfc-shared/date-and-time-automation-support.md)
+
+此程序示範如何計算兩個之間的差異`CTime`物件，以及如何取得`CTimeSpan`結果。
+
+#### <a name="to-calculate-elapsed-time"></a>若要計算經過的時間
+
+1. 建立兩個`COleDateTime`物件。
+
+2. 其中一個設定`COleDateTime`物件目前的時間。
+
+3. 執行某些耗時的工作。
+
+4. 設定其他`COleDateTime`物件目前的時間。
+
+5. 需要兩個時間之間的差異。
+
+   [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]
+
+## <a name="see-also"></a>另請參閱
+
+[日期和時間：Automation 支援](../atl-mfc-shared/date-and-time-automation-support.md)
 

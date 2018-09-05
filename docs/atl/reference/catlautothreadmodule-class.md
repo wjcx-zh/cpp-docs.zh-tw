@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModule 類別 |Microsoft 文件
+title: CAtlAutoThreadModule 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c89d142254909591ebd01bfa859be5488cbfaf6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356614"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763652"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 類別
-這個類別會實作在集區執行緒的 apartment model COM 伺服器。  
-  
+
+這個類別會實作在執行緒集區的 apartment model COM 伺服器。
+
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
-```  
-  
-## <a name="remarks"></a>備註  
- `CAtlAutoThreadModule` 衍生自[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)並實作在集區執行緒的 apartment model COM 伺服器。 `CAtlAutoThreadModule` 使用[CComApartment](../../atl/reference/ccomapartment-class.md)管理模組中的每個執行緒的 apartment。  
-  
- 您必須使用[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)巨集來指定物件的類別定義中[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)做為 class factory。 接著，您應該加入類別，衍生自的單一執行個體`CAtlAutoThreadModuleT`例如`CAtlAutoThreadModule`。 例如:   
-  
- `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`  
-  
+```
+
+## <a name="remarks"></a>備註
+
+`CAtlAutoThreadModule` 衍生自[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)並實作在執行緒集區的 apartment model COM 伺服器。 `CAtlAutoThreadModule` 會使用[CComApartment](../../atl/reference/ccomapartment-class.md)管理模組中的每個執行緒的 apartment。
+
+您必須使用[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)中指定的物件的類別定義的巨集[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)做為 class factory。 接著，您應該加入衍生自的類別的單一執行個體`CAtlAutoThreadModuleT`這類`CAtlAutoThreadModule`。 例如: 
+
+`CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
+
 > [!NOTE]
->  這個類別會取代過時[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)類別。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `IAtlAutoThreadModule`  
-  
- [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)  
-  
- `CAtlAutoThreadModule`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlbase.h  
-  
-## <a name="see-also"></a>另請參閱  
- [CAtlAutoThreadModuleT 類別](../../atl/reference/catlautothreadmodulet-class.md)   
- [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
- [類別概觀](../../atl/atl-class-overview.md)   
- [模組類別](../../atl/atl-module-classes.md)
+>  這個類別會取代過時[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)類別。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`IAtlAutoThreadModule`
+
+[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)
+
+`CAtlAutoThreadModule`
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlbase.h
+
+## <a name="see-also"></a>另請參閱
+
+[CAtlAutoThreadModuleT 類別](../../atl/reference/catlautothreadmodulet-class.md)   
+[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)   
+[模組類別](../../atl/atl-module-classes.md)

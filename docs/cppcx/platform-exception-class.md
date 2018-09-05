@@ -19,11 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586631"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758764"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 類別
 代表應用程式執行期間所發生的錯誤。 自訂例外狀況類別不能衍生自 `Platform::Exception`類別。 如果您需要自訂例外狀況，您可以使用 `Platform::COMException` 並指定應用程式特定的 HRESULT。  

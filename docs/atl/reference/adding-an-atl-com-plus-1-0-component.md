@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963559"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751455"
 ---
 # <a name="adding-an-atl-com-10-component"></a>新增 ATL COM + 1.0 元件
-此精靈會將物件加入至您的專案，支援 COM + 1.0 服務，包括交易中。  
-  
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>將 ATL COM + 1.0 元件新增至您的專案  
-  
-1.  Folderstable**方案總管**或[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下您要新增 ATL COM + 1.0 元件專案的名稱。  
-  
-2.  在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。  
-  
-3.  在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**ATL COM + 1.0 元件**，然後按一下**開啟**以顯示[ATL COM + 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
-  
-## <a name="see-also"></a>另請參閱  
- [新增類別](../../ide/adding-a-class-visual-cpp.md)   
- [加入方法](../../ide/adding-a-method-visual-cpp.md)
+
+此精靈會將物件加入至您的專案，支援 COM + 1.0 服務，包括交易中。
+
+### <a name="to-add-an-atl-com-10-component-to-your-project"></a>將 ATL COM + 1.0 元件新增至您的專案
+
+1. Folderstable**方案總管**或[類別檢視](/visualstudio/ide/viewing-the-structure-of-code)，以滑鼠右鍵按一下您要新增 ATL COM + 1.0 元件專案的名稱。
+
+2. 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。
+
+3. 在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**ATL COM + 1.0 元件**，然後按一下**開啟**以顯示[ATL COM + 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+
+## <a name="see-also"></a>另請參閱
+
+[新增類別](../../ide/adding-a-class-visual-cpp.md)   
+[加入方法](../../ide/adding-a-method-visual-cpp.md)
 

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4ef64ac81e36a298d89078997992343d92b7dbdc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609181"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756866"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>通用 Windows 平台應用程式不支援 CRT 函式
 當您建置通用 Windows 平台 (UWP) 應用程式時，許多 C 執行階段 (CRT) 函式都無法使用。 在某些情況下，因應措施可供使用---例如，您可以使用 Windows 執行階段或 Win32 Api。 不過，在其他情況下則已禁止使用 CRT 函式，因為 UWP 應用程式無法使用對應至這些函式的功能或支援的 API。 若要尋找支援的 Windows 執行階段的替代方法，請參閱[UWP 應用程式中的 Windows Api 替代方案](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。  

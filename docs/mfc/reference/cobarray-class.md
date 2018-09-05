@@ -53,11 +53,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5082490b9dd2e37090bac747e592b62ce51ac26a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200898"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754965"
 ---
 # <a name="cobarray-class"></a>CObArray 類別
 支援 `CObject` 指標的陣列。  

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8ed67496189388b869d7d9491ac4baad3de810ca
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203588"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751974"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 *Boxing*這類包裝實值類型變數[Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— 或基本純量類型，例如`int`— 在 ref 類別變數傳遞至採用的方法時[Platform:: object ^](../cppcx/platform-object-class.md)作為其輸入類型。  

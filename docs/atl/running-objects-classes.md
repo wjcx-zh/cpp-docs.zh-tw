@@ -17,21 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 32d1363f845014bd10e6f0126e676c12477cea16
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958562"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752309"
 ---
 # <a name="running-objects-classes"></a>執行的物件類別
-下列類別提供執行物件的支援：  
-  
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)判斷如果物件正在執行時，會強制執行它，或鎖定進入執行狀態。  
-  
-## <a name="related-articles"></a>相關文章  
- [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../atl/atl-class-overview.md)
+
+下列類別提供執行物件的支援：
+
+- [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)判斷如果物件正在執行時，會強制執行它，或鎖定進入執行狀態。
+
+## <a name="related-articles"></a>相關文章
+
+[ATL 教學課程](../atl/active-template-library-atl-tutorial.md)
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../atl/atl-class-overview.md)
 

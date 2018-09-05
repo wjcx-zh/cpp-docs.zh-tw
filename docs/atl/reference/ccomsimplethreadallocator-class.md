@@ -21,58 +21,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884661"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752464"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 類別
-此類別會管理類別選取執行緒`CComAutoThreadModule`。  
-  
-## <a name="syntax"></a>語法  
-  
+
+此類別會管理類別選取執行緒`CComAutoThreadModule`。
+
+## <a name="syntax"></a>語法
+
 ```
 class CComSimpleThreadAllocator
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CComSimpleThreadAllocator::GetThread](#getthread)|選取一個執行緒。|  
-  
-## <a name="remarks"></a>備註  
- `CComSimpleThreadAllocator` 管理針對選取的執行緒[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread` 只要每個執行緒，並傳回序列中的下一個。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlbase.h  
-  
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
- 選取一個執行緒，藉由指定序列中的下一個執行緒。  
-  
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CComSimpleThreadAllocator::GetThread](#getthread)|選取一個執行緒。|
+
+## <a name="remarks"></a>備註
+
+`CComSimpleThreadAllocator` 管理針對選取的執行緒[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread` 只要每個執行緒，並傳回序列中的下一個。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlbase.h
+
+##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+
+選取一個執行緒，藉由指定序列中的下一個執行緒。
+
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
-```  
-  
-### <a name="parameters"></a>參數  
- *pApt*  
- 不使用 ATL 的預設實作。  
-  
- *nThreads*  
- EXE 模組中的執行緒數目上限。  
-  
-### <a name="return-value"></a>傳回值  
- 整數，介於 0 和 (*nThreads* -1)。 識別其中一個 EXE 模組中的執行緒。  
-  
-### <a name="remarks"></a>備註  
- 您可以覆寫`GetThread`提供的選取項目不同的方法，或將使用*pApt*參數。  
-  
- `GetThread` 會呼叫[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。  
-  
-## <a name="see-also"></a>另請參閱  
- [CComApartment 類別](../../atl/reference/ccomapartment-class.md)   
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>參數
+
+*pApt*  
+不使用 ATL 的預設實作。
+
+*nThreads*  
+EXE 模組中的執行緒數目上限。
+
+### <a name="return-value"></a>傳回值
+
+整數，介於 0 和 (*nThreads* -1)。 識別其中一個 EXE 模組中的執行緒。
+
+### <a name="remarks"></a>備註
+
+您可以覆寫`GetThread`提供的選取項目不同的方法，或將使用*pApt*參數。
+
+`GetThread` 會呼叫[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。
+
+## <a name="see-also"></a>另請參閱
+
+[CComApartment 類別](../../atl/reference/ccomapartment-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)

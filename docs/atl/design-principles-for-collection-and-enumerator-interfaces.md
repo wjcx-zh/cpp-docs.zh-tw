@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 8ffe40b583a9dabeb14ce5347de6ae3d14dae724
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851323"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751481"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和列舉程式介面的設計原則
-有不同的設計原則，每一種介面背後：  
-  
--   集合介面會提供*隨機*存取權*單一*透過集合中的項目`Item`方法，它可讓用戶端探索透過集合中有多少項目`Count`屬性，並通常可讓用戶端加入和移除項目。  
-  
--   列舉值介面會提供*序列*存取權*多重*集合中的項目，它並不允許用戶端能夠探索 （直到過了列舉值可讓您停止傳回集合中有多少項目項目），而它也未提供任何方式加入或移除項目。  
-  
- 每一種介面扮演不同的角色提供存取集合中的項目。  
-  
-## <a name="see-also"></a>另請參閱  
- [集合和列舉程式](../atl/atl-collections-and-enumerators.md)
+
+有不同的設計原則，每一種介面背後：
+
+- 集合介面會提供*隨機*存取權*單一*透過集合中的項目`Item`方法，它可讓用戶端探索透過集合中有多少項目`Count`屬性，並通常可讓用戶端加入和移除項目。
+
+- 列舉值介面會提供*序列*存取權*多重*集合中的項目，它並不允許用戶端能夠探索 （直到過了列舉值可讓您停止傳回集合中有多少項目項目），而它也未提供任何方式加入或移除項目。
+
+每一種介面扮演不同的角色提供存取集合中的項目。
+
+## <a name="see-also"></a>另請參閱
+
+[集合和列舉程式](../atl/atl-collections-and-enumerators.md)
 

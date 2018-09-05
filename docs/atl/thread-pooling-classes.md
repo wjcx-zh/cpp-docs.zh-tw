@@ -18,22 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70254f05dc871a8073d82f1870b30f178e0f7276
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d1039f93d28db118dafadd88b074d788a1b861de
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959000"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752176"
 ---
 # <a name="thread-pooling-classes"></a>執行緒共用類別
-下列類別支援執行緒集區：  
-  
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md)實作 EXE 模組，並支援多個執行緒集區 apartment。  
-  
--   [CComApartment](../atl/reference/ccomapartment-class.md)管理執行緒集區的 EXE 模組中的 apartment。  
-  
--   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md)管理 EXE 模組選取的執行緒。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../atl/atl-class-overview.md)
+
+下列類別支援執行緒集區：
+
+- [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md)實作 EXE 模組，並支援多個執行緒集區 apartment。
+
+- [CComApartment](../atl/reference/ccomapartment-class.md)管理執行緒集區的 EXE 模組中的 apartment。
+
+- [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md)管理 EXE 模組選取的執行緒。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../atl/atl-class-overview.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 指定 ATL 專案的編譯器最佳化 |Microsoft 文件
+title: 指定 ATL 專案的編譯器最佳化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0060437613bcdd6281ce5cceb112f5fd7f470bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95df1e21bee99914d2f20f194d68e5bfae29e203
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361966"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763551"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 專案的編譯器最佳化
-根據預設， [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)會產生與 ATL_NO_VTABLE 巨集的新類別，如下所示：  
-  
+
+根據預設， [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)產生 ATL_NO_VTABLE 巨集的新類別，如下所示：
+
 ```  
 class ATL_NO_VTABLE CProjName  
 {  
- ...  
+...  
 };  
-```  
-  
- ATL 然後定義了 _ATL_NO_VTABLE，如下所示：  
-  
+```
+
+ATL 然後 _ATL_NO_VTABLE 會，如下所示的定義：
+
 ```  
 #ifdef _ATL_DISABLE_NO_VTABLE  
- #define ATL_NO_VTABLE  
+#define ATL_NO_VTABLE  
 #else  
- #define ATL_NO_VTABLE __declspec(novtable)  
+#define ATL_NO_VTABLE __declspec(novtable)  
 #endif  
-```  
-  
- 如果您沒有定義 _ATL_DISABLE_NO_VTABLE ATL_NO_VTABLE 巨集會展開`declspec(novtable)`。 使用`declspec(novtable)`在類別宣告會防止 vtable 指標在類別建構函式和解構函式中初始化。 當您建置專案時，連結器會排除在 vtable 和 vtable 所指向的所有函式。  
-  
- 您必須使用 ATL_NO_VTABLE，並進而`declspec(novtable)`，只有的基底類別不是直接建立。 您必須使用`declspec(novtable)`與最具衍生性的類別，在專案中，因為這個類別 (通常[Ccomobject<](../../atl/reference/ccomobject-class.md)， [CComAggObject](../../atl/reference/ccomaggobject-class.md)，或[CComPolyObject](../../atl/reference/ccompolyobject-class.md))初始化 vtable 指標為您的專案。  
-  
- 您必須從使用的任何物件的建構函式呼叫虛擬函式`declspec(novtable)`。 您也應該一併移動這些呼叫[跖](ccomobjectrootex-class.md#finalconstruct)方法。  
+```
 
-  
- 如果您不確定您是否應使用`declspec(novtable)`修飾詞，您可以從任何類別定義中，移除 ATL_NO_VTABLE 巨集，或您可以全域予以停用指定  
-  
+如果您沒有定義 _ATL_DISABLE_NO_VTABLE，ATL_NO_VTABLE 巨集會展開`declspec(novtable)`。 使用`declspec(novtable)`類別中宣告可防止 vtable 指標在類別建構函式和解構函式中初始化。 當您建置專案時，連結器會消除 vtable 和 vtable 所指向的所有函式。
+
+您必須使用 ATL_NO_VTABLE，並進而`declspec(novtable)`，不是直接可建立只基底的類別。 您不能使用`declspec(novtable)`與最高衍生性類別，在您的專案，因為這個類別 (通常[CComObject](../../atl/reference/ccomobject-class.md)， [CComAggObject](../../atl/reference/ccomaggobject-class.md)，或[CComPolyObject](../../atl/reference/ccompolyobject-class.md))vtable 指標初始化為您的專案。
+
+您必須從使用的任何物件的建構函式呼叫虛擬函式`declspec(novtable)`。 您應該將這些呼叫移[跖](ccomobjectrootex-class.md#finalconstruct)方法。  
+
+如果您不確定您是否應使用`declspec(novtable)`修飾詞，您可以從任何類別定義，移除 ATL_NO_VTABLE 巨集，或您可以全域停用它藉由指定
+
 ```  
 #define _ATL_DISABLE_NO_VTABLE  
-```  
-  
- 在 stdafx.h 之前其他所有的 ATL, 標頭檔都包含在內。  
-  
-## <a name="see-also"></a>另請參閱  
- [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
- [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
- [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [ATL 和 C 執行階段程式碼的程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
- [novtable](../../cpp/novtable.md)   
- [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
+```
+
+在 stdafx.h 中之前的所有其他 ATL 標頭檔會包含。
+
+## <a name="see-also"></a>另請參閱
+
+[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
+[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)   
+[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
+[novtable](../../cpp/novtable.md)   
+[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

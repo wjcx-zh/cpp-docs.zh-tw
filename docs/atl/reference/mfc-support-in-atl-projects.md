@@ -1,5 +1,5 @@
 ---
-title: ATL 專案中的 MFC 支援 |Microsoft 文件
+title: ATL 專案中的 MFC 支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d42afec863695b1cab05c2d3cf2f65f3d64a1507
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb6a3c5bae4d973ba74155ab018ebea69b0e2b93
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360637"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751396"
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 專案中的 MFC 支援
-如果您選取**支援 MFC** ATL 專案精靈，在您的專案也會宣告為 MFC 應用程式物件 （類別） 的應用程式。 初始化 MFC 程式庫專案，並具現化類別 (類別*ProjName*) 衍生自[CWinApp](../../mfc/reference/cwinapp-class.md)。  
-  
- 未使用屬性的 ATL DLL 專案只能使用此選項。  
-  
+
+如果您選取**支援 MFC** ATL 專案精靈 中，您的專案會宣告為 MFC 應用程式物件 （類別） 的應用程式。 初始化 MFC 程式庫專案，並具現化類別 (類別*ProjName*) 衍生自[CWinApp](../../mfc/reference/cwinapp-class.md)。
+
+此選項適用於僅限非屬性化 ATL DLL 專案。
+
 ```  
 class CProjNameApp : public CWinApp  
 {  
 public:  
- 
+
 // Overrides  
     virtual BOOL InitInstance();
 virtual int ExitInstance();
 DECLARE_MESSAGE_MAP() 
 };  
- 
+
 BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)  
 END_MESSAGE_MAP()  
- 
+
 CProjNameApp theApp;  
- 
+
 BOOL CProjNameApp::InitInstance()  
 {  
     return CWinApp::InitInstance();
 
 }  
- 
+
 int CProjNameApp::ExitInstance()  
 {  
     return CWinApp::ExitInstance();
 
 }  
-```  
-  
- 您可以檢視應用程式的物件類別和其`InitInstance`和`ExitInstance`類別檢視中的函式。  
-  
-## <a name="see-also"></a>另請參閱  
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [建立的 ATL 專案](../../atl/reference/creating-an-atl-project.md)   
- [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
+```
+
+您可以檢視應用程式的物件類別及其`InitInstance`和`ExitInstance`類別檢視 中的函式。
+
+## <a name="see-also"></a>另請參閱
+
+[新增類別](../../ide/adding-a-class-visual-cpp.md)   
+[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)   
+[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

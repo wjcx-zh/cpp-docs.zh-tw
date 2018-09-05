@@ -1,5 +1,5 @@
 ---
-title: 將物件和控制項加入至 ATL 專案 |Microsoft 文件
+title: 加入 ATL 專案中的物件和控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a6f9102aeebd0cc60765c70cf74fb2329bc801f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357769"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756557"
 ---
-# <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項加入至 ATL 專案
-您可以使用其中一個 ATL 程式碼精靈加入 ATL 或 MFC 為基礎的專案中的物件或控制項。 針對每個 COM 物件或控制項您加入，亦即，精靈會產生的.cpp 和.h 檔案，以及指令碼為基礎的登錄支援.rgs 檔。 在 Visual Studio 中有下列的 ATL 程式碼精靈：  
-  
-||||  
-|-|-|-|  
-|[ATL 簡單物件](../../atl/reference/atl-simple-object-wizard.md)|[ATL 對話方塊](../../atl/reference/atl-dialog-wizard.md)|[ATL 控制項](../../atl/reference/atl-control-wizard.md)|  
-|[ATL 屬性頁](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page 元件](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL OLE DB 消費者](../../atl/reference/atl-ole-db-consumer-wizard.md)|  
-|[將 ATL 支援加入 MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB 提供者](../../atl/reference/atl-ole-db-provider-wizard.md)|  
-  
+# <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項新增至 ATL 專案
+
+您可以使用其中一個 ATL 程式碼精靈加入 ATL 或 MFC 為基礎的專案中的物件或控制項。 針對每個 COM 物件或控制項您加入，亦即，精靈會產生.cpp 和.h 檔案，以及指令碼為基礎的登錄支援.rgs 檔案。 在 Visual Studio 中有下列的 ATL 程式碼精靈：
+
+||||
+|-|-|-|
+|[ATL 簡單物件](../../atl/reference/atl-simple-object-wizard.md)|[ATL 對話方塊](../../atl/reference/atl-dialog-wizard.md)|[ATL 控制項](../../atl/reference/atl-control-wizard.md)|
+|[ATL 屬性頁](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page 元件](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL OLE DB 消費者](../../atl/reference/atl-ole-db-consumer-wizard.md)|
+|[將 ATL 支援加入 MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB 提供者](../../atl/reference/atl-ole-db-provider-wizard.md)|
+
 > [!NOTE]
->  將 ATL 物件加入至您的專案之前, 您應該檢閱的詳細資訊和需求的相關說明主題中的物件。  
-  
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>若要加入物件或控制項，使用 ATL 控制項精靈  
-  
-1.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下**新增**從捷徑功能表。 按一下**加入類別**。  
-  
-     [加入類別](../../ide/add-class-dialog-box.md) 對話方塊隨即出現。  
-  
-2.  在分類窗格中選取 [ATL] 資料夾，選取要從 [範本] 窗格中插入的物件。 按一下**開啟**。 所選物件的程式碼精靈 隨即出現。  
-  
-    > [!NOTE]
-    >  如果您想要將 ATL 物件加入至 MFC 專案，您必須將 ATL 支援加入現有專案。 您可以依照下列中的指示[將 ATL 支援加入至 MFC 專案](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
-  
-     或者，如果您嘗試以 ATL 物件加入不含先前將 ATL 支援加入 MFC 專案，Visual Studio 會提示您指定是否要讓 ATL 支援加入至專案。 按一下**是**將 ATL 支援加入至專案，並開啟所選的 ATL 精靈。  
-  
-## <a name="see-also"></a>另請參閱  
- [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
- [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
- [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATL 和 C 執行階段程式碼的程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
+> 然後再將 ATL 物件新增至您的專案，您應該檢閱的詳細資訊和需求的相關說明主題中的物件。
+
+### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>若要加入物件或控制項，使用 ATL 控制項精靈
+
+1. 在 方案總管 中，以滑鼠右鍵按一下專案節點，然後按一下 **新增**從捷徑功能表。 按一下 **加入類別**。
+
+   [加入類別](../../ide/add-class-dialog-box.md) 對話方塊隨即出現。
+
+2. 在 [分類] 窗格中選取 [ATL] 資料夾的狀況下，選取要從 [範本] 窗格中插入的物件。 按一下 **開啟**。 在所選物件的程式碼精靈隨即出現。
+
+   > [!NOTE]
+   >  如果您想要將 ATL 物件加入至 MFC 專案，您必須加入 ATL 支援加入現有的專案。 您可以依照下列中的指示[將 ATL 支援加入至 MFC 專案](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。
+
+   或者，如果您嘗試加入 MFC 專案中的 ATL 物件，而不需先前新增 ATL 支援時，Visual Studio 會提示您指定是否要讓 ATL 支援加入至專案。 按一下 **是**將 ATL 支援加入至專案，並開啟所選的 ATL 精靈。
+
+## <a name="see-also"></a>另請參閱
+
+[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
+[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)   
+[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

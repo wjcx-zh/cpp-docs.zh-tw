@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fda9cab73088746ec64caf482f9e606d713eaa4f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222739"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756973"
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 `delegate`關鍵字用來宣告 Windows 執行階段相當於在 standard c + + 中的函式物件的參考型別。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：  

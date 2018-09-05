@@ -1,5 +1,5 @@
 ---
-title: 字串，ATL 屬性頁精靈 |Microsoft 文件
+title: 字串，ATL 屬性頁精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 101a81eb2adf7b1ee133c2e68a6a74d9369075c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f65b75ff7ad5af4f3552cec594497616922bd048
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361762"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753746"
 ---
 # <a name="strings-atl-property-page-wizard"></a>字串, ATL 屬性頁精靈
-提供與屬性頁相關聯的文字。  
-  
- **標題**  
- 屬性頁 索引標籤上設定所顯示的文字。  
-  
- **文件字串**  
- 設定文字字串，描述頁面。 這個字串可以顯示在屬性工作表對話方塊。 屬性框架無法使用狀態列或工具提示中的描述。 標準屬性畫面格目前不使用這個字串。  
-  
- **說明檔**  
- 設定說明檔，描述如何使用屬性頁的名稱。 此名稱不應該包含路徑。 當使用者按**協助**，框架會在名為 HelpDir 機碼下 CLSID 的屬性頁面登錄項目中的值中的目錄開啟說明檔案。  
-  
-## <a name="see-also"></a>另請參閱  
- [ATL 屬性頁精靈](../../atl/reference/atl-property-page-wizard.md)   
- [選項，ATL 屬性頁精靈](../../atl/reference/options-atl-property-page-wizard.md)
+
+提供 [屬性] 頁面與相關聯的文字。
+
+**標題**  
+屬性頁 索引標籤上設定所顯示的文字。
+
+**文件字串**  
+設定描述頁面的文字字串。 這個字串可以顯示在屬性工作表對話方塊。 屬性框架都可以使用狀態列或工具提示中的描述。 標準屬性框架目前不使用此字串。
+
+**說明檔**  
+設定描述如何使用 [屬性] 頁面的說明檔的名稱。 此名稱不應該包含路徑。 當使用者按下**協助**，框架 HelpDir 中的索引鍵屬性頁面登錄項目，其 CLSID 下的值中命名的目錄中開啟說明檔案。
+
+## <a name="see-also"></a>另請參閱
+
+[ATL 屬性頁精靈](../../atl/reference/atl-property-page-wizard.md)   
+[選項，ATL 屬性頁精靈](../../atl/reference/options-atl-property-page-wizard.md)
 

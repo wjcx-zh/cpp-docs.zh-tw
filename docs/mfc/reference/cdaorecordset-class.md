@@ -177,11 +177,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a1db997dd81b339901bf3cf3017a766e17aa8cfb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197629"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758449"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 
@@ -646,7 +646,7 @@ virtual BOOL Find(
 - AFX_DAO_LAST 尋找比對字串的最後一個位置。
 
 *lpszFilter*<br/>
-字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。 例如:
+字串運算式 (例如**其中**子句中的 SQL 陳述式，而不需要這個字**其中**) 用來找出資料錄。 例如: 
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
@@ -1374,9 +1374,9 @@ BOOL IsBOF() const;
 
 ||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外狀況|例外狀況|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外狀況|例外狀況|
-|兩者都是非零值|例外狀況|例外狀況|例外狀況|例外狀況|
+|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外|例外|
+|兩者都是非零值|例外|例外|例外|例外|
 |這兩個 0|Allowed|Allowed|Allowed|Allowed|
 
 允許的移動作業，並不表示作業已成功將尋找一筆記錄。 此外，它只會指出允許嘗試執行指定的移動作業，且不會產生例外狀況。 值`IsBOF`和`IsEOF`成員函式可能會因為嘗試的移動而變更。
@@ -1441,9 +1441,9 @@ BOOL IsEOF() const;
 
 ||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外狀況|例外狀況|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外狀況|例外狀況|
-|兩者都是非零值|例外狀況|例外狀況|例外狀況|例外狀況|
+|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
+|`IsBOF`=0,<br /><br /> `IsEOF`= 非零值|Allowed|Allowed|例外|例外|
+|兩者都是非零值|例外|例外|例外|例外|
 |這兩個 0|Allowed|Allowed|Allowed|Allowed|
 
 允許的移動作業，並不表示作業已成功將尋找一筆記錄。 此外，它只會指出允許嘗試執行指定的移動作業，且不會產生例外狀況。 值`IsBOF`和`IsEOF`成員函式可能會因為嘗試的移動而變更。
@@ -1910,7 +1910,7 @@ BOOL Seek(
 下列字串運算式的其中一個:"<"，"\<="，"="、"> = 」，或">"。
 
 *pKey1*<br/>
-指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要項。
+指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要。
 
 *pKey2*<br/>
 指標`COleVariant`其值會對應到索引中的第二個欄位，如果有的話。 預設值是 NULL。

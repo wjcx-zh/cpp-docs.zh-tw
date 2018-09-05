@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f60349203ce55a927ffac3d095988e5198bedd87
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601917"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764091"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 實值類別
 表示物件的大小。 SizeT 是不帶正負號的資料類型。  

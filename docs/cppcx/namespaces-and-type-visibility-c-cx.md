@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c4bdccc14db423d7a47545c51b31ce472f0c4308
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219517"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758790"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 命名空間是標準 C++ 建構，可將具有相關功能的類型組合在一起，並防止程式庫中發生名稱衝突。 Windows 執行階段類型系統會要求必須宣告在命名空間範圍的命名空間中的所有公用 Windows 執行階段型別，包括您自己的程式碼中。 在全域範圍中宣告或以巢狀方式存在於其他類別中的公用型別會造成編譯時期錯誤。  

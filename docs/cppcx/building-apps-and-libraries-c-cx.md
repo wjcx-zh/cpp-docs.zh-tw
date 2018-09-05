@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec156489b08d9f640187148b6284b5fd4763e6eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583995"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751602"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>建置應用程式和程式庫 (C++/CX)
 在本節中的主題提供的一些詳細資訊，產生的通用 Windows 平台應用程式或 Windows 執行階段元件中使用建置系統。  

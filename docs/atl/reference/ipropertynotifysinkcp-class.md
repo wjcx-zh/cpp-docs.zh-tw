@@ -19,47 +19,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fddd187dd6df58c4013b9c1fc7a08d5f644a0db
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203159"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759661"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 類別
-這個類別會公開[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作為可連接物件上的連出介面的介面。  
-  
+
+這個類別會公開[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)作為可連接物件上的連出介面的介面。
+
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 template<class T, class CDV = CComDynamicUnkArray>  
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
-```    
-  
-#### <a name="parameters"></a>參數  
- *T*  
- 您的類別，衍生自`IPropertyNotifySinkCP`。  
-  
- *CDV*  
- 類別可管理的連接點和其接收器之間的連線。 預設值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，可讓連接無限制。 您也可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，指定固定的連接數目。  
-  
-## <a name="remarks"></a>備註  
- `IPropertyNotifySinkCP` 繼承其基底類別，透過的所有方法[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)。  
-  
- [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)介面可讓接收物件，以接收有關屬性變更通知。 類別`IPropertyNotifySinkCP`會將此介面公開為可連接物件上的連出介面。 用戶端必須實作`IPropertyNotifySink`接收上的方法。  
-  
- 衍生您的類別，從`IPropertyNotifySinkCP`當您要建立連接點，表示`IPropertyNotifySink`介面。  
-  
- 如需有關如何使用 ATL 中的連接點的詳細資訊，請參閱[連接點](../../atl/atl-connection-points.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlctl.h  
-  
-## <a name="see-also"></a>另請參閱  
- [IConnectionPointImpl 類別](../../atl/reference/iconnectionpointimpl-class.md)   
- [IConnectionPointContainerImpl 類別](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+#### <a name="parameters"></a>參數
+
+*T*  
+您的類別，衍生自`IPropertyNotifySinkCP`。
+
+*CDV*  
+類別可管理的連接點和其接收器之間的連線。 預設值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，可讓連接無限制。 您也可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，指定固定的連接數目。
+
+## <a name="remarks"></a>備註
+
+`IPropertyNotifySinkCP` 繼承其基底類別，透過的所有方法[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)。
+
+[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)介面可讓接收物件，以接收有關屬性變更通知。 類別`IPropertyNotifySinkCP`會將此介面公開為可連接物件上的連出介面。 用戶端必須實作`IPropertyNotifySink`接收上的方法。
+
+衍生您的類別，從`IPropertyNotifySinkCP`當您要建立連接點，表示`IPropertyNotifySink`介面。
+
+如需有關如何使用 ATL 中的連接點的詳細資訊，請參閱[連接點](../../atl/atl-connection-points.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlctl.h
+
+## <a name="see-also"></a>另請參閱
+
+[IConnectionPointImpl 類別](../../atl/reference/iconnectionpointimpl-class.md)   
+[IConnectionPointContainerImpl 類別](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)

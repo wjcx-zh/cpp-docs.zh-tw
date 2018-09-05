@@ -1,5 +1,5 @@
 ---
-title: IAxWinAmbientDispatchEx 介面 |Microsoft 文件
+title: IAxWinAmbientDispatchEx 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,69 +18,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22815ddf3131b9d262d68a3202f4f500b7edf807
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c1c6ed120705886c1b0bb4836e851139543f629
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358136"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753908"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 介面
-這個介面會實作裝載控制項的補充環境屬性。  
-  
+
+這個介面會實作補充環境裝載的控制項屬性。
+
 > [!IMPORTANT]
->  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDispatchEx : public IAxWinAmbientDispatch
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[SetAmbientDispatch](#setambientdispatch)|這個方法被呼叫來補充預設環境屬性的介面與使用者定義的介面。|  
-  
-## <a name="remarks"></a>備註  
- 靜態連結至 ATL 和主機 ActiveX 控制項，特別是 ActiveX 控制項有環境屬性的 ATL 應用程式中包含這個介面。 不包括此介面將會產生這個判斷提示: 「 您是否忘記要傳遞到 Init LIBID"  
-  
- 這個介面是 ATL 的 ActiveX 控制項裝載物件所公開的。 衍生自[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)，`IAxWinAmbientDispatchEx`將可讓您增補 ATL 提供與您自己的環境屬性介面的方法。  
-  
- [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)會嘗試載入型別資訊有關`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`從類型程式庫所包含的程式碼。  
-  
- 如果您要連結至 ATL90.dll， **AXHost**會從類型程式庫 DLL 中載入的型別資訊。  
-  
- 請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需詳細資訊。  
-  
-## <a name="requirements"></a>需求  
- 下表所示使用數種格式，此介面的定義。  
-  
-|定義類型|檔案|  
-|---------------------|----------|  
-|IDL|atliface.idl|  
-|類型程式庫|ATL.dll|  
-|C++|atliface.h （也包含在 ATLBase.h）|  
-  
-##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch  
- 這個方法被呼叫來補充預設環境屬性的介面與使用者定義的介面。  
-  
+```
+
+## <a name="members"></a>成員
+
+### <a name="methods"></a>方法
+
+|||
+|-|-|
+|[SetAmbientDispatch](#setambientdispatch)|會呼叫這個方法，來補充預設環境屬性介面與使用者定義的介面。|
+
+## <a name="remarks"></a>備註
+
+在靜態連結至 ATL 和主機 ActiveX 控制項，尤其是 ActiveX 控制項有環境屬性的 ATL 應用程式中包含這個介面。 不包含這個介面會產生這個判斷提示: 「 您是否忘記將 LIBID 傳遞給 Init 」
+
+這個介面會公開由裝載物件的 ATL 的 ActiveX 控制項。 衍生自[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)，`IAxWinAmbientDispatchEx`將可讓您增補 ATL 提供與您自己的環境屬性介面的方法。
+
+[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)會嘗試載入的型別資訊的相關`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`從類型程式庫包含程式碼。
+
+如果您要連結至 ATL90.dll， **AXHost**會從類型程式庫 DLL 中載入的型別資訊。
+
+請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需詳細資訊。
+
+## <a name="requirements"></a>需求
+
+此介面的定義有數種格式下, 表所示。
+
+|定義類型|檔案|
+|---------------------|----------|
+|IDL|atliface.idl|
+|型別程式庫|ATL.dll|
+|C++|atliface.h （也包含在 ATLBase.h）|
+
+##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
+
+會呼叫這個方法，來補充預設環境屬性介面與使用者定義的介面。
+
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
-```  
-  
-### <a name="parameters"></a>參數  
- *pDispatch*  
- 新的介面指標。  
-  
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
-  
-### <a name="remarks"></a>備註  
- 當`SetAmbientDispatch`呼叫與新介面的指標，這個新介面將用來叫用任何屬性或方法，如果系統要求您針對裝載的控制項，這些屬性所未提供的[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
-  
-## <a name="see-also"></a>另請參閱  
- [IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)
+```
+
+### <a name="parameters"></a>參數
+
+*pDispatch*  
+新的介面指標。
+
+### <a name="return-value"></a>傳回值
+
+會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+
+### <a name="remarks"></a>備註
+
+當`SetAmbientDispatch`會呼叫新的介面指標，這個新介面將用來叫用的任何屬性或方法，如果系統要求的所裝載的控制項，這些屬性所未提供的[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
+
+## <a name="see-also"></a>另請參閱
+
+[IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)

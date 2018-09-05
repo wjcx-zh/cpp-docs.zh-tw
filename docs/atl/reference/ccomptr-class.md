@@ -18,91 +18,102 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761393"
 ---
 # <a name="ccomptr-class"></a>CComPtr 類別
-用來管理 COM 介面指標的智慧型指標類別。  
-  
-## <a name="syntax"></a>語法  
-  
+
+用來管理 COM 介面指標的智慧型指標類別。
+
+## <a name="syntax"></a>語法
+
 ```
 template<class T>  
 class CComPtr
-```  
-  
-#### <a name="parameters"></a>參數  
- *T*  
- COM 介面，用來指定要儲存的指標的類型。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CComPtr::CComPtr](#ccomptr)|建構函式。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CComPtr::operator =](#operator_eq)|將指標指派給成員的指標。|  
-  
-## <a name="remarks"></a>備註  
- 使用 ATL`CComPtr`並[CComQIPtr](../../atl/reference/ccomqiptr-class.md)來管理 COM 介面指標。 兩者都衍生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，並同時執行自動參考計數。  
-  
- `CComPtr`並[CComQIPtr](../../atl/reference/ccomqiptr-class.md)類別可以幫助您執行自動參考計數來排除記憶體流失。  下列函式同時執行相同的邏輯作業;不過，請注意如何第二個版本可能較不容易出錯使用`CComPtr`類別：  
-  
- [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
-  
- [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
-  
- 在偵錯組建中連結程式碼追蹤的 atlsd.lib。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
-  
- `CComPtr`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlbase.h  
-  
-##  <a name="ccomptr"></a>  CComPtr::CComPtr  
- 建構函式。  
-  
+```
+
+#### <a name="parameters"></a>參數
+
+*T*  
+COM 介面，用來指定要儲存的指標的類型。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CComPtr::CComPtr](#ccomptr)|建構函式。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[CComPtr::operator =](#operator_eq)|將指標指派給成員的指標。|
+
+## <a name="remarks"></a>備註
+
+使用 ATL`CComPtr`並[CComQIPtr](../../atl/reference/ccomqiptr-class.md)來管理 COM 介面指標。 兩者都衍生自[CComPtrBase](../../atl/reference/ccomptrbase-class.md)，並同時執行自動參考計數。
+
+`CComPtr`並[CComQIPtr](../../atl/reference/ccomqiptr-class.md)類別可以幫助您執行自動參考計數來排除記憶體流失。  下列函式同時執行相同的邏輯作業;不過，請注意如何第二個版本可能較不容易出錯使用`CComPtr`類別：
+
+[!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]
+
+[!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]
+
+在偵錯組建中連結程式碼追蹤的 atlsd.lib。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
+
+`CComPtr`
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlbase.h
+
+##  <a name="ccomptr"></a>  CComPtr::CComPtr
+
+建構函式。
+
 ```
 CComPtr() throw ();
 CComPtr(T* lp) throw ();
 CComPtr (const CComPtr<T>& lp) throw ();
-```  
-  
-### <a name="parameters"></a>參數  
- *lp*  
- 用來初始化介面指標。  
-  
- *T*  
- COM 介面。  
-  
-##  <a name="operator_eq"></a>  CComPtr::operator =  
- 指派運算子。  
-  
+```
+
+### <a name="parameters"></a>參數
+
+*lp*  
+用來初始化介面指標。
+
+*T*  
+COM 介面。
+
+##  <a name="operator_eq"></a>  CComPtr::operator =
+
+指派運算子。
+
 ```
 T* operator= (T* lp) throw ();
 T* operator= (const CComPtr<T>& lp) throw ();
-```  
-  
-### <a name="return-value"></a>傳回值  
- 讓指標回到更新`CComPtr`物件  
-  
-### <a name="remarks"></a>備註  
- 現有的物件，如果有一個存在這個作業 AddRefs 新的物件和版本。  
-  
-## <a name="see-also"></a>另請參閱  
- [CComPtr::CComPtr](#ccomptr)   
- [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>傳回值
+
+讓指標回到更新`CComPtr`物件
+
+### <a name="remarks"></a>備註
+
+現有的物件，如果有一個存在這個作業 AddRefs 新的物件和版本。
+
+## <a name="see-also"></a>另請參閱
+
+[CComPtr::CComPtr](#ccomptr)   
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[類別概觀](../../atl/atl-class-overview.md)

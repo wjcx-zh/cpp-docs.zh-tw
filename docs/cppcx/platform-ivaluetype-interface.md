@@ -14,11 +14,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e2f1e83c285274326be2501a8f9b006c8df05204
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613382"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751523"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType 介面
 `Platform::IValueType` 是實值類別和實值結構所實作的基礎結構介面。 無法在程式碼中明確使用。  

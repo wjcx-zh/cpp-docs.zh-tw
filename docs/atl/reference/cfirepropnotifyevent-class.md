@@ -21,83 +21,95 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec6fb0d54cd748b707c81b88e09fb7d846aaa2f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88c816fecf71b94d25ac676f8169eeb26a2982fc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194420"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760213"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 類別
-這個類別提供方法來通知控制項屬性變更有關容器的接收器。  
-  
+
+這個類別提供方法來通知控制項屬性變更有關容器的接收器。
+
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 class CFirePropNotifyEvent
-```  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|（靜態）通知容器接收已變更的控制項屬性。|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|（靜態）通知控制項屬性即將變更的容器的接收器。|  
-  
-## <a name="remarks"></a>備註  
- `CFirePropNotifyEvent` 有兩種方法，通知控制項屬性已變更，或將變更容器的接收器。  
-  
- 如果實作您的控制項類別衍生自`IPropertyNotifySink`，則`CFirePropNotifyEvent`當您呼叫時，會叫用方法`FireOnRequestEdit`或`FireOnChanged`。 如果您的控制項類別不衍生自`IPropertyNotifySink`，這些函式的呼叫會傳回 S_OK。  
-  
- 如需建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlctl.h  
-  
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- 告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性已變更的介面。  
-  
+```
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|（靜態）通知容器接收已變更的控制項屬性。|
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|（靜態）通知控制項屬性即將變更的容器的接收器。|
+
+## <a name="remarks"></a>備註
+
+`CFirePropNotifyEvent` 有兩種方法，通知控制項屬性已變更，或將變更容器的接收器。
+
+如果實作您的控制項類別衍生自`IPropertyNotifySink`，則`CFirePropNotifyEvent`當您呼叫時，會叫用方法`FireOnRequestEdit`或`FireOnChanged`。 如果您的控制項類別不衍生自`IPropertyNotifySink`，這些函式的呼叫會傳回 S_OK。
+
+如需建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlctl.h
+
+##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+
+告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性已變更的介面。
+
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
-```  
-  
-### <a name="parameters"></a>參數  
- *pUnk*  
- [in]指標`IUnknown`傳送通知的物件。  
-  
- *dispID*  
- [in]已變更之屬性的識別項。  
-  
-### <a name="return-value"></a>傳回值  
- 其中一個標準的 HRESULT 值。  
-  
-### <a name="remarks"></a>備註  
- 此函式是安全地呼叫，即使您的控制項不支援連接點。  
-  
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- 告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性即將變更的介面。  
-  
+```
+
+### <a name="parameters"></a>參數
+
+*pUnk*  
+[in]指標`IUnknown`傳送通知的物件。
+
+*dispID*  
+[in]已變更之屬性的識別項。
+
+### <a name="return-value"></a>傳回值
+
+其中一個標準的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+此函式是安全地呼叫，即使您的控制項不支援連接點。
+
+##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+
+告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性即將變更的介面。
+
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
-```  
-  
-### <a name="parameters"></a>參數  
- *pUnk*  
- [in]指標`IUnknown`傳送通知的物件。  
-  
- *dispID*  
- [in]若要變更之屬性的識別項。  
-  
-### <a name="return-value"></a>傳回值  
- 其中一個標準的 HRESULT 值。  
-  
-### <a name="remarks"></a>備註  
- 此函式是安全地呼叫，即使您的控制項不支援連接點。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>參數
+
+*pUnk*  
+[in]指標`IUnknown`傳送通知的物件。
+
+*dispID*  
+[in]若要變更之屬性的識別項。
+
+### <a name="return-value"></a>傳回值
+
+其中一個標準的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+此函式是安全地呼叫，即使您的控制項不支援連接點。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../../atl/atl-class-overview.md)

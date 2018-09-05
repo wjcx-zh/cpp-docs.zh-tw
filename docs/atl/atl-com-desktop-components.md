@@ -15,47 +15,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b16f2fd1a82d6199f1e035b06f8c0598810f0dfd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953845"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752156"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
-ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化元件物件模型 (COM) 物件的程式設計。 若要完全利用 ATL，強烈建議 COM 工作熟悉。  
-  
-## <a name="in-this-section"></a>本節內容  
- [ATL 類別概觀](../atl/atl-class-overview.md)  
- 提供的連結和依類別目錄的 ATL 類別的簡短描述。  
-  
- [類別與結構](../atl/reference/atl-classes.md)  
- 提供參考資料的類別和結構依照字母順序排列。  
-  
- [ATL 函式](../atl/reference/atl-functions.md)  
- 提供全域依照字母順序排列的函式的參考資料。 包含將功能組織成類別目錄的主題。  
-  
- [ATL 全域變數](../atl/reference/atl-global-variables.md)  
- 提供參考資料，依照字母順序排列這些全域變數。  
-  
- [ATL 巨集](../atl/reference/atl-macros.md)  
- 提供參考資料上依照字母順序排列的巨集。 包含主題組織成類別目錄的巨集。  
-  
- [ATL Typedef](../atl/reference/atl-typedefs.md)  
- 依照字母順序排列的 typedef 上提供的參考資料  
-  
- [背景工作原型](../atl/reference/worker-archetype.md)  
- 提供 ATL 背景工作原型的連結。  
-  
-## <a name="related-sections"></a>相關章節  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- 提供有關如何使用 Active Template Library (ATL) 進行程式設計的主題。  
-  
- [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
- 將引導您完成建立控制項，並示範一些程序中的 ATL 基本概念。  
-  
- [ATL 範例](../visual-cpp-samples.md)  
- 示範如何使用 ATL 撰寫 COM 物件的範例程式碼。  
-  
- [OLE DB 範本](../data/oledb/ole-db-templates.md)  
- 提供 OLE DB 取用者和提供者範本的參考資料，包含一組範本類別，其中實作許多常用的 OLE DB 介面。  
+
+ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化元件物件模型 (COM) 物件的程式設計。 若要完全利用 ATL，強烈建議 COM 工作熟悉。
+
+## <a name="in-this-section"></a>本節內容
+
+[ATL 類別概觀](../atl/atl-class-overview.md)  
+提供的連結和依類別目錄的 ATL 類別的簡短描述。
+
+[類別與結構](../atl/reference/atl-classes.md)  
+提供參考資料的類別和結構依照字母順序排列。
+
+[ATL 函式](../atl/reference/atl-functions.md)  
+提供全域依照字母順序排列的函式的參考資料。 包含將功能組織成類別目錄的主題。
+
+[ATL 全域變數](../atl/reference/atl-global-variables.md)  
+提供參考資料，依照字母順序排列這些全域變數。
+
+[ATL 巨集](../atl/reference/atl-macros.md)  
+提供參考資料上依照字母順序排列的巨集。 包含主題組織成類別目錄的巨集。
+
+[ATL Typedef](../atl/reference/atl-typedefs.md)  
+依照字母順序排列的 typedef 上提供的參考資料
+
+[背景工作原型](../atl/reference/worker-archetype.md)  
+提供 ATL 背景工作原型的連結。
+
+## <a name="related-sections"></a>相關章節
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+提供有關如何使用 Active Template Library (ATL) 進行程式設計的主題。
+
+[ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
+將引導您完成建立控制項，並示範一些程序中的 ATL 基本概念。
+
+[ATL 範例](../visual-cpp-samples.md)  
+示範如何使用 ATL 撰寫 COM 物件的範例程式碼。
+
+[OLE DB 範本](../data/oledb/ole-db-templates.md)  
+提供 OLE DB 取用者和提供者範本的參考資料，包含一組範本類別，其中實作許多常用的 OLE DB 介面。  

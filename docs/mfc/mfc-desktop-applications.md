@@ -1,5 +1,5 @@
 ---
-title: MFC 桌面應用程式 |Microsoft 文件
+title: MFC 桌面應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350231"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754991"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面應用程式
 Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程式開發介面的物件導向包裝函式。 雖然這個程式庫可以用來建立非常簡單的桌面應用程式，但還是在您需要開發包含多個控制項的較複雜使用者介面時最有用。 您可以使用 MFC 來建立 Office 樣式使用者介面的應用程式。  
@@ -40,7 +40,7 @@ Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程�
 > [!IMPORTANT]
 >  MFC 類別和其成員不能在 Windows 執行階段環境中執行的應用程式。  
 >   
->  多位元組字元編碼的 (MBCS) MFC 程式庫 (DLL) 不再隨附於 Visual Studio，但是可以當做 Visual Studio 附加元件。 如需詳細資訊，請參閱[MFC MBCS DLL 附加元件](mfc-mbcs-dll-add-on.md)。  
+>  多位元組字元編碼的 (MBCS) MFC 程式庫 (DLL) 不再隨附於 Visual Studio，但是可以當做 Visual Studio 附加元件。 如需詳細資訊，請參閱 < [MFC MBCS DLL 附加元件](mfc-mbcs-dll-add-on.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [概念](mfc-concepts.md)  
@@ -67,7 +67,7 @@ Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程�
  [內部類別](reference/internal-classes.md)  
  MFC 內部使用。 為求完整起見，本節會說明這些內部類別，但是它們並不適合直接在您的程式碼中使用。  
   
- [巨集和全域變數](reference/mfc-macros-and-globals.md)  
+ [巨集和全域](reference/mfc-macros-and-globals.md)  
  提供 MFC 程式庫中巨集與全域函式的連結。  
   
  [結構、樣式、回呼和訊息對應](reference/structures-styles-callbacks-and-message-maps.md)  

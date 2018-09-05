@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd6f4eed4cefba16d95baabe38fc5268c0ae8512
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216435"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752322"
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 提供一般行為的 ref 類別或 ref 結構在 Windows 執行階段應用程式。 所有 ref 類別和 ref 結構執行個體都會隱含轉換為 Platform::Object^，而且也都能覆寫其虛擬 ToString 方法。  

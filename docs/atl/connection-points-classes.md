@@ -17,39 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3f866d56d0c0ab89a91b13e238d9503c1ca9e02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e24d6333faee842227edb09ea05aa6a1f8b0d9a0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205071"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763597"
 ---
 # <a name="connection-points-classes"></a>連接點類別
-下列類別會提供支援的連接點：  
-  
--   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md)實作連接點容器。  
-  
--   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)實作連接點。  
-  
--   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)實作代表您建立的連接點[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)介面。  
-  
--   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md)管理無限制的連接點和其接收器之間的連線。  
-  
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md)管理固定的連接點和其接收器之間的連線數目。  
-  
--   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md)通知用戶端接收器物件的屬性已變更或將要變更。  
-  
--   [IDispEventImpl](../atl/reference/idispeventimpl-class.md)提供 ATL COM 物件的連接點的支援。 這些連接點會對應與事件接收對應，提供您的 COM 物件。  
-  
--   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)事件路由傳送至適當的處理常式函式類別中對應的事件接收器搭配運作。  
-  
-## <a name="related-articles"></a>相關文章  
- [連接點](../atl/atl-connection-points.md)  
-  
- [事件處理和 ATL](../atl/event-handling-and-atl.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../atl/atl-class-overview.md)   
- [連接點巨集](../atl/reference/connection-point-macros.md)   
- [連接點全域函式](../atl/reference/connection-point-global-functions.md)
+
+下列類別會提供支援的連接點：
+
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md)實作連接點容器。
+
+- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)實作連接點。
+
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)實作代表您建立的連接點[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)介面。
+
+- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md)管理無限制的連接點和其接收器之間的連線。
+
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md)管理固定的連接點和其接收器之間的連線數目。
+
+- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md)通知用戶端接收器物件的屬性已變更或將要變更。
+
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md)提供 ATL COM 物件的連接點的支援。 這些連接點會對應與事件接收對應，提供您的 COM 物件。
+
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)事件路由傳送至適當的處理常式函式類別中對應的事件接收器搭配運作。
+
+## <a name="related-articles"></a>相關文章
+
+[連接點](../atl/atl-connection-points.md)
+
+[事件處理和 ATL](../atl/event-handling-and-atl.md)
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../atl/atl-class-overview.md)   
+[連接點巨集](../atl/reference/connection-point-macros.md)   
+[連接點全域函式](../atl/reference/connection-point-global-functions.md)
 

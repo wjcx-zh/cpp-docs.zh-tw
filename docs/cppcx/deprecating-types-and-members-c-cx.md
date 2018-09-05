@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205476"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764406"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
 在 C + + /CX 中，Windows 執行階段型別和成員的生產者和取用者使用[Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。  

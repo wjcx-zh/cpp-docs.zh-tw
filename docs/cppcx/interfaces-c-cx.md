@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592548"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764438"
 ---
 # <a name="interfaces-ccx"></a>介面 (C++/CX)
 雖然 ref 類別最多可以繼承自一個具象基底類別，但它可以實作任意數目的介面類別。 介面類別 (或介面結構) 本身可以繼承 (或要求) 多個介面類別、可以多載其成員函式，也可以具有類型參數。  

@@ -1,5 +1,5 @@
 ---
-title: 雙重介面和 ATL |Microsoft 文件
+title: 雙重介面和 ATL |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9212662d419f5750d6a8037b73a58fd58c4c858f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355042"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765131"
 ---
 # <a name="dual-interfaces-and-atl"></a>雙重介面和 ATL
-雙重介面可讓它為 dispinterface 方法或 vtable 方法存取的方法。 本節涵蓋一些 ATL 觀點的雙重介面的功能。  
-  
-## <a name="in-this-section"></a>本節內容  
- [實作雙重介面](../atl/implementing-a-dual-interface.md)  
- 討論的類別和精靈包含於實作雙重介面。  
-  
- [多個雙重介面](../atl/multiple-dual-interfaces.md)  
- 討論如何公開 （expose） 單一物件上的多個雙重介面。  
-  
- [Nonextensible 屬性](../atl/nonextensible-attribute.md)  
- 討論何時使用**nonextensible**介面定義上的屬性。  
-  
- [雙重介面和事件](../atl/dual-interfaces-and-events.md)  
- 討論設計考量，不讓介面的雙重介面的事件。  
-  
-## <a name="related-sections"></a>相關章節  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  
-  
-## <a name="see-also"></a>另請參閱  
- [概念](../atl/active-template-library-atl-concepts.md)
+
+雙重介面允許其方法為 dispinterface 方法，或為 vtable 方法加以存取。 本節涵蓋一些 ATL 觀點的雙重介面的功能。
+
+## <a name="in-this-section"></a>本節內容
+
+[實作雙重介面](../atl/implementing-a-dual-interface.md)  
+討論 「 類別 」 和 「 參與實作雙重介面的精靈。
+
+[多個雙重介面](../atl/multiple-dual-interfaces.md)  
+討論如何在單一物件上的多個雙重介面公開 （expose）。
+
+[Nonextensible 屬性](../atl/nonextensible-attribute.md)  
+討論使用時機**nonextensible**介面定義上的屬性。
+
+[雙重介面和事件](../atl/dual-interfaces-and-events.md)  
+討論設計考量，不讓介面的雙重介面的事件。
+
+## <a name="related-sections"></a>相關章節
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
+
+## <a name="see-also"></a>另請參閱
+
+[概念](../atl/active-template-library-atl-concepts.md)
 

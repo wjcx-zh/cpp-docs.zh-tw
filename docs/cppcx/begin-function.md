@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606528"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765356"
 ---
 # <a name="begin-function"></a>begin 函式
 傳回迭代器，指向指定的介面參數所存取之集合的開頭。  

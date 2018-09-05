@@ -19,69 +19,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 71dc40a7c2d4fe460f546dbfe4f55d00aff59667
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885805"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759505"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 類別
-這個類別會提供預設方法，集合類別的函式是由基本資料類型所組成。  
-  
-## <a name="syntax"></a>語法  
-  
+
+這個類別會提供預設方法，集合類別的函式是由基本資料類型所組成。
+
+## <a name="syntax"></a>語法
+
 ```
 template <typename T>  
 class CPrimitiveElementTraits : public CDefaultElementTraits<T>
-```  
-  
-#### <a name="parameters"></a>參數  
- *T*  
- 集合類別物件中儲存的資料型別。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-typedefs"></a>公用 Typedefs  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
-  
-## <a name="remarks"></a>備註  
- 這個類別會提供預設的靜態函式和移動、 複製、 比較和雜湊儲存在集合類別物件的基本資料型別項目所用的方法。  
-  
- 如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
-  
- [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
-  
- [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)  
-  
- [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)  
-  
- `CPrimitiveElementTraits`  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlcoll.h  
-  
-##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
- 要用於將項目加入至集合的類別物件的資料類型。  
-  
+```
+
+#### <a name="parameters"></a>參數
+
+*T*  
+集合類別物件中儲存的資料型別。
+
+## <a name="members"></a>成員
+
+### <a name="public-typedefs"></a>公用 Typedefs
+
+|名稱|描述|
+|----------|-----------------|
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|要用於將項目加入至集合的類別物件的資料類型。|
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|
+
+## <a name="remarks"></a>備註
+
+這個類別會提供預設的靜態函式和移動、 複製、 比較和雜湊儲存在集合類別物件的基本資料型別項目所用的方法。
+
+如需詳細資訊，請參閱 < [ATL 集合類別](../../atl/atl-collection-classes.md)。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
+
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
+
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
+
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+
+`CPrimitiveElementTraits`
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlcoll.h
+
+##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE
+
+要用於將項目加入至集合的類別物件的資料類型。
+
 ```
 typedef T INARGTYPE;
-```  
-  
-##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE  
- 要用來擷取元素的集合類別物件的資料類型。  
-  
+```
+
+##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE
+
+要用來擷取元素的集合類別物件的資料類型。
+
 ```
 typedef T& OUTARGTYPE;
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+## <a name="see-also"></a>另請參閱
+
+[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)

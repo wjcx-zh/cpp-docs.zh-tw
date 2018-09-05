@@ -19,43 +19,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c5751fa3c5c8bc20f287ca3c48d885fc41c60ba0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880004"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764325"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 結構
-此結構包含在 ATL 中的視窗化程式碼中的類別執行個體資料  
-  
-## <a name="syntax"></a>語法  
-  
+
+此結構包含在 ATL 中的視窗化程式碼中的類別執行個體資料
+
+## <a name="syntax"></a>語法
+
 ```
     struct _AtlCreateWndData{
     void* m_pThis;
     DWORD m_dwThreadID;
     _AtlCreateWndData* m_pNext;
 };
-```  
-  
-## <a name="members"></a>成員  
- `m_pThis`  
- **這**用來取得視窗程序中的存取權的類別執行個體的指標。  
-  
- `m_dwThreadID`  
- 目前的類別執行個體的執行緒 ID。  
-  
- `m_pNext`  
- 下一個指標`_AtlCreateWndData`物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlbase.h  
-  
-## <a name="see-also"></a>另請參閱  
- [類別和結構](../../atl/reference/atl-classes.md)
+```
 
+## <a name="members"></a>成員
 
+`m_pThis`  
+**這**用來取得視窗程序中的存取權的類別執行個體的指標。
 
+`m_dwThreadID`  
+目前的類別執行個體的執行緒 ID。
 
+`m_pNext`  
+下一個指標`_AtlCreateWndData`物件。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlbase.h
+
+## <a name="see-also"></a>另請參閱
+
+[類別和結構](../../atl/reference/atl-classes.md)
 

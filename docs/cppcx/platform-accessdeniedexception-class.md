@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 808de08163f0f94e4c3d0064fced7cb81f83c931
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597932"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767926"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException 類別
 當存取資源或功能遭拒時擲回。  

@@ -103,11 +103,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205141"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765927"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 包含快顯功能表的工具列按鈕。  

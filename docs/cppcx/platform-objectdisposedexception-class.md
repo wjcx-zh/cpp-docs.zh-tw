@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 53946335175b0919c800a5ddb57d4be2fdcc20b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592274"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764474"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException 類別
 在已處置的物件上執行作業時擲回。  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391896"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207266"
 ---
 # <a name="structure-declarations"></a>結構宣告
 「結構宣告」會命名一個類型，並指定可能具有不同類型之變數值的序列 (稱為結構的「成員」或「欄位」)。 選擇性識別項 (稱為「標記」) 會為結構類型提供名稱，並且可以在後續參考結構類型時使用。 該結構類型的變數會保留由該類型定義的整個序列。 C 中的結構類似於其他語言中稱為「記錄」的類型。  
@@ -163,7 +163,7 @@ struct somestruct
   
  編譯器允許使用一個可變大小或大小為零的陣列，做為結構的最後一個成員。 在各種情況下使用時，如果常數陣列的大小不同，這會非常有幫助。 此類結構的宣告如下所示：  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  可變大小陣列只可以顯示為結構的最後一個成員。 只要未在任何封閉結構中宣告其他成員，包含可變大小陣列的宣告可以巢狀的方式放置於其他結構內。 不允許使用此類結構的陣列。 `sizeof` 運算子，套用至此類型的變數或類型本身時，會假設陣列的大小為 0。  
   

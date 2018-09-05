@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339770"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200316"
 ---
 # <a name="add-class-dialog-box"></a>加入類別對話方塊
 [加入類別]  對話方塊包含的範本可讓您：  
@@ -32,7 +32,7 @@ ms.locfileid: "33339770"
   
 -   在專案中加入適當的檔案和原始程式碼，自動建立新類別。  
   
- 您可以從 [專案] 功能表、[方案總管] 或[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，存取 [新增類別] 對話方塊。  
+ 您可以從 [專案] 功能表、[方案總管] 或[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，存取 [新增類別] 對話方塊。  
   
 > [!NOTE]
 >  當您嘗試加入不適合目前專案的類別時，您會收到錯誤訊息。 按一下 [確定]  返回 [加入類別]  對話方塊。  

@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4295c0fbd0542ad6c7c819b6ef7024b2384304d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382886"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204446"
 ---
 # <a name="default-signals"></a>預設訊號
-**ANSI 4.7.1.1** 如果沒有在呼叫訊號處理常式之前執行 **signal (***sig***, SIG_DFL)** 的同等項，會封鎖所執行的訊號  
+**ANSI 4.7.1.1**：如果沒有在呼叫信號處理常式之前執行 **signal (**<em>sig</em>**, SIG_DFL)** 的同等項，會封鎖所執行的訊號  
   
- 在程式開始執行時，訊號會設定為其預設狀態。  
+ 在程式開始執行時，會將訊號設為其預設狀態。  
   
 ## <a name="see-also"></a>另請參閱  
  [程式庫函式](../c-language/library-functions.md)

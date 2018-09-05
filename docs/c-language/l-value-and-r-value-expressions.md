@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386260"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208904"
 ---
 # <a name="l-value-and-r-value-expressions"></a>左值和右值運算式
 參考記憶體位置的運算式稱為「左值」運算式。 左值代表儲存區域的「定位程式」值或「左」值，表示它可以在等號 (**=**) 的左側出現。 左值通常是識別項。  
@@ -39,7 +39,7 @@ ms.locfileid: "32386260"
   
 -   成員選取運算式 (**->** 或 **.**)  
   
--   未參考陣列的一元間接取值 (**\***) 運算式  
+-   未參考陣列的一元間接取值 (<strong>\*</strong>) 運算式  
   
 -   括號內的左值運算式  
   
@@ -47,7 +47,7 @@ ms.locfileid: "32386260"
   
  「右值」這個詞有時用來描述運算式的值，並且與左值做區分。 所有左值都是右值，但並非所有右值都是左值。  
   
- **Microsoft 特定的**  
+ **Microsoft 專屬**  
   
  Microsoft C 包含 ANSI C 標準擴充功能，只要物件的大小未透過轉型延伸，就可將左值轉型做為左值使用  (如需詳細資訊，請參閱[類型轉換](../c-language/type-cast-conversions.md))。下列範例將示範這項功能：  
   
@@ -62,7 +62,7 @@ long l;
   
  Microsoft C 預設會啟用 Microsoft 擴充功能。 使用 /Za 編譯器選項可停用這些擴充功能。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>請參閱  
  [運算元和運算式](../c-language/operands-and-expressions.md)

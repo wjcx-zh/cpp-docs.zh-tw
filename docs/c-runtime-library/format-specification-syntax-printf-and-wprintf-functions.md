@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392532"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216668"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -58,7 +58,7 @@ ms.locfileid: "32392532"
 像是 `short`、`int`、`long`、`long long` 的整數類型和其 `unsigned` 的變化可藉由使用 **d**、**i**、**o**、**u**、**x** 和 **X** 指定。像是 `float`、`double` 和 `long double` 的浮點類型可藉由使用 **a**、**A**、**e**、**E**、**f**、**F**、**g** 和 **G** 指定。根據預設，除非 *size* 前置詞修改它們，否則會將整數引數強制轉成 `int` 類型，且會將浮點引數強制轉成 `double`。 在 64 位元系統上，`int` 是 32 位元值；因此，除非使用 **ll** 或 **I64** 的 *size* 前置詞，否則 64 位元整數在為了輸出而格式化時會遭到截斷。 由 **p** 指定的指標類型會使用此平台的預設指標。
 
 > [!NOTE]
-> **Microsoft 特定的**  
+> **Microsoft 專屬**  
 > **Z** 類型字元以及搭配 `printf` 和 `wprintf` 函式使用時的 **c**、**C**、**s** 及 **S** 類型字元的行為，是 Microsoft 延伸模組。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
 
 ### <a name="type-field-characters"></a>類型欄位字元
@@ -85,7 +85,7 @@ ms.locfileid: "32392532"
 |**p**|指標類型|顯示引數為十六進位數字的位址。|
 |**s**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**S**|String|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
-|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) 或 [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
+|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) 或 [UNICODE_STRING](https://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
 
 自 Visual Studio 2015 起，如果對應於浮點轉換規範 (**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**) 的引數是無限大、不確定或 NAN，則格式化輸出符合 C99 標準。 下表列出格式化輸出︰
 
@@ -212,7 +212,7 @@ ms.locfileid: "32392532"
 **hc** 或 **hC** 類型規範，與 `printf` 函式中的 **c** 和 `wprintf` 函式中的 **C** 同義)。 **lc**、**lC**、**wc** 或 **wC** 類型規範，與 `printf` 函式中的 **C** 和 `wprintf` 函式中的 **c** 同義)。 **hs** 或 **hS** 類型規範，與 `printf` 函式中的 **s** 和 `wprintf` 函式中的 **S** 同義)。 **ls**、**lS**、**ws** 或 **wS** 類型規範，與 `printf` 函式中的 **S** 和 `wprintf` 函式中的 **s** 同義)。
 
 > [!NOTE]
-> **Microsoft 特定的**  
+> **Microsoft 專屬**  
 > **I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
 ## <a name="see-also"></a>請參閱

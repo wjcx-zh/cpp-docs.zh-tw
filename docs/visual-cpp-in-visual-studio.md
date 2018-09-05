@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4d4005479c1808ba2d396dfe8807f8a415f9322
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: eb826c89106358c338230d46dc8743e1ee4d60f4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131772"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200448"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -144,7 +144,7 @@ CPU 上執行的非同步和平行演算法。
 [C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 GPU 上執行的大量平行演算法。
 
-[Windows 執行階段範本庫 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
+[Windows 執行階段範本庫 (WRL)](https://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
 通用 Windows 平台 (UWP) 應用程式與元件。
 
 [以 C++/CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

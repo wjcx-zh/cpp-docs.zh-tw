@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330177"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216376"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>隔離的 COM、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
-使用此對話方塊即可指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的 [隔離的 COM] 選項。  
+使用此對話方塊即可指定 [Mt.exe](https://msdn.microsoft.com/library/aa375649) 的 [隔離的 COM] 選項。  
   
  若要存取此屬性頁對話方塊，請開啟您專案或屬性工作表的屬性頁。 展開 [通用屬性] 下的 [資訊清單工具] 節點，然後選取 [隔離的 COM]。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33330177"
  使用 /replacements 選項指定包含 .rgs 檔中可取代字串值的檔案完整路徑。  
   
 ## <a name="see-also"></a>請參閱  
- [隔離的應用程式](http://msdn.microsoft.com/library/aa375190)   
+ [隔離的應用程式](/windows/desktop/SbsCs/isolated-applications)   
  [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)   
  [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)   
  [使用專案屬性](../ide/working-with-project-properties.md)   

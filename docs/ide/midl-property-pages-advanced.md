@@ -26,37 +26,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207756"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197956"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 屬性頁：進階
 **MIDL** 資料夾中的 [進階] 屬性頁指定下列 MIDL 編譯器選項：  
   
--   啟用錯誤檢查 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   啟用錯誤檢查 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   檢查配置 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查配置 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   檢查限制 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查限制 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   檢查列舉範圍 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查列舉範圍 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   檢查參考指標 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查參考指標 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   檢查 Stub 資料 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查 Stub 資料 ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   驗證參數 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
+-   驗證參數 ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
--   結構成員對齊 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   結構成員對齊 ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   重新導向輸出 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   重新導向輸出 ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   C 前置處理器選項 ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   C 前置處理器選項 ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   取消前置處理器的定義 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   取消前置處理器的定義 ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
  \* /robust 只用於針對 Windows 2000 或更新版本的電腦建置時。 如果您建置 ATL 專案，而且想要使用 /robust，請變更 dlldatax.c 檔中的這一行：  
   

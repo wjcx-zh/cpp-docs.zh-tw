@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 282fd41602b70f743926b0fe5322346e9cdfd3fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340693"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203291"
 ---
 # <a name="project-and-solution-files"></a>專案和方案檔
 當您在 Visual Studio 中建立專案時，會建立下列檔案。 它們可用來管理方案中的專案檔案。  
@@ -40,7 +40,7 @@ ms.locfileid: "33340693"
 |*Projname*.sdf|*Projname*|不會顯示在方案總管中|「瀏覽資料庫」檔案。 它支援瀏覽和導覽功能，例如 [移至定義]、[尋找所有參考] 和 [類別檢視]。 會藉由剖析標頭檔來產生它。|  
 |*Projname.* vcxproj.filters|*Projname*|不會顯示在方案總管中|「篩選」檔。 它指定要在方案的哪個位置加入檔案。 例如，.h 檔案放置於 [標頭檔] 節點中。|  
 |*Projname.* vcxproj.user|*Projname*|不會顯示在方案總管中|「移轉使用者」檔案。 從 Visual Studio 2008 移轉專案之後，此檔案包含任何 .vsprops 檔案轉換的資訊。|  
-|*Projname*.idl|*Projname*|原始程式檔|(特定專案) 包含控制項類型程式庫的介面描述語言 (IDL) 原始程式碼。 Visual C++ 會使用這個檔案來產生類型程式庫。 產生的程式庫會向其他自動化用戶端公開控制項的介面。 如需詳細資訊，請參閱 Windows SDK 中的 [Interface Definition (IDL) File](http://msdn.microsoft.com/library/windows/desktop/aa378712) (介面定義 (IDL) 檔)。|  
+|*Projname*.idl|*Projname*|原始程式檔|(特定專案) 包含控制項類型程式庫的介面描述語言 (IDL) 原始程式碼。 Visual C++ 會使用這個檔案來產生類型程式庫。 產生的程式庫會向其他自動化用戶端公開控制項的介面。 如需詳細資訊，請參閱 Windows SDK 中的 [Interface Definition (IDL) File](https://msdn.microsoft.com/library/windows/desktop/aa378712) (介面定義 (IDL) 檔)。|  
 |Readme.txt|*Projname*|專案|「讀我檔案」。 它是由應用程式精靈所產生，並說明專案中的檔案。|  
   
 ## <a name="see-also"></a>請參閱  

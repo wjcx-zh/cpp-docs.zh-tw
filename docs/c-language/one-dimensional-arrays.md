@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388902"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196972"
 ---
 # <a name="one-dimensional-arrays"></a>一維陣列
 後置運算式 (postfix expression) 後面跟著以方括號 (**[ ]**) 括住的運算式，是以註標方式來表示的陣列物件元素。 當註標運算式如下表示時，代表 *expression* 於 *postfix-expression* 之外的所在位置位址值：  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  通常，*postfix-expression* 所代表的值是指標值，例如陣列識別項，而 *expression* 則是整數值。 不過，在語法上需要的是其中一個指標類型的運算式，另一個則是整數類型。 因此，整數值可以在 *postfix-expression* 位置，而指標值則可以在 *expression* 的括號中，或是在註標位置。 例如，以下這個程式碼是合法的：  
@@ -52,7 +47,7 @@ int main() {
   
  註標運算式通常用來參考陣列元素，但是您可以將註標套用到任何指標。 無論值的順序為何，*expression* 都必須以方括號 (**[ ]**) 括住。  
   
- 評估註標運算式的方式是在指標值中加入整數值，然後將間接運算子 (**\***) 套用到結果。 (如需間接運算子的相關討論，請參閱[間接和傳址運算子](../c-language/indirection-and-address-of-operators.md))。實際上，假設 `a` 是指標而 `b` 是整數，下列四個運算式對一維陣列而言是相等的：  
+ 評估註標運算式的方式是在指標值中加入整數值，然後將間接運算子 (<strong>\*</strong>) 套用到結果。 (如需間接運算子的相關討論，請參閱[間接和傳址運算子](../c-language/indirection-and-address-of-operators.md))。實際上，假設 `a` 是指標而 `b` 是整數，下列四個運算式對一維陣列而言是相等的：  
   
 ```  
 a[b]  

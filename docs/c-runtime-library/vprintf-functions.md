@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418376"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216930"
 ---
 # <a name="vprintf-functions"></a>vprintf 函式
 每個 `vprintf` 函式都會接受引數清單的指標，然後設定指定資料的格式，並將其寫入到特定目的地。 函式在執行參數驗證方面有所不同，取決於函式接受寬字元字串或單一位元組字元字串、輸出目的地，以及是否支援在參數所在格式字串中指定順序。  
@@ -89,7 +89,7 @@ ms.locfileid: "32418376"
  針對 **vsprintf**、`vswprintf`、`_vsnprintf` 與 `_vsnwprintf`，如果在重疊的字串之間進行複製，則行為是未定義的。  
   
 > [!IMPORTANT]
->  確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 若使用這些函式的安全版本 (不論是 **_s** 或 **_p** 尾碼)，使用者提供的格式字串可能觸發無效的參數例外狀況 (若使用者提供的字串包含無效的格式設定字元)。  
+>  確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。 若使用這些函式的安全版本 (不論是 **_s** 或 **_p** 尾碼)，使用者提供的格式字串可能觸發無效的參數例外狀況 (若使用者提供的字串包含無效的格式設定字元)。  
   
 ## <a name="see-also"></a>請參閱  
  [資料流 I/O](../c-runtime-library/stream-i-o.md)   

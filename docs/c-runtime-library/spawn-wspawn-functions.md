@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 0e5a71faae381bc17b92d6b23047b9632913c2fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201259"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函式
 所有 `_spawn` 函式都會建立並執行新的處理序：  
@@ -134,7 +134,7 @@ ms.locfileid: "34451767"
 >  字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_spawn` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。  
   
 > [!IMPORTANT]
->  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_spawn`。 `_spawn` 會導致呼叫 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。  
+>  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_spawn`。 `_spawn` 會導致呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。  
   
  您可以將引數指標當做個別的參數 (在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中) 或指標陣列 (在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中) 傳遞。 您必須至少將一個引數，`arg0` 或 `argv`[0]，傳遞至繁衍的處理序。 依照慣例，此引數是您會在命令列上輸入的程式名稱。 不同的值不會產生錯誤。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "34451767"
 ## <a name="redirecting-output"></a>正在重新導向輸出  
  如果從 DLL 或 GUI 應用程式呼叫 `_spawn`，而且想要將輸出重新導向至管道，您有兩個選項︰  
   
--   使用 Win32 API 建立管道，然後呼叫[AllocConsole](http://msdn.microsoft.com/library/windows/desktop/ms681944) (AllocConsole 函式)，在啟動結構中設定控制代碼值，再呼叫 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425) (CreateProcess 函式)。  
+-   使用 Win32 API 建立管道，然後呼叫[AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944) (AllocConsole 函式)，在啟動結構中設定控制代碼值，再呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)。  
   
 -   呼叫會建立管道的 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)，並叫用使用 **cmd.exe /c** (或 **command.exe /c**) 的應用程式。  
   

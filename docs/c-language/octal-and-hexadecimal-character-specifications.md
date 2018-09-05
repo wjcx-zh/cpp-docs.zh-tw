@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eeb1f8e08fbb1d4f30517485c9296febab5a0de0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387384"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198752"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八進位和十六進位字元規格
-**\\***ooo* 的序列表示您可以將 ASCII 字元集中的任何字元，指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。  
+**\\**<em>ooo</em> 的序列表示您可以將 ASCII 字元集中的任何字元指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。  
   
- 同樣地，**\x***hhh* 的序列可讓您將任何 ASCII 字元指定為十六進位字元碼。 例如，您能以一般 C 逸出序列 (**\b**) 指定 ASCII 退格鍵字元，或是將它編碼為 **\010** (八進位) 或 **\x008** (十六進位)。  
+ 同樣地，**\x**<em>hhh</em> 的序列可讓您將任何 ASCII 字元指定為十六進位字元碼。 例如，您能以一般 C 逸出序列 (**\b**) 指定 ASCII 退格鍵字元，或是將它編碼為 **\010** (八進位) 或 **\x008** (十六進位)。  
   
  在八進位逸出序列中只能使用數字 0 到 7。 八進位逸出序列的長度絕不可超過三位數，而且會在遇到不是八進位數字的第一個字元時結束。 雖然您不需要這三個位數全部使用，但是必須至少使用一個。 例如，ASCII 退格鍵字元的八進位表示法為 **\10**，字母 A 則是 **\101**，如 ASCII 圖表中所示。  
   

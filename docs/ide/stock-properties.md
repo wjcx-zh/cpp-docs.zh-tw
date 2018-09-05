@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335430"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213789"
 ---
 # <a name="stock-properties"></a>內建屬性
 如果您想要使用 [[新增屬性精靈]](../ide/idl-attributes-add-property-wizard.md) 將屬性新增至 MFC 分配介面 (Dispinterface)，您可以在精靈的 [[名稱]](../ide/names-add-property-wizard.md) 頁面中，從 **[屬性名稱]** 清單選擇內建屬性。 這些屬性如下所示：  
@@ -35,7 +35,7 @@ ms.locfileid: "33335430"
 |**字型**|傳回或設定控制項的環境字型。 如果控制項沒有字型，則為 Null。|  
 |`ForeColor`|傳回或設定控制項的環境 `ForeColor` 屬性。|  
 |**hWnd**|傳回或設定控制項的 **hWnd** 屬性。 **hWnd** 沒有**成員變數**實作類型。|  
-|**ReadyState**|傳回或設定控制項的 **ReadyState** 屬性。 控制項可以是未初始化、已初始化、正在載入、互動式或完成。 如需詳細資訊，請參閱「網際網路 SDK」中的 [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx)。|  
+|**ReadyState**|傳回或設定控制項的 **ReadyState** 屬性。 控制項可以是未初始化、已初始化、正在載入、互動式或完成。 如需詳細資訊，請參閱「網際網路 SDK」中的 [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)。|  
 |**Text**|傳回或設定控制項內含的文字。 **Text** 沒有**成員變數**實作類型。|  
   
 ## <a name="see-also"></a>請參閱  

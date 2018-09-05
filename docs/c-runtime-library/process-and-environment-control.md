@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392467"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200959"
 ---
 # <a name="process-and-environment-control"></a>處理序控制和環境控制
 
@@ -56,7 +56,7 @@ ms.locfileid: "32392467"
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|呼叫 **atexit** 和 **_onexit** 註冊的函式、清除所有緩衝區、關閉所有開啟的檔案，並且終止處理序|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|立即終止處理序，但不呼叫 **atexit** 或 **_onexit** 或清除緩衝區|
 |[getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|取得環境變數的值|
-|[_getpid](../c-runtime-library/reference/getpid.md)|取得處理序 ID 編號|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|取得處理序 ID 編號|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|還原儲存的堆疊環境；使用它來執行非區域的 **goto**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|排程常式在程式終止時執行；為了與 Microsoft C/C++ 版本 7.0 或更早版本的相容性而使用|
 |[_pclose](../c-runtime-library/reference/pclose.md)|等候新的命令處理程式，然後關閉相關管道上的資料流|

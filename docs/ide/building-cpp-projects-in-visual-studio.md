@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340498"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195862"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中建置 C++ 專案
 在 Visual Studio 整合式開發環境 (IDE) 中，有數種方法可以建置整個方案或僅在其中建置一個專案。 您還可以修改建置設定，並指定自訂建置步驟，以讓您的開發處理程序更加有效。  
@@ -50,7 +50,7 @@ ms.locfileid: "33340498"
   
  當您在 Visual Studio 中建置 Visual C++ 應用程式時，您可以在專案的 [屬性頁] 對話方塊中，修改許多建置設定。 如需如何設定專案屬性的資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
- 如需如何使用 IDE 來建立、建置及偵錯 C++ 專案的範例，請參閱[逐步解說：使用 C++ 探索 Visual Studio IDE](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 如需如何使用 IDE 建置 C++/CLR 專案，請參閱[逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 如需如何使用 IDE 來建立 Windows 執行階段應用程式的範例，請參閱[使用 C++ 建立您的第一個 Windows 執行階段應用程式](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
+ 如需如何使用 IDE 來建立、建置及偵錯 C++ 專案的範例，請參閱[逐步解說：使用 C++ 探索 Visual Studio IDE](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 如需如何使用 IDE 建置 C++/CLR 專案，請參閱[逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 如需如何使用 IDE 來建立 Windows 執行階段應用程式的範例，請參閱[使用 C++ 建立您的第一個 Windows 執行階段應用程式](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
   
  若要閱讀如何建置、修改建置設定及指定自訂建置步驟的更多資訊，請參閱下列文章。  
   

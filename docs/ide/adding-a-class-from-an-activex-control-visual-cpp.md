@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b676e35dcf98ef7ae1f41e4a91922d689bd40409
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322402"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202135"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>自 ActiveX 控制項加入類別 (Visual C++)
 使用此精靈從可用 ActiveX 控制項中的介面建立 MFC 類別。 您可以將 MFC 類別新增至 [MFC 應用程式](../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "33322402"
   
 ### <a name="to-add-an-mfc-class-from-an-activex-control"></a>從 ActiveX 控制項新增 MFC 類別  
   
-1.  在 [方案總管] 或[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，以滑鼠右鍵按一下您要將 ActiveX 控制項類別新增至其中的專案名稱。  
+1.  在 [方案總管] 或[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，以滑鼠右鍵按一下您要將 ActiveX 控制項類別新增至其中的專案名稱。  
   
 2.  從捷徑功能表按一下 [新增]，然後按一下 [新增類別]。  
   

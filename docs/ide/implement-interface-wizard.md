@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195191"
 ---
 # <a name="implement-interface-wizard"></a>實作介面精靈
 這個精靈將實作 COM 物件的介面。 許多介面的實作會包含在 Visual Studio 和 Windows 所提供的 COM 程式庫中。 建立該物件的執行個體時，介面實作會與物件建立關聯，而且它會提供物件所提供的服務。  
   
- 如需介面和實作的討論，請參閱 Windows SDK 中的[介面和介面實作](http://msdn.microsoft.com/library/windows/desktop/ms694356)。  
+ 如需介面和實作的討論，請參閱 Windows SDK 中的[介面和介面實作](/windows/desktop/com/interfaces-and-interface-implementations)。  
   
  **實作介面來源**  
  指定從中建立介面之型別程式庫的位置。  

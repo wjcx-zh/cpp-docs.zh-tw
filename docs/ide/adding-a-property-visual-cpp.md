@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212791"
 ---
 # <a name="adding-a-property-visual-c"></a>加入屬性 (Visual C++)
 您可以使用[新增屬性精靈](../ide/names-add-property-wizard.md)將方法新增至專案中的介面。  
   
 ### <a name="to-add-a-property-to-your-object"></a>將屬性新增至您的物件  
   
-1.  在[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，以滑鼠右鍵按一下您要新增屬性的介面名稱。  
+1.  在[類別檢視](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，以滑鼠右鍵按一下您要新增屬性的介面名稱。  
   
     > [!NOTE]
     >  您也可以將屬性新增至分配介面，除非專案有屬性，否則它會巢狀位於程式庫節點內。  
@@ -49,5 +49,5 @@ ms.locfileid: "33327576"
 ## <a name="see-also"></a>請參閱  
  [建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)   
  [編輯 COM 介面](../ide/editing-a-com-interface.md)   
- [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [介面指標和介面](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [元件物件模型](/windows/desktop/com/the-component-object-model)   
+ [介面指標和介面](/windows/desktop/com/interface-pointers-and-interfaces)

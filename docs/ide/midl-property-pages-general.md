@@ -25,35 +25,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329978"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204685"
 ---
 # <a name="midl-property-pages-general"></a>MIDL 屬性頁：一般
 **MIDL** 資料夾中的 [一般] 屬性頁指定下列 MIDL 編譯器選項：  
   
--   前置處理器定義 [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   前置處理器定義 [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   其他 Include 目錄 ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   其他 Include 目錄 ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   忽略標準 Include 路徑 ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   忽略標準 Include 路徑 ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   MkTypLib 相容 ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   MkTypLib 相容 ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   警告層級 ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   警告層級 ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   警告視為錯誤 ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   警告視為錯誤 ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   隱藏程式啟始資訊 ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   隱藏程式啟始資訊 ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   MIDL Char 型別 ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   MIDL Char 型別 ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   目標環境 ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   目標環境 ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   產生 Stubless Proxy ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   產生 Stubless Proxy ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
  如需如何存取 **MIDL** 資料夾中 [一般] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   

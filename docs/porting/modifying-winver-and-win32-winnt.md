@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007f8b07b78618f4fdd8031d0f6dab5f1c12916
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6593168e87f8a0dde1dd996aeadf2d225adbbe72
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912637"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194175"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>修改 WINVER 和 _WIN32_WINNT
 
@@ -59,11 +59,11 @@ Visual C++ 不再支援將 Windows 95、Windows 98、Windows ME、Windows NT 或
 若您發現目前查看的 SDKDDKVer.h 複本未列出所有的 Windows 版本，表示您可能使用舊版的 Windows SDK。 根據預設，Visual Studio 2017 中的 Win32 專案使用 Windows 10 SDK。   
   
 > [!NOTE]
->  如果您在應用程式中包含內部 MFC 標頭，則不保證值能夠運作。  
+> 如果您在應用程式中包含內部 MFC 標頭，則不保證值能夠運作。  
   
-您也可以利用 **/D** 編譯器選項，定義此巨集。 如需詳細資訊，請參閱 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。  
+您也可以利用 `/D` 編譯器選項，定義此巨集。 如需詳細資訊，請參閱 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。  
   
-如需這些巨集的意義的相關資訊，請參閱 [使用 Windows 標頭](https://msdn.microsoft.com/library/windows/desktop/aa383745)。  
+如需這些巨集的意義的相關資訊，請參閱 [使用 Windows 標頭](/windows/desktop/WinProg/using-the-windows-headers)。  
   
 ## <a name="see-also"></a>請參閱  
 

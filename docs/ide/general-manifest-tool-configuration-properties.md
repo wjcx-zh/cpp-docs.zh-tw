@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1953e7c37c07f66845510efe037015a537aa7baa
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef1eb1c0c1ee8c9fb2814bc7cd808ea2e524b8a4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329084"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200329"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>一般、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
-使用此對話方塊即可指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的一般選項。  
+使用此對話方塊即可指定 [Mt.exe](https://msdn.microsoft.com/library/aa375649) 的一般選項。  
   
  若要存取此屬性頁對話方塊，請開啟您專案或屬性工作表的屬性頁。 展開 [組態屬性] 下的 [資訊清單工具] 節點，然後選取 [一般]。  
   

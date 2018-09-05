@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 69421faced2873a4083cc6edbf7dd86e15f3cd9e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33322285"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199079"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 \<summary> 標記應該用來描述類型或類型成員。 使用 [\<remarks>](../ide/remarks-visual-cpp.md) 新增類型描述的補充資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "33322285"
  物件的摘要。  
   
 ## <a name="remarks"></a>備註  
- \<summary> 標記的文字是 IntelliSense 中型別的唯一資訊來源，也會顯示在[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)和程式碼結構 Web 報告中。  
+ \<summary> 標記的文字是 IntelliSense 中型別的唯一資訊來源，也會顯示在[物件瀏覽器](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)和程式碼結構 Web 報告中。  
   
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   

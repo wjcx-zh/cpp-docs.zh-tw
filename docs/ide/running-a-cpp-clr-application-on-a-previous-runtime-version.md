@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 20a20002397e285680927fe519e4eac7b68cc343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323611"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216558"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在舊版執行階段版本上執行 C++ /clr 應用程式
 除非另行指定，否則 C++ .NET Framework 應用程式已建置為在編譯器用來建置應用程式的 Common Language Runtime (CLR) 版本上執行。 不過，針對一個版本的執行階段所建置的 .exe 應用程式，可以在提供必要功能的任何其他版本上執行。  
@@ -37,7 +37,7 @@ ms.locfileid: "33323611"
   
  如果您指定多個執行階段版本，而且應用程式在具有多個已安裝執行階段版本的電腦上執行，則應用程式會使用 config 檔中所指定且已安裝的第一個版本。  
   
- 如需詳細資訊，請參閱[如何：將應用程式設定成以 .NET Framework 版本為目標](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)。  
+ 如需詳細資訊，請參閱[如何：將應用程式設定成以 .NET Framework 版本為目標](https://msdn.microsoft.com/5247b307-89ca-417b-8dd0-e8f9bd2f4717)。  
   
  若要在 1.0 版或 1.1 版的 CLR 上執行，由 Visual C++ 編譯器所建置的應用程式，必須使用 [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) 編譯。  
   

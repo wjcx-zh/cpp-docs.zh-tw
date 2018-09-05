@@ -75,7 +75,6 @@
 ## [轉散發 Visual C++ 檔案](redistributing-visual-cpp-files.md)
 ### [使用合併模組來轉散發元件](redistributing-components-by-using-merge-modules.md)
 ### [轉散發 Visual C++ ActiveX 控制項](redistributing-visual-cpp-activex-controls.md)
-### [轉散發資料庫支援檔案](redistributing-database-support-files.md)
 ### [轉散發 MFC 程式庫](redistributing-the-mfc-library.md)
 ### [轉散發 ATL 應用程式](redistributing-an-atl-application.md)
 ## [部署範例](deployment-examples.md)

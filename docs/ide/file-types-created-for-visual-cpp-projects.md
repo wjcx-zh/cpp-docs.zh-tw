@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc0bc1789e4fc4f11b9d0becfda656a42d0ec95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 29ab603001405056626af0debbde7b6f8ef78704
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214192"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690571"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>為 Visual C++ 專案建立的檔案類型
 本主題描述所有類型的檔案，該檔案與適用於傳統桌面應用程式的 Visual C + + 專案相關聯。 您的專案中包含的實際檔案取決於專案類型以及您使用精靈時選取的選項。  
@@ -73,7 +73,7 @@ ms.locfileid: "43214192"
 |.HxC|專案|說明專案檔。|  
 |.ico|資源|圖示點陣圖形檔。|  
 |.idb|編譯|狀態檔，其中包含原始程式檔與類別定義之間的相依性資訊，編譯器可以在最少重建和累加編譯期間使用該資訊。 使用 [/Fd](../build/reference/fd-program-database-file-name.md) 編譯器選項以指定 .idb 檔的名稱。 如需詳細資訊，請參閱 [/Gm (啟用最少重建)](../build/reference/gm-enable-minimal-rebuild.md) 。|  
-|.idl|編譯|介面定義語言檔。 如需詳細資訊，請參閱 Windows SDK 中的 [Interface Definition (IDL) File](https://msdn.microsoft.com/library/windows/desktop/aa378712) (介面定義 (IDL) 檔)。|  
+|.idl|編譯|介面定義語言檔。 如需詳細資訊，請參閱 Windows SDK 中的 [Interface Definition (IDL) File](/windows/desktop/Rpc/the-interface-definition-language-idl-file) (介面定義 (IDL) 檔)。|  
 |.ilk|連結|累加連結檔案。 如需詳細資訊，請參閱 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 。|  
 |.map|連結|包含連結器資訊的文字檔。 使用 [/Fm](../build/reference/fm-name-mapfile.md) 編譯器選項來命名對應檔。 如需詳細資訊，請參閱 [/MAP](../build/reference/map-generate-mapfile.md) 。|  
 |.mfcribbon-ms|資源|資源檔，其中包含定義功能區按鈕、控制項和屬性的 XML 程式碼。 如需詳細資訊，請參閱 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
@@ -81,7 +81,7 @@ ms.locfileid: "43214192"
 |.pch|偵錯|先行編譯標頭檔。|  
 |.rc、.rc2|資源|用以產生資源的[資源指令碼檔](../windows/working-with-resource-files.md) 。|  
 |.sbr|編譯|原始程式瀏覽器中繼檔案。 [BSCMAKE](../build/reference/bscmake-options.md)的輸入檔。|  
-|.sln|方案|「方案」[](https://msdn.microsoft.com/a45c299d-69f5-4b67-879d-1383417df0a7)檔。|  
+|.sln|方案|[「方案」](/visualstudio/ide/solutions-and-projects-in-visual-studio)檔。|  
 |.suo|方案|方案選項檔。|  
 |.txt|資源|文字檔，通常是「讀我」檔案。|  
 |.vap|專案|Visual Studio Analyzer 專案檔。|  

@@ -1,7 +1,7 @@
 ---
-title: 執行 NMAKE |Microsoft 文件
+title: 執行 NMAKE |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -20,31 +20,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29516dcbcf650225ec3b86eee9e135a35bff82f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379701"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894638"
 ---
 # <a name="running-nmake"></a>執行 NMAKE
-## <a name="syntax"></a>語法  
-  
-```  
-NMAKE [option...] [macros...] [targets...] [@commandfile...]  
-```  
-  
-## <a name="remarks"></a>備註  
- 只有指定 NMAKE 組建*目標*或未指定，如果第一個目標 makefile 中的。 第一個 makefile 目標可以是[虛擬目標](../build/pseudotargets.md)來建置其他目標。 NMAKE 使用 /F; 使用指定的 makefile如果未指定 /F，它會使用 Makefile 中的檔案目前的目錄。 如果未不指定任何 makefile，建置命令列使用推斷規則*目標*。  
-  
- `commandfile`文字檔案 （或回應檔） 包含命令列輸入。 其他輸入可以前面或後面的`commandfile`。 允許的路徑。 在`commandfile`，分行符號會被視為空格。 如果包含空格，請將巨集括在引號中。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
- [NMAKE 選項](../build/nmake-options.md)  
-  
- [Tools.ini 和 NMAKE](../build/tools-ini-and-nmake.md)  
-  
- [NMAKE 的結束代碼](../build/exit-codes-from-nmake.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [NMAKE 參考](../build/nmake-reference.md)
+
+## <a name="syntax"></a>語法
+
+> **NMAKE** [*選項*...][*巨集*...][*目標*...][**\@**<em>commandfile&lt</em> ...]
+
+## <a name="remarks"></a>備註
+
+只有指定的 NMAKE 組建*目標*或，如果未指定，第一個目標的 makefile 中。 第一次的 makefile 目標可以是[虛擬目標](../build/pseudotargets.md)建置的其他目標。 NMAKE 使用 /F; 使用指定的 makefile如果未指定 /F，它會使用目前的目錄中的 Makefile 檔案。 如果未不指定任何 makefile，建置命令列使用推斷規則*目標*。
+
+*Commandfile&lt*文字檔案 （或回應檔） 包含命令列輸入。 其他輸入可以前面或後面\@ *commandfile&lt*。 允許的路徑。 在  *commandfile&lt*，換行符號會被視為空格。 巨集定義以引號括住包含空格。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
+
+[NMAKE 選項](../build/nmake-options.md)  
+
+[Tools.ini 和 NMAKE](../build/tools-ini-and-nmake.md)  
+
+[NMAKE 的結束代碼](../build/exit-codes-from-nmake.md)  
+
+## <a name="see-also"></a>另請參閱
+
+[NMAKE 參考](../build/nmake-reference.md)

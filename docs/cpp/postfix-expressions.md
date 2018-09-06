@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e7ab8ad911869cab56df12b08b9688b9912f2a63
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403137"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895158"
 ---
 # <a name="postfix-expressions"></a>後置運算式
 後置運算式包含主要運算式，或後置運算子後面接著主要運算式的運算式。 下表列出後置運算子。  
@@ -50,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 在上述運算式中，`func`是主要運算式中，`func(1)`是函式後置運算式`func(1)->GetData`是後置運算式，指定類別的成員`func(1)->GetData()`是另一個函式後置運算式，並將整個運算式是遞增 GetData 傳回值的後置運算式。  整個運算式的意義是傳遞 1 做為呼叫 func 的引數，並取得類別的指標做為傳回值。  然後呼叫`GetValue()`該類別，然後傳回的值遞增。  
+ 在上述運算式中，`func`是主要運算式中，`func(1)`是函式後置運算式`func(1)->GetValue`是後置運算式，指定類別的成員`func(1)->GetValue()`是另一個函式後置運算式，並將整個運算式是遞增 GetValue 的傳回值的後置運算式。  整個運算式的意義是傳遞 1 做為呼叫 func 的引數，並取得類別的指標做為傳回值。  然後呼叫`GetValue()`該類別，然後傳回的值遞增。  
   
  以上列出的運算式為指派運算式，表示這些運算式的結果必須是右值。  
   

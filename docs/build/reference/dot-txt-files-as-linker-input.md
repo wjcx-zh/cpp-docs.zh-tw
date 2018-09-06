@@ -1,5 +1,5 @@
 ---
-title: .做為連結器輸入的 Txt 檔案 |Microsoft 文件
+title: .Txt 檔案，做為連結器輸入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b142fd35fd2e29a4d82e7b1aa0741e8f234e21
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd865772b3629939306d835728e5033da763eaa9
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369899"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895262"
 ---
 # <a name="txt-files-as-linker-input"></a>.Txt 檔做為連結器輸入
-LINK 可接受各種文字檔案做為其他的輸入。 [命令檔](../../build/reference/link-command-files.md)規範 (@) 和[基底位址](../../build/reference/base-base-address.md)（/ 基底） [/DEF](../../build/reference/def-specify-module-definition-file.md)，和[/](../../build/reference/order-put-functions-in-order.md)所有的選項會指定文字檔案。 這些檔案可以具有任何副檔名，不只是.txt。  
-  
-## <a name="see-also"></a>另請參閱  
- [LINK 輸入的檔](../../build/reference/link-input-files.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+連結中，必須要有各種不同的文字檔做為額外的輸入。 [命令檔](../../build/reference/link-command-files.md)規範 (**\@**) 和[基底位址](../../build/reference/base-base-address.md)（/ 基底）、 [/DEF](../../build/reference/def-specify-module-definition-file.md)，以及[/ORDER](../../build/reference/order-put-functions-in-order.md)所有的選項會指定文字檔案。 這些檔案可以有任何擴充功能，不只是.txt。
+
+## <a name="see-also"></a>另請參閱
+
+[LINK 輸入的檔](../../build/reference/link-input-files.md)   
+[連結器選項](../../build/reference/linker-options.md)

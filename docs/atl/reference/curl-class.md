@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753723"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895288"
 ---
 # <a name="curl-class"></a>CUrl 類別
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` 可讓您管理的 URL，例如路徑或連接埠的數字欄位。 `CUrl` 了解的格式如下的 Url:
 
-\<配置 >://\<使用者名稱 >:\<密碼 > @\<主機名稱 >:\<連接埠號碼 > /\<UrlPath >\<ExtraInfo >
+\<配置 >://\<使用者名稱 >:\<密碼 >\@\<主機名稱 >:\<連接埠號碼 > /\<UrlPath >\<ExtraInfo >
 
 （某些欄位是選擇性的）。例如，請考慮此 URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl)剖析它，如下所示：
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - 密碼: 「 密碼 」
 
-- 主機名稱:"www.microsoft.com"
+- 主機名稱:"`www.microsoft.com`」
 
 - 連接埠號碼： 80
 
@@ -235,7 +235,7 @@ inline BOOL CreateUrl(
 
 這個方法會附加其個別的欄位，才能建構完整的 URL 字串使用下列格式：
 
-**\<配置 >://\<使用者 >:\<傳遞 > @\<網域 >:\<連接埠 >\<路徑 >\<額外 >**
+**\<配置 >://\<使用者 >:\<傳遞 >\@\<網域 >:\<連接埠 >\<路徑 >\<額外 >**
 
 呼叫這個方法時*pdwMaxLength*參數應該一開始會包含所參考的字串緩衝區的最大長度*lpszUrl*參數。 值*pdwMaxLength*參數將會更新的 URL 字串的實際長度。
 

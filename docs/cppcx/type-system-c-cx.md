@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6137203176722316b802a1da5bb2e67dba36848a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594017"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767773"
 ---
 # <a name="type-system-ccx"></a>類型系統 (C++/CX)
 使用 Windows 執行階段架構，您可以使用 C + + /CX、 Visual Basic、 Visual C# 和 JavaScript 來撰寫應用程式和元件，直接存取 Windows API，並與其他 Windows 執行階段應用程式和元件相互操作。 在 c + + 撰寫的通用 Windows 平台應用程式編譯為直接在 CPU 中執行的原生程式碼。 以 C# 或 Visual Basic 撰寫的通用 Windows 平台應用程式編譯成 Microsoft intermediate language (MSIL)，並在 common language runtime (CLR) 中執行。 在執行階段環境中，執行以 JavaScript 撰寫的通用 Windows 平台應用程式。 Windows 執行階段作業系統元件本身是以 c + + 撰寫，並以原生程式碼執行。 所有這些元件和通用 Windows 平台應用程式直接透過 Windows 執行階段應用程式二進位介面 (ABI) 進行通訊。  

@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e644ec013b4beac6ebc4f7c774f926711dc1093e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609164"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758956"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException 類別
 作業失敗時擲回。 這是 E_FAIL HRESULT 的對等用法。  

@@ -20,11 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590779"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767887"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 類別
 指出應用程式的執行緒模型為單一執行緒 Apartment (STA)。  

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584116"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767603"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 類別與結構 (C++/CX)
 C + + /CX 支援使用者定義*ref 類別*並*ref struct*，和使用者定義*值類別*並*值結構*。 這些資料結構是主要的容器的 C + /CX 支援 Windows 執行階段類型系統。 其內容會發出至中繼資料，根據某些特定的規則，這可讓它們在 Windows 執行階段元件和以 c + + 或其他語言所撰寫的通用 Windows 平台應用程式之間傳遞。  

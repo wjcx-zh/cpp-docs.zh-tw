@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394690"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764783"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -74,11 +74,11 @@ void *bsearch(
 
 ## <a name="return-value"></a>傳回值
 
-**bsearch**讓指標回到發生*金鑰*所指陣列中*基底*。 如果*金鑰*找不到，則函數會傳回**NULL**。 如果陣列不是以遞增排序次序，或是包含具有相同索引鍵的重複記錄，則無法預測結果。
+**bsearch**讓指標回到一段*金鑰*所指陣列中*基底*。 如果*金鑰*找不到，則函數會傳回**NULL**。 如果陣列不是以遞增排序次序，或是包含具有相同索引鍵的重複記錄，則無法預測結果。
 
 ## <a name="remarks"></a>備註
 
-**Bsearch**函式會執行的已排序陣列的二進位搜尋*數目*項目，每個*寬度*個位元組大小。 *基底*值是要搜尋之陣列的基底指標和*金鑰*是要搜尋的值。 *比較*參數是指向使用者所提供的常式會比較要求的索引鍵陣列項目，並傳回下列值指定其關聯性的其中一個：
+**Bsearch**函式會執行二進位搜尋的已排序陣列*數目*項目，每個*寬度*個位元組大小。 *基底*的值是要搜尋之陣列的基底的指標並*金鑰*是要搜尋的值。 *比較*參數是使用者所提供的常式會比較要求的索引鍵的陣列項目，並傳回其中一個指定其關聯性的下列值的指標：
 
 |傳回值*比較*常式|描述|
 |-----------------------------------------|-----------------|
@@ -86,11 +86,11 @@ void *bsearch(
 |0|索引鍵等於陣列項目。|
 |> 0|索引鍵大於陣列項目。|
 
-這個函式會驗證它的參數。 如果*比較*，*金鑰*或*數目*是**NULL**，或如果*基底*是**NULL**和 **數目*非零，或如果*寬度*是零，則無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
+這個函式會驗證它的參數。 如果*比較*，*金鑰*或*號碼*是**NULL**，或如果*基底*是**NULL**並*數字*為非零值，或如果*寬度*為零，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為`EINVAL`和函式會傳回**NULL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> 和 \<search.h>|
 

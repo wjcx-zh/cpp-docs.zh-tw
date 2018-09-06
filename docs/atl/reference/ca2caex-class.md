@@ -19,123 +19,137 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879240"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764975"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 類別
-這個類別會使用字串轉換巨集 CA2CTEX CT2CAEX 和 typedef CA2CA。  
-  
+
+這個類別會使用字串轉換巨集 CA2CTEX CT2CAEX 和 typedef CA2CA。
+
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。  
-  
-## <a name="syntax"></a>語法  
-  
+>  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+
+## <a name="syntax"></a>語法
+
 ```
 template<int t_nBufferLength = 128>  
 class CA2CAEX
-```  
-  
-#### <a name="parameters"></a>參數  
- *t_nBufferLength*  
- 轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CA2CAEX::CA2CAEX](#ca2caex)|建構函式。|  
-|[CA2CAEX:: ~ CA2CAEX](#dtor)|解構函式。|  
-  
-### <a name="public-operators"></a>公用運算子  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|轉換運算子。|  
-  
-### <a name="public-data-members"></a>公用資料成員  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CA2CAEX::m_psz](#m_psz)|儲存在來源字串資料成員。|  
-  
-## <a name="remarks"></a>備註  
- 除非需要額外的功能，使用 CA2CTEX、 CT2CAEX 或 CA2CA 在自己的程式碼。  
-  
- 這個類別能夠安全地在迴圈中使用，而且不會堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
-  
- 下列巨集根據此類別：  
-  
-- CA2CTEX  
-  
-- CT2CAEX  
-  
- 下列的 typedef 根據此類別：  
-  
-- CA2CA  
-  
- 如需這些文字轉換巨集的討論，請參閱 < [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlconv.h  
-  
-##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
- 建構函式。  
-  
+```
+
+#### <a name="parameters"></a>參數
+
+*t_nBufferLength*  
+轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。
+
+## <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[CA2CAEX::CA2CAEX](#ca2caex)|建構函式。|
+|[CA2CAEX:: ~ CA2CAEX](#dtor)|解構函式。|
+
+### <a name="public-operators"></a>公用運算子
+
+|名稱|描述|
+|----------|-----------------|
+|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|轉換運算子。|
+
+### <a name="public-data-members"></a>公用資料成員
+
+|名稱|描述|
+|----------|-----------------|
+|[CA2CAEX::m_psz](#m_psz)|儲存在來源字串資料成員。|
+
+## <a name="remarks"></a>備註
+
+除非需要額外的功能，使用 CA2CTEX、 CT2CAEX 或 CA2CA 在自己的程式碼。
+
+這個類別能夠安全地在迴圈中使用，而且不會堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。
+
+下列巨集根據此類別：
+
+- CA2CTEX
+
+- CT2CAEX
+
+下列的 typedef 根據此類別：
+
+- CA2CA
+
+如需這些文字轉換巨集的討論，請參閱 < [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。
+
+## <a name="example"></a>範例
+
+請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlconv.h
+
+##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX
+
+建構函式。
+
 ```
 CA2CAEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2CAEX(LPCSTR psz) throw(...);
-```  
-  
-### <a name="parameters"></a>參數  
- *psz*  
- 要轉換的文字字串。  
-  
- *nCodePage*  
- 未使用這個類別中。  
-  
-### <a name="remarks"></a>備註  
- 建立做為轉換所需的緩衝區。  
-  
-##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
- 解構函式。  
-  
+```
+
+### <a name="parameters"></a>參數
+
+*psz*  
+要轉換的文字字串。
+
+*nCodePage*  
+未使用這個類別中。
+
+### <a name="remarks"></a>備註
+
+建立做為轉換所需的緩衝區。
+
+##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX
+
+解構函式。
+
 ```
 ~CA2CAEX() throw();
-```  
-  
-### <a name="remarks"></a>備註  
- 釋放配置的緩衝區。  
-  
-##  <a name="m_psz"></a>  CA2CAEX::m_psz  
- 儲存在來源字串資料成員。  
-  
+```
+
+### <a name="remarks"></a>備註
+
+釋放配置的緩衝區。
+
+##  <a name="m_psz"></a>  CA2CAEX::m_psz
+
+儲存在來源字串資料成員。
+
 ```
 LPCSTR m_psz;
-```  
-  
-##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR  
- 轉換運算子。  
-  
+```
+
+##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR
+
+轉換運算子。
+
 ```  
 operator LPCSTR() const throw();
-```  
-  
-### <a name="return-value"></a>傳回值  
- 當輸入 LPCSTR，傳回文字字串。  
-  
-## <a name="see-also"></a>另請參閱  
- [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
- [CA2WEX 類別](../../atl/reference/ca2wex-class.md)   
- [CW2AEX 類別](../../atl/reference/cw2aex-class.md)   
- [CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
- [CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>傳回值
+
+當輸入 LPCSTR，傳回文字字串。
+
+## <a name="see-also"></a>另請參閱
+
+[CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
+[CA2WEX 類別](../../atl/reference/ca2wex-class.md)   
+[CW2AEX 類別](../../atl/reference/cw2aex-class.md)   
+[CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
+[CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)

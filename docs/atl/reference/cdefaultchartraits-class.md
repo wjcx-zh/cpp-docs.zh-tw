@@ -19,68 +19,78 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 080a7b9f5da71535f8b141555ec1890a521fe715
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881850"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761978"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 類別
-這個類別提供兩個靜態函式之間大寫和小寫字元轉換。  
-  
-## <a name="syntax"></a>語法  
-  
+
+這個類別提供兩個靜態函式之間大寫和小寫字元轉換。
+
+## <a name="syntax"></a>語法
+
 ```
 template <typename T>  
 class CDefaultCharTraits
-```  
-  
-#### <a name="parameters"></a>參數  
- *T*  
- 若要在集合中儲存的資料型別。  
-  
-## <a name="members"></a>成員  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[CDefaultCharTraits::CharToLower](#chartolower)|（靜態）呼叫此函式可將字元轉換成大寫。|  
-|[CDefaultCharTraits::CharToUpper](#chartoupper)|（靜態）呼叫此函式可將字元轉換成小寫。|  
-  
-## <a name="remarks"></a>備註  
- 這個類別會提供函式所使用的類別[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
-  
-## <a name="requirements"></a>需求  
- **標頭：** atlcoll.h  
-  
-##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower  
- 呼叫此函式可將字元轉換成小寫。  
-  
+```
+
+#### <a name="parameters"></a>參數
+
+*T*  
+若要在集合中儲存的資料型別。
+
+## <a name="members"></a>成員
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[CDefaultCharTraits::CharToLower](#chartolower)|（靜態）呼叫此函式可將字元轉換成大寫。|
+|[CDefaultCharTraits::CharToUpper](#chartoupper)|（靜態）呼叫此函式可將字元轉換成小寫。|
+
+## <a name="remarks"></a>備註
+
+這個類別會提供函式所使用的類別[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。
+
+## <a name="requirements"></a>需求
+
+**標頭：** atlcoll.h
+
+##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower
+
+呼叫此函式可將字元轉換成小寫。
+
 ```
 static wchar_t CharToLower(wchar_t x);  
 static char CharToLower(char x);
-```  
-  
-### <a name="parameters"></a>參數  
- *x*  
- 要轉換為小寫的字元。  
-  
-### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
-  
-##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  
- 呼叫此函式可將字元轉換成大寫。  
-  
+```
+
+### <a name="parameters"></a>參數
+
+*x*  
+要轉換為小寫的字元。
+
+### <a name="example"></a>範例
+
+[!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]
+
+##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper
+
+呼叫此函式可將字元轉換成大寫。
+
 ```
 static wchar_t CharToUpper(wchar_t x);  
 static char CharToUpper(char x);
-```  
-  
-### <a name="parameters"></a>參數  
- *x*  
- 要轉換為大寫的字元。  
-  
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>參數
+
+*x*  
+要轉換為大寫的字元。
+
+## <a name="see-also"></a>另請參閱
+
+[類別概觀](../../atl/atl-class-overview.md)

@@ -17,35 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7119dca24a6b6ec5b66e52d7e2c01cd66985e764
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4b93a93b545d03875167ccd641fa3e0867c371a8
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848372"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759368"
 ---
 # <a name="specifying-property-pages"></a>指定屬性頁
-當您建立 ActiveX 控制項時，您通常要關聯可用來設定您的控制項屬性的屬性頁。 控制容器使用`ISpecifyPropertyPages`介面，以了解哪些屬性頁面可以用來設定您的控制項屬性。 您必須在您的控制項上實作這個介面。  
-  
- 若要實作`ISpecifyPropertyPages`使用 ATL，採取下列步驟：  
-  
-1.  衍生您的類別，從[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。  
-  
-2.  新增項目`ISpecifyPropertyPages`類別的 COM 對應。  
-  
-3.  新增[PROP_PAGE](reference/property-map-macros.md#prop_page)每個頁面與您的控制項相關聯的屬性對應的項目。  
-  
+
+當您建立 ActiveX 控制項時，您通常要關聯可用來設定您的控制項屬性的屬性頁。 控制容器使用`ISpecifyPropertyPages`介面，以了解哪些屬性頁面可以用來設定您的控制項屬性。 您必須在您的控制項上實作這個介面。
+
+若要實作`ISpecifyPropertyPages`使用 ATL，採取下列步驟：
+
+1. 衍生您的類別，從[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。
+
+2. 新增項目`ISpecifyPropertyPages`類別的 COM 對應。
+
+3. 新增[PROP_PAGE](reference/property-map-macros.md#prop_page)每個頁面與您的控制項相關聯的屬性對應的項目。
+
 > [!NOTE]
->  產生標準控制項使用時[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)，您只需要將 PROP_PAGE 項目加入至屬性對應。 精靈會產生必要的程式碼，如需其他步驟。  
-  
- 正常運作的容器會顯示指定的屬性頁中 PROP_PAGE 中的項目屬性對應的順序相同。 一般而言，您應該放置標準屬性頁面項目之後的項目屬性對應，在自訂頁面，讓使用者看到專屬於您控制的頁面第一次。  
-  
-## <a name="example"></a>範例  
- 下列類別日曆控制項會使用`ISpecifyPropertyPages`介面，以判斷可以使用自訂日期頁面和 [內建的色彩] 頁面來設定其屬性的容器。  
-  
- [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
-  
-## <a name="see-also"></a>另請參閱  
- [屬性頁](../atl/atl-com-property-pages.md)   
- [ATLPages 範例](../visual-cpp-samples.md)
+>  產生標準控制項使用時[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)，您只需要將 PROP_PAGE 項目加入至屬性對應。 精靈會產生必要的程式碼，如需其他步驟。
+
+正常運作的容器會顯示指定的屬性頁中 PROP_PAGE 中的項目屬性對應的順序相同。 一般而言，您應該放置標準屬性頁面項目之後的項目屬性對應，在自訂頁面，讓使用者看到專屬於您控制的頁面第一次。
+
+## <a name="example"></a>範例
+
+下列類別日曆控制項會使用`ISpecifyPropertyPages`介面，以判斷可以使用自訂日期頁面和 [內建的色彩] 頁面來設定其屬性的容器。
+
+[!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]
+
+## <a name="see-also"></a>另請參閱
+
+[屬性頁](../atl/atl-com-property-pages.md)   
+[ATLPages 範例](../visual-cpp-samples.md)
 

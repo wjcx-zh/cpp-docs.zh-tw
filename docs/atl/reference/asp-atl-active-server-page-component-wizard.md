@@ -1,5 +1,5 @@
 ---
-title: ASP，ATL Active Server Page 元件精靈 |Microsoft 文件
+title: ASP，ATL Active Server Page 元件精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe27a64a2086f08c5a29e2961d069771fdbc4e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356135"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761939"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL Active Server Page 元件精靈
-使用 ATL Active Server Page 元件精靈的這個頁面可指定選擇性設定處理資訊和相關 ASP 元件的狀態。  
-  
- **選擇性方法**  
- 會加入選擇性的 ASP 方法， **OnStartPage**和**OnEndPage**，對您物件。 若要設定的任何 Active Server Pages 內建函式物件，就必須選取此選項。 根據預設，它會選取。  
-  
--   **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)稱為第一次指令碼嘗試存取的物件。 **OnEndPage**物件完成時，會呼叫處理指令碼。  
-  
- **內建物件**  
- 您必須選取**OnStartPage/OnEndPage**選項可用來設定任何 ASP 內建物件。  
-  
-|選項|描述|  
-|------------|-----------------|  
-|**要求**|Active Server Pages 內建函式提供存取**要求**物件。 要求物件用來將 HTTP 要求。|  
-|**回應**|Active Server Pages 內建函式提供存取**回應**物件。 要求的回應，回應物件會將資訊傳送到瀏覽器顯示給使用者。|  
-|**工作階段**|Active Server Pages 內建函式提供存取**工作階段**物件。 **工作階段**物件會維護目前使用者工作階段，包括儲存及擷取狀態資訊的相關資訊。|  
-|**應用程式**|Active Server Pages 內建函式提供存取**應用程式**物件。 **應用程式**物件管理跨多個 ASP 物件共用的狀態。|  
-|**伺服器**|Active Server Pages 內建函式提供存取**伺服器**物件。 **伺服器**物件可讓您建立其他 ASP 物件。|  
-  
-## <a name="see-also"></a>另請參閱  
- [ATL Active Server Page 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)   
- [ATL Active Server Page 元件](../../atl/reference/adding-an-atl-active-server-page-component.md)
+
+使用 ATL Active Server Page 元件精靈的這個頁面可指定選擇性設定處理資訊和與您的 ASP 元件的狀態。
+
+**選擇性方法**  
+新增選擇性的 ASP 方法中， **OnStartPage**並**OnEndPage**，您的物件。 若要設定任何 Active Server Pages 的內建物件，就必須選取此選項。 根據預設，會選取它。
+
+- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)稱為第一次指令碼會嘗試存取的物件。 **OnEndPage**物件完成時，會呼叫處理指令碼。
+
+**內建物件**  
+您必須選取**OnStartPage/OnEndPage**選項可用來設定任何 ASP 內建物件。
+
+|選項|描述|
+|------------|-----------------|
+|**要求**|可讓您存取內建的 Active Server Pages**要求**物件。 Request 物件用來將 HTTP 要求。|
+|**回應**|可讓您存取內建的 Active Server Pages**回應**物件。 要求的回應，回應物件會將資訊傳送到瀏覽器顯示給使用者。|
+|**工作階段**|可讓您存取內建的 Active Server Pages**工作階段**物件。 **工作階段**物件會維護目前的使用者工作階段，包括儲存和擷取狀態資訊的相關資訊。|
+|**應用程式**|可讓您存取內建的 Active Server Pages**應用程式**物件。 **應用程式**物件會管理跨多個 ASP 物件共用的狀態。|
+|**伺服器**|可讓您存取內建的 Active Server Pages **Server**物件。 **Server**物件可讓您建立 ASP 的其他物件。|
+
+## <a name="see-also"></a>另請參閱
+
+[ATL Active Server Page 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)   
+[ATL Active Server Page 元件](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5bb69b65d78b6369d872fd6f953f6ddde382c21b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602285"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759440"
 ---
 # <a name="static-libraries-ccx"></a>靜態程式庫 (C++/CX)
 通用 Windows 平台 (UWP) 應用程式中使用的靜態程式庫可以包含 ISO 標準 c + + 程式碼，包括 STL 型別，以及不會從 Windows 執行階段應用程式平台排除的 Win32 Api 呼叫。 靜態程式庫會使用 Windows 執行階段元件，並可能會建立 Windows 執行階段元件，但有某些限制。  

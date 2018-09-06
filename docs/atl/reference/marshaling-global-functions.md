@@ -16,100 +16,115 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879330"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759466"
 ---
 # <a name="marshaling-global-functions"></a>封送處理全域函式
-這些函式提供封送處理，並將封送處理資料轉換成介面指標的支援。  
-  
+
+這些函式提供封送處理，並將封送處理資料轉換成介面指標的支援。
+
 > [!IMPORTANT]
->  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
-  
-|||  
-|-|-|  
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|釋出的封送處理資料和`IStream`指標。|  
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|建立新的資料流物件，並封送處理指定的介面指標。|  
+>  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。
+
+|||
+|-|-|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|釋出的封送處理資料和`IStream`指標。|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|建立新的資料流物件，並封送處理指定的介面指標。|
 |[AtlUnmarshalPtr](#atlunmarshalptr)|將資料流的封送處理資料轉換成介面指標。|  
 
 ## <a name="requirements"></a>需求：
+
 **標頭：** atlbase.h
-  
-##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream  
- 釋放資料流的封送處理資料，然後釋放資料流指標。  
+
+##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
+
+釋放資料流的封送處理資料，然後釋放資料流指標。  
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);
-```  
-  
-### <a name="parameters"></a>參數  
- *pStream*  
- [in]指標`IStream`上用來封送處理的資料流介面。  
-  
-### <a name="example"></a>範例  
-  範例，請參閱[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
-  
-##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc  
- 建立新的資料流物件、將 Proxy 的 CLSID 寫入資料流，並且藉由將初始化 Proxy 所需的資料寫入資料流的方式封送處理指定的介面指標。  
-  
+```
+
+### <a name="parameters"></a>參數
+
+*pStream*  
+[in]指標`IStream`上用來封送處理的資料流介面。
+
+### <a name="example"></a>範例
+
+範例，請參閱[AtlMarshalPtrInProc](#atlmarshalptrinproc)。
+
+##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
+
+建立新的資料流物件、將 Proxy 的 CLSID 寫入資料流，並且藉由將初始化 Proxy 所需的資料寫入資料流的方式封送處理指定的介面指標。
+
 ```
 HRESULT AtlMarshalPtrInProc(
     IUnknown* pUnk,
     const IID& iid,
     IStream** ppStream);
-```  
-  
-### <a name="parameters"></a>參數  
- *pUnk*  
- [in]要封送處理介面的指標。  
-  
- *iid*  
- [in]封送處理介面的 GUID。  
-  
- *ppStream*  
- [out]指標`IStream`上用來封送處理的新資料流物件的介面。  
-  
-### <a name="return-value"></a>傳回值  
- 標準的 HRESULT 值。  
-  
-### <a name="remarks"></a>備註  
- MSHLFLAGS_TABLESTRONG 旗標會設定，因此指標可以封送處理至多個資料流。 指標也可以解除封送處理多次。  
-  
- 如果封送處理會失敗，則會釋放資料流指標。  
-  
- `AtlMarshalPtrInProc` 僅適用於同處理序物件的指標。  
-  
-### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
-  
-##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr  
- 將資料流的封送處理資料轉換成可供用戶端使用的介面指標。  
-   
+```
+
+### <a name="parameters"></a>參數
+
+*pUnk*  
+[in]要封送處理介面的指標。
+
+*iid*  
+[in]封送處理介面的 GUID。
+
+*ppStream*  
+[out]指標`IStream`上用來封送處理的新資料流物件的介面。
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+MSHLFLAGS_TABLESTRONG 旗標會設定，因此指標可以封送處理至多個資料流。 指標也可以解除封送處理多次。
+
+如果封送處理會失敗，則會釋放資料流指標。
+
+`AtlMarshalPtrInProc` 僅適用於同處理序物件的指標。
+
+### <a name="example"></a>範例
+
+[!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
+
+##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
+
+將資料流的封送處理資料轉換成可供用戶端使用的介面指標。
+
 ```
 HRESULT AtlUnmarshalPtr(
     IStream* pStream,
     const IID& iid,
     IUnknown** ppUnk);
-```  
-  
-### <a name="parameters"></a>參數  
- *pStream*  
- [in]正在 marshaling 資料流的指標。  
-  
- *iid*  
- [in]正在 marshaling 介面的 GUID。  
-  
- *ppUnk*  
- [out]解除封送處理介面的指標。  
-  
-### <a name="return-value"></a>傳回值  
- 標準的 HRESULT 值。  
-  
-### <a name="example"></a>範例  
-  範例，請參閱[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
-  
-## <a name="see-also"></a>另請參閱  
- [函式](../../atl/reference/atl-functions.md)
+```
+
+### <a name="parameters"></a>參數
+
+*pStream*  
+[in]正在 marshaling 資料流的指標。
+
+*iid*  
+[in]正在 marshaling 介面的 GUID。
+
+*ppUnk*  
+[out]解除封送處理介面的指標。
+
+### <a name="return-value"></a>傳回值
+
+標準的 HRESULT 值。
+
+### <a name="example"></a>範例
+
+範例，請參閱[AtlMarshalPtrInProc](#atlmarshalptrinproc)。
+
+## <a name="see-also"></a>另請參閱
+
+[函式](../../atl/reference/atl-functions.md)

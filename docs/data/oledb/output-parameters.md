@@ -19,50 +19,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ae742f27f7e2fd13de9acfc3c814b36c85e9e106
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5f9e0e273df1221801a9b761cd7f45200e0b50c0
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339022"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895080"
 ---
 # <a name="output-parameters"></a>輸出參數
-呼叫預存程序是類似於叫用 SQL 命令。 主要差異是預存程序使用輸出參數 （或 「 outparameters"），並傳回值。  
-  
- 下列預存程序，第一個 '？ '的傳回值 (phone) 和第二個是'？ ' 是輸入的參數 （名稱）：  
-  
+
+呼叫預存程序是類似於叫用 SQL 命令。 主要差異是預存程序使用輸出參數 （或 「 outparameters"），並傳回值。
+
+下列預存程序，第一個 '？ '的傳回值 (phone) 和第二個是'？ ' 是輸入的參數 （名稱）：
+
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
-  
- 您可以指定 in 和 out 參數在參數對應：  
-  
+
+您可以指定 in 和 out 參數在參數對應：
+
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
    SET_PARAM_TYPE(DBPARAMIO_OUTPUT)  
-   COLUMN_ENTRY(1, m_Phone)   // Phone is the return value  
+   COLUMN_ENTRY(1, m_Phone)   // Phone is the return value
    SET_PARAM_TYPE(DBPARAMIO_INPUT)  
-   COLUMN_ENTRY(2, m_Name)   // Name is the input parameter  
+   COLUMN_ENTRY(2, m_Name)   // Name is the input parameter
 END_PARAM_MAP()  
 ```  
-  
- 您的應用程式必須處理從預存程序所傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數，並傳回結果處理期間的不同時間的值。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不會不提供輸出參數和傳回碼，直到取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。  
-  
-## <a name="row-count"></a>資料列計數  
- 如果您執行具有 outparameters 的預存程序使用 OLE DB 消費者樣板，直到您關閉資料列集未設定的資料列計數。  
-  
- 例如，請考慮使用資料列集和具預存程序：  
-  
-```sql  
-create procedure sp_test  
-   @_rowcount integer output  
-as  
-   select top 50 * from test  
-   @_rowcount = @@rowcount  
-return 0  
+
+您的應用程式必須處理從預存程序所傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數，並傳回結果處理期間的不同時間的值。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不會不提供輸出參數和傳回碼，直到取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。
+
+## <a name="row-count"></a>資料列計數
+
+如果您執行具有 outparameters 的預存程序使用 OLE DB 消費者樣板，直到您關閉資料列集未設定的資料列計數。
+
+例如，請考慮使用資料列集和具預存程序：
+
+```sql
+create procedure sp_test
+   @_rowcount integer output
+as
+   select top 50 * from test
+   @_rowcount = @@rowcount
+return 0
 ```  
-  
- @_rowcount具報告測試資料表中實際傳回多少資料列。 不過，此預存程序會限制為最多 50 個資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 您必須呼叫`Close`或`CloseAll`填入具之前擷取其值。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用預存程序](../../data/oledb/using-stored-procedures.md)
+
+\@_Rowcount 具報告測試資料表中實際傳回多少資料列。 不過，此預存程序會限制為最多 50 個資料列數目。 例如，如果在測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 個資料列）。 如果有先前只有 30 個資料列的資料表中，資料列計數會是 30。 您必須呼叫`Close`或`CloseAll`填入具之前擷取其值。
+
+## <a name="see-also"></a>另請參閱
+
+[使用預存程序](../../data/oledb/using-stored-procedures.md)

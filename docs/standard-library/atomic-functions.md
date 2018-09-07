@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540769"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110158"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函式
 
@@ -110,11 +110,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標*不可部分完成*物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+指標*atomic*物件，其中儲存型別的值`Ty`。
 
-*Exp*類型的值的指標`Ty`。
+*Exp*<br/>
+指向 `Ty` 類型值的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -148,15 +151,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+儲存 `Ty` 類型值之 `atomic` 物件的指標。
 
-*Exp*類型的值的指標`Ty`。
+*Exp*<br/>
+指向 `Ty` 類型值的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
-*Diffgr:id="order1*第一[memory_order](../standard-library/atomic-enums.md#memory_order_enum)引數。
+*Diffgr:id="order1*<br/>
+第一個 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數。
 
-*Order2*第二個`memory_order`引數。 值*Order2*無法`memory_order_release`或是`memory_order_acq_rel`，它不能高於值*diffgr:id="order1*。
+*Order2*<br/>
+第二個 `memory_order` 引數。 值*Order2*無法`memory_order_release`或是`memory_order_acq_rel`，它不能高於值*diffgr:id="order1*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -186,11 +194,14 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+儲存 `Ty` 類型值之 `atomic` 物件的指標。
 
-*Exp*類型的值的指標`Ty`。
+*Exp*<br/>
+指向 `Ty` 類型值的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -224,15 +235,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+儲存 `Ty` 類型值之 `atomic` 物件的指標。
 
-*Exp*類型的值的指標`Ty`。
+*Exp*<br/>
+指向 `Ty` 類型值的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
-*Diffgr:id="order1*第一[memory_order](../standard-library/atomic-enums.md#memory_order_enum)引數。
+*Diffgr:id="order1*<br/>
+第一個 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數。
 
-*Order2*第二個`memory_order`引數。 值*Order2*不得`memory_order_release`或是`memory_order_acq_rel`，也不能高於值*diffgr:id="order1*。
+*Order2*<br/>
+第二個 `memory_order` 引數。 值*Order2*不得`memory_order_release`或是`memory_order_acq_rel`，也不能高於值*diffgr:id="order1*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -256,9 +272,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+儲存 `Ty` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -288,11 +306,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+儲存 `Ty` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -315,9 +336,11 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件會儲存類型的指標`T`。
+*Atom*<br/>
+儲存 `T` 類型指標之 `atomic` 物件的指標。
 
-*值*型別的值`ptrdiff_t`。
+*值*<br/>
+型別 `ptrdiff_t` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -357,9 +380,11 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件會儲存類型的指標`T`。
+*Atom*<br/>
+儲存 `T` 類型指標之 `atomic` 物件的指標。
 
-*值*型別的值`ptrdiff_t`。
+*值*<br/>
+型別 `ptrdiff_t` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -398,9 +423,11 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`T`。
+*值*<br/>
+型別 `T` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -430,11 +457,14 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`T`。
+*值*<br/>
+型別 `T` 的值。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -457,9 +487,11 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`T`。
+*值*<br/>
+型別 `T` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -489,11 +521,14 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`T`。
+*值*<br/>
+型別 `T` 的值。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -521,9 +556,11 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件會儲存類型的指標`T`。
+*Atom*<br/>
+儲存 `T` 類型指標之 `atomic` 物件的指標。
 
-*值*型別的值`ptrdiff_t`。
+*值*<br/>
+型別 `ptrdiff_t` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -561,9 +598,11 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件會儲存類型的指標`T`。
+*Atom*<br/>
+儲存 `T` 類型指標之 `atomic` 物件的指標。
 
-*值*型別的值`ptrdiff_t`。
+*值*<br/>
+型別 `ptrdiff_t` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -603,9 +642,11 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`T`。
+*值*<br/>
+型別 `T` 的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -635,11 +676,14 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`T`。
+*值*<br/>
+型別 `T` 的值。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -660,7 +704,8 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*旗標*指向的`atomic_flag`物件。
+*旗標*<br/>
+`atomic_flag` 物件的指標。
 
 ## <a name="atomic_flag_clear_explicit"></a> atomic_flag_clear_explicit
 
@@ -673,9 +718,11 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>參數
 
-*旗標*指向的`atomic_flag`物件。
+*旗標*<br/>
+`atomic_flag` 物件的指標。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ## <a name="atomic_flag_test_and_set"></a> atomic_flag_test_and_set
 
@@ -688,7 +735,8 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*旗標*指向的`atomic_flag`物件。
+*旗標*<br/>
+`atomic_flag` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -705,9 +753,11 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>參數
 
-*旗標*指向的`atomic_flag`物件。
+*旗標*<br/>
+`atomic_flag` 物件的指標。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -726,9 +776,11 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`Ty`。
+*Atom*<br/>
+儲存 `Ty` 類型值之 `atomic` 物件的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
 ### <a name="remarks"></a>備註
 
@@ -747,7 +799,8 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中儲存型別的值`T`。
+*Atom*<br/>
+儲存 `T` 類型值之 `atomic` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -770,7 +823,8 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中包含型別的值`Ty`。
+*Atom*<br/>
+包含 `atomic` 類型值之 `Ty` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -793,9 +847,11 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中包含型別的值`Ty`。
+*Atom*<br/>
+包含 `atomic` 類型值之 `Ty` 物件的指標。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 請不要使用 `memory_order_release` 或 `memory_order_acq_rel`。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 請不要使用 `memory_order_release` 或 `memory_order_acq_rel`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -811,7 +867,8 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*順序*的記憶體順序條件約束，決定範圍類型。
+*順序*<br/>
+決定範圍類型的記憶體順序條件約束。
 
 ### <a name="remarks"></a>備註
 
@@ -839,9 +896,11 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Atom*不可部分完成的物件，其中包含型別值的指標`Ty`。
+*Atom*<br/>
+不可部分完成的物件指標，該物件包含 `Ty` 類型的值。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
 ### <a name="remarks"></a>備註
 
@@ -867,11 +926,14 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>參數
 
-*Atom*的指標`atomic`物件，其中包含型別的值`Ty`。
+*Atom*<br/>
+包含 `atomic` 類型值之 `Ty` 物件的指標。
 
-*值*型別的值`Ty`。
+*值*<br/>
+型別 `Ty` 的值。
 
-*順序*A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 請不要使用 `memory_order_consume`、`memory_order_acquire` 或 `memory_order_acq_rel`。
+*順序*<br/>
+[memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 請不要使用 `memory_order_consume`、`memory_order_acquire` 或 `memory_order_acq_rel`。
 
 ### <a name="remarks"></a>備註
 
@@ -887,7 +949,8 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*順序*的記憶體順序條件約束，決定範圍類型。
+*順序*<br/>
+決定範圍類型的記憶體順序條件約束。
 
 ### <a name="remarks"></a>備註
 
@@ -913,7 +976,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Arg*型別的值`Ty`。
+*引數*<br/>
+型別 `Ty` 的值。
 
 ### <a name="return-value"></a>傳回值
 

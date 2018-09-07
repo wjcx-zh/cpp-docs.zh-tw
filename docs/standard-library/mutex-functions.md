@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9e352d43f4ff7c6fa655bd14d2c7f595cfed32ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962184"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106700"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 函式和變數
 
@@ -50,11 +50,14 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>參數
 
-*旗標*A [once_flag](../standard-library/once-flag-structure.md)物件，可確保可呼叫物件只呼叫一次。
+*旗標*<br/>
+[once_flag](../standard-library/once-flag-structure.md) 物件，可確保只呼叫可呼叫的物件一次。
 
-*F*可呼叫物件。
+*F*<br/>
+可呼叫的物件。
 
-*A*引數清單。
+*A*<br/>
+引數清單。
 
 ### <a name="remarks"></a>備註
 

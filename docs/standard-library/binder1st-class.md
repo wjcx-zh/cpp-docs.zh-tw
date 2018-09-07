@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a9e53d9344e56f9efc4f20b834ce31bcb05f9fbb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961717"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103979"
 ---
 # <a name="binder1st-class"></a>binder1st 類別
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*func*二元函式物件轉換成一元函式物件。
+*函式*<br/>
+要轉換為一元函式物件的二元函式物件。
 
-*左*二元函式物件的第一個引數所繫結的值。
+*left*<br/>
+二元函式物件的第一個引數所要繫結的值。
 
-*右*改寫的二進位物件比較的第二個引數的固定值的引數的值。
+*right*<br/>
+調整後的二元物件用來與第二個引數的固定值進行比較的引數值。
 
 ## <a name="return-value"></a>傳回值
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4405f2ac1615a40f41f5deb9ee4d9baf5b8f8ef7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0f8917d2d1a6895f4454aad8d48dd25ee4bdaa3f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955269"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110561"
 ---
 # <a name="multiplies-struct"></a>multiplies 結構
 
@@ -44,16 +44,18 @@ struct multiplies<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left) * std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>參數
 
 *型別*， *T*， *U*支援二進位的型別`operator*`會指定或推斷類型的運算元。
 
-*左*乘法運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
+*左邊*<br/>
+乘法運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右*乘法運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
+*右邊*<br/>
+乘法運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 
@@ -111,7 +113,7 @@ int main( )
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
- are: ( 6 24 54 96 150 216 )
+are: ( 6 24 54 96 150 216 )
 *\
 ```
 

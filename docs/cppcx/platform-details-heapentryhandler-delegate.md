@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3526aed9f8acd4c1d385e5b5b0311200dcfd9b54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 188155a3c88f2aa4a4276ca58be9d9a86c4888a7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766898"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103745"
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler 委派
-這個委派僅供內部使用，不適用於開發用途。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-  
-delegate HeapEntryHandler;  
-```  
-  
-### <a name="remarks"></a>備註  
- 這個類別只為完整性而提供，因為它可用瀏覽器進行檢查。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `Platform`  
-  
-### <a name="requirements"></a>需求  
- **中繼資料：** platform.winmd  
-  
- **命名空間：** Platform::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform 命名空間](platform-namespace-c-cx.md)
+
+這個委派僅供內部使用，不適用於開發用途。
+
+## <a name="syntax"></a>語法
+
+```cpp
+delegate HeapEntryHandler;
+```
+
+### <a name="remarks"></a>備註
+
+這個類別只為完整性而提供，因為它可用瀏覽器進行檢查。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`Platform`
+
+### <a name="requirements"></a>需求
+
+**中繼資料：** platform.winmd
+
+**命名空間：** Platform::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Platform 命名空間](platform-namespace-c-cx.md)

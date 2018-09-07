@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 909bcb8446c7d876828a6d020cd20a7398ec04d5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960735"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108742"
 ---
 # <a name="integersequence-class"></a>integer_sequence 類別
 
@@ -44,9 +44,11 @@ struct integer_sequence
 
 ### <a name="parameters"></a>參數
 
-*T*值; 的類型必須是整數類資料類型： bool、 char、 char16_t、 char32_t、 wchar_t 或帶正負號或不帶正負號的整數類型。
+*T*<br/>
+值類型，必須是整數類型：bool、char、char16_t、char32_t、wchar_t 或代正負號或不帶正負號的整數類型。
 
-*Vals*代表一連串的值為整數類型 t 的型別參數組件
+*Vals*<br/>
+非類型參數封裝，表示整數類型 T 之值的序列。
 
 ## <a name="members"></a>成員
 
@@ -129,7 +131,7 @@ int main()
 
 ## <a name="requirements"></a>需求
 
-標頭：<type_traits>
+標頭： \<type_traits\>
 
 命名空間：std
 

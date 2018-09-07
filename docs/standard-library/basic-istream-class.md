@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200024"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102612"
 ---
 # <a name="basicistream-class"></a>basic_istream 類別
 
@@ -168,7 +168,7 @@ setstate(state);
 
 ### <a name="operators"></a>運算子
 
-|Operator|描述|
+|運算子|描述|
 |-|-|
 |[operator>>](#op_gt_gt)|呼叫輸入資料流上的函式，或從輸入資料流讀取經格式化的資料。|
 |[operator=](#op_eq)|將位於運算子右側的 `basic_istream` 指派給此物件。 這是一個移動指派，涉及不會留下複本的 `rvalue` 參考。|
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>參數
 
-*strbuf*類型的物件[basic_streambuf](../standard-library/basic-streambuf-class.md)。
+*strbuf*<br/>
+[basic_streambuf](../standard-library/basic-streambuf-class.md) 類型的物件。
 
-*_Isstd* **，則為 true**如果這是標準的資料流; 否則**false**。
+*_Isstd*<br/>
+**true**如果這是標準的資料流; 否則**false**。
 
-*右*A`basic_istream`来複製的物件。
+*right*<br/>
+要複製的 `basic_istream` 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>參數
 
-*計數*要讀取的字元數`strbuf`。
+*count*<br/>
+要從 `strbuf` 中讀取的字元數。
 
-*Delim*如果發生之前應終止讀取的字元*計數*。
+*Delim*<br/>
+如果發生之前應終止讀取的字元*計數*。
 
-*str*中要寫入的字串。
+*str*<br/>
+要在其中寫入的字串。
 
-*Ch*来取得的字元。
+*ch*<br/>
+要取得的字元。
 
-*strbuf*中要寫入的緩衝區。
+*strbuf*<br/>
+要在其中寫入的緩衝區。
 
 ### <a name="return-value"></a>傳回值
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>參數
 
-*計數*要讀取的字元數`strbuf`。
+*count*<br/>
+要從 `strbuf` 中讀取的字元數。
 
-*Delim*如果發生之前應終止讀取的字元*計數*。
+*Delim*<br/>
+如果發生之前應終止讀取的字元*計數*。
 
-*str*中要寫入的字串。
+*str*<br/>
+要在其中寫入的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>參數
 
-*計數*要略過目前的項目數目讀取位置。
+*count*<br/>
+要從目前的讀取位置略過的元素數目。
 
-*Delim*的項目，如果發生計數、 會導致`ignore`返回並讓之後的所有項目*Delim*讀取。
+*Delim*<br/>
+項目，如果發生計數、 會導致`ignore`返回並讓之後的所有項目*Delim*讀取。
 
 ### <a name="return-value"></a>傳回值
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>參數
 
-*Pfn*函式指標。
+*pfn*<br/>
+函式指標。
 
-*strbuf*型別的物件`stream_buf`。
+*strbuf*<br/>
+`stream_buf` 類型的物件。
 
-*val*要從資料流讀取的值。
+*val*<br/>
+要從資料流中讀取的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`rvalue`參考`basic_ifstream`物件。
+*right*<br/>
+`basic_ifstream` 物件的 `rvalue` 參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>參數
 
-*Ch*来放回資料流的字元。
+*ch*<br/>
+要放回資料流的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>參數
 
-*str*用來讀取的字元陣列。
+*str*<br/>
+要讀取其中字元的陣列。
 
-*計數*要讀取的字元數。
+*count*<br/>
+要讀取的字元數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>參數
 
-*str*所在陣列`readsome`儲存所讀取的字元。
+*str*<br/>
+`readsome` 要在其中儲存所讀取字元的陣列。
 
-*計數*要讀取的字元數。
+*count*<br/>
+要讀取的字元數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>參數
 
-*pos*要在其中移動讀取的指標的絕對位置。
+*pos*<br/>
+要在其中移動讀取指標的絕對位置。
 
-*關閉*若要移動讀取的指標相對於位移*方式*。
+*關閉*<br/>
+若要移動讀取的指標相對於位移*方式*。
 
-*方式*之一[ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir)列舉型別。
+*方法*<br/>
+其中一個 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列舉。
 
 ### <a name="return-value"></a>傳回值
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>參數
 
-*右*左值參考`basic_istream`物件。
+*right*<br/>
+`basic_istream` 物件的 lvalue 參考。
 
 ### <a name="remarks"></a>備註
 

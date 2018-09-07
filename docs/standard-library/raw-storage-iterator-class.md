@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 527213eb8e696caa97e307c643929118dd954965
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208522"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101011"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 類別
 
@@ -40,9 +40,11 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>參數
 
-*OutputIterator*指定要儲存之物件的輸出迭代器。
+*OutputIterator*<br/>
+指定要儲存之物件的輸出迭代器。
 
-*型別*正在配置儲存體物件的型別。
+*類型*<br/>
+正在配置儲存體的物件類型。
 
 ## <a name="remarks"></a>備註
 
@@ -159,9 +161,9 @@ int main( void)
 {
    Int *pInt = ( Int* ) malloc( sizeof( Int ) );
    memset( pInt, 0, sizeof( Int ) ); // Set bIsConstructed to false;
- *pInt = 5;
+*pInt = 5;
    raw_storage_iterator< Int*, Int > it( pInt );
- *it = 5;
+*it = 5;
 }
 \* Output:
 Not constructed.
@@ -181,7 +183,8 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>參數
 
-`val` 型別的物件的值`Type`要插入到記憶體。
+*val*<br/>
+型別的物件的值`Type`要插入到記憶體。
 
 ### <a name="return-value"></a>傳回值
 
@@ -233,7 +236,7 @@ int main( void )
 *pInt = 5;
 
    raw_storage_iterator<Int*, Int> it( pInt );
- *it = 5;
+*it = 5;
 }
 \* Output:
 Not constructed.
@@ -282,7 +285,7 @@ int main( void )
    int *pInt = new int[5];
    std::raw_storage_iterator<int*,int> it( pInt );
    for ( int i = 0; i < 5; i++, it++ ) {
- *it = 2 * i;
+*it = 2 * i;
 };
 
    for ( int i = 0; i < 5; i++ ) cout << "array " << i << " = " << pInt[i] << endl;;
@@ -308,7 +311,8 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>參數
 
-*第一個*為基礎的正向迭代器`raw_storage_iterator`物件所建構。
+*first*<br/>
+正向迭代器，是構成要建構之 `raw_storage_iterator` 物件的基礎。
 
 ### <a name="example"></a>範例
 

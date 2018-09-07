@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a76266714a462837ce8c919392abde8293af8d86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684717"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103238"
 ---
 # <a name="complex-class"></a>complex 類別
 
@@ -108,11 +108,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal*用來初始化建構中複數之實數部分的值。
+*_RealVal*<br/>
+用於初始化建構中複數之實數部分的值。
 
-*_ImagVal*用來初始化建構中複數之虛數部分的值。
+*_ImagVal*<br/>
+用於初始化建構中複數之虛數部分的值。
 
-*complexNum*其實部及虛部用於初始化建構中複數的複數。
+*complexNum*<br/>
+其實數及虛數用於初始化建構中之複數的複數。
 
 ### <a name="remarks"></a>備註
 
@@ -187,7 +190,8 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>參數
 
-*右*其虛數的值是要擷取的複數。
+*right*<br/>
+要擷取其虛數部分的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -243,7 +247,8 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*複數或數字為目標複數的參數相同類型。
+*right*<br/>
+複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
 
@@ -326,7 +331,8 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*複數或數字為目標複數的參數相同類型。
+*right*<br/>
+複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
 
@@ -400,7 +406,7 @@ The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)
 The complex number cr1 added to the complex number cl1 is:
- cl1 += cr1 = (5,3)
+cl1 += cr1 = (5,3)
 The modulus of cl1 is: 5.83095
 The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.
 
@@ -408,7 +414,7 @@ The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)
 The complex number cr2 added to the complex number cl2 is:
- cl2 += cr2 = (3,4)
+cl2 += cr2 = (3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -428,9 +434,11 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*複數，為目標複數的減數。
+*complexNum*<br/>
+複數，其為目標複數的減數。
 
-*_RealPart*為目標複數的減數的實數。
+*_RealPart*<br/>
+實數，其為目標複數的減數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -503,18 +511,18 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The difference between the two complex numbers is:
- cs1 = cl1 - cr1 = (1,5)
+cs1 = cl1 - cr1 = (1,5)
 Complex number cr1 subtracted from complex number cl1 is:
- cl1 -= cr1 = (1,5)
+cl1 -= cr1 = (1,5)
 The modulus of cl1 is: 5.09902
 The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.
 
 The left-side complex number is cl2 = (2,4)
 The right-side complex number is cr2 = 5
 The difference between the two complex numbers is:
- cs2 = cl2 - cr2 = (-3,4)
+cs2 = cl2 - cr2 = (-3,4)
 Complex number cr2 subtracted from complex number cl2 is:
- cl2 -= cr2 = (-3,4)
+cl2 -= cr2 = (-3,4)
 The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
@@ -534,9 +542,11 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*複數，為目標複數的減數。
+*complexNum*<br/>
+複數，其為目標複數的減數。
 
-*_RealPart*為目標複數的減數的實數。
+*_RealPart*<br/>
+實數，其為目標複數的減數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -634,7 +644,8 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*右*複數或數字為目標複數的參數相同類型。
+*right*<br/>
+複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
 
@@ -666,7 +677,7 @@ int main( )
 
    cl1  = cr1;
    cout << "The complex number cr1 assigned to the complex number cl1 is:"
-        << "\n cl1 = cr1 = " << cl1 << endl;
+        << "\ncl1 = cr1 = " << cl1 << endl;
 
    // Example of the second member function
    // type double assigned to type complex<double>
@@ -677,11 +688,11 @@ int main( )
 
    cl2 = cr2;
    cout << "The complex number cr2 assigned to the complex number cl2 is:"
-        << "\n cl2 = cr2 = " << cl2 << endl;
+        << "\ncl2 = cr2 = " << cl2 << endl;
 
    cl2 = complex<double>(3.0, 4.0);
    cout << "The complex number (3, 4) assigned to the complex number cl2 is:"
-        << "\n cl2 = " << cl2 << endl;
+        << "\ncl2 = " << cl2 << endl;
 }
 ```
 
@@ -689,13 +700,13 @@ int main( )
 The left-side complex number is cl1 = (3,4)
 The right-side complex number is cr1 = (2,-1)
 The complex number cr1 assigned to the complex number cl1 is:
- cl1 = cr1 = (2,-1)
+cl1 = cr1 = (2,-1)
 The left-side complex number is cl2 = (-2,4)
 The right-side complex number is cr2 = 5
 The complex number cr2 assigned to the complex number cl2 is:
- cl2 = cr2 = (5,0)
+cl2 = cr2 = (5,0)
 The complex number (3, 4) assigned to the complex number cl2 is:
- cl2 = (3,4)
+cl2 = (3,4)
 ```
 
 ## <a name="real"></a>  complex::real
@@ -711,7 +722,8 @@ T real(const T& right);
 
 ### <a name="parameters"></a>參數
 
-*右*其真正的值是要擷取的複數。
+*right*<br/>
+要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
 

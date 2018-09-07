@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956862"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100907"
 ---
 # <a name="duration-class"></a>duration 類別
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>參數
 
-*Rep2*代表刻度數目的算術類型。
+*Rep2*<br/>
+代表滴答數的算術類型。
 
-*Period2* A`std::ratio`範本特製化，表示單位的滴答期間的秒數。
+*Period2*<br/>
+`std::ratio` 範本特製化，表示以秒為單位的滴答期間。
 
-*R*預設期間的滴答數。
+*R*<br/>
+預設期間的滴答數。
 
-*工期*所指定的期間的滴答數字*Period2*。
+*持續時間*<br/>
+所指定的期間的滴答數字*Period2*。
 
 ### <a name="remarks"></a>備註
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>參數
 
-*Div*第一種方法，如*Div*代表滴答計數。 第二個方法中， *Div*是`duration`物件，其中包含滴答計數。
+*Div*<br/>
+第一種方法，如*Div*代表滴答計數。 第二個方法中， *Div*是`duration`物件，其中包含滴答計數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>參數
 
-*Mult*所指定型別的值`duration::rep`。
+*Mult*<br/>
+`duration::rep` 所指定的類型值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>參數
 
-*Div*所指定型別的值`duration::rep`。
+*Div*<br/>
+`duration::rep` 所指定的類型值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>參數
 
-*Div*除數，它是持續時間物件或代表滴答計數的值。
+*Div*<br/>
+除數，它是持續時間物件或代表滴答計數的值。
 
 ### <a name="remarks"></a>備註
 

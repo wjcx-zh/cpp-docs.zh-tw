@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0fecd7eefe9ac6a7a479fb12475b2b1c769cf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26e66b6ad47af521bb5188860d7d987e9d3b5f6b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405467"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100831"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
 
@@ -64,29 +64,34 @@ _invoke_watson(
 
 ## <a name="parameters"></a>參數
 
-*運算式*表示來源的程式碼參數運算式不是有效的字串。
+*運算式*<br/>
+表示原始程式碼參數運算式不是有效的字串。
 
-*function_name*呼叫此處理常式的函式的名稱。
+*function_name*<br/>
+呼叫此處理常式的函式名稱。
 
-*file_name*其中呼叫此處理常式的原始程式碼檔。
+*file_name*<br/>
+呼叫處理常式的原始程式碼檔。
 
-*line_number*其中呼叫此處理常式的原始程式碼中的行號。
+*line_number*<br/>
+呼叫處理常式的原始程式碼行號。
 
-*保留*未使用。
+*保留*<br/>
+未使用。
 
 ## <a name="return-value"></a>傳回值
 
-這些函式不會傳回值。 **_Invalid_parameter_noinfo_noreturn**和 **_invoke_watson**函式不會傳回給呼叫者，並在某些情況下， **_invalid_parameter**和 **_invalid_parameter_noinfo**可能不會傳回給呼叫者。
+這些函式不會傳回值。 **_Invalid_parameter_noinfo_noreturn**並 **_invoke_watson**函式不會傳回給呼叫者，並在某些情況下， **_invalid_parameter**和 **_invalid_parameter_noinfo**可能不會傳回給呼叫者。
 
 ## <a name="remarks"></a>備註
 
-當無效參數傳遞至 C 執行階段程式庫函式時，程式庫函式會呼叫「無效的參數處理常式」，此函式可由程式設計師指定其可以做的事情。 例如，它可以將問題回報給使用者、寫入記錄檔、開啟偵錯工具、終止程式，或不執行任何動作。 如果函式不程式設計人員，預設的處理常式，以指定 **_invoke_watson**，稱為。
+當無效參數傳遞至 C 執行階段程式庫函式時，程式庫函式會呼叫「無效的參數處理常式」，此函式可由程式設計師指定其可以做的事情。 例如，它可以將問題回報給使用者、寫入記錄檔、開啟偵錯工具、終止程式，或不執行任何動作。 如果沒有任何函式由程式設計師的預設處理常式中，指定 **_invoke_watson**，會呼叫。
 
-根據預設，偵錯的程式碼中已識別無效的參數時 CRT 程式庫函式呼叫的函式 **_invalid_parameter**使用 verbose 參數。 在非偵錯程式碼， **_invalid_parameter_noinfo**函式呼叫，而它會呼叫 **_invalid_parameter**函式使用空白的參數。 如果非偵錯 CRT 程式庫函式需要程式終止 **_invalid_parameter_noinfo_noreturn**函式呼叫，而它會呼叫 **_invalid_parameter**函式使用空白參數，後面接著呼叫 **_invoke_watson**函式來強制程式終止。
+根據預設，偵錯程式碼中，識別出無效的參數時 CRT 程式庫函式呼叫此函式 **_invalid_parameter**使用 verbose 參數。 在非偵錯程式碼中， **_invalid_parameter_noinfo**函式呼叫時，其會呼叫 **_invalid_parameter**函式使用空白參數。 如果非偵錯 CRT 程式庫函式需要終止程式， **_invalid_parameter_noinfo_noreturn**函式呼叫時，其會呼叫 **_invalid_parameter**函式使用空白參數，後面接著呼叫 **_invoke_watson**函式，以強制終止程式。
 
-**_Invalid_parameter**函式檢查是否已設定的使用者定義的無效參數處理常式，而且如果是，會呼叫它。 例如，如果使用者定義的執行緒區域處理常式經由目前的執行緒對 [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 進行呼叫而設定，則會呼叫它，然後傳回函式。 否則，如果使用者定義的全域無效的參數處理常式是經由呼叫 [set_invalid_parameter_handle](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 而設定，則會呼叫它，然後傳回函式。 否則，預設處理常式 **_invoke_watson**呼叫。 預設行為 **_invoke_watson**是終止程式。 使用者定義的處理常式可能會終止或傳回。 我們建議您，除非確定可復原，否則使用者定義的處理常式應終止程式。
+**_Invalid_parameter**函式檢查是否已設定的使用者定義的無效參數處理常式，而且如果是的話，呼叫它。 例如，如果使用者定義的執行緒區域處理常式經由目前的執行緒對 [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 進行呼叫而設定，則會呼叫它，然後傳回函式。 否則，如果使用者定義的全域無效的參數處理常式是經由呼叫 [set_invalid_parameter_handle](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 而設定，則會呼叫它，然後傳回函式。 否則，預設處理常式 **_invoke_watson**呼叫。 預設行為 **_invoke_watson**是終止程式。 使用者定義的處理常式可能會終止或傳回。 我們建議您，除非確定可復原，否則使用者定義的處理常式應終止程式。
 
-當預設處理常式 **_invoke_watson**呼叫時，如果處理器支援[__fastfail](../../intrinsics/fastfail.md)作業，它會叫用使用的參數**FAST_FAIL_INVALID_ARG**並在處理序終止。 否則，就會引發快速失敗例外狀況，這可以附加的偵錯工具來攔截。 如果允許繼續處理程序，它就會終止由 Windows 呼叫**TerminateProcess**函式使用的例外狀況程式碼狀態**STATUS_INVALID_CRUNTIME_PARAMETER**。
+當預設的處理常式 **_invoke_watson**呼叫時，如果處理器支援[__fastfail](../../intrinsics/fastfail.md)作業，它會叫用使用的參數**FAST_FAIL_INVALID_ARG**並在處理序終止。 否則，就會引發快速失敗例外狀況，這可以附加的偵錯工具來攔截。 如果允許繼續處理程序，它就會終止呼叫 Windows **TerminateProcess**函式使用的例外狀況代碼狀態**STATUS_INVALID_CRUNTIME_PARAMETER**。
 
 ## <a name="requirements"></a>需求
 

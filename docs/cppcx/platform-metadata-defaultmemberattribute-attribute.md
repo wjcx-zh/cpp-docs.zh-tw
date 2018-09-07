@@ -15,39 +15,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d531418e4729c34907cb65d446f89bfa60fb63
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54959b293752ac0453ba383f86ab225e0b45e471
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754705"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106989"
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::Metadata::DefaultMemberAttribute 屬性
-指出在許多可能的多載函式中要叫用的慣用函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-  
-public ref class DefaultMember abstract : Attribute  
-```  
-  
-## <a name="inheritance"></a>繼承  
- [Platform::Object](../cppcx/platform-object-class.md)   
-  
- [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
-  
-### <a name="remarks"></a>備註  
- 將 DefaultMember 屬性套用至 JavaScript 應用程式將取用的方法。  
-  
-### <a name="requirements"></a>需求  
- **最低支援用戶端：** Windows 8  
-  
- **最低支援伺服器：** Windows Server 2012  
-  
- **命名空間：** Platform::Metadata  
-  
- **中繼資料：** platform.winmd  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform::Metadata 命名空間](../cppcx/platform-metadata-namespace.md)
+
+指出在許多可能的多載函式中要叫用的慣用函式。
+
+## <a name="syntax"></a>語法
+
+```cpp
+public ref class DefaultMember abstract : Attribute
+```
+
+## <a name="inheritance"></a>繼承
+
+[Platform::Object](../cppcx/platform-object-class.md)
+
+[Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
+
+### <a name="remarks"></a>備註
+
+將 DefaultMember 屬性套用至 JavaScript 應用程式將取用的方法。
+
+### <a name="requirements"></a>需求
+
+**最低支援用戶端：** Windows 8
+
+**最低支援伺服器：** Windows Server 2012
+
+**命名空間：** Platform::Metadata
+
+**中繼資料：** platform.winmd
+
+## <a name="see-also"></a>另請參閱
+
+[Platform::Metadata 命名空間](../cppcx/platform-metadata-namespace.md)

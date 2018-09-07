@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406637"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108315"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-啟用或停用支援 **%n**中格式化[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-系列函式。
+啟用或停用的支援 **%n**格式化[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-系列函式。
 
 ## <a name="syntax"></a>語法
 
@@ -55,19 +55,20 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>參數
 
-*啟用*非零值，以啟用 **%n**支援，0 表示停用 **%n**支援。
+*enable*<br/>
+非零值，以啟用 **%n**支援，0 以停用 **%n**支援。
 
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-狀態 **%n**之前呼叫這個函式支援： 非零如果 **%n**支援已啟用，0，如果已停用。
+狀態 **%n**之前呼叫這個函式支援： 非零 if **%n**支援已啟用，0，如果它已停用。
 
 ## <a name="remarks"></a>備註
 
-由於安全性理由，支援 **%n**格式規範中的預設會停用**printf**及其所有的變化。 如果 **%n**中遇到**printf**格式規格中，預設行為是叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 呼叫 **_set_printf_count_output**具有非零引數會導致**printf**-系列的函式，來解譯 **%n**中所述[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+基於安全性原因，對 **%n**格式規範中的預設會停用**printf**和其所有變體。 如果 **%n**中遇到**printf**格式規格中，預設行為是叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 呼叫 **_set_printf_count_output**為非零引數會導致**printf**-系列函式解譯 **%n**中所述[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 

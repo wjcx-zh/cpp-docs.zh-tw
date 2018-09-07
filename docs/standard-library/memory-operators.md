@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e37d1506fd713f90b793c6f3f9a04b39bf53f7a4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954231"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100466"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 運算子
 
@@ -56,13 +56,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左*其中一個要測試是否不相等的物件。
+*left*<br/>
+要測試是否不相等的物件之一。
 
-*右*其中一個要測試是否不相等的物件。
+*right*<br/>
+要測試是否不相等的物件之一。
 
-*Ty1*左邊所控制的類型共用指標。
+*Ty1*<br/>
+左側共用指標所控制的類型。
 
-*Ty2*權限所控制的類型共用指標。
+*Ty2*<br/>
+右側共用指標所控制的類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -154,13 +158,17 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*其中一個要測試是否相等的物件。
+*left*<br/>
+要測試是否相等的其中一個物件。
 
-*右*其中一個要測試是否相等的物件。
+*right*<br/>
+要測試是否相等的其中一個物件。
 
-*Ty1*左邊所控制的類型共用指標。
+*Ty1*<br/>
+左側共用指標所控制的類型。
 
-*Ty2*權限所控制的類型共用指標。
+*Ty2*<br/>
+右側共用指標所控制的類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -258,13 +266,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左*其中一個要比較的物件。
+*left*<br/>
+要比較的其中一個物件。
 
-*右*其中一個要比較的物件。
+*right*<br/>
+要比較的其中一個物件。
 
-*Ty1*左邊所控制的類型共用指標。
+*Ty1*<br/>
+左側共用指標所控制的類型。
 
-*Ty2*權限所控制的類型共用指標。
+*Ty2*<br/>
+右側共用指標所控制的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -288,13 +300,17 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左*其中一個要比較的物件。
+*left*<br/>
+要比較的其中一個物件。
 
-*右*其中一個要比較的物件。
+*right*<br/>
+要比較的其中一個物件。
 
-*Ty1*左側指標所控制的類型。
+*Ty1*<br/>
+左側指標所控制的類型。
 
-*Ty2*右側指標所控制的類型。
+*Ty2*<br/>
+右側指標所控制的類型。
 
 ## <a name="op_lt_eq"></a> operator&lt;=
 
@@ -314,13 +330,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左*其中一個要比較的物件。
+*left*<br/>
+要比較的其中一個物件。
 
-*右*其中一個要比較的物件。
+*right*<br/>
+要比較的其中一個物件。
 
-*Ty1*左邊所控制的類型共用指標。
+*Ty1*<br/>
+左側共用指標所控制的類型。
 
-*Ty2*權限所控制的類型共用指標。
+*Ty2*<br/>
+右側共用指標所控制的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -344,13 +364,17 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左*其中一個要比較的物件。
+*left*<br/>
+要比較的其中一個物件。
 
-*右*其中一個要比較的物件。
+*right*<br/>
+要比較的其中一個物件。
 
-*Ty1*左邊所控制的類型共用指標。
+*Ty1*<br/>
+左側共用指標所控制的類型。
 
-*Ty2*權限所控制的類型共用指標。
+*Ty2*<br/>
+右側共用指標所控制的類型。
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
 
@@ -364,15 +388,20 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>參數
 
-*Elem*資料流元素的類型。
+*Elem*<br/>
+資料流元素的類型。
 
-*Tr*型別資料流元素特性。
+*Tr*<br/>
+資料流元素特性的類型。
 
-*Ty*共用指標所控制的類型。
+*Ty*<br/>
+共用指標所控制的類型。
 
-*out*輸出資料流。
+*out*<br/>
+輸出資料流。
 
-*預存程序*共用的指標。
+*預存程序*<br/>
+共用指標。
 
 ### <a name="remarks"></a>備註
 

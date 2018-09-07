@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954808"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108898"
 ---
 # <a name="moneyput-class"></a>money_put 類別
 
@@ -47,9 +47,11 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內使用地區設定中的字元編碼的類型。
+*CharType*<br/>
+程式內用於編碼地區設定字元的類型。
 
-*OutputIterator*迭代器的貨幣 put 函式的型別將其輸出寫入。
+*OutputIterator*<br/>
+貨幣 put 函式將其輸出寫入其中的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -117,15 +119,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-*下一步*迭代器，定址對象所插入字串的第一個元素。
+*next*<br/>
+迭代器，定址對象是所插入字串的第一個元素。
 
-*_Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
+*_Intl*<br/>
+布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*_Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要
+*_Iosbase*<br/>
+格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*_Fill*間距所使用的字元。
+*_Fill*<br/>
+間距所使用的字元。
 
-*val*来轉換的字串物件。
+*val*<br/>
+要轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -195,7 +202,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
@@ -234,15 +242,20 @@ iter_type put(
 
 ### <a name="parameters"></a>參數
 
-*下一步*迭代器，定址對象所插入字串的第一個元素。
+*next*<br/>
+迭代器，定址對象是所插入字串的第一個元素。
 
-*_Intl*布林值，指出序列中預期的貨幣符號的類型： **，則為 true**國際，如果**false**如果是國內。
+*_Intl*<br/>
+布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*_Iosbase*格式旗標時組表示，貨幣符號是選擇性的; 否則它需要
+*_Iosbase*<br/>
+格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*_Fill*間距所使用的字元。
+*_Fill*<br/>
+間距所使用的字元。
 
-*val*来轉換的字串物件。
+*val*<br/>
+要轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
 

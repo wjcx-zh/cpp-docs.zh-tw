@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2b4712a76be411d237ee2abc97ddbdd4b67e57f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959887"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108354"
 ---
 # <a name="basicfstream-class"></a>basic_fstream 類別
 
@@ -46,9 +46,11 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Elem*檔案緩衝區的基本項目。
+*Elem*<br/>
+檔案緩衝區的基本項目。
 
-*Tr*的基本項目，將檔案緩衝區的特性 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>備註
 
@@ -135,11 +137,14 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*_Filename*来開啟之檔案的名稱。
+*_Filename*<br/>
+要開啟之檔案的名稱。
 
-*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -215,11 +220,14 @@ void open(
 
 ### <a name="parameters"></a>參數
 
-*_Filename*来開啟之檔案的名稱。
+*_Filename*<br/>
+要開啟之檔案的名稱。
 
-*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -239,7 +247,8 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*左值參考`basic_fstream`物件。
+*right*<br/>
+`basic_fstream` 物件的 lvalue 參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -275,7 +284,8 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`lvalue`參考`basic_fstream`物件。
+*right*<br/>
+`basic_fstream` 物件的 `lvalue` 參考。
 
 ### <a name="remarks"></a>備註
 

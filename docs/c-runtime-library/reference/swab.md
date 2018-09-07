@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2975e63f79818e5eac430056258b72b9c6641a49
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408436"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100270"
 ---
 # <a name="swab"></a>_swab
 
@@ -59,25 +59,28 @@ void _swab(
 
 ## <a name="parameters"></a>參數
 
-*src*複製及交換資料。
+*src*<br/>
+要複製並交換的資料。
 
-*目的地*交換資料的儲存位置。
+*dest*<br/>
+交換資料的儲存位置。
 
-*n*複製及交換的位元組數目。
+*n*<br/>
+要複製並交換的位元組數目。
 
 ## <a name="return-value"></a>傳回值
 
-**Swab**函式不會傳回值。 函式集合**errno**至**EINVAL**如果*src*或*目的地*指標是 null 或*n*較少者為比零 」 和 「 無效的參數叫用處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
+**Swab**函式不會傳回值。 函式集合**errno**要**EINVAL**如果*src*或*dest*指標為 null 或*n*小於零，且不正確的參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
 
 如需這個傳回碼及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-如果*n*是奇數， **_swab**函式複製*n*位元組從*src*，交換的相鄰的位元組，每個配對，並將在結果*目的地*。 如果*n*數值是奇數， **_swab**複製，並將第一個交換*n*-1 個位元組的*src*，而不會複製的最後一個位元組。 **_Swab**函式通常用來準備要傳輸到的機器使用不同的位元組順序的二進位資料。
+如果*n*是奇數， **_swab**函式複製*n*位元組*src*、 交換每一對相鄰的位元組，並將儲存在結果*dest*。 如果*n*是奇數， **_swab**複製並交換的第一個*n*-1 位元組*src*，而不會複製最後一個位元組。 **_Swab**函式通常用來準備要傳輸到使用不同位元組順序的機器的二進位資料。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> 或 \<stdlib.h>|
 

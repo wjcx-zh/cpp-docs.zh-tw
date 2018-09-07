@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ee9e6af44c77c16099dc5e30c78ac4a5f39aa54a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959853"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108536"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 類別
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -208,11 +209,14 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*表示*`mean`分佈參數。
+*mean*<br/>
+`mean` 分佈參數。
 
-*stddev* `stddev`分佈參數。
+*stddev*<br/>
+`stddev` 分佈參數。
 
-*parm*用來建構分佈的參數結構。
+*parm*<br/>
+用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -239,11 +243,14 @@ struct param_type {
 ```
 ### <a name="parameters"></a>參數
 
-*表示*`mean`分佈參數。
+*mean*<br/>
+`mean` 分佈參數。
 
-*stddev* `stddev`分佈參數。
+*stddev*<br/>
+`stddev` 分佈參數。
 
-*右*`param_type`結構，用來比較。
+*right*<br/>
+用來進行比較的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 

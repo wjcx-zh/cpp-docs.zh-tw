@@ -52,12 +52,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a19d023400179e1e7e16541b7e3d7ef38ad963ba
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959088"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101089"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 函式
 
@@ -82,7 +82,8 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -133,7 +134,8 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -185,7 +187,8 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>參數
 
-*_Iosbase* `ios_base`物件。
+*_Iosbase*<br/>
+`ios_base` 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -201,7 +204,8 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -248,7 +252,8 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -274,7 +279,8 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -319,7 +325,8 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -361,7 +368,8 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -389,7 +397,8 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -415,7 +424,8 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -461,7 +471,8 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -487,7 +498,8 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -528,7 +540,8 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -550,7 +563,8 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -574,7 +588,8 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -600,7 +615,8 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -656,7 +672,8 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -700,7 +717,8 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -753,7 +771,8 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -779,7 +798,8 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -823,7 +843,8 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -876,7 +897,8 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -900,7 +922,8 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>參數
 
-*str*型別的物件的參考[ios_base](../standard-library/ios-base-class.md)，或繼承自型別`ios_base`。
+*str*<br/>
+對 [ios_base](../standard-library/ios-base-class.md) 類型之物件的參考，或對繼承自 `ios_base` 之類型的參考。
 
 ### <a name="return-value"></a>傳回值
 

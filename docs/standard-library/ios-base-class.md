@@ -118,12 +118,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec1d5291526360157b4e1a0b5b4eff9ae9fd454
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 66818710a1d5811f2ff52acf7f9785de09ba0c53
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956449"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101686"
 ---
 # <a name="iosbase-class"></a>ios_base 類別
 
@@ -272,11 +272,14 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>參數
 
-*址 （_e)* [事件](#event)。
+*_E*<br/>
+[事件](#event)。
 
-*（_b)* 呼叫事件的資料流。
+*（_b)*<br/>
+在其中呼叫事件的資料流。
 
-*（_i)* 使用者定義的數字。
+*_I*<br/>
+使用者定義的數字。
 
 ### <a name="remarks"></a>備註
 
@@ -349,7 +352,8 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>參數
 
-*fmtfl*新`fmtflags`設定。
+*fmtfl*<br/>
+新的 `fmtflags` 設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -499,7 +503,8 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>參數
 
-*_Loc*新的地區設定。
+*_Loc*<br/>
+新的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -575,7 +580,8 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>參數
 
-*idx*儲存為值的索引`iword`。
+*idx*<br/>
+要以 `iword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -649,7 +655,8 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>參數
 
-*右*型別的物件`ios_base`。
+*right*<br/>
+`ios_base` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -672,7 +679,8 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>參數
 
-*_Prec*若要顯示，有效位數的數目或固定標記法中的小數點後數字數目。
+*_Prec*<br/>
+要顯示的有效位數，或是固定標記法中的小數點後位數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -716,7 +724,8 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>參數
 
-*_Idx*儲存為值的索引`pword`。
+*_Idx*<br/>
+要以 `pword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -741,9 +750,11 @@ void register_callback(
 
 ### <a name="parameters"></a>參數
 
-*pfn*回呼函式的指標。
+*pfn*<br/>
+回呼函式的指標。
 
-*idx*使用者定義的數字。
+*idx*<br/>
+使用者定義的數字。
 
 ### <a name="remarks"></a>備註
 
@@ -901,17 +912,19 @@ fmtflags setf(
 
 ### <a name="parameters"></a>參數
 
-*遮罩 （_m)* 来開啟的旗標。
+*遮罩 （_m)*<br/>
+要開啟的旗標。
 
-*_Unset*来關閉的旗標。
+*_Unset*<br/>
+若要關閉旗標。
 
 ### <a name="return-value"></a>傳回值
 
-    The previous format flags
+先前的格式旗標
 
 ### <a name="remarks"></a>備註
 
-    The first member function effectively calls [flags](#flags)(_ *Mask* &#124; \_ *Flags*) (set selected bits) and then returns the previous format flags. The second member function effectively calls **flags**(\_ *Mask* **& fmtfl, flags& ~**`_Mask`) (replace selected bits under a mask) and then returns the previous format flags.
+第一個成員函式會有效地呼叫[旗標](#flags)(_*遮罩* &#124; \_ *旗標*) （將選取的位元），然後傳回先前的格式旗標。 第二個成員函式會有效地呼叫**旗標**(\_ *遮罩* **& fmtfl，旗標 & ~**`_Mask`) （取代選取的位元在遮罩）然後傳回先前的格式旗標。
 
 ### <a name="example"></a>範例
 
@@ -949,15 +962,16 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>參數
 
-*_Sync*所有資料流是否與同步`stdio`。
+*_Sync*<br/>
+所有資料流是否與同步`stdio`。
 
 ### <a name="return-value"></a>傳回值
 
-    Previous setting for this function.
+此函式之前的設定。
 
 ### <a name="remarks"></a>備註
 
-    The static member function stores a `stdio` sync flag, which is initially **true**. When **true**, this flag ensures that operations on the same file are properly synchronized between the [iostreams](../standard-library/iostreams-conventions.md) functions and those defined in the C++ Standard Library. Otherwise, synchronization may or may not be guaranteed, but performance may be improved. The function stores *_Sync* in the `stdio` sync flag and returns its previous stored value. You can call it reliably only before performing any operations on the standard streams.
+靜態成員函式存放區`stdio`同步處理的旗標，也就是最初 **，則為 true**。 當**真**，這個旗標可確保在相同的檔案上的作業會正確同步處理之間[iostreams](../standard-library/iostreams-conventions.md)函式和 c + + 標準程式庫中定義的。 否則，同步處理可能會或可能不保證，但可能會改善效能。 此函式會 *_Sync*在`stdio`同步旗標，並傳回其先前儲存的值。 您可以呼叫它可靠地只之前的標準資料流上執行任何作業。
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -971,15 +985,16 @@ void unsetf(
 
 ### <a name="parameters"></a>參數
 
-*遮罩 （_m)* 您想要關閉的旗標。
+*遮罩 （_m)*<br/>
+您想要關閉的旗標。
 
 ### <a name="remarks"></a>備註
 
-    The member function effectively calls [flags](#flags)(`~`*_Mask* **& flags**) (clear selected bits).
+此成員函式會有效地呼叫[旗標](#flags)(`~`*遮罩 （_m)* **& 旗標**) （清除選取的位元）。
 
 ### <a name="example"></a>範例
 
-    See [ios_base::setf](#setf) for a sample of using `unsetf`.
+請參閱[ios_base:: setf](#setf)如需範例使用`unsetf`。
 
 ## <a name="width"></a> ios_base::width
 
@@ -994,15 +1009,16 @@ streamsize width(
 
 ### <a name="parameters"></a>參數
 
-*_Wide*輸出資料流所需的大小。
+*_Wide*<br/>
+所需的輸出資料流大小。
 
 ### <a name="return-value"></a>傳回值
 
-    The current width setting.
+目前的寬度設定。
 
 ### <a name="remarks"></a>備註
 
-    The first member function returns the stored field width. The second member function stores *_Wide* in the field width and returns its previous stored value.
+第一個成員函式會傳回預存的欄位寬度。 第二個成員函式存放區 *_Wide*中的欄位寬度和傳回其先前儲存的值。
 
 ### <a name="example"></a>範例
 
@@ -1027,7 +1043,7 @@ int main( ) {
 
 ## <a name="xalloc"></a> ios_base::xalloc
 
-    Specifies that a variable is part of the stream.
+指定變數的資料流的一部分。
 
 ```cpp
 static int xalloc( );
@@ -1035,11 +1051,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>傳回值
 
-    The static member function returns a stored static value, which it increments on each call.
+靜態成員函式會傳回預存的靜態值，這樣就會自動遞增每次呼叫。
 
 ### <a name="remarks"></a>備註
 
-    You can use the return value as a unique index argument when calling the member functions [iword](#iword) or [pword](#pword).
+您可以使用傳回的值做為唯一索引的引數，呼叫成員函式時[iword](#iword)或是[pword](#pword)。
 
 ### <a name="example"></a>範例
 

@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406884"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107521"
 ---
 # <a name="srand"></a>srand
 
-設定虛擬隨機號碼產生器所使用的起始的種子值**rand**函式。
+設定使用的虛擬隨機數字產生器的起始種子值**rand**函式。
 
 ## <a name="syntax"></a>語法
 
@@ -59,15 +59,16 @@ void srand(
 
 ### <a name="parameters"></a>參數
 
-*種子*虛擬隨機產生的種子
+*seed*<br/>
+虛擬亂數產生的種子
 
 ## <a name="remarks"></a>備註
 
-**Srand**函式會將目前的執行緒中產生虛擬隨機整數的一系列的起點。 若要重新初始化來建立結果的相同順序產生器，呼叫**srand**函式，並使用相同*種子*一次的引數。 任何其他值作為*種子*設定產生器中的虛擬隨機序列不同的起始點。 **rand**擷取所產生的虛擬隨機數字。 呼叫**rand**之前的任何呼叫**srand**會產生相同的順序與呼叫**srand**與*種子*傳遞為 1。
+**Srand**函式會設定為目前的執行緒中產生一系列的虛擬隨機整數的起點。 若要重新初始化產生器以建立相同結果的順序，請呼叫**srand**函式，並使用相同*種子*一次的引數。 任何其他值*種子*設定產生器中的虛擬隨機序列不同的起始點。 **rand**擷取所產生的虛擬隨機數字。 呼叫**rand**任何呼叫之前**srand**會產生與呼叫的相同順序**srand**具有*種子*傳遞為 1。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 

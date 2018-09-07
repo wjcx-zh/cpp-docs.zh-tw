@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe988a7dee7fb358d9454c06811d7baf2cd4ace0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755108"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101959"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 列舉
-指定回呼函式 (事件處理常式) 會執行的執行緒內容。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-enum class CallbackContext {};  
-```  
-  
-### <a name="members"></a>成員  
-  
-|類型程式碼|描述|  
-|---------------|-----------------|  
-|任何|回呼函式可以在任何執行緒的內容中執行。|  
-|相同|回呼函式只能在啟動非同步作業的執行緒內容中執行。|  
-  
-### <a name="requirements"></a>需求  
- **最低支援用戶端：** Windows 8  
-  
- **最低支援伺服器：** Windows Server 2012  
-  
- **命名空間：** Platform  
-  
- **中繼資料：** platform.winmd
+
+指定回呼函式 (事件處理常式) 會執行的執行緒內容。
+
+## <a name="syntax"></a>語法
+
+```cpp
+enum class CallbackContext {};
+```
+
+### <a name="members"></a>成員
+
+|類型程式碼|描述|
+|---------------|-----------------|
+|任何|回呼函式可以在任何執行緒的內容中執行。|
+|相同|回呼函式只能在啟動非同步作業的執行緒內容中執行。|
+
+### <a name="requirements"></a>需求
+
+**最低支援用戶端：** Windows 8
+
+**最低支援伺服器：** Windows Server 2012
+
+**命名空間：** Platform
+
+**中繼資料：** platform.winmd

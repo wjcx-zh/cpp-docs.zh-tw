@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954899"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106739"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函式
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>參數
 
-*是*輸入的字串是要擷取的資料流。
+*is*<br/>
+要擷取字串的輸入資料流。
 
-*str*其中會從輸入資料流讀取字元的字串。
+*str*<br/>
+要從輸入資料流讀取字元的字串。
 
-*delim*行的分隔符號。
+*Delim*<br/>
+行的分隔符號。
 
 ### <a name="return-value"></a>傳回值
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>參數
 
-*左*一個字串，其項目要與另一個字串交換。
+*left*<br/>
+一個字串，其元素要與另一個字串的元素進行交換。
 
-*右*其項目要交換的第一個字串的字串。
+*right*<br/>
+另一個字串，其元素要與第一個字串交換。
 
 ### <a name="remarks"></a>備註
 

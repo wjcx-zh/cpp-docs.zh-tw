@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7cd9a949fef63e742d75bc01b199871d4950cc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956472"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110132"
 ---
 # <a name="uniquelock-class"></a>unique_lock 類別
 
@@ -76,7 +76,7 @@ class unique_lock;
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-`unique_lock`
+*unique_lock*<br/>
 
 ## <a name="requirements"></a>需求
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>參數
 
 *其他*  
- `unique_lock` 物件。
+`unique_lock` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -182,7 +182,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>參數
 
 *其他*  
- `unique_lock` 物件。
+`unique_lock` 物件。
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -215,7 +215,7 @@ bool try_lock_for(
 ### <a name="parameters"></a>參數
 
 *Rel_time*  
- [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
+[chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
 
@@ -241,7 +241,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>參數
 
 *Abs_time*  
- 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
+這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
@@ -284,16 +284,16 @@ unique_lock(mutex_type& Mtx,
 ### <a name="parameters"></a>參數
 
 *Mtx*  
- mutex 類型物件。
+mutex 類型物件。
 
 *Rel_time*  
- [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
+[chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 *Abs_time*  
- 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
+這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 *其他*  
- `unique_lock` 物件。
+`unique_lock` 物件。
 
 ### <a name="remarks"></a>備註
 

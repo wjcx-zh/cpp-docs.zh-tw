@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f55a332032b081cba45d2235f263adafde7e10f8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962448"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101768"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 類別
 
@@ -163,7 +163,8 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>參數
 
-*val*其位址所搜尋之物件的 const 或 nonconst 值。
+*val*<br/>
+搜尋其位址之物件的 const 或 nonconst 值。
 
 ### <a name="return-value"></a>傳回值
 

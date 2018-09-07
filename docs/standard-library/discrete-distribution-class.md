@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 97ac9d7e8e00e5f81d974aa84befaad99881391d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964206"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108755"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 類別
 
@@ -82,7 +82,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*<br/>
+整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -209,21 +210,29 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstW*要建構分佈的清單中的第一個迭代器。
+*firstW*<br/>
+要建構分佈的清單中的第一個迭代器。
 
-*lastW*要建構分佈 （非內含，因為迭代器端使用空的項目） 的清單中的最後一個迭代器。
+*lastW*<br/>
+要建構分佈的清單中的最後一個迭代器 (非內含，因為迭代器針對結尾使用空的項目)。
 
-*weightlist* [initializer_list](../cpp/initializers.md)從中建構分佈。
+*weightlist*<br/>
+要建構分佈的 [initializer_list](../cpp/initializers.md)。
 
-*計數*分佈範圍中的項目數。 若 `count==0`，則相當於預設建構函式 (一律產生零)。
+*count*<br/>
+分佈範圍中的元素數目。 若 `count==0`，則相當於預設建構函式 (一律產生零)。
 
-*低*分佈範圍中的最小值。
+*low*<br/>
+分佈範圍中的最低值。
 
-*高*分佈範圍中的最大值。
+*high*<br/>
+分佈範圍中的最高值。
 
-*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
+*weightfunc*<br/>
+表示分佈的可能性函式的物件。 參數和傳回值必須可轉換成**double**。
 
-*parm* `param_type`結構，用來建構分佈。
+*parm*<br/>
+用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -269,21 +278,29 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*firstW*要建構分佈的清單中的第一個迭代器。
+*firstW*<br/>
+要建構分佈的清單中的第一個迭代器。
 
-*lastW*要建構分佈 （非內含，因為迭代器端使用空的項目） 的清單中的最後一個迭代器。
+*lastW*<br/>
+要建構分佈的清單中的最後一個迭代器 (非內含，因為迭代器針對結尾使用空的項目)。
 
-*weightlist* [initializer_list](../cpp/initializers.md)從中建構分佈。
+*weightlist*<br/>
+要建構分佈的 [initializer_list](../cpp/initializers.md)。
 
-*計數*分佈範圍中的項目數。 若 *count* 為 0，此項目就相當於預設建構函式 (一律產生零)。
+*count*<br/>
+分佈範圍中的元素數目。 若 *count* 為 0，此項目就相當於預設建構函式 (一律產生零)。
 
-*低*分佈範圍中的最小值。
+*low*<br/>
+分佈範圍中的最低值。
 
-*高*分佈範圍中的最大值。
+*high*<br/>
+分佈範圍中的最高值。
 
-*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
+*weightfunc*<br/>
+表示分佈的可能性函式的物件。 參數和傳回值必須可轉換成**double**。
 
-*右*`param_type`来比較此物件。
+*right*<br/>
+要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954912"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103695"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>參數
 
-*型別*来儲存在佇列中的項目資料類型
+*類型*<br/>
+要存放在佇列中的項目資料類型
 
-*容器*用來實作佇列的基礎容器類型。
+*容器*<br/>
+用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*將元素加入至佇列的後端。
+*val*<br/>
+加入至佇列後端的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-*右* **const**其中建構的佇列是要從中複製的容器。
+*right*<br/>
+其中建構佇列為複本的 **const** 容器。
 
 ### <a name="remarks"></a>備註
 

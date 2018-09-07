@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3475eeadef19ee74fdafb7da758c79556f42ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 927b04cb661a63ccdce321af2cdd63b666d4c5b2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765186"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102011"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable 介面
-這個介面僅供內部使用，不適用於開發用途。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-  
-interface class IEquatable;  
-```  
-  
-### <a name="remarks"></a>備註  
- 這個介面只為完整性而提供，因為它可用瀏覽器進行檢查。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `Platform`  
-  
-### <a name="requirements"></a>需求  
- **中繼資料：** platform.winmd  
-  
- **命名空間：** Platform::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform 命名空間](platform-namespace-c-cx.md)
+
+這個介面僅供內部使用，不適用於開發用途。
+
+## <a name="syntax"></a>語法
+
+```cpp
+interface class IEquatable;
+```
+
+### <a name="remarks"></a>備註
+
+這個介面只為完整性而提供，因為它可用瀏覽器進行檢查。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`Platform`
+
+### <a name="requirements"></a>需求
+
+**中繼資料：** platform.winmd
+
+**命名空間：** Platform::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Platform 命名空間](platform-namespace-c-cx.md)

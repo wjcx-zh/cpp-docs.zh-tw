@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aad6fdd96df22375e93207e70dfd0f7cf1f44c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b136dc29431164de195eeebf9085c2377664f869
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405597"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105675"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -59,19 +59,24 @@ void qsort_s(
 
 ### <a name="parameters"></a>參數
 
-*基底*目標陣列的開頭。
+*base*<br/>
+目標陣列的開頭。
 
-*數字*陣列項目中的大小。
+*數字*<br/>
+陣列大小 (以項目計)。
 
-*寬度*項目大小 （位元組）。
+*width*<br/>
+項目大小 (以位元組計)。
 
-*比較*比較函式。 第一個引數是*內容*指標。 第二個引數是指標*金鑰*搜尋。 第三個引數是要與比較之陣列項目的指標*金鑰*。
+*compare*<br/>
+比較函式。 第一個引數*內容*指標。 第二個引數是指標*金鑰*搜尋。 第三個引數是要與比較陣列元素的指標*金鑰*。
 
-*內容*可以是任何內容的指標物件*比較*常式需要存取。
+*context*<br/>
+可以是任何內容的指標物件*比較*常式需要存取。
 
 ## <a name="remarks"></a>備註
 
-**Qsort_s**函式實作快速排序演算法來排序的陣列*數目*項目，每個*寬度*位元組。 引數*基底*是要排序陣列的基底指標。 **qsort_s**以排序的項目，這個陣列會覆寫。 引數*比較*為使用者提供的常式會比較兩個陣列項目並傳回值，指定其關聯性的指標。 **qsort_s**呼叫*比較*常式一或多個時間排序，每次呼叫時，將指標傳遞至兩個陣列項目：
+**Qsort_s**函式會實作快速排序演算法，來排序的陣列*數目*項目，每個*寬度*位元組。 引數*基底*是要排序之陣列的基底的指標。 **qsort_s**覆寫這個陣列具有已排序的元素。 引數*比較*為使用者提供的常式比較兩個陣列元素，並傳回值，指定其關聯性的指標。 **qsort_s**呼叫*比較*例行的一或多個時間期間的每個呼叫會將指標傳遞至兩個陣列元素的排序：
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -87,22 +92,22 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 陣列是以比較函式所定義的遞增順序排序。 若要以遞減順序排序陣列，請將比較函式中的「大於」和「小於」意義反轉。
 
-若傳遞了無效的參數到此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果要繼續，請允許執行，則此函數會傳回與**errno**設**EINVAL**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+若傳遞了無效的參數到此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回與**errno**設為**EINVAL**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
 |key|base|compare|num|寬度|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**NULL**|任何|任何|任何|任何|**EINVAL**|
-|任何|**NULL**|任何|!= 0|任何|**EINVAL**|
-|任何|任何|任何|任何|<= 0|**EINVAL**|
-|任何|任何|**NULL**|任何|任何|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
+|any|any|any|any|<= 0|**EINVAL**|
+|any|any|**NULL**|any|any|**EINVAL**|
 
-**qsort_s**具有相同的行為**qsort**但*內容*參數和集合**errno**。 藉由傳遞*內容*參數，比較函式可使用的物件指標透過項目指標存取物件功能或無法存取其他資訊。 新增*內容*參數，會使**qsort_s**更安全，因為*內容*可用來避免因使用靜態變數進行的重新進入 bug共用的可用資訊*比較*函式。
+**qsort_s**具有相同的行為**qsort**但*內容*參數且會設定**errno**。 藉由傳遞*內容*參數，比較函式可使用的物件指標透過元素指標存取物件功能或無法存取其他資訊。 新增*內容*參數，會使**qsort_s**更安全，因為*內容*可用來避免使用靜態變數以將所引進的重新進入 bug共用可用的資訊*比較*函式。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**qsort_s**|\<stdlib.h> 和 \<search.h>|
 
@@ -112,7 +117,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用*內容*中的參數**qsort_s**函式。 *內容*參數可讓您更輕鬆地執行排序，具備執行緒安全。 而不是使用靜態變數必須進行同步處理以確保執行緒安全，傳遞不同*內容*中每個排序的參數。 在此範例中，地區設定物件做為*內容*參數。
+下列範例示範如何使用*內容*中的參數**qsort_s**函式。 *內容*參數可讓您更輕鬆地執行安全執行緒的排序。 而不是使用必須同步處理，以確保執行緒安全性的靜態變數，傳遞不同*內容*每個排序中的參數。 在此範例中，地區設定物件做為*內容*參數。
 
 ```cpp
 // crt_qsort_s.cpp

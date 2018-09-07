@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a84d07db2e3fe48d981641d2803352d90268d93a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e46ddc82f867d3c126b9a7e8d259ba0c3c22bfde
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754061"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101972"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException 類別
-當 COM Proxy 物件嘗試參考已不存在的 COM 伺服器時會擲回  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-public ref class DisconnectedException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>備註  
- 當類別 A 參考另一個處理序中的其他類別 (類別 B) 時，類別 A 需要 Proxy 物件，才能與保留類別 B 之跨處理序的 COM 伺服器通訊。有時候伺服器記憶體用盡，但類別 A 卻不知道。 在這種情況下，會擲回 RPC_E_DISCONNECTED 例外狀況，並轉譯成 Platform::DisconnectedException。 發生這種情形的情境之一，就是事件來源叫用的委派已傳遞給它，但在它訂閱事件之後的某個時間點，該委派卻終結。 發生此情況時，事件來源會將委派從其引動過程清單中移除。  
-  
- 如需詳細資訊，請參閱 [COMException](../cppcx/platform-comexception-class.md) 類別。  
-  
-### <a name="requirements"></a>需求  
- **最低支援用戶端：** Windows 8  
-  
- **最低支援伺服器：** Windows Server 2012  
-  
- **命名空間：** Platform  
-  
- **中繼資料：** platform.winmd  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform::COMException 類別](../cppcx/platform-comexception-class.md)
+
+當 COM Proxy 物件嘗試參考已不存在的 COM 伺服器時會擲回
+
+## <a name="syntax"></a>語法
+
+```
+public ref class DisconnectedException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>備註
+
+當類別 A 參考另一個處理序中的其他類別 (類別 B) 時，類別 A 需要 Proxy 物件，才能與保留類別 B 之跨處理序的 COM 伺服器通訊。有時候伺服器記憶體用盡，但類別 A 卻不知道。 在這種情況下，會擲回 RPC_E_DISCONNECTED 例外狀況，並轉譯成 Platform::DisconnectedException。 發生這種情形的情境之一，就是事件來源叫用的委派已傳遞給它，但在它訂閱事件之後的某個時間點，該委派卻終結。 發生此情況時，事件來源會將委派從其引動過程清單中移除。
+
+如需詳細資訊，請參閱 [COMException](../cppcx/platform-comexception-class.md) 類別。
+
+### <a name="requirements"></a>需求
+
+**最低支援用戶端：** Windows 8
+
+**最低支援伺服器：** Windows Server 2012
+
+**命名空間：** Platform
+
+**中繼資料：** platform.winmd
+
+## <a name="see-also"></a>另請參閱
+
+[Platform::COMException 類別](../cppcx/platform-comexception-class.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b4a8b148dc8b72c7dcc1931802c503be783e9ea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027393"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108599"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函式
 
@@ -46,7 +46,8 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>參數
 
-*原則*A[啟動](../standard-library/future-enums.md#launch)值。
+*原則*<br/>
+[launch](../standard-library/future-enums.md#launch) 值。
 
 ### <a name="remarks"></a>備註
 
@@ -93,7 +94,8 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Errno* A [future_errc](../standard-library/future-enums.md#future_errc)識別報告的錯誤值。
+*errno*<br/>
+[future_errc](../standard-library/future-enums.md#future_errc) 值，可識別所回報的錯誤。
 
 ### <a name="return-value"></a>傳回值
 
@@ -109,7 +111,8 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Errno* A [future_errc](../standard-library/future-enums.md#future_errc)識別報告的錯誤值。
+*errno*<br/>
+[future_errc](../standard-library/future-enums.md#future_errc) 值，可識別所回報的錯誤。
 
 ### <a name="return-value"></a>傳回值
 
@@ -129,9 +132,11 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>參數
 
-*左*左側`promise`物件。
+*左邊*<br/>
+左 `promise` 物件。
 
-*右*右`promise`物件。
+*右邊*<br/>
+右 `promise` 物件。
 
 ## <a name="see-also"></a>另請參閱
 

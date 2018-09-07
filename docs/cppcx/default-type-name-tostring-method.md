@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752498"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108555"
 ---
 # <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString 方法
-傳回字串，表示目前的類型。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 表示目前物件的字串。  
-  
-### <a name="requirements"></a>需求  
- **最低支援用戶端：** Windows 8  
-  
- **最低支援伺服器：** Windows Server 2012  
-  
- **命名空間：** default  
-  
- **標頭：** vccorlib.h  
-  
-## <a name="see-also"></a>另請參閱  
- [預設命名空間](../cppcx/default-namespace.md)
+
+傳回字串，表示目前的類型。
+
+## <a name="syntax"></a>語法
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>傳回值
+
+表示目前物件的字串。
+
+### <a name="requirements"></a>需求
+
+**最低支援用戶端：** Windows 8
+
+**最低支援伺服器：** Windows Server 2012
+
+**命名空間：** default
+
+**標頭：** vccorlib.h
+
+## <a name="see-also"></a>另請參閱
+
+[預設命名空間](../cppcx/default-namespace.md)

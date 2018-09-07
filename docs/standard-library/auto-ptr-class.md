@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00114711f93fcc1ec057ea50b1ce681523db3a9c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 945de6e2ef7e9ec3967091f88b1d0cfeaa8df5e3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957999"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108885"
 ---
 # <a name="autoptr-class"></a>auto_ptr 類別
 
@@ -65,9 +65,11 @@ public:
 ```
 ### <a name="parameters"></a>參數
 
-*右*`auto_ptr`從中取得現有的資源。
+*right*<br/>
+要從中取得現有資源的 `auto_ptr`。
 
-*ptr*此指標指定成取代儲存的指標。
+*ptr*<br/>
+此指標指定了要取代的已儲存指標。
 
 ## <a name="remarks"></a>備註
 
@@ -130,9 +132,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 ### <a name="parameters"></a>參數
 
-*ptr*物件的指標，`auto_ptr`封裝。
+*ptr*<br/>
+`auto_ptr` 所封裝物件的指標。
 
-*右*`auto_ptr`複製建構函式物件。
+*right*<br/>
+要由建構函式所複製的 `auto_ptr` 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -282,7 +286,8 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="parameters"></a>參數
 
-*右*型別的物件`auto_ptr`。
+*right*<br/>
+`auto_ptr` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -499,7 +504,8 @@ void reset(Type* ptr = 0);
 
 ### <a name="parameters"></a>參數
 
-*ptr*此指標指定成取代儲存的指標`myptr`。
+*ptr*<br/>
+此指標指定成取代儲存的指標`myptr`。
 
 ### <a name="example"></a>範例
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8b50f703dde69669c57e0f639e748ee596a3f1ab
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960826"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106583"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 類別
 
@@ -44,11 +44,14 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>參數
 
-*_Pm*類別的成員函式的指標`Type`轉換成函式物件。
+*_Pm*<br/>
+要轉換成函式物件之 `Type` 類別的成員函式指標。
 
-*左*物件所 *_Pm*上呼叫成員函式。
+*left*<br/>
+物件， *_Pm*上呼叫成員函式。
 
-*右*所指定的引數 *_Pm*。
+*right*<br/>
+提供給引數 *_Pm*。
 
 ## <a name="return-value"></a>傳回值
 

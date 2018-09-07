@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221604"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103914"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>參數
 
-*路徑*完整路徑。
+*path*<br/>
+完整路徑。
 
-*磁碟機*磁碟機代號，後面接著冒號 (**:**)。 您可以傳遞**NULL**此參數，如果您不需要的磁碟機代號。
+*磁碟機*<br/>
+磁碟機代號，後面接著冒號 (**:**)。 您可以傳遞**NULL**此參數，如果您不需要的磁碟機代號。
 
-*dir*目錄路徑，包括結尾的斜線。 正斜線 ( **/** )，反斜線 ( **\\** )，或可以使用。 您可以傳遞**NULL**此參數，如果您不需要的目錄路徑。
+*dir*<br/>
+目錄路徑，包括結尾斜線。 正斜線 ( **/** )，反斜線 ( **\\** )，或可以使用。 您可以傳遞**NULL**此參數，如果您不需要的目錄路徑。
 
-*fname*基底檔名 （無副檔名）。 您可以傳遞**NULL**此參數，如果您不需要檔案名稱。
+*fname*<br/>
+基底檔名 (無副檔名)。 您可以傳遞**NULL**此參數，如果您不需要檔案名稱。
 
-*ext*副檔名，包括前置句點 (**。**)。 您可以傳遞**NULL**此參數，如果您不需要檔名的副檔名。
+*ext*<br/>
+副檔名，包括前置句點 (**。**)。 您可以傳遞**NULL**此參數，如果您不需要檔名的副檔名。
 
 ## <a name="remarks"></a>備註
 

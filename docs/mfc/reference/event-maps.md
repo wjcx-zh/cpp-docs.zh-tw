@@ -1,5 +1,5 @@
 ---
-title: 事件對應 |Microsoft 文件
+title: 事件對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122385"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106804"
 ---
 # <a name="event-maps"></a>事件對應
 
@@ -63,7 +63,7 @@ MFC 程式庫會針對引發事件提供最佳化的程式設計模型。 在這
 
 ##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
 
-每個`COleControl`位在程式中的衍生的類別可以提供對應至指定的事件，控制項就會引發的事件。
+每個`COleControl`-在您的程式中的衍生的類別可提供事件對應至指定的控制項就會引發的事件。
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -71,9 +71,9 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>備註
 
-在類別宣告結尾使用 DECLARE_EVENT_MAP 巨集。 接著，在定義類別的成員函式的.cpp 檔案，使用 BEGIN_EVENT_MAP 巨集、 巨集項目針對每個控制項的事件，以及 END_EVENT_MAP 巨集來宣告事件清單的結尾。
+在類別宣告結尾使用 DECLARE_EVENT_MAP 巨集。 接著，在定義類別的成員函式的.cpp 檔案，使用 BEGIN_EVENT_MAP 巨集、 巨集項目為每個控制項的事件和 END_EVENT_MAP 巨集來宣告事件清單的結尾。
 
-如需事件對應的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
+如需有關事件對應的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -90,14 +90,14 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="parameters"></a>參數
 
 *theClass*  
-指定的事件對應的控制項類別名稱。
+指定其事件對應的控制項類別的名稱。
 
 *baseClass*  
-指定的基底類別名稱*theClass*。
+指定的基底類別的名稱*theClass*。
 
 ### <a name="remarks"></a>備註
 
-在實作 (.cpp) 檔案中定義為類別成員函式，事件對應開頭 BEGIN_EVENT_MAP 巨集，然後新增巨集項目針對每個事件，並完成 END_EVENT_MAP 巨集的事件對應。
+在定義您的類別成員函式的實作 (.cpp) 檔案，啟動事件對應 BEGIN_EVENT_MAP 巨集，然後新增巨集項目，每個事件，並完成事件對應 END_EVENT_MAP 巨集。
 
 如需有關事件對應和 BEGIN_EVENT_MAP 巨集的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
 
@@ -107,7 +107,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-您可以使用 END_EVENT_MAP 巨集來結束事件對應的定義。
+您可以使用 END_EVENT_MAP 巨集結束事件對應的定義。
 
 ```cpp
 END_EVENT_MAP()
@@ -134,7 +134,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 事件引發函式的名稱。
 
 *vtsParams*  
-以空格分隔清單指定函式的參數清單的一個或多個常數。
+指定函式的參數清單的一或多個常數以空格分隔清單。
 
 ### <a name="remarks"></a>備註
 
@@ -142,11 +142,11 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-指定清單，其中包含 32 位元的整數，表示 RGB 色彩值，後面接著的指標`IFontDisp`OLE 字型物件介面。
+指定清單，其中包含 32 位元的整數，表示 RGB 色彩值，後面接著一個指向`IFontDisp`OLE 字型物件介面。
 
 `VTS_`常數和其意義如下：
 
-|符號|參數型別|
+|符號|參數類型|
 |------------|--------------------|
 |VTS_I2|**short**|
 |VTS_I4|**long**|
@@ -177,7 +177,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 對於所有 variant 類型，除了 VTS_FONT 和 VTS_PICTURE，提供指向 variant 資料常數的已定義其他變數的常數。 這些常數會使用名為`VTS_Pconstantname`慣例。 例如，VTS_PCOLOR 是 VTS_COLOR 常數指標。
+> 對於所有 variant 類型，除了 VTS_FONT 和 VTS_PICTURE，提供變異資料常數的指標，定義其他變數的常數。 這些常數會使用名為`VTS_Pconstantname`慣例。 比方說，VTS_PCOLOR 是 VTS_COLOR 常數的指標。
 
 ### <a name="requirements"></a>需求
 
@@ -185,7 +185,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
 
-定義事件引發函式的自訂事件屬於所指定的分派識別碼*dispid*。
+定義事件引發自訂事件屬於所指定的分派識別碼的函式*dispid*。
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -201,13 +201,13 @@ EVENT_CUSTOM_ID(
 事件的名稱。
 
 *dispid*  
-分派識別碼時引發事件，控制項使用。
+引發事件時，控制項所使用的分派識別碼。
 
 *pfnFire*  
 事件引發函式的名稱。
 
 *vtsParams*  
-在事件引發時，變數的參數清單會傳遞至控制項容器。
+引發事件時，參數的變數清單會傳遞至控制項容器。
 
 ### <a name="remarks"></a>備註
 
@@ -215,7 +215,7 @@ EVENT_CUSTOM_ID(
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-指定清單，其中包含 32 位元的整數，表示 RGB 色彩值，後面接著的指標`IFontDisp`OLE 字型物件介面。
+指定清單，其中包含 32 位元的整數，表示 RGB 色彩值，後面接著一個指向`IFontDisp`OLE 字型物件介面。
 
 取得一份`VTS_`常數，請參閱[EVENT_CUSTOM](#event_custom)。
 
@@ -225,7 +225,7 @@ EVENT_CUSTOM_ID(
 
 ## <a name="on_oleverb"></a>  ON_OLEVERB
 
-這個巨集會定義訊息對應項目對應至控制項的特定成員函式的自訂動詞命令。
+這個巨集會定義訊息的對應項目對應至您的控制項的特定成員函式的自訂動詞命令。
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -233,14 +233,15 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 
 ### <a name="parameters"></a>參數
 
-*idsVerbName*動詞命令的名稱的字串資源識別碼。
+*idsVerbName*<br/>
+動詞命令的名稱的字串資源識別碼。
 
-*memberFxn*  
+*memberFxn*<br/>
 當叫用動詞時，由框架呼叫的函式。
 
 ### <a name="remarks"></a>備註
 
-資源編輯器可以用來建立字串資料表中加入的自訂動詞命令名稱。
+資源編輯器可用來建立自訂的動詞名稱新增至字串資料表。
 
 函式原型*memberFxn*是：
 
@@ -251,7 +252,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-值*lpMsg*， *hWndParent*，和*lpRect*參數取自的對應參數`IOleObject::DoVerb`成員函式。
+值*lpMsg*， *hWndParent*，並*lpRect*參數都會取自的對應參數`IOleObject::DoVerb`成員函式。
 
 ### <a name="requirements"></a>需求
 
@@ -277,7 +278,7 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 格式是標準動詞索引`OLEIVERB_`，後面接著動作。 OLEIVERB_SHOW、 OLEIVERB_HIDE 和 OLEIVERB_UIACTIVATE 是標準動詞的一些範例。
 
-請參閱[ON_OLEVERB](#on_oleverb)要做為函式原型的說明*memberFxn*參數。
+請參閱[ON_OLEVERB](#on_oleverb)用作函式原型的說明*memberFxn*參數。
 
 
 ### <a name="requirements"></a>需求
@@ -286,4 +287,4 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)

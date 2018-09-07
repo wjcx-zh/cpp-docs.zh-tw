@@ -15,44 +15,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a28f07990d5958f48f032b1355a565d2a4a559e9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8345a8418a2ff08b8909a7c01bd177afa426709b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758970"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104091"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices 命名空間
-這個命名空間僅供內部使用，不適用於開發用途。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-  
-namespace Platform {  
-   namespace InteropServices {  
-}}  
-```  
-  
-### <a name="members"></a>成員  
- 雖然此命名空間僅適合內部使用，但瀏覽器仍會顯示此命名空間的下列成員。  
-  
-|名稱|備註|  
-|----------|------------|  
-|ComInterfaceType|列舉|  
-|InterfaceTypeAttribute||  
-|LayoutKind|列舉|  
-|MarshalAsAttribute||  
-|StuctLayoutAttribute||  
-|UnmanagedType|列舉|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `Platform`  
-  
-### <a name="requirements"></a>需求  
- **中繼資料：** platform.winmd  
-  
- **命名空間：** Platform::InteropServices  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform 命名空間](platform-namespace-c-cx.md)
+
+這個命名空間僅供內部使用，不適用於開發用途。
+
+## <a name="syntax"></a>語法
+
+```cpp
+namespace Platform {
+   namespace InteropServices {
+}}
+```
+
+### <a name="members"></a>成員
+
+雖然此命名空間僅適合內部使用，但瀏覽器仍會顯示此命名空間的下列成員。
+
+|名稱|備註|
+|----------|------------|
+|ComInterfaceType|列舉|
+|InterfaceTypeAttribute||
+|LayoutKind|列舉|
+|MarshalAsAttribute||
+|StuctLayoutAttribute||
+|UnmanagedType|列舉|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`Platform`
+
+### <a name="requirements"></a>需求
+
+**中繼資料：** platform.winmd
+
+**命名空間：** Platform::InteropServices
+
+## <a name="see-also"></a>另請參閱
+
+[Platform 命名空間](platform-namespace-c-cx.md)

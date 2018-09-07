@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 381316cd7b05f62ba8b730c376e266e5fd0a70cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960586"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109276"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 類別
 
@@ -49,9 +49,11 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>參數
 
-*CharType*表示 istreambuf_iterator 的字元類型的型別。
+*CharType*<br/>
+類型，表示 istreambuf_iterator 的字元類型。
 
-*Traits*表示 istreambuf_iterator 的字元類型的型別。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*特性*<br/>
+類型，表示 istreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
 
 ## <a name="remarks"></a>備註
 
@@ -150,7 +152,8 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*迭代器，用來檢查是否相等。
+*right*<br/>
+要檢查其相等性的迭代器。
 
 ### <a name="return-value"></a>傳回值
 
@@ -246,9 +249,11 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*的輸入資料流緩衝區`istreambuf_iterator`附加。
+*strbuf*<br/>
+要附加 `istreambuf_iterator` 的輸入資料流緩衝區。
 
-*_Istr*的輸入資料流`istreambuf_iterator`附加。
+*_Istr*<br/>
+要附加 `istreambuf_iterator` 的輸入資料流。
 
 ### <a name="remarks"></a>備註
 
@@ -319,7 +324,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;   //Put value of outpos equal to inpos
+*outpos = *inpos;   //Put value of outpos equal to inpos
       ++inpos;
       ++outpos;
    }
@@ -364,7 +369,7 @@ int main( )
    ostreambuf_iterator<char> outpos ( cout );
    while ( inpos != endpos )
    {
- *outpos = *inpos;
+*outpos = *inpos;
       ++inpos;   //Increment istreambuf_iterator
       ++outpos;
    }

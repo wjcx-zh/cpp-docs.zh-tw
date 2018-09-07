@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198311"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105311"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -50,7 +50,8 @@ ms.locfileid: "43198311"
 *pgcfiles*<br/>
 一或多個的.pgc 檔案您想要合併的.pgd 檔的設定檔資料。 您可以指定單一的.pgc 檔案或多個的.pgc 檔案。 如果您未指定任何的.pgc 檔案**pgomgr**合併所有的檔案名稱是.pgd 檔相同的.pgc 檔案。
 
-*pgdfile* .pgd 檔，其中您要合併的.pgc 檔案或檔案中的資料。
+*pgdfile*<br/>
+.Pgd 檔案，其中您要合併的.pgc 檔案或檔案中的資料。
 
 ## <a name="remarks"></a>備註
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dd9d4dfa7c10d19112cd8154ddcf3b7a70bf3034
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962045"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103888"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 運算子
 
@@ -44,11 +44,14 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>參數
 
-*Fty*来包裝的函式類型。
+*Fty*<br/>
+要包裝的函式類型。
 
-*f*函式物件
+*f*<br/>
+函式物件
 
-*npc* null 指標。
+*npc*<br/>
+Null 指標。
 
 ### <a name="remarks"></a>備註
 
@@ -101,11 +104,14 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>參數
 
-*Fty*来包裝的函式類型。
+*Fty*<br/>
+要包裝的函式類型。
 
-*f*函式物件
+*f*<br/>
+函式物件
 
-*npc* null 指標。
+*npc*<br/>
+Null 指標。
 
 ### <a name="remarks"></a>備註
 

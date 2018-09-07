@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ec0a30a8ee193db362efa375f6e9d0f5746a56f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845488"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105298"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error 類別
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>備註
 
-此類別可作為擲回之所有例外狀況的基底類別，以在 \<filesystem> 中回報錯誤。 它會儲存 string 類型物件，這裡稱為 mymesg 主要是為了公開的目的。 它也會儲存兩個 path 類型物件，稱為 mypval1 和 mypval2。
+此類別可作為擲回之所有例外狀況的基底類別，以在 \<filesystem> 中回報錯誤。 它會儲存類型的物件`string`，稱為`mymesg`這裡有展銷的目的。 它也會儲存兩個物件的型別`path`，稱為`mypval1`和`mypval2`。
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>建構函式
+
+|建構函式|描述|
+|-|-|
+|[filesystem_error](#filesystem_error)|建構`filesystem_error`訊息。|
+
+### <a name="member-functions"></a>成員函式
+
+|成員函式|描述|
+|-|-|
+|[路徑 1](#path1)|傳回 `mypval1`。|
+|[路徑 2](#path2)|傳回 `mypval2`。|
+|[項目](#what)|傳回 `NTBS` 的指標。|
+
+## <a name="requirements"></a>需求
+
+**標頭：** \<filesystem >
+
+**命名空間：** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+
+第一個建構函式會建構其訊息從*what_arg*並*ec*。 第二個建構函式也會建構其訊息從*pval1*，其儲存在`mypval1`。 第三個建構函式也會建構其訊息從*pval1*，其儲存在`mypval1`，以及從*pval2*，其儲存在`mypval2`。
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-第一個建構函式會從 what_arg 和 ec 建構其訊息。 第二個建構函式也會從 pval1 建構其訊息，並存放在 mypval1。 第三個建構函式也會從 pval1 與 pval2 建構其訊息，並存放在 mypval1 和 mypval2 中。
+### <a name="parameters"></a>參數
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*what_arg*<br/>
+指定的訊息。
+
+*ec*<br/>
+指定的錯誤碼。
+
+*mypval1*<br/>
+進一步指定的訊息參數。
+
+*mypval2*<br/>
+進一步指定的訊息參數。
+
+## <a name="path1"></a> filesystem_error::path1
+
+此成員函式會傳回 `mypval1`
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-成員函式傳回 mypval1
+## <a name="path2"></a> filesystem_error::path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+此成員函式會傳回 `mypval2`
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-成員函式傳回 mypval2
+## <a name="what"></a> filesystem_error::what
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+此成員函式傳回的指標`NTBS`中，最好是從組成`runtime_error::what()`， `system_error::what()`， `mymesg`， `mypval1.native_string()`，和`mypval2.native_string()`。
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-成員函式會傳回 NTBS 的指標，最好是由 runtime_error::what()、system_error::what()、mymesg、mypval1.native_string() 和 mypval2.native_string() 組成 。
-
-## <a name="requirements"></a>需求
-
-**標頭：** \<filesystem >
-
-**命名空間：** std::experimental::filesystem
 
 ## <a name="see-also"></a>另請參閱
 

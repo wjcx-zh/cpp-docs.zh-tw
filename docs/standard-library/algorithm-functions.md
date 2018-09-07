@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334702a2c3e9a86becfb5a653b22154b5a4e197a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e8ec44fcdd336786707bf809ce676d866df132e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691713"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101673"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -268,11 +268,14 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*comp*二元述詞讓符合所搜尋的範圍中相鄰元素的值的條件。
+*comp*<br/>
+二元述詞提供所搜尋的範圍中相鄰元素的值要符合的條件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -341,9 +344,9 @@ int main()
 ```Output
 L = ( 50 40 10 20 20 )
 There are two adjacent elements that are equal.
- They have a value of 20.
+They have a value of 20.
 There are two adjacent elements where the second is twice the first.
- They have values of 10 & 20.
+They have values of 10 & 20.
 ```
 
 ## <a name="all_of"></a> all_of
@@ -360,11 +363,14 @@ bool all_of(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示開始檢查條件的位置。 某範圍元素的開始迭代器標記。
+*first*<br/>
+輸入迭代器，表示開始檢查條件的位置。 某範圍元素的開始迭代器標記。
 
-*最後一個*輸入迭代器，表示要檢查條件的項目範圍的結尾。
+*最後一個*<br/>
+輸入迭代器，表示檢查條件的某範圍元素結尾。
 
-*comp*来測試的條件。 這是使用者定義的述詞函式物件，可定義所檢查的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+要測試的條件。 這是使用者定義的述詞函式物件，可定義所檢查的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -388,11 +394,14 @@ bool any_of(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示開始檢查條件的項目範圍的位置。
+*first*<br/>
+輸入迭代器，表示檢查條件的某範圍元素開始。
 
-*最後一個*輸入迭代器，表示要檢查條件的項目範圍的結尾。
+*最後一個*<br/>
+輸入迭代器，表示檢查條件的某範圍元素結尾。
 
-*comp*来測試的條件。 這是由使用者定義的述詞函式物件所提供。 這個述詞定義所測試的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+要測試的條件。 這是由使用者定義的述詞函式物件所提供。 這個述詞定義所測試的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -426,13 +435,17 @@ bool binary_search(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*值*要比對的項目或值所需的值必須滿足的條件與二元述詞指定的項目值。
+*值*<br/>
+必要的值，比對元素值或必須符合條件的元素值與二元述詞所指定的元素值。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -546,11 +559,14 @@ OutputIterator copy(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器定址來源範圍中的第一個元素的位置。
+*first*<br/>
+輸入迭代器，在來源範圍的第一個項目位置定址。
 
-*最後一個*輸入迭代器是其中一個來源範圍中最後一個項目的位置定址。
+*最後一個*<br/>
+輸入迭代器，用於定址來源範圍中最後一個項目的後面一個位置。
 
-*destBeg*輸出迭代器，定址目的範圍中的第一個元素的位置。
+*destBeg*<br/>
+輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -636,11 +652,14 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器定址來源範圍中的第一個元素的位置。
+*first*<br/>
+雙向迭代器，在來源範圍的第一個項目位置定址。
 
-*最後一個*雙向迭代器定址一個來源範圍中最後一個項目的位置。
+*最後一個*<br/>
+雙向迭代器，在來源範圍中越過最後一個項目的位置定址。
 
-*destEnd*雙向迭代器，定址目的範圍中的最後一個項目的其中一個位置。
+*destEnd*<br/>
+雙向迭代器，在目的範圍中越過最後一個項目的位置定址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -724,13 +743,17 @@ OutputIterator copy_if(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示檢查條件的範圍開始。
+*first*<br/>
+輸入迭代器，表示檢查條件的範圍開始。
 
-*最後一個*輸入迭代器，表示範圍結尾。
+*最後一個*<br/>
+輸入迭代器，表示範圍的結尾。
 
-*dest*輸出迭代器，表示所複製元素的目的地。
+*dest*<br/>
+輸出迭代器，表示所複製元素的目的地。
 
-*_Pred*範圍中的每個項目對其進行測試的條件。 這種條件是由使用者定義的述詞函式物件所提供。 述詞會採用一個引數，並傳回**真**或是**false**。
+*_Pred*<br/>
+測試範圍中每個元素的條件。 這種條件是由使用者定義的述詞函式物件所提供。 述詞會採用一個引數，並傳回**真**或是**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -758,11 +781,14 @@ OutputIterator copy_n(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示要複製元素的位置。
+*first*<br/>
+輸入迭代器，表示要複製元素的位置。
 
-*計數*的帶正負號或不帶正負號整數類型，指定的項目數複製。
+*count*<br/>
+帶正負號或不帶正負號的整數類型，指定要複製的元素數目。
 
-*dest*輸出迭代器，表示要複製項目。
+*dest*<br/>
+輸出迭代器，表示要將元素複製過去的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -786,11 +812,14 @@ typename iterator_traits<InputIterator>::difference_type count(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址範圍中第一個元素的位置周遊。
+*first*<br/>
+輸入迭代器，定址要周遊範圍中第一個元素的位置。
 
-*最後一個*輸入迭代器定址的後面一個位置，最後一個元素範圍中要周遊。
+*最後一個*<br/>
+輸入迭代器，定址要周遊範圍中最後一個元素之後的位置。
 
-*val*要計算個數之項目的值。
+*val*<br/>
+要計算之元素的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -853,11 +882,14 @@ typename iterator_traits<InputIterator>::difference_type count_if(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*輸入迭代器，定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*_Pred*定義項目時要計算符合條件的使用者定義述詞函式物件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*_Pred*<br/>
+使用者定義的述詞函式物件，定義計算元素時所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -950,15 +982,20 @@ bool equal(
 
 ### <a name="parameters"></a>參數
 
-*First1*輸入迭代器，定址在第一個範圍中的第一個元素的位置進行測試。
+*first1*<br/>
+輸入迭代器，定址要測試的第一個範圍中第一個項目的位置。
 
-*Last1*輸入迭代器，定址在第一個範圍中最後一個元素的後面一個位置進行測試。
+*last1*<br/>
+輸入迭代器，定址要測試的第一個範圍中最後一個項目的後面一個位置。
 
-*First2*輸入迭代器，定址在第二個範圍中的第一個元素的位置進行測試。
+*first2*<br/>
+輸入迭代器，定址要測試的第二個範圍中第一個項目的位置。
 
-*First2*輸入迭代器，定址在第二個範圍中的最後一個元素的其中一個位置進行測試。
+*first2*<br/>
+輸入迭代器，定址要測試的第二個範圍中最後一個項目的後面一個位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*Comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1027,13 +1064,17 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*val*正在搜尋排序範圍中的值。
+*val*<br/>
+排序範圍中要搜尋的值。
 
-*comp*使用者定義述詞函式物件，定義在其中一個項目是否小於另一個的意義。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1183,11 +1224,14 @@ void fill(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置周遊。
+*first*<br/>
+正向迭代器，定址要周遊之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中要周遊。
+*最後一個*<br/>
+正向迭代器，定址要周遊之範圍中最後一個元素之後的位置。
 
-*val*的值指派給範圍內的項目 [*第一次*，*最後一個*)。
+*val*<br/>
+要指派給範圍中的元素的值 [*第一*，*最後一個*)。
 
 ### <a name="remarks"></a>備註
 
@@ -1248,11 +1292,14 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸出迭代器，定址範圍中的第一個元素位置的值指派給*Val*。
+*第一個*<br/>
+輸出迭代器，定址範圍中的第一個元素位置的值指派給*Val*。
 
-*計數*的帶正負號或不帶正負號的整數型別指定的項目數，指派值。
+*計數*<br/>
+帶正負號或不帶正負號的整數類型，指定要獲指派值的元素數目。
 
-*Val*的值指派給範圍內的項目 [*第一次*， *First + Count*)。
+*val*<br/>
+要指派給範圍中的元素的值 [*第一*， *First + Count*)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1325,11 +1372,14 @@ InputIterator find(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址範圍中第一個元素的位置搜尋指定的值。
+*first*<br/>
+輸入迭代器，其定址要搜尋指定值的範圍中，第一個元素的位置。
 
-*最後一個*輸入迭代器，定址範圍中的最後一個元素的後面一個位置，搜尋指定的值。
+*最後一個*<br/>
+輸入迭代器，其定址要搜尋指定值的範圍中，最後一個元素後方的位置。
 
-*val*来搜尋的值。
+*val*<br/>
+要搜尋的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1364,15 +1414,20 @@ ForwardIterator1 find_end(
 
 ### <a name="parameters"></a>參數
 
-*First1*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first1*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*Last1*正向迭代器定址的後面一個位置，最後一個項目的範圍中搜尋。
+*last1*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*First2*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first2*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*Last2*正向迭代器定址的後面一個位置，最後一個項目的範圍中搜尋。
+*last2*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*Comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1477,7 +1532,7 @@ List L1 = ( 5 10 15 20 )
 Vector v2 = ( 20 30 40 )
 There is a match of L1 in v1 that begins at position 7.
 There is a sequence of elements in v1 that are equivalent to those
- in v2 under the binary predicate twice and that begins at position 8.
+in v2 under the binary predicate twice and that begins at position 8.
 ```
 
 ## <a name="find_first_of"></a> find_first_of
@@ -1503,15 +1558,20 @@ ForwardIterator1 find_first_of(
 
 ### <a name="parameters"></a>參數
 
-*First1*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first1*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*last1*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*last1*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*first2*正向迭代器，定址範圍中第一個元素的位置比對。
+*first2*<br/>
+正向迭代器，其定址要比對範圍中第一個元素的位置。
 
-*last2*正向迭代器定址的後面一個位置，最後一個元素範圍中要比對。
+*last2*<br/>
+正向迭代器，其定址要比對範圍中最後一個元素之後的位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1616,10 +1676,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 15 20 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 3.
+and the first one begins at position 3.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="find_if"></a> find_if
@@ -1636,11 +1696,14 @@ InputIterator find_if(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*輸入迭代器，定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*pred*使用者定義述詞函式物件或[lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義要搜尋的項目要符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
+*預測*<br/>
+使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1750,11 +1813,14 @@ InputIterator find_if_not(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*輸入迭代器，定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*pred*使用者定義述詞函式物件或[lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義要搜尋的項目不符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
+*預測*<br/>
+使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素不符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1780,11 +1846,14 @@ Function for_each(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址要處理的範圍中第一個元素的位置。
+*first*<br/>
+輸入迭代器，定址要對其作業之範圍中第一個元素的位置。
 
-*最後一個*輸入迭代器定址的後面一個位置，最後一個元素範圍中操作。
+*最後一個*<br/>
+輸入迭代器，定址要對其作業之範圍中最後一個元素之後的位置。
 
-*_Func*套用至每個項目範圍中的使用者定義函式物件。
+*_Func*<br/>
+套用至範圍中每個元素的使用者定義函式物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1902,13 +1971,13 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
- by the factor -2 gives:
- v1mod1 = ( 8 6 4 2 0 -2 -4 ).
+by the factor -2 gives:
+v1mod1 = ( 8 6 4 2 0 -2 -4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 gives:
- v1mod2 = ( 40 30 20 10 0 -10 -20 ).
+by the factor 5 gives:
+v1mod2 = ( 40 30 20 10 0 -10 -20 ).
 The average of the elements of v1 is:
- Average ( v1mod2 ) = 10.
+Average ( v1mod2 ) = 10.
 ```
 
 ## <a name="generate"></a> generate
@@ -1925,11 +1994,14 @@ void generate(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址要指派的值範圍中的第一個項目位置。
+*first*<br/>
+正向迭代器，定址要指派值之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器，定址要指派的值範圍中最後一個項目的後面一個位置。
+*最後一個*<br/>
+正向迭代器，定址要指派值之範圍中最後一個元素之後的位置。
 
-*_Gen*函式物件，該物件會呼叫不含引數用來產生要指派給每個範圍中元素的值。
+*_Gen*<br/>
+不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1996,11 +2068,14 @@ void generate_n(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸出迭代器，定址要指派的值範圍中的第一個項目位置。
+*第一個*<br/>
+輸出迭代器，指向範圍中第一個項目的位置 (要指派值至其中)。
 
-*計數*的帶正負號或不帶正負號的整數型別指定的項目數，由產生器函式被指派值。
+*計數*<br/>
+帶正負號或不帶正負號的整數類型，指定要由產生器函式指派值的項目數。
 
-*Gen*函式物件，該物件會呼叫不含引數用來產生要指派給每個範圍中元素的值。
+*一般*<br/>
+不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
 
@@ -2077,15 +2152,20 @@ bool includes(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器定址兩個排序的來源範圍的第一篇的第二個的所有元素是否都包含在第一個要測試的第一個元素的位置。
+*first1*<br/>
+輸入迭代器，定址要進行下列作業之兩個排序來源範圍的第一個範圍中第一個元素的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
 
-*last1*輸入迭代器定址後面一個位置的最後一個元素前兩個排序的來源範圍的第二個的所有元素是否都包含在第一個要測試。
+*last1*<br/>
+輸入迭代器，定址要進行下列作業之兩個排序來源範圍的第一個範圍中最後一個元素之後的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
 
-*first2*輸入迭代器定址的第一個項目中的兩個連續第二個排序來源範圍的第二個的所有元素是否都包含在第一個要測試。
+*first2*<br/>
+輸入迭代器，定址要進行下列作業之兩個連續排序來源範圍的第二個範圍中第一個元素的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
 
-*last2*輸入迭代器定址的後面一個位置，最後一個項目中的兩個連續第二個排序來源範圍的第二個的所有元素是否都包含在第一個要測試。
+*last2*<br/>
+輸入迭代器，定址要進行下列作業之兩個連續排序來源範圍的第二個範圍中最後一個元素之後的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2238,17 +2318,17 @@ int main()
 
 ```Output
 Original vector v1a with range sorted by the
- binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
+binary predicate less than is v1a = ( -2 -1 0 1 2 3 4 ).
 Original vector v1b with range sorted by the
- binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
+binary predicate less than is v1b = ( -2 -1 0 1 2 3 ).
 Original vector v2a with range sorted by the
- binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
+binary predicate greater is v2a = ( 4 3 2 1 0 -1 ).
 Original vector v2b with range sorted by the
- binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
+binary predicate greater is v2b = ( 3 2 1 0 -1 -2 ).
 Original vector v3a with range sorted by the
- binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
+binary predicate mod_lesser is v3a = ( 0 1 2 3 4 ).
 Original vector v3b with range sorted by the
- binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
+binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
@@ -2275,13 +2355,17 @@ void inplace_merge(
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器，定址要結合並排序成單一範圍的第一個項目中的第一個的兩個連續排序範圍的位置。
+*first*<br/>
+雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第一個範圍中第一個元素的位置。
 
-*中間*雙向迭代器，定址要結合並排序成單一範圍的第一個項目中第二個兩個連續排序範圍的位置。
+*中間*<br/>
+雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中第一個元素的位置。
 
-*最後一個*雙向迭代器，定址要結合並排序成單一範圍的最後一個項目中第二個兩個連續排序範圍超過一個的位置。
+*最後一個*<br/>
+雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中最後一個元素之後的位置。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -2389,17 +2473,17 @@ int main()
 
 ```Output
 Original vector v1 with subranges sorted by the
- binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
- binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
- binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
+binary predicate mod_lesser is v3 = ( 0 1 2 3 4 5 0 -1 -2 -3 -4 -5 )
 Merged inplace with default order,
- vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
+vector v1mod = ( -5 -4 -3 -2 -1 0 0 1 2 3 4 5 )
 Merged inplace with binary predicate greater specified,
- vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
+vector v2mod = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Merged inplace with binary predicate mod_lesser specified,
- vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
+vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
 ## <a name="is_heap"></a> is_heap
@@ -2421,11 +2505,14 @@ bool is_heap(
 
 ### <a name="parameters"></a>參數
 
-*第一個*的隨機存取迭代器，表示要檢查有無堆積的範圍開始。
+*first*<br/>
+隨機存取迭代器，表示檢查堆積的範圍開始。
 
-*最後一個*表示範圍結尾的隨機存取迭代器。
+*最後一個*<br/>
+隨機存取迭代器，表示範圍結尾。
 
-*comp*測試以排序元素的條件。 二元述詞會接受單一引數，並傳回**真**或是**false**。
+*comp*<br/>
+要測試以排序元素的條件。 二元述詞會接受單一引數，並傳回**真**或是**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2458,11 +2545,14 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>參數
 
-*開始*隨機存取迭代器，指定要檢查有無堆積的範圍的第一個項目。
+*begin*<br/>
+隨機存取迭代器，指定要檢查有無堆積之範圍的第一個項目。
 
-*結束*的隨機存取迭代器，指定要檢查有無堆積之範圍的結尾。
+*end*<br/>
+隨機存取迭代器，指定要檢查有無堆積的範圍結尾。
 
-*比較*指定嚴格弱式排序條件定義堆積的二元述詞。 預設述詞的時機*比較*未指定為`std::less<>`。
+*compare*<br/>
+二元述詞，指定定義堆積的嚴格弱式排序條件。 預設述詞的時機*比較*未指定為`std::less<>`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2488,11 +2578,14 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示範圍開始檢查條件的位置。
+*first*<br/>
+輸入迭代器，表示範圍開始檢查條件的位置。
 
-*最後一個*輸入迭代器，表示範圍結尾。
+*最後一個*<br/>
+輸入迭代器，表示範圍結尾。
 
-*comp*来測試條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2539,15 +2632,20 @@ bool is_permutation(
 
 ### <a name="parameters"></a>參數
 
-*First1*正向迭代器，表示範圍的第一個項目。
+*first1*<br/>
+指向範圍的第一個項目的正向迭代器。
 
-*Last1*正向迭代器，指向範圍的最後一個項目。
+*last1*<br/>
+指向範圍的最後項目前一個的正向迭代器。
 
-*First2*正向迭代器，表示第二個範圍，用於比較的第一個元素。
+*first2*<br/>
+指向第二個範圍的第一個項目的正向迭代器，用於比較。
 
-*Last2*參考到其中的第二個範圍，用於比較的最後一個元素的正向迭代器。
+*last2*<br/>
+指向第二個範圍的最後一個項目之某個項目的正向迭代器，用於比較。
 
-*預計*來測試是否相等，並傳回的述詞**bool**。
+*預測*<br/>
+測試是否相等，並傳回的述詞**bool**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2637,11 +2735,14 @@ bool is_sorted(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，表示要檢查之範圍的開始位置。
+*first*<br/>
+正向迭代器，表示要檢查之範圍的開始位置。
 
-*最後一個*表示範圍結尾的正向迭代器。
+*最後一個*<br/>
+正向迭代器，表示範圍結尾。
 
-*comp*進行測試以判斷兩個項目間之順序的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。 這會執行與 `operator<` 相同的工作。
+*comp*<br/>
+要測試以判斷兩個元素間之順序的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。 這會執行與 `operator<` 相同的工作。
 
 ### <a name="remarks"></a>備註
 
@@ -2659,21 +2760,24 @@ bool is_sorted(
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
-    ForwardIterator last); 
+    ForwardIterator last);
 template<class ForwardIterator, class BinaryPredicate>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*的正向迭代器，表示要檢查之範圍的開始位置。
+*first*<br/>
+正向迭代器，表示要檢查之範圍的開始位置。
 
-*最後一個*表示範圍結尾的正向迭代器。
+*最後一個*<br/>
+正向迭代器，表示範圍結尾。
 
-*comp*進行測試以判斷兩個項目間之順序的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+要測試以判斷兩個元素間之順序的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2697,9 +2801,11 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>參數
 
-*左*正向迭代器，並將其值是要交換的其中一個。
+*left*<br/>
+要交換其值的其中一個正向迭代器。
 
-*右*正向迭代器，並將其值是要交換的第二個。
+*right*<br/>
+要交換其值的第二個正向迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -2830,14 +2936,14 @@ int main()
 ```Output
 The original deque of CInts is deq1 = ( CInt(5), CInt(1), CInt(10) ).
 The deque of CInts with first & last elements swapped is:
- deq1 = ( CInt(10), CInt(1), CInt(5) ).
+deq1 = ( CInt(10), CInt(1), CInt(5) ).
 The deque of CInts with first & last elements swapped back is:
- deq1 = ( CInt(5), CInt(1), CInt(10) ).
+deq1 = ( CInt(5), CInt(1), CInt(10) ).
 Vector v1 is ( 0 1 2 3 ).
 Deque deq2 is ( 4 5 ).
 After exchanging first elements,
- vector v1 is: v1 = ( 4 1 2 3 ).
- & deque deq2 is: deq2 = ( 0 5 ).
+vector v1 is: v1 = ( 4 1 2 3 ).
+& deque deq2 is: deq2 = ( 0 5 ).
 ```
 
 ## <a name="lexicographical_compare"></a> lexicographical_compare
@@ -2864,15 +2970,20 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器，定址在第一個範圍中的第一個元素的位置進行比較。
+*first1*<br/>
+輸入迭代器，定址要比較之第一個範圍中第一個元素的位置。
 
-*last1*輸入迭代器，定址在第一個範圍中最後一個項目的後面一個位置進行比較。
+*last1*<br/>
+輸入迭代器，定址要比較之第一個範圍中最後一個元素之後的位置。
 
-*first2*輸入迭代器，定址在第二個範圍中的第一個元素的位置進行比較。
+*first2*<br/>
+輸入迭代器，定址要比較之第二個範圍中第一個元素的位置。
 
-*last2*輸入迭代器，定址在第二個範圍中最後一個項目的後面一個位置進行比較。
+*last2*<br/>
+輸入迭代器，定址要比較之第二個範圍中最後一個元素之後的位置。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3005,13 +3116,17 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*最後一個*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*值*其第一個位置或可能第一個位置搜尋排序範圍中的值。
+*值*<br/>
+正在搜尋排序範圍中第一個位置或可能第一個位置的值。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3140,11 +3255,14 @@ void make_heap(
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址要轉換成堆積的範圍內的第一個元素的位置。
+*first*<br/>
+隨機存取迭代器，定址要轉換為堆積之範圍中第一個元素的位置。
 
-*最後一個*隨機存取迭代器，定址要轉換成堆積的範圍內，最後一個元素的後面一個位置。
+*最後一個*<br/>
+隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -3208,30 +3326,34 @@ int main() {
 template<class Type>
 constexpr Type& max(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type& max(
     initializer_list<Type> ,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*左*所比較的兩個物件的第一個。
+*left*<br/>
+正在比較的兩個物件之第一個。
 
-*右*兩者的第二個物件進行比較。
+*right*<br/>
+正在比較的兩個物件之第二個。
 
-*comp*二元述詞，用來比較兩個物件。
+*comp*<br/>
+用來比較兩個物件的二元述詞。
 
-*_IList*初始設定式清單，其中包含要比較的物件。
+*_IList*<br/>
+包含要比較的物件之初始設定式清單。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3424,11 +3546,14 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置搜尋最大的項目。
+*first*<br/>
+正向迭代器，定址要搜尋最大元素之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器，定址範圍中的最後一個元素的後面一個位置来搜尋的最大的項目。
+*最後一個*<br/>
+正向迭代器，定址要搜尋最大元素之範圍中最後一個元素之後的位置。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3566,17 +3691,23 @@ OutputIterator merge(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器，定址要結合並排序成單一範圍的兩個排序的來源範圍的第一篇的第一個元素的位置。
+*first1*<br/>
+輸入迭代器，用於定址要結合並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個項目的位置。
 
-*last1*輸入迭代器定址的其中一個最後一個元素在第一個来結合並排序成單一範圍的兩個排序的來源範圍。
+*last1*<br/>
+輸入迭代器，用於定址要結合並排序成單一範圍之兩個排序來源範圍的第一個範圍中，最後一個項目的後面一個位置。
 
-*first2*輸入迭代器，定址要結合並排序成單一範圍的第一個項目中的兩個連續第二個排序來源範圍的位置。
+*first2*<br/>
+輸入迭代器，用於定址要結合並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，第一個項目的位置。
 
-*last2*輸入迭代器，定址要結合並排序成單一範圍的最後一個項目中的兩個連續第二個排序來源範圍中的後面一個位置。
+*last2*<br/>
+輸入迭代器，用於定址要結合並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置。
 
-*結果*輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置會結合成單一排序範圍。
+*結果*<br/>
+輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會結合成單一排序範圍。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3716,31 +3847,35 @@ int main() {
 template<class Type>
 constexpr const Type& min(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
 constexpr Type min( 
-    initializer_list<Type> ); 
+    initializer_list<Type> );
 template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>參數
 
-*左*所比較的兩個物件的第一個。
+*left*<br/>
+正在比較的兩個物件之第一個。
 
-*右*兩者的第二個物件進行比較。
+*right*<br/>
+正在比較的兩個物件之第二個。
 
-*comp*二元述詞，用來比較兩個物件。
+*comp*<br/>
+用來比較兩個物件的二元述詞。
 
-*_IList*包含要比較之成員的 initializer_list。
+*_IList*<br/>
+包含要比較之成員的 initializer_list。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3935,11 +4070,14 @@ constexpr ForwardIterator min_element(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置搜尋最小的元素。
+*first*<br/>
+正向迭代器，定址要搜尋最小元素之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器，定址範圍中的最後一個元素的後面一個位置搜尋最小的元素。
+*最後一個*<br/>
+正向迭代器，定址要搜尋最小元素之範圍中最後一個元素之後的位置。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4058,7 +4196,7 @@ The smallest element in s1 is: CInt( -3 )
 Vector v1 is ( 0 1 2 3 -2 -4 -6 -8 ).
 The smallest element in v1 is: -8
 The smallest element in v1 under the mod_lesser
- binary predicate is: 0
+binary predicate is: 0
 ```
 
 ## <a name="minmax_element"></a> minmax_element
@@ -4069,21 +4207,24 @@ The smallest element in v1 under the mod_lesser
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last); 
+    ForwardIterator Last);
 template<class ForwardIterator, class BinaryPredicate>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
-    BinaryPredicate  comp); 
+    BinaryPredicate  comp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，表示範圍的開頭。
+*first*<br/>
+正向迭代器，表示範圍開頭。
 
-*最後一個*表示範圍結尾的正向迭代器。
+*最後一個*<br/>
+正向迭代器，表示範圍結尾。
 
-*comp*用來排序元素的選擇性測試。
+*comp*<br/>
+用來排序元素的選擇性測試。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4113,31 +4254,35 @@ Returns
 template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
-    const Type& right); 
+    const Type& right);
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 template<class Type>
- constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> ); 
+constexpr pair<Type&, Type&> minmax(
+    initializer_list<Type> );
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
-    BinaryPredicate comp); 
+    BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>參數
 
-*左*所比較的兩個物件的第一個。
+*left*<br/>
+正在比較的兩個物件之第一個。
 
-*右*兩者的第二個物件進行比較。
+*right*<br/>
+正在比較的兩個物件之第二個。
 
-*comp*二元述詞，用來比較兩個物件。
+*comp*<br/>
+用來比較兩個物件的二元述詞。
 
-*_IList*包含要比較之成員的 initializer_list。
+*_IList*<br/>
+包含要比較之成員的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -4190,15 +4335,20 @@ mismatch(
 
 ### <a name="parameters"></a>參數
 
-*First1*輸入迭代器，定址在第一個範圍中的第一個元素的位置進行測試。
+*first1*<br/>
+輸入迭代器，定址要測試的第一個範圍中第一個項目的位置。
 
-*Last1*輸入迭代器，定址在第一個範圍中最後一個元素的後面一個位置進行測試。
+*last1*<br/>
+輸入迭代器，定址要測試的第一個範圍中最後一個項目的後面一個位置。
 
-*First2*輸入迭代器，定址在第二個範圍中的第一個元素的位置進行測試。
+*first2*<br/>
+輸入迭代器，定址要測試的第二個範圍中第一個項目的位置。
 
-*Last2*輸入迭代器，定址在第二個範圍中的最後一個元素的其中一個位置進行測試。
+*last2*<br/>
+輸入迭代器，定址要測試的第二個範圍中最後一個項目的後面一個位置。
 
-*Comp*使用者定義述詞函式物件，會比較每個範圍中的目前項目，並判斷它們是否相等。 符合時傳回 **true**，不符合則傳回 **false**。
+*Comp*<br/>
+使用者定義述詞函式物件，比較每個範圍中的目前項目，並判斷是否相等。 符合時傳回 **true**，不符合則傳回 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4320,16 +4470,19 @@ template<class InputIterator, class OutputIterator>
 OutputIterator move(
     InputIterator first,
     InputIterator last,
-    OutputIterator dest); 
+    OutputIterator dest);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示要移動的項目範圍的開始位置。
+*first*<br/>
+輸入迭代器，表示項目移動範圍的開始位置。
 
-*最後一個*輸入迭代器，表示要移動的項目範圍的結尾。
+*最後一個*<br/>
+輸入迭代器，表示項目移動範圍的結束位置。
 
-*dest*要包含已移動項目的輸出迭代器。
+*dest*<br/>
+要包含已移動項目的輸出迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -4350,11 +4503,14 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>參數
 
-*第一個*迭代器，表示要從中移動元素的範圍開始。
+*first*<br/>
+迭代器，表示要從中移動元素的範圍開始。
 
-*最後一個*迭代器，表示要從中移動項目的範圍結尾。 這個元素不會進行移動。
+*最後一個*<br/>
+迭代器，表示要從中移動元素的範圍結尾。 這個元素不會進行移動。
 
-*destEnd*雙向迭代器，定址目的範圍中的最後一個項目的其中一個位置。
+*destEnd*<br/>
+雙向迭代器，在目的範圍中越過最後一個項目的位置定址。
 
 ### <a name="remarks"></a>備註
 
@@ -4377,11 +4533,14 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>參數
 
-*第一個*的雙向迭代器指向第一個元素的位置，範圍中要排列。
+*first*<br/>
+雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*最後一個*的雙向迭代器指向的後面一個位置，最後一個元素範圍中要排列。
+*最後一個*<br/>
+雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
-*comp*定義順序中後續元素所要符合的比較準則的使用者定義述詞函式物件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4517,21 +4676,21 @@ The original deque of CInts is deq1 = ( CInt( 5 ), CInt( 1 ), CInt( 10 ) ).
 The lexicographically next permutation exists and has
 replaced the original ordering of the sequence in deq1.
 After one application of next_permutation,
- deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
+deq1 = ( CInt( 5 ), CInt( 10 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first next_permutation, vector v1 is:
- v1 = ( -3 -2 -1 0 1 3 2 ).
+v1 = ( -3 -2 -1 0 1 3 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 1 3 ).
+v1 =   ( -3 -2 -1 0 2 1 3 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 2 3 1 ).
+v1 =   ( -3 -2 -1 0 2 3 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 1 2 ).
+v1 =   ( -3 -2 -1 0 3 1 2 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 0 3 2 1 ).
+v1 =   ( -3 -2 -1 0 3 2 1 ).
 After another next_permutation of vector v1,
- v1 =   ( -3 -2 -1 1 0 2 3 ).
+v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
 ## <a name="nth_element"></a> nth_element
@@ -4543,19 +4702,23 @@ template<class RandomAccessIterator>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
- void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
 
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址範圍中第一個元素的位置進行分割。
+*first*<br/>
+隨機存取迭代器，定址要分割之範圍中第一個元素的位置。
 
-*_Nth*隨機存取迭代器，定址的元素位置的資料分割的界限上正確排序。
+*_Nth*<br/>
+隨機存取迭代器，定址要在磁碟分割界限上正確排序之元素的位置。
 
-*最後一個*隨機存取迭代器，定址範圍中的最後一個元素的後面一個位置進行分割。
+*最後一個*<br/>
+隨機存取迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
-*comp*定義順序中後續元素所要符合的比較準則的使用者定義述詞函式物件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -4644,11 +4807,14 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示開始檢查條件的項目範圍的位置。
+*first*<br/>
+輸入迭代器，表示開始檢查條件之某範圍元素的位置。
 
-*最後一個*輸入迭代器，表示項目範圍的結尾。
+*最後一個*<br/>
+輸入迭代器，表示某範圍元素的結尾。
 
-*comp*来測試條件。 這是由定義該條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+要測試的條件。 這是由定義該條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4680,13 +4846,17 @@ void partial_sort(
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址範圍中第一個元素的位置進行排序。
+*first*<br/>
+隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*sortEnd*的隨機存取迭代器定址之子範圍中最後一個項目的後面一個位置進行排序。
+*sortEnd*<br/>
+隨機存取迭代器，定址要排序之子範圍中最後一個元素之後的位置。
 
-*最後一個*隨機存取迭代器定址的後面一個位置，最後一個元素範圍中要局部排序。
+*最後一個*<br/>
+隨機存取迭代器，定址要局部排序之範圍中最後一個元素之後的位置。
 
-*comp*定義順序中後續元素所要符合的比較準則的使用者定義述詞函式物件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -4750,7 +4920,7 @@ int main()
 
    // A user-defined (UD) binary predicate can also be used
    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
- UDgreater );
+UDgreater );
    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
       cout << *Iter1 << " ";
@@ -4760,13 +4930,13 @@ int main()
 
 ```Output
 Original vector:
- v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
+v1 = ( 0 2 4 6 8 10 1 3 5 7 9 11 )
 Partially sorted vector:
- v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
+v1 = ( 0 1 2 3 4 5 10 8 6 7 9 11 )
 Partially resorted (greater) vector:
- v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
+v1 = ( 11 10 9 8 0 1 2 3 4 5 6 7 )
 Partially resorted (UDgreater) vector:
- v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
+v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
 ## <a name="partial_sort_copy"></a> partial_sort_copy
@@ -4792,15 +4962,20 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器定址來源範圍中的第一個元素的位置。
+*first1*<br/>
+輸入迭代器，在來源範圍的第一個項目位置定址。
 
-*last1*輸入迭代器定址的後面一個位置，最後一個元素的來源範圍中。
+*last1*<br/>
+輸入迭代器，定址來源範圍中最後一個元素之後的位置。
 
-*first2*隨機存取迭代器，定址排序的目的範圍中第一個元素的位置。
+*first2*<br/>
+隨機存取迭代器，定址排序目的範圍中第一個元素的位置。
 
-*last2*隨機存取迭代器定址的後面一個位置，最後一個元素的排序的目的範圍中。
+*last2*<br/>
+隨機存取迭代器，定址排序目的範圍中最後一個元素之後的位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4903,11 +5078,14 @@ BidirectionalIterator partition(
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器，定址範圍中第一個元素的位置進行分割。
+*first*<br/>
+雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*最後一個*雙向迭代器，定址範圍中的最後一個元素的後面一個位置進行分割。
+*最後一個*<br/>
+雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
-*comp*使用者定義述詞函式物件，定義要分類的項目時符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4972,20 +5150,25 @@ pair<OutputIterator1, OutputIterator2>
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred); 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，表示檢查條件的範圍開始。
+*first*<br/>
+輸入迭代器，表示檢查條件的範圍開始。
 
-*最後一個*輸入迭代器，表示範圍結尾。
+*最後一個*<br/>
+輸入迭代器，表示範圍結尾。
 
-*dest1*輸出迭代器，用來複製項目傳回 true 的條件使用測試 *_Pred*。
+*dest1*<br/>
+輸出迭代器，用來複製項目傳回 true 的條件使用測試 *_Pred*。
 
-*dest2*輸出迭代器，用來將傳回 false 條件的項目複製使用測試 *_Pred*。
+*dest2*<br/>
+輸出迭代器，用來將傳回 false 條件的項目複製使用測試 *_Pred*。
 
-*_Pred*来測試條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*_Pred*<br/>
+要測試的條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="remarks"></a>備註
 
@@ -5000,16 +5183,19 @@ template<class ForwardIterator, class Predicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp); 
+    Predicate comp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*A`ForwardIterator`表示檢查條件的範圍開頭。
+*first*<br/>
+`ForwardIterator`，表示檢查條件的範圍開始。
 
-*最後一個*A`ForwardIterator`表示範圍結尾。
+*最後一個*<br/>
+`ForwardIterator`，表示範圍結尾。
 
-*comp*来測試條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*comp*<br/>
+要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5034,11 +5220,14 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址堆積中的第一個元素的位置。
+*first*<br/>
+隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*最後一個*隨機存取迭代器定址的後面一個位置，最後一個元素的堆積中。
+*最後一個*<br/>
+隨機存取迭代器，定址堆積中最後一個元素之後的位置。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -5140,11 +5329,14 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>參數
 
-*第一個*的雙向迭代器指向第一個元素的位置，範圍中要排列。
+*first*<br/>
+雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*最後一個*的雙向迭代器指向的後面一個位置，最後一個元素範圍中要排列。
+*最後一個*<br/>
+雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
-*comp*定義順序中後續元素所要符合的比較準則的使用者定義述詞函式物件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5272,24 +5464,24 @@ int main() {
 ```Output
 The original deque of CInts is deq1 = ( CInt( 1 ), CInt( 5 ), CInt( 10 ) ).
 The lexicographically previous permutation doesn't exist
- and the lexicographically smallest permutation
- has replaced the original ordering of the sequence in deq1.
+and the lexicographically smallest permutation
+has replaced the original ordering of the sequence in deq1.
 After one application of prev_permutation,
- deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
+deq1 = ( CInt( 10 ), CInt( 5 ), CInt( 1 ) ).
 
 Vector v1 is ( -3 -2 -1 0 1 2 3 ).
 After the first prev_permutation, vector v1 is:
- v1 = ( -3 -2 0 3 2 1 -1 ).
+v1 = ( -3 -2 0 3 2 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 2 1 ).
+v1 =   ( -3 -2 0 3 -1 2 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 3 -1 1 2 ).
+v1 =   ( -3 -2 0 3 -1 1 2 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 3 1 -1 ).
+v1 =   ( -3 -2 0 2 3 1 -1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 3 1 ).
+v1 =   ( -3 -2 0 2 -1 3 1 ).
 After another prev_permutation of vector v1,
- v1 =   ( -3 -2 0 2 -1 1 3 ).
+v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
 ## <a name="push_heap"></a> push_heap
@@ -5307,11 +5499,14 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址堆積中的第一個元素的位置。
+*first*<br/>
+隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*最後一個*隨機存取迭代器，定址要轉換成堆積的範圍內，最後一個元素的後面一個位置。
+*最後一個*<br/>
+隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -5408,17 +5603,20 @@ Std::random_shuffle() 函式已遭取代，取代[std:: shuffle](../standard-lib
 
 ```cpp
 template<class ForwardIterator, class Type>
- ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址要從中移除元素之範圍中的第一個元素的位置。
+*first*<br/>
+轉送迭代器，定址要從中移除元素之範圍中，第一個元素的位置。
 
-*最後一個*正向迭代器，定址要從中移除元素之範圍中最後一個項目的後面一個位置。
+*最後一個*<br/>
+轉送迭代器，定址要從中移除元素之範圍中，最後一個元素的位置後方。
 
-*val*是從範圍中移除的值。
+*val*<br/>
+要從範圍中移除的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5488,19 +5686,23 @@ int main() {
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
- OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
 
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址要從中移除元素之範圍中的第一個元素的位置。
+*first*<br/>
+輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*最後一個*輸入迭代器，定址要從中移除元素之範圍中最後一個項目的後面一個位置。
+*最後一個*<br/>
+輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*結果*輸出迭代器，定址要移除的元素之目的範圍中的第一個元素的位置。
+*結果*<br/>
+輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
-*val*是從範圍中移除的值。
+*val*<br/>
+要從範圍中移除的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5573,13 +5775,17 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，定址要從中移除元素之範圍中的第一個元素的位置。
+*first*<br/>
+輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*最後一個*輸入迭代器，定址要從中移除元素之範圍中最後一個項目的後面一個位置。
+*最後一個*<br/>
+輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*結果*輸出迭代器，定址要移除的元素之目的範圍中的第一個元素的位置。
+*結果*<br/>
+輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
-*_Pred*必須滿足一元述詞是項目的值是要被取代。
+*_Pred*<br/>
+必須符合的一元述詞，也就是要被取代的項目值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5664,11 +5870,14 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，指向要從中移除元素之範圍中的第一個元素的位置。
+*first*<br/>
+正向迭代器，指向要從中移除元素之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器，指向要從中移除元素之範圍中，最後一個元素的後面一個位置。
+*最後一個*<br/>
+正向迭代器，指向要從中移除元素之範圍中最後一個元素之後的位置。
 
-*_Pred*必須滿足一元述詞是項目的值是要被取代。
+*_Pred*<br/>
+必須符合的一元述詞，也就是要被取代的項目值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5751,13 +5960,17 @@ void replace(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，指向要從中取代元素之範圍中的第一個元素的位置。
+*first*<br/>
+正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器，指向要從中取代元素之範圍中，最後一個元素的後面一個位置。
+*最後一個*<br/>
+正向迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
-*_OldVal*所取代之項目的舊值。
+*_OldVal*<br/>
+所取代之項目的舊值。
 
-*_NewVal*指派給具有舊值的項目新值。
+*_NewVal*<br/>
+要指派給具有舊值之項目的新值。
 
 ### <a name="remarks"></a>備註
 
@@ -5823,15 +6036,20 @@ OutputIterator replace_copy(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，指向要從中取代元素之範圍中的第一個元素的位置。
+*first*<br/>
+輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*最後一個*輸入迭代器指向的後面一個位置，最後一個元素要從中取代元素之範圍中。
+*最後一個*<br/>
+輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*結果*輸出迭代器，指向要複製的項目已變更的序列其中之目的範圍中的第一個元素。
+*結果*<br/>
+輸出迭代器，用於指向要複製已更改順序的項目之目的範圍中，第一個項目的位置。
 
-*_OldVal*所取代之項目的舊值。
+*_OldVal*<br/>
+所取代之項目的舊值。
 
-*_NewVal*指派給具有舊值的項目新值。
+*_NewVal*<br/>
+要指派給具有舊值之項目的新值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5921,15 +6139,20 @@ OutputIterator replace_copy_if(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器，指向要從中取代元素之範圍中的第一個元素的位置。
+*first*<br/>
+輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*最後一個*輸入迭代器指向的後面一個位置，最後一個元素要從中取代元素之範圍中。
+*最後一個*<br/>
+輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*結果*輸出迭代器，指向要複製元素之目的範圍中的第一個元素的位置。
+*結果*<br/>
+輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
-*_Pred*必須滿足一元述詞是項目的值是要被取代。
+*_Pred*<br/>
+必須符合的一元述詞，也就是要被取代的項目值。
 
-*val*指派給其舊值符合述詞的項目新值。
+*val*<br/>
+要指派給其舊值符合此述詞之項目的新值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6025,13 +6248,17 @@ void replace_if(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，指向要從中取代元素之範圍中的第一個元素的位置。
+*first*<br/>
+正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*最後一個*迭代器，指向要從中取代元素之範圍中，最後一個元素的後面一個位置。
+*最後一個*<br/>
+迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
-*_Pred*必須滿足一元述詞是項目的值是要被取代。
+*_Pred*<br/>
+必須符合的一元述詞，也就是要被取代的項目值。
 
-*val*指派給其舊值符合述詞的項目新值。
+*val*<br/>
+要指派給其舊值符合此述詞之項目的新值。
 
 ### <a name="remarks"></a>備註
 
@@ -6101,9 +6328,11 @@ void reverse(BidirectionalIterator first, BidirectionalIterator last);
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器指向第一個項目在其中排列元素之範圍中的位置。
+*first*<br/>
+雙向迭代器，指向要排列元素之範圍中第一個元素的位置。
 
-*最後一個*指向的後面一個位置，最後一個元素中的範圍內的排列元素的雙向迭代器。
+*最後一個*<br/>
+雙向迭代器，指向要排列元素之範圍中最後一個元素之後的位置。
 
 ### <a name="remarks"></a>備註
 
@@ -6146,9 +6375,9 @@ int main() {
 
 ```Output
 The original vector v1 is:
- ( 0 1 2 3 4 5 6 7 8 9 ).
+( 0 1 2 3 4 5 6 7 8 9 ).
 The modified vector v1 with values reversed is:
- ( 9 8 7 6 5 4 3 2 1 0 ).
+( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
 ## <a name="reverse_copy"></a> reverse_copy
@@ -6166,11 +6395,14 @@ OutputIterator reverse_copy(
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器指向第一個元素的位置，在其中排列元素之來源範圍中。
+*first*<br/>
+雙向迭代器，用於指向要排列的來源範圍中，第一個元素的位置。
 
-*最後一個*指向一個位置，最後一個元素內的排列元素之來源範圍中的雙向迭代器。
+*最後一個*<br/>
+雙向迭代器，用於指向要排列元素的來源範圍中，最後一個元素的後面一個位置。
 
-*結果*輸出迭代器，指向要複製元素之目的範圍中的第一個元素的位置。
+*結果*<br/>
+輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6226,7 +6458,7 @@ int main() {
 
 ```cpp
 template<class ForwardIterator>
- void rotate(
+void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
@@ -6235,11 +6467,14 @@ template<class ForwardIterator>
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置来被輪替。
+*first*<br/>
+正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*中間*定義位址與範圍的第一個部分要交換其元素之範圍的第二部分中的第一個項目位置的範圍內界限的正向迭代器。
+*中間*<br/>
+定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中要被輪替。
+*最後一個*<br/>
+正向迭代器，用於定址要旋轉之範圍中最後一個項目的後面一個位置。
 
 ### <a name="remarks"></a>備註
 
@@ -6309,17 +6544,17 @@ Vector v1 is ( -3 -2 -1 0 1 2 3 4 5 ).
 After rotating, vector v1 is ( 0 1 2 3 4 5 -3 -2 -1 ).
 The original deque d1 is ( 0 1 2 3 4 5 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 1 2 3 4 5 0 ).
+d1 is   ( 1 2 3 4 5 0 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 2 3 4 5 0 1 ).
+d1 is   ( 2 3 4 5 0 1 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 3 4 5 0 1 2 ).
+d1 is   ( 3 4 5 0 1 2 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 4 5 0 1 2 3 ).
+d1 is   ( 4 5 0 1 2 3 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 5 0 1 2 3 4 ).
+d1 is   ( 5 0 1 2 3 4 ).
 After the rotation of a single deque element to the back,
- d1 is   ( 0 1 2 3 4 5 ).
+d1 is   ( 0 1 2 3 4 5 ).
 ```
 
 ## <a name="rotate_copy"></a> rotate_copy
@@ -6338,13 +6573,16 @@ OutputIterator rotate_copy(
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址範圍中第一個元素的位置来被輪替。
+*first*<br/>
+正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*中間*定義位址與範圍的第一個部分要交換其元素之範圍的第二部分中的第一個項目位置的範圍內界限的正向迭代器。
+*中間*<br/>
+定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
 _*最後一個*正向迭代器定址的後面一個位置，最後一個元素範圍中要被輪替。
 
-*結果*輸出迭代器，定址目的範圍中的第一個元素的位置。
+*結果*<br/>
+輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6439,15 +6677,20 @@ ForwardIterator1 search(
 
 ### <a name="parameters"></a>參數
 
-*First1*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first1*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*last1*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*last1*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*first2*正向迭代器，定址範圍中第一個元素的位置比對。
+*first2*<br/>
+正向迭代器，其定址要比對範圍中第一個元素的位置。
 
-*last2*正向迭代器定址的後面一個位置，最後一個元素範圍中要比對。
+*last2*<br/>
+正向迭代器，其定址要比對範圍中最後一個元素之後的位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6553,10 +6796,10 @@ Vector v1 = ( 0 5 10 15 20 25 0 5 10 15 20 25 )
 List L1 = ( 20 25 )
 Vector v2 = ( 20 30 40 )
 There is at least one match of L1 in v1
- and the first one begins at position 4.
+and the first one begins at position 4.
 There is a sequence of elements in v1 that are equivalent
- to those in v2 under the binary predicate twice
- and the first one begins at position 2.
+to those in v2 under the binary predicate twice
+and the first one begins at position 2.
 ```
 
 ## <a name="search_n"></a> search_n
@@ -6583,15 +6826,20 @@ ForwardIterator1 search_n(
 
 ### <a name="parameters"></a>參數
 
-*First1*正向迭代器，定址範圍中第一個元素的位置搜尋。
+*first1*<br/>
+正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*last1*正向迭代器定址的後面一個位置，最後一個元素範圍中搜尋。
+*last1*<br/>
+正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*計數*所搜尋的子序列的大小。
+*count*<br/>
+所搜尋子序列的大小。
 
-*val*所搜尋序列中項目的值。
+*val*<br/>
+所搜尋序列中元素的值。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6683,9 +6931,9 @@ int main()
 ```Output
 Vector v1 = ( 0 5 10 15 20 25 5 5 5 0 5 10 15 20 25 10 10 10 )
 There is at least one match of a sequence ( 5 5 5 )
- in v1 and the first one begins at position 6.
+in v1 and the first one begins at position 6.
 There is a match of a sequence ( 5 5 5 ) under the equivalence
- predicate one_half in v1 and the first one begins at position 15.
+predicate one_half in v1 and the first one begins at position 15.
 ```
 
 ## <a name="set_difference"></a> set_difference
@@ -6713,17 +6961,23 @@ OutputIterator set_difference(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器定址的第一個元素的位置，在兩個排序的來源範圍的第一個是並排序成單一範圍代表兩個來源範圍的差異。
+*first1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的差異。
 
-*last1*輸入迭代器定址的其中一個最後一個元素第一個範圍中的兩個排序的來源範圍是並排序成單一範圍代表兩個來源範圍的差異。
+*last1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的差異。
 
-*first2*輸入迭代器定址位置的第一個項目中的兩個連續第二個排序來源範圍是並排序成單一範圍代表兩個來源範圍的差異。
+*first2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的差異。
 
-*last2*輸入迭代器定址的後面一個位置的最後一個元素中的兩個連續第二個排序來源範圍是並排序成單一範圍代表兩個來源範圍的差異。
+*last2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的差異。
 
-*結果*輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置是集成單一排序範圍代表兩個來源範圍的差異。
+*結果*<br/>
+輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的差異。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6887,17 +7141,22 @@ OutputIterator set_intersection(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器定址在兩個排序的來源範圍的第一個是並排序成單一範圍代表兩個來源範圍的交集的第一個元素的位置。
+*first1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的交集。
 
-*last1*輸入迭代器定址的其中一個最後一個元素第一個範圍中的兩個排序的來源範圍是並排序成單一範圍代表兩個來源範圍的交集。
+*last1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的交集。
 
-*first2*輸入迭代器定址位置的第一個項目中的兩個連續第二個排序來源範圍是並排序成單一範圍代表兩個來源範圍的交集。
+*first2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的交集。
 
-*last2*輸入迭代器定址的後面一個位置的最後一個元素中的兩個連續第二個排序來源範圍會聯並排序成單一範圍，以代表兩個來源範圍的交集。
+*last2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的交集。
 
 **_** *結果*集成單一排序範圍代表兩個來源的交集為輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置範圍。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7036,7 +7295,7 @@ int main() {
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
- OutputIterator set_symmetric_difference(
+OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
@@ -7056,17 +7315,22 @@ OutputIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器定址的第一個元素的位置，在兩個排序的來源範圍的第一個是並排序成單一範圍代表兩個來源範圍的對稱差異。
+*first1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個項目的位置，此聯集範圍代表兩個來源範圍的對稱差。
 
-*last1*輸入迭代器定址的其中一個最後一個元素第一個範圍中的兩個排序的來源範圍是並排序成單一範圍代表兩個來源範圍的對稱差異。
+*last1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，最後一個項目的後面一個位置，此聯集範圍代表兩個來源範圍的對稱差。
 
-*first2*輸入迭代器定址位置的第一個項目中的兩個連續第二個排序來源範圍是並排序成單一範圍代表兩個來源範圍的對稱差異。
+*first2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，第一個項目的位置，此聯集範圍代表兩個來源範圍的對稱差。
 
-*last2*輸入迭代器定址的後面一個位置的最後一個元素中的兩個連續第二個排序來源範圍是並排序成單一範圍代表兩個來源範圍的對稱差異。
+*last2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置，此聯集範圍代表兩個來源範圍的對稱差。
 
 **_** *結果*輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置是集成單一排序範圍代表兩個的對稱差異來源範圍。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7230,17 +7494,22 @@ OutputIterator set_union(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器定址在兩個排序的來源範圍的第一個是並排序成單一範圍代表兩個來源範圍的聯集的第一個元素的位置。
+*first1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的聯集。
 
-*last1*輸入迭代器定址的其中一個最後一個元素第一個範圍中的兩個排序的來源範圍是並排序成單一範圍代表兩個來源範圍的聯集。
+*last1*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的聯集。
 
-*first2*輸入迭代器定址位置的第一個項目中的兩個連續第二個排序來源範圍是並排序成單一範圍代表兩個來源範圍的聯集。
+*first2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的聯集。
 
-*last2*輸入迭代器定址的後面一個位置的最後一個元素中的兩個連續第二個排序來源範圍會聯並排序成單一範圍，以代表兩個來源範圍的聯集。
+*last2*<br/>
+輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的聯集。
 
 **_** *結果*輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置是集成單一排序範圍代表兩個來源範圍的聯集。
 
-*comp*使用者定義述詞函式物件，定義一個項目是否大於另一個的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*comp*<br/>
+使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7392,11 +7661,14 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>參數
 
-*第一個*迭代器範圍中第一個項目要隨機播放 （含） 之間。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
+*first*<br/>
+範圍中要隨機播放之第一個元素的迭代器，內含。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*最後一個*迭代器範圍中最後一個項目要隨機播放、 獨佔。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
+*最後一個*<br/>
+範圍中要隨機播放之最後一個元素的迭代器，專用。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*gen*亂數產生器，`shuffle()`函式將用於此作業。 必須符合 `UniformRandomNumberGenerator` 的需求。
+*一般*<br/>
+`shuffle()` 函式將用於作業的亂數產生器。 必須符合 `UniformRandomNumberGenerator` 的需求。
 
 ### <a name="remarks"></a>備註
 
@@ -7422,11 +7694,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址範圍中第一個元素的位置進行排序。
+*first*<br/>
+隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*最後一個*隨機存取迭代器，定址範圍中的最後一個元素的後面一個位置進行排序。
+*最後一個*<br/>
+隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
-*comp*定義順序中後續元素所要符合的比較準則的使用者定義述詞函式物件。 此二元述詞會採用兩個引數，並傳回 **，則為 true**如果兩個引數的順序並**false**否則。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
+*comp*<br/>
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 此二元述詞會採用兩個引數，並傳回 **，則為 true**如果兩個引數的順序並**false**否則。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -7523,11 +7798,14 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>參數
 
-*第一個*隨機存取迭代器，定址目標堆積中的第一個元素的位置。
+*first*<br/>
+隨機存取迭代器，定址目標堆積中第一個元素的位置。
 
-*最後一個*隨機存取迭代器，定址目標堆積中最後一個項目的後面一個位置。
+*最後一個*<br/>
+隨機存取迭代器，定址目標堆積中最後一個元素之後的位置。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -7612,11 +7890,14 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器，定址範圍中第一個元素的位置進行分割。
+*first*<br/>
+雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*最後一個*雙向迭代器，定址範圍中的最後一個元素的後面一個位置進行分割。
+*最後一個*<br/>
+雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
-*_Pred*使用者定義述詞函式物件，定義要分類的項目時符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*_Pred*<br/>
+使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7679,7 +7960,7 @@ int main() {
 
 ```cpp
 template<class BidirectionalIterator>
- void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
 
 template<class BidirectionalIterator, class BinaryPredicate>
 void stable_sort(
@@ -7691,11 +7972,14 @@ void stable_sort(
 
 ### <a name="parameters"></a>參數
 
-*第一個*雙向迭代器，定址範圍中第一個元素的位置進行排序。
+*first*<br/>
+雙向迭代器，定址要排序之範圍中第一個元素的位置。
 
-*最後一個*雙向迭代器，定址範圍中的最後一個元素的後面一個位置進行排序。
+*最後一個*<br/>
+雙向迭代器，定址要排序之範圍中最後一個元素之後的位置。
 
-*comp*定義順序中後續元素所要符合的比較準則的使用者定義述詞函式物件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -7790,9 +8074,11 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>參數
 
-*左*針對第一個覆寫會交換其內容的第一個物件。 針對第二個覆寫，第一個物件陣列會交換其內容。
+*left*<br/>
+針對第一個覆寫，第一個物件會交換其內容。 針對第二個覆寫，第一個物件陣列會交換其內容。
 
-*右*的第一個覆寫時，要交換其內容的第二個物件。 針對第二個覆寫，第二個物件陣列會交換其內容。
+*right*<br/>
+針對第一個覆寫，第二個物件會交換其內容。 針對第二個覆寫，第二個物件陣列會交換其內容。
 
 ### <a name="remarks"></a>備註
 
@@ -7869,11 +8155,14 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>參數
 
-*first1*指向其項目要交換的第一個範圍的第一個位置的正向迭代器。
+*first1*<br/>
+正向迭代器，指向要交換其元素之第一個範圍中的第一個位置。
 
-*last1*指向一個其項目要交換的第一個範圍的最後一個位置的正向迭代器。
+*last1*<br/>
+正向迭代器，指向要交換其元素之第一個範圍中最後一個位置之後的位置。
 
-*first2*指向其項目要交換的第二個範圍的第一個位置的正向迭代器。
+*first2*<br/>
+正向迭代器，指向要交換其元素之第二個範圍中的第一個位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7969,15 +8258,20 @@ OutputIterator transform(
 
 ### <a name="parameters"></a>參數
 
-*first1*輸入迭代器，定址要處理的第一個來源範圍中第一個元素的位置。
+*first1*<br/>
+輸入迭代器，定址要對其作業之第一個來源範圍中第一個元素的位置。
 
-*last1*操作上的輸入迭代器定址在第一個來源範圍中最後一個項目的後面一個位置。
+*last1*<br/>
+輸入迭代器，定址要對其作業之第一個來源範圍中最後一個元素之後的位置。
 
-*first2*輸入迭代器，定址要處理的第二個來源範圍中第一個元素的位置。
+*first2*<br/>
+輸入迭代器，用於定址第二個來源範圍中要執行之第一個項目的位置。
 
-*結果*輸出迭代器，定址目的範圍中的第一個元素的位置。
+*結果*<br/>
+輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
-*_Func*演算法套用至每個項目中的第一個來源範圍或使用者定義 (UD) 二元函式物件所套用的演算法的第二個版本中所使用的第一個版本中所用的使用者定義一元函式物件成對，在 正向順序，以兩個來源範圍。
+*_Func*<br/>
+套用至第一個來源範圍中每個元素之演算法第一版中所使用的使用者定義一元函式物件，或以正向順序成對套用至兩個來源範圍之演算法第二版中所使用的使用者定義 (UD) 二元函式物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8070,12 +8364,12 @@ int main()
 ```Output
 Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
- v1mod = ( -8 -6 -4 -2 0 2 4 ).
+v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
- by the factor 5 & copying to v2 gives:
- v2 = ( -40 -30 -20 -10 0 10 20 ).
+by the factor 5 & copying to v2 gives:
+v2 = ( -40 -30 -20 -10 0 10 20 ).
 Multiplying elements of the vectors v1mod and v2 pairwise gives:
- v3 = ( 320 180 80 20 0 20 80 ).
+v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
 ## <a name="unique"></a> unique
@@ -8098,11 +8392,14 @@ template<class ForwardIterator, class Predicate>
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址要掃描重複移除之範圍中第一個元素的位置。
+*first*<br/>
+正向迭代器，定址要掃描重複移除之範圍中第一個元素的位置。
 
-*最後一個*正向迭代器定址的後面一個位置，最後一個元素要掃描重複移除之範圍中。
+*最後一個*<br/>
+正向迭代器，定址要掃描重複項目移除之範圍中最後一個元素之後的位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8201,10 +8498,10 @@ int main()
 ```Output
 Vector v1 is ( 5 -5 5 -5 5 -5 5 -5 4 4 4 4 7 ).
 Removing adjacent duplicates from vector v1 gives
- ( 5 -5 5 -5 5 -5 5 -5 4 7 ).
+( 5 -5 5 -5 5 -5 5 -5 4 7 ).
 Removing adjacent duplicates from vector v1 under the
   binary predicate mod_equal gives
- ( 5 4 7 ).
+( 5 4 7 ).
 Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
@@ -8228,13 +8525,17 @@ OutputIterator unique_copy( InputIterator first,
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址來源範圍中的第一個元素的位置複製。
+*first*<br/>
+正向迭代器，用於定址要複製之來源範圍中第一個項目的位置。
 
-*最後一個*正向迭代器，定址來源範圍中最後一個項目的後面一個位置複製。
+*最後一個*<br/>
+正向迭代器，用於定址要複製之來源範圍中最後一個項目的後面一個位置。
 
-*結果*輸出迭代器，定址要接收的連續重複項目複本之目的範圍中的第一個元素的位置移除。
+*結果*<br/>
+輸出迭代器，用於定址正在接收所移除的連續重複項目複本之目的範圍中，第一個項目的位置。
 
-*Comp*定義所要採取兩個項目是否符合條件的使用者定義述詞函式物件，對等。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8344,13 +8645,17 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>參數
 
-*第一個*要搜尋範圍中第一個元素的位置。
+*first*<br/>
+所搜尋範圍中第一個元素的位置。
 
-*最後一個*的後面一個位置，最後一個元素要搜尋的範圍內。
+*最後一個*<br/>
+所搜尋範圍中最後一個元素之後的位置。
 
-*值*需要超出迭代器定址之元素的值已排序範圍中的值傳回。
+*值*<br/>
+需要超出所傳回迭代器定址之元素值的排序範圍中的值。
 
-*comp*定義使用者定義述詞函式物件感測其中一個元素是否小於另一個。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*comp*<br/>
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 

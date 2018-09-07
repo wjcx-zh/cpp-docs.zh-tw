@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200663"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101933"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 巨集、_assert、_wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>參數
 
-*運算式*（包括指標運算式） 的評估為非零的純量運算式 (**，則為 true**) 或 0 (**false**)。
+*運算式*<br/>
+（包括指標運算式） 的評估為非零的純量運算式 (**真**) 或 0 (**false**)。
 
-*訊息*来顯示的訊息。
+*message*<br/>
+要顯示的訊息。
 
-*檔名*名稱的來源檔案中失敗的判斷提示。
+*filename*<br/>
+判斷提示失敗之原始程式檔的名稱。
 
-*行*失敗的判斷提示的原始程式檔中的行號。
+*線條*<br/>
+判斷提示失敗之原始程式檔中的行號。
 
 ## <a name="remarks"></a>備註
 
@@ -97,7 +101,7 @@ void _wassert(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**判斷提示**， **_wassert**|\<assert.h>|
 

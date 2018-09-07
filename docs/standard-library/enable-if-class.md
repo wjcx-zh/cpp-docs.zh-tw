@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966481"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100802"
 ---
 # <a name="enableif-class"></a>enable_if 類別
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>參數
 
-*B*的值會決定產生的型別是否存在。
+*B*<br/>
+判斷所產生類型是否存在的值。
 
-*T*具現化，如果型別*B*為 true。
+*T*<br/>
+如果具現化的型別*B*為 true。
 
 ## <a name="remarks"></a>備註
 
@@ -64,12 +66,12 @@ using enable_if_t = typename enable_if<B,T>::type;
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - 情節 2：加入具有預設引數的函式參數：
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - 情節 3：加入具有預設引數的範本參數：
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 情節 1 未使用建構函式和轉換運算子，因為它們沒有傳回類型。

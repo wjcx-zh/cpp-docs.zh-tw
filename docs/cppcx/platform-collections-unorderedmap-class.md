@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205809"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105831"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -35,13 +35,13 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>參數
 
-*K*  
+*K*<br/>
 機碼值組中，機碼的類型。
 
-*V*  
+*V*<br/>
 機碼值組中，值的型別。
 
-*C*  
+*C*<br/>
 一個型別，提供函式物件，可以根據排序鍵比較兩個項目值，判斷它們在 Map 中的相對順序。 根據預設， [std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
 
 ### <a name="remarks"></a>備註
@@ -118,7 +118,7 @@ virtual void Clear();
 
 ```cpp
 virtual Windows::Foundation::Collections::IIterator<
-   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ 
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^
    First();
 ```
 
@@ -158,7 +158,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 用來尋找 UnorderedMap 元素的機碼。 型別*金鑰*為 typename *K*。
 
 ### <a name="return-value"></a>傳回值
@@ -180,10 +180,10 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
-*值*  
+*值*<br/>
 機碼值組的值部分。 型別*值*為 typename *V*。
 
 ### <a name="return-value"></a>傳回值
@@ -204,7 +204,7 @@ V Lookup(
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 用來在 UnorderedMap 中尋找元素的機碼。 型別*金鑰*為 typename *K*。
 
 ### <a name="return-value"></a>傳回值
@@ -242,7 +242,7 @@ virtual void Remove(
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
 ## <a name="size"></a>  Unorderedmap:: Size 方法
@@ -346,31 +346,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>參數
 
-*InIt*  
+*InIt*<br/>
 目前 UnorderedMap 的 typename。
 
-*P*  
+*P*<br/>
 可比較兩個機碼以判斷它們是否相等的函式物件。 此參數的預設值[std:: equal_to\<K >](../standard-library/equal-to-struct.md)。
 
-*H*  
+*H*<br/>
 可為機碼產生雜湊值的函式物件。 此參數的預設值[雜湊類別 1](../standard-library/hash-class.md)類別的索引鍵類型，支援。
 
-*m*  
+*m*<br/>
 參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: unordered_map](../standard-library/unordered-map-class.md)用來初始化目前 UnorderedMap。
 
-*il* A [std:: initializer_list](../standard-library/initializer-list-class.md)的[std:: pair](../standard-library/pair-structure.md)用來初始化對應的物件。
+*il*<br/>
+A [std:: initializer_list](../standard-library/initializer-list-class.md)的[std:: pair](../standard-library/pair-structure.md)用來初始化對應的物件。
 
-*first*  
+*first*<br/>
 用來初始化目前 UnorderedMap 的元素範圍中第一個元素的輸入迭代器。
 
-*最後一個*  
+*最後一個*<br/>
 用來初始化目前 UnorderedMap 的元素範圍以外第一個元素的輸入迭代器。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](platform-namespace-c-cx.md)  
-[Platform::Collections 命名空間](../cppcx/platform-collections-namespace.md)  
-[Platform::Collections::Map 類別](../cppcx/platform-collections-map-class.md)  
-[Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)  
-[集合](../cppcx/collections-c-cx.md)  
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platform 命名空間](platform-namespace-c-cx.md)<br/>
+[Platform::Collections 命名空間](../cppcx/platform-collections-namespace.md)<br/>
+[Platform::Collections::Map 類別](../cppcx/platform-collections-map-class.md)<br/>
+[Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
+[集合](../cppcx/collections-c-cx.md)<br/>
+[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

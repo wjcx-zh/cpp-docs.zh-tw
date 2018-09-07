@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbac9637083a61b7fce03a844201530116b882b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 60a12c18ec4e174087900f7386d948ea3ab16a89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964355"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102482"
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream 類別
 
@@ -42,11 +42,14 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*配置*的配置器類別。
+*配置*<br/>
+配置器類別。
 
-*Elem*字串的基本元素的類型。
+*Elem*<br/>
+字串之基本項目的類型。
 
-*Tr*字元特性之字串的基本項目特製化。
+*Tr*<br/>
+字元特性是在字串的基本項目上特製化。
 
 ## <a name="remarks"></a>備註
 
@@ -97,9 +100,11 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>參數
 
-*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*str*型別的物件`basic_string`。
+*str*<br/>
+`basic_string` 類型的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -137,7 +142,8 @@ void str(
 
 ### <a name="parameters"></a>參數
 
-*_Newstr*新的字串。
+*_Newstr*<br/>
+新字串。
 
 ### <a name="return-value"></a>傳回值
 

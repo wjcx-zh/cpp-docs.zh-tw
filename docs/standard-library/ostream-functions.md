@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 494c750ec80000ef9090824e0436f6e443593847
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962318"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107603"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函式
 
@@ -42,11 +42,14 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>參數
 
-*Elem*項目類型。
+*Elem*<br/>
+元素類型。
 
-*Ostr*類型的物件**basic_ostream**。
+*Ostr*<br/>
+型別的物件**basic_ostream**。
 
-*Tr*字元特性。
+*Tr*<br/>
+字元特性。
 
 ### <a name="return-value"></a>傳回值
 
@@ -86,11 +89,14 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>參數
 
-*Elem*項目類型。
+*Elem*<br/>
+元素類型。
 
-*Ostr*型別的物件`basic_ostream`。
+*Ostr*<br/>
+`basic_ostream` 類型的物件。
 
-*Tr*字元特性。
+*Tr*<br/>
+字元特性。
 
 ### <a name="return-value"></a>傳回值
 
@@ -132,11 +138,14 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>參數
 
-*Elem*項目類型。
+*Elem*<br/>
+元素類型。
 
-*Ostr*型別的物件`basic_ostream`。
+*Ostr*<br/>
+`basic_ostream` 類型的物件。
 
-*Tr*字元特性。
+*Tr*<br/>
+字元特性。
 
 ### <a name="return-value"></a>傳回值
 
@@ -177,13 +186,17 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*Elem*項目類型。
+*Elem*<br/>
+元素類型。
 
-*Tr*字元特性。
+*Tr*<br/>
+字元特性。
 
-*左*左值參考`basic_ostream`物件。
+*left*<br/>
+`basic_ostream` 物件的 lvalue 參考。
 
-*右*左值參考`basic_ostream`物件。
+*right*<br/>
+`basic_ostream` 物件的 lvalue 參考。
 
 ### <a name="remarks"></a>備註
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fdad6f34fed49ec851f027cba4c53ea08b48902
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82a5a02ed85e3a02c1131a413eb8588dd49dee90
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195399"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100894"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 運算子
 
@@ -64,13 +64,17 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>參數
 
-*Ch*字元。
+*ch*<br/>
+字元。
 
-*Istr*資料流。
+*Istr*<br/>
+資料流。
 
-*str*字串。
+*str*<br/>
+字串。
 
-*val*型別。
+*val*<br/>
+類型。
 
 ### <a name="return-value"></a>傳回值
 

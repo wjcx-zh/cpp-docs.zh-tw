@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e76c5fc4881f0689bf83ee96acd2a7cce8c948
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 34009ac94d35a377e1080ea674f58715e7a42aa2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401557"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101050"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -53,7 +53,8 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>參數
 
-*memblock*已傳回的記憶體區塊的指標[_aligned_malloc](aligned-malloc.md)或是[_aligned_offset_malloc](aligned-offset-malloc.md)函式。
+*memblock*  
+若要傳回的記憶體區塊的指標[_aligned_malloc](aligned-malloc.md)或是[_aligned_offset_malloc](aligned-offset-malloc.md)函式。
 
 ## <a name="remarks"></a>備註
 

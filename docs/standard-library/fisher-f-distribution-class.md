@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51d8a4656cac15da170d221c784105ff939983a5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959647"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108794"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
 
@@ -79,9 +79,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*一般而言，URNG*<br/>
+統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -257,11 +259,14 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*m* `m`分佈參數。
+*m*<br/>
+`m` 分佈參數。
 
-*n* `n`分佈參數。
+*n*<br/>
+`n` 分佈參數。
 
-*parm* `param_type`結構，用來建構分佈。
+*parm*<br/>
+用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -289,11 +294,14 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*m* `m`分佈參數。
+*m*<br/>
+`m` 分佈參數。
 
-*n* `n`分佈參數。
+*n*<br/>
+`n` 分佈參數。
 
-*右*`param_type`来比較此物件。
+*right*<br/>
+要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 

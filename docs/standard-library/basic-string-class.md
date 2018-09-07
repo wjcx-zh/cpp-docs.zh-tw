@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209080"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105662"
 ---
 # <a name="basicstring-class"></a>basic_string 類別
 
@@ -146,11 +146,14 @@ class basic_string;
 
 ### <a name="parameters"></a>參數
 
-*CharType*單一字元，用以儲存在字串中的資料類型。 C + + 標準程式庫提供的類型定義這個樣板類別特製化[字串](../standard-library/string-typedefs.md#string)類型的項目**char**， [wstring](../standard-library/string-typedefs.md#wstring)，如**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`，和[u32string](../standard-library/string-typedefs.md#u32string)如`char32_t`。
+*CharType*<br/>
+若要儲存在字串中之單一字元的資料類型。 C + + 標準程式庫提供的類型定義這個樣板類別特製化[字串](../standard-library/string-typedefs.md#string)類型的項目**char**， [wstring](../standard-library/string-typedefs.md#wstring)，如**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`，和[u32string](../standard-library/string-typedefs.md#u32string)如`char32_t`。
 
-*Traits*的各種重要屬性`CharType`basic_string 特製化中的項目會描述類別`Traits`。 預設值是 `char_traits`< `CharType`>。
+*特性*<br/>
+各種重要屬性`CharType`basic_string 特製化中的項目會描述類別`Traits`。 預設值是 `char_traits`< `CharType`>。
 
-*配置器*表示預存配置器物件，封裝有關字串的配置和解除配置之記憶體的詳細資訊的型別。 預設值是 **allocator**< `CharType`>。
+*配置器*<br/>
+代表預存配置器物件的類型，封裝有關字串之記憶體配置和解除配置的詳細資訊。 預設值是 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>建構函式
 
@@ -314,19 +317,26 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>參數
 
-*ptr*来附加的 C 字串。
+*ptr*<br/>
+要附加的 C 字串。
 
-*str*来附加其字元的字串。
+*str*<br/>
+要附加其字元的字串。
 
-*_Off*提供要附加的字元在來源字串的部分的索引。
+*_Off*<br/>
+提供要附加之字元的部分來源字串組件的索引。
 
-*計數*附加，最多會從來源字串的字元數。
+*count*<br/>
+要從來源字串附加的字元數上限。
 
-*_Ch*来附加的字元值。
+*_Ch*<br/>
+要附加的字元值。
 
-*第一個*輸入迭代器，定址範圍中的第一個項目附加。
+*first*<br/>
+輸入迭代器，為範圍中要附加的第一個元素定址。
 
-*最後一個*来附加的輸入迭代器，const_pointer 或 const_iterator 定址範圍中最後一個元素以外的位置。
+*最後一個*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為範圍中要附加的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -468,19 +478,26 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>參數
 
-*ptr* C 字串指派給目標字串的字元的指標。
+*ptr*<br/>
+要指派給目標字串之 C 字串的字元指標。
 
-*計數*的指派，從來源字串的字元數。
+*count*<br/>
+要指派，從來源字串的字元數。
 
-*str*來源字串的字元是指派給目標字串。
+*str*<br/>
+其字元要指派給目標字串的來源字串。
 
-*_Ch*来指派的字元值。
+*_Ch*<br/>
+要指派的字元值。
 
-*第一個*指派給目標範圍的輸入迭代器，const_pointer 或 const_iterator 在來源字串範圍中的第一個字元定址。
+*first*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為來源字串範圍中要指派給目標範圍的第一個字元定址。
 
-*最後一個*指派給目標範圍的輸入迭代器，const_pointer 或 const_iterator 定址一個範圍中的最後一個字元以外的來源字串。
+*最後一個*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為來源字串範圍中要指派給目標範圍的最後一個字元以外的字元定址。
 
-*關閉*指派新字元會開始處的位置。
+*關閉*<br/>
+即將開始指派新字元的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -595,7 +612,8 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*要參考之項目的位置的索引。
+*_Off*<br/>
+要參考之元素的位置索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -721,12 +739,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -741,21 +759,29 @@ basic_string(
 
 ### <a name="parameters"></a>參數
 
-*ptr* C 字串的字元是用來初始化`string`所建構。 此值不可以是 Null 指標。
+*ptr*<br/>
+所含字元用來初始化所建構之 `string` 的 C 字串。 此值不可以是 Null 指標。
 
-*_Al*所建構之字串物件的儲存體配置器類別。
+*_Al*<br/>
+要建構之字串物件的儲存體配置器類別。
 
-*計數*要初始化的字元數。
+*count*<br/>
+要初始化的字元數。
 
-*右*来初始化所建構之字串的字串。
+*right*<br/>
+要初始化所建構之字串的字串。
 
-*_Roff*是第一個用來初始化所建構之字串的字元值的字串中字元的索引。
+*_Roff*<br/>
+對於所建構的字串，第一個用來初始化其字元值之字串字元的索引。
 
-*_Ch*来複製到所建構之字串的字元值。
+*_Ch*<br/>
+要複製到所建構之字串中的字元值。
 
-*第一個*要插入的輸入迭代器，const_pointer 或 const_iterator，為來源範圍中的第一個項目定址。
+*first*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的第一個元素定址。
 
-*最後一個*要插入的輸入迭代器，const_pointer 或 const_iterator 定址來源範圍中最後一個元素以外的位置。
+*最後一個*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -851,7 +877,7 @@ int main( ) {
    cout << "The full original string str1 is: " << str1 << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'G';
+*str1_Iter = 'G';
    cout << "The first character of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The full modified string str1 is now: " << str1 << endl;
@@ -1148,19 +1174,26 @@ int compare(
 
 ### <a name="parameters"></a>參數
 
-*str*是要與運算元字串比較的字串。
+*str*<br/>
+要與運算元字串比較的字串。
 
-*_Pos1*比較開始處的運算元字串索引。
+*_Pos1*<br/>
+比較開始處的運算元字串索引。
 
-*_Num1*要比較之運算元字串的字元數目上限。
+*_Num1*<br/>
+要比較之運算元字串的字元數上限。
 
-*_Num2*要比較之參數字串的字元數目上限。
+*_Num2*<br/>
+要比較之參數字串的字元數上限。
 
-*_Off*比較開始處的參數字串索引。
+*_Off*<br/>
+比較開始處的參數字串索引。
 
-*計數*要比較之參數字串的字元數目上限。
+*count*<br/>
+要比較之參數字串的字元數上限。
 
-*ptr*要與運算元字串比較的 C 字串。
+*ptr*<br/>
+要與運算元字串比較的 C 字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1341,14 +1374,14 @@ The operand string is equal to the parameter string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter string.
+are equal to the parameter string.
 The first three characters of the operand string
- are less than the parameter string.
+are less than the parameter string.
 
 The operand string is: AACAB
 The parameter string is: DCABD
 The three characters from position 2 of the operand string are equal to
- the 3 characters parameter string from position 1.
+the 3 characters parameter string from position 1.
 
 The operand string is: ABC
 The parameter C-string is: DEF
@@ -1357,12 +1390,12 @@ The operand string is less than the parameter C-string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter C-string.
+are equal to the parameter C-string.
 
 The operand string is: AACAB
 The parameter C-string is: ACAB
 The 3 characters from position 2 of the operand string are equal to
- the first 3 characters of the parameter C-string.
+the first 3 characters of the parameter C-string.
 ```
 
 ## <a name="const_iterator"></a>  basic_string::const_iterator
@@ -1470,11 +1503,13 @@ size_type copy(
 
 ### <a name="parameters"></a>參數
 
-*ptr*項目是要複製的目標字元陣列。
+*ptr*<br/>
+要複製元素的目標字元陣列。
 
 _*計數*進行複製，最多會從來源字串的字元數。
 
-*_Off*從中複製都能在來源字串中的開頭位置。
+*_Off*<br/>
+來源字串中要建立複本的開始位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1573,13 +1608,16 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>參數
 
-*dest*項目是要複製的目標字元陣列。
+*dest*<br/>
+要複製元素的目標字元陣列。
 
-*dest_size*的大小*dest*。
+*dest_size*<br/>
+大小*dest*。
 
 _*計數*進行複製，最多會從來源字串的字元數。
 
-*_Off*從中複製都能在來源字串中的開頭位置。
+*_Off*<br/>
+來源字串中要建立複本的開始位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1847,7 +1885,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'T';
+*str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1891,15 +1929,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>參數
 
-*第一個*迭代器，定址範圍中第一個元素的位置會被清除。
+*first*<br/>
+迭代器，為範圍中要清除之第一個元素的位置定址。
 
-*最後一個*迭代器定址的後面一個位置，最後一個項目的範圍中要清除。
+*最後一個*<br/>
+迭代器，為範圍中要清除之最後一個元素之後的位置定址。
 
-*_It*迭代器定址的元素位置，在字串中要清除。
+*_It*<br/>
+迭代器，為字串中要清除之元素的位置定址。
 
-*_Pos*移除字串中的第一個字元索引。
+*_Pos*<br/>
+字串中要移除之第一個字元的索引。
 
-*計數*將會移除如果有多個字串開頭的範圍中的項目數 *_Pos*。
+*count*<br/>
+要移除的元素數目 (如果在以 *_Pos* 開頭的字串範圍內有許多元素)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1998,15 +2041,20 @@ size_type find(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*成員函式是搜尋的字元值。
+*_Ch*<br/>
+要搜尋之成員函式的字元值。
 
-*_Off*開始搜尋位置的索引。
+*_Off*<br/>
+開始搜尋位置的索引。
 
-*ptr*要搜尋之成員函式的 C 字串。
+*ptr*<br/>
+要搜尋之成員函式的 C 字串。
 
-*計數*從要搜尋之成員函式的 C 字串中的第一個字元開始往前計數的字元數目。
+*count*<br/>
+要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*成員函式是搜尋的字串。
+*str*<br/>
+要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2130,7 +2178,7 @@ The Character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' after
- the 5th position in str2 is: 17
+the 5th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: This is a sample string for this program
@@ -2139,7 +2187,7 @@ The index of the next occurrence of 'for' is in str3 begins at: 24
 
 The original string str4 is: clearly this perfectly unclear.
 The index of the 1st element of 'clear' after
- the 5th position in str4 is: 25
+the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
@@ -2171,15 +2219,20 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*成員函式是搜尋的字元值。
+*_Ch*<br/>
+要搜尋之成員函式的字元值。
 
-*_Off*開始搜尋位置的索引。
+*_Off*<br/>
+開始搜尋位置的索引。
 
-*ptr*要搜尋之成員函式的 C 字串。
+*ptr*<br/>
+要搜尋之成員函式的 C 字串。
 
-*計數*從要搜尋之成員函式的 C 字串中的第一個字元開始往前計數的字元數目。
+*count*<br/>
+要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*成員函式是搜尋的字串。
+*str*<br/>
+要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2312,21 +2365,21 @@ The index of the 'non x' found in str1 is: 1
 
 The original string str2 is: BBB-1111
 Elements of the substring 'B1' were not
- found in str2 after the 6th position.
+found in str2 after the 6th position.
 The index of the 1st element of 'B2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 444-555-GGG
 The index of the 1st occurrence of an element in str3
- other than one of the characters in '45G' is: 3
+other than one of the characters in '45G' is: 3
 The index of the second occurrence of an element of '45G' in str3
- after the 0th position is: 7
+after the 0th position is: 7
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st non occurrence of an element of 'ba3' in str4 after
- the 5th position is: 5
+the 5th position is: 5
 The index of the 1st non occurrence of an element of '12' in str4 after
- the 0th position is: 2
+the 0th position is: 2
 ```
 
 ## <a name="find_first_of"></a>  basic_string::find_first_of
@@ -2357,15 +2410,20 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*成員函式是搜尋的字元值。
+*_Ch*<br/>
+要搜尋之成員函式的字元值。
 
-*_Off*開始搜尋位置的索引。
+*_Off*<br/>
+開始搜尋位置的索引。
 
-*ptr*要搜尋之成員函式的 C 字串。
+*ptr*<br/>
+要搜尋之成員函式的 C 字串。
 
-*計數*從要搜尋之成員函式的 C 字串中的第一個字元開始往前計數的字元數目。
+*count*<br/>
+要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*成員函式是搜尋的字串。
+*str*<br/>
+要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2497,21 +2555,21 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the 1st occurrence of an element of 'B1' in str2 after
- the 6th position is: 11
+the 6th position is: 11
 The index of the 1st element of 'D2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 123-abc-123-abc-456-EFG-456-EFG
 The index of the 1st occurrence of an element of '5G' in str3 after
- the 0th position is: 17
+the 0th position is: 17
 The index of the second occurrence of an element of '5G' in str3
- after the 0th position is: 22
+after the 0th position is: 22
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st occurrence of an element of 'ba3' in str4 after
- the 5th position is: 9
+the 5th position is: 9
 The index of the 1st occurrence of an element of 'a2' in str4 after
- the 0th position is: 1
+the 0th position is: 1
 ```
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
@@ -2542,15 +2600,20 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*成員函式是搜尋的字元值。
+*_Ch*<br/>
+要搜尋之成員函式的字元值。
 
-*_Off*完成搜尋時之位置的索引。
+*_Off*<br/>
+完成搜尋位置的索引。
 
-*ptr*要搜尋之成員函式的 C 字串。
+*ptr*<br/>
+要搜尋之成員函式的 C 字串。
 
-*計數*從要搜尋之成員函式的 C 字串中的第一個字元開始往前計數的字元數目。
+*count*<br/>
+要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*成員函式是搜尋的字串。
+*str*<br/>
+要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2680,25 +2743,25 @@ int main( )
 ```Output
 The original string str1 is: dddd-1dd4-abdd
 The index of the last non 'd'
- found before the 7th position in str1 is: 5
+found before the 7th position in str1 is: 5
 The index of the non 'd' found in str1 is: 11
 
 The original string str2 is: BBB-1111
 The index of the last occurrence of a element
- not of 'B1' in str2 before the 6th position is: 3
+not of 'B1' in str2 before the 6th position is: 3
 The elements of the substring 'B-1' were not found in str2 .
 
 The original string str3 is: 444-555-GGG
 The index of the last occurrence of an element in str3
- other than one of the characters in '45G' is: 7
+other than one of the characters in '45G' is: 7
 The index of the penultimate occurrence of an element
- not in '45G' in str3 is: 3
+not in '45G' in str3 is: 3
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element not
- in 'b-a' in str4 before the 5th position is: 1
+in 'b-a' in str4 before the 5th position is: 1
 The index of the last occurrence of an element not in '12'
- in str4 before the end position is: 10
+in str4 before the end position is: 10
 ```
 
 ## <a name="find_last_of"></a>  basic_string::find_last_of
@@ -2729,15 +2792,20 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*成員函式是搜尋的字元值。
+*_Ch*<br/>
+要搜尋之成員函式的字元值。
 
-*_Off*完成搜尋時之位置的索引。
+*_Off*<br/>
+完成搜尋位置的索引。
 
-*ptr*要搜尋之成員函式的 C 字串。
+*ptr*<br/>
+要搜尋之成員函式的 C 字串。
 
-*計數*從要搜尋之成員函式的 C 字串中的第一個字元開始往前計數的字元數目。
+*count*<br/>
+要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*成員函式是搜尋的字串。
+*str*<br/>
+要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2858,19 +2926,19 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the last occurrence of an element of 'B1' in str2 before
- the 12th position is: 11
+the 12th position is: 11
 The index of the last element of 'D2' after
- the 0th position in str2 is: 16
+the 0th position in str2 is: 16
 
 The original string str3 is: 456-EFG-456-EFG
 The index of the last occurrence of an element of '5E' in str3 before
- the 8th position is: 4
+the 8th position is: 4
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element of 'ba3' in str4 before
- the 8th position is: 4
+the 8th position is: 4
 The index of the last occurrence of an element of 'a2' in str4 before
- the 0th position is: 9
+the 0th position is: 9
 ```
 
 ## <a name="front"></a>  basic_string::front
@@ -2992,23 +3060,32 @@ void insert(
 
 ### <a name="parameters"></a>參數
 
-*_P0*插入點後面位置的索引的新的字元。
+*_P0*<br/>
+新字元插入點後面位置的索引。
 
-*ptr*要全部或部分插入字串的 C 字串。
+*ptr*<br/>
+要全部或部分插入字串的 C 字串。
 
-*計數*要插入的字元數。
+*count*<br/>
+要插入的字元數。
 
-*str*要全部或部分插入目標字串的字串。
+*str*<br/>
+要全部或部分插入目標字串的字串。
 
-*_Off*提供要附加的字元在來源字串的部分的索引。
+*_Off*<br/>
+提供要附加之字元的部分來源字串組件的索引。
 
-*_Ch*要插入之項目的字元值。
+*_Ch*<br/>
+要插入之項目的字元值。
 
-*_It*迭代器，定址其後的字元是插入的位置。
+*_It*<br/>
+迭代器，為要在其後插入字元的位置定址。
 
-*第一個*要插入的輸入迭代器，const_pointer 或 const_iterator，為來源範圍中的第一個項目定址。
+*first*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的第一個元素定址。
 
-*最後一個*要插入的輸入迭代器，const_pointer 或 const_iterator 定址來源範圍中最後一個元素以外的位置。
+*最後一個*<br/>
+輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3288,11 +3365,14 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*来附加的字元。
+*_Ch*<br/>
+要附加的字元。
 
-*ptr*来附加之 C 字串的字元。
+*ptr*<br/>
+要附加之 C 字串的字元。
 
-*右*附加字串的字元。
+*right*<br/>
+要附加之字串的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3377,11 +3457,14 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*来指派的字元值。
+*_Ch*<br/>
+要指派的字元值。
 
-*ptr* C 字串指派給目標字串的字元的指標。
+*ptr*<br/>
+要指派給目標字串之 C 字串的字元指標。
 
-*右*來源字串的字元是指派給目標字串。
+*right*<br/>
+其字元要指派給目標字串的來源字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3459,7 +3542,8 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*要參考之項目的位置的索引。
+*_Off*<br/>
+要參考之元素的位置索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3575,7 +3659,8 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*可以加入至字串結尾的字元。
+*_Ch*<br/>
+要新增至字串結尾的字元。
 
 ### <a name="remarks"></a>備註
 
@@ -3667,7 +3752,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'A';
+*str1_rIter = 'A';
    cout << "The first character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3689,10 +3774,10 @@ int main( )
 ```Output
 The first character-letter of the reversed string str1 is: a
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The first character-letter of the modified str1 is now: A
 The full modified reversed string str1 is now:
- AblE was I ere I saw elbA
+AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
@@ -3766,7 +3851,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'o';
+*str1_rIter = 'o';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3788,10 +3873,10 @@ int main( )
 ```Output
 The last character-letter of the reversed string str1 is: A
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The last character-letter of the modified str1 is now: o
 The full modified reversed string str1 is now:
- ablE was I ere I saw elbo
+ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
@@ -3873,29 +3958,39 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>參數
 
-*str*做為來源的運算元字串的字元的字串。
+*str*<br/>
+作為運算元字串之字元來源的字串。
 
-*_Pos1*取代開始處的運算元字串索引。
+*_Pos1*<br/>
+取代開始處的運算元字串索引。
 
-*_Num1*的運算元字串中要取代的字元數目上限。
+*_Num1*<br/>
+運算元字串中要取代的字元數上限。
 
-*_Pos2*複製開始處的參數字串索引。
+*_Pos2*<br/>
+複製開始處的參數字串索引。
 
-*_Num2*要從參數 C 字串的字元數目上限。
+*_Num2*<br/>
+要從參數 C 字串使用的字元數上限。
 
-*ptr*要運算元字串的字元來源的 C 字串。
+*ptr*<br/>
+作為運算元字串之字元來源的 C 字串。
 
-*_Ch*来複製到運算元字串的字元。
+*_Ch*<br/>
+要複製到運算元字串的字元。
 
 * first0 * 的迭代器定址的第一個字元為運算元字串中移除。
 
 * last0 * 的迭代器定址的最後一個字元為運算元字串中移除。
 
-*第一個*參數字串中要複製的迭代器，const_pointer 或 const_iterator 第一個字元定址。
+*first*<br/>
+迭代器 const_pointer 或 const_iterator，為參數字串中要複製的第一個字元定址。
 
-*最後一個*參數字串中要複製的迭代器，const_pointer 或 const_iterator 最後一個字元定址。
+*最後一個*<br/>
+迭代器 const_pointer 或 const_iterator，為參數字串中要複製的最後一個字元定址。
 
-*計數*次數 *_Ch*複製到運算元字串。
+*count*<br/>
+次數 *_Ch*複製到運算元字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4039,45 +4134,45 @@ The operand string s1o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs1p is: CCC
 The result of s1o.replace ( 1 , 3 , s1p )
- is the string: ABBBAAAA.
+is the string: ABBBAAAA.
 The result of s1o.replace ( 5 , 3 , cs1p )
- is the string: ABBBACCC.
+is the string: ABBBACCC.
 
 The operand string s2o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs2p is: CCC
 The result of s2o.replace (1, 3, s2p, 1, 2)
- is the string: ABBAAAA.
+is the string: ABBAAAA.
 The result of s2o.replace (4 ,3 ,cs2p)
- is the string: ABBAC.
+is the string: ABBAC.
 
 The operand string s3o is: AAAAAAAA
 The parameter character c1p is: C
 The result of s3o.replace(1, 3, 4, ch3p)
- is the string: ACCCCAAAA.
+is the string: ACCCCAAAA.
 
 The operand string s4o is: AAAAAAAA
 The parameter string s4p is: BBB
 The parameter C-string cs4p is: CCC
 The result of s1o.replace (IterF0, IterL0, s4p)
- is the string: BBBAAAAA.
+is the string: BBBAAAAA.
 The result of s4o.replace (IterF0, IterL0, cs4p)
- is the string: CCCAAAAA.
+is the string: CCCAAAAA.
 
 The operand string s5o is: AAAAAAAF
 The parameter C-string cs5p is: CCCBB
 The result of s5o.replace (IterF1, IterL1, cs4p ,4)
- is the string: CCCBAAAF.
+is the string: CCCBAAAF.
 
 The operand string s6o is: AAAAAAAG
 The parameter character ch6p is: q
 The result of s6o.replace (IterF1, IterL1, 4, ch6p)
- is the string: qqqqAAAAG.
+is the string: qqqqAAAAG.
 
 The operand string s7o is: OOOOOOO
 The parameter string s7p is: PPPP
 The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
- is the string: OPPOOOO.
+is the string: OPPOOOO.
 ```
 
 ## <a name="reserve"></a>  basic_string::reserve
@@ -4090,7 +4185,8 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>參數
 
-*計數*為其保留記憶體的字元數。
+*count*<br/>
+為其保留記憶體的字元數。
 
 ### <a name="remarks"></a>備註
 
@@ -4184,9 +4280,11 @@ void resize(
 
 ### <a name="parameters"></a>參數
 
-*計數*字串的新大小。
+*count*<br/>
+字串的新大小。
 
-*_Ch*以初始化附加字元的值是否需要額外的項目。
+*_Ch*<br/>
+如果需要額外的元素，則會初始化附加字元的值。
 
 ### <a name="remarks"></a>備註
 
@@ -4321,15 +4419,20 @@ size_type rfind(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*成員函式是搜尋的字元值。
+*_Ch*<br/>
+要搜尋之成員函式的字元值。
 
-*_Off*開始搜尋位置的索引。
+*_Off*<br/>
+開始搜尋位置的索引。
 
-*ptr*要搜尋之成員函式的 C 字串。
+*ptr*<br/>
+要搜尋之成員函式的 C 字串。
 
-*計數*從要搜尋之成員函式的 C 字串中的第一個字元開始往前計數的字元數目。
+*count*<br/>
+要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str*成員函式是搜尋的字串。
+*str*<br/>
+要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4454,7 +4557,7 @@ The character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' before
- the 30th position in str2 is: 17
+the 30th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
@@ -4599,9 +4702,11 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>參數
 
-*_Off*找出字串的複本從中，預設值為 0 的位置處的項目索引。
+*_Off*<br/>
+索引，用於將元素定位在建立字串複本的來源位置，預設值為 0。
 
-*計數*是否存在於要複製的字元數。
+*count*<br/>
+要複製的字元數 (如果有)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4635,13 +4740,13 @@ int main( )
 
 ```Output
 The original string str1 is:
- Heterological paradoxes are persistent.
+Heterological paradoxes are persistent.
 
 The substring str1 copied is: logical
 
 The default substring str3 is:
- Heterological paradoxes are persistent.
- which is the entire original string.
+Heterological paradoxes are persistent.
+which is the entire original string.
 ```
 
 ## <a name="swap"></a>  basic_string::swap
@@ -4655,7 +4760,8 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*str*與目的字串交換其元素的來源字串。
+*str*<br/>
+要與目的字串交換其元素的來源字串。
 
 ### <a name="remarks"></a>備註
 
@@ -4697,11 +4803,11 @@ int main( )
 
 ```Output
 Before swapping string s1 and s2:
- The basic_string s1 = Tweedledee.
- The basic_string s2 = Tweedledum.
+The basic_string s1 = Tweedledee.
+The basic_string s2 = Tweedledum.
 After swapping string s1 and s2:
- The basic_string s1 = Tweedledum.
- The basic_string s2 = Tweedledee.
+The basic_string s1 = Tweedledum.
+The basic_string s2 = Tweedledee.
 ```
 
 ## <a name="traits_type"></a>  basic_string::traits_type

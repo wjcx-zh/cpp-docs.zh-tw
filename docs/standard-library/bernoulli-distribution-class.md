@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cc8b144ab8cf619469723f6fd19a4ffdac085e6d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953230"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105844"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 類別
 
@@ -76,7 +76,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*一般而言，URNG*<br/>
+統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -158,7 +159,7 @@ Enter an integer value for a sample count: 100
 p == 0.45
 Histogram for 100 samples:
 false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
- true :::::::::::::::::::::::::::::::::::::::::
+true :::::::::::::::::::::::::::::::::::::::::
 ```
 
 ## <a name="requirements"></a>需求
@@ -178,9 +179,11 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p*預存`p`分佈參數。
+*p*<br/>
+儲存的 `p` 分佈參數。
 
-*parm* `param_type`結構，用來建構分佈。
+*parm*<br/>
+用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -200,7 +203,8 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p*預存`p`分佈參數。
+*p*<br/>
+儲存的 `p` 分佈參數。
 
 ### <a name="remarks"></a>備註
 

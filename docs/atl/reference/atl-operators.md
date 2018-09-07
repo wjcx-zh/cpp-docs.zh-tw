@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b651d73db043388e1dc7bf33c085f07d3aabed33
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767939"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103699"
 ---
 # <a name="atl-operators"></a>ATL 運算子
 
@@ -43,15 +43,15 @@ ms.locfileid: "43767939"
 比較`CSid`物件或`SID`結構是否相等的 （安全性識別碼）。
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-`lhs`  
+*lhs*  
 第一個`CSid`物件或`SID`来比較的結構。
 
-`rhs`  
+*rhs*  
 第二個`CSid`物件或`SID`来比較的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -63,7 +63,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 比較`CSid`物件或`SID`結構是否不相等的 （安全性識別碼）。
 
 ```   
-bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -83,7 +83,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 測試是否`CSid`物件或`SID`運算子左邊的結構是否小於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -107,7 +107,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 測試是否`CSid`物件或`SID`運算子左邊的結構是否大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -131,7 +131,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 測試是否`CSid`物件或`SID`運算子左邊的結構是否小於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>參數
@@ -155,7 +155,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 測試是否`CSid`物件或`SID`運算子左邊的結構是否大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。
 
 ```   
-bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
+bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>參數

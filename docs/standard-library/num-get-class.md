@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2fc6fe93b3c7b798a53f6989d95e83c3be4b022
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2cb6364a9f1cb74f9a002e37c278f3686b9916ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959816"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110119"
 ---
 # <a name="numget-class"></a>num_get 類別
 
@@ -44,9 +44,11 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內使用地區設定中的字元編碼的類型。
+*CharType*<br/>
+程式內用於編碼地區設定字元的類型。
 
-*InputIterator*從中數值 get 函式的迭代器的型別讀取其輸入。
+*InputIterator*<br/>
+數值 get 函式從中讀取其輸入的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -175,15 +177,20 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>參數
 
-*第一個*從中讀取數字的字元範圍的開頭。
+*first*<br/>
+要從中讀取數字的字元範圍開頭。
 
-*最後一個*從中讀取數字的字元範圍的結尾。
+*最後一個*<br/>
+要從中讀取數字的字元範圍結尾。
 
-*_Iosbase* [ios_base](../standard-library/ios-base-class.md)轉換所使用的旗標。
+*_Iosbase*<br/>
+旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
-*_State* failbit 狀態 (請參閱 < [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) 失敗時會新增。
+*（_s)*<br/>
+失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
-*val*已讀取的值。
+*val*<br/>
+已讀取的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -417,15 +424,20 @@ iter_type get(
 
 ### <a name="parameters"></a>參數
 
-*第一個*從中讀取數字的字元範圍的開頭。
+*first*<br/>
+要從中讀取數字的字元範圍開頭。
 
-*最後一個*從中讀取數字的字元範圍的結尾。
+*最後一個*<br/>
+要從中讀取數字的字元範圍結尾。
 
-*_Iosbase* [ios_base](../standard-library/ios-base-class.md)轉換所使用的旗標。
+*_Iosbase*<br/>
+旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
-*_State* failbit 狀態 (請參閱 < [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) 失敗時會新增。
+*（_s)*<br/>
+失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
-*val*已讀取的值。
+*val*<br/>
+已讀取的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -571,7 +583,8 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 

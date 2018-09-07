@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962442"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110434"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 類別
 
@@ -116,11 +116,14 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>參數
 
-*al*配置器物件。
+*Al*<br/>
+配置器物件。
 
-*計數*配置的項目數。
+*count*<br/>
+要配置的元素數。
 
-*提示*A`const_pointer`滿足儲存體的要求，藉由找出要求之前所配置物件的位址可能會協助配置器物件。 Null 指標視為沒有提示。
+*提示*<br/>
+`const_pointer`，可找出要求之前所配置物件的位址，來協助配置器物件符合儲存要求。 Null 指標視為沒有提示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -141,11 +144,14 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>參數
 
-*al*配置器物件。
+*Al*<br/>
+配置器物件。
 
-*ptr*建構物件之位置的指標。
+*ptr*<br/>
+要建構物件之位置的指標。
 
-*args*傳遞給物件建構函式的引數清單。
+*引數*<br/>
+傳遞給物件建構函式的引數清單。
 
 ### <a name="remarks"></a>備註
 
@@ -163,11 +169,14 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>參數
 
-*al*配置器物件。
+*Al*<br/>
+配置器物件。
 
-*ptr*解除配置物件的起始位置的指標。
+*ptr*<br/>
+要解除配置之物件的起始位置指標。
 
-*計數*解除配置的物件數目。
+*count*<br/>
+要解除配置的物件數目。
 
 ### <a name="remarks"></a>備註
 
@@ -186,9 +195,11 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>參數
 
-*al*配置器物件。
+*Al*<br/>
+配置器物件。
 
-*ptr*物件位置的指標。
+*ptr*<br/>
+物件位置的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -204,7 +215,8 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>參數
 
-*al*配置器物件。
+*Al*<br/>
+配置器物件。
 
 ### <a name="remarks"></a>備註
 
@@ -220,7 +232,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>參數
 
-*al*配置器物件。
+*Al*<br/>
+配置器物件。
 
 ### <a name="return-value"></a>傳回值
 

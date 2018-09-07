@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 10c93374a1ed9ed4fa875c78310d9ffa34406b83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958015"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100830"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG* 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*一般而言，URNG*<br/>
+亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -200,11 +202,14 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a_value* `a`分佈參數。
+*a_value*<br/>
+`a` 分佈參數。
 
-*b_value* `b`分佈參數。
+*b_value*<br/>
+`b` 分佈參數。
 
-*parm* `param_type`結構，用來建構分佈。
+*parm*<br/>
+用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -232,11 +237,14 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a_value* `a`分佈參數。
+*a_value*<br/>
+`a` 分佈參數。
 
-*b_value* `b`分佈參數。
+*b_value*<br/>
+`b` 分佈參數。
 
-*右*`param_type`来比較此物件。
+*right*<br/>
+要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 

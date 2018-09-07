@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407310"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100349"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,19 +54,21 @@ void setbuf(
 
 ### <a name="parameters"></a>參數
 
-*資料流*指標**檔案**結構。
+*資料流*<br/>
+**FILE** 結構的指標。
 
-*緩衝區*使用者配置的緩衝區。
+*buffer*<br/>
+使用者配置的緩衝區。
 
 ## <a name="remarks"></a>備註
 
-**Setbuf**函式控制項緩衝*資料流*。 *資料流*引數必須參考尚未讀取或寫入的開啟檔案。 如果*緩衝區*引數是**NULL**，是未緩衝的資料流。 如果沒有，緩衝區必須指向字元陣列的長度**BUFSIZ**，其中**BUFSIZ** STDIO 中定義為緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流是根據預設，未經過緩衝處理，但是您可以使用**setbuf**指派緩衝區**stderr**。
+**Setbuf**函式會控制緩衝*串流*。 *資料流*引數必須參照尚未讀取或寫入的開啟檔案。 如果*緩衝區*引數是**NULL**，資料流不會緩衝處理。 如果沒有，緩衝區必須指向長度的字元陣列**BUFSIZ**，其中**BUFSIZ**是定義於 STDIO 的緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流不會緩衝處理依預設，但您可以使用**setbuf**將緩衝區指派給**stderr**。
 
-**setbuf**已被取代[setvbuf](setvbuf.md)，這是慣用的常式，以新的程式碼。 **setbuf**保留與現有的程式碼的相容性。
+**setbuf**已被取代[setvbuf](setvbuf.md)，這是新的程式碼的慣用的常式。 **setbuf**保留與現有的程式碼的相容性。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 

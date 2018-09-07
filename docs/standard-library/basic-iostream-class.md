@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0ef4b993ec628771666ac3773b575ee518c18173
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954704"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106434"
 ---
 # <a name="basiciostream-class"></a>basic_iostream 類別
 
@@ -85,9 +85,11 @@ basic_iostream();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*現有`basic_streambuf`物件。
+*strbuf*<br/>
+現有的 `basic_streambuf` 物件。
 
-*右*現有`basic_iostream`物件，用來建構新`basic_iostream`。
+*right*<br/>
+現有的 `basic_iostream` 物件，用來建構新的 `basic_iostream`。
 
 ### <a name="remarks"></a>備註
 
@@ -105,7 +107,8 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`rvalue`參考`basic_iostream`從指派的物件。
+*right*<br/>
+要指派之來源 `basic_iostream` 物件的 `rvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
@@ -121,7 +124,8 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`basic_iostream`交換的物件。
+*right*<br/>
+要交換的 `basic_iostream` 物件。
 
 ### <a name="remarks"></a>備註
 

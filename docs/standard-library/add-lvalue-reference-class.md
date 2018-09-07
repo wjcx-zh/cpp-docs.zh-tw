@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 710d7c154477320f7fb65f52f430f4c0666762c2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 46ca75850aede04d54dc659e3f29166ab91abdbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956943"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102625"
 ---
 # <a name="addlvaluereference-class"></a>add_lvalue_reference Class
 
@@ -39,7 +39,8 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*T*来修改的類型。
+*T*<br/>
+要修改的類型。
 
 ## <a name="remarks"></a>備註
 

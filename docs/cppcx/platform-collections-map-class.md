@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758374"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103875"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>參數
 
-*K*  
- 機碼值組中，機碼的類型。
+*K*<br/>
+機碼值組中，機碼的類型。
 
-*V*  
+*V*<br/>
 機碼值組中，值的型別。
 
-*C*  
+*C*<br/>
 一個型別，提供函式物件，可以根據排序鍵比較兩個項目值，判斷它們在 Map 中的相對順序。 根據預設， [std:: less<>\<K >](../standard-library/less-struct.md)。
 
-*__is_valid_winrt_type()*  
-編譯器產生函式可驗證的型別*K*並*V*如果該類型無法儲存在對應中會提供易懂的錯誤訊息。
+*__is_valid_winrt_type()* 驗證的類型產生的編譯器函式*K*並*V*如果該類型無法儲存在對應中會提供易懂的錯誤訊息。
 
 ### <a name="remarks"></a>備註
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 用來尋找 Map 項目的機碼。 型別*金鑰*為 typename *K*。
 
 ### <a name="return-value"></a>傳回值
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
-*值*  
+*值*<br/>
 機碼值組的值部分。 型別*值*為 typename *V*。
 
 ### <a name="return-value"></a>傳回值
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 用來在 Map 中尋找元素的機碼。 型別*金鑰*為 typename *K*。
 
 ### <a name="return-value"></a>傳回值
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>參數
 
-*InIt*  
+*InIt*<br/>
 目前 Map 的 typename。
 
-*comp*  
+*comp*<br/>
 一個型別，提供函式物件，可以根據排序鍵比較兩個項目值，判斷它們在 Map 中的相對順序。
 
-*m*  
+*m*<br/>
 參考或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用來初始化目前 Map。
 
-*first*  
+*first*<br/>
 用來初始化目前 Map 的項目範圍中，第一個項目的輸入迭代器。
 
-*最後一個*  
+*最後一個*<br/>
 用來初始化目前 Map 的項目範圍以外第一個項目的輸入迭代器。
 
 ## <a name="mapchanged"></a>  Map:: mapchanged 事件
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
 ## <a name="size"></a>  Map:: size 方法
@@ -304,5 +303,5 @@ Map 中的元素數目。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](platform-namespace-c-cx.md)  
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platform 命名空間](platform-namespace-c-cx.md)<br/>
+[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

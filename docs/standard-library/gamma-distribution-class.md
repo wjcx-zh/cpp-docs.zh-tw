@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26386ebb5e2bbb20b952200869ccffb7677c59af
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 05442a0c590bcb66449aeae72d54cc6e988421bc
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962422"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099892"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 類別
 
@@ -80,9 +80,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*一般而言，URNG*<br/>
+統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -207,11 +209,14 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*alpha* `alpha`分佈參數。
+*alpha*<br/>
+`alpha` 分佈參數。
 
-*beta* `beta`分佈參數。
+*beta*<br/>
+`beta` 分佈參數。
 
-*parm*用來建構分佈的參數結構。
+*parm*<br/>
+用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -239,11 +244,14 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*alpha* `alpha`分佈參數。
+*alpha*<br/>
+`alpha` 分佈參數。
 
-*beta* `beta`分佈參數。
+*beta*<br/>
+`beta` 分佈參數。
 
-*右*`param_type`来比較此執行個體。
+*right*<br/>
+要與此項目比較的 `param_type` 執行個體。
 
 ### <a name="remarks"></a>備註
 

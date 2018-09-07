@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406829"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100283"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,25 +55,26 @@ void rewind(
 
 ### <a name="parameters"></a>參數
 
-*資料流*指標**檔案**結構。
+*資料流*<br/>
+**FILE** 結構的指標。
 
 ## <a name="remarks"></a>備註
 
-**倒轉**函式會重新調整位置與相關聯的檔案指標*資料流*檔案的開頭。 **rewind** 呼叫類似
+**倒轉**函式相關聯的檔案指標重新置放*串流*檔案的開頭。 **rewind** 呼叫類似
 
-**(void) fseek (** _資料流_**，0 L SEEK_SET);**
+**(void) fseek (** _資料流_**，0 L、 SEEK_SET);**
 
-不過，不同於[fseek](fseek-fseeki64.md)，**倒轉**清除資料流錯誤指標以及檔案結尾指標。 此外，不同於[fseek](fseek-fseeki64.md)，**倒轉**不會傳回一個值，指出是否已順利移動指標。
+不過，不同於[fseek](fseek-fseeki64.md)，**倒轉**清除資料流的錯誤指標以及檔案結尾指標。 此外，不同於[fseek](fseek-fseeki64.md)，**倒轉**不會傳回值，指出是否已順利移動指標。
 
-若要清除鍵盤緩衝區，請使用**倒轉**與資料流**stdin**，這是關聯的預設鍵盤。
+若要清除鍵盤緩衝區，請使用**倒轉**使用的資料流**stdin**，聯預設鍵盤。
 
-如果資料流**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回與**errno**設**EINVAL**。
+如果資料流**NULL**指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回與**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**rewind**|\<stdio.h>|
 

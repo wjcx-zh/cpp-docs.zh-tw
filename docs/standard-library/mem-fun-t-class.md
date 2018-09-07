@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956384"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108523"
 ---
 # <a name="memfunt-class"></a>mem_fun_t 類別
 
@@ -41,9 +41,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>參數
 
-*_Pm*類別的成員函式的指標`Type`轉換成函式物件。
+*_Pm*<br/>
+要轉換成函式物件之 `Type` 類別的成員函式指標。
 
-*_Pleft*物件所 *_Pm*上呼叫成員函式。
+*_Pleft*<br/>
+物件， *_Pm*上呼叫成員函式。
 
 ## <a name="return-value"></a>傳回值
 

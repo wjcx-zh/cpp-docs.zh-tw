@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959228"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106960"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 類別
 
@@ -111,9 +111,11 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>參數
 
-*Lck* A`mutex`任何型別的物件。
+*Lck*<br/>
+任何類型的 `mutex` 物件。
 
-*預計*傳回的任何運算式 **，則為 true**或是**false**。
+*預測*<br/>
+傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -140,11 +142,14 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>參數
 
-*Lck* A`mutex`任何型別的物件。
+*Lck*<br/>
+任何類型的 `mutex` 物件。
 
-*Rel_time* A`chrono::duration`物件，指定的執行緒之前的時間喚醒。
+*Rel_time*<br/>
+`chrono::duration` 物件，指定喚醒執行緒之前的時間。
 
-*預計*傳回的任何運算式 **，則為 true**或是**false**。
+*預測*<br/>
+傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -192,11 +197,14 @@ void wait_until(
 
 ### <a name="parameters"></a>參數
 
-*Lck* mutex 物件。
+*Lck*<br/>
+Mutex 物件。
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)物件。
+*Abs_time*<br/>
+[chrono::time_point](../standard-library/time-point-class.md) 物件。
 
-*預計*傳回的任何運算式 **，則為 true**或是**false**。
+*預測*<br/>
+傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="return-value"></a>傳回值
 

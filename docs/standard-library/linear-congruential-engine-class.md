@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a3b5ed9880a29e0738f67ca30695ea87c81de6b7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958275"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110210"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 類別
 
@@ -55,13 +55,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>參數
 
-*UIntType*不帶正負號的整數結果型別。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*A* **乘數**。 **前置條件**：請參閱＜備註＞一節。
+*A*<br/>
+**乘數**。 **前置條件**：請參閱＜備註＞一節。
 
-*C* **遞增**。 **前置條件**：請參閱＜備註＞一節。
+*C*<br/>
+**遞增**。 **前置條件**：請參閱＜備註＞一節。
 
-*M* **模數**。 **前置條件**：請參閱備註。
+*M*<br/>
+**模數**。 **前置條件**：請參閱備註。
 
 ## <a name="members"></a>成員
 

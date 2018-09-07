@@ -16,56 +16,64 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78815ed42833c48074abbb4b0c0fa0203f8c35a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 66e3ff5a2daf0ddef41ea478b55ca2fc67298c01
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765690"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108444"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 介面
-`IBoxArray` 是實值類型陣列的包裝函式，這些實值類型會在不同的應用程式二進位介面 (ABI) 之間傳遞或是儲存在 `Platform::Object^` 元素的集合中，例如在 XAML 控制項中。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-template <typename T>  
-interface class IBoxArray  
-```  
-  
-#### <a name="parameters"></a>參數  
- `T`  
- 每個陣列元素中 Boxed 值的類型。  
-  
-### <a name="remarks"></a>備註  
- `IBoxArray` 是 C + + /CX 名稱`Windows::Foundation::IReferenceArray`。  
-  
-### <a name="members"></a>成員  
- `IBoxArray` 介面繼承自 `IValueType` 介面。 `IBoxArray` 也有這些成員：  
-  
-|方法|描述|  
-|------------|-----------------|  
-|[值](#value)|傳回之前儲存在這個 `IBoxArray` 執行個體中的 Unboxed 陣列。|  
+
+`IBoxArray` 是實值類型陣列的包裝函式，這些實值類型會在不同的應用程式二進位介面 (ABI) 之間傳遞或是儲存在 `Platform::Object^` 元素的集合中，例如在 XAML 控制項中。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template <typename T>
+interface class IBoxArray
+```
+
+#### <a name="parameters"></a>參數
+
+*T*<br/>
+每個陣列元素中 Boxed 值的類型。
+
+### <a name="remarks"></a>備註
+
+`IBoxArray` 是 C + + /CX 名稱`Windows::Foundation::IReferenceArray`。
+
+### <a name="members"></a>成員
+
+`IBoxArray` 介面繼承自 `IValueType` 介面。 `IBoxArray` 也有這些成員：
+
+|方法|描述|
+|------------|-----------------|
+|[值](#value)|傳回之前儲存在這個 `IBoxArray` 執行個體中的 Unboxed 陣列。|
 
 ## <a name="value"></a> Iboxarray:: Value 屬性
-傳回一開始儲存在這個物件中的值。  
-  
-### <a name="syntax"></a>語法  
-  
-```cpp  
-property T Value {T get();}  
-```  
-  
-### <a name="parameters"></a>參數  
- `T`  
- boxed 值的類型。  
-  
-### <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 傳回一開始儲存在這個物件中的值。  
-  
-### <a name="remarks"></a>備註  
- 如需範例，請參閱[Boxing](../cppcx/boxing-c-cx.md)。  
-  
-  
-## <a name="see-also"></a>另請參閱  
- [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+
+傳回一開始儲存在這個物件中的值。
+
+### <a name="syntax"></a>語法
+
+```cpp
+property T Value {T get();}
+```
+
+### <a name="parameters"></a>參數
+
+*T*<br/>
+boxed 值的類型。
+
+### <a name="property-valuereturn-value"></a>屬性值/傳回值
+
+傳回一開始儲存在這個物件中的值。
+
+### <a name="remarks"></a>備註
+
+如需範例，請參閱[Boxing](../cppcx/boxing-c-cx.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

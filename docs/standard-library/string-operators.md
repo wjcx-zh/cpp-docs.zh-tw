@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966617"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101793"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 運算子
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`串連。
+*left*<br/>
+要串連的 C 樣式字串或 `basic_string` 類型物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`串連。
+*right*<br/>
+要串連的 C 樣式字串或 `basic_string` 類型物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*left*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*right*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*left*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*right*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*left*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*right*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*left*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*right*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*_Ostr*寫入輸出資料流。
+*_Ostr*<br/>
+要寫入的輸出資料流。
 
-*str*要輸入至輸出資料流的字串。
+*str*<br/>
+要輸入至輸出資料流的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*left*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*right*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*left*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
-*右*的 C 樣式字串或物件型別的`basic_string`進行比較。
+*right*<br/>
+要比較的 C 樣式字串或 `basic_string` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>參數
 
-*_Istr*用來擷取序列的輸入資料流
+*_Istr*<br/>
+用來擷取序列的輸入資料流
 
-*右*正在擷取輸入資料流的字串。
+*right*<br/>
+要從輸入資料流擷取的字串。
 
 ### <a name="return-value"></a>傳回值
 

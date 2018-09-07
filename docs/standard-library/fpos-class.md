@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966598"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105876"
 ---
 # <a name="fpos-class"></a>fpos 類別
 
@@ -47,7 +47,8 @@ class fpos
 
 ### <a name="parameters"></a>參數
 
-*Statetype*狀態資訊。
+*Statetype*<br/>
+狀態資訊。
 
 ### <a name="constructors"></a>建構函式
 
@@ -92,11 +93,14 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>參數
 
-*_Off*資料流中的位移。
+*_Off*<br/>
+資料流中的位移。
 
-*_State*的開始狀態`fpos`物件。
+*（_s)*<br/>
+`fpos` 物件的開始狀態。
 
-*_Filepos*資料流中的位移。
+*_Filepos*<br/>
+資料流中的位移。
 
 ### <a name="remarks"></a>備註
 
@@ -114,7 +118,8 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*來比較的檔案位置指標。
+*right*<br/>
+以比較目標為依據的檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -186,7 +191,8 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>參數
 
-*_Off*的位移，以您想用來遞增檔案位置指標。
+*_Off*<br/>
+遞增檔案位置指標時所要依據的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -210,7 +216,8 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*的位移，以您想用來遞增檔案位置指標。
+*_Off*<br/>
+遞增檔案位置指標時所要依據的位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -236,9 +243,11 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>參數
 
-*右*檔案位置。
+*right*<br/>
+檔案位置。
 
-*_Off* Stream 位移。
+*_Off*<br/>
+資料流位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -258,7 +267,8 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off* Stream 位移。
+*_Off*<br/>
+資料流位移。
 
 ### <a name="return-value"></a>傳回值
 
@@ -282,7 +292,8 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*來比較的檔案位置指標。
+*right*<br/>
+以比較目標為依據的檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -355,7 +366,8 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>參數
 
-*_State*新的轉換狀態。
+*（_s)*<br/>
+新的轉換狀態。
 
 ### <a name="return-value"></a>傳回值
 

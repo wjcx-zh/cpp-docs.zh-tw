@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455bf63cdac425217c40068853b302edefb94f16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404278"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103784"
 ---
 # <a name="perror-wperror"></a>perror、_wperror
 
@@ -64,11 +64,12 @@ void _wperror(
 
 ### <a name="parameters"></a>參數
 
-*訊息*列印的字串訊息。
+*message*<br/>
+要列印的字串訊息。
 
 ## <a name="remarks"></a>備註
 
-**Perror**函式會列印錯誤訊息至**stderr**。 **_wperror**是寬字元版本的 **_perror**;*訊息*引數 **_wperror**是寬字元字串。 **_wperror**和 **_perror**除此之外的行為相同。
+**Perror**函式會列印錯誤訊息**stderr**。 **_wperror**是寬字元版本的 **_perror**;*訊息*引數 **_wperror**是寬字元字串。 **_wperror**並 **_perror**行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -76,17 +77,17 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*訊息*會列印第一次後, 接冒號，然後是系統錯誤訊息，取得產生錯誤，最後一次程式庫呼叫，最後由新行字元。 如果*訊息*為 null 指標或 null 字串的指標**perror**會列印只有系統錯誤訊息。
+*訊息*會先列印後, 接冒號，再依上次產生錯誤的程式庫呼叫的系統錯誤訊息，最後由新行字元。 如果*訊息*是 null 指標或為 null 的字串，指標**perror**會列印只有系統錯誤訊息。
 
-錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**適當的錯誤訊息使用列印**errno**為的索引值 **_sys_errlist**。 變數的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)定義中的項目數目上限為 **_sys_errlist**陣列。
+錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**適當的錯誤訊息使用列印**errno**值為索引 **_sys_errlist**。 變數的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中的項目數目上限指 **_sys_errlist**陣列。
 
-針對精確的結果，呼叫**perror**之後立即在程式庫常式傳回錯誤。 否則，後續呼叫可能會覆寫**errno**值。
+取得精確的結果，呼叫**perror**之後立即在程式庫常式傳回錯誤。 否則，後續呼叫可能會覆寫**errno**值。
 
-在 Windows 作業系統，有些**errno** ERRNO 中列出的值。H 是未使用。 這些值會保留供 UNIX 作業系統使用。 請參閱[_doserrno，errno，_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)如的清單**errno** Windows 作業系統所使用的值。 **perror**列印任何空字串**errno**值不是由這些平台。
+在 Windows 作業系統，有些**errno** ERRNO 中列出的值。小時皆未使用。 這些值會保留供 UNIX 作業系統使用。 請參閱[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)如需清單**errno** Windows 作業系統所使用的值。 **perror**列印空字串為任何**errno**不使用這些平台的值。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**perror**|\<stdio.h> 或 \<stdlib.h>|
 |**_wperror**|\<stdio.h> 或 \<wchar.h>|

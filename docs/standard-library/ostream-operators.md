@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 766ab6f9a93cc617c2a3ecb4c305775d670a9640
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955929"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108950"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 運算子
 
@@ -88,17 +88,23 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*_Ch*字元。
+*_Ch*<br/>
+字元。
 
-*_Elem*項目類型。
+*_Elem*<br/>
+元素類型。
 
-*_Ostr* A`basic_ostream`物件。
+*_Ostr*<br/>
+`basic_ostream` 物件。
 
-*str*字元字串。
+*str*<br/>
+字元字串。
 
-*_Tr*字元特性。
+*_Tr*<br/>
+字元特性。
 
-*val*類型
+*val*<br/>
+類型
 
 ### <a name="return-value"></a>傳回值
 

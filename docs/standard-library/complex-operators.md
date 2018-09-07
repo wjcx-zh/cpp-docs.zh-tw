@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208672"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110185"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 運算子
 
@@ -58,9 +58,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左*複數或其參數型別，要測試是否不相等的物件。
+*left*<br/>
+用作測試不相等的複數或其參數類型的物件。
 
-*右*複數或其參數型別，要測試是否不相等的物件。
+*right*<br/>
+用作測試不相等的複數或其參數類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -196,9 +198,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>參數
 
-*左*兩個複數或數字，所要乘以的複數的參數類型的第一個\*作業。
+*left*<br/>
+兩個複數或數字，所要乘以的複數的參數類型的第一個\*作業。
 
-*右*兩個複數或數字，所要乘以的複數的參數類型的第二個\*作業。
+*right*<br/>
+兩個複數或數字，所要乘以的複數的參數類型的第二個\*作業。
 
 ### <a name="return-value"></a>傳回值
 
@@ -295,9 +299,11 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-*左*兩個複數相加或所要新增為複數的參數類型的數字的第一個 + 作業。
+*left*<br/>
+兩個複數的第一個或某個數字 (其為要以 + 運算相加之複數的參數類型)。
 
-*右*兩個複數相加或所要新增為複數的參數類型的數字的第二個 + 作業。
+*right*<br/>
+兩個複數的第二個或某個數字 (其為要以 + 運算相加之複數的參數類型)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -402,7 +408,7 @@ The argument of cs3 is: 0.463648 radians, which is 26.5651 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of + to the right-side
- complex number is: cs4 = (3,4)
+complex number is: cs4 = (3,4)
 The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
@@ -433,9 +439,11 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>參數
 
-*左*的兩個複數或數字是以-運算相減之複數的參數類型的第一個。
+*left*<br/>
+兩個複數的第一個或某個數字 (其為要以 - 運算相減之複數的參數類型)。
 
-*右*的兩個複數或數字是以-運算相減之複數的參數類型的第二個。
+*right*<br/>
+兩個複數的第二個或某個數字 (其為要以 - 運算相減之複數的參數類型)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -542,7 +550,7 @@ The argument of cs3 is: -1.10715 radians, which is -63.4349 degrees.
 
 The right-side complex number is cr4 = (3,4)
 The result of the unary application of - to the right-side
- complex number is: cs4 = (-3,-4)
+complex number is: cs4 = (-3,-4)
 The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
@@ -570,9 +578,11 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>參數
 
-*左*某個複數或數字，是要除以的分母與分子的複數的參數類型 / 作業。
+*left*<br/>
+某個複數或數字 (其為要以 / 運算相除之複數分子的參數類型)。
 
-*右*某個複數或數字，分母設為用來與相除之複數的參數類型 / 作業。
+*right*<br/>
+某個複數或數字 (其為要以 / 運算相除之複數分母的參數類型)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -678,9 +688,11 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*Ostr*在其中輸入複數的輸出資料流。
+*Ostr*<br/>
+要輸入複數的輸出資料流。
 
-*右*複數插入輸出資料流輸入
+*right*<br/>
+要輸入輸出資料流中的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -749,9 +761,11 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*複數或其參數型別，要測試是否不相等的物件。
+*left*<br/>
+用作測試不相等的複數或其參數類型的物件。
 
-*右*複數或其參數型別，要測試是否不相等的物件。
+*right*<br/>
+用作測試不相等的複數或其參數類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -877,9 +891,11 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>參數
 
-*Istr*從中擷取複數的輸入資料流。
+*Istr*<br/>
+要擷取複數的來源輸入資料流。
 
-*右*正在從輸入資料流擷取複數。
+*right*<br/>
+要從輸入資料流擷取的複數。
 
 ### <a name="return-value"></a>傳回值
 

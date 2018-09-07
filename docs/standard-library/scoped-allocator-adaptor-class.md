@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62bdeeddf0e81cf017c49eac51ca0e2eaaf046c1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104063"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 類別
 
@@ -131,9 +131,11 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>參數
 
-*計數*配置足夠的儲存體的項目數。
+*count*<br/>
+要配置足夠儲存空間的元素數。
 
-*提示*可協助找出要求之前所配置的物件位址的配置器物件的指標。
+*提示*<br/>
+指標，可藉由找出要求之前所配置的物件位址，來協助配置器物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -168,15 +170,20 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>參數
 
-*ptr*是要建構物件之記憶體位置的指標。
+*ptr*<br/>
+要建構物件之記憶體位置的指標。
 
-*args*引數清單。
+*引數*<br/>
+引數清單。
 
-*第一個*配對中第一種類型的物件。
+*first*<br/>
+配對中第一個類型的物件。
 
-*第二個*配對中第二個類型的物件。
+*second*<br/>
+配對中第二個類型的物件。
 
-*右*移動或複製現有的物件。
+*right*<br/>
+要移動或複製的現有物件。
 
 ### <a name="remarks"></a>備註
 
@@ -208,9 +215,11 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>參數
 
-*ptr*解除配置物件的起始位置的指標。
+*ptr*<br/>
+要解除配置之物件的起始位置指標。
 
-*計數*解除配置的物件數目。
+*count*<br/>
+要解除配置的物件數目。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
@@ -223,7 +232,8 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>參數
 
-*ptr*即將終結物件的指標。
+*ptr*<br/>
+要終結的物件指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -283,10 +293,10 @@ scoped_allocator_adaptor();
 scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
+const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(
- scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
+scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
@@ -294,11 +304,14 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>參數
 
-*右*現有`scoped_allocator_adaptor`。
+*right*<br/>
+現有的 `scoped_allocator_adaptor`。
 
-*al*用作外部配置器的現有配置器。
+*Al*<br/>
+用來做為外部配置器的現有配置器。
 
-*rest*来做為內部的配置器的配置器的清單。
+*rest*<br/>
+用來做為內部配置器的配置器清單。
 
 ### <a name="remarks"></a>備註
 

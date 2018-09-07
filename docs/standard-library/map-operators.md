@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 22d8d5d348dc4bf4bd50ee56db360e4490503b78
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0113f792a20c1680ce931d43cbaf016e7bcfaf59
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959254"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108302"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 運算子
 
@@ -48,9 +48,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`map`。
+*left*<br/>
+`map` 類型的物件。
 
-*右*型別的物件`map`。
+*right*<br/>
+`map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -110,9 +112,11 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`map`。
+*left*<br/>
+`map` 類型的物件。
 
-*右*型別的物件`map`。
+*right*<br/>
+`map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -172,9 +176,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`map`。
+*left*<br/>
+`map` 類型的物件。
 
-*右*型別的物件`map`。
+*right*<br/>
+`map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -237,9 +243,11 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`map`。
+*left*<br/>
+`map` 類型的物件。
 
-*右*型別的物件`map`。
+*right*<br/>
+`map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -299,9 +307,11 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`map`。
+*left*<br/>
+`map` 類型的物件。
 
-*右*型別的物件`map`。
+*right*<br/>
+`map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -361,9 +371,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`map`。
+*left*<br/>
+`map` 類型的物件。
 
-*右*型別的物件`map`。
+*right*<br/>
+`map` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -426,9 +438,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`multimap`。
+*left*<br/>
+`multimap` 類型的物件。
 
-*右*型別的物件`multimap`。
+*right*<br/>
+`multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -488,9 +502,11 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`multimap`。
+*left*<br/>
+`multimap` 類型的物件。
 
-*右*型別的物件`multimap`。
+*right*<br/>
+`multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -550,9 +566,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`multimap`。
+*left*<br/>
+`multimap` 類型的物件。
 
-*右*型別的物件`multimap`。
+*right*<br/>
+`multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -615,9 +633,11 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`multimap`。
+*left*<br/>
+`multimap` 類型的物件。
 
-*右*型別的物件`multimap`。
+*right*<br/>
+`multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -677,9 +697,11 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`multimap`。
+*left*<br/>
+`multimap` 類型的物件。
 
-*右*型別的物件`multimap`。
+*right*<br/>
+`multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -739,9 +761,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`multimap`。
+*left*<br/>
+`multimap` 類型的物件。
 
-*右*型別的物件`multimap`。
+*right*<br/>
+`multimap` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 

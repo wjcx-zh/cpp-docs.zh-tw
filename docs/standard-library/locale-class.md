@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100750"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>參數
 
-*Loc*包含要插入至目標地區設定 facet 的地區設定。
+*當地語系化*<br/>
+包含要插入到目標地區設定中之 facet 的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*Loc*程式所做的預設地區設定的地區設定。
+*當地語系化*<br/>
+程式要用來作為預設地區設定的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>參數
 
-*Locname*地區設定名稱。
+*Locname*<br/>
+地區設定的名稱。
 
-*Loc*之複製建構新的地區設定的地區設定。
+*當地語系化*<br/>
+在建構新地區設定時所要複製的地區設定。
 
-*其他*從中選取分類的地區設定。
+*其他*<br/>
+要從中選取分類的地區設定。
 
-*Cat*要代入到建構之地區設定分類。
+*Cat*<br/>
+要代入到所建構之地區設定中的分類。
 
-*Fac*要代入到建構之地區設定 facet。
+*Fac*<br/>
+要代入到所建構之地區設定中的 facet。
 
 ### <a name="remarks"></a>備註
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*其中一個要測試是否不相等的地區設定。
+*right*<br/>
+其中一個要測試是否不相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>參數
 
-*左*左邊的字串。
+*left*<br/>
+左字串。
 
-*右*右邊的字串。
+*right*<br/>
+右字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-*右*其中一個要測試是否相等的地區設定。
+*right*<br/>
+其中一個要測試是否相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -734,14 +745,14 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)<br/>
 [字碼頁](../c-runtime-library/code-pages.md)<br/>
-[地區設定名稱、 語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

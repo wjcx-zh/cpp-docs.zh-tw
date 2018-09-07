@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962269"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105402"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函式
 
@@ -75,7 +75,8 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>參數
 
-*除了*具有待複製例外狀況的類別。 雖然任何類別物件都可以是 `make_exception_ptr` 函式的引數，但一般會指定 [exception 類別](../standard-library/exception-class.md)物件作為其引數。
+*除了*<br/>
+具有待複製例外狀況的類別。 雖然任何類別物件都可以是 `make_exception_ptr` 函式的引數，但一般會指定 [exception 類別](../standard-library/exception-class.md)物件作為其引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -97,7 +98,8 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>參數
 
-*P*攔截的例外狀況重新擲回。 如果*P*為 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，此函式會擲回[std:: bad_exception](../standard-library/bad-exception-class.md)。
+*P*<br/>
+要重新擲回的已攔截例外狀況。 如果*P*為 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，此函式會擲回[std:: bad_exception](../standard-library/bad-exception-class.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -121,7 +123,8 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>參數
 
-*fnew*要在終止時呼叫的函式。
+*fnew*<br/>
+要在終止時呼叫的函式。
 
 ### <a name="return-value"></a>傳回值
 
@@ -178,7 +181,8 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>參數
 
-*fnew*發生未預期的例外狀況時要呼叫的函式。
+*fnew*<br/>
+當未預期的例外狀況發生時要呼叫的函式。
 
 ### <a name="return-value"></a>傳回值
 

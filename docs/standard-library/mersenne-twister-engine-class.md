@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959267"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100218"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 類別
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>參數
 
-*UIntType*不帶正負號的整數結果型別。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*W* **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **狀態大小**。 狀態序列中的元素數 (值)。
+*N*<br/>
+**狀態大小**。 狀態序列中的元素數 (值)。
 
-*M* **移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件**：`0 < M ≤ N`
+*M*<br/>
+**移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件**：`0 < M ≤ N`
 
-*R* **遮罩位元**。 **前置條件**：`R ≤ W`
+*R*<br/>
+**遮罩位元**。 **前置條件**：`R ≤ W`
 
-*A* **XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`
+*A*<br/>
+**XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`
 
-*U*， *S*， *T*， *L* **Tempering 移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`
+*U*， *S*， *T*， *L*<br/>
+**調和移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`
 
-*D*， *B*， *C* **Tempering 位元遮罩參數**。 用做編碼 (調和) 期間的位元遮罩值。 前置條件：`D,B,C ≤ (1u<<W) - 1u`
+*D*， *B*， *C*<br/>
+**調和位元遮罩參數**。 用做編碼 (調和) 期間的位元遮罩值。 前置條件：`D,B,C ≤ (1u<<W) - 1u`
 
-*F* **初始化乘數**。 用於協助初始化序列。 前置條件：`F ≤ (1u<<W) - 1u`
+*F*<br/>
+**初始化乘數**。 用於協助初始化序列。 前置條件：`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Members
 

@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960927"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106466"
 ---
 # <a name="regextraits-class"></a>regex_traits 類別
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*Elem*字元項目型別描述。
+*Elem*<br/>
+要描述的字元項目類型。
 
 ## <a name="remarks"></a>備註
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*loc*来儲存的地區設定物件。
+*當地語系化*<br/>
+要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*測試的項目。
+*ch*<br/>
+待測試的項目。
 
-*符合 cls*来測試的類別。
+*符合 cls*<br/>
+做為測試對象的類別。
 
 ### <a name="remarks"></a>備註
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>參數
 
-*str*
+*str*<br/>
 
 Null 終止的序列。
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*来查閱之序列的開頭。
+*first*<br/>
+要查閱之序列的開頭。
 
-*最後一個*查閱之序列的結尾。
+*最後一個*<br/>
+要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*来查閱之序列的開頭。
+*first*<br/>
+要查閱之序列的開頭。
 
-*最後一個*查閱之序列的結尾。
+*最後一個*<br/>
+要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*之轉換的序列的開頭。
+*first*<br/>
+要轉換之序列的開頭。
 
-*最後一個*轉換之序列的結尾。
+*最後一個*<br/>
+要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*之轉換的序列的開頭。
+*first*<br/>
+要轉換之序列的開頭。
 
-*最後一個*轉換之序列的結尾。
+*最後一個*<br/>
+要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*来轉換的項目。
+*ch*<br/>
+要轉換的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*来轉換的項目。
+*ch*<br/>
+要轉換的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*来轉換的項目。
+*ch*<br/>
+要轉換的項目。
 
-*基底*的算術基底使用。
+*radix*<br/>
+要使用的算術基底。
 
 ### <a name="remarks"></a>備註
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 673289f5ac8b739dfe7c1a4de446a37d85763452
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208828"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108404"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -55,9 +55,11 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>參數
 
-*_Amount*擷取的貨幣值。
+*_Amount*<br/>
+所擷取的貨幣值。
 
-*_Intl*如果 **，則為 true**，使用國際格式。 預設值為 **false**。
+*_Intl*<br/>
+如果 **，則為 true**，使用國際格式。 預設值為 **false**。
 
 ### <a name="remarks"></a>備註
 
@@ -76,9 +78,11 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>參數
 
-*_Tptr*時間結構形式的時間。
+*_Tptr*<br/>
+採用時間結構形式的時間。
 
-*_Fmt*所需的格式，用來取得時間值。
+*_Fmt*<br/>
+用來取得時間值的所需格式。
 
 ### <a name="remarks"></a>備註
 
@@ -95,9 +99,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>參數
 
-*_Amount*來插入資料流中的金額。
+*_Amount*<br/>
+要插入到資料流中的金額。
 
-*_Intl*設定為 **，則為 true**如果操作工具應該使用國際格式**false**如果不應該。
+*_Intl*<br/>
+設定為 **，則為 true**如果操作工具應該使用國際格式**false**如果不應該。
 
 ### <a name="return-value"></a>傳回值
 
@@ -120,9 +126,11 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>參數
 
-*_Tptr*来寫入資料流，提供時間結構的時間值。
+*_Tptr*<br/>
+時間結構中所提供要寫入到資料流中的時間值。
 
-*_Fmt*寫入時間值所需的格式。
+*_Fmt*<br/>
+寫入時間值時所需的格式。
 
 ### <a name="remarks"></a>備註
 
@@ -141,11 +149,14 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>參數
 
-*str* std:: string、 char\*，字串常值或原始字串常值或其中任何一項的寬版本 (例如 std:: wstring、 wchar_t\*)。
+*str*<br/>
+Std:: string、 char\*，字串常值或原始字串常值或其中任何一項的寬版本 (例如 std:: wstring、 wchar_t\*)。
 
-*分隔符號*的使用者指定的字元或寬字元，用以做為分隔符號的開頭和結尾的字串。
+*分隔符號*<br/>
+使用者指定的字元或寬字元，用作字串開頭和結尾的分隔符號。
 
-*逸出*的使用者指定的字元或寬字元，做為逸出字元用於字串內的逸出序列。
+*逸出*<br/>
+使用者指定的字元或寬字元，用作字串內逸出序列的逸出字元。
 
 ### <a name="remarks"></a>備註
 
@@ -303,7 +314,8 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>參數
 
-*遮罩*来清除的旗標。
+*遮罩*<br/>
+要清除的旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -323,7 +335,8 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>參數
 
-*（_b)* 數字基底。
+*（_b)*<br/>
+數字基底。
 
 ### <a name="return-value"></a>傳回值
 
@@ -352,7 +365,8 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>參數
 
-*Ch*將用來填滿靠右對齊顯示中的空格的字元。
+*ch*<br/>
+將用來填滿靠右對齊顯示中空格的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -372,7 +386,8 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>參數
 
-*遮罩*来設定旗標。
+*遮罩*<br/>
+要設定的旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -392,7 +407,8 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>參數
 
-*Prec*浮點值的有效位數。
+*prec*<br/>
+浮點數值的有效位數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -412,7 +428,8 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>參數
 
-*寬*顯示欄位的寬度。
+*寬*<br/>
+顯示欄位的寬度。
 
 ### <a name="return-value"></a>傳回值
 

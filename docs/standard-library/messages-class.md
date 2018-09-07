@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954886"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106447"
 ---
 # <a name="messages-class"></a>messages 類別
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內使用地區設定中的字元編碼的類型。
+*CharType*<br/>
+程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval*關閉目錄。
+*_Catval*<br/>
+要關閉的目錄。
 
 ### <a name="remarks"></a>備註
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval*關閉目錄。
+*_Catval*<br/>
+要關閉的目錄。
 
 ### <a name="remarks"></a>備註
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval*識別值，指定要搜尋的訊息目錄。
+*_Catval*<br/>
+識別值，指定所要搜尋的訊息目錄。
 
-*_ 設定*第一個識別用來找出訊息目錄中的訊息。
+*（_s)*<br/>
+第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*訊息 （_m)* 第二個識別用來找出訊息目錄中的訊息。
+*訊息 （_m)*<br/>
+第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault*失敗而被傳回的字串。
+*_Dfault*<br/>
+失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname*要搜尋的目錄名稱。
+*_Catname*<br/>
+所要搜尋之目錄的名稱。
 
-*_Loc*所搜尋的目錄中的地區設定。
+*_Loc*<br/>
+要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval*識別值，指定要搜尋的訊息目錄。
+*_Catval*<br/>
+識別值，指定所要搜尋的訊息目錄。
 
-*_ 設定*第一個識別用來找出訊息目錄中的訊息。
+*（_s)*<br/>
+第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*訊息 （_m)* 第二個識別用來找出訊息目錄中的訊息。
+*訊息 （_m)*<br/>
+第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault*失敗而被傳回的字串。
+*_Dfault*<br/>
+失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+整數值，用來指定物件的記憶體管理類型。
 
-*_Locname*地區設定的名稱。
+*_Locname*<br/>
+地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname*要搜尋的目錄名稱。
+*_Catname*<br/>
+所要搜尋之目錄的名稱。
 
-*_Loc*所搜尋的目錄中的地區設定。
+*_Loc*<br/>
+要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
 

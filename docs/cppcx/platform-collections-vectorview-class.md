@@ -20,260 +20,269 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b5f6fcfefa03fe733ac7b6e5a8417278e6f01
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690603"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102508"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
-代表物件之循序集合的唯讀檢視，這些物件可透過索引加以個別存取。 集合中每個物件的類型，由樣板參數指定。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-template <typename T, typename E>  
-   ref class VectorView sealed;  
-```  
-  
-#### <a name="parameters"></a>參數  
- `T`  
- `VectorView` 物件中包含的元素類型。  
-  
- `E`  
- 指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。  
-  
-### <a name="remarks"></a>備註  
- `VectorView`類別會實作[2&gt;{3&gt;windows::foundation::collections::ivectorview&lt;t&lt;3}&lt;2}\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)介面，也支援標準樣板程式庫迭代器。  
-  
-### <a name="members"></a>成員  
-  
-### <a name="public-constructors"></a>公用建構函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[VectorView::VectorView](#ctor)|初始化 VectorView 類別的新執行個體。|  
-  
-### <a name="public-methods"></a>公用方法  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[VectorView::First](#first)|傳回迭代器，指定 VectorView 中的第一個項目。|  
-|[VectorView::GetAt](#getat)|擷取由指定之索引所表示的目前 VectorView 項目。|  
-|[VectorView::GetMany](#getmany)|由指定的索引處開始，從目前 VectorView 擷取一連串項目。|  
-|[VectorView::IndexOf](#indexof)|在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。|  
-|[VectorView::Size](#size)|傳回目前 VectorView 物件中的項目數。|  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `VectorView`  
-  
-### <a name="requirements"></a>需求  
- **標頭：** collection.h  
-  
- **命名空間：** Platform::Collections  
+
+代表物件之循序集合的唯讀檢視，這些物件可透過索引加以個別存取。 集合中每個物件的類型，由樣板參數指定。
+
+## <a name="syntax"></a>語法
+
+```
+template <typename T, typename E>
+   ref class VectorView sealed;
+```
+
+#### <a name="parameters"></a>參數
+
+*T*<br/>
+`VectorView` 物件中包含的元素類型。
+
+*E*<br/>
+指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。
+
+### <a name="remarks"></a>備註
+
+`VectorView`類別會實作[2&gt;{3&gt;windows::foundation::collections::ivectorview&lt;t&lt;3}&lt;2}\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)介面，也支援標準樣板程式庫迭代器。
+
+### <a name="members"></a>成員
+
+### <a name="public-constructors"></a>公用建構函式
+
+|名稱|描述|
+|----------|-----------------|
+|[VectorView::VectorView](#ctor)|初始化 VectorView 類別的新執行個體。|
+
+### <a name="public-methods"></a>公用方法
+
+|名稱|描述|
+|----------|-----------------|
+|[VectorView::First](#first)|傳回迭代器，指定 VectorView 中的第一個項目。|
+|[VectorView::GetAt](#getat)|擷取由指定之索引所表示的目前 VectorView 項目。|
+|[VectorView::GetMany](#getmany)|由指定的索引處開始，從目前 VectorView 擷取一連串項目。|
+|[VectorView::IndexOf](#indexof)|在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。|
+|[VectorView::Size](#size)|傳回目前 VectorView 物件中的項目數。|
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`VectorView`
+
+### <a name="requirements"></a>需求
+
+**標頭：** collection.h
+
+**命名空間：** Platform::Collections
 
 ## <a name="first"></a>  Vectorview:: First 方法
-傳回迭代器，指定 VectorView 中的第一個項目。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-  
-virtual Windows::Foundation::Collections::IIterator<T>^   
-   First();  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 指定 VectorView 中第一個項目的迭代器。  
-  
-### <a name="remarks"></a>備註  
- 若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myVectorView->First();`。  
-  
 
+傳回迭代器，指定 VectorView 中的第一個項目。
+
+### <a name="syntax"></a>語法
+
+```
+
+virtual Windows::Foundation::Collections::IIterator<T>^
+   First();
+```
+
+### <a name="return-value"></a>傳回值
+
+指定 VectorView 中第一個項目的迭代器。
+
+### <a name="remarks"></a>備註
+
+若要保留 first （） 所傳回的迭代器的方便作法是將傳回的值指派給宣告的變數**自動**類型推斷關鍵字。 例如，`auto x = myVectorView->First();`。
 
 ## <a name="getat"></a>  Vectorview:: Getat 方法
-擷取由指定之索引所表示的目前 VectorView 項目。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-  
-T GetAt(  
-   UInt32 index  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- `index`  
- 以零起始、不帶正負號的整數，在 VectorView 物件中指定特別項目。  
-  
-### <a name="return-value"></a>傳回值  
- `index` 參數指定的項目。 VectorView 範本參數所指定的項目類型*T*。  
-  
 
+擷取由指定之索引所表示的目前 VectorView 項目。
+
+### <a name="syntax"></a>語法
+
+```
+
+T GetAt(
+   UInt32 index
+);
+```
+
+### <a name="parameters"></a>參數
+
+*index*<br/>
+以零起始、不帶正負號的整數，在 VectorView 物件中指定特別項目。
+
+### <a name="return-value"></a>傳回值
+
+`index` 參數指定的項目。 VectorView 範本參數所指定的項目類型*T*。
 
 ## <a name="getmany"></a>  Vectorview:: Getmany 方法
-由指定的索引處開始，從目前 VectorView 擷取一連串項目。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-  
-virtual unsigned int GetMany(  
-   unsigned int startIndex,   
-   ::Platform::WriteOnlyArray<T>^ dest  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- `startIndex`  
- 要擷取之開始項目以零為起始的索引。  
-  
- `dest`  
- 這項作業完成時，所指定的項目開始的項目陣列`startIndex`和 VectorView 中的最後一個項目處結束。  
-  
-### <a name="return-value"></a>傳回值  
- 擷取的項目數目。  
-  
 
+由指定的索引處開始，從目前 VectorView 擷取一連串項目。
+
+### <a name="syntax"></a>語法
+
+```
+
+virtual unsigned int GetMany(
+   unsigned int startIndex,
+   ::Platform::WriteOnlyArray<T>^ dest
+);
+```
+
+### <a name="parameters"></a>參數
+
+*startIndex*<br/>
+要擷取之開始項目以零為起始的索引。
+
+*dest*<br/>
+這項作業完成時，所指定的項目開始的項目陣列`startIndex`和 VectorView 中的最後一個項目處結束。
+
+### <a name="return-value"></a>傳回值
+
+擷取的項目數目。
 
 ## <a name="indexof"></a>  Vectorview:: Indexof 方法
-在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-  
-virtual bool IndexOf(  
-   T value,  
-   unsigned int* index  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- `value`  
- 要尋找的項目。  
-  
- `index`  
- 如果找到參數 `value`，則為項目以零起始的索引，否則為 0。  
-  
- 如果項目是 VectorView 的第一個項目或找不到項目，則 `index` 參數為 0。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。  
-  
-### <a name="return-value"></a>傳回值  
- 如果找到指定的項目則為 `true`，否則為 `false`。  
-  
 
+在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。
+
+### <a name="syntax"></a>語法
+
+```
+
+virtual bool IndexOf(
+   T value,
+   unsigned int* index
+);
+```
+
+### <a name="parameters"></a>參數
+
+*值*<br/>
+要尋找的項目。
+
+*index*<br/>
+如果找到參數 `value`，則為項目以零起始的索引，否則為 0。
+
+如果項目是 VectorView 的第一個項目或找不到項目，則 `index` 參數為 0。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。
+
+### <a name="return-value"></a>傳回值
+
+如果找到指定的項目則為 `true`，否則為 `false`。
 
 ## <a name="size"></a>  Vectorview:: Size 方法
-傳回目前 VectorView 物件中的項目數。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-  
-virtual property unsigned int Size;  
-```  
-  
-### <a name="return-value"></a>傳回值  
- 目前 VectorView 中的項目數。  
-  
 
+傳回目前 VectorView 物件中的項目數。
+
+### <a name="syntax"></a>語法
+
+```
+
+virtual property unsigned int Size;
+```
+
+### <a name="return-value"></a>傳回值
+
+目前 VectorView 中的項目數。
 
 ## <a name="ctor"></a>  Vectorview:: Vectorview 建構函式
-初始化 VectorView 類別的新執行個體。  
-  
-### <a name="syntax"></a>語法  
-  
-```  
-VectorView();  
-explicit VectorView(  
-   UInt32 size  
-);  
-VectorView(  
-   UInt32 size,  
-   T value  
-);  
-explicit VectorView(  
-   const ::std::vector<T>& v  
-);  
-explicit VectorView(  
-   ::std::vector<T>&& v  
-);  
-VectorView(  
-   const T * ptr,  
-   UInt32 size  
-);  
-  
-template <  
-   size_t N  
->  
-explicit VectorView(  
-   const T (&arr)[N]  
-);  
-  
-template <  
-   size_t N  
->  
-explicit VectorView(  
-   const ::std::array<T,  
-   N>& a  
-);  
-  
-explicit VectorView(  
-   const ::Platform::Array<T>^ arr  
-);  
-  
-template <  
-   typename InIt  
->  
-VectorView(  
-   InItfirst,  
-   InItlast  
-);  
-  
-VectorView(  
-   std::initializer_list<T> il  
-);  
-```  
-  
-### <a name="parameters"></a>參數  
- `InIt`  
- 用來初始化目前 VectorView 的物件集合類型。  
-  
- il  
- A [std:: initializer_list](../standard-library/initializer-list-class.md)其項目會用來初始化 VectorView。  
-  
- `N`  
- 用來初始化目前 VectorView 之物件集合中的項目數。  
-  
- `size`  
- VectorView 中的項目數。  
-  
- `value`  
- 用來初始化目前 VectorView 中各個項目的值。  
-  
- `v`  
- [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: vector](../standard-library/vector-class.md)用來初始化目前 VectorView。  
-  
- `ptr`  
- 用來初始化目前 VectorView 之 `std::vector` 的指標。  
-  
- `arr`  
- A [platform:: array](../cppcx/platform-array-class.md)用來初始化目前 VectorView 的物件。  
-  
- `a`  
- A [std:: array](../standard-library/array-class-stl.md)用來初始化目前 VectorView 的物件。  
-  
- `first`  
- 用來初始化目前 VectorView 之物件序列中的第一個項目。 型別`first`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
-  
- `last`  
- 用來初始化目前 VectorView 之物件序列中的最後一個項目。 型別`last`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
-  
 
+初始化 VectorView 類別的新執行個體。
 
-  
-## <a name="see-also"></a>另請參閱  
- [Platform 命名空間](platform-namespace-c-cx.md)   
- [在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+### <a name="syntax"></a>語法
+
+```
+VectorView();
+explicit VectorView(
+   UInt32 size
+);
+VectorView(
+   UInt32 size,
+   T value
+);
+explicit VectorView(
+   const ::std::vector<T>& v
+);
+explicit VectorView(
+   ::std::vector<T>&& v
+);
+VectorView(
+   const T * ptr,
+   UInt32 size
+);
+
+template <
+   size_t N
+>
+explicit VectorView(
+   const T (&arr)[N]
+);
+
+template <
+   size_t N
+>
+explicit VectorView(
+   const ::std::array<T,
+   N>& a
+);
+
+explicit VectorView(
+   const ::Platform::Array<T>^ arr
+);
+
+template <
+   typename InIt
+>
+VectorView(
+   InItfirst,
+   InItlast
+);
+
+VectorView(
+   std::initializer_list<T> il
+);
+```
+
+### <a name="parameters"></a>參數
+
+*InIt*<br/>
+用來初始化目前 VectorView 的物件集合類型。
+
+*il*<br/>
+A [std:: initializer_list](../standard-library/initializer-list-class.md)其項目會用來初始化 VectorView。
+
+*N*<br/>
+用來初始化目前 VectorView 之物件集合中的項目數。
+
+*size*<br/>
+VectorView 中的項目數。
+
+*值*<br/>
+用來初始化目前 VectorView 中各個項目的值。
+
+*v*<br/>
+[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: vector](../standard-library/vector-class.md)用來初始化目前 VectorView。
+
+*ptr*<br/>
+用來初始化目前 VectorView 之 `std::vector` 的指標。
+
+*arr*<br/>
+A [platform:: array](../cppcx/platform-array-class.md)用來初始化目前 VectorView 的物件。
+
+*a*<br/>
+A [std:: array](../standard-library/array-class-stl.md)用來初始化目前 VectorView 的物件。
+
+*first*<br/>
+用來初始化目前 VectorView 之物件序列中的第一個項目。 型別`first`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+*最後一個*<br/>
+用來初始化目前 VectorView 之物件序列中的最後一個項目。 型別`last`藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[Platform 命名空間](platform-namespace-c-cx.md)<br/>
+[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

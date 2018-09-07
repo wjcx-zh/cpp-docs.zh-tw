@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3ab2994359e99e490422fbb2f11cf28a05d6e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7adf4c285646e6a3f4706a9a56995f4440cc1e8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395656"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103811"
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 
@@ -54,9 +54,11 @@ extern "C" void __stdcall _CxxThrowException(
 
 ### <a name="parameters"></a>參數
 
-*pExceptionObject*產生例外狀況的物件。
+*pExceptionObject*<br/>
+產生例外狀況的物件。
 
-*pThrowInfo*處理例外狀況所需的資訊。
+*pThrowInfo*<br/>
+處理例外狀況所需的資訊。
 
 ## <a name="remarks"></a>備註
 

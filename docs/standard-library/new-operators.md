@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216184"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100362"
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt; 運算子
 
@@ -39,7 +39,8 @@ void operator delete(void* ptr,
 
 ### <a name="parameters"></a>參數
 
-*ptr*其值是要轉譯的刪除無效的指標。
+*ptr*<br/>
+要藉由刪除來讓值變成無效的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -71,7 +72,8 @@ void operator delete[](void* ptr,
 
 ### <a name="parameters"></a>參數
 
-*ptr*其值是要轉譯的刪除無效的指標。
+*ptr*<br/>
+要藉由刪除來讓值變成無效的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -101,9 +103,11 @@ void* operator new(std::size_t count,
 
 ### <a name="parameters"></a>參數
 
-*計數*配置儲存區的位元組數目。
+*count*<br/>
+要配置的儲存體位元組數。
 
-*ptr*要傳回的指標。
+*ptr*<br/>
+必須傳回指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -198,9 +202,11 @@ void* operator new[](std::size_t count,
 
 ### <a name="parameters"></a>參數
 
-*計數*的陣列物件配置儲存區的位元組數目。
+*count*<br/>
+要為陣列物件配置的儲存體位元組數。
 
-*ptr*要傳回的指標。
+*ptr*<br/>
+必須傳回指標。
 
 ### <a name="return-value"></a>傳回值
 

@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bc8f906c4c084ef4cabef9b26ef9e6b48e9e33cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956878"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106079"
 ---
 # <a name="chartraits-struct"></a>char_traits 結構
 
@@ -57,7 +57,8 @@ struct char_traits;
 
 ### <a name="parameters"></a>參數
 
-*CharType*項目資料類型。
+*CharType*<br/>
+項目資料類型。
 
 ## <a name="remarks"></a>備註
 
@@ -116,11 +117,13 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom*指派其值的字元。
 
-*_CharTo*用來指派字元值的項目。
+*_CharTo*<br/>
+要指派字元值的元素。
 
 * strTo * 其初始的項目要指派字元值的字串或字元陣列。
 
-*_Num*要指派值的項目數。
+*_Num*<br/>
+要指派值之元素的數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -199,7 +202,8 @@ static int compare(const char_type* str1,
 
 * str2 * 兩個字串的第二個要互相比較。
 
-*_Num*要比較之字串中的項目數。
+*_Num*<br/>
+要比較之字串中的元素數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -258,11 +262,14 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>參數
 
-*（_t)* 来接收已複製的字元序列之目標的字串或字元陣列開頭的項目。
+*（_t)*<br/>
+要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
-*_From*来複製的來源字串或字元陣列開頭的項目。
+*_From*<br/>
+要複製之來源字串或字元陣列開頭的元素。
 
-*_Num*来複製的項目數。
+*_Num*<br/>
+要複製之元素的數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -317,13 +324,17 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>參數
 
-*dest*来接收已複製的字元序列之目標的字串或字元陣列。
+*dest*<br/>
+要接收已複製字元序列的目標字串或字元陣列。
 
-*dest_size*的大小*dest*。 如果`char_type`已**char**，則此大小是以位元組為單位。 如果`char_type`已**wchar_t**，則此大小是以字組。
+*dest_size*<br/>
+大小*dest*。 如果`char_type`已**char**，則此大小是以位元組為單位。 如果`char_type`已**wchar_t**，則此大小是以字組。
 
-*_From*来複製的來源字串或字元陣列。
+*_From*<br/>
+要複製的來源字串或字元陣列。
 
-*計數*来複製的項目數。
+*count*<br/>
+要複製之元素的數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -425,9 +436,11 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>參數
 
-*_Ch1*兩個字元的第一個要測試是否相等。
+*_Ch1*<br/>
+要測試是否相等之兩個字元的第一個字元。
 
-*_Ch2*兩個字元的第二個要測試是否相等。
+*_Ch2*<br/>
+要測試是否相等之兩個字元的第二個字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -483,9 +496,11 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>參數
 
-*_Ch1*兩個字元的第一個要測試是否相等為`int_type`s。
+*_Ch1*<br/>
+兩個字元的第一個要測試是否相等為`int_type`s。
 
-*_Ch2*兩個字元的第二個要測試是否相等為`int_type`s。
+*_Ch2*<br/>
+要測試是否相等之兩個字元的第二個字元 (以 `int_type` 表示)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -551,9 +566,9 @@ The char_types and corresponding int_types are:
     ch3 = x corresponding to int1 = 120.
 
 The int_type representation of character ch1
- is not equal to the int_type representation of ch2.
+is not equal to the int_type representation of ch2.
 The int_type representation of character ch1
- is equal to the int_type representation of ch3.
+is equal to the int_type representation of ch3.
 ```
 
 ## <a name="find"></a>  char_traits::find
@@ -568,11 +583,14 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>參數
 
-*str*要搜尋的字串的第一個字元。
+*str*<br/>
+要在字串中搜尋的第一個字元。
 
-*_Num*的位置，計算從第一個来搜尋的範圍內。
+*_Num*<br/>
+要在範圍中搜尋的位置數值 (從第一個字元算起)。
 
-*_Ch*範圍中要搜尋的字元。
+*_Ch*<br/>
+要在範圍中搜尋的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -616,7 +634,7 @@ int main( )
 The string to be searched is: f2d-1234-abcd
 The character searched for in s1 is: d
 The string beginning with the first occurrence
- of the character 'd' is: d-1234-abcd
+of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
@@ -646,7 +664,8 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>參數
 
-*str*其長度是要測量之 C 字串。
+*str*<br/>
+要測量其長度的 C 字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -688,9 +707,11 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>參數
 
-*_Ch1*兩個字元的第一個来測試是否為小於。
+*_Ch1*<br/>
+要測試何者較小之兩個字元的第一個字元。
 
-*_Ch2*兩個字元的第二個要測試是否為小於。
+*_Ch2*<br/>
+要測試何者較小之兩個字元的第二個字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -749,11 +770,14 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>參數
 
-*（_t)* 来接收已複製的字元序列之目標的字串或字元陣列開頭的項目。
+*（_t)*<br/>
+要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
-*_From*来複製的來源字串或字元陣列開頭的項目。
+*_From*<br/>
+要複製之來源字串或字元陣列開頭的元素。
 
-*_Num*要從來源字串複製的項目數。
+*_Num*<br/>
+要從來源字串中複製的元素數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -823,13 +847,17 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>參數
 
-*dest*来接收已複製的字元序列之目標的字串或字元陣列開頭的項目。
+*dest*<br/>
+要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
-*dest_size*的大小*dest*。 如果`char_type`已**char**，則這是以位元組為單位。 如果`char_type`已**wchar_t**，則以字組。
+*dest_size*<br/>
+大小*dest*。 如果`char_type`已**char**，則這是以位元組為單位。 如果`char_type`已**wchar_t**，則以字組。
 
-*_From*来複製的來源字串或字元陣列開頭的項目。
+*_From*<br/>
+要複製之來源字串或字元陣列開頭的元素。
 
-*計數*要從來源字串複製的項目數。
+*count*<br/>
+要從來源字串中複製的元素數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -895,7 +923,8 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*以表示的字元`int_type`要測試它是否為 EOF 字元。
+*_Ch*<br/>
+要測試其是否為 EOF 字元的字元 (以 `int_type` 表示)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1002,7 +1031,8 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch* `int_type`字元來表示成`char_type`。
+*_Ch*<br/>
+要以 `char_type` 表示的 `int_type` 字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1107,7 +1137,8 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch* `char_type`字元來表示成`int_type`。
+*_Ch*<br/>
+要以 `int_type` 表示的 `char_type` 字元。
 
 ### <a name="return-value"></a>傳回值
 

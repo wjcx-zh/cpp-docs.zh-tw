@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeaed487db1063efd14dddbca28480a169b13522
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761107"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103928"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -49,10 +49,10 @@ template <typename T, typename E>
 
 ### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 Vector 物件中包含的元素型別。
 
-*E*  
+*E*<br/>
 指定二元述詞，來測試是否與類型的值相等*T*。預設值是 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>備註
@@ -128,7 +128,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 要插入 Vector 中的項目。 型別*項目*由此*T*類型名稱。
 
 ## <a name="clear"></a>  Vector:: clear 方法
@@ -173,7 +173,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
 ### <a name="return-value"></a>傳回值
@@ -194,10 +194,10 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>參數
 
-*startIndex*  
+*startIndex*<br/>
 要擷取之開始項目以零為起始的索引。
 
-*dest*  
+*dest*<br/>
 呼叫端配置的陣列所指定的項目開始的項目*startIndex*並在向量中最後一個項目結束。
 
 ### <a name="return-value"></a>傳回值
@@ -234,10 +234,10 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>參數
 
-*值*  
+*值*<br/>
 要尋找的項目。
 
-*index*  
+*index*<br/>
 項目的以零為起始的索引若參數*值*找到; 否則即為 0。
 
 *Index*參數為 0，如果項目是第一個向量的元素，或找不到項目。 如果傳回值為 `true`，表示找到符合項目，並且是第一個項目，否則表示找不到項目。
@@ -262,10 +262,10 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*項目*  
+*項目*<br/>
 要在指定的項目之後插入向量的項目*index*。 型別*項目*由此*T*類型名稱。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
@@ -280,7 +280,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
 ## <a name="removeatend"></a>  Vector:: removeatend 方法
@@ -305,7 +305,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>參數
 
-*arr*  
+*arr*<br/>
 型別定義的物件陣列*T*類型名稱。
 
 ## <a name="setat"></a>  Vector:: setat 方法
@@ -320,10 +320,10 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>參數
 
-*index*  
+*index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*項目*  
+*項目*<br/>
 要指派給指定項目的值。 型別*項目*由此*T*類型名稱。
 
 ## <a name="size"></a>  Vector:: size 方法
@@ -365,40 +365,40 @@ Vector(std::initializer_list<T> il);
 
 ### <a name="parameters"></a>參數
 
-*a*  
+*a*<br/>
 A [std:: array](../standard-library/array-class-stl.md) ，將會用來初始化 Vector。
 
-*arr*  
+*arr*<br/>
 A [platform:: array](../cppcx/platform-array-class.md) ，將會用來初始化 Vector。
 
-*InIt*  
+*InIt*<br/>
 用來初始化目前 Vector 的物件集合類型。
 
-*il*  
+*il*<br/>
 A [std:: initializer_list](../standard-library/initializer-list-class.md)之物件的型別*T* ，將會用來初始化 Vector。
 
-*N*  
+*N*<br/>
 用來初始化目前 Vector 之物件集合中的項目數。
 
-*size*  
+*size*<br/>
 Vector 中的項目數。
 
-*值*  
+*值*<br/>
 用來初始化目前 Vector 中各個項目的值。
 
-*v*  
+*v*<br/>
 [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)要[std:: vector](../standard-library/vector-class.md)用來初始化目前 Vector。
 
-*ptr*  
+*ptr*<br/>
 用來初始化目前 Vector 之 `std::vector` 的指標。
 
-*first*  
+*first*<br/>
 用來初始化目前 Vector 之物件序列中的第一個項目。 型別*第一*藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*最後一個*  
+*最後一個*<br/>
 用來初始化目前 Vector 之物件序列中的最後一個項目。 型別*上次*藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](platform-namespace-c-cx.md)  
-[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Platform 命名空間](platform-namespace-c-cx.md)<br/>
+[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

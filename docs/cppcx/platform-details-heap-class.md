@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9bd4238f9e89a6d9c11f402aa0af2fa6f2418bd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 15d068aea4d9150725649e36ceb059f85b668d3e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755774"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101774"
 ---
 # <a name="platformdetailsheap-class"></a>Platform::Details::Heap 類別
-這個類別僅供內部使用，不適用於開發用途。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-  
-ref class Heap sealed;  
-```  
-  
-### <a name="remarks"></a>備註  
- 這個類別只為完整性而提供，因為它可用瀏覽器進行檢查。  
-  
-## <a name="inheritance-hierarchy"></a>繼承階層  
- `Platform`  
-  
-### <a name="requirements"></a>需求  
- **中繼資料：** platform.winmd  
-  
- **命名空間：** Platform::Details  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform 命名空間](platform-namespace-c-cx.md)
+
+這個類別僅供內部使用，不適用於開發用途。
+
+## <a name="syntax"></a>語法
+
+```cpp
+ref class Heap sealed;
+```
+
+### <a name="remarks"></a>備註
+
+這個類別只為完整性而提供，因為它可用瀏覽器進行檢查。
+
+## <a name="inheritance-hierarchy"></a>繼承階層
+
+`Platform`
+
+### <a name="requirements"></a>需求
+
+**中繼資料：** platform.winmd
+
+**命名空間：** Platform::Details
+
+## <a name="see-also"></a>另請參閱
+
+[Platform 命名空間](platform-namespace-c-cx.md)

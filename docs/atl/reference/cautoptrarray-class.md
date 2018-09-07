@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cd1a9a50d57ececb2d12dca8faa6dc914972f5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d83f98de4f1d07fbebdd07186729453d2ef1d3b2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763028"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108722"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 類別
 
@@ -43,7 +43,7 @@ class CAutoPtrArray : public CAtlArray<
 
 #### <a name="parameters"></a>參數
 
-`E`  
+*E*<br/>
 指標類型。
 
 ## <a name="members"></a>成員

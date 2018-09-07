@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: 995aa846af4642070150f2dd41d4bf6463f46ee8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d14bba0e38e49145ccd7d0078f4bbfd731e08827
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964455"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110421"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函式
 
@@ -64,9 +64,11 @@ void advance(
 
 ### <a name="parameters"></a>參數
 
-*InIt*要遞增且必須符合輸入迭代器需求的迭代器。
+*InIt*<br/>
+要遞增且必須符合輸入迭代器需求的迭代器。
 
-*關閉*整數型別，會轉換為迭代器的差異類型，並指定位置的迭代器會為進階的增量數目。
+*Off*<br/>
+整數類資料類型，可以轉換為迭代器的差異類型，並指定迭代器位置向前移的增量數目。
 
 ### <a name="remarks"></a>備註
 
@@ -134,7 +136,8 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>參數
 
-*_Cont*執行後端插入容器。
+*_Cont*<br/>
+要在其中執行背後插入的容器。
 
 ### <a name="return-value"></a>傳回值
 
@@ -172,9 +175,9 @@ int main( )
 
    // Insertions can be done with template function
    back_insert_iterator<vector<int> > backiter ( vec );
- *backiter = 30;
+*backiter = 30;
    backiter++;
- *backiter = 40;
+*backiter = 40;
 
    // Alternatively, insertions can be done with the
    // back_insert_iterator member function
@@ -212,9 +215,11 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>參數
 
-*cont*容器。
+*cont*<br/>
+容器。
 
-*陣列*類型之物件的陣列`Ty`。
+*array*<br/>
+`Ty` 類型的物件陣列。
 
 ### <a name="return-value"></a>傳回值
 
@@ -305,7 +310,8 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>參數
 
-*cont*容器或 initializer_list。
+*cont*<br/>
+容器或 initializer_list。
 
 ### <a name="return-value"></a>傳回值
 
@@ -337,7 +343,8 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>參數
 
-*cont*容器或 initializer_list。
+*cont*<br/>
+容器或 initializer_list。
 
 ### <a name="return-value"></a>傳回值
 
@@ -368,9 +375,11 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>參數
 
-*第一個*第一個迭代器，並與第二個距離是所決定。
+*first*<br/>
+要判斷與第二個迭代器之距離的第一個迭代器。
 
-*最後一個*第二個迭代器，並從第一個距離是所決定。
+*最後一個*<br/>
+要判斷與第一個迭代器之距離的第二個迭代器。
 
 ### <a name="return-value"></a>傳回值
 
@@ -447,9 +456,11 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>參數
 
-*cont*容器。
+*cont*<br/>
+容器。
 
-*陣列*類型之物件的陣列`Ty`。
+*array*<br/>
+`Ty` 類型的物件陣列。
 
 ### <a name="return-value"></a>傳回值
 
@@ -472,7 +483,8 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>參數
 
-*_Cont*容器物件，其前方會有項目插入。
+*_Cont*<br/>
+其前面要插入元素的容器物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -512,7 +524,7 @@ int main( )
 
    // Using the template function to insert an element
    front_insert_iterator< list < int> > Iter(L);
- *Iter = 100;
+*Iter = 100;
 
    // Alternatively, you may use the front_insert member function
    front_inserter ( L ) = 200;
@@ -526,9 +538,9 @@ int main( )
 
 ```Output
 The list L is:
- ( -1 0 1 2 3 4 5 6 7 8 ).
+( -1 0 1 2 3 4 5 6 7 8 ).
 After the front insertions, the list L is:
- ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
+( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
 ## <a name="inserter"></a>  inserter
@@ -545,9 +557,11 @@ inserter(
 
 ### <a name="parameters"></a>參數
 
-*_Cont*的新項目要加入的容器。
+*_Cont*<br/>
+要新增新元素的容器。
 
-*_Where*迭代器，找出插入點。
+*_Where*<br/>
+找出插入點的迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -581,7 +595,7 @@ int main( )
 
    // Using the template version to insert an element
    insert_iterator<list <int> > Iter( L, L.begin ( ) );
- *Iter = 1;
+*Iter = 1;
 
    // Alternatively, using the member function to insert an element
    inserter ( L, L.end ( ) ) = 500;
@@ -595,9 +609,9 @@ int main( )
 
 ```Output
 The list L is:
- ( 20 30 40 ).
+( 20 30 40 ).
 After the insertions, the list L is:
- ( 1 20 30 40 500 ).
+( 1 20 30 40 500 ).
 ```
 
 ## <a name="make_checked_array_iterator"></a>  make_checked_array_iterator
@@ -611,18 +625,21 @@ After the insertions, the list L is:
 template <class Iter>
 checked_array_iterator<Iter>
     make_checked_array_iterator(
- Iter Ptr,
+Iter Ptr,
     size_t Size,
     size_t Index = 0);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ptr*目的地陣列的指標。
+*ptr*<br/>
+目的陣列的指標。
 
-*大小*目的地陣列的大小。
+*Size*<br/>
+目的陣列的大小。
 
-*索引*陣列中的選擇性索引。
+*Tuple*<br/>
+陣列中選擇性的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -704,7 +721,8 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>參數
 
-*_It*儲存在新的迭代器移動迭代器。
+*_It*<br/>
+儲存在新移動迭代器中的迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -725,7 +743,8 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>參數
 
-*Ptr*目的地陣列的指標。
+*ptr*<br/>
+目的陣列的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -802,9 +821,11 @@ InputIterator next(
 
 ### <a name="parameters"></a>參數
 
-*第一個*目前的位置。
+*first*<br/>
+目前位置。
 
-*_Off*逐一查看的次數。
+*_Off*<br/>
+要逐一查看的次數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -827,9 +848,11 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>參數
 
-*第一個*目前的位置。
+*first*<br/>
+目前位置。
 
-*_Off*逐一查看的次數。
+*_Off*<br/>
+要逐一查看的次數。
 
 ### <a name="remarks"></a>備註
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a67a22b8236646b549032e236006cd4855c3a43c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961067"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108718"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函式
 
@@ -50,13 +50,17 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*索引*項目位移。
+*Tuple*<br/>
+項目位移。
 
-*T*元素的類型。
+*T*<br/>
+元素的類型。
 
-*N*陣列中的項目數。
+*N*<br/>
+陣列中的項目數。
 
-*arr*要從選取的陣列。
+*arr*<br/>
+要從中選取的陣列。
 
 ### <a name="example"></a>範例
 
@@ -101,13 +105,17 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>參數
 
-*Ty*元素的類型。
+*Ty*<br/>
+元素的類型。
 
-*N*陣列的大小。
+*N*<br/>
+陣列的大小。
 
-*左*来交換的第一個陣列。
+*left*<br/>
+要交換的第一個陣列。
 
-*右*来交換的第二個陣列。
+*right*<br/>
+要交換的第二個陣列。
 
 ### <a name="remarks"></a>備註
 

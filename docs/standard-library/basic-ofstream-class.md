@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 31637c1c194754e193970a4ff5efef500228115b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964806"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105246"
 ---
 # <a name="basicofstream-class"></a>basic_ofstream 類別
 
@@ -46,9 +46,11 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Elem*檔案緩衝區的基本項目。
+*Elem*<br/>
+檔案緩衝區的基本項目。
 
-*Tr*的基本項目，將檔案緩衝區的特性 (通常`char_traits` <  `Elem`>)。
+*Tr*<br/>
+檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>備註
 
@@ -129,13 +131,17 @@ basic_ofstream(
 
 ### <a name="parameters"></a>參數
 
-*_Filename*来開啟之檔案的名稱。
+*_Filename*<br/>
+要開啟之檔案的名稱。
 
-*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*預設檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。
 
-*右*右值參考`basic_ofstream`物件來初始化這個`basic_ofstream`物件。
+*right*<br/>
+正在用來初始化此 `basic_ofstream` 物件之 `basic_ofstream` 物件的右值參考。
 
 ### <a name="remarks"></a>備註
 
@@ -247,11 +253,14 @@ void open(
 
 ### <a name="parameters"></a>參數
 
-*_Filename*来開啟之檔案的名稱。
+*_Filename*<br/>
+要開啟之檔案的名稱。
 
-*模式 （_m)* 中列舉的其中一個[ios_base:: openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*預設檔案開啟保護，相當於`shflag`中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*<br/>
+預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。
 
 ### <a name="remarks"></a>備註
 
@@ -271,7 +280,8 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*的右值參考`basic_ofstream`物件。
+*right*<br/>
+`basic_ofstream` 物件的右值參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -307,7 +317,8 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`lvalue`到另一個參考`basic_ofstream`物件。
+*right*<br/>
+對其他 `basic_ofstream` 物件的 `lvalue` 參考。
 
 ### <a name="remarks"></a>備註
 

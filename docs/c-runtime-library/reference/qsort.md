@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404704"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110190"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,19 +59,23 @@ void qsort(
 
 ### <a name="parameters"></a>參數
 
-*基底*目標陣列的開頭。
+<br/>
+目標陣列的開頭。
 
-*數字*陣列項目中的大小。
+*數字*<br/>
+陣列大小 (以項目計)。
 
-*寬度*項目大小 （位元組）。
+*width*<br/>
+項目大小 (以位元組計)。
 
-*比較*指向使用者所提供的常式會比較兩個陣列項目，並傳回值，這個值會指定其關聯性。
+*compare*<br/>
+使用者提供之常式的指標，該常式比較兩個陣列元素，然後傳回一個指定其關聯性的值。
 
 ## <a name="remarks"></a>備註
 
-**Qsort**函式實作快速排序演算法來排序的陣列*數目*項目，每個*寬度*位元組。 引數*基底*是要排序陣列的基底指標。 **qsort**使用已排序的項目，這個陣列會覆寫。
+**Qsort**函式會實作快速排序演算法，來排序的陣列*數目*項目，每個*寬度*位元組。 引數*基底*是要排序之陣列的基底的指標。 **qsort**覆寫這個陣列所使用的已排序的項目。
 
-**qsort**呼叫*比較*例行的一或多個逾排序期間，並在每次呼叫時，將指標傳遞給兩個陣列項目。
+**qsort**呼叫*比較*常式一或多次，並將指標傳遞至兩個陣列元素中，每次呼叫。
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -87,11 +91,11 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 陣列是以比較函式所定義的遞增順序排序。 若要以遞減順序排序陣列，請將比較函式中的「大於」和「小於」意義反轉。
 
-這個函式會驗證它的參數。 如果*比較*或*數目*是**NULL**，或如果*基底*是**NULL**和 **數目*非零，或如果*寬度*小於零，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回與**errno**設**EINVAL**。
+這個函式會驗證它的參數。 如果*比較*或*數目*會**NULL**，或如果*基底*是**NULL**和 **號碼*為非零值，或者如果*寬度*小於零，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回與**errno**設為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**qsort**|\<stdlib.h> 和 \<search.h>|
 

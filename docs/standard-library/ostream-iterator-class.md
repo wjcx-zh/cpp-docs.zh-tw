@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: c166b39a6252c3b49427f06d88c179bd9ca25ce8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207915"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108328"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 類別
 
@@ -42,11 +42,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>參數
 
-*型別*要插入至輸出資料流的物件類型。
+*類型*<br/>
+要插入至輸出資料流的物件類型。
 
-*CharType*表示的字元類型的型別`ostream_iterator`。 這個引數是選擇性的預設值是**char**。
+*CharType*<br/>
+類型，表示 `ostream_iterator` 的字元類型。 這個引數是選擇性的預設值是**char**。
 
-*Traits*表示的字元類型的型別`ostream_iterator`。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*特性*<br/>
+類型，表示 `ostream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
 
 ostream_iterator 類別必須符合輸出迭代器的需求。 使用 `ostream_iterator`，演算法可以直接寫入輸出資料流。
 
@@ -114,9 +117,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to the output stream\n"
         << "by intOut are:" << endl;
- *intOut = 10;
- *intOut = 20;
- *intOut = 30;
+*intOut = 10;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 The integers written to the output stream
@@ -163,10 +166,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -213,10 +216,10 @@ int main( )
    // standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -236,7 +239,8 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*型別的物件的值`Type`要插入至輸出資料流。
+*val*<br/>
+要插入至輸出資料流的 `Type` 類型物件值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -266,10 +270,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *intOut = 10;
+*intOut = 10;
    intOut++;      // No effect on iterator position
- *intOut = 20;
- *intOut = 30;
+*intOut = 20;
+*intOut = 30;
 }
 \* Output:
 Elements written to output stream:
@@ -294,9 +298,11 @@ ostream_iterator(
 
 ### <a name="parameters"></a>參數
 
-*_Ostr*類型的輸出資料流[ostream_iterator:: ostream_type](#ostream_type)来反覆運算。
+*_Ostr*<br/>
+要逐一查看之類型 [ostream_iterator::ostream_type](#ostream_type) 的輸出資料流。
 
-*（_d)* 插入至輸出資料流值之間的分隔符號。
+*（_d)*<br/>
+要插入至輸出資料流值之間的分隔符號。
 
 ### <a name="remarks"></a>備註
 
@@ -319,9 +325,9 @@ int main( )
 
    // ostream_iterator for stream cout
    ostream_iterator<int> intOut ( cout , "\n" );
- *intOut = 10;
+*intOut = 10;
    intOut++;
- *intOut = 20;
+*intOut = 20;
    intOut++;
 
    int i;
@@ -404,9 +410,9 @@ int main( )
    // elements to the output stream:
    cout << "The integers written to output stream\n"
         << "by intOut are:" << endl;
- *intOut = 1;
- *intOut = 10;
- *intOut = 100;
+*intOut = 1;
+*intOut = 10;
+*intOut = 100;
 }
 \* Output:
 The integers written to output stream

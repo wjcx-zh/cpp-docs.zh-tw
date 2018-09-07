@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: ba77722abb28f246d305b44fb78379b2297ccc14
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 809dae9fb6bd255d36f9d7417bf6ab606b1309be
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965713"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102729"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 運算子
 
@@ -46,9 +46,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`list`。
+*left*<br/>
+`list` 類型的物件。
 
-*右*型別的物件`list`。
+*right*<br/>
+`list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -95,9 +97,11 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`list`。
+*left*<br/>
+`list` 類型的物件。
 
-*右*型別的物件`list`。
+*right*<br/>
+`list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -148,9 +152,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`list`。
+*left*<br/>
+`list` 類型的物件。
 
-*右*型別的物件`list`。
+*right*<br/>
+`list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -201,9 +207,11 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`list`。
+*left*<br/>
+`list` 類型的物件。
 
-*右*型別的物件`list`。
+*right*<br/>
+`list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -250,9 +258,11 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`list`。
+*left*<br/>
+`list` 類型的物件。
 
-*右*型別的物件`list`。
+*right*<br/>
+`list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -303,9 +313,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`list`。
+*left*<br/>
+`list` 類型的物件。
 
-*右*型別的物件`list`。
+*right*<br/>
+`list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 

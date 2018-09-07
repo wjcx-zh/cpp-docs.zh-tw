@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 56a8d05c3a68cf8d3e12b8a6452d43033e414cbf
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957404"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102716"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 運算子
 
@@ -49,13 +49,17 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
-*時間*A`time_point`物件。
+*時間*<br/>
+`time_point` 物件。
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -84,9 +88,11 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-`Left` 左邊`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-`Right` 右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -114,9 +120,11 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>參數
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
-*Mult*整數值。
+*Mult*<br/>
+整數值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -147,13 +155,17 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>參數
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
-*Div*整數值。
+*Div*<br/>
+整數值。
 
-*左*左側`duration`物件。
+*左邊*<br/>
+左 `duration` 物件。
 
-*右*右`duration`物件。
+*右邊*<br/>
+右 `duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -191,13 +203,17 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
-*時間*A`time_point`物件。
+*時間*<br/>
+`time_point` 物件。
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -224,9 +240,11 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -252,9 +270,11 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -278,9 +298,11 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -306,9 +328,11 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -332,9 +356,11 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*左*左側`duration`或`time_point`物件。
+*左邊*<br/>
+左邊的 `duration` 或 `time_point` 物件。
 
-*右*右`duration`或`time_point`物件。
+*右邊*<br/>
+右邊的 `duration` 或 `time_point` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -360,13 +386,17 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>參數
 
-*工期*A`duration`物件。
+*持續時間*<br/>
+`duration` 物件。
 
-*Div*整數值。
+*Div*<br/>
+整數值。
 
-*左*左側`duration`物件。
+*左邊*<br/>
+左 `duration` 物件。
 
-*右*右`duration`物件。
+*右邊*<br/>
+右 `duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 

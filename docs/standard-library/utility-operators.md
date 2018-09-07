@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6c97e44e5110108351ac9c47f47434b828193fc7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962022"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099625"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 運算子
 
@@ -49,10 +49,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>參數
 
 *left*  
- `pair` 類型的物件。
+`pair` 類型的物件。
 
 *right*  
- `pair` 類型的物件。
+`pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -120,9 +120,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`pair`。
+*left*<br/>
+`pair` 類型的物件。
 
-*右*型別的物件`pair`。
+*right*<br/>
+`pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -182,10 +184,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>參數
 
 *left*  
- 運算子左側 `pair` 類型的物件。
+運算子左側 `pair` 類型的物件。
 
 *right*  
- 運算子右側 `pair` 類型的物件。
+運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -259,10 +261,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>參數
 
 *left*  
- 運算子左側 `pair` 類型的物件。
+運算子左側 `pair` 類型的物件。
 
 *right*  
- 運算子右側 `pair` 類型的物件。
+運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -344,10 +346,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>參數
 
 *left*  
- 運算子左側 `pair` 類型的物件。
+運算子左側 `pair` 類型的物件。
 
 *right*  
- 運算子右側 `pair` 類型的物件。
+運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -431,10 +433,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>參數
 
 *left*  
- 運算子左側 `pair` 類型的物件。
+運算子左側 `pair` 類型的物件。
 
 *right*  
- 運算子右側 `pair` 類型的物件。
+運算子右側 `pair` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 

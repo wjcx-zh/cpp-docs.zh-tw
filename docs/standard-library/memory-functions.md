@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957421"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101660"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>參數
 
-*Val*物件或函式為其取得真正的位址。
+*val*<br/>
+要取得真正位址的物件或函式。
 
 ### <a name="return-value"></a>傳回值
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>參數
 
-*對齊*嘗試繫結的對齊方式。
+*對齊*<br/>
+嘗試的對齊界限。
 
-*大小*對齊儲存體的位元組大小。
+*Size*<br/>
+對齊儲存體的大小 (位元組)。
 
-*Ptr*可用連續儲存集區使用的起始位址。 這個參數也是一個 output 參數，並設定為包含新的起始位址，如果對齊成功。 如果 `align()` 不成功，則不會修改這個參數。
+*ptr*<br/>
+要使用的可用連續儲存集區的開始位址。 這個參數也是一個 output 參數，並設定為包含新的起始位址，如果對齊成功。 如果 `align()` 不成功，則不會修改這個參數。
 
-*空間*可用的總空間`align()`以用來建立對齊儲存體。 這個參數也是輸出參數，在對齊儲存體和任何關聯的額外負荷減去之後，會包含儲存緩衝區中剩下的調整空間。
+*空格鍵*<br/>
+`align()` 可用來建立對齊儲存體的總空間。 這個參數也是輸出參數，在對齊儲存體和任何關聯的額外負荷減去之後，會包含儲存緩衝區中剩下的調整空間。
 
 如果 `align()` 不成功，則不會修改這個參數。
 
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>參數
 
-*配置*用來建立物件的配置器。
+*配置*<br/>
+用來建立物件的配置器。
 
-*Args*成為物件的零或多個引數。
+*Args*<br/>
+成為物件的零個或多個引數。
 
 ### <a name="remarks"></a>備註
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-*Ty*控制所傳回的類型共用指標。
+*Ty*<br/>
+傳回之共用指標所控制的類型。
 
-*其他*引數共用指標所控制的類型。
+*其他*<br/>
+引數共用指標所控制的類型。
 
-*其他*引數共用的指標。
+*其他*<br/>
+引數共用指標。
 
 ### <a name="remarks"></a>備註
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>參數
 
-*ptr*連線、 配置、 有效儲存區域的指標。
+*ptr*<br/>
+指向可存取、已配置之有效儲存區域的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>參數
 
-*Ptr*刪除物件的指標。
+*ptr*<br/>
+要刪除的物件指標。
 
 其他陣列中要刪除的項目類型。
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-*Ty*控制所傳回的類型共用指標。
+*Ty*<br/>
+傳回之共用指標所控制的類型。
 
-*其他*引數共用指標所控制的類型。
+*其他*<br/>
+引數共用指標所控制的類型。
 
-*預存程序*引數共用的指標。
+*預存程序*<br/>
+引數共用指標。
 
 ### <a name="remarks"></a>備註
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>參數
 
-*D*刪除者的類型。
+*D*<br/>
+刪除者的類型。
 
-*Ty*共用指標所控制的類型。
+*Ty*<br/>
+共用指標所控制的類型。
 
-*預存程序*共用的指標。
+*預存程序*<br/>
+共用指標。
 
 ### <a name="remarks"></a>備註
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>參數
 
-*計數*項目要求的記憶體最大數目是配置。
+*count*<br/>
+所要求的元素數目上限，將針對這些元素配置記憶體。
 
 ### <a name="return-value"></a>傳回值
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>參數
 
-*T*的物件型別，`unique_ptr`會指向。
+*T*<br/>
+`unique_ptr` 指向的物件類型。
 
-*型別*建構函式引數所指定的型別*Args*。
+*型別*<br/>
+建構函式引數所指定的型別*Args*。
 
-*引數*傳遞至類型的物件的建構函式的引數*T*。
+*Args*<br/>
+要傳遞至類型的物件的建構函式的引數*T*。
 
-*Elem*型別的項目陣列*T*。
+*Elem*<br/>
+型別的項目陣列*T*。
 
-*大小*配置空間的新陣列中的項目數。
+*Size*<br/>
+在新陣列中要為其配置空間的元素數目。
 
 ### <a name="remarks"></a>備註
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>參數
 
-*_left*共用或弱式指標。
+*_left*<br/>
+共用指標或弱式指標。
 
-*右*共用或弱式指標。
+*right*<br/>
+共用指標或弱式指標。
 
 ### <a name="remarks"></a>備註
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>參數
 
-*_Pbuf*解除配置記憶體的指標。
+*_Pbuf*<br/>
+指向要配置之記憶體的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>  static_pointer_cast
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-*Ty*控制所傳回的類型共用指標。
+*Ty*<br/>
+傳回之共用指標所控制的類型。
 
-*其他*引數共用指標所控制的類型。
+*其他*<br/>
+引數共用指標所控制的類型。
 
-*其他*引數共用的指標。
+*其他*<br/>
+引數共用指標。
 
 ### <a name="remarks"></a>備註
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>參數
 
-*Ty*左側共用/弱式指標所控制的類型。
+*Ty*<br/>
+由左側共用/弱式指標控制的類型。
 
-*其他*右側共用/弱式指標所控制的類型。
+*其他*<br/>
+由右側共用/弱式指標所控制的類型。
 
-*左*左側共用/弱式指標。
+*left*<br/>
+左側共用/弱式指標。
 
-*右*右側共用/弱式指標。
+*right*<br/>
+右側共用/弱式指標。
 
 ### <a name="remarks"></a>備註
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器定址來源範圍中的第一個項目。
+*first*<br/>
+輸入迭代器，為來源範圍中的第一個項目定址。
 
-*最後一個*輸入迭代器定址來源範圍中的最後一個項目。
+*最後一個*<br/>
+輸入迭代器，為來源範圍中的最後一個項目定址。
 
-*dest*正向迭代器，定址目的範圍中的第一個項目。
+*dest*<br/>
+正向迭代器，為目的範圍中的第一個項目定址。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>參數
 
-*第一個*輸入迭代器指向要複製的物件。
+*first*<br/>
+輸入迭代器，參考要複製的物件。
 
-*計數*的帶正負號或不帶正負號的整數型別指定的次數，複製物件。
+*count*<br/>
+帶正負號或不帶正負號的整數類型，指定複製物件的次數。
 
-*dest*正向迭代器，表示新的複本在哪裡。
+*dest*<br/>
+正向迭代器，參考放置新複本的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址對象是要起始之目的範圍中的第一個元素。
+*first*<br/>
+正向迭代器，定址對象是要起始之目的範圍中的第一個元素。
 
-*最後一個*正向迭代器，定址對象是要起始之目的範圍中的最後一個元素。
+*最後一個*<br/>
+正向迭代器，定址對象是要起始之目的範圍中的最後一個元素。
 
-*val*来用來初始化目的範圍的值。
+*val*<br/>
+用來初始化目的範圍的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*第一個*正向迭代器，定址目的範圍中的第一個項目起始。
+*first*<br/>
+正向迭代器，為目的範圍中要起始的第一個項目定址。
 
-*計數*来初始化的項目數。
+*count*<br/>
+要初始化的項目數目。
 
-*val*来用來初始化目的範圍的值。
+*val*<br/>
+用來初始化目的範圍的值。
 
 ### <a name="remarks"></a>備註
 

@@ -15,60 +15,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ff953d33fb882bf65af101c422093ddbc1aedf2e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759095"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105229"
 ---
 # <a name="end-function"></a>end 函式
-傳回迭代器，指向指定的介面參數所存取之集合的結尾之外。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-template <typename T>  
-    ::Platform::Collections::VectorIterator<T>   
-    end(  
-        IVector<T>^ v       );  
-  
-template <typename T>  
-    ::Platform::Collections::VectorViewIterator<T>   
-    end(  
-        IVectorView<T>^ v  
-       );  
-template <typename T>   
-    ::Platform::Collections::InputIterator<T>   
-    end(  
-        IIterable<T>^ i  
-       );  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `T`  
- 樣板類型參數。  
-  
- `v`  
- 向量的集合\<T > 或 VectorView\<T > 物件存取的 IVector\<T >，或 IVectorView\<T > 介面。  
-  
- `i`  
- Iiterable<t> Windows 執行階段的集合物件所存取 IIterable\<T > 介面。  
-  
-### <a name="return-value"></a>傳回值  
- 指向集合結尾之外的迭代器。  
-  
-### <a name="remarks"></a>備註  
- 前兩個樣板函式會傳回迭代器，第三個樣板函式會傳回輸入迭代器。  
-  
- [傳回的](../cppcx/platform-collections-vectorviewiterator-class.md) Platform::Collections::VectorViewIterator `end` 物件是會儲存 `VectorProxy<T>`類型項目的 Proxy 迭代器。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
-  
-### <a name="requirements"></a>需求  
- **標頭：** collection.h  
-  
- **命名空間：** Windows::Foundation::Collections  
-  
-## <a name="see-also"></a>另請參閱  
- [Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+
+傳回迭代器，指向指定的介面參數所存取之集合的結尾之外。
+
+## <a name="syntax"></a>語法
+
+```
+
+template <typename T>
+    ::Platform::Collections::VectorIterator<T>
+    end(
+        IVector<T>^ v       );
+
+template <typename T>
+    ::Platform::Collections::VectorViewIterator<T>
+    end(
+        IVectorView<T>^ v
+       );
+template <typename T>
+    ::Platform::Collections::InputIterator<T>
+    end(
+        IIterable<T>^ i
+       );
+```
+
+#### <a name="parameters"></a>參數
+
+*T*<br/>
+樣板類型參數。
+
+*v*<br/>
+向量的集合\<T > 或 VectorView\<T > 物件存取的 IVector\<T >，或 IVectorView\<T > 介面。
+
+*i*<br/>
+Iiterable<t> Windows 執行階段的集合物件所存取 IIterable\<T > 介面。
+
+### <a name="return-value"></a>傳回值
+
+指向集合結尾之外的迭代器。
+
+### <a name="remarks"></a>備註
+
+前兩個樣板函式會傳回迭代器，第三個樣板函式會傳回輸入迭代器。
+
+[傳回的](../cppcx/platform-collections-vectorviewiterator-class.md) Platform::Collections::VectorViewIterator `end` 物件是會儲存 `VectorProxy<T>`類型項目的 Proxy 迭代器。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+
+### <a name="requirements"></a>需求
+
+**標頭：** collection.h
+
+**命名空間：** Windows::Foundation::Collections
+
+## <a name="see-also"></a>另請參閱
+
+[Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

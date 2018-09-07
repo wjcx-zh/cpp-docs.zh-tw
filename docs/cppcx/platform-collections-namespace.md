@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d872df7294e33ef47247609af4606da842bb6184
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0a8c6191f8cbcf79973a5af55d222dd6f17fc47e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686543"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106066"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空間
 
@@ -68,4 +68,4 @@ using namespace Platform::Collections;
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)  
+[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

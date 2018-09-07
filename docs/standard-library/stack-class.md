@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963221"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110408"
 ---
 # <a name="stack-class"></a>stack 類別
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>參數
 
-*型別*来儲存在堆疊中的項目資料類型。
+*類型*<br/>
+要存放在堆疊中的項目資料類型。
 
-*容器*用來實作堆疊的基礎容器類型。 預設值是 `deque`*\<Type>* 類別。
+*容器*<br/>
+用來實作堆疊的基礎容器類型。 預設值是 `deque`*\<Type>* 類別。
 
 ## <a name="remarks"></a>備註
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*將元素加入至堆疊的頂端。
+*val*<br/>
+加入至堆疊頂端的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-*右*要從中複製所建構的堆疊的容器。
+*right*<br/>
+要從中複製所建構堆疊的容器。
 
 ### <a name="example"></a>範例
 

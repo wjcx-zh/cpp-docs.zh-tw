@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966455"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110369"
 ---
 # <a name="collate-class"></a>collate 類別
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內用來編碼字元的類型。
+*CharType*<br/>
+用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+整數值，用來指定物件的記憶體管理類型。
 
-*_Locname*地區設定的名稱。
+*_Locname*<br/>
+地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*要比較的第一個序列中的第一個元素指標。
+*first1*<br/>
+要比較之第一個序列中第一個元素的指標。
 
-*last1*要比較的第一個序列中的最後一個元素指標。
+*last1*<br/>
+要比較之第一個序列中最後一個元素的指標。
 
-*first2*第二個序列中的第一個元素的指標進行比較。
+*first2*<br/>
+要比較之第二個序列中第一個元素的指標。
 
-*last2*第二個序列中的最後一個元素的指標進行比較。
+*last2*<br/>
+要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*要比較的第一個序列中的第一個元素指標。
+*first1*<br/>
+要比較之第一個序列中第一個元素的指標。
 
-*last1*要比較的第一個序列中的最後一個元素指標。
+*last1*<br/>
+要比較之第一個序列中最後一個元素的指標。
 
-*first2*第二個序列中的第一個元素的指標進行比較。
+*first2*<br/>
+要比較之第二個序列中第一個元素的指標。
 
-*last2*第二個序列中的最後一個元素的指標進行比較。
+*last2*<br/>
+要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*是決定其序列值的第一個字元的指標。
+*first*<br/>
+要決定其序列值之第一個字元的指標。
 
-*最後一個*是決定其序列值的最後一個字元的指標。
+*最後一個*<br/>
+要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>參數
 
-*第一個*轉換之序列中的第一個字元的指標。
+*first*<br/>
+要轉換之序列中第一個字元的指標。
 
-*最後一個*轉換之序列中的最後一個字元的指標。
+*最後一個*<br/>
+要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*是決定其序列值的第一個字元的指標。
+*first*<br/>
+要決定其序列值之第一個字元的指標。
 
-*最後一個*是決定其序列值的最後一個字元的指標。
+*最後一個*<br/>
+要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*第一個*轉換之序列中的第一個字元的指標。
+*first*<br/>
+要轉換之序列中第一個字元的指標。
 
-*最後一個*轉換之序列中的最後一個字元的指標。
+*最後一個*<br/>
+要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
 

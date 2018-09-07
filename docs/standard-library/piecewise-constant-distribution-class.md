@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2c2b4c93604a95b4c2d73c69a834ab6724bd9193
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963533"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103941"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 類別
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮點結果類型，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -258,23 +259,32 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstI*分佈範圍中的第一個元素的輸入迭代器。
+*firstI*<br/>
+分佈範圍中第一個元素的輸入迭代器。
 
-*lastI*分佈範圍中最後一個項目的輸入迭代器。
+*lastI*<br/>
+分佈範圍中最後一個元素的輸入迭代器。
 
-*firstW*加權範圍中的第一個元素的輸入迭代器。
+*firstW*<br/>
+加權範圍中第一個元素的輸入迭代器。
 
-*間隔* [initializer_list](../cpp/initializers.md)具有分佈間隔。
+*intervals*<br/>
+具有分佈間隔的 [initializer_list](../cpp/initializers.md)。
 
-*計數*分佈範圍中的項目數。
+*count*<br/>
+分佈範圍中的元素數目。
 
-*xmin*分佈範圍中的最小值。
+*xmin*<br/>
+分佈範圍中的最低值。
 
-*xmax*分佈範圍中的最大值。 必須大於 *xmin*。
+*xmax*<br/>
+分佈範圍中的最高值。 必須大於 *xmin*。
 
-*weightfunc*代表分佈的機率函式的物件。 參數和傳回值必須可轉換成**double**。
+*weightfunc*<br/>
+表示分佈的可能性函式的物件。 參數和傳回值必須可轉換成**double**。
 
-*parm*用來建構分佈的參數結構。
+*parm*<br/>
+用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 

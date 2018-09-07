@@ -7,12 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 36af7eb87f777686a0a83fab98032ce36e75c906
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966364"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102521"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 函式
 
@@ -33,9 +33,11 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*右*提供要交換之元素的地圖或地圖其項目要與 map 交換*左*。
+*right*<br/>
+提供要交換之元素的地圖或地圖其項目要與 map 交換*左*。
 
-*左*對應，其項目要與 map 交換*右*。
+*left*<br/>
+其項目要與 map 交換的對應*右*。
 
 ### <a name="remarks"></a>備註
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*右*提供要交換之元素的 multimap 或其項目要與 multimap 交換的 multimap*左*。
+*right*<br/>
+提供要交換之元素的 multimap 或其項目要與 multimap 交換的 multimap*左*。
 
-*左*其項目要與 multimap 交換的 multimap*右*。
+*left*<br/>
+其項目要與 multimap 交換的 multimap*右*。
 
 ### <a name="remarks"></a>備註
 

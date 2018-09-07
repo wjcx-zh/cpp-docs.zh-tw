@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965986"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100920"
 ---
 # <a name="numput-class"></a>num_put 類別
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內使用地區設定中的字元編碼的類型。
+*CharType*<br/>
+程式內用於編碼地區設定字元的類型。
 
-*OutputIterator*數值 put 函式的迭代器的型別將其輸出寫入。
+*OutputIterator*<br/>
+數值 put 函式將其輸出寫入其中的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-*下一步*迭代器，定址對象所插入字串的第一個元素。
+*next*<br/>
+迭代器，定址對象是所插入字串的第一個元素。
 
-*_Iosbase*指定資料流，其中包含帶有 numpunct facet 施加的輸出和旗標設定輸出格式使用地區設定。
+*_Iosbase*<br/>
+指定的資料流，其中包含帶有 numpunct facet 的地區設定，可用來為輸出和旗標加上標點符號以設定輸出格式。
 
-*_Fill*間距所使用的字元。
+*_Fill*<br/>
+間距所使用的字元。
 
-*val*的數字或布林值類型的輸出。
+*val*<br/>
+要輸出的數字或布林值類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>參數
 
-*dest*迭代器，定址對象所插入字串的第一個元素。
+*dest*<br/>
+迭代器，定址對象是所插入字串的第一個元素。
 
-*_Iosbase*指定包含帶有 numpunct facet 施加的輸出和旗標設定輸出格式使用地區設定的資料流。
+*_Iosbase*<br/>
+指定的資料流，其中包含帶有 numpunct facet 的地區設定，可用來為輸出和旗標加上標點符號以設定輸出格式。
 
-*_Fill*間距所使用的字元。
+*_Fill*<br/>
+間距所使用的字元。
 
-*val*的數字或布林值類型的輸出。
+*val*<br/>
+要輸出的數字或布林值類型。
 
 ### <a name="return-value"></a>傳回值
 

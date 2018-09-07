@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 156ae11bcc63e5d19b816580bfce7bb24cfbc3d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964306"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106674"
 ---
 # <a name="extent-class"></a>extent 類別
 
@@ -37,9 +37,11 @@ struct extent;
 
 ### <a name="parameters"></a>參數
 
-*Ty*要查詢的類型。
+*Ty*<br/>
+要查詢的類型。
 
-*我*陣列繫結至查詢。
+*I*<br/>
+要查詢的陣列界限
 
 ## <a name="remarks"></a>備註
 

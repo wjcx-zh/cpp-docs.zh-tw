@@ -15,38 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de406267a4c18cace88882b26f6b249fc5a0efa3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2d5cf1895bcd2f5ae78ba8aa08d874fe7a60258
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761039"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101894"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 命名空間 (C++/CX)
-C + + /CX 補充 collections 命名空間，以簡化使用 Vector、 VectorView、 對應和 MapView 集合類別的函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-namespace Windows {  
-    namespace Foundation {  
-        namespace Collections;  
-    }  
-}  
-```  
-  
-### <a name="functions"></a>函式  
-  
-|名稱|描述|  
-|----------|-----------------|  
-|[back_inserter 函式](../cppcx/back-inserter-function.md)|傳回可用來在集合結尾插入值的迭代器。|  
-|[begin 函式](../cppcx/begin-function.md)|傳回指向集合開頭的迭代器。|  
-|[end 函式](../cppcx/end-function.md)|傳回指向集合結尾之外的迭代器。|  
-|[to_vector 函式](../cppcx/to-vector-function.md)|傳回作為 std::vector 的集合。|  
-  
-### <a name="requirements"></a>需求  
- **標頭：** collection.h  
-  
- **命名空間：** Windows::Foundation::Collections  
-  
+
+C + + /CX 補充 collections 命名空間，以簡化使用 Vector、 VectorView、 對應和 MapView 集合類別的函式。
+
+## <a name="syntax"></a>語法
+
+```
+
+namespace Windows {
+    namespace Foundation {
+        namespace Collections;
+    }
+}
+```
+
+### <a name="functions"></a>函式
+
+|名稱|描述|
+|----------|-----------------|
+|[back_inserter 函式](../cppcx/back-inserter-function.md)|傳回可用來在集合結尾插入值的迭代器。|
+|[begin 函式](../cppcx/begin-function.md)|傳回指向集合開頭的迭代器。|
+|[end 函式](../cppcx/end-function.md)|傳回指向集合結尾之外的迭代器。|
+|[to_vector 函式](../cppcx/to-vector-function.md)|傳回作為 std::vector 的集合。|
+
+### <a name="requirements"></a>需求
+
+**標頭：** collection.h
+
+**命名空間：** Windows::Foundation::Collections
+

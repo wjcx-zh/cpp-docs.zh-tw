@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959744"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100881"
 ---
 # <a name="basicregex-class"></a>basic_regex 類別
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>參數
 
-*Elem*要符合的項目類型。
+*Elem*<br/>
+要符合之項目的類型。
 
-*RXtraits*項目的 Traits 類別。
+*RXtraits*<br/>
+項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>參數
 
-*STtraits*字串來源的 Traits 類別。
+*STtraits*<br/>
+字串來源的 Traits 類別。
 
-*STalloc*字串來源的配置器類別。
+*STalloc*<br/>
+字串來源的 Allocator 類別。
 
-*InIt*輸入範圍來源的迭代器類型。
+*InIt*<br/>
+輸入範圍來源的迭代器類型。
 
-*右*来複製的 Regex 來源。
+*right*<br/>
+要複製的 Regex 來源。
 
-*ptr*来複製之序列開頭的指標。
+*ptr*<br/>
+要複製之序列開頭的指標。
 
-*旗標*語法選項旗標，以在複製時加入。
+*flags*<br/>
+要在複製時加入的語法選項旗標。
 
 *len/t d >* 要複製之序列的長度。
 
-*str*来複製的字串。
+*str*<br/>
+要複製的字串。
 
-*第一個*来複製之序列的開頭。
+*first*<br/>
+要複製之序列的開頭。
 
-*最後一個*来複製之序列的結尾。
+*最後一個*<br/>
+要複製之序列的結尾。
 
-*IList*来複製的 initializer_list。
+*IList*<br/>
+要複製的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>參數
 
-*STtraits*字串來源的 Traits 類別。
+*STtraits*<br/>
+字串來源的 Traits 類別。
 
-*STalloc*字串來源的配置器類別。
+*STalloc*<br/>
+字串來源的 Allocator 類別。
 
-*InIt*輸入範圍來源的迭代器類型。
+*InIt*<br/>
+輸入範圍來源的迭代器類型。
 
-*右*来複製的 Regex 來源。
+*right*<br/>
+要複製的 Regex 來源。
 
-*ptr*来複製之序列開頭的指標。
+*ptr*<br/>
+要複製之序列開頭的指標。
 
-*旗標*語法選項旗標，以在複製時加入。
+*flags*<br/>
+要在複製時加入的語法選項旗標。
 
 *len/t d >* 要複製之序列的長度。
 
-*str*来複製的字串。
+*str*<br/>
+要複製的字串。
 
-*第一個*来複製之序列的開頭。
+*first*<br/>
+要複製之序列的開頭。
 
-*最後一個*来複製之序列的結尾。
+*最後一個*<br/>
+要複製之序列的結尾。
 
-*IList*来複製的 initializer_list。
+*IList*<br/>
+要複製的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*loc*来儲存的地區設定物件。
+*當地語系化*<br/>
+要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>參數
 
-*STtraits*字串來源的 Traits 類別。
+*STtraits*<br/>
+字串來源的 Traits 類別。
 
-*STalloc*字串來源的配置器類別。
+*STalloc*<br/>
+字串來源的 Allocator 類別。
 
-*右*来複製的 Regex 來源。
+*right*<br/>
+要複製的 Regex 來源。
 
-*str*来複製的字串。
+*str*<br/>
+要複製的字串。
 
 ### <a name="remarks"></a>備註
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>參數
 
-*右*来交換的規則運算式物件。
+*right*<br/>
+要交換的規則運算式物件。
 
 ### <a name="remarks"></a>備註
 

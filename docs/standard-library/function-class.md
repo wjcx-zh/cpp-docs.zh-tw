@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959925"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104130"
 ---
 # <a name="function-class"></a>function 類別
 
@@ -89,9 +89,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*Fty*来包裝的函式類型。
+*Fty*<br/>
+要包裝的函式類型。
 
-*Ax*配置器函式。
+*Ax*<br/>
+配置器函數。
 
 ## <a name="remarks"></a>備註
 
@@ -164,11 +166,14 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*_Func*可呼叫物件。
+*_Func*<br/>
+可呼叫的物件。
 
-*_Fnref*包含可呼叫物件的參考包裝函式。
+*_Fnref*<br/>
+參考包裝函式，其中包含可呼叫物件。
 
-*Ax*配置器物件。
+*Ax*<br/>
+配置器物件。
 
 ### <a name="remarks"></a>備註
 
@@ -199,17 +204,23 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*右*来複製的函式物件。
+*right*<br/>
+要複製的函式物件。
 
-*Fx*可呼叫物件的類型。
+*Fx*<br/>
+可呼叫物件的類型。
 
-*_Func*来包裝的可呼叫物件。
+*_Func*<br/>
+要包裝的可呼叫物件。
 
-*配置*的配置器類型。
+*配置*<br/>
+配置器類型。
 
-*Ax*配置器。
+*Ax*<br/>
+配置器。
 
-*_Fnref*来包裝的可呼叫物件參考。
+*_Fnref*<br/>
+要包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
 
@@ -340,9 +351,11 @@ result_type operator()(
 
 ### <a name="parameters"></a>參數
 
-*TN*第 n 個呼叫引數的類型。
+*TN*<br/>
+第 N 個呼叫引數類型。
 
-*tN*第 n 個呼叫引數。
+*TN*<br/>
+第 N 個呼叫引數。
 
 ### <a name="remarks"></a>備註
 
@@ -391,13 +404,17 @@ template <class Fty>
 
 ### <a name="parameters"></a>參數
 
-*npc* null 指標常數。
+*npc*<br/>
+null 指標常數。
 
-*右*来複製的函式物件。
+*right*<br/>
+要複製的函式物件。
 
-*fn*来包裝的可呼叫物件。
+*fn*<br/>
+要包裝的可呼叫物件。
 
-*fnref*来包裝的可呼叫物件參考。
+*fnref*<br/>
+要包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
 
@@ -506,7 +523,8 @@ void swap(function& right);
 
 ### <a name="parameters"></a>參數
 
-*右*来交換的函式物件。
+*right*<br/>
+要交換的函式物件。
 
 ### <a name="remarks"></a>備註
 
@@ -567,7 +585,8 @@ template <class Fty2>
 
 ### <a name="parameters"></a>參數
 
-*Fty2*来測試的目標可呼叫物件類型。
+*Fty2*<br/>
+要測試的目標可呼叫物件類型。
 
 ### <a name="remarks"></a>備註
 

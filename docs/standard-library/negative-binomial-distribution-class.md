@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7d2035a1146c5e620d8f75dd6bba5095a7630e0a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964404"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103992"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 類別
 
@@ -81,7 +81,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*<br/>
+整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -242,11 +243,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*k* `k`分佈參數。
+*k*<br/>
+`k` 分佈參數。
 
-*p* `p`分佈參數。
+*p*<br/>
+`p` 分佈參數。
 
-*parm*用來建構分佈的參數結構。
+*parm*<br/>
+用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
 
@@ -266,11 +270,14 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*k* `k`分佈參數。
+*k*<br/>
+`k` 分佈參數。
 
-*p* `p`分佈參數。
+*p*<br/>
+`p` 分佈參數。
 
-*右*`param_type`結構，用來比較。
+*right*<br/>
+用來進行比較的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 

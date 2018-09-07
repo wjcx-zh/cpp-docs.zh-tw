@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959857"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099586"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 類別
 
@@ -38,7 +38,7 @@ ms.locfileid: "38959857"
 ```cpp
 template <class Type, class CharType = char, class Traits = char_traits<CharType>, class Distance = ptrdiff_t,>
 class istream_iterator
- : public iterator<
+: public iterator<
     input_iterator_tag, Type, Distance,
     const Type *,
     const Type&>;
@@ -46,13 +46,17 @@ class istream_iterator
 
 ### <a name="parameters"></a>參數
 
-*型別*要從輸入資料流擷取的物件類型。
+*類型*<br/>
+要輸入資料流擷取的物件類型。
 
-*CharType*表示的字元類型的型別`istream_iterator`。 這個引數是選擇性的預設值是**char**。
+*CharType*<br/>
+類型，表示 `istream_iterator` 的字元類型。 這個引數是選擇性的預設值是**char**。
 
-*Traits*表示的字元類型的型別`istream_iterator`。 這個引數是選用引數，且預設值是 `char_traits`< `CharType`>。
+*特性*<br/>
+類型，表示 `istream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`< `CharType`>。
 
-*距離*的帶正負號的整數類資料類型表示的差異類型`istream_iterator`。 這個引數是選擇性的，而且預設值是 `ptrdiff_t`。
+*距離*<br/>
+帶正負號的整數類資料類型，表示 `istream_iterator` 的差異類型。 這個引數是選擇性的，而且預設值是 `ptrdiff_t`。
 
 在建構或遞增具有非 null 儲存指標的 istream_iterator 類別物件之後，物件會嘗試從關聯的輸入資料流擷取和儲存 `Type` 類型物件。 如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。
 
@@ -144,7 +148,8 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>參數
 
-*_Istr*會讀取使用的輸入資料流來初始化`istream_iterator`。
+*_Istr*<br/>
+要讀取的輸入資料流，用來將 `istream_iterator` 初始化。
 
 ### <a name="remarks"></a>備註
 

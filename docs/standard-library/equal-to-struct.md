@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 78ee4e040bc70b3ababe357fea2c6a279fb1b09a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961648"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105430"
 ---
 # <a name="equalto-struct"></a>equal_to 結構
 
@@ -33,27 +33,29 @@ ms.locfileid: "38961648"
 ```cpp
 template <class Type = void>
 struct equal_to : public binary_function<Type, Type, bool>
- {
+{
     bool operator()(const Type& Left, const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator==
 template <>
 struct equal_to<void>
- {
+{
     template <class T, class U>
     auto operator()(T&& Left, U&& Right) const
       ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>參數
 
 *型別*， *T*， *U*支援任何型別`operator==`會指定或推斷類型的運算元。
 
-*左*等號比較運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
+*左邊*<br/>
+等號比較運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右*等號比較運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
+*右邊*<br/>
+等號比較運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
 

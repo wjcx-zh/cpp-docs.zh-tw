@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ec465e9a829164201d61d3e60c678371cc8c3d3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955810"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108491"
 ---
 # <a name="gslice-class"></a>gslice 類別
 
@@ -84,11 +84,14 @@ gslice(
 
 ### <a name="parameters"></a>參數
 
-*_StartIndex* valarray 索引子集的第一個元素。
+*_StartIndex*<br/>
+子集中第一個項目的 valarray 索引。
 
-*_LenArray*每個配量中指定的項目數的陣列。
+*_LenArray*<br/>
+指定每個配量中元素數目的陣列。
 
-*_IncArray*指定在每個配量的跨度的陣列。
+*_IncArray*<br/>
+指定每個配量中跨度的陣列。
 
 ### <a name="return-value"></a>傳回值
 
@@ -214,13 +217,13 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The size of the valarray is: 20.
 
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The size of vaResult is:
- vaGSlice.size ( ) = ( 4 4 ).
+vaGSlice.size ( ) = ( 4 4 ).
 ```
 
 ## <a name="start"></a>  gslice::start
@@ -280,9 +283,9 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
@@ -347,11 +350,11 @@ int main( )
 
 ```Output
 The operand valarray va is:
- ( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
+( 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 ).
 The valarray for vaGSlice is vaResult:
- va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
+va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The strides of vaResult are:
- vaGSlice.stride ( ) = ( 7 4 ).
+vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
 ## <a name="see-also"></a>另請參閱

@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763652"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110639"
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 類別
 
 這個類別會實作在執行緒集區的 apartment model COM 伺服器。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+> 此類別和其成員不能在 Windows 執行階段中執行的應用程式。
 
 ## <a name="syntax"></a>語法
 
@@ -46,7 +46,7 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
->  這個類別會取代過時[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)類別。
+> 這個類別會取代過時[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)類別。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 

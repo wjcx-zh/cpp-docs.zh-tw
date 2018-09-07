@@ -44,19 +44,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408911"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100394"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
 
 使用環境路徑來搜尋檔案。 這些函式已有更安全的版本可供使用，請參閱 [_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -87,27 +87,30 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>參數
 
-*檔名*来搜尋的檔案名稱。
+*filename*<br/>
+要搜尋的檔案名稱。
 
-*varname*来搜尋的環境。
+*varname*<br/>
+要搜尋的環境。
 
-*pathname*来儲存的完整路徑的緩衝區。
+*路徑名稱*<br/>
+要儲存此完整路徑的緩衝區。
 
 ## <a name="remarks"></a>備註
 
-**_Searchenv**例行搜尋指定的網域中的目標檔案。 *Varname*變數可以是任何環境或使用者定義變數 — 比方說，**路徑**， **LIB**，或**INCLUDE**— 指定目錄路徑清單。 因為 **_searchenv**區分大小寫， *varname*應該與環境變數的大小寫。
+**_Searchenv**例行搜尋指定的網域中的目標檔案。 *Varname*變數可以是任何環境或使用者定義變數 — 比方說，**路徑**， **LIB**，或**INCLUDE**— 指定目錄路徑的清單。 因為 **_searchenv**區分大小寫， *varname*應該符合環境變數的大小寫。
 
-此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，便會在環境變數指定的目錄中尋找。 如果目標檔案，其中一個這些目錄中新建立的路徑會複製到*pathname*。 如果*filename*找不到檔案， *pathname*包含空的 null 結尾字串。
+此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，便會在環境變數指定的目錄中尋找。 如果目標檔案已在其中一個這些目錄中，新建立的路徑會複製到*pathname*。 如果*檔名*找不到檔案， *pathname*包含空的 null 結尾字串。
 
-*Pathname*緩衝區應該要有至少 **_MAX_PATH**字元的長度，藉此容納完整長度的建構的路徑名稱。 否則， **_searchenv**可能滿溢*pathname*緩衝區，而且會導致非預期的行為。
+*Pathname*緩衝區應該至少 **_MAX_PATH**適應建構的路徑名稱的完整長度的字元。 否則，請 **_searchenv**可能會溢位*pathname*緩衝並造成未預期的行為。
 
-**_wsearchenv**是寬字元版本的 **_searchenv**，和引數 **_wsearchenv**是寬字元字串。 **_wsearchenv**和 **_searchenv**除此之外的行為相同。
+**_wsearchenv**是寬字元版本的 **_searchenv**，和引數 **_wsearchenv**是寬字元字串。 **_wsearchenv**並 **_searchenv**行為相同。
 
-如果*filename*為空字串，這些函數會傳回**ENOENT**。
+如果*檔名*為空字串，這些函式會傳回**ENOENT**。
 
-如果*filename*或*pathname*是**NULL**指標、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+如果*檔名*或是*pathname*是**NULL**指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
 
-如需有關**errno**和錯誤代碼，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
+如需詳細資訊**errno**和錯誤碼，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
 
 在 C++ 中，這些函式具有多載樣板，可以叫用這些函式的更新、更安全之對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -119,7 +122,7 @@ void _wsearchenv(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> 或 \<wchar.h>|

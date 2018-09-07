@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb8a30f8dde14801b89b1e2d36e349ea8e93a5c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958526"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107104"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 
@@ -78,7 +78,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*<br/>
+浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -204,11 +205,14 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*m* `m`分佈參數。
+*m*<br/>
+`m` 分佈參數。
 
-*s* `s`分佈參數。
+*s*<br/>
+`s` 分佈參數。
 
-*parm* `param_type`結構，用來建構分佈。
+*parm*<br/>
+用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -236,11 +240,14 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*m* `m`分佈參數。
+*m*<br/>
+`m` 分佈參數。
 
-*s* `s`分佈參數。
+*s*<br/>
+`s` 分佈參數。
 
-*右*`param_type`結構，用來比較。
+*right*<br/>
+用來進行比較的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 

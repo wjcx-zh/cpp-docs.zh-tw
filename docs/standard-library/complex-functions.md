@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12dd6d48b8d0e2012273ad122708d9a0d7ea11cd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959988"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110171"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函式
 
@@ -73,7 +73,8 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*判斷其模數的複數。
+*complexNum*<br/>
+要判斷其模數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -141,10 +142,10 @@ c2 = polar ( 5.0 , pi / 6 ) = (4.33013,2.5)
 c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The modulus of c1 is recovered from c1 using: abs ( c1 ) = 5
 Argument of c1 is recovered from c1 using:
- arg ( c1 ) = 0 radians, which is 0 degrees.
+arg ( c1 ) = 0 radians, which is 0 degrees.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
@@ -159,7 +160,8 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*判斷為其引數的複數。
+*complexNum*<br/>
+要判斷其引數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -227,10 +229,10 @@ c2 = polar ( 5.0 , pi / 6 ) = (4.33013,2.5)
 c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The modulus of c1 is recovered from c1 using: abs ( c1 ) = 5
 Argument of c1 is recovered from c1 using:
- arg ( c1 ) = 0 radians, which is 0 degrees.
+arg ( c1 ) = 0 radians, which is 0 degrees.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
@@ -245,7 +247,8 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*傳回其共軛複數的複數。
+*complexNum*<br/>
+要傳回其共軛複數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -319,7 +322,8 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷它的餘弦的複數。
+*complexNum*<br/>
+要判斷其餘弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -409,7 +413,8 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*正在判斷其雙曲線餘弦值的複數。
+*complexNum*<br/>
+要判斷其雙曲餘弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -499,7 +504,8 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*複雜數字的指數要判斷。
+*complexNum*<br/>
+要判斷其指數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -569,7 +575,8 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*的實數部分是要擷取的複數。
+*complexNum*<br/>
+要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -620,7 +627,8 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷其自然對數的複數。
+*complexNum*<br/>
+要判斷其自然對數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -689,7 +697,8 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷其基底 10 對數的複數。
+*complexNum*<br/>
+要判斷其底數為 10 之對數值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -758,7 +767,8 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*是判斷其範數的複數。
+*complexNum*<br/>
+要判斷其範數的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -824,7 +834,7 @@ c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The complex numbers c2 & c3 have the same principal arguments.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
@@ -840,9 +850,11 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Modulus*輸入複數的模數。
+*_Modulus*<br/>
+輸入複數的模數。
 
-*_Argument*輸入複數的引數。
+*_Argument*<br/>
+輸入複數的引數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -901,7 +913,7 @@ c3 = polar ( 5.0 , 13 * pi / 6 ) = (4.33013,2.5)
 The complex numbers c2 & c3 have the same principal arguments.
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.523599 radians, which is 30 degrees.
+arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
 ## <a name="pow"></a>  pow
@@ -924,9 +936,11 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>參數
 
-*（_b)* 複數或數字，到成員函式乘冪之基底複數的參數類型。
+*（_b)*<br/>
+複數或數字，其為由成員函式乘至乘冪之基底複數的參數類型。
 
-*電源 （_p)* 的整數或複數或數字的基底，就是成員函式乘冪的複數的參數類型。
+*_Power*<br/>
+整數或複數或數字，其為由成員函式乘至乘冪之基底複數的參數類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1021,28 +1035,28 @@ int main( )
 Complex number for base cb1 = (3,4)
 Integer for power = 2
 Complex number returned from complex base and integer power:
- ce1 = cb1 ^ cp1 = (-7,24)
+ce1 = cb1 ^ cp1 = (-7,24)
 The modulus of ce1 is: 25
 The argument of ce1 is: 1.85459 radians, which is 106.26 degrees.
 
 Complex number for base cb2 = (3,4)
 Type double for power cp2 = pi = 3.14159
 Complex number returned from complex base and double power:
- ce2 = cb2 ^ cp2 = (-152.915,35.5475)
+ce2 = cb2 ^ cp2 = (-152.915,35.5475)
 The modulus of ce2 is: 156.993
 The argument of ce2 is: 2.91318 radians, which is 166.913 degrees.
 
 Complex number for base cb3 = (3,4)
 Complex number for power cp3= (-2,1)
 Complex number returned from complex base and complex power:
- ce3 = cb3 ^ cp3 = (0.0153517,-0.00384077)
+ce3 = cb3 ^ cp3 = (0.0153517,-0.00384077)
 The modulus of ce3 is: 0.0158249
 The argument of ce3 is: -0.245153 radians, which is -14.0462 degrees.
 
 Type double for base cb4 = pi = 3.14159
 Complex number for power cp4 = (2,-1)
 Complex number returned from double base and complex power:
- ce4 = cb4 ^ cp4 = (4.07903,-8.98725)
+ce4 = cb4 ^ cp4 = (4.07903,-8.98725)
 The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
@@ -1058,7 +1072,8 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*的實數部分是要擷取的複數。
+*complexNum*<br/>
+要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1109,7 +1124,8 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷其正弦值的複數。
+*complexNum*<br/>
+要判斷其正弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1199,7 +1215,8 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷其雙曲正弦值的複數。
+*complexNum*<br/>
+要判斷其雙曲線正弦值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1289,7 +1306,8 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*找不到為其平方根的複數。
+*complexNum*<br/>
+要找出其平方根的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1348,10 +1366,10 @@ c1 = polar ( 5.0 ) = (-2.58529e-012,25)
 c2 = sqrt ( c1 ) = (3.53553,3.53553)
 The modulus of c2 is recovered from c2 using: abs ( c2 ) = 5
 Argument of c2 is recovered from c2 using:
- arg ( c2 ) = 0.785398 radians, which is 45 degrees.
+arg ( c2 ) = 0.785398 radians, which is 45 degrees.
 The modulus of c2 = sqrt( abs ( c1 ) ) =5
 The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
- which is 45 degrees.
+which is 45 degrees.
 ```
 
 ## <a name="tan"></a> tan
@@ -1365,7 +1383,8 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷其正切值的複數。
+*complexNum*<br/>
+要判斷其正切值的複數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1453,7 +1472,8 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*要判斷其雙曲正切值的複數。
+*complexNum*<br/>
+要判斷其雙曲線正切值的複數。
 
 ### <a name="return-value"></a>傳回值
 

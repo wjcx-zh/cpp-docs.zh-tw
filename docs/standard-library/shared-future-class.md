@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954990"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100776"
 ---
 # <a name="sharedfuture-class"></a>shared_future 類別
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>參數
 
-*右*A`shared_future`物件。
+*右邊*<br/>
+`shared_future` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>參數
 
-*右*A[未來](../standard-library/future-class.md)或`shared_future`物件。
+*右邊*<br/>
+[future](../standard-library/future-class.md) 或 `shared_future` 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>參數
 
-*Rel_time* A [chrono::](../standard-library/duration-class.md)物件，指定最大時間間隔，則執行緒會封鎖。
+*Rel_time*<br/>
+[chrono::duration](../standard-library/duration-class.md) 物件，會指定執行緒封鎖的時間間隔上限。
 
 ### <a name="return-value"></a>傳回值
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>參數
 
-*Abs_time* A [chrono:: time_point](../standard-library/time-point-class.md)指定的時間之後，可以解除封鎖執行緒的物件。
+*Abs_time*<br/>
+[chrono::time_point](../standard-library/time-point-class.md) 物件，會指定可將執行緒解除封鎖的時間。
 
 ### <a name="return-value"></a>傳回值
 

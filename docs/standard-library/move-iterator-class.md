@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffd7a429bbddc81458538ace0ccc138dec65b9aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955243"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106563"
 ---
 # <a name="moveiterator-class"></a>move_iterator 類別
 
@@ -157,7 +157,8 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*迭代器，做為預存迭代器。
+*right*<br/>
+要當做預存迭代器使用的迭代器。
 
 ### <a name="remarks"></a>備註
 
@@ -173,7 +174,8 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*来加入至目前位置，以判斷新的目前位置的位移。
+*_Off*<br/>
+要加入至目前位置的位移，藉以判斷目前新位置。
 
 ### <a name="return-value"></a>傳回值
 

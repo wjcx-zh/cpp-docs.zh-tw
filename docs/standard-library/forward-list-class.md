@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102573"
 ---
 # <a name="forwardlist-class"></a>forward_list 類別
 
@@ -881,15 +881,20 @@ void splice_after(
 
 ### <a name="parameters"></a>參數
 
-*其中*其後方插入目的地 forward_list 中的位置。
+*Where*<br/>
+目的地 forward_list 中的位置，要在其後面插入。
 
-*來源*要插入至目的地 forward_list 的來源 forward_list。
+*Source*<br/>
+要插入至目的地 forward_list 的來源 forward_list。
 
-*Iter*要從來源 forward_list 插入的項目。
+*Iter*<br/>
+要從來源 forward_list 插入的元素。
 
-*第一個*要從來源 forward_list 插入的範圍內的第一個項目。
+*第一個*<br/>
+要從來源 forward_list 插入的範圍中的第一個元素。
 
-*最後一個*從來源 forward_list 插入的範圍外的第一個位置。
+*最後一個*<br/>
+要從來源 forward_list 插入的範圍外的第一個位置。
 
 ### <a name="remarks"></a>備註
 

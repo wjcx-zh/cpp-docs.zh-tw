@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 83e6e1bc3d35f076d3a1b8fd2151ad4c94c060cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955016"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107649"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 運算子
 
@@ -48,9 +48,11 @@ operator&(
 
 ### <a name="parameters"></a>參數
 
-*左*其相關元素會使用位元結合兩個 bitset 中的第一個`AND`。
+*left*<br/>
+兩個 bitset 的第一個 bitset，其相關元素會使用位元 `AND` 結合。
 
-*右*其相關元素會使用位元結合兩個 valarray 的第二個`AND`。
+*right*<br/>
+兩個 valarray 的第二個 valarray，其相關元素會使用位元 `AND` 結合。
 
 ### <a name="return-value"></a>傳回值
 
@@ -98,7 +100,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*右*類型的物件**bitset\<N >** 這是要插入至輸出資料流，做為字串。
+*right*<br/>
+要當做字串插入輸出資料流之 **bitset\<N>** 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -157,9 +160,11 @@ _Istr,
 
 ### <a name="parameters"></a>參數
 
-*_Istr*輸入到輸入資料流插入 bitset 的字串。
+*_Istr*<br/>
+在輸入資料流中輸入以插入 bitset 的字串。
 
-*右*從輸入資料流接收位元的 bitset。
+*right*<br/>
+要從輸入資料流接收位元的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
@@ -240,9 +245,11 @@ operator^(
 
 ### <a name="parameters"></a>參數
 
-*左*其相關元素會使用位元結合兩個 bitset 中的第一個`EXCLUSIVE-OR`。
+*left*<br/>
+兩個 bitset 的第一個 bitset，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。
 
-*右*其相關元素會使用位元結合兩個 valarray 的第二個`EXCLUSIVE-OR`。
+*right*<br/>
+兩個 valarray 的第二個 valarray，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。
 
 ### <a name="return-value"></a>傳回值
 
@@ -290,9 +297,11 @@ operator|(
 
 ### <a name="parameters"></a>參數
 
-*左*其相關元素會使用位元結合兩個 bitset 中的第一個`OR`。
+*left*<br/>
+兩個 bitset 的第一個 bitset，其相關元素會使用位元 `OR` 結合。
 
-*右*其相關元素會使用位元結合兩個 valarray 的第二個`OR`。
+*right*<br/>
+兩個 valarray 的第二個 valarray，其相關元素會使用位元 `OR` 結合。
 
 ### <a name="return-value"></a>傳回值
 

@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac73456108669950f59f2399495526b8b319f07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3198a2d3ef91df80429f7cd245e5616ebe7af43a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956803"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110626"
 ---
 # <a name="codecvt-class"></a>codecvt 類別
 
@@ -70,11 +70,14 @@ class codecvt : public locale::facet, codecvt_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType*程式內用來編碼字元的類型。
+*CharType*<br/>
+用於程式內部字元編碼的類型。
 
-*位元組*用於程式外部字元編碼類型。
+*Byte*<br/>
+用於程式外部字元編碼的類型。
 
-*StateType*可用來表示的字元表示的內部和外部類型之間的轉換中繼狀態的類型。
+*StateType*<br/>
+類型，可以用來表示字元表示的內部和外部類型之間的轉換中繼狀態。
 
 ## <a name="remarks"></a>備註
 
@@ -206,7 +209,8 @@ explicit codecvt(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*用來指定物件的記憶體管理類型的整數值。
+*_Refs*<br/>
+整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
@@ -216,7 +220,7 @@ explicit codecvt(size_t _Refs = 0);
 
 - 1：物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- 2： 未定義這些值。
 
 建構函式會初始化其`locale::facet`與基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -277,19 +281,26 @@ virtual result do_in(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first1*来轉換之序列的開頭的指標。
+*first1*<br/>
+要轉換之序列開頭的指標。
 
-*last1*来轉換之序列的結尾指標。
+*last1*<br/>
+要轉換之序列結尾的指標。
 
-*next1*指標的第一個未轉換字元已轉換序列結尾以外的位置。
+*next1*<br/>
+超過已轉換序列結尾之第一個未轉換字元的指標。
 
-*first2*的已轉換序列開頭的指標。
+*first2*<br/>
+已轉換序列開頭的指標。
 
-*last2*已轉換序列結尾的指標。
+*last2*<br/>
+已轉換序列結尾的指標。
 
-*next2*指標`CharType`所附在上一個轉換之後`CharType`，目的序列中的第一個未變更的字元。
+*next2*<br/>
+指標`CharType`所附在上一個轉換之後`CharType`，目的序列中的第一個未變更的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -325,13 +336,17 @@ virtual int do_length(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first1*外部序列開頭的指標。
+*first1*<br/>
+外部序列開頭的指標。
 
-*last1*外部序列結尾的指標。
+*last1*<br/>
+外部序列結尾的指標。
 
-*_Len2*的最大數目`Byte`的成員函式可傳回。
+*_Len2*<br/>
+最大數目`Byte`的成員函式可傳回。
 
 ### <a name="return-value"></a>傳回值
 
@@ -386,19 +401,26 @@ virtual result do_out(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first1*来轉換之序列的開頭的指標。
+*first1*<br/>
+要轉換之序列開頭的指標。
 
-*last1*来轉換之序列的結尾指標。
+*last1*<br/>
+要轉換之序列結尾的指標。
 
-*next1*的第一個指標參考轉換`CharType`，最後一個之後`CharType`轉換。
+*next1*<br/>
+第一個指標參考轉換`CharType`，最後一個之後`CharType`轉換。
 
-*first2*的已轉換序列開頭的指標。
+*first2*<br/>
+已轉換序列開頭的指標。
 
-*last2*已轉換序列結尾的指標。
+*last2*<br/>
+已轉換序列結尾的指標。
 
-*next2*的第一個指標參考轉換`Byte`，最後一個之後`Byte`轉換。
+*next2*<br/>
+第一個指標參考轉換`Byte`，最後一個之後`Byte`轉換。
 
 ### <a name="return-value"></a>傳回值
 
@@ -434,13 +456,17 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first2*目的範圍中第一個位置的指標。
+*first2*<br/>
+目的範圍中第一個位置的指標。
 
-*last2*目的範圍中最後一個位置的指標。
+*last2*<br/>
+目的範圍中最後一個位置的指標。
 
-*next2*指向目的序列中第一個未變更的元素。
+*next2*<br/>
+目的序列中第一個未變更的元素指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -544,19 +570,26 @@ result in(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first1*来轉換之序列的開頭的指標。
+*first1*<br/>
+要轉換之序列開頭的指標。
 
-*last1*来轉換之序列的結尾指標。
+*last1*<br/>
+要轉換之序列結尾的指標。
 
-*next1*指標的第一個未轉換字元已轉換序列結尾以外的位置。
+*next1*<br/>
+超過已轉換序列結尾之第一個未轉換字元的指標。
 
-*first2*的已轉換序列開頭的指標。
+*first2*<br/>
+已轉換序列開頭的指標。
 
-*last2*已轉換序列結尾的指標。
+*last2*<br/>
+已轉換序列結尾的指標。
 
-*next2*指標`CharType`所附在上一個轉換之後`Chartype`目的序列中的第一個未變更的字元。
+*next2*<br/>
+指標`CharType`所附在上一個轉換之後`Chartype`目的序列中的第一個未變更的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -610,7 +643,7 @@ int main( )
 
 ```Output
 It worked! The converted string is:
- [This is the string to be converted!]
+[This is the string to be converted!]
 ```
 
 ## <a name="intern_type"></a>  codecvt::intern_type
@@ -639,13 +672,17 @@ int length(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first1*外部序列開頭的指標。
+*first1*<br/>
+外部序列開頭的指標。
 
-*last1*外部序列結尾的指標。
+*last1*<br/>
+外部序列結尾的指標。
 
-*_Len2*的成員函式可傳回的位元組數目上限。
+*_Len2*<br/>
+可由成員函式傳回的位元組數目上限。
 
 ### <a name="return-value"></a>傳回值
 
@@ -740,19 +777,26 @@ result out(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first1*来轉換之序列的開頭的指標。
+*first1*<br/>
+要轉換之序列開頭的指標。
 
-*last1*来轉換之序列的結尾指標。
+*last1*<br/>
+要轉換之序列結尾的指標。
 
-*next1*的第一個指標參考轉換`CharType`最後一個之後`CharType`轉換。
+*next1*<br/>
+第一個指標參考轉換`CharType`最後一個之後`CharType`轉換。
 
-*first2*的已轉換序列開頭的指標。
+*first2*<br/>
+已轉換序列開頭的指標。
 
-*last2*已轉換序列結尾的指標。
+*last2*<br/>
+已轉換序列結尾的指標。
 
-*next2*的第一個指標參考轉換`Byte`在上一個轉換之後`Byte`。
+*next2*<br/>
+第一個指標參考轉換`Byte`在上一個轉換之後`Byte`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -796,7 +840,7 @@ int main( )
 
 ```Output
 It worked: The converted string is:
- [This is the wchar_t string to be converted.]
+[This is the wchar_t string to be converted.]
 ```
 
 ## <a name="state_type"></a>  codecvt::state_type
@@ -825,13 +869,17 @@ result unshift(
 
 ### <a name="parameters"></a>參數
 
-*_State*成員函式的呼叫之間所保留的轉換狀態。
+*（_s)*<br/>
+成員函式呼叫之間所保留的轉換狀態。
 
-*first2*目的範圍中第一個位置的指標。
+*first2*<br/>
+目的範圍中第一個位置的指標。
 
-*last2*目的範圍中最後一個位置的指標。
+*last2*<br/>
+目的範圍中最後一個位置的指標。
 
-*next2*指向目的序列中第一個未變更的元素。
+*next2*<br/>
+目的序列中第一個未變更的元素指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -857,5 +905,5 @@ result unshift(
 
 [\<locale>](../standard-library/locale.md)<br/>
 [字碼頁](../c-runtime-library/code-pages.md)<br/>
-[地區設定名稱、 語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

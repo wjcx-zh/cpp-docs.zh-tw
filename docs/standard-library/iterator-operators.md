@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5ffd25e7289b4627b0b69e4cfd43b19c176d9e18
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954691"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110587"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 運算子
 
@@ -53,9 +53,11 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`iterator`。
+*left*<br/>
+`iterator` 類型的物件。
 
-*右*型別的物件`iterator`。
+*right*<br/>
+`iterator` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -120,10 +122,10 @@ int main( )
 ```Output
 The vector vec is: ( 1 2 3 4 5 6 7 8 ).
 The iterator rVPOS1 initially points to the first element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterators are equal.
 The iterator rVPOS1 now points to the second element
- in the reversed sequence: 7.
+in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
@@ -155,9 +157,11 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*左*類型迭代器的物件。
+*left*<br/>
+iterator 類型的物件。
 
-*右*類型迭代器的物件。
+*right*<br/>
+iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -224,10 +228,10 @@ int main( )
 ```Output
 The vector vec is: ( 2 4 6 8 10 ).
 The iterator rVPOS1 initially points to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterators are equal.
 The iterator rVPOS1 now points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
@@ -242,9 +246,11 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>參數
 
-*左*型別的物件`iterator`。
+*left*<br/>
+`iterator` 類型的物件。
 
-*右*型別的物件`iterator`。
+*right*<br/>
+`iterator` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -313,10 +319,10 @@ int main( )
 ```Output
 The initial vector vec is: ( 0 2 4 6 8 10 ).
 The iterators rVPOS1& rVPOS2 initially point to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterator rVPOS1 is not less than the iterator rVPOS2.
 The iterator rVPOS2 now points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
@@ -331,9 +337,11 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>參數
 
-*左*類型迭代器的物件。
+*left*<br/>
+iterator 類型的物件。
 
-*右*類型迭代器的物件。
+*right*<br/>
+iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -404,12 +412,12 @@ int main( )
 ```Output
 The initial vector vec is: ( 0 2 4 6 8 10 ).
 The iterator rVPOS1 initially points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterator rVPOS2 initially points to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 The iterator rVPOS2 now points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
@@ -424,9 +432,11 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>參數
 
-*左*類型迭代器的物件。
+*left*<br/>
+iterator 類型的物件。
 
-*右*類型迭代器的物件。
+*right*<br/>
+iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -493,10 +503,10 @@ int main( )
 ```Output
 The initial vector vec is: ( 0 2 4 6 8 10 ).
 The iterators rVPOS1 & rVPOS2 initially point to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 The iterator rVPOS1 now points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
@@ -511,9 +521,11 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>參數
 
-*左*類型迭代器的物件。
+*left*<br/>
+iterator 類型的物件。
 
-*右*類型迭代器的物件。
+*right*<br/>
+iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -584,12 +596,12 @@ int main( )
 ```Output
 The initial vector vec is: ( 0 2 4 6 8 10 ).
 The iterator rVPOS1 initially points to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterator rVPOS2 initially points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 The iterator rVPOS1 now points to the second element
- in the reversed sequence: 8.
+in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
@@ -613,9 +625,11 @@ operator+(
 
 ### <a name="parameters"></a>參數
 
-*_Off*為常數 move_iterator 或常數 reverse_iterator 是位移的位置數目。
+*_Off*<br/>
+要為常數 move_iterator 或常數 reverse_iterator 調整位移的位置數目。
 
-*右*位移的迭代器。
+*right*<br/>
+要調整位移的迭代器。
 
 ### <a name="return-value"></a>傳回值
 
@@ -665,9 +679,9 @@ int main( )
 ```Output
 The initial vector vec is: ( 0 2 4 6 8 10 ).
 The iterator rVPOS1 initially points to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterator rVPOS1 now points to the fifth element
- in the reversed sequence: 2.
+in the reversed sequence: 2.
 ```
 
 ## <a name="operator-"></a>  operator-
@@ -688,9 +702,11 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>參數
 
-*左*迭代器。
+*left*<br/>
+迭代器。
 
-*右*迭代器。
+*right*<br/>
+迭代器。
 
 ### <a name="return-value"></a>傳回值
 
@@ -755,9 +771,9 @@ int main( )
 ```Output
 The initial vector vec is: ( 0 2 4 6 8 10 ).
 The iterators rVPOS1 & rVPOS2 initially point to the first element
- in the reversed sequence: 10.
+in the reversed sequence: 10.
 The iterator rVPOS2 now points to the fifth element
- in the reversed sequence: 2.
+in the reversed sequence: 2.
 The difference: rVPOS2 - rVPOS1= 4.
 ```
 

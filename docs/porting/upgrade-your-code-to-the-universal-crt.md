@@ -8,12 +8,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2057f3dc8abc3f661010300671b67ad5c37a87d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1091a28448aa6531aa909117e0284e19bbcc7cd8
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850596"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578380"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -35,7 +35,7 @@ UCRT 靜態程式庫和動態連結虛設常式程式庫位於 Windows Kits\\10\
 
 C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援程式啟動所需的程式碼以及例外狀況處理和內建函式這類功能。 程式庫和其標頭檔仍然位於 Program Files 或 Program files (x86) 目錄的版本特定 Microsoft Visual Studio 資料夾中。 在 Visual Studio 2017 中，標頭位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_lib 版本_\\include 下，而且連結程式庫位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_li b版本_\\lib\\_architecture_ 下，其中_版本_是已安裝的 Visual Studio 版本、_lib 版本_是程式庫的版本，而 _architecture_ 是處理器架構。 OneCore 和 Store 的連結程式庫也可以位於 libraries 資料夾中。 靜態程式庫的零售和偵錯版本是 libvcruntime.lib 和 libvcruntimed.lib。 動態連結零售和偵錯虛設常式程式庫分別是 vcruntime.lib 和 vcruntimed.lib。  
   
-當您更新 Visual C++ 專案時，如果您已將專案的 [連結器] 屬性 [忽略所有預設程式庫] 設定為 [是]，或在命令列上使用 /NODEFAULTLIB 連結器選項，則必須更新要包含新已重構程式庫的程式庫清單。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  
+當您更新 Visual C++ 專案時，如果您已將專案的 [連結器] 屬性 [忽略所有預設程式庫] 設定為 [是]，或在命令列上使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單，以包含已重構的新程式庫。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和轉散發
   

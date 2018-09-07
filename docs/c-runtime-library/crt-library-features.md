@@ -1,7 +1,7 @@
 ---
 title: CRT 程式庫功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
-ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
+ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799190"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42578470"
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 
@@ -64,6 +64,8 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 |libvcruntimed.lib|無|用於靜態連結的偵錯版本。 不可轉散發。|**/MTd**|_MT、_DEBUG|
 |vcruntime.lib|vcruntime\<版本>.dll|vcruntime 的 DLL 匯入程式庫。|**/MD**|_MT、_DLL|
 |vcruntimed.lib|vcruntime\<版本>d.dll|偵錯 vcruntime 的 DLL 匯入程式庫。 不可轉散發。|**/MDd**|_DEBUG、_MT、_DLL|
+
+當 UCRT 重構發生時，並行執行階段函式移到了 concrt140.dll 中，而這是 C++ 可轉散發套件的一部份。 C++ 平行容器和演算法 (例如 `concurrency::parallel_for`) 必須有這個 DLL。 此外，C++ 標準程式庫也要求 Windows XP 上必須有這個 DLL，以支援同步基元，因為 Windows XP 並沒有條件變數。
 
 根據 CRT 程式庫為靜態或動態連結，為機器碼、Managed 程式碼或混合程式碼，初始化 CRT 的程式碼會位於上述幾個程式庫的其中一個。 這段程式碼會處理 CRT 啟始、內部每個執行緒資料的初始化及終止。 它會因所使用的編譯器版本而有所不同。 這個程式庫一律會以靜態方式連結，即使使用動態連結的 UCRT 亦然。
 

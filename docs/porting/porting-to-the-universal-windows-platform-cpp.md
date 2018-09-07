@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55fbe59128aef6fbc7df20dd14afd102b493f2fd
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322494"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578421"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
@@ -27,9 +27,9 @@ Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植�
 
 本主題包含將程式碼移植到 UWP 的程序，如下所示。
 
-1. [將 Windows 8.1 市集應用程式移植到 UWP](#BK_81StoreApp)
+- [將 Windows 8.1 市集應用程式移植到 UWP](#BK_81StoreApp)
 
-2. [將 Windows 8.1 執行階段元件移植到 UWP](#BK_81Component)
+- [將 Windows 8.1 執行階段元件移植到 UWP](#BK_81Component)
 
 若您有傳統桌面的 Win32 DLL，並想要從 UWP 應用程式加以呼叫，您也可以執行此作業。 使用這類程序可以為現有的傳統 Windows 桌面的 C++ 應用程式或跨平台標準 C++ 程式碼建立 UWP 使用者介面層。 請參閱[做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。
 
@@ -41,9 +41,9 @@ Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植�
 
 1. 若還未如此做，請在 Visual Studio 2017 中開啟 Windows 8.1 應用程式專案，並依照指示升級專案檔。
 
-   您必須在 Visual Studio 安裝程式已安裝 Windows 8.1 工具。 若還未安裝這些工具，請從 [程式和功能] 視窗中啟動 Visual Studio 安裝程式，並選擇 Visual Studio 2017，然後在安裝程式視窗中選擇 [修改]。 找出 Windows 8.1 工具，請確定已選取，並選擇 [確定]。
+   您必須已在 **Visual Studio 安裝程式中安裝 Windows 8.1 工具**。 若還未安裝這些工具，請從 [程式和功能] 視窗中啟動 **Visual Studio** 安裝程式，選擇 [Visual Studio 2017]，然後在安裝程式視窗中選擇 [修改]。 找出 [Windows 8.1 工具]，確認已加以選取，然後選擇 [確定]。
 
-2. 開啟 [專案屬性] 視窗，然後在 [C++] 的 [一般] 中，將 [平台工具組] 設定為 v141，即 Visual Studio 2017 的工具組。
+2. 開啟 [專案屬性] 視窗，然後在 [C++] > [一般] 中，將 [平台工具組] 設定為 **v141**，即 Visual Studio 2017 的工具組。
 
 3. 將專案建置為 Windows 8.1 專案，並解決任何建置錯誤。 在這個階段的任何錯誤都有可能是出於建置工具和程式庫的重大變更。 如需可能會影響程式碼之變更的詳細說明，請參閱 [Visual C++ 變更歷程記錄 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)。
 
@@ -51,21 +51,21 @@ Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植�
 
 4. 使用空白範本建立新的通用 Windows 應用程式專案。 您也許想提供給它與現有專案相同的名稱，但若要這麼做，則此專案必須是在不同的目錄中。
 
-5. 請關閉此方案，然後使用 [Windows 檔案總管] 或命令列，將程式碼檔案 (副檔名 .cpp、.h 和 .xaml) 從 Windows 8.1 專案複製到與您在步驟 1 中所建立專案之專案檔 (.vcxproj) 相同的資料夾內。 請勿複製 Package.appxmanifest 檔案，而如果您有針對 Windows 8.1 桌面版和 Phone 的不同程式碼，請選擇其中一個先進行移植 (您稍後必須先執行一些工作，以套用到其他工作)。 請務必複製子資料夾和其內容。 如果出現提示，請選擇取代任何重複名稱的檔案。
+5. 請關閉解決方案，然後使用 **Windows 檔案總管**或命令列，將程式碼檔案 (副檔名為 .cpp、.h 和 .xaml) 從 Windows 8.1 專案複製到與您在步驟 1 中所建立專案之專案檔 (.vcxproj) 相同的資料夾內。 請勿複製 Package.appxmanifest 檔案，而如果您有針對 Windows 8.1 桌面版和 Phone 的不同程式碼，請選擇其中一個先進行移植 (您稍後必須先執行一些工作，以套用到其他工作)。 請務必複製子資料夾和其內容。 如果出現提示，請選擇取代任何重複名稱的檔案。
 
-6. 重新開啟此方案，然後選擇專案節點捷徑功能表中的 [加入現有項目]  。 請選取您已複製的所有檔案，但是已為專案之一部分的任何檔案除外。
+6. 重新開啟解決方案，然後選擇專案節點捷徑功能表中的 [新增] > [現有項目]。 請選取您已複製的所有檔案，但是已為專案之一部分的任何檔案除外。
 
    請檢查任何子資料夾，並請確認在其中新增這些檔案。
 
-7. 如果您不使用和舊專案相同的專案名稱，則請開啟 Package.appxmanifest 檔案，更新 [進入點] 以反映應用程式類別的命名空間名稱。
+7. 如果您不使用和舊專案相同的專案名稱，則請開啟 Package.appxmanifest 檔案，更新 [進入點] 以反映 `App` 類別的命名空間名稱。
 
-   Package.appxmanifest 檔案中的 [進入點]  欄位包含應用程式類別限定範圍的名稱，其中包括包含此應用程式類別的命名空間。 當您建立通用 Windows 專案時，此命名空間會設為專案的名稱。 如果這和從舊的專案中複製的檔案不同，則您必須更新其中之一或其他檔案，使兩者相符。
+   Package.appxmanifest 檔案中的 [進入點]  欄位包含 `App` 類別的範圍名稱，其中包括包含 `App` 類別的命名空間。 當您建立通用 Windows 專案時，此命名空間會設為專案的名稱。 如果這和從舊的專案中複製的檔案不同，則您必須更新其中之一或其他檔案，使兩者相符。
 
 8. 建置專案，並解決任何出於 Windows SDK 不同版本之間之重大變更的建置錯誤。
 
 9. 在本機桌面上執行專案。 請確認沒有部署錯誤，也請確認應用程式的版面配置看起來是否合理，以及是否可在桌面上正確運作。
 
-10. 如果您有針對另一個裝置的不同程式碼檔案和 .xaml，例如 Windows Phone 8.1，請檢查這段程式碼，並識別其中何處不同於標準裝置。 如果不同之處只在於版面配置，您也許可在 xaml 中使用 Visual State Manager，依螢幕大小自訂此顯示器。 至於其他差異，您可以在使用下列 #if 陳述式的程式碼中使用條件區段。
+10. 如果您有針對另一個裝置的不同程式碼檔案和 .xaml，例如 Windows Phone 8.1，請檢查這段程式碼，並識別其中何處不同於標準裝置。 如果不同之處只在於版面配置，您也許可在 xaml 中使用 **Visual State Manager**，依螢幕大小自訂顯示。 至於其他差異，您可以在使用下列 #if 陳述式的程式碼中使用條件區段。
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)

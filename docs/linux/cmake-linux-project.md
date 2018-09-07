@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269536"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900508"
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
 
@@ -30,7 +30,7 @@ ms.locfileid: "39269536"
 本主題假設您對 Visual Studio 中的 CMake 支援有基本認識。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)。 如需 CMake 本身的詳細資訊，請參閱 [Build, Test and Package Your Software With CMake](https://cmake.org/) (使用 CMake 建置、測試及封裝您的軟體)。
 
 > [!NOTE]  
-> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如果您的套件管理員提供舊版的 CMake，可以採取的因應措施為[從來源建置 CMake](#build-a-supported-cmake release-from-source) 或從官方 [CMake 下載頁面](https://cmake.org/download/)來加以下載。 如需由 Microsoft 提供，可在 Visual Studio 中支援 [CMake Targets View](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的 CMake 變體，請下載最新的預先建置二進位檔，下載位置：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。
+> Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如需由 Microsoft 提供，可在 Visual Studio 中支援 [CMake Targets View](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)窗格的 CMake 變體，請下載最新的預先建置二進位檔，下載位置：[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases)。 如果您的套件管理員提供舊版的 CMake 3.8，可以採取的因應措施為[從來源建置 CMake](#build-a-supported-cmake-release-from-source)，或者若您偏好使用標準 CMake，則可從官方 [CMake 下載頁面](https://cmake.org/download/)加以下載。 
 
 ## <a name="open-a-folder"></a>開啟資料夾
 
@@ -87,10 +87,16 @@ add_executable(hello-cmake hello.cpp)
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ add_executable(hello-cmake hello.cpp)
 }
 ```
 
-`name` 值可以是您喜歡的任何值。 `remoteMachineName` 值指定以哪部遠端系統為目標 (如果有多部遠端系統)。 此欄位已啟用 IntelliSense 來協助您選取正確的系統。 `remoteCMakeListsRoot` 欄位指定專案來源將要複製到的遠端系統。 `remoteBuildRoot` 欄位是遠端系統上將產生組建輸出的位置。 該輸出也會在本機複製到 `buildRoot` 所指定的位置。
+`name` 值可以是您喜歡的任何值。 `remoteMachineName` 值指定以哪部遠端系統為目標 (如果有多部遠端系統)。 此欄位已啟用 IntelliSense 來協助您選取正確的系統。 `remoteCMakeListsRoot` 欄位指定專案來源將要複製到的遠端系統。 `remoteBuildRoot` 欄位是遠端系統上將產生組建輸出的位置。 該輸出也會在本機複製到 `buildRoot` 所指定的位置。 `remoteInstallRoot` 和 `installRoot` 欄位類似於 `remoteBuildRoot` 和 `buildRoot`，不同之處在於前者會在進行 CMake 安裝時套用。 `remoteCopySources` 項目會控制您的本機來源是否複製到遠端電腦。 若您有大量檔案，而且已經自行同步來源，可能會將此設為 false。 若您需要診斷錯誤，`remoteCopyOutputVerbosity` 值會控制複製步驟的詳細資訊。 `remoteCopySourcesConcurrentCopies` 項目會控制要繁衍多少處理序來進行複製。 `remoteCopySourcesMethod` 值可以是 rsync 或 sftp 其中之一。 `remoteCopySourcesExclusionList` 欄位可讓您控制會複製到遠端電腦的內容。 `rsyncCommandArgs` 值可讓您控制複製的 rsync 方法。 `remoteCopyBuildOutput` 欄位會控制遠端組建輸出是否複製到您的本機組建資料夾。
+
+另外還有幾項選擇性設定可用來進行其他控制：
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+這些選項可讓您在建置前後及 CMake 產生之前，於遠端方塊執行命令。 這些命令可以是遠端方塊上的任何有效命令。 輸出會經由管線回到 Visual Studio。
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>從來源建置支援的 CMake 版本
 

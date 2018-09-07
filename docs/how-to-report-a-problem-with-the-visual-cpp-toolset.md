@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
+ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322364"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42583903"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
@@ -335,7 +335,7 @@ CONTEXT:
 
 1. 輸入 **mkdir linkrepro**，以建立連結重現的目錄。
 
-1. 輸入 **set link\_repro=linkrepro** 命令，以將 **link\_repro** 環境變數設為您剛剛建立的目錄。
+1. 輸入 **set link\_repro=linkrepro** 命令，以將 **link\_repro** 環境變數設為您剛剛建立的目錄。 如果您的組建從不同的目錄執行 (這在較複雜的專案時常發生)，請改將 **link\_repro** 設為 linkrepro 目錄的完整路徑。
 
 1. 若要在 Visual Studio 中建置重現專案，請在開發人員命令提示字元主控台視窗中輸入 **devenv** 命令。 這確保 Visual Studio 可以看到 **link\_repro** 環境變數的值。 若要在命令列中建置專案，請使用上述擷取的命令列引數來複製重現組建。
 

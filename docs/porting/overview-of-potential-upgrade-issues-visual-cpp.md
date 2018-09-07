@@ -8,18 +8,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2411c5deb3a14ee3eaebb76fc69b6f36fa3bed42
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848511"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578167"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
 多年來，Microsoft Visual C++ 編譯器經過許多變更，包括 C++ 語言本身、C++ 標準程式庫、C 執行階段 (CRT) 以及 MFC 和 ATL 這類其他程式庫。 因此，從較舊版 Visual Studio 升級應用程式時，您可能會在先前編譯無誤的程式碼中遇到編譯器和連結器錯誤及警告。 原始程式碼基底越舊，這類錯誤的可能性就越大。 本概觀摘要說明您可能會遇到的最常見問題類別，並提供更多詳細資訊的連結。
 
-注意︰過去，建議應該一次以一個版本的累加方式執行跨數個 Visual Studio 版本的升級。 我們不再建議這種方法。 我們發現，不論程式碼基底多舊，升級至目前 Visual Studio 版本幾乎一律較為簡單。
+> [!NOTE] 
+> 以往，我們建議應一次一個版本，以累加方式執行跨越數個 Visual Studio 版本的升級。 我們不再建議這種方法。 我們發現，不論程式碼基底多舊，升級至目前 Visual Studio 版本幾乎一律較為簡單。
 
 有關升級程序的問題或意見都可以傳送至 vcupgrade@microsoft.com。
 
@@ -29,7 +30,7 @@ ms.locfileid: "33848511"
 
 ### <a name="toolset"></a>Toolset
 
-.obj 和 .lib 檔案格式定義良好並且極少變更。 有時會針對這些檔案格式進行新增，但這些新增通常不會影響較新工具組使用較舊工具組所產生的物件檔案和程式庫。 這裡最大的一個例外狀況是您使用 [/GL (整個程式最佳化)](../build/reference/gl-whole-program-optimization.md) 進行編譯。 如果您使用 **/GL** 進行編譯，則只能使用用來產生目的檔的相同工具組連結該產生的目的檔。 因此，如果您使用 **/GL** 以及使用 Visual Studio 2017 (v141) 編譯器產生目的檔，則必須使用 Visual Studio 2017 (v141) 連結器連結該目的檔。 原因是目的檔的內部資料結構在工具組的主要版本中不穩定，而且較新的工具組不了解較舊的資料格式。
+.obj 和 .lib 檔案格式定義良好並且極少變更。 有時會針對這些檔案格式進行新增，但這些新增通常不會影響較新工具組使用較舊工具組所產生的物件檔案和程式庫。 這裡最大的一個例外狀況是您使用 [/GL (整個程式最佳化)](../build/reference/gl-whole-program-optimization.md) 進行編譯。 如果您使用 `/GL` 進行編譯，則只能使用用來產生目的檔的相同工具組來連結所產生的目的檔。 因此，如果您使用 `/GL` 以及使用 Visual Studio 2017 (v141) 編譯器產生目的檔，則必須使用 Visual Studio 2017 (v141) 連結器來加以連結。 原因是目的檔的內部資料結構在工具組的主要版本中不穩定，而且較新的工具組不了解較舊的資料格式。
 
 C++ 沒有穩定的應用程式二進位介面 (ABI)。 Visual Studio 會為版本的所有次要版本維持穩定的 C++ ABI。 例如，Visual Studio 2017 和其所有更新都是與二進位檔相容。 但是，在 Visual Studio 的主要版本之間，ABI 不一定相容 (2015 和 2017 除外，兩者_皆與_二進位檔相容)。 即，我們可能會對 C++ 類型版面配置、名稱裝飾、例外狀況處理和 C++ ABI 的其他部分進行重大變更。 因此，如果您的目的檔包含具有 C++ 連結的外部符號，則該目的檔可能未正確地連結到使用 工具組之不同主要版本所產生的目的檔。 請注意，這裡的「可能無法運作」有許多可能的結果︰連結可能完全失敗 (例如，如果名稱裝飾已變更)、連結可能成功但項目無法在執行階段運作 (例如，類型版面配置已變更)，或項目在許多情況下可能可以運作且不會發生錯誤。 也請注意，雖然 C++ ABI 不穩定，但是 COM 所需的 C ABI 和 C++ ABI 子集則十分穩定。
 
@@ -88,11 +89,11 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 
-(在 Microsoft Visual C++ 6.0 和較舊版中，`wchar_t` 並未實作為內建類型，而是在 wchar.h 中宣告為不帶正負號短整數的 typedef)。在 C++ 標準中，`wchar_t` 必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從較舊版的 Visual Studio 升級，並且因為程式碼嘗試以隱含方式將 `wchar_t` 轉換成 `unsigned short` 而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 **/Zc:wchar_t-**。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+(在 Microsoft Visual C++ 6.0 和更舊版本中，**wchar_t** 並未實作為內建類型，而是在 wchar.h 中宣告為 unsigned short 的 typedef。)C++ 標準要求 **wchar_t** 必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用連結器選項 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升級
 
-**/NODEFAULTLIB** 連結器選項 (或「略過所有預設程式庫」連結器屬性) 會告訴連結器不要在預設程式庫 (例如 CRT) 中自動連結。 這表示每個程式庫都必須個別列為輸入。 此程式庫清單提供於 [專案屬性] 對話方塊之 [連結器] 區段的 [其他相依性] 屬性中。
+`/NODEFAULTLIB` 連結器選項 (或「略過所有預設程式庫」連結器屬性) 會告訴連結器不要在預設程式庫 (例如 CRT) 中自動連結。 這表示每個程式庫都必須個別列為輸入。 此程式庫清單提供於 [專案屬性] 對話方塊之 [連結器] 區段的 [其他相依性] 屬性中。
 
 因為部分預設程式庫的名稱已變更，所以升級時，使用此選項的專案會出現問題。 因為每個程式庫都必須列在 [其他相依性] 屬性中或連結器命令列上，所以您必須更新程式庫清單以使用目前名稱。
 
@@ -106,13 +107,13 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 |msvcrt.lib|ucrt.lib、vcruntime.lib|
 |msvcrtd.lib|ucrtd.lib、vcruntimed.lib|
 
-如果您使用也會略過預設程式庫的 **/ENTRY** 選項或 **/NOENTRY** 選項，則也會出現相同問題。
+如果您使用也會略過預設程式庫的 `/ENTRY` 選項或 `/NOENTRY` 選項，則也會出現相同問題。
 
 ## <a name="errors-due-to-improved-language-conformance"></a>因改善的語言一致性而造成的錯誤
 
 多年來，Microsot Visual C++ 編譯器持續改善其與 C++ 標準的一致性。 因為編譯器正確地標幟先前略過或明確允許的錯誤，所以使用較舊版本編譯的程式碼可能無法在 Visual Studio 2017 中編譯。
 
-例如，在 MSVC 的歷程記錄中，**/Zc:forScope** 為早期推出的參數。 它允許不一致的迴圈變數行為。 該參數現在已被取代，可能會在未來的版本中移除。 強烈建議您不要在升級程式碼時使用該參數。 如需詳細資訊，請參閱 [/Zc:forScope- 已被取代](porting-guide-spy-increment.md#deprecated_forscope)。
+例如，在 MSVC 的歷程記錄中，`/Zc:forScope` 為早期推出的參數。 它允許不一致的迴圈變數行為。 該參數現在已被取代，可能會在未來的版本中移除。 強烈建議您不要在升級程式碼時使用該參數。 如需詳細資訊，請參閱 [/Zc:forScope- 已被取代](porting-guide-spy-increment.md#deprecated_forscope)。
 
 您在升級時可能會看到的其中一個常見編譯器錯誤範例，是將非 const 引數傳遞至 const 參數。 舊版編譯器不一定會將其標幟為錯誤。 如需詳細資訊，請參閱[編譯器的更嚴格轉換](porting-guide-spy-increment.md#stricter_conversions)。
 
@@ -122,17 +123,17 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 \<stdint.h> 標頭定義在所有平台上都一定會有所指定長度的 typedef 和巨集，這點與內建整數類型不同。 例如 `uint32_t` 和 `int64_t` 就是範例。 \<stdint.h> 標頭新增於 Visual Studio 2010。 2010 之前所撰寫的程式碼可能會提供這些類型的私用定義，而這些定義不一定是與 \<stdint.h> 定義一致。
 
-如果錯誤是 C2371，並涉及 stdint 類型，可能表示類型定義於程式庫或協力廠商程式庫檔案的標頭中。 升級時，您應該排除 \<stdint.h> 類型的所有自訂定義，但請先比較自訂定義與目前標準定義，確定未造成新的問題。
+如果錯誤是 C2371，並涉及 `stdint` 類型，可能表示類型定義於程式庫或協力廠商程式庫檔案的標頭中。 升級時，您應該排除 \<stdint.h> 類型的所有自訂定義，但請先比較自訂定義與目前標準定義，確定未造成新的問題。
 
-您可以按下 F12 [移至定義]，來查看定義討論中類型的位置。
+您可以按下 **F12** (**移至定義**)，來查看有疑義的類型在何處定義。
 
-這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面] 對話方塊中，開啟 [C/C++] > [進階] 頁面，然後將 [顯示 Include 檔] 設為 [是]。 然後重建您的專案，並查看輸出視窗中的 #includes 清單。 每個標頭都會縮排在包含它的標頭下方。
+這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面] 對話方塊中，開啟 [C/C++] > [進階] 頁面，然後將 [顯示 Include 檔] 設為 [是]。 然後重建您的專案，並查看輸出視窗中的 `#include` 清單。 每個標頭都會縮排在包含它的標頭下方。
 
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函式的錯誤
 
 多年來，已對 C 執行階段進行許多變更。 已新增許多安全版本的函式，並已移除一些函式。 此外，如本文稍早所述，已在 Visual Studio 2015 中將 Microsoft 的 CRT 實作重構為新的二進位檔和相關聯的 .lib 檔案。
 
-如果錯誤涉及 CRT 函式，請搜尋 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)，以查看這些主題是否包含任何其他資訊。 如果錯誤是「LNK2019 無法解析的外部」，請確定尚未移除函式。 否則，如果您確定函式仍然存在，而且呼叫程式碼正確，請確認您的專案是否使用 **/NODEFAULTLIB**。 如果是的話，則您需要更新程式庫清單，讓專案使用新的通用 (UCRT) 程式庫。 如需詳細資訊，請參閱上方有關程式庫和相依性的章節。
+如果錯誤涉及 CRT 函式，請搜尋 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)，以查看這些主題是否包含任何其他資訊。 如果錯誤是「LNK2019 無法解析的外部」，請確定尚未移除函式。 否則，如果您確定函式仍然存在，而且呼叫程式碼正確，請確認您的專案是否使用 `/NODEFAULTLIB`。 如果是的話，則您需要更新程式庫清單，讓專案使用新的通用 (UCRT) 程式庫。 如需詳細資訊，請參閱上方有關程式庫和相依性的章節。
 
 如果錯誤涉及 `printf` 或 `scanf`，請確定您未私自定義兩者其一不含 stdio.h。 若是如此，請移除私人定義或 legacy\_stdio\_definitions.lib 的連結。 您可於 [組態屬性] > [連結器] > [輸入] 下的 [屬性頁] 對話方塊中，於 [其他相依性] 屬性設定此項目。 如果您連結到 Windows SDK 8.1 或較舊版，則請新增 legacy\_stdio\_definitions.lib。
 
@@ -160,7 +161,7 @@ C++ 標準現在指定從不帶正負號到帶正負號整數值的轉換視為�
 
 ### <a name="windows-version"></a>Windows 版本
 
-升級直接或間接使用 Windows API 的程式時，您需要決定要支援的最小 Windows 版本。 在大部分情況下，Windows 7 是不錯的選擇。 如需詳細資訊，請參閱[標頭檔問題](porting-guide-spy-increment.md#header_file_problems)。 WINVER 巨集定義設計您的程式在其上執行的最舊 Windows 版本。 如果您的 MFC 程式將 WINVER 設為 0x0501 (Windows XP)，則因為 MFC 不再支援 XP，所以會收到警告，即使編譯器本身具有 XP 模式也是一樣。  
+升級直接或間接使用 Windows API 的程式時，您需要決定要支援的最小 Windows 版本。 在大部分情況下，Windows 7 是不錯的選擇。 如需詳細資訊，請參閱[標頭檔問題](porting-guide-spy-increment.md#header_file_problems)。 `WINVER` 巨集會定義您的程式應執行的最舊 Windows 版本。 如果您的 MFC 程式將 WINVER 設為 0x0501 (Windows XP)，則因為 MFC 不再支援 XP，所以會收到警告，即使編譯器本身具有 XP 模式也是一樣。  
 
 如需詳細資訊，請參閱[更新目標 Windows 版本](porting-guide-spy-increment.md#updating_winver)和[更多過時的標頭檔](porting-guide-spy-increment.md#outdated_header_files)。
 
@@ -170,13 +171,13 @@ ATL 和 MFC 是相當穩定的 API，但偶而會進行變更。 如需詳細資
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 已定義於 MSVCRTD.lib 中
 
-MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC 程式庫之間的順序問題。 需要先連結 MFC，才能提供 new 和 delete 運算子。 若要修正錯誤，請使用 /NODEFAULTLIB 參數來忽略這些預設程式庫︰MSVCRTD.lib 和 mfcs140d.lib。 然後將這些相同的程式庫新增為其他相依性。
+MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC 程式庫之間的順序問題。 需要先連結 MFC，才能提供 new 和 delete 運算子。 若要修正錯誤，請使用 `/NODEFAULTLIB` 參數來忽略這些預設程式庫︰MSVCRTD.lib 和 mfcs140d.lib。 然後將這些相同的程式庫新增為其他相依性。
 
 ## <a name="32-vs-64-bit"></a>32 與 64 位元
 
 如果您的原始程式碼是針對 32 位元系統所編譯，則可以選擇建立 64 位元版本，而不是新的 32 位元應用程式，或是包含新的 32 位元應用程式。 一般而言，您應該先以 32 位元模式編譯程式，然後嘗試 64 位元。 針對 64 位元進行編譯十分簡單，但在部分情況下，它可以顯示 32 位元組建所隱藏的 Bug。
 
-此外，您應該注意下列項目可能發生的編譯時期和執行階段問題：指標大小、時間和大小值，以及 printf 和 scanf 函式中的格式規範。 如需詳細資訊，請參閱[針對 64 位元 x64 目標設定 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)。 如需其他移轉提示，請參閱 [Programming Guide for 64-bit Windows](https://msdn.microsoft.com/library/windows/desktop/bb427430\(v=vs.85\).aspx) (64 位元 Windows 程式設計指南)。
+此外，您應該注意下列項目可能發生的編譯時期和執行階段問題：指標大小、時間和大小值，以及 printf 和 scanf 函式中的格式規範。 如需詳細資訊，請參閱[針對 64 位元 x64 目標設定 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)。 如需其他移轉提示，請參閱 [Programming Guide for 64-bit Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows) (64 位元 Windows 程式設計指南)。
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 與 MBCS/ASCII
 

@@ -1,7 +1,7 @@
 ---
 title: 地區設定名稱、語言和國家/地區字串 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606731"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578420"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>地區設定名稱、語言和國家/地區字串
 
@@ -44,9 +44,9 @@ ms.locfileid: "39606731"
 
 字碼頁是與地區設定相關聯的 ANSI/OEM 字碼頁。 當您以語言或是以語言和國家/地區指定地區設定時，便會為您判定字碼頁。 特殊值 `.ACP` 會指定國家/地區的 ANSI 字碼頁。 特殊值 `.OCP` 會指定國家/地區的 OEM 字碼頁。 例如，如果您指定 `"Greek_Greece.ACP"` 作為地區設定，地區設定便會儲存為 `Greek_Greece.1253` (希臘文的 ANSI 字碼頁)。如果您指定 `"Greek_Greece.OCP"` 作為地區設定，則會儲存為 `Greek_Greece.737` (希臘文的 OEM 字碼頁)。 如需字碼頁的詳細資訊，請參閱 [Code Pages](../c-runtime-library/code-pages.md)。 如需 Windows 上受支援字碼頁的清單，請參閱 [Code Page Identifiers (字碼頁識別項)](/windows/desktop/Intl/code-page-identifiers)。
 
-如果您只使用字碼頁指定地區設定，則會使用系統預設的語言和國家/地區。 例如，如果您指定 `".1254"` (ANSI 土耳其文) 作為配置英文 (美國) 系統的地區設定，儲存的地區設定便是 `English_United States.1254`。 因為這可能會導致不一致的行為，所以不建議使用這個格式。
+如果您僅使用字碼頁來指定地區設定，就會使用 [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename) 回報的使用者預設語言和國家/地區。 例如，如果您指定 `".1254"` (ANSI 土耳其文) 作為配置英文 (美國) 使用者的地區設定，儲存的地區設定便是 `English_United States.1254`。 因為這可能會導致不一致的行為，所以不建議使用這個格式。
 
-`C` 的 *locale* 引數值會指定 C 轉譯的最小 ANSI 符合環境。 `C` 地區設定會假設每個 `char` 資料類型都是 1 位元組，而其值永遠小於 256。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。
+`C` 的 *locale* 引數值會指定 C 轉譯的最小 ANSI 符合環境。 `C` 地區設定會假設每個 **char** 資料類型都是 1 位元組，而其值永遠小於 256。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。
 
 藉由使用 `setlocale` 分類，可以為 `_wsetlocale` 和 `LC_ALL` 函式同時指定所有地區設定分類。 藉由使用具有此格式的地區設定引數，您可以將分類全設定為相同的地區設定，或是為每個分類個別設定：
 

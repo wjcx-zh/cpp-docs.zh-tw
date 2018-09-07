@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238561"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900663"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 專案
 
@@ -221,6 +221,8 @@ JSON IntelliSense 可協助您編輯 CMakeSettings.json 檔案：
 1. **variables**：包含成對的 CMake 變數名稱和值，會以 **-D**_name_**=**_value_ 形式傳遞至 CMake。 如果您的 CMake 專案建置指示指定直接將任何變數新增至 CMake 快取檔案，建議您改為在此新增。
 1. **cmakeCommandArgs**：指定您要傳遞至 CMake.exe 的任何其他參數。
 1. **configurationType**：定義所選產生器的組建組態類型。 目前支援的值為 "Debug"、"MinSizeRel"、"Release" 和 "RelWithDebInfo"。
+1. **ctestCommandArgs**：指定在執行測試時要傳遞到 CTest 的額外參數。
+1. **buildCommandArgs**：指定要傳遞到基礎建置系統的額外參數。 例如，在使用 Ninja 產生器時傳遞 -v 會強制 Ninja 輸出命令列。
 
 ### <a name="environment-variables"></a>環境變數
 

@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f76b6f61eb5d8e7370e61e9cc1f466bdfb4c43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410836"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592715"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 應用程式、Windows 執行階段和 C 執行階段
 
-通用 Windows 平台 (UWP) 應用程式是在 Windows 執行階段 (執行於 [!INCLUDE[win8](../build/reference/includes/win8_md.md)]) 中執行的程式。 Windows 執行階段是可信賴的環境，控制可供 UWP 應用程式使用的函式、變數及資源。 不過，根據設計，Windows 執行階段限制會讓大多數的 C 執行階段程式庫 (CRT) 功能無法在 UWP 應用程式中使用。
+通用 Windows 平台 (UWP) 應用程式是在 Windows 執行階段 (執行於 Windows 8) 中執行的程式。 Windows 執行階段是可信賴的環境，控制可供 UWP 應用程式使用的函式、變數及資源。 不過，根據設計，Windows 執行階段限制會讓大多數的 C 執行階段程式庫 (CRT) 功能無法在 UWP 應用程式中使用。
 
 「Windows 執行階段」不支援下列 CRT 功能：
 

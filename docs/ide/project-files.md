@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327225"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578612"
 ---
 # <a name="project-files"></a>專案檔
 Visual C++ 專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並包含建置 Visual C++ 專案所需的資訊。  
   
 ## <a name="example"></a>範例  
- 下列範例 .vcxproj 檔案的產生方式，是在 [新專案] 對話方塊中指定 [Win32 主控台應用程式]。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或 [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 中的 [建置] 命令。 (此範例無法處理，因為未提供必要的原始檔和標頭檔。)如需專案檔中的 XML 項目的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
+ 下列範例 .vcxproj 檔案的產生方式，是在 [新專案] 對話方塊中指定 [Win32 主控台應用程式]。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或在 IDE 中使用**建置**命令。 (此範例無法處理，因為未提供必要的原始檔和標頭檔。)如需專案檔中的 XML 項目的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

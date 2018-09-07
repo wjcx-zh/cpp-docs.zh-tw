@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5789e353a6e15d4da3f5754d9d4d91821359d14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845862"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578275"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>針對 UNIX 使用者的 Visual C++ 簡介
 
@@ -37,7 +37,7 @@ ms.locfileid: "33845862"
   
 ## <a name="debugging-your-code"></a>偵錯您的程式碼  
 
-如果您使用命令列並在開發工作站上執行應用程式，當您的程式碼遇到記憶體存取違規、未處理的例外狀況或其他無法復原的錯誤時，便會顯示一個可執行 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 偵錯工具的對話方塊。 如果您按一下 [確定]，則會啟動 Visual Studio 開發環境，並將偵錯工具開啟到失敗點。 您可以透過這個方式來偵錯應用程式，在這種情況下，只有在以 [/Z7、/Zi、/ZI (偵錯資訊格式)](../build/reference/z7-zi-zi-debug-information-format.md) 參數編譯時，才能使用原始程式碼。 如需詳細資訊，請參閱[偵錯原生程式碼](/visualstudio/debugger/debugging-native-code)和[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
+如果您使用命令列並在開發工作站上執行應用程式，當您的程式碼遇到記憶體存取違規、未處理的例外狀況或其他無法復原的錯誤時，便會顯示一個可執行 Visual Studio 偵錯工具的對話方塊。 如果您按一下 [確定]，則會啟動 Visual Studio 開發環境，並將偵錯工具開啟到失敗點。 您可以透過這個方式來偵錯應用程式，在這種情況下，只有在以 [/Z7、/Zi、/ZI (偵錯資訊格式)](../build/reference/z7-zi-zi-debug-information-format.md) 參數編譯時，才能使用原始程式碼。 如需詳細資訊，請參閱[偵錯原生程式碼](/visualstudio/debugger/debugging-native-code)和[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   
 ## <a name="using-the-development-environment"></a>使用開發環境  
 
@@ -47,7 +47,7 @@ ms.locfileid: "33845862"
   
 ## <a name="importing-your-existing-code"></a>匯入現有的程式碼 
  
-您可以使用 C++ 編譯器來建置現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，然後放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 專案。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
+您可以使用 C++ 編譯器來建置現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，然後放入 Visual Studio 專案中。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
   
 ## <a name="creating-a-new-project"></a>建立新專案  
 
@@ -61,13 +61,13 @@ ms.locfileid: "33845862"
 
 Microsoft Visual C++ 編譯器實作標準 C++ 程式設計語言的數個延伸模組，以支援 Windows 作業系統的程式設計。 這些擴充功能可用來指定儲存類別屬性、函式呼叫慣例和基底定址等。 如需所有支援之 C++ 延伸模組的完整清單，請參閱 [Microsoft 專用的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
   
-您可以使用 **/Za** 編譯器選項，來停用 C++ 的所有 Microsoft 特定延伸模組。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 **/Za** 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需有關 C++ 編譯器一致性的詳細資訊，請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)與[非標準行為](../cpp/nonstandard-behavior.md)。  
+您可以使用 `/Za` 編譯器選項，來停用 C++ 的所有 Microsoft 特定擴充功能。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 `/Za` 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需有關 C++ 編譯器一致性的詳細資訊，請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)與[非標準行為](../cpp/nonstandard-behavior.md)。  
   
 ## <a name="precompiled-headers"></a>先行編譯標頭檔  
 
 Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編譯的選項，包括內嵌程式碼。 您可以使用這項效能功能來編譯穩定的程式碼主體，並將程式碼的編譯狀態儲存在檔案中，然後在後續編譯期間，將先行編譯的程式碼與仍在開發中的程式碼結合。 由於穩定的程式碼不需要重新編譯，因此每個後續編譯的速度會更快。  
   
-預設會在 **stdafx.h** 和 **stdafx.cpp** 檔案中指定所有先行編譯的程式碼。 除非您取消選取 [先行編譯標頭檔] 選項，否則 [新增專案精靈] 會自動為您建立這些檔案。 如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../build/reference/creating-precompiled-header-files.md)。  
+根據預設，會在 stdafx.h 和 stdafx.cpp 檔案中指定所有先行編譯的程式碼。 除非您取消選取 [先行編譯標頭檔] 選項，否則 [新增專案精靈] 會自動為您建立這些檔案。 如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../build/reference/creating-precompiled-header-files.md)。  
   
 ## <a name="related-sections"></a>相關章節  
 

@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705435"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42583909"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
@@ -39,7 +39,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="installation"></a>安裝 
 
-複製 GitHub 的 vcpkg 存放庫：https://github.com/Microsoft/vcpkg。 您可以下載到您偏好的任何資料夾位置。
+複製 GitHub 的 vcpkg 存放庫： https://github.com/Microsoft/vcpkg。 您可以下載到您偏好的任何資料夾位置。
 
 在根資料夾中執行啟動載入器： 
 

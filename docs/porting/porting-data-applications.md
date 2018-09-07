@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c148c805cb4ddc5e012e9de5e8e5f7e207f47dc3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839877"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578196"
 ---
 # <a name="porting-data-applications"></a>移植資料應用程式
 Visual C++ 多年來提供了數種使用資料庫的方式。 2011 年，Microsoft 宣佈它正在校準 ODBC 做為慣用技術，以從原生程式碼存取 SQL Server 產品。 ODBC 是一種業界標準，使用它可讓您在多個平台和資料來源間自由攜帶程式碼。 大多數的 SQL 資料庫產品和許多 NoSQL 產品都支援 ODBC。 您可以呼叫低階的 ODBC API 直接使用 ODBC，或者可以使用 MFC ODBC 包裝函式類別，或協力廠商的 C++ 包裝函式程式庫。 
@@ -36,11 +36,12 @@ OLE DB 是以 COM 規格為基礎的低階高效 API，只有 Windows 提供支�
 
 如果您使用 C++/CLI，就可以繼續像平常一樣使用 ADO.NET。 如需詳細資訊，請參閱[使用 ADO.NET 存取資料 (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 和[存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)。  
   
--   除了 ODBC 包裝函式類別，MFC 也提供資料存取物件 (DAO) 包裝函式類別連接到 Access 資料庫。  不過，DAO 已淘汰。 所有以 CDaoDatabase 或 CDaoRecordset 為基礎的程式碼都應該升級。 
+- 除了 ODBC 包裝函式類別，MFC 也提供資料存取物件 (DAO) 包裝函式類別連接到 Access 資料庫。  不過，DAO 已淘汰。 所有以 `CDaoDatabase` 或 `CDaoRecordset` 為基礎的程式碼均應升級。 
 
 如需 Microsoft Windows 資料存取技術記錄的相關資訊，請參閱 [Microsoft Data Access Components (Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components) (Microsoft 資料存取元件 (維基百科))。  
 
 ## <a name="see-also"></a>請參閱  
- [Visual C++ 中的資料存取](../data/data-access-in-cpp.md)  
- [Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) (Microsoft 開放式資料庫連接 (ODBC))  
- [Data Access Technologies Road Map](https://msdn.microsoft.com/en-us/library/ms810810.aspx) (資料存取技術藍圖)  
+ 
+[Visual C++ 中的資料存取](../data/data-access-in-cpp.md)  
+[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) (Microsoft 開放式資料庫連接 (ODBC))  
+[Data Access Technologies Road Map](https://msdn.microsoft.com/library/ms810810.aspx) (資料存取技術藍圖)  

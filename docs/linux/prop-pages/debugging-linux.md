@@ -12,12 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 55f07d8903d8110410648e352d364151bf6d2a73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df57a884186fe33d91de78647cc225f3a63a6f9f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331096"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578354"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++ 偵錯工具屬性 (Linux C++)
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337245"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578240"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 Visual C++ 工具和功能
 
@@ -31,7 +31,7 @@ ms.locfileid: "33337245"
 
 ||||||
 |-|-|-|-|-|
-|平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio 企業版|
+|Platform|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio 企業版|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台 ((電話、平板電腦、電腦、Xbox、IoT 和 HoloLens))|X||X|X|
 |Microsoft Store 8.1|||X|X|
@@ -45,8 +45,8 @@ ms.locfileid: "33337245"
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |32 位元 x86 編譯器|X|X|X|X|
 |X86_arm 跨平台編譯器|X||X|X|
-|64 位元 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 編譯器|||X|X|
-|X86_ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 跨平台編譯器|X|X|X|X|
+|64 位元 x64 編譯器|||X|X|
+|X86_ x64 跨平台編譯器|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>程式庫和標頭
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841898"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578274"
 ---
 # <a name="floating-point-migration-issues"></a>浮點數的移轉問題  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33841898"
   
 許多浮點數學程式庫函式對不同的 CPU 架構會有不同的實作。 例如，32 位元 x86 CRT 的實作可能和 64 位元 x64 CRT 的實作不同。 此外，某些函式對指定的 CPU 架構可能有多種實作。 在執行階段，會根據 CPU 支援的指令集動態選取最有效率的實作。 例如，在 32 位元 x86 CRT，有些函式同時有 x87 實作和 SSE2 實作。 在支援 SSE2 的 CPU 上執行時，會使用較快的 SSE2 實作。 在不支援 SSE2 的 CPU 上執行時，會使用較慢的 x87 實作。 您可能會在移轉舊版程式碼時看到這種情況，因為 Visual Studio 2012 已將預設 x86 編譯器架構選項變更為 [/arch:SSE2](../build/reference/arch-x86.md)。 由於數學程式庫函式的不同實作可能會使用不同的 CPU 指令和不同的演算法來產生結果，因此函式在不同的平台中可能會產生不同的結果。 在大部分情況下，結果是在正確四捨五入結果的 +/-1 ulp 內，但實際的結果可能因 CPU 而異。  
   
-相較於舊程式碼與新程式碼來看，即使是使用相同編譯器旗標，Visual Studio 不同浮點數模式的程式碼產生正確性增強功能，也可能影響浮點數運算的結果。 例如，在指定 [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (預設值) 或 **/fp:strict** 時，Visual Studio 2010 所產生的程式碼可能並未正確透過運算式來傳播中繼的非數字 (NaN) 值。 因此，如果某些運算式是在舊版編譯器中提供數值結果，現在即可正確產生 NaN 結果。 您可能也會發覺到差異，因為針對 **/fp:fast** 啟用的程式碼最佳化現可利用更多的處理器功能。 這些最佳化可以使用較少的指示，但或許會影響產生的結果，因為系統已移除部分先前可見的中繼作業。  
+相較於舊程式碼與新程式碼來看，即使是使用相同編譯器旗標，Visual Studio 不同浮點數模式的程式碼產生正確性增強功能，也可能影響浮點數運算的結果。 例如，在指定 [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (預設) 或 `/fp:strict` 時，Visual Studio 2010 所產生的程式碼可能並未正確透過運算式來傳播不是數字 (NaN) 的中繼值。 因此，如果某些運算式是在舊版編譯器中提供數值結果，現在即可正確產生 NaN 結果。 您可能也會發覺到差異，因為針對 `/fp:fast` 啟用的程式碼最佳化現可利用更多的處理器功能。 這些最佳化可以使用較少的指示，但或許會影響產生的結果，因為系統已移除部分先前可見的中繼作業。  
   
 ## <a name="how-to-get-identical-results"></a>如何取得相同的結果  
   

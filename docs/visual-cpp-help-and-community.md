@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851633"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583981"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
@@ -34,7 +34,7 @@ ms.locfileid: "33851633"
 |標題|描述|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
-|[Windows 開發人員中心](http://go.microsoft.com/fwlink/p/?LinkId=256534)|包含如何使用 C++ 和其他語言開發 [!INCLUDE[win8](build/reference/includes/win8_md.md)]應用程式的相關資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
+|[Windows 開發人員中心](http://go.microsoft.com/fwlink/p/?LinkId=256534)|包含如何使用 C++ 和其他語言開發 Windows 8 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
 
 ### <a name="online-and-offline-documentation"></a>線上和離線文件
 

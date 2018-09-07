@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16ec6be15635ebfc085615015b1221231645970d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5063eae507ee6c83cbed2ae7fc92679098b91f36
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894790"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104615"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (匯出函式)
 
@@ -36,26 +36,35 @@ ms.locfileid: "43894790"
 
 ## <a name="remarks"></a>備註
 
-使用 /EXPORT 選項時，您可以從您的程式匯出的函式，以便讓其他程式可以呼叫此函式。 您也可以匯出資料。 匯出通常是在 DLL 中定義。
+**/匯出**選項會指定函式或資料的項目，若要匯出從您的程式，讓其他程式可以呼叫此函式，或使用的資料。 匯出通常是在 DLL 中定義。
 
-*Entryname*是函式或資料的項目名稱，因為它是可供呼叫端程式。 `ordinal` 指定的索引，範圍介於 1 到 65535 之間的匯出資料表如果您未指定`ordinal`，連結會將指派其中一個。 **NONAME**關鍵字匯出函式只能做為序數，而不*entryname*。
+*Entryname*是函式或資料的項目名稱，因為它是可供呼叫端程式。 *序數*指定範圍 1 到 65535 之間的匯出資料表的索引，如果您未指定*序數*，連結會將指派其中一個。 **NONAME**關鍵字匯出函式只能做為序數，而不*entryname*。
 
 **資料**關鍵字會指定匯出的項目是資料的項目。 必須使用宣告的用戶端程式中的資料項目**extern __declspec （dllimport)**。
 
-有三種方法匯出定義，在 建議使用的順序列出：
+有四種方法匯出定義，在 建議使用的順序列出：
 
 1. [__declspec （dllexport)](../../cpp/dllexport-dllimport.md)原始程式碼中
 
-2. [匯出](../../build/reference/exports.md).def 檔案中的陳述式
+1. [匯出](../../build/reference/exports.md).def 檔案中的陳述式
 
-3. LINK 命令中的 /EXPORT 規格
+1. LINK 命令中的 /EXPORT 規格
 
-這三種方法可以用於相同的程式。 當組建的程式包含匯出的連結時，它也會建立匯入程式庫，除非在組建中使用.exp 檔。
+1. A[註解](../../preprocessor/comment-c-cpp.md)指示詞中的原始程式碼，表單的`#pragma comment(linker, "/export: definition ")`。
+
+所有這些方法可以用於相同的程式。 當組建的程式包含匯出的連結時，它也會建立匯入程式庫，除非在組建中使用.exp 檔。
 
 連結使用裝飾形式的識別項。 建立的.obj 檔案時，編譯器就會裝飾識別項。 如果*entryname*指定連結器在其未裝飾形成 （因為它會出現在原始程式碼中），連結會嘗試比對的名稱。 如果它找不到所需的唯一相符項目，連結就會發出錯誤訊息。 使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具，以取得[裝飾名稱](../../build/reference/decorated-names.md)時您必須指定至連結器識別項格式。
 
 > [!NOTE]
 > 未指定 C 識別項宣告的裝飾的形式`__cdecl`或`__stdcall`。
+
+如果您要匯出未裝飾的函式名稱，並有不同的匯出，根據組建組態 （例如，在 32 位元或 64 位元的組建），您可以使用不同的.DEF 檔，每個組態。 （條件式的前置處理器指示詞不允許在.DEF 檔中）。或者，您可以使用`#pragma comment`指示詞之前的函式宣告如下所示，其中`PlainFuncName`是未裝飾的名稱，和`_PlainFuncName@4`是函式的裝飾的名稱：
+
+```cpp
+#pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+BOOL CALLBACK PlainFuncName( Things * lpParams)
+```
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 

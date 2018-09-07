@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962913"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107468"
 ---
 # <a name="list-class"></a>list 類別
 
@@ -128,9 +128,11 @@ class list
 
 ### <a name="parameters"></a>參數
 
-*型別*来儲存在清單中的項目資料類型。
+*類型*<br/>
+要存放在清單中的元素資料類型。
 
-*配置器*表示預存配置器物件，封裝有關清單的配置和解除配置之記憶體的詳細資訊的型別。 這個引數為選擇性，而且預設值是**allocator**\<*類型*>。
+*配置器*<br/>
+代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數為選擇性，而且預設值是**allocator**\<*類型*>。
 
 ## <a name="remarks"></a>備註
 
@@ -250,15 +252,20 @@ void assign(
 
 ### <a name="parameters"></a>參數
 
-*第一個*第一個元素位置的項目範圍中要複製的引數清單。
+*第一個*<br/>
+複製來源的引數清單中，項目範圍的第一個項目的位置。
 
-*最後一個*複製引數清單的項目範圍之外的第一個元素的位置。
+*最後一個*<br/>
+複製來源的引數清單中，項目範圍之外第一個項目的位置。
 
-*計數*正在插入至清單的元素複本數目。
+*計數*<br/>
+插入清單中項目的複本數目。
 
-*Val*正在插入至清單項目的值。
+*val*<br/>
+插入清單中之項目的值。
 
-*IList* initializer_list，包含要插入的項目。
+*IList*<br/>
+initializer_list，包含要插入之項目。
 
 ### <a name="remarks"></a>備註
 
@@ -952,7 +959,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+*c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is "
         << *c1_Iter << endl;
 
@@ -983,11 +990,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>參數
 
-*其中*若要從清單中移除之項目的位置。
+*Where*<br/>
+要從清單中移除之元素項目的位置。
 
-*第一個*從清單中移除第一個元素的位置。
+*first*<br/>
+從清單中移除的第一個元素的位置。
 
-*最後一個*從清單中移除最後一個元素之後的位置。
+*最後一個*<br/>
+從清單中移除的最後一個元素之後的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1437,9 +1447,11 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>參數
 
-*右*與目標清單合併之引數清單。
+*right*<br/>
+要與目標清單合併的引數清單。
 
-*comp*比較運算子，用來排序目標清單的項目。
+*comp*<br/>
+比較運算子，用來排序目標清單的元素。
 
 ### <a name="remarks"></a>備註
 
@@ -1834,7 +1846,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;
+*c1_rIter = 40;
    cout << "The last element in the list is now " << *c1_rIter << "." << endl;
 }
 ```
@@ -1892,7 +1904,8 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*值，如果保留項目，將會導致從清單中的項目移除。
+*val*<br/>
+值，由項目持有時，會導致項目從清單移除。
 
 ### <a name="remarks"></a>備註
 
@@ -1949,7 +1962,8 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>參數
 
-*pred*一元述詞，如此，如果符合項目，該項目從清單刪除。
+*預測*<br/>
+一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。
 
 ### <a name="example"></a>範例
 
@@ -2099,9 +2113,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>參數
 
-*_Newsize*清單的新大小。
+*_Newsize*<br/>
+清單的新大小。
 
-*val*要加入至清單中，如果新大小大於新的項目值的原始大小。 如果省略此值，就會為新元素指派類別的預設值。
+*val*<br/>
+如果新大小大於原始大小，便是要新增到清單中之新元素的值。 如果省略此值，就會為新元素指派類別的預設值。
 
 ### <a name="remarks"></a>備註
 
@@ -2279,7 +2295,8 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>參數
 
-*comp*比較運算子，用來排序連續元素。
+*comp*<br/>
+用來排序連續元素的比較運算子。
 
 ### <a name="remarks"></a>備註
 
@@ -2350,15 +2367,20 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>參數
 
-*其中*前面要插入之目的地清單中的位置。
+*Where*<br/>
+目的地清單中的位置 (要在此位置之前插入)。
 
-*來源*要插入至目的地清單的 [來源] 清單。
+*Source*<br/>
+要插入至目的地清單的來源清單。
 
-*Iter*要從來源清單插入的項目。
+*Iter*<br/>
+要從來源清單插入的項目。
 
-*第一個*要從來源清單插入的範圍內的第一個項目。
+*第一個*<br/>
+要從來源清單插入的範圍中的第一個項目。
 
-*最後一個*之最後一個元素要從來源清單插入的範圍內的第一個位置。
+*最後一個*<br/>
+要從來源清單插入的範圍中的最後一個項目，這之後的第一個位置。
 
 ### <a name="remarks"></a>備註
 
@@ -2460,9 +2482,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>參數
 
-*右*提供要交換之元素的清單或清單項目會利用清單來交換*左*。
+*right*<br/>
+提供要交換之元素的清單或其項目要交換與清單的清單*左*。
 
-*左*清單，其項目是利用清單來交換*右*。
+*left*<br/>
+清單，其項目是利用清單來交換*右*。
 
 ### <a name="example"></a>範例
 
@@ -2525,7 +2549,8 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>參數
 
-*pred*二元述詞用來比較連續元素。
+*預測*<br/>
+供二元述詞用來比較連續元素。
 
 ### <a name="remarks"></a>備註
 

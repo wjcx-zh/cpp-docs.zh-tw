@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3ddab2c3dff6631b5cb775352a3bcb994d6abff3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958139"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109910"
 ---
 # <a name="addcv-class"></a>add_cv 類別
 
@@ -40,7 +40,8 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*T*来修改的類型。
+*T*<br/>
+要修改的類型。
 
 ## <a name="remarks"></a>備註
 

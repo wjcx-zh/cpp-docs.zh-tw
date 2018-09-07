@@ -92,12 +92,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcf3a5fcdb8c604dac368b60cf4a368bdb1c3f14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865750"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107515"
 ---
 # <a name="regexconstants-class"></a>regex_constants 類別
 
@@ -110,7 +110,7 @@ namespace regex_constants {
     enum syntax_option_type;
     enum match_flag_type;
     enum error_type;
- }
+}
 ```
 
 ## <a name="remarks"></a>備註
@@ -214,7 +214,7 @@ enum match_flag_type
 
 比對選項包括：
 
-`match_default`
+*match_default*<br/>
 
 `match_not_bol` -- 不會將目標序列中的第一個位置視為行首
 

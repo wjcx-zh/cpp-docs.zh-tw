@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7a7489c07572a9e3865698dc02988768983669
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960573"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104602"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 類別
 
@@ -369,8 +369,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要對應的索引鍵值。
+*Keyval*  
+要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -411,7 +411,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -486,7 +486,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -515,7 +515,7 @@ size_type bucket_size(size_type nbucket) const;
 ### <a name="parameters"></a>參數
 
 *nbucket*  
- Bucket 編號。
+Bucket 編號。
 
 ### <a name="remarks"></a>備註
 
@@ -556,7 +556,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket('a') == 7
 bucket_size(7) == 1
 ```
@@ -674,7 +674,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -880,8 +880,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要搜尋的索引鍵值。
+*Keyval*  
+要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -920,7 +920,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 count('A') == 0
 count('b') == 1
 count('C') == 0
@@ -981,7 +981,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 end()-begin() == 3
 begin()-end() == -3
 ```
@@ -1106,7 +1106,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -1201,8 +1201,8 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要搜尋的索引鍵值。
+*Keyval*  
+要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -1254,7 +1254,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 equal_range('x'):
 equal_range('b'): [b, 2]
 ```
@@ -1278,16 +1278,16 @@ size_type erase(
 ### <a name="parameters"></a>參數
 
 *Where*  
- 要移除之項目的位置。
+要移除之項目的位置。
 
 *第一個*  
- 要移除之第一個項目的位置。
+要移除之第一個項目的位置。
 
 *最後一個*  
- 緊接在要移除之最後一個項目後面的位置。
+緊接在要移除之最後一個項目後面的位置。
 
 *Key*  
- 要移除之項目的索引鍵值。
+要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1309,8 +1309,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要搜尋的索引鍵值。
+*Keyval*  
+要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -1355,7 +1355,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 find('A') == false
 find('b') == true: [b, 2]
 ```
@@ -1980,7 +1980,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2012,7 +2012,7 @@ void max_load_factor(float factor);
 ### <a name="parameters"></a>參數
 
 *factor*  
- 新的最大載入因數。
+新的最大載入因數。
 
 ### <a name="remarks"></a>備註
 
@@ -2076,7 +2076,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_bucket_count() == 8
@@ -2292,7 +2292,7 @@ void rehash(size_type nbuckets);
 ### <a name="parameters"></a>參數
 
 *nbuckets*  
- 要求的值區數目。
+要求的值區數目。
 
 ### <a name="remarks"></a>備註
 
@@ -2346,7 +2346,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 bucket_count() == 8
 load_factor() == 0.375
 max_load_factor() == 4
@@ -2419,7 +2419,7 @@ int main()
 ```
 
 ```Output
- [c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 size == 0
 empty() == true
 
@@ -2475,7 +2475,8 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>參數
 
-*右*来交換的容器。
+*right*<br/>
+要交換的容器。
 
 ### <a name="remarks"></a>備註
 
@@ -2581,7 +2582,7 @@ unordered_multimap(
 
 template <class InputIterator>
 unordered_multimap(
- InputIterator first, InputIterator last,
+InputIterator first, InputIterator last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
     const Comp& Comp = Pred(),
@@ -2596,7 +2597,7 @@ unordered_multimap(
 |*Al*|要儲存的配置器物件。|
 |*Comp*|要儲存的比較函式物件。|
 |*雜湊*|要儲存的雜湊函式物件。|
-|*bucket_count*|Bucket 最小數目。|
+|*Bucket_count*|Bucket 最小數目。|
 |*右邊*|要複製的容器。|
 |*IList*|從中複製項目的 initializer_list。|
 
@@ -2606,7 +2607,7 @@ unordered_multimap(
 
 所有建構函式也會初始化數個儲存值。 複製建構函式中，值取自*右*。 否則就是：
 
-bucket 最小數目為引數*Bucket_count*，如果存在，則它是所述的預設值由實作定義的值為`N0`。
+Bucket 最小數目為引數*Bucket_count*，如果存在，則它是所述的預設值由實作定義的值為`N0`。
 
 雜湊函式物件是引數*雜湊*，如果存在，則它是`Hash()`。
 
@@ -2733,9 +2734,9 @@ int main()
 
 ```Output
 [a, 1] [b, 2] [c, 3] [d, 4] [e, 5] [f, 6] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [5, g] [6, h] [7, i] [8, j] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [a, 1] [b, 2] [c, 3] [c, 3] [b, 2] [a, 1]
- [f, 6] [e, 5] [d, 4]
- [c, 3] [b, 2] [a, 1]
- [c, 3] [b, 2] [a, 1]
+[f, 6] [e, 5] [d, 4]
+[c, 3] [b, 2] [a, 1]
+[c, 3] [b, 2] [a, 1]
 ```
 
 ## <a name="value_type"></a>  unordered_multimap::value_type

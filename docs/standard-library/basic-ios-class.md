@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956839"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110014"
 ---
 # <a name="basicios-class"></a>basic_ios 類別
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>參數
 
-*Elem*型別。
+*Elem*<br/>
+類型。
 
-*Traits*型別的變數`char_traits`。
+*特性*<br/>
+類型為 `char_traits` 的變數。
 
 ## <a name="remarks"></a>備註
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>參數
 
-*sb*儲存輸入或輸出元素的標準緩衝區。
+*sb*<br/>
+要儲存輸入或輸出元素的標準緩衝區。
 
 ### <a name="remarks"></a>備註
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>參數
 
-*右*您想要複製其旗標的資料流。
+*right*<br/>
+您要複製其旗標的資料流。
 
 ### <a name="return-value"></a>傳回值
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>參數
 
-*Newexcept*您想要擲回例外狀況的旗標。
+*Newexcept*<br/>
+您要擲回例外狀況的旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>參數
 
-*Char*您要做為填滿字元的字元。
+*Char*<br/>
+您要當做填滿字元的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*Loc*地區設定字串。
+*當地語系化*<br/>
+地區設定字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>參數
 
-*_Sb*儲存輸入或輸出元素的標準緩衝區。
+*_Sb*<br/>
+要儲存輸入或輸出元素的標準緩衝區。
 
-*_Isstd*指定這是否為標準資料流。
+*_Isstd*<br/>
+指定這是否為標準資料流。
 
 ### <a name="remarks"></a>備註
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`ios_base`從中移動值的物件。
+*right*<br/>
+要從中移動值的 `ios_base` 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>參數
 
-*Char* **char**轉換。
+*Char*<br/>
+**Char**轉換。
 
-*預設值* **char**所要傳回如果不找到任何對等項目。
+*Default*<br/>
+**Char**所要傳回如果不找到任何對等項目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>參數
 
-*_Sb*資料流。
+*_Sb*<br/>
+資料流。
 
 ### <a name="remarks"></a>備註
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>參數
 
-*_State*来設定的其他旗標。
+*（_s)*<br/>
+要設定的其他旗標。
 
 ### <a name="remarks"></a>備註
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>參數
 
-*strbuf*成為讀取的緩衝區之資料流緩衝區。
+*strbuf*<br/>
+要成為讀取緩衝區的資料流緩衝區。
 
 ### <a name="remarks"></a>備註
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>參數
 
-*str*資料流。
+*str*<br/>
+資料流。
 
 ### <a name="return-value"></a>傳回值
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>參數
 
-*Char*来轉換的字元。
+*Char*<br/>
+要轉換的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>參數
 
-*右*`basic_ios`用來交換值的物件。
+*right*<br/>
+用來交換值的 `basic_ios` 物件。
 
 ### <a name="remarks"></a>備註
 

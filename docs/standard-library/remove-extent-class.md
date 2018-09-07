@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 749877c670d1c40f0cc7ff4d7e438fdd8c96ca5b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: dcd99de00e7cc5bf2689476df03c5d97d65e2be5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107376"
 ---
 # <a name="removeextent-class"></a>remove_extent 類別
 
@@ -40,7 +40,8 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*T*来修改的類型。
+*T*<br/>
+要修改的類型。
 
 ## <a name="remarks"></a>備註
 

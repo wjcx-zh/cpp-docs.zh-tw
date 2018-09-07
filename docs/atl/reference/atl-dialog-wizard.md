@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767708"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110033"
 ---
 # <a name="atl-dialog-wizard"></a>ATL 對話方塊精靈
 
@@ -35,7 +35,7 @@ ms.locfileid: "43767708"
 **簡短名稱**  
 設定 ATL 對話方塊物件的縮寫的名稱。 您提供的名稱會決定類別名稱和檔案 （.cpp 和.h） 名稱，除非您個別變更這些欄位。
 
-`Class`  
+**類別**  
 設定要建立之類別的名稱。 這個名稱根據您在中提供的名稱**簡短名稱**前面 'C'，類別名稱的一般前置詞加上。
 
 **.h 檔案**  

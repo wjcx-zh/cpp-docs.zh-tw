@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ba1a48fe9a4e7f0f8921861abeab2b76de3169c8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207717"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107370"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 類別
 
@@ -45,9 +45,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>參數
 
-*CharType*表示 ostreambuf_iterator 的字元類型的型別。 這個引數是選擇性的預設值是**char**。
+*CharType*<br/>
+類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選擇性的預設值是**char**。
 
-*Traits*表示 ostreambuf_iterator 的字元類型的型別。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*特性*<br/>
+類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
 
 ## <a name="remarks"></a>備註
 
@@ -124,17 +126,17 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
 \* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
+by charOutBuf are: OUT.
 *\
 ```
 
@@ -172,9 +174,9 @@ int main( )
 
 *charOut = 'a';
    charOut ++;
- *charOut  = 'b';
+*charOut  = 'b';
    charOut ++;
- *charOut = 'c';
+*charOut = 'c';
    cout << " are characters output individually." << endl;
 
    bool b1 = charOut.failed ( );
@@ -225,10 +227,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;   // no effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
 \* Output:
 Elements written to output stream:
@@ -273,10 +275,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
 \* Output:
 Elements written to output stream:
@@ -294,7 +296,8 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>參數
 
-*_Char*来插入至資料流緩衝區的字元。
+*_Char*<br/>
+要插入至資料流緩衝區的字元。
 
 ### <a name="return-value"></a>傳回值
 
@@ -324,15 +327,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator
@@ -346,9 +349,11 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*用來初始化輸出資料流緩衝區指標的輸出 streambuf 物件。
+*strbuf*<br/>
+用於初始化輸出資料流緩衝區指標的輸出 streambuf 物件。
 
-*Ostr*輸出資料流物件，用來初始化輸出資料流緩衝區指標。
+*Ostr*<br/>
+用於初始化輸出資料流緩衝區指標的輸出資料流物件。
 
 ### <a name="remarks"></a>備註
 
@@ -374,9 +379,9 @@ int main( )
 
 *charOut = 'O';
    charOut ++;
- *charOut  = 'U';
+*charOut  = 'U';
    charOut ++;
- *charOut = 'T';
+*charOut = 'T';
    cout << " are characters output individually." << endl;
 
    ostreambuf_iterator<char> strOut ( cout );
@@ -457,17 +462,17 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
 \* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
+by charOutBuf are: OUT.
 *\
 ```
 

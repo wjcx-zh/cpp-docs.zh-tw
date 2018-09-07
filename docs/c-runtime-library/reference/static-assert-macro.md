@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbab8314a038d796ebd1a13342f3054e59f3e68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eda76666679b133b2d5486d21cd4c8e24d1fdf3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407362"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105077"
 ---
 # <a name="staticassert-macro"></a>_STATIC_ASSERT 巨集
 
-評估在編譯時間運算式，並產生錯誤結果時**FALSE**。
+評估在編譯時間運算式，並產生錯誤，當結果為**FALSE**。
 
 ## <a name="syntax"></a>語法
 
@@ -49,15 +49,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>參數
 
-*booleanExpression* （包括指標） 的運算式評估為非零 (**TRUE**) 或 0 (**FALSE**)。
+*booleanExpression*<br/>
+（包括指標） 的運算式評估為非零 (**真**) 或 0 (**FALSE**)。
 
 ## <a name="remarks"></a>備註
 
-這個巨集類似於[_ASSERT 和 _ASSERTE 巨集](assert-asserte-assert-expr-macros.md)，不同之處在於*booleanExpression*在編譯時期評估而不是在執行階段。 如果*booleanExpression*評估為**FALSE** (0)，[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)產生。
+這個巨集類似於[_ASSERT 和 _ASSERTE 巨集](assert-asserte-assert-expr-macros.md)，差異在於*booleanExpression*在編譯時間，而不是在執行階段評估。 如果*booleanExpression*評估為**FALSE** (0)，[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)產生。
 
 ## <a name="example"></a>範例
 
-在此範例中，我們會檢查是否[sizeof](../../c-language/sizeof-operator-c.md) **int**大於或等於 2 個位元組和是否[sizeof](../../c-language/sizeof-operator-c.md) **長**是 1 個位元組。 將不會編譯程式，它會產生[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)因為**長**超過 1 個位元組。
+在此範例中，我們會檢查是否[sizeof](../../c-language/sizeof-operator-c.md) **int**大於或等於 2 個位元組和是否[sizeof](../../c-language/sizeof-operator-c.md) **長**是 1 個位元組。 將不會編譯程式，並且會產生[編譯器錯誤 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)因為**長**大於 1 個位元組。
 
 ```C
 // crt__static_assert.c

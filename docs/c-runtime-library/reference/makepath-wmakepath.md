@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204900"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105090"
 ---
 # <a name="makepath-wmakepath"></a>_makepath、_wmakepath
 
@@ -75,15 +75,20 @@ void _wmakepath(
 
 ### <a name="parameters"></a>參數
 
-*路徑*完整路徑緩衝區。
+*path*<br/>
+完整路徑緩衝區。
 
-*磁碟機*包含字母 （A、 B，等等） 對應至所需的磁碟機和選擇性的後置冒號。 **_makepath**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
+*磁碟機*<br/>
+包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
 
-*dir*包含路徑的目錄，不包括磁碟機指示項或實際檔案名稱。 結尾的斜線是選擇性的並正斜線 （/） 或反斜線 (\\)，或是兩者都可能會用於在單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**或指向空字串，沒有目錄路徑會插入複合*路徑*字串。
+*dir*<br/>
+包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 結尾的斜線是選擇性的並正斜線 （/） 或反斜線 (\\)，或是兩者都可能會用於在單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**或指向空字串，沒有目錄路徑會插入複合*路徑*字串。
 
-*fname*包含基底檔案名稱不含任何檔案名稱副檔名。 如果*fname*是**NULL**或指向空字串，任何檔名會插入複合*路徑*字串。
+*fname*<br/>
+包含基底檔案名稱，但不包含任何副檔名。 如果*fname*是**NULL**或指向空字串，任何檔名會插入複合*路徑*字串。
 
-*ext*包含實際的檔案名稱副檔名，或不含前置句號 （.）。 **_makepath**自動插入句號，如果它不會出現在*ext*。如果*ext*是**NULL**或指向空字串，不含副檔名會插入複合*路徑*字串。
+*ext*<br/>
+包含實際副檔名，可包含或不含前置句號 (.)。 **_makepath**自動插入句號，如果它不會出現在*ext*。如果*ext*是**NULL**或指向空字串，不含副檔名會插入複合*路徑*字串。
 
 ## <a name="remarks"></a>備註
 

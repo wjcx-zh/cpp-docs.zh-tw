@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957518"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109871"
 ---
 # <a name="sharedptr-class"></a>shared_ptr 類別
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>參數
 
-*預存程序*来複製的共用的指標。
+*預存程序*<br/>
+要複製的共用指標。
 
-*ap*来複製的自動指標。
+*亞太地區*<br/>
+要複製的自動指標。
 
 ### <a name="remarks"></a>備註
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>參數
 
-*ptr* `lvalue`參考`shared_ptr`或`weak_ptr`。
+*ptr*<br/>
+針對 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>參數
 
-*其他*引數指標所控制的類型。
+*其他*<br/>
+引數指標所控制的類型。
 
-*D*刪除者的類型。
+*D*<br/>
+刪除者的類型。
 
-*ptr*来複製的指標。
+*ptr*<br/>
+要複製的指標。
 
-*dtor*来複製的刪除者。
+*dtor*<br/>
+要複製的刪除者。
 
-*A*配置器類型。
+*A*<br/>
+配置器的類型。
 
-*配置*来複製的配置器。
+*配置*<br/>
+要複製的配置器。
 
 ### <a name="remarks"></a>備註
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>參數
 
-*其他*引數指標所控制的類型。
+*其他*<br/>
+引數指標所控制的類型。
 
-*ptr*来複製的指標。
+*ptr*<br/>
+要複製的指標。
 
-*D*刪除者的類型。
+*D*<br/>
+刪除者的類型。
 
-*A*配置器類型。
+*A*<br/>
+配置器的類型。
 
-*dtor*刪除者。
+*dtor*<br/>
+刪除者。
 
-*in*配置器。
+*in*<br/>
+配置器。
 
-*預存程序*来複製的智慧型指標。
+*預存程序*<br/>
+要複製的智慧型指標。
 
-*wp*弱式指標。
+*wp*<br/>
+弱式指標。
 
-*ap*来複製的自動指標。
+*亞太地區*<br/>
+要複製的自動指標。
 
 ### <a name="remarks"></a>備註
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>參數
 
-*預存程序*来交換的共用的指標。
+*預存程序*<br/>
+要交換的共用指標。
 
 ### <a name="remarks"></a>備註
 

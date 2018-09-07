@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400654"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107458"
 ---
 # <a name="lockfile"></a>_lock_file
 
@@ -53,15 +53,16 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>參數
 
-*檔案*檔案控制代碼。
+*file*<br/>
+檔案控制代碼。
 
 ## <a name="remarks"></a>備註
 
-**_Lock_file**函式鎖定**檔案**所指定物件*檔案*。 基礎檔案未被鎖定 **_lock_file**。 使用 [_unlock_file](unlock-file.md) 解除檔案鎖定。 呼叫 **_lock_file**和 **_unlock_file**執行緒中必須相符。
+**_Lock_file**函式鎖定**檔案**所指定的物件*檔案*。 基礎檔案未被鎖定 **_lock_file**。 使用 [_unlock_file](unlock-file.md) 解除檔案鎖定。 呼叫 **_lock_file**並 **_unlock_file**執行緒中必須相符。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 

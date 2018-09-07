@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960039"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110054"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>參數
 
-*右*来插入的物件或範圍。
+*right*<br/>
+要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>參數
 
-*val*来指派的值。
+*val*<br/>
+要指派的值。
 
 ### <a name="remarks"></a>備註
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*關閉*存取項目的位置。
+*關閉*<br/>
+要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*關閉*存取項目的位置。
+*關閉*<br/>
+要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>參數
 
-*右*来複製的容器。
+*right*<br/>
+要複製的容器。
 
 ### <a name="remarks"></a>備註
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>參數
 
-*右*来交換內容的陣列。
+*right*<br/>
+要與之交換內容的陣列。
 
 ### <a name="remarks"></a>備註
 

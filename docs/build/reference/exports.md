@@ -1,7 +1,7 @@
 ---
 title: 匯出 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894547"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104286"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -38,9 +38,7 @@ EXPORTS
 
 匯出的語法*定義*是：
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_序數_ \[ **NONAME**]] \[ \[**私密金鑰**] |\[**資料**]]
 
 *entryname*是您想要匯出的函式或變數名稱。 此為必要項。 如果您將匯出的名稱與 DLL 中的名稱不同，在 DLL 中指定匯出的名稱使用*internal_name*。 例如，如果您的 DLL 匯出函式 `func1`，且您想要呼叫端使用它作為 `func2`，則您可以指定：
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-如果您將匯出的名稱是從另一個模組中，依序數匯出，請指定 使用匯出的 DLL 中的序數*other_module。 #ordinal_number*。 例如，如果您的 DLL 匯出函式，從另一個模組是序數 42，而您想要使用它作為呼叫者`func2`，您就要指定：
+如果您將匯出的名稱是從另一個模組中，依序數匯出，請指定 使用匯出的 DLL 中的序數*other_module*。__#__ *序數*。 例如，如果您的 DLL 匯出函式，從另一個模組是序數 42，而您想要使用它作為呼叫者`func2`，您就要指定：
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-因為 Visual c + + 編譯器會使用 c + + 函式的名稱裝飾，所以您必須使用裝飾的名稱 internal_name，或使用 extern"C"中的原始程式碼定義匯出的函式。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例以底線 (\_) 前置詞和後置詞組成 at 符號 (\@) 後面中的位元組數 （十進位）引數清單。
+因為 Visual c + + 編譯器會使用 c + + 函式的名稱裝飾，所以您必須使用裝飾的名稱*internal_name*或使用定義匯出的函式`extern "C"`原始程式碼中。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例以底線 (\_) 前置詞和後置詞組成 at 符號 (\@) 後面中的位元組數 （十進位）引數清單。
 
 若要尋找由編譯器所產生的裝飾的名稱，請使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具或連結器[/typedefs/ 對應](../../build/reference/map-generate-mapfile.md)選項。 裝飾名稱是編譯器專屬的。 如果您匯出 .DEF 檔案中的裝飾名稱，則連結至 DLl 的可執行檔必須也使用相同版本的編譯器進行建置。 這可確保呼叫端的裝飾名稱符合 .DEF 檔案中的已匯出名稱。
 
-您可以使用\@*序數*指定數字，而不是函式名稱，將會進入 DLL 的匯出表。 許多 Windows DLL 會匯出序數，以支援舊版程式碼。 通常在 16 位元 Windows 程式碼中使用序數，因為它有助於最大程度減小 DLL 的大小。 建議除非您的 DLL 用戶端因舊版支援而需要序數，否則不要依序數匯出函式。 由於 .LIB 檔會包含序數與函式之間的對應，因此您可以像在使用 DLL 的專案中那樣，使用函式名稱。
+您可以使用\@*序數*指定數字，而不是函式名稱，便會進入 DLL 的匯出表。 許多 Windows DLL 會匯出序數，以支援舊版程式碼。 通常在 16 位元 Windows 程式碼中使用序數，因為它有助於最大程度減小 DLL 的大小。 建議除非您的 DLL 用戶端因舊版支援而需要序數，否則不要依序數匯出函式。 由於 .LIB 檔會包含序數與函式之間的對應，因此您可以像在使用 DLL 的專案中那樣，使用函式名稱。
 
 使用選擇性**NONAME**關鍵字，您可以僅依序數匯出，並減少產生的 DLL 中匯出表格的大小。 不過，如果您想要使用[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL 時，在您必須了解序數，因為名稱不是有效。
 
@@ -88,9 +86,16 @@ EXPORTS
 
 3. [/匯出](../../build/reference/export-exports-a-function.md)LINK 命令中的規格
 
-4. A[註解](../../preprocessor/comment-c-cpp.md)在原始程式碼中，表單的指示詞 `#pragma comment(linker, "/export: definition ")`  
+4. A[註解](../../preprocessor/comment-c-cpp.md)指示詞中的原始程式碼，表單的`#pragma comment(linker, "/export: definition ")`。 下列範例示範 #pragma comment 指示詞之前函式宣告，其中`PlainFuncName`是未裝飾的名稱，和`_PlainFuncName@4`是函式的裝飾的名稱：
 
-所有四種方法可在同一程式中使用。 當 LINK 繫結的程式包含匯出時，它還會建立匯入程式庫，除非組建中使用 .EXP 檔。
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+#Pragma 指示詞是您需要匯出未裝飾的函式名稱，並有不同的匯出，根據組建組態 （例如，在 32 位元或 64 位元的組建） 時相當實用。
+
+所有四種方法可在同一程式中使用。 當 LINK 繫結的程式包含匯出時，它還會建立匯入程式庫，除非組建中使用 .EXP 檔。 
 
 EXPORTS 區段的範例如下：
 

@@ -15,30 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 197f43a8b5a9485642aca16c25cb35515cabe020
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759395"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109988"
 ---
 # <a name="platformuintptr-value-class"></a>Platform::UIntPtr 實值類別
-代表大小適用於平台的不帶正負號指標 (32 位元或 64 位元)。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-public value struct UintPtr  
-```  
-  
-### <a name="requirements"></a>需求  
- **最低支援用戶端：** Windows 8  
-  
- **最低支援伺服器：** Windows Server 2012  
-  
- **命名空間：** Platform  
-  
- **中繼資料：** platform.winmd  
-  
-## <a name="see-also"></a>另請參閱  
- [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)
+
+代表大小適用於平台的不帶正負號指標 (32 位元或 64 位元)。
+
+## <a name="syntax"></a>語法
+
+```cpp
+public value struct UintPtr
+```
+
+### <a name="requirements"></a>需求
+
+**最低支援用戶端：** Windows 8
+
+**最低支援伺服器：** Windows Server 2012
+
+**命名空間：** Platform
+
+**中繼資料：** platform.winmd
+
+## <a name="see-also"></a>另請參閱
+
+[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

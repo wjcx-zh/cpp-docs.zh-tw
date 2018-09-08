@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a2b776fb155d8927b610de38bdd79370f4c0803
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208646"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107394"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函式
 
@@ -70,13 +70,17 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 
 ### <a name="parameters"></a>參數
 
-*Fty*要呼叫的物件類型。
+*Fty*<br/>
+要呼叫的物件類型。
 
-*TN*第 n 個呼叫引數的類型。
+*TN*<br/>
+第 N 個呼叫引數類型。
 
-*fn*来呼叫的物件。
+*fn*<br/>
+要呼叫的物件。
 
-*tN*第 n 個呼叫引數。
+*TN*<br/>
+第 N 個呼叫引數。
 
 ### <a name="remarks"></a>備註
 
@@ -165,9 +169,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>參數
 
-*func*二元函式物件轉換成一元函式物件。
+*func*<br/>
+要轉換為一元函式物件的二元函式物件。
 
-*左*二元函式物件的第一個引數所繫結的值。
+*left*<br/>
+二元函式物件的第一個引數所要繫結的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -257,9 +263,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*func*二元函式物件轉換成一元函式物件。
+*func*<br/>
+要轉換為一元函式物件的二元函式物件。
 
-*右*二元函式物件的第二個引數所繫結的值。
+*right*<br/>
+二元函式物件的第二個引數所要繫結的值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -348,7 +356,7 @@ struct bit_and : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator&
 template <>
@@ -364,9 +372,11 @@ struct bit_and<void>
 
 *型別*， *T*， *U*支援任何型別`operator&`會指定或推斷類型的運算元。
 
-*左*位元的 AND 運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
+*左邊*<br/>
+位元 AND 運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右*位元的 AND 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
+*右邊*<br/>
+位元 AND 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -383,24 +393,26 @@ struct bit_and<void>
 ```cpp
 template <class Type = void>
 struct bit_not : public unary_function<Type, Type>
- {
+{
     Type operator()(const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator~
 template <>
 struct bit_not<void>
- {
+{
     template <class Type>
     auto operator()(Type&& Right) const  ->  decltype(~std::forward<Type>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>參數
 
-*型別*支援的一元 （unary） 的型別`operator~`。
+*類型*<br/>
+支援一元 `operator~` 的類型。
 
-*右*位元補數運算的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送 lvalue 或 rvalue 參考類型的引數推斷*型別*。
+*右邊*<br/>
+位元補數運算的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送 lvalue 或 rvalue 參考類型的引數推斷*型別*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -420,7 +432,7 @@ struct bit_or : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator|
 template <>
@@ -436,9 +448,11 @@ struct bit_or<void>
 
 *型別*， *T*， *U*支援任何型別`operator|`會指定或推斷類型的運算元。
 
-*左*位元 OR 運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
+*左邊*<br/>
+位元 OR 運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右*位元 OR 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
+*右邊*<br/>
+位元 OR 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -458,7 +472,7 @@ struct bit_xor : public binary_function<Type, Type, Type> {
     Type operator()(
     const Type& Left,
     const Type& Right) const;
- };
+};
 
 // specialized transparent functor for operator^
 template <>
@@ -474,9 +488,11 @@ struct bit_xor<void>
 
 *型別*， *T*， *U*支援任何型別`operator^`會指定或推斷類型的運算元。
 
-*左*位元 XOR 運算的左的運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
+*左邊*<br/>
+位元 XOR 運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右*位元 XOR 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
+*右邊*<br/>
+位元 XOR 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -500,9 +516,11 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>參數
 
-*Ty*包裝的引數的類型。
+*Ty*<br/>
+要包裝的引數類型。
 
-*arg*包裝的引數。
+*arg*<br/>
+要包裝的引數。
 
 ### <a name="remarks"></a>備註
 
@@ -552,9 +570,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="parameters"></a>參數
 
-*Ret*包裝函式的傳回型別。
+*ret*<br/>
+包裝函式的傳回類型。
 
-*Ty*成員函式指標的類型。
+*Ty*<br/>
+成員函式指標的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -623,7 +643,8 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 
 ### <a name="parameters"></a>參數
 
-*pmem*類別的成員函式的指標`Type`轉換成函式物件。
+*pmem*<br/>
+要轉換成函式物件之 `Type` 類別的成員函式指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -709,7 +730,8 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) cons
 
 ### <a name="parameters"></a>參數
 
-*pmem*類別的成員函式的指標`Type`轉換成函式物件。
+*pmem*<br/>
+要轉換成函式物件之 `Type` 類別的成員函式指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -804,7 +826,8 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="parameters"></a>參數
 
-*pred*要變為負值的一元述詞。
+*預測*<br/>
+要變為負值的一元述詞。
 
 ### <a name="return-value"></a>傳回值
 
@@ -875,7 +898,8 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>參數
 
-*func*要變為負值的二元述詞。
+*func*<br/>
+要變為負值的二元述詞。
 
 ### <a name="return-value"></a>傳回值
 
@@ -953,7 +977,8 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>參數
 
-*pfunc*一元或二元函式指標轉換成可調適性函式。
+*pfunc*<br/>
+要轉換成可調適性函式的一元或二元函式指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1072,11 +1097,14 @@ void swap(function<Fty>& f1, function<Fty>& f2);
 
 ### <a name="parameters"></a>參數
 
-*Fty*函式物件所控制的類型。
+*Fty*<br/>
+函式物件所控制的類型。
 
-*f1*第一個函式物件。
+*F1*<br/>
+第一個函式物件。
 
-*f2*第二個函式物件。
+*F2*<br/>
+第二個函式物件。
 
 ### <a name="remarks"></a>備註
 

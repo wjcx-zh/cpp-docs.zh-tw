@@ -1,7 +1,7 @@
 ---
-title: 編譯器警告 （層級 1） C4627 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4627 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284182"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249616"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>編譯器警告 (層級 1) C4627
-'\<識別項 >': 尋找先行編譯標頭使用時略過  
+
+> '*header_file*': 尋找先行編譯標頭檔使用時，略過
+
+如果目前的原始程式檔已[/Yu\(使用先行編譯標頭檔)](../../build/reference/yu-use-precompiled-header-file.md)選項集，則編譯器會忽略檔案中的所有項目之前會包含先行編譯標頭。 警告**C4627**如果，在 Visual Studio 2015 和更早版本中就會產生*header_file*包含先行編譯標頭檔中，而且如果先行編譯標頭也未包含*header_file*。
+
+## <a name="example"></a>範例
+
+這個範例會示範如何可能會發生錯誤，並示範如何修正此問題：
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- 當搜尋時使用先行編譯標頭位置，編譯器遇到`#include`指示詞*\<識別碼 >* include 檔。 編譯器會忽略`#include`指示詞，但發出警告**C4627**如果先行編譯標頭尚未包含*\<識別碼 >* include 檔。  
-  
-## <a name="see-also"></a>另請參閱  
- [建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>另請參閱
+
+[建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)

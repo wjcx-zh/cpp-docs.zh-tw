@@ -35,16 +35,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a33c6c41b2a9567ef8ed156901b8d04405b6eb46
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336488"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578438"
 ---
 # <a name="general-property-page-project"></a>一般屬性頁 (專案)
 
-當您以滑鼠右鍵按一下 [方案總管] 中的專案節點並選取 [屬性] 時，左窗格中 [組態屬性] 節點下的 [一般] 屬性頁會顯示屬性的兩個區段：
+當您以滑鼠右鍵按一下方案總管中的專案節點並選取 [屬性] 時，左窗格中 [組態屬性] 節點下的 [一般] 屬性頁會顯示屬性的兩個區段：
 
 - 一般
 

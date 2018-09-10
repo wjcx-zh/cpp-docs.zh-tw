@@ -49,19 +49,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df2168da257c6d1d07cff6400122830da60b5fef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca1591bba9518b1b5f6122f51bf60f5a23fc7a26
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417441"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319002"
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
 
 比較字串。
 
 > [!IMPORTANT]
-> **_mbscmp**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscmp**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -87,7 +87,7 @@ int _mbscmp(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式的傳回值表示的序數關聯*string1*至*string2*。
+所有這些函式的傳回值表示的序數關聯*string1*要*string2*。
 
 |值|string1 與 string2 的關係|
 |-----------|----------------------------------------|
@@ -95,11 +95,11 @@ int _mbscmp(
 |0|*string1*等同於*string2*|
 |> 0|*string1*大於*string2*|
 
-參數驗證錯誤時， **_mbscmp**傳回 **_NLSCMPERROR**，定義在\<h > 和\<m >。
+參數驗證錯誤時， **_mbscmp**會傳回 **_NLSCMPERROR**，其定義於\<h > 和\<m >。
 
 ## <a name="remarks"></a>備註
 
-**Strcmp**函式會執行序數比較*string1*和*string2*和傳回值，這個值指出其關聯性。 **wcscmp**和 **_mbscmp**分別是寬字元和多位元組字元版本的**strcmp**。 **_mbscmp**辨識多位元組字元序列，會根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或*string2*為 null 指標， **_mbscmp**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 若要繼續，允許執行 **_mbscmp**傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。 **strcmp**和**wcscmp**不會驗證它們的參數。 除此之外，這三個函式的行為相同。
+**Strcmp**函式會執行序數比較*string1*並*string2*和傳回值，這個值指出其關聯性。 **wcscmp**並 **_mbscmp**分別是寬字元和多位元組字元版本**strcmp**。 **_mbscmp**辨識多位元組字元序列，根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或是*string2*為 null 指標， **_mbscmp**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行 **_mbscmp**會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。 **strcmp**並**wcscmp**不會驗證其參數。 除此之外，這三個函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -107,20 +107,20 @@ int _mbscmp(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-**Strcmp**函式的不同**strcoll**函式中， **strcmp**比較為序數，且不會受到地區設定。 **strcoll**使用辭典編纂順序比較字串**LC_COLLATE**類別目前的地區設定。 如需有關**LC_COLLATE**類別目錄，請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。
+**Strcmp**函式與差異**strcoll**中的函式**strcmp**比較為序數，且不會受到地區設定。 **strcoll**使用，依辭典編纂順序比較字串**LC_COLLATE**目前地區設定的類別。 如需詳細資訊**LC_COLLATE**分類中，請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。
 
 在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與詞典編纂的字元順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂順序不同。 例如，在某些歐洲的地區設定中，字元集中的字元 'a' (值 0x61) 會在字元 'ä' (值 0xE4) 之前，但以詞典編纂而言，字元 'ä' 是在字元 'a' 之前。
 
-在不同的地區設定的字元集和詞典編纂字元順序，您可以使用**strcoll**而不是**strcmp**針對字串的詞典編纂比較。 或者，您可以使用**strxfrm**上原始字串，然後使用**strcmp**上產生的字串。
+在地區設定中的字元集和詞典編纂字元順序不同，您可以使用**strcoll**而不是**strcmp**為字串的詞典編纂的比較。 或者，您可以使用**strxfrm**原始字串，然後再使用**strcmp**產生的字串。
 
-**Strcmp**函式會區分大小寫。 **_stricmp**， **_wcsicmp**，和 **_mbsicmp**第一次將它們轉換成其小寫的形式來比較字串。 包含位於 'Z' 之間字元的兩個字串和 'a' ASCII 資料表中 ('['、'\\'，']'，' ^'，'_' 和 '\`') 的比較方式，根據其大小寫。 例如，兩個字串"ABCDE"和"ABCD ^"一種方式比較，如果該比較為小寫 ("abcde">"abcd ^") 另一種方式 ("ABCDE"<"ABCD ^") 如果比較為大寫。
+**Strcmp**函式會區分大小寫。 **_stricmp**， **_wcsicmp**，以及 **_mbsicmp**第一次將它們轉換成其小寫的形式來比較字串。 包含位於 'Z' 之間字元的兩個字串和 'a' ASCII 資料表中 ('['、'\\'，']'，' ^'、 '_' 和 '\`') 比較以不同的方式，根據其大小寫。 例如，兩個字串"ABCDE"和"ABCD ^"比較其中一個方法，如果該比較為小寫 ("abcde">"abcd ^") 以及的其他方式 ("ABCDE"<"ABCD ^") 如果比較為大寫。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strcmp**|<string.h>|
-|**wcscmp**|<string.h> 或 <wchar.h>|
+|**strcmp**|\<string.h>|
+|**wcscmp**|\<string.h> 或 \<wchar.h>|
 |**_mbscmp**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。

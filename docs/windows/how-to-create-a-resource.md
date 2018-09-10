@@ -1,5 +1,5 @@
 ---
-title: 如何： 建立資源 |Microsoft Docs
+title: 如何： 建立資源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - toolbars [C++], resources
 - resource toolbars
-- resources [Visual Studio], creating
+- resources [C++], creating
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7c82a55d2cbfba20b80a02dbcf000c85ed10e83
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679789"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316779"
 ---
 # <a name="how-to-create-a-resource"></a>如何：建立資源
 

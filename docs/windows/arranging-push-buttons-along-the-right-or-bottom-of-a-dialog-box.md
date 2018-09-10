@@ -1,5 +1,5 @@
 ---
-title: 沿著右側或對話方塊的底部排列按鈕 |Microsoft Docs
+title: 排列按鈕沿著的右方或底部的對話方塊 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e87a600192bbcd3c8c91dd3f400ed67e9fab7ea9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608719"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316727"
 ---
-# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>沿著對話方塊的右方或底部排列按鈕
+# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box-c"></a>排列按鈕沿著的右方或底部的對話方塊 （c + +）
 
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>若要沿著右側或對話方塊的底部排列按鈕
 

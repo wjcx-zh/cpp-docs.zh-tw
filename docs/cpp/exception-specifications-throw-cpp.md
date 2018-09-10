@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402399"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318267"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格 （throw、 noexcept） （c + +）
 
@@ -43,7 +43,7 @@ void MyFunction(int i) noexcept;
 
 |例外狀況規格|意義|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|函式不會擲回例外狀況。 在[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)模式 （這是預設值），`noexcept`和`noexcept(true)`相等。 當從宣告的函式擲回例外狀況`noexcept`或是`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)叫用。 當從函式擲回例外狀況宣告為`throw()`中 **/std: c + + 14**模式中，結果是未定義的行為。 沒有任何特定的函式會叫用。 這是從 C + + 14 標準，其叫用編譯器時所需的歧異[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br> **Visual Studio 2017 15.5 版和更新版本**： 在 **/std: c + + 17**模式`noexcept`， `noexcept(true)`，和`throw()`都是相等的。 在  **/std: c + + 17**模式中，`throw()`為其別名`noexcept(true)`。 在  **/std: c + + 17**模式中，從這些規格中的任何宣告的函式擲回例外狀況時[std:: terminate](../standard-library/exception-functions.md#terminate)叫用 C + + 17 標準所需。|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|函式不會擲回例外狀況。 在[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)模式 （這是預設值），`noexcept`和`noexcept(true)`相等。 當從宣告的函式擲回例外狀況`noexcept`或是`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)叫用。 當從函式擲回例外狀況宣告為`throw()`中 **/std: c + + 14**模式中，結果是未定義的行為。 沒有任何特定的函式會叫用。 這是從 C + + 14 標準，其叫用編譯器時所需的歧異[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br/> **Visual Studio 2017 15.5 版和更新版本**： 在 **/std: c + + 17**模式`noexcept`， `noexcept(true)`，和`throw()`都是相等的。 在  **/std: c + + 17**模式中，`throw()`為其別名`noexcept(true)`。 在  **/std: c + + 17**模式中，從這些規格中的任何宣告的函式擲回例外狀況時[std:: terminate](../standard-library/exception-functions.md#terminate)叫用 C + + 17 標準所需。|
 |`noexcept(false)`<br/>`throw(...)`<br/>無規格|此函式可以擲回任何類型的例外狀況。|
 |`throw(type)`| (**C + + 14 和更早版本**) 的函式可能會擲回例外狀況型別的`type`。 編譯器會接受語法，但會將它做為解譯`noexcept(false)`。 在  **/std: c + + 17**模式下，編譯器會發出警告 C5040。|
 
@@ -64,9 +64,9 @@ C 函式不允許明確例外狀況規格。 C 函式會假設不擲回例外狀
 
 |功能|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|沒有例外狀況規格的 C++ 函式|[是]|是|是|[是]|
-|使用 c + + 函式`noexcept`， `noexcept(true)`，或`throw()`例外狀況規格|否|否|是|[是]|
-|使用 c + + 函式`noexcept(false)`， `throw(...)`，或`throw(type)`例外狀況規格|[是]|是|是|[是]|
+|沒有例外狀況規格的 C++ 函式|是|是|是|是|
+|使用 c + + 函式`noexcept`， `noexcept(true)`，或`throw()`例外狀況規格|否|否|是|是|
+|使用 c + + 函式`noexcept(false)`， `throw(...)`，或`throw(type)`例外狀況規格|是|是|是|是|
 
 ## <a name="example"></a>範例
 

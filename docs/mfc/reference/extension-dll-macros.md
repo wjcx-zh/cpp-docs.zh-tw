@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee79ccad55d2fd360166b9d693f3d4757fe2049f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d3f34a6bc42f1c01783e21e1c3b0f9f04adad46f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339224"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317754"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>巨集和管理 Dll 函式
 
@@ -99,7 +99,7 @@ void AFXAPI AfxOleInitModule( );
  如果您要建置 OLE 控制項，並使用`COleControlModule`，您不應該呼叫`AfxOleInitModule`因為`InitInstance`成員函式`COleControlModule`呼叫`AfxOleInitModule`。  
    
 ### <a name="requirements"></a>需求  
- **標頭**: < afxdll_.h >  
+ **標頭**: \<afxdll_.h >  
    
 ### <a name="see-also"></a>另請參閱  
  [巨集和全域](mfc-macros-and-globals.md)   
@@ -117,7 +117,7 @@ void AFXAPI AfxNetInitModule( );
  MFC 通訊端 DLL 是一個 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 連結至`CDynLinkLibrary`鏈結，它必須建立`CDynLinkLibrary`每個模組，將會使用它的內容中的物件。 `AfxNetInitModule` 會建立`CDynLinkLibrary`物件在您的標準 MFC DLL 的內容中，讓它取得連結至`CDynLinkLibrary`物件的標準 MFC DLL 的鏈結。  
    
 ### <a name="requirements"></a>需求  
- **標頭：** < afxdll_.h >  
+ **標頭：** \<afxdll_.h >  
    
 ### <a name="see-also"></a>另請參閱  
  [巨集和全域](mfc-macros-and-globals.md)   

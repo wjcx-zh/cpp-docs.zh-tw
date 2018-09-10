@@ -1,5 +1,5 @@
 ---
-title: 轉換點陣圖為工具列 |Microsoft Docs
+title: 轉換點陣圖為工具列 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602396"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317222"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>轉換點陣圖為工具列
+# <a name="converting-bitmaps-to-toolbars-c"></a>轉換點陣圖為工具列 （c + +）
 
-您可以藉由轉換點陣圖建立新的工具列。 從點陣圖圖形將轉換成工具列按鈕影像。 通常，點陣圖包含數個按鈕上的映像單一的點陣圖，使用一個映像的每個按鈕。 映像可以是任何大小;預設值是 16 像素寬和影像的高度。 您可以指定在按鈕影像的大小[新增工具列資源對話方塊](../windows/new-toolbar-resource-dialog-box.md)當您選擇**工具列編輯器**從**映像**影像編輯器中的功能表。
+轉換點陣圖，您可以在 c + + 專案中建立新的工具列。 從點陣圖圖形將轉換成工具列按鈕影像。 通常，點陣圖包含數個按鈕上的映像單一的點陣圖，使用一個映像的每個按鈕。 映像可以是任何大小;預設值是 16 像素寬和影像的高度。 您可以指定在按鈕影像的大小[新增工具列資源對話方塊](../windows/new-toolbar-resource-dialog-box.md)當您選擇**工具列編輯器**從**映像**影像編輯器中的功能表。
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>若要將點陣圖轉換成工具列
 

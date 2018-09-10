@@ -1,5 +1,5 @@
 ---
-title: 功能表命令屬性 |Microsoft Docs
+title: 功能表命令屬性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34fa9944d1daa443850454560f8e5741e881f6f8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598707"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317912"
 ---
-# <a name="menu-command-properties"></a>功能表命令屬性
+# <a name="menu-command-properties-c"></a>功能表命令屬性 （c + +）
 
 下列資訊會根據組織** 功能表**屬性中出現[屬性 視窗](/visualstudio/ide/reference/properties-window)當您選取功能表命令。 這些字母順序列出雖然**屬性**視窗也可讓您依類別檢視這些屬性。
 

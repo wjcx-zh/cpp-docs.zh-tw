@@ -1,5 +1,5 @@
 ---
-title: 快速鍵編輯器 |Microsoft Docs
+title: 快速鍵編輯器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,27 +11,26 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
-- tables [Visual Studio], accelerator key
-- accelerator keys
-- resource editors, Accelerator editor
+- tables [C++], accelerator key
+- accelerator keys [C++]
+- resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
-- Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681719"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318787"
 ---
-# <a name="accelerator-editor"></a>快速鍵編輯器
+# <a name="accelerator-editor-c"></a>快速鍵編輯器 （c + +）
 
-快速鍵對應表是一種 Windows 資源，其中包含快速鍵清單 (也稱為快速鍵) 和與其相關聯的命令識別項。 程式可有多個快速鍵對應表。
+快速鍵對應表是包含一份快速鍵 （也稱為快速鍵） 的 c + + Windows 資源，以及與它們相關聯的命令識別碼。 程式可有多個快速鍵對應表。
 
 一般而言，快速鍵是用作程式命令的鍵盤快速鍵，功能表或工具列也使用這些命令。 不過，您可以使用快速鍵對應表定義和使用者介面物件沒有關聯性的命令鍵組合。
 

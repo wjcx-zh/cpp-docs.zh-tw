@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850416"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319080"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>依編譯器版本的編譯器警告
 
@@ -404,7 +404,7 @@ C4694|'*型別*': 密封抽象類別不能有基底類別'*型別*'
 C4720|內嵌組合語言報告: '*描述*'
 C4721|'*描述*': 無法當做內建函式
 C4722|'*描述*': 解構函式從未返回，可能有記憶體遺漏
-C4726|ARM 僅 arch4/4T 支援 ' < cpsr_f > 或 < spsr_f >' 具有即時運算值
+C4726|ARM 僅 arch4/4T 支援 '\<cpsr_f > 或\<spsr_f >' 具有即時運算值
 C4727|名為的 PCH*名稱*中找到的相同時間戳記*名稱*並*名稱*。  使用第一個 PCH。
 C4729|依據 flow graph 產生的警告，發現函式太大
 C4730|'*描述*': 混合 _m64 和浮點運算式可能會導致不正確的程式碼

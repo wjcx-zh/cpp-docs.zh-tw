@@ -8,7 +8,7 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], reference topics
+- attributes [C++/CLI], reference topics
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857e032f02102a79747b79140207d07905f5b3d2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591587"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317247"
 ---
 # <a name="com-attributes"></a>COM 屬性
 COM 屬性插入程式碼，以支援 COM 開發和.NET Framework 通用語言執行階段開發的多個區域。 這些區域範圍從自訂的介面實作和支援的現有介面來支援內建屬性、 方法和事件。 此外，可在支援複合和 ActiveX 控制項的實作。

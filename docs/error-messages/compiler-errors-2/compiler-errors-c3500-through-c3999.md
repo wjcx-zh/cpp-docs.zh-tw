@@ -255,12 +255,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1a157bcd3ecdce16a25d5bb6523ed6962a94a18
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 49677077761a11df93a540a749e140485fa9485f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42541559"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319067"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>編譯器錯誤 C3500 到 C3999
 
@@ -496,7 +496,7 @@ ms.locfileid: "42541559"
 |[編譯器錯誤 C3721](compiler-error-c3721.md)|'*簽章*': 不相容的簽章的事件|
 |[編譯器錯誤 C3722](compiler-error-c3722.md)|不允許泛型事件|
 |[編譯器錯誤 C3723](compiler-error-c3723.md)|'*函式*': 無法解析事件|
-|[編譯器錯誤 C3724](compiler-error-c3724.md)|以多執行緒模式使用事件需要在程式碼中加入 #include <windows.h>|
+|[編譯器錯誤 C3724](compiler-error-c3724.md)|必須 #include \<windows.h > 若要使用多執行緒模式使用事件|
 |編譯器錯誤 C3725|已過時。|
 |編譯器錯誤 C3726|已過時。|
 |[編譯器錯誤 C3727](compiler-error-c3727.md)|'*事件*': managed 的事件必須是成員函式或變數的指標，委派的資料成員|

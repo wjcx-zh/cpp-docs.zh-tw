@@ -1,5 +1,5 @@
 ---
-title: 快速鍵 （圖示影像編輯器） |Microsoft Docs
+title: 快速鍵 （c + + 圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f211b15134ad292c9e7e4d3ed92d81ea59dd3b86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 26818aaaec16e06553bde24ba7e5d6d350971cef
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683296"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317741"
 ---
-# <a name="accelerator-keys-image-editor-for-icons"></a>快速鍵 (圖示影像編輯器)
+# <a name="accelerator-keys-c-image-editor-for-icons"></a>快速鍵 （c + + 圖示影像編輯器）
 
 以下是預設繫結至索引鍵的影像編輯器命令的快速鍵。 若要變更的快速鍵，請按一下**選項**上**工具**功能表，然後選擇 **鍵盤**下**環境**資料夾。 如需詳細資訊，請參閱[識別及自訂鍵盤快速鍵](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)。
 

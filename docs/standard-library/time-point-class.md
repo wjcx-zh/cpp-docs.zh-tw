@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 72ce06a3f722bca0147d220fb8602ab9e30f8751
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954256"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319015"
 ---
 # <a name="timepoint-class"></a>time_point 類別
 
@@ -160,7 +160,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 第一個建構函式會建構預存 `duration` 值等於 [duration::zero](../standard-library/duration-class.md#zero) 的物件。
 
-第二個建構函式會建構一個物件，其預存的 duration 值等於*Dur*。 除非 `is_convertible<Duration2, duration>`「判斷為 true」(holds true)，否則第二個建構函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
+第二個建構函式會建構一個物件，其預存的 duration 值等於*Dur*。 除非`is_convertible<Duration2, duration>`保留 true，第二個建構函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
 
 第三個建構函式會使用 `Tp.time_since_epoch()` 初始化其 `duration` 值。
 

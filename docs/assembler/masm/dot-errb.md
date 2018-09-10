@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6bc42590b23492d1935ab6f6489a3afbf8a5f6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e07694e8ad8d30da76c2b3594b267bd695009870
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676556"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318222"
 ---
 # <a name="errb"></a>.ERRB
 
@@ -29,7 +29,7 @@ ms.locfileid: "43676556"
 
 ## <a name="syntax"></a>語法
 
-> .ERRB <textitem> [[，訊息]]
+> .ERRB *textitem* [[，*訊息*]]
 
 ## <a name="see-also"></a>另請參閱
 

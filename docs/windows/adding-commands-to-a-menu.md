@@ -1,5 +1,5 @@
 ---
-title: 將命令加入至功能表 |Microsoft Docs
+title: 將命令加入至功能表 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,22 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - menu items, adding to menus
-- menus, adding items
-- commands, adding to menus
-- commands
-- menu items
+- menus [C++], adding items
+- commands [C++], adding to menus
 ms.assetid: 1523a755-0ab5-42f8-9e98-bb9881564431
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 79dbc2644b721c62b67e0671b0caa2e053c7a923
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c2c67242195f54f543bdc8c0c1be49fbed69fe91
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593574"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318716"
 ---
-# <a name="adding-commands-to-a-menu"></a>將命令加入至功能表
+# <a name="adding-commands-to-a-menu-c"></a>將命令加入至功能表 （c + +）
 
 ### <a name="to-add-commands-to-a-menu"></a>將命令新增至功能表
 

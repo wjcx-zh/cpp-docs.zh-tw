@@ -1,5 +1,5 @@
 ---
-title: 在對話方塊中的控制項 |Microsoft Docs
+title: 控制項在對話方塊中 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591954"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317104"
 ---
-# <a name="controls-in-dialog-boxes"></a>對話方塊中的控制項
+# <a name="controls-in-dialog-box-ces"></a>Es 控制項對話方塊 （c + +）
 
 您可以將控制項加入對話方塊方塊中，使用[對話方塊編輯器索引標籤](../windows/dialog-editor-tab-toolbox.md)中[工具箱視窗](/visualstudio/ide/reference/toolbox)，這可讓您選擇您想要並將它拖曳至對話方塊中的控制項。 根據預設，工具箱 視窗設為 自動隱藏。 對話方塊編輯器開啟時，它會為您的解決方案的左邊界上的索引標籤出現。 不過，您可以釘選**工具箱**視窗中的按一下位置**自動隱藏**視窗右上角的按鈕。 如需有關如何控制這個視窗的行為的詳細資訊，請參閱 <<c0> [ 視窗管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。
 

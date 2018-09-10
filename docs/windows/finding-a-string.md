@@ -1,5 +1,5 @@
 ---
-title: 尋找字串 |Microsoft Docs
+title: 尋找字串資源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e04caa4aa927bd24bc1a5cd86f5d390e1c376b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e331401a3a2a789b13bc21b76c9b1cbfcb30e33
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197531"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318496"
 ---
-# <a name="finding-a-string"></a>尋找字串
+# <a name="finding-a-string-resource-c"></a>尋找字串資源 （c + +）
 
 您可以搜尋一或多個字串在字串資料表中，並使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)具有**檔案中尋找**命令 (**編輯**功能表) 來尋找所有執行個體的字串符合模式。
 

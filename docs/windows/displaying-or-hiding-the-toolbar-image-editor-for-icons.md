@@ -1,5 +1,5 @@
 ---
-title: 顯示或隱藏工具列 （圖示影像編輯器） |Microsoft Docs
+title: 顯示或隱藏工具列 （c + + 圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df6adfb026c9bfeab715e617dae64a25e993e868
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 360884c27e834f31badce0b02119203ee7877e4e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602608"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318924"
 ---
-# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>顯示或隱藏工具列 (圖示影像編輯器)
+# <a name="displaying-or-hiding-the-toolbar-c-image-editor-for-icons"></a>顯示或隱藏工具列 （c + + 圖示影像編輯器）
 
 因為有許多種繪圖工具可從[鍵盤](../windows/accelerator-keys-image-editor-for-icons.md)，可能會很有用隱藏**影像編輯器**工具列。
 

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 172ead8aa67f042512a73b8c0d1ecdaa0723c5d1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583981"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676541"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
@@ -27,14 +27,14 @@ ms.locfileid: "42583981"
 
 |標題|描述|
 |-----------|-----------------|
-|[開發人員程式碼範例](http://go.microsoft.com/fwlink/p/?LinkId=256533)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
+|[開發人員程式碼範例](https://code.msdn.microsoft.com/)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
 
 ## <a name="product-documentation"></a>產品文件
 
 |標題|描述|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
-|[Windows 開發人員中心](http://go.microsoft.com/fwlink/p/?LinkId=256534)|包含如何使用 C++ 和其他語言開發 Windows 8 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
+|[Windows 開發人員中心](https://developer.microsoft.com/en-us/windows/)|包含如何使用 C++ 和其他語言開發 Windows 8 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
 
 ### <a name="online-and-offline-documentation"></a>線上和離線文件
 
@@ -48,7 +48,7 @@ ms.locfileid: "42583981"
 
 |標題|描述|
 |-----------|-----------------|
-|[Visual C++ Team 部落格](http://go.microsoft.com/fwlink/p/?LinkId=256537)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
-|[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|
-|[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|包含有關 Visual Studio 和相關開發工具的文章及新聞。|
-|[MSDN 論壇](http://go.microsoft.com/fwlink/p/?LinkId=256538)|官方 Microsoft 論壇，您可以在這裡提出問題，從 Microsoft 和社群專家處獲得解答。 使用論壇首頁上的 [搜尋] 方塊尋找與 C++ 特別相關的論壇。|
+|[Visual C++ Team 部落格](https://blogs.msdn.microsoft.com/vcblog/)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
+|[Channel 9](https://channel9.msdn.com/)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|
+|[Visual Studio](https://visualstudio.microsoft.com/)|包含有關 Visual Studio 和相關開發工具的文章及新聞。|
+|[MSDN 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc)與[開發人員社群](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|

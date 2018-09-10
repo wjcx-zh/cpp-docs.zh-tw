@@ -1,5 +1,5 @@
 ---
-title: 群組對話方塊上的選項按鈕 |Microsoft Docs
+title: 群組對話方塊 （c + +） 上的選項按鈕 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - member variables, adding to radio button groups
 - variables, dialog box control member variables
-- dialog box controls, grouping radio buttons
+- dialog box controls [C++], grouping radio buttons
 - grouping controls
-- radio buttons, grouping on dialog boxes
+- radio buttons [C++], grouping on dialog boxes
 ms.assetid: 3cc43f9e-56c8-4faa-9930-ce81733c69de
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d0846d87273920f72598a1ea5bc4bd83d4c952d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599881"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315388"
 ---
-# <a name="grouping-radio-buttons-on-a-dialog-box"></a>群組對話方塊上的選項按鈕
+# <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>群組對話方塊 （c + +） 上的選項按鈕
 
 當您新增到對話方塊中的選項按鈕時，將它們視為一組藉由設定**群組**中的屬性**屬性**群組中的第一個按鈕的視窗。 然後，這個選項按鈕的控制項識別碼就會出現在 [[加入成員變數精靈]](../ide/add-member-variable-wizard.md)中，讓您為選項按鈕群組加入成員變數。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0652ca867ba49243ca5c87caa1dec98da929cf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a08563396a77dec5f72ea35e10dd8a349095077
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764546"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314231"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 
@@ -51,7 +51,7 @@ ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，�
 
    您可以使用**IWebBrowser2**方法因為 ATL.h 檔案中為您提供該介面的指標。
 
-接下來，修改 HTML 資源，來叫用您所建立的方法。 您將新增叫用這些方法的三個按鈕。  
+接下來，修改 HTML 資源，來叫用您所建立的方法。 您將新增叫用這些方法的三個按鈕。
 
 #### <a name="to-modify-the-html-resource"></a>若要修改 HTML 資源
 
@@ -72,9 +72,9 @@ ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，�
 3. 將呼叫加入`HelloHTML`您所建立的方法。 例如: 
 
     ```html
-    <br>  
-    <br>  
-    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>  
+    <br>
+    <br>
+    <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
    這個方法會建立一個標示為的按鈕**HelloHTML**，使用者可以按一下以顯示`HelloHTML`訊息方塊。

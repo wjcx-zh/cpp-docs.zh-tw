@@ -1,5 +1,5 @@
 ---
-title: 編輯圖形資源 （圖示影像編輯器） |Microsoft Docs
+title: 編輯圖形資源 （c + + 圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608857"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312632"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>編輯圖形資源 (圖示影像編輯器)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>編輯圖形資源 （c + + 圖示影像編輯器）
 
 圖形化的資源是您定義應用程式的映像。 您可以繪製徒手，或使用形狀繪製。 您可以選取組件的編輯、 翻轉或調整其大小的影像，或您可以從選取的組件的映像建立自訂筆刷，並使用筆刷繪製。 您可以定義映像的屬性，將影像儲存在不同的格式，將映像轉換成另一種格式。
 

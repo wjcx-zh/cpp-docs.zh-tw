@@ -1,5 +1,5 @@
 ---
-title: 版本資訊編輯器 |Microsoft Docs
+title: 版本資訊編輯器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,23 +10,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Version Information editor, about Version Information editor
+- Version Information editor [C++], about Version Information editor
 - editors, Version Information
-- resource editors, Version Information editor
+- resource editors [C++], Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7eb767d3969f964f2605aaebc8c4adb743cd1fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1d8a4eb57996bcc2afd9ddc92a9eecf354f88116
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199762"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313692"
 ---
-# <a name="version-information-editor"></a>版本資訊編輯器
+# <a name="version-information-editor-c"></a>版本資訊編輯器 （c + +）
 
 版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 具有**版本資訊**編輯器，建立及維護這項資料會儲存在版本資訊資源。 應用程式不需要版本資訊資源，但這卻是收集應用程式識別資訊的好地方。 安裝程式 API 也使用版本資訊。
 

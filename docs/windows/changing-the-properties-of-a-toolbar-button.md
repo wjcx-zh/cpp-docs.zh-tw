@@ -1,5 +1,5 @@
 ---
-title: 變更工具列按鈕的屬性 |Microsoft Docs
+title: 變更工具列按鈕 （c + +） 的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,8 +9,8 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - toolbar controls [MFC], command ID
-- toolbar buttons (in Toolbar editor), setting properties
-- Toolbar editor, toolbar button properties
+- toolbar buttons [C++], setting properties
+- Toolbar editor [C++], toolbar button properties
 - command IDs, toolbar buttons
 ms.assetid: b16a0635-e703-4156-acea-a54df279295a
 author: mikeblome
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1bf5ebd78e3e3b9083e8a4ad0898433d30422a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f554d6d3369f94c5f4e9409d9f6af9a65935fc42
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600537"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313530"
 ---
-# <a name="changing-the-properties-of-a-toolbar-button"></a>變更工具列按鈕的屬性
+# <a name="changing-the-properties-of-a-toolbar-button-c"></a>變更工具列按鈕 （c + +） 的屬性
 
 ### <a name="to-change-the-properties-of-a-toolbar-button"></a>若要變更工具列按鈕的屬性
 
-1. 選取工具列按鈕。
+1. 在 c + + 專案中，選取工具列按鈕。
 
 2. 輸入中的新識別碼**識別碼**中的屬性[屬性視窗](/visualstudio/ide/reference/properties-window)，或使用下拉式清單選取新**識別碼**。
 

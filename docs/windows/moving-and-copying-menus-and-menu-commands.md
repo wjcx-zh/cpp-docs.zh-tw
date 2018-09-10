@@ -1,5 +1,5 @@
 ---
-title: 移動和複製功能表和功能表命令 |Microsoft Docs
+title: 移動和複製功能表和功能表命令 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,9 +8,9 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- commands, copying on menus
+- commands [C++], copying on menus
 - menu items, moving
-- commands, moving on menus
+- commands [C++], moving on menus
 - menu items, copying
 ms.assetid: 1d8df535-9922-4579-a9c2-37aeac1856eb
 author: mikeblome
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7933aeb5b9b12e761c684a1a9b62c4201ef4bdb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b12d9d09cd2e4b35c458c2acbefa48eee8c4b0a9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204834"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312753"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>移動和複製功能表和功能表命令
 

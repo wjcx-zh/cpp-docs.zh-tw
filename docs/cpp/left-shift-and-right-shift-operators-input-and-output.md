@@ -23,16 +23,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6c89e2550c01db695aa513a98d6d1cc8f116ca0
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dea292ad348a155c6acdf64352dae47e858140b0
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571662"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314101"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;並&lt; &lt;)
 
-位元移位運算子是右移位運算子 (>>)，會將位元*shift 運算式*右側，和左移運算子 (<<)，會將位元的*shift 運算式*左邊。 <sup>1</sup>
+位元移位運算子是右移位運算子 (**&gt;&gt;**)，會將位元*shift 運算式*右側和左移運算子 (**&lt; &lt;**)，會將位元*shift 運算式*左邊。 <sup>1</sup>
 
 ## <a name="syntax"></a>語法
 

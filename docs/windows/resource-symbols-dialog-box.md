@@ -1,5 +1,5 @@
 ---
-title: 資源符號對話方塊 |Microsoft Docs
+title: 資源符號對話方塊 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,25 +10,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- New Symbol dialog box
-- Resource Symbols dialog box
-- Change Symbol dialog box
+- New Symbol dialog box [C++]
+- Resource Symbols dialog box [C++]
+- Change Symbol dialog box [C++]
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc4c6a749a5e3ef1835d959e7803ac6b6f4435ec
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 064fb9adce8b41c13709819f7ce0b7c515fea12a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609815"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313165"
 ---
-# <a name="resource-symbols-dialog-box"></a>資源符號對話方塊
+# <a name="resource-symbols-dialog-box-c"></a>資源符號對話方塊 （c + +）
 
-**資源符號**對話方塊可讓您加入新的資源符號、 變更顯示，或請跳至原始程式碼中正在使用中位置的符號。
+**資源符號**c + + 對話方塊可讓您加入新的資源符號、 變更顯示，或請跳至原始程式碼中正在使用中位置的符號。
 
 **名稱**  
 顯示的符號名稱。 如需詳細資訊，請參閱 <<c0> [ 符號名稱限制](../windows/symbol-name-restrictions.md)。

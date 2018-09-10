@@ -1,5 +1,5 @@
 ---
-title: 資源包含對話方塊 |Microsoft Docs
+title: 資源包含對話方塊 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,29 +10,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Resource Includes dialog box
-- rc files, changing storage
-- symbol header files, changing
-- compiling source code, including resources
-- .rc files, changing storage
-- symbol header files, read-only
-- symbols, symbol header files
+- Resource Includes dialog box [C++]
+- rc files [C++], changing storage
+- symbol header files [C++], changing
+- .rc files [C++], changing storage
+- symbol header files [C++], read-only
+- symbols [C++], symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96ee92f1b21d67321b95a169cbc4c47eaca2de17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1ea89cdd21f4debfa23716a04630e34e3b9203c1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610657"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313334"
 ---
-# <a name="resource-includes-dialog-box"></a>資源包含對話方塊
+# <a name="resource-includes-dialog-box-c"></a>資源包含對話方塊 （c + +）
 
-您可以使用**Resource Includes**對話方塊來修改專案.rc 檔，以及所有儲存的所有資源的環境的一般工作安排[符號](../windows/symbols-resource-identifiers.md)Resource.h 中。
+您可以使用**Resource Includes**對話方塊中，在 c + + 專案中，修改儲存專案.rc 檔和所有中的所有資源的環境的一般工作安排[符號](../windows/symbols-resource-identifiers.md)Resource.h 中。
 
 若要開啟 [ **Resource Includes** ] 對話方塊中，以滑鼠右鍵按一下.rc 檔案中[資源檢視](../windows/resource-view-window.md)，然後選擇**Resource Includes**從捷徑功能表。
 

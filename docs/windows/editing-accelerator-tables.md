@@ -1,5 +1,5 @@
 ---
-title: 編輯快速鍵對應表 |Microsoft Docs
+title: 編輯快速鍵對應表 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596399"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314881"
 ---
-# <a name="editing-accelerator-tables"></a>編輯快速鍵對應表
+# <a name="editing-accelerator-tables-c"></a>編輯快速鍵對應表 （c + +）
 
-Visual c + + 中，您可以直接使用就地編輯中編輯快速鍵對應表**加速器**編輯器。
+在 c + + 專案中，您可以直接使用就地編輯中編輯快速鍵對應表**加速器**編輯器。
 
 使用標準內容頁，請參閱下列程序，不過，就地編輯和屬性頁方法有相同的結果。 使用屬性頁，或使用就地編輯所做的變更會立即反映在快速鍵對應表中。
 

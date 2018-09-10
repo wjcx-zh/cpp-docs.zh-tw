@@ -1,5 +1,5 @@
 ---
-title: 資源檔 (Visual Studio) |Microsoft Docs
+title: 資源檔 (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,33 +8,32 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- resources [Visual Studio]
-- .rc files
-- resource files
-- resource script files
-- resource script files, Win-32 based applications
-- resource script files, files updated when editing resources
-- resources [Visual Studio], types of resource files
-- rct files
 - resources [C++]
-- rc files
-- resource files, types of
-- .rct files
-- resource script files, unsupported types
+- .rc files [C++]
+- resource files [C++]
+- resource script files [C++]
+- resource script files [C++], Win-32 based applications
+- resource script files [C++], files updated when editing resources
+- resources [C++], types of resource files
+- rct files [C++]
+- rc files [C++]
+- resource files [C++], types of
+- .rct files [C++]
+- resource script files [C++], unsupported types
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6db3af430b0274f116eba4445158ddcf55ad1636
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678367"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315661"
 ---
-# <a name="resource-files-visual-studio"></a>資源檔 (Visual Studio)
+# <a name="resource-files-c"></a>資源檔 (C++)
 
 > [!NOTE]
 > 這份資料適用於 Windows 桌面應用程式。 通用 Windows 平台應用程式中資源的詳細資訊，請參閱[定義應用程式資源](/windows/uwp/app-resources/)。

@@ -1,5 +1,5 @@
 ---
-title: 工具列 （圖示影像編輯器） |Microsoft Docs
+title: 工具列 （c + + 圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604132"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314400"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>工具列 (圖示影像編輯器)
+# <a name="toolbar-c-image-editor-for-icons"></a>工具列 （c + + 圖示影像編輯器）
 
 **影像編輯器**工具列包含工具，繪圖、 繪圖、 輸入文字、 消除及操作檢視。 它也包含選項選取器，與中，您可以選取使用各項工具的選項。 例如，您可以選擇不同的筆刷寬度、 縮放因素和線條樣式。
 

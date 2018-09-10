@@ -76,18 +76,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba97d3bcd356a044245e7613470bead1cc42eb25
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0da454b2b980be3565ee27fde4ee14d7eadd42fb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417125"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313622"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l
 比較兩個字串的指定數目的字元，而不考慮大小寫。
 
 > [!IMPORTANT]
-> **_mbsnicmp**和 **_mbsnicmp_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnicmp**並 **_mbsnicmp_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -144,21 +144,21 @@ int _mbsnicmp_l(
 
 |傳回值|描述|
 |------------------|-----------------|
-|< 0|*string1*的子字串小於*string2*子字串。|
+|< 0|*string1*子字串小於*string2*子字串。|
 |0|*string1*子字串等於*string2*子字串。|
 |> 0|*string1*子字串大於*string2*子字串。|
 
-參數驗證錯誤時，這些函式會傳回 **_NLSCMPERROR**，定義在\<h > 和\<m >。
+參數驗證錯誤時，這些函式會傳回 **_NLSCMPERROR**，其定義於\<h > 和\<m >。
 
 ## <a name="remarks"></a>備註
 
-**_Strnicmp**函式進行序數比較，最多第一個*計數*字元*string1*和*string2*。 系統會將每個字元轉換成小寫來執行比較，而不考慮大小寫。 **_strnicmp**是不區分大小寫版本的**strncmp**。 如果達到結束的 null 字元之前任一字串中，比較結束*計數*來比較字元。 如果字串相等結束的 null 字元到達之前任一字串中*計數*來比較字元、 較短的字串為較小者。
+**_Strnicmp**函式進行序數比較，最多會第一個*計數*字元*string1*並*string2*。 系統會將每個字元轉換成小寫來執行比較，而不考慮大小寫。 **_strnicmp**是不區分大小寫版本**strncmp**。 如果達到結束的 null 字元之前任一字串中結束的比較*計數*來比較字元。 如果字串相等時結束的 null 字元，便到達之前任一字串中*計數*來比較字元、 短的字串為較小者。
 
-ASCII 資料表 91 到 96 的字元 ('['、'\\'、']'、'^'、'_' 及 '\`') 會評估為小於任何字母字元。 這種排序為相同的**stricmp**。
+ASCII 資料表 91 到 96 的字元 ('['、'\\'、']'、'^'、'_' 及 '\`') 會評估為小於任何字母字元。 此順序是相同**stricmp**。
 
-**_wcsnicmp**和 **_mbsnicmp**是寬字元和多位元組字元版本的 **_strnicmp**。 引數 **_wcsnicmp**是寬字元字串; **_mbsnicmp**是多位元組字元字串。 **_mbsnicmp**辨識多位元組字元序列，會根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 除此之外，這三個函式的行為相同。 這些函式會受到地區設定，不需要的版本 **_l**後置詞使用目前的地區設定的地區設定相關的行為; 沒有版本 **_l**尾碼改用*地區設定*中傳遞。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_wcsnicmp**並 **_mbsnicmp**是寬字元和多位元組字元版本的 **_strnicmp**。 引數 **_wcsnicmp**是寬字元字串; **_mbsnicmp**是多位元組字元字串。 **_mbsnicmp**辨識多位元組字元序列，根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 除此之外，這三個函式的行為相同。 這些函式會受到地區設定，不需要的版本 **_l**其地區設定相關行為的後置詞使用目前的地區設定; 具有版本 **_l**後置詞改用*地區設定*中傳遞。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-這些函式全都會驗證它們的參數。 如果有任一個*string1*或*string2*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。
+這些函式全都會驗證它們的參數。 如果有任一*string1*或是*string2*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -170,10 +170,10 @@ ASCII 資料表 91 到 96 的字元 ('['、'\\'、']'、'^'、'_' 及 '\`') 會�
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strnicmp**， **_strnicmp_l**|<string.h>|
-|**_wcsnicmp**， **_wcsnicmp_l**|<string.h> 或 <wchar.h>|
+|**_strnicmp**， **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**， **_wcsnicmp_l**|\<string.h> 或 \<wchar.h>|
 |**_mbsnicmp**， **_mbsnicmp_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。

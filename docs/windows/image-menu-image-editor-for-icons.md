@@ -1,5 +1,5 @@
 ---
-title: 影像功能表 （圖示影像編輯器） |Microsoft Docs
+title: 影像功能表 （c + + 圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1729f98222d0f5c2d15ae907ac464367bc39a559
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f99e743ccbb8e7eca65c092a85b0cc482226567d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593944"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315929"
 ---
-# <a name="image-menu-image-editor-for-icons"></a>影像功能表 (圖示影像編輯器)
+# <a name="image-menu-c-image-editor-for-icons"></a>影像功能表 （c + + 圖示影像編輯器）
 
 **映像**時才會顯示功能表**映像**編輯器之後，有可用於編輯映像的色板，和設定的命令**影像編輯器**視窗選項。 此外，使用裝置映像的命令可使用圖示和游標時。
 

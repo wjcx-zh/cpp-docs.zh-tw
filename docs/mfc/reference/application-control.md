@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d8780c249fdf768c322e3026240642c4da43c4
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 538a376dd14eae32864b494b7e79db1c89686b84
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315011"
 ---
 # <a name="application-control"></a>應用程式控制
 OLE 會需要應用程式和其物件的實際控制。 OLE 系統 Dll 必須能夠啟動和自動發行的應用程式、 協調其生產環境和修改的物件，等等。 本主題中的函式符合這些需求。 除了由 OLE 系統 Dll 呼叫，這些函式有時必須呼叫以及應用程式。 
@@ -186,7 +186,7 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>需求  
- **標頭：** < afxwin.h >  
+ **標題:** afxwin.h  
    
 ### <a name="see-also"></a>另請參閱  
  [巨集和全域](mfc-macros-and-globals.md)   
@@ -332,7 +332,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
    
 ### <a name="requirements"></a>需求  
- **標頭：** < afxwin.h >  
+ **標題:** afxwin.h  
    
 ### <a name="see-also"></a>另請參閱  
  [巨集和全域](mfc-macros-and-globals.md)  

@@ -1,5 +1,5 @@
 ---
-title: 快速鍵輔助按鍵屬性 |Microsoft Docs
+title: 快速鍵輔助按鍵屬性 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6750bfc0195eaaa350b829d1d899f648e9fe0e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 793e02b4ac083d6fe84ba2cc76ee340bcf2484e9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592632"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316051"
 ---
-# <a name="accelerator-modifier-property"></a>快速鍵輔助按鍵屬性
+# <a name="accelerator-modifier-property-c"></a>快速鍵輔助按鍵屬性 （c + +）
 
 以下是合法的項目快速鍵對應表中的修飾詞 屬性。
 

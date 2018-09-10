@@ -1,5 +1,5 @@
 ---
-title: 二進位編輯器 |Microsoft Docs
+title: 二進位編輯器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,8 +11,8 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - editors, Binary
-- resources [Visual Studio], editing
-- resource editors, Binary editor
+- resources [C++], editing
+- resource editors [C++], Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
 author: mikeblome
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f49aa8e270caf3f1e26416ee4f9a24781b87b059
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 86dd69a893c589ad4ebba06c2577925eae959f40
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591763"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313687"
 ---
-# <a name="binary-editor"></a>二進位編輯器
+# <a name="binary-editor-c"></a>二進位編輯器 （c + +）
 
 > [!WARNING]
 > **二進位編輯器**不適用於 Express 版本。

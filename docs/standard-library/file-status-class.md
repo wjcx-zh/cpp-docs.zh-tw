@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::permissions
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8f85041099d76a4bbb492aa55c5fb73d870589
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7dc955aa615deadb6e99cfdbb8d72513cc93ced8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842530"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314556"
 ---
 # <a name="filestatus-class"></a>file_status 類別
 
@@ -39,7 +39,34 @@ ms.locfileid: "33842530"
 class file_status;
 ```
 
-## <a name="filestatusfilestatus"></a>file_status::file_status
+### <a name="constructors"></a>建構函式
+
+|建構函式|描述|
+|-|-|
+|[file_status](#file_status)|建構的包裝函式[file_type](../standard-library/filesystem-enumerations.md#file_type)和檔案[perms](../standard-library/filesystem-enumerations.md#perms)。|
+
+### <a name="member-functions"></a>成員函式
+
+|成員函式|描述|
+|-|-|
+|[type](#type)|取得或設定 `file_type`。|
+|[permissions](#permissions)|取得或設定檔案權限。|
+
+### <a name="operators"></a>運算子
+
+|運算子|描述|
+|-|-|
+|[operator=](#op_as)|預設成員指派運算子會如預期般運作。|
+
+## <a name="requirements"></a>需求
+
+**標頭：** \<filesystem >
+
+**命名空間：** std::experimental::filesystem、 std::experimental::filesystem
+
+## <a name="file_status"></a> file_status:: file_status
+
+建構的包裝函式[file_type](../standard-library/filesystem-enumerations.md#file_type)和檔案[perms](../standard-library/filesystem-enumerations.md#perms)。
 
 ```cpp
 explicit file_status(
@@ -53,40 +80,60 @@ file_status(file_status&&) noexcept = default;
 ~file_status() noexcept = default;
 ```
 
-## <a name="filestatusoperator"></a>file_status::operator=
+### <a name="parameters"></a>參數
+
+*ftype*<br/>
+指定`file_type`，預設為`file_type::none`。
+
+*遮罩*<br/>
+指定的檔案`perms`，預設為`perms::unknown`。
+
+*file_status*<br/>
+預存的物件。
+
+## <a name="op_as"></a> file_status::operator =
+
+預設成員指派運算子會如預期般運作。
 
 ```cpp
 file_status& operator=(const file_status&) noexcept = default;
 file_status& operator=(file_status&&) nexcept = default;
 ```
 
-預設成員指派運算子會如預期般運作。
+### <a name="parameters"></a>參數
 
-## <a name="type"></a>類型
+*file_status*<br/>
+[File_status](../standard-library/file-status-class.md)複製到`file_status`。
+
+## <a name="type"></a> 型別
+
+取得或設定 `file_type`。
 
 ```cpp
 file_type type() const noexcept
 void type(file_type ftype) noexcept
 ```
 
-取得或設定 file_type。
+### <a name="parameters"></a>參數
 
-## <a name="permissions"></a>權限
+*ftype*<br/>
+已指定 `file_type`。
+
+## <a name="permissions"></a> 權限
+
+取得或設定檔案權限。
+
+若要建立的檔案中使用 setter`readonly`或移除`readonly`屬性。
 
 ```cpp
 perms permissions() const noexcept
 void permissions(perms mask) noexcept
 ```
 
-取得或設定檔案權限。
+### <a name="parameters"></a>參數
 
-使用 setter 將檔案設成唯讀或移除唯讀屬性。
-
-## <a name="requirements"></a>需求
-
-**標頭：** \<filesystem >
-
-**命名空間：** std::experimental::filesystem、 std::experimental::filesystem
+*遮罩*<br/>
+已指定 `perms`。
 
 ## <a name="see-also"></a>另請參閱
 

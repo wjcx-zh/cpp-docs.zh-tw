@@ -1,5 +1,5 @@
 ---
-title: 對話方塊編輯器 |Microsoft Docs
+title: 對話方塊編輯器 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource editors, Dialog editor
+- resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
-- dialog boxes, editing
+- dialog boxes [C++], editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c34487941ee45f91883ed91b1faa2c93973cfe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601720"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315492"
 ---
-# <a name="dialog-editor"></a>對話方塊編輯器
+# <a name="dialog-editor-c"></a>對話方塊編輯器 （c + +）
 
 ** 對話方塊**編輯器可讓您建立或編輯對話方塊資源。 您開啟對話方塊編輯器中的對話方塊的.rc 檔上按兩下**資源檢視** 視窗 (**檢視** > **資源檢視**)。 請注意，**資源檢視**不適用於 Express 版本。
 

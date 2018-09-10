@@ -1,5 +1,5 @@
 ---
-title: 切換對話方塊控制項和程式碼 |Microsoft Docs
+title: 切換對話方塊 （c + +） 控制項和程式碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - events [C++], viewing for controls
 - Windows messages [C++], controls
 - messages [C++], viewing for dialog boxes
-- Dialog editor, accessing code
+- Dialog Editor [C++], accessing code
 - code [C++], switching from Dialog Editor
 - controls [C++], jumping to code
-- Dialog editor, switching between controls and code
+- Dialog Editor [C++], switching between controls and code
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9aa603afdd6392f9dbe6082a76c1ae157bd008af
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0ef2bcd7dc6bf70f4d0486334d71bd5f7798c83f
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610852"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314387"
 ---
-# <a name="switching-between-dialog-box-controls-and-code"></a>在對話方塊控制項和程式碼之間切換
+# <a name="switching-between-dialog-box-c-controls-and-code"></a>切換對話方塊 （c + +） 控制項和程式碼
 
 在 MFC 應用程式，您可以按兩下對話方塊控制項跳至其處理常式程式碼，或快速地建立處理常式函式 stub。
 

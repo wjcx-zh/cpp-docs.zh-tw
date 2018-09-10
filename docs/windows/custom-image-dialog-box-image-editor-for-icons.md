@@ -1,5 +1,5 @@
 ---
-title: 自訂影像對話方塊 （圖示影像編輯器） |Microsoft Docs
+title: 自訂影像對話方塊 （c + +） （圖示影像編輯器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Custom Image dialog box
+- Custom Image dialog box [C++]
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb5e4d2fdc64499616af2492d39bfe3cac4931ae
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8f505694cd0efed303558438b2c2ed2fbff888b7
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595937"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313191"
 ---
-# <a name="custom-image-dialog-box-image-editor-for-icons"></a>自訂影像對話方塊 (圖示影像編輯器)
+# <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>自訂影像對話方塊 （c + +） （圖示影像編輯器）
 可讓您建立新的映像的自訂大小和色彩數目。
  **寬度**  
  提供空間讓您輸入自訂影像的寬度，單位為像素 （1-512，限制為 2048年）。

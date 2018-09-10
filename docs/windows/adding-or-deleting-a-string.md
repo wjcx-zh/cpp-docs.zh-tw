@@ -1,5 +1,5 @@
 ---
-title: 新增或刪除字串 |Microsoft Docs
+title: 新增或刪除字串資源 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - strings [C++], adding to string tables
-- string tables, deleting strings
+- string tables [C++], deleting strings
 - strings [C++], deleting in string tables
-- string tables, adding strings
+- string tables [C++], adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 952531a846fe48e9f093f016efd67d73c386d82c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c22990c504700ab82ae0d7542420a3f82db4d73
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204483"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314036"
 ---
-# <a name="adding-or-deleting-a-string"></a>加入或刪除字串
+# <a name="adding-or-deleting-a-string-resource-c"></a>新增或刪除字串資源 （c + +）
 
 您可以很快地插入至字串資料表使用的新項目**字串**編輯器。 新的字串會放在資料表結尾處，並指定下一個可用的識別項。 然後您可以編輯**識別碼**，**值**，或**標題**中的屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)視。
 

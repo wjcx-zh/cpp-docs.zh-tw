@@ -1,5 +1,5 @@
 ---
-title: 圖示和游標： 顯示裝置 （圖示影像編輯器） 的影像資源 |Microsoft Docs
+title: 圖示和游標： 顯示裝置 （c + + 圖示影像編輯器） 的影像資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,13 +11,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - cursors [C++], creating
-- image resources, display devices
+- image resources [C++], display devices
 - icons [C++], creating
 - cursors [C++], types
 - icons [C++]
 - Image editor [C++], icons and cursors
 - cursors [C++]
-- display devices, creating icons for
+- display devices [C++], creating icons for
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
@@ -26,14 +26,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b90337b48c46d335bfccf405b2ba7e0628b9f99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209488"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313581"
 ---
-# <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>圖示和游標：顯示裝置的影像資源 (圖示影像編輯器)
+# <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>圖示和游標： 顯示裝置 （c + + 圖示影像編輯器） 的影像資源
 
 圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有「作用點」(hot spot)，Windows 會用它來追蹤游標的位置。 圖示和游標會建立和使用編輯**映像**編輯器中，當點陣圖和其他映像。
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83e644d8544b7919c0f61199197574d03b13ff8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763064"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315365"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 
@@ -106,23 +106,23 @@ ms.locfileid: "43763064"
 
    選取資料來源之後，根據資料表或您所選取的預存程序的預設類別名稱填入這個方塊 (請參閱**Zdroj dat**下方)。 您可以編輯的類別名稱。
 
-- **.h 檔案**  
+- **.h 檔案**
 
    選取資料來源之後，以根據您選取的預存程序的資料表預設標頭的類別名稱填入這個方塊 (請參閱**Zdroj dat**下方)。 您可以編輯的標頭檔的名稱，或選取現有的標頭檔。
 
-- **使用屬性**  
+- **使用屬性**
 
    這個選項會指定精靈是否會建立使用屬性或宣告範本的取用者類別。 當您選取此選項時，精靈會使用屬性代替樣板宣告 （這是預設選項）。 當您取消選取此選項時，精靈會使用樣板宣告，而非屬性。
 
    - 如果您選取消費者**型別**的**資料表**，精靈會使用`db_source`並`db_table`屬性來建立資料表和資料表的存取子類別宣告，並使用`db_column`來建立資料行對應。 比方說，它會建立此對應：
 
         ```cpp
-        // Inject table class and table accessor class declarations  
-        [db_source("<initialization_string>"), db_table("dbo.Orders")]  
-        ... 
-        // Column map  
-        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;  
-        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];  
+        // Inject table class and table accessor class declarations
+        [db_source("<initialization_string>"), db_table("dbo.Orders")]
+        ...
+        // Column map
+        [ db_column(1, status=m_dwOrderIDStatus, length=m_dwOrderIDLength) ] LONG m_OrderID;
+        [ db_column(2, status=m_dwCustomerIDStatus, length=m_dwCustomerIDLength) ] TCHAR m_CustomerID[6];
         ...
         ```
 
@@ -133,20 +133,20 @@ ms.locfileid: "43763064"
             class COrdersAccessor; // Table class
             class COrders : public CTable<CAccessor<COrdersAccessor>>;
         // ...
-        // Column map  
+        // Column map
             BEGIN_COLUMN_MAP(COrderDetailsAccessor)
                 COLUMN_ENTRY_LENGTH_STATUS(1, m_OrderID, m_dwOrderIDLength, m_dwOrderIDStatus)
                 COLUMN_ENTRY_LENGTH_STATUS(2, m_CustomerID, m_dwCustomerIDLength, m_dwCustomerIDStatus)
-                // ...  
+                // ...
             END_COLUMN_MAP()
         ```
 
    - 如果您選取消費者**型別**的**命令**，精靈會使用`db_source`並`db_command`屬性，並使用`db_column`來建立資料行對應。 比方說，它會建立此對應：
 
         ```cpp
-        [db_source("<initialization_string>"), db_command("SQL_command")]  
-        ... 
-        // Column map using db_column is the same as for consumer type of 'table'  
+        [db_source("<initialization_string>"), db_command("SQL_command")]
+        ...
+        // Column map using db_column is the same as for consumer type of 'table'
         ```
 
       而不使用的命令和命令存取子類別宣告中之命令類別的.h 檔案中，例如：
@@ -193,6 +193,6 @@ ms.locfileid: "43763064"
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)  
-[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)  
+[ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)
+[使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 [連接字串和資料連結 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

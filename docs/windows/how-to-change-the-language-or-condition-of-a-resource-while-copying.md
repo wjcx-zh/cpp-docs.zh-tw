@@ -1,5 +1,5 @@
 ---
-title: 如何： 在複製時變更其語言或條件的資源 |Microsoft Docs
+title: 如何： 變更其語言或條件的資源時複製 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,22 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Language property
-- condition property of resource
+- Language property [C++]
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4acb718d44a5abcf4413cbb7f026e4a8ea0f57b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 26ec8987b22444c98bb7a88c791c4f941737ceae
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218085"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313308"
 ---
-# <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在複製資源時變更其語言或條件
+# <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>如何： 變更其語言或條件的資源時複製 （c + +）
 
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。
 

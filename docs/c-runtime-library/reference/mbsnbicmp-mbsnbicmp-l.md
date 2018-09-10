@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15038e42b87a9803312df79eb5d235f1add51669
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c9da102f81654062518ca8e886aab1c49df623
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405012"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314959"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp、_mbsnbicmp_l
 
-比較**n**位元組的兩個多位元組字元字串，並忽略大小寫。
+比較**n**個位元組的兩個多位元組字元字串，並忽略大小寫。
 
 > [!IMPORTANT]
-> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -92,19 +92,19 @@ int _mbsnbicmp(
 |0|*string1*子字串等於*string2*子字串。|
 |> 0|*string1*子字串大於*string2*子字串。|
 
-發生錯誤時， **_mbsnbicmp**傳回 **_NLSCMPERROR**，定義於 String.h 和 Mbstring.h。
+發生錯誤時， **_mbsnbicmp**會傳回 **_NLSCMPERROR**，其定義於 String.h 和 Mbstring.h。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbicmp**函式會執行序數比較的第一個最*計數*位元組*string1*和*string2*。 轉換為小寫; 每個字元來執行比較[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)是區分大小寫版本的 **_mbsnbicmp**。 如果達到結束的 null 字元之前任一字串中，比較結束*計數*來比較字元。 如果字串相等結束的 null 字元到達之前任一字串中*計數*來比較字元、 較短的字串為較小者。
+**_Mbsnbicmp**函式會執行序數比較最多的第一個*計數*位元組*string1*並*string2*。 轉換為小寫; 每個字元來執行比較[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)區分大小寫版本 **_mbsnbicmp**。 如果達到結束的 null 字元之前任一字串中結束的比較*計數*來比較字元。 如果字串相等時結束的 null 字元，便到達之前任一字串中*計數*來比較字元、 短的字串為較小者。
 
-**_mbsnbicmp**類似於[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，不同之處在於，它會比較字串最多*計數*字元而不是位元組。
+**_mbsnbicmp**大致[_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md)，差異在於比較字串最多*計數*而不是由字元的位元組。
 
-包含 ASCII 資料表中介於 'Z' 和 'a' 之間字元 ('['、'\\'、']'、'^'、'_' 和 '\`') 的兩個字串，會根據其大小寫以不同的方式進行比較。 比方說，這兩個字串"ABCDE"和"ABCD ^"一種方式比較，如果該比較為小寫 ("abcde">"abcd ^") 另一種方式 ("ABCDE"<"ABCD ^") 如果是大寫。
+包含 ASCII 資料表中介於 'Z' 和 'a' 之間字元 ('['、'\\'、']'、'^'、'_' 和 '\`') 的兩個字串，會根據其大小寫以不同的方式進行比較。 例如，兩個字串"ABCDE"和"ABCD ^"比較其中一個方法，如果該比較為小寫 ("abcde">"abcd ^") 以及的其他方式 ("ABCDE"<"ABCD ^") 如果它是大寫。
 
-**_mbsnbicmp**根據來辨識多位元組字元序列[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。 不受目前地區設定的影響。
+**_mbsnbicmp**辨識多位元組字元序列，根據[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。 不受目前地區設定的影響。
 
-如果有任一個*string1*或*string2*為 null 指標， **_mbsnbicmp**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，則此函數會傳回 **_NLSCMPERROR**並設定**errno**至**EINVAL**。
+如果有任一*string1*或是*string2*為 null 指標， **_mbsnbicmp**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，則函數會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -115,9 +115,9 @@ int _mbsnbicmp(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_mbsnbicmp**|<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

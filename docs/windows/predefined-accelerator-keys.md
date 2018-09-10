@@ -1,5 +1,5 @@
 ---
-title: 預先定義的快速鍵 |Microsoft Docs
+title: 預先定義的快速鍵 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
-- keyboard shortcuts, predefined
+- keyboard shortcuts [C++], predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f5ed6d95b48a4ecbe2fa23a377d8aac7a73feb9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e6498e0b0722b5de28b5569c5f3565b0f033ea9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603789"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315674"
 ---
-# <a name="predefined-accelerator-keys"></a>預先定義的快速鍵
+# <a name="predefined-accelerator-keys-c"></a>預先定義的快速鍵 （c + +）
 
 Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其中有部分是用於 Windows 環境的虛擬按鍵。 其他則支援瀏覽器或 Unicode 應用程式。 您可以在任何加速器中使用任何此類按鍵。
 

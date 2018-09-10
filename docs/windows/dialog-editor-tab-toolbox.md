@@ -1,5 +1,5 @@
 ---
-title: 對話方塊編輯器索引標籤、 工具箱 |Microsoft Docs
+title: 對話方塊編輯器索引標籤上，工具箱 （c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,10 +10,10 @@ dev_langs:
 helpviewer_keywords:
 - Toolbox [C++], Dialog Editor tab
 - controls [C++], types
-- syslink controls ino dialog boxes
-- custom controls [Visual Studio], dialog boxes
+- syslink controls in dialog boxes
+- custom controls [C++], dialog boxes
 - controls [C++], standard
-- Dialog editor, creating controls
+- Dialog Editor [C++], creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
 author: mikeblome
@@ -21,14 +21,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a528ece23301f707b267ed7cefd30649b34c5e60
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613508"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316207"
 ---
-# <a name="dialog-editor-tab-toolbox"></a>工具箱、對話方塊編輯器索引標籤
+# <a name="dialog-editor-tab-toolbox-c"></a>對話方塊編輯器索引標籤上，工具箱 （c + +）
 
 **對話方塊編輯器**索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您處理**對話方塊**編輯器。 若要將控制項加入新的對話方塊中，將控制項從**工具箱**對話方塊中，您要建立 (如需詳細資訊，請參閱[將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md))。 然後移動控制項，或變更其大小和形狀。
 

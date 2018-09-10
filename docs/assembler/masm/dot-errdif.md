@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2315c33e96c1343a0cfd9a4a8e2a06b5af3d42ba
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 45df072d78bc35243fb305e716d3e7a3ac483813
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676167"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313373"
 ---
 # <a name="errdifi"></a>.ERRDIF [[I]]
 
@@ -29,7 +29,7 @@ ms.locfileid: "43676167"
 
 ## <a name="syntax"></a>語法
 
-> .[[I]] ERRDIF <textitem1>， <textitem2> [[，訊息]]
+> .[[I]] ERRDIF *textitem1*， *textitem2* [[，*訊息*]]
 
 ## <a name="remarks"></a>備註
 

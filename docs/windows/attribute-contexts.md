@@ -8,19 +8,19 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- attributes [C++], contexts
+- attributes [C++/CLI], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7635f49a494648f18bcd59eb8d212cc76d1f1539
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e3935b168220b528afaecd2e1438cfe49496b1b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600796"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313659"
 ---
 # <a name="attribute-contexts"></a>屬性內容
 C + + 屬性可以使用四個基本的欄位描述： 它們可以套用到目標 (**適用於**)，如果它們是可重複，或是不 (**Repeatable**)、 所需的其他屬性 (存在**所需的屬性**)，和不相容性與其他屬性 (**無效的屬性**)。 隨附的資料表中每個屬性的參考主題會列出這些欄位。 以下說明每個欄位。

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 2d3b238b9a5bc01fa3ee053acdb3c7c84b95df71
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130985"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385004"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -44,7 +44,7 @@ ms.locfileid: "43130985"
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**選項可用於 Visual Studio 2017 15.5.5 版和所有更新 Microsoft Visual c + + 編譯器 (MSVC) 或在 2018 年 1 月 23 日之後。
+**/Qspectre**選項可用於 Visual Studio 2017 15.5.5 版和所有更新 Microsoft Visual c + + 編譯器 (MSVC) 或在 2018 年 1 月 23 日之後。 若要更新編譯器，並作為個別的元件安裝 Spectre 降低程式庫，請使用 Visual Studio 安裝程式。 **/Qspectre**選項也會適用於 Visual Studio 2015 Update 3 透過修補程式。 如需詳細資訊，請參閱 < [KB 4338871](https://support.microsoft.com/help/4338871)。
 
 所有版本的 Visual Studio 2017 版本 15.5 版及所有預覽的 Visual Studio 15.6 版已經包含了未記載的選項， **/d2guardspecload**，它就相當於初始行為 **/Qspectre**. 您可以使用 **/d2guardspecload**到您的程式碼，在這些版本的編譯器中套用相同的緩和措施。 請更新您要使用的組建 **/Qspectre**中的支援選項，編譯器 **/Qspectre**選項也可在更新版本的編譯器支援新的緩和措施。
 

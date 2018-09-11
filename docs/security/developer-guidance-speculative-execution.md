@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mamillmsft
+author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378c6fe9a86cc44d80252f69367cf8c70234f469
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613242"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384952"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>理論式執行端通道的 c + + 開發人員指引
 
@@ -31,7 +31,7 @@ ms.locfileid: "42613242"
 
 這篇文章所提供的指引與相關弱點所代表的類別：
 
-1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 （從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 
+1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 （從 15.5.5 版開始） 的 Visual Studio 2017 中 Visual c + + 編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 `/Qspectre`參數也會適用於 Visual Studio 2015 Update 3，透過[KB 4338871](https://support.microsoft.com/help/4338871)。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 
 
 2. CVE-2018年-3639，也稱為[推測性存放區略過 (SSB)](https://aka.ms/sescsrdssb)。 可能發生因為相依的存放區，因為記憶體存取 misprediction 預先載入的推測性執行的側邊通道被與這個硬體的弱點可能會類別。
 

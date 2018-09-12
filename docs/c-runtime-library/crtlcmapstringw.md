@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 163d6f90d31e27cc4d8a616074f7f4153ab58876
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451949"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685491"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 將一個字元字串對應至另一個字元字串，並執行指定的地區設定相關轉換。 此函式也可用來產生輸入字串的排序鍵。  
@@ -78,7 +78,7 @@ int __crtLCMapStringW(
  零表示失敗。 若要取得延伸錯誤資訊，請呼叫 `GetLastError` 函式。  
   
 ## <a name="remarks"></a>備註  
- 如果 `cchSrc` 大於零且 `lpSrcStr` 為以 null 終止的字串， `__crtLCMapStringW` 會將 `cchSrc` 設定為字串的長度。 然後 `__crtLCMapStringW` 會呼叫寬字串 (Unicode) 版本的 `LCMapString` 函式並指定其參數。 如需此函式之參數和傳回值的詳細資訊，請參閱 `LCMapString` MSDN Library [中的](http://go.microsoft.com/fwlink/p/?linkid=150542)函式。  
+ 如果 `cchSrc` 大於零且 `lpSrcStr` 為以 null 終止的字串， `__crtLCMapStringW` 會將 `cchSrc` 設定為字串的長度。 然後 `__crtLCMapStringW` 會呼叫寬字串 (Unicode) 版本的 `LCMapString` 函式並指定其參數。 如需此函式的參數和傳回值詳細資訊，請參閱 [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)。  
   
 ## <a name="requirements"></a>需求  
   

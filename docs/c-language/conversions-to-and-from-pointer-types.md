@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384290"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216094"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>指標類型的轉換
 一種值類型的指標可以轉換成另一種類型的指標。 不過，由於儲存區中不同類型會有不同的對齊需求和大小，因此結果可能會是未定義。 物件指標可以轉換成類型需要較不嚴格或同等嚴格之儲存對齊的物件指標，並且在不經變更的情況下轉換回原物件指標。  
@@ -43,7 +43,7 @@ ms.locfileid: "32384290"
   
 -   如果整數類型的大小與指標類型不相同，則會先使用[從帶正負號整數類型的轉換](../c-language/conversions-from-signed-integral-types.md)和[從不帶正負號整類型的轉換](../c-language/conversions-from-unsigned-integral-types.md)中所提供的轉換路徑，將整數類型轉換成指標的大小。 然後才會將它視為指標值。  
   
- 值為 0 的整數常數運算式或是轉型為 **void \*** 的這類運算式，都可以藉由類型轉換、指派或與任何類型的指標比較的方式進行轉換。 這樣所產生的 null 指標相當於相同類型的另一個 null 指標，但是這個 null 指標不等於任何函式指標或物件指標。 常數 0 以外的整數可以轉換成指標類型，但是結果不可移植。  
+ 值為 0 的整數常數運算式或是轉型為 **void** <strong>\*</strong> 等運算式，都可以藉由類型轉換、指派或與任何類型指標比較的方式來進行轉換。 這樣所產生的 null 指標相當於相同類型的另一個 null 指標，但是這個 null 指標不等於任何函式指標或物件指標。 常數 0 以外的整數可以轉換成指標類型，但是結果不可移植。  
   
 ## <a name="see-also"></a>請參閱  
  [指派轉換](../c-language/assignment-conversions.md)

@@ -16,27 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2257ff9be5988ed6a08dd5d152c83910c6edc88
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387950"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214715"
 ---
 # <a name="multidimensional-arrays-c"></a>多維陣列 (C)
 註標運算式也可以擁有多個註標，如下所示：  
   
 ```  
-  
-expression1  
-[  
-expression2  
-] [  
-expression3  
-]...  
+expression1 [ expression2 ] [ expression3 ] ...  
 ```  
   
- 註標運算式的關聯是由左至右。 最左邊的下標運算式 *expression1 ***[*** expression2***]** 會最先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 除非最後一個指標值會定址陣列類型 (請參閱以下範例)，否則間接取值運算子 (**\***) 會在評估最後一個註標運算式之後套用。  
+ 註標運算式的關聯是由左至右。 最左邊的下標運算式 *expression1* **[** *expression2* **]** 會最先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 除非最後一個指標值會定址陣列類型 (請參閱以下範例)，否則間接取值運算子 (<strong>\*</strong>) 會在評估最後一個註標運算式之後套用。  
   
  具有多個註標的運算式會參考「多維陣列」的元素。 所謂的多維陣列是指其中所包含的元素也是一種陣列。 例如，三維陣列的第一個元素是具有兩個維度的陣列。  
   

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340394"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694037"
 ---
 # <a name="redistributing-the-mfc-library"></a>轉散發 MFC 程式庫
 如果您以動態方式將應用程式連結至 MFC 程式庫，則必須轉散發相應的 MFC DLL。 例如，如果 MFC 應用程式是使用 Visual Studio 2015 所隨附的 MFC 版本所建置，您必須轉散發 mfc140.dll 或 mfc140u.dll，視您的應用程式是針對窄字元或 Unicode 支援進行編譯而定。  
@@ -36,7 +36,7 @@ ms.locfileid: "33340394"
   
  如果應用程式會使用實作 WebBrowser 控制項的 MFC 類別 (例如，[類別](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 類別](../mfc/reference/chtmleditview-class.md))，建議您同時安裝最新版本的 Microsoft Internet Explorer，讓目標電腦具有最新的通用控制項檔案。 (最低需要有 Internet Explorer 4.0。)如需如何安裝 Internet Explorer 元件的資訊，請參閱 Microsoft 支援服務網站上的 "Article 185375: How To Create a Single EXE Install of Internet Explorer" (文章 185375：如何建立 Internet Explorer 的單一 EXE 安裝)。  
   
- 如果應用程式會使用 MFC 資料庫類別 (例如，[CRecordset 類別](../mfc/reference/crecordset-class.md)和 [CRecordView 類別](../mfc/reference/crecordview-class.md))，您必須轉散發 ODBC 和應用程式所使用的任何 ODBC 驅動程式。 如需詳細資訊，請參閱[轉散發資料庫支援檔案](../ide/redistributing-database-support-files.md)。  
+ 如果應用程式會使用 MFC 資料庫類別 (例如，[CRecordset 類別](../mfc/reference/crecordset-class.md)和 [CRecordView 類別](../mfc/reference/crecordview-class.md))，您必須轉散發 ODBC 和應用程式所使用的任何 ODBC 驅動程式。  
   
  如果 MFC 應用程式使用 Windows Forms 控制項，您必須隨著應用程式轉散發 mfcmifc80.dll。 這個 DLL 是使用強式名稱簽署的 .NET 組件，可隨著其應用程式本機資料夾中的應用程式轉散發，或使用 [Gacutil.exe (全域組件快取工具)](/dotnet/framework/tools/gacutil-exe-gac-tool) 將其部署到全域組件快取 (GAC) 中來轉散發。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33340394"
   
  可轉散發的 .msm 檔案包含可用於當地語系化的 DLL。 每種支援的語言都有一個 DLL。 安裝處理序會將這些 DLL 安裝在目標電腦的 %windir%\system32\ 資料夾中。  
   
- 如需如何將 MFC 應用程式當地語系化的詳細資訊，請參閱 [TN057：MFC 元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)，以及 Microsoft 支援服務網站上的 [Article 208983: How to Using MFC LOC DLLs](http://go.microsoft.com/fwlink/p/?linkid=198025) (文章 208983：如何使用 MFC LOC DLL)。  
+ 如需如何當地語系化 MFC 應用程式的詳細資訊，請參閱 [TN057：MFC 元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)。
   
  您可以藉由部署應用程式本機資料夾中的 MFC DLL，來轉散發 MFC 當地語系化 DLL。 如需如何轉散發 Visual C++ 程式庫的詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。  
   

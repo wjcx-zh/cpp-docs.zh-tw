@@ -1,7 +1,7 @@
 ---
 title: directory_iterator 類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,24 +35,24 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cbf9e8d4ebdf62cbbfdc5a37ca1c49d7106a42
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09970c0d3cf8771317c93670c0ec7f029e1ace2a
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105199"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691584"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 類別
 
-描述可循序遍訪目錄中的檔案名稱的輸入迭代器。 對於迭代器 X，運算式 *X 會評估為 directory_entry 類別的物件，該物件會包裝檔案名稱及其狀態的任何已知項目。
+描述可循序遍訪目錄中的檔案名稱的輸入迭代器。 迭代器`X`，運算式`*X`評估為類別的物件`directory_entry`包裝檔案名稱和任何已知的狀態項目。
 
-此類別會儲存類型路徑，呼叫的物件`mydir`這裡基於有展銷的目的，用來表示要排序之目錄的名稱和呼叫物件的類型 directory_entry`myentry`這裡，表示目前的檔案名稱中目錄序列中。 預設建構物件的類型 directory_entry 具有空白`mydir`路徑名稱，而代表結束序列迭代器。
+此類別會儲存類型的物件`path`，稱為`mydir`這裡展示，代表要循序目錄的名稱，目的和型別的物件`directory_entry`稱為`myentry`這裡，表示目前目錄序列中的檔案名稱。 類型的預設建構物件`directory_entry`含有空白`mydir`路徑名稱，而代表結束序列迭代器。
 
-例如，假設目錄 abc 有項目 def 和 ghi，程式碼：
+例如，假設目錄`abc`項目的`def`和`ghi`，程式碼：
 
 `for (directory_iterator next(path("abc")), end; next != end; ++next)     visit(next->path());`
 
-會呼叫`visit`引數 path 與 visit。
+會呼叫`visit`使用的引數`path("abc/def")`和`path("abc/ghi")`。
 
 如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。
 
@@ -72,7 +72,7 @@ class directory_iterator;
 
 |成員函式|描述|
 |-|-|
-|[遞增值](#increment)|此函式會嘗試前進到目錄中的下一個檔案名稱。|
+|[遞增值](#increment)|會嘗試前進到下一步 的檔案名稱，在目錄中。|
 
 ### <a name="operators"></a>運算子
 

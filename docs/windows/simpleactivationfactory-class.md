@@ -1,28 +1,34 @@
 ---
 title: SimpleActivationFactory 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory
+- module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
+- module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
+- module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory class
+- Microsoft::WRL::SimpleActivationFactory::ActivateInstance method
+- Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
+- Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0820012c8c22de1287fcb09037212b870a4ff7bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594794"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691467"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 類別
 
@@ -54,9 +60,9 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 |名稱|描述|
 |----------|-----------------|
-|[SimpleActivationFactory::ActivateInstance 方法](../windows/simpleactivationfactory-activateinstance-method.md)|建立指定之介面的執行個體。|
-|[SimpleActivationFactory::GetRuntimeClassName 方法](../windows/simpleactivationfactory-getruntimeclassname-method.md)|取得所指定類別的執行個體的執行階段類別名稱*基底*類別範本參數。|
-|[SimpleActivationFactory::GetTrustLevel 方法](../windows/simpleactivationfactory-gettrustlevel-method.md)|取得所指定類別的執行個體的信任層級*基底*類別範本參數。|
+|[SimpleActivationFactory::ActivateInstance 方法](#activateinstance)|建立指定之介面的執行個體。|
+|[SimpleActivationFactory::GetRuntimeClassName 方法](#getruntimeclassname)|取得所指定類別的執行個體的執行階段類別名稱*基底*類別範本參數。|
+|[SimpleActivationFactory::GetTrustLevel 方法](#gettrustlevel)|取得所指定類別的執行個體的信任層級*基底*類別範本參數。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -88,6 +94,67 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="activateinstance"></a>Simpleactivationfactory:: Activateinstance 方法
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+建立指定之介面的執行個體。
+
+```cpp
+STDMETHOD( ActivateInstance )(
+    _Deref_out_ IInspectable **ppvObject
+);
+```
+
+#### <a name="parameters"></a>參數
+
+*ppvObject*  
+這項作業完成時，所指定的物件執行個體的指標`Base`類別範本參數。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+如果`__WRL_STRICT__`是定義，判斷提示會發出錯誤如果類別範本參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+
+## <a name="getruntimeclassname"></a>Simpleactivationfactory:: Getruntimeclassname 方法
+
+取得所指定類別的執行個體的執行階段類別名稱`Base`類別範本參數。
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+#### <a name="parameters"></a>參數
+
+*runtimeName*  
+這項作業完成時，執行階段類別名稱。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+如果`__WRL_STRICT__`是定義，判斷提示會發出錯誤如果所指定的類別`Base`類別樣板參數不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+
+## <a name="gettrustlevel"></a>Simpleactivationfactory:: Gettrustlevel 方法
+
+取得所指定類別的執行個體的信任層級`Base`類別範本參數。
+
+```cpp
+STDMETHOD(
+   GetTrustLevel
+)(_Out_ TrustLevel* trustLvl);
+```
+
+#### <a name="parameters"></a>參數
+
+*trustLvl*  
+這項作業完成時，目前類別物件的信任層級。
+
+### <a name="return-value"></a>傳回值
+
+一律傳回 S_OK。

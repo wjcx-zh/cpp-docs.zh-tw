@@ -1,28 +1,30 @@
 ---
 title: RuntimeClassFlags 結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClassFlags
+- implements/Microsoft::WRL::RuntimeClassFlags::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- RuntimeClassFlags structure
+- Microsoft::WRL::RuntimeClassFlags structure
+- Microsoft::WRL::RuntimeClassFlags::value constant
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0a32fc373900af1a4322f4f2511c44417d2916a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6c3cb141576598aa39c718316048900622c4df41
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594270"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691454"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 結構
 
@@ -48,7 +50,7 @@ A [RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。
 
 |名稱|描述|
 |----------|-----------------|
-|[RuntimeClassFlags::value 常數](../windows/runtimeclassflags-value-constant.md)|包含[RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。|
+|[RuntimeClassFlags::value 常數](#value-constant)|包含[RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -60,6 +62,10 @@ A [RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="value-constant"></a>Runtimeclassflags:: Value 常數
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+包含的欄位[RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。
+  
+```cpp
+static const unsigned int value = flags;
+```

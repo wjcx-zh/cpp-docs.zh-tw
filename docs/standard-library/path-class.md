@@ -1,7 +1,7 @@
 ---
 title: path 類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4559bec84d7e6051155ad73f68a1ef8ae13ca6cc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104156"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691506"
 ---
 # <a name="path-class"></a>path 類別
 
-**path** 類別會儲存類型 string\_type 的物件 (這裡基於示範目的而稱為 myname)，適合用於路徑名稱。 string\_type 與 basic\_string\<value_type> 同義，其中 value\_type 與 Windows 下的 char 或 Posix 下的 wchar_t 同義。
+**路徑**類別會儲存類型的物件`string_type`，稱為`myname`這裡基於的說明，適合用為路徑名稱。 `string_type` 是的同義字`basic_string<value_type>`，其中`value_type`同義**char**在 Windows 或**wchar_t** Posix 下。
 
 如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。
 
@@ -443,7 +443,7 @@ class iterator
 
 ## <a name="make_preferred"></a> path:: make_preferred
 
-視需要請將每個分隔符號轉換成 preferred_separator 」。
+將轉換至每個分隔符號`preferred_separator`視。
 
 ```cpp
 path& make_preferred();
@@ -529,7 +529,7 @@ path& operator+=(Elem elem);
 
 1. `concat(source);`
 
-1. `concat(path(basic_string\<Elem>(1, elem)));`
+1. `concat(path(basic_string<Elem>(1, elem)));`
 
 ## <a name="op_divide"></a> path:: operator / =
 
@@ -576,7 +576,7 @@ path parent_path() const;
 
 ### <a name="remarks"></a>備註
 
-傳回父路徑元件`myname`，特別的前置詞`myname`移除之後`filename().native()`和任何正前面的目錄分隔符號。 (同樣地，如果`begin() != end()`，它是範圍 [begin （），透過連續套用 operator / = range。 中的所有元素的組合)元件可能是空的。
+傳回父路徑元件`myname`，特別的前置詞`myname`移除之後`filename().native()`和任何正前面的目錄分隔符號。 (同樣地，如果`begin() != end()`，它是在範圍內的所有元素的組合`[begin(), --end())`連續套用`operator/=`。)元件可能是空的。
 
 ## <a name="path"></a> path:: path
 
@@ -687,7 +687,7 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="remarks"></a>備註
 
-首先會移除後置詞`extension().native()`從`myname`。 然後，如果`!newext.empty() && newext[0] != dot`(其中`dot`是`*path(".").c_str()`)，然後`dot`附加至`myname`。 然後`newext`附加至`myname`。
+首先會移除後置詞`extension().native()`從`myname`。 然後，如果`!newext.empty() && newext[0] != dot`(其中`dot`是`*path(".").c_str()`)，然後`dot`附加至`myname`。 然後*newext*附加至`myname`。
 
 ## <a name="replace_filename"></a> path:: replace_filename
 
@@ -747,7 +747,7 @@ path root_path() const;
 
 ### <a name="remarks"></a>備註
 
-傳回的根路徑元件`myname`，root_name / root_directory。 元件可能是空的。
+傳回的根路徑元件`myname`，具體來說`root_name()`  /  `root_directory`。 元件可能是空的。
 
 ## <a name="stem"></a> path:: stem
 
@@ -773,7 +773,7 @@ string string() const;
 
 ### <a name="remarks"></a>備註
 
-第一個 (template) 成員函式會使用與下相同的方式轉換儲存在 mypath 的序列：
+儲存在序列的第一個 （範本） 的成員函式轉換`mypath`一樣：
 
 1. `string()` 的 `string<char, Traits, Alloc>()`
 
@@ -783,7 +783,7 @@ string string() const;
 
 1. `u32string()` 的 `string<char32_t, Traits, Alloc>()`
 
-儲存在序列的第二個成員函式轉換`mypath`成 char 序列，並傳回它的字串類型物件中所儲存的主機系統偏好的編碼。
+儲存在序列的第二個成員函式轉換`mypath`成主機系統偏好的編碼**char**序列，並傳回它的類型物件中所儲存`string`。
 
 ## <a name="string_type"></a> path::string_type
 
@@ -827,7 +827,7 @@ string u8string() const;
 
 ## <a name="value_type"></a> path::value_type
 
-此類型描述主機作業系統偏好的路徑元素。
+此類型描述`path`主機作業系統偏好的項目。
 
 ```cpp
 #if _WIN32_C_LIB
@@ -839,7 +839,7 @@ typedef char value_type;
 
 ## <a name="wstring"></a> path::wstring
 
-儲存中的序列轉換`mypath`成主機系統偏好的編碼`wchar_t`順序和類型的物件中所儲存的傳回`wstring`。
+儲存中的序列轉換`mypath`成主機系統偏好的編碼**wchar_t**序列，並傳回它的類型物件中所儲存`wstring`。
 
 ```cpp
 wstring wstring() const;

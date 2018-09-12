@@ -1,28 +1,30 @@
 ---
 title: SimpleClassFactory 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/7/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory
+- module/Microsoft::WRL::SimpleClassFactory::CreateInstance
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: deb100cfcbb8d2af14501b8b5cf90569a90c2d4d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600487"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691441"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 類別
 
@@ -44,7 +46,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 基底類別必須提供預設建構函式。
 
-下列程式碼範例示範如何使用**SimpleClassFactory**具有[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集。
+下列程式碼範例示範如何使用`SimpleClassFactory`具有[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)巨集。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -54,7 +56,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 |名稱|描述|
 |----------|-----------------|
-|[SimpleClassFactory::CreateInstance 方法](../windows/simpleclassfactory-createinstance-method.md)|建立指定之介面的執行個體。|
+|[SimpleClassFactory::CreateInstance 方法](#createinstance)|建立指定之介面的執行個體。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -86,6 +88,35 @@ class SimpleClassFactory : public ClassFactory<>;
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="createinstance"></a>Simpleclassfactory:: Createinstance 方法
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+建立指定之介面的執行個體。
+
+```cpp
+STDMETHOD( CreateInstance )(
+   _Inout_opt_ IUnknown* pUnkOuter,
+   REFIID riid,
+   _Deref_out_ void** ppvObject
+);
+```
+
+#### <a name="parameters"></a>參數
+
+*pUnkOuter*  
+必須是`nullptr`; 否則傳回的值是 CLASS_E_NOAGGREGATION。
+
+SimpleClassFactory 不支援彙總。 如果已支援彙總，但所建立的物件已是在彙總的一部分*pUnkOuter*會是指標，以控制`IUnknown`彙總的介面。
+
+*riid*  
+介面若要建立之物件的識別碼。
+
+*ppvObject*  
+這項作業完成時，所指定的物件執行個體的指標*riid*參數。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+如果`__WRL_STRICT__`是定義，判斷提示會發出錯誤如果類別範本參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或因未設定 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。

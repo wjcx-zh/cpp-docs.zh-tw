@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206167"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319093"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -65,7 +65,7 @@ ms.locfileid: "43206167"
   
 - **數學程式庫函式 C++ 多載**：在舊版中，\<math.h> 只為數學程式庫函式定義了一部分 C++ 多載，而未定義全部。 \<cmath> 定義了剩餘的多載。因此，若要取得所有的多載，必須加入 \<cmath> 標頭。 但對於只加入 \<math.h> 的程式碼，函式多載解析將會是一大問題。 現在，所有的 C++ 多載皆已從 \<math.h> 中移除，而且全部都歸入 \<cmath>。  
   
-     若要解析錯誤，請加入 <cmath>，從而取得從 \<math.h> 中移除的函式宣告。 下表列出已移動的函式。  
+     若要解決錯誤，請包含 \<cmath>，以取得已從 \<math.h> 移除的函式宣告。 下表列出已移動的函式。  
   
      已移動的函式：  
   

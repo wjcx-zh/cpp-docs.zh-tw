@@ -17,44 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f7e5f8933aabe36362938a23c28ed1cd562a579
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205389"
 ---
 # <a name="pointer-declarations"></a>指標宣告
 「指標宣告」用於命名指標變數，並且會指定變數所指向的物件類型。 宣告為指標的變數會保留記憶體位址。  
   
-## <a name="syntax"></a>語法  
- *declarator*：  
- &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
-  
- *direct-declarator*：  
- &nbsp;&nbsp;*identifier*  
-  
- &nbsp;&nbsp;**(** *declarator* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
-  
- *pointer*：  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
-  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
-  
- *type-qualifier-list*：  
- &nbsp;&nbsp;*type-qualifier*  
-  
- &nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
+## <a name="syntax"></a>語法
+
+*declarator*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+
+*direct-declarator*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
+
+*pointer*：  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
+
+*type-qualifier-list*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
   
  *type-specifier* 會為物件提供類型，它可以是任何基本、結構或等位類型。 指標變數也可以指向函式、陣列和其他指標  (如需宣告和解譯更複雜指標類型的詳細資訊，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md))。  
   
- 您可以將 *type-specifier* 設定為 **void**，以藉此延後指定指標參考的類型。 這類項目稱為「**void** 的指標」，書寫方式為 `void *`。 宣告為 *void* 指標的變數可用來指向任何類型的物件。 不過，若要在指標或指標所指向的物件上執行大部分作業，則必須為每項作業明確指定指標所指向的類型  (**char \*** 類型和 **void \*** 類型的變數可在不進行類型轉換的情況下與指派相容)。這類轉換可以利用類型轉換完成 (如需詳細資訊，請參閱[類型轉換](../c-language/type-cast-conversions.md))。  
+ 您可以將 *type-specifier* 設定為 **void**，以藉此延後指定指標參考的類型。 這類項目稱為「**void** 的指標」，書寫方式為 `void *`。 宣告為 *void* 指標的變數可用來指向任何類型的物件。 不過，若要在指標或指標所指向的物件上執行大部分作業，則必須為每項作業明確指定指標所指向的類型  (**char** <strong>\*</strong> 類型和 **void** <strong>\*</strong> 類型的變數可在不進行類型轉換的情況下與指派相容)。這類轉換可以利用類型轉換完成 (如需詳細資訊，請參閱[類型轉換](../c-language/type-cast-conversions.md))。  
   
  *type-qualifier* 可以是 **const** 或 **volatile**，或兩者都是。 這兩者會分別指定，指標不可由程式本身修改 (**const**)，或是指標可由非程式所控制的某個處理序合法修改 (**volatile**) (如需 **const** 和 **volatile** 的詳細資訊，請參閱[類型限定詞](../c-language/type-qualifiers.md))。  
   

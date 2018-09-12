@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391957"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206129"
 ---
 # <a name="is-isw-routines"></a>is、isw 常式
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391957"
  `__iscsymf`  
  字母或底線。  
   
- **isdigit**  
+ `isdigit`  
  十進位數字 (0 - 9)。  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391957"
  `iswcntrl`  
  控制寬字元。  
   
- **__iswcsym**  
- **isalnum** 為 true 的任何寬字元，或 '_' 字元。  
+ `__iswcsym`  
+ `isalnum` 為 true 的任何寬字元，或 '_' 字元。  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  `iswalpha` 為 true 的任何寬字元，或 '_' 字元。  
   
  `iswctype`  
  字元具有 `desc` 引數所指定的屬性。 針對 `iswctype` 之 `desc` 引數的每個有效值，都有對等的寬字元分類常式，如下表所示︰  
   
- **等同於 iswctype(**   
- ***c, desc* ) 到其他 isw 測試常式**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>iswctype(c, desc) 與其他 isw 測試常式的對應項
   
 |*desc* 引數的值|iswctype( *c, desc*) 對應項|  
 |------------------------------|----------------------------------------|  

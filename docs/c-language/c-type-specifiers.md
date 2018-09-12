@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37ac421627d4c4503d75eaf65188bbe234af015
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f965481ae1d3abea40577680b1af72004f793123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388379"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197224"
 ---
 # <a name="c-type-specifiers"></a>C 類型指定名稱
 
@@ -50,7 +50,7 @@ ms.locfileid: "32388379"
 
 關鍵字 **void** 有三個用途：指定函式傳回型別、指定不使用引數之函式的引數類型清單，以及指向未指定類型的指標。 您可以使用 **void** 類型宣告不傳回值的函式或宣告未指定類型的指標。 如需有關 **void** 單獨出現在函式名稱之後並以括弧括住時的詳細資訊，請參閱[引數](../c-language/arguments.md)。
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 類型檢查現在符合 ANSI 標準，這表示類型 **short** 與類型 **int** 是不同的類型。 例如，這是在舊版編譯器中接受之 Microsoft C 編譯器的重新定義。
 
@@ -79,9 +79,9 @@ pi = pu;  /* Now generates warning */
 
 會評估類型 **void** 運算式的副作用。 您無法以任何方式使用具有 **void** 類型之運算式的 (不存在) 值，也不能將 **void** 運算式 (透過隱含或明確轉換) 轉換成 **void** 以外的任何類型。 如果您在需要 **void** 運算式的內容使用任何其他類型的運算式，則會捨棄其值。
 
-為符合 ANSI 規格，不能將 **void\*\*** 作為 **int\*\*** 使用。 只有 **void\*** 能夠當作未指定類型的指標使用。
+為符合 ANSI 規格，不能將 <strong>void\*\*</strong> 作為 <strong>int\*\*</strong> 使用。 只有 **void**<strong>\*</strong> 能夠當作未指定類型的指標使用。
 
-**結束 Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 您可以使用 **typedef** 宣告建立其他類型指定名稱，如 [Typedef 宣告](../c-language/typedef-declarations.md)中所述。 如需每種類型之大小的詳細資訊，請參閱[基本類型的儲存區](../c-language/storage-of-basic-types.md)。
 

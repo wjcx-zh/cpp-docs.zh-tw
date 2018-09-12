@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330229"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204647"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>巡覽類別結構 (Visual C++)
-您可以使用[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)或[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)來瀏覽專案類別結構，包括函式、繼承和介面。  
+您可以使用**類別檢視**或**物件瀏覽器**來瀏覽專案類別結構，包括函式、繼承和介面。 如需詳細資訊，請參閱[檢視程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
   
  您可以在 [類別檢視] 中的函式名稱上按兩下，就可移至函式宣告。 您可以在 [類別檢視] 中的類別名稱上按兩下，就可移至類別定義。  
   

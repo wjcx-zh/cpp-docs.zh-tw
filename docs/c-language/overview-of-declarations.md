@@ -15,43 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac843ef83d2de4f9cf84a44c67859becaead6ec6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392623"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218500"
 ---
 # <a name="overview-of-declarations"></a>宣告概觀
 「宣告」會指定一組識別項的解譯和屬性。 如果宣告也為以識別項命名的物件或函式保留儲存區，則稱為「定義」。 變數、函式和類型的 C 宣告具有下列語法：  
   
-## <a name="syntax"></a>語法  
- `declaration`：  
- *declaration-specifiers* *attribute-seq* opt*init-declarator-list* opt **;**  
-  
- /\**attribute-seq* opt 是 Microsoft 特定的 */  
-  
- *declaration-specifiers*：  
- *storage-class-specifier declaration-specifiers*opt  
-  
- *type-specifier declaration-specifiers*opt  
-  
- *type-qualifier declaration-specifiers*opt  
-  
- *init-declarator-list*：  
- *init-declarator*  
-  
- *init-declarator-list* , *init-declarator*  
-  
- *init-declarator*：  
- *declarator*  
-  
- *declarator*  **=**  *initializer*  
+## <a name="syntax"></a>語法
+
+*declaration*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+
+/\* *attribute-seq*<sub>opt</sub> is Microsoft specific */
+
+*declaration-specifiers*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>  
+
+*init-declarator-list*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*  
+
+*init-declarator*：  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*  
   
 > [!NOTE]
->  後續章節將不再重複 `declaration` 的這個語法。 後續章節中的語法通常會以 `declarator` 非終端開頭。  
+> 下列各節將不再重複 *declaration* 的這個語法。 下列各節中的語法通常會以 *declarator* 非終端開頭。  
   
- *init-declarator-list* 中的宣告包含所要命名的識別項；*init* 是 initializer (初始設定式) 的縮寫。 *init-declarator-list* 是以逗號分隔的宣告子序列，每個宣告子都可以有額外的類型資訊及/或初始設定式。 `declarator` 包含所要宣告的識別項 (若有的話)。 *declaration-specifiers* 非終端項是由一序列的類型和儲存類別指定名稱所組成，以指示連結、儲存期，以及至少是宣告子所表示實體的部分類型。 因此，宣告是由儲存類別規範、類型規範、類型限定詞、宣告子和初始設定式的某種組合所構成。  
+ *init-declarator-list* 中的宣告包含所要命名的識別項；*init* 是 initializer (初始設定式) 的縮寫。 *init-declarator-list* 是以逗號分隔的宣告子序列，每個宣告子都可以有額外的類型資訊及/或初始設定式。 *declarator* 包含所要宣告的識別項 (若有的話)。 *declaration-specifiers* 非終端項是由一序列的類型和儲存類別指定名稱所組成，以指示連結、儲存期，以及至少是宣告子所表示實體的部分類型。 因此，宣告是由儲存類別規範、類型規範、類型限定詞、宣告子和初始設定式的某種組合所構成。  
   
  宣告可以包含 *attribute-seq* 中列出的一或數個選擇性屬性；*seq* 是 sequence (序列) 的縮寫。 這些 Microsoft 特定屬性可執行各種函式，本手冊中會有詳細的討論。  
   
@@ -63,7 +60,7 @@ int const *fp;
   
  宣告名為 `fp` 的變數，做為無法修飾 (**const**) `int` 值的指標。 若要定義宣告中的多個變數，您可以使用多個宣告子，並以逗號分隔。  
   
- 一個宣告至少要有一個宣告子，否則其類型規範必須宣告結構標記、等位標記或列舉的成員。 宣告子提供有關識別項的任何其餘資訊。 宣告子是一種識別項，可以用方括號 (**[ ]**)、星號 (**\***) 或括號 (**( )**) 來修飾，以分別宣告陣列、指標或函式類型。 當您宣告簡單變數 (例如字元、整數和浮點項目)，或是簡單變數的結構和等位時，`declarator` 就只是識別項。 如需宣告子的詳細資訊，請參閱[宣告子及變數宣告](../c-language/declarators-and-variable-declarations.md)。  
+ 一個宣告至少要有一個宣告子，否則其類型規範必須宣告結構標記、等位標記或列舉的成員。 宣告子提供有關識別項的任何其餘資訊。 宣告子是一種識別項，可以用方括號 (**[ ]**)、星號 (<strong>\*</strong>) 或括號 (**( )**) 來修飾，以分別宣告陣列、指標或函式類型。 當您宣告簡單變數 (例如字元、整數和浮點項目)，或是簡單變數的結構和等位時，`declarator` 就只是識別項。 如需宣告子的詳細資訊，請參閱[宣告子及變數宣告](../c-language/declarators-and-variable-declarations.md)。  
   
  所有定義都是隱含的宣告，但並非所有宣告都是定義。 例如，以 `extern` 儲存類別規範開頭的變數宣告是要「參考」而不是「定義」宣告。 如果在定義外部變數之前先加以參考，或是從使用外部變數的原始程式檔，將其定義在另一個原始程式檔中，則需要 `extern` 宣告。 儲存體不是藉由「參考」宣告來配置，也不能在宣告中初始化變數。  
   

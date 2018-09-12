@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409273"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205256"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 資料類型
 
@@ -34,7 +34,7 @@ ms.locfileid: "32409273"
 
 所以最好以 8 位元 `unsigned char` 表示一個位元組的多位元組字元。 或者，為避免負值結果，只要先將 **char** 類型的單一位元組字元轉換成 `unsigned char`，再將它轉換成 **int** 或 **long** 即可。
 
-因為某些 SBCS 字串處理函式採用 (帶正負號的) **char\*** 參數，所以定義 **_MBCS** 時，會產生類型不符的編譯器警告。 有三種方法可以避免這個警告，位效率順序列出︰
+因為某些 SBCS 字串處理函式採用 (帶正負號) **char**<strong>\*</strong> 參數，所以定義 **_MBCS** 時，會產生類型不符的編譯器警告。 有三種方法可以避免這個警告，位效率順序列出︰
 
 1. 在 TCHAR.H 中使用型別安全的內嵌函式。 這是預設行為。
 

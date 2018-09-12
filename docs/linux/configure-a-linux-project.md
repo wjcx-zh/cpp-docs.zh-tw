@@ -1,7 +1,7 @@
 ---
 title: 在 Visual Studio 中設定 C++ Linux 專案 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/05/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,17 +14,19 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b4e5bad5b0688a2f0deeb237335c26419e2d9cbe
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207898"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895197"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
+
 本主題說明如何在 Visual Stuidio 中設定 C++ Linux 專案。 如需 Visual Studio 中 CMake Linux 專案的相關資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。
 
 ## <a name="general-settings"></a>一般設定
+
 使用 Visual Studio，可以設定 Linux 專案的各種選項。  若要檢視這些選項，請選取 [專案] > [屬性] 功能表，或在**方案總管**中以滑鼠右鍵按一下專案，然後從操作功能表中選取 [屬性]。 [一般] 設定隨即出現。
 
 ![一般組態](media/settings_general.png)
@@ -32,13 +34,14 @@ ms.locfileid: "39207898"
 預設會使用此工具來建置可執行檔 (.out)。  若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型] 選項。
 
 ## <a name="remote-settings"></a>遠端設定
+
 若要變更與遠端的 Linux 電腦有關的設定，請設定出現在 [一般] 設定中的遠端選項：
 
-* 若要變更目標 Linux 電腦，請使用 [遠端組建電腦] 項目。  這可讓您選取其中一個先前建立的連線。  若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)小節。
+- 若要變更目標 Linux 電腦，請使用 [遠端組建電腦] 項目。  這可讓您選取其中一個先前建立的連線。  若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)小節。
 
-* [遠端組建根目錄] 決定在遠端 Linux 電腦上建置專案的根目錄位置。  除非進行變更，否則這會預設為 **~/projects**。
+- [遠端組建根目錄] 決定在遠端 Linux 電腦上建置專案的根目錄位置。  除非進行變更，否則這會預設為 **~/projects**。
 
-* [遠端組建專案目錄] 是在遠端 Linux 電腦上建置這個特定專案的位置。  這會預設為上面所設定之根目錄下的 **$(RemoteRootDir)/$(ProjectName)**，其會擴充到目前專案後命名的目錄。
+- [遠端組建專案目錄] 是在遠端 Linux 電腦上建置這個特定專案的位置。  這會預設為上面所設定之根目錄下的 **$(RemoteRootDir)/$(ProjectName)**，其會擴充到目前專案後命名的目錄。
 
 > [!NOTE]
 > 若要變更預設 C 和 C++ 編譯器，或是用來建置專案的連結器和封存工具，請使用 [C/C++] > [一般] 區段和 [連結器] > [一般] 區段中的適當項目。  這些可以設定成使用特定版本的 GCC，甚至 Clang 編譯器 (舉例來說)。
@@ -61,17 +64,19 @@ ms.locfileid: "39207898"
 **Visual Studio 2017 15.7 和更新版本：** 請參閱[管理 IntelliSense 的遠端標頭](#remote_intellisense)。
 
 ## <a name="copy-sources"></a>複製來源
+
 建置時，會將開發電腦上的來源檔案複製到 Linux 電腦，並在該處進行編譯。  根據預設，Visual Studio 專案中的所有來源都會複製到上方設定中所設定的位置。  不過，也可以在清單中新增其他來源，或者完全關閉複製來源，後者是 Makefile 專案的預設值。
 
-* [要複製的來源] 決定將哪些來源複製到遠端電腦。  根據預設，**@(SourcesToCopyRemotely)** 預設為專案中所有的原始程式碼檔案，但不包括任何資產/資源檔案，例如影像。
+- [要複製的來源] 決定將哪些來源複製到遠端電腦。  根據預設，**\@(SourcesToCopyRemotely)** 預設為專案中所有的原始程式碼檔案，但不包括任何資產/資源檔案，例如影像。
 
-* [複製來源] 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
+- [複製來源] 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 
-* [要複製的其他來源] 可讓您新增將複製到遠端系統的其他原始程式檔。  您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
+- [要複製的其他來源] 可讓您新增將複製到遠端系統的其他原始程式檔。  您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
 
-  `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
+`C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>建置事件
+
 因為所有編譯都是在遠端電腦上進行，所以已在 [專案屬性] 的 [建置事件] 區段中新增數個額外建置事件。  這些是 [遠端建置前事件]、[遠端連結前事件] 和 [遠端建置後事件]，並且在程序中的個別步驟之前或之後發生於遠端電腦上。
 
 ![建置事件](media/settings_buildevents.png)
@@ -90,7 +95,8 @@ apt install zip
 
 ![遠端標頭 IntelliSense](media/remote-header-intellisense.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
+
 [使用專案屬性](../ide/working-with-project-properties.md)  
 [C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)  
 [VC++ 目錄 (Linux C++)](../linux/prop-pages/directories-linux.md)  

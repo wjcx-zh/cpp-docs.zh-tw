@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab516edc5cb30d777eb42cc96e2932e526f20772
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a94d575ee36f38b56f64fb6298eb6f6f6e43567e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385815"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762739"
 ---
 # <a name="summary-of-string-literals"></a>字串常值的摘要
-*string-literal*:  
- **'** *s-char-sequence* opt **'**  
+
+*string-literal*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**'** *s-char-sequence*<sub>opt</sub> **'**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L'** *s-char-sequence*sub>opt</sub> **'**  
   
- **L'** *s-char-sequence* opt **'**  
+*s-char-sequence*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*  
   
- *s-char-sequence*:  
- *s-char*  
-  
- *s-char-sequence s-char*  
-  
- *s-char*:  
- 原始程式碼字元集的任何成員，但雙引號 (")、反斜線 (\\) 或新行字元 *escape-sequence* 除外  
-  
-## <a name="see-also"></a>請參閱  
- [語彙文法](../c-language/lexical-grammar.md)
+*s-char*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;原始程式碼字元集的任何成員，但雙引號 (")、反斜線 (\\) 或新行字元 escape-sequence 除外  
+
+## <a name="see-also"></a>另請參閱
+
+[語彙文法](../c-language/lexical-grammar.md)

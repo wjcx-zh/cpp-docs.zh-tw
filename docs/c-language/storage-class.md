@@ -20,49 +20,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecd50ddf72fbafb23571e2b2709418e4eb89093e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5473a3c11268e7e8563d95392ec6439e55c03bf4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391427"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757158"
 ---
 # <a name="storage-class"></a>儲存類別
 函式定義中的儲存類別指定名稱會為函式提供 `extern` 或 **static** 儲存類別。  
   
-## <a name="syntax"></a>語法  
- *function-definition*:  
- *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
+## <a name="syntax"></a>語法
+
+*function-definition*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
+
+/\* *attribute-seq* 是 Microsoft 專有 \*/
+
+*declaration-specifiers*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>  
+
+*storage-class-specifier*: /\* 用於函式定義 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**外部**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**靜態**
+
+如果函式定義未包含 *storage-class-specifier*，則儲存類別會預設為 `extern`。 您可以將函式明確宣告為 `extern`，但其實不需要。  
   
- /\* *attribute-seq* 是 Microsoft 專有 */  
+如果函式的宣告包含 *storage-class-specifier* `extern`，則識別項的連結會與具有檔案範圍之識別項的任何可見宣告相同。 如果沒有具有檔案範圍的可見宣告，表示識別項具有外部連結。 如果識別項具有檔案範圍，但沒有 *storage-class-specifier*，表示識別項具有外部連結。 外部連結是指，識別項的每個執行個體表示相同的物件或函式。 如需連結和檔案範圍的詳細資訊，請參閱[存留期、範圍、可視性和連結](../c-language/lifetime-scope-visibility-and-linkage.md)。  
   
- *declaration-specifiers*：  
- *storage-class-specifier declaration-specifiers* opt  
+具有 `extern` 以外之儲存類別規範的區塊範圍函式宣告會產生錯誤。  
   
- *type-specifier declaration-specifiers* opt  
+具有 **static** 儲存類別的函式，只有在本身定義所在的原始程式檔中才可見。 所有其他函式無論擁有明確或隱含指定的 `extern` 儲存類別，在程式的所有原始程式檔中都可見。 如果需要 **static** 儲存類別，則必須在第一個函式宣告 (如果有的話) 上宣告，以及在函式定義上宣告。  
   
- *type-qualifier declaration-specifiers* opt  
+**Microsoft 專屬**  
   
- *storage-class-specifier*: /\* 用於函式定義 \*/  
- **extern**  
+已啟用 Microsoft 擴充功能時，如果函式定義位於相同的原始程式檔中且定義明確指定了 **static** 儲存類別，則會為原本宣告時沒有儲存類別 (或具有 `extern` 儲存類別) 的函式指定 **static** 儲存類別。  
   
- **static**  
+使用 /Ze 編譯器選項進行編譯時，在區塊內使用 `extern` 關鍵字宣告的函式會具有全域可視性。 但使用 /Za 編譯時就不是這種情況。 如果將原始程式碼的可攜性納入考量，則不應倚賴這項功能。  
   
- 如果函式定義未包含 *storage-class-specifier*，則儲存類別會預設為 `extern`。 您可以將函式明確宣告為 `extern`，但其實不需要。  
+**結束 Microsoft 專屬**  
   
- 如果函式的宣告包含 *storage-class-specifier* `extern`，則識別項的連結會與具有檔案範圍之識別項的任何可見宣告相同。 如果沒有具有檔案範圍的可見宣告，表示識別項具有外部連結。 如果識別項具有檔案範圍，但沒有 *storage-class-specifier*，表示識別項具有外部連結。 外部連結是指，識別項的每個執行個體表示相同的物件或函式。 如需連結和檔案範圍的詳細資訊，請參閱[存留期、範圍、可視性和連結](../c-language/lifetime-scope-visibility-and-linkage.md)。  
-  
- 具有 `extern` 以外之儲存類別規範的區塊範圍函式宣告會產生錯誤。  
-  
- 具有 **static** 儲存類別的函式，只有在本身定義所在的原始程式檔中才可見。 所有其他函式無論擁有明確或隱含指定的 `extern` 儲存類別，在程式的所有原始程式檔中都可見。 如果需要 **static** 儲存類別，則必須在第一個函式宣告 (如果有的話) 上宣告，以及在函式定義上宣告。  
-  
- **Microsoft 特定的**  
-  
- 已啟用 Microsoft 擴充功能時，如果函式定義位於相同的原始程式檔中且定義明確指定了 **static** 儲存類別，則會為原本宣告時沒有儲存類別 (或具有 `extern` 儲存類別) 的函式指定 **static** 儲存類別。  
-  
- 使用 /Ze 編譯器選項進行編譯時，在區塊內使用 `extern` 關鍵字宣告的函式會具有全域可視性。 但使用 /Za 編譯時就不是這種情況。 如果將原始程式碼的可攜性納入考量，則不應倚賴這項功能。  
-  
- **結束 Microsoft 特定的**  
-  
-## <a name="see-also"></a>請參閱  
- [C 函式定義](../c-language/c-function-definitions.md)
+## <a name="see-also"></a>另請參閱  
+[C 函式定義](../c-language/c-function-definitions.md)

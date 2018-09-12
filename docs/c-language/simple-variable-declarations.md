@@ -15,53 +15,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbda7ff9a22a42ce4a6b8c3de10d0d6f0d03f77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7216a4a470b6293a31d6f364626188e41351b5cb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389763"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763135"
 ---
 # <a name="simple-variable-declarations"></a>簡單變數宣告
-簡單變數的宣告 (直接宣告子的最簡單形式) 會指定變數的名稱和類型。 另外也會指定變數的儲存類別和資料類型。  
-  
- 儲存類別或類型 (或兩者皆是) 為變數宣告中所必要。 不具類型的變數 (例如 `var;`) 會產生警告。  
-  
-## <a name="syntax"></a>語法  
- `declarator`：  
- *pointer* opt  
-  
- *direct-declarator*  
-  
- *direct-declarator*：  
- *identifier*  
-  
- *identifier*:  
- *nondigit*  
-  
- *identifier nondigit*  
-  
- *identifier digit*  
-  
- 對於算術、結構、等位、列舉和 void 類型，以及 `typedef` 名稱所代表的類型，簡單宣告子可以在宣告中使用，因為類型規範會提供所有類型相關資訊。 指標、陣列和函式類型都需要更複雜的宣告子。  
-  
- 您可以使用以逗號分隔 (**,**) 的識別項清單，在相同的宣告中指定數個變數。 宣告中定義的所有變數都會具有相同的基底類型。 例如:   
-  
-```  
-int x, y;        /* Declares two simple variables of type int */  
-int const z = 1; /* Declares a constant value of type int */  
-```  
-  
- 變數 `x` 和 `y` 可以保存集合中以特定實作的 `int` 類型定義的任何值。 簡單物件 `z` 會初始化為值 1，而且不可修改。  
-  
- 如果 `z` 是針對未初始化的靜態變數或是在檔案範圍內宣告，就會收到初始值 0，而且該值不可修改。  
-  
-```  
-unsigned long reply, flag; /* Declares two variables  
-                              named reply and flag     */  
-```  
-  
- 在這個範例中，`reply` 和 `flag` 這兩個變數都具有 `unsigned long` 類型並且保存不帶正負號的整數值。  
-  
-## <a name="see-also"></a>請參閱  
- [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)
+
+簡單變數的宣告 (直接宣告子的最簡單形式) 會指定變數的名稱和類型。 另外也會指定變數的儲存類別和資料類型。
+
+儲存類別或類型 (或兩者皆是) 為變數宣告中所必要。 不具類型的變數 (例如 `var;`) 會產生警告。
+
+## <a name="syntax"></a>語法
+
+*declarator*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
+
+*direct-declarator*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*
+
+*identifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼* *nondigit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼* *數字*
+
+對於算術、結構、等位、列舉和 void 類型，以及 `typedef` 名稱所代表的類型，簡單宣告子可以在宣告中使用，因為類型規範會提供所有類型相關資訊。 指標、陣列和函式類型都需要更複雜的宣告子。
+
+您可以使用以逗號分隔 (**,**) 的識別項清單，在相同的宣告中指定數個變數。 宣告中定義的所有變數都會具有相同的基底類型。 例如: 
+
+```C
+int x, y;        /* Declares two simple variables of type int */
+int const z = 1; /* Declares a constant value of type int */
+```
+
+變數 `x` 和 `y` 可以保存集合中以特定實作的 `int` 類型定義的任何值。 簡單物件 `z` 會初始化為值 1，而且不可修改。
+
+如果 `z` 是針對未初始化的靜態變數或是在檔案範圍內宣告，就會收到初始值 0，而且該值不可修改。
+
+```C
+unsigned long reply, flag; /* Declares two variables
+                              named reply and flag     */
+```
+
+在這個範例中，`reply` 和 `flag` 這兩個變數都具有 `unsigned long` 類型並且保存不帶正負號的整數值。
+
+## <a name="see-also"></a>另請參閱
+
+[宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

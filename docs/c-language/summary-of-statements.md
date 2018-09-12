@@ -12,86 +12,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2d3b27149344151f891e23c39bbecb8e4c1102
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18fdc129bd2aadd45ebaa13510e6029dba9a07df
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391346"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766853"
 ---
 # <a name="summary-of-statements"></a>陳述式摘要
-*statement*:  
- *labeled-statement*  
+
+*statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Microsoft 專有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Microsoft 專有 \*/
+
+*jump-statement*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *識別碼*  **;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**繼續 ;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**中斷 ;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**return** *運算式*<sub>opt</sub> **;**
+
+*compound-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+
+*declaration-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*宣告*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *宣告*
+
+*statement-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *陳述式*
+
+*expression-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*運算式*<sub>opt</sub> **;**  
   
- *compound-statement*  
+*iteration-statement*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *運算式*  **)**  *陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**do**  *陳述式*  **while (**  *運算式*  **) ;**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**for (**  *運算式*<sub>opt</sub> **;** *運算式*<sub>opt</sub> **;** *運算式*<sub>opt</sub> **)** *陳述式*
+
+*selection-statement*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *運算式*  **)**  *陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *運算式*  **)**  *陳述式*  **else**  *陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**switch (**  *運算式*  **)**  *陳述式*
+
+*labeled-statement*：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*  **:**  *陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *陳述式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**預設 :**  *陳述式*
+
+*try-except-statement*:   /\* Microsoft 特定 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *陳述式*  **)**  *compound-statement*  
   
- *expression-statement*  
-  
- *selection-statement*  
-  
- *iteration-statement*  
-  
- *jump-statement*  
-  
- *try-except-statement* /* Microsoft 特定 \*/  
-  
- *try-finally-statement* /* Microsoft 特定 \*/  
-  
- *jump-statement*：  
- **goto**  *identifier*  **;**  
-  
- **continue ;**  
-  
- **break ;**  
-  
- **return**  *expression*opt **;**  
-  
- *compound-statement*:  
- **{**  *declaration-list*opt*statement-list*opt **}**  
-  
- *declaration-list*:  
- *declaration*  
-  
- *declaration-list declaration*  
-  
- *statement-list*:  
- *statement*  
-  
- *statement-list statement*  
-  
- *expression-statement*:  
- *expression*opt **;**  
-  
- *iteration-statement*：  
- **while (**  *expression*  **)**  *statement*  
-  
- **do**  *statement*  **while (**  *expression*  **) ;**  
-  
- **for (**  *expression*opt **;** *expression*opt **;** *expression*opt **)** *statement*  
-  
- *selection-statement*：  
- **if (**  *expression*  **)**  *statement*  
-  
- **if (**  *expression*  **)**  *statement*  **else**  *statement*  
-  
- **switch (**  *expression*  **)**  *statement*  
-  
- *labeled-statement*：  
- *identifier*  **:**  *statement*  
-  
- **case**  *constant-expression*  **:**  *statement*  
-  
- **default :**  *statement*  
-  
- *try-except-statement*:   /\* Microsoft 特定 \*/  
- **__try**  *compound-statement*  
-  
- **__except (**  *expression*  **)**  *compound-statement*  
-  
- *try-finally-statement*:   /\* Microsoft 特定 \*/  
- **__try**  *compound-statement*  
-  
- **__finally**  *compound-statement*  
-  
-## <a name="see-also"></a>請參閱  
- [階段結構文法](../c-language/phrase-structure-grammar.md)
+*try-finally-statement*:   /\* Microsoft 特定 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
+
+## <a name="see-also"></a>另請參閱  
+[階段結構文法](../c-language/phrase-structure-grammar.md)

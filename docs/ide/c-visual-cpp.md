@@ -17,49 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 74e2fdd2f970ca3c1f177dd8d7ea565757a03a4b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329254"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312996"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-\<c> 標記指出在一段描述中應該標記為程式碼的文字。 請使用 [\<code>](../ide/code-visual-cpp.md) 將多行指定為程式碼。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-<c>text</c>  
-```  
-  
-#### <a name="parameters"></a>參數  
- `text`  
- 您要指定為程式碼的文字。  
-  
-## <a name="remarks"></a>備註  
- 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// xml_c_tag.cpp  
-// compile with: /doc /LD  
-// post-build command: xdcmake xml_c_tag.xdc  
-  
-/// Text for class MyClass.  
-class MyClass {  
-public:  
-   int m_i;  
-   MyClass() : m_i(0) {}  
-  
-   /// <summary><c>MyMethod</c> is a method in the <c>MyClass</c> class.  
-   /// </summary>  
-   int MyMethod(MyClass * a) {  
-      return a -> m_i;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [XML 文件](../ide/xml-documentation-visual-cpp.md)
+
+\<c> 標記指出在一段描述中應該標記為程式碼的文字。 請使用 [\<code>](../ide/code-visual-cpp.md) 將多行指定為程式碼。
+
+## <a name="syntax"></a>語法
+
+```
+<c>text</c>
+```
+
+#### <a name="parameters"></a>參數
+
+*文字*<br/>
+您要指定為程式碼的文字。
+
+## <a name="remarks"></a>備註
+
+編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+
+## <a name="example"></a>範例
+
+```cpp
+// xml_c_tag.cpp
+// compile with: /doc /LD
+// post-build command: xdcmake xml_c_tag.xdc
+
+/// Text for class MyClass.
+class MyClass {
+public:
+   int m_i;
+   MyClass() : m_i(0) {}
+
+   /// <summary><c>MyMethod</c> is a method in the <c>MyClass</c> class.
+   /// </summary>
+   int MyMethod(MyClass * a) {
+      return a -> m_i;
+   }
+};
+```
+
+## <a name="see-also"></a>請參閱
+
+[XML 文件](../ide/xml-documentation-visual-cpp.md)

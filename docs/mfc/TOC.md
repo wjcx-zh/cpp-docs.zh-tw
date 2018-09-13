@@ -141,7 +141,6 @@
 ### [撰寫 MFC 應用程式](writing-mfc-applications.md)
 ### [網際網路上的 ActiveX 控制項](activex-controls-on-the-internet.md)
 ### [升級現有的 ActiveX 控制項](upgrading-an-existing-activex-control.md)
-### [網際網路上的主動式文件](active-documents-on-the-internet.md)
 ### [網際網路上的非同步 Moniker](asynchronous-monikers-on-the-internet.md)
 ### [測試網際網路應用程式](testing-internet-applications.md)
 ### [網際網路安全性 (C++)](internet-security-cpp.md)

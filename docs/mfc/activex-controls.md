@@ -1,7 +1,7 @@
 ---
-title: ActiveX 控制項 |Microsoft 文件
+title: ActiveX 控制項 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,16 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3cb9a43e9982a9c7e7b577562fd9d7cf4a7ccc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83a968a5f3521064feea61b3fa09583a4ede71c9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340783"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534959"
 ---
 # <a name="activex-controls"></a>ActiveX 控制項
 在 Visual C++ 中，您可以使用 MFC 或 ATL 來建立 ActiveX 控制項。  
-  
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 ActiveX 控制項的許多功能可以以更簡單且更安全的方式，使用現代化的技術，例如 HTML5 和 JavaScript、 現代瀏覽器延伸或 WebAssembly 模組執行。 如需詳細資訊，請參閱[揮別以往，第 2 部分： 說再見 ActiveX、 VBScript、 使用 attachEvent...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 和[原生傳訊](/microsoft-edge/extensions/guides/native-messaging)並[Microsoft Edge 延伸模組](/microsoft-edge/extensions)並[WebAssembly](https://webassembly.org/)。
+
 -   [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)  
   
 -   [ATL](../atl/active-template-library-atl-concepts.md)  

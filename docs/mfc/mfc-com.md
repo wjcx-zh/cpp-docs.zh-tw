@@ -1,7 +1,7 @@
 ---
 title: MFC COM |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 026e8b39d751a352830b37ae0b5692882e2daa3f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205645"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534829"
 ---
 # <a name="mfc-com"></a>MFC COM
 MFC 的子集專門設計來支援 COM，而大部分的 Active Template Library (ATL) 設計為 COM 程式設計。 本節的主題描述 COM 的 MFC 支援  
@@ -34,8 +34,6 @@ MFC 的子集專門設計來支援 COM，而大部分的 Active Template Library
  Active 技術 （例如 ActiveX 控制項、 使用中文件內含項目、 OLE 和等等） 使用元件物件模型 (COM)，以便在網路上的環境中，不論它們是語言與彼此互動的軟體元件建立。 Active 技術可用來建立在桌面或網際網路執行的應用程式。 如需詳細資訊，請參閱[COM 簡介](../atl/introduction-to-com.md)或是[元件物件模型](/windows/desktop/com/the-component-object-model)。  
   
  Active 技術包括用戶端和伺服器技術，包括下列：  
-  
--   [主動式文件內含項目](../mfc/active-document-containment.md)、 支援 MFC 版本 4.2 和更新版本，可讓使用者檢視[主動式文件](../mfc/active-documents.md)（例如 Microsoft Excel 或 Word 檔案） 並啟用文件的原生的整個介面應用程式的整個工作區[主動式文件容器](../mfc/active-document-containers.md)例如 Microsoft Office Binder 或 Microsoft Internet Explorer。 所提供的文件時，用戶端，作為容器[作用中的文件伺服程式](../mfc/active-document-servers.md)。 如需有關如何使用主動式文件中的網際網路應用程式的詳細資訊，請參閱：[在網際網路上的主動式文件](../mfc/active-documents-on-the-internet.md)。  
   
 -   ActiveX 控制項是可用的網站等容器中的互動式物件。 如需有關 ActiveX 控制項的詳細資訊，請參閱：  
   

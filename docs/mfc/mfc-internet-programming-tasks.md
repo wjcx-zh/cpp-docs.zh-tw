@@ -1,7 +1,7 @@
 ---
-title: MFC 網際網路程式設計工作 |Microsoft 文件
+title: MFC 網際網路程式設計工作 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e8d8fab6fe78c6ca1e32f7973327d2285cfcd20
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347242"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534907"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC 網際網路程式設計工作
-本節包含將網際網路支援加入至您應用程式的詳細步驟。 其中的主題包含如何使用 MFC 類別以使您現有的應用程式支援網際網路，以及如何將主動式文件支援加入至現有的 COM 元件。 您要建立包含文件最新股價、 匹茲堡橄欖球分數和南極洲 microsoft 最新溫度提供數個技術可幫助您這樣做，透過網際網路。  
+本節包含將網際網路支援加入至您應用程式的詳細步驟。 其中的主題包含如何使用 MFC 類別以使您現有的應用程式支援網際網路，以及如何將主動式文件支援加入至現有的 COM 元件。 您要建立的文件股價、 匹茲堡橄欖球分數，以及最新溫度資料南極大陸 Microsoft 提供數個技術，可協助您透過網際網路進行。  
   
- Active 技術包括 ActiveX 控制項 (先前稱為 OLE 控制項) 和 Active 文件；WinInet 可輕鬆地跨網際網路擷取和儲存檔案，而非同步 Moniker 則可以有效率地下載資料。 Visual C++ 提供許多精靈，利用起始應用程式協助您快速入門。 如需這些技術的簡介，請參閱[MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)和[MFC COM](../mfc/mfc-com.md)。  
+ Active 技術包括 ActiveX 控制項 (先前稱為 OLE 控制項) 和 Active 文件；WinInet 可輕鬆地跨網際網路擷取和儲存檔案，而非同步 Moniker 則可以有效率地下載資料。 Visual C++ 提供許多精靈，利用起始應用程式協助您快速入門。 如需與這些技術的簡介，請參閱[MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)並[MFC COM](../mfc/mfc-com.md)。  
   
- 您總是想要透過 FTP 檔案，但是尚未學習 WinSock 和網路程式設計通訊協定 WinInet 類別封裝這些通訊協定，提供一組簡單的函式可用來撰寫用戶端應用程式上網際網路，下載檔案使用 HTTP、 FTP 和 gopher。 您可以使用 WinInet 搜尋您的硬碟或整個世界的目錄。 您可以收集數種不同類型的資料，並將其呈現給整合介面的使用者。  
+ 您一直想要 FTP 檔案，但是尚未學習 WinSock 和網路程式設計通訊協定 WinInet 類別封裝這些通訊協定，提供您一組簡單的函式可用來撰寫要下載檔案在網際網路上的用戶端應用程式使用 HTTP、 FTP 和 gopher。 您可以使用 WinInet 搜尋您的硬碟或整個世界的目錄。 您可以收集數種不同類型的資料，並將其呈現給整合介面的使用者。  
   
  您有大量的資料需要下載非同步 moniker，請提供大型物件的漸進式呈現的 COM （元件物件模型） 解決方案。 WinInet 也可以透過非同步方式使用。  
   
@@ -48,8 +48,6 @@ ms.locfileid: "33347242"
 -   [網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)  
   
 -   [升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)  
-  
--   [網際網路上的主動式文件](../mfc/active-documents-on-the-internet.md)  
   
 -   [網際網路上的非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: MFC ActiveX 控制項： 最佳化 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,15 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424bb8e7082432cea3f730bb0783c2c1912c293f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 09d441a44660310a13be264b24286ad2f0ccc6cd
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220502"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535180"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控制項：最佳化
 這篇文章說明您可用來最佳化您的 ActiveX 控制項，以提升效能的技巧。  
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
   
  主題[開啟關閉可見時啟動選項](../mfc/turning-off-the-activate-when-visible-option.md)並[提供滑鼠互動而非使用中](../mfc/providing-mouse-interaction-while-inactive.md)討論不建立視窗啟動之前的控制項。 本主題[提供無視窗啟用](../mfc/providing-windowless-activation.md)討論，即使在啟用時，永遠不會建立視窗中，控制項。  
   

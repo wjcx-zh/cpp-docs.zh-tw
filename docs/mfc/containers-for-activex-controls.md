@@ -1,7 +1,7 @@
 ---
-title: ActiveX 控制項的容器 |Microsoft 文件
+title: ActiveX 控制項的容器 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,24 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 008cf9ea24958cad0866e180d74a43fb031416c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c40a158777622856942c4c436299470aba3e6f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341442"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534855"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX 控制項的容器
-您可以使用其他應用程式，以開發 Visual c + + ActiveX 控制項，只要它們支援 ActiveX 控制項內含項目。 許多 Microsoft 應用程式，開頭列出的版本支援 ActiveX 控制項內含項目。  
+您可以使用其他應用程式，在開發 Visual c + + ActiveX 控制項，只要它們支援 ActiveX 控制項內含項目。 有多種 Microsoft 應用程式，開頭列出的版本支援 ActiveX 控制項內含項目。
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。  
   
 > [!NOTE]
->  下列清單是不支援 ActiveX 控制項，但代表最常用於測試集的應用程式的完整清單：  
+>  下列清單不支援 ActiveX 控制項，但代表最常用於測試集的應用程式的完整清單：  
   
  應用程式支援 ActiveX 控制項內含項目包括：  
   
 -   Internet Explorer 3.x 和更新版本  
   
--   Visual 基本 4.x 和更新版本  
+-   Visual Basic 4.x 和更新版本  
   
 -   Visual c + + 4.x 和更新版本  
   
@@ -41,7 +44,7 @@ ms.locfileid: "33341442"
   
 -   Word 97 和更新版本  
   
--   存取 97 和更新版本  
+-   Access 97 和更新版本  
   
 -   FrontPage 97 和更新版本  
   

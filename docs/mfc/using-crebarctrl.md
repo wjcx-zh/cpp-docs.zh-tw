@@ -1,5 +1,5 @@
 ---
-title: 使用 CReBarCtrl |Microsoft 文件
+title: 使用 CReBarCtrl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fbd58954e5b5b0bf16a052e3a667e28f6bc981
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29f678eb776e17fc9dc7cbd07e9a0fa91eef530c
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/13/2018
 ms.locfileid: "33383305"
 ---
 # <a name="using-crebarctrl"></a>使用 CReBarCtrl
@@ -32,7 +32,7 @@ Rebar 控制項可當做子視窗的容器。 這些子視窗通常是其他控�
   
  ![有兩個群組列的 rebar 控制項](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼  
   
 -   [CReBar 和CReBarCtrl 比較](../mfc/crebar-vs-crebarctrl.md)  
   

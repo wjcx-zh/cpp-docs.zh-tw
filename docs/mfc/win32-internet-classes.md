@@ -1,7 +1,7 @@
 ---
-title: Win32 網際網路類別 |Microsoft 文件
+title: Win32 網際網路類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,30 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383220"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534933"
 ---
 # <a name="win32-internet-classes"></a>Win32 網際網路類別
-MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術來讓網際網路程式設計更容易。  
+MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術，以便於網際網路程式設計。
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- 建立和初始化一個網際網路工作階段或多個同時網際網路工作階段，視需要描述 proxy 伺服器的連線。  
+ 建立和初始化一個網際網路工作階段或數個同時網際網路工作階段，如有必要，將告訴您連線到 proxy 伺服器。  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  管理您與網際網路伺服器的連接。  
   
  [CInternetFile](../mfc/reference/cinternetfile-class.md)  
- 這個類別和其衍生的類別可讓在使用網際網路通訊協定的遠端系統上檔案的存取權。  
+ 此類別和其衍生的類別允許在使用網際網路通訊協定的遠端系統上的檔案的存取權。  
   
  [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
  管理您與 HTTP 伺服器的連接。  
   
- [Cinternetfile](../mfc/reference/chttpfile-class.md)  
- 提供功能，以尋找和讀取 HTTP 伺服器上的檔案。  
+ [CHttpFile](../mfc/reference/chttpfile-class.md)  
+ 提供的功能來尋找和讀取 HTTP 伺服器上的檔案。  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
  提供在 Gopher 伺服器上尋找和讀取檔案的功能。  
@@ -51,7 +55,7 @@ MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術來讓網際網路程式�
  管理您連接到 FTP 伺服器。  
   
  [CGopherConnection](../mfc/reference/cgopherconnection-class.md)  
- 管理您與 gopher 伺服器的連接。  
+ 管理您連接至 gopher 伺服器。  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
  執行本機和網際網路檔案搜尋。  

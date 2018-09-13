@@ -1,7 +1,7 @@
 ---
 title: 依工作分類的網際網路資訊 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,15 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a0e9fc861340f4289e7f50ebc59248b1ed317db3
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677543"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534998"
 ---
 # <a name="internet-information-by-task"></a>依工作分類的網際網路資訊
 本主題中所列的工作會根據您想要完成的工作來排序的。  
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
   
  本主題中列出的工作類別如下：  
   
@@ -34,13 +37,9 @@ ms.locfileid: "43677543"
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX 控制項、 文件和非同步 Moniker 工作  
   
--   [深入了解主動式文件](../mfc/active-documents-on-the-internet.md)  
-  
 -   [深入了解非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [深入了解網際網路內容中的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)  
-  
--   [深入了解網際網路內容中的主動式文件](../mfc/active-documents-on-the-internet.md)  
   
 -   [最佳化的 ActiveX 控制項](../mfc/mfc-activex-controls-optimization.md)  
   

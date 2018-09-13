@@ -1,7 +1,7 @@
 ---
 title: CDocObjectServer 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701cfc2f8a88f57a1c50c9c4310ecd21154ef09a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 156480c05833b9d653a903986a37f77878c37671
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337862"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535284"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 類別
 實作可讓一般 `COleDocument` 伺服器融入完整 DocObject 伺服器所需的其他 OLE 介面： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
@@ -71,7 +71,7 @@ class CDocObjectServer : public CCmdTarget
   
  若要自訂您的 DocObject 伺服器，衍生您自己的類別，從`CDocObjectServer`，並覆寫其檢視設定函式中， [OnActivateView](#onactivateview)， [OnApplyViewState](#onapplyviewstate)，和[OnSaveViewState](#onsaveviewstate). 您必須提供來回架構會呼叫您類別的新執行個體。  
   
- 如需 DocObjects 的詳細資訊，請參閱[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)並[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 參考 》*。 另請參閱[網際網路前幾個步驟： 主動式文件](../../mfc/active-documents-on-the-internet.md)並[主動式文件](../../mfc/active-documents-on-the-internet.md)。  
+ 如需 DocObjects 的詳細資訊，請參閱[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)並[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 參考 》*。  
   
  另請參閱下列知識庫文件：  
   

@@ -1,7 +1,7 @@
 ---
-title: 撰寫 MFC 應用程式 |Microsoft 文件
+title: 撰寫 MFC 應用程式 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -17,35 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267fee7f3309cf5cbc4daa48f65e647c4d85a47d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f3f542fc1ff45a80f4d198c58255d91388a30ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385985"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535167"
 ---
 # <a name="writing-mfc-applications"></a>撰寫 MFC 應用程式
-本文說明開發應用程式的初始步驟。 首先，您必須決定您要撰寫的應用程式種類。 有幾個選項都中有所討論[應用程式設計選擇](../mfc/application-design-choices.md)。 您的應用程式會：  
+這篇文章說明您需要開發您的應用程式的初始步驟。 首先，您必須決定您要撰寫的應用程式種類。 有幾個選項中已討論過[應用程式設計選擇](../mfc/application-design-choices.md)。 您的應用程式會：  
   
--   在網際網路或內部網路上執行  
+-   在網際網路或近端內部網路上執行  
   
 -   在用戶端或伺服器上執行  
   
--   在瀏覽器或獨立的應用程式執行  
+-   在瀏覽器中，或是獨立的應用程式執行  
   
 -   使用 COM 或 Active 技術  
   
 -   使用 WinInet 或非同步 moniker 下載資料  
   
- 您的決策可決定適合您的應用程式的類別。 您也協助判斷您執行應用程式精靈，開始建構您的應用程式時，您做的選取項目。  
+ 您的決策會判斷哪些類別是適用於您的應用程式。 您的答案也有助於判斷您執行應用程式精靈，開始建構您的應用程式時所做的選取項目。  
   
- 關於網際網路應用程式進行最初的設計決策之後，您可以使用應用程式精靈，若要開始使用。 使用應用程式精靈建立基本架構應用程式，並修改程式碼，如下列文件所述：  
+ 關於網際網路應用程式進行最初的設計決策之後，您可以使用應用程式精靈 來開始。 您可以使用應用程式精靈 來建立基本架構的應用程式，並修改程式碼，如下列文章中所述：  
   
 -   ActiveX 控制項，請參閱[網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。  
   
--   主動式文件，請參閱[網際網路上的主動式文件](../mfc/active-documents-on-the-internet.md)。  
-  
- 下列文件也會提供指示來協助您開始程式設計工作：  
+ 下列文件也會提供指示來協助您開始您的程式設計工作：  
   
 -   [應用程式設計選擇](../mfc/application-design-choices.md)  
   

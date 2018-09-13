@@ -1,7 +1,7 @@
 ---
 title: 升級現有的 ActiveX 控制項 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686182"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535264"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
-現有的 ActiveX 控制項 （先前稱為 OLE 控制項） 可以不需修改網際網路上使用。 不過，您可能想要修改控制項，以提升其效能。 當使用您在網頁上的控制項，還有其他考量。 .Ocx 檔案和所有支援的檔案必須是目標電腦上，或透過網際網路下載。 這可讓程式碼大小和下載時間很重要的考量。 下載項目可以封裝在簽署的.cab 檔案中。 您可以標示為安全的指令碼，以及用於初始化安全控制項。  
+現有的 ActiveX 控制項 （先前稱為 OLE 控制項） 可以不需修改網際網路上使用。 不過，您可能想要修改控制項，以提升其效能。 
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
+
+當使用您在網頁上的控制項，還有其他考量。 .Ocx 檔案和所有支援的檔案必須是目標電腦上，或透過網際網路下載。 這可讓程式碼大小和下載時間很重要的考量。 下載項目可以封裝在簽署的.cab 檔案中。 您可以標示為安全的指令碼，以及用於初始化安全控制項。  
   
  這篇文章討論下列主題：  
   

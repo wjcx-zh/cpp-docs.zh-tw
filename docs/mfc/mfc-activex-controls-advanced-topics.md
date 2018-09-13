@@ -1,7 +1,7 @@
 ---
-title: MFC ActiveX 控制項： 進階主題 |Microsoft 文件
+title: MFC ActiveX 控制項： 進階主題 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,46 +22,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: fbebffa1bbec55e08cccafd387c44991ebe467ca
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930000"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535232"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控制項：進階主題
-本文涵蓋開發 ActiveX 控制項相關的進階的主題。 它們包括：  
+本文章涵蓋開發 ActiveX 控制項相關的進階的主題。 它們包括：  
   
 -   [使用 ActiveX 控制項中的資料庫類別](#_core_using_database_classes_in_activex_controls)  
   
--   [實作的參數化的屬性](#_core_implementing_a_parameterized_property)  
+-   [實作參數化的屬性](#_core_implementing_a_parameterized_property)  
   
--   [處理您的 ActiveX 控制項中的錯誤](#_core_handling_errors_in_your_activex_control)  
+-   [在您的 ActiveX 控制項中處理錯誤](#_core_handling_errors_in_your_activex_control)  
   
--   [處理在控制項中的特殊按鍵](#_core_handling_special_keys_in_your_control)  
+-   [處理控制項中的特殊按鍵](#_core_handling_special_keys_in_your_control)  
   
--   [存取執行階段中不可見的對話方塊控制項](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
+-   [在執行階段則看不見的存取對話方塊控制項](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需有關取代 ActiveX 的現代技術的詳細資訊，請參閱[ActiveX 控制項](activex-controls.md)。
   
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> 使用 ActiveX 控制項中的資料庫類別  
- ActiveX 控制項類別是類別庫的一部分，因為您可以套用相同的程序和使用資料庫類別開發 ActiveX 控制項使用 MFC 資料庫類別的標準 MFC 應用程式中的規則。  
+ 由於 ActiveX 控制項類別是類別庫的一部分，您可以套用相同的程序和規則使用標準的 MFC 應用程式開發使用 MFC 資料庫類別的 ActiveX 控制項中的資料庫類別。  
   
- MFC 資料庫類別的一般概觀，請參閱[MFC 資料庫類別 （DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文介紹 MFC ODBC 類別和 MFC DAO 類別，以及引導您前往上更多詳細資料。  
+ MFC 資料庫類別的一般概觀，請參閱 < [MFC 資料庫類別 （DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文將介紹 MFC ODBC 類別和 MFC DAO 類別，並將您導向上的更多詳細資料。  
   
 > [!NOTE]
->  Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 呤魽您畷樾[OLE DB 樣板](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO 中維護現有應用程式。  
+>  Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-programming.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。  
   
-##  <a name="_core_implementing_a_parameterized_property"></a> 實作的參數化的屬性  
- （有時稱為屬性陣列） 的參數化的屬性是公開為控制項的單一屬性的值同質集合的方法。 例如，您可以使用參數化的屬性來公開陣列或做為屬性的字典。 在 Visual Basic 中，這類屬性是使用陣列標記法來存取：  
+##  <a name="_core_implementing_a_parameterized_property"></a> 實作參數化的屬性  
+ 參數化的屬性 （有時稱為屬性的陣列） 是一種方法公開為控制項的單一屬性的值同質集合。 例如，您可以使用參數化的屬性公開的陣列或做為屬性的字典。 在 Visual Basic 中，這類屬性會使用陣列標記法來存取：  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
   
- 您可以使用 [加入屬性精靈] 來實作的參數化的屬性。 加入屬性精靈 會藉由加入一對 Get/Set 函式允許控制項使用者存取使用上述的表示法的屬性或以標準方式來實作屬性。  
+ 您可以使用 [新增屬性精靈] 來實作參數化的屬性。 加入屬性精靈藉由新增一組允許控制項使用者存取使用上述的標記法屬性的 Get/Set 函式，或以標準方式來實作屬性。  
   
- 類似於方法和屬性，參數化屬性也會有允許的參數數目限制。 在參數化屬性，限制為 15 個參數 （使用一個參數保留給儲存屬性值）。  
+ 類似於方法和屬性，參數化屬性也會有允許的參數數目限制。 在參數化屬性的情況下，限制為 15 個參數 （使用一個參數保留供儲存屬性值）。  
   
  下列程序，將參數化的屬性，稱為陣列，可以存取為整數的二維陣列。  
   
-#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>若要加入使用 [加入屬性精靈] 的參數化的屬性  
+#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>若要加入參數化的屬性，使用 [新增屬性精靈]  
   
 1.  載入控制項專案。  
   
@@ -69,43 +72,43 @@ ms.locfileid: "36930000"
   
 3.  在控制項的介面節點 (程式庫節點的第二個節點) 上按一下滑鼠右鍵，開啟捷徑功能表。  
   
-4.  從捷徑功能表，按一下 **新增**，然後按一下 **加入屬性**。  
+4.  從快顯功能表中，按一下**新增**，然後按一下**加入屬性**。  
   
-5.  在**屬性名稱**方塊中，輸入`Array`。  
+5.  在 **屬性名稱**方塊中，輸入`Array`。  
   
-6.  在**屬性型別**方塊中，選取**簡短**。  
+6.  在 **屬性的型別**方塊中，選取**簡短**。  
   
-7.  如**實作**類型，按一下  **Get/Set 方法**。  
+7.  針對**實作**類型，按一下**Get/Set 方法**。  
   
-8.  在**取得函式**和**設定函式** 方塊中，輸入 Get 和 Set 函式的唯一名稱，或接受預設名稱。  
+8.  在 **取得函式**並**設定函式**方塊中，輸入為 Get 和 Set 函式的唯一名稱，或接受預設名稱。  
   
-9. 加入參數，呼叫*列*(型別*簡短*)，並使用**參數名稱**和**參數型別**控制項。  
+9. 新增名為的參數*資料列*(型別*簡短*)，並使用**參數名稱**並**參數型別**控制項。  
   
-10. 加入第二個參數呼叫*資料行*(型別*簡短*)。  
+10. 新增第二個參數，呼叫*資料行*(型別*簡短*)。  
   
 11. 按一下 [ **完成**]。  
   
 ### <a name="changes-made-by-the-add-property-wizard"></a>所做的變更加入屬性精靈  
- 當您新增自訂屬性時，加入屬性精靈 進行變更的控制項類別標頭檔 (。H） 和實作 (。CPP) 檔案。  
+ 當您新增自訂屬性時，加入屬性精靈 進行變更的控制項類別的標頭檔 (。H） 和實作 (。CPP) 檔案。  
   
- 控制項類別會加入下列幾行。H 檔案：  
+ 下列幾行加入的控制項類別。H 檔案：  
   
  [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]  
   
- 此程式碼會宣告兩個函式呼叫`GetArray`和`SetArray`，讓使用者存取屬性時，要求特定資料列和資料行。  
+ 此程式碼會宣告兩個呼叫的函式`GetArray`和`SetArray`可讓使用者存取屬性時，要求特定資料列和資料行。  
   
- 此外，[加入屬性精靈] 將下列幾行加入至控制項分派對應，位於控制項類別實作 (。CPP) 檔案：  
+ 此外，加入屬性精靈 會加入下列幾行控制項分派對應，位於控制項類別實作 (。CPP) 檔案：  
   
  [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]  
   
- 最後，實作`GetArray`和`SetArray`函數會加入至結尾。CPP 檔案。 在大部分情況下，您將修改 Get 函式來傳回屬性的值。 Set 函式通常會包含執行之前, 或之後的屬性變更的程式碼。  
+ 最後，實作`GetArray`和`SetArray`函式會新增至結尾。CPP 檔案。 在大部分情況下，您將修改 Get 函式來傳回屬性的值。 Set 函式通常會包含執行、 之前或之後的屬性變更的程式碼。  
   
- 為此屬性才能發揮作用，您可以宣告型別的控制項類別中的二維陣列成員變數**簡短**來儲存參數化屬性的值。 然後，您無法修改儲存在適當的資料列和資料行，將值傳回參數所指示的 Get 函式，並修改 Set 函式來更新資料列和資料行參數所參考的值。  
+ 針對此屬性才能發揮作用中，您可以宣告在控制項類別中，類型的二維陣列成員變數**簡短**來儲存參數化屬性的值。 然後，您可以修改 Get 函式，以傳回儲存在適當的資料列與資料行的值，如參數，所指示，並修改 Set 函式來更新資料列和資料行參數所參考的值。  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a> 處理您的 ActiveX 控制項中的錯誤  
- 如果在控制項中發生錯誤狀況，您可能需要將錯誤回報給控制項容器。 有兩種方法來報告錯誤，請根據錯誤發生的情況。 如果錯誤發生在屬性中取得或設定函式，或實作 OLE Automation 方法中，控制項應該呼叫[colecontrol:: Throwerror](../mfc/reference/colecontrol-class.md#throwerror)的訊號，以控制使用者所發生的錯誤。 如果在其他任何階段發生錯誤，應該呼叫控制項[colecontrol:: Fireerror](../mfc/reference/colecontrol-class.md#fireerror)，其引發的內建的錯誤事件。  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> 在您的 ActiveX 控制項中處理錯誤  
+ 如果控制項中發生錯誤狀況，您可能需要的控制項容器中報告錯誤。 有兩種方法來報告錯誤，請根據錯誤發生的情況。 如果發生錯誤的屬性中取得或設定函式，或在 OLE Automation 方法的實作，控制項應該呼叫[colecontrol:: Throwerror](../mfc/reference/colecontrol-class.md#throwerror)，哪一個訊號，來控制使用者所發生的錯誤。 如果在其他任何時候，就會發生錯誤，控制項應該呼叫[colecontrol:: Fireerror](../mfc/reference/colecontrol-class.md#fireerror)，它就會引發內建的錯誤事件。  
   
- 若要指出已發生的錯誤種類，控制項必須傳遞錯誤程式碼`ThrowError`或`FireError`。 錯誤碼是 32 位元值的 OLE 狀態碼。 可能的話，請選擇錯誤程式碼從一組標準的 OLECTL 中定義的代碼。H 標頭檔。 下表摘要說明這些代碼。  
+ 若要指出已發生之錯誤的種類，控制項必須傳遞錯誤代碼`ThrowError`或`FireError`。 錯誤碼是 OLE 狀態碼，有 32 位元值。 可能的話，請選擇錯誤的程式碼從一組標準的 OLECTL 中定義的代碼。H 標頭檔。 下表摘要說明這些程式碼。  
   
 ### <a name="activex-control-error-codes"></a>ActiveX 控制項錯誤碼  
   
@@ -135,7 +138,7 @@ ms.locfileid: "36930000"
 |CTL_E_PATHNOTFOUND|找不到路徑|  
 |CTL_E_INVALIDPATTERNSTRING|無效的模式字串|  
 |CTL_E_INVALIDUSEOFNULL|使用 NULL 無效|  
-|CTL_E_INVALIDFILEFORMAT|檔案格式無效|  
+|CTL_E_INVALIDFILEFORMAT|無效的檔案格式|  
 |CTL_E_INVALIDPROPERTYVALUE|無效的屬性值|  
 |CTL_E_INVALIDPROPERTYARRAYINDEX|無效的屬性陣列索引|  
 |CTL_E_SETNOTSUPPORTEDATRUNTIME|在執行階段不支援 Set|  
@@ -152,31 +155,31 @@ ms.locfileid: "36930000"
 |CTL_E_SEARCHTEXTNOTFOUND|找不到搜尋文字|  
 |CTL_E_REPLACEMENTSTOOLONG|取代文字太長|  
   
- 如有必要，使用 CUSTOM_CTL_SCODE 巨集來定義自訂錯誤程式碼的條件，未涵蓋的其中一個標準代碼。 這個巨集參數應該是介於 1000年之間的整數和 32767 之間。 例如:   
+ 如有必要，使用 CUSTOM_CTL_SCODE 巨集來定義自訂錯誤碼未涵蓋的條件由其中一個標準的程式碼。 這個巨集的參數應為介於 1000年之間的整數到 32767 之間，內含。 例如:   
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
- 如果您要建立 ActiveX 控制項，以取代現有 VBX 控制項，定義您 ActiveX 控制項錯誤碼 VBX 控制項使用確保錯誤碼相容相同數值的值。  
+ 如果您要建立 ActiveX 控制項來取代現有的 VBX 控制項，定義您 ActiveX 控制項錯誤碼與 VBX 控制項用來確保錯誤碼相容的數字值相同。  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a> 處理在控制項中的特殊按鍵  
- 在某些情況下您可能想要處理特殊的方式; 某些按鍵組合例如，插入新行，在多行文字方塊中按下 ENTER 鍵時方塊控制項，或編輯的群組之間移動控制項時的方向金鑰已按下的識別碼。  
+##  <a name="_core_handling_special_keys_in_your_control"></a> 處理控制項中的特殊按鍵  
+ 在某些情況下您可能想要處理特定按鍵組合以特殊方式;比方說，插入新行，在多行文字方塊中按下 ENTER 鍵時方塊控制項，或編輯的群組之間移動控制項時方向性金鑰已按下的識別碼。  
   
- 如果您的 ActiveX 控制項的基底類別是`COleControl`，您可以覆寫[cwnd:: Pretranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)容器處理它們之前處理訊息。 如果使用這項技術，一律會傳回**TRUE**如果您的覆寫中處理訊息`PreTranslateMessage`。  
+ 如果您的 ActiveX 控制項的基底類別是`COleControl`，您可以覆寫[cwnd:: Pretranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)容器處理它們之前處理訊息。 在使用這項技術時，一律會傳回**真**如果您的覆寫中處理訊息`PreTranslateMessage`。  
   
- 下列程式碼範例示範可能的方式來處理任何與方向性的索引鍵相關的訊息。  
+ 下列程式碼範例示範可能的方式來處理與方向的索引鍵相關的任何訊息。  
   
  [!code-cpp[NVC_MFC_AxUI#38](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_5.cpp)]  
   
  如需有關處理 ActiveX 控制項的鍵盤介面的詳細資訊，請參閱 ActiveX SDK 文件。  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 存取執行階段中不可見的對話方塊控制項  
- 您可以建立沒有任何使用者介面，而且無法在執行階段的對話方塊控制項。 如果您將隱藏在執行階段 ActiveX 控制項加入至對話方塊並使用[CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem)來存取控制項，控制項將無法正常運作。 相反地，您應該使用下列技巧來取得物件，表示控制項：  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 在執行階段則看不見的存取對話方塊控制項  
+ 您可以建立沒有任何使用者介面，而且無法在執行階段的對話方塊控制項。 如果您看不在執行階段的 ActiveX 控制項新增至對話方塊並使用[CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem)存取控制項，控制項將無法正常運作。 相反地，您應該使用其中一個下列技巧來取得物件，表示控制項：  
   
--   使用 [加入成員變數精靈，選取**控制變數**]，然後選取控制項的 id。 輸入成員變數的名稱，並選取控制項的包裝函式類別，做為**控制項類型**。  
+-   使用 加入成員變數精靈，選取**控制變數**，然後選取 控制項的 id。 輸入成員變數的名稱，然後選取做為控制項的包裝函式類別**的控制項型別**。  
   
      -或-  
   
--   為對話方塊的項目宣告本機變數和子類別。 插入類似下列的程式碼 (`CMyCtrl`是包裝函式類別，IDC_MYCTRL1 是控制項的識別碼):  
+-   為對話方塊中的項目宣告的本機變數和子類別。 插入程式碼，如下所示 (`CMyCtrl`是包裝函式類別，IDC_MYCTRL1 是控制項的 ID):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

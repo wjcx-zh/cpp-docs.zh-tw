@@ -1,7 +1,7 @@
 ---
 title: CEdit 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27ea5ccb0d15bd57a526c78cd3c57a4e83369ed0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757786"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535401"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 編輯控制項的功能。  
@@ -520,7 +520,7 @@ BOOL GetHighlight(
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[EM_GETHILITE](/windows/desktop/Controls/em-gethilite)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[EM_GETHILITE](/windows/desktop/Controls/em-gethilite)訊息，Windows SDK 中所述。 兩者`SetHighlight`和`GetHighlight`UNICODE 組建只目前已啟用。 
   
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText  
  呼叫此成員函式，以取得此文字限制`CEdit`物件。  
@@ -985,7 +985,7 @@ void SetHighlight(
 |[in]*ichEnd*|反白顯示的文字範圍中的最後一個字元的以零為起始索引。|  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。  
+ 這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。  這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。 兩者`SetHighlight`和`GetHighlight`UNICODE 組建只會啟用。 
   
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText  
  呼叫此成員函式，若要設定此文字限制`CEdit`物件。  

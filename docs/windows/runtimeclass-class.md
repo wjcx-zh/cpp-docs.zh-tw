@@ -1,28 +1,50 @@
 ---
 title: RuntimeClass 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
+- implements/Microsoft::WRL::RuntimeClass::AddRef
+- implements/Microsoft::WRL::RuntimeClass::DecrementReference
+- implements/Microsoft::WRL::RuntimeClass::GetIids
+- implements/Microsoft::WRL::RuntimeClass::GetRuntimeClassName
+- implements/Microsoft::WRL::RuntimeClass::GetTrustLevel
+- implements/Microsoft::WRL::RuntimeClass::GetWeakReference
+- implements/Microsoft::WRL::RuntimeClass::InternalAddRef
+- implements/Microsoft::WRL::RuntimeClass::QueryInterface
+- implements/Microsoft::WRL::RuntimeClass::Release
+- implements/Microsoft::WRL::RuntimeClass::RuntimeClass
+- implements/Microsoft::WRL::RuntimeClass::~RuntimeClass
 dev_langs:
 - C++
 helpviewer_keywords:
-- RuntimeClass class
+- Microsoft::WRL::RuntimeClass class
+- Microsoft::WRL::RuntimeClass::AddRef method
+- Microsoft::WRL::RuntimeClass::DecrementReference method
+- Microsoft::WRL::RuntimeClass::GetIids method
+- Microsoft::WRL::RuntimeClass::GetRuntimeClassName method
+- Microsoft::WRL::RuntimeClass::GetTrustLevel method
+- Microsoft::WRL::RuntimeClass::GetWeakReference method
+- Microsoft::WRL::RuntimeClass::InternalAddRef method
+- Microsoft::WRL::RuntimeClass::QueryInterface method
+- Microsoft::WRL::RuntimeClass::Release method
+- Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
+- Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f6cca23834eb889ecb83d91b40861b92fe922ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605980"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535037"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 類別
 
@@ -51,10 +73,24 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
-|----------|-----------------|
-|[RuntimeClass::RuntimeClass 建構函式](../windows/runtimeclass-runtimeclass-constructor.md)|初始化 RuntimeClass 類別目前執行個體。|
-|[RuntimeClass::~RuntimeClass 解構函式](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|取消初始化 RuntimeClass 類別目前執行個體。|
+| 名稱                                               | 描述                                                     |
+| -------------------------------------------------- | --------------------------------------------------------------- |
+| [Runtimeclass:: Runtimeclass](#runtimeclass)        | 初始化目前的執行個體`RuntimeClass`類別。   |
+| [RuntimeClass:: ~ RuntimeClass](#tilde-runtimeclass) | 取消初始化目前的執行個體`RuntimeClass`類別。 |
+
+### <a name="public-methods"></a>公用方法
+
+| 名稱                                                      | 描述                                                                                        |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| [Runtimeclass:: Addref](#addref)                           | 遞增參考計數目前`RuntimeClass`物件。                              |
+| [Runtimeclass:: Decrementreference](#decrementreference)   | 遞減參考計數目前`RuntimeClass`物件。                              |
+| [Runtimeclass:: Getiids](#getiids)                         | 取得陣列，其中可包含的介面識別碼，藉由將目前`RuntimeClass`物件。 |
+| [Runtimeclass:: Getruntimeclassname](#getruntimeclassname) | 取得目前的執行階段類別名稱`RuntimeClass`物件。                                  |
+| [Runtimeclass:: Gettrustlevel](#gettrustlevel)             | 取得目前的信任層級`RuntimeClass`物件。                                         |
+| [Runtimeclass:: Getweakreference](#getweakreference)       | 取得目前的弱式參考的物件指標`RuntimeClass`物件。                 |
+| [Runtimeclass:: Internaladdref](#internaladdref)           | 目前的參考計數遞增`RuntimeClass`物件。                               |
+| [Runtimeclass:: Queryinterface](#queryinterface)           | 擷取指定的介面 ID 的指標                                                 |
+| [Runtimeclass:: Release](#release)                         | 執行 COM 釋放作業對目前`RuntimeClass`物件。                             |
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -66,6 +102,189 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="tilde-runtimeclass"></a>RuntimeClass:: ~ RuntimeClass
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+取消初始化目前的執行個體`RuntimeClass`類別。
+
+```cpp
+virtual ~RuntimeClass();
+```
+
+## <a name="addref"></a>Runtimeclass:: Addref
+
+遞增參考計數目前`RuntimeClass`物件。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+## <a name="decrementreference"></a>Runtimeclass:: Decrementreference
+
+遞減參考計數目前`RuntimeClass`物件。
+
+```cpp
+ULONG DecrementReference();
+```
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+## <a name="getiids"></a>Runtimeclass:: Getiids
+
+取得陣列，其中可包含的介面識別碼，藉由將目前`RuntimeClass`物件。
+
+```cpp
+STDMETHOD(
+   GetIids
+)  
+   (_Out_ ULONG *iidCount,
+   _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
+```
+
+### <a name="parameters"></a>參數
+
+*iidCount*  
+這項作業完成時，陣列中的元素總數*iid*。
+
+*iid*  
+這項作業完成時，介面識別碼的陣列的指標。
+
+### <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，E_OUTOFMEMORY。
+
+## <a name="getruntimeclassname"></a>Runtimeclass:: Getruntimeclassname
+
+取得目前的執行階段類別名稱`RuntimeClass`物件。
+
+```cpp
+STDMETHOD( GetRuntimeClassName )(
+    _Out_ HSTRING* runtimeName
+);
+```
+
+### <a name="parameters"></a>參數
+
+*runtimeName*  
+這項作業完成時，執行階段類別名稱。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+如果，就會發出判斷提示時發生`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`未定義。
+
+## <a name="gettrustlevel"></a>Runtimeclass:: Gettrustlevel
+
+取得目前的信任層級`RuntimeClass`物件。
+
+```cpp
+STDMETHOD(GetTrustLevel)(
+    _Out_ TrustLevel* trustLvl
+);
+```
+
+### <a name="parameters"></a>參數
+
+*trustLvl*  
+這項作業完成時，目前的信任層級`RuntimeClass`物件。
+
+### <a name="return-value"></a>傳回值
+
+一律傳回 S_OK。
+
+### <a name="remarks"></a>備註
+
+如果，就會發出判斷提示時發生`__WRL_STRICT__`或`__WRL_FORCE_INSPECTABLE_CLASS_MACRO__`未定義。
+
+## <a name="getweakreference"></a>Runtimeclass:: Getweakreference
+
+取得目前的弱式參考的物件指標`RuntimeClass`物件。
+
+```cpp
+STDMETHOD(
+   GetWeakReference
+)(_Deref_out_ IWeakReference **weakReference);
+```
+
+### <a name="parameters"></a>參數
+
+*weakReference*  
+這項作業完成時，弱式參考物件的指標。
+
+### <a name="return-value"></a>傳回值
+
+一律傳回 S_OK。
+
+## <a name="internaladdref"></a>Runtimeclass:: Internaladdref
+
+目前的參考計數遞增`RuntimeClass`物件。
+
+```cpp
+ULONG InternalAddRef();
+```
+
+### <a name="return-value"></a>傳回值
+
+產生的參考計數。
+
+## <a name="queryinterface"></a>Runtimeclass:: Queryinterface
+
+擷取指定的介面 ID 的指標
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)  
+   (REFIID riid,
+   _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>參數
+
+*riid*  
+介面識別碼。
+
+*ppvObject*  
+此 opereation 完成時，所指定之介面的指標*riid*參數。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+## <a name="release"></a>Runtimeclass:: Release
+
+執行 COM 釋放作業對目前`RuntimeClass`物件。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+如果參考計數變成零時，`RuntimeClass`刪除物件。
+
+## <a name="runtimeclass"></a>Runtimeclass:: Runtimeclass
+
+初始化目前的執行個體`RuntimeClass`類別。
+
+```cpp
+RuntimeClass();
+```

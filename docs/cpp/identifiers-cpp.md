@@ -1,7 +1,7 @@
 ---
 title: 識別項 （c + +） |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405226"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535141"
 ---
 # <a name="identifiers-c"></a>識別項 （c + +）
 識別項是字元序列，用來表示下列其中一項：  
@@ -104,7 +104,7 @@ int main() {
   
  識別項的拼字、大小寫不能與關鍵字完全相同。 包含關鍵字的識別項是合法的。 例如，`Pint`是合法的識別項，即使它包含**int**，這是一個關鍵字。  
   
- 在識別項開頭使用兩個連續底線字元 ( **__** )，或者單一前置底線後面接著一個大寫字母，皆為保留給 C++ 在所有範圍中實作。 因為可能與目前或未來保留的識別項相衝突，您應該避免在具有檔案範圍的名稱中使用一個後面接著小寫字母的前置底線。  
+ 使用兩個連續底線字元 ( **__** ) 在識別項，或者單一前置底線後面接著一個大寫字母，是保留給在所有範圍中的 c + + 實作。 因為可能與目前或未來保留的識別項相衝突，您應該避免在具有檔案範圍的名稱中使用一個後面接著小寫字母的前置底線。  
   
 ## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

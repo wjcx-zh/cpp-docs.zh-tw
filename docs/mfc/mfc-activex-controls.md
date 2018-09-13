@@ -1,7 +1,7 @@
 ---
 title: MFC ActiveX 控制項 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205838"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535193"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
-ActiveX 控制項是可重複使用的軟體元件，以元件物件模型 (COM) 為基礎，支援各種不同的 OLE 功能並且可自訂以符合眾多軟體需求。 ActiveX 控制項的設計適用於一般的 ActiveX 控制項容器中以及在網際網路上，全球資訊網網頁中。 您可以建立 ActiveX 控制項與 MFC，此處說明，或使用[Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md)。  
+
+ActiveX 控制項是可重複使用的軟體元件，以元件物件模型 (COM) 為基礎，支援各種不同的 OLE 功能並且可自訂以符合眾多軟體需求。 
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需詳細資訊，請參閱 < [ActiveX 控制項](activex-controls.md)。
+
+ActiveX 控制項的設計適用於一般的 ActiveX 控制項容器中以及在網際網路上，全球資訊網網頁中。 您可以建立 ActiveX 控制項與 MFC，此處說明，或使用[Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md)。  
   
  ActiveX 控制項可以繪製本身在它自己的視窗中，回應事件 （例如滑鼠點按），且可透過管理介面，其中包含屬性和方法類似於 Automation 物件。  
   

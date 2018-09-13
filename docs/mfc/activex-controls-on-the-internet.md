@@ -1,7 +1,7 @@
 ---
-title: 在網際網路上的 ActiveX 控制項 |Microsoft 文件
+title: 在網際網路上的 ActiveX 控制項 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,15 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5c64980cbdfeec92f0029828183c8f56b390dd85
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931973"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535310"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
-ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開發可程式化軟體元件的主要架構，可用於各種不同的容器，包括網際網路上 COM 感知的 Web 瀏覽器。 所有 ActiveX 控制項都可以是網際網路控制項，並可將其功能加入現用文件或成為網頁的一部分。 網頁上的控制項可以使用指令碼彼此通訊。  
+
+ActiveX 控制項是更新版本的 OLE 控制項規格。 
+
+>[!IMPORTANT]
+> ActiveX 是舊版的技術，不應用於新的開發。 如需詳細資訊，請參閱 < [ActiveX 控制項](activex-controls.md)。
+
+控制項是用於開發可程式化軟體元件的主要架構，可用於各種不同的容器，包括網際網路上 COM 感知的 Web 瀏覽器。 所有 ActiveX 控制項都可以是網際網路控制項，並可將其功能加入現用文件或成為網頁的一部分。 網頁上的控制項可以使用指令碼彼此通訊。  
   
  ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的介面，ActiveX 控制項也可以用於所有容器。  
   
@@ -37,13 +43,13 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
 -   可以是無視窗以及始終就地啟動。  
   
- **若要在 ActiveX 控制項，控制項必須：**  
+ **若要為 ActiveX 控制項，控制項必須：**  
   
 -   支援`IUnknown`介面。  
   
 -   是個 COM 物件。  
   
--   匯出**DLLRegisterServer**和**DLLUnRegisterServer**。  
+-   匯出**DLLRegisterServer**並**DLLUnRegisterServer**。  
   
 -   視功能所需支援其他介面。  
   
@@ -85,13 +91,13 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>使用 MFC ActiveX 控制項精靈建立您的專案  
   
-1.  按一下**新增**上**檔案**功能表。  
+1.  按一下 **的新**上**檔案**功能表。  
   
-2.  選取**MFC ActiveX 控制項精靈**從 Visual c + + 專案，並命名您的專案。  
+2.  選取  **MFC ActiveX 控制項精靈**從 Visual c + + 專案，並命名您的專案。  
   
-3.  在**控制設定**頁面上，選取**非同步載入屬性**。 選取此選項會為您設定就緒狀態屬性和就緒狀態變更的事件。  
+3.  在 **控制設定**頁面上，選取**非同步載入屬性**。 選取此選項會為您設定就緒狀態屬性和就緒狀態變更的事件。  
   
-     您可以也選取其他最佳化，例如**無視窗啟用**，如所述[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。  
+     您可以也選取其他最佳化，例如**無視窗啟用**，，用來說明這[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。  
   
 4.  選擇**完成**建立專案。  
   
@@ -109,7 +115,7 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
      請注意，您必須包含 AFXCMN.H 才能使用 `CListCtrl` 類別。  
   
-4.  當控制項的整體狀態變更 (例如，從載入到初始化或使用者互動) 時，呼叫 `COleControl::InternalSetReadyState`。 如果您的控制項有只有一個資料路徑屬性，您可以加入程式碼上**BSCF_LASTDATANOTIFICATION**以通知容器您的下載已完成。 例如:   
+4.  當控制項的整體狀態變更 (例如，從載入到初始化或使用者互動) 時，呼叫 `COleControl::InternalSetReadyState`。 如果您的控制項都只有一個資料路徑屬性，您可以加入程式碼上**BSCF_LASTDATANOTIFICATION**以通知容器您的下載已完成。 例如:   
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -119,9 +125,9 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
 #### <a name="to-add-a-property"></a>若要加入屬性  
   
-1.  在**類別檢視**，以滑鼠右鍵按一下 程式庫節點下的介面，然後選取**新增**，然後**加入屬性**。 這會啟動**加入屬性精靈**。  
+1.  在 **類別檢視**，以滑鼠右鍵按一下 程式庫節點下的介面，然後選取**新增**，然後**加入屬性**。 這會啟動**加入屬性精靈**。  
   
-2.  在**加入屬性精靈**，選取**Set/Get 方法**選項按鈕，輸入**屬性名稱**(範例中，editcontroltext），並選取 BSTR 做為**屬性型別**。  
+2.  在 **加入屬性精靈**，選取**Set/Get 方法**選項按鈕，輸入**屬性名稱**，例如，EditControlText，並選取 BSTR 做為**屬性型別**。  
   
 3.  按一下 [ **完成**]。  
   
@@ -129,15 +135,15 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  實作 `Get/Set` 方法。 如`Get`，傳回字串。 對於 `Set`，載入屬性並呼叫 `SetModifiedFlag`。  
+5.  實作 `Get/Set` 方法。 針對`Get`，傳回的字串。 對於 `Set`，載入屬性並呼叫 `SetModifiedFlag`。  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   
-6.  在[DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)，加入下列行：  
+6.  在  [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange)，加入下列一行：  
   
      [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]  
   
-7.  覆寫[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)通知要新增這行重設其控制項的屬性：  
+7.  覆寫[ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata)通知要加入這一行，以重設其控制項的屬性：  
   
      [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]  
   
@@ -161,9 +167,9 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
  您實作[非同步 moniker](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`類別。 不過，ActiveX 控制項可以使用 `CDataPathProperty` 類別 (衍生自 `CAsyncMonikerFile`)，來協助實作非同步控制項屬性。  
   
- ASYNDOWN 範例示範如何使用計時器設定非同步迴圈以讀取資料。 可從 Microsoft 下載中心下載在知識庫文件「如何：AsyncDown 示範非同步資料下載」(Q177244) 中說明的 ASYNDOWN  (如需從 Microsoft 下載中心下載檔案的詳細資訊，請參閱 Microsoft 知識庫「如何從線上服務取得 Microsoft 支援檔案 (Q119591)」一文)。您可以找到知識庫文件在[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
+ ASYNDOWN 範例示範如何使用計時器設定非同步迴圈以讀取資料。 可從 Microsoft 下載中心下載在知識庫文件「如何：AsyncDown 示範非同步資料下載」(Q177244) 中說明的 ASYNDOWN  (如需從 Microsoft 下載中心下載檔案的詳細資訊，請參閱 Microsoft 知識庫「如何從線上服務取得 Microsoft 支援檔案 (Q119591)」一文)。您可以找到知識庫文件[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
   
- ASYNDOWN 中所使用的基本技巧是將設定的計時器**cdatapathproperty:: Ondataavailable**表示資料時使用。 當計時器收到訊息時，應用程式會讀入 128 位元組區塊的資料，並填入編輯控制項中。 如果資料在處理計時器訊息時無法使用，計時器就會關閉。 如果有更多資料延遲抵達，則 `OnDataAvailable` 會開啟計時器。  
+ ASYNDOWN 中所使用的基本技巧是在中設定計時器**cdatapathproperty:: Ondataavailable**表示當資料可供使用。 當計時器收到訊息時，應用程式會讀入 128 位元組區塊的資料，並填入編輯控制項中。 如果資料在處理計時器訊息時無法使用，計時器就會關閉。 如果有更多資料延遲抵達，則 `OnDataAvailable` 會開啟計時器。  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>在網頁上顯示控制項  
  以下是供在網頁上插入控制項中的物件標記和屬性的範例。  
@@ -197,13 +203,13 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
  `</OBJECT>`  
   
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>更新現有的 OLE 控制項以使用新的 ActiveX 控制項功能  
- 如果您的 OLE 控制項是以 Visual C++ 4.2 之前的版本建立，則有些步驟是您可以採取，以改善其效能和增強其功能。 如需這些變更的詳細討論，請參閱[ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。  
+ 如果您的 OLE 控制項是以 Visual C++ 4.2 之前的版本建立，則有些步驟是您可以採取，以改善其效能和增強其功能。 如需這些變更的詳細討論，請參閱 < [ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)。  
   
  如果您將非同步屬性支援加入至現有的控制項，您將需要自行加入就緒狀態屬性和 `ReadyStateChange` 事件。 在您的控制項的建構函式中，加入：  
   
  [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]  
   
- 藉由呼叫下載您的程式碼時，會更新就緒狀態[colecontrol:: Internalsetreadystate](../mfc/reference/colecontrol-class.md#internalsetreadystate)。 您可以呼叫 `InternalSetReadyState` 的位置是從 `OnProgress` 衍生的類別覆寫 `CDataPathProperty`。  
+ 藉由呼叫下載您的程式碼時，您將會更新就緒狀態[colecontrol:: Internalsetreadystate](../mfc/reference/colecontrol-class.md#internalsetreadystate)。 您可以呼叫 `InternalSetReadyState` 的位置是從 `OnProgress` 衍生的類別覆寫 `CDataPathProperty`。  
   
 
   

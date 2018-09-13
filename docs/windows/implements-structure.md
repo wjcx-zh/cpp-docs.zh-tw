@@ -1,28 +1,36 @@
 ---
 title: 實作結構 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603284"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535349"
 ---
 # <a name="implements-structure"></a>Implements 結構
 
@@ -104,23 +112,23 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
-|----------|-----------------|
-|`ClassFlags`|`RuntimeClassFlags<WinRt>` 的同義字。|
+| 名稱        | 描述                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| `RuntimeClassFlags<WinRt>` 的同義字。 |
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
-|----------|-----------------|
-|[Implements::CanCastTo 方法](../windows/implements-cancastto-method.md)|取得指定的介面指標。|
-|[Implements::CastToUnknown 方法](../windows/implements-casttounknown-method.md)|取得指標基礎`IUnknown`介面。|
-|[Implements::FillArrayWithIid 方法](../windows/implements-fillarraywithiid-method.md)|插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。|
+| 名稱                                              | 描述                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements:: cancastto](#cancastto)               | 取得指定的介面指標。                                                                    |
+| [Implements:: casttounknown](#casttounknown)       | 取得指標基礎`IUnknown`介面。                                                        |
+| [Implements:: fillarraywithiid](#fillarraywithiid) | 插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。 |
 
 ### <a name="protected-constants"></a>受保護的常數
 
-|名稱|描述|
-|----------|-----------------|
-|[Implements::IidCount 常數](../windows/implements-iidcount-constant.md)|保留實作的介面識別碼的數目。|
+| 名稱                              | 描述                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements:: iidcount](#iidcount) | 保留實作的介面識別碼的數目。 |
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -142,6 +150,76 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="cancastto"></a>Implements:: cancastto
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)
+取得指定的介面指標。
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>參數
+
+*riid*  
+參考介面識別碼。
+
+*ppv*  
+如果成功，介面的指標所指定*riid*。
+
+### <a name="return-value"></a>傳回值
+
+如果成功則為 S_OK否則，HRESULT，表示錯誤，例如 E_NOINTERFACE。
+
+### <a name="remarks"></a>備註
+
+這是執行 QueryInterface 作業的內部協助程式函式。
+
+## <a name="casttounknown"></a>Implements:: casttounknown
+
+取得指標基礎`IUnknown`介面。
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>傳回值
+
+這項作業一定成功，並傳回`IUnknown`指標。
+
+### <a name="remarks"></a>備註
+
+內部 helper 函式。
+
+## <a name="fillarraywithiid"></a>Implements:: fillarraywithiid
+
+插入至指定的陣列項目目前的第零個範本參數所指定的介面識別碼。
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>參數
+
+*index*  
+以零為起始的索引，指出起始的陣列項目，這項作業。 這項作業完成時， *index*都會遞增 1。
+
+*iid*  
+IID 類型的陣列。
+
+### <a name="remarks"></a>備註
+
+內部 helper 函式。
+
+## <a name="iidcount"></a>Implements:: iidcount
+
+保留實作的介面識別碼的數目。
+
+```cpp
+static const unsigned long IidCount;
+```

@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597569"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556750"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze (停用語言擴充功能)
 **/Za**編譯器選項會發出與 ANSI C89 或 ISO C + + 11 不相容的語言建構的錯誤。 **/Ze**編譯器選項，預設為開啟，啟用 Microsoft 擴充功能。  
@@ -54,8 +54,8 @@ ms.locfileid: "42597569"
   
  我們建議您停用語言擴充功能藉由指定 **/Za**選項，如果您打算移植程式至其他環境。 當 **/Za**指定，則編譯器會將 Microsoft 擴充關鍵字做為簡單識別項，會停用其他的 Microsoft 擴充功能，並會自動定義`__STDC__`C 程式的預先定義巨集。  
   
- 搭配使用其他編譯器選項 **/Za**可能會影響編譯器確保符合標準的方式。 例如， **/Za**並[/fp （指定浮點行為）](../../build/reference/fp-specify-floating-point-behavior.md)可能會導致浮點類型升級行為不符合 ISO C99 或 C + + 11 標準。  
-  
+ 搭配使用其他編譯器選項 **/Za**可能會影響編譯器確保符合標準的方式。
+
  如需指定特定的標準行為的設定方式，請參閱[/Zc](../../build/reference/zc-conformance.md)編譯器選項。  
   
  如需 Visual c + + 一致性問題的詳細資訊，請參閱[非標準行為](../../cpp/nonstandard-behavior.md)。  

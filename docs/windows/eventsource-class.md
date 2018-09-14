@@ -1,32 +1,48 @@
 ---
 title: EventSource 類別 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
+- event/Microsoft::WRL::EventSource::Add
+- event/Microsoft::WRL::EventSource::addRemoveLock_
+- event/Microsoft::WRL::EventSource::EventSource
+- event/Microsoft::WRL::EventSource::GetSize
+- event/Microsoft::WRL::EventSource::InvokeAll
+- event/Microsoft::WRL::EventSource::Remove
+- event/Microsoft::WRL::EventSource::targets_
+- event/Microsoft::WRL::EventSource::targetsPointerLock_
 dev_langs:
 - C++
 helpviewer_keywords:
-- EventSource class
+- Microsoft::WRL::EventSource class
+- Microsoft::WRL::EventSource::Add method
+- Microsoft::WRL::EventSource::addRemoveLock_ data member
+- Microsoft::WRL::EventSource::EventSource, constructor
+- Microsoft::WRL::EventSource::GetSize method
+- Microsoft::WRL::EventSource::InvokeAll method
+- Microsoft::WRL::EventSource::Remove method
+- Microsoft::WRL::EventSource::targets_ data member
+- Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8805547c5803ae665178330063e6b77b1b3c662e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596207"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601492"
 ---
 # <a name="eventsource-class"></a>EventSource 類別
 
-代表非 agile 的事件。 **EventSource**成員函式加入、 移除及叫用事件處理常式。 針對敏捷式軟體開發的事件，使用[AgileEventSource](agileeventsource-class.md)。
+代表非 agile 的事件。 `EventSource` 成員函式會新增、移除及叫用事件處理常式。 針對敏捷式軟體開發的事件，使用[AgileEventSource](agileeventsource-class.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -44,26 +60,26 @@ class EventSource;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
-|----------|-----------------|
-|[EventSource::EventSource 建構函式](../windows/eventsource-eventsource-constructor.md)|初始化的新執行個體**EventSource**類別。|
+| 名稱                                     | 描述                                            |
+| ---------------------------------------- | ------------------------------------------------------ |
+| [Eventsource:: Eventsource](#eventsource) | 初始化 `EventSource` 類別的新執行個體。 |
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
-|----------|-----------------|
-|[EventSource::Add 方法](../windows/eventsource-add-method.md)|將附加事件處理常式，以指定的委派介面來表示目前的事件處理常式的集合**EventSource**物件。|
-|[EventSource::GetSize 方法](../windows/eventsource-getsize-method.md)|擷取與目前相關聯的事件處理常式數目**EventSource**物件|
-|[EventSource::InvokeAll 方法](../windows/eventsource-invokeall-method.md)|呼叫目前相關聯的每個事件處理常式**EventSource**物件使用指定的引數型別和引數。|
-|[EventSource::Remove 方法](../windows/eventsource-remove-method.md)|刪除從目前與相關聯的事件處理常式的集合指定的事件註冊語彙基元所代表的事件處理常式**EventSource**物件。|
+| 名稱                                 | 描述                                                                                                                                                      |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Eventsource:: Add](#add)             | 將附加事件處理常式，以指定的委派介面來表示目前的事件處理常式組`EventSource`物件。                     |
+| [Eventsource:: Getsize](#getsize)     | 擷取與目前相關聯的事件處理常式數目`EventSource`物件。                                                                         |
+| [Eventsource:: Invokeall](#invokeall) | 呼叫目前相關聯的每個事件處理常式`EventSource`物件使用指定的引數型別和引數。                                      |
+| [Eventsource:: Remove](#remove)       | 刪除從目前與相關聯的事件處理常式的集合指定的事件註冊語彙基元所代表的事件處理常式`EventSource`物件。 |
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|描述|
-|----------|-----------------|
-|[EventSource::addRemoveLock_ 資料成員](../windows/eventsource-addremovelock-data-member.md)|同步存取[targets_](../windows/eventsource-targets-data-member.md)陣列時加入、 移除或叫用事件處理常式。|
-|[EventSource::targets_ 資料成員](../windows/eventsource-targets-data-member.md)|一或多個事件處理常式的陣列。|
-|[EventSource::targetsPointerLock_ 資料成員](../windows/eventsource-targetspointerlock-data-member.md)|同步處理正在加入此 eventsource 的事件處理常式、 同時也已移除，或叫用的內部資料成員的存取權。|
+| 名稱                                                    | 描述                                                                                                                       |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [Eventsource:: Addremovelock_](#addremovelock)           | 同步存取[targets_](#targets)陣列時加入、 移除或叫用事件處理常式。                          |
+| [Eventsource:: Targets_](#targets)                       | 一或多個事件處理常式的陣列。                                                                                           |
+| [Eventsource:: Targetspointerlock_](#targetspointerlock) | 同步處理正在加入此 eventsource 的事件處理常式、 同時也已移除，或叫用的內部資料成員的存取權。 |
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -75,7 +91,316 @@ class EventSource;
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="add"></a>Eventsource:: Add
 
-[Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)  
-[AgileEventSource 類別](agileeventsource-class.md)
+將附加事件處理常式，以指定的委派介面來表示目前的事件處理常式組`EventSource`物件。
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>參數
+
+*delegateInterface*  
+要委派物件，代表事件處理常式的介面。
+
+*語彙基元*  
+這項作業完成時，代表事件的控制代碼。 使用此權杖做為參數[remove （)](#remove)捨棄的事件處理常式的方法。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+## <a name="addremovelock"></a>Eventsource:: Addremovelock_
+
+同步存取[targets_](#targets)陣列時加入、 移除或叫用事件處理常式。
+
+```cpp
+Wrappers::SRWLock addRemoveLock_;
+```
+
+## <a name="eventsource"></a>Eventsource:: Eventsource
+
+初始化 `EventSource` 類別的新執行個體。
+
+```cpp
+EventSource();
+```
+
+## <a name="getsize"></a>Eventsource:: Getsize
+
+擷取與目前相關聯的事件處理常式數目`EventSource`物件。
+
+```cpp
+size_t GetSize() const;
+```
+
+### <a name="return-value"></a>傳回值
+
+中的事件處理常式數目[targets_](#targets)。
+
+## <a name="invokeall"></a>Eventsource:: Invokeall
+
+呼叫目前相關聯的每個事件處理常式`EventSource`物件使用指定的引數型別和引數。
+
+```cpp
+void InvokeAll();
+template <
+   typename T0
+>
+void InvokeAll(
+   T0arg0
+);
+template <
+   typename T0,
+   typename T1
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8
+);
+template <
+   typename T0,
+   typename T1,
+   typename T2,
+   typename T3,
+   typename T4,
+   typename T5,
+   typename T6,
+   typename T7,
+   typename T8,
+   typename T9
+>
+void InvokeAll(
+   T0arg0,
+   T1arg1,
+   T2arg2,
+   T3arg3,
+   T4arg4,
+   T5arg5,
+   T6arg6,
+   T7arg7,
+   T8arg8,
+   T9arg9
+);
+```
+
+### <a name="parameters"></a>參數
+
+*T0*  
+第零個事件處理常式的引數的類型。
+
+*T1*  
+第一個事件處理常式引數型別。
+
+*T2*  
+第二個事件處理常式引數的型別。
+
+*T3*  
+第三個事件處理常式引數的型別。
+
+*T4*  
+第四個事件處理常式引數的型別。
+
+*T5*  
+第五個事件處理常式引數的型別。
+
+*T6*  
+第六個事件處理常式引數的型別。
+
+*T7*  
+第七個事件處理常式引數的型別。
+
+*T8*  
+第八個事件處理常式的引數的類型。
+
+*T9*  
+第九個事件處理常式引數的型別。
+
+*arg0*  
+第零個事件處理常式引數。
+
+*arg1*  
+第一個事件處理常式引數。
+
+*Arg2*  
+第二個事件處理常式引數。
+
+*arg3*  
+第三個事件處理常式引數。
+
+*arg4*  
+第四個事件處理常式引數。
+
+*arg5*  
+第五個事件處理常式引數。
+
+*arg6*  
+第六個事件處理常式引數。
+
+*arg7*  
+第七個事件處理常式引數。
+
+*arg8*  
+第八個事件處理常式引數。
+
+*arg9*  
+第九個事件處理常式引數。
+
+## <a name="remove"></a>Eventsource:: Remove
+
+刪除從目前與相關聯的事件處理常式的集合指定的事件註冊語彙基元所代表的事件處理常式`EventSource`物件。
+
+```cpp
+HRESULT Remove(
+   EventRegistrationToken token
+);
+```
+
+### <a name="parameters"></a>參數
+
+*語彙基元*  
+代表事件處理常式的控制代碼。 註冊事件處理常式時，傳回這個語彙基元[add （)](#add)方法。
+
+### <a name="return-value"></a>傳回值
+
+如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
+
+### <a name="remarks"></a>備註
+
+如需詳細資訊`EventRegistrationToken`結構，請參閱**Windows::Foundation::EventRegistrationToken 結構**中的主題**Windows 執行階段**參考文件。
+
+## <a name="targets"></a>Eventsource:: Targets_
+
+一或多個事件處理常式的陣列。
+
+```cpp
+ComPtr<Details::EventTargetArray> targets_;
+```
+
+### <a name="remarks"></a>備註
+
+當目前由事件`EventSource`物件發生時，會呼叫事件處理常式。
+
+## <a name="targetspointerlock"></a>Eventsource:: Targetspointerlock_
+
+這個同步處理內部資料成員，即使事件處理常式的存取`EventSource`正在加入、 移除或叫用。
+
+```cpp
+Wrappers::SRWLock targetsPointerLock_;
+```

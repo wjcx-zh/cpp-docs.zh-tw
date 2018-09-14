@@ -1,6 +1,6 @@
 ---
-title: 編譯器警告 （層級 3） C4839 |Microsoft 文件
-ms.date: 10/25/2017
+title: 編譯器警告 （層級 3） C4839 |Microsoft Docs
+ms.date: 09/13/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -15,24 +15,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b72289eef03c56356865b0b62a999c417da570a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14a79c6abb118fb173382be87ebda4316545c65a
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291953"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601401"
 ---
-# <a name="compiler-warning-level-4-c4839"></a>編譯器警告 （層級 4） C4839
+# <a name="compiler-warning-level-3-c4839"></a>編譯器警告 （層級 3） C4839
 
-> 類別使用非標準*類型*' 當做 variadic 函式的引數
+> 類別的非標準用法*型別*' 做為引數的 variadic 函式
 
-在 Visual Studio 2017，類別或結構會傳遞給 variadic 函式例如`printf`必須是可完整複製。 傳遞這類物件時，編譯器只會進行位元複製，而且不會呼叫建構函式或解構函式。
+類別或結構，例如傳遞給 variadic 函式`printf`必須可透過極簡方式複製。 傳遞這類物件時，編譯器只會進行位元複製，而且不會呼叫建構函式或解構函式。
+
+這項警告是在 Visual Studio 2017 中的開始提供。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4839:
 
 ```cpp
+// C4839.cpp
+// compile by using: cl /EHsc /W3 C4839.cpp
 #include <atomic>
 #include <memory>
 #include <stdio.h>
@@ -42,20 +46,10 @@ int main()
     std::atomic<int> i(0);
     printf("%i\n", i); // error C4839: non-standard use of class 'std::atomic<int>'
                         // as an argument to a variadic function
-                        // note: the constructor and destructor will not be called; 
+                        // note: the constructor and destructor will not be called;
                         // a bitwise copy of the class will be passed as the argument
                         // error C2280: 'std::atomic<int>::atomic(const std::atomic<int> &)':
                         // attempting to reference a deleted function
-
-    struct S {
-        S(int i) : i(i) {}
-        S(const S& other) : i(other.i) {}
-        operator int() { return i; }
-    private:
-        int i;
-    } s(0);
-    printf("%i\n", s); // warning C4840 : non-portable use of class 'main::S'
-                      // as an argument to a variadic function
 }
 ```
 
@@ -66,14 +60,7 @@ int main()
     printf("%i\n", i.load());
 ```
 
-或者先執行靜態轉型來轉換物件，再傳遞它︰
-
-```cpp
-    struct S {/* as before */} s(0);
-    printf("%i\n", static_cast<int>(s))
-```
-
-建置和管理使用字串`CStringW`，提供`operator LPCWSTR()`應該用來轉換`CStringW`C 指標的格式字串所預期的物件。
+針對字串使用建置和管理`CStringW`，提供`operator LPCWSTR()`應該用來轉換`CStringW`格式字串所預期的 C 指標的物件。
 
 ```cpp
     CStringW str1;

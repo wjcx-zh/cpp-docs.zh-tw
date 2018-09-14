@@ -1,7 +1,7 @@
 ---
 title: 偵錯迭代器支援 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959588"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601466"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -38,7 +38,7 @@ C++ 標準說明為何成員函式可能會導致容器的迭代器變成無效�
 
 - 使用 push 或 insert 增加[向量](../standard-library/vector.md)的大小時，會導致 `vector` 內的迭代器變成無效。
 
-## <a name="example"></a>範例
+## <a name="invalid-iterators"></a>無效的迭代器
 
 如果您在偵錯模式中編譯此範例程式，程式就會在執行階段進行判斷提示並終止。
 
@@ -49,12 +49,7 @@ C++ 標準說明為何成員函式可能會導致容器的迭代器變成無效�
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
+## <a name="using-iteratordebuglevel"></a>使用 _ITERATOR_DEBUG_LEVEL
 
 您可以使用前置處理器巨集 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)，來關閉偵錯組建中的迭代器偵錯功能。 這個程式不會進行判斷提示，但仍會觸發未定義的行為。
 
@@ -81,11 +76,7 @@ int main() {
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>範例
+## <a name="unitialized-iterators"></a>未初始化的迭代器
 
 如果您嘗試在迭代器初始化之前就加以使用，也會發生如下的判斷提示：
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
+## <a name="incompatible-iterators"></a>不相容的迭代器
 
 下列程式碼範例會引起判斷提示，因為針對 [for_each](../standard-library/algorithm-functions.md#for_each) 演算法提供的兩個迭代器不相容。 演算法會檢查並判斷會提供給它們的迭代器是否參考相同的容器。
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 請注意，此範例中使用 Lambda 運算式`[] (int& elem) { elem *= 2; }` 而不是仿函式。 雖然這種選擇與判斷提示失敗無關 (類似的仿函式會導致相同的失敗)，但 Lambda 非常適合用來完成精簡函式物件的工作。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。
 
-## <a name="example"></a>範例
+## <a name="iterators-going-out-of-scope"></a>迭代器要超出範圍
 
 偵錯迭代器，檢查也會導致中宣告的迭代器變數**for**迴圈超出範圍時**如**迴圈範圍結束。
 
@@ -163,11 +148,7 @@ int main()
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>範例
+## <a name="destructors-for-debug-iterators"></a>偵錯迭代器的解構函式
 
-偵錯迭代器具有非一般的解構函式。 如果解構函式因任何原因並未執行，即可能發生存取違規與資料損毀情況。 請考量以下範例：
+偵錯迭代器具有非一般的解構函式。 如果解構函式不會執行，但在釋放物件的記憶體，可能會發生存取違規與資料損毀。 請考量以下範例：
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>另請參閱

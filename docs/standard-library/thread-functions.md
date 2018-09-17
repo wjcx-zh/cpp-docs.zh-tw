@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 25c03be7ffb504f2bec47677aec70360d0f8b38f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960446"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704240"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函式
 
@@ -54,8 +54,8 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*  
- [duration](../standard-library/duration-class.md) 物件，可指定時間間隔。
+*Rel_time*<br/>
+[duration](../standard-library/duration-class.md) 物件，可指定時間間隔。
 
 ### <a name="remarks"></a>備註
 
@@ -74,8 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*  
- 表示時間點。
+*Abs_time*<br/>
+表示時間點。
 
 ### <a name="remarks"></a>備註
 
@@ -91,11 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 左邊**執行緒**物件。
+*左邊*<br/>
+左邊**執行緒**物件。
 
-*右邊*  
- 右**執行緒**物件。
+*右邊*<br/>
+右**執行緒**物件。
 
 ### <a name="remarks"></a>備註
 

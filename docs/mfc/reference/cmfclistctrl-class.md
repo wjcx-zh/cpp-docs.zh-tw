@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04eccb2d1472afb1c04daac8ab23c2ce6fe97c58
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9e1339c1696483a3150337a9d2670763e075f7ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851440"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702673"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 類別
 `CMFCListCtrl`類別會擴充功能[CListCtrl 類別](../../mfc/reference/clistctrl-class.md)類別所支援的進階標頭控制項功能[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)。  
@@ -105,11 +105,11 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bMark*  
- 布林值參數，決定是否要啟用不同的背景色彩。  
+*bMark*<br/>
+[in]布林值參數，決定是否要啟用不同的背景色彩。  
   
- [in]*bRedraw*  
- 布林值參數，決定是否要立即重繪控制項。  
+*bRedraw*<br/>
+[in]布林值參數，決定是否要立即重繪控制項。  
   
 ### <a name="remarks"></a>備註  
  `EnableMarkSortedColumn` 使用方法`CDrawingManager::PixelAlpha`來計算要使用的色彩排序資料行。 挑選色彩根據一般的背景色彩。  
@@ -122,8 +122,8 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 布林值，指定是否要啟用多個資料行排序模式。  
+*bEnable*<br/>
+[in]布林值，指定是否要啟用多個資料行排序模式。  
   
 ### <a name="remarks"></a>備註  
  當您啟用排序依據多個資料行時，資料行沒有階層。 主要的資料行時，將第一次排序的資料列。 任何對等的值則會依每個後續的資料行，根據優先順序排序。  
@@ -165,14 +165,14 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lParam1*  
- 要比較的第一個項目。  
+*lParam1*<br/>
+[in]要比較的第一個項目。  
   
- [in]*lParam2*  
- 要比較的第二個項目。  
+*lParam2*<br/>
+[in]要比較的第二個項目。  
   
- [in]*iColumn*  
- 這個方法會排序資料行的索引。  
+*iColumn*<br/>
+[in]這個方法會排序資料行的索引。  
   
 ### <a name="return-value"></a>傳回值  
  整數，表示兩個項目相對位置。 負值表示第一個項目之前，應該還有第二個，正值表示第一個項目應該遵循第二個，而且表示兩個項目是相同的零。  
@@ -190,11 +190,11 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nRow*  
- 有問題的儲存格之資料列。  
+*nRow*<br/>
+[in]有問題的儲存格之資料列。  
   
- [in]*nColumn*  
- 有問題的資料格資料行。  
+*nColumn*<br/>
+[in]有問題的資料格資料行。  
   
 ### <a name="return-value"></a>傳回值  
  COLOREF 值，指定儲存格的背景色彩。  
@@ -213,14 +213,14 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nRow*  
- 有問題的儲存格之資料列。  
+*nRow*<br/>
+[in]有問題的儲存格之資料列。  
   
- [in]*nColumn*  
- 有問題的資料格資料行。  
+*nColumn*<br/>
+[in]有問題的資料格資料行。  
   
- [in]*dwData*  
- 使用者定義的資料。 預設實作不會使用此參數。  
+*dwData*<br/>
+[in]使用者定義的資料。 預設實作不會使用此參數。  
   
 ### <a name="return-value"></a>傳回值  
  要用於目前的儲存格的字型的控制代碼。  
@@ -238,11 +238,11 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nRow*  
- 有問題的儲存格之資料列。  
+*nRow*<br/>
+[in]有問題的儲存格之資料列。  
   
- [in]*nColumn*  
- 有問題的資料格資料行。  
+*nColumn*<br/>
+[in]有問題的資料格資料行。  
   
 ### <a name="return-value"></a>傳回值  
  COLOREF 值，指定儲存格的文字色彩。  
@@ -258,8 +258,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iColumn*  
- 若要移除資料行。  
+*iColumn*<br/>
+[in]若要移除資料行。  
   
 ### <a name="remarks"></a>備註  
  這個方法會移除標題控制項中排序資料行。 它會呼叫[CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)。  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iColumn*  
- 要排序的資料行。  
+*iColumn*<br/>
+[in]要排序的資料行。  
   
- [in]*bAscending*  
- 布林值，指定排序次序。  
+*bAscending*<br/>
+[in]布林值，指定排序次序。  
   
- [in]*bAdd*  
- 布林值，指定方法是否會將所指定的資料行*iColumn*排序資料行的清單。  
+*bAdd*<br/>
+[in]布林值，指定方法是否會將所指定的資料行*iColumn*排序資料行的清單。  
   
 ### <a name="remarks"></a>備註  
  此方法會輸入的參數傳遞至標題控制項使用的方法[CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)。  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iColumn*  
- 要排序的資料行。  
+*iColumn*<br/>
+[in]要排序的資料行。  
   
- [in]*bAscending*  
- 布林值，指定排序次序。  
+*bAscending*<br/>
+[in]布林值，指定排序次序。  
   
- [in]*bAdd*  
- 布林值，指定此方法是否會將所指定的資料行*iColumn*排序資料行的清單。  
+*bAdd*<br/>
+[in]布林值，指定此方法是否會將所指定的資料行*iColumn*排序資料行的清單。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

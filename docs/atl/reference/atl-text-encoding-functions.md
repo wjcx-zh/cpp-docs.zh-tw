@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757467"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706832"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文字編碼函式
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>參數
 
-[in]*pbSrcData*  
-包含要解碼的資料緩衝區。
+*pbSrcData*<br/>
+[in]包含要解碼的資料緩衝區。
 
-[in]*nSrcLen*  
-以位元組為單位的長度*pbSrcData*。
+*nSrcLen*<br/>
+[in]以位元組為單位的長度*pbSrcData*。
 
-[out]*szDest*  
-呼叫端配置緩衝區，以接收已解碼的資料。
+*szDest*<br/>
+[out]呼叫端配置緩衝區，以接收已解碼的資料。
 
-[out]*pnDestLen*  
-指標變數，其中包含以位元組為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。
+*pnDestLen*<br/>
+[out]指標變數，其中包含以位元組為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。
 
-[in]*dwFlags*  
-描述如何執行轉換所 ATLSMTP_QPENCODE 旗標。
+*dwFlags*<br/>
+[in]描述如何執行轉換所 ATLSMTP_QPENCODE 旗標。
 
 ### <a name="return-value"></a>傳回值
 

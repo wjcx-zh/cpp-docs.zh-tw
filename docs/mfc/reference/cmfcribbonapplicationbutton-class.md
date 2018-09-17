@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849011"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701385"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton 類別
 實作位於應用程式視窗左上角的特殊按鈕。 按一下按鈕時，按鈕會開啟通常包含一般 [ **檔案** ] 命令 (例如 [ **開啟**]、[ **儲存**] 和 [ **結束**]) 的功能表。  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiBmpResID*  
- 在 [應用程式] 按鈕上顯示影像的資源識別碼。  
+*uiBmpResID*<br/>
+[in]在 [應用程式] 按鈕上顯示影像的資源識別碼。  
   
- [in]*hBmp*  
- 在 [應用程式] 按鈕上顯示點陣圖控制代碼。  
+*hBmp*<br/>
+[in]在 [應用程式] 按鈕上顯示點陣圖控制代碼。  
   
 ### <a name="remarks"></a>備註  
  若要將新的映像指派給功能區應用程式按鈕，在您建立按鈕之後，使用這個方法。 應用程式視窗左上角，位於 [應用程式] 按鈕。  

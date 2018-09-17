@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfeb1453cffac6cfe338f42da8b8efe60e18c9f8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fa2aa8fb79a0590c437699bcf887f2a7e1c1bb21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539583"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705012"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer 內建函式
 **Microsoft 專屬**  
@@ -72,11 +72,11 @@ void * _InterlockedExchangePointer_HLERelease(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Target`  
- 指向要交換之值的指標的指標。 函式將值設定為 `Value`，並傳回其先前的值。  
+*Target*<br/>
+[in、 out]要交換之值的指標的指標。 函式將值設定為 `Value`，並傳回其先前的值。  
   
- [in] `Value`  
- 要與 `Target` 所指之值交換的值。  
+*值*<br/>
+[in]要交換值的值所指向`Target`。  
   
 ## <a name="return-value"></a>傳回值  
  函式會傳回 `Target` 所指向的起始值。  

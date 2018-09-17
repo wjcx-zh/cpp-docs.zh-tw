@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eacffcd5e66d73cd7594207f58356a4a8a0ecb47
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e9ca899b7ad0f83faed4b8aefe318d2c62abb76
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541574"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704986"
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 專屬**  
@@ -38,8 +38,8 @@ unsigned long __segmentlimit(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `a`  
- 常數，指定的區段選取器。  
+*a*<br/>
+[in]常數，指定的區段選取器。  
   
 ## <a name="return-value"></a>傳回值  
  區段的限制所指定的區段選取器`a`，前提是選取器是在目前的權限層級的有效且可見。  

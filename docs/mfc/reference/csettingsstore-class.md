@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1731c32506ec0e9c4c392ff9429e28e5b71b3c7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c1cd37ee2ad7fe09e2838d5e3cecb3488594d2c9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221128"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706624"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包裝 Windows 應用程式開發介面函式，提供用來存取登錄的物件導向介面。  
@@ -102,8 +102,8 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszPath*  
- 指定要建立或開啟金鑰的名稱。  
+*pszPath*<br/>
+[in]指定要建立或開啟金鑰的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為 0否則為非零值。  
@@ -121,11 +121,11 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bAdmin*  
- 布林值參數，指定是否`CSettingsStore`物件扮演系統管理員模式。  
+*bAdmin*<br/>
+[in]布林值參數，指定是否`CSettingsStore`物件扮演系統管理員模式。  
   
- [in]*bReadOnly*  
- 布林值參數，指定是否`CSettingsStore`唯讀模式中建立物件。  
+*bReadOnly*<br/>
+[in]布林值參數，指定是否`CSettingsStore`唯讀模式中建立物件。  
   
 ### <a name="remarks"></a>備註  
  如果*bAdmin*設定為 TRUE，`m_hKey`成員變數會設為**HKEY_LOCAL_MACHINE**。 如果您設定*bAdmin*設為 FALSE，`m_hKey`設定為**HKEY_CURRENT_USER**。  
@@ -144,11 +144,11 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszPath*  
- 若要刪除的索引鍵名稱。  
+*pszPath*<br/>
+[in]若要刪除的索引鍵名稱。  
   
- [in]*bAdmin*  
- 指定要刪除的金鑰位置的參數。  
+*bAdmin*<br/>
+[in]指定要刪除的金鑰位置的參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -166,8 +166,8 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszValue*  
- 指定要移除的值欄位。  
+*pszValue*<br/>
+[in]指定要移除的值欄位。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -180,8 +180,8 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszPath*  
- 登錄機碼的名稱。  
+*pszPath*<br/>
+[in]登錄機碼的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -265,53 +265,53 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszKey*  
- 以 null 終止的字串，其中包含要從登錄讀取的值名稱的指標。  
+*pszKey*<br/>
+[in]以 null 終止的字串，其中包含要從登錄讀取的值名稱的指標。  
   
- [out]*iVal*  
- 接收讀取登錄機碼值的整數變數的參考。  
+*iVal*<br/>
+[out]接收讀取登錄機碼值的整數變數的參考。  
   
- [out]*dwVal*  
- 接收從登錄機碼讀取值的 32 位元雙字組變數的參考。  
+*dwVal*<br/>
+[out]接收從登錄機碼讀取值的 32 位元雙字組變數的參考。  
   
- [out]*sVal*  
- 接收讀取登錄機碼值的字串變數的參考。  
+*sVal*<br/>
+[out]接收讀取登錄機碼值的字串變數的參考。  
   
- [out]*scStringList*  
- 接收從登錄機碼讀取值的字串清單變數參考。  
+*scStringList*<br/>
+[out]接收從登錄機碼讀取值的字串清單變數參考。  
   
- [out]*scArray*  
- 接收從登錄機碼讀取值的字串陣列變數的參考。  
+*scArray*<br/>
+[out]接收從登錄機碼讀取值的字串陣列變數的參考。  
   
- [out]*dwcArray*  
- 接收從登錄機碼讀取值的 32 位元雙字組陣列變數的參考。  
+*dwcArray*<br/>
+[out]接收從登錄機碼讀取值的 32 位元雙字組陣列變數的參考。  
   
- [out]*wcArray*  
- 接收從登錄機碼讀取值的 16 位元字組陣列變數的參考。  
+*wcArray*<br/>
+[out]接收從登錄機碼讀取值的 16 位元字組陣列變數的參考。  
   
- [out]*bcArray*  
- 接收從登錄機碼讀取值的位元組陣列變數的參考。  
+*bcArray*<br/>
+[out]接收從登錄機碼讀取值的位元組陣列變數的參考。  
   
- [out]*lpPoint*  
- 參考的指標`POINT`接收值的結構會讀取登錄機碼。  
+*lpPoint*<br/>
+[out]參考的指標`POINT`接收值的結構會讀取登錄機碼。  
   
- [out]*rect*  
- 若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)接收值的變數會讀取登錄機碼。  
+*rect*<br/>
+[out]若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)接收值的變數會讀取登錄機碼。  
   
- [out]*ppData*  
- 指標，接收值的資料指標讀取的登錄機碼。  
+*ppData*<br/>
+[out]指標，接收值的資料指標讀取的登錄機碼。  
   
- [out]*pBytes*  
- 不帶正負號的整數變數的指標。 此變數會接收緩衝區的大小， *ppData*指向。  
+*pBytes*<br/>
+[out]不帶正負號的整數變數的指標。 此變數會接收緩衝區的大小， *ppData*指向。  
   
- [out]*清單*  
- 若要參考[CObList](../../mfc/reference/coblist-class.md)接收值的變數會讀取登錄機碼。  
+*list*<br/>
+[out]若要參考[CObList](../../mfc/reference/coblist-class.md)接收值的變數會讀取登錄機碼。  
   
- [out]*obj*  
- 若要參考[CObject](../../mfc/reference/cobject-class.md)接收值的變數會讀取登錄機碼。  
+*obj*<br/>
+[out]若要參考[CObject](../../mfc/reference/cobject-class.md)接收值的變數會讀取登錄機碼。  
   
- [out]*pObj*  
- 參考的指標`CObject`接收值的變數會讀取登錄機碼。  
+*pObj*<br/>
+[out]參考的指標`CObject`接收值的變數會讀取登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -395,53 +395,53 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pszKey*  
- 包含要設定的值名稱的字串指標。  
+*pszKey*<br/>
+[in]包含要設定的值名稱的字串指標。  
   
- [in]*iVal*  
- 包含要儲存資料的整數變數的參考。  
+*iVal*<br/>
+[in]包含要儲存資料的整數變數的參考。  
   
- [in]*dwVal*  
- 32 位元雙字組變數，其中包含要儲存的資料參考。  
+*dwVal*<br/>
+[in]32 位元雙字組變數，其中包含要儲存的資料參考。  
   
- [in]*pszVal*  
- 以 null 終止的字串變數，其中包含要儲存的資料指標。  
+*pszVal*<br/>
+[in]以 null 終止的字串變數，其中包含要儲存的資料指標。  
   
- [in]*scStringList*  
- 若要參考[CStringList](../../mfc/reference/cstringlist-class.md)變數，其中包含要儲存的資料。  
+*scStringList*<br/>
+[in]若要參考[CStringList](../../mfc/reference/cstringlist-class.md)變數，其中包含要儲存的資料。  
   
- [in]*bcArray*  
- 包含要儲存資料的位元組陣列變數的參考。  
+*bcArray*<br/>
+[in]包含要儲存資料的位元組陣列變數的參考。  
   
- [in]*scArray*  
- 包含要儲存資料的字串陣列變數的參考。  
+*scArray*<br/>
+[in]包含要儲存資料的字串陣列變數的參考。  
   
- [in]*dwcArray*  
- 32 位元雙字組陣列變數，其中包含要儲存的資料參考。  
+*dwcArray*<br/>
+[in]32 位元雙字組陣列變數，其中包含要儲存的資料參考。  
   
- [in]*wcArray*  
- 包含要儲存資料的 16 位元字組陣列變數的參考。  
+*wcArray*<br/>
+[in]包含要儲存資料的 16 位元字組陣列變數的參考。  
   
- [in]*rect*  
- 若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)變數，其中包含要儲存的資料。  
+*rect*<br/>
+[in]若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)變數，其中包含要儲存的資料。  
   
- [in]*lpPoint*  
- 參考的指標`POINT`變數，其中包含要儲存的資料。  
+*lpPoint*<br/>
+[in]參考的指標`POINT`變數，其中包含要儲存的資料。  
   
- [in]*pData*  
- 其中包含要儲存的資料緩衝區的指標。  
+*pData*<br/>
+[in]其中包含要儲存的資料緩衝區的指標。  
   
- [in]*nBytes*  
- 指定的大小，以位元組為單位的資料*pData*參數所指向。  
+*nBytes*<br/>
+[in]指定的大小，以位元組為單位的資料*pData*參數所指向。  
   
- [in]*清單*  
- 若要參考[CObList](../../mfc/reference/coblist-class.md)變數，其中包含要儲存的資料。  
+*list*<br/>
+[in]若要參考[CObList](../../mfc/reference/coblist-class.md)變數，其中包含要儲存的資料。  
   
- [in]*obj*  
- 若要參考[CObject](../../mfc/reference/cobject-class.md)變數，其中包含要儲存的資料。  
+*obj*<br/>
+[in]若要參考[CObject](../../mfc/reference/cobject-class.md)變數，其中包含要儲存的資料。  
   
- [in]*pObj*  
- 指標的指標`CObject`變數，其中包含要儲存的資料。  
+*pObj*<br/>
+[in]指標的指標`CObject`變數，其中包含要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUE，否則為 FALSE。  

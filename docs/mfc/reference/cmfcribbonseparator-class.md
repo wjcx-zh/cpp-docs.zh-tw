@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12f4b9019a79b6ff57da6905b6ad9329788b4ec9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: e9112a6790175709a2575319c6f71a55d1303a83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705311"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 類別
 實作功能區分隔符號。  
@@ -113,11 +113,11 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndListBox*  
- 指標**命令**加入分隔符號的位置清單。  
+*pWndListBox*<br/>
+[in]指標**命令**加入分隔符號的位置清單。  
   
- [in]*bDeep*  
- 忽略。  
+*bDeep*<br/>
+[in]略過。  
   
 ### <a name="return-value"></a>傳回值  
  在清單方塊中所指定的字串以零起始的索引*pWndListBox*。  
@@ -130,8 +130,8 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bIsHoriz*  
- 如果為 TRUE，分隔符號是水平;如果為 FALSE，分隔符號是垂直。  
+*bIsHoriz*<br/>
+[in]如果為 TRUE，分隔符號是水平;如果為 FALSE，分隔符號是垂直。  
   
 ### <a name="remarks"></a>備註  
  應用程式功能表中，會使用水平分隔符號。 工具列中，會使用垂直分隔符號。  
@@ -149,8 +149,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*Src*  
- 要複製的來源功能區項目。  
+*src*<br/>
+[in]要複製的來源功能區項目。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  傳回分隔符號的大小。  
@@ -160,8 +160,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
 ### <a name="return-value"></a>傳回值  
  指定的裝置內容的分隔符號的大小。  
@@ -197,8 +197,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  呼叫系統上繪製分隔符號**命令**清單。  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDC*|裝置內容的指標。|  
-|[in]*先把 strText*|在清單上顯示的文字。|  
-|[in]*nTextOffset*|與文字之間的週框矩形左邊的間距。|  
-|[in]*rect*|指定週框矩形。|  
-|[in]*bIsSelected*|忽略。|  
-|[in]*bHighlighted*|忽略。|  
+|*pDC*|[in]裝置內容指標。|  
+|*先把 strText*|[in]在清單上顯示的文字。|  
+|*nTextOffset*|[in]與文字之間的週框矩形左邊的間距。|  
+|*rect*|[in]指定週框矩形。|  
+|*bIsSelected*|[in]略過。|  
+|*bHighlighted*|[in]略過。|  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

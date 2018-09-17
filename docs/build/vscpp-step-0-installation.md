@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee0763608edde0f7ceff81983a324190b605ff7
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702893"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 c + + 支援
 
@@ -37,9 +37,9 @@ ms.locfileid: "43130887"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安裝
 
- 若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，然後選擇**自訂安裝**]，然後選擇 [c + + 元件。 
+若要安裝 Visual Studio 2015，請前往[下載舊版 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 執行安裝程式，並選擇 [自訂安裝]，然後選擇 C++ 元件。
 
- 一般情況下，我們強烈建議您使用 Visual Studio 2017，即使您需要編譯您使用 Visual Studio 2015 的編譯器的程式碼。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](../porting/use-native-multi-targeting.md)。
+一般來說，即使需要使用 Visual Studio 2015 編譯器，編譯您的程式碼，也都非常建議您使用 Visual Studio 2017。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](../porting/use-native-multi-targeting.md)。
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安裝
 
@@ -59,13 +59,13 @@ ms.locfileid: "43130887"
 
    ![使用 c + + 的桌面開發](../build/media/desktop-development-with-cpp.png "使用 c + + 的桌面開發")
 
-    C + +，請選取**使用 c + + 的桌面開發**工作負載，然後選擇**安裝**。
+   C + +，請選取**使用 c + + 的桌面開發**工作負載，然後選擇**安裝**。
 
    ![安裝包含 c + + 工作負載的桌面開發](../build/media/vscpp-concierge-choose-workload.gif "安裝包含 c + + 工作負載的桌面開發")
 
 1. 當安裝完成時，選擇**啟動**按鈕來啟動 Visual Studio。
 
-   第一次執行 Visual Studio 中，您必須使用 Microsoft 帳戶登入。 如果您沒有帳戶，您可以免費建立一個。 您也必須選擇一個佈景主題。 別擔心，您可以將它變更稍後如果您想要。 
+   第一次執行 Visual Studio 中，您必須使用 Microsoft 帳戶登入。 如果您沒有帳戶，您可以免費建立一個。 您也必須選擇一個佈景主題。 別擔心，您可以將它變更稍後如果您想要。
 
    可能需要 Visual Studio 幾分鐘，您就準備好使用您在執行第一次。 以下是看起來像是快速縮時攝影外：
 

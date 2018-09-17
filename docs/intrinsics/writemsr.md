@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705129"
 ---
 # <a name="writemsr"></a>__writemsr
 **Microsoft 專屬**  
@@ -40,11 +40,11 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Register`  
- 模型特定暫存器。  
+*註冊*<br/>
+[in]模型特定暫存器。  
   
- [輸入] `Value`  
- 要寫入的值。  
+*值*<br/>
+[in]要寫入的值。  
   
 ## <a name="requirements"></a>需求  
   

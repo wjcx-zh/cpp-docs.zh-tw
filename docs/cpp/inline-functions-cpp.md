@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403663"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701685"
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 在類別宣告的主體中定義的函式是內嵌函式。  
@@ -156,7 +156,8 @@ private:
   
  遞迴函式可以內嵌替代到所指定的深度[inline_depth](../preprocessor/inline-depth.md) pragma，最多 16 個呼叫。 該深度之後，遞迴函式呼叫視為函式執行個體的呼叫。  由內嵌啟發學習法所檢查之遞迴函式的深度不能超過 16。 [Inline_recursion](../preprocessor/inline-recursion.md) pragma 控制目前在展開的函式的內嵌展開。 請參閱[內嵌函式展開](../build/reference/ob-inline-function-expansion.md)(/ Ob) 編譯器選項，如需相關資訊。  
   
-**結束 Microsoft 專屬**  
+**結束 Microsoft 專屬**
+
  如需有關使用**內嵌**規範，請參閱：  
   
 -   [內嵌類別成員函式](../cpp/inline-functions-cpp.md)  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 364ad39bfe47ff04c4a1eefb52b32ed4bddb7809
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4bfb567774191edb86a9eb34a38be69344f19575
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543121"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702074"
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 專屬**  
@@ -40,11 +40,11 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Mask`  
- 要向左移位的 64 位元整數值。  
+*遮罩*<br/>
+[in]要向左移位的 64 位元整數值。  
   
- [輸入] `nBit`  
- 要移位的位元數。  
+*nBit*<br/>
+[in]要移位的位元數。  
   
 ## <a name="return-value"></a>傳回值  
  遮罩向左旋轉`nBit`位元。  

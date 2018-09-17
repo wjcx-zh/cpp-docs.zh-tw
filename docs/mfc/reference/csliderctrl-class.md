@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bd20852f1dfd278d4ae58cc6c67d6047579cd08
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 9e06ff5301af07ff123954060053296839118d11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703959"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 提供 Windows 通用滑桿控制項的功能。  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nLength*|滑桿，像素為單位的長度。|  
+|*nLength*|[in]滑桿，像素為單位的長度。|  
   
 ### <a name="remarks"></a>備註  
  此方法需要 trackbar 控制項設定為[TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles)樣式。  

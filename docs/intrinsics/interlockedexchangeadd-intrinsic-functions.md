@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d25fccd56522d420a96b589796ef77cc30148d3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d438d31088c6ded53df3137e76ebc6a2953890e6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700910"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd 內建函式
 **Microsoft 專屬**  
@@ -164,11 +164,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Addend`  
- 要加入的值；會被相加的結果取代。  
+*加數*<br/>
+[in、 out]要加入至; 的值取代為相加的結果。  
   
- [in] `Value`  
- 要加入的值。  
+*值*<br/>
+[in]要加入的值。  
   
 ## <a name="return-value"></a>傳回值  
  傳回值是 `Addend` 參數所指向之變數的初始值。  
@@ -177,9 +177,9 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`、`_InterlockedExchangeAdd8`、`_InterlockedExchangeAdd16``_InterlockedExchangeAdd64`|x86、 x64、 ARM|\<intrin.h>|  
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`、`_InterlockedExchangeAdd_HLERelease`、`_InterlockedExchangeAdd64_HLEAcquire``_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|  
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  在 `_InterlockedExchangeAdd` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。  

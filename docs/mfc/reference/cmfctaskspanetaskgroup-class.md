@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 57c7c55ae2214c4123973e93c65f5e189d32b99a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849157"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701645"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 類別
 `CMFCTasksPaneTaskGroup`類別是所使用的 helper 類別[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控制項。 屬於類型 `CMFCTasksPaneTaskGroup` 的物件表示「 *工作群組*」(Task Group)。 工作群組是 Framework 顯示在具有摺疊按鈕之不同方塊中的項目清單。 方塊可以有選擇性的標題 (群組名稱)。 如果群組已摺疊，工作清單是不可見的。  
@@ -216,11 +216,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParent*  
- 表示目前的工作群組的父視窗。  
+*pParent*<br/>
+[in]表示目前的工作群組的父視窗。  
   
- [out]*資料*  
- 型別的物件`CAccessibilityData`，並填入目前的工作群組的協助工具資料。  
+*data*<br/>
+[out]型別的物件`CAccessibilityData`，並填入目前的工作群組的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
  則為 TRUE*資料*參數，則已成功填入目前的工作群組的協助工具資料; 否則為 FALSE。  

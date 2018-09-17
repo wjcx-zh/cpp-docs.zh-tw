@@ -1,5 +1,5 @@
 ---
-title: Null 和未定義的巨集 |Microsoft 文件
+title: Null 和未定義的巨集 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 494a084ee5ba1da29c132aa632b647b37f305855
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eee6e713715e4709af990878224261a41f5470e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368466"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702633"
 ---
 # <a name="null-and-undefined-macros"></a>Null 和未定義的巨集
-Null 和未定義的巨集展開為 null 的字串，但巨集定義為 null 的字串會被視為前置處理運算式中定義。 若要定義巨集做為 null 的字串，指定沒有字元除了命令列或命令檔中的等號 （=） 後面的空格或定位字元和雙引號括住的 null 字串或定義 ("")。 若要取消定義巨集，使用 **！UNDEF。** 如需詳細資訊，請參閱[Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)
+
+Null 和未定義的巨集展開成 null 的字串，但為 null 的字串所定義的巨集視為已定義前置處理運算式中。 若要定義巨集做為 null 的字串，指定任何字元除外命令列或指令檔中的等號 （=） 後面的空格或定位字元，且將 null 字串或定義括在雙引號 ("")。 若要取消定義巨集，使用 **！UNDEF。** 如需詳細資訊，請參閱 < [Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

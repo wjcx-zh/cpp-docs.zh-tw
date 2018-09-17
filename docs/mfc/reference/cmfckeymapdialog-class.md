@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853666"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704038"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 類別
 `CMFCKeyMapDialog`類別支援的控制項，將命令對應至鍵盤上的按鍵。  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParentFrame*  
- 父視窗的指標`CMFCKeyMapDialog`物件。  
+*pWndParentFrame*<br/>
+[in]父視窗的指標`CMFCKeyMapDialog`物件。  
   
- [in]*bEnablePrint*  
- 如果可列印的快速鍵清單，則為 TRUE否則為 FALSE。 預設值為 FALSE。  
+*bEnablePrint*<br/>
+[in]如果可列印的快速鍵清單，則為 TRUE否則為 FALSE。 預設值為 FALSE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nItem*  
- 索引鍵對應的內部清單中項目的以零為起始的索引。  
+*nItem*<br/>
+[in]索引鍵對應的內部清單中項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  A`CString`物件，其中包含已格式化的項目文字。  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdID*  
- 命令識別碼。  
+*uiCmdID*<br/>
+[in]命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  以分號分隔 （';'） 的快速鍵清單，與指定的命令相關聯。  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pButton*  
- 指標，用來對應至命令名稱和描述的鍵盤按鍵組合的工具列按鈕。 索引鍵對應項目會儲存在內部清單控制項中。  
+*pButton*<br/>
+[in]指標，用來對應至命令名稱和描述的鍵盤按鍵組合的工具列按鈕。 索引鍵對應項目會儲存在內部清單控制項中。  
   
- [in]*nItem*  
- 以零為起始的索引，指定要插入新的索引鍵對應項目內部的清單控制項中的位置。  
+*nItem*<br/>
+[in]以零為起始的索引，指定要插入新的索引鍵對應項目內部的清單控制項中的位置。  
   
 ### <a name="remarks"></a>備註  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dc*  
- 印表機裝置內容。  
+*dc*<br/>
+[in]印表機裝置內容。  
   
- [in]*n 版面*  
- 若要列印的頁碼。  
+*n 版面*<br/>
+[in]若要列印的頁碼。  
   
- [in]*cx*  
- 標頭，單位為像素水平位移。  
+*cx*<br/>
+[in]標頭，單位為像素水平位移。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，印刷文字的高度。 如需詳細資訊，請參閱的傳回值區段[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)。  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dc*  
- 印表機裝置內容。  
+*dc*<br/>
+[in]印表機裝置內容。  
   
- [in]*nItem*  
- 要列印的項目以零為起始的索引。  
+*nItem*<br/>
+[in]要列印的項目以零為起始的索引。  
   
- [in]*y*  
- 頁面頂端和項目的位置之間的垂直位移。  
+*y*<br/>
+[in]頁面頂端和項目的位置之間的垂直位移。  
   
- [in]*cx*  
- 頁面的左邊和位置的項目之間的水平位移。  
+*cx*<br/>
+[in]頁面的左邊和位置的項目之間的水平位移。  
   
- [in]*bCalcHeight*  
- TRUE 表示要計算的列印的項目; 最佳高度如果為 false，則截斷列印的項目，使其符合預設的空間。  
+*bCalcHeight*<br/>
+[in]TRUE 表示要計算的列印的項目; 最佳高度如果為 false，則截斷列印的項目，使其符合預設的空間。  
   
 ### <a name="return-value"></a>傳回值  
  列印項目的高度。  

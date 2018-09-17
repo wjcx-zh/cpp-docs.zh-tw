@@ -1,5 +1,5 @@
 ---
-title: -連結 （傳遞選項給連結器） |Microsoft 文件
+title: -link （傳遞選項給連結器） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,43 +21,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b22e21022162a0f9f75e41e3e0bfdce348947e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663407e4948ebc4e3c0a1676c44e8d2b4bd53fcc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373289"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704115"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (傳遞選項給連結器)
-將一或多個連結器選項傳遞至連結器。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-/link linkeroptions  
-```  
-  
-## <a name="arguments"></a>引數  
- `linkeroptions`  
- 連結器選項或傳遞至連結器的選項。  
-  
-## <a name="remarks"></a>備註  
- **/Link> >** 選項和其連結器選項必須出現在任何檔名和 CL 選項之後。 不需要之間的空間 **/link> >** 和`linkeroptions`。 如需詳細資訊，請參閱[設定連結器選項](../../build/reference/setting-linker-options.md)。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  按一下**連結器**資料夾。  
-  
-3.  按一下 連結器屬性頁。  
-  
-4.  修改一或多個屬性。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
-  
--   無法以程式設計方式變更這個編譯器選項。  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器選項](../../build/reference/compiler-options.md)   
- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+
+將一或多個連結器選項傳遞給連結器。
+
+## <a name="syntax"></a>語法
+
+```
+/link linkeroptions
+```
+
+## <a name="arguments"></a>引數
+
+*linkeroptions*<br/>
+連結器選項或要傳遞至連結器選項。
+
+## <a name="remarks"></a>備註
+
+**/Link>** 選項和其連結器選項必須出現在任何檔案名稱和 CL 選項之後。 之間的空間，須 **/link>** 和`linkeroptions`。 如需詳細資訊，請參閱 <<c0> [ 設定連結器選項](../../build/reference/setting-linker-options.md)。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 按一下 **連結器**資料夾。
+
+1. 按一下 [連結器屬性頁]。
+
+1. 修改一或多個屬性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
+
+- 這個編譯器選項不能以程式設計方式變更。
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)

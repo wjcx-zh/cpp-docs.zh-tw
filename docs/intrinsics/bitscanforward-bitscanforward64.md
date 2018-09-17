@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4720ca4a65a543ca09412ac0c1eb1e65bf6cdd23
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e563e7240c1797bf863ee0762f923e91a6f05bb0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543101"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699881"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Microsoft 專屬**  
@@ -47,11 +47,11 @@ unsigned char _BitScanForward64(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸出] `Index`  
- 會使用找到的第一個設定位元 (1) 的位元位置載入。  
+*Tuple*<br/>
+[out]會使用找到的第一個設定位元 (1) 的位元位置載入。  
   
- [in] `Mask`  
- 要搜尋的 32 位元或 64 位元值。  
+*遮罩*<br/>
+[in]要搜尋的 32 位元或 64 位元值。  
   
 ## <a name="return-value"></a>傳回值  
  如果遮罩是零，則為 0；否則為非零。  

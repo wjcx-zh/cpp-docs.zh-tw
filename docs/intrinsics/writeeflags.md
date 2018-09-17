@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a6f3d8f8a3527e193ed1bec0f7dc4b563593b84
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8c01e10a77278f0a02658778ec178f0a4226eb36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704856"
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定的值寫入程式狀態和控制 (EFLAGS) 註冊。  
@@ -37,7 +37,7 @@ void __writeeflags(unsigned __int64 Value);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `Value`|要寫入的 EFLAGS 暫存器的值。 `Value`參數是 32 位元長，不適用於 32 位元平台和 64 位元長，不適用於 64 位元平台。|  
+|*值*|[in]要寫入的 EFLAGS 暫存器的值。 `Value`參數是 32 位元長，不適用於 32 位元平台和 64 位元長，不適用於 64 位元平台。|  
   
 ## <a name="remarks"></a>備註  
  這些常式都僅有內建函式。  

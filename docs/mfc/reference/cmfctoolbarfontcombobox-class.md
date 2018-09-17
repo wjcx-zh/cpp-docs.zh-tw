@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b510b05c80ba7cdbea0bbf0ec580e88daa55fbed
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216257"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704362"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 類別
 包含可讓使用者從一份系統字型選取字型下拉式方塊控制項的工具列按鈕。  
@@ -110,14 +110,14 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- 下拉式方塊的命令識別碼。  
+*uiID*<br/>
+[in]下拉式方塊的命令識別碼。  
   
- [in]*iImage*  
- 工具列影像之以零起始的索引。 映像位於[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別會負責維護。  
+*iImage*<br/>
+[in]工具列影像之以零起始的索引。 映像位於[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別會負責維護。  
   
- [in]*nFontType*  
- 字型下拉式方塊包含的類型。 這個參數可以是下列值的組合 (布林值 OR):  
+*nFontType*<br/>
+[in]字型下拉式方塊包含的類型。 這個參數可以是下列值的組合 (布林值 OR):  
   
  DEVICE_FONTTYPE  
   
@@ -125,20 +125,20 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in]*nCharSet*  
- 如果設為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有具有相同名稱的兩種字型，下拉式方塊包含其中一個）。如果設為有效的字元組值，而下拉式方塊包含只在指定的字元集的字型。 請參閱[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)的可能字元清單的設定。  
+*nCharSet*<br/>
+[in]如果設為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有具有相同名稱的兩種字型，下拉式方塊包含其中一個）。如果設為有效的字元組值，而下拉式方塊包含只在指定的字元集的字型。 請參閱[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)的可能字元清單的設定。  
   
- [in]*cheaderctrl:: Create*  
- 下拉式方塊的樣式。 (請參閱[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
+*cheaderctrl:: Create*<br/>
+[in]下拉式方塊的樣式。 (請參閱[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in]*iWidth*  
- 像素為單位，編輯控制項的寬度。  
+*iWidth*<br/>
+[in]像素為單位，編輯控制項的寬度。  
   
- [in]*nPitchAndFamily*  
- 如果設為 DEFAULT_PITCH，下拉式方塊包含不論字幅的字型。 如果設定為 FIXED_PITCH 或 VARIABLE_PITCH，下拉式方塊包含僅透過這樣的字幅的字型。 目前不支援篩選根據字型家族。  
+*nPitchAndFamily*<br/>
+[in]如果設為 DEFAULT_PITCH，下拉式方塊包含不論字幅的字型。 如果設定為 FIXED_PITCH 或 VARIABLE_PITCH，下拉式方塊包含僅透過這樣的字幅的字型。 目前不支援篩選根據字型家族。  
   
- [out]*pLstFontsExternal*  
- 指標[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中儲存可用的字型。  
+*pLstFontsExternal*<br/>
+[out]指標[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中儲存可用的字型。  
   
 ### <a name="remarks"></a>備註  
  通常`CMFCToolBarFontComboBox`物件使用的字型清單儲存於單一共用`CObList`物件。 如果您使用第二個多載的建構函式，並提供的有效指標*pLstFontsExternal*，、 該`CMFCToolBarFontComboBox`物件將會改為填滿`CObList`可*pLstFontsExternal*若要使用可用字型的點。  
@@ -156,8 +156,8 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 指定下拉式方塊項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]指定下拉式方塊項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  `CMFCFontInfo` 物件的指標。 如果*iIndex*未指定有效的項目索引，則傳回值是 NULL。  
@@ -183,14 +183,14 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszName*  
- 指定的字型名稱或前置詞。  
+*lpszName*<br/>
+[in]指定的字型名稱或前置詞。  
   
- [in]*nCharSet*  
- 指定的字元集。  
+*nCharSet*<br/>
+[in]指定的字元集。  
   
- [in]*bExact*  
- 指定是否*lpszName*包含字型名稱或字型前置詞。  
+*bExact*<br/>
+[in]指定是否*lpszName*包含字型名稱或字型前置詞。  
   
 ### <a name="return-value"></a>傳回值  
  如果已順利啟動。 選取的字型為非零否則為 0。  

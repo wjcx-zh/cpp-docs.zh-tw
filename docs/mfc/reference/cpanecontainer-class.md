@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d69a5cefa1cb43ad4f6c585b3cb7f7e021ae9183
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ec78ed92829f8a8ac33e796687f812dc7ad444a1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538251"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701567"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 類別
 `CPaneContainer`類別是由 MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐窗格的指標或 `CPaneContainer.` 的兩個執行個體的指標，也存放分隔窗格 (或容器) 的分割線的指標。 Framework 可以將容器巢狀於容器內部，建置表示複雜停駐配置的二進位樹狀目錄。 二進位樹狀目錄的根儲存在[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)物件。  
@@ -267,8 +267,8 @@ BOOL AddSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pContainer*  
- [in]*bRightNodeNew*  
+*pContainer*<br/>
+[in][in]*bRightNodeNew*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -286,10 +286,10 @@ virtual int CalcAvailablePaneSpace(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nRequiredOffset*  
- [in]*pBar*  
- [in]*pContainer*  
- [in]*bLeftBar*  
+*nRequiredOffset*<br/>
+[in][in]*pBar*  
+*pContainer*<br/>
+[in][in]*bLeftBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -305,8 +305,8 @@ virtual CSize CalcAvailableSpace(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*sizeStretch*  
- [in]*bLeftBar*  
+*sizeStretch*<br/>
+[in][in]*bLeftBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -356,10 +356,10 @@ CPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pManager*  
- [in]*pLeftBar*  
- [in]*pRightBar*  
- [in]*pSlider*  
+*pManager*<br/>
+[in][in]*pLeftBar*  
+*pRightBar*<br/>
+[in][in]*pSlider*  
   
 ### <a name="remarks"></a>備註  
   
@@ -373,8 +373,8 @@ virtual void DeletePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [in]*barType*  
+*pBar*<br/>
+[in][in]*barType*  
   
 ### <a name="remarks"></a>備註  
   
@@ -388,8 +388,8 @@ CPaneContainer* FindSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pObject*  
- [in]*尋找準則*  
+*pObject*<br/>
+[in][in]*尋找準則*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -612,8 +612,8 @@ virtual void GetWindowRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- [in]*bIgnoreVisibility*  
+*rect*<br/>
+[in][in]*bIgnoreVisibility*  
   
 ### <a name="remarks"></a>備註  
   
@@ -725,8 +725,8 @@ void OnDeleteHidePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [in]*bHide*  
+*pBar*<br/>
+[in][in]*bHide*  
   
 ### <a name="remarks"></a>備註  
   
@@ -740,8 +740,8 @@ virtual int OnMoveInternalPaneDivider(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nOffset*  
- [in]*hdwp*  
+*nOffset*<br/>
+[in][in]*hdwp*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -757,8 +757,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [in]*bShow*  
+*pBar*<br/>
+[in][in]*bShow*  
   
 ### <a name="remarks"></a>備註  
   
@@ -814,8 +814,8 @@ virtual void Resize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- [in]*hdwp*  
+*rect*<br/>
+[in][in]*hdwp*  
  [in]*bRedraw*  
   
 ### <a name="remarks"></a>備註  
@@ -834,12 +834,12 @@ virtual void ResizePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nOffset*  
- [in]*pBar*  
- [in]*pContainer*  
- [in]*bHorz*  
- [in]*bLeftBar*  
- [in]*hdwp*  
+*nOffset*<br/>
+[in][in]*pBar*  
+*pContainer*<br/>
+[in][in]*bHorz*  
+*bLeftBar*<br/>
+[in][in]*hdwp*  
   
 ### <a name="remarks"></a>備註  
   
@@ -854,8 +854,8 @@ virtual void ResizePartOfPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nOffset*  
- [in]*bLeftPart*  
+*nOffset*<br/>
+[in][in]*bLeftPart*  
  [in]*hdwp*  
   
 ### <a name="remarks"></a>備註  
@@ -882,8 +882,8 @@ void SetPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [in]*bLeft*  
+*pBar*<br/>
+[in][in]*bLeft*  
   
 ### <a name="remarks"></a>備註  
   
@@ -897,8 +897,8 @@ void SetPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pContainer*  
- [in]*bLeft*  
+*pContainer*<br/>
+[in][in]*bLeft*  
   
 ### <a name="remarks"></a>備註  
   
@@ -948,8 +948,8 @@ BOOL SetUpByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- [in]*pBar*  
+*nID*<br/>
+[in][in]*pBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -980,10 +980,10 @@ virtual int StretchPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nOffset*  
- [in]*bStretchHorz*  
- [in]*bLeftBar*  
- [in]*bMoveSlider*  
+*nOffset*<br/>
+[in][in]*bStretchHorz*  
+*bLeftBar*<br/>
+[in][in]*bMoveSlider*  
  [in]*hdwp*  
   
 ### <a name="return-value"></a>傳回值  

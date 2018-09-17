@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 604ccf9ba0695cf9d17790f149be1f0738266076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339276"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701762"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 類別
 `CDataRecoveryHandler`時，自動儲存文件，並將它們還原，如果應用程式意外結束。  
@@ -188,8 +188,8 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDocument*|指標`CDocument`儲存。|  
-|[in]*bResetModifiedFlag*|TRUE 表示`CDataRecoveryHandler`考慮*pDocument*修改;FALSE 表示此架構會考慮*pDocument*是未修改。 請參閱 < 備註 > 一節這個旗標的效果的詳細資訊。|  
+|*pDocument*|[in]指標`CDocument`儲存。|  
+|*bResetModifiedFlag*|[in]TRUE 表示`CDataRecoveryHandler`考慮*pDocument*修改;FALSE 表示此架構會考慮*pDocument*是未修改。 請參閱 < 備註 > 一節這個旗標的效果的詳細資訊。|  
   
 ### <a name="return-value"></a>傳回值  
  如果設定了適當的旗標，則為 TRUE 並*pDocument*有效`CDocument`物件。  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*dwRestartManagerSupportFlags*|指出哪一個選項，重新啟動管理員支援。|  
-|[in]*nAutosaveInterval*|時，自動儲存之間的時間。 這個參數是以毫秒為單位。|  
+|*dwRestartManagerSupportFlags*|[in]指出哪一個選項，重新啟動管理員支援。|  
+|*nAutosaveInterval*|[in]時，自動儲存之間的時間。 這個參數是以毫秒為單位。|  
   
 ### <a name="remarks"></a>備註  
  MFC 架構會自動建立`CDataRecoveryHandler`當您使用您的應用程式的物件**新的專案**精靈。 除非您要自訂的資料復原行為或重新啟動管理員，您不應建立`CDataRecoveryHandler`物件。  
@@ -237,7 +237,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDocument*|指標`CDocument`。 這個方法會建立此文件資訊`CDocument`。|  
+|*pDocument*|[in]指標`CDocument`。 這個方法會建立此文件資訊`CDocument`。|  
   
 ### <a name="return-value"></a>傳回值  
  預設實作會傳回 TRUE。  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*strAutosavedFile*|包含會檔案名稱的字串。|  
+|*strAutosavedFile*|[in]包含會檔案名稱的字串。|  
   
 ### <a name="return-value"></a>傳回值  
  預設實作永遠傳回 TRUE。  
@@ -285,8 +285,8 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strDocumentName*  
- 包含文件名稱的字串。 `GenerateAutosaveFileName` 您可以使用此文件名稱來產生對應的自動儲存檔案名稱。  
+*strDocumentName*<br/>
+[in]包含文件名稱的字串。 `GenerateAutosaveFileName` 您可以使用此文件名稱來產生對應的自動儲存檔案名稱。  
   
 ### <a name="return-value"></a>傳回值  
  從產生的自動儲存檔案名稱*strDocumentName*。  
@@ -326,7 +326,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDocument*|指標`CDocument`。 `GetDocumentListName` 這會擷取文件名稱`CDocument`。|  
+|*pDocument*|[in]指標`CDocument`。 `GetDocumentListName` 這會擷取文件名稱`CDocument`。|  
   
 ### <a name="return-value"></a>傳回值  
  中的文件名稱*pDocument*。  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDocument*|指標`CDocument`。|  
+|*pDocument*|[in]指標`CDocument`。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的文件一般標題。  
@@ -362,8 +362,8 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strDocumentTitle*  
- 一般文件標題。  
+*strDocumentTitle*<br/>
+[in]一般文件標題。  
   
 ### <a name="return-value"></a>傳回值  
  復原後的文件標題。  
@@ -462,7 +462,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDocument*|要移除文件指標。|  
+|*pDocument*|[in]要移除文件指標。|  
   
 ### <a name="return-value"></a>傳回值  
  則為 TRUE *pDocument*已從清單移除如果發生錯誤，則為 FALSE。  
@@ -529,8 +529,8 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nAutosaveInterval*  
- 以毫秒為單位，新的自動儲存間隔。  
+*nAutosaveInterval*<br/>
+[in]以毫秒為單位，新的自動儲存間隔。  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  設定會檔案儲存所在的目錄。  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*strAutosavePath*|儲存自動儲存檔案的路徑。|  
+|*strAutosavePath*|[in]儲存自動儲存檔案的路徑。|  
   
 ### <a name="remarks"></a>備註  
  變更自動儲存目錄不會移動目前會檔案。  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*strRestartIdentifier*|重新啟動管理員唯一識別項。|  
+|*strRestartIdentifier*|[in]重新啟動管理員唯一識別項。|  
   
 ### <a name="remarks"></a>備註  
  重新啟動管理員會記錄在登錄中開啟的文件的相關資訊。 這項資訊會儲存具有唯一的重新啟動識別項，做為索引鍵。 重新啟動識別碼是唯一的應用程式的每個執行個體，因為應用程式的多個執行個體可能會意外結束，並重新啟動管理員可以復原每個。  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*bSaveOnIdle*|若要儲存在目前的閒置週期; 文件資訊，則為 TRUE如果為 false，則不會執行儲存。|  
+|*bSaveOnIdle*|[in]若要儲存在目前的閒置週期; 文件資訊，則為 TRUE如果為 false，則不會執行儲存。|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  設定是否重新啟動管理員所造成的應用程式先前的結束。  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*bShutdownByRestartManager*|TRUE 表示重新啟動管理員造成應用程式結束。如果為 false，則表示應用程式已結束，因為其他原因。|  
+|*bShutdownByRestartManager*|[in]TRUE 表示重新啟動管理員造成應用程式結束。如果為 false，則表示應用程式已結束，因為其他原因。|  
   
 ### <a name="remarks"></a>備註  
  Framework 的行為會根據前一個結束是否非預期或由重新啟動管理員來啟動。  
@@ -609,7 +609,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pDocument*|儲存的文件指標。|  
+|*pDocument*|[in]儲存的文件指標。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法刪除會文件，且更新過的文件資訊;，則為 TRUE。如果發生錯誤，則為 FALSE。  

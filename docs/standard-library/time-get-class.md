@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102742"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704870"
 ---
 # <a name="timeget-class"></a>time_get 類別
 
@@ -69,10 +69,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType*  
+*CharType*<br/>
 用於程式內部字元編碼的類型。
 
-*InputIterator*  
+*InputIterator*<br/>
 從中讀取時間值的迭代器。
 
 ## <a name="remarks"></a>備註
@@ -320,19 +320,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -371,19 +371,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 輸出餐參數，會根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm*  
+*ptm*<br/>
 指向月份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -414,19 +414,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -465,19 +465,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向工作日資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -508,19 +508,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向年份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -563,31 +563,31 @@ iter_type get(
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，表示要轉換的序列是否開始。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，表示要轉換之序列的結束。
 
-*iosbase*  
+*iosbase*<br/>
 資料流。
 
-*state*  
+*state*<br/>
 已針對此資料流狀態設定適當位元遮罩項目，藉此指出錯誤。
 
-*ptm*  
+*ptm*<br/>
 要儲存時間之時間結構的指標。
 
-*fmt*  
+*fmt*<br/>
 轉換規範字元。
 
-*mod*  
+*mod*<br/>
 選擇性修飾詞字元。
 
-*fmt_first*  
+*fmt_first*<br/>
 格式指示詞開始位置的點。
 
-*fmt_last*  
+*fmt_last*<br/>
 格式指示詞結尾的點。
 
 ### <a name="return-value"></a>傳回值
@@ -620,19 +620,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -714,19 +714,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 輸出餐參數，會根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。
 
-*ptm*  
+*ptm*<br/>
 指向月份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -806,19 +806,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 未使用。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向日期資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -887,19 +887,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向工作日資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -964,19 +964,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*  
+*first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*  
+*最後一個*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*iosbase*  
+*iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*state*  
+*state*<br/>
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*ptm*  
+*ptm*<br/>
 指向年份資訊儲存位置的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1050,7 +1050,7 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*refs*  
+*refs*<br/>
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註

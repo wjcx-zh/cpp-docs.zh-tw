@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207637"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705272"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 類別
 `CSplitButton`類別代表分割按鈕控制項。 當使用者按一下按鈕的主要部分時，分割按鈕控制項會執行預設行為，而當使用者按一下按鈕的下拉箭號時，則顯示下拉式功能表。  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*cheaderctrl:: Create*|位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
-|[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[in]*nID*|控制項的 ID。|  
+|*cheaderctrl:: Create*|[in]位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|  
+|*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
+|*pParentWnd*|[in]非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
+|*nID*|[in]控制項的 ID。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nMenuId*|在功能表列的資源識別碼。|  
-|[in]*nSubMenuId*|為子功能表的資源識別碼。|  
-|[in]*pMenu*|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，指定子功能表。 `CSplitButton`物件刪除`CMenu`物件和其相關聯的 HMENU 時`CSplitButton`物件超出範圍。|  
+|*nMenuId*|[in]在功能表列的資源識別碼。|  
+|*nSubMenuId*|[in]為子功能表的資源識別碼。|  
+|*pMenu*|[in]指標[CMenu](../../mfc/reference/cmenu-class.md)物件，指定子功能表。 `CSplitButton`物件刪除`CMenu`物件和其相關聯的 HMENU 時`CSplitButton`物件超出範圍。|  
   
 ### <a name="remarks"></a>備註  
  使用[CSplitButton::Create](#create)方法來建立分割按鈕控制項，並將其附加至`CSplitButton`物件。  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pNMHDR*|指標[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)結構，其中包含有關的資訊[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
-|[out]*pResult*|（未使用，會傳回任何值）。傳回值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
+|*pNMHDR*|[in]指標[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)結構，其中包含有關的資訊[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
+|*pResult*|[out]（未使用，會傳回任何值）。傳回值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|  
   
 ### <a name="remarks"></a>備註  
  當使用者按一下下拉箭號，分割按鈕控制項上的時，系統會傳送 BCN_DROPDOWN 通知訊息，其中`OnDropDown`方法控制代碼。 不過，`CSplitButton`物件不會轉送 BCN_DROPDOWN 通知，以包含分割按鈕控制項的控制項。 因此，包含控制項無法支援的自訂動作以回應通知。  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nMenuId*|在功能表列的資源識別碼。|  
-|[in]*nSubMenuId*|為子功能表的資源識別碼。|  
-|[in]*pMenu*|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，指定子功能表。 `CSplitButton`物件刪除`CMenu`物件和其相關聯的 HMENU 時`CSplitButton`物件超出範圍。|  
+|*nMenuId*|[in]在功能表列的資源識別碼。|  
+|*nSubMenuId*|[in]為子功能表的資源識別碼。|  
+|*pMenu*|[in]指標[CMenu](../../mfc/reference/cmenu-class.md)物件，指定子功能表。 `CSplitButton`物件刪除`CMenu`物件和其相關聯的 HMENU 時`CSplitButton`物件超出範圍。|  
   
 ### <a name="remarks"></a>備註  
  *NMenuId*參數會識別功能表列，也就是水平功能表列項目清單。 *NSubMenuId*參數是以零為起始的索引編號識別的子功能表，也就是下拉式清單中的每個功能表列項目相關聯的功能表項目。 比方說，一般的應用程式有一個包含功能表的功能表列項目，「 檔案 」，[編輯] 和 [說明]。 [檔案] 功能表列項目具有子功能表，其中包含的功能表項目中，[開啟，]"Close"和"Exit"。 按一下下拉箭號，分割按鈕控制項時，控制項就會顯示指定的子功能表功能表列。  

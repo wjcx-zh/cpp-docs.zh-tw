@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5063eae507ee6c83cbed2ae7fc92679098b91f36
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703855"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (匯出函式)
 
@@ -80,5 +80,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)   
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
 [連結器選項](../../build/reference/linker-options.md)

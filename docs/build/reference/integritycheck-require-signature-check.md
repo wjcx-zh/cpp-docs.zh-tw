@@ -12,40 +12,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc43bc4175f42282014e94426717527143dc059
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31df513a40b60fcb57c48f0d20e124fc77888d99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197052"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703117"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (需要簽章檢查)
-指定必須檢查在載入時間的二進位檔映像的數位簽章。  
-  
-```  
-/INTEGRITYCHECK[:NO]  
-```  
-  
-## <a name="remarks"></a>備註  
- 根據預設， **/INTEGRITYCHECK**已關閉。  
-  
- **/INTEGRITYCHECK**選項集 — DLL 或可執行檔的 PE 標頭中，記憶體管理員檢查數位簽章，以將影像載入 Windows 中的旗標。 這個選項必須設定適用於 32 位元和 64 位元 Dll 實作特定 Windows 功能中，載入的核心模式程式碼，並建議用於在 Windows Vista、 Windows 7、windows 8、windows、 Windows Server 2008 和 Windows Server 2012 的所有裝置驅動程式。 在 Windows Vista 之前的 Windows 版本會忽略此旗標。 如需詳細資訊，請參閱 <<c0> [ 強制完整性簽署的可攜式執行檔 (PE) 檔案](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)。  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項  
-  
-1.  開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  展開 [組態屬性] 節點。  
-  
-3.  依序展開**連結器**節點。  
-  
-4.  選取 **命令列**屬性頁。  
-  
-5.  在 **其他選項**，輸入`/INTEGRITYCHECK`或`/INTEGRITYCHECK:NO`。  
-  
-## <a name="see-also"></a>另請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)   
- [強制的完整性簽署的可攜式執行檔 (PE) 檔案](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)   
- [核心模式程式碼簽署逐步解說](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)   
- [Windows 7 和 Windows Server 2008 中的 AppInit Dll](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+
+指定必須檢查在載入時間的二進位檔映像的數位簽章。
+
+```
+/INTEGRITYCHECK[:NO]
+```
+
+## <a name="remarks"></a>備註
+
+根據預設， **/INTEGRITYCHECK**已關閉。
+
+**/INTEGRITYCHECK**選項集 — DLL 或可執行檔的 PE 標頭中，記憶體管理員檢查數位簽章，以將影像載入 Windows 中的旗標。 這個選項必須設定適用於 32 位元和 64 位元 Dll 實作特定 Windows 功能中，載入的核心模式程式碼，並建議用於在 Windows Vista、 Windows 7、windows 8、windows、 Windows Server 2008 和 Windows Server 2012 的所有裝置驅動程式。 在 Windows Vista 之前的 Windows 版本會忽略此旗標。 如需詳細資訊，請參閱 <<c0> [ 強制完整性簽署的可攜式執行檔 (PE) 檔案](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)。
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
+
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 展開 [組態屬性] 節點。
+
+1. 依序展開**連結器**節點。
+
+1. 選取 **命令列**屬性頁。
+
+1. 在 **其他選項**，輸入`/INTEGRITYCHECK`或`/INTEGRITYCHECK:NO`。
+
+## <a name="see-also"></a>另請參閱
+
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)<br/>
+[強制完整性簽署的可攜式執行檔 (PE) 的檔案](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)
+[核心模式程式碼簽署逐步解說](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
+[Windows 7 和 Windows Server 2008 中的 AppInit Dll](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

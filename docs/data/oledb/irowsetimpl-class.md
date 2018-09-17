@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faf782f4386cf2b2640ed65f3a2b24bbf4c5d693
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c339ffcf3fb32c7ff8ad45fca792a91c96848d9e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571672"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703725"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 提供 `IRowset` 介面的實作。  
@@ -244,11 +244,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 ```  
   
 #### <a name="parameters"></a>參數  
- [in]*currentRow*  
- 目前的資料列。  
+*currentRow*<br/>
+[in]目前的資料列。  
   
- [in]*columnNames*  
- 所要求的狀態資料行。  
+*columnNames*<br/>
+[in]所要求的狀態資料行。  
   
 ### <a name="return-value"></a>傳回值  
  [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))旗標資料行。 

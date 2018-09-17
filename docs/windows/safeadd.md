@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e84b76f8079656da3ed19aa2c690bf240854015
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ada0997a03cefbec4bcc4faa26ad4eaf8c176ff2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594352"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704883"
 ---
 # <a name="safeadd"></a>SafeAdd
 
@@ -41,14 +41,14 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>參數
 
-[in]*t*  
-要新增的第一個數字。 這必須為類型 T。
+*t*<br/>
+[in]要新增的第一個數字。 這必須為類型 T。
 
-[in]*u*  
-若要新增第二個數字。 這必須為類型 U。
+*u*<br/>
+[in]若要新增第二個數字。 這必須為類型 U。
 
-[out]*結果*  
-參數所在**SafeAdd**儲存結果。
+*結果*<br/>
+[out]參數所在**SafeAdd**儲存結果。
 
 ## <a name="return-value"></a>傳回值
 

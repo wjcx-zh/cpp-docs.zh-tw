@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b454a86957911060e33c82e79832e107313e0300
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690543"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703595"
 ---
 # <a name="errorcode-class"></a>error_code 類別
 
@@ -264,9 +264,8 @@ bool operator<(const error_code& right) const;
 
 ```cpp
 template <class _Enum>
-typename enable_if<is_error_code_enum<_Enum>::value,
-    error_code>::type&
- operator=(_Enum _Errcode);
+typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
+    operator=(_Enum _Errcode);
 ```
 
 ### <a name="parameters"></a>參數

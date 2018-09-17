@@ -12,15 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 54754e465f3a153b769b7619ff2bfb70a1872907
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699611"
 ---
 # <a name="definitions-and-declarations-c"></a>定義和宣告 (C++)
-**Microsoft 專有**DLL 介面的所有項目 （函式和資料） 的已知在系統中，某些程式匯出，也就是宣告為的所有項目是指**dllimport**或**dllexport**. DLL 介面中的所有宣告都必須都指定**dllimport**或是**dllexport**屬性。 不過，定義必須只指定**dllexport**屬性。 例如，下列函式定義會產生編譯器錯誤：
+**Microsoft 專屬**
+
+ DLL 介面會參考已知由系統; 中匯出的某些程式的所有項 （函式和資料）也就是說，所有的項目宣告為**dllimport**或是**dllexport**。 DLL 介面中的所有宣告都必須都指定**dllimport**或是**dllexport**屬性。 不過，定義必須只指定**dllexport**屬性。 例如，下列函式定義會產生編譯器錯誤：
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

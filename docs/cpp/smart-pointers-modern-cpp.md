@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d78b37971cda2ca1bcf468a794abf69555efc3e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eb4af8f218a6040080cdf429b061205269cbc4dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462247"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703582"
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 在現代 c + + 程式設計，包括標準程式庫*智慧型指標*、 用來確保程式是免費的記憶體和資源流失，和是安全的例外狀況。  
@@ -69,8 +69,9 @@ ms.locfileid: "39462247"
 ## <a name="kinds-of-smart-pointers"></a>智慧型指標種類  
  下列章節中將摘要說明可在 Windows 程式設計環境中使用的各種不同智慧型指標，並描述其使用時機。  
   
- **C + + 標準程式庫智慧型指標**  
- 使用這些智慧型指標做為封裝純舊 C++ 物件 (POCO) 指標的首要選擇。  
+### <a name="c-standard-library-smart-pointers"></a>C++ 標準程式庫智慧型指標
+
+使用這些智慧型指標做為封裝純舊 C++ 物件 (POCO) 指標的首要選擇。  
   
 -   `unique_ptr`   
      只允許一個基礎指標的擁有者。 用做 POCO 的預設選項，除非您確信自己需要 `shared_ptr`。 可以移至新擁有者，但不可複製或共用。 替換已被取代的 `auto_ptr`。 與 `boost::scoped_ptr` 比較。 `unique_ptr` 既小又有效率的;大小是一個指標，並支援快速插入和擷取的 c + + 標準程式庫集合右值參考。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 unique_ptr 執行個體](../cpp/how-to-create-and-use-unique-ptr-instances.md)並[unique_ptr 類別](../standard-library/unique-ptr-class.md)。  
@@ -81,8 +82,9 @@ ms.locfileid: "39462247"
 -   `weak_ptr`   
     與 `shared_ptr` 一起使用的特殊案例智慧型指標。 `weak_ptr` 可以讓您存取由一個或多個 `shared_ptr` 執行個體擁有的物件，但是不會參與參考計數。 當您想要觀察物件，但不需要物件保持運作時，即可使用。 在某些要中斷 `shared_ptr` 執行個體之間循環參考的情況下為必要項。 標頭檔：`<memory>`。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 weak_ptr 執行個體](../cpp/how-to-create-and-use-weak-ptr-instances.md)並[weak_ptr 類別](../standard-library/weak-ptr-class.md)。  
   
- **智慧型指標的 COM 物件 （傳統 Windows 程式設計）**  
- 當您使用 COM 物件時，請將介面指標包裝在適當的智慧型指標類型中。 Active Template Library (ATL) 會定義數個各種用途的智慧型指標。 您也可以使用 `_com_ptr_t` 智慧型指標類型，編譯器會在從 .tlb 檔案建立包裝函式類別時使用這個類型。 當您不想要包含 ATL 標頭檔時，這是最佳選擇。  
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM 物件 (傳統 Windows 程式設計) 的智慧型指標
+
+當您使用 COM 物件時，請將介面指標包裝在適當的智慧型指標類型中。 Active Template Library (ATL) 會定義數個各種用途的智慧型指標。 您也可以使用 `_com_ptr_t` 智慧型指標類型，編譯器會在從 .tlb 檔案建立包裝函式類別時使用這個類型。 當您不想要包含 ATL 標頭檔時，這是最佳選擇。  
   
  [CComPtr 類別](../atl/reference/ccomptr-class.md)  
  除非無法使用 ATL，否則請使用這種方式。 使用 `AddRef` 和 `Release` 方法執行參考計數。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立和使用 CComPtr 和 CComQIPtr 執行個體](../cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。  
@@ -99,8 +101,9 @@ ms.locfileid: "39462247"
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)  
  在功能上與 `CComQIPtr` 類似，但是不相依於 ATL 標頭。  
   
- **POCO 物件的 ATL 智慧型指標**  
- 除了 COM 物件的智慧型指標之外，ATL 還定義了純舊 C++ 物件的智慧標籤指標 (及智慧型指標集合)。 在傳統 Windows 程式設計中，這些型別是有用的替代項目至 c + + 標準程式庫集合時，尤其是當程式碼可攜性就不需要或不想混合的 c + + 標準程式庫和 ATL 的程式設計模型時  
+### <a name="atl-smart-pointers-for-poco-objects"></a>POCO 物件的 ATL 智慧型指標
+
+除了 COM 物件的智慧型指標之外，ATL 還定義了純舊 C++ 物件的智慧標籤指標 (及智慧型指標集合)。 在傳統 Windows 程式設計中，這些型別是有用的替代項目至 c + + 標準程式庫集合時，尤其是當程式碼可攜性就不需要或不想混合的 c + + 標準程式庫和 ATL 的程式設計模型時  
   
  [CAutoPtr 類別](../atl/reference/cautoptr-class.md)  
  藉由傳送複本上的擁有權以強制唯一擁有權的智慧型指標。 類似已被取代的 `std::auto_ptr` 類別。  

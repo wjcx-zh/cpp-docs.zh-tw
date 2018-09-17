@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 62d78fb7c2b9cbaee62baf59636303f90177cf7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953897"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699591"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 類別
 
@@ -50,11 +50,11 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*_Locname*  
- 地區設定名稱。
+*_Locname*<br/>
+地區設定名稱。
 
-*_Refs*  
- 初始參考計數。
+*_Refs*<br/>
+初始參考計數。
 
 ## <a name="remarks"></a>備註
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac06722b675af5e8ac8d4136cc2938ac772befc9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c519d4f6d903453ce9fea6965a8f954243bab97
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848579"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703829"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 類別
 實作功能區的不可點選式文字標籤。  
@@ -80,11 +80,11 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszText*  
- 要在標籤中顯示的文字。  
+*lpszText*<br/>
+[in]要在標籤中顯示的文字。  
   
- [in]*bIsMultiLine*  
- 若要指定標籤為多行標籤;，則為 TRUE否則為 FALSE。  
+*bIsMultiLine*<br/>
+[in]若要指定標籤為多行標籤;，則為 TRUE否則為 FALSE。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  判斷目前的功能區標籤元素的協助工具資料。  
@@ -96,11 +96,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParent*  
- 表示目前的功能區標籤的父視窗。  
+*pParent*<br/>
+[in]表示目前的功能區標籤的父視窗。  
   
- [out]*資料*  
- 型別的物件`CAccessibilityData`，並填入目前的功能區標籤的協助工具資料。  
+*data*<br/>
+[out]型別的物件`CAccessibilityData`，並填入目前的功能區標籤的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
  則為 TRUE*資料*參數，則已成功填入目前的功能區標籤的協助工具資料; 否則為 FALSE。  

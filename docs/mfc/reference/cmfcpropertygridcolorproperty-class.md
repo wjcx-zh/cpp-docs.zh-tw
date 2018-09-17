@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849161"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705831"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 類別
 `CMFCPropertyGridColorProperty` 類別支援開啟色彩選取對話方塊的屬性清單控制項項目。  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strName*  
- 屬性的名稱。  
+*strName*<br/>
+[in]屬性的名稱。  
   
- [in]*色彩*  
- 屬性的色彩值。  
+*色彩*<br/>
+[in]屬性的色彩值。  
   
- [in]*pPalette*  
- 指標的色彩調色盤。 預設值是 NULL。  
+*pPalette*<br/>
+[in]指標的色彩調色盤。 預設值是 NULL。  
   
- [in]*lpszDescr*  
- 屬性描述。 預設值是 NULL。  
+*lpszDescr*<br/>
+[in]屬性描述。 預設值是 NULL。  
   
- [in]*dwData*  
- 應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
+*dwData*<br/>
+[in]應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  可讓*自動*色彩選取對話方塊上的按鈕。 (標準自動按鈕會標示**自動**。)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszLabel*  
- [自動] 按鈕的標籤文字。  
+*lpszLabel*<br/>
+[in][自動] 按鈕的標籤文字。  
   
- [in]*colorAutomatic*  
- 自動 （預設） 色彩的 RGB 色彩值。  
+*colorAutomatic*<br/>
+[in]自動 （預設） 色彩的 RGB 色彩值。  
   
- [in]*bEnable*  
- 若要啟用自動的按鈕，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]若要啟用自動的按鈕，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszLabel*  
- [其他] 按鈕的標籤文字。  
+*lpszLabel*<br/>
+[in][其他] 按鈕的標籤文字。  
   
- [in]*bAltColorDlg*  
- True 會顯示`CMFCColorDialog`此對話方塊。如果為 false，則顯示標準色彩選取對話方塊。 預設值為 TRUE。  
+*bAltColorDlg*<br/>
+[in]True 會顯示`CMFCColorDialog`此對話方塊。如果為 false，則顯示標準色彩選取對話方塊。 預設值為 TRUE。  
   
- [in]*bEnable*  
- 若要顯示 [其他] 按鈕;，則為 TRUE否則為 FALSE。  預設值為 TRUE。  
+*bEnable*<br/>
+[in]若要顯示 [其他] 按鈕;，則為 TRUE否則為 FALSE。  預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- RGB 色彩值。  
+*色彩*<br/>
+[in]RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nColumnsNumber*  
- 色彩屬性格線中的資料行的慣用的數目。  
+*nColumnsNumber*<br/>
+[in]色彩屬性格線中的資料行的慣用的數目。  
   
 ### <a name="remarks"></a>備註  
  這個方法會設定的值`m_nColumnsNumber`受保護的資料成員。  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*varValue*  
- 一個值。  
+*varValue*<br/>
+[in]一個值。  
   
 ### <a name="remarks"></a>備註  
  使用[cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)方法來重設已編輯的屬性的原始值。  

@@ -1,5 +1,5 @@
 ---
-title: 浮點支援對舊版程式碼 （Visual c + +） |Microsoft 文件
+title: 浮點支援較舊的程式碼 （Visual c + +） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7cbf955fbf795d06d9cd2448d0736dc435f3b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7285325bf1a934afcef337da318d019ec6fe375c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706806"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>舊版程式碼的浮點支援 (Visual C++)
-MMX 和浮點的堆疊暫存器 (MM0-MM7/ST0-ST7) 會保留在內容切換。  對這些暫存器沒有明確呼叫慣例。  核心模式程式碼中嚴格禁止您使用這些暫存器。  
-  
-## <a name="see-also"></a>另請參閱  
- [呼叫慣例](../build/calling-convention.md)
+
+MMX 和浮點堆疊暫存器 (MM0-MM7/ST0-ST7) 會保留在內容切換。  沒有任何明確的呼叫慣例，這些暫存器。  這些暫存器使用嚴格禁止在核心模式程式碼。
+
+## <a name="see-also"></a>另請參閱
+
+[呼叫慣例](../build/calling-convention.md)

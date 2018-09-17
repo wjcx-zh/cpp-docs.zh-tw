@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083bb7258197bbc11118eaf3d3c3e3423c473310
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fd5661a2b6aa257c91babcc3d17b1babb0b4d2c2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678320"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707157"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ unsigned char __vmx_vmclear(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `VmcsPhysicalAddress`|包含要清除 VMCS 的實體位址的 64 位元記憶體位置指標。|  
+|*VmcsPhysicalAddress*|[in]包含要清除 VMCS 的實體位址的 64 位元記憶體位置指標。|  
   
 ## <a name="return-value"></a>傳回值  
   

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894586"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706936"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (指定 MIDL 命令列引數的選項)
 
@@ -38,7 +38,7 @@ ms.locfileid: "43894586"
 
 ## <a name="arguments"></a>引數
 
-*file*  
+*file*<br/>
 包含的檔案名稱[MIDL 命令列選項](/windows/desktop/Midl/general-midl-command-line-syntax)。
 
 ## <a name="remarks"></a>備註
@@ -61,9 +61,9 @@ ms.locfileid: "43894586"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)   
-[連結器選項](../../build/reference/linker-options.md)   
-[/IDLOUT （命名 MIDL 輸出檔）](../../build/reference/idlout-name-midl-output-files.md)   
-[/IGNOREIDL （不要將屬性處理至 MIDL）](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/TLBOUT （名稱。TLB 檔案）](../../build/reference/tlbout-name-dot-tlb-file.md)   
-[建置屬性化程式](../../windows/building-an-attributed-program.md)
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)<br/>
+[/IDLOUT （命名 MIDL 輸出檔）](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL （不要將屬性處理至 MIDL）](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/TLBOUT （名稱。TLB 檔案）](../../build/reference/tlbout-name-dot-tlb-file.md)
+[建置屬性化的程式](../../windows/building-an-attributed-program.md)

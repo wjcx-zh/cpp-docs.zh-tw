@@ -1,7 +1,7 @@
 ---
 title: const_seg |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3081837cc4516750f8c2c0d75cfc37eef208f9d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: db73d212a11fe096c07a7e14d033c21e6b61311c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540967"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705207"
 ---
 # <a name="constseg"></a>const_seg
 指定的區段位置[const](../cpp/const-cpp.md)變數會儲存在.obj 檔案。  
@@ -34,33 +34,35 @@ ms.locfileid: "42540967"
 #pragma const_seg ( [ [ { push | pop}, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>備註  
- 
+### <a name="parameters"></a>參數
+
+**push**<br/>
+（選擇性）將記錄放入內部編譯器堆疊上。 A**推播**可以有*識別項*並*區段名稱*。  
+  
+**pop**<br/>
+（選擇性）從內部編譯器堆疊頂端移除記錄。  
+  
+*identifier*<br/>
+（選擇性）當搭配**推播**，將名稱指派給內部編譯器堆疊上的記錄。 當搭配**pop**，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
+  
+使用*識別碼*可讓一推出多筆記錄**pop**命令。  
+  
+「*區段名稱*"<br/>  
+（選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中區段名稱。  
+  
+「*區段類別*"<br/>
+（選擇性）包含與 c + + 2.0 以前版本的相容性。 會忽略此項。  
+  
+## <a name="remarks"></a>備註
+
 意義*區段*並*一節*是本主題中的可互換的。  
   
 OBJ 檔案可以使用檢視[dumpbin](../build/reference/dumpbin-command-line.md)應用程式。 .obj 檔案中 `const` 變數的預設區段是 .rdata。 某些 `const` 變數 (例如純量) 會自動內嵌於程式碼資料流中。 內嵌的程式碼不會出現在 .rdata 中。  
   
 定義必須在 `const_seg` 中進行動態初始化的物件時，會產生未定義的行為。  
   
-未包含參數的 `#pragma const_seg` 會將區段重設為 .rdata。  
-  
-*推播*（選擇性）  
-將記錄放置到內部編譯器堆疊上。 A*推播*可以有*識別項*並*區段名稱*。  
-  
-*pop* （選擇性）  
-會從內部編譯器堆疊頂端移除記錄。  
-  
-*識別項*（選擇性）  
-當搭配*推播*，將名稱指派給內部編譯器堆疊上的記錄。 當搭配*pop*，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
-  
-使用*識別碼*可讓一推出多筆記錄*pop*命令。  
-  
-「*區段名稱*」 （選擇性）  
-區段的名稱。 當搭配*pop*，時會推出堆疊並*區段名稱*會變成作用中區段名稱。  
-  
-「*區段類別*」 （選擇性）  
-包含這個項目可提供與 C++ 2.0 以前版本的相容性。 會忽略此項。  
-  
+未包含參數的 `#pragma const_seg` 會將區段重設為 .rdata。
+
 ## <a name="example"></a>範例  
   
 ```cpp  

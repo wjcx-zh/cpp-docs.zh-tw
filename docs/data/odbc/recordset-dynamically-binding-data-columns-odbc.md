@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0be424b07fd9d13eec63c56172b2b0195b83d9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e64a8a795181115652ab25750c1bac8712fabbad
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338807"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703116"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>資料錄集：動態地繫結資料行 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -91,19 +91,16 @@ ms.locfileid: "39338807"
      其中一個方法是將迴圈加入至您主要資料錄集的`DoFieldExchange`循環新的資料行，每個資料行清單中，呼叫適當的 RFX 函式的程式清單的函式。 在每個 RFX 呼叫時，請從 [資料行名稱] 清單和對應成員的結果值清單中的儲存體位置傳遞的資料行名稱。  
   
 ###  <a name="_core_lists_of_columns"></a> 資料行清單  
- 下表中，會顯示您要使用的四個清單。  
-  
- **目前資料表的資料行 (在圖中的清單 1)** 目前在資料來源上的資料表中的資料行清單。 這份清單可能會比對目前繫結資料錄集中的資料行清單。  
-  
- **繫結資料錄集的資料行 (在圖中的清單 2)**  
- 資料錄集繫結的資料行清單。 這些資料行已經有 RFX 陳述式，您`DoFieldExchange`函式。  
-  
- **資料行來-動態繫結 (在圖中的清單 3)**  
- 在資料表中，但不是在資料錄集的資料行清單。 這些是您想要動態繫結的資料行。  
-  
- **動態資料行值 (在圖中的清單 4)**  
- 包含值的儲存體的清單擷取自您動態繫結資料行。 此清單的項目對應於資料行來-動態繫結，一對一。  
-  
+
+下表中，會顯示您要使用的四個清單。  
+
+|||
+|-|-|  
+**目前資料表的資料行**| （圖中的清單 1）在資料來源的資料表中的目前資料行清單。 這份清單可能會比對目前繫結資料錄集中的資料行清單。|
+|**繫結資料錄集資料行**| （圖中的清單 2）資料錄集繫結的資料行清單。 這些資料行已經有 RFX 陳述式，您`DoFieldExchange`函式。|
+|**資料行來-動態繫結**| （圖中的清單 3）在資料表中，但不是在資料錄集的資料行清單。 這些是您想要動態繫結的資料行。|
+|**動態資料行值**| （圖中的清單 4）包含值的儲存體的清單擷取自您動態繫結資料行。 此清單的項目對應於資料行來-動態繫結，一對一。|
+
 ###  <a name="_core_building_your_lists"></a> 建置您的清單  
  了解一般策略，您可以開啟詳細資料。 本主題的其餘部分中的程序會示範如何建置清單所示[列出的資料行](#_core_lists_of_columns)。 程序會引導您：  
   

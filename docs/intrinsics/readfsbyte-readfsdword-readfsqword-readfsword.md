@@ -1,5 +1,5 @@
 ---
-title: __readfsbyte、 __readfsdword、 __readfsqword、 __readfsword |Microsoft 文件
+title: __readfsbyte、 __readfsdword、 __readfsqword、 __readfsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333192"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705680"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 讀取位置，相對於 FS 區段的開頭位移所指定的記憶體。  
+ 讀取記憶體從相對於 FS 區段開頭的位移所指定的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Offset`  
- 從開頭的位移`FS`來讀取。  
+*位移*<br/>
+[in]從開頭的位移`FS`來讀取。  
   
 ## <a name="return-value"></a>傳回值  
- 記憶體的位元組、 word、 doubleword 或 quadword （如呼叫的函式名稱所指示） 的內容在位置`FS:[Offset]`。  
+ 記憶體中的位元組、 word、 doubleword 或 （如下所呼叫的函式的名稱） 的 quadword 內容位於位置`FS:[Offset]`。  
   
 ## <a name="requirements"></a>需求  
   
@@ -74,9 +74,9 @@ unsigned __int64 __readfsqword(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 這些常式會只提供內建函式。  
+ 這些常式都僅有內建函式。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__writefsbyte、 \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   

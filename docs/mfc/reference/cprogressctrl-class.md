@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690148"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705909"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 提供 Windows 通用進度列控制項的功能。  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*clrBar*|A [COLORREF](/windows/desktop/gdi/colorref)值，指定新的進度指示器列的色彩。 指定 CLR_DEFAULT 造成進度列，使用其預設色彩。|  
+|*clrBar*|[in]A [COLORREF](/windows/desktop/gdi/colorref)值，指定新的進度指示器列的色彩。 指定 CLR_DEFAULT 造成進度列，使用其預設色彩。|  
   
 ### <a name="return-value"></a>傳回值  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*fMarqueeMode*|若為 true，則開啟跑馬燈模式，或若要關閉跑馬燈模式，則為 FALSE。|  
-|[in]*n 間隔*|以毫秒為單位的跑馬燈動畫的更新之間的時間。|  
+|*fMarqueeMode*|[in]若為 true，則開啟跑馬燈模式，或若要關閉跑馬燈模式，則為 FALSE。|  
+|*n 間隔*|[in]以毫秒為單位的跑馬燈動畫的更新之間的時間。|  
   
 ### <a name="return-value"></a>傳回值  
  此方法一律會傳回 TRUE。  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iState*|要設定的進度列狀態。 使用下列其中一個值：<br /><br /> -PBST_NORMAL-進行中<br />-PBST_ERROR-錯誤<br />-PBST_PAUSED-暫停|  
+|*iState*|[in]若要設定進度列狀態。 使用下列其中一個值：<br /><br /> -PBST_NORMAL-進行中<br />-PBST_ERROR-錯誤<br />-PBST_PAUSED-暫停|  
   
 ### <a name="return-value"></a>傳回值  
  目前進度列控制項先前的狀態。  

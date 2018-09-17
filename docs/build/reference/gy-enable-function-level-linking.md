@@ -1,5 +1,5 @@
 ---
-title: -Gy （啟用函式階層連結） |Microsoft 文件
+title: -Gy （啟用函式階層連結） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,48 +23,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e939a12cf23a9d9e476b676a5b068889414497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09faa1a1d2b6743b7fce31af32ba4fe1572b592e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704999"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (啟用函式階層連結)
-允許編譯器以封裝函式 (COMDAT) 的形式來封裝個別函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-/Gy[-]  
-```  
-  
-## <a name="remarks"></a>備註  
- 連結器需要函式個別的封裝為 Comdat 來排除或排序的 DLL 或.exe 檔案中的個別函式。  
-  
- 您可以使用連結器選項[/editandcontinue （最佳化）](../../build/reference/opt-optimizations.md) .exe 檔案中排除未參考的包裝函式。  
-  
- 您可以使用連結器選項[/ORDER （Put 函式順序）](../../build/reference/order-put-functions-in-order.md) .exe 檔案中指定的順序包含封裝函式。  
-  
- 如果具現化呼叫，必定封裝內嵌函式 (發生，例如，如果內嵌已關閉，或您採取函式位址)。 此外，在類別宣告中定義的 c + + 成員函式會自動封裝;其他函數則不會，並選取此選項需要將它們編譯為包裝函式。  
-  
+
+允許編譯器以封裝函式 (COMDAT) 的形式來封裝個別函式。
+
+## <a name="syntax"></a>語法
+
+```
+/Gy[-]
+```
+
+## <a name="remarks"></a>備註
+
+連結器會需要為來排除或排序 DLL 或.exe 檔案中的個別函式的 Comdat 函式個別封裝。
+
+您可以使用連結器選項[/OPT （最佳化）](../../build/reference/opt-optimizations.md)的.exe 檔案中排除未參考的封裝函式。
+
+您可以使用連結器選項[/ORDER （Put 函式的順序）](../../build/reference/order-put-functions-in-order.md)来包含的封裝函式中指定的順序中的.exe 檔案。
+
+如果它們具現化呼叫，一律會封裝內嵌函式 (發生，例如，如果內嵌已關閉或需要為函式位址)。 此外，自動封裝在類別宣告中定義的 c + + 成員函式;其他函式則不會，並選取此選項需要將它們編譯為封裝函式。
+
 > [!NOTE]
->  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續 」，會自動設定 **/Gy**選項。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  按一下 [C/C++]  資料夾。  
-  
-3.  按一下**程式碼產生**屬性頁。  
-  
-4.  修改**函式層級啟用連結**屬性。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
-  
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>。  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器選項](../../build/reference/compiler-options.md)   
- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+>  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續，會自動設定 **/Gy**選項。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 按一下 [C/C++]  資料夾。
+
+1. 按一下 **程式碼產生**屬性頁。
+
+1. 修改**啟用函式層級連結**屬性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
+
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>。
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)

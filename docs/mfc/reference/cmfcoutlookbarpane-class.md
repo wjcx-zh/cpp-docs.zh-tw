@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f62346d12c978a466de14357352f78345e99f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc03777a490613cb3da111e4a3b678311f09f678
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691104"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706533"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 類別
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。  
@@ -184,32 +184,32 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiImage*  
- 指定點陣圖的資源識別碼。  
+*uiImage*<br/>
+[in]指定點陣圖的資源識別碼。  
   
- [in]*lpszLabel*  
- 指定按鈕的文字。  
+*lpszLabel*<br/>
+[in]指定按鈕的文字。  
   
- [in]*iIdCommand*  
- 指定按鈕控制項的識別碼。  
+*iIdCommand*<br/>
+[in]指定按鈕控制項的識別碼。  
   
- [in]*iInsertAt*  
- 要插入的按鈕的 outlook 功能區的頁面上指定的以零為起始的索引。  
+*iInsertAt*<br/>
+[in]要插入的按鈕的 outlook 功能區的頁面上指定的以零為起始的索引。  
   
- [in]*uiLabel*  
- 字串資源 id。  
+*uiLabel*<br/>
+[in]字串資源 id。  
   
- [in]*szBmpFileName*  
- 指定要載入之磁碟映像檔案名稱。  
+*szBmpFileName*<br/>
+[in]指定要載入之磁碟映像檔案名稱。  
   
- [in]*szLabel*  
- 指定按鈕的文字。  
+*szLabel*<br/>
+[in]指定按鈕的文字。  
   
- [in]*hBmp*  
- 按鈕的點陣圖控制代碼。  
+*hBmp*<br/>
+[in]按鈕的點陣圖控制代碼。  
   
- [in]*hIcon*  
- 按鈕的圖示控制代碼。  
+*hIcon*<br/>
+[in]按鈕的圖示控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 新增按鈕，則為 TRUE。否則為 FALSE。  
@@ -254,17 +254,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParentWnd*  
- 指定 Outlook 功能區窗格控制項的父視窗。 必須不是 NULL。  
+*pParentWnd*<br/>
+[in]指定 Outlook 功能區窗格控制項的父視窗。 必須不是 NULL。  
   
- [in]*cheaderctrl:: Create*  
- 視窗樣式。  如需視窗樣式的清單，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*cheaderctrl:: Create*<br/>
+[in]視窗樣式。  如需視窗樣式的清單，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*uiID*  
- 控制項 id。 必須是唯一以啟用儲存控制項的狀態。  
+*uiID*<br/>
+[in]控制項 id。 必須是唯一以啟用儲存控制項的狀態。  
   
- [in]*dwControlBarStyle*  
- 指定特殊從 Outlook 功能區中卸離時，定義行為的 Outlook 功能區窗格控制項的樣式。  
+*dwControlBarStyle*<br/>
+[in]指定特殊從 Outlook 功能區中卸離時，定義行為的 Outlook 功能區窗格控制項的樣式。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -284,11 +284,11 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pButton*  
- 指標，使用者按下的工具列按鈕。  
+*pButton*<br/>
+[in]指標，使用者按下的工具列按鈕。  
   
- [in]*pPopup*  
- 在捷徑功能表的指標。  
+*pPopup*<br/>
+[in]在捷徑功能表的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果應該顯示的捷徑功能表，為 true，則傳回否則為 FALSE。  
@@ -309,8 +309,8 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bPageScroll*  
- 如果為 TRUE，讓頁面捲動模式。 如果為 FALSE，停用頁面捲動模式。  
+*bPageScroll*<br/>
+[in]如果為 TRUE，讓頁面捲動模式。 如果為 FALSE，停用頁面捲動模式。  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  傳回一般 (亦即，未選取) 的 Outlook 功能區窗格的文字色彩。  
@@ -365,8 +365,8 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIdCommand*  
- 指定要移除按鈕的命令識別碼。  
+*iIdCommand*<br/>
+[in]指定要移除按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功移除 [] 按鈕;，則為 TRUE。如果指定的命令識別碼無效，則為 FALSE。  
@@ -379,8 +379,8 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- 指定新的背景色彩。  
+*色彩*<br/>
+[in]指定新的背景色彩。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式來設定 Outlook 功能區的目前背景色彩。 只有在沒有任何背景影像，會使用背景色彩。  
@@ -393,8 +393,8 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiImageID*  
- 指定映像資源識別碼。  
+*uiImageID*<br/>
+[in]指定映像資源識別碼。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法來設定 Outlook 列的背景影像。 受管理的背景影像清單的內嵌[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件。  
@@ -426,11 +426,11 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*clrRegText*  
- 指定新的非選取的文字色彩。  
+*clrRegText*<br/>
+[in]指定新的非選取的文字色彩。  
   
- [in]*clrSelText*  
- 指定選定文字的新色彩。  
+*clrSelText*<br/>
+[in]指定選定文字的新色彩。  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  設定 Outlook 功能區窗格的透明色彩。  

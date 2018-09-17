@@ -20,14 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952933f72ae5d3f65aa646964ec6e04e758a27c6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 244fea4b776f0713b6fb2281563e39d27a910a2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704238"
 ---
 # <a name="f-set-stack-size"></a>/F (設定堆疊大小)
+
 設定程式的堆疊大小 （位元組）。
 
 ## <a name="syntax"></a>語法
@@ -47,9 +48,9 @@ ms.locfileid: "44103771"
 
 您也可以藉由設定堆疊大小：
 
--   使用 **/堆疊**連結器選項。 如需詳細資訊，請參閱 < [/堆疊](../../build/reference/stack.md)。
+- 使用 **/堆疊**連結器選項。 如需詳細資訊，請參閱 < [/堆疊](../../build/reference/stack.md)。
 
--   使用 EDITBIN 的.exe 檔案。 如需詳細資訊，請參閱 < [EDITBIN 參考](../../build/reference/editbin-reference.md)。
+- 使用 EDITBIN 的.exe 檔案。 如需詳細資訊，請參閱 < [EDITBIN 參考](../../build/reference/editbin-reference.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -65,5 +66,5 @@ ms.locfileid: "44103771"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)   
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

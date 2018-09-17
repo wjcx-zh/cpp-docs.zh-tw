@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849785"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700905"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 類別
 顯示快顯功能表和報告使用者功能表選取的按鈕。  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMsg*  
- 指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
+*pMsg*<br/>
+[in]指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果訊息已轉譯，而且不應該分派;如果訊息未被翻譯，因此應該分派，0。  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bCalcOnly*  
- 布林值參數，指出是否此方法會調整大小的按鈕。  
+*bCalcOnly*<br/>
+[in]布林值參數，指出是否此方法會調整大小的按鈕。  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定按鈕的新大小。  

@@ -1,5 +1,5 @@
 ---
-title: 多個目標 |Microsoft 文件
+title: 多個目標 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1e072b5c831cecabaf1fd63034a0746b3e3419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66849bdbe28ac2bd965714de56f962df98ced133
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368183"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703660"
 ---
 # <a name="multiple-targets"></a>多重目標
-NMAKE 評估成單一的相依性的多個目標為不同的描述區塊中所指定的每個。  
-  
- 例如，這個...  
-  
-```Output  
-bounce.exe leap.exe : jump.obj  
-   echo Building...  
-```  
-  
- ..來評估如下：  
-  
-```Output  
-bounce.exe : jump.obj  
-   echo Building...  
-leap.exe : jump.obj  
-   echo Building...  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [目標](../build/targets.md)
+
+如同每個個別描述區塊中指定，NMAKE 就會評估成單一的相依性的多個目標。
+
+例如，這個...
+
+```Output
+bounce.exe leap.exe : jump.obj
+   echo Building...
+```
+
+...已評估為此：
+
+```Output
+bounce.exe : jump.obj
+   echo Building...
+leap.exe : jump.obj
+   echo Building...
+```
+
+## <a name="see-also"></a>另請參閱
+
+[目標](../build/targets.md)

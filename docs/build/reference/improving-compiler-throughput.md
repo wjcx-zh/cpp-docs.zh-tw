@@ -1,5 +1,5 @@
 ---
-title: 改善編譯器處理量 |Microsoft 文件
+title: 改善編譯器輸送量 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c78c0640e415f4a531149a47430833ba94770719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 883b4056226a3595f2255dcadfb4cc056e1150ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704130"
 ---
 # <a name="improving-compiler-throughput"></a>改善編譯器處理量
-使用先行編譯標頭檔更快建置您的專案。 這很重要，如果您使用 ATL、 MFC 或 Windows SDK 標頭檔。  
-  
- 請參閱[/Yc](../../build/reference/yc-create-precompiled-header-file.md)和[/Yu](../../build/reference/yu-use-precompiled-header-file.md)。  
-  
- 如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [最佳化程式碼](../../build/reference/optimizing-your-code.md)
+
+若要更快速地建置您的專案中使用先行編譯標頭檔。 這很重要，如果您使用 ATL、 MFC 或 Windows SDK 標頭檔。
+
+請參閱[/Yc](../../build/reference/yc-create-precompiled-header-file.md)並[/Yu](../../build/reference/yu-use-precompiled-header-file.md)。
+
+如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[最佳化程式碼](../../build/reference/optimizing-your-code.md)

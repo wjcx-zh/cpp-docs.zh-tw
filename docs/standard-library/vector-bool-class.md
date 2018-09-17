@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962776"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702906"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-*右邊*  
- 值會指派給位元的項目參考。
+*右邊*<br/>
+值會指派給位元的項目參考。
 
-*val*  
- 要指派給位元的布林值。
+*val*<br/>
+要指派給位元的布林值。
 
 #### <a name="example"></a>範例
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 要與交換的項目*右*項目。
+*左邊*<br/>
+要與交換的項目*右*項目。
 
-*右邊*  
- 要與交換的項目*左*項目。
+*右邊*<br/>
+要與交換的項目*左*項目。
 
 ### <a name="remarks"></a>備註
 

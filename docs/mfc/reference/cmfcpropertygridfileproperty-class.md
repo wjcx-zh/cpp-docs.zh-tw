@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700828"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty 類別
 `CMFCPropertyGridFileProperty`類別支援開啟檔案選取對話方塊的屬性清單控制項項目。  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strName*  
- 屬性名稱。  
+*strName*<br/>
+[in]屬性名稱。  
   
- [in]*bOpenFileDialog*  
- True 會開放**開啟檔案**此對話方塊。若要開啟，則為 FALSE**儲存檔案** 對話方塊。  
+*bOpenFileDialog*<br/>
+[in]True 會開放**開啟檔案**此對話方塊。若要開啟，則為 FALSE**儲存檔案** 對話方塊。  
   
- [in]*strFileName*  
- 初始檔案名稱。  
+*strFileName*<br/>
+[in]初始檔案名稱。  
   
- [in]*lpszDefExt*  
- 一或多個副檔名的字串。 預設值是 NULL。  
+*lpszDefExt*<br/>
+[in]一或多個檔案名稱副檔名的字串。 預設值是 NULL。  
   
- [in]*dwFlags*  
- 對話方塊旗標。 預設值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的位元組合 (OR)。  
+*dwFlags*<br/>
+[in]對話方塊旗標。 預設值是 OFN_HIDEREADONLY 和 OFN_OVERWRITEPROMPT 的位元組合 (OR)。  
   
- [in]*lpszFilter*  
- 一或多個檔案篩選條件的字串。 預設值是 NULL。  
+*lpszFilter*<br/>
+[in]一或多個檔案篩選器的字串。 預設值是 NULL。  
   
- [in]*lpszDescr*  
- 屬性項目說明。 預設值是 NULL。  
+*lpszDescr*<br/>
+[in]屬性項目描述。 預設值是 NULL。  
   
- [in]*dwData*  
- 屬性項目相關聯的應用程式專屬資料。 例如，32 位元整數或其他資料的指標。 預設值為 0。  
+*dwData*<br/>
+[in]屬性項目相關聯的應用程式專屬資料。 例如，32 位元整數或其他資料的指標。 預設值為 0。  
   
 ### <a name="return-value"></a>傳回值  
   

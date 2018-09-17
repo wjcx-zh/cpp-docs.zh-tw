@@ -1,5 +1,5 @@
 ---
-title: EDITBIN 命令列 |Microsoft 文件
+title: EDITBIN 命令列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371173"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700590"
 ---
 # <a name="editbin-command-line"></a>EDITBIN 命令列
-若要執行 EDITBIN，使用下列語法：  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- 指定的物件或映像，以變更一個或多個檔案與一或多個選項變更的檔案。  
-  
- 當您輸入命令`editbin`沒有命令列的輸入，EDITBIN 會顯示摘要其選項的使用方式陳述式。  
-  
-## <a name="see-also"></a>另請參閱  
- [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
- [EDITBIN 參考](../../build/reference/editbin-reference.md)
+
+若要執行 EDITBIN，使用下列語法：
+
+```
+EDITBIN [options] files...
+```
+
+指定物件或要變更的映像的一或多個檔案和一或多個變更檔案的選項。
+
+當您輸入命令`editbin`而無需任何其他命令列的輸入，EDITBIN 顯示摘要說明其選項的使用方式陳述式。
+
+## <a name="see-also"></a>另請參閱
+
+[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)<br/>
+[EDITBIN 參考](../../build/reference/editbin-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: -MANIFESTFILE （名稱資訊清單檔案） |Microsoft 文件
+title: -MANIFESTFILE （命名資訊清單檔） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95337afc790436187c547bba108da2161b0738b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d3869b0cb656e7bde9a12fb028f84d1d4d09965
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373344"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706975"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (為資訊清單檔案命名)
-```  
-/MANIFESTFILE:filename  
-```  
-  
-## <a name="remarks"></a>備註  
- /MANIFESTFILE 可讓您變更資訊清單檔案的預設名稱。  資訊清單檔案的預設名稱是為.manifest 的檔案名稱。  
-  
- /MANIFESTFILE 會有任何作用，如果您沒有也連結[/資訊清單](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  展開**組態屬性**節點。  
-  
-3.  展開**連結器**節點。  
-  
-4.  選取**資訊清單檔案**屬性頁。  
-  
-5.  修改**資訊清單檔案**屬性。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
-  
-1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>。  
-  
-## <a name="see-also"></a>另請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+```
+/MANIFESTFILE:filename
+```
+
+## <a name="remarks"></a>備註
+
+/MANIFESTFILE 可讓您變更資訊清單檔案的預設名稱。  資訊清單檔案的預設名稱是副檔名為.manifest 的檔案名稱。
+
+/MANIFESTFILE 會有任何作用，如果您沒有也連結[/manifest](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 展開 [組態屬性] 節點。
+
+1. 依序展開**連結器**節點。
+
+1. 選取 **資訊清單檔案**屬性頁。
+
+1. 修改**資訊清單檔案**屬性。
+
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
+
+1. 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>。
+
+## <a name="see-also"></a>另請參閱
+
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764871"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701710"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 提供 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，以及管理視窗的成員。  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nState*|指定是否要顯示或隱藏功能表。 *NState*參數可以是下列值：<br /><br /> -如果它隱藏的但是沒有任何作用，如果顯示，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但是沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02-) 會隱藏功能表。|  
+|*nState*|[in]指定是否要顯示或隱藏功能表。 *NState*參數可以是下列值：<br /><br /> -如果它隱藏的但是沒有任何作用，如果顯示，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但是沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02-) 會隱藏功能表。|  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法已成功變更功能表狀態，則為 TRUE。否則為 FALSE。  
@@ -1005,7 +1005,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nStyle*|指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示任何時間，而且依預設未取得焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設為隱藏功能表。 如果功能表隱藏的請按 ALT 鍵以顯示功能表，並給予焦點。 如果會顯示功能表，請按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果功能表隱藏的請按 F10 鍵，可顯示功能表，並給予焦點。 如果會顯示功能表，請按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵以將其隱藏，則會顯示功能表。|  
+|*nStyle*|[in]指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示任何時間，而且依預設未取得焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設為隱藏功能表。 如果功能表隱藏的請按 ALT 鍵以顯示功能表，並給予焦點。 如果會顯示功能表，請按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果功能表隱藏的請按 F10 鍵，可顯示功能表，並給予焦點。 如果會顯示功能表，請按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵以將其隱藏，則會顯示功能表。|  
   
 ### <a name="remarks"></a>備註  
  如果值*nStyle*參數不是有效的這個方法會判斷提示中偵錯模式而且引發[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在發行模式中。 發生其他執行階段錯誤，這個方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  

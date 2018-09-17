@@ -8,12 +8,12 @@ f1_keywords:
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-ms.openlocfilehash: 6e228eb538a0d281dff8066390b0c6dd2e7ea4d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0056d54844e9396d517fd44c3649f1bc9605829b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700553"
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt; 列舉
 
@@ -25,23 +25,37 @@ ms.locfileid: "33843843"
 
 為 [future_error](../standard-library/future-error-class.md) 類別所回報的所有錯誤提供符號名稱。
 
-class future_errc { broken_promise, future_already_retrieved, promise_already_satisfied, no_state };
+```cpp
+class future_errc {
+   broken_promise,
+   future_already_retrieved,
+   promise_already_satisfied,
+   no_state
+   };
+```
 
 ## <a name="future_status"></a>  future_status 列舉
 
 為計時的 wait 函式可傳回的原因提供符號名稱。
 
 ```cpp
-enum future_status{    ready,
+enum future_status{
+    ready,
     timeout,
- deferred};
+    deferred
+};
 ```
 
 ## <a name="launch"></a>  launch 列舉
 
 代表一種位元遮罩類型，描述範本函式 [async](../standard-library/future-functions.md#async) 可能的模式。
 
-class launch{ async, deferred };
+```cpp
+class launch{
+   async,
+   deferred
+   };
+```
 
 ## <a name="see-also"></a>另請參閱
 

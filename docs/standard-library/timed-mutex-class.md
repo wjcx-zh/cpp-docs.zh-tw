@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ed4f12e127c6ceef212ffefc512e764dd53fb19
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962656"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706546"
 ---
 # <a name="timedmutex-class"></a>timed_mutex 類別
 
@@ -129,8 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*  
- [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
+*Rel_time*<br/>
+[chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
 
@@ -153,8 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*  
- 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
+*Abs_time*<br/>
+這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eb3ba676da2de9790fc992b9f788963f8dcdbc1
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: bdc9d89dbc0e77a8002cc34e5d010ee49d761da4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894638"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706689"
 ---
 # <a name="running-nmake"></a>執行 NMAKE
 
@@ -41,11 +41,11 @@ ms.locfileid: "43894638"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-[NMAKE 選項](../build/nmake-options.md)  
+[NMAKE 選項](../build/nmake-options.md)
 
-[Tools.ini 和 NMAKE](../build/tools-ini-and-nmake.md)  
+[Tools.ini 和 NMAKE](../build/tools-ini-and-nmake.md)
 
-[NMAKE 的結束代碼](../build/exit-codes-from-nmake.md)  
+[NMAKE 的結束代碼](../build/exit-codes-from-nmake.md)
 
 ## <a name="see-also"></a>另請參閱
 

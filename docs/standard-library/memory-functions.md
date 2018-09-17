@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b740613666c7e4e1b5cc2c1b14c5cbf04b0fe6ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101660"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702867"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -310,7 +310,8 @@ struct default_delete {
 *ptr*<br/>
 要刪除的物件指標。
 
-其他陣列中要刪除的項目類型。
+*其他*<br/>
+要刪除的陣列項目類型。
 
 ### <a name="remarks"></a>備註
 

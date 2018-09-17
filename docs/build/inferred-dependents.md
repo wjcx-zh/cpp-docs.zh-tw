@@ -1,5 +1,5 @@
 ---
-title: 推斷相依 |Microsoft 文件
+title: 推斷相依項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86ed1a8fe6c97ae11af50f59cb639ef6fd7c1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 631c5631b60f0e05dd1f1541facc767f35944d3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367894"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701476"
 ---
 # <a name="inferred-dependents"></a>推斷相依
-推斷的相依衍生自推斷規則，並評估之前明確的相依性。 如果推斷的相依過時相對於它的目標，NMAKE 就會叫用命令區塊，相依性。 如果推斷的相依不存在，或對自身的相依性而言已過期，NMAKE 就會先更新推斷的相依。 如需推斷相依的詳細資訊，請參閱[推斷規則](../build/inference-rules.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [相依性](../build/dependents.md)
+
+推斷的相依衍生自推斷規則，而且明確的相依項目之前評估。 如果推斷的相依為相對於其目標過期時，NMAKE 就會叫用命令區塊，相依性。 如果推斷的相依不存在，或對自身的相依性而言已過期，NMAKE 首先會更新推斷的相依。 如需推斷的相依性的詳細資訊，請參閱[推斷規則](../build/inference-rules.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[相依性](../build/dependents.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCWindowsManagerDialog 類別 |Microsoft 文件
+title: CMFCWindowsManagerDialog 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 71c85d3061da7cf4c87abef9549542900e962f64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042093"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707001"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog 類別
 `CMFCWindowsManagerDialog`物件可讓使用者管理 MDI 應用程式中的 MDI 子視窗。  
@@ -45,10 +45,10 @@ class CMFCWindowsManagerDialog : public CDialog
 ## <a name="remarks"></a>備註  
  `CMFCWindowsManagerDialog`包含應用程式中目前開啟的 MDI 子視窗的清單。 使用者可以使用此對話方塊，手動控制 MDI 子視窗的狀態。  
   
- `CMFCWindowsManagerDialog` 內嵌於[CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)。 `CMFCWindowsManagerDialog`不是您應該手動建立的類別。 請改為呼叫此函式[CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)，並將建立並顯示`CMFCWindowsManagerDialog`物件。  
+ `CMFCWindowsManagerDialog` 內嵌於[CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)。 `CMFCWindowsManagerDialog`不是您應該以手動方式建立的類別。 相反地，呼叫此函式[CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)，它就會建立及顯示`CMFCWindowsManagerDialog`物件。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建構`CMFCWindowsManagerDialog`藉由呼叫物件`CMDIFrameWndEx::ShowWindowsDialog`。 此程式碼片段是部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何建構`CMFCWindowsManagerDialog`藉由呼叫物件`CMDIFrameWndEx::ShowWindowsDialog`。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]  
   
@@ -76,14 +76,14 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMDIFrame*  
- 父系或擁有者視窗的指標。  
+*pMDIFrame*<br/>
+[in]父系或擁有者視窗的指標。  
   
- [in]*bHelpButton*  
- 布林值參數，指定是否要顯示架構**協助** 按鈕。  
+*bHelpButton*<br/>
+[in]布林值參數，指定是否要顯示架構**協助** 按鈕。  
   
 ### <a name="remarks"></a>備註  
- 如需視覺管理員的詳細資訊，請參閱[視覺化管理員](../../mfc/visualization-manager.md)。  
+ 如需有關視覺管理員的詳細資訊，請參閱[視覺化管理員](../../mfc/visualization-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

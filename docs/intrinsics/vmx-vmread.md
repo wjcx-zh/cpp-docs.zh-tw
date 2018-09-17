@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f03ea1ea39b9202d4bb7b850bb81354a4a47f1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c0c8b5a22cfef8ebde74fbe6d1f6920a969e7bc6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677376"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706377"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft 專屬**  
@@ -42,8 +42,8 @@ unsigned char __vmx_vmread(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `Field`|要讀取的 VMCS 欄位。|  
-|[輸入] `FieldValue`|指標的位置來儲存值讀取所指定的 VMCS 欄位`Field`參數。|  
+|*欄位*|[in]要讀取的 VMCS 欄位。|  
+|*FieldValue*|[in]指標的位置來儲存值讀取所指定的 VMCS 欄位`Field`參數。|  
   
 ## <a name="return-value"></a>傳回值  
   

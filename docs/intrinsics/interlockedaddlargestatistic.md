@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAddLargeStatistic |Microsoft 文件
+title: _InterlockedAddLargeStatistic |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602cfb415c17c9e57d9fc1e932777cd1929e5f40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee14f187545e09bbdca81f760b85e771fba3936d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703907"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 執行連鎖的相加的第一個運算元中是 64 位元值。  
+ 執行連鎖的相加的第一個運算元的 64 位元值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,11 +40,11 @@ long _InterlockedAddLargeStatistic(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Addend`  
- 若要加入作業的第一個運算元指標。 指向的值取代相加的結果。  
+*加數*<br/>
+[in、 out]新增作業的第一個運算元指標。 指向的值會由相加的結果取代。  
   
- [輸入] `Value`  
- 第二個運算元中。若要加入的第一個運算元的值。  
+*值*<br/>
+[in]第二個運算元中;要新增的第一個運算元的值。  
   
 ## <a name="return-value"></a>傳回值  
  第二個運算元的值。  
@@ -58,11 +58,11 @@ long _InterlockedAddLargeStatistic(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 此內建物件不是不可部分完成因為它會執行為兩個不同的鎖定的指示。 不可部分完成的 64 位元讀取另一個執行緒上執行期間發生這個內建函式可能會導致不一致所讀取的值。  
+ 此內建函式不是不可部分完成因為它會實作為兩個不同的鎖定的指示。 不可部分完成的 64 位元讀取另一個執行緒上執行期間發生這個內建函式可能會導致不一致所讀取的值。  
   
- 此函式的行為為讀寫屏障。 如需詳細資訊，請參閱[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
+ 此函式的行為為讀寫屏障。 如需詳細資訊，請參閱 < [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

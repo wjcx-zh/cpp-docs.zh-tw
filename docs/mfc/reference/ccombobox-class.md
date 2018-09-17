@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205283"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702087"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 提供 Windows 下拉式方塊的功能。  
@@ -206,8 +206,8 @@ class CComboBox : public CWnd
   
 |樣式|當清單方塊是可見的|靜態或編輯控制項|  
 |-----------|-------------------------------|-----------------------------|  
-|簡單|永遠|Edit|  
-|Drop-down|當已下拉|Edit|  
+|簡單|永遠|編輯|  
+|Drop-down|當已下拉|編輯|  
 |下拉式清單|當已下拉|Static|  
   
  您可以建立`CComboBox`從對話方塊範本，或直接在您的程式碼中的物件。 在這兩種情況下，第一次呼叫建構函式`CComboBox`來建構`CComboBox`物件，然後呼叫[建立](#create)成員函式來建立控制項，並將其附加至`CComboBox`物件。  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*lpszText*|接收的提示橫幅文字的緩衝區指標。|  
-|[in]*cchText*|緩衝區的大小， *lpszText*參數所指向。|  
+|*lpszText*|[out]接收的提示橫幅文字的緩衝區指標。|  
+|*cchText*|[in]緩衝區的大小， *lpszText*參數所指向。|  
   
 ### <a name="return-value"></a>傳回值  
  在第一個多載中， [CString](../../atl-mfc-shared/using-cstring.md)物件，其中包含提示橫幅文字，如果有的話，否則`CString`長度為零的物件。  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*lpszText*|以 null 終止的緩衝區，其中包含提示文字的指標。|  
+|*lpszText*|[in]以 null 終止的緩衝區，其中包含提示文字的指標。|  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iMinVisible*|指定可見的項目的數目下限。|  
+|*iMinVisible*|[in]指定可見的項目的數目下限。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  

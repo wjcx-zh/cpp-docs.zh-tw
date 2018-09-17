@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315024"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703556"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 運算子
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要測試不相等項目之兩個 valarray 的第一個。
+*left*<br/>
+要測試不相等項目之兩個 valarray 的第一個。
 
-*right*  
- 要測試不相等項目之兩個 valarray 的第二個。
+*right*<br/>
+要測試不相等項目之兩個 valarray 的第二個。
 
 ### <a name="return-value"></a>傳回值
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 當作被除數的值或是 valarray，除以另一個值或 valarray。
+*left*<br/>
+當作被除數的值或是 valarray，除以另一個值或 valarray。
 
-*right*  
- 當作除數的值或 valarray，除另一個值或 valarray。
+*right*<br/>
+當作除數的值或 valarray，除另一個值或 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
+*left*<br/>
+要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-*right*  
- 要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
+*right*<br/>
+要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
+*left*<br/>
+要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
-*right*  
- 要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
+*right*<br/>
+要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
+*left*<br/>
+要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*  
- 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
+*right*<br/>
+要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
+*left*<br/>
+要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*  
- 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
+*right*<br/>
+要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要移位的值，或是其項目要移位的 valarray。
+*left*<br/>
+要移位的值，或是其項目要移位的 valarray。
 
-*right*  
- 指出右移數量的值，或是其項目指出項目右移數量的 valarray。
+*right*<br/>
+指出右移數量的值，或是其項目指出項目右移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
+*left*<br/>
+要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*  
- 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
+*right*<br/>
+要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
+*left*<br/>
+要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*  
- 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
+*right*<br/>
+要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要移位的值，或是其項目要移位的 valarray。
+*left*<br/>
+要移位的值，或是其項目要移位的 valarray。
 
-*right*  
- 指出左移數量的值，或是其項目指出項目左移數量的 valarray。
+*right*<br/>
+指出左移數量的值，或是其項目指出項目左移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要相乘其項目之兩個 valarray 的第一個，或是 valarray 每個項目要乘以的指定值。
+*left*<br/>
+要相乘其項目之兩個 valarray 的第一個，或是 valarray 每個項目要乘以的指定值。
 
-*right*  
- 要相乘其項目之兩個 valarray 的第二個，或是 valarray 每個項目要乘以的指定值。
+*right*<br/>
+要相乘其項目之兩個 valarray 的第二個，或是 valarray 每個項目要乘以的指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要相加其項目之兩個 valarray 的第一個，或是要加上 valarray 每個項目的指定值。
+*left*<br/>
+要相加其項目之兩個 valarray 的第一個，或是要加上 valarray 每個項目的指定值。
 
-*right*  
- 要相加其項目之兩個 valarray 的第二個，或是要加上 valarray 每個項目的指定值。
+*right*<br/>
+要相加其項目之兩個 valarray 的第二個，或是要加上 valarray 每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 當作被減數的值或 valarray，要減去其他值或 valarray 以得出差。
+*left*<br/>
+當作被減數的值或 valarray，要減去其他值或 valarray 以得出差。
 
-*right*  
- 當作減數的值或 valarray，要與其他值或 valarray 相減以得出差。
+*right*<br/>
+當作減數的值或 valarray，要與其他值或 valarray 相減以得出差。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 當作被除數的值或是 valarray，除以另一個值或 valarray 以得出商。
+*left*<br/>
+當作被除數的值或是 valarray，除以另一個值或 valarray 以得出商。
 
-*right*  
- 當作除數的值或 valarray，除另一個值或 valarray 以得出商。
+*right*<br/>
+當作除數的值或 valarray，除另一個值或 valarray 以得出商。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要測試相等項目之兩個 valarray 的第一個。
+*left*<br/>
+要測試相等項目之兩個 valarray 的第一個。
 
-*right*  
- 要測試相等項目之兩個 valarray 的第二個。
+*right*<br/>
+要測試相等項目之兩個 valarray 的第二個。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
+*left*<br/>
+要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-*right*  
- 要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
+*right*<br/>
+要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
+*left*<br/>
+要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-*right*  
- 要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
+*right*<br/>
+要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>參數
 
-*left*  
- 要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
+*left*<br/>
+要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
-*right*  
- 要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
+*right*<br/>
+要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
 

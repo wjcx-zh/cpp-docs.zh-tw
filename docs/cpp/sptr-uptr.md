@@ -18,15 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e059b8144518f3d0cacdde5d7f438c04b7933a2
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dc6625e9f9137bc6adbe10270ef7192d2f1672f0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467866"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700852"
 ---
 # <a name="sptr-uptr"></a>__sptr、__uptr
-**Microsoft 專屬**  
+**Microsoft 專屬**
+
  使用 **__sptr**或是 **__uptr**修飾詞指定編譯器如何將 32 位元指標轉換為 64 位元指標在 32 位元指標宣告。 例如，將 32 位元指標指派給 64 位元指標變數，或在 64 位元平台取值時，就會轉換 32 位元指標。  
   
  有關 64 位元平台支援的 Microsoft 文件有時會將 32 位元指標的最高有效位元稱為正負號位元。 根據預設，編譯器會使用正負號擴充項目將 32 位元指標轉換為 64 位元指標。 也就是說，64 位元指標的最低有效 32 位元設為 32 位元指標的值，而最高有效 32 位元則設為 32 位元指標的正負號位元的值。 如果正負號位元是 0，此類轉換會產生正確的結果，如果正負號位元是 1，則不會產生正確結果。 例如，32 位元位址 0x7FFFFFFF 會產生相等的 64 位元位址 0x000000007FFFFFFF，但會將 32 位元位址 0x80000000 錯誤地變更為 0xFFFFFFFF80000000。  

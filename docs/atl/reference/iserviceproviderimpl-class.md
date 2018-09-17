@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca7a39149969b7e85685930d6e901bf81db99d64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d14d00e57cbbb04c77f0b84c584ebb1c4f4260e5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703198"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 類別
 
@@ -83,14 +83,14 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>參數
 
-[IN]*guidService*  
-為服務的識別項 (SID) 的指標。
+*guidService*<br/>
+[in]為服務的識別項 (SID) 的指標。
 
-[IN]*riid*  
-呼叫端是來存取的介面識別項。
+*riid*<br/>
+[in]呼叫端是來存取的介面識別項。
 
-[OUT]*ppvObj*  
-受要求介面的間接指標。
+*ppvObj*<br/>
+[out]受要求介面的間接指標。
 
 ### <a name="return-value"></a>傳回值
 

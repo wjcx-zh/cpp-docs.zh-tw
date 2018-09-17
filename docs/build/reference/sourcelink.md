@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242859"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706663"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK （包括 Sourcelink PDB 檔案）
 
@@ -33,7 +33,7 @@ ms.locfileid: "40242859"
 
 ## <a name="arguments"></a>引數
 
-*filename*  
+*filename*<br/>
 指定的 JSON 格式組態檔，其中包含 url 的本機檔案路徑的簡單對應，可以擷取原始程式檔偵錯工具的顯示。 此檔案的格式資訊，請參閱[來源連結 JSON 結構描述](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)。
 
 ## <a name="remarks"></a>備註
@@ -48,11 +48,11 @@ SourceLink 是語言和原始檔控制無從驗證的系統，可提供來源偵
 
 1. 在 **其他選項**方塊中，加入 **/SOURCELINK:**_檔名_，然後選擇  **確定**或**套用**以儲存變更。
 
-### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
+
 - 此選項並沒有對等的程式設計。
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)  
-[連結器選項](../../build/reference/linker-options.md)  
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

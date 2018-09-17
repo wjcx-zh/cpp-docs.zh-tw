@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75c5e4df92cf23198d7225dfe337a5c82ecf5596
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b765f6393b9bd2d632539abb5fb7cd17c29297b6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701749"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 
@@ -45,9 +45,9 @@ class SafeInt;
 
 |參數|描述|
 |---------------|-----------------|
-|[in]*rhs*|輸入的參數，表示數個獨立的函式中的運算子右邊的值。|
-|[in]*我*|輸入的參數，表示數個獨立的函式中的運算子右邊的值。|
-|[in]*位元*|輸入的參數，表示數個獨立的函式中的運算子右邊的值。|
+|*rhs*|[in]輸入的參數，表示數個獨立的函式中的運算子右邊的值。|
+|*i*|[in]輸入的參數，表示數個獨立的函式中的運算子右邊的值。|
+|*位元*|[in]輸入的參數，表示數個獨立的函式中的運算子右邊的值。|
 
 ## <a name="members"></a>成員
 

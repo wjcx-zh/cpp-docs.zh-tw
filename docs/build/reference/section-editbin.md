@@ -1,5 +1,5 @@
 ---
-title: -SECTION (EDITBIN) |Microsoft 文件
+title: -SECTION (EDITBIN) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,54 +19,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29e258b4fb661cfa06e057704bba983ad924f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f91d467681d5a4d5bf4eaa5f042ef44b87810b3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378349"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701974"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
-```  
-/SECTION:name[=newname][,attributes][alignment]  
-```  
-  
-## <a name="remarks"></a>備註  
- 此選項會變更的屬性區段中，覆寫區段的目的檔被編譯或連結時所設定的屬性。  
-  
- 冒號後面 ( **:** )，指定*名稱*的區段。 若要變更的區段名稱，請遵循*名稱*以等號 （=） 和*newname*區段。  
-  
- 若要設定或變更區段的`attributes`，指定逗號 (**，**) 後面接著一個或多個屬性的字元。 要變換正負號的屬性，在之前它一個內含驚嘆號 （！） 的字元。 下列字元指定記憶體的屬性：  
-  
-|屬性|設定|  
-|---------------|-------------|  
-|c|程式碼|  
-|d|可捨棄|  
-|e|可執行檔|  
-|i|初始化的資料|  
-|K|虛擬記憶體快取|  
-|m|移除連結|  
-|o|連結資訊|  
-|p|分頁的虛擬記憶體|  
-|r|讀取|  
-|秒|共用|  
-|u|未初始化的資料|  
-|w|寫入|  
-  
- 控制*對齊*，指定的字元**A**後面接著一個，如下所示設定對齊的大小 （位元組），下列字元：  
-  
-|字元|對齊大小 （位元組）|  
-|---------------|-----------------------------|  
-|1|1|  
-|2|2|  
-|4|4|  
-|8|8|  
-|p|16|  
-|t|32|  
-|秒|64|  
-|x|沒有對齊|  
-  
- 指定`attributes`和*對齊*元字元，如同使用任何空格的字串。 這些字元不區分大小寫。  
-  
-## <a name="see-also"></a>另請參閱  
- [EDITBIN 選項](../../build/reference/editbin-options.md)
+
+```
+/SECTION:name[=newname][,attributes][alignment]
+```
+
+## <a name="remarks"></a>備註
+
+此選項會變更區段，覆寫區段的物件檔案編譯或連結時所設定的屬性的屬性。
+
+冒號之後 ( **:** )，指定*名稱*的區段。 若要變更的區段名稱，請遵循*名稱*以等號 （=） 和*newname*區段。
+
+若要設定或變更的區段`attributes`，指定逗號 (**，**) 後面接著一或多個屬性的字元。 要變換正負號的屬性，在屬性和一個驚嘆號 （！） 字元前面。 下列字元指定記憶體的屬性：
+
+|屬性|設定|
+|---------------|-------------|
+|c|程式碼|
+|d|可捨棄|
+|e|可執行檔|
+|i|初始化的資料|
+|K|快取的虛擬記憶體|
+|m|移除連結|
+|o|連結資訊|
+|p|分頁的虛擬記憶體|
+|r|讀取|
+|秒|共用|
+|u|未初始化的資料|
+|w|寫入|
+
+控制*對齊*，指定的字元**A**後面接著一個，如下所示設定對齊的大小 （位元組），下列字元：
+
+|字元|對齊大小 （位元組）|
+|---------------|-----------------------------|
+|1|1|
+|2|2|
+|4|4|
+|8|8|
+|p|16|
+|t|32|
+|秒|64|
+|x|沒有對齊|
+
+指定`attributes`並*對齊*字元視為任何泛空白字元的字串。 這些字元不區分大小寫。
+
+## <a name="see-also"></a>另請參閱
+
+[EDITBIN 選項](../../build/reference/editbin-options.md)

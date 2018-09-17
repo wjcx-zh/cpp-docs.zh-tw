@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761939"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700646"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL Active Server Page 元件精靈
 
 使用 ATL Active Server Page 元件精靈的這個頁面可指定選擇性設定處理資訊和與您的 ASP 元件的狀態。
 
-**選擇性方法**  
-新增選擇性的 ASP 方法中， **OnStartPage**並**OnEndPage**，您的物件。 若要設定任何 Active Server Pages 的內建物件，就必須選取此選項。 根據預設，會選取它。
+- **選擇性方法**  
 
-- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)稱為第一次指令碼會嘗試存取的物件。 **OnEndPage**物件完成時，會呼叫處理指令碼。
+   新增選擇性的 ASP 方法中， **OnStartPage**並**OnEndPage**，您的物件。 若要設定任何 Active Server Pages 的內建物件，就必須選取此選項。 根據預設，會選取它。
 
-**內建物件**  
-您必須選取**OnStartPage/OnEndPage**選項可用來設定任何 ASP 內建物件。
+- **OnStartPage/OnEndPage**
+
+   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)稱為第一次指令碼會嘗試存取的物件。 **OnEndPage**物件完成時，會呼叫處理指令碼。
+
+- **內建物件**  
+
+   您必須選取**OnStartPage/OnEndPage**選項可用來設定任何 ASP 內建物件。
 
 |選項|描述|
 |------------|-----------------|

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718259"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 具有 Microsoft Outlook [ **巡覽窗格** ] 視覺外觀的索引標籤控制項。  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndCtrl*  
- 指標，要加入的控制項。  
+*pWndCtrl*<br/>
+[in]指標，要加入的控制項。  
   
- [in]*lpszName*  
- 指定索引標籤的名稱。  
+*lpszName*<br/>
+[in]指定索引標籤的名稱。  
   
- [in]*bDetachable*  
- 如果為 TRUE，頁面將會建立為中斷連結。  
+*bDetachable*<br/>
+[in]如果為 TRUE，頁面將會建立為中斷連結。  
   
- [in]*nImageID*  
- 在內部的映像清單中，要在新的索引標籤中顯示之影像的影像索引。  
+*nImageID*<br/>
+[in]在內部的映像清單中，要在新的索引標籤中顯示之影像的影像索引。  
   
- [in]*dwControlBarStyle*  
- 指定已包裝的停駐窗格 AFX_ CBRS_ * 樣式。  
+*dwControlBarStyle*<br/>
+[in]指定已包裝的停駐窗格 AFX_ CBRS_ * 樣式。  
   
 ### <a name="remarks"></a>備註  
  使用此函式將控制項加入為新的 outlook 功能區頁面。  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 指定的初始大小和位置，像素為單位。  
+*rect*<br/>
+[in]指定的初始大小和位置，像素為單位。  
   
- [in]*pParentWnd*  
- 父視窗的點。 必須不是 NULL。  
+*pParentWnd*<br/>
+[in]父視窗的點。 必須不是 NULL。  
   
- [in]*nID*  
- 控制項 id。  
+*nID*<br/>
+[in]控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果已順利建立控制項，非零值。否則為 0。  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 指定是否應該啟用或停用動畫。  
+*bEnable*<br/>
+[in]指定是否應該啟用或停用動畫。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式可啟用和停用動畫。 當使用者開啟索引標籤頁時，頁面的標題投影片 增加或相應減少如果已啟用動畫。 如果動畫會停用，頁面就會變成作用中立即。  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 決定是否顯示捲軸按鈕。  
+*bEnable*<br/>
+[in]決定是否顯示捲軸按鈕。  
   
- [in]*bIsUp*  
- 決定是否要顯示的最上層的捲軸。  
+*bIsUp*<br/>
+[in]決定是否要顯示的最上層的捲軸。  
   
- [in]*bIsDown*  
- 決定是否要顯示底部的捲軸。  
+*bIsDown*<br/>
+[in]決定是否要顯示底部的捲軸。  
   
 ### <a name="remarks"></a>備註  
  啟用捲動按鈕的顯示方式。 這個方法是由架構呼叫，若要還原的捲軸按鈕的作用中的索引標籤變更時。  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iTab*  
- 開啟索引標籤的以零為起始的索引。  
+*iTab*<br/>
+[in]開啟索引標籤的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，開啟指定的索引標籤，非零值。否則為 0。  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nBorderSize*  
- 像素為單位指定新的框線大小。  
+*nBorderSize*<br/>
+[in]像素為單位指定新的框線大小。  
   
 ### <a name="remarks"></a>備註  
  設定新的框線大小並重新計算的 outlook 視窗版面配置。  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiAlign*  
- 指定文字的對齊方式。  
+*uiAlign*<br/>
+[in]指定文字的對齊方式。  
   
- [in]*bRedraw*  
- 如果為 TRUE，outlook 視窗將會重新繪製。  
+*bRedraw*<br/>
+[in]如果為 TRUE，outlook 視窗將會重新繪製。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此函式來變更頁面按鈕的文字對齊方式。  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- 指定要載入的映像的資源識別碼。  
+*uiID*<br/>
+[in]指定要載入的映像的資源識別碼。  
   
- [in]*cx*  
- 在映像清單中，像素為單位指定影像的寬度。  
+*cx*<br/>
+[in]在映像清單中，像素為單位指定影像的寬度。  
   
- [in]*clrTransp*  
- 指定透明色彩的 RGB 值。  
+*clrTransp*<br/>
+[in]指定透明色彩的 RGB 值。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 TRUE否則會傳回 FALSE。  

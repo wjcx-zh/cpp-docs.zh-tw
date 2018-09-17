@@ -1,5 +1,5 @@
 ---
-title: -Zp （結構成員對齊） |Microsoft 文件
+title: -Zp （結構成員對齊） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1666da40f748d18c762eae19595692addcdbf78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0268f5c5d5d34d8fa244dc6260889bea6b1e837a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380858"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715906"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (結構成員對齊)
 
-控制結構的成員會封裝為記憶體的方式，並指定在模組中的所有結構相同的封裝。
+控制結構的成員會封裝到記憶體的方式，並指定在模組中的所有結構相同的封裝。
 
 ## <a name="syntax"></a>語法
 
@@ -38,9 +38,9 @@ ms.locfileid: "32380858"
 
 ## <a name="remarks"></a>備註
 
-當您指定 **/Zp**_n_選項，每個結構成員之後第一個儲存在成員類型的大小或*n*-位元組界限 (其中*n*是 1、 2、 4、 8 或 16)，兩者中較小。
+當您指定 **/Zp**_n_選項，每個結構成員之後的第一個會儲存在成員類型的大小或*n*-位元組界限 (其中*n*是 1、 2、 4、 8 或 16)，取其較小。
 
-下表說明可用的封裝的值：
+下表說明可用的封裝值：
 
 |/Zp 引數|作用|
 |-|-|
@@ -52,10 +52,10 @@ ms.locfileid: "32380858"
 
 除非您有特定的對齊需求，您不應該使用此選項。
 
-> [!WARNING]  
-> Windows SDK 中的 c + + 標頭假設 **/Zp8**封裝。 如果，可能會發生損毀的記憶體 **/Zp**使用 Windows SDK 的標頭時，變更設定。
+> [!WARNING]
+> Windows SDK 中的 c + + 標頭假設 **/zp8**封裝。 如果，可能會發生損毀的記憶體 **/Zp**使用 Windows SDK 標頭時，變更設定。
 
-您也可以使用[套件](../../preprocessor/pack.md)來控制結構封裝。 如需對齊的詳細資訊，請參閱：
+您也可以使用[組件](../../preprocessor/pack.md)來控制結構的封裝。 如需對齊的詳細資訊，請參閱：
 
 - [align](../../cpp/align-cpp.md)
 
@@ -67,17 +67,17 @@ ms.locfileid: "32380858"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-1. 選取**C/c + +** > **程式碼產生**屬性頁。
+1. 選取  **C/c + +** > **程式碼產生**屬性頁。
 
 1. 修改**結構成員對齊**屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。
 
 ## <a name="see-also"></a>另請參閱
 
-- [編譯器選項](../../build/reference/compiler-options.md)   
+- [編譯器選項](../../build/reference/compiler-options.md)
 - [設定編譯器選項](../../build/reference/setting-compiler-options.md)

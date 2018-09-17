@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848515"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709783"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 類別
 `CMFCRibbonButtonsGroup`類別可讓您將一組功能區按鈕組織成群組。 群組中的所有按鈕彼此水平直接相鄰，而且以框線框住。  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pButton*  
- 按鈕以新增指標。  
+*pButton*<br/>
+[in]按鈕以新增指標。  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  將按鈕的清單加入至群組。  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lstButtons*  
- 您想要新增的按鈕指標的清單。  
+*lstButtons*<br/>
+[in]您想要新增的按鈕指標的清單。  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  建構 `CMFCRibbonButtonsGroup` 物件。  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pButton*  
- 指定將新增至新建立的按鈕`CMFCRibbonButtonsGroup`物件。  
+*pButton*<br/>
+[in]指定將新增至新建立的按鈕`CMFCRibbonButtonsGroup`物件。  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*我*  
- 按鈕，以傳回以零為起始的索引。  
+*i*<br/>
+[in]按鈕，以傳回以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  指標，位於指定索引處的按鈕。 如果指定的索引超出範圍，則為 NULL。  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 功能區群組的裝置內容指標。  
+*pDC*<br/>
+[in]功能區群組的裝置內容指標。  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容指標`CMFCRibbonButtonsGroup`物件。  
+*pDC*<br/>
+[in]裝置內容指標`CMFCRibbonButtonsGroup`物件。  
   
- [in]*rectImage*  
- 在其中繪製影像的矩形。  
+*rectImage*<br/>
+[in]在其中繪製影像的矩形。  
   
- [in]*pButton*  
- 要繪製影像按鈕。  
+*pButton*<br/>
+[in]要繪製影像按鈕。  
   
- [in]*nImageIndex*  
- （在三個映像陣列以進行一般、 反白顯示或停用按鈕） 的按鈕上繪製影像的索引。  
+*nImageIndex*<br/>
+[in]（在三個映像陣列以進行一般、 反白顯示或停用按鈕） 的按鈕上繪製影像的索引。  
   
 ### <a name="remarks"></a>備註  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pImages*  
- 一般的映像。  
+*pImages*<br/>
+[in]一般的映像。  
   
- [in]*pHotImages*  
- 最忙碌的映像。  
+*pHotImages*<br/>
+[in]最忙碌的映像。  
   
- [in]*pDisabledImages*  
- 已停用的映像。  
+*pDisabledImages*<br/>
+[in]已停用的映像。  
   
 ### <a name="remarks"></a>備註  
  呼叫`SetImages`按鈕新增至群組之前。 映像數目必須大於或等於要新增至群組的按鈕數目。  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pCategory*  
- 父類別，來設定指標 （在功能區控制項的索引標籤式的群組稱為類別）。  
+*pCategory*<br/>
+[in]父類別，來設定指標 （在功能區控制項的索引標籤式的群組稱為類別）。  
   
 ### <a name="remarks"></a>備註  
   

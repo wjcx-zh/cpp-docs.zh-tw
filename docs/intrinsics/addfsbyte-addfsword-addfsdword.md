@@ -1,5 +1,5 @@
 ---
-title: __addfsbyte、 __addfsword、 __addfsdword |Microsoft 文件
+title: __addfsbyte、 __addfsword、 __addfsdword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330242"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714216"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte、__addfsword、__addfsdword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 新增值到相對於開頭的位移所指定的記憶體位置`FS`區段。  
+ 將值新增至相對於開頭的位移所指定的記憶體位置`FS`區段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,11 +53,11 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Offset`  
- 從開頭的位移`FS`。  
+*位移*<br/>
+[in]從開頭的位移`FS`。  
   
- [輸入] `Data`  
- 要加入之記憶體位置的值。  
+*Data*<br/>
+[in]要加入之記憶體位置的值。  
   
 ## <a name="requirements"></a>需求  
   
@@ -68,9 +68,9 @@ void __addfsdword(
 |`__addfsdword`|x86|  
   
 ## <a name="remarks"></a>備註  
- 這些常式會只提供內建函式。  
+ 這些常式都僅有內建函式。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__incfsbyte、 \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   

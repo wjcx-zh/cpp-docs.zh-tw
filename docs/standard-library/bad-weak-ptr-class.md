@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cb6e00341e5e40d04be1d447f03e43818e53291
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fcd0309321ce841a739d24d037a24f81a9551f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839828"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725483"
 ---
 # <a name="badweakptr-class"></a>bad_weak_ptr 類別
 
@@ -32,11 +32,11 @@ ms.locfileid: "33839828"
 
 ```cpp
 class bad_weak_ptr : public std::exception
- {
+{
 public:
     bad_weak_ptr();
     const char *what() throw();
- };
+};
 ```
 
 ## <a name="remarks"></a>備註

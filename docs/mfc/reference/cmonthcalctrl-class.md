@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14fbe2bf5f74a2d6d2f6ae3f394c2e6e74a4e76f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8405c41f5235ecba580bbf453a1129a38b4d8421
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206186"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719092"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 封裝月曆控制項的功能。  
@@ -297,7 +297,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pmcGridInfo*|指標[MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo)接收目前月份的行事曆控制項的相關資訊的結構。 呼叫端負責配置和初始化此結構。|  
+|*pmcGridInfo*|[out]指標[MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo)接收目前月份的行事曆控制項的相關資訊的結構。 呼叫端負責配置和初始化此結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -420,11 +420,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
   
 |值|在星期幾|  
 |-----------|---------------------|  
-|0|星期一|  
+|0|週一|  
 |1|星期二|  
-|2|星期三|  
+|2|週三|  
 |3|星期四|  
-|4|星期五|  
+|4|週五|  
 |5|星期六|  
 |6|星期日|  
   
@@ -733,7 +733,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*cxyBorder*|框線寬度，單位為像素。|  
+|*cxyBorder*|[in]框線寬度，單位為像素。|  
   
 ### <a name="remarks"></a>備註  
  如果這個方法成功，若要設定框線寬度*cxyBorder*參數。 否則，框線寬度會重設為目前所指定的預設值[佈景主題](/windows/desktop/Controls/visual-styles-overview)，零，如果不會使用佈景主題。  
@@ -773,7 +773,7 @@ BOOL SetCalID(CALID calid);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*calid*|其中一個[行事曆識別碼](/windows/desktop/Intl/calendar-identifiers)常數。|  
+|*calid*|[in]其中一個[行事曆識別碼](/windows/desktop/Intl/calendar-identifiers)常數。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -851,7 +851,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwNewView*|指定每月、 年、 十年或世紀檢視下列值之一。<br /><br /> MCMV_MONTH： 每月檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年來檢視<br /><br /> MCMV_CENTURY： 世紀檢視|  
+|*dwNewView*|[in]指定每月、 年、 十年或世紀檢視下列值之一。<br /><br /> MCMV_MONTH： 每月檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年來檢視<br /><br /> MCMV_CENTURY： 世紀檢視|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1137,7 +1137,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆所需的數目的矩形。|  
+|*lpRect*|[in]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆所需的數目的矩形。|  
   
 ### <a name="return-value"></a>傳回值  
  指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)所定義的結構，定義的矩形，其大小小於或等於矩形*lpRect*參數。  

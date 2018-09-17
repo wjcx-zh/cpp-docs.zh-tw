@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209724"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713852"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
 ## <a name="syntax"></a>語法  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  由於乘法類運算子所執行的轉換不提供溢位或反向溢位條件，因此，如果乘法類運算的結果無法以轉換後的運算元類型表示，則資訊可能會遺失。  
   
-## <a name="microsoft-specific"></a>Microsoft 特定的  
- 在 Microsoft C++ 中，模數運算式的結果一律與第一個運算元的正負號相同。  
-  
-**結束 Microsoft 專屬**  
- 如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，-11 的計算的值 / 3 為-3.666666666。 該整數除法的結果是-3。  
+**Microsoft 專屬**
+
+在 Microsoft C++ 中，模數運算式的結果一律與第一個運算元的正負號相同。
+
+**結束 Microsoft 專屬**
+
+如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，-11 的計算的值 / 3 為-3.666666666。 該整數除法的結果是-3。  
   
  乘法類運算子之間的關聯性根據身分識別 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
   

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ad07e225afbfe0c69b5115cfb566ef722eb81e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538248"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722655"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft 專屬**  
@@ -39,11 +39,11 @@ unsigned __int64 __ull_rshift(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `mask`  
- 要向右移位的 64 位元整數值。  
+*遮罩*<br/>
+[in]要向右移位的 64 位元整數值。  
   
- [輸入] `nBit`  
- 若移動，請在 x86 上的 32 模數和模數 x64 的 64 位元數。  
+*nBit*<br/>
+[in]若移動，請在 x86 上的 32 模數和模數 x64 的 64 位元數。  
   
 ## <a name="return-value"></a>傳回值  
  遮罩移位`nBit`位元。  

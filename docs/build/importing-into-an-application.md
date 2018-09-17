@@ -1,5 +1,5 @@
 ---
-title: 匯入應用程式 |Microsoft 文件
+title: 匯入應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f41d20191474da3713f061747d5985fd447116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e88d34ce685e22e561683cc33db25997650ed7fd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368053"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718378"
 ---
 # <a name="importing-into-an-application"></a>匯入至應用程式
-您可以匯入函式應用程式使用兩種方法：  
-  
--   使用關鍵字 **__declspec （dllimport)** 主應用程式中的函式定義中  
-  
--   使用模組定義 (.def) 檔連同 **__declspec （dllimport)**  
-  
-## <a name="what-do-you-want-to-do"></a>請您指定選項。  
-  
--   [匯入使用 __declspec （dllimport） 的應用程式](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [使用 __declspec （dllimport） 匯入函式呼叫](../build/importing-function-calls-using-declspec-dllimport.md)  
-  
--   [使用 __declspec （資料 dllimport） 匯入](../build/importing-data-using-declspec-dllimport.md)  
-  
--   [使用.DEF 檔匯入](../build/importing-using-def-files.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [匯入和匯出](../build/importing-and-exporting.md)
+
+您可以匯入函式應用程式使用兩種方法：
+
+- 使用關鍵字 **__declspec （dllimport)** 主應用程式中的函式定義中
+
+- 使用模組定義 (.def) 檔連同 **__declspec （dllimport)**
+
+## <a name="what-do-you-want-to-do"></a>請您指定選項。
+
+- [匯入使用 __declspec （dllimport） 的應用程式](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [使用 __declspec （dllimport） 匯入函式呼叫](../build/importing-function-calls-using-declspec-dllimport.md)
+
+- [匯入使用 __declspec （資料 dllimport）](../build/importing-data-using-declspec-dllimport.md)
+
+- [使用 DEF 檔匯入](../build/importing-using-def-files.md)
+
+## <a name="see-also"></a>另請參閱
+
+[匯入和匯出](../build/importing-and-exporting.md)

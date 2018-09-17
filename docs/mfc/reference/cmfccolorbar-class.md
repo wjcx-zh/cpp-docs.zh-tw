@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d7edc11584f7a7c6d2b218d9bfbbcf8d3020a4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5610cd7f5c861fb8f82364e8f1d4d6975a18d7b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212100"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717973"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 類別
 `CMFCColorBar`類別表示可以在文件或應用程式中選取色彩的停駐控制列。  
@@ -280,8 +280,8 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bVertDock*  
- 若要指定色彩列控制項停駐垂直;，則為 TRUE若要指定色彩列控制項停駐水平，則為 FALSE。  
+*bVertDock*<br/>
+[in]若要指定色彩列控制項停駐垂直;，則為 TRUE若要指定色彩列控制項停駐水平，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  一維陣列中的色彩列控制項的色彩按鈕的大小。  
@@ -324,51 +324,51 @@ CMFCColorBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- 陣列，架構會顯示色軸控制項的色彩。  
+*色彩*<br/>
+[in]陣列，架構會顯示色軸控制項的色彩。  
   
- [in]*色彩*  
- 一開始選取的色彩。  
+*色彩*<br/>
+[in]一開始選取的色彩。  
   
- [in]*lpszAutoColor*  
- 文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
+*lpszAutoColor*<br/>
+[in]文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
   
  標準自動按鈕的標籤**自動**。  
   
- [in]*lpszOtherColor*  
- 文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
+*lpszOtherColor*<br/>
+[in]文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
   
  [其他] 按鈕的標準標籤是**其他色彩...**.  
   
- [in]*lpszDocColors*  
- 文件的 [色彩] 按鈕的文字標籤。 文件色彩調色盤會列出所有的文件目前使用的色彩。  
+*lpszDocColors*<br/>
+[in]文件的 [色彩] 按鈕的文字標籤。 文件色彩調色盤會列出所有的文件目前使用的色彩。  
   
- [in]*lstDocColors*  
- 一份文件目前使用的色彩。  
+*lstDocColors*<br/>
+[in]一份文件目前使用的色彩。  
   
- [in]*nColumns*  
- 具有色彩陣列的資料行數目。  
+*nColumns*<br/>
+[in]具有色彩陣列的資料行數目。  
   
- [in]*nRowsDockHorz*  
- 可在色軸水平的停駐時的資料列數目。  
+*nRowsDockHorz*<br/>
+[in]可在色軸水平的停駐時的資料列數目。  
   
- [in]*nColDockVert*  
- 可在色軸垂直的停駐時的資料行數目。  
+*nColDockVert*<br/>
+[in]可在色軸垂直的停駐時的資料行數目。  
   
- [in]*colorAutomatic*  
- 當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
+*colorAutomatic*<br/>
+[in]當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
   
- [in]*nCommandID*  
- 色軸控制項命令識別碼。  
+*nCommandID*<br/>
+[in]色軸控制項命令識別碼。  
   
- [in]*pParentBtn*  
- 父代按鈕指標。  
+*pParentBtn*<br/>
+[in]父代按鈕指標。  
   
- [in]*src*  
- 將現有`CMFCColorBar`複製到新的物件`CMFCColorBar`物件。  
+*src*<br/>
+[in]將現有`CMFCColorBar`複製到新的物件`CMFCColorBar`物件。  
   
- [in]*uiCommandID*  
- 命令 ID。  
+*uiCommandID*<br/>
+[in]命令 id。  
   
 ##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
  計算的垂直和水平的邊界，才能包含在色軸控制項上的按鈕，並調整這些按鈕的位置。  
@@ -383,8 +383,8 @@ void ContextToSize(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*bSquareButtons*|TRUE 表示指定的色彩列控制項上的按鈕圖形是方形;否則為 FALSE。 預設值為 TRUE。|  
-|[in]*bCenterButtons*|TRUE 表示指定的色軸的控制項按鈕表面的內容會置中;否則為 FALSE。 預設值為 TRUE。|  
+|*bSquareButtons*|[in]TRUE 表示指定的色彩列控制項上的按鈕圖形是方形;否則為 FALSE。 預設值為 TRUE。|  
+|*bCenterButtons*|[in]TRUE 表示指定的色軸的控制項按鈕表面的內容會置中;否則為 FALSE。 預設值為 TRUE。|  
   
 ### <a name="remarks"></a>備註  
   
@@ -403,26 +403,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParentWnd*  
- 父視窗的指標。  
+*pParentWnd*<br/>
+[in]父視窗的指標。  
   
- [in]*cheaderctrl:: Create*  
- 位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*cheaderctrl:: Create*<br/>
+[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*nID*  
- 命令 ID。  
+*nID*<br/>
+[in]命令 id。  
   
- [in]*pPalette*  
- 指標的色彩調色盤。 預設值是 NULL。  
+*pPalette*<br/>
+[in]指標的色彩調色盤。 預設值是 NULL。  
   
- [in]*nColumns*  
- 色軸控制項中的資料行數目。 預設值為 0。  
+*nColumns*<br/>
+[in]色軸控制項中的資料行數目。 預設值為 0。  
   
- [in]*nRowsDockHorz*  
- 水平的停駐時的色軸控制項中的資料列數目。 預設值為 0。  
+*nRowsDockHorz*<br/>
+[in]水平的停駐時的色軸控制項中的資料列數目。 預設值為 0。  
   
- [in]*nColDockVert*  
- 垂直的停駐時的色軸控制項中的資料行數目。 預設值為 0。  
+*nColDockVert*<br/>
+[in]垂直的停駐時的色軸控制項中的資料行數目。 預設值為 0。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -443,20 +443,20 @@ virtual BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParentWnd*  
- 父視窗的指標。 不可以是 NULL。  
+*pParentWnd*<br/>
+[in]父視窗的指標。 不可以是 NULL。  
   
- [in]*rect*  
- 指定要繪製色軸的控制項位置的周框。  
+*rect*<br/>
+[in]指定要繪製色軸的控制項位置的周框。  
   
- [in]*nID*  
- 控制項 id。  
+*nID*<br/>
+[in]控制項 id。  
   
- [in]*nColumns*  
- 理想的色軸控制項中的資料行數目。 這個方法會修改該數字，以符合指定的調色盤。 預設值為-1，表示未指定此參數。  
+*nColumns*<br/>
+[in]理想的色軸控制項中的資料行數目。 這個方法會修改該數字，以符合指定的調色盤。 預設值為-1，表示未指定此參數。  
   
- [in]*pPalette*  
- 調色盤色彩，則為 NULL 指標。 如果此參數為 NULL，這個方法會計算色軸控制項的大小，如同指定 20 的色彩。 預設值是 NULL。  
+*pPalette*<br/>
+[in]調色盤色彩，則為 NULL 指標。 如果此參數為 NULL，這個方法會計算色軸控制項的大小，如同指定 20 的色彩。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。  
@@ -477,8 +477,8 @@ static BOOL CreatePalette(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*arColors*|色彩的陣列。|  
-|[in]*調色盤*|色的調色盤。|  
+|*arColors*|[in]色彩的陣列。|  
+|*調色盤*|[in]色的調色盤。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -494,16 +494,16 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszLabel*  
- 文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
+*lpszLabel*<br/>
+[in]文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
   
  標準自動按鈕的標籤**自動**。  
   
- [in]*colorAutomatic*  
- 當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
+*colorAutomatic*<br/>
+[in]當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
   
- [in]*bEnable*  
- 若要啟用自動的按鈕，則為 TRUE若要停用 [自動] 按鈕，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]若要啟用自動的按鈕，則為 TRUE若要停用 [自動] 按鈕，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  如果刪除自動按鈕的文字標籤*lpszLabel*參數為 NULL 或有*bEnable*參數為 FALSE。  
@@ -519,16 +519,16 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszLabel*  
- 文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
+*lpszLabel*<br/>
+[in]文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
   
  此按鈕的標準標籤是**其他色彩...**.  
   
- [in]*bAltColorDlg*  
- True 會顯示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)此對話方塊。FALSE 表示顯示標準[CColorDialog](../../mfc/reference/ccolordialog-class.md)  對話方塊。 預設值為 TRUE。  
+*bAltColorDlg*<br/>
+[in]True 會顯示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)此對話方塊。FALSE 表示顯示標準[CColorDialog](../../mfc/reference/ccolordialog-class.md)  對話方塊。 預設值為 TRUE。  
   
- [in]*bEnable*  
- TRUE 表示啟用按鈕，如果為 false，則停用按鈕。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]TRUE 表示啟用按鈕，如果為 false，則停用按鈕。 預設值為 TRUE。  
   
 ##  <a name="getcolor"></a>  CMFCColorBar::GetColor  
  擷取目前選取的色彩。  
@@ -551,7 +551,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*bVertDock*|若要執行計算，用於以垂直方式停駐的色軸的控制項;，則為 TRUE否則，水平停駐的控制項執行計算。|  
+|*bVertDock*|[in]若要執行計算，用於以垂直方式停駐的色軸的控制項;，則為 TRUE否則，水平停駐的控制項執行計算。|  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其`cx`元件包含的資料行且其數目`cy`元件包含的資料列數目。  
@@ -580,7 +580,7 @@ int GetExtraHeight(int nNumColumns) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nNumColumns*|如果色彩列控制項包含文件色彩，在文件色彩的方格中顯示的資料行數目。 否則，這個值不在使用中。|  
+|*nNumColumns*|[in]如果色彩列控制項包含文件色彩，在文件色彩的方格中顯示的資料行數目。 否則，這個值不在使用中。|  
   
 ### <a name="return-value"></a>傳回值  
  導出額外高度所需。  
@@ -630,8 +630,8 @@ static int InitColors(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pPalette*|調色盤物件，則為 NULL 指標。 如果此參數為 NULL，則此方法會使用預設調色盤的作業系統。|  
-|[in]*arColors*|色彩的陣列。|  
+|*pPalette*|[in]調色盤物件，則為 NULL 指標。 如果此參數為 NULL，則此方法會使用預設調色盤的作業系統。|  
+|*arColors*|[in]色彩的陣列。|  
   
 ### <a name="return-value"></a>傳回值  
  色彩陣列中的項目數目。  
@@ -657,8 +657,8 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nChar*  
- 使用者按下的按鍵虛擬按鍵碼。  
+*NChar*<br/>
+[in]使用者按下的按鍵虛擬按鍵碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法會處理指定的索引鍵，則為 TRUE否則為 FALSE。  
@@ -674,7 +674,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pButton*|位於工具列的控制項的指標。|  
+|*pButton*|[in]位於工具列的控制項的指標。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -689,11 +689,11 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pTarget*  
- 視窗，其中包含要更新使用者介面項目的指標。  
+*pTarget*<br/>
+[in]視窗，其中包含要更新使用者介面項目的指標。  
   
- [in]*bDisableIfNoHndler*  
- 若要停用使用者介面項目，如果沒有處理常式定義在訊息對應; 中，則為 TRUE否則為 FALSE。  
+*bDisableIfNoHndler*<br/>
+[in]若要停用使用者介面項目，如果沒有處理常式定義在訊息對應; 中，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  當您的應用程式的使用者按一下使用者介面項目時，項目必須知道是否應該顯示為已啟用或停用。 命令訊息的目標會提供這項資訊藉由實作 ON_UPDATE_COMMAND_UI 命令處理常式。 使用這個方法，以協助處理命令。 如需詳細資訊，請參閱 < [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。  
@@ -708,11 +708,11 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*colorDefault*  
- [色彩] 對話方塊開啟時，依預設會選取色彩。  
+*colorDefault*<br/>
+[in][色彩] 對話方塊開啟時，依預設會選取色彩。  
   
- [out]*colorRes*  
- 使用者選取色彩。  
+*colorRes*<br/>
+[out]使用者選取色彩。  
   
 ### <a name="return-value"></a>傳回值  
  如果使用者選取的色彩;，則為 TRUE。如果使用者已取消 [色彩] 對話方塊中，則為 FALSE。  
@@ -737,7 +737,7 @@ CPalette* SelectPalette(CDC* pDC);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pDC*|目前的色彩列控制項的父代按鈕的裝置內容指標。|  
+|*pDC*|[in]目前的色彩列控制項的父代按鈕的裝置內容指標。|  
   
 ### <a name="return-value"></a>傳回值  
  指標，會取代目前的色彩列控制項的父代按鈕的調色盤的調色盤。  
@@ -750,8 +750,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- RGB 色彩值。  
+*色彩*<br/>
+[in]RGB 色彩值。  
   
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
  設定指定的色彩的新名稱。  
@@ -763,11 +763,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- 色彩的 RGB 值。  
+*色彩*<br/>
+[in]色彩的 RGB 值。  
   
- [in]*strName*  
- 指定的色彩的的新名稱。  
+*strName*<br/>
+[in]指定的色彩的的新名稱。  
   
 ### <a name="remarks"></a>備註  
  這個方法會變更在所有指定的色彩名稱`CMFCColorBar`應用程式中的物件。  
@@ -780,8 +780,8 @@ void SetCommandID(UINT nCommandID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nCommandID*  
- 命令識別碼。  
+*nCommandID*<br/>
+[in]命令識別碼。  
   
 ### <a name="remarks"></a>備註  
  呼叫這個方法，即可修改的色彩列控制項的命令識別碼，並通知識別碼已變更之控制項的父視窗。  
@@ -797,14 +797,14 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszCaption*  
- 其顯示時的色軸控制項不會停駐的標題。  
+*lpszCaption*<br/>
+[in]其顯示時的色軸控制項不會停駐的標題。  
   
- [in]*lstDocColors*  
- 取代目前的文件色彩的色彩清單。  
+*lstDocColors*<br/>
+[in]取代目前的文件色彩的色彩清單。  
   
- [in]*bShowWhenDocked*  
- 顯示文件色彩的色軸控制項停駐; 時，則為 TRUE否則為 FALSE。 預設值為 FALSE。  
+*bShowWhenDocked*<br/>
+[in]顯示文件色彩的色軸控制項停駐; 時，則為 TRUE否則為 FALSE。 預設值為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  *文件色彩*是目前文件中使用的色彩。 架構會自動維護一份文件色彩，但您可以使用這個方法來修改清單。  
@@ -817,8 +817,8 @@ void SetHorzMargin(int nHorzMargin);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nHorzMargin*  
- 水平邊界，以像素為單位。  
+*nHorzMargin*<br/>
+[in]水平邊界，以像素為單位。  
   
 ### <a name="remarks"></a>備註  
  根據預設， [CMFCColorBar::CMFCColorBar](#cmfccolorbar)建構函式會將水平的邊界設定為 4 個像素。  
@@ -834,7 +834,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pWndList*|屬性方格控制項物件的指標。|  
+|*pWndList*|[in]屬性方格控制項物件的指標。|  
   
 ##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
  設定垂直邊界，也就是頂端或底端色彩儲存格和用戶端區域的界限之間的間距。  
@@ -844,8 +844,8 @@ void SetVertMargin(int nVertMargin);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nVertMargin*  
- 垂直邊界，以像素為單位。  
+*nVertMargin*<br/>
+[in]垂直邊界，以像素為單位。  
   
 ### <a name="remarks"></a>備註  
  根據預設， [CMFCColorBar::CMFCColorBar](#cmfccolorbar)建構函式會將垂直的邊界設定為 4 個像素。  
@@ -858,8 +858,8 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdId*  
- 命令識別碼。 （會忽略這個參數）。  
+*uiCmdId*<br/>
+[in]命令識別碼。 （會忽略這個參數）。  
   
 ### <a name="remarks"></a>備註  
  這個方法會 WM_SETMESSAGESTRING 訊息傳送給色彩列控制項的擁有者。  

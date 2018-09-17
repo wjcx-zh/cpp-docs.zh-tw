@@ -1,5 +1,5 @@
 ---
-title: __incfsbyte、 __incfsword、 __incfsdword |Microsoft 文件
+title: __incfsbyte、 __incfsword、 __incfsdword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719351"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte、__incfsword、__incfsdword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  相對於開頭的位移所指定的記憶體位置中加入一個值`FS`區段。  
   
@@ -50,8 +50,8 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Offset`  
- 從開頭的位移`FS`。  
+*位移*<br/>
+[in]從開頭的位移`FS`。  
   
 ## <a name="requirements"></a>需求  
   
@@ -62,9 +62,9 @@ void __incfsdword(
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>備註  
- 這些內建函式只適用於核心模式，常式僅可作為內建函式。  
+ 這些內建函式僅適用於核心模式，常式僅可作為內建函式。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   

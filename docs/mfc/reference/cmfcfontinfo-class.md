@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984ebc1568c831420e11bd7b3c9004dabcc316b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eef400f13e36ac543fbcd73ccb7aedf4bc053037
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222090"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718090"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 `CMFCFontInfo`類別所描述的名稱和字型的其他屬性。  
@@ -94,23 +94,23 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszName*  
- 字型的名稱。 如需詳細資訊，請參閱 <<c0> `lfFaceName` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
+*lpszName*<br/>
+[in]字型的名稱。 如需詳細資訊，請參閱 <<c0> `lfFaceName` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
- [in]*lpszScript*  
- 指令碼 （字元集） 的字型名稱。  
+*lpszScript*<br/>
+[in]指令碼 （字元集） 的字型名稱。  
   
- [in]*nCharSet*  
- 值，指定字型的字元集 （指令碼）。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
+*nCharSet*<br/>
+[in]值，指定字型的字元集 （指令碼）。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
- [in]*nPitchAndFamily*  
- 值，指定的字幅和家族的字型。 如需詳細資訊，請參閱 <<c0> `lfPitchAndFamily` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
+*nPitchAndFamily*<br/>
+[in]值，指定的字幅和家族的字型。 如需詳細資訊，請參閱 <<c0> `lfPitchAndFamily` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
- [in]*n*  
- 指定的字型類型的值。 這個參數可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
+*n*<br/>
+[in]指定的字型類型的值。 這個參數可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
   
- [in]*src*  
- 將現有`CMFCFontInfo`物件，其成員用來建構這個`CMFCFontInfo`物件。  
+*src*<br/>
+[in]將現有`CMFCFontInfo`物件，其成員用來建構這個`CMFCFontInfo`物件。  
   
 ### <a name="return-value"></a>傳回值  
   

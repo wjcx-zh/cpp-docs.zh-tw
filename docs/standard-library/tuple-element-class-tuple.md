@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959065"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716185"
 ---
 # <a name="tupleelement-class"></a>tuple_element 類別
 
@@ -66,22 +66,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>參數
 
-*Tuple*  
+*Tuple*<br/>
 指定之項目的索引。
 
-*Tuple*  
+*Tuple*<br/>
 Tuple 的類型。
 
-*Elem*  
+*Elem*<br/>
 陣列元素的類型。
 
-*Size*  
+*Size*<br/>
 陣列的大小。
 
-*T1*  
+*T1*<br/>
 配對中第一個項目型別。
 
-*T2*  
+*T2*<br/>
 配對中第二個元素的類型。
 
 ## <a name="remarks"></a>備註
@@ -184,7 +184,13 @@ int main() {
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<tuple >**標頭：** \<陣列 > （用於陣列特製化）**標頭：** \<公用程式 > （用於配對特製化） **命名空間：** std
+**標頭：** \<tuple>
+
+**標頭：** \<array> (用於陣列特製化)
+
+**標頭：** \<公用程式 > （用於配對特製化）
+
+**命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 

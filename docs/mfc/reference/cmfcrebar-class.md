@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721509"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 A`CMFCReBar`物件是提供版面配置、 持續性和 rebar 控制項的狀態資訊的控制列。  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in][out]*pBar*  
  要插入至 rebar 的子視窗指標。 參考的物件必須有**WS_CHILD**視窗樣式。  
   
- [in]*pszText*  
- 指定要顯示 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示 rebar 本身。  
+*pszText*<br/>
+[in]指定要顯示 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示 rebar 本身。  
   
  [in][out]*pbmp*  
  指定要顯示 rebar 背景點陣圖。  
   
- [in]*cheaderctrl:: Create*  
- 包含要套用至群組列的樣式。 頻外樣式的完整清單，請參閱的描述`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文件中的結構。  
+*cheaderctrl:: Create*<br/>
+[in]包含要套用至群組列的樣式。 頻外樣式的完整清單，請參閱的描述`fStyle`中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Windows SDK 文件中的結構。  
   
- [in]*clrFore*  
- 表示 rebar 的前景色彩。  
+*clrFore*<br/>
+[in]表示 rebar 的前景色彩。  
   
- [in]*clrBack*  
- 表示 rebar 的背景色彩。  
+*clrBack*<br/>
+[in]表示 rebar 的背景色彩。  
   
 ### <a name="return-value"></a>傳回值  
  如果群組列已成功新增至 rebar;，則為 TRUE。否則為 FALSE。  
@@ -146,14 +146,14 @@ BOOL Create(
  [in][out]*pParentWnd*  
  此 rebar 控制項的父視窗指標。  
   
- [in]*dwCtrlStyle*  
- 指定 rebar 控制項的樣式。 預設樣式值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項上的線條。 如需有效的樣式清單，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文件。  
+*dwCtrlStyle*<br/>
+[in]指定 rebar 控制項的樣式。 預設樣式值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰的群組列的 rebar 控制項上的線條。 如需有效的樣式清單，請參閱 < [Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK 文件。  
   
- [in]*cheaderctrl:: Create*  
- Rebar 控制項的視窗樣式。 如需有效的樣式清單，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
+*cheaderctrl:: Create*<br/>
+[in]Rebar 控制項的視窗樣式。 如需有效的樣式清單，請參閱 <<c0> [ 的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in]*nID*  
- Rebar 的子視窗識別碼。  
+*nID*<br/>
+[in]Rebar 的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 建立 rebar，則為 TRUE。否則為 FALSE。  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- [in]*pTI*  
+*點*<br/>
+[in][in]*pTI*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pTarget*  
- [in]*bDisableIfNoHndler*  
+*pTarget*<br/>
+[in][in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>備註  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722238"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 提供 Windows 通用快速鍵控制項的功能。  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*wVirtualKeyCode*  
- 鍵盤快速鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
+*wVirtualKeyCode*<br/>
+[out]鍵盤快速鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
   
- [out]*wModifiers*  
- 位元組合 (OR) 旗標，表示修飾詞中的索引鍵的鍵盤快速鍵。  
+*wModifiers*<br/>
+[out]位元組合 (OR) 旗標，表示修飾詞中的索引鍵的鍵盤快速鍵。  
   
  輔助鍵旗標如下所示：  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*wVirtualKeyCode*  
- 鍵盤快速鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
+*wVirtualKeyCode*<br/>
+[in]鍵盤快速鍵的虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  
   
- [in]*wModifiers*  
- 位元組合 (OR) 旗標，表示修飾詞中的索引鍵的鍵盤快速鍵。  
+*wModifiers*<br/>
+[in]位元組合 (OR) 旗標，表示修飾詞中的索引鍵的鍵盤快速鍵。  
   
  輔助鍵旗標如下所示：  
   

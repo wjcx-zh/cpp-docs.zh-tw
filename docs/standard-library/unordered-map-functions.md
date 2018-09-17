@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a6d8a925f493a8299cf1afd8e851456277a68e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965548"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715516"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 函式
 
@@ -42,26 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*Key*  
- 索引鍵類型。
+*Key*<br/>
+索引鍵類型。
 
-*Ty*  
- 對應的類型。
+*Ty*<br/>
+對應的類型。
 
-*雜湊*  
- 雜湊函式物件類型。
+*雜湊*<br/>
+雜湊函式物件類型。
 
-*預測*  
- 相等比較函式物件類型。
+*預測*<br/>
+相等比較函式物件類型。
 
-*配置*  
- 配置器類別。
+*配置*<br/>
+配置器類別。
 
-*left*  
- 要交換的第一個容器。
+*left*<br/>
+要交換的第一個容器。
 
-*right*  
- 要交換的第二個容器。
+*right*<br/>
+要交換的第二個容器。
 
 ### <a name="remarks"></a>備註
 
@@ -136,26 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*Key*  
- 索引鍵類型。
+*Key*<br/>
+索引鍵類型。
 
-*Ty*  
- 對應的類型。
+*Ty*<br/>
+對應的類型。
 
-*雜湊*  
- 雜湊函式物件類型。
+*雜湊*<br/>
+雜湊函式物件類型。
 
-*預測*  
- 相等比較函式物件類型。
+*預測*<br/>
+相等比較函式物件類型。
 
-*配置*  
- 配置器類別。
+*配置*<br/>
+配置器類別。
 
-*left*  
- 要交換的第一個容器。
+*left*<br/>
+要交換的第一個容器。
 
-*right*  
- 要交換的第二個容器。
+*right*<br/>
+要交換的第二個容器。
 
 ### <a name="remarks"></a>備註
 

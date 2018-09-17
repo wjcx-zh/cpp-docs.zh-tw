@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb57f408c52f6884c68e93af88671d49815ef69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 156eca047946ad13b1e4f09057edceb9f0bc6b34
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840338"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719182"
 ---
 # <a name="1-object"></a>_1 物件
 
@@ -35,12 +35,12 @@ ms.locfileid: "33840338"
 namespace placeholders {
     extern unspecified _1,
     _2, ... _M
- } // namespace placeholders (within std)
+} // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>備註
 
-物件`_1, _2, ... _M`預留位置會指定第一、 第二個，...，Mth 引數，分別在函式呼叫所傳回的物件[繫結](../standard-library/functional-functions.md#bind)。 您可以使用 `_N` 來指定在評估繫結運算式時，應該插入第 N 個引數的位置。
+物件`_1, _2, ... _M`會指定第一次，第二個、...、 第 m 個引數，分別在函式呼叫所傳回的物件預留位置[繫結](../standard-library/functional-functions.md#bind)。 您可以使用 `_N` 來指定在評估繫結運算式時，應該插入第 N 個引數的位置。
 
 在此實作中，`M` 的值為 20。
 

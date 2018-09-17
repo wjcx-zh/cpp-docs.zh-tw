@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b34cbd2cebea2b1c4d6bf32e61a7f496b70d7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596264"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709900"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -99,26 +99,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name* (選擇性)  
-您用來處理資料列集之控制代碼的名稱。 如果您指定 *name*，則 **db_command** 會產生具有所指定 *name*的類別，以用來周遊資料列集或執行多個動作查詢。 如果您未指定 *name*，則不可能會將多個資料列的結果傳回給使用者。
+*name*  
+（選擇性）您用來處理資料列集的控制代碼的名稱。 如果您指定 *name*，則 **db_command** 會產生具有所指定 *name*的類別，以用來周遊資料列集或執行多個動作查詢。 如果您未指定 *name*，則不可能會將多個資料列的結果傳回給使用者。
 
-*source_name* (選擇性)  
-命令所執行的 `CSession` 變數或已套用 `db_source` 屬性的類別執行個體。 請參閱 [db_source](../windows/db-source.md)。
+*source_name*  
+（選擇性）`CSession`變數或具有類別的執行個體`db_source`屬性套用至它在其上執行命令。 請參閱 [db_source](../windows/db-source.md)。
 
 **db_command** 會確認用於 *source_name* 的變數有效，因此指定的變數應該在函式或全域範圍中。
 
-*hresult* （選擇性）  
-識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
+*hresult*  
+（選擇性）識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
 
-*bindings* (選擇性)  
-可讓您區隔繫結參數與 OLE DB 命令。
+*繫結*  
+（選擇性）可讓您區隔繫結參數，從 OLE DB 命令。
 
 如果您指定的值*繫結*， **db_command**會剖析相關聯的值，而不會剖析\[ *bindtype*] 參數。 這種用法可讓您使用 OLE DB 提供者語法。 若要停用剖析，而不使用繫結參數，指定`Bindings=""`。
 
 如果您未指定的值*繫結*， **db_command**會剖析繫結參數區塊，尋找 '**(**'，後面接著 **\[** _bindtype_**]** 在方括號，後面接著一或多個先前宣告 c + + 成員變數，後面接著 '**)**'。 產生的命令中會移除括弧之間的所有文字，並且會使用這些參數來建構此命令的資料行和參數繫結。
 
-*bulk_fetch* （選擇性）  
-指定要提取之資料列數目的整數值。
+*bulk_fetch*  
+（選擇性）整數值，指定要擷取的資料列數目。
 
 預設值為 1，指定單一資料列擷取 (資料列集的類型會是 [CRowset](../data/oledb/crowset-class.md))。
 

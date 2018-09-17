@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 522a2fc1f2092c90a9938efee8cf594e2813c5ad
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0b88c9a57b359c6cef7dc8587a4695b5590e69d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721873"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor 內建函式
 **Microsoft 專屬**  
@@ -158,11 +158,11 @@ __int64 _InterlockedXor64_rel(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Value`  
- 要被結果取代的第一個運算元指標。  
+*值*<br/>
+[in、 out]要被結果取代的第一個運算元指標。  
   
- [in] `Mask`  
- 第二個運算元。  
+*遮罩*<br/>
+[in]第二個運算元。  
   
 ## <a name="return-value"></a>傳回值  
  第一個運算元的原始值。  
@@ -171,10 +171,10 @@ __int64 _InterlockedXor64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedXor`、`_InterlockedXor8`、`_InterlockedXor16``_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|  
+|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedXor_np`、`_InterlockedXor8_np`、`_InterlockedXor16_np``_InterlockedXor64_np`|X64|\<intrin.h>|  
-|`_InterlockedXor_HLEAcquire`、`_InterlockedXor_HLERelease`、`_InterlockedXor64_HLEAcquire``_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|  
+|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  每個函式名稱的數字會指定引數的位元大小。  

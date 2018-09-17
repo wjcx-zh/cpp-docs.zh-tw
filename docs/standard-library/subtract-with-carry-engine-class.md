@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687983"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721730"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 類別
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>參數
 
-*UIntType*  
- 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*UIntType*<br/>
+不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*W*  
- **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **短延隔**。 整數值數目。 **前置條件**：`0 < S < R`
+*S*<br/>
+**短延隔**。 整數值數目。 **前置條件**：`0 < S < R`
 
-*R*  
- **長延隔**。 決定所產生數列中的週期。
+*R*<br/>
+**長延隔**。 決定所產生數列中的週期。
 
 ## <a name="members"></a>Members
 

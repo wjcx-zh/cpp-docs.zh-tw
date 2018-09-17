@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 10acf2b69eaa6b49145e671d437f18dfaff8e499
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195786"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715399"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -51,20 +51,20 @@ ms.locfileid: "43195786"
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype* （選擇性）  
-OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
+*dbtype*  
+（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
 
-*有效位數*（選擇性）  
-要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*擴展*（選擇性）  
-要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*小數位數*  
+（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*狀態*（選擇性）  
-成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+*status*  
+（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
-*長度*（選擇性）  
-成員變數，用來保存資料行的大小，以位元組為單位。
+*length*  
+（選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註
 

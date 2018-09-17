@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1236cbdaca396aa6d52d4e30095d9a0df5379142
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688541"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712032"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -437,8 +437,8 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 ### <a name="parameters"></a>參數
 
-[in]*lpvParam*  
-保留供未來使用。
+*lpvParam*<br/>
+[in]保留供日後使用。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1745,11 +1745,11 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="parameters"></a>參數
 
-[in]*lpszFileName*  
-要開啟之檔案的名稱。
+*lpszFileName*<br/>
+[in]要開啟之檔案的名稱。
 
-[in]*bAddToMRU*  
-TRUE 表示在文件是其中一個最新的檔案;FALSE 表示文件不是其中一個最新的檔案。
+*bAddToMRU*<br/>
+[in]TRUE 表示在文件是其中一個最新的檔案;FALSE 表示文件不是其中一個最新的檔案。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1936,8 +1936,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bCompat*  
-TRUE 會將列印和列印至，允許使用者列印檔案，直接從殼層，或將檔案拖曳至印表機物件的殼層命令的登錄項目。 它也會新增 DefaultIcon 索引鍵。 根據預設，此參數為 FALSE 的回溯相容性。
+*bCompat*<br/>
+[in]TRUE 會將列印和列印至，允許使用者列印檔案，直接從殼層，或將檔案拖曳至印表機物件的殼層命令的登錄項目。 它也會新增 DefaultIcon 索引鍵。 根據預設，此參數為 FALSE 的回溯相容性。
 
 ### <a name="remarks"></a>備註
 
@@ -1973,14 +1973,14 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |參數|描述|
-|[in]*bRegisterRecoveryCallback*|TRUE 表示此執行個體的應用程式會使用復原的回呼函式;FALSE 表示不。 應用程式意外結束時，架構會呼叫復原回呼函式。 如需詳細資訊，請參閱 < [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|[in]*strRestartIdentifier*|識別此執行個體重新啟動管理員的唯一字串。 重新啟動管理員識別項是唯一的應用程式的每個執行個體。|
-|[in]*pwzCommandLineArgs*|字串，包含任何額外的引數，從命令列。|
-|[in]*dwRestartFlags*|重新啟動管理員的選擇性旗標。 如需詳細資訊，請參閱＜備註＞一節。|
-|[in]*pRecoveryCallback*|復原的回呼函式。 此函式必須採用 LPVOID 參數做為輸入，並傳回 DWORD。 預設復原回呼函式是`CWinApp::ApplicationRecoveryCallback`。|
-|[in]*lpvParam*|復原回撥函式的輸入的參數。 如需詳細資訊，請參閱 < [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
-|[in]*dwPingInterval*|重新啟動管理員會等到復原回撥函式傳回的時間長度。 這個參數是以毫秒為單位。|
-|[in]*dwCallbackFlags*|旗標傳遞至復原的回呼函式。 保留供未來使用。|
+|*bRegisterRecoveryCallback*|[in]TRUE 表示此執行個體的應用程式會使用復原的回呼函式;FALSE 表示不。 應用程式意外結束時，架構會呼叫復原回呼函式。 如需詳細資訊，請參閱 < [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*strRestartIdentifier*|[in]識別此執行個體重新啟動管理員的唯一字串。 重新啟動管理員識別項是唯一的應用程式的每個執行個體。|
+|*pwzCommandLineArgs*|[in]字串，包含任何額外的引數，從命令列。|
+|*dwRestartFlags*|[in]重新啟動管理員的選擇性旗標。 如需詳細資訊，請參閱＜備註＞一節。|
+|*pRecoveryCallback*|[in]復原的回呼函式。 此函式必須採用 LPVOID 參數做為輸入，並傳回 DWORD。 預設復原回呼函式是`CWinApp::ApplicationRecoveryCallback`。|
+|*lpvParam*|[in]復原回撥函式的輸入的參數。 如需詳細資訊，請參閱 < [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。|
+|*dwPingInterval*|[in]重新啟動管理員會等到復原回撥函式傳回的時間長度。 這個參數是以毫秒為單位。|
+|*dwCallbackFlags*|[in]旗標傳遞至復原的回呼函式。 保留供未來使用。|
 
 ### <a name="return-value"></a>傳回值
 

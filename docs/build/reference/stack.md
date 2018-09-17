@@ -1,5 +1,5 @@
 ---
-title: -堆疊 |Microsoft 文件
+title: -堆疊 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,24 +19,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a82111ce950d14bc6b3e270ee9a658d806b28b62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8deb3e3bedcb773aa01ae5f1c3ff66ce9d509f2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716654"
 ---
 # <a name="stack"></a>/STACK
-```  
-/STACK:reserve[,commit]  
-```  
-  
-## <a name="remarks"></a>備註  
- 此選項設定堆疊的大小 （位元組），並以十進位或 C 語言標記法會採用引數。 /STACK 選項僅適用於可執行檔。  
-  
- *保留*引數指定虛擬記憶體中堆疊配置總量。 EDITBIN 會無條件進位到最接近的 4 個位元組指定的值。  
-  
- 選擇性`commit`引數受限於作業系統所解譯。 在 Windows NT、 Windows 95 和 Windows 98、`commit`指定一次配置的實體記憶體數量。 已認可的虛擬記憶體會造成要保留在分頁檔的空間。 較高`commit`值可以節省的時間，當應用程式需要較多的堆疊空間，但會增加記憶體需求且可能啟動時間。  
-  
-## <a name="see-also"></a>另請參閱  
- [EDITBIN 選項](../../build/reference/editbin-options.md)
+
+```
+/STACK:reserve[,commit]
+```
+
+## <a name="remarks"></a>備註
+
+這個選項會設定堆疊大小 （位元組），並採用引數，以十進位或 C 語言表示法。 /STACK 選項僅適用於可執行檔。
+
+*保留*引數會指定虛擬記憶體中堆疊配置總量。 EDITBIN 會無條件進位到最接近的 4 個位元組指定的值。
+
+選擇性`commit`引數受限於由作業系統的解譯方式。 在 Windows NT、 Windows 95 和 Windows 98`commit`指定一次配置的實體記憶體數量。 已認可的虛擬記憶體會造成要保留在分頁檔的空間。 較高`commit`值可以節省的時間，當應用程式需要較多的堆疊空間，但會增加記憶體需求且可能啟動時間。
+
+## <a name="see-also"></a>另請參閱
+
+[EDITBIN 選項](../../build/reference/editbin-options.md)

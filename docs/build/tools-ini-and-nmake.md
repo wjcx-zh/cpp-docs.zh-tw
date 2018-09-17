@@ -1,5 +1,5 @@
 ---
-title: Tools.ini 和 NMAKE |Microsoft 文件
+title: Tools.ini 和 NMAKE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 860a334274a3a1a4ac9e11c3e7b5e9a0f136ecc0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84406886c9aa0c0053ed7c183912bf8a7f1f4771
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380546"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723576"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini 和 NMAKE
-NMAKE 讀取 Tools.ini 之前它會讀取 makefile，除非使用 /R。 它會尋找 Tools.ini 第一次在目前的目錄，然後初始化環境變數所指定的目錄中。 NMAKE 中的設定初始設定檔案區段的開頭`[NMAKE]`，而且可以包含任何 makefile 的資訊。 指定數字符號開頭的個別行上的註解 （#）。  
-  
-## <a name="see-also"></a>另請參閱  
- [執行 NMAKE](../build/running-nmake.md)
+
+NMAKE 讀取 Tools.ini 之前它會讀取 makefile，除非使用 /R。 它會尋找 Tools.ini 第一次在目前的目錄，然後在初始化環境變數所指定的目錄中。 NMAKE 中的設定的初始設定檔案的區段開頭`[NMAKE]`，而且可以包含任何 makefile 的資訊。 指定的註解上以不同的行開頭的數字符號 （#）。
+
+## <a name="see-also"></a>另請參閱
+
+[執行 NMAKE](../build/running-nmake.md)

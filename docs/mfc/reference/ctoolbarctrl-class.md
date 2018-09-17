@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686081"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724070"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 類別
 提供 Windows 工具列通用控制項的功能。  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*idButton*|要接收新的點陣圖按鈕命令識別項。|  
-|[in]*iBitmap*|目前的工具列控制項的影像清單中的映像的以零為起始的索引。|  
+|*idButton*|[in]要接收新的點陣圖按鈕命令識別項。|  
+|*iBitmap*|[in]目前的工具列控制項的影像清單中的映像的以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*idButton*|擷取其顯示文字的按鈕的識別項。|  
+|*idButton*|[in]擷取其顯示文字的按鈕的識別項。|  
   
 ### <a name="return-value"></a>傳回值  
  A [CString](../../atl-mfc-shared/using-cstring.md) ，其中包含指定的按鈕的顯示文字。  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*lpColorScheme*|指標[新增的色彩配置](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)接收色彩配置資訊的結構。 當這個方法傳回時，結構描述的反白顯示色彩和陰影色彩的工具列控制項。|  
+|*lpColorScheme*|[out]指標[新增的色彩配置](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)接收色彩配置資訊的結構。 當這個方法傳回時，結構描述的反白顯示色彩和陰影色彩的工具列控制項。|  
   
 ### <a name="return-value"></a>傳回值  
 如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pnHorzPadding*|整數，接收工具列控制項的水平的填補像素為單位。|  
-|[out]*pnVertPadding*|整數，接收的工具列控制項中，垂直的填補像素為單位。|  
+|*pnHorzPadding*|[out]整數，接收工具列控制項的水平的填補像素為單位。|  
+|*pnVertPadding*|[out]整數，接收的工具列控制項中，垂直的填補像素為單位。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 工具列按鈕的命令識別碼。  
+*nID*<br/>
+[in]工具列按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果按鈕已反白顯示正值的整數，0，表示按鈕不會反白顯示或-1 的錯誤，就會發生。  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 在工具列上的按鈕命令識別項。  
+*nID*<br/>
+[in]在工具列上的按鈕命令識別項。  
   
 ### <a name="return-value"></a>傳回值  
  正整數如果按鈕是未定的如果零按鈕的逸出序列是不確定或-1，如果錯誤發生。  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 按下或放開按鈕命令識別項。  
+*nID*<br/>
+[in]按下或放開按鈕命令識別項。  
   
- [in]*bPress*  
- 按下指定的按鈕;，則為 TRUE釋放指定的按鈕，則為 FALSE。 預設值為 TRUE。  
+*bPress*<br/>
+[in]按下指定的按鈕;，則為 TRUE釋放指定的按鈕，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pReplaceBitmap*|指標[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)結構，描述要被取代的點陣圖和新的點陣圖。|  
+|*pReplaceBitmap*|[in]指標[TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap)結構，描述要被取代的點陣圖和新的點陣圖。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*fAnchor*  
- 指定是否錨點反白顯示已啟用或停用。 如果此值為非零值，將會啟用醒目提示錨點。 如果此值為零，錨點醒目提示將會停用  
+*fAnchor*<br/>
+[in]指定是否錨點反白顯示已啟用或停用。 如果此值為非零值，將會啟用醒目提示錨點。 如果此值為零，錨點醒目提示將會停用  
   
 ### <a name="return-value"></a>傳回值  
  先前的錨點設定。 如果反白顯示已啟用，此值為非零值。 如果未啟用反白顯示，這個值會是零。  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*lpColorScheme*|指標[新增的色彩配置](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)描述反白顯示色彩和陰影色彩的工具列控制項的結構。|  
+|*lpColorScheme*|[in]指標[新增的色彩配置](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme)描述反白顯示色彩和陰影色彩的工具列控制項的結構。|  
   
 ### <a name="remarks"></a>備註  
  如果在設定 Windows Vista 的視覺效果佈景主題，這個方法沒有任何作用。  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*nHorzPadding*|指定工具列控制項的水平的填補像素為單位。|  
-|[in]*nVertPadding*|指定垂直填補的工具列控制項中，像素為單位。|  
+|*nHorzPadding*|[in]指定工具列控制項的水平的填補像素為單位。|  
+|*nVertPadding*|[in]指定垂直填補的工具列控制項中，像素為單位。|  
   
 ### <a name="return-value"></a>傳回值  
  DWORD 的低位文字包含先前的水平的填補值，而其高位文字包含先前的垂直的邊框距離值。 邊框距離值是以像素為單位測量。  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iImageID*|影像清單的以零為起始的索引。 如果您使用一個映像清單，請將這個參數設定為零。|  
-|[in]*pImageList*|指標[CImageList](../../mfc/reference/cimagelist-class.md)包含新的映像清單。|  
+|*iImageID*|[in]影像清單的以零為起始的索引。 如果您使用一個映像清單，請將這個參數設定為零。|  
+|*pImageList*|[in]指標[CImageList](../../mfc/reference/cimagelist-class.md)包含新的映像清單。|  
   
 ### <a name="return-value"></a>傳回值  
  指標[CImageList](../../mfc/reference/cimagelist-class.md) ，包含目前的控制項，則為 NULL 的前一個映像清單，如果沒有這類映像清單設定。  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605923"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719716"
 ---
 # <a name="rdx"></a>rdx
 
@@ -43,8 +43,8 @@ ms.locfileid: "42605923"
 *key*  
 若要建立或開啟金鑰的名稱。
 
-*valuename* （選擇性）  
-指定要設定的 [值] 欄位。 如果在索引鍵已經存在具有此名稱的值欄位，會將它加入。
+*valuename*  
+（選擇性）指定要設定的 [值] 欄位。 如果在索引鍵已經存在具有此名稱的值欄位，會將它加入。
 
 *regtype*  
 要加入的登錄機碼的類型。 可以是下列其中之一： `text`， `dword`， `binary`，或`CString`。

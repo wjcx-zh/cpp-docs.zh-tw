@@ -1,5 +1,5 @@
 ---
-title: 排程 |Microsoft 文件
+title: 排程 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00db7daf5c2c9882c1d54ac054ee285de1fdac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691829"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712149"
 ---
 # <a name="schedule"></a>排程
-適用於[如](../../../parallel/openmp/reference/for-openmp.md)指示詞。  
+適用於[針對](../../../parallel/openmp/reference/for-openmp.md)指示詞。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,11 +44,11 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` (選擇性)  
- 指定反覆項目的大小。 `size` 必須是整數。 不正確時`type`是`runtime`。  
+*size*<br/>
+（選擇性）指定反覆項目的大小。 `size` 必須是整數。 不是有效的 when`type`是`runtime`。  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
+ 如需詳細資訊，請參閱 < [2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
   
 ## <a name="example"></a>範例  
   

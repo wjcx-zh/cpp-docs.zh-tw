@@ -1,5 +1,5 @@
 ---
-title: __stosq |Microsoft 文件
+title: __stosq |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332022"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715503"
 ---
 # <a name="stosq"></a>__stosq
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 會產生存放區字串指令 (`rep stosq`)。  
+ 產生的存放區的字串指示 (`rep stosq`)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸出] `Dest`  
- 作業的目的地。  
+*目的地*<br/>
+[out]作業的目的地。  
   
- [輸入] `Data`  
- 要儲存的資料。  
+*Data*<br/>
+[in]要儲存的資料。  
   
- [輸入] `Count`  
- 要寫入的 quadwords 區塊的長度。  
+*計數*<br/>
+[in]要寫入的 quadwords 區塊的長度。  
   
 ## <a name="requirements"></a>需求  
   
@@ -59,7 +59,7 @@ void __stosb(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 結果是 quadword`Data`撰寫成一個區塊`Count`中的 quadwords`Dest`字串。  
+ 結果是 quadword`Data`寫入至區塊`Count`quadwords 中的`Dest`字串。  
   
  此常式僅可作為內建常式使用。  
   
@@ -89,7 +89,7 @@ int main()
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

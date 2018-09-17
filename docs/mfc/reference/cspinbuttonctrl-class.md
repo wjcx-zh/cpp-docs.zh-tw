@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757097"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718070"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 提供 Windows 通用微調按鈕控制項的功能。  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>參數  
- *nLower*和*nUpper*  
- 上限與下限的控制項。 針對`SetRange`、 未限制可能會大於 UD_MAXVAL 或小於 UD_MINVAL; 此外，兩個限制之間的差異不能超過 UD_MAXVAL。 `SetRange32` 沒有任何限制置於限制;使用任何整數。  
+### <a name="parameters"></a>參數
+
+*nLower*和*nUpper*<br/>
+上限與下限的控制項。 針對`SetRange`、 未限制可能會大於 UD_MAXVAL 或小於 UD_MINVAL; 此外，兩個限制之間的差異不能超過 UD_MAXVAL。 `SetRange32` 沒有任何限制置於限制;使用任何整數。  
   
 ### <a name="remarks"></a>備註  
  此成員函式`SetRange32`設定微調按鈕控制項的 32 位元範圍。  

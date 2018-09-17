@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726631"
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 編輯控制項的功能。  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*lpszText*  
- 包含提示文字的字串指標。  
+*lpszText*<br/>
+[out]包含提示文字的字串指標。  
   
- [in]*cchText*  
- 可以接收到的字元數。 這個數目包括結束的 NULL 字元。  
+*cchText*<br/>
+[in]可以接收到的字元數。 這個數目包括結束的 NULL 字元。  
   
 ### <a name="return-value"></a>傳回值  
  第一個多載而言，TRUE 如果方法成功，否則為 FALSE。  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pichStart*|反白顯示的文字範圍中的第一個字元的以零為起始索引。|  
-|[out]*pichEnd*|反白顯示的文字範圍中的最後一個字元的以零為起始索引。|  
+|*pichStart*|[out]反白顯示的文字範圍中的第一個字元的以零為起始索引。|  
+|*pichEnd*|[out]反白顯示的文字範圍中的最後一個字元的以零為起始索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszText*  
- 包含要編輯控制項中顯示提示的字串指標。  
+*lpszText*<br/>
+[in]包含要編輯控制項中顯示提示的字串指標。  
   
- [in]*fDrawWhenFocused*  
- 如果為 FALSE，是不會繪製提示橫幅，當使用者在編輯控制項中按一下，並提供控制項焦點。  
+*fDrawWhenFocused*<br/>
+[in]如果為 FALSE，是不會繪製提示橫幅，當使用者在編輯控制項中按一下，並提供控制項焦點。  
   
  如果為 TRUE，即使控制項有焦點時，才繪製提示橫幅。 當使用者開始輸入控制項中時，就會消失提示橫幅。  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*ichStart*|反白顯示的文字範圍中的第一個字元的以零為起始索引。|  
-|[in]*ichEnd*|反白顯示的文字範圍中的最後一個字元的以零為起始索引。|  
+|*ichStart*|[in]反白顯示的文字範圍中的第一個字元的以零為起始索引。|  
+|*ichEnd*|[in]反白顯示的文字範圍中的最後一個字元的以零為起始索引。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。  這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。 兩者`SetHighlight`和`GetHighlight`UNICODE 組建只會啟用。 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pEditBalloonTip*|指標[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)該結構描述之氣球提示。|  
-|[in]*lpszTitle*|包含的汽球提示標題的 Unicode 字串指標。|  
-|[in]*lpszText*|包含的汽球提示文字的 Unicode 字串指標。|  
-|[in]*ttiIcon*|**INT**指定類型的相關聯之氣球提示的圖示。 預設值是 TTI_NONE。 如需詳細資訊，請參閱 <<c0> `ttiIcon` 隸屬[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)結構。|  
+|*pEditBalloonTip*|[in]指標[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)該結構描述之氣球提示。|  
+|*lpszTitle*|[in]包含的汽球提示標題的 Unicode 字串指標。|  
+|*lpszText*|[in]包含的汽球提示文字的 Unicode 字串指標。|  
+|*ttiIcon*|[in]**INT**指定類型的相關聯之氣球提示的圖示。 預設值是 TTI_NONE。 如需詳細資訊，請參閱 <<c0> `ttiIcon` 隸屬[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 883bc55cc9b820c95a98e1fcc235fb53f22d7e9d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960888"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716180"
 ---
 # <a name="unarynegate-class"></a>unary_negate 類別
 
@@ -42,11 +42,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*函式*  
- 要變為負值的一元函式。
+*函式*<br/>
+要變為負值的一元函式。
 
-*left*  
- 要變為負值之一元函式的運算元。
+*left*<br/>
+要變為負值之一元函式的運算元。
 
 ## <a name="return-value"></a>傳回值
 

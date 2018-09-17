@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540408"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712950"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 類別
 `CMFCRibbonButton` 類別實作可以放置在功能區列項目 (例如面板、快速存取工具列和快顯功能表) 上的按鈕。  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pSubItem*  
- 指定要加入的新元素的指標。  
+*pSubItem*<br/>
+[in]指定要加入的新元素的指標。  
   
- [in]*nIndex*  
- 指定要加入的按鈕，功能表項目的陣列中的項目索引若要加入功能表項目的陣列結尾處的項目為-1。  
+*nIndex*<br/>
+[in]指定要加入的按鈕，功能表項目的陣列中的項目索引若要加入功能表項目的陣列結尾處的項目為-1。  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 指定按鈕的命令識別碼。  
+*nID*<br/>
+[in]指定按鈕的命令識別碼。  
   
- [in]*lpszText*  
- 指定按鈕的文字標籤。  
+*lpszText*<br/>
+[in]指定按鈕的文字標籤。  
   
- [in]*nSmallImageIndex*  
- 影像清單中的父類別指定按鈕的小型影像的以零為起始索引。  
+*nSmallImageIndex*<br/>
+[in]影像清單中的父類別指定按鈕的小型影像的以零為起始索引。  
   
- [in]*nLargeImageIndex*  
- 影像清單中的父類別指定按鈕的大型影像的以零為起始索引。  
+*nLargeImageIndex*<br/>
+[in]影像清單中的父類別指定按鈕的大型影像的以零為起始索引。  
   
- [in]*hIcon*  
- 指定應用程式做為按鈕的影像之圖示的控制代碼。  
+*hIcon*<br/>
+[in]指定應用程式做為按鈕的影像之圖示的控制代碼。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何建構`CMFCRibbonButton`物件。  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [in]*bCalcOnly*  
+*pDC*<br/>
+[in][in]*bCalcOnly*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [in]*類型*  
+*pDC*<br/>
+[in][in]*類型*  
  [in]*rectImage*  
   
 ### <a name="remarks"></a>備註  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [in]*先把 strText*  
- [in]*rectText*  
- [in]*uiDTFlags*  
+*pDC*<br/>
+[in][in]*先把 strText*  
+*rectText*<br/>
+[in][in]*uiDTFlags*  
  [in]*clrText*  
   
 ### <a name="return-value"></a>傳回值  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- 指定命令識別碼的快顯功能表項目。  
+*uiID*<br/>
+[in]指定命令識別碼的快顯功能表項目。  
   
 ### <a name="return-value"></a>傳回值  
  以零起始的索引子相關聯的項目的*uiID*。 如果沒有這類子項目，為-1。  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bLargeImage*  
- 如果為 TRUE，則傳回映像的索引包含大型的映像，映像清單中否則，會傳回包含小型的映像的映像清單中的影像索引。  
+*bLargeImage*<br/>
+[in]如果為 TRUE，則傳回映像的索引包含大型的映像，映像清單中否則，會傳回包含小型的映像的映像清單中的影像索引。  
   
 ### <a name="return-value"></a>傳回值  
  相關聯的映像清單中的按鈕的影像索引。  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- 指定滑鼠點選的位置。  
+*點*<br/>
+[in]指定滑鼠點選的位置。  
   
 ### <a name="remarks"></a>備註  
  如果您想要處理這個事件，請覆寫這個方法在衍生類別中。  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 指定您想要移除功能表項目的以零為起始的索引。  
+*nIndex*<br/>
+[in]指定您想要移除功能表項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果已順利移除指定的項目，則為 TRUE。否則為 FALSE 的 if *nIndex*是負數，或超過快顯功能表中功能表項目數目。  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 如果為 TRUE，按鈕會顯示大型影像。 否則，按鈕會顯示小型影像。  
+*bSet*<br/>
+[in]如果為 TRUE，按鈕會顯示大型影像。 否則，按鈕會顯示小型影像。  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  啟用功能區按鈕的預設命令。  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 如果為 TRUE，按鈕可以執行其預設的命令。 如果為 FALSE，則按鈕無法執行其預設的命令。  
+*bSet*<br/>
+[in]如果為 TRUE，按鈕可以執行其預設的命令。 如果為 FALSE，則按鈕無法執行其預設的命令。  
   
 ### <a name="remarks"></a>備註  
  *bSet*無關僅當按鈕的功能表。 如果*bSet*為 TRUE，按鈕可以執行其預設命令而指派的快顯功能表會顯示只有當使用者按一下按鈕右邊的箭號時，才。 否則，按鈕無法執行其預設的命令，而快顯功能表會出現在使用者按一下不論哪一個區域中按鈕。  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 指定的影像索引。  
+*nIndex*<br/>
+[in]指定的影像索引。  
   
- [in]*bLargeImage*  
- 如果為 TRUE，指定的索引是指大型映像清單。 否則，索引是指的小型影像清單。  
+*bLargeImage*<br/>
+[in]如果為 TRUE，指定的索引是指大型映像清單。 否則，索引是指的小型影像清單。  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  將快顯功能表上指派給功能區按鈕。  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 如果為 TRUE，功能表會靠右對齊。 否則，功能表是靠左對齊  
+*bSet*<br/>
+[in]如果為 TRUE，功能表會靠右對齊。 否則，功能表是靠左對齊  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

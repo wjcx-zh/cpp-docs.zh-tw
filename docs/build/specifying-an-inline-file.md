@@ -1,5 +1,5 @@
 ---
-title: 指定內嵌檔 |Microsoft 文件
+title: 指定內嵌檔 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0d85436aef5ed48c0a8787f8bce330bf6d3e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73983094f10088920100b4fbbb8d870aee13f05e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380101"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720560"
 ---
 # <a name="specifying-an-inline-file"></a>指定內嵌檔
-指定兩個角括弧 (<<) 命令中其中*filename*出現。 角括號不可為巨集展開。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-<<[filename]  
-```  
-  
-## <a name="remarks"></a>備註  
- 執行命令時，會取代角括號*filename*，如果指定，或將 NMAKE 產生的唯一名稱。 如果指定， *filename*必須遵循不含空格或定位鍵的角括號。允許的路徑。 需要或假設沒有副檔名。 如果*filename*指定的檔案建立在目前或指定的目錄，覆寫任何現有的檔案名稱; 否則它會建立在 TMP 目錄中 (或目前的目錄中，如果 TMP 環境變數未定義）。 如果使用上一個*filename*是重複使用，NMAKE 會取代先前的檔案。  
-  
-## <a name="see-also"></a>另請參閱  
- [Makefile 中的內嵌檔](../build/inline-files-in-a-makefile.md)
+
+指定兩個角括弧 (<<) 命令中何處*filename*出現。 角括號不可為巨集展開。
+
+## <a name="syntax"></a>語法
+
+```
+<<[filename]
+```
+
+## <a name="remarks"></a>備註
+
+執行命令時，會取代角括號*filename*，如果指定，或將 NMAKE 產生的唯一名稱。 如果指定， *filename*必須遵循不含空格或定位字元的角括號。允許的路徑。 需要不含副檔名，或假設。 如果*filename*指定的檔案建立在目前或指定的目錄，該名稱的覆寫任何現有的檔案; 否則它會建立在 TMP 目錄 (或目前的目錄中，如果 TMP 環境變數未定義）。 如果先前*filename*是重複使用，NMAKE 會取代先前的檔案。
+
+## <a name="see-also"></a>另請參閱
+
+[Makefile 中的內嵌檔](../build/inline-files-in-a-makefile.md)

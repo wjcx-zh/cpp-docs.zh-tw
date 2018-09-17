@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 95d9da94e2fa7a79db6696649854fafa989941f4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541573"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726267"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 類別
 在工具列上的映像。 `CMFCToolBarImages`類別會管理從應用程式資源，或從檔案載入工具列影像。  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*clrBase*  
- [in]*clrTone*  
+*clrBase*<br/>
+[in][in]*clrTone*  
   
 ### <a name="remarks"></a>備註  
   
@@ -297,11 +297,11 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hIcon*  
- 要加入圖示控制代碼。  
+*hIcon*<br/>
+[in]要加入圖示控制代碼。  
   
- [in]*bAlphaBlend*  
- 則為 TRUE，如果有此圖示會搭配 alpha 透明混色;否則為 FALSE。  
+*bAlphaBlend*<br/>
+[in]則為 TRUE，如果有此圖示會搭配 alpha 透明混色;否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，已加入的工具列影像的以零起始的索引否則為-1。  
@@ -320,17 +320,17 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hbmp*  
- 若要新增點陣圖控制代碼。  
+*hbmp*<br/>
+[in]若要新增點陣圖控制代碼。  
   
- [in]*bSetBitPerPixel*  
- 如果`CMFCToolBarImages`物件會使用新的映像; 的色彩深度 （每像素的位元）False`CMFCToolbarImages`物件會保留目前的色彩深度。  
+*bSetBitPerPixel*<br/>
+[in]如果`CMFCToolBarImages`物件會使用新的映像; 的色彩深度 （每像素的位元）False`CMFCToolbarImages`物件會保留目前的色彩深度。  
   
- [in]*imageList*  
- 參考`CMFCToolbarImages`物件，其中包含要加入的影像。  
+*ImageList*<br/>
+[in]參考`CMFCToolbarImages`物件，其中包含要加入的影像。  
   
- [in]*nIndex*  
- 在來源中的索引`CMFCToolbarImages`要加入影像的物件。  
+*nIndex*<br/>
+[in]在來源中的索引`CMFCToolbarImages`要加入影像的物件。  
   
 ### <a name="return-value"></a>傳回值  
  工具列數目映像，`CMFCToolBarImages`成功; 加入新的點陣圖之後，物件會維護為-1，如果作業失敗。  
@@ -397,8 +397,8 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*imageList*  
- 工具列影像，做為來源使用的映像清單。  
+*ImageList*<br/>
+[in]工具列影像，做為來源使用的映像清單。  
   
 ### <a name="return-value"></a>傳回值  
  一律會傳回 TRUE。  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bmp*  
- [in]*clrTransparent*  
+*bmp*<br/>
+[in][in]*clrTransparent*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -431,8 +431,8 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iImage*  
- 指定要刪除之影像的以零為起始的索引。  
+*iImage*<br/>
+[in]指定要刪除之影像的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 刪除映像，則為 TRUE。如果映像索引無效，則為 FALSE`CMFCToolbarImages`物件是暫時性的`CMFCToolbarImages`物件不包含使用者定義的映像，或如果某些其他錯誤。  
@@ -455,35 +455,35 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*x*  
- 左側影像所要繪製的矩形的 X 座標。  
+*x*<br/>
+[in]左側影像所要繪製的矩形的 X 座標。  
   
- [in]*y*  
- 影像所要繪製的矩形頂端的 Y 座標。  
+*y*<br/>
+[in]影像所要繪製的矩形頂端的 Y 座標。  
   
- [in]*iImageIndex*  
- 要顯示之影像的以零為起始的索引。  
+*iImageIndex*<br/>
+[in]要顯示之影像的以零為起始的索引。  
   
- [in]*bHilite*  
- 如果影像是否會反白顯示;，則為 TRUE。否則為 FALSE。  
+*bHilite*<br/>
+[in]如果影像是否會反白顯示;，則為 TRUE。否則為 FALSE。  
   
- [in]*bDisabled*  
- 如果影像繪製已停用的樣式; 中，則為 TRUE。否則為 FALSE。  
+*bDisabled*<br/>
+[in]如果影像繪製已停用的樣式; 中，則為 TRUE。否則為 FALSE。  
   
- [in]*bIndeterminate*  
- 如果影像繪製不定狀態的樣式;，則為 TRUE。否則為 FALSE。  
+*bIndeterminate*<br/>
+[in]如果影像繪製不定狀態的樣式;，則為 TRUE。否則為 FALSE。  
   
- [in]*bShadow*  
- 具有延伸陰影; 要繪製影像時，則為 TRUE。否則為 FALSE。  
+*bShadow*<br/>
+[in]具有延伸陰影; 要繪製影像時，則為 TRUE。否則為 FALSE。  
   
- [in]*bInactive*  
- 如果影像繪製非作用中狀態的樣式;，則為 TRUE。否則為 FALSE。  
+*bInactive*<br/>
+[in]如果影像繪製非作用中狀態的樣式;，則為 TRUE。否則為 FALSE。  
   
- [in]*alphaSrc*  
- Alpha 色頻 (opacity) 值。 值為 255 表示映像會繪製不透明。 值為 0 表示影像的繪製透明。 僅適用於 32 位元彩色影像和顯示 Windows Vista 玻璃樣式的映像，則會使用此值。  
+*alphaSrc*<br/>
+[in]Alpha 色頻 (opacity) 值。 值為 255 表示映像會繪製不透明。 值為 0 表示影像的繪製透明。 僅適用於 32 位元彩色影像和顯示 Windows Vista 玻璃樣式的映像，則會使用此值。  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的影像顯示已成功;，則為 TRUE。如果映像索引無效，或是發生其他錯誤，則為 FALSE。  
@@ -506,14 +506,14 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [in]*rect*  
- [in]*iImageIndex*  
- [in]*horzAlign*  
- [in]*vertAlign*  
- [in]*rectSrc*  
- [in]*0*  
- [in]*0)*  
+*pDC*<br/>
+[in][in]*rect*  
+*iImageIndex*<br/>
+[in][in]*horzAlign*  
+*vertAlign*<br/>
+[in][in]*rectSrc*  
+*0*<br/>
+[in][in]*0)*  
  [in]*alphaSrc*  
   
 ### <a name="return-value"></a>傳回值  
@@ -540,8 +540,8 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*ds*  
- 參考`CAfxDrawState`物件傳遞給`PrepareDrawImage`方法。  
+*ds*<br/>
+[in]參考`CAfxDrawState`物件傳遞給`PrepareDrawImage`方法。  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  傳回具有指定的影像索引，從工具列影像的圖示。  
@@ -551,8 +551,8 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 要做為圖示擷取映像所在的映像清單中以零為起始的索引。  
+*nIndex*<br/>
+[in]要做為圖示擷取映像所在的映像清單中以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  控制代碼，以擷取的圖示，則為 NULL 如果*nIndex*超出範圍。  
@@ -567,11 +567,11 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 要填滿矩形座標。  
+*rect*<br/>
+[in]要填滿矩形座標。  
   
 ### <a name="remarks"></a>備註  
  若要使用的系統色彩 COLOR_BTNFACE 和 COLOR_BTNHIGHLIGHT 平均值的色彩填滿矩形，使用這個方法。 如果系統使用較少或 256 色，矩形會填入這兩種色彩的遞色圖樣改為。  
@@ -629,8 +629,8 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bDest*  
- TRUE 表示擷取目的地大小;如果為 false，則擷取來源映像大小。  
+*bDest*<br/>
+[in]TRUE 表示擷取目的地大小;如果為 false，則擷取來源映像大小。  
   
 ### <a name="return-value"></a>傳回值  
  A`SIZE`結構，指定影像的大小，單位為像素。  
@@ -719,8 +719,8 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiResId*  
- 映像資源識別碼。  
+*uiResId*<br/>
+[in]映像資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 映像索引如果不存在具有指定的資源識別碼的映像，為-1。  
@@ -744,8 +744,8 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nGrayImageLuminancePercentage*  
- 明亮度百分比。  
+*nGrayImageLuminancePercentage*<br/>
+[in]明亮度百分比。  
   
 ### <a name="return-value"></a>傳回值  
  如果在集合中的映像已成功; 呈現灰色，則為 TRUE。否則為 FALSE。  
@@ -844,20 +844,20 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiResID*  
- 點陣圖資源的識別碼。  
+*uiResID*<br/>
+[in]點陣圖資源的識別碼。  
   
- [in]*hinstRes*  
- 資源 DLL 的執行個體。  
+*hinstRes*<br/>
+[in]資源 DLL 的執行個體。  
   
- [in]*bAdd*  
- 若要將取代現有的點陣圖載入的點陣圖為現有的點陣圖，或 FALSE，則為 TRUE。  
+*bAdd*<br/>
+[in]若要將取代現有的點陣圖載入的點陣圖為現有的點陣圖，或 FALSE，則為 TRUE。  
   
- [in]*lpszBmpFileName*  
- 要從中載入點陣圖到磁碟檔案的路徑。  
+*lpszBmpFileName*<br/>
+[in]要從中載入點陣圖到磁碟檔案的路徑。  
   
- [in]*nMaxFileSize*  
- 點陣圖檔案中的位元組數目上限或 0，以載入點陣圖，不論檔案大小。 如果檔案的大小超過此大小上限，此方法會傳回 FALSE，並不會載入點陣圖。  
+*nMaxFileSize*<br/>
+[in]點陣圖檔案中的位元組數目上限或 0，以載入點陣圖，不論檔案大小。 如果檔案的大小超過此大小上限，此方法會傳回 FALSE，並不會載入點陣圖。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 載入點陣圖，則為 TRUE。否則為 FALSE。  
@@ -876,8 +876,8 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszResourceName*  
- [in]*hinstRes*  
+*lpszResourceName*<br/>
+[in][in]*hinstRes*  
  [in]*bAdd*  
   
 ### <a name="return-value"></a>傳回值  
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- [in]*bUseRGBQUAD*  
+*色彩*<br/>
+[in][in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -912,8 +912,8 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bUseRGBQUAD*  
- [in]*clrSrc*  
+*bUseRGBQUAD*<br/>
+[in][in]*clrSrc*  
  [in]*clrDest*  
   
 ### <a name="return-value"></a>傳回值  
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- [in]*bUseRGBQUAD*  
+*色彩*<br/>
+[in][in]*bUseRGBQUAD*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -974,11 +974,11 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*hbmp*  
- 鏡像的點陣圖控制代碼。  
+*hbmp*<br/>
+[in、 out]鏡像的點陣圖控制代碼。  
   
- [in]*cxImage*  
- 單位為像素影像的寬度。  
+*cxImage*<br/>
+[in]單位為像素影像的寬度。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功地是否已鏡像化映像，則為 TRUE否則為 FALSE。  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hbmp*  
- [in]*cyImage*  
+*hbmp*<br/>
+[in][in]*cyImage*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hbmp*  
- [in]*bAutoCheckPremlt*  
+*hbmp*<br/>
+[in][in]*bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1066,14 +1066,14 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*ds*  
- 參考`CAfxDrawState`結構，其中儲存影像轉譯階段之間配置的資源。  
+*ds*<br/>
+[in]參考`CAfxDrawState`結構，其中儲存影像轉譯階段之間配置的資源。  
   
- [in]*sizeImageDest*  
- 指定的目的端影像的大小。  
+*sizeImageDest*<br/>
+[in]指定的目的端影像的大小。  
   
- [in]*bFadeInactive*  
- 如果您想要繪製非作用中的映像較淡的則為 TRUE。  
+*bFadeInactive*<br/>
+[in]如果您想要繪製非作用中的映像較淡的則為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  如果要繪製的工具列影像所需的資源配置成功，否則為 FALSE，則為 TRUE。  
@@ -1118,8 +1118,8 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*n 值*  
- 新的 alpha 色頻值。  
+*n 值*<br/>
+[in]新的 alpha 色頻值。  
   
 ### <a name="remarks"></a>備註  
  這個方法可用於設定自訂的 alpha 值，已停用的映像。 預設值為 127，因此是半透明的已停用的按鈕映像。 如果您設定的值為 0，已停用的映像會完全透明。 如果您設定的值為 255，則會有已停用的映像是完全不透明。  
@@ -1146,8 +1146,8 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*sizeImage*  
- 工具列影像的新大小。  
+*sizeImage*<br/>
+[in]工具列影像的新大小。  
   
 ### <a name="remarks"></a>備註  
  根據預設工具列影像的大小為 16x15 像素為單位。 如果您想要使用不同大小的工具列影像，請呼叫這個方法。  
@@ -1205,8 +1205,8 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*clrTransparent*  
- RGB 值。  
+*clrTransparent*<br/>
+[in]RGB 值。  
   
 ### <a name="return-value"></a>傳回值  
  先前的透明色彩。  
@@ -1224,11 +1224,11 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iImage*  
- 要更新之影像的以零為起始的索引。  
+*iImage*<br/>
+[in]要更新之影像的以零為起始的索引。  
   
- [in]*hbmp*  
- 點陣圖控制代碼從用來更新映像。  
+*hbmp*<br/>
+[in]點陣圖控制代碼從用來更新映像。  
   
 ### <a name="return-value"></a>傳回值  
  如果已順利更新映像，則為 TRUE。如果影像清單不是使用者定義或暫存的則為 FALSE。  

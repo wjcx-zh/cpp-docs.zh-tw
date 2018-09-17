@@ -1,5 +1,5 @@
 ---
-title: -BIND |Microsoft 文件
+title: -將繫結 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b77c778017dc78235948e8d23db136c1f63ab12d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a47004ce41d6bae3d91a81c4a61a712bc31dfbdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372427"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725890"
 ---
 # <a name="bind"></a>/BIND
-```  
-/BIND[:PATH=path]  
-```  
-  
-## <a name="remarks"></a>備註  
- 這個選項會設定為可執行檔或 DLL 的匯入位址資料表中的進入點的位址。 使用此選項，以降低載入程式的時間。  
-  
- 指定程式的可執行檔和 Dll 中的*檔案*EDITBIN 命令列上的引數。 選擇性*路徑*/BIND 引數指定的位置指定的檔案所使用的 dll。 請以分號隔開多個目錄 (**;**)。 如果*路徑*未指定，EDITBIN 搜尋 PATH 環境變數中指定的目錄。 如果*路徑*會指定 EDITBIN 忽略 PATH 變數。  
-  
- 根據預設，程式載入器載入程式時設定的進入點的位址。 此程序所花費的時間會有所差異，取決於 Dll 的數字和程式中參考的進入點的數目。 如果程式已修改其中 /BIND，且基底位址的可執行檔和 Dll 不會衝突已經載入的 Dll，如果作業系統不需要設定這些位址。 不正確地以檔案的情況下，作業系統重新放置到程式的 Dll，並重新計算的進入點位址，以將新增到程式的載入時間。  
-  
-## <a name="see-also"></a>另請參閱  
- [EDITBIN 選項](../../build/reference/editbin-options.md)
+
+```
+/BIND[:PATH=path]
+```
+
+## <a name="remarks"></a>備註
+
+這個選項會設定為可執行檔或 DLL 的匯入位址表格中的進入點位址。 使用此選項，以降低載入程式的時間。
+
+指定程式的可執行檔和中的 Dll*檔案*EDITBIN 命令列上的引數。 選擇性*路徑*/BIND 引數會指定所指定的檔案使用的 Dll 的位置。 以分號分隔多個目錄 (**;**)。 如果*路徑*未指定，EDITBIN 搜尋路徑環境變數中指定的目錄。 如果*路徑*會指定 EDITBIN 忽略 PATH 變數。
+
+根據預設，程式載入器載入程式時設定進入點的位址。 此程序所花費的時間量會根據 Dll 的數字和程式中參考的進入點的數目而有所不同。 如果程式已修改其中 /BIND，而且如果基底位址的可執行檔，而且其 Dll 尚未載入的 Dll 不會衝突，作業系統就不需要設定這些位址。 不正確地以檔案的情況下，作業系統會重新放置到程式的 Dll，並重新計算的進入點位址，這會新增至程式的載入時間。
+
+## <a name="see-also"></a>另請參閱
+
+[EDITBIN 選項](../../build/reference/editbin-options.md)

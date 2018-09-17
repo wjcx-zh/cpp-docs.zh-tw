@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e61f1ac30c2a50cbbefe6c0cbd9e28011a0d0bd
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb24ed970d3b02835d5545cb0eaf1d9fd8e81c7e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572338"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713423"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (使用多處理序建置)
 
@@ -127,7 +127,7 @@ Visual Studio 會使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工
 
 您的方案建置時間有一部分取決於執行組建的處理序數目。 *數字*引數[/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 選項會指定要同時建置的專案數目上限。 同樣地， *processMax*引數 **/MP**編譯器選項會指定要同時建置的編譯單位的數目上限。 如果 **/maxcpucount**選項會指定*P*專案並 **/MP**選項指定*C*處理時，最多*P* x *C*在同一時間執行的處理程序。
 
- 決定是否要使用 MSBuild 的指導方針或 **/MP**技術如下所示：
+決定是否要使用 MSBuild 的指導方針或 **/MP**技術如下所示：
 
 - 如果有與每個專案中的幾個檔案的許多專案，使用 MSBuild 工具。
 

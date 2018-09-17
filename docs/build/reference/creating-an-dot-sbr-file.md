@@ -1,5 +1,5 @@
 ---
-title: 建立。Sbr 檔案 |Microsoft 文件
+title: 建立。Sbr 檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdada1f4d07d02988da388e39e332c832f633adb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac872dd13458c3fe15971f30a72b06e5510c5bd0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371079"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723680"
 ---
 # <a name="creating-an-sbr-file"></a>建立 .Sbr 檔
-BSCMAKE 的輸入的檔是.sbr 檔案。 編譯器會建立.sbr 檔案以供在編譯每個目的檔 (.obj)。 當您建立或更新您的瀏覽資訊檔時，為您的專案的所有.sbr 檔必須都是可用磁碟空間。  
-  
- 若要建立的.sbr 檔與所有可能的資訊，請指定[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)。  
-  
- 若要建立不含本機符號的.sbr 檔案，請指定[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)。 如果.sbr 檔包含本機符號時，您可以仍然省略它們從.bsc 檔使用 BSCMAKE 的[/El 選項](../../build/reference/bscmake-options.md)`.`  
-  
- 您可以建立的.sbr 檔案而不執行完整的編譯。 例如，您可以指定 /Zs 選項，編譯器將執行語法檢查以及仍產生的.sbr 檔案，如果您指定 /FR 的話。  
-  
- 在建置程序可以更有效率的.sbr 檔案會先封裝移除未參考的定義。 編譯器會自動套件.sbr 檔案。  
-  
-## <a name="see-also"></a>另請參閱  
- [建置 .Bsc 檔](../../build/reference/building-a-dot-bsc-file.md)
+
+BSCMAKE 的輸入的檔是.sbr 檔案。 編譯器會建立.sbr 檔案以供編譯每個目的檔 (.obj)。 當您建立或更新您的瀏覽資訊檔時，為您的專案的所有.sbr 檔必須都是在磁碟上使用。
+
+若要建立的.sbr 檔案與所有可能的資訊，請指定[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)。
+
+若要建立的.sbr 檔案中不含本機符號，指定[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)。 如果的.sbr 檔案包含本機符號，您可以仍然從省略.bsc 檔使用 BSCMAKE 的[/El 選項](../../build/reference/bscmake-options.md)`.`
+
+您可以建立的.sbr 檔案，而不執行完整的編譯。 例如，您可以在其中指定 /Zs 選擇編譯器執行語法檢查，並仍產生的.sbr 檔案，如果您指定 /FR 的話。
+
+建置程序可能更有效率，如果的.sbr 檔案會先封裝以移除未參考的定義。 編譯器會自動套件.sbr 檔案。
+
+## <a name="see-also"></a>另請參閱
+
+[建置 .Bsc 檔](../../build/reference/building-a-dot-bsc-file.md)

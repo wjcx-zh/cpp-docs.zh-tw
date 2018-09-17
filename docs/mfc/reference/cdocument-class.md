@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 16f812fc941284122ce2a869786ae73447bff83a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337498"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722627"
 ---
 # <a name="cdocument-class"></a>CDocument 類別
 提供使用者定義的文件類別的基本功能。  
@@ -659,8 +659,8 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*deEvent*  
- 列舉的資料類型，描述事件的型別。  
+*deEvent*<br/>
+[in]列舉的資料類型，描述事件的型別。  
   
 ### <a name="remarks"></a>備註  
  文件事件可能會影響多個類別。 這個方法會負責處理而不會影響類別的文件事件[CDocument 類別](../../mfc/reference/cdocument-class.md)。 目前，唯一必須回應文件事件的類別是[CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)。 `CDocument`類別有其他可覆寫方法負責處理效果`CDocument`。  

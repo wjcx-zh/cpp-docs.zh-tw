@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc3be9fb25b6593f4b69f846394544b7b7d756a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715529"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -49,26 +49,26 @@ function declaration
 *name*  
 會在.idl 檔中的程式碼區塊的使用者定義的名稱。
 
-*dllname* （選擇性）  
-包含匯出的.dll 檔案。
+*dllname*  
+（選擇性）包含匯出的.dll 檔案。
 
-*uuid* （選擇性）  
-唯一 ID。
+*uuid*  
+（選擇性）唯一的識別碼。
 
-*helpstring* （選擇性）  
-字元字串，用來描述類型程式庫。
+*helpstring*  
+（選擇性）字元字串，用來描述類型程式庫。
 
-*helpstringcontext* （選擇性）  
-.Hlp 或.chm 檔案中的 [說明] 主題的識別碼。
+*helpstringcontext*  
+（選擇性）.Hlp 或.chm 檔案中的 [說明] 主題的識別碼。
 
-*helpcontext* （選擇性）  
-此類型程式庫的說明識別碼。
+*helpcontext*  
+（選擇性）這個類型程式庫說明識別碼。
 
-*隱藏*（選擇性）  
-避免程式庫顯示為參數。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
+*hidden*  
+（選擇性）避免程式庫顯示為參數。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
 
-*限制*（選擇性）  
-程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
+*restricted*  
+（選擇性）程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
 
 *函式宣告*  
 您將定義的函式。

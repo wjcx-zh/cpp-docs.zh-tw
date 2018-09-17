@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07581805edd92e5b577889c8dfb12c5cf08ac20b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b035f496a8daf34334d6e3a6690046c862795dc9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714554"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 `CNetAddressCtrl` 類別表示網路位址控制項，您可以用來輸入和驗證 IPv4、IPv6 和具名 DNS 位址的格式。  
@@ -127,10 +127,10 @@ virtual BOOL Create(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*cheaderctrl:: Create*|若要套用至控制項的樣式的位元組合。 如需詳細資訊，請參閱 <<c0> [ 編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
-|[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[in]*nID*|控制項的 ID。|  
+|*cheaderctrl:: Create*|[in]若要套用至控制項的樣式的位元組合。 如需詳細資訊，請參閱 <<c0> [ 編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
+|*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
+|*pParentWnd*|[in]非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
+|*nID*|[in]控制項的 ID。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -151,11 +151,11 @@ virtual BOOL CreateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|位元組合 (OR) 套用至控制項的延伸樣式。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|  
-|[in]*cheaderctrl:: Create*|位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
-|[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[in]*pParentWnd*|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[in]*nID*|控制項的 ID。|  
+|*dwExStyle*|[in]位元組合 (OR) 套用至控制項的延伸樣式。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|  
+|*cheaderctrl:: Create*|[in]位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
+|*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
+|*pParentWnd*|[in]非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
+|*nID*|[in]控制項的 ID。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -183,10 +183,9 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ```  
   
 ### <a name="parameters"></a>參數  
-  
-|參數|描述|  
-|---------------|-----------------|  
-|[in、 out]*pAddress*|指標[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)結構。  設定*pAddrInfo*屬於此結構的位址[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)結構，然後再呼叫 GetAddress 方法。|  
+
+*pAddress*<br/>
+[in、 out]指標[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)結構。  設定*pAddrInfo*屬於此結構的位址[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)結構，然後再呼叫 GetAddress 方法。
   
 ### <a name="return-value"></a>傳回值  
  值為 S_OK，如果這個方法成功，否則，COM 錯誤碼。 如需可能的錯誤碼的詳細資訊，請參閱的傳回值區段[NetAddr_GetAddress](/windows/desktop/api/shellapi/nf-shellapi-netaddr_getaddress)巨集。  
@@ -222,7 +221,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwAddrMask*|網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱 < [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
+|*dwAddrMask*|[in]網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱 < [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法會成功則為 S_OK否則，COM 錯誤碼。  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fda6ac3336b1f2a5e910355b5460633916b0803
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894651"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712370"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (插入偵錯程式庫的 PCH 參考)
 
@@ -31,16 +31,16 @@ ms.locfileid: "43894651"
 
 ## <a name="syntax"></a>語法
 
->**/Yl**  
->**/Yl**_名稱_  
->**/Yl-**  
+>**/Yl**
+> **/Yl**_名稱_
+> **/Yl-**
 
 ### <a name="arguments"></a>引數
 
-*name*  
+*name*<br/>
 選擇性的名稱，做為唯一的符號的一部分。
 
-*\-*  
+*\-*<br/>
 虛線 （-） 明確停用 **/Yl**編譯器選項。
 
 ## <a name="remarks"></a>備註
@@ -75,5 +75,5 @@ ms.locfileid: "43894651"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)  
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)  
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)

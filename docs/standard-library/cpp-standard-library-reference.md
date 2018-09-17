@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc6c665309f51044f00b05931500065ed087e774
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841202"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722601"
 ---
 # <a name="c-standard-library-reference"></a>C++ 標準程式庫參考
 
@@ -32,7 +32,7 @@ C++ 程式可以透過 C++ 標準程式庫的這個合格實作呼叫大量函�
 
 ## <a name="in-this-section"></a>本節內容
 
-[C + + 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)提供 c + + 標準程式庫的 Microsoft 實作的概觀。
+[C + + 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)提供之 Microsoft 實作的 c + + 標準程式庫的概觀。
 
 [iostream 程式設計](../standard-library/iostream-programming.md)提供 iostream 程式設計的概觀。
 

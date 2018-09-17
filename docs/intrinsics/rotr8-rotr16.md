@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a667f857621c01900165f6e93de7f7bddc837915
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 936113d2b59bf089179c6f0c016c8a91c5edc74d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541560"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715815"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 **Microsoft 專屬**  
@@ -44,11 +44,11 @@ unsigned short _rotr16(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `value`  
- 要旋轉的值。  
+*值*<br/>
+[in]要旋轉的值。  
   
- [in] `shift`  
- 要旋轉的位元數。  
+*shift*<br/>
+[in]若要旋轉的位元數。  
   
 ## <a name="return-value"></a>傳回值  
  旋轉的值。  

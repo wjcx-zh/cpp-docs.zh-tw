@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335954"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716297"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 `CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIDTemplate*  
- 對話方塊範本資源識別碼。  
+*nIDTemplate*<br/>
+[in]對話方塊範本資源識別碼。  
   
- [in]*lpszTemplateName*  
- 對話方塊範本資源名稱。  
+*lpszTemplateName*<br/>
+[in]對話方塊範本資源名稱。  
   
- [in]*pParent*  
- 父視窗的指標。 預設值是 NULL。  
+*pParent*<br/>
+[in]父視窗的指標。 預設值是 NULL。  
   
- [in]*pParentWnd*  
- 父視窗的指標。 預設值是 NULL。  
+*pParentWnd*<br/>
+[in]父視窗的指標。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- RGB 色彩值。  
+*色彩*<br/>
+[in]RGB 色彩值。  
   
- [in]*bRepaint*  
- 若要立即更新畫面; TRUE否則為 FALSE。 預設值為 TRUE。  
+*bRepaint*<br/>
+[in]若要立即更新畫面; TRUE否則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hBitmap*  
- 背景影像控制代碼。  
+*hBitmap*<br/>
+[in]背景影像控制代碼。  
   
- [in]*uiBmpResId*  
- 背景影像的資源識別碼。  
+*uiBmpResId*<br/>
+[in]背景影像的資源識別碼。  
   
- [in]*位置*  
- 其中一個`CDialogEx::BackgroundLocation`指定映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 預設值是 BACKGR_TILE。  
+*location*<br/>
+[in]其中一個`CDialogEx::BackgroundLocation`指定映像的位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 預設值是 BACKGR_TILE。  
   
- [in]*bAutoDestroy*  
- 為 true，則會自動終結背景影像否則為 FALSE。  
+*bAutoDestroy*<br/>
+[in]為 true，則會自動終結背景影像否則為 FALSE。  
   
- [in]*bRepaint*  
- 若要立即重繪對話方塊中，TRUE否則為 FALSE。  
+*bRepaint*<br/>
+[in]若要立即重繪對話方塊中，TRUE否則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  在第二個方法多載的語法，為 true，則如果方法成功，否則為 FALSE。  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90b96181dc3d48edbe6f58923e62d4fd1259f3c0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541385"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723927"
 ---
 # <a name="movsd"></a>__movsd
 **Microsoft 專屬**  
@@ -41,14 +41,14 @@ void __movsd(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸出] `Dest`  
- 作業的目的地。  
+*目的地*<br/>
+[out]作業的目的地。  
   
- [輸入] `Source`  
- 作業的來源。  
+*Source*<br/>
+[in]作業的來源。  
   
- [輸入] `Count`  
- 若要複製的雙字組數目。  
+*計數*<br/>
+[in]若要複製的雙字組數目。  
   
 ## <a name="requirements"></a>需求  
   

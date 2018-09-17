@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b21651bdab6bf2e4603a8fa012480a6201e34b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: db5c1ee0a381d45ce951c627d5f59bfb6eb97ea3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336214"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724824"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 類別
 在衍生的視覺管理員與 Windows 佈景主題 API 之間的層。  
@@ -136,25 +136,25 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標  
+*pDC*<br/>
+[in]裝置內容的指標  
   
- [in]*rect*  
- 核取方塊的週框。  
+*rect*<br/>
+[in]核取方塊的週框。  
   
- [in]*bHighlighted*  
- 指定核取方塊會反白顯示。  
+*bHighlighted*<br/>
+[in]指定核取方塊會反白顯示。  
   
- [in]*nState*  
- 0 適用於已檢查的標準，未選取，1  
+*nState*<br/>
+[in] 0 適用於已檢查的標準，未選取，1  
   
  適用於混合的標準 2。  
   
- [in]*bEnabled*  
- 指定是否要啟用此核取方塊。  
+*bEnabled*<br/>
+[in]指定是否要啟用此核取方塊。  
   
- [in]*bPressed*  
- 指定是否已按下核取方塊。  
+*bPressed*<br/>
+[in]指定是否已按下核取方塊。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -181,20 +181,20 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 下拉式方塊框線的週框。  
+*rect*<br/>
+[in]下拉式方塊框線的週框。  
   
- [in]*bDisabled*  
- 指定是否要停用下拉式方塊框線。  
+*bDisabled*<br/>
+[in]指定是否要停用下拉式方塊框線。  
   
- [in]*bIsDropped*  
- 指定是否要向下卸除下拉式方塊框線。  
+*bIsDropped*<br/>
+[in]指定是否要向下卸除下拉式方塊框線。  
   
- [in]*bIsHighlighted*  
- 指定下拉式方塊框線會反白顯示。  
+*bIsHighlighted*<br/>
+[in]指定下拉式方塊框線會反白顯示。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pDC*|裝置內容的指標。|  
-|[in]*rect*|下拉式方塊下拉式按鈕的週框。|  
-|[in]*bDisabled*|指定是否要停用下拉式方塊下拉式按鈕。|  
-|[in]*bIsDropped*|指定是否要向下卸除下拉式方塊下拉式按鈕。|  
-|[in]*bIsHighlighted*|指定下拉式方塊下拉式按鈕已反白顯示。|  
+|*pDC*|[in]裝置內容指標。|  
+|*rect*|[in]下拉式方塊下拉式按鈕的週框。|  
+|*bDisabled*|[in]指定是否要停用下拉式方塊下拉式按鈕。|  
+|*bIsDropped*|[in]指定是否要向下卸除下拉式方塊下拉式按鈕。|  
+|*bIsHighlighted*|[in]指定下拉式方塊下拉式按鈕已反白顯示。|  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 週框的按鈕。  
+*rect*<br/>
+[in]週框的按鈕。  
   
- [in]*pButton*  
- 指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)来繪製物件。  
+*pButton*<br/>
+[in]指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)来繪製物件。  
   
- [in]*uiState*  
- 忽略。 狀態取自*pButton*。  
+*uiState*<br/>
+[in]略過。 狀態取自*pButton*。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -265,23 +265,23 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 選項按鈕的週框。  
+*rect*<br/>
+[in]選項按鈕的週框。  
   
- [in]*bHighlighted*  
- 指定的選項按鈕已反白顯示。  
+*bHighlighted*<br/>
+[in]指定的選項按鈕已反白顯示。  
   
- [in]*bChecked*  
- 指定是否要檢查的選項按鈕。  
+*bChecked*<br/>
+[in]指定是否要檢查的選項按鈕。  
   
- [in]*bEnabled*  
- 指定是否要啟用的選項按鈕。  
+*bEnabled*<br/>
+[in]指定是否要啟用的選項按鈕。  
   
- [in]*bPressed*  
- 指定是否已按下選項按鈕。  
+*bPressed*<br/>
+[in]指定是否已按下選項按鈕。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -303,32 +303,32 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pStatusBar*  
- 狀態列指標。 這個值會被忽略。  
+*pStatusBar*<br/>
+[in]狀態列指標。 這個值會被忽略。  
   
- [in]*rectProgress*  
- 進度列中的週框矩形*pDC*座標。  
+*rectProgress*<br/>
+[in]進度列中的週框矩形*pDC*座標。  
   
- [in]*nProgressTotal*  
- 整體進度值。  
+*nProgressTotal*<br/>
+[in]整體進度值。  
   
- [in]*nProgressCurr*  
- 目前的進度值。  
+*nProgressCurr*<br/>
+[in]目前的進度值。  
   
- [in]*clrBar*  
- 開始色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
+*clrBar*<br/>
+[in]開始色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
   
- [in]*clrProgressBarDest*  
- 結束色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
+*clrProgressBarDest*<br/>
+[in]結束色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
   
- [in]*clrProgressText*  
- 進度的文字色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 所定義的文字色彩`afxGlobalData.clrBtnText`。  
+*clrProgressText*<br/>
+[in]進度的文字色彩。 `CMFCBaseVisualManager` 會忽略這種情況。 所定義的文字色彩`afxGlobalData.clrBtnText`。  
   
- [in]*bProgressText*  
- 指定是否要顯示進度的文字。  
+*bProgressText*<br/>
+[in]指定是否要顯示進度的文字。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  
@@ -344,14 +344,14 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pBar*  
- 應該繪製其背景窗格指標。  
+*pBar*<br/>
+[in]應該繪製其背景窗格指標。  
   
- [in]*rectClient*  
- 要填滿區域的周框。  
+*rectClient*<br/>
+[in]要填滿區域的周框。  
   
 ### <a name="return-value"></a>傳回值  
  如果已啟用佈景主題的 API，則為 TRUE。否則為 FALSE。  

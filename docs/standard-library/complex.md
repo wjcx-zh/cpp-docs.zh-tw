@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726696"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ ms.locfileid: "38965665"
 
 藉由代表複數*z* = (， *b*) 形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，規則可以套用的實際數字集合的代數，一組複數集合和其分量。 例如: 
 
-   (1 + 2*i*) \* (2 + 3*i*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*i*  
-   = -4 + 7*i*
+   (1 + 2*我*) \* (2 + 3*我*) = 1 \* (2 + 3*我*) + 2*我* \* (2 + 3*i*)= (2 + 3*我*) + (4*我*+ 6*我*<sup>2</sup>) = (2-6) + （3 + 4）*我*=-4 + 7*我*
 
 複數系統為體，但不為有序體。 任何排序複數的因為沒有欄位的實際數字和其子集，所以不等式不適用於複數至實際數字。
 

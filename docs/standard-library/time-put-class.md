@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02c4c537f1a420a096fbcd979580ff7b10076845
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106752"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719949"
 ---
 # <a name="timeput-class"></a>time_put 類別
 
@@ -45,10 +45,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*  
+*CharType*<br/>
 用於程式內部字元編碼的類型。
 
-*OutputIterator*  
+*OutputIterator*<br/>
 時間 put 函式將其輸出寫入其中的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-*next*  
+*next*<br/>
 輸出迭代器，其中的字元序列代表插入的日期與時間。
 
-*_Iosbase*  
+*_Iosbase*<br/>
 未使用。
 
-*_Pt*  
+*_Pt*<br/>
 輸出的日期和時間資訊。
 
-*_Fmt*  
+*_Fmt*<br/>
 輸出的格式。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*  
+*_Mod*<br/>
 格式修飾詞。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>傳回值
@@ -171,28 +171,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>參數
 
-*next*  
+*next*<br/>
 輸出迭代器，其中的字元序列代表插入的日期與時間。
 
-*_Iosbase*  
+*_Iosbase*<br/>
 未使用。
 
-*_Fill*  
+*_Fill*<br/>
 類型字元`CharType`空間所使用。
 
-*_Pt*  
+*_Pt*<br/>
 輸出的日期和時間資訊。
 
-*_Fmt*  
+*_Fmt*<br/>
 輸出的格式。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*  
+*_Mod*<br/>
 格式修飾詞。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*first*  
+*first*<br/>
 輸出的格化式字串開頭。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*最後一個*  
+*最後一個*<br/>
 輸出的格化式字串結尾。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>傳回值

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540776"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720131"
 ---
 # <a name="movsb"></a>__movsb
 **Microsoft 專屬**  
@@ -41,14 +41,14 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸出] `Destination`  
- 若要複製的目的地的指標。  
+*目的地*<br/>
+[out]若要複製的目的地的指標。  
   
- [輸入] `Source`  
- 要複製的來源指標。  
+*Source*<br/>
+[in]要複製的來源指標。  
   
- [輸入] `Count`  
- 要複製的位元組數目。  
+*計數*<br/>
+[in]要複製的位元組數目。  
   
 ## <a name="requirements"></a>需求  
   

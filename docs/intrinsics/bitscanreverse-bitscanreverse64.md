@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe9fc90556c15cdab13f68647f07b877aa15abf
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ab174484cb305e26c23d1c1d6b5e573341c9035c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538616"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716960"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 **Microsoft 專屬**  
@@ -47,11 +47,11 @@ unsigned char _BitScanReverse64(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸出] `Index`  
- 會使用找到的第一個設定位元 (1) 的位元位置載入。  
+*Tuple*<br/>
+[out]會使用找到的第一個設定位元 (1) 的位元位置載入。  
   
- [in] `Mask`  
- 要搜尋的 32 位元或 64 位元值。  
+*遮罩*<br/>
+[in]要搜尋的 32 位元或 64 位元值。  
   
 ## <a name="return-value"></a>傳回值  
  如果已設定 `Index` 則為非零，如果找不到設定位元則為 0。  

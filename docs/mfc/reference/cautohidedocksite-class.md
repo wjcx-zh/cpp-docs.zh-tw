@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f36d6231cfce86314be082a77a39034b619741ad
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5778b5be050fec50d30215a8b9cef2ca6e4b6dd4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336939"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709679"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 類別
 `CAutoHideDockSite`擴充[CDockSite 類別](../../mfc/reference/cdocksite-class.md)以實作自動隱藏固定窗格。  
@@ -115,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pBar*|Framework 測試 [基底] 窗格。|  
+|*pBar*|[in]Framework 測試 [基底] 窗格。|  
   
 ### <a name="return-value"></a>傳回值  
  則為 TRUE *pBar*衍生自`CMFCAutoHideBar`;FALSE 否則。  
@@ -138,9 +138,9 @@ virtual void DockPane(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWnd*|Framework 停駐窗格。|  
-|[in]*dockMethod*|停駐窗格的選項。|  
-|[in]*lpRect*|指定停駐窗格的界限的矩形。|  
+|*pWnd*|[in]Framework 停駐窗格。|  
+|*dockMethod*|[in]停駐窗格的選項。|  
+|*lpRect*|[in]指定停駐窗格的界限的矩形。|  
   
 ### <a name="remarks"></a>備註  
  預設實作不會使用參數*dockMethod*，其可供未來使用。  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*rect*|矩形的參考。 方法會儲存停駐位置的大小，這個矩形中。|  
+|*rect*|[in]矩形的參考。 方法會儲存停駐位置的大小，這個矩形中。|  
   
 ### <a name="remarks"></a>備註  
  這樣就不必包含矩形被調整位移的邊界。  
@@ -182,8 +182,8 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nOffset*  
- 新的位移。  
+*nOffset*<br/>
+[in]新的位移。  
   
 ### <a name="remarks"></a>備註  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)物件會以靜態方式上放置`CAutoHideDockSite`物件。 這表示使用者無法以手動方式變更的位置`CMFCAutoHideBar`物件。 `SetOffsetLeft`方法控制最左邊的左下方之間的間距`CMFCAutoHideBar`左邊的`CAutoHideDockSite`。  
@@ -196,8 +196,8 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nOffset*  
- 新的位移。  
+*nOffset*<br/>
+[in]新的位移。  
   
 ### <a name="remarks"></a>備註  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)物件會以靜態方式上放置`CAutoHideDockSite`物件。 這表示使用者無法以手動方式變更的位置`CMFCAutoHideBar`物件。 `SetOffsetRight`方法控制之間的最右邊的右側的間距`CMFCAutoHideBar`和右側`CAutoHideDockSite`。  
@@ -214,7 +214,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*rectNewClientArea*|保留的值。|  
+|*rectNewClientArea*|[in]保留的值。|  
   
 ### <a name="remarks"></a>備註  
  預設實作不會使用*rectNewClientArea*。 它會重新繪製邊界全域工具列和按鈕間距的窗格。  
@@ -231,7 +231,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pAutoHideToolbar*|指標[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)物件 窗格位於`CAutoHideDockSite`。|  
+|*pAutoHideToolbar*|[in]指標[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)物件 窗格位於`CAutoHideDockSite`。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會搜尋包含的資料列*pAutoHideToolbar*。 它會呼叫`CMFCAutoHideBar.UnSetAutoHideMode`所有`CMFCAutoHideBar`該資料列上的物件。 如果*pAutoHideToolbar*找不到或它是 NULL，這個方法會呼叫`CMFCAutoHideBar.UnSetAutoHideMode`所有`CMFCAutoHideBar`物件上`CAutoHideDockSite`。  

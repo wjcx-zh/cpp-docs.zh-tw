@@ -58,12 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eff5cab57c1288af1f6e1109fae458c35e0fa7b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b301483e2c2f76838054059af838b282aee2d523
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611379"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711252"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 內建函式
 **Microsoft 專屬**  
@@ -186,14 +186,14 @@ __int64 _InterlockedCompareExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Destination`  
- 目的地值的指標。 會忽略正負號。  
+*目的地*<br/>
+[in、 out]目的端值的指標。 會忽略正負號。  
   
- [in] `Exchange`  
- 交換值。 會忽略正負號。  
+*Exchange*<br/>
+[in]交換值。 會忽略正負號。  
   
- [in] `Comparand`  
- 要與目的地比較的值。 會忽略正負號。  
+*比較元*<br/>
+[in]要與目的地比較的值。 會忽略正負號。  
   
 ## <a name="return-value"></a>傳回值  
  傳回值是 `Destination` 指標的初始值。  
@@ -202,10 +202,10 @@ __int64 _InterlockedCompareExchange64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchange`、`_InterlockedCompareExchange8`、`_InterlockedCompareExchange16``_InterlockedCompareExchange64`|x86、 x64、 ARM|\<intrin.h>|  
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|  
 |`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|  
-|`_InterlockedCompareExchange_HLEAcquire`、`_InterlockedCompareExchange_HLERelease`、`_InterlockedCompareExchange64_HLEAcquire``_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  `_InterlockedCompareExchange` 會執行不可部分完成的 `Destination` 值與 `Comparand` 值的比較。 如果 `Destination` 值等於 `Comparand` 值，則 `Exchange` 值會儲存在 `Destination` 所指定的位址。 否則，不會執行任何作業。  

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4eddd4ce677adfb51192302357dfbd72be36df3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721496"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -41,11 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-*右邊*  
- 值會指派給位元的項目參考。
+*右邊*<br/>
+值會指派給位元的項目參考。
 
-*val*  
- 要指派給位元的布林值。
+*val*<br/>
+要指派給位元的布林值。
 
 ## <a name="example"></a>範例
 

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707523"
 ---
 # <a name="weakptr-class"></a>weak_ptr 類別
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*Ty*  
- 弱式指標所控制的類型。
+*Ty*<br/>
+弱式指標所控制的類型。
 
 ## <a name="remarks"></a>備註
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-*其他*  
- 引數共用/弱式指標所控制的類型。
+*其他*<br/>
+引數共用/弱式指標所控制的類型。
 
-*wp*  
- 要複製的弱式指標。
+*wp*<br/>
+要複製的弱式指標。
 
-*預存程序*  
- 要複製的共用指標。
+*預存程序*<br/>
+要複製的共用指標。
 
 ### <a name="remarks"></a>備註
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>參數
 
-*ptr*  
- 針對 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 參考。
+*ptr*<br/>
+針對 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>參數
 
-*wp*  
- 要交換的弱式指標。
+*wp*<br/>
+要交換的弱式指標。
 
 ### <a name="remarks"></a>備註
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>參數
 
-*其他*  
- 引數共用/弱式指標所控制的類型。
+*其他*<br/>
+引數共用/弱式指標所控制的類型。
 
-*wp*  
- 要複製的弱式指標。
+*wp*<br/>
+要複製的弱式指標。
 
-*預存程序*  
- 要複製的共用指標。
+*預存程序*<br/>
+要複製的共用指標。
 
 ### <a name="remarks"></a>備註
 

@@ -1,5 +1,5 @@
 ---
-title: .Def 檔案做為連結器輸入 |Microsoft 文件
+title: ..Def 檔作為連結器輸入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e7828154501a067c6b236929a18c51724d3f6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5afb165b33dfa7911e01c1c4368946fd91915a35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370523"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710270"
 ---
 # <a name="def-files-as-linker-input"></a>.Def 檔做為連結器輸入
-請參閱[模組定義 (.def) 檔](../../build/reference/module-definition-dot-def-files.md)如需詳細資訊。 使用[/DEF](../../build/reference/def-specify-module-definition-file.md)指定.def 檔名的選項。  
-  
-## <a name="see-also"></a>另請參閱  
- [LINK 輸入的檔](../../build/reference/link-input-files.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+請參閱[模組定義 (.def) 檔](../../build/reference/module-definition-dot-def-files.md)如需詳細資訊。 使用[/DEF](../../build/reference/def-specify-module-definition-file.md) .def 檔名的選項。
+
+## <a name="see-also"></a>另請參閱
+
+[LINK 輸入檔](../../build/reference/link-input-files.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

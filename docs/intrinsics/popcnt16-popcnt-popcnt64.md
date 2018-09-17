@@ -1,5 +1,5 @@
 ---
-title: __popcnt16、 __popcnt、 __popcnt64 |Microsoft 文件
+title: __popcnt16 __popcnt，__popcnt64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329192"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724729"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
-**Microsoft 特定的**  
+
+**Microsoft 專屬**  
   
- 計算其中數字的 16 位、 32 或 64 位元不帶正負號的整數中的位元 （母體擴展計數）。  
+ 計算的其中一個 16、 32 或 64 位元不帶正負號的整數中的位元 （母體擴展計數）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,11 +49,11 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `value`  
- 16-、 32 或 64 位元不帶正負號的整數，我們想要擴展計數。  
+*值*<br/>
+[in]16、 32 或 64 位元不帶正負號的整數，我們想要的母體擴展的計數。  
   
 ## <a name="return-value"></a>傳回值  
- 中的一個位元數`value`參數。  
+ 中的一個位元數目`value`參數。  
   
 ## <a name="requirements"></a>需求  
   
@@ -65,9 +66,9 @@ unsigned __int64 __popcnt64(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 每個這些內建函式會產生`popcnt`指令。  值的大小，`popcnt`指令會傳回等同於其引數的大小。  在 32 位元模式中有沒有 64 位元一般用途的暫存器，因此沒有 64 位元`popcnt`。  
+ 每個這些內建函式會產生`popcnt`指令。  值的大小，`popcnt`指令會傳回其引數的大小相同。  在 32 位元模式中有無 64 位元一般用途的暫存器，因此沒有 64 位元`popcnt`。  
   
- 若要決定硬體支援的`popcnt`指示，請呼叫`__cpuid`與內建`InfoType=0x00000001`並檢查位元 23 的`CPUInfo[2] (ECX)`。 此位元否則就會支援該指令，則為 1 和 0。 如果您執行程式碼會使用此內建物件不支援的硬體上`popcnt`指令，結果會產生無法預測。  
+ 若要判斷硬體支援`popcnt`指示，請呼叫`__cpuid`與內建`InfoType=0x00000001`並檢查位元 23 的`CPUInfo[2] (ECX)`。 此位元可說是支援的指示，則為 1 和 0。 如果您執行程式碼使用此內建在不支援的硬體上`popcnt`指令，結果會無法預測。  
   
 ## <a name="example"></a>範例  
   
@@ -106,8 +107,9 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32  
 ```  
   
-**結束 Microsoft 特定的**  
- 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+**結束 Microsoft 專屬**  
+
+進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

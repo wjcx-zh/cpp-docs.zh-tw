@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 700c88fa71e82e35602efef768fc5753760a5e1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593476"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709139"
 ---
 # <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
 
@@ -63,11 +63,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>參數
 
-*屬性*（選擇性）  
-其他宣告資訊。 如需有關屬性和屬性類別的詳細資訊，請參閱屬性。
+*屬性*  
+（選擇性）其他宣告資訊。 如需有關屬性和屬性類別的詳細資訊，請參閱屬性。
 
-*修飾詞*（選擇性）  
-函式，例如靜態修飾詞。  **虛擬**不能，因為虛擬方法不可為泛型。
+*修飾詞*  
+（選擇性）函式，例如靜態修飾詞。  **虛擬**不能，因為虛擬方法不可為泛型。
 
 *傳回型別*  
 此方法傳回的型別。 如果傳回的型別為 void，沒有傳回值，則需要的。
@@ -78,8 +78,8 @@ return-type identifier<type-parameter identifier(s)>
 *型別參數識別項*  
 以逗號分隔的識別碼清單。
 
-*型式參數*（選擇性）  
-參數清單。
+*型式參數*  
+（選擇性）參數清單。
 
 *類型參數條件約束-子句*  
 這可作為類型引數，類型上指定的限制，並會在指定的格式[泛型類型參數的條件約束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。

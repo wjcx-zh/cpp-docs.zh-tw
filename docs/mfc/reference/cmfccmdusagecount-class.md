@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853760"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719962"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 類別
 追蹤 Windows 訊息，例如當使用者從功能表選取項目時的使用的計數。  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*uiCmd*|指定命令要計數器遞增。|  
+|*uiCmd*|[in]指定命令要計數器遞增。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會加入新項目指令計數的對應結構`m_CmdUsage`，如果項目不存在。  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*uiCmd*|要擷取 [命令] 計數器的識別碼。|  
+|*uiCmd*|[in]要擷取 [命令] 計數器的識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  與指定的命令識別碼相關聯的使用計數  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*uiCmd*|指定要檢查的命令。|  
+|*uiCmd*|[in]指定要檢查的命令。|  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果經常使用的命令;否則為 0。  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*ar*|A`CArchive`来序列化或物件。|  
+|*ar*|[in]A`CArchive`来序列化或物件。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會序列化的指令計數的對應結構`m_CmdUsage`，和 總命令的用法， `m_nTotalUsage`、 計數器或指定的封存。  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*nStartCount*|所有追蹤的命令新增初始的計數。|  
-|[in]*nMinUsagePercentage*|新的最小的使用量百分比。|  
+|*nStartCount*|[in]所有追蹤的命令新增初始的計數。|  
+|*nMinUsagePercentage*|[in]新的最小的使用量百分比。|  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，FALSE 則為 TRUE *nMinUsagePercentage*參數是大於或等於 100。  

@@ -20,30 +20,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6d73237ac5b4b2ab549de5dba19116aa4e743514
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571565"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709419"
 ---
 # <a name="lib-reference"></a>LIB 參考
-Microsoft 程式庫管理員 (LIB.exe) 會建立並管理通用物件檔案格式 (COFF) 物件檔的程式庫。 LIB 也可用來建立匯出檔案和程式庫匯入參考匯出的定義。  
-  
+
+Microsoft 程式庫管理員 (LIB.exe) 會建立並管理通用物件檔案格式 (COFF) 物件檔的程式庫。 LIB 也可用來建立匯出檔案和程式庫匯入參考匯出的定義。
+
 > [!NOTE]
->  您可以啟動此工具只能從 Visual Studio 命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。  
-  
--   [LIB 概觀](../../build/reference/overview-of-lib.md)  
-  
--   [如何：在 Visual Studio 開發環境中設定 LIB.EXE 選項](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
-  
--   [執行 LIB](../../build/reference/running-lib.md)  
-  
--   [管理程式庫](../../build/reference/managing-a-library.md)  
-  
--   [擷取程式庫成員](../../build/reference/extracting-a-library-member.md)  
-  
--   [與匯入程式庫和匯出檔案一起使用](../../build/reference/working-with-import-libraries-and-export-files.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)
+>  您可以啟動此工具只能從 Visual Studio 命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。
+
+- [LIB 概觀](../../build/reference/overview-of-lib.md)
+
+- [如何：在 Visual Studio 開發環境中設定 LIB.EXE 選項](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+
+- [執行 LIB](../../build/reference/running-lib.md)
+
+- [管理程式庫](../../build/reference/managing-a-library.md)
+
+- [擷取程式庫成員](../../build/reference/extracting-a-library-member.md)
+
+- [與匯入程式庫和匯出檔案一起使用](../../build/reference/working-with-import-libraries-and-export-files.md)
+
+## <a name="see-also"></a>另請參閱
+
+[C/C++ 建置工具](../../build/reference/c-cpp-build-tools.md)

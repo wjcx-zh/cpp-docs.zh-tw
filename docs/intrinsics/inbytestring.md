@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7569c7034184adecf6bb452d7c406a762af4e20b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541196"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711655"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Microsoft 專屬**  
@@ -41,14 +41,14 @@ void __inbytestring(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Port`  
- 要讀取的連接埠。  
+*連接埠*<br/>
+[in]要讀取的連接埠。  
   
- [輸出] `Buffer`  
- 從連接埠讀取的資料會寫入此處。  
+*Buffer*<br/>
+[out]從連接埠讀取的資料會寫入此處。  
   
- [輸入] `Count`  
- 要讀取之資料的位元組數目。  
+*計數*<br/>
+[in]要讀取之資料的位元組數目。  
   
 ## <a name="requirements"></a>需求  
   

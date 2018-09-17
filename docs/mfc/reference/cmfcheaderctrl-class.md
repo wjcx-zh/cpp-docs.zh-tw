@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850078"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718116"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 `CMFCHeaderCtrl`類別支援排序標題控制項中的多個資料行。  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 若要啟用多個資料行排序模式;，則為 TRUE若要停用多個資料行排序模式，並移除已排序的資料行清單中的任何資料行，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]若要啟用多個資料行排序模式;，則為 TRUE若要停用多個資料行排序模式，並移除已排序的資料行清單中的任何資料行，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  若要啟用或停用多個資料行排序模式中使用這個方法。 兩個或多個資料行可以參與排序標題控制項是否在多個資料行排序模式。  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iColumn*  
- 資料行的以零為起始的索引。  
+*iColumn*<br/>
+[in]資料行的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  值，這個值表示指定的資料行的排序狀態。 下表列出可能的值：  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*iItem*  
- 要繪製的項目以零為起始的索引。  
+*iItem*<br/>
+[in]要繪製的項目以零為起始的索引。  
   
- [in]*rect*  
- 要繪製之項目的週框。  
+*rect*<br/>
+[in]要繪製之項目的週框。  
   
- [in]*bIsPressed*  
- TRUE 表示繪製項目處於已按下狀態;否則為 FALSE。  
+*bIsPressed*<br/>
+[in]TRUE 表示繪製項目處於已按下狀態;否則為 FALSE。  
   
- [in]*bIsHighlighted*  
- TRUE 表示繪製反白顯示的狀態; 中的項目否則為 FALSE。  
+*bIsHighlighted*<br/>
+[in]TRUE 表示繪製反白顯示的狀態; 中的項目否則為 FALSE。  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  由架構呼叫以繪製的排序箭號。  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectArrow*  
- 週框的排序箭號。  
+*rectArrow*<br/>
+[in]週框的排序箭號。  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  由架構呼叫以填滿標頭控制項資料行的背景。  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iColumn*  
- 要移除的資料行之以零起始的索引。  
+*iColumn*<br/>
+[in]要移除的資料行之以零起始的索引。  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  設定控制項中的指定資料行的排序次序。  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iColumn*  
- 標頭控制項資料行之以零起始的索引。 如果此參數小於零，則這個方法會移除所有資料行的排序資料行清單中。  
+*iColumn*<br/>
+[in]標頭控制項資料行之以零起始的索引。 如果此參數小於零，則這個方法會移除所有資料行的排序資料行清單中。  
   
- [in]*bAscending*  
- 指定資料行的排序次序所*iColumn*參數指定。 若要設定遞增順序，則為 TRUE若要設定遞減排序，則為 FALSE。 預設值為 TRUE。  
+*bAscending*<br/>
+[in]指定資料行的排序次序所*iColumn*參數指定。 若要設定遞增順序，則為 TRUE若要設定遞減排序，則為 FALSE。 預設值為 TRUE。  
   
- [in]*bAdd*  
- True，以設定資料行的排序次序*iColumn*參數指定。  
+*bAdd*<br/>
+[in]True，以設定資料行的排序次序*iColumn*參數指定。  
   
  如果目前的標頭控制項處於*多個資料行排序*模式中，這個方法會將排序資料行清單中的指定資料行。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)來設定多個資料行排序模式。  
   

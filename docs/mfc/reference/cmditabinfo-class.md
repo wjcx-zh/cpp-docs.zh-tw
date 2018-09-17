@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37522cc2eaaa57abd5c3c7a0986532bb47d73f5e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7cd0355c4d0ce203617729142e03860e9960190a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726605"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 類別
 `CMDITabInfo`類別用來將參數傳遞給[cmdiframewndex:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)方法。 設定這個類別的成員以控制 MDI 索引標籤式群組的行為。  
@@ -235,8 +235,8 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*ar*  
- A [CArchive 類別](../../mfc/reference/carchive-class.md)来序列化的物件。  
+*ar*<br/>
+[in]A [CArchive 類別](../../mfc/reference/carchive-class.md)来序列化的物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)   

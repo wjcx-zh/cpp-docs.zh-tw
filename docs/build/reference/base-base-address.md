@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895210"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725968"
 ---
 # <a name="base-base-address"></a>/BASE (基底位址)
 
@@ -60,11 +60,11 @@ ms.locfileid: "43895210"
 
 *金鑰*是英數字元的字串，不區分大小寫。 它通常是 DLL 的名稱，但不是需要。 *金鑰*後面接著基底*地址*在 C 語言、 十六進位或是十進位標記法和選擇性的最大*大小*。 所有的三個引數是以空格或定位字元分隔。 連結器會發出警告，如果指定*大小*小於程式所需的虛擬位址空間。 A*註解*指定分號 (**;**) 可以位於相同或不同的行。 連結器會忽略從分號到行結尾的所有文字。 此範例會示範這類檔案的一部分：
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 如果包含這些資料行的檔案便稱為 dlls.txt 命令，下列範例命令會套用這項資訊：
 
@@ -88,5 +88,5 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)  
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
 [連結器選項](../../build/reference/linker-options.md)

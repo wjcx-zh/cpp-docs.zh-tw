@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680576"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721249"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 類別
 `CVSListBox`類別支援的可編輯的清單控制項。  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strIext*  
- 字串的參考。  
+*strIext*<br/>
+[in]字串的參考。  
   
- [in]*dwData*  
- 與字串相關聯的特定應用程式的 32 位元值。 預設值為 0。  
+*dwData*<br/>
+[in]與字串相關聯的特定應用程式的 32 位元值。 預設值為 0。  
   
- [in]*iIndex*  
- 將保存的字串的位置以零為起始的索引。 如果*iIndex*參數為-1，字串會新增至清單的結尾。 預設值為 -1。  
+*iIndex*<br/>
+[in]將保存的字串的位置以零為起始的索引。 如果*iIndex*參數為-1，字串會新增至清單的結尾。 預設值為 -1。  
   
 ### <a name="return-value"></a>傳回值  
  字串的清單控制項中的位置以零為起始的索引。  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 清單控制項項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果編輯作業成功; 啟動，則為 TRUE。否則為 FALSE。  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 可編輯的清單控制項項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]可編輯的清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  指定的項目相關聯的 32 位元值。  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
- 可編輯的清單控制項項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]可編輯的清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含指定項目的文字。  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 可編輯的清單控制項項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]可編輯的清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果移除指定的項目時，則為 TRUE。否則為 FALSE。  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iItem*  
- 可編輯的清單控制項項目的以零為起始的索引。  
+*iItem*<br/>
+[in]可編輯的清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iIndex*  
- 可編輯的清單控制項項目的以零為起始的索引。  
+*iIndex*<br/>
+[in]可編輯的清單控制項項目的以零為起始的索引。  
   
- [in]*dwData*  
- 32 位元值。 此值可以是應用程式特定整數或其他資料的指標。  
+*dwData*<br/>
+[in]32 位元值。 此值可以是應用程式特定整數或其他資料的指標。  
   
 ### <a name="remarks"></a>備註  
   

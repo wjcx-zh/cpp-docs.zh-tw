@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 17136bbc1d914732871d256053acff20d78ab8b1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688139"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724232"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 類別
 `CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*cheaderctrl:: Create*|位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|  
-|[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|  
-|[in]*pParentWnd*|指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|  
-|[in]*nID*|控制項的 ID。|  
+|*cheaderctrl:: Create*|[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|  
+|*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|  
+|*pParentWnd*|[in]指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|  
+|*nID*|[in]控制項的 ID。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwExStyle*|要套用至控制項的延伸樣式的位元組合。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|  
-|[in]*cheaderctrl:: Create*|位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|  
-|[in]*rect*|參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|  
-|[in]*pParentWnd*|指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|  
-|[in]*nID*|控制項的 ID。|  
+|*dwExStyle*|[in]要套用至控制項的延伸樣式的位元組合。 如需詳細資訊，請參閱 < *dwExStyle*的參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)函式。|  
+|*cheaderctrl:: Create*|[in]位元組合 (OR)[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)並[頁面巡覽區控制項的樣式](/windows/desktop/Controls/pager-control-styles)来套用至控制項。|  
+|*rect*|[in]參考[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的位置和大小的工作區座標中的控制項。|  
+|*pParentWnd*|[in]指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 這個參數不能是 NULL。|  
+|*nID*|[in]控制項的 ID。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*bForward*|True 表示正向的滑鼠訊息時傳回 FALSE 不將滑鼠訊息轉送。|  
+|*bForward*|[in]True 表示正向的滑鼠訊息時傳回 FALSE 不將滑鼠訊息轉送。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_FORWARDMOUSE](/windows/desktop/Controls/pgm-forwardmouse)訊息，Windows SDK 中所述。  
@@ -273,7 +273,7 @@ DWORD GetButtonState(int iButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
+|*iButton*|[in]表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  指定按鈕的狀態*iButton*參數。 狀態是 PGF_INVISIBLE、 PGF_NORMAL、 PGF_GRAYED、 PGF_DEPRESSED，或是 PGF_HOT。 如需詳細資訊，請參閱的傳回值區段[PGM_GETBUTTONSTATE](/windows/desktop/Controls/pgm-getbuttonstate)訊息。  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
+|*iButton*|[in]表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的按鈕是處於已按下狀態;，則為 TRUE。否則為 FALSE。  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
+|*iButton*|[in]表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的按鈕呈現灰色狀態;，則為 TRUE。否則為 FALSE。  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
+|*iButton*|[in]表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的按鈕處於作用中狀態，則為 TRUE否則為 FALSE。  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
+|*iButton*|[in]表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的按鈕處於隱藏狀態，則為 TRUE否則為 FALSE。  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButton*|表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
+|*iButton*|[in]表示要擷取狀態的按鈕。 PGS_HORZ 頁面巡覽區控制項樣式時，指定左的按鈕和 PGB_BOTTOMORRIGHT PGB_TOPORLEFT 右邊的按鈕。 PGS_VERT 頁面巡覽區控制項樣式時，指定 PGB_TOPORLEFT 頂端按鈕和 PGB_BOTTOMORRIGHT 底端按鈕。 如需詳細資訊，請參閱 <<c0> [ 呼叫器控制項樣式](/windows/desktop/Controls/pager-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的按鈕處於正常狀態，則為 TRUE否則為 FALSE。  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*clrBk*|A [COLORREF](/windows/desktop/gdi/colorref)值，包含頁面巡覽控制項的新的背景色彩。|  
+|*clrBk*|[in]A [COLORREF](/windows/desktop/gdi/colorref)值，包含頁面巡覽控制項的新的背景色彩。|  
   
 ### <a name="return-value"></a>傳回值  
  A [COLORREF](/windows/desktop/gdi/colorref)值，包含前一個頁面巡覽控制項的背景色彩。  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iBorder*|新的框線大小，以像素表示。 如果*iBorder*參數是負值，框線大小會設為零。|  
+|*iBorder*|[in]新的框線大小，以像素表示。 如果*iBorder*參數是負值，框線大小會設為零。|  
   
 ### <a name="return-value"></a>傳回值  
  先前的框線大小，以像素表示。  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iButtonSize*|新的按鈕大小，以像素表示。|  
+|*iButtonSize*|[in]新的按鈕大小，以像素表示。|  
   
 ### <a name="return-value"></a>傳回值  
  先前的按鈕大小，以像素表示。  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hwndChild*|要包含視窗控制代碼。|  
+|*hwndChild*|[in]要包含視窗控制代碼。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_SETCHILD](/windows/desktop/Controls/pgm-setchild)訊息，Windows SDK 中所述。  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iPos*|新的捲動位置，以像素表示。|  
+|*iPos*|[in]新的捲動位置，以像素表示。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_SETPOS](/windows/desktop/Controls/pgm-setpos)訊息，Windows SDK 中所述。  

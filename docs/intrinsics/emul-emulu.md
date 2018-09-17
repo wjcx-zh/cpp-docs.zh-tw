@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6e9e7ee594f2587334d93173daa147d81dcebb2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8f3bf997006d98cfbd05a47140baf53ef7032876
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538820"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719416"
 ---
 # <a name="emul-emulu"></a>__emul、__emulu
 **Microsoft 專屬**  
@@ -46,11 +46,11 @@ unsigned __int64 __emulu(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `a`  
- 第一個整數運算元的乘法運算。  
+*a*<br/>
+[in]第一個整數運算元的乘法運算。  
   
- [輸入] `b`  
- 第二個整數運算元的乘法運算。  
+*b*<br/>
+[in]第二個整數運算元的乘法運算。  
   
 ## <a name="return-value"></a>傳回值  
  乘法運算的結果。  

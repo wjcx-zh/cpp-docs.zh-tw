@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5f5c987f8e448490a0d337517d7a0699619849
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 4ea4a0c17422823f306942bc7d02514456bf8310
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538810"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712084"
 ---
 # <a name="tuple-class"></a>元組類別
 
@@ -52,8 +52,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ## <a name="remarks"></a>備註
 
@@ -154,11 +154,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>參數
 
-*取消*  
- 第 N 個複製的元組項目類型。
+*取消*<br/>
+第 N 個複製的元組項目類型。
 
-*right*  
- 要複製的來源元組。
+*right*<br/>
+要複製的來源元組。
 
 ### <a name="remarks"></a>備註
 
@@ -263,11 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>參數
 
-*取消*  
- 第 N 個複製的元組項目類型。
+*取消*<br/>
+第 N 個複製的元組項目類型。
 
-*right*  
- 要複製的來源元組。
+*right*<br/>
+要複製的來源元組。
 
 ### <a name="remarks"></a>備註
 

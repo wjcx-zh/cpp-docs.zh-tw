@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50c0025e561c86fc18bbf5c4554c9f894fe32ec7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cd5341dc4d47740410df01feadbd9e6aa3926a23
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721381"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte、__addgsword、__addgsdword、__addgsqword
 **Microsoft 專屬**  
@@ -60,11 +60,11 @@ void __addgsqword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Offset`  
- 從開頭的位移`GS`。  
+*位移*<br/>
+[in]從開頭的位移`GS`。  
   
- [輸入] `Data`  
- 要加入之記憶體位置的值。  
+*Data*<br/>
+[in]要加入之記憶體位置的值。  
   
 ## <a name="requirements"></a>需求  
   

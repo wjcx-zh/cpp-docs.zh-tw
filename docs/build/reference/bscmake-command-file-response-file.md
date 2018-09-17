@@ -19,39 +19,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a14e0ba315820eec0dd2fe17823f2c5c656fd87
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 69fb144bed21b00fc07107f3fa8d5e64c1afb10d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895106"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716513"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令檔 (回應檔)
 
 您可以提供的命令檔中的命令列輸入部分或全部。 指定命令檔，請使用下列語法：
 
-```  
+```
 BSCMAKE @filename
-```  
+```
 
 允許只有一個命令檔。 您可以指定的路徑*filename*。 在前面*檔名*使用 at 符號 (**\@**)。 BSCMAKE 不採用擴充功能。 您可以指定額外*sbrfiles*之後在命令列*filename*。 命令檔是文字檔，其中包含 BSCMAKE 的相同順序的輸入，如同您會在命令列上指定它。 使用一或多個空格、 定位點或新行字元分隔的命令列引數。
 
 下列命令會呼叫 BSCMAKE 使用的命令檔：
 
-```  
+```
 BSCMAKE @prog1.txt
-```  
+```
 
 以下是範例的命令檔：
 
-```  
+```
 /n /v /o main.bsc /El
-/S (  
+/S (
 toolbox.h
 verdate.h c:\src\inc\screen.h
 )
 file1.sbr file2.sbr file3.sbr file4.sbr
-```  
+```
 
 ## <a name="see-also"></a>另請參閱
 

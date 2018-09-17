@@ -1,5 +1,5 @@
 ---
-title: -分析 （程式碼分析） |Microsoft 文件
+title: -分析 （程式碼分析） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/26/2018
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4893f30bae3b29538c8bead637cb4d083087a57b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89f0402eedbe6e49d6ce4095dc8c91ec69e15447
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376581"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723602"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (程式碼分析)
 
@@ -40,33 +40,25 @@ ms.locfileid: "32376581"
 
 ## <a name="arguments"></a>引數
 
- /analyze  
- 以預設模式開啟分析。 分析會輸出至**輸出**視窗，就像其他錯誤訊息一樣。 使用 **/ 分析-** 明確關閉分析。
+/ 分析會在分析中的預設模式。 分析會輸出至**輸出**等其他錯誤訊息的視窗。 使用 **/ 分析-** 來明確關閉分析。
 
- /analyze:WX-  
- 指定 **/analyze: WX-** 程式碼分析警告，表示不要視為錯誤當您使用編譯 **/WX**。 如需詳細資訊，請參閱 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告層級)](../../build/reference/compiler-option-warning-level.md)。
+/analyze: WX-指定 **/analyze: WX-** 程式碼分析警告的方法不要視為錯誤當您使用編譯 **/WX**。 如需詳細資訊，請參閱 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告層級)](../../build/reference/compiler-option-warning-level.md)。
 
- /analyze:log `filename`  
- 詳細的分析器結果會做為 XML 寫入至 `filename` 所指定的檔案。
+/analyze: log`filename`詳細的分析器結果會寫入為 XML 檔案所指定`filename`。
 
- /analyze:quiet  
- 關閉 分析器輸出至**輸出**視窗。
+/analyze: quiet 會關閉分析器的輸出**輸出**視窗。
 
- /analyze:stacksize `number`  
- `number`參數會搭配這個選項使用指定大小，以位元組為單位的警告之堆疊框架[C6262](/visualstudio/code-quality/c6262)產生。 如果未指定這個參數，則預設的堆疊框架大小為 16KB。
+/analyze: stacksize `number` `number`會搭配這個選項的參數指定的大小，以位元組為單位的警告之堆疊框架[C6262](/visualstudio/code-quality/c6262)產生。 如果未指定這個參數，則預設的堆疊框架大小為 16KB。
 
- /analyze:max_paths `number`  
- 搭配這個選項使用的 `number` 參數會指定要分析的程式碼路徑數目上限。 如果未指定這個參數，則預設數目為 256。 值越大，執行的檢查就越徹底，但是也可能需要較長的時間進行分析。
+/analyze: max_paths `number` `number`會搭配這個選項的參數會指定要分析的程式碼路徑的最大數目。 如果未指定這個參數，則預設數目為 256。 值越大，執行的檢查就越徹底，但是也可能需要較長的時間進行分析。
 
- /analyze:only  
- 通常，編譯器在執行分析器之後，會產生程式碼並進行更多語法檢查。 **/Analyze： 只有**選項會關閉這個程式碼產生階段; 這可讓分析加快，但不是會產生編譯錯誤和可能已探索的編譯器的程式碼產生階段的警告。 如果程式並不是沒有程式碼產生錯誤，分析結果可能就不可靠，因此，建議您只有在程式碼已通過程式碼產生語法檢查且沒有錯誤的情況下，才使用這個選項。
+/analyze： 只一般而言，編譯器會產生程式碼，進行更多語法檢查之後執行分析器。 **/Analyze： 只有**選項會關閉這個程式碼產生階段; 這可讓分析加快，但不是會發出編譯錯誤和可能已由編譯器的程式碼產生階段探索到的警告。 如果程式並不是沒有程式碼產生錯誤，分析結果可能就不可靠，因此，建議您只有在程式碼已通過程式碼產生語法檢查且沒有錯誤的情況下，才使用這個選項。
 
- /analyze： 規則集 `<file_path>.ruleset`  
-可讓您指定的規則集若要分析，包括您可以建立自己的自訂規則集。 當設定這個參數時，因為它會排除指定的規則集執行前的非成員的規則引擎會更有效率。 當未設定此參數時，則引擎會檢查所有規則。
+/analyze: ruleset`<file_path>.ruleset`可讓您指定的規則集來分析，包括您可以建立自己的自訂規則集。 當設定這個參數時，因為它會排除指定的規則集執行前的非成員的規則引擎會更有效率。 當未設定此參數，則引擎會檢查所有規則。
 
-隨附於 Visual Studio 的 ruleset 存在於 **%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets。**
+隨附於 Visual Studio 的 ruleset 位於 **%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule 集。**
 
-下列範例自訂規則集會告知 「 規則引擎，以檢查 C6001 和 C26494。 您可以將此檔案，任何位置，只要它有`.ruleset`延伸模組，並提供引數中的完整路徑。
+下列範例自訂規則集會告訴規則引擎，以檢查 C6001 和 C26494。 您可以將此檔案，任何地方，只要它有`.ruleset`延伸模組，並提供引數中的完整路徑。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,30 +70,30 @@ ms.locfileid: "32376581"
 </RuleSet>
 ```
 
-/analyze: plugin  
-當程式碼分析的一部分執行時，可讓指定 PREfast 外掛程式。 LocalEspC.dll 是外掛程式實作並行存取相關的程式碼分析簽入範圍的 C261XX 警告。 例如， [C26100](/visualstudio/code-quality/c26100)， [C26101](/visualstudio/code-quality/c26101)，...， [C26167](/visualstudio/code-quality/c26167)。
+/analyze： 外掛程式可讓指定的 PREfast 外掛程式程式碼分析的一部分執行。
+LocalEspC.dll 是外掛程式實作並行存取相關的程式碼分析簽入範圍的 C261XX 警告。 例如， [C26100](/visualstudio/code-quality/c26100)， [C26101](/visualstudio/code-quality/c26101)，...， [C26167](/visualstudio/code-quality/c26167)。
 
-若要執行 LocalEspC.dll，使用這個編譯器選項： **/analyze: plugin LocalEspC.dll**
+若要執行 LocalEspC.dll，使用這個編譯器選項： **/analyze： 外掛程式 LocalEspC.dll**
 
-若要執行 CppCoreCheck.dll，第一次從開發人員命令提示字元執行此命令：
+若要執行 CppCoreCheck.dll，第一次在開發人員命令提示字元執行此命令：
 
 ```cmd
 set Esp.Extensions=CppCoreCheck.dll
 ```
 
-然後使用這個編譯器選項： **/analyze: plugin EspXEngine.dll**。
+然後使用這個編譯器選項： **/analyze： 外掛程式 EspXEngine.dll**。
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[程式碼分析 C/c + + 概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)和[程式碼分析 C/c + + 警告](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)。
+如需詳細資訊，請參閱 <<c0> [ 程式碼分析 C/c + + 概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)並[程式碼分析 C/c + + 警告](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-1. 展開**組態屬性**節點。
+1. 展開 [組態屬性] 節點。
 
-1. 展開**程式碼分析**節點。
+1. 依序展開**程式碼分析**節點。
 
 1. 選取 [ **一般** ] 屬性頁。
 

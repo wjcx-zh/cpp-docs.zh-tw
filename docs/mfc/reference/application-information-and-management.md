@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208881"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726787"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 當您撰寫應用程式時，您會建立單一[CWinApp](../../mfc/reference/cwinapp-class.md)-衍生物件。 有時候，您可能想要取得此物件來自外部的相關資訊`CWinApp`-衍生物件。 或者，您可能需要其他全域"mananger 」 物件的存取權。
@@ -406,8 +406,8 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 從 `CWnd`衍生之物件的指標。  
+*pWnd*<br/>
+[in]衍生自物件的指標`CWnd`。  
    
 ### <a name="return-value"></a>傳回值  
  如果提供的視窗是擴充的框架物件，則為 TRUE否則為 FALSE。  
@@ -442,8 +442,8 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 從 `CWnd`衍生之物件的指標。  
+*pWnd*<br/>
+[in]衍生自物件的指標`CWnd`。  
    
 ### <a name="return-value"></a>傳回值  
  如果提供的視窗是工具列物件，則為 TRUE否則為 FALSE。  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- TRUE 表示登錄資訊會導向至在 HKCU 的節點FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** ( **HKCR**)。  
+*bEnable*<br/>
+[in]TRUE 表示登錄資訊會導向至在 HKCU 的節點FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** ( **HKCR**)。  
   
 ### <a name="remarks"></a>備註  
 

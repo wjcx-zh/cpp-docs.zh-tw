@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606951"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721341"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>參數
 
-[in]*我*  
-新的值**SafeInt**物件。 這必須是類型 T 或 U，根據建構函式的參數。
+*i*<br/>
+[in]新的值**SafeInt**物件。 這必須是類型 T 或 U，根據建構函式的參數。
 
-[in]*b*  
-新的布林值**SafeInt**物件。
+*b*<br/>
+[in]新的布林值**SafeInt**物件。
 
-[in]*u*  
-A **SafeInt**為類型 u。新**SafeInt**物件會有相同的值*u*，但會是 t 型別
+*u*<br/>
+[in]A **SafeInt**為類型 u。新**SafeInt**物件會有相同的值*u*，但會是 t 型別
 
 U 中儲存的資料型別**SafeInt**。 這可以是布林值、 字元或整數類型。 如果是整數類型，它可以是帶正負號或不帶正負號和介於 8 到 64 位元。
 

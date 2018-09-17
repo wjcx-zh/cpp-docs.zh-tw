@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 263667b96c052025550f4d366cd236d256e7f7a8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9ba9f6c2de8260ea846b51e2192ecfb967c5502
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541383"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719975"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。  
@@ -136,11 +136,11 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pAutoHideWnd*  
- 您要隱藏的視窗。  
+*pAutoHideWnd*<br/>
+[in]您想要隱藏視窗。  
   
- [in]*dwAlignment*  
- 指定自動隱藏按鈕與應用程式視窗之對齊方式的值。  
+*dwAlignment*<br/>
+[in]值，指定與應用程式視窗的 [自動隱藏] 按鈕的對齊方式。  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bStretch*  
- [in]*bHorz*  
+*bStretch*<br/>
+[in][in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -207,12 +207,12 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszClassName*  
- [in]*cheaderctrl:: Create*  
- [in]*rect*  
- [in]*pParentWnd*  
- [in]*nID*  
- [in]*dwControlBarStyle*  
+*lpszClassName*<br/>
+[in][in]*cheaderctrl:: Create*  
+*rect*<br/>
+[in][in]*pParentWnd*  
+*nID*<br/>
+[in][in]*dwControlBarStyle*  
  [in]*pContext*  
   
 ### <a name="return-value"></a>傳回值  
@@ -342,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nLength*  
- 這是基底實作中未使用的值。 在衍生實作中，這個值可用來表示已調整窗格的長度。  
+*nLength*<br/>
+[in]值未在基底實作。 在衍生實作中，這個值可用來表示已調整窗格的長度。  
   
- [in]*bVert*  
- 這是基底實作中未使用的值。 在衍生實作中，使用 true 以控制代碼，自動隱藏列垂直摺疊，大小寫和 FALSE，自動隱藏列是水平摺疊案例。  
+*bVert*<br/>
+[in]值未在基底實作。 在衍生實作中，使用 true 以控制代碼，自動隱藏列垂直摺疊，大小寫和 FALSE，自動隱藏列是水平摺疊案例。  
   
 ### <a name="return-value"></a>傳回值  
  產生的已調整窗格大小。  

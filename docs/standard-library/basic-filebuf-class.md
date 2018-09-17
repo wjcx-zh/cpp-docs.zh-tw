@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ee6c74693987c35f37caf210e604835061cbefd6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222717"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715334"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 類別
 
@@ -71,10 +71,10 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 ### <a name="parameters"></a>參數
 
 *Elem*<br/>
- 檔案緩衝區的基本項目。
+檔案緩衝區的基本項目。
 
 *Tr*<br/>
- 檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
+檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>備註
 
@@ -413,13 +413,13 @@ basic_filebuf<Elem, Tr> *open(
 ### <a name="parameters"></a>參數
 
 *_Filename*<br/>
- 要開啟之檔案的名稱。
+要開啟之檔案的名稱。
 
 *模式 （_m)*<br/>
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
+[ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *_Prot*<br/>
- 預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 ### <a name="parameters"></a>參數
 
 *right*<br/>
- [basic_filebuf](../standard-library/basic-filebuf-class.md) 物件的右值參考。
+[basic_filebuf](../standard-library/basic-filebuf-class.md) 物件的右值參考。
 
 ### <a name="return-value"></a>傳回值
 
@@ -483,7 +483,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>參數
 
 *_Meta*<br/>
- 要插入緩衝區的字元或`traits_type::eof`。
+要插入緩衝區的字元或`traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>參數
 
 *_Meta*<br/>
- 要插入緩衝區的字元，或 `traits_type::eof`。
+要插入緩衝區的字元，或 `traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -547,13 +547,13 @@ virtual pos_type seekoff(off_type _Off,
 ### <a name="parameters"></a>參數
 
 *_Off*<br/>
- 要搜尋的相對位置 *_Way*。
+要搜尋的相對位置 *_Way*。
 
 *_Way*<br/>
- 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
+位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
 
 *_Which*<br/>
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
+指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -578,10 +578,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 ### <a name="parameters"></a>參數
 
 *_Sp*<br/>
- 要搜尋的位置。
+要搜尋的位置。
 
 *_Which*<br/>
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
+指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -608,10 +608,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 ### <a name="parameters"></a>參數
 
 *_Buffer*<br/>
- 緩衝區的指標。
+緩衝區的指標。
 
 *count*<br/>
- 緩衝區的大小。
+緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
 
@@ -632,7 +632,7 @@ void swap(basic_filebuf& right);
 ### <a name="parameters"></a>參數
 
 *right*<br/>
- 對其他 `basic_filebuf` 的 `lvalue` 參考。
+對其他 `basic_filebuf` 的 `lvalue` 參考。
 
 ## <a name="sync"></a> basic_filebuf::sync
 

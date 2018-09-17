@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc8ef005eea61597eb316090e26af7e83718dd8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 126e23064bdc599ba230efc5dde472cd05a1aa69
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760841"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720742"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 類別
 `CMFCShellTreeCtrl`類別會擴充[CTreeCtrl 類別](../../mfc/reference/ctreectrl-class.md)透過顯示 Shell 項目階層。  
@@ -104,8 +104,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 布林值，指定是否要啟用快顯功能表。  
+*bEnable*<br/>
+[in]布林值，指定是否要啟用快顯功能表。  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
  傳回設定之旗標[CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
@@ -130,11 +130,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*strPath*  
- 字串參數的參考。 方法會將項目的路徑寫入此參數。  
+*strPath*<br/>
+[out]字串參數的參考。 方法會將項目的路徑寫入此參數。  
   
- [in]*htreeItem*  
- 方法會擷取此樹狀結構控制項項目的路徑。  
+*htreeItem*<br/>
+[in]方法會擷取此樹狀結構控制項項目的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零否則為 0。  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*訊息*  
- [in]*wParam*  
- [in]*lParam*  
- [in]*pLResult*  
+*message*<br/>
+[in][in]*wParam*  
+*lParam*<br/>
+[in][in]*pLResult*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pItem*  
- [in]*bSelected*  
+*pItem*<br/>
+[in][in]*bSelected*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -228,11 +228,11 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszPath*  
- 字串，指定項目的路徑。  
+*lpszPath*<br/>
+[in]字串，指定項目的路徑。  
   
- [in]*lpidl*  
- 指定的項目 PIDL  
+*lpidl*<br/>
+[in]指定的項目 PIDL  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為 S_OK否則 E_FAIL。  
@@ -247,11 +247,11 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwFlags*  
- 要設定的旗標。  
+*dwFlags*<br/>
+[in]若要設定旗標。  
   
- [in]*bRefresh*  
- 布林值，指定是否`CMFCShellTreeCtrl`應該立即重新整理。  
+*bRefresh*<br/>
+[in]布林值，指定是否`CMFCShellTreeCtrl`應該立即重新整理。  
   
 ### <a name="remarks"></a>備註  
  `CMFCShellTreeCtrl`所有設定旗標為傳遞[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。 不同的旗標之值的相關資訊，請參閱[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)。  
@@ -264,8 +264,8 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pShellList*  
- `CMFCShellListCtrl` 物件的指標。  
+*pShellList*<br/>
+[in]指標`CMFCShellListCtrl`物件。  
   
 ### <a name="remarks"></a>備註  
  這個方法產生關聯`CMFCShellListCtrl`與`CMFCShellTreeCtrl`。 這些物件可能會顯示為類似檔案總管的視窗： 如果使用者選取中的物件`CMFCShellTreeCtrl`，則關聯的項目中的`CMFCShellListCtrl`將會自動更新。  

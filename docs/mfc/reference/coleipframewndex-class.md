@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2eb1695383e5bb1a700305fd0cc8487590afd7c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 114ddba64de255c0f034fb9dbcbe55a45ca72bba
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217037"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723966"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 類別
 `COleIPFrameWndEx` 類別會實作支援 MFC 的 OLE 容器。 您必須從 `COleIPFrameWndEx` 類別衍生應用程式的就地框架視窗類別，而不是從 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)類別來衍生。 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。   
@@ -216,8 +216,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pControlBar*  
- [in]*bTail*  
+*pControlBar*<br/>
+[in][in]*bTail*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -246,8 +246,8 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [in]*nDockBarID*  
+*pBar*<br/>
+[in][in]*nDockBarID*  
  [in]*lpRect*  
   
 ### <a name="remarks"></a>備註  
@@ -262,11 +262,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- 若要停駐窗格的指標。  
+*pBar*<br/>
+[in]若要停駐窗格的指標。  
   
- [in]*pLeftOf*  
- [窗格]，做為原始指標。  
+*pLeftOf*<br/>
+[in][窗格]，做為原始指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業成功，則傳回 TRUE。 否則會傳回 FALSE。  
@@ -316,12 +316,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- [in]*uiCustomizeCmd*  
- [in]*strCustomizeLabel*  
- [in]*uiViewToolbarsMenuEntryID*  
- [in]*bContextMenuShowsToolbarsOnly*  
- [in]*bViewMenuShowsToolbarsOnly*  
+*bEnable*<br/>
+[in][in]*uiCustomizeCmd*  
+*strCustomizeLabel*<br/>
+[in][in]*uiViewToolbarsMenuEntryID*  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in][in]*bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>備註  
   
@@ -445,11 +445,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pButton*  
- 按鈕的指標。  
+*pButton*<br/>
+[in]按鈕的指標。  
   
- [in]*strTTText*  
- 指標的工具提示文字。  
+*strTTText*<br/>
+[in]指標的工具提示文字。  
   
 ### <a name="return-value"></a>傳回值  
  預設實作會傳回 0。  
@@ -468,14 +468,14 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszRegEntry*  
- 其中的程式庫會儲存使用者工具列設定登錄項目。  
+*lpszRegEntry*<br/>
+[in]其中的程式庫會儲存使用者工具列設定登錄項目。  
   
- [in]*uiUserToolbarFirst*  
- 指派給第一個使用者定義工具列的控制項識別碼。  
+*uiUserToolbarFirst*<br/>
+[in]指派給第一個使用者定義工具列的控制項識別碼。  
   
- [in]*uiUserToolbarLast*  
- 指派給最後一個使用者定義工具列的控制項識別碼。  
+*uiUserToolbarLast*<br/>
+[in]指派給最後一個使用者定義工具列的控制項識別碼。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此函式來初始化指派給使用者以動態方式定義的工具列控制項 Id 的範圍。 參數*uiUserToolbarFirst*並*uiUserToolbarLast*定義允許的工具列控制項 Id 的範圍。 若要停用使用者定義工具列的建立，請設定*uiUserToolbarFirst*或是*uiUserToolbarLast*為-1。  
@@ -491,8 +491,8 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pControlBar*  
- [in]*pTarget*  
+*pControlBar*<br/>
+[in][in]*pTarget*  
  [in]*bAfter*  
   
 ### <a name="return-value"></a>傳回值  
@@ -523,8 +523,8 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- [in]*dwBarAlignment*  
+*點*<br/>
+[in][in]*dwBarAlignment*  
  [in]*bOuterEdge*  
   
 ### <a name="return-value"></a>傳回值  
@@ -543,10 +543,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIDResource*  
- [in]*dwDefaultStyle*  
- [in]*pParentWnd*  
- [in]*pContext*  
+*nIDResource*<br/>
+[in][in]*dwDefaultStyle*  
+*pParentWnd*<br/>
+[in][in]*pContext*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -588,8 +588,8 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenuPopup*  
- 快顯功能表物件的指標。  
+*pMenuPopup*<br/>
+[in]快顯功能表物件的指標。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以接收來自通知`CMFCPopupMenu`物件及其處理 WM_DESTROY 訊息時。  
@@ -606,10 +606,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- [in]*則 nCode*  
- [in]*pExtra*  
- [in]*pHandlerInfo*  
+*nID*<br/>
+[in][in]*則 nCode*  
+*pExtra*<br/>
+[in][in]*pHandlerInfo*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -626,14 +626,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pMenuButton*  
- [功能表] 按鈕的指標。  
+*pMenuButton*<br/>
+[in][功能表] 按鈕的指標。  
   
- [in]*rectImage*  
- 與功能表項目相關聯的影像。  
+*rectImage*<br/>
+[in]與功能表項目相關聯的影像。  
   
 ### <a name="return-value"></a>傳回值  
  預設實作不做任何動作，並傳回 0。  
@@ -652,14 +652,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*pMenu*  
- 快顯功能表物件的指標。  
+*pMenu*<br/>
+[in]快顯功能表物件的指標。  
   
- [in]*rectLogo*  
- 要顯示的標誌的指標。  
+*rectLogo*<br/>
+[in]要顯示的標誌的指標。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以顯示在功能表列所擁有相關聯的快顯功能表上的標誌`COleIPFrameWndEx`-衍生物件。 預設實作不做任何動作。  
@@ -710,8 +710,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bPreview*  
- [in]*pState*  
+*bPreview*<br/>
+[in][in]*pState*  
   
 ### <a name="remarks"></a>備註  
   
@@ -725,8 +725,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenuPane*  
- [in]*uiToolbarID*  
+*pMenuPane*<br/>
+[in][in]*uiToolbarID*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -754,8 +754,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenuPopup*  
- 要顯示的快顯功能表的指標。  
+*pMenuPopup*<br/>
+[in]要顯示的快顯功能表的指標。  
   
 ### <a name="return-value"></a>傳回值  
  預設實作不做任何動作，並傳回非零值。 如果無法顯示快顯功能表，您的實作應該傳回 FALSE。  
@@ -773,11 +773,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pMenuPopup*  
- 使用者選取的快顯功能表指標。  
+*pMenuPopup*<br/>
+[in]使用者選取的快顯功能表指標。  
   
- [in]*pBar*  
- 裝載功能表窗格指標。  
+*pBar*<br/>
+[in]裝載功能表窗格指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果您想要的 framework，以啟動快顯功能表中，則為 TRUE否則為 FALSE。 預設值為 TRUE。  
@@ -803,10 +803,10 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*點*  
- [in]*nSensitivity*  
- [in]*bExactBar*  
- [in]*pRTCBarType*  
+*點*<br/>
+[in][in]*nSensitivity*  
+*bExactBar*<br/>
+[in][in]*pRTCBarType*  
  [in]*dwAlignment*  
   
 ### <a name="return-value"></a>傳回值  
@@ -852,10 +852,10 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pControlBar*  
- [in]*bDestroy*  
- [in]*bAdjustLayout*  
- [in]*bAutoHide*  
+*pControlBar*<br/>
+[in][in]*bDestroy*  
+*bAdjustLayout*<br/>
+[in][in]*bAutoHide*  
  [in]*pBarReplacement*  
   
 ### <a name="remarks"></a>備註  
@@ -868,8 +868,8 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*狀態*  
- 指定的銜接狀態。  
+*state*<br/>
+[in]指定的銜接狀態。  
   
 ### <a name="remarks"></a>備註  
  使用此函式來指定新的停駐狀態窗格隸屬於`COleIPFrameWndEx`物件。  
@@ -885,14 +885,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*功能表*  
- 參考[CMenu](../../mfc/reference/cmenu-class.md)要修改的物件。  
+*功能表*<br/>
+[in]參考[CMenu](../../mfc/reference/cmenu-class.md)要修改的物件。  
   
- [in]*uiViewUserToolbarCmdFirst*  
- 指定的使用者定義的第一個命令。  
+*uiViewUserToolbarCmdFirst*<br/>
+[in]指定的使用者定義的第一個命令。  
   
- [in]*uiViewUserToolbarCmdLast*  
- 指定的使用者定義的最後一個命令。  
+*uiViewUserToolbarCmdLast*<br/>
+[in]指定的使用者定義的最後一個命令。  
   
 ### <a name="remarks"></a>備註  
   
@@ -908,10 +908,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBar*  
- [in]*bShow*  
- [in]*bDelay*  
- [in]*bActivate*  
+*pBar*<br/>
+[in][in]*bShow*  
+*bDelay*<br/>
+[in][in]*bActivate*  
   
 ### <a name="remarks"></a>備註  
   
@@ -928,8 +928,8 @@ virtual void WinHelp(
  [in] dwData  
  指定所需的說明所指定類型的資料*nCmd*。  
   
- [in]*nCmd*  
- 指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱[WinHelp 函式](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK 中。  
+*nCmd*<br/>
+[in]指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱[WinHelp 函式](/windows/desktop/api/winuser/nf-winuser-winhelpa)Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  
   

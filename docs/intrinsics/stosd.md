@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f019a0c2c62b991b2799f1a5d6d89402054c0260
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543111"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723381"
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft 專屬**  
@@ -41,14 +41,14 @@ void __stosd(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸出] `Dest`  
- 作業的目的地。  
+*目的地*<br/>
+[out]作業的目的地。  
   
- [輸入] `Data`  
- 要儲存的資料。  
+*Data*<br/>
+[in]要儲存的資料。  
   
- [輸入] `Count`  
- 要寫入的雙字組的區塊的長度。  
+*計數*<br/>
+[in]要寫入的雙字組的區塊的長度。  
   
 ## <a name="requirements"></a>需求  
   

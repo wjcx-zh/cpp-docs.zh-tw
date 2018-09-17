@@ -1,5 +1,5 @@
 ---
-title: MxCsr |Microsoft 文件
+title: MxCsr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,34 +12,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df2225526c20463bdbd618322d031c3245d9493
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d18a4247d36e6894230d74322d52cd5854e42fb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368622"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726501"
 ---
 # <a name="mxcsr"></a>MxCsr
-暫存器狀態也會包含 MxCsr。 呼叫慣例會將此暫存器分割為變動性部分與靜態部分。 動態部分所組成的 6 的狀態旗標，MXCSR [0:5]，而 MXCSR [6:15] 暫存器的其餘部分會被視為靜態。  
-  
- 靜態部分是在程式執行開始設定為下列的標準值：  
-  
-```  
-MXCSR[6]         : Denormals are zeros - 0  
-MXCSR[7:12]      : Exception masks all 1's (all exceptions masked)  
-MXCSR[13:14]   : Rounding  control - 0 (round to nearest)  
-MXCSR[15]      : Flush to zero for masked underflow - 0 (off)  
-```  
-  
- 修改任何 mxcsr 的靜態欄位被呼叫端必須將它們還原後再傳回至呼叫端。 此外，已修改這些欄位的呼叫端必須還原為其標準的值之前叫用被呼叫端，除非協議由被呼叫端必須要有修改過的值。  
-  
- 有兩個例外控制旗標不適用規則：  
-  
--   在指定的函式的目的為修改靜態 MxCsr 函式加上旗標。  
-  
--   時，它可以證明更正這些規則的違規情形，會導致程式的行為/意義和這些規則不違反規則的程式，例如，透過分析整個程式相同。  
-  
- 除非特別函式的文件所述，您可以不進行任何假設不同的函式，MXCSR 動態部分的狀態。  
-  
-## <a name="see-also"></a>另請參閱  
- [呼叫慣例](../build/calling-convention.md)
+
+註冊狀態也會包含 MxCsr。 呼叫慣例會將此註冊分成變動性的部分和靜態部分。 動態部分所組成的 6 的狀態旗標，MXCSR [0:5]，而暫存器，MXCSR [6:15] 的其餘部分會被視為靜態。
+
+靜態部分設為下列的標準值開頭的程式執行：
+
+```
+MXCSR[6]         : Denormals are zeros - 0
+MXCSR[7:12]      : Exception masks all 1's (all exceptions masked)
+MXCSR[13:14]   : Rounding  control - 0 (round to nearest)
+MXCSR[15]      : Flush to zero for masked underflow - 0 (off)
+```
+
+修改的任何靜態欄位 mxcsr 被呼叫端必須將它們還原，然後傳回給其呼叫端。 此外，修改這些欄位的任何呼叫端必須將它們還原至其標準的值之前叫用被呼叫端，除非由合約被呼叫端必須要有修改過的值。
+
+有兩個規則的例外狀況為非變動性有關的控制旗標：
+
+- 在函式中指定的函式的文件的目的為修改靜態 MxCsr 旗標。
+
+- 當它是可以證明正確，這些規則的違規會導致程式的行為/意義和這些規則都不違反規則的程式，例如，透過整個程式分析與相同的。
+
+除非特別說明函式的文件中做任何限制性規定可以不進行跨函式界限，變動部分的 MXCSR 狀態相關。
+
+## <a name="see-also"></a>另請參閱
+
+[呼叫慣例](../build/calling-convention.md)

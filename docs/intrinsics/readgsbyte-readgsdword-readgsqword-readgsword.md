@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f71faa5a7b81931c8ee3fbce00ea4b7e66249b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9cc4c44807a40425d4531c747526148837e0a25c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541566"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711154"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 **Microsoft 專屬**  
@@ -52,8 +52,8 @@ unsigned __int64 __readgsqword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Offset`  
- 從開頭的位移`GS`來讀取。  
+*位移*<br/>
+[in]從開頭的位移`GS`來讀取。  
   
 ## <a name="return-value"></a>傳回值  
  記憶體中的位元組、 單字、 雙字組或 （如下所呼叫的函式的名稱） 的 quadword 內容位於位置`GS:[Offset]`。  

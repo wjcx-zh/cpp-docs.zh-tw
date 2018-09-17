@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 577e4b4e7bf54742035c8b4333d345ca894501ac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202972"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708990"
 ---
 # <a name="cusertool-class"></a>CUserTool 類別
 使用者工具是執行外部應用程式的功能表項目。 **工具**索引標籤**自訂** 對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 可讓使用者加入使用者工具，並指定名稱、 命令、 引數，以及每個使用者工具的初始目錄。  
@@ -122,11 +122,11 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectImage*  
- 指定區域的座標，要顯示的圖示。  
+*rectImage*<br/>
+[in]指定區域的座標，要顯示的圖示。  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
  傳回字串，包含與使用者工具相關聯的命令文字。  
@@ -223,8 +223,8 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszCmd*  
- 指定新的應用程式與使用者工具相關聯。  
+*lpszCmd*<br/>
+[in]指定新的應用程式與使用者工具相關聯。  
   
 ### <a name="remarks"></a>備註  
  呼叫此方法以設定使用者工具執行的新應用程式。 方法會終結舊的圖示，並從指定的應用程式載入新的圖示。 如果它無法載入圖示，從應用程式，它會藉由呼叫載入使用者工具的預設圖示[CUserTool::LoadDefaultIcon](#loaddefaulticon)。  

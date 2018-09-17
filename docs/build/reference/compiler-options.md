@@ -1,5 +1,5 @@
 ---
-title: 編譯器選項 |Microsoft 文件
+title: 編譯器選項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/29/2018
 ms.technology:
@@ -18,29 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea07361a292ee5e7cde99cedad2d5ac4c8a53aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 76ab322dc4573863a30092b296e87e90c41619ab
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374269"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716206"
 ---
 # <a name="compiler-options"></a>編譯器選項
 
-cl.exe 是工具，可控制 Microsoft Visual c + + (MSVC) C 和 c + + 編譯器和連結器。 cl.exe 可以只在支援 Microsoft Visual Studio for Windows 作業系統上執行。
+cl.exe 是控制的 Microsoft Visual c + + (MSVC) C 和 c + + 編譯器和連結器工具。 cl.exe 可以只在支援 Microsoft Visual Studio 的 Windows 作業系統上執行。
 
-> [!NOTE]  
-> 您可以啟動這個工具只會從 Visual Studio 開發人員命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。 如需詳細資訊，請參閱[命令列上的建置 C/c + + 程式碼](../building-on-the-command-line.md)。
+> [!NOTE]
+> 您可以啟動此工具只能從 Visual Studio 開發人員命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。 如需詳細資訊，請參閱 <<c0> [ 命令列上的建置 C/c + + 程式碼](../building-on-the-command-line.md)。
 
-編譯器會產生通用物件檔案格式 (COFF) 物件檔 (.obj)。 連結器會產生可執行檔 (.exe) 或動態連結程式庫 (Dll)。
+編譯器會產生通用物件檔案格式 (COFF) 目的檔 (.obj)。 連結器會產生可執行檔 (.exe) 或動態連結程式庫 (Dll)。
 
 請注意，所有的編譯器選項是區分大小寫。 您可以使用正斜線 (`/`) 或破折號 (`-`) 指定編譯器選項。
 
-若要編譯而不連結，請使用[/c](../../build/reference/c-compile-without-linking.md)選項。
+若要編譯而不要連結，使用[/c](../../build/reference/c-compile-without-linking.md)選項。
 
 ## <a name="find-a-compiler-option"></a>尋找編譯器選項
 
-若要尋找特定的編譯器選項，請參閱下列的清單：
+若要尋找特定的編譯器選項，請參閱下列清單之一：
 
 - [依字母順序排列的編譯器選項](../../build/reference/compiler-options-listed-alphabetically.md)
 
@@ -48,7 +48,7 @@ cl.exe 是工具，可控制 Microsoft Visual c + + (MSVC) C 和 c + + 編譯器
 
 ## <a name="specify-compiler-options"></a>指定編譯器選項
 
-每個編譯器選項的主題討論如何在開發環境中設定。 如需指定在開發環境以外的選項資訊，請參閱：
+每個編譯器選項的主題討論如何在開發環境中設定。 開發環境外部指定選項的資訊，請參閱：
 
 - [編譯器命令列語法](../../build/reference/compiler-command-line-syntax.md)
 
@@ -62,7 +62,7 @@ cl.exe 是工具，可控制 Microsoft Visual c + + (MSVC) C 和 c + + 編譯器
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)  
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)  
-[快速編譯](../../build/reference/fast-compilation.md)  
-[CL 叫用連結器](../../build/reference/cl-invokes-the-linker.md)  
+[C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
+[快速編譯](../../build/reference/fast-compilation.md)<br/>
+[CL 叫用連結器](../../build/reference/cl-invokes-the-linker.md)

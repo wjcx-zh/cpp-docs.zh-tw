@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756359"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709796"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 類別
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>參數
 
-[in]*T*  
-雙重介面。
+*T*<br/>
+[in]雙重介面。
 
-[in]*piid*  
-指向 IID *T*。
+*piid*<br/>
+[in]指向 IID *T*。
 
-[in]*plibid*  
-指標，包含介面的相關資訊的類型程式庫的 LIBID。 根據預設，會傳遞伺服器層級類型程式庫。
+*plibid*<br/>
+[in]指標，包含介面的相關資訊的類型程式庫的 LIBID。 根據預設，會傳遞伺服器層級類型程式庫。
 
-[in]*wMajor*  
-類型程式庫的主要版本。 根據預設，此值為 1。
+*wMajor*<br/>
+[in]型別程式庫主要版本。 根據預設，此值為 1。
 
-[in]*wMinor*  
-類型程式庫的次要版本。 根據預設，此值為 0。
+*wMinor*<br/>
+[in]型別程式庫次要版本。 根據預設，此值為 0。
 
-[in]*tihclass*  
-用來管理的類型資訊的類別*T*。預設值為 `CComTypeInfoHolder`。
+*tihclass*<br/>
+[in]用來管理的類型資訊的類別*T*。預設值為 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
 

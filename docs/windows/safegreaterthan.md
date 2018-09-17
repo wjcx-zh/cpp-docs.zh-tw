@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c67dbe68c26a306b59eaf20b741b6b061ac2192
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d17f464fd618f69279a5fe2e65c1abf8147eec9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596506"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724789"
 ---
 # <a name="safegreaterthan"></a>SafeGreaterThan
 
@@ -40,11 +40,11 @@ inline bool SafeGreaterThan (
 
 ### <a name="parameters"></a>參數
 
-[in]*t*  
-要比較的第一個數字。 這必須是型別`T`。
+*t*<br/>
+[in]要比較的第一個數字。 這必須是型別`T`。
 
-[in]*u*  
-要比較的第二個點數。 這必須是型別`U`。
+*u*<br/>
+[in]要比較的第二個點數。 這必須是型別`U`。
 
 ## <a name="return-value"></a>傳回值
 

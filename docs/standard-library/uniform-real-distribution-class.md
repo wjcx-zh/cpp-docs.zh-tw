@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a9661bc61d59d6ca5b0aff1889a6bb736a1001
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103223"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710797"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution 類別
 
@@ -200,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*  
+*a*<br/>
 隨機值的下限 (內含)。
 
-*b*  
+*b*<br/>
 隨機值的上限 (專有)。
 
-*parm*  
+*parm*<br/>
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -235,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*  
+*a*<br/>
 隨機值的下限 (內含)。
 
-*b*  
+*b*<br/>
 隨機值的上限 (專有)。
 
-*right*  
+*right*<br/>
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註

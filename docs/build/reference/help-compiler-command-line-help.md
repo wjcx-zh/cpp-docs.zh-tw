@@ -1,5 +1,5 @@
 ---
-title: -說明 （編譯器命令列說明） |Microsoft 文件
+title: -HELP （編譯器命令列說明） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,34 +22,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40246db2d70d69fc2dab576ef5c7da9c7829ab80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc21ac544a7f30dd193ca571fcd82e1078fb44dc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713228"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (編譯器命令列說明)
-顯示編譯器選項清單至標準輸出。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-/HELP  
-/help  
-/?  
-```  
-  
-## <a name="remarks"></a>備註  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
-  
--   這個編譯器選項應該只能存取從命令列。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
-  
--   無法以程式設計方式變更這個編譯器選項。  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器選項](../../build/reference/compiler-options.md)   
- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+
+標準輸出中顯示編譯器選項的清單。
+
+## <a name="syntax"></a>語法
+
+```
+/HELP
+/help
+/?
+```
+
+## <a name="remarks"></a>備註
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
+
+- 從命令列時，應該只能存取這個編譯器選項。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
+
+- 這個編譯器選項不能以程式設計方式變更。
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)

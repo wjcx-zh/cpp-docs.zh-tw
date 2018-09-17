@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960303"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718315"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函式
 
@@ -41,11 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>參數
 
-*val*  
- 將會收到 new_val 值的物件。
+*val*<br/>
+將會收到 new_val 值的物件。
 
-*new_val*  
- 其值會複製或移動到 val 的物件。
+*new_val*<br/>
+其值會複製或移動到 val 的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -163,17 +163,17 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Tuple*  
- 指定元素的以 0 為基底的索引。
+*Tuple*<br/>
+指定元素的以 0 為基底的索引。
 
-*T1*  
- 第一個配對項目的類型。
+*T1*<br/>
+第一個配對項目的類型。
 
-*T2*  
- 第二個配對項目的類型。
+*T2*<br/>
+第二個配對項目的類型。
 
-*提取要求*  
- 要從中選取的配對。
+*提取要求*<br/>
+要從中選取的配對。
 
 ### <a name="remarks"></a>備註
 
@@ -234,11 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>參數
 
-*val1*  
- 值，初始化 `pair` 的第一個項目。
+*val1*<br/>
+值，初始化 `pair` 的第一個項目。
 
-*Val2*  
- 值，初始化 `pair` 的第二個項目。
+*Val2*<br/>
+值，初始化 `pair` 的第二個項目。
 
 ### <a name="return-value"></a>傳回值
 

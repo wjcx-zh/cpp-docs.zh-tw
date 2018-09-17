@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027319"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721444"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 慣例概觀
 
@@ -64,16 +64,16 @@ ARM 上 Windows 的指令集嚴格限制為 Thumb-2。 在此平台上執行的�
 - 目標指令必須是下列其中一種：
 
    |16 位元 Opcode|類別|限制|
-    |---------------------|-----------|------------------|
-    |MOV、MVN|Move|Rm != PC、Rd != PC|
-    |LDR、LDR[S]B、LDR[S]H|從記憶體載入|但不是 LDR 常值格式|
-    |STR、STRB、STRH|儲存至記憶體||
-    |ADD、ADC、RSB、SBC、SUB|加法或減法|但不是 ADD/SUB SP、SP、imm7 格式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
-    |CMP、CMN|比較|Rm != PC、Rn != PC|
-    |MUL|乘法||
-    |ASR、LSL、LSR、ROR|位元移位||
-    |AND、BIC、EOR、ORR、TST|位元算術||
-    |BX|分支到暫存器|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV、MVN|Move|Rm != PC、Rd != PC|
+   |LDR、LDR[S]B、LDR[S]H|從記憶體載入|但不是 LDR 常值格式|
+   |STR、STRB、STRH|儲存至記憶體||
+   |ADD、ADC、RSB、SBC、SUB|加法或減法|但不是 ADD/SUB SP、SP、imm7 格式<br /><br /> Rm != PC、Rdn != PC、Rdm != PC|
+   |CMP、CMN|比較|Rm != PC、Rn != PC|
+   |MUL|乘法||
+   |ASR、LSL、LSR、ROR|位元移位||
+   |AND、BIC、EOR、ORR、TST|位元算術||
+   |BX|分支到暫存器|Rm != PC|
 
 雖然目前 ARMv7 CPU 無法報告不容許之指令格式的使用情況，但預期未來版本可以報告。 如果偵錯到這些格式，則使用它們的任何程式可能會因未定義的指令例外狀況而終止。
 
@@ -233,5 +233,5 @@ ARM EABI 會指定使用回溯程式碼的例外狀況回溯模型。 不過，�
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM 例外狀況處理](../build/arm-exception-handling.md)  
+[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM 例外狀況處理](../build/arm-exception-handling.md)

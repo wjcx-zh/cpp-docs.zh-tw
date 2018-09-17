@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0aa5b4028863ff31084e8d01892a86b990de51fb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543103"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714203"
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft 專屬**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftright128(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `LowPart`  
- 要移位的 128 位元數量的較低 64 個位元。  
+*LowPart*<br/>
+[in]要移位的 128 位元數量低 64 個位元。  
   
- [in] `HighPart`  
- 要移位的 128 位元數量的較高 64 個位元。  
+*HighPart*<br/>
+[in]要移位的 128 位元數量高 64 個位元。  
   
- [in] `Shift`  
- 要移位的位元數。  
+*Shift*<br/>
+[in]要移位的位元數。  
   
 ## <a name="return-value"></a>傳回值  
  結果的較低 64 個位元。  

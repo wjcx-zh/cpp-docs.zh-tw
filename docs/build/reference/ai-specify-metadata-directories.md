@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f932e186630d1bc6c846c78af99f98262861068
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110665"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716584"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (指定中繼資料目錄)
 
@@ -42,6 +42,7 @@ ms.locfileid: "44110665"
 編譯器要搜尋的目錄或路徑。
 
 ## <a name="remarks"></a>備註
+
 只有一個目錄可以傳遞給 **/AI**引動過程。 請指定其中一個 **/AI**選項針對每個您想要編譯器搜尋的路徑。 例如，若要將 C:\Project\Meta 和 C:\Common\Meta 加入至編譯器搜尋路徑`#using`指示詞，新增`/AI"C:\Project\Meta" /AI"C:\Common\Meta"`至編譯器命令列或新增至每個目錄**其他 #using 目錄**在 Visual Studio 中的屬性。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
@@ -58,6 +59,6 @@ ms.locfileid: "44110665"
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)   
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)   
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
 [#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)

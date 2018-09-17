@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954834"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726683"
 ---
 # <a name="unorderedset-class"></a>unordered_set 類別
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要對應的索引鍵值。
+*keyval*<br/>
+要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket*  
- Bucket 編號。
+*nbucket*<br/>
+Bucket 編號。
 
 ### <a name="remarks"></a>備註
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要搜尋的索引鍵值。
+*keyval*<br/>
+要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要搜尋的索引鍵值。
+*keyval*<br/>
+要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>參數
 
-*Where*  
- 要移除之項目的位置。
+*Where*<br/>
+要移除之項目的位置。
 
-*第一個*  
- 要移除之第一個項目的位置。
+*第一個*<br/>
+要移除之第一個項目的位置。
 
-*最後一個*  
- 緊接在要移除之最後一個項目後面的位置。
+*最後一個*<br/>
+緊接在要移除之最後一個項目後面的位置。
 
-*Key*  
- 要移除之項目的索引鍵值。
+*Key*<br/>
+要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
- 要搜尋的索引鍵值。
+*keyval*<br/>
+要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>參數
 
-*factor*  
- 新的最大載入因數。
+*factor*<br/>
+新的最大載入因數。
 
 ### <a name="remarks"></a>備註
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets*  
- 要求的值區數目。
+*nbuckets*<br/>
+要求的值區數目。
 
 ### <a name="remarks"></a>備註
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- 要交換的容器。
+*right*<br/>
+要交換的容器。
 
 ### <a name="remarks"></a>備註
 

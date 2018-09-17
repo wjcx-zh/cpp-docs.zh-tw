@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 433d4ba23cbf4ed7e2819a3752cd2155b7c20371
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 12935c6a735d72bb1eb25627c78d69f362073a90
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724369"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset 內建函式
 **Microsoft 專屬**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `a`  
- 要檢查的記憶體指標。  
+*a*<br/>
+[in]要檢查的記憶體指標。  
   
- [in] `b`  
- 要測試的位元位置。  
+*b*<br/>
+[in]要測試的位元位置。  
   
 ## <a name="return-value"></a>傳回值  
  `b` 所指定位置上的位元之原始值。  

@@ -1,5 +1,5 @@
 ---
-title: 單一 |Microsoft 文件
+title: 單一 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd5349331ac23998511a8f1b838d2cd13b01998
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691855"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716985"
 ---
 # <a name="single"></a>single
 可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。  
@@ -36,8 +36,9 @@ ms.locfileid: "33691855"
 ```  
   
 #### <a name="parameters"></a>參數  
- `clause` (選擇性)  
- 零個或多個子句。 請參閱 < 備註 > 一節如需所支援的子句**單一**。  
+
+`clause`  
+（選擇性）零個或多個子句。 請參閱所支援的子句清單的 < 備註 > 一節**單一**。  
   
 ## <a name="remarks"></a>備註  
  **單一**指示詞可支援下列 OpenMP 子句：  
@@ -50,9 +51,9 @@ ms.locfileid: "33691855"
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [主要](../../../parallel/openmp/reference/master.md)指示詞可讓您指定的一段程式碼應該只能在執行主要執行緒。  
+ [主要](../../../parallel/openmp/reference/master.md)指示詞可讓您指定一段程式碼，應該只在主要執行緒上執行。  
   
- 如需詳細資訊，請參閱[2.4.3 單一建構](../../../parallel/openmp/2-4-3-single-construct.md)。  
+ 如需詳細資訊，請參閱 < [2.4.3 單一建構](../../../parallel/openmp/2-4-3-single-construct.md)。  
   
 ## <a name="example"></a>範例  
   

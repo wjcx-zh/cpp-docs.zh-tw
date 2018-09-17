@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086fbbc2a25c4af2b09f40d83ac0b20399860ca1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3777492212bbff368902acf589f0a3c46ea4ac18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679802"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718668"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ void __svm_vmrun(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `VmcbPhysicalAddress`|VMCB 實體位址。|  
+|*VmcbPhysicalAddress*|[in]VMCB 實體位址。|  
   
 ## <a name="remarks"></a>備註  
  `__svm_vmrun`函式使用 VMCB 中最少量的資訊，開始執行的虛擬機器客體程式碼。 使用[__svm_vmsave](../intrinsics/svm-vmsave.md)或是[__svm_vmload](../intrinsics/svm-vmload.md)函式，如果您需要處理複雜的中斷，或切換至另一個客體的詳細資訊。  

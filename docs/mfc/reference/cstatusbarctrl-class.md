@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677741"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711793"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 類別
 提供 Windows 通用狀態列控制項的功能。  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iPart*|組件，其中包含要擷取圖示的以零為起始的索引。 如果這個參數是-1，狀態列會假設為簡單模式下的狀態 列中。|  
+|*iPart*|[in]組件，其中包含要擷取圖示的以零為起始的索引。 如果這個參數是-1，狀態列會假設為簡單模式下的狀態 列中。|  
   
 ### <a name="return-value"></a>傳回值  
  圖示的控制代碼如果方法成功，否則為 NULL。  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSimple*  
- 顯示型別旗標。 如果此參數為 TRUE 時，控制項就會顯示簡單的文字;如果是 FALSE，它會顯示多個部分。  
+*bSimple*<br/>
+[in]顯示型別旗標。 如果此參數為 TRUE 時，控制項就會顯示簡單的文字;如果是 FALSE，它會顯示多個部分。  
   
 ### <a name="return-value"></a>傳回值  
  一律傳回 0。  

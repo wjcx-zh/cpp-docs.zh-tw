@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c56f9ea0770618e65f454acd23ea22f19d3cfa92
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954847"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711096"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 類別
 
@@ -52,11 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>參數
 
-*Codecvt*  
- [locale](../standard-library/locale-class.md) Facet，代表轉換物件。
+*Codecvt*<br/>
+[locale](../standard-library/locale-class.md) Facet，代表轉換物件。
 
-*Elem*  
- 寬字元項目類型。
+*Elem*<br/>
+寬字元項目類型。
 
 ## <a name="remarks"></a>備註
 

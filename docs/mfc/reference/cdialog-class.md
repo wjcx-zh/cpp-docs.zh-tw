@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c18a9b1e4a35a1089b8a7fb441161552bb3a3909
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217329"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724304"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 用於在螢幕上顯示對話方塊的基底類別。  
@@ -472,8 +472,8 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pFont*  
- 指定將當做預設字型使用此對話方塊中的所有控制項的字型的指標。  
+*pFont*<br/>
+[in]指定將當做預設字型使用此對話方塊中的所有控制項的字型的指標。  
   
 ### <a name="remarks"></a>備註  
  對話方塊中將使用指定的字型作為預設值它的所有控制項。  

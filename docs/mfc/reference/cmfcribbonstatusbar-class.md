@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3123206c90bd5dd901e25ff3fe26e48ba8809452
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540400"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710504"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 類別
 `CMFCRibbonStatusBar`類別會實作狀態列控制項可以顯示功能區項目。  
@@ -149,8 +149,8 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pElement*  
- 動態項目的指標。  
+*pElement*<br/>
+[in]動態項目的指標。  
   
 ### <a name="remarks"></a>備註  
  不同規則的項目，於動態元素，而且非屬可自訂狀態列的 [自訂] 功能表不會顯示它們。  
@@ -166,14 +166,14 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pElement*  
- 若要加入的項目指標。  
+*pElement*<br/>
+[in]若要加入的項目指標。  
   
- [in]*lpszLabel*  
- 項目的文字標籤。  
+*lpszLabel*<br/>
+[in]項目的文字標籤。  
   
- [in]*bIsVisible*  
- 如果您想要新增的項目為可見，FALSE 如果您想要新增項目為隱藏，則為 TRUE。  
+*bIsVisible*<br/>
+[in]如果您想要新增的項目為可見，FALSE 如果您想要新增項目為隱藏，則為 TRUE。  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
  將功能區項目加入至功能區狀態列擴充區域中。  
@@ -186,14 +186,14 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pElement*  
- 若要加入的項目指標。  
+*pElement*<br/>
+[in]若要加入的項目指標。  
   
- [in]*lpszLabel*  
- 項目的文字標籤。  
+*lpszLabel*<br/>
+[in]項目的文字標籤。  
   
- [in]*bIsVisible*  
- 如果您想要新增的項目為可見，FALSE 如果您想要新增項目為隱藏，則為 TRUE。  
+*bIsVisible*<br/>
+[in]如果您想要新增的項目為可見，FALSE 如果您想要新增項目為隱藏，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  擴充區域位於狀態列控制項右邊。  
@@ -219,14 +219,14 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParentWnd*  
- 父視窗的指標。  
+*pParentWnd*<br/>
+[in]父視窗的指標。  
   
- [in]*cheaderctrl:: Create*  
- 邏輯 OR 運算子組合的控制項的樣式。  
+*cheaderctrl:: Create*<br/>
+[in]邏輯 OR 運算子組合的控制項的樣式。  
   
- [in]*nID*  
- 狀態列控制項識別碼。  
+*nID*<br/>
+[in]狀態列控制項識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  [狀態] 列已成功建立，FALSE 否則，其值為 TRUE。  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdID*  
- [in]*BOOL*  
+*uiCmdID*<br/>
+[in][in]*BOOL*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -281,8 +281,8 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- 項目的識別碼。  
+*uiID*<br/>
+[in]項目的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  具有指定之命令識別碼的項目指標 如果沒有這類項目，則為 NULL。  
@@ -305,8 +305,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 指定以零為起始的索引，位於狀態列控制項的主要區域中的項目。  
+*nIndex*<br/>
+[in]指定以零為起始的索引，位於狀態列控制項的主要區域中的項目。  
   
 ### <a name="return-value"></a>傳回值  
  位於指定索引處的項目指標。 如果索引是負值或超過在狀態列中的項目數，則為 NULL。  
@@ -331,8 +331,8 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nIndex*  
- 指定位於狀態列控制項擴充區域中之元素的以零起始索引。  
+*nIndex*<br/>
+[in]指定位於狀態列控制項擴充區域中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  此指標指向功能區狀態列擴充區域中，位於指定索引上的元素。 如果*nIndex*是負數，或超過功能區狀態列擴充區域中的項目數。  
@@ -413,14 +413,14 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*strInfo*  
- 資訊的字串。  
+*strInfo*<br/>
+[in]資訊的字串。  
   
- [in]*rectInfo*  
- 週框。  
+*rectInfo*<br/>
+[in]週框的矩形。  
   
 ### <a name="remarks"></a>備註  
  如果您想要自訂狀態列上的資訊字串的外觀，請覆寫這個方法在衍生類別中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法，將 [狀態] 列中的資訊模式。 在此模式中，[狀態] 列會隱藏所有窗格，並顯示所指定的資訊字串*strInfo*。  
@@ -449,8 +449,8 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiID*  
- 從 [狀態] 列中移除之項目的識別碼。  
+*uiID*<br/>
+[in]從 [狀態] 列中移除之項目的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果具有指定的項目，則為 TRUE *uiID*已移除。 FALSE 否則。  
@@ -463,8 +463,8 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszInfo*  
- 資訊的字串。  
+*lpszInfo*<br/>
+[in]資訊的字串。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法，將 [狀態] 列中的資訊模式。 在此模式中，[狀態] 列會隱藏所有窗格，並顯示所指定的資訊字串*lpszInfo*。  

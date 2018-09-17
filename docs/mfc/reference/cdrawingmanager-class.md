@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ded6eb4b6b757934bcdb62c280c6d57e1b171e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72e37cd8ba46e3ad9e59fa0d585d6a118b7a0038
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196056"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708626"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 `CDrawingManager`類別會實作複雜繪圖演算法。  
@@ -139,8 +139,8 @@ CDrawingManager(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dc*  
- 裝置內容的參考。 `CDrawingManager`會使用此內容為繪圖。  
+*dc*<br/>
+[in]裝置內容的參考。 `CDrawingManager`會使用此內容為繪圖。  
   
 ##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32  
  建立應用程式可以直接寫入 32 位元裝置獨立點陣圖 (DIB)。  
@@ -160,8 +160,8 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*大小*|A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，表示點陣圖的大小。|  
-|[out]*pBits*|指向資料指標所收到的 DIB 位置的位元值。|  
+|*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，表示點陣圖的大小。|  
+|*pBits*|[out]指向資料指標所收到的 DIB 位置的位元值。|  
 |*點陣圖*|原始點陣圖控制代碼|  
 |*clrTransparent*|指定的原始點陣圖的透明色彩的 RGB 值。|  
   
@@ -183,17 +183,17 @@ void DrawAlpha(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDstDC*  
- 目的地裝置內容指標。  
+*pDstDC*<br/>
+[in]目的地裝置內容指標。  
   
- [in]*rectDst*  
- 目的矩形。  
+*rectDst*<br/>
+[in]目的矩形。  
   
- [in]*pSrcDC*  
- 來源裝置內容指標。  
+*pSrcDC*<br/>
+[in]來源裝置內容指標。  
   
- [in]*rectSrc*  
- 來源矩形。  
+*rectSrc*<br/>
+[in]來源矩形。  
   
 ### <a name="remarks"></a>備註  
  這個方法執行兩個點陣圖 alpha 透明混色。 如需 alpha 透明混色的詳細資訊，請參閱[alphablend，還有旁邊](/windows/desktop/api/wingdi/nf-wingdi-alphablend)Windows SDK 中。  
@@ -209,14 +209,14 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 橢圓形的週框。  
+*rect*<br/>
+[in]橢圓形的週框。  
   
- [in]*clrFill*  
- 這個方法會使用以填滿橢圓形的色彩。  
+*clrFill*<br/>
+[in]這個方法會使用以填滿橢圓形的色彩。  
   
- [in]*clrLine*  
- 這個方法會使用為橢圓形的框線色彩。  
+*clrLine*<br/>
+[in]這個方法會使用為橢圓形的框線色彩。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳回不繪製橢圓形，如果其中一個色彩設定為-1。 它也會傳回不繪製橢圓形，如果指定的週框的任一個維度是 0。  
@@ -236,26 +236,26 @@ BOOL DrawGradientRing(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md)參數，指定漸層停駐的信號的界限。  
+*rect*<br/>
+[in]A [CRect](../../atl-mfc-shared/reference/crect-class.md)參數，指定漸層停駐的信號的界限。  
   
- [in]*colorStart*  
- 漸層的第一個色彩。  
+*colorStart*<br/>
+[in]漸層的第一個色彩。  
   
- [in]*colorFinish*  
- 最後的色彩漸層。  
+*colorFinish*<br/>
+[in]最後的色彩漸層。  
   
- [in]*colorBorder*  
- 框線的色彩。  
+*colorBorder*<br/>
+[in]框線的色彩。  
   
- [in]*nAngle*  
- 參數來指定初始的漸層繪製角度。 這個值應該是介於 0 和 360 之間。  
+*nAngle*<br/>
+[in]參數來指定初始的漸層繪製角度。 這個值應該是介於 0 和 360 之間。  
   
- [in]*nWidth*  
- 響鈴框線的寬度。  
+*nWidth*<br/>
+[in]響鈴框線的寬度。  
   
- [in]*clrFace*  
- 環形的內部的色彩。  
+*clrFace*<br/>
+[in]環形的內部的色彩。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -287,11 +287,11 @@ void DrawLineA(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*x1*|行開頭位置的 x 座標。|  
-|[in]*y1*|行開頭位置的 y 座標。|  
-|[in]*x2*|線條的結束位置的 x 座標。|  
-|[in]*y2*|線條的結束位置的 y 座標。|  
-|[in]*clrLine*|線條色彩。|  
+|*x1*|[in]行開頭位置的 x 座標。|  
+|*y1*|[in]行開頭位置的 y 座標。|  
+|*x2*|[in]線條的結束位置的 x 座標。|  
+|*y2*|[in]線條的結束位置的 y 座標。|  
+|*clrLine*|[in]線條色彩。|  
   
 ### <a name="remarks"></a>備註  
  如果這個方法會失敗*clrLine*等於-1。  
@@ -307,14 +307,14 @@ void DrawRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 矩形界限。  
+*rect*<br/>
+[in]矩形界限。  
   
- [in]*clrFill*  
- 這個方法會使用以填滿矩形的色彩。  
+*clrFill*<br/>
+[in]這個方法會使用以填滿矩形的色彩。  
   
- [in]*clrLine*  
- 這個方法會使用矩形的框線色彩。  
+*clrLine*<br/>
+[in]這個方法會使用矩形的框線色彩。  
   
 ### <a name="remarks"></a>備註  
  這個方法傳回時不繪製矩形，如果其中一個色彩設定為-1。 它也會傳回如果任一個矩形的維度是 0。  
@@ -335,29 +335,29 @@ BOOL DrawShadow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 您的應用程式中的矩形區域。 繪製管理員將此區域下方繪製一個陰影。  
+*rect*<br/>
+[in]您的應用程式中的矩形區域。 繪製管理員將此區域下方繪製一個陰影。  
   
- [in]*nDepth*  
- 寬度和高度的陰影。  
+*nDepth*<br/>
+[in]寬度和高度的陰影。  
   
- [in]*iMinBrightness*  
- 陰影的最小的亮度。  
+*iMinBrightness*<br/>
+[in]陰影的最小的亮度。  
   
- [in]*iMaxBrightness*  
- 陰影的最大的亮度。  
+*iMaxBrightness*<br/>
+[in]陰影的最大的亮度。  
   
- [in]*pBmpSaveBottom*  
- 指標，包含影像的下半部陰影的點陣圖。  
+*pBmpSaveBottom*<br/>
+[in]指標，包含影像的下半部陰影的點陣圖。  
   
- [in]*pBmpSaveRight*  
- 指標，包含該映像，矩形右側繪製陰影的點陣圖。  
+*pBmpSaveRight*<br/>
+[in]指標，包含該映像，矩形右側繪製陰影的點陣圖。  
   
- [in]*clrBase*  
- 陰影的色彩。  
+*clrBase*<br/>
+[in]陰影色彩。  
   
- [in]*bRightShadow*  
- 布林值參數，指出如何繪製陰影。 如果*bRightShadow*是`TRUE`，`DrawShadow`矩形右側上繪製一個陰影。  
+*bRightShadow*<br/>
+[in]布林值參數，指出如何繪製陰影。 如果*bRightShadow*是`TRUE`，`DrawShadow`矩形右側上繪製一個陰影。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -389,26 +389,26 @@ void Fill4ColorsGradient(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 要填滿的矩形。  
+*rect*<br/>
+[in]要填滿的矩形。  
   
- [in]*colorStart1*  
- 第一個的色彩漸層的初始色彩。  
+*colorStart1*<br/>
+[in]第一個的色彩漸層的初始色彩。  
   
- [in]*colorFinish1*  
- 第一個色彩漸層的完稿色彩。  
+*colorFinish1*<br/>
+[in]第一個色彩漸層的完稿色彩。  
   
- [in]*colorStart2*  
- 第二個的色彩漸層的初始色彩。  
+*colorStart2*<br/>
+[in]第二個的色彩漸層的初始色彩。  
   
- [in]*colorFinish2*  
- 第二個色彩漸層的完稿色彩。  
+*colorFinish2*<br/>
+[in]第二個色彩漸層的完稿色彩。  
   
- [in]*bHorz*  
- 布林值，指出參數是否`Fill4ColorsGradient`水平或垂直的漸層的色彩。 TRUE 表示水平漸層。  
+*bHorz*<br/>
+[in]布林值，指出參數是否`Fill4ColorsGradient`水平或垂直的漸層的色彩。 TRUE 表示水平漸層。  
   
- [in]*nPercentage*  
- 從 0 到 100 的整數。 這個值表示要使用的第一個色彩漸層填滿的矩形的百分比。  
+*nPercentage*<br/>
+[in]從 0 到 100 的整數。 這個值表示要使用的第一個色彩漸層填滿的矩形的百分比。  
   
 ### <a name="remarks"></a>備註  
  當兩個色彩漸層填滿矩形時，它們會位於彼此的上方或下一步，值而定*bHorz*。 每個色彩漸層的計算，使用方法的方式單獨[CDrawingManager::FillGradient](#fillgradient)。  
@@ -429,23 +429,23 @@ void FillGradient(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 要填滿的矩形區域。  
+*rect*<br/>
+[in]要填滿的矩形區域。  
   
- [in]*colorStart*  
- 漸層的第一個色彩。  
+*colorStart*<br/>
+[in]漸層的第一個色彩。  
   
- [in]*colorFinish*  
- 完稿色彩的漸層。  
+*colorFinish*<br/>
+[in]完稿色彩的漸層。  
   
- [in]*bHorz*  
- 布林值參數，指定是否`FillGradient`應該繪製在水平或垂直漸層。  
+*bHorz*<br/>
+[in]布林值參數，指定是否`FillGradient`應該繪製在水平或垂直漸層。  
   
- [in]*nStartFlatPercentage*  
- 矩形的百分比，`FillGradient`填入*colorStart*開始之漸層之前。  
+*nStartFlatPercentage*<br/>
+[in]矩形的百分比，`FillGradient`填入*colorStart*開始之漸層之前。  
   
- [in]*nEndFlatPercentage*  
- 矩形的百分比，`FillGradient`填入*colorFinish*完成之漸層之後。  
+*nEndFlatPercentage*<br/>
+[in]矩形的百分比，`FillGradient`填入*colorFinish*完成之漸層之後。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用`FillGradient`方法的`CDrawingManager`類別。 此程式碼片段是一部分[MS Office 2007 示範範例](../../visual-cpp-samples.md)。  
@@ -464,17 +464,17 @@ void FillGradient2 (
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 要填滿的矩形區域。  
+*rect*<br/>
+[in]要填滿的矩形區域。  
   
- [in]*colorStart*  
- 漸層的第一個色彩。  
+*colorStart*<br/>
+[in]漸層的第一個色彩。  
   
- [in]*colorFinish*  
- 最後的色彩漸層。  
+*colorFinish*<br/>
+[in]最後的色彩漸層。  
   
- [in]*nAngle*  
- 整數，介於 0 和 360 之間。 此參數指定之色彩漸層的方向。  
+*nAngle*<br/>
+[in]整數，介於 0 和 360 之間。 此參數指定之色彩漸層的方向。  
   
 ### <a name="remarks"></a>備註  
  使用*nAngle*以指定之色彩漸層的方向。 當您指定之色彩漸層的方向時，您也指定之色彩漸層的開始位置。 值為 0，表示*nAngle*表示從矩形頂端的漸層開始。 作為*nAngle*增加時，起始位置的漸層中根據角度以逆時鐘方向的移動。  
@@ -496,17 +496,17 @@ BOOL GrayRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 要填滿的矩形區域。  
+*rect*<br/>
+[in]要填滿的矩形區域。  
   
- [in]*nPercentage*  
- 您想要在矩形的灰色的百分比。  
+*nPercentage*<br/>
+[in]您想要在矩形的灰色的百分比。  
   
- [in]*clrTransparent*  
- 透明的色彩。  
+*clrTransparent*<br/>
+[in]透明的色彩。  
   
- [in]*clrDisabled*  
- 如果這個方法會使用取消的飽和度的色彩*nPercentage*設定為-1。  
+*clrDisabled*<br/>
+[in]如果這個方法會使用取消的飽和度的色彩*nPercentage*設定為-1。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -529,20 +529,20 @@ BOOL HighlightRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 若要反白顯示的矩形區域。  
+*rect*<br/>
+[in]若要反白顯示的矩形區域。  
   
- [in]*nPercentage*  
- 百分比來指出應該是透明的反白顯示。  
+*nPercentage*<br/>
+[in]百分比來指出應該是透明的反白顯示。  
   
- [in]*clrTransparent*  
- 透明的色彩。  
+*clrTransparent*<br/>
+[in]透明的色彩。  
   
- [in]*nTolerance*  
- 表示的整數 0 和 255 之間的色彩容錯。  
+*nTolerance*<br/>
+[in]表示的整數 0 和 255 之間的色彩容錯。  
   
- [in]*clrBlend*  
- 混用基底的色彩。  
+*clrBlend*<br/>
+[in]混用基底的色彩。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -563,14 +563,14 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*H*  
- 介於 0 到 1，表示色彩的色調。  
+*H*<br/>
+[in]介於 0 到 1，表示色彩的色調。  
   
- [in]*L*  
- 介於 0 和 1，表示色彩的亮度。  
+*L*<br/>
+[in]介於 0 和 1，表示色彩的亮度。  
   
- [in]*S*  
- 介於 0 和 1，表示色彩的飽和度。  
+*S*<br/>
+[in]介於 0 和 1，表示色彩的飽和度。  
   
 ### <a name="return-value"></a>傳回值  
  提供的 HLS 色彩 RGB 表示法。  
@@ -591,14 +591,14 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*H*  
- 表示數字介於 0 和 360 之間的色彩色調。  
+*H*<br/>
+[in]表示數字介於 0 和 360 之間的色彩色調。  
   
- [in]*L*  
- 介於 0 和 1，表示色彩的亮度。  
+*L*<br/>
+[in]介於 0 和 1，表示色彩的亮度。  
   
- [in]*S*  
- 介於 0 和 1，表示色彩的飽和度。  
+*S*<br/>
+[in]介於 0 和 1，表示色彩的飽和度。  
   
 ### <a name="return-value"></a>傳回值  
  提供的 HLS 色彩 RGB 表示法。  
@@ -623,9 +623,9 @@ static COLORREF __stdcall HSVtoRGB(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*H*|表示的數字介於 0 和 360 之間的色彩色調。|  
-|[in]*S*|介於 0 和 1，表示色彩的飽和度。|  
-|[in]*V*|介於 0 和 1，表示色彩的值。|  
+|*H*|[in]表示的數字介於 0 和 360 之間的色彩色調。|  
+|*S*|[in]介於 0 和 1，表示色彩的飽和度。|  
+|*V*|[in]介於 0 和 1，表示色彩的值。|  
   
 ### <a name="return-value"></a>傳回值  
  提供 HSV 色彩的 RGB 呈現。  
@@ -650,23 +650,23 @@ static BYTE __stdcall HueToRGB(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*m1*  
- 請參閱＜備註＞。  
+*M1*<br/>
+[in]請參閱 < 備註 >。  
   
- [in]*m2*  
- 請參閱＜備註＞。  
+*M2*<br/>
+[in]請參閱 < 備註 >。  
   
- [in]*h*  
- 請參閱＜備註＞。  
+*h*<br/>
+[in]請參閱 < 備註 >。  
   
- [in]*rm1*  
- 請參閱＜備註＞。  
+*rm1*<br/>
+[in]請參閱 < 備註 >。  
   
- [in]*rm2*  
- 請參閱＜備註＞。  
+*rm2*<br/>
+[in]請參閱 < 備註 >。  
   
- [in]*rh*  
- 請參閱＜備註＞。  
+*rh*<br/>
+[in]請參閱 < 備註 >。  
   
 ### <a name="return-value"></a>傳回值  
  提供 hue 的個別紅色、 綠色或藍色元件。  
@@ -692,11 +692,11 @@ void MirrorRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 若要翻轉區域的周框。  
+*rect*<br/>
+[in]若要翻轉區域的周框。  
   
- [in]*bHorz*  
- 布林值參數，指出矩形是否會水平或垂直翻轉。  
+*bHorz*<br/>
+[in]布林值參數，指出矩形是否會水平或垂直翻轉。  
   
 ### <a name="remarks"></a>備註  
  這個方法可以反轉所擁有的裝置任何的內容區域`CDrawingManager`類別。 如果*bHorz*是設為 TRUE，這個方法的區域會水平翻轉。 否則，它的區域垂直翻轉。  
@@ -722,23 +722,23 @@ static COLORREF __stdcall PixelAlpha(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*srcPixel*  
- 像素的初始色彩。  
+*srcPixel*<br/>
+[in]像素的初始色彩。  
   
- [in]*百分比*  
- 表示數字介於 0 到 100 之間的透明度百分比。 值為 100 表示的初始色彩是完全透明的。  
+*百分比*<br/>
+[in]表示數字介於 0 到 100 之間的透明度百分比。 值為 100 表示的初始色彩是完全透明的。  
   
- [in]*percentR*  
- 表示數字介於 0 到 100 之間的紅色元件的透明度百分比。  
+*percentR*<br/>
+[in]表示數字介於 0 到 100 之間的紅色元件的透明度百分比。  
   
- [in]*percentG*  
- 表示數字介於 0 到 100 之間的綠色元件的透明度百分比。  
+*percentG*<br/>
+[in]表示數字介於 0 到 100 之間的綠色元件的透明度百分比。  
   
- [in]*percentB*  
- 表示數字介於 0 到 100 之間的藍色元件透明度百分比。  
+*percentB*<br/>
+[in]表示數字介於 0 到 100 之間的藍色元件透明度百分比。  
   
- [in]*dstPixel*  
- 基底的像素色彩。  
+*dstPixel*<br/>
+[in]基底的像素色彩。  
   
 ### <a name="return-value"></a>傳回值  
  半透明的像素的完稿色彩。  
@@ -760,17 +760,17 @@ static HBITMAP __stdcall PrepareShadowMask (
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nDepth*  
- 寬度和高度的陰影。  
+*nDepth*<br/>
+[in]寬度和高度的陰影。  
   
- [in]*clrBase*  
- 陰影的色彩。  
+*clrBase*<br/>
+[in]陰影色彩。  
   
- [in]*iMinBrightness*  
- 陰影的最小的亮度。  
+*iMinBrightness*<br/>
+[in]陰影的最小的亮度。  
   
- [in]*iMaxBrightness*  
- 陰影的最大的亮度。  
+*iMaxBrightness*<br/>
+[in]陰影的最大的亮度。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法建立點陣圖控制代碼否則為 NULL。  
@@ -794,10 +794,10 @@ static void __stdcall RGBtoHSL(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*rgb*|色彩 RGB 值。|  
-|[out]*H*|Double 值，這個方法儲存的色彩色調的位置指標。|  
-|[out]*S*|Double 值，這個方法儲存的色彩飽和度的位置指標。|  
-|[out]*L*|Double 值，這個方法儲存的色彩亮度的位置指標。|  
+|*rgb*|[in]色彩 RGB 值。|  
+|*H*|[out]Double 值，這個方法儲存的色彩色調的位置指標。|  
+|*S*|[out]Double 值，這個方法儲存的色彩飽和度的位置指標。|  
+|*L*|[out]Double 值，這個方法儲存的色彩亮度的位置指標。|  
   
 ### <a name="remarks"></a>備註  
  色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
@@ -816,17 +816,17 @@ static void __stdcall RGBtoHSV(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rgb*  
- 要轉換的 RGB 表示法中的色彩。  
+*rgb*<br/>
+[in]要轉換的 RGB 表示法中的色彩。  
   
- [out]*H*  
- Double 值，這個方法儲存產生的色彩色調的位置指標。  
+*H*<br/>
+[out]Double 值，這個方法儲存產生的色彩色調的位置指標。  
   
- [out]*S*  
- Double 值，這個方法儲存產生的色彩飽和度的位置指標。  
+*S*<br/>
+[out]Double 值，這個方法儲存產生的色彩飽和度的位置指標。  
   
- [out]*V*  
- Double 值，這個方法儲存產生的色彩值的位置指標。  
+*V*<br/>
+[out]Double 值，這個方法儲存產生的色彩值的位置指標。  
   
 ### <a name="remarks"></a>備註  
  色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
@@ -849,29 +849,29 @@ static void __stdcall SetAlphaPixel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pBits*  
- 點陣圖的位元值指標。  
+*pBits*<br/>
+[in]點陣圖的位元值指標。  
   
- [in]*rect*  
- 您的應用程式中的矩形區域。 繪圖 manager 繪製一個陰影下方和右邊的這個區域。  
+*rect*<br/>
+[in]您的應用程式中的矩形區域。 繪圖 manager 繪製一個陰影下方和右邊的這個區域。  
   
- [in]*x*  
- 色彩的像素水平座標。  
+*x*<br/>
+[in]色彩的像素水平座標。  
   
- [in]*y*  
- 像素色彩的垂直座標。  
+*y*<br/>
+[in]像素色彩的垂直座標。  
   
- [in]*百分比*  
- 透明度百分比。  
+*百分比*<br/>
+[in]透明度百分比。  
   
- [in]*iShadowSize*  
- 寬度和高度的陰影。  
+*iShadowSize*<br/>
+[in]寬度和高度的陰影。  
   
- [in]*clrBase*  
- 陰影的色彩。  
+*clrBase*<br/>
+[in]陰影色彩。  
   
- [in]*bIsRight*  
- 布林值參數，指出哪一個像素的色彩。 如需詳細資訊，請參閱＜備註＞一節。  
+*bIsRight*<br/>
+[in]布林值參數，指出哪一個像素的色彩。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ### <a name="remarks"></a>備註  
  這個方法是 helper 方法，以供[CDrawingManager::DrawShadow](#drawshadow)方法。 我們建議，如果您想要繪製一個陰影，呼叫`CDrawingManager::DrawShadow`改。  
@@ -896,12 +896,12 @@ static void __stdcall SetPixel(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pBits*|點陣圖的位元值指標。|  
-|[in]*cx*|點陣圖的總寬度。|  
-|[in]*cy*|點陣圖的高度總計。|  
-|[in]*x*|若要變更點陣圖與像素 x 座標。|  
-|[in]*y*|若要變更點陣圖與像素的 y 座標。|  
-|[in]*色彩*|新提供的座標所識別的像素色彩。|  
+|*pBits*|[in]點陣圖的位元值指標。|  
+|*cx*|[in]點陣圖的總寬度。|  
+|*cy*|[in]點陣圖的高度總計。|  
+|*x*|[in]若要變更點陣圖與像素 x 座標。|  
+|*y*|[in]若要變更點陣圖與像素的 y 座標。|  
+|*色彩*|[in]新提供的座標所識別的像素色彩。|  
   
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors  
  結合的加權比例為基礎的兩個色彩。  
@@ -920,11 +920,11 @@ static COLORREF __stdcall SmartMixColors(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*color1*|混合的第一個色彩。|  
-|[in]*色 2*|混用第二個色彩。|  
-|[in]*dblLumRatio*|新的色彩亮度的比例。 `SmartMixColors` 乘以此比率的混合色彩的亮度然後再判斷完稿色彩。|  
-|[in]*版 k1 的 powerapps*|第一個色彩加權的比例。|  
-|[in]*k2*|第二個色彩的加權的比例。|  
+|*color1*|[in]混合的第一個色彩。|  
+|*色 2*|[in]混用第二個色彩。|  
+|*dblLumRatio*|[in]新的色彩亮度的比例。 `SmartMixColors` 乘以此比率的混合色彩的亮度然後再判斷完稿色彩。|  
+|*版 k1 的 powerapps*|[in]第一個色彩加權的比例。|  
+|*k2*|[in]第二個色彩的加權的比例。|  
   
 ### <a name="return-value"></a>傳回值  
  表示加權的混合提供色彩的色彩。  

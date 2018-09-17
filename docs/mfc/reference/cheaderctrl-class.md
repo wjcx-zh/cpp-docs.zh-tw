@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe4b604958220a846ee3a91b1a6251f6f461de9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 763849c2f13e88c11280ec7594385afd85552080
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758852"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712727"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 提供 Windows 通用標頭控制項的功能。  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|其樣式為 HDF_SPLITBUTTON 標頭項目的以零為起始的索引。 如需詳細資訊，請參閱 <<c0> `fmt` 隸屬[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構。|  
-|[out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框矩形資訊的結構。|  
+|*iItem*|[in]其樣式為 HDF_SPLITBUTTON 標頭項目的以零為起始的索引。 如需詳細資訊，請參閱 <<c0> `fmt` 隸屬[HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)結構。|  
+|*lpRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收的週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，此函式，則為 TRUE。否則為 FALSE。  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。|  
+|*lpRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收到的週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，此函式，則為 TRUE。否則為 FALSE。  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、 out]*phdhti*|指標[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)結構，指定要測試的點，並且會收到測試的結果。|  
+|*phdhti*|[in、 out]指標[HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo)結構，指定要測試的點，並且會收到測試的結果。|  
   
 ### <a name="return-value"></a>傳回值  
  標頭項目，如果有的話，在指定的位置; 為起始的索引否則為-1。  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iItem*|標頭項目的以零為起始的索引。|  
+|*iItem*|[in]標頭項目的以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  

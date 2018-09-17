@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e996a83cfc2a79d4bf5cc458ccc5bdd586355b64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538814"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721301"
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft 專屬**  
@@ -39,14 +39,14 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Multiplier`  
- 要相乘的第一個 64 位元整數。  
+*乘數*<br/>
+[in]要相乘的第一個 64 位元整數。  
   
- [in] `Multiplicand`  
- 要相乘的第二個 64 位元整數。  
+*被乘數*<br/>
+[in]要相乘的第二個 64 位元整數。  
   
- [輸出] `HighProduct`  
- 乘積的 64 高位元。  
+*HighProduct*<br/>
+[out]高 64 個位元的產品。  
   
 ## <a name="return-value"></a>傳回值  
  乘積的 64 低位元。  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726202"
 ---
 # <a name="clist-class"></a>CList 類別
 支援可循序或依值存取之非唯一物件的排序清單。  
@@ -115,7 +115,7 @@ class CList : public CObject
  *型別*  
  儲存在清單中的物件型別。  
   
- *ARG* *_* *類型*  
+ *ARG_TYPE 這個*  
  用來參考儲存在清單中的物件類型。 可以是參考。  
   
 ## <a name="remarks"></a>備註  

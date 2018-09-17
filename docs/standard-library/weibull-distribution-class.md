@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f684ad5e6487378e8f85aa1c30af0ae9d9038075
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9229aa162c032198595e78344157748d250b4288
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713761"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 類別
 
@@ -233,13 +233,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*  
+*a*<br/>
 `a` 分佈參數。
 
-*b*  
+*b*<br/>
 `b` 分佈參數。
 
-*parm*  
+*parm*<br/>
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -268,13 +268,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*  
+*a*<br/>
 `a` 分佈參數。
 
-*b*  
+*b*<br/>
 `b` 分佈參數。
 
-*right*  
+*right*<br/>
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註

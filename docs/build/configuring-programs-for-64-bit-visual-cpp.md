@@ -18,43 +18,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1054343d5e6afbc739fe302870b43eb9526f7d8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fe77781970a0f5cba6334bd117e816b43413cb38
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196985"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724694"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>設定 Visual c + + 64 位元 x64 目標
 
-此章節包含有關鎖定為目標的 64 位元 x64 硬體使用 Visual c + + 建置工具。  
-  
-## <a name="in-this-section"></a>本節內容  
-  
--   [如何：將 Visual C++ 專案設定成以 64 位元 x64 平台為目標](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
-  
--   [如何：在命令列啟用 64 位元 Visual C++ 工具組](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
-  
--   [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)  
-  
--   [x64 軟體慣例](../build/x64-software-conventions.md)  
-  
-## <a name="related-sections"></a>相關章節  
+此章節包含有關鎖定為目標的 64 位元 x64 硬體使用 Visual c + + 建置工具。
 
-[.NET framework 64 位元應用程式](/dotnet/framework/64-bit-apps)  
-  
-[align](../cpp/align-cpp.md)  
-  
-[/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)  
-  
-[/favor (專為架構最佳化)](../build/reference/favor-optimize-for-architecture-specifics.md)  
-  
-[64 位元 Windows 程式設計指南](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)  
-  
-[適用於 x64 的 MASM (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)  
-  
-[x64 (amd64) 內建清單](../intrinsics/x64-amd64-intrinsics-list.md)  
-  
-## <a name="see-also"></a>另請參閱  
+## <a name="in-this-section"></a>本節內容
+
+- [如何：將 Visual C++ 專案設定成以 64 位元 x64 平台為目標](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+
+- [如何：在命令列啟用 64 位元 Visual C++ 工具組](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+
+- [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)
+
+- [x64 軟體慣例](../build/x64-software-conventions.md)
+
+## <a name="related-sections"></a>相關章節
+
+[.NET framework 64 位元應用程式](/dotnet/framework/64-bit-apps)
+
+[align](../cpp/align-cpp.md)
+
+[/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)
+
+[/favor (專為架構最佳化)](../build/reference/favor-optimize-for-architecture-specifics.md)
+
+[64 位元 Windows 程式設計指南](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
+
+[適用於 x64 的 MASM (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)
+
+[x64 (amd64) 內建清單](../intrinsics/x64-amd64-intrinsics-list.md)
+
+## <a name="see-also"></a>另請參閱
 
 [建置 C/C++ 程式](building-c-cpp-programs.md)

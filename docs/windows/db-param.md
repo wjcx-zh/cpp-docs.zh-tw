@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612997"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719097"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ ms.locfileid: "42612997"
 *序數*  
 中要將資料繫結至資料列集的欄位對應的資料行號碼 （DBCOLUMNINFO 序數）。
 
-*paramtype* （選擇性）  
-若要設定的參數類型。 提供者支援只有參數 I/O 類型所支援的基礎資料來源。 類型是一或多個 DBPARAMIOENUM 值的組合：
+*paramtype*  
+（選擇性）若要設定的參數類型。 提供者支援只有參數 I/O 類型所支援的基礎資料來源。 類型是一或多個 DBPARAMIOENUM 值的組合：
 
 - DBPARAMIO_INPUT 輸入參數。
 
@@ -56,20 +56,20 @@ ms.locfileid: "42612997"
 
 - DBPARAMIO_NOTPARAM 存取子沒有任何參數。 設定`eParamIO`為此值在資料列存取子會提醒使用者參數被忽略。
 
-*dbtype* （選擇性）  
-OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
+*dbtype*  
+（選擇性）OLE DB[型別指示器](/previous-versions/windows/desktop/ms711251\(v=vs.85\))的資料行項目。
 
-*有效位數*（選擇性）  
-要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+（選擇性）要用於資料行項目有效位數。 如需詳細資訊，請參閱說明`bPrecision`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*擴展*（選擇性）  
-要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*小數位數*  
+（選擇性）要用於資料行項目小數位數。 如需詳細資訊，請參閱說明`bScale`項目[DBBINDING 結構](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*狀態*（選擇性）  
-成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+*status*  
+（選擇性）成員變數，用來保存此資料行的狀態。 狀態會指出資料行的值是資料值或其他值，例如 NULL。 如需可能的值，請參閱[狀態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
-*長度*（選擇性）  
-成員變數，用來保存資料行的大小，以位元組為單位。
+*length*  
+（選擇性）成員變數，用來保存資料行的大小，以位元組為單位。
 
 ## <a name="remarks"></a>備註
 

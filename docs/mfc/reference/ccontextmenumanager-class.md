@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c3a9088ced647dd0e6694181cd7ab7857047c720
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338749"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713276"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 類別
 `CContextMenuManager`物件管理捷徑功能表，也稱為操作功能表。  
@@ -115,14 +115,14 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiMenuNameResId*  
- 包含新的功能表名稱的字串資源識別碼。  
+*uiMenuNameResId*<br/>
+[in]包含新的功能表名稱的字串資源識別碼。  
   
- [in]*uiMenuResId*  
- 功能表資源識別碼。  
+*uiMenuResId*<br/>
+[in]功能表資源識別碼。  
   
- [in]*lpszName*  
- 包含新的功能表名稱的字串。  
+*lpszName*<br/>
+[in]包含新的功能表名稱的字串。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，為非零0，表示方法將會失敗。  
@@ -148,8 +148,8 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nMenuResId*  
- 功能表資源識別碼。  
+*nMenuResId*<br/>
+[in]功能表資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  相關聯的功能表的控制代碼或`NULL`如果找不到功能表。  
@@ -164,11 +164,11 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszName*  
- 字串，包含要擷取功能表的名稱。  
+*lpszName*<br/>
+[in]字串，包含要擷取功能表的名稱。  
   
- [out]*puiOrigResID*  
- UINT 指標。 這個參數會包含指定的功能表中，資源識別碼，如果找到。  
+*puiOrigResID*<br/>
+[out]UINT 指標。 這個參數會包含指定的功能表中，資源識別碼，如果找到。  
   
 ### <a name="return-value"></a>傳回值  
  所指定的名稱相符的功能表的控制代碼*lpszName*。 如果沒有呼叫功能表則為 NULL *lpszName*。  
@@ -184,8 +184,8 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*listOfNames*  
- 參考[CStringList](../../mfc/reference/cstringlist-class.md)參數。 這個方法會寫入此參數中的功能表名稱的清單。  
+*listOfNames*<br/>
+[out]參考[CStringList](../../mfc/reference/cstringlist-class.md)參數。 這個方法會寫入此參數中的功能表名稱的清單。  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  載入資訊與相關聯[CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)從 Windows 登錄。  
@@ -195,8 +195,8 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszProfileName*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功則為非零否則為 0。  
@@ -227,8 +227,8 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszProfileName*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功則為非零否則為 0。  
@@ -246,8 +246,8 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 布林值參數可控制是否要關閉使用中的快顯功能表。 如果為 true 值表示不會關閉使用中的快顯功能表。 FALSE 表示作用中的快顯功能表已關閉。  
+*bSet*<br/>
+[in]布林值參數可控制是否要關閉使用中的快顯功能表。 如果為 true 值表示不會關閉使用中的快顯功能表。 FALSE 表示作用中的快顯功能表已關閉。  
   
 ### <a name="remarks"></a>備註  
  根據預設，`CContextMenuManager`關閉使用中的快顯功能表。  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiMenuResId*  
- 這個方法會顯示的功能表資源識別碼。  
+*uiMenuResId*<br/>
+[in]這個方法會顯示的功能表資源識別碼。  
   
- [in]*x*  
- 在水平位移的工作區座標中的捷徑功能表時。  
+*x*<br/>
+[in]在水平位移的工作區座標中的捷徑功能表時。  
   
- [in]*y*  
- 捷徑功能表，在工作區座標的垂直位移  
+*y*<br/>
+[in]捷徑功能表，在工作區座標的垂直位移  
   
- [in]*pWndOwner*  
- 快顯功能表的父視窗指標。  
+*pWndOwner*<br/>
+[in]快顯功能表的父視窗指標。  
   
- [in]*bOwnMessage*  
- 表示訊息會路由傳送的布林參數。 如果*bOwnMessage*是 FALSE，標準的 MFC 路由使用。 否則，請*pWndOwner*接收訊息。  
+*bOwnMessage*<br/>
+[in]表示訊息會路由傳送的布林參數。 如果*bOwnMessage*是 FALSE，標準的 MFC 路由使用。 否則，請*pWndOwner*接收訊息。  
   
- [in]*hmenuPopup*  
- 這個方法會顯示功能表的控制代碼。  
+*hmenuPopup*<br/>
+[in]這個方法會顯示功能表的控制代碼。  
   
- [in]*bAutoDestroy*  
- 布林值參數，指出功能表是否將會自動終結。  
+*bAutoDestroy*<br/>
+[in]布林值參數，指出功能表是否將會自動終結。  
   
- [in]*bRightAlign*  
- 布林值參數，指出功能表項目對齊的方式。 如果*bRightAlign*為 TRUE，功能表會靠右對齊的由右至左讀取順序。  
+*bRightAlign*<br/>
+[in]布林值參數，指出功能表項目對齊的方式。 如果*bRightAlign*為 TRUE，功能表會靠右對齊的由右至左讀取順序。  
   
 ### <a name="return-value"></a>傳回值  
  第一個方法多載會傳回非零值，如果方法成功; 顯示的功能表否則為 0。 第二個方法多載會傳回的指標[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)如果快顯功能表會顯示; 否則為 NULL。  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hmenuPopup*  
- 這個方法會顯示快顯功能表的控制代碼。  
+*hmenuPopup*<br/>
+[in]這個方法會顯示快顯功能表的控制代碼。  
   
- [in]*x*  
- 在水平位移的工作區座標中的捷徑功能表時。  
+*x*<br/>
+[in]在水平位移的工作區座標中的捷徑功能表時。  
   
- [in]*y*  
- 垂直的捷徑功能表，在工作區座標的位移。  
+*y*<br/>
+[in]垂直的捷徑功能表，在工作區座標的位移。  
   
- [in]*pWndOwner*  
- 快顯功能表的父視窗指標。  
+*pWndOwner*<br/>
+[in]快顯功能表的父視窗指標。  
   
- [in]*bRightAlign*  
- 布林值參數，指出功能表項目對齊的方式。 如果*bRightAlign*為 TRUE，功能表會靠右對齊的由右至左讀取順序。 如果*bRightAlign*為 FALSE 時，功能表是靠左對齊，由左到右的讀取順序。  
+*bRightAlign*<br/>
+[in]布林值參數，指出功能表項目對齊的方式。 如果*bRightAlign*為 TRUE，功能表會靠右對齊的由右至左讀取順序。 如果*bRightAlign*為 FALSE 時，功能表是靠左對齊，由左到右的讀取順序。  
   
 ### <a name="return-value"></a>傳回值  
  使用者選擇; 命令的功能表命令識別碼0，表示使用者關閉快顯功能表，而不選取功能表命令。  

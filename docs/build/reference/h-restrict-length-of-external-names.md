@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895314"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724395"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (限制外部名稱的長度)
 
@@ -37,7 +37,7 @@ ms.locfileid: "43895314"
 
 ## <a name="arguments"></a>引數
 
-*數字*  
+*數字*<br/>
 指定在程式中所允許的外部名稱的最大長度。
 
 ## <a name="remarks"></a>備註
@@ -96,5 +96,5 @@ void func2(void) {}
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)   
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110132"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711382"
 ---
 # <a name="uniquelock-class"></a>unique_lock 類別
 
@@ -130,7 +130,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*  
+*其他*<br/>
 `unique_lock` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -181,7 +181,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*  
+*其他*<br/>
 `unique_lock` 物件。
 
 ## <a name="try_lock"></a>  try_lock
@@ -214,7 +214,7 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*  
+*Rel_time*<br/>
 [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
@@ -240,7 +240,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*  
+*Abs_time*<br/>
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
@@ -283,16 +283,16 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>參數
 
-*Mtx*  
+*Mtx*<br/>
 mutex 類型物件。
 
-*Rel_time*  
+*Rel_time*<br/>
 [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
-*Abs_time*  
+*Abs_time*<br/>
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
-*其他*  
+*其他*<br/>
 `unique_lock` 物件。
 
 ### <a name="remarks"></a>備註

@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b9b5bb5beae8599c360d35df878a38b591b1b4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: afd9c9e8069d6140b66a38f4686f562533dd5c21
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722705"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 封裝的一般的對話方塊中，開啟檔案或檔案儲存作業所用的。  
@@ -522,29 +522,29 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bOpenFileDialog*  
- 指定的對話方塊來建立類型的參數。 將它設定為 TRUE 來建構**開啟舊檔** 對話方塊。 將它設定為 FALSE，以建構**另存新檔** 對話方塊。  
+*bOpenFileDialog*<br/>
+[in]指定的對話方塊來建立類型的參數。 將它設定為 TRUE 來建構**開啟舊檔** 對話方塊。 將它設定為 FALSE，以建構**另存新檔** 對話方塊。  
   
- [in]*lpszDefExt*  
- 預設的副檔名。 如果使用者不包含檔案名稱 方塊中的已知的副檔名 （一個具有關聯使用者的電腦上），所指定的延伸模組*lpszDefExt*會自動附加至檔案名稱。 如果此參數為 NULL，則會附加不含副檔名。  
+*lpszDefExt*<br/>
+[in]預設檔案名稱的副檔名。 如果使用者不包含檔案名稱 方塊中的已知的副檔名 （一個具有關聯使用者的電腦上），所指定的延伸模組*lpszDefExt*會自動附加至檔案名稱。 如果此參數為 NULL，則會附加不含副檔名。  
   
- [in]*lpszFileName*  
- 初始檔案名稱出現在 [檔案名稱] 方塊中。 如果是 NULL，則會不出現任何初始檔案名稱。  
+*lpszFileName*<br/>
+[in]初始檔案名稱出現在 [檔案名稱] 方塊中。 如果是 NULL，則會不出現任何初始檔案名稱。  
   
- [in]*dwFlags*  
- 您可以使用自訂對話方塊中的一或多個旗標的組合。 如需這些旗標的描述，請參閱 < [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的結構。 如果您修改`m_ofn.Flags`結構成員，請使用您的變更的位元 OR 運算子，以讓預設行為保持不變。  
+*dwFlags*<br/>
+[in]您可以使用自訂對話方塊中的一或多個旗標的組合。 如需這些旗標的描述，請參閱 < [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK 中的結構。 如果您修改`m_ofn.Flags`結構成員，請使用您的變更的位元 OR 運算子，以讓預設行為保持不變。  
   
- [in]*lpszFilter*  
- 指定篩選條件的字串組的一系列您可以套用至檔案。 如果您指定檔案篩選器時，只有符合篩選準則的檔案才會出現在檔案清單中。 請參閱 < 備註 > 一節，如需有關如何使用檔案篩選器。  
+*lpszFilter*<br/>
+[in]指定篩選條件的字串組的一系列您可以套用至檔案。 如果您指定檔案篩選器時，只有符合篩選準則的檔案才會出現在檔案清單中。 請參閱 < 備註 > 一節，如需有關如何使用檔案篩選器。  
   
- [in]*pParentWnd*  
- [檔案] 對話方塊中的父代或擁有者視窗指標。  
+*pParentWnd*<br/>
+[in][檔案] 對話方塊中的父代或擁有者視窗指標。  
   
- [in]*dwSize*  
- 大小`OPENFILENAME`結構。 這個值取決於作業系統的版本。 MFC 會使用這個參數來判斷的對話方塊來建立適當類型。 預設大小為 0 表示 MFC 程式碼將會決定要使用正確的對話方塊大小會根據程式執行所在的作業系統版本。  
+*dwSize*<br/>
+[in]大小`OPENFILENAME`結構。 這個值取決於作業系統的版本。 MFC 會使用這個參數來判斷的對話方塊來建立適當類型。 預設大小為 0 表示 MFC 程式碼將會決定要使用正確的對話方塊大小會根據程式執行所在的作業系統版本。  
   
- [in]*bVistaStyle*  
- **請注意**這個參數可在 Visual Studio 2008 及更新版本，將會導致 [新樣式] 對話方塊，您會執行在 Windows Vista 或更新版本時，才使用。  
+*bVistaStyle*<br/>
+[in]**注意**這個參數可在 Visual Studio 2008 及更新版本，將會導致 [新樣式] 對話方塊，您會執行在 Windows Vista 或更新版本時，才使用。  
   
  指定的檔案對話方塊樣式參數。 將它設定為 true 會使用新的 Vista 樣式檔案對話方塊。 否則，您將使用舊樣式的對話方塊。 請參閱 < 備註 > 一節的詳細資訊的相關 Vista 下執行。  
   
@@ -1346,11 +1346,11 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 要設定文字控制項的 ID。  
+*nID*<br/>
+[in]要設定文字控制項的 ID。  
   
- [in]*lpsz*  
- 包含要設定控制項的文字字串的指標。  
+*lpsz*<br/>
+[in]包含要設定控制項的文字字串的指標。  
   
 ### <a name="remarks"></a>備註  
  此函式的兩個版本的應用程式，使用 Unicode 的有效值。 不過，只有使用 LPCSTR 類型版本是適用於使用 ANSI 應用程式。  
@@ -1435,17 +1435,17 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nWin3ID*  
- 包含非 Explorer 的範本資源的 ID 編號`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
+*nWin3ID*<br/>
+[in]包含非 Explorer 的範本資源的 ID 編號`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
   
- [in]*nWin4ID*  
- [總管] 中包含的範本資源的 ID 編號`CFileDialog`物件。 只有 Windows NT 4.0 和更新版本、 Windows 95 和更新版本中，或有 OFN_EXPLORER 樣式時，會使用此範本。  
+*nWin4ID*<br/>
+[in][總管] 中包含的範本資源的 ID 編號`CFileDialog`物件。 只有 Windows NT 4.0 和更新版本、 Windows 95 和更新版本中，或有 OFN_EXPLORER 樣式時，會使用此範本。  
   
- [in]*lpWin3ID*  
- 包含非 Explorer 的範本資源名稱`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
+*lpWin3ID*<br/>
+[in]包含非 Explorer 的範本資源名稱`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
   
- [in]*lpWin4ID*  
- 包含名稱的 [總管] 中的範本資源`CFileDialog`物件。 只有 Windows NT 4.0 和更新版本、 Windows 95 和更新版本中，或有 OFN_EXPLORER 樣式時，會使用此範本。  
+*lpWin4ID*<br/>
+[in]包含名稱的 [總管] 中的範本資源`CFileDialog`物件。 只有 Windows NT 4.0 和更新版本、 Windows 95 和更新版本中，或有 OFN_EXPLORER 樣式時，會使用此範本。  
   
 ### <a name="remarks"></a>備註  
  系統會使用其中一個指定的範本。 系統會決定要使用哪個範本根據 OFN_EXPLORER 樣式和作業系統上執行應用程式存在。 藉由指定的非檔案總管 」 和 「 檔案總管樣式範本，很容易就能支援 Windows NT 3.51、 Windows NT 4.0 和更新版本中，和 Windows 95 和更新版本。  

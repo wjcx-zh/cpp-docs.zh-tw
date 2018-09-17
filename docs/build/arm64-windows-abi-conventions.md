@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028538"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716634"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 慣例概觀
 
@@ -173,7 +173,7 @@ TPIDR_EL1|指向目前處理器的 KPCR 結構
 
 11. NGRN 設為 8。
 
-12. NSAA 會無條件進位至較大的一個 8 或自然對齊的引數的型別... 
+12. NSAA 會無條件進位至較大的一個 8 或自然對齊的引數的型別...
 
 13. 如果引數是一種複合類型引數會複製到已調整的 nsaa 的記憶體。 NSAA 會增加引數的大小。 現在已配置的引數。
 
@@ -189,7 +189,7 @@ TPIDR_EL1|指向目前處理器的 KPCR 結構
 
 2. 不會使用 SIMD 和浮點數暫存器。
 
-實際上，這相當於下列規則 C.12–C.15 配置虛數的堆疊，其中前 64 個位元組堆疊的載入 x0 x7，而通常放置任何其餘的堆疊引數的引數。 
+實際上，這相當於下列規則 C.12–C.15 配置虛數的堆疊，其中前 64 個位元組堆疊的載入 x0 x7，而通常放置任何其餘的堆疊引數的引數。
 
 ## <a name="return-values"></a>傳回值
 
@@ -231,5 +231,5 @@ ARM EABI 也會指定使用回溯程式碼的例外狀況回溯模型。 不過�
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)  
-[ARM64 例外狀況處理](../build/arm64-exception-handling.md)  
+[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64 例外狀況處理](../build/arm64-exception-handling.md)

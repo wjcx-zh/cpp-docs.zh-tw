@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853965"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711135"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 類別
 `CMFCTasksPaneTask`類別是一個 helper 類別，代表工作的工作窗格控制項 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 工作物件代表的工作群組中的項目 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每個工作可以有命令，當使用者按一下工作與工作名稱左邊的圖示時，Framework 就會執行這個命令。  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParent*  
- 表示目前工作的父視窗。  
+*pParent*<br/>
+[in]表示目前工作的父視窗。  
   
- [out]*資料*  
- 型別的物件`CAccessibilityData`，並填入目前的工作的協助工具資料。  
+*data*<br/>
+[out]型別的物件`CAccessibilityData`，並填入目前的工作的協助工具資料。  
   
 ### <a name="return-value"></a>傳回值  
  則為 TRUE*資料*參數，則已成功填入目前的工作的協助工具資料; 否則為 FALSE。  

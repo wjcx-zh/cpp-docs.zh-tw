@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef6192218f5fae40bca6aa6fb8202a0d238091a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b2ae5b321ce9de1e834119e764a65df638d97e10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195828"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721184"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 類別
 `CMFCShellListCtrl`類別提供 Windows 清單控制項功能，並會將它展開加入顯示 shell 項目清單的能力。  
@@ -130,11 +130,11 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszPath*  
- 包含的資料夾路徑的字串。  
+*lpszPath*<br/>
+[in]包含的資料夾路徑的字串。  
   
- [in]*lpItemInfo*  
- 指標`LPAFX_SHELLITEMINFO`結構，描述要顯示的資料夾。  
+*lpItemInfo*<br/>
+[in]指標`LPAFX_SHELLITEMINFO`結構，描述要顯示的資料夾。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為 S_OK否則 E_FAIL。  
@@ -157,8 +157,8 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 布林值，指定架構是否啟用快顯功能表。  
+*bEnable*<br/>
+[in]布林值，指定架構是否啟用快顯功能表。  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
  擷取目前選取的資料夾中的路徑[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
@@ -168,8 +168,8 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*strPath*  
- 其中方法會將路徑字串參數的參考。  
+*strPath*<br/>
+[out]其中方法會將路徑字串參數的參考。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零否則為 0。  
@@ -185,8 +185,8 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*strName*  
- 其中的方法，將名稱寫入字串參數的參考。  
+*strName*<br/>
+[out]其中的方法，將名稱寫入字串參數的參考。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零否則為 0。  
@@ -227,11 +227,11 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*strPath*  
- 接收路徑字串的參考。  
+*strPath*<br/>
+[out]接收路徑字串的參考。  
   
- [in]*iItem*  
- 清單項目的索引。  
+*iItem*<br/>
+[in]清單項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUEFALSE 否則。  
@@ -273,8 +273,8 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lParam1*  
- [in]*lParam2*  
+*lParam1*<br/>
+[in][in]*lParam2*  
  [in]*iColumn*  
   
 ### <a name="return-value"></a>傳回值  
@@ -291,11 +291,11 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*tmFile*  
- 與檔案關聯的日期。  
+*tmFile*<br/>
+[in]與檔案關聯的日期。  
   
- [out]*str*  
- 字串，包含格式的檔案的日期。  
+*str*<br/>
+[out]字串，包含格式的檔案的日期。  
   
 ### <a name="remarks"></a>備註  
  當[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件顯示與檔案相關聯的日期，它必須將該日期轉換成字串格式。 `CMFCShellListCtrl`讓該轉換會使用這個方法。 根據預設，此方法會使用目前的地區設定日期格式轉換為字串。  
@@ -310,11 +310,11 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lFileSize*  
- 此架構會顯示檔案的大小。  
+*lFileSize*<br/>
+[in]此架構會顯示檔案的大小。  
   
- [out]*str*  
- 字串，包含格式的檔案大小。  
+*str*<br/>
+[out]字串，包含格式的檔案大小。  
   
 ### <a name="remarks"></a>備註  
  當[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件需要顯示檔案的大小，它必須轉換成字串格式的檔案大小。 `CMFCShellListCtrl`讓該轉換會使用這個方法。 根據預設，這個方法會從位元組轉換檔案的大小，以 kb 為單位，然後使用目前的地區設定格式化字串的大小。  
@@ -329,11 +329,11 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iItem*  
- 項目索引。  
+*iItem*<br/>
+[in]項目索引。  
   
- [in]*pItem*  
- LPAFX_SHELLITEMINFO 參數描述項目。  
+*pItem*<br/>
+[in]LPAFX_SHELLITEMINFO 參數描述項目。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則圖示影像的索引在函數失敗時，為-1。  
@@ -354,14 +354,14 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iItem*  
- 項目索引。  
+*iItem*<br/>
+[in]項目索引。  
   
- [in]*iColumn*  
- 感興趣的資料行。  
+*iColumn*<br/>
+[in]感興趣的資料行。  
   
- [in]*pItem*  
- LPAFX_SHELLITEMINFO 參數描述項目。  
+*pItem*<br/>
+[in]LPAFX_SHELLITEMINFO 參數描述項目。  
   
 ### <a name="return-value"></a>傳回值  
  A`CString`其中包含項目相關聯的文字。  
@@ -402,8 +402,8 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nTypes*  
- 清單項目的型別`CMFCShellListCtrl`物件支援。  
+*nTypes*<br/>
+[in]清單項目的型別`CMFCShellListCtrl`物件支援。  
   
 ### <a name="remarks"></a>備註  
  如需詳細的項目類型清單的相關資訊，請參閱[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)。  

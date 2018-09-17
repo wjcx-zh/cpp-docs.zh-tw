@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e466d8a176d5c4c7fd1e2250373b42ee263a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c4e86ff5ad4e1ebdba728202904324d9dc9e66f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856328"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711746"
 ---
 # <a name="seedseq-class"></a>seed_seq 類別
 
@@ -68,30 +68,63 @@ public:
 
 ## <a name="types"></a>類型
 
-`typedef unsigned int result_type;` 種子序列的項目類型。 32 位元不帶正負號的整數類型。
+```cpp
+typedef unsigned int result_type;
+```
+
+種子序列的項目類型。 32 位元不帶正負號的整數類型。
 
 ## <a name="constructors"></a>建構函式
 
-`seed_seq();` 預設建構函式，將空的內部序列會初始化。
+```cpp
+seed_seq();
+```
 
-`template<class T>` `seed_seq(initializer_list<T> initlist);` 使用`initlist`設定內部的順序。
+預設的建構函式，會初始化以具備空的內部序列。
+
+```cpp
+template<class T>
+seed_seq(initializer_list<T> initlist);
+```
+
+使用 `initlist` 設定內部序列。
 `T` 必須是整數類型。
 
-`template<class InputIterator>` `seed_seq(InputIterator begin, InputIterator end);` 初始化內部序列使用提供的輸入迭代器範圍中的所有項目。
+```cpp
+template<class InputIterator>
+seed_seq(InputIterator begin, InputIterator end);
+```
+
+使用輸入迭代器範圍中提供的所有元素，來初始化內部序列。
 `iterator_traits<InputIterator>::value_type` 必須是整數類型。
 
 ## <a name="members"></a>成員
 
 ### <a name="generating-functions"></a>產生函式
 
-`template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);` 會使用內部演算法所提供序列的項目中填入。 已初始化 `seed_seq` 的內部序列會影響此演算法。
+```cpp
+template<class RandomAccessIterator>
+void generate(RandomAccessIterator begin,
+          RandomAccessIterator end);
+```
+
+使用內部演算法，以填入所提供序列的元素。 已初始化 `seed_seq` 的內部序列會影響此演算法。
 如果 `begin == end`，則不會有任何動作。
 
 ### <a name="property-functions"></a>屬性函式
 
-`size_t size() const;` 傳回數字中的項目`seed_seq`。
+```cpp
+size_t size() const;
+```
 
-`template<class OutputIterator> void param(OutputIterator dest) const;` 將內部序列複製到輸出迭代器`dest`。
+傳回 `seed_seq` 中項目的數目。
+
+```cpp
+template<class OutputIterator>
+void param(OutputIterator dest) const;
+```
+
+將內部序列複製至輸出迭代器 `dest`。
 
 ## <a name="example"></a>範例
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 600bdb29a06d9aef84f2f4d914a458f9a4090c4a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 99b4a84109db8a412f0a3d64967a522d18ada930
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849444"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713449"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 類別
 提供下拉式工具列和下拉式工具列按鈕的下拉式清單框架視窗功能。  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWndParent*|父框架的視窗下拉式清單。|  
-|[in]*x*|位置清單向下畫面格的水平螢幕座標。|  
-|[in]*y*|位置清單向下畫面格的垂直螢幕座標。|  
-|[in]*pWndOriginToolbar*|會顯示這個方法會使用來填入新的下拉式清單的畫面格物件的下拉式按鈕的工具列。|  
+|*pWndParent*|[in]父框架的視窗下拉式清單。|  
+|*x*|[in]位置清單向下畫面格的水平螢幕座標。|  
+|*y*|[in]位置清單向下畫面格的垂直螢幕座標。|  
+|*pWndOriginToolbar*|[in]會顯示這個方法會使用來填入新的下拉式清單的畫面格物件的下拉式按鈕的工具列。|  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功建立下拉式框架;，則為 TRUE。否則為 FALSE。  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*bNotify*|未使用。|  
+|*bNotify*|[in]未使用。|  
   
 ### <a name="remarks"></a>備註  
  建立下拉式框架或父視窗大小調整時，架構會呼叫這個方法。 這個方法會計算的位置和大小的下拉式清單框架使用的位置和父視窗的大小。  
@@ -171,8 +171,8 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bAutoDestroy*  
- 為 true，則會自動終結相關聯的下拉工具列的視窗;否則為 FALSE。  
+*bAutoDestroy*<br/>
+[in]為 true，則會自動終結相關聯的下拉工具列的視窗;否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  如果*bAutoDestroy*為 TRUE，則`CMFCDropDownFrame`解構函式會終結相關聯的下拉工具列的視窗。 預設值為 TRUE。  

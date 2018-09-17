@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676776"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716166"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 類別
 實作的工具提示控制項[CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)用以顯示工具提示。  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndParent*  
- 父視窗的指標。  
+*pWndParent*<br/>
+[in]父視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果視窗已成功建立，則為 TRUE否則為 FALSE。  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*rect*  
- 包含工具提示控制項的最後一個位置。  
+*rect*<br/>
+[out]包含工具提示控制項的最後一個位置。  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  隱藏工具提示控制項。  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nTextMargin*  
- 指定的工具提示控制項的文字與工具提示視窗的框線之間的間距。 預設值是 10 個像素。  
+*nTextMargin*<br/>
+[in]指定的工具提示控制項的文字與工具提示視窗的框線之間的間距。 預設值是 10 個像素。  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  顯示工具提示控制項。  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*rect*  
- 指定的位置和大小的工具提示控制項。  
+*rect*<br/>
+[in]指定的位置和大小的工具提示控制項。  
   
- [in]*先把 strText*  
- 指定要在工具提示中顯示的文字。  
+*先把 strText*<br/>
+[in]指定要在工具提示中顯示的文字。  
   
 ### <a name="remarks"></a>備註  
  這個方法會顯示工具提示控制項的位置與所指定的大小*rect*。 如果未呼叫此方法的上次變更位置、 大小和文字，則這個方法沒有任何作用。  

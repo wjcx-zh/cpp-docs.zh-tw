@@ -16,25 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f65b75ff7ad5af4f3552cec594497616922bd048
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 27a67430b82e1badc2beb5fecd72c55802e690cd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753746"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724356"
 ---
 # <a name="strings-atl-property-page-wizard"></a>字串, ATL 屬性頁精靈
 
 提供 [屬性] 頁面與相關聯的文字。
 
-**標題**  
-屬性頁 索引標籤上設定所顯示的文字。
+- **標題**
 
-**文件字串**  
-設定描述頁面的文字字串。 這個字串可以顯示在屬性工作表對話方塊。 屬性框架都可以使用狀態列或工具提示中的描述。 標準屬性框架目前不使用此字串。
+   屬性頁 索引標籤上設定所顯示的文字。
 
-**說明檔**  
-設定描述如何使用 [屬性] 頁面的說明檔的名稱。 此名稱不應該包含路徑。 當使用者按下**協助**，框架 HelpDir 中的索引鍵屬性頁面登錄項目，其 CLSID 下的值中命名的目錄中開啟說明檔案。
+- **文件字串**
+
+   設定描述頁面的文字字串。 這個字串可以顯示在屬性工作表對話方塊。 屬性框架都可以使用狀態列或工具提示中的描述。 標準屬性框架目前不使用此字串。
+
+- **說明檔**
+
+   設定描述如何使用 [屬性] 頁面的說明檔的名稱。 此名稱不應該包含路徑。 當使用者按下**協助**，框架 HelpDir 中的索引鍵屬性頁面登錄項目，其 CLSID 下的值中命名的目錄中開啟說明檔案。
 
 ## <a name="see-also"></a>另請參閱
 

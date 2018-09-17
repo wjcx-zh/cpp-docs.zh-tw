@@ -1,5 +1,5 @@
 ---
-title: 匯入資料使用 __declspec （dllimport） |Microsoft 文件
+title: 使用 __declspec （dllimport） 匯入資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,51 +19,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9877c5a229c3cabcb7703dd2617d1d57e3512f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a024d7488eb1683f40548839ab843da1e56f65e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368508"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710212"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>使用 __declspec(dllimport) 匯入資料
-在使用資料的情況下 **__declspec （dllimport)** 是方便項目，以便移除一層間接取值。 當您從 DLL 匯入資料時，您仍然必須透過匯入位址表。 之前 **__declspec （dllimport)**，這代表您必須記得要存取資料從 DLL 匯出時執行額外的間接取值層級：  
-  
-```  
-// project.h  
-#ifdef _DLL   // If accessing the data from inside the DLL  
-   ULONG ulDataInDll;  
-  
-#else         // If accessing the data from outside the DLL  
-   ULONG *ulDataInDll;  
-#endif  
-```  
-  
- 然後會將匯出的資料中您。DEF 檔案：  
-  
-```  
-// project.def  
-LIBRARY project  
-EXPORTS  
-   ulDataInDll   CONSTANT  
-```  
-  
- 而且在 DLL 外部存取：  
-  
-```  
-if (*ulDataInDll == 0L)   
-{  
-   // Do stuff here  
-}  
-```  
-  
- 當您將標記資料做為 **__declspec （dllimport)**，編譯器會自動為您產生間接取值的程式碼。 您不再需要擔心上述步驟。 如先前所述，請勿使用 **__declspec （dllimport)** 宣告上的資料時建置 DLL。 函數的 DLL 中不會使用匯入位址表來存取資料的物件。因此，您必須不存在的間接取值的額外層級。  
-  
- 若要自動從 DLL 匯出資料，使用這個宣告：  
-  
-```  
-__declspec(dllexport) ULONG ulDataInDLL;  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [匯入至應用程式](../build/importing-into-an-application.md)
+
+在使用資料的情況下 **__declspec （dllimport)** 是移除一層間接取值的便利性項目。 當您匯入資料，從 DLL 時，您仍然必須通過 匯入位址表格。 再 **__declspec （dllimport)**，這表示您必須記得先執行另一層間接取值時存取的資料從 DLL 匯出：
+
+```
+// project.h
+#ifdef _DLL   // If accessing the data from inside the DLL
+   ULONG ulDataInDll;
+
+#else         // If accessing the data from outside the DLL
+   ULONG *ulDataInDll;
+#endif
+```
+
+然後匯出的資料，在您。DEF 檔案：
+
+```
+// project.def
+LIBRARY project
+EXPORTS
+   ulDataInDll   CONSTANT
+```
+
+及存取外部 DLL:
+
+```
+if (*ulDataInDll == 0L)
+{
+   // Do stuff here
+}
+```
+
+當您將標記資料作為 **__declspec （dllimport)**，編譯器會自動為您產生的間接取值的程式碼。 您不再需要擔心上述步驟。 如先前所述，不用 **__declspec （dllimport)** 建置 DLL 時對資料的宣告。 DLL 內的函式來存取資料的物件; 請勿匯入位址表格因此，您將沒有額外的層級的間接取值的存在。
+
+若要自動從 DLL 匯出資料，使用這個宣告：
+
+```
+__declspec(dllexport) ULONG ulDataInDLL;
+```
+
+## <a name="see-also"></a>另請參閱
+
+[匯入至應用程式](../build/importing-into-an-application.md)

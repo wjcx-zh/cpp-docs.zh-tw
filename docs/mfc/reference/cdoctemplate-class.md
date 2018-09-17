@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243881a2ca18ba54e3a6c9cafee407f07746baca
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336981"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709835"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 類別
 定義文件範本基本功能的抽象基底類別。  
@@ -431,11 +431,11 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszPathName*  
- 指標，包含要開啟的文件之檔案的路徑。  
+*lpszPathName*<br/>
+[in]指標，包含要開啟的文件之檔案的路徑。  
   
- [in]*bAddToMRU*  
- TRUE 表示在文件是其中一個最新的檔案;FALSE 表示文件不是其中一個最新的檔案。  
+*bAddToMRU*<br/>
+[in]TRUE 表示在文件是其中一個最新的檔案;FALSE 表示文件不是其中一個最新的檔案。  
   
 ### <a name="return-value"></a>傳回值  
  其檔案的命名方式的文件的指標*lpszPathName*;如果不成功，則為 NULL。  

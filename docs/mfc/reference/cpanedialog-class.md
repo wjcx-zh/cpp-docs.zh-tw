@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682323"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710147"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 類別
 `CPaneDialog`類別支援非強制回應，可停駐的對話方塊。  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszWindowName*  
- [停駐] 對話方塊中的名稱。  
+*lpszWindowName*<br/>
+[in][停駐] 對話方塊中的名稱。  
   
- [in]*pParentWnd*  
- 父視窗的點。  
+*pParentWnd*<br/>
+[in]父視窗的點。  
   
- [in]*bHasGripper*  
- 使用標題 (gripper); 建立停駐的對話方塊中，則為 TRUE否則為 FALSE。  
+*bHasGripper*<br/>
+[in]使用標題 (gripper); 建立停駐的對話方塊中，則為 TRUE否則為 FALSE。  
   
- [in]*lpszTemplateName*  
- 資源的對話方塊範本的名稱。  
+*lpszTemplateName*<br/>
+[in]資源的對話方塊範本的名稱。  
   
- [in]*nStyle*  
- Windows 樣式。  
+*nStyle*<br/>
+[in]Windows 樣式。  
   
- [in]*nID*  
- 控制項 id。  
+*nID*<br/>
+[in]控制項 id。  
   
- [in]*nIDTemplate*  
- 對話方塊範本資源識別碼。  
+*nIDTemplate*<br/>
+[in]對話方塊範本資源識別碼。  
   
- [in]*dwTabbedStyle*  
- 使用者控制項的另一個窗格拖放這個控制項窗格的標題時所產生的索引標籤式視窗的樣式。 預設值是 AFX_CBRS_REGULAR_TABS。 如需詳細資訊，請參閱的 < 備註 > 一節[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+*dwTabbedStyle*<br/>
+[in]使用者控制項的另一個窗格拖放這個控制項窗格的標題時所產生的索引標籤式視窗的樣式。 預設值是 AFX_CBRS_REGULAR_TABS。 如需詳細資訊，請參閱的 < 備註 > 一節[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
- [in]*dwControlBarStyle*  
- 其他的樣式屬性。 預設值是 AFX_DEFAULT_DOCKING_PANE_STYLE。 如需詳細資訊，請參閱的 < 備註 > 一節[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
+*dwControlBarStyle*<br/>
+[in]其他的樣式屬性。 預設值是 AFX_DEFAULT_DOCKING_PANE_STYLE。 如需詳細資訊，請參閱的 < 備註 > 一節[cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)方法。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*wParam*  
- 接受預設的鍵盤焦點之控制項的控制代碼。  
+*wParam*<br/>
+[in]接受預設的鍵盤焦點之控制項的控制代碼。  
   
- [in]*lParam*  
- 指定額外的初始化資料。  
+*lParam*<br/>
+[in]指定額外的初始化資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。 此外，TRUE 設定所指定的控制項的鍵盤焦點*wParam*參數;FALSE 可避免設定預設鍵盤焦點。  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pOccDialogInfo*  
- 對話方塊範本，用來建立對話方塊物件的指標。 此參數的值會接著傳遞至[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
+*pOccDialogInfo*<br/>
+[in]對話方塊範本，用來建立對話方塊物件的指標。 此參數的值會接著傳遞至[COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols)方法。  
   
 ### <a name="return-value"></a>傳回值  
  永遠為 TRUE。  

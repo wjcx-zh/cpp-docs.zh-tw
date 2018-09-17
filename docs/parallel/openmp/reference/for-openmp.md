@@ -1,5 +1,5 @@
 ---
-title: 針對 (OpenMP) |Microsoft 文件
+title: (openmp) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694858"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721652"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-會導致在執行工作分割為個執行緒在平行區域內的迴圈。  
+會導致完成的工作分割為個執行緒在平行區域內的迴圈。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,17 +33,16 @@ ms.locfileid: "33694858"
    for_statement  
 ```  
   
+## <a name="arguments"></a>引數
+
+*子句*<br/>
+（選擇性）零個或多個子句。 請參閱所支援的子句清單的 < 備註 > 一節**針對**。  
+  
+*for_statement*<br/>
+For 迴圈的。 如果使用者程式碼中，將會產生未定義的行為如迴圈變更的索引變數。  
+  
 ## <a name="remarks"></a>備註  
- 其中：  
-  
- `clause` (選擇性)  
- 零個或多個子句。 請參閱 < 備註 > 一節如需所支援的子句**如**。  
-  
- `for_statement`  
- For 迴圈的。 如果使用者程式碼中，將會產生未定義的行為如迴圈變更的索引變數。  
-  
-## <a name="remarks"></a>備註  
- **如**指示詞可支援下列 OpenMP 子句：  
+ **針對**指示詞可支援下列 OpenMP 子句：  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -59,9 +58,9 @@ ms.locfileid: "33694858"
   
 -   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- 如果**平行**也指定`clause`可以任何子句接受**平行**或**如**指示詞，除了**nowait**.  
+ 如果**平行**同時指定，則`clause`可以任何子句接受**平行**或**如**指示詞，除了**nowait**.  
   
- 如需詳細資訊，請參閱[2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
+ 如需詳細資訊，請參閱 < [2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
   
 ## <a name="example"></a>範例  
   

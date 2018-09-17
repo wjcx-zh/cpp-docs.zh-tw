@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207388"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714657"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 類別
 實作數個可讓您使用識別項清單指標 (PIDL) 的方法。  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*strOutFolder*  
- 字串，此方法用來儲存所選資料夾的路徑。  
+*strOutFolder*<br/>
+[out]字串，此方法用來儲存所選資料夾的路徑。  
   
- [in]*pWndParent*  
- 父視窗的指標。  
+*pWndParent*<br/>
+[in]父視窗的指標。  
   
- [in]*lplszInitialFolder*  
- 字串，包含顯示對話方塊時，依預設會選取的資料夾。  
+*lplszInitialFolder*<br/>
+[in]字串，包含顯示對話方塊時，依預設會選取的資料夾。  
   
- [in]*lpszTitle*  
- 對話方塊標題。  
+*lpszTitle*<br/>
+[in]對話方塊標題。  
   
- [in]*ulFlags*  
- 指定對話方塊中的選項旗標。 請參閱[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)詳細描述。  
+*ulFlags*<br/>
+[in]指定對話方塊中的選項旗標。 請參閱[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa)詳細描述。  
   
- [out]*piFolderImage*  
- 其中方法會將寫入選取的資料夾的影像索引的整數值的指標。  
+*piFolderImage*<br/>
+[out]其中方法會將寫入選取的資料夾的影像索引的整數值的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果使用者從對話方塊中，選取資料夾，非零值。否則為 0。  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pidl1*  
- 第一個項目中。  
+*pidl1*<br/>
+[in]第一個項目中。  
   
- [in]*pidl2*  
- 第二個項目中。  
+*pidl2*<br/>
+[in]第二個項目中。  
   
 ### <a name="return-value"></a>傳回值  
  新的項目清單如果函式成功，否則為 NULL 指標。  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pidlSource*  
- 原始的項目清單。  
+*pidlSource*<br/>
+[in]原始的項目清單。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，新建立的項目清單的指標否則為 NULL。  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*cbSize*  
- 項目清單的大小。  
+*cbSize*<br/>
+[in]項目清單的大小。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則建立的項目清單的指標否則為 NULL。  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pidl*  
- 若要刪除項目清單。  
+*pidl*<br/>
+[in]若要刪除項目清單。  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  傳回項目清單中的項目數目。  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pidl*  
- 項目清單的指標。  
+*pidl*<br/>
+[in]項目清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
  項目清單中的項目數目。  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pidl*  
- 項目清單的指標。  
+*pidl*<br/>
+[in]項目清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
  項目清單的大小。  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pidl*  
- 要逐一查看的項目清單。  
+*pidl*<br/>
+[in]要逐一查看的項目清單。  
   
 ### <a name="return-value"></a>傳回值  
  在清單中下一個項目指標。  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpidl*  
- PIDL，將擷取其父代。  
+*lpidl*<br/>
+[in]PIDL，將擷取其父代。  
   
- [out]*lpidlParent*  
- 方法會儲存結果 PIDL 參考。  
+*lpidlParent*<br/>
+[out]方法會儲存結果 PIDL 參考。  
   
 ### <a name="return-value"></a>傳回值  
  父系 PIDL 層級。  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszPath*  
- 字串，指定項目的路徑。  
+*lpszPath*<br/>
+[in]字串，指定項目的路徑。  
   
- [out]*pidl*  
- PIDL 參考。 該方法會使用此 PIDL 來儲存它的傳回值的指標。  
+*pidl*<br/>
+[out]PIDL 參考。 該方法會使用此 PIDL 來儲存它的傳回值的指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 NOERROR 如果登錄成功。OLE 定義的錯誤值。  

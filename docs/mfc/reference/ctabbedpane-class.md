@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901007"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712827"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 類別
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*  
-若要啟用的索引標籤; 的自動著色，則為 TRUE否則為 FALSE。
+*bEnable*<br/>
+[in]若要啟用的索引標籤; 的自動著色，則為 TRUE否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>參數
 
-[in]*pBar*  
-[in]*nTabID*  
-[in]*dockMethod*  
-[in]*bHide*  
+*pBar*<br/>
+[in][in]*nTabID*  
+*dockMethod*<br/>
+[in][in]*bHide*  
 
 ### <a name="return-value"></a>傳回值
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>參數
 
-[out]*rectTabAreaTop*  
-包含的大小和位置，包括螢幕座標中的最上層索引標籤區域。
+*rectTabAreaTop*<br/>
+[out]包含的大小和位置，包括螢幕座標中的最上層索引標籤區域。
 
-[out]*rectTabAreaBottom*  
-包含的大小和位置，包括螢幕座標中的底部索引標籤區域。
+*rectTabAreaBottom*<br/>
+[out]包含的大小和位置，包括螢幕座標中的底部索引標籤區域。
 
 ### <a name="remarks"></a>備註
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>參數
 
-[in]*arColors*  
-包含要設定色彩的陣列。
+*arColors*<br/>
+[in]包含要設定色彩的陣列。
 
 ### <a name="remarks"></a>備註
 

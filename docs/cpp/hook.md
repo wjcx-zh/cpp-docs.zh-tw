@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197393"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719286"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ long __hook(
 
 - Managed 事件： *ReceiverClass*是事件接收器類別和`HandlerMethod`是處理常式。
 
-*接收者*（選擇性）<br/>
-事件接收器類別執行個體的指標。 如果您未指定接收器，預設值是接收器類別或結構所在 **__hook**呼叫。
+*接收者*<br/>
+（選擇性）事件接收器類別的執行個體的指標。 如果您未指定接收器，預設值是接收器類別或結構所在 **__hook**呼叫。
 
 ## <a name="usage"></a>使用量
 

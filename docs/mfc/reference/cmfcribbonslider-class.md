@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540771"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709328"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 類別
 `CMFCRibbonSlider`類別會實作可以加入功能區列或功能區狀態列的滑桿控制項。 功能區滑桿控制項類似出現在 Office 2007 應用程式中的縮放滑桿。  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 滑桿的識別碼。  
+*nID*<br/>
+[in]滑桿的識別碼。  
   
  [in]。 *nWidth*  
  滑桿寬度，以像素為單位。  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nPos*  
- 指定要設定滑桿的位置。 這個位置是相對於滑桿的開頭。  
+*nPos*<br/>
+[in]指定要設定滑桿的位置。 這個位置是相對於滑桿的開頭。  
   
- [in]*bRedraw*  
- 如果為 TRUE，就會重新繪製滑桿。  
+*bRedraw*<br/>
+[in]如果為 TRUE，就會重新繪製滑桿。  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  設定範圍滑桿控制項的值。  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nMin*  
- 指定滑桿控制項的最小值。  
+*nMin*<br/>
+[in]指定滑桿控制項的最小值。  
   
- [in]*nMax*  
- 指定滑桿控制項的最大值。  
+*nMax*<br/>
+[in]指定滑桿控制項的最大值。  
   
 ### <a name="remarks"></a>備註  
  藉由設定 最小和最大值，指定滑桿控制項的值範圍。  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nZoomIncrement*  
- 指定滑桿控制項的縮放增量。  
+*nZoomIncrement*<br/>
+[in]指定滑桿控制項的縮放增量。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

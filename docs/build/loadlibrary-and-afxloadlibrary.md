@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687931"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726286"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
@@ -39,7 +39,7 @@ ms.locfileid: "43687931"
 
 如果 Windows 無法載入 DLL，處理序可以嘗試從錯誤復原。 比方說，此程序無法通知錯誤的使用者，並要求使用者指定 dll 的另一個路徑。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 請確定指定的任何 Dll 的完整路徑。 載入檔案時，會先搜尋目前的目錄。 如果您不限定檔案的路徑，可能會載入並不是預期的檔案。 若要避免這個問題的另一個方法是使用[/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md)連結器選項。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。

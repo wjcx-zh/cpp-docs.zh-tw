@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708665"
 ---
 # <a name="cl-command-files"></a>CL 命令檔
 
@@ -37,25 +37,25 @@ ms.locfileid: "43894755"
 
 比方說，如果是名為 回應檔案中的下列命令：
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 指定下列 CL 命令：
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 CL 命令如下所示：
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 請注意命令列] 和 [命令檔命令會有效地結合。
 
 ## <a name="see-also"></a>另請參閱
 
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
 [編譯器選項](../../build/reference/compiler-options.md)

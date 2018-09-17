@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199491"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710227"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>參數
 
-*類型*  
- 要儲存在向量中的項目資料類型
+*類型*<br/>
+要儲存在向量中的項目資料類型
 
-*配置器*  
- 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<Type>`。
+*配置器*<br/>
+代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<Type>`。
 
 ## <a name="remarks"></a>備註
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>參數
 
-*第一個*  
- 項目範圍中要複製的第一個項目位置。
+*第一個*<br/>
+項目範圍中要複製的第一個項目位置。
 
-*最後一個*  
- 項目範圍之外要複製的第一個項目位置。
+*最後一個*<br/>
+項目範圍之外要複製的第一個項目位置。
 
-*計數*  
- 插入向量的項目複本數目。
+*計數*<br/>
+插入向量的項目複本數目。
 
-*val*  
- 插入向量之項目的值。
+*val*<br/>
+插入向量之項目的值。
 
-*IList*  
- 包含要插入之項目的 initializer_list。
+*IList*<br/>
+包含要插入之項目的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>參數
 
-*_Pos*  
- 向量中要參考之項目的註標或位置編號。
+*_Pos*<br/>
+向量中要參考之項目的註標或位置編號。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>參數
 
 *val*<br/>
- 要指派給加入到向量結尾之元素的值。
+要指派給加入到向量結尾之元素的值。
 
 ### <a name="example"></a>範例
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>參數
 
-*count*  
- 配置給向量的最小儲存空間長度。
+*count*<br/>
+配置給向量的最小儲存空間長度。
 
 ### <a name="example"></a>範例
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>參數
 
-*Newsize*  
- 向量的新大小。
+*Newsize*<br/>
+向量的新大小。
 
-*val*  
- 如果新的大小大於原始大小，則已將新元素的初始化值加入至向量。 如果省略此值，則新的物件會使用其預設建構函式。
+*val*<br/>
+如果新的大小大於原始大小，則已將新元素的初始化值加入至向量。 如果省略此值，則新的物件會使用其預設建構函式。
 
 ### <a name="remarks"></a>備註
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>參數
 
-*right*  
- 提供要交換之元素的向量或其項目要與向量交換的向量*左*。
+*right*<br/>
+提供要交換之元素的向量或其項目要與向量交換的向量*左*。
 
-*left*  
- 其項目要與向量交換的向量*右*。
+*left*<br/>
+其項目要與向量交換的向量*右*。
 
 ### <a name="example"></a>範例
 

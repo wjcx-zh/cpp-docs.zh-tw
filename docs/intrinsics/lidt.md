@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4b6dcdee1d30274e8cc4baf3de70e4c6cbb611d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5184d925e5d6712dd547e34341d84919c50e0a43
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692698"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724707"
 ---
 # <a name="lidt"></a>__lidt
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ void __lidt(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `Source`|要複製到 IDTR 值指標。|  
+|*Source*|[in]要複製到 IDTR 值指標。|  
   
 ## <a name="requirements"></a>需求  
   

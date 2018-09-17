@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409183"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707758"
 ---
 # <a name="comma-operator-"></a>逗號運算子：,
 允許將兩個陳述式設為群組，其中一個是必要項。  
@@ -37,11 +37,7 @@ expression , expression
   
  逗號可以在某些內容中做為分隔符號使用，例如，函式引數清單。 請勿混淆做為分隔符號使用的逗號，與做為運算子使用的逗號，這兩種用法完全不同。  
   
- 以下列運算式為例  
-  
- *e1* ， *e2*  
-  
- 型別和運算式的值是類型和值*e2*; 評估的結果*e1*會被捨棄。 如果右運算元是左值，則結果會是左值。  
+ 以 `e1, e2` 運算式為例。 型別和運算式的值是類型和值*e2*; 評估的結果*e1*會被捨棄。 如果右運算元是左值，則結果會是左值。  
   
  逗號通常做為分隔符號使用 (例如，在函式的實際引數中或彙總初始設定式中)，而逗號運算子及其運算元必須以括號括住。 例如:   
   

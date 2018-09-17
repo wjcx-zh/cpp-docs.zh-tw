@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bd7d581a632158154822f7ce51ac3dc5042b2a48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e673d01aa5657d9ada9ae1ee84ad3d56483e2fc5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589293"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723342"
 ---
 # <a name="safedivide"></a>SafeDivide
 
@@ -41,14 +41,14 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>參數
 
-[in]*t*  
-除數。 這必須為類型 T。
+*t*<br/>
+[in]除數。 這必須為類型 T。
 
-[in]*u*  
-被除數。 這必須為類型 U。
+*u*<br/>
+[in]被除數。 這必須為類型 U。
 
-[out]*結果*  
-參數所在**SafeDivide**儲存結果。
+*結果*<br/>
+[out]參數所在**SafeDivide**儲存結果。
 
 ## <a name="return-value"></a>傳回值
 

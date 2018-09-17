@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7601913b3940de8e6ade2c76100f4d773281db7
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: ca2582e4c792e0ef60cb11d632c6f4e88891852d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540765"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726046"
 ---
 # <a name="section"></a>section
 在 .obj 檔案中建立區段。  
@@ -43,30 +43,17 @@ ms.locfileid: "42540765"
 *區段名稱*是必要的參數，將會是區段的名稱。 名稱不得與任何標準區段名稱相衝突。 請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，應該不會使用您的名稱。  
   
 *屬性*是組成一或多個以逗號分隔的屬性，您想要指派給該區段的選擇性參數。 可能*屬性*是：  
-  
-**read**  
-允許對於資料進行讀取作業。  
-  
-**write**  
-允許對於資料進行寫入作業。  
-  
-**execute**  
-允許執行程式碼。  
-  
-**shared**  
-讓所有載入影像的處理序共用區段。  
-  
-**nopage**  
-將區段標記為不可分頁；適用於 Win32 裝置驅動程式。  
-  
-**nocache**  
-將區段標記為不可快取；適用於 Win32 裝置驅動程式。  
-  
-**discard**  
-將區段標記為可捨棄；適用於 Win32 裝置驅動程式。  
-  
-**remove**  
-標記為不駐留記憶體; 區段虛擬裝置驅動程式 (V*x*D) 只。  
+
+|屬性|描述|
+|-|-|
+|**read**|允許對於資料進行讀取作業。|
+|**write**|允許對於資料進行寫入作業。|
+|**execute**|允許執行程式碼。|
+|**shared**|讓所有載入影像的處理序共用區段。|
+|**nopage**|將區段標記為不可分頁；適用於 Win32 裝置驅動程式。|
+|**nocache**|將區段標記為不可快取；適用於 Win32 裝置驅動程式。|
+|**discard**|將區段標記為可捨棄；適用於 Win32 裝置驅動程式。|
+|**remove**|標記為不駐留記憶體; 區段虛擬裝置驅動程式 (V*x*D) 只。|
   
 如果您未指定屬性，區段將會具有讀取和寫入屬性。  
   

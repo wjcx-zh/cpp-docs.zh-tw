@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214675"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712945"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵錯。 這些診斷服務包含巨集和全域函式，可讓您追蹤程式的記憶體配置、在執行階段傾印物件的內容，以及在執行階段列印偵錯訊息。 診斷服務的巨集和全域函式可分為下列分類：  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bDump*  
- TRUE 表示已啟用記憶體流失傾印;FALSE 表示已停用記憶體流失傾印。  
+*bDump*<br/>
+[in]TRUE 表示已啟用記憶體流失傾印;FALSE 表示已停用記憶體流失傾印。  
   
 ### <a name="return-value"></a>傳回值  
  此旗標先前的值。  

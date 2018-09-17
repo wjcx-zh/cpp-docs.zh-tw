@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240cd4588cb36125b571462b26fcee3853412218
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c1ff172fde385b4e814508aaf2b567ac15874069
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538410"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720384"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動平行處理和自訂向量化
 Auto-Parallelizer 和 Auto-Vectorizer 的設計目的是為您程式碼中的迴圈提供自動效能提升。  
@@ -75,8 +75,10 @@ void test() {
   
  會產生以下輸出：  
   
-**---正在分析函式： void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4)： 迴圈平行化**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+```
   
 使用下列命令進行編譯：  
   
@@ -84,9 +86,11 @@ void test() {
   
 會產生以下輸出：  
   
-**---正在分析函式： void __cdecl test(void)**   
-**d:\myproject\mytest.cpp(4)： 迴圈平行化**   
-**d:\myproject\mytest.cpp(4)： 迴圈未平行化，原因為 '1008'**  
+```Output
+--- Analyzing function: void __cdecl test(void)
+d:\myproject\mytest.cpp(4) : loop parallelized
+d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
+```
   
 請注意之間兩個不同的輸出差異[/Qpar-report （自動平行化工具報告層級）](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)選項。 `/Qpar-report:1` 只會針對平行處理成功的迴圈輸出平行化工具訊息。 `/Qpar-report:2` 會對平行處理成功和失敗的迴圈輸出平行化工具訊息。  
   

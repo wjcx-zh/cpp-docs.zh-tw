@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87fafb0f6eba5130524a373a065fb86ea7eacfc9
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d8ea4df02e87a64d70ce773ed35d1a3cb0509f8b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894508"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717771"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER (依順序置放函式)
 
@@ -39,7 +39,7 @@ ms.locfileid: "43894508"
 
 ### <a name="parameters"></a>參數
 
-*filename*  
+*filename*<br/>
 指定 COMDAT 函式的連結順序的文字檔。
 
 ## <a name="remarks"></a>備註
@@ -83,5 +83,5 @@ ms.locfileid: "43894508"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)  
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
 [連結器選項](../../build/reference/linker-options.md)

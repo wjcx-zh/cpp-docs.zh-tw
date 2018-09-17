@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e565d5f10bdb06bff6ad8c17047ed3e11070364d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f8da58ad4ba2ddbfdbea7a951104b88d8f55c445
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099586"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710283"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 類別
 
@@ -265,9 +265,9 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>備註
 
-*i* -> 相當於 (\* *i*)。 *m*
+`i->m` 相當於 `(*i).m`
 
-運算子會傳回 **&\*\*this**。
+第一個運算子會傳回 `&*this`。
 
 ### <a name="example"></a>範例
 

@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f455ce1f09822d4705a8c700e9dbc93d4a2e79c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104602"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715594"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 類別
 
@@ -369,7 +369,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*Keyval*  
+*keyval*<br/>
 要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -514,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket*  
+*nbucket*<br/>
 Bucket 編號。
 
 ### <a name="remarks"></a>備註
@@ -880,7 +880,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*Keyval*  
+*keyval*<br/>
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1201,7 +1201,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>參數
 
-*Keyval*  
+*keyval*<br/>
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1277,16 +1277,16 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*Where*  
+*Where*<br/>
 要移除之項目的位置。
 
-*第一個*  
+*第一個*<br/>
 要移除之第一個項目的位置。
 
-*最後一個*  
+*最後一個*<br/>
 緊接在要移除之最後一個項目後面的位置。
 
-*Key*  
+*Key*<br/>
 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -1309,7 +1309,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*Keyval*  
+*keyval*<br/>
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -2011,7 +2011,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>參數
 
-*factor*  
+*factor*<br/>
 新的最大載入因數。
 
 ### <a name="remarks"></a>備註
@@ -2291,7 +2291,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets*  
+*nbuckets*<br/>
 要求的值區數目。
 
 ### <a name="remarks"></a>備註

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b140aed55bb1a83224bbe1698ff40695c306a693
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103732"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722367"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (延遲載入匯入)
 
@@ -56,5 +56,5 @@ ms.locfileid: "44103732"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)   
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
 [連結器選項](../../build/reference/linker-options.md)

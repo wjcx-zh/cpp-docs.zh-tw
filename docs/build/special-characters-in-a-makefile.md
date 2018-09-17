@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709355"
 ---
 # <a name="special-characters-in-a-makefile"></a>Makefile 中的特殊字元
 
 若要使用 NMAKE 特殊字元常值字元，請在其前面放置插入號 (^)。 NMAKE 會忽略在其他字元前面的插入號。 特殊字元如下：
 
-`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
 加上引號的字串中的插入號 (^) 會被視為常值的插入號字元。 行結尾處的插入號會插入常值的新行字元字串或巨集。
 

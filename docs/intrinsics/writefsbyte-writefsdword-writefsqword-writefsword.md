@@ -1,5 +1,5 @@
 ---
-title: __writefsbyte、 __writefsdword、 __writefsqword、 __writefsword |Microsoft 文件
+title: __writefsbyte、 __writefsdword、 __writefsqword、 __writefsword |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338298"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718467"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte、__writefsdword、__writefsqword、__writefsword
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 寫入記憶體相對於 FS 區段的開頭位移所指定的位置。  
+ 寫入記憶體相對於 FS 區段開頭的位移所指定的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Offset`  
- 從寫入 FS 開頭的位移。  
+*位移*<br/>
+[in]從要寫入的 FS 開頭的位移。  
   
- [輸入] `Data`  
- 要寫入的值。  
+*Data*<br/>
+[in]要寫入的值。  
   
 ## <a name="requirements"></a>需求  
   
@@ -78,9 +78,9 @@ void __writefsqword(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 這些常式會只提供內建函式。  
+ 這些常式都僅有內建函式。  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [__readfsbyte、 \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   

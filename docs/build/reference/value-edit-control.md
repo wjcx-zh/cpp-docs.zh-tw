@@ -1,5 +1,5 @@
 ---
-title: 值編輯控制項 |Microsoft 文件
+title: 值編輯控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7364a294dbb45d28c6168dd8c8939372093e91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 823306fa95b2a4a317afef8aed21cd361a773be3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373812"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722302"
 ---
 # <a name="value-edit-control"></a>值編輯控制項
-使用控制項、 輸入的值、 將它貼入剪貼簿、 或拖放到此編輯控制項對偵錯工具。 十六進位或十進位格式輸入值，然後按一下**查閱**。 十六進位值之前應該加 0x。有效的字元是 0-9、 A-F 和 a-f。 十進位值前面可以有負號 （-）。有效的字元是 0-9。  
-  
-## <a name="see-also"></a>另請參閱  
- [ERRLOOK 參考](../../build/reference/errlook-reference.md)
+
+若要使用控制項，輸入的值，貼上剪貼簿，或拖放它從偵錯工具，在這個編輯控制項。 十六進位或十進位格式輸入值，然後按一下**查閱**。 十六進位值應該加 0x;有效字元為 0-9、a-F 和 a-f。 十進位值可以加上減號 （–）;有效字元為 0-9。
+
+## <a name="see-also"></a>另請參閱
+
+[ERRLOOK 參考](../../build/reference/errlook-reference.md)

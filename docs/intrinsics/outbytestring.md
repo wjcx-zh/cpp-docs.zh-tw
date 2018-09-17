@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55dc6492faea101df40c2901ced24321822f36e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543110"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718831"
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Microsoft 專屬**  
@@ -41,14 +41,14 @@ void __outbytestring(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `Port`  
- 若要將資料傳送至連接埠。  
+*連接埠*<br/>
+[in]若要將資料傳送至連接埠。  
   
- [輸入] `Buffer`  
- 指定的連接埠傳送資料。  
+*Buffer*<br/>
+[in]指定的連接埠傳送資料。  
   
- [輸入] `Count`  
- 資料要傳送的位元組數目。  
+*計數*<br/>
+[in]資料要傳送的位元組數目。  
   
 ## <a name="requirements"></a>需求  
   

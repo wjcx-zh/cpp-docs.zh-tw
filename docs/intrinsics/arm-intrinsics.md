@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030ac6bb2e6fb7acd9745d4fa818e89d29ee1832
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208971"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712799"
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
 Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關 ARM 的詳細資訊，請參閱 < [ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?LinkId=522049)並[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。  
@@ -2165,8 +2165,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
  `Location`  
  要讀取或寫入的記憶體位置的位址。  
   
- `Value` (僅限儲存內建函式)  
- 要寫入至指定記憶體位置的值。  
+ `Value`  
+ 要寫入至指定的記憶體位置 （僅 store 內建） 的值。  
   
  **傳回值 （載入內建函式只）**  
   
@@ -2176,9 +2176,8 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  您可以使用 `__iso_volatile_load8/16/32/64` 和 `__iso_volatile_store8/16/32/64` 內建函式，明確地執行不受編譯器最佳化約束的記憶體存取。 編譯器無法移除、合成 (synthetize)，或變更這些作業的相對順序，但不會產生隱含硬體記憶體屏障。 因此，硬體可能仍然重新排列跨多個執行緒中可觀察到的記憶體存取。 更精確地說，這些內建函式相當於下列運算式下編譯 **/volatile:iso**。  
   
-```  
-  
-      int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
+```cpp
+int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;   
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;  
 ```  
   

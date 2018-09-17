@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5c9eba152ddaf0ab35fc1a331905a457ff339f28
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964810"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725981"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 
@@ -49,11 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 左 `thread::id` 物件。
+*左邊*<br/>
+左 `thread::id` 物件。
 
-*右邊*  
- 右 `thread::id` 物件。
+*右邊*<br/>
+右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -75,11 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 左 `thread::id` 物件。
+*左邊*<br/>
+左 `thread::id` 物件。
 
-*右邊*  
- 右 `thread::id` 物件。
+*右邊*<br/>
+右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -101,11 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 左 `thread::id` 物件。
+*左邊*<br/>
+左 `thread::id` 物件。
 
-*右邊*  
- 右 `thread::id` 物件。
+*右邊*<br/>
+右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -127,11 +127,11 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 左 `thread::id` 物件。
+*左邊*<br/>
+左 `thread::id` 物件。
 
-*右邊*  
- 右 `thread::id` 物件。
+*右邊*<br/>
+右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -155,11 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>參數
 
-*左邊*  
- 左 `thread::id` 物件。
+*左邊*<br/>
+左 `thread::id` 物件。
 
-*右邊*  
- 右 `thread::id` 物件。
+*右邊*<br/>
+右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -180,12 +180,12 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>參數
- 
-*左邊*  
- 左 `thread::id` 物件。
 
-*右邊*  
- 右 `thread::id` 物件。
+*左邊*<br/>
+左 `thread::id` 物件。
+
+*右邊*<br/>
+右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -207,11 +207,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*Ostr*  
- [basic_ostream](../standard-library/basic-ostream-class.md) 物件。
+*Ostr*<br/>
+[basic_ostream](../standard-library/basic-ostream-class.md) 物件。
 
-*Id*  
- `thread::id` 物件。
+*Id*<br/>
+`thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 

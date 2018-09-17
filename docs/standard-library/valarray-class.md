@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bd6b1c5ed9cf29b87dc2a218f7a5e9eda3e3dc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9f95c9d85ab3649c1710881c73df1ae325f9cb60
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319054"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724811"
 ---
 # <a name="valarray-class"></a>valarray 類別
 
@@ -132,10 +132,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 ### <a name="parameters"></a>參數
 
 *_Func(Type)*<br/>
- 要套用至運算元 valarray 每個項目的函式物件。
+要套用至運算元 valarray 每個項目的函式物件。
 
 *_Func(const Type&)*<br/>
- 要套用至運算元 valarray 每個項目的 const 函式物件。
+要套用至運算元 valarray 每個項目的 const 函式物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -204,8 +204,8 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>參數
 
-*count*  
- 項目要向前移位的位置數目。
+*count*<br/>
+項目要向前移位的位置數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -463,8 +463,8 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要相除的運算元 valarray 項目相同的項目型別值。
+*right*<br/>
+Valarray，或是與要相除的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -528,8 +528,8 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray 的項目型別值相同的合併為運算元 valarray 項目，透過邏輯`AND`與運算元 valarray。
+*right*<br/>
+Valarray 的項目型別值相同的合併為運算元 valarray 項目，透過邏輯`AND`與運算元 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -599,8 +599,8 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- 指出右移數量的值，或是其項目指出項目右移數量的 valarray。
+*right*<br/>
+指出右移數量的值，或是其項目指出項目右移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -668,8 +668,8 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- 指出左移數量的值，或是其項目指出項目左移數量的 valarray。
+*right*<br/>
+指出左移數量的值，或是其項目指出項目左移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
 
@@ -738,8 +738,8 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要相乘的運算元 valarray 項目相同的項目型別值。
+*right*<br/>
+Valarray，或是與要相乘的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -854,8 +854,8 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要相加的運算元 valarray 項目相同的項目型別值。
+*right*<br/>
+Valarray，或是與要相加的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -970,8 +970,8 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要從中減去的運算元 valarray 項目相同的項目型別值。
+*right*<br/>
+Valarray，或是與要從中減去的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1035,8 +1035,8 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要除的運算元 valarray 項目相同的項目型別值。
+*right*<br/>
+Valarray，或是與要除的運算元 valarray 項目相同的項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1110,23 +1110,23 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- 要複製到運算元 valarray 的 valarray。
+*right*<br/>
+要複製到運算元 valarray 的 valarray。
 
-*val*  
- 要指派給運算元 valarray 項目的值。
+*val*<br/>
+要指派給運算元 valarray 項目的值。
 
-*_Slicearray*  
- 要複製到運算元 valarray 的 slice_array。
+*_Slicearray*<br/>
+要複製到運算元 valarray 的 slice_array。
 
-*_Gslicearray*  
- 要複製到運算元 valarray 的 gslice_array。
+*_Gslicearray*<br/>
+要複製到運算元 valarray 的 gslice_array。
 
-*_Maskarray*  
- 要複製到運算元 valarray 的 mask_array。
+*_Maskarray*<br/>
+要複製到運算元 valarray 的 mask_array。
 
-*_Indarray*  
- 要複製到運算元 valarray 的 indirect_array。
+*_Indarray*<br/>
+要複製到運算元 valarray 的 indirect_array。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1228,20 +1228,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>參數
 
-*_Off*  
- 要指派值的項目索引。
+*_Off*<br/>
+要指派值的項目索引。
 
-*_Slicearray*  
- Valarray 的 slice_array，指定要選取或傳回至新 valarray 的子集。
+*_Slicearray*<br/>
+Valarray 的 slice_array，指定要選取或傳回至新 valarray 的子集。
 
-*_Gslicearray*  
- Valarray 的 gslice_array，指定要選取或傳回至新 valarray 的子集。
+*_Gslicearray*<br/>
+Valarray 的 gslice_array，指定要選取或傳回至新 valarray 的子集。
 
-*_Boolarray*  
- Valarray 的 bool_array，指定要選取或傳回至新 valarray 的子集。
+*_Boolarray*<br/>
+Valarray 的 bool_array，指定要選取或傳回至新 valarray 的子集。
 
-*_Indarray*  
- Valarray 的 indirect_array，指定要選取或傳回至新 valarray 的子集。
+*_Indarray*<br/>
+Valarray 的 indirect_array，指定要選取或傳回至新 valarray 的子集。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1269,8 +1269,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要透過互斥邏輯 **XOR** 與運算元 valarray 項目合併的相同項目型別值。
+*right*<br/>
+Valarray，或是與要透過互斥邏輯 **XOR** 與運算元 valarray 項目合併的相同項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1342,8 +1342,8 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
- Valarray，或是與要透過 `OR` 與運算元 valarray 項目合併的相同項目型別值。
+*right*<br/>
+Valarray，或是與要透過 `OR` 與運算元 valarray 項目合併的相同項目型別值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1518,11 +1518,11 @@ void resize(
 
 ### <a name="parameters"></a>參數
 
-*_Newsize*  
- 重新調整大小的 valarray 中的項目數。
+*_Newsize*<br/>
+重新調整大小的 valarray 中的項目數。
 
-*val*  
- 要指定給重新調整大小的 valarray 項目的值。
+*val*<br/>
+要指定給重新調整大小的 valarray 項目的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1589,8 +1589,8 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>參數
 
-*count*  
- 項目要向前移位的位置數目。
+*count*<br/>
+項目要向前移位的位置數目。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1839,32 +1839,32 @@ valarray(
 
 ### <a name="parameters"></a>參數
 
-*計數*  
- 要放在 valarray 中的項目數目。
+*計數*<br/>
+要放在 valarray 中的項目數目。
 
-*val*  
- 用來初始化 valarray 中之項目的值。
+*val*<br/>
+用來初始化 valarray 中之項目的值。
 
-*ptr*  
- 值指標，這些值要用來初始化 valarray 中之項目。
+*ptr*<br/>
+值指標，這些值要用來初始化 valarray 中之項目。
 
-*右邊*  
- 用來初始化新 valarray 的現有 valarray。
+*右邊*<br/>
+用來初始化新 valarray 的現有 valarray。
 
-*SliceArray*  
- slice_array，其項目值要用來初始化建構中 valarray 的項目。
+*SliceArray*<br/>
+slice_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*GsliceArray*  
- gslice_array，其項目值要用來初始化建構中 valarray 的項目。
+*GsliceArray*<br/>
+gslice_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*MaskArray*  
- mask_array，其項目值要用來初始化建構中 valarray 的項目。
+*MaskArray*<br/>
+mask_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*IndArray*  
- indirect_array，其項目值要用來初始化建構中 valarray 的項目。
+*IndArray*<br/>
+indirect_array，其項目值要用來初始化建構中 valarray 的項目。
 
-*IList*  
- initializer_list，包含欲複製的項目。
+*IList*<br/>
+initializer_list，包含欲複製的項目。
 
 ### <a name="remarks"></a>備註
 

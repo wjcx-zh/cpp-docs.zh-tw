@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a6bed16f338c5ee3333529613189fe03ad7e3ec3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851583"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709549"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 類別
 `CMFCLinkCtrl`類別顯示為超連結的按鈕，並按一下按鈕時叫用連結的目標。  
@@ -91,11 +91,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectClient*  
- 之界限的連結控制項的矩形。  
+*rectClient*<br/>
+[in]之界限的連結控制項的矩形。  
   
 ### <a name="remarks"></a>備註  
  當您想要使用自己的程式碼繪製按鈕的焦點矩形，請覆寫這個方法。  
@@ -108,8 +108,8 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszURL*  
- 要顯示的按鈕文字。  
+*lpszURL*<br/>
+[in]要顯示的按鈕文字。  
   
 ### <a name="remarks"></a>備註  
   
@@ -121,8 +121,8 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszPrefix*  
- URL 通訊協定前置詞。  
+*lpszPrefix*<br/>
+[in]URL 通訊協定前置詞。  
   
 ### <a name="remarks"></a>備註  
  這個方法可用於設定 URL 前置詞。 前置詞不會顯示在按鈕的臉部，但您可以使用它來瀏覽至的 URL 目標。  
@@ -137,11 +137,11 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bVCenter*  
- 為 true，則按鈕文字和點陣圖的頂端和底部的連結控制中; 之間的垂直置中對齊否則為 FALSE。 預設值為 FALSE。  
+*bVCenter*<br/>
+[in]為 true，則按鈕文字和點陣圖的頂端和底部的連結控制中; 之間的垂直置中對齊否則為 FALSE。 預設值為 FALSE。  
   
- [in]*bHCenter*  
- 為 true，則按鈕文字和點陣圖的左邊和右邊的連結控制中; 之間的水平置中對齊否則為 FALSE。 預設值為 FALSE。  
+*bHCenter*<br/>
+[in]為 true，則按鈕文字和點陣圖的左邊和右邊的連結控制中; 之間的水平置中對齊否則為 FALSE。 預設值為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含連結控制項的新大小。  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336516"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713592"
 ---
 # <a name="cfileexception-class"></a>CFileException 類別
 表示檔案相關的例外狀況。  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、 out]*lpszError*  
- 收到的錯誤訊息的緩衝區指標。  
+*lpszError*<br/>
+[in、 out]收到的錯誤訊息的緩衝區指標。  
   
- [in]*nMaxError*  
- 指定的緩衝區可以保留的字元數目上限。 這包括結束的 null 字元。  
+*nMaxError*<br/>
+[in]指定的緩衝區可以保留的字元數目上限。 這包括結束的 null 字元。  
   
- [in、 out]*pnHelpContext*  
- 指標設為不帶正負號的整數，會收到說明內容識別碼。 如果`NULL`，會傳回任何識別碼。  
+*pnHelpContext*<br/>
+[in、 out]指標設為不帶正負號的整數，會收到說明內容識別碼。 如果`NULL`，會傳回任何識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  

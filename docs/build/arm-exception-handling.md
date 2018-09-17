@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205699"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711226"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
@@ -175,26 +175,26 @@ ARM 的每一個 .pdata 記錄長度都是 8 個位元組。 記錄的一般格�
 1. 1 或 2 字組標頭描述 .xdata 結構的整體大小，並提供關鍵函式資料。 第二個字組時才存在*結尾計數*並*程式碼字組*欄位都設定為 0。 下表詳細說明這些欄位：
 
    |字組|位元|用途|
-    |----------|----------|-------------|
-    |0|0-17|*函式長度*是 18 位元欄位，指出以位元組為單位，除以 2 的函式的總長度。 如果函式大於 512 KB，則必須使用多個 .pdata 和 .xdata 記錄，來描述函式。 如需詳細資料，請參閱本文件中的＜大型函式＞一節。|
-    |0|18-19|*Vers*是 2 位元欄位，描述其餘 xdata 的版本。 目前僅定義版本 0，保留值 1-3。|
-    |0|20|*X*是 1 位元欄位，指出存在 (1) 與否 (0) 的例外狀況資料。|
-    |0|21|*E*是 1 位元欄位，指出描述單一結尾的資訊會封裝到標頭 (1) 而不需要其他範圍字組的更新版本 (0)。|
-    |0|22|*F*是 1 位元欄位，指出此記錄是描述函式片段 (1) 或完整的函式 (0)。 片段隱含無序言，且應忽略所有序言處理。|
-    |0|23-27|*結尾計數*是 5 位元欄位，有兩種意義，視狀態而定*E*元：<br /><br /> -如果*E*是 0，則這個欄位是第 3 節中所述的例外狀況範圍總數的計數。 如果超過 31 個範圍存在於函式，則此欄位中，*程式碼字組*欄位必須同時設為 0 指出需要擴充字組。<br />-如果*E*為 1，此欄位會指定僅描述結尾之第一個回溯程式碼索引。|
-    |0|28-31|*程式碼字組*是 4 位元欄位，指定包含所有在第 4 節中的回溯程式碼所需的 32 位元字組的數目。 如果超過 15 個字組所需的超過 63 個回溯程式碼位元組，這個欄位並*結尾計數*欄位必須同時設為 0 指出需要擴充字組。|
-    |1|0-15|*擴充的結尾計數*是 16 位元欄位，編碼為異常大數目的結尾時，提供更多空間。 包含此欄位的擴充字組時才存在*結尾計數*並*程式碼字組*的第一個標頭文字中的欄位都設定為 0。|
-    |1|16-23|*擴充程式碼字組*是 8 位元欄位，編碼為異常大數目的回溯程式碼字組時，提供更多空間。 包含此欄位的擴充字組時才存在*結尾計數*並*程式碼字組*的第一個標頭文字中的欄位都設定為 0。|
-    |1|24-31|保留|
+   |----------|----------|-------------|
+   |0|0-17|*函式長度*是 18 位元欄位，指出以位元組為單位，除以 2 的函式的總長度。 如果函式大於 512 KB，則必須使用多個 .pdata 和 .xdata 記錄，來描述函式。 如需詳細資料，請參閱本文件中的＜大型函式＞一節。|
+   |0|18-19|*Vers*是 2 位元欄位，描述其餘 xdata 的版本。 目前僅定義版本 0，保留值 1-3。|
+   |0|20|*X*是 1 位元欄位，指出存在 (1) 與否 (0) 的例外狀況資料。|
+   |0|21|*E*是 1 位元欄位，指出描述單一結尾的資訊會封裝到標頭 (1) 而不需要其他範圍字組的更新版本 (0)。|
+   |0|22|*F*是 1 位元欄位，指出此記錄是描述函式片段 (1) 或完整的函式 (0)。 片段隱含無序言，且應忽略所有序言處理。|
+   |0|23-27|*結尾計數*是 5 位元欄位，有兩種意義，視狀態而定*E*元：<br /><br /> -如果*E*是 0，則這個欄位是第 3 節中所述的例外狀況範圍總數的計數。 如果超過 31 個範圍存在於函式，則此欄位中，*程式碼字組*欄位必須同時設為 0 指出需要擴充字組。<br />-如果*E*為 1，此欄位會指定僅描述結尾之第一個回溯程式碼索引。|
+   |0|28-31|*程式碼字組*是 4 位元欄位，指定包含所有在第 4 節中的回溯程式碼所需的 32 位元字組的數目。 如果超過 15 個字組所需的超過 63 個回溯程式碼位元組，這個欄位並*結尾計數*欄位必須同時設為 0 指出需要擴充字組。|
+   |1|0-15|*擴充的結尾計數*是 16 位元欄位，編碼為異常大數目的結尾時，提供更多空間。 包含此欄位的擴充字組時才存在*結尾計數*並*程式碼字組*的第一個標頭文字中的欄位都設定為 0。|
+   |1|16-23|*擴充程式碼字組*是 8 位元欄位，編碼為異常大數目的回溯程式碼字組時，提供更多空間。 包含此欄位的擴充字組時才存在*結尾計數*並*程式碼字組*的第一個標頭文字中的欄位都設定為 0。|
+   |1|24-31|保留|
 
 2. 例外狀況資料之後 (如果*E*標頭中的位元已設為 0) 是一份結尾範圍，這會壓縮至一個字組的其中一個，並以遞增的開始位移順序儲存的相關資訊。 每一個範圍包含下列欄位：
 
    |位元|用途|
-    |----------|-------------|
-    |0-17|*結尾開始位移*是 18 位元欄位，描述在結尾，以位元組為單位除以 2，相對於函式的開頭的位移。|
-    |18-19|*Res*是 2 位元欄位，保留供未來擴充。 其值必須為 0。|
-    |20-23|*條件*是 4 位元欄位，可提供執行結尾時的條件。 對於無條件的結尾，它應該設定為 0xE，指出「永遠」。 (結尾必須完全是有條件的或完全是無條件的，而在 Thumb-2 模式下，結尾以 IT opcode 後的第一個指令開始)。|
-    |24-31|*結尾開始索引*是 8 位元欄位，指出描述此結尾之第一個回溯程式碼的位元組索引。|
+   |----------|-------------|
+   |0-17|*結尾開始位移*是 18 位元欄位，描述在結尾，以位元組為單位除以 2，相對於函式的開頭的位移。|
+   |18-19|*Res*是 2 位元欄位，保留供未來擴充。 其值必須為 0。|
+   |20-23|*條件*是 4 位元欄位，可提供執行結尾時的條件。 對於無條件的結尾，它應該設定為 0xE，指出「永遠」。 (結尾必須完全是有條件的或完全是無條件的，而在 Thumb-2 模式下，結尾以 IT opcode 後的第一個指令開始)。|
+   |24-31|*結尾開始索引*是 8 位元欄位，指出描述此結尾之第一個回溯程式碼的位元組索引。|
 
 3. 在結尾範圍清單之後是包含回溯程式碼的位元組陣列，在本文章的＜回溯程式碼＞一節有詳細描述。 此陣列在最近完整字組界面的結尾處填補。 位元組以 Little-Endian 順序儲存，因此可在 Little-Endian 模式下直接擷取。
 
@@ -358,16 +358,16 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 通常，會預期壓縮包裝函式為一般序言中的額外暫存器儲存預先配置空間，然後使用 `str` 或 `stm` 而不是 `push`，來執行暫存器儲存。 這可將所有堆疊指標操作保持在函式的原始序言中。
@@ -386,14 +386,14 @@ ShrinkWrappedFunction
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 這裡的關鍵是在每一個指令界限上，堆疊完全與區域的回溯程式碼一致。 在此範例中，如果內部推入之前發生回溯，則它會被視為區域 A 的一部分，且僅會回溯區域 A 序言。 如果內部推入之後發生回溯，則會視為區域 B，也沒有序言，但具有描述內部推入和來自區域 a 類似邏輯的原始序言的回溯程式碼的一部分保存對於內部彈出。
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>另請參閱
 
-[ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)  
-[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)<br/>
+[Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)

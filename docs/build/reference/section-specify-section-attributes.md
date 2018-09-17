@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f052d8acaceee88b6b9a727e176666180b1bb9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bf762718e507309e47d36b06baacf54c6cb01e3e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214176"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713721"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (指定區段屬性)
 
@@ -89,7 +89,7 @@ K 和 P 是不尋常的區段旗標對應到它們都使用負值的意義。 �
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
 
 1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
 
@@ -101,5 +101,5 @@ K 和 P 是不尋常的區段旗標對應到它們都使用負值的意義。 �
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)  
-[連結器選項](../../build/reference/linker-options.md)  
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

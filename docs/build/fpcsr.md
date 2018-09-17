@@ -1,5 +1,5 @@
 ---
-title: FpCsr |Microsoft 文件
+title: FpCsr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,33 +12,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9defb41a026b32acb4375185f14c903788b91a23
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6ed0500d0382563878d0751ba5386e4cc637fdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367442"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718285"
 ---
 # <a name="fpcsr"></a>FpCsr
-暫存器狀態也包含將 x87 FPU 控制字組。 呼叫慣例會要求此暫存器為靜態。  
-  
- 將 x87 FPU 控制字組暫存設定為下列的標準值開頭的程式執行：  
-  
-```  
-FPCSR[0:6]: Exception masks all 1's (all exceptions masked)  
-FPCSR[7]: Reserved - 0  
-FPCSR[8:9]: Precision Control - 10B (double precision)  
-FPCSR[10:11]: Rounding  control - 0 (round to nearest)  
-FPCSR[12]: Infinity control - 0 (not used)  
-```  
-  
- 修改任何 fpcsr 欄位被呼叫端必須將它們還原後再傳回至呼叫端。 此外，已修改這些欄位的呼叫端必須還原為其標準的值之前叫用被呼叫端，除非協議由被呼叫端必須要有修改過的值。  
-  
- 有兩個例外控制旗標不適用規則：  
-  
-1.  在指定的函式的目的為修改靜態 FpCsr 函式加上旗標。  
-  
-2.  時，它可以證明更正這些規則的違規情形，會導致程式的行為/意義和這些規則不違反規則的程式，例如，透過分析整個程式相同。  
-  
-## <a name="see-also"></a>另請參閱  
- [呼叫慣例](../build/calling-convention.md)
+
+註冊狀態也會包含 x87 FPU 控制字組。 呼叫慣例會要求此暫存器為靜態。
+
+X87 FPU 控制字組暫存器設為下列的標準值開頭的程式執行：
+
+```
+FPCSR[0:6]: Exception masks all 1's (all exceptions masked)
+FPCSR[7]: Reserved - 0
+FPCSR[8:9]: Precision Control - 10B (double precision)
+FPCSR[10:11]: Rounding  control - 0 (round to nearest)
+FPCSR[12]: Infinity control - 0 (not used)
+```
+
+修改任何 fpcsr 欄位被呼叫端必須將它們還原，然後傳回給其呼叫端。 此外，修改這些欄位的任何呼叫端必須將它們還原至其標準的值之前叫用被呼叫端，除非由合約被呼叫端必須要有修改過的值。
+
+有兩個規則的例外狀況為非變動性有關的控制旗標：
+
+1. 在函式中指定的函式的文件的目的為修改靜態 FpCsr 旗標。
+
+1. 當它是可以證明正確，這些規則的違規會導致程式的行為/意義和這些規則都不違反規則的程式，例如，透過整個程式分析與相同的。
+
+## <a name="see-also"></a>另請參閱
+
+[呼叫慣例](../build/calling-convention.md)

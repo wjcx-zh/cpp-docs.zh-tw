@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849467"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717427"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 類別
 `CMFCMaskedEdit`類別支援遮罩的編輯控制項，可驗證使用者輸入，根據遮罩，並顯示驗證的結果，根據的範本。  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 若要指定，則為 TRUE [CMFCMaskedEdit::GetWindowText](#getwindowtext)方法擷取只加上遮罩字元;指定方法擷取整個文字，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]若要指定，則為 TRUE [CMFCMaskedEdit::GetWindowText](#getwindowtext)方法擷取只加上遮罩字元;指定方法擷取整個文字，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  這個方法可用於啟用擷取遮罩的字元。 然後建立對應至的電話號碼，例如 (425) 555-0187 遮罩的編輯控制項。 如果您呼叫`GetWindowText`方法，它會傳回"4255550187 」。 如果您停用擷取不顯示字元的字元，`GetWindowText`方法會傳回編輯控制項，例如"(425) 555-0187 」 中顯示的文字。  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszMask*  
- 遮罩字串會指定可以出現在使用者輸入的每個位置的字元類型。 長度*lpszInputTemplate*並*lpszMask*參數字串必須相同。 請參閱 < 備註 > 一節更詳細遮罩字元。  
+*lpszMask*<br/>
+[in]遮罩字串會指定可以出現在使用者輸入的每個位置的字元類型。 長度*lpszInputTemplate*並*lpszMask*參數字串必須相同。 請參閱 < 備註 > 一節更詳細遮罩字元。  
   
- [in]*lpszInputTemplate*  
- 遮罩範本字串，指定常值字元，可以出現在使用者輸入的每個位置。 使用底線字元 ('_') 做為字元預留位置。 長度*lpszInputTemplate*並*lpszMask*參數字串必須相同。  
+*lpszInputTemplate*<br/>
+[in]遮罩範本字串，指定常值字元，可以出現在使用者輸入的每個位置。 使用底線字元 ('_') 做為字元預留位置。 長度*lpszInputTemplate*並*lpszMask*參數字串必須相同。  
   
- [in]*chMaskInputTemplate*  
- 預設的字元，此架構可以代替使用者輸入的每個無效字元。 此參數的預設值為底線 ('_')。  
+*chMaskInputTemplate*<br/>
+[in]預設的字元，此架構可以代替使用者輸入的每個無效字元。 此參數的預設值為底線 ('_')。  
   
- [in]*lpszValid*  
- 字串，包含一組有效的字元。 NULL 表示所有字元都都有效。 此參數的預設值是 NULL。  
+*lpszValid*<br/>
+[in]字串，包含一組有效的字元。 NULL 表示所有字元都都有效。 此參數的預設值是 NULL。  
   
 ### <a name="remarks"></a>備註  
  您可以使用這個方法來建立遮罩式的編輯控制的遮罩。 衍生的類別`CMFCMaskedEdit`類別並覆寫[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)方法，以使用您自己的程式碼進行的自訂遮罩處理。  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- True 會選取唯一群組;若要選取整個文字，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]True 會選取唯一群組;若要選取整個文字，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  使用此函式來指定遮罩的編輯控制項是否允許使用者選取的群組或整個文字。  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 驗證遮罩字元，僅針對輸入的使用者，則為 TRUE若要以整個遮罩驗證，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]驗證遮罩字元，僅針對輸入的使用者，則為 TRUE若要以整個遮罩驗證，則為 FALSE。 預設值為 TRUE。  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  擷取驗證遮罩式的編輯控制中的文字。  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*lpszStringBuf*  
- 接收從編輯控制項的文字的緩衝區指標。  
+*lpszStringBuf*<br/>
+[out]接收從編輯控制項的文字的緩衝區指標。  
   
- [in]*nMaxCount*  
- 要接收的字元數目上限。  
+*nMaxCount*<br/>
+[in]要接收的字元數目上限。  
   
- [out]*rstrString*  
- 接收從編輯控制項的文字字串物件的參考。  
+*rstrString*<br/>
+[out]接收從編輯控制項的文字字串物件的參考。  
   
 ### <a name="return-value"></a>傳回值  
  第一個方法多載會傳回字串複製到的位元組數目*lpszStringBuf*參數緩衝區中; 0，如果遮罩的編輯控制項中不有任何文字。  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*chChar*  
- 要驗證的字元。  
+*chChar*<br/>
+[in]要驗證的字元。  
   
- [in]*chMaskChar*  
- 從遮罩字串對應的字元。  
+*chMaskChar*<br/>
+[in]從遮罩字串對應的字元。  
   
 ### <a name="return-value"></a>傳回值  
  則為 TRUE *chChar*參數是所允許的字元類型*chMaskChar*參數; 否則為 FALSE。  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszValid*  
- 包含一組有效的輸入字元的字串。 NULL 表示所有字元都都有效。 此參數的預設值是 NULL。  
+*lpszValid*<br/>
+[in]包含一組有效的輸入字元的字串。 NULL 表示所有字元都都有效。 此參數的預設值是 NULL。  
   
 ### <a name="remarks"></a>備註  
  使用此方法來定義有效的字元清單。 如果輸入的字元不在此清單中，遮罩的編輯控制項不會接受它。  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszString*  
- 指向以 null 結束的字串，用以做為提示。  
+*lpszString*<br/>
+[in]指向以 null 結束的字串，用以做為提示。  
   
 ### <a name="remarks"></a>備註  
  這個方法會設定控制項的文字。  

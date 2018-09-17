@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4223ce5c358f4e95ab94baac9d5cf0edda5ad73f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850773"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716345"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 類別
 `CSettingsStoreSP`類別是一個 helper 類別，您可以使用建立的執行個體[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
@@ -88,11 +88,11 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bAdmin*  
- 布林值參數，決定是否`CSettingsStore`系統管理員模式中建立物件。  
+*bAdmin*<br/>
+[in]布林值參數，決定是否`CSettingsStore`系統管理員模式中建立物件。  
   
- [in]*bReadOnly*  
- 布林值參數，決定是否`CSettingsStore`建立物件的唯讀存取權。  
+*bReadOnly*<br/>
+[in]布林值參數，決定是否`CSettingsStore`建立物件的唯讀存取權。  
   
 ### <a name="return-value"></a>傳回值  
  新建立的參考`CSettingsStore`物件。  
@@ -117,8 +117,8 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*dwUserData*  
- 使用者定義的資料，`CSettingsStoreSP`物件存放區。  
+*dwUserData*<br/>
+[in]使用者定義的資料，`CSettingsStoreSP`物件存放區。  
   
 ### <a name="remarks"></a>備註  
  `CSettingsStoreSP`物件會儲存的資料*dwUserData*受保護的成員變數中`m_dwUserData`。  
@@ -131,8 +131,8 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pRTI*  
- 從衍生類別的執行階段類別資訊指標[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
+*pRTI*<br/>
+[in]從衍生類別的執行階段類別資訊指標[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUE如果所識別的類別，則為 FALSE。 *pRTI*不衍生自`CSettingsStore`。  

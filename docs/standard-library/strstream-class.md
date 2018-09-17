@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b321891bc5b9392fffc72ec0c9661a39a5631e5a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955731"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717830"
 ---
 # <a name="strstream-class"></a>strstream 類別
 
@@ -77,8 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>參數
 
-*_Freezeit*  
- A **bool**指出您是否要凍結的資料流。
+*_Freezeit*<br/>
+A **bool**指出您是否要凍結的資料流。
 
 ### <a name="remarks"></a>備註
 
@@ -162,14 +162,14 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>參數
 
-*count*  
- 緩衝區的大小。
+*count*<br/>
+緩衝區的大小。
 
-*模式 （_m)*  
- 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
+*模式 （_m)*<br/>
+緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
-*ptr*  
- 緩衝區。
+*ptr*<br/>
+緩衝區。
 
 ### <a name="remarks"></a>備註
 

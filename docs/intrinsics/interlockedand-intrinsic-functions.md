@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b991d4d0546ea20e26f2896bc78032e2fb1c6136
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 26ae6034e9a54a6cf198b39c81d688f10616d1d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540781"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707859"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 內建函式
 **Microsoft 專屬**  
@@ -180,11 +180,11 @@ __int64 _InterlockedAnd64_rel(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `value`  
- 要被結果取代的第一個運算元指標。  
+*值*<br/>
+[in、 out]要被結果取代的第一個運算元指標。  
   
- [in] `mask`  
- 第二個運算元。  
+*遮罩*<br/>
+[in]第二個運算元。  
   
 ## <a name="return-value"></a>傳回值  
  第一個運算元的原始值。  
@@ -193,10 +193,10 @@ __int64 _InterlockedAnd64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedAnd`、`_InterlockedAnd8`、`_InterlockedAnd16``_InterlockedAnd64`|x86、 x64、 ARM|\<intrin.h>|  
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|  
-|`_InterlockedAnd_np`、`_InterlockedAnd8_np`、`_InterlockedAnd16_np``_InterlockedAnd64_np`|X64|\<intrin.h>|  
-|`_InterlockedAnd_HLEAcquire`、`_InterlockedAnd_HLERelease`、`_InterlockedAnd64_HLEAcquire``_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|  
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  每個函式名稱的數字會指定引數的位元大小。  

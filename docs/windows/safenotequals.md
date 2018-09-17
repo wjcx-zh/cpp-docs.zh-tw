@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6da18217c45162dc6e275824d56ea8378b8782
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19427d24d61581d207101605a8456e8067ade929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589653"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713839"
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 
@@ -40,11 +40,11 @@ inline bool SafeNotEquals (
 
 ### <a name="parameters"></a>參數
 
-[in]*t*  
-要比較的第一個數字。 這必須是型別`T`。
+*t*<br/>
+[in]要比較的第一個數字。 這必須是型別`T`。
 
-[in]*u*  
-要比較的第二個點數。 這必須是型別`U`。
+*u*<br/>
+[in]要比較的第二個點數。 這必須是型別`U`。
 
 ## <a name="return-value"></a>傳回值
 

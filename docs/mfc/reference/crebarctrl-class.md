@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702cc504032f7c4702dcc1b317c517d53b9cccc9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0b88e53d7f5cfdd03728f8d1a474ee5171ca5daa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717583"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 類別
 封裝 Rebar 控制項的功能，這個控制項是子視窗的容器。  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*uBand*|Rebar 群組列的以零為起始的索引。|  
-|[in]*cxWidth*|新的 rebar 群組列中，單位為像素的寬度。|  
+|*uBand*|[in]Rebar 群組列的以零為起始的索引。|  
+|*cxWidth*|[in]新的 rebar 群組列中，單位為像素的寬度。|  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為 TRUE否則為 FALSE。  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwMask*|位元組合 (OR) 旗標，指定在的旗標*dwStyleEx*參數套用。 使用一或多個下列值：<br /><br /> RBS_EX_SPLITTER： 根據預設，顯示分隔器下方在水平模式中，和右邊垂直的模式。<br /><br /> RBS_EX_TRANSPARENT： 轉寄[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)父視窗的訊息。|  
-|[in]*dwStyleEx*|位元組合 (OR) 旗標，指定要套用的樣式。 若要設定樣式，指定會在相同的旗標*dwMask*參數。 若要重設的樣式，請指定二進位零。|  
+|*dwMask*|[in]位元組合 (OR) 旗標，指定在的旗標*dwStyleEx*參數套用。 使用一或多個下列值：<br /><br /> RBS_EX_SPLITTER： 根據預設，顯示分隔器下方在水平模式中，和右邊垂直的模式。<br /><br /> RBS_EX_TRANSPARENT： 轉寄[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)父視窗的訊息。|  
+|*dwStyleEx*|[in]位元組合 (OR) 旗標，指定要套用的樣式。 若要設定樣式，指定會在相同的旗標*dwMask*參數。 若要重設的樣式，請指定二進位零。|  
   
 ### <a name="return-value"></a>傳回值  
  先前的延伸的樣式。  

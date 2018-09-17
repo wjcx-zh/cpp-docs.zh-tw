@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027176"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712487"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 `CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 指定命令識別碼。  
+*nID*<br/>
+[in]指定命令識別碼。  
   
- [in]*lpszText*  
- 指定文字標籤。  
+*lpszText*<br/>
+[in]指定文字標籤。  
   
 ### <a name="return-value"></a>傳回值  
  建構功能區核取方塊物件。  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 核取方塊相關聯的 CDC 的指標。  
+*pDC*<br/>
+[in]核取方塊相關聯的 CDC 的指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`CSize`物件，其中包含核取方塊的壓縮大小。  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 指標，此核取方塊相關聯的 CDC。  
+*pDC*<br/>
+[in]指標，此核取方塊相關聯的 CDC。  
   
 ### <a name="return-value"></a>傳回值  
  A`CSize`物件，包含中繼核取方塊的大小。  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 此核取方塊相關聯的 CDC 物件的指標。  
+*pDC*<br/>
+[in]此核取方塊相關聯的 CDC 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`CSize`物件，其中包含規則的核取方塊大小。  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 若要在其中繪製核取方塊 CDC 的指標。  
+*pDC*<br/>
+[in]若要在其中繪製核取方塊 CDC 的指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in]*CDC**  
  核取方塊相關聯的 CDC 的指標。  
   
- [in]*CRect*  
- A`CRect`物件，指定要繪製的功能表影像的矩形。  
+*CRect*<br/>
+[in]A`CRect`物件，指定要繪製的功能表影像的矩形。  
   
 ### <a name="return-value"></a>傳回值  
  傳回已繪製的影像，如果為 TRUE 或 FALSE，如果不是。  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 在其中繪製核取方塊的裝置內容指標。  
+*pDC*<br/>
+[in]在其中繪製核取方塊的裝置內容指標。  
   
- [in]*先把 strText*  
- 顯示文字。  
+*先把 strText*<br/>
+[in]顯示文字。  
   
- [in]*nTextOffset*  
- 距離，以像素為單位，從左側的清單方塊的顯示文字。  
+*nTextOffset*<br/>
+[in]距離，以像素為單位，從左側的清單方塊的顯示文字。  
   
- [in]*rect*  
- 核取方塊顯示矩形。  
+*rect*<br/>
+[in]核取方塊顯示矩形。  
   
- [in]*bIsSelected*  
- 如果核取方塊為選取狀態，或如果沒有，則為 FALSE，則為 TRUE。  
+*bIsSelected*<br/>
+[in]如果核取方塊為選取狀態，或如果沒有，則為 FALSE，則為 TRUE。  
   
- [in]*bHighlighted*  
- 如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
+*bHighlighted*<br/>
+[in]如果核取方塊反白顯示，或如果沒有，則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
   

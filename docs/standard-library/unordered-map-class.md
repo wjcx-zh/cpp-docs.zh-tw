@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107454"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726228"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 類別
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket*  
+*nbucket*<br/>
 Bucket 編號。
 
 ### <a name="remarks"></a>備註
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
+*keyval*<br/>
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
+*keyval*<br/>
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>參數
 
-*Where*  
+*Where*<br/>
 要移除之項目的位置。
 
-*第一個*  
+*第一個*<br/>
 要移除之第一個項目的位置。
 
-*最後一個*  
+*最後一個*<br/>
 緊接在要移除之最後一個項目後面的位置。
 
-*Key*  
+*Key*<br/>
 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*  
+*keyval*<br/>
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>參數
 
-*factor*  
+*factor*<br/>
 新的最大載入因數。
 
 ### <a name="remarks"></a>備註
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets*  
+*nbuckets*<br/>
 要求的值區數目。
 
 ### <a name="remarks"></a>備註
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>參數
 
-*right*  
+*right*<br/>
 要交換的容器。
 
 ### <a name="remarks"></a>備註

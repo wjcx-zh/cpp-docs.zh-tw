@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebae1828d102881d866e05d41f1831e35e01a51
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e623c0990477c5ee24fb4dcc782a6f243dce3337
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712163"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 提供 Windows 通用樹狀檢閱控制項的功能。  
@@ -465,7 +465,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*fCancelWithoutSave*|若要捨棄之前結束編輯作業或為 FALSE，則將變更儲存至樹狀檢視項目，在做出結論作業之前的樹狀檢視項目變更，則為 TRUE。|  
+|*fCancelWithoutSave*|[in]若要捨棄之前結束編輯作業或為 FALSE，則將變更儲存至樹狀檢視項目，在做出結論作業之前的樹狀檢視項目變更，則為 TRUE。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -732,7 +732,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
+|*hItem*|[in]控制代碼的樹狀檢視控制項項目。|  
   
 ### <a name="return-value"></a>傳回值  
  要指定的項目處於展開狀態時所顯示之影像的索引。  
@@ -798,9 +798,9 @@ BOOL GetItemPartRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
-|[in]*nPart*|組件的識別碼。 必須設定為 TVGIPR_BUTTON。|  
-|[out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構就會收到所指定的部分的矩形座標*hItem*並*nPart*。|  
+|*hItem*|[in]控制代碼的樹狀檢視控制項項目。|  
+|*nPart*|[in]組件的識別碼。 必須設定為 TVGIPR_BUTTON。|  
+|*lpRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構就會收到所指定的部分的矩形座標*hItem*並*nPart*。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -879,7 +879,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
+|*hItem*|[in]控制代碼的樹狀檢視控制項項目。|  
   
 ### <a name="return-value"></a>傳回值  
  項目的擴充的狀態。 如需詳細資訊，請參閱 <<c0> `uStateEx` 隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。  
@@ -1322,7 +1322,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*uAccId*|協助工具樹狀檢視項目中的項目識別碼。|  
+|*uAccId*|[in]協助工具樹狀檢視項目中的項目識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  樹狀檢視項目的控制代碼 ( `HTREEITEM`)，其對應於*uAccId*參數。 如需詳細資訊，請參閱 < *hItem*隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。  
@@ -1353,7 +1353,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|樹狀檢視中的項目控制項的控制代碼。 如需詳細資訊，請參閱 < *hItem*隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。|  
+|*hItem*|[in]樹狀檢視中的項目控制項的控制代碼。 如需詳細資訊，請參閱 < *hItem*隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  對應至的存取範圍識別項*hItem*參數。  
@@ -1474,8 +1474,8 @@ BOOL SetAutoscrollInfo(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*uPixelsPerSec*|每秒来捲動的像素數目。|  
-|[in]*uUpdateTime*|更新控制項的時間間隔。|  
+|*uPixelsPerSec*|[in]每秒来捲動的像素數目。|  
+|*uUpdateTime*|[in]更新控制項的時間間隔。|  
   
 ### <a name="return-value"></a>傳回值  
  一律會傳回 TRUE。  
@@ -1555,8 +1555,8 @@ DWORD SetExtendedStyle(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*dwExMask*|位元遮罩，指定目前的樹狀檢視控制項中的哪一個樣式會受到這個方法。 如果此參數為零，則會忽略，而*dwExStyles*參數指派給樹狀檢視控制項。<br /><br /> 指定零個或的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。|  
-|[in]*dwExStyles*|位元遮罩，指定控制項才能設定或清除的目前的樹狀檢視中的樣式。<br /><br /> 若要設定樣式的組合，指定的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。 若要清除的樣式集，指定零。|  
+|*dwExMask*|[in]位元遮罩，指定目前的樹狀檢視控制項中的哪一個樣式會受到這個方法。 如果此參數為零，則會忽略，而*dwExStyles*參數指派給樹狀檢視控制項。<br /><br /> 指定零個或的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。|  
+|*dwExStyles*|[in]位元遮罩，指定控制項才能設定或清除的目前的樹狀檢視中的樣式。<br /><br /> 若要設定樣式的組合，指定的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](/windows/desktop/Controls/tree-view-control-window-extended-styles)。 若要清除的樣式集，指定零。|  
   
 ### <a name="return-value"></a>傳回值  
  值，包含先前擴充控制項的樣式。  
@@ -1747,8 +1747,8 @@ BOOL SetItemExpandedImageIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
-|[in]*iExpandedImage*|要指定的項目處於展開狀態時所顯示之影像的索引。|  
+|*hItem*|[in]控制代碼的樹狀檢視控制項項目。|  
+|*iExpandedImage*|[in]要指定的項目處於展開狀態時所顯示之影像的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1858,8 +1858,8 @@ BOOL SetItemStateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|控制代碼的樹狀檢視控制項項目。|  
-|[in]*uStateEx*|項目的擴充的狀態。 如需詳細資訊，請參閱 <<c0> `uStateEx` 隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。|  
+|*hItem*|[in]控制代碼的樹狀檢視控制項項目。|  
+|*uStateEx*|[in]項目的擴充的狀態。 如需詳細資訊，請參閱 <<c0> `uStateEx` 隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1984,7 +1984,7 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*hItem*|樹狀檢視中的項目控制項控制代碼。 如需詳細資訊，請參閱 <<c0> `hItem` 隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。|  
+|*hItem*|[in]樹狀檢視中的項目控制項控制代碼。 如需詳細資訊，請參閱 <<c0> `hItem` 隸屬[TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa)結構。|  
   
 ### <a name="remarks"></a>備註  
  如需有關工具提示與提示之間的差異的詳細資訊，請搜尋 「 工具提示和資訊提示 」 中發表[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  

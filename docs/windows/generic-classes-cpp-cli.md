@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76dc54662fac3dc769e0bbf72c672908196ef351
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598243"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716777"
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 
@@ -47,8 +47,8 @@ class-body
 
 在上述語法中，使用下列詞彙：
 
-*屬性*（選擇性）  
-其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
+*屬性*  
+（選擇性）其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。
 
 *類別索引鍵*  
 任一**類別**或**typename**
@@ -58,7 +58,7 @@ class-body
 *條件約束子句*  
 （不以逗號分隔） 的清單**其中**子句指定的型別參數條件約束。 採用下列格式：
 
-`where`  *型別參數識別項*`:`*條件約束清單*  `...`
+> **何處***型別參數識別項* **:** *條件約束清單***...** 
 
 *條件約束清單*  
 *類別或介面*[`,` *...*]
@@ -69,8 +69,8 @@ class-body
 *identifier*  
 泛型類別，也就是任何有效的 c + + 識別項的名稱。
 
-*修飾詞*（選擇性）  
-允許的修飾詞包含**密封**並**抽象**。
+*修飾詞*  
+（選擇性）允許的修飾詞包含**密封**並**抽象**。
 
 *基底清單*  
 清單，其中包含一個基底類別，以及任何實作介面，以逗號分隔。

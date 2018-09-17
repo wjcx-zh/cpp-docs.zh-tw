@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848764"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709179"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 類別
 `CMFCRibbonUndoButton`類別實作，其中包含最新的使用者命令中的下拉式清單按鈕。 使用者可以選取一或多個最新的命令，從下拉式清單中，重做或復原。  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszLabel*  
- 動作標籤會顯示在下拉式清單中。  
+*lpszLabel*<br/>
+[in]動作標籤會顯示在下拉式清單中。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  清除動作清單，也就是下拉式清單。  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 指定命令識別碼。  
+*nID*<br/>
+[in]指定命令識別碼。  
   
- [in]*lpszText*  
- 指定按鈕的文字標籤。  
+*lpszText*<br/>
+[in]指定按鈕的文字標籤。  
   
- [in]*nSmallImageIndex*  
- 影像清單中的按鈕的小型影像的父物件的以零為起始的索引。  
+*nSmallImageIndex*<br/>
+[in]影像清單中的按鈕的小型影像的父物件的以零為起始的索引。  
   
- [in]*nLargeImageIndex*  
- 以零起始的索引中的父物件的影像清單的按鈕的大型影像。  
+*nLargeImageIndex*<br/>
+[in]以零起始的索引中的父物件的影像清單的按鈕的大型影像。  
   
- [in]*hIcon*  
- 您可以使用為按鈕的影像圖示控制代碼。  
+*hIcon*<br/>
+[in]您可以使用為按鈕的影像圖示控制代碼。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  判斷使用者從下拉式清單中選取的項目數目。  

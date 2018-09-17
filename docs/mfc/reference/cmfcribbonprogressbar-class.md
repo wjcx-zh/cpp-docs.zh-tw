@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c72a928c3f747251f4c02305cc61b83cfcedcb
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 286c95b775b95d44ad8fd9dc216b161aed717796
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538606"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711980"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 類別
 實作以視覺效果指示長時間作業進度的控制項。  
@@ -106,14 +106,14 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 指定功能區的進度列的命令 ID。  
+*nID*<br/>
+[in]指定功能區的進度列的命令 ID。  
   
- [in]*nWidth*  
- 指定寬度，單位為像素功能區的進度列。  
+*nWidth*<br/>
+[in]指定寬度，單位為像素功能區的進度列。  
   
- [in]*nHeight*  
- 指定高度，單位為像素功能區的進度列。  
+*nHeight*<br/>
+[in]指定高度，單位為像素功能區的進度列。  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  傳回目前的進度列位置。  
@@ -197,8 +197,8 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bSet*  
- 若要指定進度列是無限的模式，則為 TRUE否則為 FALSE。  
+*bSet*<br/>
+[in]若要指定進度列是無限的模式，則為 TRUE否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  通常，如果進度列是無限的模式，它在告訴使用者的作業正在進行，但完成時間不明。 因此，進度列填滿重複從最小值的最大值。  
@@ -213,11 +213,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nPos*  
- 指定設定的進度列的位置。  
+*nPos*<br/>
+[in]指定設定的進度列的位置。  
   
- [in]*bRedraw*  
- 指定是否應該重新繪製進度列。  
+*bRedraw*<br/>
+[in]指定是否應該重新繪製進度列。  
   
 ### <a name="remarks"></a>備註  
  正在設定的範圍必須是所指定的範圍內[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
@@ -232,11 +232,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nMin*  
- 指定範圍的最小值。  
+*nMin*<br/>
+[in]指定範圍的最小值。  
   
- [in]*nMax*  
- 指定範圍的最大值。  
+*nMax*<br/>
+[in]指定範圍的最大值。  
   
 ### <a name="remarks"></a>備註  
  使用此方法來定義進度列範圍設定最小和最大值。  

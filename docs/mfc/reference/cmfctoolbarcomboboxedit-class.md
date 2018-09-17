@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35fa804c7cdcff8a2005a3c91176209e8cc96219
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 554fcb68583b6d7b00e57a5df814fe0330069426
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680170"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721964"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit 類別
 架構會使用`CMFCToolBarComboBoxEdit`類別來建立行為類似的可編輯的下拉式方塊控制項的工具列按鈕。  
@@ -74,8 +74,8 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*下拉式方塊*  
- 參考[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件，這是包含下拉式方塊控制項的工具列按鈕。  
+*下拉式方塊*<br/>
+[in]參考[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件，這是包含下拉式方塊控制項的工具列按鈕。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何建構的物件`CMFCToolBarComboBoxEdit`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  

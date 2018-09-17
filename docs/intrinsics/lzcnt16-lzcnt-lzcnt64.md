@@ -1,5 +1,5 @@
 ---
-title: __lzcnt16，__lzcnt，__lzcnt64 |Microsoft 文件
+title: __lzcnt16 __lzcnt，__lzcnt64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,17 +24,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e04182cf673674e1f1ba8c073b624760bc4809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c24dcd92628b9f03596c9d10c38b5d63806dc6c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332789"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720001"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16，__lzcnt，__lzcnt64
-**Microsoft 特定的**  
+
+**Microsoft 專屬**  
   
- 計數的前置數字零 16、 32 或 64 位元整數。  
+計數有前置字元數目的前置零的 16、 32 或 64 位元整數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,11 +52,11 @@ unsigned __int64 __lzcnt64(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `value`  
- 16-、 32 或 64 位元不帶正負號的整數掃描前置零。  
+*值*<br/>
+[in]16-、 32 或 64 位元不帶正負號的整數掃描前置零。  
   
 ## <a name="return-value"></a>傳回值  
- 數目的前置零位元中的`value`參數。 如果`value`為零，則傳回值是輸入運算元 （16、 32 或 64） 的大小。 如果最高有效位元`value`，傳回的值為零。  
+ 前置零位元中的數字`value`參數。 如果`value`為零，則傳回值是輸入運算元 （16、 32 或 64） 的大小。 如果最高有效位元`value`為 1，傳回的值為零。  
   
 ## <a name="requirements"></a>需求  
   
@@ -68,11 +69,11 @@ unsigned __int64 __lzcnt64(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 每個這些內建函式會產生`lzcnt`指令。  值的大小，`lzcnt`指令會傳回等同於其引數的大小。  在 32 位元模式中有沒有 64 位元一般用途的暫存器，因此沒有 64 位元`lzcnt`。  
+ 每個這些內建函式會產生`lzcnt`指令。  值的大小，`lzcnt`指令會傳回其引數的大小相同。  在 32 位元模式中有無 64 位元一般用途的暫存器，因此沒有 64 位元`lzcnt`。  
   
- 若要判斷硬體支援`lzcnt`指令呼叫`__cpuid`與內建`InfoType=0x80000001`並檢查位元 5 的`CPUInfo[2] (ECX)`。 此位元會支援該指令，則為 1 和 0 否則。 如果您執行程式碼會使用此內建物件不支援的硬體上`lzcnt`指令，結果會產生無法預測。  
+ 若要判斷硬體支援`lzcnt`指令呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查位元 5 的`CPUInfo[2] (ECX)`。 此位元會經過支援指令，則為 1 和 0。 如果您執行程式碼使用此內建在不支援的硬體上`lzcnt`指令，結果會無法預測。  
   
- 不支援的 Intel 處理器上`lzcnt`指令位元組編碼方式為執行指令， `bsr` （位元掃描反向）。 如果程式碼可攜性問題，請考慮使用`_BitScanReverse`內建改為。 如需詳細資訊，請參閱[_BitScanReverse，_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。  
+ 不支援的 Intel 處理器上`lzcnt`指令的位元組編碼為執行指令， `bsr` （位元掃描相反）。 如果程式碼可攜性有問題，請考慮使用`_BitScanReverse`內建函式改用。 如需詳細資訊，請參閱 < [_bitscanreverse、_bitscanreverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -112,8 +113,9 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0  
 ```  
   
-**結束 Microsoft 特定的**  
- 本文部分內容是由進階微裝置，Inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+**結束 Microsoft 專屬**
+
+本文部分內容是由進階 Micro 裝置，Inc.Copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

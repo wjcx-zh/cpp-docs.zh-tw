@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a7a450d683bfa2c358e26a4109a2e8a75c04e233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599395"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716211"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 內建函式
 **Microsoft 專屬**  
@@ -152,11 +152,11 @@ __int64 _InterlockedExchange64_rel(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Target`  
- 要交換的值的指標。 函式會將此變數設定為 `Value`，並傳回其先前的值。  
+*Target*<br/>
+[in、 out]要交換之值的指標。 函式會將此變數設定為 `Value`，並傳回其先前的值。  
   
- [in] `Value`  
- 要與 `Target` 所指之值交換的值。  
+*值*<br/>
+[in]要交換值的值所指向`Target`。  
   
 ## <a name="return-value"></a>傳回值  
  傳回 `Target` 所指的初始值。  
@@ -165,9 +165,9 @@ __int64 _InterlockedExchange64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedExchange`、`_InterlockedExchange8`、`_InterlockedExchange16``_InterlockedExchange64`|x86、 x64、 ARM|\<intrin.h>|  
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedExchange_HLEAcquire`、`_InterlockedExchange_HLERelease`、`_InterlockedExchange64_HLEAcquire``_InterlockedExchange64_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  `_InterlockedExchange` 提供 Win32 Windows SDK 的編譯器內建支援[InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange)函式。  

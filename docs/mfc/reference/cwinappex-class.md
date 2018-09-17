@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540777"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720066"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 類別
 `CWinAppEx` 處理應用程式的狀態，將狀態儲存至登錄、 從登錄載入狀態、 初始化應用程式管理員，並提供連結這些相同的應用程式管理員。  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSectionName*  
- 字串，包含登錄機碼的路徑。  
+*lpszSectionName*<br/>
+[in]字串，包含登錄機碼的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，為非零否則為 0。  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bResourceSmartUpdate*  
- 布林值參數，指定工作區物件是否應該偵測和處理資源的更新。  
+*bResourceSmartUpdate*<br/>
+[in]布林值參數，指定工作區物件是否應該偵測和處理資源的更新。  
   
 ### <a name="remarks"></a>備註  
  `CWinAppEx`類別有初始設定方法、 提供功能來儲存及載入至登錄，應用程式資訊和控制全域應用程式設定。 它也可讓您使用類似如下的全域管理員[CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)並[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)。 每個應用程式可以有只有一個執行個體`CWinAppEx`類別。  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bEnable*  
- 指定應用程式從登錄是否載入的初始大小和位置的主框架視窗。  
+*bEnable*<br/>
+[in]指定應用程式從登錄是否載入的初始大小和位置的主框架視窗。  
   
 ### <a name="remarks"></a>備註  
  根據預設的大小和位置的主要畫面格會從與其他應用程式設定的登錄載入。 這會發生在[CWinAppEx::LoadState](#loadstate)。 如果您不想從登錄載入初始視窗放置，呼叫這個方法時*bEnable*設為 FALSE。  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszRegEntry*  
- 字串，包含路徑的登錄機碼。 應用程式會使用此登錄機碼，來儲存資訊的 tear-off 功能表。  
+*lpszRegEntry*<br/>
+[in]字串，包含路徑的登錄機碼。 應用程式會使用此登錄機碼，來儲存資訊的 tear-off 功能表。  
   
- [in]*uiCmdFirst*  
- 第一個終止關閉功能表的識別碼。  
+*uiCmdFirst*<br/>
+[in]第一個終止關閉功能表的識別碼。  
   
- [in]*uiCmdLast*  
- 最後一個終止關閉功能表的識別碼。  
+*uiCmdLast*<br/>
+[in]最後一個終止關閉功能表的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果`CMenuTearOffManager`建立並初始化成功;FALSE 則會發生錯誤則`CMenuTearOffManager`已經存在。  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmdToolsDummy*  
- 不帶正負號的整數，架構會使用預留位置做為使用者的 [工具] 功能表的命令識別碼。  
+*uiCmdToolsDummy*<br/>
+[in]不帶正負號的整數，架構會使用預留位置做為使用者的 [工具] 功能表的命令識別碼。  
   
- [in]*uiCmdFirst*  
- 第一次的 [使用者] 工具命令的命令識別碼。  
+*uiCmdFirst*<br/>
+[in]第一次的 [使用者] 工具命令的命令識別碼。  
   
- [in]*uiCmdLast*  
- 最後的 [使用者] 工具命令的命令識別碼。  
+*uiCmdLast*<br/>
+[in]最後的 [使用者] 工具命令的命令識別碼。  
   
- [in]*pToolRTC*  
- 類別，`CUserToolsManager`物件用來建立新的使用者工具。  
+*pToolRTC*<br/>
+[in]類別，`CUserToolsManager`物件用來建立新的使用者工具。  
   
- [in]*uArgMenuID*  
- 引數功能表識別碼。  
+*uArgMenuID*<br/>
+[in]引數功能表識別碼。  
   
- [in]*uInitDirMenuID*  
- 初始的工具目錄功能表識別碼。  
+*uInitDirMenuID*<br/>
+[in]初始的工具目錄功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法會建立並初始化則為 TRUE`CUserToolsManager`物件;FALSE 如果方法失敗，或如果`CUserToolsManager`物件已經存在。  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 包含的登錄機碼名稱的字串。  
+*lpszEntry*<br/>
+[in]包含的登錄機碼名稱的字串。  
   
- [out]*ppData*  
- 方法會填滿的二進位資料緩衝區的指標。  
+*ppData*<br/>
+[out]方法會填滿的二進位資料緩衝區的指標。  
   
- [out]*pBytes*  
- 讀取方法用來寫入的位元組數目的不帶正負號整數的指標。  
+*pBytes*<br/>
+[out]讀取方法用來寫入的位元組數目的不帶正負號整數的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUEFALSE 否則。  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 包含的登錄項目名稱的字串。  
+*lpszEntry*<br/>
+[in]包含的登錄項目名稱的字串。  
   
- [in]*n 預設*  
- 如果指定的登錄項目不存在則方法會傳回預設值。  
+*n 預設*<br/>
+[in]如果指定的登錄項目不存在則方法會傳回預設值。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功; 登錄資料否則*n 預設*。  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 字串，包含相對路徑的登錄項目。  
+*lpszEntry*<br/>
+[in]字串，包含相對路徑的登錄項目。  
   
- [out]*obj*  
- 參考`CObject`。 該方法會使用這個參考來儲存登錄資料。  
+*obj*<br/>
+[out]參考`CObject`。 該方法會使用這個參考來儲存登錄資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，為非零否則為 0。  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*szSectionAdd*  
- 字串，包含相對路徑的登錄機碼。  
+*szSectionAdd*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  A `CString` ，其中包含的登錄機碼的絕對路徑。  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSubSection*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*lpszEntry*  
- 字串，包含要讀取的值。  
+*lpszEntry*<br/>
+[in]字串，包含要讀取的值。  
   
- [out]*ppData*  
- 方法會儲存資料緩衝區的指標。  
+*ppData*<br/>
+[out]方法會儲存資料緩衝區的指標。  
   
- [out]*pBytes*  
- 不帶正負號的整數指標。 方法會寫入的大小*ppData*給這個參數。  
+*pBytes*<br/>
+[out]不帶正負號的整數指標。 方法會寫入的大小*ppData*給這個參數。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUE，否則為 FALSE。  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSubSection*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*lpszEntry*  
- 字串，包含要讀取的值。  
+*lpszEntry*<br/>
+[in]字串，包含要讀取的值。  
   
- [in]*n 預設*  
- 要傳回如果指定的值不存在的預設值。  
+*n 預設*<br/>
+[in]要傳回如果指定的值不存在的預設值。  
   
 ### <a name="return-value"></a>傳回值  
  整數資料儲存在指定的登錄值;*n 預設*如果不存在的資料。  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSubSection*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*lpszEntry*  
- 字串，包含要讀取的值。  
+*lpszEntry*<br/>
+[in]字串，包含要讀取的值。  
   
- [out]*obj*  
- 參考`CObject`。 此方法會使用這`CObject`儲存登錄資料。  
+*obj*<br/>
+[out]參考`CObject`。 此方法會使用這`CObject`儲存登錄資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSubSection*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*lpszEntry*  
- 字串，包含要讀取的值。  
+*lpszEntry*<br/>
+[in]字串，包含要讀取的值。  
   
- [in]*lpszDefault*  
- 要傳回如果指定的值不存在的預設值。  
+*lpszDefault*<br/>
+[in]要傳回如果指定的值不存在的預設值。  
   
 ### <a name="return-value"></a>傳回值  
  如果資料存在時，儲存在指定的登錄值的字串資料否則*lpszDefault*。  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 字串，包含的登錄機碼名稱  
+*lpszEntry*<br/>
+[in]字串，包含的登錄機碼名稱  
   
- [in]*lpzDefault*  
- 如果指定的登錄項目不存在則方法會傳回預設值。  
+*lpzDefault*<br/>
+[in]如果指定的登錄項目不存在則方法會傳回預設值。  
   
 ### <a name="return-value"></a>傳回值  
  字串資料儲存在登錄中，如果登錄成功。*lpszDefault*否則。  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSectionName*  
- 字串，包含登錄機碼的路徑。  
+*lpszSectionName*<br/>
+[in]字串，包含登錄機碼的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  如果金鑰是在登錄中，非零值。否則為 0。  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pFrame*  
- 框架視窗物件的指標。 此方法適用於此框架視窗在登錄中的狀態資訊。  
+*pFrame*<br/>
+[in]框架視窗物件的指標。 此方法適用於此框架視窗在登錄中的狀態資訊。  
   
- [in]*lpszSectionName*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSectionName*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*pFrameImpl*  
- `CFrameImpl` 物件的指標。 此方法適用於此框架視窗在登錄中的狀態資訊。  
+*pFrameImpl*<br/>
+[in]指標`CFrameImpl`物件。 此方法適用於此框架視窗在登錄中的狀態資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零否則為 0。  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*rectNormalPosition*  
- 矩形，其中包含的主框架視窗座標中的已還原的位置時。  
+*rectNormalPosition*<br/>
+[out]矩形，其中包含的主框架視窗座標中的已還原的位置時。  
   
- [out]*nFlags*  
- 控制項的位置最小化的視窗及作業系統最小化的視窗並已還原的視窗之間的切換方式的旗標。  
+*nFlags*<br/>
+[out]控制項的位置最小化的視窗及作業系統最小化的視窗並已還原的視窗之間的切換方式的旗標。  
   
- [out]*nShowCmd*  
- 整數，指定視窗的顯示狀態。 如需可能值的詳細資訊，請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
+*nShowCmd*<br/>
+[out]整數，指定視窗的顯示狀態。 如需可能值的詳細資訊，請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零否則為 0。  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndControl*  
- 使用者叫用內容說明視窗物件的指標。  
+*pWndControl*<br/>
+[in]使用者叫用內容說明視窗物件的指標。  
   
- [in]*dwHelpIDArray]*  
- 保留的值。  
+*dwHelpIDArray]*<br/>
+[in]保留的值。  
   
 ### <a name="remarks"></a>備註  
  這個方法目前已保留供日後使用。 預設實作不做任何動作，它目前未由架構呼叫。  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pFrameImpl*  
- `CFrameImpl` 物件的指標。  
+*pFrameImpl*<br/>
+[in]指標`CFrameImpl`物件。  
   
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會將儲存的狀態*pFrameImpl*。  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWnd*  
- 物件的指標衍生自[CView 類別](../../mfc/reference/cview-class.md)。  
+*pWnd*<br/>
+[in]物件的指標衍生自[CView 類別](../../mfc/reference/cview-class.md)。  
   
- [in]*iViewId*  
- 檢視識別碼。  
+*iViewId*<br/>
+[in]檢視識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果此架構會尋找命令，則為 TRUE否則為 FALSE。  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pFrame*  
- 框架視窗的指標。  
+*pFrame*<br/>
+[in]框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，為非零0，如果負載失敗，或是沒有載入任何資料。  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSectionName*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSectionName*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*pFrameImpl*  
- `CFrameImpl` 物件的指標。 此框架會儲存至 Windows 登錄中。  
+*pFrameImpl*<br/>
+[in]指標`CFrameImpl`物件。 此框架會儲存至 Windows 登錄中。  
   
- [in]*pFrame*  
- 框架視窗物件的指標。 此框架會儲存至 Windows 登錄中。  
+*pFrame*<br/>
+[in]框架視窗物件的指標。 此框架會儲存至 Windows 登錄中。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUEFALSE 否則。  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSectionName*  
- 字串，包含路徑的登錄機碼。  
+*lpszSectionName*<br/>
+[in]字串，包含路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
  字串，包含預設登錄位置的路徑。  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiMenuResId*  
- 功能表資源識別碼。  
+*uiMenuResId*<br/>
+[in]功能表資源識別碼。  
   
- [in]*點*  
- A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)螢幕座標中指定功能表的位置。  
+*點*<br/>
+[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)螢幕座標中指定功能表的位置。  
   
- [in]*pWnd*  
- 擁有快顯功能表視窗的指標。  
+*pWnd*<br/>
+[in]擁有快顯功能表視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，顯示快顯功能表，非零值。否則為 0。  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nFlags*  
- 控制項的位置最小化的視窗及作業系統最小化的視窗並已還原的視窗之間的切換方式的旗標。  
+*nFlags*<br/>
+[in]控制項的位置最小化的視窗及作業系統最小化的視窗並已還原的視窗之間的切換方式的旗標。  
   
- [in]*nShowCmd*  
- 整數，指定視窗的顯示狀態。 如需可能值的詳細資訊，請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
+*nShowCmd*<br/>
+[in]整數，指定視窗的顯示狀態。 如需可能值的詳細資訊，請參閱[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。  
   
- [in]*rectNormalPosition*  
- 處於還原狀態時，包含的主框架視窗座標的矩形。  
+*rectNormalPosition*<br/>
+[in]處於還原狀態時，包含的主框架視窗座標的矩形。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零否則為 0。  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 包含的登錄機碼名稱的字串。  
+*lpszEntry*<br/>
+[in]包含的登錄機碼名稱的字串。  
   
- [in]*pData*  
- 要儲存的資料。  
+*pData*<br/>
+[in]要儲存的資料。  
   
- [in]*nBytes*  
- 大小*pData*以位元組為單位。  
+*nBytes*<br/>
+[in]大小*pData*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 包含的登錄機碼名稱的字串。  
+*lpszEntry*<br/>
+[in]包含的登錄機碼名稱的字串。  
   
- [in]*n 值*  
- 要儲存的資料。  
+*n 值*<br/>
+[in]要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 字串，包含要設定的值。  
+*lpszEntry*<br/>
+[in]字串，包含要設定的值。  
   
- [in]*obj*  
- 參考`CObject`方法會將儲存的資料。  
+*obj*<br/>
+[in]參考`CObject`方法會將儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 字串，包含的登錄機碼名稱  
+*lpszSubSection*<br/>
+[in]字串，包含的登錄機碼名稱  
   
- [in]*lpszEntry*  
- 字串，包含要設定的值。  
+*lpszEntry*<br/>
+[in]字串，包含要設定的值。  
   
- [in]*pData*  
- 要寫入登錄的資料。  
+*pData*<br/>
+[in]要寫入登錄的資料。  
   
- [in]*nBytes*  
- 大小*pData*以位元組為單位。  
+*nBytes*<br/>
+[in]大小*pData*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 字串，包含相對路徑的登錄機碼。  
+*lpszSubSection*<br/>
+[in]字串，包含相對路徑的登錄機碼。  
   
- [in]*lpszEntry*  
- 字串，包含要設定的值。  
+*lpszEntry*<br/>
+[in]字串，包含要設定的值。  
   
- [in]*n 值*  
- 要寫入登錄的資料。  
+*n 值*<br/>
+[in]要寫入登錄的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 包含的登錄機碼名稱的字串。  
+*lpszSubSection*<br/>
+[in]包含的登錄機碼名稱的字串。  
   
- [in]*lpszEntry*  
- 字串，包含要設定之值的名稱。  
+*lpszEntry*<br/>
+[in]字串，包含要設定之值的名稱。  
   
- [in]*obj*  
- 要儲存的資料。  
+*obj*<br/>
+[in]要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszSubSection*  
- 包含的登錄機碼名稱的字串。  
+*lpszSubSection*<br/>
+[in]包含的登錄機碼名稱的字串。  
   
- [in]*lpszEntry*  
- 字串，包含要設定的值。  
+*lpszEntry*<br/>
+[in]字串，包含要設定的值。  
   
- [in]*lpszValue*  
- 要寫入登錄的字串資料。  
+*lpszValue*<br/>
+[in]要寫入登錄的字串資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszEntry*  
- 包含的登錄機碼名稱的字串。  
+*lpszEntry*<br/>
+[in]包含的登錄機碼名稱的字串。  
   
- [in]*lpszValue*  
- 要儲存的資料。  
+*lpszValue*<br/>
+[in]要儲存的資料。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  

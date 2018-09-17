@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692379"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719234"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 當使用者按住最上層工具列按鈕時出現的工具列。  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiResID*  
- 參考作用中工具列影像之點陣圖的資源 ID。  
+*uiResID*<br/>
+[in]參考作用中工具列影像之點陣圖的資源識別碼。  
   
- [in]*uiColdResID*  
- 參考非作用中工具列影像之點陣圖的資源 ID。  
+*uiColdResID*<br/>
+[in]參考非作用中工具列影像之點陣圖的資源識別碼。  
   
- [in]*uiMenuResID*  
- 參考標準功能表影像之點陣圖的資源 ID。  
+*uiMenuResID*<br/>
+[in]參考標準功能表影像之點陣圖的資源識別碼。  
   
- [in]*封鎖*  
- True 表示要鎖定工具列，否則為 FALSE。  
+*封鎖*<br/>
+[in]True 表示要鎖定工具列，否則為 FALSE。  
   
- [in]*uiDisabledResID*  
- 參考已停用工具列影像之點陣圖的資源 ID。  
+*uiDisabledResID*<br/>
+[in]參考已停用的工具列影像之點陣圖的資源識別碼。  
   
- [in]*uiMenuDisabledResID*  
- 參考已停用功能表影像之點陣圖的資源 ID。  
+*uiMenuDisabledResID*<br/>
+[in]參考已停用的功能表影像之點陣圖的資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為非零，否則為零。  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiResID*  
- [in]*uiColdResID*  
- [in]*uiMenuResID*  
- [in]*BOOL*  
- [in]*uiDisabledResID*  
- [in]*uiMenuDisabledResID*  
+*uiResID*<br/>
+[in][in]*uiColdResID*  
+*uiMenuResID*<br/>
+[in][in]*BOOL*  
+*uiDisabledResID*<br/>
+[in][in]*uiMenuDisabledResID*  
  [in]*uiHotResID*  
   
 ### <a name="return-value"></a>傳回值  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nFlags*  
- [in]*點*  
+*nFlags*<br/>
+[in][in]*點*  
   
 ### <a name="remarks"></a>備註  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nFlags*  
- [in]*點*  
+*nFlags*<br/>
+[in][in]*點*  
   
 ### <a name="remarks"></a>備註  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pTarget*  
- [in]*bDisableIfNoHndler*  
+*pTarget*<br/>
+[in][in]*bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>備註  
   

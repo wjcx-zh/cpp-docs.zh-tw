@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 146a764cd2b1fcc567a564a6995c191c4f838262
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959039"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722224"
 ---
 # <a name="systemclock-structure"></a>system_clock 結構
 
@@ -86,8 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Tm*  
- [time_t](../c-runtime-library/standard-types.md) 物件。
+*Tm*<br/>
+[time_t](../c-runtime-library/standard-types.md) 物件。
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 常數
 
@@ -119,7 +119,7 @@ static const bool is_steady = false;
 
 ### <a name="remarks"></a>備註
 
-如果時鐘具「單一性」[](#is_monotonic_constant)且時鐘刻度之間的時間固定，則時鐘具「穩定性」。
+如果時鐘具[單一性](#is_monotonic_constant)且時鐘刻度之間的時間固定，則時鐘具「穩定性」。
 
 ## <a name="now"></a>  system_clock::now
 
@@ -143,8 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*時間*  
- [time_point](../standard-library/time-point-class.md) 物件。
+*時間*<br/>
+[time_point](../standard-library/time-point-class.md) 物件。
 
 ## <a name="see-also"></a>另請參閱
 

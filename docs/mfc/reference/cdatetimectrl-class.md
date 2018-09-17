@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf2134b334c259a6543af279ee058b659cf21d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9eb3b70851cb5e51ef2ddc0e99347c81fe632b6d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210183"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726657"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 封裝日期與時間選擇器控制項的功能。  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pDateTimePickerInfo*|指標[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)接收的目前日期和時間選擇器控制項描述的結構。<br /><br /> 呼叫端會負責配置這個結構。 不過，這個方法會初始化*cbSize*結構成員。|  
+|*pDateTimePickerInfo*|[out]指標[DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo)接收的目前日期和時間選擇器控制項描述的結構。<br /><br /> 呼叫端會負責配置這個結構。 不過，這個方法會初始化*cbSize*結構成員。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*psize*|指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構，包含控制項的理想大小。|  
+|*psize*|[out]指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)結構，包含控制項的理想大小。|  
   
 ### <a name="return-value"></a>傳回值  
  傳回值永遠是 TRUE。  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*cheaderctrl:: Create*|新的月份行事曆月份行事曆控制項樣式位元結合 (OR) 的控制項樣式。 如需詳細資訊，請參閱 <<c0> [ 月份的行事曆控制項樣式](/windows/desktop/Controls/month-calendar-control-styles)。|  
+|*cheaderctrl:: Create*|[in]新的月份行事曆月份行事曆控制項樣式位元結合 (OR) 的控制項樣式。 如需詳細資訊，請參閱 <<c0> [ 月份的行事曆控制項樣式](/windows/desktop/Controls/month-calendar-control-styles)。|  
   
 ### <a name="return-value"></a>傳回值  
  下拉式月曆控制項先前的樣式。  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e00dd485478a5a6fb7ff029afdad7bf7212fd56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b6a450d26480a0e89a115efc5731725f8f8b913
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839942"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714190"
 ---
 # <a name="badfunctioncall-class"></a>bad_function_call 類別
 
@@ -30,9 +30,7 @@ ms.locfileid: "33839942"
 ## <a name="syntax"></a>語法
 
 ```cpp
-class bad_function_call
- : public std::exception {
- };
+class bad_function_call : public std::exception {};
 ```
 
 ## <a name="remarks"></a>備註

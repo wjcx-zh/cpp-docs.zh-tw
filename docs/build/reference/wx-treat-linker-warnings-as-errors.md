@@ -1,5 +1,5 @@
 ---
-title: -WX （連結器警告視為錯誤） |Microsoft 文件
+title: -WX （連結器警告視為錯誤） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686b17a3db00175340e3490241c6c2e9f9325225
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91f73af0c270be4452a4b556d2cb77c0d55bed33
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377283"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722588"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (將連結器警告視為錯誤)
-```  
-/WX[:NO]  
-```  
-  
-## <a name="remarks"></a>備註  
- 訊息，/WX 會導致沒有產生連結器產生警告的輸出檔。  
-  
- 這是類似於 **/WX**編譯器 (請參閱[/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊)。 但是，指定 **/WX**編譯並不表示，如 **/WX**也會作用中連結器階段，您必須明確指定 **/WX**每個工具。  
-  
- 根據預設， **/WX**為非作用中。 若要將連結器警告視為錯誤，指定 **/WX**。 **/WX:NO**等同於不指定 **/WX**。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  按一下**連結器**資料夾。  
-  
-3.  按一下 [命令列]  屬性頁。  
-  
-4.  輸入到選項**其他選項**方塊。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
-  
-1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
-  
-## <a name="see-also"></a>另請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+```
+/WX[:NO]
+```
+
+## <a name="remarks"></a>備註
+
+訊息，/WX 會導致連結器會產生警告則會產生任何輸出檔。
+
+這是類似 **/WX**編譯器 (請參閱[/w、 /W0、 /W1、 /W2、 / w3、 / w4、 /w1、 /w2、 / w3、 / w4、 /Wall、 /wd，/ /wo，我們 （警告層級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊)。 但是，指定 **/WX**編譯並不表示，如 **/WX**也會作用中連結器階段; 您必須明確指定 **/WX**的各項工具。
+
+根據預設， **/WX**為非作用中。 若要將連結器警告視為錯誤，指定 **/WX**。 **/WX:NO**等同於不指定 **/WX**。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 按一下 **連結器**資料夾。
+
+1. 按一下 [命令列]  屬性頁。
+
+1. 輸入到選項**其他選項** 方塊中。
+
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
+
+1. 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>另請參閱
+
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

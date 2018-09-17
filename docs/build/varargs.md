@@ -1,5 +1,5 @@
 ---
-title: Varargs |Microsoft 文件
+title: Varargs |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7b71cd426bc89570f9d394f3e38dc7a002f6e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8305eaddf87a2e67b797bedff1944dbcbbbdbd41
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380504"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713644"
 ---
 # <a name="varargs"></a>Varargs
-如果將參數傳遞透過 varargs （例如，省略引數），基本上是正常的參數傳遞適用於包括溢出的第五個和後續引數。 它負責再次被呼叫端的傾印的引數，其位址。 只有浮點數值整數和浮點暫存器將會包含浮點值萬一被呼叫端必須是整數暫存器中的數值。  
-  
-## <a name="see-also"></a>另請參閱  
- [呼叫慣例](../build/calling-convention.md)
+
+如果參數傳遞透過 varargs （比方說，省略引數），基本上是正常的參數傳遞適用於包括溢出，第五個和後續引數。 它負責一次被呼叫端的傾印的引數，取得其位址。 對於只有浮點數值，整數和浮點暫存器會包含浮點值萬一被呼叫端需要整數暫存器值。
+
+## <a name="see-also"></a>另請參閱
+
+[呼叫慣例](../build/calling-convention.md)

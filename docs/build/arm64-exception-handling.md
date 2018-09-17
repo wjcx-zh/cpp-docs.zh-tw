@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e24997fa2eb6e6e5c3d8438b137e168c2f70b1f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034734"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716526"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
@@ -129,7 +129,7 @@ Windows 上 ARM64 會使用相同的結構化例外狀況，以處理非同步�
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-    只有 r19 儲存：
+   只有 r19 儲存：
 
     ```asm
         sub    sp, sp, #16              // reg save area allocation*
@@ -636,5 +636,5 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 ## <a name="see-also"></a>另請參閱
 
-[ARM64 ABI 慣例概觀](arm64-windows-abi-conventions.md)  
-[ARM 例外狀況處理](../build/arm-exception-handling.md)  
+[ARM64 ABI 慣例概觀](arm64-windows-abi-conventions.md)<br/>
+[ARM 例外狀況處理](../build/arm-exception-handling.md)

@@ -1,5 +1,5 @@
 ---
-title: CTabView 類別 |Microsoft 文件
+title: CTabView 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ce47dc5fc0a1d05d2f7200539718fb11c60d810e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718857"
 ---
 # <a name="ctabview-class"></a>CTabView 類別
-`CTabView`類別簡化索引標籤控制項類別的使用 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 在使用 MFC 的文件/檢視架構的應用程式。  
+`CTabView`類別可簡化使用索引標籤控制項類別 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 在使用 MFC 的文件/檢視架構的應用程式中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,8 +55,8 @@ class CTabbedView : public CView
 |名稱|描述|  
 |----------|-----------------|  
 |[CTabView::AddView](#addview)|將新的檢視加入至索引標籤控制項。|  
-|[CTabView::FindTab](#findtab)|傳回指定檢視的索引 索引標籤控制項中。|  
-|[CTabView::GetActiveView](#getactiveview)|讓指標回到目前使用的檢視|  
+|[CTabView::FindTab](#findtab)|傳回指定的檢視中索引的索引標籤控制項。|  
+|[CTabView::GetActiveView](#getactiveview)|讓指標回到目前現用檢視表|  
 |[CTabView::GetTabControl](#gettabcontrol)|傳回與檢視相關聯的索引標籤控制項的參考。|  
 |[CTabView::RemoveView](#removeview)|移除索引標籤控制項中的檢視。|  
 |[CTabView::SetActiveView](#setactiveview)|讓檢視成為使用中。|  
@@ -65,18 +65,18 @@ class CTabbedView : public CView
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CTabView::IsScrollBar](#isscrollbar)|在建立索引標籤檢視來判斷索引標籤檢視是否有共用水平捲軸時，由架構呼叫。|  
-|[CTabView::OnActivateView](#onactivateview)|索引標籤檢視進行作用中或非使用中時，由架構呼叫。|  
+|[CTabView::IsScrollBar](#isscrollbar)|建立索引標籤檢視來判斷索引標籤檢視是否有共用的水平捲軸時，由架構呼叫。|  
+|[CTabView::OnActivateView](#onactivateview)|索引標籤檢視進行作用中或非作用中時，由架構呼叫。|  
   
 ## <a name="remarks"></a>備註  
- 此類別可讓您更容易置於文件/檢視應用程式中的索引標籤式的檢視。 `CTabView` 是`CView`-衍生的類別，其中包含內嵌`CMFCTabCtrl`物件。 `CTabView` 會處理所有訊息才能支援`CMFCTabCtrl`物件。 只是衍生自`CTabView`並插入您的應用程式，然後新增`CView`-衍生類別使用`AddView`方法。 此索引標籤控制項顯示這些檢視表與索引標籤。  
+ 這個類別可讓您輕鬆放入文件/檢視應用程式的 索引標籤式的檢視。 `CTabView` 已`CView`-衍生類別，其中包含內嵌`CMFCTabCtrl`物件。 `CTabView` 處理支援所需的所有訊息`CMFCTabCtrl`物件。 只需要衍生的類別`CTabView`並將之插入您的應用程式，然後新增`CView`-使用衍生類別`AddView`方法。 索引標籤控制項顯示這些檢視表與索引標籤。  
   
- 比方說，您可能會有的文件，可以用不同的方式表示： 試算表、 圖表、 可編輯的表單，等等。 您可以建立視繪製資料的個別檢視、 插入到您`CTabView`-衍生物件，並讓他們不含任何額外的程式碼索引標籤。  
+ 例如，您可能可以用不同的方式表示的文件： 為試算表、 圖表、 可編輯的表單等等。 您可以建立繪圖的資料，視需要的個別檢視、 插入到您`CTabView`-衍生的物件，並讓它們而不需要任何額外的程式碼索引標籤。  
   
  [TabbedView 範例： MFC 索引標籤式檢視應用程式](../../visual-cpp-samples.md)說明的使用方式`CTabView`。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何`CTabView`TabbedView 範例中使用。  
+ 下列範例顯示如何`CTabView`TabbedView 範例中使用。  
   
  [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
   
@@ -95,50 +95,50 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pViewClass*  
- 執行階段類別，插入檢視的指標。  
+*pViewClass*<br/>
+[in][插入] 檢視的執行階段類別的指標。  
   
- [in]*strViewLabel*  
- 指定在索引標籤的文字。  
+*strViewLabel*<br/>
+[in]指定在索引標籤的文字。  
   
- [in]*iIndex*  
- 指定要插入檢視以零為起始的位置。 如果這個位置是新的索引標籤插入尾端的-1。  
+*iIndex*<br/>
+[in]指定要插入檢視表的以零為起始的位置。 如果該位置是新的索引標籤插入尾端的-1。  
   
- [in]*pContext*  
- 指標`CCreateContext`的檢視。  
+*pContext*<br/>
+[in]指標`CCreateContext`的檢視。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功為檢視索引。 否則為-1。  
+ 如果此方法成功檢視索引。 否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式可將檢視加入至索引標籤控制項內嵌在框架中。  
+ 呼叫此函式可將檢視新增至索引標籤控制項內嵌在框架中。  
   
 ##  <a name="findtab"></a>  CTabView::FindTab  
- 傳回指定檢視的索引 索引標籤控制項中。  
+ 傳回指定的檢視中索引的索引標籤控制項。  
   
 ```  
 int FindTab(HWND hWndView) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*hWndView*  
- 檢視的控制代碼。  
+*hWndView*<br/>
+[in]檢視的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果找到; 檢視的索引否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式可擷取具有指定的控制代碼檢視的索引。  
+ 呼叫此函式以擷取具有指定的控制代碼的檢視的索引。  
   
 ##  <a name="getactiveview"></a>  CTabView::GetActiveView  
- 讓指標回到目前使用的檢視。  
+ 讓指標回到目前現用檢視表。  
   
 ```  
 CView* GetActiveView() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 有效指標的使用中的檢視或為 NULL，如果沒有使用中的檢視。  
+ 有效到現用檢視表或如果沒有使用中的檢視則為 NULL 指標。  
   
 ### <a name="remarks"></a>備註  
   
@@ -153,33 +153,33 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
  與檢視相關聯的索引標籤控制項的參考。  
   
 ##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
- 在建立索引標籤檢視來判斷索引標籤檢視是否有共用水平捲軸時，由架構呼叫。  
+ 建立索引標籤檢視來判斷索引標籤檢視是否有共用的水平捲軸時，由架構呼叫。  
   
 ```  
 virtual BOOL IsScrollBar() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果索引標籤檢視應該要建立與共用的捲軸，則為 TRUE。 否則為 FALSE。  
+ 如果應建立索引標籤檢視，以及共用的捲軸，則為 TRUE。 否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法時*CTabView*建立物件。  
   
- 覆寫*IsScrollBar*方法中的*CTabView*-衍生類別，並傳回 TRUE，如果您想要建立的檢視，有共用水平捲軸。  
+ 覆寫*IsScrollBar*方法中的*CTabView*-衍生的類別，而傳回 TRUE，如果您想要建立的檢視，有共用的水平捲軸。  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
- 索引標籤檢視進行作用中或非使用中時，由架構呼叫。  
+ 索引標籤檢視進行作用中或非作用中時，由架構呼叫。  
   
 ```  
 virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*檢視*  
- 檢視指標。  
+*檢視*<br/>
+[in]若要檢視的指標。  
   
 ### <a name="remarks"></a>備註  
- 預設實作不做任何動作。 覆寫這個方法在`CTabView`-衍生的類別處理此通知。  
+ 預設實作不做任何動作。 覆寫這個方法在`CTabView`-衍生的類別來處理此通知。  
   
 ##  <a name="removeview"></a>  CTabView::RemoveView  
  移除索引標籤控制項中的檢視。  
@@ -189,8 +189,8 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iTabNum*  
- 要移除之檢視的索引。  
+*iTabNum*<br/>
+[in]要移除之檢視的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功移除檢視的索引。 否則為-1。  
@@ -205,8 +205,8 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iTabNum*  
- 索引標籤檢視以零為起始的索引。  
+*iTabNum*<br/>
+[in]索引標籤檢視的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的檢視已啟用，FALSE 如果檢視的索引無效，則為 TRUE。  

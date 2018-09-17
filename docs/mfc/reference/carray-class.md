@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f59cc50e864a241608e460a45f3336e7cb89ecbb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339432"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717635"
 ---
 # <a name="carray-class"></a>CArray 類別
 支援類似 C 陣列，但可以動態地減少或增加視的陣列。  
@@ -69,12 +69,13 @@ template <class TYPE, class ARG_TYPE = const TYPE&>
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>參數  
- *型別*  
- 指定儲存在陣列中的物件類型的樣板參數。 *型別*是參數，由`CArray`。  
-  
- *ARG* *_* *類型*  
- 指定用來存取儲存在陣列中的物件的引數類型的樣板參數。 通常參考*型別*。 *Arg_type 這個*是參數，傳遞至`CArray`。  
+#### <a name="parameters"></a>參數
+
+*型別*<br/>
+指定儲存在陣列中的物件類型的樣板參數。 *型別*是參數，由`CArray`。
+
+*ARG_TYPE 這個*<br/>
+指定用來存取儲存在陣列中的物件的引數類型的樣板參數。 通常參考*型別*。 *Arg_type 這個*是參數，傳遞至`CArray`。  
   
 ## <a name="members"></a>成員  
   
@@ -137,7 +138,7 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>需求  
- `Header:` afxtempl.h  
+**Header:** afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
  加入新元素的陣列，陣列成長 1 結尾。  

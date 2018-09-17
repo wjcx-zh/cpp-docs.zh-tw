@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538252"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712513"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 類別
 實作放置在功能區上的超連結。 當您按一下時，超連結會開啟網頁。  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 指定當按下連結控制項時執行命令的命令識別碼。  
+*nID*<br/>
+[in]指定當按下連結控制項時執行命令的命令識別碼。  
   
- [in]*lpszText*  
- 指定要在連結控制項上顯示標籤。  
+*lpszText*<br/>
+[in]指定要在連結控制項上顯示標籤。  
   
- [in]*lpszLink*  
- 指定連結控制項相關聯的超連結。  
+*lpszLink*<br/>
+[in]指定連結控制項相關聯的超連結。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用的建構函式`CMFCRibbonLinkCtrl`類別。 此程式碼片段是一部分[功能區小工具範例](../../visual-cpp-samples.md)。  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszLink*  
- 指定超連結文字。  
+*lpszLink*<br/>
+[in]指定超連結文字。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

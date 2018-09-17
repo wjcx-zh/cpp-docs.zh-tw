@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712760"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函式
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>參數
 
-*Tuple*  
- 要取得的項目索引。
+*Tuple*<br/>
+要取得的項目索引。
 
-*型別*  
- Tuple 中宣告的類型序列，按宣告順序。
+*型別*<br/>
+Tuple 中宣告的類型序列，按宣告順序。
 
-*T*  
- 要取得的元素類型。
+*T*<br/>
+要取得的元素類型。
 
-*Tuple*  
- 包含任何數目元素的 Std::tuple。
+*Tuple*<br/>
+包含任何數目元素的 Std::tuple。
 
 ### <a name="remarks"></a>備註
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個函式參數的類型。
+*TN*<br/>
+第 N 個函式參數的類型。
 
-*TN*  
- 第 N 個函式參數的值。
+*TN*<br/>
+第 N 個函式參數的值。
 
 ### <a name="remarks"></a>備註
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 元素的基底類型。
+*TN*<br/>
+第 N 個 tuple 元素的基底類型。
 
 ### <a name="remarks"></a>備註
 

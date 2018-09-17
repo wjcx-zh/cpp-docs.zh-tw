@@ -66,12 +66,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f89b5f8488f3c89365e490f0bc81bac5816949
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 33ce6996d4435709edcc9d733b9500490dcfe34c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539014"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709874"
 ---
 # <a name="interlockedor-intrinsic-functions"></a>_InterlockedOr 內建函式
 **Microsoft 專屬**  
@@ -180,11 +180,11 @@ __int64 _InterlockedOr64_rel(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Value`  
- 要被結果取代的第一個運算元指標。  
+*值*<br/>
+[in、 out]要被結果取代的第一個運算元指標。  
   
- [in] `Mask`  
- 第二個運算元。  
+*遮罩*<br/>
+[in]第二個運算元。  
   
 ## <a name="return-value"></a>傳回值  
  第一個參數所指向的原始值。  
@@ -193,10 +193,10 @@ __int64 _InterlockedOr64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedOr`、`_InterlockedOr8`、`_InterlockedOr16``_InterlockedOr64`|x86、 x64、 ARM|\<intrin.h>|  
+|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`, `_InterlockedOr64`|x86、 x64、 ARM|\<intrin.h>|  
 |`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM|\<intrin.h>|  
-|`_InterlockedOr_np`、`_InterlockedOr8_np`、`_InterlockedOr16_np``_InterlockedOr64_np`|X64|\<intrin.h>|  
-|`_InterlockedOr_HLEAcquire`、`_InterlockedOr_HLERelease`、`_InterlockedOr64_HLEAcquire``_InterlockedOr64_HLERelease`|x86、x64|\<immintrin.h>|  
+|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|X64|\<intrin.h>|  
+|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`, `_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x86、x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>備註  
  每個函式名稱的數字會指定引數的位元大小。  

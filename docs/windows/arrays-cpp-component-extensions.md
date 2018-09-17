@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa004d449190003f6438744c09c1c8023a0cbda3
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314426"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714443"
 ---
 # <a name="arrays-c-component-extensions"></a>陣列 (C++ 元件擴充功能)
 
@@ -62,12 +62,14 @@ ms.locfileid: "44314426"
     {initialization-list [,...]}
 ```
 
-*限定詞*[選用] 的一或多個這些儲存類別規範：[可變動](../cpp/mutable-data-members-cpp.md)， [volatile](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[靜態](../cpp/static-members-cpp.md)。
+*限定詞*<br/>
+（選擇性）一或多個這些儲存類別規範：[可變](../cpp/mutable-data-members-cpp.md)， [volatile](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[靜態](../cpp/static-members-cpp.md).
 
 *陣列類型*  
 陣列變數的型別。 有效的類型為 Windows 執行階段類別和基本類型、 ref 類別和結構、 實值類別和結構和原生指標 (`type*`)。
 
-*陣序規範*[選用] 陣列維度的數目。 必須是 1。
+*rank*<br/>
+（選擇性）陣列維度的數目。 必須是 1。
 
 *identifier*  
 陣列變數的名稱。
@@ -75,7 +77,8 @@ ms.locfileid: "44314426"
 *初始化型別*  
 初始化陣列值型別。 通常*陣列型別*並*初始化型別*都是相同的型別。 不過，類型可以不同的轉換是否*初始化型別*要*陣列型別*— 比方說，如果*初始化型別*衍生自*陣列型別*。
 
-*初始設定式清單*[選用] 中大值的逗號分隔清單括號，初始化陣列的元素。 例如，如果*陣序大小清單*已`(3)`，其中宣告的 3 個元素，一維陣列*初始化清單*可能`{1,2,3}`。
+*初始設定式清單*<br/>
+（選擇性）初始化陣列的元素的大括號中值的逗號分隔清單。 例如，如果*陣序大小清單*已`(3)`，其中宣告的 3 個元素，一維陣列*初始化清單*可能`{1,2,3}`。
 
 ### <a name="remarks"></a>備註
 
@@ -115,12 +118,14 @@ int main() {
     {initialization-list [,...]}
 ```
 
-*限定詞*[選用] 的一或多個這些儲存類別規範：[可變動](../cpp/mutable-data-members-cpp.md)， [volatile](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[靜態](../cpp/static-members-cpp.md)。
+*限定詞*<br/>
+（選擇性）一或多個這些儲存類別規範：[可變](../cpp/mutable-data-members-cpp.md)， [volatile](../cpp/volatile-cpp.md)， [const](../cpp/const-cpp.md)， [extern](../cpp/using-extern-to-specify-linkage.md)，[靜態](../cpp/static-members-cpp.md).
 
 *陣列類型*  
 陣列變數的型別。 有效的類型為 Windows 執行階段類別和基本類型、 ref 類別和結構、 實值類別與結構，原生指標 (`type*`)，和 POD （一般舊資料） 的原生類型。
 
-*陣序規範*[選用] 陣列維度的數目。 預設值為 1;最大值為 32。 每個維度本身是陣列的一個陣列。
+*rank*<br/>
+（選擇性）陣列維度的數目。 預設值為 1;最大值為 32。 每個維度本身是陣列的一個陣列。
 
 *identifier*  
 陣列變數的名稱。
@@ -131,7 +136,8 @@ int main() {
 *陣序大小清單*  
 陣列中每個維度的大小以逗號分隔清單。 或者，如果*初始設定式清單*參數指定，則編譯器可以推斷每個維度大小並*陣序大小清單*可以省略。
 
-*初始設定式清單*[選用] 中大值的逗號分隔清單括號，初始化陣列的元素。 或以逗號分隔清單的巢狀*初始設定式清單*初始化多維陣列中的元素的項目。
+*初始設定式清單*<br/>
+（選擇性）初始化陣列的元素的大括號中值的逗號分隔清單。 或以逗號分隔清單的巢狀*初始設定式清單*初始化多維陣列中的元素的項目。
 
 例如，如果*陣序大小清單*已`(3)`，其中宣告的 3 個元素，一維陣列*初始化清單*可能`{1,2,3}`。 如果*陣序大小清單*已`(3,2,4)`，其中宣告中的第一個維度，2 個項目中第二個，在第三，4 個元素的 3 個元素的三維陣列*初始化清單*可能是`{{1,2,3},{0,0},{-5,10,-21,99}}`。)
 

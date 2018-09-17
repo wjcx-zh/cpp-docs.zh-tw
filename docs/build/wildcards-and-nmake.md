@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: da3f7882a24d31f1a8560cdc9c038081324bf675
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208620"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715607"
 ---
 # <a name="wildcards-and-nmake"></a>萬用字元和 NMAKE
-NMAKE 展開檔案名稱萬用字元 (\*和？) 相依性命令行中。 在命令中指定萬用字元會傳遞至命令NMAKE 不會展開它。  
-  
-## <a name="see-also"></a>另請參閱  
- [Makefile 內容](../build/contents-of-a-makefile.md)
+
+NMAKE 展開檔案名稱萬用字元 (\*和？) 相依性命令行中。 在命令中指定萬用字元會傳遞至命令NMAKE 不會展開它。
+
+## <a name="see-also"></a>另請參閱
+
+[Makefile 內容](../build/contents-of-a-makefile.md)

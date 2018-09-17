@@ -1,5 +1,5 @@
 ---
-title: -volatile （volatile 關鍵字轉譯） |Microsoft 文件
+title: -volatile （volatile 關鍵字轉譯） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,47 +23,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccd36c5edaaab8577e5f278b25b51ce69e0633f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4204d602d1390bf30080a800174426513faf0467
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723628"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (volatile 關鍵字轉譯)
 
-指定如何[volatile](../../cpp/volatile-cpp.md)關鍵字會被解譯。
+指定如何[volatile](../../cpp/volatile-cpp.md)關鍵字是解譯。
 
 ## <a name="syntax"></a>語法
 
-> **/volatile:**{**iso**|**ms**}  
+> **/volatile:**{**iso**|**ms**}
 
 ## <a name="arguments"></a>引數
 
-**/volatile:iso**  
-選取嚴格`volatile`ISO 標準 c + + 語言所定義的語意。 暫時性存取不保證 acquire/release 語意。 如果編譯器會以 ARM 為目標，這是預設解譯`volatile`。
+**/volatile:iso**<br/>
+選取嚴格`volatile`ISO 標準 c + + 語言所定義的語意。 暫時性存取時不保證 acquire/release 語意。 如果編譯器以 ARM 為目標，這是預設解譯`volatile`。
 
-**/volatile: ms**  
-選取 Microsoft 擴充`volatile`新增記憶體排序保證以外的 ISO 標準 c + + 語言的語意。 暫時性存取保證 acquire/release 語意。 不過，此選項也會強制編譯器產生的硬體記憶體屏障，可能會顯著增加負擔，在 ARM 和其他記憶體排序的弱式架構。 如果 ARM 以外的任何平台為目標的編譯器，這是預設解譯`volatile`。
+**/volatile: ms**<br/>
+選取 Microsoft 擴充`volatile`記憶體順序保證超越 ISO 標準 c + + 語言的語意。 暫時性存取時保證 acquire/release 語意。 不過，此選項也會強制編譯器產生硬體記憶體屏障，可能會在 ARM 和其他弱式記憶體順序架構增加重大額外負荷。 如果編譯器以除了 ARM 以外的任何平台為目標，這是預設解譯`volatile`。
 
 ## <a name="remarks"></a>備註
 
-我們強烈建議您改用 **/volatile:iso**以及明確的同步處理基本類型和編譯器內建在處理跨執行緒共用的記憶體時。 如需詳細資訊，請參閱[volatile](../../cpp/volatile-cpp.md)。
+我們強烈建議您改用 **/volatile:iso**以及明確的同步處理原始物件和編譯器內建時您正在處理跨執行緒共用的記憶體。 如需詳細資訊，請參閱 < [volatile](../../cpp/volatile-cpp.md)。
 
-如果您現有的程式碼移植，或變更此專案的中間選項，可能會很有幫助啟用警告[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)來識別受影響的語意差異的程式碼位置。
+如果您移植現有的程式碼，或變更這個選項的專案，它可能有助於啟用警告[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)識別受語意差異的程式碼位置。
 
-沒有任何`#pragma`相當於控制這個選項。
+沒有任何`#pragma`等於控制這個選項。
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>若要設定 /volatile 編譯器選項在 Visual Studio 中
 
 1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 在**其他選項**方塊中，加入 **/volatile:iso**或 **/volatile: ms** ，然後選擇 **確定**或**套用**以儲存變更。
+1. 在 **其他選項**方塊中，加入 **/volatile:iso**或 **/volatile: ms** ，然後選擇 **確定**或**套用**以儲存變更。
 
 ## <a name="see-also"></a>另請參閱
 
-[volatile](../../cpp/volatile-cpp.md)  
-[編譯器選項](../../build/reference/compiler-options.md)  
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)  
+[volatile](../../cpp/volatile-cpp.md)<br/>
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)

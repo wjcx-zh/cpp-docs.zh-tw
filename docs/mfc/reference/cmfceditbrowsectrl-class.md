@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693968"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707462"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 `CMFCEditBrowseCtrl`類別支援編輯瀏覽控制項，這是選擇性包含瀏覽 按鈕可編輯的文字方塊。 當使用者按一下瀏覽按鈕時，控制項就會執行自訂動作或顯示包含檔案瀏覽器或資料夾瀏覽器的標準對話方塊。  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  `CMFCEditBrowseCtrl`類別支援下列模式。  
   
- **自訂模式**  
- 當使用者按一下 [瀏覽] 按鈕時，會執行自訂動作。 例如，您可以顯示的應用程式特定的對話方塊。  
+- **自訂模式**
+
+   當使用者按一下 [瀏覽] 按鈕時，會執行自訂動作。 例如，您可以顯示的應用程式特定的對話方塊。  
   
- **檔案模式**  
- 當使用者按一下 [瀏覽] 按鈕時，會顯示標準檔案選取對話方塊。  
+- **檔案模式**
+
+   當使用者按一下 [瀏覽] 按鈕時，會顯示標準檔案選取對話方塊。  
   
- **資料夾模式**  
- 當使用者按一下 瀏覽 按鈕時，會顯示標準的資料夾選項 對話方塊。  
+- **資料夾模式**
+
+   當使用者按一下 瀏覽 按鈕時，會顯示標準的資料夾選項 對話方塊。  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>如何： 指定編輯瀏覽控制項  
  執行下列步驟，以納入您的應用程式中編輯瀏覽控制項：  

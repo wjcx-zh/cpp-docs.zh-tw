@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684953"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726813"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 封裝「清單檢視控制項」的功能，顯示項目集合，其中每個項目是由圖示 (來自影像清單) 和標籤所組成的。  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iIndex*|群組的以零為起始的索引。|  
-|[out]*pGroup*|指標[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)接收所指定之群組的相關資訊的結構*iIndex*參數。<br /><br /> 呼叫端負責初始化的成員[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。 設定`cbSize`成員的結構，大小和旗標`mask`來指定要擷取之資訊的成員。|  
+|*iIndex*|[in]群組的以零為起始的索引。|  
+|*pGroup*|[out]指標[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)接收所指定之群組的相關資訊的結構*iIndex*參數。<br /><br /> 呼叫端負責初始化的成員[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。 設定`cbSize`成員的結構，大小和旗標`mask`來指定要擷取之資訊的成員。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iGroupId*|指定群組。|  
-|[in、 out]*lpRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構會接收群組所指定的矩形座標*iGroupId*。|  
-|[in]*iCoords*|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整個已展開群組 （預設值） 座標。<br />-LVGGR_HEADER-僅標頭 （摺疊的群組） 的座標。<br />-LVGGR_SUBSETLINK-座標只子集連結 （標記子集）。|  
+|*iGroupId*|[in]指定群組。|  
+|*lpRect*|[in、 out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果這個方法成功，結構會接收群組所指定的矩形座標*iGroupId*。|  
+|*iCoords*|[in]指定要擷取的矩形座標。 使用下列值之一：<br /><br /> -LVGGR_GROUP-整個已展開群組 （預設值） 座標。<br />-LVGGR_HEADER-僅標頭 （摺疊的群組） 的座標。<br />-LVGGR_SUBSETLINK-座標只子集連結 （標記子集）。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*iGroupId*|群組的以零為起始的索引。|  
-|[in]*dwMask*|指定狀態来擷取之值所指定群組的遮罩。 如需詳細資訊，請參閱 <<c0> `mask` 隸屬[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。|  
+|*iGroupId*|[in]群組的以零為起始的索引。|  
+|*dwMask*|[in]指定狀態来擷取之值所指定群組的遮罩。 如需詳細資訊，請參閱 <<c0> `mask` 隸屬[LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的群組，或 0，如果找不到群組要求的狀態。  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 這個參數不能是 NULL。|  
-|[in]*iColumn*|控制項中的資料行的以零為起始索引。|  
-|[in]*rectType*|要為其擷取周框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS-傳回整個子項目，包括圖示和標籤的週框矩形。<br /><br /> LVIR_ICON-傳回圖示或小圖示子項目的週框。<br /><br /> LVIR_LABEL-傳回子項目文字的週框矩形。|  
-|[out]*pRect*|指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 這個參數不能是 NULL。|  
+|*pItemIndex*|[in]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 這個參數不能是 NULL。|  
+|*iColumn*|[in]控制項中的資料行的以零為起始索引。|  
+|*rectType*|[in]要為其擷取周框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS-傳回整個子項目，包括圖示和標籤的週框矩形。<br /><br /> LVIR_ICON-傳回圖示或小圖示子項目的週框。<br /><br /> LVIR_LABEL-傳回子項目文字的週框矩形。|  
+|*pRect*|[out]指標[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 這個參數不能是 NULL。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*fSmall*|要擷取的項目間距的檢視。 小圖示檢視中，或圖示檢視，則為 FALSE，則指定 TRUE。|  
-|[out]*pnHorzSpacing*|包含項目之間的水平間距。|  
-|[out]*pnVertSpacing*|包含項目之間的垂直間距。|  
+|*fSmall*|[in]要擷取的項目間距的檢視。 小圖示檢視中，或圖示檢視，則為 FALSE，則指定 TRUE。|  
+|*pnHorzSpacing*|[out]包含項目之間的水平間距。|  
+|*pnVertSpacing*|[out]包含項目之間的垂直間距。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in、 out]*pItemIndex*|指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋或-1 表示找到第一個符合項目，中的旗標*nFlags*參數。<br /><br /> 如果這個方法成功，`LVITEMINDEX`結構描述的搜尋作業找到的項目。|  
-|[in]*nFlags*|位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能取決於索引、 狀態或外觀的目標項目，或以指定目標項目的實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱 <<c0>  *旗標*中的參數[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
+|*pItemIndex*|[in、 out]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋或-1 表示找到第一個符合項目，中的旗標*nFlags*參數。<br /><br /> 如果這個方法成功，`LVITEMINDEX`結構描述的搜尋作業找到的項目。|  
+|*nFlags*|[in]位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能取決於索引、 狀態或外觀的目標項目，或以指定目標項目的實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱 <<c0>  *旗標*中的參數[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*索引*|目前的清單檢視控制項中項目的以零為起始的索引。|  
+|*index*|[in]目前的清單檢視控制項中項目的以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果指定的項目可為可見; 否則為 FALSE，則為 TRUE。  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*識別碼*|項目的唯一識別碼。|  
+|*id*|[in]項目的唯一識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  目前的索引，做為指定的識別碼。  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*索引*|項目的以零為起始的索引。|  
+|*index*|[in]項目的以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的項目唯一識別碼。  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*idItemFrom*  
- 要移動之項目的索引。  
+*idItemFrom*<br/>
+[in]要移動之項目的索引。  
   
- [in]*idGroupTo*  
- 群組的識別項的項目將會移至。  
+*idGroupTo*<br/>
+[in]群組的識別項的項目將會移至。  
   
 ### <a name="remarks"></a>備註  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pItemIndex*|指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)該結構描述項目。 呼叫端負責配置這個結構，並設定其成員。|  
-|[in]*dwState*|若要設定項目，狀態即的位元組合[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。 指定 0 時可重設，或其中一個狀態設定。|  
-|[in]*dwMask*|所指定的狀態的有效位元遮罩*dwState*參數。 指定的位元組合 (OR)[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。|  
+|*pItemIndex*|[in]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)該結構描述項目。 呼叫端負責配置這個結構，並設定其成員。|  
+|*dwState*|[in]若要設定項目，狀態即的位元組合[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。 指定 0 時可重設，或其中一個狀態設定。|  
+|*dwMask*|[in]所指定的狀態的有效位元遮罩*dwState*參數。 指定的位元組合 (OR)[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pfnCompare*  
- 應用程式定義的比較函式的位址。  
+*pfnCompare*<br/>
+[in]應用程式定義的比較函式的位址。  
   
  排序作業會呼叫比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是靜態成員的類別，或是獨立的函式不是任何類別的成員。  
   
- [in]*dwData*  
- 應用程式定義的值傳遞給比較函式。  
+*dwData*<br/>
+[in]應用程式定義的值傳遞給比較函式。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，否則為 FALSE。  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pfnCompare*|應用程式定義的比較函式的位址。<br /><br /> 排序作業會呼叫比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是靜態成員的類別，或是獨立的函式不是任何類別的成員。|  
-|[in]*dwData*|應用程式定義的值傳遞給比較函式。|  
+|*pfnCompare*|[in]應用程式定義的比較函式的位址。<br /><br /> 排序作業會呼叫比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是靜態成員的類別，或是獨立的函式不是任何類別的成員。|  
+|*dwData*|[in]應用程式定義的值傳遞給比較函式。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  

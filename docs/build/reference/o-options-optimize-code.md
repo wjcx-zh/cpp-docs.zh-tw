@@ -1,5 +1,5 @@
 ---
-title: -O 選項 （最佳化程式碼） |Microsoft 文件
+title: -O 選項 （最佳化程式碼） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.technology:
@@ -19,20 +19,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c77fd91d63ec79fca87e11a4a02eca157eddf84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376796"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717531"
 ---
 # <a name="o-options-optimize-code"></a>/O 選項 (最佳化程式碼)
 
-**/O**選項會控制各種建立速度最快或最小的程式碼可協助您最佳化。
+**/O**選項可控制各種最佳化，可協助您建立最快速度或最小的程式碼。
 
-- [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)設定產生最小的程式碼的最佳化的組合。
+- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)設定產生最小的程式碼的最佳化的組合。
 
-- [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)設定最佳化程式碼的最大速度最佳化的組合。
+- [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)設定最佳化程式碼的最大速度最佳化的組合。
 
 - [/Ob](../../build/reference/ob-inline-function-expansion.md)控制內嵌函式展開。
 
@@ -40,21 +40,21 @@ ms.locfileid: "32376796"
 
 - [/Og](../../build/reference/og-global-optimizations.md)啟用全域最佳化。
 
-- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md)會產生適當的函式呼叫內建函式。
+- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md)會產生適當的函式呼叫的內建函式。
 
 - [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)會指示編譯器大小最佳化優先於速度最佳化。
 
-- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) （預設值） 會指示編譯器針對速度最佳化優先於大小最佳化。
+- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) （預設值） 會指示編譯器速度最佳化優先於大小最佳化。
 
-- [/Ox](../../build/reference/ox-full-optimization.md)是選取數個特別強調速度最佳化的組合選項。 它是嚴格的子集 **/O2**最佳化。
+- [/Ox](../../build/reference/ox-full-optimization.md)是組合的選項，選取數個時應著重速度最佳化。 它是嚴格子集 **/o2**最佳化。
 
-- [/Oy](../../build/reference/oy-frame-pointer-omission.md)隱藏快速函式呼叫的呼叫堆疊上框架指標的建立。
+- [/Oy](../../build/reference/oy-frame-pointer-omission.md)隱藏框架指標更快的函式呼叫的呼叫堆疊上的建立。
 
 ## <a name="remarks"></a>備註
 
-您可以結合多個 **/O**成單一選項陳述式的選項。 例如， **/Odi**相同 **/Od /Oi**。 某些選項互斥，如果一起使用，會造成編譯器錯誤。 請參閱個別 **/O**選項的詳細資訊。
+您可以結合多個 **/O**成單一的選項陳述式的選項。 例如， **/Odi**等同於 **/Od /Oi**。 某些選項互斥，而且如果一起使用，會造成編譯器錯誤。 請參閱個別 **/O**選項的詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)   
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

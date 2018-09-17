@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540782"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715659"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 類別
 根據 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)的擴充工具提示實作。 根據 `CMFCToolTipCtrl` 類別的工具提示可以顯示圖示、標籤和描述。 您可以使用漸層填滿、自訂文字和框線色彩、粗體文字、圓角或氣球樣式，自訂其視覺外觀。  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 工具提示的週框。  
+*rect*<br/>
+[in]工具提示的週框。  
   
- [in]*clrLine*  
- 框線色彩。  
+*clrLine*<br/>
+[in]框線色彩。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生類別來自訂工具提示框線外觀。  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- [in]*rect*  
+*pDC*<br/>
+[in][in]*rect*  
  [in]*bCalcOnly*  
   
 ### <a name="return-value"></a>傳回值  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rectImage*  
- 圖示的座標。  
+*rectImage*<br/>
+[in]圖示的座標。  
   
 ### <a name="return-value"></a>傳回值  
  所繪製的圖示，其值為 TRUE。 否則為 FALSE。  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- [標籤] 區域的周框。  
+*rect*<br/>
+[in][標籤] 區域的周框。  
   
- [in]*bCalcOnly*  
- 如果為 TRUE，就不會繪製標籤。  
+*bCalcOnly*<br/>
+[in]如果為 TRUE，就不會繪製標籤。  
   
 ### <a name="return-value"></a>傳回值  
  標籤，像素為單位的大小。  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*x1*  
- 水平分隔符號的左邊座標。  
+*x1*<br/>
+[in]水平分隔符號的左邊座標。  
   
- [in]*x2*  
- 水平分隔符號的右邊座標。  
+*x2*<br/>
+[in]水平分隔符號的右邊座標。  
   
- [in]*Y*  
- 分隔線的垂直座標。  
+*Y*<br/>
+[in]分隔線的垂直座標。  
   
 ### <a name="remarks"></a>備註  
  預設實作會繪製一條線從點 (x1，y) 到點 (x2，y)。  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*rect*  
- 指定要填滿區域的週框矩形。  
+*rect*<br/>
+[in]指定要填滿區域的週框矩形。  
   
- [in]*clrText*  
- 工具提示的前景色彩。  
+*clrText*<br/>
+[in]工具提示的前景色彩。  
   
- [in]*clrLine*  
- 色彩的框線和分隔符號之間的線條標籤和描述。  
+*clrLine*<br/>
+[in]色彩的框線和分隔符號之間的線條標籤和描述。  
   
 ### <a name="remarks"></a>備註  
  預設實作會填滿所指定的矩形*rect*使用的色彩或最新的呼叫所指定的圖樣[CMFCToolTipCtrl::SetParams](#setparams)。  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*strDesrciption*  
- 描述文字。  
+*strDesrciption*<br/>
+[in]描述文字。  
   
 ### <a name="remarks"></a>備註  
  描述文字會顯示在工具提示下分隔符號。  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nWidthRegular*  
- [in]*nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in][in]*nWidthLargeImage*  
   
 ### <a name="remarks"></a>備註  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pParams*  
- 指標[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件，包含顯示參數。  
+*pParams*<br/>
+[in]指標[CMFCToolTipInfo 類別](../../mfc/reference/cmfctooltipinfo-class.md)物件，包含顯示參數。  
   
 ### <a name="remarks"></a>備註  
  會顯示工具提示，使用色彩來繪製視覺化樣式，每當*pParams*指定。 值*pParams*會儲存在受保護的成員`m_Params`，存取由衍生類別覆寫[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)， [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)， [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)， [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)，或[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)維護指定的外觀。  

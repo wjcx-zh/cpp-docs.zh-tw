@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201747"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712845"
 ---
 # <a name="moneyget-class"></a>money_get 類別
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>參數
 
 *CharType*<br/>
- 程式內用於編碼地區設定字元的類型。
+程式內用於編碼地區設定字元的類型。
 
 *InputIterator*<br/>
- get 函式從中讀取其輸入的迭代器類型。
+get 函式從中讀取其輸入的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>參數
 
 *first*<br/>
- 輸入迭代器，定址對象是要轉換之序列的開頭。
+輸入迭代器，定址對象是要轉換之序列的開頭。
 
 *最後一個*<br/>
- 輸入迭代器，定址對象是要轉換之序列的結尾。
+輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *Intl*<br/>
- 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
+布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
 *iosbase*<br/>
- 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
 *狀態*<br/>
- 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
 *val*<br/>
- 儲存已轉換之序列的字串。
+儲存已轉換之序列的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>參數
 
 *first*<br/>
- 輸入迭代器，定址對象是要轉換之序列的開頭。
+輸入迭代器，定址對象是要轉換之序列的開頭。
 
 *最後一個*<br/>
- 輸入迭代器，定址對象是要轉換之序列的結尾。
+輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *Intl*<br/>
- 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
+布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
 *iosbase*<br/>
- 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
+格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
 *狀態*<br/>
- 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
+根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
 *val*<br/>
- 儲存已轉換之序列的字串。
+儲存已轉換之序列的字串。
 
 ### <a name="return-value"></a>傳回值
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>參數
 
 *_Refs*<br/>
- 整數值，用來指定物件的記憶體管理類型。
+整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 

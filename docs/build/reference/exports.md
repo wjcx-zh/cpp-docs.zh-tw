@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104286"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714517"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ ms.locfileid: "44104286"
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ EXPORTS
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 有四種方法匯出定義，按建議順序列出：
 
@@ -95,7 +95,7 @@ EXPORTS
 
 #Pragma 指示詞是您需要匯出未裝飾的函式名稱，並有不同的匯出，根據組建組態 （例如，在 32 位元或 64 位元的組建） 時相當實用。
 
-所有四種方法可在同一程式中使用。 當 LINK 繫結的程式包含匯出時，它還會建立匯入程式庫，除非組建中使用 .EXP 檔。 
+所有四種方法可在同一程式中使用。 當 LINK 繫結的程式包含匯出時，它還會建立匯入程式庫，除非組建中使用 .EXP 檔。
 
 EXPORTS 區段的範例如下：
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 當您使用 .DEF 檔從 DLL 匯出變數時，您無需在變數上指定 `__declspec(dllexport)`。 不過，在使用 DLL 的任何檔案中，您必須在資料的宣告上，仍使用 `__declspec(dllimport)`。
 

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09767927a91c61f564e2013bf1b3e0930821193
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: c0e42cd14c5707f728f5577a77b2dd613c5ef2a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709603"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 移轉時常見的問題
 
@@ -110,4 +110,4 @@ MSVC 編譯器支援的兩個不同的方式解讀`volatile`您可以使用編�
 
 ## <a name="see-also"></a>另請參閱
 
-[針對 ARM 處理器設定 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+[針對 ARM 處理器設定 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214162"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713302"
 ---
 # <a name="deque-class"></a>deque 類別
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>參數
 
 *類型*<br/>
- 要存放在 deque 中的項目資料類型。
+要存放在 deque 中的項目資料類型。
 
 *配置器*<br/>
- 代表預存配置器物件的類型，封裝 deque 之記憶體配置和解除配置的詳細資訊。 這個引數為選擇性，而且預設值是**allocator\<類型 >**。
+代表預存配置器物件的類型，封裝 deque 之記憶體配置和解除配置的詳細資訊。 這個引數為選擇性，而且預設值是**allocator\<類型 >**。
 
 ## <a name="remarks"></a>備註
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>參數
 
 *第一個*<br/>
- 要從引數 deque 複製的元素範圍中，第一個元素的位置。
+要從引數 deque 複製的元素範圍中，第一個元素的位置。
 
 *最後一個*<br/>
- 要從引數 deque 複製之元素範圍中，超出範圍的第一個元素位置。
+要從引數 deque 複製之元素範圍中，超出範圍的第一個元素位置。
 
 *計數*<br/>
- 插入 deque 的元素複本數目。
+插入 deque 的元素複本數目。
 
 *val*<br/>
- 插入 deque 的元素值。
+插入 deque 的元素值。
 
 *IList*<br/>
- 插入 deque 的 initializer_list。
+插入 deque 的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>參數
 
 *pos*<br/>
- deque 中要參考之元素的註標 (或位置編號)。
+deque 中要參考之元素的註標 (或位置編號)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>參數
 
 *_Where*<br/>
- 要從 deque 中移除之元素的位置。
+要從 deque 中移除之元素的位置。
 
 *first*<br/>
- 從 deque 中移除之第一個元素的位置。
+從 deque 中移除之第一個元素的位置。
 
 *最後一個*<br/>
- 從 deque 中移除之最後一個元素以外的位置。
+從 deque 中移除之最後一個元素以外的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>參數
 
 *pos*<br/>
- 要參考之 deque 元素的位置。
+要參考之 deque 元素的位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>參數
 
 *_Newsize*<br/>
- deque 的新大小。
+deque 的新大小。
 
 *val*<br/>
- 如果新大小超過原始大小，則會將新元素的值新增至 deque。 如果省略此值，則為新元素的類別指定預設值。
+如果新大小超過原始大小，則會將新元素的值新增至 deque。 如果省略此值，則為新元素的類別指定預設值。
 
 ### <a name="remarks"></a>備註
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>參數
 
 *right*<br/>
- 提供要交換元素的 deque，或要與 deque `left` 交換元素的 deque。
+提供要交換元素的 deque，或要與 deque `left` 交換元素的 deque。
 
 *left*<br/>
- Deque，其項目要與 deque 交換*右*。
+Deque，其項目要與 deque 交換*右*。
 
 ### <a name="example"></a>範例
 

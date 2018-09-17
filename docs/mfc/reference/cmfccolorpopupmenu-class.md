@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 32dd81b005570761088cdeb874ad0524bc543df2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852990"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721860"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 類別
 代表使用者使用文件或應用程式中選取色彩的快顯功能表。  
@@ -133,51 +133,51 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*色彩*  
- 陣列，架構會顯示快顯功能表的色彩。  
+*色彩*<br/>
+[in]陣列，架構會顯示快顯功能表的色彩。  
   
- [in]*色彩*  
- 選取的預設色彩。  
+*色彩*<br/>
+[in]選取的預設色彩。  
   
- [in]*lpszAutoColor*  
- 文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
+*lpszAutoColor*<br/>
+[in]文字標籤*自動*（預設值） 的色彩按鈕，則為 NULL。  
   
  標準自動按鈕的標籤**自動**。  
   
- [in]*lpszOtherColor*  
- 文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
+*lpszOtherColor*<br/>
+[in]文字標籤*其他* 按鈕，以顯示更多的色彩選擇，或 NULL。  
   
  [其他] 按鈕的標準標籤是**其他色彩...**.  
   
- [in]*lpszDocColors*  
- 文件的 [色彩] 按鈕的文字標籤。 文件色彩調色盤會列出所有的文件目前使用的色彩。  
+*lpszDocColors*<br/>
+[in]文件的 [色彩] 按鈕的文字標籤。 文件色彩調色盤會列出所有的文件目前使用的色彩。  
   
- [in]*lstDocColors*  
- 一份文件目前使用的色彩。  
+*lstDocColors*<br/>
+[in]一份文件目前使用的色彩。  
   
- [in]*nColumns*  
- 具有色彩陣列的資料行數目。  
+*nColumns*<br/>
+[in]具有色彩陣列的資料行數目。  
   
- [in]*nHorzDockRows*  
- 可在色軸水平的停駐時的資料列數目。  
+*nHorzDockRows*<br/>
+[in]可在色軸水平的停駐時的資料列數目。  
   
- [in]*nVertDockColumns*  
- 可在色軸垂直的停駐時的資料行數目。  
+*nVertDockColumns*<br/>
+[in]可在色軸垂直的停駐時的資料行數目。  
   
- [in]*colorAutomatic*  
- 當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
+*colorAutomatic*<br/>
+[in]當您按一下 [自動] 按鈕時，架構會套用預設色彩。  
   
- [in]*uiCommandID*  
- 色軸控制項命令識別碼。  
+*uiCommandID*<br/>
+[in]色軸控制項命令識別碼。  
   
- [in]*bStdColorDlg*  
- 布林值，指出是否要顯示標準系統的 [色彩] 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  對話方塊。  
+*bStdColorDlg*<br/>
+[in]布林值，指出是否要顯示標準系統的 [色彩] 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  對話方塊。  
   
- [in]*pParentBtn*  
- 父代按鈕指標。  
+*pParentBtn*<br/>
+[in]父代按鈕指標。  
   
- [in]*nID*  
- 命令 ID。  
+*nID*<br/>
+[in]命令 id。  
   
 ### <a name="remarks"></a>備註  
  每個多載建構函式集`m_bEnabledInCustomizeMode`成員設為 FALSE。  
@@ -202,9 +202,9 @@ virtual CPane* CreateTearOffBar(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*pWndMain*|Tear-off 列的父視窗的指標。|  
-|[in]*uiID*|Tear-off 列的命令識別碼。|  
-|[in]*lpszName*|Tear-off 列視窗文字。|  
+|*pWndMain*|[in]Tear-off 列的父視窗的指標。|  
+|*uiID*|[in]Tear-off 列的命令識別碼。|  
+|*lpszName*|[in]Tear-off 列視窗文字。|  
   
 ### <a name="return-value"></a>傳回值  
  新的分割控制列物件的指標。  
@@ -233,8 +233,8 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndList*  
- 屬性方格控制項物件的指標。  
+*pWndList*<br/>
+[in]屬性方格控制項物件的指標。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723303"
 ---
 # <a name="building-an-import-library-and-export-file"></a>建置匯入程式庫和匯出檔案
 
@@ -60,7 +60,7 @@ ms.locfileid: "43894612"
 
 下列選項會套用至建置匯入程式庫和匯出檔案：
 
-> **/ OUT:** *匯入*  
+> **/ OUT:** *匯入*
 
 覆寫預設的輸出檔案名稱，如*匯入*所建立的程式庫。 /OUT 未指定，預設的名稱時，第一個物件檔案或程式庫中的 LIB 命令和擴充功能的基底名稱。 lib。 匯出檔案會提供相同的基底名稱做為匯入程式庫和擴充功能。 exp。
 

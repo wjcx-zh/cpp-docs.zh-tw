@@ -1,5 +1,5 @@
 ---
-title: USING 指示詞 |Microsoft 文件
+title: 指示詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455e1dba4c2ef4e77ee0542617f9dff707a9487c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7375db4929d48be443aba97f0ea9e47ff355419
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369912"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707703"
 ---
 # <a name="directives"></a>/DIRECTIVES
-```  
-/DIRECTIVES  
-```  
-  
-## <a name="remarks"></a>備註  
- 此選項傾印映像的編譯器產生.drective 一節。  
-  
- 只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
-  
-## <a name="see-also"></a>另請參閱  
- [DUMPBIN 選項](../../build/reference/dumpbin-options.md)
+
+```
+/DIRECTIVES
+```
+
+## <a name="remarks"></a>備註
+
+此選項將傾印映像的編譯器產生.drective 一節。
+
+只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
+
+## <a name="see-also"></a>另請參閱
+
+[DUMPBIN 選項](../../build/reference/dumpbin-options.md)

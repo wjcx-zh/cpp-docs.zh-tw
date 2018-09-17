@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200214"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711797"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,10 +52,10 @@ ms.locfileid: "43200214"
 
 ### <a name="parameters"></a>參數
 
-*型別*（選擇性）  
-可以是下列其中一項：
+*type*  
+（選擇性）可以是下列其中一項：
 
-- `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 此為預設值。
+- `dll` 新增函式和類別，可讓產生的 DLL 當成同處理序 COM 伺服器。 這是預設值。
 
 - `exe` 將函式和類別可讓產生可執行檔當成跨處理序 COM 伺服器。
 
@@ -63,11 +63,11 @@ ms.locfileid: "43200214"
 
 - `unspecified` 停止插入與模組屬性相關的 ATL 程式碼： 插入 「 ATL 模組類別、 全域執行個體 _AtlModule 和輸入點函式。 因為專案中有其他屬性，所以請不要停止插入 ATL 程式碼。
 
-*name* (選擇性)  
-程式庫區塊的名稱。
+*name*  
+（選擇性）程式庫區塊的名稱。
 
-*版本*（選擇性）  
-您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。
+*version*  
+（選擇性）您想要指派給程式庫區塊的版本號碼。 預設值為 1.0。
 
 *uuid*  
 程式庫的唯一識別碼。 如果您省略此參數，將會自動產生程式庫的識別碼。 您可能需要擷取*uuid*程式庫區塊，您可以使用識別碼來這麼做 **__uuidof (** *libraryname* **)**。
@@ -75,32 +75,32 @@ ms.locfileid: "43200214"
 *lcid*  
 當地語系化參數。 請參閱[lcid](/windows/desktop/Midl/lcid)如需詳細資訊。
 
-*控制*（選擇性）  
-指定程式庫中的所有 coclass 都是控制項。
+*control*  
+（選擇性）指定媒體櫃中的所有 coclass 的控制項。
 
 *helpstring*  
 指定類型程式庫。
 
-*helpstringdll* （選擇性）  
-設定用來執行文件字串查閱之 .dll 檔案的名稱。 請參閱[helpstringdll](/windows/desktop/Midl/helpstringdll)如需詳細資訊。
+*helpstringdll*  
+（選擇性）設定用來執行文件字串查閱之.dll 檔案的名稱。 請參閱[helpstringdll](/windows/desktop/Midl/helpstringdll)如需詳細資訊。
 
-*helpfile* （選擇性）  
-名稱**協助**型別程式庫的檔案。
+*helpfile*  
+（選擇性）名稱**協助**型別程式庫的檔案。
 
-*helpcontext* （選擇性）  
-**說明 ID**這個類型程式庫。
+*helpcontext*  
+（選擇性）**說明 ID**這個類型程式庫。
 
-*helpstringcontext* （選擇性）  
-如需詳細資訊，請參閱 [helpstringcontext](../windows/helpstringcontext.md) 。
+*helpstringcontext*  
+（選擇性）請參閱[helpstringcontext](../windows/helpstringcontext.md)如需詳細資訊。
 
-*隱藏*（選擇性）  
-避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
+*hidden*  
+（選擇性）避免顯示整個媒體櫃。 此用法是與控制項搭配使用。 主機需要建立新的類型程式庫，以包裝控制項與擴充屬性。 請參閱[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性，如需詳細資訊。
 
-*限制*（選擇性）  
-不能任意呼叫程式庫成員。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
+*restricted*  
+（選擇性）程式庫成員不能任意呼叫。 請參閱[限制](/windows/desktop/Midl/restricted)MIDL 屬性，如需詳細資訊。
 
-*自訂*（選擇性）  
-一或多個屬性；這類似於 [custom](../windows/custom-cpp.md) 屬性。 第一個參數*自訂*是屬性的 GUID。 例如:
+*custom*  
+（選擇性）一或多個屬性;這是類似[自訂](../windows/custom-cpp.md)屬性。 第一個參數*自訂*是屬性的 GUID。 例如: 
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]

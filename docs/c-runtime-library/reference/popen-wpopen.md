@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218382"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726358"
 ---
 # <a name="popen-wpopen"></a>_popen、_wpopen
 
@@ -61,12 +61,12 @@ ms.locfileid: "43218382"
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ const wchar_t *mode
 
 **_Popen**函式會建立一個管道，並以非同步方式執行命令處理器以指定字串的繁衍的複本*命令*。 字元字串 *mode* 會指定要求的存取類型，如下所示。
 
-**"r"** 呼叫處理序可以讀取繁衍的命令的標準輸出使用傳回的資料流。
-
-**"w"** 呼叫處理序可以寫入至繁衍的命令的標準輸入使用傳回的資料流。
-
-**"b"** 在二進位模式中開啟。
-
-**"t"** 以文字模式開啟。
+|存取模式|描述|
+|-|-|
+|**"r"**|呼叫處理序可使用傳回的資料流來讀取繁衍命令的標準輸出。|
+|**"w"**|呼叫處理序可使用傳回的資料流來寫入至繁衍命令的標準輸入。|
+|**"b"**|在二進位模式中開啟。|
+|**"t"**|在文字模式中開啟。|
 
 > [!NOTE]
 > 如果在 Windows 程式中，使用 **_popen**函式會傳回無效的檔案指標，會造成程式無限期停止回應。 **_popen**在主控台應用程式中運作正常。 若要建立 Windows 應用程式會將重新導向輸入和輸出，請參閱[建立子處理序具有重新導向輸入和輸出](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output)Windows SDK 中。

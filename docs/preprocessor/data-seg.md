@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9841b74d7bef74a117350b84747a606043d05d67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539567"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707664"
 ---
 # <a name="dataseg"></a>data_seg
 指定儲存在 .obj 檔案中已初始化之變數的資料區段。  
@@ -34,31 +34,33 @@ ms.locfileid: "42539567"
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="parameters"></a>參數
+
+**push**<br/>
+（選擇性）將記錄放入內部編譯器堆疊上。 A**推播**可以有*識別項*並*區段名稱*。  
+
+**pop**<br/>
+（選擇性）從內部編譯器堆疊頂端移除記錄。  
+  
+*identifier*<br/>
+（選擇性）當搭配**推播**，將名稱指派給內部編譯器堆疊上的記錄。 當搭配**pop**，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
+  
+*識別項*可讓一推出多筆資料錄**pop**命令。  
+  
+*「 區段名稱 」*<br/>
+（選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中區段名稱。  
+  
+*「 區段類別 」*<br/>
+（選擇性）包含與 c + + 2.0 以前版本的相容性。 會忽略此項。  
+  
 ## <a name="remarks"></a>備註 
 
 意義*區段*並*一節*是本主題中的可互換的。  
   
 OBJ 檔案可以使用檢視[dumpbin](../build/reference/dumpbin-command-line.md)應用程式。 .obj 檔案中已初始化之變數的預設區段是 .data。 未初始化的變數會被視為要初始化為零，並儲存在 .bss 中。  
   
-**data_seg**不含任何參數區段重設為.data。  
-  
-*推播*（選擇性）  
-將記錄放置到內部編譯器堆疊上。 A*推播*可以有*識別項*並*區段名稱*。  
-  
-*pop* （選擇性）  
-會從內部編譯器堆疊頂端移除記錄。  
-  
-*識別項*（選擇性）  
-當搭配*推播*，將名稱指派給內部編譯器堆疊上的記錄。 當搭配*pop*，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
-  
-*識別項*可讓一推出多筆資料錄*pop*命令。  
-  
-*「 區段名稱 」*（選擇性）  
-區段的名稱。 當搭配*pop*，時會推出堆疊並*區段名稱*會變成作用中區段名稱。  
-  
-*「 區段類別 」* （選擇性）  
-包含這個項目可提供與 C++ 2.0 以前版本的相容性。 會忽略此項。  
-  
+**data_seg**不含任何參數區段重設為.data。
+
 ## <a name="example"></a>範例  
   
 ```cpp  

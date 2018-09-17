@@ -1,5 +1,5 @@
 ---
-title: _mm_stream_ss |Microsoft 文件
+title: _mm_stream_ss |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339484"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714385"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
- 寫入記憶體位置的 32 位元的資料不侵害快取。  
+ 將 32 位元資料寫入記憶體位置而不到處快取。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>參數  
   
- [輸出] `Dest`  
- 來源資料所寫入之位置指標。  
+*目的地*<br/>
+[out]寫入來源資料的位置指標。  
   
- [輸入] `Source`  
- 包含 128 位元數字`float`32 位元在其下要寫入值...  
+*Source*<br/>
+[in]包含 128 位元數字`float`以寫入下 32 位元的值...  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -61,9 +61,9 @@ void _mm_stream_ss(
   
 ## <a name="remarks"></a>備註  
   
-此內建函式會產生`movntss`指令。 若要判斷硬體支援此指示，請呼叫`__cpuid`與內建`InfoType=0x80000001`並檢查位元 6 的`CPUInfo[2] (ECX)`。 此位元否則就會支援指令時，1 和 0。  
+此內建函式會產生`movntss`指令。 若要判斷此指令的硬體支援，請呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查位元 6 的`CPUInfo[2] (ECX)`。 此位元不支援指令時，1 和 0。  
   
-如果您執行程式碼乃使用`_mm_stream_ss`內建函式不支援的硬體上`movntss`指令，結果會產生無法預測。  
+如果您執行使用的程式碼`_mm_stream_ss`內建函式不支援的硬體上`movntss`指令，結果會無法預測。  
   
 ## <a name="example"></a>範例  
   
@@ -97,9 +97,9 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
 
-進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
   
 ## <a name="see-also"></a>另請參閱  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4014c58a7e562aa632dba62dcac04c835352cbf
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 03b2f4e746632cc91b652ca76587ddad18afd165
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101725"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717960"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (清單檔)
 
@@ -49,38 +49,38 @@ ms.locfileid: "44101725"
 
 ### <a name="fa-arguments"></a>/FA 引數
 
-無  
+無<br/>
 只有組合器語言包含在清單中。
 
-**C**  
+**C**<br/>
 選擇性。 在清單中包含機器的程式碼。
 
-**s**  
+**s**<br/>
 選擇性。 包含在清單中的原始程式碼。
 
-**u**  
+**u**<br/>
 選擇性。 將清單檔案，以 utf-8 格式編碼，並包含位元組順序標記。 根據預設，檔案被編碼為 ANSI。 使用`u`建立清單檔，會正確顯示在任何系統上，或如果您使用 Unicode 原始程式碼檔做為編譯器的輸入。
 
 如果兩個**s**並**u**指定，而且如果原始程式碼檔使用 Unicode 編碼方式，除了 utf-8，則程式碼中的程式行會.asm 檔可能無法正確顯示。
 
 ### <a name="fa-argument"></a>/Fa 引數
 
-無  
+無<br/>
 一*來源*.asm 檔建立的編譯過程中每個原始程式碼檔案。
 
-*filename*  
+*filename*<br/>
 清單檔名為*filename*.asm 會置於目前的目錄。 編譯單一原始程式碼檔案時，這是才有效。
 
-*filename.extension*  
+*filename.extension*<br/>
 清單檔名為*filename.extension*放在目前的目錄。 編譯單一原始程式碼檔案時，這是才有效。
 
-*目錄*__\\__  
+*目錄*__\\__<br/>
 一*source_file*.asm 檔會建立並放置在指定*directory*的編譯過程中每個原始程式碼檔案。 請注意所需的尾端有反斜線。 允許只在目前的磁碟上的路徑。
 
-*目錄*__\\__*檔名*  
+*目錄*__\\__*檔名*<br/>
 清單檔名為*檔名*.asm 會置於指定*directory*。 編譯單一原始程式碼檔案時，這是才有效。
 
-*目錄*__\\__*filename.extension*  
+*目錄*__\\__*filename.extension*<br/>
 清單檔名為*filename.extension*放在指定*directory*。 編譯單一原始程式碼檔案時，這是才有效。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
@@ -98,6 +98,7 @@ ms.locfileid: "44101725"
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>。 若要指定 **/FAu**，請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
 ## <a name="example"></a>範例
+
 下列命令列會產生合併的來源和機器程式碼清單稱為 HELLO.cod:
 
 ```cmd
@@ -106,7 +107,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
-[編譯器選項](../../build/reference/compiler-options.md)   
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)   
+[輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)<br/>
 [指定路徑名稱](../../build/reference/specifying-the-pathname.md)

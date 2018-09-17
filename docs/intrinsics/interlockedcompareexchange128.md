@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539575"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721119"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Microsoft 專屬**  
   
- 執行 128 位元的連鎖的比較和交換。  
+執行 128 位元的連鎖的比較和交換。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Destination`  
- 目的地，也就是兩個 64 位元整數的陣列的指標視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免了一般性保護錯誤。  
+*目的地*<br/>
+[in、 out]目的地，也就是兩個 64 位元整數的陣列的指標視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免了一般性保護錯誤。  
   
- [輸入] `ExchangeHigh`  
- 64 位元整數，可能會與目的地的較高部份交換。  
+*ExchangeHigh*<br/>
+[in]64 位元整數，可能會與目的地的較高部份交換。  
   
- [輸入] `ExchangeLow`  
- 64 位元整數，可能會與目的地的低位部份交換。  
+*ExchangeLow*<br/>
+[in]64 位元整數，可能會與目的地的低位部份交換。  
   
- [in、out] `ComparandResult`  
- （視為 128 位元欄位） 的兩個 64 位元整數的陣列指標要與目的地比較。  在輸出時，這會覆寫目的地的原始值。  
+*ComparandResult*<br/>
+[in、 out]（視為 128 位元欄位） 的兩個 64 位元整數的陣列指標要與目的地比較。  在輸出時，這會覆寫目的地的原始值。  
   
 ## <a name="return-value"></a>傳回值  
  1，表示 128 位元比較元等於原始值的目的地。 `ExchangeHigh` 和`ExchangeLow`覆寫的 128 位元的目的地。  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**結束 Microsoft 專屬**  
- 進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
+**結束 Microsoft 專屬**
+
+進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

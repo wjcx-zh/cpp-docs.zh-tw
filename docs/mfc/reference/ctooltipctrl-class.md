@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06f0b78938534f685f14757ca16e5ad2574412f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684803"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726748"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 封裝「工具提示控制項」的功能，這個小型快顯視窗顯示說明應用程式中工具用途的單行文字。  
@@ -374,7 +374,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*lpToolInfo*|指標[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)接收目前的工具提示視窗的相關資訊的結構。|  
+|*lpToolInfo*|[out]指標[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)接收目前的工具提示視窗的相關資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 擷取的資訊，則為 TRUE。否則為 FALSE。  
@@ -504,7 +504,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pttgt*|指標[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)結構，其中包含工具提示控制項的相關資訊。 當這個方法傳回時， *pszTitle*隸屬[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)結構標題的文字點。|  
+|*pttgt*|[out]指標[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)結構，其中包含工具提示控制項的相關資訊。 當這個方法傳回時， *pszTitle*隸屬[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle)結構標題的文字點。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle)訊息，Windows SDK 中所述。  

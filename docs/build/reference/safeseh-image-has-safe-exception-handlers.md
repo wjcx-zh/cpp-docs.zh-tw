@@ -18,107 +18,109 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9156fd0d4d0433cfb975c242bc87008471bc4723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 035485540135fb3b3b082de630b31d6bf934b3d9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713878"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (影像擁有安全例外狀況處理常式)
-```  
-/SAFESEH[:NO]  
-```  
-  
- 當 **/SAFESEH**指定，連結器只會產生映像，是否它也可以產生映像的安全例外狀況處理常式的表格。 此資料表指定哪些例外狀況處理常式是有效的映像的作業系統。  
-  
- **/SAFESEH**適用於 x86 連結時才有效目標。 **/SAFESEH**已經註明的例外狀況處理常式的平台不支援。 例如，在 x64 和 ARM 上，所有的例外狀況處理常式會註明在 PDATA 中。 ML64.exe 到映像，可讓您回溯透過 ml64 函式已加入發出 SEH 資訊 （XDATA 和 PDATA） 的註釋的支援。 請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)如需詳細資訊。  
-  
- 如果 **/SAFESEH**未指定，連結器將會產生安全的例外狀況處理常式的表格的映像，如果所有模組都都與安全例外狀況處理功能相容。 如果任何模組不相容於安全例外狀況處理功能，產生的映像將不會包含安全例外狀況處理常式的表格。 如果[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 或其中一個 EFI_ * 選項，指定連結器不會嘗試產生映像包含表格的安全例外狀況處理常式，當兩者皆非的那些子系統可以使用的資訊。  
-  
- 如果 **/SAFESEH:NO**指定，連結器不會產生安全的例外狀況處理常式的表格的映像，即使所有模組都都與安全的例外狀況處理功能相容。  
-  
- 連結器不會產生映像的最常見原因是因為一或多個輸入檔案 （模組） 連結器無法與安全例外狀況處理常式的功能相容。 模組不相容於安全例外狀況處理常式的常見原因是因為它使用舊版 Visual c + + 編譯器建立。  
-  
- 您也可以註冊為結構化例外狀況處理常式函式，使用[。SAFESEH](../../assembler/masm/dot-safeseh.md)。  
-  
- 不可能將標示的現有二進位為有安全例外狀況處理常式 （或任何例外狀況處理常式）;必須在建置階段新增安全的例外狀況處理的詳細資訊。  
-  
- 建置安全的例外狀況處理常式的表格連結器的能力取決於使用 C 執行階段程式庫的應用程式。 如果連結[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)和您想要的安全例外狀況處理常式的資料表，您必須提供載入的組態結構 （例如可以 loadcfg.c CRT 原始程式檔中找到），其中包含 Visual c + + 定義的所有項目。 例如:   
-  
-```  
-#include <windows.h>  
-extern DWORD_PTR __security_cookie;  /* /GS security cookie */  
-  
-/*  
- * The following two names are automatically created by the linker for any  
- * image that has the safe exception table present.  
-*/  
-  
-extern PVOID __safe_se_handler_table[]; /* base of safe handler entry table */  
-extern BYTE  __safe_se_handler_count;  /* absolute symbol whose address is  
-                                           the count of table entries */  
-typedef struct {  
-    DWORD       Size;  
-    DWORD       TimeDateStamp;  
-    WORD        MajorVersion;  
-    WORD        MinorVersion;  
-    DWORD       GlobalFlagsClear;  
-    DWORD       GlobalFlagsSet;  
-    DWORD       CriticalSectionDefaultTimeout;  
-    DWORD       DeCommitFreeBlockThreshold;  
-    DWORD       DeCommitTotalFreeThreshold;  
-    DWORD       LockPrefixTable;            // VA  
-    DWORD       MaximumAllocationSize;  
-    DWORD       VirtualMemoryThreshold;  
-    DWORD       ProcessHeapFlags;  
-    DWORD       ProcessAffinityMask;  
-    WORD        CSDVersion;  
-    WORD        Reserved1;  
-    DWORD       EditList;                   // VA  
-    DWORD_PTR   *SecurityCookie;  
-    PVOID       *SEHandlerTable;  
-    DWORD       SEHandlerCount;  
-} IMAGE_LOAD_CONFIG_DIRECTORY32_2;  
-  
-const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {  
-    sizeof(IMAGE_LOAD_CONFIG_DIRECTORY32_2),  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    0,  
-    &__security_cookie,  
-    __safe_se_handler_table,  
-    (DWORD)(DWORD_PTR) &__safe_se_handler_count  
-};  
-```  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  選取 **連結器**資料夾。  
-  
-3.  選取 **命令列**屬性頁。  
-  
-4.  輸入到選項**其他選項** 方塊中。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
-  
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
-  
-## <a name="see-also"></a>另請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+```
+/SAFESEH[:NO]
+```
+
+當 **/SAFESEH**指定，連結器只會產生映像，是否它也可以產生映像的安全例外狀況處理常式的表格。 此資料表指定哪些例外狀況處理常式是有效的映像的作業系統。
+
+**/SAFESEH**適用於 x86 連結時才有效目標。 **/SAFESEH**已經註明的例外狀況處理常式的平台不支援。 例如，在 x64 和 ARM 上，所有的例外狀況處理常式會註明在 PDATA 中。 ML64.exe 到映像，可讓您回溯透過 ml64 函式已加入發出 SEH 資訊 （XDATA 和 PDATA） 的註釋的支援。 請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)如需詳細資訊。
+
+如果 **/SAFESEH**未指定，連結器將會產生安全的例外狀況處理常式的表格的映像，如果所有模組都都與安全例外狀況處理功能相容。 如果任何模組不相容於安全例外狀況處理功能，產生的映像將不會包含安全例外狀況處理常式的表格。 如果[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 或其中一個 EFI_ * 選項，指定連結器不會嘗試產生映像包含表格的安全例外狀況處理常式，當兩者皆非的那些子系統可以使用的資訊。
+
+如果 **/SAFESEH:NO**指定，連結器不會產生安全的例外狀況處理常式的表格的映像，即使所有模組都都與安全的例外狀況處理功能相容。
+
+連結器不會產生映像的最常見原因是因為一或多個輸入檔案 （模組） 連結器無法與安全例外狀況處理常式的功能相容。 模組不相容於安全例外狀況處理常式的常見原因是因為它使用舊版 Visual c + + 編譯器建立。
+
+您也可以註冊為結構化例外狀況處理常式函式，使用[。SAFESEH](../../assembler/masm/dot-safeseh.md)。
+
+不可能將標示的現有二進位為有安全例外狀況處理常式 （或任何例外狀況處理常式）;必須在建置階段新增安全的例外狀況處理的詳細資訊。
+
+建置安全的例外狀況處理常式的表格連結器的能力取決於使用 C 執行階段程式庫的應用程式。 如果連結[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)和您想要的安全例外狀況處理常式的資料表，您必須提供載入的組態結構 （例如可以 loadcfg.c CRT 原始程式檔中找到），其中包含 Visual c + + 定義的所有項目。 例如: 
+
+```
+#include <windows.h>
+extern DWORD_PTR __security_cookie;  /* /GS security cookie */
+
+/*
+* The following two names are automatically created by the linker for any
+* image that has the safe exception table present.
+*/
+
+extern PVOID __safe_se_handler_table[]; /* base of safe handler entry table */
+extern BYTE  __safe_se_handler_count;  /* absolute symbol whose address is
+                                           the count of table entries */
+typedef struct {
+    DWORD       Size;
+    DWORD       TimeDateStamp;
+    WORD        MajorVersion;
+    WORD        MinorVersion;
+    DWORD       GlobalFlagsClear;
+    DWORD       GlobalFlagsSet;
+    DWORD       CriticalSectionDefaultTimeout;
+    DWORD       DeCommitFreeBlockThreshold;
+    DWORD       DeCommitTotalFreeThreshold;
+    DWORD       LockPrefixTable;            // VA
+    DWORD       MaximumAllocationSize;
+    DWORD       VirtualMemoryThreshold;
+    DWORD       ProcessHeapFlags;
+    DWORD       ProcessAffinityMask;
+    WORD        CSDVersion;
+    WORD        Reserved1;
+    DWORD       EditList;                   // VA
+    DWORD_PTR   *SecurityCookie;
+    PVOID       *SEHandlerTable;
+    DWORD       SEHandlerCount;
+} IMAGE_LOAD_CONFIG_DIRECTORY32_2;
+
+const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
+    sizeof(IMAGE_LOAD_CONFIG_DIRECTORY32_2),
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    &__security_cookie,
+    __safe_se_handler_table,
+    (DWORD)(DWORD_PTR) &__safe_se_handler_count
+};
+```
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 選取 **連結器**資料夾。
+
+1. 選取 **命令列**屬性頁。
+
+1. 輸入到選項**其他選項** 方塊中。
+
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
+
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>另請參閱
+
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

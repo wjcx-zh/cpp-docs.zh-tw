@@ -1,5 +1,5 @@
 ---
-title: 推斷規則的優先順序 |Microsoft 文件
+title: 推斷規則的優先順序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725227"
 ---
 # <a name="precedence-in-inference-rules"></a>推斷規則的優先順序
-如果有多重定義推斷規則，NMAKE 就會使用最高優先順序的定義。 下列清單顯示的優先順序從最高到最低：  
-  
-1.  定義 makefile; 中的推斷規則更新的定義，其優先順序。  
-  
-2.  Tools.ini; 在定義推斷規則更新的定義，其優先順序。  
-  
-3.  預先定義的推斷規則。  
-  
-## <a name="see-also"></a>另請參閱  
- [推斷規則](../build/inference-rules.md)
+
+如果有多重定義推斷規則，NMAKE 就會使用最高優先順序的定義。 下列清單顯示優先順序從最高到低排列的順序：
+
+1. Makefile; 中定義推斷規則更新的定義，其優先順序。
+
+1. Tools.ini; 中定義推斷規則更新的定義，其優先順序。
+
+1. 預先定義的推斷規則。
+
+## <a name="see-also"></a>另請參閱
+
+[推斷規則](../build/inference-rules.md)

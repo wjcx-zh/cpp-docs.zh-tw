@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb123f6ca46841b59d178bba88b97ca44b55f621
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767461"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725877"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>內建屬性, ATL 控制項精靈
 
 在精靈的此頁面會識別內建控制項支援的屬性。 根據預設，會識別沒有屬性。
 
-**不支援**  
-指出目前控制項不支援的可用屬性。
+- **不支援**
 
-**支援**  
-指出控制項目前支援的屬性。
+   指出目前控制項不支援的可用屬性。
+
+- **支援**
+
+   指出控制項目前支援的屬性。
 
 |傳輸按鈕|描述|
 |---------------------|-----------------|
 |**>**|將加入至**Supported**清單中目前選取的屬性名稱**不支援**清單。|
 |**>>**|將加入至**Supported**清單中可用的所有屬性名稱**不支援**都清單。|
-|**<**|移除中目前選取的屬性名稱**支援**清單。|
-|**<<**|移除目前所列的所有屬性名稱**支援**清單。|
+|**\<**|移除中目前選取的屬性名稱**支援**清單。|
+|**\<\<**|移除目前所列的所有屬性名稱**支援**清單。|
 
 ## <a name="see-also"></a>另請參閱
 

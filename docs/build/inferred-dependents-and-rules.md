@@ -1,5 +1,5 @@
 ---
-title: 推斷相依和規則 |Microsoft 文件
+title: 推斷相依和規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae09fd756e0eb4eab3031beb5b4cba8c4d35a40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c13ae7784ff40b39642ce26fd062a1aab80f2d4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368040"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707547"
 ---
 # <a name="inferred-dependents-and-rules"></a>推斷相依和規則
-如果有適用的推斷規則，nmake 就會假設為目標的推斷的相依。 規則適用於：  
-  
--   *toext*符合目標的擴充功能。  
-  
--   *fromext*具有目標的基底名稱以及檔案的副檔名存在於目前或指定的目錄中的相符項目。  
-  
--   *fromext*處於[。尾碼](../build/dot-directives.md); 沒有其他*fromext*在比對規則有較高 **。尾碼**優先順序。  
-  
--   沒有明確的相依具有較高 **。尾碼**優先順序。  
-  
- 推斷相依項目可能會導致未預期的副作用。 如果目標的描述區塊包含命令，NMAKE 就會執行這些命令，而不是命令中的規則。  
-  
-## <a name="see-also"></a>另請參閱  
- [推斷規則](../build/inference-rules.md)
+
+如果適用的推斷規則存在，NMAKE 就會假設為目標的推斷的相依。 如果，套用規則：
+
+- *toext*符合目標的延伸模組。
+
+- *fromext*有目標的基底名稱和檔案的副檔名存在於目前或指定目錄中的相符項目。
+
+- *fromext*處於[。尾碼](../build/dot-directives.md); 沒有其他*fromext*比對規則中有較高 **。後置詞**優先順序。
+
+- 具有較高的任何明確的相依 **。後置詞**優先順序。
+
+推斷相依項目可能會造成非預期的副作用。 如果目標的描述區塊包含命令，NMAKE 就會執行這些命令，而不是命令中的規則。
+
+## <a name="see-also"></a>另請參閱
+
+[推斷規則](../build/inference-rules.md)

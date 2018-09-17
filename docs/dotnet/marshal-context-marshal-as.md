@@ -1,5 +1,5 @@
 ---
-title: marshal_context::marshal_as |Microsoft 文件
+title: marshal_context::marshal_as |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27f27b164d7a00e05e8d080a692f97b696776cbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f88d086c76ea6b56f1bb049b886df70ceadbdbb9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136203"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707898"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 在特定資料物件上執行封送處理，以便在 Managed 資料類型和原生資料類型之間進行轉換。  
@@ -39,18 +39,18 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `input`  
- 您想要封送處理的值`To_Type`變數。  
+*input*<br/>
+[in]您想要封送處理的值`To_Type`變數。  
   
 ## <a name="return-value"></a>傳回值  
  類型的變數`To_Type`也就是轉換的值的`input`。  
   
 ## <a name="remarks"></a>備註  
- 這個函式會在特定資料物件上執行封送處理。 此函式只適用於資料表中所指定的轉換[概觀的封送處理 c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。  
+ 這個函式會在特定資料物件上執行封送處理。 此函式只適用於中的資料表所表示的轉換[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。  
   
- 如果您嘗試封送處理不支援的資料類型的一組`marshal_as`會產生錯誤[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在編譯時間。 請閱讀隨附此錯誤，如需詳細資訊訊息。 `C4996`以上就已被取代的函式可能會產生錯誤。 會產生此錯誤的兩個條件是嘗試封送處理一對不支援的資料類別，以及嘗試為需要內容的轉換使用 `marshal_as`。  
+ 如果您嘗試封送處理不支援的資料類型的一組`marshal_as`會產生錯誤[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在編譯時期。 閱讀隨附此錯誤，如需詳細資訊的訊息。 `C4996`錯誤可能產生多個只是已被取代的函式。 會產生此錯誤的兩個條件是嘗試封送處理一對不支援的資料類別，以及嘗試為需要內容的轉換使用 `marshal_as`。  
   
- 封送處理程式庫包含數個標頭檔。 任何轉換必須只有一個檔案，但您可以加入其他檔案，如果您需要進行其他轉換。 `Marshaling Overview in C++` 中的表格所指出的封送處理檔案應該包含在每次轉換中。  
+ 封送處理程式庫是由數個標頭檔所組成。 任何轉換必須只有一個檔案，但如果您需要為其他轉換，您可以包含其他檔案。 `Marshaling Overview in C++` 中的表格所指出的封送處理檔案應該包含在每次轉換中。  
   
 ## <a name="example"></a>範例  
  這個範例會建立從 `System::String` 到 `const char *` 變數類型的封送處理的內容。 已轉換的資料在刪除內容的行之後將失效。  

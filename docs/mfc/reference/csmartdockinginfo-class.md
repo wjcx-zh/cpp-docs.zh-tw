@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849811"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725851"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 類別
 定義智慧停駐標記的外觀。  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*params*  
- 型別的物件`CSmartDockingInfo`，並填入目前的智慧停駐參數。  
+*params*<br/>
+[out]型別的物件`CSmartDockingInfo`，並填入目前的智慧停駐參數。  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  指定是否要使用目前的佈景主題色彩時，架構會顯示智慧停駐標記。  

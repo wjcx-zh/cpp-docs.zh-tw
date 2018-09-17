@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686153"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725170"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 類別
 `CMFCFontComboBox`類別會建立包含字型清單的下拉式方塊控制項。  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDesc*  
- 指向字型描述物件。  
+*pDesc*<br/>
+[in]指向字型描述物件。  
   
- [in]*lpszName*  
- 指定的字型名稱。  
+*lpszName*<br/>
+[in]指定的字型名稱。  
   
- [in]*nCharSet*  
- 指定的字元集。 預設值是 DEFAULT_CHARSET。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
+*nCharSet*<br/>
+[in]指定的字元集。 預設值是 DEFAULT_CHARSET。 如需詳細資訊，請參閱 <<c0> `lfCharSet` 隸屬[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果字型下拉式方塊中的項目符合指定的字型描述物件或字型名稱和字元集，則為 TRUE否則為 FALSE。  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nFontType*  
- 指定的字型類型。 預設值為 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
+*nFontType*<br/>
+[in]指定的字型類型。 預設值為 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
   
- [in]*nCharSet*  
- 指定字型的字元集。 預設值是 DEFAULT_CHARSET。  
+*nCharSet*<br/>
+[in]指定字型的字元集。 預設值是 DEFAULT_CHARSET。  
   
- [in]*nPitchAndFamily*  
- 指定字型的字距和系列。 預設值是 DEFAULT_PITCH。  
+*nPitchAndFamily*<br/>
+[in]指定字型的字距和系列。 預設值是 DEFAULT_PITCH。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 初始化字型下拉式方塊，則為 TRUE。否則為 FALSE。  

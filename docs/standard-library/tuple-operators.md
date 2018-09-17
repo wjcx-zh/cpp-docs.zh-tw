@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9990ecb01ea6de68713cedc49fbddadeb9ad7c30
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956959"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726345"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 運算子
 
@@ -40,8 +40,8 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ### <a name="remarks"></a>備註
 
@@ -105,8 +105,8 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ### <a name="remarks"></a>備註
 
@@ -170,8 +170,8 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ### <a name="remarks"></a>備註
 
@@ -235,8 +235,8 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ### <a name="remarks"></a>備註
 
@@ -300,8 +300,8 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ### <a name="remarks"></a>備註
 
@@ -365,8 +365,8 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>參數
 
-*TN*  
- 第 N 個 tuple 項目類型。
+*TN*<br/>
+第 N 個 tuple 項目類型。
 
 ### <a name="remarks"></a>備註
 

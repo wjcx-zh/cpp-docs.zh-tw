@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960550"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719130"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 類別
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>參數
 
-*_Freezeit*  
- A **bool**指出您是否要凍結的資料流。
+*_Freezeit*<br/>
+A **bool**指出您是否要凍結的資料流。
 
 ### <a name="remarks"></a>備註
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>參數
 
-*_Meta*  
- 要插入緩衝區的字元，或 `EOF`。
+*_Meta*<br/>
+要插入緩衝區的字元，或 `EOF`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>參數
 
-*_Meta*  
- 要插入緩衝區的字元，或 `EOF`。
+*_Meta*<br/>
+要插入緩衝區的字元，或 `EOF`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>參數
 
-*_Off*  
- 要搜尋的相對位置 *_Way*。
+*_Off*<br/>
+要搜尋的相對位置 *_Way*。
 
-*_Way*  
- 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
+*_Way*<br/>
+位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*_Which*  
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
+*_Which*<br/>
+指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>參數
 
-*_Sp*  
- 要搜尋的位置。
+*_Sp*<br/>
+要搜尋的位置。
 
-*_Which*  
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
+*_Which*<br/>
+指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>參數
 
-*_Allocfunc*  
- 用於配置記憶體緩衝區的函式。
+*_Allocfunc*<br/>
+用於配置記憶體緩衝區的函式。
 
-*count*  
- 判斷所指向緩衝區的長度 *_Getptr*。 如果 *_Getptr*不是引數 （第一個建構函式的形式），建議的配置大小的緩衝區。
+*count*<br/>
+判斷所指向緩衝區的長度 *_Getptr*。 如果 *_Getptr*不是引數 （第一個建構函式的形式），建議的配置大小的緩衝區。
 
-*_Freefunc*  
- 用於釋放記憶體緩衝區的函式。
+*_Freefunc*<br/>
+用於釋放記憶體緩衝區的函式。
 
-*_Getptr*  
- 用於輸入的緩衝區。
+*_Getptr*<br/>
+用於輸入的緩衝區。
 
-*_Putptr*  
- 用於輸出的緩衝區。
+*_Putptr*<br/>
+用於輸出的緩衝區。
 
 ### <a name="remarks"></a>備註
 

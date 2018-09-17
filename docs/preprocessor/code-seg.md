@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540577"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719117"
 ---
 # <a name="codeseg"></a>code_seg
 指定文字區段，其中函式儲存在 .obj 檔案中。  
@@ -34,6 +34,25 @@ ms.locfileid: "42540577"
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>參數
+  
+**push**<br/>
+（選擇性）將記錄放入內部編譯器堆疊上。 A**推播**可以有*識別項*並*區段名稱*。  
+  
+**pop**<br/>
+（選擇性）從內部編譯器堆疊頂端移除記錄。  
+  
+*identifier*<br/>
+（選擇性）當搭配**推播**，將名稱指派給內部編譯器堆疊上的記錄。 當搭配**pop**，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
+  
+*識別項*可讓多筆記錄，是只使用一個快顯**pop**命令。  
+  
+「*區段名稱*"<br/>  
+（選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中的文字區段名稱。  
+  
+「*區段類別*"<br/>
+（選擇性）會被忽略，包含與 c + + 的版本早於 2.0 版相容。  
+  
 ## <a name="remarks"></a>備註  
  
 **Code_seg** pragma 指示詞不會控制具現化的範本，產生的物件程式碼，也不會隱含地編譯器所產生的程式碼的位置，例如特殊成員函式。 我們建議您改用[__declspec(code_seg(...))](../cpp/code-seg-declspec.md)改為屬性，因為它可讓您控制所有目的碼的位置。 這包括編譯器產生的程式碼。  
@@ -43,24 +62,7 @@ A*區段*在.obj 檔案是載入成為記憶體單位的資料的具名的區塊
 **Code_seg** pragma 指示詞會指示編譯器 z jednotky překladu 的後續物件的所有程式碼置於名為文字區段*區段名稱*。 根據預設，.obj 檔中函式所使用的文字區段是具名的 .text。  
   
 A **code_seg**不含參數的 pragma 指示詞會將後續目的碼的文字區段名稱重設為.text。  
-  
-*推播*（選擇性）  
-將記錄放置到內部編譯器堆疊上。 A*推播*可以有*識別項*並*區段名稱*。  
-  
-*pop* （選擇性）  
-會從內部編譯器堆疊頂端移除記錄。  
-  
-*識別項*（選擇性）  
-當搭配*推播*，將名稱指派給內部編譯器堆疊上的記錄。 當搭配*pop*，會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，不會推出。  
-  
-*識別項*可讓多筆記錄，是只使用一個快顯*pop*命令。  
-  
-「*區段名稱*」 （選擇性）  
-區段的名稱。 當搭配*pop*，時會推出堆疊並*區段名稱*會變成作用中的文字區段名稱。  
-  
-「*區段類別*」 （選擇性）  
-會被忽略，包含的原因是為了與 2.0 版以前的 C++ 版本相容。  
-  
+
 您可以使用[DUMPBIN。EXE](../build/reference/dumpbin-command-line.md)應用程式檢視.obj 檔。 每個支援的目標架構的 DUMPBIN 版本是隨附於 Visual Studio。  
   
 ## <a name="example"></a>範例  

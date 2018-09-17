@@ -1,5 +1,5 @@
 ---
-title: 程式庫 |Microsoft 文件
+title: 程式庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d2fb7e69b0557bf96601666c390b3d59412b5a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43b14e8e8ff4871ba4319c7f4fac5545e72e710b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723550"
 ---
 # <a name="library"></a>LIBRARY
-會告知連結來建立 DLL。 同時，連結會建立匯入程式庫，除非在組建中使用.exp 檔。  
-  
-```  
-LIBRARY [library][BASE=address]  
-```  
-  
-## <a name="remarks"></a>備註  
- *文件庫*引數指定的 DLL 名稱。 您也可以使用[/out](../../build/reference/out-output-file-name.md)連結器選項來指定 DLL 的輸出名稱。  
-  
- 基底 =*位址*引數則設定作業系統使用載入的 DLL 的基底位址。 這個引數會覆寫 0x10000000 預設 DLL 位置。 請參閱描述[/基底](../../build/reference/base-base-address.md)基底地址的詳細資料的選項。  
-  
- 請務必使用[/DLL](../../build/reference/dll-build-a-dll.md)連結器選項，當您建置 DLL。  
-  
-## <a name="see-also"></a>另請參閱  
- [模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)
+
+會告訴 LINK 以建立 DLL。 在此同時，連結會建立匯入程式庫，除非在組建中使用.exp 檔。
+
+```
+LIBRARY [library][BASE=address]
+```
+
+## <a name="remarks"></a>備註
+
+*程式庫*引數會指定 DLL 的名稱。 您也可以使用[/out](../../build/reference/out-output-file-name.md)連結器選項來指定 DLL 的輸出名稱。
+
+基底 =*地址*引數設定作業系統使用載入的 DLL 的基底位址。 這個引數會覆寫預設的 DLL 位置 0x10000000。 請參閱的說明[基底/](../../build/reference/base-base-address.md)基底位址的詳細資料的選項。
+
+請務必使用[/DLL](../../build/reference/dll-build-a-dll.md)建置 DLL 時，連結器選項。
+
+## <a name="see-also"></a>另請參閱
+
+[模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)

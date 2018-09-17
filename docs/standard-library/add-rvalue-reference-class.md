@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20a637872c8c26433920da313d4e6c001736d06
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e4936772c82bb482e468a37f2f7b327c9a728f0c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720118"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference 類別
 
@@ -81,7 +81,8 @@ All static_assert tests of add_rvalue_reference passed.
 
 ## <a name="requirements"></a>需求
 
-標頭： \<type_traits >  
+標頭： \<type_traits >
+
 命名空間： std
 
 ## <a name="see-also"></a>另請參閱

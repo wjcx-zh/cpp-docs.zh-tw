@@ -1,5 +1,5 @@
 ---
-title: _InterlockedAdd 內建函式 |Microsoft 文件
+title: _Interlockedand 內建函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,15 +36,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333943"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709523"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAnd 內建函式
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  執行不可部分完成的相加，這可確保多個執行緒可以存取共用變數時，操作可成功完成。  
   
@@ -86,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in、out] `Addend`  
- 指向要加入整數的指標；由相加的結果所取代。  
+*加數*<br/>
+[in、 out]要加入至; 整數的指標取代為相加的結果。  
   
- [in] `Value`  
- 要加入的值。  
+*值*<br/>
+[in]要加入的值。  
   
 ## <a name="return-value"></a>傳回值  
  兩個函式都傳回相加的結果。  
@@ -173,7 +173,7 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   

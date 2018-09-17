@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598229"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720723"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
 由於 Visual Studio 支援多個平台工具組，您可以針對作業系統和預設工具組不支援的執行階段程式庫。 例如，藉由切換平台工具組，您可以使用 C + + 11、 C + + 14 和在 Visual Studio 中 Visual c + + 編譯器支援的 C + + 17 語言增強功能來建立以 Windows XP 和 Windows Server 2003 為目標的應用程式。 您可以也會使用舊版平台工具組來維護的二進位檔相容的舊版程式碼，同時仍然利用 Visual Studio IDE 的最新的功能。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安裝 Windows XP 平台工具組
+
 若要在 Visual Studio 2017 中取得的平台工具組和目標 Windows XP 和 Windows Server 2003 的元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或您選擇**修改**若要修改現有的安裝，請確定**使用 c + + 的桌面開發**選取工作負載。 在此工作負載的選用元件的清單中，選擇**c + + 的 Windows XP 支援**，然後選擇**安裝**或**修改**。
 
 ## <a name="windows-xp-targeting-experience"></a>以 Windows XP 為目標的體驗
@@ -72,7 +73,7 @@ Windows XP 平台工具組，C 執行階段程式庫 (CRT)、 c + + 標準程式
 
 - **偵錯 DirectX 圖形**
 
-     圖形偵錯工具不支援 Direct3D 9 API，因為它無法用於偵錯在 Windows XP 或 Windows Server 2003 使用 Direct3D 的應用程式。 不過，如果應用程式實作使用 Direct3D 10 或 Direct3D 11 API 的替代轉譯器，則會使用圖形偵錯工具來診斷這些 API 的使用問題。
+   圖形偵錯工具不支援 Direct3D 9 API，因為它無法用於偵錯在 Windows XP 或 Windows Server 2003 使用 Direct3D 的應用程式。 不過，如果應用程式實作使用 Direct3D 10 或 Direct3D 11 API 的替代轉譯器，則會使用圖形偵錯工具來診斷這些 API 的使用問題。
 
 - **建置 HLSL**
 

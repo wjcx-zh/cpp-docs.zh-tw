@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720267"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 類別
 可讓使用者建立不同的命令與特定的關聯[CView](../../mfc/reference/cview-class.md)物件的使用者在該檢視內部按兩下時。  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iViewId*  
- 檢視識別碼。  
+*iViewId*<br/>
+[in]檢視識別碼。  
   
- [in]*uiViewNameResId*  
- 參考的檢視表名稱的資源字串識別碼。  
+*uiViewNameResId*<br/>
+[in]參考的檢視表名稱的資源字串識別碼。  
   
- [in]*uiIconId*  
- 檢視圖示識別碼。  
+*uiIconId*<br/>
+[in]檢視圖示識別碼。  
   
- [in]*iId*  
- 檢視識別碼。  
+*iId*<br/>
+[in]檢視識別碼。  
   
- [in]*lpszViewName*  
- 檢視名稱。  
+*lpszViewName*<br/>
+[in]檢視名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iId*  
- 檢視識別碼。  
+*iId*<br/>
+[in]檢視識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果檢視是相關聯的命令; 命令識別碼否則為 0。  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iViewId*  
- 檢視識別碼。  
+*iViewId*<br/>
+[in]檢視識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則圖示資源識別碼否則為 0。  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszName*  
- 檢視名稱。  
+*lpszName*<br/>
+[in]檢視名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則檢視表識別碼否則為 0。  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*listOfNames*  
- 參考`CStringList`物件。  
+*listOfNames*<br/>
+[out]參考`CStringList`物件。  
   
 ### <a name="remarks"></a>備註  
  這個方法會填入參數`listOfNames`使用註冊的所有檢視的名稱[CMouseManager::AddView](#addview)。  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 登錄機碼的路徑。  
+*lpszProfileName*<br/>
+[in]登錄機碼的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 登錄機碼的路徑。  
+*lpszProfileName*<br/>
+[in]登錄機碼的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*iViewId*  
- 檢視識別項。  
+*iViewId*<br/>
+[in]檢視識別項。  
   
- [in]*uiCmd*  
- 命令識別項。  
+*uiCmd*<br/>
+[in]命令識別項。  
   
 ### <a name="remarks"></a>備註  
  若要將自訂命令產生關聯的檢視，您必須先註冊檢視使用[CMouseManager::AddView](#addview)。 `AddView`方法需要檢視識別碼做為輸入參數。 一旦您註冊的檢視時，您可以呼叫`CMouseManager::SetCommandForDblClk`具有相同檢視識別碼輸入參數提供給`AddView`。 之後，當使用者按兩下滑鼠在已註冊的檢視時，應用程式將執行命令以*uiCmd。* 若要支援自訂的滑鼠行為，您也需要自訂向滑鼠管理員的檢視。 如需有關自訂的滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../keyboard-and-mouse-customization.md)。  

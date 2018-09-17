@@ -1,5 +1,5 @@
 ---
-title: -SUMMARY |Microsoft 文件
+title: -摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c4824de941674f55e85bc702f442cfa2f45aa5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b960387aad13744ed8e0a83b10348e6e314c1d35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373744"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715700"
 ---
 # <a name="summary"></a>/SUMMARY
-```  
-/SUMMARY  
-```  
-  
-## <a name="remarks"></a>備註  
- 此選項會顯示最少資訊區段中，包括大小總計。 這個選項是預設值，如果未不指定任何其他選項。  
-  
- 只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
-  
-## <a name="see-also"></a>另請參閱  
- [DUMPBIN 選項](../../build/reference/dumpbin-options.md)
+
+```
+/SUMMARY
+```
+
+## <a name="remarks"></a>備註
+
+此選項會顯示各區段，包括大小總計的基本資訊。 如果未不指定任何其他選項，此選項會是預設值。
+
+只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。
+
+## <a name="see-also"></a>另請參閱
+
+[DUMPBIN 選項](../../build/reference/dumpbin-options.md)

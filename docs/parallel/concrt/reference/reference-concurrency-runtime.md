@@ -1,5 +1,5 @@
 ---
-title: 參考 （並行執行階段） |Microsoft 文件
+title: 參考 （並行執行階段） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693448"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723225"
 ---
 # <a name="reference-concurrency-runtime"></a>參考 (並行執行階段)
-本節包含並行執行階段的參考的資訊。
-**請注意**的 c + + 語言標準保留的識別項開頭是底線 (_) 字元，例如文件庫的實作使用。 請勿在您的程式碼中使用這些名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 基於這些理由，並行執行階段文件中會省略這類程式碼項目。
+本節包含並行執行階段的參考資訊。
+
+> [!Note]
+> C + + 語言標準保留使用開頭為底線 (_) 字元，程式庫等實作的識別項。 請勿在您的程式碼中使用這些名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 基於這些理由，並行執行階段文件中省略這類程式碼項目。
 
 ## <a name="in-this-section"></a>本節內容
+
 [concurrency 命名空間](concurrency-namespace.md)concurrency 命名空間提供類別和函式可讓您存取並行執行階段，而 c + + 的並行程式設計架構。 如需詳細資訊，請參閱[並行執行階段](../concurrency-runtime.md)。
 
-[std 命名空間中](std-namespace.md)
+[std 命名空間](std-namespace.md)
+
 [stdx 命名空間](stdx-namespace.md)
-
-

@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107421"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711048"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空間函式
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 浮點值。
 
-`_Iptr` (out 參數）  
-整數部分`_X`，為浮點值。
+`_Iptr`  
+[out]整數部分`_X`，為浮點值。
 
 ### <a name="return-value"></a>傳回值
 帶正負號小數部分`_X`。
@@ -1891,8 +1891,8 @@ inline double remquo(
 `_Y`  
 第二個浮點引數。
 
-`_Quo` (out 參數）  
-用來傳回分數位元之商數的整數的位址`_X`除以分數位元`_Y`。
+`_Quo`  
+[out]用來傳回分數位元之商數的整數的位址`_X`除以分數位元`_Y`。
 
 ### <a name="return-value"></a>傳回值
 傳回餘數`_X`除以`_Y`。
@@ -1914,8 +1914,8 @@ inline float remquof(
 `_Y`  
 第二個浮點引數。
 
-`_Quo` (out 參數）  
-用來傳回分數位元之商數的整數的位址`_X`除以分數位元`_Y`。
+`_Quo`  
+[out]用來傳回分數位元之商數的整數的位址`_X`除以分數位元`_Y`。
 
 ### <a name="return-value"></a>傳回值
 傳回餘數`_X`除以`_Y`。

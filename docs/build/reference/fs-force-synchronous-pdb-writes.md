@@ -1,5 +1,5 @@
 ---
-title: -FS （強制同步 PDB 寫入） |Microsoft 文件
+title: -FS （強制同步 PDB 寫入） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8565022a77742a1a8c7ed1f243a192d94c8627fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b332782cb9bcd929bcd67d4d81b7a7d0259f53cc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374787"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714593"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (強制同步 PDB 寫入)
-強制寫入要程式資料庫 (PDB) 檔案，建立[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)或[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— 透過 MSPDBSRV 序列化。EXE。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-/FS  
-```  
-  
-## <a name="remarks"></a>備註  
- 根據預設，當 **/Zi**或 **/ZI**指定，則編譯器會鎖定 PDB 檔案寫入類型資訊和符號偵錯資訊。 當類型數目很大時，這可以大幅降低編譯器產生類型資訊所需的時間。 如果另一個處理序暫時鎖定 PDB 檔案 (例如，防毒程式)，編譯器寫入可能會失敗，而且可能會發生嚴重錯誤。 當 cl.exe 的多個複本存取同一個 PDB 檔，這個問題也可能會發生，例如，如果方案有使用相同中繼目錄的獨立專案或者輸出目錄和平行組建已啟用。 **/FS**編譯器選項防止編譯器鎖定 PDB 檔案，並強制寫入通過 MSPDBSRV。EXE，將序列化存取權。 這可能會使建置時間明顯更久，而且不能避免 cl.exe 的多個執行個體同時存取 PDB 檔案可能發生的所有錯誤。 建議您變更方案，以便獨立專案寫入個別的中繼和輸出位置，或者讓一個專案相依於另一個專案，以強制序列化的專案建置。  
-  
- [/MP](../../build/reference/mp-build-with-multiple-processes.md)選項可讓 **/FS**預設。  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  選取**C/c + +** 資料夾。  
-  
-3.  選取**命令列**屬性頁。  
-  
-4.  修改**其他選項**屬性，以包括`/FS`，然後選擇 **確定**。  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
-  
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
-  
-## <a name="see-also"></a>另請參閱  
- [編譯器選項](../../build/reference/compiler-options.md)   
- [設定編譯器選項](../../build/reference/setting-compiler-options.md)
+
+強制寫入要程式資料庫 (PDB) 檔案，由[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)或[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— 透過 MSPDBSRV 序列化。EXE。
+
+## <a name="syntax"></a>語法
+
+```
+/FS
+```
+
+## <a name="remarks"></a>備註
+
+根據預設，當 **/Zi**或是 **/ZI**指定，則編譯器會鎖定 PDB 檔案寫入類型資訊和符號偵錯資訊。 當類型數目很大時，這可以大幅降低編譯器產生類型資訊所需的時間。 如果另一個處理序暫時鎖定 PDB 檔案 (例如，防毒程式)，編譯器寫入可能會失敗，而且可能會發生嚴重錯誤。 當 cl.exe 的多個複本存取同一個 PDB 檔，這個問題也可能會發生，例如，如果方案有使用相同中繼目錄的獨立專案或者輸出目錄和平行組建已啟用。 **/FS**編譯器選項防止編譯器鎖定 PDB 檔案，並強制寫入通過 MSPDBSRV。EXE，將序列化存取。 這可能會使建置時間明顯更久，而且不能避免 cl.exe 的多個執行個體同時存取 PDB 檔案可能發生的所有錯誤。 建議您變更方案，以便獨立專案寫入個別的中繼和輸出位置，或者讓一個專案相依於另一個專案，以強制序列化的專案建置。
+
+[/MP](../../build/reference/mp-build-with-multiple-processes.md)選項可讓 **/FS**預設。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 選取  **C/c + +** 資料夾。
+
+1. 選取 **命令列**屬性頁。
+
+1. 修改**其他選項**屬性，以包括`/FS`，然後選擇**確定**。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
+
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>另請參閱
+
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
+[設定編譯器選項](../../build/reference/setting-compiler-options.md)

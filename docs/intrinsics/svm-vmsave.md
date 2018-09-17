@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50be44d612f44586ff8e6c8e953efa0b1fa90948
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bc66784a9f5b6c953516bb30271c973779340e09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680633"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722848"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 **Microsoft 專屬**  
@@ -41,7 +41,7 @@ void __svm_vmsave(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `VmcbPhysicalAddress`|VMCB 實體位址。|  
+|*VmcbPhysicalAddress*|[in]VMCB 實體位址。|  
   
 ## <a name="remarks"></a>備註  
  `__svm_vmsave`函式相當於`VMSAVE`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 文件編號 24593、 修訂 3.11 或更新版本，在[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。  

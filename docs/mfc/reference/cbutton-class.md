@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196707"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701829"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 提供 Windows 按鈕控制項的功能。  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*lpszNote*|呼叫端會負責配置和解除配置之緩衝區的指標。 如果傳回的值為 TRUE，緩衝區會包含與目前的命令連結控制項; 相關聯的註解文字否則，緩衝區是不變。|  
-|[in、 out]*cchNote*|不帶正負號的整數變數的指標。<br /><br /> 呼叫這個方法時，變數會包含所指定的緩衝區的大小*lpszNote*參數。<br /><br /> 當這個方法傳回時，如果傳回的值為 TRUE 的變數會包含與目前的命令連結控制項相關聯的附註的大小。 如果傳回的值為 FALSE，則變數會包含包含附註所需的緩衝區大小。|  
+|*lpszNote*|[out]呼叫端會負責配置和解除配置之緩衝區的指標。 如果傳回的值為 TRUE，緩衝區會包含與目前的命令連結控制項; 相關聯的註解文字否則，緩衝區是不變。|  
+|*cchNote*|[in、 out]不帶正負號的整數變數的指標。<br /><br /> 呼叫這個方法時，變數會包含所指定的緩衝區的大小*lpszNote*參數。<br /><br /> 當這個方法傳回時，如果傳回的值為 TRUE 的變數會包含與目前的命令連結控制項相關聯的附註的大小。 如果傳回的值為 FALSE，則變數會包含包含附註所需的緩衝區大小。|  
   
 ### <a name="return-value"></a>傳回值  
  在第一個多載中， [CString](../../atl-mfc-shared/using-cstring.md)物件，其中包含與目前的命令連結控制項相關聯的註解文字。  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pInfo*|指標[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)接收目前的分割按鈕控制項的相關資訊的結構。 呼叫端會負責配置結構。|  
+|*pInfo*|[out]指標[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)接收目前的分割按鈕控制項的相關資訊的結構。 呼叫端會負責配置結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[out]*pSize*|指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)接收之矩形的描述的結構。|  
+|*pSize*|[out]指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)接收之矩形的描述的結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*fDropDown*|True 表示要設定 BST_DROPDOWNPUSHED 檢視狀態。否則為 FALSE。|  
+|*fDropDown*|[in]True 表示要設定 BST_DROPDOWNPUSHED 檢視狀態。否則為 FALSE。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*fElevationRequired*|True 會設定`elevation required`狀態; 否則為 FALSE。|  
+|*fElevationRequired*|[in]True 會設定`elevation required`狀態; 否則為 FALSE。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*lpszNote*|已設定為命令連結控制項的註解文字的 Unicode 字串的指標。|  
+|*lpszNote*|[in]已設定為命令連結控制項的註解文字的 Unicode 字串的指標。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*chGlyph*|指定要作為分割按鈕下拉式箭號圖像 （glyph） 的字元。|  
+|*chGlyph*|[in]指定要作為分割按鈕下拉式箭號圖像 （glyph） 的字元。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pSplitImageList*|指標[CImageList](../../mfc/reference/cimagelist-class.md)来指派給目前的分割按鈕控制項的物件。|  
+|*pSplitImageList*|[in]指標[CImageList](../../mfc/reference/cimagelist-class.md)来指派給目前的分割按鈕控制項的物件。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pInfo*|指標[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構，定義目前的分割按鈕控制項。|  
+|*pInfo*|[in]指標[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構，定義目前的分割按鈕控制項。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*pSize*|指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)該結構描述的周框。|  
+|*pSize*|[in]指標[大小](https://msdn.microsoft.com/library/windows/desktop/dd145106)該結構描述的周框。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in]*uSplitStyle*|分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構。|  
+|*uSplitStyle*|[in]分割按鈕樣式的位元組合。 如需詳細資訊，請參閱 <<c0> `uSplitStyle` 隸屬[BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  

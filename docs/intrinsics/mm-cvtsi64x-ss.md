@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eb253ab776565339aeaeade26d6d355b4f6a742b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545763"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699995"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 專屬**  
@@ -39,11 +39,11 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `a`  
- `__m128`結構，其中包含四個單精確度浮點值。  
+*a*<br/>
+[in]`__m128`結構，其中包含四個單精確度浮點值。  
   
- [輸入] `b`  
- 要轉換成浮點值的 64 位元整數。  
+*b*<br/>
+[in]要轉換成浮點值的 64 位元整數。  
   
 ## <a name="return-value"></a>傳回值  
  `__m128`結構，其第一個的浮點值是轉換的結果。 其他三個值會複製與`a`。  

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61050f8fc1924f6d2a143893af5bd1918df94394
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895184"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700775"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -43,14 +43,14 @@ void __stosb(
 
 #### <a name="parameters"></a>參數
 
-[輸出] `Dest`  
-作業的目的地。
+*目的地*<br/>
+[out]作業的目的地。
 
-[輸入] `Data`  
-要儲存的資料。
+*Data*<br/>
+[in]要儲存的資料。
 
-[輸入] `Count`  
-要寫入的位元組區塊的長度。
+*計數*<br/>
+[in]要寫入的位元組區塊的長度。
 
 ## <a name="requirements"></a>需求
 

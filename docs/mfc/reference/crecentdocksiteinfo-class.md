@@ -1,5 +1,5 @@
 ---
-title: CRecentDockSiteInfo 類別 |Microsoft 文件
+title: CRecentDockSiteInfo 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078996"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702607"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 類別
-`CRecentDockSiteInfo`類別會儲存最新狀態資訊的協助程式類別[CPane 類別](../../mfc/reference/cpane-class.md)。  
+`CRecentDockSiteInfo`類別會儲存最新狀態資訊的 helper 類別[CPane 類別](../../mfc/reference/cpane-class.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*CList < HWND*  
- [in]*lstOrg*  
+*CList < HWND*<br/>
+[in][in]*lstOrg*  
  [in]*bForSlider*  
   
 ### <a name="remarks"></a>備註  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bForSlider*  
- [in]*srcInfo*  
+*bForSlider*<br/>
+[in][in]*srcInfo*  
   
 ### <a name="remarks"></a>備註  
   
@@ -275,8 +275,8 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pRecentContainer*  
- [in]*pTabbedBar*  
+*pRecentContainer*<br/>
+[in][in]*pTabbedBar*  
   
 ### <a name="remarks"></a>備註  
   

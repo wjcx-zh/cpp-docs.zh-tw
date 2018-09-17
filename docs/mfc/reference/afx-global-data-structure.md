@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677453"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701918"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 `AFX_GLOBAL_DATA` 結構包含的欄位和方法，用於管理架構，或自訂應用程式外觀和行為。  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*pWnd*  
- 指向控制項視窗的指標。  
+*pWnd*<br/>
+[in]控制項的視窗的指標。  
   
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*lpRect*  
- 指向限定要繪製區域的矩形的指標。 預設值是 NULL。  
+*lpRect*<br/>
+[in]指向限定要繪製之區域的矩形。 預設值是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*hTheme*  
- 處理佈景主題資料的視窗中，或為 NULL。 架構會使用指定的佈景主題來繪製文字，如果這個參數不是 NULL，且支援佈景主題。 否則，此架構不會使用佈景主題來繪製文字。  
+*hTheme*<br/>
+[in]處理佈景主題資料的視窗中，或為 NULL。 架構會使用指定的佈景主題來繪製文字，如果這個參數不是 NULL，且支援佈景主題。 否則，此架構不會使用佈景主題來繪製文字。  
   
  使用[OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata)方法用來建立 HTHEME。  
   
- [in]*pDC*  
- 裝置內容的指標。  
+*pDC*<br/>
+[in]裝置內容指標。  
   
- [in]*iPartId*  
- 具有想要的文字外觀之控制項組件。 如需詳細資訊，請參閱表格中的 Parts 資料行[組件與狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。  
+*iPartId*<br/>
+[in]具有所需的文字外觀之控制項組件。 如需詳細資訊，請參閱表格中的 Parts 資料行[組件與狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。  
   
- [in]*iStateId*  
- 具有想要的文字外觀的控制項狀態。 如需詳細資訊，請參閱表格中的 States 資料行[組件與狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)。  
+*iStateId*<br/>
+[in]具有所需的文字外觀的控制項狀態。 如需詳細資訊，請參閱表格中的 States 資料行[組件與狀態](https://msdn.microsoft.com/library/windows/desktop/bb773210)。  
   
- [in]*先把 strText*  
- 要繪製的文字。  
+*先把 strText*<br/>
+[in]要繪製的文字。  
   
- [in]*rect*  
- 在其中繪製指定文字的區域界限。  
+*rect*<br/>
+[in]在其中繪製指定的文字區域的界限。  
   
- [in]*dwFlags*  
- 旗標的位元組合 (OR)，指定如何繪製指定文字。  
+*dwFlags*<br/>
+[in]位元組合 (OR) 旗標，指定如何繪製指定的文字。  
   
  如果*hTheme*參數是`NULL`或佈景主題不會支援，且不會啟用，如果*nFormat*參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述有效旗標。 如果支援佈景主題， *dwFlags*的參數[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)方法描述有效的旗標。  
   
- [in]*nGlowSize*  
- 繪製指定文字前已繪製在背景上的光暈效果大小。 預設值為 0。  
+*nGlowSize*<br/>
+[in]繪製背景上繪製指定的文字前的光暈效果大小。 預設值為 0。  
   
- [in]*clrText*  
- 用來繪製指定文字的色彩。 預設值為預設色彩。  
+*clrText*<br/>
+[in]在其中繪製指定的文字色彩。 預設值為預設色彩。  
   
 ### <a name="return-value"></a>傳回值  
  如果使用佈景主題來繪製指定的文字;，則為 TRUE。否則為 FALSE。  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*bEnable*  
- TRUE 表示啟用協助工具支援，若要停用協助工具支援，則為 FALSE。 預設值為 TRUE。  
+*bEnable*<br/>
+[in]TRUE 表示啟用協助工具支援，若要停用協助工具支援，則為 FALSE。 預設值為 TRUE。  
   
 ### <a name="remarks"></a>備註  
  Active Accessibility 是一種 COM 技術，可改善程式與 Windows 作業系統一起與輔助技術產品合作的方式。 它提供用於公開使用者介面項目資訊的可靠方法。 然而，現在已有稱為 Microsoft UI 自動化之較新協助工具模型可供使用。 如需這兩項技術的比較，請參閱 < [UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)。  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*strBuffer*  
- 文字的緩衝區。  
+*strBuffer*<br/>
+[in]文字的緩衝區。  
   
- [in]*lpszTag*  
- 一組的開頭和結尾 XML 標記名稱。  
+*lpszTag*<br/>
+[in]一組的開頭和結尾 XML 標記名稱。  
   
- [out]*strTag*  
- 當這個方法傳回時， *strTag*參數中包含的文字之間的開頭和結尾 XML 標記，來命名*lpszTag*參數。 修剪任何前置或尾端空白字元的結果。  
+*strTag*<br/>
+[out]當這個方法傳回時， *strTag*參數中包含的文字之間的開頭和結尾 XML 標記，來命名*lpszTag*參數。 修剪任何前置或尾端空白字元的結果。  
   
- [in]*bIsCharsList*  
- True 會轉換符號中的逸出字元*strTag*成實際的逸出字元; 的參數不是用來執行轉換，則為 FALSE。預設值為 FALSE。 如需詳細資訊，請參閱＜備註＞。  
+*bIsCharsList*<br/>
+[in]True 會轉換符號中的逸出字元*strTag*成實際的逸出字元; 的參數不是用來執行轉換，則為 FALSE。預設值為 FALSE。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，這個方法，則為 TRUE。否則為 FALSE。  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*nColor*  
- 指定將擷取其色彩之使用者介面項目的值。 如需有效值的清單，請參閱 < *nIndex*的參數[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。  
+*nColor*<br/>
+[in]值，指定使用者介面的項目，擷取其色彩。 如需有效值的清單，請參閱 < *nIndex*的參數[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。  
   
 ### <a name="return-value"></a>傳回值  
  指定之使用者介面項目的 RGB 色彩值。 如需詳細資訊，請參閱＜備註＞。  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in、 out]*資訊*  
- A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可調整的度量資訊。  
+*資訊*<br/>
+[in、 out]A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可調整的度量資訊。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*bHorz*  
- 若要擷取的字元高度文字水平空間。 執行時，則為 TRUE如果為 false，則文字會以垂直方式執行時擷取的字元高度。 預設值為 TRUE。  
+*bHorz*<br/>
+[in]若要擷取的字元高度文字水平空間。 執行時，則為 TRUE如果為 false，則文字會以垂直方式執行時擷取的字元高度。 預設值為 TRUE。  
   
 ### <a name="return-value"></a>傳回值  
  目前的字型的測量其 ascender 從其下半部的高度。  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*lpszClassNamePrefix*  
- 要註冊之視窗類別的名稱。  
+*lpszClassNamePrefix*<br/>
+[in]若要註冊視窗類別的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則已註冊類別的限定的名稱否則，請[資源例外狀況](exception-processing.md#afxthrowresourceexception)。  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*hwnd*  
- 層疊視窗的控制代碼。  
+*hwnd*<br/>
+[in]分層視窗的控制代碼。  
   
- [in]*crKey*  
- 透明度的色彩索引鍵[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)使用來構成層疊的視窗。  
+*crKey*<br/>
+[in]透明度的色彩索引鍵[桌面視窗管理員](/windows/desktop/dwm/dwm-overview)使用來構成層疊的視窗。  
   
- [in]*bAlpha*  
- Alpha 值，用來描述層疊視窗的不透明度。  
+*bAlpha*<br/>
+[in]用來描述層疊視窗的不透明度的 alpha 值。  
   
- [in]*dwFlags*  
- 位元組合 (OR) 或旗標，指定要使用哪些方法參數。 指定 LWA_COLORKEY 以使用*crKey*參數當做透明色彩。 指定 LWA_ALPHA 使用*bAlpha*參數，來判斷層疊視窗的不透明度。  
+*dwFlags*<br/>
+[in]位元組合 (OR) 旗標，指定要使用哪一個方法的參數。 指定 LWA_COLORKEY 以使用*crKey*參數當做透明色彩。 指定 LWA_ALPHA 使用*bAlpha*參數，來判斷層疊視窗的不透明度。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in]*lpLogFont*  
- 包含字型的屬性的結構指標。  
+*lpLogFont*<br/>
+[in]包含字型的屬性的結構指標。  
   
- [in]*bHorz*  
- TRUE 表示指定的文字往返水平空間。指定文字以垂直方式執行，則為 FALSE。  
+*bHorz*<br/>
+[in]TRUE 表示指定的文字往返水平空間。指定文字以垂直方式執行，則為 FALSE。  
   
 ### <a name="return-value"></a>傳回值  
  如果這個方法成功，則為 TRUE。否則為 FALSE。 在偵錯模式中，此方法會判斷提示這個方法是否成功。  

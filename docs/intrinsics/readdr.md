@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1d5cabbd1d779de4c6c081b57b8f241d9fa92f62
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539579"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709055"
 ---
 # <a name="readdr"></a>__readdr
 讀取指定的偵錯暫存器的值。  
@@ -34,8 +34,8 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `DebugRegister`  
- 從 0 到 7 可識別偵錯常數暫存器。  
+*DebugRegister*<br/>
+[in]從 0 到 7 可識別偵錯常數暫存器。  
   
 ## <a name="return-value"></a>傳回值  
  指定的偵錯暫存器的值。  

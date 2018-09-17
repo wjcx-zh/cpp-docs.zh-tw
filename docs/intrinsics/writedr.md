@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b559edf26c847404d718440e86037cab4026297b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541572"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704947"
 ---
 # <a name="writedr"></a>__writedr
 將指定的值寫入至指定的偵錯器。  
@@ -34,11 +34,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `DebugRegister`  
- 從 0 到 7 可識別偵錯的數字註冊。  
+*DebugRegister*<br/>
+[in]從 0 到 7 可識別偵錯的數字註冊。  
   
- [輸入] `DebugValue`  
- 要寫入至偵錯值暫存器。  
+*DebugValue*<br/>
+[in]要寫入至偵錯值暫存器。  
   
 ## <a name="remarks"></a>備註  
  這些內建函式是只適用於核心模式，而只提供內建函式常式。  

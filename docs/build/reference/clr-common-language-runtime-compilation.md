@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0f4660e9221855c93835a0a5ba5e0557178a66
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109858"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703816"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 
@@ -40,7 +40,7 @@ ms.locfileid: "44109858"
 
 ## <a name="arguments"></a>引數
 
-*options*  
+*options*<br/>
 下列一或多個以逗號分隔的參數。
 
 - 無
@@ -140,5 +140,5 @@ Visual C++ 已不再支援 **/clr:oldsyntax** 選項。 此選項在 Visual Stud
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)   
+[編譯器選項](../../build/reference/compiler-options.md)<br/>
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

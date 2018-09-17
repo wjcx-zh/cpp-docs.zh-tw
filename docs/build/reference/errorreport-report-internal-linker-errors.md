@@ -1,5 +1,5 @@
 ---
-title: -ERRORREPORT （回報內部連結器錯誤） |Microsoft 文件
+title: -ERRORREPORT （回報內部連結器錯誤） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374332"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701086"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (回報內部連結器錯誤)
 
@@ -32,17 +32,17 @@ ms.locfileid: "32374332"
 
 ## <a name="arguments"></a>引數
 
-**none**  
+**none**<br/>
 將不會收集有關內部編譯器錯誤的報告，也不會將報告傳送給 Microsoft。
 
-**提示**  
-提示您在收到內部編譯器錯誤時傳送報告。 **提示**是在開發環境中編譯應用程式時的預設值。
+**提示**<br/>
+提示您在收到內部編譯器錯誤時傳送報告。 **提示字元**是在開發環境中編譯應用程式的預設值。
 
-**queue**  
-佇列錯誤報告。 當您登入系統管理員權限時，會顯示視窗，以便您可以將任何失敗報告自上次登入 （不會提示您要傳送報告的失敗一次以上每隔三天）。 **佇列**應用程式會在命令提示字元進行編譯時是預設值。
+**queue**<br/>
+佇列錯誤報告。 當您登入系統管理員權限時，以便您可以報告自上次登入的任何失敗，會顯示的視窗 （您將不會提示您傳送錯誤報告的頻率超過每隔三天一次）。 **佇列**是應用程式會在命令提示字元進行編譯時的預設值。
 
-**傳送**  
-如果已啟用報告的 Windows 錯誤報告服務設定，自動傳送給 Microsoft 報告內部編譯器錯誤。
+**傳送**<br/>
+如果 Windows 錯誤報告服務的設定已啟用報告，自動傳送給 Microsoft 報告內部編譯器錯誤。
 
 ## <a name="remarks"></a>備註
 
@@ -64,6 +64,6 @@ ms.locfileid: "32374332"
 
 ## <a name="see-also"></a>另請參閱
 
-[/errorReport (回報編譯器內部錯誤)](../../build/reference/errorreport-report-internal-compiler-errors.md)  
-[設定連結器選項](../../build/reference/setting-linker-options.md)  
-[連結器選項](../../build/reference/linker-options.md)  
+[/errorReport （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

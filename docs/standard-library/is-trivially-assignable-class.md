@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fd0a8bbffd3a6e0f03635b659dd3743e12c9f077
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955562"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700761"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 類別
 
@@ -37,9 +37,11 @@ struct is_trivially_assignable;
 
 ### <a name="parameters"></a>參數
 
-若要接收指派的物件型別。
+*若要*<br/>
+接收指派的物件類型。
 
-從提供的值物件的型別。
+*From*<br/>
+提供值的物件類型。
 
 ## <a name="remarks"></a>備註
 

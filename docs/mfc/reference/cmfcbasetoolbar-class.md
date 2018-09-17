@@ -1,5 +1,5 @@
 ---
-title: CMFCBaseToolBar 類別 |Microsoft 文件
+title: CMFCBaseToolBar 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037840"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705233"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 類別
 工具列的基底類別。  
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|傳回固定模式。 (覆寫[cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)。)|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|傳回的最小的工具列。 (覆寫[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|窗格的父代變更之後，由架構呼叫。 (覆寫[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|在窗格的父代變更之後，由架構呼叫。 (覆寫[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,19 +90,19 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [out]*大小*  
- 工具列的大小下限。  
+*size*<br/>
+[out]工具列的大小下限。  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- 窗格的父代變更之後，由架構呼叫。  
+ 在窗格的父代變更之後，由架構呼叫。  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pWndOldParent*  
- 先前的父視窗的指標。  
+*pWndOldParent*<br/>
+[in]先前的父視窗的指標。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

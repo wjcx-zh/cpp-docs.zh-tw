@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 551282b6d99491e49a185bab2ede2f775bb55498
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955827"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707820"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 函式
 
@@ -53,11 +53,11 @@ struct is_assignable;
 
 ### <a name="parameters"></a>參數
 
-*若要*  
- 接收指派的物件類型。
+*若要*<br/>
+接收指派的物件類型。
 
-*From*  
- 提供值的物件類型。
+*From*<br/>
+提供值的物件類型。
 
 ### <a name="remarks"></a>備註
 
@@ -74,8 +74,8 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-*Ty*  
- 要查詢的類型。
+*Ty*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -92,8 +92,8 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*  
- 要查詢的類型。
+*Ty*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -145,8 +145,8 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-*T*  
- 要查詢的類型。
+*T*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -198,8 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*T*  
- 要查詢的類型。
+*T*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -216,8 +216,8 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-*T*  
- 要評估的類型
+*T*<br/>
+要評估的類型
 
 ### <a name="remarks"></a>備註
 
@@ -234,8 +234,8 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*Ty*  
- 要查詢的類型。
+*Ty*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -252,8 +252,8 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-*T*  
- 要查詢的類型。
+*T*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -272,8 +272,8 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*Ty*  
- 要查詢的類型。
+*Ty*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
@@ -302,8 +302,8 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*  
- 要查詢的類型。
+*Ty*<br/>
+要查詢的類型。
 
 ### <a name="remarks"></a>備註
 

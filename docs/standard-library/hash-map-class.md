@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211588"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702023"
 ---
 # <a name="hashmap-class"></a>hash_map 類別
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>參數
 
 *Key*<br/>
- 要存放在 hash_map 中的索引鍵資料類型。
+要存放在 hash_map 中的索引鍵資料類型。
 
 *類型*<br/>
- 要存放在 hash_map 中的項目資料類型。
+要存放在 hash_map 中的項目資料類型。
 
 *特性*<br/>
- 包含兩個函式物件的類型：一個 compare 類別可以將兩個項目值做為排序索引鍵加以比較，以決定其相對順序；一個雜湊函式，為項目的一元述詞對應索引鍵值，對應到 `size_t` 類型之不帶正負號的整數。 這個引數是選擇性的，而且 hash_compare<`Key`, less<`Key`> > 是預設值。
+包含兩個函式物件的類型：一個 compare 類別可以將兩個項目值做為排序索引鍵加以比較，以決定其相對順序；一個雜湊函式，為項目的一元述詞對應索引鍵值，對應到 `size_t` 類型之不帶正負號的整數。 這個引數是選擇性的，而且 hash_compare<`Key`, less<`Key`> > 是預設值。
 
 *配置器*<br/>
- 代表預存配置器物件的類型，封裝有關 hash_map 之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 allocator<pair <const `Key`, `Type`>>。
+代表預存配置器物件的類型，封裝有關 hash_map 之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>備註
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>參數
 
 *key*<br/>
- 要從 hash_map 中比對之元素的索引鍵值。
+要從 hash_map 中比對之元素的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>參數
 
 *key*<br/>
- 要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。
+要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>參數
 
 *_Where*<br/>
- 要從 hash_map 中移除之項目的位置。
+要從 hash_map 中移除之項目的位置。
 
 *first*<br/>
- 從 hash_map 中移除之第一個項目的位置。
+從 hash_map 中移除之第一個項目的位置。
 
 *最後一個*<br/>
- 從 hash_map 中移除的最後一個項目之後的位置。
+從 hash_map 中移除的最後一個項目之後的位置。
 
 *key*<br/>
- 要從 hash_map 中移除之項目的索引鍵值。
+要從 hash_map 中移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>參數
 
 *key*<br/>
- 要以所搜尋之 hash_map 中元素的排序鍵比對的索引鍵值。
+要以所搜尋之 hash_map 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>參數
 
 *key*<br/>
- 要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。
+要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>參數
 
 *right*<br/>
- 提供要與目標 hash_map 交換之元素的引數 hash_map。
+提供要與目標 hash_map 交換之元素的引數 hash_map。
 
 ### <a name="remarks"></a>備註
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>參數
 
 *key*<br/>
- 要與所搜尋之 hash_map 中元素的排序鍵值比較的引數索引鍵值。
+要與所搜尋之 hash_map 中元素的排序鍵值比較的引數索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 

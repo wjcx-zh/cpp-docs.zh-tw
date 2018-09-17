@@ -1,5 +1,5 @@
 ---
-title: 區段 (OpenMP) |Microsoft 文件
+title: 區段 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692073"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708028"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-識別要當做被除數所有執行緒之間的程式碼區段。  
+識別要被所有執行緒之間的程式碼區段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,16 +39,15 @@ ms.locfileid: "33692073"
 }  
 ```  
   
+## <a name="arguments"></a>引數
+
+*子句*<br/>
+（選擇性）零個或多個子句。 請參閱所支援的子句清單的 < 備註 > 一節**各節**。
+
 ## <a name="remarks"></a>備註  
- 其中：  
+ **各節**指示詞可以包含零或多個**一節**指示詞。  
   
- `clause` (選擇性)  
- 零個或多個子句。 請參閱 < 備註 > 一節如需所支援的子句**區段**。  
-  
-## <a name="remarks"></a>備註  
- **區段**指示詞可以包含零或多個**區段**指示詞。  
-  
- **區段**指示詞可支援下列 OpenMP 子句：  
+ **各節**指示詞可支援下列 OpenMP 子句：  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,9 +59,9 @@ ms.locfileid: "33692073"
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- 如果**平行**也指定`clause`可以任何子句接受**平行**或**區段**指示詞，除了`nowait`。  
+ 如果**平行**同時指定，則`clause`可以任何子句接受**平行**或**各節**指示詞，除了`nowait`。  
   
- 如需詳細資訊，請參閱[2.4.2 sections 建構](../../../parallel/openmp/2-4-2-sections-construct.md)。  
+ 如需詳細資訊，請參閱 < [2.4.2 sections 建構](../../../parallel/openmp/2-4-2-sections-construct.md)。  
   
 ## <a name="example"></a>範例  
   

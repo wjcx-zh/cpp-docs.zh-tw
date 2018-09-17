@@ -33,12 +33,12 @@ helpviewer_keywords:
 - std::thread [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47afdbd5e4a5045ec5f91f8f766b45d3d547ba3e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f0606258ada9a3b4298bdb9710f3c3021e793b8e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706884"
 ---
 # <a name="thread-class"></a>thread 類別
 
@@ -200,8 +200,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*  
- A**執行緒**物件。
+*其他*<br/>
+A**執行緒**物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -223,8 +223,8 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*  
- A**執行緒**物件。
+*其他*<br/>
+A**執行緒**物件。
 
 ## <a name="thread"></a>  thread::thread 建構函式
 
@@ -240,14 +240,14 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*F*  
- 由執行緒執行的應用程式定義函式。
+*F*<br/>
+由執行緒執行的應用程式定義函式。
 
-*A*  
- 要傳遞至引數清單*F*。
+*A*<br/>
+要傳遞至引數清單*F*。
 
-*其他*  
- 將現有**執行緒**物件。
+*其他*<br/>
+將現有**執行緒**物件。
 
 ### <a name="remarks"></a>備註
 

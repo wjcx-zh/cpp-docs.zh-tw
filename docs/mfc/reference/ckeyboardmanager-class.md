@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212887"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707482"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 管理主框架視窗及子框架視窗的快速鍵資料表。  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*uiCmd*  
- 命令 ID。  
+*uiCmd*<br/>
+[in]命令 id。  
   
- [out]*str*  
- 對 `CString` 物件的參考。  
+*str*<br/>
+[out]參考`CString`物件。  
   
- [in]*pWndFrame*  
- 框架視窗的指標。  
+*pWndFrame*<br/>
+[in]框架視窗的指標。  
   
- [in]*bIsDefaultFrame*  
- 指定的框架視窗是否為預設的框架視窗。  
+*bIsDefaultFrame*<br/>
+[in]指定的框架視窗是否為預設的框架視窗。  
   
 ### <a name="return-value"></a>傳回值  
  如果所找到的快顯，非零值。否則為 0。  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*nKey*|要進行檢查的按鍵。|  
-|[in]*fVirt*|指定攠摝坫行為。 如需可能值的清單，請參閱 <<c0> [ 加速度結構](/windows/desktop/api/winuser/ns-winuser-tagaccel)。|  
-|[in]*pWndFrame*|框架視窗。 這個方法會判斷是否要將攠摝坫處理這個框架中。|  
-|[in]*bIsDefaultFrame*|布林值，指出參數是否*pWndFrame*是預設框架視窗。|  
+|*nKey*|[in]要檢查的索引鍵。|  
+|*fVirt*|[in]指定攠摝坫行為。 如需可能值的清單，請參閱 <<c0> [ 加速度結構](/windows/desktop/api/winuser/ns-winuser-tagaccel)。|  
+|*pWndFrame*|[in]框架視窗。 這個方法會判斷是否要將攠摝坫處理這個框架中。|  
+|*bIsDefaultFrame*|[in]布林值，指出參數是否*pWndFrame*是預設框架視窗。|  
   
 ### <a name="return-value"></a>傳回值  
  如果在處理的快速鍵，則為 TRUE。 FALSE 如果未處理的索引鍵，或如果*pWndFrame*是 NULL。  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |參數|描述|  
-|[in]*nChar*|這個方法會檢查的字元。|  
+|*NChar*|[in]這個方法會檢查的字元。|  
   
 ### <a name="return-value"></a>傳回值  
  非零值可列印字元時，如果零不是。  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 登錄路徑其中`CKeyboardManager`資料會儲存。  
+*lpszProfileName*<br/>
+[in]登錄路徑其中`CKeyboardManager`資料會儲存。  
   
- [in]*pDefaultFrame*  
- 作為預設的視窗框架視窗的指標。  
+*pDefaultFrame*<br/>
+[in]作為預設的視窗框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果狀態載入成功則為 0 否則，非零值。  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*lpszProfileName*  
- 儲存的登錄路徑`CKeyboardManager`狀態。  
+*lpszProfileName*<br/>
+[in]儲存的登錄路徑`CKeyboardManager`狀態。  
   
- [in]*pDefaultFrame*  
- 會變成預設的視窗框架視窗的指標。  
+*pDefaultFrame*<br/>
+[in]會變成預設的視窗框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
  非零值，如果鍵盤管理員狀態儲存成功，否則為 0。  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*bShowAll*  
- 如果為 TRUE，將會顯示所有的快速鍵。 如果為 FALSE，則會顯示第一個的快速鍵。  
+*bShowAll*<br/>
+[in]如果為 TRUE，將會顯示所有的快速鍵。 如果為 FALSE，則會顯示第一個的快速鍵。  
   
- [in]*lpszDelimiter*  
- 要插入快捷鍵之間的字串。 如果只有一個攠摝坫會顯示此分隔符號會有任何作用。  
+*lpszDelimiter*<br/>
+[in]要插入快捷鍵之間的字串。 如果只有一個攠摝坫會顯示此分隔符號會有任何作用。  
   
 ### <a name="remarks"></a>備註  
  根據預設，如果命令具有與其建立關聯的多個快速鍵將顯示的第一個的快速鍵。 此函式可讓您列出的所有命令相關都聯的所有快速鍵。  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nChar*  
- 要轉換的字元。  
+*NChar*<br/>
+[in]要轉換的字元。  
   
 ### <a name="return-value"></a>傳回值  
  是輸入參數的上層暫存器的字元。  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pTemplate*  
- 文件範本指標。  
+*pTemplate*<br/>
+[in]文件範本指標。  
   
- [in]*lpAccel*  
- 新的快顯索引鍵的指標。  
+*lpAccel*<br/>
+[in]新的快顯索引鍵的指標。  
   
- [in]*nSize*  
- 新的快顯資料表的大小。  
+*nSize*<br/>
+[in]新的快顯資料表的大小。  
   
- [in]*pDefaultFrame*  
- 預設框架視窗的指標。  
+*pDefaultFrame*<br/>
+[in]預設框架視窗的指標。  
   
- [in]*hAccelNew*  
- 新的快顯資料表控制代碼。  
+*hAccelNew*<br/>
+[in]新的快顯資料表控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功則為非零否則為 0。  

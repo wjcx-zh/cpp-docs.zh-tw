@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216470"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705687"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 類別
 實作包含字型清單的下拉式方塊。 您可以在功能區面板上放置下拉式方塊。  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nFontType*  
- 指定要加入字型的字型類型。  
+*nFontType*<br/>
+[in]指定要加入字型的字型類型。  
   
- [in]*nCharSet*  
- 指定要加入字型的字元集。  
+*nCharSet*<br/>
+[in]指定要加入字型的字元集。  
   
- [in]*nPitchAndFamily*  
- 指定的字幅和加入的字型系列。  
+*nPitchAndFamily*<br/>
+[in]指定的字幅和加入的字型系列。  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  建構並初始化[CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)物件。  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*nID*  
- 當使用者從下拉式方塊選取項目時執行命令的命令識別碼。  
+*nID*<br/>
+[in]當使用者從下拉式方塊選取項目時執行命令的命令識別碼。  
   
- [in]*nFontType*  
- 指定字型下拉式方塊中顯示類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。  
+*nFontType*<br/>
+[in]指定字型下拉式方塊中顯示類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。  
   
- [in]*nCharSet*  
- 篩選出隸屬於指定的字元集的下拉式方塊中的字型...  
+*nCharSet*<br/>
+[in]篩選出隸屬於指定的字元集的下拉式方塊中的字型...  
   
- [in]*nPitchAndFamily*  
- 指定的字幅和下拉式方塊中顯示的字型家族。  
+*nPitchAndFamily*<br/>
+[in]指定的字幅和下拉式方塊中顯示的字型家族。  
   
- [in]*nWidth*  
- 指定寬度，單位為像素下拉式方塊。  
+*nWidth*<br/>
+[in]指定寬度，單位為像素下拉式方塊。  
   
 ### <a name="remarks"></a>備註  
  如需有關可能*nFontType*參數值，請參閱[EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 文件。  

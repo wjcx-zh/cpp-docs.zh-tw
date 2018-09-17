@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9858bfe4dc1d2451e4cd5054c5909aab27ef86c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955616"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710004"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname 類別
 
@@ -50,11 +50,11 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*_Locname*  
- 具名地區設定。
+*_Locname*<br/>
+具名地區設定。
 
-*_Refs*  
- 初始參考計數。
+*_Refs*<br/>
+初始參考計數。
 
 ## <a name="requirements"></a>需求
 

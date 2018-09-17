@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401876"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700674"
 ---
 # <a name="overloading-unary-operators"></a>多載一元運算子
 可以多載的一元運算子如下：  
@@ -55,18 +55,18 @@ ms.locfileid: "39401876"
   
  下列規則對於其他所有一元運算子皆成立。 若要將一元運算子函式宣告為非靜態成員，您必須以此格式進行宣告：  
   
- `ret-type operator` `op` `()`  
+> *ret 型別***運算子** *op* **（)**  
   
- 其中，`ret-type` 是傳回類型，而 `op` 則是上表所列的其中一個運算子。  
+ 何處*ret 類型*是傳回的型別並*op*其中一個運算子會列在上表中。  
   
  若要將一元運算子函式宣告為全域函式，您必須以此格式進行宣告：  
   
- `ret-type operator` `op` (`arg` )  
+> *ret 型別***運算子** *op* **(** *arg* **)**  
   
- 其中，`ret-type` 和 `op` 是成員運算子函式，而 `arg` 則是運算類別類型的引數。  
+ 其中*ret 類型*並*op*成員運算子函式中所述， *arg*是所要執行的類別類型的引數。  
   
 > [!NOTE]
->  一元運算子的傳回類型沒有任何限制。 例如，邏輯 NOT (`!`) 傳回整數值是合理的，但不會強制執行。  
+>  一元運算子的傳回型別沒有任何限制。 例如，邏輯 NOT (`!`) 傳回整數值是合理的，但不會強制執行。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算子多載](../cpp/operator-overloading.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 853666f6dee7bae68b03ccc1d9d9c23ce765925b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541205"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699956"
 ---
 # <a name="mulh"></a>__mulh
 **Microsoft 專屬**  
@@ -38,11 +38,11 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>參數  
- [輸入] `a`  
- 要相乘的第一個數字。  
+*a*<br/>
+[in]要相乘的第一個數字。  
   
- [in] `b`  
- 要相乘的第二個數字。  
+*b*<br/>
+[in]要相乘的第二個數字。  
   
 ## <a name="return-value"></a>傳回值  
  相乘的 128 位元結果的 64 高位元。  

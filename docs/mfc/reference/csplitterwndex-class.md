@@ -1,5 +1,5 @@
 ---
-title: CSplitterWndEx 類別 |Microsoft 文件
+title: CSplitterWndEx 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121646"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707339"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 類別
 
@@ -50,12 +50,12 @@ class CSplitterWndEx : public CSplitterWnd
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|由架構呼叫以繪製分隔視窗。 (覆寫[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)。)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|由架構呼叫以繪製分隔器視窗。 (覆寫[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)。)|  
   
 ## <a name="remarks"></a>備註  
- 覆寫`OnDrawSplitter`方法，以自訂的圖形化元件分隔視窗的外觀。  
+ 覆寫`OnDrawSplitter`方法，以自訂的圖形化元件分隔器視窗的外觀。  
   
- `CSplitterWndEx`類別會搭配[OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)， [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)，和[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)方法，其為藉由視覺管理員。 若要使視覺管理員，以繪製您的應用程式中的分隔視窗，取代的宣告`CSplitterWnd`類別`CSplitterWndEx`類別。 框架視窗的應用程式，位於 mainfrm.h CMainFrame 類別中宣告的分隔視窗類別。 如需範例，請參閱`OutlookDemo`的 Samples 目錄中的範例。  
+ `CSplitterWndEx`類別可搭配使用[OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)， [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)，和[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)方法，也就是實作由視覺管理員。 若要使視覺管理員繪製您的應用程式中的分隔視窗，取代的宣告`CSplitterWnd`類別搭配`CSplitterWndEx`類別。 框架視窗的應用程式，位於稱為 mainfrm.h CMainFrame 類別中宣告的分隔器視窗類別。 如需範例，請參閱`OutlookDemo`的 Samples 目錄中的範例。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](cobject-class.md)  
@@ -70,7 +70,7 @@ class CSplitterWndEx : public CSplitterWnd
  **標頭：** afxsplitterwndex.h  
   
 ##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
- 由架構呼叫以繪製分隔視窗。  
+ 由架構呼叫以繪製分隔器視窗。  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -81,14 +81,14 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]*pDC*  
- 裝置內容的指標。 如果這個參數是 NULL，架構會重新繪製作用中視窗。  
+*pDC*<br/>
+[in]裝置內容指標。 如果此參數為 NULL，架構會重新繪製作用中視窗。  
   
- [in]*n*  
- 其中一個`CSplitterWnd::ESplitType`列舉值，指定要繪製的分隔視窗項目。 有效值為`splitBox`， `splitBar`， `splitIntersection`，和`splitBorder`。  
+*n*<br/>
+[in]其中一個`CSplitterWnd::ESplitType`列舉值，指定要繪製的分隔器視窗項目。 有效值`splitBox`， `splitBar`， `splitIntersection`，和`splitBorder`。  
   
- [in]*rect*  
- 指定的維度和位置繪製指定的分隔器視窗項目的周框。  
+*rect*<br/>
+[in]指定的維度和位置繪製指定的分隔器視窗項目的週框矩形。  
   
 ### <a name="remarks"></a>備註  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94bca969b150718450da166501abaea9c89b75d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 671cb2fa19d920b0e60acd8d34623a05fe4a048e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760379"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703791"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 
@@ -56,17 +56,20 @@ ms.locfileid: "43760379"
 
 提供物件的 COM 功能的相關資訊。
 
-**Coclass**  
-設定元件類別，其中包含的物件所支援的介面清單的名稱。
+- **Coclass**
 
-> [!NOTE]
->  如果您建立您的專案使用的屬性，或如果您在此精靈頁面指示的屬性頁會使用屬性，您就無法變更此選項，因為不包含 ATL`coclass`屬性。
+   設定元件類別，其中包含的物件所支援的介面清單的名稱。
 
-**Type**  
-設定會在登錄中的物件描述
+   > [!NOTE]
+   > 如果您建立您的專案使用的屬性，或如果您在此精靈頁面指示的屬性頁會使用屬性，您就無法變更此選項，因為不包含 ATL`coclass`屬性。
 
-**ProgID**  
-設定而不是物件的 CLSID 可用容器的名稱。
+- **Type**
+
+   設定會在登錄中的物件描述
+
+- **ProgID**
+
+   設定而不是物件的 CLSID 可用容器的名稱。
 
 ## <a name="see-also"></a>另請參閱
 

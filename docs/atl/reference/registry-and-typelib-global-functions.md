@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753262"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701723"
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
 
@@ -78,8 +78,8 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>參數
 
-[out]*pEnabled*  
-TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。
+*pEnabled*<br/>
+[out]TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -309,8 +309,8 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>參數
 
-[in]*bEnable*  
-TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。
+*bEnable*  
+[in]TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>傳回值
 

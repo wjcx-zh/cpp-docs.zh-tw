@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758127"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703842"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 類別
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>參數
 
-[in]*p*  
-若要儲存在全域介面表 (GIT) 介面指標。
+*p*<br/>
+[in]若要儲存在全域介面表 (GIT) 介面指標。
 
-[in]*git*  
-若要將現有的參考`CComGITPtr`物件。
+*Git*<br/>
+[in]若要將現有的參考`CComGITPtr`物件。
 
-[in]*dwCookie*  
-Cookie，用來識別的介面指標。
+*dwCookie*<br/>
+[in]Cookie，用來識別的介面指標。
 
-[in]*rv*  
-來源`CComGITPtr`移動的資料物件。
+*rv*<br/>
+[in]來源`CComGITPtr`移動的資料物件。
 
 ### <a name="remarks"></a>備註
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>參數
 
-[in]*p*  
-介面的指標。
+*p*<br/>
+[in]介面的指標。
 
-[in]*git*  
-對 `CComGITPtr` 物件的參考。
+*Git*<br/>
+[in]參考`CComGITPtr`物件。
 
-[in]*dwCookie*  
-Cookie，用來識別的介面指標。
+*dwCookie*<br/>
+[in]Cookie，用來識別的介面指標。
 
-[in]*rv*  
-`CComGITPtr`移動資料。
+*rv*<br/>
+[in]`CComGITPtr`移動資料。
 
 ### <a name="return-value"></a>傳回值
 

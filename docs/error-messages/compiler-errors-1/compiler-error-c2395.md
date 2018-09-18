@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2395 |Microsoft 文件
+title: 編譯器錯誤 C2395 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411a8d62de801591ff6a90a7bf74f3b2cfe67c7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99d9a1be42a36baac2037e4289cb24db2f45b563
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050537"
 ---
 # <a name="compiler-error-c2395"></a>編譯器錯誤 C2395
-'your_type::operator'op'' : CLR or WinRT 運算子無效。 至少一個參數必須是下列類型：'T'、'T%'、'T&'、'T^'、'T^%'、'T^&'，其中 T = 'your_type'  
-  
- Windows 執行階段或 Managed 類型中的運算子沒有至少一個參數，其類型與運算子傳回值的類型相同。  
-  
- 下列範例會產生 C2395，並示範如何修正此問題：  
-  
-```  
-// C2395.cpp  
-// compile with: /clr /c  
-value struct V {  
-   static V operator *(int i, char c);   // C2395  
-  
-   // OK  
-   static V operator *(V v, char c);  
-   // or  
-   static V operator *(int i, V& rv);  
-};  
+
+'your_type::operator'op'' : CLR or WinRT 運算子無效。 至少一個參數必須是下列類型：'T'、'T%'、'T&'、'T^'、'T^%'、'T^&'，其中 T = 'your_type'
+
+Windows 執行階段或 Managed 類型中的運算子沒有至少一個參數，其類型與運算子傳回值的類型相同。
+
+下列範例會產生 C2395，並示範如何修正此問題：
+
+```
+// C2395.cpp
+// compile with: /clr /c
+value struct V {
+   static V operator *(int i, char c);   // C2395
+
+   // OK
+   static V operator *(V v, char c);
+   // or
+   static V operator *(int i, V& rv);
+};
 ```

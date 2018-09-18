@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0000 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0000 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61099ba206269f13413fefe14ef02002968c65b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f028f53075aa540338e7abcce7f42fa132ad1af
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296259"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059118"
 ---
 # <a name="expression-evaluator-error-cxx0000"></a>運算式評估工具錯誤 CXX0000
-沒有錯誤條件  
-  
- 不發生任何錯誤。 您可以繼續正常地偵錯。  
-  
- 請注意，並通知 Microsoft 產品支援服務。
+
+沒有錯誤條件
+
+沒有發生任何錯誤。 您可以繼續正常地偵錯。
+
+癥結，並通知 Microsoft 產品支援服務。

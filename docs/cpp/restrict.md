@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3eb361d0b92a3977547388ebfd612915431ec98
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 955c3574358d59d23b644a31e42ee91ce6ce76eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068334"
 ---
 # <a name="restrict"></a>restrict
 
@@ -32,21 +32,21 @@ ms.locfileid: "39463677"
 
 ## <a name="syntax"></a>語法
 
-> **__declspec(restrict)** *pointer_return_type* *function*();  
-  
+> **__declspec(restrict)** *pointer_return_type* *function*();
+
 ## <a name="remarks"></a>備註
 
 編譯器會傳播 **__declspec(restrict)**。 比方說，CRT`malloc`函式具有 **__declspec(restrict)** 裝飾，因此，編譯器會假設指標初始化的記憶體位置`malloc`也不是由別名先前現有的指標。
 
-編譯器不會檢查傳回的指標不是實際的別名。 開發人員必須負責確保程式不別名會以標記的指標**限制 __declspec**修飾詞。  
-  
+編譯器不會檢查傳回的指標不是實際的別名。 開發人員必須負責確保程式不別名會以標記的指標**限制 __declspec**修飾詞。
+
 如需變數的類似語法，請參閱[__restrict](../cpp/extension-restrict.md)。
- 
+
 另一個註釋套用至出現在函式的別名，請參閱[__declspec(noalias)](../cpp/noalias.md)。
-  
-如需**限制**關鍵字是 c + + AMP 的一部分，請參閱[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。  
- 
-## <a name="example"></a>範例  
+
+如需**限制**關鍵字是 c + + AMP 的一部分，請參閱[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。
+
+## <a name="example"></a>範例
 
 下列範例示範如何使用 **__declspec(restrict)**。
 
@@ -122,6 +122,7 @@ int main()
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
- [關鍵字](../cpp/keywords-cpp.md)  
- [__declspec](../cpp/declspec.md)  
- [__declspec(noalias)](../cpp/noalias.md)  
+
+[關鍵字](../cpp/keywords-cpp.md)<br/>
+[__declspec](../cpp/declspec.md)<br/>
+[__declspec(noalias)](../cpp/noalias.md)

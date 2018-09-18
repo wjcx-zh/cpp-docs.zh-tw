@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028333"
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
 
@@ -72,8 +72,8 @@ ms.locfileid: "45701723"
 
 ### <a name="syntax"></a>語法
 
-```  
-ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);  
+```
+ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
 ### <a name="parameters"></a>參數
@@ -101,22 +101,22 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="syntax"></a>語法
 
-```  
-LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 開啟登錄機碼的控制代碼。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函式會開啟或建立的索引鍵名稱。
 
-*phkResult*  
+*phkResult*<br/>
 收到的開啟或建立金鑰的控制代碼變數的指標。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -133,19 +133,19 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="syntax"></a>語法
 
-```  
-LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 開啟登錄機碼的控制代碼。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 要刪除的金鑰名稱。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -162,19 +162,19 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="syntax"></a>語法
 
-```  
-BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);  
+```
+BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 指定處理常式的 CLSID。
 
-*lpszShortTypeName*  
+*lpszShortTypeName*<br/>
 指定處理常式的 ProgID。
 
-*lpszFilterExt*  
+*lpszFilterExt*<br/>
 指定已向此處理常式註冊的副檔名。
 
 ### <a name="requirements"></a>需求
@@ -191,10 +191,10 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>參數
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 模組執行個體控制代碼。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字串"\\\N 」，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -203,7 +203,8 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="remarks"></a>備註
 
-此協助程式函式會利用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)並[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
+此協助程式函式會利用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)並[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。
+
 ### <a name="requirements"></a>需求
 
 **標頭：** atlbase.h
@@ -214,22 +215,22 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="syntax"></a>語法
 
-```  
-LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 開啟登錄機碼的控制代碼。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函式會開啟或建立的索引鍵名稱。
 
-*phkResult*  
+*phkResult*<br/>
 收到建立的索引鍵的控制代碼變數的指標。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -246,28 +247,28 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="syntax"></a>語法
 
-```  
-LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);  
+```
+LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 開啟登錄機碼的控制代碼。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函式會開啟或建立的索引鍵名稱。
 
-*ulOptions*  
+*ulOptions*<br/>
 這個參數已保留，而且必須為零。
 
-*samDesired*  
+*samDesired*<br/>
 遮罩，指定索引鍵的所需的存取權限。
 
-*phkResult*  
+*phkResult*<br/>
 此變數會接收開啟金鑰的控制代碼指標。
 
-*pTM*  
+*pTM*<br/>
 指向 `CAtlTransactionManager` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -284,13 +285,13 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="syntax"></a>語法
 
-```  
-BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);  
+```
+BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lpszCLSID*  
+*lpszCLSID*<br/>
 指定要取消註冊之處理常式的 CLSID。
 
 ### <a name="requirements"></a>需求
@@ -303,13 +304,13 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="syntax"></a>語法
 
-```  
-ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);  
+```
+ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bEnable*  
+*bEnable*<br/>
 [in]TRUE 表示登錄資訊會導向至**HKCU**節點;FALSE 表示，應用程式會將登錄資訊寫入至預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。
 
 ### <a name="return-value"></a>傳回值
@@ -321,6 +322,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取權**HKEY_CURRENT_USER\Software\Classes**。
 
 重新導向不是全域的。 只有 MFC 和 ATL 架構會受到此登錄重新導向。  
+
 ### <a name="requirements"></a>需求
 
 **標頭：** atlbase.h  
@@ -339,10 +341,10 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>參數
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 模組執行個體控制代碼。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字串"\\\N 」，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -352,6 +354,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="remarks"></a>備註
 
 此協助程式函式會利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)並[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
+
 ### <a name="requirements"></a>需求
 
 **標頭：** atlbase.h
@@ -372,16 +375,16 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>參數
 
-*hInstTypeLib*  
+*hInstTypeLib*<br/>
 型別程式庫相關聯的模組的控制代碼。
 
-*lpszIndex*  
+*lpszIndex*<br/>
 格式字串"\\\N 」，其中 N 是整數索引的類型程式庫資源。 如果沒有索引鍵為必要，可以是 NULL。
 
-*pbstrPath*  
+*pbstrPath*<br/>
 在成功傳回時，包含與型別程式庫相關聯的模組的完整路徑。
 
-*ppTypeLib*  
+*ppTypeLib*<br/>
 在成功傳回時，包含要載入的型別程式庫指標的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -415,13 +418,13 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*  
+*太平洋時間*<br/>
 目前物件的指標。
 
-*rdxOp*  
+*rdxOp*<br/>
 列舉值，指出哪一個作業應該執行的函式。 請參閱 < 備註 > 一節針對允許的值。
 
-*pItem*  
+*pItem*<br/>
 要讀取或寫入登錄的資料指標。 資料也可以代表要刪除的登錄機碼。 預設值是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -446,5 +449,5 @@ HRESULT RegistryDataExchange(
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](atl-functions.md)   
+[函式](atl-functions.md)<br/>
 [登錄資料交換巨集](registry-data-exchange-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3388 |Microsoft 文件
+title: 編譯器錯誤 C3388 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481096aa870d7e66df032f4d297c652417a7b487
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4447d2d72c2a0a56df9f3a64549f201f86ddf129
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073469"
 ---
 # <a name="compiler-error-c3388"></a>編譯器錯誤 C3388
-'type': 不允許作為條件約束，假設是 'ref class' 以繼續剖析  
-  
- 已在泛型類型上指定條件約束，但未正確地指定條件約束。 請參閱[泛型型別參數的條件約束 (C + + /CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)如需詳細資訊。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3388。  
-  
-```  
-// C3388.cpp  
-// compile with: /clr /c  
-interface class AA {};  
-  
-generic <class T>  
-where T : interface class   // C3388  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where T : AA  
-ref class D {};  
+
+'type': 不允許作為條件約束，假設是 'ref class' 以繼續剖析
+
+已在泛型類型上指定條件約束，但未正確地指定條件約束。 請參閱[泛型類型參數的條件約束 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)如需詳細資訊。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3388。
+
+```
+// C3388.cpp
+// compile with: /clr /c
+interface class AA {};
+
+generic <class T>
+where T : interface class   // C3388
+ref class C {};
+
+// OK
+generic <class T>
+where T : AA
+ref class D {};
 ```

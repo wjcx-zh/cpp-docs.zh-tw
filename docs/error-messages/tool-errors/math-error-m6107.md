@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6107 |Microsoft 文件
+title: 運算錯誤 M6107 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d16df0d314aa5039d0fc495c1b934e647a40c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d954e06bfe0ca6b6d94347c6f847242ec549cf80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041385"
 ---
 # <a name="math-error-m6107"></a>運算錯誤 M6107
-unemulated  
-  
- 您嘗試執行處理器指令無效或不支援模擬器。  
-  
- 程式終止，結束代碼為 135。
+
+unemulated
+
+您嘗試執行副處理器指令無效或不支援模擬器。
+
+程式結束，結束代碼為 135。

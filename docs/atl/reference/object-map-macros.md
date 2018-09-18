@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1061b105b7fd1e344223da3850275910c164774b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761848"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040436"
 ---
 # <a name="object-map-macros"></a>物件對應巨集
 
@@ -47,7 +47,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]類別物件的描述。
 
 ### <a name="remarks"></a>備註
@@ -74,10 +74,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 [in]藉由將名為的 c + + 類別的 COM 類別的 CLSID*類別*。
 
-*class*  
+*class*<br/>
 [in]實作所表示的 COM 類別的 c + + 類別名稱*clsid*。
 
 ### <a name="remarks"></a>備註
@@ -106,10 +106,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 [in]藉由將名為的 c + + 類別的 COM 類別的 CLSID*類別*。
 
-*class*  
+*class*<br/>
 [in]實作所表示的 COM 類別的 c + + 類別名稱*clsid*。
 
 ### <a name="remarks"></a>備註

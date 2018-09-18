@@ -1,5 +1,5 @@
 ---
-title: Concurrency 命名空間運算子 (AMP) |Microsoft 文件
+title: Concurrency 命名空間運算子 (AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026929"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 ||||  
@@ -38,17 +38,17 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 其中一個要比較的 tuple。  
+*_Lhs*<br/>
+其中一個要比較的 tuple。  
   
- `_Rhs`  
- 其中一個要比較的 tuple。  
+*_Rhs*<br/>
+其中一個要比較的 tuple。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果 tuple 相等;否則， `false`。  
+ `true` 如果 tuple 相等。否則， `false`。  
   
 ##  <a name="operator_neq"></a> operator!=   
  判斷指定的引數是否不相等。  
@@ -64,21 +64,21 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 其中一個要比較的 tuple。  
+*_Lhs*<br/>
+其中一個要比較的 tuple。  
   
- `_Rhs`  
- 其中一個要比較的 tuple。  
+*_Rhs*<br/>
+其中一個要比較的 tuple。  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果 tuple 不相等。否則， `false`。  
   
 ##  <a name="operator_add"></a>  operator+   
 
- 計算 component-wise 指定的引數的總和。  
+ 計算指定的引數的整體元件總和。  
   
 ```  
 template <
@@ -109,21 +109,21 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 要加入引數的其中一個。  
+*_Lhs*<br/>
+其中一個加入的引數。  
   
- `_Rhs`  
- 要加入引數的其中一個。  
+*_Rhs*<br/>
+其中一個加入的引數。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的引數 component-wise 的總和。  
+ 指定的引數的整體元件總和。  
   
 ##  <a name="operator-"></a>  operator-   
 
- 計算指定的引數之間的 component-wise 差異。  
+ 計算指定的引數之間的整體元件差值。  
   
 ```  
 template <
@@ -154,21 +154,21 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 要減去的引數。  
+*_Lhs*<br/>
+要從中減去的引數。  
   
- `_Rhs`  
- 要減去引數。  
+*_Rhs*<br/>
+要減去的引數。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的引數 component-wise 差異。  
+ 指定的引數之間的整體元件差值。  
   
 ##  <a name="operator_star"></a>  operator*   
 
- 計算指定的引數的 component-wise 的乘積。  
+ 計算指定的引數的整體元件乘積。  
   
 ```  
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 其中一個要相乘的 tuple。  
+*_Lhs*<br/>
+其中一個要相乘的 tuple。  
   
- `_Rhs`  
- 其中一個要相乘的 tuple。  
+*_Rhs*<br/>
+其中一個要相乘的 tuple。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的引數 component-wise 產品。  
+ 指定的引數分量方向上的產品。  
   
 
 ##  <a name="operator_div"></a>  operator/   
- 計算指定的引數的 component-wise 的商數。  
+ 計算指定的引數的整體元件商數。  
   
 ```  
 template <
@@ -226,21 +226,21 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 要當做被除數 tuple。  
+*_Lhs*<br/>
+要當做被除數的 tuple。  
   
- `_Rhs`  
- 做為除數 tuple。  
+*_Rhs*<br/>
+要除以的元組。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的引數 component-wise 的商數。  
+ 指定的引數在分量方向上的商。  
   
 ##  <a name="operator_mod"></a>  operator%   
 
- 會計算第二個指定的引數的第一個指定的引數的模數。  
+ 計算的第一個指定的引數，第二個指定的引數的模數。  
   
 ```  
 template <
@@ -262,14 +262,14 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rank`  
- Tuple 引數的順位。  
+*_Rank*<br/>
+Tuple 引數的順位。  
   
- `_Lhs`  
- 從中 tuple 計算模數。  
+*_Lhs*<br/>
+Tuple 從中計算模數。  
   
- `_Rhs`  
- Tuple 來模數所。  
+*_Rhs*<br/>
+要的元組模數的。  
   
 ### <a name="return-value"></a>傳回值  
  第一個指定的引數模數第二個指定的引數的結果。  

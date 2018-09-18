@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027852"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 結構
 執行緒的抽象概念。 視您所建立之排程器的 `SchedulerType` 原則機碼而定，資源管理員會授與您支援一般 Win32 執行緒或可使用者模式排程 (UMS) 執行緒的執行緒 Proxy。 安裝 Windows 7 (含以上) 版本的 64 位元作業系統支援 UMS 執行緒。  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- `switchState`  
- 表示執行緒 proxy 正在執行的切換狀態。 參數的類型是`SwitchingProxyState`。  
+*switchState*<br/>
+表示執行緒 proxy 正在執行的切換狀態。 參數的類型是`SwitchingProxyState`。  
   
 ### <a name="remarks"></a>備註  
  如果因故需要將內容與其執行所在的虛擬處理器根解除關聯，請使用 `SwitchOut`。 根據您傳遞給 `switchState` 參數的值，以及它是否在虛擬處理器根上執行而定，呼叫會立即傳回或是封鎖與內容相關聯的執行緒 Proxy。 在將參數設定為 `SwitchOut` 的情況下呼叫 `Idle` 是錯誤的做法。 這樣會導致[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況。  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pContext`  
- 若要以合作方式切換至執行內容。  
+*pContext*<br/>
+若要以合作方式切換至執行內容。  
   
- `switchState`  
- 表示執行緒 proxy 正在執行的切換狀態。 參數的類型是`SwitchingProxyState`。  
+*switchState*<br/>
+表示執行緒 proxy 正在執行的切換狀態。 參數的類型是`SwitchingProxyState`。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法，從一個執行內容切換至另一個，從[iexecutioncontext:: Dispatch](iexecutioncontext-structure.md#dispatch)方法的第一個執行內容。 此方法將相關聯的執行內容`pContext`如果它尚未與其中一個相關聯的執行緒 proxy。 目前的執行緒 proxy 的擁有權取決於您指定的值`switchState`引數。  

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2153 |Microsoft 文件
+title: 編譯器錯誤 C2153 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d288434cce1e1584a61040145b07d26defd9dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbb3283ff4d27b6c939434ac3df8f8c1febf0eb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169721"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051421"
 ---
 # <a name="compiler-error-c2153"></a>編譯器錯誤 C2153
-十六進位常數必須有至少一個十六進位數字  
-  
- 十六進位常數 0x0x 和 \x 不正確。 至少一個十六進位數字必須遵循 x。  
-  
- 下列範例會產生 C2153:  
-  
-```  
-// C2153.cpp  
-int main() {  
-   int a= 0x;    // C2153  
-   int b= 0xA;   // OK  
-}  
+
+必須至少一個十六進位數字十六進位常數。
+
+十六進位常數 0x0x 和 \x 不會是有效項目。 至少一個十六進位數字必須遵循 x。
+
+下列範例會產生 C2153:
+
+```
+// C2153.cpp
+int main() {
+   int a= 0x;    // C2153
+   int b= 0xA;   // OK
+}
 ```

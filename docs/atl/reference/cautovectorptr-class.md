@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054476"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 類別
 
@@ -40,13 +40,13 @@ ms.locfileid: "43755719"
 ## <a name="syntax"></a>語法
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>參數
 
-`T`  
+*T*<br/>
 指標類型。
 
 ## <a name="members"></a>成員
@@ -82,7 +82,7 @@ class CAutoVectorPtr
 
 ## <a name="remarks"></a>備註
 
-這個類別提供方法來建立和管理智慧型指標，這有助於防止記憶體流失，自動在它超出範圍時釋出資源。 `CAutoVectorPtr` 類似於`CAutoPtr`、 唯一的差別在於，`CAutoVectorPtr`會使用[向量的新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)並[向量刪除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)來配置和釋放記憶體而不是 c + +**新**並**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果集合類別的`CAutoVectorPtr`所需。  
+這個類別提供方法來建立和管理智慧型指標，這有助於防止記憶體流失，自動在它超出範圍時釋出資源。 `CAutoVectorPtr` 類似於`CAutoPtr`、 唯一的差別在於，`CAutoVectorPtr`會使用[向量的新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)並[向量刪除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)來配置和釋放記憶體而不是 c + +**新**並**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果集合類別的`CAutoVectorPtr`所需。
 
 請參閱[CAutoPtr](../../atl/reference/cautoptr-class.md)使用智慧型指標類別的範例。
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>參數
 
-*nElements*  
+*nElements*<br/>
 陣列中的項目數。
 
 ### <a name="return-value"></a>傳回值
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 `CAutoVectorPtr`物件會取得這個指標的擁有權。
 
 ### <a name="remarks"></a>備註
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 現有的指標。
 
 ### <a name="remarks"></a>備註
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 變數的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -226,7 +226,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 轉換運算子。
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ operator T*() const throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAutoPtr 類別](../../atl/reference/cautoptr-class.md)   
+[CAutoPtr 類別](../../atl/reference/cautoptr-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

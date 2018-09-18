@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062666"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 類別
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>參數
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 預設的視窗樣式。
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 預設延伸的視窗樣式。
 
 ## <a name="members"></a>成員
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>參數
 
-*cheaderctrl:: Create*  
+*cheaderctrl:: Create*<br/>
 用於建立視窗的樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>參數
 
-*dwExStyle*  
+*dwExStyle*<br/>
 用來建立視窗的延伸的樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -108,6 +108,6 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [了解視窗特性](../../atl/understanding-window-traits.md)
 

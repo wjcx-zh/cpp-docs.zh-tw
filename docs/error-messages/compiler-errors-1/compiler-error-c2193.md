@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2193 |Microsoft 文件
+title: 編譯器錯誤 C2193 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d6a5890a74fbb4f8a70ee86073c257cdf16ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecfadd6476b8ed65891b5cb8fcbb3e0d54b203ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071454"
 ---
 # <a name="compiler-error-c2193"></a>編譯器錯誤 C2193
-'identifier': 已經在區段  
-  
- 函式已放在兩個不同的區段使用`alloc_text`和`code_seg`pragma。  
-  
- 下列範例會產生 C2193:  
-  
-```  
-// C2193.cpp  
-// compile with: /c  
-extern "C" void MYFUNCTION();  
-#pragma alloc_text(MYCODE, MYFUNCTION)  
-#pragma code_seg("MYCODE2")  
-extern "C" void MYFUNCTION() {}   // C2193  
-extern "C" void MYFUNCTION2() {}  
+
+'identifier': 已經在區段
+
+函式已在使用兩個不同的區段放`alloc_text`和`code_seg`pragma。
+
+下列範例會產生 C2193:
+
+```
+// C2193.cpp
+// compile with: /c
+extern "C" void MYFUNCTION();
+#pragma alloc_text(MYCODE, MYFUNCTION)
+#pragma code_seg("MYCODE2")
+extern "C" void MYFUNCTION() {}   // C2193
+extern "C" void MYFUNCTION2() {}
 ```

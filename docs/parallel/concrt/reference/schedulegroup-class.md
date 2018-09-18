@@ -1,5 +1,5 @@
 ---
-title: ScheduleGroup 類別 |Microsoft 文件
+title: ScheduleGroup 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688683"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039983"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 代表排程群組的抽象概念。 排程群組會將一組相關的工作組織在一起，以讓這些工作獲得暫時緊密排程在一起的優勢，其方法如下：透過在同一個群組中執行另一個工作再移至另一個群組；透過再同一個 NUMA 節點或實體通訊端的同一個群組內執行多個項目。  
@@ -49,10 +49,10 @@ class ScheduleGroup;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Id](#id)|傳回群組所屬的排程器內必須是唯一的排程群組的識別碼。|  
+|[Id](#id)|傳回群組所屬的排程器中是唯一的排程群組的識別碼。|  
 |[參考資料](#reference)|遞增排程器群組的參考計數。|  
 |[發行](#release)|遞減排程器群組的參考計數。|  
-|[ScheduleTask](#scheduletask)|排程的排程群組中的輕量工作。|  
+|[ScheduleTask](#scheduletask)|排程群組內的輕量級的排程工作。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `ScheduleGroup`  
@@ -64,7 +64,7 @@ class ScheduleGroup;
   
 ##  <a name="id"></a> Id 
 
- 傳回群組所屬的排程器內必須是唯一的排程群組的識別碼。  
+ 傳回群組所屬的排程器中是唯一的排程群組的識別碼。  
   
 ```
 virtual unsigned int Id() const = 0;
@@ -73,9 +73,9 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>傳回值  
  排程群組中的群組所屬的排程器的唯一識別碼。  
   
-##  <a name="operator_delete"></a> delete 運算子 
+##  <a name="operator_delete"></a> 運算子 delete 
 
- A`ScheduleGroup`終結物件內部執行階段時它的所有外部參考。 它不可明確刪除。  
+ A`ScheduleGroup`終結物件內部執行階段時，所有外部參考會釋出。 它不可明確刪除。  
   
 ```
 void operator delete(
@@ -89,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>參數  
- `_PObject`  
- 要刪除物件的指標。  
+*_PObject*<br/>
+要刪除的物件指標。  
   
 ##  <a name="reference"></a> 參考 
 
@@ -104,9 +104,9 @@ virtual unsigned int Reference() = 0;
  新遞增的參考計數。  
   
 ### <a name="remarks"></a>備註  
- 這通常用來管理排程群組的存留期的組合。 當排程群組的參考計數降至零時，則執行階段會刪除排程群組。 建立使用排程群組[currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup)方法，或[scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup)方法開始於其中一個的參考計數。  
+ 這通常用來管理排程群組組合的存留期。 排程群組的參考計數降為零，當執行階段會刪除排程群組。 建立使用排程群組[currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup)方法，或有[scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup)方法開始的其中一個的參考計數。  
   
-##  <a name="release"></a> 發行 
+##  <a name="release"></a> 版本 
 
  遞減排程器群組的參考計數。  
   
@@ -118,9 +118,9 @@ virtual unsigned int Release() = 0;
  新遞減參考計數。  
   
 ### <a name="remarks"></a>備註  
- 這通常用來管理排程群組的存留期的組合。 當排程群組的參考計數降至零時，則執行階段會刪除排程群組。 在您呼叫 `Release` 方法特定次數以移除建立參考計數和任何使用 `Reference` 方法所進行的參考後，就不能進一步利用排程群組。 這樣會導致未定義的行為。  
+ 這通常用來管理排程群組組合的存留期。 排程群組的參考計數降為零，當執行階段會刪除排程群組。 在您呼叫 `Release` 方法特定次數以移除建立參考計數和任何使用 `Reference` 方法所進行的參考後，就不能進一步利用排程群組。 如此一來，會導致未定義的行為。  
   
- 排程群組是與特定的排程器執行個體相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 正在進行其他方式導致未定義的行為。  
+ 排程群組是特定的排程器執行個體相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 在進行其他方式導致未定義的行為。  
   
 ##  <a name="dtor"></a> ~ ScheduleGroup 
 
@@ -130,7 +130,7 @@ virtual ~ScheduleGroup();
   
 ##  <a name="scheduletask"></a> ScheduleTask 
 
- 排程的排程群組中的輕量工作。  
+ 排程群組內的輕量級的排程工作。  
   
 ```
 virtual void ScheduleTask(
@@ -139,14 +139,14 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Proc`  
- 若要執行的輕量工作主體中執行的函式指標。  
+*_Proc*<br/>
+若要執行的輕量工作主體執行該函式指標。  
   
- `_Data`  
- 將做為參數傳遞至工作的主體資料的 void 指標。  
+*資料 （_d)*<br/>
+將做為參數傳遞至工作的主體資料的 void 指標。  
   
 ### <a name="remarks"></a>備註  
- 呼叫`ScheduleTask`方法隱含會參考計數放在適當的時間執行工作後執行階段所移除的排程群組上。  
+ 呼叫`ScheduleTask`方法會隱含地將參考計數放上不再由執行階段在適當的時間之後會執行該工作的排程群組。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

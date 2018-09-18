@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3154 |Microsoft 文件
+title: 編譯器錯誤 C3154 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33afc69bb44488d56b51797c72f2cd5ea4105420
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92a888020e306e762ffb242cb92636cc14680bf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251107"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074652"
 ---
 # <a name="compiler-error-c3154"></a>編譯器錯誤 C3154
-必須是 '、' 之前省略符號。 非逗號分隔的省略符號參數陣列函式上不支援。  
-  
- 變數引數函式宣告不正確。  
-  
- 如需詳細資訊，請參閱[變數引數清單 （...）(C + + /CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3154。  
-  
-```  
-// C3154.cpp  
-// compile with: /clr  
-ref struct R {  
-   void Func(int ... array<int> ^);   // C3154  
-   void Func2(int i, ... array<int> ^){}   // OK  
-   void Func3(array<int> ^){}   // OK  
-   void Func4(... array<int> ^){}   // OK  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   r->Func4(1,2,3);  
-}  
+
+必須是 '、' 省略符號之前。 非逗號分隔的省略符號參數陣列函式不支援。
+
+變數引數的函式宣告不正確。
+
+如需詳細資訊，請參閱[變數引數清單 （...）(C + + /CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3154。
+
+```
+// C3154.cpp
+// compile with: /clr
+ref struct R {
+   void Func(int ... array<int> ^);   // C3154
+   void Func2(int i, ... array<int> ^){}   // OK
+   void Func3(array<int> ^){}   // OK
+   void Func4(... array<int> ^){}   // OK
+};
+
+int main() {
+   R ^ r = gcnew R;
+   r->Func4(1,2,3);
+}
 ```

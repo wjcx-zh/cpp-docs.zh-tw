@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3d6ff72f9f5011d7c4e0f0b65cca9a82227b70d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4ec124d1010a5870d47b9f1504655a7822505fe6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040488"
 ---
 # <a name="catlfile-class"></a>CAtlFile 類別
 
@@ -107,13 +107,13 @@ explicit CAtlFile(HANDLE hFile) throw();
 
 ### <a name="parameters"></a>參數
 
-*file*  
+*file*<br/>
 「 檔案 」 物件。
 
-*hFile*  
+*hFile*<br/>
 檔案控制代碼。
 
-*pTM*  
+*pTM*<br/>
 CAtlTransactionManager 物件的指標
 
 ### <a name="remarks"></a>備註
@@ -137,25 +137,25 @@ HRESULT Create(
 
 ### <a name="parameters"></a>參數
 
-*szFilename*  
+*szFilename*<br/>
 檔案名稱。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 所需的存取。 請參閱*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。
 
-*dwShareMode*  
+*dwShareMode*<br/>
 共用模式中。 請參閱*dwShareMode*在`CreateFile`。
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 建立配置中。 請參閱*dwCreationDisposition*在`CreateFile`。
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 旗標與屬性。 請參閱*dwFlagsAndAttributes*在`CreateFile`。
 
-*lpsa*  
+*lpsa*<br/>
 安全性屬性。 請參閱*lpSecurityAttributes*在`CreateFile`。
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 範本檔案。 請參閱*hTemplateFile*在`CreateFile`。
 
 ### <a name="return-value"></a>傳回值
@@ -195,13 +195,13 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>參數
 
-*pOverlapped*  
+*pOverlapped*<br/>
 重疊的結構。 請參閱*lpOverlapped*中[GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) Windows SDK 中。
 
-*dwBytesTransferred*  
+*dwBytesTransferred*<br/>
 傳輸的位元組。 請參閱*lpNumberOfBytesTransferred*在`GetOverlappedResult`。
 
-*bWait*  
+*bWait*<br/>
 [等候] 選項。 請參閱*bWait*在`GetOverlappedResult`。
 
 ### <a name="return-value"></a>傳回值
@@ -222,7 +222,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*nPos*  
+*nPos*<br/>
 以位元組為單位的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -243,7 +243,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>參數
 
-*nLen*  
+*nLen*<br/>
 在檔案中的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -264,10 +264,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>參數
 
-*nPos*  
+*nPos*<br/>
 鎖定應該開始的位置的檔案中的位置。
 
-*nCount*  
+*nCount*<br/>
 位元組範圍鎖定的長度。
 
 ### <a name="return-value"></a>傳回值
@@ -316,19 +316,19 @@ HRESULT Read(
 
 ### <a name="parameters"></a>參數
 
-*pBuffer*  
+*pBuffer*<br/>
 從檔案讀取至接收資料的緩衝區的指標。
 
-*nBufSize*  
+*nBufSize*<br/>
 緩衝區大小，以位元組為單位。
 
-*nBytesRead*  
+*nBytesRead*<br/>
 讀取的位元組數。
 
-*pOverlapped*  
+*pOverlapped*<br/>
 重疊的結構。 請參閱*lpOverlapped*中[ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) Windows SDK 中。
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 完成常式。 請參閱*lpCompletionRoutine*中[ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -351,10 +351,10 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>參數
 
-*nOffset*  
+*nOffset*<br/>
 從所指定的起始點的位移*dwFrom*。
 
-*dwFrom*  
+*dwFrom*<br/>
 起始點 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。
 
 ### <a name="return-value"></a>傳回值
@@ -375,7 +375,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>參數
 
-*nNewLen*  
+*nNewLen*<br/>
 新的長度，以位元組為單位的檔案。
 
 ### <a name="return-value"></a>傳回值
@@ -396,10 +396,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>參數
 
-*nPos*  
+*nPos*<br/>
 解除鎖定應該開始的位置的檔案中的位置。
 
-*nCount*  
+*nCount*<br/>
 要解除鎖定的位元組範圍的長度。
 
 ### <a name="return-value"></a>傳回值
@@ -434,19 +434,19 @@ HRESULT Write(
 
 ### <a name="parameters"></a>參數
 
-*pBuffer*  
+*pBuffer*<br/>
 包含要寫入檔案的資料緩衝區。
 
-*nBufSize*  
+*nBufSize*<br/>
 若要從緩衝區傳送的位元組數目。
 
-*pOverlapped*  
+*pOverlapped*<br/>
 重疊的結構。 請參閱*lpOverlapped*中[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) Windows SDK 中。
 
-*pfnCompletionRoutine*  
+*pfnCompletionRoutine*<br/>
 完成常式。 請參閱*lpCompletionRoutine*中[WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) Windows SDK 中。
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 寫入的位元組。
 
 ### <a name="return-value"></a>傳回值
@@ -459,6 +459,6 @@ HRESULT Write(
 
 ## <a name="see-also"></a>另請參閱
 
-[跑馬燈範例](../../visual-cpp-samples.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[跑馬燈範例](../../visual-cpp-samples.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [CHandle 類別](../../atl/reference/chandle-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3216 |Microsoft 文件
+title: 編譯器錯誤 C3216 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19091b0e200bb44ca6c1ec7c9a8ee359a95fad1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eb1fb93335dc6fb61e8e73ea11cfc91c6b461b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043686"
 ---
 # <a name="compiler-error-c3216"></a>編譯器錯誤 C3216
-條件約束必須是泛型參數，而非 'type'  
-  
- 條件約束的格式錯誤。  
-  
- 下列範例會產生 C3216：  
-  
-```  
-// C3216.cpp  
-// compile with: /clr  
-interface struct A {};  
-  
-generic <class T>  
-where F : A   // C3216  
-// Try the following line instead:  
-// where T : A    // C3216  
-ref class C {};  
-```  
-  
- 下列範例示範可能的解決方式：  
-  
-```  
-// C3216b.cpp  
-// compile with: /clr /c  
-interface struct A {};  
-  
-generic <class T>  
-where T : A  
-ref class C {};  
+
+條件約束必須是泛型參數，而非 'type'
+
+條件約束的格式錯誤。
+
+下列範例會產生 C3216：
+
+```
+// C3216.cpp
+// compile with: /clr
+interface struct A {};
+
+generic <class T>
+where F : A   // C3216
+// Try the following line instead:
+// where T : A    // C3216
+ref class C {};
+```
+
+下列範例示範可能的解決方式：
+
+```
+// C3216b.cpp
+// compile with: /clr /c
+interface struct A {};
+
+generic <class T>
+where T : A
+ref class C {};
 ```

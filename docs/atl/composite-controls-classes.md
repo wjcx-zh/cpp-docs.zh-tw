@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e3c7c930df13c09afc48f17e7042f2fe846b095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075276"
 ---
 # <a name="composite-controls-classes"></a>複合控制項類別
 
@@ -36,7 +36,7 @@ ms.locfileid: "43765876"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../atl/atl-class-overview.md)   
-[複合控制項巨集](../atl/reference/composite-control-macros.md)   
+[類別概觀](../atl/atl-class-overview.md)<br/>
+[複合控制項巨集](../atl/reference/composite-control-macros.md)<br/>
 [複合控制項全域函式](../atl/reference/composite-control-global-functions.md)
 

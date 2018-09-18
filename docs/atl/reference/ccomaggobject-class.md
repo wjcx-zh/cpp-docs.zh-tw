@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76a85b840aba9d52600b3cf730eada0e8095eb98
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ffe21526dd106ad067c68da49d6b07bb9e50cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039825"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
 
@@ -41,14 +41,14 @@ ms.locfileid: "43756320"
 ## <a name="syntax"></a>語法
 
 ```
-template<class contained>  
-class CComAggObject : public IUnknown, 
+template<class contained>
+class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>參數
 
-*包含*  
+*包含*<br/>
 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
 
 ## <a name="members"></a>成員
@@ -119,7 +119,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>參數
 
-*pv*  
+*pv*<br/>
 [in]外部未知。
 
 ### <a name="remarks"></a>備註
@@ -152,7 +152,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*前置處理*  
+*前置處理*<br/>
 [out]指標**CComAggObject\<**<em>包含</em>**>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -195,7 +195,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>參數
 
-*包含*  
+*包含*<br/>
 [in]您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
 
 ### <a name="remarks"></a>備註
@@ -214,13 +214,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求的介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
 
-*前置處理*  
+*前置處理*<br/>
 [out]依類型識別之介面指標的指標`Q`。 如果物件不支援這個介面， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -245,9 +245,9 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComObject 類別](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[CComObject 類別](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

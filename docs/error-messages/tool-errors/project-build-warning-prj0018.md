@@ -1,5 +1,5 @@
 ---
-title: 專案建置警告 PRJ0018 |Microsoft 文件
+title: 專案建置警告 PRJ0018 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914f05b6e2bb3dfb8932b306fb7c84b9a31466c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e232ed90af6002a58356827421b2d49e68ba14a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033208"
 ---
 # <a name="project-build-warning-prj0018"></a>專案建置警告 PRJ0018
-找不到下列環境變數：  
-  
- 未定義的環境變數。 這個錯誤會列出未定義的環境變數。  
-  
- 請參閱[自訂建置命令巨集](../../ide/common-macros-for-build-commands-and-properties.md)的建置流程中的巨集的詳細資訊。
+
+找不到下列環境變數：
+
+未定義的環境變數。 此錯誤會列出未定義的環境變數。
+
+請參閱[巨集來進行自訂建置命令](../../ide/common-macros-for-build-commands-and-properties.md)如建置程序中的巨集的資訊。

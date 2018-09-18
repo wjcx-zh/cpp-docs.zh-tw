@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4505 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4505 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4792be35ced122829410b284fb0ac15a5e15fa94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a89a6bd11b3d63f23f65ccc1bfbe16c49c13f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292197"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054775"
 ---
 # <a name="compiler-warning-level-4-c4505"></a>編譯器警告 (層級 4) C4505
-'function': 已移除未參考的區域函式  
-  
- 指定的函式是模組的本機和中; 主體未被參考因此，此函式是無作用程式碼。  
-  
- 編譯器不會產生此無作用的函式程式碼。
+
+'function': 已移除未參考本機函式
+
+指定的函式位於本機並不受參考的模組; 主體中因此，此函式是無作用程式碼。
+
+編譯器不會產生這個無作用的函式程式碼。

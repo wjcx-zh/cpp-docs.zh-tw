@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3204 |Microsoft 文件
+title: 編譯器錯誤 C3204 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66b02701629904c73045a3850db5fe73adf58a75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb4ebc98f230074279e11692b647b4f7ba73918
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027813"
 ---
 # <a name="compiler-error-c3204"></a>編譯器錯誤 C3204
-無法從 catch 區塊呼叫 '_alloca'  
-  
- 當您在 catch 區塊內使用 [_alloca](../../c-runtime-library/reference/alloca.md) 呼叫時，會發生這個錯誤。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3204：  
-  
-```  
-// C3204.cpp  
-// compile with: /EHsc  
-#include <malloc.h>  
-  
-void ShowError(void)  
-{  
-   try  
-   {  
-   }  
-   catch(...)  
-   {  
-      _alloca(1);   // C3204  
-   }  
-}  
+
+無法從 catch 區塊呼叫 '_alloca'
+
+當您在 catch 區塊內使用 [_alloca](../../c-runtime-library/reference/alloca.md) 呼叫時，會發生這個錯誤。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3204：
+
+```
+// C3204.cpp
+// compile with: /EHsc
+#include <malloc.h>
+
+void ShowError(void)
+{
+   try
+   {
+   }
+   catch(...)
+   {
+      _alloca(1);   // C3204
+   }
+}
 ```

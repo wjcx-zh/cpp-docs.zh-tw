@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a452d563646ac869bc1a3bc832a72a9bd11b694
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031375"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -54,7 +54,7 @@ ms.locfileid: "43894805"
 對於非靜態類別函式，如果函式是以非正規的方式定義，則不需要在非正規定義上指定呼叫慣例修飾詞。 也就是說，對於類別非靜態成員方法而言，宣告時所指定的呼叫慣例是在定義時假設。 如果已指定此類別定義，
 
 ```cpp
-struct CMyClass {  
+struct CMyClass {
    void __stdcall mymethod();
 };
 ```
@@ -62,13 +62,13 @@ struct CMyClass {
 this
 
 ```cpp
-void CMyClass::mymethod() { return; }  
+void CMyClass::mymethod() { return; }
 ```
 
 相當於這個
 
 ```cpp
-void __stdcall CMyClass::mymethod() { return; }  
+void __stdcall CMyClass::mymethod() { return; }
 ```
 
 ## <a name="example"></a>範例
@@ -84,5 +84,5 @@ typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fla
 
 ## <a name="see-also"></a>另請參閱
 
-[引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
+[引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

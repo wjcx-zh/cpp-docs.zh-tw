@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bb644e43a5dd5085c53d0428f892cccd424fc1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf8747275325332f6a2d0072e2c0ba2a66ae276
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057609"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 介面
 
@@ -130,7 +130,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>參數
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -151,7 +151,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>參數
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -172,7 +172,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>參數
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -193,7 +193,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>參數
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -214,7 +214,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>參數
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -235,7 +235,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>參數
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -256,7 +256,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>參數
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -277,7 +277,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>參數
 
-*pFont*  
+*pFont*<br/>
 [out]位址`IFontDisp`用來接收此屬性的目前值的介面指標。
 
 ### <a name="return-value"></a>傳回值
@@ -298,7 +298,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>參數
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -319,7 +319,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>參數
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -342,7 +342,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>參數
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -363,7 +363,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>參數
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -380,7 +380,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>參數
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -401,7 +401,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>參數
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -422,7 +422,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>參數
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -443,7 +443,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>參數
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -464,7 +464,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>參數
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -485,7 +485,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>參數
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -506,7 +506,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>參數
 
-*clrBackground*  
+*clrBackground*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -527,7 +527,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>參數
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -548,7 +548,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>參數
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -569,7 +569,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>參數
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -590,7 +590,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>參數
 
-*pFont*  
+*pFont*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -611,7 +611,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>參數
 
-*clrForeground*  
+*clrForeground*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -632,7 +632,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>參數
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -653,7 +653,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>參數
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -674,7 +674,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>參數
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -691,7 +691,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>參數
 
-*bUserMode*  
+*bUserMode*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -704,8 +704,8 @@ ATL 主機物件實作會使用這個屬性的預設值為 VARIANT_TRUE。
 
 ## <a name="see-also"></a>另請參閱
 
-[IAxWinAmbientDispatchEx 介面](../../atl/reference/iaxwinambientdispatchex-interface.md)   
-[IAxWinHostWindow 介面](../../atl/reference/iaxwinhostwindow-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatchEx 介面](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
+[IAxWinHostWindow 介面](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4102 |Microsoft 文件
+title: 連結器工具警告 LNK4102 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d13dcbc6d15efd7cf3a7ea0a310de4ab7b0c93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9daaffc4ddfa9a869c2e60e2c05dc2b7e296d94b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031849"
 ---
 # <a name="linker-tools-warning-lnk4102"></a>連結器工具警告 LNK4102
-刪除解構函式 'name;' 的匯出映像可能無法正確執行  
-  
- 程式已嘗試匯出刪除解構函式。 產生刪除可能會發生跨 DLL 界限，使得處理程序可以釋放並未擁有的記憶體。 請確定指定的符號未列出在.def 檔案中，而且符號並未列為引數的 **/匯入**或 **/EXPORT**連結器命令列中的選項。  
-  
- 如果您要重建 C 執行階段程式庫，您可以忽略此訊息。
+
+刪除解構函式 'name;' 的匯出映像可能無法正確執行
+
+程式已嘗試匯出刪除解構函式。 產生的刪除可能會發生跨 DLL 界限，使得處理程序可以釋放它沒有自己的記憶體。 確定指定的符號不在.def 檔案中，所列，而且符號未列為的引數 **/ 匯入**或是 **/匯出**連結器命令列中的選項。
+
+如果您重建 C 執行階段程式庫，您可以忽略此訊息。

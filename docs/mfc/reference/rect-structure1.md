@@ -1,5 +1,5 @@
 ---
-title: RECT 結構 1 |Microsoft 文件
+title: RECT 結構 1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046299"
 ---
 # <a name="rect-structure1"></a>RECT 結構 1
 `RECT` 結構定義矩形的左上角和右下角的座標。  
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>成員  
- `left`  
- 指定矩形左上角的 x 座標。  
+`left`<br/>
+指定矩形左上角的 x 座標。  
   
- `top`  
- 指定矩形左上角的 y 座標。  
+`top`<br/>
+指定矩形左上角的 y 座標。  
   
- `right`  
- 指定矩形右下角的 x 座標。  
+`right`<br/>
+指定矩形右下角的 x 座標。  
   
- `bottom`  
- 指定矩形右下角的 y 座標。  
+`bottom`<br/>
+指定矩形右下角的 y 座標。  
   
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

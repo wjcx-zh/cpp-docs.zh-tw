@@ -1,5 +1,5 @@
 ---
-title: CSingleDocTemplate 類別 |Microsoft 文件
+title: CSingleDocTemplate 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: ea133213b8d1d91a6c0932c7f0b7a94c5d5a368a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026761"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 類別
 定義實作單一文件介面 (SDI) 的文件範本。  
@@ -41,21 +41,21 @@ class CSingleDocTemplate : public CDocTemplate
 |[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|建構 `CSingleDocTemplate` 物件。|  
   
 ## <a name="remarks"></a>備註  
- SDI 應用程式顯示文件; 使用主框架視窗只有一次可以開啟一份文件。  
+ SDI 應用程式使用的主框架視窗來顯示文件只有一次可以開啟一份文件。  
   
  文件範本會定義三種類型的類別之間的關聯性：  
   
 -   文件類別，衍生自`CDocument`。  
   
--   檢視類別，會顯示上面所列的文件類別的資料。 您也可以衍生此類別從`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (您也可以使用`CEditView`直接。)  
+-   檢視類別，會顯示上面所列的文件類別的資料。 您可以衍生此類別`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (您也可以使用`CEditView`直接。)  
   
--   框架視窗類別，其中包含檢視。 SDI 文件範本中，您也可以衍生這個類別，從`CFrameWnd`; 如果您不需要自訂的行為主框架視窗中，您可以使用`CFrameWnd`直接而不需衍生您自己的類別。  
+-   框架視窗類別，其中包含檢視。 為 SDI 文件範本，您可以衍生此類別`CFrameWnd`; 如果您不需要自訂行為的主框架視窗中，您可以使用`CFrameWnd`直接而不需衍生您自己的類別。  
   
  SDI 應用程式通常支援一種類型的文件，因此只有一個`CSingleDocTemplate`物件。 只有一次可以開啟一份文件。  
   
- 您不需要呼叫任何成員函式`CSingleDocTemplate`除了建構函式。 架構的控制代碼`CSingleDocTemplate`內部物件。  
+ 您不需要呼叫任何成員函式`CSingleDocTemplate`除了建構函式。 此架構會處理`CSingleDocTemplate`內部物件。  
   
- 如需有關使用`CSingleDocTemplate`，請參閱[文件範本和文件/檢視建立流程](../../mfc/document-templates-and-the-document-view-creation-process.md)。  
+ 如需有關使用`CSingleDocTemplate`，請參閱 <<c2> [ 文件範本和文件/檢視建立流程](../../mfc/document-templates-and-the-document-view-creation-process.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,32 +82,30 @@ CSingleDocTemplate(
   
 ### <a name="parameters"></a>參數  
  *nIDResource*  
- 指定的文件類型搭配使用的資源識別碼。 這可能包括功能表、 圖示、 快速鍵對應表和字串資源。  
+ 指定文件類型所使用的資源的識別碼。 這可能包括功能表、 圖示、 快速鍵對應表和字串資源。  
   
- 最多七 '\n' 字元分隔的子字串所組成的字串資源 （如果不包含子字串，則需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元）;這些子字串會描述文件類型。 子字串的相關資訊，請參閱[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如:   
+ 最多七個以 '\n' 字元分隔的子字串所組成的字串資源 （不包含子字串時，需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元;）這些子字串會描述文件類型。 子字串的相關資訊，請參閱[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如:   
   
- `// MYCALC.RC`  
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"
+END
+```
   
- `STRINGTABLE PRELOAD DISCARDABLE`  
+ 您可以編輯這個字串使用字串編輯器;整個字串會顯示為單一項目在字串編輯器中中,，不為七個不同的項目。  
   
- `BEGIN`  
-  
- `IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"`  
-  
- `END`  
-  
- 您可以編輯這個字串使用字串編輯器。整個字串會顯示為單一項目在字串編輯器中，不做為七個不同的項目。  
-  
- 如需有關這些資源類型的詳細資訊，請參閱[字串編輯器](../../windows/string-editor.md)。  
+ 如需這些資源類型的詳細資訊，請參閱[字串值編輯器](../../windows/string-editor.md)。  
   
  *pDocClass*  
  指向`CRuntimeClass`文件類別的物件。 這個類別是`CDocument`-衍生的類別定義以代表您的文件。  
   
  *pFrameClass*  
- 指向`CRuntimeClass`框架視窗類別的物件。 這個類別可以是`CFrameWnd`-衍生的類別，或者它可以是`CFrameWnd`本身如果您要為您的主框架視窗的預設行為。  
+ 指向`CRuntimeClass`框架視窗類別的物件。 這個類別可以`CFrameWnd`-衍生的類別，或者它可以是`CFrameWnd`本身如果您想要為您的主框架視窗的預設行為。  
   
  *pViewClass*  
- 指向`CRuntimeClass`檢視類別的物件。 這個類別是`CView`-衍生的類別，您定義用來顯示文件。  
+ 指向`CRuntimeClass`檢視類別的物件。 這個類別是`CView`-衍生的類別，您會定義顯示您的文件。  
   
 ### <a name="remarks"></a>備註  
  以動態方式配置`CSingleDocTemplate`物件，並將它傳遞給`CWinApp::AddDocTemplate`從`InitInstance`應用程式類別的成員函式。  

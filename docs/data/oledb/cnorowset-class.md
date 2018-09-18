@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339558"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074834"
 ---
 # <a name="cnorowset-class"></a>CNoRowset 類別
+
 可用來當做樣板引數 (`TRowset`) 的[CCommand](../../data/oledb/ccommand-class.md)或是[CTable](../../data/oledb/ctable-class.md)。  
   
 ## <a name="syntax"></a>語法
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>參數  
- *TAccessor*  
- 存取子類別。 預設為 `CAccessorBase`。  
+
+*TAccessor*<br/>
+存取子類別。 預設為 `CAccessorBase`。  
   
 ## <a name="remarks"></a>備註  
- 使用`CNoRowset`做為範本引數，如果命令未傳回資料列集。  
+
+使用`CNoRowset`做為範本引數，如果命令未傳回資料列集。  
   
- `CNoRowset` 會實作下列的虛設常式方法，其中每一個對應到其他存取子類別的方法：  
+`CNoRowset` 會實作下列的虛設常式方法，其中每一個對應到其他存取子類別的方法：  
   
--   `BindFinished` -代表當繫結完成時 (傳回`S_OK`)。  
+- `BindFinished` -代表當繫結完成時 (傳回`S_OK`)。  
   
--   `Close` -釋放資料列和目前的 IRowset 介面。  
+- `Close` -釋放資料列和目前的 IRowset 介面。  
   
--   `GetIID` -擷取連接點的介面 ID。  
+- `GetIID` -擷取連接點的介面 ID。  
   
--   `GetInterface` -擷取介面。  
+- `GetInterface` -擷取介面。  
   
--   `GetInterfacePtr` -擷取封裝的介面指標。  
+- `GetInterfacePtr` -擷取封裝的介面指標。  
   
--   `SetAccessor` -設定存取子的指標。  
+- `SetAccessor` -設定存取子的指標。  
   
--   `SetupOptionalRowsetInterfaces` -設定的資料列集的選擇性介面。  
+- `SetupOptionalRowsetInterfaces` -設定的資料列集的選擇性介面。  
   
 ## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+
+**標題:** atldbcli.h  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 2） C4007 |Microsoft 文件
+title: 編譯器警告 （層級 2） C4007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e902b3e2f18332ac6a9804a14c1c39b58d74c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3c9903af3537e9e4003a913fc12412c9b87d614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291722"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044414"
 ---
 # <a name="compiler-warning-level-2-c4007"></a>編譯器警告 （層級 2） C4007
-'function': 必須是 '屬性'  
-  
- 未明確指定函式的必要的屬性。 例如，函式**主要**必須`__cdecl`屬性。 編譯器會強制屬性。
+
+'function': 必須是 '屬性'
+
+未明確指定函式的必要的屬性。 例如，函式**主要**必須要有`__cdecl`屬性。 編譯器會強制屬性。

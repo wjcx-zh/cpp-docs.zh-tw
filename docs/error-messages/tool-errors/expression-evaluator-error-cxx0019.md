@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0019 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0019 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1679374e105ab06ce245ba68cfe92706689e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031804"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>運算式評估工具錯誤 CXX0019
-不正確的類型轉換  
-  
- C 運算式評估工具無法執行轉換所寫的類型。  
-  
- 這個錯誤是與 can0019 相同。  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
-  
-1.  指定的類型為 unknown。  
-  
-2.  沒有太多層指標類型。 例如，類型轉換  
-  
-    ```  
-    (char **)h_message  
-    ```  
-  
-     無法評估由 C 運算式評估工具。
+
+不正確的類型轉換
+
+C 運算式評估工具無法執行轉換所寫的型別。
+
+此錯誤是與 can0019 相同。
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
+
+1. 指定的型別是未知的。
+
+1. 沒有指標類型的層級太多。 例如，類型轉換
+
+    ```
+    (char **)h_message
+    ```
+
+     無法評估 C 運算式評估工具。

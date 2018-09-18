@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd3e6809a8204b9a2380e896e4e458512e79fa2b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054502"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 類別
 
@@ -40,16 +40,16 @@ ms.locfileid: "43766658"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, class TEqual = CSimpleArrayEqualHelper<T>>  
+template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 若要儲存在陣列中的資料型別。
 
-*TEqual*  
+*TEqual*<br/>
 特性物件，並定義等號比較測試類型的項目*T*。
 
 ## <a name="members"></a>成員
@@ -107,7 +107,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>參數
 
-*t*  
+*t*<br/>
 要加入至陣列的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -123,13 +123,13 @@ BOOL Add(const T& t);
 陣列物件的建構函式。
 
 ```
-CSimpleArray(const CSimpleArray<T, TEqual>& src);  
+CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
 ### <a name="parameters"></a>參數
 
-*src*  
+*src*<br/>
 現有的 `CSimpleArray` 物件。
 
 ### <a name="remarks"></a>備註
@@ -158,7 +158,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>參數
 
-*t*  
+*t*<br/>
 要搜尋項目。
 
 ### <a name="return-value"></a>傳回值
@@ -203,7 +203,7 @@ T& operator[](int nindex);
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 項目索引。
 
 ### <a name="return-value"></a>傳回值
@@ -226,7 +226,7 @@ CSimpleArray<T, TEqual>
 
 ### <a name="parameters"></a>參數
 
-*src*  
+*src*<br/>
 要複製的陣列。
 
 ### <a name="return-value"></a>傳回值
@@ -251,7 +251,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>參數
 
-*t*  
+*t*<br/>
 要從陣列中移除的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -284,7 +284,7 @@ BOOL RemoveAtint nIndex);
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 指向要移除之元素的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -307,10 +307,10 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 若要變更項目的索引。
 
-*t*  
+*t*<br/>
 要指派給指定項目的值。
 
 ### <a name="return-value"></a>傳回值

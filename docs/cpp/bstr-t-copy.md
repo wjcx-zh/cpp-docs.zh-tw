@@ -17,40 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7032d9344ec9375059d5584d080854ffe5c775
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 50f9a17c93849dec49c2c9a72825a5797d8c040c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068620"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
-**Microsoft 專屬**  
-  
- 建構已封裝 `BSTR` 的複本。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-BSTR copy( bool fCopy = true ) const;  
-```  
-  
-#### <a name="parameters"></a>參數  
- *fCopy*  
- 如果為 TRUE，**複製**會傳回一份內含`BSTR`，否則為**複製**傳回實際的 BSTR。  
-  
-## <a name="remarks"></a>備註  
- 傳回新配置已封裝 `BSTR` 物件的複本。  
-  
-## <a name="example"></a>範例  
-  
-```cpp 
-STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
-   *pVal = m_bsConStr.copy();  
-}  
-```  
-  
- **結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [_bstr_t 類別](../cpp/bstr-t-class.md)
+
+**Microsoft 專屬**
+
+建構已封裝 `BSTR` 的複本。
+
+## <a name="syntax"></a>語法
+
+```
+BSTR copy( bool fCopy = true ) const;
+```
+
+#### <a name="parameters"></a>參數
+
+*fCopy*<br/>
+如果為 TRUE，**複製**會傳回一份內含`BSTR`，否則為**複製**傳回實際的 BSTR。
+
+## <a name="remarks"></a>備註
+
+傳回新配置已封裝 `BSTR` 物件的複本。
+
+## <a name="example"></a>範例
+
+```cpp
+STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
+   *pVal = m_bsConStr.copy();
+}
+```
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[_bstr_t 類別](../cpp/bstr-t-class.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031622"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>混合 C （結構化） 和 c + + 例外狀況
 
@@ -47,10 +47,10 @@ ms.locfileid: "42572487"
 
   在使用上查看更多資訊`setjmp`和`longjmp`c + + 程式中。
 
-- [處理 c + + 中的結構化例外狀況](../cpp/exception-handling-differences.md)
+- [使用 C++ 處理結構化例外狀況](../cpp/exception-handling-differences.md)
 
   請參閱您可以使用 c + + 來處理結構化例外狀況之方法的範例。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 例外狀況處理](../cpp/cpp-exception-handling.md)  
+[C++ 例外狀況處理](../cpp/cpp-exception-handling.md)

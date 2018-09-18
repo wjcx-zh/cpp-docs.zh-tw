@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4502 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4502 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb812e462ffac15626a0504a81f4a32f7231617f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a88ed68f48960afb7dd0a13e91f44f63d00313be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037719"
 ---
 # <a name="compiler-warning-level-1-c4502"></a>編譯器警告 (層級 1) C4502
-'連結規格' 必須使用關鍵字 'extern'，必須在所有其他規範之前  
-  
- 指定連結時未`extern`關鍵字。 連結至非外部型別無關。  
-  
- 編譯器假設`extern`關鍵字。
+
+'連結規格' 必須使用關鍵字 'extern'，前面必須加上所有其他的規範
+
+指定連結時，如果未`extern`關鍵字。 連結至非外部類型無關。
+
+編譯器假設`extern`關鍵字。

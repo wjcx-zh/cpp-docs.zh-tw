@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3e0ac7cf3a5448a2963aa92c2e275be796c895d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c977ecc1094af37c5e2c2e3ed8f27a6f2bdf1c93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758335"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033871"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 類別
 
@@ -41,28 +41,28 @@ template <const CLSID* pcoclsid,
     const IID* psrcid,
     const GUID* plibid = &CAtlModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CComTypeInfoHolder>
 class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ```
 
 #### <a name="parameters"></a>參數
 
-*pcoclsid*  
+*pcoclsid*<br/>
 Coclass 的識別項的指標。
 
-*psrcid*  
+*psrcid*<br/>
 Coclass' 預設的傳出 dispinterface 的識別碼指標。
 
-*plibid*  
+*plibid*<br/>
 指標，包含介面的相關資訊的類型程式庫的 LIBID。 根據預設，會傳遞伺服器層級類型程式庫。
 
-*wMajor*  
+*wMajor*<br/>
 類型程式庫的主要版本。 預設值為 1。
 
-*wMinor*  
+*wMinor*<br/>
 類型程式庫的次要版本。 預設值為 0。
 
-*tihclass*  
+*tihclass*<br/>
 用來管理 coclass 的型別資訊的類別。 預設值是 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員

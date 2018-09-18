@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b6266ac31e2d6dec6eabc847b67b080b250837
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 533458b35e4589e04d95a4618a04a90aa1994c35
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039331"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 類別
 
@@ -32,7 +32,7 @@ ms.locfileid: "43751419"
 ## <a name="syntax"></a>語法
 
 ```
-template <class I, const IID* piid=& __uuidof(I)>  
+template <class I, const IID* piid=& __uuidof(I)>
 class CInterfaceArray : 
    public CAtlArray<ATL::CComQIPtr<I, piid>,
                     CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>參數
 
-*I*  
+*I*<br/>
 COM 介面，用來指定要儲存的指標的類型。
 
-*piid*  
+*piid*<br/>
 指向 IID*我*。
 
 ## <a name="members"></a>成員
@@ -84,7 +84,7 @@ CInterfaceArray() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlArray 類別](../../atl/reference/catlarray-class.md)   
-[CComQIPtr 類別](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlArray 類別](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtr 類別](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

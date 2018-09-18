@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2200 |Microsoft 文件
+title: 編譯器錯誤 C2200 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d9307efba9dcc6ebfef94b770a79b135515e12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb7ac03ea6450b62d55bf2a6351eb994715e3c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029373"
 ---
 # <a name="compiler-error-c2200"></a>編譯器錯誤 C2200
-'function' : 函式已經定義  
-  
- `alloc_text` pragma 會使用已定義的函式名稱。
+
+'function' : 函式已經定義
+
+`alloc_text` pragma 會使用已定義的函式名稱。

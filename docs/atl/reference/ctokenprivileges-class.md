@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fb1c50b6bdd46cc6cf0efe7739e8ada60f3274
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9acbb55f09df3912ff61a54557cb013e86c48834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762631"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036627"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 類別
 
@@ -98,19 +98,19 @@ class CTokenPrivileges
 新增一或多個權限，才能`CTokenPrivileges`存取權杖的物件。
 
 ```
-bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);  
+bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
 void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 以 null 終止的字串，指定 WINNT 中所定義的權限，名稱的指標。H 標頭檔。
 
-*bEnable*  
+*bEnable*<br/>
 如果為 true，則會啟用特殊權限。 如果為 false，則會停用的權限。
 
-*rPrivileges*  
+*rPrivileges*<br/>
 若要參考[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。 權限和屬性都會複製此結構，並新增至`CTokenPrivileges`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -123,16 +123,16 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 
 ```
 CTokenPrivileges() throw();
-CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );  
+CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );
 CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `CTokenPrivileges`物件指派給新的物件。
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)若要指派給新的結構`CTokenPrivileges`物件。
 
 ### <a name="remarks"></a>備註
@@ -161,7 +161,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 以 null 終止的字串，指定 WINNT 中所定義的權限，名稱的指標。H 標頭檔。 例如，這個參數可以指定常數 SE_SECURITY_NAME 或其對應的字串，「 SeSecurityPrivilege。 」
 
 ### <a name="return-value"></a>傳回值
@@ -194,7 +194,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pDisplayNames*  
+*pDisplayNames*<br/>
 `CString` 物件陣列的指標。 `CNames` 定義的 typedef: `CTokenPrivileges::CAtlArray<CString>`。
 
 ### <a name="remarks"></a>備註
@@ -239,10 +239,10 @@ void GetLuidsAndAttributes(
 
 ### <a name="parameters"></a>參數
 
-*pPrivileges*  
+*pPrivileges*<br/>
 陣列的指標[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)物件。 `CLUIDArray` typedef 定義為`CAtlArray<LUID> CLUIDArray`。
 
-*pAttributes*  
+*pAttributes*<br/>
 DWORD 物件的陣列指標。 如果這個參數是省略，則為 NULL，不會擷取屬性。 `CAttributes` typedef 定義為`CAtlArray <DWORD> CAttributes`。
 
 ### <a name="remarks"></a>備註
@@ -261,10 +261,10 @@ void GetNamesAndAttributes(
 
 ### <a name="parameters"></a>參數
 
-*pNames*  
+*pNames*<br/>
 陣列的指標`CString`物件。 `CNames` typedef 定義為`CAtlArray <CString> CNames`。
 
-*pAttributes*  
+*pAttributes*<br/>
 DWORD 物件的陣列指標。 如果這個參數是省略，則為 NULL，不會擷取屬性。 `CAttributes` typedef 定義為`CAtlArray <DWORD> CAttributes`。
 
 ### <a name="remarks"></a>備註
@@ -297,10 +297,10 @@ bool LookupPrivilege(
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 以 null 終止的字串，指定 WINNT 中所定義的權限，名稱的指標。H 標頭檔。 例如，這個參數可以指定常數 SE_SECURITY_NAME 或其對應的字串，「 SeSecurityPrivilege。 」
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 此變數會接收屬性的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -312,16 +312,16 @@ bool LookupPrivilege(
 指派運算子。
 
 ```
-CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);  
+CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rPrivileges*  
+*rPrivileges*<br/>
 [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構，以指派給`CTokenPrivileges`物件。
 
-*rhs*  
+*rhs*<br/>
 `CTokenPrivileges`指派給物件的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -332,7 +332,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 
 將指標值轉換`TOKEN_PRIVILEGES`結構。
 
-```  
+```
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```
 
@@ -342,9 +342,9 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)   
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
-[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[安全性範例](../../visual-cpp-samples.md)<br/>
+[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
+[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

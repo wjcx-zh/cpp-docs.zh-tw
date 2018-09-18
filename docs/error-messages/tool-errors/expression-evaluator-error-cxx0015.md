@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0015 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050812"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>運算式評估工具錯誤 CXX0015
-運算式太複雜 （堆疊溢位）  
-  
- 輸入的運算式已太複雜或巢狀層數太多量 C 運算式評估工具的可用儲存體。  
-  
- 溢位，通常會發生因為太多擱置中的計算。  
-  
- 重新安排運算式，以便可以評估運算式的每個元件，會發現，而不必等候計算運算式的其他部分。  
-  
- 將運算式分割為多個命令。  
-  
- 這個錯誤是與 can0015 相同。
+
+運算式太複雜 （堆疊溢位）
+
+輸入的運算式是太複雜或巢狀層數太多量 C 運算式評估工具的可用儲存空間。
+
+溢位，通常會發生因為太多暫止的計算。
+
+重新排列的運算式，以便可以評估運算式的每個元件，會發現，而無需等待計算運算式的其他部分。
+
+將運算式分割為多個命令。
+
+此錯誤是與 can0015 相同。

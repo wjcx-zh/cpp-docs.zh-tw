@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272c9674270c1c600fee697dd77d050d6adb4e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 79cace12447eccb9ac7dc560b6add45bd0dc81c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045077"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 類別
 
@@ -89,13 +89,13 @@ class CAtlFileMappingBase
 建構函式。
 
 ```
-CAtlFileMappingBase(CAtlFileMappingBase& orig);  
+CAtlFileMappingBase(CAtlFileMappingBase& orig);
 CAtlFileMappingBase() throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*orig*  
+*orig*<br/>
 若要建立新的物件複製原始的檔案對應物件。
 
 ### <a name="remarks"></a>備註
@@ -128,7 +128,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>參數
 
-*orig*  
+*orig*<br/>
 若要從複製原始的檔案對應物件。
 
 ### <a name="return-value"></a>傳回值
@@ -190,19 +190,19 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>參數
 
-*hFile*  
+*hFile*<br/>
 要從中建立對應物件的檔案控制代碼。 *hFile*必須有效，而且不能設為 INVALID_HANDLE_VALUE。
 
-*nMappingSize*  
+*nMappingSize*<br/>
 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別之檔案的目前大小*hFile。*
 
-*nOffset*  
+*nOffset*<br/>
 對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 在對應檔案時，檔案檢視所需的保護。 請參閱*flProtect*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -233,22 +233,22 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>參數
 
-*nMappingSize*  
+*nMappingSize*<br/>
 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小*szName*。
 
-*szName*  
+*szName*<br/>
 對應物件的名稱。
 
-*pbAlreadyExisted*  
+*pbAlreadyExisted*<br/>
 指向 BOOL 值，設為 TRUE 的對應物件已經存在。
 
-*lpsa*  
+*lpsa*<br/>
 將指標`SECURITY_ATTRIBUTES`判斷子處理序是否可以繼承傳回的控制代碼的結構。 請參閱*lpAttributes*中[CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) Windows SDK 中。
 
-*dwMappingProtection*  
+*dwMappingProtection*<br/>
 在對應檔案時，針對 [檔案] 檢視中，所需的保護。 請參閱*flProtect*在`CreateFileMapping`Windows SDK 中。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -273,16 +273,16 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>參數
 
-*szName*  
+*szName*<br/>
 對應物件的名稱。 如果沒有這個名稱的檔案對應物件的開啟控制代碼，而且沒有與衝突上的對應物件的安全性描述元*dwViewDesiredAccess*參數，開啟作業成功。
 
-*nMappingSize*  
+*nMappingSize*<br/>
 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小*szName*。
 
-*nOffset*  
+*nOffset*<br/>
 對應到開始的所在檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。
 
-*dwViewDesiredAccess*  
+*dwViewDesiredAccess*<br/>
 指定檔案檢視，因此，對應的分頁檔所保護的存取的類型。 請參閱*dwDesiredAccess*中[MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -303,7 +303,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>參數
 
-*orig*  
+*orig*<br/>
 目前的檔案對應物件。
 
 ### <a name="return-value"></a>傳回值
@@ -328,5 +328,5 @@ HRESULT Unmap() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlFileMapping 類別](../../atl/reference/catlfilemapping-class.md)   
+[CAtlFileMapping 類別](../../atl/reference/catlfilemapping-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

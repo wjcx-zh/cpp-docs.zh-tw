@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0eba14e7b8a251fdc1287fc413e2c4ebcd7ae77
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040852"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 
@@ -106,25 +106,25 @@ int FindAddr(
 
 ### <a name="parameters"></a>參數
 
-*szHost*  
+*szHost*<br/>
 主機名稱或點線的 IP 位址。
 
-*szPortOrServiceName*  
+*szPortOrServiceName*<br/>
 連接埠號碼的主機上的服務名稱。
 
-*nPortNo*  
+*nPortNo*<br/>
 連接埠號碼。
 
-*flags*  
+*flags*<br/>
 0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的組合。
 
-*addr_family*  
+*addr_family*<br/>
 位址家族 （例如 PF_INET)。
 
-*sock_type*  
+*sock_type*<br/>
 通訊端類型 （例如 SOCK_STREAM)。
 
-*ai_proto*  
+*ai_proto*<br/>
 通訊協定 （例如 IPPROTO_IP 或 IPPROTO_IPV6）。
 
 ### <a name="return-value"></a>傳回值
@@ -149,16 +149,16 @@ int FindINET4Addr(
 
 ### <a name="parameters"></a>參數
 
-*szHost*  
+*szHost*<br/>
 主機名稱或點線的 IP 位址。
 
-*nPortNo*  
+*nPortNo*<br/>
 連接埠號碼。
 
-*flags*  
+*flags*<br/>
 0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的組合。
 
-*sock_type*  
+*sock_type*<br/>
 通訊端類型 （例如 SOCK_STREAM)。
 
 ### <a name="return-value"></a>傳回值
@@ -183,16 +183,16 @@ int FindINET6Addr(
 
 ### <a name="parameters"></a>參數
 
-*szHost*  
+*szHost*<br/>
 主機名稱或點線的 IP 位址。
 
-*nPortNo*  
+*nPortNo*<br/>
 連接埠號碼。
 
-*flags*  
+*flags*<br/>
 0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的組合。
 
-*sock_type*  
+*sock_type*<br/>
 通訊端類型 （例如 SOCK_STREAM)。
 
 ### <a name="return-value"></a>傳回值
@@ -213,7 +213,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 中的特定項目的參考[addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530)清單。
 
 ### <a name="return-value"></a>傳回值

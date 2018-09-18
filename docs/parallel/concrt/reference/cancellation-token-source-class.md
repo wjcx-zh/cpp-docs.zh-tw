@@ -1,5 +1,5 @@
 ---
-title: cancellation_token_source 類別 |Microsoft 文件
+title: cancellation_token_source 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053644"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 類別
 `cancellation_token_source` 類別代表取消某個可取消作業的能力。  
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
+*_Src*<br/>
+要複製或移動的物件。  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,15 +113,17 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Iter`  
- `_Src`  
- 語彙基元，其取消作業將會導致取消傳回的語彙基元來源。 請注意，傳回的語彙基元來源也可以獨立取消，不受此參數包含的來源影響。  
+*_Iter*<br/>
+迭代器類型。
+
+*_Src*<br/>
+語彙基元，其取消作業將會導致取消傳回的語彙基元來源。 請注意，傳回的語彙基元來源也可以獨立取消，不受此參數包含的來源影響。  
   
- `_Begin`  
- C + + 標準程式庫迭代器的語彙基元範圍的開頭對應來接聽取消。  
+*（_b)*<br/>
+C + + 標準程式庫迭代器，對應的語彙基元範圍的開頭到接聽的取消。  
   
- `_End`  
- C + + 標準程式庫迭代器對應的語彙基元範圍的結束接聽取消。  
+*（_e)*<br/>
+C + + 標準程式庫迭代器，對應至權杖的範圍結尾接聽的取消。  
   
 ### <a name="return-value"></a>傳回值  
  `cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。  
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
+*_Src*<br/>
+運算元。
   
 ### <a name="return-value"></a>傳回值  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
-  
+*_Src*<br/>
+運算元。
+
 ### <a name="return-value"></a>傳回值  
   
 ##  <a name="operator_eq_eq"></a> 運算子 = = 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
+*_Src*<br/>
+運算元。
   
 ### <a name="return-value"></a>傳回值  
   

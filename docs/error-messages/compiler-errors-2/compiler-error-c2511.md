@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2511 |Microsoft 文件
+title: 編譯器錯誤 C2511 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cbbd75d3b39b55ff640ed99e261ba349043d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b628adda383baee0f2ec03ace715d94c6cca764c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058142"
 ---
 # <a name="compiler-error-c2511"></a>編譯器錯誤 C2511
-'identifier': 多載 'class' 中找不到的成員函式  
-  
- 使用指定的參數宣告的函式沒有版本。  可能的原因：  
-  
-1.  錯誤的參數傳遞至函式。  
-  
-2.  傳遞的參數順序錯誤。  
-  
-3.  參數名稱的拼字錯誤。  
-  
- 下列範例會產生 C2511:  
-  
-```  
-// C2511.cpp  
-// compile with: /c  
-class C {  
-   int c_2;  
-   int Func(char *, char *);  
-};  
-  
-int C::Func(char *, char *, int i) {   // C2511  
-// try the following line instead  
-// int C::Func(char *, char *) {  
-   return 0;  
-}  
+
+'identifier': 多載 'class' 中找不到成員函式
+
+任何版本的函式會使用指定的參數不宣告。  可能的原因：
+
+1. 錯誤的參數傳遞至函式。
+
+1. 參數傳遞錯誤的順序。
+
+1. 參數名稱的拼字錯誤。
+
+下列範例會產生 C2511:
+
+```
+// C2511.cpp
+// compile with: /c
+class C {
+   int c_2;
+   int Func(char *, char *);
+};
+
+int C::Func(char *, char *, int i) {   // C2511
+// try the following line instead
+// int C::Func(char *, char *) {
+   return 0;
+}
 ```

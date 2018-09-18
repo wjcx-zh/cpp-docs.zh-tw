@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2833 |Microsoft 文件
+title: 編譯器錯誤 C2833 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff066510292690bc940f18ab8d63605eb8627308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53360c1eaf81ad407589fbdb125d9e6fe017708e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070167"
 ---
 # <a name="compiler-error-c2833"></a>編譯器錯誤 C2833
-'operator operator' 不是可辨認的運算子或類型  
-  
- Word`operator`後面必須接著您要覆寫的運算子或您想要轉換的類型。  
-  
- 如需您可以在 managed 類型中定義的運算子，請參閱[使用者定義運算子](../../dotnet/user-defined-operators-cpp-cli.md)。  
-  
- 下列範例會產生 C2833:  
-  
-```  
-// C2833.cpp  
-// compile with: /c  
-class A {};  
-  
-void operator ::* ();   // C2833  
-void operator :: ();   // OK  
+
+'operator operator' 不是可辨認的運算子或類型
+
+Word`operator`後面必須是您想要覆寫的運算子或您想要轉換的類型。
+
+如需您可以在 managed 類型中定義的運算子，請參閱[使用者定義的運算子](../../dotnet/user-defined-operators-cpp-cli.md)。
+
+下列範例會產生 C2833:
+
+```
+// C2833.cpp
+// compile with: /c
+class A {};
+
+void operator ::* ();   // C2833
+void operator :: ();   // OK
 ```

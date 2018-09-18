@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056777"
 ---
 # <a name="program-and-linkage-c"></a>程式和連結 (C++)
 
@@ -45,11 +45,11 @@ int f(int x){ return x * i; }
 
 ## <a name="linkage-vs-scope"></a>與範圍的連結
 
-概念*連結*是指所有轉譯單位中的整個全域符號 （例如變數、 型別名稱和函式名稱），在程式內的可見性。 概念*範圍*指的區塊，例如命名空間、 類別或函式主體內宣告的符號。 這類符號會在其定義所在; 的範圍內才可見連結的概念不適用於它們。 
+概念*連結*是指所有轉譯單位中的整個全域符號 （例如變數、 型別名稱和函式名稱），在程式內的可見性。 概念*範圍*指的區塊，例如命名空間、 類別或函式主體內宣告的符號。 這類符號會在其定義所在; 的範圍內才可見連結的概念不適用於它們。
 
 ## <a name="external-vs-internal-linkage"></a>外部與內部連結
 
-A*可用函式*是函式定義在全域或命名空間範圍。 非 const 的全域變數和預設的免費函式有*外部連結*; 它們是可見的任何轉譯單位的程式。 因此，沒有其他全域物件 （變數、 類別定義等） 可以具有該名稱。 使用的符號*內部連結*或是*無連結*在宣告它的轉譯單位內才可見。 當名稱具有內部連結時，相同的名稱可能會存在於另一個轉譯單位中。 類別定義中宣告變數或函式主體沒有連結。 
+A*可用函式*是函式定義在全域或命名空間範圍。 非 const 的全域變數和預設的免費函式有*外部連結*; 它們是可見的任何轉譯單位的程式。 因此，沒有其他全域物件 （變數、 類別定義等） 可以具有該名稱。 使用的符號*內部連結*或是*無連結*在宣告它的轉譯單位內才可見。 當名稱具有內部連結時，相同的名稱可能會存在於另一個轉譯單位中。 類別定義中宣告變數或函式主體沒有連結。
 
 您可以強制明確宣告為具有內部連結的通用名稱**靜態**。 這會限制其可見宣告它的相同轉譯單位。 請注意，在此情況下，**靜態**意義有些不同時套用至區域變數。
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 請參閱[extern](extern-cpp.md)如需詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
- [基本概念](../cpp/basic-concepts-cpp.md)
+
+[基本概念](../cpp/basic-concepts-cpp.md)

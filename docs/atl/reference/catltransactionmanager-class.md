@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1217fe9c7bbb43b578a7f7236c69531f04464a44
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6109ad46fb171d4bfe3386a4746b21768510ce0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755917"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042439"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
 
@@ -124,10 +124,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 
 ### <a name="parameters"></a>參數
 
-*bFallback*  
+*bFallback*<br/>
 TRUE 表示支援後援。 如果交易的函式失敗，此類別會自動呼叫 「 非交易式 」 函式。 FALSE 表示不包含 「 遞補 」 呼叫。
 
-*bAutoCreateTransaction*  
+*bAutoCreateTransaction*<br/>
 TRUE 表示建構函式中的交易處理常式會自動建立。 FALSE 表示不是。
 
 ### <a name="remarks"></a>備註
@@ -197,25 +197,25 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*  
+*lpFileName*<br/>
 若要建立或開啟物件的名稱。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 存取的物件，可總結為讀取、 寫入、 兩者或兩者都關閉 （零）。 最常使用的值為 GENERIC_READ、 GENERIC_WRITE，或兩者： GENERIC_READ &#124; GENERIC_WRITE。
 
-*dwShareMode*  
+*dwShareMode*<br/>
 物件，該物件可以是讀取、 寫入、 兩者、 delete、 none 或所有這些項目，共用的模式： 0，FILE_SHARE_DELETE FILE_SHARE_READ、 FILE_SHARE_WRITE。
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 包含選擇性的安全性描述元，而且也會決定子處理序可以繼承傳回的控制代碼 SECURITY_ATTRIBUTES 結構的指標。 參數可以是 NULL。
 
-*dwCreationDisposition*  
+*dwCreationDisposition*<br/>
 要存在，且不存在的檔案上採取的動作。 這個參數必須是下列值，無法合併的其中一個： CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING，還是 TRUNCATE_EXISTING。
 
-*dwFlagsAndAttributes*  
+*dwFlagsAndAttributes*<br/>
 檔案屬性和旗標。 這個參數可以包含任何可用的檔案屬性組合 （FILE_ATTRIBUTE_ *）。 所有其他檔案屬性覆寫 FILE_ATTRIBUTE_NORMAL。 這個參數也可以包含旗標的組合 (FILE_FLAG_\*) 的緩衝行為的控制項，存取模式，以及其他的特殊用途旗標。 這些結合任何 FILE_ATTRIBUTE_\*值。
 
-*hTemplateFile*  
+*hTemplateFile*<br/>
 有效的控制代碼到 GENERIC_READ 存取權限的範本檔案。 檔案屬性和正在建立之檔案的擴充的屬性，就會提供範本檔案。 這個參數可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -236,7 +236,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*  
+*lpFileName*<br/>
 要刪除的檔案的名稱。
 
 ### <a name="remarks"></a>備註
@@ -255,10 +255,10 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*  
+*lpFileName*<br/>
 目錄或路徑，以及要搜尋的檔案名稱。 這個參數可以包含萬用字元，例如星號 （*） 或問號 （）。
 
-*pNextInfo*  
+*pNextInfo*<br/>
 接收資訊找到的檔案或子目錄 WIN32_FIND_DATA 結構的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -279,7 +279,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*  
+*lpFileName*<br/>
 檔案或目錄的名稱。
 
 ### <a name="remarks"></a>備註
@@ -299,13 +299,13 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*  
+*lpFileName*<br/>
 檔案或目錄的名稱。
 
-*fInfoLevelId*  
+*fInfoLevelId*<br/>
 要擷取的屬性資訊的層級。
 
-*lpFileInformation*  
+*lpFileInformation*<br/>
 接收的屬性資訊的緩衝區指標。 會儲存到這個緩衝區的屬性資訊的類型由值決定*fInfoLevelId*。 如果*fInfoLevelId*參數是 GetFileExInfoStandard，則此參數指向 WIN32_FILE_ATTRIBUTE_DATA 結構。
 
 ### <a name="remarks"></a>備註
@@ -370,10 +370,10 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="parameters"></a>參數
 
-*lpOldFileName*  
+*lpOldFileName*<br/>
 現有的檔案或目錄，在本機電腦上的目前的名稱。
 
-*lpNewFileName*  
+*lpNewFileName*<br/>
 檔案或目錄的新名稱。 此名稱不能已經存在。 新的檔案可能位於不同的檔案系統或磁碟機。 新的目錄必須位於相同的磁碟機。
 
 ### <a name="remarks"></a>備註
@@ -399,31 +399,31 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 開啟登錄機碼的控制代碼。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 此函式會開啟或建立子機碼名稱。
 
-*dwReserved*  
+*dwReserved*<br/>
 這個參數已保留，而且必須為零。
 
-*lpClass*  
+*lpClass*<br/>
 此機碼的使用者定義的類別。 可能會忽略這個參數。 這個參數可以是 NULL。
 
-*dwOptions*  
+*dwOptions*<br/>
 這個參數可以是下列值之一： REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。
 
-*samDesired*  
+*samDesired*<br/>
 遮罩，指定索引鍵的存取權限。
 
-*lpSecurityAttributes*  
+*lpSecurityAttributes*<br/>
 SECURITY_ATTRIBUTES 建構可判斷子處理序是否可以繼承傳回的控制代碼指標。 如果*lpSecurityAttributes*是 NULL，無法繼承控制代碼。
 
-*phkResult*  
+*phkResult*<br/>
 收到的開啟或建立金鑰的控制代碼變數的指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式之後您完成使用控制代碼。
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 此變數會接收其中一個下列的配置值的指標： REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
 
 ### <a name="return-value"></a>傳回值
@@ -472,19 +472,19 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>參數
 
-*hKey*  
+*hKey*<br/>
 開啟登錄機碼的控制代碼。
 
-*lpSubKey*  
+*lpSubKey*<br/>
 若要開啟登錄子機碼名稱。
 
-*ulOptions*  
+*ulOptions*<br/>
 這個參數已保留，而且必須為零。
 
-*samDesired*  
+*samDesired*<br/>
 遮罩，指定索引鍵的存取權限。
 
-*phkResult*  
+*phkResult*<br/>
 收到的開啟或建立金鑰的控制代碼變數的指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式之後您完成使用控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -521,10 +521,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>參數
 
-*lpFileName*  
+*lpFileName*<br/>
 檔案或目錄的名稱。
 
-*dwAttributes*  
+*dwAttributes*<br/>
 若要設定之檔案的檔案屬性。 如需詳細資訊，請參閱 < [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)。
 
 ### <a name="remarks"></a>備註

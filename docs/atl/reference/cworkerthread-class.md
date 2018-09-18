@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040228"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
 
@@ -42,13 +42,13 @@ ms.locfileid: "43752693"
 ## <a name="syntax"></a>語法
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>參數
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 類別提供執行緒建立函式，例如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或是[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。
 
 ## <a name="members"></a>成員
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 可等候物件的控制代碼。
 
-*pClient*  
+*pClient*<br/>
 將指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)控制代碼會收到信號時要呼叫物件上的介面。
 
-*dwParam*  
+*dwParam*<br/>
 要傳遞至參數[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼會收到信號。
 
 ### <a name="return-value"></a>傳回值
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>參數
 
-*dwInterval*  
+*dwInterval*<br/>
 指定期間的計時器，以毫秒為單位。
 
-*pClient*  
+*pClient*<br/>
 將指標[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)控制代碼會收到信號時要呼叫物件上的介面。
 
-*dwParam*  
+*dwParam*<br/>
 要傳遞至參數[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)控制代碼會收到信號。
 
-*phTimer*  
+*phTimer*<br/>
 [out]如果成功，接收新建立的計時器的控制代碼的控制代碼變數位址。
 
 ### <a name="return-value"></a>傳回值
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>參數
 
-*pThread*  
+*pThread*<br/>
 現有的背景工作執行緒。
 
 ### <a name="return-value"></a>傳回值
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 若要移除的控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwWait*  
+*dwWait*<br/>
 以毫秒為單位來等待背景工作執行緒關閉時間。 ATL_WORKER_THREAD_WAIT 預設為 10 秒。 如有必要，您可以定義您自己的值，這個符號包含 atlutil.h 之前。
 
 ### <a name="return-value"></a>傳回值
@@ -285,7 +285,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[類別](../../atl/reference/atl-classes.md)   
-[多執行緒： 建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[類別](../../atl/reference/atl-classes.md)<br/>
+[多執行緒：建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)

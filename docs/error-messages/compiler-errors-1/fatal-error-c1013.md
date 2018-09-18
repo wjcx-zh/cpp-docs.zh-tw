@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1013 |Microsoft 文件
+title: 嚴重錯誤 C1013 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b5dae643ec20e9d7d8a8dcdf41d9debe7e6b7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33c10062cac83984fb1c68835780497b89c4cbc1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050505"
 ---
 # <a name="fatal-error-c1013"></a>嚴重錯誤 C1013
-編譯器限制 : 左括號太多，請簡化運算式或分為數個陳述式  
-  
- 運算式中包含對單一運算式而言太多的括弧層級。 請簡化運算式，或將它切為多個陳述式。  
-  
- 在 Visual C++ 6.0 Service Pack 3 之前，對於單一運算式中的巢狀括弧限制是 59。 目前巢狀括弧的限制為 256。
+
+編譯器限制 : 左括號太多，請簡化運算式或分為數個陳述式
+
+運算式中包含對單一運算式而言太多的括弧層級。 請簡化運算式，或將它切為多個陳述式。
+
+在 Visual C++ 6.0 Service Pack 3 之前，對於單一運算式中的巢狀括弧限制是 59。 目前巢狀括弧的限制為 256。

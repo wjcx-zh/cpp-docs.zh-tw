@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6111 |Microsoft 文件
+title: 運算錯誤 M6111 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317992"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074821"
 ---
 # <a name="math-error-m6111"></a>運算錯誤 M6111
-堆疊反向溢位  
-  
- 浮點運算導致 8087/287/387 副處理器或模擬器上的堆疊反向溢位。  
-  
- 這個錯誤通常因呼叫`long double`沒有傳回值的函式。 例如，下列會產生這個錯誤編譯並執行時：  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- 程式終止，結束代碼 139。
+
+stack 反向溢位
+
+浮點運算導致 8087/287/387 副處理器或模擬器上的堆疊反向溢位。
+
+此錯誤通常因為呼叫`long double`不傳回值的函式。 例如，下列會產生此錯誤時編譯並執行：
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+程式結束，結束代碼 139。

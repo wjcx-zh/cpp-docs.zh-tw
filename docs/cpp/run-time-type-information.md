@@ -18,31 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77584e5fdd731c499629149a9163dbacb5eafb5e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467322"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050875"
 ---
 # <a name="run-time-type-information"></a>執行階段類型資訊
-執行階段類型資訊 (RTTI) 是一項機制，可在程式執行期間判斷物件的類型。 C++ 語言中加入 RTTI 的原因在於，有許多類別庫的廠商本身實作這項功能。 這樣會導致程式庫之間不相容。 因此，在語言層級支援執行階段類型資訊的需求變得很明確。  
-  
- 為避免混淆，這裡討論的 RTTI 幾乎完全限於指標。 不過，所討論的概念也適用於參考。  
-  
- 執行階段類型資訊有三個主要的 C++ 語言項目：  
-  
--   [Dynamic_cast](../cpp/dynamic-cast-operator.md)運算子。  
-  
-     用於多型類型的轉換。  
-  
--   [Typeid](../cpp/typeid-operator.md)運算子。  
-  
-     用於識別物件的實際類型。  
-  
--   [Type_info](../cpp/type-info-class.md)類別。  
-  
-     用來保存所傳回的型別資訊**typeid**運算子。  
-  
-## <a name="see-also"></a>另請參閱  
- [轉型](../cpp/casting.md)
+
+執行階段類型資訊 (RTTI) 是一項機制，可在程式執行期間判斷物件的類型。 C++ 語言中加入 RTTI 的原因在於，有許多類別庫的廠商本身實作這項功能。 這樣會導致程式庫之間不相容。 因此，在語言層級支援執行階段類型資訊的需求變得很明確。
+
+為避免混淆，這裡討論的 RTTI 幾乎完全限於指標。 不過，所討論的概念也適用於參考。
+
+執行階段類型資訊有三個主要的 C++ 語言項目：
+
+- [Dynamic_cast](../cpp/dynamic-cast-operator.md)運算子。
+
+     用於多型類型的轉換。
+
+- [Typeid](../cpp/typeid-operator.md)運算子。
+
+     用於識別物件的實際類型。
+
+- [Type_info](../cpp/type-info-class.md)類別。
+
+     用來保存所傳回的型別資訊**typeid**運算子。
+
+## <a name="see-also"></a>另請參閱
+
+[轉型](../cpp/casting.md)

@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4630 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4630 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3db4e42e4bd54e1d2bd5af0eb6b19ce0fea1e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadfd4cd38d1b1d0e67e49e81102135a8ced1d00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054723"
 ---
 # <a name="compiler-warning-level-1-c4630"></a>編譯器警告 (層級 1) C4630
-'symbol': 'extern' 在成員定義上不合法的儲存類別規範  
-  
- 資料成員或成員函式定義為`extern`。 雖然整個物件可以用成員不可為外部。 編譯器會忽略`extern`關鍵字。 下列範例會產生 C4630:  
-  
-```  
-// C4630.cpp  
-// compile with: /W1 /LD  
-class A {  
-   void func();  
-};  
-  
-extern void A::func() {   // C4630, remove 'extern' to resolve  
-}  
+
+'symbol': 'extern' 儲存類別規範不合法成員定義
+
+資料成員或成員函式定義為`extern`。 成員不可以是外部，，雖然可以整個物件。 編譯器會忽略`extern`關鍵字。 下列範例會產生 C4630:
+
+```
+// C4630.cpp
+// compile with: /W1 /LD
+class A {
+   void func();
+};
+
+extern void A::func() {   // C4630, remove 'extern' to resolve
+}
 ```

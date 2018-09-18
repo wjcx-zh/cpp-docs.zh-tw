@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043933"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 類別
 提供 Windows 通用索引標籤控制項的功能。  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>備註  
  在傳送訊息時`mask`成員指定要傳回的屬性。 如果`mask`成員指定 TCIF_TEXT 值`pszText`成員必須包含接收項目文字的緩衝區的位址和`cchTextMax`成員必須指定緩衝區的大小。  
   
- `mask`  
- 值，指定其`TCITEM`結構擷取或設定成員。 這個成員可以是零個或以下值的組合：  
+- `mask`
+
+   值，指定其`TCITEM`結構擷取或設定成員。 這個成員可以是零個或以下值的組合：  
   
-- TCIF_TEXT`pszText`成員是否有效。  
+   - TCIF_TEXT`pszText`成員是否有效。  
   
-- TCIF_IMAGE`iImage`成員是否有效。  
+   - TCIF_IMAGE`iImage`成員是否有效。  
   
-- TCIF_PARAM`lParam`成員是否有效。  
+   - TCIF_PARAM`lParam`成員是否有效。  
   
-- TCIF_RTLREADING 文字的`pszText`希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
+   - TCIF_RTLREADING 文字的`pszText`希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
   
-- TCIF_STATE`dwState`成員是否有效。  
+   - TCIF_STATE`dwState`成員是否有效。  
   
- `pszText`  
- 以 null 終止的字串，包含在索引標籤文字，如果結構包含一個索引標籤的相關資訊的指標。如果此結構會接收資訊，這個成員會指定接收在索引標籤文字的緩衝區的位址。  
+- `pszText`  
+
+   以 null 終止的字串，包含在索引標籤文字，如果結構包含一個索引標籤的相關資訊的指標。如果此結構會接收資訊，這個成員會指定接收在索引標籤文字的緩衝區的位址。  
   
- `cchTextMax`  
- 所指向的緩衝區大小`pszText`。 如果結構不能接收資訊，則會忽略這個成員。  
+- `cchTextMax`  
+
+   所指向的緩衝區大小`pszText`。 如果結構不能接收資訊，則會忽略這個成員。  
   
- `iImage`  
+- `iImage`  
  如果沒有任何索引標籤的影像，索引索引標籤控制項影像清單，或-1。  
   
- lParam  
- [] 索引標籤相關聯應用程式定義的資料。如果有四個位元組以上的應用程式定義的資料，每個索引標籤，應用程式必須定義的結構，並使用它，而不要`TCITEM`結構。 應用程式定義的結構的第一個成員必須是[TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)結構。 `TCITEMHEADER`結構完全相同`TCITEM`結構，但不含`lParam`成員。 您的結構大小和大小之間的差異`TCITEMHEADER`結構應該等於每個索引標籤的額外位元組數目。  
+- `lParam`  
+
+   [] 索引標籤相關聯應用程式定義的資料。如果有四個位元組以上的應用程式定義的資料，每個索引標籤，應用程式必須定義的結構，並使用它，而不要`TCITEM`結構。 應用程式定義的結構的第一個成員必須是[TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)結構。 `TCITEMHEADER`結構完全相同`TCITEM`結構，但不含`lParam`成員。 您的結構大小和大小之間的差異`TCITEMHEADER`結構應該等於每個索引標籤的額外位元組數目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

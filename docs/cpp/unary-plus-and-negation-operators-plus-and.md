@@ -21,34 +21,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06e7f6bd089866619d82798bb220580e8a11b04b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0ef8cc91f90f92d17ec759c874c7dfd34b4706e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032870"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元正和負運算子：+ 和 -
-## <a name="syntax"></a>語法  
-  
-```  
-+ cast-expression  
-- cast-expression  
-```  
-  
-## <a name="-operator"></a>+ 運算子  
- 一元加法運算子的結果 (**+**) 是其運算元的值。 一元加法運算子的運算元必須屬於算術類型。  
-  
- 整數提升會在整數運算元上執行。 結果類型會是運算元提升後的類型。 因此，運算式`+ch`，其中`ch`別的**char**，型別會導致**int**; 的值是未修改。 請參閱[標準轉換](standard-conversions.md)如需如何執行提升的詳細資訊。  
-  
-## <a name="--operator"></a>- 運算子  
- 一元負運算子 (**-**) 會產生其運算元的負數。 一元負運算子的運算元必須是算術類型。  
-  
- 整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 請參閱[標準轉換](standard-conversions.md)如需如何執行提升的詳細資訊。  
-  
-## <a name="microsoft-specific"></a>Microsoft 專有的  
- 不帶正負號數量的一元否定執行方式是 2^n 減去運算元的值，其中 n 是指定不帶正負號類型之物件的位元數。
-  
-## <a name="see-also"></a>另請參閱  
- [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
- [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+## <a name="syntax"></a>語法
+
+```
++ cast-expression
+- cast-expression
+```
+
+## <a name="-operator"></a>+ 運算子
+
+一元加法運算子的結果 (**+**) 是其運算元的值。 一元加法運算子的運算元必須屬於算術類型。
+
+整數提升會在整數運算元上執行。 結果類型會是運算元提升後的類型。 因此，運算式`+ch`，其中`ch`別的**char**，型別會導致**int**; 的值是未修改。 請參閱[標準轉換](standard-conversions.md)如需如何執行提升的詳細資訊。
+
+## <a name="--operator"></a>- 運算子
+
+一元負運算子 (**-**) 會產生其運算元的負數。 一元負運算子的運算元必須是算術類型。
+
+整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 請參閱[標準轉換](standard-conversions.md)如需如何執行提升的詳細資訊。
+
+## <a name="microsoft-specific"></a>Microsoft 專有的
+
+不帶正負號數量的一元否定執行方式是 2^n 減去運算元的值，其中 n 是指定不帶正負號類型之物件的位元數。
+
+## <a name="see-also"></a>另請參閱
+
+[具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)<br/>
+[C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

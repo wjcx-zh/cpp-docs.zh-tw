@@ -1,5 +1,5 @@
 ---
-title: out_of_memory 類別 |Microsoft 文件
+title: out_of_memory 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab3285e0b37b8af93803a1a2752e25b6d91ab2f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b57e27647f61b551f8ea5c2770290e1ae9627014
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070914"
 ---
 # <a name="outofmemory-class"></a>out_of_memory 類別
-因為系統或裝置記憶體不足而失敗的方法時擲回例外狀況。  
+方法失敗，因為系統或裝置的記憶體不足時，會擲回例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,8 +67,8 @@ out_of_memory () throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述。  
+*訊息 （_m)*<br/>
+錯誤的描述。  
   
 ### <a name="return-value"></a>傳回值  
  `out_of_memory` 類別的新執行個體。  

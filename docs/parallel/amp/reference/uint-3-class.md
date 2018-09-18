@@ -1,5 +1,5 @@
 ---
-title: uint_3 類別 |Microsoft 文件
+title: uint_3 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe59fc6f956c0e88cae1e5c737d3fe33d10d10b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052669"
 ---
 # <a name="uint3-class"></a>uint_3 類別
 表示短向量的三個不帶正負號的整數。  
@@ -110,7 +110,7 @@ class uint_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[uint_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[uint_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -176,7 +176,7 @@ class uint_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[大小常數](#uint_3__size)||  
+|[常數的大小](#uint_3__size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -223,7 +223,7 @@ class uint_3;
   
 ##  <a name="ctor"></a> uint_3 
 
- 預設建構函式，初始化為 0 的所有項目。  
+ 預設建構函式，初始化具有 0 的所有項目。  
   
 ```  
 uint_3() restrict(amp,
@@ -273,20 +273,20 @@ explicit inline uint_3(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_V0`  
- 要初始化項目 0 的值。  
+*_V0*<br/>
+要初始化項目 0 的值。  
   
- `_V1`  
- 要初始化項目 1 的值。  
+*_V1*<br/>
+要初始化項目 1 的值。  
   
- `_V2`  
- 要初始化項目 2 的值。  
+*並將 _V2*<br/>
+要初始化項目 2 的值。  
   
- `_V`  
- 初始設定的值。  
+*（_V)*<br/>
+初始設定的值。  
   
- `_Other`  
- 用來初始化物件。  
+*_Other*<br/>
+用來初始化的物件。  
   
 ##  <a name="uint_3__size"></a> 大小 
 

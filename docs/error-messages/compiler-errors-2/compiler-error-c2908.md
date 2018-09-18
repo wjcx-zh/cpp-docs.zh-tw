@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2908 |Microsoft 文件
+title: 編譯器錯誤 C2908 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84f7fbda450b0830125a30898480ea94455332
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 913a01a21c75933688c55bbb79c3621124601745
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053111"
 ---
 # <a name="compiler-error-c2908"></a>編譯器錯誤 C2908
-明確特製化;已執行個體化 'template'  
-  
- 明確特製化之前，發生主要樣板的特製化。  
-  
- 下列範例會產生 C2908:  
-  
-```  
-// C2908.cpp  
-// compile with: /c  
-template<class T> class X {};  
-  
-void f() {  
-X<int> x;   //specialization and instantiation  
-            //of X<int>  
-}  
-  
-template<> class X<int> {}  // C2908, explicit specialization  
+
+明確特製化;'template' 已經產生
+
+明確特製化之前，發生主要樣板的特製化。
+
+下列範例會產生 C2908:
+
+```
+// C2908.cpp
+// compile with: /c
+template<class T> class X {};
+
+void f() {
+X<int> x;   //specialization and instantiation
+            //of X<int>
+}
+
+template<> class X<int> {}  // C2908, explicit specialization
 ```

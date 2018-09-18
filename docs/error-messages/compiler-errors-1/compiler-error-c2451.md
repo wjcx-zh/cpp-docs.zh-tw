@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2451 |Microsoft 文件
+title: 編譯器錯誤 C2451 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2344ba4629a4f35556d8fc6c2e6760cadbc6392b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8fcf5291e664b63047801563cd3fc7118fa0ba5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198348"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051629"
 ---
 # <a name="compiler-error-c2451"></a>編譯器錯誤 C2451
-類型 'type' 的條件式運算式不合法  
-  
- 條件運算式會評估為整數型別。  
-  
- 下列範例會產生 C2451:  
-  
-```  
-// C2451.cpp  
-class B {};  
-  
-int main () {  
-   B b1;  
-   int i = 0;  
-   if (b1)   // C2451  
-   // try the following line instead  
-   // if (i)  
-      ;  
-}  
+
+條件運算式 'type' 是類型的不合法
+
+條件運算式會評估為整數型別。
+
+下列範例會產生 C2451:
+
+```
+// C2451.cpp
+class B {};
+
+int main () {
+   B b1;
+   int i = 0;
+   if (b1)   // C2451
+   // try the following line instead
+   // if (i)
+      ;
+}
 ```

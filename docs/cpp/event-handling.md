@@ -16,31 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91fded4380875515da81b87c5ffd74665df01b21
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 666fb58168dd0be4ddb011de7c2ee0fc4f4e77e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066557"
 ---
 # <a name="event-handling"></a>事件處理
-事件處理主要是支援 COM 類別 (c + + 類別可實作 COM 物件，通常會使用 ATL 類別或[coclass](../windows/coclass.md)屬性)。  如需詳細資訊，請參閱 < [COM 中的事件處理](../cpp/event-handling-in-com.md)。  
-  
- 事件處理也支援原生 C++ 類別 (不實作 COM 物件的 C++ 類別)，不過該項支援已被取代，將在未來版本中移除。  如需詳細資訊，請參閱 <<c0> [ 原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)。  
-  
- 事件處理支援單一和多執行緒的使用方式，並在同時由多個執行緒存取時保護資料。 它也可讓您從事件來源或接收器類別衍生子類別，並在衍生類別中支援擴充的事件來源或接收。  
-  
- Visual C++ 包含用於宣告事件和事件處理常式的屬性和關鍵字。 事件屬性和關鍵字可以在 CLR 程式與原生 C++ 程式中使用。  
-  
-|主題|描述|  
-|-----------|-----------------|  
-|[event_source](../windows/event-source.md)|建立事件來源。|  
-|[event_receiver](../windows/event-receiver.md)|建立事件接收器 (接收)。|  
-|[__event](../cpp/event.md)|宣告事件。|  
-|[__raise](../cpp/raise.md)|強調事件的呼叫位置。|  
-|[__hook](../cpp/hook.md)|建立處理常式方法與事件的關聯。|  
-|[__unhook](../cpp/unhook.md)|解除處理常式方法與事件的關聯。|  
-  
-## <a name="see-also"></a>另請參閱  
- [C++ 語言參考](../cpp/cpp-language-reference.md)   
- [關鍵字](../cpp/keywords-cpp.md)   
+
+事件處理主要是支援 COM 類別 (c + + 類別可實作 COM 物件，通常會使用 ATL 類別或[coclass](../windows/coclass.md)屬性)。  如需詳細資訊，請參閱 < [COM 中的事件處理](../cpp/event-handling-in-com.md)。
+
+事件處理也支援原生 C++ 類別 (不實作 COM 物件的 C++ 類別)，不過該項支援已被取代，將在未來版本中移除。  如需詳細資訊，請參閱 <<c0> [ 原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)。
+
+事件處理支援單一和多執行緒的使用方式，並在同時由多個執行緒存取時保護資料。 它也可讓您從事件來源或接收器類別衍生子類別，並在衍生類別中支援擴充的事件來源或接收。
+
+Visual C++ 包含用於宣告事件和事件處理常式的屬性和關鍵字。 事件屬性和關鍵字可以在 CLR 程式與原生 C++ 程式中使用。
+
+|主題|描述|
+|-----------|-----------------|
+|[event_source](../windows/event-source.md)|建立事件來源。|
+|[event_receiver](../windows/event-receiver.md)|建立事件接收器 (接收)。|
+|[__event](../cpp/event.md)|宣告事件。|
+|[__raise](../cpp/raise.md)|強調事件的呼叫位置。|
+|[__hook](../cpp/hook.md)|建立處理常式方法與事件的關聯。|
+|[__unhook](../cpp/unhook.md)|解除處理常式方法與事件的關聯。|
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)

@@ -29,44 +29,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054073"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>以資料庫屬性簡化資料存取
+
 本主題示範如何使用資料庫的屬性，以簡化資料庫作業。  
   
- 若要從資料庫存取資訊的基本方式是在資料庫中建立的命令 （或資料表） 類別和特定資料表的使用者記錄類別。 資料庫屬性簡化一些您先前必須做的宣告範本。  
+若要從資料庫存取資訊的基本方式是在資料庫中建立的命令 （或資料表） 類別和特定資料表的使用者記錄類別。 資料庫屬性簡化一些您先前必須做的宣告範本。  
   
- 為了示範使用資料庫屬性，下列各節說明兩個相同的資料表和使用者記錄類別宣告： 第一個使用的屬性，第二個使用 OLE DB 樣板。 這類宣告程式碼通常位於標頭檔名為資料表或命令物件，例如 Authors.h。  
+為了示範使用資料庫屬性，下列各節說明兩個相同的資料表和使用者記錄類別宣告： 第一個使用的屬性，第二個使用 OLE DB 樣板。 這類宣告程式碼通常位於標頭檔名為資料表或命令物件，例如 Authors.h。  
   
- 藉由比較兩個檔案，您可以看到使用屬性是多麼簡單。 其中的差異是：  
+藉由比較兩個檔案，您可以看到使用屬性是多麼簡單。 其中的差異是：  
   
--   使用屬性，您只需要宣告一個類別： `CAuthors`，而使用範本，您必須宣告兩個：`CAuthorsNoAttrAccessor`和`CAuthorsNoAttr`。  
+- 使用屬性，您只需要宣告一個類別： `CAuthors`，而使用範本，您必須宣告兩個：`CAuthorsNoAttrAccessor`和`CAuthorsNoAttr`。  
   
--   `db_source`呼叫中的屬性化的版本是相當於`OpenDataSource()`樣板宣告中呼叫。  
+- `db_source`呼叫中的屬性化的版本是相當於`OpenDataSource()`樣板宣告中呼叫。  
   
--   `db_table`屬性化的版本中的呼叫就相當於下列範本宣告：  
+- `db_table`屬性化的版本中的呼叫就相當於下列範本宣告：  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
--   `db_column`屬性化的版本中的呼叫是相等的資料行對應 (請參閱`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 樣板宣告中。  
+- `db_column`屬性化的版本中的呼叫是相等的資料行對應 (請參閱`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 樣板宣告中。  
   
- 屬性會為您插入使用者記錄類別宣告。 使用者記錄類別相當於`CAuthorsNoAttrAccessor`樣板宣告中。 如果您的資料表類別`CAuthors`，名為插入的使用者記錄類別`CAuthorsAccessor`，而您只可以檢視其宣告中插入程式碼。 如需詳細資訊，請參閱 「 插入屬性使用者記錄類別 」 中[使用者記錄](../../data/oledb/user-records.md)。  
+屬性會為您插入使用者記錄類別宣告。 使用者記錄類別相當於`CAuthorsNoAttrAccessor`樣板宣告中。 如果您的資料表類別`CAuthors`，名為插入的使用者記錄類別`CAuthorsAccessor`，而您只可以檢視其宣告中插入程式碼。 如需詳細資訊，請參閱 「 插入屬性使用者記錄類別 」 中[使用者記錄](../../data/oledb/user-records.md)。  
   
- 請注意，在屬性化和範本化的程式碼，您必須設定使用的資料列集屬性`CDBPropSet::AddProperty`。  
+請注意，在屬性化和範本化的程式碼，您必須設定使用的資料列集屬性`CDBPropSet::AddProperty`。  
   
- 本主題討論之屬性的相關資訊，請參閱[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。  
+本主題討論之屬性的相關資訊，請參閱[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>使用資料表和存取子宣告屬性  
- 下列程式碼會呼叫`db_source`和`db_table`資料表類別上。 `db_source` 指定要使用的連接與資料來源。 `db_table` 會插入適當的範本程式碼，來宣告資料表的類別。 `db_column` 指定資料行對應，並將存取子宣告。 您可以在任何支援 ATL 的專案中使用 OLE DB 消費者屬性  
+
+下列程式碼會呼叫`db_source`和`db_table`資料表類別上。 `db_source` 指定要使用的連接與資料來源。 `db_table` 會插入適當的範本程式碼，來宣告資料表的類別。 `db_column` 指定資料行對應，並將存取子宣告。 您可以在任何支援 ATL 的專案中使用 OLE DB 消費者屬性  
   
- 以下是使用屬性的資料表和存取子宣告：  
+以下是使用屬性的資料表和存取子宣告：  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -102,7 +104,8 @@ public:
 ```  
   
 ## <a name="table-and-accessor-declaration-using-templates"></a>使用資料表和存取子宣告範本  
- 以下是使用範本的資料表和存取子宣告。  
+
+以下是使用範本的資料表和存取子宣告。  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -207,4 +210,5 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)   
+
+[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)   

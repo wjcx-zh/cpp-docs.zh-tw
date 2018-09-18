@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9e6cd4a374f0941b360a3f8f24f61e4b46a6a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 64046eab403dca8da630c9c5324d320e0c79d4cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054294"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 支援 ATL 專案中
 
@@ -39,7 +39,7 @@ COM + 1.0 被設計來開發元件為基礎的分散式應用程式。 它也會
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
-[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

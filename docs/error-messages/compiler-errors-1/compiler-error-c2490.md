@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2490 |Microsoft 文件
+title: 編譯器錯誤 C2490 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198699"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071793"
 ---
 # <a name="compiler-error-c2490"></a>編譯器錯誤 C2490
-具有 'naked' 屬性的函式中不允許 ' keyword'  
-  
- 函式定義為[naked](../../cpp/naked-cpp.md)無法使用結構化例外狀況處理。  
-  
- 下列範例會產生 C2490:  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+
+具有 'naked' 屬性的函式中不允許 ' keyword'
+
+做為定義的函式[naked](../../cpp/naked-cpp.md)無法使用結構化例外狀況處理。
+
+下列範例會產生 C2490:
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

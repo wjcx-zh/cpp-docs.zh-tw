@@ -1,5 +1,5 @@
 ---
-title: norm_4 類別 |Microsoft 文件
+title: norm_4 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -278,15 +278,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058090"
 ---
 # <a name="norm4-class"></a>norm_4 類別
-表示短向量的四個一般數字。  
+代表四個一般數字的短向量。  
   
 ## <a name="syntax"></a>語法  
   
@@ -306,7 +306,7 @@ class norm_4;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[norm_4 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[norm_4 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -466,7 +466,7 @@ class norm_4;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[大小常數](#norm_4__size)||  
+|[常數的大小](#norm_4__size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -611,7 +611,7 @@ class norm_4;
   
 ##  <a name="ctor"></a> norm_4 
 
- 預設建構函式，初始化為 0 的所有項目。  
+ 預設建構函式，初始化具有 0 的所有項目。  
   
 ```  
 norm_4() restrict(amp,
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_V0`  
- 要初始化項目 0 的值。  
+*_V0*<br/>
+要初始化項目 0 的值。  
   
- `_V1`  
- 要初始化項目 1 的值。  
+*_V1*<br/>
+要初始化項目 1 的值。  
   
- `_V2`  
- 要初始化項目 2 的值。  
+*並將 _V2*<br/>
+要初始化項目 2 的值。  
   
- `_V3`  
- 要初始化項目 3 的值。  
+*_V3*<br/>
+要初始化項目 3 的值。  
   
- `_V`  
- 初始設定的值。  
+*（_V)*<br/>
+初始設定的值。  
   
- `_Other`  
- 用來初始化物件。  
+*_Other*<br/>
+用來初始化的物件。  
   
 ##  <a name="norm_4__size"></a> 大小 
 

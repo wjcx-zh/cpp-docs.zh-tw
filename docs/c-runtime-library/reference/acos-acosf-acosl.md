@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2b645d7ab779a7d8c3f655c84a33a8916563c47a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059859"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -67,7 +67,7 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 值介於-1 和 1，要計算反餘弦 (inverse cosine)。
 
 ## <a name="return-value"></a>傳回值
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>另請參閱
 
-[浮點支援](../../c-runtime-library/floating-point-support.md)  
-[asin、asinf、asinl](asin-asinf-asinl.md)  
-[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
-[cos、cosf、cosl](cos-cosf-cosl.md)  
-[_matherr](matherr.md)  
-[sin、sinf、sinl](sin-sinf-sinl.md)  
-[tan、tanf、tanl](tan-tanf-tanl.md)  
+[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
+[asin、asinf、asinl](asin-asinf-asinl.md)<br/>
+[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
+[cos、cosf、cosl](cos-cosf-cosl.md)<br/>
+[_matherr](matherr.md)<br/>
+[sin、sinf、sinl](sin-sinf-sinl.md)<br/>
+[tan、tanf、tanl](tan-tanf-tanl.md)

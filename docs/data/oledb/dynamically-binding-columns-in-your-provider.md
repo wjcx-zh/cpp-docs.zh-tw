@@ -17,31 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028541"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
+
 請確定您真的需要動態的資料行繫結。 因為您可能需要它：  
   
--   您的資料列集資料行不會在編譯時期定義。  
+- 您的資料列集資料行不會在編譯時期定義。  
   
--   您支援的書籤等的項目，將資料行。  
+- 您支援的書籤等的項目，將資料行。  
   
 ### <a name="to-implement-dynamic-column-binding"></a>若要實作動態資料行繫結  
   
-1.  移除任何`PROVIDER_COLUMN_MAP`從您的程式碼。  
+1. 移除任何`PROVIDER_COLUMN_MAP`從您的程式碼。  
   
-2.  在使用者記錄 （您的結構） 中，加入下列宣告：  
+1. 在使用者記錄 （您的結構） 中，加入下列宣告：  
   
     ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  實作`GetColumnInfo`函式。 此函式會配置儲存資訊的方式。 您可能需要取得的屬性或此函式的其他資訊。 您可能想要建立巨集，類似於[COLUMN_ENTRY](../../data/oledb/column-entry.md)巨集，以新增您自己的資訊。  
+1. 實作`GetColumnInfo`函式。 此函式會配置儲存資訊的方式。 您可能需要取得的屬性或此函式的其他資訊。 您可能想要建立巨集，類似於[COLUMN_ENTRY](../../data/oledb/column-entry.md)巨集，以新增您自己的資訊。  
   
      下列範例所示`GetColumnInfo`函式。  
   
@@ -97,4 +98,5 @@ ms.locfileid: "39336686"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

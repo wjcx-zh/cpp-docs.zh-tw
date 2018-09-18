@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0072 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0072 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295713"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074450"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>運算式評估工具錯誤 CXX0072
-錯誤： 類型資訊遺漏或未知  
-  
- .Pch 檔案無法連結中，或是程式碼的參考不是使用 /Zi 編譯模組中的類型。  
-  
- 這個錯誤是與 can0067 相同。
+
+錯誤： 類型資訊遺漏或未知
+
+.Pch 檔案無法連結中，或是程式碼的參考不是使用 /Zi 編譯模組中的類型。
+
+此錯誤是與 can0067 相同。

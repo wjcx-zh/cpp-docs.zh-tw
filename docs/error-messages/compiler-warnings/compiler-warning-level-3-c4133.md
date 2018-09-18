@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4133 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4133 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f01a3a4b6ccf1750ec3cd0df643c02b7678bac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f22878ebb7caa5549779d4c53b1f6b7068dc480
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056829"
 ---
 # <a name="compiler-warning-level-3-c4133"></a>編譯器警告 （層級 3） C4133
-'type': 不相容的類型-'type1' 到 'type2'  
-  
- 這個警告可能因嘗試減去兩個不同類型的指標。  
-  
- 若要避免這個警告，提供適當的型別轉型。
+
+'type': 不相容的類型-從 'type1' 到 'type2'
+
+這個警告可能因嘗試減去兩個不同類型的指標。
+
+若要避免這個警告，提供適當的類型轉換。

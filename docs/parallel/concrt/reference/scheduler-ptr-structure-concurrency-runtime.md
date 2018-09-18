@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dd15238408f90f268a5fea96635136077c795779
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059104"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 代表排程器的指標。 這個類別存在，以允許使用 shared_ptr 或只是簡單參考使用原始指標的共用的存留期的規格。  
@@ -97,8 +97,11 @@ scheduler_interface * operator-> const; （)
 ```  
   
 ### Parameters  
- `scheduler`  
- `pScheduler`  
+*scheduler*<br/>
+The scheduler to convert.
+
+*pScheduler*<br/>
+The scheduler pointer to convert.
   
 ## See Also  
  [concurrency Namespace](concurrency-namespace.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9ad03df6a342d47919eb576227422f687d15b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8f11c698b0f89e0584b673a112da10e82250cf5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755627"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035769"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -29,22 +29,22 @@ ms.locfileid: "43755627"
 
 ## <a name="syntax"></a>語法
 
-```  
+```cpp
 LRESULT NotifyHandler(
-    int idCtrl,  
-    LPNMHDR pnmh,  
+    int idCtrl,
+    LPNMHDR pnmh,
     BOOL& bHandled);
 ```
 
 #### <a name="parameters"></a>參數
 
-*idCtrl*  
+*idCtrl*<br/>
 傳送訊息的控制項識別項。
 
-*pnmh*  
+*pnmh*<br/>
 位址[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)結構，包含通知程式碼和其他資訊。 對於某些通知的訊息，此參數會指向較大的結構，其`NMHDR`做為其第一個成員的結構。
 
-*bHandled*  
+*bHandled*<br/>
 訊息對應集*bHandled*設為 TRUE 之前*NotifyHandler*呼叫。 如果*NotifyHandler*不會完全處理訊息，它應該設定*bHandled*來**FALSE**以指出訊息必須進一步處理。
 
 ## <a name="return-value"></a>傳回值
@@ -57,6 +57,6 @@ LRESULT NotifyHandler(
 
 ## <a name="see-also"></a>另請參閱
 
-[實作視窗](../atl/implementing-a-window.md)   
-[訊息對應](../atl/message-maps-atl.md)   
+[實作視窗](../atl/implementing-a-window.md)<br/>
+[訊息對應](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

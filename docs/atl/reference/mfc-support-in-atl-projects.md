@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6a3c5bae4d973ba74155ab018ebea69b0e2b93
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f3853bbe90757563f6c7dc2c9003ed7c5f2a98dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065435"
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 專案中的 MFC 支援
 
@@ -29,40 +29,40 @@ ms.locfileid: "43751396"
 
 此選項適用於僅限非屬性化 ATL DLL 專案。
 
-```  
-class CProjNameApp : public CWinApp  
-{  
+```
+class CProjNameApp : public CWinApp
+{
 public:  
 
 // Overrides  
     virtual BOOL InitInstance();
 virtual int ExitInstance();
-DECLARE_MESSAGE_MAP() 
+DECLARE_MESSAGE_MAP()
 };  
 
-BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)  
+BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)
 END_MESSAGE_MAP()  
 
 CProjNameApp theApp;  
 
-BOOL CProjNameApp::InitInstance()  
+BOOL CProjNameApp::InitInstance()
 {  
     return CWinApp::InitInstance();
 
 }  
 
-int CProjNameApp::ExitInstance()  
+int CProjNameApp::ExitInstance()
 {  
     return CWinApp::ExitInstance();
 
-}  
+}
 ```
 
 您可以檢視應用程式的物件類別及其`InitInstance`和`ExitInstance`類別檢視 中的函式。
 
 ## <a name="see-also"></a>另請參閱
 
-[新增類別](../../ide/adding-a-class-visual-cpp.md)   
-[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)   
+[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

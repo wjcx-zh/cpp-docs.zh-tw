@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2614 |Microsoft 文件
+title: 編譯器錯誤 C2614 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5783abd96e356affb8537f6fec278e368c692a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7c8674a733251750ea1b3ec75e1ee784ab2db1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045025"
 ---
 # <a name="compiler-error-c2614"></a>編譯器錯誤 C2614
-'class1': 成員初始化不合法: 'class2' 不是基底或成員  
-  
- 只有成員或基底類別，可以出現在類別或結構的初始設定清單中。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2614。  
-  
-```  
-// C2614.cpp  
-// compile with: /c  
-struct A {  
-   int i;  
-   A( int ia ) : B( i ) {};   // C2614 B is not a member of A  
-};  
-  
-struct A2 {  
-   int B;  
-   int i;  
-   A2( int ia ) : B( i ) {};   // OK  
-};  
+
+'class1': 成員初始化不合法: 'class2' 不是基底或成員
+
+只有成員或基底類別，可以出現在類別或結構的初始設定清單中。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2614。
+
+```
+// C2614.cpp
+// compile with: /c
+struct A {
+   int i;
+   A( int ia ) : B( i ) {};   // C2614 B is not a member of A
+};
+
+struct A2 {
+   int B;
+   int i;
+   A2( int ia ) : B( i ) {};   // OK
+};
 ```

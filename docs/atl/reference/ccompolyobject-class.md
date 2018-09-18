@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec995026b0142fc30470836b29697457be91937e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fcf62e142c99fad15bec667534bc60b4d19e43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764806"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045051"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 類別
 
@@ -41,14 +41,14 @@ ms.locfileid: "43764806"
 ## <a name="syntax"></a>語法
 
 ```
-template<class contained>  
+template<class contained>
 class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
 #### <a name="parameters"></a>參數
 
-*包含*  
+*包含*<br/>
 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
 
 ## <a name="members"></a>成員
@@ -127,7 +127,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>參數
 
-*pv*  
+*pv*<br/>
 [in]如果物件是彙總，或如果為 NULL 的外部未知的指標的物件，如果物件不會彙總。
 
 ### <a name="remarks"></a>備註
@@ -160,7 +160,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*前置處理*  
+*前置處理*<br/>
 [out]指標**CComPolyObject <** `contained` **>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -203,7 +203,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>參數
 
-*包含*  
+*包含*<br/>
 [in]您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
 
 ### <a name="remarks"></a>備註
@@ -216,22 +216,22 @@ CComContainedObject<contained> m_contained;
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Q*  
+*Q*<br/>
 COM 介面。
 
-*iid*  
+*iid*<br/>
 [in]所要求的介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
 
-*前置處理*  
+*前置處理*<br/>
 [out]所識別之介面指標`__uuidof(Q)`。
 
 ### <a name="return-value"></a>傳回值
@@ -256,6 +256,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
-[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
+[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

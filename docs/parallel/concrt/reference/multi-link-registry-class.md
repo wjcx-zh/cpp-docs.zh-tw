@@ -1,5 +1,5 @@
 ---
-title: multi_link_registry 類別 |Microsoft 文件
+title: multi_link_registry 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 93d13e7d74a499091a8ad0c592b3cee45a9bbb5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688930"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029584"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
 `multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。  
@@ -42,8 +42,8 @@ class multi_link_registry : public network_link_registry<_Block>;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_Block`  
- 封鎖資料類型儲存在`multi_link_registry`物件。  
+*區塊 （_b)*<br/>
+區塊資料類型儲存在`multi_link_registry`物件。  
   
 ## <a name="members"></a>成員  
   
@@ -61,9 +61,9 @@ class multi_link_registry : public network_link_registry<_Block>;
 |[add](#add)|新增連結`multi_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|傳回迭代器中的第一個項目`multi_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
 |[包含](#contains)|搜尋`multi_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
-|[count](#count)|計算中的項目數目`multi_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|  
+|[count](#count)|計算中的項目數`multi_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|  
 |[remove](#remove)|移除連結，以從`multi_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
-|[set_bound](#set_bound)|上的連結數目設定上限`multi_link_registry`物件可以保存。|  
+|[set_bound](#set_bound)|連結的數目設定上限`multi_link_registry`物件可以保存。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [network_link_registry](network-link-registry-class.md)  
@@ -84,11 +84,11 @@ virtual void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Link`  
- 要加入區塊的指標。  
+*連結 （_l)*<br/>
+要加入的區塊的指標。  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況或連結是否已存在於登錄中，如果繫結至已設定使用`set_bound`函式和連結已被移除。  
+ 方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況的連結是否已經存在於登錄中，或如果已繫結已設定使用`set_bound`函式，並連結已被移除。  
   
 ##  <a name="begin"></a> 開始 
 
@@ -113,15 +113,15 @@ virtual bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Link`  
- 在搜尋區塊的指標`multi_link_registry`物件。  
+*連結 （_l)*<br/>
+要搜尋中的區塊的指標`multi_link_registry`物件。  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果找不到指定的區塊，`false`否則。  
   
 ##  <a name="count"></a> 計數 
 
- 計算中的項目數目`multi_link_registry`物件。  
+ 計算中的項目數`multi_link_registry`物件。  
   
 ```
 virtual size_t count();
@@ -147,7 +147,7 @@ virtual ~multi_link_registry();
 ```  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況會移除所有的連結之前呼叫。  
+ 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果呼叫前會移除所有的連結。  
   
 ##  <a name="remove"></a> 移除 
 
@@ -158,23 +158,23 @@ virtual bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Link`  
- 要移除，如果在區塊的指標找到。  
+*連結 （_l)*<br/>
+要移除，如果區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果找到並移除，連結`false`否則。  
+ `true` 如果連結已找到並移除，`false`否則。  
   
 ##  <a name="set_bound"></a> set_bound 
 
- 上的連結數目設定上限`multi_link_registry`物件可以保存。  
+ 連結的數目設定上限`multi_link_registry`物件可以保存。  
   
 ```
 void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MaxLinks`  
- 最大數目的連結，`multi_link_registry`物件可以保存。  
+*_MaxLinks*<br/>
+最大數目的連結，`multi_link_registry`物件可以保存。  
   
 ### <a name="remarks"></a>備註  
  繫結設定後，取消連結項目將導致 `multi_link_registry` 物件進入不可變的狀態，後續在這種狀態下呼叫 `add` 將會擲回 `invalid_link_target` 例外狀況。  

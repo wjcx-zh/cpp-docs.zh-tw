@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 545f38058871d81196150e127c1814b304b6ab56
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c0261964f2e9c33f8a594a83e1b19c1db7be614
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767851"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069231"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 介面
 
@@ -66,7 +66,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="parameters"></a>參數
 
-*hHandle*  
+*hHandle*<br/>
 關閉控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -93,10 +93,10 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>參數
 
-*dwParam*  
+*dwParam*<br/>
 User 參數。
 
-*hObject*  
+*hObject*<br/>
 變成已收到訊號的控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -115,5 +115,5 @@ User 參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別](../../atl/reference/atl-classes.md)   
+[類別](../../atl/reference/atl-classes.md)<br/>
 [CWorkerThread 類別](../../atl/reference/cworkerthread-class.md)

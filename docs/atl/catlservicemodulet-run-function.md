@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f1be2c862775c76bbaad36f84c871eff5a38d5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1f7306e11bd1cc23e4de17e67f0941d2b3ee8473
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055281"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet:: Run 函式
 
@@ -37,9 +37,9 @@ ms.locfileid: "43759618"
 
 ## <a name="see-also"></a>另請參閱
 
-[服務](../atl/atl-services.md)   
-[CSecurityDesc 類別](../atl/reference/csecuritydesc-class.md)   
-[CSid 類別](../atl/reference/csid-class.md)   
-[CDacl 類別](../atl/reference/cdacl-class.md)   
+[服務](../atl/atl-services.md)<br/>
+[CSecurityDesc 類別](../atl/reference/csecuritydesc-class.md)<br/>
+[CSid 類別](../atl/reference/csid-class.md)<br/>
+[CDacl 類別](../atl/reference/cdacl-class.md)<br/>
 [Catlservicemodulet:: Run](../atl/reference/catlservicemodulet-class.md#run)
 

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2379 |Microsoft 文件
+title: 編譯器錯誤 C2379 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1016bedfa9df0e9dfacb56734ee60397108d046
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec340a5a48705eb91bf5bf72ec20ad382f4b262c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198072"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032441"
 ---
 # <a name="compiler-error-c2379"></a>編譯器錯誤 C2379
-型式參數數目有不同的類型，當升級  
-  
- 指定參數的型別不相容，透過預設升級後，與上一個宣告中的類型。 這是 ANSI C 中的錯誤 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 和具有 Microsoft 擴充功能的警告 (**/Ze**)。  
-  
- 下列範例會產生 C2379:  
-  
-```  
-// C2379.c  
-// compile with: /Za  
-void func();  
-void func(char);   // C2379, char promotes to int  
+
+型式參數數目有不同的類型，當升級
+
+指定參數的型別不相容，透過預設的升級後，先前的宣告中的類型。 這是 ANSI C 中的錯誤 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 和具有 Microsoft 擴充功能的警告 (**/Ze**)。
+
+下列範例會產生 C2379:
+
+```
+// C2379.c
+// compile with: /Za
+void func();
+void func(char);   // C2379, char promotes to int
 ```

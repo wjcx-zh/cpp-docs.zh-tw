@@ -1,5 +1,5 @@
 ---
-title: ODBC 驅動程式清單 |Microsoft 文件
+title: ODBC 驅動程式清單 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 310f0c6d3b36f63d4ba9d1f165c808b6d417c321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067989"
 ---
 # <a name="odbc-driver-list"></a>ODBC 驅動程式清單
-Visual c + + 提供針對下列資料庫的 ODBC 驅動程式：  
+
+Visual c + + 會提供下列資料庫中的 ODBC 驅動程式：  
   
--   SQL Server  
+- SQL Server  
   
--   Microsoft Access  
+- Microsoft Access  
   
--   Microsoft Excel  
+- Microsoft Excel  
   
--   dBASE  
+- dBASE  
   
--   Paradox  
+- Paradox  
   
--   Microsoft Oracle ODBC  
+- Microsoft Oracle ODBC  
   
--   文字檔  
+- 文字檔  
   
- 如需有關 ODBC 驅動程式可從 Microsoft 和其他公司，包括 ODBC 驅動程式套件資訊，請連絡 Microsoft 產品支援服務。  
+如需有關 ODBC 驅動程式可從 Microsoft 和其他公司，包括 ODBC 驅動程式套件資訊，請連絡 Microsoft 產品支援服務。  
   
 ## <a name="see-also"></a>另請參閱  
- [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

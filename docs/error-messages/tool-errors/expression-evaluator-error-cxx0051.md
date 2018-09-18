@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0051 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0051 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a922738aa9ba3672e1f8f7c801f02d13a90a99c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b89fb8de6bd9331a85d79ec8d8e21ba746c5c88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301791"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065038"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>運算式評估工具錯誤 CXX0051
-在中斷點指定的多個多載的符號  
-  
- 運算式評估工具無法判斷哪一個以上的多載符號來做為中斷點。  
-  
- 這個錯誤是與 can0051 相同。
+
+指定中斷點的多個多載的符號
+
+運算式評估工具無法判斷其中一個多個多載的符號來做為中斷點。
+
+此錯誤是與 can0051 相同。

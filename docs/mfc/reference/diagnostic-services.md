@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 14c231edc5395515836ccbbe9adea87e0f31b33d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712945"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068400"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵錯。 這些診斷服務包含巨集和全域函式，可讓您追蹤程式的記憶體配置、在執行階段傾印物件的內容，以及在執行階段列印偵錯訊息。 診斷服務的巨集和全域函式可分為下列分類：  
@@ -546,49 +546,31 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="remarks"></a>備註  
  下列範例會反映程式的呼叫所產生的輸出`AfxDumpStack`從 MFC 對話方塊應用程式中的按鈕處理常式：  
   
- `=== begin AfxDumpStack output ===`  
-  
- `00427D55: DUMP2\DEBUG\DUMP2.EXE! void AfxDumpStack(unsigned long) + 181 bytes`  
-  
- `0040160B: DUMP2\DEBUG\DUMP2.EXE! void CDump2Dlg::OnClipboard(void) + 14 bytes`  
-  
- `0044F884: DUMP2\DEBUG\DUMP2.EXE! int _AfxDispatchCmdMsg(class CCmdTarget *,`  
-  
- `unsigned int,int,void ( CCmdTarget::*)(void),void *,unsigned int,struct AFX_CMDHANDLE`  
-  
- `0044FF7B: DUMP2\DEBUG\DUMP2.EXE! virtual int CCmdTarget::OnCmdMsg(unsigned`  
-  
- `int,int,void *,struct AFX_CMDHANDLERINFO *) + 626 bytes`  
-  
- `00450C71: DUMP2\DEBUG\DUMP2.EXE! virtual int CDialog::OnCmdMsg(unsigned`  
-  
- `int,int,void *,struct AFX_CMDHANDLERINFO *) + 36 bytes`  
-  
- `00455B27: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnCommand(unsigned`  
-  
- `int,long) + 312 bytes`  
-  
- `00454D3D: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnWndMsg(unsigned`  
-  
- `int,unsigned int,long,long *) + 83 bytes`  
-  
- `00454CC0: DUMP2\DEBUG\DUMP2.EXE! virtual long CWnd::WindowProc(unsigned`  
-  
- `int,unsigned int,long) + 46 bytes`  
-  
- `004528D9: DUMP2\DEBUG\DUMP2.EXE! long AfxCallWndProc(class CWnd *,struct`  
-  
- `HWND__ *,unsigned int,unsigned int,long) + 237 bytes`  
-  
- `00452D34: DUMP2\DEBUG\DUMP2.EXE! long AfxWndProc(struct HWND__ *,unsigned`  
-  
- `int,unsigned int,long) + 129 bytes`  
-  
- `BFF73663: WINDOWS\SYSTEM\KERNEL32.DLL! ThunkConnect32 + 2148 bytes`  
-  
- `BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes`  
-  
- `=== end AfxDumpStack() output ===`  
+```Output
+=== begin AfxDumpStack output ===
+00427D55: DUMP2\DEBUG\DUMP2.EXE! void AfxDumpStack(unsigned long) + 181 bytes
+0040160B: DUMP2\DEBUG\DUMP2.EXE! void CDump2Dlg::OnClipboard(void) + 14 bytes
+0044F884: DUMP2\DEBUG\DUMP2.EXE! int _AfxDispatchCmdMsg(class CCmdTarget *,
+unsigned int,int,void ( CCmdTarget::*)(void),void *,unsigned int,struct 
+AFX_CMDHANDLE
+0044FF7B: DUMP2\DEBUG\DUMP2.EXE! virtual int CCmdTarget::OnCmdMsg(unsigned
+int,int,void *,struct AFX_CMDHANDLERINFO *) + 626 bytes
+00450C71: DUMP2\DEBUG\DUMP2.EXE! virtual int CDialog::OnCmdMsg(unsigned
+int,int,void *,struct AFX_CMDHANDLERINFO *) + 36 bytes
+00455B27: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnCommand(unsigned
+int,long) + 312 bytes
+00454D3D: DUMP2\DEBUG\DUMP2.EXE! virtual int CWnd::OnWndMsg(unsigned
+int,unsigned int,long,long *) + 83 bytes
+00454CC0: DUMP2\DEBUG\DUMP2.EXE! virtual long CWnd::WindowProc(unsigned
+int,unsigned int,long) + 46 bytes
+004528D9: DUMP2\DEBUG\DUMP2.EXE! long AfxCallWndProc(class CWnd *,struct
+HWND__ *,unsigned int,unsigned int,long) + 237 bytes
+00452D34: DUMP2\DEBUG\DUMP2.EXE! long AfxWndProc(struct HWND__ *,unsigned
+int,unsigned int,long) + 129 bytes
+BFF73663: WINDOWS\SYSTEM\KERNEL32.DLL! ThunkConnect32 + 2148 bytes
+BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
+=== end AfxDumpStack() output ===
+```
   
  上述輸出中的每一行指出最後一次的函式呼叫的函式呼叫時，並呼叫的函式原型所包含的模組的完整路徑名稱的位址。 如果堆疊上的函式呼叫不會發生在函式的實際位址，則會顯示位元組位移。  
   

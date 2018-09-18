@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: graphics 命名空間函式 |Microsoft 文件'
+title: 'Concurrency:: graphics 命名空間函式 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6a31a205a90480ae91740ecaf859f411c331bd69
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037965"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 命名空間函式
 |||  
@@ -26,7 +26,7 @@ ms.locfileid: "33687045"
 |[copy](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>  copy 函式 （concurrency:: graphics 命名空間）  
- 將來源紋理複製到目的地緩衝區中，或將來源緩衝區複製到目的緩衝區。 此函式的一般形式是`copy(src, dest)`。  
+ 將來源材質複製到目的緩衝區，或將來源緩衝區複製到目的緩衝區。 此函式的一般形式是`copy(src, dest)`。  
   
 ```  
 template <
@@ -132,47 +132,47 @@ void copy (
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Copy_extent`  
- 要複製之紋理區段範圍。  
+*_Copy_extent*<br/>
+要複製的材質部分的範圍。  
   
- `_Dst`  
- 要複製到的物件。  
+*_Dst*<br/>
+要複製到的物件。  
   
- `_Dst_byte_size`  
- 目的地中的位元組數目。  
+*_Dst_byte_size*<br/>
+目的地中的位元組數目。  
   
- `_Dst_type`  
- 目的地物件的類型。  
+*_Dst_type*<br/>
+目的地物件的型別。  
   
- `_Dst_offset`  
- 中要開始複製目的地的位移。  
+*_Dst_offset*<br/>
+要開始複製目的地中的位移。  
   
- `InputIterator`  
- 輸入 interator 類型。  
+*InputIterator*<br/>
+輸入迭代器類型。  
   
- `OutputIterator`  
- 輸出迭代器類型。  
+*OutputIterator*<br/>
+輸出迭代器類型。  
   
- `_Src`  
- 若要複製的物件。  
+*_Src*<br/>
+若要複製的物件。  
   
- `_Src_byte_size`  
- 在來源中的位元組數目。  
+*_Src_byte_size*<br/>
+在來源中的位元組數目。  
   
- `_Src_type`  
- 來源物件的類型。  
+*_Src_type*<br/>
+來源物件的型別。  
   
- `_Src_offset`  
- 要從中開始複製的來源中的位移。  
+*_Src_offset*<br/>
+要從其中開始複製的來源位移。  
   
- `first`  
- 插入來源容器開頭迭代器。  
+*first*<br/>
+來源容器中的開頭迭代器。  
   
- `last`  
- 插入來源容器結尾迭代器。  
+*最後一個*<br/>
+來源容器中結束迭代器。  
   
 ##  <a name="copy_async"></a>  copy_async 函式 （concurrency:: graphics 命名空間）  
- 以非同步方式將來源紋理複製到目的地緩衝區中，或將來源緩衝區複製到目的地緩衝區，然後傳回[completion_future](completion-future-class.md)可以等候的物件。 加速器上執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。  
+ 以非同步方式將來源材質複製到目的緩衝區，或將來源緩衝區複製到目的緩衝區，然後傳回[completion_future](completion-future-class.md)可以等候的物件。 當在加速器上執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。  
   
 ```  
 template<
@@ -274,44 +274,44 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Copy_extent`  
- 要複製之紋理區段範圍。  
+*_Copy_extent*<br/>
+要複製的材質部分的範圍。  
   
- `_Dst`  
- 要複製到的物件。  
+*_Dst*<br/>
+要複製到的物件。  
   
- `_Dst_byte_size`  
- 目的地中的位元組數目。  
+*_Dst_byte_size*<br/>
+目的地中的位元組數目。  
   
- `_Dst_type`  
- 目的地物件的類型。  
+*_Dst_type*<br/>
+目的地物件的型別。  
   
- `_Dst_offset`  
- 中要開始複製目的地的位移。  
+*_Dst_offset*<br/>
+要開始複製目的地中的位移。  
   
- `InputIterator`  
- 輸入 interator 類型。  
+*InputIterator*<br/>
+輸入迭代器類型。  
   
- `OutputIterator`  
- 輸出迭代器類型。  
+*OutputIterator*<br/>
+輸出迭代器類型。  
   
- `_Src`  
- 若要複製的物件。  
+*_Src*<br/>
+若要複製的物件。  
   
- `_Src_byte_size`  
- 在來源中的位元組數目。  
+*_Src_byte_size*<br/>
+在來源中的位元組數目。  
   
- `_Src_type`  
- 來源物件的類型。  
+*_Src_type*<br/>
+來源物件的型別。  
   
- `_Src_offset`  
- 要從中開始複製的來源中的位移。  
+*_Src_offset*<br/>
+要從其中開始複製的來源位移。  
   
- `first`  
- 插入來源容器開頭迭代器。  
+*first*<br/>
+來源容器中的開頭迭代器。  
   
- `last`  
- 插入來源容器結尾迭代器。  
+*最後一個*<br/>
+來源容器中結束迭代器。  
 
 ## <a name="requirements"></a>需求  
  **標頭：** amp_graphics.h  

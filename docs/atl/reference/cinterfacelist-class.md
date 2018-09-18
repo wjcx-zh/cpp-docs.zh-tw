@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752745"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032428"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 類別
 
@@ -32,7 +32,7 @@ ms.locfileid: "43752745"
 ## <a name="syntax"></a>語法
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>參數
 
-*I*  
+*I*<br/>
 COM 介面，用來指定要儲存的指標的類型。
 
-*piid*  
+*piid*<br/>
 指向 IID*我*。
 
 ## <a name="members"></a>成員
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBlockSize*  
+*nBlockSize*<br/>
 區塊的大小，預設值是 10。
 
 ### <a name="remarks"></a>備註
@@ -89,7 +89,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlList 類別](../../atl/reference/catllist-class.md)   
-[CComQIPtr 類別](../../atl/reference/ccomqiptr-class.md)   
-[CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[CAtlList 類別](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr 類別](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

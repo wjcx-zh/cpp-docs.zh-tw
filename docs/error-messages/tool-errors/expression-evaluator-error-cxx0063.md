@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0063 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0063 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 962fd27cc174097ff4d6c72cf91ade89e74f1ce4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 835a396fdbf7f97e1dccde66581af463c8254cb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039070"
 ---
 # <a name="expression-evaluator-error-cxx0063"></a>運算式評估工具錯誤 CXX0063
-不支援多載運算子 ->  
-  
- 運算式使用多載的類別成員存取運算子 (**->**)。  
-  
- 這個錯誤是與 can0063 相同。
+
+不支援多載運算子 ->
+
+運算式使用多載的類別成員存取運算子 (**->**)。
+
+此錯誤是與 can0063 相同。

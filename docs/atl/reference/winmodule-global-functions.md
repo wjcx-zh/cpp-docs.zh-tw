@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cfa128ecb598d4960c0d5527e66a9cb81266c2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70b99ac7790477df88a0e685afd5652a35c06233
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047521"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全域函式
 
@@ -51,13 +51,13 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>參數
 
-*pWinModule*  
+*pWinModule*<br/>
 模組的指標[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構。
 
-*pData*  
+*pData*<br/>
 指標[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)會初始化並新增至目前模組的結構。
 
-*pObject*  
+*pObject*<br/>
 物件的指標**這**指標。
 
 ### <a name="remarks"></a>備註
@@ -74,7 +74,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>參數
 
-*pWinModule*  
+*pWinModule*<br/>
 模組的指標[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)結構。
 
 ### <a name="return-value"></a>傳回值

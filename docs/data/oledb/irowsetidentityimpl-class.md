@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed8cc8fc2b61a3a85beb7297317c5b266557268c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036185"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 類別
+
 實作 OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\))介面，可讓資料列識別測試。  
   
 ## <a name="syntax"></a>語法
@@ -44,14 +45,16 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 類別衍生自`IRowsetIdentityImpl`。  
+
+*T*<br/>
+類別衍生自`IRowsetIdentityImpl`。  
   
- *RowClass*  
- 儲存體單位`HROW`。  
+*RowClass*<br/>
+儲存體單位`HROW`。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -62,6 +65,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 |[IsSameRow](#issamerow)|比較兩個資料列控點，以查看它們是否參考相同的資料列。|  
   
 ## <a name="issamerow"></a> Irowsetidentityimpl:: Issamerow
+
 比較兩個資料列控點，以查看它們是否參考相同的資料列。  
   
 ### <a name="syntax"></a>語法  
@@ -72,11 +76,14 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 若要比較資料列控制代碼，這個方法會轉換`HROW`控制代碼對應到`RowClass`成員和呼叫`memcmp`指標。  
+
+若要比較資料列控制代碼，這個方法會轉換`HROW`控制代碼對應到`RowClass`成員和呼叫`memcmp`指標。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

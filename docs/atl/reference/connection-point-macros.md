@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226c0b0d0f1fc316d5b78884a4d6e260296c52f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039539"
 ---
 # <a name="connection-point-macros"></a>連接點巨集
 
@@ -49,7 +49,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]包含連接點的類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -73,10 +73,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]加入連接點對應介面的 GUID。 
 
-*piid*  
+*piid*<br/>
 [in]正在 adde 介面的 GUID 的指標。
 
 ### <a name="remarks"></a>備註
@@ -111,5 +111,5 @@ END_CONNECTION_POINT_MAP()
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集](../../atl/reference/atl-macros.md)   
+[巨集](../../atl/reference/atl-macros.md)<br/>
 [連接點全域函式](../../atl/reference/connection-point-global-functions.md)

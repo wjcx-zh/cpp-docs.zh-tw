@@ -17,66 +17,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fb8ff09fc50557283a0f4e8ef0e159bc900e86
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4ce62f17008bf4a1ba805db40583e6c63b69a302
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059976"
 ---
 # <a name="using-exit-or-return"></a>結束 exit 或 return
-當您呼叫**結束**或執行**會傳回**陳述式從`main`，靜態物件會在其初始化的反向順序終結。 下列範例將示範這類初始化和清除如何運作：  
-  
-## <a name="example"></a>範例  
-  
-```cpp 
-// using_exit_or_return1.cpp  
-#include <stdio.h>  
-class ShowData {  
-public:  
-   // Constructor opens a file.  
-   ShowData( const char *szDev ) {  
-   errno_t err;  
-      err = fopen_s(&OutputDev, szDev, "w" );  
-   }  
-  
-   // Destructor closes the file.  
-   ~ShowData() { fclose( OutputDev ); }  
-  
-   // Disp function shows a string on the output device.  
-   void Disp( char *szData ) {   
-      fputs( szData, OutputDev );  
-   }  
-private:  
-   FILE *OutputDev;  
-};  
-  
-//  Define a static object of type ShowData. The output device  
-//   selected is "CON" -- the standard output device.  
-ShowData sd1 = "CON";  
-  
-//  Define another static object of type ShowData. The output  
-//   is directed to a file called "HELLO.DAT"  
-ShowData sd2 = "hello.dat";  
-  
-int main() {  
-   sd1.Disp( "hello to default device\n" );  
-   sd2.Disp( "hello to file hello.dat\n" );  
-}  
-```  
-  
- 在上述範例中，靜態物件 `sd1` 和 `sd2` 會在進入 `main` 之前建立並初始化。 此程式會終止使用之後**會傳回**陳述式中，第一個`sd2`終結，然後`sd1`。 `ShowData` 類別的解構函式會關閉與這些靜態物件相關聯的檔案    
-  
- 另一種撰寫這個程式碼的方式，是使用區塊範圍宣告 `ShowData` 物件，讓物件能夠在超出範圍時終結：  
-  
-```cpp 
-int main() {  
-   ShowData sd1, sd2( "hello.dat" );  
-  
-   sd1.Disp( "hello to default device\n" );  
-   sd2.Disp( "hello to file hello.dat\n" );  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [其他終止考量](../cpp/additional-termination-considerations.md)
+
+當您呼叫**結束**或執行**會傳回**陳述式從`main`，靜態物件會在其初始化的反向順序終結。 下列範例將示範這類初始化和清除如何運作：
+
+## <a name="example"></a>範例
+
+```cpp
+// using_exit_or_return1.cpp
+#include <stdio.h>
+class ShowData {
+public:
+   // Constructor opens a file.
+   ShowData( const char *szDev ) {
+   errno_t err;
+      err = fopen_s(&OutputDev, szDev, "w" );
+   }
+
+   // Destructor closes the file.
+   ~ShowData() { fclose( OutputDev ); }
+
+   // Disp function shows a string on the output device.
+   void Disp( char *szData ) {
+      fputs( szData, OutputDev );
+   }
+private:
+   FILE *OutputDev;
+};
+
+//  Define a static object of type ShowData. The output device
+//   selected is "CON" -- the standard output device.
+ShowData sd1 = "CON";
+
+//  Define another static object of type ShowData. The output
+//   is directed to a file called "HELLO.DAT"
+ShowData sd2 = "hello.dat";
+
+int main() {
+   sd1.Disp( "hello to default device\n" );
+   sd2.Disp( "hello to file hello.dat\n" );
+}
+```
+
+在上述範例中，靜態物件 `sd1` 和 `sd2` 會在進入 `main` 之前建立並初始化。 此程式會終止使用之後**會傳回**陳述式中，第一個`sd2`終結，然後`sd1`。 `ShowData` 類別的解構函式會關閉與這些靜態物件相關聯的檔案 
+
+另一種撰寫這個程式碼的方式，是使用區塊範圍宣告 `ShowData` 物件，讓物件能夠在超出範圍時終結：
+
+```cpp
+int main() {
+   ShowData sd1, sd2( "hello.dat" );
+
+   sd1.Disp( "hello to default device\n" );
+   sd2.Disp( "hello to file hello.dat\n" );
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[其他終止考量](../cpp/additional-termination-considerations.md)

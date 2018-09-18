@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cf941171ef992c677c619a1c6a45ab9868526a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058493"
 ---
 # <a name="registry-macros"></a>登錄巨集
 
@@ -71,7 +71,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>參數
 
-*libid*  
+*libid*<br/>
 型別程式庫的 GUID。
 
 ### <a name="remarks"></a>備註
@@ -105,19 +105,19 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>參數
 
-*class*  
+*class*<br/>
 [in]包含為了與舊版相容。
 
-*pid*  
+*pid*<br/>
 [in]若要 LPCTSTR 是版本專屬的程式識別項。
 
-*vpid*  
+*vpid*<br/>
 [in]LPCTSTR 版本無關的程式識別項。
 
-*nid*  
+*nid*<br/>
 [in]UINT，是在登錄做為該程式的說明中的資源字串的索引。
 
-*flags*  
+*flags*<br/>
 [in]DWORD，其中包含程式的登錄中的執行緒模型。 必須是下列值之一： THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="remarks"></a>備註
@@ -138,10 +138,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>參數
 
-*resid*  
+*resid*<br/>
 .Rgs 檔案所包含的相關資訊的資源識別碼*appid*。
 
-*appid*  
+*appid*<br/>
 GUID。
 
 ### <a name="remarks"></a>備註
@@ -162,7 +162,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]字串資源的識別碼。
 
 ### <a name="remarks"></a>備註
@@ -187,7 +187,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]您資源的精靈所產生的識別項。
 
 ### <a name="remarks"></a>備註

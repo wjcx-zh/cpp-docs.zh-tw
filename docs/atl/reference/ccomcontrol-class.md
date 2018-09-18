@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761348"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036165"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
 
@@ -46,17 +46,17 @@ ms.locfileid: "43761348"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 實作控制項的類別。
 
-*WinBase*  
+*WinBase*<br/>
 實作視窗化函式的基底類別。 預設值為[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。
 
 ## <a name="members"></a>成員
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求介面的 GUID。
 
-*ppv*  
+*ppv*<br/>
 [out]所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。
 
 ### <a name="remarks"></a>備註
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父系或擁有者的視窗控制代碼。 必須提供有效的視窗控制代碼。 [控制] 視窗會侷限於其父視窗的區域。
 
-*rcPos*  
+*rcPos*<br/>
 [in]初始大小和位置來建立視窗。
 
 ### <a name="remarks"></a>備註
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>參數
 
-*dispID*  
+*dispID*<br/>
 [in]已變更之屬性的識別項。
 
 ### <a name="return-value"></a>傳回值
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>參數
 
-*dispID*  
+*dispID*<br/>
 [in]若要變更之屬性的識別項。
 
 ### <a name="return-value"></a>傳回值
@@ -203,7 +203,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="remarks"></a>備註
 
-如果您的控制項類別衍生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，這個方法會呼叫[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有連線`IPropertyNotifySink`介面指定控制項屬性即將變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。  
+如果您的控制項類別衍生自[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)，這個方法會呼叫[CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit)通知所有連線`IPropertyNotifySink`介面指定控制項屬性即將變更。 如果您的控制項類別未衍生自`IPropertyNotifySink`，這個方法會傳回 S_OK。
 
 這個方法可以安全地呼叫，即使您的控制項不支援連接點。
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>參數
 
-*lpszText*  
+*lpszText*<br/>
 要在訊息方塊中顯示的文字。
 
-*lpszCaption*  
+*lpszCaption*<br/>
 對話方塊的標題。 如果 NULL （預設值），在使用 「 錯誤 」 的標題。
 
-*n*  
+*n*<br/>
 指定的內容和對話方塊的行為。 請參閱[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)清單的 Windows SDK 文件可用的不同的訊息方塊中的項目。 預設提供的簡單**確定** 按鈕。
 
 ### <a name="return-value"></a>傳回值
@@ -243,7 +243,7 @@ int MessageBox(
 
 ## <a name="see-also"></a>另請參閱
 
-[CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[CComControlBase 類別](../../atl/reference/ccomcontrolbase-class.md)   
+[CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[CComControlBase 類別](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [CComCompositeControl 類別](../../atl/reference/ccomcompositecontrol-class.md)

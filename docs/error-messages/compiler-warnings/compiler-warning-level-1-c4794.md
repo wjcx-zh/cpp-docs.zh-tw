@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4794 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4794 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ffa1200e7c760f028549335f0df5a9ea8ba3d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c6e6b8aedacc71291afc2a34a6a11d7b19a126b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027397"
 ---
 # <a name="compiler-warning-level-1-c4794"></a>編譯器警告 (層級 1) C4794
-執行緒區域儲存區變數 'variable' 的區段已從 ''section name' 變更為 '.tls$'  
-  
- 您使用了 [#pragma data_seg](../../preprocessor/data-seg.md) ，將 tls 變數放在開頭不是 .tls$ 的區段中。  
-  
- 已定義 *__declspec(thread)* 變數的目的檔中將會有 .tls$ [x](../../cpp/thread.md) 區段。 EXE 或 DLL 中的.tls 區段將會從這些區段產生。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C4794：  
-  
-```  
-// C4794.cpp  
-// compile with: /W1 /c  
-#pragma data_seg(".someseg")  
-__declspec(thread) int i;   // C4794  
-  
-// OK  
-#pragma data_seg(".tls$9")  
-__declspec(thread) int j;  
+
+執行緒區域儲存區變數 'variable' 的區段已從 ''section name' 變更為 '.tls$'
+
+您使用了 [#pragma data_seg](../../preprocessor/data-seg.md) ，將 tls 變數放在開頭不是 .tls$ 的區段中。
+
+已定義 *__declspec(thread)* 變數的目的檔中將會有 .tls$ [x](../../cpp/thread.md) 區段。 EXE 或 DLL 中的.tls 區段將會從這些區段產生。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4794：
+
+```
+// C4794.cpp
+// compile with: /W1 /c
+#pragma data_seg(".someseg")
+__declspec(thread) int i;   // C4794
+
+// OK
+#pragma data_seg(".tls$9")
+__declspec(thread) int j;
 ```

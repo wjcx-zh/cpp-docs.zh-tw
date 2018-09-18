@@ -1,5 +1,5 @@
 ---
-title: source_link_manager 類別 |Microsoft 文件
+title: source_link_manager 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff869fb93d5dae39a924c3d4133f5a6bc6fb824f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059793"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 類別
 `source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。  
@@ -45,8 +45,8 @@ class source_link_manager;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_LinkRegistry`  
- 網路連結登錄中。  
+*_LinkRegistry*<br/>
+網路連結登錄中。  
   
 ## <a name="members"></a>成員  
   
@@ -54,10 +54,10 @@ class source_link_manager;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`const_pointer`|類型，提供的指標`const`中的項目`source_link_manager`物件。|  
-|`const_reference`|提供的參考型別`const`項目儲存在`source_link_manager`物件進行讀取和執行 const 作業。|  
+|`const_pointer`|此類型提供的指標`const`中的項目`source_link_manager`物件。|  
+|`const_reference`|提供的參考型別`const`項目儲存在`source_link_manager`供讀取和執行 const 作業的物件。|  
 |`iterator`|類型，提供迭代器可以讀取或修改任何項目中的`source_link_manager`物件。|  
-|`type`|受連結登錄類型`source_link_manager`物件。|  
+|`type`|由連結登錄的型別`source_link_manager`物件。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -70,18 +70,18 @@ class source_link_manager;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[add](#add)|將加入的來源連結`source_link_manager`物件。|  
+|[add](#add)|新增來源連結`source_link_manager`物件。|  
 |[begin](#begin)|傳回迭代器中的第一個項目`source_link_manager`物件。|  
 |[包含](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|  
-|[count](#count)|計算中連結的區塊數目`source_link_manager`物件。|  
-|[reference](#reference)|取得參考上`source_link_manager`物件。|  
-|[register_target_block](#register_target_block)|註冊保存此目標區塊`source_link_manager`物件。|  
+|[count](#count)|計算連結中的區塊數目`source_link_manager`物件。|  
+|[reference](#reference)|在參考取得`source_link_manager`物件。|  
+|[register_target_block](#register_target_block)|註冊擁有此目標區塊`source_link_manager`物件。|  
 |[release](#release)|在釋放參考`source_link_manager`物件。|  
 |[remove](#remove)|移除連結，以從`source_link_manager`物件。|  
 |[set_bound](#set_bound)|設定來源連結，可以新增至這個最大數目`source_link_manager`物件。|  
   
 ## <a name="remarks"></a>備註  
- 目前，來源區塊是計數的參考。 這是包裝函式上`network_link_registry`物件，可讓並行存取的連結，並提供參考透過回呼連結的能力。 訊息區塊 ( `target_block`s 或`propagator_block`s) 應該將這個類別用於其來源連結。  
+ 目前，來源區塊是計數的參考。 這是一個包裝函式上`network_link_registry`物件，可讓您連結的並行存取，並可讓參考透過回呼的連結。 訊息區塊 ( `target_block`s 或`propagator_block`s) 應該將這個類別用於其來源連結。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `source_link_manager`  
@@ -93,15 +93,15 @@ class source_link_manager;
   
 ##  <a name="add"></a> 新增 
 
- 將加入的來源連結`source_link_manager`物件。  
+ 新增來源連結`source_link_manager`物件。  
   
 ```
 void add(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Link`  
- 要加入區塊的指標。  
+*連結 （_l)*<br/>
+要加入的區塊的指標。  
   
 ##  <a name="begin"></a> 開始 
 
@@ -115,7 +115,7 @@ iterator begin();
  迭代器中的第一個項目定址`source_link_manager`物件。  
   
 ### <a name="remarks"></a>備註  
- 迭代器的結束狀態以`NULL`連結。  
+ 迭代器的結束狀態會由`NULL`連結。  
   
 ##  <a name="contains"></a> 包含 
 
@@ -126,26 +126,26 @@ bool contains(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Link`  
- 在搜尋區塊的指標`source_link_manager`物件。  
+*連結 （_l)*<br/>
+要搜尋中的區塊的指標`source_link_manager`物件。  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果找不到指定的區塊，`false`否則。  
   
 ##  <a name="count"></a> 計數 
 
- 計算中連結的區塊數目`source_link_manager`物件。  
+ 計算連結中的區塊數目`source_link_manager`物件。  
   
 ```
 size_t count();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在連結區塊數目`source_link_manager`物件。  
+ 連結中的區塊數目`source_link_manager`物件。  
   
 ##  <a name="reference"></a> 參考 
 
- 取得參考上`source_link_manager`物件。  
+ 在參考取得`source_link_manager`物件。  
   
 ```
 void reference();
@@ -153,17 +153,17 @@ void reference();
   
 ##  <a name="register_target_block"></a> register_target_block 
 
- 註冊保存此目標區塊`source_link_manager`物件。  
+ 註冊擁有此目標區塊`source_link_manager`物件。  
   
 ```
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 目標區塊保有這`source_link_manager`物件。  
+*_PTarget*<br/>
+目標區塊保留這`source_link_manager`物件。  
   
-##  <a name="release"></a> 發行 
+##  <a name="release"></a> 版本 
 
  在釋放參考`source_link_manager`物件。  
   
@@ -180,11 +180,11 @@ bool remove(_EType _Link);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Link`  
- 要移除，如果在區塊的指標找到。  
+*連結 （_l)*<br/>
+要移除，如果區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果找到並移除，連結`false`否則。  
+ `true` 如果連結已找到並移除，`false`否則。  
   
 ##  <a name="set_bound"></a> set_bound 
 
@@ -195,8 +195,8 @@ void set_bound(size_t _MaxLinks);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MaxLinks`  
- 連結的數目上限。  
+*_MaxLinks*<br/>
+連結的數目上限。  
   
 ##  <a name="ctor"></a> source_link_manager 
 

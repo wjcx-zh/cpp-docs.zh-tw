@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2254 |Microsoft 文件
+title: 編譯器錯誤 C2254 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773b6d8b8f0dafe560da8549139442efb31ba429
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6030f85ef1b8742b07f1be92101d740732207fa5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170079"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067086"
 ---
 # <a name="compiler-error-c2254"></a>編譯器錯誤 C2254
-'function': 純規範或抽象覆寫規範不允許在 friend 函式  
-  
- A`friend`指定為純虛擬函式`virtual`。  
-  
- 下列範例會產生 C2254:  
-  
-```  
-// C2254.cpp  
-// compile with: /c  
-class A {  
-public:  
-   friend void func1() = 0;   // C2254, func1 is friend  
-   void virtual func2() = 0;   // OK, pure virtual  
-   friend void func3();   // OK, friend not virtual nor pure  
-};  
-  
-void func1() {};  
-void func3() {};  
+
+'function': 純規範或抽象覆寫規範不允許在 friend 函式
+
+A`friend`函式指定為純`virtual`。
+
+下列範例會產生 C2254:
+
+```
+// C2254.cpp
+// compile with: /c
+class A {
+public:
+   friend void func1() = 0;   // C2254, func1 is friend
+   void virtual func2() = 0;   // OK, pure virtual
+   friend void func3();   // OK, friend not virtual nor pure
+};
+
+void func1() {};
+void func3() {};
 ```

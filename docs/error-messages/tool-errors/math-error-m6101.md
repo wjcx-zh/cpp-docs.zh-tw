@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6101 |Microsoft 文件
+title: 運算錯誤 M6101 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb428cb7f4ad59300de0ceab9a6faa727e44f9c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60ef740d94672b0828b97cc39c2b6a50054443a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340238"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041632"
 ---
 # <a name="math-error-m6101"></a>運算錯誤 M6101
-無效  
-  
- 無效的作業。  
-  
- 一個運算元為 NaN （不是數字） 或無限大時，就可能導致這個錯誤。  
-  
- 程式終止，結束代碼為 129。
+
+無效
+
+無效的作業。
+
+運算元為 NaN （不是數字） 或無限大時，可能被造成這個錯誤。
+
+程式結束，結束代碼為 129。

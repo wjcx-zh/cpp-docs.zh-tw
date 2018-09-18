@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2058 |Microsoft 文件
+title: 編譯器錯誤 C2058 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456aa7a2766f2460ee914c625b63f67bda132c87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb59a50ec324f81dedc9d784514b397ebc351dfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163094"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046637"
 ---
 # <a name="compiler-error-c2058"></a>編譯器錯誤 C2058
-常數運算式不是整數，不能在這裡使用  
-  
- 此內容需要整數常數運算式。
+
+常數運算式不是整數，不能在這裡使用
+
+此內容需要整數常數運算式。

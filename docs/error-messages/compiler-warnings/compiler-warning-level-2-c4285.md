@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 2） C4285 |Microsoft 文件
+title: 編譯器警告 （層級 2） C4285 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4366142c14ec77c1c344312e50e7295c71ca93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ad828e25f647bddcc8a9ebe9662e2ba61f48d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040685"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>編譯器警告 (層級 2) C4285
-傳回型別 'identifier:: operator->' 是遞迴的如果套用使用中置標記法  
-  
- 指定**operator-> （)** 函式無法傳回的型別它被定義或為其定義的類型的參考。  
-  
- 下列範例會產生 C4285:  
-  
-```  
-// C4285.cpp  
-// compile with: /W2  
-class C  
-{  
-public:  
-    C operator->();   // C4285  
-   // C& operator->();  C4285, also  
-};  
-  
-int main()  
-{  
-}  
+
+傳回型別為 'identifier:: operator->' 是遞迴套用使用中置標記法
+
+指定**operator-> （)** 函式無法傳回的型別它被定義或為其定義之型別的參考。
+
+下列範例會產生 C4285:
+
+```
+// C4285.cpp
+// compile with: /W2
+class C
+{
+public:
+    C operator->();   // C4285
+   // C& operator->();  C4285, also
+};
+
+int main()
+{
+}
 ```

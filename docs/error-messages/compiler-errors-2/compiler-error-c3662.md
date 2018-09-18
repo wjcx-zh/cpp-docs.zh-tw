@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3662 |Microsoft 文件
+title: 編譯器錯誤 C3662 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f9e5f9c48b9884939c6236075b3cf2227163ab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d04705d588e22c22e607bc6e1010eeec0d9c3f41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265905"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053462"
 ---
 # <a name="compiler-error-c3662"></a>編譯器錯誤 C3662
-'member'：只允許在 Managed 或 WinRT 類別的成員函式上覆寫規範 'specifier'  
-  
- 不允許在原生類型的成員上使用覆寫規範。  
-  
- 如需詳細資訊，請參閱[明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3662。  
-  
-```  
-// C3662.cpp  
-// compile with: /clr /c  
-struct S {  
-   virtual void f();  
-};  
-  
-struct S1 : S {  
-   virtual void f() new;   // C3662  
-};  
-  
-ref struct T {  
-   virtual void f();  
-};  
-  
-ref struct T1 : T {  
-   virtual void f() new;   // OK  
-};  
+
+'member'：只允許在 Managed 或 WinRT 類別的成員函式上覆寫規範 'specifier'
+
+不允許在原生類型的成員上使用覆寫規範。
+
+如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3662。
+
+```
+// C3662.cpp
+// compile with: /clr /c
+struct S {
+   virtual void f();
+};
+
+struct S1 : S {
+   virtual void f() new;   // C3662
+};
+
+ref struct T {
+   virtual void f();
+};
+
+ref struct T1 : T {
+   virtual void f() new;   // OK
+};
 ```

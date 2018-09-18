@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 C4972 |Microsoft 文件
+title: 編譯器警告 C4972 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5337a60781c6fb39281f051657ea7ebd9371fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e083a91397ee00d8e74b5ee4549a192bba62b643
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270947"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037771"
 ---
 # <a name="compiler-warning-c4972"></a>編譯器警告 C4972
-直接修改或將 Unbox 作業的結果視為左值，將無法驗證  
-  
- 對實值類型的控制代碼取值 (也稱為 Unboxing)，然後指派給它，這個作業無法驗證。  
-  
- 如需詳細資訊，請參閱[Boxing](../../windows/boxing-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C4972。  
-  
-```  
-// C4972.cpp  
-// compile with: /clr:safe  
-using namespace System;  
-ref struct R {  
-   int ^ p;   // a value type  
-};  
-  
-int main() {  
-   R ^ r = gcnew R;  
-   *(r->p) = 10;   // C4972  
-  
-   // OK  
-   r->p = 10;  
-   Console::WriteLine( r->p );  
-   Console::WriteLine( *(r->p) );  
-}  
+
+直接修改或將 Unbox 作業的結果視為左值，將無法驗證
+
+對實值類型的控制代碼取值 (也稱為 Unboxing)，然後指派給它，這個作業無法驗證。
+
+如需詳細資訊，請參閱 < [Boxing](../../windows/boxing-cpp-component-extensions.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4972。
+
+```
+// C4972.cpp
+// compile with: /clr:safe
+using namespace System;
+ref struct R {
+   int ^ p;   // a value type
+};
+
+int main() {
+   R ^ r = gcnew R;
+   *(r->p) = 10;   // C4972
+
+   // OK
+   r->p = 10;
+   Console::WriteLine( r->p );
+   Console::WriteLine( *(r->p) );
+}
 ```

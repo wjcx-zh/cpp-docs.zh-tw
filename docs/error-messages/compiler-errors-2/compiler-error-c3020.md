@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3020 |Microsoft 文件
+title: 編譯器錯誤 C3020 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,73 +16,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a9c942f6b1459cbdb88561b749290eb47d3cfb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c7f86d116c1a830db54490f3e5231d837d4246c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060638"
 ---
 # <a name="compiler-error-c3020"></a>編譯器錯誤 C3020
-'var': OpenMP 'for' 迴圈索引變數不可修改迴圈主體中  
-  
- OpenMP`for`迴圈也許不能修改的本文中的索引 （迴圈計數器）`for`迴圈。  
-  
- 下列範例會產生 C3020:  
-  
-```  
-// C3020.cpp  
-// compile with: /openmp  
-int main() {  
-   int i = 0, n = 3;  
-  
-   #pragma omp parallel  
-   {  
-      #pragma omp for  
-      for (i = 0; i < 10; i += n)  
-         i *= 2;   // C3020  
-         // try the following line instead  
-         // n++;  
-   }  
-}  
-```  
-  
- 宣告變數[lastprivate](../../parallel/openmp/reference/lastprivate.md)不能當做平行化迴圈內的索引。  
-  
- 下列範例會提供 C3020 的第二個 lastprivate，因為該 lastprivate 將會觸發寫入 idx_a 內最外層迴圈。 第一個 lastprivate 不會產生錯誤，因為該 lastprivate 觸發寫入外部最外層 idx_a for 迴圈 （技術上來說，在最後一個反覆項目的結尾）。 下列範例會產生 C3020。  
-  
-```  
-// C3020b.cpp  
-// compile with: /openmp /c  
-float a[100][100];  
-int idx_a, idx_b;  
-void test(int first, int last)  
-{  
-   #pragma omp parallel for lastprivate(idx_a)  
-   for (idx_a = first; idx_a <= last; ++idx_a) {  
-      #pragma omp parallel for lastprivate(idx_a)   // C3020  
-      for (idx_b = first; idx_b <= last; ++idx_b) {  
-         a[idx_a][idx_b] += 1.0f;  
-      }  
-   }  
-}  
-```  
-  
- 下列範例示範可能的解決方式：  
-  
-```  
-// C3020c.cpp  
-// compile with: /openmp /c  
-float a[100][100];  
-int idx_a, idx_b;  
-void test(int first, int last)  
-{  
-   #pragma omp parallel for lastprivate(idx_a)  
-   for (idx_a = first; idx_a <= last; ++idx_a) {  
-      #pragma omp parallel for lastprivate(idx_b)  
-      for (idx_b = first; idx_b <= last; ++idx_b) {  
-         a[idx_a][idx_b] += 1.0f;  
-      }  
-   }  
-}  
+
+'var': OpenMP 'for' 迴圈的索引變數不能修改在迴圈主體中
+
+OpenMP`for`迴圈可能不會修改的本文中的索引 （迴圈計數器）`for`迴圈。
+
+下列範例會產生 C3020:
+
+```
+// C3020.cpp
+// compile with: /openmp
+int main() {
+   int i = 0, n = 3;
+
+   #pragma omp parallel
+   {
+      #pragma omp for
+      for (i = 0; i < 10; i += n)
+         i *= 2;   // C3020
+         // try the following line instead
+         // n++;
+   }
+}
+```
+
+以宣告的變數[lastprivate](../../parallel/openmp/reference/lastprivate.md)不能用做平行化迴圈內的索引。
+
+下列範例會針對第二個 lastprivate 提供 C3020，因為該 lastprivate 會觸發寫入 idx_a 中最外層的迴圈。 第一個 lastprivate 不會發生錯誤，因為該 lastprivate 觸發 idx_a 之外最外層寫入 for 迴圈 （技術上來說，在結尾的最後一個反覆項目）。 下列範例會產生 C3020。
+
+```
+// C3020b.cpp
+// compile with: /openmp /c
+float a[100][100];
+int idx_a, idx_b;
+void test(int first, int last)
+{
+   #pragma omp parallel for lastprivate(idx_a)
+   for (idx_a = first; idx_a <= last; ++idx_a) {
+      #pragma omp parallel for lastprivate(idx_a)   // C3020
+      for (idx_b = first; idx_b <= last; ++idx_b) {
+         a[idx_a][idx_b] += 1.0f;
+      }
+   }
+}
+```
+
+下列範例示範可能的解決方式：
+
+```
+// C3020c.cpp
+// compile with: /openmp /c
+float a[100][100];
+int idx_a, idx_b;
+void test(int first, int last)
+{
+   #pragma omp parallel for lastprivate(idx_a)
+   for (idx_a = first; idx_a <= last; ++idx_a) {
+      #pragma omp parallel for lastprivate(idx_b)
+      for (idx_b = first; idx_b <= last; ++idx_b) {
+         a[idx_a][idx_b] += 1.0f;
+      }
+   }
+}
 ```

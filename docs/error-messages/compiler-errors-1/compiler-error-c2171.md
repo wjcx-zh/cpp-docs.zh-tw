@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2171 |Microsoft 文件
+title: 編譯器錯誤 C2171 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45d90989b79f4c1eb98b0319137bb9716376fcf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5c2e3c87db5a82cc3606ebca049a35adec5fa61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171805"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029243"
 ---
 # <a name="compiler-error-c2171"></a>編譯器錯誤 C2171
-'operator': 類型 'type' 的運算元不合法  
-  
- 一元運算子是與無效的運算元類型搭配使用。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2171。  
-  
-```  
-// C2171.cpp  
-int main() {  
-   double d, d1;  
-   d = ~d1;   // C2171  
-  
-   // OK  
-   int d2 = 0, d3 = 0;  
-   d2 = ~d3;  
-}  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2171。  
-  
-```  
-// C2171_b.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A() { STF( &A::D ); }  
-  
-   void D() {}  
-   void DTF() {  
-      (*TF)();   // C2171  
-      (this->*TF)();   // OK  
-   }  
-  
-   void STF(void (A::*fnc)()) {  
-      TF = fnc;  
-   }  
-  
-private:  
-   void (A::*TF)();  
-};  
+
+'operator': 類型 'type' 的運算元不合法
+
+一元運算子是與無效的運算元類型搭配使用。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2171。
+
+```
+// C2171.cpp
+int main() {
+   double d, d1;
+   d = ~d1;   // C2171
+
+   // OK
+   int d2 = 0, d3 = 0;
+   d2 = ~d3;
+}
+```
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2171。
+
+```
+// C2171_b.cpp
+// compile with: /c
+class A {
+public:
+   A() { STF( &A::D ); }
+
+   void D() {}
+   void DTF() {
+      (*TF)();   // C2171
+      (this->*TF)();   // OK
+   }
+
+   void STF(void (A::*fnc)()) {
+      TF = fnc;
+   }
+
+private:
+   void (A::*TF)();
+};
 ```

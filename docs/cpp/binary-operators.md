@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76250926ab89c14dfa26f0df3bb5571c1dae10
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6c5ad5997657ce9f8a61383a2cd7e685f0a28751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036549"
 ---
 # <a name="binary-operators"></a>二元運算子
 
@@ -80,4 +80,5 @@ ms.locfileid: "39408813"
 > 二元運算子的傳回型別不受限制；不過，大部分使用者定義的二元運算子會傳回類別類型或類別類型的參考。
 
 ## <a name="see-also"></a>另請參閱
- [運算子多載](../cpp/operator-overloading.md)
+
+[運算子多載](../cpp/operator-overloading.md)

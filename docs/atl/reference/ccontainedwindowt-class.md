@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040475"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 
@@ -49,16 +49,16 @@ ms.locfileid: "43755797"
 ## <a name="syntax"></a>語法
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>參數
 
-*TBase*  
+*TBase*<br/>
 您的新類別的基底類別。 預設的基底類別是`CWindow`。
 
-*TWinTraits*  
+*TWinTraits*<br/>
 定義視窗樣式的 traits 類別。 預設為 `CControlWinTraits`。
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>參數
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in]包含的視窗為基礎的現有視窗類別名稱。
 
-*pObject*  
+*pObject*<br/>
 [in]宣告訊息對應包含物件的指標。 這個物件的類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]識別會被收納的視窗訊息處理的訊息對應。 預設值為 0，指定預設的訊息對應宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要使用替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
 
 ### <a name="remarks"></a>備註
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>參數
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in]包含的視窗為基礎的現有視窗類別名稱。
 
-*pObject*  
+*pObject*<br/>
 [in]宣告訊息對應包含物件的指標。 這個物件的類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]識別會被收納的視窗訊息處理的訊息對應。 預設值為 0，指定預設的訊息對應宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要使用替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父系或擁有者的視窗控制代碼。
 
-*rect*  
+*rect*<br/>
 [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。
 
-*cheaderctrl:: Create*  
+*cheaderctrl:: Create*<br/>
 [in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱 < [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]子視窗的視窗識別項。 最上層視窗中，視窗的功能表控制代碼。 預設值是**0U**。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。
 
 ### <a name="return-value"></a>傳回值
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>參數
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送至視窗的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]在子類別化視窗的控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>參數
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]訊息對應識別項。 若要使用預設的訊息對應，以宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，傳遞零。 若要使用替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
 
 ### <a name="remarks"></a>備註
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>參數
 
-*bForce*  
+*bForce*<br/>
 [in]設為 true 會強制要還原原始的視窗程序即使這個視窗程序`CContainedWindowT`物件不是目前作用中。 如果*bForce*設為 FALSE，而且視窗程序這`CContainedWindowT`物件不是目前作用中，將不會還原原始的視窗程序。
 
 ### <a name="return-value"></a>傳回值
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]視窗控制代碼。
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送至視窗的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -472,9 +472,9 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>另請參閱
 
-[CWindow 類別](../../atl/reference/cwindow-class.md)   
-[CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
-[CMessageMap 類別](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CWindow 類別](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap 類別](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

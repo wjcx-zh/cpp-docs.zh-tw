@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2043 |Microsoft 文件
+title: 編譯器錯誤 C2043 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a71e00fa86b506b4b5dd5b059c778f5dc8749
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29298a11e0984120a8902b08b96699724669f58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030527"
 ---
 # <a name="compiler-error-c2043"></a>編譯器錯誤 C2043
-break 的使用不合法  
-  
- [break](../../cpp/break-statement-cpp.md) 僅適用於 `do`、 `for`、 `while`或 `switch` 陳述式內。
+
+break 的使用不合法
+
+[break](../../cpp/break-statement-cpp.md) 僅適用於 `do`、 `for`、 `while`或 `switch` 陳述式內。

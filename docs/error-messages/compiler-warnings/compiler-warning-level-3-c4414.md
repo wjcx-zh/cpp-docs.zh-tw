@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4414 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4414 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1526b20732d7a1b08ec8d753cb64e33e42dd809
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd0868fea89cd868178956c0aba171ce6525bd75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043205"
 ---
 # <a name="compiler-warning-level-3-c4414"></a>編譯器警告 (層級 3) C4414
-'function': 函式的 short 跳躍指令被轉換為 near  
-  
- Short 跳躍點產生精簡指令，從指令分支為有限範圍內的位址。 指示包含簡短的位移，代表跳躍和目標位址，函式定義之間的距離。 在連結函式可能會移動，或因移出範圍可從簡短的位移，函式會連結時間最佳化。 編譯器必須產生一種特殊記錄，這需要是不久或目前的 jmp 指令跳躍。 編譯器會進行轉換。  
-  
- 例如，下列程式碼會產生 C4414:  
-  
-```  
-// C4414.cpp  
-// compile with: /W3 /c  
-// processor: x86  
-int DoParityEven();  
-int DoParityOdd();  
-unsigned char global;  
-int __declspec(naked) DoParityEither()  
-{  
-   __asm  
-   {  
-      test global,0  
-      jpe SHORT DoParityEven  // C4414  
-      jmp SHORT DoParityOdd   // C4414  
-   }  
-}  
+
+'function': 函式的 short 跳躍指令被轉換為 near
+
+簡短的跳躍點產生精簡指令，指示從分支到限制範圍內的位址。 指示包含簡短的位移，其代表的跳躍的目標位址，而函式定義之間的距離。 連結期間函式可能會移動，或因連結時間最佳化，讓函式移出範圍可從簡短的位移。 編譯器必須產生特殊記錄，而這需要不久或目前的 jmp 指示跳躍。 編譯器會進行轉換。
+
+例如，下列程式碼會產生 C4414:
+
+```
+// C4414.cpp
+// compile with: /W3 /c
+// processor: x86
+int DoParityEven();
+int DoParityOdd();
+unsigned char global;
+int __declspec(naked) DoParityEither()
+{
+   __asm
+   {
+      test global,0
+      jpe SHORT DoParityEven  // C4414
+      jmp SHORT DoParityOdd   // C4414
+   }
+}
 ```

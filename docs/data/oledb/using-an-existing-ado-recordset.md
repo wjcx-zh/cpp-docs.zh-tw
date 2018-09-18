@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065337"
 ---
 # <a name="using-an-existing-ado-recordset"></a>使用現有的 ADO 資料錄集
+
 若要混合使用 OLE DB 消費者範本和 Active Data Objects (ADO)、 使用 ADO 開啟資料錄集 （相當於 OLE DB 消費者樣板中的資料列集）。 當您有一個資料錄集時，執行下列命令來連接到 OLE DB 資料列集：  
   
-1.  呼叫`QueryInterface`for`IRowset`和`IAccessor`指標。  
+1. 呼叫`QueryInterface`for`IRowset`和`IAccessor`指標。  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ ms.locfileid: "39338934"
     > [!NOTE]
     >  *lpUnk*指向`IUnknown`ADO 資料錄集物件。  
   
-2.  附加至其適當的 OLE DB 消費者範本類別的存取子和資料列集。  
+1. 附加至其適當的 OLE DB 消費者範本類別的存取子和資料列集。  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ ms.locfileid: "39338934"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用存取子](../../data/oledb/using-accessors.md)
+
+[使用存取子](../../data/oledb/using-accessors.md)

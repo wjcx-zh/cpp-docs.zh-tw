@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c816fecf71b94d25ac676f8169eeb26a2982fc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e667f943d2630d78880d49f18015bdac95e571ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760213"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026513"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 類別
 
@@ -72,10 +72,10 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IUnknown`傳送通知的物件。
 
-*dispID*  
+*dispID*<br/>
 [in]已變更之屬性的識別項。
 
 ### <a name="return-value"></a>傳回值
@@ -96,10 +96,10 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IUnknown`傳送通知的物件。
 
-*dispID*  
+*dispID*<br/>
 [in]若要變更之屬性的識別項。
 
 ### <a name="return-value"></a>傳回值

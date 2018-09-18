@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031453"
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
+
 控制條件分支。 中的陳述式*if 區塊*才會執行*if 運算式*評估為非零值 （或 TRUE）。 如果值*運算式*為非零值， *statement1*和區塊中的任何其他陳述式會執行 else 區塊，如果有的話，會略過。 如果值*運算式*為零，則會略過 if 區塊和 else 區塊，如果存在，則會執行。 評估為非零的運算式
 - true
 - 非 null 指標，
-- 任何非零的算術值，或 
-- 類別型別定義的模稜兩可的轉換到算術、 布林值或指標類型。 (如需轉換的詳細資訊，請參閱 <<c0> [ 標準轉換](../cpp/standard-conversions.md)。)   
-  
-## <a name="syntax"></a>語法  
-  
-```  
-if ( expression )  
+- 任何非零的算術值，或
+- 類別型別定義的模稜兩可的轉換到算術、 布林值或指標類型。 (如需轉換的詳細資訊，請參閱 <<c0> [ 標準轉換](../cpp/standard-conversions.md)。)
+
+## <a name="syntax"></a>語法
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>範例  
+## <a name="example"></a>範例
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -103,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -118,13 +119,14 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
+```
 ## <a name="if_with_init"></a> 如果初始設定式的陳述式
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**陳述式也可能包含宣告和初始化具名的變數的運算式。 變數只需要在 if 區塊的範圍內時，請使用這種形式的 if 陳述式。 
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**如果**陳述式也可能包含宣告和初始化具名的變數的運算式。 變數只需要在 if 區塊的範圍內時，請使用這種形式的 if 陳述式。
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -166,12 +168,13 @@ int main()
 }
 ```
 
- 在所有表單中的**如果**陳述式*運算式*，且可以包含結構以外的任何值會評估，包括所有副作用。 控制權會傳遞從**如果**陳述式中程式的下一個陳述式，除非其中一個*陳述式*s 包含[中斷](../cpp/break-statement-cpp.md)，[繼續](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。  
-  
- **Else**子句`if...else`陳述式是相關聯的最接近上一個**如果**陳述式中相同範圍中沒有任何對應**其他**陳述式。   
+在所有表單中的**如果**陳述式*運算式*，且可以包含結構以外的任何值會評估，包括所有副作用。 控制權會傳遞從**如果**陳述式中程式的下一個陳述式，除非其中一個*陳述式*s 包含[中斷](../cpp/break-statement-cpp.md)，[繼續](../cpp/continue-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md)。
+
+**Else**子句`if...else`陳述式是相關聯的最接近上一個**如果**陳述式中相同範圍中沒有任何對應**其他**陳述式。
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 陳述式
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**如果 constexpr**編譯時間分支的決策，而不需要的陳述式不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）： 
+
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**如果 constexpr**編譯時間分支的決策，而不需要的陳述式不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）：
 
 ```cpp
 template <class T, class... Rest>
@@ -181,9 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   if constexpr (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -192,7 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>另請參閱  
- [選取範圍陳述式](../cpp/selection-statements-cpp.md)   
- [關鍵字](../cpp/keywords-cpp.md)   
- [switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>另請參閱
+
+[選取範圍陳述式](../cpp/selection-statements-cpp.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)<br/>
+[switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)

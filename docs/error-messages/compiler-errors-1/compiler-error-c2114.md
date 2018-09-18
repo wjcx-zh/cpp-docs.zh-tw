@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2114 |Microsoft 文件
+title: 編譯器錯誤 C2114 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d781a63eeee0a39b923c7f31896e23d1dcc440cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 973a71096e3dee549140e7e1f070049a26dfc573
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165340"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047053"
 ---
 # <a name="compiler-error-c2114"></a>編譯器錯誤 C2114
-'operator': 指標在左邊; 右邊需要整數值  
-  
- `operator` 的左運算元是指標，因此右運算元必須是整數值。
+
+'operator': 指標在左邊; 右邊需要整數值
+
+`operator` 的左運算元是指標，因此右運算元必須是整數值。

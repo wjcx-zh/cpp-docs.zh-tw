@@ -1,5 +1,5 @@
 ---
-title: lock::acquire |Microsoft 文件
+title: lock::acquire |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c0b89b635ec0f0487027d5a90e43c57c39cde34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042009"
 ---
 # <a name="lockacquire"></a>lock::acquire
-取得物件，選擇性地等候一段指定的時間，或完全不用，取得鎖定的鎖定。  
+取得物件，或者等候一段指定的時間，或者完全不要，取得鎖定的鎖定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,11 +44,11 @@ void acquire(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_timeout`  
- 逾時值以毫秒為單位，或做為<xref:System.TimeSpan>。  
+*逾時 _t*<br/>
+逾時值以毫秒為單位，或為<xref:System.TimeSpan>。  
   
 ## <a name="exceptions"></a>例外狀況  
- 擲回<xref:System.ApplicationException>如果取得鎖定逾時前不會發生。  
+ 會擲回<xref:System.ApplicationException>如果取得鎖定逾時之前不會發生。  
   
 ## <a name="remarks"></a>備註  
  如果未提供的逾時值的預設逾時是<xref:System.Threading.Timeout.Infinite>。  
@@ -56,7 +56,7 @@ void acquire(
  如果已取得鎖定，此函式沒有任何作用。  
   
 ## <a name="example"></a>範例  
- 這個範例會跨多個執行緒使用單一類別的執行個體。  類別本身會使用鎖定，以確保其內部資料存取都是一致的每個執行緒。  主應用程式執行緒會定期檢查以查看是否仍然存在任何背景工作執行緒，並等候結束，直到所有的工作者執行緒完成其工作使用相同類別的執行個體上的鎖定。  
+ 此範例會跨多個執行緒使用單一類別的執行個體。  類別會使用本身的鎖定，以確保一致的每個執行緒存取其內部的資料。  主應用程式執行緒的類別相同的執行個體上使用鎖定，來定期檢查以查看是否仍存在的任何背景工作執行緒，並等候直到所有的背景工作執行緒結束已完成其工作。  
   
 ```  
 // msl_lock_acquire.cpp  

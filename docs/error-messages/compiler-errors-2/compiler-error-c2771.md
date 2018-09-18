@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2771 |Microsoft 文件
+title: 編譯器錯誤 C2771 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b545e4f1a5654177f4fc787931b229f493d7826
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfd6bc68b7081e4bf38fe02f54b632a141313c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232922"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036523"
 ---
 # <a name="compiler-error-c2771"></a>編譯器錯誤 C2771
-\#匯入只允許在全域或命名空間範圍  
-  
- 例如，函式或結構中不允許有 `#import` 指示詞。
+
+\#匯入只允許在全域或命名空間範圍
+
+例如，函式或結構中不允許有 `#import` 指示詞。

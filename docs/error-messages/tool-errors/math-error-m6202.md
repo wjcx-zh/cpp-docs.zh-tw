@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6202 |Microsoft 文件
+title: 運算錯誤 M6202 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4596b9782bc1de0e6ccd52bfcd03965415adb353
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 328336e61c299cf9b9816ddfce7212f1798eae37
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332048"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058545"
 ---
 # <a name="math-error-m6202"></a>運算錯誤 M6202
-'function': 錯誤  
-  
- 指定的函式的引數為異常值，這個函式。 此函式未定義該引數。  
-  
- 這個錯誤呼叫`_matherr`函式名稱、 其引數，與錯誤類型的函式。 您可以重新撰寫`_matherr`函式來自訂特定執行階段浮點數學錯誤的處理。
+
+'function': 錯誤
+
+指定的函式的引數是此函式的獨一性值。 該引數未定義的函式。
+
+這個錯誤呼叫`_matherr`函式名稱、 其引數，與錯誤類型的函式。 您可以重新撰寫`_matherr`函式來自訂特定執行階段浮點數學錯誤的處理。

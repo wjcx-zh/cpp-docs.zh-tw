@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 2） C4948 |Microsoft 文件
+title: 編譯器警告 （層級 2） C4948 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422f06e6e9ac749b16524f45e61cb6bbbd672cb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51b42677fbabde58afb3cb989e9b0d73e34f92a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050823"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>編譯器警告 (層級 2) C4948
-'accessor' 的傳回型別不符合對應 setter 的最後一個參數類型  
-  
-編譯器發現不相符的資料型別是目前所取得，且設定為索引的屬性。  
-  
-C4948 才可使用過時的編譯器選項 **/clr:oldSyntax**。  
+
+'accessor' 的傳回類型不符合對應之 setter 的最後一個參數類型
+
+編譯器發現何種資料類型是要取得與設定索引的屬性不符。
+
+C4948 才可使用過時的編譯器選項 **/clr: oldsyntax**。

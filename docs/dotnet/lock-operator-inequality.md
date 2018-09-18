@@ -1,5 +1,5 @@
 ---
-title: lock::operator ！ = |Microsoft 文件
+title: lock::operator ！ = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043010"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 不等比較運算子。  
@@ -39,11 +39,11 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>參數  
- `t`  
- 要比較不相等的物件。  
+*t*<br/>
+要比較不相等的物件。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回`true`如果`t`鎖定的物件不同`false`否則。  
+ 傳回`true`如果`t`鎖定的物件，與不同`false`否則。  
   
 ## <a name="example"></a>範例  
   

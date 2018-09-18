@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1208 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1208 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e4c1c6c922983635bacfb997ba991f57dbc52b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a5c1f21052cab8b9441865c835e7e3cc26ade5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318294"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039734"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>資源編譯器嚴重錯誤 RC1208
-輸入的檔案具有。RES 延伸模組  
-  
- 。資源編譯器輸出使用 RES 延伸。 。資源編譯器指令碼應 RC 擴充功能。
+
+輸入的檔案具有。RES 延伸模組
+
+。RES 延伸模組用於資源編譯器的輸出。 。RC 的擴充功能應該用於資源編譯器指令碼。

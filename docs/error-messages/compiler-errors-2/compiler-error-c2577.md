@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2577 |Microsoft 文件
+title: 編譯器錯誤 C2577 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4fb6d5a2d7621df1b11e9040ca7dd4f5551289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d9a2b09fc9b8b15c4fc21f5eb537f18f5d3b03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232047"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065812"
 ---
 # <a name="compiler-error-c2577"></a>編譯器錯誤 C2577
-'member': 解構函式/完成項不能有傳回型別  
-  
- 解構函式或完成項無法傳回值為`void`或任何其他型別。 移除`return`陳述式從解構函式定義。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2577。  
-  
-```  
-// C2577.cpp  
-// compile with: /c  
-class A {  
-public:  
-   A() {}  
-   ~A(){  
-      return 0;   // C2577  
-   }  
-};  
+
+'member': 解構函式/完成項不能有傳回型別
+
+解構函式或完成項無法傳回值為`void`或任何其他類型。 移除`return`解構函式定義中的陳述式。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2577。
+
+```
+// C2577.cpp
+// compile with: /c
+class A {
+public:
+   A() {}
+   ~A(){
+      return 0;   // C2577
+   }
+};
 ```

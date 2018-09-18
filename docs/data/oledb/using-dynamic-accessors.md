@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d5015a69c01982398dcb661fc7ea86232dde7f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340980"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056728"
 ---
 # <a name="using-dynamic-accessors"></a>使用動態存取子
 
@@ -173,8 +173,8 @@ int main(int argc, char* argv[] )
 
 ## <a name="see-also"></a>另請參閱
 
-[使用存取子](../../data/oledb/using-accessors.md)  
-[CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)  
-[CDynamicStringAccessor 類別](../../data/oledb/cdynamicstringaccessor-class.md)  
-[CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)  
+[使用存取子](../../data/oledb/using-accessors.md)<br/>
+[CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[CDynamicStringAccessor 類別](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [DynamicConsumer 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)  

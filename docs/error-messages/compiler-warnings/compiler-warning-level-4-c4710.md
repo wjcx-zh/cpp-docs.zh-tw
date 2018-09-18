@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4710 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4710 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1cc77d8ee5393fe600ceadd9c1335d76e32efe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f6de17f7005db3834bfcfc93aff03f12f0293ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046091"
 ---
 # <a name="compiler-warning-level-4-c4710"></a>編譯器警告 (層級 4) C4710
-'function': 未內嵌函式  
-  
- 指定的函式已選取的內嵌展開，但編譯器無法執行內嵌。  
-  
- 編譯器會判斷進行內嵌。 **內嵌**關鍵字、 like**註冊**關鍵字，用於做為提示編譯器。 編譯器會使用啟發學習法來判斷是否應該內嵌特定函式，以加速程式碼的速度、 進行編譯時，或應該要讓程式碼較小的空間進行編譯時的特定函式內嵌。 針對空間編譯時，編譯器將會只有內嵌非常小的函式。  
-  
- 在某些情況下，編譯器不會內嵌特定函式機械原因。 請參閱[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)因素編譯器內嵌函式的清單。  
-  
- 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
+
+'function': 未內嵌函式
+
+內嵌展開，我們選取了指定的函式，但編譯器未進行內嵌。
+
+由編譯器決定進行內嵌。 **內嵌**關鍵字，例如**註冊**關鍵字，編譯器時，可做為提示。 編譯器會使用啟發學習法，以判斷是否應該內嵌特定函式的速度、 進行編譯時，加速程式碼，或者它應內嵌特定函式讓程式碼較小的空間進行編譯時。 編譯器只會內嵌非常小的函式的空間進行編譯時。
+
+在某些情況下，編譯器不會內嵌特定函式機械的原因。 請參閱[C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md)取得一份編譯器可能不會內嵌函式的原因。
+
+此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。

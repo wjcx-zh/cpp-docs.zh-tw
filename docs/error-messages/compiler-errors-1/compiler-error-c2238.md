@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2238 |Microsoft 文件
+title: 編譯器錯誤 C2238 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8fd26a27d79860166b5a4268c330a0338a05a17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1af9ef4f36198190d174d69ec825aa6e655616
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167199"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065981"
 ---
 # <a name="compiler-error-c2238"></a>編譯器錯誤 C2238
-在 'token' 之前有未預期的語彙基元  
-  
- 找到不正確的語彙基元。  
-  
- 下列範例會產生 C2238：  
-  
-```  
-// C2238.cpp  
-// compile with: /c  
-class v {  
-virtual: int vvv;   // C2238  
-};  
+
+在 'token' 之前有未預期的語彙基元
+
+找到不正確的語彙基元。
+
+下列範例會產生 C2238：
+
+```
+// C2238.cpp
+// compile with: /c
+class v {
+virtual: int vvv;   // C2238
+};
 ```

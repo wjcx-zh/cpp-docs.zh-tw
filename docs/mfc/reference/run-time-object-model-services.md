@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e04c7f1ae9873ebf2d044dd8b6d6948e55a120
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 138275468801f3db2f2c64f06e5a505c412723b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050953"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 類別[CObject](../../mfc/reference/cobject-class.md)並[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封裝數個物件服務，包括執行階段類別資訊、 序列化和動態物件建立的存取。 從 `CObject` 衍生的所有類別都會繼承此功能。  
@@ -260,8 +260,8 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  *class_name*  
  類別的實際名稱。  
   
- `base_class_name`  
- 基底類別的名稱。  
+*base_class_name*<br/>
+基底類別的名稱。  
   
 ### <a name="remarks"></a>備註  
  IMPLEMENT_DYNAMIC 巨集的模組中使用.cpp，並再一次連結產生的物件程式碼。  

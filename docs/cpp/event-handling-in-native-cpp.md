@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58bf010be4b05d8c9f024954b51e8cdb176cd4d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 89f6ab1bd378309750984a466c30c224bee89ca7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405778"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060027"
 ---
 # <a name="event-handling-in-native-c"></a>原生 C++ 中的事件處理
 
@@ -27,76 +27,77 @@ ms.locfileid: "39405778"
 
 ## <a name="declaring-events"></a>宣告事件
 
-在 事件來源類別中，使用[__event](../cpp/event.md)關鍵字來宣告為事件的方法在方法宣告。 請務必宣告方法，但不要定義方法；這樣會產生編譯器錯誤，因為編譯器會在將方法變成事件時隱含定義該方法。 原生事件可以是包含零個或多個參數的方法。 傳回型別可為 void 或任何整數類型。  
-  
+在 事件來源類別中，使用[__event](../cpp/event.md)關鍵字來宣告為事件的方法在方法宣告。 請務必宣告方法，但不要定義方法；這樣會產生編譯器錯誤，因為編譯器會在將方法變成事件時隱含定義該方法。 原生事件可以是包含零個或多個參數的方法。 傳回型別可為 void 或任何整數類型。
+
 ## <a name="defining-event-handlers"></a>定義事件處理常式
 
-在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。  
-  
-## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式  
+在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。
 
-此外如在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)事件處理常式相關聯的事件並[__unhook](../cpp/unhook.md)來取消事件與事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。  
-  
-## <a name="firing-events"></a>引發事件  
+## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式
 
-若要引發事件，只要呼叫在事件來源類別中宣告為事件的方法即可。 如果在事件中攔截到處理常式，則會呼叫處理常式。  
-  
-### <a name="native-c-event-code"></a>原生 C++ 事件代碼  
+此外如在事件接收器類別中，您可以使用內建函式[__hook](../cpp/hook.md)事件處理常式相關聯的事件並[__unhook](../cpp/unhook.md)來取消事件與事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。
 
-下列範例示範如何在原生 C++ 中引發事件。 若要編譯和執行這個範例，請參閱程式碼中的註解。  
-  
-## <a name="example"></a>範例  
-  
-### <a name="code"></a>程式碼  
-  
-```cpp  
-// evh_native.cpp  
-#include <stdio.h>  
-  
-[event_source(native)]  
-class CSource {  
-public:  
-   __event void MyEvent(int nValue);  
-};  
-  
-[event_receiver(native)]  
-class CReceiver {  
-public:  
-   void MyHandler1(int nValue) {  
-      printf_s("MyHandler1 was called with value %d.\n", nValue);  
-   }  
-  
-   void MyHandler2(int nValue) {  
-      printf_s("MyHandler2 was called with value %d.\n", nValue);  
-   }  
-  
-   void hookEvent(CSource* pSource) {  
-      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);  
-      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);  
-   }  
-  
-   void unhookEvent(CSource* pSource) {  
-      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);  
-      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);  
-   }  
-};  
-  
-int main() {  
-   CSource source;  
-   CReceiver receiver;  
-  
-   receiver.hookEvent(&source);  
-   __raise source.MyEvent(123);  
-   receiver.unhookEvent(&source);  
-}  
-```  
-  
-### <a name="output"></a>輸出  
-  
+## <a name="firing-events"></a>引發事件
+
+若要引發事件，只要呼叫在事件來源類別中宣告為事件的方法即可。 如果在事件中攔截到處理常式，則會呼叫處理常式。
+
+### <a name="native-c-event-code"></a>原生 C++ 事件代碼
+
+下列範例示範如何在原生 C++ 中引發事件。 若要編譯和執行這個範例，請參閱程式碼中的註解。
+
+## <a name="example"></a>範例
+
+### <a name="code"></a>程式碼
+
+```cpp
+// evh_native.cpp
+#include <stdio.h>
+
+[event_source(native)]
+class CSource {
+public:
+   __event void MyEvent(int nValue);
+};
+
+[event_receiver(native)]
+class CReceiver {
+public:
+   void MyHandler1(int nValue) {
+      printf_s("MyHandler1 was called with value %d.\n", nValue);
+   }
+
+   void MyHandler2(int nValue) {
+      printf_s("MyHandler2 was called with value %d.\n", nValue);
+   }
+
+   void hookEvent(CSource* pSource) {
+      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);
+      __hook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);
+   }
+
+   void unhookEvent(CSource* pSource) {
+      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler1);
+      __unhook(&CSource::MyEvent, pSource, &CReceiver::MyHandler2);
+   }
+};
+
+int main() {
+   CSource source;
+   CReceiver receiver;
+
+   receiver.hookEvent(&source);
+   __raise source.MyEvent(123);
+   receiver.unhookEvent(&source);
+}
+```
+
+### <a name="output"></a>輸出
+
 ```Output
-MyHandler2 was called with value 123.  
-MyHandler1 was called with value 123.  
-```  
-  
+MyHandler2 was called with value 123.
+MyHandler1 was called with value 123.
+```
+
 ## <a name="see-also"></a>另請參閱
- [事件處理](../cpp/event-handling.md)  
+
+[事件處理](../cpp/event-handling.md)

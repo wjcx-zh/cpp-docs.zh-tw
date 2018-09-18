@@ -1,5 +1,5 @@
 ---
-title: 建立 OLE DB 消費者 |Microsoft 文件
+title: 建立 OLE DB 消費者 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096687"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034080"
 ---
 # <a name="creating-an-ole-db-consumer"></a>建立 OLE DB 消費者
-您可以建立 OLE DB 樣板取用者，不論 ATL OLE DB 消費者精靈，但建議的方法是使用精靈。 取用者可以在任何支援 ATL 應用程式中運作  
+
+您可以建立的 OLE DB 範本取用者包含或不含 [ATL OLE DB 消費者精靈]，但使用此精靈是建議的方法。 取用者可以在任何支援 ATL 應用程式運作  
   
- 本章節涵蓋下列主題：  
+本章節涵蓋下列主題：  
   
--   [使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [不使用精靈建立 OLE DB 消費者](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [未使用精靈建立 OLE DB 消費者](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

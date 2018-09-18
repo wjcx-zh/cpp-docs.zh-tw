@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2216 |Microsoft 文件
+title: 編譯器錯誤 C2216 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,57 +16,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6514908a0c238b7f8bf1180f860d30448043a7a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01707c3276ddedab0c224e0f459634c508e0ac04
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070141"
 ---
 # <a name="compiler-error-c2216"></a>編譯器錯誤 C2216
-'keyword1' 無法搭配 'keyword2' 使用  
-  
- 已搭配使用兩個互斥的關鍵字。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2216。  
-  
-```  
-// C2216.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   literal  
-   static int staticConst2 = 10;   // C2216  
-};  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2216。  
-  
-```  
-// C2216b.cpp  
-// compile with: /clr /c  
-public ref class X {  
-   extern property int i { int get(); }   // C2216 extern not allowed on property  
-   typedef property int i2;   // C2216 typedef not allowed on property  
-};  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2216。  
-  
-```  
-// C2216c.cpp  
-// compile with: /clr /c  
-public interface struct I {  
-   double f();  
-   double g();  
-   double h();  
-};  
-  
-public ref struct R : I {  
-   virtual double f() new override { return 0.0; }   // C2216  
-   virtual double g() new { return 0.0; }   // OK  
-   virtual double h() override { return 0.0; }   // OK  
-};  
+
+'keyword1' 無法搭配 'keyword2' 使用
+
+已搭配使用兩個互斥的關鍵字。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2216。
+
+```
+// C2216.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   literal
+   static int staticConst2 = 10;   // C2216
+};
+```
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2216。
+
+```
+// C2216b.cpp
+// compile with: /clr /c
+public ref class X {
+   extern property int i { int get(); }   // C2216 extern not allowed on property
+   typedef property int i2;   // C2216 typedef not allowed on property
+};
+```
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2216。
+
+```
+// C2216c.cpp
+// compile with: /clr /c
+public interface struct I {
+   double f();
+   double g();
+   double h();
+};
+
+public ref struct R : I {
+   virtual double f() new override { return 0.0; }   // C2216
+   virtual double g() new { return 0.0; }   // OK
+   virtual double h() override { return 0.0; }   // OK
+};
 ```

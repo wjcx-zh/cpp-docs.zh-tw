@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3225 |Microsoft 文件
+title: 編譯器錯誤 C3225 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,60 +16,64 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9f6691ddacf6b3c1347b9fd4cac134433741a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8d8b1251b9c13a71faf771c85924a75681deab7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033247"
 ---
 # <a name="compiler-error-c3225"></a>編譯器錯誤 C3225
-'arg' 的泛型型別引數不可為 'type'，它必須是實值類型或控制代碼類型  
-  
- 泛型型別引數不是正確的型別。  
-  
- 如需詳細資訊，請參閱[泛型](../../windows/generics-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>範例  
- 您無法具現化具有原生類型的泛型型別。 下列範例會產生 C3225。  
-  
-```  
-// C3225.cpp  
-// compile with: /clr  
-class A {};  
-  
-ref class B {};  
-  
-generic <class T>  
-ref class C {};  
-  
-int main() {  
-   C<A>^ c = gcnew C<A>;   // C3225  
-   C<B^>^ c2 = gcnew C<B^>;   // OK  
-}  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例會建立元件使用 C#。 請注意，條件約束指定泛型型別只產生使用實值類型。  
-  
-```  
-// C3225_b.cs  
-// compile with: /target:library  
-// a C# program  
-public class MyList<T> where T: struct {}  
-```  
-  
-## <a name="example"></a>範例  
- 這個範例會使用來自 C#-撰寫的元件，且違反 MyList 只能是條件約束以外的實值類型執行個體化<xref:System.Nullable>。 下列範例會產生 C3225。  
-  
-```  
-// C3225_c.cpp  
-// compile with: /clr  
-#using "C3225_b.dll"  
-ref class A {};  
-value class B {};  
-int main() {  
-   MyList<A> x;   // C3225  
-   MyList<B> y;   // OK  
-}  
+
+'arg' 的泛型類型引數不可為 'type'，它必須是實值類型或控制代碼類型
+
+泛型類型引數不是正確的型別。
+
+如需詳細資訊，請參閱[泛型](../../windows/generics-cpp-component-extensions.md)。
+
+## <a name="example"></a>範例
+
+您無法具現化原生類型的泛型型別。 下列範例會產生 C3225。
+
+```
+// C3225.cpp
+// compile with: /clr
+class A {};
+
+ref class B {};
+
+generic <class T>
+ref class C {};
+
+int main() {
+   C<A>^ c = gcnew C<A>;   // C3225
+   C<B^>^ c2 = gcnew C<B^>;   // OK
+}
+```
+
+## <a name="example"></a>範例
+
+下列範例會建立使用 C# 的元件。 請注意，條件約束指定泛型型別只產生使用實值型別。
+
+```
+// C3225_b.cs
+// compile with: /target:library
+// a C# program
+public class MyList<T> where T: struct {}
+```
+
+## <a name="example"></a>範例
+
+此範例會使用來自 C#-撰寫元件，且違反條件約束，只能是 MyList 以外使用實值型別執行個體化<xref:System.Nullable>。 下列範例會產生 C3225。
+
+```
+// C3225_c.cpp
+// compile with: /clr
+#using "C3225_b.dll"
+ref class A {};
+value class B {};
+int main() {
+   MyList<A> x;   // C3225
+   MyList<B> y;   // OK
+}
 ```

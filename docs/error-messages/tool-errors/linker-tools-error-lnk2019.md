@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK2019 |Microsoft 文件
+title: 連結器工具錯誤 LNK2019 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
@@ -17,36 +17,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 679d322f6d5ebcf8e56d1691d18e634bb34a2bb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301901"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067541"
 ---
 # <a name="linker-tools-error-lnk2019"></a>連結器工具錯誤 LNK2019
 
-未解析外部符號 '*符號*'函式中參考'*函式*'
+無法解析的外部符號 '*符號*'中函式所參考的'*函式*'
 
-編譯程式碼，*函式*讓您參考或呼叫*符號*，但該符號未定義的任何程式庫或物件給連結器指定的檔案。
+已編譯的程式碼，如*函式*可讓參考或呼叫*符號*，但該符號未定義的任何程式庫或連結器指定的物件檔案。
 
-這則錯誤訊息後面接著嚴重錯誤[LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)。 您必須修正若要修正錯誤 LNK1120 所有 LNK2001 和 LNK2019 錯誤。
+此錯誤訊息後面接著嚴重錯誤[LNK1120](../../error-messages/tool-errors/linker-tools-error-lnk1120.md)。 您必須修正所有 LNK2001 和 LNK2019 錯誤，若要修正錯誤 LNK1120。
 
 ## <a name="possible-causes"></a>可能的原因
 
-有許多方法，以取得此錯誤，但全部都涉及的函式或變數，連結器無法參考*解決*，或找不到的定義。 編譯器能夠識別時的符號不*宣告*，但不是在未*定義*，因為定義可能是不同原始程式檔或程式庫中。 如果符號為參考，但永遠不會定義，連結器會產生未解析外部符號錯誤。
+有許多方法可取得這項錯誤，但所有人都牽涉到的函式或變數，連結器無法參考*解決*，或尋找的定義。 符號不是時，編譯器能夠識別*宣告*，但不是在未*定義*，因為定義可能是不同的原始程式檔或程式庫中。 如果符號為參考，但永遠不會定義，連結器會產生無法解析的外部符號錯誤。
 
 以下是一些造成 LNK2019 的常見問題：
 
-### <a name="the-object-file-or-library-that-contains-the-definition-of-the-symbol-is-not-linked"></a>未連結的目的檔或包含符號定義的文件庫
+### <a name="the-object-file-or-library-that-contains-the-definition-of-the-symbol-is-not-linked"></a>未連結的目的檔或程式庫包含的符號定義
 
-在 Visual Studio 中，請確認來源檔案包含定義會建立並連結為您專案的一部分。 在命令列中，確認編譯時包含定義原始程式檔，確定產生的物件檔案包含在要連結的檔案清單。
+在 Visual Studio 中，請確認包含定義的原始程式檔會建立並連結作為專案的一部分。 在命令列中，確認，就會包含定義的原始程式檔編譯，產生的物件檔案，會包含在要連結的檔案清單。
 
-### <a name="the-declaration-of-the-symbol-is-not-spelled-the-same-as-the-definition-of-the-symbol"></a>符號的宣告不拼寫符號的定義相同
+### <a name="the-declaration-of-the-symbol-is-not-spelled-the-same-as-the-definition-of-the-symbol"></a>宣告與符號拼字與符號定義的相同
 
-請確認正確的拼字和大小寫用於宣告和定義，而使用或呼叫符號的任一處。
+請確認正確的拼字和大小寫用於宣告和定義，而且符號為使用或呼叫的任一處。
 
-### <a name="a-function-is-used-but-the-type-or-number-of-the-parameters-do-not-match-the-function-definition"></a>使用函式，但型別或參數數目不符合函式定義
+### <a name="a-function-is-used-but-the-type-or-number-of-the-parameters-do-not-match-the-function-definition"></a>使用函式，但是類型或參數數目不相符的函式定義
 
 函式宣告必須與定義相符。 請確認函式呼叫與宣告相符，而且宣告與定義相符。 叫用樣板函式的程式碼也必須有相符的樣板函式宣告，包含相同的樣板參數做為定義。 如需範本宣告不相符的範例，請參閱範例 LNK2019e.cpp 範例 > 一節中。
 
@@ -62,7 +62,7 @@ ms.locfileid: "33301901"
 
 編譯為 C 的檔案中所定義的符號之裝飾名稱，不同於 C++ 檔案中所宣告的符號，除非您使用 [extern"C"](../../cpp/using-extern-to-specify-linkage.md) 修飾詞。 請確認宣告與每個符號的編譯連結相符。 同樣地，如果您在 C++ 檔案中定義將由 C 程式使用的符號，請在定義中使用 `extern "C"` 。
 
-### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>符號已定義為靜態和稍後外部檔案參考
+### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>符號已定義為靜態，並稍後外部檔案參考
 
 不同於 C，C++ 中 [全域常數](../../error-messages/tool-errors/global-constants-in-cpp.md) 有 `static` 連結。 若要解決這項限制，您可以在標頭檔中包含 `const` 初始設定，並將該標頭包含在 .cpp 檔案中，或者您可以將變數設為非常數，並使用常數參考來存取。
 
@@ -74,15 +74,15 @@ ms.locfileid: "33301901"
 
 在舊版的 Visual Studio 中，此層級的相依性已經足夠。 不過，從 Visual Studio 2010 開始，Visual Studio 需要[專案對專案參考](/visualstudio/ide/managing-references-in-a-project)。 如果您的專案沒有專案對專案間的參考，您就有可能會收到這個連結器錯誤。 加入專案對專案間的參考來修正此問題。
 
-### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>您建立主控台應用程式所使用的 Windows 應用程式設定
+### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>您使用之設定的 Windows 應用程式來建置主控台應用程式
 
 如果錯誤訊息類似於**WinMain 函式中所參考的未解析外部符號** *function_name*，使用連結 **/subsystem: console**而不是 **/Subsystem: windows**。 如需此設定的詳細資訊，以及如何在 Visual Studio 中設定此屬性的指示，請參閱 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>您嘗試將 64 位元程式庫連結至 32 位元程式碼或 64 位元程式碼的 32 位元程式庫
 
-必須編譯您的程式碼相同架構的程式庫和物件檔案連結至您的程式碼。 確認您的專案參考都針對與您專案相同的架構編譯的程式庫。 請確定[/LIBPATH](../../build/reference/libpath-additional-libpath.md)或**其他程式庫目錄**路徑指向正確架構建置之程式庫的連結器所使用的選項。
+必須針對與您的程式碼相同的架構編譯程式庫和物件檔案連結至您的程式碼。 確認您的專案參考針對與您的專案相同的架構編譯的程式庫。 請確定[/LIBPATH](../../build/reference/libpath-additional-libpath.md)或是**其他程式庫目錄**路徑指向正確的架構建置的程式庫的連結器所使用的選項。
 
-### <a name="you-use-different-compiler-options-for-function-inlining-in-different-source-files"></a>您用於函式內嵌不同原始程式檔中使用不同的編譯器選項
+### <a name="you-use-different-compiler-options-for-function-inlining-in-different-source-files"></a>您的函式內嵌在不同的原始程式檔使用不同的編譯器選項
 
 若使用在 .cpp 檔案中定義的內嵌函式，且又在不同的原始程式檔中混用函式內嵌編譯器選項，則可能會導致 LNK2019。 如需詳細資訊，請參閱 [Function Inlining Problems](../../error-messages/tool-errors/function-inlining-problems.md)。
 
@@ -90,27 +90,27 @@ ms.locfileid: "33301901"
 
 自動 (函式範圍) 變數只能在該函式的範圍內使用。 不能將這些變數宣告為 `extern` ，也不能在其他原始程式檔中加以使用。 如需範例，請參閱 [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md)。
 
-### <a name="you-call-instrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-are-not-supported-on-your-target-architecture"></a>您呼叫內建函式或引數型別傳遞至您的目標架構不支援的內建函式
+### <a name="you-call-instrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-are-not-supported-on-your-target-architecture"></a>您呼叫內建函式，或傳遞至您的目標架構不支援的內建函式引數類型
 
 例如，如果您使用 AVX2 內建，但未指定 [/ARCH:AVX2](../../build/reference/arch-x86.md) 編譯器選項，則編譯器會假設此內建為外部函式。 編譯器會產生具有相同名稱的外部符號呼叫做為內建，而非產生內嵌指令。 當連結器嘗試找出此遺漏函式的定義時，就會產生 LNK2019。 請確認您只使用內建和目標架構支援的型別。
 
-### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>混合程式碼會使用原生 wchar\_t 不的程式碼
+### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>您混合使用原生 wchar\_t 不的程式碼
 
-根據預設，於 Visual C++ 2005 中完成的 C++ 語言一致性工作讓 `wchar_t` 成為原生類型。 您必須使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 編譯器選項，以產生與使用舊版 Visual C++ 所編譯程式庫檔及目的檔相容的程式碼。 如果不是所有檔案使用相同的已都編譯 **/Zc:wchar\_t**類型參考可能不會解析成相容的類型的設定。 在編譯時，請更新所使用的類型，或使用一致的 `wchar_t` 設定，以確認所有程式庫檔或目的檔中的 **/Zc:wchar_t** 類型都相容。
+根據預設，於 Visual C++ 2005 中完成的 C++ 語言一致性工作讓 `wchar_t` 成為原生類型。 您必須使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 編譯器選項，以產生與使用舊版 Visual C++ 所編譯程式庫檔及目的檔相容的程式碼。 如果並非所有檔案都使用相同的已都編譯 **/Zc:wchar\_t**類型參考可能不會解析成相容的類型的設定。 在編譯時，請更新所使用的類型，或使用一致的 `wchar_t` 設定，以確認所有程式庫檔或目的檔中的 **/Zc:wchar_t** 類型都相容。
 
-## <a name="third-party-library-issues-and-vcpkg"></a>第三方媒體櫃問題和 Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>協力廠商程式庫問題和 Vcpkg
 
-如果您嘗試設定協力廠商程式庫做為您的組建的一部分時，您會看到此錯誤，請考慮使用[Vcpkg](../../vcpkg.md)，Visual c + + 封裝管理員安裝及建置程式庫。 Vcpkg 支援大量且不斷[的協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並設定所有的組態屬性和相依性所需的建置成功，為您專案的一部分。 如需詳細資訊，請參閱相關[Visual c + + 部落格](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)文章。
+如果您嘗試將協力廠商程式庫設定為組建的一部分時，您會看到此錯誤，請考慮使用[Vcpkg](../../vcpkg.md)，Visual c + + 套件管理員安裝及建置程式庫。 Vcpkg 支援大量且不斷成長[協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並設定所有組態屬性和相依性所需的建置成功，為您專案的一部分。 如需詳細資訊，請參閱相關[Visual c + + 部落格](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)張貼。
 
 ## <a name="diagnosis-tools"></a>診斷工具
 
-很難判斷為什麼連結器無法找到特定的符號定義。 問題通常出在於，並未包含的程式碼包含在您的組建定義，或建置選項建立了不同裝飾外部符號的名稱。 有些工具和選項可協助您診斷 LNK2019 錯誤。
+很難判斷為什麼連結器無法找到特定的符號定義。 問題通常是您不包含包含在您的組建定義的程式碼，或建置選項建立了不同裝飾外部符號的名稱。 有些工具和選項可協助您診斷 LNK2019 錯誤。
 
 - [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) 連結器選項可協助您判斷連結器會參考哪些檔案。 這可以協助您確認包含符號定義的檔案是否已包含在您的建置中。
 
-- [/Exports](../../build/reference/dash-exports.md)和[/ 符號](../../build/reference/symbols.md)選項**DUMPBIN**公用程式可協助您探索哪些符號定義在.dll 和物件或程式庫檔案。 請確認匯出的裝飾名稱與連結器搜尋的裝飾名稱相符。
+- [/Exports](../../build/reference/dash-exports.md)並[/ 符號](../../build/reference/symbols.md)選項**DUMPBIN**公用程式可協助您探索哪些符號定義在.dll 和物件或程式庫檔案中。 請確認匯出的裝飾名稱與連結器搜尋的裝飾名稱相符。
 
-- **UNDNAME**公用程式可以顯示裝飾名稱之對等未裝飾外部符號。
+- **UNDNAME**公用程式可以顯示裝飾名稱的對等未裝飾外部符號。
 
 ## <a name="examples"></a>範例
 
@@ -145,7 +145,7 @@ void f() {
 int main() {}
 ```
 
-除非`i`和`g`所定義的其中一個檔案包含在組建中，連結器會產生 LNK2019。 您可以包含原始碼檔案來修正此問題，其中包含此定義做為編譯的一部分。 或者，您可以傳遞的.obj 檔案或.lib 檔案，包含要連結器的定義。
+除非`i`和`g`定義在其中納入組建中的檔案中，連結器會產生 LNK2019。 您可以包含原始碼檔案來修正此問題，其中包含此定義做為編譯的一部分。 或者，您可以傳遞.obj 檔案或.lib 檔案，其中包含要連結器的定義。
 
 ### <a name="a-static-data-member-is-declared-but-not-defined"></a>靜態資料成員已宣告但未定義
 
@@ -179,7 +179,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-template<class T> class 
+template<class T> class
 Test {
    // The operator<< declaration does not match the definition below:
    friend ostream& operator<<(ostream&, Test&);
@@ -200,7 +200,7 @@ int main() {
 
 ### <a name="inconsistent-wchart-type-definitions"></a>不一致的 wchar_t 類型定義
 
-這個範例會建立 DLL，具有會使用匯出`WCHAR`，這會解析為`wchar_t`。
+此範例會建立有一個使用 匯出的 DLL `WCHAR`，其解析後`wchar_t`。
 
 ```cpp
 // LNK2019g.cpp
@@ -210,7 +210,7 @@ int main() {
 __declspec(dllexport) void func(WCHAR*) {}
 ```
 
-下一個範例在前一個範例中，使用 DLL，並且會產生 LNK2019，因為類型不帶正負號 short * 和 WCHAR\*不相同。
+下一個範例會在前一個範例中，使用 DLL，並且會產生 LNK2019，因為類型不帶正負號短 * 和 WCHAR\*不相同。
 
 ```cpp
 // LNK2019h.cpp
@@ -223,9 +223,9 @@ int main() {
 }
 ```
 
- 若要修正這個錯誤，變更`unsigned short`至`wchar_t`或`WCHAR`，或藉由編譯 LNK2019g.cpp **/Zc:wchar_t-**。
+若要修正這個錯誤，變更`unsigned short`要`wchar_t`或`WCHAR`，或藉由編譯 LNK2019g.cpp **/zc: wchar_t-**。
 
 ## <a name="additional-resources"></a>其他資源
 
-如需 LNK2001 可能原因和解決方案的詳細資訊，請參閱 Stack Overflow 的問題[什麼是未定義參考/未解析外部符號錯誤及如何修正問題？](http://stackoverflow.com/q/12573816/2002113)。
+如需 LNK2001 可能原因和解決方案的詳細資訊，請參閱 Stack Overflow 的問題[什麼是未定義參考/未解析的外部符號錯誤以及如何修正它？](http://stackoverflow.com/q/12573816/2002113)。
 

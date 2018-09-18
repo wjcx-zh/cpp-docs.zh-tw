@@ -1,5 +1,5 @@
 ---
-title: choice 類別 |Microsoft 文件
+title: choice 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a8bc30d3fe394dd9940e716be69a7c10360da59f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693409"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028619"
 ---
 # <a name="choice-class"></a>choice 類別
 `choice` 傳訊區塊是多來源的單一目標區塊，代表與一組來源的控制流程互動。 選擇區塊會等候多個來源的其中一個來產生訊息，而且會傳播產生訊息之來源的索引。  
@@ -50,8 +50,8 @@ class choice: public ISource<size_t>;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- A `tuple`-基底類型表示的輸入來源的裝載。  
+*T*<br/>
+A `tuple`-基底類型表示的輸入來源的裝載。  
   
 ## <a name="members"></a>成員  
   
@@ -72,23 +72,23 @@ class choice: public ISource<size_t>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[accept](#accept)|接受的訊息，有提供這`choice`區塊中，將擁有權傳送給呼叫者。|  
-|[acquire_ref](#acquire_ref)|取得這個參考計數`choice`傳訊區塊，導致無法刪除。|  
-|[consume](#consume)|會使用先前提供由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。|  
-|[has_value](#has_value)|檢查是否這`choice`傳訊區塊具有值尚未初始化。|  
-|[index](#index)|傳回指數`tuple`代表所選取的項目`choice`傳訊區塊。|  
+|[accept](#accept)|接受的訊息，由此`choice`區塊中，將擁有權傳送給呼叫者。|  
+|[acquire_ref](#acquire_ref)|取得此參考計數`choice`傳訊區塊，以防止刪除。|  
+|[consume](#consume)|會使用先前由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。|  
+|[has_value](#has_value)|檢查是否這`choice`傳訊區塊已使用值尚未初始化。|  
+|[index](#index)|傳回的索引`tuple`代表所選取的項目`choice`傳訊區塊。|  
 |[link_target](#link_target)|將目標區塊連結至這個`choice`傳訊區塊。|  
 |[release](#release)|釋放先前成功的訊息保留。|  
 |[release_ref](#release_ref)|釋放此參考計數`choice`傳訊區塊。|  
-|[reserve](#reserve)|由此先前提供的訊息會保留`choice`傳訊區塊。|  
+|[reserve](#reserve)|保留先前由此訊息`choice`傳訊區塊。|  
 |[unlink_target](#unlink_target)|取消連結的目標區塊，從這個`choice`傳訊區塊。|  
-|[unlink_targets](#unlink_targets)|取消連結所有從這個目標`choice`傳訊區塊。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|  
+|[unlink_targets](#unlink_targets)|取消連結所有的目標，從這個`choice`傳訊區塊。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|  
 |[value](#value)|取得索引的所選取的訊息`choice`傳訊區塊。|  
   
 ## <a name="remarks"></a>備註  
- 選擇區塊會確保內送訊息的其中之一使用。  
+ 選擇區塊可確保只有其中一個內送訊息會取用。  
   
- 如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [ISource](isource-class.md)  
@@ -102,7 +102,7 @@ class choice: public ISource<size_t>;
   
 ##  <a name="accept"></a> 接受 
 
- 接受的訊息，有提供這`choice`區塊中，將擁有權傳送給呼叫者。  
+ 接受的訊息，由此`choice`區塊中，將擁有權傳送給呼叫者。  
   
 ```  
 virtual message<size_t>* accept(
@@ -111,29 +111,29 @@ virtual message<size_t>* accept(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`所提供的`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`提供的`message`物件。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`accept`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`accept`方法。  
   
 ### <a name="return-value"></a>傳回值  
- 呼叫端現在具有的擁有權的訊息指標。  
+ 指標，呼叫者現在擁有的訊息。  
   
 ##  <a name="acquire_ref"></a> acquire_ref 
 
- 取得這個參考計數`choice`傳訊區塊，導致無法刪除。  
+ 取得此參考計數`choice`傳訊區塊，以防止刪除。  
   
 ```  
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 正在呼叫這個方法的目標區塊的指標。  
+*_PTarget*<br/>
+正在呼叫這個方法的目標區塊的指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫`ITarget`連結到這個期間的來源物件`link_target`方法。  
+ 這個方法會呼叫`ITarget`物件所要連結到這個來源期間，`link_target`方法。  
   
 ##  <a name="ctor"></a> 選擇 
 
@@ -159,17 +159,17 @@ choice(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Tuple`  
- 選擇的 `tuple` 來源。  
+*_Tuple*<br/>
+選擇的 `tuple` 來源。  
   
- `_PScheduler`  
- `Scheduler` 物件，在其內會排定 `choice` 傳訊區塊的傳播工作。  
+*_PScheduler*<br/>
+`Scheduler` 物件，在其內會排定 `choice` 傳訊區塊的傳播工作。  
   
- `_PScheduleGroup`  
- `ScheduleGroup` 物件，在其內會排定 `choice` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。  
+*_PScheduleGroup*<br/>
+`ScheduleGroup` 物件，在其內會排定 `choice` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。  
   
- `_Choice`  
- 作為複製來源處的 `choice` 傳訊區塊。 請注意，原始物件會被遺棄，使其成為移動建構函式。  
+*_Choice*<br/>
+作為複製來源處的 `choice` 傳訊區塊。 請注意，原始物件會被遺棄，使其成為移動建構函式。  
   
 ### <a name="remarks"></a>備註  
  如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。  
@@ -186,7 +186,7 @@ choice(
   
 ##  <a name="consume"></a> 使用 
 
- 會使用先前提供由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。  
+ 會使用先前由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。  
   
 ```  
 virtual message<size_t>* consume(
@@ -195,21 +195,21 @@ virtual message<size_t>* consume(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的保留`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`的保留`message`物件。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`consume`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`consume`方法。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`message`物件，呼叫端現在會有的擁有權。  
+ 指標`message`物件，呼叫者現在會有的擁有權。  
   
 ### <a name="remarks"></a>備註  
- `consume`方法很類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
+ `consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
   
 ##  <a name="has_value"></a> has_value 
 
- 檢查是否這`choice`傳訊區塊具有值尚未初始化。  
+ 檢查是否這`choice`傳訊區塊已使用值尚未初始化。  
   
 ```  
 bool has_value() const;
@@ -218,11 +218,11 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果區塊已接收值，`false`否則。  
+ `true` 如果區塊已收到的值，`false`否則。  
   
 ##  <a name="index"></a> 索引 
 
- 傳回指數`tuple`代表所選取的項目`choice`傳訊區塊。  
+ 傳回的索引`tuple`代表所選取的項目`choice`傳訊區塊。  
   
 ```  
 size_t index();
@@ -232,7 +232,7 @@ size_t index();
  訊息的索引。  
   
 ### <a name="remarks"></a>備註  
- 可以使用擷取訊息裝載`get`方法。  
+ 可以使用擷取的訊息承載`get`方法。  
   
 ##  <a name="link_target"></a> link_target 
 
@@ -243,10 +243,10 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 指標`ITarget`區塊連結至這個`choice`傳訊區塊。  
+*_PTarget*<br/>
+指標`ITarget`連結到此區塊`choice`傳訊區塊。  
   
-##  <a name="release"></a> 發行 
+##  <a name="release"></a> 版本 
 
  釋放先前成功的訊息保留。  
   
@@ -257,11 +257,11 @@ virtual void release(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件時釋放。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件被釋放。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`release`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`release`方法。  
   
 ##  <a name="release_ref"></a> release_ref 
 
@@ -272,15 +272,15 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 正在呼叫這個方法的目標區塊的指標。  
+*_PTarget*<br/>
+正在呼叫這個方法的目標區塊的指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫`ITarget`要從這個來源取消連結的物件。 來源區塊，才能釋放任何資源保留給目標區塊。  
+ 這個方法會呼叫`ITarget`要從這個來源取消連結的物件。 來源區塊允許釋放任何資源保留給目標區塊。  
   
 ##  <a name="reserve"></a> 保留 
 
- 由此先前提供的訊息會保留`choice`傳訊區塊。  
+ 保留先前由此訊息`choice`傳訊區塊。  
   
 ```  
 virtual bool reserve(
@@ -289,17 +289,17 @@ virtual bool reserve(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件被保留。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件所保留。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`reserve`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`reserve`方法。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果訊息已成功保留，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
+ `true` 如果已成功保留訊息，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
   
 ### <a name="remarks"></a>備註  
- 在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`才能採取或放棄擁有的訊息，分別。  
+ 在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`以便採取或分別放棄訊息，因此擁有。  
   
 ##  <a name="unlink_target"></a> unlink_target 
 
@@ -310,19 +310,19 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 指標`ITarget`從此取消連結的區塊`choice`傳訊區塊。  
+*_PTarget*<br/>
+指標`ITarget`若要從這個取消連結的區塊`choice`傳訊區塊。  
   
 ##  <a name="unlink_targets"></a> unlink_targets 
 
- 取消連結所有從這個目標`choice`傳訊區塊。  
+ 取消連結所有的目標，從這個`choice`傳訊區塊。  
   
 ```  
 virtual void unlink_targets();
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個方法不需要從解構函式呼叫，因為解構函式內部`single_assignment`區塊將會取消連結正確。  
+ 這個方法不需要從解構函式呼叫，因為解構函式適用於內部`single_assignment`區塊將會取消連結正確。  
   
 ##  <a name="value"></a> 值 
 
@@ -336,11 +336,11 @@ _Payload_type const& value();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Payload_type`  
- 訊息內容型別。  
+*_Payload_type*<br/>
+訊息裝載的類型。  
   
 ### <a name="return-value"></a>傳回值  
- 訊息的裝載。  
+ 訊息的承載。  
   
 ### <a name="remarks"></a>備註  
  因為 `choice` 傳訊區塊可以接受具有不同類型承載的輸入，因此您必須在擷取時指定承載的類型。 您可以決定根據結果的型別`index`方法。  

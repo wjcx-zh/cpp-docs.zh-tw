@@ -1,5 +1,5 @@
 ---
-title: 私用 (OpenMP) |Microsoft 文件
+title: 私用 (OpenMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071233"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 指定每個執行緒都應該有自己的執行個體的變數。  
@@ -32,11 +32,10 @@ ms.locfileid: "33692674"
 private(var)  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+### <a name="parameters"></a>參數
   
- `var`  
- 要在每個執行緒的執行個體的變數。  
+*var*<br/>
+要在每個執行緒的執行個體的變數。  
   
 ## <a name="remarks"></a>備註  
  **私用**適用於下列指示詞：  
@@ -49,11 +48,11 @@ private(var)
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- 如需詳細資訊，請參閱[2.7.2.1 私人](../../../parallel/openmp/2-7-2-1-private.md)。  
+ 如需詳細資訊，請參閱 < [2.7.2.1 私人](../../../parallel/openmp/2-7-2-1-private.md)。  
   
 ## <a name="example"></a>範例  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

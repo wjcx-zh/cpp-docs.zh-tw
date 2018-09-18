@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67904ec0c16fb1eddcf182d34f10cb09219dfc6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f9dff61a62eec37a503b1c0018ead6dce33065a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077109"
 ---
 # <a name="ccomenum-class"></a>CComEnum 類別
 
@@ -32,7 +32,7 @@ ms.locfileid: "43767412"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>  
+    const IID* piid, class T, class Copy, class ThreadModel = CcomObjectThreadModel>
 class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 T,
     Copy>,
@@ -41,19 +41,19 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。
 
-*piid*  
+*piid*<br/>
 指標的列舉值介面的介面 ID。
 
-*T*  
+*T*<br/>
 列舉值介面所公開的項目類型。
 
-*複製*  
+*複製*<br/>
 同質[複製原則類別](../../atl/atl-copy-policy-classes.md)。
 
-*ThreadModel*  
+*ThreadModel*<br/>
 類別的執行緒模型。 此參數預設為您的專案中使用的全域物件執行緒模型。
 
 ## <a name="remarks"></a>備註
@@ -102,7 +102,7 @@ COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-obj
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
-[CComEnumImpl 類別](../../atl/reference/ccomenumimpl-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[CComEnumImpl 類別](../../atl/reference/ccomenumimpl-class.md)<br/>
 [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)

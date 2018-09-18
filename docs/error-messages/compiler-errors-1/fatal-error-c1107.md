@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1107 |Microsoft 文件
+title: 嚴重錯誤 C1107 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949ee09244a106984522fb35dd13c0b3426fc820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc896f08ac161cae4e4fab5e991da810f3faf195
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199927"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016633"
 ---
 # <a name="fatal-error-c1107"></a>嚴重錯誤 C1107
-找不到組件 'file': 請指定組件搜尋路徑，請使用 /AI 或設定 LIBPATH 環境變數  
-  
- 中繼資料檔案已傳遞給[#using](../../preprocessor/hash-using-directive-cpp.md)編譯器找不到的指示詞。  
-  
- 中的主題所述的 LIBPATH `#using`，而[/AI](../../build/reference/ai-specify-metadata-directories.md)編譯器選項可讓您指定編譯器會尋找參考的中繼資料檔案的目錄。
+
+找不到組件 'file': 請指定組件搜尋路徑，請使用 /AI 或設定 LIBPATH 環境變數
+
+中繼資料檔案已傳遞給[#using](../../preprocessor/hash-using-directive-cpp.md)編譯器找不到的指示詞。
+
+LIBPATH，如本主題中所述`#using`，而[/AI](../../build/reference/ai-specify-metadata-directories.md)編譯器選項可讓您指定在其中，編譯器會尋找參考的中繼資料檔案的目錄。

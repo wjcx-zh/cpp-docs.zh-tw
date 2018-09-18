@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3918 |Microsoft 文件
+title: 編譯器錯誤 C3918 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,101 +16,105 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c8398cabe6b878c29a8a5746b0f344d21a7b692
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d7111c2c34b4fb367af906156cc1e8b6dd496bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019103"
 ---
 # <a name="compiler-error-c3918"></a>編譯器錯誤 C3918
-使用方式必須有 'member' 是資料成員  
-  
- C3918 可能會有數種與事件相關的原因。  
-  
-## <a name="example"></a>範例  
- C3918 可能是因為類別成員必須在目前內容中。 下列範例會產生 C3918。  
-  
-```  
-// C3918.cpp  
-// compile with: /clr /c  
-public ref class C {  
-public:  
-   System::Object ^ o;  
-   delegate void Del();  
-  
-   event Del^ MyEvent {  
-      void add(Del^ev) {  
-         if ( MyEvent != nullptr) {}   // C3918  
-         if ( o != nullptr) {}   // OK  
-   }  
-   void remove(Del^){}  
-   }  
-};  
-```  
-  
-## <a name="example"></a>範例  
- 如果您嘗試檢查 trivial 事件 （事件名稱將不再提供直接存取的備份存放區委派事件） 的 null，也會造成 C3918。  
-  
- 下列範例會產生 C3918。  
-  
-```  
-// C3918_2.cpp  
-// compile with: /clr /c  
-using namespace System;  
-public delegate int MyDel(int);  
-  
-interface struct IEFace {  
-   event MyDel ^ E;  
-};  
-  
-ref struct EventSource : public IEFace {  
-   virtual event MyDel ^ E;  
-   void Fire_E(int i) {  
-      if (E)   // C3918  
-         E(i);  
-   }  
-};  
-```  
-  
-## <a name="example"></a>範例  
- 如果您不正確的事件訂閱，也會發生 C3918。 下列範例會產生 C3918。  
-  
-```  
-// C3918_3.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-public delegate void del();  
-  
-public ref class A {  
-public:  
-   event del^ e {  
-      void add(del ^handler ) {  
-         d += handler;  
-      }  
-  
-      void remove(del ^handler) {  
-         d -= handler;  
-      }  
-  
-      void raise() {   
-         d();  
-      }  
-   }  
-  
-   del^ d;  
-   void f() {}  
-  
-   A() {  
-      e = gcnew del(this, &A::f);   // C3918  
-      // try the following line instead  
-      // e += gcnew del(this, &A::f);  
-      e();  
-   }  
-};  
-  
-int main() {  
-   A a;  
-}  
+
+使用方式必須是資料成員 ' member'
+
+C3918 會與事件相關的原因。
+
+## <a name="example"></a>範例
+
+C3918 可能是因為目前的內容中需要的類別成員。 下列範例會產生 C3918。
+
+```
+// C3918.cpp
+// compile with: /clr /c
+public ref class C {
+public:
+   System::Object ^ o;
+   delegate void Del();
+
+   event Del^ MyEvent {
+      void add(Del^ev) {
+         if ( MyEvent != nullptr) {}   // C3918
+         if ( o != nullptr) {}   // OK
+   }
+   void remove(Del^){}
+   }
+};
+```
+
+## <a name="example"></a>範例
+
+如果您嘗試檢查 trivial 事件 （事件名稱將不再提供直接存取備份存放區委派事件） 的 null，也被造成 C3918。
+
+下列範例會產生 C3918。
+
+```
+// C3918_2.cpp
+// compile with: /clr /c
+using namespace System;
+public delegate int MyDel(int);
+
+interface struct IEFace {
+   event MyDel ^ E;
+};
+
+ref struct EventSource : public IEFace {
+   virtual event MyDel ^ E;
+   void Fire_E(int i) {
+      if (E)   // C3918
+         E(i);
+   }
+};
+```
+
+## <a name="example"></a>範例
+
+如果您未正確訂閱事件，也會發生 C3918。 下列範例會產生 C3918。
+
+```
+// C3918_3.cpp
+// compile with: /clr /c
+using namespace System;
+
+public delegate void del();
+
+public ref class A {
+public:
+   event del^ e {
+      void add(del ^handler ) {
+         d += handler;
+      }
+
+      void remove(del ^handler) {
+         d -= handler;
+      }
+
+      void raise() {
+         d();
+      }
+   }
+
+   del^ d;
+   void f() {}
+
+   A() {
+      e = gcnew del(this, &A::f);   // C3918
+      // try the following line instead
+      // e += gcnew del(this, &A::f);
+      e();
+   }
+};
+
+int main() {
+   A a;
+}
 ```

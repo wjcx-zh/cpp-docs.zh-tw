@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2635 |Microsoft 文件
+title: 編譯器錯誤 C2635 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30916834b8adee0d1a80625624e80c5a860e57ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb7bc7b39550df7b742b2a8b940a77170e81914c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017387"
 ---
 # <a name="compiler-error-c2635"></a>編譯器錯誤 C2635
-無法轉換成 'identifier1 *'' identifier2\*'; 隱含轉換，從虛擬基底類別  
-  
- 轉換需要轉換從`virtual`基底類別衍生的類別，這不允許。  
-  
- 下列範例會產生 C2635:  
-  
-```  
-// C2635.cpp  
-class B {};  
-class D : virtual public B {};  
-class E : public B {};  
-  
-int main() {  
-   B b;  
-   D d;  
-   E e;  
-  
-   D * pD = &d;  
-   E * pE = &e;  
-   pD = (D*)&b;   // C2635  
-   pE = (E*)&b;   // OK  
-}  
+
+無法轉換 'identifier1 *' 至' identifier2\*'; 會隱含轉換，從虛擬基底類別
+
+轉換需要轉換從`virtual`基底類別衍生的類別，這不允許。
+
+下列範例會產生 C2635:
+
+```
+// C2635.cpp
+class B {};
+class D : virtual public B {};
+class E : public B {};
+
+int main() {
+   B b;
+   D d;
+   E e;
+
+   D * pD = &d;
+   E * pE = &e;
+   pD = (D*)&b;   // C2635
+   pE = (E*)&b;   // OK
+}
 ```

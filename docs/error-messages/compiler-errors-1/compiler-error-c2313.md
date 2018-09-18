@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2313 |Microsoft 文件
+title: 編譯器錯誤 C2313 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e9e5e9163137537c9da2cd8c14bd1271ebeb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57e291788f261f0e62bd476b3027dfa809594ce3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169968"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024929"
 ---
 # <a name="compiler-error-c2313"></a>編譯器錯誤 C2313
-'type1' : 被參考 ('type2') 攔截，行號  
-  
- 此例外狀況類型有兩個處理常式。 第二個 catch 的類型會參考第一個 catch 的類型。  
-  
- 下列範例會產生 C2313：  
-  
-```  
-// C2313.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-class C {};  
-int main() {  
-    try {  
-        throw "ooops!";  
-    }  
-    catch( C& ) {}  
-    catch( C ) {}   // C2313  
-}  
+
+'type1' : 被參考 ('type2') 攔截，行號
+
+此例外狀況類型有兩個處理常式。 第二個 catch 的類型會參考第一個 catch 的類型。
+
+下列範例會產生 C2313：
+
+```
+// C2313.cpp
+// compile with: /EHsc
+#include <eh.h>
+class C {};
+int main() {
+    try {
+        throw "ooops!";
+    }
+    catch( C& ) {}
+    catch( C ) {}   // C2313
+}
 ```

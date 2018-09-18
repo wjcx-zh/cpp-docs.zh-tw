@@ -16,32 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 090fd7ed027738ebe7bc9276e3b3f124b9212c4a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 52ea719a2c9296ca1e64d881ac150994c041e206
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018726"
 ---
 # <a name="varianttsetstring"></a>_variant_t::SetString
-**Microsoft 專屬**  
-  
- 將字串指派給這個 `_variant_t` 物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void SetString(const char* pSrc);  
-```  
-  
-#### <a name="parameters"></a>參數  
- *pSrc*  
- 字元字串的指標。  
-  
-## <a name="remarks"></a>備註  
- 將 ANSI 字串轉換為 Unicode `BSTR` 字串，並將它指派給這個 `_variant_t` 物件。  
-  
- **結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [_variant_t 類別](../cpp/variant-t-class.md)
+
+**Microsoft 專屬**
+
+將字串指派給這個 `_variant_t` 物件。
+
+## <a name="syntax"></a>語法
+
+```
+void SetString(const char* pSrc);
+```
+
+#### <a name="parameters"></a>參數
+
+*pSrc*<br/>
+字元字串的指標。
+
+## <a name="remarks"></a>備註
+
+將 ANSI 字串轉換為 Unicode `BSTR` 字串，並將它指派給這個 `_variant_t` 物件。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[_variant_t 類別](../cpp/variant-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0056 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0056 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da79a78753a9847686eca6952767fdefbe27005a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cd3c2401516ee986d283dab62703c3a0dc8df42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019844"
 ---
 # <a name="expression-evaluator-error-cxx0056"></a>運算式評估工具錯誤 CXX0056
-錯誤的行號  
-  
- 指定無效的行號。  
-  
- 這個錯誤是與 can0056 相同。
+
+錯誤的行號
+
+指定無效的行號。
+
+此錯誤是與 can0056 相同。

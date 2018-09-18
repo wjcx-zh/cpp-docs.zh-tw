@@ -1,5 +1,5 @@
 ---
-title: 結構描述資料列 |Microsoft 文件
+title: 結構描述資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4368f52bebf9bb171fd4b0956dfccf9794f91356
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69b4522fe2bbb49a19dc703f36b6e98d31d1a8fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104278"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021235"
 ---
 # <a name="schema-rowsets"></a>結構描述資料列集
-結構描述 （或中繼資料） 是任何資訊的資料庫結構或組織，例如有關提供者、 資料列集、 資料表、 資料行或除了實際的資料庫內容的其他資訊。 OLE DB 可讓您取得這類資訊而不使用結構描述資料列集開啟資料列集。  
+
+結構描述 （或中繼資料） 是資料庫的結構或組織，例如有關提供者、 資料列集、 資料表、 資料行，任何資訊或其他資訊，除了實際的資料庫內容。 OLE DB 可讓您取得這類資訊，而不需要使用結構描述資料列集開啟資料列集。  
   
- 如需如何使用結構描述資料列集資訊，請參閱[取得中繼資料與結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。  
+如需有關如何使用結構描述資料列集的資訊，請參閱 <<c0> [ 取得中繼資料與結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021131"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 類別
 
@@ -43,13 +43,13 @@ ms.locfileid: "43756570"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)、 您想要從任何其他介面以支援您的複合控制項。
 
 ## <a name="members"></a>成員
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>參數
 
-*bAdvise*  
+*bAdvise*<br/>
 如果接到; 的所有控制項都是，則為 true。否則為 false。
 
 ### <a name="return-value"></a>傳回值
 
-S_OK  
-所有控制項中的事件接收對應已連線或已成功中斷連接其事件來源。
-
-E_FAIL  
-並非所有控制在事件接收對應無法連線，或從其事件來源已成功中斷連接。
-
-E_POINTER  
-此錯誤通常表示控制項的事件接收對應中的項目有問題或樣板引數中所使用的問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。
-
-CONNECT_E_ADVISELIMIT  
-連接點已達到其限制的連線，並無法接受更多。
-
-CONNECT_E_CANNOTCONNECT  
-接收不支援這個連接點所需的介面。
-
-CONNECT_E_NOCONNECTION  
-Cookie 值不代表有效的連接。 此錯誤通常表示控制項的事件接收對應中的項目有問題或樣板引數中所使用的問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。
+|||
+|-|-|
+|S_OK  |所有控制項中的事件接收對應已連線或已成功中斷連接其事件來源。|
+|E_FAIL  |並非所有控制在事件接收對應無法連線，或從其事件來源已成功中斷連接。|
+|E_POINTER  |此錯誤通常表示控制項的事件接收對應中的項目有問題或樣板引數中所使用的問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。|
+|CONNECT_E_ADVISELIMIT  |連接點已達到其限制的連線，並無法接受更多。|
+|CONNECT_E_CANNOTCONNECT  |接收不支援這個連接點所需的介面。|
+|CONNECT_E_NOCONNECTION  |Cookie 值不代表有效的連接。 此錯誤通常表示控制項的事件接收對應中的項目有問題或樣板引數中所使用的問題`IDispEventImpl`或`IDispEventSimpleImpl`基底類別。|
 
 ### <a name="remarks"></a>備註
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>參數
 
-*size*  
+*size*<br/>
 參考`SIZE`填滿由這個方法的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 控制項的父視窗控制代碼。
 
-*rcPos*  
+*rcPos*<br/>
 保留的。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 在建立控制項期間傳遞給控制項的資料。 將資料當做*dwInitParam*會顯示為的 LPARAM 參數[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)訊息，這會在建立時傳送至複合控制項。
 
 ### <a name="return-value"></a>傳回值
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 控制項的父視窗控制代碼。
 
-*rcPos*  
+*rcPos*<br/>
 用戶端中的複合控制項的位置矩形座標相對於*hWndParent*。
 
 ### <a name="return-value"></a>傳回值
@@ -280,6 +271,6 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
-[複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)   
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
+[複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

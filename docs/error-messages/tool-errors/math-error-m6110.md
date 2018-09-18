@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6110 |Microsoft 文件
+title: 運算錯誤 M6110 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97918c38f896dd5fccd3abeae86a3104cf80694
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 333a6d9741d4ccaa5764e84fabd71f58788c1b6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015790"
 ---
 # <a name="math-error-m6110"></a>運算錯誤 M6110
-堆疊溢位  
-  
- 浮點運算式導致浮點的堆疊溢位。  
-  
- 堆疊溢位浮點例外狀況會受困上限是七個層級，除了通常支援 8087/287/387 副處理器的八個層級。  
-  
- 程式終止，結束代碼 138。
+
+堆疊溢位
+
+浮點運算式造成浮點堆疊溢位。
+
+堆疊溢位浮點例外狀況會限制上限是七個層級，除了通常受到 8087/287/387 副處理器的八個層級。
+
+程式結束，結束代碼為 138。

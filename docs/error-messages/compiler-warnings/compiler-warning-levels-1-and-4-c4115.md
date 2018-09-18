@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1 和 4） C4115 |Microsoft 文件
+title: 編譯器警告 （層級 1 和 4） C4115 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2edfdc84ee38e20f7193d720eab0ccb58d30790b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c22e3c33f9ef2409c02f0e651473d566b4d2a74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022522"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4115"></a>編譯器警告 (層級 1 和 4) C4115
-'type': 括弧中未命名類型的定義  
-  
- 這個指定的符號可用來定義括弧運算式內的結構、等位或列舉類型。 定義的範圍可能不如預期。  
-  
- 在 C 函式呼叫中，此定義具有全域範圍。 在 C++ 呼叫中，此定義與正在呼叫之函式的範圍相同。  
-  
- 這個警告也可能是由括弧內不是括號運算式的宣告子 (例如原型) 所造成。  
-  
- 在 ANSI 相容性 (/Za) 下所編譯的 C++ 和 C 程式中，這是層級 1 警告。 其他情況下則為層級 3。
+
+'type': 括弧中未命名類型的定義
+
+這個指定的符號可用來定義括弧運算式內的結構、等位或列舉類型。 定義的範圍可能不如預期。
+
+在 C 函式呼叫中，此定義具有全域範圍。 在 C++ 呼叫中，此定義與正在呼叫之函式的範圍相同。
+
+這個警告也可能是由括弧內不是括號運算式的宣告子 (例如原型) 所造成。
+
+在 ANSI 相容性 (/Za) 下所編譯的 C++ 和 C 程式中，這是層級 1 警告。 其他情況下則為層級 3。

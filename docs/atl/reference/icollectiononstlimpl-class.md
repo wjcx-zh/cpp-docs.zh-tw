@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbfb34d34f6bd920744621042f5f3e09143e896
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2b70e7332c5f0a24af80ddb5cfd14a8ecf146de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025148"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 類別
 
@@ -35,25 +35,25 @@ ms.locfileid: "43751315"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
+template <class T, class CollType, class ItemType, class CopyItem, class EnumType>
 class ICollectionOnSTLImpl : public T
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 COM 集合介面。
 
-*CollType*  
+*CollType*<br/>
 C + + 標準程式庫容器類別。
 
-*ItemType*  
+*ItemType*<br/>
 容器介面所公開的項目類型。
 
-*CopyItem*  
+*CopyItem*<br/>
 A[複製原則類別](../../atl/atl-copy-policy-classes.md)。
 
-*EnumType*  
+*EnumType*<br/>
 A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-相容的列舉值類別。
 
 ## <a name="members"></a>成員
@@ -111,7 +111,7 @@ STDMETHOD(getcount)(long* pcount);
 
 ### <a name="parameters"></a>參數
 
-*pcount*  
+*pcount*<br/>
 [out]集合中的項目數目。
 
 ### <a name="return-value"></a>傳回值
@@ -128,10 +128,10 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 
 ### <a name="parameters"></a>參數
 
-*Tuple*  
+*Tuple*<br/>
 [in]集合中的項目 1 為基底的索引。
 
-*pvar*  
+*pvar*<br/>
 [out]對應至的項目*Index*。
 
 ### <a name="return-value"></a>傳回值
@@ -152,7 +152,7 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 
 ### <a name="parameters"></a>參數
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]**IUnknown**新建立列舉值物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -173,5 +173,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLCollections 範例](../../visual-cpp-samples.md)   
+[ATLCollections 範例](../../visual-cpp-samples.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

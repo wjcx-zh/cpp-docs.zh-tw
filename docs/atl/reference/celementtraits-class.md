@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 61cbd301d01d62c0d24f232703b53cebf411a082
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021066"
 ---
 # <a name="celementtraits-class"></a>CElementTraits 類別
 
@@ -31,13 +31,13 @@ ms.locfileid: "43765732"
 ## <a name="syntax"></a>語法
 
 ```
-template<typename T>  
+template<typename T>
 class CElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-`T`  
+*T*<br/>
 若要在集合中儲存的資料型別。
 
 ## <a name="remarks"></a>備註
@@ -54,5 +54,5 @@ class CElementTraits : public CDefaultElementTraits<T>
 
 ## <a name="see-also"></a>另請參閱
 
-[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

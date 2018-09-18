@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2404 |Microsoft 文件
+title: 編譯器錯誤 C2404 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f9636b593999695d145fe163c48a877e32ea25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54b1f76223f118a9a25dda6252fc74dbdc90f1a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021963"
 ---
 # <a name="compiler-error-c2404"></a>編譯器錯誤 C2404
-'identifier' : 'context' 中的暫存器不合法  
-  
- 此暫存器不能用在此內容中。
+
+'identifier' : 'context' 中的暫存器不合法
+
+此暫存器不能用在此內容中。

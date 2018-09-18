@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0046 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0046 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f8092f5233d1a0e1501c3c0ea16164b96c137e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28cffba8a424d5a8cf2160dd6a5f8718259a54b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022483"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>運算式評估工具錯誤 CXX0046
-所需的成員函式的引數清單  
-  
- 運算式呼叫成員函式，但未指定任何實際的參數。  
-  
- 這個錯誤是與 can0046 相同。
+
+所需的成員函式的引數清單
+
+運算式呼叫成員函式，但未指定任何實際的參數。
+
+此錯誤是與 can0046 相同。

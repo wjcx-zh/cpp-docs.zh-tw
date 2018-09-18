@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2357 |Microsoft 文件
+title: 編譯器錯誤 C2357 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c8739576eced6b831f5c3b72d85417e2daabb06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d6468774947ed92630d0e10badc341c5841a5aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025434"
 ---
 # <a name="compiler-error-c2357"></a>編譯器錯誤 C2357
-'identifier': 必須是 'type' 類型的函式  
-  
- 您的程式碼會宣告一個版本的`atexit`由編譯器在內部宣告不符合版本的函式。 宣告`atexit`，如下所示：  
-  
-```  
-int __cdecl atexit(void (__cdecl *)());  
-```  
-  
- 如需詳細資訊，請參閱[init_seg](../../preprocessor/init-seg.md)。  
-  
- 下列範例會產生 C2357:  
-  
-```  
-// C2357.cpp  
-// compile with: /c  
-// C2357 expected  
-#pragma warning(disable : 4075)  
-// Uncomment the following line to resolve.  
-// int __cdecl myexit(void (__cdecl *)());  
-#pragma init_seg(".mine$m",myexit)  
+
+'identifier': 必須是 'type' 類型的函式
+
+您的程式碼會宣告的版本`atexit`編譯器在內部宣告的版本不符的函式。 宣告`atexit`，如下所示：
+
+```
+int __cdecl atexit(void (__cdecl *)());
+```
+
+如需詳細資訊，請參閱 < [init_seg](../../preprocessor/init-seg.md)。
+
+下列範例會產生 C2357:
+
+```
+// C2357.cpp
+// compile with: /c
+// C2357 expected
+#pragma warning(disable : 4075)
+// Uncomment the following line to resolve.
+// int __cdecl myexit(void (__cdecl *)());
+#pragma init_seg(".mine$m",myexit)
 ```

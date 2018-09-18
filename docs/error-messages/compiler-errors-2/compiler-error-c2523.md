@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2523 |Microsoft 文件
+title: 編譯器錯誤 C2523 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4546e576ced8d57a35c4c4861f29824a8d91d910
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77f440bf282d6159af3a96bfeb1aa7db8941e87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022795"
 ---
 # <a name="compiler-error-c2523"></a>編譯器錯誤 C2523
-' 類別:: ~ 識別項 ': 解構函式/完成項標記不相符  
-  
- 解構函式名稱必須是類別名稱加上波狀符號 (`~`)。 建構函式和解構函式會，只有具有相同的名稱與類別的成員。  
-  
- 下列範例會產生 C2523:  
-  
-```  
-// C2523.cpp  
-// compile with: /c  
-class A {  
-   ~B();    // C2523  
-   ~A();   // OK  
-};  
+
+' 類別:: ~ 識別碼 ': 解構函式/完成項標記不相符
+
+解構函式的名稱必須是類別名稱加上波狀符號 (`~`)。 建構函式和解構函式是唯一的成員具有相同名稱做為類別。
+
+下列範例會產生 C2523:
+
+```
+// C2523.cpp
+// compile with: /c
+class A {
+   ~B();    // C2523
+   ~A();   // OK
+};
 ```

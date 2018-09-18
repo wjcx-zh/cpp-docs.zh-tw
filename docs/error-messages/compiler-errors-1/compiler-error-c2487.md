@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2487 |Microsoft 文件
+title: 編譯器錯誤 C2487 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d2f74f1d189cf2be71d812dd8da01bb6fe8bdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2b0a71ef29edc7bbd7fec7b359c4a5a10df1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225459"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018909"
 ---
 # <a name="compiler-error-c2487"></a>編譯器錯誤 C2487
-'identifier': dll 介面類別的成員可能無法以 dll 介面宣告  
-  
- 您可以宣告了整個類別或具有 DLL 介面的非 DLL 介面類別的特定成員。 您無法宣告具有 DLL 介面的類別，然後將宣告該類別以 DLL 介面的成員。
+
+'identifier': dll 介面類別的成員不可以宣告以 dll 介面
+
+您可以宣告了整個類別或非 DLL 介面類別，以 DLL 介面的特定成員。 您無法以 DLL 介面的類別宣告，然後將宣告 DLL 介面與該類別的成員。

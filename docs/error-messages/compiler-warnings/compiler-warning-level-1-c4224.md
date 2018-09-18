@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4224 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4224 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f74aee988264706d5c74e94c8198a448f66465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49ad5937d310166dd3ca7f41e6881d98f396535f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025655"
 ---
 # <a name="compiler-warning-level-1-c4224"></a>編譯器警告 (層級 1) C4224
-使用非標準擴充： 型式參數 'identifier' 先前已定義為類型  
-  
- 先前已使用的識別項當做`typedef`。 這會導致 ANSI 相容性警告 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// C4224.cpp  
-// compile with: /Za /W1 /LD  
-typedef int I;  
-void func ( int I );  // C4224  
+
+使用非標準擴充： 型式參數 'identifier' 先前已定義為類型
+
+先前已使用的識別項當做`typedef`。 這會導致 ANSI 相容性警告 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+## <a name="example"></a>範例
+
+```
+// C4224.cpp
+// compile with: /Za /W1 /LD
+typedef int I;
+void func ( int I );  // C4224
 ```

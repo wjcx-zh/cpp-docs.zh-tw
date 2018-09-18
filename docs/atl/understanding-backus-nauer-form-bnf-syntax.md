@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9acb054c7d991e2d9e98df3ce9bba8c7093f281a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e615068580bcc9078959cc6cdd7831d05b5a4acd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020871"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>了解 Backus Nauer Form (BNF) 語法
 
@@ -54,56 +54,56 @@ ATL 註冊機構所使用的指令碼以使用 backus-naur form，BNF 語法，�
 
 ### <a name="syntax-example-1"></a>語法範例 1
 
-```  
-<registry expression> ::= <Add Key>  
+```
+<registry expression> ::= <Add Key>
 ```
 
 指定`registry expression`相當於`Add Key`。
 
 ### <a name="syntax-example-2"></a>語法範例 2
 
-```  
-<registry expression> ::= <Add Key> | <Delete Key>  
+```
+<registry expression> ::= <Add Key> | <Delete Key>
 ```
 
 指定`registry expression`相當於`Add Key`或`Delete Key`。
 
 ### <a name="syntax-example-3"></a>語法範例 3
 
-```  
-<Key Name> ::= '<AlphaNumeric>+'  
+```
+<Key Name> ::= '<AlphaNumeric>+'
 ```
 
 指定`Key Name`相當於一或多個`AlphaNumerics`。
 
 ### <a name="syntax-example-4"></a>語法範例 4
 
-```  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
+```
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
 ```
 
 指定`Add Key`相當於`Key Name`，且字串常值`ForceRemove`， `NoRemove`，和`val`，是選擇性的。
 
 ### <a name="syntax-example-5"></a>語法範例 5
 
-```  
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
+```
+<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
 ```
 
 指定`AlphaNumeric`相等的任何非 NULL 字元。
 
 ### <a name="syntax-example-6"></a>語法範例 6
 
-```  
-val 'testmulti' = m 'String 1\0String 2\0'  
+```
+val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
 指定的索引鍵名稱`testmulti`multistring 值組成`String 1`和`String 2`。
 
 ### <a name="syntax-example-7"></a>語法範例 7
 
-```  
-val 'testhex' = d '&H55'  
+```
+val 'testhex' = d '&H55'
 ```
 
 指定的索引鍵名稱`testhex`的 DWORD 值設定為十六進位 55 (十進位 85)。 請注意，此格式會遵守 **& H**標記法，做為位於 Visual Basic 規格。

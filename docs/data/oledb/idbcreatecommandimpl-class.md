@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b67fc55a8af2bed554254732832cbd6486d2420
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572039"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021560"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 類別
+
 提供實作[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 工作階段物件衍生自`IDBCreateCommandImpl`。  
+
+*T*<br/>
+工作階段物件衍生自`IDBCreateCommandImpl`。  
   
- *CommandClass*  
- 您的命令類別。  
+*CommandClass*<br/>
+您的命令類別。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |[CreateCommand](#createcommand)|建立新的命令。|  
   
 ## <a name="remarks"></a>備註  
- 若要取得新的命令的工作階段物件上選擇性的介面。  
+
+若要取得新的命令的工作階段物件上選擇性的介面。  
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: Createcommand
+
 建立新的命令，並傳回要求的介面。  
   
 ### <a name="syntax"></a>語法  
@@ -74,14 +79,16 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[idbcreatecommand:: Createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
- 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBCreateCommand::CreateCommand`:  
+某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBCreateCommand::CreateCommand`:  
   
 |OLE DB 範本參數|*OLE DB 程式設計人員參考*參數|  
 |--------------------------------|------------------------------------------------|  
 |*ppvCommand*|*ppCommand*|  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

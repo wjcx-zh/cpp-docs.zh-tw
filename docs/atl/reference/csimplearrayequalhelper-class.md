@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b23ba46ee4a8e25c15b4d9e51b87c444da67f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2613a885dd5399c3655ecb853f3977be71928526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021053"
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 類別
 
@@ -32,13 +32,13 @@ ms.locfileid: "43758211"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelper
 ```
 
 #### <a name="parameters"></a>參數
 
-`T`  
+*T*<br/>
 在衍生的類別中。
 
 ## <a name="members"></a>成員
@@ -69,10 +69,10 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>參數
 
-*T1*  
+*T1*<br/>
 型別 t 的物件
 
-*T2*  
+*T2*<br/>
 型別 t 的物件
 
 ### <a name="return-value"></a>傳回值
@@ -81,6 +81,6 @@ static bool IsEqual(
 
 ## <a name="see-also"></a>另請參閱
 
-[CSimpleArray 類別](../../atl/reference/csimplearray-class.md)   
-[CSimpleArrayEqualHelperFalse 類別](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
+[CSimpleArray 類別](../../atl/reference/csimplearray-class.md)<br/>
+[CSimpleArrayEqualHelperFalse 類別](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

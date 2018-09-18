@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30778524f692e19ffad205dc693dd5afd294c25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023302"
 ---
 # <a name="server-registration-global-functions"></a>伺服器註冊全域函式
 
@@ -57,13 +57,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>參數
 
-*pComModule*  
+*pComModule*<br/>
 COM 模組指標。
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。
 
-*Createtable*  
+*Createtable*<br/>
 要註冊之物件的 clsid 點。 如果是 NULL，將會登錄在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -89,13 +89,13 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>參數
 
-*pComModule*  
+*pComModule*<br/>
 COM 模組指標。
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。
 
-*Createtable*  
+*Createtable*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL 物件對應中的所有物件將都會取消註冊。
 
 ### <a name="return-value"></a>傳回值
@@ -121,13 +121,13 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>參數
 
-*pComModule*  
+*pComModule*<br/>
 COM 模組指標。
 
-*dwClsContext*  
+*dwClsContext*<br/>
 指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 請參閱[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)如需詳細資訊。
 
-*dwFlags*  
+*dwFlags*<br/>
 決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 請參閱[REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -148,7 +148,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>參數
 
-*pComModule*  
+*pComModule*<br/>
 COM 模組指標。
 
 ### <a name="return-value"></a>傳回值
@@ -173,16 +173,16 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>參數
 
-*pComModule*  
+*pComModule*<br/>
 COM 模組指標。
 
-*rclsid*  
+*rclsid*<br/>
 若要建立之物件的 CLSID。
 
-*riid*  
+*riid*<br/>
 要求的介面 IID。
 
-*ppv*  
+*ppv*<br/>
 所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppv*設為 NULL。
 
 ### <a name="return-value"></a>傳回值

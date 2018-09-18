@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0021 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0021 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996fc46982d809da5e0b37b83f2940102892167e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ef765286d022b26aeed0ca98c9f43f94f5d17f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025772"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>運算式評估工具錯誤 CXX0021
-結構或等位做為純量  
-  
- 結構或等位已使用的運算式中，但是沒有任何項目指定。  
-  
- 當操作結構或等位變數，可能本身不含欄位限定詞會出現的變數名稱。 如果在運算式中使用結構或等位，它必須被限定所需的特定項目。  
-  
- 指定的值會在運算式中使用的項目。  
-  
- 這個錯誤是與 can0021 相同。
+
+結構或等位做為純量
+
+在運算式中，使用結構或等位，但沒有任何項目指定。
+
+處理時的結構或等位變數，可能本身不含欄位限定詞會出現的變數名稱。 如果運算式中使用的結構或等位，就必須加以限定使用所需的特定項目。
+
+指定要在運算式中使用其值的項目。
+
+此錯誤是與 can0021 相同。

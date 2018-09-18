@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4918 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4918 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4ca1d8a33ac811a23fbb0ac3e438eeeb9c1acf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb4cc66359c28ffc23afa64da1e5bdbaadd8fb9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296792"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023224"
 ---
 # <a name="compiler-warning-level-4-c4918"></a>編譯器警告 (層級 4) C4918
-'character' : 在 pragma 最佳化清單中的無效字元  
-  
- 在 [最佳化](../../preprocessor/optimize.md) pragma 陳述式的最佳化清單中找到未知的字元。  
-  
- 例如，下列陳述式會產生 C4918：  
-  
-```  
-// C4918.cpp  
-// compile with: /W4  
-#pragma optimize("X", on) // C4918 expected  
-int main()  
-{  
-}  
+
+'character' : 在 pragma 最佳化清單中的無效字元
+
+在 [最佳化](../../preprocessor/optimize.md) pragma 陳述式的最佳化清單中找到未知的字元。
+
+例如，下列陳述式會產生 C4918：
+
+```
+// C4918.cpp
+// compile with: /W4
+#pragma optimize("X", on) // C4918 expected
+int main()
+{
+}
 ```

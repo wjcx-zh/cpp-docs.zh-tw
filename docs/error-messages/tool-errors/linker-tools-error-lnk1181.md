@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edd2f39848ea1db054dd4ceee8abf290dde7a74
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016737"
 ---
 # <a name="linker-tools-error-lnk1181"></a>連結器工具錯誤 LNK1181
-無法開啟輸入的檔 'filename'  
-  
- 連結器找不到`filename`因為它不存在或找不到路徑。  
-  
- 錯誤 LNK1181 包含一些常見原因：  
-  
--   `filename` 被參考，因為其他的相依性連結器列，但該檔案不存在。  
-  
--   A **/LIBPATH**陳述式，指定目錄包含`filename`遺失。  
-  
- 若要解決上述問題，請確定任何參考連結器列上的檔案是存在於系統上。  也請確定沒有 **/LIBPATH**陳述式，針對每個包含連結器相依檔案的目錄。 
 
- 如需詳細資訊，請參閱 < [.lib 檔作為連結器輸入](../../build/reference/dot-lib-files-as-linker-input.md)。
-  
- Lnk1181 另一個可能的原因是不允許有空白字元的長檔名不以引號括住。  在此情況下，連結器會只辨識檔案名稱最多的第一個空間，並採用檔案的副檔名。 obj這種情況的解決方案是來括住的長檔名 （路徑加上檔案名稱） 以引號。  
+無法開啟輸入的檔 'filename'
 
- 在以編譯[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)選項可能會導致 LNK1181 因為該選項會抑制.obj 檔案的建立。
-  
-  
-  
-## <a name="see-also"></a>另請參閱  
- [/LIBPATH (其他 Libpath)](../../build/reference/libpath-additional-libpath.md)
+連結器找不到`filename`因為它不存在或找不到路徑。
+
+錯誤 LNK1181 包含一些常見原因：
+
+- `filename` 被參考，因為其他的相依性連結器列，但該檔案不存在。
+
+- A **/LIBPATH**陳述式，指定目錄包含`filename`遺失。
+
+若要解決上述問題，請確定任何參考連結器列上的檔案是存在於系統上。  也請確定沒有 **/LIBPATH**陳述式，針對每個包含連結器相依檔案的目錄。
+
+如需詳細資訊，請參閱 < [.lib 檔作為連結器輸入](../../build/reference/dot-lib-files-as-linker-input.md)。
+
+Lnk1181 另一個可能的原因是不允許有空白字元的長檔名不以引號括住。  在此情況下，連結器會只辨識檔案名稱最多的第一個空間，並採用檔案的副檔名。 obj這種情況的解決方案是來括住的長檔名 （路徑加上檔案名稱） 以引號。
+
+在以編譯[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)選項可能會導致 LNK1181 因為該選項會抑制.obj 檔案的建立。
+
+
+
+## <a name="see-also"></a>另請參閱
+
+[/LIBPATH (其他 Libpath)](../../build/reference/libpath-additional-libpath.md)

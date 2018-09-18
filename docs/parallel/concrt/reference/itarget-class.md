@@ -1,5 +1,5 @@
 ---
-title: ITarget 類別 |Microsoft 文件
+title: ITarget 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9780e4b9ff8950511601b03e8423764c3def77a1
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5dff803a33a35ad9ca30e0a49b6ef09155e4ec26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020338"
 ---
 # <a name="itarget-class"></a>ITarget 類別
 `ITarget` 類別是所有目標區塊的介面。 目標區塊會使用 `ISource` 區塊提供給它們的訊息。  
@@ -41,8 +41,8 @@ class ITarget;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 目標區塊接受訊息內裝載的資料類型。  
+*T*<br/>
+目標區塊所接受的訊息內裝載的資料型別。  
   
 ## <a name="members"></a>成員  
   
@@ -50,7 +50,7 @@ class ITarget;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`filter_method`|傳回的區塊所使用的任何方法的簽章`bool`值，以判斷是否應該接受提供的訊息。|  
+|`filter_method`|所傳回的區塊使用任何方法的簽章`bool`值，以判斷是否應該接受所提供的訊息。|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
@@ -63,7 +63,7 @@ class ITarget;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[propagate](#propagate)|在衍生類別中覆寫，以非同步方式傳遞訊息從來源區塊到此目標區塊。|  
+|[propagate](#propagate)|在衍生類別中覆寫，以非同步方式會將訊息從來源區塊到此目標區塊。|  
 |[傳送](#send)|在衍生類別中覆寫，以同步方式將訊息傳遞給目標區塊。|  
 |[supports_anonymous_source](#supports_anonymous_source)|在衍生類別中覆寫時，會根據訊息區塊是否會接受未與它連結的來源所提供的訊息傳回 true 或 false。 如果覆寫的方法傳回 `true`，目標就不可延後提供的訊息，因為之後要使用延後的訊息就需要在其來源連結登錄中識別來源。|  
   
@@ -71,12 +71,12 @@ class ITarget;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[link_source](#link_source)|在衍生類別中覆寫，將指定的來源區塊連結至這個`ITarget`區塊。|  
-|[unlink_source](#unlink_source)|當在衍生類別中覆寫時，取消連結指定的來源區塊從這個`ITarget`區塊。|  
-|[unlink_sources](#unlink_sources)|當在衍生類別中覆寫時，取消連結所有來源區塊從這個`ITarget`區塊。|  
+|[link_source](#link_source)|當在衍生類別中覆寫時，指定的來源區塊連結至這`ITarget`區塊。|  
+|[unlink_source](#unlink_source)|當在衍生類別中覆寫時，取消連結此將指定的來源區塊`ITarget`區塊。|  
+|[unlink_sources](#unlink_sources)|當在衍生類別中覆寫時，取消連結所有來源區塊，從這個`ITarget`區塊。|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `ITarget`  
@@ -96,22 +96,22 @@ virtual ~ITarget();
   
 ##  <a name="link_source"></a> link_source 
 
- 在衍生類別中覆寫，將指定的來源區塊連結至這個`ITarget`區塊。  
+ 當在衍生類別中覆寫時，指定的來源區塊連結至這`ITarget`區塊。  
   
 ```
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PSource`  
- `ISource`封鎖所連結至此`ITarget`區塊。  
+*_PSource*<br/>
+`ISource`封鎖所連結至此`ITarget`區塊。  
   
 ### <a name="remarks"></a>備註  
- 此函式不應該直接呼叫`ITarget`區塊。 區塊應該一起使用來連接`link_target`方法`ISource`區塊，將會叫用`link_source`上對應的目標方法。  
+ 此函式不應該直接在呼叫`ITarget`區塊。 區塊應該一起使用來連接`link_target`方法`ISource`區塊，將會叫用`link_source`相對應的目標上的方法。  
   
 ##  <a name="propagate"></a> 傳播 
 
- 在衍生類別中覆寫，以非同步方式傳遞訊息從來源區塊到此目標區塊。  
+ 在衍生類別中覆寫，以非同步方式會將訊息從來源區塊到此目標區塊。  
   
 ```
 virtual message_status propagate(
@@ -120,17 +120,17 @@ virtual message_status propagate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PMessage`  
- `message` 物件的指標。  
+*_PMessage*<br/>
+`message` 物件的指標。  
   
- `_PSource`  
- 供應項目訊息的來源區塊的指標。  
+*_PSource*<br/>
+提供訊息來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況，如果`_PMessage`或`_PSource`參數是`NULL`。  
+ 方法會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況，如果有任一`_PMessage`或是`_PSource`參數是`NULL`。  
   
 ##  <a name="send"></a> 傳送 
 
@@ -143,21 +143,21 @@ virtual message_status send(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PMessage`  
- `message` 物件的指標。  
+*_PMessage*<br/>
+`message` 物件的指標。  
   
- `_PSource`  
- 供應項目訊息的來源區塊的指標。  
+*_PSource*<br/>
+提供訊息來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況，如果`_PMessage`或`_PSource`參數是`NULL`。  
+ 方法會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況，如果有任一`_PMessage`或是`_PSource`參數是`NULL`。  
   
- 使用`send`方法之外訊息起始，並散佈在網路中的訊息是非常危險，可能會導致死結。  
+ 使用`send`方法外部訊息起始，並傳播網路內的訊息很危險，有可能會導致死結。  
   
- 當`send`傳回時，訊息可能已經被接受，並傳輸至目標區塊，或已拒絕的目標。  
+ 當`send`傳回時，訊息可能是已接受，並傳輸至目標區塊，或已被拒絕的目標。  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
@@ -172,22 +172,22 @@ virtual bool supports_anonymous_source();
   
 ##  <a name="unlink_source"></a> unlink_source 
 
- 當在衍生類別中覆寫時，取消連結指定的來源區塊從這個`ITarget`區塊。  
+ 當在衍生類別中覆寫時，取消連結此將指定的來源區塊`ITarget`區塊。  
   
 ```
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PSource`  
- `ISource`封鎖正在取消連結從這個`ITarget`區塊。  
+*_PSource*<br/>
+`ISource`封鎖正在取消連結這個`ITarget`區塊。  
   
 ### <a name="remarks"></a>備註  
- 此函式不應該直接呼叫`ITarget`區塊。 應該使用中斷區塊`unlink_target`或`unlink_targets`方法`ISource`區塊，將會叫用`unlink_source`上對應的目標方法。  
+ 此函式不應該直接在呼叫`ITarget`區塊。 區塊應該使用中斷`unlink_target`或是`unlink_targets`上的方法`ISource`區塊，將會叫用`unlink_source`相對應的目標上的方法。  
   
 ##  <a name="unlink_sources"></a> unlink_sources 
 
- 當在衍生類別中覆寫時，取消連結所有來源區塊從這個`ITarget`區塊。  
+ 當在衍生類別中覆寫時，取消連結所有來源區塊，從這個`ITarget`區塊。  
   
 ```
 virtual void unlink_sources() = 0;

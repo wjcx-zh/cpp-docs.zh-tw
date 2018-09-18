@@ -1,5 +1,5 @@
 ---
-title: accelerator_view_removed 類別 |Microsoft 文件
+title: accelerator_view_removed 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020249"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed 類別
-由於 Windows 逾時偵測與復原機制的基礎的 DirectX 呼叫失敗時擲回例外狀況。  
+因為 Windows 逾時偵測和復原機制的基礎 DirectX 呼叫失敗時擲回的例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -77,11 +77,11 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述。  
+*訊息 （_m)*<br/>
+錯誤的描述。  
   
- `_View_removed_reason`  
- 表示移除的原因的 HRESULT 錯誤碼`accelerator_view`物件。  
+*_View_removed_reason*<br/>
+HRESULT 錯誤碼指出移除的原因`accelerator_view`物件。  
   
 ### <a name="return-value"></a>傳回值  
  Accelerator_view_removed 類別的新執行個體。  

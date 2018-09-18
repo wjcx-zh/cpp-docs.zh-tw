@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0005 |Microsoft 文件
+title: 專案建置錯誤 PRJ0005 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b02e831c9adc8d7ff7fce759334263f847d24cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be1ac49d5d6fa3b85b327305bc4919d183b962e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016508"
 ---
 # <a name="project-build-error-prj0005"></a>專案建置錯誤 PRJ0005
-無法建立暫存檔目錄 'directory' 中。  
-  
- 無法建立暫存檔的呼叫。 失敗的原因包括：  
-  
--   已用完暫存檔名稱。  
-  
--   暫存目錄為唯讀。  
-  
--   沒有 TMP 環境變數或暫存目錄。  
-  
--   可用磁碟空間不足，是您的電腦。
+
+無法建立暫存檔中目錄 'directory'。
+
+若要建立暫存檔的呼叫失敗。 失敗的原因包括：
+
+- 已用盡暫存檔案名稱。
+
+- 暫存目錄是唯讀的。
+
+- 沒有暫存目錄或 TMP 環境變數。
+
+- 可用磁碟空間不足，是您的電腦。

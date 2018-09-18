@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019407"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>參數
 
-*error*  
+*error*<br/>
 要轉換的錯誤值。
 
 ### <a name="remarks"></a>備註
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 [in]報告錯誤之物件的 CLSID。
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in]描述錯誤的字串。 指定的 Unicode 版本*lpszDesc*屬於類型 LPCOLESTR; ANSI 版本指定 LPCSTR 類型。
 
-*iid*  
+*iid*<br/>
 [in]如果錯誤定義作業系統所定義的錯誤或 GUID_NULL 之介面的 IID。
 
-*hRes*  
+*hRes*<br/>
 [in]您想要的 HRESULT 傳回給呼叫者。
 
-*nID*  
+*nID*<br/>
 [in]資源識別項的錯誤描述字串的儲存位置。 此值應介於 0x0200 和 0xFFFF 之間 （含）。 在偵錯組建**ASSERT**如果將會產生*nID*並不編製索引的有效字串。 在發行組建中的錯誤描述字串將會設定為 「 未知的錯誤 」。
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in]錯誤的說明內容識別碼。
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in]路徑名稱與描述錯誤的說明檔。
 
-*hInst*  
+*hInst*<br/>
 [in]資源控制代碼。 根據預設，這個參數是`__AtlBaseModuleModule::GetResourceInstance`，其中`__AtlBaseModuleModule`全域執行個體[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)或從它衍生的類別。
 
 ### <a name="return-value"></a>傳回值
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>參數
 
-*hr*  
+*hr*<br/>
 標準的 HRESULT 值。
 
 ### <a name="remarks"></a>備註
@@ -233,6 +233,6 @@ inline void AtlThrowLastWin32();
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](../../atl/reference/atl-functions.md)   
+[函式](../../atl/reference/atl-functions.md)<br/>
 [偵錯和錯誤報告巨集](../../atl/reference/debugging-and-error-reporting-macros.md)
 

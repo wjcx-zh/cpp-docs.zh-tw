@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0057 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0057 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509c7e00236ed824c3213f7ba730909873646c2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f993b435df4d0b6804ab9b31698074d65a03112
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025018"
 ---
 # <a name="expression-evaluator-error-cxx0057"></a>運算式評估工具錯誤 CXX0057
-沒有程式碼行號  
-  
- 沒有程式碼產生指定的行號。 它不能為中斷點。  
-  
- 這個錯誤是與 can0057 相同。
+
+沒有程式碼行號
+
+沒有程式碼產生指定的行號。 它不能為中斷點。
+
+此錯誤是與 can0057 相同。

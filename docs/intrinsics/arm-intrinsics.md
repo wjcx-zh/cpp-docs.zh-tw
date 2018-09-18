@@ -1941,12 +1941,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a504df1dfb2826b5056b5feb5b13ac3555515ae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e0c2138de2becc7afa9d2392c2fa5240b584b6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018245"
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
 Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關 ARM 的詳細資訊，請參閱 < [ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?LinkId=522049)並[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。  
@@ -2162,11 +2162,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **參數**  
   
- `Location`  
- 要讀取或寫入的記憶體位置的位址。  
+*位置*<br/>
+要讀取或寫入的記憶體位置的位址。  
   
- `Value`  
- 要寫入至指定的記憶體位置 （僅 store 內建） 的值。  
+*值*<br/>
+要寫入至指定的記憶體位置 （僅 store 內建） 的值。  
   
  **傳回值 （載入內建函式只）**  
   
@@ -2209,20 +2209,20 @@ int _MoveFromCoprocessor2(
   
  **參數**  
   
- `coproc`  
- 副處理器數目，範圍在 0 到 15 之間。  
+*coproc*<br/>
+副處理器數目，範圍在 0 到 15 之間。  
   
- `opcode1`  
- 範圍 0 到 7 的副處理器專用 opcode  
+*opcode1*<br/>
+範圍 0 到 7 的副處理器專用作業碼  
   
- `crn`  
- 副處理器暫存器編號，範圍介於 0 到 15，指定第一個指令的運算元。  
+*crn*<br/>
+副處理器暫存器編號，範圍介於 0 到 15，指定第一個指令的運算元。  
   
- `crm`  
- 副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
+*crm*<br/>
+副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
   
- `opcode2`  
- 範圍 0 到 7 的其他副處理器專用作業碼。  
+*opcode2*<br/>
+範圍 0 到 7 的其他副處理器專用作業碼。  
   
  **傳回值**  
   
@@ -2248,14 +2248,14 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  **參數**  
   
- `coproc`  
- 副處理器數目，範圍在 0 到 15 之間。  
+*coproc*<br/>
+副處理器數目，範圍在 0 到 15 之間。  
   
- `opcode1`  
- 範圍 0 到 15 的副處理器專用 opcode。  
+*opcode1*<br/>
+範圍 0 到 15 的副處理器專用作業碼。  
   
- `crm`  
- 副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
+*crm*<br/>
+副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
   
  **傳回值**  
   
@@ -2293,23 +2293,23 @@ void _MoveToCoprocessor2(
   
  **參數**  
   
- `value`  
- 要寫入副處理器的值。  
+*值*<br/>
+要寫入副處理器的值。  
   
- `coproc`  
- 副處理器數目，範圍在 0 到 15 之間。  
+*coproc*<br/>
+副處理器數目，範圍在 0 到 15 之間。  
   
- `opcode1`  
- 範圍 0 到 7 的副處理器專用 opcode。  
+*opcode1*<br/>
+範圍 0 到 7 的副處理器專用作業碼。  
   
- `crn`  
- 副處理器暫存器編號，範圍介於 0 到 15，指定第一個指令的運算元。  
+*crn*<br/>
+副處理器暫存器編號，範圍介於 0 到 15，指定第一個指令的運算元。  
   
- `crm`  
- 副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
+*crm*<br/>
+副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
   
- `opcode2`  
- 範圍 0 到 7 的其他副處理器專用作業碼。  
+*opcode2*<br/>
+範圍 0 到 7 的其他副處理器專用作業碼。  
   
  **傳回值**  
   
@@ -2336,14 +2336,14 @@ void _MoveFromCoprocessor64(
   
  **參數**  
   
- `coproc`  
- 副處理器數目，範圍在 0 到 15 之間。  
+*coproc*<br/>
+副處理器數目，範圍在 0 到 15 之間。  
   
- `opcode1`  
- 範圍 0 到 15 的副處理器專用 opcode。  
+*opcode1*<br/>
+範圍 0 到 15 的副處理器專用作業碼。  
   
- `crm`  
- 副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
+*crm*<br/>
+副處理器暫存器數目 (範圍在 0 到 15 之間)，用以指定其他來源或目的地運算元。  
   
  **傳回值**  
   

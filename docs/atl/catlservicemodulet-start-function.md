@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1b367dd02506678af8c147dc93bb8725ca3c83
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b1edd5d01300324a8d24b41aa289f510cf078ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021768"
 ---
 # <a name="catlservicemoduletstart-function"></a>Catlservicemodulet:: Start 函式
 
@@ -35,6 +35,6 @@ ms.locfileid: "43762706"
 
 ## <a name="see-also"></a>另請參閱
 
-[服務](../atl/atl-services.md)   
+[服務](../atl/atl-services.md)<br/>
 [Catlservicemodulet:: Start](../atl/reference/catlservicemodulet-class.md#start)
 

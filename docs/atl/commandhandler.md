@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4799d0b9c36ade8b1e203ca106605db75752b02f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019467"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -29,7 +29,7 @@ ms.locfileid: "43752811"
 
 ## <a name="syntax"></a>語法
 
-```  
+```cpp
 LRESULT CommandHandler(
     WORD wNotifyCode,  
     WORD wID,  
@@ -39,16 +39,16 @@ LRESULT CommandHandler(
 
 #### <a name="parameters"></a>參數
 
-*wNotifyCode*  
+*wNotifyCode*<br/>
 通知的程式碼。
 
-*wID*  
+*wID*<br/>
 功能表項目、 控制項或加速器的識別項。
 
-*hWndCtl*  
+*hWndCtl*<br/>
 視窗控制項的控制代碼。
 
-*bHandled*  
+*bHandled*<br/>
 訊息對應集*bHandled*設為 TRUE 之前`CommandHandler`呼叫。 如果`CommandHandler`完全不會處理訊息，它應該設定*bHandled*為 FALSE，以指出需要進一步處理的訊息。
 
 ## <a name="return-value"></a>傳回值
@@ -61,7 +61,7 @@ LRESULT CommandHandler(
 
 ## <a name="see-also"></a>另請參閱
 
-[實作視窗](../atl/implementing-a-window.md)   
-[訊息對應](../atl/message-maps-atl.md)   
+[實作視窗](../atl/implementing-a-window.md)<br/>
+[訊息對應](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

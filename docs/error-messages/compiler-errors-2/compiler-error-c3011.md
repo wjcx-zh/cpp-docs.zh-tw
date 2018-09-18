@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3011 |Microsoft 文件
+title: 編譯器錯誤 C3011 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb78e658c0f56798fa0c23201889809d6c68d184
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f25e3f9479b2555badbd079c3e2d939e91acbba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024407"
 ---
 # <a name="compiler-error-c3011"></a>編譯器錯誤 C3011
-內嵌組譯碼不允許直接放在平行區域內  
-  
- `omp` 平行區域不能包含內嵌組譯碼指令。  
-  
- 下列範例會產生 C3011：  
-  
-```  
-// C3011.cpp  
-// compile with: /openmp  
-// processor: /x86  
-int main() {  
-   int   n = 0;  
-  
-   #pragma omp parallel  
-   {  
-      _asm mov eax, n   // Delete this line to resolve this error.  
-   }   // C3011  
-}  
+
+內嵌組譯碼不允許直接放在平行區域內
+
+`omp` 平行區域不能包含內嵌組譯碼指令。
+
+下列範例會產生 C3011：
+
+```
+// C3011.cpp
+// compile with: /openmp
+// processor: /x86
+int main() {
+   int   n = 0;
+
+   #pragma omp parallel
+   {
+      _asm mov eax, n   // Delete this line to resolve this error.
+   }   // C3011
+}
 ```

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3526425bac6591b9330e0915d717ba5b47ee7b3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ad1efa3badf310a78b69d3abba5b9874e01daf7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755095"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020962"
 ---
 # <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl 類別
 
@@ -43,13 +43,13 @@ ms.locfileid: "43755095"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T>  
+template<class T>
 class IRunnableObjectImpl
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IRunnableObjectImpl`。
 
 ## <a name="members"></a>成員
@@ -162,5 +162,5 @@ ATL 實作會傳回 S_OK。
 
 ## <a name="see-also"></a>另請參閱
 
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

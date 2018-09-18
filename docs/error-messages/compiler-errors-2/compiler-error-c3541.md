@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3541 |Microsoft 文件
+title: 編譯器錯誤 C3541 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2440d1ab91cda00240d99d2188365754bd34fb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0f9cb18089bcf8ce1688cabb261f91f868da247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255106"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021716"
 ---
 # <a name="compiler-error-c3541"></a>編譯器錯誤 C3541
-'type': typeid 無法套用至包含 'auto' 的類型  
-  
- [Typeid](../../windows/typeid-cpp-component-extensions.md)運算子不能套用至指定的類型，因為它包含`auto`規範。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3541。  
-  
-```  
-// C3541.cpp  
-// Compile with /Zc:auto  
-#include <typeinfo>  
-int main() {  
-    auto x = 123;  
-    typeid(x);    // OK  
-    typeid(auto); // C3541  
-    return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [auto 關鍵字](../../cpp/auto-keyword.md)   
- [/Zc: auto （推算變數類型）](../../build/reference/zc-auto-deduce-variable-type.md)   
- [typeid](../../windows/typeid-cpp-component-extensions.md)
+
+'type': typeid 無法套用至包含 'auto' 的類型
+
+[Typeid](../../windows/typeid-cpp-component-extensions.md)運算子不能套用至指定的類型，因為它包含`auto`規範。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3541。
+
+```
+// C3541.cpp
+// Compile with /Zc:auto
+#include <typeinfo>
+int main() {
+    auto x = 123;
+    typeid(x);    // OK
+    typeid(auto); // C3541
+    return 0;
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[auto 關鍵字](../../cpp/auto-keyword.md)<br/>
+[/Zc:auto (推算變數類型)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[typeid](../../windows/typeid-cpp-component-extensions.md)

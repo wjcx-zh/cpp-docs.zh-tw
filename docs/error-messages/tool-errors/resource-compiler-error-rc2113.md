@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器錯誤 RC2113 |Microsoft 文件
+title: 資源編譯器錯誤 RC2113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152621a248c2a47a453034f1b171fe1746000fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb23ae8e9274368abd2c754d94a19050ae3805c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015866"
 ---
 # <a name="resource-compiler-error-rc2113"></a>資源編譯器錯誤 RC2113
-在對話方塊中預期為 END  
-  
- **結束**關鍵字必須發生在結尾**對話方塊**陳述式。 請確定任何先前陳述式左引號。
+
+在對話方塊中預期為 END
+
+**結束**關鍵字必須出現在結尾**對話方塊**陳述式。 請確定沒有任何從前面的陳述式的左引號。

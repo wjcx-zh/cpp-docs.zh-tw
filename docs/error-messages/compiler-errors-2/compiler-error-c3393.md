@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3393 |Microsoft 文件
+title: 編譯器錯誤 C3393 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db8e60df6c6f8f1d19b55d78b527cca2755f4ca4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ceb6875484a3afe1d13f13990334434a6c1b086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022652"
 ---
 # <a name="compiler-error-c3393"></a>編譯器錯誤 C3393
-條件約束子句中語法錯誤：'identifier' 不是類型  
-  
- 傳遞給條件約束的識別項必須是類型，但卻不是類型。  如需詳細資訊，請參閱[泛型型別參數的條件約束 (C + + /CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3393：  
-  
-```  
-// C3393.cpp  
-// compile with: /clr /c  
-void MyInterface() {}  
-interface class MyInterface2 {};  
-  
-generic<typename T>  
-where T : MyInterface   // C3393  
-// try the following line instead  
-// where T : MyInterface2  
-ref class R {};  
+
+條件約束子句中語法錯誤：'identifier' 不是類型
+
+傳遞給條件約束的識別項必須是類型，但卻不是類型。  如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C + + /cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3393：
+
+```
+// C3393.cpp
+// compile with: /clr /c
+void MyInterface() {}
+interface class MyInterface2 {};
+
+generic<typename T>
+where T : MyInterface   // C3393
+// try the following line instead
+// where T : MyInterface2
+ref class R {};
 ```

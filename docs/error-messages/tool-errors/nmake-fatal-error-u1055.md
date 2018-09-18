@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1055 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1055 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320878"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017926"
 ---
 # <a name="nmake-fatal-error-u1055"></a>NMAKE 嚴重錯誤 U1055
-環境空間不足  
-  
- 作業系統已用盡空間的環境變數。  
-  
- 請增加環境空間，或設定較少的環境變數。
+
+環境空間不足
+
+作業系統已用盡空間給環境變數。
+
+增加環境空間，或設定較少的環境變數。

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131749"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022353"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -135,7 +135,7 @@ int sum(int a, int b)
 
 下圖顯示函式定義的組件。 陰影區域是函式主體。
 
- ![函式定義的組件](../cpp/media/vc38ru1.gif "vc38RU1")函式定義的組件
+![函式定義的組件](../cpp/media/vc38ru1.gif "vc38RU1")函式定義的組件
 
 ## <a name="function-definitions"></a>函式定義
 
@@ -205,7 +205,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
- **C + + 11:** 若要明確處理透過右值參考或左值參考傳遞引數，使用雙連字號的參數上表示通用參考：
+**C + + 11:** 若要明確處理透過右值參考或左值參考傳遞引數，使用雙連字號的參數上表示通用參考：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -315,22 +315,22 @@ template<typename F, typename Tuple = tuple<T...>,
     ```cpp
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     struct S
     {
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         S s = g();
@@ -338,16 +338,16 @@ template<typename F, typename Tuple = tuple<T...>,
         return 0;
     }
     ```
-    
+
 1. 傳回的 std:: tuple 或 std:: pair 物件：
 
     ```cpp
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-        
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -355,20 +355,20 @@ template<typename F, typename Tuple = tuple<T...>,
         double d{ .01 };
         return { i,s,d };
     }
-    
+
     int main()
     {
         auto t = f();
         cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << endl;
-     
+
         // --or--
-    
+
         int myval;
         string myname;
         double mydecimal;
         tie(myval, myname, mydecimal) = f();
         cout << myval << " " << myname << " " << mydecimal << endl;
-    
+
         return 0;
     }
     ```
@@ -379,9 +379,9 @@ template<typename F, typename Tuple = tuple<T...>,
     #include <tuple>
     #include <string>
     #include <iostream>
-    
+
     using namespace std;
-    
+
     tuple<int, string, double> f()
     {
         int i{ 108 };
@@ -394,25 +394,25 @@ template<typename F, typename Tuple = tuple<T...>,
         string name;
         int num;
     };
-    
+
     S g()
     {
         string t{ "hello" };
         int u{ 42 };
         return { t, u };
     }
-    
+
     int main()
     {
         auto[x, y, z] = f(); // init from tuple
         cout << x << " " << y << " " << z << endl;
-    
+
         auto[a, b] = g(); // init from POD struct
         cout << a << " " << b << endl;
         return 0;
     }
     ```
-    
+
 1. 除了使用本身的傳回值，您可以 「 傳回 」 值定義任何數目的參數，使用依參照傳遞，讓函式可以修改或初始化之物件的呼叫端提供的值。 如需詳細資訊，請參閱 <<c0> [ 參考類型函式引數](reference-type-function-arguments.md)。
 
 ## <a name="function-pointers"></a>函式指標
@@ -435,9 +435,10 @@ int (*myFunction(char* s))(int);
 上述宣告相當於上面使用 typedef 的宣告。
 
 ## <a name="see-also"></a>另請參閱
- [函式多載](../cpp/function-overloading.md)  
- [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)  
- [明確的預設和已刪除的函式](../cpp/explicitly-defaulted-and-deleted-functions.md)  
- [函式上的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)  
- [預設引數](../cpp/default-arguments.md)  
- [內嵌函式](../cpp/inline-functions-cpp.md)
+
+[函式多載](../cpp/function-overloading.md)<br/>
+[具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)<br/>
+[明確的預設和已刪除的函式](../cpp/explicitly-defaulted-and-deleted-functions.md)<br/>
+[函式上的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)<br/>
+[預設引數](../cpp/default-arguments.md)<br/>
+[內嵌函式](../cpp/inline-functions-cpp.md)

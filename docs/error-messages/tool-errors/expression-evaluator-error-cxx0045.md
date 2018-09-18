@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0045 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0045 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac52b16c2c8551282b79ef6a7fda40e24acc6bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9913bc77dfc3fbc95bd03fd32c954c4d304d27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023198"
 ---
 # <a name="expression-evaluator-error-cxx0045"></a>運算式評估工具錯誤 CXX0045
-不是函式  
-  
- 符號不是函式名稱的程式中提供的引數清單。  
-  
-## <a name="example"></a>範例  
-  
-```  
-queue( alpha, beta )  
-```  
-  
- 當`queue`不是函式。  
-  
- 這個錯誤是與 can0045 相同。
+
+不是函式
+
+符號不是函式名稱的程式中提供的引數清單。
+
+## <a name="example"></a>範例
+
+```
+queue( alpha, beta )
+```
+
+當`queue`不是函式。
+
+此錯誤是與 can0045 相同。

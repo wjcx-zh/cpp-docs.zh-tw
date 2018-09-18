@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2883 |Microsoft 文件
+title: 編譯器錯誤 C2883 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3119db27127521f5078a5753bb82c82da381ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50cc5b2abb34fae21bea78aa146e74b9aa9491c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019259"
 ---
 # <a name="compiler-error-c2883"></a>編譯器錯誤 C2883
-'name': 由 using 宣告引入 'identifier' 函式宣告衝突  
-  
- 您嘗試一次以上定義的函式。 第一個定義已命名空間，與從`using`宣告。 第二個是區域定義。  
-  
- 下列範例會產生 C2883:  
-  
-```  
-// C2883.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-int main() {  
-   using A::z;  
-   void z(int);   // C2883  z is already defined  
-}  
+
+'name': 由 using 宣告引入 'identifier' 函式宣告衝突
+
+您嘗試一次以上定義的函式。 從具有的命名空間進行的第一個定義`using`宣告。 第二個是本機的定義。
+
+下列範例會產生 C2883:
+
+```
+// C2883.cpp
+namespace A {
+   void z(int);
+}
+
+int main() {
+   using A::z;
+   void z(int);   // C2883  z is already defined
+}
 ```

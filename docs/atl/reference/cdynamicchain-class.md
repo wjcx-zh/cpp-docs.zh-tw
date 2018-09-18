@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017959"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 類別
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>參數
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]鏈結的物件和其訊息對應相關聯的唯一識別碼。
 
-*hWnd*  
+*hWnd*<br/>
 [in]接收訊息的視窗控制代碼。
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送至視窗的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
-*lResult*  
+*lResult*<br/>
 [out]訊息處理的結果。
 
 ### <a name="return-value"></a>傳回值
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>參數
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]鏈結的物件和其訊息對應相關聯的唯一識別碼。 您原本定義此值，透過呼叫[SetChainEntry](#setchainentry)。
 
 ### <a name="return-value"></a>傳回值
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>參數
 
-*dwChainID*  
+*dwChainID*<br/>
 [in]鏈結的物件和其訊息對應相關聯的唯一識別碼。
 
-*pObject*  
+*pObject*<br/>
 [in]宣告訊息對應鏈結物件的指標。 這個物件必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]訊息對應中的鏈結的物件識別碼。 預設值為 0，用來識別宣告的預設訊息對應[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要指定替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
 
 ### <a name="return-value"></a>傳回值
@@ -201,5 +201,5 @@ BOOL SetChainEntry(
 
 ## <a name="see-also"></a>另請參閱
 
-[CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
+[CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

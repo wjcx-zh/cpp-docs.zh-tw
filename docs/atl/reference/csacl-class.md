@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f42d90fa2fb04c75f6c45db8d099d4a1a9a74c2a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d408ab5d0575984fb597cec28f01484d9b878ebf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108387"
 ---
 # <a name="csacl-class"></a>CSacl 類別
 
@@ -110,25 +110,25 @@ bool AddAuditAce(
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)物件。
 
-*AccessMask*  
+*AccessMask*<br/>
 指定要稽核的存取權限遮罩指定`CSid`物件。
 
-*bSuccess*  
+*bSuccess*<br/>
 指定是否要稽核允許的存取嘗試。 設定此旗標，true 以啟用稽核;否則，請將它設定為 false。
 
-*bFailure*  
+*bFailure*<br/>
 指定是否要稽核拒絕的存取嘗試。 設定此旗標，true 以啟用稽核;否則，請將它設定為 false。
 
-*AceFlags*  
+*AceFlags*<br/>
 一組控制 ACE 繼承的位元旗標。
 
-*pObjectType*  
+*pObjectType*<br/>
 物件類型。
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 繼承的物件型別。
 
 ### <a name="return-value"></a>傳回值
@@ -152,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 將現有`ACL`（存取控制清單） 結構。
 
 ### <a name="remarks"></a>備註
@@ -193,7 +193,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `ACL` （存取控制清單） 指派給現有的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -210,7 +210,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>參數
 
-*nIndex*  
+*nIndex*<br/>
 若要移除的 ACE 項目索引。
 
 ### <a name="remarks"></a>備註
@@ -231,8 +231,8 @@ void RemoveAllAces() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAcl 類別](../../atl/reference/cacl-class.md)   
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)   
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[CAcl 類別](../../atl/reference/cacl-class.md)<br/>
+[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

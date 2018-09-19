@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2714 |Microsoft 文件
+title: 編譯器錯誤 C2714 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b012acdebd5ccddb056d9558bb1034ac2ba0b49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a5a8a2157fc574b9a43688bfc8fa9adcbcb676f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235156"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108491"
 ---
 # <a name="compiler-error-c2714"></a>編譯器錯誤 C2714
-不允許 __alignof(void)  
-  
- 無效的值傳遞給操作員。  
-  
- 請參閱[__alignof 運算子](../../cpp/alignof-operator.md)如需詳細資訊。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2714。  
-  
-```  
-// C2714.cpp  
-int main() {  
-   return __alignof(void);   // C2714  
-   return __alignof(char);   // OK  
-}  
+
+不允許 __alignof(void)
+
+無效的值傳遞給操作員。
+
+請參閱[__alignof 運算子](../../cpp/alignof-operator.md)如需詳細資訊。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2714。
+
+```
+// C2714.cpp
+int main() {
+   return __alignof(void);   // C2714
+   return __alignof(char);   // OK
+}
 ```

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f59e43bbc1d5f11d1582bad577cc0d8eb971d121
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108582"
 ---
 # <a name="dual-interfaces-and-atl"></a>雙重介面和 ATL
 
@@ -29,21 +29,21 @@ ms.locfileid: "43765131"
 
 ## <a name="in-this-section"></a>本節內容
 
-[實作雙重介面](../atl/implementing-a-dual-interface.md)  
+[實作雙重介面](../atl/implementing-a-dual-interface.md)<br/>
 討論 「 類別 」 和 「 參與實作雙重介面的精靈。
 
-[多個雙重介面](../atl/multiple-dual-interfaces.md)  
+[多個雙重介面](../atl/multiple-dual-interfaces.md)<br/>
 討論如何在單一物件上的多個雙重介面公開 （expose）。
 
-[Nonextensible 屬性](../atl/nonextensible-attribute.md)  
+[Nonextensible 屬性](../atl/nonextensible-attribute.md)<br/>
 討論使用時機**nonextensible**介面定義上的屬性。
 
-[雙重介面和事件](../atl/dual-interfaces-and-events.md)  
+[雙重介面和事件](../atl/dual-interfaces-and-events.md)<br/>
 討論設計考量，不讓介面的雙重介面的事件。
 
 ## <a name="related-sections"></a>相關章節
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
 
 ## <a name="see-also"></a>另請參閱

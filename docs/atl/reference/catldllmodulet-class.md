@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107823"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 類別
 
@@ -38,13 +38,13 @@ ms.locfileid: "43766570"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別衍生自`CAtlDllModuleT`。
 
 ## <a name="members"></a>成員
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>參數
 
-*rclsid*  
+*rclsid*<br/>
 若要建立之物件的 CLSID。
 
-*riid*  
+*riid*<br/>
 要求的介面 IID。
 
-*ppv*  
+*ppv*<br/>
 所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppv*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwReason*  
+*dwReason*<br/>
 如果設為 DLL_PROCESS_ATTACH、 DLL_THREAD_ATTACH 和 DLL_THREAD_DETACH 通知呼叫已停用。
 
-*lpreserved，請*  
+*lpreserved，請*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 如果型別程式庫是要註冊，則為 TRUE。 預設值為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>參數
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果型別程式庫是從登錄中移除，則為 TRUE。 預設值為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>參數
 
-*rclsid*  
+*rclsid*<br/>
 若要建立之物件的 CLSID。
 
-*riid*  
+*riid*<br/>
 要求的介面 IID。
 
-*ppv*  
+*ppv*<br/>
 所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppv*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -231,7 +231,7 @@ HRESULT GetClassObject(
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlModuleT 類別](../../atl/reference/catlmodulet-class.md)   
-[Catldllmodulet 類別](../../atl/reference/catlexemodulet-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[CAtlModuleT 類別](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlDllModuleT 類別](../../atl/reference/catlexemodulet-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

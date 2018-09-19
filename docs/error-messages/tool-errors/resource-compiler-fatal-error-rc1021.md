@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1021 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1021 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27cc4096f84abc47c53b5c08eeacf5ebc92186da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d67b52282483e0767331b198fdf990660c64e85a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108506"
 ---
 # <a name="resource-compiler-fatal-error-rc1021"></a>資源編譯器嚴重錯誤 RC1021
-無效的前置處理器命令 'string'  
-  
- 後面的數字符號字元 (**#**) 並未形成有效的前置處理器指示詞。  
-  
- 數字的符號不能當做識別項中的第一個字元。
+
+無效的前置處理器命令 'string'
+
+後面的數字符號字元 (**#**) 不會形成有效的前置處理器指示詞。
+
+數字的符號不能做為第一個字元在識別項。

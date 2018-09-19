@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d18a6b5eae55373be9ddc71a4d856547bf420c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a816d10a0cb9665938e77ae8c649464b7b6768c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108478"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 類別
 
@@ -57,17 +57,17 @@ ms.locfileid: "43758426"
 
 ```
 template <class T,
-    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>  
+    int nBindFlags = BINDF_ASYNCHRONOUS | BINDF_ASYNCSTORAGE | BINDF_GETNEWESTVERSION | BINDF_NOWRITECACHE>
 class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadModel::ThreadModelNoCS>,
     public IBindStatusCallbackImpl<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您包含收到資料時所呼叫的函式的類別。
 
-*nBindFlags*  
+*nBindFlags*<br/>
 指定所傳回的繫結旗標[GetBindInfo](#getbindinfo)。 預設實作設定繫結還是非同步、 擷取資料/物件的最新版本並不會儲存在磁碟快取中擷取的資料。
 
 ## <a name="members"></a>成員
@@ -162,7 +162,7 @@ CBindStatusCallback();
 會建立`CBindStatusCallback`物件並呼叫`StartAsyncDownload`開始以非同步方式下載資料，從指定的 URL。
 
 ```
-static HRESULT Download(  
+static HRESULT Download(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -172,21 +172,21 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*  
+*太平洋時間*<br/>
 [in]要求非同步資料傳輸物件的指標。 `CBindStatusCallback`物件這個物件的類別樣板化。
 
-*pFunc*  
+*pFunc*<br/>
 [in]接收資料讀取函式的指標。 函式是物件的類別型別的成員`T`。 請參閱[StartAsyncDownload](#startasyncdownload)如語法和範例。
 
-*Ibttransportconfig*  
+*Ibttransportconfig*<br/>
 [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如: 
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in]`IUnknown`的容器。 預設為 NULL。
 
-*bRelative*  
+*bRelative*<br/>
 [in]旗標，指出 URL 相對或絕對。 根據預設，這表示 URL 的 FALSE 是絕對路徑。
 
 ### <a name="return-value"></a>傳回值
@@ -209,7 +209,7 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>參數
 
-*pgrfBSCF*  
+*pgrfBSCF*<br/>
 [out]BINDF 列舉值，表示如何繫結作業應該就會發生指標。 根據預設，設定下列的列舉值：
 
 BINDF_ASYNCHRONOUS 非同步下載。
@@ -220,7 +220,7 @@ BINDF_GETNEWESTVERSION 繫結作業應該擷取資料的最新版本。
 
 繫結作業不應該儲存的 BINDF_NOWRITECACHE 擷取磁碟快取中的資料。
 
-*pbindinfo*  
+*pbindinfo*<br/>
 [in、 out]指標`BINDINFO`結構讓物件如何想發生的繫結的詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -241,7 +241,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>參數
 
-*pnPriority*  
+*pnPriority*<br/>
 [out]位址**長**，成功時，接收變數的優先順序。
 
 ### <a name="return-value"></a>傳回值
@@ -284,12 +284,12 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 此函式所指的`m_pFunc`是物件之類別的成員，而且具有下列語法：
 
-```  
-void Function_Name(  
-   CBindStatusCallback<T>* pbsc,  
-   BYTE* pBytes,  
-   DWORD dwSize  
-   );  
+```
+void Function_Name(
+   CBindStatusCallback<T>* pbsc,
+   BYTE* pBytes,
+   DWORD dwSize
+   );
 ```
 
 ##  <a name="m_pt"></a>  CBindStatusCallback::m_pT
@@ -357,7 +357,7 @@ CComPtr<IStream> m_spStream;
 系統提供的非同步 moniker 呼叫`OnDataAvailable`提供資料給物件，可供使用。
 
 ```
-STDMETHOD(  
+STDMETHOD(
     OnDataAvailable)(DWORD grfBSCF,
     DWORD dwSize,
     FORMATETC* /* pformatetc */,
@@ -366,16 +366,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>參數
 
-*grfBSCF*  
+*grfBSCF*<br/>
 [in]BSCF 列舉值。 一或多個項目： BSCF_FIRSTDATANOTIFICATION、 BSCF_INTERMEDIARYDATANOTIFICATION 或 BSCF_LASTDATANOTIFICATION。
 
-*dwSize*  
+*dwSize*<br/>
 [in]（以位元組為單位） 的繫結開始之後，您可以使用資料的累積數量。 可以是零，表示的資料量無關，或特定數量變成可用。
 
-*pformatetc*  
+*pformatetc*<br/>
 [in]指標[FORMATETC](/windows/desktop/com/the-formatetc-structure)結構，其中包含可用的資料格式。 如果沒有任何格式，可以是 CF_NULL。
 
-*pstgmed*  
+*pstgmed*<br/>
 [in]指標[STGMEDIUM](/windows/desktop/com/the-stgmedium-structure)結構，其中保存目前可用的實際資料。
 
 ### <a name="return-value"></a>傳回值
@@ -396,7 +396,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>參數
 
-*dwReserved*  
+*dwReserved*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -413,10 +413,10 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 所要求介面的介面識別項。 未使用。
 
-*punk*  
+*punk*<br/>
 IUnknown 介面的位址。 未使用。
 
 ### <a name="return-value"></a>傳回值
@@ -437,16 +437,16 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>參數
 
-*ulProgress*  
+*ulProgress*<br/>
 不帶正負號的長整數。 未使用。
 
-*ulProgressMax*  
+*ulProgressMax*<br/>
 不帶正負號的長整數未使用。
 
-*ulStatusCode*  
+*ulStatusCode*<br/>
 不帶正負號的長整數。 未使用。
 
-*szStatusText*  
+*szStatusText*<br/>
 字串值的位址。 未使用。
 
 ### <a name="return-value"></a>傳回值
@@ -463,10 +463,10 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>參數
 
-*dwReserved*  
+*dwReserved*<br/>
 保留供未來使用。
 
-*pBinding*  
+*pBinding*<br/>
 [in]在目前的 IBinding 介面位址繫結作業。 這不能是 NULL。 用戶端應該在繫結物件的參考，將這個指標上呼叫 AddRef。
 
 ##  <a name="onstopbinding"></a>  CBindStatusCallback::OnStopBinding
@@ -479,11 +479,11 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>參數
 
-*hresult*  
+*hresult*<br/>
 繫結作業所傳回的狀態碼。
 
-szStatusText  
-字串值未使用的位址。
+*szError*<br/>
+字串值的位址。 未使用。
 
 ### <a name="remarks"></a>備註
 
@@ -494,7 +494,7 @@ szStatusText
 啟動非同步下載資料，從指定的 URL。
 
 ```
-HRESULT StartAsyncDownload(  
+HRESULT StartAsyncDownload(
     T* pT,
     ATL_PDATAAVAILABLE pFunc,
     BSTR bstrURL,
@@ -504,21 +504,21 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*  
+*太平洋時間*<br/>
 [in]要求非同步資料傳輸物件的指標。 `CBindStatusCallback`物件這個物件的類別樣板化。
 
-*pFunc*  
+*pFunc*<br/>
 [in]函式來接收所讀取的資料指標。 函式是物件的類別型別的成員`T`。 請參閱**備註**如語法和範例。
 
-*Ibttransportconfig*  
+*Ibttransportconfig*<br/>
 [in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如: 
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*pUnkContainer*  
+*pUnkContainer*<br/>
 [in]`IUnknown`的容器。 預設為 NULL。
 
-*bRelative*  
+*bRelative*<br/>
 [in]旗標，指出 URL 相對或絕對。 根據預設，這表示 URL 的 FALSE 是絕對路徑。
 
 ### <a name="return-value"></a>傳回值

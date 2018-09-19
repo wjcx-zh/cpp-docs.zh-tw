@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3060 |Microsoft 文件
+title: 編譯器錯誤 C3060 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c443517edb26258f91497a4d82fcfd7ff26893d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c053f7b92ae12b3e99792603cf7b3c5ac9b49227
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108595"
 ---
 # <a name="compiler-error-c3060"></a>編譯器錯誤 C3060
-'member': Friend 函式不可使用限定名稱在類別中定義 (只可以宣告)  
-  
- 使用限定名稱定義了 Friend 函式，這是不允許的做法。  
-  
- 下列範例會產生 C3060：  
-  
-```  
-// C3060.cpp  
-class A {  
-public:  
-   void func();  
-};  
-  
-class C {  
-public:  
-   friend void A::func() { }   // C3060  
-   // Try the following line and the out of class definition:  
-   // friend void A::func();  
-};  
-  
-// void A::func(){}  
+
+'member': Friend 函式不可使用限定名稱在類別中定義 (只可以宣告)
+
+使用限定名稱定義了 Friend 函式，這是不允許的做法。
+
+下列範例會產生 C3060：
+
+```
+// C3060.cpp
+class A {
+public:
+   void func();
+};
+
+class C {
+public:
+   friend void A::func() { }   // C3060
+   // Try the following line and the out of class definition:
+   // friend void A::func();
+};
+
+// void A::func(){}
 ```

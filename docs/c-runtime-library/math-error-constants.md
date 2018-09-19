@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb491e8073acf2af525814b595ce79365df0fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063329"
 ---
 # <a name="math-error-constants"></a>運算錯誤常數
-## <a name="syntax"></a>語法  
-  
-```  
-  
-#include <math.h>  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 執行階段程式庫的數學常式可能會產生數學錯誤常數。  
-  
- 這些錯誤 (如下所述) 會對應至在 MATH.H 中定義的例外狀況類型，並會在發生數學錯誤時由 `_matherr` 函式傳回。  
-  
-|常數|意義|  
-|--------------|-------------|  
-|`_DOMAIN`|函式的引數位於函式的定義域之外。|  
-|`_OVERFLOW`|結果太大而無法以函式的傳回類型表示。|  
-|`_PLOSS`|發生精確度部分遺失。|  
-|`_SING`|引數獨特性：函式的引數具有不合法的值。 (例如，值 0 傳遞至要求非零值的函式)。|  
-|`_TLOSS`|發生精確度完全遺失。|  
-|`_UNDERFLOW`|結果太小而無法表示。|  
-  
-## <a name="see-also"></a>請參閱  
- [_matherr](../c-runtime-library/reference/matherr.md)   
- [全域常數](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>語法
+
+```
+
+#include <math.h>
+
+```
+
+## <a name="remarks"></a>備註
+
+執行階段程式庫的數學常式可能會產生數學錯誤常數。
+
+這些錯誤 (如下所述) 會對應至在 MATH.H 中定義的例外狀況類型，並會在發生數學錯誤時由 `_matherr` 函式傳回。
+
+|常數|意義|
+|--------------|-------------|
+|`_DOMAIN`|函式的引數位於函式的定義域之外。|
+|`_OVERFLOW`|結果太大而無法以函式的傳回類型表示。|
+|`_PLOSS`|發生精確度部分遺失。|
+|`_SING`|引數獨特性：函式的引數具有不合法的值。 (例如，值 0 傳遞至要求非零值的函式)。|
+|`_TLOSS`|發生精確度完全遺失。|
+|`_UNDERFLOW`|結果太小而無法表示。|
+
+## <a name="see-also"></a>請參閱
+
+[_matherr](../c-runtime-library/reference/matherr.md)<br/>
+[全域常數](../c-runtime-library/global-constants.md)

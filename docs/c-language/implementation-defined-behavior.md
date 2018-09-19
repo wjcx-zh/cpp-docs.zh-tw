@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd276b110645dbb868d24315208052a6d05355a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 496403f21ddd7e55aa5a504dd12e2c1e5e423a88
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095523"
 ---
 # <a name="implementation-defined-behavior"></a>實作定義的行為
-ANSI X3.159-1989，美國國家資訊系統標準 - 程式語言 - C，包含一個稱為＜可攜性問題＞的章節。 ANSI 章節列出 C 語言當中 ANSI 對每種特定實作開放的區域。 本節說明 Microsoft C 如何處理 C 語言中這些由實作定義的區域。  
-  
- 本節的順序比照 ANSI 章節的順序。 其中討論的每個項目均包含說明實作定義行為的 ANSI 參考。  
-  
+
+ANSI X3.159-1989，美國國家資訊系統標準 - 程式語言 - C，包含一個稱為＜可攜性問題＞的章節。 ANSI 章節列出 C 語言當中 ANSI 對每種特定實作開放的區域。 本節說明 Microsoft C 如何處理 C 語言中這些由實作定義的區域。
+
+本節的順序比照 ANSI 章節的順序。 其中討論的每個項目均包含說明實作定義行為的 ANSI 參考。
+
 > [!NOTE]
->  本節僅描述美國英文版的 C 編譯器。 其他語言的 Microsoft C 實作可能稍有不同。  
-  
-## <a name="see-also"></a>請參閱  
- [C 語言參考](../c-language/c-language-reference.md)
+>  本節僅描述美國英文版的 C 編譯器。 其他語言的 Microsoft C 實作可能稍有不同。
+
+## <a name="see-also"></a>請參閱
+
+[C 語言參考](../c-language/c-language-reference.md)

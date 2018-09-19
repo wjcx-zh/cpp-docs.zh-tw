@@ -16,16 +16,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078578"
 ---
 # <a name="inline-functions"></a>內嵌函式
 
-**Microsoft 特定的**
+**Microsoft 專屬**
 
 `__inline` 關鍵字會指示編譯器針對函式呼叫的每個執行個體，取代函式定義內的程式碼。 不過，編譯器會判斷是否進行替代。 例如，如果函式的位址已被佔用，或函式太大無法內嵌，則編譯器不會內嵌函式。
 
@@ -45,7 +45,7 @@ ms.locfileid: "32387368"
 
 使用 `__inline` 的函式不應與內嵌組合語言程式碼混淆。 如需詳細資訊，請參閱[內嵌組合語言](../c-language/inline-assembler-c.md)。
 
-**END Microsoft 特定的**  
+**END Microsoft 特定的**
 
 ## <a name="see-also"></a>請參閱
 

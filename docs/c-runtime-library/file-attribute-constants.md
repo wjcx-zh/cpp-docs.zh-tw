@@ -35,46 +35,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178082356eb08130879cd3b4f2118cbf75e451ce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42745d25c0f743fa1a11226d5cfe433327c8ff2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077044"
 ---
 # <a name="file-attribute-constants"></a>檔案屬性常數
-## <a name="syntax"></a>語法  
-  
-```  
-  
-#include <io.h>  
-```  
-  
-## <a name="remarks"></a>備註  
- 這些常數會指定函式所指定檔案或目錄的目前屬性。  
-  
- 屬性會由下列所示常數來代表：  
-  
- `_A_ARCH`  
- 封存。 每當 BACKUP 命令變更或清除檔案時即設定。 值：0x20  
-  
- `_A_HIDDEN`  
- 隱藏的檔案。 除非您使用 /AH 選項，否則使用 DIR 命令時並不常見。 傳回一般檔案以及具有此屬性之檔案的相關資訊。 值：0x02  
-  
- `_A_NORMAL`  
- 一般。 檔案可進行讀取或寫入而不受限制。 值：0x00  
-  
- `_A_RDONLY`  
- 唯讀。 無法開啟檔案以進行寫入，也無法建立具有相同名稱的檔案。 值：0x01  
-  
- `_A_SUBDIR`  
- 子目錄。 值：0x10  
-  
- `_A_SYSTEM`  
- 系統檔案。 除非使用 /AS 選項，否則使用 DIR 命令時並不常見。 值：0x04  
-  
- 可以使用 OR 運算子 (&#124;) 結合多個常數。  
-  
-## <a name="see-also"></a>請參閱  
- [檔案名稱搜尋函式](../c-runtime-library/filename-search-functions.md)   
- [全域常數](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>語法
+
+```
+
+#include <io.h>
+```
+
+## <a name="remarks"></a>備註
+
+這些常數會指定函式所指定檔案或目錄的目前屬性。
+
+屬性會由下列所示常數來代表：
+
+|常數|描述|
+|-|-|
+|`_A_ARCH`| 封存。 每當 BACKUP 命令變更或清除檔案時即設定。 值：0x20|
+|`_A_HIDDEN`| 隱藏的檔案。 除非您使用 /AH 選項，否則使用 DIR 命令時並不常見。 傳回一般檔案以及具有此屬性之檔案的相關資訊。 值：0x02|
+|`_A_NORMAL`| 一般。 檔案可進行讀取或寫入而不受限制。 值：0x00|
+|`_A_RDONLY`| 唯讀。 無法開啟檔案以進行寫入，也無法建立具有相同名稱的檔案。 值：0x01|
+|`_A_SUBDIR`| 子目錄。 值：0x10|
+|`_A_SYSTEM`| 系統檔案。 除非使用 /AS 選項，否則使用 DIR 命令時並不常見。 值：0x04|
+
+可以使用 OR 運算子 (&#124;) 結合多個常數。
+
+## <a name="see-also"></a>請參閱
+
+[檔案名稱搜尋函式](../c-runtime-library/filename-search-functions.md)<br/>
+[全域常數](../c-runtime-library/global-constants.md)

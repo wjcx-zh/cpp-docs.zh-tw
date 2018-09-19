@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762472"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091904"
 ---
 # <a name="array-declarations"></a>陣列宣告
 
@@ -48,9 +48,9 @@ ms.locfileid: "43762472"
 
 因為 *constant-expression* 是選擇性的，所以其語法有兩種形式：
 
--   第一個形式會定義陣列變數。 括弧內的 *constant-expression* 引數會指定陣列中的元素數目。 *constant-expression* (如果有的話) 必須具有整數類型與大於零的值。 每個元素都具有 *type-specifier* 所指定的類型，可以是除了 `void` 以外的任何類型。 陣列元素不可為函式類型。
+- 第一個形式會定義陣列變數。 括弧內的 *constant-expression* 引數會指定陣列中的元素數目。 *constant-expression* (如果有的話) 必須具有整數類型與大於零的值。 每個元素都具有 *type-specifier* 所指定的類型，可以是除了 `void` 以外的任何類型。 陣列元素不可為函式類型。
 
--   第二個形式會宣告一個已在其他地方定義的變數。 它省略了方括弧中的 *constant-expression* 引數，但未省略括弧。 只有當您先前初始化陣列、將其宣告為參數，或已在程式的其他位置明確將其宣告為陣列的參考時，才可以使用這個形式。
+- 第二個形式會宣告一個已在其他地方定義的變數。 它省略了方括弧中的 *constant-expression* 引數，但未省略括弧。 只有當您先前初始化陣列、將其宣告為參數，或已在程式的其他位置明確將其宣告為陣列的參考時，才可以使用這個形式。
 
 這兩種形式中，*direct-declarator*會為變數命名，而且可以修改變數的類型。 方括弧 (**[ ]**) 加上後面的 *direct-declarator* 會將宣告子修改為陣列類型。
 
@@ -75,6 +75,7 @@ char A[2][3];
 若要參考陣列的個別元素，請使用一個註標運算式，如[後置運算子](../c-language/postfix-operators.md)中所述。
 
 ## <a name="examples"></a>範例
+
 這些範例說明陣列宣告：
 
 ```C

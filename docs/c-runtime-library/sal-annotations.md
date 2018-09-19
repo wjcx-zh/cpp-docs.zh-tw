@@ -57,17 +57,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb935285c8c90c238baf59cd11a1232fa33d895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 363d7ff6de4c808c3c7b8d37a9a9f95bf069723c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107490"
 ---
 # <a name="sal-annotations"></a>SAL 註釋
-如果檢查程式庫標頭檔，您可能會注意到一些不尋常的註釋，例如 `_In_z` 和 `_Out_z_cap_(_Size)`。 這些是 Microsoft 原始程式碼註釋語言 (SAL) 的範例，它提供一組註釋說明函式如何使用它的參數，例如，其關於參數的假設和完成時的保證。 標頭檔 \<sal.h> 定義註釋。  
-  
- 如需在 Visual Studio 中使用 SAL 註釋的詳細資訊，請參閱[使用 SAL 註釋減少 C/C++ 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。  
-  
-## <a name="see-also"></a>請參閱  
- [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
+
+如果檢查程式庫標頭檔，您可能會注意到一些不尋常的註釋，例如 `_In_z` 和 `_Out_z_cap_(_Size)`。 這些是 Microsoft 原始程式碼註釋語言 (SAL) 的範例，它提供一組註釋說明函式如何使用它的參數，例如，其關於參數的假設和完成時的保證。 標頭檔 \<sal.h> 定義註釋。
+
+如需在 Visual Studio 中使用 SAL 註釋的詳細資訊，請參閱[使用 SAL 註釋減少 C/C++ 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+
+## <a name="see-also"></a>請參閱
+
+[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

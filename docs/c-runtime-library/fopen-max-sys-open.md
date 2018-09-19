@@ -22,24 +22,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3f834dd94ab67ade81969de76eef33bf139299f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18653eaae84e619e549146bd721dee3199f90ac5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388931"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090889"
 ---
 # <a name="fopenmax-sysopen"></a>FOPEN_MAX, _SYS_OPEN
-## <a name="syntax"></a>語法  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 這是可以同時開啟的檔案數目上限。 `FOPEN_MAX` 是 ANSI 相容名稱。 `_SYS_OPEN` 是為了與現有程式碼相容而提供。  
-  
-## <a name="see-also"></a>請參閱  
- [全域常數](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>語法
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>備註
+
+這是可以同時開啟的檔案數目上限。 `FOPEN_MAX` 是 ANSI 相容名稱。 `_SYS_OPEN` 是為了與現有程式碼相容而提供。
+
+## <a name="see-also"></a>請參閱
+
+[全域常數](../c-runtime-library/global-constants.md)

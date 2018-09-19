@@ -30,34 +30,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532aac2e47a402ae04ba4d4bf4fcb133c997bd31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59ec444ae81d680bf57aa4542f231c021f1abddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102773"
 ---
 # <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func、___unguarded_readlc_active_add_func
-已過時。 CRT 只會為保留二進位相容性匯出這些內部函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-int ___setlc_active_func(void);  
-int * ___unguarded_readlc_active_add_func(void);  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 傳回的值並不重要。  
-  
-## <a name="remarks"></a>備註  
- 雖然內部 CRT 函式 `___setlc_active_func` 和 `___unguarded_readlc_active_add_func` 已過時且不再提供使用，CRT 程式庫還是會為了保留二進位相容性匯出這些函式。 `___setlc_active_func` 的最初目的是要將目前作用中呼叫數傳回至 `setlocale` 函式。 `___unguarded_readlc_active_add_func` 的最初目的是要在不鎖定地區設定的情況下，傳回參考地區設定的函式數。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`___setlc_active_func`, `___unguarded_readlc_active_add_func`|無|  
-  
-## <a name="see-also"></a>請參閱  
- [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+已過時。 CRT 只會為保留二進位相容性匯出這些內部函式。
+
+## <a name="syntax"></a>語法
+
+```cpp
+int ___setlc_active_func(void);
+int * ___unguarded_readlc_active_add_func(void);
+```
+
+## <a name="return-value"></a>傳回值
+
+傳回的值並不重要。
+
+## <a name="remarks"></a>備註
+
+雖然內部 CRT 函式 `___setlc_active_func` 和 `___unguarded_readlc_active_add_func` 已過時且不再提供使用，CRT 程式庫還是會為了保留二進位相容性匯出這些函式。 `___setlc_active_func` 的最初目的是要將目前作用中呼叫數傳回至 `setlocale` 函式。 `___unguarded_readlc_active_add_func` 的最初目的是要在不鎖定地區設定的情況下，傳回參考地區設定的函式數。
+
+## <a name="requirements"></a>需求
+
+|常式傳回的值|必要的標頭|
+|-------------|---------------------|
+|`___setlc_active_func`, `___unguarded_readlc_active_add_func`|無|
+
+## <a name="see-also"></a>請參閱
+
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

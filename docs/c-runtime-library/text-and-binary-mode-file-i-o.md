@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be1a3619fcd441dbcca53b0a1c369e30f9fb678
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 133f62347998ad8238c3136c3de03b08ba41346d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116252"
 ---
 # <a name="text-and-binary-mode-file-io"></a>文字和二進位模式檔案 I/O
 
@@ -47,4 +47,4 @@ ms.locfileid: "32411480"
 ## <a name="see-also"></a>請參閱
 
 [輸入和輸出](../c-runtime-library/input-and-output.md)<br/>
- [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087473"
 ---
 # <a name="indirection-and-address-of-operators"></a>間接取值和傳址運算子
 
@@ -52,7 +52,6 @@ ms.locfileid: "32389416"
 
 如果運算元是一元 __&#42;__ 運算子的結果，則不評估運算子，且結果就如同兩者已省略。 結果不是左值，並仍套用運算子的條件約束。 如果運算元是 __&#91;&#93;__ 運算子的結果，則 __&__ 運算子或 __&#91;&#93;__ 運算子隱含的一元 __&#42;__ 皆不評估。 結果和移除 __&__ 運算子及將 __&#91;&#93;__ 運算子變更為 __+__ 運算子具有相同的效果。 否則，結果就是運算元指定之物件或函式的指標。
 
-
 ## <a name="examples"></a>範例
 
 下列是使用這些常見宣告的範例：
@@ -65,7 +64,7 @@ double d;
 
 此陳述式使用傳址運算子 (**&**) 取得陣列 `a` 第六個元素的位址。 結果會儲存在指標變數 `pa`：
 
-```C  
+```C
 pa = &a[5];
 ```
 
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 宣告 `roundup` 函式後，就會宣告及初始化 `roundup` 的兩個指標。 第一個指標 (`proundup`) 只使用函式的名稱初始化，而第二個指標 (`pround`) 則在初始化時使用傳址運算子。 兩個初始化相同。
 
 ## <a name="see-also"></a>另請參閱
 
-[間接取值運算子：&#42;](../cpp/indirection-operator-star.md)  
-[傳址運算子：&](../cpp/address-of-operator-amp.md)  
+[間接取值運算子：&#42;](../cpp/indirection-operator-star.md)<br/>
+[傳址運算子：&](../cpp/address-of-operator-amp.md)

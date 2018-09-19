@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837361ce7116deb0b425e380959de3acb6dafa57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed3d760989d131ecdc2491d0b1952e657949fb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065669"
 ---
 # <a name="truncation-of-text-files"></a>文字檔截斷
-**ANSI 4.9.3** 文字資料流上的寫入作業是否會導致相關聯的檔案於該點之後被截斷  
-  
- 寫入文字資料流不會在該點之後截斷檔案。  
-  
-## <a name="see-also"></a>請參閱  
- [程式庫函式](../c-language/library-functions.md)
+
+**ANSI 4.9.3** 文字資料流上的寫入作業是否會導致相關聯的檔案於該點之後被截斷
+
+寫入文字資料流不會在該點之後截斷檔案。
+
+## <a name="see-also"></a>請參閱
+
+[程式庫函式](../c-language/library-functions.md)

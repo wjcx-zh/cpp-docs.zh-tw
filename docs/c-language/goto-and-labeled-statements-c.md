@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadad9f2f025db4f7c3a63a7948a6cbbcfbd3ac3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5183ff4f770ca0b6396835ed680b54fe13811e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080606"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和標記陳述式 (C)
-`goto` 陳述式會將控制項傳輸至標籤。 所指的標籤必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。  
-  
+
+`goto` 陳述式會將控制項傳輸至標籤。 所指的標籤必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。
+
 ## <a name="syntax"></a>語法
 
 *statement*:<br/>
@@ -40,41 +41,42 @@ ms.locfileid: "43761426"
 *labeled-statement*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*識別碼*  **:**  *陳述式*
 
-陳述式標籤只對 `goto` 陳述式有意義，在任何其他內容中，加上標籤的陳述式都會執行，而不考慮標籤。  
-  
-*jump-statement* 必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。 `goto` 後面的一組 *identifier* 名稱都有自己的命名空間，因此這些名稱不會干擾其他識別項。 標籤不能重新宣告。 如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md)。  
-  
-理想的程式設計風格是盡可能先使用 **break**、**continue** 和 `return` 陳述式，而不是 `goto`。 由於 **break** 陳述式只會從一個迴圈層級結束，因此可能需要使用 `goto` 才能從深層的巢狀迴圈內結束迴圈。  
-  
-這個範例將示範 `goto` 陳述式：  
-  
-```  
-// goto.c  
-#include <stdio.h>  
-  
-int main()  
-{  
-    int i, j;  
-  
-    for ( i = 0; i < 10; i++ )  
-    {  
-        printf_s( "Outer loop executing. i = %d\n", i );  
-        for ( j = 0; j < 3; j++ )  
-        {  
-            printf_s( " Inner loop executing. j = %d\n", j );  
-            if ( i == 5 )  
-                goto stop;  
-        }  
-    }  
-  
-    /* This message does not print: */  
-    printf_s( "Loop exited. i = %d\n", i );  
-  
-    stop: printf_s( "Jumped to stop. i = %d\n", i );  
-}  
-```  
-  
-在這個範例中，當 `goto` 等於 5 時，`stop` 陳述式會將控制項傳送至標記 `i` 的點。  
-  
-## <a name="see-also"></a>另請參閱  
+陳述式標籤只對 `goto` 陳述式有意義，在任何其他內容中，加上標籤的陳述式都會執行，而不考慮標籤。
+
+*jump-statement* 必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。 `goto` 後面的一組 *identifier* 名稱都有自己的命名空間，因此這些名稱不會干擾其他識別項。 標籤不能重新宣告。 如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md)。
+
+理想的程式設計風格是盡可能先使用 **break**、**continue** 和 `return` 陳述式，而不是 `goto`。 由於 **break** 陳述式只會從一個迴圈層級結束，因此可能需要使用 `goto` 才能從深層的巢狀迴圈內結束迴圈。
+
+這個範例將示範 `goto` 陳述式：
+
+```
+// goto.c
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for ( i = 0; i < 10; i++ )
+    {
+        printf_s( "Outer loop executing. i = %d\n", i );
+        for ( j = 0; j < 3; j++ )
+        {
+            printf_s( " Inner loop executing. j = %d\n", j );
+            if ( i == 5 )
+                goto stop;
+        }
+    }
+
+    /* This message does not print: */
+    printf_s( "Loop exited. i = %d\n", i );
+
+    stop: printf_s( "Jumped to stop. i = %d\n", i );
+}
+```
+
+在這個範例中，當 `goto` 等於 5 時，`stop` 陳述式會將控制項傳送至標記 `i` 的點。
+
+## <a name="see-also"></a>請參閱
+
 [陳述式](../c-language/statements-c.md)

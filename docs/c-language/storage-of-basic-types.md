@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090486"
 ---
 # <a name="storage-of-basic-types"></a>基本類型的儲存空間
-下表摘要說明與每個基本類型相關聯的儲存區。  
-  
-### <a name="sizes-of-fundamental-types"></a>基本類型的大小  
-  
-|類型|存放裝置|  
-|----------|-------------|  
-|`char`、`unsigned char`、**signed char**|1 個位元組|  
-|**short**、**unsigned short**|2 個位元組|  
-|`int`, `unsigned int`|4 個位元組|  
-|**long**、`unsigned long`|4 個位元組|  
-|**float**|4 個位元組|  
-|**double**|8 個位元組|  
-|`long double`|8 個位元組|  
-  
- C 資料類型屬於一般分類。 「整數類資料類型」包括 `char`、`int`、**short**、**long**、**signed**、`unsigned` 和 `enum`。 「浮點類型」包括 **float**、**double** 和 `long double`。 「算術類型」包括所有浮點和整數類資料類型。  
-  
-## <a name="see-also"></a>請參閱  
- [宣告和類型](../c-language/declarations-and-types.md)
+
+下表摘要說明與每個基本類型相關聯的儲存區。
+
+### <a name="sizes-of-fundamental-types"></a>基本類型的大小
+
+|類型|存放裝置|
+|----------|-------------|
+|`char`、`unsigned char`、**signed char**|1 個位元組|
+|**short**、**unsigned short**|2 個位元組|
+|`int`, `unsigned int`|4 個位元組|
+|**long**、`unsigned long`|4 個位元組|
+|**float**|4 個位元組|
+|**double**|8 個位元組|
+|`long double`|8 個位元組|
+
+C 資料類型屬於一般分類。 「整數類資料類型」包括 `char`、`int`、**short**、**long**、**signed**、`unsigned` 和 `enum`。 「浮點類型」包括 **float**、**double** 和 `long double`。 「算術類型」包括所有浮點和整數類資料類型。
+
+## <a name="see-also"></a>請參閱
+
+[宣告和類型](../c-language/declarations-and-types.md)

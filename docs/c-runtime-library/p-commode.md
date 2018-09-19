@@ -28,33 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e91c03f619be1d0f1d8ad23f3b8d60e1be30cfb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f610b26c79201f3431b6263a002b59df7456cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082439"
 ---
 # <a name="pcommode"></a>__p__commode
-指向 `_commode` 全域變數會指定檔案 I/O 作業的預設「檔案認可模式」。  
-  
-## <a name="syntax"></a>語法  
-  
-```cpp  
-int * __p__commode(  
-   );  
-```  
-  
-## <a name="return-value"></a>傳回值  
- `_commode` 全域變數的指標。  
-  
-## <a name="remarks"></a>備註  
- `__p__commode` 函式僅供內部使用，不應該從使用者程式碼呼叫。  
-  
- 檔案認可模式會指定重要資料寫入磁碟的時機。 如需詳細資訊，請參閱 [fflush](../c-runtime-library/reference/fflush.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
+
+指向 `_commode` 全域變數會指定檔案 I/O 作業的預設「檔案認可模式」。
+
+## <a name="syntax"></a>語法
+
+```cpp
+int * __p__commode(
+   );
+```
+
+## <a name="return-value"></a>傳回值
+
+`_commode` 全域變數的指標。
+
+## <a name="remarks"></a>備註
+
+`__p__commode` 函式僅供內部使用，不應該從使用者程式碼呼叫。
+
+檔案認可模式會指定重要資料寫入磁碟的時機。 如需詳細資訊，請參閱 [fflush](../c-runtime-library/reference/fflush.md)。
+
+## <a name="requirements"></a>需求
+
+|常式傳回的值|必要的標頭|
+|-------------|---------------------|
 |__p\__commode|internal.h|

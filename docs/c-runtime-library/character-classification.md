@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101341"
 ---
 # <a name="character-classification"></a>字元分類
 
 這些每個常式都會測試指定的單一位元組字元、寬字元或滿足條件的多位元組字元。 (根據定義，介於 0 到 127 之間的 ASCII 字元集是所有多位元組字元集的子集。 例如，日文片假名包括 ASCII 以及非 ASCII 字元)。
 
- 測試條件會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。
+測試條件會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。
 
- 這些常式的執行速度通常會比您撰寫的測試還快，而且也較受到喜好。 例如，下列程式碼執行得比呼叫 `isalpha(c)` 還慢：
+這些常式的執行速度通常會比您撰寫的測試還快，而且也較受到喜好。 例如，下列程式碼執行得比呼叫 `isalpha(c)` 還慢：
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

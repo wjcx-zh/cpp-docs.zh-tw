@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98340f9670229e7be0d56beac482d7ad994fb6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a7af5e89e66b179b4527fd35a042caf8ddb1c644
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765781"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100574"
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
+
 typedef 宣告是將 typedef 宣告為儲存類別的宣告。 宣告子會變成新的類型。 您可以使用 typedef 宣告，針對 C 已經定義或您已經宣告的類型建構較短或更有意義的名稱。 Typedef 名稱可讓您封裝可能變更的實作詳細資料。
 
 typedef 宣告的解譯方式和變數或函式宣告相同，但識別項會變成該類型的同義字，而不是假設宣告所指定的類型。
@@ -113,6 +114,7 @@ pfv signal( int, pfv );    /* Uses typedef type */
 ```
 
 ## <a name="examples"></a>範例
+
 下列範例示範 typedef 宣告：
 
 ```C
@@ -154,6 +156,6 @@ DRAWF box;
 void box( int, int );
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

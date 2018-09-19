@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388613"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113717"
 ---
 # <a name="code-pages"></a>字碼頁
 
 *字碼頁*是字元集，可包括數字、標點符號和其他字符。 不同語言和地區設定可能會使用不同的字碼頁。 例如，ANSI 字碼頁 1252 用於英文和大部分的歐洲語言；OEM 字碼頁 932 用於日文漢字。
 
- 字碼頁在資料表中可以呈現為字元與單一位元組值或多位元組值的對應。 許多字碼頁都共用 0x00 - 0x7F 範圍內字元的 ASCII 字元集。
+字碼頁在資料表中可以呈現為字元與單一位元組值或多位元組值的對應。 許多字碼頁都共用 0x00 - 0x7F 範圍內字元的 ASCII 字元集。
 
- Microsoft 執行階段程式庫使用下列類型的字碼頁：
+Microsoft 執行階段程式庫使用下列類型的字碼頁：
 
 - 系統預設 ANSI 字碼頁。 根據預設，啟動時，執行階段系統會自動將多位元組字碼頁設定為取自作業系統的系統預設 ANSI 字碼頁。 呼叫：
 
@@ -54,4 +54,4 @@ ms.locfileid: "32388613"
 ## <a name="see-also"></a>請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
- [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

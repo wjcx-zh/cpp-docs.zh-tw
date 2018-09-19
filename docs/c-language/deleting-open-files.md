@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 268496c676aa0c324fa434879e9147eef180dd30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e66c811571f22c263193ffad676052b34b7f72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382243"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087093"
 ---
 # <a name="deleting-open-files"></a>刪除開啟檔案
-**ANSI 4.9.4.1**：移除函式在開啟檔案上會造成的影響  
-  
- 移除函式會刪除檔案。 如果檔案已開啟，則此函式會失敗且傳回 -1。  
-  
-## <a name="see-also"></a>請參閱  
- [程式庫函式](../c-language/library-functions.md)
+
+**ANSI 4.9.4.1**：移除函式在開啟檔案上會造成的影響
+
+移除函式會刪除檔案。 如果檔案已開啟，則此函式會失敗且傳回 -1。
+
+## <a name="see-also"></a>請參閱
+
+[程式庫函式](../c-language/library-functions.md)

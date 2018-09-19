@@ -20,32 +20,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbcf0a1106610740a585b7e4f8b68e3fc9b6a8f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d48ead4532638461962a3bf88d2321cee775ab3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087652"
 ---
 # <a name="fseek-lseek-constants"></a>fseek, _lseek 常數
-## <a name="syntax"></a>語法  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- *origin* 引數會指定初始位置，而且可以是下列所示常數其中之一：  
-  
-|常數|意義|  
-|--------------|-------------|  
-|`SEEK_END`|檔案結尾|  
-|`SEEK_CUR`|檔案指標的目前位置|  
-|`SEEK_SET`|檔案開頭|  
-  
-## <a name="see-also"></a>請參閱  
- [fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)   
- [_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)   
- [全域常數](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>語法
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>備註
+
+*origin* 引數會指定初始位置，而且可以是下列所示常數其中之一：
+
+|常數|意義|
+|--------------|-------------|
+|`SEEK_END`|檔案結尾|
+|`SEEK_CUR`|檔案指標的目前位置|
+|`SEEK_SET`|檔案開頭|
+
+## <a name="see-also"></a>請參閱
+
+[fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)<br/>
+[_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)<br/>
+[全域常數](../c-runtime-library/global-constants.md)

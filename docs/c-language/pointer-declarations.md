@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095933"
 ---
 # <a name="pointer-declarations"></a>指標宣告
 
@@ -31,10 +31,10 @@ ms.locfileid: "43752719"
 ## <a name="syntax"></a>語法
 
 *declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
@@ -42,7 +42,7 @@ ms.locfileid: "43752719"
 
 *pointer*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *指標*
 
 *type-qualifier-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
@@ -59,6 +59,7 @@ ms.locfileid: "43752719"
 您可以在定義結構、等位或列舉類型之前，宣告結構、等位或列舉類型的指標。 使用結構或等位標記即可宣告指標，如下列範例所示。 由於編譯器不需要知道結構或等位的大小，也能為指標變數配置空間，因此允許使用這類宣告。
 
 ## <a name="examples"></a>範例
+
 下列範例將示範指標宣告。
 
 ```

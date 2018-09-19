@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaab56876651a1056ef89d57bebb2799d1bb3194
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0bcb9d5dbadc0fbaa33a3c8df6f9193704514e0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604137"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083284"
 ---
 # <a name="language-strings"></a>語言字串
 
@@ -33,9 +33,9 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 
 |語言字串|對等的地區設定名稱|
 |---------------------|----------------------------|
-|american|en-US|
-|american english|en-US|
-|american-english|en-US|
+|american|zh-TW|
+|american english|zh-TW|
+|american-english|zh-TW|
 |australian|en-AU|
 |belgian|nl-BE|
 |canadian|en-CA|
@@ -47,7 +47,7 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|en-US|
+|english-american|zh-TW|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -58,8 +58,8 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|en-US|
-|english-usa|en-US|
+|english-us|zh-TW|
+|english-usa|zh-TW|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -70,7 +70,7 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |german-swiss|de-CH|
 |irish-english|en-IE|
 |italian-swiss|it-CH|
-|norwegian|no|
+|norwegian|否|
 |norwegian-bokmal|nb-NO|
 |norwegian-nynorsk|nn-NO|
 |portuguese-brazilian|pt-BR|
@@ -96,12 +96,12 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |swedish-finland|sv-FI|
 |swiss|de-CH|
 |uk|en-GB|
-|us|en-US|
-|usa|en-US|
+|us|zh-TW|
+|usa|zh-TW|
 
 ## <a name="see-also"></a>另請參閱
 
-[地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  
-[國家/地區字串](../c-runtime-library/country-region-strings.md)  
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
+[地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[國家/地區字串](../c-runtime-library/country-region-strings.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

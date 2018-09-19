@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0688ed7c670f4601ac25a8878a59bd977b77536f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126db1ffe203c050c69b32d74bb295bab143c9ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106242"
 ---
 # <a name="reading-pointer-values"></a>讀取指標值
-**ANSI 4.9.6.2**：`fscanf` 函式中 **%p** 轉換的輸入內容  
-  
- 指定 **%p** 格式字元時，`fscanf` 函式會將指標從十六進位 ASCII 值轉換成正確的位址。  
-  
-## <a name="see-also"></a>請參閱  
- [程式庫函式](../c-language/library-functions.md)
+
+**ANSI 4.9.6.2**：`fscanf` 函式中 **%p** 轉換的輸入內容
+
+指定 **%p** 格式字元時，`fscanf` 函式會將指標從十六進位 ASCII 值轉換成正確的位址。
+
+## <a name="see-also"></a>請參閱
+
+[程式庫函式](../c-language/library-functions.md)

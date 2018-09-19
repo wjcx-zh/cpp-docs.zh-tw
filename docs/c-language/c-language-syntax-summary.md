@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a4d6618aeea9cc07731ba814644cf31b4a6941
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73bbc4d8c80b6fa617710344f570da3498f3a94a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062016"
 ---
 # <a name="c-language-syntax-summary"></a>C 語言語法摘要
-本節提供 C 語言和 Microsoft 專有 C 語言功能的完整描述。 您可以使用本節中的語法標記法，來判斷所有語言元件的實際語法。 語法的說明會出現在本手冊討論主題的章節中。  
-  
+
+本節提供 C 語言和 Microsoft 專有 C 語言功能的完整描述。 您可以使用本節中的語法標記法，來判斷所有語言元件的實際語法。 語法的說明會出現在本手冊討論主題的章節中。
+
 > [!NOTE]
->  這個語法摘要不是 ANSI C 標準的一部分，包括在內僅供參考之用。 Microsoft 專有語法會在語法之後註解中註明。  
-  
-## <a name="see-also"></a>請參閱  
- [C 語言參考](../c-language/c-language-reference.md)
+>  這個語法摘要不是 ANSI C 標準的一部分，包括在內僅供參考之用。 Microsoft 專有語法會在語法之後註解中註明。
+
+## <a name="see-also"></a>請參閱
+
+[C 語言參考](../c-language/c-language-reference.md)

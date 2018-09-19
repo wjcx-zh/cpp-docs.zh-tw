@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200959"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085754"
 ---
 # <a name="process-and-environment-control"></a>處理序控制和環境控制
 
@@ -77,11 +77,11 @@ ms.locfileid: "43200959"
 |[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|使用 **PATH** 變數、指定的環境和引數陣列建立並執行新處理序|
 |[system、_wsystem](../c-runtime-library/reference/system-wsystem.md)|執行作業系統命令|
 
- 在 Windows 作業系統中，被繁衍的處理序相當於繁衍的處理序。 任何處理序都可以使用 **_cwait** 等候處理序識別碼已知的任何其他處理序。
+在 Windows 作業系統中，被繁衍的處理序相當於繁衍的處理序。 任何處理序都可以使用 **_cwait** 等候處理序識別碼已知的任何其他處理序。
 
- **_exec** 和 **_spawn** 系列之間的差異是 **_spawn** 函式可以將控制權從新的處理序交還給呼叫處理序。 在 **_spawn** 函式中，除非指定 **_P_OVERLAY**，否則記憶體中會同時有呼叫處理序和新處理序。 在 **_exec** 函式中，新的處理序會重疊在呼叫處理序上，因此除非嘗試開始執行新處理序時發生錯誤，否則控制權無法交還給呼叫處理序。
+**_exec** 和 **_spawn** 系列之間的差異是 **_spawn** 函式可以將控制權從新的處理序交還給呼叫處理序。 在 **_spawn** 函式中，除非指定 **_P_OVERLAY**，否則記憶體中會同時有呼叫處理序和新處理序。 在 **_exec** 函式中，新的處理序會重疊在呼叫處理序上，因此除非嘗試開始執行新處理序時發生錯誤，否則控制權無法交還給呼叫處理序。
 
- **_exec** 系列中函式之間的差異，以及在 **_spawn** 系列中函式之間的差異，包括找出隨新處理序執行之檔案的方法、引數傳遞給新處理序的形式，以及設定環境的方法，如下表所示。 當引數數目是常數或在編譯階段為已知時，使用傳遞引數清單的函式。 當引數數目是在執行階段決定時，使用將指標傳遞給包含引數之陣列的函式。 下表中的資訊也適用於 **_spawn** 和 **_exec** 函式的寬字元對應。
+**_exec** 系列中函式之間的差異，以及在 **_spawn** 系列中函式之間的差異，包括找出隨新處理序執行之檔案的方法、引數傳遞給新處理序的形式，以及設定環境的方法，如下表所示。 當引數數目是常數或在編譯階段為已知時，使用傳遞引數清單的函式。 當引數數目是在執行階段決定時，使用將指標傳遞給包含引數之陣列的函式。 下表中的資訊也適用於 **_spawn** 和 **_exec** 函式的寬字元對應。
 
 ### <a name="spawn-and-exec-function-families"></a>_spawn 和 _exec 函式系列
 

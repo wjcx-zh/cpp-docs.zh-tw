@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082244"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 \<summary> 標記應該用來描述類型或類型成員。 使用 [\<remarks>](../ide/remarks-visual-cpp.md) 新增類型描述的補充資訊。  
@@ -35,8 +35,8 @@ ms.locfileid: "43692298"
 ```  
   
 #### <a name="parameters"></a>參數  
- `description`  
- 物件的摘要。  
+*description*<br/>
+物件的摘要。  
   
 ## <a name="remarks"></a>備註  
  \<summary> 標記的文字是 IntelliSense 中型別的唯一資訊來源，也會顯示在[物件瀏覽器](/visualstudio/ide/viewing-the-structure-of-code)和程式碼結構 Web 報告中。  

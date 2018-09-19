@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082218"
 ---
 # <a name="locale"></a>地區設定
 
 「地區設定」指的是可用來自訂程式的國家/地區和語言設定。 有些地區設定相關分類包括日期和貨幣值的顯示格式。 如需詳細資訊，請參閱[地區設定分類](../c-runtime-library/locale-categories.md)。
 
- 使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函式，可在使用沒有 **_l** 尾碼的函式時變更或查詢部分或所有目前程式或執行緒地區設定資訊。 具有 **_l** 尾碼的函式只會使用傳入的地區設定參數，作為其在執行該特定函式期間的地區設定資訊。 若要建立地區設定以與使用 **_l** 尾碼的函式搭配使用，請使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要釋出此地區設定，請使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要取得目前地區設定，請使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)。
+使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函式，可在使用沒有 **_l** 尾碼的函式時變更或查詢部分或所有目前程式或執行緒地區設定資訊。 具有 **_l** 尾碼的函式只會使用傳入的地區設定參數，作為其在執行該特定函式期間的地區設定資訊。 若要建立地區設定以與使用 **_l** 尾碼的函式搭配使用，請使用 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)。 若要釋出此地區設定，請使用 [_free_locale](../c-runtime-library/reference/free-locale.md)。 若要取得目前地區設定，請使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)。
 
- 使用 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 來控制每個執行緒都有它自己的地區設定，還是程式中的所有執行緒都共用相同的地區設定。 如需詳細資訊，請參閱[地區設定和字碼頁](../text/locales-and-code-pages.md)。
+使用 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 來控制每個執行緒都有它自己的地區設定，還是程式中的所有執行緒都共用相同的地區設定。 如需詳細資訊，請參閱[地區設定和字碼頁](../text/locales-and-code-pages.md)。
 
- 下表中有更安全版本的函式可供使用，以 **_s** ("secure") 尾碼表示。 如需詳細資訊，請參閱 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
+下表中有更安全版本的函式可供使用，以 **_s** ("secure") 尾碼表示。 如需詳細資訊，請參閱 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="locale-dependent-routines"></a>地區設定相關常式
 
@@ -82,4 +82,4 @@ ms.locfileid: "32392506"
 ## <a name="see-also"></a>請參閱
 
 [國際化](../c-runtime-library/internationalization.md)<br/>
- [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

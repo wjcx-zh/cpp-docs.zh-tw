@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e76adb397c9131bbaa7c2c40124de31348c56a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c074ddd193765029a2925e1a98c4ab1787f9a82a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082673"
 ---
 # <a name="execution-character-set"></a>執行字元集
-這個內容通常是指「執行字元集」。 執行字元集不一定要與撰寫 C 程式使用的來源字元集相同。 執行字元集包含來源字元集內的所有字元，另外還包括 null 字元、新行字元、退格鍵、水平定位字元、垂直定位字元、歸位字元和逸出序列。 來源和執行字元集在其他實作中可能不同。  
-  
-## <a name="see-also"></a>請參閱  
- [C 字元常數](../c-language/c-character-constants.md)
+
+這個內容通常是指「執行字元集」。 執行字元集不一定要與撰寫 C 程式使用的來源字元集相同。 執行字元集包含來源字元集內的所有字元，另外還包括 null 字元、新行字元、退格鍵、水平定位字元、垂直定位字元、歸位字元和逸出序列。 來源和執行字元集在其他實作中可能不同。
+
+## <a name="see-also"></a>請參閱
+
+[C 字元常數](../c-language/c-character-constants.md)

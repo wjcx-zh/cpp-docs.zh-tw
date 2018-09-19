@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078786"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 \<param> 標記應該在方法宣告的註解中用來描述參數的其中一個方法。  
@@ -35,11 +35,11 @@ ms.locfileid: "43686417"
 ```  
   
 #### <a name="parameters"></a>參數  
- `name`  
- 方法參數的名稱。  以單引號或雙引號將名稱括起來。  如果編譯器找不到 `name`，它會發出警告。  
+*name*<br/>
+方法參數的名稱。  以單引號或雙引號將名稱括起來。  如果編譯器找不到 `name`，它會發出警告。  
   
- `description`  
- 參數的描述。  
+*description*<br/>
+參數的描述。  
   
 ## <a name="remarks"></a>備註  
  \<param> 標記的文字將會顯示於 IntelliSense、[物件瀏覽器](/visualstudio/ide/viewing-the-structure-of-code)以及程式碼結構 Web 報告中。  
@@ -48,7 +48,7 @@ ms.locfileid: "43686417"
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

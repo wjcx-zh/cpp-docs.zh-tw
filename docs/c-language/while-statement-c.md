@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763236"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096804"
 ---
 # <a name="while-statement-c"></a>while 陳述式 (C)
 
-`while` 陳述式可讓您重複陳述式直到指定的運算式變成 false 為止。  
-  
+`while` 陳述式可讓您重複陳述式直到指定的運算式變成 false 為止。
+
 ## <a name="syntax"></a>語法
 
 *iteration-statement*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *運算式*  **)**  *陳述式*
-  
-*expression* 必須有算術或指標類型。 執行程序如下所示：  
-  
-1. 會對 *expression* 進行評估。  
-  
+
+*expression* 必須有算術或指標類型。 執行程序如下所示：
+
+1. 會對 *expression* 進行評估。
+
 2. 如果 *expression* 一開始是 false，就永遠不會執行 `while` 陳述式的主體，且控制權會從 `while` 陳述式傳遞至程式的下一個陳述式。
 
    如果 *expression* 為 true (非零)，就會執行陳述式的本體，且從步驟 1 開始重複執行程序。
@@ -55,6 +55,6 @@ while ( i >= 0 )
 
 這個範例會將 `string2` 的字元複製到 `string1`。 如果 `i` 大於或等於 0，會將 `string2[i]` 指派給 `string1[i]` 並遞減 `i`。 當 `i` 等於或小於 0 時，會終止執行 `while` 陳述式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [while 陳述式 (C++)](../cpp/while-statement-cpp.md)

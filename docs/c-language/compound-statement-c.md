@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13f09defccb0aeb3d4ec47cf7cf1678deaee6dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11197f19047b0058f5401b9419f0f353c44c91d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063617"
 ---
 # <a name="compound-statement-c"></a>複合陳述式 (C)
 
@@ -60,5 +60,6 @@ if ( i > 0 )
 
 在這個範例中，如果 `i` 大於 0，則複合陳述式內的所有陳述式會依序執行。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
+
 [陳述式](../c-language/statements-c.md)

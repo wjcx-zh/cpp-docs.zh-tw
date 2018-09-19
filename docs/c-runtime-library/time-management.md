@@ -19,18 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5983795dbb5711452db2f59b07cb6aa8b22a8c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f63bfe358e3f077bff780e2c5b4436fb841fd145
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083973"
 ---
 # <a name="time-management"></a>時間管理
 
 您可以使用這些函式取得目前的時間，以及在必要時轉換、調整及儲存該時間。 目前的時間為系統時間。
 
- **_ftime** 和 **localtime** 常式會使用 **TZ** 環境變數。 如果未設定 **TZ**，則執行階段程式庫會嘗試使用作業系統所指定的時區資訊。 若此資訊無法使用，這些函式會使用預設值 PST8PDT。 如需 **TZ** 的詳細資訊，請參閱 [_tzset](../c-runtime-library/reference/tzset.md)；另請參閱 [_daylight、timezone 及 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+**_ftime** 和 **localtime** 常式會使用 **TZ** 環境變數。 如果未設定 **TZ**，則執行階段程式庫會嘗試使用作業系統所指定的時區資訊。 若此資訊無法使用，這些函式會使用預設值 PST8PDT。 如需 **TZ** 的詳細資訊，請參閱 [_tzset](../c-runtime-library/reference/tzset.md)；另請參閱 [_daylight、timezone 及 _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ### <a name="time-routines"></a>時間常式
 

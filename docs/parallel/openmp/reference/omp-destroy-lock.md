@@ -1,5 +1,5 @@
 ---
-title: omp_destroy_lock |Microsoft 文件
+title: omp_destroy_lock |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05612664b50c6a51008ab1d78ac1d40145fb593e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5c24f09bbad550633c68c403c89362a293265111
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695001"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019915"
 ---
 # <a name="ompdestroylock"></a>omp_destroy_lock
 未初始化的鎖定。  
@@ -34,17 +34,16 @@ void omp_destroy_lock(
 );  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+### <a name="parameters"></a>參數
   
- `lock`  
- 類型的變數[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)初始化與[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)。  
+*lock*<br/>
+類型的變數[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) ，初始化[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)。  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函式](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)。  
+ 如需詳細資訊，請參閱 < [3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函式](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)的使用範例`omp_destroy_lock`。  
+ 請參閱[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)如需使用的範例`omp_destroy_lock`。  
   
 ## <a name="see-also"></a>另請參閱  
  [函式](../../../parallel/openmp/reference/openmp-functions.md)

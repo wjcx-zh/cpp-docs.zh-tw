@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2773 |Microsoft 文件
+title: 編譯器錯誤 C2773 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad1a4a3b34bd8c4d4ed81c1327073e650f5079
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 861fe9b53352548c919e54c36a603eaeb4d23b39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023432"
 ---
 # <a name="compiler-error-c2773"></a>編譯器錯誤 C2773
-\#匯入和 #using 只適用於 c + + 編譯器  
-  
- C 編譯器無法辨識`#import`前置處理器指示詞。 將來源檔編譯為 c + +。 使用[/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)如有必要。
+
+\#匯入和 #using 只適用於 c + + 編譯器
+
+C 編譯器無法辨識`#import`前置處理器指示詞。 將來源檔編譯為 c + +。 使用[/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)如有必要。

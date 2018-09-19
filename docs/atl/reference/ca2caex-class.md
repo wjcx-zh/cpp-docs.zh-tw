@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147814856e1e447894fd9826b9620ea8d762d48c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4abf96e3850f88b58e138745536ffc40aef11b68
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764975"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024537"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 類別
 
@@ -36,13 +36,13 @@ ms.locfileid: "43764975"
 ## <a name="syntax"></a>語法
 
 ```
-template<int t_nBufferLength = 128>  
+template<int t_nBufferLength = 128>
 class CA2CAEX
 ```
 
 #### <a name="parameters"></a>參數
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。
 
 ## <a name="members"></a>成員
@@ -103,10 +103,10 @@ CA2CAEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*psz*  
+*psz*<br/>
 要轉換的文字字串。
 
-*nCodePage*  
+*nCodePage*<br/>
 未使用這個類別中。
 
 ### <a name="remarks"></a>備註
@@ -137,7 +137,7 @@ LPCSTR m_psz;
 
 轉換運算子。
 
-```  
+```
 operator LPCSTR() const throw();
 ```
 
@@ -147,9 +147,9 @@ operator LPCSTR() const throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
-[CA2WEX 類別](../../atl/reference/ca2wex-class.md)   
-[CW2AEX 類別](../../atl/reference/cw2aex-class.md)   
-[CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
-[CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
+[CA2AEX 類別](../../atl/reference/ca2aex-class.md)<br/>
+[CA2WEX 類別](../../atl/reference/ca2wex-class.md)<br/>
+[CW2AEX 類別](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX 類別](../../atl/reference/cw2wex-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

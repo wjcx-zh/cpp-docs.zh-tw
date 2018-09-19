@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024389"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 類別
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]接收訊息的視窗控制代碼。
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送至視窗的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
-*lResult*  
+*lResult*<br/>
 [out]訊息處理的結果。
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in]訊息對應會處理訊息的識別碼。 預設訊息對應中，以宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，由 0。 替代訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由`msgMapID`。
 
 ### <a name="return-value"></a>傳回值
@@ -108,7 +108,7 @@ virtual BOOL ProcessWindowMessage(
 
 ## <a name="see-also"></a>另請參閱
 
-[CDynamicChain 類別](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[CDynamicChain 類別](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eca3e25e1476023ef4b7192efd2ffbd4170e88ca
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019025"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 類別
+
 提供實作[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
@@ -45,14 +46,16 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 您的類別，衍生自`ISessionPropertiesImpl`。  
+
+*T*<br/>
+您的類別，衍生自`ISessionPropertiesImpl`。  
   
- *PropClass*  
- 使用者可定義屬性類別，預設值為*T*。  
+*PropClass*<br/>
+使用者可定義屬性類別，預設值為*T*。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[SetProperties](#setproperties)|設定工作階段屬性群組中的屬性。|  
   
 ## <a name="remarks"></a>備註  
- 在 工作階段上必要的介面。 這個類別會實作藉由呼叫靜態函式所定義的工作階段屬性[屬性集對應](../../data/oledb/begin-propset-map.md)。 在您的工作階段類別，應該指定屬性集對應。  
+
+在 工作階段上必要的介面。 這個類別會實作藉由呼叫靜態函式所定義的工作階段屬性[屬性集對應](../../data/oledb/begin-propset-map.md)。 在您的工作階段類別，應該指定屬性集對應。  
   
 ## <a name="getproperties"></a> Isessionpropertiesimpl:: Getproperties
+
 傳回清單中的屬性`DBPROPSET_SESSION`目前所設定的工作階段的屬性群組。  
   
 ### <a name="syntax"></a>語法  
@@ -79,9 +84,11 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+
+請參閱[ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="setproperties"></a> Isessionpropertiesimpl:: Setproperties
+
 在 設定屬性`DBPROPSET_SESSION`屬性群組。  
   
 ### <a name="syntax"></a>語法  
@@ -92,8 +99,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

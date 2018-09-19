@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3749 |Microsoft 文件
+title: 編譯器錯誤 C3749 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78de0c696123375c11e5c11e64223858b57451ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4151d712c12cb34785c3f4ab77c76cdd78d4830
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270771"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024082"
 ---
 # <a name="compiler-error-c3749"></a>編譯器錯誤 C3749
-'attribute': 自訂屬性不能在函式  
-  
- 自訂屬性不能在函式。 如需有關自訂屬性的詳細資訊，請參閱主題[屬性](../../windows/attribute.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3749:  
-  
-```  
-// C3749a.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[AttributeUsage(AttributeTargets::All)]  
-public ref struct ABC : public Attribute {  
-   ABC() {}  
-};  
-  
-void f1() { [ABC]; };  // C3749  
-```  
+
+'attribute': 函式內可能未使用的自訂屬性
+
+自訂屬性不能在函式。 如需有關自訂屬性的詳細資訊，請參閱主題[屬性](../../windows/attribute.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3749:
+
+```
+// C3749a.cpp
+// compile with: /clr /c
+using namespace System;
+
+[AttributeUsage(AttributeTargets::All)]
+public ref struct ABC : public Attribute {
+   ABC() {}
+};
+
+void f1() { [ABC]; };  // C3749
+```

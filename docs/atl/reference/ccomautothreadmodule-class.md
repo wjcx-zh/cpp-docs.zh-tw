@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022678"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 類別
 
@@ -44,13 +44,13 @@ ATL 7.0 截至`CComAutoThreadModule`已淘汰： 請參閱 < [ATL 模組類別](
 ## <a name="syntax"></a>語法
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>參數
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in]管理執行緒的選取項目類別。 預設值是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
 
 ## <a name="members"></a>成員
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>參數
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in]建立者函式指標。
 
-*riid*  
+*riid*<br/>
 [in]要求的介面 IID。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObj*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 [in]物件的對應項目的陣列的指標。
 
-*h*  
+*h*<br/>
 [in]的 HINSTANCE 傳遞給`DLLMain`或`WinMain`。
 
-*plibid*  
+*plibid*<br/>
 [in]與專案相關聯的類型程式庫的 LIBID 指標。
 
-*nThreads*  
+*nThreads*<br/>
 [in]若要建立的執行緒數目。 根據預設， *nThreads*是所傳回的值[GetDefaultThreads](#getdefaultthreads)。
 
 ### <a name="remarks"></a>備註
@@ -269,5 +269,5 @@ LONG Unlock();
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

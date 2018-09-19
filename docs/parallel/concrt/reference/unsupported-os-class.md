@@ -1,5 +1,5 @@
 ---
-title: unsupported_os 類別 |Microsoft 文件
+title: unsupported_os 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4881bc0182c0d7bfbc5b5806fd6a59eea7fb25
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5298f7d8e6a998fb7841a6c3429a4240876c7cf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016529"
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 類別
 這個類別會描述使用不支援的作業系統時擲回的例外狀況。  
@@ -63,8 +63,8 @@ unsupported_os() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述性訊息。  
+*訊息 （_m)*<br/>
+錯誤的描述性訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

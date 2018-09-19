@@ -1,5 +1,5 @@
 ---
-title: message_processor 類別 |Microsoft 文件
+title: message_processor 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026916"
 ---
 # <a name="messageprocessor-class"></a>message_processor 類別
 `message_processor` 類別是處理 `message` 物件的抽象基底類別。 訊息順序方面沒有一定的保證。  
@@ -39,8 +39,8 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 在訊息中裝載的資料型別由這`message_processor`物件。  
+*T*<br/>
+訊息內裝載的資料型別由這個`message_processor`物件。  
   
 ## <a name="members"></a>成員  
   
@@ -54,15 +54,15 @@ class message_processor;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[async_send](#async_send)|在衍生類別中覆寫，放入訊息區塊以非同步的方式。|  
-|[sync_send](#sync_send)|在衍生類別中覆寫，放入訊息區塊以同步方式。|  
+|[async_send](#async_send)|在衍生類別中覆寫時，會放在訊息成區塊以非同步的方式。|  
+|[sync_send](#sync_send)|在衍生類別中覆寫時，會放在訊息成區塊以同步方式。|  
 |[等候](#wait)|當在衍生類別中覆寫時，等候所有完成的非同步作業。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|當在衍生類別中覆寫時，會執行到區塊轉送訊息的處理。 每次會加入新的訊息，而且找不到佇列為空白，請呼叫一次。|  
+|[process_incoming_message](#process_incoming_message)|當在衍生類別中覆寫時，會執行正向的訊息處理成區塊。 每次新增了新的訊息，並發現佇列是空的請呼叫一次。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `message_processor`  
@@ -74,41 +74,41 @@ class message_processor;
   
 ##  <a name="async_send"></a> async_send 
 
- 在衍生類別中覆寫，放入訊息區塊以非同步的方式。  
+ 在衍生類別中覆寫時，會放在訊息成區塊以非同步的方式。  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Msg`  
- A`message`以非同步方式傳送物件。  
+*_Msg*<br/>
+A`message`以非同步方式傳送的物件。  
   
 ### <a name="remarks"></a>備註  
  處理器實作應該覆寫這個方法。  
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- 當在衍生類別中覆寫時，會執行到區塊轉送訊息的處理。 每次會加入新的訊息，而且找不到佇列為空白，請呼叫一次。  
+ 當在衍生類別中覆寫時，會執行正向的訊息處理成區塊。 每次新增了新的訊息，並發現佇列是空的請呼叫一次。  
   
 ```
 virtual void process_incoming_message() = 0;
 ```  
   
 ### <a name="remarks"></a>備註  
- 訊息區塊實作應該覆寫這個方法。  
+ 訊息區塊的實作應該覆寫這個方法。  
   
 ##  <a name="sync_send"></a> sync_send 
 
- 在衍生類別中覆寫，放入訊息區塊以同步方式。  
+ 在衍生類別中覆寫時，會放在訊息成區塊以同步方式。  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Msg`  
- A`message`要以同步方式傳送物件。  
+*_Msg*<br/>
+A`message`以同步方式傳送的物件。  
   
 ### <a name="remarks"></a>備註  
  處理器實作應該覆寫這個方法。  

@@ -1,5 +1,5 @@
 ---
-title: runtime_exception 類別 |Microsoft 文件
+title: runtime_exception 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695742"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019888"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
-C + + Accelerated Massive Parallelism (AMP) 程式庫中的例外狀況的基底類型。  
+C + + Accelerated Massive Parallelism (AMP) 文件庫中的例外狀況的基底型別。  
   
 ### <a name="syntax"></a>語法  
   
@@ -55,7 +55,7 @@ class runtime_exception : public std::exception;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|將指定的內容複製`runtime_exception`成這一個物件。|  
+|[operator=](#operator_eq)|將指定的內容複製`runtime_exception`到這個物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -85,20 +85,20 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 造成例外狀況之錯誤的描述。  
+*訊息 （_m)*<br/>
+造成例外狀況之錯誤的描述。  
   
- `_Hresult`  
- 造成例外狀況的錯誤的 HRESULT。  
+*_Hresult*<br/>
+造成例外狀況的錯誤的 HRESULT。  
   
- `_Other`  
- `runtime_exception`来複製物件。  
+*_Other*<br/>
+`runtime_exception`来複製的物件。  
   
 ### <a name="return-value"></a>傳回值  
  `runtime_exception` 物件。  
 
 ## <a name="dtor"></a>  ~ runtime_exception 解構函式  
-物件已遭終結。  
+終結物件。  
   
 ### <a name="syntax"></a>語法  
   
@@ -119,7 +119,7 @@ HRESULT get_error_code() const throw();
  造成例外狀況的錯誤的 HRESULT。  
   
 ## <a name="runtime_exception__operator_eq"></a>  operator=   
-  將指定的內容複製`runtime_exception`成這一個物件。  
+  將指定的內容複製`runtime_exception`到這個物件。  
   
 ### <a name="syntax"></a>語法  
   
@@ -128,8 +128,8 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `runtime_exception`来複製物件。  
+*_Other*<br/>
+`runtime_exception`来複製的物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`runtime_exception`物件。  

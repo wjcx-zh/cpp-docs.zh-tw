@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3054 |Microsoft 文件
+title: 編譯器錯誤 C3054 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9880373d0d401c15754a2aaf6759fe2c6c68574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a25b731c602d4b684b1cfcea65aba651ddbac0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029399"
 ---
 # <a name="compiler-error-c3054"></a>編譯器錯誤 C3054
-目前在泛型類別或函式中不支援 '#pragma omp parallel'  
-  
- 如需詳細資訊，請參閱[泛型](../../windows/generics-cpp-component-extensions.md)和[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3054。  
-  
-```  
-// C3054.cpp  
-// compile with: /openmp /clr /c  
-#include <omp.h>  
-  
-ref struct MyBaseClass {  
-   // Delete the following 7 lines to resolve.  
-   generic <class ItemType>  
-   void Test(ItemType i) {   // C3054  
-      #pragma omp parallel num_threads(4)  
-      {  
-         int i = omp_get_thread_num();  
-      }  
-   }  
-  
-   // OK  
-   void Test2() {  
-      #pragma omp parallel num_threads(4)  
-      {  
-         int i = omp_get_thread_num();  
-      }  
-   }  
-};  
+
+目前在泛型類別或函式中不支援 '#pragma omp parallel'
+
+如需詳細資訊，請參閱 <<c0> [ 泛型](../../windows/generics-cpp-component-extensions.md)並[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3054。
+
+```
+// C3054.cpp
+// compile with: /openmp /clr /c
+#include <omp.h>
+
+ref struct MyBaseClass {
+   // Delete the following 7 lines to resolve.
+   generic <class ItemType>
+   void Test(ItemType i) {   // C3054
+      #pragma omp parallel num_threads(4)
+      {
+         int i = omp_get_thread_num();
+      }
+   }
+
+   // OK
+   void Test2() {
+      #pragma omp parallel num_threads(4)
+      {
+         int i = omp_get_thread_num();
+      }
+   }
+};
 ```

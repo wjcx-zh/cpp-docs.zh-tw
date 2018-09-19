@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1152 |Microsoft 文件
+title: 連結器工具錯誤 LNK1152 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b15185977dfdaa6c6cad154889e95f59ab27c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22276d0b3189f93f57f8337b22b5d6070cd3db0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034469"
 ---
 # <a name="linker-tools-error-lnk1152"></a>連結器工具錯誤 LNK1152
-無法解析一或多個未裝飾的符號  
-  
- 這個錯誤加上一則警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)無法解析的每個未裝飾符號和至少兩個警告[LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)未裝飾符號找到重複的符號。
+
+無法解析一或多個未裝飾的符號
+
+此錯誤會加上其中一個警告[LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)每個無法解析的未裝飾符號和至少兩個警告[LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md)重複找到未裝飾符號的符號。

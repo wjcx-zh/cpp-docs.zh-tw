@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK2017 |Microsoft 文件
+title: 連結器工具錯誤 LNK2017 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095423b5f2d86cef309ed4316ff72d195b11eb26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80af2bb6475fc37b7feba5b29bfe9c1292740286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022446"
 ---
 # <a name="linker-tools-error-lnk2017"></a>連結器工具錯誤 LNK2017
-'segment' /largeaddressaware: no 沒有無效的 'symbol' 重新配置  
-  
- 您嘗試建立具有 32 位元位址的 64 位元映像。 若要這樣做，您必須：  
-  
--   使用固定的負載位址。  
-  
--   限制 3 GB 映像。  
-  
--   指定[/largeaddressaware: no](../../build/reference/largeaddressaware-handle-large-addresses.md)。
+
+'symbol' 重新配置至 'segment' 沒有 /largeaddressaware: no 無效
+
+您嘗試建置 32 位元位址的 64 位元映像。 若要這樣做，您必須：
+
+- 使用固定的載入位址。
+
+- 限制為 3 GB 的映像。
+
+- 指定[/largeaddressaware: no](../../build/reference/largeaddressaware-handle-large-addresses.md)。

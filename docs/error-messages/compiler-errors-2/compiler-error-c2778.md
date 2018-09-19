@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6106832ea82531a6f6915417ac56d53504db882e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209709"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022158"
 ---
 # <a name="compiler-error-c2778"></a>編譯器錯誤 C2778
-__declspec 格式不正確的 GUID  
-  
- 不正確的 GUID 提供給[uuid](../../cpp/uuid-cpp.md)擴充的屬性。  
-  
- GUID 必須是十六進位數字，以下列格式的字串：  
-  
-```  
-// C2778a.cpp  
-// compile with: /c  
-struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};  
-struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
-```  
-  
- `uuid`擴充的屬性會接受字串辨識[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)、 使用或不含大括號分隔符號。  
-  
- 下列範例會產生 C2778:  
-  
-```  
-// C2778b.cpp  
-struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778  
-struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778  
+
+__declspec 格式不正確的 GUID
+
+不正確的 GUID 提供給[uuid](../../cpp/uuid-cpp.md)擴充的屬性。
+
+GUID 必須是十六進位數字，以下列格式的字串：
+
+```
+// C2778a.cpp
+// compile with: /c
+struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
+struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
+```
+
+`uuid`擴充的屬性會接受字串辨識[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)、 使用或不含大括號分隔符號。
+
+下列範例會產生 C2778:
+
+```
+// C2778b.cpp
+struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778
+struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778
 ```

@@ -13,17 +13,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baf70ac7fd4d07958478d2eef455c7dc395e221
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025876"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>編譯器警告 （層級 4） C4840
 
 > 非可移植的類別的用法*型別*' 做為引數的 variadic 函式
-  
+
 ## <a name="remarks"></a>備註
 
 類別或結構傳遞給 variadic 函式必須是可完整複製。 傳遞這類物件時，編譯器只會進行位元複製，而且不會呼叫建構函式或解構函式。

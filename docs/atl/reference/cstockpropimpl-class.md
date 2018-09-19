@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609216b38ab67076b454ac5adad3f331b235b580
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032025"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 類別
 
@@ -95,7 +95,7 @@ template <class T, class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>  
+    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 plibid,
     wMajor,
@@ -105,25 +105,25 @@ wMinor,
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 實作控制項，以及衍生自類別`CStockPropImpl`。
 
-*介面名稱*  
+*介面名稱*<br/>
 雙重介面，公開內建的屬性。
 
-*piid*  
+*piid*<br/>
 指向 IID 的`InterfaceName`。
 
-*plibid*  
+*plibid*<br/>
 指標，包含定義的型別程式庫的 LIBID `InterfaceName`。
 
-*wMajor*  
+*wMajor*<br/>
 類型程式庫的主要版本。 預設值為 1。
 
-*wMinor*  
+*wMinor*<br/>
 類型程式庫的次要版本。 預設值為 0。
 
-*tihclass*  
+*tihclass*<br/>
 用來管理的類型資訊的類別*T*。預設值是 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
@@ -228,7 +228,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>參數
 
-*pnAppearance*  
+*pnAppearance*<br/>
 接收控制項的繪製樣式的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -245,7 +245,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>參數
 
-*pbAutoSize*  
+*pbAutoSize*<br/>
 變數會接收旗標狀態。 TRUE 表示控制項不能是任何其他的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -262,7 +262,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="parameters"></a>參數
 
-*pclrBackColor*  
+*pclrBackColor*<br/>
 接收控制項的背景色彩的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -279,7 +279,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>參數
 
-*pnBackStyle*  
+*pnBackStyle*<br/>
 接收控制項的背景樣式的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -296,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="parameters"></a>參數
 
-*pclrBorderColor*  
+*pclrBorderColor*<br/>
 接收控制項的框線色彩的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -313,7 +313,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="parameters"></a>參數
 
-*pnBorderStyle*  
+*pnBorderStyle*<br/>
 接收控制項的框線樣式的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -330,7 +330,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>參數
 
-*pbBorderVisible*  
+*pbBorderVisible*<br/>
 變數會接收旗標狀態。 TRUE 表示控制項的框線是可見的。
 
 ### <a name="return-value"></a>傳回值
@@ -347,7 +347,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="parameters"></a>參數
 
-*pnBorderWidth*  
+*pnBorderWidth*<br/>
 接收控制項的框線寬度的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -364,7 +364,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>參數
 
-*pbstrCaption*  
+*pbstrCaption*<br/>
 若要使用控制項來顯示文字。
 
 ### <a name="return-value"></a>傳回值
@@ -381,7 +381,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="parameters"></a>參數
 
-*pnDrawMode*  
+*pnDrawMode*<br/>
 接收控制項的繪製模式的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -398,7 +398,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>參數
 
-*pnDrawStyle*  
+*pnDrawStyle*<br/>
 接收控制項的繪製樣式的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -415,7 +415,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="parameters"></a>參數
 
-*pnDrawWidth*  
+*pnDrawWidth*<br/>
 接收控制項的寬度值，單位為像素的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -432,7 +432,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>參數
 
-*pbEnabled*  
+*pbEnabled*<br/>
 變數會接收旗標狀態。 TRUE 表示已啟用控制項。
 
 ### <a name="return-value"></a>傳回值
@@ -449,7 +449,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="parameters"></a>參數
 
-*pclrFillColor*  
+*pclrFillColor*<br/>
 接收控制項的填滿色彩的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -466,7 +466,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>參數
 
-*pnFillStyle*  
+*pnFillStyle*<br/>
 接收控制項的填滿樣式的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -483,7 +483,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>參數
 
-*ppFont*  
+*ppFont*<br/>
 接收控制項的字型屬性的指標的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -500,7 +500,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>參數
 
-*pclrForeColor*  
+*pclrForeColor*<br/>
 接收控制項的前景色彩的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -517,7 +517,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>參數
 
-*phWnd*  
+*phWnd*<br/>
 與控制項關聯的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -534,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>參數
 
-*ppPicture*  
+*ppPicture*<br/>
 接收圖形的圖片屬性的指標的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -551,7 +551,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>參數
 
-*pnMousePointer*  
+*pnMousePointer*<br/>
 接收滑鼠指標的類型的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -568,7 +568,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>參數
 
-*ppPicture*  
+*ppPicture*<br/>
 變數會接收該圖片屬性的指標。 請參閱[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -585,7 +585,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="parameters"></a>參數
 
-*pnReadyState*  
+*pnReadyState*<br/>
 接收控制項的就緒狀態的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -602,7 +602,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="parameters"></a>參數
 
-*pbTabStop*  
+*pbTabStop*<br/>
 變數會接收旗標狀態。 TRUE 表示控制項的定位停駐點。
 
 ### <a name="return-value"></a>傳回值
@@ -619,7 +619,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>參數
 
-*pbstrText*  
+*pbstrText*<br/>
 顯示與控制項的文字。
 
 ### <a name="return-value"></a>傳回值
@@ -636,7 +636,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>參數
 
-*pbValid*  
+*pbValid*<br/>
 變數會接收旗標狀態。 TRUE 表示控制項有效。
 
 ### <a name="return-value"></a>傳回值
@@ -653,7 +653,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>參數
 
-*phWnd*  
+*phWnd*<br/>
 與控制項關聯的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -670,7 +670,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>參數
 
-*nAppearance*  
+*nAppearance*<br/>
 控制項所要使用新的繪製樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -687,7 +687,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="parameters"></a>參數
 
-*bAutoSize*  
+*bAutoSize*<br/>
 如果控制項不能是任何其他大小，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -704,7 +704,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>參數
 
-*clrBackColor*  
+*clrBackColor*<br/>
 新的控制項背景色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -721,7 +721,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>參數
 
-*nBackStyle*  
+*nBackStyle*<br/>
 新的控制項背景樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -738,7 +738,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="parameters"></a>參數
 
-*clrBorderColor*  
+*clrBorderColor*<br/>
 新的框線色彩。 OLE_COLOR 資料型別是在內部表示為 32 位元長整數。
 
 ### <a name="return-value"></a>傳回值
@@ -755,7 +755,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="parameters"></a>參數
 
-*nBorderStyle*  
+*nBorderStyle*<br/>
 新的框線樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -772,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>參數
 
-*bBorderVisible*  
+*bBorderVisible*<br/>
 如果框線是可見，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -789,7 +789,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>參數
 
-*nBorderWidth*  
+*nBorderWidth*<br/>
 新控制項的框線的寬度。
 
 ### <a name="return-value"></a>傳回值
@@ -806,7 +806,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>參數
 
-*bstrCaption*  
+*bstrCaption*<br/>
 若要使用控制項來顯示文字。
 
 ### <a name="return-value"></a>傳回值
@@ -823,7 +823,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>參數
 
-*nDrawMode*  
+*nDrawMode*<br/>
 控制項新的繪圖模式。
 
 ### <a name="return-value"></a>傳回值
@@ -840,7 +840,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>參數
 
-*nDrawStyle*  
+*nDrawStyle*<br/>
 控制項新的繪製樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -857,7 +857,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>參數
 
-*nDrawWidth*  
+*nDrawWidth*<br/>
 新的寬度，以供控制項的繪製方法。
 
 ### <a name="return-value"></a>傳回值
@@ -874,7 +874,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>參數
 
-*bEnabled*  
+*bEnabled*<br/>
 如果已啟用控制項，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -891,7 +891,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>參數
 
-*clrFillColor*  
+*clrFillColor*<br/>
 控制項新的填滿色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -908,7 +908,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>參數
 
-*nFillStyle*  
+*nFillStyle*<br/>
 控制項新的填滿樣式。
 
 ### <a name="return-value"></a>傳回值
@@ -925,7 +925,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>參數
 
-*pFont*  
+*pFont*<br/>
 指向控制項的字型屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -942,7 +942,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>參數
 
-*clrForeColor*  
+*clrForeColor*<br/>
 控制項的新前景色彩。
 
 ### <a name="return-value"></a>傳回值
@@ -959,7 +959,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>參數
 
-*/&ast; hWnd &ast;/*  
+*/&ast; hWnd &ast;/*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -980,7 +980,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>參數
 
-*pPicture*  
+*pPicture*<br/>
 圖形的圖片內容指標。
 
 ### <a name="return-value"></a>傳回值
@@ -997,7 +997,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>參數
 
-*nMousePointer*  
+*nMousePointer*<br/>
 滑鼠指標的類型。
 
 ### <a name="return-value"></a>傳回值
@@ -1014,7 +1014,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>參數
 
-*pPicture*  
+*pPicture*<br/>
 圖片的內容指標。 請參閱[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1031,7 +1031,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>參數
 
-*nReadyState*  
+*nReadyState*<br/>
 控制項的就緒狀態。
 
 ### <a name="return-value"></a>傳回值
@@ -1048,7 +1048,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="parameters"></a>參數
 
-*bTabStop*  
+*bTabStop*<br/>
 如果控制項是定位停駐點，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -1065,7 +1065,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>參數
 
-*bstrText*  
+*bstrText*<br/>
 顯示與控制項的文字。
 
 ### <a name="return-value"></a>傳回值
@@ -1082,7 +1082,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>參數
 
-*bValid*  
+*bValid*<br/>
 如果控制項有效，則為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -1099,7 +1099,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 視窗控制代碼 (Window Handle)。
 
 ### <a name="return-value"></a>傳回值
@@ -1120,7 +1120,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>參數
 
-*pFont*  
+*pFont*<br/>
 指向控制項的字型屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -1141,7 +1141,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>參數
 
-*pPicture*  
+*pPicture*<br/>
 圖形的圖片內容指標。
 
 ### <a name="return-value"></a>傳回值
@@ -1162,7 +1162,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>參數
 
-*pPicture*  
+*pPicture*<br/>
 圖片的內容指標。 請參閱[IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1175,5 +1175,5 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)

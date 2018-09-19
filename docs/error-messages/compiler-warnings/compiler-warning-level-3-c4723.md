@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4723 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4723 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c5f91bbdc60ab1901c4afe4d5bea9f3258692ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ca6715e26705632dc3187cb6db7deed8636cd82
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296610"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033143"
 ---
 # <a name="compiler-warning-level-3-c4723"></a>編譯器警告 (層級 3) C4723
-可能除以 0  
-  
- 評估為編譯時期零未定義的結果除以作業中的第二個運算元。  
-  
- 只有在使用時，會發出這個警告[/Og](../../build/reference/og-global-optimizations.md)或 /og 的最佳化選項。  
-  
- 編譯器可能會產生零個運算元。
+
+可能除以 0
+
+在作業中被評估為零，在編譯時期，未定義的結果除以第二個運算元。
+
+只有在使用時，會發出這個警告[/Og](../../build/reference/og-global-optimizations.md)或 /og 的最佳化選項。
+
+編譯器可能產生零個運算元。

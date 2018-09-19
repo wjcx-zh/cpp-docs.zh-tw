@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30a0080dd576add0433421bb465d89b2967b9acd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753119"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034924"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 類別
 
@@ -136,7 +136,7 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
 
 ### <a name="parameters"></a>參數
 
-*szNewName*  
+*szNewName*<br/>
 新的檔案儲存在暫存檔案的內容名稱。 如果這個引數為 NULL，則會刪除暫存檔案的內容。
 
 ### <a name="return-value"></a>傳回值
@@ -157,10 +157,10 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 
 ### <a name="parameters"></a>參數
 
-*pszDir*  
+*pszDir*<br/>
 暫存檔案的路徑。 如果這是 NULL， [GetTempPath](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha)會被指派的路徑。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 所需的存取。 請參閱*dwDesiredAccess*中[CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -201,7 +201,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*nPos*  
+*nPos*<br/>
 以位元組為單位的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -222,7 +222,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>參數
 
-*nLen*  
+*nLen*<br/>
 在檔案中的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -271,10 +271,10 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>參數
 
-*nPos*  
+*nPos*<br/>
 鎖定應該開始的位置的檔案中的位置。
 
-*nCount*  
+*nCount*<br/>
 位元組範圍鎖定的長度。
 
 ### <a name="return-value"></a>傳回值
@@ -289,7 +289,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 暫存檔案中傳回的控制代碼。
 
-```  
+```
 operator HANDLE() throw();
 ```
 
@@ -306,13 +306,13 @@ HRESULT Read(
 
 ### <a name="parameters"></a>參數
 
-*pBuffer*  
+*pBuffer*<br/>
 從檔案讀取至接收資料的緩衝區的指標。
 
-*nBufSize*  
+*nBufSize*<br/>
 緩衝區大小，以位元組為單位。
 
-*nBytesRead*  
+*nBytesRead*<br/>
 讀取的位元組數。
 
 ### <a name="return-value"></a>傳回值
@@ -337,10 +337,10 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 
 ### <a name="parameters"></a>參數
 
-*nOffset*  
+*nOffset*<br/>
 位移，以位元組為單位，從所指定的起始點*dwFrom。*
 
-*dwFrom*  
+*dwFrom*<br/>
 起始點 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。
 
 ### <a name="return-value"></a>傳回值
@@ -365,7 +365,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>參數
 
-*nNewLen*  
+*nNewLen*<br/>
 新的長度，以位元組為單位的檔案。
 
 ### <a name="return-value"></a>傳回值
@@ -402,10 +402,10 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ### <a name="parameters"></a>參數
 
-*nPos*  
+*nPos*<br/>
 解除鎖定應該開始的位置的檔案中的位置。
 
-*nCount*  
+*nCount*<br/>
 要解除鎖定的位元組範圍的長度。
 
 ### <a name="return-value"></a>傳回值
@@ -421,7 +421,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 呼叫這個方法，以將資料寫入至檔案指標所指示的位置開始的暫存檔。
 
 ```
-HRESULT Write(  
+HRESULT Write(
     LPCVOID pBuffer,
     DWORD nBufSize,
     DWORD* pnBytesWritten = NULL) throw();
@@ -429,13 +429,13 @@ HRESULT Write(
 
 ### <a name="parameters"></a>參數
 
-*pBuffer*  
+*pBuffer*<br/>
 包含要寫入檔案的資料緩衝區。
 
-*nBufSize*  
+*nBufSize*<br/>
 若要從緩衝區傳送的位元組數目。
 
-*pnBytesWritten*  
+*pnBytesWritten*<br/>
 寫入的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -452,5 +452,5 @@ HRESULT Write(
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [CAtlFile 類別](../../atl/reference/catlfile-class.md)

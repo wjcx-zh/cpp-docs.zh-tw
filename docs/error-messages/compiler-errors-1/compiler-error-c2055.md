@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2055 |Microsoft 文件
+title: 編譯器錯誤 C2055 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f16d9c3948c0211da69142f1b9c7c1a6a32d8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6c63d79325417fbd9b1f451fb4a51f13957b4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019338"
 ---
 # <a name="compiler-error-c2055"></a>編譯器錯誤 C2055
-預期的型式參數清單中，不是類型的清單  
-  
- 函式定義包含參數的型別清單，而不是型式參數清單。 ANSI C 要求的型式參數命名為，除非它們是 void 或省略符號 (`...`)。  
-  
- 下列範例會產生 C2055:  
-  
-```  
-// C2055.c  
-// compile with: /c  
-void func(int, char) {}  // C2055  
-void func (int i, char c) {}   // OK  
+
+預期的型式參數清單中，不是類型的清單
+
+函式定義包含參數的型別清單，而不是型式參數清單。 ANSI C 要求的型式參數命名為，除非它們是 void 或省略符號 (`...`)。
+
+下列範例會產生 C2055:
+
+```
+// C2055.c
+// compile with: /c
+void func(int, char) {}  // C2055
+void func (int i, char c) {}   // OK
 ```

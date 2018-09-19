@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2946 |Microsoft 文件
+title: 編譯器錯誤 C2946 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9485f424306d66514c9e919f13ff5988f8b0d1f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91af822dd21adf9125162ed997e71ed548c863ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247067"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027683"
 ---
 # <a name="compiler-error-c2946"></a>編譯器錯誤 C2946
-明確具現化；'class' 不是樣板類別特製化  
-  
- 您無法明確具現化非樣板類別。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2946。  
-  
-```  
-// C2946.cpp  
-class C {};  
-template C;  // C2946  
-int main() {}  
+
+明確具現化；'class' 不是樣板類別特製化
+
+您無法明確具現化非樣板類別。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2946。
+
+```
+// C2946.cpp
+class C {};
+template C;  // C2946
+int main() {}
 ```

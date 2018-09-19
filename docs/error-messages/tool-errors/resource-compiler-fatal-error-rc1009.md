@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1009 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1009 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f90b127ccee7579304e3963d4edb6ff56ecd95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ceed87c62863f9a5150feebf90f67118656d858
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034105"
 ---
 # <a name="resource-compiler-fatal-error-rc1009"></a>資源編譯器嚴重錯誤 RC1009
-編譯器限制： 巨集太深的巢狀 'macro'  
-  
- 檔案超過資源編譯器的巨集巢狀結構。 修改指定的來源檔案，以減少其巨集巢狀結構深度。
+
+編譯器限制： 巨集太深的巢狀 'macro'
+
+檔案超過巨集巢狀資源編譯器限制。 修改指定的原始程式檔，以減少其巨集巢狀結構深度。

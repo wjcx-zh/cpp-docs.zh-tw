@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed0e105443231853442296748f0e505f3df51b48
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5a3f912f7ba3a5455f7583ba2a5036548ac65df2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753704"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022171"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 類別
 
@@ -37,14 +37,14 @@ ms.locfileid: "43753704"
 ## <a name="syntax"></a>語法
 
 ```
-template<const IID* piid>  
+template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl 
    : public ISupportErrorInfo
 ```
 
 #### <a name="parameters"></a>參數
 
-*piid*  
+*piid*<br/>
 支援介面的 IID 的指標[IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)。
 
 ## <a name="members"></a>成員
@@ -95,7 +95,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>參數
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]成功時，執行緒數目的集區中接收變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -116,7 +116,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>參數
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]變數的位址，成功時，收到的最長時間的執行緒集區會關閉執行緒等候的毫秒數。
 
 ### <a name="return-value"></a>傳回值
@@ -137,7 +137,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>參數
 
-*nNumThreads*  
+*nNumThreads*<br/>
 執行緒集區中的要求的數目。
 
 如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。
@@ -162,7 +162,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>參數
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。
 
 ### <a name="return-value"></a>傳回值

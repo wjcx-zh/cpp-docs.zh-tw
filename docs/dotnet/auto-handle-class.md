@@ -1,5 +1,5 @@
 ---
-title: auto_handle 類別 |Microsoft 文件
+title: auto_handle 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029711"
 ---
 # <a name="autohandle-class"></a>auto_handle 類別
-自動資源管理可用來將 managed 型別中嵌入虛擬控制代碼。  
+自動資源管理可將 managed 類型中嵌入虛擬控制代碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_element_type`  
- 要內嵌的 managed 的類型。  
+*_element_type*<br/>
+要內嵌的 managed 的類型。  
   
 ## <a name="requirements"></a>需求  
  **標頭檔** \<msclr\auto_handle.h >  

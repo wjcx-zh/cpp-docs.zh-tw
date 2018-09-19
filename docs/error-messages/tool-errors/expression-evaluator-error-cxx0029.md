@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0029 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0029 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 216474bbb7a67cb3c435770ab418ab4b7f4e5c4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687708db71eedf9b8f62dc88efc1bfe473cde1d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297319"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017010"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>運算式評估工具錯誤 CXX0029
-不是結構指標  
-  
- 成員選取運算子 (**->**) 已套用至運算式，不是結構的指標。  
-  
- 檢查整個運算式的括號括住正確，或類型轉換成適當結構指標類型的地址運算式。  
-  
- 這個錯誤是與 can0029 相同。
+
+不是結構指標
+
+成員選取運算子 (**->**) 已套用至運算式不是結構的指標。
+
+檢查整個運算式的括號括住正確，或類型轉換成適當的結構指標類型的地址運算式。
+
+此錯誤是與 can0029 相同。

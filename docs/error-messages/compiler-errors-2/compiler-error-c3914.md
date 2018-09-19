@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3914 |Microsoft 文件
+title: 編譯器錯誤 C3914 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3818c54f3720bdff92280e04a4750ed1b4f238c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bb10652a6328bb8ddcc3a8e62755a960a7fc850
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029412"
 ---
 # <a name="compiler-error-c3914"></a>編譯器錯誤 C3914
-預設屬性不可為靜態  
-  
-預設屬性宣告不正確。  如需詳細資訊，請參閱[How to： 使用內容，在 C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。  
-  
-## <a name="example"></a>範例  
-下列範例會產生 C3914，並示範如何修正此問題。  
-  
-```  
-// C3914.cpp  
-// compile with: /clr /c  
-ref struct X {  
-   static property int default[int] {   // C3914  
-   // try the following line instead  
-   // property int default[int] {  
-      int get(int) { return 0; }  
-      void set(int, int) {}  
-   }  
-};  
+
+預設屬性不可為靜態
+
+預設屬性宣告不正確。  如需詳細資訊，請參閱 <<c0> [ 如何： 使用屬性，在 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3914，並示範如何修正此問題。
+
+```
+// C3914.cpp
+// compile with: /clr /c
+ref struct X {
+   static property int default[int] {   // C3914
+   // try the following line instead
+   // property int default[int] {
+      int get(int) { return 0; }
+      void set(int, int) {}
+   }
+};
 ```

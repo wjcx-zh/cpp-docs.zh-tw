@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0261ed9d1e84849f408c3d764693cb95ac7019d2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65b8a0420bc996812eed5996757e05d50aafc030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023523"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -30,8 +30,8 @@ ms.locfileid: "39408062"
 
 A **__declspec**可用的函式宣告中的擴充的屬性。
 
-## <a name="syntax"></a>語法  
-  
+## <a name="syntax"></a>語法
+
 > *傳回型別*__declspec （nothrow) [*呼叫慣例*]*函式名稱*([*引數清單*])
 
 ## <a name="remarks"></a>備註
@@ -57,6 +57,7 @@ void __stdcall f3() throw();
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
- [__declspec](../cpp/declspec.md)  
- [noexcept](noexcept-cpp.md)  
- [關鍵字](../cpp/keywords-cpp.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[noexcept](noexcept-cpp.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: tile_barrier 類別 |Microsoft 文件
+title: tile_barrier 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e81b7cab8d7e8774e6ac50c5de5f256d76b232
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a91cbb816deb18d9c4cf7356faa879c09a9d276c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025200"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 類別
-同步處理的使用中執行緒群組 （磚） 執行的執行緒執行`wait`方法。 執行階段可以具現化這個類別。  
+同步處理在執行緒群組 (tile) 中執行所使用的執行緒的執行`wait`方法。 只有在執行階段可以具現化這個類別。  
   
 ### <a name="syntax"></a>語法 
   
@@ -50,10 +50,10 @@ class tile_barrier;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[等候](#wait)|指示來停止執行，直到在磚中的所有執行緒都完成等候的執行緒群組 （磚） 中的所有執行緒。|  
-|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|阻擋所有執行緒，直到完成為止所有記憶體存取在磚中的，磚中的所有執行緒的執行已達到此呼叫。|  
-|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|阻擋所有執行緒，直到所有的全域記憶體存取在磚中的執行已經完成，而在磚中的所有執行緒已都達到此呼叫。|  
-|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|封鎖，直到所有的磚中的所有執行緒執行`tile_static`已經完成的記憶體存取，而在磚中的所有執行緒已都達到此呼叫。|  
+|[等候](#wait)|指示要停止執行，直至 tile 中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。|  
+|[wait_with_all_memory_fence](#wait_with_all_memory_fence)|封鎖執行，直到所有記憶體存取都已經都完成的所有執行緒和 tile 中的所有執行緒到達這個呼叫為止。|  
+|[wait_with_global_memory_fence](#wait_with_global_memory_fence)|封鎖直到所有全域記憶體存取的所有執行緒的執行已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|  
+|[wait_with_tile_static_memory_fence](#wait_with_tile_static_memory_fence)|封鎖 tile 中的所有執行緒的執行，直到所有`tile_static`記憶體存取已經完成，且 tile 中的所有執行緒都到達這個呼叫為止。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `tile_barrier`  
@@ -74,11 +74,11 @@ tile_barrier(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `tile_barrier`来複製物件。  
+*_Other*<br/>
+`tile_barrier`来複製的物件。  
 
 ## <a name="wait"></a>  等候 
-指示來停止執行，直到在磚中的所有執行緒都完成等候的執行緒群組 （磚） 中的所有執行緒。  
+指示來停止執行，直到磚中的所有執行緒均已都完成等待執行緒群組 (tile) 中的所有執行緒。  
   
 ### <a name="syntax"></a>語法 
   
@@ -87,7 +87,7 @@ void wait() const restrict(amp);
 ```    
 
 ## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence   
-區塊執行的所有執行緒，直到在磚中的所有執行緒已都達到此呼叫在磚中。 這可確保所有記憶體存取檢視中 [執行緒] 磚中，其他執行緒，且已經執行程式的順序。  
+封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有記憶體存取對執行緒 tile 中，在其他執行緒可見，而且依照程式順序執行。  
   
 ### <a name="syntax"></a>語法 
   
@@ -97,7 +97,7 @@ void wait_with_all_memory_fence() const restrict(amp);
   
 
 ## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence   
-區塊執行的所有執行緒，直到在磚中的所有執行緒已都達到此呼叫在磚中。 這可確保所有的全域記憶體存取會顯示執行緒在磚中，其他執行緒，而且已經執行程式的順序。  
+封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保所有全域記憶體存取對執行緒 tile 中，在其他執行緒可見，並已依照程式順序執行。  
   
 ### <a name="syntax"></a>語法 
   
@@ -106,7 +106,7 @@ void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
 ## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence   
-區塊執行的所有執行緒，直到在磚中的所有執行緒已都達到此呼叫在磚中。 如此可確保`tile_static`記憶體存取可以看見其他執行緒的執行緒在磚中，而且已經執行程式的順序。  
+封鎖執行的所有執行緒，直到 tile 中的所有執行緒都到達這個呼叫為止。 這可確保`tile_static`記憶體存取對執行緒 tile 中，在其他執行緒可見，而且已依照程式順序執行。  
   
 ### <a name="syntax"></a>語法 
   

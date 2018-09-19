@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c88b73499948db4e8fc0645b2d59f7b92b3cfe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753174"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022990"
 ---
 # <a name="csid-class"></a>CSid 類別
 
@@ -156,22 +156,22 @@ explicit CSid(
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 將現有`CSid`物件或`SID`（安全性識別碼） 結構。
 
-*IdentifierAuthority*  
+*IdentifierAuthority*<br/>
 授權單位。
 
-*nSubAuthorityCount*  
+*nSubAuthorityCount*<br/>
 局部授權計數。
 
-*pszAccountName*  
+*pszAccountName*<br/>
 帳戶名稱。
 
-*pszSystem*  
+*pszSystem*<br/>
 系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串為 NULL，會改用本機系統。
 
-*pSid*  
+*pSid*<br/>
 指標`SID`結構。
 
 ### <a name="remarks"></a>備註
@@ -233,7 +233,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 的結構或`CSid`来比較的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -300,7 +300,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 
 ### <a name="parameters"></a>參數
 
-*nSubAuthority*  
+*nSubAuthority*<br/>
 局部授權。
 
 ### <a name="return-value"></a>傳回值
@@ -363,13 +363,13 @@ bool LoadAccount(
 
 ### <a name="parameters"></a>參數
 
-*pszAccountName*  
+*pszAccountName*<br/>
 帳戶名稱。
 
-*pszSystem*  
+*pszSystem*<br/>
 系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串為 NULL，會改用本機系統。
 
-*pSid*  
+*pSid*<br/>
 指標[SID](/windows/desktop/api/winnt/ns-winnt-_sid)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -385,13 +385,13 @@ bool LoadAccount(
 指派運算子。
 
 ```
-CSid& operator= (const CSid& rhs) throw(...);  
+CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`若要指派給`CSid`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -410,10 +410,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在左邊 = = 運算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在右側 = = 運算子。
 
 ### <a name="return-value"></a>傳回值
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
 
 ### <a name="return-value"></a>傳回值
@@ -454,10 +454,10 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
 
 ### <a name="return-value"></a>傳回值
@@ -476,10 +476,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
 
 ### <a name="return-value"></a>傳回值
@@ -498,10 +498,10 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
 
 ### <a name="return-value"></a>傳回值
@@ -520,10 +520,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*lhs*  
+*lhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
 
-*rhs*  
+*rhs*<br/>
 `SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
 
 ### <a name="return-value"></a>傳回值
@@ -534,7 +534,7 @@ bool operator>=(
 
 轉型`CSid`物件的指標`SID`（安全性識別碼） 結構。
 
-```  
+```
 operator const SID *() const throw(...);
 ```
 
@@ -584,7 +584,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[安全性全域函式](../../atl/reference/security-global-functions.md)   
+[安全性範例](../../visual-cpp-samples.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[安全性全域函式](../../atl/reference/security-global-functions.md)<br/>
 [運算子](../../atl/reference/atl-operators.md)

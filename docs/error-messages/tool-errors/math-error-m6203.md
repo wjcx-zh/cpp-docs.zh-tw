@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6203 |Microsoft 文件
+title: 運算錯誤 M6203 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7660284f9e5e69b53f3289eaa1aa424944bbecb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8474c91802b4756207676c466fdd28d66d911b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022665"
 ---
 # <a name="math-error-m6203"></a>運算錯誤 M6203
-'function': _OVERFLOW 錯誤  
-  
- 指定的函式的結果就是太大，無法呈現。  
-  
- 這個錯誤呼叫`_matherr`函式名稱、 其引數，與錯誤類型的函式。 您可以重新撰寫`_matherr`函式來自訂特定執行階段浮點數學錯誤的處理。
+
+'function': _OVERFLOW 錯誤
+
+指定的函式的結果就是太大，無法呈現。
+
+這個錯誤呼叫`_matherr`函式名稱、 其引數，與錯誤類型的函式。 您可以重新撰寫`_matherr`函式來自訂特定執行階段浮點數學錯誤的處理。

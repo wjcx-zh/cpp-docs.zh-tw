@@ -17,18 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b978356cead1f9b74ce59e58ab0191f5e00105b
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c64abdee07a7fde3e92fb684a86a8e28e4a78ad7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029737"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 資料類型 (ODBC)
+
 > [!NOTE]
 >  這項資訊適用於 MFC ODBC 類別。 如果您使用 MFC DAO 類別時，請參閱 「 比較 Microsoft Jet 資料庫引擎 SQL 和 ANSI SQL"DAO [說明] 中的主題。  
   
- 下表會將 ANSI SQL 資料類型對應至 c + + 資料類型。 這可增強的附錄 D 中提供的 C 語言資訊*ODBC SDK* *程式設計人員參考*MSDN Library CD 上。 精靈會管理為您的大部分資料類型對應。 如果您不使用精靈，您可以使用對應的資訊可協助您以手動方式撰寫欄位交換程式碼。  
+下表會將 ANSI SQL 資料類型對應至 c + + 資料類型。 這可增強的附錄 D 中提供的 C 語言資訊*ODBC SDK* *程式設計人員參考*MSDN Library CD 上。 精靈會管理為您的大部分資料類型對應。 如果您不使用精靈，您可以使用對應的資訊可協助您以手動方式撰寫欄位交換程式碼。  
   
 ### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>ANSI SQL 資料類型對應至 c + + 資料類型  
   
@@ -54,16 +55,17 @@ ms.locfileid: "39340764"
 |**時間**|`CTime`, `CString`|  
 |**時間戳記**|`CTime`, `CString`|  
   
- 1. ANSI**十進位**並**數值**對應至`CString`因為**SQL_C_CHAR**是預設 ODBC 傳輸類型。  
+1. ANSI**十進位**並**數值**對應至`CString`因為**SQL_C_CHAR**是預設 ODBC 傳輸類型。  
   
- 2. 當對應至的預設值來截斷超過 255 個字元的字元資料`CString`。 您可以藉由明確將擴充截斷長度*nMaxLength*引數`RFX_Text`。  
+2. 當對應至的預設值來截斷超過 255 個字元的字元資料`CString`。 您可以藉由明確將擴充截斷長度*nMaxLength*引數`RFX_Text`。  
   
- 3. 當對應至的預設值來截斷超過 255 個字元的二進位資料`CByteArray`。 您可以藉由明確將擴充截斷長度*nMaxLength*引數`RFX_Binary`。  
+3. 當對應至的預設值來截斷超過 255 個字元的二進位資料`CByteArray`。 您可以藉由明確將擴充截斷長度*nMaxLength*引數`RFX_Binary`。  
   
- 如果您不會使用 ODBC 資料指標程式庫，您可能會遇到問題，在嘗試更新兩個或更多使用 Microsoft SQL Server ODBC 驅動程式和 MFC ODBC 資料庫類別的長時間的可變長度欄位。 ODBC 型別**SQL_LONGVARCHAR**並**SQL_LONGVARBINARY**、 對應至文字和映像 SQL Server 型別。 A`CDBException`如果您更新兩個或多個長時間的可變長度欄位相同的呼叫會擲回`CRecordset::Update`。 因此，不會更新同時使用多長的資料行`CRecordset::Update`。 您可以使用 ODBC API，同時更新多長的資料行`SQLPutData`。 您也可以使用 ODBC 資料指標程式庫，但這不建議用於驅動程式，如 SQL Server 驅動程式支援資料指標，而不需要資料指標程式庫。  
+如果您不會使用 ODBC 資料指標程式庫，您可能會遇到問題，在嘗試更新兩個或更多使用 Microsoft SQL Server ODBC 驅動程式和 MFC ODBC 資料庫類別的長時間的可變長度欄位。 ODBC 型別**SQL_LONGVARCHAR**並**SQL_LONGVARBINARY**、 對應至文字和映像 SQL Server 型別。 A`CDBException`如果您更新兩個或多個長時間的可變長度欄位相同的呼叫會擲回`CRecordset::Update`。 因此，不會更新同時使用多長的資料行`CRecordset::Update`。 您可以使用 ODBC API，同時更新多長的資料行`SQLPutData`。 您也可以使用 ODBC 資料指標程式庫，但這不建議用於驅動程式，如 SQL Server 驅動程式支援資料指標，而不需要資料指標程式庫。  
   
- 如果您使用 MFC ODBC 資料庫類別和 Microsoft SQL Server ODBC 驅動程式，使用 ODBC 資料指標程式庫**ASSERT**可能會發生連同`CDBException`如果呼叫`CRecordset::Update`在呼叫`CRecordset::Requery`。 請改為呼叫`CRecordset::Close`並`CRecordset::Open`而非`CRecordset::Requery`。 另一個解決方案是不使用 ODBC 資料指標程式庫，因為 SQL Server 和 SQL Server ODBC 驅動程式提供原生支援資料指標的原生並不需要 ODBC 資料指標程式庫。  
+如果您使用 MFC ODBC 資料庫類別和 Microsoft SQL Server ODBC 驅動程式，使用 ODBC 資料指標程式庫**ASSERT**可能會發生連同`CDBException`如果呼叫`CRecordset::Update`在呼叫`CRecordset::Requery`。 請改為呼叫`CRecordset::Close`並`CRecordset::Open`而非`CRecordset::Requery`。 另一個解決方案是不使用 ODBC 資料指標程式庫，因為 SQL Server 和 SQL Server ODBC 驅動程式提供原生支援資料指標的原生並不需要 ODBC 資料指標程式庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL](../../data/odbc/sql.md)   
- [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+
+[SQL](../../data/odbc/sql.md)<br/>
+[SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

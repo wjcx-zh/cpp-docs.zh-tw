@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 965aa7256fadd00d2ef435b6df64467460322991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a22b04bd0a362824e20621eaa7f66cafd0e55cf5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753054"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024498"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 類別
 
@@ -44,16 +44,16 @@ ms.locfileid: "43753054"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, class TBase = CWindow>  
+template <class T, class TBase = CWindow>
 class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`CAxDialogImpl`。
 
-*TBase*  
+*TBase*<br/>
 基底的視窗類別`CDialogImplBaseT`。
 
 ## <a name="members"></a>成員
@@ -121,7 +121,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>參數
 
-*bAdvise*  
+*bAdvise*<br/>
 如果接收的所有項目會接到;，設為 true如果是 all，則為 false。 接收項目是要 unadvised。
 
 ### <a name="return-value"></a>傳回值
@@ -139,13 +139,13 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]主控視窗控制代碼。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
-*RECT （&AMP; S)*  
+*RECT （&AMP; S)*<br/>
 不使用這個參數。 此參數的傳入方式`CComControl`。
 
 ### <a name="return-value"></a>傳回值
@@ -180,16 +180,16 @@ BOOL DestroyWindow();
 
 ```
 INT_PTR DoModal(
-    HWND hWndParent = ::GetActiveWindow(), 
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]主控視窗控制代碼。 預設值是傳回值[GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 函式。
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in]指定要傳遞至對話方塊中的值*lParam* WM_INITDIALOG 訊息參數。
 
 ### <a name="return-value"></a>傳回值
@@ -212,7 +212,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>參數
 
-*nRetCode*  
+*nRetCode*<br/>
 [in]要傳回的值[DoModal](#domodal)。
 
 ### <a name="return-value"></a>傳回值
@@ -264,7 +264,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 ### <a name="parameters"></a>參數
 
-*pMsg*  
+*pMsg*<br/>
 指標[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)結構，其中包含要檢查的訊息。
 
 ### <a name="return-value"></a>傳回值
@@ -285,5 +285,5 @@ bool m_bModal;
 
 ## <a name="see-also"></a>另請參閱
 
-[CDialogImpl 類別](../../atl/reference/cdialogimpl-class.md)   
+[CDialogImpl 類別](../../atl/reference/cdialogimpl-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

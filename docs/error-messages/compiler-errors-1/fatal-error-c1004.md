@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1004 |Microsoft 文件
+title: 嚴重錯誤 C1004 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d88f76c00c8f5b36acf238f0da88e908eac6dbe8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a284de510fde49602a06fb9282c0ddd59eeb0ac1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197165"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020276"
 ---
 # <a name="fatal-error-c1004"></a>嚴重錯誤 C1004
-找到未預期的檔案結尾  
-  
- 編譯器遇到來源檔案的結尾，而不會解決建構。 程式碼可能會遺漏下列項目之一：  
-  
--   右大括號  
-  
--   右括號  
-  
--   結束的註解標記 (* /)  
-  
--   分號  
-  
- 若要解決這個錯誤，請檢查下列：  
-  
--   預設磁碟機空間不足的暫存檔案，需要更多關於倍的空間與原始程式檔案。  
-  
--   `#if`指示詞會評估為 false 缺少右`#endif`指示詞。  
-  
--   原始程式檔未以歸位字元和換行字元結尾。  
-  
- 下列範例會產生 C1004:  
-  
-```  
-// C1004.cpp  
-#if TEST  
-int main() {}  
-// C1004  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C1004b.cpp  
-#if TEST  
-#endif  
-  
-int main() {}  
+
+找到未預期的檔案結尾
+
+編譯器會遇到原始程式檔的結尾，而不會解決建構。 程式碼可能會遺失下列項目之一：
+
+- 右大括號
+
+- 右括號
+
+- 結束的註解標記 (* /)
+
+- 分號
+
+若要解決這個錯誤，請檢查下列：
+
+- 預設磁碟機沒有足夠的空間，需要更多關於兩倍的空間為原始程式檔中的暫存檔案。
+
+- `#if`評估為 false 的缺少結尾的指示詞`#endif`指示詞。
+
+- 原始程式檔不以歸位字元和換行字元結尾。
+
+下列範例會產生 C1004:
+
+```
+// C1004.cpp
+#if TEST
+int main() {}
+// C1004
+```
+
+可能的解決方式：
+
+```
+// C1004b.cpp
+#if TEST
+#endif
+
+int main() {}
 ```

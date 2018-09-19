@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4001 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4001 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc728fa5c66fb4b42c8fe4a785f36048ffbaed4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c325656b9e61ee324a3b9f171413f1020440f9ab
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025408"
 ---
 # <a name="compiler-warning-level-4-c4001"></a>編譯器警告 （層級 4） C4001
-使用非標準的擴充 '單行註解'  
 
-> [!NOTE] 
-> 因為單行註解中 C99 標準 Visual Studio 2017 版本 15.5 已移除這個警告。
-  
- 單行註解是標準 c + + 和 C 啟動與 C99 標準。 嚴格的 ANSI 相容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))，C 的檔案，其中包含單行註解，產生 C4001 由於非標準的擴充功能的使用方式。 由於單行註解是標準 c + + 中，C 的檔案，其中包含單行註解不會產生 C4001 編譯搭配 Microsoft 擴充功能 (/Ze) 時。  
-  
-## <a name="example"></a>範例  
- 若要停用警告，請取消註解[#pragma warning(disable:4001)](../../preprocessor/warning.md)。  
-  
-```  
-// C4001.cpp  
-// compile with: /W4 /Za /TC  
-// #pragma warning(disable:4001)  
-int main()  
-{  
-   // single-line comment in main  
-   // C4001  
-}  
+使用非標準的擴充 '單行註解'
+
+> [!NOTE]
+> 這個警告會移除 Visual Studio 2017 15.5 版中，因為單行註解是在 C99 標準。
+
+單行註解是 standard c + + 和 C 啟動與 C99 標準。
+嚴格的 ANSI 相容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))，C 的檔案，其中包含單行註解，產生 C4001 由於非標準的擴充功能的使用方式。 由於單行註解是標準 c + + 中，C 檔案包含單行註解不會產生 C4001 搭配 Microsoft 擴充功能 (/Ze) 進行編譯時。
+
+## <a name="example"></a>範例
+
+若要停用警告，請取消註解[#pragma warning(disable:4001)](../../preprocessor/warning.md)。
+
+```
+// C4001.cpp
+// compile with: /W4 /Za /TC
+// #pragma warning(disable:4001)
+int main()
+{
+   // single-line comment in main
+   // C4001
+}
 ```

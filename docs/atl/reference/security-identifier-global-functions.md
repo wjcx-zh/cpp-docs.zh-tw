@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74836c06e4ff7a9188c9886087502ad4909aebf0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8041d3928b819a7a5a53f89cc3dc2351a29ecf8f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762410"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020899"
 ---
 # <a name="security-identifier-global-functions"></a>安全性識別碼全域函式
 
@@ -111,6 +111,7 @@ CSid AccountOps() throw(...);
 ##  <a name="admins"></a>  Sids::Admins
 
 傳回 DOMAIN_ALIAS_RID_ADMINS SID。  
+
 ```
 CSid Admins() throw(...);
 ```
@@ -118,6 +119,7 @@ CSid Admins() throw(...);
 ##  <a name="anonymouslogon"></a>  Sids::AnonymousLogon
 
 傳回 SECURITY_ANONYMOUS_LOGON_RID SID。  
+
 ```
 CSid AnonymousLogon() throw(...);
 ```
@@ -125,6 +127,7 @@ CSid AnonymousLogon() throw(...);
 ##  <a name="authenticateduser"></a>  Sids::AuthenticatedUser
 
 傳回 SECURITY_AUTHENTICATED_USER_RID SID。  
+
 ```
 CSid AuthenticatedUser() throw(...);
 ```
@@ -132,6 +135,7 @@ CSid AuthenticatedUser() throw(...);
 ##  <a name="backupops"></a>  Sids::BackupOps
 
 傳回 DOMAIN_ALIAS_RID_BACKUP_OPS SID。  
+
 ```
 CSid BackupOps() throw(...);
 ```
@@ -139,6 +143,7 @@ CSid BackupOps() throw(...);
 ##  <a name="batch"></a>  Sids::Batch
 
 傳回 SECURITY_BATCH_RID SID。  
+
 ```
 CSid Batch() throw(...);
 ```
@@ -146,6 +151,7 @@ CSid Batch() throw(...);
 ##  <a name="creatorgroup"></a>  Sids::CreatorGroup
 
 傳回 SECURITY_CREATOR_GROUP_RID SID。  
+
 ```
 CSid CreatorGroup() throw(...);
 ```
@@ -153,6 +159,7 @@ CSid CreatorGroup() throw(...);
 ##  <a name="creatorgroupserver"></a>  Sids::CreatorGroupServer
 
 傳回 SECURITY_CREATOR_GROUP_SERVER_RID SID。  
+
 ```
 CSid CreatorGroupServer() throw(...);
 ```
@@ -160,6 +167,7 @@ CSid CreatorGroupServer() throw(...);
 ##  <a name="creatorowner"></a>  Sids::CreatorOwner
 
 傳回 SECURITY_CREATOR_OWNER_RID SID。  
+
 ```
 CSid CreatorOwner() throw(...);
 ```
@@ -167,6 +175,7 @@ CSid CreatorOwner() throw(...);
 ##  <a name="creatorownerserver"></a>  Sids::CreatorOwnerServer
 
 傳回 SECURITY_CREATOR_OWNER_SERVER_RID SID。  
+
 ```
 CSid CreatorOwnerServer() throw(...);
 ```
@@ -174,6 +183,7 @@ CSid CreatorOwnerServer() throw(...);
 ##  <a name="dialup"></a>  Sids::Dialup
 
 傳回 SECURITY_DIALUP_RID SID。  
+
 ```
 CSid Dialup() throw(...);
 ```
@@ -181,6 +191,7 @@ CSid Dialup() throw(...);
 ##  <a name="guests"></a>  Sids::Guests
 
 傳回 DOMAIN_ALIAS_RID_GUESTS SID。  
+
 ```
 CSid Guests() throw(...);
 ```
@@ -188,6 +199,7 @@ CSid Guests() throw(...);
 ##  <a name="interactive"></a>  Sids::Interactive
 
 傳回 SECURITY_INTERACTIVE_RID SID。  
+
 ```
 CSid Interactive() throw(...);
 ```
@@ -195,6 +207,7 @@ CSid Interactive() throw(...);
 ##  <a name="local"></a>  Sids::Local
 
 傳回 SECURITY_LOCAL_RID SID。  
+
 ```
 CSid Local() throw(...);
 ```
@@ -202,6 +215,7 @@ CSid Local() throw(...);
 ##  <a name="network"></a>  Sids::Network
 
 傳回 SECURITY_NETWORK_RID SID。  
+
 ```
 CSid Network() throw(...);
 ```
@@ -209,6 +223,7 @@ CSid Network() throw(...);
 ##  <a name="networkservice"></a>  Sids::NetworkService
 
 傳回 SECURITY_NETWORK_SERVICE_RID SID。  
+
 ```
 CSid NetworkService() throw(...);
 ```
@@ -222,6 +237,7 @@ CSid NetworkService() throw(...);
 ##  <a name="null"></a>  Sids::Null
 
 傳回 SECURITY_NULL_RID SID。  
+
 ```
 CSid Null() throw(...);
 ```
@@ -229,6 +245,7 @@ CSid Null() throw(...);
 ##  <a name="prew2kaccess"></a>  Sids::PreW2KAccess
 
 傳回 DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID。  
+
 ```
 CSid PreW2KAccess() throw(...);
 ```
@@ -236,6 +253,7 @@ CSid PreW2KAccess() throw(...);
 ##  <a name="powerusers"></a>  Sids::PowerUsers
 
 傳回 DOMAIN_ALIAS_RID_POWER_USERS SID。  
+
 ```
 CSid PowerUsers() throw(...);
 ```
@@ -243,6 +261,7 @@ CSid PowerUsers() throw(...);
 ##  <a name="printops"></a>  Sids::PrintOps
 
 傳回 DOMAIN_ALIAS_RID_PRINT_OPS SID。  
+
 ```
 CSid PrintOps() throw(...);
 ```
@@ -250,6 +269,7 @@ CSid PrintOps() throw(...);
 ##  <a name="proxy"></a>  Sids::Proxy
 
 傳回 SECURITY_PROXY_RID SID。  
+
 ```
 CSid Proxy() throw(...);
 ```
@@ -257,6 +277,7 @@ CSid Proxy() throw(...);
 ##  <a name="rasservers"></a>  Sids::RasServers
 
 傳回 DOMAIN_ALIAS_RID_RAS_SERVERS SID。  
+
 ```
 CSid RasServers() throw(...);
 ```
@@ -264,6 +285,7 @@ CSid RasServers() throw(...);
 ##  <a name="replicator"></a>  Sids::Replicator
 
 傳回 DOMAIN_ALIAS_RID_REPLICATOR SID。  
+
 ```
 CSid Replicator() throw(...);
 ```
@@ -271,6 +293,7 @@ CSid Replicator() throw(...);
 ##  <a name="restrictedcode"></a>  Sids::RestrictedCode
 
 傳回 SECURITY_RESTRICTED_CODE_RID SID。  
+
 ```
 CSid RestrictedCode() throw(...);
 ```
@@ -278,6 +301,7 @@ CSid RestrictedCode() throw(...);
 ##  <a name="self"></a>  Sids::Self
 
 傳回 SECURITY_PRINCIPAL_SELF_RID SID。  
+
 ```
 CSid Self() throw(...);
 ```
@@ -285,6 +309,7 @@ CSid Self() throw(...);
 ##  <a name="serverlogon"></a>  Sids::ServerLogon
 
 傳回 SECURITY_SERVER_LOGON_RID SID。  
+
 ```
 CSid ServerLogon() throw(...);
 ```
@@ -292,6 +317,7 @@ CSid ServerLogon() throw(...);
 ##  <a name="service"></a>  Sids::Service
 
 傳回 SECURITY_SERVICE_RID SID。  
+
 ```
 CSid Service() throw(...);
 ```
@@ -299,6 +325,7 @@ CSid Service() throw(...);
 ##  <a name="system"></a>  Sids::System
 
 傳回 SECURITY_LOCAL_SYSTEM_RID SID。  
+
 ```
 CSid System() throw(...);
 ```
@@ -306,6 +333,7 @@ CSid System() throw(...);
 ##  <a name="systemops"></a>  Sids::SystemOps
 
 傳回 DOMAIN_ALIAS_RID_SYSTEM_OPS SID。  
+
 ```
 CSid SystemOps() throw(...);
 ```
@@ -313,6 +341,7 @@ CSid SystemOps() throw(...);
 ##  <a name="terminalserver"></a>  Sids::TerminalServer
 
 傳回 SECURITY_TERMINAL_SERVER_RID SID。  
+
 ```
 CSid TerminalServer() throw(...);
 ```
@@ -320,6 +349,7 @@ CSid TerminalServer() throw(...);
 ##  <a name="users"></a>  Sids::Users
 
 傳回 DOMAIN_ALIAS_RID_USERS SID。  
+
 ```
 CSid Users() throw(...);
 ```
@@ -327,6 +357,7 @@ CSid Users() throw(...);
 ##  <a name="world"></a>  Sids::World
 
 傳回 SECURITY_WORLD_RID SID。  
+
 ```
 CSid World() throw(...);
 ```

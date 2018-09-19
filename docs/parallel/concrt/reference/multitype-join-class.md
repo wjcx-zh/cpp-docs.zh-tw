@@ -1,5 +1,5 @@
 ---
-title: multitype_join 類別 |Microsoft 文件
+title: multitype_join 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: eea798db304b27a77ae70766a7271cfa3f94981b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019406"
 ---
 # <a name="multitypejoin-class"></a>multitype_join 類別
 `multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。  
@@ -48,11 +48,11 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- `tuple`裝載類型的訊息加入，且由區塊的傳播。  
+*T*<br/>
+`tuple`之訊息的裝載類型加入且由區塊所傳播。  
   
- `_Jtype`  
- 此種類的`join`區塊這有`greedy`或 `non_greedy`  
+*_Jtype*<br/>
+類型的`join`區塊，這是，可能是`greedy`或 `non_greedy`  
   
 ## <a name="members"></a>成員  
   
@@ -73,18 +73,18 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[accept](#accept)|接受的訊息，有提供這`multitype_join`區塊中，將擁有權傳送給呼叫者。|  
-|[acquire_ref](#acquire_ref)|取得這個參考計數`multitype_join`傳訊區塊，導致無法刪除。|  
-|[consume](#consume)|取用先前所提供的訊息`multitype_join`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。|  
+|[accept](#accept)|接受的訊息，由此`multitype_join`區塊中，將擁有權傳送給呼叫者。|  
+|[acquire_ref](#acquire_ref)|取得此參考計數`multitype_join`傳訊區塊，以防止刪除。|  
+|[consume](#consume)|會使用先前所提供訊息`multitype_join`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。|  
 |[link_target](#link_target)|將目標區塊連結至這個`multitype_join`傳訊區塊。|  
 |[release](#release)|釋放先前成功的訊息保留。|  
 |[release_ref](#release_ref)|釋放此參考計數`multiple_join`傳訊區塊。|  
-|[reserve](#reserve)|由此先前提供的訊息會保留`multitype_join`傳訊區塊。|  
+|[reserve](#reserve)|保留先前由此訊息`multitype_join`傳訊區塊。|  
 |[unlink_target](#unlink_target)|取消連結的目標區塊，從這個`multitype_join`傳訊區塊。|  
-|[unlink_targets](#unlink_targets)|取消連結所有從這個目標`multitype_join`傳訊區塊。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|  
+|[unlink_targets](#unlink_targets)|取消連結所有的目標，從這個`multitype_join`傳訊區塊。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [ISource](isource-class.md)  
@@ -98,7 +98,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 ##  <a name="accept"></a> 接受 
 
- 接受的訊息，有提供這`multitype_join`區塊中，將擁有權傳送給呼叫者。  
+ 接受的訊息，由此`multitype_join`區塊中，將擁有權傳送給呼叫者。  
   
 ```  
 virtual message<_Destination_type>* accept(
@@ -107,33 +107,33 @@ virtual message<_Destination_type>* accept(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`所提供的`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`提供的`message`物件。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`accept`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`accept`方法。  
   
 ### <a name="return-value"></a>傳回值  
- 呼叫端現在具有的擁有權的訊息指標。  
+ 指標，呼叫者現在擁有的訊息。  
   
 ##  <a name="acquire_ref"></a> acquire_ref 
 
- 取得這個參考計數`multitype_join`傳訊區塊，導致無法刪除。  
+ 取得此參考計數`multitype_join`傳訊區塊，以防止刪除。  
   
 ```  
 virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 正在呼叫這個方法的目標區塊的指標。  
+*_PTarget*<br/>
+正在呼叫這個方法的目標區塊的指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫`ITarget`連結到這個期間的來源物件`link_target`方法。  
+ 這個方法會呼叫`ITarget`物件所要連結到這個來源期間，`link_target`方法。  
   
 ##  <a name="consume"></a> 使用 
 
- 取用先前所提供的訊息`multitype_join`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。  
+ 會使用先前所提供訊息`multitype_join`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。  
   
 ```  
 virtual message<_Destination_type>* consume(
@@ -142,17 +142,17 @@ virtual message<_Destination_type>* consume(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的保留`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`的保留`message`物件。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`consume`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`consume`方法。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`message`物件，呼叫端現在會有的擁有權。  
+ 指標`message`物件，呼叫者現在會有的擁有權。  
   
 ### <a name="remarks"></a>備註  
- `consume`方法很類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
+ `consume`方法是類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
   
 ##  <a name="link_target"></a> link_target 
 
@@ -163,8 +163,8 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 指標`ITarget`區塊連結至這個`multitype_join`傳訊區塊。  
+*_PTarget*<br/>
+指標`ITarget`連結到此區塊`multitype_join`傳訊區塊。  
   
 ##  <a name="ctor"></a> multitype_join 
 
@@ -190,17 +190,17 @@ multitype_join(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Tuple`  
- 此 `tuple` 傳訊區塊的 `multitype_join` 來源。  
+*_Tuple*<br/>
+此 `tuple` 傳訊區塊的 `multitype_join` 來源。  
   
- `_PScheduler`  
- `Scheduler` 物件，在其內會排定 `multitype_join` 傳訊區塊的傳播工作。  
+*_PScheduler*<br/>
+`Scheduler` 物件，在其內會排定 `multitype_join` 傳訊區塊的傳播工作。  
   
- `_PScheduleGroup`  
- `ScheduleGroup` 物件，在其內會排定 `multitype_join` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。  
+*_PScheduleGroup*<br/>
+`ScheduleGroup` 物件，在其內會排定 `multitype_join` 傳訊區塊的傳播工作。 所使用的 `Scheduler` 物件由排程群組所隱含。  
   
- `_Join`  
- 作為複製來源處的 `multitype_join` 傳訊區塊。 請注意，原始物件會被遺棄，使其成為移動建構函式。  
+*_Join*<br/>
+作為複製來源處的 `multitype_join` 傳訊區塊。 請注意，原始物件會被遺棄，使其成為移動建構函式。  
   
 ### <a name="remarks"></a>備註  
  如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。  
@@ -215,7 +215,7 @@ multitype_join(
 ~multitype_join();
 ```  
   
-##  <a name="release"></a> 發行 
+##  <a name="release"></a> 版本 
 
  釋放先前成功的訊息保留。  
   
@@ -226,11 +226,11 @@ virtual void release(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件時釋放。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件被釋放。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`release`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`release`方法。  
   
 ##  <a name="release_ref"></a> release_ref 
 
@@ -241,15 +241,15 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 正在呼叫這個方法的目標區塊的指標。  
+*_PTarget*<br/>
+正在呼叫這個方法的目標區塊的指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫`ITarget`要從這個來源取消連結的物件。 來源區塊，才能釋放任何資源保留給目標區塊。  
+ 這個方法會呼叫`ITarget`要從這個來源取消連結的物件。 來源區塊允許釋放任何資源保留給目標區塊。  
   
 ##  <a name="reserve"></a> 保留 
 
- 由此先前提供的訊息會保留`multitype_join`傳訊區塊。  
+ 保留先前由此訊息`multitype_join`傳訊區塊。  
   
 ```  
 virtual bool reserve(
@@ -258,17 +258,17 @@ virtual bool reserve(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件被保留。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件所保留。  
   
- `_PTarget`  
- 正在呼叫的目標區塊的指標`reserve`方法。  
+*_PTarget*<br/>
+正在呼叫的目標區塊的指標`reserve`方法。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果訊息已成功保留，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
+ `true` 如果已成功保留訊息，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
   
 ### <a name="remarks"></a>備註  
- 在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`才能採取或放棄擁有的訊息，分別。  
+ 在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`以便採取或分別放棄訊息，因此擁有。  
   
 ##  <a name="unlink_target"></a> unlink_target 
 
@@ -279,12 +279,12 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 指標`ITarget`從此取消連結的區塊`multitype_join`傳訊區塊。  
+*_PTarget*<br/>
+指標`ITarget`若要從這個取消連結的區塊`multitype_join`傳訊區塊。  
   
 ##  <a name="unlink_targets"></a> unlink_targets 
 
- 取消連結所有從這個目標`multitype_join`傳訊區塊。  
+ 取消連結所有的目標，從這個`multitype_join`傳訊區塊。  
   
 ```  
 virtual void unlink_targets();

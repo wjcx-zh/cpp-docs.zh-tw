@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0064 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0064 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025889"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>運算式評估工具錯誤 CXX0064
-無法在繫結的虛擬成員函式上設定中斷點  
-  
- 設定中斷點上的虛擬成員函式，透過指標至物件，例如：  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- 虛擬函式，可以設定中斷點，輸入此類別，例如：  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- 這個錯誤是與 can0064 相同。
+
+無法在繫結的虛擬成員函式上設定中斷點
+
+設定中斷點上的虛擬成員函式透過指標至物件，例如：
+
+```
+pClass->vfunc( int );
+```
+
+可以輸入類別，例如，在虛擬函式上設定中斷點：
+
+```
+Class::vfunc( int );
+```
+
+此錯誤是與 can0064 相同。

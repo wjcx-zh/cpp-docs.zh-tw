@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2086 |Microsoft 文件
+title: 編譯器錯誤 C2086 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1a21c06adeeda5d9db428e984da51f06addb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0e0d8b105d58b0585bc31b8d340d3d7ba5fb29e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029841"
 ---
 # <a name="compiler-error-c2086"></a>編譯器錯誤 C2086
-'identifier': 重複定義  
-  
- 識別項會定義一次以上，或上一個與後續的宣告。  
-  
- C2086 也可以累加建置參考的 C# 組件的結果。 重建 C# 組件來解決這個錯誤。  
-  
- 下列範例會產生 C2086:  
-  
-```  
-// C2086.cpp  
-main() {  
-  int a;  
-  int a;   // C2086 not an error in ANSI C  
-}  
+
+'identifier': 重複定義
+
+識別項定義了一次以上，或在後續的宣告不同於前一個。
+
+C2086 也可以是累加建置參考的 C# 組件的結果。 重新建置 C# 組件來解決這個錯誤。
+
+下列範例會產生 C2086:
+
+```
+// C2086.cpp
+main() {
+  int a;
+  int a;   // C2086 not an error in ANSI C
+}
 ```

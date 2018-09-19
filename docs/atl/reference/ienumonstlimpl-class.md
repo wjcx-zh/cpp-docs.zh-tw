@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f2e448d5fa73c64e9abb66ef70e513bc9fa0728
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759242"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031141"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
 
@@ -40,25 +40,25 @@ ms.locfileid: "43759242"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType>  
+    const IID* piid, class T, class Copy, class CollType>
 class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 COM 列舉值。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。
 
-*piid*  
+*piid*<br/>
 指標的列舉值介面的介面 ID。
 
-*T*  
+*T*<br/>
 列舉值介面所公開的項目類型。
 
-*複製*  
+*複製*<br/>
 A[複製原則類別](../../atl/atl-copy-policy-classes.md)。
 
-*CollType*  
+*CollType*<br/>
 C + + 標準程式庫容器類別。
 
 ## <a name="members"></a>成員
@@ -114,10 +114,10 @@ HRESULT Init(
 
 ### <a name="parameters"></a>參數
 
-*pUnkForRelease*  
+*pUnkForRelease*<br/>
 [in]`IUnknown`必須保持運作的存留期間列舉值物件的指標。 如果物件不存在，請傳遞 NULL。
 
-*collection*  
+*collection*<br/>
 包含要列舉的項目 c + + 標準程式庫容器的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -140,7 +140,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>參數
 
-*ppEnum*  
+*ppEnum*<br/>
 [out]從目前的列舉值，複製新建立的物件上的列舉值介面。
 
 ### <a name="return-value"></a>傳回值
@@ -192,13 +192,13 @@ STDMETHOD(Next)(
 
 ### <a name="parameters"></a>參數
 
-*celt*  
+*celt*<br/>
 [in]要求的元素數目。
 
-*rgelt*  
+*rgelt*<br/>
 [out]要填入之項目的陣列。
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out]中實際傳回項目數*rgelt*。 這可以是小於*celt*如果少於*celt*仍然在清單中的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -227,7 +227,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>參數
 
-*celt*  
+*celt*<br/>
 [in]略過的項目數目。
 
 ### <a name="return-value"></a>傳回值

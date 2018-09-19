@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020611"
 ---
 # <a name="subscript-operator-"></a>註標運算子]
 
@@ -64,7 +64,7 @@ double aDbl[2];
 
 *expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-註標運算式的關聯是由左至右。 最左邊的註標運算式*expression1* **[** *expression2* **]**，會先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 間接取值運算子 (<strong>\*</strong>) 之後，會套用最後一個註標的運算式評估時，除非最後一個指標值定址為陣列類型。
+註標運算式的關聯是由左至右。 最左邊的下標運算式 *expression1* **[** *expression2* **]** 會最先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 間接取值運算子 (<strong>\*</strong>) 之後，會套用最後一個註標的運算式評估時，除非最後一個指標值定址為陣列類型。
 
 具有多個註標的運算式會參考多維陣列的元素。 所謂的多維陣列是指其中所包含的元素也是一種陣列。 例如，三維陣列的第一個元素是具有兩個維度的陣列。 下列範例會宣告和初始化一個簡單的二維字元陣列：
 
@@ -120,6 +120,6 @@ int main() {
 
 [後置運算式](../cpp/postfix-expressions.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[陣列](../cpp/arrays-cpp.md)
+[陣列](../cpp/arrays-cpp.md)<br/>
 [一維陣列](../c-language/one-dimensional-arrays.md)<br/>
 [多維陣列](../c-language/multidimensional-arrays-c.md)<br/>

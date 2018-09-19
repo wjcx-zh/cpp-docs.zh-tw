@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028632"
 ---
 # <a name="traversing-a-simple-rowset"></a>往返簡單資料列集
+
 下列範例顯示不包含命令的快速簡便的資料庫存取。 下列的取用者程式碼，在 ATL 專案中，從呼叫資料表擷取資料錄*演出者*在 Microsoft Access 資料庫中使用 Microsoft OLE DB Provider for ODBC。 程式碼會建立[CTable](../../data/oledb/ctable-class.md)存取子使用的資料表物件會根據使用者記錄類別`CArtists`。 它會開啟連接、 開啟連線時，工作階段並開啟工作階段上的資料表。  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 使用者資料錄`CArtists`，看起來像這樣：  
+使用者資料錄`CArtists`，看起來像這樣：  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

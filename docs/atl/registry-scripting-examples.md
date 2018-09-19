@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dc28d8a0d5dc24d0f0c665e5a17fc38e0c9d08f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eabb923b165d407f77554d88d710cd7c67a14240
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753145"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022107"
 ---
 # <a name="registry-scripting-examples"></a>登錄指令碼範例
 
@@ -32,17 +32,17 @@ ms.locfileid: "43753145"
 
 下列的剖析樹狀結構會說明簡單的指令碼，將單一索引鍵加入至系統登錄。 特別是，指令碼會將索引鍵，`MyVeryOwnKey`至`HKEY_CURRENT_USER`。 它也會將指派的預設字串值`HowGoesIt`至新的機碼：
 
-```  
-HKEY_CURRENT_USER  
+```
+HKEY_CURRENT_USER
 {  
-'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 此指令碼可以輕鬆地擴充來定義多個子機碼，如下所示：
 
-```  
-HKCU  
+```
+HKCU
 {  
     'MyVeryOwnKey' = s 'HowGoesIt'  
     {  
@@ -51,8 +51,8 @@ HKCU
             'PrettyCool' = d '55'  
             val 'ANameValue' = s 'WithANamedValue'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 現在，指令碼會新增子機碼中，`HasASubkey`至`MyVeryOwnKey`。 這個子機碼，它會新增兩`PrettyCool`子機碼 (預設值`DWORD`55 的值) 和`ANameValue`名為值 (字串值是`WithANamedValue`)。
@@ -61,8 +61,8 @@ HKCU
 
 下列指令碼會註冊本身的註冊機構 COM 伺服器。
 
-```  
-HKCR  
+```
+HKCR
 {  
     ATL.Registrar = s 'ATL Registrar Class'  
     {  
@@ -78,8 +78,8 @@ HKCR
                 val ThreadingModel = s 'Apartment'  
             }  
         }  
-    }  
-}  
+    }
+}
 ```
 
 在執行階段，將此剖析樹狀結構`ATL.Registrar`機碼`HKEY_CLASSES_ROOT`。 這個新的索引鍵，然後 it:
@@ -106,15 +106,15 @@ HKCR
 
 若要指定一個以上的剖析樹狀結構中的指令碼，只要將一個樹狀結構放結尾的另一個。 例如，下列指令碼會將索引鍵， `MyVeryOwnKey`，以剖析樹狀結構，同時`HKEY_CLASSES_ROOT`和`HKEY_CURRENT_USER`:
 
-```  
-HKCR  
+```
+HKCR
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
-HKEY_CURRENT_USER  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
+HKEY_CURRENT_USER
 {  
-    'MyVeryOwnKey' = s 'HowGoesIt'  
-}  
+    'MyVeryOwnKey' = s 'HowGoesIt'
+}
 ```
 
 > [!NOTE]

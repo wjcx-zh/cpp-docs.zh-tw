@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbdb880c7165f314c004a7cbcad44dd3b76fd36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cd7e80d3c01cf84080ba2b5851da99584122ec4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023939"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 類別
 定義文件範本基本功能的抽象基底類別。  
@@ -167,17 +167,15 @@ CDocTemplate (
  指定文件類型所使用的資源的識別碼。 這可能包括功能表、 圖示、 快速鍵對應表和字串資源。  
   
  最多七個以 '\n' 字元分隔的子字串所組成的字串資源 （不包含子字串時，需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元;）這些子字串會描述文件類型。 如需子字串的資訊，請參閱[GetDocString](#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如:   
-  
- `// MYCALC.RC`  
-  
- `STRINGTABLE PRELOAD DISCARDABLE`  
-  
- `BEGIN`  
-  
- `IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"`  
-  
- `END`  
-  
+
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_SHEETTYPE "\nSheet\nWorksheet\nWorksheets (*.myc)\n.myc\n MyCalcSheet\nMyCalc Worksheet"
+END
+```
+
  請注意，字串開頭 '\n' 字元;這是因為第一個子字串不能用於 MDI 應用程式，因此就不會包含。 您可以編輯這個字串使用字串編輯器;整個字串會顯示為單一項目在字串編輯器中中,，不為七個不同的項目。  
   
  *pDocClass*  

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2081 |Microsoft 文件
+title: 編譯器錯誤 C2081 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165217b3ea4d50dc965927419786a01a6cc92af3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48f2cdecaea38beed14735bb3f94c8422a28c747
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166857"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030452"
 ---
 # <a name="compiler-error-c2081"></a>編譯器錯誤 C2081
-'identifier': 型式參數清單不合法的名稱  
-  
- 識別項會導致語法錯誤。  
-  
- 這個錯誤可能被因使用舊樣式型式參數清單。 您必須指定型式參數的型別之型式參數清單中。  
-  
- 下列範例會產生 C2081:  
-  
-```  
-// C2081.c  
-void func( int i, j ) {}  // C2081, no type specified for j  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C2081b.c  
-// compile with: /c  
-void func( int i, int j ) {}  
+
+'identifier': 不合法的型式參數清單中的名稱
+
+識別項會導致語法錯誤。
+
+此錯誤可能被因使用舊樣式型式參數清單。 在型式參數清單中，您必須指定的型式參數的類型。
+
+下列範例會產生 C2081:
+
+```
+// C2081.c
+void func( int i, j ) {}  // C2081, no type specified for j
+```
+
+可能的解決方式：
+
+```
+// C2081b.c
+// compile with: /c
+void func( int i, int j ) {}
 ```

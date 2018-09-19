@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2192 |Microsoft 文件
+title: 編譯器錯誤 C2192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97b0885dd626c992ab55703038838aa743e30d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6cea2b4ce805c8f7d966ee9d2b3c27f8a901c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023510"
 ---
 # <a name="compiler-error-c2192"></a>編譯器錯誤 C2192
-不同的參數 'number' 宣告  
-  
- C 函式宣告具有不同的參數清單的第二次。 C 不支援多載函式。  
-  
- 下列範例會產生 C2192:  
-  
-```  
-// C2192.c  
-// compile with: /Za /c  
-void func( float, int );  
-void func( int, float );   // C2192, different parameter list  
-void func2( int, float );   // OK  
+
+參數 'number' 宣告不同
+
+C 函式宣告第二次使用不同的參數清單。 C 不支援多載函式。
+
+下列範例會產生 C2192:
+
+```
+// C2192.c
+// compile with: /Za /c
+void func( float, int );
+void func( int, float );   // C2192, different parameter list
+void func2( int, float );   // OK
 ```

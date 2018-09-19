@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029464"
 ---
 # <a name="c-bit-fields"></a>C++ 位元欄位
 
@@ -38,7 +38,7 @@ ms.locfileid: "39408038"
 > [!NOTE]
 > 寬度 0 未命名的位元欄位強制對齊的下一個位元欄位到下一個**型別**界限，其中**型別**是成員的型別。
 
- 下列範例宣告包含位元欄位的結構：
+下列範例宣告包含位元欄位的結構：
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ struct Date {
 - 初始化非**const**具有位元欄位的參考。
 
 ## <a name="see-also"></a>另請參閱
- [類別和結構](../cpp/classes-and-structs-cpp.md)
+
+[類別和結構](../cpp/classes-and-structs-cpp.md)

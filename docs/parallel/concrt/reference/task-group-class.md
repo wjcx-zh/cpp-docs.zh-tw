@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020716"
 ---
 # <a name="taskgroup-class"></a>task_group 類別
 `task_group` 類別表示可以等候或取消的平行工作集合。  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Function`  
- 若要執行的工作控制代碼的主體就會叫用的函式物件類型。  
+*_Function*<br/>
+若要執行的工作控制代碼的主體就會叫用的函式物件類型。  
   
- `_Func`  
- 要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。  
+*_Func*<br/>
+要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。  
   
- `_Placement`  
- 位置的參考，這是 `_Func` 參數代表的工作應該執行的位置。  
+*放置 （_p)*<br/>
+位置的參考，這是 `_Func` 參數代表的工作應該執行的位置。  
   
- `_Task_handle`  
- 這排程的工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續直到存留預期`wait`或是`run_and_wait`呼叫此方法`task_group`物件。  
+*_Task_handle*<br/>
+這排程的工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續直到存留預期`wait`或是`run_and_wait`呼叫此方法`task_group`物件。  
   
 ### <a name="remarks"></a>備註  
  執行階段排程在稍後的時間，可以呼叫的函式傳回之後，執行所提供的工作函式。 這個方法會使用[task_handle](task-handle-class.md)物件來保存一份所提供的工作函式。 因此，您將傳遞給這個方法的函式物件中發生的任何狀態變更不會出現該函式物件的複本中。 此外，請確定您傳遞指標或參考的工作函式的任何物件的存留期保持有效，直到工作函式傳回。  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Function`  
- 函式物件的類型，將會叫用它來執行工作主體。  
+*_Function*<br/>
+函式物件的類型，將會叫用它來執行工作主體。  
   
- `_Task_handle`  
- 這會在呼叫的內容上執行內嵌工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續存留的預期`run_and_wait`方法完成執行。  
+*_Task_handle*<br/>
+這會在呼叫的內容上執行內嵌工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續存留的預期`run_and_wait`方法完成執行。  
   
- `_Func`  
- 要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。  
+*_Func*<br/>
+要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。  
   
 ### <a name="return-value"></a>傳回值  
  指出是否滿意等待結果或工作群組已取消，因為明確的取消作業或其中一個工作擲回例外狀況。 如需詳細資訊，請參閱 < [task_group_status](concurrency-namespace-enums.md#task_group_status)。  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_CancellationToken`  
- 取消與這個工作群組相關聯的語彙基元。 取消語彙基元時，工作群組也會取消。  
+*_CancellationToken*<br/>
+取消與這個工作群組相關聯的語彙基元。 取消語彙基元時，工作群組也會取消。  
   
 ### <a name="remarks"></a>備註  
  使用取消語彙基元的建構函式會建立 `task_group`，當與語彙基元相關聯的來源取消時，它也會一併取消。 提供明確的取消語彙基元也會將這個工作群組隔離，使其無法參與具有不同語彙基元或沒有語彙基元之父群組的隱含取消。  

@@ -1,5 +1,5 @@
 ---
-title: progress_reporter 類別 |Microsoft 文件
+title: progress_reporter 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686561"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016763"
 ---
 # <a name="progressreporter-class"></a>progress_reporter 類別
 進度報告程式類別允許報告特定類型的進度通知。 每個 progress_reporter 物件都會繫結至特定非同步動作或作業。  
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_ProgressType`  
- 透過進度報告程式報告之每個進度通知的承載類型。  
+*_ProgressType*<br/>
+透過進度報告程式報告之每個進度通知的承載類型。  
   
 ## <a name="members"></a>Members  
   
@@ -55,7 +55,7 @@ class progress_reporter;
 |[report](#report)|將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。|  
   
 ## <a name="remarks"></a>備註  
- 此類型只適用於 Windows 執行階段應用程式。  
+ 此類型只適用於 Windows 執行階段應用程式的。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `progress_reporter`  
@@ -80,8 +80,8 @@ void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `val`  
- 透過進度通知的報表內容。  
+*val*<br/>
+透過進度通知報告的承載。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

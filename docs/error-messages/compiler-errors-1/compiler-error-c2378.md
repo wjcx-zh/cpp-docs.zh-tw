@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2378 |Microsoft 文件
+title: 編譯器錯誤 C2378 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ba6f8aed7964b36ccfc665e29b393c9a593782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5aa4b8ecef6be2149132c9ccf533285cd0bb7f7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021820"
 ---
 # <a name="compiler-error-c2378"></a>編譯器錯誤 C2378
-'identifier' : 重複定義; 符號無法以 typedef 多載  
-  
- 識別項已重新定義為 `typedef`。  
-  
- 下列範例會產生 C2378：  
-  
-```  
-// C2378.cpp  
-// compile with: /c  
-int i;  
-typedef int i;   // C2378  
-typedef int b;   // OK  
+
+'identifier' : 重複定義; 符號無法以 typedef 多載
+
+識別項已重新定義為 `typedef`。
+
+下列範例會產生 C2378：
+
+```
+// C2378.cpp
+// compile with: /c
+int i;
+typedef int i;   // C2378
+typedef int b;   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1078 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1078 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316643"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019364"
 ---
 # <a name="nmake-fatal-error-u1078"></a>NMAKE 嚴重錯誤 U1078
-在 'expression' 的常數溢位  
-  
- 指定的運算式中包含超過範圍-2147483648 到 2147483647 的常數。 常數被出現在下列情況的其中一個：  
-  
--   前置處理器指示詞指定的運算式  
-  
--   指定虛線的錯誤層級 (**-**) 命令修飾詞
+
+在 'expression' 的常數溢位
+
+指定的運算式中包含超過，範圍從-2,147,483,648 到 2,147,483,647 的常數。 常數會出現在下列情況的其中一個：
+
+- 前置處理器指示詞指定的運算式
+
+- 指定虛線的錯誤層級 (**-**) 命令修飾詞

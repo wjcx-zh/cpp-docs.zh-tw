@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1312 |Microsoft 文件
+title: 嚴重錯誤 C1312 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867904067add0b18981b5b8c71d7c6d8db3434ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a392cbdbd601d2ea9ebc3d3ca9be37ed6029185
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028593"
 ---
 # <a name="fatal-error-c1312"></a>嚴重錯誤 C1312
-函式中的條件式分支太多。 請簡化或重整原始程式碼。  
-  
- 程式碼太複雜，編譯器若要處理便會用盡堆疊記憶體。  請簡化您的程式碼。
+
+函式中的條件式分支太多。 請簡化或重整原始程式碼。
+
+程式碼太複雜，編譯器若要處理便會用盡堆疊記憶體。  請簡化您的程式碼。

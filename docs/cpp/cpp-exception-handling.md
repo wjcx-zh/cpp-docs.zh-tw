@@ -15,37 +15,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51c41fb9d6261da31c8a1028abac69d82b93e898
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 41abebbd73dc1cf72e35dcce88aa551be181061b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019638"
 ---
 # <a name="c-exception-handling"></a>C++ 例外狀況處理
-C++ 語言內建擲回和攔截例外狀況支援。 使用 C++ 設計程式時，您應盡可能使用本節所述的內建 C++ 例外狀況支援。  
-  
- 若要啟用 c + + 例外狀況處理程式碼中，使用[/EHsc](../build/reference/eh-exception-handling-model.md)。  
-  
-## <a name="in-this-section"></a>本節內容  
- 以下關於 C++ 例外狀況處理的討論包括：  
-  
--   [Try、 catch 和 throw 陳述式](../cpp/try-throw-and-catch-statements-cpp.md)  
-  
--   [Catch 區塊的評估方式](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
-  
--   [例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)  
-  
--   [例外狀況規格](../cpp/exception-specifications-throw-cpp.md)  
-  
--   [noexcept](../cpp/noexcept-cpp.md)  
-  
--   [未處理的 C++ 例外狀況](../cpp/unhandled-cpp-exceptions.md)  
-  
--   [混合 C (結構化) 和 C++ 例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)  
-  
-## <a name="support-for-earlier-mfc-exceptions"></a>對於舊版 MFC 例外狀況的支援  
- 從 4.0 版開始，MFC 開始使用 C++ 例外狀況處理機制。 雖然建議您在新的程式碼中使用 C++ 例外狀況處理，但 MFC 4.0 (含) 以後版本會保留舊版的 MFC 巨集，因此舊程式碼不會出現錯誤。 並且，您可以合併巨集和新的機制。 如需混合巨集和 c + + 例外狀況處理及轉換舊的程式碼，以使用新的機制的資訊，請參閱文章[例外狀況： 使用 MFC 巨集和 c + + 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)和[例外狀況： 從 MFC 轉換例外狀況巨集](../mfc/exceptions-converting-from-mfc-exception-macros.md)。 如果您仍然使用舊版的 MFC 例外狀況巨集，它們會判斷值為 C++ 例外狀況關鍵字。 請參閱[例外狀況： 3.0 版例外狀況巨集變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)
+
+C++ 語言內建擲回和攔截例外狀況支援。 使用 C++ 設計程式時，您應盡可能使用本節所述的內建 C++ 例外狀況支援。
+
+若要啟用 c + + 例外狀況處理程式碼中，使用[/EHsc](../build/reference/eh-exception-handling-model.md)。
+
+## <a name="in-this-section"></a>本節內容
+
+以下關於 C++ 例外狀況處理的討論包括：
+
+- [Try、 catch 和 throw 陳述式](../cpp/try-throw-and-catch-statements-cpp.md)
+
+- [Catch 區塊的評估方式](../cpp/how-catch-blocks-are-evaluated-cpp.md)
+
+- [例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)
+
+- [例外狀況規格](../cpp/exception-specifications-throw-cpp.md)
+
+- [noexcept](../cpp/noexcept-cpp.md)
+
+- [未處理的 C++ 例外狀況](../cpp/unhandled-cpp-exceptions.md)
+
+- [混合 C (結構化) 和 C++ 例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+
+## <a name="support-for-earlier-mfc-exceptions"></a>對於舊版 MFC 例外狀況的支援
+
+從 4.0 版開始，MFC 開始使用 C++ 例外狀況處理機制。 雖然建議您在新的程式碼中使用 C++ 例外狀況處理，但 MFC 4.0 (含) 以後版本會保留舊版的 MFC 巨集，因此舊程式碼不會出現錯誤。 並且，您可以合併巨集和新的機制。 如需混合巨集和 c + + 例外狀況處理及轉換舊的程式碼，以使用新的機制的資訊，請參閱文章[例外狀況： 使用 MFC 巨集和 c + + 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)和[例外狀況： 從 MFC 轉換例外狀況巨集](../mfc/exceptions-converting-from-mfc-exception-macros.md)。 如果您仍然使用舊版的 MFC 例外狀況巨集，它們會判斷值為 C++ 例外狀況關鍵字。 請參閱[例外狀況： 3.0 版例外狀況巨集變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1020 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1020 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c90d3a5bb880ad10dcc4fb24d31fdc107f898840
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe19b079a0407f07796bd8141db2cbedaf02cbbb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032961"
 ---
 # <a name="resource-compiler-fatal-error-rc1020"></a>資源編譯器嚴重錯誤 RC1020
-未預期 ' #endif'  
-  
- `#endif`指示詞出現但沒有對應的`#if`， **#ifdef**，或 **#ifndef**指示詞。  
-  
- 請確定已符合`#endif`每個`#if`， **#ifdef**，和 **#ifndef**陳述式。
+
+未預期的 ' #endif'
+
+`#endif`指示詞出現但沒有相符`#if`， **#ifdef**，或 **#ifndef**指示詞。
+
+請確定沒有相符`#endif`針對每個`#if`， **#ifdef**，並 **#ifndef**陳述式。

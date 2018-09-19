@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71dc40a7c2d4fe460f546dbfe4f55d00aff59667
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: aa5f96b8937168126509025735d20fab7b35c2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019195"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 類別
 
@@ -33,13 +33,13 @@ ms.locfileid: "43759505"
 ## <a name="syntax"></a>語法
 
 ```
-template <typename T>  
+template <typename T>
 class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 集合類別物件中儲存的資料型別。
 
 ## <a name="members"></a>成員
@@ -91,5 +91,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>另請參閱
 
-[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
+[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

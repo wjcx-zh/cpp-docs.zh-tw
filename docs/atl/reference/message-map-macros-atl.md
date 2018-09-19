@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024904"
 ---
 # <a name="message-map-macros-atl"></a>訊息對應巨集 (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>參數
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]訊息對應識別項。
 
 ### <a name="remarks"></a>備註
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 [in]包含訊息對應的類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>參數
 
-*theChainClass*  
+*theChainClass*<br/>
 [in]包含訊息對應的基底類別名稱。
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]訊息對應識別項。
 
 ### <a name="remarks"></a>備註
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>參數
 
-*theChainMember*  
+*theChainMember*<br/>
 [in]包含訊息對應的資料成員名稱。
 
-*msgMapID*  
+*msgMapID*<br/>
 [in]訊息對應識別項。
 
 ### <a name="remarks"></a>備註
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>參數
 
-*theChainClass*  
+*theChainClass*<br/>
 [in]包含訊息對應的基底類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>參數
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in]物件的訊息對應的唯一識別碼。
 
 ### <a name="remarks"></a>備註
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>參數
 
-*theChainMember*  
+*theChainMember*<br/>
 [in]包含訊息對應的資料成員名稱。
 
 ### <a name="remarks"></a>備註
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>參數
 
-*程式碼*  
+*程式碼*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]功能表項目、 控制項或加速器的識別項。
 
-*程式碼*  
+*程式碼*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]功能表項目、 控制項或傳送訊息的對應鍵的識別碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*程式碼*  
+*程式碼*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>參數
 
-*訊息*  
+*訊息*<br/>
 [in]Windows 訊息。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>參數
 
-*msgFirst*  
+*msgFirst*<br/>
 [in]標記訊息的連續範圍的開頭。
 
-*msgLast*  
+*msgLast*<br/>
 [in]標記結尾的連續範圍的訊息。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>參數
 
-*cd*  
+*cd*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]傳送訊息的控制項識別項。
 
-*cd*  
+*cd*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]傳送訊息的控制項識別項。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*cd*  
+*cd*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>參數
 
-*程式碼*  
+*程式碼*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]功能表項目、 控制項或加速器的識別項。
 
-*程式碼*  
+*程式碼*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]功能表項目、 控制項或加速器的識別項。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*程式碼*  
+*程式碼*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>參數
 
-*cd*  
+*cd*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]功能表項目、 控制項或加速器的識別項。
 
-*cd*  
+*cd*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]功能表項目、 控制項或加速器的識別項。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。  
 
 ### <a name="requirements"></a>需求
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*cd*  
+*cd*<br/>
 [in]通知的程式碼。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>參數
 
-*idFirst*  
+*idFirst*<br/>
 [in]標記控制識別項的連續範圍的開頭。
 
-*idLast*  
+*idLast*<br/>
 [in]標記的控制項識別項的連續範圍的結尾。
 
-*func*  
+*func*<br/>
 [in]訊息處理常式函式的名稱。
 
 ## <a name="see-also"></a>另請參閱

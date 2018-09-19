@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2164 |Microsoft 文件
+title: 編譯器錯誤 C2164 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23596fc25685adc155220de344adcd7d25827985
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e997a3b260b9ec8b68a92967233269707e6888
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032155"
 ---
 # <a name="compiler-error-c2164"></a>編譯器錯誤 C2164
-'function': 未宣告的內建函式  
-  
- `intrinsic` Pragma 會使用未宣告的函式 (只會發生 **/Oi**)。 或者，不包括其標頭檔已使用的編譯器內建函式的其中一種。  
-  
- 下列範例會產生 C2164:  
-  
-```  
-// C2164.c  
-// compile with: /c  
-// processor: x86  
-// Uncomment the following line to resolve.  
-// #include "xmmintrin.h"  
-void b(float *p) {  
-   _mm_load_ss(p);   // C2164  
-}  
+
+'function': 未宣告的內建函式
+
+`intrinsic` Pragma 會使用未宣告的函式 (只會發生 **/Oi**)。 或者，但不包括其標頭檔所使用的其中一個編譯器內建函式。
+
+下列範例會產生 C2164:
+
+```
+// C2164.c
+// compile with: /c
+// processor: x86
+// Uncomment the following line to resolve.
+// #include "xmmintrin.h"
+void b(float *p) {
+   _mm_load_ss(p);   // C2164
+}
 ```

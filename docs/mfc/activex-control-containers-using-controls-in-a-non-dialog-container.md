@@ -1,5 +1,5 @@
 ---
-title: ActiveX 控制項容器： 使用非對話方塊容器中的控制項 |Microsoft 文件
+title: ActiveX 控制項容器： 使用非對話方塊容器中的控制項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16264e9b072d27349d4375bd7c04d5bbac1be597
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e190eb76702b1c6d246ac2aee9c22021955af7f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028099"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控制項容器：在非對話方塊容器中使用控制項
 在某些應用程式 (例如 SDI 或 MDI 應用程式) 中，您會想要在應用程式的視窗中內嵌控制項。 **建立**包裝函式類別，插入 Visual c + + 中，成員函式可以動態建立控制項的執行個體，而不需要對話方塊。  
   
  **建立**成員函式具有下列參數：  
   
- `lpszWindowName`  
- 要在控制項的 Text 或 Caption 屬性 (如果有的話) 中顯示的文字指標。  
+*lpszWindowName*<br/>
+要在控制項的 Text 或 Caption 屬性 (如果有的話) 中顯示的文字指標。  
   
- `dwStyle`  
- 視窗樣式。 如需完整清單，請參閱[cwnd:: Createcontrol](../mfc/reference/cwnd-class.md#createcontrol)。  
+*cheaderctrl:: Create*<br/>
+視窗樣式。 如需完整清單，請參閱 < [cwnd:: Createcontrol](../mfc/reference/cwnd-class.md#createcontrol)。  
   
- `rect`  
- 指定控制項的大小和位置。  
+*rect*<br/>
+指定控制項的大小和位置。  
   
- `pParentWnd`  
- 指定控制項的父視窗，通常是 `CDialog`。 它不得為**NULL**。  
+*pParentWnd*<br/>
+指定控制項的父視窗，通常是 `CDialog`。 不能**NULL**。  
   
- `nID`  
- 指定控制項 ID，而且可以由容器使用以參考控制項。  
+*nID*<br/>
+指定控制項 ID，而且可以由容器使用以參考控制項。  
   
  使用此函式動態建立 ActiveX 控制項的範例會在 SDI 應用程式的表單檢視中。 您接著可以在應用程式的 `WM_CREATE` 處理常式中建立控制項的執行個體。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33324898"
   
 3.  將 `WM_CREATE` 訊息處理常式新增至類別 `CMyView`。  
   
-4.  處理常式函式中`CMyView::OnCreate`，呼叫以控制項的`Create`函式使用**這**與父視窗的指標：  
+4.  在處理常式函式`CMyView::OnCreate`，呼叫以控制項的`Create`函式使用**這**與父視窗的指標：  
   
      [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
   

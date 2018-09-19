@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025538"
 ---
 # <a name="connection-point-global-functions"></a>連接點全域函式
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>參數
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in]指標`IUnknown`物件的用戶端想要使用連線。
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標，用戶端的`IUnknown`。
 
-*iid*  
+*iid*<br/>
 [in]連接點的 GUID。 一般而言，這是連接點所管理之輸出介面相同。
 
-*pdw*  
+*pdw*<br/>
 [out]指標，可唯一識別連接 cookie。
 
 ### <a name="return-value"></a>傳回值
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>參數
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in]指標`IUnknown`的用戶端連接使用的物件。
 
-*iid*  
+*iid*<br/>
 [in]連接點的 GUID。 一般而言，這是連接點所管理之輸出介面相同。
 
-*dw*  
+*dw*<br/>
 [in]可唯一識別連接 cookie。
 
 ### <a name="return-value"></a>傳回值
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>參數
 
-*太平洋時間*  
+*太平洋時間*<br/>
 [in]包含接收對應的物件指標。
 
-*bAdvise*  
+*bAdvise*<br/>
 [in]如果接到; 接收的所有項目，則為 TRUE。如果要 unadvised 接收的所有項目，則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
@@ -145,5 +145,5 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](../../atl/reference/atl-functions.md)   
+[函式](../../atl/reference/atl-functions.md)<br/>
 [連接點巨集](../../atl/reference/connection-point-macros.md)

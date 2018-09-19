@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb24b1d00c7c70b545213a64e685f238d6b5157
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757958"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029009"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 
@@ -93,16 +93,16 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>參數
 
-*pParent*  
+*pParent*<br/>
 指標[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)參考物件的父容器的物件。 如果沒有父容器，則此參數會是 NULL。
 
-*ObjectType*  
+*ObjectType*<br/>
 指標`GUID`結構，辨識與目前物件相關聯的物件型別。 設定*ObjectType*為 NULL，如果物件沒有的 GUID。
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。
 
 ### <a name="return-value"></a>傳回值
@@ -161,28 +161,28 @@ bool Create(
 
 ### <a name="parameters"></a>參數
 
-*pParent*  
+*pParent*<br/>
 指標[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)參考在其中建立新物件的父目錄物件。 如果沒有父代目錄，請設為 NULL。
 
-*pCreator*  
+*pCreator*<br/>
 安全性描述元物件的建立者所提供的指標。 如果物件的建立者不會明確地傳遞新物件的安全性資訊，請將這個參數設定為 NULL。
 
-*bIsDirectoryObject*  
+*bIsDirectoryObject*<br/>
 指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。
 
-*語彙基元*  
+*語彙基元*<br/>
 若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。
 
-*ObjectType*  
+*ObjectType*<br/>
 指標`GUID`結構，辨識與目前物件相關聯的物件型別。 設定*ObjectType*為 NULL，如果物件沒有的 GUID。
 
-*bIsContainerObject*  
+*bIsContainerObject*<br/>
 指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -210,10 +210,10 @@ bool Get(
 
 ### <a name="parameters"></a>參數
 
-*si*  
+*si*<br/>
 一組的位元旗標，指出要擷取的安全性描述元組件。 這個值可以是組成[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位元旗標。
 
-*pResult*  
+*pResult*<br/>
 指標[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)收到一份要求的資訊從指定的安全性描述元的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -234,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `CPrivateObjectSecurityDesc`来指派給目前物件的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -262,19 +262,19 @@ bool Set(
 
 ### <a name="parameters"></a>參數
 
-*si*  
+*si*<br/>
 一組的位元旗標，指出若要設定的安全性描述元組件。 這個值可以是組成[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位元旗標。
 
-*修改*  
+*修改*<br/>
 指標[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件。 所指定的組件的這個安全性描述元*si*參數會套用至物件的安全性描述元。
 
-*GenericMapping*  
+*GenericMapping*<br/>
 指標[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping)結構，指定每個物件的特定權限的一般權限的對應。
 
-*語彙基元*  
+*語彙基元*<br/>
 若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。
 
-*AutoInheritFlags*  
+*AutoInheritFlags*<br/>
 一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -287,7 +287,7 @@ bool Set(
 
 ## <a name="see-also"></a>另請參閱
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[安全性全域函式](../../atl/reference/security-global-functions.md)   
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[安全性全域函式](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc 類別](../../atl/reference/csecuritydesc-class.md)

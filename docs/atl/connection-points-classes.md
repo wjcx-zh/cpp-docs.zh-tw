@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24d6333faee842227edb09ea05aa6a1f8b0d9a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 490084ef16afb1f00f05bea07f95d13209661343
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763597"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024343"
 ---
 # <a name="connection-points-classes"></a>連接點類別
 
@@ -52,7 +52,7 @@ ms.locfileid: "43763597"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../atl/atl-class-overview.md)   
-[連接點巨集](../atl/reference/connection-point-macros.md)   
+[類別概觀](../atl/atl-class-overview.md)<br/>
+[連接點巨集](../atl/reference/connection-point-macros.md)<br/>
 [連接點全域函式](../atl/reference/connection-point-global-functions.md)
 

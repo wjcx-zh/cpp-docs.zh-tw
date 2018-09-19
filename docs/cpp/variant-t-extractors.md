@@ -58,68 +58,71 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c18605c7539636e3158bc1dd9fe3a47e1d3146d6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6a9d4e13a4b7382d15e601eba16a5a12edd2d00f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034137"
 ---
 # <a name="variantt-extractors"></a>_variant_t 擷取器
-**Microsoft 專屬**  
-  
- 資料擷取封裝`VARIANT`物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
-operator BYTE( ) const;  
-operator VARIANT() const throw();  
-operator char() const;  
-operator unsigned short() const;  
-operator unsigned long() const;  
-operator int() const;  
-operator unsigned int() const;  
-operator __int64() const;  
-operator unsigned __int64() const;  
-```  
-  
-## <a name="remarks"></a>備註  
- 從封裝擷取未經處理資料`VARIANT`。 如果`VARIANT`已經是不是適當的類型，`VariantChangeType`用來嘗試轉換，而且在失敗時產生的錯誤：  
-  
--   **運算子 short （)** 擷取**簡短**整數值。  
-  
--   **運算子 long （)** 擷取**長**整數值。  
-  
--   **運算子 float （)** 擷取**float**數值。  
-  
--   **運算子 double （)** 擷取**double**整數值。  
-  
--   **運算子 CY （）** 擷取`CY`物件。  
-  
--   **運算子 bool （)** 擷取**bool**值。  
-  
--   **運算子 DECIMAL （）** 擷取`DECIMAL`值。  
-  
--   **運算子 BYTE （）** 擷取`BYTE`值。  
-  
--   **運算子 _bstr_t （)** 擷取的字串，會封裝在`_bstr_t`物件。  
-  
--   **運算子 IDispatch\*（)** 從封裝擷取分配介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。  
-  
--   **運算子 IUnknown\*（)** 從封裝擷取 COM 介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。  
-  
- **結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [_variant_t 類別](../cpp/variant-t-class.md)
+
+**Microsoft 專屬**
+
+資料擷取封裝`VARIANT`物件。
+
+## <a name="syntax"></a>語法
+
+```
+operator short( ) const; 
+operator long( ) const; 
+operator float( ) const; 
+operator double( ) const; 
+operator CY( ) const; 
+operator _bstr_t( ) const; 
+operator IDispatch*( ) const; 
+operator bool( ) const; 
+operator IUnknown*( ) const; 
+operator DECIMAL( ) const; 
+operator BYTE( ) const;
+operator VARIANT() const throw();
+operator char() const;
+operator unsigned short() const;
+operator unsigned long() const;
+operator int() const;
+operator unsigned int() const;
+operator __int64() const;
+operator unsigned __int64() const;
+```
+
+## <a name="remarks"></a>備註
+
+從封裝擷取未經處理資料`VARIANT`。 如果`VARIANT`已經是不是適當的類型，`VariantChangeType`用來嘗試轉換，而且在失敗時產生的錯誤：
+
+- **運算子 short （)** 擷取**簡短**整數值。
+
+- **運算子 long （)** 擷取**長**整數值。
+
+- **運算子 float （)** 擷取**float**數值。
+
+- **運算子 double （)** 擷取**double**整數值。
+
+- **運算子 CY （）** 擷取`CY`物件。
+
+- **運算子 bool （)** 擷取**bool**值。
+
+- **運算子 DECIMAL （）** 擷取`DECIMAL`值。
+
+- **運算子 BYTE （）** 擷取`BYTE`值。
+
+- **運算子 _bstr_t （)** 擷取的字串，會封裝在`_bstr_t`物件。
+
+- **運算子 IDispatch\*（)** 從封裝擷取分配介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。
+
+- **運算子 IUnknown\*（)** 從封裝擷取 COM 介面指標`VARIANT`。 `AddRef` 如此稱呼，是在產生的指標，它可以決定是否要呼叫`Release`釋放它。
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[_variant_t 類別](../cpp/variant-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: bad_target 類別 |Microsoft 文件
+title: bad_target 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be10e5e4105dd16a68ad2854538d6181e90bfbe9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 12e035a27693fcad095cd83880aba99c37ba1c1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027631"
 ---
 # <a name="badtarget-class"></a>bad_target 類別
 這個類別描述在傳訊區塊獲得目標的指標，但該目標對所執行的作業來說並不正確時，所擲回的例外狀況。  
@@ -43,7 +43,7 @@ class bad_target : public std::exception;
 |[bad_target](#ctor)|多載。 建構 `bad_target` 物件。|  
   
 ## <a name="remarks"></a>備註  
- 例如嘗試使用訊息保留給不同的目標或釋出其並未持有的保留項目為目標的原因，通常會擲回這個例外狀況。  
+ 這個例外狀況通常會擲回的原因，例如做為目標，嘗試使用不同的目標保留的訊息，或釋出其並未持有的保留項目。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,8 +66,8 @@ bad_target() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述性訊息。  
+*訊息 （_m)*<br/>
+錯誤的描述性訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

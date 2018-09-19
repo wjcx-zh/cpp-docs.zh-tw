@@ -22,28 +22,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028112"
 ---
 # <a name="commands-and-tables"></a>命令和資料表
+
 命令和資料表可讓您存取資料列集;也就是開啟資料列集、 執行命令，並繫結資料行。 [CCommand](../../data/oledb/ccommand-class.md)並[CTable](../../data/oledb/ctable-class.md)類別具現化的命令和資料表的物件，分別。 這些類別衍生自[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)如下圖所示。  
   
- ![CCommand 和 CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
+![CCommand 和 CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 命令和資料表類別  
   
- 在上表中，`TAccessor`可以任何存取子的型別列出[存取子類型](../../data/oledb/accessors-and-rowsets.md)。 *TRowset*可以任何資料列集型別列出[資料列集類型](../../data/oledb/accessors-and-rowsets.md)。 *TMultiple*指定結果型別 （單一或多個結果集）。  
+在上表中，`TAccessor`可以任何存取子的型別列出[存取子類型](../../data/oledb/accessors-and-rowsets.md)。 *TRowset*可以任何資料列集型別列出[資料列集類型](../../data/oledb/accessors-and-rowsets.md)。 *TMultiple*指定結果型別 （單一或多個結果集）。  
   
- [ATL OLE DB 消費者精靈](../../atl/reference/atl-ole-db-consumer-wizard.md)可讓您指定是否要讓命令或資料表的物件。  
+[ATL OLE DB 消費者精靈](../../atl/reference/atl-ole-db-consumer-wizard.md)可讓您指定是否要讓命令或資料表的物件。  
   
--   針對資料來源，而不需要的命令，您可以使用`CTable`類別。 您通常將它用於簡單的資料列集未指定任何參數，而且需要多個結果。 這個簡單的類別會開啟使用您指定的資料表名稱的資料來源上的資料表。  
+- 針對資料來源，而不需要的命令，您可以使用`CTable`類別。 您通常將它用於簡單的資料列集未指定任何參數，而且需要多個結果。 這個簡單的類別會開啟使用您指定的資料表名稱的資料來源上的資料表。  
   
--   對於支援命令的資料來源，您可以使用`CCommand`類別。 若要執行命令時，呼叫[開啟](../../data/oledb/ccommand-open.md)這個類別上。 或者，您可以呼叫`Prepare`準備命令，您想要執行一次以上。  
+- 對於支援命令的資料來源，您可以使用`CCommand`類別。 若要執行命令時，呼叫[開啟](../../data/oledb/ccommand-open.md)這個類別上。 或者，您可以呼叫`Prepare`準備命令，您想要執行一次以上。  
   
      `CCommand` 有三個範本引數： 存取子類型、 資料列集類型，以及結果型別 (`CNoMultipleResults`，根據預設，或`CMultipleResults`)。 如果您指定`CMultipleResults`，則`CCommand`類別支援`IMultipleResults`介面，並會處理多個資料列集。 [DBVIEWER](https://github.com/Microsoft/VCSamples)範例示範如何處理多個結果。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0062 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0062 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b812a269b5acc383cbdd185e06ecb92f1c63d2a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 509d33be45f26f7dbf2de85969b90e253e0d5228
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019145"
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>運算式評估工具錯誤 CXX0062
-不支援的建構函式呼叫  
-  
- 運算式呼叫的建構函式。 運算式無法明確呼叫建構函式或建構函式呼叫的轉換。  
-  
- 這個錯誤是與 can0062 相同。
+
+不支援的建構函式呼叫
+
+運算式所做的建構函式的呼叫。 運算式無法進行明確呼叫建構函式，或進行需要建構函式呼叫的轉換。
+
+此錯誤是與 can0062 相同。

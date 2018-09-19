@@ -33,14 +33,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0dfc28a510ab9fcc18149f1cd96037e6754d3d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2c786783963bf2f3613228b87a7ede23eb75a450
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025590"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
+
 提供的實作`IDBProperties`介面。  
   
 ## <a name="syntax"></a>語法
@@ -52,11 +53,13 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 您的類別，衍生自`IDBPropertiesImpl`。  
+
+*T*<br/>
+您的類別，衍生自`IDBPropertiesImpl`。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -69,9 +72,11 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[SetProperties](#setproperties)|列舉值的資料來源，並初始化屬性群組，針對資料來源物件或初始化屬性群組中，設定屬性。|  
   
 ## <a name="remarks"></a>備註  
- [IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\))是資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉程式會公開[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))，它必須公開`IDBProperties`。 `IDBPropertiesImpl` 會實作`IDBProperties`使用所定義的靜態函式[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
+
+[IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\))是資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉程式會公開[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))，它必須公開`IDBProperties`。 `IDBPropertiesImpl` 會實作`IDBProperties`使用所定義的靜態函式[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。  
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: Getproperties
+
 傳回目前所設定的資料來源物件初始化屬性群組中目前所設定的屬性值的資料來源、 資料來源資訊，並初始化屬性群組中的屬性值列舉值。  
   
 ### <a name="syntax"></a>語法  
@@ -84,9 +89,10 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[idbproperties:: Getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
- 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBProperties::GetProperties`:  
+某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBProperties::GetProperties`:  
   
 |OLE DB 範本參數|*OLE DB 程式設計人員參考*參數|  
 |--------------------------------|------------------------------------------------|  
@@ -96,9 +102,11 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 |*prgProperties*|*prgPropertySets*|  
   
 ### <a name="remarks"></a>備註  
- 如果提供者初始化時，這個方法會傳回 DBPROPSET_DATASOURCE，DBPROPSET_DATASOURCEINFO、 的屬性值的資料來源物件目前所設定的 DBPROPSET_DBINIT 屬性群組。 如果尚未初始化提供者，它會傳回僅限 DBPROPSET_DBINIT 群組屬性。 
+
+如果提供者初始化時，這個方法會傳回 DBPROPSET_DATASOURCE，DBPROPSET_DATASOURCEINFO、 的屬性值的資料來源物件目前所設定的 DBPROPSET_DBINIT 屬性群組。 如果尚未初始化提供者，它會傳回僅限 DBPROPSET_DBINIT 群組屬性。 
   
 ## <a name="getpropertyinfo"></a> Idbpropertiesimpl:: Getpropertyinfo
+
 傳回資料來源所支援的屬性資訊。  
   
 ### <a name="syntax"></a>語法  
@@ -112,9 +120,10 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
- 某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBProperties::GetPropertyInfo`:  
+某些參數會對應至*OLE DB 程式設計人員參考*參數中所述的不同名稱的`IDBProperties::GetPropertyInfo`:  
   
 |OLE DB 範本參數|*OLE DB 程式設計人員參考*參數|  
 |--------------------------------|------------------------------------------------|  
@@ -122,9 +131,11 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 |*rgPropertySets*|*rgPropertyIDSets*|  
   
 ### <a name="remarks"></a>備註  
- 會使用[idbinitializeimpl:: M_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)來實作這項功能。 
+
+會使用[idbinitializeimpl:: M_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)來實作這項功能。 
 
 ## <a name="setproperties"></a> Idbpropertiesimpl:: Setproperties
+
 列舉值的資料來源，並初始化屬性群組，針對資料來源物件或初始化屬性群組中，設定屬性。  
   
 ### <a name="syntax"></a>語法  
@@ -135,11 +146,14 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[idbproperties:: Setproperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[idbproperties:: Setproperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
- 如果提供者初始化時，此方法會設定 DBPROPSET_DATASOURCE，DBPROPSET_DATASOURCEINFO、 的屬性值的資料來源物件的 DBPROPSET_DBINIT 屬性群組。 如果尚未初始化提供者，它會設定僅限 DBPROPSET_DBINIT 群組屬性。  
+
+如果提供者初始化時，此方法會設定 DBPROPSET_DATASOURCE，DBPROPSET_DATASOURCEINFO、 的屬性值的資料來源物件的 DBPROPSET_DBINIT 屬性群組。 如果尚未初始化提供者，它會設定僅限 DBPROPSET_DBINIT 群組屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

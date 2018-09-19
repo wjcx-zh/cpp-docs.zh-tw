@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1019 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1019 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cd9658a97f1f62a2a5a262e7262127744dd144a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a455daffba3957b9a4628ecab9e604994e4a4ce2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319731"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027085"
 ---
 # <a name="resource-compiler-fatal-error-rc1019"></a>資源編譯器嚴重錯誤 RC1019
-未預期 ' #else '  
-  
- `#else`指示詞未出現在`#if`， **#ifdef**，或 **#ifndef**建構。  
-  
- 請確定沒有`#if`， **#ifdef**，或 **#ifndef**這個陳述式前的作用中陳述式。
+
+非預期 ' #else '
+
+`#else`指示詞沒有出現在`#if`， **#ifdef**，或 **#ifndef**建構。
+
+請確定沒有`#if`， **#ifdef**，或 **#ifndef**此陳述式的作用中之前的陳述式。

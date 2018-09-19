@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561bfa3e307a08c6a3560a6a8b6d3bebd8598343
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 08c92d86cbbfd38ed4ae852ce52e3b70735812e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028086"
 ---
 # <a name="understanding-parse-trees"></a>了解剖析樹狀結構
 
 您可以定義一或多個剖析樹狀目錄中您的註冊機構指令碼，其中每個剖析樹狀結構具有下列格式：
 
-```  
-<root key>{<registry expression>}+  
+```
+<root key>{<registry expression>}+
 ```
 
 其中：
 
-```  
+```
 <root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
     HKEY_LOCAL_MACHINE | HKEY_USERS |  
     HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
     HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-    HKLM | HKU | HKPD | HKDD | HKCC  
-<registry expression> ::= <Add Key> | <Delete Key>  
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]  
-<Delete Key> ::= Delete<Key Name>  
-<Key Name> ::= '<AlphaNumeric>+'  
-<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
-<Key Value> ::== <Key Type><Key Name>  
-<Key Type> ::= s | d  
-<Key Value> ::= '<AlphaNumeric>'  
+    HKLM | HKU | HKPD | HKDD | HKCC
+<registry expression> ::= <Add Key> | <Delete Key>
+<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name> [<Key Value>][{<Add Key>}]
+<Delete Key> ::= Delete<Key Name>
+<Key Name> ::= '<AlphaNumeric>+'
+<AlphaNumeric> ::= any character not NULL, i.e. ASCII 0
+<Key Value> ::== <Key Type><Key Name>
+<Key Type> ::= s | d
+<Key Value> ::= '<AlphaNumeric>'
 ```
 
 > [!NOTE]
@@ -52,8 +52,8 @@ ms.locfileid: "43751191"
 
 剖析樹狀結構可以新增多個索引鍵和子機碼\<根目錄機碼 >。 在此情況下，它將保持子機碼的控制代碼為開啟狀態，直到剖析器完成剖析所有子機碼。 這種方法是更有效率，比起單一索引鍵，一次，如下列範例所示：
 
-```  
-HKEY_CLASSES_ROOT  
+```
+HKEY_CLASSES_ROOT
 {  
     'MyVeryOwnKey'  
     {  
@@ -61,8 +61,8 @@ HKEY_CLASSES_ROOT
         {  
             'PrettyCool'  
         }  
-    }  
-}  
+    }
+}
 ```
 
 在這裡，註冊機構一開始會開啟 （建立） `HKEY_CLASSES_ROOT\MyVeryOwnKey`。 然後會看到，`MyVeryOwnKey`有子機碼。 而不是關閉的索引鍵`MyVeryOwnKey`，註冊機構保留的控制代碼，並開啟 （建立）`HasASubKey`使用此父控制代碼。 （沒有父控制代碼開啟時系統登錄會比較慢）。因此，開啟`HKEY_CLASSES_ROOT\MyVeryOwnKey`，然後開啟`HasASubKey`具有`MyVeryOwnKey`為父代的速度比開啟`MyVeryOwnKey`，正在關閉`MyVeryOwnKey`，然後開啟`MyVeryOwnKey\HasASubKey`。

@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602409"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028528"
 ---
 # <a name="header-files-c"></a>標頭檔 （c + +）
 
-必須宣告程式項目，例如變數、 函式、 類別和等等的名稱，才能使用。 例如，您就無法寫入`x = 42`未宣告 'x'。 
+必須宣告程式項目，例如變數、 函式、 類別和等等的名稱，才能使用。 例如，您就無法寫入`x = 42`未宣告 'x'。
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- 宣告會告知編譯器是否是**int**、 **double**，則**函式**、**類別**或一些其他的事。  此外，每個名稱必須宣告 （直接或間接） 中使用每個.cpp 檔案中。 當您編譯程式時，每個.cpp 檔案會單獨編譯至編譯單位。 編譯器並不知道哪些名稱宣告在其他的編譯單位中。 這表示，如果您定義類別或函式或全域變數，您必須提供的話，那會使用它的每個額外的.cpp 檔案的宣告。 該動作的每個宣告中的所有檔案必須完全相同。 稍微不一致的問題會導致錯誤或非預期的行為，當連結器嘗試合併到單一程式中的所有編譯單位。
+宣告會告知編譯器是否是**int**、 **double**，則**函式**、**類別**或一些其他的事。  此外，每個名稱必須宣告 （直接或間接） 中使用每個.cpp 檔案中。 當您編譯程式時，每個.cpp 檔案會單獨編譯至編譯單位。 編譯器並不知道哪些名稱宣告在其他的編譯單位中。 這表示，如果您定義類別或函式或全域變數，您必須提供的話，那會使用它的每個額外的.cpp 檔案的宣告。 該動作的每個宣告中的所有檔案必須完全相同。 稍微不一致的問題會導致錯誤或非預期的行為，當連結器嘗試合併到單一程式中的所有編譯單位。
 
-錯誤的可能性降到最低，c + + 已採用的慣例*標頭檔*包含宣告。 您在 標頭檔中進行宣告，然後使用 #include 指示詞中的每個.cpp 檔案，或其他標頭檔所需的宣告。 #Include 指示詞插入標頭檔的複本直接在編譯之前的.cpp 檔案。 
+錯誤的可能性降到最低，c + + 已採用的慣例*標頭檔*包含宣告。 您在 標頭檔中進行宣告，然後使用 #include 指示詞中的每個.cpp 檔案，或其他標頭檔所需的宣告。 #Include 指示詞插入標頭檔的複本直接在編譯之前的.cpp 檔案。
 
 ## <a name="example"></a>範例
 
@@ -91,7 +91,7 @@ int main()
 
 ## <a name="include-guards"></a>Include 防護
 
-一般而言，標頭檔都有*include 防護*或`#pragma once`指示詞，以確保它們不會插入多次成單一的.cpp 檔案。 
+一般而言，標頭檔都有*include 防護*或`#pragma once`指示詞，以確保它們不會插入多次成單一的.cpp 檔案。
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 多個檔案可能會有可能包含標頭檔，因為它不能包含可能會產生具有相同名稱的多個定義的定義。 下列不允許，或視為非常適合：
 
 - 在命名空間或全域範圍的內建的類型定義
-- 非內嵌函式定義 
+- 非內嵌函式定義
 - 非 const 變數的定義
 - 彙總的定義
 - 未命名的命名空間
 - using 指示詞
 
-利用**使用**指示詞不一定會發生錯誤，但可能造成問題，因為它的命名空間帶入範圍中直接或間接包含該標頭的每個.cpp 檔案。 
+利用**使用**指示詞不一定會發生錯誤，但可能造成問題，因為它的命名空間帶入範圍中直接或間接包含該標頭的每個.cpp 檔案。
 
 ## <a name="sample-header-file"></a>範例標頭檔
 
 下列範例顯示各種宣告和定義的標頭檔中允許的：
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

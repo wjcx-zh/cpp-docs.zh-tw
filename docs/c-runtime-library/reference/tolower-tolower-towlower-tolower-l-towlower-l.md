@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023662"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
+
 將字元轉換為小寫。
 
 ## <a name="syntax"></a>語法
@@ -95,13 +96,13 @@ int _towlower_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會將轉換的複本*c*至較低的情況下，如果轉換是可行的並傳回結果。 沒有表示錯誤的保留傳回值。
+這些常式都會將一份*c*至較低的情況下，如果轉換是可行的並傳回結果。 沒有表示錯誤的保留傳回值。
 
 ## <a name="remarks"></a>備註
 
-這些常式都會將指定的大寫字母轉換為小寫字母 (如果可能且相關的話)。 大小寫轉換**towlower**地區設定而定。 只有與目前地區設定相關字元的大小寫會變更。 功能，但不包含 **_l**後置詞使用目前設定的地區設定。 有這些函式的版本 **_l**尾碼接受做為參數的地區設定，並使用，而不是目前已設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些常式都會將指定的大寫字母轉換為小寫字母 (如果可能且相關的話)。 大小寫轉換**towlower**地區設定而定。 只有與目前地區設定相關字元的大小寫會變更。 沒有函式 **_l**後置詞使用目前設定的地區設定。 有這些函式的版本 **_l**尾碼採用的地區設定做為參數，並使用，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-為了讓 **_tolower**提供預期的結果， [__isascii](isascii-isascii-iswascii.md)和[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必須兩者都傳回非零值。
+為了讓 **_tolower**預期的結果，提供給[__isascii](isascii-isascii-iswascii.md)並[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必須都傳回非零值。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -111,11 +112,11 @@ int _towlower_l(
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**和 **_towlower_l**有沒有地區設定相依性，而且不是直接呼叫。 可供內部使用 **_totlower_l**。
+> **_tolower_l**並 **_towlower_l**沒有任何地區設定相依性，不是直接呼叫。 它們專供內部使用 **_totlower_l**。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**tolower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|

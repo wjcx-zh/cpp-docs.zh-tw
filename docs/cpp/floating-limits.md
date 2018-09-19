@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025525"
 ---
 # <a name="floating-limits"></a>浮點數限制
 
 **Microsoft 專屬**
 
-下表列出浮點常數值的限制。 標準標頭檔中也會定義這些限制\<float.h >。  
+下表列出浮點常數值的限制。 標準標頭檔中也會定義這些限制\<float.h >。
 
 ## <a name="limits-on-floating-point-constants"></a>浮點常數的限制
 
@@ -57,4 +57,4 @@ ms.locfileid: "39604290"
 
 ## <a name="see-also"></a>另請參閱
 
-[整數限制](../cpp/integer-limits.md)  
+[整數限制](../cpp/integer-limits.md)

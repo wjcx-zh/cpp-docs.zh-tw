@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2117 |Microsoft 文件
+title: 編譯器錯誤 C2117 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a51bebc1edf7398d91356adb16f35443820cef2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5579a6f05e1de768aebd2e68b64d0b861688607
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166870"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030976"
 ---
 # <a name="compiler-error-c2117"></a>編譯器錯誤 C2117
-'identifier': 陣列界限溢位  
-  
- 陣列有太多初始設定式：  
-  
--   陣列項目和初始設定式不相符的大小和數量。  
-  
--   沒有在字串中的 null 結束字元的空間。  
-  
- 下列範例會產生 C2117:  
-  
-```  
-// C2117.cpp  
-int main() {  
-   char abc[4] = "abcd";   // C2117  
-   char def[4] = "abd";   // OK  
-}  
+
+'identifier': 陣列界限溢位
+
+陣列中有太多的初始設定式：
+
+- 陣列項目和初始設定式不相符的大小和數量。
+
+- 給以 null 終止字串中沒有空間。
+
+下列範例會產生 C2117:
+
+```
+// C2117.cpp
+int main() {
+   char abc[4] = "abcd";   // C2117
+   char def[4] = "abd";   // OK
+}
 ```

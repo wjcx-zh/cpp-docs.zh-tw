@@ -1,5 +1,5 @@
 ---
-title: texture_view 類別 |Microsoft 文件
+title: texture_view 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 03684d287072e6c27fa06343ff498bbc62d4449a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027072"
 ---
 # <a name="textureview-class"></a>texture_view 類別
-提供對紋理的寫入權限和讀取權限。 `texture_view` 只可以用來讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設值 32 位元 bpse。 若要閱讀其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  
+提供材質的寫入權限和讀取權限。 `texture_view` 只能讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設 32 位元 bpse。 若要讀取其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,11 +50,11 @@ class texture_view<const value_type, _Rank>
 ```  
   
 #### <a name="parameters"></a>參數  
- `value_type`  
- 紋理彙總中的項目類型。  
+*value_type*<br/>
+材質彙總中項目的型別。  
   
- `_Rank`  
- 陣序`texture_view`。  
+*_Rank*<br/>
+陣序`texture_view`。  
   
 ## <a name="members"></a>成員  
   
@@ -62,9 +62,9 @@ class texture_view<const value_type, _Rank>
   
 |名稱|描述|  
 |----------|-----------------|  
-|`value_type`|紋理彙總中的項目類型。|  
-|`coordinates_type`|用來指定在材質座標的型別`texture_view`— 也就是`short_vector`具有相關聯的紋理，其的實值類型為相同的陣序`float`。|  
-|`gather_return_type`|傳回型別用於收集作業 — 也就是次序 4`short_vector`保存的四個同質性色彩元件收集取樣的四個材質值。|  
+|`value_type`|材質彙總中項目的型別。|  
+|`coordinates_type`|用來指定在材質的座標類型`texture_view`— 也就是`short_vector`具有相同陣序規範為相關聯的實值類型的紋理`float`。|  
+|`gather_return_type`|傳回的型別，用於收集作業 — 也就是陣序 4`short_vector`保留四個同質色彩元件收集從四個取樣材質值。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -77,27 +77,27 @@ class texture_view<const value_type, _Rank>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[gather_alpha](#gather_alpha)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。|  
-|[gather_blue](#gather_blue)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。|  
-|[gather_green](#gather_green)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。|  
-|[gather_red](#gather_red)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 (x) 元件。|  
-|[get](#get)|多載。 依索引取得的項目值。|  
-|[範例](#sample)|多載。 使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。|  
-|[set](#set)|依索引設定項目的值。|  
+|[gather_alpha](#gather_alpha)|多載。 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的 alpha (w) 元件。|  
+|[gather_blue](#gather_blue)|多載。 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的藍色 (z) 元件。|  
+|[gather_green](#gather_green)|多載。 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的綠色 (y) 元件。|  
+|[gather_red](#gather_red)|多載。 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的紅色 (x) 元件。|  
+|[get](#get)|多載。 依索引取得項目值。|  
+|[範例](#sample)|多載。 使用指定的取樣組態範例在指定的座標和詳細程度。|  
+|[set](#set)|依索引設定元素的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator()](#operator_call)|多載。 依索引取得的項目值。|  
-|[operator[]](#operator_at)|多載。 依索引取得的項目值。|  
+|[operator()](#operator_call)|多載。 依索引取得項目值。|  
+|[operator[]](#operator_at)|多載。 依索引取得項目值。|  
 |[operator=](#operator_eq)|多載。 指派運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[value_type](#value_type)|實值型別項目的`texture_view`。|  
+|[value_type](#value_type)|項目的實值型別`texture_view`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `_Texture_base`  
@@ -156,32 +156,32 @@ texture_view(// [7] copy constructor
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
- [1，2]建構函式  
+*_Src*<br/>
+[1，2]建構函式  
  `texture`所在的可寫入`texture_view`建立。  
   
  [3，4]建構函式  
- `texture`上不能寫入`texture_view`建立。  
+ `texture`在其上不能寫入`texture_view`建立。  
   
- `_Other`  
- [5] 複製建構函式  
+*_Other*<br/>
+[5] 複製建構函式  
  可寫入的來源`texture_view`。  
   
  [6，7]複製建構函式  
- 無法寫入來源`texture_view`。  
+ 非可寫入的來源`texture_view`。  
   
- `_Mipmap_level`  
- 在來源上特定的 mipmap 層次`texture`這個可寫入`texture_view`繫結。 預設值是 0，代表最上層 （最不詳細） mip 層級。  
+*_Mipmap_level*<br/>
+在來源上的特定 mipmap 層級`texture`這個可寫入`texture_view`繫結至。 預設值為 0，表示最上層 （最詳細） mip 層級。  
   
- `_Most_detailed_mip`  
- 排名最前面 （最不詳細） 層級檢視中，相對於指定的 mip 層級`texture_view`物件。  
+*_Most_detailed_mip*<br/>
+Top 的檢視，相對於指定的層級 （最詳細） mip 層級`texture_view`物件。  
   
- `_Mip_levels`  
- 可透過存取 mipmap 層次數目`texture_view`。  
+*_Mip_levels*<br/>
+可透過存取的 mipmap 層級數目`texture_view`。  
   
 ##  <a name="gather_red"></a> gather_red 
 
- 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 (x) 元件。  
+ 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的紅色 (x) 元件。  
   
 ```  
 const gather_return_type gather_red(
@@ -197,21 +197,21 @@ const gather_return_type gather_red(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Address_mode`  
- 若要使用的位址模式範例`texture_view`。 位址模式也適用於所有的維度。  
+*_Address_mode*<br/>
+若要使用的位址模式範例`texture_view`。 位址模式也適用於所有維度。  
   
- `_Sampler`  
- 要使用的取樣器組態範例`texture_view`。  
+*_Sampler*<br/>
+若要使用的取樣器組態範例`texture_view`。  
   
- `_Coord`  
- 要採取的範例的座標。 小數的座標值用於範例材質間進行插補。  
+*_Coord*<br/>
+要取樣的來源座標。 分數座標值用於範例材質之間進行插補。  
   
 ### <a name="return-value"></a>傳回值  
- 包含 4 的紅色 (x) 元件的陣序規範 4 短向量取樣材質值。  
+ 陣序 4 短向量，包含紅色 (x) 元件，4 個取樣材質值。  
   
 ##  <a name="gather_green"></a> gather_green 
 
- 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。  
+ 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的綠色 (y) 元件。  
   
 ```  
 const gather_return_type gather_green(
@@ -227,21 +227,21 @@ const gather_return_type gather_green(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Address_mode`  
- 若要使用的位址模式範例`texture_view`。 位址模式也適用於所有的維度。  
+*_Address_mode*<br/>
+若要使用的位址模式範例`texture_view`。 位址模式也適用於所有維度。  
   
- `_Sampler`  
- 要使用的取樣器組態範例`texture_view`。  
+*_Sampler*<br/>
+若要使用的取樣器組態範例`texture_view`。  
   
- `_Coord`  
- 要採取的範例的座標。 小數的座標值用於範例材質間進行插補。  
+*_Coord*<br/>
+要取樣的來源座標。 分數座標值用於範例材質之間進行插補。  
   
 ### <a name="return-value"></a>傳回值  
- 包含 4 的綠色 (y) 元件的陣序規範 4 短向量取樣材質值。  
+ 陣序 4 短向量，包含綠色 (y) 元件，4 個取樣材質值。  
   
 ##  <a name="gather_blue"></a> gather_blue 
 
- 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。  
+ 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的藍色 (z) 元件。  
   
 ```  
 const gather_return_type gather_blue(
@@ -257,21 +257,21 @@ const gather_return_type gather_blue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Address_mode`  
- 若要使用的位址模式範例`texture_view`。 位址模式也適用於所有的維度。  
+*_Address_mode*<br/>
+若要使用的位址模式範例`texture_view`。 位址模式也適用於所有維度。  
   
- `_Sampler`  
- 要使用的取樣器組態範例`texture_view`。  
+*_Sampler*<br/>
+若要使用的取樣器組態範例`texture_view`。  
   
- `_Coord`  
- 要採取的範例的座標。 小數的座標值用於範例材質間進行插補。  
+*_Coord*<br/>
+要取樣的來源座標。 分數座標值用於範例材質之間進行插補。  
   
 ### <a name="return-value"></a>傳回值  
- 包含 4 的紅色 (x) 元件的陣序規範 4 短向量取樣材質值。  
+ 陣序 4 短向量，包含紅色 (x) 元件，4 個取樣材質值。  
   
 ##  <a name="gather_alpha"></a> gather_alpha 
 
- 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。  
+ 在指定座標的材質取樣使用指定的取樣組態，並傳回四個取樣材質的 alpha (w) 元件。  
   
 ```  
 const gather_return_type gather_alpha(
@@ -287,17 +287,17 @@ const gather_return_type gather_alpha(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Address_mode`  
- 若要使用的位址模式範例`texture_view`。 位址模式也適用於所有的維度。  
+*_Address_mode*<br/>
+若要使用的位址模式範例`texture_view`。 位址模式也適用於所有維度。  
   
- `_Sampler`  
- 要使用的取樣器組態範例`texture_view`。  
+*_Sampler*<br/>
+若要使用的取樣器組態範例`texture_view`。  
   
- `_Coord`  
- 要採取的範例的座標。 小數的座標值用於範例材質間進行插補。  
+*_Coord*<br/>
+要取樣的來源座標。 分數座標值用於範例材質之間進行插補。  
   
 ### <a name="return-value"></a>傳回值  
- 陣序規範 4 短向量包含 alpha (w) 元件的 4 取樣材質值。  
+ 陣序 4 短向量，包含的 alpha (w) 元件，4 個取樣材質值。  
   
 ##  <a name="get"></a> 取得 
 
@@ -314,18 +314,18 @@ value_type get(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Index`  
- 若要取得，可能是多維度的項目索引。  
+*_Index*<br/>
+若要取得，可能是多維度的項目索引。  
   
- `_Mip_level`  
- Mipmap 層次，我們應該從中取得的值。 預設值 0 表示最詳細的 mipmap 層次。  
+*_Mip_level*<br/>
+Mipmap 層級，我們應從中取得的值。 預設值 0 表示最詳細的 mipmap 層次。  
   
 ### <a name="return-value"></a>傳回值  
  項目的值。  
   
 ##  <a name="operator_eq"></a> 運算子 = 
 
- 指派與指定的相同紋理檢視`texture_view`至此`texture_view`執行個體。  
+ 與指定的相同材質的檢視指派`texture_view`至此`texture_view`執行個體。  
   
 ```  
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor  
@@ -341,19 +341,19 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- [1，2]複製建構函式  
+*_Other*<br/>
+[1，2]複製建構函式  
  可寫入`texture_view`物件。  
   
  [3] 複製建構函式  
- 不能寫入`texture_view`物件。  
+ 不可寫入`texture_view`物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`texture_view`執行個體。  
   
 ##  <a name="operator_at"></a> operator] 
 
- 依索引傳回項目值。  
+ 依索引傳回的項目值。  
   
 ```  
 const value_type operator[] (const index<_Rank>& _Index) const restrict(amp);
@@ -369,18 +369,18 @@ value_type operator[] (int _I0) const restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Index`  
- 索引中，可能是多維度。  
+*_Index*<br/>
+索引，可能是多維度。  
   
- `_I0`  
- 一維索引。  
+*_I0*<br/>
+一維索引。  
   
 ### <a name="return-value"></a>傳回值  
  以編製索引的項目值`_Index`。  
   
 ##  <a name="operator_call"></a> operator （) 
 
- 依索引傳回項目值。  
+ 依索引傳回的項目值。  
   
 ```  
 const value_type operator() (
@@ -421,24 +421,24 @@ value_type operator() (
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Index`  
- 索引中，可能是多維度。  
+*_Index*<br/>
+索引，可能是多維度。  
   
- `_I0`  
- 索引的最有效的元件。  
+*_I0*<br/>
+索引的重要元件。  
   
- `_I1`  
- 索引的下一步-到-最高有效的元件。  
+*_I1*<br/>
+索引的下一步 以-重要的元件。  
   
- `_I2`  
- 索引的最小顯著性的元件。  
+*_I2*<br/>
+索引的最小顯著性的元件。  
   
 ### <a name="return-value"></a>傳回值  
  以編製索引的項目值`_Index`。  
   
 ##  <a name="sample"></a> 範例 
 
- 使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。  
+ 使用指定的取樣組態範例在指定的座標和詳細程度。  
   
 ```  
 value_type sample(
@@ -457,27 +457,27 @@ value_type sample(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Filter_mode`  
- 使用取樣 texture_view 的篩選模式。 篩選模式也適用於最小化、 最大化和 mipmap 篩選器。  
+*_Filter_mode*<br/>
+要用來取樣 texture_view 的篩選模式。 此篩選模式為相同的最小化、 最大化和 mipmap 篩選條件。  
   
- `_Address_mode`  
- 使用取樣 texture_view 位址模式。 位址模式也適用於所有的維度。  
+*_Address_mode*<br/>
+要用來取樣 texture_view 的位址模式。 位址模式也適用於所有維度。  
   
- `_Sampler`  
- 要使用取樣 texture_view 的取樣器組態。  
+*_Sampler*<br/>
+要用來取樣 texture_view 的取樣器組態。  
   
- `_Coord`  
- 要採取的範例的座標。 小數的座標值可用來材質值之間進行插補。  
+*_Coord*<br/>
+要取樣的來源座標。 分數座標值用於材質值之間進行插補。  
   
- `_Level_of_detail`  
- 此值會指定要取樣的 mipmap 層次。 小數的值可用來插入兩個 mipmap 層次。 詳細資料的預設層級是 0，代表最詳細的 mip 層級。  
+*_Level_of_detail*<br/>
+值會指定從取樣的 mipmap 層級。 兩個 mipmap 層級之間進行插補會使用小數的值。 詳細資料的預設層級是 0，表示最詳細的 mip 層級。  
   
 ### <a name="return-value"></a>傳回值  
- 插補的範例值。  
+ 內插補點的範例值。  
   
 ##  <a name="set"></a> 設定 
 
- 將項目的值設定為指定的值的指定索引處。  
+ 為指定值的指定索引處設定項目的值。  
   
 ```  
 void set(
@@ -486,15 +486,15 @@ void set(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Index`  
- 若要設定，可能是多維度的項目索引。  
+*_Index*<br/>
+若要設定，可能是多維度的項目索引。  
   
- `value`  
- 若要設定項目的值。  
+*值*<br/>
+若要設定項目的值。  
   
 ##  <a name="value_type"></a> value_type 
 
- Texture_view 元素的值型別。  
+ Texture_view 中項目的實值型別。  
   
 ```  
 typedef typename const value_type value_type;  

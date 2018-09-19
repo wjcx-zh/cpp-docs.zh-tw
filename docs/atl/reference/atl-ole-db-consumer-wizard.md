@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020429"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 
@@ -193,6 +193,6 @@ ms.locfileid: "44315365"
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)
-[使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
+[ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [連接字串和資料連結 (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

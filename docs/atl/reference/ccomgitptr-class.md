@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703842"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033949"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 類別
 
@@ -38,13 +38,13 @@ ms.locfileid: "45703842"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class CComGITPtr
 ```
 
 #### <a name="parameters"></a>參數
 
-`T`  
+*T*<br/>
 要儲存在 GIT 中的介面指標的類型。
 
 ## <a name="members"></a>成員
@@ -102,10 +102,10 @@ HRESULT Attach(DWORD dwCookie) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 要加入至 GIT 的介面指標。
 
-*dwCookie*  
+*dwCookie*<br/>
 用來識別的介面指標的 cookie。
 
 ### <a name="return-value"></a>傳回值
@@ -170,7 +170,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>參數
 
-*前置處理*  
+*前置處理*<br/>
 也就是接收的介面指標。
 
 ### <a name="return-value"></a>傳回值
@@ -262,7 +262,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 傳回具有相關聯的 cookie`CComGITPtr`物件。
 
-```  
+```
 operator DWORD() const;
 ```
 
@@ -288,7 +288,7 @@ HRESULT Revoke() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[無限制執行緒封送處理器](../../atl/atl-and-the-free-threaded-marshaler.md)   
-[存取在 Apartment 之間的介面](/windows/desktop/com/accessing-interfaces-across-apartments)   
-[使用全域介面資料表的時機](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[無限制執行緒封送處理器](../../atl/atl-and-the-free-threaded-marshaler.md)<br/>
+[存取在 Apartment 之間的介面](/windows/desktop/com/accessing-interfaces-across-apartments)<br/>
+[使用全域介面資料表的時機](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 920cfbde9229131c5148c359f6a82ce002d7fb3a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030140"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 類別
 
@@ -58,7 +58,7 @@ class CComSafeArray
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 陣列中儲存之資料的類型。
 
 ## <a name="members"></a>成員
@@ -158,19 +158,19 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*psaSrc*  
+*psaSrc*<br/>
 `SAFEARRAY` 物件的指標。
 
-*ulCount*  
+*ulCount*<br/>
 若要加入至陣列的物件數目。
 
-*太平洋時間*  
+*太平洋時間*<br/>
 要加入至陣列的一個或多個物件指標。
 
-*t*  
+*t*<br/>
 若要加入至的陣列物件的參考。
 
-*bCopy*  
+*bCopy*<br/>
 指出是否應該建立一份資料。 預設值為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -193,7 +193,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>參數
 
-*psaSrc*  
+*psaSrc*<br/>
 指標`SAFEARRAY`結構。
 
 ### <a name="return-value"></a>傳回值
@@ -220,25 +220,25 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>參數
 
-*繫結*  
+*繫結*<br/>
 `SAFEARRAYBOUND` 結構。
 
-*ulCount*  
+*ulCount*<br/>
 陣列中的項目數。
 
-*lLBound*  
+*lLBound*<br/>
 下限值;也就是說，陣列中的第一個元素的索引。
 
-*pBound*  
+*pBound*<br/>
 指標`SAFEARRAYBOUND`結構。
 
-*uDims*  
+*uDims*<br/>
 陣列中的維度數目。
 
-*saSrc*  
+*saSrc*<br/>
 參考`SAFEARRAY`結構或`CComSafeArray`物件。 在任一情況下建構函式會使用此參考進行比較陣列中的複本，因此不在建構之後參考之陣列。
 
-*psaSrc*  
+*psaSrc*<br/>
 指標`SAFEARRAY`結構。 建構函式會使用此位址進行比較陣列中的複本，因此不在建構之後參考之陣列。
 
 ### <a name="remarks"></a>備註
@@ -267,7 +267,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>參數
 
-*ppArray*  
+*ppArray*<br/>
 指標`SAFEARRAY`複製。
 
 ### <a name="return-value"></a>傳回值
@@ -288,7 +288,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 
 ### <a name="parameters"></a>參數
 
-*ppArray*  
+*ppArray*<br/>
 要在其中建立新的位置指標`SAFEARRAY`。
 
 ### <a name="return-value"></a>傳回值
@@ -310,16 +310,16 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="parameters"></a>參數
 
-*pBound*  
+*pBound*<br/>
 `SAFEARRAYBOUND` 物件的指標。
 
-*uDims*  
+*uDims*<br/>
 陣列中的維度數目。
 
-*ulCount*  
+*ulCount*<br/>
 陣列中的項目數。
 
-*lLBound*  
+*lLBound*<br/>
 下限值;也就是說，陣列中的第一個元素的索引。
 
 ### <a name="return-value"></a>傳回值
@@ -372,7 +372,7 @@ T& GetAt(LONG lIndex) const;
 
 ### <a name="parameters"></a>參數
 
-*lIndex*  
+*lIndex*<br/>
 要傳回的陣列中值的索引編號。
 
 ### <a name="return-value"></a>傳回值
@@ -389,7 +389,7 @@ ULONG GetCount(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*uDim*  
+*uDim*<br/>
 陣列維度。
 
 ### <a name="return-value"></a>傳回值
@@ -422,7 +422,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*uDim*  
+*uDim*<br/>
 用來取得下限的陣列維度。 如果省略，預設值為 0。
 
 ### <a name="return-value"></a>傳回值
@@ -485,7 +485,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*uDim*  
+*uDim*<br/>
 陣列維度，用來取得上限。 如果省略，預設值為 0。
 
 ### <a name="return-value"></a>傳回值
@@ -526,10 +526,10 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 
 ### <a name="parameters"></a>參數
 
-*alIndex*  
+*alIndex*<br/>
 指標的陣列中每個維度的索引向量。 最左邊 （最大） 的維度是`alIndex[0]`。
 
-*t*  
+*t*<br/>
 傳回資料的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -546,10 +546,10 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 
 ### <a name="parameters"></a>參數
 
-*alIndex*  
+*alIndex*<br/>
 指標的陣列中每個維度的索引向量。 最右邊的 （最不重要） 維度是`alIndex`[0]。
 
-*T*  
+*T*<br/>
 指定新項目的值。
 
 ### <a name="return-value"></a>傳回值
@@ -571,7 +571,7 @@ T& operator[]int nindex) const;
 
 ### <a name="parameters"></a>參數
 
-*lIndex nIndex*  
+*lIndex nIndex*<br/>
 陣列中的必要項目索引編號。
 
 ### <a name="return-value"></a>傳回值
@@ -593,10 +593,10 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>參數
 
-*saSrc*  
+*saSrc*<br/>
 對 `CComSafeArray` 物件的參考。
 
-*psaSrc*  
+*psaSrc*<br/>
 `SAFEARRAY` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -626,13 +626,13 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 ### <a name="parameters"></a>參數
 
-*pBound*  
+*pBound*<br/>
 指標`SAFEARRAYBOUND`結構，其中包含有關的項目數和陣列的下限。
 
-*ulCount*  
+*ulCount*<br/>
 要求的已調整大小的陣列中的物件數目。
 
-*lLBound*  
+*lLBound*<br/>
 下限。
 
 ### <a name="return-value"></a>傳回值
@@ -653,13 +653,13 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ### <a name="parameters"></a>參數
 
-*lIndex*  
+*lIndex*<br/>
 若要設定的陣列項目索引編號。
 
-*t*  
+*t*<br/>
 指定的項目新值。
 
-*bCopy*  
+*bCopy*<br/>
 指出是否應該建立一份資料。 預設值為 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -672,7 +672,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>另請參閱
 
-[SAFEARRAY 資料類型](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)   
-[Ccomsafearray:: Create](#create)   
-[Ccomsafearray:: Destroy](#destroy)   
+[SAFEARRAY 資料類型](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[CComSafeArray::Create](#create)<br/>
+[CComSafeArray::Destroy](#destroy)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

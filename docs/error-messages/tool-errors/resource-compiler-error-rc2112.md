@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器錯誤 RC2112 |Microsoft 文件
+title: 資源編譯器錯誤 RC2112 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4007e714a69665758a44c5f80c03fd7dbbfe7f8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2b65f845ef845648d219c6d0e58a9fcd9068a34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018583"
 ---
 # <a name="resource-compiler-error-rc2112"></a>資源編譯器錯誤 RC2112
-在對話方塊中預期為 BEGIN  
-  
- **開始**關鍵字必須緊接**對話方塊**關鍵字。
+
+在對話方塊中預期為 BEGIN
+
+**開始**關鍵字必須緊接**對話方塊**關鍵字。

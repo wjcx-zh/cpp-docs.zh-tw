@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 69882f9b22d11de139951b6196b58729af70a36a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018141"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 類別
 裝載 Windows Form 使用者控制項的 MFC 對話方塊類別包裝函式。  
@@ -43,8 +43,8 @@ class CWinFormsDialog :
 ```  
   
 #### <a name="parameters"></a>參數  
- `TManagedControl`  
- 要顯示在 MFC 應用程式的.NET Framework 使用者控制項。  
+*TManagedControl*<br/>
+要顯示在 MFC 應用程式的.NET Framework 使用者控制項。  
   
 ## <a name="members"></a>成員  
   

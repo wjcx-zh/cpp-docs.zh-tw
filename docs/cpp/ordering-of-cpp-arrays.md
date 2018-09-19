@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b85f1a97dd38be3e82b2d7e8a10ca8149788e6f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 7b4b285d77596362e2056ebc48d5a25878060ef1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404684"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031791"
 ---
 # <a name="ordering-of-c-arrays"></a>C++ 陣列的排序
-C++ 陣列是以列為主要順序進行儲存。 以列為主要順序表示最後一個註標變更最快速。  
-  
-## <a name="see-also"></a>另請參閱  
- [陣列](../cpp/arrays-cpp.md)
+
+C++ 陣列是以列為主要順序進行儲存。 以列為主要順序表示最後一個註標變更最快速。
+
+## <a name="see-also"></a>另請參閱
+
+[陣列](../cpp/arrays-cpp.md)

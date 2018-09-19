@@ -35,29 +35,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2780697c1a50e15e170f2096a2841e2c50d844a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031432"
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
 **Microsoft 專屬**
 
-**嘗試-除了**陳述式是 C 的 Microsoft 擴充功能，以及 c + + 語言的支援結構化例外狀況處理。  
+**嘗試-除了**陳述式是 C 的 Microsoft 擴充功能，以及 c + + 語言的支援結構化例外狀況處理。
 
-## <a name="syntax"></a>語法  
-  
-> **__try**   
-> {  
->    受防護的程式碼  
-> }  
-> **__except** (*運算式*)  
-> {  
->    例外狀況處理常式程式碼  
-> }  
+## <a name="syntax"></a>語法
+
+> **__try** {/ / 受防護的程式碼} **__except** (*運算式*) {/ / 例外狀況處理常式程式碼}
 
 ## <a name="remarks"></a>備註
 
@@ -74,7 +67,7 @@ ms.locfileid: "45724681"
 
 1. 執行保護的區段。
 
-2. 如果沒有發生例外狀況執行保護區段期間，在之後的陳述式會繼續執行 **__except**子句。  
+2. 如果沒有發生例外狀況執行保護區段期間，在之後的陳述式會繼續執行 **__except**子句。
 
 3. 如果執行保護區段期間發生的例外狀況，或在任何受保護的區段所呼叫常式， **__except** *運算式*(稱為*篩選*運算式)評估和值會決定如何處理例外狀況。 共有三個值：
 
@@ -88,10 +81,10 @@ ms.locfileid: "45724681"
 
 每個應用程式都有自己的例外狀況處理常式。
 
-不是有效一頭栽進 **__try**陳述式，但是可以跳出一個。 如果執行中期終止處理程序，不會呼叫例外狀況處理常式**嘗試-除了**陳述式。  
-  
-如需詳細資訊，請參閱知識庫文件 Q315937：＜如何：對 Visual C++ 應用程式中的堆疊溢位設陷＞(機器譯文)。  
-  
+不是有效一頭栽進 **__try**陳述式，但是可以跳出一個。 如果執行中期終止處理程序，不會呼叫例外狀況處理常式**嘗試-除了**陳述式。
+
+如需詳細資訊，請參閱知識庫文件 Q315937：＜如何：對 Visual C++ 應用程式中的堆疊溢位設陷＞(機器譯文)。
+
 ## <a name="the-leave-keyword"></a>__leave 關鍵字
 
 **__Leave**關鍵字只在中是有效的保護區段**嘗試-除了**陳述式，而其作用是跳至保護區段的結尾。 然後在例外狀況處理常式之後的第一個陳述式繼續執行。
@@ -106,12 +99,12 @@ A **goto**陳述式也可以跳出保護的區段中，而且它不會不會降�
 
 內建函式`GetExceptionInformation`傳回結構，包含例外狀況的其他資訊的指標。 透過這個指標就可以存取發生硬體例外狀況當時的電腦狀態。 結構如下所示：
 
-```cpp  
+```cpp
 typedef struct _EXCEPTION_POINTERS {
     PEXCEPTION_RECORD ExceptionRecord;
     PCONTEXT ContextRecord;
-} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
-```  
+} EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
+```
 
 指標類型`PEXCEPTION_RECORD`和`PCONTEXT`include 檔中定義\<winnt.h >，和`_EXCEPTION_RECORD`並`_CONTEXT`include 檔中定義\<excpt.h >
 
@@ -123,10 +116,10 @@ excpt.h 會定義這些內建函式的一些替代名稱：
 
 `GetExceptionCode` 相當於 `_exception_code`
 
- `GetExceptionInformation` 相當於 `_exception_info`
+`GetExceptionInformation` 相當於 `_exception_info`
 
- `AbnormalTermination` 相當於 `_abnormal_termination`
-  
+`AbnormalTermination` 相當於 `_abnormal_termination`
+
 ## <a name="example"></a>範例
 
 ```cpp
@@ -176,24 +169,25 @@ int main()
     puts("world");
 }
 ```
-  
-## <a name="output"></a>輸出  
-  
-```Output 
-hello  
-in try  
-in try  
-in filter.  
-caught AV as expected.  
-in finally. termination:  
-        abnormal  
-in except  
-world  
-```  
 
-**結束 Microsoft 專屬**  
+## <a name="output"></a>輸出
+
+```Output
+hello
+in try
+in try
+in filter.
+caught AV as expected.
+in finally. termination:
+        abnormal
+in except
+world
+```
+
+**結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
- [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
- [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
- [關鍵字](../cpp/keywords-cpp.md)
+
+[撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)<br/>
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[關鍵字](../cpp/keywords-cpp.md)

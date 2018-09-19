@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4549 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4549 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31a2aec4753cf0cd800ca22ea1e997a5929bf3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b36a7516c244c49e56d7070684f5914407d625c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284325"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027356"
 ---
 # <a name="compiler-warning-level-1-c4549"></a>編譯器警告 (層級 1) C4549
-'operator': 逗號之前不會影響; 運算子您是否想 'operator'？  
-  
- 編譯器偵測到格式不正確的逗點運算式。  
-  
- 此警告預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
-  
- 下列範例會產生 C4549:  
-  
-```  
-// C4549.cpp  
-// compile with: /W1  
-#pragma warning (default : 4549)  
-  
-int main() {  
-   int i = 0, k = 0;  
-  
-   if ( i == 0, k )   // C4549  
-   // try the following line instead  
-   // if ( i == 0 )  
-      i++;  
-}  
+
+'operator': 逗號之前不會影響; 運算子您是否想 'operator'？
+
+編譯器偵測到格式不正確的逗點運算式。
+
+此警告預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
+
+下列範例會產生 C4549:
+
+```
+// C4549.cpp
+// compile with: /W1
+#pragma warning (default : 4549)
+
+int main() {
+   int i = 0, k = 0;
+
+   if ( i == 0, k )   // C4549
+   // try the following line instead
+   // if ( i == 0 )
+      i++;
+}
 ```

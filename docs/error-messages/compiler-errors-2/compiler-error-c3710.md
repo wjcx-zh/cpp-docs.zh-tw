@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3710 |Microsoft 文件
+title: 編譯器錯誤 C3710 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,64 +16,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f463257efbf1c615d0451a585a4a4ee8defdfebd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44faf99abe5df371a12025f7317743738dc8f024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018986"
 ---
 # <a name="compiler-error-c3710"></a>編譯器錯誤 C3710
-'function': 不適當的語法中用於指定事件處理常式 __hook /\__unhook  
-  
- 當您指定的事件處理常式和[__hook](../../cpp/hook.md)或[__unhook](../../cpp/unhook.md)，處理常式必須是有效的方法。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3710  
-  
-```  
-// C3710.cpp  
-// compile with: /link /opt:noref  
-#include <atlbase.h>  
-#include <atlcom.h>  
-#include <atlctl.h>  
-#include <stdio.h>  
-  
-[event_source(native)]  
-class CEventSrc  
-{  
-public:  
-    __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec  
-{  
-public:  
-    void handler1()  
-    {  
-        printf_s("Executing handler1().\n");  
-    }  
-  
-    void HookEvents(CEventSrc* pSrc)   
-    {  
-        __hook(&CEventSrc::event1, pSrc, 0);   // C3710  
-        // try the following line instead  
-        // __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);  
-    }  
-  
-    void UnhookEvents(CEventSrc* pSrc)  
-    {  
-        __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1);  
-    }  
-};  
-  
-int main()  
-{  
-    CEventSrc eventSrc;  
-    CEventRec eventRec;  
-    eventRec.HookEvents(&eventSrc);  
-    eventSrc.event1();  
-    eventRec.UnhookEvents(&eventSrc);  
-}  
+
+'function': 不適當的語法，用於指定事件處理常式在 __hook /\__unhook
+
+當您指定事件處理常式[__hook](../../cpp/hook.md)或是[__unhook](../../cpp/unhook.md)，處理常式必須是有效的方法。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3710
+
+```
+// C3710.cpp
+// compile with: /link /opt:noref
+#include <atlbase.h>
+#include <atlcom.h>
+#include <atlctl.h>
+#include <stdio.h>
+
+[event_source(native)]
+class CEventSrc
+{
+public:
+    __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec
+{
+public:
+    void handler1()
+    {
+        printf_s("Executing handler1().\n");
+    }
+
+    void HookEvents(CEventSrc* pSrc)
+    {
+        __hook(&CEventSrc::event1, pSrc, 0);   // C3710
+        // try the following line instead
+        // __hook(&CEventSrc::event1, pSrc, &CEventRec::handler1);
+    }
+
+    void UnhookEvents(CEventSrc* pSrc)
+    {
+        __unhook(&CEventSrc::event1, pSrc, &CEventRec::handler1);
+    }
+};
+
+int main()
+{
+    CEventSrc eventSrc;
+    CEventRec eventRec;
+    eventRec.HookEvents(&eventSrc);
+    eventSrc.event1();
+    eventRec.UnhookEvents(&eventSrc);
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3192 |Microsoft 文件
+title: 編譯器錯誤 C3192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e014e9ad54963212ef580e14870138273e882a47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50b639335e0a8ce2f55bb327f3a6a475b1fb770e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031154"
 ---
 # <a name="compiler-error-c3192"></a>編譯器錯誤 C3192
-語法錯誤: '^' 不是前置運算子 (您是否是指' *'？)  
-  
- 控制代碼不當做取值運算子。  
-  
- 下列範例會產生 C3192:  
-  
-```  
-// C3192.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class MyClass {  
-public:  
-   MyClass () {}  
-   MyClass(MyClass%) {}  
-};  
-  
-int main() {  
-   MyClass ^ s = gcnew MyClass;   
-   MyClass b = ^s;   // C3192  
-  
-   // OK  
-   MyClass b2 = *s;  
-}  
+
+語法錯誤: '^' 不是前置運算子 (這表示您' *'？)
+
+控制代碼不能當做取值運算子。
+
+下列範例會產生 C3192:
+
+```
+// C3192.cpp
+// compile with: /clr
+using namespace System;
+
+ref class MyClass {
+public:
+   MyClass () {}
+   MyClass(MyClass%) {}
+};
+
+int main() {
+   MyClass ^ s = gcnew MyClass;
+   MyClass b = ^s;   // C3192
+
+   // OK
+   MyClass b2 = *s;
+}
 ```

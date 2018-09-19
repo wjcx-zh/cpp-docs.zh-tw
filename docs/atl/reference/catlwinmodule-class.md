@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e52f21eea272f34bdc6594dcdb8f57c8538ac50
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b516b3a2f1089408688a7db4d131b4569b733755
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017357"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 類別
 
@@ -80,10 +80,10 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 ### <a name="parameters"></a>參數
 
-*pData*  
+*pData*<br/>
 指標`_AtlCreateWndData`會初始化並新增至目前模組的結構。
 
-*pObject*  
+*pObject*<br/>
 物件的指標**這**指標。
 
 ### <a name="remarks"></a>備註
@@ -128,6 +128,6 @@ void* ExtractCreateWndData();
 
 ## <a name="see-also"></a>另請參閱
 
-[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

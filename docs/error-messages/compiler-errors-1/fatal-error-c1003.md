@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1003 |Microsoft 文件
+title: 嚴重錯誤 C1003 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11dbaa335a7354a54deda8db1bb29f2384873a28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb12cfb83b8fc7e7a0b4b89e325897002d1561c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196632"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029347"
 ---
 # <a name="fatal-error-c1003"></a>嚴重錯誤 C1003
-錯誤計數超過 number; 停止編譯  
-  
- 程式中的錯誤太多而不允許復原。 編譯器必須終止。
+
+錯誤計數超過 number; 停止編譯
+
+程式中的錯誤太多而不允許復原。 編譯器必須終止。

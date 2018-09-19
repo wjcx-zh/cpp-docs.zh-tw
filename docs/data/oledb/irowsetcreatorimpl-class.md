@@ -30,14 +30,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f2fb70149c6f1c02d2b28d50e370480b027186bf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51534ffb027e35bbab5a9473cf4190c14b384808
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118129"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 類別
+
 執行相同的功能`IObjectWithSite`但也可讓 OLE DB 屬性`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`。  
   
 ## <a name="syntax"></a>語法
@@ -49,11 +50,13 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 類別衍生自`IRowsetCreator`。  
+
+*T*<br/>
+類別衍生自`IRowsetCreator`。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |[SetSite](#setsite)|設定站台，其中包含資料列集物件。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別繼承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 當提供者命令或工作階段物件會建立一個資料列集時，它會呼叫`QueryInterface`尋找資料列集物件上`IObjectWithSite`，並呼叫`SetSite`傳遞資料列集物件的`IUnkown`站介面的介面。  
+
+這個類別繼承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 當提供者命令或工作階段物件會建立一個資料列集時，它會呼叫`QueryInterface`尋找資料列集物件上`IObjectWithSite`，並呼叫`SetSite`傳遞資料列集物件的`IUnkown`站介面的介面。  
 
 ## <a name="setsite"></a> Irowsetcreatorimpl:: Setsite
+
 設定站台，其中包含資料列集物件。 如需詳細資訊，請參閱 < [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。  
   
 ### <a name="syntax"></a>語法  
@@ -76,15 +81,19 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 ```  
   
 #### <a name="parameters"></a>參數  
- *pCreator*  
- [in]指標`IUnknown`的站台管理的資料列集物件介面指標。  
+
+*pCreator*<br/>
+[in]指標`IUnknown`的站台管理的資料列集物件介面指標。  
   
 ### <a name="return-value"></a>傳回值  
- 標準的 HRESULT。  
+
+標準的 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 颾魤 ㄛ`IRowsetCreatorImpl::SetSite`可讓 OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`屬性。 
+
+颾魤 ㄛ`IRowsetCreatorImpl::SetSite`可讓 OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`屬性。 
 
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f34f7ceca5cf958e981f8390044863a07b4317
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 80bd9984afa3ce1fc6cda4e0b48cfa59e7e84b56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118449"
 ---
 # <a name="worker-archetype"></a>背景工作原型
 
@@ -68,7 +68,7 @@ ms.locfileid: "43767161"
 
 呼叫以處理工作項目。
 
-```  
+```
 void Execute(
     RequestType request,  
     void* pvWorkerParam,  
@@ -77,25 +77,25 @@ void Execute(
 
 #### <a name="parameters"></a>參數
 
-*要求*  
+*要求*<br/>
 處理工作項目。 工作項目屬於相同的型別`RequestType`。
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 了解的背景工作角色類別的自訂參數。 也會傳遞給`WorkerArchetype::Initialize`和`Terminate`。
 
-*pOverlapped*  
+*pOverlapped*<br/>
 指標[OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped)結構，用來建立在哪一個工作項目已排入佇列的佇列。
 
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 
-呼叫以初始化背景工作角色的物件之前的任何要求會傳遞至, `WorkerArchetype::Execute`。  
+呼叫以初始化背景工作角色的物件之前的任何要求會傳遞至, `WorkerArchetype::Execute`。
 ```
 BOOL Initialize(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>參數
 
-*pvParam*  
+*pvParam*<br/>
 了解的背景工作角色類別的自訂參數。 也會傳遞給`WorkerArchetype::Terminate`和`WorkerArchetype::Execute`。
 
 ### <a name="return-value"></a>傳回值
@@ -106,8 +106,8 @@ BOOL Initialize(void* pvParam) throw();
 
 可處理的背景工作角色類別的工作項目類型的 typedef。
 
-```  
-typedef MyRequestType RequestType;    
+```
+typedef MyRequestType RequestType;
 ```
 
 ### <a name="remarks"></a>備註
@@ -118,17 +118,17 @@ typedef MyRequestType RequestType;
 
 停止背景工作物件的初始化之後的所有要求都傳遞至, 呼叫`WorkerArchetype::Execute`)。
 
-``` 
+```
 void Terminate(void* pvParam) throw();
 ```
 
 #### <a name="parameters"></a>參數
 
-*pvParam*  
+*pvParam*<br/>
 了解的背景工作角色類別的自訂參數。 也會傳遞給`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。
 
 ## <a name="see-also"></a>另請參閱
 
-[概念](../../atl/active-template-library-atl-concepts.md)   
+[概念](../../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
 

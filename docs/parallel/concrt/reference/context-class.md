@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136175"
 ---
 # <a name="context-class"></a>Context 類別
 代表執行內容的抽象概念。  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PObject`  
- 要刪除的物件指標。  
+*_PObject*<br/>
+要刪除的物件指標。  
   
 ##  <a name="oversubscribe"></a> 過度訂閱 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_BeginOversubscription`  
- 如果`true`，過度訂閱期間，應新增的額外虛擬處理器的指示。 如果`false`，表示過度訂閱應該結束，而且應該移除先前加入的虛擬處理器。  
+*_BeginOversubscription*<br/>
+如果`true`，過度訂閱期間，應新增的額外虛擬處理器的指示。 如果`false`，表示過度訂閱應該結束，而且應該移除先前加入的虛擬處理器。  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

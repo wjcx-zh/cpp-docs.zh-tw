@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0040 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0040 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb71bad9fd6f6e1de1bd10b204e720bfee036abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff0f0d446094ad7a0f9a96ed73c2c6c5e5af209
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295427"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117552"
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>運算式評估工具錯誤 CXX0040
-函式要求隱含轉換  
-  
- C 運算式評估工具不支援包含建構函式呼叫的隱含轉換。  
-  
- 這個錯誤是與 can0040 相同。
+
+函式要求隱含轉換
+
+C 運算式評估工具不支援包含建構函式呼叫的隱含轉換。
+
+此錯誤是與 can0040 相同。

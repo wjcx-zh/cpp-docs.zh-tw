@@ -1,5 +1,5 @@
 ---
-title: invalid_compute_domain 類別 |Microsoft 文件
+title: invalid_compute_domain 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116005"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain 類別
-執行階段無法啟動一個核心使用在指定的計算網域時，會擲回的例外狀況[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫站台。  
+執行階段無法使用在指定的計算網域啟動核心時，會擲回的例外狀況[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫站台。  
 
   
 ## <a name="syntax"></a>語法  
@@ -70,8 +70,8 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述。  
+*訊息 （_m)*<br/>
+錯誤的描述。  
   
 ### <a name="return-value"></a>傳回值  
  執行個體`invalid_compute_domain`類別  

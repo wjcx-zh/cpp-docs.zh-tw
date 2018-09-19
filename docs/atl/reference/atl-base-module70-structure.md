@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7218d7fc8886cffdcce13f09a682fdc635f84f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8ee35df4b6ee792cd91f1b294259544e8944509
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089043"
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 結構
 
@@ -47,28 +47,28 @@ struct _ATL_BASE_MODULE70 {
 
 ## <a name="members"></a>成員
 
-`cbSize`  
+`cbSize`<br/>
 結構，用來進行版本設定的大小。
 
-`m_hInst`  
+`m_hInst`<br/>
 `hInstance`此模組 （exe 或 dll）。
 
-`m_hInstResource`  
+`m_hInstResource`<br/>
 預設執行個體資源控制代碼。
 
-`m_bNT5orWin98`  
+`m_bNT5orWin98`<br/>
 作業系統版本資訊。 供內部使用 ATL
 
-`dwAtlBuildVer`  
+`dwAtlBuildVer`<br/>
 儲存 ATL 的版本 目前 0x0700。
 
-`pguidVer`  
+`pguidVer`<br/>
 ATL 的內部 GUID。
 
-`m_csResource`  
+`m_csResource`<br/>
 用來同步存取`m_rgResourceInstance`陣列。 供內部使用 ATL
 
-`m_rgResourceInstance`  
+`m_rgResourceInstance`<br/>
 用來搜尋資源的 ATL 並知道的所有資源執行個體的陣列。 供內部使用 ATL
 
 ## <a name="remarks"></a>備註

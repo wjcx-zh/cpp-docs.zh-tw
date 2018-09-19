@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403919"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114497"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
 
 每個 c + + 運算式都有類型，而且屬於*值分類*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。
 
- C + + 17 標準會定義運算式值的類別，如下所示：
+C + + 17 標準會定義運算式值的類別，如下所示：
 
 - A *glvalue*是的運算式的評估會決定物件、 位元欄位或函式的身分識別。
 - A *prvalue*是其評估初始化物件或位元欄位，或計算運算子的運算元的值，因為在它出現內容所指定的運算式。
@@ -36,40 +36,40 @@ ms.locfileid: "39403919"
 
 下圖說明兩個類別之間的關聯性：
 
- ![C + + 運算式值類別](media/value_categories.png "c + + 運算式值類別")
+![C + + 運算式值類別](media/value_categories.png "c + + 運算式值類別")
 
- 左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括**const**變數，陣列項目，函式會傳回左值參考、 位元欄位、 等位和類別成員的呼叫。
+左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括**const**變數，陣列項目，函式會傳回左值參考、 位元欄位、 等位和類別成員的呼叫。
 
- Prvalue 運算式有沒有可供您的程式存取的位址。 Prvalue 運算式的範例包括常值、 函式呼叫會傳回非參考類型，並只能由編譯器建立運算式評估期間，但可存取的暫存物件。
+Prvalue 運算式有沒有可供您的程式存取的位址。 Prvalue 運算式的範例包括常值、 函式呼叫會傳回非參考類型，並只能由編譯器建立運算式評估期間，但可存取的暫存物件。
 
- Xvalue 運算式有一個位址，無法再存取您的程式，但可以用來初始化右值參考，可讓您存取運算式。 範例包括傳回右值參考，以及陣列註標、 成員和指標成員運算式之陣列或物件是右值參考的函式呼叫。
+Xvalue 運算式有一個位址，無法再存取您的程式，但可以用來初始化右值參考，可讓您存取運算式。 範例包括傳回右值參考，以及陣列註標、 成員和指標成員運算式之陣列或物件是右值參考的函式呼叫。
 
 ## <a name="example"></a>範例
 
- 下列範例將示範數種正確和不正確的左值和右值用法：
+下列範例將示範數種正確和不正確的左值和右值用法：
 
 ```cpp
 // lvalues_and_rvalues2.cpp
 int main()
 {
- int i, j, *p;
+int i, j, *p;
 
- // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
- i = 7;
+// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+i = 7;
 
- // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
- 7 = i; // C2106
- j * 4 = 7; // C2106
+// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+7 = i; // C2106
+j * 4 = 7; // C2106
 
- // Correct usage: the dereferenced pointer is an lvalue.
- *p = i;
+// Correct usage: the dereferenced pointer is an lvalue.
+*p = i;
 
- const int ci = 7;
- // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
- ci = 9; // C3892
+const int ci = 7;
+// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+ci = 9; // C3892
 
- // Correct usage: the conditional operator returns an lvalue.
- ((i < 3) ? i : j) = 7;
+// Correct usage: the conditional operator returns an lvalue.
+((i < 3) ? i : j) = 7;
 }
 ```
 
@@ -79,6 +79,7 @@ int main()
 條款*左值*並*右值*通常會在您參考的物件參考時所使用。 如需參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)並[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
- [基本概念](../cpp/basic-concepts-cpp.md)  
- [左值參考宣告子：&](../cpp/lvalue-reference-declarator-amp.md)  
- [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)
+
+[基本概念](../cpp/basic-concepts-cpp.md)<br/>
+[左值參考宣告子：&](../cpp/lvalue-reference-declarator-amp.md)<br/>
+[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

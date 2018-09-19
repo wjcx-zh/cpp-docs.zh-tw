@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7e3731132e1b9ed9381a7b97347406b620df70
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 13ddd14ad530fa2b7ce2892ce8838b27e307381f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135758"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 類別
 
@@ -36,17 +36,17 @@ ms.locfileid: "43759661"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T, class CDV = CComDynamicUnkArray>  
+template<class T, class CDV = CComDynamicUnkArray>
 class IPropertyNotifySinkCP 
    : public IConnectionPointImpl<T, &IID_IPropertyNotifySink, CDV>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IPropertyNotifySinkCP`。
 
-*CDV*  
+*CDV*<br/>
 類別可管理的連接點和其接收器之間的連線。 預設值是[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，可讓連接無限制。 您也可以使用[CComUnkArray](../../atl/reference/ccomunkarray-class.md)，指定固定的連接數目。
 
 ## <a name="remarks"></a>備註
@@ -65,6 +65,6 @@ class IPropertyNotifySinkCP
 
 ## <a name="see-also"></a>另請參閱
 
-[IConnectionPointImpl 類別](../../atl/reference/iconnectionpointimpl-class.md)   
-[IConnectionPointContainerImpl 類別](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
+[IConnectionPointImpl 類別](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[IConnectionPointContainerImpl 類別](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

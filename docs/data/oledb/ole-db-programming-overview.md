@@ -16,25 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 735e753412498d3285ad26e02b017fb931960daf
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ec41a0213c621e948a160553c03b17be39e9f2f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090707"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 程式設計概觀
+
 OLE DB 是以 COM 為基礎的高效能資料庫技術。 它提供常見的方式來存取資料，不論儲存形式為何。 在典型的企業的情況下，大量的資訊會儲存在公司的資料庫外部。 編製索引-循序檔案、 個人 （例如存取） 的資料庫、 試算表 （例如 Excel)、 專案規劃應用程式 （例如專案） 和 （例如 Outlook) 的電子郵件 （例如 FAT 或 NTFS） 的檔案系統中找到這項資訊。 OLE DB 可讓您以相同的方式，存取任何種類的資料存放區，只要資料存放區有 OLE DB 提供者。
   
- OLE DB 可讓您開發應用程式以存取不同資料來源，無論是 DBMS。 OLE DB 通用存取可讓使用適當的 DBMS 功能對給定的資料來源的 COM 介面。 COM 可減少不必要的重複資料刪除的服務，並最大化不只在資料來源之間，也在其他應用程式之間的互通性。  
+OLE DB 可讓您開發應用程式以存取不同資料來源，無論是 DBMS。 OLE DB 通用存取可讓使用適當的 DBMS 功能對給定的資料來源的 COM 介面。 COM 可減少不必要的重複資料刪除的服務，並最大化不只在資料來源之間，也在其他應用程式之間的互通性。  
   
 ## <a name="benefits-of-com"></a>COM 的優點  
- 這是 COM 之處。 OLE DB 是一組 COM 介面。 藉由透過一組一致的介面存取資料，您可以將資料庫組織成合作元件的矩陣。  
+
+這是 COM 之處。 OLE DB 是一組 COM 介面。 藉由透過一組一致的介面存取資料，您可以將資料庫組織成合作元件的矩陣。  
   
- 以 COM 規格為基礎，OLE DB 定義的可延伸且可維護的集合的因素，並將封裝的 DBMS 功能的一致、 可重複使用部分的介面。 這些介面定義資料列的容器，查詢處理器和交易協調器，可統一各種資訊來源的交易式存取等的 DBMS 元件的界限。  
+以 COM 規格為基礎，OLE DB 定義的可延伸且可維護的集合的因素，並將封裝的 DBMS 功能的一致、 可重複使用部分的介面。 這些介面定義資料列的容器，查詢處理器和交易協調器，可統一各種資訊來源的交易式存取等的 DBMS 元件的界限。  
  
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 範本](../../data/oledb/ole-db-templates.md)
+
+[OLE DB 程式設計](../../data/oledb/ole-db-programming.md)<br/>
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 範本](../../data/oledb/ole-db-templates.md)

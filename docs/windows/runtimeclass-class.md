@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd5fdc2aa47e5e7486f48c0106b7b24ff16d9f
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 3bc016367495be8cc10c09605e8018811bde5ca9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118904"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 類別
 
@@ -69,7 +69,8 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ## <a name="members"></a>成員
 
-`RuntimeClassInitialize` 用來初始化物件，如果函式`MakeAndInitialize`樣板函式用來建構物件。 如果初始化失敗，，傳回 S_OK，如果物件已成功初始化或 COM 錯誤碼。 COM 錯誤程式碼會傳播的傳回值為`MakeAndInitialize`。 請注意，`RuntimeClassInitialize`方法不會呼叫如果`Make`樣板函式用來建構物件。
+`RuntimeClassInitialize`<br/>
+用來初始化物件，如果函式`MakeAndInitialize`樣板函式用來建構物件。 如果初始化失敗，，傳回 S_OK，如果物件已成功初始化或 COM 錯誤碼。 COM 錯誤程式碼會傳播的傳回值為`MakeAndInitialize`。 請注意，`RuntimeClassInitialize`方法不會呼叫如果`Make`樣板函式用來建構物件。
 
 ### <a name="public-constructors"></a>公用建構函式
 

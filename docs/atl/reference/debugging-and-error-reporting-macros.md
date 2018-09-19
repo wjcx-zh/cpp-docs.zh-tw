@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136155"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>偵錯和錯誤報告巨集
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>參數
 
-*booleanExpression*  
+*booleanExpression*<br/>
 （包括指標） 的運算式，評估為非零值則為 0。
 
 ### <a name="remarks"></a>備註
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>參數
 
-*booleanExpression*  
+*booleanExpression*<br/>
 指定要測試的布林運算式。
 
-*hr*  
+*hr*<br/>
 指定要傳回的錯誤碼。
 
 ### <a name="remarks"></a>備註
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>參數
 
-*funcname*  
+*funcname*<br/>
 [in]字串，包含未實作的函式的名稱。
 
 ### <a name="remarks"></a>備註
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>參數
 
-*exp*  
+*exp*<br/>
 [in]字串和要傳送給 Visual c + + 的 [輸出] 視窗或捕捉這些訊息的任何應用程式的變數。
 
-*category*  
+*category*<br/>
 [in]事件或在其上的方法來報告的類型。 請參閱的 < 備註 > 一份分類。
 
-*層級*  
+*層級*<br/>
 [in]報表的追蹤層級。 請參閱 「 備註 」，如需詳細資訊。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in]傳送至傾印裝置格式化的字串。
 
 ### <a name="remarks"></a>備註
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>參數
 
-*exp*  
+*exp*<br/>
 [in]要傳送給 Visual c + + 的 [輸出] 視窗或捕捉這些訊息的任何應用程式的字串。
 
-*category*  
+*category*<br/>
 [in]事件或在其上的方法來報告的類型。 請參閱的 < 備註 > 一份分類。
 
-*層級*  
+*層級*<br/>
 [in]報表的追蹤層級。 請參閱 「 備註 」，如需詳細資訊。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in]`printf`-樣式格式字串，用來建立傳送至傾印裝置的字串。
 
 ### <a name="remarks"></a>備註
@@ -295,5 +295,5 @@ ATLTRACE 而且 ATLTRACE2 有相同的行為，ATLTRACE 是為了回溯相容性
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集](../../atl/reference/atl-macros.md)   
+[巨集](../../atl/reference/atl-macros.md)<br/>
 [偵錯和錯誤報告全域函式](../../atl/reference/debugging-and-error-reporting-global-functions.md)

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e680bf4c84087db90c794c772f58691a5b2932d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c3157db05d183ab9ada2ad53443ca5b20bcfbcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136318"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -160,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>參數
 
-*hToken*  
+*hToken*<br/>
 存取權杖控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -191,10 +191,10 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 若要參考[CSid 類別](../../atl/reference/csid-class.md)物件。
 
-*pbIsMember*  
+*pbIsMember*<br/>
 指標，此變數會接收檢查的結果。
 
 ### <a name="return-value"></a>傳回值
@@ -222,10 +222,10 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>參數
 
-*pImp*  
+*pImp*<br/>
 新的指標`CAccessToken`物件。
 
-*sil*  
+*sil*<br/>
 指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)列舉型別，提供新的權杖模擬等級。
 
 ### <a name="return-value"></a>傳回值
@@ -249,13 +249,13 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>參數
 
-*pPri*  
+*pPri*<br/>
 新的指標`CAccessToken`物件。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定新的權杖要求的存取權限。 預設值，MAXIMUM_ALLOWED，要求所有呼叫端的有效存取權限。 請參閱[存取權限和存取遮罩](/windows/desktop/SecAuthZ/access-rights-and-access-masks)的更多的存取權限。
 
-*pTokenAttributes*  
+*pTokenAttributes*<br/>
 指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定新的權杖的安全性描述元，並判斷子處理序是否可以繼承的語彙基元。 如果*pTokenAttributes*是 NULL，此語彙基元取得預設安全性描述元，而且無法繼承控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -286,34 +286,34 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>參數
 
-*pApplicationName*  
+*pApplicationName*<br/>
 以 null 終止的字串，指定要執行之模組的指標。 此參數不可以是 NULL。
 
-*pCommandLine*  
+*pCommandLine*<br/>
 以 null 終止的字串，指定要執行的命令列的指標。
 
-*pProcessInformation*  
+*pProcessInformation*<br/>
 指標[PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)接收新的處理序的識別資訊的結構。
 
-*pStartupInfo*  
+*pStartupInfo*<br/>
 指標[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)結構，指定新的處理序的主視窗的顯示方式。
 
-*dwCreationFlags*  
+*dwCreationFlags*<br/>
 指定控制項的優先權類別] 和 [建立處理程序的其他旗標。 請參閱 Win32 函式[CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)旗標的清單。
 
-*bLoadProfile*  
+*bLoadProfile*<br/>
 如果為 TRUE，會載入使用者設定檔[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。
 
-*pProcessAttributes*  
+*pProcessAttributes*<br/>
 指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定新的處理序的安全性描述元，並判斷子處理序是否可以繼承傳回的控制代碼。 如果*pProcessAttributes*是 NULL，此程序取得的預設安全性描述元，而且無法繼承控制代碼。
 
-*pThreadAttributes*  
+*pThreadAttributes*<br/>
 指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定新的執行緒的安全性描述元，並判斷子處理序是否可以繼承傳回的控制代碼。 如果*pThreadAttributes*是 NULL，執行緒會取得預設安全性描述元，而且無法繼承控制代碼。
 
-*bInherit*  
+*bInherit*<br/>
 指出是否在新處理序會繼承控制代碼呼叫處理序。 如果為 TRUE，新的處理序會繼承呼叫處理序中每個可繼承的開啟控制代碼。 繼承的控制代碼具有相同的值與存取權限，原始的控制代碼的形式。
 
-*pCurrentDirectory*  
+*pCurrentDirectory*<br/>
 以 null 終止的字串，指定目前的磁碟機和目錄的新處理序的指標。 字串必須包含磁碟機代號的完整路徑。 如果此參數為 NULL，新處理序會為呼叫處理序有相同的目前磁碟機和目錄。
 
 ### <a name="return-value"></a>傳回值
@@ -340,16 +340,16 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>參數
 
-*pRestrictedToken*  
+*pRestrictedToken*<br/>
 新的限制`CAccessToken`物件。
 
-*SidsToDisable*  
+*SidsToDisable*<br/>
 A`CTokenGroups`物件，指定禁用 Sid。
 
-*SidsToRestrict*  
+*SidsToRestrict*<br/>
 A`CTokenGroups`物件，指定限制的 Sid。
 
-*PrivilegesToDelete*  
+*PrivilegesToDelete*<br/>
 A`CTokenPrivileges`物件，指定要刪除權限限制的權杖中。 預設會建立空的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -391,10 +391,10 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 字串，包含在中停用的權限的指標`CAccessToken`物件。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指標`CTokenPrivileges`其中將包含先前的權限狀態的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -413,10 +413,10 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>參數
 
-*rPrivileges*  
+*rPrivileges*<br/>
 包含要在停用的權限的字串陣列的指標`CAccessToken`物件。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指標`CTokenPrivileges`其中將包含先前的權限狀態的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -435,10 +435,10 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>參數
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 字串，包含要在中啟用的權限的指標`CAccessToken`物件。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指標`CTokenPrivileges`其中將包含先前的權限狀態的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -457,10 +457,10 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>參數
 
-*rPrivileges*  
+*rPrivileges*<br/>
 包含要在中啟用的權限的字串陣列的指標`CAccessToken`物件。
 
-*pPreviousState*  
+*pPreviousState*<br/>
 指標`CTokenPrivileges`其中將包含先前的權限狀態的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -477,7 +477,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pDacl*  
+*pDacl*<br/>
 指標[CDacl 類別](../../atl/reference/cdacl-class.md)物件將會收到`CAccessToken`物件的預設 DACL。
 
 ### <a name="return-value"></a>傳回值
@@ -494,7 +494,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
 ### <a name="return-value"></a>傳回值
@@ -511,7 +511,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pGroups*  
+*pGroups*<br/>
 指標[CTokenGroups 類別](../../atl/reference/ctokengroups-class.md)可接收群組資訊的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -541,7 +541,7 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>參數
 
-*pImpersonationLevel*  
+*pImpersonationLevel*<br/>
 指標[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)列舉型別可接收模擬層級資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -558,7 +558,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pluid*  
+*pluid*<br/>
 指標[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)這將會收到登入工作階段識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -579,7 +579,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pSid*  
+*pSid*<br/>
 指標[CSid 類別](../../atl/reference/csid-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
@@ -600,7 +600,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pSid*  
+*pSid*<br/>
 指標[CSid 類別](../../atl/reference/csid-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
@@ -621,7 +621,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pSid*  
+*pSid*<br/>
 指標[CSid 類別](../../atl/reference/csid-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
@@ -642,7 +642,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pPrivileges*  
+*pPrivileges*<br/>
 指標[CTokenPrivileges 類別](../../atl/reference/ctokenprivileges-class.md)可接收的權限的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -659,10 +659,10 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*hProcess*  
+*hProcess*<br/>
 處理已開啟存取權杖的處理序。 如果使用預設值是 NULL，則會使用目前的處理序。
 
 ### <a name="return-value"></a>傳回值
@@ -695,7 +695,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pSource*  
+*pSource*<br/>
 指標[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-_token_source)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -712,7 +712,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pStatistics*  
+*pStatistics*<br/>
 指標[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-_token_statistics)結構。
 
 ### <a name="return-value"></a>傳回值
@@ -729,7 +729,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pdwSessionId*  
+*pdwSessionId*<br/>
 終端機服務工作階段識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -749,13 +749,13 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*hThread*  
+*hThread*<br/>
 執行緒已開啟的存取權杖的控制代碼。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 存取檢查是否對執行緒呼叫的安全性內容提出`GetThreadToken`方法或呼叫端執行緒的程序的安全性內容。
 
 如果此參數為 FALSE 時，會執行存取檢查，呼叫執行緒中使用的安全性內容。 如果執行緒模擬用戶端，此安全性內容可以是用戶端處理序。 如果此參數為 TRUE，存取檢查會使用呼叫執行緒的處理程序的安全性內容。
@@ -774,7 +774,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pluid*  
+*pluid*<br/>
 指標[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)這將會收到權杖的識別碼。
 
 ### <a name="return-value"></a>傳回值
@@ -791,7 +791,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pType*  
+*pType*<br/>
 位址[TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) ，成功時，收到的權杖類型的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -812,7 +812,7 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pSid*  
+*pSid*<br/>
 指標[CSid 類別](../../atl/reference/csid-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
@@ -841,7 +841,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>參數
 
-*hThread*  
+*hThread*<br/>
 要指派的模擬權杖執行緒的控制代碼。 這個控制代碼必須已經開啟 TOKEN_IMPERSONATE 存取權限。 如果*hThread*是 NULL，方法會導致執行緒停止使用模擬 token。
 
 ### <a name="return-value"></a>傳回值
@@ -914,19 +914,19 @@ bool LogonUser(
 
 ### <a name="parameters"></a>參數
 
-*pszUserName*  
+*pszUserName*<br/>
 以 null 終止的字串，指定使用者名稱的指標。 這是登入的使用者帳戶的名稱。
 
-*pszDomain*  
+*pszDomain*<br/>
 以 null 終止的字串，指定的網域或其帳戶的資料庫包含的伺服器名稱的指標*pszUserName*帳戶。
 
-*pszPassword*  
+*pszPassword*<br/>
 以 null 終止的字串，指定所指定的使用者帳戶的純文字密碼的指標*pszUserName*。
 
-*dwLogonType*  
+*dwLogonType*<br/>
 指定登入要執行作業的類型。 請參閱[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)如需詳細資訊。
 
-*dwLogonProvider*  
+*dwLogonProvider*<br/>
 指定登入提供者。 請參閱[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -950,13 +950,13 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果為 TRUE，目前的執行緒會模擬呼叫的 COM 用戶端，即使已成功完成這個呼叫。 如果為 FALSE，存取權杖也會開啟，但當此呼叫完成時，執行緒不會有模擬語彙基元。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 存取檢查是否對執行緒呼叫的安全性內容提出[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或呼叫端執行緒的程序的安全性內容。
 
 如果此參數為 FALSE 時，會執行存取檢查，呼叫執行緒中使用的安全性內容。 如果執行緒模擬用戶端，此安全性內容可以是用戶端處理序。 如果此參數為 TRUE，存取檢查會使用呼叫執行緒的處理程序的安全性內容。
@@ -983,16 +983,16 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>參數
 
-*hPipe*  
+*hPipe*<br/>
 具名管道的控制代碼。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果為 TRUE，目前的執行緒會模擬呼叫管道用戶端，即使已成功完成這個呼叫。 如果為 FALSE，存取權杖也會開啟，但當此呼叫完成時，執行緒不會有模擬語彙基元。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 存取檢查是否對執行緒呼叫的安全性內容提出[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或呼叫端執行緒的程序的安全性內容。
 
 如果此參數為 FALSE 時，會執行存取檢查，呼叫執行緒中使用的安全性內容。 如果執行緒模擬用戶端，此安全性內容可以是用戶端處理序。 如果此參數為 TRUE，存取檢查會使用呼叫執行緒的處理程序的安全性內容。
@@ -1019,16 +1019,16 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>參數
 
-*BindingHandle*  
+*BindingHandle*<br/>
 表示用戶端的繫結的伺服器上的繫結控制代碼。
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果為 TRUE，目前的執行緒會模擬呼叫的 RPC 用戶端，即使已成功完成這個呼叫。 如果為 FALSE，存取權杖也會開啟，但當此呼叫完成時，執行緒不會有模擬語彙基元。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 存取檢查是否對執行緒呼叫的安全性內容提出[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或呼叫端執行緒的程序的安全性內容。
 
 如果此參數為 FALSE 時，會執行存取檢查，呼叫執行緒中使用的安全性內容。 如果執行緒模擬用戶端，此安全性內容可以是用戶端處理序。 如果此參數為 TRUE，存取檢查會使用呼叫執行緒的處理程序的安全性內容。
@@ -1055,18 +1055,18 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>參數
 
-*dwDesiredAccess*  
+*dwDesiredAccess*<br/>
 指定存取遮罩，用以指定對存取權杖的必要存取類型。 這些必要的存取類型會與權杖的 DACL 比較，以決定要授與或拒絕的存取。
 
-*bImpersonate*  
+*bImpersonate*<br/>
 如果為 TRUE，執行緒會保留在要求的模擬層級，這個方法完成之後。 如果為 FALSE，執行緒將會還原為其原始的模擬層級。
 
-*bOpenAsSelf*  
+*bOpenAsSelf*<br/>
 存取檢查是否對執行緒呼叫的安全性內容提出[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法或呼叫端執行緒的程序的安全性內容。
 
 如果此參數為 FALSE 時，會執行存取檢查，呼叫執行緒中使用的安全性內容。 如果執行緒模擬用戶端，此安全性內容可以是用戶端處理序。 如果此參數為 TRUE，存取檢查會使用呼叫執行緒的處理程序的安全性內容。
 
-*sil*  
+*sil*<br/>
 指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level)列舉型別，提供語彙基元的模擬層級。
 
 ### <a name="return-value"></a>傳回值
@@ -1091,10 +1091,10 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>參數
 
-*[Requiredprivileges]*  
+*[Requiredprivileges]*<br/>
 指標[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-_privilege_set)結構。
 
-*pbResult*  
+*pbResult*<br/>
 指出是否啟用任何或所有指定的權限中的值指標方法設定`CAccessToken`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1115,7 +1115,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>參數
 
-*hThread*  
+*hThread*<br/>
 若要還原的模擬執行緒的控制代碼。 如果*hThread*是 NULL，會假設目前的執行緒。
 
 ### <a name="return-value"></a>傳回值
@@ -1136,7 +1136,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rDacl*  
+*rDacl*<br/>
 新的預設值[CDacl 類別](../../atl/reference/cdacl-class.md)資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1157,7 +1157,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 [CSid 類別](../../atl/reference/csid-class.md)物件，其中包含擁有者資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1178,7 +1178,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 [CSid 類別](../../atl/reference/csid-class.md)物件，包含主要群組資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1191,6 +1191,6 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLSecurity 範例](../../visual-cpp-samples.md)   
-[存取權杖](/windows/desktop/SecAuthZ/access-tokens)   
+[ATLSecurity 範例](../../visual-cpp-samples.md)<br/>
+[存取權杖](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

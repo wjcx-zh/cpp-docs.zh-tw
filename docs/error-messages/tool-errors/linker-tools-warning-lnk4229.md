@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4229 |Microsoft 文件
+title: 連結器工具警告 LNK4229 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c82599d414ddfcd3bd75097a32d8bfce31752cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0837942c7701f8349983f4651005123b5ba89232
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118878"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>連結器工具警告 LNK4229
-找到無效的指示詞 /directive忽略  
-  
- 透過傳遞指示詞[註解](../../preprocessor/comment-c-cpp.md)pragma 不正確。 連結器會忽略`/directive`。
+
+找到無效的指示詞 /directive已忽略
+
+透過傳遞指示詞[註解](../../preprocessor/comment-c-cpp.md)pragma 無效。 連結器會忽略`/directive`。

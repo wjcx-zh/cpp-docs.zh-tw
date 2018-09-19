@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e44475d7d9eee547e0e9d47c8d49c439d91bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1990de6165e50397f11d84cb0486c1d5d5d67fce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089226"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList 類別
 
@@ -35,7 +35,7 @@ ms.locfileid: "43766616"
 ## <a name="syntax"></a>語法
 
 ```
-template<typename E, class Allocator = ATL::CCRTAllocator>  
+template<typename E, class Allocator = ATL::CCRTAllocator>
 class CHeapPtrList 
    : public CAtlList<ATL::CHeapPtr<E, Allocator>,
                      CHeapPtrElementTraits<E, Allocator>>
@@ -43,10 +43,10 @@ class CHeapPtrList
 
 #### <a name="parameters"></a>參數
 
-*E*  
+*E*<br/>
 要儲存在集合類別的物件類型。
 
-*配置器*  
+*配置器*<br/>
 要使用的記憶體配置類別。 預設值是[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)。
 
 ## <a name="members"></a>成員
@@ -81,7 +81,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBlockSize*  
+*nBlockSize*<br/>
 區塊大小。
 
 ### <a name="remarks"></a>備註
@@ -90,7 +90,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CAtlList 類別](../../atl/reference/catllist-class.md)   
-[CHeapPtr 類別](../../atl/reference/cheapptr-class.md)   
-[CHeapPtrElementTraits 類別](../../atl/reference/cheapptrelementtraits-class.md)   
+[CAtlList 類別](../../atl/reference/catllist-class.md)<br/>
+[CHeapPtr 類別](../../atl/reference/cheapptr-class.md)<br/>
+[CHeapPtrElementTraits 類別](../../atl/reference/cheapptrelementtraits-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

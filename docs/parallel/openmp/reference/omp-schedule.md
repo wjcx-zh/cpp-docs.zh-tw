@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d873d29d5ac6de1073c1ba3f3065dd015cde1f5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd5bf96706b94ffbba8cb1b9aeeee8701b266e5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115035"
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 修改的行為[排程](../../../parallel/openmp/reference/schedule.md)子句時`schedule(runtime)`中指定`for`或`parallel for`指示詞。  
@@ -37,8 +37,8 @@ set OMP_SCHEDULE[=type[,size]]
 *size*<br/>
 （選擇性）指定反覆項目的大小。 `size` 必須是正整數。 預設值為 1，除非`type`是靜態的。 不是有效的 when`type`是`runtime`。  
   
- `type`  
- 排程的類型：  
+*type*<br/>
+排程的類型：  
   
 -   `dynamic`  
   

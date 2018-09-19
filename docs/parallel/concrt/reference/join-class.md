@@ -1,5 +1,5 @@
 ---
-title: join 類別 |Microsoft 文件
+title: join 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a37b6d3dce5d41578999aa54c8dff2dd2271fe9e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 46073d07cbca27256ca169ab94e0fe027bf98b15
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692635"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118852"
 ---
 # <a name="join-class"></a>join 類別
 `join` 傳訊區塊是單一目標、多來源的排序 `propagator_block`，會與來自其每個來源的 `T` 類型訊息合併。  
@@ -46,11 +46,11 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 ```   
   
 #### <a name="parameters"></a>參數  
- `T`  
- 訊息的裝載類型加入，且由區塊的傳播。  
+*T*<br/>
+訊息的裝載類型加入，而且由區塊所傳播。  
   
- `_Jtype`  
- 此種類的`join`區塊這有`greedy`或 `non_greedy`  
+*_Jtype*<br/>
+類型的`join`區塊，這是，可能是`greedy`或 `non_greedy`  
   
 ## <a name="members"></a>成員  
   
@@ -65,17 +65,17 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|接受的訊息，有提供這`join`傳訊區塊，將擁有權傳送給呼叫者。|  
-|[consume_message](#consume_message)|取用先前所提供的訊息`join`傳訊區塊和目標，將擁有權傳送給呼叫者所保留。|  
-|[link_target_notification](#link_target_notification)|告知新目標的已連結至這個回呼`join`傳訊區塊。|  
-|[propagate_message](#propagate_message)|以非同步方式傳遞訊息從`ISource`至此區塊`join`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|建構輸出訊息時，它們具有所有傳播訊息包含每個來源的輸入的訊息。 送出此輸出訊息，每個目標。|  
-|[release_message](#release_message)|釋放先前訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
-|[reserve_message](#reserve_message)|由此先前提供的訊息會保留`join`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
-|[resume_propagation](#resume_propagation)|釋放保留項目之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
+|[accept_message](#accept_message)|接受的訊息，由此`join`傳訊區塊，將擁有權傳送給呼叫者。|  
+|[consume_message](#consume_message)|會使用先前所提供訊息`join`傳訊區塊和目標，將擁有權傳送給呼叫者所保留。|  
+|[link_target_notification](#link_target_notification)|通知新目標，已連結至這個回呼`join`傳訊區塊。|  
+|[propagate_message](#propagate_message)|以非同步方式傳遞的訊息`ISource`至此區塊`join`傳訊區塊。 它由`propagate`方法中，當呼叫來源區塊。|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|建構輸出訊息時將它們全部傳播完成訊息，包含來自每個來源的輸入的訊息。 送出的這個輸出訊息至其目標。|  
+|[release_message](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
+|[reserve_message](#reserve_message)|保留先前由此訊息`join`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
+|[resume_propagation](#resume_propagation)|保留區釋出之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [ISource](isource-class.md)  
@@ -95,36 +95,36 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 ##  <a name="accept_message"></a> accept_message 
 
- 接受的訊息，有提供這`join`傳訊區塊，將擁有權傳送給呼叫者。  
+ 接受的訊息，由此`join`傳訊區塊，將擁有權傳送給呼叫者。  
   
 ```
 virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`所提供的`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`提供的`message`物件。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`message`物件，呼叫端現在會有的擁有權。  
+ 指標`message`物件，呼叫者現在會有的擁有權。  
   
 ##  <a name="consume_message"></a> consume_message 
 
- 取用先前所提供的訊息`join`傳訊區塊和目標，將擁有權傳送給呼叫者所保留。  
+ 會使用先前所提供訊息`join`傳訊區塊和目標，將擁有權傳送給呼叫者所保留。  
   
 ```
 virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件被取用。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件被取用。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`message`物件，呼叫端現在會有的擁有權。  
+ 指標`message`物件，呼叫者現在會有的擁有權。  
   
 ### <a name="remarks"></a>備註  
- 類似於`accept`，但呼叫一律置於`reserve`。  
+ 類似於`accept`，但一律置於呼叫`reserve`。  
   
 ##  <a name="ctor"></a> 聯結 
 
@@ -158,22 +158,22 @@ join(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_NumInputs`  
- 數目輸入這`join`區塊仍能繼續。  
+*_NumInputs*<br/>
+數字輸入這樣`join`將允許的區塊。  
   
- `_Filter`  
- 篩選函數用來決定是否應該接受所提供的訊息。  
+*篩選 （_f)*<br/>
+判斷是否應該接受所提供的訊息篩選器函式。  
   
- `_PScheduler`  
- `Scheduler`物件所在的傳播工作`join`排定傳訊區塊。  
+*_PScheduler*<br/>
+`Scheduler`物件的傳播工作在其中`join`傳訊區塊已排程。  
   
- `_PScheduleGroup`  
- `ScheduleGroup`物件所在的傳播工作`join`排定傳訊區塊。 所使用的 `Scheduler` 物件由排程群組所隱含。  
+*_PScheduleGroup*<br/>
+`ScheduleGroup`物件的傳播工作在其中`join`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。  
   
 ### <a name="remarks"></a>備註  
  如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。  
   
- 型別`filter_method`是函式簽章`bool (T const &)`由此叫用`join`傳訊區塊，以判斷它是否應該接受提供的訊息。  
+ 型別`filter_method`是仿函式簽章`bool (T const &)`由此叫用的所在`join`傳訊區塊，以判斷是否應該接受接受所提供的訊息。  
   
 ##  <a name="dtor"></a> ~ 聯結 
 
@@ -185,7 +185,7 @@ join(
   
 ##  <a name="link_target_notification"></a> link_target_notification 
 
- 告知新目標的已連結至這個回呼`join`傳訊區塊。  
+ 通知新目標，已連結至這個回呼`join`傳訊區塊。  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
@@ -193,7 +193,7 @@ virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- 以非同步方式傳遞訊息從`ISource`至此區塊`join`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。  
+ 以非同步方式傳遞的訊息`ISource`至此區塊`join`傳訊區塊。 它由`propagate`方法中，當呼叫來源區塊。  
   
 ```
 message_status propagate_message(
@@ -202,18 +202,18 @@ message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PMessage`  
- `message` 物件的指標。  
+*_PMessage*<br/>
+`message` 物件的指標。  
   
- `_PSource`  
- 供應項目訊息的來源區塊的指標。  
+*_PSource*<br/>
+提供訊息來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。  
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
- 建構輸出訊息時，它們具有所有傳播訊息包含每個來源的輸入的訊息。 送出此輸出訊息，每個目標。  
+ 建構輸出訊息時將它們全部傳播完成訊息，包含來自每個來源的輸入的訊息。 送出的這個輸出訊息至其目標。  
   
 ```
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
@@ -221,37 +221,37 @@ void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
   
 ##  <a name="release_message"></a> release_message 
 
- 釋放先前訊息保留。  
+ 釋放先前的訊息保留。  
   
 ```
 virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件時釋放。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件被釋放。  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- 由此先前提供的訊息會保留`join`傳訊區塊。  
+ 保留先前由此訊息`join`傳訊區塊。  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`所提供的`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`提供的`message`物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果訊息已成功保留，`false`否則。  
+ `true` 如果已成功保留訊息，`false`否則。  
   
 ### <a name="remarks"></a>備註  
- 之後`reserve`呼叫時，如果它傳回`true`，`consume`或`release`必須呼叫需要或釋出訊息的擁有權。  
+ 在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
- 釋放保留項目之後，請繼續傳播。  
+ 保留區釋出之後，請繼續傳播。  
   
 ```
 virtual void resume_propagation();

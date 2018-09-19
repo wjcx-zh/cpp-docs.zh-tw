@@ -1,5 +1,5 @@
 ---
-title: tiled_extent 類別 |Microsoft 文件
+title: tiled_extent 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114549"
 ---
 # <a name="tiledextent-class"></a>tiled_extent 類別
-A`tiled_extent`物件是`extent`細分成一段、 兩段或 3d 圖格的範圍空間一到三個維度的物件。  
+A`tiled_extent`物件是`extent`將範圍空間到一、 二或三維的拼貼一到三個維度的物件。  
   
 ### <a name="syntax"></a>語法  
   
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Dim0`  
- 最重要的維度的長度。  
+*_Dim0*<br/>
+最高有效維度的長度。  
   
- `_Dim1`  
- 下一步 以最重要維度的長度。  
+*_Dim1*<br/>
+下一步 以最高有效維度的長度。  
   
- `_Dim2`  
- 最小顯著性維度的長度。  
+*_Dim2*<br/>
+最小顯著性維度的長度。  
   
 ## <a name="members"></a>成員  
   
@@ -78,31 +78,31 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[get_tile_extent](#get_tile_extent)|傳回`extent`物件，以擷取的值`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
-|[pad](#pad)|傳回新`tiled_extent`向上調整為整除磚維度的範圍的物件。|  
-|[truncate](#truncate)|傳回新`tiled_extent`與範圍的物件向下調整為整除圖格維度。|  
+|[get_tile_extent](#get_tile_extent)|傳回`extent`擷取的值的物件`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
+|[pad](#pad)|傳回新`tiled_extent`向上調整為能被 tile 維度整除的範圍的物件。|  
+|[truncate](#truncate)|傳回新`tiled_extent`向下調整為能被 tile 維度整除的範圍的物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|將指定的內容複製`tiled_index`成這一個物件。|  
+|[operator=](#operator_eq)|將指定的內容複製`tiled_index`到這個物件。|  
 
   
 ### <a name="public-constants"></a>公用常數  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[tile_dim0 常數](#tile_dim0)|會儲存最重要的維度的長度。|  
-|[tile_dim1 常數](#tile_dim1)|儲存下一步 以最重要維度的長度。|  
-|[tile_dim2 常數](#tile_dim2)|會儲存最小顯著性維度的長度。|  
+|[tile_dim0 常數](#tile_dim0)|儲存的最高有效維度的長度。|  
+|[tile_dim1 常數](#tile_dim1)|儲存下一步 以最高有效維度的長度。|  
+|[tile_dim2 常數](#tile_dim2)|儲存最低有效維度的長度。|  
 
   
 ### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[tile_extent](#tile_extent)|取得`extent`物件，以擷取的值`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
+|[tile_extent](#tile_extent)|取得`extent`擷取的值的物件`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `extent`  
@@ -130,14 +130,14 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `extent`或`tiled_extent`来複製物件。  
+*_Other*<br/>
+`extent`或`tiled_extent`来複製的物件。  
   
 
   
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent   
-傳回`extent`物件，以擷取的值`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。  
+傳回`extent`擷取的值的物件`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。  
   
 ### <a name="syntax"></a>語法  
   
@@ -146,11 +146,11 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `extent`擷取這個維度物件`tiled_extent`執行個體。  
+ `extent`物件，擷取這個維度`tiled_extent`執行個體。  
   
 
 ## <a name="pad"> </a>  填補   
-傳回新`tiled_extent`向上調整為整除磚維度的範圍的物件。  
+傳回新`tiled_extent`向上調整為能被 tile 維度整除的範圍的物件。  
   
 ### <a name="syntax"></a>語法  
   
@@ -159,9 +159,9 @@ tiled_extent pad() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 新`tiled_extent`傳值物件。 
+ 新`tiled_extent`物件，依值。 
 ## <a name="truncate"> </a>  截斷   
-傳回新`tiled_extent`與範圍的物件向下調整為整除圖格維度。  
+傳回新`tiled_extent`向下調整為能被 tile 維度整除的範圍的物件。  
   
 ### <a name="syntax"></a>語法  
   
@@ -170,10 +170,10 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回新`tiled_extent`與範圍的物件向下調整為整除圖格維度。  
+ 傳回新`tiled_extent`向下調整為能被 tile 維度整除的範圍的物件。  
 
 ## <a name="operator_eq"> </a>  運算子 =   
-將指定的內容複製`tiled_index`成這一個物件。  
+將指定的內容複製`tiled_index`到這個物件。  
   
 ### <a name="syntax"></a>語法  
   
@@ -183,14 +183,14 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `tiled_index`從複製的物件。  
+*_Other*<br/>
+`tiled_index`從複製的物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`tiled_index`執行個體。  
 
 ## <a name="tile_dim0"> </a>  tile_dim0   
-會儲存最重要的維度的長度。  
+儲存的最高有效維度的長度。  
   
 ### <a name="syntax"></a>語法  
   
@@ -199,7 +199,7 @@ static const int tile_dim0 = _Dim0;
 ```  
   
 ## <a name="tile_dim1"> </a>  tile_dim1   
-儲存下一步 以最重要維度的長度。  
+儲存下一步 以最高有效維度的長度。  
   
 ### <a name="syntax"></a>語法  
   
@@ -207,7 +207,7 @@ static const int tile_dim0 = _Dim0;
 static const int tile_dim1 = _Dim1;  
 ```  
 ## <a name="tile_dim2"> </a>  tile_dim2   
-會儲存最小顯著性維度的長度。  
+儲存最低有效維度的長度。  
   
 ### <a name="syntax"></a>語法  
   
@@ -215,7 +215,7 @@ static const int tile_dim1 = _Dim1;
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tile_extent"> </a>  tile_extent   
-  取得`extent`物件，以擷取的值`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。  
+  取得`extent`擷取的值的物件`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。  
   
 ### <a name="syntax"></a>語法  
   

@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0024 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0024 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a07297ddabf269b003a1f14d967d1187fea96d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2816be7bb1d33757d9722d605d461ac6fb34fadd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118189"
 ---
 # <a name="expression-evaluator-error-cxx0024"></a>運算式評估工具錯誤 CXX0024
-作業需要左值  
-  
- 如需要左值的作業指定了不會評估為左值的運算式。  
-  
- 左值 （因此稱為因為它會出現在指派陳述式的左邊） 是指的記憶體位置的運算式。  
-  
- 例如，`buffer[count]`是有效的左值，因為它所指向的特定記憶體位置。 邏輯比較`zed != 0`不是有效的左值，因為其評估結果為 TRUE 或 FALSE，未為記憶體位址。  
-  
- 這個錯誤是與 can0024 相同。
+
+需要值 （l-value） 的作業
+
+運算式未評估為左值，指定作業需要左值。
+
+左值 （因此稱為 「 因為它出現在指派陳述式左邊 」） 是指記憶體位置的運算式。
+
+比方說，`buffer[count]`是有效的左值，因為它會指向特定記憶體位置。 邏輯比較`zed != 0`不是有效的左值，因為其評估結果為 TRUE 或 FALSE，未為記憶體位址。
+
+此錯誤是與 can0024 相同。

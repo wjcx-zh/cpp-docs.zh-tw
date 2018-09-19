@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761884"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136292"
 ---
 # <a name="composite-control-macros"></a>複合控制項巨集
 
@@ -34,7 +34,7 @@ ms.locfileid: "43761884"
 |[BEGIN_SINK_MAP](#begin_sink_map)|標記為複合控制項的事件接收對應的開頭。|
 |[END_SINK_MAP](#end_sink_map)|將標示為複合控制項的事件接收對應的結尾。|
 |[SINK_ENTRY](#sink_entry)|事件接收對應的項目。|
-|[SINK_ENTRY_EX](#sink_entry_ex)|使用其他參數的事件接收對應的項目。| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|使用其他參數的事件接收對應的項目。|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017)類似 SINK_ENTRY_EX，不同之處在於它接受 iid 的指標。|
 |[SINK_ENTRY_INFO](#sink_entry_info)|用於以手動方式提供的型別資訊的事件接收對應的項目[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)。|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)類似 SINK_ENTRY_INFO，不同之處在於它接受 iid 的指標。|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>參數
 
-*（_c)*  
+*（_c)*<br/>
 [in]指定的控制項。
 
 ### <a name="example"></a>範例
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]識別控制項。
 
-*dispid*  
+*dispid*<br/>
 [in]識別指定的事件。
 
-*fn*  
+*fn*<br/>
 [in]事件處理常式函式的名稱。 此函式必須使用`_stdcall`呼叫慣例，而且有適當的 dispinterface 樣式的簽章。
 
 ### <a name="example"></a>範例
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]識別控制項。
 
-*iid*  
+*iid*<br/>
 [in]識別分派介面。  
 
-*piid*  
+*piid*<br/>
 [in]分派介面指標。
 
-*dispid*  
+*dispid*<br/>
 [in]識別指定的事件。
 
-*fn*  
+*fn*<br/>
 [in]事件處理常式函式的名稱。 此函式必須使用`_stdcall`呼叫慣例，而且有適當的 dispinterface 樣式的簽章。
 
 ### <a name="example"></a>範例
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]識別事件的來源不帶正負號的整數。 此值必須符合*nID*中的相關所使用的範本參數[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基底類別。
 
-*iid*  
+*iid*<br/>
 [in]識別分派介面的 IID。  
 
-*piid*  
+*piid*<br/>
 [in]指標，可識別分派介面的 IID。
 
-*dispid*  
+*dispid*<br/>
 [in]識別指定的事件的 DISPID。
 
-*fn*  
+*fn*<br/>
 [in]事件處理常式函式的名稱。 此函式必須使用`_stdcall`呼叫慣例，而且有適當的 dispinterface 樣式的簽章。
 
-*資訊*  
+*資訊*<br/>
 [in]輸入事件處理常式函式的資訊。 此類型資訊的指標的形式提供`_ATL_FUNC_INFO`結構。 CC_CDECL 是唯一的選項，支援 Windows ce 的 CALLCONV 欄位`_ATL_FUNC_INFO`結構。 任何其他值都不支援因此其行為未定義。
 
 ### <a name="remarks"></a>備註
@@ -176,5 +176,5 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集](../../atl/reference/atl-macros.md)   
+[巨集](../../atl/reference/atl-macros.md)<br/>
 [複合控制項全域函式](../../atl/reference/composite-control-global-functions.md)

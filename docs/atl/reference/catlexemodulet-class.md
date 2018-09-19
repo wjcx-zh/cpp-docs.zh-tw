@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa212a6a58d1de417035f002b2caf3e206dabf1c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b9b19888f6eae3efe7baf4429ec1174432f99a10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118553"
 ---
 # <a name="catlexemodulet-class"></a>Catldllmodulet 類別
 
@@ -46,13 +46,13 @@ ms.locfileid: "43757581"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別衍生自`CAtlExeModuleT`。
 
 ## <a name="members"></a>成員
@@ -100,7 +100,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)  
+[_ATL_MODULE](atl-typedefs.md#_atl_module)
 
 [CAtlModule](../../atl/reference/catlmodule-class.md)
 
@@ -200,10 +200,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 命令列傳遞至應用程式。
 
-*pnRetCode*  
+*pnRetCode*<br/>
 對應至註冊 （如果它發生） 的 HRESULT。
 
 ### <a name="return-value"></a>傳回值
@@ -240,7 +240,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 做為傳遞的值*nShowCmd* WinMain 中的參數。
 
 ### <a name="return-value"></a>傳回值
@@ -261,10 +261,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwClsContext*  
+*dwClsContext*<br/>
 指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
 
-*dwFlags*  
+*dwFlags*<br/>
 決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。
 
 ### <a name="return-value"></a>傳回值
@@ -293,7 +293,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設為 SW_HIDE。
 
 ### <a name="return-value"></a>傳回值
@@ -350,7 +350,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。
 
 ### <a name="return-value"></a>傳回值
@@ -363,7 +363,7 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[ATLDuck 範例](../../visual-cpp-samples.md)   
-[CAtlModuleT 類別](../../atl/reference/catlmodulet-class.md)   
-[CAtlDllModuleT 類別](../../atl/reference/catldllmodulet-class.md)   
+[ATLDuck 範例](../../visual-cpp-samples.md)<br/>
+[CAtlModuleT 類別](../../atl/reference/catlmodulet-class.md)<br/>
+[CAtlDllModuleT 類別](../../atl/reference/catldllmodulet-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2698 |Microsoft 文件
+title: 編譯器錯誤 C2698 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c466e39702f1e408ad96d79c16c4a5953fa373f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7ca3e7568640aabd2b7960d97ea94a11a1d5d59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118917"
 ---
 # <a name="compiler-error-c2698"></a>編譯器錯誤 C2698
-using 宣告為 '宣告 1' 不能同時存在與 using 宣告為' 宣告 2'  
-  
- 一旦[using 宣告](../../cpp/using-declaration.md)資料成員，任何使用不允許使用相同的名稱和相同範圍中宣告，因為只有函式可以多載。  
-  
- 下列範例會產生 C2698:  
-  
-```  
-// C2698.cpp  
-struct A {  
-   int x;  
-};  
-  
-struct B {  
-   int x;  
-};  
-  
-struct C : A, B {  
-   using A::x;  
-   using B::x;   // C2698  
-}  
+
+using 宣告為 'declaration 1' 不能同時存在與 using 宣告為' declaration 2'
+
+一旦[using 宣告](../../cpp/using-declaration.md)資料成員，任何使用不允許使用相同的名稱與相同範圍中的宣告，因為只有函式可以多載。
+
+下列範例會產生 C2698:
+
+```
+// C2698.cpp
+struct A {
+   int x;
+};
+
+struct B {
+   int x;
+};
+
+struct C : A, B {
+   using A::x;
+   using B::x;   // C2698
+}
 ```

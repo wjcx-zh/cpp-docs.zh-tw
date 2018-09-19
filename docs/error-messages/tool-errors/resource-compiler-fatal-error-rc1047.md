@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1047 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1047 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9d2451c9ec7bf5217b3f2e559b7a604a7aa65f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a7c2e1fe8437e4d187033f8ffceaf6506e71d20
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135850"
 ---
 # <a name="resource-compiler-fatal-error-rc1047"></a>資源編譯器嚴重錯誤 RC1047
-「 太多選項選項 'string' 」  
-  
- 將指定的選項已指定太多次。 指定的字串是造成錯誤的選項的引數。
+
+「 太多選項選項 'string' 」
+
+指定的選項已指定太多次。 指定的字串是造成錯誤的選項的引數。

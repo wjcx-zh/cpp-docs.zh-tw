@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131795"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118826"
 ---
 # <a name="attributes-in-c"></a>C + + 中的屬性
 
@@ -45,7 +45,7 @@ void Foo(int);
 
 - `[[carries_dependency]]` 指定函式會傳播相關執行緒同步處理排序的資料相依性。 屬性可以套用至一或多個參數，以指定傳入的引數會攜帶到函式主體的相依性。 屬性可以套用至函式本身，以指定的傳回值會從函式的相依性。 編譯器可以使用這項資訊來產生更有效率的程式碼。
 
-- `[[deprecated]]` **Visual Studio 2015 和更新版本：** 指定函式不適用於使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用這個來產生參考用訊息，當用戶端程式碼嘗試呼叫函式。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值或樣板特製化的宣告。  
+- `[[deprecated]]` **Visual Studio 2015 和更新版本：** 指定函式不適用於使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用這個來產生參考用訊息，當用戶端程式碼嘗試呼叫函式。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值或樣板特製化的宣告。
 
 - `[[fallthrough]]` **Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性可用的內容中[切換](switch-statement-cpp.md)以做為編譯器 （或任何人讀取提示的陳述式程式碼） 的 fallthrough 行為。 Visual c + + 編譯器目前不會在警告上 fallthrough 行為，所以這個屬性沒有任何效果編譯器行為。
 

@@ -18,39 +18,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c85de0f147d0cfed873a091d17c46e56bf5758a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 89e243dd1905e61a6c9a1b16c1936d7d6617ba17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116811"
 ---
 # <a name="compound-statements-blocks"></a>複合陳述式 (區塊)
-複合陳述式包含大括號括住的零或多個陳述式 (**{}**)。 複合陳述式可以在必須有陳述式的任何位置使用。 複合陳述式通常稱為「區塊」(Block)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-{ [ statement-list ] }  
-```  
-  
-## <a name="remarks"></a>備註  
- 下列範例會使用複合陳述式，作為*陳述式*屬於**如果**陳述式 (請參閱[if 陳述式](../cpp/if-else-statement-cpp.md)如需語法的詳細資訊):  
-  
-```cpp 
-if( Amount > 100 )  
-{  
-    cout << "Amount was too large to handle\n";  
-    Alert();  
-}  
-else  
+
+複合陳述式包含大括號括住的零或多個陳述式 (**{}**)。 複合陳述式可以在必須有陳述式的任何位置使用。 複合陳述式通常稱為「區塊」(Block)。
+
+## <a name="syntax"></a>語法
+
+```
+{ [ statement-list ] }
+```
+
+## <a name="remarks"></a>備註
+
+下列範例會使用複合陳述式，作為*陳述式*屬於**如果**陳述式 (請參閱[if 陳述式](../cpp/if-else-statement-cpp.md)如需語法的詳細資訊):
+
+```cpp
+if( Amount > 100 )
 {
-    Balance -= Amount;  
+    cout << "Amount was too large to handle\n";
+    Alert();
 }
-```  
-  
+else
+{
+    Balance -= Amount;
+}
+```
+
 > [!NOTE]
->  由於宣告是陳述式，宣告可以是其中一個陳述式中*陳述式清單*。 因此，在複合陳述式內宣告，但未明確宣告為靜態的名稱，會具有區域範圍和 (為物件時) 存留期。 請參閱[範圍](../cpp/scope-visual-cpp.md)具有本機領域的名稱的處理方式的詳細資料。  
-  
-## <a name="see-also"></a>另請參閱  
- [C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)
+>  由於宣告是陳述式，宣告可以是其中一個陳述式中*陳述式清單*。 因此，在複合陳述式內宣告，但未明確宣告為靜態的名稱，會具有區域範圍和 (為物件時) 存留期。 請參閱[範圍](../cpp/scope-visual-cpp.md)具有本機領域的名稱的處理方式的詳細資料。
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)

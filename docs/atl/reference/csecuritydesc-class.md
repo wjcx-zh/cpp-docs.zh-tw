@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d771b24db830a03101b7a0041b02aeaeaf3b3b3d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116863"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 類別
 
@@ -129,13 +129,13 @@ class CSecurityDesc
 
 ```
 CSecurityDesc() throw();
-CSecurityDesc(const CSecurityDesc& rhs) throw(... );  
+CSecurityDesc(const CSecurityDesc& rhs) throw(... );
 CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `CSecurityDesc`物件或`SECURITY_DESCRIPTOR`若要指派給新的結構`CSecurityDesc`物件。
 
 ### <a name="remarks"></a>備註
@@ -164,7 +164,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pstr*  
+*pstr*<br/>
 以 null 終止的字串，其中包含的指標[字串格式的安全性描述元](/windows/desktop/SecAuthZ/security-descriptor-string-format)轉換。
 
 ### <a name="return-value"></a>傳回值
@@ -187,7 +187,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="parameters"></a>參數
 
-*psdc*  
+*psdc*<br/>
 指標`SECURITY_DESCRIPTOR_CONTROL`接收的安全性描述元控制資訊的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -211,13 +211,13 @@ bool GetDacl(
 
 ### <a name="parameters"></a>參數
 
-*pDacl*  
+*pDacl*<br/>
 指標`CDacl`結構用來儲存一份安全性描述元的 DACL。 如果存在判別 ACL，方法會設定*pDacl*安全性描述元的判別 ACL 的位址。 如果判別 ACL 不存在，則會不儲存任何值。
 
-*pbPresent*  
+*pbPresent*<br/>
 值，指出指定的安全性描述元中的判別 ACL 的目前狀態的指標。 如果安全性描述元包含判別 ACL，此參數會設定為 true。 如果安全性描述元不包含判別 ACL，此參數設為 false。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 為 SE_DACL_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構判別 ACL 有的安全性描述元。 如果這個旗標為 true，判別 ACL 已擷取由預設機制;如果為 false，使用者已明確指定判別 ACL。
 
 ### <a name="return-value"></a>傳回值
@@ -236,10 +236,10 @@ bool GetGroup(
 
 ### <a name="parameters"></a>參數
 
-*pSid*  
+*pSid*<br/>
 指標[CSid](../../atl/reference/csid-class.md) （安全性識別碼），會收到一份 CDacl 中儲存的群組。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 為 SE_GROUP_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構方法傳回時。
 
 ### <a name="return-value"></a>傳回值
@@ -258,10 +258,10 @@ bool GetOwner(
 
 ### <a name="parameters"></a>參數
 
-*pSid*  
+*pSid*<br/>
 指標[CSid](../../atl/reference/csid-class.md) （安全性識別碼），會收到一份 CDacl 中儲存的群組。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 為 SE_OWNER_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構方法傳回時。
 
 ### <a name="return-value"></a>傳回值
@@ -293,13 +293,13 @@ bool GetSacl(
 
 ### <a name="parameters"></a>參數
 
-*pSacl*  
+*pSacl*<br/>
 指標`CSacl`結構用來儲存一份安全性描述元的 SACL。 如果系統 ACL 存在，方法會設定*pSacl*安全性描述元的系統 ACL 的位址。 如果系統 ACL 不存在，則會不儲存任何值。
 
-*pbPresent*  
+*pbPresent*<br/>
 方法的旗標的指標將設定為表示指定的安全性描述元中的系統 ACL 存在。 如果安全性描述元包含系統 ACL，此參數會設定為 true。 如果安全性描述元不包含系統 ACL，此參數設為 false。
 
-*pbDefaulted*  
+*pbDefaulted*<br/>
 為 SE_SACL_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構的安全性描述元的系統 ACL 有。
 
 ### <a name="return-value"></a>傳回值
@@ -529,13 +529,13 @@ bool MakeSelfRelative() throw(...);
 指派運算子。
 
 ```
-CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);  
+CSecurityDesc& operator= (const SECURITY_DESCRIPTOR& rhs) throw(...);
 CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `SECURITY_DESCRIPTOR`結構或`CSecurityDesc`物件指派給`CSecurityDesc`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -546,7 +546,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 將指標值轉換`SECURITY_DESCRIPTOR`結構。
 
-```  
+```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
@@ -562,10 +562,10 @@ bool SetControl(
 
 ### <a name="parameters"></a>參數
 
-*ControlBitsOfInterest*  
+*ControlBitsOfInterest*<br/>
 SECURITY_DESCRIPTOR_CONTROL 遮罩，指出若要設定的控制位元。 如需可設定之旗標的清單，請參閱 < [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。
 
-*ControlBitsToSet*  
+*ControlBitsToSet*<br/>
 SECURITY_DESCRIPTOR_CONTROL 遮罩，表示新的值，指定控制位元*ControlBitsOfInterest*遮罩。 這個參數可以是針對列出的旗標的組合*ControlBitsOfInterest*參數。
 
 ### <a name="return-value"></a>傳回值
@@ -592,13 +592,13 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>參數
 
-*Dacl*  
+*Dacl*<br/>
 若要參考`CDacl`物件，指定安全性描述元的 DACL。 這個參數必須不是 NULL。 若要設定安全性描述元中的 NULL DACL，第一種形式的方法應該搭配*bPresent*設為 false。
 
-*bPresent*  
+*bPresent*<br/>
 指定旗標，指出安全性描述元中 DACL 的目前狀態。 如果此參數為 true，則方法會設定 SE_DACL_PRESENT 旗標中`SECURITY_DESCRIPTOR_CONTROL`結構，並使用中的值*Dacl*並*bDefaulted*參數。 如果為 false，方法會清除 SE_DACL_PRESENT 旗標，並*bDefaulted*會被忽略。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指定旗標，指出 DACL 的來源。 如果這個旗標為 true，DACL 已擷取的一些預設的機制。 如果為 false，DACL 已明確指定的使用者。 方法會將此值儲存在 SE_DACL_DEFAULTED 旗標的`SECURITY_DESCRIPTOR_CONTROL`結構。 如果未指定此參數，則會清除 SE_DACL_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -619,10 +619,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*sid*  
+*sid*<br/>
 若要參考[CSid](../../atl/reference/csid-class.md)物件安全性描述元的新主要群組。 這個參數必須不是 NULL。 安全性描述元可以標示為沒有 DACL 或 SACL，但它必須擁有群組和擁有者，這些甚至會 NULL SID （這是具有特殊意義的內建 SID）。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 表示主要群組資訊是否衍生自預設機制。 如果此值為 true，它是預設的詳細資訊，方法會將此值儲存為 SE_GROUP_DEFAULTED 旗標`SECURITY_DESCRIPTOR_CONTROL`結構。 如果此參數為零，則會清除 SE_GROUP_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -639,10 +639,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*sid*  
+*sid*<br/>
 [CSid](../../atl/reference/csid-class.md)安全性描述元的新主要擁有者的物件。 這個參數必須不是 NULL。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指出是否要將擁有者資訊衍生自預設機制。 如果此值為 true，則預設資訊。 方法會將此值儲存為 SE_OWNER_DEFAULTED 旗標`SECURITY_DESCRIPTOR_CONTROL`結構。 如果此參數為零，則會清除 SE_OWNER_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -659,10 +659,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*Sacl*  
+*Sacl*<br/>
 指標`CSacl`物件，指定安全性描述元的 SACL。 這個參數不可以是 NULL，且必須是 CSacl 物件。 不同於 Dacl，並無差別 NULL 和空的 SACL，之間，SACL 物件未指定存取權限，只有稽核資訊。
 
-*bDefaulted*  
+*bDefaulted*<br/>
 指定旗標，指出 SACL 的來源。 如果這個旗標為 true，SACL 已擷取的一些預設的機制。 如果為 false，SACL 已明確指定的使用者。 方法會將此值儲存在 SE_SACL_DEFAULTED 旗標的`SECURITY_DESCRIPTOR_CONTROL`結構。 如果未指定此參數，則會清除 SE_SACL_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -682,10 +682,10 @@ bool ToString(
 
 ### <a name="parameters"></a>參數
 
-*pstr*  
+*pstr*<br/>
 將會收到的 null 終止字串的指標[字串格式的安全性描述元](/windows/desktop/SecAuthZ/security-descriptor-string-format)。
 
-*si*  
+*si*<br/>
 指定 SECURITY_INFORMATION 位元旗標，表示要包含在輸出字串中的安全性描述元的元件組合。
 
 ### <a name="return-value"></a>傳回值
@@ -713,7 +713,7 @@ bool ToString(
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)   
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[安全性範例](../../visual-cpp-samples.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

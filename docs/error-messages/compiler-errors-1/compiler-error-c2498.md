@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2498 |Microsoft 文件
+title: 編譯器錯誤 C2498 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50596e4e5ca47a0f1bdf3f5ab25405139b66447
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fbd946158157f76b2fc9bfe6cbd3ea9086d09ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115147"
 ---
 # <a name="compiler-error-c2498"></a>編譯器錯誤 C2498
-'function': 'novtable' 只能套用至類別宣告或定義  
-  
- 這個錯誤可能因使用`__declspec(novtable)`具有函式。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2498:  
-  
-```  
-// C2498.cpp  
-// compile with: /c  
-void __declspec(novtable) f() {}   // C2498  
-class __declspec(novtable) A {};   // OK  
+
+'function': 'novtable' 只能套用至類別宣告或定義
+
+此錯誤可能因使用`__declspec(novtable)`函式。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2498:
+
+```
+// C2498.cpp
+// compile with: /c
+void __declspec(novtable) f() {}   // C2498
+class __declspec(novtable) A {};   // OK
 ```

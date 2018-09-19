@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4015 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4015 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ad81175a033f60bd866da445bfe4a7f2dabfca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0cbf958cad0ddd15d2827881e0d33a15ad7a9e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271801"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115290"
 ---
 # <a name="compiler-warning-level-1-c4015"></a>編譯器警告 （層級 1） C4015
-'identifier': 位元欄位的類型必須是整數類資料  
-  
- 位元欄位不被宣告為整數型別。 編譯器會假設為不帶正負號位元欄位的基底類型。 位元欄位必須宣告為不帶正負號的整數類型。
+
+'identifier': 位元欄位的類型必須是整數
+
+位元欄位未宣告為整數類型。 編譯器會假設為不帶正負號位元欄位的基底類型。 位元欄位必須宣告為不帶正負號的整數類型。

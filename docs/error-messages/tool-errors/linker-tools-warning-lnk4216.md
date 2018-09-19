@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4216 |Microsoft 文件
+title: 連結器工具警告 LNK4216 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3face9db98fcf2fc727d2bf8713a014f28ca5ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b55ede76c41f4832854d1c4b4c4c4fc2793a5e71
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299464"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118865"
 ---
 # <a name="linker-tools-warning-lnk4216"></a>連結器工具警告 LNK4216
-匯出的項目點的項目  
-  
- 從 DLL 匯出的進入點。 要匯出的 DLL 進入點不需要。
+
+已匯出的進入點 」 項目
+
+從 DLL 匯出的進入點。 DLL 的進入點不需要匯出。

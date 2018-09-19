@@ -21,27 +21,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 85241d9dde87e929b02328a6e7d0c75b5ce068ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116226"
 ---
 # <a name="writing-a-termination-handler"></a>撰寫終止處理常式
-不同於例外狀況處理常式，無論程式碼保護區塊是否正常終止，都一定會執行終止處理常式。 終止處理常式的唯一用途應該是確保資源 (例如記憶體、控制代碼和檔案) 適當地關閉，而不管程式碼區段的執行如何完成。  
-  
- 終止處理常式會使用 try-finally 陳述式。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
-  
--   [Try-finally 陳述式](../cpp/try-finally-statement.md)  
-  
--   [清除資源](../cpp/cleaning-up-resources.md)  
-  
--   [例外狀況處理採取動作的時機](../cpp/timing-of-exception-handling-a-summary.md)  
-  
--   [終止處理常式的限制](../cpp/restrictions-on-termination-handlers.md)  
-  
-## <a name="see-also"></a>另請參閱  
- [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+不同於例外狀況處理常式，無論程式碼保護區塊是否正常終止，都一定會執行終止處理常式。 終止處理常式的唯一用途應該是確保資源 (例如記憶體、控制代碼和檔案) 適當地關閉，而不管程式碼區段的執行如何完成。
+
+終止處理常式會使用 try-finally 陳述式。
+
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
+
+- [Try-finally 陳述式](../cpp/try-finally-statement.md)
+
+- [清除資源](../cpp/cleaning-up-resources.md)
+
+- [例外狀況處理採取動作的時機](../cpp/timing-of-exception-handling-a-summary.md)
+
+- [終止處理常式的限制](../cpp/restrictions-on-termination-handlers.md)
+
+## <a name="see-also"></a>另請參閱
+
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

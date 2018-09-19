@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 8327442588a5ae5fa15ba37cc53b4f748fa0837d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208506"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136305"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 命名空間函式
 ||||  
@@ -95,8 +95,8 @@ inline float acos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的反餘弦值  
@@ -109,8 +109,8 @@ inline float acosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的反餘弦值  
@@ -123,8 +123,8 @@ inline float asin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正弦值  
@@ -137,8 +137,8 @@ inline float asinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正弦值  
@@ -151,8 +151,8 @@ inline float atan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正切值  
@@ -167,11 +167,11 @@ inline float atan2(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Y`  
- 浮點值。  
+*_Y*<br/>
+浮點值。  
   
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _Y/_X 的反正切值  
@@ -186,11 +186,11 @@ inline float atan2f(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Y`  
- 浮點值。  
+*_Y*<br/>
+浮點值。  
   
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _Y/_X 的反正切值  
@@ -203,8 +203,8 @@ inline float atanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正切值  
@@ -217,8 +217,8 @@ inline float ceil(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的上限  
@@ -231,8 +231,8 @@ inline float ceilf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的上限  
@@ -245,8 +245,8 @@ inline float cosf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的餘弦值  
@@ -259,8 +259,8 @@ inline float coshf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲餘弦值  
@@ -273,8 +273,8 @@ inline float cos(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的餘弦值  
@@ -287,8 +287,8 @@ inline float cosh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲餘弦值  
@@ -301,8 +301,8 @@ inline float exp(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 e 為底數的指數引數  
@@ -315,8 +315,8 @@ inline float exp2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回基底 2 指數的引數  
@@ -329,8 +329,8 @@ inline float exp2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回基底 2 指數的引數  
@@ -343,8 +343,8 @@ inline float expf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 e 為底數的指數引數  
@@ -357,8 +357,8 @@ inline float fabs(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 整數值  
+*_X*<br/>
+整數值  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值  
@@ -371,8 +371,8 @@ inline float fabsf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值  
@@ -385,8 +385,8 @@ inline float floor(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的下限  
@@ -399,8 +399,8 @@ inline float floorf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的下限  
@@ -415,11 +415,11 @@ inline float max(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 整數值  
+*_X*<br/>
+整數值  
   
- `_Y`  
- 整數值  
+*_Y*<br/>
+整數值  
   
 ### <a name="return-value"></a>傳回值  
  傳回的最大的數值引數  
@@ -434,11 +434,11 @@ inline float fmaxf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Y`  
- 浮點值。  
+*_Y*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回的最大的數值引數  
@@ -453,11 +453,11 @@ inline float min(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 整數值  
+*_X*<br/>
+整數值  
   
- `_Y`  
- 整數值  
+*_Y*<br/>
+整數值  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的最小數值  
@@ -472,11 +472,11 @@ inline float fminf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Y`  
- 浮點值。  
+*_Y*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的最小數值  
@@ -491,11 +491,11 @@ inline float fmod(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Y`  
- 浮點值。  
+*_Y*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X/_Y 浮點數餘數  
@@ -510,11 +510,11 @@ inline float fmodf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Y`  
- 浮點值。  
+*_Y*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X/_Y 浮點數餘數  
@@ -529,11 +529,11 @@ inline float frexp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Exp`  
- 傳回整數的指數 _X 中的浮點值  
+*2^_exp*<br/>
+傳回整數的指數 _X 中的浮點值  
   
 ### <a name="return-value"></a>傳回值  
  會傳回尾數 _X  
@@ -548,11 +548,11 @@ inline float frexpf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Exp`  
- 傳回整數的指數 _X 中的浮點值  
+*2^_exp*<br/>
+傳回整數的指數 _X 中的浮點值  
   
 ### <a name="return-value"></a>傳回值  
  會傳回尾數 _X  
@@ -565,8 +565,8 @@ inline int isfinite(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回非零值，才引數具有有限的值  
@@ -579,8 +579,8 @@ inline int isinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回非零值，才引數的無限值  
@@ -593,8 +593,8 @@ inline int isnan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回非零值，才引數具有 NaN 值  
@@ -609,11 +609,11 @@ inline float ldexp(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值 mentissa  
+*_X*<br/>
+浮點值 mentissa  
   
- `_Exp`  
- 整數指數  
+*2^_exp*<br/>
+整數指數  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X \* 2 ^ 2^_exp  
@@ -628,11 +628,11 @@ inline float ldexpf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值 mentissa  
+*_X*<br/>
+浮點值 mentissa  
   
- `_Exp`  
- 整數指數  
+*2^_exp*<br/>
+整數指數  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X \* 2 ^ 2^_exp  
@@ -645,8 +645,8 @@ inline float log(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 e 對數  
@@ -659,8 +659,8 @@ inline float log10(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
@@ -673,8 +673,8 @@ inline float log10f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
@@ -687,8 +687,8 @@ inline float log2(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 2 對數  
@@ -701,8 +701,8 @@ inline float log2f(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
@@ -715,8 +715,8 @@ inline float logf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 e 對數  
@@ -731,10 +731,11 @@ inline float modf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Ip`  
+*（_i)*<br/>
+接收值的整數部分  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X 的帶正負號小數部分  
@@ -749,10 +750,11 @@ inline float modff(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_Ip`  
+*（_i)*<br/>
+接收值的整數部分  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X 的帶正負號小數部分  
@@ -767,11 +769,11 @@ inline float pow(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值，基底  
+*_X*<br/>
+浮點值，基底  
   
- `_Y`  
- 浮點數的值指數  
+*_Y*<br/>
+浮點數的值指數  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X 的 _y 次方的值  
@@ -786,11 +788,11 @@ inline float powf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值，基底  
+*_X*<br/>
+浮點值，基底  
   
- `_Y`  
- 浮點數的值指數  
+*_Y*<br/>
+浮點數的值指數  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -802,8 +804,8 @@ inline float round(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X 的最接近的整數  
@@ -816,8 +818,8 @@ inline float roundf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 _X 的最接近的整數  
@@ -830,8 +832,8 @@ inline float rsqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的平方根的倒數  
@@ -844,8 +846,8 @@ inline float rsqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的平方根的倒數  
@@ -858,8 +860,8 @@ inline int signbit(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回非零值，才 _X 的正負號為負數  
@@ -872,8 +874,8 @@ inline int signbitf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回非零值，才 _X 的正負號為負數  
@@ -886,8 +888,8 @@ inline float sin(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的正弦值  
@@ -900,8 +902,8 @@ inline float sinf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的正弦值  
@@ -917,14 +919,14 @@ inline void sincos(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_S`  
- 傳回 _X 的正弦值  
+*_S*<br/>
+傳回 _X 的正弦值  
   
- `_C`  
- 傳回 _X 的餘弦值  
+*_C*<br/>
+傳回 _X 的餘弦值  
   
 ##  <a name="sincosf"></a>  sincosf  
  計算 _X 的正弦和餘弦值  
@@ -937,14 +939,14 @@ inline void sincosf(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
- `_S`  
- 傳回 _X 的正弦值  
+*_S*<br/>
+傳回 _X 的正弦值  
   
- `_C`  
- 傳回 _X 的餘弦值  
+*_C*<br/>
+傳回 _X 的餘弦值  
   
 ##  <a name="sinh"></a>  sinh  
  計算引數的雙曲正弦值  
@@ -954,8 +956,8 @@ inline float sinh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正弦值  
@@ -968,8 +970,8 @@ inline float sinhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正弦值  
@@ -982,8 +984,8 @@ inline float sqrt(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的 squre 根項目  
@@ -996,8 +998,8 @@ inline float sqrtf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的 squre 根項目  
@@ -1010,8 +1012,8 @@ inline float tan(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的正切值  
@@ -1024,8 +1026,8 @@ inline float tanf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的正切值  
@@ -1038,8 +1040,8 @@ inline float tanh(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正切值  
@@ -1052,8 +1054,8 @@ inline float tanhf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正切值  
@@ -1066,8 +1068,8 @@ inline float trunc(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的整數部分  
@@ -1080,8 +1082,8 @@ inline float truncf(float _X) restrict(amp);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_X`  
- 浮點值。  
+*_X*<br/>
+浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數的整數部分  

@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2099 |Microsoft 文件
+title: 編譯器錯誤 C2099 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28f525676f6d9238838f0dbc245d9771f99ebeb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fcbefa4d8fb9d5503f28cf3bf39cafc6b05a225
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116824"
 ---
 # <a name="compiler-error-c2099"></a>編譯器錯誤 C2099
-初始設定式不是常數  
-  
- 這個錯誤只能由 C 編譯器發出，而且只發生在非自動變數。  編譯器會在程式開始時初始化非自動變數，而所初始化的值必須是常數。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2099。  
-  
-```  
-// C2099.c  
-int j;  
-int *p;  
-j = *p;   // C2099 *p is not a constant  
-```  
-  
-## <a name="example"></a>範例  
- C2099 也會發生，因為編譯器無法對 **/fp:strict** 下的運算式執行常數摺疊，因為浮點精確度的環境設定 (如需詳細資訊請參閱 [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) ) 可能和執行階段的編譯不一樣。  
-  
- 當常數摺疊失敗時，編譯器會叫用動態初始化，這在 C 中不被允許。  
-  
- 若要解決這個錯誤，請將模組編譯為 .cpp 檔或簡化運算式。  
-  
- 如需詳細資訊，請參閱 [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md)。  
-  
- 下列範例會產生 C2099。  
-  
-```  
-// C2099_2.c  
-// compile with: /fp:strict /c  
-float X = 2.0 - 1.0;   // C2099  
-float X2 = 1.0;   // OK  
+
+初始設定式不是常數
+
+這個錯誤只能由 C 編譯器發出，而且只發生在非自動變數。  編譯器會在程式開始時初始化非自動變數，而所初始化的值必須是常數。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2099。
+
+```
+// C2099.c
+int j;
+int *p;
+j = *p;   // C2099 *p is not a constant
+```
+
+## <a name="example"></a>範例
+
+C2099 也會發生，因為編譯器無法對 **/fp:strict** 下的運算式執行常數摺疊，因為浮點精確度的環境設定 (如需詳細資訊請參閱 [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md) ) 可能和執行階段的編譯不一樣。
+
+當常數摺疊失敗時，編譯器會叫用動態初始化，這在 C 中不被允許。
+
+若要解決這個錯誤，請將模組編譯為 .cpp 檔或簡化運算式。
+
+如需詳細資訊，請參閱 [/fp (Specify Floating-Point Behavior)](../../build/reference/fp-specify-floating-point-behavior.md)。
+
+下列範例會產生 C2099。
+
+```
+// C2099_2.c
+// compile with: /fp:strict /c
+float X = 2.0 - 1.0;   // C2099
+float X2 = 1.0;   // OK
 ```

@@ -14,48 +14,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff0716359c715431f9887f50be06e592d57787e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2976dbdd880cb200547f5fb2ac5d529877628ff0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089745"
 ---
 # <a name="using-arrays-c"></a>使用陣列 (C++)
-使用陣列註標運算子 (`[ ]`)，您可以存取陣列的個別項目。 如果一維陣列用於沒有註標的運算式，陣列名稱判斷值為陣列中第一個項目的指標。  
-  
-```cpp 
-// using_arrays.cpp  
-int main() {  
-   char chArray[10];  
-   char *pch = chArray;   // Evaluates to a pointer to the first element.  
-   char   ch = chArray[0];   // Evaluates to the value of the first element.  
-   ch = chArray[3];   // Evaluates to the value of the fourth element.  
-}  
-```  
-  
- 當您使用多維陣列時，您可以在運算式中使用各種組合。  
-  
-```cpp 
-// using_arrays_2.cpp  
-// compile with: /EHsc /W1  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   double multi[4][4][3];   // Declare the array.  
-   double (*p2multi)[3];  
-   double (*p1multi);  
-  
-   cout << multi[3][2][2] << "\n";   // C4700 Use three subscripts.  
-   p2multi = multi[3];               // Make p2multi point to  
-                                     // fourth "plane" of multi.  
-   p1multi = multi[3][2];            // Make p1multi point to  
-                                     // fourth plane, third row  
-                                     // of multi.  
-}  
-```  
-  
- 在上述程式碼中，`multi`是一個三維陣列型別的**double**。 `p2multi`指標會指向的型別陣列**double**大小為三。 在此範例中，陣列搭配使用的註標有一個、兩個和三個。 雖然更常見的是指定所有註標 (如在 `cout` 陳述式中)，但有時選取陣列元素的特定子集是很有用的 (如 `cout` 之後的陳述式所示)。  
-  
-## <a name="see-also"></a>另請參閱  
- [陣列](../cpp/arrays-cpp.md)
+
+使用陣列註標運算子 (`[ ]`)，您可以存取陣列的個別項目。 如果一維陣列用於沒有註標的運算式，陣列名稱判斷值為陣列中第一個項目的指標。
+
+```cpp
+// using_arrays.cpp
+int main() {
+   char chArray[10];
+   char *pch = chArray;   // Evaluates to a pointer to the first element.
+   char   ch = chArray[0];   // Evaluates to the value of the first element.
+   ch = chArray[3];   // Evaluates to the value of the fourth element.
+}
+```
+
+當您使用多維陣列時，您可以在運算式中使用各種組合。
+
+```cpp
+// using_arrays_2.cpp
+// compile with: /EHsc /W1
+#include <iostream>
+using namespace std;
+int main() {
+   double multi[4][4][3];   // Declare the array.
+   double (*p2multi)[3];
+   double (*p1multi);
+
+   cout << multi[3][2][2] << "\n";   // C4700 Use three subscripts.
+   p2multi = multi[3];               // Make p2multi point to
+                                     // fourth "plane" of multi.
+   p1multi = multi[3][2];            // Make p1multi point to
+                                     // fourth plane, third row
+                                     // of multi.
+}
+```
+
+在上述程式碼中，`multi`是一個三維陣列型別的**double**。 `p2multi`指標會指向的型別陣列**double**大小為三。 在此範例中，陣列搭配使用的註標有一個、兩個和三個。 雖然更常見的是指定所有註標 (如在 `cout` 陳述式中)，但有時選取陣列元素的特定子集是很有用的 (如 `cout` 之後的陳述式所示)。
+
+## <a name="see-also"></a>另請參閱
+
+[陣列](../cpp/arrays-cpp.md)

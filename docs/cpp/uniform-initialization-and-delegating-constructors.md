@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116239"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>統一初始設定和委派建構函式
+
 在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不需要在等號。 此外，您可以使用委派的建構函式來簡化您的程式碼，當您具有執行類似工作的多個建構函式。
 
 ## <a name="brace-initialization"></a>括號初始設定
+
 您可以使用括號初始設定的任何類別、 結構或等位。 如果類型具有預設建構函式，以隱含或明確宣告，您可以使用預設的大括號進行初始化 （空的大括號）。 比方說，可能會使用預設值和非預設的大括號初始設定初始化下列類別：
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>initializer_list 建構函式
+
 [Initializer_list 類別](../standard-library/initializer-list-class.md)表示可用在建構函式，並在其他內容中指定類型之物件的清單。 您可以建構 initializer_list 使用括號初始設定：
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>委派建構函式
+
 許多類別都有多個建構函式會執行類似的動作 — 例如，驗證參數：
 
 ```cpp

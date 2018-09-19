@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 078d4b01d2c797fa11c3603c79a341f75e11f18c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42544405"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115472"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 指定一或多個變數，應該在所有執行緒之間共用。  
@@ -32,11 +32,10 @@ ms.locfileid: "42544405"
 shared(var)  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+### <a name="parameters"></a>參數
   
- `var`  
- 若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
+*var*<br/>
+若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
   
 ## <a name="remarks"></a>備註  
  共用變數，在執行緒之間的另一個方法是使用[copyprivate](../../../parallel/openmp/reference/copyprivate.md)子句。  

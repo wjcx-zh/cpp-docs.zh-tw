@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116720"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -40,16 +40,16 @@ constexpr ctor (params);
 
 ## <a name="parameters"></a>參數
 
- *params*  
+*params*<br/>
 一或多個參數必須是常值的型別且本身是常數運算式。
 
 ## <a name="return-value"></a>傳回值
 
- Constexpr 變數或函式必須傳回[常值型別](trivial-standard-layout-and-pod-types.md#literal_types)。
+Constexpr 變數或函式必須傳回[常值型別](trivial-standard-layout-and-pod-types.md#literal_types)。
 
 ## <a name="constexpr-variables"></a>constexpr 變數
 
- const 和 constexpr 變數之間的主要差異是 const 變數的初始化可以延遲到執行階段，而 constexpr 變數則必須在編譯時期初始化。  所有的 constexpr 變數都是常數。
+const 和 constexpr 變數之間的主要差異是 const 變數的初始化可以延遲到執行階段，而 constexpr 變數則必須在編譯時期初始化。  所有的 constexpr 變數都是常數。
 
 - 變數可以使用宣告**constexpr**，如果它具有常值的型別，並已初始化。 如果建構函式執行初始化，則建構函式必須宣告為**constexpr**。
 
@@ -91,7 +91,7 @@ Constexpr 函式，套用下列規則：
 下列規則適用於**constexpr**函式在 Visual Studio 2017 和更新版本：
 
 - 它可能包含**如果**和**切換**陳述式，以及所有迴圈陳述式，包括**如**、 以範圍為基礎，**雖然**，和**請勿-雖然**。
- 
+
 - 它可能包含區域變數宣告、 但變數必須初始化，必須為常值的型別，而且不能是靜態或執行緒區域。 在本機宣告的變數不一定要 const，可能會變動。
 
 - Constexpr 非靜態成員函式不需要是隱含 const。
@@ -115,7 +115,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="example"></a>範例
 
- 下列範例所示**constexpr**變數、 函式和使用者定義型別。 請注意，在 main （），最後一行陳述**constexpr**成員函式 getvalue （） 是執行階段呼叫，因為不需要此值在編譯時期為已知。
+下列範例所示**constexpr**變數、 函式和使用者定義型別。 請注意，在 main （），最後一行陳述**constexpr**成員函式 getvalue （） 是執行階段呼叫，因為不需要此值在編譯時期為已知。
 
 ```cpp
 #include <iostream>
@@ -189,5 +189,6 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>另請參閱
- [宣告和定義](../cpp/declarations-and-definitions-cpp.md)  
- [const](../cpp/const-cpp.md)
+
+[宣告和定義](../cpp/declarations-and-definitions-cpp.md)<br/>
+[const](../cpp/const-cpp.md)

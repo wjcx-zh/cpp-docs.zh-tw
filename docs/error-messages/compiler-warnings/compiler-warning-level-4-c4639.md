@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4639 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4639 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ad4b3159eb83c6dd050bba41032a461716f556a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0ab2e08878e2172337ef373ebcbc8a37359b85f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117669"
 ---
 # <a name="compiler-warning-level-4-c4639"></a>編譯器警告 (層級 4) C4639
-MSXML 錯誤，將不會處理註解的 XML 文件。 原因  
-  
- 此警告可能發生的原因有許多。  
-  
- 若要解決這個警告：  
-  
--   重新編譯。  
-  
--   重新安裝 common language runtime，重新安裝 MSXML。  
-  
--   編輯或移除造成警告以及重新編譯的文件註解。  
-  
- C4639 時，所有其他的 XML 註解處理已停用，並不會產生.xdc 檔。
+
+MSXML 錯誤，將不會處理註解的 XML 文件。 原因
+
+任意數目的原因可能會發生這個警告。
+
+若要解決這個警告：
+
+- 重新編譯。
+
+- 重新安裝 common language runtime，重新安裝 MSXML。
+
+- 編輯或移除文件註解會導致警告，然後重新編譯。
+
+C4639 時，會停用所有進一步的 XML 註解處理，並不會產生.xdc 檔案。

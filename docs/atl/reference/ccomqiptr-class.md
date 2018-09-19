@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4437d06a7308505c2338f37deea1126fcb0605
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e4c35ab13d5cf2448135b1e07405a1e31a5eec86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752904"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116668"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr 類別
 
@@ -32,16 +32,16 @@ ms.locfileid: "43752904"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T, const IID* piid= &__uuidof(T)>  
+template<class T, const IID* piid= &__uuidof(T)>
 class CComQIPtr: public CComPtr<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 COM 介面，用來指定要儲存的指標的類型。
 
-*piid*  
+*piid*<br/>
 指向 IID *T*。
 
 ## <a name="members"></a>成員
@@ -87,13 +87,13 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>參數
 
-*lp*  
+*lp*<br/>
 用來初始化介面指標。
 
-*T*  
+*T*<br/>
 COM 介面。
 
-*piid*  
+*piid*<br/>
 指向 IID *T*。
 
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =
@@ -108,13 +108,13 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>參數
 
-*lp*  
+*lp*<br/>
 用來初始化介面指標。
 
-*T*  
+*T*<br/>
 COM 介面。
 
-*piid*  
+*piid*<br/>
 指向 IID *T*。
 
 ### <a name="return-value"></a>傳回值
@@ -123,8 +123,8 @@ COM 介面。
 
 ## <a name="see-also"></a>另請參閱
 
-[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
-[CComQIPtr::CComQIPtr](#ccomqiptr)   
-[CComPtrBase 類別](../../atl/reference/ccomptrbase-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
+[CComPtrBase 類別](../../atl/reference/ccomptrbase-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)

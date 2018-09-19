@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f9554f0ba8daf5a96f0fa2daa32e0e20469bf7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7b3487b29122b4a5109a6c0de51cd0e459380aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117370"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 類別
 支援以 16 位元字組為索引鍵的 `CObject` 指標對應。  
@@ -63,9 +63,7 @@ class CMapWordToOb : public CObject
 ## <a name="members"></a>成員  
  成員函式`CMapWordToOb`類別的成員函式類似[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CMapStringToOb` 參考文件。 無論在何處看到`CString`或是**const**指標**char**身為函式參數或傳回值，以取代文字。  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const;'  
   
  例如，轉換為  
   

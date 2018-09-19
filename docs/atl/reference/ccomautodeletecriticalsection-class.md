@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c8ff6141fb5aa58e8de626675e29b46426ed47f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118436"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection 類別
 
@@ -54,6 +54,6 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 
 ## <a name="see-also"></a>另請參閱
 
-[CComSafeDeleteCriticalSection 類別](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
-[CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   
+[CComSafeDeleteCriticalSection 類別](../../atl/reference/ccomsafedeletecriticalsection-class.md)<br/>
+[CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

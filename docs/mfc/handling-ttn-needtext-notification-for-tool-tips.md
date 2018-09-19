@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114575"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>處理工具提示的 TTN_NEEDTEXT 告知
 做為一部分[啟用工具提示](../mfc/enabling-tool-tips.md)，您處理**TTN_NEEDTEXT**藉由將下列項目加入至主控視窗的訊息對應的訊息：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- 此按鈕需要文字時要呼叫此成員函式。  
+*memberFxn*<br/>
+此按鈕需要文字時要呼叫此成員函式。  
   
  請注意，工具提示的識別碼一律為 0。  
   
@@ -41,14 +41,14 @@ ms.locfileid: "43200514"
   
  其中的斜體的參數如下：  
   
- `id`  
- 傳送通知之控制項的識別項。 未使用。 控制項 id 取自**NMHDR**結構。  
+*id*<br/>
+傳送通知之控制項的識別項。 未使用。 控制項 id 取自**NMHDR**結構。  
   
- `pNMHDR`  
- 指標[NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa)結構。 也會討論這個結構中進一步[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)。  
+*pNMHDR*<br/>
+指標[NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa)結構。 也會討論這個結構中進一步[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)。  
   
- `pResult`  
- 您設定的指標，結果程式碼前您傳回。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。  
+*pResult*<br/>
+您設定的指標，結果程式碼前您傳回。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。  
   
  表單檢視的通知處理常式的範例：  
   

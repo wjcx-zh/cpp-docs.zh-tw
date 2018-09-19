@@ -16,86 +16,92 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1369614cfd20d39fee3f2c2dd1ca7436ae742d2b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1fec9329bbbf19f3987c0abf3dfd2ce32300df62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089784"
 ---
 # <a name="nonstandard-behavior"></a>非標準行為
-以下各節列出 C++ 的 Visual C++ 實作與 C++ 標準不一致的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。  
-  
- 編譯器限制不同於 c + + 標準中所定義的清單已列入[編譯器限制](../cpp/compiler-limits.md)。  
-  
-## <a name="covariant-return-types"></a>Covariant 傳回型別  
- 當虛擬函式具有可變數目的引數時，不支援虛擬基底類別做為 Covariant 傳回類型。 不符合 C++ ISO 規格第 7 段的第 10.3 節。 下列範例無法編譯，讓編譯器錯誤[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
-  
-```cpp  
-// CovariantReturn.cpp  
-class A   
-{  
-   virtual A* f(int c, ...);   // remove ...  
-};  
-  
-class B : virtual A  
-{  
-   B* f(int c, ...);   // C2688 remove ...  
-};  
-```  
-  
-## <a name="binding-nondependent-names-in-templates"></a>樣板中的繫結非相依名稱  
- Visual C++ 編譯器目前不支援在開始剖析樣板時繫結非相依的名稱。 不符合 C++ ISO 規格的第 14.6.3 節。 可能會在樣板出現後 (但在樣板具現化之前) 造成宣告多載。  
-  
-```cpp  
-#include <iostream>  
-using namespace std;  
-  
-namespace N {  
-   void f(int) { cout << "f(int)" << endl;}  
-}  
-  
-template <class T> void g(T) {  
-    N::f('a');   // calls f(char), should call f(int)  
-}  
-  
-namespace N {  
-    void f(char) { cout << "f(char)" << endl;}  
-}  
-  
-int main() {  
-    g('c');  
-}  
-// Output: f(char)  
-```  
-  
-## <a name="function-exception-specifiers"></a>函式例外狀況規範  
- 會剖析但不使用 `throw()` 以外的函式例外狀況規範。 不符合 ISO C++ 規格的第 15.4 節。 例如:   
-  
-```cpp  
-void f() throw(int); // parsed but not used  
-void g() throw();    // parsed and used  
-```  
-  
- 如需有關例外狀況規格的詳細資訊，請參閱[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)。  
-  
-## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，而不是用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。  
-  
-```cpp  
-#include <iostream>  
-  
-int main()  
-{  
-    using namespace std;  
-  
-    char_traits<char>::int_type int2 = char_traits<char>::eof();  
-    cout << "The eof marker for char_traits<char> is: " << int2 << endl;  
-  
-    char_traits<wchar_t>::int_type int3 = char_traits<wchar_t>::eof();  
-    cout << "The eof marker for char_traits<wchar_t> is: " << int3 << endl;  
-}  
-```  
-  
-## <a name="storage-location-of-objects"></a>物件的儲存位置  
- C++ 標準 (第 6 段第 1.8 節) 要求完整的 C++ 物件必須具有唯一的儲存位置。 不過，使用 Visual C++ 時，有些情況是沒有資料成員的類型會與其他類型共用物件存留期的儲存位置。
+
+以下各節列出 C++ 的 Visual C++ 實作與 C++ 標準不一致的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。
+
+編譯器限制不同於 c + + 標準中所定義的清單已列入[編譯器限制](../cpp/compiler-limits.md)。
+
+## <a name="covariant-return-types"></a>Covariant 傳回型別
+
+當虛擬函式具有可變數目的引數時，不支援虛擬基底類別做為 Covariant 傳回類型。 不符合 C++ ISO 規格第 7 段的第 10.3 節。 下列範例無法編譯，讓編譯器錯誤[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+
+```cpp
+// CovariantReturn.cpp
+class A
+{
+   virtual A* f(int c, ...);   // remove ...
+};
+
+class B : virtual A
+{
+   B* f(int c, ...);   // C2688 remove ...
+};
+```
+
+## <a name="binding-nondependent-names-in-templates"></a>樣板中的繫結非相依名稱
+
+Visual C++ 編譯器目前不支援在開始剖析樣板時繫結非相依的名稱。 不符合 C++ ISO 規格的第 14.6.3 節。 可能會在樣板出現後 (但在樣板具現化之前) 造成宣告多載。
+
+```cpp
+#include <iostream>
+using namespace std;
+
+namespace N {
+   void f(int) { cout << "f(int)" << endl;}
+}
+
+template <class T> void g(T) {
+    N::f('a');   // calls f(char), should call f(int)
+}
+
+namespace N {
+    void f(char) { cout << "f(char)" << endl;}
+}
+
+int main() {
+    g('c');
+}
+// Output: f(char)
+```
+
+## <a name="function-exception-specifiers"></a>函式例外狀況規範
+
+會剖析但不使用 `throw()` 以外的函式例外狀況規範。 不符合 ISO C++ 規格的第 15.4 節。 例如: 
+
+```cpp
+void f() throw(int); // parsed but not used
+void g() throw();    // parsed and used
+```
+
+如需有關例外狀況規格的詳細資訊，請參閱[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)。
+
+## <a name="chartraitseof"></a>char_traits::eof()
+
+C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，而不是用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    char_traits<char>::int_type int2 = char_traits<char>::eof();
+    cout << "The eof marker for char_traits<char> is: " << int2 << endl;
+
+    char_traits<wchar_t>::int_type int3 = char_traits<wchar_t>::eof();
+    cout << "The eof marker for char_traits<wchar_t> is: " << int3 << endl;
+}
+```
+
+## <a name="storage-location-of-objects"></a>物件的儲存位置
+
+C++ 標準 (第 6 段第 1.8 節) 要求完整的 C++ 物件必須具有唯一的儲存位置。 不過，使用 Visual C++ 時，有些情況是沒有資料成員的類型會與其他類型共用物件存留期的儲存位置。

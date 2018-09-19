@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757834"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088939"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 類別
 
@@ -65,7 +65,7 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*  
+*nBytes*<br/>
 要配置的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 配置的記憶體之指標。
 
 ### <a name="remarks"></a>備註
@@ -103,10 +103,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 配置的記憶體之指標。
 
-*nBytes*  
+*nBytes*<br/>
 要重新配置的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -119,6 +119,6 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)   
-[CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)   
+[CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)<br/>
+[CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

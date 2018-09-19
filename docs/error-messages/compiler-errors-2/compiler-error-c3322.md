@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3322 |Microsoft 文件
+title: 編譯器錯誤 C3322 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc9ad0604bfed9cfabdc2ab2f180d3db3ef804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9447dde4c20d2c29a2894d810a73d1db3997d237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104241"
 ---
 # <a name="compiler-error-c3322"></a>編譯器錯誤 C3322
-'property': 不是屬性 (attribute) 'attribute' 的有效屬性 (property)  
-  
- 無效或無法辨識的屬性 (property) 或參數已傳遞給屬性 (attribute)。 請參閱屬性的文件。
+
+'property': 不是屬性 (attribute) 'attribute' 的有效屬性 (property)
+
+無效或無法辨識的屬性 (property) 或參數已傳遞給屬性 (attribute)。 請參閱屬性的文件。

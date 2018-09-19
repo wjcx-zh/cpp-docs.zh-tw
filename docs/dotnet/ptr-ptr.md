@@ -1,5 +1,5 @@
 ---
-title: ptr::ptr |Microsoft 文件
+title: ptr::ptr |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161469"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107022"
 ---
 # <a name="ptrptr"></a>ptr::ptr
-建構`com::ptr`包裝的 COM 物件。  
+建構`com::ptr`包裝 COM 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,15 +40,15 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>參數  
- `P`  
- COM 的介面指標。  
+*P*<br/>
+COM 的介面指標。  
   
 ## <a name="remarks"></a>備註  
  無引數的建構函式指派`nullptr`基礎物件控制代碼。 後續呼叫`com::ptr`會驗證內部的物件，並以無訊息模式失敗，直到物件實際上是建立或附加。  
   
- 單一引數的建構函式會將 COM 物件的參考，但不會釋放呼叫者的參考，因此呼叫端必須呼叫`Release`真正放棄控制項之 COM 物件。 當`com::ptr`的解構函式呼叫就會自動釋放 COM 物件上的其參考。  
+ 單一引數的建構函式會將 COM 物件的參考，但不會釋放呼叫者的參考，因此，呼叫端必須呼叫`Release`真正讓控制項在 COM 物件上。 當`com::ptr`的解構函式會呼叫它將會自動釋出其參考 COM 物件上的。  
   
- 傳遞`NULL`此建構函式相當於呼叫沒有引數版本。  
+ 傳遞`NULL`這個建構函式相當於呼叫無引數版本。  
   
 ## <a name="example"></a>範例  
  這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 它會示範兩個版本的建構函式的使用方式。  

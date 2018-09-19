@@ -1,5 +1,5 @@
 ---
-title: location 類別 |Microsoft 文件
+title: location 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a7d441aff74faede9ecbc41f03fe52cd05528e06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688020"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104760"
 ---
 # <a name="location-class"></a>location 類別
 硬體實體位置的抽象概念。  
@@ -76,7 +76,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="current"></a> 目前的 
+##  <a name="current"></a> 目前 
 
  傳回 `location` 物件，表示呼叫執行緒執行的最特定位置。  
   
@@ -96,8 +96,8 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_NumaNodeNumber`  
- 要建構其位置的 NUMA 節點編號。  
+*_NumaNodeNumber*<br/>
+要建構其位置的 NUMA 節點編號。  
   
 ### <a name="return-value"></a>傳回值  
  代表 NUMA 節點的位置，由 `_NumaNodeNumber` 參數所指定。  
@@ -120,12 +120,17 @@ location(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
- `_LocationType`  
- `_Id`  
- `_BindingId`  
- `_PBinding`  
-  
+*_Src*<br/>
+
+*_LocationType*<br/>
+
+*識別碼 （_i)*<br/>
+
+*_BindingId*<br/>
+
+*_PBinding*<br/>
+（選擇性）繫結指標。
+
 ### <a name="remarks"></a>備註  
  預設建構的位置表示整個系統。  
   
@@ -138,7 +143,8 @@ bool operator!= (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
+*_Rhs*<br/>
+運算元`location`。
   
 ### <a name="return-value"></a>傳回值  
  如果這兩個位置不同則為 `true`，否則為 `false`。  
@@ -152,8 +158,8 @@ location& operator= (const location& _Rhs);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
- 來源 `location` 物件。  
+*_Rhs*<br/>
+來源 `location` 物件。  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -166,7 +172,8 @@ bool operator== (const location& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
+*_Rhs*<br/>
+運算元`location`。
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果兩個位置都相同，和`false`否則。  

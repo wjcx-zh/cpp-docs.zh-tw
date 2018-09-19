@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c4bbd4efbdbf5d1ecf566244a9000a93a7c981
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48afac392d02edfd3d312583642367bc6726e536
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106788"
 ---
 # <a name="using-idispeventimpl"></a>使用 IDispEventImpl
 
@@ -44,7 +44,7 @@ ms.locfileid: "43760295"
 此範例是來自[ATLEventHandling 範例](../visual-cpp-samples.md)。  
 
 ```cpp
-[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]  
+[ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
 dispinterface ApplicationEvents {
 properties:
 methods:
@@ -69,6 +69,6 @@ methods:
 
 ## <a name="see-also"></a>另請參閱
 
-[事件處理](../atl/event-handling-and-atl.md)   
+[事件處理](../atl/event-handling-and-atl.md)<br/>
 [ATLEventHandling 範例](../visual-cpp-samples.md)
 

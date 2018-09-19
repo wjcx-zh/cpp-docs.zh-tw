@@ -1,5 +1,5 @@
 ---
-title: 您在使用資料錄檢視 （MFC 資料存取） 角色 |Microsoft 文件
+title: 您在使用資料錄檢視 （MFC 資料存取） 角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7a9d3fa7e828467e73c77736fb5643baf19660f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0188f9b7498bc704c43f642fcb7aa1dc72af6a4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105462"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>您在使用記錄檢視上的角色 (MFC 資料存取)
+
 下表顯示您通常必須執行什麼操作才能使用資料錄檢視以及該架構為您執行什麼操作。  
   
 ### <a name="working-with-a-record-view-you-and-the-framework"></a>使用資料錄檢視：您與架構  
@@ -31,16 +32,17 @@ ms.locfileid: "33111090"
 |您|架構|  
 |---------|-------------------|  
 |使用 Visual C++ 的話方塊編輯器來設計表單。|建立對話方塊樣板資源 (含控制項)。|  
-|使用[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)建立衍生自類別[CRecordView](../mfc/reference/crecordview-class.md)和[CRecordset](../mfc/reference/crecordset-class.md)。|為您撰寫類別。|  
+|使用[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)來建立衍生自類別[CRecordView](../mfc/reference/crecordview-class.md)並[CRecordset](../mfc/reference/crecordset-class.md)。|為您撰寫類別。|  
 |將資料錄檢視控制項對應至資料錄集欄位資料成員。|提供控制項與資料錄集欄位之間的 DDX。|  
-||提供預設的命令處理常式**最先移動**，**最後移動**，**移到下一個**，和**移到上一個**命令功能表或工具列按鈕。|  
+||提供預設的命令處理常式**移到最前面**，**移到最後面**，**移到下一個**，以及**移到上一個**命令功能表或工具列按鈕。|  
 ||將變更更新到資料來源。|  
 |[選用] 撰寫程式碼，以第二個資料錄集中的資料填入清單方塊或下拉式方塊或是其他控制項。||  
 |[選用] 針對任何特殊驗證撰寫程式碼。||  
 |[選用] 撰寫程式碼來加入或刪除資料錄。||  
   
- 表單架構程式設計是唯一一個使用資料庫的方法。 使用一些其他使用者介面或沒有使用者介面的應用程式的相關資訊，請參閱[MFC： 使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)和[MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md). 顯示資料庫記錄的替代方法，請參閱類別[CListView](../mfc/reference/clistview-class.md)和[CTreeView](../mfc/reference/ctreeview-class.md)。  
+表單架構程式設計是唯一一個使用資料庫的方法。 如需使用其他使用者介面或沒有使用者介面的應用程式的資訊，請參閱 < [MFC： 使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)和[MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md). 顯示資料庫記錄的替代方法，請參閱類別[CListView](../mfc/reference/clistview-class.md)並[CTreeView](../mfc/reference/ctreeview-class.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   
- [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)
+
+[資料錄檢視 (MFC 資料存取)](../data/record-views-mfc-data-access.md)<br/>
+[ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

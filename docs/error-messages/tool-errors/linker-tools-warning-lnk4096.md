@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4096 |Microsoft 文件
+title: 連結器工具警告 LNK4096 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6dedf18989341df82cacfde14f358c778d141e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264bbff052be7b37af1525392ffe0289fddef6d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104085"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>連結器工具警告 LNK4096
-/ 對於 Windows 95 及 Windows 98; 無效基底值 「 數字 」映像可能無法執行  
-  
- 所指定的基底地址無效。 Windows 95 及 Windows 98 的可執行檔必須具有大於 0x400000 起始位址。 如需有關基底地址的詳細資訊，請參閱[/基底](../../build/reference/base-base-address.md)連結器選項。
+
+/ 基底值 「 數字 」 的 Windows 95 和 Windows 98; 無效映像可能無法執行
+
+您所指定的基底位址無效。 Windows 95 和 Windows 98 的可執行檔必須具有大於 0x400000 的基底位址。 如需有關基底位址的詳細資訊，請參閱[基底/](../../build/reference/base-base-address.md)連結器選項。

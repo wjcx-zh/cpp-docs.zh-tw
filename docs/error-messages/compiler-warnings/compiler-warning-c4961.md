@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 C4961 |Microsoft 文件
+title: 編譯器警告 C4961 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68027aa11bedc6e9ad94fddc71a217a5e91bd2ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397ada023e5640cacd53fe45ffd0d250c5799d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269523"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105112"
 ---
 # <a name="compiler-warning-c4961"></a>編譯器警告 C4961
-沒有任何分析資料合併到 '.pgd 檔' 中，特性指引最佳化已停用  
-  
- 沒有任何分析資料 (.pgc 檔) 可供使用，因此無法進行特性指引最佳化。
+
+沒有任何分析資料合併到 '.pgd 檔' 中，特性指引最佳化已停用
+
+沒有任何分析資料 (.pgc 檔) 可供使用，因此無法進行特性指引最佳化。

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27def7f37bda8d4ed5fe5e37a8b5907b542a6ba
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106229"
 ---
 # <a name="marshaling-global-functions"></a>封送處理全域函式
 
@@ -50,7 +50,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 [in]指標`IStream`上用來封送處理的資料流介面。
 
 ### <a name="example"></a>範例
@@ -70,13 +70,13 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]要封送處理介面的指標。
 
-*iid*  
+*iid*<br/>
 [in]封送處理介面的 GUID。
 
-*ppStream*  
+*ppStream*<br/>
 [out]指標`IStream`上用來封送處理的新資料流物件的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -108,13 +108,13 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 [in]正在 marshaling 資料流的指標。
 
-*iid*  
+*iid*<br/>
 [in]正在 marshaling 介面的 GUID。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]解除封送處理介面的指標。
 
 ### <a name="return-value"></a>傳回值

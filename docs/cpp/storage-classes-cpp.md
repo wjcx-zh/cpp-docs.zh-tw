@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f7939d42aa246c9b7d5924979357fb6301e726
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107455"
 ---
-# <a name="storage-classes-c"></a>儲存類別 (C++)  
-  
-A*儲存類別*內容中的 c + + 變數宣告為類型規範，可控管物件的存留期、 連結和記憶體位置。 指定的物件只能有一個儲存類別。 區塊內定義的變數會具有自動儲存區，除非另有指定使用**extern**，**靜態**，或`thread_local`規範。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。  
-  
-**備註**  
-  
-1.  [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。  
-  
-2.  **Visual c + + 2010年及更新版本：** **自動**關鍵字不再是 c + + 儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字從 c + + 語言中移除。
+# <a name="storage-classes-c"></a>儲存類別 (C++)
+
+A*儲存類別*內容中的 c + + 變數宣告為類型規範，可控管物件的存留期、 連結和記憶體位置。 指定的物件只能有一個儲存類別。 區塊內定義的變數會具有自動儲存區，除非另有指定使用**extern**，**靜態**，或`thread_local`規範。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。
+
+**備註**
+
+1. [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
+
+1. **Visual c + + 2010年及更新版本：** **自動**關鍵字不再是 c + + 儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字從 c + + 語言中移除。
 
 
 ```cpp
@@ -148,14 +148,14 @@ using namespace std;
 struct C {
    void Test(int value) {
       static int var = 0;
-      if (var == value) 
+      if (var == value)
          cout << "var == value" << endl;
       else
          cout << "var != value" << endl;
 
       var = value;
    }
-}; 
+};
 
 int main() {
    C c1;
@@ -185,9 +185,9 @@ Deklarace **const**變數**extern**儲存類別會強制該變數具有外部連
 ```cpp
 // external.cpp
 // DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;   
+extern int DefinedElsewhere;
 int main() {
-   int DefinedHere; 
+   int DefinedHere;
    {
       // refers to DefinedHere in the enclosing scope
       extern int DefinedHere;
@@ -205,7 +205,7 @@ thread_local float f = 42.0; // Global namespace. Not implicitly static.
 struct S // cannot be applied to type definition
 {
     thread_local int i; // Illegal. The member must be static.
-    thread_local static char buf[10]; // OK 
+    thread_local static char buf[10]; // OK
 };
 
 void DoSomething()
@@ -224,7 +224,7 @@ void DoSomething()
 
 -  您可以套用`thread_local`至資料宣告和定義;`thread_local`不能在函式宣告或定義。
 
--  您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和類別的靜態資料成員。 宣告的任何區域變數`thread_local`是以隱含方式靜態，如果沒有其他的儲存體類別會提供; 換句話說，在區塊範圍`thread_local`相當於`thread_local static`。 
+-  您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和類別的靜態資料成員。 宣告的任何區域變數`thread_local`是以隱含方式靜態，如果沒有其他的儲存體類別會提供; 換句話說，在區塊範圍`thread_local`相當於`thread_local static`。
 
 -  不論是在相同的檔案還是不同的檔案進行宣告和定義，您都必須指定執行緒區域物件之宣告和定義的 `thread_local`。
 
@@ -232,7 +232,7 @@ void DoSomething()
 
 ##  <a name="register"></a>  註冊
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字不再是支援的存放裝置類別。 關鍵字是仍保留供日後使用標準的。 
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字不再是支援的存放裝置類別。 關鍵字是仍保留供日後使用標準的。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -322,4 +322,5 @@ Destroying: Static I3
 - 最後，靜態區域變數 (例如 `I3`) 會在程式執行期間保留其值，不過會在程式終止時終結。
 
 ## <a name="see-also"></a>另請參閱
- [宣告和定義](../cpp/declarations-and-definitions-cpp.md)
+
+[宣告和定義](../cpp/declarations-and-definitions-cpp.md)

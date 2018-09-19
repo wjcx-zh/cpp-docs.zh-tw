@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3303 |Microsoft 文件
+title: 編譯器錯誤 C3303 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec00864bf0fb9d6a2f6e19198285a9b8ac65dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7625d7b16eba226539473ac8af109a3367291cb7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105090"
 ---
 # <a name="compiler-error-c3303"></a>編譯器錯誤 C3303
-'attribute': 屬性只可以在 'usage' 上使用  
-  
- 嘗試使用無效的屬性。
+
+'attribute': 屬性只可以在 'usage' 上使用
+
+嘗試使用無效的屬性。

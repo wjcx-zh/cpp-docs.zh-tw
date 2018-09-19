@@ -1,5 +1,5 @@
 ---
-title: 連結器工具警告 LNK4205 |Microsoft 文件
+title: 連結器工具警告 LNK4205 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1764f04f7733cfb6b9a9a033b8667e53fbbfcc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e76cef24436fc5ce3468a1c94be2d1a49733525a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300712"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105527"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>連結器工具警告 LNK4205
-'filename' 遺漏參考模組; 的目前偵錯資訊如同沒有偵錯資訊般連結物件  
-  
- .Pdb 檔案已過期的資訊。 連結器將會繼續連結物件，而不偵錯資訊。 您可能想要重新編譯物件檔案使用[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)選項。
+
+'filename' 遺失用於參考模組; 目前的偵錯資訊如同沒有偵錯資訊般連結物件
+
+.Pdb 檔案中有過時資訊。 連結器會繼續連結物件，而不偵錯資訊。 您可能想要重新編譯物件檔案使用[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)選項。

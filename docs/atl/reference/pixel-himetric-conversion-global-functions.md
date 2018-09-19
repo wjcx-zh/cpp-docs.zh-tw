@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 086310efe565e060645320db30526b03d57a68af
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b5ab980813eec09fe0eef35f54280444d8c08b80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752406"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105384"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 轉換全域函式
 
@@ -46,10 +46,10 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="parameters"></a>參數
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [in]物件，以 himetric 為單位的大小指標。
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [out]物件的大小，單位為像素所要傳回的指標。
 
 ### <a name="example"></a>範例
@@ -72,10 +72,10 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="parameters"></a>參數
 
-*lpSizeInPix*  
+*lpSizeInPix*<br/>
 [in]物件的像素為單位的大小指標。
 
-*lpSizeInHiMetric*  
+*lpSizeInHiMetric*<br/>
 [out]物件的大小，以 himetric 為單位所要傳回的指標。
 
 ### <a name="example"></a>範例

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5938785d7d9fdccae73048392b74cc5bb34f6680
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4821ba572d2719ebba6c693cc39b96971002512
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106320"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 類別
 
@@ -32,7 +32,7 @@ ms.locfileid: "43753551"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>  
+    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>
 class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 T,
     Copy,
@@ -42,19 +42,19 @@ CollType>,
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 COM 列舉值。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。
 
-*piid*  
+*piid*<br/>
 指標的列舉值介面的介面 ID。
 
-*T*  
+*T*<br/>
 列舉值介面所公開的項目類型。
 
-*複製*  
+*複製*<br/>
 A[複製原則](../../atl/atl-copy-policy-classes.md)類別。
 
-*CollType*  
+*CollType*<br/>
 C + + 標準程式庫容器類別。
 
 ## <a name="remarks"></a>備註
@@ -111,9 +111,9 @@ C + + 標準程式庫容器類別。
 
 ## <a name="see-also"></a>另請參閱
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[ATLCollections 範例： 示範 ICollectionOnSTLImpl、 CComEnumOnSTL，以及自訂複製原則類別](../../visual-cpp-samples.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[ATLCollections 範例： 示範 ICollectionOnSTLImpl、 CComEnumOnSTL，以及自訂複製原則類別](../../visual-cpp-samples.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [IEnumOnSTLImpl 類別](../../atl/reference/ienumonstlimpl-class.md)

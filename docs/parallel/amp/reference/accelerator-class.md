@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bebc10481c446edfa29d09663ac3139ecc5391b
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: dee005091c95bbac5fca64851f631b443bd33cca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106764"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 加速器是適用於資料平行計算的硬體功能。 加速器可能是附加至 PCIe 匯流排 （例如 GPU) 的裝置，或可能是主要 CPU 上設定的擴充的指令。  
@@ -164,11 +164,11 @@ accelerator(const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Device_path`  
- 實體裝置的路徑。  
+*_Device_path*<br/>
+實體裝置的路徑。  
   
- `_Other`  
- 要複製的加速器。  
+*_Other*<br/>
+要複製的加速器。  
   
 ##  <a name="cpu_accelerator"></a> cpu_accelerator 
 
@@ -187,8 +187,8 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 ```  
   
 ### <a name="parameters"></a>參數  
- `qmode`  
- 佇列的模式。  
+*qmode*<br/>
+佇列的模式。  
   
 ### <a name="return-value"></a>傳回值  
  新`accelerator_view`於此加速器，使用指定的佇列模式的物件。  
@@ -470,8 +470,8 @@ bool operator!= (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator`要與這個比較的物件。  
+*_Other*<br/>
+`accelerator`要與這個比較的物件。  
   
 ### <a name="return-value"></a>傳回值  
  `false` 如果兩個`accelerator`物件是否相同，否則`true`。  
@@ -485,8 +485,8 @@ accelerator& operator= (const accelerator& _Other);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator`從複製的物件。  
+*_Other*<br/>
+`accelerator`從複製的物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`accelerator`物件。  
@@ -502,8 +502,8 @@ bool operator== (const accelerator& _Other) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator`要與這個比較的物件。  
+*_Other*<br/>
+`accelerator`要與這個比較的物件。  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果另`accelerator`物件是否與此相同`accelerator`物件; 否則`false`。  
@@ -517,8 +517,8 @@ static inline bool set_default(std::wstring _Path);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Path`  
- 要在加速器的路徑。  
+*路徑 （_p)*<br/>
+要在加速器的路徑。  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果呼叫成功設定預設加速器。 否則為 `false`。  
@@ -532,8 +532,8 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Default_cpu_access_type`  
- 要用於 array/array_view 記憶體配置，在此加速器上預設 cpu access_type。  
+*_Default_cpu_access_type*<br/>
+要用於 array/array_view 記憶體配置，在此加速器上預設 cpu access_type。  
   
 ### <a name="return-value"></a>傳回值  
  布林值，指出是否成功設定加速器的預設 cpu access_type。  
@@ -597,8 +597,8 @@ accelerator_view(const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator_view`来複製的物件。  
+*_Other*<br/>
+`accelerator_view`来複製的物件。  
   
 ##  <a name="create_marker"></a> create_marker 
 
@@ -714,8 +714,8 @@ bool operator!= (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator_view`要與這個比較的物件。  
+*_Other*<br/>
+`accelerator_view`要與這個比較的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果這兩個物件相同則為 `false`，否則為 `true`。  
@@ -729,8 +729,8 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator_view`從複製的物件。  
+*_Other*<br/>
+`accelerator_view`從複製的物件。  
   
 ### <a name="return-value"></a>傳回值  
  已修改的參考`accelerator_view`物件。  
@@ -746,8 +746,8 @@ bool operator== (const accelerator_view& _Other) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- `accelerator_view`要與這個比較的物件。  
+*_Other*<br/>
+`accelerator_view`要與這個比較的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果這兩個物件相同則為 `true`，否則為 `false`。  

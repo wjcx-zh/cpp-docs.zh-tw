@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3498 |Microsoft 文件
+title: 編譯器錯誤 C3498 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,53 +16,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 913caa8fc73e5fe325a9d17a48b6c2b9ba641546
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5bb87abc113e586aa4f3097444df4c5a46a6a92c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254451"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106768"
 ---
 # <a name="compiler-error-c3498"></a>編譯器錯誤 C3498
-'var': 您無法擷取的變數，其中包含 managed 或 WinRTtype  
-  
- 您無法擷取在 lambda 中有 managed 類型或 Windows 執行階段類型的變數。  
-  
-### <a name="to-correct-this-error"></a>更正這個錯誤  
-  
--   將 managed 或 Windows 執行階段變數傳遞至 Lambda 運算式的參數清單。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3498，因為具有 managed 類型的變數會出現在 Lambda 運算式的擷取清單中：  
-  
-```  
-// C3498a.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-int main()  
-{  
-   String ^ s = "Hello";  
-   [&s](String ^ r)   
-      { return String::Concat(s, r); } (", World!"); // C3498  
-}  
-```  
-  
-## <a name="example"></a>範例  
- 下列範例會藉由將傳遞 managed 變數 `s` 至 lambda 運算式的擷取清單中，以解析 C3498：  
-  
-```  
-// C3498b.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-int main()  
-{  
-   String ^ s = "Hello";  
-   [](String ^ s, String ^ r)   
-      { return String::Concat(s, r); } (s, ", World!");  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)
+
+'var': 您無法擷取的變數，其中包含 managed 或 WinRTtype
+
+您無法擷取在 lambda 中有 managed 類型或 Windows 執行階段類型的變數。
+
+### <a name="to-correct-this-error"></a>更正這個錯誤
+
+- 將 managed 或 Windows 執行階段變數傳遞至 Lambda 運算式的參數清單。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3498，因為具有 managed 類型的變數會出現在 Lambda 運算式的擷取清單中：
+
+```
+// C3498a.cpp
+// compile with: /clr
+using namespace System;
+
+int main()
+{
+   String ^ s = "Hello";
+   [&s](String ^ r)
+      { return String::Concat(s, r); } (", World!"); // C3498
+}
+```
+
+## <a name="example"></a>範例
+
+下列範例會藉由將傳遞 managed 變數 `s` 至 lambda 運算式的擷取清單中，以解析 C3498：
+
+```
+// C3498b.cpp
+// compile with: /clr
+using namespace System;
+
+int main()
+{
+   String ^ s = "Hello";
+   [](String ^ s, String ^ r)
+      { return String::Concat(s, r); } (s, ", World!");
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

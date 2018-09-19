@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1091 |Microsoft 文件
+title: 嚴重錯誤 C1091 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48c9dca72bddc844e94fb7978cb6414aa8fecf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e93c2e6c26f8704e700465fb706867129847a460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226206"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104233"
 ---
 # <a name="fatal-error-c1091"></a>嚴重錯誤 C1091
-編譯器限制：字串長度超過 'length' 個位元組的上限  
-  
- 字串常數超過目前的字串長度限制。  
-  
- 您可能想要將靜態字串分割成兩個 (含) 以上的變數，並使用 [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) 將結果聯結作為宣告的一部分或在執行階段時聯結。
+
+編譯器限制：字串長度超過 'length' 個位元組的上限
+
+字串常數超過目前的字串長度限制。
+
+您可能想要將靜態字串分割成兩個 (含) 以上的變數，並使用 [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) 將結果聯結作為宣告的一部分或在執行階段時聯結。

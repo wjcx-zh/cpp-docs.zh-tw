@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd34cbcecdcf8943f8a02a2bb82c5c712f2cb16f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106036"
 ---
 # <a name="adding-an-atl-dialog-box"></a>新增 ATL 對話方塊
 
@@ -44,7 +44,7 @@ ms.locfileid: "43754718"
 
 ## <a name="see-also"></a>另請參閱
 
-[新增類別](../../ide/adding-a-class-visual-cpp.md)   
-[視窗類別](../../atl/atl-window-classes.md)   
+[加入類別](../../ide/adding-a-class-visual-cpp.md)<br/>
+[視窗類別](../../atl/atl-window-classes.md)<br/>
 [訊息對應](../../atl/message-maps-atl.md)
 

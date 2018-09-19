@@ -14,106 +14,107 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1c0d7a50be0ab940ebff82cd8a21fb5ac3aed075
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404222"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106988"
 ---
 # <a name="member-function-templates"></a>成員函式樣板
 
-成員樣板這個詞同時指成員函式樣板和巢狀類別樣板。 成員函式樣板是樣板函式，為類別或類別樣板的成員。  
-  
- 成員函式可以是數種內容中的函式樣板。 類別樣板的所有函式都是泛型，但不稱為成員樣板或成員函式樣板。 如果這些成員函式採用自己的樣板引數，則會視為成員函式樣板。  
-  
+成員樣板這個詞同時指成員函式樣板和巢狀類別樣板。 成員函式樣板是樣板函式，為類別或類別樣板的成員。
+
+成員函式可以是數種內容中的函式樣板。 類別樣板的所有函式都是泛型，但不稱為成員樣板或成員函式樣板。 如果這些成員函式採用自己的樣板引數，則會視為成員函式樣板。
+
 ## <a name="example"></a>範例
 
- 非樣板或樣板類別的成員函式樣板會宣告為函式樣板，並且包含其樣板參數。  
-  
+非樣板或樣板類別的成員函式樣板會宣告為函式樣板，並且包含其樣板參數。
+
 ```cpp
-// member_function_templates.cpp  
-struct X  
-{  
-   template <class T> void mf(T* t) {}  
-};  
-  
-int main()  
-{  
-   int i;  
-   X* x = new X();  
-   x->mf(&i);  
-}  
-```  
-  
+// member_function_templates.cpp
+struct X
+{
+   template <class T> void mf(T* t) {}
+};
+
+int main()
+{
+   int i;
+   X* x = new X();
+   x->mf(&i);
+}
+```
+
 ## <a name="example"></a>範例
 
- 下列範例將示範樣板類別的成員函式樣板。  
-  
+下列範例將示範樣板類別的成員函式樣板。
+
 ```cpp
-// member_function_templates2.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u)  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
-  
-## <a name="example"></a>範例
-  
-```cpp
-// defining_member_templates_outside_class.cpp  
-template<typename T>  
-class X  
-{  
-public:  
-   template<typename U>  
-   void mf(const U &u);  
-};  
-  
-template<typename T> template <typename U>  
-void X<T>::mf(const U &u)  
-{  
-}  
-  
-int main()  
-{  
-}  
-```  
-  
+// member_function_templates2.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u)
+   {
+   }
+};
+
+int main()
+{
+}
+```
+
 ## <a name="example"></a>範例
 
- 區域類別不可以有成員樣板。  
-  
- 成員樣板函式不可以是虛擬函式，而且宣告時的名稱與基底類別虛擬函式相同時，不可覆寫來自基底類別的虛擬函式。  
-  
-下列範例將示範樣板化使用者定義的轉換：  
-  
 ```cpp
-// templated_user_defined_conversions.cpp  
-template <class T>  
-struct S  
-{  
-   template <class U> operator S<U>()  
-   {  
-      return S<U>();  
-   }  
-};  
-  
-int main()  
-{  
-   S<int> s1;  
-   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.  
-}  
-```  
-  
+// defining_member_templates_outside_class.cpp
+template<typename T>
+class X
+{
+public:
+   template<typename U>
+   void mf(const U &u);
+};
+
+template<typename T> template <typename U>
+void X<T>::mf(const U &u)
+{
+}
+
+int main()
+{
+}
+```
+
+## <a name="example"></a>範例
+
+區域類別不可以有成員樣板。
+
+成員樣板函式不可以是虛擬函式，而且宣告時的名稱與基底類別虛擬函式相同時，不可覆寫來自基底類別的虛擬函式。
+
+下列範例將示範樣板化使用者定義的轉換：
+
+```cpp
+// templated_user_defined_conversions.cpp
+template <class T>
+struct S
+{
+   template <class U> operator S<U>()
+   {
+      return S<U>();
+   }
+};
+
+int main()
+{
+   S<int> s1;
+   S<long> s2 = s1;  // Convert s1 using UDC and copy constructs S<long>.
+}
+```
+
 ## <a name="see-also"></a>另請參閱
- [函式樣板](../cpp/function-templates.md)
+
+[函式樣板](../cpp/function-templates.md)

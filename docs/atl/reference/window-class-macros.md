@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106905"
 ---
 # <a name="window-class-macros"></a>視窗類別巨集
 
@@ -29,8 +29,8 @@ ms.locfileid: "43752559"
 
 |||
 |-|-|
-|[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可讓您指定新的視窗類別名稱。| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可讓您指定新的視窗類別，並在封入類別的新類別會使用其視窗程序的名稱。| 
+|[{2&AMP;GT;DECLARE_WND_CLASS&AMP;LT;2](#declare_wnd_class)|可讓您指定新的視窗類別名稱。|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017)可讓您指定新的視窗類別，並在封入類別的新類別會使用其視窗程序的名稱。|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|可讓您指定的現有視窗類別為基礎的新的視窗類別名稱。|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|可讓您指定類別的參數。|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>參數
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新的視窗類別名稱。 如果是 NULL，ATL 會產生視窗類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>參數
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新的視窗類別名稱。 如果是 NULL，ATL 會產生視窗類別名稱。 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in]包含新的視窗類別的視窗類別名稱。 不可以是 NULL。
 
 ### <a name="remarks"></a>備註
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>參數
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]視窗名稱類別，將超級類別*OrigWndClassName*。 如果是 NULL，ATL 會產生視窗類別名稱。
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in]現有視窗類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>參數
 
-*WndClassName*  
+*WndClassName*<br/>
 [in]新的視窗類別名稱。 如果是 NULL，ATL 會產生視窗類別名稱。
 
-*style*  
+*style*<br/>
 [in]視窗的樣式。
 
-*背景*  
+*背景*<br/>
 [in]視窗的背景色彩。
 
 ### <a name="remarks"></a>備註

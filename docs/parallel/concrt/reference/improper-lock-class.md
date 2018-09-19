@@ -1,5 +1,5 @@
 ---
-title: improper_lock 類別 |Microsoft 文件
+title: improper_lock 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695596"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106190"
 ---
 # <a name="improperlock-class"></a>improper_lock 類別
 這個類別描述以不當的方式取得鎖定時擲回的例外狀況。  
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|多載。 建構 `improper_lock exception`。|  
   
 ## <a name="remarks"></a>備註  
- 通常，嘗試取得相同的內容上不可重新進入鎖定以遞迴方式時，會擲回這個例外狀況。  
+ 一般而言，當嘗試取得不可重新進入鎖定以遞迴方式，在相同的內容時，便會擲回這個例外狀況。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述性訊息。  
+*訊息 （_m)*<br/>
+錯誤的描述性訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

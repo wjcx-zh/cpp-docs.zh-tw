@@ -17,25 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0a7b78284b1fc0bd952928952c24c61423396eb2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8c08ef71df7fe3c49d4084a3539b4ddd14d8b6d7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341045"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105113"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 類別和執行緒
+
 從 MFC 4.2 開始，沒有適用於 MFC ODBC 類別的多執行緒支援。 不過，要注意的是，MFC 不需 DAO 類別提供多執行緒的支援。  
   
- ODBC 類別的多執行緒支援有一些限制。 這些類別會包裝 ODBC API，因為它們僅限於建立所在的元件進行多執行緒處理的支援。 比方說，許多 ODBC 驅動程式不是安全執行緒，因此，MFC ODBC 類別不具備執行緒安全如果您使用其中一個這些驅動程式使用。 您應該確認您的特定驅動程式是否具備執行緒安全。  
+ODBC 類別的多執行緒支援有一些限制。 這些類別會包裝 ODBC API，因為它們僅限於建立所在的元件進行多執行緒處理的支援。 比方說，許多 ODBC 驅動程式不是安全執行緒，因此，MFC ODBC 類別不具備執行緒安全如果您使用其中一個這些驅動程式使用。 您應該確認您的特定驅動程式是否具備執行緒安全。  
   
- 在建立多執行緒應用程式時，您應該非常小心使用多個執行緒操作相同的物件。 例如，使用相同`CRecordset`兩個執行緒中的物件可能會造成問題，擷取資料時，一個執行緒中的提取作業可能會覆寫在另一個執行緒中提取的資料。 MFC ODBC 類別，在個別執行緒中的較常見用法是共用開啟`CDatabase`多個使用相同的 ODBC 連接，使用不同的執行緒物件`CRecordset`中每個執行緒的物件。 請注意，您不應將傳遞未開啟`CDatabase`物件至`CRecordset`另一個執行緒的物件。  
+在建立多執行緒應用程式時，您應該非常小心使用多個執行緒操作相同的物件。 例如，使用相同`CRecordset`兩個執行緒中的物件可能會造成問題，擷取資料時，一個執行緒中的提取作業可能會覆寫在另一個執行緒中提取的資料。 MFC ODBC 類別，在個別執行緒中的較常見用法是共用開啟`CDatabase`多個使用相同的 ODBC 連接，使用不同的執行緒物件`CRecordset`中每個執行緒的物件。 請注意，您不應將傳遞未開啟`CDatabase`物件至`CRecordset`另一個執行緒的物件。  
   
 > [!NOTE]
 >  如果您必須有多個執行緒操作相同的物件，您應該實作適當的同步處理機制，例如關鍵區段。 請注意，某些作業，例如`Open`，未受保護。 您應該確定，這些作業將不會呼叫同時從不同的執行緒。  
   
- 如需建立多執行緒應用程式的詳細資訊，請參閱 <<c0> [ 多執行緒主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+如需建立多執行緒應用程式的詳細資訊，請參閱 <<c0> [ 多執行緒主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
- [資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+
+[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

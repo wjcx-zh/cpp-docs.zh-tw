@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf82c48cb5b1f9bd93a9c30afe8c698699c8199b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106346"
 ---
 # <a name="property-map-macros"></a>屬性對應巨集
 
@@ -55,7 +55,7 @@ BEGIN_PROP_MAP(theClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 [in]指定包含屬性對應的類別。
 
 ### <a name="remarks"></a>備註
@@ -80,13 +80,13 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 
 ### <a name="parameters"></a>參數
 
-*szDesc*  
+*szDesc*<br/>
 [in]屬性描述。
 
-*成員*  
+*成員*<br/>
 [in]包含範圍; 的資料成員比方說， `m_sizeExtent`。
 
-*vt*  
+*vt*<br/>
 [in]指定之屬性的 VARIANT 類型。
 
 ### <a name="remarks"></a>備註
@@ -113,16 +113,16 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 
 ### <a name="parameters"></a>參數
 
-*szDesc*  
+*szDesc*<br/>
 [in]屬性描述。
 
-*dispid*  
+*dispid*<br/>
 [in]屬性的 DISPID。
 
-*clsid*  
+*clsid*<br/>
 [in]相關聯的屬性頁的 CLSID。 使用特殊值 CLSID_NULL 並沒有相關聯的屬性頁的屬性。
 
-*vt*  
+*vt*<br/>
 [in]屬性的型別。
 
 ### <a name="remarks"></a>備註
@@ -145,19 +145,19 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 
 ### <a name="parameters"></a>參數
 
-*szDesc*  
+*szDesc*<br/>
 [in]屬性描述。
 
-*dispid*  
+*dispid*<br/>
 [in]屬性的 DISPID。
 
-*clsid*  
+*clsid*<br/>
 [in]相關聯的屬性頁的 CLSID。 使用特殊值 CLSID_NULL 並沒有相關聯的屬性頁的屬性。
 
-*iidDispatch*  
+*iidDispatch*<br/>
 [in]定義該屬性的雙重介面的 IID。
 
-*vt*  
+*vt*<br/>
 [in]屬性的型別。
 
 ### <a name="remarks"></a>備註
@@ -182,7 +182,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 [in]屬性頁 CLSID。
 
 ### <a name="remarks"></a>備註

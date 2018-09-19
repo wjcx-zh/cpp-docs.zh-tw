@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2532 |Microsoft 文件
+title: 編譯器錯誤 C2532 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78138de907b77d0a770cd606d805f60091ce0fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a621b093eaf0e706249161dd2b1b4a3fd282be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106995"
 ---
 # <a name="compiler-error-c2532"></a>編譯器錯誤 C2532
-'identifier': 參考的修飾詞不合法  
-  
- 參考已變更。 不能修改參考來參考另一個物件。 請改用指標。
+
+'identifier': 參考的修飾詞不合法
+
+參考已變更。 參考無法修改成指向另一個物件。 請改用指標。

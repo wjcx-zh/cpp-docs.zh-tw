@@ -1,5 +1,5 @@
 ---
-title: 命令物件介面 |Microsoft 文件
+title: 命令物件介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9c597cc30e23ffce2787eac6c13f6ba8c53f96c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea824fda89ccf45c62145a0fe72e55edc614970a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096115"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106953"
 ---
 # <a name="command-object-interfaces"></a>命令物件介面
-命令物件會使用`IAccessor`介面以指定參數繫結。 取用者可以呼叫`IAccessor::CreateAccessor`，它會將陣列傳遞`DBBINDING`結構。 `DBBINDING` 包含有關 （例如類型和長度） 的資料行繫結資訊。 提供者會接收此結構，並判斷應該傳送之資料的方式，以及是否需要轉換。  
+
+命令物件會使用`IAccessor`介面來指定參數繫結。 取用者可以呼叫`IAccessor::CreateAccessor`，它會將陣列傳遞`DBBINDING`結構。 `DBBINDING` 包含資料行繫結 （例如型別和長度） 的相關資訊。 提供者會收到結構，並判斷應該傳送資料的方式，以及是否需要轉換。  
   
- `ICommandText`介面會提供方法來指定文字命令。 `ICommandProperties`介面會處理所有的命令屬性。  
+`ICommandText`介面可用來指定文字的命令。 `ICommandProperties`介面處理命令的所有屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

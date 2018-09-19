@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104318"
 ---
 # <a name="assume"></a>__assume
 **Microsoft 專屬**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>參數  
- `expression`  
- 假設評估為 true 的任何運算式。  
+*運算式*<br/>
+假設評估為 true 的任何運算式。  
   
 ## <a name="remarks"></a>備註  
  最佳化程式會在關鍵字出現處假設 `expression` 代表的條件為 true，並保持為 true，直到修改 `expression` (例如，藉由指派給變數) 為止。 選擇性使用 `__assume` 傳遞給最佳化程式的提示，可以改善最佳化。  

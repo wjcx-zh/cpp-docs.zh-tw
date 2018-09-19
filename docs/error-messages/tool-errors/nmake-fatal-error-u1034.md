@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1034 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1034 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b8442ffcab4a800902a634ddb015c7bcb4b91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a8f6f64f3f24ebb6294f16c451a1fb6027ec1f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105085"
 ---
 # <a name="nmake-fatal-error-u1034"></a>NMAKE 嚴重錯誤 U1034
-語法錯誤： 遺漏分隔符號  
-  
- 冒號 (**:**) 分隔的目標，而且相依項目遺失。
+
+語法錯誤： 遺漏分隔符號
+
+冒號 (**:**) 分隔的目標，且遺失相依性。

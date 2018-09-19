@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2649 |Microsoft 文件
+title: 編譯器錯誤 C2649 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23885c43618eab725dbf4425c273a59a77ba393
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 719a822f0e6b00d7f0de914c50f0391d4f3484f9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199297"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105072"
 ---
 # <a name="compiler-error-c2649"></a>編譯器錯誤 C2649
-'identifier': 不是 'class-key'  
-  
- 類別、結構或等位宣告使用不正確的標記。
+
+'identifier': 不是 'class-key'
+
+類別、結構或等位宣告使用不正確的標記。

@@ -1,5 +1,5 @@
 ---
-title: call_in_appdomain 函式 |Microsoft 文件
+title: call_in_appdomain 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111282"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105241"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain 函式
-指定應用程式定義域中執行的函式。  
+指定的應用程式定義域中執行的函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,23 +49,23 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>參數  
- `appdomainId`  
- Appdomain 中用來呼叫此函式。  
+*appdomainId*<br/>
+要呼叫的函式的 appdomain。  
   
- `voidFunc`  
- 指標`void`N 參數的函式 (0 < = N < = 15)。  
+*voidFunc*<br/>
+指標`void`N 參數的函式 (0 < = N < = 15)。  
   
- `nonvoidFunc`  
- 非指標`void`N 參數的函式 (0 < = N < = 15)。  
+*nonvoidFunc*<br/>
+非指標`void`N 參數的函式 (0 < = N < = 15)。  
   
- `arg1...argN`  
- 0 到 15 個參數傳遞給`voidFunc`或`nonvoidFunc`其他 appdomain 中。  
+*arg1...argN*<br/>
+0 到 15 個參數傳遞給`voidFunc`或`nonvoidFunc`其他的 appdomain 中。  
   
 ## <a name="return-value"></a>傳回值  
- 執行結果`voidFunc`或`nonvoidFunc`指定的應用程式網域中。  
+ 執行的結果`voidFunc`或`nonvoidFunc`中指定的應用程式定義域。  
   
 ## <a name="remarks"></a>備註  
- 函式的引數傳遞至`call_in_appdomain`必須不是 CLR 型別。  
+ 函式的引數傳遞給`call_in_appdomain`不得 CLR 型別。  
   
 ## <a name="example"></a>範例  
   

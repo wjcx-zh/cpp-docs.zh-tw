@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610e98e15e4e7bd20802d39a70354a20076ce1a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 91ed7cb82bbf9036a32ee20ecf33a8138086a98c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103942"
 ---
 # <a name="abstract-classes-c"></a>抽象類別 (C++)
 
@@ -97,4 +97,5 @@ int main() {
 > 在上述範例中，純虛擬函式 `base::~base` 是從 `derived::~derived` 隱含呼叫。 另外也可以使用完整限定的成員函式名稱明確呼叫純虛擬函式。
 
 ## <a name="see-also"></a>另請參閱
-[繼承](../cpp/inheritance-cpp.md)  
+
+[繼承](../cpp/inheritance-cpp.md)

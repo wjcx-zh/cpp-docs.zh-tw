@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107113"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 類別
 
@@ -76,13 +76,13 @@ ms.locfileid: "43761871"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IOleObjectImpl`。
 
 ## <a name="members"></a>成員
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。 不使用 ATL 實作。
 
 ### <a name="return-value"></a>傳回值
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。 不使用 ATL 實作。
 
 ### <a name="return-value"></a>傳回值
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。 不使用 ATL 實作。
 
 ### <a name="return-value"></a>傳回值
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>參數
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in]指標，該矩形容器會想要繪製到的控制項。
 
-*hwndParent*  
+*hwndParent*<br/>
 [in]包含控制項的視窗控制代碼。 不使用 ATL 實作。
 
 ### <a name="return-value"></a>傳回值
@@ -833,6 +833,6 @@ STDMETHOD(Update)(void);
 
 ## <a name="see-also"></a>另請參閱
 
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
-[ActiveX 控制項介面](/windows/desktop/com/activex-controls-interfaces)   
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
+[ActiveX 控制項介面](/windows/desktop/com/activex-controls-interfaces)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

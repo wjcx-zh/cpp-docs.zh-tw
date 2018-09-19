@@ -1,5 +1,5 @@
 ---
-title: unorm_2 類別 |Microsoft 文件
+title: unorm_2 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 678cb8a782d07b64b93f87963b0ead500136fbcf
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6f49d51fc939df8fc26000627552afc19a0208d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685979"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106203"
 ---
 # <a name="unorm2-class"></a>unorm_2 類別
-表示兩個不帶正負號的一般數字的短向量。  
+表示短向量的兩個不帶正負號的一般數字。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ class unorm_2;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[unorm_2 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[unorm_2 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -126,7 +126,7 @@ class unorm_2;
   
 ##  <a name="ctor"></a> unorm_2 
 
- 預設建構函式，初始化為 0 的所有項目。  
+ 預設建構函式，初始化具有 0 的所有項目。  
   
 ```  
 unorm_2() restrict(amp,
@@ -186,17 +186,17 @@ explicit inline unorm_2(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_V0`  
- 要初始化項目 0 的值。  
+*_V0*<br/>
+要初始化項目 0 的值。  
   
- `_V1`  
- 要初始化項目 1 的值。  
+*_V1*<br/>
+要初始化項目 1 的值。  
   
- `_V`  
- 初始設定的值。  
+*（_V)*<br/>
+初始設定的值。  
   
- `_Other`  
- 用來初始化物件。  
+*_Other*<br/>
+用來初始化的物件。  
   
 ##  <a name="unorm_2__size"></a> 大小 
 

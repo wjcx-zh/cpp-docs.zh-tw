@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3065 |Microsoft 文件
+title: 編譯器錯誤 C3065 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a6bb966fd973a9ede675e98761e8649ca20c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35867da62dad9e399e4b4672f84478e4ea9688a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104931"
 ---
 # <a name="compiler-error-c3065"></a>編譯器錯誤 C3065
-在非類別範圍不允許屬性宣告  
-  
- [屬性](../../cpp/property-cpp.md) __declspec 修飾詞用在類別外部。  屬性只能在類別內宣告。  
-  
- 下列範例會產生 C3065：  
-  
-```  
-// C3065.cpp  
-// compile with: /c  
-__declspec(property(get=get_i)) int i;   // C3065  
-  
-class x {  
-public:  
-   __declspec(property(get=get_i)) int i;   // OK  
-};  
+
+在非類別範圍不允許屬性宣告
+
+[屬性](../../cpp/property-cpp.md) __declspec 修飾詞用在類別外部。  屬性只能在類別內宣告。
+
+下列範例會產生 C3065：
+
+```
+// C3065.cpp
+// compile with: /c
+__declspec(property(get=get_i)) int i;   // C3065
+
+class x {
+public:
+   __declspec(property(get=get_i)) int i;   // OK
+};
 ```

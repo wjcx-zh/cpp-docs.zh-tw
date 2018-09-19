@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2178 |Microsoft 文件
+title: 編譯器錯誤 C2178 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2017
 ms.technology:
@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3727a66554b2e128061820df160c02a1370ebb74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af9efdb3258e6793a17a26b552df8ba4e63c9107
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171291"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102331"
 ---
-# <a name="compiler-error-c2178"></a>編譯器錯誤 C2178  
-  
-'*識別碼*'不可以宣告與'*規範*' 規範  
-  
-A`mutable`規範使用在宣告中，但在此內容中不允許規範。  
-  
-`mutable`規範可以只會套用至類別資料成員的名稱，但不可套用至宣告的名稱`const`或`static`，但不可套用至參考的成員。  
-  
-## <a name="example"></a>範例  
-  
-下列範例顯示如何 C2178 可能會發生，以及如何修正此問題。  
-  
-```  
+# <a name="compiler-error-c2178"></a>編譯器錯誤 C2178
+
+'*識別碼*'不可以宣告使用'*規範*' 規範
+
+A`mutable`規範使用在宣告中，但在此內容中不允許規範。
+
+`mutable`規範可以只會套用至類別資料成員的名稱，但不可套用至宣告的名稱`const`或`static`，但不可套用至參考的成員。
+
+## <a name="example"></a>範例
+
+下列範例會示範如何 C2178 可能會發生，以及如何修正此問題。
+
+```
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 
@@ -46,4 +46,4 @@ class S {
 
 mutable int x = 4; // C2178
 // To fix, remove mutable keyword
-```  
+```

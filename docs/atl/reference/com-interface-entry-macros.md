@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758153"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085221"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>參數
 
-[in] 介面名稱的 x 類別物件衍生自直接。
+*x*<br/>
+[in]您類別的物件直接衍生自介面的名稱。
 
 ### <a name="remarks"></a>備註
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]您要從您的物件公開的介面名稱。
 
-*x2*  
+*x2*<br/>
 [in]要從中繼承分支名稱*x*公開。
 
 ### <a name="remarks"></a>備註
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]公開介面的 GUID。
 
-*x*  
+*x*<br/>
 [in]其 vtable 即將公開為所識別的介面的類別名稱*iid*。
 
 ### <a name="example"></a>範例
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]您指定介面的 GUID。
 
-*x*  
+*x*<br/>
 [in]您類別的物件直接衍生自介面的名稱。
 
-*x2*  
+*x2*<br/>
 [in]您類別的物件直接衍生自第二個介面的名稱。
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]查詢介面的 GUID。
 
-*punk*  
+*punk*<br/>
 [in]名稱`IUnknown`指標。
 
 ### <a name="remarks"></a>備註
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>參數
 
-*punk*  
+*punk*<br/>
 [in]名稱`IUnknown`指標。
 
 ### <a name="remarks"></a>備註
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]查詢介面的 GUID。
 
-*punk*  
+*punk*<br/>
 [in]名稱`IUnknown`指標。 必須是包含 COM 對應之類別的成員。
 
-*clsid*  
+*clsid*<br/>
 [in]如果會建立彙總的識別碼*punk*是 NULL。
 
 ### <a name="remarks"></a>備註
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>參數
 
-*punk*  
+*punk*<br/>
 [in]名稱`IUnknown`指標。 必須是包含 COM 對應之類別的成員。
 
-*clsid*  
+*clsid*<br/>
 [in]如果會建立彙總的識別碼*punk*是 NULL。
 
 ### <a name="remarks"></a>備註
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]文字用來建構的介面識別項。
 
 ### <a name="remarks"></a>備註
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]分割介面的 GUID。
 
-*x*  
+*x*<br/>
 [in]實作介面的類別名稱。
 
-*punk*  
+*punk*<br/>
 [in]名稱`IUnknown`指標。 必須是包含 COM 對應之類別的成員。 應該初始化為 NULL 類別物件的建構函式中。
 
 ### <a name="remarks"></a>備註
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]分割介面的 GUID。
 
-*x*  
+*x*<br/>
 [in]實作介面的類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>參數
 
-*classname*  
+*classname*<br/>
 [in]目前物件的基底類別。
 
 ### <a name="remarks"></a>備註
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]公開介面的 GUID。
 
-*dw*  
+*dw*<br/>
 [in]為參數傳遞給*func*。
 
-*func*  
+*func*<br/>
 [in]將傳回的函式指標*iid*。
 
 ### <a name="remarks"></a>備註
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>參數
 
-*dw*  
+*dw*<br/>
 [in]為參數傳遞給*func*。
 
-*func*  
+*func*<br/>
 [in]取得在處理 COM 對應中的此項目時所呼叫的函式。
 
 ### <a name="remarks"></a>備註
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>參數
 
-*x*  
+*x*<br/>
 [in]文字用來建構的介面識別項。
 
 ### <a name="remarks"></a>備註

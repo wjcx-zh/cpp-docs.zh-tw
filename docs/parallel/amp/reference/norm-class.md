@@ -1,5 +1,5 @@
 ---
-title: norm 類別 |Microsoft 文件
+title: norm 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087472"
 ---
 # <a name="norm-class"></a>norm 類別
-表示範數字。 每個項目是浮點數中的範圍 [-1.0 f、 1.0 f]。  
+代表範數字。 每個項目是浮點數字範圍內的 [-1.0 f、 1.0f]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_V`  
- 用來初始化的值。  
+*（_V)*<br/>
+用來初始化的值。  
   
- `_Other`  
- 用來初始化物件。  
+*_Other*<br/>
+用來初始化的物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: norm_3 類別 |Microsoft 文件
+title: norm_3 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688657"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074379"
 ---
 # <a name="norm3-class"></a>norm_3 類別
 表示短向量的三個一般數字。  
@@ -110,7 +110,7 @@ class norm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[norm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[norm_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -170,7 +170,7 @@ class norm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[大小常數](#size)||  
+|[常數的大小](#size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -216,7 +216,7 @@ class norm_3;
  **命名空間：** concurrency:: graphics  
 
 ## <a name="ctor"></a> norm_3 建構函式
-預設建構函式，初始化為 0 的所有項目。  
+預設建構函式，初始化具有 0 的所有項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -264,22 +264,22 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_V0`  
- 要初始化項目 0 的值。  
+*_V0*<br/>
+要初始化項目 0 的值。  
   
- `_V1`  
- 要初始化項目 1 的值。  
+*_V1*<br/>
+要初始化項目 1 的值。  
   
- `_V2`  
- 要初始化項目 2 的值。  
+*並將 _V2*<br/>
+要初始化項目 2 的值。  
   
- `_V`  
- 初始設定的值。  
+*（_V)*<br/>
+初始設定的值。  
   
- `_Other`  
- 用來初始化物件。  
+*_Other*<br/>
+用來初始化的物件。  
   
-## <a name="a-namesize-size-constant"></a><a name="size"> 大小常數
+## <a name="a-namesize-size-constant"></a><a name="size"> 常數的大小
 ### <a name="syntax"></a>語法  
   
 ```  

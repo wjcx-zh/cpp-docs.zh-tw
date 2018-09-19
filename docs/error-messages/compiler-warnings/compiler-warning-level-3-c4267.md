@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4267 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4267 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de75c4eb05002f638e6b665a39f2a35e114b0ab4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 359b254c937eb0c52edd56ae9a2616bfea764213
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290159"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097034"
 ---
 # <a name="compiler-warning-level-3-c4267"></a>編譯器警告 (層級 3) C4267
-'var': 將 'size_t' 轉換為 'type'，資料可能遺失  
-  
- 編譯器偵測到從 `size_t` 轉換成較小的類型。  
-  
- 若要修正這項警告，請使用 `size_t`，而不是 `type`。 或者，使用至少與 `size_t` 一樣大的整數類型。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C4267：  
-  
-```  
-// C4267.cpp  
-// compile by using: cl /W4 C4267.cpp  
-void Func1(short) {}  
-void Func2(int) {}  
-void Func3(long) {}  
-void Func4(size_t) {}  
-  
-int main() {  
-   size_t bufferSize = 10;  
-   Func1(bufferSize);   // C4267 for all platforms  
-   Func2(bufferSize);   // C4267 only for 64-bit platforms  
-   Func3(bufferSize);   // C4267 only for 64-bit platforms  
-   Func4(bufferSize);   // OK for all platforms  
-}  
+
+'var': 將 'size_t' 轉換為 'type'，資料可能遺失
+
+編譯器偵測到從 `size_t` 轉換成較小的類型。
+
+若要修正這項警告，請使用 `size_t`，而不是 `type`。 或者，使用至少與 `size_t` 一樣大的整數類型。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4267：
+
+```
+// C4267.cpp
+// compile by using: cl /W4 C4267.cpp
+void Func1(short) {}
+void Func2(int) {}
+void Func3(long) {}
+void Func4(size_t) {}
+
+int main() {
+   size_t bufferSize = 10;
+   Func1(bufferSize);   // C4267 for all platforms
+   Func2(bufferSize);   // C4267 only for 64-bit platforms
+   Func3(bufferSize);   // C4267 only for 64-bit platforms
+   Func4(bufferSize);   // OK for all platforms
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4570 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4570 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a79b6afae4bc14e5fcd2dc4979ebd29c60c15b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 063c976915e744df8eda3604bdfa121ba21ef36d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099442"
 ---
 # <a name="compiler-warning-level-3-c4570"></a>編譯器警告 (層級 3) C4570
-'type': 未明確宣告為抽象，但是擁有抽象函式  
-  
- 此型別包含[抽象](../../windows/abstract-cpp-component-extensions.md)函式應該本身標記為抽象。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C4570。  
-  
-```  
-// C4570.cpp  
-// compile with: /clr /W3 /c  
-ref struct X {   // C4570  
-// try the following line instead  
-// ref class X abstract {  
-   virtual void f() abstract;  
-};  
+
+'type': 未明確宣告為抽象，但是擁有抽象函式
+
+包含的類型[抽象](../../windows/abstract-cpp-component-extensions.md)函式應該本身標示為抽象。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4570。
+
+```
+// C4570.cpp
+// compile with: /clr /W3 /c
+ref struct X {   // C4570
+// try the following line instead
+// ref class X abstract {
+   virtual void f() abstract;
+};
 ```

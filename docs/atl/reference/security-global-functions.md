@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9ee4c25932064ddb76078701a1a6606f27cb1a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075149"
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 
@@ -72,13 +72,13 @@ inline bool AtlGetDacl(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要擷取的安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*pDacl*  
+*pDacl*<br/>
 將包含擷取的安全性資訊的 DACL 物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -106,16 +106,16 @@ inline bool AtlSetDacl(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要設定安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*rDacl*  
+*rDacl*<br/>
 DACL 包含新的安全性資訊。
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 繼承的流程控制。 這個值可以是 0 （預設值），PROTECTED_DACL_SECURITY_INFORMATION 或 UNPROTECTED_DACL_SECURITY_INFORMATION。
 
 ### <a name="return-value"></a>傳回值
@@ -124,7 +124,7 @@ DACL 包含新的安全性資訊。
 
 ### <a name="remarks"></a>備註
 
-在偵錯組建中，判斷提示就會發生錯誤，如果*hObject*無效，或如果*dwInheritanceFlowControl*不是其中的三個允許的值。  
+在偵錯組建中，判斷提示就會發生錯誤，如果*hObject*無效，或如果*dwInheritanceFlowControl*不是其中的三個允許的值。
 ### <a name="requirements"></a>需求
 
 **標頭：** atlsecurity.h 
@@ -145,13 +145,13 @@ inline bool AtlGetGroupSid(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要從中擷取安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*pSid*  
+*pSid*<br/>
 指標`CSid`其中將包含新的安全性資訊的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -178,13 +178,13 @@ inline bool AtlSetGroupSid(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要設定安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*rSid*  
+*rSid*<br/>
 `CSid`物件，其中包含新的安全性資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -211,13 +211,13 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要從中擷取安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*pSid*  
+*pSid*<br/>
 指標`CSid`其中將包含新的安全性資訊的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -244,13 +244,13 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要設定安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*rSid*  
+*rSid*<br/>
 `CSid`物件，其中包含新的安全性資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -278,16 +278,16 @@ inline bool AtlGetSacl(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要從中擷取安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*pSacl*  
+*pSacl*<br/>
 將包含擷取的安全性資訊的 SACL 物件的指標。
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 如果為 true，此函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成時。
 
 ### <a name="return-value"></a>傳回值
@@ -320,19 +320,19 @@ inline bool AtlSetSacl(
 
 ### <a name="parameters"></a>參數
 
-*hObject*  
+*hObject*<br/>
 要設定安全性資訊的物件控制代碼。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*hObject*參數。
 
-*rSacl*  
+*rSacl*<br/>
 SACL 包含新的安全性資訊。
 
-*dwInheritanceFlowControl*  
+*dwInheritanceFlowControl*<br/>
 繼承的流程控制。 這個值可以是 0 （預設值），PROTECTED_SACL_SECURITY_INFORMATION 或 UNPROTECTED_SACL_SECURITY_INFORMATION。
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 如果為 true，此函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成時。
 
 ### <a name="return-value"></a>傳回值
@@ -369,19 +369,19 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*pszObjectName*  
+*pszObjectName*<br/>
 以 null 終止的字串，指定要從中擷取安全性資訊的物件名稱的指標。
 
-*ObjectType*  
+*ObjectType*<br/>
 指定的值從[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)列舉，指出所識別的物件型別*pszObjectName*參數。
 
-*pSecurityDescriptor*  
+*pSecurityDescriptor*<br/>
 它會接收要求的安全性描述元物件。
 
-*requestedInfo*  
+*requestedInfo*<br/>
 一組[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位元旗標，表示要擷取的安全性資訊的類型。 這個參數可以是下列值的組合。
 
-*bRequestNeededPrivileges*  
+*bRequestNeededPrivileges*<br/>
 如果為 true，此函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成時。
 
 ### <a name="return-value"></a>傳回值

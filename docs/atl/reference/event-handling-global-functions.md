@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcdf854eeeceb1aa3648ff984e3a2c956d973eeb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: acc8aeb54e98e531756d71d6be389dca8a494f4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754661"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091450"
 ---
 # <a name="event-handling-global-functions"></a>事件處理全域函式
 
@@ -52,7 +52,7 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 
 ### <a name="parameters"></a>參數
 
-*hEvent*  
+*hEvent*<br/>
 [in]要等候的物件控制代碼。
 
 ### <a name="return-value"></a>傳回值

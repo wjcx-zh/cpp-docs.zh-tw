@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd6c2ddfaef8c298696ea33537ea7bfd754330f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 112700fffc3b4104599f68f80f00e8d3239788f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089563"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl 類別
 
@@ -53,7 +53,7 @@ class IOleInPlaceObjectWindowlessImpl
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IOleInPlaceObjectWindowlessImpl`。
 
 ## <a name="members"></a>成員
@@ -197,5 +197,5 @@ HRESULT UIDeactivate();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

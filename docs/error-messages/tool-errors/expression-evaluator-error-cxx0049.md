@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0049 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0049 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097066"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>運算式評估工具錯誤 CXX0049
-過時的 OMF-請重新連結程式  
-  
- 程式會使用舊的 OMF （物件模組格式）。  
-  
- 重新連結使用最新的連結器版本的程式。  
-  
- 這個錯誤是與 can0049 相同。
+
+過時的 OMF-請重新連結程式
+
+程式會使用舊的 OMF （物件模組格式）。
+
+重新連結使用目前的連結器版本的程式。
+
+此錯誤是與 can0049 相同。

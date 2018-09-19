@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2645 |Microsoft 文件
+title: 編譯器錯誤 C2645 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0330f9f678da58648c2fd445f7a291b02c167a89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ada345b79c061c71bc716bf7baf96116444bcc7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229144"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076823"
 ---
 # <a name="compiler-error-c2645"></a>編譯器錯誤 C2645
-成員指標沒有限定的名稱 (找到 ':: *')  
-  
- 成員指標的宣告未指定類別。  
-  
- 下列範例會產生 C2645:  
-  
-```  
-// C2645.cpp  
-class A {};  
-int main() {  
-   int B::* bp;   // C2645 B not defined  
-   int A::* ap;   // OK  
-}  
+
+成員指標沒有限定的名稱 (找到 ':: *')
+
+成員指標的宣告未指定類別。
+
+下列範例會產生 C2645:
+
+```
+// C2645.cpp
+class A {};
+int main() {
+   int B::* bp;   // C2645 B not defined
+   int A::* ap;   // OK
+}
 ```

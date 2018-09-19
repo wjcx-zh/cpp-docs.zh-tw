@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1209 |Microsoft 文件
+title: 嚴重錯誤 C1209 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce9ebf0281981264c3abeb1485cdffb89410e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e518cacdeb8db133ff6378e6569ee868312b8333
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081490"
 ---
 # <a name="fatal-error-c1209"></a>嚴重錯誤 C1209
-所安裝的執行階段版本不支援 Friend 組件  
-  
- 如果您有目前版本的編譯器，但 Common Language Runtime 來自舊版本，就會發生 C1208。  
-  
- 編譯器的某個功能可能無法在執行階段的舊版本上運作。  
-  
- 若要解決 C1209，請安裝所使用編譯器隨附的 Common Language Runtime。  
-  
- 如需詳細資訊，請參閱[Friend 組件 （c + +）](../../dotnet/friend-assemblies-cpp.md)。
+
+所安裝的執行階段版本不支援 Friend 組件
+
+如果您有目前版本的編譯器，但 Common Language Runtime 來自舊版本，就會發生 C1208。
+
+編譯器的某個功能可能無法在執行階段的舊版本上運作。
+
+若要解決 C1209，請安裝所使用編譯器隨附的 Common Language Runtime。
+
+如需詳細資訊，請參閱 < [Friend 組件 （c + +）](../../dotnet/friend-assemblies-cpp.md)。

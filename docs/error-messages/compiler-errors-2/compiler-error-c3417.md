@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3417 |Microsoft 文件
+title: 編譯器錯誤 C3417 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b83c3b6cf5697ca2e52f9f8ad6afdc2754edd4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b21636c3500625f262355750d32aa0fa3faeb5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073846"
 ---
 # <a name="compiler-error-c3417"></a>編譯器錯誤 C3417
-'member': 實值類型不能包含使用者定義的特殊成員函式  
-  
- 實值類型不能包含等預設執行個體建構函式、 解構函式或複製建構函式的函式。  
-  
- 下列範例會產生 C3517:  
-  
-```  
-// C3417.cpp  
-// compile with: /clr /c  
-value class VC {  
-   VC(){}   // C3417  
-  
-   // OK  
-   static VC(){}  
-   VC(int i){}  
-};  
+
+'member': 實值型別不能包含使用者定義的特殊成員函式
+
+實值型別不能包含等預設執行個體建構函式、 解構函式或複製建構函式的函式。
+
+下列範例會產生 C3517:
+
+```
+// C3417.cpp
+// compile with: /clr /c
+value class VC {
+   VC(){}   // C3417
+
+   // OK
+   static VC(){}
+   VC(int i){}
+};
 ```

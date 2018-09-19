@@ -1,5 +1,5 @@
 ---
-title: ptr::operator = |Microsoft 文件
+title: ptr::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075071"
 ---
 # <a name="ptroperator"></a>ptr::operator=
-將 COM 物件，以附加`com::ptr`。  
+附加至 COM 物件`com::ptr`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,14 +39,14 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_right`  
- 要附加的 COM 介面指標。  
+*右方 （_r)*<br/>
+要附加的 COM 介面指標。  
   
 ## <a name="return-value"></a>傳回值  
- 上的追蹤參考`com::ptr`。  
+ 追蹤參考上的`com::ptr`。  
   
 ## <a name="exceptions"></a>例外狀況  
- 如果`com::ptr`已經擁有的 COM 物件，參考`operator=`會擲回<xref:System.InvalidOperationException>。  
+ 如果`com::ptr`已經擁有的 COM 物件的參考`operator=`就會擲回<xref:System.InvalidOperationException>。  
   
 ## <a name="remarks"></a>備註  
  若要將 COM 物件指派`com::ptr`參考 COM 物件，但不會釋放呼叫者的參考。  
@@ -54,7 +54,7 @@ ptr<_interface_type> % operator=(
  此運算子具有相同的效果`Attach`。  
   
 ## <a name="example"></a>範例  
- 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument`成員函式的第一個呼叫`Release`任何先前擁有物件，然後使用`operator=`附加新的文件物件。  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument`成員函式會先呼叫`Release`任何先前擁有物件，然後使用`operator=`附加新的文件物件。  
   
 ```  
 // comptr_op_assign.cpp  

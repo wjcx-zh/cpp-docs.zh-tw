@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6b812ddd4dbd3c81d9018be926d9103bca3ec796
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f26a9d603238c83aa4243092e88719d1de4fda1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755969"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093063"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 類別
 
@@ -34,13 +34,13 @@ ms.locfileid: "43755969"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T>  
+template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別。
 
 `CComClassFactorySingleton` 衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。 每次呼叫`CreateInstance`方法只會查詢此物件的介面指標。
@@ -91,13 +91,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>參數
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
 
-*riid*  
+*riid*<br/>
 [in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObj*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -120,9 +120,9 @@ CComPtr<IUnknown> m_spObj;
 
 ## <a name="see-also"></a>另請參閱
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
-[CComClassFactory2 類別](../../atl/reference/ccomclassfactory2-class.md)   
-[CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[CComClassFactory2 類別](../../atl/reference/ccomclassfactory2-class.md)<br/>
+[CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

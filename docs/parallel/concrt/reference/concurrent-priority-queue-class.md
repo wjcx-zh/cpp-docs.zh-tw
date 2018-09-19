@@ -1,5 +1,5 @@
 ---
-title: concurrent_priority_queue 類別 |Microsoft 文件
+title: concurrent_priority_queue 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d52598f5ef987ce05eb664c6d3ef24ab86e002d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096136"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 類別
 `concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。  
@@ -46,14 +46,14 @@ template <typename T,
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 要儲存在優先權佇列中之項目的資料類型。  
+*T*<br/>
+要儲存在優先權佇列中之項目的資料類型。  
   
- `_Compare`  
- 函式物件的類型，可用來比較兩個項目值做為排序鍵，以判斷其在優先權佇列中的相對順序。 這個引數是選用引數，且預設值是二元述詞 `less<T>`。  
+*_Compare*<br/>
+函式物件的類型，可用來比較兩個項目值做為排序鍵，以判斷其在優先權佇列中的相對順序。 這個引數是選用引數，且預設值是二元述詞 `less<T>`。  
   
- `_Ax`  
- 代表預存配置器物件的類型，該物件會封裝有關配置和解除配置並行優先權佇列之記憶體的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<T>`。  
+*_Ax*<br/>
+代表預存配置器物件的類型，該物件會封裝有關配置和解除配置並行優先權佇列之記憶體的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<T>`。  
   
 ## <a name="members"></a>成員  
   
@@ -78,18 +78,18 @@ template <typename T,
 |名稱|描述|  
 |----------|-----------------|  
 |[clear](#clear)|清除並行優先權中的所有項目。 這個方法不是並行安全。|  
-|[empty](#empty)|測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全。|  
-|[get_allocator](#get_allocator)|傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全。|  
-|[push](#push)|多載。 將項目加入至並行優先權佇列。 這個方法是並行安全。|  
-|[size](#size)|傳回並行優先權佇列中的項目數。 這個方法是並行安全。|  
+|[empty](#empty)|測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。|  
+|[get_allocator](#get_allocator)|傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全的。|  
+|[push](#push)|多載。 將項目加入至並行優先權佇列。 這個方法是並行安全的。|  
+|[size](#size)|傳回並行優先權佇列中的項目數。 這個方法是並行安全的。|  
 |[swap](#swap)|將兩個並行優先權佇列的內容交換。 這個方法不是並行安全。|  
-|[try_pop](#try_pop)|如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全。|  
+|[try_pop](#try_pop)|如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全的。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|多載。 另一個內容指派`concurrent_priority_queue`給這一個物件。 這個方法不是並行安全。|  
+|[operator=](#operator_eq)|多載。 將另一個內容指派`concurrent_priority_queue`如下的物件。 這個方法不是並行安全。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊`concurrent_priority_queue`類別，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -111,7 +111,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>備註  
- `clear` 不是並行安全。 您必須確定，其他的執行緒所叫用並行優先權佇列上的方法時呼叫這個方法。 `clear` 不會釋放記憶體。  
+ `clear` 不是並行安全。 您必須確定，沒有其他執行緒所叫用並行優先權佇列上的方法時呼叫這個方法。 `clear` 不會釋放記憶體。  
   
 ##  <a name="ctor"></a> concurrent_priority_queue 
 
@@ -146,51 +146,51 @@ concurrent_priority_queue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_InputIterator`  
- 輸入迭代器的類型。  
+*_InputIterator*<br/>
+輸入迭代器的類型。  
   
- `_Al`  
- 搭配這個物件使用的配置器類別。  
+*_Al*<br/>
+搭配這個物件使用的配置器類別。  
   
- `_Init_capacity`  
- `concurrent_priority_queue` 物件的初始容量。  
+*_Init_capacity*<br/>
+`concurrent_priority_queue` 物件的初始容量。  
   
- `_Begin`  
- 要複製的元素範圍中第一個元素的位置。  
+*（_b)*<br/>
+要複製的元素範圍中第一個元素的位置。  
   
- `_End`  
- 超出要複製之元素範圍的第一個元素的位置。  
+*（_e)*<br/>
+超出要複製之元素範圍的第一個元素的位置。  
   
- `_Src`  
- 要從中複製或移動項目的來源 `concurrent_priority_queue` 物件。  
+*_Src*<br/>
+要從中複製或移動項目的來源 `concurrent_priority_queue` 物件。  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存配置器物件`_Al`和初始化優先權佇列。  
+ 所有建構函式會儲存配置器物件`_Al`和初始化優先權佇列。  
   
- 第一個建構函式指定空的初始優先順序佇列，並選擇性地指定配置器。  
+ 第一個建構函式會指定空的初始優先權佇列，並選擇性地指定的配置器。  
   
- 第二個建構函式指定優先權佇列的初始容量`_Init_capacity`並選擇性地指定配置器。  
+ 第二個建構函式會指定優先順序佇列的初始容量，`_Init_capacity`並選擇性地指定配置器。  
   
- 第三個建構函式指定的值提供的迭代器範圍 [ `_Begin`， `_End`) 和 （選擇性） 指定的配置器。  
+ 第三個建構函式指定的值提供的迭代器範圍 [ `_Begin`， `_End`)，並選擇性地指定配置器。  
   
- 第四個和第五個建構函式指定的複本優先權佇列`_Src`。  
+ 第四個和第五個建構函式會指定一份優先順序佇列`_Src`。  
   
  第六個和第七個建構函式指定的優先順序佇列移動`_Src`。  
   
 ##  <a name="empty"></a> 空白 
 
- 測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全。  
+ 測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果優先順序佇列是空的呼叫函式，此時`false`否則。  
+ `true` 優先順序佇列是空的目前呼叫的函式，如果`false`否則。  
   
 ##  <a name="get_allocator"></a> get_allocator 
 
- 傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全。  
+ 傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全的。  
   
 ```
 allocator_type get_allocator() const;
@@ -201,7 +201,7 @@ allocator_type get_allocator() const;
   
 ##  <a name="operator_eq"></a> 運算子 = 
 
- 另一個內容指派`concurrent_priority_queue`給這一個物件。 這個方法不是並行安全。  
+ 將另一個內容指派`concurrent_priority_queue`如下的物件。 這個方法不是並行安全。  
   
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -210,15 +210,15 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Src`  
- 來源 `concurrent_priority_queue` 物件。  
+*_Src*<br/>
+來源 `concurrent_priority_queue` 物件。  
   
 ### <a name="return-value"></a>傳回值  
  此參考`concurrent_priority_queue`物件。  
   
-##  <a name="push"></a> 推入 
+##  <a name="push"></a> 推播 
 
- 將項目加入至並行優先權佇列。 這個方法是並行安全。  
+ 將項目加入至並行優先權佇列。 這個方法是並行安全的。  
   
 ```
 void push(const value_type& _Elem);
@@ -227,22 +227,22 @@ void push(value_type&& _Elem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Elem`  
- 要新增至並行優先權佇列中的項目。  
+*_Elem*<br/>
+要加入至並行優先權佇列項目。  
   
 ##  <a name="size"></a> 大小 
 
- 傳回並行優先權佇列中的項目數。 這個方法是並行安全。  
+ 傳回並行優先權佇列中的項目數。 這個方法是並行安全的。  
   
 ```
 size_type size() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在這個項目數目`concurrent_priority_queue`物件。  
+ 在此的項目數`concurrent_priority_queue`物件。  
   
 ### <a name="remarks"></a>備註  
- 傳回的大小一定會包含所呼叫函式加入的所有項目`push`。 不過，它可能無法反映暫止的並行作業的結果。  
+ 在傳回的大小一定會包含新增的函式呼叫的所有項目`push`。 不過，它可能無法反映的暫止的並行作業的結果。  
   
 ##  <a name="swap"></a> 交換 
 
@@ -253,23 +253,23 @@ void swap(concurrent_priority_queue& _Queue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Queue`  
- `concurrent_priority_queue`來交換內容的物件。  
+*（_q)*<br/>
+`concurrent_priority_queue`来交換內容的物件。  
   
 ##  <a name="try_pop"></a> try_pop 
 
- 如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全。  
+ 如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全的。  
   
 ```
 bool try_pop(reference _Elem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Elem`  
- 將會填入最高的優先順序項目，如果佇列是空的變數參考。  
+*_Elem*<br/>
+將會填入最高的優先順序項目，如果佇列是空的變數參考。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果值已推出，`false`否則。  
+ `true` 如果值快顯，`false`否則。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

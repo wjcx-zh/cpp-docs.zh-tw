@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604b58f7f8f6074c16effa3220d17bc00c44f5b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 872644533a0fab73768392efa2c5cd016b6bb980
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095649"
 ---
 # <a name="algorithms-modern-c"></a>演算法 (現代 C++)
 
@@ -31,13 +31,13 @@ ms.locfileid: "43214310"
 
 若要寫入比較子，請使用嚴格**<** 並用*具名 lambda*盡可能。
 
-```cpp  
+```cpp
 auto comp = [](const widget& w1, const widget& w2)
      { return w1.weight() < w2.weight(); }
 
 sort( v.begin(), v.end(), comp );
 
-auto i = lower_bound( v.begin(), v.end(), comp );  
+auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
 ## <a name="loops"></a>迴圈
@@ -46,26 +46,26 @@ auto i = lower_bound( v.begin(), v.end(), comp );
 
 而不是像這樣的舊 c + +:
 
-```cpp  
+```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
-    /* ... */  
+    /* ... */
 }
 
 auto i = v.begin();
 
 for ( ; i != v.end(); ++i ) {
-    if (*i > x && *i < y) break;  
-}  
+    if (*i > x && *i < y) break;
+}
 ```
 
 使用像這樣的現代 c + +:
 
-```cpp  
+```cpp
 for_each( begin(strings), end(strings), [](string& s) {
-  // ...  
+  // ...
 } );
 
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
 ### <a name="range-based-for-loops"></a>範圍架構的 for 迴圈

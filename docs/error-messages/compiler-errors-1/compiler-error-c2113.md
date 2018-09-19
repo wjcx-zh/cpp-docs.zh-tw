@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2113 |Microsoft 文件
+title: 編譯器錯誤 C2113 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ad712fa27d6350b672a7bfc1636d0fb3b80b7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94dd75ad7df782a92dfe359ebabf0abe1175ad75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096167"
 ---
 # <a name="compiler-error-c2113"></a>編譯器錯誤 C2113
-'-' : 指標只能和另一個指標相減  
-  
- 減法運算的右運算元是指標，但左運算元不是。
+
+'-' : 指標只能和另一個指標相減
+
+減法運算的右運算元是指標，但左運算元不是。

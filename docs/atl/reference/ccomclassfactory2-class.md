@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e4b8fe74355d99258677fd4746ad2461f508d3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 05fcef5ee1141de8261bc4ecc813cd573fb8f901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757799"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099497"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 類別
 
@@ -36,7 +36,7 @@ ms.locfileid: "43757799"
 ## <a name="syntax"></a>語法
 
 ```
-template <class license>  
+template <class license>
 class CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
     public license
@@ -44,7 +44,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>參數
 
-*授權*  
+*授權*<br/>
 類別若實作下列靜態函式：
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -105,13 +105,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>參數
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
 
-*riid*  
+*riid*<br/>
 [in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。
 
-*ppvObj*  
+*ppvObj*<br/>
 [out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObj*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -138,19 +138,19 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>參數
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
 
-*pUnkReserved*  
+*pUnkReserved*<br/>
 [in]不使用。 必須是 NULL。
 
-*riid*  
+*riid*<br/>
 [in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。
 
-*bstrKey*  
+*bstrKey*<br/>
 [in]執行階段授權金鑰之前取得呼叫`RequestLicKey`。 此金鑰，才能建立物件。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]所指定的介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -171,7 +171,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>參數
 
-*pLicInfo*  
+*pLicInfo*<br/>
 [out]指標`LICINFO`結構。
 
 ### <a name="return-value"></a>傳回值
@@ -192,7 +192,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>參數
 
-*fLock*  
+*fLock*<br/>
 [in]如果為 TRUE，就會遞增的鎖定計數;否則，鎖定計數會遞減。
 
 ### <a name="return-value"></a>傳回值
@@ -215,10 +215,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>參數
 
-*dwReserved*  
+*dwReserved*<br/>
 [in]不使用。 必須是零。
 
-*pbstrKey*  
+*pbstrKey*<br/>
 [out]授權金鑰的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -233,8 +233,8 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ## <a name="see-also"></a>另請參閱
 
-[CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[CComClassFactorySingleton 類別](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComClassFactorySingleton 類別](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

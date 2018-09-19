@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2044 |Microsoft 文件
+title: 編譯器錯誤 C2044 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8207f23f53cc10651be549bf30147f1c33cc3db9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73444428d015949b4147639b7f6a7c2a27d8160e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101407"
 ---
 # <a name="compiler-error-c2044"></a>編譯器錯誤 C2044
-continue 的使用不合法  
-  
- [continue](../../cpp/continue-statement-cpp.md) 只有在 `do`、 `for`或 `while` 陳述式中不合法。
+
+continue 的使用不合法
+
+[continue](../../cpp/continue-statement-cpp.md) 只有在 `do`、 `for`或 `while` 陳述式中不合法。

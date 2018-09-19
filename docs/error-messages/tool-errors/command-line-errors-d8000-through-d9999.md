@@ -1,5 +1,5 @@
 ---
-title: 命令列錯誤 D8000 至 D9999 |Microsoft 文件
+title: 命令列錯誤 D8000 至 D9999 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
 ms.technology:
@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e608745f4c10d915ee0fc8a2cdad2f372f81046c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bed2202c8dc7f6372a102eb3926ac49d568793a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302538"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096700"
 ---
 # <a name="command-line-errors-d8000-through-d9999"></a>命令列錯誤 D8000 至 D9999
 
-本節文章提供組建工具所產生的命令列錯誤的參考。
+在本節中的文章會提供建置工具所產生的命令列錯誤的參考。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -63,4 +63,4 @@ ms.locfileid: "33302538"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置錯誤](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
+[C/C++ 建置錯誤](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

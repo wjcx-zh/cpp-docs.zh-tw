@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f53b75466a4fe623de9c1f0fd6f0ff768cf55f47
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f44bcdedc718ce4d6459fea7f8581273e49caa10
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097558"
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 類別
 
@@ -45,7 +45,7 @@ class IPointerInactiveImpl
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IPointerInactiveImpl`。
 
 ## <a name="members"></a>成員

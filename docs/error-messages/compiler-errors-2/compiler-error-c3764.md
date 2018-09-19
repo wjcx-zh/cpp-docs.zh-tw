@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3764 |Microsoft 文件
+title: 編譯器錯誤 C3764 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c214fcf40f442c35d754db64c8443c328d50ae10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b57b9005eacc6e4a59adecc38b40027fffb5bcf1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096999"
 ---
 # <a name="compiler-error-c3764"></a>編譯器錯誤 C3764
-'override_function': 無法覆寫基底類別方法 'base_class_function'  
-  
- 編譯器偵測到格式不正確的覆寫。 例如，基底類別函式未`virtual`。 如需詳細資訊，請參閱[覆寫](../../windows/override-cpp-component-extensions.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3764。  
-  
-```  
-// C3764.cpp  
-// compile with: /clr /c  
-public ref struct A {  
-   void g(int);  
-   virtual void h(int);  
-};  
-  
-public ref struct B : A {  
-   virtual void g(int) override {}   // C3764  
-   virtual void h(int) override {}   // OK  
-};  
-```  
-  
-## <a name="example"></a>範例  
- C3764 基底類別方法同時為明確時，也會發生和具名覆寫。 下列範例會產生 C3764。  
-  
-```  
-// C3764_b.cpp  
-// compile with: /clr /c  
-ref struct A {  
-   virtual void Test() {}  
-};  
-  
-ref struct B : public A {  
-   virtual void Test() override {}  
-   virtual void Test2() = A::Test {}   // C3764  
-};  
+
+'override_function': 無法覆寫基底類別方法 'base_class_function'
+
+編譯器偵測到格式不正確的覆寫。 例如，基底類別函式未`virtual`。 如需詳細資訊，請參閱 <<c0> [ 覆寫](../../windows/override-cpp-component-extensions.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3764。
+
+```
+// C3764.cpp
+// compile with: /clr /c
+public ref struct A {
+   void g(int);
+   virtual void h(int);
+};
+
+public ref struct B : A {
+   virtual void g(int) override {}   // C3764
+   virtual void h(int) override {}   // OK
+};
+```
+
+## <a name="example"></a>範例
+
+C3764 也可能發生於基底類別方法是明確，和名為覆寫。 下列範例會產生 C3764。
+
+```
+// C3764_b.cpp
+// compile with: /clr /c
+ref struct A {
+   virtual void Test() {}
+};
+
+ref struct B : public A {
+   virtual void Test() override {}
+   virtual void Test2() = A::Test {}   // C3764
+};
 ```

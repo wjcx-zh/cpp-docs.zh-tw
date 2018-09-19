@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087951"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 類別
 
@@ -35,7 +35,7 @@ ms.locfileid: "43754887"
 ## <a name="syntax"></a>語法
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 對話方塊範本資源的資源識別碼。
 
-*t_bCenter*  
+*t_bCenter*<br/>
 如果對話方塊物件擁有者 視窗中，位於中央，則為 TRUE。否則為 FALSE。
 
 ## <a name="members"></a>成員
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 對話方塊的父控制代碼。 如果未不提供任何值，父代設為目前使用中視窗。
 
 ### <a name="return-value"></a>傳回值

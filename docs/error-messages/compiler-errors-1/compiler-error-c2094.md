@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2094 |Microsoft 文件
+title: 編譯器錯誤 C2094 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4db86a805118cbdbf74f21737b4a331fc59237c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e3591fef423bc24562a2f2edf18f7f2774cfcc4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167316"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073521"
 ---
 # <a name="compiler-error-c2094"></a>編譯器錯誤 C2094
-標籤 'identifier' 未定義  
-  
-函式中沒有 [goto](../../cpp/goto-statement-cpp.md) 陳述式所使用的標籤。  
-  
-## <a name="example"></a>範例  
-下列範例會產生 C2094：  
-  
-```cpp  
-// C2094.c  
-int main() {  
-   goto test;  
-}   // C2094  
-```  
-  
- 可能的解決方式：  
-  
-```cpp  
-// C2094b.c  
-int main() {  
-   goto test;  
-   test:   
-   {  
-   }  
-}  
+
+標籤 'identifier' 未定義
+
+函式中沒有 [goto](../../cpp/goto-statement-cpp.md) 陳述式所使用的標籤。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2094：
+
+```cpp
+// C2094.c
+int main() {
+   goto test;
+}   // C2094
+```
+
+可能的解決方式：
+
+```cpp
+// C2094b.c
+int main() {
+   goto test;
+   test:
+   {
+   }
+}
 ```

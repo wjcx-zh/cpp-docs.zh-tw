@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2042 |Microsoft 文件
+title: 編譯器錯誤 C2042 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b0442371b210f40d58a10b6bf1107979ea88db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbc1d0d5ec0781ebf203a2cebcd99a58996c6547
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079995"
 ---
 # <a name="compiler-error-c2042"></a>編譯器錯誤 C2042
-signed 及 unsigned 關鍵字是互斥的  
-  
- 關鍵字 `signed` 和 `unsigned` 用於單一宣告中。  
-  
- 下列範例會產生 C2042：  
-  
-```  
-// C2042.cpp  
-unsigned signed int i;   // C2042  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C2042b.cpp  
-// compile with: /c  
-unsigned int i;  
-signed int ii;  
+
+signed 及 unsigned 關鍵字是互斥的
+
+關鍵字 `signed` 和 `unsigned` 用於單一宣告中。
+
+下列範例會產生 C2042：
+
+```
+// C2042.cpp
+unsigned signed int i;   // C2042
+```
+
+可能的解決方式：
+
+```
+// C2042b.cpp
+// compile with: /c
+unsigned int i;
+signed int ii;
 ```

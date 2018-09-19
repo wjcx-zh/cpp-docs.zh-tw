@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2222 |Microsoft 文件
+title: 編譯器錯誤 C2222 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78679021289e41ed9c584abdd94348b55e30184e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f97e96a7a5548de25ba9b0b45f76e4cdef87baa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072585"
 ---
 # <a name="compiler-error-c2222"></a>編譯器錯誤 C2222
-未預期的類型 'type'：必須是基底類別或成員  
-  
- 初始設定式清單只可以初始化基底類別或類型的成員。 若要修正這個錯誤，請確認在初始設定式清單中僅初始化基底類別或類型的成員。
+
+未預期的類型 'type'：必須是基底類別或成員
+
+初始設定式清單只可以初始化基底類別或類型的成員。 若要修正這個錯誤，請確認在初始設定式清單中僅初始化基底類別或類型的成員。

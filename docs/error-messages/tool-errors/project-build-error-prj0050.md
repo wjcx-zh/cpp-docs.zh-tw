@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0050 |Microsoft 文件
+title: 專案建置錯誤 PRJ0050 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad17614f693e313190dba9cc767c023981dec34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3949ea0db2f1667aecf1aeeefd922b192cbf41
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318509"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100587"
 ---
 # <a name="project-build-error-prj0050"></a>專案建置錯誤 PRJ0050
-無法註冊輸出。 請確定您有適當的權限可以修改登錄。  
-  
- Visual c + + 建置系統無法註冊組建 （dll 或.exe） 的輸出。 您必須修改登錄的系統管理員身分登入。  
-  
- 如果您建立.dll，您可以嘗試登錄以手動方式使用 regsvr32.exe 此.dll 檔，這應會顯示組建失敗的原因的相關資訊。  
-  
- 如果您不建立.dll，查看組建記錄檔，會造成錯誤的命令。
+
+無法註冊輸出。 請確定您有適當的權限可以修改登錄。
+
+Visual c + + 建置系統無法註冊組建 （dll 或.exe） 的輸出。 您必須修改登錄的系統管理員身分登入。
+
+如果您要建置 dll，您可以嘗試登錄以手動方式使用 regsvr32.exe 此.dll 檔，這應該會顯示組建的失敗原因的相關資訊。
+
+如果您未建立.dll，查看組建記錄檔中的命令，將導致錯誤。

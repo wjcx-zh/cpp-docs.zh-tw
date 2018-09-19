@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0010 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0010 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed62ecba1d25882a95f6555c48d43b3ae405110
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bcc7231f3dca4c46c2ace410b9444c472880ff7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298404"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086794"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>運算式評估工具錯誤 CXX0010
-遺漏左括號  
-  
- 運算式包含不對稱的方括號。 請重新輸入具有平衡方括號運算式。  
-  
- 這個錯誤是與 can0010 相同。
+
+遺漏左括號
+
+運算式包含不對稱的方括號。 重新輸入使用平衡方括弧括住的運算式。
+
+此錯誤是與 can0010 相同。

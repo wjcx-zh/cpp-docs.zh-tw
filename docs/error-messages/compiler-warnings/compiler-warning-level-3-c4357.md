@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4357 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4357 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bb609b051def4f84924c1d9ebbcd9574d2ce77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5bf30112e152c473c4f88a98f5f1073b789216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086742"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>編譯器警告 (層級 3) C4357
-param 陣列引數的型式引數清單中委派 'del' 略過產生 'function' 時  
-  
- `ParamArray`已略過屬性和`function`無法呼叫具有變數引數。  
-  
- 下列範例會產生 C4357:  
-  
-```  
-// C4357.cpp  
-// compile with: /clr /W3 /c  
-using namespace System;  
-public delegate void f(int i, ... array<Object^>^ varargs);   // C4357  
-  
-public delegate void g(int i, array<Object^>^ varargs);   // OK  
+
+param 陣列引數的型式引數清單中委派 'del' 略過產生 'function' 時
+
+`ParamArray`屬性會被忽略，和`function`無法呼叫具有變數引數。
+
+下列範例會產生 C4357:
+
+```
+// C4357.cpp
+// compile with: /clr /W3 /c
+using namespace System;
+public delegate void f(int i, ... array<Object^>^ varargs);   // C4357
+
+public delegate void g(int i, array<Object^>^ varargs);   // OK
 ```

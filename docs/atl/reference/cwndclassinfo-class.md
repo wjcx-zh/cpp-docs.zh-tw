@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edfe84b767136d5ea7e2dcb0b47a06474020c074
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097876"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 
@@ -185,7 +185,7 @@ ATOM Register(WNDPROC* pProc);
 
 ### <a name="parameters"></a>參數
 
-*pProc*  
+*pProc*<br/>
 [out]指定現有視窗類別的原始視窗程序。
 
 ### <a name="return-value"></a>傳回值
@@ -200,5 +200,5 @@ ATOM Register(WNDPROC* pProc);
 
 ## <a name="see-also"></a>另請參閱
 
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

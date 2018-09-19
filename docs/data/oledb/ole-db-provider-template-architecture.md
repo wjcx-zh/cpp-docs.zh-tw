@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078890"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供者樣板架構
+
 ## <a name="data-sources-and-sessions"></a>資料來源和工作階段  
- OLE DB 提供者架構包含資料來源物件和一或多個工作階段。 資料來源物件是每個提供者必須具現化初始物件。 當取用者應用程式需要資料時，它同時會建立啟動提供者的資料來源物件。 資料來源物件會建立工作階段物件 (使用`IDBCreateSession`介面) 透過這取用者會連接到資料來源物件。 ODBC 程式設計人員可以將資料來源物件視為相當於`HENV`和 工作階段物件，相當於`HDBC`。  
+
+OLE DB 提供者架構包含資料來源物件和一或多個工作階段。 資料來源物件是每個提供者必須具現化初始物件。 當取用者應用程式需要資料時，它同時會建立啟動提供者的資料來源物件。 資料來源物件會建立工作階段物件 (使用`IDBCreateSession`介面) 透過這取用者會連接到資料來源物件。 ODBC 程式設計人員可以將資料來源物件視為相當於`HENV`和 工作階段物件，相當於`HDBC`。  
   
- ![提供者架構](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![提供者架構](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- OLE DB 提供者精靈所建立的原始程式檔，以及 OLE DB 範本會實作資料來源物件。 工作階段是一個物件，對應至 OLE DB `TSession`。  
+OLE DB 提供者精靈所建立的原始程式檔，以及 OLE DB 範本會實作資料來源物件。 工作階段是一個物件，對應至 OLE DB `TSession`。  
   
 ## <a name="mandatory-and-optional-interfaces"></a>必要和選用的介面  
- OLE DB 提供者範本可讓您預先封裝實作所有必要的介面。 必要和選用的介面是由 OLE DB 定義的數種類型的物件：  
+
+OLE DB 提供者範本可讓您預先封裝實作所有必要的介面。 必要和選用的介面是由 OLE DB 定義的數種類型的物件：  
   
--   [資料來源](../../data/oledb/data-source-object-interfaces.md)  
+- [資料來源](../../data/oledb/data-source-object-interfaces.md)  
   
--   [工作階段](../../data/oledb/session-object-interfaces.md)  
+- [工作階段](../../data/oledb/session-object-interfaces.md)  
   
--   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)  
   
--   [命令](../../data/oledb/command-object-interfaces.md)  
+- [命令](../../data/oledb/command-object-interfaces.md)  
   
--   [異動](../../data/oledb/transaction-object-interfaces.md)  
+- [異動](../../data/oledb/transaction-object-interfaces.md)  
   
- 請注意，OLE DB 提供者範本不會實作資料列和儲存體物件。  
+請注意，OLE DB 提供者範本不會實作資料列和儲存體物件。  
   
- 下表列出必要和選用的介面，如上面所列的物件根據[OLE DB 2.6 SDK 文件](/previous-versions/windows/desktop/ms722784\(v=vs.85\))。  
+下表列出必要和選用的介面，如上面所列的物件根據[OLE DB 2.6 SDK 文件](/previous-versions/windows/desktop/ms722784\(v=vs.85\))。  
   
 |元件|介面|註解|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684286"
 |[命令](../../data/oledb/command-object-interfaces.md)([CCommand](ccommand-class.md))|[必要] `IAccessor`<br /><br /> [必要] `IColumnsInfo`<br /><br /> [必要] `ICommand`<br /><br /> [必要] `ICommandProperties`<br /><br /> [必要] `ICommandText`<br /><br /> [必要] `IConvertType`<br /><br /> [選用] `IColumnsRowset`<br /><br /> [選用] `ICommandPersist`<br /><br /> [選用] `ICommandPrepare`<br /><br /> [選用] `ICommandWithParameters`<br /><br /> [選用] `ISupportErrorInfo`<br /><br /> [選用] `ICommandStream`|命令物件會處理資料，例如查詢作業。 它可以處理參數化或非參數化陳述式。<br /><br /> 命令物件也會負責處理參數和輸出資料行的繫結的。 繫結是結構，其中包含擷取的資料行，在資料列集的方式的相關資訊。 它包含例如序數、 資料類型、 長度和狀態資訊。|  
 |[交易](../../data/oledb/transaction-object-interfaces.md)（選擇性）|[必要] `IConnectionPointContainer`<br /><br /> [必要] `ITransaction`<br /><br /> [選用] `ISupportErrorInfo`|交易物件的資料來源上定義不可部分完成的工作單位，並判斷這些工作單位如何互相關聯性。 此物件不直接支援 OLE DB 提供者範本 （也就是您建立自己的物件）。|  
   
- 如需詳細資訊，請參閱下列主題：  
+如需詳細資訊，請參閱下列主題：  
   
--   [屬性對應](../../data/oledb/property-maps.md)  
+- [屬性對應](../../data/oledb/property-maps.md)  
   
--   [使用者記錄](../../data/oledb/user-record.md)  
+- [使用者記錄](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 介面](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 介面](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

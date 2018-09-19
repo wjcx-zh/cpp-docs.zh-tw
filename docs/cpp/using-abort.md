@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63c3134dee6c316519dfcc34cff30b591b56460
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3edc24b2b8dc869022039d4aaaea73af06eac16b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465392"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092522"
 ---
 # <a name="using-abort"></a>使用 abort
-呼叫[中止](../c-runtime-library/reference/abort.md)函式會導致立即終止。 它會略過初始化全域靜態物件的正常解構流程。 另外也會略過任何使用 `atexit` 函式指定的特殊處理。  
-  
-## <a name="see-also"></a>另請參閱  
- [其他終止考量](../cpp/additional-termination-considerations.md)
+
+呼叫[中止](../c-runtime-library/reference/abort.md)函式會導致立即終止。 它會略過初始化全域靜態物件的正常解構流程。 另外也會略過任何使用 `atexit` 函式指定的特殊處理。
+
+## <a name="see-also"></a>另請參閱
+
+[其他終止考量](../cpp/additional-termination-considerations.md)

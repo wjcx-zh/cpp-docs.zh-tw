@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747fe2cd742686a7fda1f5031224cf7ab1607fb2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 156a0a827a67e80369ca8b834b62bcf0e431ab14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076342"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig 介面
 
@@ -71,7 +71,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 
 ### <a name="parameters"></a>參數
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]成功時，執行緒數目的集區中接收變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -92,7 +92,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 
 ### <a name="parameters"></a>參數
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]變數的位址，成功時，收到的最長時間的執行緒集區會關閉執行緒等候的毫秒數。
 
 ### <a name="return-value"></a>傳回值
@@ -113,7 +113,7 @@ STDMETHOD(SetSize)int nNumThreads);
 
 ### <a name="parameters"></a>參數
 
-*nNumThreads*  
+*nNumThreads*<br/>
 執行緒集區中的要求的數目。
 
 如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。
@@ -138,7 +138,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ### <a name="parameters"></a>參數
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。
 
 ### <a name="return-value"></a>傳回值
@@ -151,5 +151,5 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 
 ## <a name="see-also"></a>另請參閱
 
-[類別](../../atl/reference/atl-classes.md)   
+[類別](../../atl/reference/atl-classes.md)<br/>
 [CThreadPool 類別](../../atl/reference/cthreadpool-class.md)

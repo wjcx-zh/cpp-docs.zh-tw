@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756102"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084549"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 類別
 
@@ -45,19 +45,19 @@ ms.locfileid: "43756102"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的新類別，衍生自 `CWindowImpl`。
 
-*TBase*  
+*TBase*<br/>
 您類別的基底類別。 根據預設，基底類別是[CWindow](../../atl/reference/cwindow-class.md)。
 
-*TWinTraits*  
+*TWinTraits*<br/>
 A [traits 類別](../../atl/understanding-window-traits.md)定義視窗樣式。 預設為 `CControlWinTraits`。
 
 ## <a name="members"></a>成員
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 [in]父系或擁有者的視窗控制代碼。
 
-*rect*  
+*rect*<br/>
 [in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。
 
-*szWindowName*  
+*szWindowName*<br/>
 [in]指定視窗的名稱。 預設值是 NULL。
 
-*cheaderctrl:: Create*  
+*cheaderctrl:: Create*<br/>
 [in]視窗的樣式。 這個值會結合 traits 類別所提供之視窗的樣式。 預設值可讓類別完全控制樣式特性。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in]延伸的視窗樣式。 這個值會結合 traits 類別所提供之視窗的樣式。 預設值可讓類別完全控制樣式特性。 如需可能值的清單，請參閱 < [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in]子視窗的視窗識別項。 最上層視窗中，視窗的功能表控制代碼。 預設值是**0U**。
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。
 
 ### <a name="return-value"></a>傳回值
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>參數
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送至視窗的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]終結視窗控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]在子類別化視窗的控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>參數
 
-*hWnd*  
+*hWnd*<br/>
 [in]視窗控制代碼。
 
-*uMsg*  
+*uMsg*<br/>
 [in]傳送至視窗的訊息。
 
-*wParam*  
+*wParam*<br/>
 [in]其他特定訊息資訊。
 
-*lParam*  
+*lParam*<br/>
 [in]其他特定訊息資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -387,6 +387,6 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>另請參閱
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[CComControl 類別](../../atl/reference/ccomcontrol-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

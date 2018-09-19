@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::attach |Microsoft 文件
+title: auto_gcroot::attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 242c83ce7a22d56d3c584b50ec93c941b45213ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ddd11cf6c9fbc1b0a032a609f1315e581290c01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074977"
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 附加`auto_gcroot`物件。  
@@ -46,14 +46,14 @@ auto_gcroot<_element_type> & attach(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_right`  
- 要附加的物件或`auto_gcroot`包含要附加的物件。  
+*右方 （_r)*<br/>
+要附加的物件或`auto_gcroot`包含要附加的物件。  
   
 ## <a name="return-value"></a>傳回值  
  目前的 `auto_gcroot`。  
   
 ## <a name="remarks"></a>備註  
- 如果`_right`是`auto_gcroot`，它會釋放其物件的擁有權之前物件附加至目前`auto_gcroot`。  
+ 如果`_right`已`auto_gcroot`，它會釋放其物件的擁有權之前物件附加至目前`auto_gcroot`。  
   
 ## <a name="example"></a>範例  
   

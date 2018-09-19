@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2022 |Microsoft 文件
+title: 編譯器錯誤 C2022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e13dddc1cba93afe8c51b2bca3efdd58e75f85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc92e683c3def2378912db5011049924696b7f59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089654"
 ---
 # <a name="compiler-error-c2022"></a>編譯器錯誤 C2022
-'number' : 對於字元而言太大  
-  
- 反斜線八進位數字 (\\) 是字元或太大而無法表示字元字串常數。
+
+'number' : 對於字元而言太大
+
+反斜線的八進位數字 (\\) 是字元或字串常數的值太大，表示字元。

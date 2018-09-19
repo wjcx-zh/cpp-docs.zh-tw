@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3501 |Microsoft 文件
+title: 編譯器錯誤 C3501 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a74c3f06165765f971a8999dfe80412dd99dc719
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bdf614c8b04dc9695d870aa8254cff8a2b75ca26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253422"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086274"
 ---
 # <a name="compiler-error-c3501"></a>編譯器錯誤 C3501
-沒有為 ProgID 'progid' 註冊的 typelib  
-  
- 類別識別碼指定 progid 並沒有相關聯的類型程式庫。 因此，您不能傳遞這 progid 來`#import`陳述式。
+
+沒有為 ProgID 'progid' 註冊的 typelib
+
+頇蜞頇指定 progid 並沒有相關聯的型別程式庫。 因此，您無法傳遞此 progid 來`#import`陳述式。

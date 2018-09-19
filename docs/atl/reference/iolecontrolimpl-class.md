@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27d327fbac5e92ddb2fee50c30d57a46658e889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28404c4f8dddeafb624b873448d4dc7aaa5dc0d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076810"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 類別
 
@@ -44,7 +44,7 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IOleControlImpl`。
 
 ## <a name="members"></a>成員
@@ -138,6 +138,6 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ## <a name="see-also"></a>另請參閱
 
-[IOleObjectImpl 類別](../../atl/reference/ioleobjectimpl-class.md)   
-[ActiveX 控制項介面](/windows/desktop/com/activex-controls-interfaces)   
+[IOleObjectImpl 類別](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[ActiveX 控制項介面](/windows/desktop/com/activex-controls-interfaces)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

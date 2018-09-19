@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2935 |Microsoft 文件
+title: 編譯器錯誤 C2935 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b387e7cee3542dd41ab799b00ae28c834fe05903
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c37719276ccb6e541b192873429c0876256bf9b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244738"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088302"
 ---
 # <a name="compiler-error-c2935"></a>編譯器錯誤 C2935
-'class': type-class-id 重複定義為全域函式  
-  
- 您無法使用泛型或樣板類別作為全域函式。  
-  
- 此錯誤可能是大括弧不對稱所造成。  
-  
- 下列範例會產生 C2935：  
-  
-```  
-// C2935.cpp  
-// compile with: /c  
-template<class T>  
-struct TC {};   
-void TC<int>() {}   // C2935  
-  
-// OK  
-struct TC2 {};   
-void TC2() {}  
-```  
-  
- 使用泛型時，也會發生 C2935：  
-  
-```  
-// C2935b.cpp  
-// compile with: /clr /c  
-generic<class T>   
-ref struct GC { };  
-void GC<int>() {}   // C2935  
-void GC() {}   // OK  
+
+'class': type-class-id 重複定義為全域函式
+
+您無法使用泛型或樣板類別作為全域函式。
+
+此錯誤可能是大括弧不對稱所造成。
+
+下列範例會產生 C2935：
+
+```
+// C2935.cpp
+// compile with: /c
+template<class T>
+struct TC {};
+void TC<int>() {}   // C2935
+
+// OK
+struct TC2 {};
+void TC2() {}
+```
+
+使用泛型時，也會發生 C2935：
+
+```
+// C2935b.cpp
+// compile with: /clr /c
+generic<class T>
+ref struct GC { };
+void GC<int>() {}   // C2935
+void GC() {}   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4201 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4201 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56805506c112d0d92b627b905199bcbbeae8d2f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 702ce23333e29548e9bfe092c15ae60c5652168e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096934"
 ---
 # <a name="compiler-warning-level-4-c4201"></a>編譯器警告 (層級 4) C4201
-使用非標準擴充： 沒有名稱的結構/等位  
-  
- Microsoft 擴充功能 (/Ze) 下您可以指定沒有宣告子結構做為另一個結構或等位的成員。 這些結構產生 ANSI 相容性錯誤 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// C4201.cpp  
-// compile with: /W4  
-struct S  
-{  
-   float y;  
-   struct  
-   {  
-      int a, b, c;  // C4201  
-   };  
-} *p_s;  
-  
-int main()  
-{  
-}  
+
+使用非標準擴充： 沒有名稱的結構/等位
+
+Microsoft 擴充功能 (/Ze) 下您可以指定不含宣告子的結構做為另一個結構或等位的成員。 這些結構產生 ANSI 相容性錯誤 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+
+## <a name="example"></a>範例
+
+```
+// C4201.cpp
+// compile with: /W4
+struct S
+{
+   float y;
+   struct
+   {
+      int a, b, c;  // C4201
+   };
+} *p_s;
+
+int main()
+{
+}
 ```

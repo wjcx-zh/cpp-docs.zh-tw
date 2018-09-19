@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099769"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 介面
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in]指標`IUnknown`要附加至主機的物件之控制項的介面。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用來裝載之視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>參數
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]字串，識別要建立的控制項。 可以是 （必須包含在大括號） 的 CLSID、 ProgID、 URL 或原始 HTML (前面加上**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用來裝載之視窗控制代碼。
 
-*pStream*  
+*pStream*<br/>
 [in]包含控制項的初始化資料的資料流介面指標。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>參數
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]字串，識別要建立的控制項。 可以是 （必須包含在大括號） 的 CLSID、 ProgID、 URL 或原始 HTML (前面加上**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用來裝載之視窗控制代碼。
 
-*pStream*  
+*pStream*<br/>
 [in]包含控制項的初始化資料的資料流介面指標。 可以是 NULL。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]將會收到的指標位址`IUnknown`介面建立的控制項。 可以是 NULL。
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in]在所包含的物件上的輸出介面的介面識別項。 可以是 IID_NULL。
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in]指標`IUnknown`連接到包含的物件所指定的連接點的接收器物件的介面`iidSink`。
 
 ### <a name="return-value"></a>傳回值
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 [in]所要求的控制項上的介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]將會收到建立控制項的指定的介面的指標位址。
 
 ### <a name="return-value"></a>傳回值
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>參數
 
-*pDisp*  
+*pDisp*<br/>
 [in]指標`IDispatch`介面。
 
 ### <a name="return-value"></a>傳回值
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>參數
 
-*pDisp*  
+*pDisp*<br/>
 [in]指標`IDocHostUIHandlerDispatch`介面。
 
 ### <a name="return-value"></a>傳回值
@@ -229,7 +229,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ## <a name="see-also"></a>另請參閱
 
-[IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

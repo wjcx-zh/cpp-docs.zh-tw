@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2941 |Microsoft 文件
+title: 編譯器錯誤 C2941 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9904bd4f4d6a48169590ff43e7b229dc3a3eb2f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46fc923c058c59d64bf1fca37ffff97554d645e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241856"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091409"
 ---
 # <a name="compiler-error-c2941"></a>編譯器錯誤 C2941
-'class' : type-class-id 重複定義為區域 'item'  
-  
- 您無法使用泛型或樣板類別作為項目。
+
+'class' : type-class-id 重複定義為區域 'item'
+
+您無法使用泛型或樣板類別作為項目。

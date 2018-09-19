@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 3） C4543 |Microsoft 文件
+title: 編譯器警告 （層級 3） C4543 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075448"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>編譯器警告 (層級 3) C4543
-屬性 'no_injected_text' 隱藏插入的文字  
-  
- [No_injected_text](../../windows/no-injected-text.md)屬性出現在原始程式碼中，這表示編譯器將會防止屬性插入程式碼。  
-  
- 這項警告是，用意在提醒您屬性不能插入程式碼。
+
+屬性 'no_injected_text' 隱藏插入的文字
+
+[No_injected_text](../../windows/no-injected-text.md)屬性出現在原始程式碼中，這表示，編譯器會防止屬性插入程式碼。
+
+這個警告是要提醒您多多屬性不能插入程式碼。

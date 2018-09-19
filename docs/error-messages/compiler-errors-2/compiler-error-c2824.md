@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2824 |Microsoft 文件
+title: 編譯器錯誤 C2824 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc654f60d9494480e0551f4de3ec1e041938cea2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 310156e82f69622a5c4a2315e204ccaa146e2c00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237160"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077408"
 ---
 # <a name="compiler-error-c2824"></a>編譯器錯誤 C2824
-傳回型別 'operator new' 必須是 ' void *'  
-  
- 使用為基礎的指標，多載運算子的`new`必須傳回`void *`。  
-  
- 下列範例會產生 C2824:  
-  
-```  
-// C2824.cpp  
-// compile with: /c  
-class   A {  
-   A* operator new(size_t i, char *m);   // C2824  
-   // try the following line instead  
-   // void* operator new(size_t i, char *m);  
-};  
+
+必須是 'operator new' 的傳回類型 ' void *'
+
+使用非為基礎的指標，多載的運算子`new`必須傳回`void *`。
+
+下列範例會產生 C2824:
+
+```
+// C2824.cpp
+// compile with: /c
+class   A {
+   A* operator new(size_t i, char *m);   // C2824
+   // try the following line instead
+   // void* operator new(size_t i, char *m);
+};
 ```

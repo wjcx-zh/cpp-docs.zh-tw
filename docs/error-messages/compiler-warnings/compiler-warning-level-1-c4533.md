@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4533 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4533 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a260cb27529e3ef7ec2b7b7a948578bad320d738
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a99211afe310730e9041f2f04dc8ce67a762ed0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084857"
 ---
 # <a name="compiler-warning-level-1-c4533"></a>編譯器警告 (層級 1) C4533
-'variable' 的初始化會被 '指令' 略過  
-  
- 指令程式中的變更控制項的流量，使得初始化變數的指令，所以未執行。 下列範例會產生 C4533:  
-  
-```  
-// C4533.cpp  
-// compile with: /W1  
-#include <stdio.h>  
-  
-struct A  
-{  
-   int m_data;  
-};  
-  
-int main()  
-{  
-   if (1)  
-   {  
-      goto Label;  
-   }  
-  
-   A a = { 100 };  
-  
-   Label:   // C4533  
-      printf("\n%d", a.m_data);   // prints an uninitialized value  
-}  
+
+'variable' 的初始化會略過 '指示'
+
+在程式中的指示變更控制項的流程，使得初始化變數的指示，不會執行。 下列範例會產生 C4533:
+
+```
+// C4533.cpp
+// compile with: /W1
+#include <stdio.h>
+
+struct A
+{
+   int m_data;
+};
+
+int main()
+{
+   if (1)
+   {
+      goto Label;
+   }
+
+   A a = { 100 };
+
+   Label:   // C4533
+      printf("\n%d", a.m_data);   // prints an uninitialized value
+}
 ```

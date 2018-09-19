@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::swap |Microsoft 文件
+title: auto_gcroot::swap |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78ab5f8385f404a6db2c9919c39c17d1442b49a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 785480c10aff65d02280a9338e79e76cd430a57b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104915"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098078"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
-交換與另一個物件`auto_gcroot`。  
+交換物件與另一個`auto_gcroot`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,8 +39,8 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_right`  
- `auto_gcroot`用來交換物件。  
+*右方 （_r)*<br/>
+`auto_gcroot`和其交換物件。  
   
 ## <a name="example"></a>範例  
   

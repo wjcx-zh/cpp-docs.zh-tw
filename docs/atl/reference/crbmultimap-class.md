@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0b81d1baddfd8d89112f7f7b9d63624a6aa3b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093814"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 類別
 
@@ -40,22 +40,22 @@ ms.locfileid: "43757763"
 template<typename K,
          typename V, 
          class KTraits = CElementTraits<K>, 
-         class VTraits = CElementTraits<V>>  
+         class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```
 
 #### <a name="parameters"></a>參數
 
-*K*  
+*K*<br/>
 索引鍵的項目類型。
 
-*V*  
+*V*<br/>
 值的項目型別。
 
-*KTraits*  
+*KTraits*<br/>
 程式碼，用來複製或移動索引鍵的項目。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。
 
-*VTraits*  
+*VTraits*<br/>
 若要複製或移動值的項目所使用的程式碼。
 
 ## <a name="members"></a>成員
@@ -111,7 +111,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBlockSize*  
+*nBlockSize*<br/>
 區塊大小。
 
 ### <a name="remarks"></a>備註
@@ -148,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 指定的索引鍵，識別要找的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -180,10 +180,10 @@ V& GetNextValueWithKey(
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 若要呼叫所取得的位置值[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)或是[CRBMultiMap::GetNextWithKey](#getnextwithkey)，或由先前呼叫`GetNextValueWithKey`。
 
-*key*  
+*key*<br/>
 指定的索引鍵，識別要找的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -215,10 +215,10 @@ CPair* GetNextWithKey(
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 若要呼叫所取得的位置值[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)或是[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)，或由先前呼叫`GetNextWithKey`。
 
-*key*  
+*key*<br/>
 指定的索引鍵，識別要找的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -241,10 +241,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 若要加入的索引鍵值`CRBMultiMap`物件。
 
-*值*  
+*值*<br/>
 要加入至值`CRBMultiMap`相關聯的物件*金鑰*。
 
 ### <a name="return-value"></a>傳回值
@@ -269,7 +269,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 指定的索引鍵，識別要刪除的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -288,7 +288,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CRBTree 類別](../../atl/reference/crbtree-class.md)   
-[CAtlMap 類別](../../atl/reference/catlmap-class.md)   
-[CRBMap 類別](../../atl/reference/crbmap-class.md)   
+[CRBTree 類別](../../atl/reference/crbtree-class.md)<br/>
+[CAtlMap 類別](../../atl/reference/catlmap-class.md)<br/>
+[CRBMap 類別](../../atl/reference/crbmap-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dcaa927bc9fe38ca45cf938a20cf08713ecff1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755508"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098949"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 
@@ -44,13 +44,13 @@ ms.locfileid: "43755508"
 ## <a name="syntax"></a>語法
 
 ```
-template<class ThreadModel>  
+template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
 #### <a name="parameters"></a>參數
 
-*ThreadModel*  
+*ThreadModel*<br/>
 類別，其方法實作所需的執行緒模型。 您可以設定，以明確選擇的執行緒模型*ThreadModel*要[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 您可以藉由設定接受伺服器的預設執行緒模型*ThreadModel*要[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或是[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。  
 
 ## <a name="members"></a>成員
@@ -205,16 +205,16 @@ static HRESULT InternalQueryInterface(
 
 ### <a name="parameters"></a>參數
 
-*pThis*  
+*pThis*<br/>
 [in]包含的介面公開至 COM 對應物件的指標`QueryInterface`。
 
-*pEntries*  
+*pEntries*<br/>
 [in]指標`_ATL_INTMAP_ENTRY`存取的可用的介面對應的結構。
 
-*iid*  
+*iid*<br/>
 [in]所要求介面的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]在指定的介面指標的指標*iid*，或如果找不到介面則為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -308,7 +308,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="parameters"></a>參數
 
-*bStarting*  
+*bStarting*<br/>
 [out]值為 TRUE，如果正在初始化類別;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
@@ -343,10 +343,10 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求介面的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]在指定的介面指標的指標*iid*，或如果彙總不支援的介面，則為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -381,7 +381,7 @@ void Unlock();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
-[CComObject 類別](../../atl/reference/ccomobject-class.md)   
-[CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
+[CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject 類別](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

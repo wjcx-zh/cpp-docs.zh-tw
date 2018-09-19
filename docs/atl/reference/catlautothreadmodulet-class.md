@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099694"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 類別
 
@@ -35,21 +35,21 @@ ms.locfileid: "43757611"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 類別會實作 COM 伺服器。
 
-*ThreadAllocator*  
+*ThreadAllocator*<br/>
 管理執行緒的選取項目類別。 預設值是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
 
-*dwWait*  
+*dwWait*<br/>
 指定逾時間隔，以毫秒為單位。 預設值為 INFINITE，這表示永遠不會超過方法的逾時間隔。
 
 ## <a name="members"></a>成員
@@ -95,7 +95,7 @@ static int GetDefaultThreads();
 
 ## <a name="see-also"></a>另請參閱
 
-[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
+[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)

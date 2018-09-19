@@ -1,5 +1,5 @@
 ---
-title: 資源編譯器嚴重錯誤 RC1011 |Microsoft 文件
+title: 資源編譯器嚴重錯誤 RC1011 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a8666939e5355c595cc3aca9ddb1d34dcd555b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0e8e1b6d18251ff909592cbbdaa38bbd5fe458d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316497"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075919"
 ---
 # <a name="resource-compiler-fatal-error-rc1011"></a>資源編譯器嚴重錯誤 RC1011
-編譯器限制: 'identifier': 巨集定義太大  
-  
- 嘗試定義分割為較短的定義。
+
+編譯器限制: 'identifier': 巨集定義太大
+
+嘗試定義分割為較短的定義。

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089576"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 類別
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 您分割的類別，衍生自`CComTearOffObjectBase`和要分割物件以支援的介面。
 
 ATL 中兩個階段實作其 tear-off 介面 —`CComTearOffObjectBase`方法會處理參考計數和`QueryInterface`，雖然`CComTearOffObject`實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>參數
 
-*pv*  
+*pv*<br/>
 [in]將會轉換成指標的指標`CComObject<Owner>`物件。
 
 ### <a name="remarks"></a>備註
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>參數
 
-*擁有者*  
+*擁有者*<br/>
 [in]其分割所實作的類別。
 
 ### <a name="remarks"></a>備註
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求之介面的 IID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -209,5 +209,5 @@ STDMETHOD_ULONG Release();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComCachedTearOffObject 類別](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[CComCachedTearOffObject 類別](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

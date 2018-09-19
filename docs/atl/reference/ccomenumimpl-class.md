@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aab6e168970ff740f68d1338a05d51c691fd116d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2cf80d51cdf45b6298255a252124ace9568953b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082509"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 類別
 
@@ -43,22 +43,22 @@ ms.locfileid: "43759983"
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy>  
+    const IID* piid, class T, class Copy>
 class ATL_NO_VTABLE CComEnumImpl : public Base
 ```
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)的範例。
 
-*piid*  
+*piid*<br/>
 指標的列舉值介面的介面 ID。
 
-*T*  
+*T*<br/>
 列舉值介面所公開的項目類型。
 
-*複製*  
+*複製*<br/>
 同質[複製原則類別](../../atl/atl-copy-policy-classes.md)。
 
 ## <a name="members"></a>成員
@@ -143,16 +143,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>參數
 
-*begin*  
+*begin*<br/>
 包含要列舉的項目陣列的第一個元素指標。
 
-*end*  
+*end*<br/>
 最後一個元素的陣列，包含要列舉的項目之外的位置指標。
 
-*pUnk*  
+*pUnk*<br/>
 [in]`IUnknown`必須保持運作的存留期間列舉值物件的指標。 如果物件不存在，請傳遞 NULL。
 
-*flags*  
+*flags*<br/>
 指定列舉值應該取得陣列的擁有權，或建立一份旗標。 可能的值如下所述。
 
 ### <a name="return-value"></a>傳回值
@@ -167,13 +167,13 @@ HRESULT Init(
 
 *旗標*參數可讓您指定的列舉程式應該如何處理陣列項目傳遞給它。 *旗標*可能需要其中一個值`CComEnumFlags`列舉型別，如下所示：
 
-```  
-enum CComEnumFlags  
-   {  
-   AtlFlagNoCopy = 0,  
-   AtlFlagTakeOwnership = 2, // BitOwn  
-   AtlFlagCopy = 3           // BitOwn | BitCopy  
-   };  
+```
+enum CComEnumFlags
+   {
+   AtlFlagNoCopy = 0,
+   AtlFlagTakeOwnership = 2, // BitOwn
+   AtlFlagCopy = 3           // BitOwn | BitCopy
+   };
 ```
 
 `AtlFlagNoCopy` 表示陣列的存留期不列舉值所控制。 在此情況下，陣列會是靜態或所識別的物件*pUnk*負責當不再需要時釋放陣列。
@@ -195,7 +195,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 
 ### <a name="parameters"></a>參數
 
-*ppEnum*  
+*ppEnum*<br/>
 [out]從目前的列舉值，複製新建立的物件上的列舉值介面。
 
 ### <a name="return-value"></a>傳回值
@@ -256,13 +256,13 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 
 ### <a name="parameters"></a>參數
 
-*celt*  
+*celt*<br/>
 [in]要求的元素數目。
 
-*rgelt*  
+*rgelt*<br/>
 [out]要填入之項目的陣列。
 
-*pceltFetched*  
+*pceltFetched*<br/>
 [out]中實際傳回項目數*rgelt*。 這可以是小於*celt*如果少於*celt*保持在清單中的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -291,7 +291,7 @@ STDMETHOD(Skip)(ULONG celt);
 
 ### <a name="parameters"></a>參數
 
-*celt*  
+*celt*<br/>
 [in]略過的項目數目。
 
 ### <a name="return-value"></a>傳回值
@@ -304,6 +304,6 @@ STDMETHOD(Skip)(ULONG celt);
 
 ## <a name="see-also"></a>另請參閱
 
-[IEnumOnSTLImpl 類別](../../atl/reference/ienumonstlimpl-class.md)   
-[CComEnum 類別](../../atl/reference/ccomenum-class.md)   
+[IEnumOnSTLImpl 類別](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[CComEnum 類別](../../atl/reference/ccomenum-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

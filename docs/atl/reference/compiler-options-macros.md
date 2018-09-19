@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 087e03ea44388249817d6ffd70659a30e8bdabe0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 63fa47f4237d27cb8e0d5629e2041244ab360132
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758618"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075094"
 ---
 # <a name="compiler-options-macros"></a>編譯器選項巨集
 
@@ -211,7 +211,7 @@ ATL_NO_VTABLE
 
 ### <a name="parameters"></a>參數
 
-*myfunction*  
+*myfunction*<br/>
 不應該由內嵌的函式。
 
 ### <a name="remarks"></a>備註

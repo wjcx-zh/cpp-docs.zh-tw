@@ -1,5 +1,5 @@
 ---
-title: overwrite_buffer 類別 |Microsoft 文件
+title: overwrite_buffer 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 05afb5f0cd9db22be48da3999105a0874ee5c037
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694192"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080814"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 類別
 `overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。  
@@ -48,8 +48,8 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- 儲存及緩衝區所傳播之訊息的裝載類型。  
+*T*<br/>
+儲存及緩衝區所傳播之訊息的裝載類型。  
   
 ## <a name="members"></a>成員  
   
@@ -64,28 +64,28 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[has_value](#has_value)|檢查是否這`overwrite_buffer`傳訊區塊尚未有值。|  
-|[value](#value)|取得參考的訊息儲存在目前裝載`overwrite_buffer`傳訊區塊。|  
+|[has_value](#has_value)|檢查是否這`overwrite_buffer`傳訊區塊尚未值。|  
+|[value](#value)|取得儲存在訊息的目前內容的參考`overwrite_buffer`傳訊區塊。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|接受的訊息，有提供這`overwrite_buffer`傳訊區塊，一份訊息傳回給呼叫者。|  
-|[consume_message](#consume_message)|取用先前所提供的訊息`overwrite_buffer`傳訊區塊和目標，傳回的訊息複本給呼叫者所保留。|  
-|[link_target_notification](#link_target_notification)|告知新目標的已連結至這個回呼`overwrite_buffer`傳訊區塊。|  
-|[propagate_message](#propagate_message)|以非同步方式傳遞訊息從`ISource`至此區塊`overwrite_buffer`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。|  
+|[accept_message](#accept_message)|接受的訊息，由此`overwrite_buffer`傳訊區塊，傳回給呼叫端的訊息。|  
+|[consume_message](#consume_message)|會使用先前所提供訊息`overwrite_buffer`傳訊區塊和目標，並傳回給呼叫端的訊息保留。|  
+|[link_target_notification](#link_target_notification)|通知新目標，已連結至這個回呼`overwrite_buffer`傳訊區塊。|  
+|[propagate_message](#propagate_message)|以非同步方式傳遞的訊息`ISource`至此區塊`overwrite_buffer`傳訊區塊。 它由`propagate`方法中，當呼叫來源區塊。|  
 |[propagate_to_any_targets](#propagate_to_any_targets)|上的芳鄰`message _PMessage`以此`overwrite_buffer`傳訊區塊，並提供其所有連結的目標。|  
-|[release_message](#release_message)|釋放先前訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
-|[reserve_message](#reserve_message)|由此先前提供的訊息會保留`overwrite_buffer`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
-|[resume_propagation](#resume_propagation)|釋放保留項目之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
-|[send_message](#send_message)|以同步方式將傳遞訊息，以從`ISource`至此區塊`overwrite_buffer`傳訊區塊。 所叫用`send`方法，由來源區塊呼叫時。|  
+|[release_message](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
+|[reserve_message](#reserve_message)|保留先前由此訊息`overwrite_buffer`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
+|[resume_propagation](#resume_propagation)|保留區釋出之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
+|[send_message](#send_message)|以同步方式傳遞的訊息`ISource`至此區塊`overwrite_buffer`傳訊區塊。 它由`send`方法中，當呼叫來源區塊。|  
 |[supports_anonymous_source](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 (覆寫[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>備註  
- `overwrite_buffer`傳訊區塊會散佈到其目標其儲存訊息的複本。  
+ `overwrite_buffer`傳訊區塊散佈其預存的訊息，其目標的每個複本。  
   
- 如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [ISource](isource-class.md)  
@@ -105,62 +105,62 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 ##  <a name="accept_message"></a> accept_message 
 
- 接受的訊息，有提供這`overwrite_buffer`傳訊區塊，一份訊息傳回給呼叫者。  
+ 接受的訊息，由此`overwrite_buffer`傳訊區塊，傳回給呼叫端的訊息。  
   
 ```
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`所提供的`message`物件。  
+*_MsgId*<br/>
+`runtime_object_identity`提供的`message`物件。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`message`物件，呼叫端現在會有的擁有權。  
+ 指標`message`物件，呼叫者現在會有的擁有權。  
   
 ### <a name="remarks"></a>備註  
- `overwrite_buffer`傳訊區塊傳回副本的訊息，其目標，而不是傳送目前保留訊息的擁有權。  
+ `overwrite_buffer`傳訊區塊傳回副本的訊息，其目標，而不是傳送擁有權的目前保留的訊息。  
   
 ##  <a name="consume_message"></a> consume_message 
 
- 取用先前所提供的訊息`overwrite_buffer`傳訊區塊和目標，傳回的訊息複本給呼叫者所保留。  
+ 會使用先前所提供訊息`overwrite_buffer`傳訊區塊和目標，並傳回給呼叫端的訊息保留。  
   
 ```
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件被取用。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件被取用。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`message`物件，呼叫端現在會有的擁有權。  
+ 指標`message`物件，呼叫者現在會有的擁有權。  
   
 ### <a name="remarks"></a>備註  
- 類似於`accept`，但呼叫一律置於`reserve`。  
+ 類似於`accept`，但一律置於呼叫`reserve`。  
   
 ##  <a name="has_value"></a> has_value 
 
- 檢查是否這`overwrite_buffer`傳訊區塊尚未有值。  
+ 檢查是否這`overwrite_buffer`傳訊區塊尚未值。  
   
 ```
 bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果區塊已接收值，`false`否則。  
+ `true` 如果區塊已收到的值，`false`否則。  
   
 ##  <a name="link_target_notification"></a> link_target_notification 
 
- 告知新目標的已連結至這個回呼`overwrite_buffer`傳訊區塊。  
+ 通知新目標，已連結至這個回呼`overwrite_buffer`傳訊區塊。  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PTarget`  
- 新連結的目標指標。  
+*_PTarget*<br/>
+新連結的目標指標。  
   
 ##  <a name="dtor"></a> ~ overwrite_buffer 
 
@@ -196,23 +196,23 @@ overwrite_buffer(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Filter`  
- 篩選函數用來決定是否應該接受所提供的訊息。  
+*篩選 （_f)*<br/>
+判斷是否應該接受所提供的訊息篩選器函式。  
   
- `_PScheduler`  
- `Scheduler`物件所在的傳播工作`overwrite_buffer`排定傳訊區塊。  
+*_PScheduler*<br/>
+`Scheduler`物件的傳播工作在其中`overwrite_buffer`傳訊區塊已排程。  
   
- `_PScheduleGroup`  
- `ScheduleGroup`物件所在的傳播工作`overwrite_buffer`排定傳訊區塊。 所使用的 `Scheduler` 物件由排程群組所隱含。  
+*_PScheduleGroup*<br/>
+`ScheduleGroup`物件的傳播工作在其中`overwrite_buffer`傳訊區塊已排程。 所使用的 `Scheduler` 物件由排程群組所隱含。  
   
 ### <a name="remarks"></a>備註  
  如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。  
   
- 型別`filter_method`是函式簽章`bool (T const &)`由此叫用`overwrite_buffer`傳訊區塊，以判斷它是否應該接受提供的訊息。  
+ 型別`filter_method`是仿函式簽章`bool (T const &)`由此叫用的所在`overwrite_buffer`傳訊區塊，以判斷是否應該接受接受所提供的訊息。  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- 以非同步方式傳遞訊息從`ISource`至此區塊`overwrite_buffer`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。  
+ 以非同步方式傳遞的訊息`ISource`至此區塊`overwrite_buffer`傳訊區塊。 它由`propagate`方法中，當呼叫來源區塊。  
   
 ```
 virtual message_status propagate_message(
@@ -221,14 +221,14 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PMessage`  
- `message` 物件的指標。  
+*_PMessage*<br/>
+`message` 物件的指標。  
   
- `_PSource`  
- 供應項目訊息的來源區塊的指標。  
+*_PSource*<br/>
+提供訊息來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。  
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
@@ -239,15 +239,15 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PMessage`  
- 指標`message`物件這個`overwrite_buffer`已取得的擁有權。  
+*_PMessage*<br/>
+指標`message`物件這個`overwrite_buffer`已取得的擁有權。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會覆寫中的目前訊息`overwrite_buffer`新接受訊息`_PMessage`。  
+ 這個方法會覆寫中目前的訊息`overwrite_buffer`最近接受訊息`_PMessage`。  
   
 ##  <a name="send_message"></a> send_message 
 
- 以同步方式將傳遞訊息，以從`ISource`至此區塊`overwrite_buffer`傳訊區塊。 所叫用`send`方法，由來源區塊呼叫時。  
+ 以同步方式傳遞的訊息`ISource`至此區塊`overwrite_buffer`傳訊區塊。 它由`send`方法中，當呼叫來源區塊。  
   
 ```
 virtual message_status send_message(
@@ -256,14 +256,14 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PMessage`  
- `message` 物件的指標。  
+*_PMessage*<br/>
+`message` 物件的指標。  
   
- `_PSource`  
- 供應項目訊息的來源區塊的指標。  
+*_PSource*<br/>
+提供訊息來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
- A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+ A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。  
   
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
@@ -278,37 +278,37 @@ virtual bool supports_anonymous_source();
   
 ##  <a name="release_message"></a> release_message 
 
- 釋放先前訊息保留。  
+ 釋放先前的訊息保留。  
   
 ```
 virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件時釋放。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件被釋放。  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- 由此先前提供的訊息會保留`overwrite_buffer`傳訊區塊。  
+ 保留先前由此訊息`overwrite_buffer`傳訊區塊。  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_MsgId`  
- `runtime_object_identity`的`message`物件被保留。  
+*_MsgId*<br/>
+`runtime_object_identity`的`message`物件所保留。  
   
 ### <a name="return-value"></a>傳回值  
- `true` 如果訊息已成功保留，`false`否則。  
+ `true` 如果已成功保留訊息，`false`否則。  
   
 ### <a name="remarks"></a>備註  
- 之後`reserve`呼叫時，如果它傳回`true`，`consume`或`release`必須呼叫需要或釋出訊息的擁有權。  
+ 在後`reserve`呼叫時，如果它傳回`true`，可以是`consume`或`release`採取，或釋放訊息的擁有權必須先呼叫。  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
- 釋放保留項目之後，請繼續傳播。  
+ 保留區釋出之後，請繼續傳播。  
   
 ```
 virtual void resume_propagation();
@@ -316,17 +316,17 @@ virtual void resume_propagation();
   
 ##  <a name="value"></a> 值 
 
- 取得參考的訊息儲存在目前裝載`overwrite_buffer`傳訊區塊。  
+ 取得儲存在訊息的目前內容的參考`overwrite_buffer`傳訊區塊。  
   
 ```
 T value();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 目前儲存訊息的裝載。  
+ 目前儲存訊息的承載。  
   
 ### <a name="remarks"></a>備註  
- 中儲存的值`overwrite_buffer`無法在這個方法會傳回之後，立即變更。 這個方法會等候訊息到達時，如果目前沒有任何訊息儲存在`overwrite_buffer`。  
+ 中儲存的值`overwrite_buffer`無法在這個方法傳回之後，立即變更。 這個方法會等候，直到訊息抵達時，如果目前沒有任何訊息儲存在`overwrite_buffer`。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

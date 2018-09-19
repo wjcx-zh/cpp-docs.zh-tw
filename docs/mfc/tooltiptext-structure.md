@@ -17,33 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f65b94294b3b3d55f9839dffa99a18be61c5639
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195980"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097155"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 結構
 撰寫您[工具提示通知處理常式](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)，您必須使用**TOOLTIPTEXT**結構。 成員**TOOLTIPTEXT**結構：  
   
- `typedef struct {`  
-  
- `NMHDR     hdr;        // required for all WM_NOTIFY messages`  
-  
- `LPTSTR    lpszText;   // see below`  
-  
- `TCHAR     szText[80]; // buffer for tool tip text`  
-  
- `HINSTANCE hinst;      // see below`  
-  
- `UINT      uflags;     // flag indicating how to interpret the`  
-  
- `// idFrom member of the NMHDR structure`  
-  
- `// that is included in the structure`  
-  
- `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
+```cpp
+typedef struct {
+    NMHDR     hdr;        // required for all WM_NOTIFY messages
+    LPTSTR    lpszText;   // see below
+    TCHAR     szText[80]; // buffer for tool tip text
+    HINSTANCE hinst;      // see below
+    UINT      uflags;     // flag indicating how to interpret the
+                          // idFrom member of the NMHDR structure
+                          // that is included in the structure
+} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
+```
   
  *hdr*  
  識別需要文字的工具。 這個結構的成員中，您唯一需要的是控制項的命令 ID。 控制項的命令 ID 會處於*idFrom*隸屬**NMHDR**語法存取結構`hdr.idFrom`。 請參閱[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)如需成員的討論**NMHDR**結構。  
@@ -57,7 +51,7 @@ ms.locfileid: "43195980"
  *hinst*  
  執行個體的控制代碼，其中包含做為工具提示文字所使用的字串。 如果*lpszText*是位址的工具提示文字，這個成員為 NULL。  
   
- 當您處理 `TTN_NEEDTEXT` 通知訊息時，請使用其中一種方法指定下列要顯示的字串：  
+當您處理 `TTN_NEEDTEXT` 通知訊息時，請使用其中一種方法指定下列要顯示的字串：  
   
 -   將文字複製到所指定的緩衝區*szText*成員。  
   

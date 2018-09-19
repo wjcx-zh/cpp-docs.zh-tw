@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b712b44c2908df1163380a76909884e4ab87d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 788188814de37214f397632161de55b54a28421e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073261"
 ---
 # <a name="default-atl-project-configurations"></a>預設 ATL 專案組態
 
@@ -34,8 +34,8 @@ ms.locfileid: "43755744"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[使用專案屬性](../../ide/working-with-project-properties.md)   
-[組態管理員 對話方塊](/visualstudio/ide/understanding-build-configurations)   
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[使用專案屬性](../../ide/working-with-project-properties.md)<br/>
+[組態管理員 對話方塊](/visualstudio/ide/understanding-build-configurations)<br/>
 [編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

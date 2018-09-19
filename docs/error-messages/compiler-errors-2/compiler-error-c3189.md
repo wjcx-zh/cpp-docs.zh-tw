@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3189 |Microsoft 文件
+title: 編譯器錯誤 C3189 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf0e49ecf9c8003d8dcfe035b14c8f5c5067dbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4666a16aed6d26f1cf38e4b32523c7c36948274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251009"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093866"
 ---
 # <a name="compiler-error-c3189"></a>編譯器錯誤 C3189
-' typeid\<抽象宣告子的類型 >': 已不再支援此語法，請使用:: typeid 改為  
-  
- 過時形式[typeid](../../windows/typeid-cpp-component-extensions.md)已使用，使用新的表單。  
-  
- 下列範例會產生 C3189:  
-  
-```  
-// C3189.cpp  
-// compile with: /clr  
-int main() {  
-   System::Type^ t  = typeid<System::Object>;   // C3189  
-   System::Type^ t2  = System::Object::typeid;   // OK  
-}  
+
+' typeid\<抽象宣告子的類型 >': 已不再支援此語法，請使用:: typeid 改為
+
+過時形式[typeid](../../windows/typeid-cpp-component-extensions.md)已使用，使用新的表單。
+
+下列範例會產生 C3189:
+
+```
+// C3189.cpp
+// compile with: /clr
+int main() {
+   System::Type^ t  = typeid<System::Object>;   // C3189
+   System::Type^ t2  = System::Object::typeid;   // OK
+}
 ```

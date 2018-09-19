@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0031 |Microsoft 文件
+title: 專案建置錯誤 PRJ0031 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5ebd25c239a05c4300b574ec0d47035904187d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce97e8f540295f5a2968fce22312b8e0e34cfd2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076888"
 ---
 # <a name="project-build-error-prj0031"></a>專案建置錯誤 PRJ0031
-自訂建置的 '輸出' 屬性 'macro_expansion' 跳檔案 'file' 包含 '巨集' 而它評估。  
-  
- 自訂建置步驟的檔案有可能是因為巨集評估問題的錯誤輸出。 這項錯誤也可能表示的格式不正確的路徑，是包含字元或檔案路徑中不合法的字元的組合。  
-  
- 若要解決這個錯誤，請修正巨集，或修正路徑規格。 評估的路徑是從專案目錄的絕對路徑。
+
+'Macro_expansion' 到檔案 'file' 包含 'macro' 而它評估步驟針對自訂建置的 '輸出' 屬性。
+
+自訂建置步驟上的檔案有可能是因為巨集評估問題的錯誤輸出。 這項錯誤也可能表示，格式不正確的路徑，是包含字元或在檔案路徑中不合法的字元的組合。
+
+若要解決這個錯誤，修正巨集或修正的路徑規格。 評估的路徑是從專案目錄的絕對路徑。

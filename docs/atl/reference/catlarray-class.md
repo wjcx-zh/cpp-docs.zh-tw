@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097792"
 ---
 # <a name="catlarray-class"></a>CAtlArray 類別
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>參數
 
-*E*  
+*E*<br/>
 陣列中儲存之資料的類型。
 
-*ETraits*  
+*ETraits*<br/>
 程式碼，用來複製或移動項目。
 
 ## <a name="members"></a>成員
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>參數
 
-*項目*  
+*項目*<br/>
 要加入至陣列的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>參數
 
-*aSrc*  
+*aSrc*<br/>
 要附加的陣列。
 
 ### <a name="return-value"></a>傳回值
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>參數
 
-*aSrc*  
+*aSrc*<br/>
 要複製到陣列之項目的來源。
 
 ### <a name="remarks"></a>備註
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>參數
 
-*iElement*  
+*iElement*<br/>
 要傳回之陣列元素的索引值。
 
 ### <a name="return-value"></a>傳回值
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>參數
 
-*iStart*  
+*iStart*<br/>
 陣列是要插入的索引。
 
-*paNew*  
+*paNew*<br/>
 要插入的陣列。
 
 ### <a name="remarks"></a>備註
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>參數
 
-*iElement*  
+*iElement*<br/>
 索引中的項目或項目會插入。
 
-*項目*  
+*項目*<br/>
 要插入的元素值。
 
-*nCount*  
+*nCount*<br/>
 若要新增的項目數目。
 
 ### <a name="remarks"></a>備註
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>參數
 
-*iElement*  
+*iElement*<br/>
 要傳回之陣列元素的索引值。
 
 ### <a name="return-value"></a>傳回值
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>參數
 
-*iElement*  
+*iElement*<br/>
 要移除之第一個項目的索引。
 
-*nCount*  
+*nCount*<br/>
 要移除的項目數目。
 
 ### <a name="remarks"></a>備註
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>參數
 
-*iElement*  
+*iElement*<br/>
 指向要設定之陣列元素的索引。
 
-*項目*  
+*項目*<br/>
 指定的項目新值。
 
 ### <a name="remarks"></a>備註
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>參數
 
-*nNewSize*  
+*nNewSize*<br/>
 陣列所需的大小。
 
-*nGrowBy*  
+*nGrowBy*<br/>
 用來判斷的值將緩衝區的大小。 -1 值會導致使用內部導出的值。
 
 ### <a name="return-value"></a>傳回值
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>參數
 
-*iElement*  
+*iElement*<br/>
 指向要設定之陣列元素的索引。
 
-*項目*  
+*項目*<br/>
 指定的項目新值。
 
 ### <a name="remarks"></a>備註
@@ -559,9 +559,9 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ## <a name="see-also"></a>另請參閱
 
-[MMXSwarm 範例](../../visual-cpp-samples.md)   
-[DynamicConsumer 範例](../../visual-cpp-samples.md)   
-[UpdatePV 範例](../../visual-cpp-samples.md)   
-[跑馬燈範例](../../visual-cpp-samples.md)   
-[CArray 類別](../../mfc/reference/carray-class.md)   
+[MMXSwarm 範例](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer 範例](../../visual-cpp-samples.md)<br/>
+[UpdatePV 範例](../../visual-cpp-samples.md)<br/>
+[跑馬燈範例](../../visual-cpp-samples.md)<br/>
+[CArray 類別](../../mfc/reference/carray-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1054 |Microsoft 文件
+title: 嚴重錯誤 C1054 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9daac4944c57dbf08fe0ebcbc95993a97838585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 439019b1f510127ae54e77d445d59e86be09a49b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101965"
 ---
 # <a name="fatal-error-c1054"></a>嚴重錯誤 C1054
-編譯器限制： 初始設定式巢狀太深  
-  
- 程式碼超出初始設定式 （10-15 層級，取決於正在初始化的類型的組合） 的巢狀限制。  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正  
-  
-1.  簡化以減少巢狀結構正在初始化的資料類型。  
-  
-2.  初始化個別陳述式中的變數宣告之後。
+
+編譯器限制： 初始設定式巢狀太深
+
+程式碼超過初始設定式 （10 至 15 層級，根據正在初始化的類型的組合） 的巢狀限制。
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正
+
+1. 簡化的資料類型，以減少巢狀結構正在初始化。
+
+1. 初始化個別的陳述式中的變數宣告之後。

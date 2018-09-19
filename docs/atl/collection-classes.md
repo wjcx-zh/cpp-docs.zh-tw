@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5cc94c2b935198cd3c445e8460e23ebbf2af55b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e6c86db9be77e098d1160b847fce5ff940d20cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752664"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093424"
 ---
 # <a name="collection-classes"></a>集合類別
 
@@ -99,6 +99,6 @@ ms.locfileid: "43752664"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../atl/atl-class-overview.md)   
+[類別概觀](../atl/atl-class-overview.md)<br/>
 [集合類別](../atl/atl-collection-classes.md)
 

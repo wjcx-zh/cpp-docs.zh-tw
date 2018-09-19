@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1164 |Microsoft 文件
+title: 連結器工具錯誤 LNK1164 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f85ad1c223c9d4b22e3763f1d24a6c2631f6342d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b07dcf360a58b07b84abe655641b758d6137d0e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087422"
 ---
 # <a name="linker-tools-error-lnk1164"></a>連結器工具錯誤 LNK1164
-區段的區段對齊 （數字） 大於 /ALIGN 值  
-  
- 目的檔中的指定區段的對齊方式大小超過指定的值[/對齊](../../build/reference/align-section-alignment.md)選項。 **/對齊**值必須是 2 的乘冪且必須等於或超過目的檔中指定的區段對齊。  
-  
- 以較小區段記憶體對齊或增加任一 recompile **/對齊**值。
+
+區段區段記憶體對齊 （數字） 大於 /ALIGN 值
+
+目的檔中的指定區段的對齊方式大小超過指定的值[/對齊](../../build/reference/align-section-alignment.md)選項。 **/對齊**值必須是 2 的冪，且必須等於或超過目的檔中指定的區段對齊。
+
+使用較小的區段記憶體對齊或增加可能是重新編譯 **/對齊**值。

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085277"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -64,15 +64,15 @@ double _cabs(
 
 ## <a name="return-value"></a>傳回值
 
-**_cabs**如果成功，傳回其引數的絕對值。 在溢位， **_cabs**傳回**HUGE_VAL**並設定**errno**至**為 ERANGE**。 您可以使用 [_matherr](matherr.md) 變更錯誤處理。
+**_cabs**如果成功，傳回其引數的絕對值。 溢位時， **_cabs**會傳回**HUGE_VAL**並設定**errno**至**ERANGE**。 您可以使用 [_matherr](matherr.md) 變更錯誤處理。
 
 ## <a name="remarks"></a>備註
 
-**_Cabs**函式會計算數值的複數，其必須是類型的結構絕對值[_complex](../../c-runtime-library/standard-types.md)。 結構*z*是真正的元件所組成*x*和虛*y*。 呼叫 **_cabs**產生同等的運算式值`sqrt( z.x * z.x + z.y * z.y )`。
+**_Cabs**函式會計算數值的複數，其必須是結構類型的絕對值[_complex](../../c-runtime-library/standard-types.md)。 結構*z*是真正的元件所組成*x*及虛數部分*y*。 呼叫 **_cabs**會產生等同於運算式的值`sqrt( z.x * z.x + z.y * z.y )`。
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)   
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)

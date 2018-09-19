@@ -22,44 +22,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 47b301e054f2bcd0a37e0ea8e5e71730fafb9ef7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0a0c0cc8817d40b325ceb7a96769dfe971b60c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340520"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097805"
 ---
 # <a name="odbc-administrator"></a>ODBC 管理員
+
 ODBC 管理員登錄和設定[zdroje dat](../../data/odbc/data-source-odbc.md)可供您在本機或網路上。 精靈會使用 ODBC 管理員所提供的資訊來建立您的使用者連接到資料來源的應用程式中的程式碼。  
   
- 若要設定 ODBC 資料來源用於 MFC ODBC 類別或 MFC 資料存取物件 (DAO) 類別，您必須先註冊，並設定資料來源。 您可以使用 ODBC 管理員來新增和移除資料來源。 根據 ODBC 驅動程式，您也可以建立新的資料來源。  
+若要設定 ODBC 資料來源用於 MFC ODBC 類別或 MFC 資料存取物件 (DAO) 類別，您必須先註冊，並設定資料來源。 您可以使用 ODBC 管理員來新增和移除資料來源。 根據 ODBC 驅動程式，您也可以建立新的資料來源。  
   
- ODBC 管理員會在安裝期間安裝。 如果您選擇**自訂**安裝，且未選取任何的 ODBC 驅動程式，在**資料庫選項** 對話方塊中，您需要重新執行安裝程式安裝必要的檔案。  
+ODBC 管理員會在安裝期間安裝。 如果您選擇**自訂**安裝，且未選取任何的 ODBC 驅動程式，在**資料庫選項** 對話方塊中，您需要重新執行安裝程式安裝必要的檔案。  
   
- 在安裝期間，您可以選取您想要安裝的 ODBC 驅動程式。 您稍後可以安裝其他驅動程式隨附於 Visual c + + 使用 Visual c + + 安裝程式。  
+在安裝期間，您可以選取您想要安裝的 ODBC 驅動程式。 您稍後可以安裝其他驅動程式隨附於 Visual c + + 使用 Visual c + + 安裝程式。  
   
- 如果您想要安裝 ODBC 驅動程式不要使用尚未發行的 Visual c + +，您必須執行安裝程式隨附的驅動程式。  
+如果您想要安裝 ODBC 驅動程式不要使用尚未發行的 Visual c + +，您必須執行安裝程式隨附的驅動程式。  
   
 #### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>若要安裝 ODBC 驅動程式隨附 Visual c + +  
   
-1.  從您的 Visual c + + 發佈光碟片執行安裝程式。  
+1. 從您的 Visual c + + 發佈光碟片執行安裝程式。  
   
      開啟安裝程式中的對話方塊會隨即出現。  
   
-2.  按一下 [**下一步**在每個對話方塊中，直到您到達**安裝選項**] 對話方塊。 選取 [**自訂**，然後按一下**下一步]**。  
+1. 按一下 [**下一步**在每個對話方塊中，直到您到達**安裝選項**] 對話方塊。 選取 [**自訂**，然後按一下**下一步]**。  
   
-3.  清除所有核取方塊後**Microsoft Visual c + + 安裝程式**對話方塊中，除了**資料庫選項**核取方塊，然後按一下**詳細資料**顯示**資料庫選項** 對話方塊。  
+1. 清除所有核取方塊後**Microsoft Visual c + + 安裝程式**對話方塊中，除了**資料庫選項**核取方塊，然後按一下**詳細資料**顯示**資料庫選項** 對話方塊。  
   
-4.  清除**Microsoft Data Access Objects**核取方塊，選取**Microsoft ODBC 驅動程式**核取方塊，然後按一下**詳細資料**。  
+1. 清除**Microsoft Data Access Objects**核取方塊，選取**Microsoft ODBC 驅動程式**核取方塊，然後按一下**詳細資料**。  
   
      **Microsoft ODBC Drivers**  對話方塊隨即出現。  
   
-5.  選取您想要安裝，然後按一下 驅動的程式**確定**兩次。  
+1. 選取您想要安裝，然後按一下 驅動的程式**確定**兩次。  
   
-6.  按一下 [**下一步]** 上其餘的對話方塊，開始安裝。 安裝完成時，安裝程式會通知您。  
+1. 按一下 [**下一步]** 上其餘的對話方塊，開始安裝。 安裝完成時，安裝程式會通知您。  
   
- 安裝驅動程式之後，您可以設定資料來源使用 ODBC 管理員。 在控制台中，您會發現 [ODBC] 圖示。  
+安裝驅動程式之後，您可以設定資料來源使用 ODBC 管理員。 在控制台中，您會發現 [ODBC] 圖示。  
   
 ## <a name="see-also"></a>另請參閱  
- [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
- [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)
+
+[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)

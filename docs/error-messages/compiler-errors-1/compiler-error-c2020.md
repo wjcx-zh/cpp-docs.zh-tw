@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2020 |Microsoft 文件
+title: 編譯器錯誤 C2020 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267c71d987587ce1b4308a80f40cdc4fa9ecefc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b79bc9340e39d5cdc886db4b81d220bbfe88bbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099794"
 ---
 # <a name="compiler-error-c2020"></a>編譯器錯誤 C2020
-'member': 'class' 成員重複定義  
-  
- 已重新定義繼承自基底類別或結構的成員。 無法重新定義繼承的成員，除非宣告為`virtual`基底類別中。
+
+'member': 'class' 成員重複定義
+
+已重新定義繼承自基底類別或結構的成員。 無法重新定義繼承的成員，除非宣告為`virtual`基底類別中。

@@ -1,5 +1,5 @@
 ---
-title: 命令列警告 D9024 |Microsoft 文件
+title: 命令列警告 D9024 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47089a580285a7d2d0f49848e7e8e5ad90f32616
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dae28f28a07049fa19b56af7efcf43285b2a751b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092666"
 ---
 # <a name="command-line-warning-d9024"></a>命令列警告 D9024
-無法識別的來源檔案類型 'filename'，檔案假設是 object  
-  
- 無法辨識指定的檔案的副檔名。 檔案已假設為目的檔，而且已傳遞至連結器。  
-  
- 會辨識下列延伸項目：  
-  
--   .c （C 原始程式檔）  
-  
--   .cxx （c + + 原始程式檔）  
-  
--   .cpp （c + + 原始程式檔）  
-  
--   .obj （目的檔）  
-  
--   .lib （程式庫檔案）  
-  
--   .def （模組定義檔）  
-  
--   .exp （連結器匯出連結 /LIB 所建立的檔案）
+
+無法辨識的來源檔案類型 'filename'、 物件檔案假設
+
+無法辨識指定的檔案的副檔名。 檔案已假設為目的檔，並傳遞給連結器。
+
+會辨識下列延伸模組：
+
+- .c （C 原始程式檔）
+
+- .cxx （c + + 原始程式檔）
+
+- .cpp （c + + 原始程式檔）
+
+- .obj （目的檔）
+
+- .lib （程式庫檔案）
+
+- .def （模組定義檔）
+
+- .exp （連結器會匯出連結 /LIB 所建立的檔案）

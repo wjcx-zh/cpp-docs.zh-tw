@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1218 |Microsoft 文件
+title: 連結器工具錯誤 LNK1218 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a0596a648c44be928e6bbbae89734911550c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8808a52724aa3dc1bdfd33fec5945ba40680ca3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095315"
 ---
 # <a name="linker-tools-error-lnk1218"></a>連結器工具錯誤 LNK1218
-將警告視為錯誤;未產生輸出檔  
-  
- 當您連結 **/WX**，會將任何連結器警告視為錯誤，並且會建立沒有輸出檔。  
-  
- 請參閱[/WX （連結器警告視為錯誤）](../../build/reference/wx-treat-linker-warnings-as-errors.md)如需詳細資訊。
+
+將警告視為錯誤;未產生輸出檔
+
+當您連結 **/WX**，會將任何連結器警告視為錯誤，將會建立任何輸出檔案。
+
+請參閱[/WX （連結器警告視為錯誤）](../../build/reference/wx-treat-linker-warnings-as-errors.md)如需詳細資訊。

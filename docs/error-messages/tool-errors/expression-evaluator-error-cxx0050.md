@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0050 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0050 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095419"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>運算式評估工具錯誤 CXX0050
-左邊的:: 必須是類別/結構/等位  
-  
- 範圍解析運算子左邊的符號 (`::`) 不是類別、 結構或等位。  
-  
- 這個錯誤是與 can0050 相同。
+
+左側:: 必須是類別/結構/等位
+
+範圍解析運算子左邊的符號 (`::`) 不是類別、 結構或等位。
+
+此錯誤是與 can0050 相同。

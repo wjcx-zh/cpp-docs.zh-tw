@@ -1,5 +1,5 @@
 ---
-title: 使用存取子 |Microsoft 文件
+title: 使用存取子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 066e963cfe551173088f6d78efaf2057f29d05fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30ebb0e28bd25cf92a2d1c918d3cc5bc921df9f6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104993"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099748"
 ---
 # <a name="using-accessors"></a>使用存取子
-下列主題說明如何判斷哪一種存取子是最適合您資料的應用程式以及如何使用不同類型的存取子可用：  
+
+下列主題說明如何判斷存取子的類型是最適合您的資料應用程式以及如何使用不同類型的存取子可用：  
   
--   [決定使用哪一個存取子](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
+- [決定使用哪一個存取子](../../data/oledb/determining-which-type-of-accessor-to-use.md)  
   
--   [在資料列集上使用多重存取子](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
+- [在資料列集上使用多重存取子](../../data/oledb/using-multiple-accessors-on-a-rowset.md)  
   
--   [使用動態存取子](../../data/oledb/using-dynamic-accessors.md)  
+- [使用動態存取子](../../data/oledb/using-dynamic-accessors.md)  
   
--   [使用手動存取子](../../data/oledb/using-manual-accessors.md)  
+- [使用手動存取子](../../data/oledb/using-manual-accessors.md)  
   
--   [存取 XML 資料](../../data/oledb/accessing-xml-data.md)  
+- [存取 XML 資料](../../data/oledb/accessing-xml-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

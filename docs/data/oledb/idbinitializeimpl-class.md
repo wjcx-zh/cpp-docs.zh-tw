@@ -50,14 +50,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f59619db743d8f8d08b2a202e992cdfcd532e1e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072416"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
+
 提供實作[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))介面。  
   
 ## <a name="syntax"></a>語法
@@ -68,11 +69,13 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 您的類別，衍生自`IDBInitializeImpl`。  
+
+*T*<br/>
+您的類別，衍生自`IDBInitializeImpl`。  
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h  
+
+**Header:** atldb.h  
   
 ## <a name="members"></a>成員  
   
@@ -97,9 +100,11 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_pCUtlPropInfo](#pcutlpropinfo)|實作 DB 屬性資訊的指標。|  
   
 ## <a name="remarks"></a>備註  
- 在資料來源物件和選擇性的介面，列舉值的強制介面。  
+
+在資料來源物件和選擇性的介面，列舉值的強制介面。  
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+
 建構函式。  
   
 ### <a name="syntax"></a>語法  
@@ -109,9 +114,11 @@ IDBInitializeImpl();
 ```  
   
 ### <a name="remarks"></a>備註  
- 所有資料成員都初始化。 
+
+所有資料成員都初始化。 
   
 ## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+
 您可以透過準備資料來源物件的屬性支援來初始化該物件。  
   
 ### <a name="syntax"></a>語法  
@@ -121,9 +128,11 @@ STDMETHOD(Initialize)(void);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+
+請參閱[idbinitialize:: Initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
+
 位置的資料來源物件處於未初始化狀態，釋出內部的資源，例如屬性支援。  
   
 ### <a name="syntax"></a>語法  
@@ -133,9 +142,11 @@ STDMETHOD(Uninitialize)(void);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+
+請參閱[Uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))中*OLE DB 程式設計人員參考*。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+
 資料來源的旗標。  
   
 ### <a name="syntax"></a>語法  
@@ -145,7 +156,8 @@ DWORD m_dwStatus;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這些旗標會指定，或指出資料來源物件的各種屬性的狀態。 包含一或多個項目**enum**值：  
+
+這些旗標會指定，或指出資料來源物件的各種屬性的狀態。 包含一或多個項目**enum**值：  
   
 ```cpp  
 enum DATASOURCE_FLAGS {  
@@ -162,6 +174,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_INITIALIZED`|如果已初始化資料來源，設定。|  
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+
 實作物件，如 DB 內容的詳細資訊的指標。  
   
 ### <a name="syntax"></a>語法  
@@ -171,5 +184,6 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

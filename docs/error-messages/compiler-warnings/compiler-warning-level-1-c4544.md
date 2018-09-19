@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4544 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4544 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc07340c0b8c9cc513e8b10910ccee21152328f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c7cd274f0d1b595d374e1b108db40a51395b968
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279301"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084272"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>編譯器警告 (層級 1) C4544
-declaration'：在這個樣板宣告上已忽略的預設樣板引數  
-  
- 在不正確的位置中指定預設樣板引數，並且已將其忽略。 類別樣板的預設樣板引數只能在宣告或類別樣板定義中指定，而不會在類別樣板的成員上指定。  
-  
- 此範例會產生 C4545，而下一個範例會顯示如何修正它：  
-  
-```  
-// C4544.cpp  
-// compile with: /W1 /LD  
-template <class T>   
-struct S  
-{  
-   template <class T1>   
-      struct S1;  
-   void f();  
-};  
-  
-template <class T=int>  
-template <class T1>  
-struct S<T>::S1 {};   // C4544  
-```  
-  
- 在此範例中，預設參數會套用至類別樣板 `S`：  
-  
-```  
-// C4544b.cpp  
-// compile with: /LD  
-template <class T = int>   
-struct S  
-{  
-   template <class T1>   
-      struct S1;  
-   void f();  
-};  
-  
-template <class T>  
-template <class T1>  
-struct S<T>::S1 {};  
+
+declaration'：在這個樣板宣告上已忽略的預設樣板引數
+
+在不正確的位置中指定預設樣板引數，並且已將其忽略。 類別樣板的預設樣板引數只能在宣告或類別樣板定義中指定，而不會在類別樣板的成員上指定。
+
+此範例會產生 C4545，而下一個範例會顯示如何修正它：
+
+```
+// C4544.cpp
+// compile with: /W1 /LD
+template <class T>
+struct S
+{
+   template <class T1>
+      struct S1;
+   void f();
+};
+
+template <class T=int>
+template <class T1>
+struct S<T>::S1 {};   // C4544
+```
+
+在此範例中，預設參數會套用至類別樣板 `S`：
+
+```
+// C4544b.cpp
+// compile with: /LD
+template <class T = int>
+struct S
+{
+   template <class T1>
+      struct S1;
+   void f();
+};
+
+template <class T>
+template <class T1>
+struct S<T>::S1 {};
 ```

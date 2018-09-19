@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084506"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 結構
 
@@ -43,16 +43,16 @@ struct _ATL_WIN_MODULE70 {
 
 ## <a name="members"></a>成員
 
-`cbSize`  
+`cbSize`<br/>
 結構，用來進行版本設定的大小。
 
-`m_csWindowCreate`  
+`m_csWindowCreate`<br/>
 用來序列化存取視窗註冊碼。 供內部使用 ATL
 
-`m_pCreateWndList`  
+`m_pCreateWndList`<br/>
 用來繫結至其物件的 windows。 供內部使用 ATL
 
-`m_rgWindowClassAtoms`  
+`m_rgWindowClassAtoms`<br/>
 用來追蹤視窗類別註冊，讓它們可以適當地取消註冊，在終止。 供內部使用 ATL
 
 ## <a name="remarks"></a>備註

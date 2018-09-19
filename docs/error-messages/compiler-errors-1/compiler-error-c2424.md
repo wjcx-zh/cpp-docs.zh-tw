@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2424 |Microsoft 文件
+title: 編譯器錯誤 C2424 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2228929f99431bdec163e4c2dae60cbd42e3ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 268d1b6cb0fe51c44e4f84663de268299834f4b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195954"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086976"
 ---
 # <a name="compiler-error-c2424"></a>編譯器錯誤 C2424
-'token': 'context' 中有不適當的運算式  
-  
- 語彙基元形成此內容中不正確運算式的一部分。
+
+'token': 'context' 中有不適當的運算式
+
+語彙基元形成此內容中不正確運算式的一部分。

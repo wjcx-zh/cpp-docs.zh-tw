@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da9a0299679ec140888e9536329f0957a786279
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 208c89cad441a1fae70f5532204ec7856459de7f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095855"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 
@@ -38,18 +38,18 @@ COM 屬性頁來設定屬性中提供的使用者介面 （或呼叫的方法）
 
 ## <a name="in-this-section"></a>本節內容
 
-[指定屬性頁](../atl/specifying-property-pages.md)  
+[指定屬性頁](../atl/specifying-property-pages.md)<br/>
 列出指定您的控制項屬性頁的步驟，並顯示範例類別。
 
-[實作屬性頁](../atl/implementing-property-pages.md)  
+[實作屬性頁](../atl/implementing-property-pages.md)<br/>
 列出的步驟來實作屬性頁，包括覆寫的方法。 逐步解說 ATLPages 範例程式為基礎的完整範例。
 
 ## <a name="related-sections"></a>相關章節
 
-[ATLPages 範例](../visual-cpp-samples.md)  
+[ATLPages 範例](../visual-cpp-samples.md)<br/>
 ATLPages 範例中，實作屬性頁，使用的範例摘要`IPropertyPageImpl`。
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
 
 ## <a name="see-also"></a>另請參閱

@@ -19,28 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2aadccd883738fe2e6e9f57cc63f67cde6d6a6c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099933"
 ---
 # <a name="member-access"></a>成員存取
-可以控制類別成員存取多載成員存取運算子 (**->**)。 在這種用法中，這個運算子會視為一元運算子，而多載運算子函式必須是類別成員函式。 因此，這類函式的宣告如下：  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-class-type *operator->()  
-```  
-  
-## <a name="remarks"></a>備註  
- 何處*類別型別*是這個運算子所屬的類別的名稱。 成員存取運算子函式必須是非靜態成員函式。  
-  
- 這個運算子 (通常會搭配指標取值運算子) 會用來實作「智慧型指標」，這類指標會在取值或計數用法之前驗證指標。  
-  
- **.** 成員存取運算子無法多載。  
-  
-## <a name="see-also"></a>另請參閱  
- [運算子多載](../cpp/operator-overloading.md)
+
+可以控制類別成員存取多載成員存取運算子 (**->**)。 在這種用法中，這個運算子會視為一元運算子，而多載運算子函式必須是類別成員函式。 因此，這類函式的宣告如下：
+
+## <a name="syntax"></a>語法
+
+```
+class-type *operator->()
+```
+
+## <a name="remarks"></a>備註
+
+何處*類別型別*是這個運算子所屬的類別的名稱。 成員存取運算子函式必須是非靜態成員函式。
+
+這個運算子 (通常會搭配指標取值運算子) 會用來實作「智慧型指標」，這類指標會在取值或計數用法之前驗證指標。
+
+**.** 成員存取運算子無法多載。
+
+## <a name="see-also"></a>另請參閱
+
+[運算子多載](../cpp/operator-overloading.md)

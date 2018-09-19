@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3b6411e9ce34ba0196d25c8a63f3f066d78549
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765118"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095595"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 類別
 
@@ -38,13 +38,13 @@ ms.locfileid: "43765118"
 ## <a name="syntax"></a>語法
 
 ```
-template <class Worker>  
+template <class Worker>
 class CNonStatelessWorker
 ```
 
 #### <a name="parameters"></a>參數
 
-*背景工作角色*  
+*背景工作角色*<br/>
 若要符合的背景工作執行緒類別[背景工作原型](../../atl/reference/worker-archetype.md)適當的處理要求排入佇列[CThreadPool](../../atl/reference/cthreadpool-class.md)。
 
 ## <a name="members"></a>成員
@@ -130,6 +130,6 @@ void Terminate(void* /* pvParam */) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CThreadPool 類別](../../atl/reference/cthreadpool-class.md)   
-[背景工作原型](../../atl/reference/worker-archetype.md)   
+[CThreadPool 類別](../../atl/reference/cthreadpool-class.md)<br/>
+[背景工作原型](../../atl/reference/worker-archetype.md)<br/>
 [類別](../../atl/reference/atl-classes.md)

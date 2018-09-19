@@ -19,65 +19,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: df75602dec8b27d12535e41b14fb2d7ca64061d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076459"
 ---
 # <a name="cleaning-up-resources"></a>清除資源
-在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 可以 **__try**陳述式區塊就已中斷之前所配置的所有資源，因此，並非所有資源皆已都開啟。  
-  
- 因此，為了安全起見，您應該先檢查哪些資源已實際開啟，再繼續進行終止處理的清除作業。 建議的程序是：  
-  
-1.  將控制代碼初始化為 NULL。  
-  
-2.  在  **__try**陳述式區塊中配置資源。 資源一配置，控制代碼就會設定為正值。  
-  
-3.  在  **__finally**陳述式區塊，釋出其對應的控制代碼或旗標變數為非零值的每個資源，或 not NULL。  
-  
-## <a name="example"></a>範例  
- 例如，下列程式碼會使用終止處理常式關閉三個檔案和已配置的記憶體區塊 **__try**陳述式區塊。 在清除資源之前，程式碼會先檢查資源是否已配置。  
-  
-```cpp 
-// exceptions_Cleaning_up_Resources.cpp  
-#include <stdlib.h>  
-#include <malloc.h>  
-#include <stdio.h>  
-#include <windows.h>  
-  
-void fileOps() {  
-   FILE  *fp1 = NULL,  
-         *fp2 = NULL,  
-         *fp3 = NULL;  
-   LPVOID lpvoid = NULL;  
-   errno_t err;  
-  
-   __try {  
-      lpvoid = malloc( BUFSIZ );  
-  
-      err = fopen_s(&fp1, "ADDRESS.DAT", "w+" );  
-      err = fopen_s(&fp2, "NAMES.DAT", "w+" );  
-      err = fopen_s(&fp3, "CARS.DAT", "w+" );  
-   }  
-   __finally {  
-      if ( fp1 )  
-         fclose( fp1 );  
-      if ( fp2 )  
-         fclose( fp2 );  
-      if ( fp3 )  
-         fclose( fp3 );  
-      if ( lpvoid )  
-         free( lpvoid );  
-   }  
-}  
-  
-int main() {  
-   fileOps();  
-}  
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)   
- [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 可以 **__try**陳述式區塊就已中斷之前所配置的所有資源，因此，並非所有資源皆已都開啟。
+
+因此，為了安全起見，您應該先檢查哪些資源已實際開啟，再繼續進行終止處理的清除作業。 建議的程序是：
+
+1. 將控制代碼初始化為 NULL。
+
+1. 在  **__try**陳述式區塊中配置資源。 資源一配置，控制代碼就會設定為正值。
+
+1. 在  **__finally**陳述式區塊，釋出其對應的控制代碼或旗標變數為非零值的每個資源，或 not NULL。
+
+## <a name="example"></a>範例
+
+例如，下列程式碼會使用終止處理常式關閉三個檔案和已配置的記憶體區塊 **__try**陳述式區塊。 在清除資源之前，程式碼會先檢查資源是否已配置。
+
+```cpp
+// exceptions_Cleaning_up_Resources.cpp
+#include <stdlib.h>
+#include <malloc.h>
+#include <stdio.h>
+#include <windows.h>
+
+void fileOps() {
+   FILE  *fp1 = NULL,
+         *fp2 = NULL,
+         *fp3 = NULL;
+   LPVOID lpvoid = NULL;
+   errno_t err;
+
+   __try {
+      lpvoid = malloc( BUFSIZ );
+
+      err = fopen_s(&fp1, "ADDRESS.DAT", "w+" );
+      err = fopen_s(&fp2, "NAMES.DAT", "w+" );
+      err = fopen_s(&fp3, "CARS.DAT", "w+" );
+   }
+   __finally {
+      if ( fp1 )
+         fclose( fp1 );
+      if ( fp2 )
+         fclose( fp2 );
+      if ( fp3 )
+         fclose( fp3 );
+      if ( lpvoid )
+         free( lpvoid );
+   }
+}
+
+int main() {
+   fileOps();
+}
+```
+
+## <a name="see-also"></a>另請參閱
+
+[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
+[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

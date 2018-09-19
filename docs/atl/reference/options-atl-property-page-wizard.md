@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3f3cf6a9e2c9924ae72624c931a4551736f8956
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 92f3855cf9c760ef8e6bb761f4a0bac042f8c539
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081763"
 ---
 # <a name="options-atl-property-page-wizard"></a>選項, ATL 屬性頁精靈
 
@@ -50,6 +50,6 @@ ms.locfileid: "45711824"
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL 屬性頁精靈](../../atl/reference/atl-property-page-wizard.md)   
+[ATL 屬性頁精靈](../../atl/reference/atl-property-page-wizard.md)<br/>
 [字串，ATL 屬性頁精靈](../../atl/reference/strings-atl-property-page-wizard.md)
 

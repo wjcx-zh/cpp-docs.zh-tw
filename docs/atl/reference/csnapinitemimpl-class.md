@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091825"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 類別
 
@@ -54,16 +54,16 @@ ms.locfileid: "43764939"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`CSnapInItemImpl`。
 
-*bIsExtension*  
+*bIsExtension*<br/>
 如果物件是嵌入式管理單元延伸;，則為 TRUE。否則為 FALSE。
 
 ## <a name="members"></a>成員
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>參數
 
-*piCallback*  
+*piCallback*<br/>
 [in]指標`IContextMenuCallback`，可以加入快顯功能表中的項目。
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in、 out]識別 Microsoft Management Console MMC 定義功能表項目插入點可用。 這可以是下列旗標的組合：
 
 - 可以在操作功能表的頂端插入 CCM_INSERTIONALLOWED_TOP 項目。
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - [結果] 窗格內容功能表中的 [檢視] 子功能表或工具列的 [檢視] 功能表中，可以插入 CCM_INSERTIONALLOWED_VIEW 項目。
 
-*type*  
+*type*<br/>
 [in]指定物件的型別。 它可以包含下列值之一：
 
 - 範圍窗格內容的 CCT_SCOPE 資料物件。
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>參數
 
-*lCommandID*  
+*lCommandID*<br/>
 [in]指定功能表項目的命令識別項。
 
-*type*  
+*type*<br/>
 [in]指定物件的型別。 它可以包含下列值之一：
 
 - 範圍窗格內容的 CCT_SCOPE 資料物件。
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>參數
 
-*lpProvider*  
+*lpProvider*<br/>
 [in]指標`IPropertySheetCallback`介面。
 
-*控制代碼*  
+*控制代碼*<br/>
 [in]指定用來將 MMCN_PROPERTY_CHANGE 通知訊息傳送至適當的資料類別的控制代碼。
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IExtendPropertySheet`包含該節點的內容資訊的物件上的介面。
 
-*type*  
+*type*<br/>
 [in]指定物件的型別。 它可以包含下列值之一：
 
 - 範圍窗格內容的 CCT_SCOPE 資料物件。
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>參數
 
-*cf*  
+*cf*<br/>
 [in]剪貼簿格式 （文字、 豐富的文字或 rtf 文字與 OLE 項目）。
 
-*pStream*  
+*pStream*<br/>
 [in]包含的物件資料的資料流指標。
 
 ### <a name="remarks"></a>備註
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>參數
 
-*ppViewType*  
+*ppViewType*<br/>
 [out]傳回的檢視類型的位址指標。
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out]提供選項，指定所擁有的嵌入式管理單元主控台 MMC_VIEW_OPTIONS 列舉型別指標。 這個值可以是下列其中一項：
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 會告訴主控台，以避免呈現中的標準清單檢視選項**檢視**功能表。 可讓嵌入式管理單元只在結果檢視 窗格中顯示它自己的自訂檢視。 這是定義在這個階段的唯一選項旗標。
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>參數
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out]指標`SCOPEDATAITEM`結構`CSnapInItemImpl`物件。
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>參數
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out]指標`RESULTDATAITEM`結構`CSnapInItemImpl`物件。
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>參數
 
-*event*  
+*event*<br/>
 [in]識別使用者所採取的動作。 下列通知則可能會：
 
 - MMCN_ACTIVATE 傳送時視窗正被啟動和停用。
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - 當嵌入式管理單元可以更新所有的檢視表發生變更時，就會傳送 MMCN_VIEW_CHANGE。
 
-*arg*  
+*arg*<br/>
 [in]通知類型而定。
 
-*param*  
+*param*<br/>
 [in]通知類型而定。
 
-*pComponentData*  
+*pComponentData*<br/>
 [out]物件，實作的指標`IComponentData`。 這個參數是 NULL，如果通知不會從正在轉送`IComponentData::Notify`。
 
-*pComponent*  
+*pComponent*<br/>
 [out]實作的物件指標`IComponent`。 這個參數是 NULL，如果通知不會從正在轉送`IComponent::Notify`。
 
-*type*  
+*type*<br/>
 [in]指定物件的型別。 它可以包含下列值之一：
 
 - 範圍窗格內容的 CCT_SCOPE 資料物件。
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>參數
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in]如果項目加入至內容功能表; 之前，應該呼叫此函式，非零值。否則為 0。
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [in、 out]識別 Microsoft Management Console MMC 定義功能表項目插入點可用。 這可以是下列旗標的組合：
 
 - 可以在操作功能表的頂端插入 CCM_INSERTIONALLOWED_TOP 項目。
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]若要設定的工具列按鈕的識別碼。
 
-*fsState*  
+*fsState*<br/>
 [in]按鈕的狀態旗標。 可以是下列其中一個或多個項目：
 
 - TBSTATE_CHECKED 按鈕 TBSTYLE_CHECKED 樣式，並按下。
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - TBSTATE_WRAP 的分行符號會遵循 按鈕。 按鈕也必須擁有 TBSTATE_ENABLED。
 
-*fsType*  
+*fsType*<br/>
 [in]按鈕的狀態旗標。 可以是下列其中一個或多個項目：
 
 - TBSTYLE_BUTTON 建立標準按鈕。
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 [in]設定功能表項目的識別碼。
 
-*pBuf*  
+*pBuf*<br/>
 [in]若要更新之功能表項目字串的指標。
 
-*flags*  
+*flags*<br/>
 [in]指定新的狀態旗標。 這可以是下列旗標的組合：
 
 - MF_POPUP 指定這是快顯功能表中的子功能表。 功能表項目、 插入點，以及進一步子功能表可能會加入至這個子功能表使用其`lCommandID`做為其`IInsertionPointID`。
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>參數
 
-*id*  
+*id*<br/>
 指定工具列按鈕的按鈕 ID，更新。
 
-*fsState*  
+*fsState*<br/>
 指定的工具列按鈕的狀態。 如果要設定此狀態，則傳回 TRUE。 這可以是下列旗標的組合：
 
 - 已啟用 按鈕會接受使用者輸入。 沒有此狀態的按鈕不接受使用者輸入，並會變為灰色。

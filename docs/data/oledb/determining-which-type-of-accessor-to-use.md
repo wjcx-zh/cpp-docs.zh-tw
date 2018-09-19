@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8dbfecf52e974330360714763da3bd4c81117ad
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086963"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
+
 在編譯時期或執行階段，您可以判斷資料列集的資料類型。  
   
- 如果您需要在編譯時期判斷資料類型，請使用靜態存取子 (例如`CAccessor`)。 以手動方式或使用 [ATL OLE DB 消費者精靈]，您可以判斷資料類型。  
+如果您需要在編譯時期判斷資料類型，請使用靜態存取子 (例如`CAccessor`)。 以手動方式或使用 [ATL OLE DB 消費者精靈]，您可以判斷資料類型。  
   
- 如果您要在執行階段決定的資料類型，請使用 動態 (`CDynamicAccessor`或 子系) 或手動存取子 (`CManualAccessor`)。 在這些情況下，您可以呼叫`GetColumnInfo`上傳回的資料行繫結資訊，從中您可以判斷類型的資料列集。  
+如果您要在執行階段決定的資料類型，請使用 動態 (`CDynamicAccessor`或 子系) 或手動存取子 (`CManualAccessor`)。 在這些情況下，您可以呼叫`GetColumnInfo`上傳回的資料行繫結資訊，從中您可以判斷類型的資料列集。  
   
- 下表列出提供的消費者範本的存取子的類型。 每個存取子都有其優缺點。 根據您的情況中，一個存取子的型別應能滿足您的需求。  
+下表列出提供的消費者範本的存取子的類型。 每個存取子都有其優缺點。 根據您的情況中，一個存取子的型別應能滿足您的需求。  
   
 |存取子類別|繫結|參數|註解|  
 |--------------------|-------------|---------------|-------------|  
@@ -42,4 +43,5 @@ ms.locfileid: "43679720"
 |`CXMLAccessor`|自動的。|否。|擷取從資料存放區，做為字串資料存取的資料，並將其格式化為 XML 標記的資料。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用存取子](../../data/oledb/using-accessors.md)
+
+[使用存取子](../../data/oledb/using-accessors.md)

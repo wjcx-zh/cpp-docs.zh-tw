@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2654 |Microsoft 文件
+title: 編譯器錯誤 C2654 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b28fb3de46d9071c9ee19711344c5b41e337934
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1181cbab40739617343f8d2a2e5e26540f01e82f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080840"
 ---
 # <a name="compiler-error-c2654"></a>編譯器錯誤 C2654
-'identifier': 嘗試在成員函式之外存取成員  
-  
- 存取成員宣告中。 只有在成員函式，就可以存取成員資料。  
-  
- 嘗試初始化中宣告的變數時，可能造成這個錯誤。 針對此用途使用建構函式。
+
+'identifier': 嘗試將成員函式之外存取成員
+
+存取成員宣告中。 成員函式中只可以存取成員資料。
+
+嘗試在宣告中初始化變數時，可能被造成這個錯誤。 針對此目的使用建構函式。

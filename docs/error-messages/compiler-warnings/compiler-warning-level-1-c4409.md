@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1） C4409 |Microsoft 文件
+title: 編譯器警告 （層級 1） C4409 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30abb265676f3e95b799f657487e293cceb2a053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32b6c92a34f5aa991452eca4c490d8570bd0d5b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086522"
 ---
 # <a name="compiler-warning-level-1-c4409"></a>編譯器警告 (層級 1) C4409
-不合法指令的大小  
-  
- 指示沒有具有指定大小的表單。 使用最小的合法大小。
+
+不合法指令的大小
+
+指示沒有具有指定大小的表單。 使用最小的合法大小。

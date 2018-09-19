@@ -1,5 +1,5 @@
 ---
-title: index 類別 |Microsoft 文件
+title: index 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: da6dae3aa76e593a3a98ff25b4d327faf284459e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097129"
 ---
 # <a name="index-class"></a>index 類別
 定義*N*-維度的索引 pographics cpp amp.md。  
@@ -36,8 +36,8 @@ class index;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_Rank`  
- 陣序或維度數目。  
+*_Rank*<br/>
+陣序規範或維度數目。  
   
 ## <a name="members"></a>成員  
   
@@ -52,14 +52,14 @@ class index;
 |名稱|描述|  
 |----------|-----------------|  
 |[operator--](#operator--)|遞減的每個項目`index`物件。|  
-|[operator(mod)=](#operator_mod_eq)|計算每個項目中的模數 （餘數）`index`物件時數字除以該元素。|  
-|[operator*=](#operator_star_eq)|乘以每個項目`index`物件數目。|  
-|[operator/=](#operator_div_eq)|將分割的每個項目`index`物件數目。|  
-|[index::operator\[\]](#operator_at)|傳回指定索引處的項目。|  
+|[operator(mod)=](#operator_mod_eq)|計算模數 （餘數） 中的每個項目的`index`物件時，項目除以某個數字。|  
+|[operator*=](#operator_star_eq)|每個元素乘`index`數字的物件。|  
+|[operator/=](#operator_div_eq)|每個項目除以`index`數字的物件。|  
+|[index::operator\[\]](#operator_at)|傳回位於指定索引處的項目。|  
 |[operator++](#operator_add_add)|遞增的每個項目`index`物件。|  
 |[operator+=](#operator_add_eq)|將指定的數目的每個項目加入`index`物件。|  
-|[operator=](#operator_eq)|將指定的內容複製`index`成這一個物件。|  
-|[operator-=](#operator_-_eq)|從每個項目指定的數目減掉`index`物件。|  
+|[operator=](#operator_eq)|將指定的內容複製`index`到這個物件。|  
+|[operator-=](#operator_-_eq)|減去指定的每個元素的數值`index`物件。|  
 
   
 ### <a name="public-constants"></a>公用常數  
@@ -72,7 +72,7 @@ class index;
  `index`  
   
 ## <a name="remarks"></a>備註  
- `index`結構表示的座標向量*N*指定中的唯一位置的整數*N*-維度空間。 在向量中的值為從最大顯著性到最小顯著性排序。 您可以擷取使用的元件值[運算子 =](#operator_eq)。  
+ `index`結構表示的座標向量*N*指定一個唯一的位置中的整數*N*-維度的空間。 向量中的值排序從最大顯著性到最不重要。 您可以擷取使用元件的值[運算子 =](#operator_eq)。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** amp.h  
@@ -113,19 +113,19 @@ explicit index(
 ### <a name="parameters"></a>參數
 
 _Array  
-等級值的一維陣列。  
+陣序值的一維陣列。  
 _I  
-中的一維索引的索引位置。  
+中的索引位置的一維索引。  
 _I0  
-最重要的維度的長度。  
+最高有效維度的長度。  
 _I1  
-下一步-到-最高有效維度的長度。  
+下一步-至-最高有效維度的長度。  
 _I2  
 最小顯著性維度的長度。  
 _Other  
 新的索引物件所依據的索引物件。  
 
-## <a name="operator--"></a>  --運算子
+## <a name="operator--"></a>  operator-
 遞減索引物件的每個項目。  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -135,10 +135,10 @@ index operator--(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-values"></a>傳回值
-針對前置運算子，index 物件 (* 這)。 後置運算子，新的索引物件。
+為前置運算子，index 物件 (* 這)。 為後置運算子，新的索引物件。
 
 ## <a name="operator_mod_eq"></a>  operator(mod) =   
-該項目除以指定的數目時，會計算每個項目中的索引物件的模數 （餘數）。
+項目除以指定數字時，會計算的每個項目中的索引物件的模數 （餘數）。
 
 ```  
 index<_Rank>& operator%=(
@@ -146,11 +146,11 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```  
 ### <a name="parameters"></a>參數
-_Rhs 要藉由分割模數的數字。
+_Rhs 除藉由尋找模數的數字。
 傳回值的索引物件。
 
 ## <a name="operator_star_eq"></a>  operator*=   
-乘上每個項目中指定數目的索引物件。
+乘以指定的數值索引物件中每個項目。
 ```
 index<_Rank>& operator*=(
    int _Rhs
@@ -158,10 +158,10 @@ index<_Rank>& operator*=(
 ```
 
 ### <a name="parameters"></a>參數
-_Rhs 要相乘的數字。
+_Rhs 相乘的數字。
 
 ## <a name="operator_div_eq"></a>  operator / = 
-索引物件中的每個項目除以指定的數目。
+索引物件中的每個項目除以指定數字。
 
 ```
 index<_Rank>& operator/=(
@@ -172,7 +172,7 @@ index<_Rank>& operator/=(
 _Rhs 要除以的數字。
 
 ## <a name="operator_at"></a> operator\[\]  
-傳回元件指定位置處的索引。
+傳回指定位置處的索引元件。
 
 ```
 int operator[] (
@@ -185,13 +185,13 @@ int& operator[] (
 ```
 
 ### <a name="parameters"></a>參數
-_Index 從 0 到陣序規範減 1 的整數。
+_Index 從 0 到順位減 1 的整數。
 
 ### <a name="return-value"></a>傳回值
-所指定索引處的項目。
+位於指定索引處的項目。
 
 ### <a name="remarks"></a>備註
-下列範例顯示元件的值索引。
+下列範例會顯示元件值的索引。
 ```  
 // Prints 1 2 3.
 concurrency::index<3> idx(1, 2, 3);
@@ -201,7 +201,7 @@ std::cout << idx[2] << "\n";
 ```
 
 ## <a name="operator_add_add"></a>  operator++   
-遞增索引物件的每個項目。
+遞增的索引物件的每個項目。
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
 
@@ -210,10 +210,10 @@ index<_Rank> operator++(
 ) restrict(amp,cpu);
 ```  
 ### <a name="return-value"></a>傳回值
-針對前置運算子，index 物件 (* 這)。 後置運算子，新的索引物件。
+為前置運算子，index 物件 (* 這)。 為後置運算子，新的索引物件。
 
 ## <a name="operator_add_eq"></a>  operator+=   
-將指定的數字加入至索引物件的每個項目。
+將指定的數目的索引物件的每個項目。
 ```  
 index<_Rank>& operator+=(
    const index<_Rank>& _Rhs
@@ -227,7 +227,7 @@ index<_Rank>& operator+=(
 _Rhs 要新增的數字。
 
 ### <a name="return-value"></a>傳回值
-索引物件。
+Index 物件。
 
 ## <a name="operator_eq"></a>  operator=   
 將指定的索引物件的內容複製到這一個。
@@ -237,13 +237,13 @@ index<_Rank>& operator=(
 ) restrict(amp,cpu);
 ``` 
 ### <a name="parameters"></a>參數
-_Other 要複製的索引物件。
+_Other 從複製的索引物件。
 
 ### <a name="return-value"></a>傳回值
 此索引物件的參考。
 
 ## <a name="operator_-_eq"></a>  運算子 =
-指定從數目減掉 index 物件的每個項目。
+減去指定的數值索引物件的每個項目。
 ```  
 index<_Rank>& operator-=(
    const index<_Rank>& _Rhs
@@ -257,10 +257,10 @@ index<_Rank>& operator-=(
 _Rhs 要減去的數字。
 
 ### <a name="return-value"></a>傳回值
-索引物件。   
+Index 物件。   
 
-## <a name="rank"></a>  順位  
-  取得 index 物件的順位。
+## <a name="rank"></a>  陣序規範  
+  取得 index 物件的陣序規範。
 ```
 static const int rank = _Rank;
 ``` 

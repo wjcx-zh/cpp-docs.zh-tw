@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87109793625435945c45b2643ccd674946acff49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103232"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 類別
 
@@ -92,19 +92,19 @@ class CTokenGroups
 新增`CSid`或現有`TOKEN_GROUPS`結構`CTokenGroups`物件。
 
 ```
-void Add(const CSid& rSid, DWORD dwAttributes) throw(... );  
+void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 A [CSid](../../atl/reference/csid-class.md)物件。
 
-*dwAttributes*  
+*dwAttributes*<br/>
 相關聯的屬性`CSid`物件。
 
-*rTokenGroups*  
+*rTokenGroups*<br/>
 A [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)結構。
 
 ### <a name="remarks"></a>備註
@@ -117,13 +117,13 @@ A [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)結構。
 
 ```
 CTokenGroups() throw();
-CTokenGroups(const CTokenGroups& rhs) throw(... );  
+CTokenGroups(const CTokenGroups& rhs) throw(... );
 CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `CTokenGroups`物件或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)結構，用來建構`CTokenGroups`物件。
 
 ### <a name="remarks"></a>備註
@@ -152,7 +152,7 @@ bool Delete(const CSid& rSid) throw();
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)的安全性識別碼 (SID) 和屬性應該將要移除的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -215,10 +215,10 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>參數
 
-*pSids*  
+*pSids*<br/>
 陣列的指標[CSid](../../atl/reference/csid-class.md)物件。
 
-*pAttributes*  
+*pAttributes*<br/>
 Dword 的陣列指標。 如果這個參數是省略，則為 NULL，不會擷取屬性。
 
 ### <a name="remarks"></a>備註
@@ -237,10 +237,10 @@ bool LookupSid(
 
 ### <a name="parameters"></a>參數
 
-*rSid*  
+*rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)物件。
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 這將會接受 DWORD 指標`CSid`物件的屬性。 如果省略則為 NULL，將不會擷取屬性。
 
 ### <a name="return-value"></a>傳回值
@@ -256,13 +256,13 @@ bool LookupSid(
 指派運算子。
 
 ```
-CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);  
+CTokenGroups& operator= (const TOKEN_GROUPS& rhs) throw(...);
 CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>參數
 
-*rhs*  
+*rhs*<br/>
 `CTokenGroups`物件或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups)將指派給結構`CTokenGroups`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -273,7 +273,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 
 將指標值轉換`TOKEN_GROUPS`結構。
 
-```  
+```
 operator const TOKEN_GROUPS *() const throw(...);
 ```
 
@@ -283,7 +283,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ## <a name="see-also"></a>另請參閱
 
-[安全性範例](../../visual-cpp-samples.md)   
-[CSid 類別](../../atl/reference/csid-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[安全性範例](../../visual-cpp-samples.md)<br/>
+[CSid 類別](../../atl/reference/csid-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

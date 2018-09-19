@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075705"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 類別
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>參數
 
-`contained`  
+*包含*<br/>
 您分割的類別，衍生自`CComTearOffObjectBase`和要分割物件以支援的介面。
 
 ## <a name="members"></a>成員
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>參數
 
-*pv*  
+*pv*<br/>
 [in]指標`IUnknown`的`CComCachedTearOffObject`。
 
 ### <a name="remarks"></a>備註
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>參數
 
-*包含*  
+*包含*<br/>
 [in]您分割的類別，衍生自`CComTearOffObjectBase`和要分割物件以支援的介面。
 
 ### <a name="remarks"></a>備註
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求介面的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -215,6 +215,6 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComTearOffObject 類別](../../atl/reference/ccomtearoffobject-class.md)   
-[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
+[CComTearOffObject 類別](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

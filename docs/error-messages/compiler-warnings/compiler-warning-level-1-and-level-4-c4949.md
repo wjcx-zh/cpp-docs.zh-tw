@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 1 和層級 4） C4949 |Microsoft 文件
+title: 編譯器警告 （層級 1 和層級 4） C4949 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dbf80f85db7334d4bcb46402851cac601d258f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f806912188ada3a4f97f0b1500e811d1271f40fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279642"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077304"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>編譯器警告 (層級 1 和層級 4) C4949
-pragma 'managed' 和 'unmanaged' 時才有意義的編譯 ' / /clr [: 選項]'  
-  
- 編譯器會忽略[管理](../../preprocessor/managed-unmanaged.md)和 unmanaged pragma，如果以不編譯原始碼[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。 這個警告僅供參考。  
-  
- 下列範例會產生 C4949:  
-  
-```  
-// C4949.cpp  
-// compile with: /LD /W1  
-#pragma managed   // C4949  
-```  
-  
- 當 **#pragma unmanaged**使用，而沒有 **/clr**，C4949 是層級 4 警告。  
-  
- 下列範例會產生 C4949:  
-  
-```  
-// C4949b.cpp  
-// compile with: /LD /W4  
-#pragma unmanaged   // C4949  
+
+pragmas 'managed' 和 'unmanaged' 是只在編譯時，才有意義 ' / /clr [: 選項]'
+
+編譯器會忽略[受控](../../preprocessor/managed-unmanaged.md)和非受控 pragma，如果使用未編譯的原始程式碼[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。 這個警告僅供參考。
+
+下列範例會產生 C4949:
+
+```
+// C4949.cpp
+// compile with: /LD /W1
+#pragma managed   // C4949
+```
+
+當 **#pragma unmanaged**使用，而沒有 **/clr**，C4949 是層級 4 警告。
+
+下列範例會產生 C4949:
+
+```
+// C4949b.cpp
+// compile with: /LD /W4
+#pragma unmanaged   // C4949
 ```

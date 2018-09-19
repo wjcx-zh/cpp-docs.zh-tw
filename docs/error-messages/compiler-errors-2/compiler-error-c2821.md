@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2821 |Microsoft 文件
+title: 編譯器錯誤 C2821 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c134d84ef27110cde83d54cbb8e46aa6a39efa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52525062a07c7c55dd323109be87667d9e0847d6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236555"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098219"
 ---
 # <a name="compiler-error-c2821"></a>編譯器錯誤 C2821
-'operator new' 的第一個型式參數必須是 'unsigned 的 int'  
-  
-第一個型式參數[運算子 new](../../standard-library/new-operators.md#op_new)必須是不帶正負號`int`。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2821:  
-  
-```cpp  
-// C2821.cpp  
-// compile with: /c  
-void * operator new( /* unsigned int,*/ void * );   // C2821  
-void * operator new( unsigned int, void * );  
+
+'operator new' 的第一個型式參數必須是 'unsigned 的 int'
+
+第一個正式參數[new 運算子](../../standard-library/new-operators.md#op_new)必須是不帶正負號`int`。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2821:
+
+```cpp
+// C2821.cpp
+// compile with: /c
+void * operator new( /* unsigned int,*/ void * );   // C2821
+void * operator new( unsigned int, void * );
 ```

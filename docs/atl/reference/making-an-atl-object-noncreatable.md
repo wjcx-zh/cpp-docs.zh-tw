@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099534"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>讓 ATL 物件變成無法建立
 
@@ -46,10 +46,10 @@ ms.locfileid: "43761452"
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)   
-[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
+[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)<br/>
+[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097675"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 類別
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>參數
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]A`CComBSTR`来附加的物件。
 
-*ch*  
+*ch*<br/>
 [in]要附加的字元。
 
-*lpsz*  
+*lpsz*<br/>
 [in]要附加的零結尾的字元字串。 您可以透過 LPCOLESTR 多載或透過 LPCSTR 版本為 ANSI 字串來傳遞 Unicode 字串。
 
-*nLen*  
+*nLen*<br/>
 [in]字元數*lpsz*附加。
 
 ### <a name="return-value"></a>傳回值
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 [in]要附加 BSTR。
 
 ### <a name="return-value"></a>傳回值
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpsz*  
+*lpsz*<br/>
 [in]要附加的位元組陣列的指標。
 
-*p*  
+*p*<br/>
 [in]要附加的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>參數
 
-*pSrc*  
+*pSrc*<br/>
 [in]Safearray，包含用來建立字串的項目。
 
 ### <a name="return-value"></a>傳回值
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>參數
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]若要指派給目前 BSTR`CComBSTR`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>參數
 
-*src*  
+*src*<br/>
 [in]若要附加至物件 BSTR。
 
 ### <a name="remarks"></a>備註
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>參數
 
-*ppArray*  
+*ppArray*<br/>
 [out]用來保存函式的結果 safearray 指標。
 
 ### <a name="return-value"></a>傳回值
@@ -315,31 +315,31 @@ unsigned int ByteLength() const throw();
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>參數
 
-*nSize*  
+*nSize*<br/>
 [in]要複製的字元數*sz*或 初始大小，以字元為單位的`CComBSTR`。
 
-*sz*  
+*sz*<br/>
 [in] 要複製的字串。 Unicode 版本指定 LPCOLESTR;ANSI 版本指定 LPCSTR。
 
-*pSrc*  
+*pSrc*<br/>
 [in] 要複製的字串。 Unicode 版本指定 LPCOLESTR;ANSI 版本指定 LPCSTR。
 
-*src*  
+*src*<br/>
 [in] `CComBSTR` 物件。
 
-*guid*  
+*guid*<br/>
 [in]參考`GUID`結構。
 
 ### <a name="remarks"></a>備註
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>參數
 
-*pbstr*  
+*pbstr*<br/>
 [out]在其中傳回的字串，這個方法所配置的 BSTR 的位址。
 
-*pvarDest*  
+*pvarDest*<br/>
 [out]在其中傳回的字串，這個方法所配置的 variant 位址。
 
 ### <a name="return-value"></a>傳回值
@@ -499,7 +499,7 @@ BSTR m_str;
 
 轉換 （cast) `CComBSTR` bstr 物件。
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>參數
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] `CComBSTR` 物件。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]以零結尾的字串。
 
-*nNull*  
+*nNull*<br/>
 [in]必須是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -586,16 +586,16 @@ BSTR* operator&() throw();
 將字串附加至`CComBSTR`物件。
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>參數
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in]A`CComBSTR`来附加的物件。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]要附加的零結尾的字串。
 
 ### <a name="remarks"></a>備註
@@ -629,8 +629,8 @@ bool operator<(LPCSTR pszSrc) const throw();
 設定組[m_str](#m_str)成員的複本*pSrc*或一份的 BSTR 成員*src*。移動指派運算子移動`src`但不複製該項。
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>參數
 
-*bstrSrc*  
+*bstrSrc*<br/>
 [in] `CComBSTR` 物件。
 
-*pszSrc*  
+*pszSrc*<br/>
 [in]以零結尾的字串。
 
-*nNull*  
+*nNull*<br/>
 [in]必須是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)上包含資料的資料流介面。
 
 ### <a name="return-value"></a>傳回值
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>參數
 
-*pStream*  
+*pStream*<br/>
 [in]指標[IStream](/windows/desktop/api/objidl/nn-objidl-istream)資料流上的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -773,5 +773,5 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)

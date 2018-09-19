@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0502528a2db47b8db41437fd7017aece1dc67cde
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9454b33348fa4e4bc2efaa609001201ea215a8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081984"
 ---
 # <a name="threadprivate"></a>threadprivate
 指定在執行緒私用變數。  
@@ -32,11 +32,10 @@ ms.locfileid: "43217741"
 #pragma omp threadprivate(var)  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+### <a name="parameters"></a>參數
   
- `var`  
- 您想要的執行緒設為私用變數的逗號分隔清單。 `var` 必須是全域或命名空間-範圍變數或靜態區域變數。  
+*var*<br/>
+您想要的執行緒設為私用變數的逗號分隔清單。 `var` 必須是全域或命名空間-範圍變數或靜態區域變數。  
   
 ## <a name="remarks"></a>備註  
  `threadprivate`指示詞可支援無 OpenMP 子句。  

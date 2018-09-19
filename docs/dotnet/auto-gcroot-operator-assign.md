@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator = |Microsoft 文件
+title: auto_gcroot::operator = |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4bc0f671ea0c156b05eabe092bc3cc85b5cd9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91503568b093dfb7052cd6d6e99fc63f1c780a73
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102734"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator=
 指派運算子。  
@@ -46,15 +46,15 @@ auto_gcroot<_element_type> & operator=(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_right`  
- 物件或`auto_gcroot`要指派給目前`auto_gcroot`。  
+*右方 （_r)*<br/>
+物件或`auto_gcroot`指派給目前`auto_gcroot`。  
   
 ## <a name="return-value"></a>傳回值  
  目前`auto_gcroot`，現在擁有`_right`。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // msl_auto_gcroot_operator_equals.cpp  
 // compile with: /clr  
 #include <msclr\auto_gcroot.h>  

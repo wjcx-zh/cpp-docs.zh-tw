@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3717 |Microsoft 文件
+title: 編譯器錯誤 C3717 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe6cdb53b3ee78016c25b273eb4682ec380d12f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c770ecfc914c033c1db71578cda137d632e363
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086691"
 ---
 # <a name="compiler-error-c3717"></a>編譯器錯誤 C3717
-'method': 無法定義引發事件的方法  
-  
- 您宣告事件的方法，其中包含實作。 [__Event](../../cpp/event.md)方法宣告不能有定義。 若要修正這個錯誤，請確定沒有事件的方法宣告有定義。 例如，下列程式碼，移除函式主體從`event1`註解所示的宣告。  
-  
- 下列範例會產生 C3717:  
-  
-```  
-// C3717.cpp  
-[event_source(native)]  
-class CEventSrc {  
-public:  
-   __event void event1() {   // C3717  
-   }  
-  
-   // remove definition for event1 and substitute following declaration  
-   // __event void event1();  
-};  
-  
-[event_receiver(native)]  
-class CEventRec {  
-public:  
-   void handler1() {  
-   }  
-  
-   void HookEvents(CEventSrc* pSrc) {  
-      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-  
-   void UnhookEvents(CEventSrc* pSrc) {  
-      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);  
-   }  
-};  
-  
-int main() {  
-}  
+
+'method': 無法定義會引發事件的方法
+
+您宣告事件的方法，其中包含實作。 [__Event](../../cpp/event.md)方法宣告不能有定義。 若要修正這個錯誤，請確定沒有事件的方法宣告有定義。 例如，下列程式碼，移除函式主體從`event1`宣告的註解所示。
+
+下列範例會產生 C3717:
+
+```
+// C3717.cpp
+[event_source(native)]
+class CEventSrc {
+public:
+   __event void event1() {   // C3717
+   }
+
+   // remove definition for event1 and substitute following declaration
+   // __event void event1();
+};
+
+[event_receiver(native)]
+class CEventRec {
+public:
+   void handler1() {
+   }
+
+   void HookEvents(CEventSrc* pSrc) {
+      __hook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+
+   void UnhookEvents(CEventSrc* pSrc) {
+      __unhook(CEventSrc::event1, pSrc, CEventRec::handler1);
+   }
+};
+
+int main() {
+}
 ```

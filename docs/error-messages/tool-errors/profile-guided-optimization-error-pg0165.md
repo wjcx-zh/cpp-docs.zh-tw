@@ -1,5 +1,5 @@
 ---
-title: 特性指引最佳化錯誤 PG0165 |Microsoft 文件
+title: 特性指引最佳化錯誤 PG0165 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acad97411480112d06dadd454d1368dcfdf2c87f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 332751a123bf7d6414c40b79870b5edf27a3d8a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084207"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>特性指引最佳化錯誤 PG0165
-讀取 'Filename.pgd': ' 不支援的 PGD 版本 （版本不相符） '。  
-  
- PGD 檔案是針對特定編譯器工具組。 當您使用比用於不同的編譯器會產生這個錯誤*Filename*.pgd。 此錯誤表示此編譯器工具組不能使用的資料從*Filename*.pgd 最佳化目前的處理序。  
-  
- 若要解決這個問題，重新產生*Filename*.pgd 使用目前的編譯器工具組。
+
+讀取 'Filename.pgd': ' 不支援的 PGD 版本 （版本不符） '。
+
+PGD 檔案專屬於特定的編譯器工具組。 會產生這個錯誤，當您使用不同的編譯器，用於以外*Filename*.pgd。 此錯誤表示這個編譯器工具組不能使用的資料*Filename*.pgd 最佳化目前的處理序。
+
+若要解決此問題，重新產生*Filename*.pgd 使用目前的編譯器工具組。

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338943e2168930bc48f02ef9ddbf36f738965078
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 56038ffe4c6062422ea34a439e73b0d90a37cfb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097727"
 ---
 # <a name="catlexception-class"></a>CAtlException 類別
 
@@ -77,14 +77,14 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>參數
 
-*hr*  
+*hr*<br/>
 HRESULT 錯誤碼。
 
 ##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
 
 將轉換的 HRESULT 值目前的物件。
 
-```  
+```
 operator HRESULT() const throw ();
 ```
 
@@ -102,5 +102,5 @@ HRESULT m_hr;
 
 ## <a name="see-also"></a>另請參閱
 
-[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
+[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

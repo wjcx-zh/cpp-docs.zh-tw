@@ -1,5 +1,5 @@
 ---
-title: event 類別 |Microsoft 文件
+title: 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7f4156720d7d02b0c96ab36101d88c941dbfbfdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692863"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071525"
 ---
 # <a name="event-class"></a>event 類別
 其為並行執行階段明確察覺的手動重設事件。  
@@ -52,8 +52,8 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|事件重設為未收到信號狀態。|  
 |[set](#set)|通知事件。|  
-|[等候](#wait)|等待事件發出訊號。|  
-|[wait_for_multiple](#wait_for_multiple)|等候發出訊號的多個事件。|  
+|[等候](#wait)|等候事件變成收到訊號。|  
+|[wait_for_multiple](#wait_for_multiple)|等候變成已收到訊號的多個事件。|  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -62,7 +62,7 @@ class event;
 |[timeout_infinite](#timeout_infinite)|值，表示等候應該永遠不會逾時。|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `event`  
@@ -91,7 +91,7 @@ _CRTIMP event();
 ```  
   
 ### <a name="remarks"></a>備註  
- 應該沒有執行緒正在等候該事件解構函式執行時。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。  
+ 應該沒有執行緒在等候事件解構函式執行時。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。  
   
 ##  <a name="reset"></a> 重設 
 
@@ -122,25 +122,25 @@ static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
   
 ##  <a name="wait"></a> 等候 
 
- 等待事件發出訊號。  
+ 等候事件變成收到訊號。  
   
 ```
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Timeout`  
- 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。  
+*逾時 _t*<br/>
+等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已滿足等候，值`0`會傳回，否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時不變得發出信號的事件。  
+ 如果滿意等待結果，該值`0`傳回; 否則即為值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時沒有變成發出信號的事件。  
   
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 ASTA 執行緒上因為這個呼叫可能會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 ASTA 執行緒上因為這個呼叫可以封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
   
 ##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
- 等候發出訊號的多個事件。  
+ 等候變成已收到訊號的多個事件。  
   
 ```
 static size_t __cdecl wait_for_multiple(
@@ -151,26 +151,26 @@ static size_t __cdecl wait_for_multiple(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_PPEvents`  
- 陣列，要等候的事件。 陣列中的事件數目會以`count`參數。  
+*_PPEvents*<br/>
+要等候的事件陣列。 陣列中的事件數目會由`count`參數。  
   
- `count`  
- 中提供的陣列內的事件計數`_PPEvents`參數。  
+*count*<br/>
+中所提供之陣列中的事件計數的`_PPEvents`參數。  
   
- `_FWaitAll`  
- 如果設定為值`true`，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須被通知以滿足等候。 如果設定為值`false`，它會指定陣列中的任何事件提供在`_PPEvents`參數變成有訊號會滿足等候。  
+*_FWaitAll*<br/>
+如果設定為值`true`，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須變成收到訊號，以滿足等候。 如果設定為值`false`，它會指定陣列中的任何事件提供在`_PPEvents`變成收到訊號的參數會滿足等候。  
   
- `_Timeout`  
- 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。  
+*逾時 _t*<br/>
+等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。  
   
 ### <a name="return-value"></a>傳回值  
- 如果已滿足等候，陣列中的索引所提供`_PPEvents`參數滿足等候條件; 否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時沒有滿足條件。  
+ 如果滿意等待結果中, 提供的陣列中的索引`_PPEvents`滿足等候條件; 參數，否則為值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時沒有所滿足的條件。  
   
 ### <a name="remarks"></a>備註  
- 如果參數`_FWaitAll`設定為值`true`函數所傳回的索引來指示必須成為所有事件發出都信號，以滿足等候，帶有沒有特殊的意義不是值的事實以外`COOPERATIVE_WAIT_TIMEOUT`。  
+ 如果參數`_FWaitAll`設定為值`true`函式所傳回的索引，表示所有的事件必須以滿足等候變成發出訊號，帶有沒有特殊的意義，不是值的事實以外`COOPERATIVE_WAIT_TIMEOUT`。  
   
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait_for_multiple`在 ASTA 執行緒上因為這個呼叫可能會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait_for_multiple`在 ASTA 執行緒上因為這個呼叫可以封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

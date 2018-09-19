@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753031"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078695"
 ---
 # <a name="category-macros"></a>分類巨集
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>參數
 
-*theClass*  
+*theClass*<br/>
 [in]包含類別目錄對應的類別名稱。
 
 ### <a name="remarks"></a>備註
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>參數
 
-*catID*  
+*catID*<br/>
 [in]CATID 常數或變數會保留已實作的類別目錄的全域唯一識別碼 (GUID)。 地址*catID*會採用，並加入至地圖中。 請參閱下表中選取的內建的分類。
 
 ### <a name="remarks"></a>備註
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>參數
 
-*catID*  
+*catID*<br/>
 [in]CATID 常數或變數會保留所需的分類的全域唯一識別碼 (GUID)。 地址*catID*會採用，並加入至地圖中。 請參閱下表中選取的內建的分類。
 
 ### <a name="remarks"></a>備註

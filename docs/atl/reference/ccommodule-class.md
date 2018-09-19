@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090694"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>參數
 
-*rclsid*  
+*rclsid*<br/>
 [in]若要建立之物件的 CLSID。
 
-*riid*  
+*riid*<br/>
 [in]要求的介面 IID。
 
-*ppv*  
+*ppv*<br/>
 [out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppv*設為 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 [in]物件的對應項目的陣列的指標。
 
-*h*  
+*h*<br/>
 [in]的 HINSTANCE 傳遞給`DLLMain`或`WinMain`。
 
-*plibid*  
+*plibid*<br/>
 [in]與專案相關聯的類型程式庫的 LIBID 指標。
 
 ### <a name="return-value"></a>傳回值
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 [in]若要註冊之物件的 CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in]與物件相關的 ProgID。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in]版本無關的 ProgID，與物件相關聯。
 
-*nDescID*  
+*nDescID*<br/>
 [in]物件的描述的字串資源識別碼。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]指定要在登錄中輸入的執行緒模型。 可能的值為 THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
 ### <a name="return-value"></a>傳回值
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in]指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。 如需這些值的說明，請參閱 < [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK 中。
 
-*dwFlags*  
+*dwFlags*<br/>
 [in]決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。 如需這些值的說明，請參閱 < [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Windows SDK 中。
 
 ### <a name="return-value"></a>傳回值
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>參數
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in]表示是否將已註冊型別程式庫。 預設值為 FALSE。
 
-*Createtable*  
+*Createtable*<br/>
 [in]要註冊之物件的 clsid 點。 若要註冊 NULL （預設值），在物件對應中的所有物件。
 
 ### <a name="return-value"></a>傳回值
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in]格式字串`"\\N"`，其中`N`是型別程式庫資源的整數索引。
 
 ### <a name="return-value"></a>傳回值
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 [in]要移除註冊之物件的 CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in]與物件相關的 ProgID。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in]版本無關的 ProgID，與物件相關聯。
 
 ### <a name="return-value"></a>傳回值
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>參數
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 如果為 TRUE，類型程式庫還有未註冊。
 
-*Createtable*  
+*Createtable*<br/>
 要移除註冊物件的 clsid 點。 如果 NULL （預設值），在物件對應中的所有物件就會取消註冊。
 
 ### <a name="return-value"></a>傳回值
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>參數
 
-*clsid*  
+*clsid*<br/>
 註冊或取消登錄該物件的 CLSID。
 
-*lpszProgID*  
+*lpszProgID*<br/>
 與物件相關的 ProgID。
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 版本無關的 ProgID，與物件相關聯。
 
-*nDescID*  
+*nDescID*<br/>
 物件的描述的字串資源識別碼。
 
-*szDesc*  
+*szDesc*<br/>
 字串，包含物件的描述。
 
-*dwFlags*  
+*dwFlags*<br/>
 指定要在登錄中輸入的執行緒模型。 可能的值為 THREADFLAGS_APARTMENT、 THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
-*bRegister*  
+*bRegister*<br/>
 表示是否應該註冊的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>參數
 
-*lpszRes*  
+*lpszRes*<br/>
 [in]資源名稱。
 
-*nResID*  
+*nResID*<br/>
 [in]資源識別碼。
 
-*bRegister*  
+*bRegister*<br/>
 [in]表示是否應該註冊的物件。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in]儲存指令碼的可置換的參數相關聯的值取代對應指標。 會自動使用 ATL `%MODULE%`。 若要使用其他可置換的參數，請參閱 「 備註 」，如需詳細資訊。 否則，請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>參數
 
-*lpszRes*  
+*lpszRes*<br/>
 [in]資源名稱。
 
-*nResID*  
+*nResID*<br/>
 [in]資源識別碼。
 
-*bRegister*  
+*bRegister*<br/>
 [in]表示是否應該註冊資源指令碼。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in]儲存指令碼的可置換的參數相關聯的值取代對應指標。 會自動使用 ATL `%MODULE%`。 若要使用其他可置換的參數，請參閱 「 備註 」，如需詳細資訊。 否則，請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值

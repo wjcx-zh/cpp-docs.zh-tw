@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757877"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093831"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 類別
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 來源物件的唯一識別碼。 當`IDispEventImpl`的基底類別為複合控制項，使用此參數所需的自主控制的資源識別碼。 在其他情況下，使用任意的正整數。
 
-*T*  
+*T*<br/>
 使用者的類別，衍生自`IDispEventImpl`。
 
-*pdiid*  
+*pdiid*<br/>
 要由此類別實作的事件分配程式介面的 IID 的指標。 此介面必須定義在所表示的類型程式庫*plibid*， *wMajor*，並*wMinor*。
 
-*plibid*  
+*plibid*<br/>
 類型程式庫定義分派介面的指標所指向*pdiid*。 如果 **& GUID_NULL**，會從來源事件的物件載入類型程式庫。
 
-*wMajor*  
+*wMajor*<br/>
 類型程式庫的主要版本。 預設值為 0。
 
-*wMinor*  
+*wMinor*<br/>
 類型程式庫的次要版本。 預設值為 0。
 
-*tihclass*  
+*tihclass*<br/>
 用來管理的類型資訊的類別*T*。預設值是類型的類別之`CComTypeInfoHolder`; 不過，您可以提供型別的類別以外的其他連線，覆寫此範本參數`CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]Id 函式的參考。
 
-*dispidMember*  
+*dispidMember*<br/>
 [in]函式的分派識別碼。
 
-*lcid*  
+*lcid*<br/>
 [in]地區設定內容的函式識別碼。
 
-*資訊*  
+*資訊*<br/>
 [in]結構，表示呼叫此函式的方式。
 
 ### <a name="return-value"></a>傳回值
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>參數
 
-*PTI*  
+*PTI*<br/>
 [in]指標[ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含使用者定義類型的介面。
 
-*hrt*  
+*hrt*<br/>
 [in]要擷取之型別描述的控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -249,10 +249,10 @@ typedef tihclass _tihclass;
 
 ## <a name="see-also"></a>另請參閱
 
-[_ATL_FUNC_INFO 結構](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventSimpleImpl 類別](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO 結構](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventSimpleImpl 類別](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

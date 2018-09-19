@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04bad7c90869eb5a5b87a465b175e4ed3f0b9991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9b684d66a96a7a3a7d7d60a1b107792c2061ce57
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751507"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086599"
 ---
 # <a name="object-status-macros"></a>物件狀態巨集
 
@@ -43,7 +43,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 
 ### <a name="parameters"></a>參數
 
-*miscstatus*  
+*miscstatus*<br/>
 所有適用的 OLEMISC 旗標。
 
 ### <a name="remarks"></a>備註

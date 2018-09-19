@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2212 |Microsoft 文件
+title: 編譯器錯誤 C2212 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 152b38be30b50684684bb0c2c39a035b748915b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 773dff4c731830d300c97f1960b24923d2b7d67f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168733"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089875"
 ---
 # <a name="compiler-error-c2212"></a>編譯器錯誤 C2212
-'identifier': __based 不提供函式指標  
-  
- 函式的指標不可以宣告為`__based`。 如果您需要的程式碼為基礎的資料，請使用`__declspec`關鍵字或`data_seg`pragma。
+
+'identifier': __based 不提供函式指標
+
+函式的指標不可以宣告為`__based`。 如果您需要的程式碼為基礎的資料，請使用`__declspec`關鍵字或`data_seg`pragma。

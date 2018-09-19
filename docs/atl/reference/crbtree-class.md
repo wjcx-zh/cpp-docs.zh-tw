@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c8221b7e379d739dda3ebfa9cbc205d9f88af6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: de307c1b4f3d910615061915a240bf7b2c61b337
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090356"
 ---
 # <a name="crbtree-class"></a>CRBTree 類別
 
@@ -54,22 +54,22 @@ ms.locfileid: "43759541"
 template <typename K,
           typename V, 
           class KTraits = CElementTraits<K>, 
-          class VTraits = CElementTraits<V>> 
+          class VTraits = CElementTraits<V>>
 class CRBTree
 ```
 
 #### <a name="parameters"></a>參數
 
-*K*  
+*K*<br/>
 索引鍵的項目類型。
 
-*V*  
+*V*<br/>
 值的項目型別。
 
-*KTraits*  
+*KTraits*<br/>
 程式碼，用來複製或移動索引鍵的項目。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。
 
-*VTraits*  
+*VTraits*<br/>
 若要複製或移動值的項目所使用的程式碼。
 
 ## <a name="members"></a>成員
@@ -169,7 +169,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 索引鍵的值。
 
 ### <a name="return-value"></a>傳回值
@@ -192,13 +192,13 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置值。
 
-*key*  
+*key*<br/>
 變數會接收索引鍵。
 
-*值*  
+*值*<br/>
 接收值的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -249,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置值。
 
 ### <a name="return-value"></a>傳回值
@@ -271,7 +271,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>傳回值
@@ -295,13 +295,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
-*key*  
+*key*<br/>
 指定樹狀目錄中的索引鍵的類型樣板參數。
 
-*值*  
+*值*<br/>
 指定的樹狀目錄值的類型樣板參數。
 
 ### <a name="remarks"></a>備註
@@ -318,7 +318,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>傳回值
@@ -340,7 +340,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>傳回值
@@ -362,7 +362,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>傳回值
@@ -400,7 +400,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="return-value"></a>傳回值
@@ -457,7 +457,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
 ### <a name="remarks"></a>備註
@@ -474,10 +474,10 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 位置的計數器，例如由先前呼叫方法[CRBTree::GetHeadPosition](#getheadposition)或是[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。
 
-*值*  
+*值*<br/>
 要加入至值`CRBTree`物件。
 
 ### <a name="remarks"></a>備註

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753132"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093437"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 類別
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>參數
 
-*pRegistrar*  
+*pRegistrar*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>參數
 
-*pFunc*  
+*pFunc*<br/>
 若要新增函式指標。
 
-*dw*  
+*dw*<br/>
 使用者定義的資料，傳遞至函式。
 
 ### <a name="return-value"></a>傳回值
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>參數
 
-*ppGIT*  
+*ppGIT*<br/>
 指標，此變數會接收全域介面資料表的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>參數
 
-*lpszRes*  
+*lpszRes*<br/>
 資源名稱。
 
-*nResID*  
+*nResID*<br/>
 資源識別碼。
 
-*bRegister*  
+*bRegister*<br/>
 如果物件應該註冊;，則為 TRUE。FALSE 否則。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 儲存指令碼的可置換的參數相關聯的值取代對應指標。 ATL 會自動使用 %模組。 若要使用其他可置換的參數，請參閱[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則，請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>參數
 
-*lpszRes*  
+*lpszRes*<br/>
 資源名稱。
 
-*bRegister*  
+*bRegister*<br/>
 表示是否應該註冊的物件。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 儲存指令碼的可置換的參數相關聯的值取代對應指標。 ATL 會自動使用 %模組。 若要使用其他可置換的參數，請參閱[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則，請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>參數
 
-*nResID*  
+*nResID*<br/>
 資源識別碼。
 
-*lpszRes*  
+*lpszRes*<br/>
 資源名稱。
 
-*bRegister*  
+*bRegister*<br/>
 表示是否應該註冊資源指令碼。
 
-*pMapEntries*  
+*pMapEntries*<br/>
 儲存指令碼的可置換的參數相關聯的值取代對應指標。 ATL 會自動使用 %模組。 若要使用其他可置換的參數，請參閱[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則，請使用 NULL 預設值。
 
 ### <a name="return-value"></a>傳回值
@@ -364,7 +364,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ## <a name="see-also"></a>另請參閱
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[類別概觀](../../atl/atl-class-overview.md)   
-[模組類別](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[模組類別](../../atl/atl-module-classes.md)<br/>
 [登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)  

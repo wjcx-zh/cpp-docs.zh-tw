@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c9b143ca2f156a534f7ab803974f24771b2652
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 37a7591e185b1436bb3cd0f8b56a625f71bf8ed2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073640"
 ---
 # <a name="logical-or-operator-"></a>邏輯 OR 運算子: | |
 
@@ -73,6 +73,7 @@ int main() {
 ```
 
 ## <a name="see-also"></a>另請參閱
- [C + + 內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)  
- [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
- [C 邏輯運算子](../c-language/c-logical-operators.md)
+
+[C + + 內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C 邏輯運算子](../c-language/c-logical-operators.md)

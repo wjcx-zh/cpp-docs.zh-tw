@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3083 |Microsoft 文件
+title: 編譯器錯誤 C3083 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7e0a60fbe976e8ab511efce8fc46d59e473958a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28bc0a42aa6f6f59c9241a615764b474b23957b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253042"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091630"
 ---
 # <a name="compiler-error-c3083"></a>編譯器錯誤 C3083
-'function': 左邊的符號 ':: ' 必須是類型  
-  
- 函式呼叫不正確。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C3083。  
-  
-```  
-// C3083.cpp  
-// compile with: /c  
-struct N {  
-   ~N();  
-};  
-  
-struct N1 {  
-   ~N1();  
-};  
-  
-N::N::~N() {}   // C3083  
-N1::~N1() {}   // OK  
+
+'function': 左邊的符號 ':: ' 必須是類型
+
+未正確地呼叫函式。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3083。
+
+```
+// C3083.cpp
+// compile with: /c
+struct N {
+   ~N();
+};
+
+struct N1 {
+   ~N1();
+};
+
+N::N::~N() {}   // C3083
+N1::~N1() {}   // OK
 ```

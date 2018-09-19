@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2191 |Microsoft 文件
+title: 編譯器錯誤 C2191 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa4b590b494355450909032c78822553004beddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e739c5c9fc77c4c9658afb2f5f6d9568c6f43bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169432"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088354"
 ---
 # <a name="compiler-error-c2191"></a>編譯器錯誤 C2191
-第二個參數清單比第一個長  
-  
- C 函式宣告的第二個時間較長的參數清單。 C 不支援多載函式。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C2191:  
-  
-```  
-// C2191.c  
-// compile with: /Za /c  
-void func( int );  
-void func( int, float );   // C2191 different parameter list  
-void func2( int, float );   // OK  
+
+第二個參數清單比第一個長
+
+C 函式宣告的較長的參數清單的第二次。 C 不支援多載函式。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C2191:
+
+```
+// C2191.c
+// compile with: /Za /c
+void func( int );
+void func( int, float );   // C2191 different parameter list
+void func2( int, float );   // OK
 ```

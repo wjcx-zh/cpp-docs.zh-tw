@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079332"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 類別
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 提供由 Shell for Rich Preview 主機視窗的控制代碼。
 
-*中華人民共和國*  
+*中華人民共和國*<br/>
 指定的初始大小和視窗的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>參數
 
-*hdc*  
+*hdc*<br/>
 繪製的裝置內容控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>參數
 
-*nMsg*  
+*nMsg*<br/>
 設定為 WM_PAINT。
 
-*wParam*  
+*wParam*<br/>
 不使用這個參數。
 
-*lParam*  
+*lParam*<br/>
 不使用這個參數。
 
-*bHandled*  
+*bHandled*<br/>
 此函式傳回時，它會包含 TRUE。
 
 ### <a name="return-value"></a>傳回值
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>參數
 
-*hWndParent*  
+*hWndParent*<br/>
 新的父視窗的控制代碼。
 
 ### <a name="remarks"></a>備註
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>參數
 
-*clrBack*  
+*clrBack*<br/>
 [預覽] 視窗的背景色彩。
 
-*clrText*  
+*clrText*<br/>
 [預覽] 視窗的文字色彩。
 
-*plf*  
+*plf*<br/>
 用來在 [預覽] 視窗中顯示文字的字型。
 
 ### <a name="remarks"></a>備註
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>參數
 
-*中華人民共和國*  
+*中華人民共和國*<br/>
 指定新的大小和預覽控制項的位置。
 
-*bRedraw*  
+*bRedraw*<br/>
 指定是否應該重新繪製控制項。
 
 ### <a name="remarks"></a>備註

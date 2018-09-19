@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764926"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076654"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal 類別
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>參數
 
-*基底*  
+*基底*<br/>
 您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
 
 ## <a name="members"></a>成員
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>參數
 
-*iid*  
+*iid*<br/>
 [in]所要求介面的 GUID。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]識別 iid，則為 NULL，如果找不到介面之介面指標的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -174,7 +174,7 @@ STDMETHOD_(ULONG, Release)();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComObjectStack 類別](../../atl/reference/ccomobjectstack-class.md)   
-[CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
-[CComObject 類別](../../atl/reference/ccomobject-class.md)   
+[CComObjectStack 類別](../../atl/reference/ccomobjectstack-class.md)<br/>
+[CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)<br/>
+[CComObject 類別](../../atl/reference/ccomobject-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

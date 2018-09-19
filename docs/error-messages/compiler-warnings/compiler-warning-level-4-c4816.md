@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4816 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4816 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74386e980171ce1b54c8256ad505b363df7830d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0d70204e61f1e37157b9e1b23664cf1f5d24b2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303585"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095998"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>編譯器警告 (層級 4) C4816
-'param' : 參數具有大小為零且將被截斷的陣列 (除非物件是透過傳址方式傳遞)  
-  
- 具有大小為零之陣列的物件參數未透過傳址方式傳遞。 傳遞物件時不會複製陣列。  
-  
-## <a name="example"></a>範例  
- 下列範例會產生 C4816：  
-  
-```  
-// C4816.cpp  
-// compile with: /W4  
-#include <stdio.h>  
-  
-extern "C" int printf_s(const char *, ...);  
-  
-#pragma warning(disable : 4200)  
-  
-struct S1  
-{  
-    int i;  
-    char cArr[];  
-};  
-  
-void TestErr(S1 s1)   // C4816 param with zero-array   
-                      // not passed by reference  
-{  
-    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);  
-}  
-  
-void TestOk(S1 &s1)  
-{  
-    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);  
-}  
-  
-int main()  
-{  
-    S1 myS_1 = { 6, 'a', 'b', 'c' };  
-    TestErr(myS_1);  
-    TestOk(myS_1);  
-}  
+
+'param' : 參數具有大小為零且將被截斷的陣列 (除非物件是透過傳址方式傳遞)
+
+具有大小為零之陣列的物件參數未透過傳址方式傳遞。 傳遞物件時不會複製陣列。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C4816：
+
+```
+// C4816.cpp
+// compile with: /W4
+#include <stdio.h>
+
+extern "C" int printf_s(const char *, ...);
+
+#pragma warning(disable : 4200)
+
+struct S1
+{
+    int i;
+    char cArr[];
+};
+
+void TestErr(S1 s1)   // C4816 param with zero-array
+                      // not passed by reference
+{
+    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);
+}
+
+void TestOk(S1 &s1)
+{
+    printf_s("%d %c %c\n", s1.i, s1.cArr[0], s1.cArr[1]);
+}
+
+int main()
+{
+    S1 myS_1 = { 6, 'a', 'b', 'c' };
+    TestErr(myS_1);
+    TestOk(myS_1);
+}
 ```

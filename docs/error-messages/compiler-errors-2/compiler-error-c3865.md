@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3865 |Microsoft 文件
+title: 編譯器錯誤 C3865 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a872d4cf7ed285a0798461c77adf904cfa3e71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fd5c83d922601ca4cdffe0f3772723b31e630b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275495"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090837"
 ---
 # <a name="compiler-error-c3865"></a>編譯器錯誤 C3865
-'calling_convention': 只用於原生成員函式  
-  
- 呼叫慣例的受管理的成員函式或其中一個是全域函式的函式上使用。 只能在原生 （未受管理） 的成員函式的呼叫慣例。  
-  
- 如需詳細資訊，請參閱[呼叫慣例](../../cpp/calling-conventions.md)。  
-  
- 下列範例會產生 C3865:  
-  
-```  
-// C3865.cpp  
-// compile with: /clr  
-// processor: x86  
-void __thiscall Func(){}   // C3865  
-  
-// OK  
-struct MyType {  
-   void __thiscall Func(){}  
-};  
+
+'calling_convention': 僅適用於原生成員函式
+
+其中一個是全域函式的函式或的受管理的成員函式上使用的呼叫慣例。 呼叫慣例僅適用於原生的 （未受管理） 成員函式。
+
+如需詳細資訊，請參閱 <<c0> [ 呼叫慣例](../../cpp/calling-conventions.md)。
+
+下列範例會產生 C3865:
+
+```
+// C3865.cpp
+// compile with: /clr
+// processor: x86
+void __thiscall Func(){}   // C3865
+
+// OK
+struct MyType {
+   void __thiscall Func(){}
+};
 ```

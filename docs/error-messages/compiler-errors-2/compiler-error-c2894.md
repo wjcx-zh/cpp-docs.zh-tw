@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2894 |Microsoft 文件
+title: 編譯器錯誤 C2894 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92c412aa753d4440a25f8123b4b25e40360b7a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14305b88042421817133a3def8fd73db57055026
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243315"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095725"
 ---
 # <a name="compiler-error-c2894"></a>編譯器錯誤 C2894
-不可以宣告樣板擁有 'C' 連結  
-  
- 這個錯誤可能因內部定義的範本`extern`"C"區塊。  
-  
- 下列範例會產生 C2894:  
-  
-```  
-// C2894.cpp  
-extern "C" {  
-   template<class T> class stack {};   // C2894 fail  
-  
-   template<class T> void f(const T &aT) {}   // C2894  
-}  
-```  
-  
- 下列範例會產生 C2894:  
-  
-```  
-// C2894b.cpp  
-// compile with: /c  
-extern "C" template<class T> void f(const T &aT) {}   // C2894  
-  
-template<class T> void f2(const T &aT) {}   // OK  
+
+不可以宣告樣板擁有 'C' 連結
+
+此錯誤可能因內定義的範本`extern`"C"區塊。
+
+下列範例會產生 C2894:
+
+```
+// C2894.cpp
+extern "C" {
+   template<class T> class stack {};   // C2894 fail
+
+   template<class T> void f(const T &aT) {}   // C2894
+}
+```
+
+下列範例會產生 C2894:
+
+```
+// C2894b.cpp
+// compile with: /c
+extern "C" template<class T> void f(const T &aT) {}   // C2894
+
+template<class T> void f2(const T &aT) {}   // OK
 ```

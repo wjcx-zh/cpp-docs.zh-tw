@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1092 |Microsoft 文件
+title: 嚴重錯誤 C1092 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f5b5d903fe1fb2d3182a7b08f7bf82ddf334fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9852b7b3d695d5414e52727ce672ee3258f6840b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199245"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077148"
 ---
 # <a name="fatal-error-c1092"></a>嚴重錯誤 C1092
-編輯後繼續不支援對資料類型的變更; 需要先進行建置  
-  
- 您已變更，或上次成功組建之後加入的資料類型。  
-  
--   編輯後繼續不支援變更現有的資料類型，包括類別、 結構或列舉的定義。 您必須停止偵錯，並建置應用程式。  
-  
--   編輯後繼續不支援附加新資料型別如果程式資料庫檔案，例如 vc*x*0 pdb (其中*x*是使用中的主要版本的 Visual c + +) 是唯讀的。 若要加入的資料類型，編譯器必須在寫入模式開啟的.pdb 檔案。  
-  
-### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要移除這個錯誤，而不需要結束目前的偵錯工作階段  
-  
-1.  請將資料類型改回錯誤之前的狀態。  
-  
-2.  從 [偵錯]  功能表選擇 [套用程式碼變更] 。  
-  
-### <a name="to-remove-this-error-without-changing-your-source-code"></a>移除這個錯誤，而不變更您的原始程式碼  
-  
-1.  從 [偵錯]  功能表選擇 [停止偵錯] 。  
-  
-2.  從 [建置]  功能表選擇 [建置] 。  
-  
- 如需詳細資訊，請參閱 [支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。
+
+編輯後繼續不支援對資料類型的變更; 需要先進行建置
+
+您已變更，或自從上次成功的組建後，新增的資料類型。
+
+- 編輯後繼續不支援變更現有的資料類型，包括類別、 結構或列舉的定義。 您必須停止偵錯，並建置應用程式。
+
+- 編輯後繼續不支援的新資料類型，如果程式資料庫檔案，例如 vc*x*0.pdb (其中*x*是使用中的主要版本的 Visual c + +) 是唯讀的。 若要加入的資料類型，編譯器必須在寫入模式中開啟的.pdb 檔案。
+
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要移除這個錯誤，而不需要結束目前的偵錯工作階段
+
+1. 請將資料類型改回錯誤之前的狀態。
+
+1. 從 [偵錯]  功能表選擇 [套用程式碼變更] 。
+
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>移除這個錯誤，而不變更您的原始程式碼
+
+1. 從 [偵錯]  功能表選擇 [停止偵錯] 。
+
+1. 從 [建置]  功能表選擇 [建置] 。
+
+如需詳細資訊，請參閱 [支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。

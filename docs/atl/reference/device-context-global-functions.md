@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c8e7c6fb2d1e441ab0c85f60779bbefd221d52
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761062"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077538"
 ---
 # <a name="device-context-global-functions"></a>裝置內容全域函式
 
@@ -39,10 +39,10 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>參數
 
-*hdc*  
+*hdc*<br/>
 [in]現有的控制代碼的裝置內容，則為 NULL。
 
-*ptd*  
+*ptd*<br/>
 [in]指標`DVTARGETDEVICE`結構，其中包含目標裝置的相關資訊。
 
 ### <a name="return-value"></a>傳回值

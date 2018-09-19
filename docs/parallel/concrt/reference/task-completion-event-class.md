@@ -1,5 +1,5 @@
 ---
-title: task_completion_event 類別 |Microsoft 文件
+title: task_completion_event 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687877"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088991"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 類別
 `task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>參數  
- `_ResultType`  
- 這個 `task_completion_event` 類別的結果類型。  
-  
- `T`  
+*_ResultType*<br/>
+這個 `task_completion_event` 類別的結果類型。  
+
   
 ## <a name="members"></a>Members  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Result`  
- 要設定與此事件的結果。  
+*_Result*<br/>
+要設定與這個事件的結果。  
   
 ### <a name="return-value"></a>傳回值  
- 方法會傳回`true`如果它已順利設定事件。 它會傳回`false`若已設定事件。  
+ 此方法會傳回`true`如果它已成功地設定該事件。 它會傳回`false`如果已設定的事件。  
   
 ### <a name="remarks"></a>備註  
- 如果存在多個並行呼叫或`set`，只有第一次呼叫會成功，且其結果 （如果有的話） 會儲存在工作完成事件。 將其餘會忽略，而該方法會傳回 false。 當您設定工作完成事件時，所有工作從都建立事件將會立即完成，，和其接續，如果有的話，將排程。 工作完成的物件`_ResultType`以外`void`會將值傳遞給其接續。  
+ 如果多個存在或並行呼叫`set`，只有第一次呼叫會成功，且其結果 （如果有的話） 會儲存在工作完成事件。 剩餘集合會被忽略，則方法會傳回 false。 當您設定工作完成事件時，所有工作都建立，事件將會立即完成，而且其，如果有的話，都會排定接續。 工作完成物件具有`_ResultType`以外的其他`void`會將值傳遞至其接續。  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>參數  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+例外狀況型別。
+
+*_Except*<br/>
+若要設定例外狀況。
+
+*_ExceptionPtr*<br/>
+要設定的例外狀況指標。
   
 ### <a name="return-value"></a>傳回值  
   

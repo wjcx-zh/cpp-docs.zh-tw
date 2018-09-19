@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2443 |Microsoft 文件
+title: 編譯器錯誤 C2443 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec215debf3faefc2c4fca5d1b20336da194f79ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10592e3e6fc5a5b2c07f2067e3f798d7cda507bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102420"
 ---
 # <a name="compiler-error-c2443"></a>編譯器錯誤 C2443
-運算元大小衝突  
-  
- 指示需要運算元都是相同的大小。  
-  
- 下列範例會產生 C2443:  
-  
-```  
-// C2443.cpp  
-// processor: x86  
-short var;  
-int main() {  
-   __asm xchg ax,bl   // C2443  
-   __asm mov al,red   // C2443  
-   __asm mov al,BYTE PTR var   // OK  
-}  
+
+運算元大小衝突
+
+指示要求運算元必須是相同的大小。
+
+下列範例會產生 C2443:
+
+```
+// C2443.cpp
+// processor: x86
+short var;
+int main() {
+   __asm xchg ax,bl   // C2443
+   __asm mov al,red   // C2443
+   __asm mov al,BYTE PTR var   // OK
+}
 ```

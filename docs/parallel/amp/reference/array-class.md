@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ce6a5f26cba69aff8ebb296a6f4a716adf1c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: abf907fe12f55b44e7f2e184b8752d2e09a326f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071727"
 ---
 # <a name="array-class"></a>array 類別
 表示用來將資料移至加速器的資料容器。
@@ -50,10 +50,10 @@ friend class array;
 ```  
 
 #### <a name="parameters"></a>參數
-`value_type`  
+*value_type*<br/>
 資料的項目型別。
 
-`_Rank`  
+*_Rank*<br/>
 陣列陣序。
 
 ## <a name="members"></a>成員
@@ -404,46 +404,46 @@ array(array&& _Other) restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>參數
-`_Associated_Av`  
+*_Associated_Av*<br/>
 指定陣列慣用的目標位置的 accelerator_view。
 
-`_Av`  
+*_Av*<br/>
 [Accelerator_view](accelerator-view-class.md)物件，指定陣列的位置。
 
-`_Cpu_access_type`  
+*_Cpu_access_type*<br/>
 想要[access_type](concurrency-namespace-enums-amp.md#access_type) CPU 上的陣列。 此參數的預設值是`access_type_auto`離開 CPU`access_type`判斷執行階段。 實際 CPU`access_type`的陣列可以使用查詢`get_cpu_access_type`方法。
 
-`_Extent`  
+*_Extent*<br/>
 在每個維度中陣列的範圍。
 
-`_E0`  
+*_E0*<br/>
 這個區段範圍的最重要的元件。
 
-`_E1`  
+*_E1*<br/>
 這個區段範圍的下一步 以-重要元件。
 
-`_E2`  
+*_E2*<br/>
 這個區段範圍的最不重要元件。
 
-`_InputIterator`  
+*_InputIterator*<br/>
 輸入迭代器類型。
 
-`_Src`  
+*_Src*<br/>
 若要複製的物件。
 
-`_Src_first`  
+*_Src_first*<br/>
 來源容器中的開頭迭代器。
 
-`_Src_last`  
+*_Src_last*<br/>
 來源容器中結束迭代器。
 
-`_Other`  
+*_Other*<br/>
 其他資料來源。
 
-`_Rank`  
+*_Rank*<br/>
 區段的順位。
 
-`value_type`  
+*value_type*<br/>
 複製的項目資料型別。
 
 ##  <a name="associated_accelerator_view"></a> associated_accelerator_view
@@ -467,7 +467,7 @@ void copy_to(
 ```  
 
 ### <a name="parameters"></a>參數
-`_Dest`  
+*_Dest*<br/>
 [Array_view](array-view-class.md)複製到的物件。
 
 ##  <a name="cpu_access_type"></a> cpu_access_type
@@ -551,7 +551,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ```  
 
 ### <a name="parameters"></a>參數
-`value_type`  
+*value_type*<br/>
 向量的元素資料型別。
 
 ### <a name="return-value"></a>傳回值
@@ -580,19 +580,19 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>參數
-`_Index`  
+*_Index*<br/>
 項目的位置。
 
-`_I0`  
+*_I0*<br/>
 本節的原點的最重要的元件。
 
-`_I1`  
+*_I1*<br/>
 下一步-至-重要元件之原點的這一節。
 
-`_I2`  
+*_I2*<br/>
 本節中的來源最不重要元件。
 
-`_I`  
+*_I*<br/>
 項目的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -614,10 +614,10 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ```  
 
 ### <a name="parameters"></a>參數
-`_Index`  
+*_Index*<br/>
 索引。
 
-`_I`  
+*_I*<br/>
 索引。
 
 ### <a name="return-value"></a>傳回值
@@ -637,10 +637,10 @@ array& operator= (
 ```  
 
 ### <a name="parameters"></a>參數
-`_Other`  
+*_Other*<br/>
 `array`從複製的物件。
 
-`_Src`  
+*_Src*<br/>
 `array`從複製的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -752,40 +752,40 @@ array_view<const value_type,3> section(
 ```  
 
 ### <a name="parameters"></a>參數
-`_E0`  
+*_E0*<br/>
 這個區段範圍的最重要的元件。
 
-`_E1`  
+*_E1*<br/>
 這個區段範圍的下一步 以-重要元件。
 
-`_E2`  
+*_E2*<br/>
 這個區段範圍的最不重要元件。
 
-`_Ext`  
+*_Ext*<br/>
 [範圍](extent-class.md)指定區段範圍的物件。 原點是 0。
 
-`_Idx`  
+*_Idx*<br/>
 [Index](index-class.md)物件，指定原點的位置。 子區段是範圍的其餘部分。
 
-`_I0`  
+*_I0*<br/>
 本節的原點的最重要的元件。
 
-`_I1`  
+*_I1*<br/>
 下一步-至-重要元件之原點的這一節。
 
-`_I2`  
+*_I2*<br/>
 本節中的來源最不重要元件。
 
-`_Rank`  
+*_Rank*<br/>
 區段的順位。
 
-`_Section_extent`  
+*_Section_extent*<br/>
 [範圍](extent-class.md)指定區段範圍的物件。
 
-`_Section_origin`  
+*_Section_origin*<br/>
 [Index](index-class.md)物件，指定原點的位置。
 
-`value_type`  
+*value_type*<br/>
 複製的項目資料型別。
 
 ### <a name="return-value"></a>傳回值
@@ -807,13 +807,13 @@ array_view<const value_type,_New_rank> view_as(
 ```  
 
 ### <a name="parameters"></a>參數
-`_New_rank`  
+*_New_rank*<br/>
 陣序`extent`做為參數傳遞的物件。
 
-`_View_extent`  
+*_View_extent*<br/>
 用來建構新的範圍內[array_view](array-view-class.md)物件。
 
-`value_type`  
+*value_type*<br/>
 這兩個原始項目的資料型別`array`物件，並傳回`array_view`物件。
 
 ### <a name="return-value"></a>傳回值

@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f3f447c2cc45e0ccc96a1480b9d521f1bde09c9e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 99d647e2e5a98c7e4c4433baaface66d1f987b32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073665"
 ---
 # <a name="ole-db-programming"></a>OLE DB 程式設計
+
 Microsoft OLE DB 是舊版技術;對於新的應用程式是連結的 SQL 伺服器的所需的資料存取 API。 所有其他新的應用程式應該使用 ODBC。 目前的 OLE DB provider for SQL Server 是 SQLNCLI11。DLL。 SQL Server 2016 仍會出貨的提供者。 這份文件適用於開發人員會維護已使用 OLE DB 的現有應用程式。
   
- OLE DB 範本是 C++ 範本，可透過提供實作許多常用 OLE DB 介面的類別，讓您更輕鬆地使用高效能的 OLE DB 資料庫技術。 此範本庫分為消費者範本和提供者範本。  
+OLE DB 範本是 C++ 範本，可透過提供實作許多常用 OLE DB 介面的類別，讓您更輕鬆地使用高效能的 OLE DB 資料庫技術。 此範本庫分為消費者範本和提供者範本。  
   
- Visual C++ 也支援精靈建立 OLE DB 起始應用程式。  
+Visual C++ 也支援精靈建立 OLE DB 起始應用程式。  
   
- 此外，您可以使用屬性來實作 OLE DB 消費者範本。  
+此外，您可以使用屬性來實作 OLE DB 消費者範本。  
   
 |若要深入了解|請參閱|  
 |-------------------------|---------|  
@@ -45,4 +46,5 @@ Microsoft OLE DB 是舊版技術;對於新的應用程式是連結的 SQL 伺服
 |ODBC 概念性主題|[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
 ## <a name="see-also"></a>另請參閱  
- [資料存取](../data-access-in-cpp.md)
+
+[資料存取](../data-access-in-cpp.md)

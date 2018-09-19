@@ -1,5 +1,5 @@
 ---
-title: unorm 類別 |Microsoft 文件
+title: unorm 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071220"
 ---
 # <a name="unorm-class"></a>unorm 類別
-表示 unorm 數字。 每個項目是浮點數 [0.0，1.0 f] 範圍內。  
+代表 unorm 數字。 每個項目是浮點數中的範圍 [0.0，1.0 f]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ class unorm;
 |名稱|描述|  
 |----------|-----------------|  
 |unorm::operator--||  
-|unorm::operator float|轉換運算子。 將 unorm 數字轉換成浮點值。|  
+|unorm::operator float|轉換運算子。 將 unorm 號碼轉換為浮點值。|  
 |unorm::operator*=||  
 |unorm::operator/=||  
 |unorm::operator++||  
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_V`  
- 用來初始化的值。  
+*（_V)*<br/>
+用來初始化的值。  
   
- `_Other`  
- 用來初始化 norm 物件。  
+*_Other*<br/>
+Norm 物件，用來初始化。  
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

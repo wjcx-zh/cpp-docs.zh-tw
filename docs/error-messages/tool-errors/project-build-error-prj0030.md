@@ -1,5 +1,5 @@
 ---
-title: 專案建置錯誤 PRJ0030 |Microsoft 文件
+title: 專案建置錯誤 PRJ0030 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf1c9137f8c4ed0d80955eef38b07ea86204a5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 964fedd40f577a8b337c4ad0c20ba80d33ed2a23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317654"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099896"
 ---
 # <a name="project-build-error-prj0030"></a>專案建置錯誤 PRJ0030
-巨集展開發生錯誤。 評估遞迴超過 32 個層級為 $（巨集）。  
-  
- 這個錯誤被因您在巨集中的遞迴。 例如，如果您設定**中繼目錄**屬性 (請參閱[一般屬性頁 （專案）](../../ide/general-property-page-project.md)) (IntDir)，您會有遞迴。  
-  
- 若要解決這個錯誤，不會定義巨集或根據它們用來定義的巨集的屬性。
+
+巨集展開發生錯誤。 $（巨集） 的評估遞迴超過 32 個層級。
+
+此錯誤被因為您在巨集中的遞迴。 例如，如果您設定**中繼目錄**屬性 (請參閱[一般屬性頁 （專案）](../../ide/general-property-page-project.md)) (IntDir)，您會有遞迴。
+
+若要解決這個錯誤，不會定義巨集或根據它們用來定義的巨集的屬性。

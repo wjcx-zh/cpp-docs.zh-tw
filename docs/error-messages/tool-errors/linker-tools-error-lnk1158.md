@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1158 |Microsoft 文件
+title: 連結器工具錯誤 LNK1158 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cee2a31d1a7b05104031fbf41e8e3addb82d7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ce319aa4529c74cad00342b09aa0ed98bb49ce7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094165"
 ---
 # <a name="linker-tools-error-lnk1158"></a>連結器工具錯誤 LNK1158
-無法執行 'filename'  
-  
- 指定可執行檔呼叫[連結](../../build/reference/linker-command-line-syntax.md)是不包含連結的目錄中，也不是 PATH 環境變數中指定的目錄中。  
-  
- 例如，您會收到這個錯誤如果您嘗試使用 PGOPTIMIZE 參數來[/LTCG](../../build/reference/ltcg-link-time-code-generation.md) 32 位元作業系統的電腦上的連結器選項。
+
+無法執行 'filename'
+
+指定的可執行檔，由呼叫[連結](../../build/reference/linker-command-line-syntax.md)不包含連結的目錄中，也不在 PATH 環境變數所指定的目錄中。
+
+例如，您會收到這個錯誤如果您嘗試使用 PGOPTIMIZE 參數來[/LTCG](../../build/reference/ltcg-link-time-code-generation.md) 32 位元作業系統的電腦上的連結器選項。

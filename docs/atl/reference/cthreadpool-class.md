@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757390"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091695"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 
@@ -44,16 +44,16 @@ ms.locfileid: "43757390"
 ## <a name="syntax"></a>語法
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>參數
 
-*背景工作角色*  
+*背景工作角色*<br/>
 符合類別[背景工作原型](../../atl/reference/worker-archetype.md)提供用來處理的工作項目加入執行緒集區佇列的程式碼。
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 提供用來建立執行緒集區中的函式類別。
 
 ## <a name="members"></a>成員
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>參數
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out]成功時，執行緒數目的集區中接收變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>參數
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out]變數的位址，成功時，收到的最長時間的執行緒集區會關閉執行緒等候的毫秒數。
 
 ### <a name="return-value"></a>傳回值
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>參數
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 要傳遞至背景工作執行緒物件的背景工作角色參數`Initialize`， `Execute`，和`Terminate`方法。
 
-*nNumThreads*  
+*nNumThreads*<br/>
 執行緒集區中的要求的數目。
 
 如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。
 
 如果*nNumThreads*為零，若要取得的執行緒總數機器中的處理器數目將會乘以 ATLS_DEFAULT_THREADSPERPROC。  預設為每個處理器的 2 個執行緒。 如有必要，您可以定義您自己的正整數值，這個符號包含 atlutil.h 之前。
 
-*dwStackSize*  
+*dwStackSize*<br/>
 集區中每個執行緒的堆疊大小。
 
-*hCompletion*  
+*hCompletion*<br/>
 若要完成連接埠相關聯的物件控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>參數
 
-*要求*  
+*要求*<br/>
 要排入佇列的要求。
 
 ### <a name="return-value"></a>傳回值
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>參數
 
-*nNumThreads*  
+*nNumThreads*<br/>
 執行緒集區中的要求的數目。
 
 如果*nNumThreads*是負數，其絕對值將會乘以中取得的執行緒總數機器的處理器數目。
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。
 
 ### <a name="return-value"></a>傳回值
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 以毫秒為單位，執行緒集區會等待關閉執行緒要求的最大時間。 如果提供 0 或沒有值，這個方法會使用設定的逾時[CThreadPool::SetTimeout](#settimeout)。
 
 ### <a name="remarks"></a>備註
@@ -358,6 +358,6 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [類別](../../atl/reference/atl-classes.md)

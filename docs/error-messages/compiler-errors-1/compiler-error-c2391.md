@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2391 |Microsoft 文件
+title: 編譯器錯誤 C2391 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a16ed19f5cac9d6c23a3f709e40fc290223e93c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1201651ffc52dae7b8f184895f8005750ee4697e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102368"
 ---
 # <a name="compiler-error-c2391"></a>編譯器錯誤 C2391
-'identifier': 'friend' 不能在類型定義  
-  
- `friend`宣告包含完整的類別宣告。 A`friend`成員函式或複雜的類型規範，但不是完整的類別宣告，可以指定宣告。  
-  
- 下列範例會產生 C2326：  
-  
-```  
-// C2391.cpp  
-// compile with: /c  
-class D {   
-   void func( int );   
-};  
-  
-class A {  
-   friend class B { int i; };   // C2391  
-  
-   // OK  
-   friend class C;  
-   friend void D::func(int);  
-};  
+
+'identifier': 'friend' 不能在類型定義
+
+`friend`宣告包含完整的類別宣告。 A`friend`宣告可以指定一個成員函式或複雜的類型規範，但不是完整的類別宣告。
+
+下列範例會產生 C2326：
+
+```
+// C2391.cpp
+// compile with: /c
+class D {
+   void func( int );
+};
+
+class A {
+   friend class B { int i; };   // C2391
+
+   // OK
+   friend class C;
+   friend void D::func(int);
+};
 ```

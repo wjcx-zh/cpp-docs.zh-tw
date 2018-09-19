@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1e04bd31ca1942e5e5fa054cb4991233e2f61c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b772a548054cd9d829356436afe53748c215c193
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762183"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078916"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 類別
 
@@ -76,7 +76,7 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*  
+*nBytes*<br/>
 在新記憶體區塊中要求的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -101,7 +101,7 @@ void Free(void* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 此記憶體管理員先前所配置之記憶體的指標。
 
 ### <a name="remarks"></a>備註
@@ -122,7 +122,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 此記憶體管理員先前所配置之記憶體的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -143,10 +143,10 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 此記憶體管理員先前所配置之記憶體的指標。
 
-*nBytes*  
+*nBytes*<br/>
 在新記憶體區塊中要求的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -173,7 +173,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>參數
 
-*pbAllowContextMenu*  
+*pbAllowContextMenu*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -194,7 +194,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>參數
 
-*pbAllowShowUI*  
+*pbAllowShowUI*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -215,7 +215,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>參數
 
-*pbAllowWindowless*  
+*pbAllowWindowless*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -236,7 +236,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>參數
 
-*pclrBackground*  
+*pclrBackground*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -257,7 +257,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>參數
 
-*pbDisplayAsDefault*  
+*pbDisplayAsDefault*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -278,7 +278,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>參數
 
-*pdwDocHostDoubleClickFlags*  
+*pdwDocHostDoubleClickFlags*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -299,7 +299,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>參數
 
-*pdwDocHostFlags*  
+*pdwDocHostFlags*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -320,7 +320,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>參數
 
-*pFont*  
+*pFont*<br/>
 [out]位址`IFontDisp`用來接收此屬性的目前值的介面指標。
 
 ### <a name="return-value"></a>傳回值
@@ -341,7 +341,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>參數
 
-*pclrForeground*  
+*pclrForeground*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -362,7 +362,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>參數
 
-*plcidLocaleID*  
+*plcidLocaleID*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -385,7 +385,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>參數
 
-*pbMessageReflect*  
+*pbMessageReflect*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -406,7 +406,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>參數
 
-*pbstrOptionKeyPath*  
+*pbstrOptionKeyPath*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -423,7 +423,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>參數
 
-*pbShowGrabHandles*  
+*pbShowGrabHandles*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -444,7 +444,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>參數
 
-*pbShowHatching*  
+*pbShowHatching*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -465,7 +465,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>參數
 
-*pbUserMode*  
+*pbUserMode*<br/>
 [out]要接收此屬性的目前值之變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -486,7 +486,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>參數
 
-*bAllowContextMenu*  
+*bAllowContextMenu*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -507,7 +507,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>參數
 
-*bAllowShowUI*  
+*bAllowShowUI*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -528,7 +528,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>參數
 
-*bAllowWindowless*  
+*bAllowWindowless*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -549,7 +549,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>參數
 
-*clrBackground*  
+*clrBackground*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -570,7 +570,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>參數
 
-*bDisplayAsDefault*  
+*bDisplayAsDefault*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -591,7 +591,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>參數
 
-*dwDocHostDoubleClickFlags*  
+*dwDocHostDoubleClickFlags*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -612,7 +612,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>參數
 
-*dwDocHostFlags*  
+*dwDocHostFlags*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -633,7 +633,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>參數
 
-*pFont*  
+*pFont*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -654,7 +654,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>參數
 
-*clrForeground*  
+*clrForeground*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -675,7 +675,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>參數
 
-*lcidLocaleID*  
+*lcidLocaleID*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -696,7 +696,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>參數
 
-*bMessageReflect*  
+*bMessageReflect*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -717,7 +717,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>參數
 
-*bstrOptionKeyPath*  
+*bstrOptionKeyPath*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -734,7 +734,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>參數
 
-*bUserMode*  
+*bUserMode*<br/>
 [in]此屬性的新值。
 
 ### <a name="return-value"></a>傳回值
@@ -755,7 +755,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>參數
 
-*pDispatch*  
+*pDispatch*<br/>
 新的介面指標。
 
 ### <a name="return-value"></a>傳回值
@@ -776,10 +776,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>參數
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in]指標`IUnknown`要附加至主機的物件之控制項的介面。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用來裝載之視窗控制代碼。
 
 ### <a name="return-value"></a>傳回值
@@ -799,13 +799,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>參數
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]字串，識別要建立的控制項。 可以是 （必須包含在大括號） 的 CLSID、 ProgID、 URL 或原始 HTML (前面加上**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用來裝載之視窗控制代碼。
 
-*pStream*  
+*pStream*<br/>
 [in]包含控制項的初始化資料的資料流介面指標。 可以是 NULL。
 
 ### <a name="return-value"></a>傳回值
@@ -836,22 +836,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>參數
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in]字串，識別要建立的控制項。 可以是 （必須包含在大括號） 的 CLSID、 ProgID、 URL 或原始 HTML (前面加上**MSHTML:**)。
 
-*hWnd*  
+*hWnd*<br/>
 [in]要用來裝載之視窗控制代碼。
 
-*pStream*  
+*pStream*<br/>
 [in]包含控制項的初始化資料的資料流介面指標。 可以是 NULL。
 
-*ppUnk*  
+*ppUnk*<br/>
 [out]將會收到的指標位址`IUnknown`介面建立的控制項。 可以是 NULL。
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in]在所包含的物件上的輸出介面的介面識別項。 可以是 IID_NULL。
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in]指標`IUnknown`連接到包含的物件所指定的連接點的接收器物件的介面`iidSink`。
 
 ### <a name="return-value"></a>傳回值
@@ -874,10 +874,10 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 
 ### <a name="parameters"></a>參數
 
-*riid*  
+*riid*<br/>
 [in]所要求的控制項上的介面識別碼。
 
-*ppvObject*  
+*ppvObject*<br/>
 [out]將會收到建立控制項的指定的介面的指標位址。
 
 ### <a name="return-value"></a>傳回值
@@ -894,7 +894,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>參數
 
-*pDisp*  
+*pDisp*<br/>
 [in]指標`IDispatch`介面。
 
 ### <a name="return-value"></a>傳回值
@@ -911,7 +911,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>參數
 
-*pDisp*  
+*pDisp*<br/>
 [in]指標`IDocHostUIHandlerDispatch`介面。
 
 ### <a name="return-value"></a>傳回值
@@ -936,7 +936,7 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>參數
 
-*bstrLic*  
+*bstrLic*<br/>
 [in]包含控制項的授權金鑰 BSTR。
 
 ### <a name="remarks"></a>備註
@@ -966,7 +966,7 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>參數
 
-*bstrLic*  
+*bstrLic*<br/>
 [in]包含控制項的授權金鑰 BSTR。
 
 ### <a name="remarks"></a>備註

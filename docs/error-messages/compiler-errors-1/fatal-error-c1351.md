@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1351 |Microsoft 文件
+title: 嚴重錯誤 C1351 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a700734cc2fb860d9d3ad8143aed817809ab69f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bd76b164e24834f22cc4654873559e340efcb79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100450"
 ---
 # <a name="fatal-error-c1351"></a>嚴重錯誤 C1351
 
-> 載入 dll 時發生錯誤 '*dll*': 不相容版本  
+> 載入 dll 時發生錯誤 '*dll*': 不相容的版本
 
-找不到 DLL 的版本錯誤。
+找不到錯誤的 dll 版本。
 
-這表示您的安裝問題，而且您應該重新安裝 Visual Studio。
+這表示您的安裝問題，您應該重新安裝 Visual Studio。

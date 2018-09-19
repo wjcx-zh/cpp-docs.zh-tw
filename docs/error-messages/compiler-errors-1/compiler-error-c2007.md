@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2007 |Microsoft 文件
+title: 編譯器錯誤 C2007 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 159a4b8f9dffc4f6ee96b0bb1935682f9f6db281
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2ac9383b144496228038529808e24dfd1c0f7a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097324"
 ---
 # <a name="compiler-error-c2007"></a>編譯器錯誤 C2007
-\#定義語法  
-  
- 沒有識別項的後面出現`#define`。 若要解決此錯誤，使用識別項。  
-  
- 下列範例會產生 C2007:  
-  
-```  
-// C2007.cpp  
-#define   // C2007  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C2007b.cpp  
-// compile with: /c  
-#define true 1  
+
+\#定義語法
+
+沒有識別項出現之後`#define`。 若要解決此錯誤，使用識別項。
+
+下列範例會產生 C2007:
+
+```
+// C2007.cpp
+#define   // C2007
+```
+
+可能的解決方式：
+
+```
+// C2007b.cpp
+// compile with: /c
+#define true 1
 ```

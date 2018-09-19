@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68e6b4730be3679e4309a298d40657dcecde94b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eb111b3fa1376be8a43bfc9a04c7865164bff76
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084571"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 類別
 
@@ -42,19 +42,19 @@ ms.locfileid: "43755706"
 ## <a name="syntax"></a>語法
 
 ```
-template <UINT nID, class T, const IID* pdiid>  
+template <UINT nID, class T, const IID* pdiid>
 class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```
 
 #### <a name="parameters"></a>參數
 
-*nID*  
+*nID*<br/>
 來源物件的唯一識別碼。 當`IDispEventSimpleImpl`的基底類別為複合控制項，使用此參數所需的自主控制的資源識別碼。 在其他情況下，使用任意的正整數。
 
-*T*  
+*T*<br/>
 使用者的類別，衍生自`IDispEventSimpleImpl`。
 
-*pdiid*  
+*pdiid*<br/>
 要由此類別實作的事件分配程式介面的 IID 的指標。
 
 ## <a name="members"></a>成員
@@ -119,7 +119,7 @@ HRESULT Advise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IUnknown`事件來源物件的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -145,10 +145,10 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IUnknown`事件來源物件的介面。
 
-*piid*  
+*piid*<br/>
 IID 事件來源物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -174,10 +174,10 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IUnknown`事件來源物件的介面。
 
-*piid*  
+*piid*<br/>
 IID 事件來源物件的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -267,7 +267,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 
 ### <a name="parameters"></a>參數
 
-*pUnk*  
+*pUnk*<br/>
 [in]指標`IUnknown`事件來源物件的介面。
 
 ### <a name="return-value"></a>傳回值
@@ -287,8 +287,8 @@ S_OK 或任何失敗 HRESULT 值。
 
 ## <a name="see-also"></a>另請參閱
 
-[_ATL_FUNC_INFO 結構](../../atl/reference/atl-func-info-structure.md)   
-[IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)   
-[IDispEventImpl 類別](../../atl/reference/idispeventimpl-class.md)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[_ATL_FUNC_INFO 結構](../../atl/reference/atl-func-info-structure.md)<br/>
+[IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)<br/>
+[IDispEventImpl 類別](../../atl/reference/idispeventimpl-class.md)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

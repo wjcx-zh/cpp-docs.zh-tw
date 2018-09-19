@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2308 |Microsoft 文件
+title: 編譯器錯誤 C2308 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4523fd23f0900172e80cf71fd748a9f939deb044
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24c01565f03bafa1b0bf1c20c4fb967cde3fc5b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091968"
 ---
 # <a name="compiler-error-c2308"></a>編譯器錯誤 C2308
-串連不相符的字串  
-  
- 串連指定這兩個寬型和非寬字元字串。 您無法串連寬字元字串，而非寬字元字串。
+
+將不相符的字串串連
+
+串連指定這兩個寬和非寬字元字串。 您無法將寬字元字串，而非寬字元字串的串連。

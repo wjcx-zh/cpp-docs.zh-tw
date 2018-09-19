@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075718"
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>參數
 
-*K*  
+*K*<br/>
 索引鍵的項目類型。
 
-*V*值項目型別。
+*V*<br/>
+值的項目型別。
 
-*KTraits*  
+*KTraits*<br/>
 程式碼，用來複製或移動索引鍵的項目。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。
 
-*VTraits*  
+*VTraits*<br/>
 若要複製或移動值的項目所使用的程式碼。
 
 ## <a name="members"></a>成員
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>參數
 
-*nBins*  
+*nBins*<br/>
 提供的預存的項目指標的分類收納數目。 稍後本主題適用於分類收納組的說明，請參閱備註。
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 最佳的負載比率。
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 負載比率下限臨界值。
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 負載比率上限臨界值。
 
-*nBlockSize*  
+*nBlockSize*<br/>
 區塊大小。
 
 ### <a name="remarks"></a>備註
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
-*key*  
+*key*<br/>
 指定對應的索引鍵的類型樣板參數。
 
-*值*  
+*值*<br/>
 指定的對應值的類型樣板參數。
 
 ### <a name="return-value"></a>傳回值
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
-*key*  
+*key*<br/>
 指定對應的索引鍵的類型樣板參數。
 
-*值*  
+*值*<br/>
 指定的對應值的類型樣板參數。
 
 ### <a name="remarks"></a>備註
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="return-value"></a>傳回值
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>參數
 
-*nBins*  
+*nBins*<br/>
 雜湊資料表所使用的分類收納數目。 請參閱[CAtlMap::CAtlMap](#catlmap)取得說明。
 
-*bAllocNow*  
+*bAllocNow*<br/>
 旗標指示應該配置記憶體時。
 
 ### <a name="return-value"></a>傳回值
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 指定識別的項目，是要查閱的索引鍵。
 
-*值*  
+*值*<br/>
 收到的查閱值的變數。
 
 ### <a name="return-value"></a>傳回值
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 要加入或取代之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>參數
 
-*nBins*  
+*nBins*<br/>
 若要使用的雜湊表的分類收納新的數目。 請參閱[CAtlMap::CAtlMap](#catlmap)取得說明。
 
 ### <a name="remarks"></a>備註
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
 ### <a name="remarks"></a>備註
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 您想要移除對應至項目配對的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>參數
 
-*key*  
+*key*<br/>
 若要加入的索引鍵值`CAtlMap`物件。
 
-*值*  
+*值*<br/>
 要加入至值`CAtlMap`物件。
 
 ### <a name="return-value"></a>傳回值
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>參數
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 最佳的負載比率。
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 負載比率下限臨界值。
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 負載比率上限臨界值。
 
-*bRehashNow*  
+*bRehashNow*<br/>
 表示是否應該重新計算雜湊表的旗標。
 
 ### <a name="remarks"></a>備註
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>參數
 
-*pos*  
+*pos*<br/>
 先前呼叫所傳回的位置計數器[CAtlMap::GetNextAssoc](#getnextassoc)或是[CAtlMap::GetStartPosition](#getstartposition)。
 
-*值*  
+*值*<br/>
 要加入至值`CAtlMap`物件。
 
 ### <a name="remarks"></a>備註
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>參數
 
-*K*  
+*K*<br/>
 索引鍵的項目類型。
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>參數
 
-*V*  
+*V*<br/>
 值的項目型別。
 
 ## <a name="see-also"></a>另請參閱
 
-[跑馬燈範例](../../visual-cpp-samples.md)   
-[UpdatePV 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[跑馬燈範例](../../visual-cpp-samples.md)<br/>
+[UpdatePV 範例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

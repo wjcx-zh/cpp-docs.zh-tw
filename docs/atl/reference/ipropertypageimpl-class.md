@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28af5343f761f89678768133c9114e3cf23be8e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075224"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 類別
 
@@ -58,13 +58,13 @@ ms.locfileid: "43755982"
 ## <a name="syntax"></a>語法
 
 ```
-template<class T>  
+template<class T>
 class IPropertyPageImpl
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`IPropertyPageImpl`。
 
 ## <a name="members"></a>成員
@@ -311,7 +311,7 @@ void SetDirty(BOOL bDirty);
 
 ### <a name="parameters"></a>參數
 
-*bDirty*  
+*bDirty*<br/>
 [in]如果為 TRUE，屬性頁的狀態會標示為已變更。 否則，它會標示為不變。
 
 ### <a name="remarks"></a>備註
@@ -368,7 +368,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 ## <a name="see-also"></a>另請參閱
 
-[IPropertyPage2Impl 類別](../../atl/reference/ipropertypage2impl-class.md)   
-[IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)   
-[ISpecifyPropertyPagesImpl 類別](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+[IPropertyPage2Impl 類別](../../atl/reference/ipropertypage2impl-class.md)<br/>
+[IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl 類別](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

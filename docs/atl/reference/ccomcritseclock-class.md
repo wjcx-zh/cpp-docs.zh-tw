@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06b34099ecdb9c61d3580586bcb3bcd73eaf709
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ab3c4b349b64b96b8aeb7a53d6bf8809f41cea7b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755043"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097779"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 類別
 
@@ -39,7 +39,7 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>參數
 
-*TLock*  
+*TLock*<br/>
 要鎖定和解除鎖定的物件。
 
 ## <a name="members"></a>成員
@@ -76,10 +76,10 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>參數
 
-*cs*  
+*cs*<br/>
 重要區段物件。
 
-*bInitialLock*  
+*bInitialLock*<br/>
 初始鎖定狀態： **，則為 true**鎖定的方法。
 
 ### <a name="remarks"></a>備註
@@ -128,5 +128,5 @@ void Unlock() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   
+[CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [CComAutoCriticalSection 類別](../../atl/reference/ccomautocriticalsection-class.md)

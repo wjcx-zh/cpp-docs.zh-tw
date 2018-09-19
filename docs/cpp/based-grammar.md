@@ -14,36 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d1713b0cc8e1d5d53d3b30f3dd48a0b54a3782
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 43e9074de25d8cb914432123478f5f338ff4ba1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103760"
 ---
 # <a name="based-grammar"></a>__based 文法
-## <a name="microsoft-specific"></a>Microsoft 特定的  
- 基底位址在您需要精確控制配置物件的區段時很實用 (靜態和動態架構資料)。  
-  
- 基底定址在 32 位元和 64 位元編譯中可接受 「 型的指標 」 的唯一形式所定義的類型包含 32 位元或 64 位元的基底的 32 位元或 64 位元的移動，或根據**void**。  
-  
-## <a name="grammar"></a>文法  
- *根據範圍修飾詞*:  
- **__based (***基底運算式***)**   
-  
- *基底運算式*:  
- *based-variablebased-abstract-declaratorsegment-namesegment-cast*  
-  
- *基礎變數*:  
- *identifier*  
-  
- *架構抽象宣告子*:  
- *抽象宣告子*  
-  
- *基底型別*:  
- *type-name*  
-  
-**結束 Microsoft 專屬**  
-  
-## <a name="see-also"></a>另請參閱  
- [Based 指標](../cpp/based-pointers-cpp.md)
+
+## <a name="microsoft-specific"></a>Microsoft 特定的
+
+基底位址在您需要精確控制配置物件的區段時很實用 (靜態和動態架構資料)。
+
+基底定址在 32 位元和 64 位元編譯中可接受 「 型的指標 」 的唯一形式所定義的類型包含 32 位元或 64 位元的基底的 32 位元或 64 位元的移動，或根據**void**。
+
+## <a name="grammar"></a>文法
+
+*根據範圍修飾詞*: **__based (***基底運算式***)** 
+
+*基底運算式*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
+
+*以變數*:*識別碼*
+
+*架構抽象宣告子*:*抽象宣告子*
+
+*基底型別*:*型別名稱*
+
+**結束 Microsoft 專屬**
+
+## <a name="see-also"></a>另請參閱
+
+[Based 指標](../cpp/based-pointers-cpp.md)

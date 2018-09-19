@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2066 |Microsoft 文件
+title: 編譯器錯誤 C2066 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 952b0565c3ff22e4fb96ac59d7a969aad713c815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc9945cfd938b79784b3e29b484133365176e758
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163773"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086989"
 ---
 # <a name="compiler-error-c2066"></a>編譯器錯誤 C2066
-轉換成函式類型不合法  
-  
- 在 ANSI C 中，不合法的函式指標和資料指標之間轉換。
+
+函式類型的轉換不合法
+
+在 ANSI C 中，它是不合法轉換函式指標之間的資料指標。

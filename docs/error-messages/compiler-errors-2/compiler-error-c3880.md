@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3880 |Microsoft 文件
+title: 編譯器錯誤 C3880 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cc36f3b5fb9571a707e4ffe4e75182e984e407
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03cd1c953e4f0183fe71dcbcf4cc3bfb242b4f1c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269753"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074353"
 ---
 # <a name="compiler-error-c3880"></a>編譯器錯誤 C3880
-'var': 不可以是常值資料成員  
-  
- 型別[常值](../../windows/literal-cpp-component-extensions.md)必須是屬性，或編譯時期轉換成下列類型之一：  
-  
--   整數類資料類型  
-  
--   字串  
-  
--   具有整數類型或基本類型列舉  
-  
- 下列範例會產生 C3880:  
-  
-```  
-// C3880.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   literal System::Decimal staticConst1 = 10;   // C3880  
-   literal int staticConst2 = 10;   // OK  
-};  
+
+'var': 不可以是常值資料成員
+
+型別[常值](../../windows/literal-cpp-component-extensions.md)必須是屬性，或編譯時期轉換成下列類型之一：
+
+- 整數類資料類型
+
+- 字串
+
+- 整數或基礎類型的列舉
+
+下列範例會產生 C3880:
+
+```
+// C3880.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   literal System::Decimal staticConst1 = 10;   // C3880
+   literal int staticConst2 = 10;   // OK
+};
 ```

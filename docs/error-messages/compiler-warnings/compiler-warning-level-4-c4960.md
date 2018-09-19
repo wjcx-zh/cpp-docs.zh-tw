@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 4） C4960 |Microsoft 文件
+title: 編譯器警告 （層級 4） C4960 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1281bc86ad363c02df5c39ed41f616a6fff1a9b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed6ba083017c84cd6af05b917ff8417b0394d7c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294423"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085715"
 ---
 # <a name="compiler-warning-level-4-c4960"></a>編譯器警告 (層級 4) C4960
-'function' 太大而無法分析  
-  
- 使用 [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)時，編譯器偵測到函式大於 65,535 個指令的輸入模組。 這類大型函式不適用於特性指引最佳化。  
-  
- 若要解決這個警告，請減少函式的大小。
+
+'function' 太大而無法分析
+
+使用 [/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)時，編譯器偵測到函式大於 65,535 個指令的輸入模組。 這類大型函式不適用於特性指引最佳化。
+
+若要解決這個警告，請減少函式的大小。

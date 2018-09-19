@@ -35,14 +35,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a74d2c06f5de9956056c9d8e82d35b64c65cb16f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 15e00f27c5ad5d5312928bda8f73304a8417a6bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071818"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 類別
+
 實作連接點介面的提供者站台[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))。  
   
 ## <a name="syntax"></a>語法
@@ -58,20 +59,22 @@ class IRowsetNotifyCP :
 ```  
   
 ### <a name="parameters"></a>參數  
- *T*  
- 類別衍生自`IRowsetNotifyCP`。  
+
+*T*<br/>
+類別衍生自`IRowsetNotifyCP`。  
   
- *ReentrantEventSync*  
- 支援重新進入的 mutex 類別 (預設值是`CComSharedMutex`)。 Mutex 是同步處理物件，可讓一個執行緒互斥資源的存取權。  
+*ReentrantEventSync*<br/>
+支援重新進入的 mutex 類別 (預設值是`CComSharedMutex`)。 Mutex 是同步處理物件，可讓一個執行緒互斥資源的存取權。  
   
- *piid*  
- 介面識別碼指標 (`IID*`) 的`IRowsetNotify`連接點的介面。 預設值是 `&__uuidof(IRowsetNotify)`。  
+*piid*<br/>
+介面識別碼指標 (`IID*`) 的`IRowsetNotify`連接點的介面。 預設值是 `&__uuidof(IRowsetNotify)`。  
   
- *DynamicUnkArray*  
- 類型的陣列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，這是動態配置的陣列的`IUnknown`指標給用戶端接收器介面。 
+*DynamicUnkArray*<br/>
+類型的陣列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，這是動態配置的陣列的`IUnknown`指標給用戶端接收器介面。 
 
 ## <a name="requirements"></a>需求  
- **Header:** atldb.h   
+
+**Header:** atldb.h   
   
 ## <a name="members"></a>成員  
   
@@ -84,13 +87,15 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](#onrowsetchange)|告知消費者，影響整個資料列集的變更。|  
   
 ## <a name="remarks"></a>備註  
- `IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
+
+`IRowsetNotifyCP` 實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。  
   
- 請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為 「 接收 」） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 請參閱[接收通知](../../data/oledb/receiving-notifications.md)需於取用者實作連接點介面。  
+請注意，您也必須實作並註冊`IRowsetNotify`在取用者 （也稱為 「 接收 」） 使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) ，好讓取用者可以處理通知。 請參閱[接收通知](../../data/oledb/receiving-notifications.md)需於取用者實作連接點介面。  
   
- 實作通知的詳細資訊，請參閱 「 支援通知 」，在[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)。  
+實作通知的詳細資訊，請參閱 「 支援通知 」，在[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)。  
 
 ## <a name="onfieldchange"></a> Irowsetnotifycp:: Fire_onfieldchange
+
 廣播[OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))事件來通知取用者的資料行的值變更。  
   
 ### <a name="syntax"></a>語法  
@@ -106,9 +111,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
+
+請參閱[IRowsetNotify::OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))中*OLE DB 程式設計人員參考*。 
 
 ## <a name="onrowchange"></a> Irowsetnotifycp:: Fire_onrowchange
+
 廣播[OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響資料列。  
   
 ### <a name="syntax"></a>語法  
@@ -123,9 +130,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
+
+請參閱[irowsetnotify:: Onrowchange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))中*OLE DB 程式設計人員參考*。  
 
 ## <a name="onrowsetchange"></a> Irowsetnotifycp:: Fire_onrowsetchange
+
 廣播[OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))事件，以連接點上的所有接聽程式`IID_IRowsetNotify`來通知取用者的變更會影響整個資料列集。  
   
 ### <a name="syntax"></a>語法  
@@ -138,13 +147,15 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ```  
   
 #### <a name="parameters"></a>參數  
- 請參閱[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))中*OLE DB 程式設計人員參考*。
+
+請參閱[IRowsetNotify::OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\))中*OLE DB 程式設計人員參考*。
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
- [通知 (COM)](/windows/desktop/com/notifications)   
- [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)   
- [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)   
- [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)   
- [建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)
+
+[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[通知 (COM)](/windows/desktop/com/notifications)<br/>
+[BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
+[END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>
+[CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)<br/>
+[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)

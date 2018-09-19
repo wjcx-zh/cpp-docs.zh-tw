@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3226 |Microsoft 文件
+title: 編譯器錯誤 C3226 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb5fca95c876b1020a630f0ebe69e56a1dfa362
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d0b070d5f32b75bdd3c56a3754857a574638b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083245"
 ---
 # <a name="compiler-error-c3226"></a>編譯器錯誤 C3226
-泛型宣告內不允許有樣板宣告，必須改為泛型宣告  
-  
- 請在泛型類別內使用泛型宣告。  
-  
- 下列範例會產生 C3226：  
-  
-```  
-// C3226.cpp  
-// compile with: /clr  
-generic <class T>  
-ref class C {  
-   template <class T1>   // C3226  
-   ref struct S1 {};  
-};  
-```  
-  
- 下列範例示範可能的解決方式：  
-  
-```  
-// C3226b.cpp  
-// compile with: /clr /c  
-generic <class T>  
-ref class C {  
-   generic <class T1>  
-   ref struct S1 {};  
-};  
+
+泛型宣告內不允許有樣板宣告，必須改為泛型宣告
+
+請在泛型類別內使用泛型宣告。
+
+下列範例會產生 C3226：
+
+```
+// C3226.cpp
+// compile with: /clr
+generic <class T>
+ref class C {
+   template <class T1>   // C3226
+   ref struct S1 {};
+};
+```
+
+下列範例示範可能的解決方式：
+
+```
+// C3226b.cpp
+// compile with: /clr /c
+generic <class T>
+ref class C {
+   generic <class T1>
+   ref struct S1 {};
+};
 ```

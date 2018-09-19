@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2075 |Microsoft 文件
+title: 編譯器錯誤 C2075 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 689cce77da2193cf4864e46df050287d98b6e46e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ffedc5ce0ae073d53c32f6d0b9447987da31391a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083024"
 ---
 # <a name="compiler-error-c2075"></a>編譯器錯誤 C2075
-'identifier': 陣列初始化需要使用大括號  
-  
- 指定的陣列初始設定式未以大括號括住。  
-  
- 下列範例會產生 C2075：  
-  
-```  
-// C2075.c  
-int main() {  
-   int i[] = 1, 2, 3 };   // C2075  
-}  
-```  
-  
- 可能的解決方式：  
-  
-```  
-// C2075b.c  
-int main() {  
-   int j[] = { 1, 2, 3 };  
-}  
+
+'identifier': 陣列初始化需要使用大括號
+
+指定的陣列初始設定式未以大括號括住。
+
+下列範例會產生 C2075：
+
+```
+// C2075.c
+int main() {
+   int i[] = 1, 2, 3 };   // C2075
+}
+```
+
+可能的解決方式：
+
+```
+// C2075b.c
+int main() {
+   int j[] = { 1, 2, 3 };
+}
 ```

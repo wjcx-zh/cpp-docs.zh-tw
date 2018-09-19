@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff071ad298d379dd8d063d5f71287da9a567b49
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 74d36c7b13be3653a0c17f763e37447d5541c5a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086456"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 類別
 
@@ -62,16 +62,16 @@ ms.locfileid: "43755556"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, UINT nServiceNameID>  
+template <class T, UINT nServiceNameID>
 class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別衍生自`CAtlServiceModuleT`。
 
-*nServiceNameID*  
+*nServiceNameID*<br/>
 服務資源識別碼。
 
 ## <a name="members"></a>成員
@@ -163,7 +163,7 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwOpcode*  
+*dwOpcode*<br/>
 定義處理常式作業參數。 如需詳細資訊，請參閱 < 備註 >。
 
 ### <a name="remarks"></a>備註
@@ -246,10 +246,10 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>參數
 
-*pszFormat*  
+*pszFormat*<br/>
 要寫入事件記錄檔的字串。
 
-...  
+*...*<br/>
 要寫入事件記錄檔的選擇性額外字串。
 
 ### <a name="remarks"></a>備註
@@ -366,7 +366,7 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwOpcode*  
+*dwOpcode*<br/>
 保留的。
 
 ##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine
@@ -379,10 +379,10 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>參數
 
-*lpCmdLine*  
+*lpCmdLine*<br/>
 命令列。
 
-*pnRetCode*  
+*pnRetCode*<br/>
 對應至註冊 （如果它發生） 的 HRESULT。
 
 ### <a name="return-value"></a>傳回值
@@ -403,7 +403,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 此參數會傳遞至[CAtlExeModuleT::PreMessageLoop](../../atl/reference/catlexemodulet-class.md#premessageloop)。
 
 ### <a name="return-value"></a>傳回值
@@ -424,7 +424,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>參數
 
-*bService*  
+*bService*<br/>
 必須註冊為服務，則為 true。
 
 ### <a name="return-value"></a>傳回值
@@ -441,7 +441,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。 預設值是 SW_HIDE。
 
 ### <a name="return-value"></a>傳回值
@@ -462,10 +462,10 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwArgc*  
+*dwArgc*<br/>
 Argc 引數。
 
-*lpszArgv*  
+*lpszArgv*<br/>
 Argv 引數。
 
 ### <a name="remarks"></a>備註
@@ -484,7 +484,7 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>參數
 
-*dwState*  
+*dwState*<br/>
 新的狀態。 請參閱[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)可能的值。
 
 ### <a name="remarks"></a>備註
@@ -501,7 +501,7 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。
 
 ### <a name="return-value"></a>傳回值
@@ -562,7 +562,7 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>參數
 
-*nShowCmd*  
+*nShowCmd*<br/>
 指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)一節。
 
 ### <a name="return-value"></a>傳回值
@@ -575,5 +575,5 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[Catldllmodulet 類別](../../atl/reference/catlexemodulet-class.md)   
+[CAtlDllModuleT 類別](../../atl/reference/catlexemodulet-class.md)<br/>
 [類別概觀](../../atl/atl-class-overview.md)

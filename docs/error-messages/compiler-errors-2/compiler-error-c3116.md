@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3116 |Microsoft 文件
+title: 編譯器錯誤 C3116 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde589df31e6e3b75f9a0153d7383ab1e85ed180
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1104b731fa565991615eb88cc34fa946e2bfb505
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077839"
 ---
 # <a name="compiler-error-c3116"></a>編譯器錯誤 C3116
-'儲存體規範': 介面方法的儲存類別無效  
-  
- 您使用`typedef`， `register`，或`static`為介面方法的存放裝置類別。 這些儲存類別不允許在介面成員上。  
-  
- 下列範例會產生 C3116:  
-  
-```  
-// C3116.cpp  
-__interface ImyInterface  
-{  
-   static void myFunc();   // C3116  
-};  
+
+'儲存體 specifier': 介面方法的無效儲存類別
+
+您可以使用`typedef`， `register`，或`static`為介面方法的儲存體類別。 在介面成員上不允許這些儲存體類別。
+
+下列範例會產生 C3116:
+
+```
+// C3116.cpp
+__interface ImyInterface
+{
+   static void myFunc();   // C3116
+};
 ```

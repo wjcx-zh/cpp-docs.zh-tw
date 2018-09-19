@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37df260d16c04210fb7e66c0ec9a747a3dad7da4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 11c391e6ad467c835cd8c65ec872db74b85404a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097610"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 
@@ -36,16 +36,16 @@ ms.locfileid: "43760158"
 ## <a name="syntax"></a>語法
 
 ```
-template <class T, const CLSID* pclsid = &CLSID_NULL>  
+template <class T, const CLSID* pclsid = &CLSID_NULL>
 class CComCoClass
 ```
 
 #### <a name="parameters"></a>參數
 
-*T*  
+*T*<br/>
 您的類別，衍生自`CComCoClass`。
 
-*pclsid*  
+*pclsid*<br/>
 物件的 CLSID 指標。
 
 ## <a name="members"></a>成員
@@ -91,13 +91,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>參數
 
-*Q*  
+*Q*<br/>
 應該傳回透過 COM 介面*pp*。
 
-*punkOuter*  
+*punkOuter*<br/>
 [in]外部未知或彙總的控制未知。
 
-*前置處理*  
+*前置處理*<br/>
 [out]如果建立成功接收的要求的介面指標的指標變數的位址。
 
 ### <a name="return-value"></a>傳回值
@@ -166,24 +166,25 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>參數
 
-*lpszDesc*  
-[in]描述錯誤的字串。 Unicode 版本`Error`指定*lpszDesc*屬於類型 LPCOLESTR; ANSI 版本指定 LPCSTR 類型。  
-*iid*  
+*lpszDesc*<br/>
+[in]描述錯誤的字串。 Unicode 版本`Error`指定*lpszDesc*屬於類型 LPCOLESTR; ANSI 版本指定 LPCSTR 類型。
+
+*iid*<br/>
 [in]定義的錯誤或 GUID_NULL （預設值），如果錯誤由作業系統所定義之介面的 IID。
 
-*hRes*  
+*hRes*<br/>
 [in]您想要的 HRESULT 傳回給呼叫者。 預設值為 0。 如需詳細資訊*hRes*，請參閱 < 備註 >。
 
-*nID*  
+*nID*<br/>
 [in]資源識別項的錯誤描述字串的儲存位置。 此值應介於 0x0200 和 0xFFFF 之間 （含）。 在偵錯組建**ASSERT**如果將會產生*nID*並不編製索引的有效字串。 在發行組建中的錯誤描述字串將會設定為 「 未知的錯誤 」。
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in]錯誤的說明內容識別碼。
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in]路徑名稱與描述錯誤的說明檔。
 
-*hInst*  
+*hInst*<br/>
 [in]資源控制代碼。 根據預設，這個參數是`_AtlModule::GetResourceInstance`，其中`_AtlModule`全域執行個體[CAtlModule](../../atl/reference/catlmodule-class.md)。
 
 ### <a name="return-value"></a>傳回值

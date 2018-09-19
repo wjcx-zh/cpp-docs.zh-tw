@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2528 |Microsoft 文件
+title: 編譯器錯誤 C2528 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 347330600e9b912d50522532f0c64e789e385520
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c588457743c601e31c24fd0a53de652477fbf05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072598"
 ---
 # <a name="compiler-error-c2528"></a>編譯器錯誤 C2528
-'name': 參考的指標不合法  
-  
- 您無法宣告為參考的指標。 之前宣告的指標取值的變數。  
-  
- 下列範例會產生 C2528:  
-  
-```  
-// C2528.cpp  
-int i;  
-int &ir = i;  
-int & (*irptr) = ir;    // C2528  
+
+'name': 參考的指標不合法
+
+您無法宣告為參考的指標。 之前宣告的指標取值的變數。
+
+下列範例會產生 C2528:
+
+```
+// C2528.cpp
+int i;
+int &ir = i;
+int & (*irptr) = ir;    // C2528
 ```

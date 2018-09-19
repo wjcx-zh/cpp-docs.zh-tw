@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6009af2026f10ff25983544e6724385246a42f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101393"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 類別
 
@@ -157,6 +157,6 @@ HRESULT Unlock() throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[CComFakeCriticalSection 類別](../../atl/reference/ccomfakecriticalsection-class.md)   
-[類別概觀](../../atl/atl-class-overview.md)   
+[CComFakeCriticalSection 類別](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[類別概觀](../../atl/atl-class-overview.md)<br/>
 [CComCritSecLock 類別](../../atl/reference/ccomcritseclock-class.md)

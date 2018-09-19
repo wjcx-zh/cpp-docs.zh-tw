@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db188764694c0c0c0b7a85c3653564d563f9cbd2
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efcf76c02eaeafb89c48b9dc82d9269377e520ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538815"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076316"
 ---
 # <a name="fatal-error-c1113"></a>嚴重錯誤 C1113
-\#使用 'file' 上失敗  
-  
- 只有 Microsoft Intermediate Language (MSIL) 格式的檔案可以傳遞至[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)編譯器選項可讓您建立的 MSIL 輸出檔。 其他 Visual Studio 語言也會產生 MSIL 的檔案。
+
+\#使用 'file' 上失敗
+
+只有 Microsoft Intermediate Language (MSIL) 格式的檔案可以傳遞至[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)編譯器選項可讓您建立的 MSIL 輸出檔。 其他 Visual Studio 語言也會產生 MSIL 的檔案。

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ac6f333312fc62854478897912fc28f3c2f8e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093957"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項新增至 ATL 專案
 
@@ -56,10 +56,10 @@ ms.locfileid: "43756557"
 
 ## <a name="see-also"></a>另請參閱
 
-[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
-[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)   
-[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
-[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
+[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
+[Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)<br/>
+[使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
+[使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
 

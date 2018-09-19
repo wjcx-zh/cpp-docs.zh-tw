@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2091 |Microsoft 文件
+title: 編譯器錯誤 C2091 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c115ea47f87a59c7412ed057675ccf893467cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c47d7e99099632313fd561a4e08af52644693c95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166357"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077005"
 ---
 # <a name="compiler-error-c2091"></a>編譯器錯誤 C2091
-函式會傳回函式  
-  
- 函式無法傳回函式。 而是傳回函式的指標。
+
+函式會傳回函式
+
+函式無法傳回函式。 改為函式傳回的指標。

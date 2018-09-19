@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338586"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078513"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>異動：異動如何影響更新 (ODBC)
+
 若要更新[資料來源](../../data/odbc/data-source-odbc.md)透過編輯緩衝區 （交易外使用的相同方法） 使用的交易期間所管理。 資料錄集的欄位資料成員以下合稱做為編輯緩衝區，其中包含目前的記錄，以將資料錄集備份期間暫時`AddNew`或`Edit`。 期間`Delete`作業，目前的記錄不會備份在交易內。 如需有關編輯緩衝區和更新的目前記錄的儲存方式的詳細資訊，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  
   
 > [!NOTE]
 >  如果您已實作大量資料列擷取，您不能呼叫`AddNew`， `Edit`，或`Delete`。 您必須改為撰寫您自己的函式來執行資料來源的更新。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量資料庫連接 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 在交易期間`AddNew`， `Edit`，和`Delete`可以認可或回復作業。 效果`CommitTrans`和`Rollback`可能會導致不會還原為編輯緩衝區目前的記錄。 若要確定目前的記錄會正確還原，務必了解如何`CommitTrans`並`Rollback`成員函式`CDatabase`搭配使用的更新函式`CRecordset`。  
+在交易期間`AddNew`， `Edit`，和`Delete`可以認可或回復作業。 效果`CommitTrans`和`Rollback`可能會導致不會還原為編輯緩衝區目前的記錄。 若要確定目前的記錄會正確還原，務必了解如何`CommitTrans`並`Rollback`成員函式`CDatabase`搭配使用的更新函式`CRecordset`。  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> CommitTrans 如何影響更新  
- 下表說明的效果`CommitTrans`的交易。  
+
+下表說明的效果`CommitTrans`的交易。  
   
 ### <a name="how-committrans-affects-updates"></a>CommitTrans 如何影響更新  
   
@@ -48,7 +50,8 @@ ms.locfileid: "39338586"
 |`Delete` 然後 `CommitTrans`|從資料來源刪除的記錄。|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> 復原對交易的影響  
- 下表說明的效果`Rollback`的交易。  
+
+下表說明的效果`Rollback`的交易。  
   
 ### <a name="how-rollback-affects-transactions"></a>復原對交易的影響  
   
@@ -61,8 +64,9 @@ ms.locfileid: "39338586"
 |`Delete` 然後 `Rollback`|刪除目前資料錄的內容。|呼叫`Requery`從資料來源還原目前的資料錄的內容。|刪除資料來源的資料會反轉。|  
   
 ## <a name="see-also"></a>另請參閱  
- [異動 (ODBC)](../../data/odbc/transaction-odbc.md)   
- [異動 (ODBC)](../../data/odbc/transaction-odbc.md)   
- [異動： 執行交易集中的資料錄 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase 類別](../../mfc/reference/cdatabase-class.md)   
- [CRecordset 類別](../../mfc/reference/crecordset-class.md)
+
+[異動 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[異動 (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[異動：在一個資料錄集內執行異動 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[CDatabase 類別](../../mfc/reference/cdatabase-class.md)<br/>
+[CRecordset 類別](../../mfc/reference/crecordset-class.md)

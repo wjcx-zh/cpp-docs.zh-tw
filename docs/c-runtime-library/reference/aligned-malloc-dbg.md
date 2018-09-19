@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8786af730567155ca865440e612bb983e2bea8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 076ccfcf164eb17e2a855f175c8714cd63a91817
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093038"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -56,16 +56,16 @@ void * _aligned_malloc_dbg(
 
 ### <a name="parameters"></a>參數
 
-*size*  
+*size*<br/>
 要求的記憶體配置大小。
 
-*對齊方式*  
+*對齊方式*<br/>
 對齊值，必須是 2 的整數冪。
 
-*filename*  
+*filename*<br/>
 要求配置作業之原始程式檔的名稱的指標，或為 NULL。
 
-*linenumber*  
+*linenumber*<br/>
 原始程式檔中的行號，其中要求配置作業，或為 NULL。
 
 ## <a name="return-value"></a>傳回值
@@ -96,4 +96,4 @@ void * _aligned_malloc_dbg(
 
 ## <a name="see-also"></a>另請參閱
 
-[偵錯常式](../../c-runtime-library/debug-routines.md)  
+[偵錯常式](../../c-runtime-library/debug-routines.md)

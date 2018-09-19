@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::reset |Microsoft 文件
+title: auto_gcroot::reset |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d2ff59b6fc9c4f893f87fbb59b0531c5ba8917fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f461958a09212f5beb562b5b8e92fa6f39711ec5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106371"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082270"
 ---
 # <a name="autogcrootreset"></a>auto_gcroot::reset
-終結目前擁有的物件，並選擇性地採取擁有新的物件。  
+終結目前擁有的物件，並選擇性地採取 新物件的擁有權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,8 +39,8 @@ void reset(
 ```  
   
 #### <a name="parameters"></a>參數  
- `_new_ptr`  
- （選擇性）新的物件。  
+*_new_ptr*<br/>
+（選擇性）新的物件。  
   
 ## <a name="example"></a>範例  
   

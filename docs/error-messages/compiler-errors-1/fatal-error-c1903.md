@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1903 |Microsoft 文件
+title: 嚴重錯誤 C1903 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f4f89abd2d2a59efa7c028321fd9a6ff82cc206
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9374f5e5c8b65956a7864406c86927b0daf604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226143"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102212"
 ---
 # <a name="fatal-error-c1903"></a>嚴重錯誤 C1903
-無法從先前的錯誤復原; 正在停止編譯  
-  
- 編譯器發現太多錯誤，無法繼續進行。 請修正錯誤並重新編譯。
+
+無法從先前的錯誤復原; 正在停止編譯
+
+編譯器發現太多錯誤，無法繼續進行。 請修正錯誤並重新編譯。

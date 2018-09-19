@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60541891832a3d466f7396086ac0918108991582
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d95a8f6b28b638b65191bc04ad094cc128f7b247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080307"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 
@@ -82,7 +82,7 @@ class CPathT
 
 #### <a name="parameters"></a>參數
 
-*StringType*  
+*StringType*<br/>
 ATL/MFC 字串類別使用的路徑 (請參閱[CStringT](../../atl-mfc-shared/reference/cstringt-class.md))。
 
 ## <a name="members"></a>成員
@@ -194,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>參數
 
-*pszExtension*  
+*pszExtension*<br/>
 若要新增檔案副檔名。
 
 ### <a name="return-value"></a>傳回值
@@ -215,7 +215,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="parameters"></a>參數
 
-*pszMore*  
+*pszMore*<br/>
 要附加的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -236,7 +236,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="parameters"></a>參數
 
-*iDrive*  
+*iDrive*<br/>
 磁碟機編號 0 是 a: (1 為 b，依此類推）。
 
 ### <a name="remarks"></a>備註
@@ -265,10 +265,10 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="parameters"></a>參數
 
-*pszDir*  
+*pszDir*<br/>
 目錄路徑。
 
-*pszFile*  
+*pszFile*<br/>
 檔案路徑。
 
 ### <a name="remarks"></a>備註
@@ -285,7 +285,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="parameters"></a>參數
 
-*pszOther*  
+*pszOther*<br/>
 要比較目前的路徑。
 
 ### <a name="return-value"></a>傳回值
@@ -306,10 +306,10 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="parameters"></a>參數
 
-*hDC*  
+*hDC*<br/>
 使用字型度量資訊的裝置內容。
 
-*nWidth*  
+*nWidth*<br/>
 寬度，單位為像素，字串將會強制放入。
 
 ### <a name="return-value"></a>傳回值
@@ -330,10 +330,10 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="parameters"></a>參數
 
-*nMaxChars*  
+*nMaxChars*<br/>
 要包含在新的字串，包含結束的 NULL 字元的字元數目上限。
 
-*dwFlags*  
+*dwFlags*<br/>
 保留的。
 
 ### <a name="return-value"></a>傳回值
@@ -356,10 +356,10 @@ CPathT() throw();
 
 ### <a name="parameters"></a>參數
 
-*pszPath*  
+*pszPath*<br/>
 要將路徑字串的指標。
 
-*path*  
+*path*<br/>
 路徑字串中。
 
 ##  <a name="fileexists"></a>  CPathT::FileExists
@@ -480,7 +480,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="parameters"></a>參數
 
-*pszPrefix*  
+*pszPrefix*<br/>
 要搜尋的前置詞。 前置詞是其中一種類型:"c:\\\\"，"。"，"..."，"...\\\\".
 
 ### <a name="return-value"></a>傳回值
@@ -533,7 +533,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="parameters"></a>參數
 
-*pszOther*  
+*pszOther*<br/>
 在另一個路徑。
 
 ### <a name="return-value"></a>傳回值
@@ -630,7 +630,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="parameters"></a>參數
 
-*pszSpec*  
+*pszSpec*<br/>
 要搜尋的檔案類型的 null 終止字串的指標。 例如，若要測試文件檔案，在目前路徑的檔案是否*pszSpec*應該設定為"*.doc"。
 
 ### <a name="return-value"></a>傳回值
@@ -651,7 +651,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 ### <a name="parameters"></a>參數
 
-*pszMore*  
+*pszMore*<br/>
 要附加的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -744,16 +744,16 @@ BOOL RelativePathTo(
 
 ### <a name="parameters"></a>參數
 
-*pszFrom*  
+*pszFrom*<br/>
 相對路徑的起點。
 
-*dwAttrFrom*  
+*dwAttrFrom*<br/>
 檔案屬性*pszFrom*。 如果這個值包含 FILE_ATTRIBUTE_DIRECTORY， *pszFrom*假設是目錄，否則*pszFrom*假設為檔案。
 
-*pszTo*  
+*pszTo*<br/>
 相對路徑的結束點。
 
-*dwAttrTo*  
+*dwAttrTo*<br/>
 檔案屬性*pszTo*。 如果這個值包含 FILE_ATTRIBUTE_DIRECTORY， *pszTo*假設是目錄，否則*pszTo*假設為檔案。
 
 ### <a name="return-value"></a>傳回值
@@ -838,7 +838,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="parameters"></a>參數
 
-*pszExtension*  
+*pszExtension*<br/>
 新的檔案名稱副檔名，前面加上"。"字元。
 
 ### <a name="return-value"></a>傳回值
@@ -919,5 +919,5 @@ typedef StringType::XCHAR XCHAR;
 
 ## <a name="see-also"></a>另請參閱
 
-[類別](../../atl/reference/atl-classes.md)   
+[類別](../../atl/reference/atl-classes.md)<br/>
 [CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)

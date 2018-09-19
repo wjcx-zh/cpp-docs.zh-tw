@@ -1,5 +1,5 @@
 ---
-title: 編譯器警告 （層級 2） C4051 |Microsoft 文件
+title: 編譯器警告 （層級 2） C4051 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672de8924f7a04d1849ff79349c8334ed123a418
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5074ca6f048aec06f98b6081d932ee85868cb9d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296649"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103401"
 ---
 # <a name="compiler-warning-level-2-c4051"></a>編譯器警告 (層級 2) C4051
-轉換類型，可能導致資料遺失  
-  
- 運算式包含兩個具有不同基底類型的資料項目。 轉換其中一個類型會使資料項目被截斷。  
-  
- 如果您將資料項目轉換為適當類型，即可修正這個警告。
+
+轉換類型，可能導致資料遺失
+
+運算式包含兩個具有不同基底類型的資料項目。 轉換其中一個類型會使資料項目被截斷。
+
+如果您將資料項目轉換為適當類型，即可修正這個警告。

@@ -1,5 +1,5 @@
 ---
-title: copyprivate |Microsoft 文件
+title: copyprivate |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071129"
 ---
 # <a name="copyprivate"></a>copyprivate
-指定一個或多個變數，應該所有執行緒之間共用。  
+指定一或多個變數，應該在所有執行緒之間共用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,16 +32,15 @@ ms.locfileid: "33692934"
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>備註  
- 其中：  
+### <a name="parameters"></a>參數
   
- `var`  
- 若要共用的一或多個變數。 如果指定了多個變數，請以逗號分隔變數名稱。  
+*var*<br/>
+若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。  
   
 ## <a name="remarks"></a>備註  
  `copyprivate` 適用於[單一](../../../parallel/openmp/reference/single.md)指示詞。  
   
- 如需詳細資訊，請參閱[2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。  
+ 如需詳細資訊，請參閱 < [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。  
   
 ## <a name="example"></a>範例  
   

@@ -1,5 +1,5 @@
 ---
-title: task 類別 （並行執行階段） |Microsoft 文件
+title: task 類別 （並行執行階段） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3cd783baafec4171618a6994ac4fde13dfe41f56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694091"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097493"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
-平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 也可以撰寫工作與其他工作，使用接續 ( `then`)，和聯結 ( `when_all`) 和 choice ( `when_any`) 模式。  
+平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 它也包含與其他使用接續的工作 ( `then`)，和聯結 ( `when_all`) 和選擇 ( `when_any`) 模式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,10 +48,12 @@ class task;
 ```  
   
 #### <a name="parameters"></a>參數  
- `T`  
- `T`  
- `_ReturnType`  
- 此工作的結果類型。  
+
+*T*<br/>
+工作物件型別。
+
+*_ReturnType*<br/>
+此工作的結果類型。  
   
 ## <a name="members"></a>Members  
   
@@ -87,7 +89,7 @@ class task;
 |[operator==](#operator_eq_eq)|多載。 判斷兩個 `task` 物件是否表示相同的內部工作。|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `task`  
@@ -114,7 +116,7 @@ void get() const;
  如果工作已取消，呼叫`get`將會擲回[task_canceled](task-canceled-class.md)例外狀況。 如果工作發生不同的例外狀況，或例外狀況從前項工作傳播至它，則呼叫 `get` 將會擲回該例外狀況。  
   
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫[concurrency::task::wait](#wait)或`get`(`wait`呼叫`get`) 會在 STA 執行的程式碼中 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫`get`接收以工作為基礎的接續在前項工作的結果，因為會立即提供結果的方法。  
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫[concurrency::task::wait](#wait)或是`get`(`wait`呼叫`get`) 會在 STA 執行的程式碼中 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫`get`接收中以工作為基礎的接續的前項工作的結果，因為會立即提供結果的方法。  
   
 ##  <a name="is_apartment_aware"></a> is_apartment_aware 
 
@@ -135,7 +137,7 @@ bool is_done() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果工作已完成，false 否則則為 true。  
+ 如果工作已完成，false 否則，則為 true。  
   
 ### <a name="remarks"></a>備註  
  如果工作已完成或取消 （不論有無使用者例外狀況），則函數會傳回 true。  
@@ -151,7 +153,8 @@ bool operator!= (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
+*_Rhs*<br/>
+要比較的工作。
   
 ### <a name="return-value"></a>傳回值  
  如果這些物件參考不同的基礎工作則為 `true`，否則為 `false`。  
@@ -167,8 +170,8 @@ task& operator= (task&& _Other);
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Other`  
- 來源 `task` 物件。  
+*_Other*<br/>
+來源 `task` 物件。  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -186,7 +189,8 @@ bool operator== (const task<void>& _Rhs) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Rhs`  
+*_Rhs*<br/>
+要比較的工作。
   
 ### <a name="return-value"></a>傳回值  
  如果這些物件參考相同的基礎工作則為 `true`，否則為 `false`。  
@@ -224,20 +228,20 @@ task(
 ```  
   
 ### <a name="parameters"></a>參數  
- `T`  
- 從中要建構工作的參數的類型。  
+*T*<br/>
+從中要建構工作的參數的類型。  
   
- `_Param`  
- 從中要建構工作的參數。 這可能是 lambda、 函式物件，`task_completion_event<result_type>`物件或如果您在 Windows 執行階段應用程式中使用工作 Windows::Foundation::IAsyncInfo。 Lambda 或函式物件應該是類型，相當於`std::function<X(void)>`，其中 X 可以是類型的變數`result_type`， `task<result_type>`，或在 Windows 執行階段應用程式中的 Windows::Foundation::IAsyncInfo。  
+*_Param*<br/>
+從中要建構工作的參數。 這可能是 lambda、 函式物件，`task_completion_event<result_type>`物件或如果您在 Windows 執行階段應用程式中使用工作 Windows::Foundation::IAsyncInfo。 Lambda 或函式物件應該是類型，相當於`std::function<X(void)>`，其中 X 可以是類型的變數`result_type`， `task<result_type>`，或在 Windows 執行階段應用程式中的 Windows::Foundation::IAsyncInfo。  
   
- `_TaskOptions`  
- 工作選項包括取消語彙基元、排程器等等  
+*_TaskOptions*<br/>
+工作選項包括取消語彙基元、排程器等等  
   
- `_Other`  
- 來源 `task` 物件。  
+*_Other*<br/>
+來源 `task` 物件。  
   
 ### <a name="remarks"></a>備註  
- 出現 `task` 的預設建構函式，只是為了讓工作在容器內使用。 只有在指派有效的工作給預設建構的工作之後，您才能使用它。 這類方法`get`，`wait`或`then`將會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)預設建構的工作上呼叫時的例外狀況。  
+ 出現 `task` 的預設建構函式，只是為了讓工作在容器內使用。 只有在指派有效的工作給預設建構的工作之後，您才能使用它。 這類方法`get`，`wait`或是`then`將會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)預設建構的工作上呼叫時的例外狀況。  
   
  從 `task_completion_event` 建立的工作，會在設定工作完成事件後完成 (並排定其接續作業)。  
   
@@ -247,9 +251,9 @@ task(
   
  `task` 的行為就像智慧型指標，可透過傳值方式安全傳遞。 它可以由多個執行緒存取，而不需要鎖定。  
   
- 建構函式多載採用 Windows::Foundation::IAsyncInfo 介面或 lambda 傳回這種介面，只可用於 Windows 執行階段應用程式。  
+ 建構函式多載採用 Windows::Foundation::IAsyncInfo 介面或 lambda 傳回這樣的介面，而僅適用於 Windows 執行階段應用程式。  
   
- 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ##  <a name="then"></a> 然後 
 
@@ -289,28 +293,28 @@ __declspec(
 ```   
   
 ### <a name="parameters"></a>參數  
- `_Function`  
- 此工作會叫用的函式物件的類型。  
+*_Function*<br/>
+此工作會叫用的函式物件的類型。  
   
- `_Func`  
- 當這個工作完成時執行的接續函式。 這個接續函式必須接受 `result_type` 或 `task<result_type>` 的變數做為輸入，其中 `result_type` 是這個工作所產生結果的類型。  
+*_Func*<br/>
+當這個工作完成時執行的接續函式。 這個接續函式必須接受 `result_type` 或 `task<result_type>` 的變數做為輸入，其中 `result_type` 是這個工作所產生結果的類型。  
   
- `_TaskOptions`  
- 工作選項包括取消語彙基元、排程器和接續內容。 前 3 個選項預設會從前項工作繼承  
+*_TaskOptions*<br/>
+工作選項包括取消語彙基元、排程器和接續內容。 前 3 個選項預設會從前項工作繼承  
   
- `_CancellationToken`  
- 要與接續工作產生關聯的取消語彙基元。 所建立不含取消語彙基元的接續工作將會繼承其前項工作的語彙基元。  
+*_CancellationToken*<br/>
+要與接續工作產生關聯的取消語彙基元。 所建立不含取消語彙基元的接續工作將會繼承其前項工作的語彙基元。  
   
- `_ContinuationContext`  
- 指定執行接續作業位置的變數。 此變數只是適用於 UWP 應用程式時。 如需詳細資訊，請參閱[task_continuation_context](task-continuation-context-class.md)  
+*_ContinuationContext*<br/>
+指定執行接續作業位置的變數。 此變數只會在 UWP 應用程式中使用時很有用的。 如需詳細資訊，請參閱[task_continuation_context](task-continuation-context-class.md)  
   
 ### <a name="return-value"></a>傳回值  
  新建立的接續工作。 所傳回工作的結果類型取決於 `_Func` 傳回哪些項目。  
   
 ### <a name="remarks"></a>備註  
- 多載`then`的 lambda 或仿函式會傳回 Windows::Foundation::IAsyncInfo 介面，則只能用於 Windows 執行階段應用程式。  
+ 多載`then`的 lambda 或仿函數時，傳回 Windows::Foundation::IAsyncInfo 介面，而僅適用於 Windows 執行階段應用程式。  
   
- 如需有關如何使用接續工作來撰寫的非同步工作的詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需有關如何使用接續工作組成非同步工作的詳細資訊，請參閱 <<c0> [ 工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ##  <a name="wait"></a> 等候 
 
@@ -326,7 +330,7 @@ task_status wait() const;
 ### <a name="remarks"></a>備註  
   
 > [!IMPORTANT]
->  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 STA 執行的程式碼 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫[concurrency](#get)方法以接收以工作為基礎的接續在前項工作的結果。  
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 STA 上執行之程式碼 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫[concurrency](#get)方法，以接收以工作為基礎的接續的前項工作的結果。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

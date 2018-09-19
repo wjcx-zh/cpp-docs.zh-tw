@@ -1,5 +1,5 @@
 ---
-title: 嚴重錯誤 C1192 |Microsoft 文件
+title: 嚴重錯誤 C1192 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45880594a3a9aa64fd62099b5b1eea342107e3dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e372db05d39bb7559fc3ee4390b8886e070b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227417"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091929"
 ---
 # <a name="fatal-error-c1192"></a>嚴重錯誤 C1192
-\#using 'file'  
-  
- 只有 Microsoft Intermediate Language (MSIL) 格式的檔案可以傳遞至[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)編譯器選項可讓您建立的 MSIL 的輸出檔。 其他 Visual Studio 語言也會產生 MSIL 檔案。
+
+\#使用 'file' 上失敗
+
+只有 Microsoft Intermediate Language (MSIL) 格式的檔案可以傳遞至[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)編譯器選項可讓您建立的 MSIL 輸出檔。 其他 Visual Studio 語言也會產生 MSIL 的檔案。

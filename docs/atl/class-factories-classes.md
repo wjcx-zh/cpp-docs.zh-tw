@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41068a81d52c0e30ef95cf364d759f35a39140c9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 414a37d51d39c94e022c726a5c8ede20504de5eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095738"
 ---
 # <a name="class-factories-classes"></a>Class Factory 類別
 
@@ -40,6 +40,6 @@ ms.locfileid: "43760012"
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../atl/atl-class-overview.md)   
+[類別概觀](../atl/atl-class-overview.md)<br/>
 [彙總和 Class Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)
 

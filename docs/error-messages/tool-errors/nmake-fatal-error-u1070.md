@@ -1,5 +1,5 @@
 ---
-title: NMAKE 嚴重錯誤 U1070 |Microsoft 文件
+title: NMAKE 嚴重錯誤 U1070 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe39a5d6f6074596561cd8e32f7b9428bc60f6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6eb462e5c3c7e497cde55151bf92c62ffb2afcd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087015"
 ---
 # <a name="nmake-fatal-error-u1070"></a>NMAKE 嚴重錯誤 U1070
-在巨集定義 '巨集名稱' 循環  
-  
- 給定的巨集定義包含巨集的定義包含指定的巨集。 循環的巨集不正確。  
-  
-## <a name="example"></a>範例  
- 下列巨集定義  
-  
-```  
-ONE=$(TWO)  
-TWO=$(ONE)  
-```  
-  
- 會導致下列錯誤：  
-  
-```  
-cycle in macro definition 'TWO'  
+
+在巨集定義 'macroname' 循環
+
+指定的巨集定義包含巨集，其定義包含指定的巨集。 循環的巨集的定義是無效的。
+
+## <a name="example"></a>範例
+
+下列巨集定義
+
+```
+ONE=$(TWO)
+TWO=$(ONE)
+```
+
+會導致下列錯誤：
+
+```
+cycle in macro definition 'TWO'
 ```

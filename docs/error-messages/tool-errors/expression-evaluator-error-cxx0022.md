@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0022 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0022 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082348"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>運算式評估工具錯誤 CXX0022
-_main 之前呼叫函式  
-  
- C 運算式評估工具無法評估函式，偵錯工具已進入函式之前 **_main**。 程式未正確初始化直到 **_main**已呼叫。  
-  
- 這個錯誤是與 can0022 相同。
+
+函式呼叫之前 （_m）
+
+C 運算式評估工具無法評估的函式，才能偵錯工具進入函式 **_main**。 程式未正確初始化直到 **_main**已呼叫。
+
+此錯誤是與 can0022 相同。

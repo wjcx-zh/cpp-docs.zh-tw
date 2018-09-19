@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C2542 |Microsoft 文件
+title: 編譯器錯誤 C2542 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039d5853da3876dbe079ff1e4a38be4afdb34bd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81f6f9aa48a4a0ee1a0b414879ae3673c13529fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097235"
 ---
 # <a name="compiler-error-c2542"></a>編譯器錯誤 C2542
-'identifier': 類別物件已初始化沒有建構函式  
-  
- 沒有任何建構函式的參數清單，符合此初始化。  
-  
- 這個錯誤可能被因不正確的參數，初始化。
+
+'identifier': 類別物件已初始化沒有建構函式
+
+符合此初始化的參數清單沒有建構函式。
+
+此錯誤可能被因在初始化中的參數不正確。

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c8081b5a85b09f513152861cb09758b61df8d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3b10648a3251a705085e31559a98b6ee4957c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088471"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 類別
 
@@ -101,7 +101,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*nBytes*  
+*nBytes*<br/>
 在新記憶體區塊中要求的位元組數目。
 
 ### <a name="return-value"></a>傳回值
@@ -124,10 +124,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>參數
 
-*hHeap*  
+*hHeap*<br/>
 現有的堆積控制代碼。
 
-*bTakeOwnership*  
+*bTakeOwnership*<br/>
 旗標表示如果`CWin32Heap`物件是堆積的資源取得擁有權。
 
 ### <a name="remarks"></a>備註
@@ -149,16 +149,16 @@ CWin32Heap(
 
 ### <a name="parameters"></a>參數
 
-*hHeap*  
+*hHeap*<br/>
 現有的堆積物件。
 
-*dwFlags*  
+*dwFlags*<br/>
 建立堆積時使用的旗標。
 
-*nInitialSize*  
+*nInitialSize*<br/>
 堆積的初始大小。
 
-*nMaxSize*  
+*nMaxSize*<br/>
 堆積的大小上限。
 
 ### <a name="remarks"></a>備註
@@ -213,7 +213,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 要釋放的記憶體區塊指標。 NULL 是有效的值，且沒有任何作用。
 
 ##  <a name="getsize"></a>  CWin32Heap::GetSize
@@ -226,7 +226,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 記憶體區塊的方法就會取得其大小的指標。 這是所傳回的指標[CWin32Heap::Allocate](#allocate)或是[CWin32Heap::Reallocate](#reallocate)。
 
 ### <a name="return-value"></a>傳回值
@@ -263,10 +263,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>參數
 
-*p*  
+*p*<br/>
 若要重新配置之記憶體區塊的指標。
 
-*nBytes*  
+*nBytes*<br/>
 配置之區塊的新大小 (以位元組為單位)。 區塊可以放大或縮小。
 
 ### <a name="return-value"></a>傳回值
@@ -279,9 +279,9 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)   
-[IAtlMemMgr 類別](../../atl/reference/iatlmemmgr-class.md)   
-[CLocalHeap 類別](../../atl/reference/clocalheap-class.md)   
-[CGlobalHeap 類別](../../atl/reference/cglobalheap-class.md)   
-[CCRTHeap 類別](../../atl/reference/ccrtheap-class.md)   
+[類別概觀](../../atl/atl-class-overview.md)<br/>
+[IAtlMemMgr 類別](../../atl/reference/iatlmemmgr-class.md)<br/>
+[CLocalHeap 類別](../../atl/reference/clocalheap-class.md)<br/>
+[CGlobalHeap 類別](../../atl/reference/cglobalheap-class.md)<br/>
+[CCRTHeap 類別](../../atl/reference/ccrtheap-class.md)<br/>
 [CComHeap 類別](../../atl/reference/ccomheap-class.md)

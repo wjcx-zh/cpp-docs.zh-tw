@@ -54,14 +54,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7975c91631df24ab12858677a770c38dc0f6411
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e13f262b90ff46955d6ba63fb83a941d712b017a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087873"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 類別
+
 使用陣列語法的資料列集的存取項目。  
   
 ## <a name="syntax"></a>語法
@@ -74,11 +75,13 @@ class CArrayRowset :
 ```  
   
 ### <a name="parameters"></a>參數  
- *TAccessor*  
- 您想要使用的資料列集的存取子類別的型別。  
+
+*TAccessor*<br/>
+您想要使用的資料列集的存取子類別的型別。  
 
 ## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+
+**標題:** atldbcli.h  
   
 ## <a name="members"></a>成員  
   
@@ -102,6 +105,7 @@ class CArrayRowset :
 |[CArrayRowset::m_nRowsRead](#nrowsread)|已讀取的資料列數目。|  
   
 ## <a name="carrayrowset"></a> Carrayrowset:: Carrayrowset
+
 建立新的 `CArrayRowset` 物件。  
   
 ### <a name="syntax"></a>語法  
@@ -111,10 +115,12 @@ CArrayRowset(int nMax = 100000);
 ```  
   
 #### <a name="parameters"></a>參數  
- *nMax*  
- [in] 資料列集的最大資料列數。 
+
+*nMax*<br/>
+[in] 資料列集的最大資料列數。 
 
 ## <a name="snapshot"></a> Carrayrowset:: Snapshot
+
 將整個資料列集讀取至記憶體，建立其影像或快照。  
   
 ### <a name="syntax"></a>語法  
@@ -124,6 +130,7 @@ HRESULT Snapshot() throw();
 ```  
 
 ## <a name="operator"></a> Carrayrowset:: Operator
+
 提供在資料列集中存取資料列，類似陣列的語法。  
   
 ### <a name="syntax"></a>語法  
@@ -133,19 +140,23 @@ TAccessor & operator[](int nrow);
 ```  
   
 #### <a name="parameters"></a>參數  
- *TAccessor*  
- 指定儲存在資料列集中存取子類型的範本參數。  
+
+*TAccessor*<br/>
+指定儲存在資料列集中存取子類型的範本參數。  
   
- *nRow*  
- [in] 要存取的資料列號碼 (陣列項目)。  
+*nRow*<br/>
+[in] 要存取的資料列號碼 (陣列項目)。  
   
 ### <a name="return-value"></a>傳回值  
- 所要求資料列的內容。  
+
+所要求資料列的內容。  
   
 ### <a name="remarks"></a>備註  
- 如果*nRow*超出資料列集中的資料列數目，會擲回例外狀況。  
+
+如果*nRow*超出資料列集中的資料列數目，會擲回例外狀況。  
 
 ## <a name="nrowsread"></a> Carrayrowset:: M_nrowsread
+
 包含資料列集已讀取的資料列的數目。  
   
 ### <a name="syntax"></a>語法  
@@ -155,6 +166,7 @@ ULONG m_nRowsRead;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset 類別](../../data/oledb/crowset-class.md)
+
+[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[CRowset 類別](../../data/oledb/crowset-class.md)

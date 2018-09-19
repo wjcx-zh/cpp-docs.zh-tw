@@ -1,5 +1,5 @@
 ---
-title: 連結器工具錯誤 LNK1166 |Microsoft 文件
+title: 連結器工具錯誤 LNK1166 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 474d4ad146edf4411bd9734a6ec4482273c065dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aa86a9fd3c2d6d19482ba5ce5c866ab660e742e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073079"
 ---
 # <a name="linker-tools-error-lnk1166"></a>連結器工具錯誤 LNK1166
-無法調整程式碼在位移 = 位移，va = 值  
-  
- 連結器無法填補所需的程式碼。  
-  
- 某些指示不允許某些處理器跨頁面界限。 新增填補更正這種情況下嘗試連結。 在此情況下，連結可能無法解決此問題。
+
+無法調整位移的程式碼 = 位移，va = value
+
+連結器無法填補所需的程式碼。
+
+若要跨頁面界限在某些處理器上不允許特定指示。 新增填補，若要更正這種情況下嘗試連結。 在此情況下，連結可能無法解決此問題。

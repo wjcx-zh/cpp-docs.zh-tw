@@ -1,5 +1,5 @@
 ---
-title: scheduler_resource_allocation_error 類別 |Microsoft 文件
+title: scheduler_resource_allocation_error 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101692"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 類別
 這個類別描述因無法在並行執行階段中取得關鍵來源而擲回的例外狀況。  
@@ -71,7 +71,7 @@ HRESULT get_error_code() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `HRESULT`錯誤造成的例外狀況的值。  
+ `HRESULT`錯誤造成例外狀況的值。  
   
 ##  <a name="ctor"></a> scheduler_resource_allocation_error 
 
@@ -87,11 +87,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ```  
   
 ### <a name="parameters"></a>參數  
- `_Message`  
- 錯誤的描述性訊息。  
+*訊息 （_m)*<br/>
+錯誤的描述性訊息。  
   
- `_Hresult`  
- `HRESULT`錯誤造成的例外狀況的值。  
+*_Hresult*<br/>
+`HRESULT`錯誤造成例外狀況的值。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

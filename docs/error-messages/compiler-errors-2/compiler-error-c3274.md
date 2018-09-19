@@ -1,5 +1,5 @@
 ---
-title: 編譯器錯誤 C3274 |Microsoft 文件
+title: 編譯器錯誤 C3274 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072e490d73c574367c9c97d86d9c82d547a76e1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 424b6be69559932ac6f16dc83e39257e414a2120
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088484"
 ---
 # <a name="compiler-error-c3274"></a>編譯器錯誤 C3274
-__finally/finally 缺少對應的 try  
-  
- 找到缺少對應之 [的](../../cpp/try-finally-statement.md) __finally [或](../../dotnet/finally.md) finally `try`陳述式。 若要解決這個問題，請刪除 `__finally` 陳述式，或為 `try` 加入 `__finally`陳述式。  
-  
- 下列範例會產生 C3274：  
-  
-```  
-// C3274.cpp  
-// compile with: /clr  
-// C3274 expected  
-using namespace System;  
-int main() {  
-   try {  
-      try {  
-         throw gcnew ApplicationException();  
-      }  
-      catch(...) {  
-         Console::Error->WriteLine(L"Caught an exception");  
-      }  
-      finally {  
-         Console::WriteLine(L"In finally");  
-      }  
-   } finally {  
-      Console::WriteLine(L"In finally");  
-   }  
-  
-   // Uncomment the following 3 lines to resolve.  
-   // try {  
-   //   throw gcnew ApplicationException();  
-   // }  
-  
-   finally {  
-      Console::WriteLine(L"In finally");  
-   }  
-   Console::WriteLine(L"**FAIL**");  
-}  
+
+__finally/finally 缺少對應的 try
+
+找到缺少對應之 [的](../../cpp/try-finally-statement.md) __finally [或](../../dotnet/finally.md) finally `try`陳述式。 若要解決這個問題，請刪除 `__finally` 陳述式，或為 `try` 加入 `__finally`陳述式。
+
+下列範例會產生 C3274：
+
+```
+// C3274.cpp
+// compile with: /clr
+// C3274 expected
+using namespace System;
+int main() {
+   try {
+      try {
+         throw gcnew ApplicationException();
+      }
+      catch(...) {
+         Console::Error->WriteLine(L"Caught an exception");
+      }
+      finally {
+         Console::WriteLine(L"In finally");
+      }
+   } finally {
+      Console::WriteLine(L"In finally");
+   }
+
+   // Uncomment the following 3 lines to resolve.
+   // try {
+   //   throw gcnew ApplicationException();
+   // }
+
+   finally {
+      Console::WriteLine(L"In finally");
+   }
+   Console::WriteLine(L"**FAIL**");
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: 運算錯誤 M6205 |Microsoft 文件
+title: 運算錯誤 M6205 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8d7fbd042d8ce8210ec4fe275b0d83314f5d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55549300a5ea603e4462d5b81679f935319838ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099744"
 ---
 # <a name="math-error-m6205"></a>運算錯誤 M6205
-'function': _TLOSS 錯誤  
-  
- 發生總遺失精確度 （有效位數）。  
-  
- 這個錯誤可能是因為 sin、 運算元，提供非常大量 cos 或 tan 因為運算元必須減少為介於 0 到 2 之間的數字 * pi。
+
+'function': _TLOSS 錯誤
+
+發生精確度 （有效位數） 完全遺失。
+
+此錯誤可能因提供非常大量的運算元 sin、 cos、 或 tan，因為運算元必須減少至 0 和 2 之間的數字 * pi。

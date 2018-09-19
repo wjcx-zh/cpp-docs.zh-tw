@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733d090073fe2ed08a0499ea205c2377b4bdb289
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679693"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080437"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
 當您宣告的程式項目，例如類別、 函式或變數時，其名稱只能 「 看到 」 和程式的某些部分中使用。 會顯示名稱的內容會呼叫其*範圍*。 例如，如果您宣告變數`x`函式中`x`才會顯示該函式主體內。 它有*本機領域*。 您可能有其他變數相同名稱在您的程式;只要它們位於不同的範圍時，不會違反 「 一個定義規則，並不會引發錯誤。
 
-針對自動的非靜態變數，範圍也會決定當應用程式建立和終結程式記憶體中。 
+針對自動的非靜態變數，範圍也會決定當應用程式建立和終結程式記憶體中。
 
 有六種範圍：
 
@@ -51,9 +51,9 @@ ms.locfileid: "43679693"
 
 您可以在封閉的區塊中宣告名稱，以隱藏該名稱。 下圖是在內層區塊中重新宣告 `i`，從而隱藏外層區塊範圍中與 `i` 相關的變數。
 
- ![區塊&#45;的範圍名稱隱藏](../cpp/media/vc38sf1.png "vc38SF1")區塊範圍和名稱隱藏
+![區塊&#45;的範圍名稱隱藏](../cpp/media/vc38sf1.png "vc38SF1")區塊範圍和名稱隱藏
 
- 本圖所示的程式輸出為：
+本圖所示的程式輸出為：
 
 ```cpp
 i = 0
@@ -67,7 +67,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>隱藏類別名稱
 
- 您可以藉由宣告函式、物件、變數或相同範圍中的列舉程式，隱藏類別名稱。 不過，類別名稱仍可存取時加上關鍵字**類別**。
+您可以藉由宣告函式、物件、變數或相同範圍中的列舉程式，隱藏類別名稱。 不過，類別名稱仍可存取時加上關鍵字**類別**。
 
 ```cpp
 // hiding_class_names.cpp
@@ -91,7 +91,7 @@ double Account = 15.37;            // Hides class name Account
 
 int main()
 {
-    class Account Checking( Account ); // Qualifies Account as 
+    class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
     cout << "Opening account with balance of: "
@@ -103,13 +103,13 @@ int main()
 > [!NOTE]
 > 任何將放在類別名稱 (`Account`) 稱為的關鍵字類別必須用來區分它與全域範圍的變數 Account。 當類別名稱出現在範圍解析運算子 (::) 的左邊時，不適用這項規則。 範圍解析運算子左邊的名稱一律視為類別名稱。
 
- 下列範例示範如何宣告型別的物件的指標`Account`使用**類別**關鍵字：
+下列範例示範如何宣告型別的物件的指標`Account`使用**類別**關鍵字：
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
- `Account`初始設定式中 （在括弧內） 在上述陳述式中具有全域範圍; 它是型別**double**。
+`Account`初始設定式中 （在括弧內） 在上述陳述式中具有全域範圍; 它是型別**double**。
 
 > [!NOTE]
 > 重複使用識別項名稱 (如這個範例中所示) 會視為不良的程式設計風格。
@@ -118,7 +118,7 @@ class Account *Checking = new class Account( Account );
 
 ## <a name="hiding-names-with-global-scope"></a>隱藏具有全域領域的名稱
 
- 您可以藉由明確地宣告區塊範圍中的相同名稱，隱藏具有全域領域的名稱。 不過，全域領域名稱可以使用存取範圍解析運算子 (`::`)。
+您可以藉由明確地宣告區塊範圍中的相同名稱，隱藏具有全域領域的名稱。 不過，全域領域名稱可以使用存取範圍解析運算子 (`::`)。
 
 ```cpp
 #include <iostream>
@@ -139,4 +139,5 @@ Global-scoped i has the value: 7
 ```
 
 ## <a name="see-also"></a>另請參閱
- [基本概念](../cpp/basic-concepts-cpp.md)
+
+[基本概念](../cpp/basic-concepts-cpp.md)

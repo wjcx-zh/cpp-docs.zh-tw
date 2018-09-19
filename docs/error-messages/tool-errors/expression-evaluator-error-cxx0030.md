@@ -1,5 +1,5 @@
 ---
-title: 運算式評估工具錯誤 CXX0030 |Microsoft 文件
+title: 運算式評估工具錯誤 CXX0030 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 669c585c637129c1fb6a480d91b31e5a1264fd22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2921013d116b7d8f02e1e29380ca3cd14086b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298112"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102804"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>運算式評估工具錯誤 CXX0030
-無法評估運算式  
-  
- 當寫入偵錯工具的運算式評估工具無法取得運算式的值。 一個可能的原因是運算式參考外部程式的位址空間的記憶體 （取值 null 指標是一個範例）。 Windows 不允許存取外部程式的位址空間的記憶體。  
-  
- 您可以重新撰寫運算式，利用括號控制的評估順序。  
-  
- 這個錯誤是與 can0030 相同。
+
+無法評估運算式
+
+寫入偵錯工具的運算式評估工具無法取得運算式的值。 一個可能的原因是此運算式會參考外部程式的位址空間的記憶體 （正在取值 null 指標是一個例子）。 Windows 不允許存取程式的位址空間之外的記憶體。
+
+若要重新撰寫運算式，利用括號控制評估的順序。
+
+此錯誤是與 can0030 相同。
